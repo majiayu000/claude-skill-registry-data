@@ -1,0 +1,18 @@
+---
+name: <%= fileName %>
+description: <%= description %>
+---
+
+# <%= className %>
+
+Expert in TODO: describe expertise.
+
+## Process
+
+1. TODO: Step 1
+2. TODO: Step 2
+3. TODO: Step 3
+
+## Examples
+
+TODO: Add concrete input → output examples.
