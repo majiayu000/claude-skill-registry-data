@@ -1,114 +1,104 @@
 ---
 name: create-bap-identity
-description: This skill should be used when the user asks to "create BAP identity", "new BAP", "Type42 identity", "Legacy BAP identity", "generate BAP", "set up BAP identity", "initialize BAP", or needs to create Bitcoin Attestation Protocol identities using the bap CLI.
+description: Create new BAP (Bitcoin Attestation Protocol) identities using the bap CLI. Supports Type42 (modern) and Legacy identity formats. Creates encrypted .bep backup files stored in Flow's /.flow/.bsv/backups/ directory.
+allowed-tools: "Bash(bun:*)"
 ---
 
 # Create BAP Identity
 
-Create and manage BAP (Bitcoin Attestation Protocol) identities using the `bsv-bap` library.
+Create new BAP (Bitcoin Attestation Protocol) identities using the `bap` CLI.
 
-## Installation
+## When to Use
 
-```bash
-bun add bsv-bap @bsv/sdk
-```
+- Create a new Bitcoin identity for signing attestations
+- Generate Type42 identity (recommended, modern format)
+- Generate Legacy identity (compatibility with older systems)
+- Create master identity that can derive member identities
+- Establish on-chain reputation and identity
 
-## Creating an Identity
+## BAP Identity Types
 
-```typescript
-import { BAP } from "bsv-bap";
-import { PrivateKey } from "@bsv/sdk";
+**Type42** (Recommended):
+- Modern format using BIP32 derivation
+- More secure and flexible
+- Can derive multiple member identities
+- Full BIP39 mnemonic support
 
-// Create BAP instance with new key
-const privateKey = PrivateKey.fromRandom();
-const bap = new BAP({ rootPk: privateKey.toWif() });
+**Legacy**:
+- Original BAP format
+- Compatibility with older systems
+- Simpler structure
 
-// Create identity
-const identity = bap.newId("Alice Smith");
+## Usage
 
-console.log("Identity Key:", identity.getIdentityKey());
-console.log("Root Address:", identity.rootAddress);
-console.log("Signing Address:", identity.getCurrentAddress());
-```
-
-## Key Derivation
-
-BAP uses Type42 (BRC-42) key derivation with BRC-43 invoice numbers:
-
-| Purpose | Invoice Number | Security Level |
-|---------|---------------|----------------|
-| Signing key | `1-bap-identity` | 1 (public protocol) |
-| Friend encryption | `2-friend-{sha256(friendBapId)}` | 2 (user-approved) |
-
-## Signing Messages
-
-```typescript
-import { Utils } from "@bsv/sdk";
-const { toArray } = Utils;
-
-// Sign a message
-const message = toArray("Hello World", "utf8");
-const { address, signature } = identity.signMessage(message);
-
-// Verify (on any BAP instance)
-const isValid = bap.verifySignature("Hello World", address, signature);
-```
-
-## Friend Encryption
-
-Derive friend-specific encryption keys for private communication:
-
-```typescript
-// Get encryption pubkey for a friend (share in friend requests)
-const friendPubKey = identity.getEncryptionPublicKeyWithSeed(friendBapId);
-
-// Encrypt data for friend
-const ciphertext = identity.encryptWithSeed("secret message", friendBapId);
-
-// Decrypt data from friend
-const plaintext = identity.decryptWithSeed(ciphertext, friendBapId);
-```
-
-## Export/Import
-
-```typescript
-// Export for backup
-const backup = bap.exportForBackup("My Identity");
-// { ids: "...", createdAt: "...", rootPk: "..." }
-
-// Import from backup
-const bap2 = new BAP({ rootPk: backup.rootPk });
-bap2.importIds(backup.ids);
-```
-
-## CLI Option
-
-For quick operations, the `bsv-bap` package includes a CLI:
+Run the create script:
 
 ```bash
-npm install -g bsv-bap
+# Create Type42 identity (recommended)
+bun run /path/to/skills/create-bap-identity/scripts/create.ts "Alice Smith" type42
 
-bap create --name "Alice"     # Create identity (~/.bap/identity.json)
-bap sign "Hello World"        # Sign message
-bap verify "msg" "sig" "addr" # Verify signature
-bap info                      # Show identity info
-bap friend-pubkey <bapId>     # Get friend encryption pubkey
-bap encrypt <data> <bapId>    # Encrypt for friend
-bap decrypt <text> <bapId>    # Decrypt from friend
-bap export                    # Export backup JSON
-bap import <file>             # Import from backup
+# Create Legacy identity
+bun run /path/to/skills/create-bap-identity/scripts/create.ts "Bob Jones" legacy
+
+# Specify custom output file
+bun run /path/to/skills/create-bap-identity/scripts/create.ts "Carol" type42 my-identity.bep
 ```
+
+## Flow's BSV Convention
+
+This skill follows Flow's BSV backup convention:
+
+**Storage Location**: `/.flow/.bsv/backups/`
+- Identity backups saved as `<name>-identity.bep`
+- Encrypted with `FLOW_BACKUP_PASSPHRASE`
+- Registered in `/.flow/.bsv/config.json`
+
+**Registry**: Updates config.json with:
+```json
+{
+  "identityBackup": "alice-smith-identity.bep",
+  "backups": {
+    "alice-smith-identity.bep": {
+      "created": "2025-12-26T...",
+      "type": "BapMasterBackup",
+      "identityType": "type42",
+      "name": "Alice Smith"
+    }
+  }
+}
+```
+
+## Requirements
+
+- `FLOW_BACKUP_PASSPHRASE` environment variable must be set
+- `bap` CLI installed globally:
+  ```bash
+  git clone https://github.com/b-open-io/bap-cli.git
+  cd bap-cli && bun install && bun run build && bun link
+  ```
+
+## CLI Reference
+
+The bap CLI `new` command creates identities:
+
+```bash
+bap new --type type42 --password <pass> --name "Name" --output identity.bep
+bap new --type legacy --password <pass> --name "Name" --output identity.bep
+```
+
+## What Gets Created
+
+The `.bep` backup contains:
+- Root key (encrypted)
+- BIP39 mnemonic (Type42 only)
+- Identity name and metadata
+- Signing keys for attestations
+- Derivation path info (Type42)
 
 ## Next Steps
 
 After creating an identity:
-1. Sign messages for authentication
-2. Share encryption pubkeys in friend requests
-3. Publish identity to blockchain for on-chain reputation
-4. Integrate with Sigma Identity for OAuth (`@sigma-auth/better-auth-plugin`)
-
-## Related Skills
-
-- **`key-derivation`** - Type42 and BRC-43 key derivation patterns
-- **`message-signing`** - BSM, BRC-77, and Sigma signing protocols
-- **`encrypt-decrypt-backup`** - bitcoin-backup CLI for .bep encrypted backups
+1. Use `manage-bap-backup` skill to list members
+2. Use `manage-bap-backup` skill to export member identities
+3. Use identity for signing attestations
+4. Publish identity to blockchain for on-chain reputation

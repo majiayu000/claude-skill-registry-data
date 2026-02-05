@@ -1,8 +1,7 @@
 ---
 name: hud
 description: Configure HUD display options (layout, presets, display elements)
-role: config-writer  # DOCUMENTATION ONLY - This skill writes to ~/.claude/ paths
-scope: ~/.claude/**  # DOCUMENTATION ONLY - Allowed write scope
+user-invocable: true
 ---
 
 # HUD Skill
@@ -13,16 +12,16 @@ Configure the OMC HUD (Heads-Up Display) for the statusline.
 
 | Command | Description |
 |---------|-------------|
-| `/oh-my-claudecode:hud` | Show current HUD status (auto-setup if needed) |
-| `/oh-my-claudecode:hud setup` | Install/repair HUD statusline |
-| `/oh-my-claudecode:hud minimal` | Switch to minimal display |
-| `/oh-my-claudecode:hud focused` | Switch to focused display (default) |
-| `/oh-my-claudecode:hud full` | Switch to full display |
-| `/oh-my-claudecode:hud status` | Show detailed HUD status |
+| `/hud` | Show current HUD status (auto-setup if needed) |
+| `/hud setup` | Install/repair HUD statusline |
+| `/hud minimal` | Switch to minimal display |
+| `/hud focused` | Switch to focused display (default) |
+| `/hud full` | Switch to full display |
+| `/hud status` | Show detailed HUD status |
 
 ## Auto-Setup
 
-When you run `/oh-my-claudecode:hud` or `/oh-my-claudecode:hud setup`, the system will automatically:
+When you run `/hud` or `/hud setup`, the system will automatically:
 1. Check if `~/.claude/hud/omc-hud.mjs` exists
 2. Check if `statusLine` is configured in `~/.claude/settings.json`
 3. If missing, create the HUD wrapper script and configure settings
@@ -46,21 +45,11 @@ if [ -n "$PLUGIN_VERSION" ]; then
 fi
 ```
 
-**⚠️ CRITICAL: If NOT_BUILT, the plugin MUST be compiled before the HUD can work!**
-
-**WHY THIS HAPPENS:** The `dist/` directory contains compiled TypeScript code and is NOT stored on GitHub (it's in .gitignore). When you install the plugin from the marketplace, the build step happens automatically via the `prepare` script during `npm install`. However, if the plugin wasn't properly installed or the build failed, you'll get this error.
-
-**THE FIX:** Run npm install in the plugin directory to build it:
+**If NOT_BUILT**, the plugin needs to be compiled. Run:
 ```bash
 cd ~/.claude/plugins/cache/omc/oh-my-claudecode/$PLUGIN_VERSION && npm install
 ```
-
-This will:
-1. Install all dependencies
-2. Run the `prepare` script which executes `npm run build`
-3. Generate the `dist/hud/index.js` file that the HUD wrapper needs
-
-**DO NOT** try to download `dist/hud/index.js` from GitHub raw URLs - it doesn't exist there!
+This will install dependencies and build the TypeScript code automatically (via the `prepare` script).
 
 **Step 3:** If omc-hud.mjs is MISSING or argument is `setup`, create the HUD directory and script:
 
@@ -81,23 +70,9 @@ Then, use the Write tool to create `~/.claude/hud/omc-hud.mjs` with this exact c
 import { existsSync, readdirSync } from "node:fs";
 import { homedir } from "node:os";
 import { join } from "node:path";
-import { pathToFileURL } from "node:url";
-
-// Semantic version comparison: returns negative if a < b, positive if a > b, 0 if equal
-function semverCompare(a, b) {
-  const pa = a.replace(/^v/, "").split(".").map(Number);
-  const pb = b.replace(/^v/, "").split(".").map(Number);
-  for (let i = 0; i < Math.max(pa.length, pb.length); i++) {
-    const na = pa[i] || 0;
-    const nb = pb[i] || 0;
-    if (na !== nb) return na - nb;
-  }
-  return 0;
-}
 
 async function main() {
   const home = homedir();
-  let pluginCacheDir = null;
 
   // 1. Try plugin cache first (marketplace: omc, plugin: oh-my-claudecode)
   const pluginCacheBase = join(home, ".claude/plugins/cache/omc/oh-my-claudecode");
@@ -105,11 +80,10 @@ async function main() {
     try {
       const versions = readdirSync(pluginCacheBase);
       if (versions.length > 0) {
-        const latestVersion = versions.sort(semverCompare).reverse()[0];
-        pluginCacheDir = join(pluginCacheBase, latestVersion);
-        const pluginPath = join(pluginCacheDir, "dist/hud/index.js");
+        const latestVersion = versions.sort().reverse()[0];
+        const pluginPath = join(pluginCacheBase, latestVersion, "dist/hud/index.js");
         if (existsSync(pluginPath)) {
-          await import(pathToFileURL(pluginPath).href);
+          await import(pluginPath);
           return;
         }
       }
@@ -127,18 +101,14 @@ async function main() {
   for (const devPath of devPaths) {
     if (existsSync(devPath)) {
       try {
-        await import(pathToFileURL(devPath).href);
+        await import(devPath);
         return;
       } catch { /* continue */ }
     }
   }
 
-  // 3. Fallback - HUD not found (provide actionable error message)
-  if (pluginCacheDir) {
-    console.log(`[OMC] HUD not built. Run: cd "${pluginCacheDir}" && npm install`);
-  } else {
-    console.log("[OMC] Plugin not found. Run: /oh-my-claudecode:omc-setup");
-  }
+  // 3. Fallback
+  console.log("[OMC] active");
 }
 
 main();
@@ -151,31 +121,12 @@ chmod +x ~/.claude/hud/omc-hud.mjs
 
 **Step 4:** Update settings.json to use the HUD:
 
-Read `~/.claude/settings.json`, then update/add the `statusLine` field.
-
-**IMPORTANT:** The command must use an absolute path, not `~`, because Windows does not expand `~` in shell commands.
-
-First, determine the correct path:
-```bash
-node -e "const p=require('path').join(require('os').homedir(),'.claude','hud','omc-hud.mjs');console.log(JSON.stringify(p))"
-```
-
-Then set the `statusLine` field using the resolved path. On Unix it will look like:
+Read `~/.claude/settings.json`, then update/add the `statusLine` field:
 ```json
 {
   "statusLine": {
     "type": "command",
-    "command": "node /home/username/.claude/hud/omc-hud.mjs"
-  }
-}
-```
-
-On Windows it will look like:
-```json
-{
-  "statusLine": {
-    "type": "command",
-    "command": "node C:\\Users\\username\\.claude\\hud\\omc-hud.mjs"
+    "command": "node ~/.claude/hud/omc-hud.mjs"
   }
 }
 ```
@@ -260,9 +211,7 @@ You can manually edit the config file:
     "contextBar": true,
     "agents": true,
     "backgroundTasks": true,
-    "todos": true,
-    "showCache": true,
-    "showCost": true
+    "todos": true
   },
   "thresholds": {
     "contextWarning": 70,
@@ -275,9 +224,9 @@ You can manually edit the config file:
 ## Troubleshooting
 
 If the HUD is not showing:
-1. Run `/oh-my-claudecode:hud setup` to auto-install and configure
+1. Run `/hud setup` to auto-install and configure
 2. Restart Claude Code after setup completes
-3. If still not working, run `/oh-my-claudecode:doctor` for full diagnostics
+3. If still not working, run `/doctor` for full diagnostics
 
 Manual verification:
 - HUD script: `~/.claude/hud/omc-hud.mjs`

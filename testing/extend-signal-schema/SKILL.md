@@ -229,7 +229,7 @@ When using this skill, you MUST NOT:
 
 - **Modify Eliza agents or gateways**:
   - Do NOT edit Eliza agent configs, character specs, or runtime behavior.
-  - Do NOT modify afi-gateway.
+  - Do NOT modify afi-eliza-gateway.
 
 - **Touch infra/ops**:
   - Do NOT modify deployment configs, Terraform, K8s, or CI/CD.
@@ -302,7 +302,7 @@ exactly what changed and why.
   → Belongs in afi-token (escalate to human).
 
 - "Update Eliza agent character specs to use the new field."
-  → Belongs in afi-gateway (escalate to human).
+  → Belongs in afi-eliza-gateway (escalate to human).
 
 - "Add a new validator that calls an external API."
   → Requires explicit approval (escalate to human).

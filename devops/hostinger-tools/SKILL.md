@@ -2,7 +2,6 @@
 name: hostinger-tools
 type: complex
 depth: base
-user-invocable: false
 description: >-
   Executes Hostinger API operations via Python wrapper. Use when managing VPS
   instances, Docker Compose projects, DNS records, domains, firewalls, SSH keys,

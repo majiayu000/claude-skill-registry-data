@@ -183,7 +183,8 @@ When using this skill, you MUST NOT:
 - Create or modify validators or schemas in `afi-reactor`.
   - Those belong in `afi-core` or `afi-config`.
 - Duplicate or move canonical logic from `afi-core` into `afi-reactor`.
-- Modify any other repos (`afi-token`, `afi-config`, `afi-ops`, `afi-infra`, etc.).
+- Modify any other repos (`afi-token`, `afi-eliza-gateway`, `afi-config`,
+  `afi-ops`, `afi-infra`, etc.).
 - Introduce new external services, queues, or transports.
 - Perform large, sweeping refactors of the DAG architecture without explicit
   human approval.

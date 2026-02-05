@@ -20,31 +20,12 @@ All framework commands should load this skill first to establish:
 ## Project Templates
 
 These templates are used when creating project structure:
-
-**Planning documents:**
 - `references/VISION-template.md` - Vision document structure
-- `references/DELTAS-template.md` - Delta inventory structure (work tracking)
-- `references/DEPENDENCIES-template.md` - Dependency matrix structure (delta dependencies)
-
-**Decision documents:**
+- `references/FEATURES-template.md` - Feature inventory structure
+- `references/DEPENDENCIES-template.md` - Dependency matrix structure
+- `references/BACKLOG-template.md` - Backlog for bugs, ideas, improvements, tech-debt, questions
 - `references/ADR-template.md` - Architecture Decision Record format
 - `references/DES-template.md` - Design Pattern document format
-
-**Feature documentation:**
-- `../working-on-delta/references/feature-spec.md` - Long-lived feature specification
-- `../working-on-delta/references/feature-design.md` - Long-lived feature design
-- `../working-on-delta/references/feature-domain-readme.md` - Domain index template
-- `../working-on-delta/references/feature-specs-readme.md` - Top-level feature index
-
-**Delta working documents:**
-- `../working-on-delta/references/delta-spec.md` - Delta specification (working doc)
-- `../working-on-delta/references/delta-design.md` - Delta design (working doc)
-- `../working-on-delta/references/implementation-plan.md` - Implementation plan (working doc)
-
-**Guidance documents** (how to write each document type):
-- `../working-on-delta/references/spec-template.md` - How to write delta specifications
-- `../working-on-delta/references/design-template.md` - How to write design rationale
-- `../working-on-delta/references/plan-template.md` - How to write implementation plans
 
 ## Decision Types Reference
 
@@ -56,19 +37,39 @@ Load `references/decision-types.md` when:
 
 This reference contains the full decision tree and examples for choosing between ADRs (one-time architectural choices) and DES (repeatable patterns).
 
+## Backlog System
+
+The backlog tracks items not ready for full feature treatment:
+- **Bugs** (BUG-) - Issues to fix via `/review-code`
+- **Ideas** (IDEA-) - May be promoted to features via `/add-feature`
+- **Improvements** (IMP-) - Enhancements to fix via `/review-code`
+- **Tech Debt** (DEBT-) - Cleanup items via `/review-code`
+- **Questions** (Q-) - Resolve via `/decision`
+
+Use `${CLAUDE_PLUGIN_ROOT}/scripts/backlog.py` for management:
+```bash
+python ${CLAUDE_PLUGIN_ROOT}/scripts/backlog.py list      # List open items
+python ${CLAUDE_PLUGIN_ROOT}/scripts/backlog.py show ID   # Show item details
+python ${CLAUDE_PLUGIN_ROOT}/scripts/backlog.py add TYPE "TITLE" --priority N
+python ${CLAUDE_PLUGIN_ROOT}/scripts/backlog.py fix ID    # Mark as fixed
+python ${CLAUDE_PLUGIN_ROOT}/scripts/backlog.py promote ID --feature FEATURE-ID
+```
+
+Priority scale: 1=critical, 2=high, 3=medium, 4=low, 5=someday
+
 ## State Detection
 
 Before executing any command, detect project state:
 
 ### 1. Not Initialized
-**Condition:** No `docs/planning/` directory exists
+**Condition:** No `planning/` directory exists
 
 **Action:**
 - If no significant code exists → Offer `/katachi:init-framework`
 - If code exists → Explain retrofit options
 
 ### 2. Partially Initialized
-**Condition:** `docs/planning/` exists but missing VISION.md, DELTAS.md, or DEPENDENCIES.md
+**Condition:** `planning/` exists but missing VISION.md, FEATURES.md, or DEPENDENCIES.md
 
 **Action:**
 - List what's missing
@@ -140,15 +141,15 @@ Throughout the entire process:
 Track state in `/tmp/<command>-state.md`:
 
 **Commands with natural IDs:**
-- For `-delta` commands, include the delta ID: `/tmp/<command>-<FEATURE-ID>-state.md`
-  - `/spec-delta`: `/tmp/spec-<FEATURE-ID>-state.md`
-  - `/design-delta`: `/tmp/design-<FEATURE-ID>-state.md`
-  - `/plan-delta`: `/tmp/plan-<FEATURE-ID>-state.md`
-  - `/implement-delta`: `/tmp/implement-<FEATURE-ID>-state.md`
+- For `-feature` commands, include the feature ID: `/tmp/<command>-<FEATURE-ID>-state.md`
+  - `/spec-feature`: `/tmp/spec-<FEATURE-ID>-state.md`
+  - `/design-feature`: `/tmp/design-<FEATURE-ID>-state.md`
+  - `/plan-feature`: `/tmp/plan-<FEATURE-ID>-state.md`
+  - `/implement-feature`: `/tmp/implement-<FEATURE-ID>-state.md`
 
 **Commands without natural IDs (parallel execution support):**
 - Generate unique animal-adjective ID: `/tmp/<command>-<animal-adjective>-state.md`
-  - `/add-delta`: `/tmp/add-delta-<animal-adjective>-state.md`
+  - `/add-feature`: `/tmp/add-feature-<animal-adjective>-state.md`
   - `/analyze`: `/tmp/analyze-<animal-adjective>-state.md`
   - `/analyze-impact`: `/tmp/analyze-impact-<animal-adjective>-state.md`
   - `/decision`: `/tmp/decision-<animal-adjective>-state.md`
@@ -157,7 +158,7 @@ Track state in `/tmp/<command>-state.md`:
   - Keep state files after completion (don't auto-clean) for debugging/audit trail
 
 **Commands that don't need parallel support:**
-- `/vision`, `/deltas`, `/dependencies` - Sequential execution sufficient, use `/tmp/<command>-state.md`
+- `/vision`, `/features`, `/dependencies` - Sequential execution sufficient, use `/tmp/<command>-state.md`
 
 **Commands without scratchpads:**
 - `/commit`, `/record-learnings` - No scratchpad needed
@@ -218,37 +219,26 @@ Use Task tool (general-purpose agent) to research, then synthesize findings to i
    - Research official documentation for libraries/frameworks/APIs
    - Build understanding without asking upfront questions
 
-2. **Draft proposal (with decision points)**
+2. **Draft proposal**
    - Create complete document following template
    - Base all choices on research findings
    - Note any uncertainties/assumptions clearly
-   - **If choices require user input:** Use AskUserQuestion (ambiguous requirements, multiple valid approaches, trade-offs)
 
-3. **External validation (silent)**
-   - Dispatch appropriate reviewer agent
-   - Agent provides structured feedback
-
-4. **Apply validation feedback (silent, with decision points)**
-   - Apply ALL recommendations automatically
-   - **If applying requires a choice:** Use AskUserQuestion (multiple valid fixes, conflicts with earlier decisions)
-   - Track changes for presentation
-
-5. **Present validated document**
-   - Show complete document to user
-   - Include summary of applied validation fixes
-   - Highlight unresolved issues
+3. **Present for review**
+   - Show complete proposal to user
+   - Highlight uncertainties and ask about them
    - Invite user feedback: "What needs adjustment?"
 
-6. **Iterate based on user feedback**
+4. **Iterate**
    - Apply user corrections/additions
-   - Re-run validation if significant changes
+   - Re-present updated sections if significant changes
    - Repeat until user approves
 
-7. **Finalize**
+5. **Finalize**
+   - Apply any validation step (if command includes it)
    - Write document to file
-   - Update status
 
-**Key principle:** Validate before presenting, auto-apply fixes. Only use AskUserQuestion for genuine decisions (multiple valid options), not for fixes.
+**Key principle:** Always draft first, no upfront questions. Questions happen during review phase.
 
 ### Validation Best Practices
 
@@ -258,8 +248,8 @@ Dispatch the appropriate reviewer agent for validation:
 
 | Document Type | Reviewer Agent |
 |--------------|----------------|
-| Delta Spec | `katachi:spec-reviewer` |
-| Delta Design | `katachi:design-reviewer` |
+| Feature Spec | `katachi:spec-reviewer` |
+| Feature Design | `katachi:design-reviewer` |
 | Implementation Plan | `katachi:plan-reviewer` |
 | Implemented Code | `katachi:code-reviewer` |
 | Change Impact | `katachi:impact-analyzer` |
@@ -297,7 +287,7 @@ Balance fresh perspective with respecting user decisions:
 
 ## Status Tracking
 
-Conventions for tracking delta progress through the development workflow.
+Conventions for tracking feature progress through the development workflow.
 
 ### Status Symbols
 
@@ -309,26 +299,26 @@ Conventions for tracking delta progress through the development workflow.
 
 ### Status Progression
 
-Deltas progress through these stages:
+Features progress through these phases:
 
 ```
-✗ Defined         (initial state - delta in DELTAS.md)
+✗ Defined         (initial state - feature in FEATURES.md)
     ↓
-⧗ Spec            (/spec-delta starts)
+⧗ Spec            (/spec-feature starts)
     ↓
-✓ Spec            (/spec-delta completes)
+✓ Spec            (/spec-feature completes)
     ↓
-⧗ Design          (/design-delta starts)
+⧗ Design          (/design-feature starts)
     ↓
-✓ Design          (/design-delta completes)
+✓ Design          (/design-feature completes)
     ↓
-⧗ Plan            (/plan-delta starts)
+⧗ Plan            (/plan-feature starts)
     ↓
-✓ Plan            (/plan-delta completes)
+✓ Plan            (/plan-feature completes)
     ↓
-⧗ Implementation  (/implement-delta starts)
+⧗ Implementation  (/implement-feature starts)
     ↓
-✓ Implementation  (/implement-delta completes)
+✓ Implementation  (/implement-feature completes)
 ```
 
 ### When to Update Status
@@ -336,114 +326,64 @@ Deltas progress through these stages:
 #### At Command Start
 Set status to in-progress state (⧗) for the current phase.
 
-Example: `/spec-delta CORE-001` → set status to "⧗ Spec"
+Example: `/spec-feature CORE-001` → set status to "⧗ Spec"
 
 #### At Command Completion
 Set status to complete state (✓) for the current phase.
 
-Example: `/spec-delta CORE-001` finishes → set status to "✓ Spec"
+Example: `/spec-feature CORE-001` finishes → set status to "✓ Spec"
 
 ### How to Update Status
 
-Use the deltas.py script:
+Use the features.py script:
 
 ```bash
 # Set status
-python ${CLAUDE_PLUGIN_ROOT}/scripts/deltas.py status set FEATURE-ID "STATUS"
+python scripts/features.py status set FEATURE-ID "STATUS"
 
 # Examples
-python ${CLAUDE_PLUGIN_ROOT}/scripts/deltas.py status set CORE-001 "⧗ Spec"
-python ${CLAUDE_PLUGIN_ROOT}/scripts/deltas.py status set CORE-001 "✓ Spec"
-python ${CLAUDE_PLUGIN_ROOT}/scripts/deltas.py status set CORE-001 "⧗ Design"
+python scripts/features.py status set CORE-001 "⧗ Spec"
+python scripts/features.py status set CORE-001 "✓ Spec"
+python scripts/features.py status set CORE-001 "⧗ Design"
 ```
 
 ### Querying Status
 
 ```bash
-# List all deltas with status
-python ${CLAUDE_PLUGIN_ROOT}/scripts/deltas.py status list
+# List all features with status
+python scripts/features.py status list
+
+# Filter by phase
+python scripts/features.py status list --phase 1
 
 # Filter by category
-python ${CLAUDE_PLUGIN_ROOT}/scripts/deltas.py status list --category CORE
+python scripts/features.py status list --category CORE
 
 # Filter by status
-python ${CLAUDE_PLUGIN_ROOT}/scripts/deltas.py status list --status "✓ Spec"
+python scripts/features.py status list --status "✓ Spec"
 
-# Show detailed delta status
-python ${CLAUDE_PLUGIN_ROOT}/scripts/deltas.py status show CORE-001
+# Show detailed feature status
+python scripts/features.py status show CORE-001
 ```
 
-### Status in DELTAS.md
+### Status in FEATURES.md
 
-Status is stored in DELTAS.md as a column:
+Status is stored in FEATURES.md as a column:
 
 ```markdown
 | ID | Description | Complexity | Status |
 |----|-------------|------------|--------|
-| CORE-001 | Delta description | Medium | ✓ Design |
-| CORE-002 | Another delta | Easy | ⧗ Spec |
+| CORE-001 | Feature description | Medium | ✓ Design |
+| CORE-002 | Another feature | Easy | ⧗ Spec |
 ```
 
 ### Ready to Implement
 
-A delta is ready to implement when:
+A feature is ready to implement when:
 1. All dependencies have status "✓ Implementation" or higher
-2. The delta has status "✓ Plan"
+2. The feature has status "✓ Plan"
 
 Use this command to check:
 ```bash
-python ${CLAUDE_PLUGIN_ROOT}/scripts/deltas.py ready
+python scripts/features.py ready
 ```
-
----
-
-## Task Management Protocol
-
-Use Claude Code's task tools to track workflow progress within each command.
-
-### Purpose
-
-Tasks provide:
-- Visibility into what the command will do (upfront planning)
-- Progress tracking via spinner with activeForm text
-- Clear completion state for each phase
-
-### When to Create Tasks
-
-Create tasks at command start, after loading skills and reading initial context. Create all tasks upfront with dependencies before beginning work.
-
-### Task Guidelines
-
-**Identify workflow phases:** Review the command's process steps and identify distinct phases (research, draft, validate, iterate, finalize, etc.)
-
-**Create one task per phase:** Each phase becomes a task with:
-- `subject`: Imperative action (e.g., "Research context for {ID}")
-- `description`: Brief explanation of what happens in this phase
-- `activeForm`: Present participle shown in spinner (e.g., "Researching context")
-
-**Set dependencies:** Use `TaskUpdate` with `addBlockedBy` to create a chain. Phases that must complete before others are blocked.
-
-**Include identifiers:** When working with a delta or using a scratchpad ID, include it in task subjects for clarity.
-
-**Progress through tasks:**
-1. Mark task as `in_progress` when starting the phase
-2. Do the work
-3. Mark task as `completed` when done
-4. Move to next task
-
-### Integration with Status Tracking
-
-Task management complements delta status tracking:
-
-| System | Purpose | Scope |
-|--------|---------|-------|
-| `deltas.py` + DELTAS.md | Delta lifecycle status | Cross-session |
-| Claude Code Tasks | Workflow phase progress | Within command |
-
-Update both at appropriate points:
-- `deltas.py status set` at command start/completion (delta lifecycle)
-- `TaskUpdate` as each workflow phase starts/completes (session visibility)
-
-### Commands Without Tasks
-
-Some simple commands may not need task tracking (single-step operations, simple extractions). Use judgment - if there are distinct phases worth tracking, create tasks.

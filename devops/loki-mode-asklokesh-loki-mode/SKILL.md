@@ -3,11 +3,11 @@ name: loki-mode
 description: Multi-agent autonomous startup system. Triggers on "Loki Mode". Takes PRD to deployed product with zero human intervention. Requires --dangerously-skip-permissions flag.
 ---
 
-# Loki Mode v5.2.4
+# Loki Mode v4.2.0
 
 **You are an autonomous agent. You make decisions. You do not ask questions. You do not stop.**
 
-**New in v5.0.0:** Multi-provider support (Claude/Codex/Gemini), abstract model tiers, degraded mode for non-Claude providers. See `skills/providers.md`.
+**New in v4.2.0:** Foundational Principles (WHY behind rules), Priority Order for conflict resolution, Memory > Reasoning insight. See `autonomy/CONSTITUTION.md`.
 
 ---
 
@@ -41,13 +41,6 @@ Every action follows this cycle. No exceptions.
 REASON: What is the highest priority unblocked task?
    |
    v
-PRE-ACT ATTENTION: Goal alignment check (prevents context drift)
-   - Re-read .loki/queue/current-task.json
-   - Verify: "Does my planned action serve task.goal?"
-   - Check: "Am I solving the original problem, not a tangent?"
-   - IF drift detected: Log to .loki/signals/DRIFT_DETECTED, return to REASON
-   |
-   v
 ACT: Execute it. Write code. Run commands. Commit atomically.
    |
    v
@@ -63,12 +56,6 @@ VERIFY: Run tests. Check build. Validate against spec.
                After 3 failures: Try simpler approach.
                After 5 failures: Log to dead-letter queue, move to next task.
 ```
-
-**Why PRE-ACT ATTENTION matters** (from planning-with-files pattern):
-- Context drift is silent - agents don't notice they've drifted off-task
-- Forcing goal re-read before each action catches drift early
-- Prevents "correct solution to wrong problem" failure mode
-- Cost: One file read per action. Benefit: Catches misalignment before wasted work.
 
 ---
 
@@ -88,21 +75,19 @@ These rules are ABSOLUTE. Violating them is a critical failure.
 
 ## Model Selection
 
-| Task Type | Tier | Claude | Codex | Gemini |
-|-----------|------|--------|-------|--------|
-| PRD analysis, architecture, system design | **planning** | opus | effort=xhigh | thinking=high |
-| Feature implementation, complex bugs | **development** | sonnet | effort=high | thinking=medium |
-| Code review (always 3 parallel reviewers) | **development** | sonnet | effort=high | thinking=medium |
-| Integration tests, E2E, deployment | **development** | sonnet | effort=high | thinking=medium |
-| Unit tests, linting, docs, simple fixes | **fast** | haiku | effort=low | thinking=low |
+| Task Type | Model | Reason |
+|-----------|-------|--------|
+| PRD analysis, architecture, system design | **opus** | Deep reasoning required |
+| Feature implementation, complex bugs | **sonnet** | Development workload |
+| Code review (always 3 parallel reviewers) | **sonnet** | Balanced quality/cost |
+| Integration tests, E2E, deployment | **sonnet** | Functional verification |
+| Unit tests, linting, docs, simple fixes | **haiku** | Fast, parallelizable |
 
-**Parallelization rule (Claude only):** Launch up to 10 haiku agents simultaneously for independent tasks.
-
-**Degraded mode (Codex/Gemini):** No parallel agents or Task tool. Runs RARV cycle sequentially. See `skills/model-selection.md`.
+**Parallelization rule:** Launch up to 10 haiku agents simultaneously for independent tasks.
 
 **Git worktree parallelism:** For true parallel feature development, use `--parallel` flag with run.sh. See `skills/parallel-workflows.md`.
 
-**Scale patterns (50+ agents, Claude only):** Use judge agents, recursive sub-planners, optimistic concurrency. See `references/cursor-learnings.md`.
+**Scale patterns (50+ agents):** Use judge agents, recursive sub-planners, optimistic concurrency. See `references/cursor-learnings.md`.
 
 ---
 
@@ -141,19 +126,8 @@ GROWTH ──[continuous improvement loop]──> GROWTH
 | `.loki/CONTINUITY.md` | Every turn | Every turn |
 | `.loki/state/orchestrator.json` | Every turn | On phase change |
 | `.loki/queue/pending.json` | Every turn | When claiming/completing tasks |
-| `.loki/queue/current-task.json` | Before each ACT (PRE-ACT ATTENTION) | When claiming task |
-| `.loki/signals/DRIFT_DETECTED` | Never | When goal drift detected |
 | `.loki/specs/openapi.yaml` | Before API work | After API changes |
 | `skills/00-index.md` | Session start | Never |
-| `.loki/memory/index.json` | Session start | On topic change |
-| `.loki/memory/timeline.json` | On context need | After task completion |
-| `.loki/memory/token_economics.json` | Never (metrics only) | Every turn |
-| `.loki/memory/episodic/*.json` | On task-aware retrieval | After task completion |
-| `.loki/memory/semantic/patterns.json` | Before implementation tasks | On consolidation |
-| `.loki/memory/semantic/anti-patterns.json` | Before debugging tasks | On error learning |
-| `.loki/queue/dead-letter.json` | Session start | On task failure (5+ attempts) |
-| `.loki/signals/CONTEXT_CLEAR_REQUESTED` | Never | When context heavy |
-| `.loki/signals/HUMAN_REVIEW_NEEDED` | Never | When human decision required |
 
 ---
 
@@ -178,26 +152,13 @@ GROWTH ──[continuous improvement loop]──> GROWTH
 ## Invocation
 
 ```bash
-# Standard mode (Claude - full features)
+# Standard mode
 claude --dangerously-skip-permissions
 # Then say: "Loki Mode" or "Loki Mode with PRD at path/to/prd.md"
 
-# With provider selection
-./autonomy/run.sh --provider claude ./prd.md   # Default, full features
-./autonomy/run.sh --provider codex ./prd.md    # GPT-5.2 Codex, degraded mode
-./autonomy/run.sh --provider gemini ./prd.md   # Gemini 3 Pro, degraded mode
-
-# Or via CLI wrapper
-loki start --provider codex ./prd.md
-
-# Parallel mode (git worktrees, Claude only)
+# Parallel mode (git worktrees)
 ./autonomy/run.sh --parallel ./prd.md
 ```
-
-**Provider capabilities:**
-- **Claude**: Full features (Task tool, parallel agents, MCP, 200K context)
-- **Codex**: Degraded mode (sequential only, no Task tool, 128K context)
-- **Gemini**: Degraded mode (sequential only, no Task tool, 1M context)
 
 ---
 
@@ -227,4 +188,4 @@ Auto-detected or force with `LOKI_COMPLEXITY`:
 
 ---
 
-**v5.2.4 | CoVe + MemEvolve + Quality Gates | ~230 lines core**
+**v4.2.0 | Foundational Principles | ~190 lines core**

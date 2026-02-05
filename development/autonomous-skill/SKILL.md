@@ -1,240 +1,169 @@
 ---
 name: autonomous-skill
-description: 'Use when user wants to execute long-running tasks that require multiple sessions to complete. This skill manages task decomposition, progress tracking, and autonomous execution using Claude Code headless mode with auto-continuation. Trigger phrases: "autonomous", "long-running task", "multi-session", "自主执行", "长时任务", "autonomous skill".'
-allowed-tools: Read, Write, Edit, Glob, Grep, Task, Bash(cat:*), Bash(ls:*), Bash(tree:*), Bash(mkdir:*), Bash(touch:*), Bash(pwd:*), Bash(cd:*), Bash(grep:*), Bash(find:*), Bash(head:*), Bash(tail:*), Bash(claude:*)
+description: Use when user wants to execute long-running tasks that require multiple sessions to complete. This skill manages task decomposition, progress tracking, and autonomous execution using Codex non-interactive mode with auto-continuation. Trigger phrases include autonomous, long-running task, multi-session, 自主执行, 长时任务, autonomous skill.
 ---
 
 # Autonomous Skill - Long-Running Task Execution
 
-Execute complex, long-running tasks across multiple sessions using a dual-agent pattern (Initializer + Executor) with automatic session continuation.
+Execute complex, long-running tasks across multiple sessions using a dual-agent pattern (Initializer + Executor) with automatic session continuation via Codex non-interactive mode.
+
+## Quick Start
+
+Use the `run-session.sh` script to manage autonomous tasks:
+
+```bash
+# Start a new autonomous task
+~/.codex/skills/autonomous-skill/scripts/run-session.sh "Build a REST API for todo app"
+
+# Continue an existing task
+~/.codex/skills/autonomous-skill/scripts/run-session.sh --task-name build-rest-api-todo --continue
+
+# List all tasks and their progress
+~/.codex/skills/autonomous-skill/scripts/run-session.sh --list
+
+# Show help
+~/.codex/skills/autonomous-skill/scripts/run-session.sh --help
+```
 
 ## Directory Structure
 
 All task data is stored in `.autonomous/<task-name>/` under the project root:
 
-```
+```text
 project-root/
 └── .autonomous/
     ├── build-rest-api/
-    │   ├── task_list.md
-    │   └── progress.md
+    │   ├── task_list.md        # Master task checklist
+    │   ├── progress.md         # Session-by-session notes
+    │   ├── session.id          # Last Codex session ID for resumption
+    │   └── session.log         # JSON Lines output from sessions
     ├── refactor-auth/
     │   ├── task_list.md
-    │   └── progress.md
+    │   ├── progress.md
+    │   └── session.id
     └── ...
 ```
 
 This allows multiple autonomous tasks to run in parallel without conflicts.
 
+## Script Options
+
+```text
+Usage:
+  run-session.sh "task description"           Start new task (auto-generates name)
+  run-session.sh --task-name <name> --continue Continue specific task
+  run-session.sh --list                        List all tasks
+  run-session.sh --help                        Show help
+
+Options:
+  --task-name <name>       Specify task name explicitly
+  --continue, -c           Continue existing task
+  --no-auto-continue       Don't auto-continue after session
+  --max-sessions N         Limit to N sessions
+  --list                   List all existing tasks
+  --resume-last            Resume the most recent Codex session
+  --network                Enable network access (uses danger-full-access sandbox)
+```
+
 ## Workflow Overview
 
-```
-User Request → Generate Task Name → Create .autonomous/<task-name>/ → Execute Sessions
-```
-
-## Step 1: Initialize Task Directory
-
-Generate a task name from user's description and create the directory:
-
-```bash
-# Generate task name (lowercase, hyphens, max 30 chars)
-# Example: "Build a REST API for todo app" → "build-rest-api-todo"
-TASK_NAME=$(echo "$USER_TASK" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9]/-/g' | sed 's/--*/-/g' | cut -c1-30 | sed 's/-$//')
-
-# Create task directory
-TASK_DIR=".autonomous/$TASK_NAME"
-mkdir -p "$TASK_DIR"
-
-echo "Task directory: $TASK_DIR"
-```
-
-## Step 2: Analyze Current State
-
-Check if this is a new task or continuation:
-
-```bash
-TASK_DIR=".autonomous/$TASK_NAME"
-
-# Look for existing task list
-if [ -f "$TASK_DIR/task_list.md" ]; then
-  echo "=== CONTINUATION MODE ==="
-  echo "Found existing task at: $TASK_DIR"
-
-  # Show progress summary
-  TOTAL=$(grep -c '^\- \[' "$TASK_DIR/task_list.md" 2>/dev/null || echo "0")
-  DONE=$(grep -c '^\- \[x\]' "$TASK_DIR/task_list.md" 2>/dev/null || echo "0")
-  echo "Progress: $DONE/$TOTAL tasks completed"
-
-  # Show recent progress notes
-  echo ""
-  echo "=== Recent Progress ==="
-  head -50 "$TASK_DIR/task_list.md"
-else
-  echo "=== NEW TASK MODE ==="
-  echo "Creating new task at: $TASK_DIR"
-  mkdir -p "$TASK_DIR"
-fi
-```
-
-## Step 3: Choose Agent Mode
-
-### For NEW Tasks (Initializer Mode)
-
-If `task_list.md` does NOT exist in the task directory:
-
-```bash
-SKILL_DIR="${CLAUDE_PLUGIN_ROOT}/skills/autonomous-skill"
-TASK_DIR=".autonomous/$TASK_NAME"
-
-# Read the initializer prompt template
-INITIALIZER_PROMPT=$(cat "$SKILL_DIR/templates/initializer-prompt.md")
-
-# Execute initializer session
-claude -p "Task: $USER_TASK_DESCRIPTION
-Task Directory: $TASK_DIR
-
-$INITIALIZER_PROMPT" \
-  --output-format stream-json \
-  --max-turns 50 \
-  --append-system-prompt "You are the Initializer Agent. Create task_list.md and progress.md in $TASK_DIR directory."
-```
-
-### For CONTINUATION (Executor Mode)
-
-If `task_list.md` EXISTS in the task directory:
-
-```bash
-SKILL_DIR="${CLAUDE_PLUGIN_ROOT}/skills/autonomous-skill"
-TASK_DIR=".autonomous/$TASK_NAME"
-
-# Read the executor prompt template
-EXECUTOR_PROMPT=$(cat "$SKILL_DIR/templates/executor-prompt.md")
-
-# Read current state
-TASK_LIST=$(cat "$TASK_DIR/task_list.md")
-PROGRESS=$(cat "$TASK_DIR/progress.md" 2>/dev/null || echo "No previous progress notes")
-
-# Execute executor session
-claude -p "Continue working on the task.
-Task Directory: $TASK_DIR
-
-Current task_list.md:
-$TASK_LIST
-
-Previous progress notes:
-$PROGRESS
-
-$EXECUTOR_PROMPT" \
-  --output-format stream-json \
-  --max-turns 100 \
-  --append-system-prompt "You are the Executor Agent. Complete tasks and update files in $TASK_DIR directory."
-```
-
-## Step 4: Auto-Continue Loop
-
-After each session completes, check remaining tasks and auto-continue:
-
-```bash
-#!/bin/bash
-TASK_DIR=".autonomous/$TASK_NAME"
-AUTO_CONTINUE_DELAY=3
-SESSION_NUM=1
-
-while true; do
-  echo ""
-  echo "=========================================="
-  echo "  SESSION $SESSION_NUM - Task: $TASK_NAME"
-  echo "=========================================="
-
-  # Run the appropriate agent
-  # ... execute session ...
-
-  # Check completion
-  if [ -f "$TASK_DIR/task_list.md" ]; then
-    TOTAL=$(grep -c '^\- \[' "$TASK_DIR/task_list.md" 2>/dev/null || echo "0")
-    DONE=$(grep -c '^\- \[x\]' "$TASK_DIR/task_list.md" 2>/dev/null || echo "0")
-
-    echo ""
-    echo "=== Progress: $DONE/$TOTAL tasks completed ==="
-
-    if [ "$DONE" -eq "$TOTAL" ] && [ "$TOTAL" -gt 0 ]; then
-      echo ""
-      echo "All tasks completed! Exiting."
-      break
-    fi
-  fi
-
-  # Auto-continue with delay
-  echo ""
-  echo "Continuing in $AUTO_CONTINUE_DELAY seconds... (Press Ctrl+C to pause)"
-  sleep $AUTO_CONTINUE_DELAY
-
-  SESSION_NUM=$((SESSION_NUM + 1))
-done
-```
-
-## Step 5: Report Progress
-
-After execution, display a clear progress report:
-
-```
-==========================================
-  SESSION COMPLETE - Task: build-rest-api
-==========================================
-
-Task Directory: .autonomous/build-rest-api/
-
-Tasks completed this session:
-- [x] Task 5: Implement user authentication
-- [x] Task 6: Add login form validation
-
-Overall Progress: 18/50 tasks (36%)
-
-Next tasks:
-- [ ] Task 7: Create password reset flow
-- [ ] Task 8: Add session management
-
-Continuing in 3 seconds... (Press Ctrl+C to pause)
+```text
+User Request → Generate Task Name → Create .autonomous/<task-name>/ → Execute Codex Sessions
+                                                                            ↓
+                                                                    ┌───────────────┐
+                                                                    │ task_list.md  │
+                                                                    │ exists?       │
+                                                                    └───────┬───────┘
+                                                                            │
+                                                    ┌───────────────────────┴───────────────────────┐
+                                                    │ NO                                        YES │
+                                                    ▼                                              ▼
+                                            ┌───────────────┐                            ┌───────────────┐
+                                            │  INITIALIZER  │                            │   EXECUTOR    │
+                                            │  - Analyze    │                            │  - Read state │
+                                            │  - Break down │                            │  - Next task  │
+                                            │  - Create     │                            │  - Implement  │
+                                            │    task_list  │                            │  - Mark done  │
+                                            └───────────────┘                            └───────────────┘
+                                                                            │
+                                                                            ▼
+                                                                    ┌───────────────┐
+                                                                    │ All complete? │
+                                                                    └───────┬───────┘
+                                                                            │
+                                                            ┌───────────────┴───────────────┐
+                                                            │ NO                        YES │
+                                                            ▼                              ▼
+                                                    Auto-continue               Exit with success
+                                                    (3 sec delay)
 ```
 
 ## Usage Examples
 
 ### Example 1: Start New Task
 
+```bash
+~/.codex/skills/autonomous-skill/scripts/run-session.sh "Build a REST API for todo app"
 ```
-User: Please use autonomous skill to build a REST API for a todo app
 
-Response:
-1. Generated task name: "build-rest-api-todo"
-2. Created directory: .autonomous/build-rest-api-todo/
-3. Running Initializer Agent...
-4. Created task_list.md with 25 tasks
-5. Progress: 3/25 completed
-6. Auto-continuing in 3 seconds...
+Output:
+```text
+ℹ Generated task name: build-rest-api-todo
+==========================================
+  SESSION 1 - build-rest-api-todo
+==========================================
+
+==========================================
+  INITIALIZER SESSION
+==========================================
+Task: Build a REST API for todo app
+Task Name: build-rest-api-todo
+Task Directory: .autonomous/build-rest-api-todo
+
+[Codex creates task_list.md with 25 tasks...]
+
+✓ Initializer session complete
+ℹ Session ID saved: 550e8400-e29b-41d4-a716-446655440000
+
+=== Progress: 0/25 ===
+
+Continuing in 3 seconds... (Press Ctrl+C to pause)
 ```
 
 ### Example 2: Continue Existing Task
 
-```
-User: Continue the autonomous task "build-rest-api-todo"
-
-Response:
-1. Found task: .autonomous/build-rest-api-todo/
-2. Current progress: 15/25 tasks
-3. Running Executor Agent...
-4. Completed tasks 16-17
-5. Progress: 17/25 completed
-6. Auto-continuing in 3 seconds...
+```bash
+~/.codex/skills/autonomous-skill/scripts/run-session.sh --task-name build-rest-api-todo --continue
 ```
 
-### Example 3: List All Tasks
+### Example 3: Resume with Session Context
 
 ```bash
-# List all autonomous tasks
-ls -la .autonomous/
+# Resume the Codex session (preserves conversation context)
+~/.codex/skills/autonomous-skill/scripts/run-session.sh --task-name build-rest-api-todo --continue --resume-last
+```
 
-# Show progress for specific task
-cat .autonomous/build-rest-api-todo/task_list.md
+### Example 4: List All Tasks
+
+```bash
+~/.codex/skills/autonomous-skill/scripts/run-session.sh --list
+```
+
+Output:
+```text
+==========================================
+  AUTONOMOUS TASKS
+==========================================
+  ✓ build-rest-api-todo (25/25 - 100% complete) [session: 550e8400...]
+  ○ refactor-auth (12/30 - 40%) [session: 661f9511...]
+  ? incomplete-task (no task_list.md)
+```
+
+### Example 5: With Network Access
+
+```bash
+# Enable network access for tasks that need API calls
+~/.codex/skills/autonomous-skill/scripts/run-session.sh --network "Fetch data from GitHub API and analyze"
 ```
 
 ## Key Files
@@ -245,20 +174,41 @@ For each task in `.autonomous/<task-name>/`:
 |------|---------|
 | `task_list.md` | Master task list with checkbox progress |
 | `progress.md` | Session-by-session progress notes |
+| `session.id` | Last Codex session ID for resumption |
+| `session.log` | JSON Lines output from Codex sessions |
 
 ## Important Notes
 
 1. **Task Isolation**: Each task has its own directory, no conflicts
-2. **Task Naming**: Auto-generated from description (lowercase, hyphens)
-3. **Task List is Sacred**: Never delete or modify descriptions, only mark `[x]`
+2. **Task Naming**: Auto-generated from description (lowercase, hyphens, max 30 chars)
+3. **Task List is Sacred**: Never delete or modify task descriptions, only mark `[x]`
 4. **One Task at a Time per Session**: Focus on completing tasks thoroughly
 5. **Auto-Continue**: Sessions auto-continue with 3s delay; Ctrl+C to pause
+6. **Session Resumption**: Use `--resume-last` to preserve Codex conversation context
+
+## Codex CLI Reference
+
+The script uses these Codex commands internally:
+
+```bash
+# Non-interactive execution with file edits (fully autonomous)
+# --full-auto: autonomous execution with workspace-write sandbox
+codex exec --full-auto --json "prompt"
+
+# Resume previous session
+codex exec --full-auto --json resume <SESSION_ID> "prompt"
+
+# Full access (file edits + network) - use with caution!
+codex exec --dangerously-bypass-approvals-and-sandbox --json "prompt"
+```
 
 ## Troubleshooting
 
 | Issue | Solution |
 |-------|----------|
-| Task not found | Check `.autonomous/` for existing tasks |
-| Multiple tasks | Specify task name explicitly |
-| Session stuck | Check `progress.md` in task directory |
+| Task not found | Run `--list` to see existing tasks |
+| Multiple tasks | Specify task name with `--task-name` |
+| Session stuck | Check `session.log` in task directory |
 | Need to restart | Delete task directory and start fresh |
+| Resume failed | Remove `session.id` to start fresh session |
+| Codex not found | Install Codex CLI: `npm install -g @openai/codex` |

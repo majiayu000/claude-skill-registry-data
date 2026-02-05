@@ -5,32 +5,6 @@ description: DEX liquidity analysis and slippage estimation for MEV trading. Use
 
 # Liquidity Depth Analyzer
 
-DEX liquidity analysis and slippage estimation for MEV trading.
-
-## When to Use
-
-- Implementing swap execution
-- Selecting optimal routes
-- Sizing positions for trades
-- Calculating price impact
-- Validating arbitrage profitability
-
-## Workflow
-
-### Step 1: Check Liquidity Depth
-
-Verify depth >= 3x trade size.
-
-### Step 2: Calculate Price Impact
-
-Ensure impact < 0.5% (50 bps).
-
-### Step 3: Validate Profit After Slippage
-
-Confirm profit survives slippage tolerance.
-
----
-
 ## Core Rule
 
 **Never execute without knowing:**

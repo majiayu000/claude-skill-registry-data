@@ -517,7 +517,6 @@ pce_memory_upsert({
 | `/eld-model-term-card` | Term Cardの作成 |
 | `/eld-ground-check` | Law/Termの接地状況検証 |
 | `/eld-ground-evaluate` | 成果物評価 |
-| `/systematic-test-design` | 体系的テスト設計（ユニットテスト＋PBT統合） |
 
 ---
 

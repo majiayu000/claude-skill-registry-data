@@ -1,8 +1,6 @@
 ---
 name: carmenta-copy
-# prettier-ignore
-description: Use when writing user-facing copy, error messages, UI text, empty states, onboarding, or reviewing voice/tone
-version: 1.1.2
+description: "Invoke for Carmenta user-facing copy and voice review"
 ---
 
 <objective>

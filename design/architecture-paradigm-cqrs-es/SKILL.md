@@ -1,14 +1,12 @@
 ---
 name: architecture-paradigm-cqrs-es
 description: |
-
-Triggers: event-sourcing, architecture, scalability, distributed-systems, audit-trail
   CQRS and Event Sourcing for auditability, read/write separation, and temporal queries.
 
   Triggers: CQRS, event sourcing, audit trail, temporal queries
   Use when: read/write scaling differs or audit trail required
   DO NOT use when: simple CRUD - use architecture-paradigms first.
-version: 1.3.5
+version: 1.0.0
 category: architectural-pattern
 tags: [architecture, CQRS, Event-Sourcing, distributed-systems, audit-trail, scalability]
 dependencies: []
@@ -48,15 +46,3 @@ estimated_tokens: 800
   - **Mitigation**: Users may be confused by delays between performing an action and seeing the result. Clearly document the SLAs for read model updates and manage user-facing expectations accordingly, for example, by providing immediate feedback on the command side.
 - **Schema Drift**:
   - **Mitigation**: An unplanned change to an event schema can break consumers. Enforce the use of a formal schema registry and implement version gates in the CI/CD pipeline to prevent the emission of unvalidated event versions.
-## Troubleshooting
-
-### Common Issues
-
-**Command not found**
-Ensure all dependencies are installed and in PATH
-
-**Permission errors**
-Check file permissions and run with appropriate privileges
-
-**Unexpected behavior**
-Enable verbose logging with `--verbose` flag

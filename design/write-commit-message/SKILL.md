@@ -59,21 +59,9 @@ Indicate breaking changes with `!` after type/scope:
 - Keep under 72 characters
 - Be specific and descriptive
 
-## Simple One-Line Commits
+## Multi-line Commits
 
-**ALWAYS prefer simple, single-line commits.**
-
-**DO NOT add a body unless absolutely necessary.** Most commits should be a single line.
-
-## When to Use Multi-line Commits (Rarely)
-
-Only use a body when the commit requires significant explanation that cannot fit in the description:
-
-- Breaking changes that need migration instructions
-- Complex architectural decisions that need justification
-- Changes affecting multiple systems that need explanation
-
-The code speaks for itself. Commit messages should be concise.
+For complex changes, use a body to provide context:
 
 ## Footers
 
