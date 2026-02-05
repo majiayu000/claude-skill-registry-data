@@ -1,85 +1,90 @@
 ---
 name: architecture-design
-description: Design scalable, maintainable system and integration architectures for pilot projects. Use when defining components, data pipelines, tool integrations, and guardrails to ensure robustness, performance, and extensibility.
+description: >
+  PRD・機能設計からアーキテクチャ設計書（docs/architecture.md）を作成する。
+  「アーキテクチャ設計して」「技術選定して」「インフラ設計」「システム構成を決めて」
+  「技術スタックを決めて」「非機能要件の設計」などの依頼時に発火。
+  技術選定（理由付き）・レイヤー設計・データ戦略・セキュリティ・スケーラビリティを出力。
 ---
 
-# Architecture Design
+# Architecture Design Skill
 
-## Overview
+機能設計の「どう実現するか」を「どの技術で・どう構成するか」に落とし込む。
 
-[TODO: 1-2 sentences explaining what this skill enables]
+## 入出力
 
-## Structuring This Skill
+| 種別 | パス |
+|------|------|
+| 入力 | `docs/product-requirements.md`（PRD） |
+| 入力 | `docs/functional-design.md`（機能設計） |
+| 入力 | `docs/architecture.md`（既存あれば優先） |
+| 出力 | `docs/architecture.md` |
 
-[TODO: Choose the structure that best fits this skill's purpose. Common patterns:
+## 参照ファイル
 
-**1. Workflow-Based** (best for sequential processes)
-- Works well when there are clear step-by-step procedures
-- Example: DOCX skill with "Workflow Decision Tree" -> "Reading" -> "Creating" -> "Editing"
-- Structure: ## Overview -> ## Workflow Decision Tree -> ## Step 1 -> ## Step 2...
+| ファイル | 読むタイミング |
+|----------|----------------|
+| `./template.md` | 新規作成時のベース |
+| `./reference.md` | 技術選定基準・レビュー観点 |
 
-**2. Task-Based** (best for tool collections)
-- Works well when the skill offers different operations/capabilities
-- Example: PDF skill with "Quick Start" -> "Merge PDFs" -> "Split PDFs" -> "Extract Text"
-- Structure: ## Overview -> ## Quick Start -> ## Task Category 1 -> ## Task Category 2...
+## 手順
 
-**3. Reference/Guidelines** (best for standards or specifications)
-- Works well for brand guidelines, coding standards, or requirements
-- Example: Brand styling with "Brand Guidelines" -> "Colors" -> "Typography" -> "Features"
-- Structure: ## Overview -> ## Guidelines -> ## Specifications -> ## Usage...
+### 1. 要件抽出
+```
+PRD・機能設計から以下を抽出：
+- 非機能要件（性能・信頼性・セキュリティ）
+- データモデル・データ量見込み
+- 外部連携要件
+- 制約条件（予算・期間・チームスキル）
+```
 
-**4. Capabilities-Based** (best for integrated systems)
-- Works well when the skill provides multiple interrelated features
-- Example: Product Management with "Core Capabilities" -> numbered capability list
-- Structure: ## Overview -> ## Core Capabilities -> ### 1. Feature -> ### 2. Feature...
+### 2. 既存設計の確認
+- `docs/architecture.md` が存在する？
+  - **Yes** → 構造を維持して差分更新
+  - **No** → `./template.md` をコピーして新規作成
 
-Patterns can be mixed and matched as needed. Most skills combine patterns (e.g., start with task-based, add workflow for complex operations).
+### 3. アーキテクチャ設計
 
-Delete this entire "Structuring This Skill" section when done - it's just guidance.]
+`./template.md` の構造に従い、以下を埋める：
 
-## [TODO: Replace with the first main section based on chosen structure]
+| セクション | 内容 | 必須 |
+|-----------|------|------|
+| 技術スタック | 言語・FW・DB・ツール + 選定理由 | ✅ |
+| システム構成図 | Mermaid + コンポーネント説明 | ✅ |
+| レイヤー設計 | 各層の責務・依存ルール | ✅ |
+| データ戦略 | DB設計・バックアップ・キャッシュ | ✅ |
+| セキュリティ | 認証・認可・暗号化・監査 | ✅ |
+| パフォーマンス | 目標値・測定方法・最適化方針 | ✅ |
+| スケーラビリティ | 想定負荷・スケール戦略 | ✅ |
+| 依存関係管理 | バージョン固定方針 | ✅ |
+| テスト戦略 | Unit/Integration/E2E方針 | ✅ |
 
-[TODO: Add content here. See examples in existing skills:
-- Code samples for technical skills
-- Decision trees for complex workflows
-- Concrete examples with realistic user requests
-- References to scripts/templates/references as needed]
+### 4. 技術選定の根拠確認
 
-## Resources (optional)
+すべての技術選定に以下が書かれているか確認：
+- **用途**: 何に使うか
+- **選定理由**: なぜこれを選んだか
+- **代替案**: 検討した他の選択肢（あれば）
 
-Create only the resource directories this skill actually needs. Delete this section if no resources are required.
+### 5. 非機能要件との整合性チェック
 
-### scripts/
-Executable code (Python/Bash/etc.) that can be run directly to perform specific operations.
+PRDの非機能要件が設計でカバーされているか確認：
+- [ ] パフォーマンス要件 → 設計で対応策が書かれている
+- [ ] 信頼性要件 → バックアップ・復旧戦略がある
+- [ ] セキュリティ要件 → 認証・認可・暗号化が定義されている
 
-**Examples from other skills:**
-- PDF skill: `fill_fillable_fields.py`, `extract_form_field_info.py` - utilities for PDF manipulation
-- DOCX skill: `document.py`, `utilities.py` - Python modules for document processing
+### 6. 出力
+`docs/architecture.md` を作成/更新し、変更点をサマリ提示
 
-**Appropriate for:** Python scripts, shell scripts, or any executable code that performs automation, data processing, or specific operations.
+## 発火例
+- 「アーキテクチャ設計して」
+- 「技術選定を整理して」
+- 「インフラ構成を決めて」
+- 「非機能要件の設計をお願い」
+- 「セキュリティ設計をして」
 
-**Note:** Scripts may be executed without loading into context, but can still be read by Codex for patching or environment adjustments.
-
-### references/
-Documentation and reference material intended to be loaded into context to inform Codex's process and thinking.
-
-**Examples from other skills:**
-- Product management: `communication.md`, `context_building.md` - detailed workflow guides
-- BigQuery: API reference documentation and query examples
-- Finance: Schema documentation, company policies
-
-**Appropriate for:** In-depth documentation, API references, database schemas, comprehensive guides, or any detailed information that Codex should reference while working.
-
-### assets/
-Files not intended to be loaded into context, but rather used within the output Codex produces.
-
-**Examples from other skills:**
-- Brand styling: PowerPoint template files (.pptx), logo files
-- Frontend builder: HTML/React boilerplate project directories
-- Typography: Font files (.ttf, .woff2)
-
-**Appropriate for:** Templates, boilerplate code, document templates, images, icons, fonts, or any files meant to be copied or used in the final output.
-
----
-
-**Not every skill requires all three types of resources.**
+## 境界（やらないこと）
+- **要件定義** → `prd-writing` スキル
+- **機能設計（コンポーネント・フロー）** → `functional-design` スキル
+- **ディレクトリ構造** → `repository-structure` スキル
+- **コーディング規約** → `development-guidelines` スキル

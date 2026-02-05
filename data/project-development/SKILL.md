@@ -1,342 +1,408 @@
 ---
 name: project-development
-description: Design and build LLM-powered projects from ideation through deployment. Use when starting new agent projects, choosing between LLM and traditional approaches, or structuring batch processing pipelines.
+description: Development workflow guide for choosing the right skill based on your task - screens, widgets, BLoC, APIs, forms, storage, and more (project)
 ---
 
-# Project Development Methodology
+# Project Development Skill Guide
 
-This skill covers the principles for identifying tasks suited to LLM processing, designing effective project architectures, and iterating rapidly using agent-assisted development. The methodology applies whether building a batch processing pipeline, a multi-agent research system, or an interactive agent application.
+This skill guides you to the appropriate skill for your development task. Use this as a decision tree when starting new work on the project.
 
-## When to Activate
+## When to Use
 
-Activate this skill when:
-- Starting a new project that might benefit from LLM processing
-- Evaluating whether a task is well-suited for agents versus traditional code
-- Designing the architecture for an LLM-powered application
-- Planning a batch processing pipeline with structured outputs
-- Choosing between single-agent and multi-agent approaches
-- Estimating costs and timelines for LLM-heavy projects
+Trigger this skill when:
+- Starting a new feature and unsure which skill applies
+- Need guidance on the project's development workflow
+- Creating a new project skill or updating existing skills
+- User asks "how do I...", "which skill...", "where should I...", or "help me build..."
+- User asks to "add a skill", "create a skill", "update skills", or "document a workflow"
 
-## Core Concepts
+## Quick Reference: Skill Selection
 
-### Task-Model Fit Recognition
+| Task | Skill | Command |
+|------|-------|---------|
+| Create a new screen/page | `/project-screen` | `mason make screen` |
+| Create a reusable widget | `/project-widget` | `mason make widget` |
+| Add state management | `/project-bloc` | `mason make simple_bloc` or `list_bloc` |
+| Create a form with validation | `/project-form` | Manual setup |
+| Integrate REST API | `/project-api` | `mason make api_client` |
+| Add localized text | `/project-locale` | Edit ARB + `melos run gen-l10n` |
+| Store data persistently | `/project-database` | Drift tables |
+| Store secrets/tokens | `/project-secure-storage` | VaultRepository |
+| Show user feedback | `/project-feedback` | Toasts, dialogs, snackbars |
+| Create native plugin | `/project-plugin` | `mason make native_plugin` |
+| Update app metadata | `/project-metadata` | Manual edits |
+| Create/modify Mason brick | `/template-mason-brick` | Brick + test + workflow |
+| **Add/update project skill** | `/project-development` | See "Creating New Project Skills" |
 
-Not every problem benefits from LLM processing. The first step in any project is evaluating whether the task characteristics align with LLM strengths. This evaluation should happen before writing any code.
+## Decision Tree: What Are You Building?
 
-**LLM-suited tasks share these characteristics:**
-
-| Characteristic | Why It Fits |
-|----------------|-------------|
-| Synthesis across sources | LLMs excel at combining information from multiple inputs |
-| Subjective judgment with rubrics | LLMs handle grading, evaluation, and classification with criteria |
-| Natural language output | When the goal is human-readable text, not structured data |
-| Error tolerance | Individual failures do not break the overall system |
-| Batch processing | No conversational state required between items |
-| Domain knowledge in training | The model already has relevant context |
-
-**LLM-unsuited tasks share these characteristics:**
-
-| Characteristic | Why It Fails |
-|----------------|--------------|
-| Precise computation | Math, counting, and exact algorithms are unreliable |
-| Real-time requirements | LLM latency is too high for sub-second responses |
-| Perfect accuracy requirements | Hallucination risk makes 100% accuracy impossible |
-| Proprietary data dependence | The model lacks necessary context |
-| Sequential dependencies | Each step depends heavily on the previous result |
-| Deterministic output requirements | Same input must produce identical output |
-
-The evaluation should happen through manual prototyping: take one representative example and test it directly with the target model before building any automation.
-
-### The Manual Prototype Step
-
-Before investing in automation, validate task-model fit with a manual test. Copy one representative input into the model interface. Evaluate the output quality. This takes minutes and prevents hours of wasted development.
-
-This validation answers critical questions:
-- Does the model have the knowledge required for this task?
-- Can the model produce output in the format you need?
-- What level of quality should you expect at scale?
-- Are there obvious failure modes to address?
-
-If the manual prototype fails, the automated system will fail. If it succeeds, you have a baseline for comparison and a template for prompt design.
-
-### Pipeline Architecture
-
-LLM projects benefit from staged pipeline architectures where each stage is:
-- **Discrete**: Clear boundaries between stages
-- **Idempotent**: Re-running produces the same result
-- **Cacheable**: Intermediate results persist to disk
-- **Independent**: Each stage can run separately
-
-**The canonical pipeline structure:**
+### 1. User Interface
 
 ```
-acquire → prepare → process → parse → render
+Creating UI?
+├── New page/route? → /project-screen
+├── Reusable component? → /project-widget
+├── Form with validation? → /project-form
+└── Feedback (toast/dialog/snackbar)? → /project-feedback
 ```
 
-1. **Acquire**: Fetch raw data from sources (APIs, files, databases)
-2. **Prepare**: Transform data into prompt format
-3. **Process**: Execute LLM calls (the expensive, non-deterministic step)
-4. **Parse**: Extract structured data from LLM outputs
-5. **Render**: Generate final outputs (reports, files, visualizations)
-
-Stages 1, 2, 4, and 5 are deterministic. Stage 3 is non-deterministic and expensive. This separation allows re-running the expensive LLM stage only when necessary, while iterating quickly on parsing and rendering.
-
-### File System as State Machine
-
-Use the file system to track pipeline state rather than databases or in-memory structures. Each processing unit gets a directory. Each stage completion is marked by file existence.
+### 2. Business Logic & State
 
 ```
-data/{id}/
-├── raw.json         # acquire stage complete
-├── prompt.md        # prepare stage complete
-├── response.md      # process stage complete
-├── parsed.json      # parse stage complete
+Managing state?
+├── Simple state (theme, settings)? → /project-bloc (simple_bloc)
+├── List with CRUD? → /project-bloc (list_bloc)
+└── Form state with validation? → /project-form
 ```
 
-To check if an item needs processing: check if the output file exists. To re-run a stage: delete its output file and downstream files. To debug: read the intermediate files directly.
-
-This pattern provides:
-- Natural idempotency (file existence gates execution)
-- Easy debugging (all state is human-readable)
-- Simple parallelization (each directory is independent)
-- Trivial caching (files persist across runs)
-
-### Structured Output Design
-
-When LLM outputs must be parsed programmatically, prompt design directly determines parsing reliability. The prompt must specify exact format requirements with examples.
-
-**Effective structure specification includes:**
-
-1. **Section markers**: Explicit headers or prefixes for parsing
-2. **Format examples**: Show exactly what output should look like
-3. **Rationale disclosure**: "I will be parsing this programmatically"
-4. **Constrained values**: Enumerated options, score ranges, formats
-
-**Example prompt structure:**
-```
-Analyze the following and provide your response in exactly this format:
-
-## Summary
-[Your summary here]
-
-## Score
-Rating: [1-10]
-
-## Details
-- Key point 1
-- Key point 2
-
-Follow this format exactly because I will be parsing it programmatically.
-```
-
-The parsing code must handle variations gracefully. LLMs do not follow instructions perfectly. Build parsers that:
-- Use regex patterns flexible enough to handle minor formatting variations
-- Provide sensible defaults when sections are missing
-- Log parsing failures for later review rather than crashing
-
-### Agent-Assisted Development
-
-Modern agent-capable models can accelerate development significantly. The pattern is:
-
-1. Describe the project goal and constraints
-2. Let the agent generate initial implementation
-3. Test and iterate on specific failures
-4. Refine prompts and architecture based on results
-
-This is about rapid iteration: generate, test, fix, repeat. The agent handles boilerplate and initial structure while you focus on domain-specific requirements and edge cases.
-
-Key practices for effective agent-assisted development:
-- Provide clear, specific requirements upfront
-- Break large projects into discrete components
-- Test each component before moving to the next
-- Keep the agent focused on one task at a time
-
-### Cost and Scale Estimation
-
-LLM processing has predictable costs that should be estimated before starting. The formula:
+### 3. Data Layer
 
 ```
-Total cost = (items × tokens_per_item × price_per_token) + API overhead
+Working with data?
+├── External REST API? → /project-api
+├── Local persistent data? → /project-database
+├── Sensitive data (tokens, keys)? → /project-secure-storage
+└── User-facing text? → /project-locale
 ```
 
-For batch processing:
-- Estimate input tokens per item (prompt + context)
-- Estimate output tokens per item (typical response length)
-- Multiply by item count
-- Add 20-30% buffer for retries and failures
+### 4. Platform Integration
 
-Track actual costs during development. If costs exceed estimates significantly, re-evaluate the approach. Consider:
-- Reducing context length through truncation
-- Using smaller models for simpler items
-- Caching and reusing partial results
-- Parallel processing to reduce wall-clock time (not token cost)
+```
+Platform-specific code?
+├── Native functionality? → /project-plugin
+└── App identity (name, icons)? → /project-metadata
+```
 
-## Detailed Topics
+### 5. Project Tooling
 
-### Choosing Single vs Multi-Agent Architecture
+```
+Development tooling?
+├── Code generation templates? → /template-mason-brick
+└── Add/update project skills? → /project-development (this skill)
+```
 
-Single-agent pipelines work for:
-- Batch processing with independent items
-- Tasks where items do not interact
-- Simpler cost and complexity management
+## Feature Development Workflow
 
-Multi-agent architectures work for:
-- Parallel exploration of different aspects
-- Tasks exceeding single context window capacity
-- When specialized sub-agents improve quality
+When building a complete feature, follow this order:
 
-The primary reason for multi-agent is context isolation, not role anthropomorphization. Sub-agents get fresh context windows for focused subtasks. This prevents context degradation on long-running tasks.
+### Step 1: Plan the Data Layer
 
-See `multi-agent-patterns` skill for detailed architecture guidance.
+1. **External API needed?** → `/project-api`
+   - Create API client package with OpenAPI spec
+   - Generate models and clients
 
-### Architectural Reduction
+2. **Local storage needed?** → `/project-database` or `/project-secure-storage`
+   - Use `/project-database` for structured data (settings, cache, lists)
+   - Use `/project-secure-storage` for secrets (tokens, API keys, credentials)
 
-Start with minimal architecture. Add complexity only when proven necessary. Production evidence shows that removing specialized tools often improves performance.
+### Step 2: Create Business Logic
 
-Vercel's d0 agent achieved 100% success rate (up from 80%) by reducing from 17 specialized tools to 2 primitives: bash command execution and SQL. The file system agent pattern uses standard Unix utilities (grep, cat, find, ls) instead of custom exploration tools.
+3. **State management** → `/project-bloc`
+   - Create BLoC package for feature state
+   - Use `simple_bloc` for basic state
+   - Use `list_bloc` for list management
 
-**When reduction outperforms complexity:**
-- Your data layer is well-documented and consistently structured
-- The model has sufficient reasoning capability
-- Your specialized tools were constraining rather than enabling
-- You are spending more time maintaining scaffolding than improving outcomes
+4. **Form handling** → `/project-form`
+   - Create FormBloc for forms with validation
 
-**When complexity is necessary:**
-- Your underlying data is messy, inconsistent, or poorly documented
-- The domain requires specialized knowledge the model lacks
-- Safety constraints require limiting agent capabilities
-- Operations are truly complex and benefit from structured workflows
+### Step 3: Build the UI
 
-See `tool-design` skill for detailed tool architecture guidance.
+5. **Screen creation** → `/project-screen`
+   - Create screen with routing conventions
+   - Use `AppAdaptiveScaffold` for responsive layout
 
-### Iteration and Refactoring
+6. **Reusable widgets** → `/project-widget`
+   - Extract shared components
 
-Expect to refactor. Production agent systems at scale require multiple architectural iterations. Manus refactored their agent framework five times since launch. The Bitter Lesson suggests that structures added for current model limitations become constraints as models improve.
+7. **User feedback** → `/project-feedback`
+   - Add toasts, dialogs, snackbars
 
-Build for change:
-- Keep architecture simple and unopinionated
-- Test across model strengths to verify your harness is not limiting performance
-- Design systems that benefit from model improvements rather than locking in limitations
+### Step 4: Polish
 
-## Practical Guidance
+8. **Localization** → `/project-locale`
+   - Add all user-facing text to ARB files
 
-### Project Planning Template
+9. **Testing** → Run `melos run test`
 
-1. **Task Analysis**
-   - What is the input? What is the desired output?
-   - Is this synthesis, generation, classification, or analysis?
-   - What error rate is acceptable?
-   - What is the value per successful completion?
+## Common Feature Patterns
 
-2. **Manual Validation**
-   - Test one example with target model
-   - Evaluate output quality and format
-   - Identify failure modes
-   - Estimate tokens per item
+### Authentication Feature
 
-3. **Architecture Selection**
-   - Single pipeline vs multi-agent
-   - Required tools and data sources
-   - Storage and caching strategy
-   - Parallelization approach
+```
+1. /project-api          → Auth API client (login, register, refresh)
+2. /project-secure-storage → Token storage
+3. /project-bloc         → AuthBloc (login state, session management)
+4. /project-form         → LoginFormBloc, RegisterFormBloc
+5. /project-screen       → LoginScreen, RegisterScreen
+6. /project-feedback     → Error toasts, success messages
+7. /project-locale       → Auth-related text
+```
 
-4. **Cost Estimation**
-   - Items × tokens × price
-   - Development time
-   - Infrastructure requirements
-   - Ongoing operational costs
+### Settings Feature
 
-5. **Development Plan**
-   - Stage-by-stage implementation
-   - Testing strategy per stage
-   - Iteration milestones
-   - Deployment approach
+```
+1. /project-database     → Settings storage (theme, preferences)
+2. /project-bloc         → SettingsBloc (or use ThemeBloc)
+3. /project-screen       → SettingsScreen, subpages
+4. /project-locale       → Settings labels
+```
 
-### Anti-Patterns to Avoid
+### Data Listing Feature
 
-**Skipping manual validation**: Building automation before verifying the model can do the task wastes significant time when the approach is fundamentally flawed.
+```
+1. /project-api          → Data API client
+2. /project-database     → Optional caching
+3. /project-bloc         → ListBloc (list_bloc template)
+4. /project-screen       → List screen with detail navigation
+5. /project-widget       → List item widget, empty state
+6. /project-feedback     → Loading states, error handling
+7. /project-locale       → List-related text
+```
 
-**Monolithic pipelines**: Combining all stages into one script makes debugging and iteration difficult. Separate stages with persistent intermediate outputs.
+### Form Submission Feature
 
-**Over-constraining the model**: Adding guardrails, pre-filtering, and validation logic that the model could handle on its own. Test whether your scaffolding helps or hurts.
+```
+1. /project-api          → Submission endpoint
+2. /project-form         → FormBloc with validation
+3. /project-screen       → Form screen
+4. /project-feedback     → Validation errors, success toast
+5. /project-locale       → Form labels, errors
+```
 
-**Ignoring costs until production**: Token costs compound quickly at scale. Estimate and track from the beginning.
+### Third-Party Integration (e.g., OpenAI, Stripe)
 
-**Perfect parsing requirements**: Expecting LLMs to follow format instructions perfectly. Build robust parsers that handle variations.
+```
+1. /project-api          → API client for third-party service
+2. /project-secure-storage → API key storage (REQUIRED for secrets!)
+3. /project-bloc         → Integration state management
+4. /project-screen       → Settings screen for API key input
+5. /project-feedback     → Integration status feedback
+```
 
-**Premature optimization**: Adding caching, parallelization, and optimization before the basic pipeline works correctly.
+## Package Organization
 
-## Examples
+```
+Root Project
+├── lib/                      # Main app (screens, router, providers)
+├── app_api/                  # API clients (/project-api)
+├── app_bloc/                 # BLoC packages (/project-bloc)
+├── app_form/                 # Form modules (/project-form)
+├── app_widget/               # Reusable widgets (/project-widget)
+├── app_plugin/               # Native plugins (/project-plugin)
+├── app_lib/                  # Core utilities
+│   ├── database/             # /project-database
+│   ├── locale/               # /project-locale
+│   ├── secure_storage/       # /project-secure-storage
+│   ├── theme/                # Theme management
+│   ├── provider/             # App providers
+│   └── logging/              # Logging utilities
+├── bricks/                   # Mason templates (/template-mason-brick)
+└── third_party/              # Modified third-party packages
+```
 
-**Example 1: Batch Analysis Pipeline (Karpathy's HN Time Capsule)**
+## Storage Decision Guide
 
-Task: Analyze 930 HN discussions from 10 years ago with hindsight grading.
+| Data Type | Solution | Skill |
+|-----------|----------|-------|
+| API tokens, passwords | Secure storage | `/project-secure-storage` |
+| Third-party API keys | Secure storage | `/project-secure-storage` |
+| Theme preference | SharedPreferences or DB | `/project-database` |
+| User settings (complex) | Database | `/project-database` |
+| Cached API responses | Database | `/project-database` |
+| Offline data | Database | `/project-database` |
+| Feature flags | SharedPreferences | (built-in) |
 
-Architecture:
-- 5-stage pipeline: fetch → prompt → analyze → parse → render
-- File system state: data/{date}/{item_id}/ with stage output files
-- Structured output: 6 sections with explicit format requirements
-- Parallel execution: 15 workers for LLM calls
+## Mason Brick Quick Reference
 
-Results: $58 total cost, ~1 hour execution, static HTML output.
+| Brick | Command | Purpose |
+|-------|---------|---------|
+| `screen` | `mason make screen --name Name` | Screen with routing |
+| `widget` | `mason make widget --name Name` | Reusable widget |
+| `simple_bloc` | `mason make simple_bloc --name=name -o app_bloc/name` | Basic BLoC |
+| `list_bloc` | `mason make list_bloc --name=name -o app_bloc/name` | List BLoC |
+| `repository` | `mason make repository --name=name -o app_lib/name` | Data repository |
+| `api_client` | `mason make api_client --package_name=name -o app_api/name` | API client |
+| `native_plugin` | `mason make native_plugin --name=name -o app_plugin` | Native plugin |
 
-**Example 2: Architectural Reduction (Vercel d0)**
+## Development Commands
 
-Task: Text-to-SQL agent for internal analytics.
+```bash
+# Initial setup
+melos bootstrap && melos run prepare
 
-Before: 17 specialized tools, 80% success rate, 274s average execution.
+# After code changes
+melos run analyze          # Check for issues
+melos run format           # Format code
+melos run test             # Run all tests
 
-After: 2 tools (bash + SQL), 100% success rate, 77s average execution.
+# After ARB changes
+melos run gen-l10n         # Generate localizations
 
-Key insight: The semantic layer was already good documentation. Claude just needed access to read files directly.
+# After model/database changes
+melos run build-runner     # Generate code
 
-See [Case Studies](./references/case-studies.md) for detailed analysis.
+# Run app
+flutter run -d <device>
+```
 
-## Guidelines
+## Checklist: Before Committing
 
-1. Validate task-model fit with manual prototyping before building automation
-2. Structure pipelines as discrete, idempotent, cacheable stages
-3. Use the file system for state management and debugging
-4. Design prompts for structured, parseable outputs with explicit format examples
-5. Start with minimal architecture; add complexity only when proven necessary
-6. Estimate costs early and track throughout development
-7. Build robust parsers that handle LLM output variations
-8. Expect and plan for multiple architectural iterations
-9. Test whether scaffolding helps or constrains model performance
-10. Use agent-assisted development for rapid iteration on implementation
-
-## Integration
-
-This skill connects to:
-- context-fundamentals - Understanding context constraints for prompt design
-- tool-design - Designing tools for agent systems within pipelines
-- multi-agent-patterns - When to use multi-agent versus single pipelines
-- evaluation - Evaluating pipeline outputs and agent performance
-- context-compression - Managing context when pipelines exceed limits
-
-## References
-
-Internal references:
-- [Case Studies](./references/case-studies.md) - Karpathy HN Capsule, Vercel d0, Manus patterns
-- [Pipeline Patterns](./references/pipeline-patterns.md) - Detailed pipeline architecture guidance
-
-Related skills in this collection:
-- tool-design - Tool architecture and reduction patterns
-- multi-agent-patterns - When to use multi-agent architectures
-- evaluation - Output evaluation frameworks
-
-External resources:
-- Karpathy's HN Time Capsule project: https://github.com/karpathy/hn-time-capsule
-- Vercel d0 architectural reduction: https://vercel.com/blog/we-removed-80-percent-of-our-agents-tools
-- Manus context engineering: Peak Ji's blog on context engineering lessons
-- Anthropic multi-agent research: How we built our multi-agent research system
+- [ ] All user-facing text localized (`/project-locale`)
+- [ ] Sensitive data in secure storage (`/project-secure-storage`)
+- [ ] Error handling with user feedback (`/project-feedback`)
+- [ ] Tests written for new code
+- [ ] `melos run analyze` passes
+- [ ] `melos run format-check` passes
 
 ---
 
-## Skill Metadata
+## Creating New Project Skills
 
-**Created**: 2025-12-25
-**Last Updated**: 2025-12-25
-**Author**: Agent Skills for Context Engineering Contributors
-**Version**: 1.0.0
+When the project needs a new skill (e.g., new package type, new workflow, new integration pattern), follow this process.
 
+### Step 1: Create Skill Directory
+
+```bash
+mkdir -p .claude/skills/project-<skill-name>
+```
+
+### Step 2: Create skill.md
+
+Create `.claude/skills/project-<skill-name>/skill.md` with this structure:
+
+```markdown
+---
+name: project-<skill-name>
+description: Brief description of what this skill does (project)
+---
+
+# Flutter <Skill Name> Skill
+
+Description of what this skill guides.
+
+## When to Use
+
+Trigger this skill when:
+- Condition 1
+- Condition 2
+- User asks to "...", "...", or "..."
+
+## [Main Content Sections]
+
+- Package location and structure
+- Step-by-step guide
+- Code examples
+- Best practices
+- Common errors and solutions
+
+## Quick Reference
+
+Summary table or commands for easy lookup.
+```
+
+### Step 3: Update CLAUDE.md
+
+Add the new skill to the Custom Skills list in `CLAUDE.md`:
+
+```markdown
+- `/project-<skill-name>` - Brief description
+```
+
+Keep the list alphabetized (except `/project-development` stays first).
+
+### Step 4: Update This Skill (project-development)
+
+Update this file to include the new skill:
+
+1. **Quick Reference table** - Add row with task, skill, and command
+2. **Decision Tree** - Add to appropriate category
+3. **Common Feature Patterns** - Add if relevant to common workflows
+4. **Package Organization** - Add if it introduces new package location
+
+### Skill Naming Conventions
+
+| Prefix | Use For |
+|--------|---------|
+| `project-` | Project-specific development workflows |
+| `template-` | Mason brick and code generation |
+
+### Skill Content Guidelines
+
+1. **"When to Use" section is required** - Helps Claude trigger the skill appropriately
+2. **Include concrete examples** - Code snippets, file structures, commands
+3. **Reference existing packages** - Show where to find reference implementations
+4. **Add troubleshooting** - Common errors and solutions
+5. **Keep focused** - One skill per concern (don't combine unrelated topics)
+
+---
+
+## Updating This Skill (Self-Maintenance)
+
+This skill (`/project-development`) should be updated when:
+
+### When to Update
+
+| Trigger | Action |
+|---------|--------|
+| New skill added | Add to Quick Reference, Decision Tree, relevant patterns |
+| Skill removed | Remove all references |
+| Skill renamed | Update all references |
+| New feature pattern emerges | Add to Common Feature Patterns |
+| New package location added | Update Package Organization |
+| New Mason brick added | Add to Mason Brick Quick Reference |
+| Workflow changes | Update Development Commands or Checklist |
+
+### Update Checklist
+
+When adding a new skill, update these sections:
+
+- [ ] **Quick Reference: Skill Selection** - Add table row
+- [ ] **Decision Tree** - Add to appropriate category (UI/State/Data/Platform/Tooling)
+- [ ] **Common Feature Patterns** - Add to relevant patterns if applicable
+- [ ] **Package Organization** - Add if new package location
+- [ ] **Storage Decision Guide** - Add if storage-related
+- [ ] **Mason Brick Quick Reference** - Add if includes Mason brick
+- [ ] **CLAUDE.md** - Add to Custom Skills list
+
+### Example: Adding a New Skill
+
+If adding `/project-notifications` for push notifications:
+
+1. Create `.claude/skills/project-notifications/skill.md`
+
+2. Update Quick Reference table:
+```markdown
+| Push notifications | `/project-notifications` | Platform setup |
+```
+
+3. Update Decision Tree under Platform Integration:
+```
+Platform-specific code?
+├── Native functionality? → /project-plugin
+├── Push notifications? → /project-notifications  ← NEW
+└── App identity (name, icons)? → /project-metadata
+```
+
+4. Add to Common Feature Patterns if needed:
+```
+### Push Notification Feature
+
+1. /project-notifications → Platform setup (FCM, APNs)
+2. /project-bloc         → NotificationBloc
+3. /project-screen       → Notification settings screen
+...
+```
+
+5. Update CLAUDE.md:
+```markdown
+- `/project-notifications` - Configure push notifications with FCM and APNs
+```
+
+---
+
+## Getting Help
+
+- **Unsure which skill?** → Ask: "Which skill should I use to [task]?"
+- **Need more detail?** → Invoke the specific skill: `/project-<skill-name>`
+- **Project conventions?** → Read `CLAUDE.md` at project root
+- **Add new skill?** → Follow "Creating New Project Skills" section above

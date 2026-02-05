@@ -1,55 +1,75 @@
-﻿---
+---
 name: godot
-version: 1.2.0
-description: Develop, test, build, and deploy Godot 4.x games. Includes GdUnit4 for GDScript unit tests and PlayGodot for game automation and E2E testing. Supports web/desktop exports, CI/CD pipelines, and deployment to Vercel/GitHub Pages/itch.io.
+description: Use when working with godot
 ---
 
-# Godot Skill (Streamlined)
+# Godot Skill
 
-## What This Is For
-Use this when working in Godot 4.x projects: playtesting, debugging, writing GDScript, or running tests.
+Use when working with godot, generated from official documentation.
 
----
+## When to Use This Skill
 
-## HPV Best Practices (Headed Playability)
-- Prefer fewer, batched inputs with 400-800 ms waits, then verify state once.
-- Cache key nodes once per session (world root, player, DialogueBox) to avoid repeat lookups.
-- Gate actions on state checks (DialogueBox visible, quest flags, markers) to avoid loops.
-- Use teleport/runtime eval to reach targets quickly, then interact like a human would.
-- In this repo, minigames are typically skipped unless explicitly requested.
+This skill should be triggered when:
+- Working with godot
+- Asking about godot features or APIs
+- Implementing godot solutions
+- Debugging godot code
+- Learning godot best practices
 
----
+## Quick Reference
 
-## MCP Quick Flow (Typical)
-1) Start project headed.
-2) Inspect runtime scene tree once.
-3) Teleport to target.
-4) Trigger interaction.
-5) Verify with DialogueBox text or flag state.
+### Common Patterns
 
----
+**Pattern 1:** Frequently asked questions What can I do with Godot? How much does it cost? What are the license terms? Godot is Free and open source Software av...
 
-## Headless Logic Checks (HLC)
-Run logic tests when you are in an engineering role:
+```
+%APPDATA%\Microsoft\Windows\Start Menu\Programs
+```
 
-- godot --headless --path . --script tests/run_tests.gd
-- godot --headless --path . -s res://addons/gdUnit4/bin/GdUnitCmdTool.gd --run-tests
+## Reference Files
 
----
+This skill includes comprehensive documentation in `references/`:
 
-## GdUnit4 Quick Start
-Basic structure:
-- extends GdUnitTestSuite
-- use scene_runner for scene tests
-- await runner.await_idle_frame() before input
+- **about.md** - About documentation
+- **other.md** - Other documentation
 
----
+Use `view` to read specific reference files when detailed information is needed.
 
-## PlayGodot (Optional)
-PlayGodot is useful for external automation but requires a custom Godot fork.
-Consider it when the project specifically needs E2E automation.
+## Working with This Skill
 
----
+### For Beginners
+Start with the getting_started or tutorials reference files for foundational concepts.
 
-## Export/Deploy (Optional)
-Reserve this for tasks that explicitly require exporting or deployment.
+### For Specific Features
+Use the appropriate category reference file (api, guides, etc.) for detailed information.
+
+### For Code Examples
+The quick reference section above contains common patterns extracted from the official docs.
+
+## Resources
+
+### references/
+Organized documentation extracted from official sources. These files contain:
+- Detailed explanations
+- Code examples with language annotations
+- Links to original documentation
+- Table of contents for quick navigation
+
+### scripts/
+Add helper scripts here for common automation tasks.
+
+### assets/
+Add templates, boilerplate, or example projects here.
+
+## Notes
+
+- This skill was automatically generated from official documentation
+- Reference files preserve the structure and examples from source docs
+- Code examples include language detection for better syntax highlighting
+- Quick reference patterns are extracted from common usage examples in the docs
+
+## Updating
+
+To refresh this skill with updated documentation:
+1. Re-run the scraper with the same configuration
+2. The skill will be rebuilt with the latest information

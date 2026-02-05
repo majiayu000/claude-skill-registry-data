@@ -1,419 +1,196 @@
 ---
 name: tauri
-description: Tauri framework for building cross-platform desktop and mobile apps. Use for desktop app development, native integrations, Rust backend, and web-based UIs.
+description: Provides comprehensive guidance for Tauri framework including Rust backend, frontend integration, window management, and desktop app development. Use when the user asks about Tauri, needs to create Tauri applications, implement Tauri features, or build lightweight desktop apps.
+license: Complete terms in LICENSE.txt
 ---
 
-# Tauri Skill
+## When to use this skill
 
-Comprehensive assistance with Tauri development, generated from official documentation.
+Use this skill whenever the user wants to:
+- Install and set up Tauri in a project
+- Create desktop applications with Tauri
+- Use Tauri CLI commands
+- Configure Tauri applications
+- Handle frontend-backend communication
+- Use Tauri APIs
+- Build and package Tauri applications
+- Troubleshoot Tauri issues
 
-## When to Use This Skill
+## How to use this skill
 
-This skill should be triggered when:
-- Building cross-platform desktop applications with Rust + WebView
-- Implementing native system integrations (file system, notifications, system tray)
-- Setting up Tauri project structure and configuration
-- Debugging Tauri applications in VS Code or Neovim
-- Configuring Windows/macOS/Linux code signing for distribution
-- Developing mobile apps with Tauri (Android/iOS)
-- Creating Tauri plugins for custom native functionality
-- Implementing IPC (Inter-Process Communication) between frontend and backend
-- Optimizing Tauri app security and permissions
-- Setting up CI/CD pipelines for Tauri app releases
+This skill is organized to match the Tauri official documentation structure (https://v2.tauri.org.cn/, https://v2.tauri.org.cn/start/, https://v2.tauri.org.cn/reference/cli/). When working with Tauri:
 
-## Key Concepts
+1. **Identify the topic** from the user's request:
+   - Installation/安装 → `examples/start/installation.md`
+   - Quick Start/快速开始 → `examples/start/quick-start.md`
+   - Guide/使用指南 → `examples/guide/`
+   - CLI/命令行 → `examples/reference/cli.md`
+   - API/API 文档 → `api/`
 
-### Multi-Process Architecture
-Tauri uses a **Core Process** (Rust) and **WebView Process** (HTML/CSS/JS) architecture:
-- **Core Process**: Manages windows, system tray, IPC routing, and has full OS access
-- **WebView Process**: Renders UI using system WebViews (no bundled browser!)
-- **Principle of Least Privilege**: Each process has minimal required permissions
+2. **Load the appropriate example file** from the `examples/` directory:
 
-### Inter-Process Communication (IPC)
-Two IPC primitives:
-- **Events**: Fire-and-forget, one-way messages (both Core → WebView and WebView → Core)
-- **Commands**: Request-response pattern using `invoke()` API (WebView → Core only)
+   **Start (快速开始)**:
+   - `examples/start/intro.md` - Introduction to Tauri
+   - `examples/start/installation.md` - Installation guide
+   - `examples/start/quick-start.md` - Quick start guide
+   - `examples/start/prerequisites.md` - Prerequisites
 
-### Why Tauri?
-- **Small binaries**: Uses OS WebViews (Microsoft Edge WebView2/WKWebView/webkitgtk)
-- **Security-first**: Message passing architecture prevents direct function access
-- **Multi-platform**: Desktop (Windows/macOS/Linux) + Mobile (Android/iOS)
+   **Guide (使用指南)**:
+   - `examples/guide/architecture.md` - Architecture
+   - `examples/guide/frontend.md` - Frontend setup
+   - `examples/guide/backend.md` - Backend (Rust)
+   - `examples/guide/commands.md` - Commands
+   - `examples/guide/events.md` - Events
+   - `examples/guide/window.md` - Window management
+   - `examples/guide/filesystem.md` - File system
+   - `examples/guide/configuration.md` - Configuration
+   - `examples/guide/build.md` - Build and package
 
-## Quick Reference
+   **Reference (参考)**:
+   - `examples/reference/cli.md` - CLI commands
+   - `examples/reference/config.md` - Configuration reference
 
-### 1. Project Setup - Cargo.toml
+3. **Follow the specific instructions** in that example file for syntax, structure, and best practices
 
-```toml
-[build-dependencies]
-tauri-build = "2.0.0"
+   **Important Notes**:
+   - Tauri uses Web frontend and Rust backend
+   - Frontend can be any web framework
+   - Backend is written in Rust
+   - Communication via commands and events
+   - Each example file includes key concepts, code examples, and key points
 
-[dependencies]
-tauri = { version = "2.0.0" }
+4. **Reference API documentation** in the `api/` directory when needed:
+   - `api/tauri-api.md` - Tauri API
+   - `api/commands-api.md` - Commands API
+   - `api/events-api.md` - Events API
+   - `api/window-api.md` - Window API
+   - `api/filesystem-api.md` - File system API
+   - `api/config-api.md` - Configuration API
+
+5. **Use templates** from the `templates/` directory:
+   - `templates/installation.md` - Installation templates
+   - `templates/project-setup.md` - Project setup templates
+   - `templates/configuration.md` - Configuration templates
+
+### 1. Understanding Tauri
+
+Tauri is a framework for building desktop applications using web frontend technologies and Rust backend.
+
+**Key Concepts**:
+- **Frontend**: Web technologies (HTML, CSS, JavaScript)
+- **Backend**: Rust
+- **Commands**: Frontend-backend communication
+- **Events**: Event system
+- **Window**: Window management
+- **File System**: File operations
+
+### 2. Installation
+
+**Prerequisites**:
+- Node.js
+- Rust
+- System dependencies
+
+**Using npm**:
+
+```bash
+npm install @tauri-apps/cli
 ```
 
-### 2. Windows Code Signing Configuration
+**Using cargo**:
 
-```json
-{
-  "tauri": {
-    "bundle": {
-      "windows": {
-        "certificateThumbprint": "A1B1A2B2A3B3A4B4A5B5A6B6A7B7A8B8A9B9A0B0",
-        "digestAlgorithm": "sha256",
-        "timestampUrl": "http://timestamp.comodoca.com"
-      }
-    }
-  }
-}
+```bash
+cargo install tauri-cli
 ```
 
-### 3. VS Code Debugging - launch.json
+### 3. Basic Setup
 
-```json
-{
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "type": "lldb",
-      "request": "launch",
-      "name": "Tauri Development Debug",
-      "cargo": {
-        "args": [
-          "build",
-          "--manifest-path=./src-tauri/Cargo.toml",
-          "--no-default-features"
-        ]
-      },
-      "preLaunchTask": "ui:dev"
-    }
-  ]
-}
+```bash
+# Create Tauri project
+npm create tauri-app
+
+# Or using cargo
+cargo tauri init
 ```
 
-### 4. Rust State Management
 
-```rust
-let data = app.state::<AppData>();
-```
+### Doc mapping (one-to-one with official documentation)
 
-### 5. GitHub Actions - Publish Workflow
+- `examples/guide/` or `examples/getting-started/` → https://v2.tauri.org.cn/start/
+- `api/` → https://v2.tauri.org.cn/reference/cli/
 
-```yaml
-name: 'publish'
+## Examples and Templates
 
-on:
-  push:
-    tags:
-      - 'app-v*'
-```
+This skill includes detailed examples organized to match the official documentation structure. All examples are in the `examples/` directory (see mapping above).
 
-### 6. Trunk Configuration (Rust Frontend)
+**To use examples:**
+- Identify the topic from the user's request
+- Load the appropriate example file from the mapping above
+- Follow the instructions, syntax, and best practices in that file
+- Adapt the code examples to your specific use case
 
-```toml
-# Trunk.toml
-[watch]
-ignore = ["./src-tauri"]
+**To use templates:**
+- Reference templates in `templates/` directory for common scaffolding
+- Adapt templates to your specific needs and coding style
 
-[serve]
-ws_protocol = "ws"
-```
+## API Reference
 
-### 7. Azure Key Vault Signing (relic.conf)
+Detailed API documentation is available in the `api/` directory, organized to match the official Tauri API documentation structure:
 
-```toml
-[server.azurekv]
-url = "https://<KEY_VAULT_NAME>.vault.azure.net/certificates/<CERTIFICATE_NAME>"
-```
+### Tauri API (`api/tauri-api.md`)
+- Tauri core API
+- API methods
+- API types
 
-### 8. Custom Sign Command (tauri.conf.json)
+### Commands API (`api/commands-api.md`)
+- Command definition
+- Command invocation
+- Command parameters
 
-```json
-{
-  "tauri": {
-    "bundle": {
-      "windows": {
-        "signCommand": "relic sign -c relic.conf -f -o \"%1\""
-      }
-    }
-  }
-}
-```
+### Events API (`api/events-api.md`)
+- Event emission
+- Event listening
+- Event handling
 
-### 9. Opening DevTools Programmatically
+### Window API (`api/window-api.md`)
+- Window creation
+- Window management
+- Window events
 
-```rust
-use tauri::Manager;
+### File System API (`api/filesystem-api.md`)
+- File operations
+- Directory operations
+- Path operations
 
-#[tauri::command]
-fn open_devtools(window: tauri::Window) {
-    window.open_devtools();
-}
-```
+### Configuration API (`api/config-api.md`)
+- Configuration options
+- Configuration file
+- Environment variables
 
-### 10. Mobile Plugin - Android Command
+**To use API reference:**
+1. Identify the API you need help with
+2. Load the corresponding API file from the `api/` directory
+3. Find the API signature, parameters, return type, and examples
+4. Reference the linked example files for detailed usage patterns
+5. All API files include links to relevant example files in the `examples/` directory
 
-```kotlin
-@Command
-fun download(invoke: Invoke) {
-    val args = invoke.parseArgs(DownloadArgs::class.java)
-    // Command implementation
-    invoke.resolve()
-}
-```
+## Best Practices
 
-## Reference Files
-
-This skill includes comprehensive documentation organized into 9 categories:
-
-### core_concepts.md
-**Contains:** 7 pages covering foundational architecture
-- **Process Model**: Multi-process architecture, Core vs WebView processes, security principles
-- **Inter-Process Communication**: Events and Commands patterns, message passing
-- **Debug in VS Code**: Setting up `vscode-lldb`, launch.json configuration, Windows debugger
-- **Tauri Architecture**: Ecosystem overview (tauri-runtime, tauri-macros, tauri-utils, WRY, TAO)
-
-**When to use**: Understanding Tauri's design philosophy, debugging setup, architecture decisions
-
-### development.md
-**Contains:** 13 pages on development workflows
-- **Debug in Neovim**: nvim-dap setup, codelldb configuration, overseer plugin for dev servers
-- **CrabNebula DevTools**: Real-time log inspection, performance tracking, event monitoring
-- **Debug**: Development-only code patterns, console logging, WebView inspector, production debugging
-- **Mobile Plugin Development**: Android (Kotlin) and iOS (Swift) plugin creation, lifecycle events
-
-**When to use**: Setting up development environment, debugging strategies, mobile development
-
-### distribution.md
-**Contains:** 8 pages on app distribution
-- **Windows Code Signing**: OV certificates, Azure Key Vault, custom sign commands, GitHub Actions
-- **Azure Code Signing**: trusted-signing-cli setup, environment variables, signing workflows
-- **Code Signing Best Practices**: EV vs OV certificates, SmartScreen reputation, Microsoft Store
-
-**When to use**: Preparing apps for release, code signing, CI/CD pipelines, production builds
-
-### getting_started.md
-**Contains:** Quick start guides and initial setup instructions
-- Project initialization
-- First Tauri app tutorials
-- Configuration basics
-
-**When to use**: Starting new Tauri projects, onboarding new developers
-
-### plugins.md
-**Contains:** Plugin development and integration guides
-- Creating custom plugins
-- Mobile plugin patterns (Android/iOS)
-- Plugin configuration
-- Lifecycle events (load, onNewIntent)
-- Command arguments and parsing
-
-**When to use**: Extending Tauri with native functionality, integrating third-party libraries
-
-### reference.md
-**Contains:** API references and configuration schemas
-- tauri.conf.json structure
-- Command-line interface options
-- Configuration options reference
-
-**When to use**: Looking up specific API methods, configuration properties, CLI flags
-
-### security.md
-**Contains:** Security best practices and patterns
-- Content Security Policy (CSP)
-- Secure IPC patterns
-- Permission management
-- WebView security
-
-**When to use**: Hardening applications, security audits, implementing secure features
-
-### tutorials.md
-**Contains:** Step-by-step implementation guides
-- Building specific features
-- Integration examples
-- Real-world use cases
-
-**When to use**: Learning by example, implementing common patterns
-
-### other.md
-**Contains:** Miscellaneous documentation not categorized above
-- Advanced topics
-- Edge cases
-- Platform-specific notes
-
-**When to use**: Troubleshooting unusual issues, platform-specific implementations
-
-## Working with This Skill
-
-### For Beginners
-1. **Start with**: `getting_started.md` for project setup and basic concepts
-2. **Then read**: `core_concepts.md` → Process Model and IPC sections
-3. **Practice**: Set up debugging with `development.md` → Debug in VS Code
-4. **Build**: Follow tutorials in `tutorials.md`
-
-**Common beginner questions:**
-- "How do I create a Tauri app?" → `getting_started.md`
-- "What is the Core Process?" → `core_concepts.md` → Process Model
-- "How do I call Rust from JavaScript?" → `core_concepts.md` → IPC → Commands
-
-### For Intermediate Developers
-1. **Focus on**: `plugins.md` for custom native functionality
-2. **Master**: `development.md` for debugging and DevTools
-3. **Explore**: `reference.md` for API details
-4. **Implement**: Custom IPC patterns from `core_concepts.md`
-
-**Common intermediate questions:**
-- "How do I create a custom plugin?" → `plugins.md` → Plugin Development
-- "How do I debug performance issues?" → `development.md` → CrabNebula DevTools
-- "What configuration options are available?" → `reference.md`
-
-### For Advanced Users
-1. **Deep dive**: `security.md` for production-ready security
-2. **Optimize**: Mobile development patterns in `plugins.md`
-3. **Automate**: Distribution workflows in `distribution.md`
-4. **Customize**: Advanced patterns in `other.md`
-
-**Common advanced questions:**
-- "How do I set up code signing for Windows?" → `distribution.md` → Windows Code Signing
-- "How do I create mobile plugins?" → `development.md` → Mobile Plugin Development
-- "What are the security best practices?" → `security.md`
-
-### Navigation Tips
-- **Search by topic**: Each reference file has a table of contents
-- **Code examples**: All code blocks include language annotations
-- **Original docs**: Reference files include URLs to source documentation
-- **Quick patterns**: Check the Quick Reference section above first
-
-### Using with Claude
-When asking Claude for help with Tauri:
-1. **Be specific**: Mention the platform (Windows/macOS/Linux/Android/iOS)
-2. **Provide context**: Share your `tauri.conf.json` if relevant
-3. **Reference categories**: "Check the distribution.md file for signing info"
-4. **Share errors**: Include full error messages and stack traces
+1. **Separate frontend and backend**: Keep frontend and backend code separate
+2. **Use commands**: Use commands for frontend-backend communication
+3. **Handle errors**: Properly handle errors in both frontend and backend
+4. **Security**: Follow Tauri security best practices
+5. **Performance**: Optimize application performance
+6. **Build configuration**: Configure build and package properly
+7. **Use TypeScript**: Leverage TypeScript for type safety
 
 ## Resources
 
-### references/
-Organized documentation extracted from official Tauri sources (https://tauri.app/). These files contain:
-- **Detailed explanations**: Architecture, patterns, best practices
-- **Code examples**: Language-annotated (rust, json, toml, kotlin, swift)
-- **Links to sources**: Original documentation URLs for deeper reading
-- **Table of contents**: Quick navigation within each file
+- **Official Documentation**: https://v2.tauri.org.cn/
+- **Quick Start**: https://v2.tauri.org.cn/start/
+- **CLI Reference**: https://v2.tauri.org.cn/reference/cli/
+- **GitHub Repository**: https://github.com/tauri-apps/tauri
 
-### scripts/
-Helper scripts for common automation tasks:
-- Build scripts
-- Testing utilities
-- Deployment helpers
+## Keywords
 
-*Add your custom scripts here for project-specific automation*
-
-### assets/
-Templates, boilerplate, and example projects:
-- Project templates
-- Configuration examples
-- Sample applications
-
-*Add your templates and boilerplate code here*
-
-## Common Patterns
-
-### Creating a Tauri Command
-```rust
-#[tauri::command]
-fn greet(name: &str) -> String {
-    format!("Hello, {}!", name)
-}
-
-// In main.rs
-fn main() {
-    tauri::Builder::default()
-        .invoke_handler(tauri::generate_handler![greet])
-        .run(tauri::generate_context!())
-        .expect("error while running tauri application");
-}
-```
-
-### Calling Commands from Frontend
-```javascript
-import { invoke } from '@tauri-apps/api/core';
-
-const greeting = await invoke('greet', { name: 'World' });
-console.log(greeting); // "Hello, World!"
-```
-
-### Emitting Events
-```rust
-// From Rust
-app.emit_all("event-name", Payload { message: "Hello".into() }).unwrap();
-
-// Listening in JavaScript
-import { listen } from '@tauri-apps/api/event';
-
-const unlisten = await listen('event-name', (event) => {
-    console.log(event.payload.message);
-});
-```
-
-## Debugging Quick Tips
-
-### Enable Rust Backtraces
-```bash
-# Linux/macOS
-RUST_BACKTRACE=1 tauri dev
-
-# Windows (PowerShell)
-$env:RUST_BACKTRACE=1; tauri dev
-```
-
-### Create Debug Build
-```bash
-npm run tauri build -- --debug
-```
-
-### Open DevTools Programmatically
-```rust
-use tauri::Manager;
-window.open_devtools();
-window.close_devtools();
-```
-
-## Platform-Specific Notes
-
-### Windows
-- Uses **Microsoft Edge WebView2** (automatically installed on Windows 11)
-- Code signing required for SmartScreen reputation
-- EV certificates get immediate trust; OV certificates build reputation over time
-
-### macOS
-- Uses **WKWebView** (native to macOS)
-- DevTools API is private (using in production prevents App Store acceptance)
-- Code signing with Apple Developer certificate
-
-### Linux
-- Uses **webkitgtk** (must be installed separately)
-- Package formats: .deb, .rpm, .AppImage
-
-### Android
-- Kotlin-based plugins
-- Activity lifecycle integration
-- Requires Android Studio
-
-### iOS
-- Swift-based plugins
-- Swift Package Manager for dependencies
-- Requires Xcode
-
-## Notes
-
-- This skill was automatically generated from official Tauri documentation
-- All code examples are extracted from official sources
-- Reference files preserve structure and links to original docs
-- Quick reference patterns represent real-world usage
-- Last updated: October 2025
-
-## Updating
-
-To refresh this skill with updated documentation:
-1. Re-run the scraper with `configs/tauri.json`
-2. The skill will be rebuilt with the latest information
-3. Enhancement will preserve custom additions in `scripts/` and `assets/`
+Tauri, tauri, desktop application, 桌面应用, Rust, Web frontend, commands, events, window, file system, CLI, 命令, 事件, 窗口, 文件系统, 命令行, Tauri CLI, Tauri commands, Tauri events, Tauri window, Tauri filesystem, cross-platform, 跨平台

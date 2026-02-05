@@ -1,69 +1,157 @@
 ---
 name: code-reviewer
-description: Structured code review output format for the reviewer agent. Provides APPROVED/ISSUES format with file:line references. Use when: reviewing code changes, code quality checks, architecture compliance checks, approving code for merge, identifying critical/major/minor issues.
+description: Revisa código buscando bugs, seguridad, performance y mejores prácticas
+allowed-tools: Read, Grep, Glob
 ---
 
-# Code Reviewer
+# Code Reviewer Skill
 
-Structured format for code reviews.
+Realizas code reviews exhaustivos enfocándote en calidad, seguridad, rendimiento y mantenibilidad. Solo reportas issues con alta confianza para evitar falsos positivos.
 
-## Output Format
+## Áreas de Revisión
 
-### If APPROVED
+### 1. Seguridad (Prioridad Alta)
+- [ ] Inyección SQL/NoSQL
+- [ ] XSS (Cross-Site Scripting)
+- [ ] CSRF (Cross-Site Request Forgery)
+- [ ] Exposición de secretos/credenciales
+- [ ] Autenticación y autorización débil
+- [ ] Deserialización insegura
+- [ ] Configuración insegura de CORS
+- [ ] Rate limiting ausente
+
+### 2. Bugs y Lógica (Prioridad Alta)
+- [ ] Race conditions
+- [ ] Null/undefined no manejados
+- [ ] Off-by-one errors
+- [ ] Manejo de errores incompleto
+- [ ] Memory leaks
+- [ ] Infinite loops potenciales
+- [ ] Estado inconsistente
+
+### 3. Performance (Prioridad Media)
+- [ ] N+1 queries
+- [ ] Renders innecesarios (React)
+- [ ] Bundle size excesivo
+- [ ] Operaciones bloqueantes
+- [ ] Falta de memoización
+- [ ] Índices de DB faltantes
+- [ ] Caché no utilizado
+
+### 4. Mantenibilidad (Prioridad Media)
+- [ ] Código duplicado
+- [ ] Funciones muy largas (>50 líneas)
+- [ ] Complejidad ciclomática alta
+- [ ] Acoplamiento excesivo
+- [ ] Nombres poco descriptivos
+- [ ] Falta de tipos TypeScript
+- [ ] Documentación faltante en código complejo
+
+### 5. Estilo y Convenciones (Prioridad Baja)
+- [ ] Inconsistencias de formato
+- [ ] Imports no organizados
+- [ ] Console.logs en producción
+- [ ] Comentarios obsoletos
+- [ ] TODO/FIXME sin resolver
+
+## Sistema de Confianza
+
+Solo reportar issues con confianza >= 80%:
+
+| Nivel | Confianza | Acción |
+|-------|-----------|--------|
+| Crítico | 95%+ | Reportar inmediatamente |
+| Alto | 85-94% | Reportar con contexto |
+| Medio | 80-84% | Reportar como sugerencia |
+| Bajo | <80% | No reportar |
+
+## Formato de Reporte
 
 ```markdown
-## APPROVED
+## Code Review: [archivo/componente]
 
-**Summary**: Brief description of what was reviewed
+### Issues Críticos
+🔴 **[SECURITY]** SQL Injection en `src/api/users.ts:45`
+- **Descripción**: Query construida con concatenación de strings
+- **Impacto**: Permite ejecutar SQL arbitrario
+- **Sugerencia**: Usar prepared statements
+- **Confianza**: 98%
 
-**Quality**: Good | Excellent
-**Tests**: Adequate | Comprehensive
-**Security**: No issues found
+### Issues Importantes
+🟠 **[BUG]** Race condition en `src/hooks/useAuth.ts:23`
+- **Descripción**: Estado actualizado sin cleanup
+- **Impacto**: Puede causar memory leak
+- **Sugerencia**: Agregar cleanup en useEffect
+- **Confianza**: 90%
 
-Proceed to QA phase.
+### Sugerencias de Mejora
+🟡 **[PERF]** N+1 query en `src/services/orders.ts:67`
+- **Descripción**: Query en loop para obtener productos
+- **Impacto**: Latencia alta con muchos orders
+- **Sugerencia**: Usar include/join
+- **Confianza**: 85%
+
+### Resumen
+- Críticos: 1
+- Importantes: 2
+- Sugerencias: 3
+- Archivos revisados: 15
 ```
 
-### If ISSUES Found
+## Patrones Específicos a Detectar
 
-```markdown
-## ISSUES
+### React/Next.js
+```typescript
+// ❌ Dependency array incompleto
+useEffect(() => {
+  fetchData(userId);
+}, []); // Falta userId
 
-### Critical (Must Fix)
-1. **src/file.py:123** - Issue description
-   - **Why**: Explanation
-   - **Fix**: Suggested solution
+// ❌ State update sin cleanup
+useEffect(() => {
+  const interval = setInterval(tick, 1000);
+  // Falta return () => clearInterval(interval)
+}, []);
 
-### Major (Should Fix)
-2. **src/file.py:456** - Issue description
-
-### Minor (Consider)
-3. **src/file.py:789** - Issue description
+// ❌ Re-render innecesario
+const Component = ({ data }) => {
+  const processed = expensiveOperation(data); // Falta useMemo
+  return <div>{processed}</div>;
+};
 ```
 
-## Review Checklist
+### Seguridad
+```typescript
+// ❌ SQL Injection
+const query = `SELECT * FROM users WHERE id = ${userId}`;
 
-### Code Quality
-- Readable, self-documenting code
-- Small, single-responsibility functions (<50 lines)
-- No placeholder code (TODO, pass, ...)
-- Proper error handling with loguru logging
-- Complete type hints on all functions
+// ❌ XSS
+element.innerHTML = userInput;
 
-### Architecture Compliance
-- Follows Clean DDD layers
-- Dependencies flow inward
-- Domain layer has NO external dependencies
-- Nodes have logic + visual wrappers separate
+// ❌ Secretos expuestos
+const apiKey = "sk_live_abc123"; // Hardcoded
 
-### Async Patterns
-- All Playwright operations are async
-- Consistent async/await usage
-- No blocking calls in async functions
+// ❌ CORS inseguro
+app.use(cors({ origin: '*' }));
+```
 
-## Severity Definitions
+### Performance
+```typescript
+// ❌ N+1 Query
+const orders = await Order.findAll();
+for (const order of orders) {
+  order.products = await Product.findAll({ where: { orderId: order.id } });
+}
 
-| Severity | Definition | Action |
-|----------|------------|--------|
-| Critical | Breaks functionality, security vulnerability | Must fix |
-| Major | Reduces maintainability, missing tests | Should fix |
-| Minor | Style, naming improvements | Consider |
+// ❌ Bundle bloat
+import _ from 'lodash'; // Importar todo lodash
+```
+
+## Exclusiones
+
+NO reportar:
+- Preferencias de estilo subjetivas
+- Cambios que requieren refactor mayor
+- Issues en código generado
+- Issues en node_modules o vendors
+- Warnings de linter ya reportados

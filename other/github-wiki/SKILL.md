@@ -58,7 +58,7 @@ Publica um ADR especifico na Wiki.
 
 ```bash
 # Publicar ADR especifico
-.claude/skills/github-wiki/scripts/publish_adr.sh .agentic_sdlc/corpus/nodes/decisions/adr-001.yml
+.claude/skills/github-wiki/scripts/publish_adr.sh .project/corpus/nodes/decisions/adr-001.yml
 
 # Publicar todos os ADRs
 .claude/skills/github-wiki/scripts/publish_adr.sh --all
@@ -69,7 +69,7 @@ Publica um ADR especifico na Wiki.
 | Documento | Fonte | Destino Wiki | Trigger |
 |-----------|-------|--------------|---------|
 | Home | Auto-gerado | Home.md | Cada sync |
-| ADRs | `.agentic_sdlc/corpus/nodes/decisions/*.yml` | ADRs/ADR-NNN.md | `/adr-create`, Phase 7 |
+| ADRs | `.project/corpus/nodes/decisions/*.yml` | ADRs/ADR-NNN.md | `/adr-create`, Phase 7 |
 | Arquitetura | `.agentic_sdlc/projects/*/docs/ARCHITECTURE.md` | Architecture.md | Phase 3, Phase 7 |
 | API Docs | `.agentic_sdlc/projects/*/docs/API.md` | API-Reference.md | Phase 7 |
 | README | `.agentic_sdlc/projects/*/docs/README.md` | Getting-Started.md | Phase 7 |

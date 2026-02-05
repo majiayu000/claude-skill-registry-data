@@ -1,87 +1,106 @@
 ---
 name: status
-description: "Check task status in the tracker and local artifacts. Use when the user invokes /status or asks for project/task status."
+description: Display CYNIC's self-status including packages, tests, integrations, and auto-generated roadmap. Use when asked about development status, project health, what's working, or CYNIC v1 completion.
+user-invocable: true
 ---
 
-# Status Command
+# /status - CYNIC Self-Status
 
-Follow `CLAUDE.md`, `conventions.md`, and `ARCHITECTURE.md`.
+*"Connais-toi toi-même, puis vérifie"* - κυνικός
 
-## Task
+Auto-tracks CYNIC's own development state. Unlike static ROADMAP.md, this is **live truth**.
 
-Show task status from tracker and related local artifacts.
+## Quick Start
 
-## Algorithm
-
-1. If no argument: show overall project status.
-2. If argument provided: show specific task status.
-
-### Mode 1: Project Overview (no argument)
-
-Use `beads` skill to get:
-- List open tasks
-- List ready tasks (not blocked)
-- List blocked tasks
-- List in-progress tasks
-
-Output:
 ```
-Project Status
-==============
-
-Stats:
-- Open tasks: <count>
-- Ready to work: <count>
-- Blocked: <count>
-- In progress: <count>
-
-Ready Tasks (can start now):
-- <id1> - <title> (P<priority>)
-- <id2> - <title> (P<priority>)
-
-Blocked Tasks:
-- <id3> - <title>
-  Blocked by: <blocker-id> (<blocker-status>)
-
-In Progress:
-- <id5> - <title>
+/status           # Full scan (runs tests ~3min)
+/status quick     # Quick scan (cached, no tests)
+/status json      # JSON output for processing
 ```
 
-### Mode 2: Specific Task (with argument)
+## What It Shows
 
-Use `beads` to get task details and dependency tree.
+1. **Packages** - Test status for all 12 packages
+2. **Integrations** - Hooks, skills, agents, MCP status
+3. **Features** - Implemented vs missing (derived from tests)
+4. **Roadmap** - Auto-generated from actual code state
 
-Also check local artifacts:
-- `docs/drafts/BRIEF_*<name>*.md`
-- `docs/drafts/TASK_*<name>*.md`
-- `docs/reviews/REVIEW_*<name>*.md`
+## Implementation
 
-Output:
-```
-Task: <id> - <title>
-Status: <status>
-Type: <type>
-Priority: <priority>
+Run the self-monitor module:
 
-Description:
-<description>
+```bash
+# Full scan (with tests)
+node scripts/lib/self-monitor.cjs
 
-Dependency Tree:
-<tree output>
+# Quick scan (no tests, uses cache)
+node scripts/lib/self-monitor.cjs --quick
 
-Local Artifacts:
-- Brief: <exists/none>
-- Spec: <exists/none>
-- Review: <exists/none>
+# JSON output
+node scripts/lib/self-monitor.cjs --json
 
-Next step:
-[What needs to be done based on current stage]
+# Status line only
+node scripts/lib/self-monitor.cjs --status
 ```
 
-## Next Step Suggestions
+## Output Example
 
-Based on task status, suggest:
-- `open` + no blocker -> `/implement <id>`
-- `in_progress` -> continue implementation
-- `in_progress` + code done -> `/review <id>`
-- `needs_work` -> `/fix <id>`
+```
+╔═══════════════════════════════════════════════════════════════════╗
+║            🐕 CYNIC SELF-STATUS (Auto-generated)                  ║
+╠═══════════════════════════════════════════════════════════════════╣
+║                                                                   ║
+║  PACKAGES: 12/12 healthy
+║  TESTS: 1980/1980 passing (100.0%)
+║                                                                   ║
+║  ✅* core         117/117 tests
+║  ✅* protocol     230/230 tests
+║  ✅* persistence  179/179 tests
+║  ✅  anchor        54/54 tests
+║  ✅  burns         75/75 tests
+║  ✅* identity      50/50 tests
+║  ✅  emergence     43/43 tests
+║  ✅* node         614/614 tests
+║  ✅* mcp          492/492 tests
+║  ✅  holdex        44/44 tests
+║  ✅  gasdf         36/36 tests
+║  ✅  zk            46/46 tests
+║                                                                   ║
+╠═══════════════════════════════════════════════════════════════════╣
+║  HOOKS: 5   SKILLS: 12   AGENTS: 13   LIB: 95
+║  MCP: healthy
+║                                                                   ║
+║  ROADMAP: ✅ Core  🔄 Integration  📋 External
+║                                                                   ║
+╠═══════════════════════════════════════════════════════════════════╣
+║  * = critical package   φ⁻¹ = 61.8% max confidence               ║
+╚═══════════════════════════════════════════════════════════════════╝
+```
+
+## Data Storage
+
+Results are cached in `~/.cynic/self/`:
+- `packages.json` - Package test results
+- `integrations.json` - Claude Code integration state
+- `features.json` - Feature detection
+- `roadmap.json` - Auto-generated roadmap
+
+## Triggering
+
+- **On demand**: Run `/status`
+- **Session start**: Can be added to awaken.cjs for startup check
+- **Post-commit**: Can be triggered by git hooks
+
+## V1 Completion Criteria
+
+CYNIC v1 is complete when:
+- All 6 critical packages healthy (core, protocol, persistence, identity, node, mcp)
+- All hooks operational
+- All skills accessible
+- MCP server healthy
+
+## See Also
+
+- `/health` - CYNIC services health (runtime)
+- `/cockpit` - Ecosystem repos overview
+- `/ecosystem` - Cross-project status

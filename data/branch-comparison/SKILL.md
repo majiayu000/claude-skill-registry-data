@@ -1,150 +1,85 @@
 ---
 name: branch-comparison
-description: Use when the user asks to compare branches, analyze git diffs, review changes between branches, update specifications based on code changes, or analyze what changed. Triggers on keywords like "compare branches", "git diff", "what changed", "branch comparison", "code changes", "spec update".
+description: Use when the user asks to compare branches, analyze git diffs, review changes, update specifications based on code changes, or sync specs with implementation. Triggers on keywords like "compare branches", "git diff", "what changed", "branch comparison", "spec update", "sync specs".
 allowed-tools: Read, Write, Edit, Bash, Grep, Glob, Task, TodoWrite
 ---
 
 # Branch Comparison & Specification Update
 
-You are to operate as an expert full-stack dotnet angular principle developer, software architect, and technical analyst to analyze all file changes between branches, perform comprehensive impact analysis, and update specification documents.
+Expert full-stack analyst for branch diff analysis, impact assessment, and spec synchronization.
 
-**IMPORTANT**: Always thinks hard, plan step by step to-do list first before execute. Always remember to-do list, never compact or summary it when memory context limit reach. Always preserve and carry your to-do list through every operation.
-
----
-
-## Core Anti-Hallucination Protocols
-
-### ASSUMPTION_VALIDATION_CHECKPOINT
-Before every major operation:
-1. "What assumptions am I making about [X]?"
-2. "Have I verified this with actual code evidence?"
-3. "Could I be wrong about [specific pattern/relationship]?"
-
-### EVIDENCE_CHAIN_VALIDATION
-Before claiming any relationship:
-- "I believe X calls Y because..." → show actual code
-- "This follows pattern Z because..." → cite specific examples
-- "Service A owns B because..." → grep for actual boundaries
-
-### TOOL_EFFICIENCY_PROTOCOL
-- Batch multiple Grep searches into single calls with OR patterns
-- Use parallel Read operations for related files
-
-### CONTEXT_ANCHOR_SYSTEM
-Every 10 operations:
-1. Re-read the original task description
-2. Verify the current operation aligns with original goals
-3. Update the `Current Focus` in `## Progress` section
+**⚠️ MUST READ** `.claude/skills/shared/anti-hallucination-protocol.md` — validation checkpoints, evidence chains, confidence levels
 
 ---
 
-## PHASE 1: EXTERNAL MEMORY-DRIVEN BRANCH ANALYSIS
+## Phase 1: Branch Analysis
 
-Build a structured knowledge model in `.ai/workspace/analysis/[comparison-name].md`.
+Build structured analysis in `.ai/workspace/analysis/[comparison-name].md`.
 
-### PHASE 1A: INITIALIZATION AND DISCOVERY
-
-1. **Initialize** the analysis file with standard headings
-
-### GIT BRANCH ANALYSIS DISCOVERY
-
-**GIT_DIFF_COMPREHENSIVE_ANALYSIS**: Start with systematic git change detection:
-
-1. **Primary Change Detection Commands**:
+### Git Change Detection
 ```bash
-git diff --name-status [source-branch]..[target-branch]
-git diff --stat [source-branch]..[target-branch]
-git log --oneline [source-branch]..[target-branch]
+git diff --name-status [source]..[target]
+git diff --stat [source]..[target]
+git log --oneline [source]..[target]
 ```
-Document results under `## Git Diff Analysis` and `## Commit History`.
 
-2. **Change Impact & Scope Classification**: Document under `## Change Classification` and `## Change Scope Analysis`:
-   - Types: Frontend, Backend, Config, DB
-   - Purpose: Feature, Bug Fix, Refactor
+### Change Classification
+For each changed file, document:
+- `filePath`, `changeType` (A/M/D), `impactLevel` (Critical/High/Medium/Low)
+- `serviceContext` (Frontend/Backend/Config/DB)
+- Purpose: Feature, Bug Fix, Refactor
 
-**RELATED_FILES_COMPREHENSIVE_DISCOVERY**: For each changed file, discover all related components:
-- Importers
-- Dependencies
-- Test files
-- API consumers
-- UI components
+### Related Files Discovery
+For each changed file, find: importers, dependencies, test files, API consumers, UI components.
 
-Save ALL changed files AND related files to `## Comprehensive File List` with:
-- `filePath`
-- `changeType`
-- `relationshipType`
-- `impactLevel`
-- `serviceContext`
+> If file list exceeds 75, prioritize by impactLevel (Critical > High > Medium > Low).
 
-**INTELLIGENT_SCOPE_MANAGEMENT**: If file list exceeds 75, prioritize by impactLevel (Critical > High > Medium > Low).
+## Phase 2: Analysis & Planning
 
-### PHASE 1B: KNOWLEDGE GRAPH CONSTRUCTION
+### Code Review Analysis
+- Strengths, weaknesses, security concerns, performance implications
 
-**IMPORTANT: MUST DO WITH TODO LIST**
+### Refactoring Recommendations
+- Immediate improvements, structural changes, technical debt
 
-For each file, document in `## Knowledge Graph`:
-- All standard fields from feature-implementation skill
-- Focus on change-specific context
+### Specification Update Plan
+- New requirements discovered, test spec updates needed, documentation gaps
 
-### PHASE 1C: OVERALL ANALYSIS
+## Phase 3: Approval Gate
 
-Write comprehensive summary showing:
-- Complete end-to-end workflows discovered
-- Key architectural patterns and relationships
-- Business logic workflows affected
-- Integration points and dependencies
+**CRITICAL**: Present analysis and plan for approval before executing updates.
 
----
+## Phase 4: Execution
 
-## PHASE 2: COMPREHENSIVE ANALYSIS AND PLANNING
+Update specification documents with: requirements, test specs, architecture docs, review findings.
 
-Generate detailed analysis under these headings:
+### Spec Update Mode
+**⚠️ MUST READ** `.claude/skills/branch-comparison/references/spec-update-workflow.md`
 
-### 1. Code Review Analysis
-- Strengths
-- Weaknesses
-- Security concerns
-- Performance implications
-- Maintainability
+Provides:
+- **Pattern-based discovery** - grep patterns for finding spec files and cross-referencing
+- **Gap analysis template** - Component | Specified | Implemented | Gap
+- **Update checklist** - Entities, commands, queries, events, API endpoints
+- **3 update patterns** - Entity spec, command spec, API endpoint spec
 
-### 2. Refactoring Recommendations
-- Immediate improvements
-- Structural changes
-- Technical debt items
+## Phase 5: Validation
 
-### 3. Specification Update Plan
-- New Requirements Discovery
-- Test Specification Updates
-- Documentation Strategy
+Verify updated specifications accurately reflect all changes. Cross-reference:
+```bash
+# Verify all commands are documented
+grep -r "class.*Command" --include="*.cs" -l  # Find implementations
+grep -r "CommandName" docs/specifications/     # Check in specs
+```
 
----
+## Guidelines
 
-## PHASE 3: APPROVAL GATE
+- **Evidence-based**: All updates grounded in concrete `git diff` output
+- **Comprehensive impact**: Analyze direct and indirect effects, including cross-service
+- **Platform-aware**: Respect CQRS, Clean Architecture, platform patterns
+- **Full traceability**: Ensure links between code, requirements, and tests
 
-**CRITICAL**: Present comprehensive analysis, code review, refactoring recommendations, and specification update plan for explicit approval. **DO NOT** proceed without it.
 
----
+## IMPORTANT Task Planning Notes
 
-## PHASE 4: SPECIFICATION UPDATE EXECUTION
-
-Once approved, read existing specification document and update with:
-- Requirements
-- Test Specifications
-- Architecture Documentation
-- Code Review findings
-
----
-
-## SUCCESS VALIDATION
-
-Verify updated specification accurately reflects all changes. Document under `## Specification Validation`.
-
----
-
-## Branch Comparison Guidelines
-
-- **Evidence-Based Analysis**: Start with `git diff` and base all updates on concrete code changes
-- **Comprehensive Impact Assessment**: Analyze direct and indirect effects, including cross-service impacts
-- **Enterprise Architecture Awareness**: Respect platform patterns, CQRS, and Clean Architecture
-- **Quality-Focused Approach**: Perform thorough code review and identify refactoring opportunities
-- **Specification Completeness**: Ensure full traceability between code, requirements, and tests
+- Always plan and break many small todo tasks
+- Always add a final review todo task to review the works done at the end to find any fix or enhancement needed

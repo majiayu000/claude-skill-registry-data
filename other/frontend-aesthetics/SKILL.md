@@ -1,634 +1,485 @@
 ---
 name: frontend-aesthetics
-description: Distinctive frontend design principles for avoiding generic AI defaults, implementing thoughtful typography/color/animations, and creating polished user experiences based on Claude Code design research
-version: 1.0.0
+description: Guide frontend design decisions to create distinctive, creative UIs that avoid generic AI-generated aesthetics. Use when building UI components, designing layouts, selecting colors/fonts, or implementing animations.
 ---
 
-## Overview
+# Frontend Aesthetics
 
-This skill provides specific design principles and patterns for creating distinctive, polished frontend interfaces that avoid "AI slop" - the generic, obviously-generated aesthetic that results from default AI model choices. Based on official research from ["Improving frontend design through Skills"](https://claude.com/blog/improving-frontend-design-through-skills) by Anthropic.
+Create distinctive, creative frontend designs that avoid generic AI-generated aesthetics and cookie-cutter patterns.
 
-**Skills Methodology**: This follows Anthropic's skills approach - reusable markdown documents that provide altitude-appropriate design guidance without permanent context overhead. Skills make effective design prompts contextual and reusable across projects.
+## When to Use
 
-**Core Problem: Distributional Convergence**: Language models naturally sample from the high-probability center of their training data distribution. This causes them to default to statistically common "safe choices" (Inter fonts, purple gradients, minimal animations, standard grid layouts) because these patterns dominate web design datasets. The result is bland, forgettable interfaces that lack intentional design decisions.
+- Designing new UI components or layouts
+- Selecting typography and font pairings
+- Choosing color schemes and themes
+- Implementing animations and micro-interactions
+- Reviewing frontend designs for generic patterns
+- Making design decisions for landing pages, dashboards, or web applications
+- Providing design guidance to frontend-focused agents
 
-**Altitude-Appropriate Guidance**: This skill avoids both extremes:
-- **Too Specific**: Prescribing exact hex codes or pixel values limits creativity
-- **Too Vague**: Assuming models know design principles leads to generic defaults
+## Instructions
 
-Instead, it provides **contextual principles** with concrete examples that guide toward distinctive choices while preserving flexibility.
+### Step 1: Assess Design Context
 
-## The "AI Slop" Problem
+Understand the project's brand identity, purpose, and target aesthetic before making design decisions.
 
-### What Models Default To (Avoid These)
+**Key Questions**:
 
-**Generic Fonts**:
-- Inter, Roboto, Open Sans, Lato
-- Default system fonts without customization
-- Single font family for everything
+- What is the project's brand personality? (playful, professional, technical, editorial, etc.)
+- Who is the target audience?
+- What emotional response should the design evoke?
+- What makes this project unique?
 
-**Generic Colors**:
-- Purple-to-white gradients (#a855f7 → #ffffff)
-- Plain white backgrounds
-- Pastel color schemes without contrast
-- Rainbow gradients
+### Step 2: Typography Selection
 
-**Minimal Visual Interest**:
-- No animations or micro-interactions
-- Flat, single-layer backgrounds
-- Standard grid layouts only
-- No depth or texture
+Choose beautiful, unique, and interesting fonts that match the project's character.
 
-**Result**: Interface that looks "obviously AI-generated" - bland, safe, forgettable
+**AVOID These Generic Fonts**:
 
-### How to Recognize "AI Slop"
-
-Calculate AI Slop Score (0-100, lower is better):
-- +30 points: Using Inter/Roboto/Open Sans fonts
-- +25 points: Purple gradient color scheme
-- +20 points: Plain white background with no depth
-- +15 points: No animations whatsoever
-- +10 points: Standard grid layout only
-
-**Score 60+**: High AI slop - needs significant design enhancement
-**Score 30-59**: Moderate - some generic patterns present
-**Score 0-29**: Distinctive - thoughtful design choices evident
-
-## Typography Principles
-
-### Avoid Generic Font Families
-
-**Never Use (Without Strong Justification)**:
-- Inter
+- Inter (massively overused in AI-generated UIs)
 - Roboto
-- Open Sans
-- Lato
-- Helvetica Neue (as primary)
-- Default system fonts
+- Arial
+- System fonts (-apple-system, BlinkMacSystemFont)
 
-### Distinctive Font Recommendations
+**Recommended Font Categories**:
 
-**Code/Technical Aesthetic**:
-```
-Primary: JetBrains Mono (headings, code blocks)
-Secondary: Space Grotesk (body, UI)
-Character: Modern, technical, developer-focused
-```
+**Code/Technical Aesthetics**:
 
-**Editorial/Content**:
-```
-Primary: Playfair Display (headings, hero)
-Secondary: Source Sans 3 (body)
-Character: Classic, sophisticated, content-heavy
-```
+- JetBrains Mono
+- Fira Code
+- Cascadia Code
+- Victor Mono
 
-**Technical/Data**:
-```
-Primary: IBM Plex Sans (all text)
-Secondary: IBM Plex Mono (code, data)
-Character: Professional, systematic, dashboard-friendly
-```
+**Editorial/Sophisticated**:
 
-**Friendly/Playful**:
-```
-Primary: Fredoka (headings)
-Secondary: Manrope (body)
-Character: Approachable, consumer-facing, warm
-```
+- Playfair Display
+- Crimson Pro
+- Spectral
+- Lora
 
-**Elegant/Premium**:
-```
-Primary: Crimson Pro (headings)
-Secondary: Karla (body)
-Character: Sophisticated, refined, premium feel
-```
+**Modern/Clean**:
 
-### Font Pairing Principles
+- Space Grotesk (use sparingly - increasingly common)
+- DM Sans
+- Outfit
+- Plus Jakarta Sans
 
-**High-Contrast Pairings** (Recommended):
-Pair fonts from different categories for maximum distinctiveness:
-- **Display + Monospace**: Playfair Display + JetBrains Mono
-- **Serif + Geometric Sans**: Crimson Pro + Space Grotesk
-- **Heavy Display + Light Sans**: Fredoka (700) + Manrope (300)
+**Critical**: Vary font choices across different projects. Don't converge on the same selections (like Space Grotesk) across all generations.
 
-**Serif + Sans Pairing**:
-- Use serif for headings (authority, elegance)
-- Use sans-serif for body (readability)
-- Ensure sufficient contrast in style (not both humanist)
-- Example: Playfair Display + Source Sans 3
+### Step 3: Color & Theme Design
 
-**Geometric + Humanist**:
-- Geometric sans for headings (modern, structured)
-- Humanist sans for body (friendly, readable)
-- Example: Space Grotesk + Source Sans 3 (avoid Inter)
+Create cohesive color systems using CSS variables with dominant colors and sharp accents.
 
-**Monospace + Sans**:
-- Monospace for code, technical data, or distinctive headings
-- Geometric/humanist sans for regular text
-- Unified family approach when available (IBM Plex, JetBrains)
-- Example: JetBrains Mono + Space Grotesk
+**Principles**:
 
-**Extreme Weight Variations**:
-Create hierarchy through dramatic weight differences:
-- **Headings**: Use 100-200 (ultra-thin) OR 800-900 (extra-bold)
-- **Body**: Use 300-400 (light to regular)
-- **Avoid**: Medium weights (500-600) for headings - not distinctive enough
-- **Example**: Manrope 200 for hero headings, Manrope 400 for body
+- Dominant colors with sharp accents > timid, evenly-distributed palettes
+- Commit to a cohesive aesthetic using CSS variables
+- Draw inspiration from IDE themes (Dracula, Nord, Tokyo Night, Monokai, etc.)
+- Consider cultural aesthetics relevant to project context
 
-**Size Jumps** (3x+ Ratio):
-Create clear hierarchy with large size differences:
-- **Hero**: 4rem (64px)
-- **H1**: 2.5rem (40px) - not quite 3x but close
-- **Body**: 1rem (16px) - 4x from hero
-- **Avoid**: Incremental 1.5x jumps (too subtle)
+**AVOID**:
 
-**Variable Fonts** (Modern Approach):
-- Single font file with multiple weights/styles
-- Reduces HTTP requests
-- Enables smooth weight transitions in animations
-- Example: Manrope Variable, Inter Variable (if used thoughtfully)
+- Purple gradients on white backgrounds (clichéd AI aesthetic)
+- Generic blue/gray combinations
+- Predictable rainbow palettes with equal weight
+- Safe, corporate color schemes when inappropriate for context
 
-### Typography Implementation
+**Approach**:
+
+- Choose 1-2 dominant colors that define the brand
+- Add 1-2 sharp accent colors for calls-to-action and highlights
+- Use CSS custom properties for theming
+- Consider both light and dark mode variations
+
+### Step 4: Motion & Animation
+
+Use animations strategically for high-impact moments and delightful micro-interactions.
+
+**Animation Priorities**:
+
+1. **High-impact moments**: Orchestrated page loads with staggered reveals
+2. **Micro-interactions**: Button hovers, transitions, state changes
+3. **Contextual effects**: Scroll-triggered animations, parallax
+
+**Implementation Guidelines**:
+
+- **For HTML/Vanilla JS**: Prioritize CSS-only solutions (transitions, animations, @keyframes)
+- **For React**: Use Motion library (Framer Motion) when available
+- **Focus on orchestration**: One well-orchestrated sequence > scattered micro-interactions
+- **Use animation-delay**: Create staggered reveals for related elements
+
+**Example Pattern**:
 
 ```css
-/* Fluid Typography with clamp() */
-:root {
-  --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
-  --text-sm: clamp(0.875rem, 0.825rem + 0.25vw, 1rem);
-  --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
-  --text-lg: clamp(1.125rem, 1.075rem + 0.25vw, 1.25rem);
-  --text-xl: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
-  --text-2xl: clamp(1.5rem, 1.35rem + 0.75vw, 2rem);
-  --text-3xl: clamp(2rem, 1.75rem + 1.25vw, 3rem);
-  --text-4xl: clamp(2.5rem, 2rem + 2.5vw, 4rem);
+.stagger-item {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
 }
-
-/* Type Scale with Clear Hierarchy */
-.heading-1 {
-  font-family: 'Playfair Display', serif;
-  font-size: var(--text-4xl);
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+.stagger-item:nth-child(1) {
+  animation-delay: 0.1s;
 }
-
-.heading-2 {
-  font-family: 'Playfair Display', serif;
-  font-size: var(--text-3xl);
-  font-weight: 600;
-  line-height: 1.2;
+.stagger-item:nth-child(2) {
+  animation-delay: 0.2s;
 }
-
-.body {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: var(--text-base);
-  font-weight: 400;
-  line-height: 1.6;
+.stagger-item:nth-child(3) {
+  animation-delay: 0.3s;
 }
 ```
 
-## Color Theory & Schemes
+### Step 5: Background & Atmosphere
 
-### Avoid Generic Color Schemes
+Create depth and atmosphere through layered backgrounds and contextual effects.
 
-**Never Use (Without Intentional Justification)**:
-- Purple-on-white gradients (AI default)
-- Plain #FFFFFF backgrounds
-- Pastel rainbow without cohesion
-- Generic Material Design colors verbatim
+**AVOID**:
 
-### Intentional Color Palette Design
+- Defaulting to solid colors
+- Plain white or gray backgrounds
+- Flat, lifeless surfaces
 
-**Principle**: Choose colors that create a **mood** and **brand identity**
+**Recommended Approaches**:
 
-**Ocean/Tech Professional**:
-```
-Primary: #0ea5e9 (sky blue)
-Accent: #f59e0b (amber)
-Background: #0f172a → #1e293b (dark slate gradient)
-Text: #f8fafc / #cbd5e1 / #64748b
-Mood: Professional, trustworthy, technical
-```
+- Layer CSS gradients for depth
+- Use geometric patterns (stripes, grids, dots)
+- Add subtle noise textures
+- Implement contextual effects (glow, blur, shadows)
+- Match background complexity to overall aesthetic
 
-**Sunset/Energetic**:
-```
-Primary: #f97316 (orange)
-Accent: #ec4899 (pink)
-Background: #fff7ed (light warm) with subtle gradients
-Text: #1c1917 / #57534e / #78716c
-Mood: Energetic, warm, inviting
-```
+**Example Patterns**:
 
-**Forest/Calm**:
-```
-Primary: #059669 (emerald)
-Accent: #facc15 (yellow)
-Background: #f0fdf4 (light green) with layered depth
-Text: #14532d / #166534 / #4ade80
-Mood: Calm, natural, wellness
-```
-
-**Cyberpunk/Bold**:
-```
-Primary: #06b6d4 (cyan)
-Accent: #f0abfc (fuchsia)
-Background: #18181b (very dark) with neon glows
-Text: #fafafa / #a1a1aa / #52525b
-Mood: Modern, bold, tech-forward
-```
-
-### Color Application Principles
-
-**Dominance Hierarchy**:
-- Background: 60% of visual space
-- Primary: 30% of elements
-- Accent: 10% for highlights
-
-**Contrast Requirements**:
-- Text on background: Minimum 4.5:1 (WCAG AA)
-- Large text: Minimum 3:1 (WCAG AA)
-- Interactive elements: Clear hover/focus states
-- Use tools: WebAIM Contrast Checker
-
-**Semantic Color Usage**:
-```
-Success: Greens (#10b981, #22c55e)
-Warning: Yellows/Oranges (#f59e0b, #eab308)
-Error: Reds (#ef4444, #dc2626)
-Info: Blues (#3b82f6, #0891b2)
-```
-
-**Implementation**:
 ```css
-:root {
-  --color-primary: 14 165 233;  /* RGB values for hsl() */
-  --color-accent: 245 158 11;
-  --color-bg-base: 15 23 42;
-  --color-bg-surface: 30 41 59;
-  --color-text-primary: 248 250 252;
-}
+/* Layered gradient */
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 
-/* Use with opacity */
-.element {
-  background-color: hsl(var(--color-primary) / 0.1);  /* 10% opacity */
-  color: hsl(var(--color-text-primary));
-}
+/* Geometric pattern */
+background-image: repeating-linear-gradient(
+  45deg,
+  transparent,
+  transparent 10px,
+  rgba(0, 0, 0, 0.05) 10px,
+  rgba(0, 0, 0, 0.05) 20px
+);
+
+/* Subtle noise texture */
+background-image: url('data:image/svg+xml,...'), linear-gradient(...);
 ```
 
-## Background Depth & Texture
+### Step 6: Validate Against Anti-Patterns
 
-### Avoid Plain Backgrounds
+Review the design against common AI-generated UI pitfalls.
 
-**Never Use**:
-- Solid white (#FFFFFF) with no variation
-- Single-color backgrounds without depth
-- Generic gradients alone
+**Anti-Pattern Checklist**:
 
-### Layered Background Techniques
+- [ ] Not using Inter, Roboto, Arial, or system fonts
+- [ ] No purple gradients on white backgrounds
+- [ ] Color palette has clear hierarchy (dominant + accent, not even distribution)
+- [ ] Animations are orchestrated and purposeful (not scattered)
+- [ ] Backgrounds have depth and atmosphere (not solid colors)
+- [ ] Layout is creative and context-appropriate (not cookie-cutter)
+- [ ] Typography is distinctive and matches brand personality
+- [ ] Design choices vary from previous projects (not repetitive)
 
-**1. Subtle Noise Texture**:
-```css
-.background-noise {
-  background-image:
-    linear-gradient(135deg, hsl(var(--bg-base)) 0%, hsl(var(--bg-surface)) 100%),
-    url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
-}
-```
+### Step 7: Return Design Guidance
 
-**2. Geometric Grid Pattern**:
-```css
-.background-grid {
-  background-image:
-    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-  background-size: 50px 50px;
-}
-```
+Provide specific, actionable design recommendations.
 
-**3. Radial Ambient Glow**:
-```css
-.background-glow {
-  background:
-    radial-gradient(circle at 20% 50%, rgba(14, 165, 233, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 80% 50%, rgba(245, 158, 11, 0.1) 0%, transparent 50%),
-    hsl(var(--bg-base));
-}
-```
+**Expected Output**:
 
-**4. Layered SVG Waves**:
-```css
-.background-waves {
-  background:
-    linear-gradient(180deg, hsl(var(--primary) / 0.1) 0%, transparent 100%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='rgba(255,255,255,0.05)' d='M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,144C960,149,1056,139,1152,128C1248,117,1344,107,1392,101.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom;
-}
-```
-
-**5. Mesh Gradient (Modern)**:
-```css
-.background-mesh {
-  background:
-    radial-gradient(at 27% 37%, hsla(215, 98%, 61%, 0.3) 0px, transparent 50%),
-    radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 0.3) 0px, transparent 50%),
-    radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 0.3) 0px, transparent 50%),
-    radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 0.3) 0px, transparent 50%),
-    radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 0.3) 0px, transparent 50%),
-    radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 0.3) 0px, transparent 50%),
-    radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 0.3) 0px, transparent 50%);
-}
-```
-
-## Animation & Motion Design
-
-### Principle: High-Impact Moments Over Random Motion
-
-**Core Insight**: One well-orchestrated page load with staggered reveals is worth more than a dozen random micro-animations scattered across the interface.
-
-**Avoid**:
-- Random animations everywhere without purpose
-- Slow, drawn-out transitions that delay user interaction
-- No animations at all (static interfaces feel lifeless)
-- Animations that don't respect reduced-motion preferences
-
-**Focus On High-Impact Moments**:
-- **Page Load**: Create memorable first impression with orchestrated entrance
-- **Major Transitions**: Route changes, modal appearances, significant state shifts
-- **Content Reveal**: Progressive disclosure as user scrolls or interacts
-- **Success Moments**: Celebrate user achievements with intentional motion
-- **Purposeful Micro-Interactions**: Hover/click feedback that reinforces UI affordances
-
-**Motion Priority**:
-1. **Page Load Animation** (highest impact) - Users see this every time
-2. **Major State Changes** (high impact) - Crucial for UX comprehension
-3. **Micro-Interactions** (supporting) - Polish, not primary focus
-4. **Decorative Motion** (lowest priority) - Use sparingly or omit
-
-### Motion Library Selection
-
-**Decision Framework**:
-- **HTML-Only Projects**: Always use CSS animations (no dependencies, better performance)
-- **React Projects**: Use [Framer Motion](https://www.framer.com/motion/) for complex choreography
-- **Simple Transitions**: CSS is sufficient even in React
-- **Complex Orchestration**: Motion library provides easier sequencing and stagger control
-
-### Page Load Animation
-
-**CSS-Only Approach** (HTML Projects, Simple React):
-```css
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.page-enter {
-  animation: fadeInUp 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-/* Staggered children */
-.stagger > :nth-child(1) { animation-delay: 0.1s; }
-.stagger > :nth-child(2) { animation-delay: 0.2s; }
-.stagger > :nth-child(3) { animation-delay: 0.3s; }
-.stagger > :nth-child(4) { animation-delay: 0.4s; }
-```
-
-**React + Framer Motion** (For Complex Animations):
-```typescript
-import { motion } from 'framer-motion'
-
-export default function Page({ children }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-    >
-      {children}
-    </motion.div>
-  )
-}
-
-// Staggered list
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1
-    }
-  }
-}
-
-const item = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0 }
-}
-
-<motion.ul variants={container} initial="hidden" animate="show">
-  {items.map((item) => (
-    <motion.li key={item.id} variants={item}>
-      {item.name}
-    </motion.li>
-  ))}
-</motion.ul>
-```
-
-### Micro-Interactions
-
-**Button Hover**:
-```css
-.button {
-  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
-}
-
-.button:active {
-  transform: translateY(0);
-  transition-duration: 0.1s;
-}
-```
-
-**Card Hover**:
-```css
-.card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
-}
-```
-
-**Link Underline Animation**:
-```css
-.link {
-  position: relative;
-  text-decoration: none;
-}
-
-.link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: currentColor;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.3s ease;
-}
-
-.link:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-```
-
-### Accessibility: Respect Reduced Motion
-
-**Always Include**:
-```css
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+```json
+{
+  "typography": {
+    "primary": "Font name and reasoning",
+    "secondary": "Font name and reasoning",
+    "code": "Monospace font (if applicable)"
+  },
+  "colors": {
+    "dominant": ["#hex1", "#hex2"],
+    "accent": ["#hex3"],
+    "theme_inspiration": "IDE theme or cultural aesthetic reference"
+  },
+  "animations": {
+    "approach": "CSS-only or Framer Motion",
+    "focus": "Page load orchestration or micro-interactions",
+    "key_moments": ["List of high-impact animation opportunities"]
+  },
+  "backgrounds": {
+    "technique": "Layered gradients, geometric patterns, etc.",
+    "atmosphere": "Description of desired depth/mood"
+  },
+  "anti_pattern_validation": {
+    "passed": true,
+    "warnings": []
   }
 }
 ```
 
-## Layout Innovation
+## Error Handling
 
-### Break from Standard Grids
+- **Missing Context**: Ask clarifying questions about brand identity and project purpose
+- **Generic Choices Detected**: Explicitly warn and suggest distinctive alternatives
+- **Repetitive Patterns**: Flag convergence on previously used aesthetics
+- **Unclear Requirements**: Request specific design goals or constraints
 
-**Asymmetric Grid**:
-```css
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr 1fr;
-  grid-template-rows: auto auto;
-  gap: 2rem;
-}
+## Examples
 
-.hero-text {
-  grid-column: 1 / 3;
-  grid-row: 1;
-}
+### Example 1: Technical Documentation Site
 
-.hero-image {
-  grid-column: 2 / 4;
-  grid-row: 1 / 3;
-  transform: translateY(-2rem);  /* Break alignment */
+**Input**:
+
+```json
+{
+  "project": "Developer documentation platform",
+  "brand": "Technical, clean, code-focused",
+  "audience": "Software engineers"
 }
 ```
 
-**Broken Grid Layout**:
-```css
-.content-grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 1.5rem;
-}
+**Output**:
 
-.card-1 {
-  grid-column: 1 / 6;
-  grid-row: 1 / 3;
-}
-
-.card-2 {
-  grid-column: 6 / 10;
-  grid-row: 1 / 2;
-  transform: translateY(2rem);  /* Offset for visual interest */
-}
-
-.card-3 {
-  grid-column: 10 / 13;
-  grid-row: 1 / 3;
-}
-```
-
-**Overlapping Elements**:
-```css
-.overlap-container {
-  position: relative;
-}
-
-.background-card {
-  position: relative;
-  z-index: 1;
-}
-
-.foreground-element {
-  position: absolute;
-  top: -2rem;
-  left: -2rem;
-  z-index: 2;
+```json
+{
+  "typography": {
+    "primary": "DM Sans - modern, readable, technical feel without being generic",
+    "secondary": "Crimson Pro - for editorial content and longer reads",
+    "code": "JetBrains Mono - excellent code aesthetics with ligatures"
+  },
+  "colors": {
+    "dominant": ["#0f172a", "#1e293b"],
+    "accent": ["#38bdf8", "#f97316"],
+    "theme_inspiration": "Tokyo Night - dark blues with bright cyan and orange accents"
+  },
+  "animations": {
+    "approach": "CSS-only for performance",
+    "focus": "Staggered page load for documentation sections",
+    "key_moments": ["Code block reveal", "Navigation transitions", "Search result appearance"]
+  },
+  "backgrounds": {
+    "technique": "Dark gradient with subtle grid pattern overlay",
+    "atmosphere": "Technical depth with code editor vibe"
+  },
+  "anti_pattern_validation": {
+    "passed": true,
+    "warnings": []
+  }
 }
 ```
 
-## Design Enhancement Checklist
+### Example 2: Creative Agency Landing Page
 
-Before considering design complete:
+**Input**:
 
-**Typography**:
-- [ ] No generic fonts (Inter, Roboto, Open Sans, Lato)
-- [ ] Clear font pairing strategy (serif + sans, mono + sans, etc.)
-- [ ] Fluid typography with clamp() or responsive scale
-- [ ] Clear hierarchy with size, weight, and spacing
+```json
+{
+  "project": "Design agency portfolio",
+  "brand": "Bold, creative, experimental",
+  "audience": "Potential clients seeking innovative design"
+}
+```
 
-**Color**:
-- [ ] Intentional color palette (not purple-on-white default)
-- [ ] Mood/brand identity expressed through colors
-- [ ] WCAG AA contrast compliance (4.5:1 minimum)
-- [ ] Semantic colors for success/warning/error/info
+**Output**:
 
-**Background**:
-- [ ] Layered depth (not plain solid color)
-- [ ] Subtle texture or pattern
-- [ ] Visual interest without overwhelming content
+```json
+{
+  "typography": {
+    "primary": "Playfair Display - elegant, sophisticated, makes a statement",
+    "secondary": "Outfit - modern contrast for body text",
+    "code": "Not applicable"
+  },
+  "colors": {
+    "dominant": ["#000000", "#fffef7"],
+    "accent": ["#ff6b35", "#00d9ff"],
+    "theme_inspiration": "High-contrast editorial with vibrant accent pops"
+  },
+  "animations": {
+    "approach": "Framer Motion for complex orchestration",
+    "focus": "Full-page orchestrated entry sequence",
+    "key_moments": [
+      "Hero text reveal with stagger",
+      "Project thumbnails parallax",
+      "Section transitions"
+    ]
+  },
+  "backgrounds": {
+    "technique": "Animated gradient mesh with organic shapes",
+    "atmosphere": "Dynamic, bold, artistic depth"
+  },
+  "anti_pattern_validation": {
+    "passed": true,
+    "warnings": []
+  }
+}
+```
 
-**Animation**:
-- [ ] Page load/transition animations present
-- [ ] Micro-interactions on hover/click
-- [ ] Purposeful animations (not random)
-- [ ] `prefers-reduced-motion` respected
+### Example 3: Anti-Pattern Detection
 
-**Layout**:
-- [ ] Not just standard grid (visual interest added)
-- [ ] Clear visual rhythm and spacing
-- [ ] Asymmetry or broken-grid elements where appropriate
-- [ ] Responsive across all breakpoints
+**Input**:
 
-**Overall**:
-- [ ] AI Slop Score < 30 (distinctive, intentional design)
-- [ ] Design feels crafted, not generated
-- [ ] Accessibility standards met
-- [ ] Performance optimized (animations use transform/opacity)
+```json
+{
+  "project": "SaaS dashboard",
+  "proposed_design": {
+    "font": "Inter",
+    "colors": ["#6366f1", "#8b5cf6", "#ffffff"],
+    "background": "solid white",
+    "animations": "minimal button hovers"
+  }
+}
+```
 
-## When to Apply
+**Output**:
 
-Use this skill when:
-- Creating new frontend interfaces
-- Enhancing existing designs that look generic
-- Avoiding "AI-generated" aesthetic
-- Implementing distinctive brand identity
-- Designing landing pages, dashboards, or web applications
-- Reviewing designs for visual appeal and distinction
-- Training models to generate better design outputs
+```json
+{
+  "typography": {
+    "primary": "REJECTED: Inter is overused. Recommend: Plus Jakarta Sans - similar readability, more distinctive",
+    "secondary": "Consider Spectral for data-heavy sections to add visual interest"
+  },
+  "colors": {
+    "dominant": ["#0c4a6e", "#082f49"],
+    "accent": ["#06b6d4", "#fbbf24"],
+    "theme_inspiration": "REJECTED: Purple gradient is clichéd. Recommend: Deep ocean blues with cyan/amber accents (Dracula-inspired)"
+  },
+  "animations": {
+    "approach": "Framer Motion",
+    "focus": "UPGRADE: Add orchestrated dashboard load sequence",
+    "key_moments": ["Staggered card reveals", "Chart animations", "Data transitions"]
+  },
+  "backgrounds": {
+    "technique": "REJECTED: Solid white is flat. Recommend: Subtle gradient with noise texture",
+    "atmosphere": "Add depth with layered backgrounds and geometric patterns"
+  },
+  "anti_pattern_validation": {
+    "passed": false,
+    "warnings": [
+      "Using Inter font (generic AI aesthetic)",
+      "Purple gradient color scheme (overused)",
+      "Solid white background (no atmosphere)",
+      "Minimal animations (missed opportunities for delight)"
+    ]
+  }
+}
+```
 
-This approach ensures frontend designs are distinctive, polished, and intentional - not generic AI defaults.
+### Example 4: E-commerce Product Page
+
+**Input**:
+
+```json
+{
+  "project": "Premium fashion e-commerce",
+  "brand": "Luxury, minimalist, editorial",
+  "audience": "High-end fashion consumers"
+}
+```
+
+**Output**:
+
+```json
+{
+  "typography": {
+    "primary": "Lora - sophisticated serif for luxury feel",
+    "secondary": "DM Sans - clean sans-serif for product details and UI",
+    "code": "Not applicable"
+  },
+  "colors": {
+    "dominant": ["#1a1a1a", "#f5f5f0"],
+    "accent": ["#c4a57b"],
+    "theme_inspiration": "Luxury editorial - black, cream, gold accent"
+  },
+  "animations": {
+    "approach": "CSS-only for lightweight performance",
+    "focus": "Smooth product image transitions and subtle reveals",
+    "key_moments": [
+      "Product image crossfade",
+      "Size selector micro-interaction",
+      "Add to cart confirmation"
+    ]
+  },
+  "backgrounds": {
+    "technique": "Soft gradient from cream to off-white with subtle texture",
+    "atmosphere": "Luxurious, tactile, premium feel"
+  },
+  "anti_pattern_validation": {
+    "passed": true,
+    "warnings": []
+  }
+}
+```
+
+## Validation
+
+- [ ] Recommends distinctive fonts that match project character
+- [ ] Explicitly warns against generic fonts (Inter, Roboto, Arial, system)
+- [ ] Creates color palettes with clear hierarchy (dominant + accent)
+- [ ] Avoids clichéd color schemes (purple gradients)
+- [ ] Suggests orchestrated animations for high-impact moments
+- [ ] Recommends backgrounds with depth and atmosphere
+- [ ] Validates against anti-patterns
+- [ ] Varies aesthetic recommendations across different contexts
+- [ ] Provides context-specific reasoning for each choice
+
+## Integration with Agents
+
+### Frontend-Focused Agents
+
+Before implementing UI components, invoke frontend-aesthetics Skill to receive design guidance:
+
+```markdown
+## Step 1: Design Guidance
+
+Use frontend-aesthetics Skill to get typography, color, animation, and background recommendations.
+
+Input: Project context, brand identity, target aesthetic
+Output: Comprehensive design guidance with specific recommendations
+
+Validate output against anti-patterns before proceeding.
+```
+
+### Code Review Agents
+
+Use frontend-aesthetics Skill to evaluate existing frontend code for generic patterns:
+
+```markdown
+## Step 3: Frontend Aesthetics Review
+
+Use frontend-aesthetics Skill in validation mode:
+
+- Extract current font choices from CSS
+- Identify color palette from CSS variables
+- Review animation implementation
+- Check background complexity
+
+Flag any anti-patterns detected.
+```
+
+### Orchestrator Integration
+
+Include frontend-aesthetics validation in quality gates:
+
+```markdown
+## Phase 2: Design Review
+
+Use frontend-aesthetics Skill to validate design choices:
+
+1. Check typography selection
+2. Validate color scheme
+3. Review animation approach
+4. Assess background depth
+
+If anti_pattern_validation.passed == false:
+Delegate design improvements to frontend worker
+```
+
+## Notes
+
+- **Token Budget**: This skill is intentionally focused (~500 tokens) for use as a design reference without overwhelming agent context
+- **Variation is Critical**: Agents should avoid converging on the same design choices (like Space Grotesk) across all projects
+- **Context Matters**: Design recommendations should always match the project's brand identity and purpose
+- **Creativity Over Templates**: Encourage unexpected, distinctive choices rather than safe, predictable patterns
+- **Performance Considerations**: CSS-only animations are preferred for HTML; Framer Motion is appropriate for React when available
+- **Font Licensing**: Ensure recommended fonts are available via Google Fonts or other accessible sources
+- **Accessibility**: Distinctive aesthetics should not compromise readability or WCAG compliance
+- **Iteration**: Design choices can be refined based on user feedback and testing
+
+## References
+
+Based on official Anthropic guidance: "Improving Claude's front-end aesthetic sense" (2025-01-15)

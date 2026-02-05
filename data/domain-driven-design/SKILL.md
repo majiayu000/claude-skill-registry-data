@@ -1,105 +1,97 @@
 ---
 name: domain-driven-design
-description: Apply Domain-Driven Design patterns. Use when modeling complex business domains, defining bounded contexts, or designing aggregates. Covers entities, value objects, and repositories.
-allowed-tools: Read, Write, Glob, Grep
+description: Expert guidance for Domain-Driven Design architecture and implementation. Use when designing complex business systems, defining bounded contexts, structuring domain models, choosing between modular monolith vs microservices, implementing aggregates/entities/value objects, or when users mention "DDD", "domain-driven design", "bounded context", "aggregate", "domain model", "ubiquitous language", "event storming", "context mapping", "domain events", "anemic domain model", strategic design, tactical patterns, or domain modeling. Helps make architectural decisions, identify subdomains, design aggregates, and avoid common DDD pitfalls.
 ---
 
-# Domain-Driven Design
+# Domain-Driven Design Skill
 
-## Core Concepts
+DDD manages complexity through alignment between software and business reality. **Strategic design (boundaries, language, subdomains) provides more value than tactical patterns (aggregates, repositories).**
 
-### Ubiquitous Language
-Use the same terminology as domain experts. Code should read like business documentation.
+## When to Apply DDD
 
-### Bounded Context
-A boundary within which a particular domain model is defined and applicable.
+**Apply DDD when:**
+- Domain has intricate business rules
+- System is long-lived and high-value
+- Domain experts are available
+- Multiple teams/departments involved
+- Software represents competitive advantage
 
-### Context Map
-Shows how bounded contexts relate to each other.
+**DDD is overkill when:**
+- Simple CRUD applications
+- Tight deadlines, limited budgets
+- No domain experts available
+- Complexity is purely technical, not business
 
-## Building Blocks
+## Core Workflow
 
-### Entity
-Has identity that persists over time. Equality based on ID.
+1. **Domain Discovery** → Identify subdomains and their strategic importance
+2. **Bounded Context Definition** → Draw boundaries where language changes
+3. **Context Mapping** → Define integration patterns between contexts
+4. **Architecture Selection** → Choose modular monolith vs microservices
+5. **Tactical Implementation** → Apply patterns within core domains only
 
-```typescript
-class User {
-  constructor(
-    public readonly id: UserId,
-    public email: Email,
-    public name: string
-  ) {}
-}
+## Quick Reference
+
+### Subdomain Types (Problem Space)
+
+| Type | Investment | Example |
+|------|-----------|---------|
+| **Core** | Maximum - competitive advantage | Recommendation engine, trading logic |
+| **Supporting** | Custom but quality tradeoffs OK | Inventory management |
+| **Generic** | Buy/outsource | Auth, email, payments |
+
+### Key Decision: Entity vs Value Object
+
+- **Entity**: Has identity, tracked through time, mutable → `Customer`, `Order`
+- **Value Object**: Defined by attributes, immutable, interchangeable → `Money`, `Address`, `Email`
+
+**Default to value objects.** Only use entities when identity matters.
+
+### Aggregate Design Rules (Vaughn Vernon)
+
+1. Model true invariants in consistency boundaries
+2. Design small aggregates (~70% should be root + value objects only)
+3. Reference other aggregates by ID only
+4. Use eventual consistency outside the boundary
+
+### Architecture Decision
+
+```
+Start with modular monolith when:
+├── Team < 20 developers
+├── Domain boundaries unclear
+├── Time-to-market critical
+└── Strong consistency required
+
+Consider microservices when:
+├── Bounded contexts have distinct languages
+├── Teams can own full contexts
+├── Independent scaling required
+└── DevOps maturity exists
 ```
 
-### Value Object
-Immutable, equality based on attributes.
+## Detailed References
 
-```typescript
-class Email {
-  private constructor(public readonly value: string) {}
+- **Strategic Patterns**: See [references/STRATEGIC-PATTERNS.md](references/STRATEGIC-PATTERNS.md) for subdomains, bounded contexts, context mapping, event storming
+- **Tactical Patterns**: See [references/TACTICAL-PATTERNS.md](references/TACTICAL-PATTERNS.md) for entities, value objects, aggregates, services, repositories
+- **Architecture Alignment**: See [references/ARCHITECTURE-ALIGNMENT.md](references/ARCHITECTURE-ALIGNMENT.md) for clean/hexagonal architecture, modular monolith, microservices
+- **Anti-Patterns**: See [references/ANTI-PATTERNS.md](references/ANTI-PATTERNS.md) for common pitfalls and how to avoid them
+- **Troubleshooting**: See [TROUBLESHOOTING.md](TROUBLESHOOTING.md) for common issues and solutions
 
-  static create(value: string): Email {
-    if (!value.includes('@')) {
-      throw new Error('Invalid email');
-    }
-    return new Email(value);
-  }
+## Critical Reminders
 
-  equals(other: Email): boolean {
-    return this.value === other.value;
-  }
-}
-```
+1. **Ubiquitous language first** - Code should read like business language
+2. **Strategic before tactical** - Understand boundaries before implementing patterns
+3. **Apply tactical patterns selectively** - Only in core domains where complexity warrants
+4. **One aggregate per transaction** - Cross-aggregate consistency via domain events
+5. **Persistence ignorance** - Domain layer has no infrastructure dependencies
 
-### Aggregate
-Cluster of entities and value objects with a root entity.
+## Implementation Skills
 
-```typescript
-class Order { // Aggregate Root
-  private items: OrderItem[] = [];
+For framework-specific implementation of these patterns:
 
-  addItem(product: ProductId, quantity: number): void {
-    // Business rules enforced here
-    this.items.push(new OrderItem(product, quantity));
-  }
+- **Spring Boot data layer**: See `spring-boot-data-ddd` skill for JPA/JDBC aggregates, repositories, transactions
+- **Spring Boot web layer**: See `spring-boot-web-api` skill for controllers, validation, exception handling  
+- **Spring Modulith**: See `spring-boot-modulith` skill for module structure and event-driven communication
 
-  get total(): Money {
-    return this.items.reduce((sum, item) => sum.add(item.subtotal), Money.zero());
-  }
-}
-```
-
-### Repository
-Abstracts data access for aggregates.
-
-```typescript
-interface OrderRepository {
-  findById(id: OrderId): Promise<Order | null>;
-  save(order: Order): Promise<void>;
-}
-```
-
-### Domain Event
-Something that happened in the domain.
-
-```typescript
-class OrderPlaced {
-  constructor(
-    public readonly orderId: OrderId,
-    public readonly userId: UserId,
-    public readonly occurredAt: Date
-  ) {}
-}
-```
-
-## Strategic Patterns
-
-### Anti-Corruption Layer
-Translate between your model and external systems.
-
-### Shared Kernel
-Shared subset of domain model between contexts.
-
-### Customer-Supplier
-Upstream provides what downstream needs.
+These skills provide Spring Boot 4 implementation patterns for the DDD concepts defined here.

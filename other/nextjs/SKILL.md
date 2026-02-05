@@ -1,125 +1,58 @@
 ---
 name: nextjs
-description: |
-  Provides Next.js project architecture expertise and implementation patterns. Enforces BFF (Backend for Frontend) pattern, Server Components strategy, and data fetching policies. Specializes in App Router architecture, Server Actions, streaming SSR, incremental static regeneration, and route handlers. Ensures optimal performance through proper component boundaries and caching strategies.
-  Use when: developing Next.js applications, implementing App Router patterns, creating Server Components and Client Components, designing Server Actions for mutations, implementing data fetching with fetch API, configuring BFF architecture, optimizing page performance with streaming and suspense, handling routing and navigation, implementing middleware, or setting up API route handlers.
+description: Build, review, and refactor Next.js (App Router) frontend projects with TypeScript. Use for tasks like creating pages/layouts, routing, server components vs client components, data fetching patterns, UI component structure, forms/validation, auth integration points, env vars, linting/testing, and production deployment readiness.
 ---
 
-# Next.js Project Architecture Rules
+# nextjs
 
-**Scope**: Project-specific policies and architecture decisions only.
+Use this skill to implement or review a Next.js frontend in a consistent, production-friendly way.
 
-**Version**: Next.js 15.5+ with App Router
+## Defaults (unless repo dictates otherwise)
 
----
+- Next.js App Router (`app/`)
+- TypeScript
+- Server Components by default; add `"use client"` only when needed
+- CSS: Tailwind if already present; otherwise follow existing styling approach
 
-## 1. BFF Architecture (Mandatory)
+## Workflow
 
-### Absolute Rules
+1) Identify project mode
+- New app: decide App Router vs Pages Router (prefer App Router unless constrained).
+- Existing app: follow current structure, conventions, and tooling.
 
-Next.js serves ONLY as a thin Backend for Frontend (BFF) layer:
+2) Establish app structure (App Router)
+- `app/layout.tsx`: global shell (providers, fonts, nav).
+- `app/page.tsx`: landing page.
+- Route groups for domains: `app/(dashboard)/...`, `app/(marketing)/...`.
+- Shared UI: `components/` (reusable), `app/**/_components/` (route-scoped).
+- Types/utilities: `lib/` (fetchers, helpers), `types/`.
 
-```
-Browser ↔ Next.js Server ↔ Backend API ↔ Database
-```
+3) Server vs client boundaries
+- Prefer Server Components for data loading and initial render.
+- Use Client Components for: event handlers, stateful UI, browser APIs, client-only libraries.
+- Keep props serializable across the boundary; avoid passing functions/classes.
 
-**NEVER**:
+4) Data fetching patterns
+- Prefer colocated server fetchers in `lib/` and call them from Server Components.
+- Use `fetch()` with Next caching semantics when appropriate.
+- Handle loading and errors with `loading.tsx` / `error.tsx` per route segment.
 
-- ❌ Direct database access from Next.js (no Prisma, no ORMs)
-- ❌ Business logic implementation in Next.js
-- ❌ Data validation beyond input sanitization
+5) Forms and validation
+- Use server actions when appropriate; otherwise route handlers (`app/api/...`) + client submit.
+- Validate on server; optionally mirror on client.
 
-**ALWAYS**:
+6) Env vars & config
+- Document required env vars; use `process.env.X`.
+- Only expose public vars with `NEXT_PUBLIC_` prefix.
 
-- ✅ All business logic in separate backend service
-- ✅ All database operations via backend API
-- ✅ Next.js for: SSR/SSG, API aggregation, session management, caching
+7) Quality gates
+- Run `lint` and `typecheck` (and tests if present).
+- Ensure accessibility basics: labels, focus states, keyboard navigation.
+- Avoid breaking route segments/URLs; add redirects when changing paths.
 
----
+## Output expectations when making changes
 
-## 2. Component Strategy (Enforced)
+- Keep diffs small and localized.
+- Prefer composition over complex shared state.
+- Add a short usage note (routes added, env vars, how to run) when you introduce new capabilities.
 
-### Server Components First
-
-**Rule**: Default to Server Components. `'use client'` only at leaf nodes.
-
-**Client Component allowed for**:
-
-- Event handlers (onClick, onChange)
-- Browser APIs (localStorage, window)
-- React hooks (useState, useEffect)
-
-**Violation**: Client Component wrapping Server Components
-
----
-
-## 3. Rendering Strategy (Explicit Declaration Required)
-
-### Mandatory Export
-
-Every page MUST explicitly declare rendering intent:
-
-```typescript
-// Required - choose one:
-export const dynamic = "force-static"; // SSG
-export const dynamic = "force-dynamic"; // SSR
-export const revalidate = 3600; // ISR
-```
-
-**No implicit rendering**. Always be explicit about caching behavior.
-
----
-
-## 4. Data Fetching (Server Actions vs API Routes)
-
-### Server Actions (Default for Internal Operations)
-
-**Use for**:
-
-- Form submissions
-- Data mutations
-- Internal Next.js operations
-
-**Location**: `app/actions/*.ts` or inline with `'use server'`
-
-### API Routes (External Integration ONLY)
-
-**Use for**:
-
-- Webhooks (Stripe, GitHub, etc.)
-- OAuth callbacks
-- Mobile app endpoints
-- Third-party service integrations
-
-**Location**: `app/api/*/route.ts`
-
-**NEVER**: API routes for internal Next.js-to-Next.js communication
-
----
-
-## 5. Caching Policy (Explicit Intent Required)
-
-### Mandatory Cache Declaration
-
-All fetch calls MUST explicitly specify caching:
-
-```typescript
-// Required - choose one:
-fetch(url, { next: { revalidate: 3600 } }); // Time-based
-fetch(url, { cache: "no-store" }); // Dynamic
-```
-
-**Use React `cache()`** to prevent duplicate requests within render cycle.
-
-**No implicit caching**. Always declare intent.
-
----
-
-## Critical Violations
-
-1. **Direct DB access from Next.js** → Architecture violation
-2. **API Routes for internal mutations** → Use Server Actions
-3. **Missing rendering strategy declaration** → Add explicit export
-4. **Client Component not at leaf** → Move `'use client'` down
-5. **Implicit caching** → Add explicit cache declaration
-6. **Backend not separated** → Mandatory separate service

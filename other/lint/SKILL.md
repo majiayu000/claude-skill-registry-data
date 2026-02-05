@@ -1,61 +1,19 @@
 ---
 name: lint
-description: Run formatting and linting checks on the codebase
+description: Linting workflow rules for this workspace.
 ---
 
-# Quick Lint Check
+# Lint Skill
 
-Run all code quality checks without committing.
+Use this skill when handling lint errors or running eslint.
 
-## Process
+## Linting
 
-### Step 1: Check Formatting
-
-```bash
-cd backend && cargo fmt --check
-```
-
-Report pass/fail status.
-
-### Step 2: Run Clippy
-
-```bash
-cd backend && cargo clippy --workspace --all-targets --all-features -- -D warnings
-```
-
-Report any warnings or errors.
-
-### Step 3: Summary
-
-Report overall status:
-- Formatting: PASS/FAIL
-- Clippy: PASS/FAIL (with count of issues if any)
-
-## Auto-Fix Option
-
-If formatting fails, offer to auto-fix:
-
-```bash
-cd backend && cargo fmt
-```
-
-For clippy issues, some can be auto-fixed:
-
-```bash
-cd backend && cargo clippy --fix --allow-dirty --allow-staged
-```
-
-Note: Not all clippy issues are auto-fixable. Manual fixes may be required.
-
-## Quick Reference
-
-```bash
-# Check only
-cd backend && cargo fmt --check && cargo clippy --workspace --all-targets --all-features -- -D warnings
-
-# Auto-fix formatting
-cd backend && cargo fmt
-
-# Auto-fix clippy (where possible)
-cd backend && cargo clippy --fix --allow-dirty --allow-staged
-```
+- When encountering lint errors, automatically fix them using `eslint --fix`
+  before making manual changes.
+- Run `eslint --fix` on the affected file(s) to resolve auto-fixable lint
+  issues.
+- If `eslint --fix` cannot solve a lint error, LEAVE IT TO ME. Do not attempt to
+  manually fix it.
+- NEVER use ESLint disable comments (e.g., `eslint-disable-next-line`,
+  `eslint-disable`, etc.). Leave lint errors for the user to fix.

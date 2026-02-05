@@ -1,107 +1,27 @@
 ---
-name: Council
-description: Multi-agent debate system. USE WHEN council, debate, perspectives, agents discuss. SkillSearch('council') for docs.
-implements: Science
-science_cycle_time: meso
+name: council
+description: Get a help or a second opinion from other agents. Bundle a prompt and a curated file set, then ask other LLMs for advice (debug, refactor, design, ...).
 ---
 
-## Customization
+# Council
 
-**Before executing, check for user customizations at:**
-`~/.claude/skills/CORE/USER/SKILLCUSTOMIZATIONS/Council/`
+Use this skill when you want a fast second brain pass from other agents or LLMs on a problem you are facing.
 
-If this directory exists, load and apply any PREFERENCES.md, configurations, or resources found there. These override default behavior. If the directory does not exist, proceed with skill defaults.
+## Workflow
 
-# Council Skill
+1. Pick the relevant files and build a concise and clear prompt describing the problem
+2. Run `ask-council "PROMPT"` to dispatch the same prompt to multiple agents
+3. Wait for the responses to come back and review them
 
-Multi-agent debate system where specialized agents discuss topics in rounds, respond to each other's points, and surface insights through intellectual friction.
+## Tips
 
-**Key Differentiator from RedTeam:** Council is collaborative-adversarial (debate to find best path), while RedTeam is purely adversarial (attack the idea). Council produces visible conversation transcripts; RedTeam produces steelman + counter-argument.
+- Share file paths relative to the project root for best results
+- If you need diffs reviewed, paste the diff into the prompt
+- Make the prompt completely standalone: include error text, constraints, and the desired output format (plan vs patch vs pros or cons)
+- Council can be slow while it reasons. Allow it several minutes to process
 
-
-## Voice Notification
-
-**When executing a workflow, do BOTH:**
-
-1. **Send voice notification**:
-   ```bash
-   curl -s -X POST http://localhost:8888/notify \
-     -H "Content-Type: application/json" \
-     -d '{"message": "Running the WORKFLOWNAME workflow from the Council skill"}' \
-     > /dev/null 2>&1 &
-   ```
-
-2. **Output text notification**:
-   ```
-   Running the **WorkflowName** workflow from the **Council** skill...
-   ```
-
-**Full documentation:** `~/.claude/skills/CORE/SkillNotifications.md`
-
-## Workflow Routing
-
-Route to the appropriate workflow based on the request.
-
-**When executing a workflow, output this notification directly:**
+## Example
 
 ```
-Running the **WorkflowName** workflow from the **Council** skill...
+ask-council "Review src/foo/bar.js. Find 3 risks and 2 improvements. Return bullets only."
 ```
-
-| Trigger | Workflow |
-|---------|----------|
-| Full structured debate (3 rounds, visible transcript) | `Workflows/Debate.md` |
-| Quick consensus check (1 round, fast) | `Workflows/Quick.md` |
-| Pure adversarial analysis | RedTeam skill |
-
-## Quick Reference
-
-| Workflow | Purpose | Rounds | Output |
-|----------|---------|--------|--------|
-| **DEBATE** | Full structured discussion | 3 | Complete transcript + synthesis |
-| **QUICK** | Fast perspective check | 1 | Initial positions only |
-
-## Context Files
-
-| File | Content |
-|------|---------|
-| `CouncilMembers.md` | Agent roles, perspectives, voice mapping |
-| `RoundStructure.md` | Three-round debate structure and timing |
-| `OutputFormat.md` | Transcript format templates |
-
-## Core Philosophy
-
-**Origin:** Best decisions emerge from diverse perspectives challenging each other. Not just collecting opinions - genuine intellectual friction where experts respond to each other's actual points.
-
-**Speed:** Parallel execution within rounds, sequential between rounds. A 3-round debate of 4 agents = 12 agent calls but only 3 sequential waits. Complete in 30-90 seconds.
-
-## Examples
-
-```
-"Council: Should we use WebSockets or SSE?"
--> Invokes DEBATE workflow -> 3-round transcript
-
-"Quick council check: Is this API design reasonable?"
--> Invokes QUICK workflow -> Fast perspectives
-
-"Council with security: Evaluate this auth approach"
--> DEBATE with Security agent added
-```
-
-## Integration
-
-**Works well with:**
-- **RedTeam** - Pure adversarial attack after collaborative discussion
-- **Development** - Before major architectural decisions
-- **Research** - Gather context before convening the council
-
-## Best Practices
-
-1. Use QUICK for sanity checks, DEBATE for important decisions
-2. Add domain-specific experts as needed (security for auth, etc.)
-3. Review the transcript - insights are in the responses, not just positions
-4. Trust multi-agent convergence when it occurs
-
----
-
-**Last Updated:** 2025-12-20

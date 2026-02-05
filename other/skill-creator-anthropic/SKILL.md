@@ -1,7 +1,7 @@
 ---
-name: anthropic-skill-creator
-description: Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends the agent's capabilities with specialized knowledge, workflows, or tool integrations.
-license: Complete terms in LICENSE.txt
+name: skill-creator-anthropic
+description: Guide for creating effective skills. Use when users want to create a new skill (or update an existing skill) that extends the model's capabilities with specialized knowledge, workflows, or tool integrations.
+license: Proprietary. See LICENSE.txt
 ---
 
 # Skill Creator
@@ -10,10 +10,7 @@ This skill provides guidance for creating effective skills.
 
 ## About Skills
 
-Skills are modular, self-contained packages that extend the agent's capabilities by providing
-specialized knowledge, workflows, and tools. Think of them as "onboarding guides" for specific
-domains or tasks—they transform the agent from a general-purpose assistant into a specialized agent
-equipped with procedural knowledge that no model can fully possess.
+Skills are modular, self-contained packages that extend the Agent's capabilities by providing specialized knowledge, workflows, and tools. Think of them as "onboarding guides" for specific domains or tasks—they transform the Agent from a general-purpose agent into a specialized agent equipped with procedural knowledge that no model can fully possess.
 
 ### What Skills Provide
 
@@ -26,9 +23,9 @@ equipped with procedural knowledge that no model can fully possess.
 
 ### Concise is Key
 
-The context window is a public good. Skills share the context window with everything else the agent needs: system prompt, conversation history, other Skills' metadata, and the actual user request.
+The context window is a public good. Skills share the context window with everything else the Agent needs: system prompt, conversation history, other Skills' metadata, and the actual user request.
 
-**Default assumption: the agent is already very smart.** Only add context the agent doesn't already have. Challenge each piece of information: "Does the agent really need this explanation?" and "Does this paragraph justify its token cost?"
+**Default assumption: the Agent is already very smart.** Only add context the Agent doesn't already have. Challenge each piece of information: "Does the Agent really need this explanation?" and "Does this paragraph justify its token cost?"
 
 Prefer concise examples over verbose explanations.
 
@@ -42,13 +39,13 @@ Match the level of specificity to the task's fragility and variability:
 
 **Low freedom (specific scripts, few parameters)**: Use when operations are fragile and error-prone, consistency is critical, or a specific sequence must be followed.
 
-Think of the agent as exploring a path: a narrow bridge with cliffs needs specific guardrails (low freedom), while an open field allows many routes (high freedom).
+Think of the Agent as exploring a path: a narrow bridge with cliffs needs specific guardrails (low freedom), while an open field allows many routes (high freedom).
 
 ### Anatomy of a Skill
 
 Every skill consists of a required SKILL.md file and optional bundled resources:
 
-```text
+```
 skill-name/
 ├── SKILL.md (required)
 │   ├── YAML frontmatter metadata (required)
@@ -59,13 +56,13 @@ skill-name/
     ├── scripts/          - Executable code (Python/Bash/etc.)
     ├── references/       - Documentation intended to be loaded into context as needed
     └── assets/           - Files used in output (templates, icons, fonts, etc.)
-```text
+```
 
 #### SKILL.md (required)
 
 Every SKILL.md consists of:
 
-- **Frontmatter** (YAML): Contains `name` and `description` fields. These are the only fields that the agent reads to determine when the skill gets used, thus it is very important to be clear and comprehensive in describing what the skill is, and when it should be used.
+- **Frontmatter** (YAML): Contains `name` and `description` fields. These are the only fields that the Agent reads to determine when the skill gets used, thus it is very important to be clear and comprehensive in describing what the skill is, and when it should be used.
 - **Body** (Markdown): Instructions and guidance for using the skill. Only loaded AFTER the skill triggers (if at all).
 
 #### Bundled Resources (optional)
@@ -77,27 +74,27 @@ Executable code (Python/Bash/etc.) for tasks that require deterministic reliabil
 - **When to include**: When the same code is being rewritten repeatedly or deterministic reliability is needed
 - **Example**: `scripts/rotate_pdf.py` for PDF rotation tasks
 - **Benefits**: Token efficient, deterministic, may be executed without loading into context
-- **Note**: Scripts may still need to be read by the agent for patching or environment-specific adjustments
+- **Note**: Scripts may still need to be read by the Agent for patching or environment-specific adjustments
 
 ##### References (`references/`)
 
-Documentation and reference material intended to be loaded as needed into context to inform the agent's process and thinking.
+Documentation and reference material intended to be loaded as needed into context to inform the Agent's process and thinking.
 
-- **When to include**: For documentation that the agent should reference while working
+- **When to include**: For documentation that the Agent should reference while working
 - **Examples**: `references/finance.md` for financial schemas, `references/mnda.md` for company NDA template, `references/policies.md` for company policies, `references/api_docs.md` for API specifications
 - **Use cases**: Database schemas, API documentation, domain knowledge, company policies, detailed workflow guides
-- **Benefits**: Keeps SKILL.md lean, loaded only when the agent determines it's needed
+- **Benefits**: Keeps SKILL.md lean, loaded only when the Agent determines it's needed
 - **Best practice**: If files are large (>10k words), include grep search patterns in SKILL.md
 - **Avoid duplication**: Information should live in either SKILL.md or references files, not both. Prefer references files for detailed information unless it's truly core to the skill—this keeps SKILL.md lean while making information discoverable without hogging the context window. Keep only essential procedural instructions and workflow guidance in SKILL.md; move detailed reference material, schemas, and examples to references files.
 
 ##### Assets (`assets/`)
 
-Files not intended to be loaded into context, but rather used within the output the agent produces.
+Files not intended to be loaded into context, but rather used within the output the Agent produces.
 
 - **When to include**: When the skill needs files that will be used in the final output
 - **Examples**: `assets/logo.png` for brand assets, `assets/slides.pptx` for PowerPoint templates, `assets/frontend-template/` for HTML/React boilerplate, `assets/font.ttf` for typography
 - **Use cases**: Templates, images, icons, boilerplate code, fonts, sample documents that get copied or modified
-- **Benefits**: Separates output resources from documentation, enables the agent to use files without loading them into context
+- **Benefits**: Separates output resources from documentation, enables the Agent to use files without loading them into context
 
 #### What to Not Include in a Skill
 
@@ -117,7 +114,7 @@ Skills use a three-level loading system to manage context efficiently:
 
 1. **Metadata (name + description)** - Always in context (~100 words)
 2. **SKILL.md body** - When skill triggers (<5k words)
-3. **Bundled resources** - As needed by the agent (Unlimited because scripts can be executed without reading into context window)
+3. **Bundled resources** - As needed by the Agent (Unlimited because scripts can be executed without reading into context window)
 
 #### Progressive Disclosure Patterns
 
@@ -142,13 +139,13 @@ Extract text with pdfplumber:
 - **Examples**: See [EXAMPLES.md](EXAMPLES.md) for common patterns
 ```
 
-The agent loads FORMS.md, REFERENCE.md, or EXAMPLES.md only when needed.
+the Agent loads FORMS.md, REFERENCE.md, or EXAMPLES.md only when needed.
 
-#### Pattern 2: Domain-specific organization
+**Pattern 2: Domain-specific organization**
 
 For Skills with multiple domains, organize content by domain to avoid loading irrelevant context:
 
-```text
+```
 bigquery-skill/
 ├── SKILL.md (overview and navigation)
 └── reference/
@@ -156,13 +153,13 @@ bigquery-skill/
     ├── sales.md (opportunities, pipeline)
     ├── product.md (API usage, features)
     └── marketing.md (campaigns, attribution)
-```text
+```
 
-When a user asks about sales metrics, the agent only reads sales.md.
+When a user asks about sales metrics, the Agent only reads sales.md.
 
 Similarly, for skills supporting multiple frameworks or variants, organize by variant:
 
-```text
+```
 cloud-deploy/
 ├── SKILL.md (workflow + provider selection)
 └── references/
@@ -171,9 +168,9 @@ cloud-deploy/
     └── azure.md (Azure deployment patterns)
 ```
 
-When the user chooses AWS, the agent only reads aws.md.
+When the user chooses AWS, the Agent only reads aws.md.
 
-#### Pattern 3: Conditional details
+**Pattern 3: Conditional details**
 
 Show basic content, link to advanced content:
 
@@ -190,14 +187,14 @@ For simple edits, modify the XML directly.
 
 **For tracked changes**: See [REDLINING.md](REDLINING.md)
 **For OOXML details**: See [OOXML.md](OOXML.md)
-```text
+```
 
-The agent reads REDLINING.md or OOXML.md only when the user needs those features.
+the Agent reads REDLINING.md or OOXML.md only when the user needs those features.
 
 **Important guidelines:**
 
 - **Avoid deeply nested references** - Keep references one level deep from SKILL.md. All reference files should link directly from SKILL.md.
-- **Structure longer reference files** - For files longer than 100 lines, include a table of contents at the top so the agent can see the full scope when previewing.
+- **Structure longer reference files** - For files longer than 100 lines, include a table of contents at the top so the Agent can see the full scope when previewing.
 
 ## Skill Creation Process
 
@@ -278,7 +275,7 @@ After initialization, customize or remove the generated SKILL.md and example fil
 
 ### Step 4: Edit the Skill
 
-When editing the (newly-generated or existing) skill, remember that the skill is being created for another agent instance to use. Include information that would be beneficial and non-obvious to the agent. Consider what procedural knowledge, domain-specific details, or reusable assets would help another agent instance execute these tasks more effectively.
+When editing the (newly-generated or existing) skill, remember that the skill is being created for another instance of the Agent to use. Include information that would be beneficial and non-obvious to the Agent. Consider what procedural knowledge, domain-specific details, or reusable assets would help another Agent instance execute these tasks more effectively.
 
 #### Learn Proven Design Patterns
 
@@ -306,10 +303,10 @@ Any example files and directories not needed for the skill should be deleted. Th
 Write the YAML frontmatter with `name` and `description`:
 
 - `name`: The skill name
-- `description`: This is the primary triggering mechanism for your skill, and helps the agent understand when to use the skill.
+- `description`: This is the primary triggering mechanism for your skill, and helps the Agent understand when to use the skill.
   - Include both what the Skill does and specific triggers/contexts for when to use it.
-  - Include all "when to use" information here - Not in the body. The body is only loaded after triggering, so "When to Use This Skill" sections in the body are not helpful to the agent.
-  - Example description for a `docx` skill: "Comprehensive document creation, editing, and analysis with support for tracked changes, comments, formatting preservation, and text extraction. Use when the agent needs to work with professional documents (.docx files) for: (1) Creating new documents, (2) Modifying or editing content, (3) Working with tracked changes, (4) Adding comments, or any other document tasks"
+  - Include all "when to use" information here - Not in the body. The body is only loaded after triggering, so "When to Use This Skill" sections in the body are not helpful to the Agent.
+  - Example description for a `docx` skill: "Comprehensive document creation, editing, and analysis with support for tracked changes, comments, formatting preservation, and text extraction. Use when the Agent needs to work with professional documents (.docx files) for: (1) Creating new documents, (2) Modifying or editing content, (3) Working with tracked changes, (4) Adding comments, or any other document tasks"
 
 Do not include any other fields in YAML frontmatter.
 
@@ -323,7 +320,7 @@ Once development of the skill is complete, it must be packaged into a distributa
 
 ```bash
 scripts/package_skill.py <path/to/skill-folder>
-```text
+```
 
 Optional output directory specification:
 

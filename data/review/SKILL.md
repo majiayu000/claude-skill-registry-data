@@ -1,242 +1,164 @@
 ---
 name: review
-description: End of day review with learning capture. Integrates with evening journaling if enabled.
+description: Quick code review for files or recent changes, checking for bugs, best practices, and potential improvements
 ---
 
-Conduct an end-of-day review to capture progress and set up tomorrow.
+# Review Skill
 
-## Tone Calibration
+Perform a quick, focused code review on specified files or recent git changes.
 
-Before executing this command, read `System/user-profile.yaml` → `communication` section and adapt:
+## Instructions
 
-**Career Level Adaptations:**
-- **Junior:** Encouraging reflection, celebrate learning moments, normalize struggles
-- **Mid:** Focus on impact achieved, challenge to think strategically
-- **Senior/Leadership:** Push on organizational impact, team development, strategic thinking
-- **C-Suite:** High-level outcomes, strategic decisions, organizational influence
+### 1. Determine Review Scope
 
-**Directness:**
-- **Very direct:** Quick wins/learnings capture, minimal prompting
-- **Balanced:** Standard reflection questions (default)
-- **Supportive:** More detailed prompts, encourage reflection
+Parse the user's request to determine what to review:
+- **Specific file(s)**: `/review src/main/java/.../MyService.java`
+- **Recent changes**: `/review changes` or `/review diff`
+- **Staged changes**: `/review staged`
+- **Last commit**: `/review last-commit`
+- **Feature/component**: `/review ForecastService` (find and review related files)
 
-**Detail Level:**
-- **Concise:** Brief capture, top highlights
-- **Balanced:** Standard review format
-- **Comprehensive:** Deep reflection, patterns, insights
+### 2. Gather Code to Review
 
-See CLAUDE.md → "Communication Adaptation" for full guidelines.
+Based on scope:
 
----
+**For specific files:**
+- Use `Read` to load the file content
 
-## Step 0: File Discovery
+**For git changes:**
+- Use `Bash` with `git diff` for unstaged changes
+- Use `Bash` with `git diff --cached` for staged changes
+- Use `Bash` with `git show HEAD` for last commit
+- Use `Bash` with `git diff HEAD~N` for recent N commits
 
-**Find files modified TODAY:**
+**For component/feature:**
+- Use `Glob` and `Grep` to find relevant files
+- Read the main files involved
 
-```bash
-# Get today's date and find files modified today
-TODAY=$(date +%Y-%m-%d)
-find . -type f -name "*.md" -newermt "$TODAY 00:00:00" ! -newermt "$TODAY 23:59:59" 2>/dev/null | grep -v "node_modules" | xargs ls -lt 2>/dev/null
-```
+### 3. Review Checklist
 
-**Critical rules:**
-1. **No truncation** — Do NOT use `head` limits on file discovery
-2. **Today only** — Use date-based filtering, NOT `-mtime 0` (which captures 24-hour rolling window)
-3. **Verify with user** — After listing files, ASK: "These are the files I found modified today. What did you actually work on?"
-4. **Don't infer** — File timestamps tell you what changed, not what matters. Wait for user confirmation.
+Analyze the code for:
 
-## Step 1: Gather Context
+#### Correctness
+- Logic errors or bugs
+- Off-by-one errors
+- Null/undefined handling
+- Edge cases not covered
+- Incorrect assumptions
 
-### Completed Tasks Today
-Check `03-Tasks/Tasks.md` for tasks completed today using completion timestamps:
-- Look for `✅ YYYY-MM-DD` matching today's date
-- These show what you actually finished (not just what you worked on)
-- Example: `- [x] **Review pricing proposal** ^task-20260127-003 ✅ 2026-01-28 09:15`
+#### Security
+- Input validation issues
+- Injection vulnerabilities (SQL, command, XSS)
+- Hardcoded secrets or credentials
+- Unsafe data handling
 
-### Weekly Priorities
-Read `00-Inbox/Weekly_Plans.md` for:
-- This week's strategic focus
-- Commitments and deadlines
-- Key people involved
+#### Performance
+- Inefficient algorithms (O(n²) when O(n) possible)
+- Unnecessary iterations or allocations
+- Missing caching opportunities
+- Blocking calls in reactive code
 
-### Recent Meetings
-Check `00-Inbox/Meetings/` for any meeting notes from today.
+#### Best Practices
+- Code style consistency
+- Naming conventions
+- Error handling patterns
+- Resource cleanup (try-with-resources, close())
+- Thread safety in concurrent code
 
-## Step 2: User Verification
+#### Maintainability
+- Code duplication
+- Overly complex methods (consider splitting)
+- Missing or misleading comments
+- Dead code
 
-**Present findings to user:**
-> "Based on file timestamps, these notes were modified today: [list]
-> 
-> What did you actually work on today that should be captured in the review?"
+#### Project-Specific (varun.surf)
+- Reactive patterns (WebFlux compliance)
+- Proper use of virtual threads/StructuredTaskScope
+- Cache invalidation concerns
+- External API error handling
 
-Wait for user response before proceeding.
+### 4. Severity Levels
 
-## Step 3: Progress Assessment
+Categorize findings:
 
-With user-verified information:
-- What was accomplished?
-- What progress was made against weekly priorities?
-- What got stuck or blocked?
-- What unexpected discoveries emerged?
-
-## Step 4: Auto-Extract Session Learnings
-
-**Scan today's conversation for learnings:**
-
-Before asking the user anything, reflect on today's session and automatically extract:
-
-1. **Mistakes or corrections**
-   - Did the user have to correct any assumptions?
-   - Did something not work as expected?
-   - Were there misunderstandings to document?
-
-2. **Preferences mentioned**
-   - Did the user express how they like to work?
-   - Were tool preferences or workflow patterns mentioned?
-   - Any communication style notes?
-
-3. **Documentation gaps**
-   - Did you have to explain something that should be documented?
-   - Were there questions about how the system works?
-   - Missing templates or unclear processes?
-
-4. **Workflow inefficiencies**
-   - Did any task take longer than it should?
-   - Were there repetitive manual steps?
-   - Opportunities for automation?
-
-**For each learning identified, write to `00-Inbox/Session_Learnings/YYYY-MM-DD.md`:**
-
-```markdown
-## HH:MM - [Short title]
-
-**What happened:** [Specific situation from today's session]
-**Why it matters:** [Impact on workflows/system]
-**Suggested fix:** [Specific action with file paths if applicable]
-**Status:** pending
-
----
-```
-
-**Then ask the user:** "I captured [N] learnings from today's session. Anything else you'd like to add?"
-
-**This ensures learnings persist for:**
-- Weekly synthesis (`/week`)
-- System improvement reviews (`/dex-whats-new`)
-- Future reference
-
-## Step 4b: Additional Insights
-
-- Key realizations or connections from user input
-- Questions that arose
-
-## Step 5: Tomorrow's Setup
-
-- Top 3 priorities (aligned with weekly focus)
-- Open loops to close
-- Questions to explore
-
-## Step 6: Track Usage (Silent)
-
-After creating the daily review, silently update usage tracking:
-
-1. Read `System/usage_log.md`
-2. Update: `- [ ] Daily review (/review)` → `- [x] Daily review (/review)`
-3. No announcement to user
-
----
-
-## Step 7: Evening Journal (If Enabled)
-
-Check if evening journaling is enabled:
-
-1. Read `System/user-profile.yaml`
-2. Check `journaling.evening` value
-3. **If `journaling.evening: true`:**
-   - Check if today's evening journal exists in `00-Inbox/Journals/YYYY/MM-Month/Evening/YYYY-MM-DD-evening.md`
-   - **If missing:**
-     - After creating the daily review, prompt: "Want to close the day with an evening reflection? (3 minutes)"
-     - If yes: Guide through evening journal (see `/journal` command)
-     - Pull in morning journal intention if it exists for reflection
-   - **If exists:** Note completion, skip prompt
-4. **If `journaling.evening: false`:** Skip journal prompt
+- **Critical**: Bugs, security issues, data loss risks
+- **Warning**: Performance issues, bad practices, potential bugs
+- **Suggestion**: Style improvements, minor optimizations, readability
 
 ## Output Format
 
-Create daily note at `00-Inbox/Daily_Reviews/Daily_Review_[YYYY-MM-DD].md`:
-
 ```markdown
----
+## Code Review: [File/Scope]
 
----
+### Summary
+- Files reviewed: X
+- Lines analyzed: Y
+- Issues found: Z (X critical, Y warnings, Z suggestions)
 
-## Demo Mode Check
+### Critical Issues
 
-Before executing, check if demo mode is active:
+#### [Issue Title]
+**File**: `path/to/file.java:line`
+**Problem**: [Description]
+**Fix**: [Suggested solution]
+```java
+// Before
+problematic code
 
-1. Read `System/user-profile.yaml` and check `demo_mode`
-2. **If `demo_mode: true`:**
-   - Display: "Demo Mode Active — Using sample data"
-   - Use `System/Demo/` paths instead of root paths
-   - Write any output to `System/Demo/` subdirectories
-3. **If `demo_mode: false`:** Use normal vault paths
-
-date: [YYYY-MM-DD]
-type: daily-review
----
-
-# Daily Review — [Day], [Month] [DD], [YYYY]
-
-## Accomplished
-
-- ✓ [Completed item 1]
-- ✓ [Completed item 2]
-
-## Progress Made
-
-| Area | Movement |
-|------|----------|
-| **[Area 1]** | [What moved forward] |
-| **[Area 2]** | [What moved forward] |
-
-## Weekly Priorities Progress
-
-> Reference: 00-Inbox/Weekly_Plans.md
-
-- **[Priority 1]:** [Status/progress]
-- **[Priority 2]:** [Status/progress]
-
-## Insights
-
-- [Key realization or connection]
-- [Important learning]
-
-## Blocked/Stuck
-
-| Item | Blocker | Status |
-|------|---------|--------|
-| [Item] | [What's blocking] | [Status] |
-
-## Discovered Questions
-
-1. [New question that emerged]
-2. [Thing to research]
-
-## Tomorrow's Focus
-
-1. [Priority 1 — tied to weekly focus]
-2. [Priority 2]
-3. [Priority 3]
-
-## Open Loops
-
-- [ ] [Thing to remember]
-- [ ] [Person to follow up with]
-- [ ] **Awaiting:** [What you're waiting on from others]
+// After
+fixed code
 ```
 
-## Important Reminders
+### Warnings
 
-- **Verify, don't infer** — Always confirm with user what they worked on
-- **Weekly alignment** — Connect daily progress to weekly priorities
-- **Day of week** — Use system date metadata, verify before writing
+#### [Issue Title]
+**File**: `path/to/file.java:line`
+**Problem**: [Description]
+**Suggestion**: [How to improve]
+
+### Suggestions
+
+- `file.java:42` - Consider extracting this to a method
+- `file.java:78` - Variable name could be more descriptive
+
+### What Looks Good
+
+- Proper error handling in [location]
+- Good use of [pattern/practice]
+- Clean separation of concerns
+
+### Files Reviewed
+- `path/to/file1.java` - [brief note]
+- `path/to/file2.java` - [brief note]
+```
+
+## Examples
+
+```bash
+# Review a specific file
+/review src/main/java/com/github/pwittchen/varun/service/ForecastService.java
+
+# Review recent uncommitted changes
+/review changes
+
+# Review staged changes before commit
+/review staged
+
+# Review the last commit
+/review last-commit
+
+# Review a component by name
+/review AggregatorService
+
+# Review multiple files
+/review src/main/java/.../controller/*.java
+```
+
+## Notes
+
+- Keep reviews focused and actionable
+- Prioritize critical issues over style nitpicks
+- Provide concrete fix suggestions, not just problem descriptions
+- Reference project patterns from CLAUDE.md when relevant
+- For large diffs, focus on the most impactful changes
+- Don't repeat issues that appear multiple times; note "X similar occurrences"

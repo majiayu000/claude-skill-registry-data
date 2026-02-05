@@ -1,63 +1,169 @@
 ---
 name: mcp-tools
-description: Create MCP server tools with Official Python MCP SDK for AI agents. Use when building MCP tools, registering tool schemas, or creating AI-accessible functions.
+description: MCP tools for Xcode automation and Apple documentation access. XcodeBuildMCP for builds, apple-docs for WWDC and API docs.
+user-invocable: false
 ---
 
-# MCP Tools Development (Official SDK)
+# MCP Tools for Swift Development
 
-## Tool Registration
-```python
-from mcp.server import Server
-from mcp.types import Tool, TextContent
-import mcp.server.stdio
+**Model Context Protocol servers for enhanced Swift/Xcode workflows.**
 
-server = Server("mcp-server")
+## Available MCP Servers
 
-@server.list_tools()
-async def list_tools() -> list[Tool]:
-    return [
-        Tool(
-            name="tool_name",
-            description="What this tool does",
-            inputSchema={
-                "type": "object",
-                "properties": {
-                    "user_id": {"type": "string"},
-                    "param": {"type": "string", "maxLength": 200}
-                },
-                "required": ["user_id", "param"]
-            }
-        )
-    ]
+### 1. XcodeBuildMCP
+**Purpose**: Xcode project automation and build validation
 
-@server.call_tool()
-async def call_tool(name: str, arguments: dict) -> list[TextContent]:
-    if name == "tool_name":
-        # Validate inputs
-        if not arguments.get("user_id"):
-            return [TextContent(type="text", text='{"error": "user_id required"}')]
-        
-        # Stateless: create DB session per call
-        async with get_db_session() as session:
-            # Do work
-            result = {"status": "success", "data": {}}
-            return [TextContent(type="text", text=json.dumps(result))]
+**Documentation**: `xcode-build-mcp.md`
+
+**Key features**:
+- Discover Xcode projects and workspaces
+- Build for macOS, iOS Simulator, iOS Device
+- List schemes and show build settings
+- Clean builds and derived data
+- Create new projects from templates
+- **Autonomous build validation** (AI can build, read errors, fix, rebuild)
+
+**Installation**:
+```json
+{
+  "mcpServers": {
+    "XcodeBuildMCP": {
+      "command": "npx",
+      "args": ["-y", "xcodebuildmcp@latest"]
+    }
+  }
+}
 ```
 
-## Server Startup
-```python
-async def main():
-    async with mcp.server.stdio.stdio_server() as (read_stream, write_stream):
-        await server.run(read_stream, write_stream, server.create_initialization_options())
+**Use when**:
+- After making code changes (MANDATORY validation)
+- Debugging build issues
+- Creating new Xcode projects
+- Cleaning stale builds
 
-if __name__ == "__main__":
-    import asyncio
-    asyncio.run(main())
+---
+
+### 2. Apple Docs MCP
+**Purpose**: Official Apple documentation with offline WWDC access
+
+**Documentation**: `apple-docs-mcp.md`
+
+**Key features**:
+- Search all Apple frameworks (SwiftUI, UIKit, Foundation, etc.)
+- Get detailed symbol information (classes, methods, properties)
+- **WWDC sessions 2014-2025** with full transcripts (offline)
+- Access Apple sample code
+- Framework exploration and discovery
+- API availability and deprecation checking
+
+**Installation**:
+```json
+{
+  "mcpServers": {
+    "apple-docs": {
+      "command": "npx",
+      "args": ["-y", "@kimsungwhee/apple-docs-mcp"]
+    }
+  }
+}
 ```
 
-## Key Rules
-- Stateless tools (no global state)
-- DB session per tool call
-- Return exact JSON schemas
-- Input validation before operations
-- User isolation (filter by user_id)
+**Use when**:
+- Researching Apple APIs (PRIORITY over Context7)
+- Finding WWDC best practices
+- Checking API availability
+- Getting official code examples
+
+---
+
+## Workflow Integration
+
+### Research-First (MANDATORY)
+
+```text
+Priority order:
+1. ⭐ Apple Docs MCP (official Apple docs + WWDC)
+2. Context7 (third-party libraries)
+3. Exa web search (community tutorials)
+```
+
+### Build Validation (MANDATORY)
+
+```text
+After EVERY code change:
+1. XcodeBuildMCP: Build project
+2. If errors → Read error messages
+3. Fix issues
+4. Rebuild to validate
+5. Only commit if zero errors
+```
+
+---
+
+## Complete Development Workflow (2026)
+
+```text
+1. Feature request received
+   ↓
+2. Apple Docs MCP: Search API/WWDC
+   ↓
+3. Read existing codebase (DRY principle)
+   ↓
+4. Implement following Apple patterns
+   ↓
+5. XcodeBuildMCP: Build to validate ⭐
+   ↓
+6. If build errors:
+   - Read error messages
+   - Fix issues
+   - Rebuild
+   ↓
+7. Run tests (if available)
+   ↓
+8. Commit changes
+```
+
+---
+
+## Benefits
+
+### XcodeBuildMCP
+✅ Autonomous error detection and fixing
+✅ Zero tolerance for compilation errors
+✅ Lightning-fast incremental builds
+✅ Project scaffolding automation
+✅ Build validation before commits
+
+### Apple Docs MCP
+✅ Official Apple documentation (most accurate)
+✅ WWDC sessions offline (2014-2025)
+✅ Zero network latency
+✅ Complete API coverage
+✅ Deprecation and availability info
+
+---
+
+## Resources
+
+**XcodeBuildMCP**:
+- [GitHub](https://github.com/cameroncooke/XcodeBuildMCP)
+- [npm](https://www.npmjs.com/package/xcodebuildmcp)
+- Version: 1.12.3
+
+**Apple Docs MCP**:
+- [GitHub](https://github.com/kimsungwhee/apple-docs-mcp)
+- [npm](https://www.npmjs.com/@kimsungwhee/apple-docs-mcp)
+
+---
+
+## Quick Reference
+
+| Task | MCP Tool | Documentation |
+|------|----------|---------------|
+| Search Apple API | `apple-docs` | `apple-docs-mcp.md` |
+| Find WWDC session | `apple-docs` | `apple-docs-mcp.md` |
+| Get code example | `apple-docs` | `apple-docs-mcp.md` |
+| Build project | `XcodeBuildMCP` | `xcode-build-mcp.md` |
+| Validate changes | `XcodeBuildMCP` | `xcode-build-mcp.md` |
+| Clean build | `XcodeBuildMCP` | `xcode-build-mcp.md` |
+| Create project | `XcodeBuildMCP` | `xcode-build-mcp.md` |

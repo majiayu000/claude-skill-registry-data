@@ -1,6 +1,6 @@
 ---
 name: context-compression
-description: This skill should be used when the user asks to "compress context", "summarize conversation history", "implement compaction", "reduce token usage", or mentions context compression, structured summarization, tokens-per-task optimization, or long-running agent sessions exceeding context limits.
+description: Design and evaluate context compression strategies for long-running agent sessions. Use when agents exhaust memory, need to summarize conversation history, or when optimizing tokens-per-task rather than tokens-per-request.
 ---
 
 # Context Compression Strategies
@@ -11,10 +11,11 @@ When agent sessions generate millions of tokens of conversation history, compres
 
 Activate this skill when:
 - Agent sessions exceed context window limits
-- Codebases exceed context windows (5M+ token systems)
 - Designing conversation summarization strategies
+- Evaluating different compression approaches for production systems
 - Debugging cases where agents "forget" what files they modified
 - Building evaluation frameworks for compression quality
+- Optimizing long-running coding or debugging sessions
 
 ## Core Concepts
 
@@ -119,22 +120,6 @@ Six dimensions capture compression quality for coding agents:
 Accuracy shows the largest variation between compression methods (0.6 point gap). Artifact trail is universally weak (2.2-2.5 range).
 
 ## Practical Guidance
-
-### Three-Phase Compression Workflow
-
-For large codebases or agent systems exceeding context windows, apply compression through three phases:
-
-1. **Research Phase**: Produce a research document from architecture diagrams, documentation, and key interfaces. Compress exploration into a structured analysis of components and dependencies. Output: single research document.
-
-2. **Planning Phase**: Convert research into implementation specification with function signatures, type definitions, and data flow. A 5M token codebase compresses to approximately 2,000 words of specification.
-
-3. **Implementation Phase**: Execute against the specification. Context remains focused on the spec rather than raw codebase exploration.
-
-### Using Example Artifacts as Seeds
-
-When provided with a manual migration example or reference PR, use it as a template to understand the target pattern. The example reveals constraints that static analysis cannot surface: which invariants must hold, which services break on changes, and what a clean migration looks like.
-
-This is particularly important when the agent cannot distinguish essential complexity (business requirements) from accidental complexity (legacy workarounds). The example artifact encodes that distinction.
 
 ### Implementing Anchored Iterative Summarization
 
@@ -252,14 +237,15 @@ Related skills in this collection:
 External resources:
 - Factory Research: Evaluating Context Compression for AI Agents (December 2025)
 - Research on LLM-as-judge evaluation methodology (Zheng et al., 2023)
-- Netflix Engineering: "The Infinite Software Crisis" - Three-phase workflow and context compression at scale (AI Summit 2025)
 
 ---
 
 ## Skill Metadata
 
 **Created**: 2025-12-22
-**Last Updated**: 2025-12-26
+**Last Updated**: 2025-12-22
 **Author**: Agent Skills for Context Engineering Contributors
-**Version**: 1.1.0
+**Version**: 1.0.0
+
+
 

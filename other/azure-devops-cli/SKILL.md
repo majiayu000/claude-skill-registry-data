@@ -1,31 +1,37 @@
----
-name: azure-devops-cli
-version: 1.0.0
-description: Expert guidance for Azure DevOps CLI (az devops) - automation, pipelines, repos, boards, and artifacts management. Use when working with Azure DevOps, managing pipelines, creating work items, or when user mentions ADO, builds, releases, or Azure repos.
-auto_activate: true
-token_budget: 1800
-keywords:
-  - azure devops
-  - az devops
-  - ado cli
-  - pipelines
-  - azure pipelines
-  - boards
-  - azure boards
-  - repos
-  - azure repos
-  - artifacts
-  - azure artifacts
-  - yaml pipeline
-  - build pipeline
-  - release pipeline
-  - work items
-  - pull requests
-  - git repos
-  - artifacts feed
+# Azure DevOps CLI Skill
+
 ---
 
-# Azure DevOps CLI Skill
+name: azure-devops-cli
+description: Expert guidance for Azure DevOps CLI (az devops) - automation, pipelines, repos, boards, and artifacts management. Use when working with Azure DevOps, managing pipelines, creating work items, or when user mentions ADO, builds, releases, or Azure repos.
+keywords:
+
+- azure devops
+- az devops
+- ado cli
+- pipelines
+- azure pipelines
+- boards
+- azure boards
+- repos
+- azure repos
+- artifacts
+- azure artifacts
+- yaml pipeline
+- build pipeline
+- release pipeline
+- work items
+- pull requests
+- git repos
+- artifacts feed
+
+<!-- prettier-ignore-start -->
+auto_activate: true
+version: 1.0.0
+token_budget: 1800
+<!-- prettier-ignore-end -->
+
+---
 
 ## Quick Start
 

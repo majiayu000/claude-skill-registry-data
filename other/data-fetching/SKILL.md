@@ -1,189 +1,275 @@
 ---
-name: Fetching Data
-description: Data fetching patterns for server/client components using fetch API, TanStack Query, useSuspenseQuery, apiRouteWrapper, and apiRequestWrapper. Use when implementing data loading, API calls, server functions, queries, mutations, API routes, or when the user mentions TanStack Query, useSuspenseQuery, apiRouteWrapper, apiRequestWrapper, tmdb-server-functions, or data fetching.
+name: data-fetching
+description: Best practices and conventions for server-side data fetching, caching, and rendering in Next.js 16+ applications.
 ---
-
-# Data Fetching Architecture
 
 ## Overview
 
-This project uses a structured data fetching pattern that differs between server and client components.
+This skill covers server-side data fetching and caching patterns using Next.js 16+ Cache Components approach with Partial Prerendering (PPR). It combines fine-grained caching control with server-side data fetching for optimal performance.
 
 ## Core Principles
 
-1. **Server components** call server functions directly
-2. **Client components** use TanStack Query to fetch from API routes
-3. **API routes** wrap server functions using `apiRouteWrapper`
-4. **Mutations** from client components call server functions directly
-5. **TMDB API** uses auto-generated server functions from `tmdb-server-functions.ts`
+### Data Access Rules
+- **NEVER call Drizzle ORM directly** - Always use server actions defined in `lib/actions/`
+- **Cache at the component level** - Use the `use cache` directive in pages/layouts, not in action files
+- **Wrap dynamic content** - Use `Suspense` boundaries to separate static and dynamic content
+- **Use lifetime profiles** - Always specify `cacheLife()` with appropriate profile
 
-## Server Components
+## Cache Components Workflow
 
-Server components can directly `await` server functions.
+### 1. Planning Data Fetching
+Before implementing:
+- Identify what data is needed for the page/component
+- Determine what content should be instantly visible (cached) vs. what can stream (dynamic)
+- Locate the appropriate server actions in `lib/actions/` or create new ones if needed
+- Plan cache tags for data that needs manual invalidation
 
-```tsx
-import { discoverMovies } from "@/utils/tmdb-server-functions";
+### 2. Implementing Cached Data Fetching
+Follow this pattern in pages or layouts:
 
-function serverFunction() {
-  return fetch(URL, headers);
-}
+```typescript
+import { cacheLife } from 'next/cache'
+import { getModels } from '@/lib/actions/models'
 
-function ServerComponent() {
-  const movies = await discoverMovies({
-    page: 1,
-    with_genres: "28",
-  });
+export default async function ModelsPage() {
+  'use cache'
+  cacheLife('hours')
 
-  const myResults = await serverFunction();
+  const models = await getModels()
 
-  return <div>...</div>;
-}
-```
-
-Use `await` directly in server components. Call TMDB server functions from `@/utils/tmdb-server-functions`.
-
-## Client Components + API Routes
-
-Client components use TanStack Query to call API routes, which wrap server functions.
-
-### Step 1: Create API Route
-
-API routes use `apiRouteWrapper` to wrap server functions:
-
-```ts
-// src/app/api/tmdb/discover-movies/route.ts
-import { apiRouteWrapper } from "@/utils/api-route-wrapper";
-import { discoverMovies } from "@/utils/tmdb-server-functions";
-
-export const GET = apiRouteWrapper(discoverMovies);
-```
-
-For custom server functions:
-
-```ts
-// src/app/api/some-api-route/route.ts
-import { apiRouteWrapper } from "@/utils/api-route-wrapper";
-import { myServerFunction } from "@/some-server-function";
-
-export const GET = apiRouteWrapper(async (params) => {
-  return myServerFunction(params);
-});
-```
-
-### Step 2: Call from Client Component
-
-Use TanStack Query with `apiRequestWrapper`:
-
-```tsx
-"use client";
-import { useSuspenseQuery } from "@tanstack/react-query";
-import { apiRequestWrapper } from "@/utils/api-request-wrapper";
-
-function ClientComponent() {
-  const { data: movies } = useSuspenseQuery({
-    queryKey: [{ scope: "movies", page: 1, with_genres: "28" }],
-    queryFn: () =>
-      apiRequestWrapper("/api/tmdb/movie-list", {
-        page: 1,
-        with_genres: "28",
-      }),
-  });
-
-  const { data: results } = useSuspenseQuery({
-    queryKey: [{ scope: "someApiRoute" }],
-    queryFn: () =>
-      apiRequestWrapper("/api/some-api-route", {
-        foo: "bar",
-      }),
-  });
-
-  return <div>...</div>;
+  return <div>{/* render models */}</div>
 }
 ```
 
-## Mutations from Client Components
+### 3. Handling Dynamic Content
+For runtime-dependent data (cookies, headers, searchParams):
 
-For mutations, client components call server functions directly (no API route needed).
+```typescript
+import { Suspense } from 'react'
 
-```tsx
-"use client";
-import { useMutation } from "@tanstack/react-query";
-import { updateMovie } from "@/server-functions/movies";
+export default function Page() {
+  return (
+    <>
+      <h1>Static Content</h1>
+      <Suspense fallback={<Skeleton />}>
+        <DynamicUserContent />
+      </Suspense>
+    </>
+  )
+}
 
-function ClientComponent() {
-  const mutation = useMutation({
-    mutationFn: updateMovie,
-  });
-
-  const handleUpdate = () => {
-    mutation.mutate({ id: 1, title: "New Title" });
-  };
-
-  return <button onClick={handleUpdate}>Update</button>;
+async function DynamicUserContent() {
+  const session = await getSession() // uses cookies()
+  return <div>{session.user.name}</div>
 }
 ```
 
-## TMDB API Integration
+## Caching Configuration
 
-TMDB server functions are auto-generated from `src/_generated/tmdb-server-functions.ts`.
+### Cache Life Profiles
+Use built-in lifetime profiles with `cacheLife()`:
 
-**Important**: These are auto-generated - **DO NOT edit manually**. Use `pnpm codegen:tmdb` to regenerate.
+| Profile | Use Case | Duration |
+|---------|----------|----------|
+| `'seconds'` | Highly volatile data | ~30 seconds |
+| `'minutes'` | Frequently updated content | ~5 minutes |
+| `'hours'` | Semi-static content | ~1 hour |
+| `'days'` | Mostly static content | ~1 day |
+| `'weeks'` | Rarely changing content | ~1 week |
+| `'max'` | Static content | Maximum duration |
 
-```tsx
-// Import TMDB functions
-import {
-  discoverMovies,
-  getMovieDetails,
-  searchMovies,
-} from "@/utils/tmdb-server-functions";
+**Default Choice:** Use `'hours'` for most content unless you have specific requirements.
 
-// Server component usage
-async function MovieList() {
-  const movies = await discoverMovies({
-    page: 1,
-    with_genres: "28",
-  });
+### Cache Tags and Revalidation
 
-  return <div>...</div>;
+#### Using `cacheTag` for Manual Invalidation
+Tag cached data that needs to be invalidated on specific events:
+
+```typescript
+import { cacheLife, cacheTag } from 'next/cache'
+import { getModelById } from '@/lib/actions/models'
+
+export default async function ModelPage({ params }: { params: { id: string } }) {
+  'use cache'
+  cacheLife('hours')
+  cacheTag('models', `model-${params.id}`)
+
+  const model = await getModelById(params.id)
+  return <div>{/* render model */}</div>
 }
-
-// API route for client components
-// src/app/api/tmdb/discover-movies/route.ts
-export const GET = apiRouteWrapper(discoverMovies);
 ```
 
-## Pattern Summary
+#### Invalidating Cache with `updateTag`
+Use in server actions for immediate cache expiration (read-your-own-writes):
 
-### Server Component Data Flow
+```typescript
+'use server'
+import { updateTag } from 'next/cache'
 
+export async function updateModel(id: string, data: ModelData) {
+  // Update database via action
+  await updateModelAction(id, data)
+
+  // Immediately expire cache so user sees fresh data
+  updateTag(`model-${id}`, 'models')
+}
 ```
-Server Component → Server Function → External API/Database
-```
 
-### Client Component Data Flow (Queries)
+#### Using `revalidateTag` for Background Refresh
+For stale-while-revalidate pattern:
 
-```
-Client Component → TanStack Query → API Route → Server Function → External API/Database
-```
+```typescript
+'use server'
+import { revalidateTag } from 'next/cache'
 
-### Client Component Data Flow (Mutations)
+export async function createModel(data: ModelData) {
+  await createModelAction(data)
 
-```
-Client Component → TanStack Query Mutation → Server Function → External API/Database
+  // Stale-while-revalidate: serve stale, refresh in background
+  revalidateTag('models', 'max')
+}
 ```
 
 ## Best Practices
 
-1. **Server components**: Call server functions directly with `await`
-2. **Client queries**: Use TanStack Query + API routes
-3. **Client mutations**: Call server functions directly
-4. **TMDB**: Use auto-generated functions, never edit manually
-5. **API routes**: Use `apiRouteWrapper`
-6. **Client fetching**: Use `apiRequestWrapper`
+### Caching Strategy
+- **Cache pages/layouts, not actions** - Add `use cache` directive in pages/layouts that consume actions, never in action files themselves
+- **Wrap actions in cached functions** - The page/layout function itself becomes the caching boundary
+- **Use Suspense boundaries** - Separate static shell from dynamic/streaming content
+- **Tag strategically** - Use cache tags for content that changes infrequently but needs manual updates
 
-## Common Mistakes
+### Performance Optimization
+- **Minimize dynamic APIs** - Avoid using `cookies()`, `headers()`, or `searchParams` in cached functions
+- **Parallel data fetching** - Multiple server actions can be called in parallel within a cached component
+- **Appropriate cache lifetimes** - Balance freshness needs with server load
 
-❌ Calling API routes from server components (use server functions directly)
-❌ Using `fetch` directly in client components (use TanStack Query)
-❌ Editing `tmdb-server-functions.ts` manually (regenerate with `pnpm codegen:tmdb`)
-❌ Creating API routes for mutations (call server functions directly)
+### Data Mutation Patterns
+- **Use `updateTag` for user mutations** - When users need to see their changes immediately
+- **Use `revalidateTag` for background updates** - When serving slightly stale data is acceptable
+- **Tag hierarchies** - Use multiple tags (e.g., `'models'` and `'model-123'`) for flexible invalidation
+
+## Common Patterns
+
+### Pattern 1: Cached List Page
+```typescript
+import { cacheLife, cacheTag } from 'next/cache'
+import { getModels } from '@/lib/actions/models'
+
+export default async function ModelsPage() {
+  'use cache'
+  cacheLife('hours')
+  cacheTag('models')
+
+  const models = await getModels()
+  return <div>{/* render list */}</div>
+}
+```
+
+### Pattern 2: Cached Detail Page with Params
+```typescript
+import { cacheLife, cacheTag } from 'next/cache'
+import { getModelById } from '@/lib/actions/models'
+
+export default async function ModelPage({ params }: { params: { id: string } }) {
+  'use cache'
+  cacheLife('hours')
+  cacheTag('models', `model-${params.id}`)
+
+  const model = await getModelById(params.id)
+  return <div>{/* render detail */}</div>
+}
+```
+
+### Pattern 3: Mixed Static and Dynamic Content
+```typescript
+import { Suspense } from 'react'
+import { cacheLife } from 'next/cache'
+
+export default function Page() {
+  return (
+    <>
+      <StaticContent />
+      <Suspense fallback={<LoadingSkeleton />}>
+        <DynamicContent />
+      </Suspense>
+    </>
+  )
+}
+
+async function StaticContent() {
+  'use cache'
+  cacheLife('hours')
+
+  const data = await getStaticData()
+  return <div>{/* render */}</div>
+}
+
+async function DynamicContent() {
+  const session = await getSession() // uses cookies
+  const userData = await getUserData(session.userId)
+  return <div>{/* render */}</div>
+}
+```
+
+### Pattern 4: Server Action with Cache Invalidation
+```typescript
+'use server'
+import { updateTag } from 'next/cache'
+import { updateModelAction } from '@/lib/actions/models'
+
+export async function updateModel(id: string, data: FormData) {
+  const result = await updateModelAction(id, data)
+
+  if (result.status === 'success') {
+    // Immediately expire cache for this specific model and all models
+    updateTag(`model-${id}`, 'models')
+  }
+
+  return result
+}
+```
+
+## Important Constraints
+
+### Serialization Requirements
+- **Arguments must be serializable** - Pass primitives, plain objects, and arrays only
+- **No class instances or functions** - Cannot pass non-serializable values as arguments to cached functions
+- **Unserializable return values are OK** - Can return React components or other unserializable values if you don't introspect them
+
+### What NOT to Cache
+- **Functions using runtime APIs** - `cookies()`, `headers()`, `searchParams` should not be in cached functions
+- **Server Actions** - Never add `use cache` to server action files; cache at the consumption point
+- **Highly personalized content** - User-specific data that varies per request
+
+## Configuration
+
+Enable Cache Components in `next.config.ts`:
+
+```typescript
+const nextConfig = {
+  cacheComponents: true,
+}
+
+export default nextConfig
+```
+
+## Troubleshooting
+
+### Cache Not Working
+- Verify `cacheComponents: true` is set in `next.config.ts`
+- Check that `use cache` is at the top of the function body
+- Ensure you're using Node.js runtime (Edge Runtime not supported)
+- Verify function arguments are serializable
+
+### Stale Data Issues
+- Check cache lifetime profile - may need shorter duration
+- Use `updateTag` instead of `revalidateTag` for immediate updates
+- Verify cache tags match between caching and invalidation
+
+### Performance Issues
+- Profile which content needs to be cached vs. dynamic
+- Use more `Suspense` boundaries to improve streaming
+- Consider longer cache lifetimes for stable content
+- Review database query performance in server actions
+
+

@@ -1,533 +1,117 @@
 ---
 name: playwright
-description: Tests web applications with Playwright including E2E tests, locators, assertions, and visual testing. Use when writing end-to-end tests, testing across browsers, automating user flows, or debugging test failures.
+description: Playwright testing best practices for Next.js applications (formerly test-playwright). This skill should be used when writing, reviewing, or debugging E2E tests with Playwright. Triggers on tasks involving test selectors, flaky tests, authentication state, API mocking, hydration testing, parallel execution, CI configuration, or debugging test failures.
 ---
 
-# Playwright
-
-Cross-browser end-to-end testing framework with auto-wait and powerful debugging.
-
-## Quick Start
-
-**Install:**
-```bash
-npm init playwright@latest
-```
-
-This creates:
-- `playwright.config.ts` - Configuration
-- `tests/` - Test directory
-- `tests-examples/` - Example tests
-
-**Run tests:**
-```bash
-npx playwright test
-npx playwright test --ui          # UI mode
-npx playwright test --headed      # See browser
-npx playwright show-report        # View report
-```
-
-## Configuration
-
-```typescript
-// playwright.config.ts
-import { defineConfig, devices } from '@playwright/test';
-
-export default defineConfig({
-  testDir: './tests',
-  fullyParallel: true,
-  forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : undefined,
-  reporter: 'html',
-
-  use: {
-    baseURL: 'http://localhost:3000',
-    trace: 'on-first-retry',
-    screenshot: 'only-on-failure',
-    video: 'on-first-retry',
-  },
-
-  projects: [
-    {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-    },
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
-    {
-      name: 'Mobile Chrome',
-      use: { ...devices['Pixel 5'] },
-    },
-    {
-      name: 'Mobile Safari',
-      use: { ...devices['iPhone 12'] },
-    },
-  ],
-
-  webServer: {
-    command: 'npm run dev',
-    url: 'http://localhost:3000',
-    reuseExistingServer: !process.env.CI,
-  },
-});
-```
-
-## Test Structure
-
-### Basic Test
-
-```typescript
-import { test, expect } from '@playwright/test';
-
-test('has title', async ({ page }) => {
-  await page.goto('/');
-  await expect(page).toHaveTitle(/My App/);
-});
-
-test('navigates to about', async ({ page }) => {
-  await page.goto('/');
-  await page.click('text=About');
-  await expect(page).toHaveURL('/about');
-});
-```
-
-### Test Groups
-
-```typescript
-import { test, expect } from '@playwright/test';
-
-test.describe('Authentication', () => {
-  test.beforeEach(async ({ page }) => {
-    await page.goto('/login');
-  });
-
-  test('shows login form', async ({ page }) => {
-    await expect(page.getByRole('heading', { name: 'Login' })).toBeVisible();
-  });
-
-  test('logs in with valid credentials', async ({ page }) => {
-    await page.getByLabel('Email').fill('user@example.com');
-    await page.getByLabel('Password').fill('password123');
-    await page.getByRole('button', { name: 'Login' }).click();
-
-    await expect(page).toHaveURL('/dashboard');
-  });
-
-  test('shows error with invalid credentials', async ({ page }) => {
-    await page.getByLabel('Email').fill('wrong@example.com');
-    await page.getByLabel('Password').fill('wrongpass');
-    await page.getByRole('button', { name: 'Login' }).click();
-
-    await expect(page.getByText('Invalid credentials')).toBeVisible();
-  });
-});
-```
-
-## Locators
-
-### Recommended Locators
-
-```typescript
-// By role (best for accessibility)
-page.getByRole('button', { name: 'Submit' });
-page.getByRole('heading', { name: 'Welcome' });
-page.getByRole('link', { name: 'Home' });
-page.getByRole('textbox', { name: 'Email' });
-page.getByRole('checkbox', { name: 'Remember me' });
-
-// By label
-page.getByLabel('Email');
-page.getByLabel('Password');
-
-// By placeholder
-page.getByPlaceholder('Enter your email');
-
-// By text
-page.getByText('Welcome to our app');
-page.getByText(/welcome/i); // Case-insensitive
-
-// By alt text
-page.getByAltText('Company logo');
-
-// By title
-page.getByTitle('Close');
-
-// By test ID
-page.getByTestId('submit-button');
-```
-
-### CSS and XPath
-
-```typescript
-// CSS selector
-page.locator('.submit-button');
-page.locator('#email-input');
-page.locator('[data-cy="login-form"]');
-
-// XPath
-page.locator('//button[text()="Submit"]');
-```
-
-### Filtering and Chaining
-
-```typescript
-// Filter by text
-page.getByRole('listitem').filter({ hasText: 'Product 1' });
-
-// Filter by child locator
-page.getByRole('listitem').filter({
-  has: page.getByRole('button', { name: 'Add to cart' }),
-});
-
-// Chain locators
-page.getByRole('article').getByRole('button', { name: 'Read more' });
-
-// Nth element
-page.getByRole('listitem').nth(0);
-page.getByRole('listitem').first();
-page.getByRole('listitem').last();
-```
-
-## Actions
-
-### Click
-
-```typescript
-await page.getByRole('button', { name: 'Submit' }).click();
-await page.getByRole('link').click({ button: 'right' }); // Right click
-await page.getByRole('button').dblclick(); // Double click
-await page.getByRole('button').click({ force: true }); // Force click
-```
-
-### Fill and Type
-
-```typescript
-// Fill (clears first)
-await page.getByLabel('Email').fill('user@example.com');
-
-// Type (key by key)
-await page.getByLabel('Search').type('playwright');
-
-// Press key
-await page.getByLabel('Search').press('Enter');
-
-// Clear
-await page.getByLabel('Email').clear();
-```
-
-### Select
-
-```typescript
-// Select option
-await page.getByLabel('Country').selectOption('usa');
-await page.getByLabel('Country').selectOption({ label: 'United States' });
-
-// Multi-select
-await page.getByLabel('Colors').selectOption(['red', 'blue']);
-```
-
-### Check and Uncheck
-
-```typescript
-await page.getByLabel('Accept terms').check();
-await page.getByLabel('Newsletter').uncheck();
-
-// Toggle
-await page.getByLabel('Dark mode').setChecked(true);
-```
-
-### Drag and Drop
-
-```typescript
-await page.getByTestId('source').dragTo(page.getByTestId('target'));
-```
-
-### File Upload
-
-```typescript
-await page.getByLabel('Upload file').setInputFiles('path/to/file.pdf');
-await page.getByLabel('Upload files').setInputFiles([
-  'file1.pdf',
-  'file2.pdf',
-]);
-```
-
-## Assertions
-
-### Element Assertions
-
-```typescript
-// Visibility
-await expect(page.getByRole('button')).toBeVisible();
-await expect(page.getByRole('button')).toBeHidden();
-
-// Enabled/Disabled
-await expect(page.getByRole('button')).toBeEnabled();
-await expect(page.getByRole('button')).toBeDisabled();
-
-// Checked
-await expect(page.getByRole('checkbox')).toBeChecked();
-await expect(page.getByRole('checkbox')).not.toBeChecked();
-
-// Text content
-await expect(page.getByRole('heading')).toHaveText('Welcome');
-await expect(page.getByRole('heading')).toContainText('Welcome');
-
-// Value
-await expect(page.getByLabel('Email')).toHaveValue('user@example.com');
-
-// Attribute
-await expect(page.getByRole('link')).toHaveAttribute('href', '/about');
-
-// Class
-await expect(page.getByRole('button')).toHaveClass(/primary/);
-
-// Count
-await expect(page.getByRole('listitem')).toHaveCount(5);
-```
-
-### Page Assertions
-
-```typescript
-await expect(page).toHaveTitle('My App');
-await expect(page).toHaveTitle(/My App/);
-await expect(page).toHaveURL('/dashboard');
-await expect(page).toHaveURL(/dashboard/);
-```
-
-### Response Assertions
-
-```typescript
-const response = await page.goto('/');
-expect(response?.status()).toBe(200);
-```
-
-## Waiting
-
-### Auto-Wait
-
-Playwright auto-waits for elements to be actionable. Manual waits:
-
-```typescript
-// Wait for element
-await page.getByRole('button').waitFor();
-await page.getByRole('button').waitFor({ state: 'hidden' });
-
-// Wait for URL
-await page.waitForURL('/dashboard');
-await page.waitForURL(/dashboard/);
-
-// Wait for response
-await page.waitForResponse('/api/users');
-await page.waitForResponse((response) =>
-  response.url().includes('/api') && response.status() === 200
-);
-
-// Wait for request
-await page.waitForRequest('/api/users');
-
-// Wait for load state
-await page.waitForLoadState('networkidle');
-
-// Custom timeout
-await page.getByRole('button').click({ timeout: 10000 });
-```
-
-## Page Objects
-
-```typescript
-// pages/LoginPage.ts
-import { Page, Locator, expect } from '@playwright/test';
-
-export class LoginPage {
-  readonly page: Page;
-  readonly emailInput: Locator;
-  readonly passwordInput: Locator;
-  readonly submitButton: Locator;
-  readonly errorMessage: Locator;
-
-  constructor(page: Page) {
-    this.page = page;
-    this.emailInput = page.getByLabel('Email');
-    this.passwordInput = page.getByLabel('Password');
-    this.submitButton = page.getByRole('button', { name: 'Login' });
-    this.errorMessage = page.getByRole('alert');
-  }
-
-  async goto() {
-    await this.page.goto('/login');
-  }
-
-  async login(email: string, password: string) {
-    await this.emailInput.fill(email);
-    await this.passwordInput.fill(password);
-    await this.submitButton.click();
-  }
-
-  async expectError(message: string) {
-    await expect(this.errorMessage).toHaveText(message);
-  }
-}
-
-// tests/login.spec.ts
-import { test, expect } from '@playwright/test';
-import { LoginPage } from '../pages/LoginPage';
-
-test('login with valid credentials', async ({ page }) => {
-  const loginPage = new LoginPage(page);
-
-  await loginPage.goto();
-  await loginPage.login('user@example.com', 'password123');
-
-  await expect(page).toHaveURL('/dashboard');
-});
-```
-
-## Fixtures
-
-```typescript
-// fixtures.ts
-import { test as base } from '@playwright/test';
-import { LoginPage } from './pages/LoginPage';
-import { DashboardPage } from './pages/DashboardPage';
-
-type MyFixtures = {
-  loginPage: LoginPage;
-  dashboardPage: DashboardPage;
-  authenticatedPage: Page;
-};
-
-export const test = base.extend<MyFixtures>({
-  loginPage: async ({ page }, use) => {
-    await use(new LoginPage(page));
-  },
-
-  dashboardPage: async ({ page }, use) => {
-    await use(new DashboardPage(page));
-  },
-
-  authenticatedPage: async ({ page }, use) => {
-    // Login before test
-    await page.goto('/login');
-    await page.getByLabel('Email').fill('user@example.com');
-    await page.getByLabel('Password').fill('password');
-    await page.getByRole('button', { name: 'Login' }).click();
-    await page.waitForURL('/dashboard');
-
-    await use(page);
-  },
-});
-
-export { expect } from '@playwright/test';
-
-// tests/dashboard.spec.ts
-import { test, expect } from '../fixtures';
-
-test('shows user info', async ({ authenticatedPage }) => {
-  await expect(authenticatedPage.getByText('Welcome')).toBeVisible();
-});
-```
-
-## API Testing
-
-```typescript
-import { test, expect } from '@playwright/test';
-
-test('API: create user', async ({ request }) => {
-  const response = await request.post('/api/users', {
-    data: {
-      name: 'John Doe',
-      email: 'john@example.com',
-    },
-  });
-
-  expect(response.ok()).toBeTruthy();
-
-  const user = await response.json();
-  expect(user.name).toBe('John Doe');
-});
-
-test('API: get users', async ({ request }) => {
-  const response = await request.get('/api/users');
-  expect(response.ok()).toBeTruthy();
-
-  const users = await response.json();
-  expect(users.length).toBeGreaterThan(0);
-});
-```
-
-## Visual Testing
-
-```typescript
-test('screenshot comparison', async ({ page }) => {
-  await page.goto('/');
-
-  // Full page
-  await expect(page).toHaveScreenshot('homepage.png');
-
-  // Element
-  await expect(page.getByRole('navigation')).toHaveScreenshot('nav.png');
-
-  // With options
-  await expect(page).toHaveScreenshot('homepage.png', {
-    maxDiffPixels: 100,
-    threshold: 0.2,
-  });
-});
-```
-
-## Debugging
-
-```bash
-# Debug mode
-npx playwright test --debug
-
-# UI mode
-npx playwright test --ui
-
-# Headed mode
-npx playwright test --headed
-
-# Trace viewer
-npx playwright show-trace trace.zip
-```
-
-```typescript
-// Pause in test
-await page.pause();
-
-// Console log
-console.log(await page.content());
-console.log(await page.getByRole('heading').textContent());
-```
-
-## Best Practices
-
-1. **Use role locators** - Most reliable and accessible
-2. **Add test IDs sparingly** - Only when roles don't work
-3. **Use page objects** - Reusable, maintainable
-4. **Avoid hardcoded waits** - Use auto-wait
-5. **Run in CI** - Catch regressions early
-
-## Common Mistakes
-
-| Mistake | Fix |
-|---------|-----|
-| Using sleep/wait | Use auto-wait or waitFor |
-| Fragile selectors | Use role-based locators |
-| No assertions | Always verify outcomes |
-| Tests depend on order | Make tests independent |
-| Hardcoded data | Use fixtures |
+# Playwright + Next.js Testing Best Practices
+
+Comprehensive testing optimization guide for Playwright with Next.js applications. Contains 43 rules across 8 categories, prioritized by impact to guide reliable, fast, and maintainable E2E tests.
+
+## When to Apply
+
+Reference these guidelines when:
+- Writing new Playwright tests for Next.js apps
+- Debugging flaky or failing tests
+- Optimizing test execution speed
+- Setting up authentication state reuse
+- Configuring CI/CD pipelines for testing
+- Testing Server Components and App Router features
+- Reviewing test code for reliability issues
+
+## Rule Categories by Priority
+
+| Priority | Category | Impact | Prefix |
+|----------|----------|--------|--------|
+| 1 | Test Architecture | CRITICAL | `arch-` |
+| 2 | Selectors & Locators | CRITICAL | `loc-` |
+| 3 | Waiting & Assertions | HIGH | `wait-` |
+| 4 | Authentication & State | HIGH | `auth-` |
+| 5 | Mocking & Network | MEDIUM-HIGH | `mock-` |
+| 6 | Next.js Integration | MEDIUM | `next-` |
+| 7 | Performance & Speed | MEDIUM | `perf-` |
+| 8 | Debugging & CI | LOW-MEDIUM | `debug-` |
+
+## Quick Reference
+
+### 1. Test Architecture (CRITICAL)
+
+- [`arch-test-isolation`](references/arch-test-isolation.md) - Use fresh browser context for each test
+- [`arch-parallel-execution`](references/arch-parallel-execution.md) - Enable parallel test execution
+- [`arch-page-object-model`](references/arch-page-object-model.md) - Use Page Object Model for complex pages
+- [`arch-fixtures`](references/arch-fixtures.md) - Use fixtures for shared setup
+- [`arch-test-production`](references/arch-test-production.md) - Test against production builds
+- [`arch-cleanup-state`](references/arch-cleanup-state.md) - Clean up test state after each test
+
+### 2. Selectors & Locators (CRITICAL)
+
+- [`loc-role-selectors`](references/loc-role-selectors.md) - Use role-based selectors over CSS
+- [`loc-data-testid`](references/loc-data-testid.md) - Use data-testid for dynamic elements
+- [`loc-label-selectors`](references/loc-label-selectors.md) - Use getByLabel for form inputs
+- [`loc-text-selectors`](references/loc-text-selectors.md) - Use getByText for static content
+- [`loc-avoid-xpath`](references/loc-avoid-xpath.md) - Avoid XPath selectors
+- [`loc-chained-locators`](references/loc-chained-locators.md) - Chain locators for specificity
+- [`loc-placeholder-selector`](references/loc-placeholder-selector.md) - Use getByPlaceholder sparingly
+
+### 3. Waiting & Assertions (HIGH)
+
+- [`wait-web-first-assertions`](references/wait-web-first-assertions.md) - Use web-first assertions
+- [`wait-avoid-hard-waits`](references/wait-avoid-hard-waits.md) - Avoid hard waits
+- [`wait-network-idle`](references/wait-network-idle.md) - Use network idle for complex pages
+- [`wait-action-retries`](references/wait-action-retries.md) - Let actions auto-wait before interacting
+- [`wait-soft-assertions`](references/wait-soft-assertions.md) - Use soft assertions for non-critical checks
+- [`wait-custom-timeout`](references/wait-custom-timeout.md) - Configure timeouts appropriately
+
+### 4. Authentication & State (HIGH)
+
+- [`auth-storage-state`](references/auth-storage-state.md) - Reuse authentication with storage state
+- [`auth-multiple-roles`](references/auth-multiple-roles.md) - Use separate storage states for different roles
+- [`auth-session-storage`](references/auth-session-storage.md) - Handle session storage for auth
+- [`auth-api-login`](references/auth-api-login.md) - Use API login for faster auth setup
+- [`auth-parallel-workers`](references/auth-parallel-workers.md) - Use worker-scoped auth for parallel tests
+
+### 5. Mocking & Network (MEDIUM-HIGH)
+
+- [`mock-api-responses`](references/mock-api-responses.md) - Mock API responses for deterministic tests
+- [`mock-intercept-modify`](references/mock-intercept-modify.md) - Intercept and modify real responses
+- [`mock-har-files`](references/mock-har-files.md) - Use HAR files for complex mock scenarios
+- [`mock-abort-requests`](references/mock-abort-requests.md) - Abort unnecessary requests
+- [`mock-network-conditions`](references/mock-network-conditions.md) - Simulate network conditions
+
+### 6. Next.js Integration (MEDIUM)
+
+- [`next-wait-hydration`](references/next-wait-hydration.md) - Wait for hydration before interacting
+- [`next-server-components`](references/next-server-components.md) - Test server components correctly
+- [`next-app-router-navigation`](references/next-app-router-navigation.md) - Test App Router navigation patterns
+- [`next-server-actions`](references/next-server-actions.md) - Test server actions end-to-end
+- [`next-baseurl-config`](references/next-baseurl-config.md) - Configure baseURL for clean navigation
+
+### 7. Performance & Speed (MEDIUM)
+
+- [`perf-sharding`](references/perf-sharding.md) - Use sharding for large test suites
+- [`perf-headless-ci`](references/perf-headless-ci.md) - Use headless mode in CI
+- [`perf-browser-selection`](references/perf-browser-selection.md) - Select browsers strategically
+- [`perf-reuse-server`](references/perf-reuse-server.md) - Reuse development server when possible
+- [`perf-retries`](references/perf-retries.md) - Configure retries for flaky test recovery
+
+### 8. Debugging & CI (LOW-MEDIUM)
+
+- [`debug-trace-viewer`](references/debug-trace-viewer.md) - Use trace viewer for failed tests
+- [`debug-screenshots-videos`](references/debug-screenshots-videos.md) - Capture screenshots and videos on failure
+- [`debug-inspector`](references/debug-inspector.md) - Use Playwright Inspector for interactive debugging
+- [`debug-ci-reporters`](references/debug-ci-reporters.md) - Configure reporters for CI integration
+
+## How to Use
+
+Read individual reference files for detailed explanations and code examples:
+
+- [Section definitions](references/_sections.md) - Category structure and impact levels
+- [Rule template](assets/templates/_template.md) - Template for adding new rules
 
 ## Reference Files
 
-- [references/locators.md](references/locators.md) - Locator strategies
-- [references/fixtures.md](references/fixtures.md) - Advanced fixtures
-- [references/ci.md](references/ci.md) - CI configuration
+| File | Description |
+|------|-------------|
+| [AGENTS.md](AGENTS.md) | Complete compiled guide with all rules |
+| [references/_sections.md](references/_sections.md) | Category definitions and ordering |
+| [assets/templates/_template.md](assets/templates/_template.md) | Template for new rules |
+| [metadata.json](metadata.json) | Version and reference information |

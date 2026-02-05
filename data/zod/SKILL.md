@@ -1,562 +1,802 @@
 ---
-name: "Zod v4"
-description: "TypeScript-first schema validation library with static type inference and runtime validation"
-when_to_use: "When you need robust data validation, type safety, schema definitions, or input validation in TypeScript/JavaScript applications"
+name: zod
+description: TypeScript-first schema validation and type inference. Use for validating API requests/responses, form data, env vars, configs, defining type-safe schemas with runtime validation, transforming data, generating JSON Schema for OpenAPI/AI, or encountering missing validation errors, type inference issues, validation error handling problems. Zero dependencies (2kb gzipped).
+license: MIT
+metadata:
+  version: 2.0.0
+  last_verified: 2025-11-17
+  package_version: 4.1.12+
+  keywords:
+    - zod
+    - validation
+    - schema
+    - typescript
+    - type-safety
+    - runtime-validation
+    - type-inference
+    - data-validation
+    - form-validation
+    - api-validation
+    - json-schema
+    - refinement
+    - transformation
+    - error-handling
+    - parse
+    - safeParse
+    - z.object
+    - z.string
+    - z.number
+    - z.array
+    - z.union
+    - z.discriminatedUnion
+    - z.refine
+    - z.transform
+    - z.infer
+    - z.coerce
+    - z.enum
+    - z.literal
+    - z.tuple
+    - z.record
+    - z.intersection
+    - z.codec
+    - z.toJSONSchema
+    - z.treeifyError
+    - z.flattenError
+    - z.prettifyError
+    - z.registry
+    - z.globalRegistry
+    - .register
+    - .meta
+    - error-customization
+    - localization
+    - i18n
+    - migration
+    - v3-to-v4
+    - breaking-changes
+    - tRPC
+    - prisma-zod
+    - react-hook-form
+    - trpc
+    - environment-variables
+    - env-validation
+    - config-validation
+    - dto
+    - type-guard
+    - runtime-type-checking
+  token_savings: 65%
+  errors_prevented: 8
+  production_tested: true
+  related_skills:
+    - react-hook-form-zod
+    - typescript-mcp
 ---
 
-# Zod v4 - Schema Validation Skill
+# Zod: TypeScript-First Schema Validation
 
-Zod v4 is a TypeScript-first schema declaration and validation library that provides static type inference, runtime validation, and exceptional performance. Version 4 delivers 14x faster parsing and 66% smaller bundles while maintaining full type safety.
+## Overview
 
-## Quick Start
-
-```bash
-npm install zod@^4.0.0
-```
-
-```typescript
-import * as z from "zod";
-
-// Basic schema creation and validation
-const UserSchema = z.object({
-  id: z.number().int().positive(),
-  email: z.email(),
-  username: z.string().min(3).max(20),
-  age: z.number().int().min(18).optional(),
-});
-
-type User = z.infer<typeof UserSchema>;
-
-// Parse and validate
-const user = UserSchema.parse({
-  id: 1,
-  email: "user@example.com",
-  username: "johndoe",
-  age: 25,
-});
-
-// Safe parsing with error handling
-const result = UserSchema.safeParse(input);
-if (!result.success) {
-  console.log(result.error);
-}
-```
-
-## Common Patterns
-
-### Object Schemas with Validation
-
-```typescript
-// Comprehensive user validation
-const UserProfile = z.object({
-  id: z.number().int().positive(),
-  email: z.email(),
-  username: z
-    .string()
-    .min(3, "Username must be at least 3 characters")
-    .max(20, "Username cannot exceed 20 characters")
-    .regex(/^[a-zA-Z0-9_]+$/, "Only alphanumeric characters and underscores"),
-  age: z.number().int().min(13).max(120),
-  role: z.enum(["user", "admin", "moderator"]).default("user"),
-  bio: z.string().max(500).optional(),
-  website: z.url().optional(),
-  createdAt: z.date().default(() => new Date()),
-});
-
-// Extending schemas
-const AdminProfile = UserProfile.extend({
-  permissions: z.array(z.string()),
-  accessLevel: z.number().min(1).max(10),
-});
-```
-
-### String Format Validation
-
-```typescript
-// Built-in format validators
-const Validations = {
-  email: z.email(),
-  uuid: z.uuidv4(),
-  url: z.url(),
-  ipv4: z.ipv4(),
-  ipv6: z.ipv6(),
-  base64: z.base64(),
-  jwt: z.jwt(),
-
-  // ISO formats
-  isoDate: z.iso.date(),
-  isoDateTime: z.iso.datetime(),
-  isoTime: z.iso.time(),
-
-  // Custom email with specific pattern
-  strictEmail: z.email({ pattern: z.regexes.rfc5322Email }),
-};
-
-// Template literal validation
-const VersionString = z.templateLiteral([
-  z.number(),
-  ".",
-  z.number(),
-  ".",
-  z.number(),
-]);
-
-const CSSValue = z.templateLiteral([
-  z.number(),
-  z.enum(["px", "em", "rem", "%", "vh", "vw"]),
-]);
-```
-
-### Array and Collection Validation
-
-```typescript
-// Array with constraints
-const NumberArray = z.array(z.number()).min(1).max(100);
-
-// Tuple validation
-const Coordinates = z.tuple([z.number(), z.number()]);
-const MixedTuple = z.tuple([z.string(), z.number()], z.boolean());
-
-// Set validation
-const UniqueStrings = z.set(z.string()).min(3);
-
-// Map validation
-const UserPermissions = z.map(
-  z.string(), // user ID
-  z.array(z.string()), // permissions
-);
-
-// Record validation
-const StringToNumber = z.record(z.string(), z.number());
-const StatusRecord = z.record(
-  z.enum(["pending", "active", "complete"]),
-  z.boolean(),
-);
-```
-
-### Union and Discriminated Unions
-
-```typescript
-// Simple union
-const StringOrNumber = z.union([z.string(), z.number()]);
-
-// Discriminated union for API responses
-const ApiResponse = z.discriminatedUnion("status", [
-  z.object({
-    status: z.literal("success"),
-    data: z.unknown(),
-  }),
-  z.object({
-    status: z.literal("error"),
-    error: z.string(),
-    code: z.number(),
-  }),
-  z.object({
-    status: z.literal("loading"),
-    message: z.string().optional(),
-  }),
-]);
-
-// Nested discriminated unions
-const BaseError = z.object({
-  status: z.literal("error"),
-  message: z.string(),
-});
-
-const DetailedError = z.discriminatedUnion("code", [
-  BaseError.extend({ code: z.literal(400), field: z.string() }),
-  BaseError.extend({ code: z.literal(401), realm: z.string() }),
-  BaseError.extend({ code: z.literal(500), stack: z.string() }),
-]);
-```
-
-### Custom Refinements and Validation
-
-```typescript
-// Custom validation with refinements
-const PasswordSchema = z
-  .string()
-  .min(8, "Password must be at least 8 characters")
-  .refine((val) => /[A-Z]/.test(val), "Must contain uppercase letter")
-  .refine((val) => /[a-z]/.test(val), "Must contain lowercase letter")
-  .refine((val) => /[0-9]/.test(val), "Must contain number")
-  .refine((val) => /[^A-Za-z0-9]/.test(val), "Must contain special character");
-
-// Complex validation with superRefine
-const UserRegistration = z
-  .object({
-    email: z.email(),
-    password: z.string(),
-    confirmPassword: z.string(),
-    age: z.number(),
-    termsAccepted: z.boolean(),
-  })
-  .superRefine((data, ctx) => {
-    if (data.password !== data.confirmPassword) {
-      ctx.addIssue({
-        code: "custom",
-        path: ["confirmPassword"],
-        message: "Passwords must match",
-      });
-    }
-
-    if (data.age < 18 && !data.termsAccepted) {
-      ctx.addIssue({
-        code: "custom",
-        path: ["termsAccepted"],
-        message: "Parental consent required for users under 18",
-      });
-    }
-  });
-```
-
-### Transformations and Data Processing
-
-```typescript
-// Transform data during validation
-const StringToNumber = z
-  .string()
-  .transform((val) => parseInt(val, 10))
-  .refine((val) => !isNaN(val), "Must be a valid number");
-
-const TimestampToDate = z
-  .number()
-  .transform((timestamp) => new Date(timestamp));
-
-const NormalizeEmail = z.string().transform((val) => val.toLowerCase().trim());
-
-// Overwrite for type-preserving transforms
-const RoundNumber = z.number().overwrite((val) => Math.round(val));
-
-// Pipeline transformations
-const ProcessUrl = z
-  .string()
-  .transform((val) => val.trim())
-  .transform((val) => val.toLowerCase())
-  .transform((val) => {
-    try {
-      return new URL(val);
-    } catch {
-      throw new Error("Invalid URL format");
-    }
-  });
-```
-
-### Recursive Schemas
-
-```typescript
-// Recursive category structure
-const Category = z.object({
-  id: z.number(),
-  name: z.string(),
-  get subcategories() {
-    return z.array(Category);
-  },
-});
-
-// Mutually recursive types
-const User = z.object({
-  id: z.number(),
-  name: z.string(),
-  get posts() {
-    return z.array(Post);
-  },
-});
-
-const Post = z.object({
-  id: z.number(),
-  title: z.string(),
-  content: z.string(),
-  get author() {
-    return User;
-  },
-  get comments() {
-    return z.array(Comment);
-  },
-});
-
-const Comment = z.object({
-  id: z.number(),
-  text: z.string(),
-  get author() {
-    return User.pick({ id: true, name: true });
-  },
-});
-```
-
-### File Validation
-
-```typescript
-// File upload validation
-const ImageUpload = z.object({
-  avatar: z
-    .file()
-    .max(5_000_000, "File must be less than 5MB")
-    .mime(["image/jpeg", "image/png", "image/webp"], "Must be an image"),
-
-  banner: z
-    .file()
-    .max(10_000_000, "File must be less than 10MB")
-    .mime(["image/jpeg", "image/png"], "Must be JPEG or PNG")
-    .optional(),
-});
-
-// Document validation
-const DocumentUpload = z
-  .file()
-  .min(1000, "File must be at least 1KB")
-  .max(50_000_000, "File must be less than 50MB")
-  .mime([
-    "application/pdf",
-    "application/msword",
-    "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-  ]);
-```
-
-### Function Validation
-
-```typescript
-// Define validated functions
-const CalculateTax = z.function({
-  input: [z.number().min(0), z.number().min(0).max(1)],
-  output: z.number(),
-});
-
-const taxCalculator = CalculateTax.implement((amount, rate) => {
-  return amount * rate;
-});
-
-// Async function validation
-const FetchUser = z.function({
-  input: [z.number().int().positive()],
-  output: z.object({
-    id: z.number(),
-    name: z.string(),
-    email: z.email(),
-  }),
-});
-
-const getUser = FetchUser.implementAsync(async (id) => {
-  const response = await fetch(`/api/users/${id}`);
-  return response.json();
-});
-```
-
-### Error Handling
-
-```typescript
-// Custom error messages
-const CustomValidation = z.object({
-  username: z
-    .string({
-      error: (issue) => {
-        if (issue.input === undefined) return "Username is required";
-        if (typeof issue.input !== "string") return "Username must be a string";
-        return "Invalid username";
-      },
-    })
-    .min(3, "Username must be at least 3 characters"),
-});
-
-// Error handling patterns
-const validateInput = (input: unknown) => {
-  const result = UserSchema.safeParse(input);
-
-  if (!result.success) {
-    const error = result.error;
-
-    // Pretty print errors
-    console.log(z.prettifyError(error));
-
-    // Extract field errors
-    const fieldErrors = error.issues.reduce(
-      (acc, issue) => {
-        const field = issue.path.join(".");
-        acc[field] = issue.message;
-        return acc;
-      },
-      {} as Record<string, string>,
-    );
-
-    return { success: false, errors: fieldErrors };
-  }
-
-  return { success: true, data: result.data };
-};
-```
-
-### Default Values and Coercion
-
-```typescript
-// Schema with defaults
-const ConfigSchema = z.object({
-  theme: z.enum(["light", "dark"]).default("light"),
-  notifications: z.boolean().default(true),
-  fontSize: z.number().min(10).max(30).default(14),
-  timeout: z.number().default(5000),
-});
-
-// Type coercion
-const CoercedConfig = z.object({
-  port: z.coerce.number().default(3000),
-  https: z.coerce.boolean().default(false),
-  maxConnections: z.coerce.number().int().positive().default(100),
-});
-
-// Environment variable parsing
-const EnvSchema = z.object({
-  NODE_ENV: z
-    .enum(["development", "production", "test"])
-    .default("development"),
-  PORT: z.coerce.number().default(3000),
-  DEBUG: z.stringbool().default("false"),
-});
-```
-
-### Zod Mini (Tree-Shakable)
-
-```typescript
-import * as z from "zod/mini";
-
-// Functional API for smaller bundles
-const OptionalString = z.optional(z.string());
-const StringArray = z.array(z.string());
-const StringOrNumber = z.union([z.string(), z.number()]);
-
-// Check functions for validations
-const ValidatedEmail = z
-  .string()
-  .check(z.regex(/@/), z.minLength(5), z.maxLength(100));
-
-const PositiveInt = z.number().check(z.int(), z.positive(), z.lt(1000));
-
-const NonEmptyArray = z.array(z.any()).check(z.minSize(1));
-```
-
-## Practical Examples
-
-### Form Validation
-
-```typescript
-// Contact form validation
-const ContactForm = z.object({
-  name: z.string().min(1, "Name is required").max(100),
-  email: z.email("Please provide a valid email"),
-  subject: z.string().min(5, "Subject must be at least 5 characters"),
-  message: z.string().min(10, "Message must be at least 10 characters"),
-  newsletter: z.boolean().default(false),
-});
-
-// React form integration
-const handleSubmit = (formData: FormData) => {
-  const data = {
-    name: formData.get("name"),
-    email: formData.get("email"),
-    subject: formData.get("subject"),
-    message: formData.get("message"),
-    newsletter: formData.get("newsletter") === "on",
-  };
-
-  const result = ContactForm.safeParse(data);
-  if (!result.success) {
-    const errors = result.error.flatten();
-    return { errors: errors.fieldErrors };
-  }
-
-  // Process valid data
-  return { success: true, data: result.data };
-};
-```
-
-### API Response Validation
-
-```typescript
-// API response schemas
-const UserResponse = z.object({
-  data: z.object({
-    id: z.number(),
-    name: z.string(),
-    email: z.email(),
-    createdAt: z.string().transform((val) => new Date(val)),
-  }),
-  meta: z.object({
-    total: z.number(),
-    page: z.number(),
-    totalPages: z.number(),
-  }),
-});
-
-// Typed API client
-const apiClient = {
-  async getUser(id: number): Promise<z.infer<typeof UserResponse>["data"]> {
-    const response = await fetch(`/api/users/${id}`);
-    const data = await response.json();
-
-    const result = UserResponse.safeParse(data);
-    if (!result.success) {
-      throw new Error(`Invalid API response: ${result.error.message}`);
-    }
-
-    return result.data.data;
-  },
-};
-```
-
-### Configuration Validation
-
-```typescript
-// Application configuration
-const AppConfig = z.object({
-  server: z.object({
-    port: z.coerce.number().min(1).max(65535).default(3000),
-    host: z.string().default("localhost"),
-    cors: z.boolean().default(true),
-  }),
-  database: z.object({
-    url: z.string(),
-    ssl: z.boolean().default(false),
-    maxConnections: z.coerce.number().int().positive().default(10),
-  }),
-  auth: z.object({
-    jwtSecret: z.string().min(32),
-    tokenExpiry: z.string().default("24h"),
-    refreshExpiry: z.string().default("7d"),
-  }),
-});
-
-// Load and validate config
-const loadConfig = (configPath: string) => {
-  const rawConfig = require(configPath);
-  const config = AppConfig.parse(rawConfig);
-  return config;
-};
-```
-
-## Requirements
-
-- **TypeScript**: 4.5+ (recommended for best inference)
-- **Runtime**: Node.js, browsers, Deno, Bun
-- **Bundle size**: 5.36kb gzipped (full), 1.88kb gzipped (mini)
+Zod is a TypeScript-first validation library that enables developers to define schemas for validating data at runtime while automatically inferring static TypeScript types. With zero dependencies and a 2kb core bundle (gzipped), Zod provides immutable, composable validation with comprehensive error handling.
 
 ## Installation
 
 ```bash
-# Full Zod v4
-npm install zod@^4.0.0
-
-# For minimal bundle size
-npm install zod@^4.0.0
-# Then import from "zod/mini"
+bun add zod
+# or
+bun add zod
+# or
+bun add zod
+# or
+yarn add zod
 ```
 
-## Key Features
+**Requirements**:
+- TypeScript v5.5+ with `"strict": true` in `tsconfig.json`
+- Zod 4.x (4.1.12+)
 
-- **Static Type Inference**: Automatic TypeScript type generation from schemas
-- **Runtime Validation**: Comprehensive input validation with detailed errors
-- **Performance**: 14x faster parsing than v3, optimized for production
-- **Tree Shakable**: Zod Mini provides 85% bundle size reduction
-- **Template Literals**: Validate string patterns matching TypeScript template literals
-- **File Validation**: Built-in File object validation with size and MIME type constraints
-- **Recursive Types**: Full support for recursive and self-referential schemas
-- **JSON Schema**: First-party JSON Schema generation
-- **Function Validation**: Type-safe function definitions with validated inputs/outputs
+**Important**: This skill documents **Zod 4.x** features. The following APIs require Zod 4 and are NOT available in Zod 3.x:
+- `z.codec()` - Bidirectional transformations
+- `z.iso.date()`, `z.iso.time()`, `z.iso.datetime()`, `z.iso.duration()` - ISO format validators
+- `z.toJSONSchema()` - JSON Schema generation
+- `z.treeifyError()`, `z.prettifyError()`, `z.flattenError()` - New error formatting helpers
+- `.meta()` - Enhanced metadata (Zod 3.x only has `.describe()`)
+- Unified `error` parameter - Replaces `message`, `invalid_type_error`, `required_error`, `errorMap`
+
+For Zod 3.x compatibility or migration guidance, see https://zod.dev
+
+## Migrating from Zod v3 to v4
+
+**Load `references/migration-guide.md` for complete v3 to v4 migration documentation.**
+
+### Quick Summary
+
+Zod v4 introduces breaking changes for better performance:
+
+- **Error customization**: Use unified `error` parameter (replaces `message`, `invalid_type_error`, `required_error`)
+- **Number validation**: Stricter - rejects `Infinity` and unsafe integers
+- **String formats**: Now top-level functions (`z.email()` vs `z.string().email()`)
+- **Object defaults**: Applied even in optional fields
+- **Deprecated APIs**: Use `.extend()` (not `.merge()`), `z.treeifyError()` (not `error.format()`)
+- **Function validation**: Use `.implement()` method
+- **UUID validation**: Stricter RFC 9562/4122 compliance
+
+**→ Load `references/migration-guide.md` for:** Complete breaking changes, migration checklist, gradual migration strategy, rollback instructions
+
+## Core Concepts
+
+### Basic Usage Pattern
+
+```typescript
+import { z } from "zod";
+
+// Define schema
+const UserSchema = z.object({
+  username: z.string(),
+  age: z.number().int().positive(),
+  email: z.string().email(),
+});
+
+// Infer TypeScript type
+type User = z.infer<typeof UserSchema>;
+
+// Validate data (throws on error)
+const user = UserSchema.parse(data);
+
+// Validate data (returns result object)
+const result = UserSchema.safeParse(data);
+if (result.success) {
+  console.log(result.data); // Typed!
+} else {
+  console.error(result.error); // ZodError
+}
+```
+
+### Parsing Methods
+
+Use the appropriate parsing method based on error handling needs:
+
+- **`.parse(data)`** - Throws `ZodError` on invalid input; returns strongly-typed data on success
+- **`.safeParse(data)`** - Returns `{ success: true, data }` or `{ success: false, error }` (no exceptions)
+- **`.parseAsync(data)`** - For schemas with async refinements/transforms
+- **`.safeParseAsync(data)`** - Async version that doesn't throw
+
+**Best Practice**: Use `.safeParse()` to avoid try-catch blocks and leverage discriminated unions.
+
+## Primitive Types
+
+### Strings
+
+```typescript
+z.string()                    // Basic string
+z.string().min(5)            // Minimum length
+z.string().max(100)          // Maximum length
+z.string().length(10)        // Exact length
+z.string().email()           // Email validation
+z.string().url()             // URL validation
+z.string().uuid()            // UUID format
+z.string().regex(/^\d+$/)    // Custom pattern
+z.string().startsWith("pre") // Prefix check
+z.string().endsWith("suf")   // Suffix check
+z.string().trim()            // Auto-trim whitespace
+z.string().toLowerCase()     // Auto-lowercase
+z.string().toUpperCase()     // Auto-uppercase
+
+// ISO formats (Zod 4+)
+z.iso.date()                 // YYYY-MM-DD
+z.iso.time()                 // HH:MM:SS
+z.iso.datetime()             // ISO 8601 datetime
+z.iso.duration()             // ISO 8601 duration
+
+// Network formats
+z.ipv4()                     // IPv4 address
+z.ipv6()                     // IPv6 address
+z.cidrv4()                   // IPv4 CIDR notation
+z.cidrv6()                   // IPv6 CIDR notation
+
+// Other formats
+z.jwt()                      // JWT token
+z.nanoid()                   // Nanoid
+z.cuid()                     // CUID
+z.cuid2()                    // CUID2
+z.ulid()                     // ULID
+z.base64()                   // Base64 encoded
+z.hex()                      // Hexadecimal
+```
+
+### Numbers
+
+```typescript
+z.number()                   // Basic number
+z.number().int()             // Integer only
+z.number().positive()        // > 0
+z.number().nonnegative()     // >= 0
+z.number().negative()        // < 0
+z.number().nonpositive()     // <= 0
+z.number().min(0)            // Minimum value
+z.number().max(100)          // Maximum value
+z.number().gt(0)             // Greater than
+z.number().gte(0)            // Greater than or equal
+z.number().lt(100)           // Less than
+z.number().lte(100)          // Less than or equal
+z.number().multipleOf(5)     // Must be multiple of 5
+z.int()                      // Shorthand for z.number().int()
+z.int32()                    // 32-bit integer
+z.nan()                      // NaN value
+```
+
+### Coercion (Type Conversion)
+
+```typescript
+z.coerce.string()            // Convert to string
+z.coerce.number()            // Convert to number
+z.coerce.boolean()           // Convert to boolean
+z.coerce.bigint()            // Convert to bigint
+z.coerce.date()              // Convert to Date
+
+// Example: Parse query parameters
+const QuerySchema = z.object({
+  page: z.coerce.number().int().positive(),
+  limit: z.coerce.number().int().max(100).default(10),
+});
+
+// "?page=5&limit=20" -> { page: 5, limit: 20 }
+```
+
+### Other Primitives
+
+```typescript
+z.boolean()                  // Boolean
+z.date()                     // Date object
+z.date().min(new Date("2020-01-01"))
+z.date().max(new Date("2030-12-31"))
+z.bigint()                   // BigInt
+z.symbol()                   // Symbol
+z.null()                     // Null
+z.undefined()                // Undefined
+z.void()                     // Void (undefined)
+```
+
+## Complex Types
+
+### Objects
+
+```typescript
+const PersonSchema = z.object({
+  name: z.string(),
+  age: z.number(),
+  address: z.object({
+    street: z.string(),
+    city: z.string(),
+    country: z.string(),
+  }),
+});
+
+type Person = z.infer<typeof PersonSchema>;
+
+// Object methods
+PersonSchema.shape                 // Access shape
+PersonSchema.keyof()              // Get union of keys
+PersonSchema.extend({ role: z.string() })  // Add fields
+PersonSchema.pick({ name: true }) // Pick specific fields
+PersonSchema.omit({ age: true })  // Omit fields
+PersonSchema.partial()            // Make all fields optional
+PersonSchema.required()           // Make all fields required
+PersonSchema.deepPartial()        // Recursively optional
+
+// Strict vs loose objects
+z.strictObject({ ... })           // No extra keys allowed (throws)
+z.object({ ... })                 // Strips extra keys (default)
+z.looseObject({ ... })            // Allows extra keys
+```
+
+### Arrays
+
+```typescript
+z.array(z.string())              // String array
+z.array(z.number()).min(1)       // At least 1 element
+z.array(z.number()).max(10)      // At most 10 elements
+z.array(z.number()).length(5)    // Exactly 5 elements
+z.array(z.number()).nonempty()   // At least 1 element
+
+// Nested arrays
+z.array(z.array(z.number()))     // number[][]
+```
+
+### Tuples
+
+```typescript
+z.tuple([z.string(), z.number()]) // [string, number]
+z.tuple([z.string(), z.number()]).rest(z.boolean()) // [string, number, ...boolean[]]
+```
+
+### Enums and Literals
+
+```typescript
+// Enum
+const RoleEnum = z.enum(["admin", "user", "guest"]);
+type Role = z.infer<typeof RoleEnum>; // "admin" | "user" | "guest"
+
+// Literal values
+z.literal("exact_value")
+z.literal(42)
+z.literal(true)
+
+// Native TypeScript enum
+enum Fruits {
+  Apple,
+  Banana,
+}
+z.nativeEnum(Fruits)
+
+// Enum methods
+RoleEnum.enum.admin              // "admin"
+RoleEnum.exclude(["guest"])      // Exclude values
+RoleEnum.extract(["admin", "user"]) // Include only
+```
+
+### Unions
+
+```typescript
+// Basic union
+z.union([z.string(), z.number()])
+
+// Discriminated union (better performance & type inference)
+const ResponseSchema = z.discriminatedUnion("status", [
+  z.object({ status: z.literal("success"), data: z.any() }),
+  z.object({ status: z.literal("error"), message: z.string() }),
+]);
+
+type Response = z.infer<typeof ResponseSchema>;
+// { status: "success", data: any } | { status: "error", message: string }
+```
+
+### Intersections
+
+```typescript
+const BaseSchema = z.object({ id: z.string() });
+const ExtendedSchema = z.object({ name: z.string() });
+
+const Combined = z.intersection(BaseSchema, ExtendedSchema);
+// Equivalent to: z.object({ id: z.string(), name: z.string() })
+```
+
+### Records and Maps
+
+```typescript
+// Record: object with typed keys and values
+z.record(z.string())             // { [key: string]: string }
+z.record(z.string(), z.number()) // { [key: string]: number }
+
+// Partial record (some keys optional)
+z.partialRecord(z.enum(["a", "b"]), z.string())
+
+// Map
+z.map(z.string(), z.number())    // Map<string, number>
+z.set(z.string())                // Set<string>
+```
+
+## Advanced Patterns
+
+**Load `references/advanced-patterns.md` for complete advanced validation and transformation patterns.**
+
+### Quick Reference
+
+**Refinements** (custom validation):
+```typescript
+z.string().refine((val) => val.length >= 8, "Too short");
+z.object({ password, confirmPassword }).superRefine((data, ctx) => { /* ... */ });
+```
+
+**Transformations** (modify data):
+```typescript
+z.string().transform((val) => val.trim());
+z.string().pipe(z.coerce.number());
+```
+
+**Codecs** (bidirectional transforms - NEW in v4.1):
+```typescript
+const DateCodec = z.codec(
+  z.iso.datetime(),
+  z.date(),
+  {
+    decode: (str) => new Date(str),
+    encode: (date) => date.toISOString(),
+  }
+);
+```
+
+**Recursive Types**:
+```typescript
+const CategorySchema: z.ZodType<Category> = z.lazy(() =>
+  z.object({ name: z.string(), subcategories: z.array(CategorySchema) })
+);
+```
+
+**Optional/Nullable**:
+```typescript
+z.string().optional()            // string | undefined
+z.string().nullable()            // string | null
+z.string().default("default")    // Provides default if undefined
+```
+
+**Readonly & Brand**:
+```typescript
+z.object({ ... }).readonly()     // Readonly properties
+z.string().brand<"UserId">()     // Nominal typing
+```
+
+**→ Load `references/advanced-patterns.md` for:** Complete refinement patterns, async validation, codec examples, composable schemas, conditional validation, performance optimization
+
+## Error Handling
+
+**Load `references/error-handling.md` for complete error formatting and customization guide.**
+
+### Quick Reference
+
+**Error Formatting Methods**:
+```typescript
+// For forms
+const { fieldErrors } = z.flattenError(error);
+
+// For nested data
+const tree = z.treeifyError(error);
+const nameError = tree.properties?.user?.properties?.name?.errors?.[0];
+
+// For debugging
+console.log(z.prettifyError(error));
+```
+
+**Custom Error Messages** (three levels):
+```typescript
+// 1. Schema-level (highest priority)
+z.string({ error: "Custom message" });
+z.string().min(5, "Too short");
+
+// 2. Per-parse level
+schema.parse(data, { error: (issue) => ({ message: "..." }) });
+
+// 3. Global level
+z.config({ customError: (issue) => ({ message: "..." }) });
+```
+
+**Localization** (40+ languages):
+```typescript
+z.config(z.locales.es());  // Spanish
+z.config(z.locales.fr());  // French
+```
+
+**→ Load `references/error-handling.md` for:** Complete error formatting examples, custom error patterns, localization setup, error code reference
+
+## Type Inference
+
+**Load `references/type-inference.md` for complete type inference and metadata documentation.**
+
+### Quick Reference
+
+**Basic Type Inference**:
+```typescript
+const UserSchema = z.object({ name: z.string() });
+type User = z.infer<typeof UserSchema>; // { name: string }
+```
+
+**Input vs Output** (for transforms):
+```typescript
+const TransformSchema = z.string().transform((s) => s.length);
+type Input = z.input<typeof TransformSchema>;   // string
+type Output = z.output<typeof TransformSchema>; // number
+```
+
+**JSON Schema Conversion**:
+```typescript
+const jsonSchema = z.toJSONSchema(UserSchema, {
+  target: "openapi-3.0",
+  metadata: true,
+});
+```
+
+**Metadata**:
+```typescript
+// Add metadata
+const EmailSchema = z.string().email().meta({
+  title: "Email Address",
+  description: "User's email address",
+});
+
+// Create custom registry
+const formRegistry = z.registry<FormFieldMeta>();
+```
+
+**→ Load `references/type-inference.md` for:** Complete type inference patterns, JSON Schema options, metadata system, custom registries, brand types
+
+## Functions
+
+Validate function inputs and outputs:
+
+```typescript
+const AddFunction = z.function()
+  .args(z.number(), z.number())  // Arguments
+  .returns(z.number());           // Return type
+
+// Implement typed function
+const add = AddFunction.implement((a, b) => {
+  return a + b; // Type-checked!
+});
+
+// Async functions
+const FetchFunction = z.function()
+  .args(z.string())
+  .returns(z.promise(z.object({ data: z.any() })))
+  .implementAsync(async (url) => {
+    const response = await fetch(url);
+    return response.json();
+  });
+```
+
+## Common Patterns
+
+### Environment Variables
+
+```typescript
+const EnvSchema = z.object({
+  NODE_ENV: z.enum(["development", "production", "test"]),
+  DATABASE_URL: z.string().url(),
+  PORT: z.coerce.number().int().positive().default(3000),
+  API_KEY: z.string().min(32),
+});
+
+// Validate on startup
+const env = EnvSchema.parse(process.env);
+
+// Now use typed env
+console.log(env.PORT); // number
+```
+
+### API Request Validation
+
+```typescript
+const CreateUserRequest = z.object({
+  username: z.string().min(3).max(20),
+  email: z.string().email(),
+  password: z.string().min(8),
+  age: z.number().int().positive().optional(),
+});
+
+// Express example
+app.post("/users", async (req, res) => {
+  const result = CreateUserRequest.safeParse(req.body);
+
+  if (!result.success) {
+    return res.status(400).json({
+      errors: z.flattenError(result.error).fieldErrors,
+    });
+  }
+
+  const user = await createUser(result.data);
+  res.json(user);
+});
+```
+
+### Form Validation
+
+```typescript
+const FormSchema = z.object({
+  firstName: z.string().min(1, "First name required"),
+  lastName: z.string().min(1, "Last name required"),
+  email: z.string().email("Invalid email"),
+  age: z.coerce.number().int().min(18, "Must be 18+"),
+  agreeToTerms: z.literal(true, {
+    errorMap: () => ({ message: "Must accept terms" }),
+  }),
+});
+
+type FormData = z.infer<typeof FormSchema>;
+```
+
+### Partial Updates
+
+```typescript
+const UserSchema = z.object({
+  id: z.string(),
+  name: z.string(),
+  email: z.string().email(),
+});
+
+// For PATCH requests: make everything optional except id
+const UpdateUserSchema = UserSchema.partial().required({ id: true });
+
+type UpdateUser = z.infer<typeof UpdateUserSchema>;
+// { id: string; name?: string; email?: string }
+```
+
+### Composable Schemas
+
+```typescript
+// Base schemas
+const TimestampSchema = z.object({
+  createdAt: z.date(),
+  updatedAt: z.date(),
+});
+
+const AuthorSchema = z.object({
+  authorId: z.string(),
+  authorName: z.string(),
+});
+
+// Compose into larger schemas
+const PostSchema = z.object({
+  id: z.string(),
+  title: z.string(),
+  content: z.string(),
+}).merge(TimestampSchema).merge(AuthorSchema);
+```
+
+## Ecosystem Integration
+
+**Load `references/ecosystem-integrations.md` for complete framework and tooling integration guide.**
+
+### Quick Reference
+
+**ESLint Plugins**:
+- `eslint-plugin-zod-x` - Enforces best practices
+- `eslint-plugin-import-zod` - Enforces import style
+
+**Framework Integrations**:
+- **tRPC** - End-to-end typesafe APIs
+- **React Hook Form** - Form validation (see `react-hook-form-zod` skill)
+- **Prisma** - Generate Zod from database models
+- **NestJS** - DTOs and validation pipes
+
+**Code Generation**:
+- **orval** - OpenAPI → Zod
+- **Hey API** - OpenAPI to TypeScript + Zod
+- **kubb** - API toolkit with codegen
+
+**→ Load `references/ecosystem-integrations.md` for:** Setup instructions, integration examples, Hono middleware, Drizzle ORM patterns
+
+## Troubleshooting
+
+**Load `references/troubleshooting.md` for complete troubleshooting guide, performance tips, and best practices.**
+
+### Quick Reference
+
+**Common Issues**:
+1. TypeScript strict mode required → Enable in `tsconfig.json`
+2. Large bundle size → Use `z.lazy()` for code splitting
+3. Slow async refinements → Cache or debounce
+4. Circular dependencies → Use `z.lazy()`
+5. Slow unions → Use `z.discriminatedUnion()`
+6. Transform vs refine confusion → Use `.refine()` for validation, `.transform()` for modification
+
+**Performance Tips**:
+- Use `.discriminatedUnion()` (5-10x faster than `.union()`)
+- Cache schema instances
+- Use `.safeParse()` (avoids try-catch overhead)
+- Lazy load large schemas
+
+**Best Practices**:
+- Define schemas at module level
+- Use type inference (`z.infer`)
+- Add custom error messages
+- Validate at system boundaries
+- Compose small schemas
+- Document with `.meta()`
+
+**→ Load `references/troubleshooting.md` for:** Detailed solutions, performance optimization, best practices, testing patterns
+
+## Quick Reference
+
+```typescript
+// Primitives
+z.string(), z.number(), z.boolean(), z.date(), z.bigint()
+
+// Collections
+z.array(), z.tuple(), z.object(), z.record(), z.map(), z.set()
+
+// Special types
+z.enum(), z.union(), z.discriminatedUnion(), z.intersection()
+z.literal(), z.any(), z.unknown(), z.never()
+
+// Modifiers
+.optional(), .nullable(), .nullish(), .default(), .catch()
+.readonly(), .brand()
+
+// Validation
+.min(), .max(), .length(), .regex(), .email(), .url(), .uuid()
+.refine(), .superRefine()
+
+// Transformation
+.transform(), .pipe(), .codec()
+
+// Parsing
+.parse(), .safeParse(), .parseAsync(), .safeParseAsync()
+
+// Type inference
+z.infer<typeof Schema>, z.input<typeof Schema>, z.output<typeof Schema>
+
+// Error handling
+z.flattenError(), z.treeifyError(), z.prettifyError()
+
+// JSON Schema
+z.toJSONSchema(schema, options)
+
+// Metadata
+.meta(), .describe()
+
+// Object methods
+.extend(), .pick(), .omit(), .partial(), .required(), .merge()
+```
+
+## When to Load References
+
+**Load `references/migration-guide.md` when:**
+- Upgrading from Zod v3 to v4
+- Questions about breaking changes
+- Need migration checklist or rollback strategy
+- Errors related to deprecated APIs (`.merge()`, `error.format()`, etc.)
+- Number validation issues with `Infinity` or unsafe integers
+
+**Load `references/error-handling.md` when:**
+- Need to format errors for forms or UI
+- Implementing custom error messages
+- Questions about `z.flattenError()`, `z.treeifyError()`, or `z.prettifyError()`
+- Setting up localization for error messages
+- Need error code reference or pattern examples
+
+**Load `references/advanced-patterns.md` when:**
+- Implementing custom refinements or async validation
+- Need bidirectional transformations (codecs)
+- Working with recursive types or self-referential data
+- Questions about `.refine()`, `.transform()`, or `.codec()`
+- Need performance optimization patterns
+- Implementing conditional validation
+
+**Load `references/type-inference.md` when:**
+- Questions about TypeScript type inference
+- Need to generate JSON Schema for OpenAPI or AI
+- Implementing metadata system for forms or documentation
+- Need custom registries for type-safe metadata
+- Questions about `z.infer`, `z.input`, `z.output`
+- Using brand types for ID safety
+
+**Load `references/ecosystem-integrations.md` when:**
+- Integrating with tRPC, React Hook Form, Prisma, or NestJS
+- Setting up ESLint plugins for best practices
+- Generating Zod schemas from OpenAPI (orval, Hey API, kubb)
+- Questions about Hono middleware or Drizzle ORM
+- Need framework-specific integration examples
+
+**Load `references/troubleshooting.md` when:**
+- Encountering TypeScript strict mode errors
+- Bundle size concerns or lazy loading needs
+- Performance issues with large unions or async refinements
+- Questions about circular dependencies
+- Need best practices or testing patterns
+- Confusion between `.refine()` and `.transform()`
+
+## Additional Resources
+
+- **Official Docs**: https://zod.dev
+- **GitHub**: https://github.com/colinhacks/zod
+- **TypeScript Playground**: https://zod-playground.vercel.app
+- **ESLint Plugin (Best Practices)**: https://github.com/JoshuaKGoldberg/eslint-plugin-zod-x
+- **tRPC Integration**: https://trpc.io
+- **Ecosystem**: https://zod.dev/ecosystem
+
+---
+
+**Production Notes**:
+- Package version: 4.1.12+ (Zod 4.x stable)
+- Zero dependencies
+- Bundle size: 2kb (gzipped)
+- TypeScript 5.5+ required
+- Strict mode required
+- Last verified: 2025-11-17
+- Skill version: 2.0.0 (Updated with v4.1 enhancements)
+
+**What's New in This Version**:
+- ✨ Comprehensive v3 to v4 migration guide with breaking changes
+- ✨ Enhanced error customization with three-level system
+- ✨ Expanded metadata API with registry system
+- ✨ Improved error formatting with practical examples
+- ✨ Built-in localization support for 40+ locales
+- ✨ Detailed codec documentation with real-world patterns
+- ✨ Performance improvements and architectural changes explained

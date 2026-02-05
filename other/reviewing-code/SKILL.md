@@ -1,363 +1,306 @@
 ---
-parallel_threshold: 3000
-timeout_minutes: 60
-zones:
-  system:
-    path: .claude
-    permission: none
-  state:
-    paths: [loa-grimoire, .beads]
-    permission: read-write
-  app:
-    paths: [src, lib, app]
-    permission: read
+name: reviewing-code
+description: Use this skill when reviewing pull requests, branch changes, or code diffs. Triggers on "review this PR", "review my changes", "code review", "review branch", or when user shares a GitHub PR URL.
 ---
 
-# Senior Tech Lead Reviewer
+# Code Review Skill
 
-<objective>
-Review sprint implementation for completeness, quality, security, and architecture alignment. Either approve (write "All good" + update sprint.md with checkmarks) OR provide detailed feedback at `loa-grimoire/a2a/sprint-N/engineer-feedback.md`.
-</objective>
+Review PR and branch changes with focus on quality, tests, complexity, and performance.
 
-<zone_constraints>
-## Zone Constraints
+## Review Philosophy
 
-This skill operates under **Managed Scaffolding**:
+This review focuses on substantive issues that matter:
+- **NOT linting**: Skip formatting, import order, naming conventions (linters handle these)
+- **Completeness**: Is the implementation complete? Any TODOs or partial implementations?
+- **Tests**: Are tests added? Are they meaningful and cover edge cases?
+- **Complexity**: Does this increase codebase complexity without justification?
+- **Performance**: Any regressions in hot paths or resource-intensive code?
+- **Duplication**: Is similar code already in the codebase?
+- **Side effects**: Any unintended consequences from these changes?
 
-| Zone | Permission | Notes |
-|------|------------|-------|
-| `.claude/` | NONE | System zone - never suggest edits |
-| `loa-grimoire/`, `.beads/` | Read/Write | State zone - project memory |
-| `src/`, `lib/`, `app/` | Read-only | App zone - requires user confirmation |
+## Multi-Model Review (Optional)
 
-**NEVER** suggest modifications to `.claude/`. Direct users to `.claude/overrides/` or `.loa.config.yaml`.
-</zone_constraints>
+This skill can leverage additional AI models for more comprehensive reviews. It automatically detects and uses available CLI tools, running them in parallel for speed.
 
-<integrity_precheck>
-## Integrity Pre-Check (MANDATORY)
+### Supported Tools
 
-Before ANY operation, verify System Zone integrity:
+| Tool | Command | Description |
+|------|---------|-------------|
+| Gemini | `gemini` | Uses gemini-2.5-pro for additional code analysis |
+| Codex | `codex review` | Uses OpenAI's Codex with dedicated review mode |
 
-1. Check config: `yq eval '.integrity_enforcement' .loa.config.yaml`
-2. If `strict` and drift detected -> **HALT** and report
-3. If `warn` -> Log warning and proceed with caution
-</integrity_precheck>
+### Step 0: Detect and Run External Reviews
 
-<factual_grounding>
-## Factual Grounding (MANDATORY)
-
-Before ANY synthesis, planning, or recommendation:
-
-1. **Extract quotes**: Pull word-for-word text from source files
-2. **Cite explicitly**: `"[exact quote]" (file.md:L45)`
-3. **Flag assumptions**: Prefix ungrounded claims with `[ASSUMPTION]`
-
-**Grounded Example:**
-```
-The SDD specifies "PostgreSQL 15 with pgvector extension" (sdd.md:L123)
-```
-
-**Ungrounded Example:**
-```
-[ASSUMPTION] The database likely needs connection pooling
-```
-</factual_grounding>
-
-<structured_memory_protocol>
-## Structured Memory Protocol
-
-### On Session Start
-1. Read `loa-grimoire/NOTES.md`
-2. Restore context from "Session Continuity" section
-3. Check for resolved blockers
-
-### During Execution
-1. Log decisions to "Decision Log"
-2. Add discovered issues to "Technical Debt"
-3. Update sub-goal status
-4. **Apply Tool Result Clearing** after each tool-heavy operation
-
-### Before Compaction / Session End
-1. Summarize session in "Session Continuity"
-2. Ensure all blockers documented
-3. Verify all raw tool outputs have been decayed
-</structured_memory_protocol>
-
-<tool_result_clearing>
-## Tool Result Clearing
-
-After tool-heavy operations (grep, cat, tree, API calls):
-1. **Synthesize**: Extract key info to NOTES.md or discovery/
-2. **Summarize**: Replace raw output with one-line summary
-3. **Clear**: Release raw data from active reasoning
-
-Example:
-```
-# Raw grep: 500 tokens -> After decay: 30 tokens
-"Found 47 AuthService refs across 12 files. Key locations in NOTES.md."
-```
-</tool_result_clearing>
-
-<trajectory_logging>
-## Trajectory Logging
-
-Log each significant step to `loa-grimoire/a2a/trajectory/{agent}-{date}.jsonl`:
-
-```json
-{"timestamp": "...", "agent": "...", "action": "...", "reasoning": "...", "grounding": {...}}
-```
-</trajectory_logging>
-
-<kernel_framework>
-## Task (N - Narrow Scope)
-Review sprint implementation for completeness, quality, security. Either approve (write "All good" + update sprint.md) OR provide detailed feedback (write to `loa-grimoire/a2a/sprint-N/engineer-feedback.md`).
-
-## Context (L - Logical Structure)
-- **Input**: `loa-grimoire/a2a/sprint-N/reviewer.md` (engineer's report), implementation code, test files
-- **Reference docs**: `loa-grimoire/prd.md`, `loa-grimoire/sdd.md`, `loa-grimoire/sprint.md` (acceptance criteria)
-- **Previous feedback**: `loa-grimoire/a2a/sprint-N/engineer-feedback.md` (YOUR previous feedback—verify addressed)
-- **Integration context**: `loa-grimoire/a2a/integration-context.md` (if exists) for review context sources, documentation requirements
-- **Current state**: Implementation awaiting quality gate approval
-- **Desired state**: Approved sprint OR specific feedback for engineer
-
-## Constraints (E - Explicit)
-- DO NOT approve without reading actual implementation code (not just the report)
-- DO NOT skip verification of previous feedback items (if engineer-feedback.md exists)
-- DO NOT approve if ANY critical issues exist (security, blocking bugs, incomplete acceptance criteria)
-- DO NOT give vague feedback—always include file paths, line numbers, specific actions
-- DO check that proper documentation was updated if integration context requires
-- DO verify context links are preserved (Discord threads, Linear issues) if required
-- DO read ALL context docs before reviewing
-
-## Verification (E - Easy to Verify)
-**Approval criteria** (ALL must be true):
-- All sprint tasks completed + all acceptance criteria met
-- Code quality is production-ready (readable, maintainable, follows conventions)
-- Tests are comprehensive and meaningful (happy paths, errors, edge cases)
-- No security issues (no hardcoded secrets, proper input validation, auth/authz correct)
-- No critical bugs or performance problems
-- Architecture aligns with SDD
-- ALL previous feedback addressed (if applicable)
-
-**If approved:** Write "All good" to `engineer-feedback.md` + update `sprint.md` with checkmarks
-**If not approved:** Write detailed feedback to `engineer-feedback.md` with file:line references
-
-## Reproducibility (R - Reproducible Results)
-- Include exact file paths and line numbers: NOT "fix auth bug" → "src/auth/middleware.ts:42 - missing null check"
-- Specify exact issue and exact fix: NOT "improve error handling" → "Add try-catch around L67-73, throw 400 with 'Invalid user ID'"
-- Reference specific security standards: NOT "insecure" → "SQL injection via string concatenation, see OWASP A03:2021"
-</kernel_framework>
-
-<uncertainty_protocol>
-- If implementation intent is unclear, read both code AND report for context
-- If acceptance criteria are ambiguous, reference PRD for original requirements
-- Say "Unable to determine [X] without [Y]" when lacking information
-- Document assumptions in feedback when making judgment calls
-- Flag areas needing product input: "This may need product clarification: [X]"
-</uncertainty_protocol>
-
-<grounding_requirements>
-Before reviewing:
-1. Read `loa-grimoire/a2a/integration-context.md` (if exists) for org context
-2. Read `loa-grimoire/prd.md` for business requirements
-3. Read `loa-grimoire/sdd.md` for architecture expectations
-4. Read `loa-grimoire/sprint.md` for acceptance criteria
-5. Read `loa-grimoire/a2a/sprint-N/reviewer.md` for implementation report
-6. Read `loa-grimoire/a2a/sprint-N/engineer-feedback.md` (if exists) for previous feedback
-7. Read actual implementation code—do not trust report alone
-</grounding_requirements>
-
-<citation_requirements>
-- Include file paths and line numbers for all issues
-- Reference OWASP/CWE for security issues
-- Quote acceptance criteria when checking completeness
-- Reference SDD sections for architecture concerns
-- Quote previous feedback when verifying it was addressed
-</citation_requirements>
-
-<workflow>
-## Phase -1: Context Assessment & Parallel Task Splitting (CRITICAL—DO THIS FIRST)
-
-Assess context size to determine if parallel splitting is needed:
+Before starting the main review, check for available tools and run them **synchronously** (background jobs don't work reliably in Claude's Bash tool due to PID issues with temp files):
 
 ```bash
-wc -l loa-grimoire/prd.md loa-grimoire/sdd.md loa-grimoire/sprint.md loa-grimoire/a2a/sprint-N/reviewer.md 2>/dev/null
+# Detect available tools
+command -v gemini >/dev/null 2>&1 && echo "Gemini available" || echo "Gemini not available"
+command -v codex >/dev/null 2>&1 && echo "Codex available" || echo "Codex not available"
 ```
 
-**Thresholds:**
-| Size | Lines | Strategy |
-|------|-------|----------|
-| SMALL | <3,000 | Sequential review |
-| MEDIUM | 3,000-6,000 | Consider task-level splitting if >3 tasks |
-| LARGE | >6,000 | MUST split into parallel sub-reviews |
+**IMPORTANT**: Run external reviews synchronously, not in the background. The `$$` variable doesn't work correctly across separate Bash tool invocations.
 
-**If MEDIUM/LARGE:** See `<parallel_execution>` section below.
+**For PR reviews:**
+```bash
+# Gemini review (run synchronously with timeout)
+gh pr diff PR_NUMBER | timeout 120 gemini -p "$(cat <<'PROMPT'
+Review this code diff for a PR. Focus on:
+- Bugs and logic errors
+- Missing error handling
+- Test coverage gaps
+- Performance issues
+- Security concerns
 
-**If SMALL:** Proceed to Phase 0.
+Format your response as markdown with these sections:
+## Critical Issues
+## Important Suggestions
+## Minor Notes
 
-## Phase 0: Check Integration Context (FIRST)
-
-Check if `loa-grimoire/a2a/integration-context.md` exists:
-
-**If EXISTS**, read for:
-- Review context sources (where to find original requirements)
-- Community intent (original feedback that sparked the feature)
-- Documentation requirements (what needs updating)
-- Available MCP tools for verification
-
-**If MISSING**, proceed with standard workflow.
-
-## Phase 1: Context Gathering
-
-Read ALL context documents in order:
-1. `loa-grimoire/a2a/integration-context.md` (if exists)
-2. `loa-grimoire/prd.md` - Business goals and user needs
-3. `loa-grimoire/sdd.md` - Architecture and patterns
-4. `loa-grimoire/sprint.md` - Tasks and acceptance criteria
-5. `loa-grimoire/a2a/sprint-N/reviewer.md` - Engineer's report
-6. `loa-grimoire/a2a/sprint-N/engineer-feedback.md` (CRITICAL if exists) - Your previous feedback
-
-## Phase 2: Code Review
-
-**Review actual implementation:**
-1. Read all modified files (don't just trust report)
-2. Validate against acceptance criteria
-3. Assess code quality (readability, maintainability, conventions)
-4. Review test coverage (read test files, verify assertions)
-5. Check architecture alignment with SDD
-6. Perform security audit (see `resources/REFERENCE.md` §Security)
-7. Check performance and resource management
-
-## Phase 3: Previous Feedback Verification
-
-**If `engineer-feedback.md` exists:**
-1. Parse every issue you raised previously
-2. Verify each item in the code (don't trust report)
-3. Mark as:
-   - Resolved (properly fixed)
-   - NOT ADDRESSED (blocking)
-   - PARTIALLY ADDRESSED (needs more work)
-
-## Phase 4: Decision Making
-
-**Outcome 1: Approve (All Good)**
-- All criteria met, production-ready
-- Actions:
-  1. Write "All good" to `engineer-feedback.md`
-  2. Update `sprint.md` with checkmarks on completed tasks
-  3. Inform user: "Sprint approved"
-
-**Outcome 2: Request Changes**
-- Any critical issues found
-- Actions:
-  1. Generate detailed feedback (see template)
-  2. Write to `engineer-feedback.md`
-  3. DO NOT update `sprint.md`
-  4. Inform user: "Changes required"
-
-**Outcome 3: Partial Approval**
-- Use judgment: Can this ship as-is?
-- If NO → Request changes
-- If YES → Approve with improvement notes
-
-## Phase 5: Feedback Generation
-
-Use template from `resources/templates/review-feedback.md`.
-
-Key sections:
-- Overall Assessment
-- Critical Issues (must fix)
-- Non-Critical Improvements (recommended)
-- Previous Feedback Status
-- Incomplete Tasks
-- Next Steps
-</workflow>
-
-<parallel_execution>
-## When to Split
-
-- SMALL (<3,000 lines): Sequential review
-- MEDIUM (3,000-6,000 lines) with >3 tasks: Consider splitting
-- LARGE (>6,000 lines): MUST split
-
-## Splitting Strategy: By Sprint Task
-
-For each task with code changes, spawn parallel Explore agent:
-
-```
-Task(
-  subagent_type="Explore",
-  prompt="Review Sprint {X} Task {Y.Z} ({Task Name}):
-
-  **Acceptance Criteria:**
-  {Copy from sprint.md}
-
-  **Files to Review:**
-  {List from reviewer.md}
-
-  **Check for:**
-  1. All acceptance criteria met
-  2. Code quality and best practices
-  3. Security issues
-  4. Test coverage
-  5. Architecture alignment
-
-  **Return:** Verdict (PASS/FAIL) with specific issues (file:line) or confirmation"
-)
+Be specific with file paths and line numbers where possible.
+PROMPT
+)"
 ```
 
-## Consolidation
+```bash
+# Codex review (if available, run separately)
+codex review --base BASE_BRANCH
+```
 
-After parallel reviews complete:
-1. Collect verdicts from each sub-review
-2. If ANY task FAILS → Overall = CHANGES REQUIRED
-3. If ALL tasks PASS → Overall = APPROVED
-4. Combine issues into single feedback document
-</parallel_execution>
+**For uncommitted changes:**
+```bash
+git diff | timeout 120 gemini -p "Review this code diff. Focus on bugs, missing error handling, test coverage gaps, performance issues, and security concerns. Format as markdown with Critical Issues, Important Suggestions, and Minor Notes sections."
+```
 
-<output_format>
-See `resources/templates/review-feedback.md` for full structure.
+**For branch changes:**
+```bash
+git diff origin/master...HEAD | timeout 120 gemini -p "Review this code diff. Focus on bugs, missing error handling, test coverage gaps, performance issues, and security concerns. Format as markdown with Critical Issues, Important Suggestions, and Minor Notes sections."
+```
 
-**If Approved:**
+**Alternative: Use temp files with fixed names (if you want to capture output):**
+```bash
+# Use fixed temp file names instead of $$
+git diff origin/master...HEAD | gemini -p "Review this diff..." > /tmp/claude-gemini-review.md 2>&1
+
+# Later, read the output
+cat /tmp/claude-gemini-review.md
+
+# Clean up when done
+rm -f /tmp/claude-gemini-review.md /tmp/claude-codex-review.md
+```
+
+### Fallback Behavior
+
+| Available Tools | Behavior |
+|----------------|----------|
+| Gemini + Codex | Full multi-model synthesis |
+| Gemini only | Gemini + Claude synthesis |
+| Codex only | Codex + Claude synthesis |
+| Neither | Standard Claude-only review |
+
+## Workflow
+
+### Step 1: Identify Changes to Review
+
+**If given a PR URL:**
+```bash
+# Extract PR info
+gh pr view PR_NUMBER --json title,body,additions,deletions,files
+
+# Get the diff
+gh pr diff PR_NUMBER
+```
+
+**If reviewing current branch:**
+```bash
+# Find the base branch
+git log --oneline -1 origin/master
+
+# Show what will be in the PR
+git diff origin/master...HEAD --stat
+git diff origin/master...HEAD
+```
+
+**If reviewing uncommitted changes:**
+```bash
+git diff --stat
+git diff
+```
+
+### Step 2: Gather Context
+
+Before reviewing, understand the intent:
+1. Read the PR description or commit messages
+2. Check for linked issues or documentation
+3. Look for project-specific guidelines:
+   ```bash
+   # Check for project CLAUDE.md or AGENTS.md
+   cat CLAUDE.md 2>/dev/null || cat AGENTS.md 2>/dev/null || echo "No project guidelines found"
+   ```
+
+### Step 3: Review the Changes
+
+For each file changed, evaluate these key areas:
+
+1. **Implementation Completeness**
+   - Are all code paths handled?
+   - Any placeholder or stub code left behind?
+   - Do error messages make sense?
+
+2. **Test Quality**
+   - Are tests added for new functionality?
+   - Do tests verify behavior, not just coverage?
+   - Are edge cases tested?
+   - Would these tests catch a regression?
+
+3. **Complexity Impact**
+   - Does this add new abstractions? Are they justified?
+   - Is there a simpler way to achieve the same goal?
+   - Does it follow existing patterns in the codebase?
+
+4. **Performance Considerations**
+   - Any new loops over large datasets?
+   - Unnecessary memory allocations in hot paths?
+   - I/O operations that could be batched?
+
+5. **Duplication Check**
+   - Search for similar existing code:
+     ```bash
+     # Look for similar function names or patterns
+     rg "similar_function_name" --type py
+     ```
+
+### Step 3.5: Synthesize Multi-Model Reviews (If Available)
+
+If external reviews were collected in Step 0, synthesize them with your findings:
+
+1. **If you saved to temp files, read them:**
+   ```bash
+   # Check for Gemini review
+   [ -f /tmp/claude-gemini-review.md ] && cat /tmp/claude-gemini-review.md
+
+   # Check for Codex review
+   [ -f /tmp/claude-codex-review.md ] && cat /tmp/claude-codex-review.md
+   ```
+
+2. **Cross-reference findings:**
+   - Issues found by **multiple models** → Higher confidence, prioritize in "Must Address"
+   - **Unique findings** from each model → Evaluate independently, include if valid
+   - **Contradicting assessments** → Note the disagreement and provide your judgment
+
+3. **Deduplicate and merge:**
+   - Combine similar issues into single entries
+   - Use the clearest explanation from any source
+   - Add model agreement indicator where multiple models agree
+
+4. **Clean up temp files:**
+   ```bash
+   rm -f /tmp/claude-gemini-review.md /tmp/claude-codex-review.md
+   ```
+
+### Step 4: Provide Feedback
+
+Structure your review as:
+
 ```markdown
-All good
+## Summary
+[1-2 sentence overview of the changes and overall assessment]
 
-Sprint {N} has been reviewed and approved. All acceptance criteria met.
+## Models Used
+[Only include if multi-model review was performed]
+- Gemini (gemini-2.5-pro): ✓ / ✗
+- Codex: ✓ / ✗
+
+## Model Comparison
+[Only include if 2+ models were used. Brief summary of how the reviews differed.]
+
+| Aspect | Gemini | Codex | Claude |
+|--------|--------|-------|--------|
+| Focus | [e.g., Security-heavy] | [e.g., Performance-focused] | [e.g., Logic/completeness] |
+| Severity | [e.g., Flagged 3 critical] | [e.g., Flagged 1 critical] | [e.g., Flagged 2 critical] |
+
+**Key differences:**
+- [Where models disagreed or had unique insights]
+- [What one model caught that others missed]
+
+**Consensus areas:**
+- [Issues all models agreed on]
+
+## Key Findings
+
+### Must Address
+1. **[Issue title]** (`file:line`) [Gemini + Codex + Claude]
+   - Detail about the issue
+   - Code example if helpful
+   - **Risk**: Why this matters
+   - **Consensus**: All models flagged this issue
+
+2. **[Next issue title]** (`file:line`) [Claude]
+   - Details...
+   - **Risk**: Why this matters
+
+### Should Consider
+3. **[Issue title]** (`file:line`) [Gemini]
+   - Details...
+
+### Minor Notes
+- [Observation]
+- [Another observation]
+
+## Tests
+[Assessment of test coverage and quality]
+
+## Complexity Assessment
+[Does this increase or decrease overall codebase complexity?]
 ```
 
-**If Changes Required:**
-Use detailed feedback template with:
-- Critical Issues (file:line, issue, fix)
-- Non-Critical Improvements
-- Previous Feedback Status
-- Next Steps
-</output_format>
+**IMPORTANT formatting rules:**
+- Use a **single incrementing number sequence** across all sections (Must Address items 1-N, Should Consider continues from N+1, etc.)
+- Use **bullet points (-)** for sub-details under each numbered finding, never restart numbering
+- Each numbered finding should have a bold title followed by file:line reference in backticks
+- Include a **Risk:** bullet point explaining why the issue matters
+- **Model attribution**: Add `[Model names]` after the file reference to show which models identified the issue
+  - `[Gemini + Codex + Claude]` - All three models agree (highest confidence)
+  - `[Gemini + Claude]` or `[Codex + Claude]` - Two models agree
+  - `[Claude]`, `[Gemini]`, or `[Codex]` - Single model finding
 
-<success_criteria>
-- **Specific**: Every issue has file:line reference
-- **Measurable**: Clear pass/fail verdict
-- **Achievable**: Feedback is actionable
-- **Relevant**: Issues trace to acceptance criteria or quality standards
-- **Time-bound**: Review completes within session
-</success_criteria>
+## Review Scope Guidelines
 
-<checklists>
-See `resources/REFERENCE.md` for complete checklists:
-- Versioning (SemVer Compliance) - 4 items
-- Completeness - 4 items
-- Functionality - 4 items
-- Code Quality - 5 items
-- Testing - 7 items
-- Security - 7 items
-- Performance - 5 items
-- Architecture - 5 items
-- Blockchain/Crypto - 7 items (if applicable)
+**In scope:**
+- Logic errors and bugs
+- Missing error handling for realistic failure modes
+- Test coverage and test quality
+- Performance regressions
+- Unnecessary complexity
+- Code duplication
+- Incomplete implementations
+- Violations of project guidelines (from CLAUDE.md/AGENTS.md)
 
-**Red Flags (immediate feedback required):**
-- Private keys in code
-- SQL via string concatenation
-- User input not validated
-- Empty catch blocks
-- No tests for critical functionality
-- N+1 query problems
-</checklists>
+**Out of scope (linter territory):**
+- Code formatting
+- Import ordering
+- Variable naming style
+- Type annotation style
+- Docstring format
+
+## Example Review
+
+**User**: "Review my changes on this branch"
+
+**Claude**:
+1. Detects available tools (Gemini, Codex)
+2. Runs `git diff origin/master...HEAD --stat` to see scope
+3. Kicks off Gemini and Codex reviews in parallel (if available)
+4. Runs `git diff origin/master...HEAD` to get full diff
+5. Checks for project guidelines
+6. Reviews each changed file
+7. Reads external review outputs and synthesizes findings
+8. Cross-references issues across models, prioritizing consensus
+9. Provides structured feedback with model attribution
+
+## Notes
+
+- Always read the full diff before providing feedback
+- Check commit messages for context on why changes were made
+- When in doubt about intent, ask before assuming something is wrong
+- Prioritize actionable feedback over stylistic preferences

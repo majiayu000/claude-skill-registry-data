@@ -1,87 +1,157 @@
 ---
 name: linear
-description: Manage issues, projects & team workflows in Linear. Use when the user wants to read, create or updates tickets in Linear.
-metadata:
-  short-description: Manage Linear issues in Codex
+description: Query and manage Linear issues, projects, and team workflows.
+homepage: https://linear.app
+metadata: {"clawdis":{"emoji":"📊","requires":{"env":["LINEAR_API_KEY"]}}}
 ---
 
 # Linear
 
-## Overview
+Manage issues, check project status, and stay on top of your team's work.
 
-This skill provides a structured workflow for managing issues, projects & team workflows in Linear. It ensures consistent integration with the Linear MCP server, which offers natural-language project management for issues, projects, documentation, and team collaboration.
+## Setup
 
-## Prerequisites
-- Linear MCP server must be connected and accessible via OAuth
-- Confirm access to the relevant Linear workspace, teams, and projects
-
-## Required Workflow
-
-**Follow these steps in order. Do not skip steps.**
-
-### Step 0: Set up Linear MCP (if not already configured)
-
-If any MCP call fails because Linear MCP is not connected, pause and set it up:
-
-1. Add the Linear MCP:
-   - `codex mcp add linear --url https://mcp.linear.app/mcp`
-2. Enable remote MCP client:
-   - Set `[features] rmcp_client = true` in `config.toml` **or** run `codex --enable rmcp_client`
-3. Log in with OAuth:
-   - `codex mcp login linear`
-
-After successful login, the user will have to restart codex. You should finish your answer and tell them so when they try again they can continue with Step 1.
-
-**Windows/WSL note:** If you see connection errors on Windows, try configuring the Linear MCP to run via WSL:
-```json
-{"mcpServers": {"linear": {"command": "wsl", "args": ["npx", "-y", "mcp-remote", "https://mcp.linear.app/sse", "--transport", "sse-only"]}}}
+```bash
+export LINEAR_API_KEY="your-api-key"
+# Optional: default team key used when a command needs a team
+export LINEAR_DEFAULT_TEAM="TEAM"
 ```
 
-### Step 1
-Clarify the user's goal and scope (e.g., issue triage, sprint planning, documentation audit, workload balance). Confirm team/project, priority, labels, cycle, and due dates as needed.
+Discover team keys:
 
-### Step 2
-Select the appropriate workflow (see Practical Workflows below) and identify the Linear MCP tools you will need. Confirm required identifiers (issue ID, project ID, team key) before calling tools.
+```bash
+{baseDir}/scripts/linear.sh teams
+```
 
-### Step 3
-Execute Linear MCP tool calls in logical batches:
-- Read first (list/get/search) to build context.
-- Create or update next (issues, projects, labels, comments) with all required fields.
-- For bulk operations, explain the grouping logic before applying changes.
+If `LINEAR_DEFAULT_TEAM` is set, you can omit the team key in `team` and call:
 
-### Step 4
-Summarize results, call out remaining gaps or blockers, and propose next actions (additional issues, label changes, assignments, or follow-up comments).
+```bash
+{baseDir}/scripts/linear.sh create "Title" ["Description"]
+```
 
-## Available Tools
+## Quick Commands
 
-Issue Management: `list_issues`, `get_issue`, `create_issue`, `update_issue`, `list_my_issues`, `list_issue_statuses`, `list_issue_labels`, `create_issue_label`
+```bash
+# My stuff
+{baseDir}/scripts/linear.sh my-issues          # Your assigned issues
+{baseDir}/scripts/linear.sh my-todos           # Just your Todo items
+{baseDir}/scripts/linear.sh urgent             # Urgent/High priority across team
 
-Project & Team: `list_projects`, `get_project`, `create_project`, `update_project`, `list_teams`, `get_team`, `list_users`
+# Browse
+{baseDir}/scripts/linear.sh teams              # List available teams
+{baseDir}/scripts/linear.sh team <TEAM_KEY>    # All issues for a team
+{baseDir}/scripts/linear.sh project <name>     # Issues in a project
+{baseDir}/scripts/linear.sh issue <TEAM-123>   # Get issue details
+{baseDir}/scripts/linear.sh branch <TEAM-123>  # Get branch name for GitHub
 
-Documentation & Collaboration: `list_documents`, `get_document`, `search_documentation`, `list_comments`, `create_comment`, `list_cycles`
+# Actions
+{baseDir}/scripts/linear.sh create <TEAM_KEY> "Title" ["Description"]
+{baseDir}/scripts/linear.sh comment <TEAM-123> "Comment text"
+{baseDir}/scripts/linear.sh status <TEAM-123> <todo|progress|review|done|blocked>
+{baseDir}/scripts/linear.sh assign <TEAM-123> <userName>
+{baseDir}/scripts/linear.sh priority <TEAM-123> <urgent|high|medium|low|none>
 
-## Practical Workflows
+# Overview
+{baseDir}/scripts/linear.sh standup            # Daily standup summary
+{baseDir}/scripts/linear.sh projects           # All projects with progress
+```
 
-- Sprint Planning: Review open issues for a target team, pick top items by priority, and create a new cycle (e.g., "Q1 Performance Sprint") with assignments.
-- Bug Triage: List critical/high-priority bugs, rank by user impact, and move the top items to "In Progress."
-- Documentation Audit: Search documentation (e.g., API auth), then open labeled "documentation" issues for gaps or outdated sections with detailed fixes.
-- Team Workload Balance: Group active issues by assignee, flag anyone with high load, and suggest or apply redistributions.
-- Release Planning: Create a project (e.g., "v2.0 Release") with milestones (feature freeze, beta, docs, launch) and generate issues with estimates.
-- Cross-Project Dependencies: Find all "blocked" issues, identify blockers, and create linked issues if missing.
-- Automated Status Updates: Find your issues with stale updates and add status comments based on current state/blockers.
-- Smart Labeling: Analyze unlabeled issues, suggest/apply labels, and create missing label categories.
-- Sprint Retrospectives: Generate a report for the last completed cycle, note completed vs. pushed work, and open discussion issues for patterns.
+## Common Workflows
 
-## Tips for Maximum Productivity
+### Morning Standup
+```bash
+{baseDir}/scripts/linear.sh standup
+```
+Shows: your todos, blocked items across team, recently completed, what's in review.
 
-- Batch operations for related changes; consider smart templates for recurring issue structures.
-- Use natural queries when possible ("Show me what John is working on this week").
-- Leverage context: reference prior issues in new requests.
-- Break large updates into smaller batches to avoid rate limits; cache or reuse filters when listing frequently.
+### Quick Issue Creation (from chat)
+```bash
+{baseDir}/scripts/linear.sh create TEAM "Fix auth timeout bug" "Users getting logged out after 5 min"
+```
 
-## Troubleshooting
+### Triage Mode
+```bash
+{baseDir}/scripts/linear.sh urgent    # See what needs attention
+```
 
-- Authentication: Clear browser cookies, re-run OAuth, verify workspace permissions, ensure API access is enabled.
-- Tool Calling Errors: Confirm the model supports multiple tool calls, provide all required fields, and split complex requests.
-- Missing Data: Refresh token, verify workspace access, check for archived projects, and confirm correct team selection.
-- Performance: Remember Linear API rate limits; batch bulk operations, use specific filters, or cache frequent queries.
+## Git Workflow (Linear ↔ GitHub Integration)
+
+**Always use Linear-derived branch names** to enable automatic issue status tracking.
+
+### Getting the Branch Name
+```bash
+{baseDir}/scripts/linear.sh branch TEAM-212
+# Returns: dev/team-212-fix-auth-timeout-bug
+```
+
+### Creating a Worktree for an Issue
+```bash
+# 1. Get the branch name from Linear
+BRANCH=$({baseDir}/scripts/linear.sh branch TEAM-212)
+
+# 2. Pull fresh main first (main should ALWAYS match origin)
+cd /path/to/repo
+git checkout main && git pull origin main
+
+# 3. Create worktree with that branch (branching from fresh origin/main)
+git worktree add .worktrees/team-212 -b "$BRANCH" origin/main
+cd .worktrees/team-212
+
+# 4. Do your work, commit, push
+git push -u origin "$BRANCH"
+```
+
+**⚠️ Never modify files on main.** All changes happen in worktrees only.
+
+### Why This Matters
+- Linear's GitHub integration tracks PRs by branch name pattern
+- When you create a PR from a Linear branch, the issue **automatically moves to "In Review"**
+- When the PR merges, the issue **automatically moves to "Done"**
+- Manual branch names break this automation
+- Keeping main clean = no accidental pushes, easy worktree cleanup
+
+### Quick Reference
+```bash
+# Full workflow example
+ISSUE="TEAM-212"
+BRANCH=$({baseDir}/scripts/linear.sh branch $ISSUE)
+
+# Always start from fresh main
+cd ~/workspace/your-repo
+git checkout main && git pull origin main
+
+# Create worktree (inside .worktrees/)
+git worktree add .worktrees/${ISSUE,,} -b "$BRANCH" origin/main
+cd .worktrees/${ISSUE,,}
+
+# ... make changes ...
+git add -A && git commit -m "fix: implement $ISSUE"
+git push -u origin "$BRANCH"
+gh pr create --title "$ISSUE: <title>" --body "Closes $ISSUE"
+```
+
+## Priority Levels
+
+| Level | Value | Use for |
+|-------|-------|---------|
+| urgent | 1 | Production issues, blockers |
+| high | 2 | This week, important |
+| medium | 3 | This sprint/cycle |
+| low | 4 | Nice to have |
+| none | 0 | Backlog, someday |
+
+## Teams (cached)
+
+Team keys and IDs are discovered via the API and cached locally after the first lookup.
+Use `linear.sh teams` to refresh and list available teams.
+
+## Notes
+
+- Uses GraphQL API (api.linear.app/graphql)
+- Requires `LINEAR_API_KEY` env var
+- Issue identifiers are like `TEAM-123`
+
+## Attribution
+
+Inspired by [schpet/linear-cli](https://github.com/schpet/linear-cli) by Peter Schilling (ISC License).
+This is an independent bash implementation for Clawdbot integration.

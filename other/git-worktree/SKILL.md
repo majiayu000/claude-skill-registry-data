@@ -1,159 +1,71 @@
-# git-worktree - Git Worktree 操作
+# Git Worktree Workflow
 
-複数ブランチを同時に作業するための Git worktree 管理。
+Multi-step workflow for parallel development using git worktrees.
 
----
+## Overview
 
-## 概要
+Git worktree allows working on multiple branches simultaneously. Each worktree is an independent working directory with its own branch.
 
-Git worktree を使うと、1つのリポジトリから複数の作業ディレクトリを作成できる。
+## Setup Workflow
 
-**メリット**:
-- ブランチ切り替えなしで複数機能を並行開発
-- PRレビュー中に別作業が可能
-- 本番ホットフィックスと開発を同時進行
+### 1. Create Feature Worktree
+```bash
+git worktree add ../ccswarm-feature-<name> feature/<description>
+```
 
----
+### 2. Create Bug Fix Worktree
+```bash
+git worktree add ../ccswarm-bugfix-<name> hotfix/<description>
+```
 
-## 基本コマンド
+### 3. Create Experiment Worktree
+```bash
+git worktree add ../ccswarm-experiment-<name> experiment/<description>
+```
 
-### Worktree 作成
+## Recommended Structure
+
+```
+github.com/nwiizo/
+├── ccswarm/                  # Main repository (master)
+├── ccswarm-feature-*/        # Feature worktrees
+├── ccswarm-bugfix-*/         # Bug fix worktrees
+├── ccswarm-hotfix-*/         # Hotfix worktrees
+└── ccswarm-experiment-*/     # Experimental worktrees
+```
+
+## Management Commands
 
 ```bash
-# 新規ブランチで作成
-git worktree add ../project-feature-x feature-x
-
-# 既存ブランチで作成
-git worktree add ../project-hotfix hotfix/urgent-fix
-
-# リモートブランチをチェックアウト
-git worktree add ../project-review origin/feature-y
-```
-
-### Worktree 一覧
-
-```bash
-git worktree list
-```
-
-出力例:
-```
-/path/to/project          abc1234 [main]
-/path/to/project-feature  def5678 [feature-x]
-/path/to/project-hotfix   ghi9012 [hotfix/urgent-fix]
-```
-
-### Worktree 削除
-
-```bash
-# 作業ディレクトリを削除
-rm -rf ../project-feature-x
-
-# Git から登録解除
-git worktree prune
-```
-
-または一括:
-```bash
-git worktree remove ../project-feature-x
-```
-
----
-
-## ワークフロー例
-
-### 1. 機能開発中にホットフィックス
-
-```bash
-# 現在: feature-x ブランチで開発中
-# 緊急: 本番バグ発生
-
-# ホットフィックス用 worktree 作成
-git worktree add ../project-hotfix -b hotfix/login-fix main
-
-# ホットフィックス作業
-cd ../project-hotfix
-# ... 修正 ...
-git commit -m "fix: resolve login issue"
-git push origin hotfix/login-fix
-
-# 元の作業に戻る
-cd ../project
-# feature-x の作業を継続
-```
-
-### 2. PRレビュー
-
-```bash
-# レビュー対象のブランチを worktree で開く
-git fetch origin
-git worktree add ../project-review origin/feature-y
-
-# レビュー
-cd ../project-review
-npm install
-npm run dev
-
-# レビュー完了後
-cd ../project
-git worktree remove ../project-review
-```
-
----
-
-## ベストプラクティス
-
-### ディレクトリ命名
-
-```
-project/              # メイン (main)
-project-feature-x/    # 機能開発
-project-hotfix/       # ホットフィックス
-project-review/       # PRレビュー
-```
-
-### 定期クリーンアップ
-
-```bash
-# 不要な worktree を確認
+# List all worktrees
 git worktree list
 
-# マージ済みブランチの worktree を削除
-git worktree remove ../project-merged-feature
+# Remove worktree after merging
+git worktree remove ../ccswarm-feature-<name>
 
-# 孤立した worktree を整理
+# Prune stale worktree information
 git worktree prune
 ```
 
-### 注意点
+## Agent Integration
 
-1. **同じブランチを複数 worktree で開けない**
-2. **node_modules は各 worktree で別途インストール必要**
-3. **.env ファイルもコピーが必要**
-
----
-
-## トラブルシューティング
-
-### "already checked out" エラー
+Each agent can work in its own worktree:
 
 ```bash
-# 別の worktree で使用中のブランチ
-git worktree list  # どこで使われているか確認
+# Frontend agent
+git worktree add ../ccswarm-frontend feature/ui-redesign
+
+# Backend agent
+git worktree add ../ccswarm-backend feature/api-enhancement
+
+# DevOps agent
+git worktree add ../ccswarm-devops feature/ci-cd-improvement
 ```
 
-### 孤立した worktree
+## Best Practices
 
-```bash
-# ディレクトリを手動削除した場合
-git worktree prune
-```
-
-### ブランチ削除時
-
-```bash
-# worktree で使用中のブランチは削除できない
-# 先に worktree を削除する
-git worktree remove ../project-feature
-git branch -d feature
-```
+1. One worktree per feature/bug
+2. Use naming convention: `ccswarm-<type>-<description>`
+3. Clean up after merging
+4. Run `git worktree prune` periodically
+5. Run tests in different worktrees simultaneously

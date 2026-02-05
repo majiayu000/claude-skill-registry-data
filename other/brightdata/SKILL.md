@@ -1,20 +1,49 @@
 ---
-name: brightdata
-description: |
-  Progressive four-tier URL content scraping with automatic fallback strategy.
-
-  USE WHEN user says "scrape this URL", "fetch this page", "get content from",
-  "can't access this site", "use Bright Data", "pull content from URL",
-  or needs to retrieve web content that may have bot detection or access restrictions.
+name: BrightData
+description: Progressive URL scraping. USE WHEN Bright Data, scrape URL, web scraping tiers. SkillSearch('brightdata') for docs.
+context: fork
 ---
 
-## Workflow Routing (SYSTEM PROMPT)
+## Customization
+
+**Before executing, check for user customizations at:**
+`~/.claude/skills/CORE/USER/SKILLCUSTOMIZATIONS/BrightData/`
+
+If this directory exists, load and apply any PREFERENCES.md, configurations, or resources found there. These override default behavior. If the directory does not exist, proceed with skill defaults.
+
+
+## 🚨 MANDATORY: Voice Notification (REQUIRED BEFORE ANY ACTION)
+
+**You MUST send this notification BEFORE doing anything else when this skill is invoked.**
+
+1. **Send voice notification**:
+   ```bash
+   curl -s -X POST http://localhost:8888/notify \
+     -H "Content-Type: application/json" \
+     -d '{"message": "Running the WORKFLOWNAME workflow in the BrightData skill to ACTION"}' \
+     > /dev/null 2>&1 &
+   ```
+
+2. **Output text notification**:
+   ```
+   Running the **WorkflowName** workflow in the **BrightData** skill to ACTION...
+   ```
+
+**This is not optional. Execute this curl command immediately upon skill invocation.**
+
+## Workflow Routing
+
+**When executing a workflow, output this notification directly:**
+
+```
+Running the **WorkflowName** workflow in the **Brightdata** skill to ACTION...
+```
 
 **CRITICAL: This workflow implements progressive escalation for URL content retrieval.**
 
 **When user requests scraping/fetching URL content:**
 Examples: "scrape this URL", "fetch this page", "get content from [URL]", "pull content from this site", "retrieve [URL]", "can't access this site", "this site is blocking me", "use Bright Data to fetch"
-→ **READ:** ${PAI_DIR}/skills/brightdata/workflows/four-tier-scrape.md
+→ **READ:** ~/.claude/skills/brightdata/Workflows/Four-tier-scrape.md
 → **EXECUTE:** Four-tier progressive scraping workflow (WebFetch → Curl → Browser Automation → Bright Data MCP)
 
 ---
@@ -149,7 +178,7 @@ Skill Response:
 ---
 
 **Related Documentation:**
-- `${PAI_DIR}/skills/CORE/SKILL-STRUCTURE-AND-ROUTING.md` - Canonical structure guide
-- `${PAI_DIR}/skills/CORE/CONSTITUTION.md` - Overall Kai philosophy
+- `~/.claude/skills/CORE/SkillSystem.md` - Canonical structure guide
+- `~/.claude/skills/CORE/CONSTITUTION.md` - Overall PAI philosophy
 
 **Last Updated:** 2025-11-23

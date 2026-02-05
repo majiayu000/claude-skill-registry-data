@@ -31,12 +31,14 @@ python scripts/compliance_checker.py [options]
 Automated tool for security scanner tasks.
 
 **Features:**
+
 - Automated scaffolding
 - Best practices built-in
 - Configurable templates
 - Quality checks
 
 **Usage:**
+
 ```bash
 python scripts/security_scanner.py <project-path> [options]
 ```
@@ -46,12 +48,14 @@ python scripts/security_scanner.py <project-path> [options]
 Comprehensive analysis and optimization tool.
 
 **Features:**
+
 - Deep analysis
 - Performance metrics
 - Recommendations
 - Automated fixes
 
 **Usage:**
+
 ```bash
 python scripts/vulnerability_assessor.py <target-path> [--verbose]
 ```
@@ -61,12 +65,14 @@ python scripts/vulnerability_assessor.py <target-path> [--verbose]
 Advanced tooling for specialized tasks.
 
 **Features:**
+
 - Expert-level automation
 - Custom configurations
 - Integration ready
 - Production-grade output
 
 **Usage:**
+
 ```bash
 python scripts/compliance_checker.py [arguments] [options]
 ```
@@ -139,6 +145,7 @@ python scripts/vulnerability_assessor.py .
 ### 3. Implement Best Practices
 
 Follow the patterns and practices documented in:
+
 - `references/security_standards.md`
 - `references/vulnerability_management_guide.md`
 - `references/compliance_requirements.md`
@@ -146,24 +153,28 @@ Follow the patterns and practices documented in:
 ## Best Practices Summary
 
 ### Code Quality
+
 - Follow established patterns
 - Write comprehensive tests
 - Document decisions
 - Review regularly
 
 ### Performance
+
 - Measure before optimizing
 - Use appropriate caching
 - Optimize critical paths
 - Monitor in production
 
 ### Security
+
 - Validate all inputs
 - Use parameterized queries
 - Implement proper authentication
 - Keep dependencies updated
 
 ### Maintainability
+
 - Write clear code
 - Use consistent naming
 - Add helpful comments

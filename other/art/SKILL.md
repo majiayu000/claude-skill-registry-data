@@ -1,123 +1,200 @@
 ---
-name: art
-description: |
-  Complete visual content system for PAI.
-  Tron-meets-Excalidraw aesthetic - dark backgrounds, neon accents, hand-drawn sketch style.
-
-# Skill Triggers
-triggers:
-  - USE WHEN user wants to create visual content, illustrations, or diagrams
-  - USE WHEN user mentions art, header images, visualizations, or any visual request
-  - USE WHEN user references mermaid, flowchart, technical diagram, or infographic
-
-# Workflow Routing
-workflows:
-  - USE WHEN user wants blog header or editorial illustration: workflows/workflow.md
-  - USE WHEN user wants visualization or is unsure which format: workflows/visualize.md
-  - USE WHEN user wants mermaid flowchart or sequence diagram: workflows/mermaid.md
-  - USE WHEN user wants technical or architecture diagram: workflows/technical-diagrams.md
-  - USE WHEN user wants taxonomy or classification grid: workflows/taxonomies.md
-  - USE WHEN user wants timeline or chronological progression: workflows/timelines.md
-  - USE WHEN user wants framework or 2x2 matrix: workflows/frameworks.md
-  - USE WHEN user wants comparison or X vs Y: workflows/comparisons.md
-  - USE WHEN user wants annotated screenshot: workflows/annotated-screenshots.md
-  - USE WHEN user wants recipe card or step-by-step: workflows/recipe-cards.md
-  - USE WHEN user wants aphorism or quote card: workflows/aphorisms.md
-  - USE WHEN user wants conceptual map or territory: workflows/maps.md
-  - USE WHEN user wants stat card or big number visual: workflows/stats.md
-  - USE WHEN user wants comic or sequential panels: workflows/comics.md
+name: Art
+description: Complete visual content system. USE WHEN user wants to create visual content, illustrations, diagrams, OR mentions art, header images, visualizations, mermaid, flowchart, technical diagram, infographic, PAI icon, pack icon, or PAI pack icon.
 ---
 
 # Art Skill
 
-Complete visual content system using the **PAI Visual Aesthetic**.
+Complete visual content system for creating illustrations, diagrams, and visual content.
+
+## Customization
+
+**Before executing, check for user customizations at:**
+`~/.claude/skills/CORE/USER/SKILLCUSTOMIZATIONS/Art/`
+
+If this directory exists, load and apply:
+- `PREFERENCES.md` - Aesthetic preferences, default model, output location
+- `CharacterSpecs.md` - Character design specifications
+- `SceneConstruction.md` - Scene composition guidelines
+
+These override default behavior. If the directory does not exist, proceed with skill defaults.
+
+
+## 🚨 MANDATORY: Voice Notification (REQUIRED BEFORE ANY ACTION)
+
+**You MUST send this notification BEFORE doing anything else when this skill is invoked.**
+
+1. **Send voice notification**:
+   ```bash
+   curl -s -X POST http://localhost:8888/notify \
+     -H "Content-Type: application/json" \
+     -d '{"message": "Running the WORKFLOWNAME workflow in the Art skill to ACTION"}' \
+     > /dev/null 2>&1 &
+   ```
+
+2. **Output text notification**:
+   ```
+   Running the **WorkflowName** workflow in the **Art** skill to ACTION...
+   ```
+
+**This is not optional. Execute this curl command immediately upon skill invocation.**
+
+## 🚨🚨🚨 MANDATORY: Output to Downloads First 🚨🚨🚨
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚠️  ALL GENERATED IMAGES GO TO ~/Downloads/ FIRST                   ⚠️
+⚠️  NEVER output directly to project directories                    ⚠️
+⚠️  User MUST preview in Finder/Preview before use                  ⚠️
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+**This applies to ALL workflows in this skill.**
+
+
+## Workflow Routing
+
+Route to the appropriate workflow based on the request.
+
+  - UL wallpaper with logo integration → `Workflows/ULWallpaper.md`
+  - Blog header or editorial illustration → `Workflows/Essay.md`
+  - D3.js interactive chart or dashboard → `Workflows/D3Dashboards.md`
+  - Visualization or unsure which format → `Workflows/Visualize.md`
+  - Mermaid flowchart or sequence diagram → `Workflows/Mermaid.md`
+  - Technical or architecture diagram → `Workflows/TechnicalDiagrams.md`
+  - Taxonomy or classification grid → `Workflows/Taxonomies.md`
+  - Timeline or chronological progression → `Workflows/Timelines.md`
+  - Framework or 2x2 matrix → `Workflows/Frameworks.md`
+  - Comparison or X vs Y → `Workflows/Comparisons.md`
+  - Annotated screenshot → `Workflows/AnnotatedScreenshots.md`
+  - Recipe card or step-by-step → `Workflows/RecipeCards.md`
+  - Aphorism or quote card → `Workflows/Aphorisms.md`
+  - Conceptual map or territory → `Workflows/Maps.md`
+  - Stat card or big number visual → `Workflows/Stats.md`
+  - Comic or sequential panels → `Workflows/Comics.md`
+  - PAI pack icon → `Workflows/CreatePAIPackIcon.md`
 
 ---
 
 ## Core Aesthetic
 
-**Tron-meets-Excalidraw** - Digital warmth combining:
-- Hand-drawn Excalidraw-style sketch lines (NOT clean vectors)
-- Dark slate backgrounds for modern contrast
-- Neon orange (warmth) + cyan (tech) accents
-- Subtle glows on key elements
+**Default:** Production-quality concept art style appropriate for editorial and technical content.
 
-**Full aesthetic documentation:** `${PAI_DIR}/skills/CORE/aesthetic.md`
+**User customization** defines specific aesthetic preferences including:
+- Visual style and influences
+- Line treatment and rendering approach
+- Color palette and wash technique
+- Character design specifications
+- Scene composition rules
 
-**This is the SINGLE SOURCE OF TRUTH for all visual styling.**
+**Load from:** `~/.claude/skills/CORE/USER/SKILLCUSTOMIZATIONS/Art/PREFERENCES.md`
 
 ---
 
-## Workflow Routing
+## Reference Images
 
-| Content Type | Workflow |
-|--------------|----------|
-| Blog headers / Editorial | `workflows/workflow.md` |
-| Adaptive orchestrator | `workflows/visualize.md` |
-| Flowcharts / Sequences | `workflows/mermaid.md` |
-| Architecture diagrams | `workflows/technical-diagrams.md` |
-| Classification grids | `workflows/taxonomies.md` |
-| Chronological | `workflows/timelines.md` |
-| 2x2 matrices | `workflows/frameworks.md` |
-| X vs Y | `workflows/comparisons.md` |
-| Screenshot markup | `workflows/annotated-screenshots.md` |
-| Step-by-step | `workflows/recipe-cards.md` |
-| Quote cards | `workflows/aphorisms.md` |
-| Idea territories | `workflows/maps.md` |
-| Big numbers | `workflows/stats.md` |
-| Sequential panels | `workflows/comics.md` |
+**User customization** may include reference images for consistent style.
+
+Check `~/.claude/skills/CORE/USER/SKILLCUSTOMIZATIONS/Art/PREFERENCES.md` for:
+- Reference image locations
+- Style examples by use case
+- Character and scene reference guidance
+
+**Usage:** Before generating images, load relevant user-provided references to match their preferred style.
 
 ---
 
 ## Image Generation
 
-**Default model:** nano-banana-pro (Gemini 3 Pro)
+**Default model:** Check user customization at `SKILLCUSTOMIZATIONS/Art/PREFERENCES.md`
+**Fallback:** nano-banana-pro (Gemini 3 Pro)
+
+### 🚨 CRITICAL: Always Output to Downloads First
+
+**ALL generated images MUST go to `~/Downloads/` first for preview and selection.**
+
+Never output directly to a project's `public/images/` directory. User needs to review images in Preview before they're used.
+
+**Workflow:**
+1. Generate to `~/Downloads/[descriptive-name].png`
+2. User reviews in Preview
+3. If approved, THEN copy to final destination (e.g., `cms/public/images/`)
+4. Create WebP and thumbnail versions at final destination
 
 ```bash
-bun run ${PAI_DIR}/skills/art/tools/generate-ulart-image.ts \
+# CORRECT - Output to Downloads for preview
+bun run ~/.claude/skills/Art/Tools/Generate.ts \
   --model nano-banana-pro \
   --prompt "[PROMPT]" \
   --size 2K \
   --aspect-ratio 1:1 \
-  --output /path/to/output.png
+  --thumbnail \
+  --output ~/Downloads/blog-header-concept.png
+
+# After approval, copy to final location
+cp ~/Downloads/blog-header-concept.png ~/Projects/Website/cms/public/images/
+cp ~/Downloads/blog-header-concept-thumb.png ~/Projects/Website/cms/public/images/
 ```
 
-### Alternative Models
+### Multiple Reference Images (Character/Style Consistency)
 
-| Model | When to Use |
-|-------|-------------|
-| **flux** | Maximum quality |
-| **gpt-image-1** | Different interpretation |
+For improved character or style consistency, use multiple `--reference-image` flags:
+
+```bash
+# Multiple reference images for better likeness
+bun run ~/.claude/skills/Art/Tools/Generate.ts \
+  --model nano-banana-pro \
+  --prompt "Person from references at a party..." \
+  --reference-image face1.jpg \
+  --reference-image face2.jpg \
+  --reference-image face3.jpg \
+  --size 2K \
+  --aspect-ratio 16:9 \
+  --output ~/Downloads/character-scene.png
+```
+
+**API Limits (Gemini):**
+- Up to 5 human reference images
+- Up to 6 object reference images
+- Maximum 14 total reference images per request
 
 **API keys in:** `${PAI_DIR}/.env`
-- `REPLICATE_API_TOKEN` - Flux and Nano Banana
-- `OPENAI_API_KEY` - GPT-image-1
-- `GOOGLE_API_KEY` - Nano Banana Pro
-- `REMOVEBG_API_KEY` - Background removal
 
----
+## Examples
 
-## Quick Decision Tree
-
+**Example 1: Blog header image**
 ```
-What does user need?
-
-├─ Unsure which approach? → VISUALIZE (analyzes & orchestrates)
-├─ Flowchart/sequence/state diagram? → MERMAID
-├─ Abstract metaphor for article? → Editorial (workflow.md)
-├─ System/architecture with labels? → Technical Diagram
-├─ Categories in grid? → Taxonomy
-├─ Change over time? → Timeline
-├─ 2x2 matrix or mental model? → Framework
-├─ Side-by-side contrast? → Comparison
-├─ Markup existing screenshot? → Annotated Screenshot
-├─ Step-by-step process? → Recipe Card
-├─ Quote as social visual? → Aphorism
-├─ Idea territories as map? → Conceptual Map
-├─ Single striking number? → Stat Card
-└─ Multi-panel story? → Comic
+User: "create a header for my AI agents post"
+→ Invokes ESSAY workflow
+→ Generates charcoal sketch prompt
+→ Creates image with architectural aesthetic
+→ Saves to ~/Downloads/ for preview
+→ After approval, copies to public/images/
 ```
 
----
+**Example 2: Technical architecture diagram**
+```
+User: "make a diagram showing the SPQA pattern"
+→ Invokes TECHNICALDIAGRAMS workflow
+→ Creates structured architecture visual
+→ Outputs PNG with consistent styling
+```
 
-**For complete visual styling rules, ALWAYS read:** `${PAI_DIR}/skills/CORE/aesthetic.md`
+**Example 3: Comparison visualization**
+```
+User: "visualize humans vs AI decision-making"
+→ Invokes COMPARISONS workflow
+→ Creates side-by-side visual
+→ Charcoal sketch with labeled elements
+```
+
+**Example 4: PAI pack icon**
+```
+User: "create icon for the skill system pack"
+→ Invokes CREATEPAIPACKICON workflow
+→ Reads workflow from Workflows/CreatePAIPackIcon.md
+→ Generates 1K image with --remove-bg for transparency
+→ Resizes to 256x256 RGBA PNG
+→ Outputs to ~/Downloads/ for preview
+→ After approval, copies to ${PROJECTS_DIR}/PAI/Packs/icons/
+```

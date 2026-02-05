@@ -1,243 +1,491 @@
 ---
 name: database-schema-design
-description: Database schema design patterns for SQL and NoSQL databases
+description: Database schema design for PostgreSQL/MySQL with normalization, relationships, constraints. Use for new databases, schema reviews, migrations, or encountering missing PKs/FKs, wrong data types, premature denormalization, EAV anti-pattern.
+keywords: database schema, schema design, database normalization, 1nf 2nf 3nf,
+  primary key, foreign key, database relationships, one to many, many to many,
+  data types postgresql, constraints check, audit columns, soft delete,
+  database best practices, schema patterns, database anti-patterns,
+  missing primary key, no foreign key, varchar max, denormalization,
+  entity relationship, composite key, uuid vs bigserial, timestamptz
 license: MIT
-compatibility: postgresql 14+, drizzle-orm 0.28+, prisma 5+
-allowed-tools: read_file write_file apply_patch run_command
 ---
 
-# Database Schema Design
+# database-schema-design
 
-## Core Principles
+Comprehensive database schema design patterns for PostgreSQL and MySQL with normalization, relationships, constraints, and error prevention.
 
-1. **Normalize first, denormalize for performance**
-2. **Use appropriate data types** - smallest type that fits
-3. **Index strategically** - based on query patterns
-4. **Plan for growth** - consider partitioning early
+---
 
-## Naming Conventions
+## Quick Start (10 Minutes)
 
-```sql
--- Tables: plural, snake_case
-users, order_items, user_addresses
+**Step 1**: Choose your schema pattern from templates:
+```bash
+# Basic schema with users, products, orders
+cat templates/basic-schema.sql
 
--- Columns: snake_case
-first_name, created_at, is_active
+# Relationship patterns (1:1, 1:M, M:M)
+cat templates/relationships.sql
 
--- Primary keys: id
-id SERIAL PRIMARY KEY
+# Constraint examples
+cat templates/constraints.sql
 
--- Foreign keys: singular_table_id
-user_id REFERENCES users(id)
-
--- Indexes: idx_table_column(s)
-CREATE INDEX idx_users_email ON users(email);
-
--- Constraints: chk_/uq_/fk_ prefix
-CONSTRAINT uq_users_email UNIQUE (email)
-CONSTRAINT chk_orders_amount CHECK (amount > 0)
+# Audit patterns
+cat templates/audit-columns.sql
 ```
 
-## Common Patterns
+**Step 2**: Apply normalization rules (at minimum 3NF):
+- **1NF**: No repeating groups, atomic values
+- **2NF**: No partial dependencies on composite keys
+- **3NF**: No transitive dependencies
+- **Load** `references/normalization-guide.md` for detailed examples
 
-### Users Table
+**Step 3**: Add essential elements to every table:
+```sql
+CREATE TABLE your_table (
+  -- Primary key (required)
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+
+  -- Business columns with proper types
+  name VARCHAR(200) NOT NULL,  -- Use appropriate lengths
+
+  -- Audit columns (always include)
+  created_at TIMESTAMPTZ DEFAULT NOW() NOT NULL,
+  updated_at TIMESTAMPTZ DEFAULT NOW() NOT NULL
+);
+```
+
+---
+
+## Critical Rules
+
+### ✓ Always Do
+
+| Rule | Reason |
+|------|--------|
+| **Every table has PRIMARY KEY** | Ensures row uniqueness, enables relationships |
+| **Foreign keys defined explicitly** | Enforces referential integrity, prevents orphans |
+| **Index all foreign keys** | Prevents slow JOINs, critical for performance |
+| **NOT NULL on required fields** | Data integrity, prevents NULL pollution |
+| **Audit columns (created_at, updated_at)** | Track changes, debugging, compliance |
+| **Appropriate data types** | Storage efficiency, validation, indexing |
+| **Check constraints for enums** | Enforces valid values at database level |
+| **ON DELETE/UPDATE rules specified** | Prevents accidental data loss or orphans |
+
+### ✗ Never Do
+
+| Anti-Pattern | Why It's Bad |
+|--------------|--------------|
+| **VARCHAR(MAX) everywhere** | Wastes space, slows indexes, no validation |
+| **Dates as VARCHAR** | No date math, no validation, sorting broken |
+| **Missing foreign keys** | No referential integrity, orphaned records |
+| **Premature denormalization** | Hard to maintain, data anomalies |
+| **EAV (Entity-Attribute-Value)** | Query complexity, no type safety, slow |
+| **Polymorphic associations** | No foreign key integrity, complex queries |
+| **Circular dependencies** | Impossible to populate, breaks CASCADE |
+| **No indexes on foreign keys** | Extremely slow JOINs, performance killer |
+
+---
+
+## Top 7 Critical Errors
+
+### Error 1: Missing Primary Key
+**Symptom**: Cannot uniquely identify rows, duplicate data
+**Fix**:
+```sql
+-- ❌ Bad
+CREATE TABLE users (
+  email VARCHAR(255),
+  name VARCHAR(100)
+);
+
+-- ✅ Good
+CREATE TABLE users (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  email VARCHAR(255) UNIQUE NOT NULL,
+  name VARCHAR(100) NOT NULL
+);
+```
+
+### Error 2: No Foreign Key Constraints
+**Symptom**: Orphaned records, data inconsistency
+**Fix**:
+```sql
+-- ❌ Bad
+CREATE TABLE orders (
+  id UUID PRIMARY KEY,
+  user_id UUID  -- No constraint!
+);
+
+-- ✅ Good
+CREATE TABLE orders (
+  id UUID PRIMARY KEY,
+  user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE
+);
+
+-- Index the foreign key
+CREATE INDEX idx_orders_user_id ON orders(user_id);
+```
+
+### Error 3: VARCHAR(MAX) Everywhere
+**Symptom**: Wasted space, slow indexes, no validation
+**Fix**:
+```sql
+-- ❌ Bad
+CREATE TABLE products (
+  name VARCHAR(MAX),
+  sku VARCHAR(MAX),
+  status VARCHAR(MAX)
+);
+
+-- ✅ Good
+CREATE TABLE products (
+  name VARCHAR(200) NOT NULL,
+  sku VARCHAR(50) UNIQUE NOT NULL,
+  status VARCHAR(20) NOT NULL
+    CHECK (status IN ('draft', 'active', 'archived'))
+);
+```
+
+### Error 4: Wrong Data Types (Dates as Strings)
+**Symptom**: No date validation, broken sorting, no date math
+**Fix**:
+```sql
+-- ❌ Bad
+CREATE TABLE events (
+  event_date VARCHAR(50)  -- '2025-12-15' or 'Dec 15, 2025'?
+);
+
+-- ✅ Good
+CREATE TABLE events (
+  event_date DATE NOT NULL,  -- Validated, sortable
+  event_time TIMESTAMPTZ     -- With timezone
+);
+```
+
+### Error 5: No Indexes on Foreign Keys
+**Symptom**: Extremely slow JOINs, poor query performance
+**Fix**:
+```sql
+-- Always index foreign keys
+CREATE TABLE order_items (
+  order_id UUID NOT NULL REFERENCES orders(id),
+  product_id UUID NOT NULL REFERENCES products(id)
+);
+
+-- ✅ Required indexes
+CREATE INDEX idx_order_items_order_id ON order_items(order_id);
+CREATE INDEX idx_order_items_product_id ON order_items(product_id);
+```
+
+### Error 6: Missing Audit Columns
+**Symptom**: Cannot track when records created/modified
+**Fix**:
+```sql
+-- ❌ Bad
+CREATE TABLE products (
+  id UUID PRIMARY KEY,
+  name VARCHAR(200)
+);
+
+-- ✅ Good
+CREATE TABLE products (
+  id UUID PRIMARY KEY,
+  name VARCHAR(200) NOT NULL,
+  created_at TIMESTAMPTZ DEFAULT NOW() NOT NULL,
+  updated_at TIMESTAMPTZ DEFAULT NOW() NOT NULL
+);
+
+-- Auto-update trigger (PostgreSQL)
+CREATE TRIGGER products_updated_at
+BEFORE UPDATE ON products
+FOR EACH ROW
+EXECUTE FUNCTION update_updated_at_column();
+```
+
+### Error 7: EAV Anti-Pattern
+**Symptom**: Complex queries, no type safety, slow performance
+**Fix**:
+```sql
+-- ❌ Bad (EAV)
+CREATE TABLE product_attributes (
+  product_id UUID,
+  attribute_name VARCHAR(100),  -- 'color', 'size', 'price'
+  attribute_value TEXT           -- Everything as text!
+);
+
+-- ✅ Good (Structured + JSONB)
+CREATE TABLE products (
+  id UUID PRIMARY KEY,
+  name VARCHAR(200) NOT NULL,
+  price DECIMAL(10,2) NOT NULL,  -- Required fields as columns
+  color VARCHAR(50),              -- Common attributes as columns
+  size VARCHAR(20),
+  attributes JSONB                -- Optional/dynamic attributes
+);
+
+-- Index JSONB
+CREATE INDEX idx_products_attributes ON products USING GIN(attributes);
+```
+
+**Load** `references/error-catalog.md` for all 12 errors with detailed fixes.
+
+---
+
+## Common Schema Patterns
+
+| Pattern | Use Case | Template |
+|---------|----------|----------|
+| **Basic CRUD** | Standard users/products/orders | `templates/basic-schema.sql` |
+| **One-to-One** | User → Profile | `templates/relationships.sql` (lines 7-17) |
+| **One-to-Many** | User → Orders | `templates/relationships.sql` (lines 23-34) |
+| **Many-to-Many** | Students ↔ Courses | `templates/relationships.sql` (lines 40-60) |
+| **Hierarchical** | Categories tree, org chart | `templates/relationships.sql` (lines 66-83) |
+| **Soft Delete** | Mark deleted, keep history | `templates/audit-columns.sql` (lines 55-80) |
+| **Versioning** | Track changes over time | `templates/audit-columns.sql` (lines 86-108) |
+| **Multi-Tenant** | Isolated data per organization | `references/schema-design-patterns.md` (lines 228-258) |
+
+---
+
+## Normalization Quick Reference
+
+| Form | Rule | Example |
+|------|------|---------|
+| **1NF** | Atomic values, no repeating groups | `phone1, phone2` → `phones` table |
+| **2NF** | 1NF + no partial dependencies | Composite key dependency → separate table |
+| **3NF** | 2NF + no transitive dependencies | `user.city` → `city.id` reference |
+| **BCNF** | 3NF + every determinant is candidate key | Rare edge cases |
+| **4NF** | BCNF + no multi-valued dependencies | Complex many-to-many |
+| **5NF** | 4NF + no join dependencies | Very rare, academic |
+
+**Recommendation**: Design to 3NF, denormalize only with measured performance data.
+
+**Load** `references/normalization-guide.md` for detailed examples with before/after.
+
+---
+
+## Configuration Summary
+
+### PostgreSQL Recommended Types
+
+```sql
+-- Primary Keys
+id UUID PRIMARY KEY DEFAULT gen_random_uuid()
+-- OR for performance-critical:
+id BIGSERIAL PRIMARY KEY
+
+-- Text
+name VARCHAR(200) NOT NULL
+description TEXT
+code CHAR(10)  -- Fixed-length codes only
+
+-- Numbers
+price DECIMAL(10,2) NOT NULL  -- Money: NEVER use FLOAT
+quantity INT NOT NULL
+rating DECIMAL(3,2)  -- 0.00 to 9.99
+
+-- Dates/Times
+created_at TIMESTAMPTZ DEFAULT NOW() NOT NULL  -- With timezone
+event_date DATE
+duration INTERVAL
+
+-- Boolean
+is_active BOOLEAN DEFAULT true NOT NULL
+
+-- JSON
+attributes JSONB  -- Binary, faster, indexable
+
+-- Enum Alternative (preferred over ENUM type)
+status VARCHAR(20) NOT NULL
+  CHECK (status IN ('draft', 'active', 'archived'))
+```
+
+### MySQL Differences
+
+```sql
+-- MySQL doesn't have:
+TIMESTAMPTZ  -- Use TIMESTAMP (stored as UTC)
+gen_random_uuid()  -- Use UUID() function
+JSONB  -- Use JSON (same performance in 8.0+)
+
+-- MySQL equivalent:
+id CHAR(36) PRIMARY KEY DEFAULT (UUID())
+-- OR:
+id BIGINT AUTO_INCREMENT PRIMARY KEY
+
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+attributes JSON
+```
+
+**Load** `references/data-types-guide.md` for comprehensive type selection guide.
+
+---
+
+## When to Load References
+
+### Schema Design Process
+**Load** `references/schema-design-patterns.md` when:
+- Starting a new database design
+- Need pattern examples (audit columns, soft deletes, versioning)
+- Implementing multi-tenancy
+- Choosing between UUID vs BIGSERIAL
+- Following naming conventions
+
+### Normalization
+**Load** `references/normalization-guide.md` when:
+- Schema has data duplication
+- Unsure what normal form you're in
+- Need to normalize existing schema
+- Planning database structure
+
+### Relationships
+**Load** `references/relationship-patterns.md` when:
+- Defining table relationships
+- Implementing junction tables
+- Creating hierarchical structures
+- Setting up cascade rules
+
+### Data Types
+**Load** `references/data-types-guide.md` when:
+- Choosing column types
+- Migrating between PostgreSQL/MySQL
+- Optimizing storage
+- Implementing JSON fields
+
+### Constraints
+**Load** `references/constraints-catalog.md` when:
+- Adding validation rules
+- Implementing CHECK constraints
+- Setting up foreign key cascades
+- Creating unique constraints
+
+### Error Prevention
+**Load** `references/error-catalog.md` when:
+- Schema review needed
+- Troubleshooting schema issues
+- All 12 documented errors with fixes
+
+---
+
+## Complete Setup Checklist
+
+**Before Creating Tables**:
+- [ ] Normalized to at least 3NF
+- [ ] All relationships identified
+- [ ] Data types chosen appropriately
+- [ ] Cascade rules defined
+
+**Every Table Must Have**:
+- [ ] Primary key defined
+- [ ] Audit columns (created_at, updated_at)
+- [ ] NOT NULL on required fields
+- [ ] Appropriate VARCHAR lengths (not MAX)
+- [ ] CHECK constraints for enums/ranges
+
+**Foreign Keys**:
+- [ ] All foreign keys defined with REFERENCES
+- [ ] ON DELETE/UPDATE actions specified
+- [ ] All foreign keys indexed
+
+**Indexes**:
+- [ ] Foreign keys indexed
+- [ ] Frequently queried columns indexed
+- [ ] Composite indexes for multi-column queries
+
+**Validation**:
+- [ ] No circular dependencies
+- [ ] No EAV patterns
+- [ ] No polymorphic associations
+- [ ] Proper data types (no dates as strings)
+
+---
+
+## Production Example
+
+**Before** (Multiple issues):
+```sql
+CREATE TABLE users (
+  email VARCHAR(MAX),           -- Issue: No primary key, VARCHAR(MAX)
+  password VARCHAR(MAX),
+  created VARCHAR(50)           -- Issue: Date as string
+);
+
+CREATE TABLE orders (
+  id UUID PRIMARY KEY,
+  user_email VARCHAR(MAX),      -- Issue: No foreign key
+  total VARCHAR(20),            -- Issue: Money as string
+  status VARCHAR(MAX)           -- Issue: No validation
+);
+```
+
+**After** (Production-ready):
 ```sql
 CREATE TABLE users (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  email VARCHAR(255) NOT NULL UNIQUE,
+  email VARCHAR(255) UNIQUE NOT NULL,
   password_hash VARCHAR(255) NOT NULL,
-  name VARCHAR(100) NOT NULL,
-  role VARCHAR(20) DEFAULT 'user' CHECK (role IN ('user', 'admin', 'moderator')),
-  is_active BOOLEAN DEFAULT true,
-  email_verified_at TIMESTAMPTZ,
-  created_at TIMESTAMPTZ DEFAULT NOW(),
-  updated_at TIMESTAMPTZ DEFAULT NOW()
+  created_at TIMESTAMPTZ DEFAULT NOW() NOT NULL,
+  updated_at TIMESTAMPTZ DEFAULT NOW() NOT NULL
 );
 
-CREATE INDEX idx_users_email ON users(email);
-CREATE INDEX idx_users_role ON users(role) WHERE is_active = true;
-```
-
-### One-to-Many Relationship
-```sql
-CREATE TABLE posts (
+CREATE TABLE orders (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-  title VARCHAR(255) NOT NULL,
-  content TEXT,
-  status VARCHAR(20) DEFAULT 'draft',
-  published_at TIMESTAMPTZ,
-  created_at TIMESTAMPTZ DEFAULT NOW(),
-  updated_at TIMESTAMPTZ DEFAULT NOW()
+  total DECIMAL(10,2) NOT NULL CHECK (total >= 0),
+  status VARCHAR(20) NOT NULL DEFAULT 'pending'
+    CHECK (status IN ('pending', 'processing', 'shipped', 'delivered', 'canceled')),
+  created_at TIMESTAMPTZ DEFAULT NOW() NOT NULL,
+  updated_at TIMESTAMPTZ DEFAULT NOW() NOT NULL
 );
 
-CREATE INDEX idx_posts_user_id ON posts(user_id);
-CREATE INDEX idx_posts_status_published ON posts(status, published_at DESC)
-  WHERE status = 'published';
+CREATE INDEX idx_orders_user_id ON orders(user_id);
+CREATE INDEX idx_orders_status ON orders(status);
 ```
 
-### Many-to-Many Relationship
-```sql
-CREATE TABLE tags (
-  id SERIAL PRIMARY KEY,
-  name VARCHAR(50) NOT NULL UNIQUE,
-  slug VARCHAR(50) NOT NULL UNIQUE
-);
+**Result**: ✅ All constraints enforced, proper types, indexed, auditable
 
-CREATE TABLE post_tags (
-  post_id UUID REFERENCES posts(id) ON DELETE CASCADE,
-  tag_id INTEGER REFERENCES tags(id) ON DELETE CASCADE,
-  PRIMARY KEY (post_id, tag_id)
-);
+---
 
-CREATE INDEX idx_post_tags_tag_id ON post_tags(tag_id);
-```
+## Known Issues Prevention
 
-### Polymorphic Associations
-```sql
--- Using separate tables (preferred)
-CREATE TABLE post_comments (
-  id UUID PRIMARY KEY,
-  post_id UUID REFERENCES posts(id),
-  content TEXT NOT NULL,
-  user_id UUID REFERENCES users(id)
-);
+All 12 documented errors prevented:
+1. ✅ Missing primary key → UUID/BIGSERIAL required
+2. ✅ No foreign key constraints → REFERENCES required
+3. ✅ VARCHAR(MAX) everywhere → Appropriate lengths
+4. ✅ Denormalization without justification → 3NF minimum
+5. ✅ Missing NOT NULL constraints → Required fields marked
+6. ✅ No indexes on foreign keys → All FKs indexed
+7. ✅ Wrong data types → Proper type selection
+8. ✅ Missing CHECK constraints → Validation rules
+9. ✅ No audit columns → created_at/updated_at required
+10. ✅ Circular dependencies → Dependency analysis
+11. ✅ Missing ON DELETE/UPDATE cascades → Cascade rules
+12. ✅ EAV anti-pattern → Structured schema + JSONB
 
-CREATE TABLE image_comments (
-  id UUID PRIMARY KEY,
-  image_id UUID REFERENCES images(id),
-  content TEXT NOT NULL,
-  user_id UUID REFERENCES users(id)
-);
+**See**: `references/error-catalog.md` for detailed fixes
 
--- Alternative: Single table with type column
-CREATE TABLE comments (
-  id UUID PRIMARY KEY,
-  commentable_type VARCHAR(50) NOT NULL,
-  commentable_id UUID NOT NULL,
-  content TEXT NOT NULL,
-  user_id UUID REFERENCES users(id),
-  CONSTRAINT uq_comments_target UNIQUE (commentable_type, commentable_id, id)
-);
-```
+---
 
-## Drizzle ORM Schema
+## Resources
 
-```typescript
-import { pgTable, uuid, varchar, text, timestamp, boolean, index } from 'drizzle-orm/pg-core';
-import { relations } from 'drizzle-orm';
+**Templates**:
+- `templates/basic-schema.sql` - Users, products, orders starter
+- `templates/relationships.sql` - All relationship types
+- `templates/constraints.sql` - Constraint examples
+- `templates/audit-columns.sql` - Audit patterns + triggers
 
-export const users = pgTable('users', {
-  id: uuid('id').primaryKey().defaultRandom(),
-  email: varchar('email', { length: 255 }).notNull().unique(),
-  name: varchar('name', { length: 100 }).notNull(),
-  passwordHash: varchar('password_hash', { length: 255 }).notNull(),
-  isActive: boolean('is_active').default(true),
-  createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
-  updatedAt: timestamp('updated_at', { withTimezone: true }).defaultNow(),
-}, (table) => ({
-  emailIdx: index('idx_users_email').on(table.email),
-}));
+**References**:
+- `references/normalization-guide.md` - 1NF through 5NF detailed
+- `references/relationship-patterns.md` - Relationship types
+- `references/data-types-guide.md` - PostgreSQL vs MySQL types
+- `references/constraints-catalog.md` - All constraints
+- `references/schema-design-patterns.md` - Best practices
+- `references/error-catalog.md` - All 12 errors documented
 
-export const posts = pgTable('posts', {
-  id: uuid('id').primaryKey().defaultRandom(),
-  userId: uuid('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
-  title: varchar('title', { length: 255 }).notNull(),
-  content: text('content'),
-  status: varchar('status', { length: 20 }).default('draft'),
-  publishedAt: timestamp('published_at', { withTimezone: true }),
-  createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
-});
+**Official Documentation**:
+- PostgreSQL Data Types: https://www.postgresql.org/docs/current/datatype.html
+- PostgreSQL Constraints: https://www.postgresql.org/docs/current/ddl-constraints.html
+- MySQL Data Types: https://dev.mysql.com/doc/refman/8.0/en/data-types.html
 
-export const usersRelations = relations(users, ({ many }) => ({
-  posts: many(posts),
-}));
+---
 
-export const postsRelations = relations(posts, ({ one }) => ({
-  author: one(users, {
-    fields: [posts.userId],
-    references: [users.id],
-  }),
-}));
-```
-
-## Indexing Strategies
-
-```sql
--- Single column index
-CREATE INDEX idx_users_email ON users(email);
-
--- Composite index (order matters!)
-CREATE INDEX idx_posts_user_status ON posts(user_id, status);
-
--- Partial index (smaller, faster)
-CREATE INDEX idx_posts_published ON posts(published_at DESC)
-  WHERE status = 'published';
-
--- Expression index
-CREATE INDEX idx_users_email_lower ON users(LOWER(email));
-
--- JSONB index
-CREATE INDEX idx_users_metadata ON users USING GIN(metadata);
-```
-
-## Soft Deletes
-
-```sql
-CREATE TABLE posts (
-  id UUID PRIMARY KEY,
-  -- other columns...
-  deleted_at TIMESTAMPTZ,
-  created_at TIMESTAMPTZ DEFAULT NOW()
-);
-
--- Query active records
-SELECT * FROM posts WHERE deleted_at IS NULL;
-
--- Partial index for performance
-CREATE INDEX idx_posts_active ON posts(created_at DESC)
-  WHERE deleted_at IS NULL;
-```
-
-## Audit Trail
-
-```sql
-CREATE TABLE audit_logs (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  table_name VARCHAR(100) NOT NULL,
-  record_id UUID NOT NULL,
-  action VARCHAR(20) NOT NULL, -- INSERT, UPDATE, DELETE
-  old_data JSONB,
-  new_data JSONB,
-  user_id UUID REFERENCES users(id),
-  created_at TIMESTAMPTZ DEFAULT NOW()
-);
-
--- Trigger function
-CREATE OR REPLACE FUNCTION audit_trigger_func()
-RETURNS TRIGGER AS $$
-BEGIN
-  INSERT INTO audit_logs (table_name, record_id, action, old_data, new_data, user_id)
-  VALUES (
-    TG_TABLE_NAME,
-    COALESCE(NEW.id, OLD.id),
-    TG_OP,
-    CASE WHEN TG_OP != 'INSERT' THEN row_to_json(OLD) END,
-    CASE WHEN TG_OP != 'DELETE' THEN row_to_json(NEW) END,
-    current_setting('app.current_user_id', true)::uuid
-  );
-  RETURN COALESCE(NEW, OLD);
-END;
-$$ LANGUAGE plpgsql;
-```
-
-## Best Practices
-
-1. **Always use UUIDs** for public-facing IDs
-2. **Add timestamps** (created_at, updated_at) to all tables
-3. **Use foreign key constraints** for referential integrity
-4. **Create indexes based on queries** not assumptions
-5. **Use ENUM types sparingly** - prefer check constraints
-6. **Plan for soft deletes** if business requires audit trail
-7. **Use transactions** for multi-table operations
-8. **Partition large tables** by time or category
+**Production-tested** | **12 errors prevented** | **MIT License**

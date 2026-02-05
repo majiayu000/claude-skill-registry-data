@@ -1,143 +1,241 @@
 ---
 name: prd
-description: 'Generate high-quality Product Requirements Documents (PRDs) for software systems and AI-powered features. Includes executive summaries, user stories, technical specifications, and risk analysis.'
-license: MIT
+description: "Generate a Product Requirements Document (PRD) for a new feature. Use when planning a feature, starting a new project, or when asked to create a PRD. Triggers on: create a prd, write prd for, plan this feature, requirements for, spec out."
 ---
 
-# Product Requirements Document (PRD)
+# PRD Generator
 
-## Overview
-
-Design comprehensive, production-grade Product Requirements Documents (PRDs) that bridge the gap between business vision and technical execution. This skill works for modern software systems, ensuring that requirements are clearly defined.
-
-## When to Use
-
-Use this skill when:
-
-- Starting a new product or feature development cycle
-- Translating a vague idea into a concrete technical specification
-- Defining requirements for AI-powered features
-- Stakeholders need a unified "source of truth" for project scope
-- User asks to "write a PRD", "document requirements", or "plan a feature"
+Create detailed Product Requirements Documents that are clear, actionable, and suitable for implementation.
 
 ---
 
-## Operational Workflow
+## The Job
 
-### Phase 1: Discovery (The Interview)
+1. Receive a feature description from the user
+2. Ask 3-5 essential clarifying questions (with lettered options)
+3. Generate a structured PRD based on answers
+4. Save to `/tasks/prd-[feature-name].md`
 
-Before writing a single line of the PRD, you **MUST** interrogate the user to fill knowledge gaps. Do not assume context.
-
-**Ask about:**
-
-- **The Core Problem**: Why are we building this now?
-- **Success Metrics**: How do we know it worked?
-- **Constraints**: Budget, tech stack, or deadline?
-
-### Phase 2: Analysis & Scoping
-
-Synthesize the user's input. Identify dependencies and hidden complexities.
-
-- Map out the **User Flow**.
-- Define **Non-Goals** to protect the timeline.
-
-### Phase 3: Technical Drafting
-
-Generate the document using the **Strict PRD Schema** below.
+**Important:** Do NOT start implementing. Just create the PRD.
 
 ---
 
-## PRD Quality Standards
+## Step 1: Clarifying Questions
 
-### Requirements Quality
+Ask only critical questions where the initial prompt is ambiguous. Focus on:
 
-Use concrete, measurable criteria. Avoid "fast", "easy", or "intuitive".
+- **Problem/Goal:** What problem does this solve?
+- **Core Functionality:** What are the key actions?
+- **Scope/Boundaries:** What should it NOT do?
+- **Success Criteria:** How do we know it's done?
 
-```diff
-# Vague (BAD)
-- The search should be fast and return relevant results.
-- The UI must look modern and be easy to use.
+### Format Questions Like This:
 
-# Concrete (GOOD)
-+ The search must return results within 200ms for a 10k record dataset.
-+ The search algorithm must achieve >= 85% Precision@10 in benchmark evals.
-+ The UI must follow the 'Vercel/Next.js' design system and achieve 100% Lighthouse Accessibility score.
+```
+1. What is the primary goal of this feature?
+   A. Improve user onboarding experience
+   B. Increase user retention
+   C. Reduce support burden
+   D. Other: [please specify]
+
+2. Who is the target user?
+   A. New users only
+   B. Existing users only
+   C. All users
+   D. Admin users only
+
+3. What is the scope?
+   A. Minimal viable version
+   B. Full-featured implementation
+   C. Just the backend/API
+   D. Just the UI
+```
+
+This lets users respond with "1A, 2C, 3B" for quick iteration.
+
+---
+
+## Step 2: PRD Structure
+
+Generate the PRD with these sections:
+
+### 1. Introduction/Overview
+Brief description of the feature and the problem it solves.
+
+### 2. Goals
+Specific, measurable objectives (bullet list).
+
+### 3. User Stories
+Each story needs:
+- **Title:** Short descriptive name
+- **Description:** "As a [user], I want [feature] so that [benefit]"
+- **Acceptance Criteria:** Verifiable checklist of what "done" means
+
+Each story should be small enough to implement in one focused session.
+
+**Format:**
+```markdown
+### US-001: [Title]
+**Description:** As a [user], I want [feature] so that [benefit].
+
+**Acceptance Criteria:**
+- [ ] Specific verifiable criterion
+- [ ] Another criterion
+- [ ] npm run typecheck passes
+- [ ] **[UI stories only]** Verify in browser using dev-browser skill
+```
+
+**Important:** 
+- Acceptance criteria must be verifiable, not vague. "Works correctly" is bad. "Button shows confirmation dialog before deleting" is good.
+- **For any story with UI changes:** Always include "Verify in browser using dev-browser skill" as acceptance criteria. This ensures visual verification of frontend work.
+
+### 4. Functional Requirements
+Numbered list of specific functionalities:
+- "FR-1: The system must allow users to..."
+- "FR-2: When a user clicks X, the system must..."
+
+Be explicit and unambiguous.
+
+### 5. Non-Goals (Out of Scope)
+What this feature will NOT include. Critical for managing scope.
+
+### 6. Design Considerations (Optional)
+- UI/UX requirements
+- Link to mockups if available
+- Relevant existing components to reuse
+
+### 7. Technical Considerations (Optional)
+- Known constraints or dependencies
+- Integration points with existing systems
+- Performance requirements
+
+### 8. Success Metrics
+How will success be measured?
+- "Reduce time to complete X by 50%"
+- "Increase conversion rate by 10%"
+
+### 9. Open Questions
+Remaining questions or areas needing clarification.
+
+---
+
+## Writing for Junior Developers
+
+The PRD reader may be a junior developer or AI agent. Therefore:
+
+- Be explicit and unambiguous
+- Avoid jargon or explain it
+- Provide enough detail to understand purpose and core logic
+- Number requirements for easy reference
+- Use concrete examples where helpful
+
+---
+
+## Output
+
+- **Format:** Markdown (`.md`)
+- **Location:** `/tasks/`
+- **Filename:** `prd-[feature-name].md` (kebab-case)
+
+---
+
+## Example PRD
+
+```markdown
+# PRD: Task Priority System
+
+## Introduction
+
+Add priority levels to tasks so users can focus on what matters most. Tasks can be marked as high, medium, or low priority, with visual indicators and filtering to help users manage their workload effectively.
+
+## Goals
+
+- Allow assigning priority (high/medium/low) to any task
+- Provide clear visual differentiation between priority levels
+- Enable filtering and sorting by priority
+- Default new tasks to medium priority
+
+## User Stories
+
+### US-001: Add priority field to database
+**Description:** As a developer, I need to store task priority so it persists across sessions.
+
+**Acceptance Criteria:**
+- [ ] Add priority column to tasks table: 'high' | 'medium' | 'low' (default 'medium')
+- [ ] Generate and run migration successfully
+- [ ] npm run typecheck passes
+
+### US-002: Display priority indicator on task cards
+**Description:** As a user, I want to see task priority at a glance so I know what needs attention first.
+
+**Acceptance Criteria:**
+- [ ] Each task card shows colored priority badge (red=high, yellow=medium, gray=low)
+- [ ] Badge includes icon: 🔴 high, 🟡 medium, ⚪ low
+- [ ] Priority visible without hovering or clicking
+- [ ] npm run typecheck passes
+- [ ] Verify in browser using dev-browser skill
+
+### US-003: Add priority selector to task edit
+**Description:** As a user, I want to change a task's priority when editing it.
+
+**Acceptance Criteria:**
+- [ ] Priority dropdown in task edit modal
+- [ ] Shows current priority as selected
+- [ ] Saves immediately on selection change
+- [ ] npm run typecheck passes
+- [ ] Verify in browser using dev-browser skill
+
+### US-004: Filter tasks by priority
+**Description:** As a user, I want to filter the task list to see only high-priority items when I'm focused.
+
+**Acceptance Criteria:**
+- [ ] Filter dropdown with options: All | High | Medium | Low
+- [ ] Filter persists in URL params
+- [ ] Empty state message when no tasks match filter
+- [ ] npm run typecheck passes
+- [ ] Verify in browser using dev-browser skill
+
+## Functional Requirements
+
+- FR-1: Add `priority` field to tasks table ('high' | 'medium' | 'low', default 'medium')
+- FR-2: Display colored priority badge on each task card
+- FR-3: Include priority selector in task edit modal
+- FR-4: Add priority filter dropdown to task list header
+- FR-5: Sort by priority within each status column (high → medium → low)
+
+## Non-Goals
+
+- No priority-based notifications or reminders
+- No automatic priority assignment based on due date
+- No priority inheritance for subtasks
+
+## Technical Considerations
+
+- Reuse existing badge component with color variants
+- Filter state managed via URL search params
+- Priority stored in database, not computed
+
+## Success Metrics
+
+- Users can change priority in <2 clicks
+- High-priority tasks immediately visible at top of lists
+- No regression in task list performance
+
+## Open Questions
+
+- Should priority affect task ordering within a column?
+- Should we add keyboard shortcuts for priority changes?
 ```
 
 ---
 
-## Strict PRD Schema
+## Checklist
 
-You **MUST** follow this exact structure for the output:
+Before saving the PRD:
 
-### 1. Executive Summary
-
-- **Problem Statement**: 1-2 sentences on the pain point.
-- **Proposed Solution**: 1-2 sentences on the fix.
-- **Success Criteria**: 3-5 measurable KPIs.
-
-### 2. User Experience & Functionality
-
-- **User Personas**: Who is this for?
-- **User Stories**: `As a [user], I want to [action] so that [benefit].`
-- **Acceptance Criteria**: Bulleted list of "Done" definitions for each story.
-- **Non-Goals**: What are we NOT building?
-
-### 3. AI System Requirements (If Applicable)
-
-- **Tool Requirements**: What tools and APIs are needed?
-- **Evaluation Strategy**: How to measure output quality and accuracy.
-
-### 4. Technical Specifications
-
-- **Architecture Overview**: Data flow and component interaction.
-- **Integration Points**: APIs, DBs, and Auth.
-- **Security & Privacy**: Data handling and compliance.
-
-### 5. Risks & Roadmap
-
-- **Phased Rollout**: MVP -> v1.1 -> v2.0.
-- **Technical Risks**: Latency, cost, or dependency failures.
-
----
-
-## Implementation Guidelines
-
-### DO (Always)
-
-- **Define Testing**: For AI systems, specify how to test and validate output quality.
-- **Iterate**: Present a draft and ask for feedback on specific sections.
-
-### DON'T (Avoid)
-
-- **Skip Discovery**: Never write a PRD without asking at least 2 clarifying questions first.
-- **Hallucinate Constraints**: If the user didn't specify a tech stack, ask or label it as `TBD`.
-
----
-
-## Example: Intelligent Search System
-
-### 1. Executive Summary
-
-**Problem**: Users struggle to find specific documentation snippets in massive repositories.
-**Solution**: An intelligent search system that provides direct answers with source citations.
-**Success**:
-
-- Reduce search time by 50%.
-- Citation accuracy >= 95%.
-
-### 2. User Stories
-
-- **Story**: As a developer, I want to ask natural language questions so I don't have to guess keywords.
-- **AC**:
-  - Supports multi-turn clarification.
-  - Returns code blocks with "Copy" button.
-
-### 3. AI System Architecture
-
-- **Tools Required**: `codesearch`, `grep`, `webfetch`.
-
-### 4. Evaluation
-
-- **Benchmark**: Test with 50 common developer questions.
-- **Pass Rate**: 90% must match expected citations.
+- [ ] Asked clarifying questions with lettered options
+- [ ] Incorporated user's answers
+- [ ] User stories are small and specific
+- [ ] Functional requirements are numbered and unambiguous
+- [ ] Non-goals section defines clear boundaries
+- [ ] Saved to `/tasks/prd-[feature-name].md`

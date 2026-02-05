@@ -1,113 +1,127 @@
 ---
-name: keyword-research
-description: Identify high-impact keywords using the 6 Circles Method. Use when planning content strategy, finding SEO opportunities, or discovering what your audience searches for.
+name: keyword_research
+router_kit: ManagementKit
+description: SEO keyword araştırma, arama hacmi analizi ve içerik stratejisi rehberi.
+metadata:
+  skillport:
+    category: research
+    tags: [architecture, automation, best practices, clean code, coding, collaboration, compliance, debugging, design patterns, development, documentation, efficiency, git, keyword research, optimization, productivity, programming, project management, quality assurance, refactoring, software engineering, standards, testing, utilities, version control, workflow]      - search
 ---
 
-# Keyword Research Skill
+# 🔑 Keyword Research
 
-## Overview
+> SEO keyword araştırma ve içerik stratejisi rehberi.
 
-Keyword Research identifies what your audience searches for. This skill teaches the 6 Circles Method to find keywords aligned with your positioning.
+---
 
-**Keywords**: keyword research, SEO keywords, search volume, keyword strategy, content planning, search intent, keyword analysis
+## 📋 Keyword Metrikleri
 
-## Core Methodology
+| Metrik | Açıklama | İdeal |
+|--------|----------|-------|
+| **Search Volume** | Aylık arama sayısı | >100 |
+| **Keyword Difficulty** | Sıralama zorluğu | <50 |
+| **CPC** | Tıklama başı maliyet | Domain'e göre |
+| **Intent** | Arama niyeti | Match |
 
-The 6 Circles Method finds keywords at the intersection of:
+---
 
-1. **Aligned with your positioning** — Keywords that match your angle
-2. **Your customer's language** — How they actually search
-3. **Avoiding competitor blind spots** — Keywords competitors ignore
-4. **Good search volume** — People actually search for these
-5. **You can write about** — You have expertise or perspective
-6. **Drive business results** — Keywords that convert
+## 🎯 Search Intent
 
-## The 6 Circles Method
+| Intent | Açıklama | Örnek |
+|--------|----------|-------|
+| **Informational** | Bilgi arama | "react nedir" |
+| **Navigational** | Site arama | "github login" |
+| **Commercial** | Karşılaştırma | "en iyi cms" |
+| **Transactional** | Satın alma | "hosting satın al" |
 
-### Circle 1: Positioning Alignment
+---
 
-Start with keywords aligned with your positioning angle.
+## 🔧 Araştırma Süreci
 
-**Example**: If your positioning is "The project management tool for remote teams," your keywords should be about remote work, distributed teams, async communication.
-
-**Not**: General project management keywords that competitors dominate.
-
-### Circle 2: Customer Language
-
-Use the language your customers actually use, not industry jargon.
-
-**Example**: If your customers say "remote work tools," don't target "distributed workforce management solutions."
-
-**How to find**: Review customer conversations, support tickets, social media comments.
-
-### Circle 3: Competitor Blind Spots
-
-Find keywords competitors ignore or underestimate.
-
-**Example**: If competitors target "project management software," target "project management for remote teams" or "async project management."
-
-**How to find**: Analyze competitor content. What keywords do they NOT target?
-
-### Circle 4: Search Volume
-
-Find keywords with meaningful search volume (100+ searches/month).
-
-**Example**: "Project management" (100k+ searches) is too competitive. "Project management for remote teams" (1k searches) is better.
-
-**Rule**: Target keywords with 100-10,000 searches/month for fastest ranking.
-
-### Circle 5: Your Expertise
-
-Only target keywords you can write about better than competitors.
-
-**Example**: If you're a remote work expert, target "remote work" keywords. If you're a productivity expert, target "productivity" keywords.
-
-**Not**: Keywords outside your expertise.
-
-### Circle 6: Business Results
-
-Target keywords that drive revenue, not just traffic.
-
-**Example**: "How to manage remote teams" drives leads. "Remote work statistics" drives traffic but not leads.
-
-**Focus**: Keywords with commercial intent.
-
-## How to Use This Skill
-
-1. **List Your Positioning Keywords** — What keywords align with your positioning?
-2. **Add Customer Language** — How do customers search for this?
-3. **Find Competitor Gaps** — What keywords do competitors miss?
-4. **Check Search Volume** — Which keywords have 100-10,000 searches/month?
-5. **Verify Your Expertise** — Can you write better content than competitors?
-6. **Confirm Business Intent** — Will these keywords drive revenue?
-
-## Keyword Clusters
-
-Organize keywords into clusters:
-
+### 1. Seed Keywords
 ```
-Cluster: Remote Team Management
-- remote team management
-- how to manage remote teams
-- remote team communication
-- distributed team tools
-- async team management
+[Ana konu]
+    ├── Alt konu 1
+    ├── Alt konu 2
+    └── Alt konu 3
 ```
 
-## Integration with Other Skills
+### 2. Keyword Expansion
+- Google Autocomplete
+- "People Also Ask"
+- Related searches
+- Competitor keywords
 
-Keyword Research works with:
-- **SEO Content** — Your keywords guide what to write about
-- **Content Atomizer** — Your keywords inform repurposing strategy
-- **Positioning Angles** — Your positioning guides keyword selection
+### 3. Filtreleme
+```
+Volume > 100
+AND Difficulty < 50
+AND Intent = Target
+```
 
-## Common Pitfalls
+---
 
-**Too Competitive** — Targeting keywords with 100k+ searches.  
-**Too Niche** — Targeting keywords with <100 searches/month.  
-**No Business Intent** — Targeting keywords that don't drive revenue.  
-**Outside Your Expertise** — Targeting keywords you can't write about better.
+## 📊 Keyword Mapping
 
-## Next Steps
+| Keyword | Volume | KD | Intent | Target Page |
+|---------|--------|-----|--------|-------------|
+| react tutorial | 10K | 45 | Info | /blog/react |
+| react vs vue | 5K | 38 | Comm | /comparison |
+| react developer | 3K | 52 | Trans | /hire |
 
-Once you've identified your keywords, move to Skill 06: SEO Content to create ranking content.
+---
+
+## 📝 Content Brief Template
+
+```markdown
+## Target Keyword: [keyword]
+
+### Metadata
+- Volume: [X]
+- Difficulty: [X]
+- Intent: [Type]
+
+### SERP Analysis
+- Top 3 results: [...]
+- Content type: [...]
+- Avg word count: [...]
+
+### Outline
+1. H1: [Title]
+2. H2: [Section 1]
+3. H2: [Section 2]
+4. ...
+
+### LSI Keywords
+- keyword1
+- keyword2
+```
+
+---
+
+*Keyword Research v1.1 - Enhanced*
+
+## 🔄 Workflow
+
+> **Kaynak:** [Semrush Keyword Strategy](https://www.semrush.com/blog/keyword-research-guide/) & [Ahrefs SEO Guide](https://ahrefs.com/blog/keyword-research/)
+
+### Aşama 1: Topic Discovery (Seed)
+- [ ] **Brainstorm**: İş hedeflerine uygun ana konuları (Topic Clusters) belirle.
+- [ ] **Competitor**: Rakiplerin trafik aldığı kelimeleri analiz et (Gap Analysis).
+- [ ] **Questions**: "People Also Ask" ve forumlardan (Reddit/Quora) soru kalıplarını topla.
+
+### Aşama 2: Metric Analysis
+- [ ] **Volume vs Difficulty**: Yüksek hacim + Düşük KD (Keyword Difficulty) fırsatlarını (Low Hanging Fruit) bul.
+- [ ] **Intent Matching**: Kelimenin niyetini (Navigational, Informational, Transactional) belirle.
+- [ ] **Long-tail**: Dönüşüm oranı yüksek 3+ kelimelik öbeklere odaklan.
+
+### Aşama 3: Mapping & Clustering
+- [ ] **Pillar Page**: Ana kelimeyi kapsayan kapsamlı rehber planla.
+- [ ] **Cannibalization**: Aynı kelimeyi hedefleyen birden fazla sayfa olmamasını sağla.
+
+### Kontrol Noktaları
+| Aşama | Doğrulama |
+|-------|-----------|
+| 1 | Hedef kelimenin arama niyeti ile içeriğimiz uyuşuyor mu? |
+| 2 | Bu kelimede sıralanmak için domain otoritemiz yeterli mi? |
+| 3 | Rakip içeriklerden "daha iyi" (10x Content) bir şey sunuyor muyuz? |

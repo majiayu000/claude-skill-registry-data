@@ -1,6 +1,7 @@
 ---
-name: kubernetes-specialist
-description: Use when deploying or managing Kubernetes workloads requiring cluster configuration, security hardening, or troubleshooting. Invoke for Helm charts, RBAC policies, NetworkPolicies, storage configuration, performance optimization.
+name: kubernetes_specialist
+router_kit: DevOpsKit
+description: Expert Kubernetes specialist for production-grade container orchestration. Invoke for cluster management, workload deployment, security hardening, and performance optimization. Keywords: Kubernetes, K8s, kubectl, Helm, RBAC, NetworkPolicy.
 triggers:
   - Kubernetes
   - K8s
@@ -12,22 +13,13 @@ triggers:
   - NetworkPolicy
   - Ingress
   - StatefulSet
-  - Operator
-  - CRD
-  - CustomResourceDefinition
-  - ArgoCD
-  - Flux
-  - GitOps
-  - Istio
-  - Linkerd
-  - service mesh
-  - multi-cluster
-  - cost optimization
-  - VPA
-  - spot instances
 role: specialist
 scope: infrastructure
 output-format: manifests
+metadata:
+  skillport:
+    category: auto-healed
+    tags: [architecture, automation, best practices, clean code, coding, collaboration, compliance, debugging, design patterns, development, documentation, efficiency, git, kubernetes specialist, optimization, productivity, programming, project management, quality assurance, refactoring, software engineering, standards, testing, utilities, version control, workflow]      - kubernetes_specialist
 ---
 
 # Kubernetes Specialist
@@ -66,13 +58,8 @@ Load detailed guidance based on context:
 | Networking | `references/networking.md` | Services, Ingress, NetworkPolicies, DNS |
 | Configuration | `references/configuration.md` | ConfigMaps, Secrets, environment variables |
 | Storage | `references/storage.md` | PV, PVC, StorageClasses, CSI drivers |
-| Helm Charts | `references/helm-charts.md` | Chart structure, values, templates, hooks, testing, repositories |
+| Helm Charts | `references/helm-charts.md` | Chart structure, values, templates, hooks |
 | Troubleshooting | `references/troubleshooting.md` | kubectl debug, logs, events, common issues |
-| Custom Operators | `references/custom-operators.md` | CRD, Operator SDK, controller-runtime, reconciliation |
-| Service Mesh | `references/service-mesh.md` | Istio, Linkerd, traffic management, mTLS, canary |
-| GitOps | `references/gitops.md` | ArgoCD, Flux, progressive delivery, sealed secrets |
-| Cost Optimization | `references/cost-optimization.md` | VPA, HPA tuning, spot instances, quotas, right-sizing |
-| Multi-Cluster | `references/multi-cluster.md` | Cluster API, federation, cross-cluster networking, DR |
 
 ## Constraints
 
@@ -114,4 +101,30 @@ Kubernetes API, kubectl, Helm 3, Kustomize, RBAC, NetworkPolicies, Pod Security 
 - **DevOps Engineer** - CI/CD pipeline integration
 - **Cloud Architect** - Multi-cloud Kubernetes strategies
 - **Security Engineer** - Advanced security hardening
-- **SRE Engineer** - Reliability and monitoring patterns
+*Kubernetes Specialist v1.1 - Enhanced*
+
+## 🔄 Workflow
+
+> **Kaynak:** [Kubernetes Production Best Practices](https://kubernetes.io/docs/setup/best-practices/) & [LearnK8s Checklist](https://learnk8s.io/production-best-practices)
+
+### Aşama 1: Manifest Hygiene
+- [ ] **Resources**: CPU/Memory Request ve Limitlerini MUTLAKA ayarla (Noisy Neighbor engelle).
+- [ ] **Probes**: Liveness (restart) ve Readiness (traffic) probalarını tanımla.
+- [ ] **Security Context**: `runAsNonRoot: true` ve `readOnlyRootFilesystem: true` yap.
+
+### Aşama 2: Delivery (GitOps)
+- [ ] **Helm/Kustomize**: Konfigürasyonu şablonla, hardcoded değer bırakma.
+- [ ] **Workflow**: ArgoCD veya Flux kullanarak state'i Git ile senkronize et.
+- [ ] **Secrets**: Şifreleri mühürle (SealedSecrets) veya External Secrets Operator kullan.
+
+### Aşama 3: Reliability
+- [ ] **HPA**: Horizontal Pod Autoscaler ile yüke göre ölçekle.
+- [ ] **PDB**: Pod Disruption Budget ile bakım sırasında kesintiyi önle.
+- [ ] **Affinity**: Kritik podları `podAntiAffinity` ile farklı node'lara dağıt.
+
+### Kontrol Noktaları
+| Aşama | Doğrulama |
+|-------|-----------|
+| 1 | Bir node çökerse servis ayakta kalıyor mu? |
+| 2 | `kubectl delete pod` yapıldığında veri kaybı oluyor mu? |
+| 3 | Cluster dışına kapalı olması gereken portlar kapalı mı? |

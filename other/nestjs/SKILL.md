@@ -1,117 +1,202 @@
 ---
 name: nestjs
-description: |
-  Provides NestJS framework development standards and architectural patterns. Ensures domain-centric architecture, proper dependency injection, and decorator pattern utilization. Specializes in modular design, providers and services, middleware and guards, interceptors and pipes, custom decorators, and microservices architecture.
-  Use when: developing NestJS applications, designing module structure (@Module), creating controllers (@Controller) and services (@Injectable), implementing REST or GraphQL APIs, configuring dependency injection, building middleware and guards, creating custom decorators, implementing authentication/authorization, designing microservices with NestJS, or integrating with TypeORM/Prisma for database access.
+description: NestJS - A progressive Node.js framework for building efficient, scalable server-side applications with TypeScript.
 ---
 
-# NestJS Development Standards
+# NestJS Framework
 
-## Module Organization Principles
+NestJS is a progressive Node.js framework for building efficient, scalable server-side applications. It uses TypeScript and combines elements of OOP, FP, and FRP.
 
-### Domain-Centric Modularization
+## When to Use This Skill
 
-Organize modules by business domain, not by function.
+Use this skill when:
+- Building Node.js backend applications with TypeScript
+- Working with NestJS controllers, providers, and modules
+- Implementing guards, pipes, interceptors, and middleware
+- Setting up authentication and authorization
+- Building microservices or GraphQL APIs
+- Working with WebSockets
+- Configuring the NestJS CLI
 
-- ❌ Bad: `controllers/`, `services/`, `repositories/`
-- ✅ Good: `users/`, `products/`, `orders/`
+## Quick Reference
 
-### Single Responsibility Module
-
-Each module is responsible for only one domain.
-
-- Separate common functionality into `common/` or `shared/` modules
-- Inter-domain communication must go through Services only
-
-## Dependency Injection Rules
-
-### Constructor Injection Only
-
-Property injection (@Inject) is forbidden.
+### Basic Controller
 
 ```typescript
-// ✅ Good
-constructor(private readonly userService: UserService) {}
+import { Controller, Get, Post, Body, Param } from '@nestjs/common';
 
-// ❌ Bad
-@Inject() userService: UserService;
-```
+@Controller('users')
+export class UsersController {
+  @Get()
+  findAll() {
+    return [];
+  }
 
-### Provider Registration Location
+  @Get(':id')
+  findOne(@Param('id') id: string) {
+    return { id };
+  }
 
-Providers are registered only in the module where they are used.
-
-- Minimize global providers
-- Use forRoot/forRootAsync only in AppModule
-
-## Decorator Usage Rules
-
-### Prioritize Custom Decorators
-
-Abstract repeated decorator combinations into custom decorators.
-
-```typescript
-// Create custom decorator when combining 3+ decorators
-@Auth() // Integrates @UseGuards + @ApiBearerAuth + @CurrentUser
-```
-
-### Decorator Order
-
-Arrange in execution order from top to bottom.
-
-1. Metadata decorators (@ApiTags, @Controller, @Resolver)
-2. Guards/Interceptors (@UseGuards, @UseInterceptors)
-3. Route decorators (@Get, @Post, @Query, @Mutation)
-4. Parameter decorators (@Body, @Param, @Args)
-
-## DTO/Entity Rules
-
-### DTO is Pure Data Transfer
-
-Business logic is forbidden; only validation is allowed.
-
-```typescript
-// ✅ Good: Validation only
-class CreateUserDto {
-  @IsEmail()
-  email: string;
-}
-
-// ❌ Bad: Contains business logic
-class CreateUserDto {
-  toEntity(): User {} // Forbidden
+  @Post()
+  create(@Body() createDto: CreateUserDto) {
+    return createDto;
+  }
 }
 ```
 
-### Separate Entity and DTO
-
-Never return Entity directly; always convert to DTO.
-
-- Request: CreateInput, UpdateInput (GraphQL) / CreateDto, UpdateDto (REST)
-- Response: Type definition or plain object
-
-## Error Handling
-
-### Domain-Specific Exception Filter
-
-Each domain has its own Exception Filter.
+### Basic Provider/Service
 
 ```typescript
+import { Injectable } from '@nestjs/common';
+
+@Injectable()
+export class UsersService {
+  private users = [];
+
+  findAll() {
+    return this.users;
+  }
+
+  findOne(id: string) {
+    return this.users.find(u => u.id === id);
+  }
+}
+```
+
+### Basic Module
+
+```typescript
+import { Module } from '@nestjs/common';
+import { UsersController } from './users.controller';
+import { UsersService } from './users.service';
+
 @Module({
-  providers: [
-    {
-      provide: APP_FILTER,
-      useClass: UserExceptionFilter,
-    },
-  ],
+  controllers: [UsersController],
+  providers: [UsersService],
+  exports: [UsersService]
 })
+export class UsersModule {}
 ```
 
-### Explicit Error Throwing
+### Guard Example
 
-Always throw Exception explicitly in all error situations.
+```typescript
+import { Injectable, CanActivate, ExecutionContext } from '@nestjs/common';
 
-- REST: Use HttpException series
-- GraphQL: Use GraphQLError or custom error
-- Forbid implicit null/undefined returns
-- Error messages should be understandable by users
+@Injectable()
+export class AuthGuard implements CanActivate {
+  canActivate(context: ExecutionContext): boolean {
+    const request = context.switchToHttp().getRequest();
+    return !!request.headers.authorization;
+  }
+}
+```
+
+### Pipe Example
+
+```typescript
+import { PipeTransform, Injectable, BadRequestException } from '@nestjs/common';
+
+@Injectable()
+export class ParseIntPipe implements PipeTransform<string, number> {
+  transform(value: string): number {
+    const val = parseInt(value, 10);
+    if (isNaN(val)) {
+      throw new BadRequestException('Validation failed');
+    }
+    return val;
+  }
+}
+```
+
+### Interceptor Example
+
+```typescript
+import { Injectable, NestInterceptor, ExecutionContext, CallHandler } from '@nestjs/common';
+import { Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
+
+@Injectable()
+export class LoggingInterceptor implements NestInterceptor {
+  intercept(context: ExecutionContext, next: CallHandler): Observable<any> {
+    console.log('Before...');
+    const now = Date.now();
+    return next.handle().pipe(
+      tap(() => console.log(`After... ${Date.now() - now}ms`)),
+    );
+  }
+}
+```
+
+### Exception Filter Example
+
+```typescript
+import { ExceptionFilter, Catch, ArgumentsHost, HttpException } from '@nestjs/common';
+import { Response } from 'express';
+
+@Catch(HttpException)
+export class HttpExceptionFilter implements ExceptionFilter {
+  catch(exception: HttpException, host: ArgumentsHost) {
+    const ctx = host.switchToHttp();
+    const response = ctx.getResponse<Response>();
+    const status = exception.getStatus();
+
+    response.status(status).json({
+      statusCode: status,
+      message: exception.message,
+    });
+  }
+}
+```
+
+### Middleware Example
+
+```typescript
+import { Injectable, NestMiddleware } from '@nestjs/common';
+import { Request, Response, NextFunction } from 'express';
+
+@Injectable()
+export class LoggerMiddleware implements NestMiddleware {
+  use(req: Request, res: Response, next: NextFunction) {
+    console.log(`${req.method} ${req.url}`);
+    next();
+  }
+}
+```
+
+## Key Concepts
+
+### Dependency Injection
+NestJS uses a powerful dependency injection system. Mark classes with `@Injectable()` and inject them via constructor parameters.
+
+### Decorators
+NestJS makes heavy use of decorators:
+- `@Controller()` - Define a controller
+- `@Get()`, `@Post()`, `@Put()`, `@Delete()` - HTTP methods
+- `@Injectable()` - Mark a class as a provider
+- `@Module()` - Define a module
+- `@UseGuards()`, `@UsePipes()`, `@UseInterceptors()` - Apply cross-cutting concerns
+
+### Request Lifecycle
+1. Middleware
+2. Guards
+3. Interceptors (pre)
+4. Pipes
+5. Route Handler
+6. Interceptors (post)
+7. Exception Filters
+
+## Documentation Reference
+
+See the `references/` folder for detailed documentation on:
+
+- [Getting Started](references/getting_started.md) - First steps, introduction (7 pages)
+- [Fundamentals](references/fundamentals.md) - Controllers, providers, modules, DI (30 pages)
+- [Techniques](references/techniques.md) - Database, validation, caching, etc. (27 pages)
+- [Security](references/security.md) - Authentication, authorization (6 pages)
+- [GraphQL](references/graphql.md) - Apollo, resolvers, mutations (17 pages)
+- [Microservices](references/microservices.md) - Redis, Kafka, gRPC, NATS (10 pages)
+- [WebSockets](references/websockets.md) - Gateways, adapters (5 pages)
+- [OpenAPI](references/openapi.md) - Swagger documentation (5 pages)
+- [CLI](references/cli.md) - Workspaces, libraries (5 pages)
+- [Recipes](references/recipes.md) - CQRS, Prisma, health checks (12 pages)

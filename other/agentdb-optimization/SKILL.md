@@ -1,6 +1,15 @@
 ---
 name: "AgentDB Performance Optimization"
+version: "1.0.0"
 description: "Optimize AgentDB performance with quantization (4-32x memory reduction), HNSW indexing (150x faster search), caching, and batch operations. Use when optimizing memory usage, improving search speed, or scaling to millions of vectors."
+category: ai-ml
+tags:
+  - agentdb
+  - performance
+  - optimization
+  - quantization
+  - indexing
+author: Smith Horn
 ---
 
 # AgentDB Performance Optimization
@@ -67,13 +76,11 @@ const adapter = await createAgentDBAdapter({
 ```
 
 **Use Cases**:
-
 - Mobile/edge deployment
 - Large-scale vector storage (millions of vectors)
 - Real-time search with memory constraints
 
 **Performance**:
-
 - Memory: 32x smaller
 - Search Speed: 10x faster (bit operations)
 - Accuracy: 95-98% of original
@@ -92,13 +99,11 @@ const adapter = await createAgentDBAdapter({
 ```
 
 **Use Cases**:
-
 - Production applications requiring high accuracy
 - Medium-scale deployments (10K-1M vectors)
 - General-purpose optimization
 
 **Performance**:
-
 - Memory: 4x smaller
 - Search Speed: 3x faster
 - Accuracy: 98-99% of original
@@ -117,13 +122,11 @@ const adapter = await createAgentDBAdapter({
 ```
 
 **Use Cases**:
-
 - High-dimensional embeddings (>512 dims)
 - Image/video embeddings
 - Large-scale similarity search
 
 **Performance**:
-
 - Memory: 8-16x smaller
 - Search Speed: 5x faster
 - Accuracy: 93-97% of original
@@ -175,7 +178,6 @@ const adapter = await createAgentDBAdapter({
 ```
 
 **Parameter Tuning**:
-
 - **M** (connections): Higher = better recall, more memory
   - Small datasets (<10K): M = 8
   - Medium datasets (10K-100K): M = 16
@@ -208,7 +210,6 @@ const result = await adapter.retrieveWithReasoning(queryEmbedding, {
 ```
 
 **Cache Tuning**:
-
 - Small applications: 100-500 patterns
 - Medium applications: 500-2000 patterns
 - Large applications: 2000-5000 patterns
@@ -507,8 +508,8 @@ const adapter = await createAgentDBAdapter({
 
 - **Quantization Paper**: docs/quantization-techniques.pdf
 - **HNSW Algorithm**: docs/hnsw-index.pdf
-- **GitHub**: <https://github.com/ruvnet/agentic-flow/tree/main/packages/agentdb>
-- **Website**: <https://agentdb.ruv.io>
+- **GitHub**: https://github.com/ruvnet/agentic-flow/tree/main/packages/agentdb
+- **Website**: https://agentdb.ruv.io
 
 ---
 

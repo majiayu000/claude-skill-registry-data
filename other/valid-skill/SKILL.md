@@ -1,24 +1,23 @@
 ---
-name: code-reviewer
-description: Review code for best practices and potential issues
-allowed-tools: Read, Grep
+name: valid-skill
+description: A valid test skill with proper formatting. This skill should pass all validations and serves as a reference for the expected format.
 ---
 
-# Code Reviewer Skill
+# Valid Skill
 
-You are a code reviewer. Analyze the provided code for:
-- Best practices violations
-- Potential bugs
-- Security vulnerabilities
-- Performance issues
+A simple valid skill for testing purposes.
 
-## Instructions
+## When to Apply
 
-$ARGUMENTS
+Reference these guidelines when testing the skills-ref validator.
 
-## Review Format
+## Quick Reference
 
-Provide feedback in the following format:
-1. Summary
-2. Issues found
-3. Recommendations
+### 1. Example Category (CRITICAL)
+
+- `example-rule-one` - First example rule for testing
+- `example-rule-two` - Second example rule for testing
+
+## How to Use
+
+This skill is used for testing validation.

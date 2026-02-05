@@ -1,44 +1,50 @@
 ---
-name: skill-name
-description: Brief description of what this skill enables. Include trigger keywords that should activate this skill. Triggers on keyword1, keyword2, keyword3.
+name: {{skill-name}}
+description: |
+  {{skill-description}}
+tools:
+  - Read
+  - Write
+  - Glob
 ---
 
-# Skill Title
+# {{Skill Title}}
 
-One-line description of the skill's purpose.
+{{Brief tagline describing what this skill does}}.
 
-## Quick Start
+## Overview
 
-```typescript
-// Minimal working example
-// This should be copy-paste ready
-```
+{{Detailed description of the skill's purpose and capabilities}}.
 
-## Core Patterns
+Use this skill when you need to:
 
-### Pattern 1
-```typescript
-// Implementation
-```
+- {{Primary use case}}
+- {{Secondary use case}}
+- {{Additional use case}}
 
-### Pattern 2
-```typescript
-// Implementation
-```
+## Workflow
 
-## Common Use Cases
+### Step 1: {{First Step Name}}
 
-### Use Case 1
-```typescript
-// Example
-```
+{{Instructions for the first step}}
 
-### Use Case 2
-```typescript
-// Example
-```
+### Step 2: {{Second Step Name}}
 
-## Resources
+{{Instructions for the second step}}
 
-- **Official Docs**: https://...
-- **API Reference**: See `references/api.md`
+### Step 3: {{Third Step Name}}
+
+{{Instructions for the third step}}
+
+## Examples
+
+<example>
+user: "{{Example user request}}"
+assistant: "{{Example assistant response showing the skill in action}}"
+</example>
+
+## Output Checklist
+
+- [ ] {{First output item verified}}
+- [ ] {{Second output item verified}}
+- [ ] {{Quality check completed}}

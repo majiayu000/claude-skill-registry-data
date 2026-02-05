@@ -1,84 +1,133 @@
 ---
-name: Debugging
-description: Systematic debugging framework ensuring root cause investigation before fixes. Includes four-phase debugging process, backward call stack tracing, multi-layer validation, and verification protocols. Use when encountering bugs, test failures, unexpected behavior, performance issues, or before claiming work complete. Prevents random fixes, masks over symptoms, and false completion claims.
-version: 3.0.0
-languages: all
+name: debugging
+description: Apply systematic debugging methodology. Use when investigating bugs, unexpected behavior, or when user reports issues. Auto-apply when conversation includes "bug", "broken", "not working", "wrong", "glitch", "flickering".
 ---
 
-# Debugging
-
-Comprehensive debugging framework combining systematic investigation, root cause tracing, defense-in-depth validation, and verification protocols.
+# Debugging Skill
 
 ## Core Principle
 
-**NO FIXES WITHOUT ROOT CAUSE INVESTIGATION FIRST**
+**Automate first, ask questions never.** If you can write a test to verify behavior, do that instead of asking the user to manually check something.
 
-Random fixes waste time and create new bugs. Find the root cause, fix at source, validate at every layer, verify before claiming success.
-
-## When to Use
-
-**Always use for:** Test failures, bugs, unexpected behavior, performance issues, build failures, integration problems, before claiming work complete
-
-**Especially when:** Under time pressure, "quick fix" seems obvious, tried multiple fixes, don't fully understand issue, about to claim success
-
-## The Four Techniques
-
-### 1. Systematic Debugging (`references/systematic-debugging.md`)
-
-Four-phase framework ensuring proper investigation:
-- Phase 1: Root Cause Investigation (read errors, reproduce, check changes, gather evidence)
-- Phase 2: Pattern Analysis (find working examples, compare, identify differences)
-- Phase 3: Hypothesis and Testing (form theory, test minimally, verify)
-- Phase 4: Implementation (create test, fix once, verify)
-
-**Key rule:** Complete each phase before proceeding. No fixes without Phase 1.
-
-**Load when:** Any bug/issue requiring investigation and fix
-
-### 2. Root Cause Tracing (`references/root-cause-tracing.md`)
-
-Trace bugs backward through call stack to find original trigger.
-
-**Technique:** When error appears deep in execution, trace backward level-by-level until finding source where invalid data originated. Fix at source, not at symptom.
-
-**Includes:** `scripts/find-polluter.sh` for bisecting test pollution
-
-**Load when:** Error deep in call stack, unclear where invalid data originated
-
-### 3. Defense-in-Depth (`references/defense-in-depth.md`)
-
-Validate at every layer data passes through. Make bugs impossible.
-
-**Four layers:** Entry validation → Business logic → Environment guards → Debug instrumentation
-
-**Load when:** After finding root cause, need to add comprehensive validation
-
-### 4. Verification (`references/verification.md`)
-
-Run verification commands and confirm output before claiming success.
-
-**Iron law:** NO COMPLETION CLAIMS WITHOUT FRESH VERIFICATION EVIDENCE
-
-Run the command. Read the output. Then claim the result.
-
-**Load when:** About to claim work complete, fixed, or passing
-
-## Quick Reference
+## Debugging Decision Tree
 
 ```
-Bug → systematic-debugging.md (Phase 1-4)
-  Error deep in stack? → root-cause-tracing.md (trace backward)
-  Found root cause? → defense-in-depth.md (add layers)
-  About to claim success? → verification.md (verify first)
+Bug reported
+    │
+    ▼
+Can I reproduce in a test?
+    │
+    ├─ YES → Write failing test first
+    │         │
+    │         ▼
+    │    Does test fail?
+    │         │
+    │         ├─ YES → Debug the logic
+    │         │
+    │         └─ NO → Bug is in rendering/CSS layer
+    │
+    └─ NO → Need more info from user (specific steps, values)
 ```
 
-## Red Flags
+## Systematic Isolation
 
-Stop and follow process if thinking:
-- "Quick fix for now, investigate later"
-- "Just try changing X and see if it works"
-- "It's probably X, let me fix that"
-- "Should work now" / "Seems fixed"
-- "Tests pass, we're done"
+| Question | Test Strategy |
+|----------|---------------|
+| Is the calculation correct? | Unit test with known inputs |
+| Is the rendering correct? | Integration test, inspect CSS |
+| Is it browser-specific? | Playwright test |
+| Is it timing-related? | Time progression integration test |
+| Is it state-related? | Expose `window.__debug`, inspect values |
 
-**All mean:** Return to systematic process.
+## Common Bug Patterns
+
+### 1. CSS Transitions + 60fps React
+
+**Symptom**: Values correct in test, visual is wrong/flickering in browser.
+
+**Cause**: CSS transitions on elements that React updates every frame.
+
+**Detection**:
+```bash
+# Find transitions on frequently-updated elements
+grep -r "transition:" src/ui/*.css
+```
+
+**Fix**: Remove CSS transitions from elements in the game loop render path.
+
+### 2. State Not Updating
+
+**Symptom**: UI shows stale data.
+
+**Test**:
+```javascript
+it('state updates over time', () => {
+  const { rerender } = render(<Component time={0} />);
+  const value0 = getValue();
+
+  rerender(<Component time={1000} />);
+  const value1 = getValue();
+
+  expect(value1).not.toEqual(value0);
+});
+```
+
+### 3. Calculation Drift
+
+**Symptom**: Values slowly diverge from expected over time.
+
+**Test**:
+```javascript
+it('no drift over many iterations', () => {
+  let state = initialState;
+  for (let i = 0; i < 10000; i++) {
+    state = update(state, 16); // 16ms per frame
+  }
+  expect(state.value).toBeCloseTo(expected, 2);
+});
+```
+
+## Debug State Exposure
+
+For browser inspection, expose state in dev mode:
+
+```javascript
+// In game loop
+if (import.meta.env.DEV) {
+  window.__debug = {
+    state: world.setLullState,
+    gameTime: world.gameTime,
+    computed: { /* derived values */ }
+  };
+}
+```
+
+Then in browser console: `window.__debug.state`
+
+## Anti-Patterns
+
+| Don't Do This | Do This Instead |
+|---------------|-----------------|
+| Add `console.log`, ask user to check | Write Vitest test |
+| Guess at the problem | Systematically isolate with tests |
+| Fix symptoms | Find and fix root cause |
+| Manual browser debugging | Playwright automation |
+| Change code without understanding | Read and understand first |
+
+## Integration with Testing Skill
+
+When debugging, use these test patterns:
+
+1. **Regression test** - Fails without fix, passes with fix
+2. **Time progression test** - Simulates frames over time
+3. **Edge case test** - Zero, negative, maximum values
+4. **Snapshot test** - For complex state objects
+
+## Debugging Checklist
+
+- [ ] Can I write a failing test?
+- [ ] Does the test isolate the bug?
+- [ ] Have I checked CSS interactions?
+- [ ] Have I verified state values?
+- [ ] Is there a timing/animation issue?
+- [ ] Did I find the root cause (not just symptoms)?

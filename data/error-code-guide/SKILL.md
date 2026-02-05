@@ -1,10 +1,10 @@
 ---
-name: error-code-guide
+name: errors
 description: |
   設計一致的錯誤碼，遵循 PREFIX_CATEGORY_NUMBER 格式。
   使用時機：定義錯誤碼、建立錯誤處理、設計 API。
   關鍵字：error code, error handling, error format, API errors, 錯誤碼, 錯誤處理。
-source: ../../../../../skills/claude-code/error-code-guide/SKILL.md
+source: ../../../../skills/error-code-guide/SKILL.md
 source_version: 1.0.0
 translation_version: 1.0.0
 last_synced: 2026-01-08
@@ -13,7 +13,7 @@ status: current
 
 # 錯誤碼指南
 
-> **語言**: [English](../../../../../skills/claude-code/error-code-guide/SKILL.md) | 繁體中文
+> **語言**: [English](../../../../skills/error-code-guide/SKILL.md) | 繁體中文
 
 **版本**: 1.0.0
 **最後更新**: 2025-12-30
@@ -86,7 +86,7 @@ API_NET_408     → API 網路逾時
 ## 詳細指南
 
 完整標準請參考：
-- [錯誤碼標準](../../../core/error-code-standards.md)
+- [錯誤碼標準](../../core/error-code-standards.md)
 
 ### AI 優化格式（節省 Token）
 
@@ -249,8 +249,8 @@ export const ErrorCodes = {
 
 ## 相關標準
 
-- [錯誤碼標準](../../../core/error-code-standards.md)
-- [日誌標準](../../../core/logging-standards.md)
+- [錯誤碼標準](../../core/error-code-standards.md)
+- [日誌標準](../../core/logging-standards.md)
 
 ---
 

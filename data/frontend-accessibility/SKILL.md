@@ -1,25 +1,25 @@
 ---
 name: Frontend Accessibility
-description: Build accessible user interfaces using semantic HTML, ARIA attributes, keyboard navigation, and WCAG compliance. Use this skill when creating or modifying UI components, forms, interactive elements, navigation menus, modals, or any user-facing interface code. When working on Astro component files (.astro), React/Vue/Svelte component files, HTML template files, form components with inputs and labels, navigation menus and interactive widgets, modal dialogs and accordions, image components with alt text, button and link implementations, focus management code, or screen reader announcement logic.
+description: Build accessible user interfaces using semantic HTML, proper ARIA attributes, keyboard navigation, color contrast, and screen reader compatibility. Use this skill when creating or editing UI components, HTML templates, JSX files, or any frontend markup. When implementing forms, interactive elements, navigation menus, modals, or dynamic content. When working with buttons, links, images, headings, or any user-facing interface elements. When ensuring keyboard accessibility, focus management, or screen reader support in React components, Vue templates, HTML files, or any frontend view files.
 ---
 
 # Frontend Accessibility
 
-This Skill provides Claude Code with specific guidance on how to adhere to coding standards as they relate to how it should handle frontend accessibility.
-
 ## When to use this skill
 
-- When creating or editing Astro components (.astro files)
-- When building React, Vue, Svelte, or other framework components
-- When implementing forms with input fields, labels, validation, and error messages
-- When creating navigation menus, breadcrumbs, or site navigation structures
-- When building interactive components (modals, dropdowns, accordions, tabs, tooltips)
-- When adding images and ensuring proper alt text and figure captions
+- When creating or editing UI component files (e.g., `.jsx`, `.tsx`, `.vue`, `.svelte`, `.html`)
+- When implementing forms and form inputs
+- When building interactive elements (buttons, links, dropdowns, modals)
+- When creating navigation menus or site structure
+- When adding images and requiring alt text
 - When implementing keyboard navigation or focus management
-- When creating buttons, links, or custom interactive elements
-- When using ARIA attributes (roles, labels, live regions, expanded states)
-- When ensuring color contrast ratios meet WCAG standards
-- When implementing skip links or other accessibility navigation aids
+- When choosing colors and ensuring sufficient contrast ratios
+- When using ARIA attributes for complex components
+- When creating heading structures and document outlines
+- When building dynamic content or single-page application views
+- When testing with screen readers or accessibility tools
+
+This Skill provides Claude Code with specific guidance on how to adhere to coding standards as they relate to how it should handle frontend accessibility.
 
 ## Instructions
 

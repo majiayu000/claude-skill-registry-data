@@ -1,370 +1,249 @@
 ---
 name: gsap
-description: Creates professional animations with GSAP (GreenSock Animation Platform). Use when building complex animations, scroll-triggered effects, timelines, or smooth transitions in any JavaScript framework.
+description: Use when implementing web animations, timeline sequencing, scroll-triggered animations, SVG animations, layout transitions, or using GSAP, ScrollTrigger, ScrollSmoother, SplitText, Flip, DrawSVG, MorphSVG, MotionPath, or @gsap/react useGSAP hook.
 ---
 
-# GSAP Animation
+# GSAP Best Practices
 
-Professional-grade animation library for the modern web - now 100% FREE including all plugins after Webflow acquisition.
+Professional-grade JavaScript animation library for the modern web. Provides high-performance tweening with powerful sequencing, scroll-based animations, and extensive plugin ecosystem.
+
+## Installation
+
+```bash
+# Core library
+npm install gsap
+
+# React hook
+npm install @gsap/react
+
+# Register plugins (do once at app entry)
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
+```
 
 ## Quick Start
 
-```bash
-npm install gsap
-```
-
 ```javascript
-import gsap from "gsap";
+import gsap from 'gsap'
 
-// Basic tween - animate to values
-gsap.to(".box", {
-  x: 100,
-  rotation: 360,
-  duration: 1,
-  ease: "power2.out"
-});
+// Basic tween
+gsap.to('.box', { x: 200, duration: 1 })
+
+// From animation
+gsap.from('.box', { opacity: 0, y: 50, duration: 0.5 })
+
+// Timeline sequence
+const tl = gsap.timeline()
+tl.to('.box1', { x: 100 })
+  .to('.box2', { x: 100 }, '-=0.5')  // overlap by 0.5s
+  .to('.box3', { x: 100 }, '<')       // same start as previous
 ```
 
-## Core Methods
+## Core Concepts
 
-### gsap.to() - Animate TO values
-```javascript
-gsap.to(".element", {
-  x: 200,           // translateX
-  y: 100,           // translateY
-  rotation: 180,    // degrees
-  scale: 1.5,
-  opacity: 0.5,
-  duration: 1,
-  delay: 0.5,
-  ease: "elastic.out(1, 0.3)"
-});
-```
+| Concept | Description |
+|---------|-------------|
+| **Tween** | Single animation that changes properties over time |
+| **Timeline** | Container for sequencing tweens with precise control |
+| **Ease** | Controls animation velocity curve (default: `power1.out`) |
+| **ScrollTrigger** | Links animations to scroll position |
+| **Plugin** | Extends GSAP with specialized capabilities |
 
-### gsap.from() - Animate FROM values
-```javascript
-// Element animates FROM these values to current state
-gsap.from(".element", {
-  x: -200,
-  opacity: 0,
-  duration: 1
-});
-```
+## Reference Index
 
-### gsap.fromTo() - Define both start and end
-```javascript
-gsap.fromTo(".element",
-  { x: 0, opacity: 0 },     // from
-  { x: 200, opacity: 1, duration: 1 }  // to
-);
-```
-
-### gsap.set() - Immediate property set (no animation)
-```javascript
-gsap.set(".element", { x: 100, opacity: 0 });
-```
-
-## Timeline Sequences
-
-Timelines group animations with precise timing control.
-
-```javascript
-const tl = gsap.timeline({
-  defaults: { duration: 0.5, ease: "power2.out" }
-});
-
-tl.to(".box1", { x: 100 })
-  .to(".box2", { x: 100 }, "-=0.3")  // overlap by 0.3s
-  .to(".box3", { x: 100 }, "+=0.2")  // delay by 0.2s
-  .to(".box4", { x: 100 }, "<")      // same start as previous
-  .to(".box5", { x: 100 }, "<0.1");  // 0.1s after previous starts
-
-// Control playback
-tl.play();
-tl.pause();
-tl.reverse();
-tl.restart();
-tl.seek(1.5);  // jump to 1.5 seconds
-```
-
-### Position Parameter
-```javascript
-tl.to(el, {x: 100}, 2)        // absolute: 2 seconds into timeline
-tl.to(el, {x: 100}, "+=1")    // relative: 1 second after previous ends
-tl.to(el, {x: 100}, "-=0.5")  // overlap: 0.5s before previous ends
-tl.to(el, {x: 100}, "<")      // same time as previous animation starts
-tl.to(el, {x: 100}, ">")      // when previous animation ends
-tl.to(el, {x: 100}, "myLabel") // at label position
-```
-
-## Special Properties
-
-| Property | Description | Example |
-|----------|-------------|---------|
-| `duration` | Animation length (seconds) | `duration: 1` |
-| `delay` | Wait before starting | `delay: 0.5` |
-| `ease` | Timing curve | `ease: "power2.inOut"` |
-| `repeat` | Times to repeat (-1 = infinite) | `repeat: 3` |
-| `yoyo` | Reverse on alternate repeats | `yoyo: true` |
-| `stagger` | Delay between multiple targets | `stagger: 0.1` |
-| `onComplete` | Callback when done | `onComplete: () => {}` |
-| `onUpdate` | Callback each frame | `onUpdate: () => {}` |
-| `paused` | Start paused | `paused: true` |
-
-## Stagger Animations
-
-```javascript
-// Simple stagger
-gsap.to(".boxes", {
-  x: 100,
-  stagger: 0.1  // 0.1s between each
-});
-
-// Advanced stagger
-gsap.to(".boxes", {
-  x: 100,
-  stagger: {
-    each: 0.1,
-    from: "center",  // start from center element
-    grid: [4, 5],    // 4 rows, 5 columns
-    axis: "y",       // stagger by row
-    ease: "power2.in"
-  }
-});
-```
-
-## Easing
-
-```javascript
-// Built-in eases
-"none"              // linear
-"power1.out"        // subtle
-"power2.out"        // moderate (default)
-"power3.out"        // strong
-"power4.out"        // more pronounced
-"back.out(1.7)"     // overshoot
-"elastic.out(1, 0.3)" // bouncy
-"bounce.out"        // bounce effect
-"circ.out"          // circular
-"expo.out"          // exponential
-
-// Directions: .in, .out, .inOut
-"power2.in"         // slow start
-"power2.out"        // slow end
-"power2.inOut"      // slow both ends
-```
-
-## ScrollTrigger Plugin
-
-Scroll-based animations - register plugin first.
-
-```javascript
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
-
-// Basic scroll trigger
-gsap.to(".box", {
-  scrollTrigger: ".box",  // trigger when .box enters viewport
-  x: 500,
-  rotation: 360
-});
-
-// Advanced configuration
-gsap.to(".parallax", {
-  scrollTrigger: {
-    trigger: ".parallax",
-    start: "top bottom",    // trigger start: element top, viewport bottom
-    end: "bottom top",      // trigger end: element bottom, viewport top
-    scrub: true,            // link animation to scroll position
-    pin: true,              // pin element during animation
-    markers: true,          // debug markers (remove in production)
-    toggleActions: "play pause reverse reset"
-  },
-  y: -200,
-  ease: "none"
-});
-```
-
-### ScrollTrigger Options
-
-```javascript
-scrollTrigger: {
-  trigger: ".element",      // element that triggers
-  start: "top center",      // [trigger position] [scroller position]
-  end: "bottom center",
-
-  // Scrub - link to scroll
-  scrub: true,              // instant scrub
-  scrub: 0.5,              // smoothing (seconds to catch up)
-
-  // Pin element
-  pin: true,
-  pinSpacing: true,
-
-  // Toggle actions: onEnter onLeave onEnterBack onLeaveBack
-  toggleActions: "play none none reverse",
-  toggleClass: "active",
-
-  // Callbacks
-  onEnter: () => {},
-  onLeave: () => {},
-  onEnterBack: () => {},
-  onLeaveBack: () => {},
-  onUpdate: (self) => console.log(self.progress),
-
-  // Horizontal scroll
-  horizontal: true,
-
-  // Custom scroller
-  scroller: ".scroll-container",
-
-  // Snap to sections
-  snap: {
-    snapTo: 1 / 4,         // snap to quarter sections
-    duration: 0.5,
-    ease: "power2.inOut"
-  }
-}
-```
-
-## React Integration
-
-Use the official `@gsap/react` package for proper cleanup.
-
-```bash
-npm install @gsap/react
-```
-
-```jsx
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-
-gsap.registerPlugin(useGSAP);
-
-function Component() {
-  const container = useRef();
-
-  useGSAP(() => {
-    // Animations auto-cleanup on unmount
-    gsap.to(".box", { x: 360, rotation: 360 });
-  }, { scope: container }); // scope animations to container
-
-  return (
-    <div ref={container}>
-      <div className="box">Animate me</div>
-    </div>
-  );
-}
-```
-
-### With Context for Manual Control
-
-```jsx
-function Component() {
-  const container = useRef();
-
-  const { contextSafe } = useGSAP({ scope: container });
-
-  // Wrap event handlers with contextSafe
-  const handleClick = contextSafe(() => {
-    gsap.to(".box", { rotation: "+=360" });
-  });
-
-  return (
-    <div ref={container}>
-      <button onClick={handleClick}>Rotate</button>
-      <div className="box" />
-    </div>
-  );
-}
-```
-
-## Other Plugins (All FREE)
-
-```javascript
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Flip } from "gsap/Flip";
-import { Draggable } from "gsap/Draggable";
-import { MotionPathPlugin } from "gsap/MotionPathPlugin";
-import { TextPlugin } from "gsap/TextPlugin";
-import { SplitText } from "gsap/SplitText";
-import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
-import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
-import { ScrollSmoother } from "gsap/ScrollSmoother";
-
-gsap.registerPlugin(
-  ScrollTrigger, Flip, Draggable, MotionPathPlugin,
-  TextPlugin, SplitText, MorphSVGPlugin, DrawSVGPlugin,
-  ScrollSmoother
-);
-```
-
-## Performance Tips
-
-1. **Use transforms and opacity** - GPU accelerated, no layout recalc
-2. **Avoid** animating width, height, top, left, margin, padding
-3. **Use will-change sparingly** - `will-change: transform`
-4. **Limit concurrent animations** - batch or stagger
-5. **Use `gsap.quickTo()`** for frequently updated values:
-
-```javascript
-const xTo = gsap.quickTo(".box", "x", { duration: 0.3 });
-const yTo = gsap.quickTo(".box", "y", { duration: 0.3 });
-
-window.addEventListener("mousemove", (e) => {
-  xTo(e.clientX);
-  yTo(e.clientY);
-});
-```
+| Reference | Use When |
+|-----------|----------|
+| `references/00-cheatsheet.md` | Quick reference, common operations at a glance |
+| `references/01-core.md` | Basic tweens, special properties, callbacks, quickTo, ticker |
+| `references/02-easing.md` | Easing functions, custom eases |
+| `references/03-timeline.md` | Sequencing, positioning, labels, nesting |
+| `references/04-stagger.md` | Staggered animations, grid distributions |
+| `references/05-utilities.md` | Helper functions (toArray, clamp, interpolate) |
+| `references/06-scrolltrigger.md` | Scroll-based animations, pin, scrub, snap |
+| `references/07-scrollsmoother.md` | Smooth scrolling, parallax effects |
+| `references/08-splittext.md` | Text splitting and animation |
+| `references/09-svg-plugins.md` | DrawSVG, MorphSVG, MotionPath |
+| `references/10-flip.md` | Layout animations (FLIP technique) |
+| `references/11-react.md` | useGSAP hook, cleanup, React patterns |
+| `references/12-observer-draggable.md` | Gesture detection, draggable elements |
+| `references/13-text-plugins.md` | TextPlugin, ScrambleTextPlugin |
 
 ## Common Patterns
 
-### Fade In on Scroll
-```javascript
-gsap.utils.toArray(".fade-in").forEach((el) => {
-  gsap.from(el, {
-    scrollTrigger: {
-      trigger: el,
-      start: "top 80%",
-    },
-    y: 50,
-    opacity: 0,
-    duration: 1
-  });
-});
-```
+### Fade In on Load
 
-### Horizontal Scroll Section
 ```javascript
-const sections = gsap.utils.toArray(".panel");
-gsap.to(sections, {
-  xPercent: -100 * (sections.length - 1),
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".container",
-    pin: true,
-    scrub: 1,
-    snap: 1 / (sections.length - 1),
-    end: () => "+=" + document.querySelector(".container").offsetWidth
-  }
-});
-```
-
-### Text Reveal
-```javascript
-const split = new SplitText(".headline", { type: "chars, words" });
-gsap.from(split.chars, {
+gsap.from('.hero', {
   opacity: 0,
-  y: 50,
-  stagger: 0.02,
-  duration: 0.5,
-  ease: "back.out"
-});
+  y: 30,
+  duration: 1,
+  ease: 'power2.out'
+})
 ```
 
-## Reference Files
+### Staggered List Animation
 
-- [references/scrolltrigger.md](references/scrolltrigger.md) - Complete ScrollTrigger guide
-- [references/plugins.md](references/plugins.md) - All GSAP plugins overview
+```javascript
+gsap.from('.list-item', {
+  opacity: 0,
+  y: 20,
+  stagger: 0.1,
+  duration: 0.5
+})
+```
+
+### Scroll-Triggered Animation
+
+```javascript
+gsap.registerPlugin(ScrollTrigger)
+
+gsap.to('.box', {
+  x: 500,
+  scrollTrigger: {
+    trigger: '.box',
+    start: 'top 80%',
+    end: 'top 20%',
+    scrub: true
+  }
+})
+```
+
+### Timeline with Controls
+
+```javascript
+const tl = gsap.timeline({ paused: true })
+tl.to('.modal', { opacity: 1, scale: 1, duration: 0.3 })
+  .from('.modal-content', { y: 20, opacity: 0 }, '-=0.1')
+
+// Control playback
+tl.play()
+tl.reverse()
+tl.progress(0.5)
+```
+
+## Critical Mistakes to Avoid
+
+### 1. Missing Plugin Registration
+
+```javascript
+// ❌ Plugin won't work
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+gsap.to('.box', { scrollTrigger: { ... } })
+
+// ✅ Register plugins first
+gsap.registerPlugin(ScrollTrigger)
+gsap.to('.box', { scrollTrigger: { ... } })
+```
+
+### 2. React Cleanup Issues
+
+```javascript
+// ❌ Memory leaks, zombie animations
+useEffect(() => {
+  gsap.to('.box', { x: 100 })
+}, [])
+
+// ✅ Use useGSAP hook for automatic cleanup
+import { useGSAP } from '@gsap/react'
+useGSAP(() => {
+  gsap.to('.box', { x: 100 })
+}, { scope: containerRef })
+```
+
+### 3. Conflicting Tweens
+
+```javascript
+// ❌ Two tweens fighting for same property
+gsap.to('.box', { x: 100, duration: 2 })
+gsap.to('.box', { x: 200, duration: 1 })
+
+// ✅ Use overwrite or kill previous
+gsap.to('.box', { x: 100, duration: 2, overwrite: true })
+// or
+gsap.killTweensOf('.box')
+gsap.to('.box', { x: 200, duration: 1 })
+```
+
+### 4. ScrollTrigger Not Refreshing
+
+```javascript
+// ❌ Layout changes but ScrollTrigger uses old positions
+dynamicallyAddContent()
+
+// ✅ Refresh after DOM/layout changes
+dynamicallyAddContent()
+ScrollTrigger.refresh()
+```
+
+### 5. Animating Non-Existent Elements
+
+```javascript
+// ❌ Element not in DOM yet
+gsap.to('.dynamic-element', { x: 100 })
+
+// ✅ Wait for element or use immediateRender: false
+gsap.to('.dynamic-element', {
+  x: 100,
+  immediateRender: false,
+  scrollTrigger: { ... }
+})
+```
+
+### 6. Wrong from() Behavior
+
+```javascript
+// ❌ from() renders immediately, causing flash
+gsap.from('.box', { opacity: 0 })
+
+// ✅ Set initial state in CSS or use fromTo
+// CSS: .box { opacity: 0; }
+gsap.to('.box', { opacity: 1 })
+
+// or use fromTo for explicit control
+gsap.fromTo('.box', { opacity: 0 }, { opacity: 1 })
+```
+
+### 7. Forgetting Selector Scope
+
+```javascript
+// ❌ Affects ALL .box elements on page
+gsap.to('.box', { x: 100 })
+
+// ✅ Scope to container
+gsap.to('.box', { x: 100 }, { scope: containerRef })
+// or use gsap.utils.selector
+const q = gsap.utils.selector(container)
+gsap.to(q('.box'), { x: 100 })
+```
+
+## Quick Reference
+
+| Task | Solution |
+|------|----------|
+| Animate to values | `gsap.to(target, { props })` |
+| Animate from values | `gsap.from(target, { props })` |
+| Animate both directions | `gsap.fromTo(target, { from }, { to })` |
+| Set instantly | `gsap.set(target, { props })` |
+| Create timeline | `gsap.timeline({ options })` |
+| Kill all tweens | `gsap.killTweensOf(target)` |
+| Global defaults | `gsap.defaults({ ease, duration })` |
+| Register plugin | `gsap.registerPlugin(Plugin)` |
+| Get by ID | `gsap.getById('myTween')` |
+| Match media | `gsap.matchMedia()` |
+
+## Plugin Availability
+
+| Plugin | License | Description |
+|--------|---------|-------------|
+| ScrollTrigger | Free | Scroll-based animations |
+| Observer | Free | Gesture/scroll detection |
+| Draggable | Free | Drag interactions |
+| Flip | Free | Layout animations |
+| TextPlugin | Free | Text content animation |
+| ScrollSmoother | Club | Smooth scrolling |
+| SplitText | Club | Text splitting |
+| DrawSVG | Club | SVG stroke animation |
+| MorphSVG | Club | SVG morphing |
+| MotionPath | Club | Path-based motion |
+| ScrollTo | Free | Scroll to position |

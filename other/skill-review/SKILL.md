@@ -1,412 +1,180 @@
 ---
 name: skill-review
-description: |
-  Audit claude-skills repository documentation with systematic 9-phase review: standards compliance, official docs verification via Context7/WebFetch, code examples accuracy, cross-file consistency, and version drift detection. Auto-fixes unambiguous issues with severity classification.
-
-  Use when: investigating skill issues, major package updates detected (e.g., v1.x → v2.x), skill not verified >90 days, before marketplace submission, or troubleshooting outdated API patterns, contradictory examples, broken links, version drift.
-
-license: MIT
-metadata:
-  version: 1.0.0
-  last_verified: 2025-11-08
-  production_tested: better-auth v2.0.0 audit (2025-11-08)
-  token_savings: ~80%
-  errors_prevented: 20+
-  official_docs: https://github.com/jezweb/claude-skills
-  triggers:
-    - "review this skill"
-    - "review the X skill"
-    - "audit the skill"
-    - "check if X needs updates"
-    - "is X skill current"
-    - "verify X documentation"
-    - "X skill seems outdated"
-allowed-tools:
-  - Read
-  - Bash
-  - Glob
-  - Grep
-  - WebFetch
-  - WebSearch
-  - Edit
-  - Write
+description: Reviews and validates agent skills against best practices. Triggers on "review this skill", "check my skill", "validate skill", "is this skill well-written", or when creating/editing skills.
 ---
 
-# Skill Review Skill
+# Skill Review
 
 ## Overview
 
-The skill-review skill provides a comprehensive, systematic process for auditing skills in the claude-skills repository. It combines automated technical validation with AI-powered verification to ensure skills remain accurate, current, and high-quality.
+Validates agent skills against the Agent Skills standard and compiled best practices. Reviews structure, frontmatter, description quality, progressive disclosure, and common anti-patterns.
 
-**Use this skill when**:
-- Investigating suspected issues in a skill
-- Major package version updates released (e.g., better-auth 1.x → 2.x)
-- Skill last verified >90 days ago
-- Before submitting skill to marketplace
-- User reports errors following skill instructions
-- Examples seem outdated or contradictory
+## When to Use
 
-**Production evidence**: Successfully audited better-auth skill (2025-11-08), found 6 critical/high issues including non-existent API imports, removed 665 lines of incorrect code, implemented v2.0.0 with correct patterns.
+- User asks to review or validate a skill
+- User is creating a new skill and wants feedback
+- User asks "is this skill well-written?"
+- User mentions skill quality, best practices, or improvement
 
----
+## Review Process
 
-## Quick Start
+### Phase 1: Load References
 
-### Invoke via Slash Command
+Before reviewing, read:
+- `references/best-practices.md` — Comprehensive guidelines
+- `references/checklist.md` — Quick validation checklist
+
+### Phase 2: Identify Target
+
+Determine what to review:
+- **Single skill**: Review `skills/<name>/SKILL.md` and its structure
+- **All skills**: Audit entire `skills/` directory
+- **New skill draft**: Review provided content before creation
+
+### Phase 3: Structural Audit
+
+Check the skill directory structure:
 
 ```
-/review-skill <skill-name>
+skill-name/
+├── SKILL.md              # Required
+├── references/           # Optional - loaded docs
+├── scripts/              # Optional - executable code
+└── assets/               # Optional - output files (not loaded)
 ```
 
-**Example**:
-```
-/review-skill better-auth
-```
+**Verify:**
+- [ ] SKILL.md exists
+- [ ] Directory name matches `name` in frontmatter
+- [ ] References are one level deep (no nested chains)
+- [ ] Scripts use forward slashes (no Windows paths)
+- [ ] No extraneous files (README.md, CHANGELOG.md, etc.)
+- [ ] Script paths in SKILL.md body (`scripts/foo.py`) exist in directory
+- [ ] If scripts use external binaries, dependencies are documented
 
-### Invoke via Skill (Proactive)
+### Phase 4: Frontmatter Validation
 
-When Claude notices potential issues, it can suggest:
-```
-User: "I'm having trouble with better-auth and D1"
+Check YAML frontmatter:
 
-Claude: "I notice the better-auth skill was last verified 6 months ago.
-Would you like me to review it? Better-auth recently released v1.3
-with D1 changes."
-```
-
+```yaml
 ---
-
-## What This Skill Does
-
-### 9-Phase Systematic Audit
-
-1. **Pre-Review Setup** (5-10 min)
-   - Install skill locally: `./scripts/install-skill.sh <skill-name>`
-   - Check current version and last verified date
-   - Test skill discovery
-
-2. **Standards Compliance** (10-15 min)
-   - Validate YAML frontmatter (name, description, license)
-   - Check keyword comprehensiveness
-   - Verify third-person description style
-   - Ensure directory structure matches spec
-
-3. **Official Documentation Verification** (15-30 min)
-   - Use Context7 MCP or WebFetch to verify API patterns
-   - Check GitHub for recent updates and issues
-   - Verify package versions against npm registry
-   - Compare with production repositories
-
-4. **Code Examples & Templates Audit** (20-40 min)
-   - Verify import statements exist in current packages
-   - Check API method signatures match official docs
-   - Ensure schema consistency across files
-   - Test templates build and run
-
-5. **Cross-File Consistency** (15-25 min)
-   - Compare SKILL.md vs README.md examples
-   - Verify "Bundled Resources" section matches actual files
-   - Ensure configuration examples consistent
-
-6. **Dependencies & Versions** (10-15 min)
-   - Run `./scripts/check-versions.sh <skill-name>`
-   - Check for breaking changes in package updates
-   - Verify "Last Verified" date is recent
-
-7. **Issue Categorization** (10-20 min)
-   - Classify by severity: 🔴 Critical / 🟡 High / 🟠 Medium / 🟢 Low
-   - Document with evidence (GitHub URL, docs link, npm changelog)
-
-8. **Fix Implementation** (30 min - 4 hours)
-   - Auto-fix unambiguous issues
-   - Ask user only for architectural decisions
-   - Update all affected files consistently
-   - Bump version if breaking changes
-
-9. **Post-Fix Verification** (10-15 min)
-   - Test skill discovery
-   - Verify templates work
-   - Check no contradictions remain
-   - Commit with detailed changelog
-
-### Automated Checks (via script)
-
-The skill runs `./scripts/review-skill.sh <skill-name>` which checks:
-- ✅ YAML frontmatter syntax and required fields
-- ✅ Package version currency (npm)
-- ✅ Broken links (HTTP status)
-- ✅ TODO markers in code
-- ✅ File organization (expected directories exist)
-- ✅ "Last Verified" date staleness
-
-### Manual Verification (AI-powered)
-
-Claude performs:
-- 🔍 API method verification against official docs
-- 🔍 GitHub activity and issue checks
-- 🔍 Production repository comparisons
-- 🔍 Code example correctness
-- 🔍 Schema consistency validation
-
+name: skill-name          # Required: lowercase, hyphens, ≤64 chars
+description: >-           # Required: ≤1024 chars, third-person
+  What it does. When to use it.
 ---
-
-## Process Workflow
-
-### Step 1: Run Automated Checks
-
-```bash
-./scripts/review-skill.sh <skill-name>
 ```
 
-Interpret output to identify technical issues.
+**Validate:**
+- [ ] `name`: Lowercase with hyphens only (`[a-z0-9-]`)
+- [ ] `name`: ≤64 characters
+- [ ] `name`: No "anthropic" or "claude" in name
+- [ ] `description`: Non-empty, ≤1024 characters
+- [ ] `description`: Third-person voice (not "I can" or "You can")
+- [ ] `description`: Includes what it does AND when to trigger
+- [ ] `description`: Contains specific trigger phrases
 
-### Step 2: Execute Manual Verification
+### Phase 5: Description Quality
 
-For **Phase 3: Official Documentation Verification**:
+The description is **the** triggering mechanism. Evaluate:
 
-1. Use Context7 MCP (if available):
-   ```
-   Use Context7 to fetch: /websites/<package-docs>
-   Search for: [API method from skill]
-   ```
+**Good descriptions include:**
+- Specific actions: "Extract text and tables from PDF files"
+- Trigger phrases: "Use when analyzing Excel files, spreadsheets, or .xlsx"
+- Synonyms users might say: "tabular data, CSV, workbooks"
 
-2. Or use WebFetch:
-   ```
-   Fetch: https://<official-docs-url>
-   Verify: [specific patterns]
-   ```
+**Bad descriptions:**
+- Vague: "Helps with documents"
+- Generic: "Processes data"
+- Missing triggers: "Analyzes spreadsheets" (no "when to use")
 
-3. Check GitHub:
-   ```
-   Visit: https://github.com/<org>/<repo>/commits/main
-   Check: Last commit, recent changes
-   Search issues: [keywords from skill]
-   ```
+### Phase 6: Body Analysis
 
-4. Find production examples:
-   ```
-   WebSearch: "<package> cloudflare production github"
-   Compare: Do real projects match our patterns?
-   ```
+Review SKILL.md body content:
 
-For **Phase 4: Code Examples Audit**:
+**Length:**
+- [ ] Under 500 lines (check with `wc -l`)
+- [ ] If longer, split into reference files
 
-- Verify all imports exist (check official docs)
-- Check API method signatures match
-- Ensure schema consistency across files
-- Test templates actually work
+**Progressive Disclosure:**
+- [ ] Quick start or overview near top
+- [ ] Details moved to references/
+- [ ] Long reference files (>100 lines) have TOC
 
-### Step 3: Categorize Issues
+**Token Efficiency:**
+- [ ] No obvious explanations (Claude already knows)
+- [ ] Examples over lengthy prose
+- [ ] Each line justifies its token cost
 
-**🔴 CRITICAL** - Breaks functionality:
-- Non-existent API methods/imports
-- Invalid configuration
-- Missing required dependencies
+**Degrees of Freedom:**
+- [ ] High freedom for context-dependent tasks
+- [ ] Low freedom for fragile/error-prone tasks
+- [ ] Defaults provided when multiple options exist
 
-**🟡 HIGH** - Causes confusion:
-- Contradictory examples across files
-- Inconsistent patterns
-- Outdated major versions
+### Phase 7: Anti-Pattern Check
 
-**🟠 MEDIUM** - Reduces quality:
-- Stale minor versions (>90 days)
-- Missing documentation sections
-- Incomplete error lists
+Scan for common issues:
 
-**🟢 LOW** - Polish issues:
-- Typos, formatting inconsistencies
-- Missing optional metadata
+| Anti-Pattern | Look For |
+|-------------|----------|
+| Windows paths | `scripts\file.py` instead of `scripts/file.py` |
+| Nested references | A.md → B.md → C.md chains |
+| Time-sensitive info | "If before August 2025..." |
+| Magic numbers | Unexplained values |
+| Too many options | "You can use X, or Y, or Z..." without default |
+| Inconsistent terms | Mixing "endpoint"/"URL"/"route" |
+| User-facing docs | README, CHANGELOG, installation guides |
+| First/second person descriptions | "I can help" or "You can use" |
 
-### Step 4: Fix Issues
+### Phase 8: Report Findings
 
-**Auto-fix** when:
-- ✅ Fix is unambiguous (correct import from docs)
-- ✅ Evidence is clear
-- ✅ No architectural impact
+Present findings using this format:
 
-**Ask user** when:
-- ❓ Multiple valid approaches
-- ❓ Breaking change decision
-- ❓ Architectural choice
-
-**Format for questions**:
 ```
-I found [issue]. There are [N] approaches:
+## Skill Review: [skill-name]
 
-1. [Approach A] - [Pros/Cons]
-2. [Approach B] - [Pros/Cons]
+### Summary
+[1-2 sentence overall assessment]
 
-Recommendation: [Default based on evidence]
+### Structure
+[✓/✗] Directory organization
+[✓/✗] File presence
+[✓/✗] Reference depth
 
-Which would you prefer?
-```
+### Frontmatter
+[✓/✗] name validation
+[✓/✗] description validation
 
-### Step 5: Version Bump Assessment
-
-If breaking changes:
-- Major: v1.0.0 → v2.0.0 (API patterns change)
-- Minor: v1.0.0 → v1.1.0 (new features, backward compatible)
-- Patch: v1.0.0 → v1.0.1 (bug fixes only)
-
-### Step 6: Generate Audit Report
-
-```markdown
-## Skill Review Report: <skill-name>
-
-**Date**: YYYY-MM-DD
-**Trigger**: [Why review performed]
-**Time Spent**: [Duration]
-
-### Findings
-
-🔴 CRITICAL (N): [List with evidence]
-🟡 HIGH (N): [List with evidence]
-🟠 MEDIUM (N): [List with evidence]
-🟢 LOW (N): [List with evidence]
-
-### Remediation
-
-**Files Modified**: [List]
-**Version Update**: [old] → [new]
-**Breaking Changes**: Yes/No
-
-### Verification
-
-✅ Discovery test passed
-✅ Templates work
-✅ Committed: [hash]
-
-### Recommendation
-
-[Final assessment]
+### Description Quality
+**Score**: [Strong / Adequate / Needs Work]
+**Issues**: [List specific problems]
+**Suggested rewrite** (if needed):
+```yaml
+description: >-
+  [Improved description]
 ```
 
----
+### Body Analysis
+**Line count**: [X] lines
+**Token efficiency**: [Good / Could trim]
+**Progressive disclosure**: [✓/✗]
 
-## Example: better-auth Audit
+### Anti-Patterns Found
+- [Issue 1] — Location: `file:line`
+- [Issue 2] — Location: `file:line`
 
-### Findings
+### Recommendations
+1. [Actionable fix]
+2. [Actionable fix]
+```
 
-**Issue #1: Non-existent d1Adapter** 🔴 CRITICAL
+## Quick Review Mode
 
-*Location*: `references/cloudflare-worker-example.ts:17`
+For rapid validation, run through the checklist in `references/checklist.md` and report only failures.
 
-*Problem*: Imports `d1Adapter` from `'better-auth/adapters/d1'` which doesn't exist
+## Resources
 
-*Evidence*:
-- Official docs: https://better-auth.com/docs/integrations/drizzle
-- GitHub: No `d1Adapter` export in codebase
-- Production: 4 repos use Drizzle/Kysely
+### references/best-practices.md
+Comprehensive guide covering architecture, design principles, writing effective descriptions, bundled resources, workflow patterns, and advanced patterns from production skills.
 
-*Fix*: Replace with `drizzleAdapter` from `'better-auth/adapters/drizzle'`
-
-### Result
-
-- **Files deleted**: 3 (obsolete patterns)
-- **Files created**: 3 (correct patterns)
-- **Lines changed**: +1,266 net
-- **Version**: v1.0.0 → v2.0.0
-- **Time**: 3.5 hours
-
----
-
-## Bundled Resources
-
-This skill references:
-
-1. **`planning/SKILL_REVIEW_PROCESS.md`** - Complete 9-phase manual guide
-2. **`scripts/review-skill.sh`** - Automated validation script
-3. **`.claude/commands/review-skill.md`** - Slash command definition
-
----
-
-## When Claude Should Invoke This Skill
-
-**Proactive triggers**:
-- User mentions skill seems outdated
-- Package major version mentioned
-- User reports errors following skill
-- Checking metadata shows >90 days since verification
-
-**Explicit triggers**:
-- "review the X skill"
-- "audit better-auth skill"
-- "is cloudflare-worker-base up to date?"
-- "check if tailwind-v4-shadcn needs updating"
-
----
-
-## Token Efficiency
-
-**Without this skill**: ~25,000 tokens
-- Trial-and-error verification
-- Repeated doc lookups
-- Inconsistent fixes across files
-- Missing evidence citations
-
-**With this skill**: ~5,000 tokens
-- Systematic process
-- Clear decision trees
-- Evidence-based fixes
-- Comprehensive audit trail
-
-**Savings**: ~80% (20,000 tokens)
-
----
-
-## Common Issues Prevented
-
-1. **Fake API adapters** - Non-existent imports
-2. **Stale API methods** - Changed signatures
-3. **Schema inconsistency** - Different table names
-4. **Outdated scripts** - Deprecated approaches
-5. **Version drift** - Packages >90 days old
-6. **Contradictory examples** - Multiple conflicting patterns
-7. **Broken links** - 404 documentation URLs
-8. **YAML errors** - Invalid frontmatter syntax
-9. **Missing keywords** - Poor discoverability
-10. **Incomplete bundled resources** - Listed files don't exist
-
----
-
-## Best Practices
-
-1. **Always cite sources** - GitHub URL, docs link, npm changelog
-2. **No assumptions** - Verify against current official docs
-3. **Be systematic** - Follow all 9 phases
-4. **Fix consistency** - Update all files, not just one
-5. **Document thoroughly** - Detailed commit messages
-6. **Test after fixes** - Verify skill still works
-
----
-
-## Known Limitations
-
-- Link checking requires network access
-- Package version checks need npm installed
-- Context7 MCP availability varies by package
-- Production repo search may need GitHub API
-- Manual phases require human judgment
-
----
-
-## Version History
-
-**v1.0.0** (2025-11-08)
-- Initial release
-- 9-phase systematic audit process
-- Automated script + manual guide
-- Slash command + skill wrapper
-- Production-tested on better-auth v2.0.0 audit
-
----
-
-## Additional Resources
-
-- **Full Process Guide**: `planning/SKILL_REVIEW_PROCESS.md`
-- **Repository**: https://github.com/jezweb/claude-skills
-- **Example Audit**: See process guide Appendix B (better-auth v2.0.0)
-
----
-
-**Last verified**: 2025-11-08 | **Version**: 1.0.0
+### references/checklist.md
+Quick-reference validation checklist for fast reviews.

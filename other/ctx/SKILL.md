@@ -1,118 +1,228 @@
 ---
 name: ctx
-description: Use when starting a session on a project, returning after time away, or before making significant changes. Essential for building comprehensive understanding of project state through total recall and oracle-driven exploration.
+description: Load PRD, FRD, Tech Spec, or RFC into context
+argument-hint: <doc-id|path>
 ---
 
-# Contextualize
+# ctx (Context Hydration)
 
-You need to fully contextualize yourself in this repository before doing any work.
+**Category**: Context Management
 
-## Step 1: Search Total Recall
+## Usage
 
-First, search Total Recall for relevant context about this project:
-
-```
-mcp__plugin_totalrecall_memory-total-recall__synthesis_search({
-  query: "project name/key terms recent work decisions made",
-  max_results: 15
-})
+```bash
+/ctx <doc-reference>
 ```
 
-Look for:
-- Recent conversations about this project
-- Decisions that were made
-- Problems that were solved
-- Patterns established
-- Gotchas discovered
+## Arguments
 
-## Step 2: Dispatch the Oracle for Deep Context
+- `<doc-reference>`: Required - Document identifier or path. Accepts:
+  - Document IDs: `PRD-001`, `FRD-042`, `TS-0045`, `RFC-0042`
+  - Partial names: `user-auth`, `payment-gateway`
+  - File paths: `./product-docs/prds/active/user-auth-prd.md`
 
-Use the Oracle to gather comprehensive context:
+## Execution Instructions for Claude Code
 
+When this command is run, Claude Code should:
+
+1. **Identify Document Type and Location**
+
+   Search order by ID prefix:
+   | Prefix | Type | Search Locations |
+   |--------|------|------------------|
+   | `PRD-` | Product PRD | `product-docs/prds/` |
+   | `FRD-` | Feature PRD | `product-docs/prds/` |
+   | `TS-` | Tech Spec | `tech-specs/` |
+   | `RFC-` | RFC | `rfcs/` |
+
+   If no prefix, search all locations for partial name match.
+
+2. **Search for Document**
+
+   ```
+   # Search patterns by type
+   PRD/FRD: product-docs/prds/**/*<query>*.md
+   Tech Spec: tech-specs/**/*<query>*.md
+   RFC: rfcs/**/*<query>*.md
+   ```
+
+3. **Handle Multiple Matches**
+
+   If multiple documents match, display options:
+   ```
+   Multiple documents match "auth":
+
+   1. PRD-001-user-authentication-prd.md (PRD)
+   2. FRD-015-oauth-integration-frd.md (FRD)
+   3. TS-0044-auth-implementation.md (Tech Spec)
+   4. RFC-0043-auth-redesign.md (RFC)
+
+   Which document to load? [1-4]
+   ```
+
+4. **Read and Present Document**
+
+   Read the full document content and present with context header:
+
+   ```
+   ═══════════════════════════════════════════════════════════
+   📄 CONTEXT LOADED: PRD-001 - User Authentication System
+   ═══════════════════════════════════════════════════════════
+
+   Type:     Product PRD
+   Status:   ACTIVE
+   Version:  1.2
+   Location: product-docs/prds/active/PRD-001-user-authentication-prd.md
+
+   Related Documents:
+   - Tech Spec: TS-0044-auth-implementation.md
+   - Tasks: tasks/PRD-001-tasks.md
+
+   ───────────────────────────────────────────────────────────
+
+   [Full document content here]
+
+   ═══════════════════════════════════════════════════════════
+   Context loaded. Ready to work on this document.
+   ═══════════════════════════════════════════════════════════
+   ```
+
+5. **Extract Related Documents**
+
+   Parse the loaded document for references to other documents:
+   - Links to RFCs, Tech Specs, PRDs, FRDs
+   - Task file references
+   - Dependency references
+
+   Offer to load related documents:
+   ```
+   💡 Related documents found:
+      - RFC-0043 (linked)
+      - TS-0044 (implementation spec)
+
+   Load related? [y/N]
+   ```
+
+## Loading Multiple Documents
+
+Support loading multiple documents at once:
+
+```bash
+# Load multiple by ID
+/ctx PRD-001 RFC-0043
+
+# Load all related to a PRD
+/ctx PRD-001 --related
+
+# Load PRD with its tech spec and tasks
+/ctx PRD-001 --full
 ```
-Task(
-  subagent_type: "general-purpose",
-  model: "opus",
-  prompt: """
-  You are The Oracle - contextualize yourself deeply in this repository.
 
-  MISSION: Build comprehensive understanding of the current project state.
+### Options
 
-  INVESTIGATE:
+| Option | Description |
+|--------|-------------|
+| `--related` | Also load all related/linked documents |
+| `--full` | Load document + tech spec + tasks |
+| `--summary` | Show only metadata and overview, not full content |
 
-  1. **Project Identity**
-     - Read CLAUDE.md, README.md, package.json (or equivalent)
-     - What is this project? What does it do?
-     - What are the core technologies and patterns?
-     - What are the established conventions?
+## Output Modes
 
-  2. **Current Work Status**
-     - Check .plans/ directory for active plans
-     - Check .tasks/ or TODO files for pending work
-     - Check git status and recent commits (git log -10 --oneline)
-     - What was being worked on? What's in progress?
+### Default (Full Content)
+Loads complete document content into context.
 
-  3. **Decision History**
-     - Check .plans/DECISIONS.md or .plans/decisions/
-     - What major decisions have been made?
-     - What constraints exist from past choices?
+### Summary Mode (`--summary`)
+```
+📄 PRD-001: User Authentication System
+   Status: ACTIVE | Version: 1.2 | Progress: 67%
 
-  4. **Architecture Overview**
-     - Map the key directories and their purposes
-     - Identify core modules/services
-     - Understand the data flow
+   Overview:
+   Implement secure user authentication with OAuth 2.0 support,
+   including social login providers and MFA capabilities.
 
-  5. **Pain Points & Context**
-     - Look for TODOs, FIXMEs, HACKs in code
-     - Check for any KNOWN_ISSUES or TROUBLESHOOTING docs
-     - Identify technical debt markers
+   Key Sections:
+   - User Stories (12 items)
+   - Technical Requirements (8 items)
+   - Success Metrics (5 KPIs)
 
-  DELIVERABLE:
-  Provide a structured context report:
-
-  ## Project Summary
-  [What this is, in 2-3 sentences]
-
-  ## Current Status
-  - Active work: [what's in progress]
-  - Blocked items: [if any]
-  - Recent changes: [last few commits summary]
-
-  ## Key Decisions to Remember
-  - [Decision 1]
-  - [Decision 2]
-
-  ## Established Patterns
-  - [Pattern 1]: [where/how used]
-  - [Pattern 2]: [where/how used]
-
-  ## Conventions & Constraints
-  - [Convention from CLAUDE.md]
-  - [Technical constraint]
-
-  ## Recommended Next Steps
-  Based on current state, suggest what to focus on.
-
-  Be thorough. This context will guide all subsequent work.
-  """
-)
+   Use '/ctx PRD-001' for full content.
 ```
 
-## Step 3: Synthesize and Report
+## Document Type Detection
 
-After gathering context from memory and Oracle:
+Infer document type from:
 
-1. **Summarize** the key findings for the user
-2. **Highlight** anything that seems urgent or blocked
-3. **Confirm** understanding of current priorities
-4. **Ask** if there's specific context you're missing
+1. **Filename patterns**
+   - `*-prd.md` → Product PRD
+   - `*-frd.md` → Feature PRD
+   - `TS-*` → Tech Spec
+   - `RFC-*` → RFC
 
-## When to Use This Command
+2. **Directory location**
+   - `product-docs/prds/` → PRD/FRD
+   - `tech-specs/` → Tech Spec
+   - `rfcs/` → RFC
 
-- Starting a new session on a project
-- Returning to a project after time away
-- Before making significant changes
-- When feeling uncertain about project state
-- After another developer has made changes
+3. **Frontmatter type field**
+   ```yaml
+   type: product-prd | feature-frd | tech-spec | rfc
+   ```
 
-**Remember**: Context prevents mistakes. Take the time to understand before acting.
+## Error Handling
+
+- **Document not found**: Show search suggestions
+  ```
+  Document "auth-prd" not found.
+
+  Did you mean:
+  - user-authentication-prd.md
+  - oauth-auth-frd.md
+
+  Or search all docs: /list-prds, /list-tech-specs, /list-rfcs
+  ```
+
+- **Invalid path**: Suggest correct format
+- **Empty document**: Warn and show metadata only
+
+## Examples
+
+```bash
+# Load by document ID
+/ctx PRD-001
+/ctx RFC-0043
+/ctx TS-0044
+
+# Load by partial name
+/ctx user-auth
+/ctx payment-gateway
+
+# Load by path
+/ctx ./product-docs/prds/active/user-auth-prd.md
+
+# Load with related documents
+/ctx PRD-001 --related
+
+# Load full context (PRD + tech spec + tasks)
+/ctx PRD-001 --full
+
+# Quick overview only
+/ctx PRD-001 --summary
+
+# Load multiple documents
+/ctx PRD-001 RFC-0043 TS-0044
+```
+
+## Integration Tips
+
+1. **After loading context**: Ready to answer questions, implement tasks, or review the document
+2. **Combine with task-focus**: Load context then focus on specific task
+3. **Use summary mode**: Quick reference without full context load
+4. **Chain with other commands**: `/ctx PRD-001 && /generate-tasks`
+
+## Implementation Notes for Claude Code
+
+1. **Efficient Search**: Use glob patterns, don't read files until match confirmed
+2. **Cache Metadata**: Parse frontmatter first for quick filtering
+3. **Fuzzy Matching**: Support partial names and common abbreviations
+4. **Context Size**: Warn if document is very large (>2000 lines)
+5. **Related Discovery**: Parse document content for cross-references

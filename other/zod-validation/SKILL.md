@@ -1,151 +1,739 @@
 ---
 name: zod-validation
-description: |
-  Zodライブラリによるランタイムバリデーション、スキーマ定義、TypeScript型推論を専門とするスキル。
-  型安全なバリデーションロジックを設計・実装し、API・フォーム・ドメイン層での検証を網羅する。
-
-  Anchors:
-  • Zod Official Documentation / 適用: スキーマAPI・バリデーション / 目的: 公式パターン準拠
-  • Effective TypeScript (Dan Vanderkam) / 適用: 型設計・型推論 / 目的: ランタイム安全性担保
-  • @hookform/resolvers / 適用: フォーム統合 / 目的: React Hook Form連携
-
-  Trigger:
-  Use when implementing runtime validation with Zod, defining TypeScript schemas, integrating form validation (react-hook-form), or validating API requests/responses. Keywords: zod, schema, safeParse, refine, z.infer, zodResolver.
-allowed-tools:
-  - Bash
-  - Edit
-  - Glob
-  - Grep
-  - Read
-  - Write
-  - Task
+description: Runtime type validation with Zod for schema definition, form validation, API contracts, and TypeScript type inference. Use when validating user input, defining API schemas, or building type-safe data pipelines.
 ---
 
-# Zod Validation
+# Zod Validation Skill
 
-## 概要
+> TypeScript-first schema validation with static type inference
 
-Zodライブラリによるランタイムバリデーションとスキーマ定義を専門とするスキル。
-TypeScriptの型推論と組み合わせて、コンパイル時とランタイムの両方で型安全性を確保する。
+## Quick Reference
 
-## ワークフロー
+```typescript
+import { z } from "zod";
 
-### Phase 1: スキーマ設計
+// Define schema
+const UserSchema = z.object({
+  id: z.string().uuid(),
+  email: z.string().email(),
+  age: z.number().min(18).optional(),
+});
 
-**目的**: データ構造からZodスキーマを設計する
+// Infer TypeScript type
+type User = z.infer<typeof UserSchema>;
 
-**アクション**:
+// Validate data
+const result = UserSchema.safeParse(data);
+if (result.success) {
+  console.log(result.data); // Typed as User
+} else {
+  console.log(result.error.issues);
+}
+```
 
-1. バリデーション対象のデータ構造を分析
-2. TypeScript型からZodスキーマへマッピング
-3. 制約（min/max/regex/refine）を追加
-4. 再利用可能なスキーマパターンを適用
-5. `z.infer<typeof schema>` で型推論を確認
+---
 
-**Task**: `agents/schema-designer.md` を参照
+## Schema Primitives
 
-### Phase 2: バリデーション実装
+### Basic Types
 
-**目的**: 設計したスキーマでバリデーションロジックを実装する
+```typescript
+// Strings
+z.string();
+z.string().min(1); // Non-empty
+z.string().max(100);
+z.string().length(5);
+z.string().email();
+z.string().url();
+z.string().uuid();
+z.string().cuid();
+z.string().regex(/^[a-z]+$/);
+z.string().startsWith("https://");
+z.string().endsWith(".com");
+z.string().trim(); // Trims whitespace
+z.string().toLowerCase();
+z.string().toUpperCase();
 
-**アクション**:
+// Numbers
+z.number();
+z.number().int();
+z.number().positive();
+z.number().negative();
+z.number().nonnegative();
+z.number().min(0);
+z.number().max(100);
+z.number().multipleOf(5);
+z.number().finite();
+z.number().safe(); // Number.MIN_SAFE_INTEGER to MAX_SAFE_INTEGER
 
-1. parse/safeParseの適切な選択
-2. エラーハンドリングの実装
-3. カスタムバリデーション（refine/superRefine）の実装
-4. エラーメッセージのフォーマット
+// Booleans
+z.boolean();
 
-**Task**: `agents/validation-implementer.md` を参照
+// Dates
+z.date();
+z.date().min(new Date("2020-01-01"));
+z.date().max(new Date());
 
-### Phase 3: 統合
+// Special types
+z.undefined();
+z.null();
+z.void();
+z.any();
+z.unknown();
+z.never();
+z.nan();
+```
 
-**目的**: フレームワークやAPIにバリデーションを統合する
+### Literals and Enums
 
-**アクション**:
+```typescript
+// Literals
+const StatusLiteral = z.literal("active");
+const CodeLiteral = z.literal(200);
 
-- **フォーム統合**: react-hook-form + zodResolver
-- **API統合**: リクエスト/レスポンス検証
+// Native enums
+enum Role {
+  Admin = "admin",
+  User = "user",
+}
+const RoleSchema = z.nativeEnum(Role);
 
-**Task**: `agents/form-integrator.md` または `agents/api-validator.md` を参照
+// Zod enums (preferred)
+const StatusEnum = z.enum(["pending", "active", "archived"]);
+type Status = z.infer<typeof StatusEnum>; // "pending" | "active" | "archived"
 
-### Phase 4: 検証と記録
+// Extract enum values
+StatusEnum.options; // ["pending", "active", "archived"]
+StatusEnum.enum.pending; // "pending"
+```
 
-**目的**: 成果物の検証と実行記録の保存
+---
 
-**アクション**:
+## Object Schemas
 
-1. `scripts/validate-schema.mjs` でスキーマ構造を確認
-2. `scripts/validate-skill.mjs` でスキル構造を確認
-3. `scripts/log_usage.mjs` で記録を残す
+### Basic Objects
 
-## Task仕様ナビ
+```typescript
+const UserSchema = z.object({
+  id: z.string(),
+  name: z.string(),
+  email: z.string().email(),
+  age: z.number().optional(),
+  role: z.enum(["admin", "user"]).default("user"),
+});
 
-| Task               | リソース                         | 説明                                 |
-| ------------------ | -------------------------------- | ------------------------------------ |
-| スキーマ設計       | agents/schema-designer.md        | データ構造からZodスキーマを設計      |
-| バリデーション実装 | agents/validation-implementer.md | スキーマを使用したバリデーション実装 |
-| フォーム統合       | agents/form-integrator.md        | react-hook-form等との統合            |
-| API検証            | agents/api-validator.md          | APIリクエスト/レスポンス検証         |
+type User = z.infer<typeof UserSchema>;
+// { id: string; name: string; email: string; age?: number; role: "admin" | "user" }
+```
 
-## ベストプラクティス
+### Object Modifiers
 
-### すべきこと
+```typescript
+const BaseSchema = z.object({
+  id: z.string(),
+  name: z.string(),
+  email: z.string(),
+  password: z.string(),
+});
 
-- **型推論を活用する**: `z.infer<typeof schema>` を使用して型安全性を確保
-- **safeParseを使用する**: ユーザー入力には例外をスローしないsafeParseを使用
-- **エラーメッセージをカスタマイズする**: ユーザーフレンドリーなメッセージを定義
-- **スキーマを再利用する**: 共通パターンは抽出して再利用（extend, merge, pick, omit）
-- **段階的バリデーション**: 複雑なバリデーションはrefine/superRefineで実装
-- 詳細は `references/schema-patterns.md` と `references/validation-patterns.md` を参照
+// Partial - all fields optional
+const PartialUser = BaseSchema.partial();
 
-### 避けるべきこと
+// Required - all fields required
+const RequiredUser = BaseSchema.required();
 
-- **parseを直接使用しない**: ユーザー入力にはsafeParseを使用（例外回避）
-- **バリデーションロジックを分散させない**: 一箇所にまとめる
-- **非同期バリデーションを過度に使用しない**: パフォーマンスへの影響を考慮
-- **エラーハンドリングを省略しない**: すべてのバリデーション結果を処理
-- **any型を使用しない**: `z.any()` の使用は最小限に
+// Pick specific fields
+const UserCredentials = BaseSchema.pick({ email: true, password: true });
 
-## リソース参照
+// Omit fields
+const PublicUser = BaseSchema.omit({ password: true });
 
-### agents/（Task仕様書）
+// Extend with new fields
+const AdminSchema = BaseSchema.extend({
+  permissions: z.array(z.string()),
+});
 
-| ファイル                         | 説明                           |
-| -------------------------------- | ------------------------------ |
-| agents/schema-designer.md        | スキーマ設計のTask仕様書       |
-| agents/validation-implementer.md | バリデーション実装のTask仕様書 |
-| agents/form-integrator.md        | フォーム統合のTask仕様書       |
-| agents/api-validator.md          | API検証のTask仕様書            |
+// Merge two schemas
+const MergedSchema = BaseSchema.merge(z.object({ createdAt: z.date() }));
 
-### references/（詳細知識）
+// Make specific fields optional
+const CreateUserSchema = BaseSchema.partial({ id: true });
 
-| ファイル                           | 説明                           |
-| ---------------------------------- | ------------------------------ |
-| references/schema-patterns.md      | スキーマパターンと実装例       |
-| references/validation-patterns.md  | バリデーションパターンと実践例 |
-| references/integration-patterns.md | フレームワーク統合パターン     |
+// Strict mode - fail on unknown keys
+const StrictSchema = BaseSchema.strict();
 
-### scripts/（検証・ロギング）
+// Passthrough - allow unknown keys
+const PassthroughSchema = BaseSchema.passthrough();
 
-| スクリプト            | 説明                  | 使用法                                           |
-| --------------------- | --------------------- | ------------------------------------------------ |
-| `validate-schema.mjs` | Zodスキーマの構造検証 | `node scripts/validate-schema.mjs <schema-file>` |
-| `validate-skill.mjs`  | スキル構造の検証      | `node scripts/validate-skill.mjs`                |
-| `log_usage.mjs`       | 使用統計とログ記録    | `node scripts/log_usage.mjs --help`              |
+// Strip unknown keys (default behavior)
+const StrippedSchema = BaseSchema.strip();
+```
 
-### assets/（テンプレート）
+### Nested Objects
 
-| テンプレート                        | 説明                     | 用途                |
-| ----------------------------------- | ------------------------ | ------------------- |
-| assets/schema-template.ts           | 基本スキーマテンプレート | 新規スキーマ作成    |
-| assets/api-schema-template.ts       | APIスキーマテンプレート  | API検証実装         |
-| assets/form-validation-template.tsx | フォーム統合テンプレート | react-hook-form連携 |
+```typescript
+const AddressSchema = z.object({
+  street: z.string(),
+  city: z.string(),
+  zipCode: z.string().regex(/^\d{5}$/),
+  country: z.string().default("US"),
+});
 
-## 変更履歴
+const CompanySchema = z.object({
+  name: z.string(),
+  address: AddressSchema,
+  employees: z.array(UserSchema),
+});
 
-| Version | Date       | Changes                                                                     |
-| ------- | ---------- | --------------------------------------------------------------------------- |
-| 4.0.0   | 2026-01-01 | 18-skills.md完全準拠: 4エージェント体制、統合パターン追加、テンプレート拡充 |
-| 3.0.0   | 2026-01-01 | 18-skills.md仕様準拠：agents/追加、references/整理、ワークフロー刷新        |
-| 2.0.0   | 2025-12-31 | YAML frontmatter最適化、Task仕様ナビ追加                                    |
-| 1.0.0   | 2025-12-24 | 初版作成                                                                    |
+type Company = z.infer<typeof CompanySchema>;
+```
+
+---
+
+## Arrays, Tuples, and Records
+
+### Arrays
+
+```typescript
+// Basic array
+const StringArray = z.array(z.string());
+
+// Array with constraints
+const NonEmptyArray = z.array(z.number()).nonempty();
+const LimitedArray = z.array(z.string()).min(1).max(10);
+
+// Array of objects
+const UsersArray = z.array(UserSchema);
+
+// Set (unique values)
+const UniqueStrings = z.set(z.string());
+```
+
+### Tuples
+
+```typescript
+// Fixed-length array with specific types
+const CoordinateTuple = z.tuple([z.number(), z.number()]);
+type Coordinate = z.infer<typeof CoordinateTuple>; // [number, number]
+
+// Tuple with rest elements
+const NamedCoordinate = z.tuple([z.string(), z.number(), z.number()]);
+// ["label", x, y]
+
+// Variadic tuples
+const AtLeastTwo = z.tuple([z.string(), z.string()]).rest(z.string());
+```
+
+### Records and Maps
+
+```typescript
+// Record with string keys
+const StringRecord = z.record(z.string(), z.number());
+type StringToNumber = z.infer<typeof StringRecord>; // Record<string, number>
+
+// Record with enum keys
+const RolePermissions = z.record(
+  z.enum(["admin", "user", "guest"]),
+  z.array(z.string()),
+);
+
+// Map type
+const UserMap = z.map(z.string(), UserSchema);
+```
+
+---
+
+## Unions and Discriminated Unions
+
+### Basic Unions
+
+```typescript
+// Simple union
+const StringOrNumber = z.union([z.string(), z.number()]);
+// Shorthand
+const StringOrNumberAlt = z.string().or(z.number());
+
+// Nullable (T | null)
+const NullableString = z.string().nullable();
+
+// Nullish (T | null | undefined)
+const NullishString = z.string().nullish();
+
+// Optional (T | undefined)
+const OptionalString = z.string().optional();
+```
+
+### Discriminated Unions
+
+```typescript
+// Best for API responses and state machines
+const ResultSchema = z.discriminatedUnion("status", [
+  z.object({
+    status: z.literal("success"),
+    data: z.object({ id: z.string(), name: z.string() }),
+  }),
+  z.object({
+    status: z.literal("error"),
+    error: z.object({ code: z.number(), message: z.string() }),
+  }),
+]);
+
+type Result = z.infer<typeof ResultSchema>;
+
+// Usage
+function handleResult(result: Result) {
+  if (result.status === "success") {
+    console.log(result.data.name); // TypeScript knows data exists
+  } else {
+    console.log(result.error.message); // TypeScript knows error exists
+  }
+}
+
+// API response pattern
+const ApiResponseSchema = z.discriminatedUnion("type", [
+  z.object({ type: z.literal("user"), user: UserSchema }),
+  z.object({ type: z.literal("users"), users: z.array(UserSchema) }),
+  z.object({ type: z.literal("error"), message: z.string() }),
+]);
+```
+
+---
+
+## Refinements and Transforms
+
+### Refinements (Custom Validation)
+
+```typescript
+// Simple refinement
+const PositiveNumber = z.number().refine((n) => n > 0, {
+  message: "Number must be positive",
+});
+
+// Refinement with path
+const PasswordSchema = z
+  .object({
+    password: z.string().min(8),
+    confirmPassword: z.string(),
+  })
+  .refine((data) => data.password === data.confirmPassword, {
+    message: "Passwords don't match",
+    path: ["confirmPassword"], // Error appears on this field
+  });
+
+// Async refinement
+const UniqueEmailSchema = z
+  .string()
+  .email()
+  .refine(
+    async (email) => {
+      const exists = await checkEmailExists(email);
+      return !exists;
+    },
+    { message: "Email already registered" },
+  );
+
+// Super refine for complex validation
+const ComplexSchema = z
+  .object({
+    type: z.enum(["personal", "business"]),
+    taxId: z.string().optional(),
+  })
+  .superRefine((data, ctx) => {
+    if (data.type === "business" && !data.taxId) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: "Tax ID required for business accounts",
+        path: ["taxId"],
+      });
+    }
+  });
+```
+
+### Transforms
+
+```typescript
+// Transform string to number
+const StringToNumber = z.string().transform((val) => parseInt(val, 10));
+
+// Transform with validation
+const SafeStringToNumber = z
+  .string()
+  .transform((val) => parseInt(val, 10))
+  .refine((n) => !isNaN(n), { message: "Invalid number" });
+
+// Pipe for transform + validate
+const NumberFromString = z
+  .string()
+  .transform((val) => parseInt(val, 10))
+  .pipe(z.number().min(0).max(100));
+
+// Default values
+const WithDefault = z.string().default("unknown");
+const WithDefaultFn = z.date().default(() => new Date());
+
+// Catch (use default on parse failure)
+const SafeNumber = z.number().catch(0);
+const SafeString = z.string().catch("fallback");
+
+// Preprocess (run before parsing)
+const TrimmedString = z.preprocess(
+  (val) => (typeof val === "string" ? val.trim() : val),
+  z.string(),
+);
+```
+
+---
+
+## Coercion
+
+```typescript
+// Automatic type coercion
+const CoercedString = z.coerce.string(); // Calls String(value)
+const CoercedNumber = z.coerce.number(); // Calls Number(value)
+const CoercedBoolean = z.coerce.boolean(); // Calls Boolean(value)
+const CoercedDate = z.coerce.date(); // Calls new Date(value)
+const CoercedBigInt = z.coerce.bigint(); // Calls BigInt(value)
+
+// Common use: form inputs (always strings)
+const FormSchema = z.object({
+  name: z.string().min(1),
+  age: z.coerce.number().min(0).max(150),
+  birthDate: z.coerce.date(),
+  subscribe: z.coerce.boolean(),
+});
+
+// Parse form data
+const formData = {
+  name: "John",
+  age: "25", // String from input
+  birthDate: "1995-06-15",
+  subscribe: "true",
+};
+const result = FormSchema.parse(formData);
+// { name: "John", age: 25, birthDate: Date, subscribe: true }
+```
+
+---
+
+## Custom Error Messages
+
+```typescript
+// Per-validation messages
+const EmailSchema = z
+  .string({
+    required_error: "Email is required",
+    invalid_type_error: "Email must be a string",
+  })
+  .email({ message: "Invalid email format" });
+
+// Object-level messages
+const UserSchema = z.object({
+  name: z.string().min(1, "Name cannot be empty"),
+  email: z.string().email("Please enter a valid email"),
+  age: z
+    .number()
+    .min(18, "Must be at least 18 years old")
+    .max(120, "Invalid age"),
+});
+
+// Custom error map (global)
+const customErrorMap: z.ZodErrorMap = (issue, ctx) => {
+  if (issue.code === z.ZodIssueCode.invalid_type) {
+    if (issue.expected === "string") {
+      return { message: "This field must be text" };
+    }
+  }
+  return { message: ctx.defaultError };
+};
+
+z.setErrorMap(customErrorMap);
+
+// Format errors for display
+function formatZodErrors(error: z.ZodError): Record<string, string> {
+  const errors: Record<string, string> = {};
+  for (const issue of error.issues) {
+    const path = issue.path.join(".");
+    if (!errors[path]) {
+      errors[path] = issue.message;
+    }
+  }
+  return errors;
+}
+```
+
+---
+
+## Form Validation (react-hook-form)
+
+```typescript
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+const SignupSchema = z.object({
+  email: z.string().email("Invalid email"),
+  password: z.string()
+    .min(8, "Password must be at least 8 characters")
+    .regex(/[A-Z]/, "Must contain uppercase letter")
+    .regex(/[0-9]/, "Must contain number"),
+  confirmPassword: z.string(),
+}).refine((data) => data.password === data.confirmPassword, {
+  message: "Passwords don't match",
+  path: ["confirmPassword"],
+});
+
+type SignupForm = z.infer<typeof SignupSchema>;
+
+function SignupForm() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<SignupForm>({
+    resolver: zodResolver(SignupSchema),
+  });
+
+  const onSubmit = (data: SignupForm) => {
+    console.log("Valid data:", data);
+  };
+
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <input {...register("email")} />
+      {errors.email && <span>{errors.email.message}</span>}
+
+      <input type="password" {...register("password")} />
+      {errors.password && <span>{errors.password.message}</span>}
+
+      <input type="password" {...register("confirmPassword")} />
+      {errors.confirmPassword && <span>{errors.confirmPassword.message}</span>}
+
+      <button type="submit">Sign Up</button>
+    </form>
+  );
+}
+```
+
+---
+
+## API Contract Validation
+
+### Request/Response Validation
+
+```typescript
+// API schemas
+const CreateUserRequest = z.object({
+  name: z.string().min(1),
+  email: z.string().email(),
+  role: z.enum(["admin", "user"]).default("user"),
+});
+
+const UserResponse = z.object({
+  id: z.string().uuid(),
+  name: z.string(),
+  email: z.string().email(),
+  role: z.enum(["admin", "user"]),
+  createdAt: z.string().datetime(),
+});
+
+const ApiError = z.object({
+  code: z.string(),
+  message: z.string(),
+  details: z.record(z.string()).optional(),
+});
+
+// Type-safe API client
+async function createUser(
+  input: z.infer<typeof CreateUserRequest>,
+): Promise<z.infer<typeof UserResponse>> {
+  const validatedInput = CreateUserRequest.parse(input);
+
+  const response = await fetch("/api/users", {
+    method: "POST",
+    body: JSON.stringify(validatedInput),
+  });
+
+  const data = await response.json();
+  return UserResponse.parse(data);
+}
+
+// Express middleware
+function validateBody<T extends z.ZodSchema>(schema: T) {
+  return (req: Request, res: Response, next: NextFunction) => {
+    const result = schema.safeParse(req.body);
+    if (!result.success) {
+      return res.status(400).json({
+        code: "VALIDATION_ERROR",
+        errors: result.error.flatten().fieldErrors,
+      });
+    }
+    req.body = result.data;
+    next();
+  };
+}
+
+// Usage
+app.post("/users", validateBody(CreateUserRequest), (req, res) => {
+  // req.body is typed and validated
+});
+```
+
+---
+
+## Environment Variable Validation
+
+```typescript
+const EnvSchema = z.object({
+  NODE_ENV: z
+    .enum(["development", "production", "test"])
+    .default("development"),
+  PORT: z.coerce.number().default(3000),
+  DATABASE_URL: z.string().url(),
+  API_KEY: z.string().min(1),
+  REDIS_URL: z.string().url().optional(),
+  LOG_LEVEL: z.enum(["debug", "info", "warn", "error"]).default("info"),
+  ENABLE_CACHE: z.coerce.boolean().default(true),
+});
+
+// Parse and validate
+function loadEnv() {
+  const result = EnvSchema.safeParse(process.env);
+
+  if (!result.success) {
+    console.error("❌ Invalid environment variables:");
+    console.error(result.error.flatten().fieldErrors);
+    process.exit(1);
+  }
+
+  return result.data;
+}
+
+export const env = loadEnv();
+
+// Type-safe access
+console.log(env.PORT); // number
+console.log(env.NODE_ENV); // "development" | "production" | "test"
+```
+
+---
+
+## Best Practices
+
+### 1. Schema Organization
+
+```typescript
+// schemas/user.ts
+export const UserSchema = z.object({...});
+export type User = z.infer<typeof UserSchema>;
+
+export const CreateUserSchema = UserSchema.omit({ id: true, createdAt: true });
+export type CreateUser = z.infer<typeof CreateUserSchema>;
+
+export const UpdateUserSchema = CreateUserSchema.partial();
+export type UpdateUser = z.infer<typeof UpdateUserSchema>;
+```
+
+### 2. Reusable Validators
+
+```typescript
+// schemas/common.ts
+export const id = z.string().uuid();
+export const email = z.string().email().toLowerCase();
+export const password = z.string().min(8).max(100);
+export const timestamp = z.string().datetime();
+export const pagination = z.object({
+  page: z.coerce.number().min(1).default(1),
+  limit: z.coerce.number().min(1).max(100).default(20),
+});
+```
+
+### 3. Brand Types for Type Safety
+
+```typescript
+const UserId = z.string().uuid().brand<"UserId">();
+const OrderId = z.string().uuid().brand<"OrderId">();
+
+type UserId = z.infer<typeof UserId>;
+type OrderId = z.infer<typeof OrderId>;
+
+// These are now incompatible types
+function getUser(id: UserId) {
+  /* ... */
+}
+function getOrder(id: OrderId) {
+  /* ... */
+}
+
+const userId = UserId.parse("123e4567-e89b-12d3-a456-426614174000");
+const orderId = OrderId.parse("123e4567-e89b-12d3-a456-426614174000");
+
+getUser(userId); // ✅ OK
+getUser(orderId); // ❌ Type error
+```
+
+### 4. Lazy Schemas (Recursive Types)
+
+```typescript
+interface Category {
+  name: string;
+  subcategories: Category[];
+}
+
+const CategorySchema: z.ZodType<Category> = z.lazy(() =>
+  z.object({
+    name: z.string(),
+    subcategories: z.array(CategorySchema),
+  }),
+);
+```
+
+### 5. Error Handling Pattern
+
+```typescript
+function parseOrThrow<T extends z.ZodSchema>(
+  schema: T,
+  data: unknown,
+  context?: string,
+): z.infer<T> {
+  const result = schema.safeParse(data);
+  if (!result.success) {
+    const message = context
+      ? `Validation failed for ${context}`
+      : "Validation failed";
+    throw new ValidationError(message, result.error);
+  }
+  return result.data;
+}
+
+class ValidationError extends Error {
+  constructor(
+    message: string,
+    public readonly zodError: z.ZodError,
+  ) {
+    super(message);
+    this.name = "ValidationError";
+  }
+}
+```
+
+---
+
+## Common Patterns
+
+| Pattern          | Schema                                   |
+| ---------------- | ---------------------------------------- |
+| Non-empty string | `z.string().min(1)`                      |
+| Positive integer | `z.number().int().positive()`            |
+| URL string       | `z.string().url()`                       |
+| ISO date string  | `z.string().datetime()`                  |
+| UUID             | `z.string().uuid()`                      |
+| Slug             | `z.string().regex(/^[a-z0-9-]+$/)`       |
+| Phone            | `z.string().regex(/^\+?[1-9]\d{1,14}$/)` |
+| Hex color        | `z.string().regex(/^#[0-9A-Fa-f]{6}$/)`  |
+
+---
+
+## Resources
+
+- [Zod Documentation](https://zod.dev)
+- [Zod GitHub](https://github.com/colinhacks/zod)
+- [react-hook-form + Zod](https://react-hook-form.com/get-started#SchemaValidation)

@@ -1,6 +1,6 @@
 ---
 name: markdown-novel-viewer
-description: Background HTTP server rendering markdown files with calm, book-like reading experience. Use when viewing markdown files or directories in browser.
+description: View markdown files with calm, book-like reading experience via HTTP server. Use for long-form content, documentation preview, novel reading, report viewing, distraction-free reading.
 ---
 
 # markdown-novel-viewer
@@ -50,7 +50,7 @@ node .claude/skills/markdown-novel-viewer/scripts/server.cjs \
   --background
 
 # Stop all running servers
-node $HOME/.claude/skills/markdown-novel-viewer/scripts/server.cjs --stop
+node .claude/skills/markdown-novel-viewer/scripts/server.cjs --stop
 ```
 
 ## Slash Command
@@ -71,6 +71,11 @@ Use `/preview` for quick access:
 - Libre Baskerville serif headings
 - Inter body text, JetBrains Mono code
 - Maximum 720px content width
+
+### Mermaid.js Diagrams
+- Auto-renders `mermaid` code blocks as diagrams
+- Theme-aware (light/dark mode support)
+- Error display with source preview for debugging
 
 ### Directory Browser
 - Clean file listing with emoji icons
@@ -189,7 +194,88 @@ Use `networkUrl` to access from other devices on the same network.
 
 **Remote access denied**: Use `--host 0.0.0.0` to bind to all interfaces
 
-## Task Planning Notes
+## Mermaid.js Diagrams
 
-- Always plan and break many small todo tasks
-- Always add a final review todo task to review the works done at the end to find any fix or enhancement needed
+### Usage
+
+Use fenced code blocks with `mermaid` language:
+
+````markdown
+```mermaid
+pie title Traffic Sources
+    "Organic" : 45
+    "Direct" : 30
+    "Referral" : 25
+```
+````
+
+### Supported Diagram Types
+
+| Type | Syntax | Use Case |
+|------|--------|----------|
+| Flowchart | `flowchart LR/TB/TD` | Process flows, decision trees |
+| Sequence | `sequenceDiagram` | API interactions, message flows |
+| Pie | `pie title "..."` | Distribution data |
+| Gantt | `gantt` | Project timelines |
+| XY Chart | `xychart-beta` | Bar/line charts |
+| Mindmap | `mindmap` | Idea hierarchies |
+| Quadrant | `quadrantChart` | 2x2 matrices |
+
+### Validating Mermaid Snippets
+
+**Quick validation**: Use the [Mermaid Live Editor](https://mermaid.live) to test syntax.
+
+**Common errors and fixes**:
+
+| Error | Cause | Fix |
+|-------|-------|-----|
+| `Parse error` | Invalid syntax | Check diagram type declaration |
+| `Unknown diagram type` | Typo in declaration | Use exact type: `flowchart`, not `flow` |
+| `Expecting token` | Missing quotes/brackets | Ensure balanced delimiters |
+| `UnknownDiagramError` | Empty or malformed block | Add valid diagram content |
+
+### Fixing Common Issues
+
+**1. Flowchart arrows**
+```mermaid
+%% Wrong: A -> B
+%% Correct:
+flowchart LR
+    A --> B
+```
+
+**2. Pie chart values**
+```mermaid
+%% Wrong: "Label": 50%
+%% Correct:
+pie title Sales
+    "Product A" : 50
+    "Product B" : 30
+```
+
+**3. XY Chart data format**
+```mermaid
+xychart-beta
+    title "Monthly Sales"
+    x-axis [Jan, Feb, Mar]
+    y-axis "Revenue" 0 --> 100
+    bar [30, 45, 60]
+```
+
+**4. Sequence diagram participants**
+```mermaid
+sequenceDiagram
+    participant A as Client
+    participant B as Server
+    A->>B: Request
+    B-->>A: Response
+```
+
+### Debug Mode
+
+When a diagram fails to render, the viewer shows:
+- Error message
+- Expandable source code preview
+- Line number where parsing failed (when available)
+
+Fix the syntax and refresh the page to re-render.

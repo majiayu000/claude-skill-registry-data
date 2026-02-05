@@ -1,45 +1,57 @@
 ---
-name: system-createcli
-description: Generate production-quality TypeScript CLIs with full documentation, error handling, and best practices. Creates deterministic, type-safe command-line tools following PAI's CLI-First Architecture. USE WHEN user says "create a CLI", "build a command-line tool", "make a CLI for X", or requests CLI generation. (user)
-location: user
+name: CreateCLI
+description: Generate TypeScript CLIs. USE WHEN create CLI, build CLI, command-line tool. SkillSearch('createcli') for docs.
 ---
 
-# system-createcli
+## Customization
+
+**Before executing, check for user customizations at:**
+`~/.claude/skills/CORE/USER/SKILLCUSTOMIZATIONS/CreateCLI/`
+
+If this directory exists, load and apply any PREFERENCES.md, configurations, or resources found there. These override default behavior. If the directory does not exist, proceed with skill defaults.
+
+
+## 🚨 MANDATORY: Voice Notification (REQUIRED BEFORE ANY ACTION)
+
+**You MUST send this notification BEFORE doing anything else when this skill is invoked.**
+
+1. **Send voice notification**:
+   ```bash
+   curl -s -X POST http://localhost:8888/notify \
+     -H "Content-Type: application/json" \
+     -d '{"message": "Running the WORKFLOWNAME workflow in the CreateCLI skill to ACTION"}' \
+     > /dev/null 2>&1 &
+   ```
+
+2. **Output text notification**:
+   ```
+   Running the **WorkflowName** workflow in the **CreateCLI** skill to ACTION...
+   ```
+
+**This is not optional. Execute this curl command immediately upon skill invocation.**
+
+# CreateCLI
 
 **Automated CLI Generation System**
 
-Generate production-ready TypeScript CLIs with comprehensive documentation, type safety, error handling, and PAI's CLI-First Architecture principles.
+Generate production-ready TypeScript CLIs with comprehensive documentation, type safety, error handling, and CLI-First Architecture principles.
 
 ---
 
-## 🎯 WORKFLOW ROUTING (SYSTEM PROMPT)
 
-**When user requests CLI creation, follow this routing:**
+## Workflow Routing
 
-### Primary Workflow: Create New CLI
-**Triggers:** "create CLI", "build command-line tool", "make CLI for X", "generate CLI"
-**Route to:** `workflows/create-cli.md`
-**Action:** Generate complete CLI from requirements
+Route to the appropriate workflow based on the request.
 
-### Extension Workflow: Add Command
-**Triggers:** "add command to CLI", "extend CLI with", "add feature to existing CLI"
-**Route to:** `workflows/add-command.md`
-**Action:** Add new command to existing CLI
+**When executing a workflow, output this notification directly:**
 
-### Migration Workflow: Upgrade Complexity Tier
-**Triggers:** "upgrade CLI", "migrate to Commander", "CLI needs more complexity"
-**Route to:** `workflows/upgrade-tier.md`
-**Action:** Migrate Tier 1 → Tier 2 (manual → Commander.js)
+```
+Running the **WorkflowName** workflow in the **CreateCLI** skill to ACTION...
+```
 
-### Testing Workflow: Add Test Suite
-**Triggers:** "add tests to CLI", "test scaffolding", "need CLI tests"
-**Route to:** `workflows/add-testing.md`
-**Action:** Generate comprehensive test suite
-
-### Distribution Workflow: Setup Publishing
-**Triggers:** "publish CLI", "distribute CLI", "make standalone binary"
-**Route to:** `workflows/setup-distribution.md`
-**Action:** Configure npm publishing or binary distribution
+  - Create a new CLI tool from scratch → `Workflows/CreateCli.md`
+  - Add a new command to existing CLI → `Workflows/AddCommand.md`
+  - Upgrade CLI to higher tier → `Workflows/UpgradeTier.md`
 
 ---
 
@@ -135,11 +147,11 @@ Activate when you see these patterns:
 
 ---
 
-## 🏗️ INTEGRATION WITH KAI
+## 🏗️ INTEGRATION WITH PAI
 
 ### Technology Stack Alignment
 
-Generated CLIs follow PAI's standards:
+Generated CLIs follow PAI standards:
 - ✅ **Runtime:** Bun (NOT Node.js)
 - ✅ **Language:** TypeScript (NOT JavaScript or Python)
 - ✅ **Package Manager:** Bun (NOT npm/yarn/pnpm)
@@ -150,9 +162,9 @@ Generated CLIs follow PAI's standards:
 ### Repository Placement
 
 Generated CLIs go to:
-- `${PAI_DIR}/bin/[cli-name]/` - Personal CLIs (like llcli)
+- `~/.claude/Bin/[cli-name]/` - Personal CLIs
 - `~/Projects/[project-name]/` - Project-specific CLIs
-- `~/Projects/PAI/examples/clis/` - Example CLIs (PUBLIC repo)
+- `${PROJECTS_DIR}/PAI/Examples/clis/` - Example CLIs (if contributing to PAI)
 
 **SAFETY:** Always verify repository location before git operations
 
@@ -172,11 +184,11 @@ Every generated CLI follows:
 **For detailed information, read these files:**
 
 ### Workflow Documentation
-- `workflows/create-cli.md` - Main CLI generation workflow (decision tree, 10-step process)
-- `workflows/add-command.md` - Add commands to existing CLIs
-- `workflows/upgrade-tier.md` - Migrate simple → complex
-- `workflows/add-testing.md` - Test suite generation
-- `workflows/setup-distribution.md` - Publishing configuration
+- `Workflows/Create-cli.md` - Main CLI generation workflow (decision tree, 10-step process)
+- `Workflows/Add-command.md` - Add commands to existing CLIs
+- `Workflows/Upgrade-tier.md` - Migrate simple → complex
+- `Workflows/Add-testing.md` - Test suite generation
+- `Workflows/Setup-distribution.md` - Publishing configuration
 
 ### Reference Documentation
 - `framework-comparison.md` - Manual vs Commander vs oclif (with research)
@@ -186,10 +198,10 @@ Every generated CLI follows:
 - `typescript-patterns.md` - Type safety patterns (from tsx, vite, bun research)
 
 ### Tools & Templates
-- `tools/templates/tier1/` - llcli-style templates (default)
-- `tools/templates/tier2/` - Commander.js templates (escalation)
-- `tools/generators/` - Generation scripts (TypeScript)
-- `tools/validators/` - Quality gates (validation)
+- `Tools/templates/tier1/` - llcli-style templates (default)
+- `Tools/templates/tier2/` - Commander.js templates (escalation)
+- `Tools/generators/` - Generation scripts (TypeScript)
+- `Tools/validators/` - Quality gates (validation)
 
 ### Examples
 - `examples/api-cli/` - API client (reference: llcli)
@@ -207,7 +219,7 @@ Every generated CLI follows:
 
 **Generated Structure:**
 ```
-${PAI_DIR}/bin/ghcli/
+~/.claude/Bin/ghcli/
 ├── ghcli.ts              # 350 lines, complete implementation
 ├── package.json          # Bun + TypeScript
 ├── tsconfig.json         # Strict mode
@@ -218,7 +230,7 @@ ${PAI_DIR}/bin/ghcli/
 
 **Usage:**
 ```bash
-ghcli repos --user danielmiessler
+ghcli repos --user exampleuser
 ghcli issues create --repo pai --title "Bug fix"
 ghcli search "typescript CLI"
 ghcli --help
@@ -233,7 +245,7 @@ ghcli --help
 
 **Generated Structure:**
 ```
-${PAI_DIR}/bin/md2html/
+~/.claude/Bin/md2html/
 ├── md2html.ts
 ├── package.json
 ├── README.md
@@ -256,7 +268,7 @@ md2html extract-frontmatter post.md
 
 **Generated Structure:**
 ```
-${PAI_DIR}/bin/data-cli/
+~/.claude/Bin/data-cli/
 ├── data-cli.ts           # Commander.js with subcommands
 ├── package.json
 ├── README.md
@@ -311,7 +323,7 @@ Every generated CLI must pass these gates:
 
 ### Why This Skill Exists
 
-Daniel repeatedly creates CLIs for APIs and tools. Each time:
+Developers repeatedly create CLIs for APIs and tools. Each time:
 1. Starts with bash script
 2. Realizes it needs error handling
 3. Realizes it needs help text
@@ -346,9 +358,9 @@ The `llcli` CLI (Limitless.ai API) proves this pattern works:
 ## 🔗 RELATED SKILLS
 
 - **development** - For complex feature development (not CLI-specific)
-- **system-mcp** - For web scraping CLIs (Bright Data, Apify wrappers)
-- **personal-lifelog** - Example of skill using llcli
+- **mcp** - For web scraping CLIs (Bright Data, Apify wrappers)
+- **lifelog** - Example of skill using llcli
 
 ---
 
-**This skill turns "I need a CLI for X" into production-ready tools in minutes, following proven patterns from llcli and PAI's CLI-First Architecture.**
+**This skill turns "I need a CLI for X" into production-ready tools in minutes, following proven patterns from llcli and CLI-First Architecture.**

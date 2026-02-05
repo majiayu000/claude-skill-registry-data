@@ -9,6 +9,161 @@ description: "MiniMax MCP server integration with token-efficient AI delegation.
 
 This skill provides complete MiniMax MCP server integration for Claude, enabling token-efficient AI delegation with 85-90% token savings. MiniMax handles heavy computational tasks while Claude plans and reviews, creating an optimal division of labor.
 
+## Usage Guidance
+
+### Autonomous Delegation (Compound Engineering)
+
+**IMPORTANT:** This skill is designed for **autonomous use**. You do NOT need to ask for permission before delegating tasks to MiniMax. The delegation patterns below are approved workflows for compound engineering.
+
+See `docs/agent-instructions/COMPOUND_ENGINEERING.md` for the full delegation framework.
+
+### When to Prefer MiniMax
+Consider delegating these tasks to MiniMax for better efficiency:
+
+1. **Web search or research queries** - MiniMax handles external searches well
+2. **Image analysis tasks** - MiniMax VLM API provides visual understanding
+3. **Multi-source research** - When you'd otherwise read 5+ files
+4. **Current information needs** - Docs, trends, releases from 2024-2026
+5. **Parallel asset generation** - Launch multiple agents for concurrent work
+6. **Screenshot analysis** - Visual bugs, UI issues, sprite quality assessment
+
+### When NOT to Delegate
+- HPV playtesting or MCP runtime inspection (requires local control and fast feedback).
+- Iterative input loops where latency ruins the feedback cycle (batch locally instead).
+
+### Trusted Domains (Auto-Approved)
+These sources are reliable and searches are **automatically restricted** to these domains:
+- `docs.anthropic.com` - Claude official docs
+- `platform.claude.com` - Claude platform docs
+- `docs.cursor.com` - Cursor IDE docs
+- `cursor.com` - Cursor docs
+- `cookbook.openai.com` - OpenAI cookbook
+- `godotengine.org` - Godot official docs
+- `api.minimax.io` - MiniMax API docs
+
+**Implementation**: The `web-search.sh` script automatically appends `site:` filters to all queries, ensuring results only come from trusted domains. To search other domains, ask Sam for permission and use an alternative search method.
+
+### Decision Trigger
+Before using Grep/Glob for research, pause and ask:
+> "Would a MiniMax search to trusted docs handle this better?"
+
+If yes → use MiniMax. If searching known local files → use local tools.
+
+### Autonomous Delegation Patterns
+
+#### Pattern 1: Parallel Research Delegation
+Launch multiple MiniMax agents concurrently instead of sequential research:
+
+**Autonomous Example - No Permission Needed:**
+```bash
+# Agent 1: Research Godot 4.5 input system
+curl -s -X POST "https://api.minimax.io/v1/coding_plan/search" \
+  -H "Authorization: Bearer ${MINIMAX_API_KEY}" \
+  -H "Content-Type: application/json" \
+  -d '{"q":"site:godotengine.org InputEventAction handling"}' &
+
+# Agent 2: Research dialogue UI patterns
+curl -s -X POST "https://api.minimax.io/v1/coding_plan/search" \
+  -H "Authorization: Bearer ${MINIMAX_API_KEY}" \
+  -H "Content-Type: application/json" \
+  -d '{"q":"site:docs.godotengine.org dialogue UI RichTextLabel"}' &
+
+# Agent 3: Research quest state management
+curl -s -X POST "https://api.minimax.io/v1/coding_plan/search" \
+  -H "Authorization: Bearer ${MINIMAX_API_KEY}" \
+  -H "Content-Type: application/json" \
+  -d '{"q":"site:docs.godotengine.org state machine autoload"}' &
+
+# Wait for all to complete, then synthesize results
+wait
+```
+
+**Key Points:**
+- Use `&` to launch requests in parallel
+- Use `wait` to collect all results before synthesizing
+- Main agent orchestrates, MiniMax agents execute
+- No permission needed - this is standard compound engineering
+
+#### Pattern 2: Parallel Image Analysis
+Analyze multiple screenshots or sprites concurrently:
+
+**Autonomous Example - Visual Quality Assessment:**
+```bash
+# Analyze 5 placeholder sprites in parallel
+for sprite in moly_seed nightshade_seed moon_tears npc_circe npc_world; do
+  curl -s -X POST "https://api.minimax.io/v1/coding_plan/vlm" \
+    -H "Authorization: Bearer ${MINIMAX_API_KEY}" \
+    -H "Content-Type: application/json" \
+    -d "{
+      \"prompt\": \"Rate this sprite on clarity, pixel art quality, and game readiness (1-10). Note issues.\",
+      \"image_url\": \"file://$(pwd)/assets/sprites/placeholders/${sprite}.png\"
+    }" > "analysis_${sprite}.json" &
+done
+wait
+
+# Synthesize all results into quality report
+cat analysis_*.json | jq '.'
+```
+
+#### Pattern 3: Research + Image Analysis Combo
+Combine web search with image understanding for comprehensive analysis:
+
+**Autonomous Example - Screenshot Bug Analysis:**
+```bash
+# Agent 1: Search for similar bug reports
+curl -s -X POST "https://api.minimax.io/v1/coding_plan/search" \
+  -H "Authorization: Bearer ${MINIMAX_API_KEY}" \
+  -H "Content-Type: application/json" \
+  -d '{"q":"site:github.com godot dialogue box overlap UI"}' > bug_research.json &
+
+# Agent 2: Analyze the screenshot
+curl -s -X POST "https://api.minimax.io/v1/coding_plan/vlm" \
+  -H "Authorization: Bearer ${MINIMAX_API_KEY}" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "prompt": "Identify UI elements, z-order issues, and layout problems in this game screenshot.",
+    "image_url": "file://screenshot.png"
+  }' > screenshot_analysis.json &
+
+wait
+
+# Main agent synthesizes both sources
+echo "Research findings:" && cat bug_research.json
+echo "Screenshot analysis:" && cat screenshot_analysis.json
+```
+
+### Token Savings with Parallel Delegation
+
+**Sequential (Bad):**
+- Research task 1: ~2000 tokens (Claude reads results)
+- Research task 2: ~2000 tokens
+- Research task 3: ~2000 tokens
+- **Total: ~6000 tokens**
+
+**Parallel with MiniMax (Good):**
+- Launch 3 agents: ~100 tokens (Claude orchestrates)
+- MiniMax handles all 3: ~6000 tokens (subagent compute)
+- Claude reviews synthesis: ~500 tokens
+- **Total: ~600 tokens for Claude** (90% savings)
+
+The key: Claude plans (~100), MiniMax executes (~6000 in subagents), Claude reviews (~500).
+
+### Example Pattern
+
+**Local file task** (use Grep/Read):
+```
+User: "Find where player_health is defined"
+Agent: *Uses Grep to search codebase* ✅
+```
+
+**Research task** (use MiniMax):
+```
+User: "How does Godot 4.5 handle input?"
+Agent: *Calls MiniMax search: site:godotengine.org input handling*
+MiniMax: *Returns official docs*
+Agent: *Reviews results* ✅
+```
+
 ## Core Capabilities
 
 ### 1. MCP Server Integration

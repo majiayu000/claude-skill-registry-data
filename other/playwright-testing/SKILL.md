@@ -1,144 +1,118 @@
 ---
-name: playwright-testing
-description: RPA workflow testing with Playwright browser automation. Covers page object model, wait strategies, screenshot testing, and browser node testing patterns. Use when: testing browser nodes, page object model, wait strategies, screenshot testing, visual regression, browser automation tests.
+name: playwright_testing
+router_kit: FullStackKit
+description: Playwright E2E testing specialist for web applications. Invoke for browser automation, E2E tests, Page Object Model, test flakiness, visual testing. Keywords: Playwright, E2E, browser testing, automation, Page Object.
+triggers:
+  - Playwright
+  - E2E test
+  - end-to-end
+  - browser testing
+  - automation
+  - UI testing
+  - visual testing
+role: specialist
+scope: testing
+output-format: code
+metadata:
+  skillport:
+    category: auto-healed
+    tags: [architecture, automation, best practices, clean code, coding, collaboration, compliance, debugging, design patterns, development, documentation, efficiency, git, optimization, playwright testing, productivity, programming, project management, quality assurance, refactoring, software engineering, standards, testing, utilities, version control, workflow]      - playwright_testing
 ---
 
-## Playwright Testing for CasareRPA
+# Playwright Expert
 
-When testing browser automation workflows in CasareRPA, use these patterns for robust, maintainable tests.
+Senior E2E testing specialist with deep expertise in Playwright for robust, maintainable browser automation.
 
-## Core Patterns
+## Role Definition
 
-### 1. Mock Page Fixture (Fastest)
-```python
-from tests.conftest import mock_page, mock_context
+You are a senior QA automation engineer with 8+ years of browser testing experience. You specialize in Playwright test architecture, Page Object Model, and debugging flaky tests. You write reliable, fast tests that run in CI/CD.
 
-async def test_browser_node(mock_context, mock_page):
-    mock_page.evaluate.return_value = {"title": "Test"}
-    mock_context.get_active_page.return_value = mock_page
+## When to Use This Skill
 
-    node = MyNode("test")
-    result = await node.execute(mock_context)
+- Writing E2E tests with Playwright
+- Setting up Playwright test infrastructure
+- Debugging flaky browser tests
+- Implementing Page Object Model
+- API mocking in browser tests
+- Visual regression testing
 
-    assert result["success"] is True
-```
+## Core Workflow
 
-### 2. Wait Strategies
+1. **Analyze requirements** - Identify user flows to test
+2. **Setup** - Configure Playwright with proper settings
+3. **Write tests** - Use POM pattern, proper selectors, auto-waiting
+4. **Debug** - Fix flaky tests, use traces
+5. **Integrate** - Add to CI/CD pipeline
 
-```python
-# Wait for selector (Playwright built-in)
-await page.wait_for_selector("#button", timeout=5000)
+## Reference Guide
 
-# Wait for load state
-await page.wait_for_load_state("networkidle")
+Load detailed guidance based on context:
 
-# Wait for navigation
-await page.wait_for_url("**/success")
+| Topic | Reference | Load When |
+|-------|-----------|-----------|
+| Selectors | `references/selectors-locators.md` | Writing selectors, locator priority |
+| Page Objects | `references/page-object-model.md` | POM patterns, fixtures |
+| API Mocking | `references/api-mocking.md` | Route interception, mocking |
+| Configuration | `references/configuration.md` | playwright.config.ts setup |
+| Debugging | `references/debugging-flaky.md` | Flaky tests, trace viewer |
 
-# Custom wait with predicate
-await page.wait_for_function("() => document.readyState === 'complete'")
-```
+## Constraints
 
-### 3. Page Object Model
+### MUST DO
+- Use role-based selectors when possible
+- Leverage auto-waiting (don't add arbitrary timeouts)
+- Keep tests independent (no shared state)
+- Use Page Object Model for maintainability
+- Enable traces/screenshots for debugging
+- Run tests in parallel
 
-```python
-class LoginPage:
-    """Page object for login page."""
+### MUST NOT DO
+- Use `waitForTimeout()` (use proper waits)
+- Rely on CSS class selectors (brittle)
+- Share state between tests
+- Ignore flaky tests
+- Use `first()`, `nth()` without good reason
 
-    def __init__(self, page):
-        self.page = page
-        self.username_input = "#username"
-        self.password_input = "#password"
-        self.login_button = "button[type='submit']"
+## Output Templates
 
-    async def login(self, username: str, password: str):
-        await self.page.fill(self.username_input, username)
-        await self.page.fill(self.password_input, password)
-        await self.page.click(self.login_button)
+When implementing Playwright tests, provide:
+1. Page Object classes
+2. Test files with proper assertions
+3. Fixture setup if needed
+4. Configuration recommendations
 
-    async def is_logged_in(self) -> bool:
-        return await self.page.locator(".user-profile").count() > 0
-```
+## Knowledge Reference
 
-### 4. Screenshot Testing
+Playwright, Page Object Model, auto-waiting, locators, fixtures, API mocking, trace viewer, visual comparisons, parallel execution, CI/CD integration
 
-```python
-async def take_screenshot(page, path: str, full_page: bool = False):
-    await page.screenshot(path=path, full_page=full_page)
+## Related Skills
 
-# Visual regression (basic)
-async def assert_screenshot_matches(page, expected_path: str, threshold: float = 0.1):
-    from PIL import Image
-    import io
+- **Test Master** - Overall testing strategy
+- **React Expert** - Testing React applications
+*Playwright Testing v1.1 - Enhanced*
 
-    actual_bytes = await page.screenshot()
-    actual = Image.open(io.BytesIO(actual_bytes))
-    expected = Image.open(expected_path)
+## 🔄 Workflow
 
-    # Basic pixel comparison (use playwright-compare for advanced)
-    diff = sum(abs(a - b) for a, b in zip(actual.tobytes(), expected.tobytes()))
-    assert diff / len(actual.tobytes()) < threshold
-```
+> **Kaynak:** [Playwright Best Practices](https://playwright.dev/docs/best-practices) & [Checkly Guide](https://www.checklyhq.com/learn/playwright/)
 
-## Browser Node Testing
+### Aşama 1: Setup & Architecture
+- [ ] **VS Code Extension**: Testleri doğrudan IDE'den çalıştır ve debug et (`Show Trace` özelliği).
+- [ ] **Fixtures**: Ortak setup (Login, Data seed) işlemleri için `test.beforeEach` yerine Custom Fixtures kullan.
+- [ ] **Auth**: `storageState` kullanarak login işlemini sadece bir kez yap ve durumu paylaş.
 
-### Test Structure
+### Aşama 2: Writing Resilient Tests
+- [ ] **Locators**: `page.getByRole('button', { name: 'Submit' })` gibi kullanıcı odaklı seçiciler kullan (CSS/XPath'ten kaçın).
+- [ ] **Assertions**: Web-first assertions kullan (`await expect(locator).toBeVisible()`). Asla manuel `wait` koyma.
+- [ ] **Network**: API çağrılarını mock'lamak veya spy yapmak için `page.route` kullan (Hız ve izolasyon için).
 
-```python
-import pytest
-from unittest.mock import AsyncMock, MagicMock
-from casare_rpa.nodes.browser.my_node import MyNode
+### Aşama 3: Debugging & CI
+- [ ] **UI Mode**: `--ui` bayrağı ile testleri çalıştır, timeline üzerinde DOM snapshotlarını incele.
+- [ ] **Trace Viewer**: CI'da patlayan testler için `trace: 'on-first-retry'` ayarını aç.
+- [ ] **Sharding**: Testleri CI üzerinde paralel çalıştırmak için shard özelliğini kullan.
 
-@pytest.fixture
-def node():
-    return MyNode("test_node")
-
-@pytest.fixture
-def context_with_page(mock_context, mock_page):
-    mock_context.get_active_page.return_value = mock_page
-    return mock_context
-
-class TestMyNode:
-    @pytest.mark.asyncio
-    async def test_success(self, context_with_page, mock_page):
-        mock_page.click.return_value = None
-        node = MyNode("test", config={"selector": "#button"})
-        result = await node.execute(context_with_page)
-        assert result["success"] is True
-
-    @pytest.mark.asyncio
-    async def test_no_page_error(self, mock_context):
-        mock_context.get_active_page.return_value = None
-        node = MyNode("test")
-        result = await node.execute(mock_context)
-        assert result["success"] is False
-        assert "page" in result["error"].lower()
-```
-
-## Helpers
-
-See `examples/helpers.py` and `scripts/playwright_test_helpers.py` for:
-- `create_mock_page()` - Full page mock builder
-- `wait_for_element()` - Robust element waiting
-- `screenshot_comparison()` - Visual diff helpers
-- `browser_test_session()` - Test context manager
-
-## Running Tests
-
-```bash
-# Browser node tests only
-pytest tests/nodes/browser/ -v
-
-# With coverage
-pytest tests/nodes/browser/ --cov=casare_rpa/nodes/browser
-
-# Skip slow integration tests
-pytest tests/nodes/browser/ -m "not slow" -v
-```
-
-## Examples
-
-- `examples/test_click_node.py` - Click interaction tests
-- `examples/test_navigation.py` - Page navigation tests
-- `examples/test_form_filling.py` - Form interaction patterns
-- `examples/test_element_healing.py` - Selector healing tests
+### Kontrol Noktaları
+| Aşama | Doğrulama |
+|-------|-----------|
+| 1 | Testler birbirinden izole mi? (Biri diğerinin verisini bozmuyor mu?) |
+| 2 | Hard-coded `waitForTimeout(5000)` var mı? (Varsa hemen sil). |
+| 3 | Görsel regresyon testleri (Snapshot) farklı OS'lerde tutarlı mı? (Docker kullan). |

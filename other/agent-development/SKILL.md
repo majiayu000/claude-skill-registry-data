@@ -1,8 +1,13 @@
 ---
-name: agent-development
+name: Agent Development
 description: This skill should be used when the user asks to "create an agent", "add an agent", "write a subagent", "agent frontmatter", "when to use description", "agent examples", "agent tools", "agent colors", "autonomous agent", or needs guidance on agent structure, system prompts, triggering conditions, or agent development best practices for Claude Code plugins.
 version: 0.1.0
 ---
+
+# SOURCE: anthropics/claude-plugins-official
+# PATH: plugins/plugin-dev/skills/agent-development/SKILL.md
+# DO NOT EDIT: This file is synced from external source
+
 
 # Agent Development for Claude Code Plugins
 
@@ -158,64 +163,6 @@ tools: ["Read", "Write", "Grep", "Bash"]
 - Code generation: `["Read", "Write", "Grep"]`
 - Testing: `["Read", "Bash", "Grep"]`
 - Full access: Omit field or use `["*"]`
-
-### hooks (optional)
-
-Agent-level hooks scoped to agent lifecycle.
-
-**Format:** Array of hook configurations
-
-```yaml
-hooks:
-  - type: PreToolUse
-    once: true
-  - type: PostToolUse
-  - type: Stop
-```
-
-**Supported hook types:**
-- `PreToolUse`: Validate before agent uses tools
-- `PostToolUse`: React to agent's tool results
-- `Stop`: Cleanup when agent completes
-
-**When to use:**
-- Validation specific to agent operations
-- Logging/tracking agent actions
-- Setup/teardown within agent lifecycle
-- Per-agent permission enforcement
-
-**Key features:**
-- `once: true` runs hook only once per agent invocation
-- Hooks inherit agent context
-- No command/prompt field needed
-
-**Example use cases:**
-```yaml
-hooks:
-  - type: PreToolUse
-    once: true                  # One-time setup check for agent
-  - type: PostToolUse          # React to every tool agent uses
-  - type: Stop                  # Cleanup when agent finishes
-```
-
-See `../hook-development/` for complete hooks documentation.
-
-### disallowedTools (optional)
-
-Disable specific agents from being invoked.
-
-**Format:** Array with `Task(AgentName)` syntax
-
-```yaml
-disallowedTools: ["Task(SWEAgent)", "Task(ExperimentalAgent)"]
-```
-
-**Use when:**
-- Preventing specific agents from running
-- Testing without certain agents
-- Security/policy enforcement
-
-**Note:** Also configurable in settings.json and via `--disallowedTools` CLI flag.
 
 ## System Prompt Design
 

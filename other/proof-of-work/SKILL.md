@@ -1,299 +1,122 @@
 ---
 name: proof-of-work
-description: Use automatically during development workflows when making claims about tests, builds, verification, or code quality requiring concrete evidence to ensure trust through transparency.
-allowed-tools:
-  - Write
-  - Edit
-  - Read
-  - Bash
-  - Grep
+description: |
+  Enforces "prove before claim" discipline - validation, testing, and evidence requirements before declaring work complete.
+  Triggers: validation, definition-of-done, proof, acceptance-criteria, testing, completion, finished, done, working, should work, configured, ready to use, implemented, fixed, improvement validated, workflow optimized, performance improved, issue resolved.
+  Use when claiming work is complete, recommending solutions, or finishing implementations.
+  Do not use when asking questions or for work clearly in-progress.
+  MANDATORY: This skill is required before any completion claim.
+category: workflow-methodology
+tags: [validation, testing, proof, definition-of-done, acceptance-criteria]
+dependencies:
+  - imbue:evidence-logging
+tools: []
+usage_patterns:
+  - completion-validation
+  - acceptance-testing
+  - proof-generation
+complexity: intermediate
+estimated_tokens: 3000
+modules:
+  - modules/validation-protocols.md
+  - modules/acceptance-criteria.md
+  - modules/red-flags.md
+  - modules/iron-law-enforcement.md
+version: 1.3.5
 ---
-
 # Proof of Work
 
-**Show, don't tell.** Never make claims about code verification without
-providing concrete evidence.
+## Table of Contents
 
-## Core Principle
+- [Overview](#overview)
+- [The Iron Law](#the-iron-law)
+- [Usage Standards](#usage-standards)
+- [Validation Protocol](#validation-protocol)
+- [Integration](#integration)
+- [Validation Checklist](#validation-checklist-before-claiming-done)
+- [Red Flag Self-Check](#red-flag-self-check)
+- [Exit Criteria](#exit-criteria)
 
-**Trust through transparency.** Every assertion about code quality, test
-results, builds, or verification must be backed by actual command output,
-not summaries or assumptions.
+## Overview
 
-## Implementation Proof
+The "Proof of Work" methodology prevents premature completion claims by requiring technical verification before stating that a task is finished. For example, instead of assuming an LSP configuration functions after a restart, we verify that the server starts and that tools respond to queries. This approach confirms the solution works before the user attempts validation.
 
-When implementing features:
+Before claiming completion, provide reproducible evidence of the solution's performance and address edge cases. All claims must be backed by actual command output captured in the current environment.
 
-1. **USE Write/Edit tools to make changes**
-   - Never just describe what should be written
-   - Actually call Write tool to create files
-   - Actually call Edit tool to modify files
+## The Iron Law
 
-2. **Show tool results**
-   - After Write: "Successfully wrote /path/to/file.ex"
-   - After Edit: "Successfully edited /path/to/file.ex"
-   - Tool output is proof changes were made
+**NO IMPLEMENTATION WITHOUT A FAILING TEST FIRST**
+**NO COMPLETION CLAIM WITHOUT EVIDENCE FIRST**
+**NO CODE WITHOUT UNDERSTANDING FIRST**
 
-3. **Verify changes exist**
-   - Use Bash to verify files exist: `ls -la /path/to/file.ex`
-   - Use Read to show content if needed
-   - Actual file existence is proof
+The Iron Law prevents testing from becoming a perfunctory exercise. If an implementation is planned before tests are written, the RED phase fails to drive the design. Understand the technical rationale for an approach and its limitations before declaring it done. Before writing code, document evidence of the failure being addressed and confirm that tests are driving the implementation.
 
-**Remember**: If you didn't use Write/Edit tools, it didn't happen.
+### Verification and TDD Workflow
 
-## Agent Verification (CRITICAL)
+Verify the fundamentals of the implementation and the reasons for choosing it over alternatives. Identify where a solution might fail rather than stating it should always work. The TDD cycle follows these mandatory steps:
 
-**NEVER EVER trust agent completion reports without verification.**
+1. **RED**: Write a failing test before implementation.
+2. **GREEN**: Create a minimal implementation that passes the test.
+3. **REFACTOR**: Improve the code without changing its behavior.
 
-This is a **zero-tolerance rule**.
-Agent reports are NOT proof - they are **claims requiring verification**.
+### Iron Law Self-Check
 
-### The Critical Error
+| Self-Check Question | If Answer Is Wrong | Action |
+|---------------------|-------------------|--------|
+| Do I have documented evidence of failure/need? | No | STOP - document failure first |
+| Am I testing pre-conceived implementation? | Yes | STOP - let test DRIVE design |
+| Am I feeling design uncertainty? | No | STOP - uncertainty is GOOD |
+| Did test drive implementation? | No | STOP - doing it backwards |
 
-When you delegate work to a subagent:
+### Iron Law Progress Tracking
 
-1. Agent completes and reports "Successfully created X, modified Y,
-   implementation complete"
-2. **STOP - DO NOT TRUST THIS REPORT**
-3. Agent reports mean NOTHING until you verify
-4. Blindly trusting agent reports is a **catastrophic failure**
+- `proof:iron-law-red`: Failing test written before implementation.
+- `proof:iron-law-green`: Minimal implementation passes test.
+- `proof:iron-law-refactor`: Code improved without behavior change.
+- `proof:iron-law-coverage`: Coverage gates passed (line, branch, and mutation).
 
-### Mandatory Verification After EVERY Agent
+Confirm that work passes all line, branch, and mutation coverage gates. For detailed enforcement patterns, see [iron-law-enforcement.md](modules/iron-law-enforcement.md).
 
-**After ANY agent completes, you MUST verify work was actually done:**
+## Usage Standards
 
-```bash
-# 1. Verify files were actually modified
-git status --short
+Apply this skill before stating that work is "done," "finished," or "ready." Use it before recommending solutions or stating that a configuration "should work." Stop if you find yourself assuming a configuration is correct without testing it or recommending a fix without first reproducing the problem. Red flags include thinking "this looks correct" without actual verification. If you cannot explain each line of a configuration or why a specific practice applies to the current context, the necessary validation steps have been skipped.
 
-# 2. Verify actual changes exist
-git diff --name-only
+## Validation Protocol
 
-# 3. Verify specific file exists (if agent claimed to create it)
-ls -la /path/to/file
+### Step 1: Reproduce the Problem (`proof:problem-reproduced`)
 
-# 4. Verify file content (spot check)
-cat /path/to/file | head -20
-```
+Before proposing a solution, verify the current state. Use tools like `ps`, `echo`, and `cat` to check running processes, environment variables, and configuration files. Document the failure with command output and error logs.
 
-**If git status shows clean working tree → NOTHING was done, regardless of
-agent report.**
+### Step 2: Test the Solution (`proof:solution-tested`)
 
-### Red Flags in Agent Reports
+Before claiming a solution works, execute it in the current environment. Capture the actual output and confirm that it matches expected behavior. Do not rely on assumed output.
 
-### Never trust these claims without verification
+### Step 3: Check for Known Issues (`proof:edge-cases-checked`)
 
-| Agent Claim               | Required Verification                       |
-| ------------------------- | ------------------------------------------- |
-| "Successfully created X"  | `ls -la /path/to/X` - prove file exists     |
-| "Modified files A, B, C"  | `git status` - prove files show as modified |
-| "Changes made to Y"       | `git diff Y` - prove actual changes exist   |
-| "Implementation complete" | `git diff --stat` - prove work was done     |
-| "Added tests to Z"        | `cat Z` - prove tests actually exist        |
-| "Updated configuration"   | `git diff config/` - prove config changed   |
+Research known bugs and limitations related to the approach. Check GitHub issues, version compatibility, and official documentation to identify potential blockers or common pitfalls.
 
-### Verification Workflow (MANDATORY)
+### Step 4: Capture Evidence (`proof:evidence-captured`)
 
-```text
-1. Delegate to agent
-2. Agent reports completion
-3. ⚠️  STOP - DO NOT TRUST REPORT ⚠️
-4. Run verification commands (git status, ls, cat, etc.)
-5. If verification fails → Agent did NOT complete work
-6. If verification passes → THEN report to user WITH PROOF
-```
+Use `imbue:evidence-logging` to document the commands executed, their output, timestamps, and the conclusions drawn from each step.
 
-### Evidence Requirements for Agent Work
+### Step 5: Prove Completion (`proof:completion-proven`)
 
-**❌ NEVER report to user:**
+Define acceptance criteria and validate each item. If a blocker is identified, document the diagnosis with evidence and provide workaround options instead of claiming completion.
 
-- "Agent created X" (without proving X exists)
-- "Agent modified Y" (without showing git diff)
-- "Implementation complete" (without showing git status)
-- "Tests added" (without proving tests exist)
+## Integration
 
-**✅ ALWAYS report with proof:**
+### With Improvement Workflows
 
-```bash
-# After agent completes, verify:
-$ git status --short
-M  apps/api/lib/users/worker.ex
-A  apps/api/test/users/worker_test.exs
+Use proof-of-work to validate improvement opportunities identified by `/update-plugins` or `/fix-workflow`. Document the baseline metrics (step count, failure rate, duration), test the proposed changes, and capture the improved metrics to demonstrate quantitative impact.
 
-# Prove files exist:
-$ ls -la apps/api/test/users/worker_test.exs
--rw-r--r--  1 user  staff  2847 Nov  7 14:32 apps/api/test/users/worker_test.exs
+## Validation Checklist (Before Claiming "Done")
 
-# Spot check content:
-$ head -10 apps/api/test/users/worker_test.exs
-defmodule YourApp.Users.UserTest do
-  use YourApp.DataCase
-  ...
-```
+Verify that the problem was reproduced with evidence and the solution was tested in the actual environment. Research known issues and consider edge cases. Capture evidence in a reproducible format and confirm that all acceptance criteria are met. The completion statement must detail the specific tests run and their results, citing evidence for each claim.
 
-**Then report:** "Agent completed. Verification proves 2 files modified
-(evidence above)."
+## Red Flag Self-Check
 
-### Why This Matters
+Before sending a completion message, confirm that you have run the recommended commands and captured their output. Verify that you have researched known issues and that the validation steps are reproducible by the user. Ensure you are proving rather than assuming.
 
-### Failure to verify agent work
+## Exit Criteria
 
-- Destroys user trust
-- Wastes user time
-- Results in false claims
-- Violates proof-of-work principle
-- Is a **catastrophic error**
-
-**The user must be able to trust your reports.** Agent reports without
-verification are **worthless**.
-
-### Agent Verification Remember
-
-- **Agent reports are claims, not proof**
-- **Verification is MANDATORY after EVERY agent**
-- **If you didn't verify, you don't know if it happened**
-- **Git status is ground truth, not agent reports**
-- **Never report agent completion without showing verification**
-
-**This is non-negotiable.** Failure to verify agent work is unacceptable.
-
-## When to Apply
-
-Apply this skill whenever claiming:
-
-- Tests pass/fail
-- Build succeeds/fails
-- Linting clean/has issues
-- Types check
-- GraphQL compatibility verified
-- CI pipeline status
-- Code review findings
-- Performance metrics
-- Any verifiable development assertion
-
-## Evidence Requirements
-
-**❌ Never say without proof:**
-
-- "Tests pass" / "Build succeeds" / "No linting issues"
-- "Types check" / "Pipeline is green" / "Code is clean"
-
-**✅ Always provide actual output:**
-
-```bash
-# Tests
-$ mix test
-Finished in 42.3 seconds
-1,247 tests, 0 failures
-
-# Linting
-$ MIX_ENV=test mix lint
-Running Credo... ✓ No issues found.
-
-# Types
-$ yarn ts:check
-✓ 456 files checked, 0 errors
-
-# CI Pipeline
-$ glab ci status
-Pipeline #12345: passed ✓
-URL: https://gitlab.com/.../pipelines/12345
-```
-
-## Zero Tolerance for Assumptions
-
-### Never assume or claim without running
-
-❌ **WRONG:**
-
-- "The tests should pass"
-- "This probably works"
-- "Based on my changes, tests will pass"
-- "I expect the build succeeds"
-
-✅ **RIGHT:**
-
-- "I have not run the tests yet. Let me run them now."
-- "Running `mix test` to verify..."
-- [Shows complete output]
-
-## Partial Verification Is Not Verification
-
-**❌ NEVER claim success from partial runs:**
-
-```bash
-# Only ran 50 tests of 1,247
-Running ExUnit tests...
-50 tests, 0 failures
-# STOPPED HERE - did not complete
-```
-
-"Tests pass" ❌ **FALSE - only partial run**
-
-**✅ ALWAYS run to completion:**
-
-```bash
-# Full suite completed
-Finished in 42.3 seconds
-1,247 tests, 0 failures  # ALL tests ran
-```
-
-"Full test suite passes: 1,247 tests, 0 failures" ✅ **TRUE**
-
-## Output Format
-
-1. Show the command you ran
-2. Show results, not summaries
-3. Include counts (tests, files, errors)
-4. Include URLs for CI/remote resources
-
-## Complete Verification Example
-
-```bash
-$ MIX_ENV=test mix lint
-✓ No issues found.
-
-$ mix test
-1,247 tests, 0 failures
-
-$ yarn graphql:compat
-✓ No breaking changes
-
-$ glab ci status
-Pipeline #12345: passed ✓
-```
-
-**Then claim:** "All verification passed (evidence above)."
-
-## Red Flags
-
-Stop and provide proof if you catch yourself saying:
-
-- "Tests pass" (without showing output)
-- "Build works" (without showing build log)
-- "No errors" (without showing check results)
-- "Pipeline is green" (without showing pipeline status)
-- "Code is clean" (without showing lint output)
-- "Types check" (without showing tsc output)
-
-## Workflow Integration
-
-**Implementation:** Run verification → Show complete output → Report with
-evidence → Wait for approval
-
-**Code review:** Reference line numbers (`file.ts:123`), quote issues,
-show analyzer output
-
-**Debugging:** Show full errors, stack traces, reproduction steps with
-output
-
-## Remember
-
-- **Every claim needs proof** - No exceptions
-- **Show complete output** - No summaries or excerpts for verification
-- **Run commands yourself** - Never assume or infer results
-- **Timestamps matter** - Show when verification ran
-- **Links are proof** - Provide URLs for remote resources
-- **Honesty over convenience** - Admit when you haven't verified
-
-### Transparency builds trust. Evidence eliminates doubt
+Complete all progress tracking items. Create an evidence log with reproducible proofs. Define and validate acceptance criteria, and document any identified blockers.

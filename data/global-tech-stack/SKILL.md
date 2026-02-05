@@ -1,25 +1,25 @@
 ---
 name: Global Tech Stack
-description: Use Astro's modern web development stack including TypeScript, Tailwind CSS, Content Collections, islands architecture, and performance-first deployment practices. Use this skill when selecting technologies, configuring integrations, choosing deployment platforms, or making architectural decisions about the tech stack. When working on Astro configuration and integrations setup, choosing between SSG/hybrid/SSR rendering modes, selecting UI frameworks for interactive islands (React, Vue, Svelte), configuring Tailwind CSS or styling solutions, setting up Content Collections for type-safe content, choosing deployment adapters (Vercel, Netlify, Cloudflare), configuring testing tools (Vitest, Playwright), implementing performance optimization strategies, or adding third-party integrations and plugins.
+description: Reference and maintain the project's technical stack including frameworks, languages, databases, testing tools, and third-party services to ensure consistency across the project. Use this skill when making technology choices, adding new dependencies, configuring frameworks, or ensuring consistency with existing stack decisions. When setting up new features that need to align with the project's chosen technologies. When documenting or updating the tech stack. This skill applies when working with any technology-specific configuration, framework setup, or when making architectural decisions about tools and libraries.
 ---
 
 # Global Tech Stack
 
-This Skill provides Claude Code with specific guidance on how to adhere to coding standards as they relate to how it should handle global tech stack.
-
 ## When to use this skill
 
-- When configuring Astro integrations in astro.config.mjs
-- When choosing between static (SSG), hybrid, or server (SSR) rendering modes
-- When selecting UI frameworks for interactive components (React, Vue, Svelte, etc.)
-- When setting up Tailwind CSS or other styling frameworks
-- When configuring Content Collections with Zod schemas for type-safe content
-- When choosing deployment platforms (Vercel, Netlify, Cloudflare Pages, Node.js)
-- When setting up testing infrastructure (Vitest for unit tests, Playwright for E2E)
-- When implementing performance optimizations (image optimization, code splitting)
-- When adding analytics, SEO, authentication, or i18n integrations
-- When making decisions about package managers (pnpm, npm) or build tools
-- When configuring TypeScript strict mode and linting/formatting tools
+- When making decisions about which frameworks or libraries to use
+- When adding new dependencies or third-party services
+- When configuring application frameworks or runtime environments
+- When setting up database connections or ORM configurations
+- When choosing CSS frameworks or UI component libraries
+- When configuring testing frameworks or linting tools
+- When setting up deployment or CI/CD pipelines
+- When integrating third-party services (authentication, email, monitoring)
+- When documenting the project's technology choices
+- When ensuring new code aligns with existing stack decisions
+- When onboarding new team members to the project's technologies
+
+This Skill provides Claude Code with specific guidance on how to adhere to coding standards as they relate to how it should handle global tech stack.
 
 ## Instructions
 

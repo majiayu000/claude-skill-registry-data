@@ -1,243 +1,41 @@
 ---
-description: Imported skill state from langchain
-name: state
-signature: 42ae2e4632a0e8f384a8b978b4d9d69d7cdb98b069bb76d974c91c511388807c
-source: /a0/tmp/skills_research/langchain/libs/deepagents/deepagents/backends/state.py
+name: Android State Management
+description: Standards for ViewModel, StateFlow, and UI State Patterns
+metadata:
+  labels: [android, state, viewmodel, flow]
+  triggers:
+    files: ['**/*ViewModel.kt', '**/*UiState.kt']
+    keywords: [viewmodel, stateflow, livedata, uistate]
 ---
 
-"""StateBackend: Store files in LangGraph agent state (ephemeral)."""
+# Android State Management
 
-from typing import TYPE_CHECKING
+## **Priority: P0**
 
-from deepagents.backends.protocol import (
-    BackendProtocol,
-    EditResult,
-    FileDownloadResponse,
-    FileInfo,
-    FileUploadResponse,
-    GrepMatch,
-    WriteResult,
-)
-from deepagents.backends.utils import (
-    _glob_search_files,
-    create_file_data,
-    file_data_to_string,
-    format_read_response,
-    grep_matches_from_files,
-    perform_string_replacement,
-    update_file_data,
-)
+## Implementation Guidelines
 
-if TYPE_CHECKING:
-    from langchain.tools import ToolRuntime
+### ViewModel Pattern
 
+- **Exposure**: Expose ONE `StateFlow<UiState>` via `.asStateFlow()`.
+- **Scope**: Use `viewModelScope` for all coroutines.
+- **Initialization**: Trigger initial load in `init` or `LaunchedEffect` (once).
 
-class StateBackend(BackendProtocol):
-    """Backend that stores files in agent state (ephemeral).
+### UI State (LCE)
 
-    Uses LangGraph's state management and checkpointing. Files persist within
-    a conversation thread but not across threads. State is automatically
-    checkpointed after each agent step.
+- **Type**: sealed interface `UiState` (Loading, Content, Error).
+- **Immutability**: Data classes inside should be `@Immutable`.
 
-    Special handling: Since LangGraph state must be updated via Command objects
-    (not direct mutation), operations return Command objects instead of None.
-    This is indicated by the uses_state=True flag.
-    """
+### Flow Lifecycle
 
-    def __init__(self, runtime: "ToolRuntime"):
-        """Initialize StateBackend with runtime."""
-        self.runtime = runtime
+- **Collection**: Use `collectAsStateWithLifecycle()` in Compose.
+- **Hot Flows**: Use `SharingStarted.WhileSubscribed(5000)` for shared resources.
 
-    def ls_info(self, path: str) -> list[FileInfo]:
-        """List files and directories in the specified directory (non-recursive).
+## Anti-Patterns
 
-        Args:
-            path: Absolute path to directory.
+- **LiveData**: `**No LiveData**: Use StateFlow.`
+- **Mutable State**: `**No Mutable Public**: Expose read-only Flow.`
+- **Context**: `**No Context in VM**: Memory Leak Risk.`
 
-        Returns:
-            List of FileInfo-like dicts for files and directories directly in the directory.
-            Directories have a trailing / in their path and is_dir=True.
-        """
-        files = self.runtime.state.get("files", {})
-        infos: list[FileInfo] = []
-        subdirs: set[str] = set()
+## References
 
-        # Normalize path to have trailing slash for proper prefix matching
-        normalized_path = path if path.endswith("/") else path + "/"
-
-        for k, fd in files.items():
-            # Check if file is in the specified directory or a subdirectory
-            if not k.startswith(normalized_path):
-                continue
-
-            # Get the relative path after the directory
-            relative = k[len(normalized_path) :]
-
-            # If relative path contains '/', it's in a subdirectory
-            if "/" in relative:
-                # Extract the immediate subdirectory name
-                subdir_name = relative.split("/")[0]
-                subdirs.add(normalized_path + subdir_name + "/")
-                continue
-
-            # This is a file directly in the current directory
-            size = len("\n".join(fd.get("content", [])))
-            infos.append(
-                {
-                    "path": k,
-                    "is_dir": False,
-                    "size": int(size),
-                    "modified_at": fd.get("modified_at", ""),
-                }
-            )
-
-        # Add directories to the results
-        for subdir in sorted(subdirs):
-            infos.append(
-                {
-                    "path": subdir,
-                    "is_dir": True,
-                    "size": 0,
-                    "modified_at": "",
-                }
-            )
-
-        infos.sort(key=lambda x: x.get("path", ""))
-        return infos
-
-    def read(
-        self,
-        file_path: str,
-        offset: int = 0,
-        limit: int = 2000,
-    ) -> str:
-        """Read file content with line numbers.
-
-        Args:
-            file_path: Absolute file path.
-            offset: Line offset to start reading from (0-indexed).
-            limit: Maximum number of lines to read.
-
-        Returns:
-            Formatted file content with line numbers, or error message.
-        """
-        files = self.runtime.state.get("files", {})
-        file_data = files.get(file_path)
-
-        if file_data is None:
-            return f"Error: File '{file_path}' not found"
-
-        return format_read_response(file_data, offset, limit)
-
-    def write(
-        self,
-        file_path: str,
-        content: str,
-    ) -> WriteResult:
-        """Create a new file with content.
-        Returns WriteResult with files_update to update LangGraph state.
-        """
-        files = self.runtime.state.get("files", {})
-
-        if file_path in files:
-            return WriteResult(error=f"Cannot write to {file_path} because it already exists. Read and then make an edit, or write to a new path.")
-
-        new_file_data = create_file_data(content)
-        return WriteResult(path=file_path, files_update={file_path: new_file_data})
-
-    def edit(
-        self,
-        file_path: str,
-        old_string: str,
-        new_string: str,
-        replace_all: bool = False,
-    ) -> EditResult:
-        """Edit a file by replacing string occurrences.
-        Returns EditResult with files_update and occurrences.
-        """
-        files = self.runtime.state.get("files", {})
-        file_data = files.get(file_path)
-
-        if file_data is None:
-            return EditResult(error=f"Error: File '{file_path}' not found")
-
-        content = file_data_to_string(file_data)
-        result = perform_string_replacement(content, old_string, new_string, replace_all)
-
-        if isinstance(result, str):
-            return EditResult(error=result)
-
-        new_content, occurrences = result
-        new_file_data = update_file_data(file_data, new_content)
-        return EditResult(path=file_path, files_update={file_path: new_file_data}, occurrences=int(occurrences))
-
-    def grep_raw(
-        self,
-        pattern: str,
-        path: str = "/",
-        glob: str | None = None,
-    ) -> list[GrepMatch] | str:
-        files = self.runtime.state.get("files", {})
-        return grep_matches_from_files(files, pattern, path, glob)
-
-    def glob_info(self, pattern: str, path: str = "/") -> list[FileInfo]:
-        """Get FileInfo for files matching glob pattern."""
-        files = self.runtime.state.get("files", {})
-        result = _glob_search_files(files, pattern, path)
-        if result == "No files found":
-            return []
-        paths = result.split("\n")
-        infos: list[FileInfo] = []
-        for p in paths:
-            fd = files.get(p)
-            size = len("\n".join(fd.get("content", []))) if fd else 0
-            infos.append(
-                {
-                    "path": p,
-                    "is_dir": False,
-                    "size": int(size),
-                    "modified_at": fd.get("modified_at", "") if fd else "",
-                }
-            )
-        return infos
-
-    def upload_files(self, files: list[tuple[str, bytes]]) -> list[FileUploadResponse]:
-        """Upload multiple files to state.
-
-        Args:
-            files: List of (path, content) tuples to upload
-
-        Returns:
-            List of FileUploadResponse objects, one per input file
-        """
-        raise NotImplementedError(
-            "StateBackend does not support upload_files yet. You can upload files "
-            "directly by passing them in invoke if you're storing files in the memory."
-        )
-
-    def download_files(self, paths: list[str]) -> list[FileDownloadResponse]:
-        """Download multiple files from state.
-
-        Args:
-            paths: List of file paths to download
-
-        Returns:
-            List of FileDownloadResponse objects, one per input path
-        """
-        state_files = self.runtime.state.get("files", {})
-        responses: list[FileDownloadResponse] = []
-
-        for path in paths:
-            file_data = state_files.get(path)
-
-            if file_data is None:
-                responses.append(FileDownloadResponse(path=path, content=None, error="file_not_found"))
-                continue
-
-            # Convert file data to bytes
-            content_str = file_data_to_string(file_data)
-            content_bytes = content_str.encode("utf-8")
-
-            responses.append(FileDownloadResponse(path=path, content=content_bytes, error=None))
-
-        return responses
+- [Templates](references/implementation.md)

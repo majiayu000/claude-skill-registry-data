@@ -1,354 +1,99 @@
 ---
 name: spring-boot-testing
-description: Guide for writing comprehensive tests for Spring Boot applications including unit tests, integration tests, and test slices. Use this when creating tests for new features or fixing bugs.
+description: Spring Boot 4 testing strategies and patterns. Use when writing unit tests, slice tests (@WebMvcTest, @DataJpaTest), integration tests, Testcontainers with @ServiceConnection, security testing (@WithMockUser, JWT), or Modulith event testing with Scenario API. Covers the critical @MockitoBean migration from @MockBean.
 ---
 
-# Spring Boot Testing Best Practices
+# Spring Boot 4 Testing
 
-Follow these practices for comprehensive test coverage.
+Comprehensive testing patterns including slice tests, Testcontainers, security testing, and Modulith Scenario API.
 
-## Test Directory Structure
+## Critical Breaking Change
 
-```
-src/
-├── test/java/com/salonhub/api/           # Unit tests
-│   └── [domain]/
-│       ├── controller/
-│       │   └── [Feature]ControllerTest.java
-│       ├── service/
-│       │   └── [Feature]ServiceTest.java
-│       └── repository/
-│           └── [Feature]RepositoryTest.java
-├── integration/java/com/salonhub/api/    # Integration tests
-│   └── [domain]/
-│       └── [Feature]IntegrationTest.java
-└── testFixtures/java/com/salonhub/api/   # Shared test utilities
-    └── [domain]/
-        ├── [Domain]DatabaseDefault.java
-        └── [Domain]TestDataBuilder.java
-```
+| Old (Boot 3.x) | New (Boot 4.x) | Notes |
+|----------------|----------------|-------|
+| `@MockBean` | `@MockitoBean` | **Required migration** |
+| `@SpyBean` | `@MockitoSpyBean` | **Required migration** |
+| `MockMvc` (procedural) | `MockMvcTester` (fluent) | **New AssertJ-style API** |
+| Implicit `@AutoConfigureMockMvc` | Explicit annotation required | Add to `@SpringBootTest` |
 
-## Unit Testing - Controller Layer
+## MockMvcTester (Spring Boot 4)
+
+New fluent, AssertJ-style API for controller testing:
 
 ```java
-@WebMvcTest(controllers = AppointmentController.class)
-@Import(TestSecurityConfig.class)
-class AppointmentControllerTest {
+@WebMvcTest(UserController.class)
+class UserControllerTest {
 
     @Autowired
-    private MockMvc mockMvc;
-
-    @MockitoBean
-    private AppointmentService appointmentService;
-
-    @Autowired
-    private ObjectMapper objectMapper;
+    private MockMvcTester mvc;  // NEW: Fluent API
 
     @Test
-    @WithMockUser(roles = {"FRONT_DESK"})
-    void getAppointment_whenExists_shouldReturn200() throws Exception {
-        // Arrange
-        AppointmentResponseDTO dto = new AppointmentResponseDTO(1L, "John", "Alice", "Haircut");
-        when(appointmentService.findById(1L)).thenReturn(dto);
-
-        // Act & Assert
-        mockMvc.perform(get("/api/appointments/1")
-                .contentType(MediaType.APPLICATION_JSON))
-            .andExpect(status().isOk())
-            .andExpect(jsonPath("$.id").value(1))
-            .andExpect(jsonPath("$.customerName").value("John"));
-
-        verify(appointmentService).findById(1L);
-    }
-
-    @Test
-    @WithMockUser(roles = {"FRONT_DESK"})
-    void createAppointment_withValidRequest_shouldReturn201() throws Exception {
-        // Arrange
-        AppointmentRequestDTO request = new AppointmentRequestDTO();
-        request.setCustomerId(1L);
-        request.setEmployeeId(1L);
-
-        AppointmentResponseDTO response = new AppointmentResponseDTO(1L, "John", "Alice", "Haircut");
-        when(appointmentService.create(any())).thenReturn(response);
-
-        // Act & Assert
-        mockMvc.perform(post("/api/appointments")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(request)))
-            .andExpect(status().isCreated())
-            .andExpect(jsonPath("$.id").value(1));
-    }
-
-    @Test
-    @WithMockUser(roles = {"FRONT_DESK"})
-    void createAppointment_withInvalidRequest_shouldReturn400() throws Exception {
-        // Arrange - missing required fields
-        AppointmentRequestDTO request = new AppointmentRequestDTO();
-
-        // Act & Assert
-        mockMvc.perform(post("/api/appointments")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(request)))
-            .andExpect(status().isBadRequest());
+    void getUser_returnsUser() {
+        mvc.get().uri("/users/{id}", 1)
+            .exchange()
+            .assertThat()
+            .hasStatusOk()
+            .bodyJson()
+            .extractingPath("$.name")
+            .isEqualTo("John");
     }
 }
 ```
 
-## Unit Testing - Service Layer
+**Key Benefits**: Fluent assertions, better error messages, AssertJ integration.
 
-```java
-@ExtendWith(MockitoExtension.class)
-class AppointmentServiceTest {
+## Test Annotation Selection
 
-    @Mock
-    private AppointmentRepository appointmentRepository;
+| Test Type | Annotation | Use When |
+|-----------|------------|----------|
+| Controller | `@WebMvcTest` | Testing request/response, validation |
+| Repository | `@DataJpaTest` | Testing queries, entity mapping |
+| JSON | `@JsonTest` | Testing serialization/deserialization |
+| REST Client | `@RestClientTest` | Testing external API clients |
+| Full Integration | `@SpringBootTest` | End-to-end, with real dependencies |
+| Module | `@ApplicationModuleTest` | Testing bounded context in isolation |
 
-    @Mock
-    private AppointmentMapper appointmentMapper;
+## Core Workflow
 
-    @InjectMocks
-    private AppointmentService appointmentService;
+1. **Choose test slice** → Minimal context for fast tests
+2. **Mock dependencies** → `@MockitoBean` for external services
+3. **Use Testcontainers** → `@ServiceConnection` for databases
+4. **Assert thoroughly** → Use AssertJ, `MockMvcTester` (new), `RestTestClient` (new), WebTestClient
+5. **Test security** → `@WithMockUser`, JWT mocking
 
-    @Test
-    void findById_whenExists_shouldReturnAppointment() {
-        // Arrange
-        Appointment appointment = new Appointment();
-        appointment.setId(1L);
-        AppointmentResponseDTO dto = new AppointmentResponseDTO(1L, "John", "Alice", "Haircut");
+## Quick Patterns
 
-        when(appointmentRepository.findById(1L)).thenReturn(Optional.of(appointment));
-        when(appointmentMapper.toResponseDTO(appointment)).thenReturn(dto);
+See [EXAMPLES.md](EXAMPLES.md) for complete working examples including:
+- **@WebMvcTest** with `MockMvcTester` and `@MockitoBean` (Java + Kotlin)
+- **@DataJpaTest** with `TestEntityManager` for lazy loading verification
+- **Testcontainers** with `@ServiceConnection` for PostgreSQL/Redis
+- **Security Testing** with `@WithMockUser` for role-based access
+- **Modulith Event Testing** with `Scenario` API
 
-        // Act
-        AppointmentResponseDTO result = appointmentService.findById(1L);
+## Detailed References
 
-        // Assert
-        assertThat(result).isNotNull();
-        assertThat(result.getId()).isEqualTo(1L);
-        verify(appointmentRepository).findById(1L);
-    }
+- **Examples**: See [EXAMPLES.md](EXAMPLES.md) for complete working code examples
+- **Troubleshooting**: See [TROUBLESHOOTING.md](TROUBLESHOOTING.md) for common issues and Boot 4 migration
+- **Slice Tests**: See [references/SLICE-TESTS.md](references/SLICE-TESTS.md) for @WebMvcTest, @DataJpaTest, @JsonTest patterns
+- **Testcontainers**: See [references/TESTCONTAINERS.md](references/TESTCONTAINERS.md) for @ServiceConnection, container reuse
+- **Security Testing**: See [references/SECURITY-TESTING.md](references/SECURITY-TESTING.md) for @WithMockUser, JWT mocking
+- **Modulith Testing**: See [references/MODULITH-TESTING.md](references/MODULITH-TESTING.md) for Scenario API, event verification
 
-    @Test
-    void findById_whenNotExists_shouldThrowException() {
-        // Arrange
-        when(appointmentRepository.findById(anyLong())).thenReturn(Optional.empty());
+## Anti-Pattern Checklist
 
-        // Act & Assert
-        assertThatThrownBy(() -> appointmentService.findById(1L))
-            .isInstanceOf(ResourceNotFoundException.class)
-            .hasMessageContaining("Appointment not found");
-    }
-}
-```
+| Anti-Pattern | Fix |
+|--------------|-----|
+| Using `@MockBean` in Boot 4 | Replace with `@MockitoBean` |
+| `@SpringBootTest` for unit tests | Use appropriate slice annotation |
+| Missing `entityManager.clear()` | Add to verify lazy loading |
+| High-cardinality test data | Use minimal, focused fixtures |
+| Shared mutable test state | Use `@DirtiesContext` or fresh containers |
+| No security tests | Add `@WithMockUser` tests for endpoints |
 
-## Repository Testing
+## Critical Reminders
 
-```java
-@DataJpaTest
-@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
-@TestPropertySource(properties = "spring.profiles.active=test")
-class AppointmentRepositoryTest {
-
-    @Autowired
-    private AppointmentRepository appointmentRepository;
-
-    @Autowired
-    private TestEntityManager entityManager;
-
-    @Test
-    void findByCustomerId_shouldReturnMatchingAppointments() {
-        // Arrange
-        Customer customer = new Customer();
-        customer.setName("John");
-        entityManager.persist(customer);
-
-        Appointment appointment = new Appointment();
-        appointment.setCustomer(customer);
-        entityManager.persist(appointment);
-        entityManager.flush();
-
-        // Act
-        List<Appointment> results = appointmentRepository.findByCustomerId(customer.getId());
-
-        // Assert
-        assertThat(results).hasSize(1);
-        assertThat(results.get(0).getCustomer().getName()).isEqualTo("John");
-    }
-}
-```
-
-## Integration Testing
-
-```java
-@ServerSetupExtension
-@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-class AppointmentIntegrationTest {
-
-    @Autowired
-    private MockMvc mockMvc;
-
-    @Autowired
-    private ObjectMapper objectMapper;
-
-    // Use constants from database defaults
-    private static final Long EXISTING_CUSTOMER_ID = CustomerDatabaseDefault.JANE_ID;
-    private static final Long EXISTING_EMPLOYEE_ID = EmployeeDatabaseDefault.ALICE_ID;
-    private static final Long EXISTING_SERVICE_ID = ServiceTypeDatabaseDefault.HAIRCUT_ID;
-
-    private static Long createdAppointmentId;
-
-    @Test
-    @Order(1)
-    void createAppointment_shouldReturnCreated() throws Exception {
-        AppointmentRequestDTO request = new AppointmentRequestDTO();
-        request.setCustomerId(EXISTING_CUSTOMER_ID);
-        request.setEmployeeId(EXISTING_EMPLOYEE_ID);
-        request.setServiceTypeId(EXISTING_SERVICE_ID);
-        request.setAppointmentTime(LocalDateTime.now().plusDays(1));
-
-        var result = mockMvc.perform(post("/api/appointments")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(request)))
-            .andExpect(status().isCreated())
-            .andExpect(jsonPath("$.id").exists())
-            .andReturn();
-
-        String json = result.getResponse().getContentAsString();
-        createdAppointmentId = objectMapper.readTree(json).get("id").asLong();
-    }
-
-    @Test
-    @Order(2)
-    void getAppointment_shouldReturnAppointment() throws Exception {
-        mockMvc.perform(get("/api/appointments/{id}", createdAppointmentId))
-            .andExpect(status().isOk())
-            .andExpect(jsonPath("$.id").value(createdAppointmentId));
-    }
-
-    @Test
-    @Order(3)
-    void updateAppointment_shouldReturnUpdated() throws Exception {
-        AppointmentRequestDTO updateRequest = new AppointmentRequestDTO();
-        updateRequest.setCustomerId(EXISTING_CUSTOMER_ID);
-        updateRequest.setEmployeeId(EXISTING_EMPLOYEE_ID);
-        updateRequest.setServiceTypeId(EXISTING_SERVICE_ID);
-        updateRequest.setAppointmentTime(LocalDateTime.now().plusDays(2));
-
-        mockMvc.perform(put("/api/appointments/{id}", createdAppointmentId)
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(updateRequest)))
-            .andExpect(status().isOk())
-            .andExpect(jsonPath("$.id").value(createdAppointmentId));
-    }
-
-    @Test
-    @Order(4)
-    void deleteAppointment_shouldReturnNoContent() throws Exception {
-        mockMvc.perform(delete("/api/appointments/{id}", createdAppointmentId))
-            .andExpect(status().isNoContent());
-    }
-}
-```
-
-## Test Data Builders
-
-```java
-public class AppointmentTestDataBuilder {
-    private Long id;
-    private Customer customer;
-    private Employee employee;
-    private LocalDateTime appointmentTime;
-    private String status;
-
-    public static AppointmentTestDataBuilder anAppointment() {
-        return new AppointmentTestDataBuilder()
-            .withId(1L)
-            .withAppointmentTime(LocalDateTime.now().plusHours(1))
-            .withStatus("SCHEDULED");
-    }
-
-    public AppointmentTestDataBuilder withId(Long id) {
-        this.id = id;
-        return this;
-    }
-
-    public AppointmentTestDataBuilder withCustomer(Customer customer) {
-        this.customer = customer;
-        return this;
-    }
-
-    public Appointment build() {
-        Appointment appointment = new Appointment();
-        appointment.setId(id);
-        appointment.setCustomer(customer);
-        appointment.setEmployee(employee);
-        appointment.setAppointmentTime(appointmentTime);
-        appointment.setStatus(status);
-        return appointment;
-    }
-
-    public AppointmentRequestDTO buildRequestDTO() {
-        AppointmentRequestDTO dto = new AppointmentRequestDTO();
-        dto.setCustomerId(customer != null ? customer.getId() : null);
-        dto.setEmployeeId(employee != null ? employee.getId() : null);
-        dto.setAppointmentTime(appointmentTime);
-        return dto;
-    }
-}
-```
-
-## Database Defaults for Testing
-
-```java
-public class AppointmentDatabaseDefault {
-    public static final Long APPOINTMENT_ID_1 = 100L;
-    public static final Long APPOINTMENT_ID_2 = 101L;
-
-    public static final String INSERT_APPOINTMENT_1 =
-        "INSERT INTO appointments (id, customer_id, employee_id, appointment_time, status) VALUES " +
-        "(100, " + CustomerDatabaseDefault.JANE_ID + ", " + EmployeeDatabaseDefault.ALICE_ID + ", " +
-        "CURRENT_TIMESTAMP + INTERVAL '1 day', 'SCHEDULED')";
-
-    public static final String[] ALL_INSERTS = {
-        INSERT_APPOINTMENT_1
-    };
-}
-```
-
-## Running Tests
-
-```powershell
-# Run all tests
-.\gradlew.bat check
-
-# Run only unit tests
-.\gradlew.bat test
-
-# Run only integration tests
-.\gradlew.bat integrationTest
-
-# Run specific test class
-.\gradlew.bat test --tests "AppointmentServiceTest"
-
-# Run with coverage
-.\gradlew.bat test jacocoTestReport
-```
-
-## Test Coverage Requirements
-
-- **Minimum 80%** code coverage for new features
-- **100%** coverage for critical business logic
-- All error scenarios tested
-- All validation rules tested
-- Security tests for all protected endpoints
-
-## Testing Checklist for New Features
-
-- [ ] Unit tests for controller (valid/invalid input, security)
-- [ ] Unit tests for service (business logic, edge cases, exceptions)
-- [ ] Repository tests for custom queries
-- [ ] Integration tests (CRUD operations with real database)
-- [ ] Create test data builders
-- [ ] Update database defaults if needed
-- [ ] Run full test suite: `.\gradlew.bat check`
+1. **@MockitoBean is mandatory** — `@MockBean` removed in Boot 4
+2. **Slice tests are fast** — Use them for focused testing
+3. **Clear EntityManager** — Required to test lazy loading behavior
+4. **@ServiceConnection simplifies Testcontainers** — No more `@DynamicPropertySource`
+5. **Test security explicitly** — Don't rely on disabled security

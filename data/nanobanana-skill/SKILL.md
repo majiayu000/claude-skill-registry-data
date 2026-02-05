@@ -1,7 +1,6 @@
 ---
 name: nanobanana-skill
-description: 'Generate or edit images using Google Gemini API via nanobanana. Triggers: "nanobanana", "generate image", "create image", "edit image", "AI drawing", "图片生成", "AI绘图", "图片编辑", "生成图片".'
-allowed-tools: Read, Write, Glob, Grep, Task, Bash(cat:*), Bash(ls:*), Bash(tree:*), Bash(python3:*)
+description: 'Generate or edit images using Google Gemini API via nanobanana. Use when the user asks to create, generate, edit images with nanobanana, or mentions image generation/editing tasks.'
 ---
 
 # Nanobanana Image Generation Skill
@@ -11,8 +10,14 @@ Generate or edit images using Google Gemini API through the nanobanana tool.
 ## Requirements
 
 1. **GEMINI_API_KEY**: Must be configured in `~/.nanobanana.env` or `export GEMINI_API_KEY=<your-api-key>`
-2. **Python3 with depedent packages installed**: google-genai, Pillow, python-dotenv. They could be installed via `python3 -m pip install -r ${CLAUDE_PLUGIN_ROOT}/skills/nanobanana-skill/requirements.txt` if not installed yet.
-3. **Executable**: `${CLAUDE_PLUGIN_ROOT}/skills/nanobanana-skill/nanobanana.py`
+2. **Python3 with depedent packages installed**: google-genai, Pillow, python-dotenv. They could be installed via `python3 -m pip install -r ~/.codex/skills/nanobanana-skill/requirements.txt` if not installed yet.
+3. **Executable**: `~/.codex/skills/nanobanana-skill/nanobanana.py`
+
+Example `.nanobanana.env`:
+
+```bash
+GEMINI_API_KEY=sk-dummy
+```
 
 ## Instructions
 
@@ -28,7 +33,7 @@ Generate or edit images using Google Gemini API through the nanobanana tool.
 2. Run the nanobanana script with appropriate parameters:
 
    ```bash
-   python3 ${CLAUDE_PLUGIN_ROOT}/skills/nanobanana-skill/nanobanana.py --prompt "description of image" --output "filename.png"
+   python3 ~/.codex/skills/nanobanana-skill/nanobanana.py --prompt "description of image" --output "filename.png"
    ```
 
 3. Show the user the saved image path when complete
@@ -43,7 +48,7 @@ Generate or edit images using Google Gemini API through the nanobanana tool.
 2. Run with input images:
 
    ```bash
-   python3 ${CLAUDE_PLUGIN_ROOT}/skills/nanobanana-skill/nanobanana.py --prompt "editing instructions" --input image1.png image2.png --output "edited.png"
+   python3 ~/.codex/skills/nanobanana-skill/nanobanana.py --prompt "editing instructions" --input image1.png image2.png --output "edited.png"
    ```
 
 ## Available Options
@@ -72,18 +77,23 @@ Generate or edit images using Google Gemini API through the nanobanana tool.
 - `2K`
 - `4K`
 
+### Optional Flags
+
+- `--enable-google-search` Enable Google Search tool for the model (default: disabled)
+- `--include-thoughts` Include model thinking in output (default: disabled)
+
 ## Examples
 
 ### Generate a simple image
 
 ```bash
-python3 ${CLAUDE_PLUGIN_ROOT}/skills/nanobanana-skill/nanobanana.py --prompt "A serene mountain landscape at sunset with a lake"
+python3 ~/.codex/skills/nanobanana-skill/nanobanana.py --prompt "A serene mountain landscape at sunset with a lake"
 ```
 
 ### Generate with specific size and output
 
 ```bash
-python3 ${CLAUDE_PLUGIN_ROOT}/skills/nanobanana-skill/nanobanana.py \
+python3 ~/.codex/skills/nanobanana-skill/nanobanana.py \
   --prompt "Modern minimalist logo for a tech startup" \
   --size 1024x1024 \
   --output "logo.png"
@@ -92,7 +102,7 @@ python3 ${CLAUDE_PLUGIN_ROOT}/skills/nanobanana-skill/nanobanana.py \
 ### Generate landscape image with high resolution
 
 ```bash
-python3 ${CLAUDE_PLUGIN_ROOT}/skills/nanobanana-skill/nanobanana.py \
+python3 ~/.codex/skills/nanobanana-skill/nanobanana.py \
   --prompt "Futuristic cityscape with flying cars" \
   --size 1344x768 \
   --resolution 2K \
@@ -102,7 +112,7 @@ python3 ${CLAUDE_PLUGIN_ROOT}/skills/nanobanana-skill/nanobanana.py \
 ### Edit existing images
 
 ```bash
-python3 ${CLAUDE_PLUGIN_ROOT}/skills/nanobanana-skill/nanobanana.py \
+python3 ~/.codex/skills/nanobanana-skill/nanobanana.py \
   --prompt "Add a rainbow in the sky" \
   --input photo.png \
   --output "photo-with-rainbow.png"
@@ -111,7 +121,7 @@ python3 ${CLAUDE_PLUGIN_ROOT}/skills/nanobanana-skill/nanobanana.py \
 ### Use faster model
 
 ```bash
-python3 ${CLAUDE_PLUGIN_ROOT}/skills/nanobanana-skill/nanobanana.py \
+python3 ~/.codex/skills/nanobanana-skill/nanobanana.py \
   --prompt "Quick sketch of a cat" \
   --model gemini-2.5-flash-image \
   --output "cat-sketch.png"

@@ -1,100 +1,200 @@
 ---
-name: twitter
-description: >
-  Use when user asks to "search Twitter", "read a tweet", "check my bookmarks",
-  "find mentions", "get tweets from a list", "see who I follow", "extract tweets",
-  or needs programmatic access to X/Twitter for research and information synthesis.
-  Handles reading, searching, bookmarks, lists, and social graph queries.
-allowed-tools:
-  - Bash(bird:*)
-  - Read
-  - Write
+name: twitter-algorithm-optimizer
+description: 使用 Twitter 开源算法洞察分析和优化推文以获得最大覆盖范围。根据推荐系统对内容排名的方式重写和编辑用户推文，以提升参与度和可见性。
+license: AGPL-3.0 (referencing Twitter's algorithm source)
 ---
 
-# Twitter / X Research & Extraction
+# Twitter 算法优化器
 
-Programmatic access to Twitter/X via `bird` CLI. Primary use: search, read, extract, and synthesize information.
+## 何时使用此技能
 
-## Core Commands
+当你需要以下操作时使用此技能：
+- **优化推文草稿**以获得最大覆盖范围和参与度
+- **理解为什么**某条推文可能在算法上表现不佳
+- **重写推文**以符合 Twitter 的排名机制
+- **根据实际排名算法改进内容策略**
+- **调试表现不佳的内容**并增加可见性
+- **最大化 Twitter 算法跟踪的参与度信号**
 
-### Reading & Threads
-```bash
-bird read <url-or-id>           # Single tweet
-bird read <url> --json          # JSON output for processing
-bird thread <url>               # Full conversation thread
-bird replies <url> -n 20        # Replies to a tweet
-```
+## 此技能的作用
 
-### Search
-```bash
-bird search "query" -n 10       # Search tweets
-bird search "from:user topic"   # User-specific search
-bird search "query" --json      # JSON for processing
-```
+1. **针对 Twitter 的核心推荐算法分析推文**
+2. **根据参与度信号识别优化机会**
+3. **重写和编辑推文以提高算法排名**
+4. **使用算法洞察解释推荐背后的"原因"**
+5. **将 Real-graph、SimClusters 和 TwHIN 原则应用于内容策略**
+6. **提供基于 Twitter 实际系统的参与度提升策略**
 
-### Bookmarks & Likes
-```bash
-bird bookmarks                  # Your saved tweets
-bird bookmarks -n 50 --json     # Bulk export
-bird likes                      # Your liked tweets
-bird unbookmark <url>           # Remove bookmark
-```
+## 工作原理：Twitter 的算法架构
 
-### Lists
-```bash
-bird lists                      # Your lists
-bird list-timeline <list-id>    # Tweets from a list
-```
+Twitter 的推荐系统使用多个相互关联的模型：
 
-### Social Graph
-```bash
-bird following                  # Who you follow
-bird followers                  # Who follows you
-bird mentions                   # Tweets mentioning you
-```
+### 核心排名模型
 
-## Extraction Workflows
+**Real-graph**：预测用户之间的互动可能性
+- 确定你的关注者是否将与你的内容互动
+- 影响 Twitter 向其他人展示你的推文的范围
+- 关键信号：关注者会喜欢、回复或转发这条推文吗？
 
-### Save tweets to file
-```bash
-bird search "topic" -n 50 --json > tweets.json
-bird bookmarks --json > bookmarks.json
-bird thread <url> --json > thread.json
-```
+**SimClusters**：具有稀疏嵌入的社区检测
+- 识别具有相似兴趣的用户社区
+- 确定你的推文是否在特定社区内产生共鸣
+- 关键策略：制作吸引会参与的高凝聚力社区的内容
 
-### Synthesize from search
-1. `bird search "topic" -n 20 --json > results.json`
-2. Read results.json
-3. Extract key insights, summarize themes
+**TwHIN**：用户和帖子的知识图嵌入
+- 映射用户和内容主题之间的关系
+- 帮助 Twitter 理解你的推文是否符合关注者的兴趣
+- 关键策略：保持在你的领域内，或清楚地表明主题转变
 
-### Export bookmarks for review
-1. `bird bookmarks -n 100 --json > bookmarks.json`
-2. Parse and categorize by topic
-3. Create summary or reading list
+**Tweepcred**：用户声誉/权威评分
+- 更高可信度的用户获得更多分发
+- 你过去的参与历史会影响当前推文的覆盖范围
+- 关键策略：通过持续参与建立声誉
 
-## Auth & Troubleshooting
+### 跟踪的参与度信号
 
-Check auth status:
-```bash
-bird whoami                     # Current account
-bird check                      # Credential sources
-```
+Twitter 的**统一用户操作**服务跟踪显式和隐式信号：
 
-Auth sources (checked in order):
-- Browser cookies (Firefox/Chrome)
-- `SWEETISTICS_API_KEY` env var
-- Explicit `--auth-token` and `--ct0` flags
+**显式信号**（高权重）：
+- 点赞（直接正面信号）
+- 回复（表示值得讨论的有价值内容）
+- 转发（最强信号 - 用户想要分享它）
+- 引用推文（参与式讨论）
 
-Common issues:
-- **Rate limits**: Wait and retry; reduce `-n` count
-- **Auth expired**: Re-login to Twitter in browser, cookies auto-refresh
-- **No results**: Check query syntax; try broader terms
+**隐式信号**（也有权重）：
+- 个人主页访问（对作者的好奇）
+- 点击/链接点击（内容被认为值得探索）
+- 时间花费（用户阅读/考虑你的推文）
+- 保存/书签（计划以后返回）
 
-## Output Formats
+**负面信号**：
+- 屏蔽/举报（Twitter 会对这个进行严重惩罚）
+- 取消关注/静音（该人不想看到你的内容）
+- 快速跳过/快速滚动（低参与度）
 
-- Default: Human-readable with emoji
-- `--plain`: Stable text output, no emoji/color
-- `--json`: Machine-readable for processing
-- `--json-full`: Includes raw API response
+### 动态生成过程
 
-Always use `--json` when extracting for synthesis.
+你的推文通过以下流程触达用户：
+
+1. **候选检索** - 多个来源找到候选推文：
+   - 搜索索引（相关关键词匹配）
+   - UTEG（时间线参与图 - 关注关系）
+   - Tweet-mixer（热门/病毒内容）
+
+2. **排名** - ML 模型对候选进行排名，预测参与度：
+   - 这个用户会与这条推文互动吗？
+   - 参与会发生得多快？
+   - 它会传播到非关注者吗？
+
+3. **过滤** - 移除屏蔽的内容，应用偏好
+
+4. **交付** - 向用户展示排名后的动态
+
+## 基于算法洞察的优化策略
+
+### 1. 最大化 Real-graph（关注者参与度）
+
+**策略**：制作你的关注者会参与的内容
+
+- **了解你的受众**：参考他们关心的话题
+- **提问**：直接问题比陈述获得更多回复
+- **（安全地）制造争议**：辩论吸引参与（但避免屏蔽/举报）
+- **标记相关创作者**：通过网络增加可见性
+- **在关注者活跃时发布**：更好的早期参与意味着更好的排名
+
+**优化示例**：
+- ❌ "我认为气候政策很重要"
+- ✅ "热门观点：当前气候政策忽视了核能。大家怎么看？"（触发回复）
+
+### 2. 利用 SimClusters（社区共鸣）
+
+**策略**：找到并服务对你的话题深入感兴趣的紧密社区
+
+- **选择一个清晰的主题**：不要用混合信息混淆算法
+- **使用社区语言**：参考共同的梗、内部笑话和术语
+- **为小众社区提供价值**：对那个特定社区真正有用
+- **鼓励社区到社区的分享**：引发讨论的引用
+- **在你的道路上建立一致性**：一致性帮助算法理解你的主题
+
+**优化示例**：
+- ❌ "我使用很多编程语言"
+- ✅ "Rust 的所有权系统是被低估的功能。以下是原因..."（针对特定的开发者社区）
+
+### 3. 改善 TwHIN 映射（内容-用户匹配）
+
+**策略**：使你的内容与你的既定身份明显相关
+
+- **表明你的专业知识**：以领域知识为主导
+- **一致性很重要**：保持在你的领域内（或清楚地宣布新方向）
+- **使用具体术语**：帮助算法正确对你进行分类
+- **参考你过去的成功**："跟进我关于 X 的推文..."
+- **建立主题权威**：同一主题的多条推文强化联系
+
+**优化示例**：
+- ❌ "我喜欢很多东西"（模糊，混淆算法）
+- ✅ "作为全栈工程师的第三次连续框架评测"（建立权威）
+
+### 4. 提升 Tweepcred（权威/可信度）
+
+**策略**：通过参与一致性建立声誉
+
+- **回复顶级创作者**：与高可信度账户的互动提升可见性
+- **引用有趣的推文**：增加价值并表明参与
+- **避免参与诱饵**：不会建立真正的可信度
+- **保持一致**：定期发布高质量内容胜过零星的病毒式尝试
+- **深入参与**：高质量的回复和讨论比数量更重要
+
+**优化示例**：
+- ❌ "如果同意就转发..."（参与诱饵，随着时间推移损害可信度）
+- ✅ "对[链接推文]中方法的深思熟虑的批评"（建立权威）
+
+### 5. 最大化参与度信号
+
+**显式信号触发器**：
+
+**对于点赞**：
+- 新颖的见解或令人难忘的措辞
+- 对受众信念的验证
+- 有用/可操作的信息
+- 有支持证据的强烈观点
+
+**对于回复**：
+- 提出直接问题
+- 制造辩论
+- 请求意见
+- 分享不完整的想法（邀请补充）
+
+**对于转发**：
+- 人们想要分享的有用信息
+- 代表性价值（推文代表他们）
+- 娱乐他们的关注者
+- 信息优势（首先发布突发新闻）
+
+**对于保存/书签**：
+- 教程或操作指南
+- 他们以后会参考的数据/统计
+- 灵感或动力
+- 他们想再次看到的笑话/娱乐
+
+**优化示例**：
+- ❌ "看看这个工具"（被动）
+- ✅ "这个工具这周节省了我 5 个小时。以下是设置方法..."（可操作，值得转发）
+
+### 6. 防止负面信号
+
+**避免**：
+- 可能被举报的煽动性内容
+- 有针对性的骚扰（受到算法惩罚）
+- 误导性/虚假声明（损害可信度）
+- 品牌外转型（混淆算法）
+- 回复者综合症（太多低价值回复）
+
+## 如何优化你的推文
+
+### 第 1 步：识别核心信息
+- 这条推文传达的最重要的一件事是什么？
+- 谁应该关心这个？
+- 你想要什么行动/参与？
+
+### 第 2 步：映射到算法策略
+- 哪个 Real-graph 关注者细分群体会参与？（关心 X 的关注者）

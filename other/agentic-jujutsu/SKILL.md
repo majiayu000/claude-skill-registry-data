@@ -2,6 +2,14 @@
 name: agentic-jujutsu
 version: 2.3.2
 description: Quantum-resistant, self-learning version control for AI agents with ReasoningBank intelligence and multi-agent coordination
+category: development
+tags:
+  - version-control
+  - multi-agent
+  - ai-agents
+  - conflict-resolution
+  - quantum-resistant
+author: Smith Horn
 ---
 
 # Agentic Jujutsu - AI Agent Version Control
@@ -11,7 +19,6 @@ description: Quantum-resistant, self-learning version control for AI agents with
 ## When to Use This Skill
 
 Use **agentic-jujutsu** when you need:
-
 - ✅ Multiple AI agents modifying code simultaneously
 - ✅ Lock-free version control (23x faster than Git)
 - ✅ Self-learning AI that improves from experience
@@ -81,7 +88,6 @@ console.log('Expected Success:', (suggestion.expectedSuccessRate * 100).toFixed(
 ```
 
 **Validation (v2.3.1)**:
-
 - ✅ Tasks must be non-empty (max 10KB)
 - ✅ Success scores must be 0.0-1.0
 - ✅ Must have operations before finalizing
@@ -204,21 +210,21 @@ Learn and improve deployment workflows:
 async function adaptiveDeployment(jj, environment) {
     // Get AI suggestion based on past deployments
     const suggestion = JSON.parse(jj.getSuggestion(`Deploy to ${environment}`));
-
+    
     console.log(`Deploying with ${(suggestion.confidence * 100).toFixed(0)}% confidence`);
     console.log(`Expected duration: ${suggestion.estimatedDurationMs}ms`);
-
+    
     // Start tracking
     jj.startTrajectory(`Deploy to ${environment}`);
-
+    
     // Execute recommended operations
     for (const op of suggestion.recommendedOperations) {
         console.log(`Executing: ${op}`);
         await executeOperation(op);
     }
-
+    
     jj.addToTrajectory();
-
+    
     // Record outcome
     const success = await verifyDeployment();
     jj.finalizeTrajectory(
@@ -236,26 +242,26 @@ Coordinate review across multiple agents:
 async function coordinatedReview(agents) {
     const reviews = await Promise.all(agents.map(async (agent) => {
         const jj = new JjWrapper();
-
+        
         // Start review trajectory
         jj.startTrajectory(`Review by ${agent.name}`);
-
+        
         // Get AI suggestion for review approach
         const suggestion = JSON.parse(jj.getSuggestion('Code review'));
-
+        
         // Perform review
         const diff = await jj.diff('@', '@-');
         const issues = await agent.analyze(diff);
-
+        
         jj.addToTrajectory();
         jj.finalizeTrajectory(
             issues.length === 0 ? 0.9 : 0.6,
             `Found ${issues.length} issues`
         );
-
+        
         return { agent: agent.name, issues, suggestion };
     }));
-
+    
     // Aggregate learning from all agents
     return reviews;
 }
@@ -269,10 +275,10 @@ Learn from failures to prevent future issues:
 async function smartMerge(jj, branch) {
     // Query similar merge attempts
     const similar = JSON.parse(jj.queryTrajectories(`merge ${branch}`, 10));
-
+    
     // Analyze past failures
     const failures = similar.filter(t => t.successScore < 0.5);
-
+    
     if (failures.length > 0) {
         console.log('⚠️ Similar merges failed in the past:');
         failures.forEach(f => {
@@ -281,15 +287,15 @@ async function smartMerge(jj, branch) {
             }
         });
     }
-
+    
     // Get AI recommendation
     const suggestion = JSON.parse(jj.getSuggestion(`merge ${branch}`));
-
+    
     if (suggestion.confidence < 0.7) {
         console.log('⚠️ Low confidence. Recommended steps:');
         suggestion.recommendedOperations.forEach(op => console.log(`  - ${op}`));
     }
-
+    
     // Execute merge with tracking
     jj.startTrajectory(`Merge ${branch}`);
     try {
@@ -313,22 +319,22 @@ class SelfImprovingAgent {
     constructor() {
         this.jj = new JjWrapper();
     }
-
+    
     async performTask(taskDescription) {
         // Get AI suggestion
         const suggestion = JSON.parse(this.jj.getSuggestion(taskDescription));
-
+        
         console.log(`Task: ${taskDescription}`);
         console.log(`AI Confidence: ${(suggestion.confidence * 100).toFixed(1)}%`);
         console.log(`Expected Success: ${(suggestion.expectedSuccessRate * 100).toFixed(1)}%`);
-
+        
         // Start trajectory
         this.jj.startTrajectory(taskDescription);
-
+        
         // Execute with recommended approach
         const startTime = Date.now();
         let success = false;
-
+        
         try {
             for (const op of suggestion.recommendedOperations) {
                 await this.execute(op);
@@ -337,25 +343,25 @@ class SelfImprovingAgent {
         } catch (err) {
             console.error('Task failed:', err.message);
         }
-
+        
         const duration = Date.now() - startTime;
-
+        
         // Record learning
         this.jj.addToTrajectory();
         this.jj.finalizeTrajectory(
             success ? 0.9 : 0.4,
-            success
+            success 
                 ? `Completed in ${duration}ms using ${suggestion.recommendedOperations.length} operations`
                 : `Failed after ${duration}ms`
         );
-
+        
         // Check improvement
         const stats = JSON.parse(this.jj.getLearningStats());
         console.log(`Improvement rate: ${(stats.improvementRate * 100).toFixed(1)}%`);
-
+        
         return success;
     }
-
+    
     async execute(operation) {
         // Execute operation logic
     }
@@ -500,22 +506,18 @@ try {
 ## Validation Rules (v2.3.1+)
 
 ### Task Description
-
 - ✅ Cannot be empty or whitespace-only
 - ✅ Maximum length: 10,000 bytes
 - ✅ Automatically trimmed
 
 ### Success Score
-
 - ✅ Must be finite (not NaN or Infinity)
 - ✅ Must be between 0.0 and 1.0 (inclusive)
 
 ### Operations
-
 - ✅ Must have at least one operation before finalizing
 
 ### Context
-
 - ✅ Cannot be empty
 - ✅ Keys cannot be empty or whitespace-only
 - ✅ Keys max 1,000 bytes, values max 10,000 bytes
@@ -531,7 +533,7 @@ if (suggestion.confidence < 0.5) {
     // Not enough data - check learning stats
     const stats = JSON.parse(jj.getLearningStats());
     console.log(`Need more data. Current trajectories: ${stats.totalTrajectories}`);
-
+    
     // Recommend: Record 5-10 trajectories first
 }
 ```
@@ -576,22 +578,22 @@ const { JjWrapper } = require('agentic-jujutsu');
 
 async function learnFromWork() {
     const jj = new JjWrapper();
-
+    
     // Start tracking
     jj.startTrajectory('Add user profile feature');
-
+    
     // Do work
     await jj.branchCreate('feature/user-profile');
     await jj.newCommit('Add user profile model');
     await jj.newCommit('Add profile API endpoints');
     await jj.newCommit('Add profile UI');
-
+    
     // Record operations
     jj.addToTrajectory();
-
+    
     // Finalize with result
     jj.finalizeTrajectory(0.85, 'Feature complete, minor styling issues remain');
-
+    
     // Next time, get suggestions
     const suggestion = JSON.parse(jj.getSuggestion('Add settings page'));
     console.log('AI suggests:', suggestion.reasoning);
@@ -607,31 +609,31 @@ async function agentSwarm(taskList) {
         jj: new JjWrapper(),
         task
     }));
-
+    
     // All agents work concurrently (no conflicts!)
     const results = await Promise.all(agents.map(async (agent) => {
         agent.jj.startTrajectory(agent.task);
-
+        
         // Get AI suggestion
         const suggestion = JSON.parse(agent.jj.getSuggestion(agent.task));
-
+        
         // Execute task
         const success = await executeTask(agent, suggestion);
-
+        
         agent.jj.addToTrajectory();
         agent.jj.finalizeTrajectory(success ? 0.9 : 0.5);
-
+        
         return { agent: agent.name, success };
     }));
-
+    
     console.log('Results:', results);
 }
 ```
 
 ## Related Documentation
 
-- **NPM Package**: <https://npmjs.com/package/agentic-jujutsu>
-- **GitHub**: <https://github.com/ruvnet/agentic-flow/tree/main/packages/agentic-jujutsu>
+- **NPM Package**: https://npmjs.com/package/agentic-jujutsu
+- **GitHub**: https://github.com/ruvnet/agentic-flow/tree/main/packages/agentic-jujutsu
 - **Full README**: See package README.md
 - **Validation Guide**: docs/VALIDATION_FIXES_v2.3.1.md
 - **AgentDB Guide**: docs/AGENTDB_GUIDE.md

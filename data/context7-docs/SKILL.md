@@ -1,78 +1,126 @@
 ---
 name: context7-docs
-description: Fetches up-to-date documentation for technologies used in the Personal AI Employee project via Context7 MCP server. Use when you need current API documentation, library references, code examples, or implementation guidance for any technology in the stack.
-allowed-tools: Read, Write, Edit, Bash, Glob, Grep
+description: Use this skill when working with any framework or library (React, Next.js, Vue, Astro, etc.) to fetch up-to-date documentation and prevent hallucinated APIs. Triggers on keywords like "use context7", "latest docs", "current API", or when working with rapidly evolving frameworks.
 ---
 
-# Context7 Documentation Skill
+# Context7 Documentation Fetching
 
-This skill provides access to up-to-date documentation for all technologies used in the Personal AI Employee project through the Context7 MCP server.
+This skill enables fetching up-to-date, version-specific documentation directly from official sources.
 
-## Supported Technologies
+## Problem Solved
 
-### Core Stack
-| Technology | Context7 Library ID | Purpose |
-|------------|---------------------|---------|
-| Python | `python/cpython` | Core language |
-| Claude Code | `anthropics/claude-code` | AI reasoning engine |
-| Anthropic SDK | `anthropics/anthropic-sdk-python` | Claude API integration |
+LLMs have stale training data. When working with Next.js 15, React 19, or any library that evolved since the model's cutoff date, you get:
+- Hallucinated APIs that don't exist
+- Deprecated patterns
+- Outdated code examples
 
-### Automation & Monitoring
-| Technology | Context7 Library ID | Purpose |
-|------------|---------------------|---------|
-| Playwright | `microsoft/playwright-python` | Browser automation (WhatsApp) |
-| Watchdog | `gorakhargosh/watchdog` | Filesystem monitoring |
-| PM2 | `unitech/pm2` | Process management |
+## When to Use
 
-### APIs & Integrations
-| Technology | Context7 Library ID | Purpose |
-|------------|---------------------|---------|
-| Gmail API | `googleapis/google-api-python-client` | Email integration |
-| Google Auth | `googleapis/google-auth-library-python` | OAuth authentication |
+- Working with any framework/library (React, Next.js, Vue, Astro, Tailwind, etc.)
+- Need current official documentation
+- Want accurate code examples
+- Encountering unfamiliar APIs
+- Starting a new project with latest versions
 
-### Data & Utilities
-| Technology | Context7 Library ID | Purpose |
-|------------|---------------------|---------|
-| PyYAML | `yaml/pyyaml` | YAML parsing (frontmatter) |
-| Requests | `psf/requests` | HTTP requests |
-| Python-dotenv | `theskumar/python-dotenv` | Environment variables |
+## How to Activate
 
-### MCP & Agent Framework
-| Technology | Context7 Library ID | Purpose |
-|------------|---------------------|---------|
-| MCP SDK | `modelcontextprotocol/python-sdk` | MCP server development |
-| FastMCP | `jlowin/fastmcp` | Quick MCP servers |
-
-## Usage
-
-### Via MCP Tool Call
-When you need documentation, use the Context7 MCP tools:
+Simply include "use context7" in your prompt:
 
 ```
-1. resolve-library-id - Find the correct library ID
-2. get-library-docs - Fetch documentation for a library
+use context7 でNext.js 15のApp Routerについて教えて
 ```
 
-### Quick Reference
-```bash
-# Example: Get Playwright docs for browser automation
-context7_resolve "playwright python"
-context7_docs "/microsoft/playwright-python" --topic "browser automation"
+```
+use context7 React 19の新機能を使ってコンポーネントを作って
 ```
 
-## Documentation Cache
+## Available Tools
 
-Fetched documentation is cached in:
+### 1. resolve-library-id
+Converts library name to Context7 ID.
+
 ```
-/Vault/Docs/
-├── python/
-├── playwright/
-├── gmail-api/
-└── mcp/
+Input: "next.js"
+Output: "/vercel/next.js/v15.0.0"
 ```
 
-## Reference
+### 2. get-library-docs
+Fetches documentation chunks and code examples.
 
-For detailed usage patterns, see [reference.md](reference.md)
+Parameters:
+- `context7_id`: Library ID from resolve-library-id
+- `topic` (optional): Specific topic to filter
+- `tokens` (optional): Max tokens (default 5000)
 
-For examples, see [examples.md](examples.md)
+## Example Usage
+
+### Basic Documentation Fetch
+
+```
+User: use context7 でReact 19のuseActionStateの使い方を教えて
+
+AI: [Calls resolve-library-id with "react"]
+    [Calls get-library-docs with topic "useActionState"]
+    [Returns current, accurate documentation]
+```
+
+### Framework Setup
+
+```
+User: use context7 で最新のAstro 5プロジェクトをセットアップして
+
+AI: [Fetches current Astro 5 documentation]
+    [Provides accurate setup commands and configuration]
+```
+
+## Supported Libraries
+
+Context7 supports documentation from major frameworks and libraries:
+
+| Category | Libraries |
+|----------|-----------|
+| **Frontend** | React, Vue, Svelte, Angular, Solid |
+| **Meta-frameworks** | Next.js, Nuxt, Astro, Remix, SvelteKit |
+| **Styling** | Tailwind CSS, CSS-in-JS libraries |
+| **State** | Redux, Zustand, Jotai, Recoil |
+| **Testing** | Jest, Vitest, Playwright, Cypress |
+| **Backend** | Express, Fastify, Hono, tRPC |
+| **Database** | Prisma, Drizzle, TypeORM |
+| **Build** | Vite, esbuild, webpack, turbopack |
+
+## Best Practices
+
+1. **Always use for rapidly evolving frameworks**
+   - Next.js (major updates frequently)
+   - React (new features in v19)
+   - Tailwind (v4 breaking changes)
+
+2. **Specify version when needed**
+   ```
+   use context7 Next.js 15.1の新機能
+   ```
+
+3. **Combine with specific topics**
+   ```
+   use context7 Prismaのリレーション設定
+   ```
+
+4. **Use for debugging**
+   ```
+   use context7 このエラーはReact 19で解決されてる？
+   ```
+
+## Integration with TAISUN
+
+Context7 is automatically available via MCP. No additional setup required.
+
+When you include "use context7" or work with framework-specific tasks, the system will:
+1. Detect the library/framework
+2. Resolve the Context7 ID
+3. Fetch relevant documentation
+4. Provide accurate, current information
+
+## Source
+
+- [Context7 GitHub](https://github.com/upstash/context7)
+- [Upstash Blog](https://upstash.com/blog/context7-mcp)

@@ -1,167 +1,281 @@
 ---
-name: frontend
-description: 프론트엔드 개발 스킬. React 컴포넌트, 커스텀 훅, Tailwind 스타일링. UI 작업 시 사용.
+name: agent-frontend
+description: Angular 21+ expert for .ts .html .css files, @Component, UI, components, pages, services, routing, forms, templates, signals, RxJS, HttpClient, inject(), reactive forms, validators, accessibility, WCAG, AXE, browser testing, Karma, Jasmine, e2e, Playwright
+allowed-tools: Read, Write, Edit, Glob, Grep, Bash
 ---
 
-# Frontend Skill
+# Frontend Development Skill
 
-## Chrome Extension UI 구조
+Expert in Angular 21+ frontend development following project conventions.
 
-### Popup (주요 UI)
+## When to Use This Skill
 
+Use this skill when:
+
+- Implementing UI components or pages
+- Creating or modifying Angular services
+- Working with forms and validation
+- Implementing routing or guards
+- Any frontend-related task
+
+## Core Principles
+
+### Angular 21+ Patterns
+
+- **Standalone components only** (no NgModules)
+- **Signals for state** (`signal()`, `computed()`)
+- **OnPush change detection** (always)
+- **inject() for DI** (not constructor injection)
+- **Native control flow** (`@if`, `@for`, `@switch`)
+- **input()/output() functions** (not decorators)
+
+### Naming Conventions
+
+- **camelCase everywhere** - variables, properties, all naming
+- **NEVER use snake_case**
+
+## Mandatory Local Testing (CRITICAL)
+
+**BEFORE EVERY PUSH, run ALL checks from apps/frontend:**
+
+```bash
+cd apps/frontend
+
+# 1. Lint check
+npm run lint
+
+# 2. Format check
+npm run format:check
+
+# 3. Tests
+npm run test:ci
+
+# 4. Build
+npm run build
 ```
-src/popup/
-├── Popup.tsx           # 메인 엔트리
-├── components/
-│   ├── LinkCard.tsx    # 링크 카드 컴포넌트
-│   ├── TagFilter.tsx   # 태그 필터 UI
-│   ├── SearchBar.tsx   # 검색 바
-│   └── LinkList.tsx    # 링크 목록
-└── hooks/
-    ├── useLinks.ts     # 링크 CRUD 훅
-    ├── useTags.ts      # 태그 관리 훅
-    └── useSearch.ts    # 검색 훅
-```
 
-### Options Page (설정)
+**If ANY check fails:**
 
-```
-src/options/
-├── Options.tsx         # 설정 페이지 엔트리
-└── components/
-    ├── ExportImport.tsx
-    └── ThemeSelector.tsx
-```
+1. STOP - Do not proceed
+2. Fix the issue
+3. Re-run ALL checks
+4. Only push when ALL pass
 
-## 컴포넌트 규칙
+**Why:** CI feedback loop takes 3-5 minutes vs local checks in <1 minute. Debugging locally is 10x faster.
 
-### 함수형 컴포넌트만 사용
+## Component Guidelines
 
-```tsx
-// Good
-export function LinkCard({ link, onDelete }: LinkCardProps) {
-  return (
-    <div className="p-4 border rounded-lg">
-      {/* ... */}
-    </div>
-  );
+### Component Size Management
+
+- **Small components (<50 lines template):** Inline templates OK
+- **All components:** CSS in separate files (NEVER inline styles)
+- **Large components (>200 lines):** Break into smaller components
+- **Large controllers (>100 lines):** Extract utility functions
+
+### TypeScript Best Practices
+
+- **NEVER use `any`** - use `unknown` instead
+- Prefer type inference when obvious
+- Use proper generics for type safety
+- Leverage TypeScript utility types (Partial, Required, Pick, Omit)
+
+## Templates
+
+### Control Flow
+
+```typescript
+// ✅ CORRECT - Native control flow
+@if (user()) {
+  <p>Welcome {{user().name}}</p>
 }
 
-// Bad - 클래스 컴포넌트
-class LinkCard extends React.Component { }
-```
-
-### Props 타입 정의
-
-```tsx
-interface LinkCardProps {
-  link: Link;
-  onDelete: (id: string) => void;
-  onTagClick?: (tag: string) => void;
+@for (item of items(); track item.id) {
+  <div>{{item.name}}</div>
 }
+
+// ❌ WRONG - Old structural directives
+*ngIf="user"
+*ngFor="let item of items"
 ```
 
-### 커스텀 훅 패턴
+### Class Bindings
 
-```tsx
-// useLinks.ts
-export function useLinks() {
-  const [links, setLinks] = useState<Link[]>([]);
-  const [loading, setLoading] = useState(true);
+```html
+<!-- ✅ CORRECT -->
+<div [class.active]="isActive()">
+  <!-- ❌ WRONG -->
+  <div [ngClass]="{'active': isActive()}"></div>
+</div>
+```
 
-  useEffect(() => {
-    loadLinks();
-  }, []);
+## State Management
 
-  async function loadLinks() {
-    setLoading(true);
-    const data = await getLinks();
-    setLinks(data);
-    setLoading(false);
+**⚠️ CRITICAL - Read Before Implementing**:
+
+### Shared State (Multi-Component)
+
+If data is needed across multiple pages/components:
+
+- **MUST use centralized store** (NgRx SignalStore or custom signal-based store)
+- **NEVER duplicate API calls** across components
+- Examples: household, user, tasks, assignments
+
+### Local Component State
+
+```typescript
+// Simple local state with signals
+export class MyComponent {
+  // Local state
+  private count = signal(0);
+
+  // Derived state
+  doubleCount = computed(() => this.count() * 2);
+
+  // Update state
+  increment() {
+    this.count.update((c) => c + 1);
+    // Or: this.count.set(5);
   }
+}
+```
 
-  async function addLink(input: CreateLinkInput) {
-    const newLink = createLink(input);
-    await saveLink(newLink);
-    setLinks(prev => [...prev, newLink]);
+### Async Data Loading
+
+**Use AsyncState utility instead of manual loading/error/data signals**:
+
+```typescript
+import { AsyncState } from '../utils/async-state';
+
+export class MyComponent {
+  protected readonly dataState = new AsyncState<Data[]>();
+
+  async loadData(): Promise<void> {
+    await this.dataState.execute(async () => {
+      return this.dataService.getData();
+    });
   }
-
-  return { links, loading, addLink, /* ... */ };
 }
 ```
 
-## Tailwind CSS 규칙
+**Benefits**: Eliminates 15+ lines of boilerplate, type-safe, consistent
 
-### 유틸리티 클래스 우선
+### localStorage
 
-```tsx
-// Good - Tailwind 유틸리티
-<div className="flex items-center gap-2 p-4 bg-white rounded-lg shadow">
+**NEVER use localStorage directly** - use StorageService:
 
-// Avoid - 커스텀 CSS
-<div className="link-card">
+```typescript
+// ❌ WRONG
+localStorage.setItem('key', JSON.stringify(value));
+
+// ✅ CORRECT
+this.storageService.set('key', value);
 ```
 
-### 반응형 디자인
+**See**: GitHub Issues #255 (State), #258 (AsyncState), #259 (Storage)
 
-```tsx
-// Popup 크기 고려 (400px width 기준)
-<div className="w-full max-w-[400px]">
-```
+## Services
 
-### 다크 모드 지원
+```typescript
+// Use inject() instead of constructor injection
+export class MyService {
+  private http = inject(HttpClient);
+  private router = inject(Router);
 
-```tsx
-<div className="bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100">
-```
-
-## 에러 핸들링
-
-### 로딩/에러 상태 표시
-
-```tsx
-function LinkList() {
-  const { links, loading, error } = useLinks();
-
-  if (loading) return <Spinner />;
-  if (error) return <ErrorMessage message={error} />;
-  if (links.length === 0) return <EmptyState />;
-
-  return (
-    <div className="space-y-2">
-      {links.map(link => (
-        <LinkCard key={link.id} link={link} />
-      ))}
-    </div>
-  );
+  getData() {
+    return this.http.get('/api/data');
+  }
 }
 ```
 
-## 접근성 (A11y)
+## Accessibility (WCAG AA Compliance)
 
-### 기본 규칙
+- All implementations MUST pass AXE checks
+- Implement proper focus management
+- Ensure sufficient color contrast
+- Add appropriate ARIA attributes
+- Support keyboard navigation
 
-- 버튼에 `aria-label` 제공 (아이콘만 있는 경우)
-- 포커스 상태 표시 (`focus:ring-2`)
-- 시맨틱 HTML 사용 (`<button>`, `<nav>`, `<main>`)
+## Workflow
 
-```tsx
-<button
-  aria-label="Delete link"
-  onClick={handleDelete}
-  className="p-2 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 rounded"
->
-  <TrashIcon className="w-4 h-4" />
-</button>
+1. **Read** the optimized agent spec: `.claude/agents/agent-frontend.md`
+2. **Understand** requirements and acceptance criteria
+3. **Research** existing patterns in the codebase
+4. **Implement** following all conventions above
+5. **Test** locally with ALL checks (lint, format, tests, build)
+6. **Only then** commit and push
+
+## Common Patterns
+
+### Creating Components
+
+```bash
+# Always use Angular CLI
+ng generate component my-component
+# Or shorthand:
+ng g c my-component
 ```
 
-## 체크리스트
+### API Integration
 
-- [ ] 함수형 컴포넌트 사용
-- [ ] Props 타입 정의
-- [ ] 로딩/에러 상태 처리
-- [ ] Tailwind 유틸리티 사용
-- [ ] 접근성 고려
-- [ ] 다크 모드 지원
+```typescript
+export class DataService {
+  private api = inject(ApiService);
 
-> 상세 패턴은 코드베이스의 기존 구현 참조
+  async fetchData(): Promise<Data[]> {
+    return this.api.get<Data[]>('/api/data');
+  }
+}
+```
+
+### Forms
+
+```typescript
+export class FormComponent {
+  form = new FormGroup({
+    name: new FormControl('', [Validators.required]),
+    email: new FormControl('', [Validators.required, Validators.email]),
+  });
+
+  onSubmit() {
+    if (this.form.invalid) return;
+    // Process form
+  }
+}
+```
+
+## Reference Files
+
+For detailed patterns and examples:
+
+- `.github/agents/frontend-agent.md` - Complete agent specification with architectural improvements
+- `CLAUDE.md` - Project-wide conventions
+
+**Specialized Skills** (use these for specific patterns):
+
+- `.claude/skills/state-management/` - Centralized stores, AsyncState, localStorage abstraction
+- `.claude/skills/http-interceptors/` - Auth, error handling, retry logic, caching
+- `.claude/skills/testing-infrastructure/` - Fixtures, mocks, component harness
+- `.claude/skills/storybook/` - Component development and visual testing
+
+**Architecture Improvement Issues** (reference these for best practices):
+
+- #253: Routing Architecture (layout components)
+- #254: Performance Optimizations (pagination, virtual scrolling, caching)
+- #255: State Management (centralized store)
+- #256: Service Layer Boundaries (single responsibility)
+- #257: HTTP Layer Improvements (interceptors)
+- #258: Eliminate Code Duplication (AsyncState utility)
+- #259: Abstract localStorage (StorageService)
+- #260: Component Organization (presentational vs container)
+- #261: Testing Infrastructure (shared utilities)
+
+## Success Criteria
+
+Before marking work complete:
+
+- [ ] All local checks pass (lint, format, tests, build)
+- [ ] Accessibility verified with AXE
+- [ ] Follows Angular 21+ patterns
+- [ ] Uses signals for state management
+- [ ] camelCase naming throughout
+- [ ] No `any` types used

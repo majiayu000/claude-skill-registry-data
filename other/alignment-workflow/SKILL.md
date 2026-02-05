@@ -349,5 +349,5 @@ def sync_odr_to_github(odr_id: str) -> dict:
 
 - Agente: `.claude/agents/alignment-agent.md`
 - Template ODR: `.agentic_sdlc/templates/odr-template.yml`
-- Guia ADR vs ODR: `.docs/guides/adr-vs-odr.md`
+- Guia ADR vs ODR: `\.agentic_sdlc/docs/guides/adr-vs-odr.md`
 - Issue #9: Implementar workflow de consenso

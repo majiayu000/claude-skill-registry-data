@@ -1,485 +1,155 @@
 ---
 name: prisma
-description: Prisma ORM patterns including Prisma Client usage, queries, mutations, relations, transactions, and schema management. Use when working with Prisma database operations or schema definitions.
+description: |
+  Prisma ORM for type-safe database operations with PostgreSQL.
+  Use when: Defining schemas, writing type-safe queries, creating migrations, modeling relations, or replacing raw SQL with ORM patterns.
+allowed-tools: Read, Edit, Write, Glob, Grep, Bash
 ---
 
-# Prisma ORM Patterns
+# Prisma Skill
 
-## Purpose
+Provides type-safe database operations as an alternative to raw SQL. This codebase currently uses the `pg` library with raw SQL queries. Prisma offers automatic type generation, declarative schema modeling, and migration management - eliminating the manual row mapping and SQL injection risks present in raw SQL approaches.
 
-Complete patterns for using Prisma ORM effectively, including query optimization, transaction handling, and the repository pattern for clean data access.
+## Quick Start
 
-## When to Use This Skill
+### Install and Initialize
 
-- Working with Prisma Client for database queries
-- Creating repositories for data access
-- Using transactions
-- Query optimization and N+1 prevention
-- Handling Prisma errors
+```bash
+cd backend
+npm install prisma @prisma/client
+npx prisma init
+```
 
----
+### Schema Definition
 
-## Basic Prisma Usage
-
-### Core Query Patterns
-
-```typescript
-import { PrismaService } from '@project-lifecycle-portal/database';
-
-// Always use PrismaService.main
-if (!PrismaService.isAvailable) {
-    throw new Error('Prisma client not initialized');
+```prisma
+// prisma/schema.prisma
+generator client {
+  provider = "prisma-client-js"
 }
 
-// Find one
-const user = await PrismaService.main.user.findUnique({
-    where: { id: userId },
-});
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
 
-// Find many with filters
-const users = await PrismaService.main.user.findMany({
-    where: { isActive: true },
-    orderBy: { createdAt: 'desc' },
-    take: 10,
-});
+model Product {
+  id               Int                    @id @default(autoincrement())
+  name             String
+  shortDescription String                 @map("short_description")
+  description      String
+  price            Decimal                @db.Decimal(10, 2)
+  salePrice        Decimal?               @map("sale_price") @db.Decimal(10, 2)
+  imageUrl         String                 @map("image_url")
+  inventory        Int                    @default(0)
+  categories       Json
+  highlights       Json?
+  usage            String?
+  isNew            Boolean                @default(false) @map("is_new")
+  isFeatured       Boolean                @default(false) @map("is_featured")
+  salesCount       Int                    @default(0) @map("sales_count")
+  createdAt        DateTime               @default(now()) @map("created_at")
+  updatedAt        DateTime               @updatedAt @map("updated_at")
+  translations     ProductTranslation[]
+  orderItems       OrderItem[]
+  variants         ProductVariant[]
 
-// Create
-const newUser = await PrismaService.main.user.create({
-    data: {
-        email: 'user@example.com',
-        name: 'John Doe',
-    },
-});
+  @@map("products")
+}
 
-// Update
-const updated = await PrismaService.main.user.update({
-    where: { id: userId },
-    data: { name: 'Jane Doe' },
-});
+model ProductTranslation {
+  id              Int      @id @default(autoincrement())
+  productId       Int      @map("product_id")
+  languageCode    String   @map("language_code") @db.VarChar(10)
+  name            String   @db.VarChar(255)
+  shortDescription String  @map("short_description")
+  description     String
+  highlights      Json?
+  usage           String?
+  slug            String?  @db.VarChar(255)
+  createdAt       DateTime @default(now()) @map("created_at")
+  updatedAt       DateTime @updatedAt @map("updated_at")
+  product         Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  language        Language @relation(fields: [languageCode], references: [code], onDelete: Cascade)
 
-// Delete
-await PrismaService.main.user.delete({
-    where: { id: userId },
-});
-```
-
-### Complex Filtering
-
-```typescript
-// Multiple conditions
-const users = await PrismaService.main.user.findMany({
-    where: {
-        email: { contains: '@example.com' },
-        isActive: true,
-        createdAt: { gte: new Date('2024-01-01') },
-    },
-});
-
-// AND/OR conditions
-const posts = await PrismaService.main.post.findMany({
-    where: {
-        AND: [
-            { published: true },
-            { author: { isActive: true } },
-        ],
-        OR: [
-            { title: { contains: 'prisma' } },
-            { content: { contains: 'prisma' } },
-        ],
-    },
-});
-```
-
----
-
-## Repository Pattern
-
-### When to Use Repositories
-
-✅ **Use repositories when:**
-- Complex queries with joins/includes
-- Query used in multiple places
-- Need to mock for testing
-
-❌ **Skip repositories for:**
-- Simple one-off queries
-- Prototyping
-
-### Repository Template
-
-```typescript
-import { PrismaService } from '@project-lifecycle-portal/database';
-import type { User, Prisma } from '@prisma/client';
-
-export class UserRepository {
-    async findById(id: string): Promise<User | null> {
-        return PrismaService.main.user.findUnique({
-            where: { id },
-            include: { profile: true },
-        });
-    }
-
-    async findByEmail(email: string): Promise<User | null> {
-        return PrismaService.main.user.findUnique({
-            where: { email },
-        });
-    }
-
-    async findActive(): Promise<User[]> {
-        return PrismaService.main.user.findMany({
-            where: { isActive: true },
-            orderBy: { createdAt: 'desc' },
-        });
-    }
-
-    async create(data: Prisma.UserCreateInput): Promise<User> {
-        return PrismaService.main.user.create({ data });
-    }
-
-    async update(id: string, data: Prisma.UserUpdateInput): Promise<User> {
-        return PrismaService.main.user.update({ where: { id }, data });
-    }
-
-    async delete(id: string): Promise<void> {
-        await PrismaService.main.user.delete({ where: { id } });
-    }
+  @@unique([productId, languageCode])
+  @@map("product_translations")
 }
 ```
 
-### Using in Service
+### Client Usage
 
 ```typescript
-export class UserService {
-    private userRepository: UserRepository;
+// backend/src/db/prisma.ts
+import { PrismaClient } from '@prisma/client';
 
-    constructor() {
-        this.userRepository = new UserRepository();
-    }
+const prisma = new PrismaClient({
+  log: process.env.NODE_ENV === 'development' ? ['query', 'warn', 'error'] : ['error'],
+});
 
-    async getById(id: string): Promise<User> {
-        const user = await this.userRepository.findById(id);
-        if (!user) {
-            throw new Error('User not found');
-        }
-        return user;
-    }
-}
+export { prisma };
 ```
 
----
+## Key Concepts
 
-## Transaction Patterns
+| Concept | Usage | Example |
+|---------|-------|---------|
+| `@map` | Map field to snake_case column | `@map("created_at")` |
+| `@@map` | Map model to table name | `@@map("products")` |
+| Relations | Define FK relationships | `product Product @relation(...)` |
+| `@db.Decimal` | Specify PostgreSQL types | `@db.Decimal(10, 2)` |
+| `@@unique` | Composite unique constraints | `@@unique([productId, languageCode])` |
+| Transactions | Atomic operations | `prisma.$transaction([...])` |
 
-### Simple Transaction
+## Common Patterns
+
+### Fetching with Translation Fallback
+
+**When:** Getting localized content with English fallback
 
 ```typescript
-const result = await PrismaService.main.$transaction(async (tx) => {
-    const user = await tx.user.create({
-        data: { email: 'user@example.com', name: 'John' },
+const product = await prisma.product.findUnique({
+  where: { id: productId },
+  include: {
+    translations: {
+      where: { languageCode: lang },
+    },
+  },
+});
+
+// Apply translation or fallback to base
+const name = product.translations[0]?.name ?? product.name;
+```
+
+### Transactions for Orders
+
+**When:** Creating orders with inventory updates
+
+```typescript
+await prisma.$transaction(async (tx) => {
+  const order = await tx.order.create({ data: orderData });
+  
+  for (const item of items) {
+    await tx.orderItem.create({
+      data: { orderId: order.id, ...item },
     });
-
-    const profile = await tx.userProfile.create({
-        data: { userId: user.id, bio: 'Developer' },
+    await tx.product.update({
+      where: { id: item.productId },
+      data: { inventory: { decrement: item.quantity } },
     });
-
-    return { user, profile };
+  }
+  
+  return order;
 });
 ```
 
-### Interactive Transaction
+## See Also
 
-```typescript
-const result = await PrismaService.main.$transaction(
-    async (tx) => {
-        const user = await tx.user.findUnique({ where: { id: userId } });
-        if (!user) throw new Error('User not found');
+- [patterns](references/patterns.md) - Query patterns and model design
+- [workflows](references/workflows.md) - Migrations and schema management
 
-        const updated = await tx.user.update({
-            where: { id: userId },
-            data: { lastLogin: new Date() },
-        });
+## Related Skills
 
-        await tx.auditLog.create({
-            data: { userId, action: 'LOGIN', timestamp: new Date() },
-        });
-
-        return updated;
-    },
-    {
-        maxWait: 5000,   // Wait max 5s to start
-        timeout: 10000,  // Timeout after 10s
-    }
-);
-```
-
----
-
-## Query Optimization
-
-### Use select to Limit Fields
-
-```typescript
-// ❌ Fetches all fields
-const users = await PrismaService.main.user.findMany();
-
-// ✅ Only fetch needed fields
-const users = await PrismaService.main.user.findMany({
-    select: {
-        id: true,
-        email: true,
-        name: true,
-    },
-});
-
-// ✅ Select with relations
-const users = await PrismaService.main.user.findMany({
-    select: {
-        id: true,
-        email: true,
-        profile: {
-            select: { firstName: true, lastName: true },
-        },
-    },
-});
-```
-
-### Use include Carefully
-
-```typescript
-// ❌ Excessive includes
-const user = await PrismaService.main.user.findUnique({
-    where: { id },
-    include: {
-        posts: { include: { comments: true } },
-        workflows: { include: { steps: { include: { actions: true } } } },
-    },
-});
-
-// ✅ Only include what you need
-const user = await PrismaService.main.user.findUnique({
-    where: { id },
-    include: { profile: true },
-});
-```
-
----
-
-## N+1 Query Prevention
-
-### Problem
-
-```typescript
-// ❌ N+1 Query Problem
-const users = await PrismaService.main.user.findMany(); // 1 query
-
-for (const user of users) {
-    // N additional queries
-    const profile = await PrismaService.main.userProfile.findUnique({
-        where: { userId: user.id },
-    });
-}
-```
-
-### Solution 1: Use include
-
-```typescript
-// ✅ Single query with include
-const users = await PrismaService.main.user.findMany({
-    include: { profile: true },
-});
-
-for (const user of users) {
-    console.log(user.profile.bio);
-}
-```
-
-### Solution 2: Batch Query
-
-```typescript
-// ✅ Batch query
-const users = await PrismaService.main.user.findMany();
-const userIds = users.map(u => u.id);
-
-const profiles = await PrismaService.main.userProfile.findMany({
-    where: { userId: { in: userIds } },
-});
-
-const profileMap = new Map(profiles.map(p => [p.userId, p]));
-```
-
----
-
-## Relations
-
-### One-to-Many
-
-```typescript
-// Get user with posts
-const user = await PrismaService.main.user.findUnique({
-    where: { id: userId },
-    include: {
-        posts: {
-            where: { published: true },
-            orderBy: { createdAt: 'desc' },
-            take: 10,
-        },
-    },
-});
-```
-
-### Nested Writes
-
-```typescript
-// Create user with profile
-const user = await PrismaService.main.user.create({
-    data: {
-        email: 'user@example.com',
-        name: 'John Doe',
-        profile: {
-            create: {
-                bio: 'Developer',
-                avatar: 'avatar.jpg',
-            },
-        },
-    },
-    include: { profile: true },
-});
-
-// Update with nested updates
-const user = await PrismaService.main.user.update({
-    where: { id: userId },
-    data: {
-        name: 'Jane Doe',
-        profile: {
-            update: { bio: 'Senior developer' },
-        },
-    },
-});
-```
-
----
-
-## Error Handling
-
-### Prisma Error Codes
-
-```typescript
-import { Prisma } from '@prisma/client';
-
-try {
-    await PrismaService.main.user.create({
-        data: { email: 'user@example.com' },
-    });
-} catch (error) {
-    if (error instanceof Prisma.PrismaClientKnownRequestError) {
-        // P2002: Unique constraint violation
-        if (error.code === 'P2002') {
-            throw new ConflictError('Email already exists');
-        }
-
-        // P2003: Foreign key constraint failed
-        if (error.code === 'P2003') {
-            throw new ValidationError('Invalid reference');
-        }
-
-        // P2025: Record not found
-        if (error.code === 'P2025') {
-            throw new NotFoundError('Record not found');
-        }
-    }
-
-    Sentry.captureException(error);
-    throw error;
-}
-```
-
-### Common Error Codes
-
-| Code | Meaning |
-|------|---------|
-| P2002 | Unique constraint violation |
-| P2003 | Foreign key constraint failed |
-| P2025 | Record not found |
-| P2014 | Relation violation |
-
----
-
-## Advanced Patterns
-
-### Aggregations
-
-```typescript
-// Count
-const count = await PrismaService.main.user.count({
-    where: { isActive: true },
-});
-
-// Aggregate
-const stats = await PrismaService.main.post.aggregate({
-    _count: true,
-    _avg: { views: true },
-    _sum: { likes: true },
-    where: { published: true },
-});
-
-// Group by
-const postsByAuthor = await PrismaService.main.post.groupBy({
-    by: ['authorId'],
-    _count: { id: true },
-});
-```
-
-### Upsert
-
-```typescript
-// Update if exists, create if not
-const user = await PrismaService.main.user.upsert({
-    where: { email: 'user@example.com' },
-    update: { lastLogin: new Date() },
-    create: {
-        email: 'user@example.com',
-        name: 'John Doe',
-    },
-});
-```
-
----
-
-## TypeScript Patterns
-
-```typescript
-import type { User, Prisma } from '@prisma/client';
-
-// Create input type
-const createUser = async (data: Prisma.UserCreateInput): Promise<User> => {
-    return PrismaService.main.user.create({ data });
-};
-
-// Include type
-type UserWithProfile = Prisma.UserGetPayload<{
-    include: { profile: true };
-}>;
-
-const user: UserWithProfile = await PrismaService.main.user.findUnique({
-    where: { id },
-    include: { profile: true },
-});
-```
-
----
-
-## Best Practices
-
-1. **Always Use PrismaService.main** - Never create new PrismaClient instances
-2. **Use Repositories for Complex Queries** - Keep data access organized
-3. **Select Only Needed Fields** - Improve performance with select
-4. **Prevent N+1 Queries** - Use include or batch queries
-5. **Use Transactions** - Ensure atomicity for multi-step operations
-6. **Handle Errors** - Check for specific Prisma error codes
-
----
-
-**Related Skills:**
-- **backend-dev-guidelines** - Complete backend architecture guide
-- **nodejs** - Core Node.js patterns and async handling
-- **express** - Express.js routing and middleware
+- See the **postgresql** skill for raw SQL patterns and PostgreSQL-specific features
+- See the **typescript** skill for type inference patterns with Prisma
+- See the **zod** skill for runtime validation of Prisma inputs

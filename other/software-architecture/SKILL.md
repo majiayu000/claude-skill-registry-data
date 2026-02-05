@@ -1,76 +1,107 @@
 ---
 name: software-architecture
-description: Guide for quality focused software architecture. This skill should be used when users want to write code, design architecture, analyze code, in any case that relates to software development. 
+description: Guide for Python software architecture in the SAPPHIRE forecast tools project. Use when writing code, designing module structure, refactoring, or making architectural decisions. Provides project-specific conventions for Python, Docker, and scientific computing patterns.
 ---
 
-# Software Architecture Development Skill
+# Software Architecture Guide
 
-This skill provides guidence for quality focused software development and architecture. It is based on Clean Architecture and Domain Driven Design principles.
+Quality-focused software development patterns for SAPPHIRE forecast tools.
 
-## Code Style Rules
+## Project-Specific Conventions
 
-### General Principles
+### Module Structure
 
-- **Early return pattern**: Always use early returns when possible, over nested conditions for better readability
-- Avoid code duplication through creation of reusable functions and modules
-- Decompose long (more than 80 lines of code) components and functions into multiple smaller components and functions. If they cannot be used anywhere else, keep it in the same file. But if file longer than 200 lines of code, it should be split into multiple files.
-- Use arrow functions instead of function declarations when possible
-
-### Best Practices
-
-#### Library-First Approach
-
-- **ALWAYS search for existing solutions before writing custom code**
-  - Check npm for existing libraries that solve the problem
-  - Evaluate existing services/SaaS solutions
-  - Consider third-party APIs for common functionality
-- Use libraries instead of writing your own utils or helpers. For example, use `cockatiel` instead of writing your own retry logic.
-- **When custom code IS justified:**
-  - Specific business logic unique to the domain
-  - Performance-critical paths with special requirements
-  - When external dependencies would be overkill
-  - Security-sensitive code requiring full control
-  - When existing solutions don't meet requirements after thorough evaluation
-
-#### Architecture and Design
-
-- **Clean Architecture & DDD Principles:**
-  - Follow domain-driven design and ubiquitous language
-  - Separate domain entities from infrastructure concerns
-  - Keep business logic independent of frameworks
-  - Define use cases clearly and keep them isolated
-- **Naming Conventions:**
-  - **AVOID** generic names: `utils`, `helpers`, `common`, `shared`
-  - **USE** domain-specific names: `OrderCalculator`, `UserAuthenticator`, `InvoiceGenerator`
-  - Follow bounded context naming patterns
-  - Each module should have a single, clear purpose
-- **Separation of Concerns:**
-  - Do NOT mix business logic with UI components
-  - Keep database queries out of controllers
-  - Maintain clear boundaries between contexts
-  - Ensure proper separation of responsibilities
-
-#### Anti-Patterns to Avoid
-
-- **NIH (Not Invented Here) Syndrome:**
-  - Don't build custom auth when Auth0/Supabase exists
-  - Don't write custom state management instead of using Redux/Zustand
-  - Don't create custom form validation instead of using established libraries
-- **Poor Architectural Choices:**
-  - Mixing business logic with UI components
-  - Database queries directly in controllers
-  - Lack of clear separation of concerns
-- **Generic Naming Anti-Patterns:**
-  - `utils.js` with 50 unrelated functions
-  - `helpers/misc.js` as a dumping ground
-  - `common/shared.js` with unclear purpose
-- Remember: Every line of custom code is a liability that needs maintenance, testing, and documentation
-
-#### Code Quality
-
-- Proper error handling with typed catch blocks
-- Break down complex logic into smaller, reusable functions
-- Avoid deep nesting (max 3 levels)
-- Keep functions focused and under 50 lines when possible
-- Keep files focused and under 200 lines of code when possible
+Each module in `apps/` follows this pattern:
 ```
+apps/<module_name>/
+├── <module_name>.py      # Entry point script
+├── src/                  # Source code
+│   ├── __init__.py
+│   ├── src.py           # Main module logic (or domain-specific names)
+│   └── config.py        # Module configuration (if needed)
+├── test/                # Tests (pytest)
+├── pyproject.toml       # Dependencies (uv)
+├── Dockerfile.py312     # Docker build
+└── config.yaml          # Module-specific settings (if needed)
+```
+
+### Python Style
+
+- **Python version**: 3.12 (migrating from 3.11)
+- **Package manager**: uv with pyproject.toml
+- **Naming**: snake_case for functions/variables, PascalCase for classes
+- **Docstrings**: Google style
+- **Type hints**: Required for new code
+- **Logging**: Use `logger` (from logging module), not `print()`
+
+### Code Patterns
+
+**Early returns** for readability:
+```python
+def process_data(data):
+    if data is None:
+        return None
+    if data.empty:
+        logger.warning("Empty data received")
+        return pd.DataFrame()
+    # Main logic here
+```
+
+**Environment variables** for configuration:
+```python
+config_path = os.getenv('ieasyforecast_configuration_path')
+if config_path is None:
+    raise ValueError("ieasyforecast_configuration_path not set")
+```
+
+**Error handling** with informative messages:
+```python
+try:
+    result = fetch_data(site_id)
+except ConnectionError as e:
+    logger.error(f"Failed to connect to data source for site {site_id}: {e}")
+    raise
+```
+
+## General Principles
+
+### Library-First Approach
+
+- Check PyPI for existing solutions before writing custom code
+- Use established libraries: pandas, numpy, xarray for data; requests for HTTP
+- **When custom code IS justified:**
+  - Domain-specific hydrology/forecasting logic
+  - Integration with iEasyHydro SDK
+  - Performance-critical numerical code
+
+### Naming Conventions
+
+- **AVOID** generic names: `utils.py`, `helpers.py`, `common.py`
+- **USE** domain-specific names: `runoff_processor.py`, `forecast_calculator.py`
+- Module names should describe their single purpose
+
+### Separation of Concerns
+
+- Keep data fetching separate from data processing
+- Keep business logic separate from I/O operations
+- Each function should do one thing well
+
+### Code Quality Guidelines
+
+- Functions under 50 lines when possible
+- Files under 300 lines (split if larger)
+- Max 3 levels of nesting
+- Add comments for non-obvious hydrology/meteorology logic
+
+## Docker Patterns
+
+- Base image: `mabesa/sapphire-pythonbaseimage:py312`
+- Use multi-stage builds for smaller images
+- Copy only necessary files (not entire repo)
+- Set `PYTHONUNBUFFERED=1` for log visibility
+
+## Testing
+
+- Use pytest with `SAPPHIRE_TEST_ENV=True`
+- Mock external services (iEasyHydro SDK, file I/O)
+- Test data processing logic independently from I/O

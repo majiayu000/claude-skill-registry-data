@@ -1,184 +1,152 @@
 ---
 name: next
-description: Analyze and pick the next task to work on. Shows scored recommendations from MASTER_PLAN.md with interactive selection. Use when starting a session or deciding what to tackle.
+description: >
+  Pick the next bead to work on. Shows ready tasks (no blockers), applies user
+  preferences for ordering (priority, type, recency), and helps select work.
+allowed-tools: "Read,Bash(bd:*),AskUserQuestion"
+version: "1.0.0"
+author: "flurdy"
 ---
 
-# What's Next?
+# Next - Pick Your Next Bead
 
-Analyze MASTER_PLAN.md tasks, score by priority, and let user pick interactively.
+Help select the next bead to work on based on readiness and user preferences.
 
-## Triggers
-- `/next` - Main command
-- `/pick` - Alias for task picking
-- "what should I work on", "pick a task", "next task"
+## When to Use
 
-## Workflow
+- Starting a new work session
+- Finished a task and need to pick the next one
+- Want to see what's available to work on
+- Need help prioritizing between multiple options
 
-### Step 1: Get Scored Tasks
+## Usage
 
-Run the task picker to get prioritized tasks:
+```
+/next                    # Show ready beads, ranked by suitability
+/next task               # Auto-pick the next most suitable task and start it
+/next quick              # Auto-pick an easy win task and start it
+/next <bead-id>          # Start working on specific bead
+```
+
+## What This Skill Does
+
+1. **Find Ready Work**
+   - Run `bd ready` to get unblocked tasks
+   - Filter out beads that are blocked by others
+   - Show current in-progress work if any
+
+2. **Rank by Suitability**
+   - Apply priority ranking algorithm (see below)
+   - Bugs generally rank higher than features at same priority
+   - Epics rank lower (they represent larger work)
+
+3. **Present Options**
+   - Show top 5 candidates with key details
+   - Include: ID, title, priority, type, age
+   - Ask user to pick or provide different criteria
+
+4. **Start Work**
+   - Mark selected bead as in_progress
+   - Show full bead details
+   - Suggest first steps if description includes them
+
+## Examples
 
 ```bash
-cd tools/task-picker-v2 && npx tsx src/get-tasks.ts --limit=8
+# Show ready work ranked by suitability
+/next
+
+# Auto-pick and start the next most suitable task
+/next task
+
+# Auto-pick an easy win (quick task)
+/next quick
+
+# Start a specific bead
+/next gauge-abc
 ```
-
-This outputs tasks sorted by:
-1. Status (PLANNED first, then REVIEW, IN_PROGRESS, PAUSED)
-2. Priority within status (P0 → P3)
-
-**Rationale:** "What's next" means what to START, not what you're already doing.
-
-### Step 2: Check for Active Work
-
-Look for IN PROGRESS tasks first - these should be finished before starting new work.
-
-```bash
-cd tools/task-picker-v2 && npx tsx src/get-tasks.ts --progress --limit=5
-```
-
-Also check git status:
-```bash
-git status --short
-```
-
-If uncommitted changes exist, mention: "You have uncommitted changes - consider committing first."
-
-### Step 3: Present Interactive Selection
-
-Use `AskUserQuestion` to let user pick:
-
-```typescript
-AskUserQuestion({
-  questions: [{
-    question: "Which task would you like to work on?",
-    header: "Task",
-    multiSelect: false,
-    options: [
-      // Top 4 tasks from get-tasks.ts, formatted as:
-      { label: "TASK-XXX: Title here", description: "P0 - IN PROGRESS" },
-      { label: "BUG-YYY: Another task", description: "P1 - PLANNED" },
-      // ...
-      { label: "Show more tasks...", description: "See full list" }
-    ]
-  }]
-})
-```
-
-**Option formatting:**
-- Label: `{ID}: {title (max 40 chars)}`
-- Description: `{priority} - {status}`
-
-### Step 4: Show Task Details
-
-When user selects a task:
-
-```bash
-cd tools/task-picker-v2 && npx tsx src/show-task.ts TASK-XXX
-```
-
-Output the full task context including description.
-
-### Step 5: Offer Actions
-
-After showing task, ask:
-- "Start working on this task" → invoke `/start-dev TASK-XXX`
-- "Pick a different task" → repeat from Step 3
-- "Just show me the context" → done
-
-## Priority Scoring (Reference)
-
-Tasks are pre-sorted, but here's the logic:
-
-| Factor | Points |
-|--------|--------|
-| P0 (Critical) | +100 |
-| P1 (High) | +50 |
-| P2 (Medium) | +20 |
-| P3 (Low) | +5 |
-| IN PROGRESS | +30 (finish first) |
-| REVIEW | +25 |
-| PLANNED | +10 |
-
-## Filter Arguments
-
-When user says `/next bugs` or `/next planned`:
-
-| Argument | Filter | get-tasks.ts flag |
-|----------|--------|-------------------|
-| `bugs` | Only BUG-XXX tasks | `--bugs` |
-| `progress` | Only IN_PROGRESS | `--progress` |
-| `planned` | Only PLANNED (backlog) | `--planned` |
-| `review` | Only REVIEW (needs verification) | `--review` |
-| `active` | IN_PROGRESS + REVIEW | `--active` |
-| `all` | Include DONE tasks | `--all` |
-
-**Note:** Default limit is 15 tasks. Use `--limit=N` to show more/less.
 
 ## Output Format
 
-Default shows PLANNED tasks first (what to start next):
-
 ```
-## What's Next?
+## Ready to Work (5 of 12 open)
 
-Top tasks ready to start:
+| # | ID        | Pri | Type    | Parent/Subs | Title                          |
+|---|-----------|-----|---------|-------------|--------------------------------|
+| 1 | gauge-abc | P1  | bug     | -           | Fix login timeout issue        |
+| 2 | gauge-def | P2  | feature | 3 subtasks  | Add export to CSV              |
+| 3 | gauge-ghi | P2  | task    | gauge-def   | Update dependencies            |
+| 4 | gauge-jkl | P3  | feature | -           | Dark mode toggle               |
+| 5 | gauge-mno | P3  | task    | 2 subtasks  | Refactor auth service          |
 
-[Shows AskUserQuestion with top PLANNED tasks by priority]
-- BUG-352: Mobile PWA "Failed to Fetch" (P0 - PLANNED)
-- BUG-1122: KDE Widget Lost Timer Sync (P1 - PLANNED)
-- BUG-1125: Canvas Edge Connections Broken (P1 - PLANNED)
-- Show active work... (IN PROGRESS/REVIEW tasks)
-```
+Currently in progress: gauge-xyz "Implement caching layer"
 
-Use `/next progress` or `/next active` to see tasks you're already working on.
-
-## Rules
-
-1. **Finish before starting** - Always show IN PROGRESS tasks first
-2. **P0 trumps all** - Critical issues come first regardless of status
-3. **Interactive selection** - Always use AskUserQuestion, never just print a list
-4. **Context on selection** - Always show full task details when picked
-5. **Action oriented** - Offer to start work with /start-dev
-
-## Example Session
-
-```
-User: /next
-
-Claude: [Runs get-tasks.ts]
-
-## Active Work
-
-You have 1 task in progress:
-
-Claude: [Shows AskUserQuestion]
-- TASK-1060: Infrastructure & E2E Sync (P0 - IN PROGRESS)
-- BUG-1099: VPS Done Tasks Not Filtered (P1 - IN PROGRESS)
-- BUG-1086: VPS/PWA Auth Not Persisting (P0 - REVIEW)
-- Show more tasks...
-
-User: [Clicks TASK-1060]
-
-Claude: [Runs show-task.ts TASK-1060]
-
-## Selected Task: TASK-1060
-**Title:** Infrastructure & E2E Sync Stability
-**Priority:** P0
-**Status:** IN PROGRESS
-...
-
-Claude: Would you like me to continue working on this task?
+Which would you like to work on? (1-5, or specify ID, or "task" to auto-pick)
 ```
 
-## NPM Scripts
+## Implementation
 
-| Script | Description |
-|--------|-------------|
-| `npm run pick:list` | List all tasks (default 15) |
-| `npm run pick:progress` | IN PROGRESS only |
-| `npm run pick:planned` | PLANNED only (backlog) |
-| `npm run pick:review` | REVIEW only |
-| `npm run pick:bugs` | Bugs only |
-| `npm run pick:all` | Include DONE tasks |
-| `npm run pick:json` | Get tasks as JSON |
-| `npm run pick:show TASK-XXX` | Show task details |
+When invoked:
+
+1. Check for current open, not in-progress elsewhere, work:
+   ```bash
+   bd list --status=open
+   ```
+
+2. Get ready (unblocked) beads:
+   ```bash
+   bd ready
+   ```
+
+3. Parse command argument:
+   - (none): Show ranked list, ask user to pick
+   - `task`: Auto-select top-ranked bead and start it
+   - `quick`: Auto-select an easy win task and start it
+   - `<bead-id>`: Start that specific bead
+
+4. If specific bead ID provided:
+   ```bash
+   bd show <id>
+   bd update <id> --status=in_progress
+   ```
+
+5. Otherwise, present top 5 options and ask user to choose
+
+6. On selection:
+   - Mark as in_progress
+   - Show full details with `bd show`
+   - If bead has description with steps, highlight first step
+
+## Handling Edge Cases
+
+- **No ready beads**: Show blocked beads and what's blocking them
+- **All in progress**: Warn about context switching, show current work
+- **Invalid ID**: Show error and list valid options
+- **User says "skip"**: Show next 5 options
+
+## Priority Ranking Algorithm
+
+Rank ready beads in this order (first match wins):
+
+| Rank | Criteria                        |
+|------|---------------------------------|
+| 1    | Any P0 issue (any type)         |
+| 2    | P1 bug                          |
+| 3    | P2 bug                          |
+| 4    | P1 feature or task              |
+| 5    | P1 epic                         |
+| 6    | P2 feature or task              |
+| 7    | P3 bug, feature, or task        |
+| 8    | P2 epic                         |
+| 9    | P3 epic                         |
+| 10   | Any other non-P4 issue          |
+
+**Note**: P4 items are backlog and not shown by default.
+
+## Quick Task Heuristics
+
+When `/next quick` is used, prefer:
+1. Type: task > bug > feature (tasks are usually smaller)
+2. Priority: P3 > P2 > P1 (lower priority = less complex)
+3. Exclude epics (too large for quick wins)
+4. Title keywords: "fix", "update", "add" > "implement", "refactor", "redesign"

@@ -1,9 +1,9 @@
 ---
 name: axiom-swiftui-26-ref
 description: Use when implementing iOS 26 SwiftUI features - covers Liquid Glass design system, performance improvements, @Animatable macro, 3D spatial layout, scene bridging, WebView/WebPage, AttributedString rich text editing, drag and drop enhancements, and visionOS integration for iOS 26+
-user-invocable: true
-skill_type: reference
-version: 1.0.0
+license: MIT
+metadata:
+  version: "1.0.0"
 ---
 
 # SwiftUI 26 Features
@@ -38,7 +38,7 @@ Comprehensive guide to new SwiftUI features in iOS 26, iPadOS 26, macOS Tahoe, w
 
 ## System Requirements
 
-#### iOS 26+, iPadOS 26+, macOS Tahoe+, watchOS 26+, axiom-visionOS 26+
+#### iOS 26+, iPadOS 26+, macOS Tahoe+, watchOS 26+, visionOS 26+
 
 ---
 
@@ -87,12 +87,37 @@ TabView {
         Button("Down") { }
 
         // Fixed spacer separates button groups
-        Spacer(.fixed)
+        ToolbarSpacer(.fixed)
 
         Button("Settings") { }
     }
 }
 ```
+
+#### ToolbarItemGroup for Visual Grouping
+
+Items within a `ToolbarItemGroup` share a single Liquid Glass background, creating a visual "pill" for related actions:
+
+```swift
+.toolbar {
+    ToolbarItem(placement: .cancellationAction) {
+        Button("Cancel", systemImage: "xmark") {}
+    }
+
+    ToolbarItemGroup(placement: .primaryAction) {
+        Button("Draw", systemImage: "pencil") {}
+        Button("Erase", systemImage: "eraser") {}
+    }
+
+    ToolbarSpacer(.flexible)
+
+    ToolbarItem(placement: .confirmationAction) {
+        Button("Save", systemImage: "checkmark") {}
+    }
+}
+```
+
+**Key insight**: `ToolbarItemPlacement` now controls visual appearance, not just position. `confirmationAction` automatically applies `glassProminent` styling; `cancellationAction` uses standard glass.
 
 #### Prominent Tinted Buttons in Liquid Glass
 
@@ -103,6 +128,304 @@ Button("Add Trip") {
 .buttonStyle(.borderedProminent)
 .tint(.blue)
 // Liquid Glass toolbars support tinting for prominence
+```
+
+Toolbar items also support `.badge()` for notification counts:
+
+```swift
+ToolbarItem(placement: .confirmationAction) {
+    Button("Done", systemImage: "checkmark") { }
+        .badge(3)  // Badge count on glass toolbar item
+}
+```
+
+#### Removing Items from Group Background
+
+Some toolbar items should appear without the shared group background, like an avatar or standalone icon. Apply `sharedBackgroundVisibility(.hidden)` to separate an item visually:
+
+```swift
+.toolbar {
+    ToolbarItem(placement: .topBarTrailing) {
+        // Avatar appears without glass background pill
+        Image(systemName: "person.crop.circle")
+            .sharedBackgroundVisibility(.hidden)
+    }
+}
+```
+
+#### Monochrome Icon Rendering
+
+Icons use monochrome rendering in more places, including toolbars. This reduces visual noise, emphasizes content, and maintains legibility. You can still tint icons with `.tint()`, but use it to convey meaning (call to action, next step) — not just for visual effect.
+
+### Toolbar Transitions & Morphing
+
+iOS 26 toolbars automatically morph between screens during NavigationStack push/pop transitions. The key insight: attach `.toolbar {}` to individual views inside NavigationStack, not to NavigationStack itself.
+
+#### DefaultToolbarItem
+
+**iOS 26+**. A toolbar item representing a system component. Use it to reposition system-provided items (like search) within your toolbar layout.
+
+```swift
+struct DefaultToolbarItem {
+    init(kind: ToolbarDefaultItemKind, placement: ToolbarItemPlacement = .automatic)
+}
+```
+
+**Key semantic**: If the system has already placed a matching item `kind` in the toolbar, `DefaultToolbarItem` implicitly replaces the default-placed instance. This lets you move system items to different placements or reposition them relative to your own toolbar content.
+
+##### Repositioning search between toolbar items
+
+```swift
+NavigationSplitView {
+    AllCalendarsView()
+} detail: {
+    SelectedCalendarView()
+        .searchable(text: $query)
+        .toolbar {
+            ToolbarItem(placement: .bottomBar) {
+                CalendarPicker()
+            }
+            ToolbarItem(placement: .bottomBar) {
+                Invites()
+            }
+            DefaultToolbarItem(kind: .search, placement: .bottomBar)
+            ToolbarSpacer(placement: .bottomBar)
+            ToolbarItem(placement: .bottomBar) { NewEventButton() }
+        }
+}
+```
+
+##### Specifying search column in collapsed NavigationSplitView
+
+Place `DefaultToolbarItem` with `.search` kind in the column that should display search when the split view collapses to compact (iPhone):
+
+```swift
+NavigationSplitView {
+    SidebarView()
+        .toolbar {
+            DefaultToolbarItem(kind: .search, placement: .bottomBar)
+        }
+} content: {
+    ContentView()
+} detail: {
+    DetailView()
+}
+.searchable(text: $text)
+```
+
+This only applies when `.searchable()` is placed on the `NavigationSplitView` itself (not a child view).
+
+##### Availability check for backward compatibility
+
+```swift
+.toolbar {
+    if #available(iOS 26.0, *) {
+        DefaultToolbarItem(kind: .search, placement: .bottomBar)
+        ToolbarSpacer(.flexible, placement: .bottomBar)
+    }
+    ToolbarItem(placement: .bottomBar) {
+        NewNoteButton()
+    }
+}
+.searchable(text: $searchText)
+```
+
+#### Basic Morphing Setup
+
+Each view declares its own toolbar. iOS 26 morphs between them during navigation:
+
+```swift
+struct MailboxList: View {
+    var body: some View {
+        List(mailboxes) { mailbox in
+            NavigationLink(mailbox.name, value: mailbox)
+        }
+        .toolbar {  // ← Attached to this view, not NavigationStack
+            ToolbarItem(placement: .bottomBar) {
+                Button("Filter", systemImage: "line.3.horizontal.decrease") { }
+            }
+            ToolbarSpacer(.flexible, placement: .bottomBar)
+            ToolbarItem(placement: .bottomBar) {
+                Button("New Message", systemImage: "square.and.pencil") { }
+            }
+        }
+    }
+}
+
+struct MessageList: View {
+    let mailbox: Mailbox
+
+    var body: some View {
+        List(mailbox.messages) { message in
+            MessageRow(message: message)
+        }
+        .toolbar {  // ← Different toolbar — iOS 26 morphs between them
+            ToolbarSpacer(.flexible, placement: .bottomBar)
+            ToolbarItem(placement: .bottomBar) {
+                Button("New Message", systemImage: "square.and.pencil") { }
+            }
+        }
+    }
+}
+```
+
+**#1 gotcha**: If you attach `.toolbar {}` to the NavigationStack itself, iOS 26 has nothing to morph between — the toolbar stays static across all pushes.
+
+#### Stable Items with `toolbar(id:)` and `ToolbarItem(id:)`
+
+Items with matching IDs across screens stay in place during morphing (no bounce). Unmatched items animate in/out:
+
+```swift
+struct MailboxList: View {
+    var body: some View {
+        List(mailboxes) { mailbox in
+            NavigationLink(mailbox.name, value: mailbox)
+        }
+        .toolbar(id: "main") {
+            ToolbarItem(id: "filter", placement: .bottomBar) {
+                Button("Filter", systemImage: "line.3.horizontal.decrease") { }
+            }
+            ToolbarSpacer(.flexible, placement: .bottomBar)
+            ToolbarItem(id: "compose", placement: .bottomBar) {
+                Button("New Message", systemImage: "square.and.pencil") { }
+            }
+        }
+    }
+}
+
+struct MessageList: View {
+    let mailbox: Mailbox
+
+    var body: some View {
+        List(mailbox.messages) { message in
+            MessageRow(message: message)
+        }
+        .toolbar(id: "main") {
+            // "filter" absent — animates out during push
+            ToolbarSpacer(.flexible, placement: .bottomBar)
+            ToolbarItem(id: "compose", placement: .bottomBar) {
+                // Same ID as MailboxList — stays stable during morph
+                Button("New Message", systemImage: "square.and.pencil") { }
+            }
+        }
+    }
+}
+```
+
+#### Complete Mail-Style Example
+
+Combines DefaultToolbarItem, ToolbarSpacer, and stable compose button:
+
+```swift
+struct MailApp: View {
+    var body: some View {
+        NavigationStack {
+            MailboxList()
+                .navigationDestination(for: Mailbox.self) { mailbox in
+                    MessageList(mailbox: mailbox)
+                }
+                .navigationDestination(for: Message.self) { message in
+                    MessageDetail(message: message)
+                }
+        }
+    }
+}
+
+// Each destination defines its own toolbar — NavigationStack morphs between them
+```
+
+#### ToolbarSpacer(.flexible)
+
+Pushes toolbar items apart (like Spacer in HStack). Complements `.fixed` for visual separation:
+
+```swift
+.toolbar {
+    ToolbarItem(placement: .bottomBar) {
+        Button("Archive", systemImage: "archivebox") { }
+    }
+    ToolbarSpacer(.flexible, placement: .bottomBar)  // Push apart
+    ToolbarItem(placement: .bottomBar) {
+        Button("Compose", systemImage: "square.and.pencil") { }
+    }
+}
+```
+
+#### .navigationSubtitle()
+
+Add a secondary line below the navigation title:
+
+```swift
+.navigationTitle("Inbox")
+.navigationSubtitle("3 unread messages")
+```
+
+### User-Customizable Toolbars
+
+`toolbar(id:content:)` also enables **user customization** — letting people rearrange, show, and hide toolbar items. This is the original purpose of the identified toolbar API (iOS 14+, iPadOS 16+ for customization).
+
+#### Setup
+
+```swift
+TextEditor(text: $text)
+    .toolbar(id: "editingtools") {
+        ToolbarItem(id: "bold", placement: .secondaryAction) {
+            Toggle(isOn: $bold) { Image(systemName: "bold") }
+        }
+        ToolbarItem(id: "italic", placement: .secondaryAction) {
+            Toggle(isOn: $italic) { Image(systemName: "italic") }
+        }
+    }
+```
+
+**Platform constraint**: Only `.secondaryAction` items support customization on iPadOS. Other placements follow normal rules and cannot be customized by the user.
+
+#### Controlling visibility
+
+```swift
+ToolbarItem(id: "advanced", placement: .secondaryAction, showsByDefault: false) {
+    // Hidden by default — user can add from customization editor
+    AdvancedFormattingControls()
+}
+```
+
+#### macOS toolbar customization menu
+
+Add `ToolbarCommands()` to enable the Customize Toolbar menu item:
+
+```swift
+@main
+struct MyApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+        .commands {
+            ToolbarCommands()
+        }
+    }
+}
+```
+
+Users can also Control-click the toolbar to access the customization editor.
+
+#### Related types
+
+- `CustomizableToolbarContent` — Protocol for content that supports customization
+- `ToolbarCustomizationBehavior` — Control whether items can be added/removed
+- `ToolbarCustomizationOptions` — Options for the customization experience
+
+#### ToolbarSpacer in customizable toolbars
+
+Spacers are customizable items too — users can add, remove, and rearrange them from the customization panel. If a customizable toolbar supports a spacer of a given type, users can also add multiple copies:
+
+```swift
+ContentView()
+    .toolbar(id: "main-toolbar") {
+        ToolbarItem(id: "tag") { TagButton() }
+        ToolbarItem(id: "share") { ShareButton() }
+        ToolbarSpacer(.fixed)
+        ToolbarItem(id: "more") { MoreButton() }
+    }
 ```
 
 ### Scroll Edge Effects
@@ -122,6 +445,8 @@ ScrollView {
 
 ### Bottom-Aligned Search
 
+**Foundational search APIs** For `.searchable`, `isSearching`, suggestions, scopes, tokens, and programmatic search control, see `axiom-swiftui-search-ref`. This section covers iOS 26 refinements only.
+
 #### iPhone ergonomics
 
 ```swift
@@ -134,20 +459,150 @@ NavigationSplitView {
 // - Top trailing corner on iPad
 ```
 
+To restore pre-iOS 26 sidebar-embedded search on iPad, specify `placement: .sidebar`:
+
+```swift
+NavigationSplitView {
+    List { }
+        .searchable(text: $searchText, placement: .sidebar)
+        // Search field embedded in sidebar instead of floating glass container
+}
+```
+
+#### System Auto-Minimization
+
+Depending on device size, number of toolbar buttons, and other factors, the system may choose to minimize the search field into a toolbar button automatically. When tapped, a full-width search field appears above the keyboard. Use `searchToolbarBehavior(.minimize)` to explicitly opt in to this behavior when search isn't the main part of your experience.
+
 #### Search Tab Role
 
-See swiftui-nav-ref skill Section 5.5 (iOS 26 Tab Features) for `Tab(role: .search)` patterns.
+Searching in multi-tab apps is often done as a dedicated page. Set a search role on one of your tabs and place `.searchable` on the TabView:
+
+```swift
+TabView {
+    BrowseView()
+        .tabItem { Label("Browse", systemImage: "square.grid.2x2") }
+
+    Tab(role: .search) {
+        SearchView()
+    }
+}
+.searchable(text: $searchText)
+```
+
+When someone selects the search tab, the search field takes the place of the tab bar. People can interact with browsing suggestions or tap the search field to bring up the keyboard.
+
+On iPad and Mac, when someone selects the search tab, the search field appears **centered above the app's browsing suggestions** — a different layout than iPhone's tab-bar replacement.
+
+See swiftui-nav-ref skill Section 5.5 (iOS 26 Tab Features) for full `Tab(role: .search)` patterns.
 
 ### Glass Effect for Custom Views
 
 ```swift
-struct PhotoGalleryView: View {
+struct ToTopButton: View {
     var body: some View {
-        CustomPhotoGrid()
-            .glassBackgroundEffect() // Reflects surrounding content
+        Button("To Top", systemImage: "chevron.up") {
+            scrollToTop()
+        }
+        .padding()
+        .glassEffect() // Reflects surrounding content
+    }
+
+    func scrollToTop() { }
+}
+```
+
+SwiftUI automatically uses a **vibrant text color** that adapts to maintain legibility against colorful backgrounds. Tints also use vibrant color that adapts to the content behind them.
+
+On iOS, add the `.interactive` modifier to the glass effect for custom controls or containers with interactive elements. Glass reacts to user interaction by scaling, bouncing, and shimmering.
+
+#### GlassEffectContainer
+
+Combine multiple glass elements with `GlassEffectContainer`. This is **essential for visual correctness** — glass samples content from an area larger than itself, but glass cannot sample other glass. Nearby glass elements in different containers produce inconsistent behavior:
+
+```swift
+GlassEffectContainer {
+    HStack(spacing: 12) {
+        ForEach(badges) { badge in
+            BadgeView(badge: badge)
+                .glassEffect()
+        }
     }
 }
 ```
+
+#### glassEffectID for Morphing Transitions
+
+Use `glassEffectID` with a namespace to create fluid morphing transitions between glass elements:
+
+```swift
+@Namespace private var badgeNamespace
+
+var body: some View {
+    if isExpanded {
+        // Expanded badge stack
+        GlassEffectContainer {
+            VStack {
+                ForEach(badges) { badge in
+                    BadgeView(badge: badge)
+                        .glassEffect()
+                        .glassEffectID(badge.id, in: badgeNamespace)
+                }
+            }
+        }
+    } else {
+        // Collapsed into toolbar button
+        Button("Badges", systemImage: "star.fill") {
+            isExpanded.toggle()
+        }
+        .glassEffect()
+        .glassEffectID("collapsed", in: badgeNamespace)
+    }
+}
+// Tapping the button expands badges with fluid glass morphing;
+// tapping again re-absorbs them into the button
+```
+
+### Sheets with Liquid Glass
+
+#### Remove presentationBackground
+
+Partial height sheets are inset by default with a Liquid Glass background. At smaller heights, bottom edges pull in, nesting in the curved edges of the display. When transitioning to full height, the glass gradually becomes opaque and anchors to the screen edge.
+
+If you've used `presentationBackground` to apply a custom background to sheets, consider removing it and let the new material shine:
+
+```swift
+// ❌ Custom background interferes with Liquid Glass sheet material
+.sheet(isPresented: $showDetail) {
+    DetailView()
+        .presentationBackground(.thinMaterial)  // Remove this
+}
+
+// ✅ System applies Liquid Glass automatically
+.sheet(isPresented: $showDetail) {
+    DetailView()
+}
+```
+
+#### Sheet Morphing from Buttons
+
+Sheets can morph directly out of the buttons that present them. Use `navigationZoomTransition` to connect the source view to the sheet content:
+
+```swift
+.toolbar {
+    ToolbarItem(placement: .topBarTrailing) {
+        Button("Details", systemImage: "info.circle") {
+            showDetails = true
+        }
+        .matchedTransitionSource(id: "details", in: namespace)
+    }
+}
+.sheet(isPresented: $showDetails) {
+    DetailsSheet()
+        .navigationTransition(.zoom(sourceID: "details", in: namespace))
+}
+```
+
+Menus, alerts, and popovers also flow smoothly out of Liquid Glass controls. Dialogs automatically morph out of the buttons that present them — no additional code needed.
 
 ### System Controls Updates
 
@@ -156,7 +611,72 @@ Controls now have the new design automatically:
 - Segmented pickers
 - Sliders
 
-**Reference** "Build a SwiftUI app with the new design" (WWDC 2025) for adoption best practices and advanced customizations.
+**Reference** "Build a SwiftUI app with the new design" (WWDC 2025-323) for adoption best practices and advanced customizations.
+
+### Button Shape Changes
+
+Bordered buttons now have a **capsule shape** by default, harmonious with the curved corners of the new design. On macOS, mini, small, and medium size controls retain a rounded-rectangle shape to preserve horizontal density.
+
+```swift
+// Capsule is now the default bordered shape on iOS
+Button("Action") { }
+    .buttonStyle(.bordered)  // Capsule shape on iOS 26
+
+// Override with buttonBorderShape if needed
+Button("Action") { }
+    .buttonStyle(.bordered)
+    .buttonBorderShape(.roundedRectangle)  // Force rounded rectangle
+```
+
+#### Extra Large Buttons
+
+For prominent actions, iOS 26 adds support for extra large sized buttons:
+
+```swift
+Button("Get Started") { startOnboarding() }
+    .buttonStyle(.borderedProminent)
+    .controlSize(.extraLarge)  // New extra-large size
+```
+
+### Updated Control Heights
+
+Control heights are updated for the new design. Most controls on macOS are slightly taller, providing more breathing room around labels and enhancing click targets.
+
+For compatibility with existing high-density layouts (complex inspectors, popovers), apply `controlSize` to a single control or an entire container:
+
+```swift
+// Preserve density in complex inspectors
+Form {
+    // controls here
+}
+.controlSize(.small)  // Maintains pre-iOS 26 density
+```
+
+### Menu Cross-Platform Consistency
+
+Menus across platforms have a new design and more consistent layout. Icons are consistently on the leading edge and are now used on macOS too. The same API using `Label` or standard control initializers now creates the same result on both platforms:
+
+```swift
+Menu("Actions") {
+    Button("Copy", systemImage: "doc.on.doc") { copy() }
+    Button("Paste", systemImage: "doc.on.clipboard") { paste() }
+    Button("Delete", systemImage: "trash", role: .destructive) { delete() }
+}
+// Same result on iOS and macOS — icons on leading edge
+```
+
+### Concentric Rectangle Shape
+
+Controls align their corners perfectly within their containers — even the device itself. This is **corner concentricity**. A button at the bottom of a sheet should share the same corner center with the sheet.
+
+```swift
+// Automatic concentricity with container
+Button("Confirm") { confirm() }
+    .clipShape(.rect(cornerRadius: 12, style: .containerConcentric))
+    // Shape automatically matches container across displays and window shapes
+```
+
+**Use case**: Buttons positioned at the edges of sheets, popovers, or cards that need their corners to feel visually nested within the container.
 
 ---
 
@@ -621,6 +1141,8 @@ struct ButtonLayoutExample: View {
 
 ### searchToolbarBehavior
 
+**Foundational search APIs** For the `.searchable` modifier, placement options, and search suggestions that `.searchToolbarBehavior` builds upon, see `axiom-swiftui-search-ref`.
+
 #### Compact search that expands on focus
 
 ```swift
@@ -646,8 +1168,11 @@ struct SearchView: View {
 }
 ```
 
+**`SearchToolbarBehavior` options**:
+- `.minimize` — Search field compact (button-like) when unfocused, expands on tap
+- `.automatic` — System default behavior (full search field)
+
 **Behavior**
-- `.minimize` — Search field compact when unfocused, expands on tap
 - Similar to Tab Bar search pattern
 - Saves toolbar space
 - Cleaner UI when search not in use
@@ -656,6 +1181,22 @@ struct SearchView: View {
 - List/content-heavy screens
 - Crowded navigation bars
 - Tab bar style search on regular screens
+
+**Backward-compatible wrapper** for apps targeting iOS 18+26:
+
+```swift
+extension View {
+    @ViewBuilder func minimizedSearch() -> some View {
+        if #available(iOS 26.0, *) {
+            self.searchToolbarBehavior(.minimize)
+        } else { self }
+    }
+}
+
+// Usage
+.searchable(text: $searchText)
+.minimizedSearch()
+```
 
 ### searchPresentationToolbarBehavior (iOS 17.1+)
 
@@ -912,18 +1453,19 @@ Model3D(named: "WaterBottle")
     .manipulable() // People can pick up and move the object
 ```
 
-### Scene Snapping APIs
+### Surface Snapping APIs
 
 ```swift
-@Environment(\.sceneSnapping) var sceneSnapping
+@Environment(\.surfaceSnappingInfo) var snappingInfo: SurfaceSnappingInfo
 
 var body: some View {
-    Model3D(named: item.modelName)
-        .overlay(alignment: .bottom) {
-            if sceneSnapping.isSnapped {
-                Pedestal() // Show pedestal for items snapped to table
-            }
-        }
+    VStackLayout().depthAlignment(.center) {
+        Model3D(named: "waterBottle")
+            .manipulable()
+
+        Pedestal()
+            .opacity(snappingInfo.classification == .table ? 1.0 : 0.0)
+    }
 }
 ```
 
@@ -1059,24 +1601,27 @@ struct MyView: View {
 }
 ```
 
-### SwiftUI Popovers from RealityKit
+### PresentationComponent
+
+Present SwiftUI popovers, alerts, and sheets directly from RealityKit entities.
 
 ```swift
-// New component allows presenting SwiftUI popovers from RealityKit entities
-entity.components[PopoverComponent.self] = PopoverComponent {
-    VStack {
-        Text("Next photo location")
-        Button("Mark Favorite") { }
-    }
-}
+// Present SwiftUI popovers from RealityKit entities
+let popover = Entity()
+mapEntity.addChild(popover)
+popover.components[PresentationComponent.self] = PresentationComponent(
+    isPresented: $popoverPresented,
+    configuration: .popover(arrowEdge: .bottom),
+    content: DetailsView()
+)
 ```
 
 ### Additional Improvements
 
+- `ViewAttachmentComponent` — add SwiftUI views to entities
+- `GestureComponent` — entity touch and gesture responsiveness
 - Enhanced coordinate conversion API
-- Attachment components
-- Synchronizing animations
-- Binding to components
+- Synchronizing animations, binding to components
 - New sizing behaviors for RealityView
 
 **Reference** "Better Together: SwiftUI & RealityKit" (WWDC 2025)
@@ -1112,26 +1657,24 @@ struct ArticleView: View {
 ```swift
 import WebKit
 
-struct BrowserView: View {
-    @State private var webPage = WebPage()
+struct InAppBrowser: View {
+    @State private var page = WebPage()
 
     var body: some View {
         VStack {
-            // Show page title
-            Text(webPage.title ?? "Loading...")
+            Text(page.title ?? "Loading...")
 
-            WebView(page: webPage)
+            WebView(page)
+                .ignoresSafeArea()
+                .onAppear {
+                    page.load(URLRequest(url: articleURL))
+                }
 
             HStack {
-                Button("Back") {
-                    webPage.goBack()
-                }
-                .disabled(!webPage.canGoBack)
-
-                Button("Forward") {
-                    webPage.goForward()
-                }
-                .disabled(!webPage.canGoForward)
+                Button("Back") { page.goBack() }
+                    .disabled(!page.canGoBack)
+                Button("Forward") { page.goForward() }
+                    .disabled(!page.canGoForward)
             }
         }
     }
@@ -1202,55 +1745,44 @@ struct CommentView: View {
 
 ```swift
 struct PhotoGrid: View {
-    @State private var selection: Set<Photo.ID> = []
-    let photos: [Photo]
+    @State private var selectedPhotos: [Photo.ID] = []
 
     var body: some View {
-        LazyVGrid(columns: columns) {
-            ForEach(photos) { photo in
-                PhotoCell(photo: photo)
-                    .draggable(photo) // Individual item
+        ScrollView {
+            LazyVGrid(columns: gridColumns) {
+                ForEach(model.photos) { photo in
+                    view(photo: photo)
+                        .draggable(containerItemID: photo.id)
+                }
             }
         }
-        .dragContainer { // Container for multiple items
-            // Return items based on selection
-            selection.map { id in
-                photos.first { $0.id == id }
-            }
-            .compactMap { $0 }
+        .dragContainer(for: Photo.self, selection: selectedPhotos) { draggedIDs in
+            photos(ids: draggedIDs)
         }
     }
 }
 ```
 
-### Lazy Drag Item Loading
-
-```swift
-.dragContainer {
-    // Items loaded lazily when drop occurs
-    // Great for expensive operations like image encoding
-    selectedPhotos.map { photo in
-        photo.transferRepresentation
-    }
-}
-```
+**Key APIs**:
+- `.draggable(containerItemID:containerNamespace:)` marks each item as part of a drag container (namespace defaults to `nil`)
+- `.dragContainer(for:selection:)` provides the typed items lazily when a drop occurs
 
 ### DragConfiguration
 
 #### Customize supported operations
 
 ```swift
-.dragConfiguration(.init(supportedOperations: [.copy, .move, .delete]))
+.dragConfiguration(DragConfiguration(allowMove: false, allowDelete: true))
 ```
 
 ### Observing Drag Events
 
 ```swift
 .onDragSessionUpdated { session in
-    if case .ended(let operation) = session.phase {
-        if operation == .delete {
-            deleteSelectedPhotos()
-        }
+    let ids = session.draggedItemIDs(for: Photo.ID.self)
+    if session.phase == .ended(.delete) {
+        trash(ids)
+        deletePhotos(ids)
     }
 }
 ```
@@ -1258,7 +1790,7 @@ struct PhotoGrid: View {
 ### Drag Preview Formations
 
 ```swift
-.dragPreviewFormation(.stack) // Items stack nicely on top of one another
+.dragPreviewsFormation(.stack) // Items stack nicely on top of one another
 
 // Other formations:
 // - .default
@@ -1270,23 +1802,27 @@ struct PhotoGrid: View {
 
 ```swift
 struct PhotoLibrary: View {
-    @State private var selection: Set<Photo.ID> = []
-    let photos: [Photo]
+    @State private var selectedPhotos: [Photo.ID] = []
 
     var body: some View {
-        LazyVGrid(columns: columns) {
-            ForEach(photos) { photo in
-                PhotoCell(photo: photo)
+        ScrollView {
+            LazyVGrid(columns: gridColumns) {
+                ForEach(model.photos) { photo in
+                    view(photo: photo)
+                        .draggable(containerItemID: photo.id)
+                }
             }
         }
-        .dragContainer {
-            selectedPhotos
+        .dragContainer(for: Photo.self, selection: selectedPhotos) { draggedIDs in
+            photos(ids: draggedIDs)
         }
-        .dragConfiguration(.init(supportedOperations: [.copy, .delete]))
-        .dragPreviewFormation(.stack)
+        .dragConfiguration(DragConfiguration(allowMove: false, allowDelete: true))
+        .dragPreviewsFormation(.stack)
         .onDragSessionUpdated { session in
-            if case .ended(.delete) = session.phase {
-                deleteSelectedPhotos()
+            let ids = session.draggedItemIDs(for: Photo.ID.self)
+            if session.phase == .ended(.delete) {
+                trash(ids)
+                deletePhotos(ids)
             }
         }
     }
@@ -1303,33 +1839,31 @@ Swift Charts now supports three-dimensional plotting with `Chart3D`.
 
 ### Basic Usage
 
+#### From WWDC 256:21:35
+
 ```swift
 import Charts
 
-struct ElevationChart: View {
-    let hikingData: [HikeDataPoint]
-
+struct HikePlotView: View {
     var body: some View {
         Chart3D {
-            ForEach(hikingData) { point in
-                LineMark3D(
-                    x: .value("Distance", point.distance),
-                    y: .value("Elevation", point.elevation),
-                    z: .value("Time", point.timestamp)
-                )
+            SurfacePlot(x: "x", y: "y", z: "z") { x, y in
+                sin(x) * cos(y)
             }
+            .foregroundStyle(Gradient(colors: [.orange, .pink]))
         }
-        .chartXScale(domain: 0...10)
-        .chartYScale(domain: 0...3000)
-        .chartZScale(domain: startTime...endTime) // Z-specific modifier
+        .chartXScale(domain: -3...3)
+        .chartYScale(domain: -3...3)
+        .chartZScale(domain: -3...3)
     }
 }
 ```
 
 #### Features
 - `Chart3D` container
+- `SurfacePlot` for continuous surface rendering from a function
 - Z-axis specific modifiers (`.chartZScale()`, `.chartZAxis()`, etc.)
-- All existing chart marks with 3D variants
+- All existing chart marks with 3D variants (e.g., `LineMark3D`)
 
 **Reference** "Bring Swift Charts to the third dimension" (WWDC 2025)
 
@@ -1371,18 +1905,17 @@ struct CountdownWidget: Widget {
     }
 }
 
-struct CountdownView: View {
-    @Environment(\.levelOfDetail) var levelOfDetail
-    let entry: CountdownEntry
+struct PhotoCountdownView: View {
+    @Environment(\.levelOfDetail) var levelOfDetail: LevelOfDetail
 
     var body: some View {
-        VStack {
-            Text(entry.date, style: .timer)
-
-            if levelOfDetail == .expanded {
-                // Show photos when close to widget
-                PhotoCarousel(photos: entry.recentPhotos)
-            }
+        switch levelOfDetail {
+        case .default:
+            RecentPhotosView() // Full detail when close
+        case .simplified:
+            CountdownView()   // Simplified when further away
+        default:
+            CountdownView()
         }
     }
 }
@@ -1422,13 +1955,33 @@ Apps must support resizable windows on iPad.
 ✅ List performance improvements (6x loading, 16x updating)
 ✅ Scrolling performance improvements
 ✅ System controls (toggles, pickers, sliders) new appearance
+✅ Bordered buttons default to capsule shape
+✅ Updated control heights (slightly taller on macOS)
+✅ Monochrome icon rendering in toolbars
+✅ Menus: icons on leading edge, consistent across iOS and macOS
+✅ Sheets morph out of dialogs automatically
+✅ Scroll edge blur/fade under system toolbars
+
+### Audit Items (Remove Old Customizations)
+
+⚠️ Remove `presentationBackground` from sheets (let Liquid Glass material shine)
+⚠️ Remove extra backgrounds/darkening effects behind toolbar areas
+⚠️ Remove hard-coded control heights (use automatic sizing)
+⚠️ Update section headers to title-style capitalization (no longer auto-uppercased)
 
 ### Manual Adoptions (Code Changes)
 
 🔧 Toolbar spacers (`.fixed`)
 🔧 Tinted prominent buttons in toolbars
-🔧 Glass effect for custom views (`.glassBackgroundEffect()`)
-🔧 Search tab role (`.tabRole(.search)`)
+🔧 Glass effect for custom views (`.glassEffect()`)
+🔧 `glassEffectID` for morphing transitions between glass elements
+🔧 `GlassEffectContainer` for multiple nearby glass elements
+🔧 `sharedBackgroundVisibility(.hidden)` to remove toolbar item from group background
+🔧 Sheet morphing from buttons (`navigationZoomTransition`)
+🔧 Search tab role (`Tab(role: .search)`)
+🔧 Compact search toolbar (`.searchToolbarBehavior(.minimize)`)
+🔧 Extra large buttons (`.controlSize(.extraLarge)`)
+🔧 Concentric rectangle shape (`.containerConcentric`)
 🔧 iPad menu bar (`.commands`)
 🔧 Window resize anchor (`.windowResizeAnchor()`)
 🔧 @Animatable macro for custom shapes/modifiers
@@ -1442,7 +1995,12 @@ Apps must support resizable windows on iPad.
 🔧 Close and confirm button roles (`Button(role: .close)`)
 🔧 Glass button styles (`GlassButtonStyle` — iOS 26.1+)
 🔧 Button sizing control (`.buttonSizing()`)
-🔧 Compact search toolbar (`.searchToolbarBehavior(.minimize)`)
+🔧 Toolbar morphing transitions (per-view `.toolbar {}` inside NavigationStack)
+🔧 DefaultToolbarItem for system components in toolbars
+🔧 Stable toolbar items (`toolbar(id:)` with matched IDs across screens)
+🔧 User-customizable toolbars (`toolbar(id:)` with `CustomizableToolbarContent`)
+🔧 Tab bar minimization (`.tabBarMinimizeBehavior(.onScrollDown)`)
+🔧 Tab view bottom accessory (`.tabViewBottomAccessory(isEnabled:content:)` — iOS 26.1+)
 
 ---
 
@@ -1465,10 +2023,16 @@ Apps must support resizable windows on iPad.
 - Recompile and test automatic appearance
 - Use toolbar spacers for logical grouping
 - Apply glass effect to custom views that benefit from reflections
+- Attach toolbars to individual views for automatic morphing transitions
+- Use `toolbar(id:)` with matching IDs for items that should stay stable across screens
 
 #### DON'T
 - Fight the automatic design - embrace consistency
-- Over-tint toolbars (use for prominence only)
+- Over-tint toolbars (use for prominence only, not decoration)
+- Attach the toolbar to NavigationStack and expect morphing (attach to views inside it)
+- Apply `presentationBackground` to sheets (remove it for Liquid Glass material)
+- Place nearby glass elements in separate containers (use `GlassEffectContainer`)
+- Add extra backgrounds or darkening effects behind system toolbar areas
 
 ### Layout & Spacing
 
@@ -1499,7 +2063,7 @@ Apps must support resizable windows on iPad.
 #### DO
 - Use `Alignment3D` for depth-based layouts
 - Enable `.manipulable()` for objects users should interact with
-- Check scene snapping state for context-aware UI
+- Check surface snapping state for context-aware UI
 
 #### DON'T
 - Use 2D alignment APIs for 3D layouts
@@ -1576,12 +2140,12 @@ TextEditor(text: $text) // Plain String loses formatting
 
 #### Solution
 ```swift
-// Must include .delete in supported operations
-.dragConfiguration(.init(supportedOperations: [.copy, .delete]))
+// Must enable delete in drag configuration
+.dragConfiguration(DragConfiguration(allowMove: false, allowDelete: true))
 
 // And observe the delete event
 .onDragSessionUpdated { session in
-    if case .ended(.delete) = session.phase {
+    if session.phase == .ended(.delete) {
         deleteItems()
     }
 }
@@ -1615,17 +2179,48 @@ SliderTickContentForEach(chapters.map(\.time), id: \.self) { time in
 
 **Why** The API enforces type safety between tick positions and slider values. This is an API design constraint, not a bug.
 
+### Issue: Toolbar morphing not working
+
+**Symptom** Toolbar stays static during NavigationStack push/pop — no morphing animation
+
+#### Solution
+```swift
+// ❌ WRONG: Toolbar on NavigationStack — nothing to morph between
+NavigationStack {
+    ContentView()
+}
+.toolbar {
+    ToolbarItem { Button("Action") { } }
+}
+
+// ✅ CORRECT: Toolbar on each destination view — iOS 26 morphs between them
+NavigationStack {
+    ListView()
+        .toolbar {
+            ToolbarItem { Button("Filter") { } }
+        }
+        .navigationDestination(for: Item.self) { item in
+            DetailView(item: item)
+                .toolbar {
+                    ToolbarItem { Button("Edit") { } }
+                }
+        }
+}
+```
+
+Move `.toolbar {}` from the NavigationStack to each view inside it. iOS 26 morphs between per-view toolbars during navigation transitions.
+
 ---
 
 ## Resources
 
-**WWDC**: 2025-256
+**WWDC**: 2025-256, 2025-278 (What's new in widgets), 2025-287 (Meet WebKit for SwiftUI), 2025-310 (Optimize SwiftUI performance with instruments), 2025-323 (Build a SwiftUI app with the new design), 2025-325 (Bring Swift Charts to the third dimension), 2025-341 (Cook up a rich text experience in SwiftUI with AttributedString)
 
-**Docs**: /swiftui, /swiftui/slider, /swiftui/slidertick, /swiftui/slidertickcontentforeach, /webkit, /foundation/attributedstring, /charts
+**Docs**: /swiftui, /swiftui/defaulttoolbaritem, /swiftui/toolbarspacer, /swiftui/searchtoolbarbehavior, /swiftui/view/toolbar(id:content:), /swiftui/view/tabbarminimizebehavior(_:), /swiftui/view/tabviewbottomaccessory(isenabled:content:), /swiftui/slider, /swiftui/slidertick, /swiftui/slidertickcontentforeach, /webkit, /foundation/attributedstring, /charts, /realitykit/presentationcomponent, /swiftui/chart3d
 
-**Skills**: axiom-swiftui-performance, axiom-liquid-glass, axiom-swift-concurrency, axiom-app-intents-ref
+**Skills**: axiom-swiftui-performance, axiom-liquid-glass, axiom-swift-concurrency, axiom-app-intents-ref, axiom-swiftui-search-ref
 
 ---
 
-**Last Updated** Based on WWDC 2025-256 "What's new in SwiftUI"
-**Version** iOS 26+, iPadOS 26+, macOS Tahoe+, watchOS 26+, axiom-visionOS 26+
+**Primary source** WWDC 2025-256 "What's new in SwiftUI". Additional content from 2025-323 (Build a SwiftUI app with the new design), 2025-287 (Meet WebKit for SwiftUI), and Apple documentation.
+**Version** iOS 26+, iPadOS 26+, macOS Tahoe+, watchOS 26+, visionOS 26+

@@ -1,58 +1,50 @@
 ---
 name: generate-changelog
-description: "Create changelog from git commits. Use when preparing release notes."
-mcp_fallback: none
-category: generation
-tier: 2
+description: Generate changelog entries from archived tickets grouped by category.
+allowed-tools: Bash
 user-invocable: false
 ---
 
-# Generate Changelog
+# Changelog Generation
 
-Automatically extract commit messages and generate formatted changelog entries for release notes and version history.
+Generate changelog entries from archived tickets for a branch.
 
 ## When to Use
 
-- Preparing release notes
-- Documenting version history
-- Creating user-facing change summaries
-- Generating development notes
+Use this skill to generate formatted changelog entries from archived tickets. The entries are grouped by category (Added, Changed, Removed) and formatted with links to commits and tickets.
 
-## Quick Reference
+## Instructions
+
+Run the bundled script to generate changelog entries:
 
 ```bash
-# Extract commits since last tag
-git log v1.0.0..HEAD --pretty=format:"%h - %s (%an) %d"
-
-# Group by conventional commit type
-git log --pretty=format:"%h %s" | grep -E "^[a-f0-9]+ (feat|fix|docs|refactor|test):"
-
-# Generate markdown changelog
-git log --reverse --pretty=format:"- %s (%h)" > CHANGELOG.md
+bash .claude/skills/generate-changelog/sh/generate.sh <branch-name> <repo-url>
 ```
 
-## Workflow
+The script outputs formatted markdown that can be inserted into CHANGELOG.md.
 
-1. **Extract commits**: Get commit messages since last release
-2. **Parse convention**: Identify conventional commit types (feat, fix, docs, etc.)
-3. **Categorize changes**: Group into sections (Features, Fixes, Documentation, etc.)
-4. **Format output**: Create readable markdown or text format
-5. **Add context**: Include version number, date, and links
+### Output Format
 
-## Output Format
+```markdown
+### Added
 
-Changelog entry:
+- Title ([hash](commit-url)) - [ticket](ticket-path)
 
-- Version number and release date
-- Features section (new capabilities)
-- Fixes section (bug fixes)
-- Documentation section (doc updates)
-- Breaking changes (if any)
-- Contributors
-- Version links (GitHub compare)
+### Changed
 
-## References
+- Title ([hash](commit-url)) - [ticket](ticket-path)
 
-- See `doc-update-blog` skill for blog post updates
-- See git documentation for commit message conventions
-- See <https://keepachangelog.com/> for changelog format standards
+### Removed
+
+- Title ([hash](commit-url)) - [ticket](ticket-path)
+```
+
+Only categories with entries are included.
+
+## Entry Format
+
+Each entry includes:
+
+- **Title**: H1 heading from ticket file
+- **hash**: Short commit hash linking to GitHub commit
+- **ticket**: Relative path to archived ticket file

@@ -1,6 +1,6 @@
 ---
 name: markdown-exporter
-description: Markdown exporter for transform Markdown text to DOCX, PPTX, XLSX, PDF, PNG, HTML, MD, CSV, JSON, JSONL, XML, Mermaid files, and extract code blocks in Markdown to Python, Bash,JS and etc files. Also known as the md_exporter skill.
+description: Markdown exporter for export Markdown text to DOCX, PPTX, XLSX, PDF, PNG, HTML, MD, CSV, JSON, JSONL, XML files, and extract code blocks in Markdown to Python, Bash,JS and etc files. Also known as the md_exporter skill.
 allowed-tools: 
 disable: false
 ---
@@ -8,7 +8,7 @@ disable: false
 
 ## ✨ What is Markdown Exporter?
 
-**Markdown Exporter** is a powerful skill that transforms your Markdown text into a wide variety of professional formats. Whether you need to create polished reports, stunning presentations, organized spreadsheets, or code files—this tool has you covered.
+**Markdown Exporter** is a Agent Skill that transforms your Markdown text into a wide variety of professional formats. Whether you need to create polished reports, stunning presentations, organized spreadsheets, or code files—this tool has you covered.
 
 ### Tools and Supported Formats
 
@@ -50,7 +50,7 @@ disable: false
         📝 Markdown slides
       </div>
       <div>
-      in <a href="https://github.com/MartinPacker/md2pptx/blob/master/docs/user-guide.md#creating-slides"> md2pptx </a> style
+      in <a href="https://pandoc.org/MANUAL.html#slide-shows">Pandoc style </a>
       </div>
     </td>
     <td>🎯 PowerPoint (.pptx)</td>
@@ -86,11 +86,7 @@ disable: false
     <td>🖼️ <a href="https://www.markdownguide.org/basic-syntax/#linking-images">Image links in Markdown</a> </td>
     <td>🖼️ Downloaded image files</td>
   </tr>
-  <tr>
-    <td><code>md_to_mermaid</code></td>
-    <td>📊 <a href="https://mermaid.js.org/">Mermaid diagrams in Markdown</a> </td>
-    <td>🖼️ PNG image(s) of Mermaid diagrams</td>
-  </tr>
+
 </table>
 
 ## Prerequisites
@@ -236,7 +232,7 @@ scripts/md-exporter md_to_xlsx /path/input.md /path/output.xlsx
 
 ### md_to_pptx - Convert Markdown to PPTX
 
-Converts Markdown text to PPTX format using md2pptx.
+Converts Markdown text to PPTX format using pandoc.
 
 **Usage:**
 ```bash
@@ -453,33 +449,8 @@ scripts/md-exporter md_to_linked_image /path/input.md /path/output.zip --compres
 ```
 
 
-### md_to_mermaid - Convert Mermaid Diagrams to PNG
-
-Converts Mermaid diagram code blocks in Markdown to PNG images.
-
-**Usage:**
-```bash
-scripts/md-exporter md_to_mermaid <input> <output> [options]
-```
-
-**Arguments:**
-- `input` - Input Markdown file path
-- `output` - Output PNG file path or directory path
-
-**Options:**
-- `--compress` - Compress all PNG images into a ZIP file
-- `--strip-wrapper` - Remove code block wrapper if present
-
-**Example:**
-```bash
-scripts/md-exporter md_to_mermaid /path/input.md /path/output.png
-scripts/md-exporter md_to_mermaid /path/input.md /path/output.zip --compress
-```
-
-
 ## 📝 Notes
 
 - All scripts only support file paths as input
 - For scripts that generate multiple files (e.g., multiple tables, multiple code blocks), the output filename will be automatically numbered
 - Use the `--strip-wrapper` option to remove code block wrappers (```) from the input Markdown
-- For PPTX conversion, ensure the `md2pptx` directory is available in the `tools/md_to_pptx/` directory

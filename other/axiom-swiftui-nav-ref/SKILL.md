@@ -1,10 +1,11 @@
 ---
 name: axiom-swiftui-nav-ref
 description: Reference — Comprehensive SwiftUI navigation guide covering NavigationStack (iOS 16+), NavigationSplitView (iOS 16+), NavigationPath, deep linking, state restoration, Tab+Navigation integration (iOS 18+), Liquid Glass navigation (iOS 26+), and coordinator patterns
-version: 1.0.0
-skill_type: reference
-apple_platforms: iOS 16+ (NavigationStack), iOS 18+ (Tab/Sidebar), iOS 26+ (Liquid Glass)
-last_updated: 2025-12-05
+license: MIT
+compatibility: iOS 16+ (NavigationStack), iOS 18+ (Tab/Sidebar), iOS 26+ (Liquid Glass)
+metadata:
+  version: "1.0.0"
+  last-updated: "2025-12-05"
 ---
 
 # SwiftUI Navigation API Reference
@@ -576,10 +577,16 @@ TabView {
         LibraryView()
     }
     Tab(role: .search) {
-        SearchView()
+        NavigationStack {
+            SearchView()
+                .navigationTitle("Search")
+        }
+        .searchable(text: $searchText)
     }
 }
 ```
+
+**Search tab requirement**: Contents of a search-role tab must be wrapped in `NavigationStack` with `.searchable()` applied to the stack. Without `NavigationStack`, the search field will not appear. For foundational `.searchable` patterns (suggestions, scopes, tokens, programmatic control), see `axiom-swiftui-search-ref`.
 
 ### 5.2 TabView with NavigationStack Per Tab
 
@@ -791,6 +798,7 @@ TabView { ... }
     }
 
 // Dynamic visibility (recommended for mini-players)
+// ⚠️ Requires iOS 26.1+ (not 26.0)
 TabView { ... }
     .tabViewBottomAccessory(isEnabled: showMiniPlayer) {
         MiniPlayerView()
@@ -801,10 +809,60 @@ TabView { ... }
 
 // Search tab with dedicated search field
 Tab(role: .search) {
-    SearchView()
+    NavigationStack {
+        SearchView()
+            .navigationTitle("Search")
+    }
+    .searchable(text: $searchText)
 }
 // Morphs into search field when selected
+// ⚠️ NavigationStack wrapper required for search field to appear
+// Fallback: If no tab has .search role, the tab view applies search
+// to ALL tabs, resetting search state when the selected tab changes
 ```
+
+#### Dynamic Bottom Accessory
+
+The accessory view can change based on the active tab, though Apple's own usage (Music mini-player) keeps it global:
+
+```swift
+@State private var activeTab: TabID = .workouts
+
+TabView(selection: $activeTab) { /* tabs */ }
+    .tabViewBottomAccessory {
+        switch activeTab {
+        case .workouts:
+            Button("Start Workout") { }
+        case .exercises:
+            Button("Add Exercise") { }
+        default:
+            EmptyView()
+        }
+    }
+```
+
+**Accessory placement**: On iPhone, the bottom accessory position depends on tab bar state. When the tab bar is normal size, the accessory appears above it; when the tab bar is collapsed (via `tabBarMinimizeBehavior`), the accessory displays inline. Read the `tabViewBottomAccessoryPlacement` environment value to adjust content:
+
+```swift
+struct AdaptiveAccessory: View {
+    @Environment(\.tabViewBottomAccessoryPlacement) var placement
+
+    var body: some View {
+        HStack {
+            NowPlayingInfo()
+            if placement == .bar {
+                // Full controls when above tab bar
+                PlaybackControls()
+            } else {
+                // Compact when inline with collapsed tab bar
+                PlayPauseButton()
+            }
+        }
+    }
+}
+```
+
+**Best practice**: Reserve `tabViewBottomAccessory` for content relevant across all tabs (playback controls, status indicators). For tab-specific actions, prefer floating glass buttons within the tab's content view.
 
 ### 5.7 Tab API Quick Reference
 
@@ -820,7 +878,7 @@ Tab(role: .search) {
 | `.tabViewStyle(.sidebarAdaptable)` | TabView | 18+ | Sidebar on iPad, tabs on iPhone |
 | `.tabViewCustomization($binding)` | TabView | 18+ | Persist user tab arrangement |
 | `.tabBarMinimizeBehavior(_:)` | TabView | 26+ | Auto-hide on scroll |
-| `.tabViewBottomAccessory(isEnabled:content:)` | TabView | 26+ | Dynamic content below tab bar |
+| `.tabViewBottomAccessory(isEnabled:content:)` | TabView | 26.1+ | Dynamic content below tab bar |
 
 ---
 
@@ -846,6 +904,8 @@ NavigationSplitView {
 ```
 
 ### 6.3 Bottom-Aligned Search (WWDC 2025, 256)
+
+**Foundational search APIs** For `.searchable`, `isSearching`, suggestions, scopes, tokens, and programmatic control, see `axiom-swiftui-search-ref`. This section covers iOS 26 bottom-aligned refinement only.
 
 ```swift
 NavigationSplitView {
@@ -885,7 +945,11 @@ TabView {
 
 ### 6.6 Sheet Presentations with Zoom Transition
 
+In iOS 26, sheets can morph directly out of the buttons that present them. Make the presenting toolbar item a source for a navigation zoom transition, and mark the sheet content as the destination:
+
 ```swift
+@Namespace private var namespace
+
 // Sheet morphs out of presenting button
 .toolbar {
     ToolbarItem {
@@ -898,6 +962,18 @@ TabView {
         .navigationTransition(.zoom(sourceID: "settings", in: namespace))
 }
 ```
+
+Other presentations also flow smoothly out of Liquid Glass controls — menus, alerts, and popovers. Dialogs automatically morph out of the buttons that present them without additional code.
+
+**Audit tip**: If you've used `presentationBackground` to apply custom backgrounds to sheets, consider removing it and let the new Liquid Glass sheet material shine. Partial height sheets are now inset with glass background by default.
+
+### 6.7 Toolbar Morphing Transitions
+
+iOS 26 automatically morphs toolbars during NavigationStack push/pop when each destination view declares its own `.toolbar {}`. Items with matching `toolbar(id:)` and `ToolbarItem(id:)` IDs stay stable during the transition (no bounce), while unmatched items animate in/out.
+
+**Key rule**: Attach `.toolbar {}` to individual views inside NavigationStack, not to NavigationStack itself. Otherwise there is nothing to morph between.
+
+See `axiom-swiftui-26-ref` skill for complete toolbar morphing API including DefaultToolbarItem, `toolbar(id:)` stable items, ToolbarSpacer patterns, and troubleshooting.
 
 ---
 
@@ -1124,11 +1200,13 @@ NavigationPath(codableRepresentation)  // For decoding
 
 ## Resources
 
-**WWDC**: 2022-10054, 2024-10147, 2025-256, 2025-323
+**WWDC**: 2022-10054, 2024-10147, 2025-256, 2025-323 (Build a SwiftUI app with the new design)
 
-**Skills**: axiom-swiftui-nav, axiom-swiftui-nav-diag, axiom-swiftui-26-ref, axiom-liquid-glass
+**Docs**: /swiftui/tabrole/search, /swiftui/view/tabbarminimizebehavior(_:), /swiftui/view/tabviewbottomaccessory(isenabled:content:)
+
+**Skills**: axiom-swiftui-nav, axiom-swiftui-nav-diag, axiom-swiftui-26-ref, axiom-liquid-glass, axiom-swiftui-search-ref
 
 ---
 
-**Last Updated** Based on WWDC 2022-10054, WWDC 2024-10147, WWDC 2025-256, WWDC 2025-323
+**Last Updated** Based on WWDC 2022-10054, WWDC 2024-10147, WWDC 2025-256, WWDC 2025-323 (Build a SwiftUI app with the new design)
 **Platforms** iOS 16+, iPadOS 16+, macOS 13+, watchOS 9+, tvOS 16+

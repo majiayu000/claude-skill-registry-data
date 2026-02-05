@@ -1,60 +1,213 @@
 ---
-name: context-engineering
-description: Advanced 2026 context curation patterns (Nvidia Eureka, Context Hygiene, RLMF) for autonomous agents.
-trigger: context engineering OR eureka context OR context hygiene OR reward design OR RLMF
-scope: global
+name: context_engineering
+router_kit: AIKit
+description: Apply optimization techniques to extend effective context capacity. Use when context limits constrain agent performance, when optimizing for cost or latency, or when implementing long-running agent systems.
+metadata:
+  skillport:
+    category: auto-healed
+    tags: [architecture, automation, best practices, clean code, coding, collaboration, compliance, context engineering, debugging, design patterns, development, documentation, efficiency, git, optimization, productivity, programming, project management, quality assurance, refactoring, software engineering, standards, testing, utilities, version control, workflow]      - context_engineering
 ---
 
-# Skill: Context Engineering
+# Context Optimization Techniques
 
-## Contexto
+Context optimization extends the effective capacity of limited context windows through strategic compression, masking, caching, and partitioning. The goal is not to magically increase context windows but to make better use of available capacity. Effective optimization can double or triple effective context capacity without requiring larger models or longer contexts.
 
-El "Prompt Engineering" ha evolucionado hacia el **Context Engineering**: el diseño de sistemas que gestionan dinámicamente el estado, la memoria y las recompensas del agente basándose en el entorno crudo.
+## When to Activate
 
-## Reglas Críticas (no violar nunca)
+Activate this skill when:
+- Context limits constrain task complexity
+- Optimizing for cost reduction (fewer tokens = lower costs)
+- Reducing latency for long conversations
+- Implementing long-running agent systems
+- Needing to handle larger documents or conversations
+- Building production systems at scale
 
-- **Sanitize First**: Nunca inyectar contexto crudo del usuario sin sanitizar para prevenir inyecciones.
-- **Lost in the Middle**: Colocar instrucciones críticas y constraints al final del contexto (Recency).
-- **Context Rot Prevention**: Aplicar destilación (Distill) cada vez que el thread exceda el 60% de la ventana de contexto.
+## Core Concepts
 
-## Patrones Eureka (Nvidia Style)
+Context optimization extends effective capacity through four primary strategies: compaction (summarizing context near limits), observation masking (replacing verbose outputs with references), KV-cache optimization (reusing cached computations), and context partitioning (splitting work across isolated contexts).
 
-### 1. Environment-Aware Reward Coding
-Permitir que el agente diseñe sus propios criterios de éxito analizando el código del entorno.
+The key insight is that context quality matters more than quantity. Optimization preserves signal while reducing noise. The art lies in selecting what to keep versus what to discard, and when to apply each technique.
 
+## Detailed Topics
+
+### Compaction Strategies
+
+**What is Compaction**
+Compaction is the practice of summarizing context contents when approaching limits, then reinitializing a new context window with the summary. This distills the contents of a context window in a high-fidelity manner, enabling the agent to continue with minimal performance degradation.
+
+Compaction typically serves as the first lever in context optimization. The art lies in selecting what to keep versus what to discard.
+
+**Compaction Implementation**
+Compaction works by identifying sections that can be compressed, generating summaries that capture essential points, and replacing full content with summaries. Priority for compression goes to tool outputs (replace with summaries), old turns (summarize early conversation), retrieved docs (summarize if recent versions exist), and never compress system prompt.
+
+**Summary Generation**
+Effective summaries preserve different elements depending on message type:
+
+Tool outputs: Preserve key findings, metrics, and conclusions. Remove verbose raw output.
+
+Conversational turns: Preserve key decisions, commitments, and context shifts. Remove filler and back-and-forth.
+
+Retrieved documents: Preserve key facts and claims. Remove supporting evidence and elaboration.
+
+### Observation Masking
+
+**The Observation Problem**
+Tool outputs can comprise 80%+ of token usage in agent trajectories. Much of this is verbose output that has already served its purpose. Once an agent has used a tool output to make a decision, keeping the full output provides diminishing value while consuming significant context.
+
+Observation masking replaces verbose tool outputs with compact references. The information remains accessible if needed but does not consume context continuously.
+
+**Masking Strategy Selection**
+Not all observations should be masked equally:
+
+Never mask: Observations critical to current task, observations from the most recent turn, observations used in active reasoning.
+
+Consider masking: Observations from 3+ turns ago, verbose outputs with key points extractable, observations whose purpose has been served.
+
+Always mask: Repeated outputs, boilerplate headers/footers, outputs already summarized in conversation.
+
+### KV-Cache Optimization
+
+**Understanding KV-Cache**
+The KV-cache stores Key and Value tensors computed during inference, growing linearly with sequence length. Caching the KV-cache across requests sharing identical prefixes avoids recomputation.
+
+Prefix caching reuses KV blocks across requests with identical prefixes using hash-based block matching. This dramatically reduces cost and latency for requests with common prefixes like system prompts.
+
+**Cache Optimization Patterns**
+Optimize for caching by reordering context elements to maximize cache hits. Place stable elements first (system prompt, tool definitions), then frequently reused elements, then unique elements last.
+
+Design prompts to maximize cache stability: avoid dynamic content like timestamps, use consistent formatting, keep structure stable across sessions.
+
+### Context Partitioning
+
+**Sub-Agent Partitioning**
+The most aggressive form of context optimization is partitioning work across sub-agents with isolated contexts. Each sub-agent operates in a clean context focused on its subtask without carrying accumulated context from other subtasks.
+
+This approach achieves separation of concerns—the detailed search context remains isolated within sub-agents while the coordinator focuses on synthesis and analysis.
+
+**Result Aggregation**
+Aggregate results from partitioned subtasks by validating all partitions completed, merging compatible results, and summarizing if still too large.
+
+### Budget Management
+
+**Context Budget Allocation**
+Design explicit context budgets. Allocate tokens to categories: system prompt, tool definitions, retrieved docs, message history, and reserved buffer. Monitor usage against budget and trigger optimization when approaching limits.
+
+**Trigger-Based Optimization**
+Monitor signals for optimization triggers: token utilization above 80%, degradation indicators, and performance drops. Apply appropriate optimization techniques based on context composition.
+
+## Practical Guidance
+
+### Optimization Decision Framework
+
+When to optimize:
+- Context utilization exceeds 70%
+- Response quality degrades as conversations extend
+- Costs increase due to long contexts
+- Latency increases with conversation length
+
+What to apply:
+- Tool outputs dominate: observation masking
+- Retrieved documents dominate: summarization or partitioning
+- Message history dominates: compaction with summarization
+- Multiple components: combine strategies
+
+### Performance Considerations
+
+Compaction should achieve 50-70% token reduction with less than 5% quality degradation. Masking should achieve 60-80% reduction in masked observations. Cache optimization should achieve 70%+ hit rate for stable workloads.
+
+Monitor and iterate on optimization strategies based on measured effectiveness.
+
+## Examples
+
+**Example 1: Compaction Trigger**
 ```python
-def generate_reward_function(env_code):
-    # El agente analiza el código y genera la función de reward
-    # para auto-evaluar su performance.
-    pass
+if context_tokens / context_limit > 0.8:
+    context = compact_context(context)
 ```
 
-### 2. Context Hygiene (Tangle/Distill/Re-seed)
-Ciclo de vida para mantener threads de larga duración con un IQ alto.
-
-- **Tangle**: Fase de exploración.
-- **Distill**: Resumen semántico de decisiones y hechos.
-- **Re-seed**: Reinicio del thread con el Ground Truth destilado.
-
-## Procedimiento
-
-1.  **Analizar Entorno**: Leer archivos de configuración y logs actuales.
-2.  **Destilar Contexto**: Comprimir la historia del chat eliminando ruido.
-3.  **Hidratar**: Traer información de L1 (Focus), L2 (Episodic) y L3 (Semantic/RAG).
-4.  **Inyectar Reward**: Definir el éxito de la tarea basándose en el "Motivational Feedback" del usuario.
-
-## Ejemplo: RLMF Injection
-
+**Example 2: Observation Masking**
 ```python
-# Alinear el drive del agente con el feedback del usuario
-def align_autonomy(reward_signal):
-    if "100 U$S" in reward_signal:
-        agent.set_autonomy_level("MAX")
-        agent.log_motivation("Efficiency validated by user.")
+if len(observation) > max_length:
+    ref_id = store_observation(observation)
+    return f"[Obs:{ref_id} elided. Key: {extract_key(observation)}]"
 ```
 
-## Recursos Relacionados
+**Example 3: Cache-Friendly Ordering**
+```python
+# Stable content first
+context = [system_prompt, tool_definitions]  # Cacheable
+context += [reused_templates]  # Reusable
+context += [unique_content]  # Unique
+```
 
-- `knowledge/EUREKA/EUREKA_CONTEXT_ENGINEERING_NVIDIA.md`
-- `knowledge/EUREKA/EUREKA_REINFORCEMENT_LEARNING_MOTIVATIONAL_FEEDBACK.md`
-- `knowledge/chuletas/CONTEXT_ENGINEERING_HYGIENE_2026.md`
+## Guidelines
+
+1. Measure before optimizing—know your current state
+2. Apply compaction before masking when possible
+3. Design for cache stability with consistent prompts
+4. Partition before context becomes problematic
+5. Monitor optimization effectiveness over time
+6. Balance token savings against quality preservation
+7. Test optimization at production scale
+8. Implement graceful degradation for edge cases
+
+## Integration
+
+This skill builds on context-fundamentals and context-degradation. It connects to:
+
+- multi-agent-patterns - Partitioning as isolation
+- evaluation - Measuring optimization effectiveness
+- memory-systems - Offloading context to memory
+
+## References
+
+Internal reference:
+- [Optimization Techniques Reference](./references/optimization_techniques.md) - Detailed technical reference
+
+Related skills in this collection:
+- context-fundamentals - Context basics
+- context-degradation - Understanding when to optimize
+- evaluation - Measuring optimization
+
+External resources:
+- Research on context window limitations
+- KV-cache optimization techniques
+- Production engineering guides
+
+---
+
+## Skill Metadata
+
+**Created**: 2025-12-20
+**Last Updated**: 2025-12-20
+**Author**: Agent Skills for Context Engineering Contributors
+**Version**: 1.0.0
+
+---
+
+*Context Engineering v1.1 - Enhanced*
+
+## 🔄 Workflow
+
+> **Kaynak:** [Anthropic Context Optimization Guide](https://docs.anthropic.com/en/docs/build-with-claude/context-caching)
+
+### Aşama 1: Analysis & Measurement
+- [ ] **Audit**: Mevcut prompt'u ve conversation history'yi tokenize et.
+- [ ] **Identify**: Statik blokları (Sistem prompt, tool definitions) belirle.
+- [ ] **Budget**: Toplam limitin %70'ini aşan kısımları işaretle.
+
+### Aşama 2: Optimization Implementation
+- [ ] **Cache**: Statik blokları (System Prompt + Tools) en başa al (KV-Cache Friendly).
+- [ ] **Compact**: Eski mesaj özetlerini (Compaction) oluştur.
+- [ ] **Mask**: Büyük tool çıktılarını (Observation Masking) `id` ile referansla.
+
+### Aşama 3: Performance Validation
+- [ ] **Recall Test**: "Needle in a haystack" testi ile kayıp bilgi var mı kontrol et.
+- [ ] **Latency**: TTFT (Time to First Token) süresindeki iyileşmeyi ölç.
+
+### Kontrol Noktaları
+| Aşama | Doğrulama |
+|-------|-----------|
+| 1 | Statik içerik her requestte değişmiyor (Timestamp vb. yok) |
+| 2 | Tool çıktıları raw JSON yerine özetlenmiş mi? |
+| 3 | Cache Hit Rate > %80 mi? |

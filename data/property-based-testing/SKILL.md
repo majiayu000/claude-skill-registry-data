@@ -1,132 +1,75 @@
 ---
 name: property-based-testing
-description: Provides guidance for property-based testing across multiple languages and smart contracts. Use when writing tests, reviewing code with serialization/validation/parsing patterns, designing features, or when property-based testing would provide stronger coverage than example-based tests.
+category: testing-quality
+description: Generate invariant and edge-case tests.
 ---
 
-# Property-Based Testing Guide
+# Property Based Testing
 
-Use this skill proactively during development when you encounter patterns where PBT provides stronger coverage than example-based tests.
+## Purpose
+- Generate invariant and edge-case tests.
 
-## When to Invoke (Automatic Detection)
+## Preconditions
+- Access to system context (repos, infra, environments)
+- Confirmed requirements and constraints
+- Required approvals for security, compliance, or governance
 
-**Invoke this skill when you detect:**
+## Inputs
+- Problem statement and scope
+- Current architecture or system constraints
+- Non-functional requirements (performance, security, compliance)
+- Target stack and environment
 
-- **Serialization pairs**: `encode`/`decode`, `serialize`/`deserialize`, `toJSON`/`fromJSON`, `pack`/`unpack`
-- **Parsers**: URL parsing, config parsing, protocol parsing, string-to-structured-data
-- **Normalization**: `normalize`, `sanitize`, `clean`, `canonicalize`, `format`
-- **Validators**: `is_valid`, `validate`, `check_*` (especially with normalizers)
-- **Data structures**: Custom collections with `add`/`remove`/`get` operations
-- **Mathematical/algorithmic**: Pure functions, sorting, ordering, comparators
-- **Smart contracts**: Solidity/Vyper contracts, token operations, state invariants, access control
+## Outputs
+- Design or implementation plan
+- Required artifacts (diagrams, configs, specs, checklists)
+- Validation steps and acceptance criteria
 
-**Priority by pattern:**
+## Detailed Step-by-Step Procedures
+1. Clarify scope, constraints, and success metrics.
+2. Review current system state, dependencies, and integration points.
+3. Select patterns, tools, and architecture options that match constraints.
+4. Produce primary artifacts (docs/specs/configs/code stubs).
+5. Validate against requirements and known risks.
+6. Provide rollout and rollback guidance.
 
-| Pattern | Property | Priority |
-|---------|----------|----------|
-| encode/decode pair | Roundtrip | HIGH |
-| Pure function | Multiple | HIGH |
-| Validator | Valid after normalize | MEDIUM |
-| Sorting/ordering | Idempotence + ordering | MEDIUM |
-| Normalization | Idempotence | MEDIUM |
-| Builder/factory | Output invariants | LOW |
-| Smart contract | State invariants | HIGH |
+## Decision Trees and Conditional Logic
+- If compliance or regulatory scope applies -> add required controls and audit steps.
+- If latency budget is strict -> choose low-latency storage and caching.
+- Else -> prefer cost-optimized storage and tiering.
+- If data consistency is critical -> prefer transactional boundaries and strong consistency.
+- Else -> evaluate eventual consistency or async processing.
 
-## When NOT to Use
+## Error Handling and Edge Cases
+- Partial failures across dependencies -> isolate blast radius and retry with backoff.
+- Data corruption or loss risk -> enable backups and verify restore path.
+- Limited access to systems -> document gaps and request access early.
+- Legacy dependencies with limited change tolerance -> use adapters and phased rollout.
 
-Do NOT use this skill for:
-- Simple CRUD operations without transformation logic
-- One-off scripts or throwaway code
-- Code with side effects that cannot be isolated (network calls, database writes)
-- Tests where specific example cases are sufficient and edge cases are well-understood
-- Integration or end-to-end testing (PBT is best for unit/component testing)
+## Tool Requirements and Dependencies
+- CLI and SDK tooling for the target stack
+- Credentials or access tokens for required environments
+- Diagramming or spec tooling when producing docs
 
-## Property Catalog (Quick Reference)
+## Stack Profiles
+- Use Profile A, B, or C from `skills/STACK_PROFILES.md`.
+- Note selected profile in outputs for traceability.
 
-| Property | Formula | When to Use |
-|----------|---------|-------------|
-| **Roundtrip** | `decode(encode(x)) == x` | Serialization, conversion pairs |
-| **Idempotence** | `f(f(x)) == f(x)` | Normalization, formatting, sorting |
-| **Invariant** | Property holds before/after | Any transformation |
-| **Commutativity** | `f(a, b) == f(b, a)` | Binary/set operations |
-| **Associativity** | `f(f(a,b), c) == f(a, f(b,c))` | Combining operations |
-| **Identity** | `f(x, identity) == x` | Operations with neutral element |
-| **Inverse** | `f(g(x)) == x` | encrypt/decrypt, compress/decompress |
-| **Oracle** | `new_impl(x) == reference(x)` | Optimization, refactoring |
-| **Easy to Verify** | `is_sorted(sort(x))` | Complex algorithms |
-| **No Exception** | No crash on valid input | Baseline property |
+## Validation
+- Requirements coverage check
+- Security and compliance review
+- Performance and reliability review
+- Peer or stakeholder sign-off
 
-**Strength hierarchy** (weakest to strongest):
-No Exception → Type Preservation → Invariant → Idempotence → Roundtrip
+## Rollback Procedures
+- Revert config or deployment to last known good state.
+- Roll back database migrations if applicable.
+- Verify service health, data integrity, and error rates after rollback.
 
-## Decision Tree
+## Success Metrics
+- Measurable outcomes (latency, error rate, uptime, cost)
+- Acceptance thresholds defined with stakeholders
 
-Based on the current task, read the appropriate section:
-
-```
-TASK: Writing new tests
-  → Read [{baseDir}/references/generating.md]({baseDir}/references/generating.md) (test generation patterns and examples)
-  → Then [{baseDir}/references/strategies.md]({baseDir}/references/strategies.md) if input generation is complex
-
-TASK: Designing a new feature
-  → Read [{baseDir}/references/design.md]({baseDir}/references/design.md) (Property-Driven Development approach)
-
-TASK: Code is difficult to test (mixed I/O, missing inverses)
-  → Read [{baseDir}/references/refactoring.md]({baseDir}/references/refactoring.md) (refactoring patterns for testability)
-
-TASK: Reviewing existing PBT tests
-  → Read [{baseDir}/references/reviewing.md]({baseDir}/references/reviewing.md) (quality checklist and anti-patterns)
-
-TASK: Need library reference
-  → Read [{baseDir}/references/libraries.md]({baseDir}/references/libraries.md) (PBT libraries by language, includes smart contract tools)
-```
-
-## How to Suggest PBT
-
-When you detect a high-value pattern while writing tests, **offer PBT as an option**:
-
-> "I notice `encode_message`/`decode_message` is a serialization pair. Property-based testing with a roundtrip property would provide stronger coverage than example tests. Want me to use that approach?"
-
-**If codebase already uses a PBT library** (Hypothesis, fast-check, proptest, Echidna), be more direct:
-
-> "This codebase uses Hypothesis. I'll write property-based tests for this serialization pair using a roundtrip property."
-
-**If user declines**, write good example-based tests without further prompting.
-
-## When NOT to Use PBT
-
-- Simple CRUD without complex validation
-- UI/presentation logic
-- Integration tests requiring complex external setup
-- Prototyping where requirements are fluid
-- User explicitly requests example-based tests only
-
-## Red Flags
-
-- Recommending trivial getters/setters
-- Missing paired operations (encode without decode)
-- Ignoring type hints (well-typed = easier to test)
-- Overwhelming user with candidates (limit to top 5-10)
-- Being pushy after user declines
-
-## Skill Chaining
-
-### Chains From
-
-| Source | When |
-|--------|------|
-| unit-test-workflow | Pure functions, roundtrip patterns detected |
-| suggest-tests | Serialization patterns identified |
-
-### Terminal Chain
-
-After PBT tests complete: **repo-hygiene** (clean temporary test files)
-
-### Testing Pipeline Position
-
-property-based-testing is step 4 in the testing pipeline:
-
-```
-tdd → suggest-tests → unit-test-workflow → property-based-testing → repo-hygiene
-                                                    ↑
-                                               (you are here)
-```
+## Example Workflows and Use Cases
+- Minimal: apply the skill to a small service or single module.
+- Production: apply the skill to a multi-service or multi-tenant system.

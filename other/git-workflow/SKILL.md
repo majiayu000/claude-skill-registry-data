@@ -1,888 +1,366 @@
 ---
 name: git-workflow
-description: "Git workflow management with atomic commit principles. Capabilities: commit organization, branching strategies, merge/rebase workflows, PR management, history cleanup, staged change analysis, single-responsibility commits. Actions: commit, push, pull, merge, rebase, branch, stage, stash git operations. Keywords: git commit, git push, git pull, git merge, git rebase, git branch, git stash, atomic commit, commit message, conventional commits, branching strategy, GitFlow, trunk-based, PR, pull request, code review, git history, cherry-pick, squash, amend, interactive rebase, staged changes. Use when: organizing commits, creating branches, merging code, rebasing, writing commit messages, managing PRs, cleaning git history, analyzing staged changes."
+description: Git worktree workflow, conventional commits, commit trailers, and PR guidelines. Activated during git operations and commits.
+allowed-tools: ['Bash', 'Read']
 ---
 
-# Git Workflow & Best Practices
+# Git Workflow Expert
 
-## Purpose
+This skill provides guidance on Git worktree workflow, commit standards, and PR best practices.
 
-Comprehensive guide for git operations with emphasis on clean history, atomic commits, and professional workflows. Automatically analyzes staged changes and enforces single-responsibility principle.
+## 🌳 Git Worktree Workflow
 
-## When to Use
+### Why Git Worktree?
 
-Activate for any git operation:
-- Committing changes (especially multiple files)
-- Creating branches
-- Merging or rebasing
-- Managing git history
-- Writing commit messages
-- Organizing staging area
-- Code review preparation
-- Repository management
+Git worktree allows working on multiple branches simultaneously without stashing or switching contexts. Each worktree is an independent working directory with its own branch.
 
-## Core Philosophy
+**Benefits**:
+- No context switching between branches
+- No stashing required
+- Parallel development on different features
+- Independent builds and tests per branch
 
-### Single Responsibility Rule ⭐
-
-**CRITICAL:** Before committing, analyze staged changes and divide into atomic commits.
-
-**Process:**
-1. Run `git status` to see all staged files
-2. Identify different concerns/features
-3. Unstage everything: `git reset HEAD`
-4. Stage files by concern, one group at a time
-5. Commit each group with focused message
-6. Repeat until all changes are committed
-
-**Why:** Makes history reviewable, revertable, and maintainable.
-
-### ⛔ MANDATORY Gate Before Commit
-
-**Ask yourself:** "If I need to revert ONLY ONE of these changes tomorrow, can I?"
-
-- **NO** → You have multiple concerns → **MUST split into separate commits**
-- **YES** → Proceed with single commit
-
-**Common trap:** "All files are related to the same feature request" is NOT a valid reason to bundle. Each independently revertable change = separate commit.
-
----
-
-## Commit Organization
-
-### Analyzing Staged Changes
+### Setting Up Worktrees
 
 ```bash
-# Check what's staged
-git status
+# Create worktree for feature development
+git worktree add ../project-feature-auth feature/user-authentication
 
-# See file-level summary
-git diff --cached --stat
+# Create worktree for bug fixes
+git worktree add ../project-bugfix-api hotfix/api-validation
 
-# See detailed changes
-git diff --cached
-
-# Check specific file
-git diff --cached path/to/file
+# Create worktree for experiments
+git worktree add ../project-experiment-new-ui experiment/react-19-upgrade
 ```
 
-### Grouping Strategies
+### Worktree Naming Convention
 
-**By Feature:**
-- Auth system changes → one commit
-- Payment module → separate commit
-- User profile → another commit
+```
+../project-<type>-<description>
+```
 
-**By Layer:**
-- Database migrations → first commit
-- Backend API → second commit
-- Frontend UI → third commit
-- Tests → fourth commit
+**Types**:
+- `feature` - New feature development
+- `bugfix` - Bug fixes
+- `hotfix` - Urgent production fixes
+- `experiment` - Experimental changes
+- `refactor` - Code refactoring
 
-**By Type:**
-- New features (feat)
-- Bug fixes (fix)
-- Refactoring (refactor)
-- Documentation (docs)
-- Performance (perf)
-- Tests (test)
+**Examples**:
+- `../myapp-feature-user-auth`
+- `../myapp-bugfix-login-error`
+- `../myapp-hotfix-security-patch`
 
-**By Dependency:**
-- Foundation/infrastructure first
-- Features that depend on foundation second
-
-### Division Workflow
+### Managing Worktrees
 
 ```bash
-# 1. Analyze current state
-git status
-git diff --cached --stat
+# List all worktrees
+git worktree list
 
-# 2. Unstage everything
-git reset HEAD
+# Show details in long format
+git worktree list --porcelain
 
-# 3. Stage first logical group
-git add file1.ts file2.ts directory/
+# Remove worktree after merging
+git worktree remove ../project-feature-auth
 
-# 4. Verify what's staged
-git diff --cached --stat
+# Remove worktree (force if dirty)
+git worktree remove --force ../project-experiment
 
-# 5. Commit with focused message
-git commit -m "type: concise description"
-
-# 6. Repeat steps 3-5 for remaining groups
+# Prune stale worktree information
+git worktree prune
 ```
 
-### Example: Real Scenario
+### Worktree Best Practices
 
-**Situation:** 29 files staged with mixed concerns
+1. **Clean up after merging** - Remove worktrees after feature completion
+2. **Use descriptive names** - Follow naming convention
+3. **Keep main worktree clean** - Use for stable work only
+4. **Regular pruning** - Run `git worktree prune` periodically
 
-```bash
-# Before - messy staging
-$ git status
-Changes to be committed:
-  # Trading Styles feature (25 files)
-  modified:   src/app/styles/page.tsx
-  new file:   src/core/domain/models/TradingStyle.ts
-  new file:   src/infrastructure/database/migrations/create_trading_styles.ts
-  ...
-  # History enhancements (4 files)
-  modified:   src/app/history/page.tsx
-  modified:   src/app/api/history/recommendations/route.ts
-  ...
-```
+## 🔧 Commit Standards
 
-**Solution:**
+### Conventional Commits
 
-```bash
-# 1. Reset staging
-git reset HEAD
-
-# 2. Commit #1 - Trading Styles feature
-git add \
-  package.json pnpm-lock.yaml \
-  src/app/styles/ \
-  src/core/domain/models/TradingStyle.ts \
-  src/core/ports/ITradingStyleRepository.ts \
-  src/infrastructure/database/TradingStyleRepository.ts \
-  src/infrastructure/database/migrations/create_trading_styles.ts
-
-git commit -m "feat: Add trading style persona system for AI-powered analysis"
-
-# 3. Commit #2 - History enhancements
-git add \
-  src/app/history/page.tsx \
-  src/app/api/history/recommendations/route.ts \
-  src/infrastructure/database/TimeseriesRepository.ts \
-  src/components/layout/AppLayout.tsx
-
-git commit -m "feat: Add comprehensive search and filtering to history page"
-```
-
-**Result:** Clean, focused commits that are independently reviewable and revertable.
-
----
-
-## Commit Messages
-
-### Conventional Commits Format
+Follow the [Conventional Commits](https://www.conventionalcommits.org/) specification:
 
 ```
 <type>(<scope>): <subject>
 
-<body>
+[optional body]
 
-<footer>
+[optional footer]
 ```
 
-### Types
+### Commit Types
 
-- `feat` - New feature
-- `fix` - Bug fix
-- `refactor` - Code restructuring (no behavior change)
-- `perf` - Performance improvement
-- `docs` - Documentation only
-- `style` - Formatting, whitespace, semicolons
-- `test` - Adding/updating tests
-- `chore` - Maintenance, dependencies
-- `build` - Build system changes
-- `ci` - CI/CD configuration
-- `revert` - Revert previous commit
+```bash
+# New feature
+git commit -m "feat(auth): add JWT token refresh mechanism"
 
-### Subject Line Rules
+# Bug fix
+git commit -m "fix(api): handle null response appropriately"
 
-- Use imperative mood: "Add feature" not "Added feature"
-- Start with lowercase (no capital first letter)
-- No period at end
-- 50 characters maximum
-- Be specific and descriptive
+# Documentation
+git commit -m "docs(readme): update installation instructions"
 
-### Body Guidelines
+# Performance improvement
+git commit -m "perf(db): optimize query performance"
 
-- Explain WHAT and WHY, not HOW
+# Code refactoring
+git commit -m "refactor(core): extract validation logic"
+
+# Testing
+git commit -m "test(auth): add unit tests for login flow"
+
+# Build/tooling
+git commit -m "build(deps): upgrade react to v18"
+
+# CI/CD
+git commit -m "ci(github): add automated deployment workflow"
+
+# Chores
+git commit -m "chore(deps): update development dependencies"
+
+# Style changes (formatting, etc.)
+git commit -m "style(components): format with prettier"
+```
+
+### Commit Type Reference
+
+| Type | Description | Example |
+|------|-------------|---------|
+| `feat` | New feature | Adding user authentication |
+| `fix` | Bug fix | Fixing null pointer error |
+| `docs` | Documentation only | Update README |
+| `style` | Formatting changes | Code formatting, no logic change |
+| `refactor` | Code refactoring | Restructure without behavior change |
+| `perf` | Performance improvement | Optimize algorithm |
+| `test` | Adding/updating tests | Add unit tests |
+| `build` | Build system changes | Update webpack config |
+| `ci` | CI/CD changes | Update GitHub Actions |
+| `chore` | Maintenance tasks | Update dependencies |
+| `revert` | Revert previous commit | Revert "feat: add feature" |
+
+### Commit Message Guidelines
+
+**Subject line**:
+- Use imperative mood ("add" not "added" or "adds")
+- Don't capitalize first letter
+- No period at the end
+- Maximum 50 characters
+
+**Body**:
 - Wrap at 72 characters
+- Explain what and why, not how
 - Use bullet points for multiple changes
-- Reference issue numbers: `Fixes #123`
-- Include breaking changes
 
-### Examples
-
-**Good:**
+**Example**:
 ```bash
 git commit -m "$(cat <<'EOF'
-feat: add trading style filtering to history page
+feat(api): add user profile endpoint
 
-Implemented comprehensive search and filtering:
-- Multi-criteria filtering (action, type, risk, style)
-- Partial symbol search with case-insensitive matching
-- LEFT JOIN with trading_styles table
-- Extended API with new query parameters
+- Add GET /api/users/:id endpoint
+- Include avatar URL in response
+- Add rate limiting (100 req/min)
 
-Fixes #456
+This allows frontend to fetch user details
+without additional API calls.
+
+Closes #123
 EOF
 )"
 ```
 
-**Bad:**
-```bash
-git commit -m "Fixed stuff"
-git commit -m "WIP"
-git commit -m "Updated files"
-```
+### Commit Trailers
 
----
-
-## Branching Strategy
-
-### Branch Naming
-
-**Format:** `type/description-in-kebab-case`
-
-**Types:**
-- `feature/` - New features
-- `fix/` - Bug fixes
-- `refactor/` - Code improvements
-- `docs/` - Documentation
-- `test/` - Test additions
-- `chore/` - Maintenance
-
-**Examples:**
-```bash
-feature/trading-style-personas
-fix/history-filter-bug
-refactor/database-queries
-docs/api-documentation
-```
-
-### Branch Workflow
+Add metadata to commits using trailers:
 
 ```bash
-# Create and switch to new branch
-git checkout -b feature/new-feature
+# Reference GitHub issue
+git commit --trailer "Github-Issue: #123"
 
-# Work on changes
-git add ...
-git commit -m "..."
+# Credit bug reporter
+git commit --trailer "Reported-by: John Doe <john@example.com>"
 
-# Keep branch updated with main
-git fetch origin
-git rebase origin/main
+# Reference related commits
+git commit --trailer "See-also: abc123"
 
-# Push to remote
-git push origin feature/new-feature
-
-# Create pull request (via GitHub/GitLab UI)
+# Co-author
+git commit --trailer "Co-authored-by: Jane Smith <jane@example.com>"
 ```
 
-### Branch Management
-
+**Example with multiple trailers**:
 ```bash
-# List all branches
-git branch -a
+git commit -m "$(cat <<'EOF'
+fix(auth): resolve token expiration issue
 
-# Switch branches
-git checkout branch-name
+Fixed bug where expired tokens weren't properly
+refreshed, causing users to be logged out unexpectedly.
 
-# Delete local branch
-git branch -d branch-name
-
-# Delete remote branch
-git push origin --delete branch-name
-
-# Rename current branch
-git branch -m new-name
+Github-Issue: #456
+Reported-by: John Doe <john@example.com>
+Reviewed-by: Jane Smith <jane@example.com>
+EOF
+)"
 ```
 
----
+## 📝 Pull Request Guidelines
 
-## Staging Operations
+### PR Title
 
-### Selective Staging
+Follow the same format as commit messages:
 
-```bash
-# Stage specific files
-git add file1.ts file2.ts
-
-# Stage entire directory
-git add src/features/
-
-# Stage all changes
-git add .
-
-# Stage by file extension
-git add *.ts
-
-# Interactive staging (patch mode)
-git add -p file.ts
+```
+<type>(<scope>): <description>
 ```
 
-### Patch Mode Operations
+**Examples**:
+- `feat(auth): add OAuth2 authentication`
+- `fix(api): resolve race condition in data sync`
+- `docs(contributing): update contributor guidelines`
 
-When using `git add -p`:
-- `y` - stage this hunk
-- `n` - don't stage this hunk
-- `s` - split into smaller hunks
-- `e` - manually edit hunk
-- `q` - quit
-- `?` - help
+### PR Description Template
 
-### Unstaging
+```markdown
+## Summary
+Brief description of changes (1-3 sentences)
 
-```bash
-# Unstage all files
-git reset HEAD
+## Changes
+- Bullet point list of main changes
+- Focus on what and why, not implementation details
+- Keep it high-level
 
-# Unstage specific file
-git restore --staged file.ts
+## Test Plan
+- [ ] Unit tests pass
+- [ ] Integration tests pass
+- [ ] Manual testing performed
+- [ ] Edge cases covered
 
-# Unstage directory
-git restore --staged src/features/
+## Breaking Changes
+List any breaking changes (if applicable)
+
+## Related Issues
+Closes #123
+Related to #456
+
+## Screenshots/Videos
+(if applicable)
 ```
 
----
+### PR Best Practices
 
-## History Management
+1. **Keep PRs small** - Easier to review, faster to merge
+2. **One feature per PR** - Don't mix unrelated changes
+3. **Update documentation** - Keep docs in sync with code
+4. **Add tests** - Don't merge without test coverage
+5. **Respond to reviews** - Address feedback promptly
+6. **Squash commits** - Clean up commit history before merge
+7. **Delete branch** - Clean up after merge
 
-### Viewing History
+### PR Review Checklist
 
-```bash
-# Compact history
-git log --oneline -10
+**Before requesting review**:
+- [ ] All tests pass
+- [ ] Code is formatted (linter passes)
+- [ ] Documentation updated
+- [ ] No console.log or debug code
+- [ ] Type safety verified (TypeScript)
+- [ ] Breaking changes documented
 
-# Detailed history
-git log -5
+**For reviewers**:
+- [ ] Code follows project conventions
+- [ ] Logic is clear and maintainable
+- [ ] Edge cases are handled
+- [ ] Tests are adequate
+- [ ] No security vulnerabilities
+- [ ] Performance considerations addressed
 
-# With file changes
-git log --stat -3
+## 🎯 Git Workflow Checklist
 
-# Specific file history
-git log -- path/to/file
+Daily workflow checklist:
 
-# Graph view
-git log --oneline --graph --all
+- [ ] Pull latest changes: `git pull`
+- [ ] Create feature branch or worktree
+- [ ] Make atomic commits with conventional format
+- [ ] Write meaningful commit messages
+- [ ] Push regularly: `git push`
+- [ ] Create PR with proper description
+- [ ] Address review feedback
+- [ ] Squash commits if needed
+- [ ] Merge and delete branch/worktree
 
-# Search commits
-git log --grep="search term"
-
-# By author
-git log --author="name"
-
-# Date range
-git log --since="2 weeks ago"
-```
-
-### Amending Commits
-
-```bash
-# Add forgotten files to last commit
-git add forgotten-file.ts
-git commit --amend --no-edit
-
-# Change last commit message
-git commit --amend -m "new message"
-```
-
-**⚠️ Warning:** Only amend commits that haven't been pushed!
+## 💡 Advanced Git Tips
 
 ### Interactive Rebase
 
 ```bash
-# Rebase last 3 commits
+# Clean up last 3 commits
 git rebase -i HEAD~3
 
-# Rebase from specific commit
-git rebase -i commit-hash
+# Rebase onto main
+git rebase -i main
 ```
 
-**Options:**
-- `pick` - keep commit as-is
-- `reword` - change commit message
-- `edit` - modify commit
-- `squash` - combine with previous
-- `fixup` - like squash, discard message
-- `drop` - remove commit
-
-### Squashing Commits
-
-Before pushing:
-```bash
-# Squash last 3 commits
-git rebase -i HEAD~3
-# Mark commits as "squash" or "fixup"
-```
-
-### Cherry-picking
+### Cherry-pick Commits
 
 ```bash
 # Apply specific commit to current branch
-git cherry-pick commit-hash
+git cherry-pick abc123
 
-# Cherry-pick multiple commits
-git cherry-pick hash1 hash2 hash3
+# Cherry-pick without committing
+git cherry-pick --no-commit abc123
 ```
 
----
-
-## Merging & Rebasing
-
-### Merge vs Rebase
-
-**Merge:**
-- Creates merge commit
-- Preserves complete history
-- Use for: integrating feature branches to main
+### Stash Management
 
 ```bash
-git checkout main
-git merge feature/new-feature
-```
-
-**Rebase:**
-- Rewrites history, linear timeline
-- Cleaner history
-- Use for: updating feature branch with main changes
-
-```bash
-git checkout feature/new-feature
-git rebase main
-```
-
-### Merge Strategies
-
-**Fast-forward (default):**
-```bash
-git merge feature/branch
-```
-
-**No fast-forward (always create merge commit):**
-```bash
-git merge --no-ff feature/branch
-```
-
-**Squash (combine all commits):**
-```bash
-git merge --squash feature/branch
-git commit -m "feat: merged feature"
-```
-
-### Resolving Conflicts
-
-```bash
-# Check conflict status
-git status
-
-# View conflicts
-git diff
-
-# After resolving conflicts in editor
-git add resolved-file.ts
-
-# Continue rebase
-git rebase --continue
-
-# Or abort
-git rebase --abort
-```
-
----
-
-## Remote Operations
-
-### Working with Remotes
-
-```bash
-# View remotes
-git remote -v
-
-# Add remote
-git remote add origin https://github.com/user/repo.git
-
-# Update remote URL
-git remote set-url origin new-url
-
-# Fetch from remote
-git fetch origin
-
-# Pull with rebase
-git pull --rebase origin main
-
-# Push to remote
-git push origin branch-name
-
-# Force push (use carefully!)
-git push --force-with-lease origin branch-name
-```
-
-### Pull Request Workflow
-
-```bash
-# 1. Update local main
-git checkout main
-git pull origin main
-
-# 2. Create feature branch
-git checkout -b feature/new-feature
-
-# 3. Make changes and commit atomically
-# (following single-responsibility rule)
-
-# 4. Keep branch updated
-git fetch origin
-git rebase origin/main
-
-# 5. Push to remote
-git push origin feature/new-feature
-
-# 6. Create PR via GitHub/GitLab UI
-
-# 7. Address review feedback
-git add .
-git commit -m "fix: address review comments"
-git push origin feature/new-feature
-
-# 8. After PR merged, clean up
-git checkout main
-git pull origin main
-git branch -d feature/new-feature
-```
-
----
-
-## Advanced Techniques
-
-### Stashing
-
-```bash
-# Stash current changes
-git stash
-
 # Stash with message
-git stash save "work in progress"
+git stash push -m "WIP: feature in progress"
 
 # List stashes
 git stash list
 
-# Apply last stash
-git stash apply
-
-# Apply and remove stash
+# Apply and drop stash
 git stash pop
 
 # Apply specific stash
-git stash apply stash@{2}
-
-# Drop stash
-git stash drop stash@{0}
-
-# Clear all stashes
-git stash clear
+git stash apply stash@{0}
 ```
 
-### Tagging
-
-```bash
-# Create lightweight tag
-git tag v1.0.0
-
-# Create annotated tag
-git tag -a v1.0.0 -m "Release version 1.0.0"
-
-# List tags
-git tag
-
-# Push tag to remote
-git push origin v1.0.0
-
-# Push all tags
-git push origin --tags
-
-# Delete tag
-git tag -d v1.0.0
-git push origin --delete v1.0.0
-```
-
-### Bisect (Finding Bugs)
+### Bisect for Bug Hunting
 
 ```bash
 # Start bisect
 git bisect start
 
-# Mark current commit as bad
+# Mark current as bad
 git bisect bad
 
 # Mark known good commit
-git bisect good commit-hash
+git bisect good abc123
 
-# Git will checkout middle commit
-# Test it, then mark as good or bad
-git bisect good  # or git bisect bad
+# Let git find the culprit
+# Test each commit and mark good/bad
+git bisect good  # or bad
 
-# Repeat until bug is found
-# Reset after finding
+# End bisect
 git bisect reset
 ```
 
-### Reflog (Recovery)
-
-```bash
-# View reflog
-git reflog
-
-# Recover lost commit
-git reset --hard commit-hash
-
-# Recover deleted branch
-git checkout -b recovered-branch commit-hash
-```
-
----
-
-## Git Ignore
-
-### .gitignore Patterns
-
-```bash
-# Ignore file
-secret.env
-
-# Ignore directory
-node_modules/
-
-# Ignore by extension
-*.log
-
-# Ignore except specific file
-!important.log
-
-# Ignore in all subdirectories
-**/debug.log
-```
-
-### Common Ignores
-
-```bash
-# Dependencies
-node_modules/
-vendor/
-
-# Build outputs
-dist/
-build/
-*.exe
-
-# Environment
-.env
-.env.local
-
-# IDE
-.vscode/
-.idea/
-*.swp
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Logs
-*.log
-logs/
-```
-
----
-
-## Best Practices Checklist
-
-### Before Committing
-
-- [ ] Run `git status` to analyze staged files
-- [ ] **⛔ GATE:** "Can I revert ONLY ONE change independently?" If NO → split commits
-- [ ] Group changes by single responsibility
-- [ ] Unstage unrelated files
-- [ ] Stage only related files together
-- [ ] Review `git diff --cached` before committing
-- [ ] Write clear, descriptive commit message
-- [ ] Follow conventional commit format
-- [ ] Ensure code builds successfully
-- [ ] Run tests if applicable
-- [ ] Verify commit is independently reviewable
-
-### Branch Management
-
-- [ ] Use descriptive branch names
-- [ ] Keep branches short-lived
-- [ ] Rebase regularly with main
-- [ ] Delete merged branches
-- [ ] Don't commit directly to main
-
-### Commit Quality
-
-- [ ] Atomic commits (one concern per commit)
-- [ ] Meaningful commit messages
-- [ ] No WIP or "fix stuff" messages
-- [ ] No commented-out code in commits
-- [ ] No generated files (unless necessary)
-- [ ] No secrets or credentials
-
-### Code Review
-
-- [ ] Small, focused pull requests
-- [ ] Descriptive PR title and description
-- [ ] Reference related issues
-- [ ] Self-review before requesting review
-- [ ] Address all review comments
-- [ ] Keep commits clean during review
-
----
-
-## Anti-Patterns to Avoid
-
-### ❌ Giant Mixed Commits
-```bash
-git add .
-git commit -m "various changes"
-```
-**Problem:** Impossible to review, revert, or understand
-
-**Fix:** Divide into atomic commits by concern
-
-### ❌ "Related" Bundling
-```bash
-# Multiple features bundled because "they're all for the same task"
-git add src/components/Form.tsx src/components/PDFExport.tsx src/types/ src/config/
-git commit -m "feat: add form and PDF export with new field types"
-```
-**Problem:** "Related to same request" ≠ "Same commit". Cannot revert PDF without losing Form.
-
-**Test:** Can you revert just ONE of these features independently? No? Split it.
-
-**Fix:**
-```bash
-git add src/config/ src/types/
-git commit -m "feat: add field mapping configuration"
-
-git add src/components/Form.tsx
-git commit -m "feat: add editable form component"
-
-git add src/components/PDFExport.tsx
-git commit -m "feat: add PDF export with bank-style layout"
-```
-
-### ❌ Committing Directly to Main
-```bash
-git checkout main
-git commit -m "quick fix"
-git push
-```
-**Problem:** Bypasses code review, risky
-
-**Fix:** Always use feature branches
-
-### ❌ Force Push to Shared Branches
-```bash
-git push --force origin main
-```
-**Problem:** Destroys others' work, breaks history
-
-**Fix:** Use `--force-with-lease` and only on your branches
-
-### ❌ Large Binary Files
-```bash
-git add large-video.mp4
-git commit -m "add video"
-```
-**Problem:** Bloats repository size forever
-
-**Fix:** Use Git LFS or external storage
-
-### ❌ Committing Secrets
-```bash
-git add .env
-git commit -m "add config"
-```
-**Problem:** Security vulnerability, hard to remove
-
-**Fix:** Use .gitignore, environment variables, secrets management
-
-### ❌ Meaningless Messages
-```bash
-git commit -m "fix"
-git commit -m "update"
-git commit -m "wip"
-```
-**Problem:** History is useless for debugging
-
-**Fix:** Write descriptive, specific commit messages
-
----
-
-## Quick Reference
-
-### Essential Commands
-
-```bash
-# Status and diff
-git status
-git diff
-git diff --cached
-git diff --stat
-
-# Staging
-git add file.ts
-git add .
-git reset HEAD
-git restore --staged file.ts
-
-# Committing
-git commit -m "message"
-git commit --amend
-
-# Branching
-git branch
-git checkout -b branch-name
-git branch -d branch-name
-
-# History
-git log --oneline -10
-git log --stat
-git show commit-hash
-
-# Remote
-git fetch origin
-git pull --rebase
-git push origin branch-name
-
-# Stashing
-git stash
-git stash pop
-```
-
-### Recovery Commands
-
-```bash
-# Undo last commit (keep changes)
-git reset --soft HEAD~1
-
-# Undo last commit (discard changes)
-git reset --hard HEAD~1
-
-# Undo changes to file
-git restore file.ts
-
-# Recover deleted branch
-git reflog
-git checkout -b branch-name commit-hash
-```
-
----
-
-## Resources
-
-- **Conventional Commits:** https://www.conventionalcommits.org/
-- **Git Book:** https://git-scm.com/book/en/v2
-- **Oh Shit, Git!:** https://ohshitgit.com/
-
----
-
-**Status**: Production-ready ✅
-**Line Count**: ~480 (under 500-line rule) ✅
-**Coverage**: Complete git workflow + atomic commit enforcement ✅
+## 🚫 Common Mistakes to Avoid
+
+❌ **Don't**:
+- Commit directly to main/master
+- Use vague commit messages ("fix bug", "update")
+- Mix unrelated changes in one commit
+- Forget to pull before pushing
+- Leave WIP commits in PR
+- Skip commit message body for complex changes
+
+✅ **Do**:
+- Use feature branches or worktrees
+- Write descriptive conventional commits
+- Make atomic commits (one logical change)
+- Pull regularly and before pushing
+- Squash/reword commits before merging
+- Provide context in commit body

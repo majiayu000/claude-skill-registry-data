@@ -1,98 +1,66 @@
 ---
 name: codex
-description: OpenAI Codex CLIを使用したコードレビュー、分析、コードベースへの質問を実行する。使用場面: (1) PRセルフレビュー、(2) コードベース全体の分析、(3) 実装に関する質問、(4) バグの調査、(5) リファクタリング提案。トリガー: "codex", "コードレビュー", "レビューして", "分析して", "/codex"
+description: Use when the user asks to run Codex CLI (codex exec, codex resume) or references OpenAI Codex for code analysis, refactoring, or automated editing. Uses GPT-5.2 by default for state-of-the-art software engineering.
 ---
 
-# Codex
+# Codex Skill Guide
 
-OpenAI Codex CLIを使用してコードレビュー・分析を実行するスキル。
+## Running a Task
+1. Default to `gpt-5.2` model. Ask the user (via `AskUserQuestion`) which reasoning effort to use (`xhigh`,`high`, `medium`, or `low`). User can override model if needed (see Model Options below).
+2. Select the sandbox mode required for the task; default to `--sandbox read-only` unless edits or network access are necessary.
+3. Assemble the command with the appropriate options:
+   - `-m, --model <MODEL>`
+   - `--config model_reasoning_effort="<high|medium|low>"`
+   - `--sandbox <read-only|workspace-write|danger-full-access>`
+   - `--full-auto`
+   - `-C, --cd <DIR>`
+   - `--skip-git-repo-check`
+3. Always use --skip-git-repo-check.
+4. When continuing a previous session, use `codex exec --skip-git-repo-check resume --last` via stdin. When resuming don't use any configuration flags unless explicitly requested by the user e.g. if he species the model or the reasoning effort when requesting to resume a session. Resume syntax: `echo "your prompt here" | codex exec --skip-git-repo-check resume --last 2>/dev/null`. All flags have to be inserted between exec and resume.
+5. **IMPORTANT**: By default, append `2>/dev/null` to all `codex exec` commands to suppress thinking tokens (stderr). Only show stderr if the user explicitly requests to see thinking tokens or if debugging is needed.
+6. Run the command, capture stdout/stderr (filtered as appropriate), and summarize the outcome for the user.
+7. **After Codex completes**, inform the user: "You can resume this Codex session at any time by saying 'codex resume' or asking me to continue with additional analysis or changes."
 
-## 実行コマンド
+### Quick Reference
+| Use case | Sandbox mode | Key flags |
+| --- | --- | --- |
+| Read-only review or analysis | `read-only` | `--sandbox read-only 2>/dev/null` |
+| Apply local edits | `workspace-write` | `--sandbox workspace-write --full-auto 2>/dev/null` |
+| Permit network or broad access | `danger-full-access` | `--sandbox danger-full-access --full-auto 2>/dev/null` |
+| Resume recent session | Inherited from original | `echo "prompt" \| codex exec --skip-git-repo-check resume --last 2>/dev/null` (no flags allowed) |
+| Run from another directory | Match task needs | `-C <DIR>` plus other flags `2>/dev/null` |
 
-```bash
-codex exec --full-auto --sandbox read-only --cd <project_directory> "<request>"
-```
+## Model Options
 
-## パラメータ
+| Model | Best for | Context window | Key features |
+| --- | --- | --- | --- |
+| `gpt-5.2-max` | **Max model**: Ultra-complex reasoning, deep problem analysis | 400K input / 128K output | 76.3% SWE-bench, adaptive reasoning, $1.25/$10.00 |
+| `gpt-5.2` ⭐ | **Flagship model**: Software engineering, agentic coding workflows | 400K input / 128K output | 76.3% SWE-bench, adaptive reasoning, $1.25/$10.00 |
+| `gpt-5.2-mini` | Cost-efficient coding (4x more usage allowance) | 400K input / 128K output | Near SOTA performance, $0.25/$2.00 |
+| `gpt-5.1-thinking` | Ultra-complex reasoning, deep problem analysis | 400K input / 128K output | Adaptive thinking depth, runs 2x slower on hardest tasks |
 
-| パラメータ | 説明 |
-|-----------|------|
-| `--full-auto` | 完全自動モードで実行 |
-| `--sandbox read-only` | 読み取り専用サンドボックス（安全な分析用） |
-| `--cd <dir>` | 対象プロジェクトのディレクトリ |
-| `"<request>"` | 依頼内容（日本語可） |
+**GPT-5.2 Advantages**: 76.3% SWE-bench (vs 72.8% GPT-5), 30% faster on average tasks, better tool handling, reduced hallucinations, improved code quality. Knowledge cutoff: September 30, 2024.
 
-## 使用例
+**Reasoning Effort Levels**:
+- `xhigh` - Ultra-complex tasks (deep problem analysis, complex reasoning, deep understanding of the problem)
+- `high` - Complex tasks (refactoring, architecture, security analysis, performance optimization)
+- `medium` - Standard tasks (refactoring, code organization, feature additions, bug fixes)
+- `low` - Simple tasks (quick fixes, simple changes, code formatting, documentation)
 
-### PRセルフレビュー（主要ユースケース）
+**Cached Input Discount**: 90% off ($0.125/M tokens) for repeated context, cache lasts up to 24 hours.
 
-```bash
-codex exec --full-auto --sandbox read-only --cd /path/to/project "このPRの変更をレビューして、以下の観点で問題を指摘してください：
-- 型安全性（any型、型アサーション）
-- セキュリティ（OWASP Top 10）
-- テストの有無
-- コード規約違反
-指摘は🔴必須/🟡推奨/💡提案に分類してください"
-```
+## Following Up
+- After every `codex` command, immediately use `AskUserQuestion` to confirm next steps, collect clarifications, or decide whether to resume with `codex exec resume --last`.
+- When resuming, pipe the new prompt via stdin: `echo "new prompt" | codex exec resume --last 2>/dev/null`. The resumed session automatically uses the same model, reasoning effort, and sandbox mode from the original session.
+- Restate the chosen model, reasoning effort, and sandbox mode when proposing follow-up actions.
 
-### コード分析
+## Error Handling
+- Stop and report failures whenever `codex --version` or a `codex exec` command exits non-zero; request direction before retrying.
+- Before you use high-impact flags (`--full-auto`, `--sandbox danger-full-access`, `--skip-git-repo-check`) ask the user for permission using AskUserQuestion unless it was already given.
+- When output includes warnings or partial results, summarize them and ask how to adjust using `AskUserQuestion`.
 
-```bash
-codex exec --full-auto --sandbox read-only --cd /path/to/project "このプロジェクトのコードをレビューして、改善点を指摘してください"
-```
+## CLI Version
 
-### バグ調査
+Requires Codex CLI v0.57.0 or later for GPT-5.2 model support. The CLI defaults to `gpt-5.2` on macOS/Linux and `gpt-5.2` on Windows. Check version: `codex --version`
 
-```bash
-codex exec --full-auto --sandbox read-only --cd /path/to/project "認証処理でエラーが発生する原因を調査してください"
-```
-
-### リファクタリング提案
-
-```bash
-codex exec --full-auto --sandbox read-only --cd /path/to/project "このコンポーネントのリファクタリング案を提案してください"
-```
-
-## PRセルフレビューとしての使用
-
-PR作成後のセルフレビューでは、以下の手順で実行する：
-
-### 1. PR差分の確認
-
-```bash
-gh pr diff
-```
-
-### 2. Codexでレビュー実行
-
-```bash
-codex exec --full-auto --sandbox read-only --cd $(pwd) "このPRの変更をレビューして、CLAUDE.mdの品質基準に照らして問題を指摘してください。
-指摘は以下に分類してください：
-- 🔴必須: セキュリティ問題、any型使用、テスト欠如、ESLintエラー
-- 🟡推奨: 型アサーションの改善、命名規則違反、パフォーマンス改善
-- 💡提案: リファクタリング提案、より良いパターン"
-```
-
-### 3. 指摘への対応
-
-| 分類 | 対応 |
-|------|------|
-| 🔴必須 | 必ず修正 |
-| 🟡推奨 | 可能な限り修正 |
-| 💡提案 | 任意で検討 |
-
-🔴必須・🟡推奨の指摘がなくなるまで修正を繰り返す（最大3回）
-
-## 実行手順
-
-1. ユーザーから依頼内容を受け取る
-2. 対象プロジェクトのディレクトリを特定する（デフォルト: 現在のworktree）
-3. 上記コマンド形式でCodexを実行
-4. 結果をユーザーに報告
-
-## 注意事項
-
-- `--sandbox read-only` により、コードの変更は行われない（安全）
-- 結果は読み取り専用で分析結果のみ出力
-- 日本語でのリクエストに対応
-- 大規模なコードベースでも効率的に分析可能
+Use `/model` slash command within a Codex session to switch models, or configure default in `~/.codex/config.toml`.

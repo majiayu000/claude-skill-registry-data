@@ -1,179 +1,405 @@
 ---
 name: error-recovery
-description: RPA error handling patterns (fallback, retry, skip, user notification) for resilient automation workflows. Use when: handling errors in RPA workflows, error recovery strategies, retry patterns, graceful degradation, error classification, logging standards.
+description: Use when encountering failures - assess severity, preserve evidence, execute rollback decision tree, and verify post-recovery state
+allowed-tools:
+  - Bash
+  - Read
+  - mcp__git__*
+  - mcp__github__*
+model: opus
 ---
 
-# Error Recovery Skill
+# Error Recovery
 
-RPA error handling patterns for resilient automation workflows.
+## Overview
 
-## Exception Types
+Handle failures gracefully with structured recovery.
 
-| Domain Exception | Use Case |
-|------------------|----------|
-| `NodeExecutionError` | Node failed during execution |
-| `NodeTimeoutError` | Node exceeded timeout |
-| `NodeValidationError` | Invalid node configuration |
-| `ValidationError` | Data validation failure |
-| `ResourceError` | File, network, API errors |
-| `AuthenticationError` | Credential failure |
-| `NetworkError` | Connection/timeout errors |
+**Core principle:** When things break, don't panic. Assess, preserve, recover, verify.
 
-## Recovery Strategies
+**Announce at start:** "I'm using error-recovery to handle this failure."
 
-| Strategy | When to Use |
-|----------|-------------|
-| **RETRY** | Transient errors (timeout, stale element, connection) |
-| **SKIP** | Non-critical node, optional data |
-| **FALLBACK** | Alternative value/path available |
-| **COMPENSATE** | Rollback needed (database writes) |
-| **ABORT** | Critical error, cannot continue |
-| **ESCALATE** | Max retries exceeded, human needed |
+## The Recovery Protocol
 
-## Error Classification
-
-```python
-from casare_rpa.domain.errors.types import ErrorClassification
-
-# TRANSIENT: Temporary, retryable
-# - TIMEOUT, CONNECTION_TIMEOUT, ELEMENT_STALE
-# - NETWORK_ERROR, RESOURCE_LOCKED
-
-# PERMANENT: Will not fix with retry
-# - SELECTOR_INVALID, PERMISSION_DENIED
-# - FILE_NOT_FOUND, CONFIG_INVALID
-
-# UNKNOWN: First occurrence
-# - Try once, then escalate
+```
+Error Detected
+      │
+      ▼
+┌─────────────┐
+│ 1. ASSESS   │ ← Severity? Scope? Impact?
+└──────┬──────┘
+       │
+       ▼
+┌─────────────┐
+│ 2. PRESERVE │ ← Capture evidence before it's lost
+└──────┬──────┘
+       │
+       ▼
+┌─────────────┐
+│ 3. RECOVER  │ ← Follow decision tree
+└──────┬──────┘
+       │
+       ▼
+┌─────────────┐
+│ 4. VERIFY   │ ← Confirm clean state
+└──────┬──────┘
+       │
+       ▼
+┌─────────────┐
+│ 5. DOCUMENT │ ← Record what happened
+└─────────────┘
 ```
 
-## Quick Patterns
+## Step 1: Assess Severity
 
-### 1. Try-Except with Context
+### Severity Levels
 
-```python
-from loguru import logger
-from casare_rpa.domain.errors.exceptions import NodeExecutionError, ErrorContext
+| Level | Description | Examples |
+|-------|-------------|----------|
+| **Critical** | System unusable, data at risk | Build completely broken, tests cause data loss |
+| **Major** | Significant functionality broken | Feature doesn't work, many tests failing |
+| **Minor** | Isolated issue, workaround exists | Single test flaky, style error |
+| **Info** | Warning only, not blocking | Deprecation notice, performance hint |
 
-try:
-    await page.click(selector)
-except Exception as exc:
-    logger.error(f"Click failed for {selector}: {exc}")
-    raise NodeExecutionError(
-        message="Element click failed",
-        node_id=self.node_id,
-        node_type=self.node_type,
-        context=ErrorContext(
-            component="ClickElementNode",
-            operation="click_element",
-            details={"selector": selector, "timeout_ms": 5000}
-        ),
-        original_error=exc
-    )
+### Assessment Questions
+
+```markdown
+## Error Assessment
+
+**Error:** [Description of error]
+**Location:** [Where it occurred]
+
+### Severity Checklist
+- [ ] Is the system still functional?
+- [ ] Is any data at risk?
+- [ ] Are other features affected?
+- [ ] Is this blocking progress?
+
+### Scope
+- Files affected: [list]
+- Features affected: [list]
+- Users affected: [none/some/all]
 ```
 
-### 2. Retry with Exponential Backoff
+## Step 2: Preserve Evidence
 
-```python
-import asyncio
-from loguru import logger
+**Capture BEFORE attempting fixes:**
 
-max_retries = 3
-base_delay = 1000  # ms
+### Error Logs
 
-for attempt in range(max_retries):
-    try:
-        result = await operation()
-        return result
-    except TimeoutError as exc:
-        if attempt < max_retries - 1:
-            delay = base_delay * (2 ** attempt)
-            logger.warning(f"Retry {attempt + 1}/{max_retries} after {delay}ms")
-            await asyncio.sleep(delay / 1000)
-        else:
-            logger.error(f"Operation failed after {max_retries} retries")
-            raise
+```bash
+# Capture error output
+pnpm test 2>&1 | tee error-log.txt
+
+# Or from failed command
+./failing-command 2>&1 | tee error-log.txt
 ```
 
-### 3. Graceful Degradation
+### Stack Traces
 
-```python
-# Primary then fallback
-result = await primary_operation()
-if not result:
-    logger.info("Primary failed, trying fallback")
-    result = await fallback_operation()
+```markdown
+## Stack Trace
 
-# Return empty/default
-try:
-    data = await fetch_optional_data()
-except Exception as exc:
-    logger.warning(f"Optional data unavailable: {exc}")
-    data = {}
+```
+Error: Connection refused
+    at Database.connect (src/db/connection.ts:45)
+    at UserService.init (src/services/user.ts:23)
+    at main (src/index.ts:12)
+```
 ```
 
-### 4. Error Handler Registry
+### State Capture
 
-```python
-from casare_rpa.domain.errors.registry import get_error_handler_registry
+```bash
+# Git state
+git status
+git diff
 
-registry = get_error_handler_registry()
+# Environment state
+env | grep -E "NODE|NPM|PATH"
 
-# Handle error and get decision
-context, decision = registry.handle_error(
-    exception=exc,
-    node_id=self.node_id,
-    node_type=self.node_type,
-    retry_count=attempt,
-    max_retries=3,
-)
-
-if decision.action == RecoveryAction.RETRY:
-    await asyncio.sleep(decision.retry_delay_ms / 1000)
-    # retry operation
+# Dependency state
+pnpm list
 ```
 
-## Logging Standards
+### Screenshot (if visual)
 
-```python
-from loguru import logger
+For UI errors, capture screenshots before changes.
 
-# ERROR: Failures that stop execution
-logger.error(f"Failed to write file {path}: {exc}")
+## Step 3: Recover
 
-# WARNING: Recovered errors
-logger.warning(f"Retrying operation, attempt {attempt}/{max_retries}")
+### Decision Tree
 
-# INFO: Expected error cases
-logger.info(f"Skipping optional node: {reason}")
-
-# Always include context
-logger.error(
-    f"Node {self.node_type} failed",
-    extra={
-        "node_id": self.node_id,
-        "selector": selector,
-        "error_type": type(exc).__name__,
-    }
-)
+```
+What type of failure?
+         │
+    ┌────┴────┬────────────┬────────────┐
+    │         │            │            │
+  Code      Build      Environment   External
+  Error     Error        Issue       Service
+    │         │            │            │
+    ▼         ▼            ▼            ▼
+  ┌────┐   ┌────┐      ┌────┐      ┌────┐
+  │Git │   │Clean│     │Re-  │     │Wait/│
+  │reco│   │build│     │init │     │Retry│
+  │very│   │     │     │     │     │     │
+  └────┘   └────┘      └────┘      └────┘
 ```
 
-## ErrorCode Reference
+### Code Error Recovery
 
-| Code | Value | Type |
-|------|-------|------|
-| `TIMEOUT` | 1001 | Transient |
-| `ELEMENT_NOT_FOUND` | 2005 | Permanent |
-| `ELEMENT_STALE` | 2008 | Transient |
-| `SELECTOR_INVALID` | 2009 | Permanent |
-| `CONNECTION_TIMEOUT` | 6002 | Transient |
-| `FILE_NOT_FOUND` | 7005 | Permanent |
-| `PERMISSION_DENIED` | 1006 | Permanent |
+**Single file broken:**
 
-## Examples
+```bash
+# Revert just that file
+git checkout HEAD -- path/to/file.ts
+```
 
-See `examples/` folder for:
-- `retry-pattern.py` - Exponential backoff
-- `fallback-pattern.py` - Alternative strategies
-- `skip-pattern.py` - Non-critical nodes
-- `user-notification.py` - Escalation patterns
+**Feature broken (multiple files):**
+
+```bash
+# Find last good commit
+git log --oneline
+
+# Revert to that commit (soft reset keeps changes staged)
+git reset --soft [GOOD_COMMIT]
+
+# Or hard reset (discards changes)
+git reset --hard [GOOD_COMMIT]
+```
+
+**Working directory is a mess:**
+
+```bash
+# Stash current changes
+git stash
+
+# Verify clean state
+git status
+
+# Optionally recover stash later
+git stash pop
+```
+
+### Build Error Recovery
+
+```bash
+# Clean build artifacts
+rm -rf node_modules dist build .cache
+
+# Reinstall dependencies
+pnpm install --frozen-lockfile  # Clean install from lock file
+
+# Rebuild
+pnpm build
+```
+
+### Environment Error Recovery
+
+```bash
+# Check environment
+env | grep -E "NODE|PNPM"
+
+# Reset Node modules
+rm -rf node_modules
+pnpm install --frozen-lockfile
+
+# If using nvm, verify version
+nvm use
+
+# Re-run init script
+./scripts/init.sh
+```
+
+### External Service Error
+
+```bash
+# Check if service is up
+curl -I https://service.example.com/health
+
+# If down, wait and retry
+sleep 60
+curl -I https://service.example.com/health
+
+# If still down, check status page
+# Document as external blocker
+```
+
+## Step 4: Verify
+
+After recovery, verify clean state:
+
+### Basic Verification
+
+```bash
+# Clean working directory
+git status
+# Expected: "nothing to commit, working tree clean" or known changes
+
+# Tests pass
+pnpm test
+
+# Build succeeds
+pnpm build
+
+# Types check
+pnpm typecheck
+```
+
+### Functionality Verification
+
+```bash
+# Run the specific thing that was broken
+pnpm test --grep "specific test"
+
+# Or verify the feature manually
+```
+
+## Step 5: Document
+
+### Issue Comment
+
+```bash
+gh issue comment [ISSUE_NUMBER] --body "## Error Recovery
+
+**Error encountered:** [Description]
+
+**Severity:** Major
+
+**Evidence:**
+\`\`\`
+[Error output]
+\`\`\`
+
+**Recovery actions:**
+1. [Action 1]
+2. [Action 2]
+
+**Verification:**
+- [x] Tests pass
+- [x] Build succeeds
+
+**Root cause:** [If known]
+
+**Prevention:** [If applicable]
+"
+```
+
+### Knowledge Graph
+
+```javascript
+// Store for future reference
+mcp__memory__add_observations({
+  observations: [{
+    entityName: "Issue #[NUMBER]",
+    contents: [
+      "Encountered [error type] on [date]",
+      "Caused by: [root cause]",
+      "Resolved by: [recovery action]"
+    ]
+  }]
+});
+```
+
+## Common Recovery Patterns
+
+### "Tests were passing, now failing"
+
+```bash
+# What changed?
+git diff HEAD~3
+
+# Did dependencies change?
+git diff HEAD~3 pnpm-lock.yaml
+
+# Clean reinstall
+rm -rf node_modules && pnpm install --frozen-lockfile
+```
+
+### "Works locally, fails in CI"
+
+```bash
+# Check for environment differences
+# - Node version
+# - OS differences
+# - Env vars
+
+# Run with CI-like settings
+CI=true pnpm test
+```
+
+### "Build was working, now broken"
+
+```bash
+# Check TypeScript errors
+pnpm typecheck
+
+# Check for circular dependencies
+pnpm dlx madge --circular src/
+
+# Clean build
+rm -rf dist && pnpm build
+```
+
+### "I broke everything"
+
+```bash
+# Don't panic
+# Find last known good state
+git log --oneline
+
+# Reset to that state
+git reset --hard [GOOD_COMMIT]
+
+# Verify
+pnpm test
+
+# Start again more carefully
+```
+
+## Escalation
+
+If recovery fails after 2-3 attempts:
+
+```markdown
+## Escalation: Unrecoverable Error
+
+**Issue:** #[NUMBER]
+
+**Error:** [Description]
+
+**Recovery attempts:**
+1. [Attempt 1] - [Result]
+2. [Attempt 2] - [Result]
+
+**Current state:** [Broken/Partially working]
+
+**Evidence preserved:** [Links to logs, screenshots]
+
+**Requesting help with:** [Specific question]
+```
+
+Mark issue as Blocked and await human input.
+
+## Checklist
+
+When error occurs:
+
+- [ ] Severity assessed
+- [ ] Evidence preserved (logs, state, screenshots)
+- [ ] Recovery action selected
+- [ ] Recovery executed
+- [ ] Clean state verified
+- [ ] Tests pass
+- [ ] Build succeeds
+- [ ] Issue documented
+
+## Integration
+
+This skill is called by:
+- `issue-driven-development` - When errors occur
+- `ci-monitoring` - CI failures
+
+This skill may trigger:
+- `research-after-failure` - If cause is unknown
+- Issue update via `issue-lifecycle`

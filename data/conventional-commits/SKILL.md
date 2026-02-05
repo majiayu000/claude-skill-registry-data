@@ -1,523 +1,393 @@
 ---
 name: conventional-commits
-description: When writing a git commit message. When task completes and changes need committing. When project uses semantic-release, commitizen, git-cliff. When choosing between feat/fix/chore/docs types. When indicating breaking changes. When generating changelogs from commit history.
+description: >
+  Git commit management following Conventional Commits specification for Aurora projects.
+  Trigger: When creating commits, analyzing git history, or reviewing commit messages.
+license: MIT
+metadata:
+  author: aurora
+  version: "1.0"
+  auto_invoke: "Creating commits, git operations, analyzing commit history"
 ---
 
-# Conventional Commits
+## When to Use
+- User asks to create a commit or "commit changes"
+- User asks to review git status or diff
+- User wants to analyze commit history
+- After completing features/fixes that need to be committed
+- User mentions "conventional commits" or asks about commit format
 
-Compose commit messages following the Conventional Commits v1.0.0 specification for structured commit history, automated changelog generation, and semantic versioning.
+---
 
-## When to Use This Skill
+## Critical Patterns
 
-Use this skill when:
-
-- Creating git commit messages for structured projects
-- Validating commit message format against Conventional Commits specification
-- Setting up commit message validation with commitlint
-- Configuring changelog generation from commit history
-- Implementing semantic versioning automation
-- Reviewing commit messages for specification compliance
-- Training teams on commit message standards
-- Integrating with tools like semantic-release, commitizen, or git-cliff
-
-## Message Structure
-
-```text
-<type>[optional scope]: <description>
+### Commit Format
+```
+<type>(<scope>): <subject>
 
 [optional body]
 
-[optional footer(s)]
+[optional footer]
 ```
 
-### Components
+### Types (in order of usage frequency)
+| Type | Description | Example |
+|------|-------------|---------|
+| `feat` | New functionality | `feat(library/book): add ISBN validation` |
+| `fix` | Bug fix | `fix(auth): resolve token refresh race condition` |
+| `refactor` | Code refactoring, no functional change | `refactor(core): extract validation logic to service` |
+| `test` | Add or modify tests | `test(book): add unit tests for create handler` |
+| `docs` | Documentation changes | `docs(readme): add installation instructions` |
+| `chore` | Maintenance tasks | `chore(deps): update nestjs to v10` |
+| `style` | Formatting, semicolons, etc. | `style(api): apply prettier formatting` |
+| `perf` | Performance improvements | `perf(query): optimize book search with index` |
+| `ci` | CI/CD changes | `ci(github): add deployment workflow` |
+| `build` | Build system or dependencies | `build(docker): optimize production image` |
+| `revert` | Revert previous commit | `revert: feat(book): add ISBN validation` |
 
-| Component   | Required | Description                  | Example                          |
-| ----------- | -------- | ---------------------------- | -------------------------------- |
-| type        | Yes      | Commit category              | `feat`, `fix`, `docs`            |
-| scope       | No       | Codebase section affected    | `(auth)`, `(parser)`             |
-| description | Yes      | Short summary of changes     | `add user authentication`        |
-| body        | No       | Detailed explanation         | Multiple paragraphs with context |
-| footer      | No       | Breaking changes, issue refs | `BREAKING CHANGE:`, `Refs: #123` |
+### Subject Rules
+1. ✅ Use imperative mood: "add" NOT "added" or "adds"
+2. ✅ Lowercase first letter
+3. ✅ No period at the end
+4. ✅ Maximum 120 characters
+5. ✅ Describe WHAT, not HOW
 
-## Commit Types
+**Good:**
+- `feat(book): add publication date validation`
+- `fix(auth): resolve token refresh issue`
 
-### Required Types (SemVer Impact)
+**Bad:**
+- `feat(book): Added publication date validation` (past tense)
+- `fix(auth): Resolve token refresh issue` (uppercase)
+- `feat(book): add publication date validation.` (period)
 
-These types are mandated by the Conventional Commits specification and directly affect semantic versioning:
+### Body Rules (Optional)
 
-```mermaid
-flowchart LR
-    Fix[fix: Bug fix<br/>for users] --> PatchVer[PATCH<br/>0.0.X]
-    Feat[feat: New feature<br/>for users] --> MinorVer[MINOR<br/>0.X.0]
-    Breaking[Any type with<br/>BREAKING CHANGE or !] --> MajorVer[MAJOR<br/>X.0.0]
+1. Separate from subject with blank line
+2. Explain WHY, not WHAT
+3. Wrap at 72 characters per line
+4. Can use bullet points with `-`
 
-    style PatchVer fill:#e1f5ff
-    style MinorVer fill:#fff4e1
-    style MajorVer fill:#ffe1e1
+### Footer Rules (Optional)
+
+1. Reference issues: `Closes #123`, `Fixes #456`
+2. Breaking changes: `BREAKING CHANGE: <description>`
+3. ❌ **NEVER** add "Co-Authored-By" or AI attribution
+
+---
+
+## Commit Workflow
+
+### 1. Analyze Changes
+```bash
+git status                # See modified/untracked files
+git diff                  # See unstaged changes
+git diff --staged         # See staged changes
+git log --oneline -10     # See recent commit style
 ```
 
-| Type   | Description           | SemVer        | Example                             |
-| ------ | --------------------- | ------------- | ----------------------------------- |
-| `feat` | New feature for users | MINOR (0.X.0) | `feat: add user authentication`     |
-| `fix`  | Bug fix for users     | PATCH (0.0.X) | `fix: prevent crash on empty input` |
+### 2. Group Related Changes
 
-### Recommended Types (Angular Convention)
+**Rules:**
+- One commit = one logical change
+- ❌ Don't mix features with fixes
+- ❌ Don't mix multiple unrelated modules
+- ✅ Multiple files are OK if they implement one feature
 
-These types come from [@commitlint/config-conventional](https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional) based on [Angular commit guidelines](https://github.com/angular/angular/blob/main/contributing-docs/commit-message-guidelines.md). They have no implicit SemVer effect unless they include `BREAKING CHANGE`.
+### 3. Generate Message
+Analyze the changes and determine:
+1. **Type**: feat, fix, refactor, etc.
+2. **Scope**: Which module/component is affected?
+3. **Subject**: What does this change do?
+4. **Body** (if needed): Why was this change necessary?
+5. **Footer** (if needed): Issue references, breaking changes
 
-| Type       | Description                                 | Example                              |
-| ---------- | ------------------------------------------- | ------------------------------------ |
-| `build`    | Build system or external dependency changes | `build: update webpack to v5`        |
-| `ci`       | CI configuration changes                    | `ci: add Node 18 to test matrix`     |
-| `docs`     | Documentation only changes                  | `docs: update API reference`         |
-| `perf`     | Performance improvement                     | `perf: reduce bundle size by 20%`    |
-| `refactor` | Code change with no bug fix or feature      | `refactor: extract validation logic` |
-| `style`    | Code style changes (whitespace, formatting) | `style: fix indentation`             |
-| `test`     | Adding or correcting tests                  | `test: add unit tests for parser`    |
+### 4. Execute Commit
+```bash
+git add <files>
+git commit -m "$(cat <<'EOF'
+<type>(<scope>): <subject>
 
-### Additional Common Types
+<body>
 
-| Type     | Description                             | Example                       |
-| -------- | --------------------------------------- | ----------------------------- |
-| `chore`  | Changes not modifying src or test files | `chore: update .gitignore`    |
-| `revert` | Reverts a previous commit               | `revert: feat: add user auth` |
-
-**Note**: Teams can define custom types beyond `feat` and `fix`, but Angular convention types are widely supported by tooling.
-
-## Specification Rules
-
-The following rules constitute the official Conventional Commits 1.0.0 specification per [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt).
-
-### Type and Scope
-
-1. Commits **MUST** be prefixed with a type, consisting of a noun (`feat`, `fix`, etc.), followed by **OPTIONAL** scope, **OPTIONAL** `!`, and **REQUIRED** terminal colon and space.
-
-2. Type `feat` **MUST** be used when a commit adds a new feature.
-
-3. Type `fix` **MUST** be used when a commit represents a bug fix.
-
-4. A scope **MAY** be provided after a type. A scope **MUST** consist of a noun describing a codebase section surrounded by parenthesis, e.g., `fix(parser):`
-
-5. A description **MUST** immediately follow the colon and space after the type/scope prefix. The description is a short summary of code changes, e.g., `fix: array parsing issue when multiple spaces were contained in string`
-
-### Body
-
-6. A longer commit body **MAY** be provided after the short description, providing additional contextual information. The body **MUST** begin one blank line after the description.
-
-7. A commit body is free-form and **MAY** consist of any number of newline separated paragraphs.
-
-### Footer
-
-8. One or more footers **MAY** be provided one blank line after the body. Each footer **MUST** consist of a word token, followed by either a `:<space>` or `<space>#` separator, followed by a string value (inspired by [git trailer convention](https://git-scm.com/docs/git-interpret-trailers)).
-
-9. A footer's token **MUST** use `-` in place of whitespace characters, e.g., `Acked-by` (this helps differentiate footer section from multi-paragraph body). Exception: `BREAKING CHANGE` **MAY** also be used as a token.
-
-10. A footer's value **MAY** contain spaces and newlines. Parsing **MUST** terminate when the next valid footer token/separator pair is observed.
-
-### Breaking Changes
-
-11. Breaking changes **MUST** be indicated in the type/scope prefix of a commit, or as an entry in the footer.
-
-12. If included as a footer, a breaking change **MUST** consist of uppercase text `BREAKING CHANGE`, followed by colon, space, and description, e.g., `BREAKING CHANGE: environment variables now take precedence over config files`
-
-13. If included in the type/scope prefix, breaking changes **MUST** be indicated by `!` immediately before `:`. If `!` is used, `BREAKING CHANGE:` **MAY** be omitted from footer, and commit description **SHALL** be used to describe the breaking change.
-
-### Additional Rules
-
-14. Types other than `feat` and `fix` **MAY** be used in commit messages, e.g., `docs: update ref docs`
-
-15. The units of information that make up Conventional Commits **MUST NOT** be treated as case sensitive by implementors, except `BREAKING CHANGE` which **MUST** be uppercase.
-
-16. `BREAKING-CHANGE` **MUST** be synonymous with `BREAKING CHANGE` when used as a token in a footer.
-
-## Description Best Practices
-
-Based on [Angular commit message guidelines](https://github.com/angular/angular/blob/main/contributing-docs/commit-message-guidelines.md):
-
-### Summary/Description Guidelines
-
-- Use imperative, present tense: "change" not "changed" nor "changes"
-- Do not capitalize first letter
-- No period (.) at the end
-- Keep entire header (type + scope + description) under 72 characters
-
-### Good Examples
-
-```text
-feat: add validation for email input
-fix: handle null pointer in user service
-docs: update installation instructions
-refactor: simplify authentication flow
+<footer>
+EOF
+)"
 ```
 
-### Bad Examples (Avoid)
+---
 
-```text
-feat: Added validation for email input     # Past tense
-fix: Handles null pointer in user service  # Third person
-docs: Update installation instructions.    # Period at end, capitalized
-FEAT: add validation                       # Uppercase type (inconsistent)
+## Code Examples
+
+### Simple Feature
+```
+feat(library/book): add publication date validation
+
+Validate that publication date is not in the future
+when creating or updating a book.
+
+Closes #234
 ```
 
-### Body Guidelines
+### Bug Fix with Context
+```
+fix(auth): resolve token refresh race condition
 
-- Use imperative, present tense (same as summary)
-- Explain motivation for the change
-- Include comparison of previous vs new behavior when helpful
-- Body **MUST** begin with one blank line after description
-- Recommended minimum: 20 characters when body is present
+Multiple simultaneous requests could trigger parallel
+token refreshes, causing some requests to fail.
 
-## Breaking Changes
+- Add mutex lock during refresh
+- Queue pending requests until refresh completes
+- Add retry logic for failed requests
 
-### Methods to Indicate Breaking Changes
-
-Three equivalent approaches:
-
-1. **Footer notation**:
-
-   ```text
-   feat: allow provided config object to extend other configs
-
-   BREAKING CHANGE: `extends` key in config file is now used for extending other config files
-   ```
-
-2. **Type suffix with `!`**:
-
-   ```text
-   feat!: remove support for Node 6
-   ```
-
-3. **Type+scope suffix with `!`**:
-   ```text
-   feat(api)!: send an email to the customer when a product is shipped
-   ```
-
-### Rules
-
-- `BREAKING CHANGE` **MUST** be uppercase
-- `BREAKING-CHANGE` is synonymous when used as footer token
-- Breaking changes **MUST** correlate to MAJOR version bump in SemVer
-
-## Semantic Versioning Correlation
-
-```mermaid
-flowchart TD
-    Start([Analyze Commits]) --> CheckBreaking{Any commit has<br/>BREAKING CHANGE<br/>or !?}
-    CheckBreaking -->|Yes| Major[MAJOR bump<br/>X.0.0]
-    CheckBreaking -->|No| CheckFeat{Any commit<br/>is feat?}
-    CheckFeat -->|Yes| Minor[MINOR bump<br/>0.X.0]
-    CheckFeat -->|No| CheckFix{Any commit<br/>is fix?}
-    CheckFix -->|Yes| Patch[PATCH bump<br/>0.0.X]
-    CheckFix -->|No| NoChange[No version change]
-
-    Major --> End([Release])
-    Minor --> End
-    Patch --> End
-    NoChange --> End
+Fixes #567
 ```
 
-### Commit Type to Version Mapping
-
-| Commit Type              | Version Bump  |
-| ------------------------ | ------------- |
-| `fix`                    | PATCH (0.0.X) |
-| `feat`                   | MINOR (0.X.0) |
-| `BREAKING CHANGE` or `!` | MAJOR (X.0.0) |
-
-**Reason**: Enables automated semantic versioning based on commit history.
-
-## Validation Patterns
-
-### Header Validation Regex
-
-```regex
-^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\(.+\))?!?:\s.+$
+### Refactor (No Functional Change)
 ```
+refactor(library/book): extract ISBN validation to service
 
-### Python Validation Example
+Move ISBN validation logic from command handler to
+dedicated IsbnValidatorService for reusability.
 
-```python
-import re
-
-CONVENTIONAL_COMMIT_PATTERN = re.compile(
-    r'^(?P<type>feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)'
-    r'(?:\((?P<scope>[^)]+)\))?'
-    r'(?P<breaking>!)?'
-    r':\s'
-    r'(?P<description>.+)$'
-)
-
-def validate_header(header: str) -> bool:
-    """Validate commit header follows Conventional Commits."""
-    return bool(CONVENTIONAL_COMMIT_PATTERN.match(header))
-
-def parse_header(header: str) -> dict | None:
-    """Parse commit header into components."""
-    match = CONVENTIONAL_COMMIT_PATTERN.match(header)
-    if not match:
-        return None
-    return {
-        'type': match.group('type'),
-        'scope': match.group('scope'),
-        'breaking': bool(match.group('breaking')),
-        'description': match.group('description'),
-    }
-```
-
-## Complete Examples
-
-### Simple Commits
-
-```text
-feat: add user authentication
-```
-
-```text
-fix: prevent crash on empty input
-```
-
-```text
-docs: correct spelling of CHANGELOG
-```
-
-### Commits with Scope
-
-```text
-feat(lang): add Polish language
-```
-
-```text
-feat(parser): add ability to parse arrays
-```
-
-```text
-fix(auth): handle token expiration correctly
-```
-
-### Breaking Changes
-
-```text
-feat: allow provided config object to extend other configs
-
-BREAKING CHANGE: `extends` key in config file is now used for extending other config files
-```
-
-```text
-feat!: send an email to the customer when a product is shipped
-```
-
-```text
-feat(api)!: send an email to the customer when a product is shipped
-```
-
-```text
-chore!: drop support for Node 6
-
-BREAKING CHANGE: use JavaScript features not available in Node 6.
-```
-
-### Multi-Paragraph Body with Footers
-
-```text
-fix: prevent racing of requests
-
-Introduce a request id and a reference to latest request. Dismiss
-incoming responses other than from latest request.
-
-Remove timeouts which were used to mitigate the racing issue but are
-obsolete now.
-
-Reviewed-by: Z
-Refs: #123
-```
-
-### Revert Commit
-
-```text
-revert: let us never again speak of the noodle incident
-
-Refs: 676104e, a215868
-```
-
-### Performance Improvement
-
-```text
-perf: reduce memory allocation in parser by 40%
-
-Replace string concatenation with StringBuilder pattern.
-Benchmark results show 40% reduction in heap allocations.
-
-Refs: #456
-```
-
-### Refactoring
-
-```text
-refactor: extract authentication logic into separate module
-
-Move auth-related functions from utils.py to auth.py.
 No functional changes.
 ```
 
-### Build/CI Changes
+### Breaking Change
+```
+feat(api)!: change pagination response format
 
-```text
-ci: add Node 18 to test matrix
+BREAKING CHANGE: Pagination response now uses cursor-based
+format instead of offset-based.
+
+Before: { items: [], total: 100, page: 1 }
+After: { items: [], nextCursor: "abc", hasMore: true }
+
+Migration guide in docs/migration/v2-pagination.md
 ```
 
-```text
-build: upgrade webpack from v4 to v5
+### Aurora YAML Changes
+```
+feat(aurora): add category entity to library module
 
-- Update webpack.config.js for v5 compatibility
-- Replace deprecated plugins
-- Update all loader dependencies
+Define new Category aggregate with:
+- id, name, description fields
+- many-to-many relation with Book
 
-Refs: #789
+Run: aurora load back module -n=library/category
 ```
 
-### Test and Style Changes
+### Dependency Update
+```
+chore(deps): update @nestjs packages to v10.2.0
 
-```text
-test: add unit tests for user validation
+- @nestjs/core: 10.1.0 -> 10.2.0
+- @nestjs/common: 10.1.0 -> 10.2.0
+- @nestjs/platform-express: 10.1.0 -> 10.2.0
 
-Cover edge cases for email validation and password strength.
+No breaking changes in this update.
 ```
 
-```text
-style: format code according to prettier config
+### Multiple Modules (Related Change)
+```
+feat(tesla): add maintenance validation across models
+
+- Add validation in Model aggregate
+- Update MaintenanceHistory to check model status
+- Add integration tests for both modules
+
+This ensures consistency when creating maintenance records.
 ```
 
-```text
-chore: update .gitignore to exclude IDE files
-```
+---
 
-## Integration with Validation Tools
-
-### commitlint Configuration
-
-Validate commits with commitlint using Angular configuration:
-
+## Commands
 ```bash
-# Install commitlint
-npm install --save-dev @commitlint/cli @commitlint/config-conventional
+# View status
+git status
 
-# Create configuration
-echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.js
+# View changes
+git diff                    # Unstaged changes
+git diff --staged          # Staged changes
+git diff --cached          # Same as --staged
 
-# Test commit message
-echo 'feat(api): add new endpoint' | npx commitlint
+# Stage files
+git add <file>             # Stage specific file
+git add -p                 # Interactive staging (choose hunks)
+
+# Commit
+git commit -m "message"    # Simple commit
+git commit                 # Opens editor for body
+
+# View history
+git log --oneline -20                      # Last 20 commits
+git log --pretty=format:"%h %s" -20       # Custom format
+git log --graph --oneline --all           # Visual graph
+
+# Amend last commit (use with caution)
+git commit --amend -m "new message"       # Change message
+git commit --amend --no-edit              # Add files to last commit
 ```
 
-For comprehensive commitlint configuration guidance, activate the commitlint skill:
+---
 
-```text
-Skill(command: "commitlint")
+## Anti-Patterns to Avoid
+| ❌ Bad | ✅ Good |
+|--------|---------|
+| `git commit -m "fix"` | `fix(auth): resolve token expiration bug` |
+| `git commit -m "WIP"` | Finish the work or use feature branch |
+| `git commit -m "changes"` | `refactor(core): extract common validation logic` |
+| `git commit -m "update files"` | `feat(book): add ISBN field to entity` |
+| `git commit -am "everything"` | Split into logical commits |
+| Mix feat + fix + refactor | Separate commits for each type |
+| Commit generated files only | Commit YAML changes + explain regeneration |
+
+---
+
+## Aurora-Specific Notes
+
+### 1. YAML Changes
+```
+feat(aurora): add category entity to library module
+
+Define new Category aggregate with id, name, description.
+
+Run: aurora load back module -n=library/category
 ```
 
-### Pre-commit Hooks
+### 2. Custom Logic in Generated Files
+```
+feat(library/book): add complex ISBN validation logic
 
-Enforce commit message format with pre-commit hooks. For complete pre-commit setup guidance, activate the pre-commit skill:
+Implement custom validation in CreateBookHandler:
+- Validate ISBN format (10 or 13 digits)
+- Check checksum digit
+- Verify not in blacklist
 
-```text
-Skill(command: "pre-commit")
+This logic is in a generated file marked as custom.
 ```
 
-### Changelog Generation
+### 3. Multiple Related Modules
+```
+feat(tesla): integrate maintenance history with models
 
-Generate changelogs from Conventional Commits using semantic-release:
+- Update Model aggregate with maintenance status
+- Add validation in MaintenanceHistory creation
+- Add integration tests
 
-```javascript
-// release.config.js
-module.exports = {
-  branches: ['main'],
-  plugins: [
-    '@semantic-release/commit-analyzer',
-    '@semantic-release/release-notes-generator',
-  ],
-};
+Changes span tesla/model and tesla/maintenance-history.
 ```
 
-Or using git-cliff:
+### 4. Test Commits
 
-```toml
-# cliff.toml
-[git]
-conventional_commits = true
+**Option A: Combined with feature**
+```
+feat(book): add ISBN validation with tests
+
+- Add ISBN validation in CreateBookHandler
+- Add unit tests for validation logic
+- Add e2e tests for create endpoint
 ```
 
-## Benefits
-
-From the [official specification](https://www.conventionalcommits.org/en/v1.0.0/):
-
-1. **Automatically generating CHANGELOGs** - Tools parse commit history and generate release notes
-2. **Automatically determining semantic version bumps** - Based on commit types landed
-3. **Communicating nature of changes** - To teammates, public, and stakeholders
-4. **Triggering build and publish processes** - CI/CD pipelines react to specific commit types
-5. **Making it easier for people to contribute** - Through structured commit history exploration
-
-## Frequently Asked Questions
-
-### Can I use custom types?
-
-Yes. Types beyond `feat` and `fix` are not mandated by the specification but have no implicit SemVer effect unless they include `BREAKING CHANGE`. Teams commonly add types like `wip`, `deps`, `security`.
-
-### Is the specification case-sensitive?
-
-Implementation-defined. Most tools normalize to lowercase. Exception: `BREAKING CHANGE` **MUST** be uppercase. Best practice: be consistent within your project.
-
-### What about merge commits?
-
-Merge commits are typically ignored by changelog generators. They do not need to follow the format.
-
-### What if I use the wrong type?
-
-**Before merging/releasing**: Use `git rebase -i` to edit commit history **After release**: Depends on tools and processes **Worst case**: Non-conforming commit is missed by tools based on the specification
-
-### Do all contributors need to use Conventional Commits?
-
-No. With squash-based workflows, lead maintainers can clean up commit messages when merging. Many teams configure git systems to automatically squash commits from pull requests and present a form for entering proper commit messages.
-
-### How do I handle revert commits?
-
-Use the `revert` type with a footer referencing reverted commit SHAs:
-
-```text
-revert: let us never again speak of the noodle incident
-
-Refs: 676104e, a215868
+**Option B: Separate commit**
 ```
+test(book): add unit tests for ISBN validation
+
+Add comprehensive test coverage for:
+- Valid ISBN-10 and ISBN-13 formats
+- Invalid formats and checksums
+- Edge cases (empty, null, special chars)
+```
+
+---
+
+## Decision Trees
+
+### Should I commit now?
+```
+Has code changed? ────NO───> No commit needed
+      │
+     YES
+      │
+Is it a logical unit? ────NO───> Break into smaller commits
+      │
+     YES
+      │
+Do tests pass? ────NO───> Fix tests first
+      │
+     YES
+      │
+  Create commit
+```
+
+### What type should I use?
+```
+New functionality? ────YES───> feat
+      │
+      NO
+      │
+Fixing a bug? ────YES───> fix
+      │
+      NO
+      │
+No functional change? ────YES───> refactor
+      │
+      NO
+      │
+Only tests? ────YES───> test
+      │
+      NO
+      │
+Dependencies? ────YES───> chore(deps)
+      │
+      NO
+      │
+Documentation? ────YES───> docs
+      │
+      NO
+      │
+    Default: chore
+```
+
+### How to scope?
+```
+Single module changed? ────YES───> Use <bc>/<module>
+      │
+      NO
+      │
+Multiple related modules? ────YES───> Use common <bc> or higher scope
+      │
+      NO
+      │
+Infrastructure? ────YES───> Use: ci, docker, config, deps
+      │
+      NO
+      │
+Core/API/GraphQL? ────YES───> Use: core, api, graphql
+      │
+      NO
+      │
+    Omit scope or use project name
+```
+
+---
 
 ## Related Skills
+This skill works with:
+- **aurora-cli**: Commit YAML changes and regenerated code
+- **aurora-development**: Commit business logic implementations (feat commits)
+- **jest-nestjs**: Commit test files (test commits or include with feat)
+- **logger**: Log commit information in session reports
 
-**Commit message validation and enforcement:**
+**Workflow:**
+1. Make changes (YAML modifications, business logic, tests)
+2. Use **aurora-cli** to regenerate code (if YAML changed)
+3. Use **conventional-commits** to create proper commit
+4. Use **logger** to document the session (optional)
 
-- `commitlint` - Configure and use commitlint for commit message validation
-- `pre-commit` - Set up pre-commit hooks for automated validation
+---
 
-**Git workflow tools:**
-
-- `git-commit-helper` - Generate commit messages from git diffs
-- `semantic-release` - Automate versioning and changelog generation
-
-## References
-
-### Official Documentation
-
-- [Conventional Commits v1.0.0 Specification](https://www.conventionalcommits.org/en/v1.0.0/) - Official specification (accessed 2025-01-15)
-- [Conventional Commits GitHub Repository](https://github.com/conventional-commits/conventionalcommits.org) - Specification source repository
-- [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt) - Key words used in specification
-
-### Related Standards
-
-- [Semantic Versioning (SemVer)](https://semver.org/) - Versioning standard that Conventional Commits dovetails with
-- [Angular Commit Message Guidelines](https://github.com/angular/angular/blob/main/contributing-docs/commit-message-guidelines.md) - Convention that inspired Conventional Commits
-- [Git Trailer Format](https://git-scm.com/docs/git-interpret-trailers) - Convention that inspired footer format
-
-### Tools and Configurations
-
-- [@commitlint/config-conventional](https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional) - Commitlint shareable config
-- [@commitlint/config-angular](https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-angular) - Angular-style commitlint config
-- [semantic-release](https://github.com/semantic-release/semantic-release) - Automated versioning and changelog
-- [git-cliff](https://github.com/orhun/git-cliff) - Changelog generator
-- [commitizen](https://github.com/commitizen/cz-cli) - Interactive commit message builder
+## Resources
+- **Specification**: https://www.conventionalcommits.org/
+- **Aurora Config**: `commitlint.config.js` (read this for project-specific rules)
+- **Git Hooks**: Pre-commit hooks may enforce format validation

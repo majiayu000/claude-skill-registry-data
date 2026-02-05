@@ -1,6 +1,11 @@
 ---
-name: stripe-integration
+name: stripe_integration
+router_kit: FullStackKit
 description: Implement Stripe payment processing for robust, PCI-compliant payment flows including checkout, subscriptions, and webhooks. Use when integrating Stripe payments, building subscription systems, or implementing secure checkout flows.
+metadata:
+  skillport:
+    category: auto-healed
+    tags: [architecture, automation, best practices, billing, checkout, clean code, coding, collaboration, compliance, debugging, design patterns, development, documentation, efficiency, git, optimization, payments, productivity, programming, project management, quality assurance, refactoring, software engineering, standards, stripe integration, subscriptions, testing, utilities, version control, webhooks, workflow]
 ---
 
 # Stripe Integration
@@ -433,10 +438,31 @@ def test_payment_flow():
 7. **PCI Compliance**: Never handle raw card data on your server
 8. **SCA Ready**: Implement 3D Secure for European payments
 
-## Common Pitfalls
+## 🔄 Workflow
 
-- **Not Verifying Webhooks**: Always verify webhook signatures
-- **Missing Webhook Events**: Handle all relevant webhook events
-- **Hardcoded Amounts**: Use cents/smallest currency unit
-- **No Retry Logic**: Implement retries for API calls
-- **Ignoring Test Mode**: Test all edge cases with test cards
+> **Kaynak:** [Stripe Integration Builder](https://stripe.com/docs/checkout/quickstart) & [Stripe Webhook Best Practices](https://stripe.com/docs/webhooks/best-practices)
+
+### Aşama 1: Product & Checkout Setup
+- [ ] **Product Definition**: Dashboard veya API üzerinden Product ve Price objelerini tanımla.
+- [ ] **Checkout Integration**: `Stripe Checkout` (Hosted) veya `Payment Element` (Custom) arasından ihtiyaca uygun olanı kur.
+- [ ] **SCA Compliance**: European (3D Secure) ödemeler için gerekli SCA (Strong Customer Authentication) adımlarını ekle.
+
+### Aşama 2: Webhook & Background Processing
+- [ ] **Webhook Listener**: Ödeme başarısı (`payment_intent.succeeded`) veya abonelik durumu değişiklikleri için güvenli bir webhook endpoint'i kur.
+- [ ] **Signature Verification**: Gelen isteklerin Stripe'tan geldiğini `endpoint secret` ile doğrula.
+- [ ] **Idempotency**: Aynı webhook isteğinin birden fazla işlenmesini önlemek için `Stripe-Idempotency-Key` veya veritabanı kontrolü kullan.
+
+### Aşama 3: Exception Handling & Fulfillment
+- [ ] **Payment Failures**: Ödeme başarısızlıklarını kullanıcıya bildir ve süreci (örn: Sepeti koru) yönet.
+- [ ] **Order Fulfillment**: Ödeme onaylandığında siparişi tamamla, veritabanını güncelle ve e-posta gönder.
+- [ ] **Customer Portal**: Kullanıcıların aboneliklerini yönetebileceği "Customer Portal" linkini entegre et.
+
+### Kontrol Noktaları
+| Aşama | Doğrulama |
+|-------|-----------|
+| 1 | Ödeme miktarları "Cents" (USD ise 100 = $1.00) bazında mı gönderiliyor? |
+| 2 | Webhook endpoint'i production'da HTTPS üzerinden mi çalışıyor? |
+| 3 | Test mode'da "4242..." kartı ile tüm akış (Success/Fail/3DS) denendi mi? |
+
+---
+*Stripe Integration v1.5 - With Workflow*

@@ -1,267 +1,329 @@
 ---
 name: rest-api-design
-description: Design RESTful APIs following best practices for resource modeling, HTTP methods, status codes, versioning, and documentation. Use when creating new APIs, designing endpoints, or improving existing API architecture.
+description: Design REST API endpoints with Zod validation and OpenAPI documentation. Use when creating new API routes, validating request/response schemas, or updating API documentation. Activates for endpoint design, schema validation, error handling, and API docs.
+allowed-tools: Read,Write,Edit,Bash(npm:*,npx:*)
+category: Code Quality & Testing
+tags:
+  - api
+  - code
+  - validation
+  - documentation
 ---
 
 # REST API Design
 
-## Overview
-
-Design REST APIs that are intuitive, consistent, and follow industry best practices for resource-oriented architecture.
+This skill helps you design and implement REST API endpoints following project patterns with Zod validation and OpenAPI documentation.
 
 ## When to Use
 
-- Designing new RESTful APIs
-- Creating endpoint structures
-- Defining request/response formats
-- Implementing API versioning
-- Documenting API specifications
-- Refactoring existing APIs
+✅ **USE this skill for:**
+- Creating new REST API endpoints with Next.js App Router
+- Designing request/response schemas with Zod
+- Implementing proper error handling and status codes
+- Adding rate limiting and authentication
+- Generating OpenAPI documentation
 
-## Instructions
+❌ **DO NOT use for:**
+- GraphQL APIs → different paradigm entirely
+- Cloudflare Workers → use `cloudflare-worker-dev` skill
+- Supabase Edge Functions → use Supabase docs
+- WebSocket/real-time APIs → different patterns
 
-### 1. **Resource Naming**
+## API Route Structure
 
 ```
-✅ Good Resource Names (Nouns, Plural)
-GET    /api/users
-GET    /api/users/123
-GET    /api/users/123/orders
-POST   /api/products
-DELETE /api/products/456
-
-❌ Bad Resource Names (Verbs, Inconsistent)
-GET    /api/getUsers
-POST   /api/createProduct
-GET    /api/user/123  (inconsistent singular/plural)
+src/app/api/
+├── auth/           # Authentication endpoints
+├── check-in/       # Daily check-in CRUD
+├── chat/           # AI coaching chat
+├── journal/        # Journal entries
+├── admin/          # Admin-only endpoints
+└── health/         # Health check
 ```
 
-### 2. **HTTP Methods & Operations**
+## Standard Route Template
 
-```http
-# CRUD Operations
-GET    /api/users          # List all users (Read collection)
-GET    /api/users/123      # Get specific user (Read single)
-POST   /api/users          # Create new user (Create)
-PUT    /api/users/123      # Replace user completely (Update)
-PATCH  /api/users/123      # Partial update user (Partial update)
-DELETE /api/users/123      # Delete user (Delete)
+```typescript
+// src/app/api/[feature]/route.ts
+import { NextRequest, NextResponse } from 'next/server';
+import { z } from 'zod';
+import { getSession } from '@/lib/auth';
+import { createRateLimiter } from '@/lib/rate-limit';
+import { logPHIAccess } from '@/lib/hipaa/audit';
+import { db } from '@/db';
 
-# Nested Resources
-GET    /api/users/123/orders       # Get user's orders
-POST   /api/users/123/orders       # Create order for user
-GET    /api/users/123/orders/456   # Get specific order
-```
+// 1. Define schemas
+const RequestSchema = z.object({
+  field: z.string().min(1).max(1000),
+  optional: z.string().optional(),
+  enumField: z.enum(['option1', 'option2']),
+  number: z.number().int().positive(),
+});
 
-### 3. **Request Examples**
+const ResponseSchema = z.object({
+  id: z.string(),
+  createdAt: z.string().datetime(),
+});
 
-#### Creating a Resource
-```http
-POST /api/users
-Content-Type: application/json
+// 2. Configure rate limiter
+const rateLimiter = createRateLimiter({
+  windowMs: 60000,    // 1 minute
+  maxRequests: 30,    // 30 requests per window
+  keyPrefix: 'api:feature',
+});
 
-{
-  "email": "john@example.com",
-  "firstName": "John",
-  "lastName": "Doe",
-  "role": "admin"
-}
-
-Response: 201 Created
-Location: /api/users/789
-{
-  "id": "789",
-  "email": "john@example.com",
-  "firstName": "John",
-  "lastName": "Doe",
-  "role": "admin",
-  "createdAt": "2025-01-15T10:30:00Z",
-  "updatedAt": "2025-01-15T10:30:00Z"
-}
-```
-
-#### Updating a Resource
-```http
-PATCH /api/users/789
-Content-Type: application/json
-
-{
-  "firstName": "Jonathan"
-}
-
-Response: 200 OK
-{
-  "id": "789",
-  "email": "john@example.com",
-  "firstName": "Jonathan",
-  "lastName": "Doe",
-  "role": "admin",
-  "updatedAt": "2025-01-15T11:00:00Z"
-}
-```
-
-### 4. **Query Parameters**
-
-```http
-# Filtering
-GET /api/products?category=electronics&inStock=true
-
-# Sorting
-GET /api/users?sort=lastName,asc
-
-# Pagination
-GET /api/users?page=2&limit=20
-
-# Field Selection
-GET /api/users?fields=id,email,firstName
-
-# Search
-GET /api/products?q=laptop
-
-# Multiple filters combined
-GET /api/orders?status=pending&customer=123&sort=createdAt,desc&limit=50
-```
-
-### 5. **Response Formats**
-
-#### Success Response
-```json
-{
-  "data": {
-    "id": "123",
-    "email": "user@example.com",
-    "firstName": "John"
-  },
-  "meta": {
-    "timestamp": "2025-01-15T10:30:00Z",
-    "version": "1.0"
+// 3. Implement handlers
+export async function GET(request: NextRequest) {
+  // Auth check
+  const session = await getSession();
+  if (!session) {
+    return NextResponse.json(
+      { error: 'Unauthorized' },
+      { status: 401 }
+    );
   }
-}
-```
 
-#### Collection Response with Pagination
-```json
-{
-  "data": [
-    { "id": "1", "name": "Product 1" },
-    { "id": "2", "name": "Product 2" }
-  ],
-  "pagination": {
-    "page": 2,
-    "limit": 20,
-    "total": 145,
-    "totalPages": 8,
-    "hasNext": true,
-    "hasPrev": true
-  },
-  "links": {
-    "self": "/api/products?page=2&limit=20",
-    "first": "/api/products?page=1&limit=20",
-    "prev": "/api/products?page=1&limit=20",
-    "next": "/api/products?page=3&limit=20",
-    "last": "/api/products?page=8&limit=20"
+  // Rate limit
+  const rateLimitResult = await rateLimiter.check(session.userId);
+  if (!rateLimitResult.allowed) {
+    return NextResponse.json(
+      { error: 'Rate limit exceeded' },
+      { status: 429, headers: rateLimitResult.headers }
+    );
   }
-}
-```
 
-#### Error Response
-```json
-{
-  "error": {
-    "code": "VALIDATION_ERROR",
-    "message": "Invalid input data",
-    "details": [
+  // Query data
+  const data = await db.query.features.findMany({
+    where: eq(features.userId, session.userId),
+  });
+
+  // Audit log (if PHI)
+  await logPHIAccess(session.userId, 'feature', null, 'LIST');
+
+  return NextResponse.json(data);
+}
+
+export async function POST(request: NextRequest) {
+  // Auth check
+  const session = await getSession();
+  if (!session) {
+    return NextResponse.json(
+      { error: 'Unauthorized' },
+      { status: 401 }
+    );
+  }
+
+  // Rate limit
+  const rateLimitResult = await rateLimiter.check(session.userId);
+  if (!rateLimitResult.allowed) {
+    return NextResponse.json(
+      { error: 'Rate limit exceeded' },
+      { status: 429, headers: rateLimitResult.headers }
+    );
+  }
+
+  // Parse and validate body
+  let body: unknown;
+  try {
+    body = await request.json();
+  } catch {
+    return NextResponse.json(
+      { error: 'Invalid JSON' },
+      { status: 400 }
+    );
+  }
+
+  const parsed = RequestSchema.safeParse(body);
+  if (!parsed.success) {
+    return NextResponse.json(
       {
-        "field": "email",
-        "message": "Email format is invalid"
+        error: 'Validation failed',
+        details: parsed.error.issues.map(i => ({
+          path: i.path.join('.'),
+          message: i.message,
+        })),
       },
-      {
-        "field": "age",
-        "message": "Must be at least 18"
-      }
-    ]
-  },
-  "meta": {
-    "timestamp": "2025-01-15T10:30:00Z",
-    "requestId": "abc-123-def"
+      { status: 400 }
+    );
   }
+
+  // Create resource
+  const [created] = await db.insert(features).values({
+    id: generateId(),
+    userId: session.userId,
+    ...parsed.data,
+    createdAt: new Date(),
+  }).returning();
+
+  // Audit log
+  await logPHIAccess(session.userId, 'feature', created.id, 'CREATE');
+
+  return NextResponse.json(created, { status: 201 });
 }
 ```
 
-### 6. **HTTP Status Codes**
+## Zod Schema Patterns
 
-```
-Success:
-200 OK              - Successful GET, PATCH, DELETE
-201 Created         - Successful POST (resource created)
-204 No Content      - Successful DELETE (no response body)
+### Basic Types
 
-Client Errors:
-400 Bad Request     - Invalid request format/data
-401 Unauthorized    - Missing or invalid authentication
-403 Forbidden       - Authenticated but not authorized
-404 Not Found       - Resource doesn't exist
-409 Conflict        - Resource conflict (e.g., duplicate email)
-422 Unprocessable   - Validation errors
-429 Too Many Requests - Rate limit exceeded
+```typescript
+import { z } from 'zod';
 
-Server Errors:
-500 Internal Server Error - Generic server error
-503 Service Unavailable   - Temporary unavailability
-```
+const Schema = z.object({
+  // Strings
+  name: z.string().min(1).max(100),
+  email: z.string().email(),
+  url: z.string().url(),
+  uuid: z.string().uuid(),
 
-### 7. **API Versioning**
+  // Numbers
+  count: z.number().int().positive(),
+  rating: z.number().min(1).max(5),
+  price: z.number().nonnegative(),
 
-```http
-# URL Path Versioning (Recommended)
-GET /api/v1/users
-GET /api/v2/users
+  // Booleans
+  isActive: z.boolean(),
 
-# Header Versioning
-GET /api/users
-Accept: application/vnd.myapi.v1+json
+  // Dates
+  date: z.string().datetime(),
+  dateOnly: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
 
-# Query Parameter (Not recommended)
-GET /api/users?version=1
-```
+  // Enums
+  status: z.enum(['pending', 'approved', 'denied']),
 
-### 8. **Authentication & Security**
+  // Arrays
+  tags: z.array(z.string()).min(1).max(10),
 
-```http
-# JWT Bearer Token
-GET /api/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+  // Optional fields
+  notes: z.string().optional(),
+  metadata: z.record(z.string()).optional(),
 
-# API Key
-GET /api/users
-X-API-Key: your-api-key-here
-
-# Always use HTTPS in production
-https://api.example.com/v1/users
+  // Nullable
+  deletedAt: z.string().datetime().nullable(),
+});
 ```
 
-### 9. **Rate Limiting Headers**
+### Advanced Patterns
 
-```http
-HTTP/1.1 200 OK
-X-RateLimit-Limit: 1000
-X-RateLimit-Remaining: 995
-X-RateLimit-Reset: 1642262400
+```typescript
+// Discriminated unions
+const EventSchema = z.discriminatedUnion('type', [
+  z.object({ type: z.literal('click'), x: z.number(), y: z.number() }),
+  z.object({ type: z.literal('keypress'), key: z.string() }),
+]);
+
+// Refinements
+const PasswordSchema = z.string()
+  .min(12, 'Password must be at least 12 characters')
+  .regex(/[A-Z]/, 'Must contain uppercase')
+  .regex(/[a-z]/, 'Must contain lowercase')
+  .regex(/[0-9]/, 'Must contain number')
+  .regex(/[^A-Za-z0-9]/, 'Must contain special character');
+
+// Transform
+const DateSchema = z.string()
+  .datetime()
+  .transform(str => new Date(str));
+
+// Preprocess (coerce types)
+const NumberFromString = z.preprocess(
+  val => typeof val === 'string' ? parseInt(val, 10) : val,
+  z.number()
+);
 ```
 
-### 10. **OpenAPI Documentation**
+### Query Parameter Validation
+
+```typescript
+export async function GET(request: NextRequest) {
+  const { searchParams } = new URL(request.url);
+
+  const QuerySchema = z.object({
+    page: z.coerce.number().int().positive().default(1),
+    limit: z.coerce.number().int().min(1).max(100).default(20),
+    sort: z.enum(['asc', 'desc']).default('desc'),
+    status: z.enum(['all', 'active', 'archived']).optional(),
+  });
+
+  const query = QuerySchema.safeParse({
+    page: searchParams.get('page'),
+    limit: searchParams.get('limit'),
+    sort: searchParams.get('sort'),
+    status: searchParams.get('status'),
+  });
+
+  if (!query.success) {
+    return NextResponse.json(
+      { error: 'Invalid query parameters', details: query.error.issues },
+      { status: 400 }
+    );
+  }
+
+  const { page, limit, sort, status } = query.data;
+  // Use validated params...
+}
+```
+
+## Error Response Format
+
+```typescript
+// Standard error response
+interface APIError {
+  error: string;           // Human-readable message
+  code?: string;           // Machine-readable code
+  details?: ErrorDetail[]; // Validation details
+}
+
+interface ErrorDetail {
+  path: string;
+  message: string;
+}
+
+// Error responses
+return NextResponse.json(
+  { error: 'Not found', code: 'NOT_FOUND' },
+  { status: 404 }
+);
+
+return NextResponse.json(
+  {
+    error: 'Validation failed',
+    code: 'VALIDATION_ERROR',
+    details: [
+      { path: 'email', message: 'Invalid email format' },
+    ],
+  },
+  { status: 400 }
+);
+```
+
+## HTTP Status Codes
+
+| Code | Use Case |
+|------|----------|
+| 200 | Successful GET, PUT, PATCH |
+| 201 | Successful POST (created) |
+| 204 | Successful DELETE (no content) |
+| 400 | Invalid request/validation error |
+| 401 | Not authenticated |
+| 403 | Not authorized (authenticated but forbidden) |
+| 404 | Resource not found |
+| 409 | Conflict (duplicate, etc.) |
+| 429 | Rate limit exceeded |
+| 500 | Server error |
+
+## OpenAPI Documentation
+
+Update `docs/openapi.yaml` when adding endpoints:
 
 ```yaml
-openapi: 3.0.0
-info:
-  title: User API
-  version: 1.0.0
-  description: User management API
-
 paths:
-  /users:
+  /api/feature:
     get:
-      summary: List all users
+      summary: List features
+      tags: [Features]
+      security:
+        - cookieAuth: []
       parameters:
         - name: page
           in: query
@@ -273,206 +335,173 @@ paths:
           schema:
             type: integer
             default: 20
+            maximum: 100
       responses:
         '200':
-          description: Successful response
+          description: Success
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  data:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/User'
+                type: array
+                items:
+                  $ref: '#/components/schemas/Feature'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
 
     post:
-      summary: Create a new user
+      summary: Create feature
+      tags: [Features]
+      security:
+        - cookieAuth: []
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/UserInput'
+              $ref: '#/components/schemas/CreateFeatureRequest'
       responses:
         '201':
-          description: User created
+          description: Created
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/User'
+                $ref: '#/components/schemas/Feature'
         '400':
-          description: Invalid input
-        '409':
-          description: Email already exists
+          $ref: '#/components/responses/ValidationError'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
 
 components:
   schemas:
-    User:
+    Feature:
       type: object
       properties:
         id:
           type: string
-        email:
-          type: string
-          format: email
-        firstName:
-          type: string
-        lastName:
+          format: uuid
+        name:
           type: string
         createdAt:
           type: string
           format: date-time
+      required: [id, name, createdAt]
 
-    UserInput:
+    CreateFeatureRequest:
       type: object
-      required:
-        - email
-        - firstName
-        - lastName
       properties:
-        email:
+        name:
           type: string
-          format: email
-        firstName:
-          type: string
-        lastName:
-          type: string
+          minLength: 1
+          maxLength: 100
+      required: [name]
+
+  responses:
+    Unauthorized:
+      description: Not authenticated
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+                example: Unauthorized
+
+    ValidationError:
+      description: Validation failed
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+              details:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    path:
+                      type: string
+                    message:
+                      type: string
 ```
 
-## Best Practices
+## Route Handler Patterns
 
-### ✅ DO
-- Use nouns for resources, not verbs
-- Use plural names for collections
-- Be consistent with naming conventions
-- Return appropriate HTTP status codes
-- Include pagination for collections
-- Provide filtering and sorting options
-- Version your API
-- Document thoroughly with OpenAPI
-- Use HTTPS
-- Implement rate limiting
-- Provide clear error messages
-- Use ISO 8601 for dates
+### Dynamic Routes
 
-### ❌ DON'T
-- Use verbs in endpoint names
-- Return 200 for errors
-- Expose internal IDs unnecessarily
-- Over-nest resources (max 2 levels)
-- Use inconsistent naming
-- Forget authentication
-- Return sensitive data
-- Break backward compatibility without versioning
+```typescript
+// src/app/api/feature/[id]/route.ts
+export async function GET(
+  request: NextRequest,
+  { params }: { params: Promise<{ id: string }> }
+) {
+  const { id } = await params;
 
-## Complete Example: Express.js
+  // Validate ID format
+  if (!isValidUUID(id)) {
+    return NextResponse.json(
+      { error: 'Invalid ID format' },
+      { status: 400 }
+    );
+  }
 
-```javascript
-const express = require('express');
-const app = express();
+  const item = await db.query.features.findFirst({
+    where: eq(features.id, id),
+  });
 
-app.use(express.json());
+  if (!item) {
+    return NextResponse.json(
+      { error: 'Not found' },
+      { status: 404 }
+    );
+  }
 
-// List users with pagination
-app.get('/api/v1/users', async (req, res) => {
-  try {
-    const page = parseInt(req.query.page) || 1;
-    const limit = parseInt(req.query.limit) || 20;
-    const offset = (page - 1) * limit;
+  return NextResponse.json(item);
+}
+```
 
-    const users = await User.findAndCountAll({
+### Pagination
+
+```typescript
+interface PaginatedResponse<T> {
+  data: T[];
+  pagination: {
+    page: number;
+    limit: number;
+    total: number;
+    totalPages: number;
+  };
+}
+
+async function getPaginated(page: number, limit: number) {
+  const offset = (page - 1) * limit;
+
+  const [data, [{ count }]] = await Promise.all([
+    db.query.features.findMany({
       limit,
       offset,
-      attributes: ['id', 'email', 'firstName', 'lastName']
-    });
+      orderBy: desc(features.createdAt),
+    }),
+    db.select({ count: count() }).from(features),
+  ]);
 
-    res.json({
-      data: users.rows,
-      pagination: {
-        page,
-        limit,
-        total: users.count,
-        totalPages: Math.ceil(users.count / limit)
-      }
-    });
-  } catch (error) {
-    res.status(500).json({
-      error: {
-        code: 'INTERNAL_ERROR',
-        message: 'An error occurred while fetching users'
-      }
-    });
-  }
-});
-
-// Get single user
-app.get('/api/v1/users/:id', async (req, res) => {
-  try {
-    const user = await User.findByPk(req.params.id);
-
-    if (!user) {
-      return res.status(404).json({
-        error: {
-          code: 'NOT_FOUND',
-          message: 'User not found'
-        }
-      });
-    }
-
-    res.json({ data: user });
-  } catch (error) {
-    res.status(500).json({
-      error: {
-        code: 'INTERNAL_ERROR',
-        message: 'An error occurred'
-      }
-    });
-  }
-});
-
-// Create user
-app.post('/api/v1/users', async (req, res) => {
-  try {
-    const { email, firstName, lastName } = req.body;
-
-    // Validation
-    if (!email || !firstName || !lastName) {
-      return res.status(400).json({
-        error: {
-          code: 'VALIDATION_ERROR',
-          message: 'Missing required fields',
-          details: [
-            !email && { field: 'email', message: 'Email is required' },
-            !firstName && { field: 'firstName', message: 'First name is required' },
-            !lastName && { field: 'lastName', message: 'Last name is required' }
-          ].filter(Boolean)
-        }
-      });
-    }
-
-    const user = await User.create({ email, firstName, lastName });
-
-    res.status(201)
-       .location(`/api/v1/users/${user.id}`)
-       .json({ data: user });
-  } catch (error) {
-    if (error.name === 'SequelizeUniqueConstraintError') {
-      return res.status(409).json({
-        error: {
-          code: 'CONFLICT',
-          message: 'Email already exists'
-        }
-      });
-    }
-    res.status(500).json({
-      error: {
-        code: 'INTERNAL_ERROR',
-        message: 'An error occurred'
-      }
-    });
-  }
-});
-
-app.listen(3000);
+  return {
+    data,
+    pagination: {
+      page,
+      limit,
+      total: count,
+      totalPages: Math.ceil(count / limit),
+    },
+  };
+}
 ```
+
+## References
+
+- [Zod Documentation](https://zod.dev)
+- [Next.js Route Handlers](https://nextjs.org/docs/app/building-your-application/routing/route-handlers)
+- [OpenAPI Specification](https://swagger.io/specification/)
+- [Dub.co Zod Validation](https://dub.co/blog/zod-api-validation)

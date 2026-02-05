@@ -1,391 +1,413 @@
 ---
-name: Telos
-description: Life OS and project analysis. USE WHEN TELOS, life goals, projects, dependencies, books, movies. SkillSearch('telos') for docs.
+name: pomodoro
+description: Simple Pomodoro timer for focused work sessions with session tracking and productivity analytics. Use when users request focus timers, ask about productivity patterns, or want to track work sessions over time. Demonstrates the System Skill Pattern (CLI + SKILL.md + Database).
+license: MIT
+allowed-tools:
+  - Bash
+  - Read
 ---
 
-# Telos
+# Pomodoro Timer Skill
 
-**TELOS** (Telic Evolution and Life Operating System) is a comprehensive context-gathering system with two applications:
+## Overview
 
-1. **Personal TELOS** - {principal.name}'s life context system (beliefs, goals, lessons, wisdom) at `~/.claude/skills/CORE/USER/TELOS/`
-2. **Project TELOS** - Analysis framework for organizations/projects (relationships, dependencies, goals, progress)
+A 25-minute timer for focused work sessions that saves every session to SQLite. Enables history tracking, productivity analytics, and pattern recognition over time.
 
+**This is a System Skill** - it provides handles to operate a personal data system. As commands run and sessions accumulate, context builds and compounds. The system learns patterns and provides increasingly valuable insights through an OODA loop of observation, orientation, decision, and action.
 
-## Voice Notification
+## Mental Model: The OODA Loop
 
-**When executing a workflow, do BOTH:**
+Operating this skill involves running a continuous cycle:
 
-1. **Send voice notification**:
-   ```bash
-   curl -s -X POST http://localhost:8888/notify \
-     -H "Content-Type: application/json" \
-     -d '{"message": "Running the WORKFLOWNAME workflow from the Telos skill"}' \
-     > /dev/null 2>&1 &
-   ```
+1. **Observe** → Check current status (`./pomodoro status`) and review history (`./pomodoro history`)
+2. **Orient** → Analyze patterns in the data (`./pomodoro stats --period week`)
+3. **Decide** → Determine optimal actions (e.g., "Morning sessions have 95% completion - schedule deep work then")
+4. **Act** → Start sessions (`./pomodoro start`), provide recommendations, celebrate milestones
 
-2. **Output text notification**:
-   ```
-   Running the **WorkflowName** workflow from the **Telos** skill...
-   ```
+Each cycle builds on accumulated data, making insights more valuable over time.
 
-**Full documentation:** `~/.claude/skills/CORE/SkillNotifications.md`
+## Dependencies
 
-## Workflow Routing
+- Binary location: `~/.claude/skills/pomodoro/pomodoro`
+- Database: Auto-created at `~/.claude/skills/pomodoro/pomodoro.db` on first run
+- No external dependencies required
 
-**When executing a workflow, output this notification directly:**
+## Quick Decision Tree
 
 ```
-Running the **WorkflowName** workflow from the **Telos** skill...
+User task → What kind of request?
+   ├─ Start focused work → Check status first, then start session
+   ├─ Check current timer → Use status command
+   ├─ Review productivity → Use stats command (day/week/month/year)
+   ├─ View past sessions → Use history command
+   └─ Stop early → Use stop command
 ```
 
-| Workflow | Trigger | File |
-|----------|---------|------|
-| **Update** | "add to TELOS", "update my goals", "add book to TELOS" | `Workflows/Update.md` |
-| **InterviewExtraction** | "extract content", "extract interviews", "analyze interviews" | `Workflows/InterviewExtraction.md` |
-| **CreateNarrativePoints** | "create narrative", "narrative points", "TELOS report", "n=24" | `Workflows/CreateNarrativePoints.md` |
-| **WriteReport** | "write report", "McKinsey report", "create TELOS report", "professional report" | `Workflows/WriteReport.md` |
+## Core Commands
 
-**Note:** For general project analysis, dashboards, dependency mapping, and executive summaries, the skill handles these directly without a separate workflow file.
+**To see all available options**: Run `./pomodoro --help` or `./pomodoro <command> --help`
 
-## Examples
+### Starting a Session
 
-**Example 1: Update personal TELOS**
-```
-User: "add Project Hail Mary to my TELOS books"
---> Invokes Update workflow
---> Creates timestamped backup of BOOKS.md
---> Adds book entry with formatted metadata
---> Logs change in updates.md with timestamp
-```
-
-**Example 2: Analyze project with TELOS**
-```
-User: "analyze ~/Projects/MyApp with TELOS"
---> Scans all .md and .csv files in directory
---> Extracts entities, relationships, dependencies
---> Returns analysis with dependency chains and progress metrics
-```
-
-**Example 3: Build project dashboard**
-```
-User: "build a dashboard for TELOSAPP"
---> Launches up to 10 parallel engineers
---> Creates Next.js dashboard with shadcn/ui + Aceternity
---> Returns interactive dashboard with dependency graphs, metrics cards, progress tables
-```
-
-**Example 4: Generate narrative points**
-```
-User: "create TELOS narrative for Acme Corp, n=24"
---> Invokes CreateNarrativePoints workflow
---> Analyzes TELOS context (situation, problems, recommendations)
---> Returns 24 crisp bullet points (8-12 words each)
---> Output is slide-ready for presentations or customer briefings
-```
-
-**Example 5: Generate McKinsey-style report**
-```
-User: "write a TELOS report for Acme Corp"
---> Invokes WriteReport workflow
---> First runs CreateNarrativePoints to generate story content
---> Maps narrative to McKinsey report structure
---> Generates web-based report with professional styling
---> Output at {project_dir}/report - run `bun dev` to view
---> White background, subtle Tokyo Night Storm accents
---> Includes: cover page, executive summary, findings, recommendations, roadmap
-```
-
----
-
-## Context Detection
-
-**How {daidentity.name} determines which TELOS context:**
-
-| User Request | Context | Location |
-|--------------|---------|----------|
-| "my TELOS", "my goals", "my beliefs", "add to TELOS" | Personal TELOS | `~/.claude/skills/CORE/USER/TELOS/` |
-| "Alma", "TELOSAPP", "analyze [project]", "dashboard for" | Project TELOS | User-specified directory |
-| "analyze ~/path/to/project" | Project TELOS | Specified path |
-
----
-
-# Part 1: Personal TELOS ({principal.name}'s Life)
-
-## Location
-
-**CRITICAL PATH:** All personal TELOS files are located at:
-```
-~/.claude/skills/CORE/USER/TELOS/
-```
-
-Personal TELOS lives in the CORE USER directory, NOT directly under the Telos skill directory.
-
-## Personal TELOS Framework
-
-All files located in `~/.claude/skills/CORE/USER/TELOS/`:
-
-### Core Philosophy
-- **TELOS.md** - Main framework document
-- **MISSION.md** - Life mission statement
-- **BELIEFS.md** - Core beliefs and world model
-- **WISDOM.md** - Accumulated wisdom
-
-### Life Data
-- **BOOKS.md** - Favorite books
-- **MOVIES.md** - Favorite movies
-- **LEARNED.md** - Lessons learned over time
-- **WRONG.md** - Things {principal.name} was wrong about (growth tracking)
-
-### Mental Models
-- **FRAMES.md** - Mental frames and perspectives
-- **MODELS.md** - Mental models used for decision-making
-- **NARRATIVES.md** - Personal narratives and self-stories
-- **STRATEGIES.md** - Strategies being employed in life
-
-### Goals & Challenges
-- **GOALS.md** - Life goals (short-term and long-term)
-- **PROJECTS.md** - Active projects
-- **PROBLEMS.md** - Problems to solve
-- **CHALLENGES.md** - Current challenges being faced
-- **PREDICTIONS.md** - Predictions about the future
-- **TRAUMAS.md** - Past traumas (for context and healing)
-
-### Change Tracking
-- **updates.md** - Comprehensive changelog of all TELOS updates
-
-## Working with Personal TELOS
-
-### Read Files
+Begin a Pomodoro session:
 
 ```bash
-# View specific file
-read ~/.claude/skills/CORE/USER/TELOS/GOALS.md
-read ~/.claude/skills/CORE/USER/TELOS/BELIEFS.md
+# Traditional 25-minute Pomodoro
+./pomodoro start --task "Refactor authentication module"
 
-# View recent updates
-read ~/.claude/skills/CORE/USER/TELOS/updates.md
+# Custom durations and cycles
+./pomodoro start --task "Quick review" --work 5 --break 3 --cycles 2
+./pomodoro start --task "Deep focus" --work 50 --break 10 --cycles 1
+
+# Flash cards (rapid cycles)
+./pomodoro start --task "Flash cards" --work 2 --break 1 --cycles 5
 ```
 
-### Update Personal TELOS
+**Options:**
+- `--work <minutes>` - Work duration (default: 25)
+- `--break <minutes>` - Break duration (default: 5)
+- `--cycles <count>` - Number of work+break rounds (default: 1)
 
-**CRITICAL:** Never manually edit. Use the Update workflow.
+**Behavior:**
+- Only one session can run at a time
+- Timer runs in foreground showing progress every minute
+- Breaks start automatically after work sessions
+- Next work session starts automatically after break (if cycles remaining)
+- Each work session saved separately to database
 
-**Workflow:** `Workflows/Update.md`
+**JSON output example:**
+```bash
+./pomodoro start --task "Write docs" --json
+# Returns: {"status": "started", "task": "Write docs", "duration": 25, "started_at": "2025-10-22T14:30:00Z"}
+```
 
-The workflow provides:
-- Automatic timestamped backups
-- Change logging in updates.md
-- Version history preservation
-- Proper formatting and structure
+### Checking Status
 
-**Valid files for updates:**
-BELIEFS.md, BOOKS.md, CHALLENGES.md, FRAMES.md, GOALS.md, LEARNED.md, MISSION.md, MODELS.md, MOVIES.md, NARRATIVES.md, PREDICTIONS.md, PROBLEMS.md, PROJECTS.md, STRATEGIES.md, TELOS.md, TRAUMAS.md, WISDOM.md, WRONG.md
-
----
-
-# Part 2: Project TELOS (Organizational Analysis)
-
-## Capabilities
-
-For any project directory, TELOS provides:
-
-1. **Relationship Discovery** - Find how files/entities connect
-2. **Dependency Mapping** - Identify what depends on what
-3. **Goal Extraction** - Discover stated and implied objectives
-4. **Progress Analysis** - Track advancement and metrics
-5. **Narrative Generation** - Create executive summaries
-6. **Visual Dashboards** - Build beautiful UIs with data
-
-## Target Directory Detection
-
-**Flexible file discovery - no required structure:**
+See if a timer is running:
 
 ```bash
-# User specifies directory
-"Analyze ~/Cloud/Projects/TELOSAPP"
---> {daidentity.name} scans for .md and .csv files anywhere in tree
-
-# {daidentity.name} automatically finds all .md and .csv files regardless of structure
+./pomodoro status
+./pomodoro status --json  # For programmatic use
 ```
 
-## Analysis Workflow
+**Output example:**
+```
+Active session: "Write documentation"
+Started: 2:30 PM
+Time remaining: 18 minutes
+```
 
-### Step 1: Identify Target
+### Viewing History
 
-**Auto-detection:**
-- User mentions project name (TELOSAPP, Alma, etc.)
-- User provides path explicitly
-- {daidentity.name} looks for common project locations
+Review past sessions:
 
-### Step 2: Scan Files
-
-Discover all markdown and CSV files:
 ```bash
-find $TARGET_DIR -type f \( -name "*.md" -o -name "*.csv" \)
+./pomodoro history --days 7    # Last 7 days
+./pomodoro history --days 30   # Last 30 days
+./pomodoro history --json      # For programmatic use
 ```
 
-Index:
-- Markdown structure (headings, sections, links)
-- CSV schema (columns, data types)
-- Cross-references and mentions
-- Entities (people, teams, projects, problems)
+**Output includes:**
+- Task names
+- Start and completion times
+- Duration
+- Completion status (completed vs. stopped early)
 
-### Step 3: Relationship Analysis
+### Analyzing Productivity
 
-Build relationship graph:
-1. **Entity Extraction** - Identify unique entities
-2. **Connection Discovery** - Find explicit/implicit links
-3. **Dependency Mapping** - Trace dependencies
-4. **Network Construction** - Build directed graph
+Get insights from accumulated data:
 
-### Step 4: Generate Insights
-
-Produce analytics:
-- **Dependency Chains**: PROBLEMS --> GOALS --> STRATEGIES --> PROJECTS
-- **Bottlenecks**: What blocks progress?
-- **Goal Alignment**: Projects aligned with objectives?
-- **Progress Metrics**: Completion percentages
-- **Risk Areas**: Overdue items, blocked work
-
-### Step 5: Create Outputs
-
-**Output Formats:**
-
-1. **Markdown Report** - Static analysis with Mermaid diagrams
-2. **Web Dashboard** - Interactive app with shadcn/ui + Aceternity
-3. **JSON Export** - Structured data
-4. **Executive Summary** - Narrative overview
-5. **Custom Format** - As requested
-
-## Building Dashboards
-
-### Parallel Engineer Strategy
-
-**CRITICAL: When building UIs, use up to 16 parallel engineers.**
-
-**Launch Strategy:**
-Use single message with 10 Task calls in parallel:
-
-```
-Engineer 1: Project structure + layout + navigation
-Engineer 2: Overview page with metrics cards
-Engineer 3: Projects page with progress tracking
-Engineer 4: Teams page with performance tables
-Engineer 5: Vulnerabilities/issues page
-Engineer 6: Progress timeline visualization
-Engineer 7: Data parsing library (MD/CSV)
-Engineer 8: Shared components (cards, badges, tables)
-Engineer 9: Design polish and theme
-Engineer 10: Integration and testing
+```bash
+./pomodoro stats --period day     # Today's stats
+./pomodoro stats --period week    # This week
+./pomodoro stats --period month   # This month
+./pomodoro stats --period year    # This year
+./pomodoro stats --json           # For programmatic use
 ```
 
-### Dashboard Requirements
+**Statistics include:**
+- Total and completed sessions
+- Completion rate (% of sessions finished)
+- Total focus time
+- Most productive hours of day
+- Task distribution (which tasks completed most often)
 
-**Tech Stack:**
-- Next.js 14 + TypeScript
-- shadcn/ui for UI components
-- Aceternity UI for layouts
-- Tailwind CSS
-- Tokyo Night Day theme (professional light)
-
-**Features:**
-- Dependency graphs (Mermaid or D3.js)
-- Progress tables (sortable, filterable)
-- Metrics cards (KPIs, stats)
-- Timeline visualizations
-- Relationship networks
-
-**Design:**
-```css
---background: #ffffff
---foreground: #1a1b26
---primary: #2e7de9
---accent: #9854f1
---destructive: #f52a65
---success: #33b579
---warning: #f0a020
+**JSON output example:**
+```json
+{
+  "period": "week",
+  "total_sessions": 23,
+  "completed": 19,
+  "completion_rate": 0.826,
+  "focus_hours": 7.9,
+  "productive_hours": [9, 10, 11],
+  "top_tasks": ["Refactoring", "Documentation", "Code review"]
+}
 ```
 
-## Common TELOS Files
+### Stopping Early
 
-**Standard Project TELOS Structure** (auto-detected):
+End the current session before completion:
 
-### Context Files
-- **OVERVIEW.md** - Project overview
-- **COMPANY.md** - Organization context
-- **PROBLEMS.md** - Issues to solve
-- **GOALS.md** - Objectives
-- **MISSION.md** - Mission statement
-- **STRATEGIES.md** - Strategic approaches
-- **PROJECTS.md** - Active initiatives
+```bash
+./pomodoro stop
+```
 
-### Operational Files
-- **EMPLOYEES.md** - Team members
-- **ENGINEERING_TEAMS.md** - Team structure
-- **BUDGET.md** - Financial tracking
-- **KPI_TRACKING.md** - Metrics
-- **APPLICATIONS.md** - App inventory
-- **TOOLS.md** - Tooling
-- **VENDORS.md** - Third parties
+Use when interruptions occur or task completes early. Session marked as incomplete in database.
 
-### Security Files
-- **VULNERABILITIES.md** - Security issues
-- **SECURITY_POSTURE.md** - Security state
-- **THREAT_MODEL.md** - Threats
+## Essential Workflows
 
-### Data Files (CSV)
-- **data/VULNERABILITIES.csv** - Vuln tracking
-- **data/INCIDENTS.csv** - Incident log
-- **data/VENDORS.csv** - Vendor data
+### Starting Focused Work
 
-**Note:** Files are optional. TELOS adapts to whatever exists.
+To help a user start a Pomodoro session:
 
-## Visualization Types
+1. **Check for active session**: `./pomodoro status`
+2. **If clear, start with appropriate options**:
+   - Traditional: `./pomodoro start --task "Deep work on authentication"`
+   - Custom: `./pomodoro start --task "Sprint planning" --work 15 --break 5 --cycles 3`
+   - Flash cards: `./pomodoro start --task "Vocabulary review" --work 2 --break 1 --cycles 10`
+3. **Confirm to user**: "25-minute Pomodoro started for [task name]. Timer running."
 
-**Available Visualizations:**
+### Daily Review
 
-- **Dependency Graphs** - Mermaid or D3.js network
-- **Progress Tables** - shadcn/ui tables with filters
-- **Metrics Cards** - Aceternity card layouts
-- **Timeline Charts** - Progress over time
-- **Status Dashboards** - KPI overviews
-- **Relationship Networks** - Force-directed graphs
-- **Bar Charts** - Recharts for comparisons
-- **Line Charts** - Trend analysis
+To provide daily productivity summary:
 
----
+1. **Fetch today's data**: `./pomodoro stats --period day --json`
+2. **Parse and present insights**:
+   - "Completed 6 Pomodoros today (3.0 hours of focus time)"
+   - "5/6 sessions completed - 83% completion rate"
+   - "Most work on: Refactoring, Documentation"
+   - "Productive hours: 9-11 AM"
 
-## Security & Privacy
+### Weekly Analysis
 
-**Personal TELOS:**
-- NEVER commit to public repos
-- NEVER share publicly
-- Always backup before changes
-- Use Update workflow only
+To provide weekly productivity review:
 
-**Project TELOS:**
-- May contain sensitive data
-- Ask before sharing externally
-- Redact sensitive info in examples
-- Follow PAI security protocols
+1. **Fetch week's data**: `./pomodoro stats --period week --json`
+2. **Identify patterns**:
+   - Compare to previous weeks if data available
+   - Note peak productive hours
+   - Identify which task types have highest completion rates
+3. **Make recommendations**:
+   - "Schedule deep work during your peak hours (9-11 AM)"
+   - "Coding sessions have 90% completion vs 70% for meetings - consider task segmentation"
 
----
+### Pattern Recognition Over Time
 
-## Key Principles
+As sessions accumulate, provide increasingly valuable insights:
 
-1. **Dual Context** - Handles both personal and project TELOS seamlessly
-   - Personal TELOS: `~/.claude/skills/CORE/USER/TELOS/` (in CORE USER directory)
-   - Project TELOS: User-specified directories
-2. **Auto-Detection** - Determines context from user question
-3. **Flexible Discovery** - Finds files regardless of structure
-4. **TELOS Methodology** - Applies relationships, dependencies, goals, narratives
-5. **Parallel Execution** - Up to 10 engineers for dashboard builds
-6. **Visual Excellence** - Beautiful outputs with shadcn/ui + Aceternity
-7. **Privacy-Aware** - Respects sensitive data
-8. **Integrated** - Works with development, research, and other skills
+**After a few sessions (1-5):**
+- "Completed 3 Pomodoros today"
+- "Building momentum with focus sessions"
 
----
+**After several days (5-20 sessions):**
+- "7 completed out of 9 sessions - 78% completion rate"
+- "Most productive between 9-11 AM"
 
-**TELOS is {principal.name}'s life operating system AND project analysis framework. One skill, two powerful contexts.**
+**After a week (20-50 sessions):**
+- "Strong week: 23 sessions with 85% completion"
+- "Peak productivity: 9-11 AM (95% completion) vs 2-4 PM (65% completion)"
+- "Consider scheduling deep work in morning hours"
 
-**Remember:** Personal TELOS files live at `~/.claude/skills/CORE/USER/TELOS/` (in the CORE USER directory)
+**After a month (50+ sessions):**
+- "Coding tasks: 90% completion rate"
+- "Documentation tasks: 70% completion rate"
+- "Consider shorter Pomodoros (15 min) for documentation work"
+
+**After several months (100+ sessions):**
+- "Completion rate improving: 72% → 85% over last 3 months"
+- "Wednesday is most productive day (92% completion)"
+- "Afternoon sessions improve when limited to 15 minutes"
+- "80% more sessions completed on coding vs documentation tasks"
+
+**Commands to use for pattern recognition:**
+```bash
+./pomodoro stats --period month --json  # Get monthly data
+./pomodoro history --days 90 --json     # Review last 90 days
+```
+
+### Milestone Celebrations
+
+Acknowledge progress at key milestones:
+
+- **10 sessions**: "First 10 Pomodoros complete - building the habit!"
+- **50 sessions**: "50 sessions milestone - over 20 hours of focused work!"
+- **100 sessions**: "100 Pomodoros! That's 40+ hours of deep focus time."
+- **High completion rates**: "95% completion this week - excellent focus!"
+
+To check milestone status: `./pomodoro stats --period year --json`
+
+## Common Pitfalls
+
+### Starting When Session Already Active
+
+❌ **Don't** start a new session without checking status first
+✅ **Do** run `./pomodoro status` before starting
+
+**Why**: Only one session can run at a time. Starting when active causes error.
+
+**Pattern to follow**:
+```bash
+# Check first
+./pomodoro status
+# If "No active session", then start
+./pomodoro start --task "New task"
+```
+
+### Non-Descriptive Task Names
+
+❌ **Don't** use vague names: "Work", "Stuff", "Things"
+✅ **Do** use specific names: "Refactor auth module", "Write API docs", "Review PR #123"
+
+**Why**: Descriptive names enable better analytics. Pattern recognition needs specificity to identify which task types work best.
+
+### Interrupting Long-Running Sessions
+
+❌ **Don't** let terminal close or process be killed during session
+✅ **Do** use `./pomodoro stop` if interruption is necessary
+
+**Why**: Interrupted sessions aren't saved to database. Use stop command to record partial session.
+
+### Ignoring Completion Rate Signals
+
+❌ **Don't** ignore consistent low completion rates for certain task types
+✅ **Do** adjust session length based on task type patterns
+
+**Why**: If documentation tasks show 60% completion vs 90% for coding, shorter sessions (15 min) may work better for documentation.
+
+**How to identify**:
+```bash
+./pomodoro stats --period month --json
+# Review completion rates by task type
+# Suggest duration adjustments based on patterns
+```
+
+## Best Practices
+
+### Session Management
+
+- Use descriptive task names for better analytics
+- Complete full 25 minutes when possible
+- Take breaks between sessions
+- Adjust duration based on task type (use `--work` flag)
+- Stop explicitly if interrupted (don't let process be killed)
+
+### User Interaction
+
+- Celebrate milestones (10, 50, 100, 250, 500 sessions)
+- Acknowledge completion rates: "Excellent focus - 90% this week!"
+- Suggest optimal times based on historical data
+- Encourage consistent practice
+- Point out improvements: "Completion rate up from 75% to 85%"
+
+### Data Analysis
+
+- Review daily stats at end of each day
+- Check weekly patterns for scheduling insights
+- Track trends over time (month, year)
+- Use JSON output for custom analytics
+- Cross-reference task types with completion rates
+- Identify peak productive hours
+
+### Command Composition
+
+Combine commands for deeper insights:
+
+```bash
+# Morning check-in: status + daily stats
+./pomodoro status
+./pomodoro stats --period day
+
+# Weekly review: history + stats
+./pomodoro history --days 7 --json
+./pomodoro stats --period week --json
+
+# Long-term analysis: monthly trends
+./pomodoro stats --period month --json
+./pomodoro history --days 90 --json
+```
+
+## Technical Notes
+
+### JSON Output
+
+All commands support `--json` flag for programmatic access:
+
+```bash
+./pomodoro status --json
+./pomodoro history --json
+./pomodoro stats --json
+```
+
+Use JSON output when:
+- Parsing data programmatically
+- Building custom analytics
+- Feeding into other tools
+- Need structured output
+
+### Database
+
+- **Location**: `~/.claude/skills/pomodoro/pomodoro.db`
+- **Format**: SQLite database with single `sessions` table
+- **Persistence**: All sessions saved permanently
+- **Growth**: Database grows with use (each session ~100 bytes)
+- **Analytics**: Richer insights as data accumulates
+- **Maintenance**: No cleanup or archiving needed
+
+**Schema**:
+```sql
+CREATE TABLE sessions (
+  id INTEGER PRIMARY KEY,
+  task TEXT NOT NULL,
+  duration INTEGER NOT NULL,
+  started_at TEXT NOT NULL,
+  completed_at TEXT
+);
+```
+
+### Timer Behavior
+
+- Runs in foreground process (blocks terminal)
+- Shows progress every minute during work sessions
+- Shows progress every minute during break sessions
+- Automatically transitions from work → break → work
+- Each work session saved separately to database
+- Supports custom durations via flags
+
+**Example session flow** (3 cycles):
+```
+Work 25min → Break 5min → Work 25min → Break 5min → Work 25min → Break 5min → Done
+```
+
+Result: 3 separate database entries (one per work session)
+
+### Binary Location
+
+- **Path**: `~/.claude/skills/pomodoro/pomodoro`
+- **Always use**: `./pomodoro` when running from skill directory
+- **Full path**: `~/.claude/skills/pomodoro/pomodoro` from anywhere
+
+**To run from skill directory**:
+```bash
+cd ~/.claude/skills/pomodoro
+./pomodoro start --task "Task name"
+```
+
+## The System Skill Pattern in Action
+
+This skill demonstrates the **System Skill Pattern** (CLI + SKILL.md + Database):
+
+1. **CLI Binary**: Handles to operate the system - start sessions, query history, analyze patterns
+2. **SKILL.md**: Operating procedure for the OODA loop (Observe → Orient → Decide → Act)
+3. **SQLite Database**: Persistent memory where every session adds context
+
+**The key insight**: With these three components, the skill animates a system rather than just responding to requests. Each interaction builds on the last. Analytics become richer. Insights get sharper. The tool compounds in value.
+
+**Example of compounding value**:
+- Week 1: "Started 5 sessions"
+- Week 4: "Morning sessions: 95% completion. Afternoon: 70%. Schedule deep work mornings."
+- Month 3: "Coding: 90% completion. Docs: 72%. Try 15-minute sessions for documentation."
+
+This pattern works for any skill where accumulating data adds value and where giving Claude handles to operate a system creates more utility than one-time responses.
+
+**See also**: README.md for deeper technical details and implementation guide.

@@ -1,25 +1,25 @@
 ---
 name: Frontend Responsive
-description: Implement mobile-first responsive designs using fluid layouts, relative units, responsive images, and touch-friendly interfaces. Use this skill when creating layouts that adapt across screen sizes, implementing breakpoints, or optimizing for mobile and tablet devices. When working on responsive component layouts, Tailwind responsive utility classes (sm:, md:, lg:, xl:), CSS media queries and breakpoints, fluid typography with clamp() or viewport units, responsive images with srcset and sizes attributes, mobile navigation menus and hamburger patterns, touch target sizing for mobile devices, responsive grid and flexbox layouts, container queries for component-based responsiveness, or viewport meta tags and mobile optimization.
+description: Implement responsive designs using mobile-first development, fluid layouts, standard breakpoints, and relative units to ensure optimal viewing across all device sizes. Use this skill when creating layouts, implementing breakpoints, styling for different screen sizes, or ensuring mobile compatibility. When working with responsive CSS, media queries, viewport configurations, or mobile-optimized components. When testing across device sizes, implementing touch-friendly interfaces, or optimizing for mobile performance. When working in any frontend file that affects layout, spacing, typography, or visual presentation across different screen sizes.
 ---
 
 # Frontend Responsive
 
-This Skill provides Claude Code with specific guidance on how to adhere to coding standards as they relate to how it should handle frontend responsive.
-
 ## When to use this skill
 
-- When implementing mobile-first layouts that scale up to larger screens
-- When using Tailwind responsive utility classes (sm:, md:, lg:, xl:, 2xl:)
-- When writing CSS media queries with min-width breakpoints
-- When implementing responsive typography using clamp(), rem, or viewport units
-- When using Astro's Image component with responsive srcset and sizes
-- When creating mobile navigation menus with toggle/hamburger patterns
-- When ensuring touch targets meet minimum size requirements (44x44px)
-- When building responsive grids using CSS Grid auto-fit or Flexbox wrapping
-- When implementing container queries for component-based responsiveness
-- When optimizing images and assets for different screen sizes and resolutions
-- When testing layouts across mobile, tablet, and desktop breakpoints
+- When implementing layouts that need to work across multiple screen sizes
+- When writing media queries or using responsive breakpoints
+- When applying responsive utility classes (e.g., Tailwind's `sm:`, `md:`, `lg:`)
+- When creating mobile-first designs and progressively enhancing for larger screens
+- When using fluid layouts with percentage-based widths or flexbox/grid
+- When choosing between fixed pixels and relative units (rem, em)
+- When ensuring touch-friendly tap targets (minimum 44x44px)
+- When optimizing images and assets for mobile devices
+- When testing UI changes across mobile, tablet, and desktop screen sizes
+- When implementing responsive typography that remains readable at all sizes
+- When prioritizing content for smaller screens
+
+This Skill provides Claude Code with specific guidance on how to adhere to coding standards as they relate to how it should handle frontend responsive.
 
 ## Instructions
 

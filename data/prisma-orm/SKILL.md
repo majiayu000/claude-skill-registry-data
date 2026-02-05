@@ -5,19 +5,6 @@ description: Type-safe database access with Prisma ORM. Covers schema design, mi
 
 # Prisma ORM Skill
 
-## Triggers
-
-Use this skill when:
-- Setting up Prisma in a Node.js/TypeScript project
-- Designing Prisma schemas with models, relations, and enums
-- Creating and managing database migrations
-- Writing Prisma Client queries (CRUD, filtering, aggregations)
-- Implementing raw SQL queries with Prisma
-- Working with database transactions
-- Building type-safe repository patterns
-- Testing with Prisma (factories, mocking)
-- Keywords: prisma, orm, database, typescript, schema, migrations, prisma client, type-safe queries, relations
-
 ## Overview
 
 Prisma is a next-generation Node.js and TypeScript ORM that provides:
@@ -91,16 +78,16 @@ model Example {
   data        Json
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
-
+  
   // Optional field
   deletedAt   DateTime?
-
+  
   // Unique constraint
   slug        String    @unique
-
+  
   // Composite unique
   @@unique([categoryId, slug])
-
+  
   // Composite index
   @@index([createdAt, isActive])
 }
@@ -226,6 +213,35 @@ npx prisma migrate status
 npx prisma migrate resolve --applied "20240115120000_migration_name"
 ```
 
+### Migration File Structure
+
+```
+prisma/
+├── schema.prisma
+└── migrations/
+    ├── 20240115120000_init/
+    │   └── migration.sql
+    ├── 20240116080000_add_posts/
+    │   └── migration.sql
+    └── migration_lock.toml
+```
+
+### Custom SQL in Migrations
+
+```sql
+-- prisma/migrations/20240115120000_custom/migration.sql
+-- Add custom SQL after Prisma's generated SQL
+
+-- Create extension
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+-- Add check constraint
+ALTER TABLE "orders" ADD CONSTRAINT "positive_amount" CHECK (amount > 0);
+
+-- Create partial index
+CREATE INDEX "active_users_idx" ON "users" (email) WHERE "deletedAt" IS NULL;
+```
+
 ---
 
 ## Prisma Client Queries
@@ -241,8 +257,8 @@ const globalForPrisma = globalThis as unknown as {
 };
 
 export const prisma = globalForPrisma.prisma ?? new PrismaClient({
-  log: process.env.NODE_ENV === 'development'
-    ? ['query', 'error', 'warn']
+  log: process.env.NODE_ENV === 'development' 
+    ? ['query', 'error', 'warn'] 
     : ['error'],
 });
 
@@ -315,9 +331,20 @@ const user = await prisma.user.upsert({
   create: { email: 'user@example.com', name: 'New User' },
 });
 
+// Update many
+const result = await prisma.user.updateMany({
+  where: { role: 'USER' },
+  data: { isActive: true },
+});
+
 // DELETE
 const user = await prisma.user.delete({
   where: { id: 'cuid123' },
+});
+
+// Delete many
+const result = await prisma.user.deleteMany({
+  where: { deletedAt: { not: null } },
 });
 ```
 
@@ -376,6 +403,24 @@ const posts = await prisma.post.findMany({
       every: { isSpam: false },    // All must match
       none: { isSpam: true },      // None must match
     },
+  },
+});
+
+// Date filters
+const recentPosts = await prisma.post.findMany({
+  where: {
+    createdAt: {
+      gte: new Date('2024-01-01'),
+      lt: new Date('2024-02-01'),
+    },
+  },
+});
+
+// Null checks
+const users = await prisma.user.findMany({
+  where: {
+    deletedAt: null,       // IS NULL
+    profile: { isNot: null }, // IS NOT NULL (relation)
   },
 });
 ```
@@ -453,6 +498,53 @@ const ordersByStatus = await prisma.order.groupBy({
     amount: { _sum: { gt: 1000 } },
   },
 });
+
+// Distinct
+const uniqueCategories = await prisma.post.findMany({
+  distinct: ['categoryId'],
+  select: { categoryId: true },
+});
+```
+
+---
+
+## Raw Queries
+
+```typescript
+// Raw query (typed result)
+const users = await prisma.$queryRaw<User[]>`
+  SELECT * FROM users 
+  WHERE email LIKE ${`%@example.com`}
+  ORDER BY created_at DESC
+  LIMIT 10
+`;
+
+// Parameterized queries (safe from SQL injection)
+const email = 'user@example.com';
+const user = await prisma.$queryRaw`
+  SELECT * FROM users WHERE email = ${email}
+`;
+
+// Raw execute (for INSERT, UPDATE, DELETE)
+const result = await prisma.$executeRaw`
+  UPDATE users SET last_login = NOW() WHERE id = ${userId}
+`;
+
+// Using Prisma.sql for dynamic queries
+import { Prisma } from '@prisma/client';
+
+const orderBy = Prisma.sql`ORDER BY created_at DESC`;
+const users = await prisma.$queryRaw`
+  SELECT * FROM users ${orderBy}
+`;
+
+// Raw with joins
+const postsWithAuthors = await prisma.$queryRaw`
+  SELECT p.*, u.name as author_name
+  FROM posts p
+  JOIN users u ON p.author_id = u.id
+  WHERE p.published = true
+`;
 ```
 
 ---
@@ -493,129 +585,23 @@ const result = await prisma.$transaction(async (tx) => {
 }, {
   maxWait: 5000,    // Max time to acquire connection
   timeout: 10000,   // Max transaction duration
-});
-```
-
----
-
-## TypeScript Integration
-
-### Generated Types
-
-```typescript
-import {
-  User,
-  Post,
-  Prisma,
-  Role
-} from '@prisma/client';
-
-// Use generated types
-function processUser(user: User): void {
-  console.log(user.email);
-}
-
-// Input types for create/update
-type UserCreateInput = Prisma.UserCreateInput;
-type UserUpdateInput = Prisma.UserUpdateInput;
-
-// Where clause types
-type UserWhereInput = Prisma.UserWhereInput;
-type UserWhereUniqueInput = Prisma.UserWhereUniqueInput;
-
-// Include/Select types
-type UserWithPosts = Prisma.UserGetPayload<{
-  include: { posts: true };
-}>;
-
-// Custom payload type
-type UserSummary = Prisma.UserGetPayload<{
-  select: {
-    id: true;
-    email: true;
-    name: true;
-    _count: { select: { posts: true } };
-  };
-}>;
-```
-
----
-
-## Best Practices
-
-### Performance
-
-```typescript
-// Use select to limit fields
-const users = await prisma.user.findMany({
-  select: { id: true, email: true }, // Only fetch needed fields
+  isolationLevel: Prisma.TransactionIsolationLevel.Serializable,
 });
 
-// Batch operations
-const users = await prisma.user.createMany({
-  data: usersToCreate,
-  skipDuplicates: true,
+// Nested writes (implicit transaction)
+const user = await prisma.user.create({
+  data: {
+    email: 'user@example.com',
+    profile: { create: { bio: 'Hello' } },
+    posts: {
+      create: [
+        { title: 'Post 1' },
+        { title: 'Post 2' },
+      ],
+    },
+  },
+  include: { profile: true, posts: true },
 });
-
-// Use cursor pagination for large datasets
-const users = await prisma.user.findMany({
-  take: 10,
-  cursor: { id: lastUserId },
-  skip: 1, // Skip the cursor
-});
-```
-
-### Error Handling
-
-```typescript
-import { Prisma } from '@prisma/client';
-
-try {
-  await prisma.user.create({ data });
-} catch (error) {
-  if (error instanceof Prisma.PrismaClientKnownRequestError) {
-    if (error.code === 'P2002') {
-      throw new Error('Email already exists');
-    }
-    if (error.code === 'P2025') {
-      throw new Error('Record not found');
-    }
-  }
-  throw error;
-}
-```
-
----
-
-## Raw Queries
-
-```typescript
-// Raw query (typed result)
-const users = await prisma.$queryRaw<User[]>`
-  SELECT * FROM users
-  WHERE email LIKE ${`%@example.com`}
-  ORDER BY created_at DESC
-  LIMIT 10
-`;
-
-// Parameterized queries (safe from SQL injection)
-const email = 'user@example.com';
-const user = await prisma.$queryRaw`
-  SELECT * FROM users WHERE email = ${email}
-`;
-
-// Raw execute (for INSERT, UPDATE, DELETE)
-const result = await prisma.$executeRaw`
-  UPDATE users SET last_login = NOW() WHERE id = ${userId}
-`;
-
-// Using Prisma.sql for dynamic queries
-import { Prisma } from '@prisma/client';
-
-const orderBy = Prisma.sql`ORDER BY created_at DESC`;
-const users = await prisma.$queryRaw`
-  SELECT * FROM users ${orderBy}
-`;
 ```
 
 ---
@@ -654,6 +640,8 @@ process.on('beforeExit', async () => {
 ```typescript
 // For serverless environments (Vercel, AWS Lambda)
 import { PrismaClient } from '@prisma/client';
+import { PrismaPg } from '@prisma/adapter-pg';
+import { Pool } from 'pg';
 
 // Use connection pooler like PgBouncer or Prisma Accelerate
 const connectionString = process.env.DATABASE_URL;
@@ -666,7 +654,88 @@ const prisma = new PrismaClient({
 
 ---
 
-## Validation with Zod
+## TypeScript Integration
+
+### Generated Types
+
+```typescript
+import { 
+  User, 
+  Post, 
+  Prisma,
+  Role 
+} from '@prisma/client';
+
+// Use generated types
+function processUser(user: User): void {
+  console.log(user.email);
+}
+
+// Input types for create/update
+type UserCreateInput = Prisma.UserCreateInput;
+type UserUpdateInput = Prisma.UserUpdateInput;
+
+// Where clause types
+type UserWhereInput = Prisma.UserWhereInput;
+type UserWhereUniqueInput = Prisma.UserWhereUniqueInput;
+
+// Include/Select types
+type UserWithPosts = Prisma.UserGetPayload<{
+  include: { posts: true };
+}>;
+
+// Custom payload type
+type UserSummary = Prisma.UserGetPayload<{
+  select: {
+    id: true;
+    email: true;
+    name: true;
+    _count: { select: { posts: true } };
+  };
+}>;
+```
+
+### Type-Safe Service Layer
+
+```typescript
+import { Prisma, User } from '@prisma/client';
+import { prisma } from './lib/prisma';
+
+// Repository pattern with types
+class UserRepository {
+  async findById(id: string): Promise<User | null> {
+    return prisma.user.findUnique({ where: { id } });
+  }
+
+  async findMany(
+    where?: Prisma.UserWhereInput,
+    orderBy?: Prisma.UserOrderByWithRelationInput,
+    pagination?: { skip?: number; take?: number }
+  ): Promise<User[]> {
+    return prisma.user.findMany({
+      where,
+      orderBy,
+      ...pagination,
+    });
+  }
+
+  async create(data: Prisma.UserCreateInput): Promise<User> {
+    return prisma.user.create({ data });
+  }
+
+  async update(id: string, data: Prisma.UserUpdateInput): Promise<User> {
+    return prisma.user.update({ where: { id }, data });
+  }
+
+  async delete(id: string): Promise<User> {
+    return prisma.user.delete({ where: { id } });
+  }
+}
+
+export const userRepository = new UserRepository();
+```
+
+### Validation with Zod
 
 ```typescript
 import { z } from 'zod';
@@ -696,6 +765,7 @@ function createUser(input: unknown) {
 // test/setup.ts
 import { PrismaClient } from '@prisma/client';
 import { execSync } from 'child_process';
+import { randomUUID } from 'crypto';
 
 const prisma = new PrismaClient();
 
@@ -711,7 +781,7 @@ beforeEach(async () => {
   const tablenames = await prisma.$queryRaw<{ tablename: string }[]>`
     SELECT tablename FROM pg_tables WHERE schemaname='public'
   `;
-
+  
   for (const { tablename } of tablenames) {
     if (tablename !== '_prisma_migrations') {
       await prisma.$executeRawUnsafe(
@@ -773,9 +843,9 @@ describe('UserService', () => {
   describe('findByEmail', () => {
     it('returns user when found', async () => {
       const created = await createUser({ email: 'test@example.com' });
-
+      
       const found = await userService.findByEmail('test@example.com');
-
+      
       expect(found).toMatchObject({
         id: created.id,
         email: 'test@example.com',
@@ -784,8 +854,36 @@ describe('UserService', () => {
 
     it('returns null when not found', async () => {
       const found = await userService.findByEmail('nonexistent@example.com');
-
+      
       expect(found).toBeNull();
+    });
+  });
+
+  describe('createWithProfile', () => {
+    it('creates user and profile in transaction', async () => {
+      const result = await userService.createWithProfile({
+        email: 'new@example.com',
+        name: 'New User',
+        bio: 'Hello world',
+      });
+
+      expect(result.profile).not.toBeNull();
+      expect(result.profile?.bio).toBe('Hello world');
+    });
+
+    it('rolls back on profile creation failure', async () => {
+      await expect(
+        userService.createWithProfile({
+          email: 'test@example.com',
+          name: 'Test',
+          bio: null as any, // Invalid
+        })
+      ).rejects.toThrow();
+
+      const user = await prisma.user.findUnique({
+        where: { email: 'test@example.com' },
+      });
+      expect(user).toBeNull();
     });
   });
 });
@@ -833,7 +931,51 @@ describe('UserService (unit)', () => {
 
 ---
 
-## Soft Deletes
+## Best Practices
+
+### Performance
+
+```typescript
+// Use select to limit fields
+const users = await prisma.user.findMany({
+  select: { id: true, email: true }, // Only fetch needed fields
+});
+
+// Batch operations
+const users = await prisma.user.createMany({
+  data: usersToCreate,
+  skipDuplicates: true,
+});
+
+// Use cursor pagination for large datasets
+const users = await prisma.user.findMany({
+  take: 10,
+  cursor: { id: lastUserId },
+  skip: 1, // Skip the cursor
+});
+```
+
+### Error Handling
+
+```typescript
+import { Prisma } from '@prisma/client';
+
+try {
+  await prisma.user.create({ data });
+} catch (error) {
+  if (error instanceof Prisma.PrismaClientKnownRequestError) {
+    if (error.code === 'P2002') {
+      throw new Error('Email already exists');
+    }
+    if (error.code === 'P2025') {
+      throw new Error('Record not found');
+    }
+  }
+  throw error;
+}
+```
+
+### Soft Deletes
 
 ```typescript
 // Middleware for soft deletes

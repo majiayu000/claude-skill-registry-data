@@ -1,612 +1,459 @@
 ---
-name: checkout
-description: Checkout flow with cart, shipping, Stripe/PayPal payments, and order completion. Use when modifying checkout, debugging payment issues, or implementing checkout features.
+name: flowglad-checkout
+description: Implement checkout sessions for purchasing subscriptions and products with Flowglad. Use this skill when creating upgrade buttons, purchase flows, or redirecting users to hosted checkout pages.
+license: MIT
+metadata:
+  author: flowglad
+  version: "1.0.0"
 ---
 
-# Checkout Flow Guide
+<!--
+@flowglad/skill
+sources_reviewed: 2026-01-21T12:00:00Z
+source_files:
+  - platform/docs/features/checkout-sessions.mdx
+  - platform/docs/sdks/checkout-sessions.mdx
+-->
 
-Complete checkout system with Stripe and PayPal integration.
+# Checkout
 
-## Checkout Flow Overview
+## Abstract
 
-```
-┌─────────┐    ┌──────────┐    ┌──────────┐    ┌─────────┐    ┌──────────┐
-│  Cart   │───▶│ Customer │───▶│ Shipping │───▶│ Payment │───▶│ Complete │
-└─────────┘    └──────────┘    └──────────┘    └─────────┘    └──────────┘
-     │              │               │               │               │
-     ▼              ▼               ▼               ▼               ▼
- Create         Set email      Set address     Stripe or       Create
- checkout       (guest or      + method        PayPal          order
-                 login)
-```
+This skill covers implementing checkout sessions for purchasing subscriptions and products with Flowglad. It includes creating upgrade buttons, handling redirects to hosted checkout pages, and displaying pricing information from the pricing model.
 
-## API Endpoints
+---
 
-| Endpoint                                   | Method | Purpose                     |
-| ------------------------------------------ | ------ | --------------------------- |
-| `/api/checkout/create`                     | POST   | Create checkout from cart   |
-| `/api/checkout/$id`                        | GET    | Get checkout state          |
-| `/api/checkout/$id/customer`               | POST   | Set customer email          |
-| `/api/checkout/$id/shipping-address`       | POST   | Set shipping address        |
-| `/api/checkout/$id/shipping-rates`         | GET    | Get shipping options        |
-| `/api/checkout/$id/shipping-method`        | POST   | Select shipping method      |
-| `/api/checkout/$id/payment/stripe`         | POST   | Create Stripe PaymentIntent |
-| `/api/checkout/$id/payment/paypal`         | POST   | Create PayPal order         |
-| `/api/checkout/$id/payment/paypal.capture` | POST   | Capture PayPal payment      |
-| `/api/checkout/$id/complete`               | POST   | Complete checkout           |
+## Table of Contents
 
-## Step 1: Create Checkout
+1. [Success and Cancel URL Handling](#1-success-and-cancel-url-handling) — **CRITICAL**
+   - 1.1 [Use Absolute URLs](#11-use-absolute-urls)
+   - 1.2 [Include Post-Checkout Context](#12-include-post-checkout-context)
+2. [Price Slug vs Price ID](#2-price-slug-vs-price-id) — **HIGH**
+   - 2.1 [Use Slugs for Stability](#21-use-slugs-for-stability)
+3. [autoRedirect Behavior](#3-autoredirect-behavior) — **MEDIUM**
+   - 3.1 [When to Use autoRedirect](#31-when-to-use-autoredirect)
+   - 3.2 [Manual Redirect Control](#32-manual-redirect-control)
+4. [Building Upgrade Buttons](#4-building-upgrade-buttons) — **MEDIUM**
+   - 4.1 [Loading States During Checkout](#41-loading-states-during-checkout)
+   - 4.2 [Disabling During Billing Load](#42-disabling-during-billing-load)
+5. [Displaying Pricing from pricingModel](#5-displaying-pricing-from-pricingmodel) — **MEDIUM**
+   - 5.1 [Accessing Prices and Products](#51-accessing-prices-and-products)
+   - 5.2 [Formatting Price Display](#52-formatting-price-display)
 
-```typescript
-// src/routes/api/checkout/create.ts
-POST: async ({ request }) => {
-  const { items } = await request.json()
-  // items: [{ productId, variantId, quantity }]
+---
 
-  // Validate and get current prices
-  const cartItems = await Promise.all(
-    items.map(async (item) => {
-      const [variant] = await db
-        .select()
-        .from(productVariants)
-        .where(eq(productVariants.id, item.variantId))
-        .limit(1)
+## 1. Success and Cancel URL Handling
 
-      const [product] = await db
-        .select()
-        .from(products)
-        .where(eq(products.id, item.productId))
-        .limit(1)
+**Impact: CRITICAL**
 
-      return {
-        productId: item.productId,
-        variantId: item.variantId,
-        quantity: item.quantity,
-        title: product.name.en,
-        variantTitle: variant.title,
-        sku: variant.sku,
-        price: parseFloat(variant.price),
-        imageUrl: null, // Fetch image separately
-      }
-    }),
-  )
+Checkout sessions require `successUrl` and `cancelUrl` parameters. These URLs determine where users are redirected after completing or abandoning checkout. Incorrect URL handling causes broken redirects and poor user experience.
 
-  const subtotal = cartItems.reduce(
-    (sum, item) => sum + item.price * item.quantity,
-    0,
-  )
+### 1.1 Use Absolute URLs
 
-  const [checkout] = await db
-    .insert(checkouts)
-    .values({
-      cartItems,
-      subtotal: subtotal.toFixed(2),
-      total: subtotal.toFixed(2),
-      currency: 'USD',
-      expiresAt: new Date(Date.now() + 24 * 60 * 60 * 1000), // 24 hours
-    })
-    .returning()
+**Impact: CRITICAL (relative URLs will fail)**
 
-  // Set checkout session cookie
-  const token = generateCheckoutToken(checkout.id)
-  const response = successResponse({ checkout }, 201)
-  setCheckoutCookie(response, token)
+Flowglad's hosted checkout redirects users via HTTP redirect, which requires fully-qualified absolute URLs.
 
-  return response
-}
-```
-
-## Step 2: Set Customer
+**Incorrect: using relative URLs**
 
 ```typescript
-// src/routes/api/checkout/$checkoutId/customer.ts
-POST: async ({ request, params }) => {
-  const { checkoutId } = params
-  const { email, createAccount, password } = await request.json()
-
-  // Validate checkout access
-  const validation = await validateCheckoutAccess(request, checkoutId)
-  if (!validation.valid) {
-    return simpleErrorResponse(validation.error, 401)
-  }
-
-  // Check if user exists
-  const session = await validateSession(request)
-
-  if (session.success) {
-    // Logged in user - link to their customer record
-    let [customer] = await db
-      .select()
-      .from(customers)
-      .where(eq(customers.userId, session.user.id))
-      .limit(1)
-
-    if (!customer) {
-      ;[customer] = await db
-        .insert(customers)
-        .values({
-          userId: session.user.id,
-          email: session.user.email,
-        })
-        .returning()
-    }
-
-    await db
-      .update(checkouts)
-      .set({ customerId: customer.id, email: customer.email })
-      .where(eq(checkouts.id, checkoutId))
-  } else {
-    // Guest checkout
-    await db
-      .update(checkouts)
-      .set({ email })
-      .where(eq(checkouts.id, checkoutId))
-  }
-
-  return successResponse({ success: true })
-}
-```
-
-## Step 3: Shipping Address
-
-```typescript
-// src/routes/api/checkout/$checkoutId/shipping-address.ts
-POST: async ({ request, params }) => {
-  const { checkoutId } = params
-  const address = await request.json()
-
-  // Validate required fields
-  const required = [
-    'firstName',
-    'lastName',
-    'address1',
-    'city',
-    'country',
-    'countryCode',
-    'zip',
-  ]
-  for (const field of required) {
-    if (!address[field]?.trim()) {
-      return simpleErrorResponse(`${field} is required`)
-    }
-  }
-
-  const [updated] = await db
-    .update(checkouts)
-    .set({
-      shippingAddress: address,
-      updatedAt: new Date(),
-    })
-    .where(eq(checkouts.id, checkoutId))
-    .returning()
-
-  return successResponse({ checkout: updated })
-}
-```
-
-## Step 4: Shipping Method
-
-```typescript
-// GET shipping rates
-GET: async ({ request, params }) => {
-  const rates = await db
-    .select()
-    .from(shippingRates)
-    .where(eq(shippingRates.isActive, true))
-    .orderBy(asc(shippingRates.position))
-
-  return successResponse({ rates })
-}
-
-// POST select shipping method
-POST: async ({ request, params }) => {
-  const { checkoutId } = params
-  const { shippingRateId } = await request.json()
-
-  const [rate] = await db
-    .select()
-    .from(shippingRates)
-    .where(eq(shippingRates.id, shippingRateId))
-    .limit(1)
-
-  if (!rate) {
-    return simpleErrorResponse('Invalid shipping rate')
-  }
-
-  const [checkout] = await db
-    .select()
-    .from(checkouts)
-    .where(eq(checkouts.id, checkoutId))
-    .limit(1)
-
-  const subtotal = parseFloat(checkout.subtotal)
-  const shippingTotal = parseFloat(rate.price)
-  const taxTotal = calculateTax(subtotal + shippingTotal)
-  const total = subtotal + shippingTotal + taxTotal
-
-  const [updated] = await db
-    .update(checkouts)
-    .set({
-      shippingRateId: rate.id,
-      shippingMethod: rate.name,
-      shippingTotal: shippingTotal.toFixed(2),
-      taxTotal: taxTotal.toFixed(2),
-      total: total.toFixed(2),
-      updatedAt: new Date(),
-    })
-    .where(eq(checkouts.id, checkoutId))
-    .returning()
-
-  return successResponse({ checkout: updated })
-}
-```
-
-## Step 5a: Stripe Payment
-
-```typescript
-// src/routes/api/checkout/$checkoutId/payment/stripe.ts
-import Stripe from 'stripe'
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!)
-
-POST: async ({ request, params }) => {
-  const { checkoutId } = params
-
-  const [checkout] = await db
-    .select()
-    .from(checkouts)
-    .where(eq(checkouts.id, checkoutId))
-    .limit(1)
-
-  if (!checkout) {
-    return simpleErrorResponse('Checkout not found', 404)
-  }
-
-  // Create PaymentIntent
-  const paymentIntent = await stripe.paymentIntents.create({
-    amount: Math.round(parseFloat(checkout.total) * 100), // cents
-    currency: checkout.currency.toLowerCase(),
-    metadata: {
-      checkoutId: checkout.id,
-    },
-  })
-
-  return successResponse({
-    clientSecret: paymentIntent.client_secret,
+const handleUpgrade = async () => {
+  await createCheckoutSession({
+    priceSlug: 'pro-monthly',
+    // FAILS: relative URLs don't work with external redirects
+    successUrl: '/dashboard?upgraded=true',
+    cancelUrl: '/pricing',
+    autoRedirect: true,
   })
 }
 ```
 
-### Frontend Stripe Integration
+Relative URLs cause redirect failures because the hosted checkout page is on a different domain and cannot resolve relative paths.
+
+**Correct: use absolute URLs with window.location.origin**
 
 ```typescript
-import { loadStripe } from '@stripe/stripe-js'
-import { Elements, PaymentElement, useStripe, useElements } from '@stripe/react-stripe-js'
-
-const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_KEY!)
-
-function CheckoutPayment({ clientSecret }: { clientSecret: string }) {
-  return (
-    <Elements stripe={stripePromise} options={{ clientSecret }}>
-      <PaymentForm />
-    </Elements>
-  )
-}
-
-function PaymentForm() {
-  const stripe = useStripe()
-  const elements = useElements()
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-
-    if (!stripe || !elements) return
-
-    const { error } = await stripe.confirmPayment({
-      elements,
-      confirmParams: {
-        return_url: `${window.location.origin}/checkout/complete`,
-      },
-    })
-
-    if (error) {
-      console.error(error.message)
-    }
-  }
-
-  return (
-    <form onSubmit={handleSubmit}>
-      <PaymentElement />
-      <button type="submit" disabled={!stripe}>
-        Pay Now
-      </button>
-    </form>
-  )
+const handleUpgrade = async () => {
+  await createCheckoutSession({
+    priceSlug: 'pro-monthly',
+    successUrl: `${window.location.origin}/dashboard?upgraded=true`,
+    cancelUrl: `${window.location.origin}/pricing`,
+    autoRedirect: true,
+  })
 }
 ```
 
-## Step 5b: PayPal Payment
+### 1.2 Include Post-Checkout Context
+
+**Impact: MEDIUM (improves user experience)**
+
+Include query parameters in success URLs to trigger appropriate UI feedback.
+
+**Incorrect: no context after checkout**
 
 ```typescript
-// src/routes/api/checkout/$checkoutId/payment/paypal.ts
-POST: async ({ request, params }) => {
-  const { checkoutId } = params
+await createCheckoutSession({
+  priceSlug: 'pro-monthly',
+  successUrl: `${window.location.origin}/dashboard`,
+  cancelUrl: window.location.href,
+  autoRedirect: true,
+})
+```
 
-  const [checkout] = await db
-    .select()
-    .from(checkouts)
-    .where(eq(checkouts.id, checkoutId))
-    .limit(1)
+User returns to dashboard with no indication that checkout succeeded.
 
-  const order = await paypalClient.orders.create({
-    intent: 'CAPTURE',
-    purchase_units: [
-      {
-        amount: {
-          currency_code: checkout.currency,
-          value: checkout.total,
-        },
-      },
-    ],
+**Correct: include success context**
+
+```typescript
+await createCheckoutSession({
+  priceSlug: 'pro-monthly',
+  successUrl: `${window.location.origin}/dashboard?checkout=success&plan=pro`,
+  cancelUrl: window.location.href,
+  autoRedirect: true,
+})
+
+// Then in the dashboard component:
+const searchParams = useSearchParams()
+const checkoutSuccess = searchParams.get('checkout') === 'success'
+
+{checkoutSuccess && (
+  <SuccessBanner>Welcome to Pro! Your subscription is now active.</SuccessBanner>
+)}
+```
+
+---
+
+## 2. Price Slug vs Price ID
+
+**Impact: HIGH**
+
+Flowglad supports referencing prices by either `priceId` or `priceSlug`. Using slugs provides stability across environments.
+
+### 2.1 Use Slugs for Stability
+
+**Impact: HIGH (IDs differ between environments)**
+
+Price IDs are auto-generated and differ between development, staging, and production environments. Slugs are user-defined and consistent.
+
+**Incorrect: hardcoding price IDs**
+
+```typescript
+await createCheckoutSession({
+  // This ID only exists in production!
+  priceId: 'price_abc123xyz',
+  successUrl: `${window.location.origin}/success`,
+  cancelUrl: window.location.href,
+  autoRedirect: true,
+})
+```
+
+Code breaks when deployed to different environments because each environment has different price IDs.
+
+**Correct: use price slugs**
+
+```typescript
+await createCheckoutSession({
+  // Slugs are consistent across all environments
+  priceSlug: 'pro-monthly',
+  successUrl: `${window.location.origin}/success`,
+  cancelUrl: window.location.href,
+  autoRedirect: true,
+})
+```
+
+When using `priceSlug`, ensure the slug is defined in your Flowglad dashboard for all environments. Slugs are case-sensitive.
+
+---
+
+## 3. autoRedirect Behavior
+
+**Impact: MEDIUM**
+
+The `autoRedirect` option controls whether users are automatically sent to the hosted checkout page.
+
+### 3.1 When to Use autoRedirect
+
+**Impact: MEDIUM (simplifies common flows)**
+
+For most checkout buttons, `autoRedirect: true` provides the expected behavior.
+
+**Incorrect: manually redirecting when autoRedirect would suffice**
+
+```typescript
+const handleUpgrade = async () => {
+  const result = await createCheckoutSession({
+    priceSlug: 'pro-monthly',
+    successUrl: `${window.location.origin}/success`,
+    cancelUrl: window.location.href,
+    // Missing autoRedirect
   })
 
-  return successResponse({ orderID: order.id })
-}
-
-// Capture payment
-// src/routes/api/checkout/$checkoutId/payment/paypal.capture.ts
-POST: async ({ request, params }) => {
-  const { orderID } = await request.json()
-
-  const capture = await paypalClient.orders.capture(orderID)
-
-  if (capture.status === 'COMPLETED') {
-    await completeCheckout(params.checkoutId, 'paypal', orderID)
+  // Unnecessary manual redirect
+  if (result.url) {
+    window.location.href = result.url
   }
-
-  return successResponse({ status: capture.status })
 }
 ```
 
-## Step 6: Complete Checkout
+**Correct: use autoRedirect for simple flows**
 
 ```typescript
-// src/routes/api/checkout/$checkoutId/complete.ts
-async function completeCheckout(
-  checkoutId: string,
-  paymentProvider: 'stripe' | 'paypal',
-  paymentId: string,
-) {
-  return await db.transaction(async (tx) => {
-    // Get checkout
-    const [checkout] = await tx
-      .select()
-      .from(checkouts)
-      .where(eq(checkouts.id, checkoutId))
-      .limit(1)
+const handleUpgrade = async () => {
+  await createCheckoutSession({
+    priceSlug: 'pro-monthly',
+    successUrl: `${window.location.origin}/success`,
+    cancelUrl: window.location.href,
+    autoRedirect: true,
+  })
+  // No manual redirect needed - user is automatically sent to checkout
+}
+```
 
-    if (!checkout) throw new Error('Checkout not found')
-    if (checkout.completedAt) throw new Error('Already completed')
+### 3.2 Manual Redirect Control
 
-    // Create or get customer
-    let customerId = checkout.customerId
+**Impact: MEDIUM (needed for analytics or pre-redirect logic)**
 
-    if (!customerId && checkout.email) {
-      // Create guest customer
-      const [customer] = await tx
-        .insert(customers)
-        .values({ email: checkout.email })
-        .returning()
-      customerId = customer.id
-    }
+Disable autoRedirect when you need to perform actions before redirecting, such as analytics tracking.
 
-    // Create order
-    const [order] = await tx
-      .insert(orders)
-      .values({
-        customerId,
-        email: checkout.email!,
-        subtotal: checkout.subtotal,
-        shippingTotal: checkout.shippingTotal || '0',
-        taxTotal: checkout.taxTotal || '0',
-        total: checkout.total,
-        currency: checkout.currency,
-        status: 'pending',
-        paymentStatus: 'paid',
-        fulfillmentStatus: 'unfulfilled',
-        shippingMethod: checkout.shippingMethod,
-        shippingAddress: checkout.shippingAddress!,
-        billingAddress: checkout.billingAddress,
-        paymentProvider,
-        paymentId,
-        paidAt: new Date(),
+**Correct: manual control for analytics**
+
+```typescript
+const handleUpgrade = async () => {
+  const result = await createCheckoutSession({
+    priceSlug: 'pro-monthly',
+    successUrl: `${window.location.origin}/success`,
+    cancelUrl: window.location.href,
+    autoRedirect: false, // Explicitly disable
+  })
+
+  if ('url' in result && result.url) {
+    // Track checkout initiation before redirect
+    await analytics.track('checkout_started', {
+      priceSlug: 'pro-monthly',
+      checkoutSessionId: result.id,
+    })
+
+    // Then manually redirect
+    window.location.href = result.url
+  }
+}
+```
+
+---
+
+## 4. Building Upgrade Buttons
+
+**Impact: MEDIUM**
+
+Upgrade buttons must handle loading states and errors gracefully.
+
+### 4.1 Loading States During Checkout
+
+**Impact: MEDIUM (prevents double-clicks and shows feedback)**
+
+Checkout session creation is asynchronous. Buttons should show loading state and be disabled during the request.
+
+**Incorrect: no loading state**
+
+```tsx
+function UpgradeButton({ priceSlug }: { priceSlug: string }) {
+  const { createCheckoutSession } = useBilling()
+
+  const handleClick = async () => {
+    // User can click multiple times while request is pending
+    await createCheckoutSession({
+      priceSlug,
+      successUrl: `${window.location.origin}/success`,
+      cancelUrl: window.location.href,
+      autoRedirect: true,
+    })
+  }
+
+  return <button onClick={handleClick}>Upgrade</button>
+}
+```
+
+**Correct: with loading state**
+
+```tsx
+function UpgradeButton({ priceSlug }: { priceSlug: string }) {
+  const { createCheckoutSession } = useBilling()
+  const [isLoading, setIsLoading] = useState(false)
+
+  const handleClick = async () => {
+    setIsLoading(true)
+    try {
+      await createCheckoutSession({
+        priceSlug,
+        successUrl: `${window.location.origin}/success`,
+        cancelUrl: window.location.href,
+        autoRedirect: true,
       })
-      .returning()
-
-    // Create order items from cart snapshot
-    await tx.insert(orderItems).values(
-      checkout.cartItems.map((item) => ({
-        orderId: order.id,
-        productId: item.productId,
-        variantId: item.variantId,
-        title: item.title,
-        variantTitle: item.variantTitle,
-        sku: item.sku,
-        price: item.price.toFixed(2),
-        quantity: item.quantity,
-        total: (item.price * item.quantity).toFixed(2),
-        imageUrl: item.imageUrl,
-      })),
-    )
-
-    // Mark checkout complete
-    await tx
-      .update(checkouts)
-      .set({ completedAt: new Date() })
-      .where(eq(checkouts.id, checkoutId))
-
-    // Record audit trail
-    await tx.insert(orderStatusHistory).values({
-      orderId: order.id,
-      field: 'status',
-      previousValue: '',
-      newValue: 'pending',
-      changedBy: 'system',
-    })
-
-    return order
-  })
-}
-```
-
-## Webhook Handlers
-
-### Stripe Webhook
-
-```typescript
-// src/routes/api/webhooks/stripe.ts
-POST: async ({ request }) => {
-  const sig = request.headers.get('stripe-signature')
-  if (!sig) return new Response('Missing signature', { status: 400 })
-
-  const body = await request.text()
-
-  try {
-    const event = stripe.webhooks.constructEvent(
-      body,
-      sig,
-      process.env.STRIPE_WEBHOOK_SECRET!,
-    )
-
-    switch (event.type) {
-      case 'payment_intent.succeeded': {
-        const paymentIntent = event.data.object as Stripe.PaymentIntent
-        const checkoutId = paymentIntent.metadata.checkoutId
-
-        if (checkoutId) {
-          await completeCheckout(checkoutId, 'stripe', paymentIntent.id)
-        }
-        break
-      }
-
-      case 'payment_intent.payment_failed': {
-        const paymentIntent = event.data.object as Stripe.PaymentIntent
-        console.error('Payment failed:', paymentIntent.id)
-        break
-      }
+    } catch (error) {
+      // Handle error (show toast, etc.)
+      console.error('Checkout failed:', error)
+      setIsLoading(false)
     }
-
-    return new Response('OK')
-  } catch (err) {
-    console.error('Webhook error:', err)
-    return new Response('Webhook error', { status: 400 })
-  }
-}
-```
-
-### PayPal Webhook
-
-```typescript
-// src/routes/api/webhooks/paypal.ts
-POST: async ({ request }) => {
-  const body = await request.json()
-
-  // Verify webhook signature
-  const isValid = await verifyPayPalWebhook(request, body)
-  if (!isValid) {
-    return new Response('Invalid signature', { status: 400 })
+    // Note: don't setIsLoading(false) on success because
+    // autoRedirect will navigate away from the page
   }
 
-  switch (body.event_type) {
-    case 'CHECKOUT.ORDER.APPROVED':
-      // Order approved, ready for capture
-      break
-
-    case 'PAYMENT.CAPTURE.COMPLETED':
-      // Payment captured successfully
-      const orderId = body.resource.supplementary_data.related_ids.order_id
-      // Complete checkout if not already done
-      break
-  }
-
-  return new Response('OK')
-}
-```
-
-## Tax Calculation
-
-```typescript
-// src/lib/tax.ts
-export const TAX_RATE = 0.0825 // 8.25%
-
-export function calculateTax(amount: number): number {
-  return Math.round(amount * TAX_RATE * 100) / 100
-}
-```
-
-## Checkout Authentication
-
-```typescript
-// src/lib/checkout-auth.ts
-import { createHmac, timingSafeEqual } from 'crypto'
-
-const SECRET = process.env.CHECKOUT_SECRET!
-
-export function generateCheckoutToken(checkoutId: string): string {
-  return createHmac('sha256', SECRET).update(checkoutId).digest('hex')
-}
-
-export function setCheckoutCookie(response: Response, token: string) {
-  response.headers.append(
-    'Set-Cookie',
-    `checkout_session=${token}; HttpOnly; SameSite=Strict; Path=/; Max-Age=86400`,
+  return (
+    <button onClick={handleClick} disabled={isLoading}>
+      {isLoading ? 'Loading...' : 'Upgrade'}
+    </button>
   )
 }
+```
 
-export async function validateCheckoutAccess(
-  request: Request,
-  checkoutId: string,
-): Promise<{ valid: boolean; error?: string }> {
-  // Check checkout exists and not expired
-  const [checkout] = await db
-    .select()
-    .from(checkouts)
-    .where(eq(checkouts.id, checkoutId))
-    .limit(1)
+### 4.2 Disabling During Billing Load
 
-  if (!checkout) return { valid: false, error: 'Checkout not found' }
-  if (checkout.completedAt) return { valid: false, error: 'Already completed' }
-  if (checkout.expiresAt < new Date()) return { valid: false, error: 'Expired' }
+**Impact: MEDIUM (prevents errors from undefined methods)**
 
-  // Validate token
-  const cookie = request.headers.get('cookie')
-  const token = parseCookie(cookie, 'checkout_session')
-  const expected = generateCheckoutToken(checkoutId)
+The `useBilling` hook returns `loaded: false` until billing data is fetched. Checkout methods should not be called before loading completes.
 
-  if (!token || !timingSafeEqual(Buffer.from(token), Buffer.from(expected))) {
-    return { valid: false, error: 'Invalid session' }
-  }
+**Incorrect: not checking loaded state**
 
-  return { valid: true }
+```tsx
+function UpgradeButton({ priceSlug }: { priceSlug: string }) {
+  const { createCheckoutSession } = useBilling()
+
+  // createCheckoutSession may throw if called before loaded
+  return <button onClick={() => createCheckoutSession({...})}>Upgrade</button>
 }
 ```
 
-## Debugging Checklist
+**Correct: check loaded state**
 
-- [ ] Checkout not expired (`expiresAt > now`)
-- [ ] Checkout not completed (`completedAt` is null)
-- [ ] Session cookie present and valid
-- [ ] Cart items snapshot has valid prices
-- [ ] Shipping address set before payment
-- [ ] Shipping method selected before payment
-- [ ] Stripe/PayPal webhook configured correctly
-- [ ] Webhook signature verification passing
+```tsx
+function UpgradeButton({ priceSlug }: { priceSlug: string }) {
+  const { loaded, createCheckoutSession } = useBilling()
+  const [isLoading, setIsLoading] = useState(false)
 
-## See Also
+  const handleClick = async () => {
+    if (!loaded) return
 
-- `src/routes/api/checkout/` - All checkout endpoints
-- `src/routes/api/webhooks/` - Payment webhooks
-- `src/lib/checkout-auth.ts` - Checkout authentication
-- `src/lib/stripe.ts` - Stripe client
-- `src/lib/paypal.ts` - PayPal client
-- `src/lib/tax.ts` - Tax calculation
-- `security` skill - Checkout security patterns
+    setIsLoading(true)
+    try {
+      await createCheckoutSession({
+        priceSlug,
+        successUrl: `${window.location.origin}/success`,
+        cancelUrl: window.location.href,
+        autoRedirect: true,
+      })
+    } catch (error) {
+      console.error('Checkout failed:', error)
+      setIsLoading(false)
+    }
+  }
+
+  return (
+    <button onClick={handleClick} disabled={!loaded || isLoading}>
+      {!loaded ? 'Loading...' : isLoading ? 'Redirecting...' : 'Upgrade'}
+    </button>
+  )
+}
+```
+
+---
+
+## 5. Displaying Pricing from pricingModel
+
+**Impact: MEDIUM**
+
+The `pricingModel` from `useBilling` contains all products, prices, and usage meters configured in your Flowglad dashboard.
+
+### 5.1 Accessing Prices and Products
+
+**Impact: MEDIUM (use helper functions for cleaner code)**
+
+Use the `getPrice` and `getProduct` helper functions instead of manually searching arrays.
+
+**Incorrect: manually searching arrays**
+
+```tsx
+function PricingCard({ priceSlug }: { priceSlug: string }) {
+  const { pricingModel } = useBilling()
+
+  // Verbose and error-prone
+  const price = pricingModel?.prices.find(p => p.slug === priceSlug)
+  const product = pricingModel?.products.find(
+    p => p.id === price?.productId
+  )
+
+  return (
+    <div>
+      <h3>{product?.name}</h3>
+      <p>${price?.unitPrice}</p>
+    </div>
+  )
+}
+```
+
+**Correct: use helper functions**
+
+```tsx
+function PricingCard({ priceSlug }: { priceSlug: string }) {
+  const { loaded, getPrice, getProduct } = useBilling()
+
+  if (!loaded) {
+    return <LoadingSkeleton />
+  }
+
+  const price = getPrice(priceSlug)
+  const product = price ? getProduct(price.productSlug) : null
+
+  if (!price || !product) {
+    return null
+  }
+
+  return (
+    <div>
+      <h3>{product.name}</h3>
+      <p>${price.unitPrice / 100}/mo</p>
+    </div>
+  )
+}
+```
+
+### 5.2 Formatting Price Display
+
+**Impact: MEDIUM (prices are in cents)**
+
+Prices in `pricingModel` are stored in cents (the smallest currency unit). Format for display.
+
+**Incorrect: displaying raw price value**
+
+```tsx
+function PriceDisplay({ priceSlug }: { priceSlug: string }) {
+  const { getPrice } = useBilling()
+  const price = getPrice(priceSlug)
+
+  // Shows "1999" instead of "$19.99"
+  return <span>{price?.unitPrice}</span>
+}
+```
+
+**Correct: format price for display**
+
+```tsx
+function PriceDisplay({ priceSlug }: { priceSlug: string }) {
+  const { loaded, getPrice } = useBilling()
+
+  if (!loaded) return <span>--</span>
+
+  const price = getPrice(priceSlug)
+  if (!price) return <span>--</span>
+
+  const formattedPrice = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: price.currency || 'USD',
+  }).format(price.unitPrice / 100)
+
+  const interval = price.intervalUnit === 'month' ? '/mo' : '/yr'
+
+  return <span>{formattedPrice}{interval}</span>
+}
+```
+
+For building complete pricing pages with product cards, monthly/annual toggles, and current plan highlighting, see the `pricing-ui` skill.

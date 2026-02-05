@@ -1,22 +1,11 @@
 ---
 name: openapi-swagger
-description: Design, document, and generate APIs using OpenAPI/Swagger specifications. Create interactive API documentation, generate client SDKs, validate schemas, and build mock servers. Use when designing REST APIs, creating API documentation, generating client libraries, or validating API contracts. Triggers on openapi, swagger, api spec, api documentation, sdk generation, api design, redoc, prism mock.
+description: Design, document, and generate APIs using OpenAPI/Swagger specifications. Create interactive API documentation, generate client SDKs, validate schemas, and build mock servers. Use when designing REST APIs, creating API documentation, generating client libraries, or validating API contracts. (project)
 ---
 
 # OpenAPI/Swagger API Development
 
 Expert guidance for API design, documentation, and SDK generation.
-
-## Triggers
-
-Use this skill when:
-- Writing OpenAPI/Swagger specifications
-- Creating interactive API documentation
-- Generating client SDKs from API specs
-- Validating API schemas
-- Building mock servers for development
-- API contract testing and design-first development
-- Keywords: openapi, swagger, api spec, api documentation, sdk generation, redoc, prism, spectral
 
 ## When to Use This Skill
 
@@ -26,8 +15,6 @@ Use this skill when:
 - Validating API schemas
 - Building mock servers for development
 - API contract testing
-
----
 
 ## OpenAPI Specification Basics
 
@@ -39,8 +26,7 @@ openapi: 3.0.3
 info:
   title: My API
   description: API description
-  version: 1.0.0
-  contact:
+    contact:
     name: API Support
     email: support@example.com
   license:
@@ -72,8 +58,6 @@ paths:
                     type: string
                     example: healthy
 ```
-
----
 
 ## Path Operations
 
@@ -199,8 +183,6 @@ paths:
         '404':
           $ref: '#/components/responses/NotFound'
 ```
-
----
 
 ## Components (Schemas)
 
@@ -367,8 +349,6 @@ components:
             message: An unexpected error occurred
 ```
 
----
-
 ## Security Schemes
 
 ```yaml
@@ -414,8 +394,6 @@ paths:
         - BearerAuth: []
         - OAuth2: [admin]
 ```
-
----
 
 ## Advanced Features
 
@@ -511,8 +489,6 @@ components:
           type: integer
 ```
 
----
-
 ## Tools & CLI Commands
 
 ### Swagger CLI
@@ -596,8 +572,6 @@ prism mock api.yaml --dynamic
 prism proxy api.yaml https://api.example.com
 ```
 
----
-
 ## Swagger UI / Redoc
 
 ### Docker Swagger UI
@@ -639,8 +613,6 @@ npm install -g @redocly/cli
 redocly build-docs api.yaml -o docs.html
 redocly preview-docs api.yaml
 ```
-
----
 
 ## Code Generation Examples
 
@@ -697,8 +669,6 @@ const newUser = await usersApi.createUser({
 // Get user
 const user = await usersApi.getUser({ userId: 'uuid-here' });
 ```
-
----
 
 ## Best Practices
 

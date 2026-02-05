@@ -1,7 +1,6 @@
 ---
 name: youtube-transcribe-skill
-description: 'Extract subtitles/transcripts from YouTube videos. Triggers: "youtube transcript", "extract subtitles", "video captions", "视频字幕", "字幕提取", "YouTube转文字", "提取字幕".'
-allowed-tools: Read, Write, Glob, Grep, Task, Bash(cat:*), Bash(ls:*), Bash(tree:*), Bash(yt-dlp:*), Bash(which:*), mcp__plugin_claude-code-settings_chrome__*
+description: 'Extract subtitles/transcripts from a YouTube video URL and save as a local file. Use when you need to extract subtitles from a YouTube video.'
 ---
 
 # YouTube Transcript Extraction
@@ -14,7 +13,9 @@ Input YouTube URL: $ARGUMENTS
 
 1. **Verify URL Format**: Confirm the input is a valid YouTube URL (supports `youtube.com/watch?v=` or `youtu.be/` formats).
 
-2. **Get Video Information**: Use WebFetch or firecrawl to fetch the page and extract the video title for subsequent file naming.
+2. **Get Video Information**:
+   - If `yt-dlp` is available, prefer `yt-dlp --get-title "[VIDEO_URL]"`.
+   - If using browser automation, extract the title from the page (via snapshot or `document.title`) for file naming.
 
 ## Step 2: CLI Quick Extraction (Priority Attempt)
 
@@ -52,37 +53,37 @@ When the CLI method fails or `yt-dlp` is missing, use browser UI automation to e
 
 1. **Check Tool Availability**:
 
-   - Check if `chrome-devtools-mcp` tools (specifically `mcp__plugin_claude-code-settings_chrome__new_page`) are available.
+   - Check if `chrome-devtools-mcp` tools (specifically `mcp__chrome__new_page`) are available.
    - **CRITICAL CHECK**: If `chrome-devtools-mcp` is **NOT** available AND `yt-dlp` was **NOT** found in Step 2:
      - **STOP** execution.
      - **Notify the User**: "Unable to proceed. Please either install `yt-dlp` (for fast CLI extraction) OR configure `chrome-devtools-mcp` (for browser automation)."
 
 2. **Initialize Browser Session** (If tools are available):
 
-   Call `mcp__plugin_claude-code-settings_chrome__new_page` to open the video URL.
+   Call `mcp__chrome__new_page` to open the video URL.
 
 ### 3.2 Analyze Page State
 
-Call `mcp__plugin_claude-code-settings_chrome__take_snapshot` to read the page accessibility tree.
+Call `mcp__chrome__take_snapshot` to read the page accessibility tree.
 
 ### 3.3 Expand Video Description
 
 _Reason: The "Show transcript" button is usually hidden within the collapsed description area._
 
 1. Search the snapshot for a button labeled **"...more"**, **"...更多"**, or **"Show more"** (usually located in the description block below the video title).
-2. Call `mcp__plugin_claude-code-settings_chrome__click` to click that button.
+2. Call `mcp__chrome__click` to click that button.
 
 ### 3.4 Open Transcript Panel
 
-1. Call `mcp__plugin_claude-code-settings_chrome__take_snapshot` to get the updated UI snapshot.
+1. Call `mcp__chrome__take_snapshot` to get the updated UI snapshot.
 2. Search for a button labeled **"Show transcript"**, **"显示转录稿"**, or **"内容转文字"**.
-3. Call `mcp__plugin_claude-code-settings_chrome__click` to click that button.
+3. Call `mcp__chrome__click` to click that button.
 
 ### 3.5 Extract Content via DOM
 
 _Reason: Directly reading the accessibility tree for long lists is slow and consumes many tokens; DOM injection is more efficient._
 
-Call `mcp__plugin_claude-code-settings_chrome__evaluate_script` to execute the following JavaScript:
+Call `mcp__chrome__evaluate_script` to execute the following JavaScript:
 
 ```javascript
 () => {
@@ -106,7 +107,7 @@ If it returns "BUFFERING", wait a few seconds and retry.
 ### 3.6 Save and Cleanup
 
 1. Use the Write tool to save the extracted text as a local file (e.g., `<Video Title>.txt`).
-2. Call `mcp__plugin_claude-code-settings_chrome__close_page` to release resources.
+2. Call `mcp__chrome__close_page` to release resources.
 
 ## Output Requirements
 

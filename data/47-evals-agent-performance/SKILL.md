@@ -1,435 +1,475 @@
 ---
-sidebar_position: 0
-title: "Build Your Evals Skill"
-description: "Create your agent-evals skill from official documentation before learning evaluation concepts. This skill-first approach ensures you build production-ready evaluation capabilities grounded in authoritative sources."
-keywords: [agent evaluation, evals, AI testing, graders, error analysis, regression testing, evaluation frameworks]
+sidebar_position: 10
+title: "Finalize Your Evals Skill"
+description: "Validate your agent-evals skill by testing it on a completely different agent. A skill proves its worth when it transfers beyond the context where you learned it."
+keywords: [agent evaluation, skill validation, portable skills, evaluation methodology, framework-agnostic, skill finalization, customer support agent, evals testing]
 chapter: 47
-lesson: 0
-duration_minutes: 25
+lesson: 10
+duration_minutes: 20
 
 # HIDDEN SKILLS METADATA
 skills:
-  - name: "Understanding Evaluation Fundamentals"
-    proficiency_level: "A2"
-    category: "Conceptual"
-    bloom_level: "Remember"
-    digcomp_area: "Information Literacy"
-    measurable_at_this_level: "Student can identify the difference between TDD (code testing) and evals (agent evaluation) and explain why evals produce probabilistic scores rather than PASS/FAIL outcomes"
-
-  - name: "Writing Learning Specifications"
-    proficiency_level: "A2"
-    category: "Technical"
-    bloom_level: "Understand"
-    digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can articulate what they want to learn about agent evaluation in a structured LEARNING-SPEC.md document with clear success criteria"
-
-  - name: "Building Skills from Documentation"
+  - name: "Validating Skill Portability"
     proficiency_level: "B1"
     category: "Applied"
     bloom_level: "Apply"
     digcomp_area: "Digital Content Creation"
-    measurable_at_this_level: "Student can use AI tools to fetch official documentation and create an initial skill structure following the SKILL.md format"
+    measurable_at_this_level: "Student can apply their agent-evals skill to a completely different agent type and verify it produces useful evaluation artifacts"
+
+  - name: "Documenting Skills for Future Use"
+    proficiency_level: "B1"
+    category: "Technical"
+    bloom_level: "Apply"
+    digcomp_area: "Digital Content Creation"
+    measurable_at_this_level: "Student can create complete skill documentation that enables future invocation without rereading the source material"
+
+  - name: "Framework-Agnostic Thinking"
+    proficiency_level: "B2"
+    category: "Conceptual"
+    bloom_level: "Analyze"
+    digcomp_area: "Information Literacy"
+    measurable_at_this_level: "Student can identify which evaluation concepts transfer across frameworks and which require framework-specific adaptation"
+
+  - name: "Continuous Skill Improvement"
+    proficiency_level: "B1"
+    category: "Soft"
+    bloom_level: "Understand"
+    digcomp_area: "Problem-Solving"
+    measurable_at_this_level: "Student can articulate how skills evolve through use and identify when a skill needs updating based on new patterns encountered"
 
 learning_objectives:
-  - objective: "Identify why systematic evaluation distinguishes good agents from great ones"
-    proficiency_level: "A2"
-    bloom_level: "Remember"
-    assessment_method: "Recognition of Andrew Ng's core thesis about disciplined evaluation processes"
-
-  - objective: "Create a LEARNING-SPEC.md document articulating evaluation learning goals"
-    proficiency_level: "A2"
-    bloom_level: "Apply"
-    assessment_method: "Written specification with clear intent, success criteria, and questions to answer"
-
-  - objective: "Build an initial agent-evals skill structure using AI-assisted documentation fetching"
+  - objective: "Validate skill portability by applying agent-evals skill to a different agent domain"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Functional SKILL.md file that passes basic structure validation"
+    assessment_method: "Student generates eval dataset and grader for a non-Task-API agent and verifies the skill produced useful outputs"
+
+  - objective: "Complete skill documentation using the standard format"
+    proficiency_level: "B1"
+    bloom_level: "Apply"
+    assessment_method: "Student's SKILL.md file contains all required sections with concrete patterns extracted from chapter learning"
+
+  - objective: "Identify framework-agnostic evaluation concepts versus framework-specific implementations"
+    proficiency_level: "B2"
+    bloom_level: "Analyze"
+    assessment_method: "Student correctly categorizes 5+ evaluation concepts as portable or framework-specific with justification"
+
+  - objective: "Articulate the continuous improvement model for skills"
+    proficiency_level: "B1"
+    bloom_level: "Understand"
+    assessment_method: "Student describes how their skill will evolve as they encounter new evaluation patterns"
 
 cognitive_load:
   new_concepts: 4
-  assessment: "4 concepts (evals vs TDD distinction, LEARNING-SPEC pattern, skill structure, documentation-first approach) within A2-B1 limit (7-10 concepts)"
+  assessment: "4 concepts (skill portability validation, documentation completeness, framework-agnostic thinking, skill evolution) within B1-B2 limit (7-10 concepts)"
 
 differentiation:
-  extension_for_advanced: "Research OpenAI's Evals framework and Google ADK's evaluation module; compare grader patterns across frameworks"
-  remedial_for_struggling: "Focus on the LEARNING-SPEC.md creation only; defer skill building to next session"
+  extension_for_advanced: "Apply skill to three different agent types across different domains; identify patterns that emerge from multiple applications"
+  remedial_for_struggling: "Focus on documentation completion first; defer multi-domain testing to post-chapter practice"
 ---
 
-# Build Your Evals Skill
+# Finalize Your Evals Skill
 
-You have built agents that generate outputs, make decisions, and take actions. But how do you know if those outputs are actually good? How do you measure whether your agent made the right decision, not just a decision? This is where most developers struggle, and it separates effective AI builders from the rest.
+You started this chapter by creating a skeleton. Now it is time to see what you actually built.
 
-Andrew Ng, one of the pioneers of modern AI, identified the critical pattern: "One of the biggest predictors for whether someone is able to build agentic workflows really well is whether or not they're able to drive a really disciplined evaluation process." The developers who master evaluation build agents that improve systematically. The developers who skip evaluation build agents that seem to work until they fail in production.
+A skill only proves its worth when it works on something you did not learn it on. You developed your agent-evals skill using Task API examples throughout this chapter. Every dataset design, grader pattern, and error analysis method came from that context. The question is: does your skill transfer?
 
-This lesson follows the Skill-First pattern. Instead of learning evaluation concepts first and building a skill later, you will create your `agent-evals` skill immediately. Why? Because building the skill forces you to engage with official documentation from the start. Your skill becomes grounded in authoritative sources rather than general knowledge. Every lesson in this chapter will then test and improve your skill, and by the capstone, you will own a production-ready evaluation capability.
+This lesson has one purpose. You will take your completed skill and apply it to a completely different agent. Not Task API. Not anything you have seen in this chapter. A fresh domain where your skill must stand on its own.
 
-## Why Skill-First for Evals
+If your skill helps you design evaluations for this new agent without returning to the chapter content, you own something valuable. If you find yourself confused or missing patterns, you know exactly where your skill needs strengthening.
 
-The traditional approach to learning agent evaluation looks like this:
+## What Your Skill Should Include
 
-1. Read about evaluation concepts
-2. See some examples
-3. Maybe build something later
-4. Forget most of it within a week
+Before testing portability, verify your skill is complete. Review your `skills/agent-evals/SKILL.md` and check for these sections:
 
-The Skill-First approach inverts this:
+| Section | Purpose | Completeness Check |
+|---------|---------|-------------------|
+| **Core Thesis** | Why evals matter | Andrew Ng quote + your interpretation |
+| **When to Activate** | Trigger patterns | 5+ specific scenarios |
+| **Evals vs TDD** | Foundational distinction | Table comparing tests and evals |
+| **Dataset Design** | Creating test cases | Three categories: typical, edge, error |
+| **Graders** | Defining "good" | Binary criteria pattern with examples |
+| **Error Analysis** | Finding failure patterns | Spreadsheet method with component columns |
+| **Component vs E2E** | Choosing eval scope | 5-step decision flow |
+| **Regression Protection** | Preventing quality drops | Workflow and threshold guidance |
+| **Framework Integration** | SDK-specific details | Table mapping concepts to frameworks |
 
-1. Define what you want to learn (specification)
-2. Build a skill structure from official documentation
-3. Learn concepts by improving your skill
-4. End the chapter owning a valuable asset
+If any section is missing or incomplete, address it now. A skill with gaps will fail when you need it most.
 
-The difference is ownership. In traditional learning, knowledge lives in your head (temporarily). In Skill-First learning, knowledge lives in a reusable skill that you can apply to every future agent project.
+## Skill Validation Checklist
 
-For evaluations specifically, this matters more than most topics. Evaluation requires discipline, and discipline requires structure. By encoding evaluation methodology into a skill, you create a forcing function that ensures you actually do the work rather than skipping it when deadlines pressure you.
+Your skill is ready for validation if it can help you with these four core tasks:
 
-## Clone skills-lab Fresh
+**Task 1: Dataset Design**
 
-Every chapter starts with a clean slate. This prevents confusion from leftover files and ensures reproducible results.
+Can your skill help you design an eval dataset for any agent?
 
-Open your terminal and navigate to your workspace directory:
+Criteria:
+- [ ] Identifies the three categories (typical, edge, error)
+- [ ] Provides guidance on starting with 10-20 cases
+- [ ] Explains how to use real data instead of synthetic
+- [ ] Includes patterns for growing datasets over time
 
-```bash
-cd ~/workspace
-```
+**Task 2: Grader Creation**
 
-If you have a previous `skills-lab` directory, remove it:
+Can your skill help you build graders that define "good" automatically?
 
-```bash
-rm -rf skills-lab
-```
+Criteria:
+- [ ] Explains why binary criteria beat 1-5 scales
+- [ ] Provides grader code template (binary checks pattern)
+- [ ] Covers LLM-as-Judge for subjective criteria
+- [ ] Warns about position bias
 
-Clone a fresh copy:
+**Task 3: Error Analysis**
 
-```bash
-git clone https://github.com/panaversity/skills-lab.git
-cd skills-lab
+Can your skill help you find which component caused failures?
+
+Criteria:
+- [ ] Includes spreadsheet method structure
+- [ ] Lists trace terminology (trace, span, error classification)
+- [ ] Provides prioritization guidance (frequency times feasibility)
+- [ ] Explains how to focus effort where errors cluster
+
+**Task 4: Component vs E2E Decision**
+
+Can your skill help you choose the right eval scope?
+
+Criteria:
+- [ ] Includes the 5-step decision flow
+- [ ] Explains when E2E is appropriate (ship decisions, production monitoring)
+- [ ] Explains when component-level is better (debugging, tuning)
+- [ ] Provides guidance on moving between scopes
+
+If your skill satisfies all four task areas, proceed to validation. If not, return to the relevant lessons and extract the missing patterns.
+
+## Testing on a Different Agent
+
+Your skill was developed using Task API examples. Now test it on something completely different.
+
+**Hypothetical Agent: Customer Support Bot**
+
+A customer support agent that:
+- Answers product questions from a knowledge base
+- Handles returns and refunds
+- Escalates complex issues to human agents
+- Maintains a helpful and professional tone
+
+This agent shares no code with Task API. It operates in a different domain with different success criteria. If your skill transfers, you can design evaluations for it without returning to chapter content.
+
+### Apply Your Skill: Dataset Design
+
+Using only your skill, design an eval dataset for the customer support agent.
+
+**Typical Cases (5 examples)**:
+
+| Input | Expected Behavior |
+|-------|-------------------|
+| "Where is my order?" | Ask for order number, provide tracking information |
+| "What's your return policy?" | Quote return policy from knowledge base |
+| "Can I get a refund?" | Clarify reason, initiate refund process if valid |
+| "Product X isn't working" | Troubleshoot with standard questions, offer solutions |
+| "How do I cancel my subscription?" | Verify identity, process cancellation, confirm |
+
+**Edge Cases (3 examples)**:
+
+| Input | Expected Behavior |
+|-------|-------------------|
+| "I'm really frustrated" + valid complaint | Acknowledge emotion, solve problem, maintain professionalism |
+| Vague complaint without details | Ask clarifying questions, don't guess |
+| Request for competitor comparison | Decline politely, redirect to product benefits |
+
+**Error Cases (2 examples)**:
+
+| Input | Expected Behavior |
+|-------|-------------------|
+| Request to access other customer's data | Refuse firmly, explain privacy policy |
+| Abusive language without valid request | Maintain professionalism, offer to help when ready |
+
+If you designed these categories using your skill's guidance, the skill is transferring.
+
+### Apply Your Skill: Grader Creation
+
+Design a grader for customer support responses using binary criteria.
+
+```python
+def grader_support_response(response: str, case: dict) -> dict:
+    """
+    Binary criteria grader for customer support agent.
+    Each criterion is yes/no. Sum them for score.
+    """
+    checks = {
+        # Criterion 1: Did it address the customer's issue?
+        "addressed_issue": (
+            case["expected_topic"] in response.lower()
+        ),
+
+        # Criterion 2: Did it maintain professional tone?
+        "professional_tone": not any(
+            word in response.lower()
+            for word in ["rude", "stupid", "whatever"]
+        ),
+
+        # Criterion 3: Did it provide actionable next steps?
+        "has_next_steps": any(
+            phrase in response.lower()
+            for phrase in ["please", "you can", "next step", "i'll help"]
+        ),
+
+        # Criterion 4: Did it avoid making things up?
+        "no_hallucination": not (
+            "our policy is" in response.lower() and
+            case.get("has_no_policy", False)
+        ),
+
+        # Criterion 5: Did it know when to escalate?
+        "appropriate_escalation": (
+            case.get("should_escalate", False) ==
+            ("human agent" in response.lower() or "escalate" in response.lower())
+        )
+    }
+
+    score = sum(checks.values())
+    return {
+        "passed": score == 5,
+        "score": score,
+        "max_score": 5,
+        "checks": checks,
+        "explanation": f"Passed {score}/5 support criteria"
+    }
 ```
 
 **Output:**
-```
-Cloning into 'skills-lab'...
-remote: Enumerating objects: 156, done.
-remote: Counting objects: 100% (156/156), done.
-remote: Compressing objects: 100% (89/89), done.
-Receiving objects: 100% (156/156), 24.18 KiB | 1.21 MiB/s, done.
-```
 
-Verify the directory structure:
+```python
+# Test the grader
+test_case = {
+    "input": "Where is my order?",
+    "expected_topic": "order",
+    "should_escalate": False
+}
 
-```bash
-ls -la
-```
+response = "I'd be happy to help you track your order. Please provide your order number and I'll look that up for you right away."
 
-**Output:**
-```
-total 16
-drwxr-xr-x   6 user  staff   192 Dec 30 10:00 .
-drwxr-xr-x  12 user  staff   384 Dec 30 10:00 ..
-drwxr-xr-x   8 user  staff   256 Dec 30 10:00 .git
--rw-r--r--   1 user  staff   234 Dec 30 10:00 README.md
-drwxr-xr-x   3 user  staff    96 Dec 30 10:00 skills
-drwxr-xr-x   2 user  staff    64 Dec 30 10:00 specs
+result = grader_support_response(response, test_case)
+print(f"Score: {result['score']}/5")
+print(f"Checks: {result['checks']}")
 ```
 
-You now have a clean environment ready for skill development.
-
-## Write Your LEARNING-SPEC.md
-
-Before fetching documentation or building anything, articulate what you want to learn. This specification becomes your learning contract. It defines success criteria that you can measure at the end of the chapter.
-
-Create the specification file:
-
-```bash
-mkdir -p specs/agent-evals
-touch specs/agent-evals/LEARNING-SPEC.md
+```
+Score: 4/5
+Checks: {'addressed_issue': True, 'professional_tone': True, 'has_next_steps': True, 'no_hallucination': True, 'appropriate_escalation': True}
 ```
 
-Open the file in your editor and add:
+If you created this grader using your skill's binary criteria pattern, the skill is working in a new domain.
 
-```markdown
-# LEARNING-SPEC: Agent Evaluations
+## Documenting Your Skill
 
-## Intent
-
-I want to learn how to systematically evaluate AI agent performance so that I can:
-1. Measure whether my agents make good decisions (not just any decisions)
-2. Catch quality regressions before they reach production
-3. Improve agent performance through data-driven iteration
-
-## Success Criteria
-
-By the end of Chapter 47, I will be able to:
-
-- [ ] Explain the difference between TDD (testing code) and evals (testing reasoning)
-- [ ] Design an evaluation dataset with typical, edge, and error cases
-- [ ] Create graders that turn subjective quality into measurable scores
-- [ ] Perform error analysis to find which component caused failures
-- [ ] Set up regression protection that runs on every agent change
-- [ ] Choose between end-to-end and component-level evals appropriately
-
-## Questions to Answer
-
-1. How do I define "good" for an agent output when there's no single right answer?
-2. Why do LLM graders fail with 1-5 scales, and what works instead?
-3. How do I trace errors back to specific agent components?
-4. When should I use end-to-end evals vs component-level evals?
-5. How many test cases do I actually need to start?
-
-## Constraints
-
-- Focus on framework-agnostic concepts (apply to any SDK)
-- Start with 10-20 test cases, not 1000
-- Prioritize quick-and-dirty evals over perfect ones
-- Use binary criteria instead of numeric scales
-
-## Non-Goals
-
-- Building a complete evaluation framework from scratch
-- Learning every evaluation library in detail
-- Achieving perfect agent performance (iterative improvement instead)
-```
-
-**Output:**
-```
-(No output - file created silently)
-```
-
-Verify the file exists:
-
-```bash
-cat specs/agent-evals/LEARNING-SPEC.md | head -20
-```
-
-**Output:**
-```
-# LEARNING-SPEC: Agent Evaluations
-
-## Intent
-
-I want to learn how to systematically evaluate AI agent performance so that I can:
-1. Measure whether my agents make good decisions (not just any decisions)
-2. Catch quality regressions before they reach production
-3. Improve agent performance through data-driven iteration
-
-## Success Criteria
-
-By the end of Chapter 47, I will be able to:
-
-- [ ] Explain the difference between TDD (testing code) and evals (testing reasoning)
-- [ ] Design an evaluation dataset with typical, edge, and error cases
-- [ ] Create graders that turn subjective quality into measurable scores
-```
-
-You now have a clear learning contract that defines what success looks like.
-
-## Create Initial Skill Structure
-
-With your learning specification in place, create the skill directory and file:
-
-```bash
-mkdir -p skills/agent-evals
-touch skills/agent-evals/SKILL.md
-```
-
-Add the initial skill structure. This is a skeleton that you will develop throughout the chapter:
+Your skill needs documentation that allows future you to use it without rereading the chapter. Complete this template in your `SKILL.md`:
 
 ```markdown
 ---
 name: agent-evals
-description: Design and implement evaluation frameworks for AI agents. Use when testing agent reasoning quality, building graders, performing error analysis, or establishing regression protection.
+description: Design and implement evaluation frameworks for AI agents. Use when testing agent reasoning quality, building graders, doing error analysis, or establishing regression protection. Framework-agnostic concepts that apply to any SDK.
 ---
 
-# Agent Evaluations Skill
+# Agent Evaluations: Measuring Reasoning Quality
 
-## Core Thesis
-
-"One of the biggest predictors for whether someone is able to build agentic workflows really well is whether or not they're able to drive a really disciplined evaluation process." - Andrew Ng
+**Core Thesis**: "One of the biggest predictors for whether someone is able to build agentic workflows really well is whether or not they're able to drive a really disciplined evaluation process." - Andrew Ng
 
 ## When to Activate
 
 Use this skill when:
-- Building quality checks for any AI agent
-- Designing evaluation datasets
+- Building systematic quality checks for any AI agent
+- Designing evaluation datasets (typical, edge, error categories)
 - Creating graders to define "good" automatically
 - Performing error analysis to find failure patterns
 - Setting up regression protection for agent changes
+- Deciding when to use end-to-end vs component-level evals
+- Debugging why an agent's output quality is inconsistent
+- Preparing an agent for production deployment
 
-## Key Concepts (To Be Developed)
+## Core Patterns
 
-### Evals vs TDD
+### Pattern: Dataset Design (10-20 cases to start)
 
-| Aspect | TDD (Code Testing) | Evals (Agent Evaluation) |
-|--------|-------------------|-------------------------|
-| **Tests** | Does function return correct output? | Did agent make the right decision? |
-| **Outcome** | PASS or FAIL (deterministic) | Scores (probabilistic) |
-| **Analogy** | Testing if calculator works | Testing if student knows WHEN to use multiplication |
+Categories:
+- Typical (60%): Common use cases the agent will handle daily
+- Edge (25%): Unusual but valid inputs that test boundaries
+- Error (15%): Cases where agent should fail gracefully
 
-### Graders (TODO)
+Use REAL data from production logs when possible. Synthetic data misses the messiness of reality.
 
-- Binary criteria over 1-5 scales
-- LLM-as-Judge patterns
-- Position bias awareness
+### Pattern: Binary Criteria Graders
 
-### Error Analysis (TODO)
+DO NOT use 1-5 scales (LLMs are poorly calibrated).
 
-- Build-Analyze loop
-- Trace and span terminology
-- Error classification patterns
+DO use binary criteria:
+1. Define 3-7 yes/no criteria
+2. Check each criterion independently
+3. Sum to get total score
+4. Threshold for pass/fail
 
-### Dataset Design (TODO)
+Template:
+def grader(response, case) -> dict:
+    checks = {"criterion_1": bool_check_1, "criterion_2": bool_check_2}
+    score = sum(checks.values())
+    return {"passed": score == len(checks), "score": score, "checks": checks}
 
-- Quality over quantity (10-20 cases to start)
-- Three categories: typical, edge, error
-- Use real data, not synthetic
+### Pattern: Error Analysis (Spreadsheet Method)
 
-### Regression Protection (TODO)
+Columns: Case | Routing | Tool Selection | Output Format | Content Quality
+Process:
+1. Run failing cases through eval suite
+2. Trace each failure to component
+3. Count which component fails most often
+4. Prioritize: frequency x feasibility
 
-- Run evals on every change
-- Baseline comparison
-- Eval-driven development loop
+### Pattern: Component vs E2E Decision
 
-## Integration
+5-step flow:
+1. Start with E2E evals to find overall quality
+2. Use error analysis to identify problem component
+3. Build component-level eval for that component
+4. Tune component using component eval
+5. Verify improvement with E2E eval
 
-This skill connects to:
-- SDK-specific evaluation modules (OpenAI, Claude, Google ADK)
-- Observability skills for trace analysis
-- CI/CD skills for automated eval runs
+### Pattern: Regression Protection
+
+Workflow:
+Before change -> Run eval suite -> Establish baseline
+After change -> Run eval suite -> Compare to baseline
+If drop > threshold -> Investigate before shipping
+
+Thresholds by criticality:
+- High-stakes (medical, financial): Any drop = block
+- Normal (support, productivity): 5% drop = investigate
+- Experimental (prototypes): 10% drop = investigate
+
+## Framework Application
+
+| Framework | Trace Access | Grader Integration |
+|-----------|-------------|-------------------|
+| OpenAI Agents SDK | Built-in tracing | Custom graders |
+| Claude Agent SDK | Hooks for tracing | Custom graders |
+| Google ADK | Evaluation module | Built-in graders |
+| LangChain | LangSmith traces | LangSmith evals |
+| Custom | Logging middleware | Custom graders |
+
+## Anti-Patterns to Avoid
+
+| Anti-Pattern | Why It's Bad | What to Do Instead |
+|-------------|--------------|-------------------|
+| 1000+ test cases first | Quantity without quality | Start with 20 thoughtful cases |
+| 1-5 scale ratings | LLMs poorly calibrated | Binary criteria summed |
+| Ignoring traces | Miss root cause | Read intermediate outputs |
+| End-to-end only | Too noisy for debugging | Add component-level evals |
+| Synthetic test data | Misses real-world messiness | Use actual user queries |
 
 ---
 
-*Status: Initial skeleton - to be developed through Chapter 47*
+*Skill Version: 1.0.0 | Created: Chapter 47 | Owner: [Your Name]*
 ```
 
-**Output:**
-```
-(No output - file created silently)
-```
+## The Portable Thinking
 
-Verify the skill structure:
+The concepts you learned transfer across any agent framework because they address universal problems:
 
-```bash
-cat skills/agent-evals/SKILL.md | head -30
-```
+| Concept | Why It Transfers |
+|---------|-----------------|
+| Evals vs TDD | Agents reason probabilistically everywhere |
+| Binary criteria | LLM calibration issues exist in all systems |
+| Error analysis | Multi-component agents fail similarly across frameworks |
+| Regression protection | Quality degradation happens regardless of SDK |
+| Dataset categories | Typical/edge/error applies to any domain |
 
-**Output:**
-```
----
-name: agent-evals
-description: Design and implement evaluation frameworks for AI agents. Use when testing agent reasoning quality, building graders, performing error analysis, or establishing regression protection.
----
+What does NOT transfer directly:
 
-# Agent Evaluations Skill
+| Concept | Framework-Specific Adaptation |
+|---------|-------------------------------|
+| Trace access | Each SDK has different tracing APIs |
+| Built-in graders | Google ADK has them; others don't |
+| Dataset storage | Varies by infrastructure |
+| CI/CD integration | Depends on deployment pipeline |
 
-## Core Thesis
+Your skill should contain the portable patterns. Framework-specific details get added when you apply the skill to a particular SDK.
 
-"One of the biggest predictors for whether someone is able to build agentic workflows really well is whether or not they're able to drive a really disciplined evaluation process." - Andrew Ng
+## Exercise: Test Your Skill on a Third Agent
 
-## When to Activate
+Your skill has now been validated on Customer Support. For your final exercise, test it on one more agent type to confirm the patterns truly generalize.
 
-Use this skill when:
-- Building quality checks for any AI agent
-- Designing evaluation datasets
-```
+**Choose one:**
 
-## Verify Your Skill Works
+1. **Content Generation Agent**: Creates blog posts, social media content, marketing copy
+2. **Code Review Agent**: Reviews pull requests, suggests improvements, catches bugs
+3. **Data Analysis Agent**: Answers questions about datasets, creates visualizations, identifies trends
 
-A skill needs to be invokable. Test that your skill loads correctly by checking its structure:
+Using only your skill:
 
-```bash
-# Check YAML frontmatter is valid
-head -5 skills/agent-evals/SKILL.md
-```
+1. Design a 10-case eval dataset (5 typical, 3 edge, 2 error)
+2. Write 5 binary criteria for a grader
+3. Identify which component would be hardest to evaluate
+4. Decide: E2E eval or component-level first? Why?
 
-**Output:**
-```
----
-name: agent-evals
-description: Design and implement evaluation frameworks for AI agents. Use when testing agent reasoning quality, building graders, performing error analysis, or establishing regression protection.
----
-```
-
-The skill has valid frontmatter with `name` and `description` fields. This is the minimum requirement for a Claude Code skill.
-
-Check the file size to ensure content exists:
-
-```bash
-wc -l skills/agent-evals/SKILL.md
-```
-
-**Output:**
-```
-62 skills/agent-evals/SKILL.md
-```
-
-You now have a working skill skeleton. Each subsequent lesson in this chapter will add content to specific sections, transforming this skeleton into a production-ready evaluation capability.
-
-## What You Built Today
-
-| Artifact | Purpose | Location |
-|----------|---------|----------|
-| Clean skills-lab | Reproducible starting point | `~/workspace/skills-lab/` |
-| LEARNING-SPEC.md | Learning contract with success criteria | `specs/agent-evals/LEARNING-SPEC.md` |
-| SKILL.md skeleton | Initial skill structure to develop | `skills/agent-evals/SKILL.md` |
-
-You have not learned evaluation concepts yet. That is intentional. You have built the container that will hold that knowledge. As you progress through this chapter, every concept you learn gets encoded into your skill. By the end, you own something valuable: a reusable evaluation methodology grounded in official documentation and tested through practice.
+If you complete this exercise without returning to chapter content, your skill is production-ready.
 
 ## Try With AI
 
-Use Claude Code, Gemini CLI, or your preferred AI tool. These prompts help you verify understanding and begin developing your skill.
-
-### Prompt 1: Validate Your Learning Specification
+### Prompt 1: Test Your Skill on a New Agent Type
 
 ```
-Review my LEARNING-SPEC.md for agent evaluations:
+I'm validating that my agent-evals skill is portable. I just learned
+evaluation methodology using a Task API agent. Now I need to apply it
+to a completely different domain.
 
-[Paste your LEARNING-SPEC.md content]
+My new agent is: [describe an agent in your actual domain]
 
-Questions:
-1. Are my success criteria measurable? Which ones are vague?
-2. What questions am I missing that I should add?
-3. Do my constraints make sense for a beginner learning evals?
+Using evaluation methodology (not any specific framework), help me:
+1. Design a 10-case eval dataset with typical, edge, and error categories
+2. Define 5 binary criteria for grading responses
+3. Identify which component would be hardest to trace errors back to
+
+I want to verify my evaluation thinking transfers, not learn new concepts.
 ```
 
-**What you're learning:** Specification quality matters. Clear success criteria let you measure progress. Vague criteria like "understand evaluations" cannot be measured. AI helps identify which criteria need sharpening before you invest time learning.
+**What you're learning:** Skill portability requires active testing. Your evaluation thinking should work in any domain because you learned patterns, not examples. AI helps you apply those patterns to verify they transfer.
 
-### Prompt 2: Expand Your Skill's "When to Activate" Section
-
-```
-I'm building an agent-evals skill. Here's my current "When to Activate" section:
-
-Use this skill when:
-- Building quality checks for any AI agent
-- Designing evaluation datasets
-- Creating graders to define "good" automatically
-- Performing error analysis to find failure patterns
-- Setting up regression protection for agent changes
-
-What specific scenarios am I missing? Give me 3-5 additional triggers
-that would indicate someone should use this skill. Focus on situations
-a developer might not immediately recognize as evaluation problems.
-```
-
-**What you're learning:** Skill activation triggers determine when your skill gets used. Comprehensive triggers ensure you apply evaluation methodology in all relevant situations, not just obvious ones. AI suggests scenarios you might overlook.
-
-### Prompt 3: Connect Evals to Your Domain
+### Prompt 2: Generate a New Domain's Eval Dataset
 
 ```
-I'm learning agent evaluation. My domain is [describe your field:
-customer support, content generation, data analysis, etc.].
+I have an agent that [describe your real agent]. I need to design an
+evaluation dataset using the three-category approach:
 
-Help me think through:
-1. What would "good" mean for an agent in my domain?
-2. What are 3 typical cases I should test?
-3. What are 2 edge cases that might break my agent?
-4. What's 1 error case where the agent should gracefully fail?
+- Typical (60%): Common cases
+- Edge (25%): Unusual but valid
+- Error (15%): Should fail gracefully
 
-Use these to help me draft the "Dataset Design" section of my skill.
+Generate 15 test cases for my agent following this structure. For each case:
+1. Input: What the user says/does
+2. Expected behavior: What the agent should do
+3. Category: Typical, edge, or error
+4. Why this category: Brief justification
+
+Use realistic examples from my domain, not generic ones.
 ```
 
-**What you're learning:** Evaluation is domain-specific. "Good" for a customer support agent differs from "good" for a code review agent. AI helps you translate abstract concepts to your specific context, making your skill immediately applicable.
+**What you're learning:** Dataset design transfers across domains when you use the category framework. The specific cases differ by domain, but the structure remains constant. AI helps you generate domain-specific cases using your portable framework.
+
+### Prompt 3: Create a Grader for Different Criteria
+
+```
+I need to evaluate a [describe your agent type] using binary criteria.
+
+The subjective quality I care about is: [describe what "good" means]
+
+Help me:
+1. Break this subjective quality into 5-7 binary yes/no criteria
+2. For each criterion, suggest how to check it (string matching, keyword presence, LLM judge)
+3. Identify which criteria need LLM-as-Judge vs can be checked with code
+
+Remember: No 1-5 scales. Each criterion must be decidable as true/false.
+```
+
+**What you're learning:** The binary criteria pattern applies to any subjective quality you need to measure. Breaking "good" into checkable components is a skill that transfers across every agent you will ever build.
 
 ### Safety Note
 
-Evaluation skills require judgment about what constitutes "good" agent behavior. AI can suggest patterns and criteria, but you must validate that evaluation frameworks align with your actual requirements. Do not assume AI-suggested grading criteria match your domain's definition of quality. Test evaluation approaches with real examples from your use case before trusting them in production.
-
+Skills evolve through use. The version you finalize today is not the final version. As you apply this skill to more agents, you will encounter patterns not covered here. When that happens, update your skill. A living skill grows stronger with each use. A frozen skill becomes obsolete. Build the habit of returning to your skills and adding what you learn in practice.

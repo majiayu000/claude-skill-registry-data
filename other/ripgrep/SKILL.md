@@ -1,92 +1,45 @@
 ---
 name: ripgrep
-description: Fast line-oriented search tool. Better than grep with color output, recursive search, and smart defaults.
-metadata: {"clawdbot":{"emoji":"🔍","requires":{"bins":["rg"]}}}
+description: Efficient text search using ripgrep (rg) with one-shot patterns that minimize iterations by getting files, line numbers, and context in a single call
 ---
 
-# ripgrep (rg) - Fast Search Tool
+# ripgrep: Powerful, one-shot text search
 
-Fast line-oriented search tool that recursively searches the current directory for a regex pattern.
+## Default Strategy
 
-## Quick Start
+**For content search: use Bash(rg) with `-e 'pattern' -n -C 2` for one-shot results.**
 
-```bash
-rg "pattern"                    # Search for pattern
-rg -l "pattern"                 # List files only
-rg -t py "pattern"              # Search Python files only
-rg -A 3 "pattern"               # Show 3 lines after match
-rg -B 2 "pattern"               # Show 2 lines before match
-rg --vimgrep "pattern"          # Output for editors
-rg "pattern" /path/to/search    # Search specific path
-```
+This gives files, line numbers, and context in a single call - minimizes iterations and context usage.
 
-## Commands
+Always prefer getting line numbers and surrounding context over multiple search attempts.
 
-### Search Files
-```bash
-uv run {baseDir}/scripts/rg.py search "TODO"                 # Find TODO comments
-uv run {baseDir}/scripts/rg.py search "def main" --type py   # Find functions in Python
-uv run {baseDir}/scripts/rg.py files "class.*Agent"          # Find classes
-```
+## Tool Selection
 
-### Find Files by Pattern
-```bash
-uv run {baseDir}/scripts/rg.py find "import" --type py       # Files with imports
-uv run {baseDir}/scripts/rg.py count "error"                 # Count occurrences
-uv run {baseDir}/scripts/rg.py hidden "secret"               # Search hidden files
-```
+**Grep tool** (built on ripgrep) - Use for structured searches:
+- Basic pattern matching with structured output
+- File type filtering with `type` parameter
+- When special flags like `-F`, `-v`, `-w`, or pipe composition are not needed
+- Handles 95% of search needs
 
-### Git-Specific
-```bash
-uv run {baseDir}/scripts/rg.py staged "FIXME"                # Search staged changes
-uv run {baseDir}/scripts/rg.py commits "feat:"               # Search commit messages
-```
+**Bash(rg)** - Use for one-shot searches needing special flags or composition:
+- Fixed string search (`-F`)
+- Invert match (`-v`)
+- Word boundaries (`-w`)
+- Context lines with patterns (`-n -C 2`)
+- Pipe composition (`| head`, `| wc -l`, `| sort`)
+- Default choice for efficient one-shot results
 
-## Examples
+**Glob tool** - Use for file name/path matching only (not content search)
 
-### Find All TODO Comments
-```bash
-rg "TODO" -n --type md
-```
+## When to Load Detailed Reference
 
-### Find Function Definitions
-```bash
-rg "^def " --type py -n
-```
+Load [ripgrep guide](./reference/ripgrep-guide.md) when needing:
+- One-shot search pattern templates
+- Effective flag combinations for complex searches
+- Pipe composition patterns
+- File type filters reference (`-t` flags)
+- Pattern syntax examples
+- Translation between Grep tool and rg commands
+- Performance optimization for large result sets
 
-### Find All Imports
-```bash
-rg "^import|^from" --type py -n
-```
-
-### Count Lines of Code by Language
-```bash
-rg -l --type py | wc -l
-```
-
-## Why ripgrep Over grep?
-
-| Feature | grep | ripgrep |
-|---------|------|---------|
-| Speed | Baseline | 10x faster |
-| Recursive | Need -r | Default |
-| Color | Need --color | Default |
-| Smart case | No | Yes |
-| Filename only | -l | -l |
-| File types | --include | -t |
-
-## Installation
-
-```bash
-brew install ripgrep  # macOS
-cargo install ripgrep # Linux/ARM64
-```
-
-## See Also
-
-- **Full workflow guide:** `memory/WORKFLOW.md` - Decision tree for when to use ripgrep vs other tools
-- **Tool comparison:** `memory/HIGH-IMPACT-TOOLS.md` - Why ripgrep over grep
-
-## Files
-
-- `scripts/rg.py` - CLI wrapper
+The guide focuses on practical patterns for getting targeted results in minimal calls.

@@ -31,7 +31,13 @@ Supported forms:
   - second line: `<age>` (e.g. `45m ago`, `6h ago`, `2d ago`)
   - third line: the ORF link
 - After the item messages, send **one final message** with the generated image.
-  - The image must visually incorporate the pulled headlines on the wraparound studio video wall using 4–6 distinct story panels (no readable text; use symbolic graphics).
+  - The image must visually incorporate the pulled news on the wraparound studio video wall using **4–6 distinct story panels**.
+  - **Panel layout (must):**
+    - TOP: big bold topic label (2–3 words, ALL CAPS)
+    - MIDDLE: smaller 3–6 word mini-headline (news-style)
+    - BOTTOM: exactly 1–2 simple icons (no maps, no busy collages)
+  - **Readability:** keep text minimal and large enough to render cleanly.
+  - No logos/watermarks.
   - If the chat provider requires non-empty text for media, use a minimal caption `.`.
 
 ## Procedure

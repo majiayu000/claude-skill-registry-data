@@ -1,120 +1,716 @@
 ---
 name: nextjs-16
-description: Build Next.js 16 applications with the correct patterns. Use this skill when creating pages, layouts, middleware (now proxy.ts), dynamic routes, or upgrading from Next.js 15. Covers breaking changes like async params/searchParams, Turbopack defaults, proxy.ts (replacing middleware.ts), and cacheComponents.
+description: Auto-activates when user mentions Next.js, App Router, server components, or Next.js routing. Expert in Next.js 16 best practices including App Router, React Server Components, and caching strategies.
+category: framework
 ---
 
-# Next.js 16
+# Next.js 16 Best Practices
 
-Build Next.js 16 applications correctly. This skill prevents common mistakes when working with Next.js 16's breaking changes.
+**Official Next.js 16 Guidelines - App Router, React 19, Server Components**
 
-## When to Use
+## Core Principles
 
-- Creating new Next.js 16 projects
-- Upgrading from Next.js 15 to 16
-- Working with dynamic routes and params
-- Implementing request proxying (formerly middleware)
-- Configuring Turbopack builds
-- Using cacheComponents (formerly dynamicIO)
+1. **ALWAYS Use App Router** - Pages Router is legacy, use `/app` directory
+2. **ALWAYS Use Server Components** - Client components only when needed
+3. **Async Everything** - params, searchParams, cookies, headers are now async
+4. **Server Actions for Mutations** - Replace API routes with Server Actions
+5. **React 19 Features** - Use `use()` hook, async components, new hooks
 
-## Critical Breaking Changes
+## Next.js 16 Async Request APIs (BREAKING CHANGE)
 
-### 1. params and searchParams are Now Promises
-
-**THIS IS THE MOST COMMON MISTAKE.** In Next.js 16, `params` and `searchParams` are asynchronous.
-
+### ✅ Good: Await All Request APIs
 ```typescript
-// WRONG - Next.js 15 pattern (WILL FAIL)
-export default function Page({ params }: { params: { id: string } }) {
-  return <div>ID: {params.id}</div>
-}
-
-// CORRECT - Next.js 16 pattern
+// app/product/[id]/page.tsx
 export default async function Page({
   params,
-}: {
-  params: Promise<{ id: string }>
-}) {
-  const { id } = await params
-  return <div>ID: {id}</div>
-}
-```
-
-**For searchParams:**
-
-```typescript
-// WRONG - Next.js 15 pattern
-export default function Page({
-  searchParams
-}: {
-  searchParams: { query: string }
-}) {
-  return <div>Query: {searchParams.query}</div>
-}
-
-// CORRECT - Next.js 16 pattern
-export default async function Page({
   searchParams,
 }: {
-  searchParams: Promise<{ query?: string }>
+  params: Promise<{ id: string }>
+  searchParams: Promise<{ filter?: string }>
 }) {
-  const { query } = await searchParams
-  return <div>Query: {query}</div>
+  // MUST await params and searchParams in Next.js 16
+  const { id } = await params
+  const { filter } = await searchParams
+
+  return <div>Product {id}, Filter: {filter}</div>
+}
+
+// app/api/route.ts
+import { cookies, headers } from 'next/headers'
+
+export async function GET() {
+  // MUST await cookies() and headers() in Next.js 16
+  const cookieStore = await cookies()
+  const headersList = await headers()
+
+  const token = cookieStore.get('auth')
+  const userAgent = headersList.get('user-agent')
+
+  return Response.json({ token, userAgent })
 }
 ```
 
-**In layouts:**
-
+### ❌ Bad: Old Next.js 15 Synchronous APIs
 ```typescript
-// CORRECT - Layout with async params
-export default async function Layout({
-  children,
-  params,
-}: {
-  children: React.ReactNode
-  params: Promise<{ slug: string }>
-}) {
-  const { slug } = await params
+// ❌ WRONG - This worked in Next.js 15, breaks in 16
+export default function Page({ params, searchParams }) {
+  const id = params.id  // Error: params is a Promise
+  const filter = searchParams.filter  // Error: searchParams is a Promise
+}
+
+// ❌ WRONG - This worked in Next.js 15, breaks in 16
+import { cookies, headers } from 'next/headers'
+
+export async function GET() {
+  const cookieStore = cookies()  // Error: must await
+  const headersList = headers()  // Error: must await
+}
+```
+
+## Upgrading from Next.js 15 to 16
+
+### Use Codemod for Automatic Migration
+```bash
+# Automatically migrates async request APIs
+npx @next/codemod@latest upgrade latest
+
+# Or specifically for async APIs
+npx @next/codemod@canary next-async-request-api .
+```
+
+### Manual Migration Checklist
+```typescript
+// 1. Add await to params
+- const { id } = params
++ const { id } = await params
+
+// 2. Add await to searchParams
+- const { filter } = searchParams
++ const { filter } = await searchParams
+
+// 3. Add await to cookies()
+- const cookieStore = cookies()
++ const cookieStore = await cookies()
+
+// 4. Add await to headers()
+- const headersList = headers()
++ const headersList = await headers()
+
+// 5. Make all page components async
+- export default function Page({ params }) {
++ export default async function Page({ params }) {
+```
+
+## Server Components (Default)
+
+### ✅ Good: Server Component Patterns
+```typescript
+// app/posts/page.tsx - Server Component (default)
+import { Suspense } from 'react'
+
+async function getPosts() {
+  const res = await fetch('https://api.example.com/posts', {
+    cache: 'no-store' // or next: { revalidate: 3600 }
+  })
+  return res.json()
+}
+
+export default async function PostsPage() {
+  // Direct data fetching in Server Component
+  const posts = await getPosts()
+
+  return (
+    <main>
+      <h1>Posts</h1>
+      <Suspense fallback={<div>Loading...</div>}>
+        <PostList posts={posts} />
+      </Suspense>
+    </main>
+  )
+}
+
+// Nested Server Component
+async function PostList({ posts }: { posts: Post[] }) {
+  return (
+    <ul>
+      {posts.map(post => (
+        <li key={post.id}>{post.title}</li>
+      ))}
+    </ul>
+  )
+}
+```
+
+### ✅ Good: Environment Variables in Server Components
+```typescript
+// Server Component - safe to access env vars
+export default async function Page() {
+  // ✅ OK - Server Components can access env vars
+  const apiKey = process.env.API_KEY
+  const data = await fetch(`https://api.example.com/data`, {
+    headers: { 'Authorization': `Bearer ${apiKey}` }
+  })
+
+  return <div>{/* render */}</div>
+}
+```
+
+### ❌ Bad: Server Component Anti-patterns
+```typescript
+// ❌ WRONG - useState in Server Component
+import { useState } from 'react'
+
+export default async function Page() {
+  const [count, setCount] = useState(0)  // Error!
+  return <div>{count}</div>
+}
+
+// ❌ WRONG - useEffect in Server Component
+import { useEffect } from 'react'
+
+export default async function Page() {
+  useEffect(() => {}, [])  // Error!
+  return <div></div>
+}
+
+// ❌ WRONG - Event handlers in Server Component
+export default async function Page() {
+  return <button onClick={() => alert('Hi')}>Click</button>  // Error!
+}
+```
+
+## Client Components
+
+### ✅ Good: Client Component with 'use client'
+```typescript
+// app/components/Counter.tsx
+'use client'
+
+import { useState } from 'react'
+
+export default function Counter() {
+  const [count, setCount] = useState(0)
+
   return (
     <div>
-      <nav>Current: {slug}</nav>
-      {children}
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>
+        Increment
+      </button>
     </div>
   )
 }
 ```
 
-**In generateMetadata:**
-
+### ✅ Good: Composing Server and Client Components
 ```typescript
-// CORRECT - Async params in metadata
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ id: string }>
-}): Promise<Metadata> {
-  const { id } = await params
-  const product = await getProduct(id)
-  return { title: product.name }
+// app/page.tsx - Server Component
+import Counter from './components/Counter'  // Client Component
+
+async function getData() {
+  const res = await fetch('https://api.example.com/data')
+  return res.json()
+}
+
+export default async function Page() {
+  const data = await getData()
+
+  return (
+    <main>
+      <h1>Server Component</h1>
+      <p>Data: {JSON.stringify(data)}</p>
+
+      {/* Client Component for interactivity */}
+      <Counter />
+    </main>
+  )
 }
 ```
 
-### 2. middleware.ts is Now proxy.ts
-
-**DO NOT CREATE `middleware.ts` in Next.js 16.** Use `proxy.ts` instead.
-
+### ✅ Good: Passing Server Data to Client Components
 ```typescript
-// File: proxy.ts (NOT middleware.ts)
-// Location: project root (same level as app/)
+// app/page.tsx - Server Component
+import ClientComponent from './ClientComponent'
 
-import type { NextRequest } from 'next/server'
-import { NextResponse } from 'next/server'
+async function getData() {
+  const res = await fetch('https://api.example.com/user')
+  return res.json()
+}
 
-// WRONG: export function middleware() {}
-// CORRECT:
-export function proxy(request: NextRequest) {
-  // Check auth
-  const token = request.cookies.get('token')
+export default async function Page() {
+  const user = await getData()
 
+  // ✅ OK - Pass serializable props to Client Component
+  return <ClientComponent user={user} />
+}
+
+// ClientComponent.tsx
+'use client'
+
+export default function ClientComponent({ user }) {
+  return <div>Welcome {user.name}</div>
+}
+```
+
+### ❌ Bad: Client Component Anti-patterns
+```typescript
+// ❌ WRONG - Don't wrap Server Component in Client Component
+'use client'
+
+import ServerComponent from './ServerComponent'  // Error!
+
+export default function ClientWrapper() {
+  return <ServerComponent />  // Won't work
+}
+
+// ❌ WRONG - Passing functions as props from Server to Client
+// app/page.tsx
+export default async function Page() {
+  async function serverAction() {
+    'use server'
+    // ...
+  }
+
+  return <ClientComponent onClick={serverAction} />  // Use Server Actions instead!
+}
+
+// ❌ WRONG - Accessing env vars in Client Component
+'use client'
+
+export default function Page() {
+  const apiKey = process.env.API_KEY  // undefined! Not exposed to client
+  return <div>{apiKey}</div>
+}
+```
+
+## Server Actions and Mutations
+
+### ✅ Good: Server Actions with 'use server'
+```typescript
+// app/actions.ts
+'use server'
+
+import { revalidatePath } from 'next/cache'
+import { redirect } from 'next/navigation'
+
+export async function createPost(formData: FormData) {
+  const title = formData.get('title') as string
+  const content = formData.get('content') as string
+
+  // Validate
+  if (!title || !content) {
+    throw new Error('Title and content are required')
+  }
+
+  // Database operation
+  await db.post.create({
+    data: { title, content }
+  })
+
+  // Revalidate cache
+  revalidatePath('/posts')
+
+  // Redirect
+  redirect('/posts')
+}
+```
+
+### ✅ Good: Form with Server Action
+```typescript
+// app/posts/new/page.tsx
+import { createPost } from '@/app/actions'
+
+export default function NewPost() {
+  return (
+    <form action={createPost}>
+      <input type="text" name="title" required />
+      <textarea name="content" required />
+      <button type="submit">Create Post</button>
+    </form>
+  )
+}
+```
+
+### ✅ Good: Server Action with useFormState (React 19)
+```typescript
+// app/actions.ts
+'use server'
+
+export async function createPost(prevState: any, formData: FormData) {
+  const title = formData.get('title') as string
+
+  if (!title) {
+    return { error: 'Title is required' }
+  }
+
+  await db.post.create({ data: { title } })
+  return { success: true }
+}
+
+// app/components/CreatePostForm.tsx
+'use client'
+
+import { useFormState } from 'react-dom'
+import { createPost } from '@/app/actions'
+
+export default function CreatePostForm() {
+  const [state, formAction] = useFormState(createPost, null)
+
+  return (
+    <form action={formAction}>
+      <input type="text" name="title" />
+      {state?.error && <p>{state.error}</p>}
+      {state?.success && <p>Post created!</p>}
+      <button type="submit">Create</button>
+    </form>
+  )
+}
+```
+
+### ✅ Good: Server Action with useFormStatus (React 19)
+```typescript
+'use client'
+
+import { useFormStatus } from 'react-dom'
+
+export default function SubmitButton() {
+  const { pending } = useFormStatus()
+
+  return (
+    <button type="submit" disabled={pending}>
+      {pending ? 'Creating...' : 'Create Post'}
+    </button>
+  )
+}
+```
+
+### ✅ Good: Server Action with Zod Validation
+```typescript
+'use server'
+
+import { z } from 'zod'
+
+const schema = z.object({
+  email: z.string().email(),
+  password: z.string().min(8),
+})
+
+export async function signup(formData: FormData) {
+  const result = schema.safeParse({
+    email: formData.get('email'),
+    password: formData.get('password'),
+  })
+
+  if (!result.success) {
+    return { errors: result.error.flatten().fieldErrors }
+  }
+
+  const { email, password } = result.data
+
+  // Create user
+  await db.user.create({ data: { email, password } })
+
+  return { success: true }
+}
+```
+
+### ❌ Bad: Server Action Anti-patterns
+```typescript
+// ❌ WRONG - No validation
+'use server'
+
+export async function createPost(formData: FormData) {
+  const title = formData.get('title')
+  await db.post.create({ data: { title } })  // No validation!
+}
+
+// ❌ WRONG - No error handling
+'use server'
+
+export async function createPost(formData: FormData) {
+  await db.post.create({ data: {} })  // Can throw, not handled!
+}
+
+// ❌ WRONG - Not calling revalidatePath after mutation
+'use server'
+
+export async function createPost(formData: FormData) {
+  await db.post.create({ data: { title: 'Post' } })
+  // Missing: revalidatePath('/posts')
+}
+```
+
+## Data Fetching and Caching
+
+### ✅ Good: Fetch with Caching Strategies
+```typescript
+// Static data - cached indefinitely
+async function getStaticData() {
+  const res = await fetch('https://api.example.com/static', {
+    cache: 'force-cache'  // default
+  })
+  return res.json()
+}
+
+// Dynamic data - no cache
+async function getDynamicData() {
+  const res = await fetch('https://api.example.com/dynamic', {
+    cache: 'no-store'
+  })
+  return res.json()
+}
+
+// Revalidate every hour
+async function getRevalidatedData() {
+  const res = await fetch('https://api.example.com/data', {
+    next: { revalidate: 3600 }  // seconds
+  })
+  return res.json()
+}
+
+// Tag-based revalidation
+async function getTaggedData() {
+  const res = await fetch('https://api.example.com/posts', {
+    next: { tags: ['posts'] }
+  })
+  return res.json()
+}
+```
+
+### ✅ Good: Revalidating Cached Data
+```typescript
+'use server'
+
+import { revalidatePath, revalidateTag } from 'next/cache'
+
+// Revalidate specific path
+export async function revalidatePostsPath() {
+  revalidatePath('/posts')
+}
+
+// Revalidate specific tag
+export async function revalidatePostsTag() {
+  revalidateTag('posts')
+}
+
+// Revalidate layout
+export async function revalidateLayout() {
+  revalidatePath('/dashboard', 'layout')
+}
+```
+
+### ✅ Good: Parallel Data Fetching
+```typescript
+export default async function Page() {
+  // Parallel fetching - both requests start at once
+  const [posts, users] = await Promise.all([
+    fetch('https://api.example.com/posts').then(r => r.json()),
+    fetch('https://api.example.com/users').then(r => r.json())
+  ])
+
+  return <div>{/* render */}</div>
+}
+```
+
+### ✅ Good: Sequential Data Fetching (when dependent)
+```typescript
+export default async function Page() {
+  // Sequential fetching - second depends on first
+  const user = await fetch('https://api.example.com/user/1').then(r => r.json())
+
+  // Use user.id for second request
+  const posts = await fetch(`https://api.example.com/users/${user.id}/posts`)
+    .then(r => r.json())
+
+  return <div>{/* render */}</div>
+}
+```
+
+### ❌ Bad: Data Fetching Anti-patterns
+```typescript
+// ❌ WRONG - Fetching in useEffect (use Server Component instead)
+'use client'
+
+import { useEffect, useState } from 'react'
+
+export default function Page() {
+  const [data, setData] = useState(null)
+
+  useEffect(() => {
+    fetch('/api/data')
+      .then(r => r.json())
+      .then(setData)
+  }, [])
+
+  return <div>{data?.title}</div>
+}
+
+// ❌ WRONG - Waterfall fetching (fetch then render then fetch)
+export default async function Page() {
+  const posts = await fetch('https://api.example.com/posts').then(r => r.json())
+
+  return (
+    <div>
+      {posts.map(post => (
+        <PostWithComments key={post.id} postId={post.id} />
+      ))}
+    </div>
+  )
+}
+
+async function PostWithComments({ postId }) {
+  // Each post fetches comments sequentially - slow!
+  const comments = await fetch(`/api/posts/${postId}/comments`).then(r => r.json())
+  return <div>{/* render */}</div>
+}
+```
+
+## Loading and Streaming
+
+### ✅ Good: loading.tsx for Instant Loading UI
+```typescript
+// app/posts/loading.tsx
+export default function Loading() {
+  return <div>Loading posts...</div>
+}
+
+// app/posts/page.tsx
+export default async function PostsPage() {
+  const posts = await getPosts()  // Shows loading.tsx while fetching
+  return <div>{/* render */}</div>
+}
+```
+
+### ✅ Good: Suspense for Granular Streaming
+```typescript
+import { Suspense } from 'react'
+
+export default function Page() {
+  return (
+    <div>
+      <h1>Dashboard</h1>
+
+      {/* Stream Posts independently */}
+      <Suspense fallback={<div>Loading posts...</div>}>
+        <Posts />
+      </Suspense>
+
+      {/* Stream Comments independently */}
+      <Suspense fallback={<div>Loading comments...</div>}>
+        <Comments />
+      </Suspense>
+    </div>
+  )
+}
+
+async function Posts() {
+  const posts = await fetch('https://api.example.com/posts').then(r => r.json())
+  return <div>{/* render */}</div>
+}
+
+async function Comments() {
+  const comments = await fetch('https://api.example.com/comments').then(r => r.json())
+  return <div>{/* render */}</div>
+}
+```
+
+## Route Handlers (API Routes)
+
+### ✅ Good: GET Route Handler
+```typescript
+// app/api/posts/route.ts
+import { NextRequest, NextResponse } from 'next/server'
+
+export async function GET(request: NextRequest) {
+  const searchParams = request.nextUrl.searchParams
+  const query = searchParams.get('query')
+
+  const posts = await db.post.findMany({
+    where: query ? { title: { contains: query } } : {}
+  })
+
+  return NextResponse.json({ posts })
+}
+```
+
+### ✅ Good: POST Route Handler with Validation
+```typescript
+// app/api/posts/route.ts
+import { NextRequest, NextResponse } from 'next/server'
+import { z } from 'zod'
+
+const schema = z.object({
+  title: z.string().min(1),
+  content: z.string().min(1),
+})
+
+export async function POST(request: NextRequest) {
+  const body = await request.json()
+
+  const result = schema.safeParse(body)
+  if (!result.success) {
+    return NextResponse.json(
+      { errors: result.error.flatten() },
+      { status: 400 }
+    )
+  }
+
+  const post = await db.post.create({ data: result.data })
+
+  return NextResponse.json({ post }, { status: 201 })
+}
+```
+
+### ✅ Good: Dynamic Route Handler
+```typescript
+// app/api/posts/[id]/route.ts
+export async function GET(
+  request: NextRequest,
+  { params }: { params: Promise<{ id: string }> }
+) {
+  const { id } = await params  // Must await in Next.js 16
+
+  const post = await db.post.findUnique({
+    where: { id }
+  })
+
+  if (!post) {
+    return NextResponse.json(
+      { error: 'Post not found' },
+      { status: 404 }
+    )
+  }
+
+  return NextResponse.json({ post })
+}
+```
+
+### ✅ Good: CORS Headers in Route Handler
+```typescript
+export async function GET(request: NextRequest) {
+  const data = { message: 'Hello from API' }
+
+  return NextResponse.json(data, {
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+    },
+  })
+}
+```
+
+## Middleware
+
+### ✅ Good: Middleware for Authentication
+```typescript
+// middleware.ts
+import { NextRequest, NextResponse } from 'next/server'
+
+export function middleware(request: NextRequest) {
+  const token = request.cookies.get('token')?.value
+
+  // Redirect to login if not authenticated
   if (!token && request.nextUrl.pathname.startsWith('/dashboard')) {
     return NextResponse.redirect(new URL('/login', request.url))
   }
@@ -122,597 +718,342 @@ export function proxy(request: NextRequest) {
   return NextResponse.next()
 }
 
-// Matcher config remains the same
 export const config = {
-  matcher: ['/dashboard/:path*', '/api/:path*'],
+  matcher: ['/dashboard/:path*']
 }
 ```
 
-**Key differences from middleware:**
-- File renamed: `middleware.ts` → `proxy.ts`
-- Function renamed: `middleware()` → `proxy()`
-- Location: Still at project root
-- Matcher config: Same syntax
-
-### 3. Turbopack is Now Default
-
-Turbopack is the default bundler. The `--turbopack` flag is no longer needed.
-
-```bash
-# Next.js 15
-next dev --turbopack
-
-# Next.js 16 (Turbopack is default)
-next dev
-```
-
-**Configuration moved to top-level:**
-
+### ✅ Good: Middleware for Rewrites
 ```typescript
-// next.config.ts
-
-// WRONG - Next.js 15 pattern
-const config = {
-  experimental: {
-    turbo: {
-      rules: { /* ... */ }
-    }
-  }
-}
-
-// CORRECT - Next.js 16 pattern
-const config = {
-  turbopack: {
-    rules: {
-      '*.svg': {
-        loaders: ['@svgr/webpack'],
-        as: '*.js',
-      },
-    },
-  },
-}
-```
-
-### 4. cacheComponents Replaces dynamicIO
-
-The `dynamicIO` experimental flag is now `cacheComponents`:
-
-```typescript
-// next.config.ts
-
-// WRONG - Next.js 15 pattern
-const config = {
-  experimental: {
-    dynamicIO: true,
-  }
-}
-
-// CORRECT - Next.js 16 pattern
-const config = {
-  cacheComponents: true,
-}
-```
-
-### 5. Parallel Routes Require default.js
-
-**Parallel routes MUST have a `default.js` file** or you'll get 404 errors during soft navigation.
-
-```
-app/
-├── @modal/
-│   ├── default.tsx    ← REQUIRED
-│   └── login/
-│       └── page.tsx
-├── layout.tsx
-└── page.tsx
-```
-
-```typescript
-// app/@modal/default.tsx
-export default function Default() {
-  return null
-}
-```
-
-### 6. Image Component Changes
-
-Several `next/image` props have changed:
-
-```typescript
-// WRONG - Next.js 15 patterns
-<Image
-  src="/photo.jpg"
-  layout="fill"           // Removed
-  objectFit="cover"       // Removed
-  objectPosition="center" // Removed
-  lazyBoundary="200px"    // Removed
-  lazyRoot={ref}          // Removed
-/>
-
-// CORRECT - Next.js 16 patterns
-<Image
-  src="/photo.jpg"
-  fill                    // Use fill prop
-  style={{
-    objectFit: 'cover',
-    objectPosition: 'center'
-  }}
-/>
-```
-
-### 7. Route Handlers Async Context
-
-Route handlers also need async params:
-
-```typescript
-// WRONG
-export async function GET(
-  request: Request,
-  { params }: { params: { id: string } }
-) {
-  return Response.json({ id: params.id })
-}
-
-// CORRECT
-export async function GET(
-  request: Request,
-  { params }: { params: Promise<{ id: string }> }
-) {
-  const { id } = await params
-  return Response.json({ id })
-}
-```
-
-## Quick Start
-
-```bash
-# Create new Next.js 16 project
-npx create-next-app@latest my-app
-
-# Or upgrade existing project
-npm install next@16 react@latest react-dom@latest
-```
-
-## Project Structure (Next.js 16)
-
-```
-my-app/
-├── app/
-│   ├── layout.tsx           # Root layout
-│   ├── page.tsx             # Home page
-│   ├── globals.css
-│   ├── @modal/              # Parallel route
-│   │   ├── default.tsx      # REQUIRED default
-│   │   └── login/
-│   │       └── page.tsx
-│   ├── dashboard/
-│   │   ├── layout.tsx
-│   │   └── [id]/            # Dynamic route
-│   │       └── page.tsx     # Uses async params
-│   └── api/
-│       └── tasks/
-│           └── [id]/
-│               └── route.ts # Uses async params
-├── proxy.ts                 # NOT middleware.ts
-├── next.config.ts           # Turbopack at top-level
-├── package.json
-└── tsconfig.json
-```
-
-## Common Patterns
-
-### httpOnly Cookie Proxy (Auth Token Forwarding)
-
-When using Better Auth or similar with httpOnly cookies, JavaScript cannot access the token. Create a server-side API route to forward requests with the token:
-
-```typescript
-// app/api/proxy/[...path]/route.ts
-import { NextRequest, NextResponse } from "next/server";
-import { cookies } from "next/headers";
-
-const BACKEND_URL = process.env.BACKEND_URL || "http://localhost:8000";
-
-export async function POST(
-  request: NextRequest,
-  { params }: { params: Promise<{ path: string[] }> }
-) {
-  const { path } = await params;
-  const cookieStore = await cookies();
-
-  // Read httpOnly cookie (only accessible server-side)
-  const idToken = cookieStore.get("auth_token")?.value;
-
-  if (!idToken) {
-    return NextResponse.json({ error: "Not authenticated" }, { status: 401 });
-  }
-
-  // Build target URL
-  const targetPath = "/" + path.join("/");
-  const url = new URL(targetPath, BACKEND_URL);
-
-  // Forward query params
-  request.nextUrl.searchParams.forEach((value, key) => {
-    url.searchParams.set(key, value);
-  });
-
-  try {
-    const body = await request.text();
-
-    const response = await fetch(url.toString(), {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${idToken}`,
-        "Content-Type": "application/json",
-      },
-      body: body || undefined,
-    });
-
-    // Handle SSE streaming responses
-    if (response.headers.get("content-type")?.includes("text/event-stream")) {
-      return new Response(response.body, {
-        status: response.status,
-        headers: {
-          "Content-Type": "text/event-stream",
-          "Cache-Control": "no-cache",
-          "Connection": "keep-alive",
-        },
-      });
-    }
-
-    const data = await response.json().catch(() => null);
-    return NextResponse.json(data, { status: response.status });
-  } catch (error) {
-    console.error("[Proxy] Error:", error);
-    return NextResponse.json({ error: "Proxy request failed" }, { status: 500 });
-  }
-}
-
-// Add GET, PUT, DELETE as needed with same pattern
-```
-
-**Key points:**
-- httpOnly cookies are a security feature - JavaScript cannot read them
-- Server-side API routes CAN read all cookies via `cookies()` from `next/headers`
-- Always handle SSE streaming by passing through `response.body`
-- Use `credentials: "include"` on client fetch to send cookies to the proxy
-
-**Evidence**: `web-dashboard/src/app/api/chatkit/route.ts`
-
-### Script Loading for Web Components (beforeInteractive)
-
-External web component scripts must load before React hydration. Use `beforeInteractive` in root layout:
-
-```tsx
-// app/layout.tsx
-import Script from "next/script";
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <head>
-        {/* MUST be in <head> with beforeInteractive for web components */}
-        <Script
-          src="https://cdn.example.com/web-component.js"
-          strategy="beforeInteractive"
-        />
-      </head>
-      <body>{children}</body>
-    </html>
-  );
-}
-```
-
-**Script strategies:**
-| Strategy | When It Loads | Use Case |
-|----------|---------------|----------|
-| `beforeInteractive` | Before hydration, in `<head>` | Web components, critical JS |
-| `afterInteractive` | After page interactive | Analytics, non-critical |
-| `lazyOnload` | During idle time | Low priority |
-
-**Evidence**: `web-dashboard/src/app/layout.tsx`
-
-### Dynamic Route with Data Fetching
-
-```typescript
-// app/tasks/[id]/page.tsx
-import { notFound } from 'next/navigation'
-
-interface Props {
-  params: Promise<{ id: string }>
-}
-
-async function getTask(id: string) {
-  const res = await fetch(`${process.env.API_URL}/api/tasks/${id}`)
-  if (!res.ok) return null
-  return res.json()
-}
-
-export async function generateMetadata({ params }: Props) {
-  const { id } = await params
-  const task = await getTask(id)
-  return { title: task?.title ?? 'Task Not Found' }
-}
-
-export default async function TaskPage({ params }: Props) {
-  const { id } = await params
-  const task = await getTask(id)
-
-  if (!task) notFound()
-
-  return (
-    <div>
-      <h1>{task.title}</h1>
-      <p>Status: {task.status}</p>
-    </div>
-  )
-}
-```
-
-### Search Page with Filters
-
-```typescript
-// app/search/page.tsx
-interface Props {
-  searchParams: Promise<{
-    query?: string
-    status?: string
-    page?: string
-  }>
-}
-
-export default async function SearchPage({ searchParams }: Props) {
-  const { query, status, page = '1' } = await searchParams
-
-  const results = await fetch(
-    `${process.env.API_URL}/api/search?` +
-    new URLSearchParams({
-      ...(query && { query }),
-      ...(status && { status }),
-      page,
-    })
-  ).then(r => r.json())
-
-  return (
-    <div>
-      <h1>Search Results for: {query}</h1>
-      {results.map(r => <div key={r.id}>{r.title}</div>)}
-    </div>
-  )
-}
-```
-
-### Proxy with Auth Check
-
-```typescript
-// proxy.ts
+// middleware.ts
 import { NextRequest, NextResponse } from 'next/server'
 
-const publicPaths = ['/', '/login', '/register', '/api/auth']
-
-export function proxy(request: NextRequest) {
-  const { pathname } = request.nextUrl
-
-  // Allow public paths
-  if (publicPaths.some(p => pathname.startsWith(p))) {
-    return NextResponse.next()
+export function middleware(request: NextRequest) {
+  // Rewrite /blog/* to /posts/*
+  if (request.nextUrl.pathname.startsWith('/blog')) {
+    const newPath = request.nextUrl.pathname.replace('/blog', '/posts')
+    return NextResponse.rewrite(new URL(newPath, request.url))
   }
 
-  // Check for auth token
-  const token = request.cookies.get('session')?.value
+  return NextResponse.next()
+}
+```
 
-  if (!token) {
-    const loginUrl = new URL('/login', request.url)
-    loginUrl.searchParams.set('callbackUrl', pathname)
-    return NextResponse.redirect(loginUrl)
-  }
+### ✅ Good: Middleware for Headers
+```typescript
+// middleware.ts
+import { NextRequest, NextResponse } from 'next/server'
 
-  // Add user header for API routes
+export function middleware(request: NextRequest) {
   const response = NextResponse.next()
-  response.headers.set('x-user-token', token)
+
+  // Add custom headers
+  response.headers.set('x-custom-header', 'my-value')
+  response.headers.set('x-request-id', crypto.randomUUID())
+
   return response
 }
+```
 
-export const config = {
-  matcher: [
-    '/((?!_next/static|_next/image|favicon.ico).*)',
-  ],
+## Metadata and SEO
+
+### ✅ Good: Static Metadata
+```typescript
+// app/page.tsx
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'My App',
+  description: 'Welcome to my app',
+  openGraph: {
+    title: 'My App',
+    description: 'Welcome to my app',
+    images: ['/og-image.jpg'],
+  },
+}
+
+export default function Page() {
+  return <div>Home</div>
 }
 ```
 
-### API Route with Validation
-
+### ✅ Good: Dynamic Metadata with generateMetadata
 ```typescript
-// app/api/tasks/[id]/route.ts
-import { NextRequest, NextResponse } from 'next/server'
+// app/posts/[id]/page.tsx
+import { Metadata } from 'next'
 
-interface Props {
+export async function generateMetadata({
+  params,
+}: {
   params: Promise<{ id: string }>
-}
-
-export async function GET(request: NextRequest, { params }: Props) {
+}): Promise<Metadata> {
   const { id } = await params
 
-  // Fetch from backend
-  const res = await fetch(`${process.env.BACKEND_URL}/api/tasks/${id}`, {
-    headers: {
-      Authorization: request.headers.get('Authorization') ?? '',
-    },
-  })
+  const post = await fetch(`https://api.example.com/posts/${id}`)
+    .then(r => r.json())
 
-  if (!res.ok) {
-    return NextResponse.json(
-      { error: 'Task not found' },
-      { status: 404 }
-    )
+  return {
+    title: post.title,
+    description: post.excerpt,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      images: [post.coverImage],
+    },
+  }
+}
+
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ id: string }>
+}) {
+  const { id } = await params
+  const post = await fetch(`https://api.example.com/posts/${id}`)
+    .then(r => r.json())
+
+  return <article>{post.title}</article>
+}
+```
+
+## Image Optimization
+
+### ✅ Good: Next.js Image Component
+```typescript
+import Image from 'next/image'
+
+export default function Page() {
+  return (
+    <div>
+      {/* Local image - auto width/height */}
+      <Image
+        src="/hero.jpg"
+        alt="Hero"
+        width={1920}
+        height={1080}
+        priority  // LCP image
+      />
+
+      {/* Remote image - must specify width/height */}
+      <Image
+        src="https://example.com/photo.jpg"
+        alt="Photo"
+        width={800}
+        height={600}
+        quality={90}
+      />
+
+      {/* Fill container */}
+      <div style={{ position: 'relative', height: '400px' }}>
+        <Image
+          src="/background.jpg"
+          alt="Background"
+          fill
+          style={{ objectFit: 'cover' }}
+        />
+      </div>
+    </div>
+  )
+}
+```
+
+### ✅ Good: Image Loader for External CDN
+```typescript
+// next.config.js
+module.exports = {
+  images: {
+    loader: 'custom',
+    loaderFile: './imageLoader.ts',
+  },
+}
+
+// imageLoader.ts
+export default function cloudinaryLoader({ src, width, quality }) {
+  const params = ['f_auto', 'c_limit', `w_${width}`, `q_${quality || 'auto'}`]
+  return `https://res.cloudinary.com/demo/image/upload/${params.join(',')}${src}`
+}
+```
+
+## Static Generation
+
+### ✅ Good: generateStaticParams for Dynamic Routes
+```typescript
+// app/posts/[id]/page.tsx
+export async function generateStaticParams() {
+  const posts = await fetch('https://api.example.com/posts')
+    .then(r => r.json())
+
+  return posts.map((post: any) => ({
+    id: post.id.toString(),
+  }))
+}
+
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ id: string }>
+}) {
+  const { id } = await params
+  const post = await fetch(`https://api.example.com/posts/${id}`)
+    .then(r => r.json())
+
+  return <article>{post.title}</article>
+}
+```
+
+## Performance Optimization
+
+### ✅ Good: Lazy Loading Components
+```typescript
+import dynamic from 'next/dynamic'
+
+// Lazy load component
+const HeavyComponent = dynamic(() => import('./HeavyComponent'), {
+  loading: () => <div>Loading...</div>
+})
+
+export default function Page() {
+  return (
+    <div>
+      <h1>Page</h1>
+      <HeavyComponent />
+    </div>
+  )
+}
+```
+
+### ✅ Good: Font Optimization
+```typescript
+// app/layout.tsx
+import { Inter, Roboto_Mono } from 'next/font/google'
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+})
+
+const robotoMono = Roboto_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+})
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en" className={inter.className}>
+      <body>{children}</body>
+    </html>
+  )
+}
+```
+
+### ✅ Good: Script Optimization
+```typescript
+import Script from 'next/script'
+
+export default function Page() {
+  return (
+    <div>
+      {/* Load after page is interactive */}
+      <Script
+        src="https://example.com/script.js"
+        strategy="lazyOnload"
+      />
+
+      {/* Critical script - load before hydration */}
+      <Script
+        src="https://example.com/critical.js"
+        strategy="beforeInteractive"
+      />
+    </div>
+  )
+}
+```
+
+## Error Handling
+
+### ✅ Good: error.tsx for Error Boundaries
+```typescript
+// app/posts/error.tsx
+'use client'
+
+export default function Error({
+  error,
+  reset,
+}: {
+  error: Error & { digest?: string }
+  reset: () => void
+}) {
+  return (
+    <div>
+      <h2>Something went wrong!</h2>
+      <p>{error.message}</p>
+      <button onClick={() => reset()}>Try again</button>
+    </div>
+  )
+}
+```
+
+### ✅ Good: not-found.tsx for 404 Errors
+```typescript
+// app/posts/[id]/not-found.tsx
+export default function NotFound() {
+  return (
+    <div>
+      <h2>Post Not Found</h2>
+      <p>Could not find the requested post.</p>
+    </div>
+  )
+}
+
+// app/posts/[id]/page.tsx
+import { notFound } from 'next/navigation'
+
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ id: string }>
+}) {
+  const { id } = await params
+  const post = await fetch(`https://api.example.com/posts/${id}`)
+    .then(r => r.ok ? r.json() : null)
+
+  if (!post) {
+    notFound()  // Shows not-found.tsx
   }
 
-  return NextResponse.json(await res.json())
-}
-
-export async function PATCH(request: NextRequest, { params }: Props) {
-  const { id } = await params
-  const body = await request.json()
-
-  const res = await fetch(`${process.env.BACKEND_URL}/api/tasks/${id}`, {
-    method: 'PATCH',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: request.headers.get('Authorization') ?? '',
-    },
-    body: JSON.stringify(body),
-  })
-
-  return NextResponse.json(await res.json(), { status: res.status })
+  return <article>{post.title}</article>
 }
 ```
 
-## next.config.ts Template
+## Environment Variables
 
-```typescript
-import type { NextConfig } from 'next'
+### ✅ Good: Environment Variables
+```bash
+# .env.local
 
-const config: NextConfig = {
-  // Turbopack config (was experimental.turbo)
-  turbopack: {
-    rules: {
-      '*.svg': {
-        loaders: ['@svgr/webpack'],
-        as: '*.js',
-      },
-    },
-  },
+# Server-only (not exposed to browser)
+DATABASE_URL=postgresql://...
+API_SECRET=secret123
 
-  // Cache components (was experimental.dynamicIO)
-  cacheComponents: true,
-
-  // Environment variables (public)
-  env: {
-    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
-  },
-
-  // Images
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '**.example.com',
-      },
-    ],
-  },
-
-  // Rewrites for API proxy
-  async rewrites() {
-    return [
-      {
-        source: '/api/:path*',
-        destination: `${process.env.BACKEND_URL}/api/:path*`,
-      },
-    ]
-  },
-}
-
-export default config
+# Exposed to browser (must start with NEXT_PUBLIC_)
+NEXT_PUBLIC_API_URL=https://api.example.com
+NEXT_PUBLIC_SITE_URL=https://example.com
 ```
 
-## Migration Checklist
-
-When upgrading from Next.js 15:
-
-- [ ] Rename `middleware.ts` to `proxy.ts`
-- [ ] Rename `middleware()` function to `proxy()`
-- [ ] Update all page components with async `params`
-- [ ] Update all page components with async `searchParams`
-- [ ] Update all route handlers with async `params`
-- [ ] Update `generateMetadata` with async `params`
-- [ ] Move `turbo` config from `experimental.turbo` to `turbopack`
-- [ ] Replace `dynamicIO` with `cacheComponents`
-- [ ] Add `default.tsx` to all parallel routes
-- [ ] Update `next/image` usage (remove layout, objectFit props)
-- [ ] Remove `--turbopack` flag from dev scripts
-
-## Common Pitfalls
-
-### 1. Forgetting to await params
-
 ```typescript
-// WRONG - Results in Promise object, not value
-export default async function Page({ params }) {
-  return <div>ID: {params.id}</div>  // Shows [object Promise]
+// Server Component or Server Action - can access all env vars
+export default async function Page() {
+  const dbUrl = process.env.DATABASE_URL  // ✅ OK
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL  // ✅ OK
 }
 
-// CORRECT
-export default async function Page({ params }) {
-  const { id } = await params
-  return <div>ID: {id}</div>
+// Client Component - can only access NEXT_PUBLIC_*
+'use client'
+
+export default function ClientComponent() {
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL  // ✅ OK
+  const dbUrl = process.env.DATABASE_URL  // ❌ undefined
 }
 ```
 
-### 2. Using middleware.ts
-
-```typescript
-// WRONG - File will be ignored
-// middleware.ts
-
-// CORRECT - Use proxy.ts
-// proxy.ts
-export function proxy(request) { ... }
-```
-
-### 3. Missing default.tsx in parallel routes
-
-```
-// WRONG - 404 during soft navigation
-app/@sidebar/page.tsx
-
-// CORRECT - Include default
-app/@sidebar/default.tsx
-app/@sidebar/page.tsx
-```
-
-### 4. Old turbo config location
-
-```typescript
-// WRONG
-experimental: { turbo: {} }
-
-// CORRECT
-turbopack: {}
-```
-
-### 5. Reading httpOnly cookies from JavaScript
-
-```typescript
-// WRONG - httpOnly cookies cannot be read from JavaScript
-const token = document.cookie.split('; ')
-  .find(row => row.startsWith('auth_token='));
-// Returns undefined even if cookie exists
-
-// CORRECT - Use server-side API route proxy
-// app/api/proxy/route.ts reads cookies via next/headers
-const cookieStore = await cookies();
-const token = cookieStore.get("auth_token")?.value;
-```
-
-### 6. Script afterInteractive for web components
-
-```typescript
-// WRONG - Web component not defined when React renders
-<Script src="https://cdn.example.com/component.js" strategy="afterInteractive" />
-
-// CORRECT - Load before React hydration
-<head>
-  <Script src="https://cdn.example.com/component.js" strategy="beforeInteractive" />
-</head>
-```
-
-## References
-
-For additional documentation, use Next.js DevTools MCP:
-```
-mcp__next-devtools__nextjs_docs with action="get" and path="/docs/app/guides/upgrading/version-16"
-```
-
-Or Context7:
-```
-mcp__context7__get-library-docs with context7CompatibleLibraryID="/vercel/next.js" and topic="app router"
-```
+**CRITICAL: ALWAYS await params/searchParams/cookies/headers in Next.js 16, use Server Components by default, Server Actions for mutations, and async components for data fetching.**

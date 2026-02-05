@@ -1,122 +1,137 @@
 ---
-name: anchor
-description: Create and distribute podcasts with Anchor (Spotify for Podcasters) - manage episodes, analytics, and distribution
-category: video
+name: anchor-expert-2026
+description: Expert Anchor smart contract development for Solana (January 2026). Use when (1) Writing or auditing Solana programs, (2) Implementing security patterns, (3) Defining account structures and constraints, (4) Building CPI interactions, (5) Testing with Mollusk/LiteSVM, (6) Deploying programs, or any Anchor/Solana program development questions.
 ---
 
-# Anchor Skill
+# Anchor Expert Guide - January 2026
 
-## Overview
-Enables Claude to use Anchor (now Spotify for Podcasters) for podcast creation and distribution including managing episodes, viewing analytics, and configuring distribution settings.
+## What is Anchor?
 
-## Quick Install
+Anchor is a framework for Solana smart contract development that provides:
+- **Security by default** - Automatic checks for common vulnerabilities
+- **Simplified account management** - Declarative account validation
+- **IDL generation** - Automatic TypeScript client generation
+- **Testing framework** - Integrated testing with TypeScript
+- **CLI tooling** - Build, deploy, test, upgrade programs
+
+**Current Version**: 0.32.1
+**Solana Version**: 1.18+ (compatible with 2.x)
+
+## When to Use This Skill
+
+- Writing Rust smart contracts for Solana
+- Implementing secure account validation
+- Building cross-program invocations (CPI)
+- Testing programs with Mollusk or LiteSVM
+- Deploying and upgrading programs
+- Generating TypeScript clients
+
+## Quick Reference
+
+See `.claude/rules/programs.md` for comprehensive patterns and security checklist.
+
+## Core Patterns
+
+### Program Structure
+```rust
+use anchor_lang::prelude::*;
+
+declare_id!("YourProgramId11111111111111111111111111111");
+
+#[program]
+pub mod my_program {
+    use super::*;
+
+    pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
+        // Implementation
+        Ok(())
+    }
+}
+
+#[derive(Accounts)]
+pub struct Initialize<'info> {
+    #[account(init, payer = user, space = 8 + MyAccount::INIT_SPACE)]
+    pub my_account: Account<'info, MyAccount>,
+
+    #[account(mut)]
+    pub user: Signer<'info>,
+
+    pub system_program: Program<'info, System>,
+}
+
+#[account]
+#[derive(InitSpace)]
+pub struct MyAccount {
+    pub data: u64,
+}
+```
+
+### Critical Security Rules
+
+1. **ALWAYS verify account ownership**: Use `Account<'info, T>` not `AccountInfo`
+2. **ALWAYS use checked arithmetic**: `.checked_add()`, `.checked_mul()`, etc.
+3. **ALWAYS validate signers**: Use `Signer<'info>` for authorities
+4. **ALWAYS store PDA bumps**: Store bump seeds in account data
+5. **NEVER use init_if_needed without validation**: Reinitialization attacks
+
+### Account Constraints
+
+```rust
+// Initialize new account
+#[account(init, payer = user, space = 8 + SIZE)]
+
+// PDA with seeds
+#[account(seeds = [b"my-seed", user.key().as_ref()], bump)]
+
+// Verify field matches
+#[account(has_one = authority)]
+
+// Custom constraint
+#[account(constraint = amount > 0 @ ErrorCode::InvalidAmount)]
+
+// Close account
+#[account(close = authority)]
+```
+
+## Testing
+
+### Mollusk (Fast Unit Tests)
+```rust
+use mollusk::Mollusk;
+
+#[test]
+fn test_initialize() {
+    let program_id = Pubkey::new_unique();
+    let mut mollusk = Mollusk::new(&program_id, "target/deploy/my_program");
+
+    // Test execution...
+}
+```
+
+### Anchor Tests (Integration)
+```bash
+anchor test                # Run all tests
+anchor test --skip-local-validator  # Skip starting validator
+```
+
+## Deployment
 
 ```bash
-curl -sSL https://canifi.com/skills/anchor/install.sh | bash
+# Build
+anchor build
+
+# Deploy to devnet
+anchor deploy
+
+# Upgrade existing program
+anchor upgrade target/deploy/program.so --program-id <ID>
+
+# Verify
+solana program show <PROGRAM_ID>
 ```
 
-Or manually:
-```bash
-cp -r skills/anchor ~/.canifi/skills/
-```
+## Additional Resources
 
-## Setup
-
-Configure via [canifi-env](https://canifi.com/setup/scripts):
-
-```bash
-# First, ensure canifi-env is installed:
-# curl -sSL https://canifi.com/install.sh | bash
-
-canifi-env set ANCHOR_EMAIL "your-email@example.com"
-canifi-env set ANCHOR_PASSWORD "your-password"
-```
-
-## Privacy & Authentication
-
-**Your credentials, your choice.** Canifi LifeOS respects your privacy.
-
-### Option 1: Manual Browser Login (Recommended)
-If you prefer not to share credentials with Claude Code:
-1. Complete the [Browser Automation Setup](/setup/automation) using CDP mode
-2. Login to the service manually in the Playwright-controlled Chrome window
-3. Claude will use your authenticated session without ever seeing your password
-
-### Option 2: Environment Variables
-If you're comfortable sharing credentials, you can store them locally:
-```bash
-canifi-env set SERVICE_EMAIL "your-email"
-canifi-env set SERVICE_PASSWORD "your-password"
-```
-
-**Note**: Credentials stored in canifi-env are only accessible locally on your machine and are never transmitted.
-
-## Capabilities
-- Manage podcast episodes
-- View download and listener analytics
-- Configure distribution settings
-- Access listener demographics
-- Manage monetization settings
-- View ratings and reviews
-
-## Usage Examples
-
-### Example 1: Check Episode Performance
-```
-User: "How is my latest podcast episode performing?"
-Claude: I'll check your episode analytics.
-1. Opening Anchor via Playwright MCP
-2. Navigating to your podcast
-3. Finding the latest episode
-4. Accessing analytics dashboard
-5. Summarizing downloads and engagement
-```
-
-### Example 2: View Listener Stats
-```
-User: "Where are my podcast listeners located?"
-Claude: I'll pull up listener demographics.
-1. Accessing analytics section
-2. Viewing geographic data
-3. Compiling location breakdown
-4. Summarizing top listening regions
-```
-
-### Example 3: Check Distribution
-```
-User: "Is my podcast available on all platforms?"
-Claude: I'll check distribution status.
-1. Opening distribution settings
-2. Reviewing connected platforms
-3. Verifying availability status
-4. Listing any issues or gaps
-```
-
-## Authentication Flow
-1. Navigate to podcasters.spotify.com via Playwright MCP
-2. Click "Log in" with Spotify account
-3. Enter email and password
-4. Handle 2FA if required (via iMessage)
-5. Maintain session for dashboard access
-
-## Error Handling
-- **Login Failed**: Retry up to 3 times, notify via iMessage
-- **Session Expired**: Re-authenticate automatically
-- **Rate Limited**: Implement exponential backoff
-- **2FA Required**: Send iMessage notification
-- **Analytics Delayed**: Note data lag timing
-- **Distribution Error**: Check platform status
-
-## Self-Improvement Instructions
-When Anchor/Spotify for Podcasters updates:
-1. Document new analytics features
-2. Update distribution platform options
-3. Track monetization changes
-4. Log new podcast tools
-
-## Notes
-- Now branded as Spotify for Podcasters
-- Free hosting and distribution
-- Analytics have 48-hour delay
-- Monetization varies by region
-- Q&A and polls available
+- Full patterns: `.claude/rules/programs.md`
+- Anchor Docs: https://anchor-lang.com/docs
+- Security Audit: https://github.com/coral-xyz/sealevel-attacks

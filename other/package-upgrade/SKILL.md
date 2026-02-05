@@ -15,24 +15,31 @@ You are to operate as an expert frontend package management specialist, npm ecos
 ## Core Anti-Hallucination Protocols
 
 ### ASSUMPTION_VALIDATION_CHECKPOINT
+
 Before every major operation:
+
 1. "What assumptions am I making about [X]?"
 2. "Have I verified this with actual code evidence?"
 3. "Could I be wrong about [specific pattern/relationship]?"
 
 ### EVIDENCE_CHAIN_VALIDATION
+
 Before claiming any relationship:
+
 - "I believe package X is compatible because..." → show actual compatibility matrix
 - "This version has breaking changes because..." → cite official changelog
 - "Migration effort is Y hours because..." → show evidence from similar migrations
 
 ### TOOL_EFFICIENCY_PROTOCOL
+
 - Batch multiple WebSearch calls for related packages
 - Use parallel Read operations for package.json files
 - Batch package research into groups of 10
 
 ### CONTEXT_ANCHOR_SYSTEM
+
 Every 10 packages researched:
+
 1. Re-read the original task description
 2. Verify the current operation aligns with original goals
 3. Update the `Current Focus` in `## Progress` section
@@ -46,6 +53,7 @@ Build package inventory in `.ai/workspace/analysis/frontend-package-upgrade-anal
 ### PHASE 1A: INITIALIZATION AND PACKAGE DISCOVERY
 
 Initialize analysis file with:
+
 - `## Metadata` - Original prompt and task description
 - `## Progress` - Track phase, items processed, total items
 - `## Package Inventory` - All package.json files and dependencies
@@ -55,13 +63,15 @@ Initialize analysis file with:
 - `## Upgrade Strategy` - Phased migration plan
 
 **Find all package.json files**:
+
 ```
-src/PlatformExampleAppWeb/package.json
-src/PlatformExampleAppWeb/apps/*/package.json
-src/PlatformExampleAppWeb/libs/*/package.json
+src/Frontend/package.json
+src/Frontend/apps/*/package.json
+src/Frontend/libs/*/package.json
 ```
 
 For each package.json, document:
+
 - Project Name & Location
 - Framework Version
 - Dependencies (categorized: Framework, UI, Build Tools, Testing, Utilities)
@@ -72,6 +82,7 @@ Create **Master Package List** consolidating all unique packages.
 ### PHASE 1B: PACKAGE USAGE ANALYSIS
 
 For each unique package, analyze codebase usage:
+
 - **Projects Using**: Which projects depend on this
 - **Import Count**: Number of files importing
 - **Key Usage Areas**: Where primarily used
@@ -87,22 +98,26 @@ For each unique package, analyze codebase usage:
 For EACH package in Master Package List:
 
 ### Latest Version Discovery
+
 - Search: "[package-name] npm latest version"
 - Check: https://www.npmjs.com/package/[package-name]
 - Extract: Latest stable version, release date, downloads
 
 ### Breaking Changes Research
+
 - Search: "[package-name] migration guide [old-version] to [new-version]"
 - Search: "[package-name] v[X] breaking changes"
 - Search: "[package-name] changelog"
 - GitHub: Check CHANGELOG.md, releases
 
 ### Ecosystem Compatibility
+
 - Angular version compatibility
 - Check peerDependencies
 - Cross-package dependencies
 
 Document:
+
 - Current vs. Latest versions
 - Version gap (major/minor/patch versions behind)
 - Breaking changes with migration steps
@@ -114,12 +129,14 @@ Document:
 ## PHASE 3: RISK ASSESSMENT & PRIORITIZATION
 
 ### Risk Categories
+
 - **Critical Risk**: 5+ major versions behind, framework packages, 50+ breaking changes
 - **High Risk**: 3-4 major versions, state management, 20-30 breaking changes
 - **Medium Risk**: 1-2 major versions, some breaking changes
 - **Low Risk**: Patch/minor updates, backward compatible
 
 ### Dependency Graph (Upgrade Order)
+
 1. Foundation packages (Node.js, TypeScript)
 2. Framework packages (Angular Core, CLI)
 3. Framework extensions (Material, RxJS)
@@ -164,6 +181,7 @@ Before marking complete, provide:
 **Overall Confidence**: [High 90-100% / Medium 70-89% / Low <70%]
 
 **Evidence Summary**:
+
 - All package.json files discovered: [count]
 - Web research completed: [X/Y packages]
 - Breaking changes documented: [count]
@@ -172,6 +190,7 @@ Before marking complete, provide:
 **Assumptions Made**: [List or "None"]
 
 **User Confirmation Needed**:
+
 - IF confidence < 90%: "Please verify [specific packages] before proceeding"
 - IF confidence >= 90%: "Analysis is comprehensive, ready for migration"
 
@@ -187,3 +206,8 @@ Before marking complete, provide:
 - **Evidence-Based Decisions**: Base ALL recommendations on actual research with sources cited
 - **Confidence Declaration**: Declare confidence level; if < 90%, request user confirmation
 - **Batch Processing**: Research packages in batches of 10
+
+## IMPORTANT Task Planning Notes
+
+- Always plan and break many small todo tasks
+- Always add a final review todo task to review the works done at the end to find any fix or enhancement needed

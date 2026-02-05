@@ -1,462 +1,133 @@
 ---
 name: react-performance
-description: Performance optimization for React web applications. Use when optimizing renders, implementing virtualization, memoizing components, or debugging performance issues.
+description: Apply when diagnosing slow renders, optimizing list rendering, or preventing unnecessary re-renders in React applications.
+version: 1.1.0
+tokens: ~950
+confidence: high
+sources:
+  - https://react.dev/learn/react-compiler
+  - https://react.dev/reference/react/memo
+  - https://react.dev/reference/react/useMemo
+  - https://react.dev/learn/render-and-commit
+last_validated: 2025-12-10
+next_review: 2025-12-24
+tags: [react, performance, optimization, frontend]
 ---
 
-# React Performance (Web)
+## When to Use
 
-## Problem Statement
+Apply when diagnosing slow renders, optimizing list rendering, or preventing unnecessary re-renders in React applications.
 
-React performance issues often stem from unnecessary re-renders, unoptimized lists, and expensive computations on the main thread. Understanding React's rendering behavior is key to building performant applications.
+## React Compiler (React 19+)
 
----
+**React Compiler automatically handles memoization for you.** If your project uses React Compiler (React 19.2+ with compiler enabled):
 
-## Pattern: Memoization
+- Manual `memo`, `useMemo`, and `useCallback` are often unnecessary
+- The compiler automatically prevents unnecessary re-renders
+- Profile first with React DevTools before adding manual optimizations
+- See [React Compiler docs](https://react.dev/learn/react-compiler) for setup
 
-### useMemo - Expensive Computations
+**When to still use manual optimization with React Compiler:**
+- Third-party libraries that require memoized props/callbacks
+- Edge cases where compiler cannot optimize (check React DevTools)
+- React 17-18 projects without compiler support
 
+**Without React Compiler** (or React 17-18), use the patterns below.
+
+## Patterns
+
+### Pattern 1: React.memo for Pure Components
 ```typescript
-// ✅ CORRECT: Memoize expensive calculation
-const sortedAndFilteredItems = useMemo(() => {
-  return items
-    .filter(item => item.active)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, 100);
-}, [items]);
+// Source: https://react.dev/reference/react/memo
+import { memo } from 'react';
 
-// ❌ WRONG: Recalculates every render
-const sortedAndFilteredItems = items
-  .filter(item => item.active)
-  .sort((a, b) => b.score - a.score);
+interface ItemProps {
+  id: string;
+  title: string;
+  onClick: (id: string) => void;
+}
 
-// ❌ WRONG: Memoizing simple access (overhead > benefit)
-const userName = useMemo(() => user.name, [user.name]);
-```
-
-**When to use useMemo:**
-- Array transformations (filter, sort, map chains)
-- Object creation passed to memoized children
-- Computations with O(n) or higher complexity
-
-### useCallback - Stable Function References
-
-```typescript
-// ✅ CORRECT: Stable callback for child props
-const handleClick = useCallback((id: string) => {
-  setSelectedId(id);
-}, []);
-
-// Pass to memoized child
-<MemoizedItem onClick={handleClick} />
-
-// ❌ WRONG: useCallback with unstable deps
-const handleClick = useCallback((id: string) => {
-  doSomething(unstableObject); // unstableObject changes every render
-}, [unstableObject]); // Defeats the purpose
-```
-
-**When to use useCallback:**
-- Callbacks passed to memoized children
-- Callbacks in dependency arrays
-- Event handlers that would cause child re-renders
-
----
-
-## Pattern: React.memo
-
-```typescript
-// Wrap components that receive stable props
-const ItemCard = memo(function ItemCard({
-  item,
-  onSelect
-}: Props) {
-  return (
-    <div onClick={() => onSelect(item.id)}>
-      <h3>{item.name}</h3>
-      <p>{item.price}</p>
-    </div>
-  );
+const ListItem = memo(function ListItem({ id, title, onClick }: ItemProps) {
+  return <li onClick={() => onClick(id)}>{title}</li>;
 });
 
-// Custom comparison for complex props
-const ItemCard = memo(
-  function ItemCard({ item, onSelect }: Props) {
-    // ...
-  },
-  (prevProps, nextProps) => {
-    // Return true if props are equal (skip re-render)
-    return (
-      prevProps.item.id === nextProps.item.id &&
-      prevProps.item.price === nextProps.item.price
-    );
-  }
-);
+// Only re-renders if props actually change
 ```
 
-**When to use React.memo:**
-- List item components
-- Components receiving stable primitive props
-- Components that render frequently but rarely change
-
-**When NOT to use:**
-- Components that always receive new props
-- Simple components (overhead > benefit)
-- Root-level pages
-
----
-
-## Pattern: List Virtualization
-
-For long lists, render only visible items using react-window or react-virtualized.
-
+### Pattern 2: useMemo for Expensive Calculations
 ```typescript
-import { FixedSizeList } from 'react-window';
+// Source: https://react.dev/reference/react/useMemo
+const filteredAndSorted = useMemo(() => {
+  return items
+    .filter(item => item.status === 'active')
+    .sort((a, b) => b.priority - a.priority);
+}, [items]); // Only recalculate when items change
+```
 
-function VirtualizedList({ items }: { items: Item[] }) {
-  const Row = ({ index, style }: { index: number; style: React.CSSProperties }) => (
-    <div style={style}>
-      <ItemCard item={items[index]} />
+### Pattern 3: useCallback for Stable Handlers
+```typescript
+// Source: https://react.dev/reference/react/useCallback
+const handleDelete = useCallback((id: string) => {
+  setItems(prev => prev.filter(item => item.id !== id));
+}, []); // Stable reference, safe for memo'd children
+```
+
+### Pattern 4: Virtualization for Long Lists
+```typescript
+// Source: https://tanstack.com/virtual/latest
+import { useVirtualizer } from '@tanstack/react-virtual';
+
+function VirtualList({ items }: { items: Item[] }) {
+  const parentRef = useRef<HTMLDivElement>(null);
+  const virtualizer = useVirtualizer({
+    count: items.length,
+    getScrollElement: () => parentRef.current,
+    estimateSize: () => 50,
+  });
+
+  return (
+    <div ref={parentRef} style={{ height: 400, overflow: 'auto' }}>
+      <div style={{ height: virtualizer.getTotalSize() }}>
+        {virtualizer.getVirtualItems().map(row => (
+          <div key={row.key} style={{ transform: `translateY(${row.start}px)` }}>
+            {items[row.index].name}
+          </div>
+        ))}
+      </div>
     </div>
   );
-
-  return (
-    <FixedSizeList
-      height={600}
-      width="100%"
-      itemCount={items.length}
-      itemSize={80}
-    >
-      {Row}
-    </FixedSizeList>
-  );
-}
-
-// Variable height items
-import { VariableSizeList } from 'react-window';
-
-function VariableList({ items }: { items: Item[] }) {
-  const getItemSize = (index: number) => {
-    return items[index].expanded ? 200 : 80;
-  };
-
-  return (
-    <VariableSizeList
-      height={600}
-      width="100%"
-      itemCount={items.length}
-      itemSize={getItemSize}
-    >
-      {Row}
-    </VariableSizeList>
-  );
 }
 ```
 
-**When to virtualize:**
-- Lists with 100+ items
-- Complex item components
-- Scrollable containers with many children
-
----
-
-## Pattern: Zustand Selector Optimization
-
-**Problem:** Selecting entire store causes re-render on any state change.
-
+### Pattern 5: Lazy Loading Components
 ```typescript
-// ❌ WRONG: Re-renders on ANY store change
-const store = useAppStore();
-// or
-const { items, loading, filters, ... } = useAppStore();
-
-// ✅ CORRECT: Only re-renders when selected values change
-const items = useAppStore((s) => s.items);
-const loading = useAppStore((s) => s.loading);
-
-// ✅ CORRECT: Multiple values with shallow comparison
-import { useShallow } from 'zustand/react/shallow';
-
-const { items, loading } = useAppStore(
-  useShallow((s) => ({
-    items: s.items,
-    loading: s.loading
-  }))
-);
-```
-
----
-
-## Pattern: Avoiding Re-Renders
-
-### Object/Array Stability
-
-```typescript
-// ❌ WRONG: New object every render
-<ChildComponent style={{ padding: 10 }} />
-<ChildComponent config={{ enabled: true }} />
-
-// ✅ CORRECT: Stable reference
-const style = useMemo(() => ({ padding: 10 }), []);
-const config = useMemo(() => ({ enabled: true }), []);
-
-<ChildComponent style={style} />
-<ChildComponent config={config} />
-
-// ✅ CORRECT: Or define outside component
-const style = { padding: 10 };
-
-function Parent() {
-  return <ChildComponent style={style} />;
-}
-```
-
-### Children Stability
-
-```typescript
-// ❌ WRONG: Inline function creates new element each render
-<Parent>
-  {() => <Child />}
-</Parent>
-
-// ✅ CORRECT: Stable element
-const child = useMemo(() => <Child />, [deps]);
-<Parent>{child}</Parent>
-```
-
----
-
-## Pattern: Code Splitting
-
-```typescript
+// Source: https://react.dev/reference/react/lazy
 import { lazy, Suspense } from 'react';
 
-// Lazy load components
-const Dashboard = lazy(() => import('./pages/Dashboard'));
-const Settings = lazy(() => import('./pages/Settings'));
+const HeavyChart = lazy(() => import('./HeavyChart'));
 
-function App() {
+function Dashboard() {
   return (
-    <Suspense fallback={<Loading />}>
-      <Routes>
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/settings" element={<Settings />} />
-      </Routes>
+    <Suspense fallback={<Spinner />}>
+      <HeavyChart data={data} />
     </Suspense>
   );
 }
-
-// Named exports
-const Dashboard = lazy(() =>
-  import('./pages/Dashboard').then(module => ({
-    default: module.Dashboard
-  }))
-);
 ```
 
----
+## Anti-Patterns
 
-## Pattern: Debouncing and Throttling
+- **Premature optimization** - Measure first with React DevTools Profiler
+- **memo everything** - Only memo components that receive same props often
+- **useMemo for simple values** - Overhead > benefit for trivial calculations
+- **Inline objects/arrays in JSX** - Creates new reference every render
+- **Manual memo with React Compiler** - Redundant if compiler is enabled
 
-```typescript
-import { useMemo } from 'react';
-import { debounce, throttle } from 'lodash-es';
+## Verification Checklist
 
-// Debounce - wait until user stops typing
-function SearchInput({ onSearch }: { onSearch: (query: string) => void }) {
-  const debouncedSearch = useMemo(
-    () => debounce(onSearch, 300),
-    [onSearch]
-  );
-
-  return (
-    <input
-      type="text"
-      onChange={(e) => debouncedSearch(e.target.value)}
-    />
-  );
-}
-
-// Throttle - limit how often function runs
-function InfiniteScroll({ onLoadMore }: { onLoadMore: () => void }) {
-  const throttledLoad = useMemo(
-    () => throttle(onLoadMore, 1000),
-    [onLoadMore]
-  );
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (nearBottom()) {
-        throttledLoad();
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [throttledLoad]);
-
-  return <div>...</div>;
-}
-```
-
----
-
-## Pattern: Image Optimization
-
-```typescript
-// Lazy load images
-<img
-  src={imageUrl}
-  loading="lazy"
-  alt="Description"
-/>
-
-// With intersection observer for more control
-function LazyImage({ src, alt }: { src: string; alt: string }) {
-  const [isVisible, setIsVisible] = useState(false);
-  const imgRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      { rootMargin: '100px' }
-    );
-
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  return (
-    <div ref={imgRef}>
-      {isVisible ? (
-        <img src={src} alt={alt} />
-      ) : (
-        <div className="placeholder" />
-      )}
-    </div>
-  );
-}
-
-// Next.js Image component (if using Next.js)
-import Image from 'next/image';
-
-<Image
-  src={imageUrl}
-  alt="Description"
-  width={400}
-  height={300}
-  placeholder="blur"
-  blurDataURL={blurHash}
-/>
-```
-
----
-
-## Pattern: Web Workers for Heavy Computation
-
-```typescript
-// worker.ts
-self.onmessage = (e: MessageEvent<{ data: number[] }>) => {
-  const result = heavyComputation(e.data.data);
-  self.postMessage(result);
-};
-
-// Component
-function DataProcessor({ data }: { data: number[] }) {
-  const [result, setResult] = useState(null);
-
-  useEffect(() => {
-    const worker = new Worker(new URL('./worker.ts', import.meta.url));
-
-    worker.onmessage = (e) => {
-      setResult(e.data);
-    };
-
-    worker.postMessage({ data });
-
-    return () => worker.terminate();
-  }, [data]);
-
-  return result ? <Results data={result} /> : <Loading />;
-}
-```
-
----
-
-## Pattern: Detecting Re-Renders
-
-### React DevTools Profiler
-
-1. Open React DevTools
-2. Go to Profiler tab
-3. Click record, interact, stop
-4. Review "Flamegraph" for render times
-5. Look for components rendering unnecessarily
-
-### why-did-you-render
-
-```typescript
-// Setup in development
-import React from 'react';
-
-if (process.env.NODE_ENV === 'development') {
-  const whyDidYouRender = require('@welldone-software/why-did-you-render');
-  whyDidYouRender(React, {
-    trackAllPureComponents: true,
-  });
-}
-
-// Mark specific component for tracking
-ItemCard.whyDidYouRender = true;
-```
-
-### Console Logging
-
-```typescript
-// Quick check for re-renders
-function ItemCard({ item }: Props) {
-  console.log('ItemCard render:', item.id);
-  // ...
-}
-```
-
----
-
-## Performance Checklist
-
-Before shipping:
-
-- [ ] Large lists are virtualized
-- [ ] List items are memoized with `React.memo`
-- [ ] Callbacks passed to items use `useCallback`
-- [ ] Zustand selectors are specific (not whole store)
-- [ ] Images use lazy loading
-- [ ] Heavy routes are code-split
-- [ ] No inline object/function props to memoized children
-- [ ] Profiler shows no unnecessary re-renders
-
----
-
-## Common Issues
-
-| Issue | Solution |
-|-------|----------|
-| List scroll lag | Virtualize list, memoize items |
-| Component re-renders too often | Check selector specificity, memoize props |
-| Slow initial render | Code split, reduce bundle size |
-| Memory growing | Check for event listener cleanup, state accumulation |
-| UI freezes on interaction | Move computation to web worker or defer |
-
----
-
-## Relationship to Other Skills
-
-- **react-zustand-patterns**: Selector optimization patterns
-- **react-async-patterns**: Proper async handling prevents re-render loops
+- [ ] Profiled with React DevTools before optimizing
+- [ ] Checked if React Compiler is enabled in project
+- [ ] memo'd components actually receive stable props
+- [ ] Lists with 100+ items use virtualization
+- [ ] Heavy components lazy loaded
+- [ ] No inline object/array props to memo'd children

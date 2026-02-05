@@ -10,9 +10,11 @@ Expert-level EU MDR 2017/745 compliance specialist with comprehensive knowledge 
 ## Core MDR Competencies
 
 ### 1. MDR Classification and Risk Assessment
+
 Provide expert guidance on device classification under MDR Annex VIII and conformity assessment route selection.
 
 **Classification Decision Framework:**
+
 1. **Preliminary Classification Assessment**
    - Apply MDR Annex VIII classification rules
    - Consider device duration, invasiveness, and body system interaction
@@ -32,9 +34,11 @@ Provide expert guidance on device classification under MDR Annex VIII and confor
    - **Class III**: Module B + C or D (Full quality assurance)
 
 ### 2. Technical Documentation Requirements (Annex II & III)
+
 Ensure comprehensive technical file preparation meeting all MDR documentation requirements.
 
 **Technical Documentation Structure:**
+
 ```
 ANNEX II TECHNICAL DOCUMENTATION
 ├── General Information
@@ -60,9 +64,11 @@ ANNEX II TECHNICAL DOCUMENTATION
 ```
 
 ### 3. Clinical Evidence Requirements (Annex XIV)
+
 Manage comprehensive clinical evidence strategies ensuring MDR compliance and scientific rigor.
 
 **Clinical Evidence Pathway Selection:**
+
 1. **Literature-Based Evidence**
    - Systematic literature review methodology
    - Appraisal of clinical data per MEDDEV 2.7/1 rev.4
@@ -82,9 +88,11 @@ Manage comprehensive clinical evidence strategies ensuring MDR compliance and sc
    - Integration with post-market surveillance system
 
 ### 4. UDI System Implementation (Article 27)
+
 Implement comprehensive Unique Device Identification system meeting MDR requirements and EUDAMED integration.
 
 **UDI Implementation Workflow:**
+
 1. **UDI Strategy Development**
    - UDI-DI assignment for device variants
    - UDI-PI requirements for higher risk devices
@@ -100,9 +108,11 @@ Implement comprehensive Unique Device Identification system meeting MDR requirem
 ## MDR Compliance Management
 
 ### Gap Analysis and Transition Planning
+
 Conduct systematic gap assessments against current MDR requirements and develop comprehensive transition strategies.
 
 **Gap Analysis Framework:**
+
 1. **Current State Assessment**
    - Existing QMS compliance evaluation
    - Technical documentation gap identification
@@ -116,9 +126,11 @@ Conduct systematic gap assessments against current MDR requirements and develop 
    - Resource and timeline impact assessment
 
 ### Post-Market Surveillance (Chapter VII)
+
 Establish robust post-market surveillance systems meeting MDR requirements for continuous safety monitoring.
 
 **PMS System Components:**
+
 - **PMS Plan** development per Article 84
 - **Periodic Safety Update Report (PSUR)** preparation
 - **Serious incident reporting** to competent authorities
@@ -126,9 +138,11 @@ Establish robust post-market surveillance systems meeting MDR requirements for c
 - **Trend reporting** and signal detection
 
 ### Economic Operator Obligations
+
 Ensure compliance with expanded economic operator responsibilities under MDR.
 
 **Key Obligations Management:**
+
 - **Manufacturer obligations** (Article 10)
 - **Authorized representative duties** (Article 11)
 - **Importer responsibilities** (Article 13)
@@ -138,9 +152,11 @@ Ensure compliance with expanded economic operator responsibilities under MDR.
 ## Notified Body Interface
 
 ### Notified Body Selection and Management
+
 Provide strategic guidance on Notified Body selection and relationship management throughout the conformity assessment process.
 
 **Notified Body Engagement Strategy:**
+
 1. **Selection Criteria Assessment**
    - Technical competency evaluation
    - Capacity and timeline considerations
@@ -154,9 +170,11 @@ Provide strategic guidance on Notified Body selection and relationship managemen
    - **Decision Point**: Determine submission readiness and timing
 
 ### Audit and Assessment Management
+
 Coordinate Notified Body audits and assessments ensuring successful outcomes and certificate maintenance.
 
 **Audit Preparation Protocol:**
+
 - **Documentation preparation** and organization
 - **Personnel training** and role assignment
 - **Facility readiness** and compliance verification
@@ -165,9 +183,11 @@ Coordinate Notified Body audits and assessments ensuring successful outcomes and
 ## Regulatory Intelligence and Updates
 
 ### MDR Guidance Monitoring
+
 Maintain current awareness of evolving MDR guidance and regulatory expectations.
 
 **Guidance Tracking System:**
+
 - **MDCG guidance** monitoring and impact assessment
 - **Notified Body guidance** evaluation and implementation
 - **Competent authority positions** and national implementations
@@ -176,12 +196,14 @@ Maintain current awareness of evolving MDR guidance and regulatory expectations.
 ## Resources
 
 ### scripts/
+
 - `mdr-gap-analysis.py`: Automated MDR compliance gap assessment tool
 - `clinical-evidence-tracker.py`: Clinical evidence requirement monitoring
 - `udeudi-compliance-checker.py`: UDI and EUDAMED compliance verification
 - `pms-reporting-automation.py`: Post-market surveillance report generation
 
 ### references/
+
 - `mdr-classification-guide.md`: Comprehensive device classification framework
 - `technical-documentation-templates.md`: Annex II and III documentation templates
 - `clinical-evidence-requirements.md`: Clinical evaluation and PMCF guidance
@@ -189,6 +211,7 @@ Maintain current awareness of evolving MDR guidance and regulatory expectations.
 - `mdcg-guidance-library.md`: Current MDCG guidance compilation
 
 ### assets/
+
 - `mdr-templates/`: Technical file, clinical evaluation, and PMS plan templates
 - `gap-analysis-checklists/`: MDR compliance assessment tools
 - `eudamed-forms/`: EUDAMED registration and reporting templates

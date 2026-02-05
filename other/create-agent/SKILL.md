@@ -1,140 +1,111 @@
 ---
 name: create-agent
-description: Quickly create a new specialized subagent when needed. Use when you need a specialist that doesn't exist yet for a specific task domain.
-allowed-tools: [Write, Read, Grep, Glob]
+description: Create a new custom subagent for Task() delegation. Use when adding a reusable agent prompt, when the user asks to "add an agent", or when a complex workflow should be delegated to a specialized agent.
 ---
 
-# Create New Agent
+# Creating a New Agent
 
-Quickly scaffold a new specialized subagent when current agents don't fit the task.
+## Official Documentation
 
-## When to Use
+- **Primary**: https://code.claude.com/docs/en/sub-agents.md
+- **Best Practices**: https://code.claude.com/docs/en/best-practices.md (section: "Create custom subagents")
 
-- Need specialist for task not covered by existing 6 agents
-- Task requires deep domain expertise
-- Creating configuration/meta work agent
-- Temporary specialist for one-time complex task
+## File Location
 
-## Current Agents (Don't Recreate)
+Create `.claude/agents/<agent-name>.md`
 
-- api-specialist (🟡) - Elysia + TypeBox
-- database-specialist (🔵) - Drizzle ORM + PostgreSQL
-- frontend-specialist (🟢) - React + Vite + Three.js
-- testing-specialist (🔴) - Bun Test + Playwright
-- security-specialist (🟠) - Privy Auth + Security
-- config-specialist (⚙️) - .claude configuration
-
-## Agent Template
+## Agent File Format
 
 ```yaml
 ---
-name: [agent-name]
-description: [EMOJI] [CAPS NAME] - [one-line description]. Use [PROACTIVELY/when] for [task types]. [What it handles].
-tools: [Read, Write, Edit, Bash, Grep, Glob]
-model: sonnet
+name: agent-name                    # Required: lowercase-with-dashes
+description: What the agent does and when to delegate to it. Be specific about trigger conditions.
+# Optional fields below:
+tools: Read, Grep, Glob, Bash       # Comma-separated; inherits all if omitted
+disallowedTools: Edit, Write        # Explicitly deny tools
+model: sonnet                       # sonnet, opus, haiku, or inherit (default)
+permissionMode: default             # default, acceptEdits, dontAsk, bypassPermissions, plan
+skills: skill-a, skill-b            # Skills to preload into agent context
 ---
 
-# [EMOJI] [Agent Name]
+You are a [role description].
 
-[Detailed description of agent's purpose]
+## Your Task
 
-## Research-First Protocol ⚠️
+When invoked:
+1. First step
+2. Second step
+3. Third step
 
-**CRITICAL: Writing code is your LAST priority**
+## Guidelines
 
-### Workflow Order (NEVER skip steps):
-1. **RESEARCH** - Use deepwiki for ANY external libraries/frameworks (Claude's knowledge is outdated)
-2. **GATHER CONTEXT** - Read existing files, Grep patterns, Glob to find code
-3. **REUSE** - Triple check if existing code already does this
-4. **VERIFY** - Ask user for clarification on ANY assumptions
-5. **SIMPLIFY** - Keep it simple, never over-engineer
-6. **CODE** - Only write new code after exhausting steps 1-5
+- Specific instruction
+- Another instruction
 
-### Before Writing ANY Code:
-- ✅ Used deepwiki to research latest API/library patterns?
-- ✅ Read all relevant existing files?
-- ✅ Searched codebase for similar functionality?
-- ✅ Asked user to verify approach?
-- ✅ Confirmed simplest possible solution?
-- ❌ If ANY answer is NO, DO NOT write code yet
+## Output Format
 
-### Key Principles:
-- **Reuse > Create** - Always prefer editing existing files over creating new ones
-- **Simple > Complex** - Avoid over-engineering
-- **Ask > Assume** - When uncertain, ask the user
-- **Research > Memory** - Use deepwiki, don't trust outdated knowledge
-
-## Responsibilities
-
-1. **[Primary Responsibility]**
-   - [Specific task]
-   - [Specific task]
-
-2. **[Secondary Responsibility]**
-   - [Specific task]
-   - [Specific task]
-
-## Domain Expertise
-
-- [Technology/framework 1]
-- [Technology/framework 2]
-- [Pattern/concept 1]
-
-## When to Use This Agent
-
-- [Trigger scenario 1]
-- [Trigger scenario 2]
-- [Trigger scenario 3]
-
-## Workflow
-
-1. [Step 1]
-2. [Step 2]
-3. [Step 3]
+Describe expected output format.
 ```
 
-## Example Agents to Create
+## Built-in Subagent Types
 
-**Performance Specialist** (⚡)
-- Bundle optimization, lazy loading
-- React.memo, useMemo, useCallback
-- Three.js optimization, LOD, instancing
-- Lighthouse scores, Core Web Vitals
+Before creating a custom agent, consider if a built-in type suffices:
 
-**Documentation Specialist** (📚)
-- README updates, API docs
-- Code comments, JSDoc
-- Architecture diagrams
-- Changelog maintenance
+| Type | Purpose | Tools |
+|------|---------|-------|
+| `Explore` | Fast codebase search, file discovery | Read-only |
+| `Plan` | Architecture, implementation planning | Read-only |
+| `Bash` | Command execution | Bash only |
+| `general-purpose` | Complex multi-step tasks | All tools |
 
-**Migration Specialist** (🔄)
-- Express → Elysia migrations
-- Database schema changes
-- Dependency updates
-- Breaking change handling
+## Design Principles
 
-## Creating the Agent
+**Focus**: One agent, one job. Don't create jack-of-all-trades agents.
 
-1. Choose emoji icon
-2. Define clear domain boundaries
-3. List specific technologies/frameworks
-4. Include Research-First Protocol
-5. Specify tools needed
-6. Save to `.claude/agents/[name].md`
+**Minimal Tools**: Grant only necessary tools. Read-only agents can't accidentally break things.
 
-## After Creation
+**Clear Workflow**: Numbered steps help the agent stay on track.
 
-The agent is immediately available:
+**Good Description**: Claude uses the description to decide when to delegate. Include:
+- What the agent specializes in
+- When to use it (trigger conditions)
+- "Use proactively when..." if appropriate
+
+## Example: Read-Only Reviewer
+
+```yaml
+---
+name: lore-checker
+description: Verify lore consistency across campaign materials. Use when adding new lore, after writing session logs, or when the user asks to check for contradictions.
+tools: Read, Grep, Glob
+model: haiku
+---
+
+You are a lore consistency checker for TTRPG campaigns.
+
+## Your Task
+
+1. Identify the new or modified lore element
+2. Search for related existing lore using Grep
+3. Read relevant files
+4. Report any contradictions or inconsistencies
+5. Suggest resolutions if conflicts found
+
+## Output Format
+
+**Checked**: [element being verified]
+**Related Files**: [list of files examined]
+**Status**: Consistent / Conflicts Found
+**Details**: [explanation]
 ```
-I need to [task] → Use [agent-name] agent
-```
 
-No restart needed - agents are loaded on demand.
+## Checklist
 
-## Best Practices
+Before committing a new agent:
 
-- **Specific domain** - Don't make generic "helper" agents
-- **Clear triggers** - When should this agent be used?
-- **Tool selection** - Only tools needed for the domain
-- **Temporary OK** - Can delete agent after one-time use
-- **Evolve existing** - Update existing agents rather than create new ones when possible
+1. [ ] Name is lowercase-with-dashes
+2. [ ] Description explains what AND when to delegate
+3. [ ] Tools are minimal for the task
+4. [ ] Workflow steps are clear and numbered
+5. [ ] Output format is specified
+6. [ ] Tested via Task() delegation

@@ -18,11 +18,13 @@ metadata:
 Expert acquisition playbook for Series A+ startups scaling internationally (EU/US/Canada) with hybrid PLG/Sales-Led motion.
 
 ## Keywords
+
 demand generation, paid media, paid ads, LinkedIn ads, Google ads, Meta ads, CAC, customer acquisition cost, lead generation, MQL, SQL, pipeline generation, acquisition strategy, performance marketing, paid social, paid search, partnerships, affiliate marketing, SEO strategy, HubSpot campaigns, marketing automation, B2B marketing, SaaS marketing
 
 ## Role Coverage
 
 This skill serves:
+
 - **Demand Generation Manager** - Multi-channel campaigns, pipeline generation
 - **Paid Media/Performance Marketer** - Paid search/social/display optimization
 - **SEO Manager** - Organic acquisition and technical SEO
@@ -56,6 +58,7 @@ This skill serves:
 **TOFU (Awareness)** → **MOFU (Consideration)** → **BOFU (Decision)** → **Handoff to Sales/Product**
 
 #### TOFU Tactics
+
 - Paid social (LinkedIn thought leadership, Meta awareness)
 - Display advertising (programmatic, retargeting)
 - Content syndication
@@ -64,6 +67,7 @@ This skill serves:
 - Target: Brand lift, site traffic, early-stage engagement
 
 #### MOFU Tactics
+
 - Paid search (solution keywords)
 - Retargeting campaigns
 - Gated content (eBooks, templates, webinars)
@@ -72,6 +76,7 @@ This skill serves:
 - Target: MQLs, demo requests, trial signups
 
 #### BOFU Tactics
+
 - Paid search (brand + competitor keywords)
 - Direct outreach campaigns
 - Free trial CTAs
@@ -114,6 +119,7 @@ Handoff Protocol:
    - Tag all assets (landing pages, emails, ads) with campaign ID
 
 2. **UTM Parameter Structure** (critical for attribution)
+
    ```
    utm_source={channel}       // linkedin, google, facebook
    utm_medium={type}          // cpc, display, email, organic
@@ -136,6 +142,7 @@ Handoff Protocol:
 ### 1.4 International Expansion Considerations
 
 **EU Market Entry**:
+
 - GDPR compliance: Double opt-in for email, explicit consent tracking in HubSpot
 - Localization: Translate landing pages, ads, emails (DE, FR, ES priority)
 - Payment: Display prices in EUR
@@ -143,6 +150,7 @@ Handoff Protocol:
 - Paid channels: LinkedIn most effective for B2B EU, Google Ads second
 
 **US/Canada Market Entry**:
+
 - Messaging: Direct, ROI-focused, less formal than EU
 - Paid channels: Google Ads + LinkedIn equal priority
 - Partnerships: Industry associations, review sites (G2, Capterra)
@@ -150,6 +158,7 @@ Handoff Protocol:
 - Sales alignment: Faster sales cycles, need immediate lead follow-up
 
 **Budget Allocation** (Series A recommended):
+
 - EU: 40% LinkedIn, 25% Google, 20% SEO, 15% Partnerships
 - US/CA: 35% Google, 30% LinkedIn, 20% SEO, 15% Partnerships
 
@@ -159,18 +168,19 @@ Handoff Protocol:
 
 ### 2.1 Channel Strategy Matrix
 
-| Channel | Best For | CAC Benchmark | Conversion Rate | Series A Priority |
-|---------|----------|---------------|-----------------|-------------------|
-| **LinkedIn Ads** | B2B, Enterprise, ABM | $150-$400 | 0.5-2% | ⭐⭐⭐⭐⭐ |
-| **Google Search** | High-intent, BOFU | $80-$250 | 2-5% | ⭐⭐⭐⭐⭐ |
-| **Google Display** | Retargeting, awareness | $50-$150 | 0.3-1% | ⭐⭐⭐ |
-| **Meta (FB/IG)** | SMB, consumer-like products | $60-$200 | 1-3% | ⭐⭐⭐ |
-| **YouTube** | Product demos, brand | $100-$300 | 0.5-1.5% | ⭐⭐ |
-| **Reddit/Twitter** | Technical audiences | $40-$180 | 0.5-2% | ⭐⭐ |
+| Channel            | Best For                    | CAC Benchmark | Conversion Rate | Series A Priority |
+| ------------------ | --------------------------- | ------------- | --------------- | ----------------- |
+| **LinkedIn Ads**   | B2B, Enterprise, ABM        | $150-$400     | 0.5-2%          | ⭐⭐⭐⭐⭐        |
+| **Google Search**  | High-intent, BOFU           | $80-$250      | 2-5%            | ⭐⭐⭐⭐⭐        |
+| **Google Display** | Retargeting, awareness      | $50-$150      | 0.3-1%          | ⭐⭐⭐            |
+| **Meta (FB/IG)**   | SMB, consumer-like products | $60-$200      | 1-3%            | ⭐⭐⭐            |
+| **YouTube**        | Product demos, brand        | $100-$300     | 0.5-1.5%        | ⭐⭐              |
+| **Reddit/Twitter** | Technical audiences         | $40-$180      | 0.5-2%          | ⭐⭐              |
 
 ### 2.2 LinkedIn Ads Playbook (Primary B2B Channel)
 
 **Campaign Structure**:
+
 ```
 Account
 └─ Campaign Group: [Q2-2025-Enterprise-ABM]
@@ -186,6 +196,7 @@ Account
 ```
 
 **Targeting Best Practices**:
+
 - **Company Size**: 50-5000 employees (Series A sweet spot)
 - **Job Titles**: Director+, VP+, C-level (use LinkedIn's precise targeting)
 - **Industries**: Software, SaaS, Tech Services
@@ -193,12 +204,14 @@ Account
 - **Budget**: Start $50/day per campaign, scale 20% weekly if CAC < target
 
 **Creative Frameworks**:
+
 1. **Thought Leadership** - Industry insights, no product pitch
 2. **Social Proof** - Customer logos, testimonials, case study snippets
 3. **Problem-Solution** - Pain point + your solution in 3 seconds
 4. **Demo-First** - Show product immediately, skip fluff
 
 **LinkedIn Lead Gen Forms vs. Landing Pages**:
+
 - **Lead Gen Forms**: Higher conversion (2-3x), lower quality, use for TOFU/MOFU
 - **Landing Pages**: Lower conversion, higher quality, use for BOFU/demo requests
 - **HubSpot Sync**: Connect LinkedIn Lead Gen Forms via native integration
@@ -206,6 +219,7 @@ Account
 ### 2.3 Google Ads Playbook (High-Intent Capture)
 
 **Campaign Types Priority**:
+
 1. **Search - Brand** (highest priority, protect brand terms)
 2. **Search - Competitor** (steal market share)
 3. **Search - Solution** (problem-aware buyers)
@@ -213,6 +227,7 @@ Account
 5. **Display - Retargeting** (re-engage warm traffic)
 
 **Search Campaign Structure**:
+
 ```
 Campaign: [Search-Solution-Keywords]
 ├─ Ad Group: [project management software]
@@ -228,6 +243,7 @@ Campaign: [Search-Solution-Keywords]
 ```
 
 **Keyword Strategy**:
+
 - **Brand Terms**: Exact match, bid high, protect brand
 - **Competitor Terms**: "[Competitor] alternative", "[Competitor] vs [You]"
 - **Solution Terms**: "best [category] software", "top [category] tools"
@@ -235,12 +251,14 @@ Campaign: [Search-Solution-Keywords]
 - **Negative Keywords**: Maintain list of 100+ (free, cheap, jobs, career, reviews)
 
 **Bid Strategy** (2025 best practice):
+
 - New campaigns: Start Manual CPC for control
 - After 50+ conversions: Switch to Target CPA
 - After 100+ conversions: Test Maximize Conversions with tCPA
 - EU markets: Bid 15-20% higher for same quality
 
 **Ad Copy Framework** (Responsive Search Ads):
+
 ```
 Headlines (15 required):
 - H1-3: Value props (Save 10 hours/week, Trusted by 500+ teams)
@@ -259,6 +277,7 @@ Descriptions (4 required):
 ### 2.4 Meta Ads Playbook (SMB/Lower ACV)
 
 **When to Use Meta**:
+
 - ✅ Product ACV <$10k
 - ✅ Visual product (UI, consumer-facing)
 - ✅ SMB/prosumer audience
@@ -266,6 +285,7 @@ Descriptions (4 required):
 - ❌ Enterprise/high ACV (use LinkedIn)
 
 **Campaign Setup**:
+
 ```
 Campaign Objective: [Conversions]
 ├─ Ad Set 1: [Lookalike - 1% of converters]
@@ -277,11 +297,13 @@ Campaign Objective: [Conversions]
 ```
 
 **Audience Strategy**:
+
 1. **Core Audiences**: Interests (business tools, productivity, startups)
 2. **Lookalike**: 1% of purchasers/high-value leads
 3. **Retargeting**: 30-day website visitors, video viewers (75%+)
 
 **Creative Best Practices**:
+
 - Use video (1:1 or 9:16 for Stories)
 - First 3 seconds = hook (problem or result)
 - Show product UI in action
@@ -291,6 +313,7 @@ Campaign Objective: [Conversions]
 ### 2.5 Budget Allocation & Scaling
 
 **Initial Budget** (Series A, $30k-50k/month total):
+
 ```
 Channel            Budget    Expected Results
 ─────────────────────────────────────────────
@@ -304,12 +327,14 @@ TOTAL              $40k      370 MQLs, 48 SQLs, $833 avg CAC
 ```
 
 **Scaling Rules**:
+
 1. If CAC <target → Increase budget 20% weekly
 2. If CAC >target → Pause, optimize, relaunch
 3. If conversion rate drops >20% → Check landing page, offer fatigue
 4. Scale winners, kill losers fast (2-week test minimum)
 
 **HubSpot ROI Dashboard**:
+
 - Marketing → Reports → Create Custom Report
 - Metrics: Spend, Leads, MQLs, SQLs, CAC, ROAS, Pipeline $
 - Dimensions: Campaign, Channel, Region
@@ -322,6 +347,7 @@ TOTAL              $40k      370 MQLs, 48 SQLs, $833 avg CAC
 ### 3.1 Technical SEO Foundation (Must-Have)
 
 **Pre-Launch Checklist**:
+
 - [ ] XML sitemap submitted to Search Console
 - [ ] Robots.txt configured (allow crawling)
 - [ ] HTTPS enabled (SSL certificate)
@@ -332,6 +358,7 @@ TOTAL              $40k      370 MQLs, 48 SQLs, $833 avg CAC
 - [ ] Hreflang tags for international (en-US, en-GB, de-DE, etc.)
 
 **Technical Audit** (quarterly):
+
 ```
 1. Crawl site with Screaming Frog
 2. Check for:
@@ -347,6 +374,7 @@ TOTAL              $40k      370 MQLs, 48 SQLs, $833 avg CAC
 ### 3.2 Keyword Strategy Framework
 
 **Keyword Research Process**:
+
 1. **Seed Keywords** - Your product category (e.g., "project management software")
 2. **Use Tools** - Ahrefs, SEMrush, or free: Google Keyword Planner + Search Console
 3. **Analyze** - Volume, difficulty, intent, SERP features
@@ -355,24 +383,28 @@ TOTAL              $40k      370 MQLs, 48 SQLs, $833 avg CAC
 **Keyword Tiers**:
 
 **Tier 1: High-Intent BOFU** (target first)
+
 - "best [product category]"
 - "[product category] for [use case]"
 - "[competitor] alternative"
 - Volume: 100-1k/mo, Difficulty: Medium, Intent: Commercial
 
 **Tier 2: Solution-Aware MOFU**
+
 - "how to [solve problem]"
 - "[problem] solution"
 - "[use case] tools"
 - Volume: 500-5k/mo, Difficulty: Medium-High, Intent: Informational-Commercial
 
 **Tier 3: Problem-Aware TOFU**
+
 - "what is [concept]"
 - "[problem] examples"
 - "[industry] challenges"
 - Volume: 1k-10k/mo, Difficulty: High, Intent: Informational
 
 **International Keyword Research**:
+
 - Use Ahrefs/SEMrush with language filters
 - Translate keywords, don't just localize (cultural nuances matter)
 - EU: Higher trust in localized content (domain.de > domain.com/de)
@@ -381,6 +413,7 @@ TOTAL              $40k      370 MQLs, 48 SQLs, $833 avg CAC
 ### 3.3 On-Page SEO Template
 
 **Page Optimization Checklist**:
+
 ```
 URL: [/best-project-management-software]
 Title Tag (60 chars): [Best Project Management Software 2025 | YourBrand]
@@ -410,6 +443,7 @@ CTA:
 ```
 
 **Content Refresh Schedule**:
+
 - Tier 1 pages: Update quarterly (rankings, pricing, features)
 - Tier 2 pages: Update semi-annually
 - Tier 3 pages: Update annually
@@ -420,32 +454,38 @@ CTA:
 **Link Acquisition Tactics** (in priority order):
 
 **1. Digital PR** (highest ROI)
+
 - Publish original research/data
 - Create industry reports
 - Pitch journalists (use HARO, Terkel, Featured)
 - Target: Industry blogs, tech publications
 
 **2. Guest Posting** (quality over quantity)
+
 - Target: Domain Authority (DA) 40+ sites
 - Avoid: Link farms, PBNs, paid links (Google penalty risk)
 - Anchor text: Branded (70%), topical (20%), exact match (10%)
 
 **3. Partnerships & Co-Marketing**
+
 - Partner with complementary SaaS tools
 - Create co-branded content
 - Exchange homepage links (footer or partner section)
 
 **4. Community Engagement**
+
 - Answer questions on Reddit, Quora
 - Participate in industry forums
 - Create tools/calculators → natural backlinks
 
 **5. Broken Link Building**
+
 - Find broken links on competitor sites
 - Offer your content as replacement
 - Tools: Ahrefs' Broken Backlinks report
 
 **Link Velocity** (avoid penalties):
+
 - Natural: 5-10 links/month for new sites
 - Aggressive: 20-30 links/month after 6 months
 - Monitor: Google Search Console for manual actions
@@ -455,24 +495,28 @@ CTA:
 **Content Types by Funnel Stage**:
 
 **TOFU (Awareness)**:
+
 - Blog posts: "Ultimate Guide to [Topic]"
 - Listicles: "Top 10 [Category]"
 - Industry reports: "[Industry] State of 2025"
 - Target: Broad keywords, thought leadership
 
 **MOFU (Consideration)**:
+
 - Comparison pages: "[Your Product] vs [Competitor]"
 - Best of lists: "Best [Category] for [Use Case]"
 - How-to guides: "How to [Solve Problem] with [Product]"
 - Target: Solution keywords, product education
 
 **BOFU (Decision)**:
+
 - Product pages: "[Product] Features & Pricing"
 - Case studies: "How [Customer] Achieved [Result]"
 - Landing pages: "Start Free Trial"
 - Target: Brand keywords, high-intent searches
 
 **Content Calendar** (Series A minimum):
+
 - TOFU: 4 posts/month (1 per week)
 - MOFU: 2 posts/month
 - BOFU: 1 post/month
@@ -481,12 +525,14 @@ CTA:
 ### 3.6 Local SEO (For Regional Offices)
 
 **Google Business Profile Setup** (per location):
+
 - Complete all fields: Name, address, phone, hours, category
 - Upload photos: Office, team, product (10+ images)
 - Collect reviews: Ask customers, automate via HubSpot workflow
 - Post updates: Weekly posts about company news, events
 
 **Local Citations** (US/Canada/EU):
+
 - Submit to: Yelp, Yellow Pages, local directories
 - NAP consistency: Name, Address, Phone identical everywhere
 - Industry directories: Software review sites (G2, Capterra)
@@ -500,6 +546,7 @@ CTA:
 **Partnership Tiers**:
 
 **Tier 1: Strategic Partnerships** (high impact, low volume)
+
 - Target: Complementary SaaS tools with overlapping ICPs
 - Structure: Co-marketing, product integrations, revenue share
 - Examples: Slack ↔ Asana, Shopify ↔ Klaviyo
@@ -507,6 +554,7 @@ CTA:
 - ROI: Very high (100+ leads/month after ramp)
 
 **Tier 2: Affiliate Partners** (scalable)
+
 - Target: Bloggers, review sites, industry influencers
 - Structure: Commission per sale (10-30% first year)
 - Platform: Use PartnerStack, Impact, or Rewardful
@@ -514,6 +562,7 @@ CTA:
 - ROI: Medium-High (depends on partner quality)
 
 **Tier 3: Referral Partners** (customer-driven)
+
 - Target: Your existing customers
 - Structure: Referral bonus ($500-$1k per SQL)
 - Platform: Built into HubSpot or standalone (Friendbuy)
@@ -521,6 +570,7 @@ CTA:
 - ROI: Medium (5-10% of customers refer)
 
 **Tier 4: Marketplace Listings** (distribution)
+
 - Target: Shopify App Store, Salesforce AppExchange, HubSpot Marketplace
 - Structure: Free listing + revenue share
 - Effort: Medium (initial listing, ongoing updates)
@@ -529,6 +579,7 @@ CTA:
 ### 4.2 Partnership Playbook
 
 **Step 1: Identify Partners**
+
 ```
 Criteria:
 - Similar ICP (overlapping audience, no direct competition)
@@ -542,6 +593,7 @@ Research:
 ```
 
 **Step 2: Outreach Template**
+
 ```
 Subject: [YourBrand] ↔ [TheirBrand] Partnership Idea
 
@@ -563,6 +615,7 @@ Best,
 ```
 
 **Step 3: Partnership Agreement**
+
 - Define scope (integration depth, marketing commitment)
 - Revenue model (rev share %, referral fees, co-selling)
 - Success metrics (leads, pipeline, revenue)
@@ -570,11 +623,13 @@ Best,
 - Exit clause (90-day notice)
 
 **Step 4: Activation & Enablement**
+
 - Create co-branded assets (landing page, webinar deck, one-pager)
 - Train partner sales team (product demo, pitch deck, objection handling)
 - Set up tracking (UTM parameters, partner portal in HubSpot)
 
 **Step 5: Ongoing Management**
+
 - Quarterly business reviews (QBRs)
 - Monthly check-ins (pipeline, blockers)
 - Co-marketing calendar (1-2 activities/quarter)
@@ -583,12 +638,14 @@ Best,
 ### 4.3 Affiliate Program Setup
 
 **Platform Selection**:
+
 - **PartnerStack** - Best for B2B SaaS, native integrations
 - **Impact** - Enterprise-grade, high control
 - **Rewardful** - Lightweight, Stripe integration
 - **FirstPromoter** - Budget-friendly, good analytics
 
 **Commission Structure** (Series A typical):
+
 ```
 Tier 1: Influencers/Publishers
 - 30% recurring for 12 months
@@ -605,12 +662,14 @@ Tier 3: Customers (Referral Program)
 ```
 
 **Recruitment Strategy**:
+
 1. **Outbound**: Find industry bloggers, YouTubers, newsletter writers
 2. **Inbound**: "Become an Affiliate" page, promote in product
 3. **Events**: Recruit at conferences, meetups
 4. **Communities**: Reddit, LinkedIn groups, Slack communities
 
 **Affiliate Enablement Kit**:
+
 - Brand assets (logos, product screenshots)
 - Pre-written content (blog post templates, social posts)
 - Tracking links (unique UTM codes per affiliate)
@@ -619,6 +678,7 @@ Tier 3: Customers (Referral Program)
 ### 4.4 Co-Marketing Campaigns
 
 **Joint Webinar Playbook**:
+
 ```
 Planning (6 weeks out):
 - Define topic (audience pain point, not product pitch)
@@ -645,6 +705,7 @@ Follow-up (1 week after):
 ```
 
 **Other Co-Marketing Tactics**:
+
 - **Co-branded Content**: eBook, report, guide
 - **Case Study**: Joint customer success story
 - **Bundle Offer**: "Buy [YourProduct] + [TheirProduct], save 20%"
@@ -654,6 +715,7 @@ Follow-up (1 week after):
 ### 4.5 HubSpot Partner Tracking
 
 **Setup**:
+
 1. **Create Partner Property**
    - Settings → Properties → Create "Partner Source" dropdown
    - Values: Partner A, Partner B, Affiliate Network, etc.
@@ -679,21 +741,25 @@ Follow-up (1 week after):
 **Model Selection** (use multi-touch for hybrid motion):
 
 **First-Touch** - Credit to first interaction
+
 - Use case: Awareness campaigns, brand building
 - Pro: Shows what drives discovery
 - Con: Ignores nurturing influence
 
 **Last-Touch** - Credit to last interaction before conversion
+
 - Use case: Direct response, BOFU campaigns
 - Pro: Shows what closes deals
 - Con: Ignores earlier touchpoints
 
 **Multi-Touch (W-Shaped)** - Credit to first, last, and middle (40-20-40 split)
+
 - Use case: Hybrid PLG/Sales-Led (recommended for Series A)
 - Pro: Full-funnel view
 - Con: More complex to explain to stakeholders
 
 **HubSpot Setup**:
+
 - Marketing → Reports → Attribution → Select Model
 - Default: Use Multi-Touch for holistic view
 - Compare: Run reports side-by-side to see differences
@@ -701,6 +767,7 @@ Follow-up (1 week after):
 ### 5.2 Reporting Dashboard (HubSpot)
 
 **Weekly Performance Dashboard**:
+
 ```
 Metrics to Track:
 1. Traffic: Visits, unique visitors, bounce rate
@@ -717,6 +784,7 @@ Dimensions:
 ```
 
 **Monthly Executive Dashboard**:
+
 ```
 KPIs:
 1. Marketing-Sourced Pipeline: $[X]M (target: $[Y]M)
@@ -736,6 +804,7 @@ Insights:
 ### 5.3 Google Analytics Setup
 
 **Events to Track** (GA4):
+
 ```
 Engagement:
 - page_view (auto-tracked)
@@ -756,12 +825,14 @@ E-commerce (if applicable):
 ```
 
 **Custom Dimensions**:
+
 - User Type: Free vs. Paid
 - Plan Type: Starter, Pro, Enterprise
 - HubSpot Lead Status: MQL, SQL, Customer
 - Campaign: HubSpot Campaign ID
 
 **Integration with HubSpot**:
+
 - Use HubSpot tracking code (includes GA4 by default)
 - Or: Google Tag Manager for advanced tracking
 - Sync: GA4 audiences → HubSpot lists for retargeting
@@ -775,23 +846,25 @@ E-commerce (if applicable):
 **Formula**: ICE = (Impact × Confidence × Ease) ÷ 3
 
 Rate each factor 1-10:
+
 - **Impact**: How much will this move the needle?
 - **Confidence**: How sure are you it will work?
 - **Ease**: How easy is it to implement?
 
 **Example Tests** (sorted by ICE score):
 
-| Test | Impact | Confidence | Ease | ICE | Priority |
-|------|--------|------------|------|-----|----------|
-| CTA button color (red vs. green) | 3 | 8 | 10 | 7.0 | Low |
-| Landing page headline rewrite | 8 | 7 | 8 | 7.7 | Medium |
-| Pricing page redesign | 9 | 6 | 4 | 6.3 | Medium |
-| New lead magnet offer | 9 | 8 | 7 | 8.0 | High |
-| Add live chat to pricing page | 7 | 9 | 8 | 8.0 | High |
+| Test                             | Impact | Confidence | Ease | ICE | Priority |
+| -------------------------------- | ------ | ---------- | ---- | --- | -------- |
+| CTA button color (red vs. green) | 3      | 8          | 10   | 7.0 | Low      |
+| Landing page headline rewrite    | 8      | 7          | 8    | 7.7 | Medium   |
+| Pricing page redesign            | 9      | 6          | 4    | 6.3 | Medium   |
+| New lead magnet offer            | 9      | 8          | 7    | 8.0 | High     |
+| Add live chat to pricing page    | 7      | 9          | 8    | 8.0 | High     |
 
 ### 6.2 Test Design & Execution
 
 **Test Template**:
+
 ```
 Hypothesis: [Adding a case study carousel to the pricing page will increase demo requests by 20% because users need social proof before committing]
 
@@ -807,11 +880,13 @@ Tools: [HubSpot A/B test, or Google Optimize]
 ```
 
 **Statistical Significance**:
+
 - Minimum: 95% confidence, 1000 visitors/variant
 - Use calculator: Optimizely Sample Size Calculator
 - Don't stop tests early (false positives)
 
 **Test Velocity** (Series A target):
+
 - 4-6 tests/month across channels
 - 70% win rate not realistic (aim for 30-40%)
 - Document losers (learnings matter)
@@ -819,6 +894,7 @@ Tools: [HubSpot A/B test, or Google Optimize]
 ### 6.3 Common Experiments
 
 **Landing Page Tests**:
+
 - Headline variations (problem-focused vs. solution-focused)
 - CTA copy ("Start Free Trial" vs. "Get Started" vs. "Try Now")
 - Form length (5 fields vs. 2 fields)
@@ -826,12 +902,14 @@ Tools: [HubSpot A/B test, or Google Optimize]
 - Hero image (product screenshot vs. people vs. abstract)
 
 **Ad Tests**:
+
 - Creative format (static vs. video vs. carousel)
 - Messaging angle (feature-led vs. benefit-led vs. outcome-led)
 - Audience targeting (broad vs. narrow)
 - Landing page destination (homepage vs. dedicated LP)
 
 **Email Tests**:
+
 - Subject line length (short vs. long)
 - Personalization (generic vs. first name vs. company name)
 - Send time (morning vs. afternoon vs. evening)
@@ -844,6 +922,7 @@ Tools: [HubSpot A/B test, or Google Optimize]
 ### 7.1 MQL → SQL Handoff (Marketing → Sales)
 
 **SQL Definition Criteria** (customize for your ICP):
+
 ```
 Required:
 ✅ Job title: Director+ (or Budget Authority confirmed)
@@ -859,6 +938,7 @@ Optional:
 ```
 
 **HubSpot Workflow**:
+
 1. Lead reaches MQL threshold (lead score >75)
 2. Trigger: Automated email to SDR
 3. SDR qualification call (BANT: Budget, Authority, Need, Timeline)
@@ -866,6 +946,7 @@ Optional:
 5. If not qualified → Recycle to nurture, adjust lead score
 
 **SLA** (Service Level Agreement):
+
 - SDR responds to MQL: 4 hours
 - AE books demo with SQL: 24 hours
 - First demo: Within 3 business days of SQL status
@@ -873,11 +954,13 @@ Optional:
 ### 7.2 SQL → Opportunity Handoff (Sales → RevOps)
 
 **Opportunity Creation**:
+
 - AE creates opportunity in HubSpot after first demo
 - Required fields: Company, Deal value, Close date, Stage
 - Pipeline stages: Discovery → Demo → Proposal → Negotiation → Closed Won/Lost
 
 **Marketing Support Post-SQL**:
+
 - Retargeting ads to target accounts (ABM)
 - Send case studies, ROI calculator
 - Invite to customer webinar
@@ -886,12 +969,14 @@ Optional:
 ### 7.3 Lost Opportunity Handoff (Sales → Marketing)
 
 **Recycle to Nurture**:
+
 - Reason: No budget, bad timing, wrong fit
 - Action: Move to "Nurture" list in HubSpot
 - Sequence: Quarterly check-in emails, invite to webinars
 - Re-engage: After 6-12 months, SDR re-qualification
 
 **Closed Lost Reasons** (track in HubSpot):
+
 - Price too high
 - Missing features
 - Chose competitor
@@ -900,6 +985,7 @@ Optional:
 - Champion left company
 
 **Use lost reasons to inform**:
+
 - Product roadmap
 - Pricing changes
 - Competitive positioning
@@ -911,16 +997,17 @@ Optional:
 
 ### 8.1 Channel-Specific Benchmarks (B2B SaaS Series A)
 
-| Metric | LinkedIn | Google Search | SEO | Email | Partnerships |
-|--------|----------|---------------|-----|-------|--------------|
-| CTR | 0.4-0.9% | 2-5% | 1-3% | 15-25% | N/A |
-| CVR | 1-3% | 3-7% | 2-5% | 2-5% | 5-10% |
-| CAC | $150-400 | $80-250 | $50-150 | $20-80 | $100-300 |
-| MQL→SQL | 10-20% | 15-25% | 12-22% | 8-15% | 20-35% |
+| Metric  | LinkedIn | Google Search | SEO     | Email  | Partnerships |
+| ------- | -------- | ------------- | ------- | ------ | ------------ |
+| CTR     | 0.4-0.9% | 2-5%          | 1-3%    | 15-25% | N/A          |
+| CVR     | 1-3%     | 3-7%          | 2-5%    | 2-5%   | 5-10%        |
+| CAC     | $150-400 | $80-250       | $50-150 | $20-80 | $100-300     |
+| MQL→SQL | 10-20%   | 15-25%        | 12-22%  | 8-15%  | 20-35%       |
 
 ### 8.2 Budget Allocation (Recommended)
 
 **Series A ($40k-60k/month)**:
+
 - 40% Paid Acquisition (LinkedIn + Google)
 - 25% Content/SEO
 - 20% Partnerships
@@ -930,31 +1017,37 @@ Optional:
 ### 8.3 Team Handoff Quick Guide
 
 **Demand Gen → Sales**:
+
 - Deliver: SQLs with BANT qualification
 - Frequency: Real-time via HubSpot
 - SLA: 4-hour response time
 
 **Demand Gen → Product Marketing**:
+
 - Request: Product positioning, competitive intel, case studies
 - Frequency: Monthly sync
 - Deliverables: Updated messaging, new collateral
 
 **Demand Gen → Marketing Ops**:
+
 - Request: Campaign tracking setup, attribution reports, data cleaning
 - Frequency: Weekly check-in
 - SLA: 48-hour turnaround for new campaigns
 
 **Paid Media → Creative/Brand**:
+
 - Request: Ad creative (10-20 variants/month)
 - Format: Specs sheet with dimensions, copy length, brand guidelines
 - SLA: 5 business days per request
 
 **SEO → Content**:
+
 - Request: Content based on keyword research
 - Deliverables: Content brief with target keywords, structure, length
 - Frequency: Monthly editorial calendar
 
 **Partnerships → Sales**:
+
 - Deliver: Partner-sourced leads with partner context
 - Co-selling: Joint calls for strategic deals
 - Frequency: Weekly partner pipeline review

@@ -1,479 +1,574 @@
 ---
 name: websocket-realtime
-description: Implement WebSocket service for real-time task synchronization across clients. Use when building real-time updates for Phase 5. (project)
-allowed-tools: Bash, Write, Read, Glob, Edit, Grep
+description: Auto-activates when user mentions WebSocket, Socket.io, real-time, SSE, Server-Sent Events, or live updates. Expert in implementing real-time bidirectional communication.
+category: backend
 ---
 
-# WebSocket Real-time Skill
+# WebSocket & Real-Time Communication
 
-## Quick Start
+Implements production-ready real-time features using WebSockets, Socket.io, and Server-Sent Events.
 
-1. **Read Phase 5 Constitution** - `constitution-prompt-phase-5.md`
-2. **Create WebSocket service** - New microservice on port 8005
-3. **Subscribe to Kafka events** - Via Dapr pub/sub
-4. **Broadcast to clients** - WebSocket connections per user
-5. **Update frontend** - Connect to WebSocket service
-6. **Handle reconnection** - Automatic reconnect logic
+## When This Activates
 
-## Architecture
+- User says: "add real-time updates", "implement WebSocket", "live notifications"
+- User mentions: "Socket.io", "WebSocket", "SSE", "Server-Sent Events", "real-time", "live chat"
+- Features: chat, live updates, notifications, collaborative editing
+- Files: websocket server, Socket.io configuration
 
-```
-┌─────────────┐     ┌───────────────┐     ┌─────────────────┐
-│   Backend   │────▶│    Kafka      │────▶│ WebSocket Svc   │
-│  (Events)   │     │  task-updates │     │   (Port 8005)   │
-└─────────────┘     └───────────────┘     └────────┬────────┘
-                                                   │
-                           WebSocket Connections   │
-                    ┌──────────────────────────────┼──────────────────────────────┐
-                    │                              │                              │
-              ┌─────▼─────┐                 ┌──────▼──────┐                ┌──────▼──────┐
-              │  Client 1 │                 │  Client 2   │                │  Client 3   │
-              │  (User A) │                 │  (User A)   │                │  (User B)   │
-              └───────────┘                 └─────────────┘                └─────────────┘
-```
+## WebSocket vs Socket.io vs SSE
 
-## WebSocket Service Implementation
+### When to Use Each
 
-### Project Structure
+**WebSocket (Native):**
+- Need low-level control
+- Binary data (gaming, video)
+- Minimal overhead
+- Custom protocol
 
-```
-services/websocket/
-├── src/
-│   ├── __init__.py
-│   ├── main.py           # FastAPI app with WebSocket
-│   ├── connection.py     # Connection manager
-│   ├── events.py         # Event handlers
-│   └── auth.py           # Token validation
-├── pyproject.toml
-└── Dockerfile
-```
+**Socket.io:**
+- Auto-reconnection needed
+- Room/namespace support
+- Browser compatibility
+- Event-based messaging
 
-### Main Application
+**Server-Sent Events (SSE):**
+- One-way server→client
+- Simple notifications
+- Automatic reconnection
+- Works through proxies
 
-```python
-# services/websocket/src/main.py
-from fastapi import FastAPI, WebSocket, WebSocketDisconnect, Query, Depends
-from fastapi.middleware.cors import CORSMiddleware
-from dapr.ext.fastapi import DaprApp
-import json
+## Socket.io Implementation
 
-from .connection import ConnectionManager
-from .auth import verify_token
+### Server Setup
 
-app = FastAPI(title="WebSocket Service")
-dapr_app = DaprApp(app)
-manager = ConnectionManager()
+```typescript
+// server.ts
+import express from 'express';
+import { createServer } from 'http';
+import { Server } from 'socket.io';
+import { createAdapter } from '@socket.io/redis-adapter';
+import { createClient } from 'redis';
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+const app = express();
+const httpServer = createServer(app);
 
-@app.websocket("/ws")
-async def websocket_endpoint(
-    websocket: WebSocket,
-    token: str = Query(...)
-):
-    """WebSocket endpoint for real-time updates."""
-    # Verify JWT token
-    user_id = await verify_token(token)
-    if not user_id:
-        await websocket.close(code=4001)
-        return
-
-    await manager.connect(websocket, user_id)
-    try:
-        while True:
-            # Keep connection alive, handle client messages
-            data = await websocket.receive_text()
-            message = json.loads(data)
-
-            if message.get("type") == "ping":
-                await websocket.send_json({"type": "pong"})
-    except WebSocketDisconnect:
-        manager.disconnect(websocket, user_id)
-
-# Dapr subscription for task events
-@dapr_app.subscribe(pubsub="taskpubsub", topic="task-updates")
-async def handle_task_update(event: dict):
-    """Handle task update events from Kafka."""
-    user_id = event.get("user_id")
-    event_type = event.get("event_type")
-    task_data = event.get("task")
-
-    # Broadcast to all connections for this user
-    await manager.broadcast_to_user(user_id, {
-        "type": "task_update",
-        "event": event_type,
-        "task": task_data
-    })
-
-@app.get("/health")
-async def health_check():
-    return {"status": "healthy", "connections": manager.active_connections_count}
-```
-
-### Connection Manager
-
-```python
-# services/websocket/src/connection.py
-from fastapi import WebSocket
-from collections import defaultdict
-import asyncio
-import logging
-
-logger = logging.getLogger(__name__)
-
-class ConnectionManager:
-    """Manage WebSocket connections per user."""
-
-    def __init__(self):
-        # user_id -> list of WebSocket connections
-        self.active_connections: dict[str, list[WebSocket]] = defaultdict(list)
-        self._lock = asyncio.Lock()
-
-    async def connect(self, websocket: WebSocket, user_id: str):
-        """Accept and store a new WebSocket connection."""
-        await websocket.accept()
-        async with self._lock:
-            self.active_connections[user_id].append(websocket)
-        logger.info(f"User {user_id} connected. Total connections: {self.active_connections_count}")
-
-    def disconnect(self, websocket: WebSocket, user_id: str):
-        """Remove a WebSocket connection."""
-        if user_id in self.active_connections:
-            if websocket in self.active_connections[user_id]:
-                self.active_connections[user_id].remove(websocket)
-            if not self.active_connections[user_id]:
-                del self.active_connections[user_id]
-        logger.info(f"User {user_id} disconnected. Total connections: {self.active_connections_count}")
-
-    async def broadcast_to_user(self, user_id: str, message: dict):
-        """Send message to all connections for a specific user."""
-        if user_id not in self.active_connections:
-            return
-
-        disconnected = []
-        for connection in self.active_connections[user_id]:
-            try:
-                await connection.send_json(message)
-            except Exception as e:
-                logger.error(f"Failed to send to user {user_id}: {e}")
-                disconnected.append(connection)
-
-        # Clean up disconnected
-        for conn in disconnected:
-            self.disconnect(conn, user_id)
-
-    async def broadcast_to_all(self, message: dict):
-        """Send message to all connected users."""
-        for user_id in list(self.active_connections.keys()):
-            await self.broadcast_to_user(user_id, message)
-
-    @property
-    def active_connections_count(self) -> int:
-        """Total number of active connections."""
-        return sum(len(conns) for conns in self.active_connections.values())
-```
-
-### Token Verification
-
-```python
-# services/websocket/src/auth.py
-import jwt
-import os
-from typing import Optional
-
-SECRET_KEY = os.getenv("BETTER_AUTH_SECRET", "")
-ALGORITHM = "HS256"
-
-async def verify_token(token: str) -> Optional[str]:
-    """Verify JWT token and return user_id."""
-    try:
-        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
-        return payload.get("sub")  # user_id
-    except jwt.InvalidTokenError:
-        return None
-```
-
-## Frontend WebSocket Client
-
-### WebSocket Hook
-
-```tsx
-// frontend/lib/websocket/use-websocket.ts
-import { useEffect, useRef, useCallback, useState } from "react";
-import { useAuthStore } from "@/stores/auth-store";
-import { useTaskStore } from "@/stores/task-store";
-
-interface WebSocketMessage {
-  type: string;
-  event?: string;
-  task?: Task;
-}
-
-export function useWebSocket() {
-  const { token } = useAuthStore();
-  const { updateTask, addTask, removeTask } = useTaskStore();
-  const ws = useRef<WebSocket | null>(null);
-  const [isConnected, setIsConnected] = useState(false);
-  const reconnectAttempts = useRef(0);
-  const maxReconnectAttempts = 5;
-
-  const connect = useCallback(() => {
-    if (!token) return;
-
-    const wsUrl = `${process.env.NEXT_PUBLIC_WS_URL}/ws?token=${token}`;
-    ws.current = new WebSocket(wsUrl);
-
-    ws.current.onopen = () => {
-      console.log("WebSocket connected");
-      setIsConnected(true);
-      reconnectAttempts.current = 0;
-    };
-
-    ws.current.onmessage = (event) => {
-      const message: WebSocketMessage = JSON.parse(event.data);
-      handleMessage(message);
-    };
-
-    ws.current.onclose = () => {
-      console.log("WebSocket disconnected");
-      setIsConnected(false);
-
-      // Attempt reconnection with exponential backoff
-      if (reconnectAttempts.current < maxReconnectAttempts) {
-        const delay = Math.pow(2, reconnectAttempts.current) * 1000;
-        reconnectAttempts.current++;
-        setTimeout(connect, delay);
-      }
-    };
-
-    ws.current.onerror = (error) => {
-      console.error("WebSocket error:", error);
-    };
-  }, [token]);
-
-  const handleMessage = (message: WebSocketMessage) => {
-    if (message.type === "task_update" && message.task) {
-      switch (message.event) {
-        case "task.created":
-          addTask(message.task);
-          break;
-        case "task.updated":
-          updateTask(message.task);
-          break;
-        case "task.deleted":
-          removeTask(message.task.id);
-          break;
-        case "task.completed":
-          updateTask({ ...message.task, status: "completed" });
-          break;
-      }
-    }
-  };
-
-  // Heartbeat to keep connection alive
-  useEffect(() => {
-    if (!isConnected) return;
-
-    const interval = setInterval(() => {
-      if (ws.current?.readyState === WebSocket.OPEN) {
-        ws.current.send(JSON.stringify({ type: "ping" }));
-      }
-    }, 30000); // Every 30 seconds
-
-    return () => clearInterval(interval);
-  }, [isConnected]);
-
-  // Connect on mount
-  useEffect(() => {
-    connect();
-    return () => {
-      ws.current?.close();
-    };
-  }, [connect]);
-
-  return { isConnected };
-}
-```
-
-### WebSocket Provider
-
-```tsx
-// frontend/providers/websocket-provider.tsx
-"use client";
-
-import { createContext, useContext, ReactNode } from "react";
-import { useWebSocket } from "@/lib/websocket/use-websocket";
-
-interface WebSocketContextType {
-  isConnected: boolean;
-}
-
-const WebSocketContext = createContext<WebSocketContextType>({
-  isConnected: false,
+const io = new Server(httpServer, {
+  cors: {
+    origin: process.env.CLIENT_URL,
+    credentials: true,
+  },
+  transports: ['websocket', 'polling'],
+  pingTimeout: 60000,
+  pingInterval: 25000,
 });
 
-export function WebSocketProvider({ children }: { children: ReactNode }) {
-  const { isConnected } = useWebSocket();
+// Redis adapter for multi-server scaling
+const pubClient = createClient({ url: process.env.REDIS_URL });
+const subClient = pubClient.duplicate();
 
-  return (
-    <WebSocketContext.Provider value={{ isConnected }}>
-      {children}
-    </WebSocketContext.Provider>
-  );
-}
+await Promise.all([pubClient.connect(), subClient.connect()]);
+io.adapter(createAdapter(pubClient, subClient));
 
-export function useWebSocketStatus() {
-  return useContext(WebSocketContext);
-}
+// Middleware
+io.use(async (socket, next) => {
+  try {
+    const token = socket.handshake.auth.token;
+    const user = await verifyToken(token);
+    socket.data.user = user;
+    next();
+  } catch (err) {
+    next(new Error('Authentication failed'));
+  }
+});
+
+// Connection handling
+io.on('connection', (socket) => {
+  console.log(`User connected: ${socket.data.user.id}`);
+
+  // Join user-specific room
+  socket.join(`user:${socket.data.user.id}`);
+
+  // Handle events
+  socket.on('message:send', async (data) => {
+    const message = await saveMessage(data);
+    
+    // Emit to specific room
+    io.to(`chat:${data.chatId}`).emit('message:new', message);
+  });
+
+  socket.on('typing:start', ({ chatId }) => {
+    socket.to(`chat:${chatId}`).emit('typing:user', {
+      userId: socket.data.user.id,
+      name: socket.data.user.name,
+    });
+  });
+
+  socket.on('typing:stop', ({ chatId }) => {
+    socket.to(`chat:${chatId}`).emit('typing:stop', {
+      userId: socket.data.user.id,
+    });
+  });
+
+  socket.on('disconnect', () => {
+    console.log(`User disconnected: ${socket.data.user.id}`);
+  });
+});
+
+httpServer.listen(3000, () => {
+  console.log('Server running on port 3000');
+});
 ```
 
-### Connection Status Indicator
+### Client Setup (React)
 
-```tsx
-// frontend/components/websocket/connection-status.tsx
-"use client";
+```typescript
+// hooks/useSocket.ts
+import { useEffect, useState } from 'react';
+import { io, Socket } from 'socket.io-client';
 
-import { useWebSocketStatus } from "@/providers/websocket-provider";
-import { Wifi, WifiOff } from "lucide-react";
+export function useSocket() {
+  const [socket, setSocket] = useState<Socket | null>(null);
+  const [connected, setConnected] = useState(false);
 
-export function ConnectionStatus() {
-  const { isConnected } = useWebSocketStatus();
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    
+    const socketInstance = io(process.env.NEXT_PUBLIC_WS_URL, {
+      auth: { token },
+      transports: ['websocket', 'polling'],
+      reconnection: true,
+      reconnectionDelay: 1000,
+      reconnectionDelayMax: 5000,
+      reconnectionAttempts: 5,
+    });
+
+    socketInstance.on('connect', () => {
+      console.log('Connected to server');
+      setConnected(true);
+    });
+
+    socketInstance.on('disconnect', () => {
+      console.log('Disconnected from server');
+      setConnected(false);
+    });
+
+    socketInstance.on('connect_error', (error) => {
+      console.error('Connection error:', error);
+    });
+
+    setSocket(socketInstance);
+
+    return () => {
+      socketInstance.close();
+    };
+  }, []);
+
+  return { socket, connected };
+}
+
+// components/Chat.tsx
+import { useEffect, useState } from 'react';
+import { useSocket } from '../hooks/useSocket';
+
+export function Chat({ chatId }: { chatId: string }) {
+  const { socket, connected } = useSocket();
+  const [messages, setMessages] = useState([]);
+  const [typingUsers, setTypingUsers] = useState<string[]>([]);
+
+  useEffect(() => {
+    if (!socket) return;
+
+    // Join chat room
+    socket.emit('chat:join', { chatId });
+
+    // Listen for new messages
+    socket.on('message:new', (message) => {
+      setMessages(prev => [...prev, message]);
+    });
+
+    // Listen for typing indicators
+    socket.on('typing:user', ({ userId, name }) => {
+      setTypingUsers(prev => [...prev, name]);
+    });
+
+    socket.on('typing:stop', ({ userId }) => {
+      setTypingUsers(prev => prev.filter(id => id !== userId));
+    });
+
+    return () => {
+      socket.emit('chat:leave', { chatId });
+      socket.off('message:new');
+      socket.off('typing:user');
+      socket.off('typing:stop');
+    };
+  }, [socket, chatId]);
+
+  const sendMessage = (content: string) => {
+    socket?.emit('message:send', { chatId, content });
+  };
+
+  const handleTyping = () => {
+    socket?.emit('typing:start', { chatId });
+    
+    // Debounce typing stop
+    clearTimeout(typingTimeout);
+    typingTimeout = setTimeout(() => {
+      socket?.emit('typing:stop', { chatId });
+    }, 2000);
+  };
 
   return (
-    <div className="flex items-center gap-2">
-      {isConnected ? (
-        <>
-          <Wifi className="h-4 w-4 text-green-500" />
-          <span className="text-sm text-green-500">Connected</span>
-        </>
-      ) : (
-        <>
-          <WifiOff className="h-4 w-4 text-red-500" />
-          <span className="text-sm text-red-500">Disconnected</span>
-        </>
+    <div>
+      <div className="messages">
+        {messages.map(msg => (
+          <div key={msg.id}>{msg.content}</div>
+        ))}
+      </div>
+      {typingUsers.length > 0 && (
+        <div>{typingUsers.join(', ')} typing...</div>
       )}
+      <input
+        onChange={handleTyping}
+        onKeyPress={(e) => {
+          if (e.key === 'Enter') sendMessage(e.target.value);
+        }}
+      />
+      <div>Status: {connected ? 'Connected' : 'Disconnected'}</div>
     </div>
   );
 }
 ```
 
-## Backend Event Publishing
+## Server-Sent Events (SSE)
 
-```python
-# backend/src/services/task_service.py
-from dapr.clients import DaprClient
+### Server Implementation
 
-async def publish_task_update(event_type: str, task: Task):
-    """Publish task update for real-time sync."""
-    with DaprClient() as client:
-        client.publish_event(
-            pubsub_name="taskpubsub",
-            topic_name="task-updates",
-            data={
-                "event_type": event_type,
-                "user_id": str(task.user_id),
-                "task": task.model_dump(mode="json")
-            }
-        )
+```typescript
+// routes/events.ts
+import express from 'express';
+
+const router = express.Router();
+
+router.get('/events', async (req, res) => {
+  // Set SSE headers
+  res.setHeader('Content-Type', 'text/event-stream');
+  res.setHeader('Cache-Control', 'no-cache');
+  res.setHeader('Connection', 'keep-alive');
+
+  // Send initial connection message
+  res.write('data: {"type":"connected"}\n\n');
+
+  // Authenticate user
+  const user = await authenticateRequest(req);
+  if (!user) {
+    res.write('event: error\ndata: {"message":"Unauthorized"}\n\n');
+    res.end();
+    return;
+  }
+
+  // Subscribe to notifications
+  const subscription = await subscribeToNotifications(user.id, (notification) => {
+    res.write(`event: notification\n`);
+    res.write(`data: ${JSON.stringify(notification)}\n\n`);
+  });
+
+  // Heartbeat to keep connection alive
+  const heartbeat = setInterval(() => {
+    res.write(': heartbeat\n\n');
+  }, 30000);
+
+  // Cleanup on disconnect
+  req.on('close', () => {
+    clearInterval(heartbeat);
+    subscription.unsubscribe();
+    res.end();
+  });
+});
+
+export default router;
 ```
 
-## Kubernetes Deployment
+### Client Implementation
 
-```yaml
-# k8s/websocket-service.yaml
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: websocket-service
-  namespace: todo-app
-spec:
-  replicas: 2
-  selector:
-    matchLabels:
-      app: websocket-service
-  template:
-    metadata:
-      labels:
-        app: websocket-service
-      annotations:
-        dapr.io/enabled: "true"
-        dapr.io/app-id: "websocket-service"
-        dapr.io/app-port: "8005"
-    spec:
-      containers:
-        - name: websocket-service
-          image: evolution-todo/websocket-service:latest
-          ports:
-            - containerPort: 8005
-          env:
-            - name: BETTER_AUTH_SECRET
-              valueFrom:
-                secretKeyRef:
-                  name: todo-secrets
-                  key: better-auth-secret
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: websocket-service
-  namespace: todo-app
-spec:
-  selector:
-    app: websocket-service
-  ports:
-    - port: 8005
-      targetPort: 8005
+```typescript
+// hooks/useSSE.ts
+import { useEffect, useState } from 'react';
+
+export function useSSE<T>(url: string) {
+  const [data, setData] = useState<T[]>([]);
+  const [connected, setConnected] = useState(false);
+
+  useEffect(() => {
+    const eventSource = new EventSource(url, {
+      withCredentials: true,
+    });
+
+    eventSource.onopen = () => {
+      console.log('SSE Connected');
+      setConnected(true);
+    };
+
+    eventSource.onmessage = (event) => {
+      const newData = JSON.parse(event.data);
+      setData(prev => [...prev, newData]);
+    };
+
+    eventSource.addEventListener('notification', (event) => {
+      const notification = JSON.parse(event.data);
+      setData(prev => [...prev, notification]);
+    });
+
+    eventSource.onerror = () => {
+      console.error('SSE Error');
+      setConnected(false);
+    };
+
+    return () => {
+      eventSource.close();
+    };
+  }, [url]);
+
+  return { data, connected };
+}
+
+// Usage
+function Notifications() {
+  const { data: notifications, connected } = useSSE('/api/events');
+
+  return (
+    <div>
+      <div>Status: {connected ? 'Connected' : 'Disconnected'}</div>
+      {notifications.map(notification => (
+        <div key={notification.id}>{notification.message}</div>
+      ))}
+    </div>
+  );
+}
 ```
 
-## Dapr Configuration
+## Native WebSocket Implementation
 
-```yaml
-# dapr-components/subscription.yaml
-apiVersion: dapr.io/v2alpha1
-kind: Subscription
-metadata:
-  name: task-updates-subscription
-spec:
-  pubsubname: taskpubsub
-  topic: task-updates
-  routes:
-    default: /task-updates
-  scopes:
-    - websocket-service
+```typescript
+// server.ts
+import { WebSocketServer } from 'ws';
+import { createServer } from 'http';
+
+const server = createServer();
+const wss = new WebSocketServer({ server });
+
+wss.on('connection', (ws, req) => {
+  console.log('Client connected');
+
+  ws.on('message', (data) => {
+    const message = JSON.parse(data.toString());
+    
+    // Broadcast to all clients
+    wss.clients.forEach(client => {
+      if (client.readyState === ws.OPEN) {
+        client.send(JSON.stringify(message));
+      }
+    });
+  });
+
+  ws.on('close', () => {
+    console.log('Client disconnected');
+  });
+
+  // Send heartbeat
+  const interval = setInterval(() => {
+    if (ws.readyState === ws.OPEN) {
+      ws.ping();
+    } else {
+      clearInterval(interval);
+    }
+  }, 30000);
+});
+
+server.listen(3000);
 ```
 
-## Verification Checklist
+```typescript
+// client.ts
+const ws = new WebSocket('ws://localhost:3000');
 
-- [ ] WebSocket service created on port 8005
-- [ ] Connection manager handles multiple users
-- [ ] Token verification working
-- [ ] Dapr subscription configured
-- [ ] Frontend WebSocket hook created
-- [ ] Automatic reconnection working
-- [ ] Heartbeat/ping-pong implemented
-- [ ] Connection status indicator displayed
-- [ ] Real-time updates propagate to all clients
-- [ ] Service deployed to Kubernetes
+ws.onopen = () => {
+  console.log('Connected');
+  ws.send(JSON.stringify({ type: 'message', content: 'Hello' }));
+};
 
-## Troubleshooting
+ws.onmessage = (event) => {
+  const data = JSON.parse(event.data);
+  console.log('Received:', data);
+};
 
-| Issue | Cause | Solution |
-|-------|-------|----------|
-| Connection refused | Wrong URL | Check WS_URL env var |
-| Auth failed | Invalid token | Verify token format |
-| No updates received | Dapr not connected | Check dapr sidecar logs |
-| Connection drops | No heartbeat | Implement ping/pong |
-| High latency | Too many connections | Scale horizontally |
+ws.onerror = (error) => {
+  console.error('WebSocket error:', error);
+};
 
-## References
+ws.onclose = () => {
+  console.log('Disconnected');
+  // Reconnect logic
+  setTimeout(() => connectWebSocket(), 5000);
+};
+```
 
-- [FastAPI WebSockets](https://fastapi.tiangolo.com/advanced/websockets/)
-- [Dapr Pub/Sub](https://docs.dapr.io/developing-applications/building-blocks/pubsub/)
-- [WebSocket API (MDN)](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket)
-- [Phase 5 Constitution](../../../constitution-prompt-phase-5.md)
+## Real-Time Features
+
+### Presence System
+
+```typescript
+// Track online users
+const onlineUsers = new Map();
+
+io.on('connection', (socket) => {
+  const userId = socket.data.user.id;
+  
+  onlineUsers.set(userId, {
+    socketId: socket.id,
+    lastSeen: Date.now(),
+  });
+
+  io.emit('presence:update', {
+    userId,
+    status: 'online',
+  });
+
+  socket.on('disconnect', () => {
+    onlineUsers.delete(userId);
+    io.emit('presence:update', {
+      userId,
+      status: 'offline',
+    });
+  });
+});
+```
+
+### Rate Limiting
+
+```typescript
+import { RateLimiterMemory } from 'rate-limiter-flexible';
+
+const rateLimiter = new RateLimiterMemory({
+  points: 10, // Number of points
+  duration: 1, // Per second
+});
+
+io.use(async (socket, next) => {
+  try {
+    await rateLimiter.consume(socket.handshake.address);
+    next();
+  } catch {
+    next(new Error('Rate limit exceeded'));
+  }
+});
+```
+
+### Message Acknowledgment
+
+```typescript
+// Server
+socket.on('message:send', async (data, callback) => {
+  try {
+    const message = await saveMessage(data);
+    io.to(data.chatId).emit('message:new', message);
+    callback({ success: true, messageId: message.id });
+  } catch (error) {
+    callback({ success: false, error: error.message });
+  }
+});
+
+// Client
+socket.emit('message:send', messageData, (response) => {
+  if (response.success) {
+    console.log('Message sent:', response.messageId);
+  } else {
+    console.error('Failed to send:', response.error);
+  }
+});
+```
+
+## Best Practices
+
+### 1. Reconnection Strategy
+
+```typescript
+function createSocketWithReconnect() {
+  let reconnectAttempts = 0;
+  const maxAttempts = 5;
+  
+  function connect() {
+    const socket = io(url, {
+      reconnection: true,
+      reconnectionDelay: Math.min(1000 * 2 ** reconnectAttempts, 30000),
+      reconnectionAttempts: maxAttempts,
+    });
+
+    socket.on('connect', () => {
+      reconnectAttempts = 0;
+    });
+
+    socket.on('disconnect', () => {
+      reconnectAttempts++;
+      if (reconnectAttempts >= maxAttempts) {
+        console.error('Max reconnection attempts reached');
+      }
+    });
+
+    return socket;
+  }
+
+  return connect();
+}
+```
+
+### 2. Message Queue for Offline
+
+```typescript
+const offlineQueue: Message[] = [];
+
+socket.on('connect', () => {
+  // Send queued messages
+  while (offlineQueue.length > 0) {
+    const message = offlineQueue.shift();
+    socket.emit('message:send', message);
+  }
+});
+
+socket.on('disconnect', () => {
+  // Queue messages while offline
+  sendMessage = (message) => {
+    offlineQueue.push(message);
+  };
+});
+```
+
+### 3. Namespace Organization
+
+```typescript
+const chatIO = io.of('/chat');
+const notificationIO = io.of('/notifications');
+
+chatIO.on('connection', (socket) => {
+  // Chat-specific logic
+});
+
+notificationIO.on('connection', (socket) => {
+  // Notification-specific logic
+});
+```
+
+## Checklist
+
+- [ ] Authentication on connection
+- [ ] Reconnection logic with exponential backoff
+- [ ] Heartbeat/ping-pong for connection health
+- [ ] Rate limiting to prevent abuse
+- [ ] Message acknowledgment for critical data
+- [ ] Offline message queue
+- [ ] Room-based messaging for targeted updates
+- [ ] Graceful error handling
+- [ ] Cleanup on disconnect
+- [ ] Redis adapter for multi-server scaling
+- [ ] Monitoring connection metrics
+
+**Implement real-time features, present complete WebSocket/SSE solution.**

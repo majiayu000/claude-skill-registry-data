@@ -1,141 +1,237 @@
 ---
 name: audit
-description: Run comprehensive codebase audit for gaps, deprecated code, TODOs, FIXMEs, architectural anti-patterns, type issues, and code smells. Use when user asks to audit code, find issues, check code quality, or identify architectural problems.
+description: Comprehensive system audit - analyze backend architecture, security, performance, and frontend UI/UX with browser automation testing. Use when reviewing system health, security posture, or code quality.
+argument-hint: "[--backend|--frontend|--security|<area>] [--quick|--deep]"
+context: fork
+agent: tech-lead
 ---
 
-# Codebase Audit
+# System Audit
 
-## Instructions
+Perform a comprehensive system audit covering backend and frontend.
 
-Perform a comprehensive, systematic audit of the codebase to identify quality issues, architectural problems, and technical debt.
+## Input
 
-### Phase 1: Discovery & Planning
+The user may provide:
+- `/audit` — Full system audit (backend + frontend)
+- `/audit --backend` — Backend only (architecture, security, performance)
+- `/audit --frontend` — Frontend only (UI/UX, browser automation)
+- `/audit --security` — Security-focused audit
+- `/audit <specific-area>` — Audit specific module (e.g., `/audit auth`)
 
-1. **Identify scope** - Determine which files/directories to audit based on user request
-2. **Create comprehensive file list** - Use Glob to find all relevant files
-3. **Initialize todo list** - Create a todo with one item per file to audit
-4. **Set up audit report** - Create structured markdown report at `.audit/audit-report-[timestamp].md`
+Optional flags via $ARGUMENTS:
+- `--quick` — High-level scan only
+- `--deep` — Comprehensive deep dive
+- `--live` — Test against live/staging environment
 
-### Phase 2: Automated Analysis
+## Process
 
-Run automated tools to supplement manual review:
-- TypeScript compiler diagnostics
-- ESLint (if configured)
-- Grep for common patterns: TODO, FIXME, HACK, XXX, @deprecated
+### 1. Clarify Scope
 
-### Phase 3: Systematic File Review
+Ask the user if scope is unclear:
+- What areas to focus on? (Full system vs specific modules)
+- Which environment? (Local, staging, production)
+- Depth of analysis? (Quick scan vs deep audit)
 
-For EACH file in the todo list:
+### 2. Backend Analysis
 
-1. **Read and analyze** the file thoroughly
-2. **Check for issues** in these categories:
-   - **Deprecations**: Deprecated APIs, patterns, or code marked for removal
-   - **TODOs/FIXMEs**: Unfinished work or known issues
-   - **Architectural anti-patterns**:
-     - God objects/classes
-     - Circular dependencies
-     - Tight coupling
-     - Violation of SOLID principles
-     - Inconsistent patterns
-   - **Type issues**:
-     - Use of `any` or `unknown`
-     - Missing type annotations
-     - Incorrect type usage
-     - Type casts that hide issues
-   - **Code smells**:
-     - Duplicated code
-     - Long functions/classes
-     - Complex conditionals
-     - Dead code
-     - Magic numbers/strings
-     - Poor naming
+#### Architecture Review
+```bash
+# Check project structure
+tree -L 3 -I 'node_modules|dist|build'
 
-3. **Assign severity** to each finding:
-   - **CRITICAL**: Breaks functionality, security issues, data corruption risks
-   - **HIGH**: Architectural violations, major maintainability issues
-   - **MEDIUM**: Code smells, minor anti-patterns, missing types
-   - **LOW**: Style issues, minor TODOs, cosmetic improvements
+# Analyze TypeScript configuration
+cat tsconfig.json
 
-4. **Check for cross-file patterns** - As you review, note patterns that appear across multiple files
-
-5. **Update report** - Add findings to the structured report
-
-6. **Mark file as completed** in todo list
-
-### Phase 4: Cross-File Analysis
-
-After reviewing all individual files:
-
-1. **Identify systemic patterns** - Issues that appear across multiple files
-2. **Architectural assessment** - Overall system architecture health
-3. **Dependency analysis** - Check for circular dependencies or coupling issues
-4. **Consistency check** - Verify naming conventions, patterns are followed
-
-### Phase 5: Validation & Summary
-
-1. **Run final checks**:
-   - TypeScript type check (`tsc --noEmit` or similar)
-   - Linting (`npm run lint` or similar)
-   - Build process if applicable
-
-2. **Generate executive summary**:
-   - Total issues by category
-   - Total issues by severity
-   - Top 10 most critical findings
-
-### Audit Report Structure
-
-```markdown
-# Audit Report - [Date]
-
-## Executive Summary
-- **Files Audited**: X
-- **Total Issues Found**: Y
-- **Critical**: A | **High**: B | **Medium**: C | **Low**: D
-
-## Top 10 Critical Findings
-1. [Issue description] - Severity: CRITICAL - File: path/to/file.ts:line
-
-## Issues by Category
-
-### Deprecations
-- [Issue] - Severity - File:line
-
-### TODOs/FIXMEs
-- [Issue] - Severity - File:line
-
-### Architectural Anti-Patterns
-- [Issue] - Severity - File:line
-
-### Type Issues
-- [Issue] - Severity - File:line
-
-### Code Smells
-- [Issue] - Severity - File:line
-
-## Cross-File Patterns
-- [Pattern description and affected files]
-
-## Automated Tool Results
-- TypeScript diagnostics summary
-- ESLint results summary
+# Review key patterns
+grep -r "export class" app/
+grep -r "export function" app/
 ```
 
-## Critical Principles
+Look for:
+- [ ] Clean Architecture adherence (layers separation)
+- [ ] SOLID principles violations
+- [ ] Circular dependencies
+- [ ] Code duplication
+- [ ] Proper error handling patterns
 
-- **NEVER skip files** - Audit every file in the todo list
-- **NEVER edit files during audit** - This is read-only analysis
-- **NEVER provide recommendations** - Only identify and report problems
-- **NEVER create action plans** - That's a separate responsibility
-- **DO use memory/pinboard** - Store context as you discover patterns
-- **DO be thorough** - Think critically about each file
-- **DO be objective** - Report what you find, not what to do about it
-- **DO track progress** - Keep todo list updated in real-time
-- **DO find all relevant files** - If you discover new files that should be audited, add them to the todo
+#### Security Assessment
 
-## Dynamic File Discovery
+```bash
+# Search for potential security issues
+grep -r "process.env" app/ --exclude-dir=node_modules
+grep -r "password" app/ -i --exclude-dir=node_modules
+grep -r "secret" app/ -i --exclude-dir=node_modules
+grep -r "eval(" app/ --exclude-dir=node_modules
+```
 
-If during audit you discover additional files that should be reviewed:
-1. Add them to the todo list immediately
-2. Continue systematic review
-3. Ensure no stone is left unturned
+Check for:
+- [ ] Hardcoded secrets or credentials
+- [ ] SQL injection vulnerabilities
+- [ ] XSS vulnerabilities
+- [ ] CSRF protection
+- [ ] Authentication/authorization logic
+- [ ] Input validation and sanitization
+
+#### Performance Analysis
+
+Analyze:
+- [ ] Database query patterns (N+1 queries)
+- [ ] Caching strategies
+- [ ] Memory usage patterns
+- [ ] Async/await usage
+- [ ] Bundle size and code splitting
+
+### 3. Frontend Analysis with Browser Automation
+
+#### Critical User Flows Testing
+
+Use `browser_subagent` to test:
+
+**Authentication Flow**
+```
+TaskName: "Testing Login Flow"
+Task: Navigate to the app login page, test the authentication flow:
+1. Verify login form is visible
+2. Test with valid credentials
+3. Verify successful redirect to dashboard
+4. Test with invalid credentials and verify error messages
+5. Capture screenshots of each state
+Return: Pass/Fail status and any UI issues found
+
+RecordingName: audit_login_flow
+```
+
+**Main User Journey**
+```
+TaskName: "Testing Core User Flow"
+Task: Test the primary user journey:
+1. Navigate through the main workflow
+2. Verify all interactive elements work
+3. Check for console errors
+4. Test responsive design at mobile (375px) and desktop (1920px)
+5. Capture screenshots at key steps
+Return: List of issues found with screenshots
+
+RecordingName: audit_core_flow
+```
+
+**Form Validation**
+```
+TaskName: "Testing Form Validation"
+Task: Test all forms in the application:
+1. Submit empty forms - verify validation messages
+2. Submit invalid data - verify error handling
+3. Submit valid data - verify success states
+4. Check accessibility (keyboard navigation, labels)
+Return: Validation coverage report
+
+RecordingName: audit_forms
+```
+
+#### UI/UX Review
+
+Analyze:
+- [ ] Component structure and reusability
+- [ ] Responsive design implementation
+- [ ] Accessibility compliance (ARIA labels, keyboard navigation)
+- [ ] Loading states and error handling
+- [ ] Visual consistency
+- [ ] Performance (bundle size, render optimization)
+
+### 4. Infrastructure Review (if applicable)
+
+Check:
+- [ ] Docker configuration
+- [ ] Environment variables management
+- [ ] Deployment scripts
+- [ ] CI/CD pipeline
+- [ ] Monitoring and logging setup
+
+### 5. Generate Audit Report
+
+Create comprehensive report with:
+
+#### Executive Summary
+```
+System Health Score: X/10
+Critical Issues: X
+High Priority: X
+Medium Priority: X
+Total Findings: X
+```
+
+#### Backend Findings
+For each issue:
+```
+**[SEVERITY]** Category: Description
+- Impact: <potential consequences>
+- Location: file:///path/to/file.ts:123
+- Recommendation: <fix suggestion>
+```
+
+#### Frontend Findings (with Browser Test Results)
+```
+**Test**: Login Flow
+- Status: FAIL
+- Issues:
+  - Password field not masked properly
+  - Error message not accessible
+- Screenshots: [login_error.png]
+- Recording: audit_login_flow.webp
+```
+
+#### Risk Assessment Matrix
+
+| Risk | Severity | Likelihood | Priority | Status |
+|------|----------|------------|----------|--------|
+| SQL Injection in search | CRITICAL | Medium | P0 | Open |
+| Missing rate limiting | HIGH | High | P1 | Open |
+| Poor error handling | MEDIUM | Low | P2 | Open |
+
+### 6. Provide Next Steps
+
+Recommend immediate actions:
+1. **Critical (P0)**: Fix within 24 hours
+2. **High (P1)**: Address within 1 week
+3. **Medium (P2)**: Plan for next sprint
+4. **Low (P3)**: Add to backlog
+
+## Output Format
+
+1. **Audit Report Document**
+   - Save as markdown in project docs
+   - Include all findings with evidence
+   - Attach screenshots and recordings
+
+2. **Quick Action Items**
+   - Top 3 critical fixes needed immediately
+   - Recommended order of execution
+
+## Guidelines
+
+- **Be Thorough**: Don't skip areas even if they look fine
+- **Use Evidence**: Screenshots and recordings for frontend issues
+- **Be Specific**: File paths, line numbers, exact reproduction steps
+- **Prioritize**: Not all issues are equal - rank by impact
+- **Actionable**: Every finding should have a clear fix recommendation
+- **Automate**: Use browser automation extensively for frontend
+
+## Browser Automation Best Practices
+
+When testing frontend:
+- Test critical paths first (auth, checkout, core features)
+- Capture screenshots at each major step
+- Test on multiple viewport sizes
+- Check for console errors during flows
+- Verify error states display correctly
+- Test keyboard navigation and accessibility
+- Record evidence for any issues found
+
+## Success Criteria
+
+Audit is complete when:
+- [ ] All specified areas analyzed
+- [ ] Findings documented with severity and evidence
+- [ ] Next steps clearly communicated
+- [ ] All browser test recordings saved

@@ -1,600 +1,395 @@
 ---
 name: graceful-shutdown
-description: Implement graceful shutdown procedures to handle SIGTERM signals, drain connections, complete in-flight requests, and clean up resources properly. Use when deploying containerized applications, handling server restarts, or ensuring zero-downtime deployments.
+description: Clean shutdown with in-flight job tracking, signal handlers, and buffer draining. Prevent data loss and corrupted state on process termination.
+license: MIT
+compatibility: TypeScript/JavaScript, Python
+metadata:
+  category: resilience
+  time: 3h
+  source: drift-masterguide
 ---
 
 # Graceful Shutdown
 
-## Overview
+Clean shutdown without data loss.
 
-Implement proper shutdown procedures to ensure all requests are completed, connections are closed, and resources are released before process termination.
+## When to Use This Skill
 
-## When to Use
+- Running background workers
+- Processing queues or streams
+- Buffering data before persistence
+- Any long-running process that handles state
 
-- Kubernetes/Docker deployments
-- Rolling updates and deployments
-- Server restarts
-- Load balancer drain periods
-- Zero-downtime deployments
-- Process managers (PM2, systemd)
-- Long-running background jobs
-- Database connection cleanup
+## Core Concepts
 
-## Shutdown Phases
+1. **Signal handlers** - Catch SIGTERM/SIGINT
+2. **In-flight tracking** - Know what's still running
+3. **Buffer draining** - Flush before exit
+4. **Cleanup callbacks** - Close connections properly
+
+## Shutdown Flow
 
 ```
-1. Receive SIGTERM signal
-2. Stop accepting new requests
-3. Drain active connections
-4. Complete in-flight requests
-5. Close database connections
-6. Flush logs and metrics
-7. Exit process
+SIGTERM received
+      │
+      ▼
+Stop accepting new work
+      │
+      ▼
+Wait for in-flight jobs
+      │
+      ▼
+Drain buffers
+      │
+      ▼
+Run cleanup callbacks
+      │
+      ▼
+Process exits
 ```
 
-## Implementation Examples
-
-### 1. **Express.js Graceful Shutdown**
+## TypeScript Implementation
 
 ```typescript
-import express from 'express';
-import http from 'http';
+// graceful-shutdown.ts
+type ShutdownCallback = () => Promise<void>;
+type DrainCallback = () => Promise<{ flushed: number; dropped: number }>;
 
-class GracefulShutdownServer {
-  private app: express.Application;
-  private server: http.Server;
+interface InFlightJob {
+  id: string;
+  workerName: string;
+  startedAt: Date;
+  timeoutMs: number;
+}
+
+class GracefulShutdown {
   private isShuttingDown = false;
-  private activeConnections = new Set<any>();
-  private shutdownTimeout = 30000; // 30 seconds
+  private shutdownPromise: Promise<void> | null = null;
+  private callbacks: ShutdownCallback[] = [];
+  private drainCallbacks: DrainCallback[] = [];
+  private inFlightJobs = new Map<string, InFlightJob>();
+  private shutdownTimeoutMs = 30000;
 
-  constructor() {
-    this.app = express();
-    this.server = http.createServer(this.app);
-    this.setupMiddleware();
-    this.setupRoutes();
-    this.setupShutdownHandlers();
+  registerSignals(): void {
+    const handler = (signal: string) => {
+      console.log(`[Shutdown] Received ${signal}`);
+      this.shutdown(`Signal: ${signal}`);
+    };
+
+    process.on('SIGTERM', () => handler('SIGTERM'));
+    process.on('SIGINT', () => handler('SIGINT'));
   }
 
-  private setupMiddleware(): void {
-    // Track active connections
-    this.app.use((req, res, next) => {
-      if (this.isShuttingDown) {
-        res.set('Connection', 'close');
-        return res.status(503).json({
-          error: 'Server is shutting down'
-        });
-      }
-
-      this.activeConnections.add(res);
-
-      res.on('finish', () => {
-        this.activeConnections.delete(res);
-      });
-
-      res.on('close', () => {
-        this.activeConnections.delete(res);
-      });
-
-      next();
-    });
+  onShutdown(callback: ShutdownCallback): void {
+    this.callbacks.push(callback);
   }
 
-  private setupRoutes(): void {
-    this.app.get('/health', (req, res) => {
-      if (this.isShuttingDown) {
-        return res.status(503).json({ status: 'shutting_down' });
-      }
-      res.json({ status: 'ok' });
-    });
-
-    this.app.get('/api/data', async (req, res) => {
-      // Simulate long-running request
-      await new Promise(resolve => setTimeout(resolve, 5000));
-      res.json({ data: 'response' });
-    });
+  onDrain(callback: DrainCallback): void {
+    this.drainCallbacks.push(callback);
   }
 
-  private setupShutdownHandlers(): void {
-    const signals: NodeJS.Signals[] = ['SIGTERM', 'SIGINT'];
-
-    signals.forEach(signal => {
-      process.on(signal, () => {
-        console.log(`Received ${signal}, starting graceful shutdown...`);
-        this.gracefulShutdown(signal);
-      });
-    });
-
-    // Handle uncaught exceptions
-    process.on('uncaughtException', (error) => {
-      console.error('Uncaught exception:', error);
-      this.gracefulShutdown('UNCAUGHT_EXCEPTION');
-    });
-
-    process.on('unhandledRejection', (reason, promise) => {
-      console.error('Unhandled rejection:', reason);
-      this.gracefulShutdown('UNHANDLED_REJECTION');
-    });
+  trackJob(id: string, workerName: string, timeoutMs = 60000): void {
+    if (this.isShuttingDown) return;
+    this.inFlightJobs.set(id, { id, workerName, startedAt: new Date(), timeoutMs });
   }
 
-  private async gracefulShutdown(signal: string): Promise<void> {
-    if (this.isShuttingDown) {
-      console.log('Shutdown already in progress');
-      return;
-    }
+  completeJob(id: string): void {
+    this.inFlightJobs.delete(id);
+  }
+
+  isShutdownInProgress(): boolean {
+    return this.isShuttingDown;
+  }
+
+  async shutdown(reason: string): Promise<void> {
+    if (this.shutdownPromise) return this.shutdownPromise;
 
     this.isShuttingDown = true;
-    console.log(`Starting graceful shutdown (${signal})`);
+    console.log(`[Shutdown] Starting: ${reason}`);
 
-    // Set shutdown timeout
-    const shutdownTimer = setTimeout(() => {
-      console.error('Shutdown timeout reached, forcing exit');
-      process.exit(1);
-    }, this.shutdownTimeout);
-
-    try {
-      // 1. Stop accepting new connections
-      await this.stopAcceptingConnections();
-
-      // 2. Wait for active requests to complete
-      await this.waitForActiveConnections();
-
-      // 3. Close server
-      await this.closeServer();
-
-      // 4. Cleanup resources
-      await this.cleanupResources();
-
-      console.log('Graceful shutdown completed');
-      clearTimeout(shutdownTimer);
-      process.exit(0);
-    } catch (error) {
-      console.error('Error during shutdown:', error);
-      clearTimeout(shutdownTimer);
-      process.exit(1);
-    }
+    this.shutdownPromise = this.performShutdown();
+    return this.shutdownPromise;
   }
 
-  private async stopAcceptingConnections(): Promise<void> {
-    console.log('Stopping new connections...');
-    return new Promise((resolve) => {
-      this.server.close(() => {
-        console.log('Server stopped accepting new connections');
-        resolve();
-      });
-    });
-  }
+  private async performShutdown(): Promise<void> {
+    const startTime = Date.now();
 
-  private async waitForActiveConnections(): Promise<void> {
-    console.log(`Waiting for ${this.activeConnections.size} active connections...`);
-
-    const checkInterval = 100;
-    const maxWait = this.shutdownTimeout - 5000;
-    let waited = 0;
-
-    while (this.activeConnections.size > 0 && waited < maxWait) {
-      await new Promise(resolve => setTimeout(resolve, checkInterval));
-      waited += checkInterval;
-
-      if (waited % 1000 === 0) {
-        console.log(`Still waiting for ${this.activeConnections.size} connections...`);
+    // 1. Wait for in-flight jobs
+    console.log(`[Shutdown] Waiting for ${this.inFlightJobs.size} jobs...`);
+    
+    while (this.inFlightJobs.size > 0) {
+      if (Date.now() - startTime > this.shutdownTimeoutMs) {
+        console.log(`[Shutdown] Timeout! ${this.inFlightJobs.size} jobs still running`);
+        break;
       }
+
+      // Force-complete stuck jobs
+      const now = Date.now();
+      for (const [id, job] of this.inFlightJobs) {
+        if (now - job.startedAt.getTime() > job.timeoutMs) {
+          console.log(`[Shutdown] Force-completing stuck job: ${id}`);
+          this.inFlightJobs.delete(id);
+        }
+      }
+
+      await this.sleep(100);
     }
 
-    if (this.activeConnections.size > 0) {
-      console.warn(`Force closing ${this.activeConnections.size} remaining connections`);
-      this.activeConnections.forEach((res: any) => {
-        res.destroy();
-      });
+    // 2. Drain buffers
+    if (this.drainCallbacks.length > 0) {
+      console.log(`[Shutdown] Draining ${this.drainCallbacks.length} buffers...`);
+      
+      let totalFlushed = 0, totalDropped = 0;
+      
+      for (const drain of this.drainCallbacks) {
+        try {
+          const result = await Promise.race([
+            drain(),
+            this.sleep(10000).then(() => ({ flushed: 0, dropped: 0 })),
+          ]);
+          totalFlushed += result.flushed;
+          totalDropped += result.dropped;
+        } catch (err) {
+          console.error('[Shutdown] Drain error:', err);
+        }
+      }
+      
+      console.log(`[Shutdown] Drained: ${totalFlushed} flushed, ${totalDropped} dropped`);
     }
 
-    console.log('All connections closed');
-  }
-
-  private async closeServer(): Promise<void> {
-    // Server already closed in stopAcceptingConnections
-    console.log('Server closed');
-  }
-
-  private async cleanupResources(): Promise<void> {
-    console.log('Cleaning up resources...');
-
-    // Close database connections
-    await this.closeDatabaseConnections();
-
-    // Flush logs
-    await this.flushLogs();
-
-    // Close any other resources
-    await this.closeOtherResources();
-
-    console.log('Resources cleaned up');
-  }
-
-  private async closeDatabaseConnections(): Promise<void> {
-    // Close database connections
-    console.log('Closing database connections...');
-    // await db.close();
-  }
-
-  private async flushLogs(): Promise<void> {
-    // Flush any pending logs
-    console.log('Flushing logs...');
-  }
-
-  private async closeOtherResources(): Promise<void> {
-    // Close Redis, message queues, etc.
-    console.log('Closing other resources...');
-  }
-
-  start(port: number): void {
-    this.server.listen(port, () => {
-      console.log(`Server listening on port ${port}`);
-    });
-  }
-}
-
-// Usage
-const server = new GracefulShutdownServer();
-server.start(3000);
-```
-
-### 2. **Kubernetes-Aware Shutdown**
-
-```typescript
-class KubernetesGracefulShutdown {
-  private isReady = true;
-  private isLive = true;
-  private shutdownDelay = 5000; // K8s propagation delay
-
-  setupProbes(app: express.Application): void {
-    // Readiness probe
-    app.get('/health/ready', (req, res) => {
-      if (this.isReady) {
-        res.status(200).json({ status: 'ready' });
-      } else {
-        res.status(503).json({ status: 'not_ready' });
-      }
-    });
-
-    // Liveness probe
-    app.get('/health/live', (req, res) => {
-      if (this.isLive) {
-        res.status(200).json({ status: 'alive' });
-      } else {
-        res.status(503).json({ status: 'not_alive' });
-      }
-    });
-  }
-
-  async shutdown(): Promise<void> {
-    console.log('Kubernetes graceful shutdown initiated');
-
-    // 1. Mark as not ready (fail readiness probe)
-    this.isReady = false;
-    console.log('Marked as not ready');
-
-    // 2. Wait for K8s to remove pod from service endpoints
-    console.log(`Waiting ${this.shutdownDelay}ms for endpoint propagation...`);
-    await new Promise(resolve => setTimeout(resolve, this.shutdownDelay));
-
-    // 3. Continue with normal graceful shutdown
-    // ... rest of shutdown logic
-  }
-}
-```
-
-### 3. **Worker Process Shutdown**
-
-```typescript
-import Queue from 'bull';
-
-class WorkerShutdown {
-  private queue: Queue.Queue;
-  private isProcessing = new Map<string, boolean>();
-
-  constructor(queue: Queue.Queue) {
-    this.queue = queue;
-    this.setupWorker();
-    this.setupShutdownHandlers();
-  }
-
-  private setupWorker(): void {
-    this.queue.process('task', 5, async (job) => {
-      const jobId = job.id!.toString();
-      this.isProcessing.set(jobId, true);
-
+    // 3. Run cleanup callbacks
+    console.log(`[Shutdown] Running ${this.callbacks.length} cleanup callbacks...`);
+    
+    for (const callback of this.callbacks) {
       try {
-        console.log(`Processing job ${jobId}`);
-        await this.processJob(job);
-        console.log(`Completed job ${jobId}`);
-      } finally {
-        this.isProcessing.delete(jobId);
-      }
-    });
-  }
-
-  private async processJob(job: Queue.Job): Promise<void> {
-    // Job processing logic
-    await new Promise(resolve => setTimeout(resolve, 5000));
-  }
-
-  private setupShutdownHandlers(): void {
-    process.on('SIGTERM', () => {
-      console.log('SIGTERM received, shutting down worker...');
-      this.shutdownWorker();
-    });
-  }
-
-  private async shutdownWorker(): Promise<void> {
-    console.log('Pausing queue...');
-    await this.queue.pause(true, true);
-
-    console.log(`Waiting for ${this.isProcessing.size} jobs to complete...`);
-
-    // Wait for current jobs to finish
-    const checkInterval = 500;
-    const maxWait = 30000;
-    let waited = 0;
-
-    while (this.isProcessing.size > 0 && waited < maxWait) {
-      await new Promise(resolve => setTimeout(resolve, checkInterval));
-      waited += checkInterval;
-
-      if (waited % 5000 === 0) {
-        console.log(`Still processing ${this.isProcessing.size} jobs...`);
+        await Promise.race([
+          callback(),
+          this.sleep(5000).then(() => { throw new Error('Callback timeout'); }),
+        ]);
+      } catch (err) {
+        console.error('[Shutdown] Callback error:', err);
       }
     }
 
-    if (this.isProcessing.size > 0) {
-      console.warn(`Forcing shutdown with ${this.isProcessing.size} jobs remaining`);
-    }
-
-    console.log('Closing queue...');
-    await this.queue.close();
-
-    console.log('Worker shutdown complete');
+    console.log(`[Shutdown] Complete in ${Date.now() - startTime}ms`);
     process.exit(0);
   }
+
+  private sleep(ms: number): Promise<void> {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+}
+
+// Singleton
+let instance: GracefulShutdown | null = null;
+
+export function getShutdownHandler(): GracefulShutdown {
+  if (!instance) instance = new GracefulShutdown();
+  return instance;
 }
 ```
 
-### 4. **Database Connection Pool Shutdown**
-
-```typescript
-import { Pool } from 'pg';
-
-class DatabaseShutdown {
-  private pool: Pool;
-  private activeQueries = new Set<Promise<any>>();
-
-  constructor(pool: Pool) {
-    this.pool = pool;
-    this.setupQueryTracking();
-  }
-
-  private setupQueryTracking(): void {
-    const originalQuery = this.pool.query.bind(this.pool);
-
-    this.pool.query = (...args: any[]) => {
-      const queryPromise = originalQuery(...args);
-
-      this.activeQueries.add(queryPromise);
-
-      queryPromise.finally(() => {
-        this.activeQueries.delete(queryPromise);
-      });
-
-      return queryPromise;
-    };
-  }
-
-  async shutdown(): Promise<void> {
-    console.log('Shutting down database connections...');
-
-    // Wait for active queries
-    if (this.activeQueries.size > 0) {
-      console.log(`Waiting for ${this.activeQueries.size} active queries...`);
-
-      await Promise.race([
-        Promise.all(Array.from(this.activeQueries)),
-        new Promise(resolve => setTimeout(resolve, 5000))
-      ]);
-    }
-
-    // Close pool
-    console.log('Ending pool...');
-    await this.pool.end();
-
-    console.log('Database connections closed');
-  }
-}
-```
-
-### 5. **PM2 Graceful Shutdown**
-
-```typescript
-// ecosystem.config.js
-module.exports = {
-  apps: [{
-    name: 'api-server',
-    script: './dist/server.js',
-    instances: 4,
-    exec_mode: 'cluster',
-    kill_timeout: 30000, // Wait 30s for graceful shutdown
-    wait_ready: true,
-    listen_timeout: 10000,
-    shutdown_with_message: true
-  }]
-};
-
-// server.ts
-import express from 'express';
-
-const app = express();
-const port = process.env.PORT || 3000;
-
-// ... setup routes ...
-
-const server = app.listen(port, () => {
-  console.log(`Server started on port ${port}`);
-
-  // Signal to PM2 that app is ready
-  if (process.send) {
-    process.send('ready');
-  }
-});
-
-// Handle shutdown message from PM2
-process.on('message', (msg) => {
-  if (msg === 'shutdown') {
-    console.log('Received shutdown message from PM2');
-    gracefulShutdown();
-  }
-});
-
-async function gracefulShutdown() {
-  console.log('Starting graceful shutdown...');
-
-  // Stop accepting new connections
-  server.close(() => {
-    console.log('Server closed');
-    process.exit(0);
-  });
-
-  // Force shutdown after timeout
-  setTimeout(() => {
-    console.error('Forced shutdown after timeout');
-    process.exit(1);
-  }, 28000); // Less than PM2's kill_timeout
-}
-```
-
-### 6. **Python/Flask Graceful Shutdown**
+## Python Implementation
 
 ```python
+# graceful_shutdown.py
+import asyncio
 import signal
-import sys
-import time
-from flask import Flask, request, g
-from threading import Lock
+from dataclasses import dataclass, field
+from datetime import datetime
+from typing import Callable, Awaitable, Dict, List
 
-app = Flask(__name__)
+@dataclass
+class InFlightJob:
+    id: str
+    worker_name: str
+    started_at: datetime
+    timeout_seconds: float
+
+ShutdownCallback = Callable[[], Awaitable[None]]
+DrainCallback = Callable[[], Awaitable[Dict[str, int]]]
 
 class GracefulShutdown:
-    def __init__(self):
-        self.is_shutting_down = False
-        self.active_requests = 0
-        self.lock = Lock()
+    def __init__(self, timeout_seconds: float = 30.0):
+        self._is_shutting_down = False
+        self._shutdown_task: asyncio.Task | None = None
+        self._callbacks: List[ShutdownCallback] = []
+        self._drain_callbacks: List[DrainCallback] = []
+        self._in_flight: Dict[str, InFlightJob] = {}
+        self._timeout = timeout_seconds
 
-    def before_request(self):
-        """Track active requests."""
-        if self.is_shutting_down:
-            return {'error': 'Server is shutting down'}, 503
+    def register_signals(self):
+        loop = asyncio.get_event_loop()
+        for sig in (signal.SIGTERM, signal.SIGINT):
+            loop.add_signal_handler(
+                sig,
+                lambda s=sig: asyncio.create_task(self.shutdown(f"Signal: {s.name}"))
+            )
 
-        with self.lock:
-            self.active_requests += 1
+    def on_shutdown(self, callback: ShutdownCallback):
+        self._callbacks.append(callback)
 
-    def after_request(self, response):
-        """Decrement active requests."""
-        with self.lock:
-            self.active_requests -= 1
-        return response
+    def on_drain(self, callback: DrainCallback):
+        self._drain_callbacks.append(callback)
 
-    def shutdown(self, signum, frame):
-        """Handle shutdown signal."""
-        print(f"Received signal {signum}, starting graceful shutdown...")
-        self.is_shutting_down = True
+    def track_job(self, job_id: str, worker_name: str, timeout_seconds: float = 60.0):
+        if self._is_shutting_down:
+            return
+        self._in_flight[job_id] = InFlightJob(
+            id=job_id,
+            worker_name=worker_name,
+            started_at=datetime.now(),
+            timeout_seconds=timeout_seconds,
+        )
 
-        # Wait for active requests
-        max_wait = 30
-        waited = 0
+    def complete_job(self, job_id: str):
+        self._in_flight.pop(job_id, None)
 
-        while self.active_requests > 0 and waited < max_wait:
-            print(f"Waiting for {self.active_requests} active requests...")
-            time.sleep(1)
-            waited += 1
+    @property
+    def is_shutting_down(self) -> bool:
+        return self._is_shutting_down
 
-        if self.active_requests > 0:
-            print(f"Force closing with {self.active_requests} requests remaining")
+    async def shutdown(self, reason: str):
+        if self._shutdown_task:
+            return await self._shutdown_task
 
-        print("Graceful shutdown complete")
-        sys.exit(0)
+        self._is_shutting_down = True
+        print(f"[Shutdown] Starting: {reason}")
+        
+        self._shutdown_task = asyncio.create_task(self._perform_shutdown())
+        return await self._shutdown_task
 
-# Setup graceful shutdown
-shutdown_handler = GracefulShutdown()
-app.before_request(shutdown_handler.before_request)
-app.after_request(shutdown_handler.after_request)
+    async def _perform_shutdown(self):
+        start_time = datetime.now()
 
-signal.signal(signal.SIGTERM, shutdown_handler.shutdown)
-signal.signal(signal.SIGINT, shutdown_handler.shutdown)
+        # Wait for in-flight jobs
+        print(f"[Shutdown] Waiting for {len(self._in_flight)} jobs...")
+        
+        while self._in_flight:
+            elapsed = (datetime.now() - start_time).total_seconds()
+            if elapsed > self._timeout:
+                print(f"[Shutdown] Timeout! {len(self._in_flight)} jobs still running")
+                break
 
-@app.route('/health')
-def health():
-    if shutdown_handler.is_shutting_down:
-        return {'status': 'shutting_down'}, 503
-    return {'status': 'ok'}
+            # Force-complete stuck jobs
+            now = datetime.now()
+            stuck = [
+                job_id for job_id, job in self._in_flight.items()
+                if (now - job.started_at).total_seconds() > job.timeout_seconds
+            ]
+            for job_id in stuck:
+                print(f"[Shutdown] Force-completing stuck job: {job_id}")
+                self._in_flight.pop(job_id)
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+            await asyncio.sleep(0.1)
+
+        # Drain buffers
+        for drain in self._drain_callbacks:
+            try:
+                result = await asyncio.wait_for(drain(), timeout=10.0)
+                print(f"[Shutdown] Drained: {result}")
+            except Exception as e:
+                print(f"[Shutdown] Drain error: {e}")
+
+        # Run cleanup callbacks
+        for callback in self._callbacks:
+            try:
+                await asyncio.wait_for(callback(), timeout=5.0)
+            except Exception as e:
+                print(f"[Shutdown] Callback error: {e}")
+
+        elapsed = (datetime.now() - start_time).total_seconds()
+        print(f"[Shutdown] Complete in {elapsed:.1f}s")
+
+
+# Singleton
+_instance: GracefulShutdown | None = None
+
+def get_shutdown_handler() -> GracefulShutdown:
+    global _instance
+    if _instance is None:
+        _instance = GracefulShutdown()
+    return _instance
+```
+
+## Usage Examples
+
+### Basic Setup
+
+```typescript
+const shutdown = getShutdownHandler();
+shutdown.registerSignals();
+
+// Register cleanup
+shutdown.onShutdown(async () => {
+  await database.close();
+  await redis.quit();
+});
+
+// Register buffer drain
+shutdown.onDrain(async () => {
+  return backpressureBuffer.flush();
+});
+```
+
+### Job Tracking
+
+```typescript
+async function processJob(jobId: string) {
+  const shutdown = getShutdownHandler();
+  
+  // Don't start new work during shutdown
+  if (shutdown.isShutdownInProgress()) {
+    return;
+  }
+  
+  shutdown.trackJob(jobId, 'my-worker', 30000);
+  
+  try {
+    await doWork(jobId);
+  } finally {
+    shutdown.completeJob(jobId);
+  }
+}
+```
+
+### With Express/Fastify
+
+```typescript
+const shutdown = getShutdownHandler();
+shutdown.registerSignals();
+
+// Stop accepting new requests
+shutdown.onShutdown(async () => {
+  await new Promise<void>((resolve) => {
+    server.close(() => resolve());
+  });
+});
+
+// Close database connections
+shutdown.onShutdown(async () => {
+  await prisma.$disconnect();
+});
 ```
 
 ## Best Practices
 
-### ✅ DO
-- Handle SIGTERM and SIGINT signals
-- Stop accepting new requests immediately
-- Wait for in-flight requests to complete
-- Set reasonable shutdown timeouts
-- Close database connections properly
-- Flush logs and metrics
-- Fail health checks during shutdown
-- Test shutdown procedures
-- Log shutdown progress
-- Use graceful shutdown in containers
+1. **Register signals early** - First thing in app startup
+2. **Track all in-flight work** - With appropriate timeouts
+3. **Drain before cleanup** - Buffers first, connections last
+4. **Set reasonable timeouts** - Don't hang forever
+5. **Check before new work** - Don't start during shutdown
 
-### ❌ DON'T
-- Ignore shutdown signals
-- Force kill processes without cleanup
-- Set unreasonably long timeouts
-- Skip resource cleanup
-- Forget to close connections
-- Block shutdown indefinitely
+## Common Mistakes
 
-## Kubernetes Configuration
+- Not registering signal handlers
+- Starting new work during shutdown
+- No timeout on cleanup callbacks
+- Forgetting to track in-flight jobs
+- Closing connections before draining buffers
 
-```yaml
-# deployment.yaml
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: api-server
-spec:
-  replicas: 3
-  template:
-    spec:
-      containers:
-      - name: api
-        image: api-server:latest
-        lifecycle:
-          preStop:
-            exec:
-              command: ["/bin/sh", "-c", "sleep 5"]
-        readinessProbe:
-          httpGet:
-            path: /health/ready
-            port: 3000
-          initialDelaySeconds: 5
-          periodSeconds: 5
-        livenessProbe:
-          httpGet:
-            path: /health/live
-            port: 3000
-          initialDelaySeconds: 15
-          periodSeconds: 10
-      terminationGracePeriodSeconds: 30
-```
+## Related Skills
 
-## Resources
-
-- [Kubernetes Pod Lifecycle](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/)
-- [Node.js Signal Events](https://nodejs.org/api/process.html#process_signal_events)
+- [Background Jobs](../background-jobs/)
+- [Backpressure](../backpressure/)
+- [Health Checks](../health-checks/)

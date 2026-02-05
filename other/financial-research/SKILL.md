@@ -5,7 +5,7 @@ description: 面向股票/行业/宏观的金融研究技能，结合结构化�
 version: 1.0.0
 author: system
 tags: [finance, research, stock, valuation, sentiment, 报告, 投研, 财报, 估值, A股, 美股]
-allowed_tools: [financial_data, web_search, read_url, browser_open, browser_snapshot, browser_click, browser_fill, browser_screenshot, browser_close, create_document]
+allowed_tools: [financial_data, web_search, read_url, browser_open, browser_snapshot, browser_click, browser_fill, browser_screenshot, browser_close, create_document, mem_retain, mem_delete, mem_summarize, mem_pin, mem_list_blocks]
 max_iterations: 30
 timeout: 600
 enabled: true

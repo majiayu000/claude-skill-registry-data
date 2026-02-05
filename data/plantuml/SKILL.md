@@ -1,324 +1,261 @@
 ---
 name: plantuml
-description: Generate PlantUML diagrams from text descriptions and convert them to PNG/SVG images. Use when asked to "create a diagram", "generate PlantUML", "convert puml to image", "extract diagrams from markdown", or "prepare markdown for Confluence". Supports all PlantUML diagram types including UML (sequence, class, activity, state, component, deployment, use case, object, timing) and non-UML (ER diagrams, Gantt charts, JSON/YAML visualization, mindmaps, WBS, network diagrams, wireframes, and more).
+description: Provides comprehensive guidance for creating PlantUML diagrams. PlantUML is a component that allows you to create various UML diagrams through simple textual descriptions. From sequence diagrams to deployment diagrams and beyond, PlantUML provides an easy way to create visual representations of complex systems. PlantUML is primarily focused on UML standards and is ideal for UML diagrams, enterprise architecture, C4 models, and diagrams requiring precise UML notation. Use when the user wants to draw, create, generate, make, build, or visualize any UML diagram, architecture diagram, or PlantUML-supported diagram type. This skill covers ALL PlantUML diagram types: UML Diagrams (sequence, use case, class, object, activity, component, deployment, state, timing diagrams), and Non-UML Diagrams (JSON/YAML data, EBNF, regex, network diagrams, Salt wireframes, Archimate, SDL, Ditaa, Gantt, chronology, mindmap, WBS, mathematical notations, ER diagrams, IE diagrams, ER Chen's notation, C4 model diagrams). Always use this skill when the user mentions PlantUML, UML diagrams, or complex architecture diagrams that require precise UML notation or C4 model support.
+license: Complete terms in LICENSE.txt
 ---
 
-# PlantUML Diagram Generation and Conversion
+## When to use this skill
 
-## Table of Contents
+**ALWAYS use this skill when the user mentions:**
+- PlantUML, UML diagrams, or explicitly requests PlantUML syntax
+- Complex architecture diagrams, C4 model diagrams, or enterprise-level diagrams
+- Standard UML diagrams: class diagrams, sequence diagrams, component diagrams, deployment diagrams, state diagrams, activity diagrams, use case diagrams
+- Architecture documentation requiring precise UML notation
+- Diagrams that need advanced customization, styling, or layout control
+- Enterprise system architecture, microservices architecture, or distributed system diagrams
+- Any request to "用 PlantUML 画图" (draw with PlantUML), "用 UML 图" (use UML diagram), "画类图" (draw class diagram), "画组件图" (draw component diagram)
 
-- [Purpose](#purpose)
-- [When to Use This Skill](#when-to-use-this-skill)
-- [Prerequisites](#prerequisites)
-- [Creating Diagrams](#creating-diagrams)
-  - [Diagram Type Identification](#diagram-type-identification)
-  - [Resilient Workflow](#resilient-workflow-primary---recommended)
-- [Converting Source Code to Diagrams](#converting-source-code-to-diagrams)
-- [Converting Diagrams to Images](#converting-diagrams-to-images)
-  - [Standalone .puml Files](#convert-standalone-puml-files)
-  - [Markdown Processing](#extract-and-convert-from-markdown)
-  - [Direct Command-Line Usage](#direct-command-line-usage)
-- [Best Practices](#best-practices)
-- [Troubleshooting](#troubleshooting)
-- [References](#references)
+**Trigger phrases include:**
+- "用 PlantUML" (use PlantUML), "用 PlantUML 画" (draw with PlantUML), "PlantUML 语法" (PlantUML syntax)
+- "UML 图" (UML diagram), "类图" (class diagram), "时序图" (sequence diagram), "组件图" (component diagram), "部署图" (deployment diagram)
+- "C4 模型" (C4 model), "架构图" (architecture diagram), "系统架构图" (system architecture diagram)
+- "活动图" (activity diagram), "状态图" (state diagram), "用例图" (use case diagram)
+- "画 UML" (draw UML), "UML 类图" (UML class diagram), "UML 时序图" (UML sequence diagram)
+- Any mention of "PlantUML", "UML", "class diagram", "sequence diagram", "component diagram", "deployment diagram", "C4 model"
 
-## Purpose
+**IMPORTANT: PlantUML vs Mermaid - Two Different Diagramming Tools:**
 
-This skill enables comprehensive PlantUML diagram creation and conversion workflows. PlantUML is a text-based diagramming tool that generates professional diagrams from simple, intuitive syntax.
+PlantUML and Mermaid are two different diagramming tools with different purposes:
 
-**Core capabilities:**
+- **PlantUML**: A component that allows you to create various UML diagrams through simple textual descriptions. From sequence diagrams to deployment diagrams and beyond, PlantUML provides an easy way to create visual representations of complex systems. PlantUML is primarily focused on UML standards and is ideal for UML diagrams, enterprise architecture, C4 models, and diagrams requiring precise UML notation.
 
-1. Create diagrams from natural language descriptions
-2. Convert source code to architecture diagrams (Spring Boot, FastAPI, Python ETL, Node.js, React)
-3. Convert standalone `.puml` files to PNG or SVG images
-4. Extract `puml` code blocks from markdown and convert to images
-5. Process linked `.puml` files in markdown (`![diagram](path/to/diagram.puml)`)
-6. Validate PlantUML syntax without conversion
-7. Replace markdown diagrams with image links for publication (Confluence, Notion)
+- **Mermaid**: A JavaScript-based diagramming and charting tool that uses Markdown-inspired text definitions. The main purpose of Mermaid is to help documentation catch up with development. Mermaid is particularly well-suited for use in Markdown documents, GitHub, GitLab, wikis, and blogs.
 
-## When to Use This Skill
+**When both PlantUML and Mermaid skills are matched:**
+- If the user explicitly mentions "PlantUML" or "UML diagram", use this skill (PlantUML)
+- If the user explicitly mentions "Mermaid" or "Markdown diagram", use the Mermaid skill instead
+- If the user mentions both or neither, **ALWAYS ask the user to choose**: "I can create this diagram using either PlantUML or Mermaid. PlantUML is focused on UML diagrams and enterprise architecture. Mermaid is a JavaScript-based tool designed for Markdown documentation and renders directly in GitHub/GitLab. Which would you prefer?"
 
-**Activate for:**
+## How to use this skill
 
-- Diagram creation requests (e.g., "Create a sequence diagram showing authentication flow")
-- Code architecture visualization (e.g., "Create deployment diagram for my Spring Boot app")
-- `.puml` file to image conversion
-- Markdown files containing ```puml code blocks or linked .puml files
-- Confluence or Notion markdown preparation (documents with PlantUML diagrams require conversion first)
-- Specific diagram types: UML (sequence, class, activity, state, component, deployment, use case, object, timing) or non-UML (ER, Gantt, mindmap, WBS, JSON/YAML, network, Archimate, wireframes)
-- PlantUML syntax validation
+**CRITICAL: PlantUML is a UML-focused diagramming tool. This skill should be triggered when the user explicitly mentions PlantUML, UML diagrams, or needs complex architecture diagrams with precise UML notation.**
 
-**Confluence/Notion uploads:** If markdown contains PlantUML diagrams, run conversion FIRST before upload.
+**Trigger this skill when you see:**
+- User says "用 PlantUML" (use PlantUML), "PlantUML 画图" (draw with PlantUML), "UML 图" (UML diagram)
+- User mentions UML diagram types: class diagram, sequence diagram, component diagram, deployment diagram, etc.
+- User needs C4 model diagrams or enterprise architecture diagrams
+- User explicitly requests PlantUML syntax or mentions PlantUML
+- User needs diagrams with precise UML notation or standard UML compliance
 
-## Prerequisites
+**When both PlantUML and Mermaid are matched, ALWAYS ask the user to choose the output format or tool, as they are two different diagramming tools with different purposes.**
 
-Before creating diagrams, verify the PlantUML setup:
+To create a PlantUML diagram:
 
-```bash
-python scripts/check_setup.py
-```
+1. **Identify the diagram type** from the user's request:
+   
+   **UML Diagrams:**
+   - Sequence diagram/时序图 → `@startuml` ... `@enduml` with `participant` or `actor`
+   - Use case diagram/用例图 → `@startuml` ... `@enduml` with `actor`, `usecase`
+   - Class diagram/类图 → `@startuml` ... `@enduml` with `class`
+   - Object diagram/对象图 → `@startuml` ... `@enduml` with `object`
+   - Activity diagram/活动图 → `@startuml` ... `@enduml` with `start`, `stop`, `if`, `while`, etc.
+   - Component diagram/组件图 → `@startuml` ... `@enduml` with `component`, `interface`, `package`
+   - Deployment diagram/部署图 → `@startuml` ... `@enduml` with `node`, `database`, `cloud`
+   - State diagram/状态图 → `@startuml` ... `@enduml` with `state`, `[*]`
+   - Timing diagram/时序图 → `@startuml` ... `@enduml` with `concise` or `robust`
+   
+   **Non-UML Diagrams:**
+   - JSON data/JSON 数据图 → `@startjson` ... `@endjson`
+   - YAML data/YAML 数据图 → `@startyaml` ... `@endyaml`
+   - EBNF (Extended Backus-Naur Form)/EBNF 图 → `@startebnf` ... `@endebnf`
+   - Regex (Regular Expression)/正则表达式图 → `@startregex` ... `@endregex`
+   - Network diagram (nwdiag)/网络图 → `@startuml` ... `@enduml` with network elements
+   - Salt (Wireframe graphical interface)/线框图 → `@startsalt` ... `@endsalt`
+   - Archimate diagram/架构图 → `@startuml` ... `@enduml` with Archimate elements
+   - SDL (Specification and Description Language)/SDL 图 → `@startsdl` ... `@endsdl`
+   - Ditaa diagram/Ditaa 图 → `@startditaa` ... `@endditaa`
+   - Gantt diagram/甘特图 → `@startgantt` ... `@endgantt`
+   - Chronology diagram/时间线图 → `@startuml` ... `@enduml` with chronology syntax
+   - MindMap diagram/思维导图 → `@startmindmap` ... `@endmindmap`
+   - WBS (Work Breakdown Structure)/工作分解结构图 → `@startwbs` ... `@endwbs`
+   - Mathematical Notations (AsciiMath, JLaTeXMath)/数学公式图 → `@startmath` ... `@endmath` or `@startlatex` ... `@endlatex`
+   - Entity Relationship (ER) diagram/实体关系图 → `@startuml` ... `@enduml` with `entity`
+   - Information Engineering (IE) diagram/信息工程图 → `@startuml` ... `@enduml` with IE notation
+   - Entity Relationship (ER) diagram (Chen's notation)/ER 图（陈氏表示法） → `@startuml` ... `@enduml` with Chen's notation
+   - C4 diagram/C4 模型图 → `@startuml` ... `@enduml` with C4-PlantUML library
 
-**Required components:**
+2. **Load the appropriate example file** from the `examples/` directory:
+   
+   **UML Diagrams:**
+   - `examples/sequence.md` - For sequence diagrams showing interactions
+   - `examples/use-case.md` - For use case diagrams
+   - `examples/class.md` - For class diagrams and object-oriented designs
+   - `examples/object.md` - For object diagrams
+   - `examples/activity.md` - For activity diagrams and workflows
+   - `examples/component.md` - For component diagrams and system architecture
+   - `examples/deployment.md` - For deployment diagrams and infrastructure
+   - `examples/state.md` - For state diagrams and state machines
+   - `examples/timing.md` - For timing diagrams
+   
+   **Non-UML Diagrams:**
+   - `examples/json-yaml.md` - For JSON/YAML data visualization
+   - `examples/ebnf.md` - For EBNF grammar diagrams
+   - `examples/regex.md` - For regular expression diagrams
+   - `examples/network.md` - For network diagrams (nwdiag)
+   - `examples/salt.md` - For Salt wireframes and UI mockups
+   - `examples/archimate.md` - For Archimate architecture diagrams
+   - `examples/sdl.md` - For SDL (Specification and Description Language) diagrams
+   - `examples/ditaa.md` - For Ditaa ASCII art diagrams
+   - `examples/gantt.md` - For Gantt charts and project timelines
+   - `examples/chronology.md` - For chronology and timeline diagrams
+   - `examples/mindmap.md` - For mindmaps
+   - `examples/wbs.md` - For work breakdown structure diagrams
+   - `examples/math.md` - For mathematical notations (AsciiMath, LaTeX)
+   - `examples/er.md` - For Entity-Relationship diagrams
+   - `examples/ie.md` - For Information Engineering diagrams
+   - `examples/er-chen.md` - For ER diagrams using Chen's notation
+   - `examples/c4.md` - For C4 model architecture diagrams
 
-| Component | Purpose | Installation |
-|-----------|---------|--------------|
-| Java JRE/JDK 8+ | Runtime | https://www.oracle.com/java/technologies/downloads/ |
-| plantuml.jar | Diagram generator | https://plantuml.com/download (place in `~/plantuml.jar` or set `PLANTUML_JAR`) |
-| Graphviz (optional) | Complex layouts | https://graphviz.org/download/ |
+3. **Follow the specific instructions** in that example file for syntax, structure, and best practices
 
-## Creating Diagrams
+   **Important Notes**:
+   - PlantUML requires Java runtime environment and Graphviz (or PlantUML server) for rendering
+   - All PlantUML diagrams must be wrapped in `@startuml` ... `@enduml` (or diagram-specific tags)
+   - Use `!include` directive to include external files or libraries (e.g., C4-PlantUML)
+   - Use `!define` and `!include` for reusable components and themes
+   - PlantUML supports extensive styling with `skinparam` directives
+   - For C4 diagrams, use `!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml`
 
-### Diagram Type Identification
+4. **Generate the PlantUML code** wrapped in a Markdown code block with proper syntax highlighting:
+   
+   **IMPORTANT**: Always wrap the PlantUML code in a Markdown code block with `plantuml` language tag. This ensures the format is preserved when users copy the content.
+   
+   **Example format** (use actual PlantUML syntax, not placeholders):
+   ```plantuml
+   @startuml
+   Alice -> Bob: Hello
+   Bob -> Alice: Hi
+   @enduml
+   ```
+   
+   **Output Format Requirements**:
+   - Always use triple backticks (```) with `plantuml` language tag
+   - Never output raw PlantUML code without code block markers
+   - The code block must be complete and properly formatted
+   - Use actual valid PlantUML syntax, not placeholders like `<diagram-type>` or `...diagram content...`
+   - Always include `@startuml` and `@enduml` tags (or diagram-specific start/end tags)
+   - This ensures users can copy the code without losing formatting
 
-Identify the appropriate diagram type based on user intent:
+5. **Include styling and configuration** when needed:
+   - Use `skinparam` directives for global styling
+   - Use `skinparam <element> { }` for element-specific styling
+   - Use `!theme` directive for predefined themes
+   - Use `!define` for custom colors and styles
+   - Use `!include` for external libraries and components
 
-| User Intent | Diagram Type | Reference |
-|-------------|--------------|-----------|
-| Interactions over time | Sequence | `references/sequence_diagrams.md` |
-| System structure with classes | Class | `references/class_diagrams.md` |
-| Workflows, decision flows | Activity | `references/activity_diagrams.md` |
-| Object states and transitions | State | `references/state_diagrams.md` |
-| Database schemas | ER (Entity Relationship) | `references/er_diagrams.md` |
-| Project timelines | Gantt | `references/gantt_diagrams.md` |
-| Idea organization | MindMap | `references/mindmap_diagrams.md` |
-| System architecture | Component | `references/component_diagrams.md` |
-| Actors and features | Use Case | `references/use_case_diagrams.md` |
-| All 19 types | See navigation hub | `references/toc.md` |
+6. **Validate the syntax**:
+   - Ensure all required elements are present
+   - Check that `@startuml` and `@enduml` tags are properly paired
+   - Verify relationships and connections are properly defined
+   - For class diagrams: Check visibility modifiers (`+`, `-`, `#`, `~`)
+   - For sequence diagrams: Verify participant declarations and message syntax
+   - For activity diagrams: Ensure proper control flow syntax
+   - For component diagrams: Verify component and interface definitions
+   - For C4 diagrams: Ensure C4-PlantUML library is included
 
-**Syntax resources:**
+7. **Save the diagram to project directory**:
+   - **Default behavior**: When generating a PlantUML diagram, save it to the current project directory
+   - **Recommended locations**:
+     - `docs/diagrams/` - For documentation diagrams
+     - `docs/` - For general documentation
+     - `diagrams/` - For standalone diagram files
+     - Current directory (`.`) - If no specific directory structure exists
+   - **File naming**: Use descriptive names like `system-architecture.puml`, `user-flow.puml`, `database-schema.puml`, etc.
+   - **File format**: Save as `.puml` file (PlantUML standard extension)
+   - **Example**: If user requests a system architecture diagram, save it as `docs/diagrams/system-architecture.puml` or `diagrams/system-architecture.puml`
+   - **Ask if needed**: If the project structure is unclear, ask the user where they'd like the diagram saved, but default to creating a `docs/` or `diagrams/` directory if it doesn't exist
 
-- `references/toc.md`: Navigation hub linking to all diagram types
-- `references/common_format.md`: Universal elements (delimiters, metadata, comments, notes)
-- `references/styling_guide.md`: Modern `<style>` syntax for visual customization
+**Output Format and File Saving**:
 
-### Resilient Workflow (Primary - Recommended)
+When generating a diagram, follow this response structure:
 
-For reliable diagram generation with error recovery, follow the 4-step resilient workflow:
+1. **Save the file first**: Create the diagram file in the project directory (e.g., `docs/diagrams/system-architecture.puml`)
 
-**Step 1: Identify Diagram Type & Load Reference**
-- Identify diagram type from user intent
-- Load `references/[diagram_type]_diagrams.md` for syntax guide
-- Consult `references/toc.md` if ambiguous
+2. **Inform the user**: Tell them where the file was saved
 
-**Step 2: Create File with Structured Naming**
-```
-./diagrams/<markdown_name>_<num>_<type>_<title>.puml
-```
+3. **Display the diagram**: Show the PlantUML code in a properly formatted Markdown code block with `plantuml` language tag
 
-Example: `./diagrams/architecture_001_sequence_user_auth.puml`
+**Example Response Structure**:
+- First line: "I've created the PlantUML diagram and saved it to `docs/diagrams/system-architecture.puml`."
+- Then show the diagram wrapped in a code block:
+  - Start with: three backticks + `plantuml` + newline
+  - Then the PlantUML code (with `@startuml` and `@enduml` tags)
+  - End with: three backticks + newline
 
-**Step 3: Convert with Error Handling (max 3 retries)**
+**Critical Requirements**:
+- The PlantUML code block MUST ALWAYS be properly formatted with triple backticks (```) and `plantuml` language tag
+- NEVER output raw PlantUML code without code block markers
+- The code block must be complete (opening and closing backticks)
+- Always include `@startuml` and `@enduml` tags (or diagram-specific start/end tags)
+- This ensures users can copy the code without losing formatting
+- Always save the diagram file to the current project directory (default: `docs/diagrams/` or `diagrams/`)
+- Use `.puml` file extension for PlantUML files
 
-If conversion fails:
-1. Check `references/troubleshooting/toc.md` for error classification
-2. Load specific guide from `references/troubleshooting/[category]_guide.md`
-3. Check `references/common_syntax_errors.md` for diagram type
+If the diagram type doesn't match any existing example, refer to the PlantUML documentation (https://plantuml.com/zh/) or ask the user for clarification about the desired visualization.
 
-**Step 4: Validate & Integrate**
-1. Verify image file exists
-2. Add image link: `![title](diagrams/filename.png)`
-3. Keep .puml source file for future edits
+## PlantUML vs Mermaid - Key Differences
 
-**Full documentation:** `references/workflows/resilient-execution-guide.md`
+**PlantUML (This Skill):**
+- **Purpose**: Component for creating various UML diagrams through simple textual descriptions
+- **Main Use Case**: From sequence diagrams to deployment diagrams and beyond, PlantUML provides an easy way to create visual representations of complex systems
+- **Focus**: Primarily focused on UML standards
+- **Best For**:
+  - Complex UML diagrams requiring precise notation (class, component, deployment diagrams)
+  - Enterprise architecture diagrams and C4 model diagrams
+  - Standard UML compliance requirements
+  - Diagrams requiring advanced customization, styling, or layout control
+  - When the user explicitly requests PlantUML or UML diagrams
 
-### Quick Syntax Reference
+**Mermaid (Different Skill):**
+- **Purpose**: JavaScript-based diagramming and charting tool that uses Markdown-inspired text definitions
+- **Main Use Case**: Help documentation catch up with development
+- **Focus**: Markdown documentation and Markdown renderers
+- **Best For**:
+  - Markdown documents, GitHub, GitLab, wikis, blogs
+  - Quick diagrams that render directly in Markdown renderers
+  - Simple flowcharts, sequence diagrams, basic charts
+  - Rapid prototyping and iteration
+  - When the user explicitly requests Mermaid or needs Markdown-compatible diagrams
 
-**Common elements:**
+**When Both Skills Are Matched:**
+- **ALWAYS ask the user to choose**: "I can create this diagram using either PlantUML or Mermaid. PlantUML is focused on UML diagrams and enterprise architecture. Mermaid is a JavaScript-based tool designed for Markdown documentation and renders directly in GitHub/GitLab. Which would you prefer?"
+- These are two different diagramming tools with different purposes - do not automatically choose one
+- If the user explicitly mentions one tool, use that tool
+- If the user mentions both or neither, ask the user to choose based on their needs
 
-- Delimiters: `@startuml` / `@enduml` (required)
-- Comments: `' Single line` or `/' Multi-line '/`
-- Relationships: `->` (solid), `-->` (dashed), `..>` (dotted)
-- Labels: `A -> B : Label text`
+## Resources
 
-**Minimal examples** (see `references/[type]_diagrams.md` for comprehensive syntax):
-
-```puml
-' Sequence: references/sequence_diagrams.md
-@startuml
-Alice -> Bob: Request
-Bob --> Alice: Response
-@enduml
-```
-
-```puml
-' Class: references/class_diagrams.md
-@startuml
-class Animal { +move() }
-class Dog extends Animal { +bark() }
-@enduml
-```
-
-```puml
-' ER: references/er_diagrams.md
-@startuml
-entity User { *id: int }
-entity Post { *id: int }
-User ||--o{ Post
-@enduml
-```
-
-## Converting Source Code to Diagrams
-
-The `examples/` directory contains language-specific templates for converting common application architectures:
-
-| Application Type | Directory | Key Diagrams |
-|------------------|-----------|--------------|
-| Spring Boot | `examples/spring-boot/` | Deployment, Component, Sequence |
-| FastAPI | `examples/fastapi/` | Deployment, Component (async routers) |
-| Python ETL | `examples/python-etl/` | Architecture with Airflow |
-| Node.js | `examples/nodejs-web/` | Express/Nest.js components |
-| React | `examples/react-frontend/` | SPA deployment, component architecture |
-
-**Workflow:**
-1. Identify application type
-2. Review example in `examples/[app-type]/`
-3. Map code structure to diagram patterns
-4. Copy and adapt the example `.puml` file
-5. Use Unicode symbols from `references/unicode_symbols.md` for semantic clarity
-
-## Converting Diagrams to Images
-
-### Convert Standalone .puml Files
-
-```bash
-# Convert to PNG (default)
-python scripts/convert_puml.py diagram.puml
-
-# Convert to SVG
-python scripts/convert_puml.py diagram.puml --format svg
-
-# Specify output directory
-python scripts/convert_puml.py diagram.puml --format svg --output-dir images/
-```
-
-### Extract and Convert from Markdown
-
-**CRITICAL for Confluence/Notion:** Run this FIRST before upload if markdown contains PlantUML diagrams.
-
-```bash
-# Process embedded ```puml blocks AND linked ![](diagram.puml) files
-python scripts/process_markdown_puml.py article.md
-
-# Convert to SVG format
-python scripts/process_markdown_puml.py article.md --format svg
-
-# Validate syntax only (for CI/CD)
-python scripts/process_markdown_puml.py article.md --validate
-```
-
-**Outputs:**
-- `article_with_images.md`: Markdown with image links
-- `images/`: Directory with generated images
-
-**IDE-Friendly Workflow:** Keep diagrams as `.puml` files during development for IDE preview, then convert for publication.
-
-### Direct Command-Line Usage
-
-```bash
-# Basic conversion
-java -jar ~/plantuml.jar diagram.puml
-
-# SVG with custom output
-java -jar ~/plantuml.jar --svg --output-dir out/ diagram.puml
-
-# Batch conversion
-java -jar ~/plantuml.jar "**/*.puml" --svg
-```
-
-See `references/plantuml_reference.md` for comprehensive command-line options.
+- **Official Documentation**: https://plantuml.com/zh/
+- **GitHub Repository**: https://github.com/plantuml/plantuml
+- **C4-PlantUML Library**: https://github.com/plantuml-stdlib/C4-PlantUML
+- **PlantUML Guide**: https://plantuml.com/zh/guide
+- **PlantUML Language Reference**: https://plantuml.com/zh/guide
 
 ## Best Practices
 
-**Diagram Quality:**
-- Use descriptive filenames from diagram content
-- Add comments with `'` for clarity
-- Follow standard UML notation
-- Test incrementally before adding complexity
+1. **Always use code blocks**: Wrap all PlantUML code in Markdown code blocks with `plantuml` language tag
+2. **Include proper tags**: Always include `@startuml` and `@enduml` (or diagram-specific tags)
+3. **Use includes for libraries**: Use `!include` for C4-PlantUML and other standard libraries
+4. **Organize files**: Save diagrams in appropriate directories (`docs/diagrams/` or `diagrams/`)
+5. **Use descriptive names**: Name diagram files clearly (e.g., `system-architecture.puml`, `user-flow.puml`)
+6. **Leverage styling**: Use `skinparam` and themes for consistent styling
+7. **Validate syntax**: Check PlantUML syntax before saving to ensure proper rendering
+8. **Consider rendering**: Note that PlantUML requires Java and Graphviz (or PlantUML server) for rendering
 
-**Format Selection:**
-- **PNG**: Web publishing, smaller files, fixed resolution
-- **SVG**: Documentation, scalable, supports hyperlinks
+## Keywords
 
-**Styling:** Apply modern `<style>` syntax from `references/styling_guide.md`:
+**English keywords:**
+plantuml, UML, class diagram, sequence diagram, use case diagram, activity diagram, component diagram, state diagram, deployment diagram, object diagram, timing diagram, network diagram, Archimate diagram, Gantt chart, mindmap, WBS diagram, JSON diagram, YAML diagram, EBNF, regex, regular expression, Salt wireframe, SDL, Ditaa, chronology diagram, mathematical notation, AsciiMath, LaTeX, ER diagram, entity relationship diagram, IE diagram, information engineering diagram, Chen's notation, C4 model, C4 diagram, architecture diagram, system architecture, enterprise architecture, microservices architecture, draw, create, generate, make, build, visualize, visualization, drawing, UML notation, standard UML
 
-```puml
-@startuml
-<style>
-classDiagram {
-  class { BackgroundColor LightBlue }
-}
-</style>
-' diagram content
-@enduml
-```
-
-**Themes:** `!theme cerulean` (also: `bluegray`, `plain`, `sketchy`, `amiga`)
-
-**Unicode symbols:** Add semantic meaning with symbols from `references/unicode_symbols.md`:
-
-```puml
-node "☁️ AWS Cloud" as aws
-database "💾 PostgreSQL" as db
-```
-
-## Troubleshooting
-
-**Quick diagnosis:**
-1. Check syntax: `java -jar plantuml.jar --check-syntax file.puml`
-2. Identify error type
-3. Load troubleshooting guide: `references/troubleshooting/toc.md`
-
-**Common issues:**
-
-| Issue | Solution |
-|-------|----------|
-| "plantuml.jar not found" | Download from https://plantuml.com/download, set `PLANTUML_JAR` |
-| "Graphviz not found" | Install from https://graphviz.org/download/ |
-| "Syntax Error" | Check delimiters match, consult `references/common_format.md` |
-| "Java not found" | Install Java JRE/JDK 8+, verify with `java -version` |
-
-**Comprehensive guides** (215+ errors documented):
-- `references/troubleshooting/toc.md` - Navigation hub with error decision tree
-- `references/troubleshooting/[category]_guide.md` - 12 focused guides by error type
-
-## References
-
-### Core Syntax References
-
-| Resource | Purpose |
-|----------|---------|
-| `references/toc.md` | Navigation hub for all 19 diagram types |
-| `references/common_format.md` | Universal elements (delimiters, metadata, comments) |
-| `references/styling_guide.md` | Modern `<style>` syntax with CSS-like rules |
-| `references/plantuml_reference.md` | Installation, CLI, and troubleshooting |
-
-### Troubleshooting Guides
-
-| Resource | Coverage |
-|----------|----------|
-| `references/troubleshooting/toc.md` | Navigation hub with error decision tree |
-| `references/troubleshooting/installation_setup_guide.md` | Setup problems |
-| `references/troubleshooting/general_syntax_guide.md` | Syntax errors |
-| `references/troubleshooting/[diagram_type]_guide.md` | Diagram-specific errors |
-
-### Enrichment Resources
-
-| Resource | Purpose |
-|----------|---------|
-| `references/unicode_symbols.md` | Unicode symbols for semantic enrichment |
-| `examples/[framework]/` | Code-to-diagram patterns |
-
-## Summary
-
-1. **Verify setup**: `python scripts/check_setup.py`
-2. **Navigate types**: Start with `references/toc.md`
-3. **Learn syntax**: Open `references/[diagram_type]_diagrams.md`
-4. **Apply styling**: Use `references/styling_guide.md`
-5. **Add symbols**: Use `references/unicode_symbols.md`
-6. **Convert files**: `scripts/convert_puml.py`
-7. **Process markdown**: `scripts/process_markdown_puml.py`
-8. **Troubleshoot**: `references/troubleshooting/toc.md`
-
-**Supported diagrams:**
-- UML: sequence, class, activity, state, component, deployment, use case, object, timing
-- Non-UML: ER, Gantt, mindmap, WBS, JSON/YAML, network, Archimate, wireframes
+**Chinese keywords (中文关键词):**
+PlantUML, UML, 类图, 时序图, 用例图, 活动图, 组件图, 状态图, 部署图, 对象图, 时序图, 网络图, 架构图, 甘特图, 思维导图, 工作分解结构图, JSON 图, YAML 图, EBNF 图, 正则表达式图, 线框图, SDL 图, Ditaa 图, 时间线图, 数学公式图, 实体关系图, ER 图, 信息工程图, IE 图, 陈氏表示法, C4 模型, C4 图, 架构图, 系统架构图, 企业架构图, 微服务架构图, 画图, 绘图, 生成图, 创建图, 制作图, 画类图, 画时序图, 画组件图, 画部署图, 画活动图, 画状态图, 画用例图, 画对象图, 画网络图, 画线框图, 画 ER 图, 用 PlantUML, PlantUML 语法, UML 图, UML 类图, UML 时序图, 可视化, 图表, 图形, 示意图, 设计图, 系统图, 用图表示, 画出来, 给我画, 帮我画, 画一个, 创建一个图, 生成一个图, 画个图说明, 用图表展示, 可视化展示

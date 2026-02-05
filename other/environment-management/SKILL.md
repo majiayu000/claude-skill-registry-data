@@ -1,485 +1,416 @@
 ---
-name: mise-environment-management
-description: Use when managing environment variables and project settings with Mise. Covers env configuration, direnv replacement, and per-directory settings.
-allowed-tools:
-  - Read
-  - Write
-  - Edit
-  - Bash
-  - Grep
-  - Glob
+name: environment-management
+description: Auto-activates when user mentions environment variables, .env files, secrets management, configuration, or multi-environment setup. Manages environment configs securely.
+category: devops
 ---
 
-# Mise - Environment Management
+# Environment Management
 
-Managing environment variables, project settings, and directory-specific configuration with Mise.
+Manages environment variables, secrets, and multi-environment configurations securely.
 
-## Basic Environment Variables
+## When This Activates
 
-### Defining Environment Variables
+- User says: "setup environment variables", "manage secrets", "create .env"
+- User mentions: ".env file", "environment config", "secrets management"
+- Files: `.env`, `.env.example`, `.env.local`, `config/*`
+- Questions about configuration or environment setup
 
-```toml
-# mise.toml
-[env]
-NODE_ENV = "production"
-DATABASE_URL = "postgresql://localhost/myapp"
-API_KEY = "development-key"
-LOG_LEVEL = "info"
-```
+## Environment File Structure
 
-### Loading Environment
+### .env.example (Template)
 
 ```bash
-# Activate mise environment
-mise activate bash  # Or zsh, fish
+# .env.example - Commit this to git (no secrets!)
 
-# Or use mise exec
-mise exec -- node app.js
+# Application
+NODE_ENV=development
+PORT=3000
+APP_URL=http://localhost:3000
 
-# Or mise run
-mise run start
+# Database
+DATABASE_URL=postgresql://user:password@localhost:5432/dbname
+# DATABASE_URL format: postgresql://USER:PASSWORD@HOST:PORT/DATABASE
+
+# Authentication
+JWT_SECRET=your-super-secret-jwt-key-here-min-32-chars
+JWT_EXPIRES_IN=7d
+SESSION_SECRET=your-session-secret-here
+
+# External APIs
+STRIPE_PUBLIC_KEY=pk_test_...
+STRIPE_SECRET_KEY=sk_test_...
+STRIPE_WEBHOOK_SECRET=whsec_...
+
+SENDGRID_API_KEY=SG....
+SENDGRID_FROM_EMAIL=noreply@example.com
+
+# OAuth (optional)
+GOOGLE_CLIENT_ID=your-google-client-id
+GOOGLE_CLIENT_SECRET=your-google-client-secret
+GITHUB_CLIENT_ID=your-github-client-id
+GITHUB_CLIENT_SECRET=your-github-client-secret
+
+# Feature Flags
+ENABLE_ANALYTICS=false
+ENABLE_DEBUG_MODE=false
+
+# Redis (optional)
+REDIS_URL=redis://localhost:6379
 ```
 
-## Advanced Environment Configuration
-
-### Template Variables
-
-```toml
-[env]
-PROJECT_ROOT = "{{ config_root }}"
-DATA_DIR = "{{ config_root }}/data"
-LOG_FILE = "{{ config_root }}/logs/app.log"
-```
-
-### Environment File Loading
-
-```toml
-[env]
-_.file = ".env"
-_.file = [".env", ".env.local"]
-```
-
-### Conditional Environment Variables
-
-```toml
-[env]
-# Set based on other variables
-DATABASE_URL = "postgresql://{{ env.DB_HOST | default(value='localhost') }}/{{ env.DB_NAME }}"
-```
-
-## Path Management
-
-### Adding to PATH
-
-```toml
-[env]
-_.path = [
-  "{{ config_root }}/bin",
-  "{{ config_root }}/scripts",
-  "/usr/local/bin"
-]
-```
-
-### Library Paths
-
-```toml
-[env]
-LD_LIBRARY_PATH = "{{ config_root }}/lib:$LD_LIBRARY_PATH"
-DYLD_LIBRARY_PATH = "{{ config_root }}/lib:$DYLD_LIBRARY_PATH"
-```
-
-## Tool-Specific Environments
-
-### Python Virtual Environment
-
-```toml
-[tools]
-python = "3.12"
-
-[env]
-_.python.venv = { path = ".venv", create = true }
-VIRTUAL_ENV = "{{ config_root }}/.venv"
-```
-
-### Node.js Environment
-
-```toml
-[tools]
-node = "20.10.0"
-
-[env]
-NODE_ENV = "development"
-NODE_OPTIONS = "--max-old-space-size=4096"
-NPM_CONFIG_PREFIX = "{{ config_root }}/.npm-global"
-```
-
-### Go Environment
-
-```toml
-[tools]
-go = "1.21"
-
-[env]
-GOPATH = "{{ config_root }}/.go"
-GOBIN = "{{ config_root }}/.go/bin"
-GO111MODULE = "on"
-```
-
-## Replacing direnv
-
-### Basic direnv Replacement
-
-```toml
-# Instead of .envrc
-# export DATABASE_URL=postgresql://localhost/myapp
-# export NODE_ENV=development
-
-# Use mise.toml
-[env]
-DATABASE_URL = "postgresql://localhost/myapp"
-NODE_ENV = "development"
-```
-
-### Allowed Directories
-
-```toml
-# mise.toml - mark as trusted
-[settings]
-experimental_monorepo_root = true  # Trust subdirectories
-```
-
-### Watch File Changes
-
-Mise automatically reloads when mise.toml changes, similar to direnv.
-
-## Hierarchical Configuration
-
-### Global Settings
-
-```toml
-# ~/.config/mise/config.toml
-[env]
-EDITOR = "code"
-GIT_AUTHOR_NAME = "Your Name"
-GIT_AUTHOR_EMAIL = "you@example.com"
-```
-
-### Project Settings
-
-```toml
-# ~/projects/myapp/mise.toml
-[env]
-PROJECT_NAME = "myapp"
-DATABASE_URL = "postgresql://localhost/myapp"
-```
-
-### Local Overrides
-
-```toml
-# ~/projects/myapp/mise.local.toml (gitignored)
-[env]
-DATABASE_URL = "postgresql://localhost/myapp-dev"
-DEBUG = "true"
-```
-
-## Sensitive Data
-
-### Environment Files
-
-```toml
-# mise.toml
-[env]
-_.file = ".env.local"  # Gitignored file with secrets
-```
+### .env (Actual - NEVER commit!)
 
 ```bash
-# .env.local (add to .gitignore)
-API_KEY=secret-key-here
-DATABASE_PASSWORD=secret-password
+# .env - Add to .gitignore!
+
+NODE_ENV=development
+PORT=3000
+APP_URL=http://localhost:3000
+
+DATABASE_URL=postgresql://postgres:mypassword123@localhost:5432/myapp_dev
+
+JWT_SECRET=super-secret-jwt-key-change-this-in-production-min-32-characters
+JWT_EXPIRES_IN=7d
+
+STRIPE_PUBLIC_KEY=pk_test_51abc123...
+STRIPE_SECRET_KEY=sk_test_51xyz789...
 ```
 
-### Using System Environment
+## Environment Tiers
 
-```toml
-[env]
-# Reference existing environment variables
-API_KEY = "$API_KEY"
-DATABASE_URL = "$DATABASE_URL"
-```
-
-### Secure Secrets Management
+### Development (.env.development)
 
 ```bash
-# Don't commit secrets to mise.toml
-# Instead, reference from external secret managers
+NODE_ENV=development
+DEBUG=true
+LOG_LEVEL=debug
 
-# Example with 1Password CLI
-mise exec -- op run -- node app.js
+DATABASE_URL=postgresql://postgres:postgres@localhost:5432/myapp_dev
+REDIS_URL=redis://localhost:6379
 
-# Or load from encrypted file
-mise exec -- sops exec-env .env.encrypted -- node app.js
+# Use test/sandbox API keys
+STRIPE_SECRET_KEY=sk_test_...
+SENDGRID_API_KEY=SG.test...
+
+# Disable features in dev
+ENABLE_ANALYTICS=false
+ENABLE_RATE_LIMITING=false
 ```
 
-## Mise Environment Variables
-
-### Built-in Variables
-
-Mise provides these variables automatically:
+### Staging (.env.staging)
 
 ```bash
-$MISE_ORIGINAL_CWD      # Directory where mise was invoked
-$MISE_CONFIG_ROOT       # Directory containing mise.toml
-$MISE_PROJECT_ROOT      # Project root directory
-$MISE_DATA_DIR          # Mise data directory
-$MISE_CACHE_DIR         # Mise cache directory
+NODE_ENV=staging
+DEBUG=false
+LOG_LEVEL=info
+
+DATABASE_URL=postgresql://user:pass@staging-db.example.com:5432/myapp_staging
+REDIS_URL=redis://staging-redis.example.com:6379
+
+# Staging API keys
+STRIPE_SECRET_KEY=sk_test_...
+SENDGRID_API_KEY=SG....
+
+# Enable some features
+ENABLE_ANALYTICS=true
+ENABLE_RATE_LIMITING=true
 ```
 
-### Using in Configuration
-
-```toml
-[env]
-PROJECT_ROOT = "{{ env.MISE_PROJECT_ROOT }}"
-CONFIG_FILE = "{{ env.MISE_CONFIG_ROOT }}/config.yaml"
-```
-
-## Configuration Validation
-
-### Check Current Environment
+### Production (.env.production)
 
 ```bash
-# Show current environment
-mise env
+NODE_ENV=production
+DEBUG=false
+LOG_LEVEL=error
 
-# Show specific variable
-mise env DATABASE_URL
+DATABASE_URL=postgresql://user:securepass@prod-db.example.com:5432/myapp_prod
+REDIS_URL=redis://prod-redis.example.com:6379
 
-# Export as shell commands
-mise env -s bash > .env.sh
-source .env.sh
+# Production API keys (LIVE!)
+STRIPE_SECRET_KEY=sk_live_...
+SENDGRID_API_KEY=SG....
+
+# All features enabled
+ENABLE_ANALYTICS=true
+ENABLE_RATE_LIMITING=true
+ENABLE_MONITORING=true
 ```
 
-### Verify Configuration
+## Loading Environment Variables
+
+### Node.js (with dotenv)
+
+```typescript
+// config.ts
+import 'dotenv/config';
+import { z } from 'zod';
+
+// Define schema for validation
+const envSchema = z.object({
+  NODE_ENV: z.enum(['development', 'staging', 'production']),
+  PORT: z.string().transform(Number),
+  APP_URL: z.string().url(),
+  DATABASE_URL: z.string().url(),
+  JWT_SECRET: z.string().min(32),
+  JWT_EXPIRES_IN: z.string(),
+  STRIPE_SECRET_KEY: z.string().startsWith('sk_'),
+  SENDGRID_API_KEY: z.string(),
+  REDIS_URL: z.string().url().optional(),
+});
+
+// Parse and validate
+const env = envSchema.parse(process.env);
+
+export const config = {
+  env: env.NODE_ENV,
+  port: env.PORT,
+  appUrl: env.APP_URL,
+  database: {
+    url: env.DATABASE_URL,
+  },
+  jwt: {
+    secret: env.JWT_SECRET,
+    expiresIn: env.JWT_EXPIRES_IN,
+  },
+  stripe: {
+    secretKey: env.STRIPE_SECRET_KEY,
+  },
+  sendgrid: {
+    apiKey: env.SENDGRID_API_KEY,
+  },
+  redis: {
+    url: env.REDIS_URL,
+  },
+} as const;
+
+// Type-safe access
+export type Config = typeof config;
+```
+
+### Next.js (Built-in Support)
+
+```typescript
+// next.config.js
+module.exports = {
+  env: {
+    // Public variables (exposed to browser)
+    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
+    NEXT_PUBLIC_STRIPE_PUBLIC_KEY: process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY,
+  },
+  // Server-side only
+  serverRuntimeConfig: {
+    DATABASE_URL: process.env.DATABASE_URL,
+    STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY,
+  },
+};
+```
+
+### Python (with python-dotenv)
+
+```python
+# config.py
+from dotenv import load_dotenv
+import os
+from pydantic import BaseSettings, Field, PostgresDsn
+
+load_dotenv()
+
+class Settings(BaseSettings):
+    app_name: str = "MyApp"
+    debug: bool = Field(False, env='DEBUG')
+    database_url: PostgresDsn
+    jwt_secret: str = Field(..., min_length=32)
+    stripe_secret_key: str
+    
+    class Config:
+        env_file = '.env'
+        case_sensitive = False
+
+settings = Settings()
+```
+
+## Secrets Management
+
+### Using Environment Variables in CI/CD
+
+#### GitHub Actions
+
+```yaml
+# .github/workflows/deploy.yml
+- name: Deploy
+  env:
+    DATABASE_URL: ${{ secrets.DATABASE_URL }}
+    JWT_SECRET: ${{ secrets.JWT_SECRET }}
+    STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
+  run: npm run deploy
+```
+
+#### Docker Compose
+
+```yaml
+# docker-compose.yml
+services:
+  app:
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+      - JWT_SECRET=${JWT_SECRET}
+    env_file:
+      - .env
+```
+
+### Cloud Providers
+
+#### Vercel
 
 ```bash
-# Check loaded config files
-mise config
+# Install Vercel CLI
+npm i -g vercel
 
-# Show resolved settings
-mise settings
+# Add secrets
+vercel env add DATABASE_URL
+vercel env add JWT_SECRET
+
+# Pull environment variables
+vercel env pull .env.local
 ```
 
-## Best Practices
-
-### Separate Public and Private Config
-
-```toml
-# mise.toml (committed)
-[env]
-NODE_ENV = "development"
-LOG_LEVEL = "info"
-API_URL = "https://api.example.com"
-
-# mise.local.toml (gitignored)
-[env]
-API_KEY = "secret-key"
-DATABASE_PASSWORD = "secret-password"
-```
-
-### Use Descriptive Variable Names
-
-```toml
-# Good: Clear, descriptive names
-[env]
-DATABASE_CONNECTION_POOL_SIZE = "10"
-API_REQUEST_TIMEOUT_MS = "5000"
-FEATURE_FLAG_NEW_UI = "true"
-
-# Avoid: Vague abbreviations
-[env]
-DB_POOL = "10"
-TIMEOUT = "5000"
-FLAG = "true"
-```
-
-### Document Required Variables
-
-```toml
-# mise.toml
-[env]
-# Database configuration (required)
-DATABASE_URL = "postgresql://localhost/myapp"
-
-# API keys (set in mise.local.toml)
-# API_KEY = "your-key-here"
-
-# Optional feature flags
-FEATURE_ANALYTICS = "false"
-```
-
-### Use Templates for Paths
-
-```toml
-# Good: Relative to config root
-[env]
-DATA_DIR = "{{ config_root }}/data"
-LOGS_DIR = "{{ config_root }}/logs"
-
-# Avoid: Hardcoded paths
-[env]
-DATA_DIR = "/Users/me/project/data"
-```
-
-## Common Patterns
-
-### Multi-Environment Setup
-
-```toml
-# mise.toml - base configuration
-[env]
-APP_NAME = "myapp"
-LOG_FORMAT = "json"
-
-# mise.development.toml
-[env]
-NODE_ENV = "development"
-DEBUG = "true"
-DATABASE_URL = "postgresql://localhost/myapp_dev"
-
-# mise.production.toml
-[env]
-NODE_ENV = "production"
-DEBUG = "false"
-DATABASE_URL = "postgresql://prod-server/myapp"
-```
+#### Railway
 
 ```bash
-# Switch environments
-ln -sf mise.development.toml mise.local.toml
-# Or
-ln -sf mise.production.toml mise.local.toml
+# Install Railway CLI
+npm i -g @railway/cli
+
+# Link project
+railway link
+
+# Add variables
+railway variables set DATABASE_URL=...
 ```
 
-### Database Configuration
+#### AWS Systems Manager (Parameter Store)
 
-```toml
-[env]
-DATABASE_HOST = "localhost"
-DATABASE_PORT = "5432"
-DATABASE_NAME = "myapp"
-DATABASE_USER = "postgres"
-DATABASE_URL = "postgresql://{{ env.DATABASE_USER }}:{{ env.DATABASE_PASSWORD }}@{{ env.DATABASE_HOST }}:{{ env.DATABASE_PORT }}/{{ env.DATABASE_NAME }}"
+```bash
+# Store parameter
+aws ssm put-parameter \
+  --name "/myapp/prod/DATABASE_URL" \
+  --value "postgresql://..." \
+  --type "SecureString"
+
+# Retrieve parameter
+aws ssm get-parameter \
+  --name "/myapp/prod/DATABASE_URL" \
+  --with-decryption \
+  --query "Parameter.Value"
 ```
 
-### Feature Flags
+## Security Best Practices
 
-```toml
-[env]
-# Feature toggles
-FEATURE_NEW_DASHBOARD = "true"
-FEATURE_BETA_API = "false"
-FEATURE_EXPERIMENTAL_CACHE = "true"
+### 1. Never Commit Secrets
 
-# Feature rollout percentages
-FEATURE_NEW_CHECKOUT_ROLLOUT = "25"
+```bash
+# .gitignore
+.env
+.env.local
+.env.*.local
+.env.production
+*.pem
+*.key
+secrets/
 ```
 
-### CI/CD Environment
+### 2. Use Secret Scanning
 
-```toml
-# mise.toml
-[env]
-NODE_ENV = "{{ env.CI | default(value='development') }}"
-SKIP_PREFLIGHT_CHECK = "{{ env.CI | default(value='false') }}"
+```bash
+# Install git-secrets
+git secrets --install
+git secrets --register-aws
+
+# Scan for secrets
+git secrets --scan
+
+# Pre-commit hook
+git secrets --install ~/.git-templates/git-secrets
+git config --global init.templateDir ~/.git-templates/git-secrets
 ```
 
-## Anti-Patterns
+### 3. Rotate Secrets Regularly
 
-### Don't Commit Secrets
+```typescript
+// secret-rotation.ts
+import { scheduleJob } from 'node-schedule';
 
-```toml
-# Bad: Secrets in committed file
-[env]
-API_KEY = "sk-secret-key-12345"
-DATABASE_PASSWORD = "password123"
-
-# Good: Reference from secure location
-[env]
-_.file = ".env.local"  # Gitignored
+// Rotate JWT secret weekly
+scheduleJob('0 0 * * 0', async () => {
+  const newSecret = generateSecureSecret();
+  await updateSecret('JWT_SECRET', newSecret);
+  await notifyAdmins('JWT secret rotated');
+});
 ```
 
-### Don't Duplicate Global Config
+### 4. Validate Environment Variables
 
-```toml
-# Bad: Repeating global settings in every project
-# ~/project-a/mise.toml
-[env]
-EDITOR = "code"
-GIT_AUTHOR_NAME = "Your Name"
+```typescript
+// startup.ts
+const requiredEnvVars = [
+  'DATABASE_URL',
+  'JWT_SECRET',
+  'STRIPE_SECRET_KEY',
+];
 
-# ~/project-b/mise.toml
-[env]
-EDITOR = "code"
-GIT_AUTHOR_NAME = "Your Name"
-
-# Good: Use global config
-# ~/.config/mise/config.toml
-[env]
-EDITOR = "code"
-GIT_AUTHOR_NAME = "Your Name"
+for (const varName of requiredEnvVars) {
+  if (!process.env[varName]) {
+    throw new Error(`Missing required environment variable: ${varName}`);
+  }
+}
 ```
 
-### Don't Hardcode Environment Names
+## Environment Detection
 
-```toml
-# Bad: Hardcoded check
-[tasks.deploy]
-run = '''
-if [ "$NODE_ENV" = "production" ]; then
-  ./deploy-prod.sh
-fi
-'''
+```typescript
+// env.ts
+export const isDevelopment = process.env.NODE_ENV === 'development';
+export const isStaging = process.env.NODE_ENV === 'staging';
+export const isProduction = process.env.NODE_ENV === 'production';
+export const isTest = process.env.NODE_ENV === 'test';
 
-# Good: Use configuration
-[tasks.deploy]
-env = { DEPLOYMENT_TARGET = "production" }
-run = "./deploy.sh"
+// Feature flags based on environment
+export const features = {
+  analytics: isProduction || isStaging,
+  debugMode: isDevelopment,
+  rateLimiting: isProduction || isStaging,
+  verboseLogging: isDevelopment || isStaging,
+};
 ```
 
-## Advanced Patterns
+## Migration Guide
 
-### Dynamic Environment Loading
+```bash
+# 1. Create .env.example from current .env (remove values)
+cat .env | sed 's/=.*/=/' > .env.example
 
-```toml
-[env]
-# Load environment based on git branch
-BRANCH = "{{ exec(command='git branch --show-current') }}"
-DEPLOY_ENV = "{{ env.BRANCH | replace(from='main', to='production') | replace(from='develop', to='staging') }}"
+# 2. Verify no secrets in .env.example
+grep -E "(secret|password|key)" .env.example
+
+# 3. Add .env to .gitignore
+echo ".env" >> .gitignore
+
+# 4. Remove .env from git history (if committed)
+git filter-branch --force --index-filter \
+  "git rm --cached --ignore-unmatch .env" \
+  --prune-empty --tag-name-filter cat -- --all
 ```
 
-### Computed Variables
+## Checklist
 
-```toml
-[env]
-PROJECT_NAME = "myapp"
-NAMESPACE = "{{ env.PROJECT_NAME }}-{{ env.ENVIRONMENT }}"
-REDIS_URL = "redis://{{ env.NAMESPACE }}-redis:6379"
-```
+- [ ] .env.example created (no secrets!)
+- [ ] .env added to .gitignore
+- [ ] All secrets in environment variables (not hardcoded)
+- [ ] Environment variables validated at startup
+- [ ] Separate configs for dev/staging/prod
+- [ ] Secrets management tool configured (GitHub Secrets, etc.)
+- [ ] Type-safe environment variable access
+- [ ] Documentation of all required variables
+- [ ] Secret rotation plan in place
+- [ ] Git secrets scanning enabled
 
-### Environment Inheritance
-
-```toml
-# Base configuration
-[env]
-LOG_LEVEL = "info"
-CACHE_TTL = "3600"
-
-# Override in specific contexts
-[env.production]
-LOG_LEVEL = "warn"
-CACHE_TTL = "7200"
-```
-
-## Related Skills
-
-- **task-configuration**: Using environment variables in tasks
-- **tool-management**: Tool-specific environment configuration
+**Generate environment configs, present to user, create files with approval.**

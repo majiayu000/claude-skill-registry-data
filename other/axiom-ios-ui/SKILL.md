@@ -1,7 +1,7 @@
 ---
 name: axiom-ios-ui
 description: Use when building, fixing, or improving ANY iOS UI including SwiftUI, UIKit, layout, navigation, animations, design guidelines. Covers view updates, layout bugs, navigation issues, performance, architecture, Apple design compliance.
-user-invocable: false
+license: MIT
 ---
 
 # iOS UI Router
@@ -42,6 +42,7 @@ Use this router when working with:
 **Gesture conflicts** → `/skill axiom-swiftui-gestures`
 **Architecture/testability** → `/skill axiom-swiftui-architecture`
 **App-level composition** → `/skill axiom-app-composition`
+**Search implementation** → `/skill axiom-swiftui-search-ref`
 **iOS 26 features** → `/skill axiom-swiftui-26-ref`
 
 ### UIKit Issues
@@ -66,31 +67,34 @@ Use this router when working with:
 
 ## Decision Tree
 
-```
-User asks about UI
-  ├─ SwiftUI?
-  │  ├─ View not updating? → swiftui-debugging
-  │  ├─ Navigation? → swiftui-nav
-  │  ├─ Performance? → swiftui-performance
-  │  ├─ Layout (adaptive)? → swiftui-layout
-  │  ├─ Stacks/grids/outlines? → swiftui-containers-ref
-  │  │  (VStack, HStack, LazyVGrid, LazyHGrid, OutlineGroup, DisclosureGroup)
-  │  ├─ Feature-level architecture? → swiftui-architecture
-  │  ├─ App-level composition? → app-composition
-  │  │  (root view switching, auth flows, scene lifecycle, modularization)
-  │  └─ Animations/gestures? → swiftui-animation-ref or swiftui-gestures
-  │
-  ├─ UIKit?
-  │  ├─ Auto Layout? → auto-layout-debugging
-  │  └─ Animations? → uikit-animation-debugging
-  │
-  ├─ Design guidelines?
-  │  ├─ Liquid Glass? → liquid-glass
-  │  ├─ HIG compliance? → hig
-  │  └─ Typography? → typography-ref
-  │
-  └─ Accessibility? → accessibility-diag
-```
+1. SwiftUI view not updating? → swiftui-debugging
+2. SwiftUI navigation? → swiftui-nav
+3. SwiftUI performance/lag? → swiftui-performance
+4. SwiftUI adaptive layout? → swiftui-layout
+5. Stacks/grids/outlines (VStack, LazyVGrid, OutlineGroup)? → swiftui-containers-ref
+6. Feature-level architecture? → swiftui-architecture
+7. App-level composition (root view, auth flows, scenes)? → app-composition
+8. Animations/gestures? → swiftui-animation-ref or swiftui-gestures
+9. SwiftUI search? → swiftui-search-ref
+10. iOS 26 features? → swiftui-26-ref
+11. Auto Layout? → auto-layout-debugging
+12. UIKit animations? → uikit-animation-debugging
+13. Liquid Glass? → liquid-glass
+14. HIG compliance? → hig
+15. Typography? → typography-ref
+16. TextKit/rich text? → textkit-ref
+17. Accessibility? → accessibility-diag
+
+## Anti-Rationalization
+
+| Thought | Reality |
+|---------|---------|
+| "Simple SwiftUI layout, no need for the layout skill" | SwiftUI layout has 12 gotchas. swiftui-layout covers all of them. |
+| "I know how NavigationStack works" | Navigation has state restoration, deep linking, and identity traps. swiftui-nav prevents 2-hour debugging. |
+| "It's just a view not updating, I'll debug it" | View update failures have 4 root causes. swiftui-debugging diagnoses in 5 min. |
+| "I'll just add .animation() and fix later" | Animation issues compound. swiftui-animation-ref has the correct patterns. |
+| "This UI is simple, no architecture needed" | Even small features benefit from separation. swiftui-architecture prevents refactoring debt. |
+| "I know how .searchable works" | Search has 6 gotchas (navigation container, isSearching level, suggestion completion). swiftui-search-ref covers all of them. |
 
 ## Example Invocations
 
@@ -120,3 +124,9 @@ User: "What's the difference between VStack and LazyVStack?"
 
 User: "How do I display hierarchical data with OutlineGroup?"
 → Invoke: `/skill axiom-swiftui-containers-ref`
+
+User: "How do I add search to my SwiftUI list?"
+→ Invoke: `/skill axiom-swiftui-search-ref`
+
+User: "My search suggestions aren't working"
+→ Invoke: `/skill axiom-swiftui-search-ref`

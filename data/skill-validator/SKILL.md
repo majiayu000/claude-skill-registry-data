@@ -1,349 +1,304 @@
 ---
 name: skill-validator
-description: |
-  Validates skills against production-level criteria with 9-category scoring.
-  This skill should be used when reviewing, auditing, or improving skills to
-  ensure quality standards. Evaluates structure, content, user interaction,
-  documentation, domain standards, technical robustness, maintainability,
-  zero-shot implementation, and reusability. Returns actionable validation
-  report with scores and improvement recommendations.
+description: Ensure Claude Code skills meet quality standards through validation operations for structure, content, patterns, and production readiness. Task-based validation with pass/fail criteria, automated checks, and compliance reporting. Use when validating skills before deployment, ensuring standards compliance, certifying production readiness, or quality gating skill releases.
+allowed-tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, WebFetch
 ---
 
 # Skill Validator
 
-Validate any skill against production-level quality criteria.
+## Overview
 
-## Validation Workflow
+skill-validator ensures Claude Code skills meet established quality standards through systematic validation operations. Unlike review-multi (which scores 1-5), skill-validator provides pass/fail validation against minimum standards for production deployment.
 
-### Phase 1: Gather Context
+**Purpose**: Quality gate for skill deployment - ensure minimum standards met
 
-1. **Read the skill's SKILL.md** completely
-2. **Identify skill type** from frontmatter description:
-   - Builder skill (creates artifacts)
-   - Guide skill (provides instructions)
-   - Automation skill (executes workflows)
-   - Analyzer skill (extracts insights)
-   - Validator skill (enforces quality)
-   - Hybrid skill (combination of above)
-3. **Read all reference files** in `references/` directory
-4. **Check for assets/scripts** directories
-5. **Note frontmatter fields** (`name`, `description`, `allowed-tools`, `model`)
+**The 4 Validation Operations**:
+1. **Validate Structure** - YAML, files, naming must pass minimum standards
+2. **Validate Content** - Essential sections and examples must be present
+3. **Validate Pattern** - Architecture pattern correctly implemented
+4. **Validate Production Readiness** - All critical criteria met for deployment
 
-### Phase 2: Apply Criteria
+**Difference from review-multi**:
+- **review-multi**: Scores 1-5, identifies improvements, comprehensive assessment
+- **skill-validator**: Pass/fail, minimum standards, deployment gating
 
-Evaluate against **9 criteria categories**. Each criterion scores 0-3:
-- **0**: Missing/Absent
-- **1**: Present but inadequate
-- **2**: Adequate implementation
-- **3**: Excellent implementation
+**Use Together**: review-multi for comprehensive assessment, skill-validator for go/no-go decisions
 
----
+## When to Use
 
-## Criteria Categories
+Use skill-validator when:
 
-### 1. Structure & Anatomy (Weight: 12%)
+1. **Pre-Deployment Gating** - Validate skill ready for production before releasing
+2. **Quality Standards Enforcement** - Ensure all skills meet minimum bar
+3. **Continuous Integration** - Automated validation in build/deploy pipelines
+4. **Certification** - Certify skills meet ecosystem standards
+5. **Post-Update Validation** - Ensure changes didn't break compliance
+6. **Ecosystem Consistency** - Maintain quality across all skills
+7. **Binary Decision Needed** - Ship or don't ship (not "what's the score")
 
-| Criterion | What to Check |
-|-----------|---------------|
-| **SKILL.md exists** | Root file present |
-| **Line count** | <500 lines (context is precious) |
-| **Frontmatter complete** | `name` and `description` present in YAML |
-| **Name constraints** | Lowercase, numbers, hyphens only; ≤64 chars; matches directory |
-| **Description format** | [What] + [When] format; ≤1024 chars |
-| **Description style** | Third-person: "This skill should be used when..." |
-| **No extraneous files** | No README.md, CHANGELOG.md, LICENSE in skill dir |
-| **Progressive disclosure** | Details in `references/`, not bloated SKILL.md |
-| **Asset organization** | Templates in `assets/`, scripts in `scripts/` |
-| **Large file guidance** | If references >10k words, grep patterns in SKILL.md |
+## Operations
 
-**Fail condition**: Missing SKILL.md or >800 lines = automatic fail
+### Operation 1: Validate Structure
 
-### 2. Content Quality (Weight: 15%)
+**Purpose**: Ensure skill structure meets minimum standards for deployment
 
-| Criterion | What to Check |
-|-----------|---------------|
-| **Conciseness** | No verbose explanations, context is public good |
-| **Imperative form** | Instructions use "Do X" not "You should do X" |
-| **Appropriate freedom** | Constraints where needed, flexibility where safe |
-| **Scope clarity** | Clear what skill does AND does not do |
-| **No hallucination risk** | No instructions that encourage making up info |
-| **Output specification** | Clear expected outputs defined |
+**Pass Criteria** (All must pass):
+- ✅ YAML frontmatter valid with required fields (name, description)
+- ✅ `name` in kebab-case format
+- ✅ `description` includes 3+ trigger keywords minimum
+- ✅ SKILL.md exists
+- ✅ File naming follows conventions
+- ✅ No critical structure violations
 
-### 3. User Interaction (Weight: 12%)
+**Process**:
+1. Run automated validation: `python3 review-multi/scripts/validate-structure.py <skill>`
+2. Check score: Must be ≥4 to pass
+3. Verify no critical issues
+4. Document pass/fail
 
-| Criterion | What to Check |
-|-----------|---------------|
-| **Clarification triggers** | Asks questions before acting on ambiguity |
-| **Required vs optional** | Distinguishes must-know from nice-to-know |
-| **Graceful handling** | What to do when user doesn't answer |
-| **No over-asking** | Doesn't ask obvious or inferrable questions |
-| **Question pacing** | Avoids too many questions in single message |
-| **Context awareness** | Uses available context before asking |
+**Validation**: **PASS** if structure score ≥4, **FAIL** if <4
 
-**Key pattern to look for**:
-```markdown
-## Required Clarifications
-1. Question about X
-2. Question about Y
-
-## Optional Clarifications
-3. Question about Z (if relevant)
-
-Note: Avoid asking too many questions in a single message.
-```
-
-### 4. Documentation & References (Weight: 10%)
-
-| Criterion | What to Check |
-|-----------|---------------|
-| **Source URLs** | Official documentation links provided |
-| **Reference files** | Complex details in `references/` not main file |
-| **Fetch guidance** | Instructions to fetch docs for unlisted patterns |
-| **Version awareness** | Notes about checking for latest patterns |
-| **Example coverage** | Good/bad examples for key patterns |
-
-**Key pattern to look for**:
-```markdown
-| Resource | URL | Use For |
-|----------|-----|---------|
-| Official Docs | https://... | Complex cases |
-```
-
-### 5. Domain Standards (Weight: 10%)
-
-| Criterion | What to Check |
-|-----------|---------------|
-| **Best practices** | Follows domain conventions (e.g., WCAG, OWASP) |
-| **Enforcement mechanism** | Checklists, validation steps, must-verify items |
-| **Anti-patterns** | Lists what NOT to do |
-| **Quality gates** | Output checklist before delivery |
-
-**Key pattern to look for**:
-```markdown
-### Must Follow
-- [ ] Requirement 1
-- [ ] Requirement 2
-
-### Must Avoid
-- Antipattern 1
-- Antipattern 2
-```
-
-### 6. Technical Robustness (Weight: 8%)
-
-| Criterion | What to Check |
-|-----------|---------------|
-| **Error handling** | Guidance for failure scenarios |
-| **Security considerations** | Input validation, secrets handling if relevant |
-| **Dependencies** | External tools/APIs documented |
-| **Edge cases** | Common edge cases addressed |
-| **Testability** | Can outputs be verified? |
-
-### 7. Maintainability (Weight: 8%)
-
-| Criterion | What to Check |
-|-----------|---------------|
-| **Modularity** | References are self-contained topics |
-| **Update path** | Easy to update when standards change |
-| **No hardcoded values** | Uses placeholders/variables where appropriate |
-| **Clear organization** | Logical section ordering |
-
-### 8. Zero-Shot Implementation (Weight: 12%)
-
-Skills should enable single-interaction implementation with embedded expertise.
-
-| Criterion | What to Check |
-|-----------|---------------|
-| **Before Implementation section** | Context gathering guidance present |
-| **Codebase context** | Guidance to scan existing structure/patterns |
-| **Conversation context** | Uses discussed requirements/decisions |
-| **Embedded expertise** | Domain knowledge in `references/`, not runtime discovery |
-| **User-only questions** | Only asks for USER requirements, not domain knowledge |
-
-**Key pattern to look for**:
-```markdown
-## Before Implementation
-
-Gather context to ensure successful implementation:
-
-| Source | Gather |
-|--------|--------|
-| **Codebase** | Existing structure, patterns, conventions |
-| **Conversation** | User's specific requirements |
-| **Skill References** | Domain patterns from `references/` |
-| **User Guidelines** | Project-specific conventions |
-```
-
-**Red flag**: Skill instructs to "research" or "discover" domain knowledge at runtime instead of embedding it.
-
-### 9. Reusability (Weight: 13%)
-
-Skills should handle variations, not single requirements.
-
-| Criterion | What to Check |
-|-----------|---------------|
-| **Handles variations** | Not hardcoded to single use case |
-| **Variable elements** | Clarifications capture what VARIES |
-| **Constant patterns** | Domain best practices encoded as constants |
-| **Not requirement-specific** | Avoids hardcoded data, tools, configs |
-| **Abstraction level** | Appropriate generalization for domain |
-
-**Good example**:
-```markdown
-"Create visualizations - adaptable to data shape, chart type, library"
-```
-
-**Bad example (too specific)**:
-```markdown
-"Create bar chart with sales data using Recharts"
-```
-
-**Key check**: Does the skill work for multiple use cases within its domain?
+**Time**: 5-10 minutes (automated)
 
 ---
 
-## Type-Specific Validation
+### Operation 2: Validate Content
 
-After scoring general criteria, verify type-specific requirements:
+**Purpose**: Ensure essential content sections and examples present
 
-| Type | Must Have |
-|------|-----------|
-| **Builder** | Clarifications, Output Spec, Domain Standards, Output Checklist |
-| **Guide** | Workflow Steps, Examples (Good/Bad), Official Docs links |
-| **Automation** | Scripts in `scripts/`, Dependencies, Error Handling, I/O Spec |
-| **Analyzer** | Analysis Scope, Evaluation Criteria, Output Format, Synthesis |
-| **Validator** | Quality Criteria, Scoring Rubric, Thresholds, Remediation |
+**Pass Criteria** (All must pass):
+- ✅ Overview/Introduction section present
+- ✅ When to Use section with 3+ scenarios minimum
+- ✅ Main content present (workflow steps OR operations OR reference)
+- ✅ At least 3 examples present (code/command)
+- ✅ Some form of best practices or guidance
 
-**Scoring**: Deduct 10 points if type-specific requirements missing for identified type.
+**Process**:
+1. Check for Overview section (## Overview or ## Introduction)
+2. Check for When to Use section with scenarios
+3. Verify main content exists (steps, operations, or reference material)
+4. Count examples (look for ``` code blocks, minimum 3)
+5. Check for Best Practices, Common Mistakes, or guidance section
 
----
+**Validation**: **PASS** if all 5 criteria met, **FAIL** if any missing
 
-## Scoring Guide
-
-### Category Scores
-
-Calculate each category score:
-```
-Category Score = (Sum of criterion scores) / (Max possible) * 100
-```
-
-### Overall Score
-
-```
-Overall = Σ(Category Score × Weight)
-```
-
-### Rating Thresholds
-
-| Score | Rating | Meaning |
-|-------|--------|---------|
-| 90-100 | **Production** | Ready for wide use |
-| 75-89 | **Good** | Minor improvements needed |
-| 60-74 | **Adequate** | Functional but needs work |
-| 40-59 | **Developing** | Significant gaps |
-| 0-39 | **Incomplete** | Major rework required |
+**Time**: 10-15 minutes (manual check)
 
 ---
 
-## Output Format
+### Operation 3: Validate Pattern
 
-Generate validation report:
+**Purpose**: Ensure architecture pattern correctly implemented
+
+**Pass Criteria** (Pattern-specific):
+
+**For Workflow Skills**:
+- ✅ Sequential steps present
+- ✅ Steps have consistent structure
+- ✅ Prerequisites or Post-Workflow section exists
+
+**For Task Skills**:
+- ✅ Operations section present
+- ✅ Operations have consistent structure
+- ✅ Operations are independent (no forced sequence)
+
+**For Reference Skills**:
+- ✅ Topic-based organization
+- ✅ Quick Reference present
+
+**Process**:
+1. Identify pattern type (workflow/task/reference)
+2. Check pattern-specific criteria
+3. Verify pattern consistency throughout
+4. Document compliance
+
+**Validation**: **PASS** if pattern correctly implemented, **FAIL** if pattern violated
+
+**Time**: 10-20 minutes (manual check)
+
+---
+
+### Operation 4: Validate Production Readiness
+
+**Purpose**: Comprehensive pass/fail check for deployment readiness
+
+**Pass Criteria** (All must pass):
+- ✅ Structure validation passes (Operation 1)
+- ✅ Content validation passes (Operation 2)
+- ✅ Pattern validation passes (Operation 3)
+- ✅ No critical anti-patterns (from review-multi if available)
+- ✅ SKILL.md completeness (not stub or incomplete)
+- ✅ Examples are concrete (not all placeholders)
+
+**Process**:
+1. Run Operations 1-3
+2. Check for critical anti-patterns:
+   - Monolithic SKILL.md (>2,000 lines, no references)
+   - All examples are placeholders
+   - Major sections missing
+3. Assess overall completeness
+4. Make deployment decision
+
+**Validation**: **PASS** if all criteria met (ready to deploy), **FAIL** if any critical issue
+
+**Time**: 30-45 minutes (combines all operations)
+
+**Output**: **DEPLOY** or **HOLD** decision
+
+---
+
+## Validation Report Format
 
 ```markdown
-# Skill Validation Report: [skill-name]
+# Skill Validation Report: [Skill Name]
 
-**Rating**: [Production/Good/Adequate/Developing/Incomplete]
-**Overall Score**: [X]/100
+**Validation Date**: [Date]
+**Validator**: [Name]
 
-## Summary
-[2-3 sentence assessment]
+## Validation Results
 
-## Category Scores
+Operation 1: Structure Validation
+Status: ✅ PASS | ❌ FAIL
+- YAML: [Pass/Fail]
+- Files: [Pass/Fail]
+- Naming: [Pass/Fail]
+- Structure Score: [X]/5
 
-| Category | Score | Weight | Weighted |
-|----------|-------|--------|----------|
-| Structure & Anatomy | X/100 | 12% | X |
-| Content Quality | X/100 | 15% | X |
-| User Interaction | X/100 | 12% | X |
-| Documentation | X/100 | 10% | X |
-| Domain Standards | X/100 | 10% | X |
-| Technical Robustness | X/100 | 8% | X |
-| Maintainability | X/100 | 8% | X |
-| Zero-Shot Implementation | X/100 | 12% | X |
-| Reusability | X/100 | 13% | X |
-| **Type-Specific Deduction** | -X | - | -X |
+Operation 2: Content Validation
+Status: ✅ PASS | ❌ FAIL
+- Overview: [Present/Missing]
+- When to Use: [X scenarios - Pass if ≥3]
+- Main Content: [Present/Missing]
+- Examples: [X examples - Pass if ≥3]
+- Guidance: [Present/Missing]
 
-## Critical Issues (if any)
-- [Issue requiring immediate fix]
+Operation 3: Pattern Validation
+Status: ✅ PASS | ❌ FAIL
+- Pattern: [Workflow/Task/Reference]
+- Implementation: [Correct/Incorrect]
+- Consistency: [Yes/No]
 
-## Improvement Recommendations
-1. **High Priority**: [Specific action]
-2. **Medium Priority**: [Specific action]
-3. **Low Priority**: [Specific action]
+Operation 4: Production Readiness
+Status: ✅ READY TO DEPLOY | ❌ HOLD
 
-## Strengths
-- [What skill does well]
+Critical Issues: [List if any]
+
+## Deployment Decision
+
+✅ DEPLOY - All validations passed, ready for production
+
+OR
+
+❌ HOLD - Critical issues must be fixed:
+1. [Issue 1 with fix]
+2. [Issue 2 with fix]
 ```
 
 ---
 
-## Quick Validation Checklist
+## Best Practices
 
-For rapid assessment, check these critical items:
+### 1. Validate Before Deploy
+**Practice**: Run skill-validator on all skills before production deployment
 
-### Structure & Frontmatter
-- [ ] SKILL.md <500 lines
-- [ ] Frontmatter: name (≤64 chars, lowercase, hyphens) + description (≤1024 chars)
-- [ ] Description uses third-person style ("This skill should be used when...")
-- [ ] No README.md/CHANGELOG.md in skill directory
+**Rationale**: Catches critical issues, prevents shipping broken skills
 
-### Content & Interaction
-- [ ] Has clarification questions (Required vs Optional)
-- [ ] Has output specification
-- [ ] Has official documentation links
+**Application**: Make validation part of deployment checklist
 
-### Zero-Shot & Reusability
-- [ ] Has "Before Implementation" section (context gathering)
-- [ ] Domain expertise embedded in `references/` (not runtime discovery)
-- [ ] Handles variations (not requirement-specific)
+### 2. Use as Quality Gate
+**Practice**: Skills must pass validation to be deployed
 
-### Type-Specific (check based on skill type)
-- [ ] Builder: Clarifications + Output Spec + Standards + Checklist
-- [ ] Guide: Workflow + Examples + Docs
-- [ ] Automation: Scripts + Dependencies + Error Handling
-- [ ] Analyzer: Scope + Criteria + Output Format
-- [ ] Validator: Criteria + Scoring + Thresholds + Remediation
+**Rationale**: Maintains ecosystem quality baseline
 
-**If 10+ checked**: Likely Production (90+)
-**If 7-9 checked**: Likely Good (75-89)
-**If 5-6 checked**: Likely Adequate (60-74)
-**If <5 checked**: Needs significant work
+**Application**: No exceptions - PASS required for deployment
 
----
+### 3. Automate Where Possible
+**Practice**: Use review-multi automation for structure validation
 
-## Reference Files
+**Rationale**: 95% automated, fast, consistent
 
-| File | When to Read |
-|------|--------------|
-| `references/detailed-criteria.md` | Deep evaluation of specific criterion |
-| `references/scoring-examples.md` | Example validations for calibration |
-| `references/improvement-patterns.md` | Common fixes for common issues |
+**Application**: Run validate-structure.py as first check
+
+### 4. Document Failures Clearly
+**Practice**: When skill fails, specify exactly what to fix
+
+**Rationale**: Actionable feedback enables quick fixes
+
+**Application**: List specific issues with remediation steps
+
+### 5. Re-Validate After Fixes
+**Practice**: After fixing issues, run validation again to confirm
+
+**Rationale**: Ensures fixes actually resolve issues
+
+**Application**: Validate → Fix → Re-validate cycle
 
 ---
 
-## Usage Examples
+## Quick Reference
 
-### Validate a skill
+### The 4 Validations
+
+| Operation | Focus | Pass Criteria | Time | Automation |
+|-----------|-------|---------------|------|------------|
+| **Structure** | YAML, files, naming | Score ≥4 | 5-10m | 95% (use review-multi) |
+| **Content** | Sections, examples | 5 criteria all met | 10-15m | 40% |
+| **Pattern** | Architecture compliance | Pattern correct | 10-20m | 50% |
+| **Production Readiness** | Overall deployment decision | All validations pass | 30-45m | Combined |
+
+### Minimum Standards
+
+**Structure**:
+- Valid YAML with name + description
+- name in kebab-case
+- 3+ trigger keywords
+- SKILL.md exists
+- Basic file structure
+
+**Content**:
+- Overview present
+- 3+ When to Use scenarios
+- Main content present
+- 3+ examples
+- Some guidance/best practices
+
+**Pattern**:
+- Correct pattern implementation
+- Consistent structure
+- Pattern-specific requirements met
+
+**Production**:
+- All validations pass
+- No critical anti-patterns
+- Completeness (not stub)
+- Examples concrete
+
+### Deployment Decision Tree
+
 ```
-Validate the chatgpt-widget-creator skill against production criteria
+Run validation operations 1-4
+     ↓
+All PASS?
+├─ Yes → ✅ DEPLOY (production ready)
+└─ No → Which failed?
+    ├─ Structure → Fix YAML/files (critical)
+    ├─ Content → Add missing sections (critical)
+    ├─ Pattern → Fix implementation (critical)
+    └─ After fixes → Re-validate → Deploy if pass
 ```
 
-### Quick audit
+### Integration with review-multi
+
+**Use Both**:
+1. **skill-validator**: Pass/fail, deployment gating
+2. **review-multi**: 1-5 scoring, comprehensive assessment, improvements
+
+**Workflow**:
 ```
-Quick validation check on mcp-builder skill
+Build skill → skill-validator (PASS?) → review-multi (score?) →
+Deploy (if PASS) + Note improvements (from review-multi)
 ```
 
-### Focused review
-```
-Check if skill-creator skill has proper user interaction patterns
-```
+---
+
+**skill-validator** provides quality gating for skill deployment, ensuring minimum standards met before production release.

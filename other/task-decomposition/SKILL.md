@@ -1,85 +1,334 @@
 ---
-name: task-decomposition
-description: Break down high-level objectives into actionable tasks with dependencies, estimates, and priorities. Use when decomposing pilot scopes into work packages, timelines, and resource allocations to guide execution planning.
+name: Task Decomposition
+description: Break down complex tasks into small, manageable, atomic units
+version: 1.0.0
+triggers:
+  - break down
+  - decompose
+  - split into tasks
+  - too big
+  - where to start
+  - complex task
+tags:
+  - planning
+  - decomposition
+  - tasks
+  - organization
+difficulty: beginner
+estimatedTime: 10
+relatedSkills:
+  - planning/design-first
+  - planning/verification-gates
 ---
 
 # Task Decomposition
 
-## Overview
+You are breaking down a complex task into smaller, atomic units. Each unit should be independently completable and verifiable.
 
-[TODO: 1-2 sentences explaining what this skill enables]
+## Core Principle
 
-## Structuring This Skill
+**If a task feels too big, it is too big. Break it down until each piece is obvious.**
 
-[TODO: Choose the structure that best fits this skill's purpose. Common patterns:
+A well-decomposed task should take no more than a few hours to complete and have a clear definition of done.
 
-**1. Workflow-Based** (best for sequential processes)
-- Works well when there are clear step-by-step procedures
-- Example: DOCX skill with "Workflow Decision Tree" -> "Reading" -> "Creating" -> "Editing"
-- Structure: ## Overview -> ## Workflow Decision Tree -> ## Step 1 -> ## Step 2...
+## What Makes a Good Atomic Task
 
-**2. Task-Based** (best for tool collections)
-- Works well when the skill offers different operations/capabilities
-- Example: PDF skill with "Quick Start" -> "Merge PDFs" -> "Split PDFs" -> "Extract Text"
-- Structure: ## Overview -> ## Quick Start -> ## Task Category 1 -> ## Task Category 2...
+A properly decomposed task is:
 
-**3. Reference/Guidelines** (best for standards or specifications)
-- Works well for brand guidelines, coding standards, or requirements
-- Example: Brand styling with "Brand Guidelines" -> "Colors" -> "Typography" -> "Features"
-- Structure: ## Overview -> ## Guidelines -> ## Specifications -> ## Usage...
+- **Small** - Completable in one focused session
+- **Independent** - Can be done without blocking on other tasks
+- **Testable** - Has clear success criteria
+- **Valuable** - Delivers some increment of value
+- **Estimatable** - Scope is clear enough to estimate
 
-**4. Capabilities-Based** (best for integrated systems)
-- Works well when the skill provides multiple interrelated features
-- Example: Product Management with "Core Capabilities" -> numbered capability list
-- Structure: ## Overview -> ## Core Capabilities -> ### 1. Feature -> ### 2. Feature...
+**Task Size Targets:**
+- Ideal: 1-2 hours of focused work
+- Maximum: Half a day
+- If larger: Break it down further
 
-Patterns can be mixed and matched as needed. Most skills combine patterns (e.g., start with task-based, add workflow for complex operations).
+## Decomposition Techniques
 
-Delete this entire "Structuring This Skill" section when done - it's just guidance.]
+### 1. Vertical Slicing
 
-## [TODO: Replace with the first main section based on chosen structure]
+Break by user-visible functionality:
 
-[TODO: Add content here. See examples in existing skills:
-- Code samples for technical skills
-- Decision trees for complex workflows
-- Concrete examples with realistic user requests
-- References to scripts/templates/references as needed]
+```
+Feature: User Registration
 
-## Resources (optional)
+Slice 1: Email/password signup
+- Form renders with email and password fields
+- Validation shows errors for invalid input
+- Success creates account and shows confirmation
 
-Create only the resource directories this skill actually needs. Delete this section if no resources are required.
+Slice 2: Email verification
+- Sends verification email on signup
+- Clicking link verifies email
+- Shows different UI for unverified accounts
 
-### scripts/
-Executable code (Python/Bash/etc.) that can be run directly to perform specific operations.
+Slice 3: Social login (OAuth)
+- "Sign in with Google" button
+- OAuth flow completes
+- Account linked to Google ID
+```
 
-**Examples from other skills:**
-- PDF skill: `fill_fillable_fields.py`, `extract_form_field_info.py` - utilities for PDF manipulation
-- DOCX skill: `document.py`, `utilities.py` - Python modules for document processing
+Each slice is deployable and testable independently.
 
-**Appropriate for:** Python scripts, shell scripts, or any executable code that performs automation, data processing, or specific operations.
+### 2. Horizontal Layering
 
-**Note:** Scripts may be executed without loading into context, but can still be read by Codex for patching or environment adjustments.
+Break by system layer:
 
-### references/
-Documentation and reference material intended to be loaded into context to inform Codex's process and thinking.
+```
+Feature: Order Processing
 
-**Examples from other skills:**
-- Product management: `communication.md`, `context_building.md` - detailed workflow guides
-- BigQuery: API reference documentation and query examples
-- Finance: Schema documentation, company policies
+Layer 1: Data Model
+- Create Order entity
+- Create OrderItem entity
+- Add database migrations
 
-**Appropriate for:** In-depth documentation, API references, database schemas, comprehensive guides, or any detailed information that Codex should reference while working.
+Layer 2: Repository/Data Access
+- Create OrderRepository
+- Implement CRUD operations
+- Add query methods
 
-### assets/
-Files not intended to be loaded into context, but rather used within the output Codex produces.
+Layer 3: Business Logic
+- Create OrderService
+- Implement order creation flow
+- Add validation rules
 
-**Examples from other skills:**
-- Brand styling: PowerPoint template files (.pptx), logo files
-- Frontend builder: HTML/React boilerplate project directories
-- Typography: Font files (.ttf, .woff2)
+Layer 4: API Endpoints
+- Create POST /orders endpoint
+- Create GET /orders/:id endpoint
+- Add error handling
 
-**Appropriate for:** Templates, boilerplate code, document templates, images, icons, fonts, or any files meant to be copied or used in the final output.
+Layer 5: Frontend Integration
+- Create order form component
+- Add API client methods
+- Handle loading and error states
+```
+
+### 3. Workflow Decomposition
+
+Break by process steps:
+
+```
+Task: Implement checkout flow
+
+Step 1: Cart validation
+- Verify items are in stock
+- Validate quantities
+- Calculate totals
+
+Step 2: Payment processing
+- Collect payment details
+- Validate payment method
+- Process transaction
+
+Step 3: Order creation
+- Create order record
+- Associate with payment
+- Update inventory
+
+Step 4: Confirmation
+- Send confirmation email
+- Display success page
+- Generate invoice
+```
+
+### 4. Component Decomposition
+
+Break by UI or system component:
+
+```
+Task: Build dashboard page
+
+Component 1: Header section
+- Logo and navigation
+- User menu dropdown
+
+Component 2: Stats cards row
+- Revenue card
+- Orders card
+- Customers card
+
+Component 3: Chart section
+- Sales trend chart
+- Data fetching and transformation
+
+Component 4: Recent orders table
+- Table with sorting
+- Pagination
+- Row actions
+```
+
+## Task Template
+
+For each decomposed task, define:
+
+```markdown
+## Task: [Brief Title]
+
+**Description:**
+[What needs to be done in 1-2 sentences]
+
+**Files to Create/Modify:**
+- [ ] path/to/file1.ts
+- [ ] path/to/file2.ts
+
+**Steps:**
+1. [First specific step]
+2. [Second specific step]
+3. [Third specific step]
+
+**Done When:**
+- [ ] [Success criterion 1]
+- [ ] [Success criterion 2]
+- [ ] Tests pass
+
+**Dependencies:**
+- Requires: [Other task if any]
+- Blocks: [What this enables]
+```
+
+## Dependency Management
+
+### Identify Dependencies
+
+```
+Task Graph:
+
+[Data Model] ──┬──▶ [Repository]
+               │
+               └──▶ [API Types]
+                        │
+[Repository] ──────────▶ [Service]
+                              │
+[API Types] ──────────────────┤
+                              ▼
+                         [API Endpoints]
+```
+
+### Minimize Dependencies
+
+- Prefer tasks that can run in parallel
+- Use interfaces to decouple dependencies
+- Start with foundational tasks first
+
+### Order by Dependencies
+
+```
+Phase 1 (No dependencies):
+- Task A: Data model
+- Task B: API type definitions
+- Task C: UI component skeletons
+
+Phase 2 (Depends on Phase 1):
+- Task D: Repository (needs A)
+- Task E: API client (needs B)
+- Task F: UI logic (needs C)
+
+Phase 3 (Depends on Phase 2):
+- Task G: Service (needs D)
+- Task H: Connected UI (needs E, F)
+```
+
+## Decomposition Checklist
+
+For each task, verify:
+
+- [ ] **Atomic?** - Can be done without interruption
+- [ ] **Clear?** - Scope is unambiguous
+- [ ] **Testable?** - Know when it's done
+- [ ] **Independent?** - Minimal dependencies
+- [ ] **Small?** - Less than half a day
+
+## Signs of Poor Decomposition
+
+- "This task keeps growing"
+- "I'm not sure where to start"
+- "It depends on too many things"
+- "I can't test it yet"
+- "This is taking longer than expected"
+
+When you see these signs, stop and re-decompose.
+
+## Example: Full Decomposition
+
+```markdown
+# Feature: Password Reset
+
+## Epic Overview
+Users can reset their forgotten password via email link.
 
 ---
 
-**Not every skill requires all three types of resources.**
+## Task 1: Password Reset Request API
+
+**Description:** Create endpoint to request password reset.
+
+**Files:**
+- [ ] src/api/auth/reset-request.ts
+- [ ] src/services/email/templates/reset.html
+
+**Steps:**
+1. Create POST /auth/reset-password endpoint
+2. Validate email exists in database
+3. Generate secure reset token
+4. Store token with expiry (1 hour)
+5. Send email with reset link
+
+**Done When:**
+- [ ] Endpoint returns 200 for valid email
+- [ ] Endpoint returns 200 for invalid email (no leak)
+- [ ] Email sent with valid token
+- [ ] Token stored in database
+
+---
+
+## Task 2: Password Reset Form UI
+
+**Description:** Create form for entering new password.
+
+**Files:**
+- [ ] src/pages/reset-password.tsx
+- [ ] src/components/PasswordResetForm.tsx
+
+**Steps:**
+1. Create page component at /reset-password?token=X
+2. Build form with password and confirm fields
+3. Add password strength validation
+4. Show loading state during submission
+
+**Done When:**
+- [ ] Form renders with token in URL
+- [ ] Validation shows for weak passwords
+- [ ] Form submits to API
+
+---
+
+## Task 3: Password Reset Complete API
+
+**Description:** Create endpoint to set new password.
+
+**Files:**
+- [ ] src/api/auth/reset-complete.ts
+
+**Steps:**
+1. Create POST /auth/reset-password/complete endpoint
+2. Validate token is valid and not expired
+3. Hash new password
+4. Update user record
+5. Invalidate token
+6. Return success
+
+**Done When:**
+- [ ] Valid token + new password updates user
+- [ ] Expired token returns error
+- [ ] Invalid token returns error
+- [ ] Token cannot be reused
+```
+
+## Integration with Other Skills
+
+- Use **design-first** to understand the full scope before decomposing
+- Use **verification-gates** to define checkpoints between phases
+- Use **testing/red-green-refactor** to implement each task

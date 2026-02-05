@@ -1,6 +1,16 @@
 ---
 name: novel-writer
 description: 专为长篇网文创作设计的智能助手，支持从设定生成到正文撰写的全流程管理，包含智能质控与状态同步。(Yunshu Optimized)
+version: 3.0.0
+author: Yunshu
+icon: 🖋️
+workspace_root: ../../../Novels
+input:
+  - name: instruction
+    type: text
+    label: 创作指令
+    placeholder: "例如：创建新书《...》 或 续写《...》"
+    required: true
 ---
 
 # Novel Writer AI 小说创作执行流程（优化版）

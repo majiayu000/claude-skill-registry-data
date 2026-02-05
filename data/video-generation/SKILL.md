@@ -1,72 +1,100 @@
 ---
-name: video-generation-skill
-description: Design video concepts, scripts, shotlists, transitions, and editing notes for VEO, Gemini, and Nano Banana-based pipelines. Use when turning a marketing idea into concrete video assets.
-allowed-tools: Read, Write
+name: video-generation
+description: AI video generation with Sora, Veo, and Kling. Use when creating Reels, video prompts, or handling video generation workflows.
 ---
 
-# Video Generation Skill
+# AI Video Generation
 
-## Purpose
-Translate marketing goals and decision moments into concrete video plans that can be executed by external tools (VEO, Gemini, Nano Banana 2, etc.).
+## Quick Reference
 
-## Outputs
-Per video:
-- Hook (first 3–5 seconds)
-- Full script / outline
-- Suggested B-roll and overlay text
-- Scene-by-scene breakdown
-- Transitions and on-screen prompts
-- Thumbnail concept and text
+| Model | Provider | Duration | Best For |
+|-------|----------|----------|----------|
+| Veo 3.1 | Google | 4-8s | Simple scenes, products |
+| Sora 2 | OpenAI | 4-12s | Complex scenes |
+| Kling Pro | fal.ai | 5-10s | Industrial, IoT |
 
-## Video Types
+## Model Selection
 
-### Short-Form (15-60 seconds)
-- TikTok
-- Instagram Reels
-- YouTube Shorts
-- Facebook Reels
+```python
+# Auto-select based on complexity
+from app.sora_helper import generate_video_smart
 
-**Structure:**
-1. Hook (0-3s): Pattern interrupt
-2. Problem (3-10s): Identify pain
-3. Solution (10-45s): Show the fix
-4. CTA (45-60s): What to do next
+result = await generate_video_smart(prompt, topic, duration=8)
+# Returns: {success, video_path, model_used}
+```
 
-### Long-Form (2-10 minutes)
-- YouTube
-- LinkedIn Video
-- Website embeds
+**Complexity Keywords:**
+- HIGH (Sora Pro): transformation, morphing, cinematic, epic
+- MEDIUM (Sora): tracking, dolly, movement, transition
+- LOW (Veo): static, simple, product
 
-**Structure:**
-1. Hook (0-15s)
-2. Introduction (15-30s)
-3. Main content (30s-8m)
-4. Summary (8-9m)
-5. CTA (9-10m)
+## Prompt Formula
 
-## Platform Guidelines
+```
+[CINEMATOGRAPHY] + [SUBJECT] + [ACTION] + [CONTEXT] + [STYLE]
+```
 
-### YouTube
-- Thumbnail: 1280x720, high contrast, max 3 words
-- Title: 40-60 chars, keyword-first
-- Description: First 150 chars are preview
+**Example:**
+```
+Slow dolly shot, IoT sensor on greenhouse shelf, LED blinking green,
+morning sunlight through glass, professional documentary style
+```
 
-### TikTok
-- Vertical 9:16
-- Native captions required
-- Trending sounds boost reach
+## Generation Functions
 
-### Instagram
-- Square or vertical
-- Auto-captions on
-- Cross-post to Facebook
+```python
+# Veo (Google)
+from app.veo_helper import generate_video_veo3
+result = await generate_video_veo3(prompt, aspect_ratio="9:16", duration_seconds=8)
 
-### LinkedIn
-- Professional tone
-- Captions essential (most watch muted)
-- Value-first approach
+# Sora (OpenAI)
+from app.sora_helper import generate_video_sora
+result = await generate_video_sora(prompt, model="sora-2", size="720x1280")
 
-## Usage
-- Called by SocialPlaybookAgent or VisualExperienceAgent
-- Use routes and components already defined in Synthex for embedding video demos
-- Store concepts in `social_assets` table with `asset_type='video'`
+# Kling (fal.ai)
+from app.fal_helper import FalVideoGenerator
+result = await FalVideoGenerator.generate_video(prompt, model="kling_pro", duration=10)
+```
+
+## Instagram Specs
+
+| Spec | Value |
+|------|-------|
+| Aspect | 9:16 vertical |
+| Resolution | 720x1280 |
+| Codec | H.264/AAC |
+| Max Duration | 90s |
+
+## Environment Variables
+
+```bash
+GEMINI_API_KEY=...   # Veo
+OPENAI_API_KEY=...   # Sora
+FAL_API_KEY=...      # Kling
+```
+
+## Return Format
+
+```python
+# Success
+{"success": True, "video_path": "/path/to.mp4", "model_used": "veo-3.1"}
+
+# Error with fallback
+{"success": False, "error": "...", "fallback": "veo3"}
+```
+
+## Best Practices
+
+- Simple, comma-separated sentences
+- Include camera movement + lighting
+- Avoid complex physics (bouncing, running)
+- Use: "cinematic", "professional", "documentary"
+- Duration: 5-8s ideal for Reels
+
+## Deep Links
+
+- `app/sora_helper.py` - Sora + smart selection
+- `app/veo_helper.py` - Veo generation
+- `app/fal_helper.py` - Kling/Wan/Minimax
+- `app/video_models.py` - Model configs
+- `context/reels-prompts.md` - Prompt examples

@@ -1,234 +1,262 @@
 ---
 name: session-end
-description: Mandatory session close-out with IG audit, AAR, HISTORIAN, and RELEASE_MANAGER. Enforces clean session handoff.
-model_tier: sonnet
-parallel_hints:
-  can_parallel_with: []
-  must_serialize_with: [startup, startupO]
-  preferred_batch_size: 1
-context_hints:
-  max_file_context: 60
-  compression_level: 1
-  requires_git_context: true
-  requires_db_context: false
-escalation_triggers:
-  - pattern: "uncommitted.*changes"
-    reason: "Uncommitted work needs human decision on how to handle"
-  - pattern: "failing.*tests"
-    reason: "Test failures need human review before session close"
+description: Complete verification steps before ending the session
 ---
 
-# Session End Skill
+# Session End Checklist
 
-> **Purpose:** Clean session close-out with governance checks
-> **Trigger:** `/session-end` or `/bye` or `/done`
-> **Enforcement:** Controlled by `.claude/Governance/config.json`
+Before ending the session, complete these verification steps:
 
-## Checklist (Required)
+## 1. Work Verification
 
-### 1. Stack Health
-- [ ] Run `./scripts/stack-health.sh` - all services GREEN
-- [ ] Run `./scripts/stack-health.sh --full` - lint/typecheck clean
+- [ ] All TodoWrite items marked as completed or documented as blocked
+- [ ] All commits pushed to remote branch
+- [ ] All code review suggestions addressed or documented as skipped (with
+      reason)
+- [ ] Tests pass: `npm test`
+- [ ] Lint passes: `npm run lint`
+- [ ] Pattern check passes: `npm run patterns:check`
 
-### 2. Work State
-- [ ] All changes committed or stashed
-- [ ] No failing tests introduced
-- [ ] Linters pass (ruff, eslint)
+## 2. CI Verification
 
-### 4. Documentation
-- [ ] CHANGELOG updated if features added
-- [ ] TODOs resolved or documented in HUMAN_TODO.md
+If you modified any of these, verify they still work:
 
-### 5. Mandatory Governance Agents (ALWAYS INVOKED)
+- [ ] `.github/workflows/ci.yml` - Main CI pipeline
+- [ ] `.github/workflows/docs-lint.yml` - Documentation linting
+- [ ] `scripts/check-docs-light.js` - Doc linter script
+- [ ] `scripts/check-pattern-compliance.js` - Pattern checker
+- [ ] `eslint.config.mjs` - ESLint configuration
 
-Regardless of governance_enabled setting, these agents are ALWAYS invoked at session end:
+## 3. Documentation Updates
 
-| Agent | Purpose | Cannot Skip |
-|-------|---------|-------------|
-| DELEGATION_AUDITOR (IG) | Audit spawn counts, chain violations, bypasses | ✓ |
-| COORD_AAR | After-action review, lessons learned | ✓ |
-| HISTORIAN | Session record for continuity | ✓ |
-| RELEASE_MANAGER | Version status, release readiness | ✓ |
+- [ ] Update SESSION_CONTEXT.md with:
+  - Work completed this session
+  - Any new blockers discovered
+  - Next steps for future sessions
+- [ ] Update ROADMAP.md Active Sprint checkboxes if features completed
+- [ ] Log any significant learnings in AI_REVIEW_LEARNINGS_LOG.md
+- [ ] Archive completed/cancelled plans to `docs/archive/completed-plans/`
+- [ ] **Cross-document check**: Review docs modified this session against
+      [DOCUMENT_DEPENDENCIES.md](../../docs/DOCUMENT_DEPENDENCIES.md#cross-document-update-triggers)
+      trigger matrix - update any dependent documents
 
-**Note:** Use `/session-end --force` only in true emergencies. Skipping these agents loses institutional memory.
+### 3.1 Roadmap Sync Check (MANDATORY for Feature Work)
 
-**DELEGATION_AUDITOR (IG):**
-- Spawn count for session
-- Chain-of-command violations
-- Bypass justifications
+> **Session #69 Guardrail:** Prevents roadmap staleness by ensuring feature work
+> is reflected in ROADMAP.md.
 
-**COORD_AAR (After Action Review):**
-- What went well
-- What could improve
-- Patterns discovered
-- Lessons learned
+If you implemented features, completed tasks, or made significant progress this
+session:
 
-**HISTORIAN:**
-- Major features completed
-- Architectural decisions
-- Notable incidents
-- Session continuity
+- [ ] **Verify ROADMAP.md reflects current status**
+  - Check Active Sprint tasks - mark completed items with `[x]`
+  - Check M1.6/M2 phase tasks - update status indicators
+  - Update sprint progress percentage if significant work done
+- [ ] **No new features without roadmap entry**
+  - If you added a new feature not in ROADMAP.md, add it now
+  - If you completed a planned feature, mark it done
 
-**RELEASE_MANAGER:**
-- Current version status
-- Uncommitted changes check
-- Release readiness assessment
-- Next release steps
+**Quick Check:**
 
-### 4. Knowledge Preservation (G-Staff Integration)
+```bash
+# See what code was changed this session
+git diff --name-only HEAD~5
 
-**Invoke G4_CONTEXT_MANAGER (RAG/Vector Updates):**
-- Index new session artifacts for retrieval
-- Update embeddings for modified documentation
-- Ensure next session has full context access
-
-**Invoke KNOWLEDGE_CURATOR (via COORD_OPS):**
-- Extract cross-session patterns
-- Update PATTERNS.md, DECISIONS.md
-- Create session handoff documentation
-
-**Invoke G4_LIBRARIAN (optional):**
-- Archive session transcripts
-- Catalog new skills/agents created
-- Update knowledge graph relationships
-
-## Quick Exit (Emergency)
-
-```
-/session-end --force
-```
-Skips all checks. Logs bypass.
-
-## Output Format
-
-```
-================================================================================
-                           SESSION END REPORT
-================================================================================
-
-## Stack Health
-[output of ./scripts/stack-health.sh --full]
-
-## Work Summary
-- Commits: [count]
-- Files Modified: [count]
-- Tests Added/Modified: [count]
-
-## Git Status
-[output of git status]
-
-## IG Report (DELEGATION_AUDITOR)
-- Total Spawns: [count]
-- Chain-of-Command Violations: [count]
-- Bypasses: [list with justifications]
-
-## After Action Review (AAR)
-### What Went Well
-- [item]
-
-### What Could Improve
-- [item]
-
-### Patterns Discovered
-- [item]
-
-### Lessons Learned
-- [item]
-
-## HISTORIAN Entry
-[Summary for session history]
-
-## Release Status (RELEASE_MANAGER)
-- Current Version: [version]
-- Uncommitted Changes: [yes/no]
-- Release Readiness: [ready/blocked/needs-review]
-- Next Steps: [recommendations]
-
-## Knowledge Preservation (G-Staff)
-- G4_CONTEXT_MANAGER: [documents indexed for RAG]
-- KNOWLEDGE_CURATOR: [patterns extracted, handoff created]
-- G4_LIBRARIAN: [artifacts cataloged] (if invoked)
-
-## Recommendations for Next Session
-- [item]
-
-================================================================================
-                              SESSION CLOSED
-================================================================================
+# If you see new components/features, verify they're in ROADMAP.md
 ```
 
-## Execution Steps
+**Why This Matters:**
 
-1. **Stack Health Check**
-   ```bash
-   ./scripts/stack-health.sh --full
-   ```
-   - Must be GREEN to proceed
-   - YELLOW acceptable with justification
-   - RED blocks session end (fix issues first)
+- Roadmap drift causes planning confusion
+- Future sessions won't know what's already implemented
+- Session #69 found Sentry was 90% done but roadmap showed "Planned"
 
-2. **Check Git State**
-   ```bash
-   git status
-   git diff --stat
-   ```
+## 4. Learning Consolidation (AUTOMATIC - Session #69)
 
-4. **Run Linters** (if not already done by stack-health)
-   ```bash
-   cd backend && ruff check . --fix
-   cd frontend && npm run lint:fix
-   ```
+Consolidation now runs **automatically** during SessionStart when the threshold
+is reached (10+ reviews). No manual action required.
 
-5. **Verify Tests**
-   ```bash
-   cd backend && pytest --tb=no -q
-   cd frontend && npm test -- --passWithNoTests
-   ```
+**What happens automatically:**
 
-6. **Check Governance Config**
-   ```bash
-   cat .claude/Governance/config.json
-   ```
+- When threshold is reached, `npm run consolidation:run --auto` runs
+- Counter is reset in AI_REVIEW_LEARNINGS_LOG.md
+- Patterns are analyzed and counted
 
-7. **Generate IG Report** (DELEGATION_AUDITOR)
-   - Review session for agent spawns
-   - Check for chain-of-command violations
-   - Document any bypasses
+**Manual follow-up (optional, if you want to persist patterns):**
 
-8. **Conduct AAR** (COORD_AAR)
-   - Reflect on session outcomes
-   - Identify improvements
-   - Capture patterns and lessons
+```bash
+npm run consolidation:check   # Check current status
+npm run consolidation:run     # Preview what was consolidated
+npm run patterns:suggest      # Find automatable patterns
+```
 
-9. **Update HISTORIAN**
-   - Write to `.claude/History/sessions/`
-   - Include major decisions and outcomes
+If you want to manually add patterns to documentation:
 
-10. **Release Status Check** (RELEASE_MANAGER)
-    - Check version status
-    - Verify no blocking issues
-    - Document release readiness
+- Add critical patterns to claude.md Section 4 (top 5 only)
+- Add full patterns to docs/agent_docs/CODE_PATTERNS.md
+- Add suggested patterns to check-pattern-compliance.js
 
-11. **Knowledge Preservation** (G-Staff)
-    - Spawn G4_CONTEXT_MANAGER for RAG/vector updates
-    - Spawn KNOWLEDGE_CURATOR for pattern synthesis
-    - Optionally spawn G4_LIBRARIAN for archival
+**Why this matters:**
 
-12. **Final Handoff**
-   - Summarize state for next session
-   - Note any pending work
-   - Verify RAG index updated
+- claude.md is loaded at session START
+- Patterns in claude.md will be in context for NEXT session
+- This is how the AI "learns" from previous sessions
 
-## Integration with Other Skills
+## 5. Code Review Completeness Audit
 
-- **startup/startupO**: Session-end complements startup for session lifecycle
-- **code-review**: Can be invoked before session-end for final review
-- **pre-pr-checklist**: Session-end incorporates similar checks
+If you received code review feedback this session:
 
-## Aliases
+```
+VERIFICATION CHECKLIST:
+├─ Did you address ALL suggestions? (not just some)
+├─ Did you test regex patterns for performance?
+├─ Did you verify path-based filtering works correctly?
+├─ Did you check for CI workflow impacts?
+└─ Did you commit descriptive messages explaining WHY changes were made?
+```
 
-- `/session-end` - Full protocol
-- `/bye` - Alias for `/session-end`
-- `/done` - Alias for `/session-end`
-- `/session-end --force` - Emergency exit, skips checks
-- `/session-end --quick` - Minimal checks, no AAR
+## 6. Automated Verification (RUN BEFORE MANUAL AUDIT)
+
+Execute these automated checks to verify session compliance:
+
+```bash
+# 1. Verify expected skills were used based on activity
+npm run skills:verify-usage
+
+# 2. Check if any triggers are pending
+npm run triggers:check
+
+# 3. Review any overrides used this session
+npm run override:list
+
+# 4. View session activity summary
+npm run session:summary
+```
+
+**Interpreting Results:**
+
+- **Skills verification failures** indicate skills that should have been used
+  but weren't. Either use the skill now, or document why it was skipped.
+- **Pending triggers** should be resolved before push. If already resolved,
+  document the resolution.
+- **Override history** should be reviewed - ensure reasons were provided and are
+  legitimate.
+- **Session summary** shows what was done this session for documentation
+  purposes.
+
+---
+
+## 7. Agent/Skill/MCP/Hook/Script Audit (MANDATORY)
+
+**Complete this audit for every session. If gaps found, document why or fix
+before ending.**
+
+### 7.1 Session Start Scripts
+
+| Script                    | Required | Ran? | If No, Why? |
+| ------------------------- | -------- | ---- | ----------- |
+| `npm run patterns:check`  | ✅       | [ ]  |             |
+| `npm run review:check`    | ✅       | [ ]  |             |
+| `npm run lessons:surface` | ✅       | [ ]  |             |
+
+### 7.2 Agent Usage (based on work performed)
+
+| Condition                    | Agent            | Should Invoke? | Did Invoke? | If No, Why? |
+| ---------------------------- | ---------------- | -------------- | ----------- | ----------- |
+| Wrote/modified .js/.ts files | code-reviewer    | [ ]            | [ ]         |             |
+| Security-related changes     | security-auditor | [ ]            | [ ]         |             |
+| Bug/error debugging          | debugger         | [ ]            | [ ]         |             |
+| Complex codebase exploration | Explore          | [ ]            | [ ]         |             |
+| Multi-step planning needed   | Plan             | [ ]            | [ ]         |             |
+
+### 7.3 Skill Usage
+
+| Condition             | Skill                | Should Invoke? | Did Invoke? | If No, Why? |
+| --------------------- | -------------------- | -------------- | ----------- | ----------- |
+| Bug/error encountered | systematic-debugging | [ ]            | [ ]         |             |
+| UI/frontend work      | frontend-design      | [ ]            | [ ]         |             |
+| Code review requested | code-reviewer        | [ ]            | [ ]         |             |
+
+### 7.4 MCP Servers
+
+| Server                        | Available | Used? | Purpose if Used |
+| ----------------------------- | --------- | ----- | --------------- |
+| (list from SessionStart hook) |           | [ ]   |                 |
+
+### 7.5 Hooks Executed
+
+| Hook             | Should Trigger | Did Trigger? | Passed? |
+| ---------------- | -------------- | ------------ | ------- |
+| SessionStart     | ✅             | [ ]          | [ ]     |
+| UserPromptSubmit | ✅             | [ ]          | [ ]     |
+| Pre-commit       | On commit      | [ ]          | [ ]     |
+| Pre-push         | On push        | [ ]          | [ ]     |
+
+### 7.6 Audit Result
+
+**Overall Result:** [ ] PASS [ ] FAIL
+
+**PASS criteria:** All required items ran AND passed (or justified with
+explanation)
+
+**If FAIL, select disposition:**
+
+- [ ] Fixes applied this session (describe below)
+- [ ] Documented for next session (note in SESSION_CONTEXT.md)
+
+**Remediation notes (if FAIL):**
+
+```
+(describe what was invoked/run to address gaps, or next steps)
+```
+
+## 8. Key Learnings to Remember
+
+Today's session reinforced these patterns:
+
+### DO:
+
+- Read files before editing
+- Use TodoWrite for multi-step tasks
+- Check all code review items multiple times
+- Add path-based filtering for context-specific patterns
+- Use bounded regex (`{0,N}?`) instead of greedy (`.*`)
+- Spread ESLint plugin configs in flat config format
+- Exclude archive files (`docs/archive/`) from strict linting
+- Add `continue-on-error` for pre-existing issues in CI
+
+### DON'T:
+
+- Skip code review suggestions without documenting why
+- Use greedy regex that can cause runaway matches
+- Forget to test changes before committing
+- Push without verifying CI impact
+- Edit files without reading them first
+
+## 9. Commit Summary
+
+Provide a summary of all commits made this session:
+
+```
+git log --oneline -10
+```
+
+---
+
+## 10. Update Session State (AUTOMATIC)
+
+**IMPORTANT:** Run this command to update session state tracking:
+
+```bash
+npm run hooks:health -- --end
+```
+
+This updates the cross-session validation system so that:
+
+- Next session-begin knows this session ended properly
+- Session statistics are tracked
+- No false warnings about incomplete sessions
+
+---
+
+Session complete. All work has been verified and documented.

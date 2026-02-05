@@ -1,6 +1,11 @@
 ---
-name: mcp-server-developer
+name: mcp_server_developer
+router_kit: FullStackKit
 description: Model Context Protocol (MCP) server implementation specialist for Claude Desktop integration. Handles TypeScript/Node.js server scaffolding, endpoint creation, telemetry setup, npx distribution, and comprehensive documentation. Follows MCP specification and best practices for production-grade server deployment.
+metadata:
+  skillport:
+    category: auto-healed
+    tags: [automation, aws, bash scripting, ci/cd, cloud computing, containerization, deployment strategies, devops, docker, gitops, infrastructure, infrastructure as code, integration, json-rpc, kubernetes, linux, logging, mcp server developer, microservices, monitoring, orchestration, pipelines, protocol, reliability, scalability, security, server, server management, terraform, tool-use]
 ---
 
 # MCP Server Developer
@@ -135,8 +140,6 @@ Expert implementation of Model Context Protocol (MCP) servers for Claude Desktop
    
    3. Test in Claude:
       "Use the perspective transformation on this problem: [your problem]"
-   ```text
-   (Expected: Structured analysis from multiple stakeholder perspectives)
    ```
 
 2. **Runnable Examples**
@@ -406,11 +409,11 @@ logTelemetry({
 
 ## Resources
 
-- **MCP Specification**: <https://spec.modelcontextprotocol.io/>
-- **MCP SDK**: <https://github.com/modelcontextprotocol/typescript-sdk>
-- **Claude Desktop Config**: <https://docs.claude.com/en/docs/agents-and-tools/agent-skills>
-- **TypeScript Best Practices**: <https://typescript-lang.org/docs/handbook/intro.html>
-- **NPM Publishing Guide**: <https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry>
+- **MCP Specification**: https://spec.modelcontextprotocol.io/
+- **MCP SDK**: https://github.com/modelcontextprotocol/typescript-sdk
+- **Claude Desktop Config**: https://docs.claude.com/en/docs/agents-and-tools/agent-skills
+- **TypeScript Best Practices**: https://typescript-lang.org/docs/handbook/intro.html
+- **NPM Publishing Guide**: https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry
 
 ## Success Criteria
 
@@ -424,4 +427,30 @@ logTelemetry({
 **Phase 0 fails if:**
 1. ❌ <10 users after 60 days → Pivot to consulting focus
 2. ❌ >5 P0 bugs in first 30 days → Architecture review needed
-3. ❌ >1000ms latency sustained → Tech stack reassessment required
+*MCP Server Developer v1.1 - Enhanced*
+
+## 🔄 Workflow
+
+> **Kaynak:** [Anthropic MCP SDK Best Practices](https://github.com/modelcontextprotocol/typescript-sdk)
+
+### Aşama 1: Architecture & Setup
+- [ ] **Scaffolding**: `npm init` ve TypeScript config ayarlarını yap.
+- [ ] **Types**: Resource ve Tool tiplerini strict mode ile tanımla.
+- [ ] **Transport**: Stdio transport'u `onerror` handler ile güvenli hale getir.
+
+### Aşama 2: Development Loop
+- [ ] **Hot Reload**: Geliştirme sırasında `nodemon` veya `watch` modunu kullan.
+- [ ] **Inspector**: `npx @modelcontextprotocol/inspector` ile canlı debug yap.
+- [ ] **Logging**: Structured logging (JSON) ekle ama stdio'yu kirletme (stderr kullan).
+
+### Aşama 3: Release
+- [ ] **Distribution**: Paketi `npm`'e veya `npx` ile çalışacak şekilde publish et.
+- [ ] **Docs**: README.md'ye `claude_desktop_config.json` örneğini ekle.
+- [ ] **Analytics**: Anonim kullanım verisi toplama (opt-in) mekanizmasını kur.
+
+### Kontrol Noktaları
+| Aşama | Doğrulama |
+|-------|-----------|
+| 1 | Server hatasız kapanıp (graceful shutdown) yeniden başlıyor mu? |
+| 2 | `list_tools` çağrısı <100ms içinde cevap veriyor mu? |
+| 3 | Dokümantasyon "Copy-Paste" ile çalıştırılabiliyor mu? |

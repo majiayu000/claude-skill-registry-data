@@ -1,163 +1,234 @@
 ---
 name: swarm-coordination
-description: Coordinate multi-agent swarm workflows. Use when working in parallel with other agents, managing shared resources, or orchestrating distributed tasks. Covers conflict prevention, handoffs, and state synchronization.
-allowed-tools: Read, Write, Bash, Glob, Grep
+description: Multi-agent swarm coordination patterns. Orchestrates parallel agent execution, manages agent communication, handles task distribution, and coordinates results aggregation.
+version: 1.0
+model: sonnet
+invoked_by: both
+user_invocable: true
+tools: [Read, Write, Edit, Bash, Glob, Grep]
+best_practices:
+  - Spawn independent agents in parallel
+  - Use structured handoff formats
+  - Aggregate results systematically
+  - Handle partial failures gracefully
+error_handling: graceful
+streaming: supported
 ---
 
-# Swarm Coordination
+# Swarm Coordination Skill
 
-## Overview
+<identity>
+Swarm Coordination Skill - Orchestrates parallel agent execution, manages inter-agent communication, handles task distribution, and coordinates results aggregation for complex multi-agent workflows.
+</identity>
 
-This skill provides protocols and patterns for consistent, conflict-free multi-agent development. Follow these guidelines when working alongside other Claude Code agents in the same codebase.
+<capabilities>
+- Parallel agent spawning
+- Task distribution strategies
+- Results aggregation
+- Inter-agent communication
+- Failure handling and recovery
+</capabilities>
 
-## Core Principles
+<instructions>
+<execution_process>
 
-1. **Beads as Source of Truth**: All work items tracked via `bd` commands
-2. **File Locking**: Hooks automatically manage file locks - respect them
-3. **Session Isolation**: Each agent has a unique session ID for tracking
-4. **Clean Handoffs**: Always leave state that another agent can continue
+### Step 1: Analyze Task for Parallelization
 
-## Workflows
+Identify parallelizable work:
 
-### Starting Work
+| Pattern           | Example                        | Strategy               |
+| ----------------- | ------------------------------ | ---------------------- |
+| Independent tasks | Review multiple files          | Spawn in parallel      |
+| Dependent tasks   | Design → Implement             | Sequential spawn       |
+| Fan-out/Fan-in    | Multiple reviews → Consolidate | Parallel + Aggregation |
+| Pipeline          | Parse → Transform → Validate   | Sequential handoff     |
 
-- [ ] **Check Beads**: Run `bd ready` to find unblocked issues
-- [ ] **Claim Work**: Update issue status: `bd update <id> --status in_progress`
-- [ ] **Check Conflicts**: Review `.claude/hooks/.file-tracker.log` for recent edits
-- [ ] **Coordinate**: If another agent is active, coordinate via Beads comments
+### Step 2: Spawn Agents in Parallel
 
-### During Work
+Use the Task tool to spawn multiple agents in a single message:
 
-- [ ] **Atomic Changes**: Make small, complete changes that don't leave broken state
-- [ ] **Frequent Commits**: Commit often to reduce merge conflicts
-- [ ] **Update Progress**: Add comments to Beads issues for visibility
-- [ ] **Respect Locks**: If a file is locked, wait or work on something else
+```javascript
+// Spawn multiple agents in ONE message for parallel execution
+Task({
+  subagent_type: 'general-purpose',
+  description: 'Architect reviewing design',
+  prompt: 'Review architecture...',
+});
 
-### Completing Work
-
-- [ ] **Run Tests**: Verify changes don't break existing functionality
-- [ ] **Close Issue**: `bd close <id> --reason "Completed: <description>"`
-- [ ] **Sync Beads**: `bd sync` to share updates with other agents
-- [ ] **Clean State**: Commit all changes, leave no uncommitted work
-
-## Conflict Prevention
-
-### File Lock Protocol
-
-Hooks automatically acquire/release locks. If you encounter a lock:
-
-```bash
-# Check who holds the lock
-cat .claude/hooks/.locks/<filename>.lock
-
-# Lock automatically expires after 60 seconds
-# If urgent, coordinate via Beads or wait
+Task({
+  subagent_type: 'general-purpose',
+  description: 'Security reviewing design',
+  prompt: 'Review security...',
+});
 ```
 
-### Merge Conflict Strategy
+**Key**: Both Task calls must be in the SAME message for true parallelism.
 
-1. Pull frequently: Keep your branch up to date
-2. Small PRs: Easier to merge than large changes
-3. Coordinate: Use Beads to claim files/features before editing
-4. Resolve quickly: Address conflicts immediately when detected
+### Step 3: Define Handoff Format
 
-## Communication Patterns
+Use structured formats for agent communication:
 
-### Handoff Message
+```markdown
+## Agent Handoff: [Source] → [Target]
 
-When ending a session with incomplete work:
+### Context
 
-```bash
-# Create handoff for next agent
-echo '{"message": "Continue implementing auth middleware. Tests passing but needs error handling in src/auth.ts:45"}' > .claude/hooks/.state/handoff.json
+- Task: [What was done]
+- Files: [Files touched]
+
+### Findings
+
+- [Key finding 1]
+- [Key finding 2]
+
+### Recommendations
+
+- [Action item 1]
+- [Action item 2]
+
+### Artifacts
+
+- [Path to artifact 1]
+- [Path to artifact 2]
 ```
 
-### Issue Comments (via Beads)
+### Step 4: Aggregate Results
 
-```bash
-# Add context for other agents
-bd comment <issue-id> "Implemented base class. Needs: validation, tests, docs"
+Combine outputs from parallel agents:
+
+```markdown
+## Swarm Results Aggregation
+
+### Participating Agents
+
+- Architect: Completed ✅
+- Security: Completed ✅
+- DevOps: Completed ✅
+
+### Consensus Points
+
+- [Point all agents agree on]
+
+### Conflicts
+
+- [Point agents disagree on]
+- Resolution: [How to resolve]
+
+### Combined Recommendations
+
+1. [Prioritized recommendation]
+2. [Prioritized recommendation]
 ```
 
-## Multi-Agent Patterns
+### Step 5: Handle Failures
 
-### Queen-Worker Pattern
+Strategies for partial failures:
 
-For complex tasks, one agent orchestrates while others execute:
+| Scenario                | Strategy                        |
+| ----------------------- | ------------------------------- |
+| Agent timeout           | Retry with simpler prompt       |
+| Agent error             | Continue with available results |
+| Conflicting results     | Use consensus-voting skill      |
+| Missing critical result | Block and retry                 |
 
-1. **Queen**: Plans, decomposes, assigns via Beads
-2. **Workers**: Claim issues, implement, report completion
-3. **Sync Point**: All workers sync before final integration
+</execution_process>
 
-### Parallel Streams
+<best_practices>
 
-For independent features:
+1. **Parallelize Aggressively**: Independent work should run in parallel
+2. **Structured Handoffs**: Use consistent formats for communication
+3. **Graceful Degradation**: Continue with partial results when safe
+4. **Clear Aggregation**: Combine results systematically
+5. **Track Provenance**: Know which agent produced each result
 
-1. Create separate Beads issues for each stream
-2. Each agent claims one stream
-3. Avoid editing same files across streams
-4. Merge streams at defined integration points
+</best_practices>
+</instructions>
 
-## State Files
+<examples>
+<usage_example>
+**Parallel Review Request**:
 
-| File | Purpose |
-|------|---------|
-| `.claude/hooks/.state/session_*.json` | Active agent sessions |
-| `.claude/hooks/.state/handoff.json` | Handoff messages between sessions |
-| `.claude/hooks/.locks/*.lock` | File edit locks |
-| `.claude/hooks/.file-tracker.log` | Recent file modifications |
-
-## Best Practices
-
-1. **Check Before Edit**: Always verify no active locks on target files
-2. **Complete Units**: Finish logical units of work before switching
-3. **Document Intent**: Use Beads issues to declare what you're working on
-4. **Test Locally**: Run tests before pushing to catch issues early
-5. **Sync Often**: Keep Beads and git in sync with other agents
-
-## Emergency Procedures
-
-### Deadlock Detection
-
-If agents are waiting on each other:
-
-```bash
-# Check active sessions
-ls -la .claude/hooks/.state/session_*.json
-
-# Check active locks
-ls -la .claude/hooks/.locks/
-
-# Force release stale locks (use with caution)
-find .claude/hooks/.locks -mmin +5 -delete
+```
+Get architecture, security, and performance reviews for the new API design
 ```
 
-### Recovery from Conflict
+**Swarm Coordination**:
 
-1. Save current work to a new branch
-2. Sync with main: `git fetch && git rebase origin/main`
-3. Resolve conflicts file by file
-4. Update Beads: `bd sync`
-5. Continue work
+```javascript
+// Spawn 3 reviewers in parallel (single message)
+Task({ description: 'Architect reviewing API', prompt: '...' });
+Task({ description: 'Security reviewing API', prompt: '...' });
+Task({ description: 'Performance reviewing API', prompt: '...' });
+```
 
-## Integration with Beads
+**Aggregated Results**:
+
+```markdown
+## API Design Review (3 agents)
+
+### Consensus
+
+- RESTful design is appropriate
+- Need authentication on all endpoints
+
+### Recommendations by Priority
+
+1. [HIGH] Add rate limiting (Security)
+2. [HIGH] Use connection pooling (Performance)
+3. [MED] Add versioning to URLs (Architect)
+```
+
+</usage_example>
+</examples>
+
+## Rules
+
+- Always spawn independent agents in parallel
+- Use structured handoff formats
+- Handle partial failures gracefully
+
+## Related Workflow
+
+This skill has a corresponding workflow for complex multi-agent scenarios:
+
+- **Workflow**: `.claude/workflows/enterprise/swarm-coordination-skill-workflow.md`
+- **When to use workflow**: For massively parallel task execution with Queen/Worker topology, fault tolerance, and distributed coordination (large-scale refactoring, parallel code review, multi-file implementation)
+- **When to use skill directly**: For simple parallel agent spawning or when integrating swarm patterns into other workflows
+
+## Workflow Integration
+
+This skill powers multi-agent orchestration patterns across the framework:
+
+**Router Decision:** `.claude/workflows/core/router-decision.md`
+
+- Router uses swarm patterns for parallel agent spawning
+- Planning Orchestration Matrix defines when to use swarm coordination
+
+**Artifact Lifecycle:** `.claude/workflows/core/skill-lifecycle.md`
+
+- Swarm patterns apply to artifact creation at scale
+- Parallel validation of multiple artifacts
+
+**Related Workflows:**
+
+- `consensus-voting` skill for resolving conflicting agent outputs
+- `context-compressor` skill for aggregating parallel results
+- Enterprise workflows in `.claude/workflows/enterprise/` use swarm patterns
+
+---
+
+## Memory Protocol (MANDATORY)
+
+**Before starting:**
 
 ```bash
-# View all open work
-bd list --status open
-
-# Get ready (unblocked) items
-bd ready --sort hybrid
-
-# Claim an issue
-bd update <id> --status in_progress --assignee claude
-
-# Add dependency
-bd dep add <blocking-id> <blocked-id> --type blocks
-
-# Complete work
-bd close <id> --reason "Implemented feature X"
-
-# Sync state
-bd sync
+cat .claude/context/memory/learnings.md
 ```
+
+**After completing:**
+
+- New pattern -> `.claude/context/memory/learnings.md`
+- Issue found -> `.claude/context/memory/issues.md`
+- Decision made -> `.claude/context/memory/decisions.md`
+
+> ASSUME INTERRUPTION: Your context may reset. If it's not in memory, it didn't happen.

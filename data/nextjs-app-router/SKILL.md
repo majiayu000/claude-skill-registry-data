@@ -1,354 +1,665 @@
 ---
 name: nextjs-app-router
-description: Next.js 16 App Router patterns including server components, client components, server actions, route handlers, layouts, metadata API, dynamic routes, file conventions, data fetching, caching strategies, and Next.js best practices for building modern React applications
-model: sonnet
+description: Build production Next.js 14+ applications with App Router. Covers server/client components, routing, data fetching, caching, streaming, metadata, and middleware. Use for full-stack React apps, SSR, ISR, and edge deployments.
 ---
 
-# Next.js App Router Patterns
+# Next.js App Router
 
-## When to Use This Skill
+Modern Next.js development with the App Router paradigm for production applications.
 
-Activate this skill when working on:
+## Core Concepts
 
-- Creating new pages, routes, or layouts
-- Implementing server or client components
-- Building server actions for data mutations
-- Setting up route handlers (API endpoints)
-- Configuring metadata and SEO
-- Implementing dynamic routes
-- Organizing app directory structure
-- Data fetching and caching strategies
-
-## Core Patterns
-
-### Server vs Client Components Decision Tree
-
-**Use Server Components (default) when:**
-
-- Fetching data from databases or APIs
-- Accessing backend resources directly
-- Keeping sensitive information secure (API keys, tokens)
-- Reducing client-side JavaScript bundle
-- No interactivity required
-
-**Use Client Components (`'use client'`) when:**
-
-- Using React hooks (`useState`, `useEffect`, `useContext`)
-- Handling browser events (onClick, onChange)
-- Using browser-only APIs (localStorage, window)
-- Using third-party libraries that depend on React hooks
-- Implementing real-time features with Ably
-
-**Example:**
+### Server vs Client Components
 
 ```tsx
-// app/board/[id]/page.tsx - Server Component (default)
-import { getBoard } from "@/lib/actions/board/getBoard";
+// app/components/ServerComponent.tsx
+// Server Components are the default - no "use client" directive
+async function ServerComponent() {
+  // Can directly access databases, file system, secrets
+  const data = await db.query('SELECT * FROM users');
 
-export default async function BoardPage({
-  params,
-}: {
-  params: Promise<{ id: string }>;
-}) {
-  const { id } = await params;
-  const board = await getBoard(id);
-
-  return <BoardView board={board} />;
-}
-```
-
-```tsx
-// components/board/BoardView.tsx - Client Component
-"use client";
-
-import { useState } from "react";
-import { PostProvider } from "@/components/board/PostProvider";
-
-export function BoardView({ board }) {
-  const [filter, setFilter] = useState("all");
-
-  return <PostProvider boardId={board.id}>{/* Interactive UI */}</PostProvider>;
-}
-```
-
-### Server Actions with Authentication
-
-**CRITICAL:** All server actions MUST use `actionWithAuth` or `rbacWithAuth` wrappers (see [rbac-security](../rbac-security/SKILL.md) skill).
-
-**Pattern:**
-
-```tsx
-// lib/actions/post/createPost.ts
-"use server";
-
-import { rbacWithAuth } from "@/lib/actions/actionWithAuth";
-import { db } from "@/db";
-import { postTable } from "@/db/schema";
-
-export const createPost = async (
-  boardId: string,
-  content: string,
-  type: PostType
-) =>
-  rbacWithAuth(boardId, async (userId) => {
-    const post = await db
-      .insert(postTable)
-      .values({
-        id: nanoid(),
-        boardId,
-        userId,
-        content,
-        type,
-        createdAt: new Date(),
-      })
-      .returning();
-
-    return post[0];
-  });
-```
-
-**Usage in Client Components:**
-
-```tsx
-"use client";
-
-import { createPost } from "@/lib/actions/post/createPost";
-import { useTransition } from "react";
-
-export function CreatePostForm({ boardId }) {
-  const [isPending, startTransition] = useTransition();
-
-  const handleSubmit = async (formData: FormData) => {
-    startTransition(async () => {
-      await createPost(boardId, formData.get("content") as string, "went_well");
-    });
-  };
-
-  return <form action={handleSubmit}>...</form>;
-}
-```
-
-### File-Based Routing Conventions
-
-**Special Files:**
-
-- `page.tsx` - Unique UI for a route
-- `layout.tsx` - Shared UI for segments and children
-- `loading.tsx` - Loading UI (Suspense boundary)
-- `error.tsx` - Error UI (Error boundary)
-- `not-found.tsx` - Not found UI
-- `route.ts` - API endpoint (Route Handler)
-
-**Route Organization:**
-
-```text
-app/
-├── layout.tsx                    # Root layout
-├── page.tsx                      # Home page
-├── board/
-│   ├── layout.tsx               # Board layout
-│   ├── page.tsx                 # Board list
-│   └── [id]/
-│       ├── page.tsx             # Board detail (dynamic route)
-│       ├── loading.tsx          # Loading state
-│       └── error.tsx            # Error handling
-└── api/
-    └── webhooks/
-        └── route.ts             # API route handler
-```
-
-### Metadata API for SEO
-
-**Static Metadata:**
-
-```tsx
-// app/board/[id]/page.tsx
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Board Details",
-  description: "View and manage your retrospective board",
-};
-```
-
-**Dynamic Metadata:**
-
-```tsx
-// app/board/[id]/page.tsx
-import { getBoard } from "@/lib/actions/board/getBoard";
-
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ id: string }>;
-}): Promise<Metadata> {
-  const { id } = await params;
-  const board = await getBoard(id);
-
-  return {
-    title: `${board.name} - Ree Board`,
-    description: board.description,
-    openGraph: {
-      title: board.name,
-      description: board.description,
-    },
-  };
-}
-```
-
-### Dynamic Imports for Code Splitting
-
-**Lazy Load Heavy Components:**
-
-```tsx
-import dynamic from "next/dynamic";
-
-// Drag-and-drop is lazy loaded in the project
-const PostDragDrop = dynamic(() => import("@/components/board/PostDragDrop"), {
-  ssr: false,
-  loading: () => <LoadingSkeleton />,
-});
-```
-
-## Anti-Patterns
-
-### ❌ Using 'use client' at the Top Level Unnecessarily
-
-**Bad:**
-
-```tsx
-"use client"; // ❌ Unnecessary - no hooks or interactivity
-
-export default function Page() {
-  return <div>Static content</div>;
-}
-```
-
-**Good:**
-
-```tsx
-// ✅ Server component by default
-export default function Page() {
-  return <div>Static content</div>;
-}
-```
-
-### ❌ Fetching Data in Client Components
-
-**Bad:**
-
-```tsx
-"use client";
-
-export default function Page() {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    fetch("/api/data")
-      .then((r) => r.json())
-      .then(setData); // ❌
-  }, []);
-}
-```
-
-**Good:**
-
-```tsx
-// ✅ Server component fetches data
-export default async function Page() {
-  const data = await getData();
-  return <ClientView data={data} />;
-}
-```
-
-### ❌ Server Actions Without Authentication
-
-**Bad:**
-
-```tsx
-"use server";
-
-export async function deleteBoard(id: string) {
-  // ❌ No auth check - security vulnerability
-  await db.delete(boardTable).where(eq(boardTable.id, id));
-}
-```
-
-**Good:**
-
-```tsx
-"use server";
-
-export const deleteBoard = async (id: string) =>
-  rbacWithAuth(id, async (userId) => {
-    // ✅ Authentication and RBAC enforced
-    await db.delete(boardTable).where(eq(boardTable.id, id));
-  });
-```
-
-### ❌ Not Using Suspense Boundaries
-
-**Bad:**
-
-```tsx
-export default async function Page() {
-  const data = await slowDataFetch(); // ❌ Blocks entire page
-  return <div>{data}</div>;
-}
-```
-
-**Good:**
-
-```tsx
-import { Suspense } from "react";
-
-export default function Page() {
   return (
-    <Suspense fallback={<Loading />}>
-      <DataComponent />
-    </Suspense>
+    <ul>
+      {data.map(user => (
+        <li key={user.id}>{user.name}</li>
+      ))}
+    </ul>
   );
 }
 
-async function DataComponent() {
-  const data = await slowDataFetch();
-  return <div>{data}</div>;
+// app/components/ClientComponent.tsx
+'use client';
+
+import { useState } from 'react';
+
+export function ClientComponent() {
+  // Client components for interactivity
+  const [count, setCount] = useState(0);
+
+  return (
+    <button onClick={() => setCount(c => c + 1)}>
+      Count: {count}
+    </button>
+  );
 }
 ```
 
-## Integration with Other Skills
+### Component Composition Pattern
 
-- **[rbac-security](../rbac-security/SKILL.md):** Server actions require authentication wrappers
-- **[drizzle-patterns](../drizzle-patterns/SKILL.md):** Data fetching in server components
-- **[signal-state-management](../signal-state-management/SKILL.md):** Client-side state in 'use client' components
-- **[ably-realtime](../ably-realtime/SKILL.md):** Real-time features require client components
-- **[testing-patterns](../testing-patterns/SKILL.md):** Test both server and client components
+```tsx
+// app/dashboard/page.tsx
+import { Suspense } from 'react';
+import { ServerData } from './ServerData';
+import { ClientInteraction } from './ClientInteraction';
+import { Loading } from '@/components/Loading';
 
-## Project-Specific Context
+export default function DashboardPage() {
+  return (
+    <div className="dashboard">
+      {/* Server component with streaming */}
+      <Suspense fallback={<Loading />}>
+        <ServerData />
+      </Suspense>
 
-### Key Files
+      {/* Client component for interaction */}
+      <ClientInteraction />
+    </div>
+  );
+}
+```
 
-- `app/` - Next.js App Router directory
-- `app/layout.tsx` - Root layout with providers
-- `app/board/[id]/page.tsx` - Dynamic board page
-- `lib/actions/` - Server actions by domain
-- `proxy.ts` - Supabase authentication proxy (Next.js 16)
-- `next.config.js` - Next.js configuration
+## File-Based Routing
 
-### Project Conventions
+### Route Structure
 
-1. Server actions live in `lib/actions/[entity]/`
-2. All server actions use `actionWithAuth` or `rbacWithAuth`
-3. Client components prefixed with 'use client'
-4. Heavy components lazy-loaded (drag-and-drop)
-5. Metadata configured for all public pages
+```
+app/
+├── layout.tsx          # Root layout (required)
+├── page.tsx            # Home page (/)
+├── loading.tsx         # Loading UI
+├── error.tsx           # Error boundary
+├── not-found.tsx       # 404 page
+├── dashboard/
+│   ├── layout.tsx      # Nested layout
+│   ├── page.tsx        # /dashboard
+│   ├── loading.tsx     # Dashboard loading
+│   └── [id]/
+│       └── page.tsx    # /dashboard/[id]
+├── api/
+│   └── users/
+│       └── route.ts    # API route handler
+└── (marketing)/        # Route group (no URL segment)
+    ├── about/
+    │   └── page.tsx    # /about
+    └── contact/
+        └── page.tsx    # /contact
+```
 
-### Environment-Specific Behavior
+### Dynamic Routes
 
-- Development: Local Turso database
-- Production: Turso Cloud with auth tokens
-- Both: Supabase authentication required
+```tsx
+// app/blog/[slug]/page.tsx
+interface PageProps {
+  params: { slug: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+}
 
----
+export default async function BlogPost({ params, searchParams }: PageProps) {
+  const post = await getPost(params.slug);
 
-**Last Updated:** 2026-01-10
+  return (
+    <article>
+      <h1>{post.title}</h1>
+      <div dangerouslySetInnerHTML={{ __html: post.content }} />
+    </article>
+  );
+}
+
+// Generate static params for SSG
+export async function generateStaticParams() {
+  const posts = await getAllPosts();
+
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
+}
+```
+
+### Catch-All Routes
+
+```tsx
+// app/docs/[...slug]/page.tsx
+interface DocsPageProps {
+  params: { slug: string[] };
+}
+
+export default function DocsPage({ params }: DocsPageProps) {
+  // /docs/a/b/c -> params.slug = ['a', 'b', 'c']
+  const path = params.slug.join('/');
+
+  return <DocViewer path={path} />;
+}
+```
+
+## Layouts
+
+### Root Layout
+
+```tsx
+// app/layout.tsx
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+
+const inter = Inter({ subsets: ['latin'] });
+
+export const metadata: Metadata = {
+  title: {
+    template: '%s | My App',
+    default: 'My App',
+  },
+  description: 'Application description',
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body className={inter.className}>
+        <header>
+          <nav>{/* Navigation */}</nav>
+        </header>
+        <main>{children}</main>
+        <footer>{/* Footer */}</footer>
+      </body>
+    </html>
+  );
+}
+```
+
+### Nested Layouts
+
+```tsx
+// app/dashboard/layout.tsx
+import { Sidebar } from '@/components/Sidebar';
+
+export default function DashboardLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="flex">
+      <Sidebar />
+      <div className="flex-1 p-6">{children}</div>
+    </div>
+  );
+}
+```
+
+## Data Fetching
+
+### Server Component Data Fetching
+
+```tsx
+// app/users/page.tsx
+async function getUsers() {
+  const res = await fetch('https://api.example.com/users', {
+    // Cache options
+    cache: 'force-cache',     // Default - cache indefinitely
+    // cache: 'no-store',     // No caching
+    next: {
+      revalidate: 3600,       // Revalidate every hour
+      tags: ['users'],        // Tag for on-demand revalidation
+    },
+  });
+
+  if (!res.ok) throw new Error('Failed to fetch');
+  return res.json();
+}
+
+export default async function UsersPage() {
+  const users = await getUsers();
+
+  return (
+    <ul>
+      {users.map(user => (
+        <li key={user.id}>{user.name}</li>
+      ))}
+    </ul>
+  );
+}
+```
+
+### Parallel Data Fetching
+
+```tsx
+// app/dashboard/page.tsx
+async function DashboardPage() {
+  // Fetch in parallel - don't await each one sequentially
+  const [users, posts, stats] = await Promise.all([
+    getUsers(),
+    getPosts(),
+    getStats(),
+  ]);
+
+  return (
+    <div>
+      <UserList users={users} />
+      <PostList posts={posts} />
+      <StatsPanel stats={stats} />
+    </div>
+  );
+}
+```
+
+### Streaming with Suspense
+
+```tsx
+// app/dashboard/page.tsx
+import { Suspense } from 'react';
+
+export default function Dashboard() {
+  return (
+    <div className="grid grid-cols-2 gap-4">
+      {/* Each suspense boundary streams independently */}
+      <Suspense fallback={<CardSkeleton />}>
+        <RevenueCard />
+      </Suspense>
+
+      <Suspense fallback={<CardSkeleton />}>
+        <UsersCard />
+      </Suspense>
+
+      <Suspense fallback={<TableSkeleton />}>
+        <RecentOrders />
+      </Suspense>
+    </div>
+  );
+}
+```
+
+## Server Actions
+
+### Form Actions
+
+```tsx
+// app/actions.ts
+'use server';
+
+import { revalidatePath, revalidateTag } from 'next/cache';
+import { redirect } from 'next/navigation';
+
+export async function createUser(formData: FormData) {
+  const name = formData.get('name') as string;
+  const email = formData.get('email') as string;
+
+  // Validate
+  if (!name || !email) {
+    return { error: 'Name and email required' };
+  }
+
+  // Create in database
+  const user = await db.user.create({
+    data: { name, email },
+  });
+
+  // Revalidate cache
+  revalidatePath('/users');
+  revalidateTag('users');
+
+  // Redirect
+  redirect(`/users/${user.id}`);
+}
+
+// app/users/new/page.tsx
+import { createUser } from '@/app/actions';
+
+export default function NewUserPage() {
+  return (
+    <form action={createUser}>
+      <input name="name" placeholder="Name" required />
+      <input name="email" type="email" placeholder="Email" required />
+      <button type="submit">Create User</button>
+    </form>
+  );
+}
+```
+
+### Progressive Enhancement
+
+```tsx
+'use client';
+
+import { useFormStatus, useFormState } from 'react-dom';
+import { createUser } from '@/app/actions';
+
+function SubmitButton() {
+  const { pending } = useFormStatus();
+
+  return (
+    <button type="submit" disabled={pending}>
+      {pending ? 'Creating...' : 'Create User'}
+    </button>
+  );
+}
+
+export function CreateUserForm() {
+  const [state, formAction] = useFormState(createUser, null);
+
+  return (
+    <form action={formAction}>
+      <input name="name" placeholder="Name" required />
+      <input name="email" type="email" placeholder="Email" required />
+      {state?.error && (
+        <p className="text-red-500">{state.error}</p>
+      )}
+      <SubmitButton />
+    </form>
+  );
+}
+```
+
+## API Routes
+
+### Route Handlers
+
+```tsx
+// app/api/users/route.ts
+import { NextRequest, NextResponse } from 'next/server';
+
+export async function GET(request: NextRequest) {
+  const searchParams = request.nextUrl.searchParams;
+  const limit = searchParams.get('limit') || '10';
+
+  const users = await db.user.findMany({
+    take: parseInt(limit),
+  });
+
+  return NextResponse.json(users);
+}
+
+export async function POST(request: NextRequest) {
+  const body = await request.json();
+
+  const user = await db.user.create({
+    data: body,
+  });
+
+  return NextResponse.json(user, { status: 201 });
+}
+```
+
+### Dynamic API Routes
+
+```tsx
+// app/api/users/[id]/route.ts
+import { NextRequest, NextResponse } from 'next/server';
+
+interface RouteParams {
+  params: { id: string };
+}
+
+export async function GET(request: NextRequest, { params }: RouteParams) {
+  const user = await db.user.findUnique({
+    where: { id: params.id },
+  });
+
+  if (!user) {
+    return NextResponse.json(
+      { error: 'User not found' },
+      { status: 404 }
+    );
+  }
+
+  return NextResponse.json(user);
+}
+
+export async function DELETE(request: NextRequest, { params }: RouteParams) {
+  await db.user.delete({
+    where: { id: params.id },
+  });
+
+  return new NextResponse(null, { status: 204 });
+}
+```
+
+## Middleware
+
+```tsx
+// middleware.ts
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
+
+export function middleware(request: NextRequest) {
+  // Check authentication
+  const token = request.cookies.get('token')?.value;
+
+  if (!token && request.nextUrl.pathname.startsWith('/dashboard')) {
+    return NextResponse.redirect(new URL('/login', request.url));
+  }
+
+  // Add custom headers
+  const response = NextResponse.next();
+  response.headers.set('x-custom-header', 'value');
+
+  return response;
+}
+
+export const config = {
+  matcher: [
+    // Match all paths except static files
+    '/((?!_next/static|_next/image|favicon.ico).*)',
+  ],
+};
+```
+
+## Metadata & SEO
+
+### Static Metadata
+
+```tsx
+// app/about/page.tsx
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About Us',
+  description: 'Learn about our company',
+  openGraph: {
+    title: 'About Us',
+    description: 'Learn about our company',
+    images: ['/og-about.png'],
+  },
+};
+
+export default function AboutPage() {
+  return <div>About content</div>;
+}
+```
+
+### Dynamic Metadata
+
+```tsx
+// app/blog/[slug]/page.tsx
+import type { Metadata } from 'next';
+
+interface Props {
+  params: { slug: string };
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const post = await getPost(params.slug);
+
+  return {
+    title: post.title,
+    description: post.excerpt,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      images: [post.image],
+      type: 'article',
+      publishedTime: post.publishedAt,
+    },
+  };
+}
+
+export default async function BlogPost({ params }: Props) {
+  const post = await getPost(params.slug);
+  return <article>{/* Post content */}</article>;
+}
+```
+
+## Error Handling
+
+### Error Boundaries
+
+```tsx
+// app/dashboard/error.tsx
+'use client';
+
+import { useEffect } from 'react';
+
+interface ErrorProps {
+  error: Error & { digest?: string };
+  reset: () => void;
+}
+
+export default function Error({ error, reset }: ErrorProps) {
+  useEffect(() => {
+    // Log error to monitoring service
+    console.error(error);
+  }, [error]);
+
+  return (
+    <div className="flex flex-col items-center justify-center p-8">
+      <h2 className="text-xl font-bold">Something went wrong!</h2>
+      <p className="text-gray-600 mt-2">{error.message}</p>
+      <button
+        onClick={reset}
+        className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
+      >
+        Try again
+      </button>
+    </div>
+  );
+}
+```
+
+### Not Found
+
+```tsx
+// app/blog/[slug]/page.tsx
+import { notFound } from 'next/navigation';
+
+export default async function BlogPost({ params }: Props) {
+  const post = await getPost(params.slug);
+
+  if (!post) {
+    notFound();
+  }
+
+  return <article>{/* Post content */}</article>;
+}
+
+// app/blog/not-found.tsx
+export default function NotFound() {
+  return (
+    <div className="text-center py-20">
+      <h2 className="text-2xl font-bold">Post Not Found</h2>
+      <p>Could not find the requested blog post.</p>
+    </div>
+  );
+}
+```
+
+## Performance Optimization
+
+### Image Optimization
+
+```tsx
+import Image from 'next/image';
+
+function ProductImage({ src, alt }: { src: string; alt: string }) {
+  return (
+    <Image
+      src={src}
+      alt={alt}
+      width={800}
+      height={600}
+      placeholder="blur"
+      blurDataURL="data:image/jpeg;base64,..."
+      priority={false}       // Set true for LCP images
+      loading="lazy"
+      sizes="(max-width: 768px) 100vw, 50vw"
+    />
+  );
+}
+```
+
+### Font Optimization
+
+```tsx
+// app/layout.tsx
+import { Inter, Roboto_Mono } from 'next/font/google';
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+});
+
+const robotoMono = Roboto_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-roboto-mono',
+});
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en" className={`${inter.variable} ${robotoMono.variable}`}>
+      <body>{children}</body>
+    </html>
+  );
+}
+```
+
+### Route Segment Config
+
+```tsx
+// app/blog/page.tsx
+
+// Force static generation
+export const dynamic = 'force-static';
+
+// Or force dynamic rendering
+// export const dynamic = 'force-dynamic';
+
+// Revalidation period
+export const revalidate = 3600; // 1 hour
+
+// Runtime
+export const runtime = 'edge'; // or 'nodejs'
+```
+
+## Best Practices
+
+1. **Default to Server Components** - Only use 'use client' when needed
+2. **Colocate Data Fetching** - Fetch data where it's used
+3. **Use Streaming** - Wrap slow components in Suspense
+4. **Parallel Fetching** - Use Promise.all for independent data
+5. **Revalidate Strategically** - Use tags and paths for cache invalidation
+6. **Handle Errors Gracefully** - Use error.tsx boundaries
+7. **Optimize Images** - Always use next/image
+8. **Type Everything** - Use TypeScript throughout
+
+## When to Use
+
+- Full-stack React applications
+- SEO-critical websites
+- E-commerce platforms
+- Marketing sites with CMS
+- Dashboards needing SSR
+- Applications requiring edge deployment

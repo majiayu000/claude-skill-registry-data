@@ -1,203 +1,55 @@
----
-name: nextjs-best-practices
-description: Next.js App Router principles. Server Components, data fetching, routing patterns.
-allowed-tools: Read, Write, Edit, Glob, Grep
----
+---name: nextjs-best-practices
+description: Guidelines for building scalable, SEO-friendly applications with Next.js (App Router).
+license: MIT
+metadata:
+  author: AI Group
+  version: "1.0.0"
+  category: Software_Engineering
+compatibility:
+  - system: Next.js 14+
+  - system: React 18+
+allowed-tools:
+  - read_file
+  - replace
+  - write_file
+
+keywords:
+  - nextjs-best-practices
+  - automation
+  - biomedical
+measurable_outcome: execute task with >95% success rate.
+---"
 
 # Next.js Best Practices
 
-> Principles for Next.js App Router development.
+This skill outlines the standards for developing modern web applications using the Next.js App Router. It covers server components, data fetching, caching strategies, and route handling.
 
----
+## When to Use This Skill
 
-## 1. Server vs Client Components
+*   **Project Setup**: Initializing a new Next.js project.
+*   **Architecture Design**: Deciding between Server vs. Client Components.
+*   **Optimization**: Improving Core Web Vitals, LCP, and CLS.
+*   **SEO Strategy**: Implementing Metadata API and sitemaps.
 
-### Decision Tree
+## Core Capabilities
 
-```
-Does it need...?
-│
-├── useState, useEffect, event handlers
-│   └── Client Component ('use client')
-│
-├── Direct data fetching, no interactivity
-│   └── Server Component (default)
-│
-└── Both? 
-    └── Split: Server parent + Client child
-```
+1.  **App Router Architecture**: structuring `app/`, `layout.tsx`, `page.tsx`, and `loading.tsx`.
+2.  **Server Actions**: Handling form submissions and mutations without API routes.
+3.  **Data Fetching**: Implementing `fetch` with caching tags and revalidation strategies.
+4.  **Middleware**: Authentication and request processing at the edge.
 
-### By Default
+## Workflow
 
-| Type | Use |
-|------|-----|
-| **Server** | Data fetching, layout, static content |
-| **Client** | Forms, buttons, interactive UI |
+1.  **Determine Component Type**: Default to Server Components. "Use Client" only for interactivity (hooks, event listeners).
+2.  **Plan Data Access**: Fetch data directly in Server Components where possible.
+3.  **Implement Metadata**: specific exportable `metadata` objects for SEO.
+4.  **Handle Errors**: Use `error.tsx` and `global-error.tsx` for graceful degradation.
 
----
+## Example Usage
 
-## 2. Data Fetching Patterns
+**User**: "Create a blog post page that fetches data from a CMS."
 
-### Fetch Strategy
-
-| Pattern | Use |
-|---------|-----|
-| **Default** | Static (cached at build) |
-| **Revalidate** | ISR (time-based refresh) |
-| **No-store** | Dynamic (every request) |
-
-### Data Flow
-
-| Source | Pattern |
-|--------|---------|
-| Database | Server Component fetch |
-| API | fetch with caching |
-| User input | Client state + server action |
-
----
-
-## 3. Routing Principles
-
-### File Conventions
-
-| File | Purpose |
-|------|---------|
-| `page.tsx` | Route UI |
-| `layout.tsx` | Shared layout |
-| `loading.tsx` | Loading state |
-| `error.tsx` | Error boundary |
-| `not-found.tsx` | 404 page |
-
-### Route Organization
-
-| Pattern | Use |
-|---------|-----|
-| Route groups `(name)` | Organize without URL |
-| Parallel routes `@slot` | Multiple same-level pages |
-| Intercepting `(.)` | Modal overlays |
-
----
-
-## 4. API Routes
-
-### Route Handlers
-
-| Method | Use |
-|--------|-----|
-| GET | Read data |
-| POST | Create data |
-| PUT/PATCH | Update data |
-| DELETE | Remove data |
-
-### Best Practices
-
-- Validate input with Zod
-- Return proper status codes
-- Handle errors gracefully
-- Use Edge runtime when possible
-
----
-
-## 5. Performance Principles
-
-### Image Optimization
-
-- Use next/image component
-- Set priority for above-fold
-- Provide blur placeholder
-- Use responsive sizes
-
-### Bundle Optimization
-
-- Dynamic imports for heavy components
-- Route-based code splitting (automatic)
-- Analyze with bundle analyzer
-
----
-
-## 6. Metadata
-
-### Static vs Dynamic
-
-| Type | Use |
-|------|-----|
-| Static export | Fixed metadata |
-| generateMetadata | Dynamic per-route |
-
-### Essential Tags
-
-- title (50-60 chars)
-- description (150-160 chars)
-- Open Graph images
-- Canonical URL
-
----
-
-## 7. Caching Strategy
-
-### Cache Layers
-
-| Layer | Control |
-|-------|---------|
-| Request | fetch options |
-| Data | revalidate/tags |
-| Full route | route config |
-
-### Revalidation
-
-| Method | Use |
-|--------|-----|
-| Time-based | `revalidate: 60` |
-| On-demand | `revalidatePath/Tag` |
-| No cache | `no-store` |
-
----
-
-## 8. Server Actions
-
-### Use Cases
-
-- Form submissions
-- Data mutations
-- Revalidation triggers
-
-### Best Practices
-
-- Mark with 'use server'
-- Validate all inputs
-- Return typed responses
-- Handle errors
-
----
-
-## 9. Anti-Patterns
-
-| ❌ Don't | ✅ Do |
-|----------|-------|
-| 'use client' everywhere | Server by default |
-| Fetch in client components | Fetch in server |
-| Skip loading states | Use loading.tsx |
-| Ignore error boundaries | Use error.tsx |
-| Large client bundles | Dynamic imports |
-
----
-
-## 10. Project Structure
-
-```
-app/
-├── (marketing)/     # Route group
-│   └── page.tsx
-├── (dashboard)/
-│   ├── layout.tsx   # Dashboard layout
-│   └── page.tsx
-├── api/
-│   └── [resource]/
-│       └── route.ts
-└── components/
-    └── ui/
-```
-
----
-
-> **Remember:** Server Components are the default for a reason. Start there, add client only when needed.
+**Agent Action**:
+1.  Reads `references/rules.md`.
+2.  Generates `app/blog/[slug]/page.tsx` as an async Server Component.
+3.  Uses `generateStaticParams` for SSG.

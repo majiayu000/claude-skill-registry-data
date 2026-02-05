@@ -1,354 +1,389 @@
 ---
-name: github-issues
-description: Query and search GitHub issues using gh CLI with web fallback. Supports filtering by labels, state, assignees, and full-text search. Use when troubleshooting errors, checking if an issue is already reported, or finding workarounds.
-allowed-tools: Bash, Read, Glob, Grep, WebFetch, WebSearch
+name: agent-github-issues
+description: GitHub Issues expert for gh issue create, gh issue list, labels, milestones, epics, features, tasks, bugs, priorities, mvp-blocker, critical, high-priority, issue tracking, project management, issue queries, workflows, acceptance criteria, task breakdown
+allowed-tools: Read, Bash
 ---
 
-# GitHub Issues Lookup
+# GitHub Issues Management Skill
 
-Query and search GitHub issues for troubleshooting, bug tracking, and finding workarounds. Supports `gh` CLI with automatic web fallback.
-
-## Overview
-
-This skill provides comprehensive guidance for querying GitHub issues from any repository. It prioritizes the GitHub CLI (`gh`) for fast, reliable access with automatic fallback to web-based methods when gh is unavailable.
-
-**Core value:** Quickly find relevant issues when troubleshooting errors, checking if bugs are already reported, or discovering workarounds for known problems.
+Expert in GitHub Issues organization and workflow management.
 
 ## When to Use This Skill
 
-This skill should be used when:
+Use this skill when:
 
-- **Troubleshooting errors** - Search for issues matching error messages or symptoms
-- **Checking if issue exists** - Before reporting a bug, search for duplicates
-- **Finding workarounds** - Discover solutions from issue discussions
-- **Tracking features** - Search for feature requests and their status
-- **Understanding history** - Find closed issues explaining past decisions
+- Creating new issues (bugs, features, tasks)
+- Organizing issues with labels and milestones
+- Querying and filtering work items
+- Tracking project progress
+- Managing issue lifecycle
 
-**Trigger keywords:** github issues, search issues, find issue, bug report, issue lookup, gh issue, troubleshoot, workaround, known issue
+## Issue Creation Workflow
 
-## Prerequisites
+### 1. Determine Issue Type
 
-**Recommended (not required):**
+**Epic** - Large initiative spanning multiple features (weeks/months)
 
-- **GitHub CLI (gh)** - Install from <https://cli.github.com/>
-- **Authentication** - Run `gh auth login` for private repos
+- Label: `epic`
+- Create milestone for tracking
+- Examples: "User Management System", "Analytics Dashboard"
 
-The skill works without `gh` by falling back to web-based methods.
+**Feature** - User-facing functionality (days to 2 weeks)
 
-## Quick Start
+- Label: `feature`
+- Link to epic milestone
+- Examples: "Password Reset Flow", "Export Reports"
 
-### Search Issues (gh CLI)
+**Task** - Technical implementation work (hours to 3 days)
 
-```bash
-# Check if gh is available
-gh --version
+- Label: `task`
+- Add area labels: `frontend`, `backend`, `database`
+- Reference parent feature: "Part of #XXX"
+- Examples: "Create users table", "Build login form"
 
-# Search for issues by keyword
-gh issue list --repo owner/repo --search "keyword" --state all
+**Bug** - Defect or broken functionality
 
-# Filter by label
-gh issue list --repo owner/repo --label "bug" --state open
+- Label: `bug`
+- Add priority: `critical`, `high-priority`, `mvp-blocker`
+- Include reproduction steps
 
-# View specific issue
-gh issue view 11984 --repo owner/repo
-
-# Search with multiple terms
-gh issue list --repo owner/repo --search "error message here" --limit 20
-```
-
-### Search Issues (Web Fallback)
-
-When gh is unavailable, use WebSearch or WebFetch:
-
-```text
-# Search via web (using WebSearch tool)
-Search: "site:github.com/owner/repo/issues keyword"
-
-# Direct URL pattern
-https://github.com/owner/repo/issues?q=keyword
-```
-
-## Core Capabilities
-
-### 1. Basic Issue Search
-
-Search issues by keywords, matching title and body text.
-
-**gh CLI:**
+### 2. Create Issue with Proper Structure
 
 ```bash
-# Basic keyword search (all states)
-gh issue list --repo anthropics/claude-code --search "path doubling" --state all
+# Create feature
+gh issue create \
+  --title "Feature: User Profile Management" \
+  --body "## Description
+Allow users to view and edit their profile information.
 
-# Open issues only
-gh issue list --repo anthropics/claude-code --search "path doubling" --state open
+## Requirements
+- View profile page with user details
+- Edit form for updating information
+- Email verification for email changes
+- Avatar upload functionality
 
-# Closed issues only
-gh issue list --repo anthropics/claude-code --search "path doubling" --state closed
+## Acceptance Criteria
+- [ ] Users can view their profile
+- [ ] Users can edit first/last name
+- [ ] Email changes require verification
+- [ ] Avatar uploads work with image validation
+- [ ] All changes persist correctly
+
+## Tasks
+Will be broken down into implementation tasks." \
+  --label "feature" \
+  --milestone "MVP Launch"
 ```
-
-**For detailed query syntax:** See [references/query-patterns.md](references/query-patterns.md)
-
----
-
-### 2. Filter by Labels
-
-Narrow results using repository labels.
 
 ```bash
-# Single label
-gh issue list --repo owner/repo --label "bug"
+# Create task
+gh issue create \
+  --title "Task: Create user profiles database table" \
+  --body "## Description
+Create database migration for user profiles table.
 
-# Multiple labels (AND)
-gh issue list --repo owner/repo --label "bug" --label "high-priority"
+Part of #105 (User Profile Management)
 
-# Common label patterns
-gh issue list --repo owner/repo --label "enhancement" --state open
-gh issue list --repo owner/repo --label "documentation"
+## Requirements
+- Add firstName, lastName, avatarUrl columns to users table
+- Create migration file with idempotency
+- Update init.sql
+
+## Acceptance Criteria
+- [ ] Migration file created
+- [ ] camelCase column names
+- [ ] Idempotency tested
+- [ ] init.sql updated" \
+  --label "task,database" \
+  --milestone "MVP Launch"
 ```
-
----
-
-### 3. Filter by Assignee/Author
-
-Find issues by who created or is assigned to them.
 
 ```bash
-# By assignee
-gh issue list --repo owner/repo --assignee username
+# Create bug
+gh issue create \
+  --title "Bug: Login button not working on mobile" \
+  --body "## Description
+Login button does not respond to taps on mobile devices.
 
-# By author
-gh issue list --repo owner/repo --author username
+## Reproduction Steps
+1. Open app on mobile device
+2. Navigate to login page
+3. Tap login button
+4. Nothing happens
 
-# Combined filters
-gh issue list --repo owner/repo --author username --state closed
+## Expected Behavior
+Login button should submit form and navigate to dashboard.
+
+## Actual Behavior
+Button does not respond to touch events.
+
+## Environment
+- Device: iPhone 12
+- OS: iOS 16
+- Browser: Safari" \
+  --label "bug,frontend,mvp-blocker"
 ```
 
----
+### 3. Organize with Labels
 
-### 4. View Issue Details
+**Issue Types:**
 
-Get full issue content including description and comments.
+- `epic` - Large initiatives
+- `feature` - User-facing features
+- `task` - Implementation work
+- `bug` - Defects
+
+**Areas:**
+
+- `frontend` - Angular UI work
+- `backend` - Fastify API work
+- `database` - Schema/migration work
+
+**Priority:**
+
+- `mvp-blocker` - Must fix before launch
+- `critical` - Blocks core functionality
+- `high-priority` - Important for current milestone
+- `medium-priority`, `low-priority`
+
+**Workflow:**
+
+- `in-progress` - Currently being worked on
+- `blocked` - Waiting on dependency
+
+## Querying and Filtering
+
+### Find Next Priority Work
 
 ```bash
-# View issue (opens in terminal)
-gh issue view 11984 --repo anthropics/claude-code
+# Find MVP blockers
+gh issue list --label "mvp-blocker" --state open
 
-# View with comments
-gh issue view 11984 --repo anthropics/claude-code --comments
+# Find critical bugs
+gh issue list --label "bug,critical" --state open
 
-# JSON output for parsing
-gh issue view 11984 --repo anthropics/claude-code --json title,body,comments
+# Find high-priority features
+gh issue list --label "feature,high-priority" --state open
 ```
 
----
-
-### 5. Web Fallback Strategy
-
-When gh CLI is unavailable, fall back to web-based methods.
-
-**Detection:**
+### Check Milestone Progress
 
 ```bash
-# Check if gh is available
-if command -v gh &> /dev/null; then
-    echo "gh available"
-else
-    echo "falling back to web"
-fi
+# List all milestones
+gh milestone list
+
+# View issues in milestone
+gh issue list --milestone "MVP Launch" --state open
+
+# See completed work
+gh issue list --milestone "MVP Launch" --state closed
 ```
 
-**Web methods (in order of preference):**
-
-1. **WebSearch tool**: `site:github.com/owner/repo/issues keyword`
-2. **firecrawl MCP**: Scrape GitHub search results
-3. **Direct URL**: `https://github.com/owner/repo/issues?q=keyword`
-
-**For detailed fallback guidance:** See [references/web-fallback.md](references/web-fallback.md)
-
----
-
-## Output Formats
-
-The skill supports three output formats:
-
-### Compact (default)
-
-One line per issue, good for scanning:
-
-```text
-#11984 [open] Path doubling in PowerShell hooks (bug, hooks)
-#11523 [closed] Fix memory leak in long sessions (bug, fixed)
-#10892 [open] Add custom status line support (enhancement)
-```
-
-### Table
-
-Markdown table format for structured display:
-
-```markdown
-| # | State | Title | Labels |
-| --- | --- | --- | --- |
-| 11984 | open | Path doubling in PowerShell hooks | bug, hooks |
-| 11523 | closed | Fix memory leak in long sessions | bug, fixed |
-```
-
-### Detailed
-
-Full information for deep investigation:
-
-```markdown
-### #11984 - Path doubling in PowerShell hooks
-**State:** open | **Labels:** bug, hooks | **Created:** 2024-12-01
-**URL:** https://github.com/anthropics/claude-code/issues/11984
-
-When using cd && in PowerShell, paths get doubled...
-```
-
----
-
-## Common Workflows
-
-### Troubleshooting an Error
-
-1. Extract key terms from error message
-2. Search issues with those terms
-3. Check both open and closed issues
-4. Look for workarounds in comments
+### Filter by Area
 
 ```bash
-# Example: Troubleshoot a specific error
-gh issue list --repo anthropics/claude-code --search "ENOENT" --state all --limit 10
+# Frontend tasks
+gh issue list --label "frontend,task" --state open
+
+# Backend work
+gh issue list --label "backend" --state open
+
+# Database migrations needed
+gh issue list --label "database" --state open
 ```
 
-### Before Reporting a Bug
-
-1. Search for existing issues with similar symptoms
-2. Check closed issues for past fixes
-3. If duplicate exists, add your context as a comment
+### Find Work to Start
 
 ```bash
-# Search before reporting
-gh issue list --repo owner/repo --search "feature not working" --state all
+# Tasks not yet started (no in-progress label)
+gh issue list --label "task" --state open --search "-label:in-progress -label:blocked"
+
+# Features ready for breakdown
+gh issue list --label "feature" --state open --search "NOT linked:issue"
 ```
 
-### Finding Workarounds
+## Issue Lifecycle Management
 
-1. Search closed issues with your problem keywords
-2. Look for issues with "workaround" or "solution" in body
-3. Check issue comments for community solutions
+### Mark as In Progress
 
 ```bash
-# Find workarounds
-gh issue list --repo owner/repo --search "workaround" --state closed --label "bug"
+gh issue edit <NUMBER> --add-label "in-progress"
 ```
 
----
+### Add Progress Updates
 
-## Error Handling
-
-### gh not installed
-
-```text
-Error: gh: command not found
-
-Solution: Install GitHub CLI from https://cli.github.com/
-  - macOS: brew install gh
-  - Windows: winget install --id GitHub.cli
-  - Linux: See https://github.com/cli/cli/blob/trunk/docs/install_linux.md
-
-Alternatively, falling back to web-based search...
+```bash
+gh issue comment <NUMBER> --body "Progress update: Completed database migration, working on API endpoint now."
 ```
 
-### Not authenticated
+### Link Related Issues
 
-```text
-Error: gh requires authentication
-
-Solution: Run `gh auth login` and follow the prompts.
-For public repos, web fallback can be used without authentication.
+```bash
+gh issue comment <NUMBER> --body "Part of #105"
+# Or in issue description:
+# Depends on #102
+# Blocks #110
 ```
 
-### Rate limited
+### Close via PR
 
-```text
-Error: API rate limit exceeded
-
-Solution: Wait 60 seconds before retrying.
-Authenticated requests have higher limits (5000/hour vs 60/hour).
+```bash
+# In PR description, use:
+# "Closes #NUMBER"
+# Issue automatically closes when PR merges
 ```
 
-### No results found
+### Close Manually
 
-```text
-No issues found matching "very specific query"
-
-Suggestions:
-- Try broader search terms
-- Remove filters (state, label)
-- Check spelling
-- Search closed issues too (--state all)
+```bash
+gh issue close <NUMBER> --comment "Completed via PR #123"
 ```
 
----
+## Daily Workflow Checklist
 
-## References
+### Morning: Find Next Work
 
-**Detailed Guides:**
+```bash
+# 1. Check mvp-blockers
+gh issue list --label "mvp-blocker" --state open
 
-- [references/gh-cli-guide.md](references/gh-cli-guide.md) - Installation, authentication, advanced usage
-- [references/query-patterns.md](references/query-patterns.md) - Search syntax and filter examples
-- [references/web-fallback.md](references/web-fallback.md) - Web-based fallback strategies
+# 2. Check current milestone
+gh issue list --milestone "MVP Launch" --state open --label "high-priority"
 
-**Related Agents:**
+# 3. Find unstarted tasks
+gh issue list --label "task" --state open --search "-label:in-progress"
+```
 
-- **history-reviewer** agent - Git history exploration and summarization
+### During Work: Update Status
 
----
+```bash
+# Mark started
+gh issue edit <NUMBER> --add-label "in-progress"
 
-## Test Scenarios
+# Add updates
+gh issue comment <NUMBER> --body "Update: [progress details]"
 
-### Scenario 1: Basic issue search
+# Mark blocked if needed
+gh issue edit <NUMBER> --add-label "blocked"
+gh issue comment <NUMBER> --body "Blocked by: [reason]"
+```
 
-**Query:** "Search for issues about hooks in the Claude Code repo"
+### After Completion: Close and Move On
 
-**Expected Behavior:**
+```bash
+# Create PR with "Closes #NUMBER"
+gh pr create --title "..." --body "Closes #NUMBER\n\n..."
 
-- Skill activates on "issues", "hooks", "Claude Code"
-- Checks if gh CLI is available
-- Runs `gh issue list --repo anthropics/claude-code --search "hooks" --state all`
-- Returns formatted results
+# After merge, issue auto-closes
+# Find next work
+gh issue list --label "mvp-blocker" --state open
+```
 
-### Scenario 2: Troubleshooting error
+## Integration with Orchestrator
 
-**Query:** "I'm getting a path doubling error in PowerShell. Is this a known issue?"
+The orchestrator uses GitHub Issues for work discovery:
 
-**Expected Behavior:**
+1. **Query** for next priority (mvp-blocker > critical > high-priority)
+2. **Read** issue details with `gh issue view <NUMBER>`
+3. **Break down** features into tasks if needed
+4. **Mark** as in-progress when starting
+5. **Update** with progress comments
+6. **Close** via PR with "Closes #XXX"
 
-- Skill activates on "error", "known issue", "PowerShell"
-- Searches for related issues
-- Finds #11984 and similar
-- Provides workaround if available
+## Creating Milestones
 
-### Scenario 3: Fallback to web
+```bash
+# Create milestone
+gh milestone create "MVP Launch" \
+  --description "Core features needed for initial launch" \
+  --due-date "2025-03-01"
 
-**Query:** "Search for issues but gh isn't installed"
+# List milestones
+gh milestone list
 
-**Expected Behavior:**
+# Add issue to milestone
+gh issue edit <NUMBER> --milestone "MVP Launch"
+```
 
-- Detects gh not available
-- Falls back to WebSearch with `site:github.com/owner/repo/issues`
-- Returns results in same format
+## Workflow Patterns
 
-## Version History
+### Epic → Features → Tasks
 
-- **v1.0.0** (2025-12-26): Initial release
+```bash
+# 1. Create epic issue
+gh issue create --title "Epic: User Management" --label "epic"
 
----
+# 2. Create milestone for epic
+gh milestone create "User Management"
 
-## Last Updated
+# 3. Create feature issues in milestone
+gh issue create --title "Feature: Registration" --label "feature" --milestone "User Management"
 
-**Date:** 2025-12-05
-**Model:** claude-opus-4-5-20251101
+# 4. Break down features into tasks
+gh issue create --title "Task: Create users table" --label "task,database" --milestone "User Management"
+# In body: "Part of #[FEATURE_NUMBER]"
+```
 
-**Audit Status:** NEW - Pending initial audit
+## Success Metrics
+
+### Healthy Issue Management
+
+- ✅ All work tracked in GitHub Issues
+- ✅ Issues properly labeled
+- ✅ Clear priority system
+- ✅ In-progress items updated regularly
+- ✅ Issues closed via PRs
+
+### Problem Indicators
+
+- ❌ Work done without issues
+- ❌ Issues missing labels
+- ❌ Unclear priorities
+- ❌ Stale in-progress issues
+- ❌ Issues manually closed without PR
+
+## Reference Files
+
+For detailed patterns:
+
+- `.claude/agents/agent-github-issues.md` - Complete agent specification
+- `.claude/agents/agent-orchestrator.md` - Integration with orchestrator workflow
+
+## Common Commands Quick Reference
+
+```bash
+# Create issue
+gh issue create --title "..." --body "..." --label "..." --milestone "..."
+
+# List issues
+gh issue list --label "..." --state open
+
+# View issue
+gh issue view <NUMBER>
+
+# Edit issue
+gh issue edit <NUMBER> --add-label "..." --milestone "..."
+
+# Comment on issue
+gh issue comment <NUMBER> --body "..."
+
+# Close issue
+gh issue close <NUMBER>
+
+# Create milestone
+gh milestone create "Name" --due-date "YYYY-MM-DD"
+
+# List milestones
+gh milestone list
+```
+
+## Success Criteria
+
+Before marking issue work complete:
+
+- [ ] Issue created with proper labels
+- [ ] Description includes requirements and acceptance criteria
+- [ ] Linked to appropriate milestone
+- [ ] Area labels applied (frontend/backend/database)
+- [ ] Priority set if applicable
+- [ ] Related issues linked

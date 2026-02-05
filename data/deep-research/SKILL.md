@@ -1,114 +1,114 @@
 ---
 name: deep-research
-description: "Execute autonomous multi-step research using Google Gemini Deep Research Agent. Use for: market analysis, competitive landscaping, literature reviews, technical research, due diligence. Takes 2-10 minutes but produces detailed, cited reports. Costs $2-5 per task."
-source: "https://github.com/sanjay3290/ai-skills/tree/main/skills/deep-research"
-risk: safe
+description: Use when user requests research requiring multiple sources, comprehensive analysis, or synthesis across topics - technical research, domain knowledge gathering, market analysis, or learning about complex subjects
 ---
 
-# Gemini Deep Research Skill
+# Deep Research
 
-Run autonomous research tasks that plan, search, read, and synthesize information into comprehensive reports.
+Autonomous multi-agent research system. Dispatches parallel sub-agents, stores findings to files, synthesizes into briefs or reports.
 
-## When to Use This Skill
+**Core principle:** Planning → Parallel research agents → File-based findings → Synthesis = high quality research with minimal context usage.
 
-Use this skill when:
-- Performing market analysis
-- Conducting competitive landscaping
-- Creating literature reviews
-- Doing technical research
-- Performing due diligence
-- Need detailed, cited research reports
+## When to Use
 
-## Requirements
+```dot
+digraph when_to_use {
+    "User requests research?" [shape=diamond];
+    "Quick factual lookup?" [shape=diamond];
+    "Use single search tool directly" [shape=box];
+    "Multiple sources or synthesis needed?" [shape=diamond];
+    "deep-research" [shape=box];
 
-- Python 3.8+
-- httpx: `pip install -r requirements.txt`
-- GEMINI_API_KEY environment variable
-
-## Setup
-
-1. Get a Gemini API key from [Google AI Studio](https://aistudio.google.com/)
-2. Set the environment variable:
-   ```bash
-   export GEMINI_API_KEY=your-api-key-here
-   ```
-   Or create a `.env` file in the skill directory.
-
-## Usage
-
-### Start a research task
-```bash
-python3 scripts/research.py --query "Research the history of Kubernetes"
+    "User requests research?" -> "Quick factual lookup?" [label="yes"];
+    "Quick factual lookup?" -> "Use single search tool directly" [label="yes"];
+    "Quick factual lookup?" -> "Multiple sources or synthesis needed?" [label="no"];
+    "Multiple sources or synthesis needed?" -> "deep-research" [label="yes"];
+}
 ```
 
-### With structured output format
-```bash
-python3 scripts/research.py --query "Compare Python web frameworks" \
-  --format "1. Executive Summary\n2. Comparison Table\n3. Recommendations"
+**Use for:** Technical research, domain knowledge, market analysis, architectural patterns, comparing approaches, learning complex topics
+
+**Don't use for:** Single fact lookups, specific URL fetches, questions answerable in one search
+
+## The Process
+
+```dot
+digraph process {
+    rankdir=TB;
+
+    "Create research directory in scratchpad" -> "Dispatch Query Analyzer agent";
+    "Dispatch Query Analyzer agent" -> "Analyzer writes research-plan.md";
+    "Analyzer writes research-plan.md" -> "Read plan, dispatch N Research agents IN PARALLEL";
+    "Read plan, dispatch N Research agents IN PARALLEL" -> "Each agent writes findings-{thread}.md";
+    "Each agent writes findings-{thread}.md" -> "Wait for all agents";
+    "Wait for all agents" -> "Dispatch Synthesizer agent";
+    "Dispatch Synthesizer agent" -> "Synthesizer reads all findings, writes final-output.md";
+    "Synthesizer reads all findings, writes final-output.md" -> "Read final output, present summary to user";
+}
 ```
 
-### Stream progress in real-time
-```bash
-python3 scripts/research.py --query "Analyze EV battery market" --stream
+## Quick Reference
+
+### Phase 1: Planning (Query Analyzer Agent)
+
+Uses `./query-analyzer-prompt.md`. Writes `research-plan.md` containing:
+- Query type: technical | domain | hybrid
+- Complexity: simple (2-3 agents) | moderate (3-4) | complex (5-6)
+- Research threads with source recommendations
+- Output format recommendation: brief | report
+
+### Phase 2: Parallel Research
+
+Uses `./research-agent-prompt.md`. Each agent:
+1. Invokes `exa-search` skill for source strategy
+2. Executes searches (Exa-primary, see Source Selection below)
+3. Writes `findings-{thread-name}.md`
+
+**Source Selection:**
+
+| Query Signal | Primary Source |
+|--------------|----------------|
+| Code, APIs, libraries | `mcp__exa__get_code_context_exa` |
+| Concepts, analysis, opinions | `mcp__exa__web_search_exa` |
+| Video explanations needed | `yt-transcribe` skill |
+| Very recent news (< 1 week) | `WebSearch` fallback |
+
+### Phase 3: Synthesis
+
+Uses `./synthesizer-prompt.md`. Reads all findings files, writes `final-output.md`:
+- **Actionable Brief** (~300 words): Simple query + clear consensus
+- **Structured Report** (~1500 words): Complex query or conflicting findings
+
+## Agent Dispatch Methods
+
+**For complex queries (4+ threads):** Use Task tool with `subagent_type: "general-purpose"` for true sub-agent isolation. Dispatch all research agents in a single message (parallel Task calls).
+
+**For simpler queries (2-3 threads):** Parallel tool calls within same context is acceptable - make all searches simultaneously, then write findings files.
+
+Either way: research threads must execute in parallel, not sequentially.
+
+## File Structure
+
+```
+{scratchpad}/deep-research-{timestamp}/
+├── research-plan.md
+├── findings-*.md
+└── final-output.md
 ```
 
-### Start without waiting
-```bash
-python3 scripts/research.py --query "Research topic" --no-wait
-```
+## Common Mistakes
 
-### Check status of running research
-```bash
-python3 scripts/research.py --status <interaction_id>
-```
+| Mistake | Fix |
+|---------|-----|
+| Doing research yourself instead of dispatching agents | Always use the three-phase architecture |
+| Keeping findings in context instead of files | Each agent MUST write to files |
+| Sequential research agents | Dispatch all research agents in PARALLEL |
+| Skipping planning phase | Always run Query Analyzer first |
+| Using WebSearch as default | Exa is primary; WebSearch only for very recent news |
 
-### Wait for completion
-```bash
-python3 scripts/research.py --wait <interaction_id>
-```
+## Red Flags - STOP
 
-### Continue from previous research
-```bash
-python3 scripts/research.py --query "Elaborate on point 2" --continue <interaction_id>
-```
-
-### List recent research
-```bash
-python3 scripts/research.py --list
-```
-
-## Output Formats
-
-- **Default**: Human-readable markdown report
-- **JSON** (`--json`): Structured data for programmatic use
-- **Raw** (`--raw`): Unprocessed API response
-
-## Cost & Time
-
-| Metric | Value |
-|--------|-------|
-| Time | 2-10 minutes per task |
-| Cost | $2-5 per task (varies by complexity) |
-| Token usage | ~250k-900k input, ~60k-80k output |
-
-## Best Use Cases
-
-- Market analysis and competitive landscaping
-- Technical literature reviews
-- Due diligence research
-- Historical research and timelines
-- Comparative analysis (frameworks, products, technologies)
-
-## Workflow
-
-1. User requests research → Run `--query "..."`
-2. Inform user of estimated time (2-10 minutes)
-3. Monitor with `--stream` or poll with `--status`
-4. Return formatted results
-5. Use `--continue` for follow-up questions
-
-## Exit Codes
-
-- **0**: Success
-- **1**: Error (API error, config issue, timeout)
-- **130**: Cancelled by user (Ctrl+C)
+- "I'll just do a quick search myself" → Use the full process
+- "I don't need to write files for this" → Files are mandatory
+- "I'll research these topics one at a time" → Parallel dispatch
+- "This is simple, I'll skip planning" → Always plan first

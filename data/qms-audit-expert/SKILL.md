@@ -10,9 +10,11 @@ Expert-level quality management system auditing with comprehensive knowledge of 
 ## Core QMS Auditing Competencies
 
 ### 1. ISO 13485 Audit Program Management
+
 Design and manage comprehensive internal audit programs ensuring systematic QMS evaluation and continuous improvement.
 
 **Audit Program Framework:**
+
 ```
 QMS AUDIT PROGRAM MANAGEMENT
 ├── Annual Audit Planning
@@ -38,9 +40,11 @@ QMS AUDIT PROGRAM MANAGEMENT
 ```
 
 ### 2. Risk-Based Audit Planning (ISO 13485 Clause 8.2.2)
+
 Develop strategic audit plans based on process criticality, risk assessment, and QMS performance data.
 
 **Risk-Based Audit Planning Process:**
+
 1. **QMS Risk Assessment for Auditing**
    - Process risk evaluation and criticality analysis
    - Previous audit results and trend analysis
@@ -60,9 +64,11 @@ Develop strategic audit plans based on process criticality, risk assessment, and
    - Customer-specific requirement inclusion
 
 ### 3. Audit Execution and Methodology
+
 Conduct systematic and effective audits using proven methodologies ensuring comprehensive QMS assessment.
 
 **Audit Execution Process:**
+
 1. **Audit Preparation**
    - **Pre-audit Document Review**: Follow scripts/audit-prep-checklist.py
    - **Audit Plan Development**: Scope, objectives, criteria, methods
@@ -82,9 +88,11 @@ Conduct systematic and effective audits using proven methodologies ensuring comp
    - **Report Distribution**: Stakeholder communication and follow-up planning
 
 ### 4. Auditor Competency Management
+
 Develop and maintain auditor competency ensuring effective audit execution and professional development.
 
 **Auditor Competency Framework:**
+
 ```
 AUDITOR COMPETENCY REQUIREMENTS
 ├── Technical Competency
@@ -112,9 +120,11 @@ AUDITOR COMPETENCY REQUIREMENTS
 ## Advanced Audit Applications
 
 ### Process-Based Auditing
+
 Implement process-based audit methodologies ensuring comprehensive process evaluation and improvement identification.
 
 **Process-Based Audit Approach:**
+
 1. **Process Understanding and Mapping**
    - Process flow analysis and documentation
    - Input-output relationship evaluation
@@ -128,9 +138,11 @@ Implement process-based audit methodologies ensuring comprehensive process evalu
    - **Monitoring Processes**: Customer satisfaction, internal audit, product monitoring
 
 ### External Audit Preparation and Coordination
+
 Prepare organization for external audits including regulatory inspections and certification body assessments.
 
 **External Audit Preparation:**
+
 1. **Pre-audit Readiness Assessment**
    - Internal audit completion and closure verification
    - Documentation review and compliance verification
@@ -150,9 +162,11 @@ Prepare organization for external audits including regulatory inspections and ce
    - Real-time issue resolution and escalation
 
 ### Specialized Audit Areas
+
 Conduct specialized audits addressing specific QMS areas and regulatory requirements.
 
 **Specialized Audit Types:**
+
 - **Design Control Audits**: ISO 13485 Clause 7.3 comprehensive assessment
 - **Risk Management Audits**: ISO 14971 integration and effectiveness
 - **Software Audits**: IEC 62304 compliance and software lifecycle
@@ -162,18 +176,22 @@ Conduct specialized audits addressing specific QMS areas and regulatory requirem
 ## Nonconformity and CAPA Integration
 
 ### Nonconformity Identification and Classification
+
 Systematically identify and classify nonconformities ensuring appropriate corrective action initiation.
 
 **Nonconformity Classification System:**
+
 - **Major Nonconformity**: Systematic failure or absence of QMS requirements
 - **Minor Nonconformity**: Isolated incident or partial implementation failure
 - **Observation**: Improvement opportunity or potential future nonconformity
 - **Best Practice**: Exemplary implementation or innovation identification
 
 ### CAPA Integration and Verification
+
 Coordinate with CAPA processes ensuring effective corrective action implementation and verification.
 
 **CAPA Integration Process:**
+
 1. **CAPA Initiation**: Audit finding translation to CAPA requirements
 2. **Root Cause Analysis Support**: Audit evidence provision and validation
 3. **Corrective Action Verification**: Implementation effectiveness assessment
@@ -182,9 +200,11 @@ Coordinate with CAPA processes ensuring effective corrective action implementati
 ## Audit Performance and Continuous Improvement
 
 ### Audit Program Performance Metrics
+
 Monitor audit program effectiveness ensuring continuous improvement and value demonstration.
 
 **Audit Performance KPIs:**
+
 - **Audit Schedule Compliance**: Planned vs. actual audit completion rates
 - **Finding Quality**: Finding accuracy, significance, and actionability
 - **Auditor Performance**: Competency assessments and feedback scores
@@ -192,9 +212,11 @@ Monitor audit program effectiveness ensuring continuous improvement and value de
 - **Process Improvement**: Audit-driven improvement identification and implementation
 
 ### Audit Program Optimization
+
 Continuously improve audit program effectiveness through methodology enhancement and best practice adoption.
 
 **Audit Program Improvement Framework:**
+
 1. **Audit Effectiveness Analysis**
    - Audit finding trends and pattern analysis
    - Process improvement opportunity identification
@@ -208,9 +230,11 @@ Continuously improve audit program effectiveness through methodology enhancement
    - Best practice sharing and knowledge management
 
 ### Industry Benchmarking and Best Practices
+
 Maintain awareness of industry audit best practices and regulatory expectations.
 
 **Benchmarking Activities:**
+
 - **Regulatory Guidance Monitoring**: FDA, EU, and other authority audit expectations
 - **Industry Standards Evolution**: ISO 13485 updates and audit methodology changes
 - **Professional Development**: Auditor certification and continuing education
@@ -219,12 +243,14 @@ Maintain awareness of industry audit best practices and regulatory expectations.
 ## Resources
 
 ### scripts/
+
 - `audit-schedule-optimizer.py`: Risk-based audit planning and schedule optimization
 - `audit-prep-checklist.py`: Comprehensive audit preparation automation
 - `nonconformity-tracker.py`: Audit finding and CAPA integration management
 - `audit-performance-analyzer.py`: Audit program effectiveness monitoring
 
 ### references/
+
 - `iso13485-audit-guide.md`: Complete ISO 13485 audit methodology and checklists
 - `process-audit-procedures.md`: Process-based audit execution frameworks
 - `regulatory-inspection-guide.md`: Regulatory audit preparation and response
@@ -232,6 +258,7 @@ Maintain awareness of industry audit best practices and regulatory expectations.
 - `auditor-competency-framework.md`: Auditor development and assessment criteria
 
 ### assets/
+
 - `audit-templates/`: Audit plan, checklist, and report templates
 - `audit-checklists/`: ISO 13485 clause-specific audit checklists
 - `training-materials/`: Auditor training and competency development programs

@@ -1,336 +1,232 @@
 ---
 name: commit-push-pr
-description: Commit changes, push to GitHub, and open a PR. Includes quality checks (security, patterns, simplification). Use --quick to skip checks.
-allowed-tools: Bash, Read, Write, Edit, Grep, Glob, AskUserQuestion
+description: |
+  Boris Cherny Pattern 6: Commit changes, push to remote, create/update PR.
+  Automates: git add -> git commit -> git push -> gh pr create.
+  Terminal skill (pipeline endpoint) after /synthesis COMPLETE.
+user-invocable: true
+context: fork
+model: opus
+version: "3.1.0"
+argument-hint: "[commit message] | --workload <slug>"
+allowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Task
+  - mcp__sequential-thinking__sequentialthinking
+hooks:
+  Setup:
+    - type: command
+      command: "source /home/palantir/.claude/skills/shared/workload-files.sh"
+      timeout: 5000
+  PreToolUse:
+    - type: command
+      command: "/home/palantir/.claude/hooks/git-safety-check.sh"
+      timeout: 10000
+      matcher: "Bash"
+
+# EFL Pattern Configuration (Terminal Skill - Minimal)
+agent_delegation:
+  enabled: false
+  reason: "Terminal skill - executes directly without delegation"
+
+parallel_agent_config:
+  enabled: false
+  reason: "Git operations must be sequential"
+
+internal_validation:
+  enabled: true
+  checks:
+    - "Branch is not main/master"
+    - "No sensitive files (.env, credentials) staged"
+    - "Commit message follows convention"
+  max_retries: 2
+
+output_paths:
+  l1: ".agent/prompts/{slug}/commit-push-pr/l1_summary.yaml"
+  l2: ".agent/prompts/{slug}/commit-push-pr/l2_index.md"
 ---
 
-# Commit, Push & PR Skill
+# /commit-push-pr - Git Workflow Automation
 
-Automates the git workflow of committing changes, pushing to GitHub, and opening a PR with intelligent handling of edge cases.
+> **Version:** 3.1.0 | **Type:** Terminal Skill
+> **Role:** Commit, push, and create PR in one command
+> **Pipeline:** After /synthesis COMPLETE (pipeline endpoint)
 
-## Required Reading
+## 1. Purpose
 
-Before executing, internalize the git workflow standards:
-@.claude/rules/git_workflow.md
+Automates the complete git workflow:
+1. Analyze staged/unstaged changes
+2. Generate or use provided commit message
+3. Stage and commit changes
+4. Push with upstream tracking
+5. Create/update pull request
 
-Key rules:
-- Use Conventional Commits format: `type(scope): description`
-- **NEVER attribute Claude** in commits or PRs (no co-author, no mentions)
-- **NEVER skip pre-commit hooks** (no `--no-verify`)
-
----
-
-## Execution Workflow
-
-### Step 1: Assess Git State
-
-Run these commands to understand the current state:
+## 2. Invocation
 
 ```bash
-# Detect the default branch (main, master, etc.)
-DEFAULT_BRANCH=$(git symbolic-ref refs/remotes/origin/HEAD 2>/dev/null | sed 's@^refs/remotes/origin/@@')
-# Fallback if symbolic-ref fails (e.g., shallow clone or missing HEAD)
-if [ -z "$DEFAULT_BRANCH" ]; then
-  DEFAULT_BRANCH=$(git remote show origin 2>/dev/null | grep 'HEAD branch' | awk '{print $NF}')
-fi
-# Final fallback to 'main' if detection fails
-DEFAULT_BRANCH=${DEFAULT_BRANCH:-main}
-
-# Get current branch
-BRANCH=$(git branch --show-current)
-
-# Check for uncommitted changes
-git status --porcelain
-
-# Check for unpushed commits (if branch has upstream)
-git log origin/$DEFAULT_BRANCH..HEAD --oneline 2>/dev/null || echo "No upstream or no commits ahead"
-
-# Check if branch has upstream tracking
-git rev-parse --abbrev-ref @{upstream} 2>/dev/null || echo "No upstream"
+/commit-push-pr                              # Auto-generate message
+/commit-push-pr "feat: Add auth module"      # Provide message
+/commit-push-pr --workload <slug>            # Pipeline completion
 ```
 
-Determine the state:
-- `HAS_CHANGES`: Are there uncommitted changes (staged, unstaged, or untracked)?
-- `HAS_UNPUSHED`: Are there commits ahead of origin/$DEFAULT_BRANCH?
-- `ON_DEFAULT_BRANCH`: Is current branch the default branch ($DEFAULT_BRANCH)?
-- `HAS_UPSTREAM`: Does the branch track a remote?
+## 3. L1/L2/L3 Output Format
 
-### Step 2: Handle "Nothing to Do" Case
+### L1 Summary (returned to main context)
 
-If `!HAS_CHANGES && !HAS_UNPUSHED`:
-```
-Inform user: "No changes to commit and no unpushed commits. Nothing to do."
-Exit gracefully.
-```
+```yaml
+taskId: commit-{timestamp}
+agentType: commit-push-pr
+status: success
+summary: "Committed abc1234, pushed to origin/feature-branch, PR #123 created"
 
-### Step 3: Handle "No Changes But Unpushed Commits" Case
+branch: "feature/auth-module"
+commitHash: "abc1234"
+filesChanged: 5
+prUrl: "https://github.com/owner/repo/pull/123"
 
-If `!HAS_CHANGES && HAS_UNPUSHED`:
-
-1. Check if PR already exists:
-```bash
-gh pr list --head "$(git branch --show-current)" --json number,url,title
+l2Path: .agent/prompts/{slug}/commit-push-pr/l2_index.md
+requiresL2Read: false
+nextActionHint: "Pipeline complete"
 ```
 
-2. If PR exists:
-   - Offer to push updates to the existing PR
-   - Report the PR URL
+### L2 Report Structure
 
-3. If no PR:
-   - Offer to push and create a new PR
-   - Proceed to Step 7
+```markdown
+# Commit Summary
 
-### Step 4: Branch Management (if HAS_CHANGES)
+**Branch:** feature/auth-module
+**Commit:** abc1234
+**Message:** feat: Add user authentication flow
 
-**If on default branch ($DEFAULT_BRANCH):**
+## Files Changed
+- src/auth/login.py (+42, -10)
+- tests/test_auth.py (+25, -0)
 
-1. Inform user that changes need to go on a feature branch
-2. Stage changes first to analyze them:
-```bash
-git add -A
-git diff --staged --stat
+## Push Status
+Pushed to origin/feature/auth-module
+
+## PR Status
+PR #123 created: https://github.com/owner/repo/pull/123
 ```
 
-3. Generate a conventional commit message based on the changes (see Step 5)
+## 4. Execution Strategy
 
-4. Derive branch name from commit message:
-   - `feat(cli): add project list` → `feat-cli-add-project-list`
-   - `fix: resolve memory leak` → `fix-resolve-memory-leak`
-   - Rules: lowercase, replace spaces/special chars with hyphens, max 50 chars
-
-5. Create and checkout the new branch:
-```bash
-git checkout -b <branch-name>
-```
-
-**If already on feature branch:**
-- Continue with the existing branch
-- Check if PR exists for context
-
-### Step 5: Stage Changes and Generate Commit Message
-
-1. Stage all changes:
-```bash
-git add -A
-```
-
-2. Analyze the staged changes:
-```bash
-git diff --staged --stat
-git diff --staged
-```
-
-3. Generate a conventional commit message based on:
-   - Files changed (infer scope from directory)
-   - Nature of changes (feat/fix/refactor/docs/test/chore)
-   - Summarize the "why" not just the "what"
-
-4. Present the commit message to the user. Example format:
-```
-Proposed commit message:
-
-  feat(cli): add project listing command
-
-  Adds a new 'lf project list' command that displays all projects
-  in the current workspace with their status.
-
-Do you want to use this message, modify it, or provide your own?
-```
-
-### Step 5.5: Quality Check
-
-**Skip if**: `--quick` flag was passed.
-
-Run quality checks on staged changes before committing.
-
-#### 1. Auto-fix trivial issues (no prompt needed)
-
-Search for and remove debug statements:
+### Phase 1: Analyze Changes
 
 ```bash
-# Find files with debug statements
-git diff --staged --name-only | xargs grep -l -E "(console\.(log|debug|info)|debugger|print\()" 2>/dev/null
+git status                    # View untracked and modified
+git diff --cached             # View staged changes
+git diff                      # View unstaged changes
+git log --oneline -5          # Recent commits for style
 ```
 
-For each file found:
-- Remove `console.log(...)`, `console.debug(...)`, `console.info(...)` statements
-- Remove `debugger;` statements
-- Remove `print(...)` statements (Python)
-- Re-stage the file after fixes
+### Phase 2: Stage and Commit
 
-Report: "Auto-fixed: Removed N debug statements from M files"
+**Commit Message Format:**
+```
+<type>: <concise description>
 
-#### 2. Check for issues requiring attention
+<optional body explaining why>
 
-Scan staged diff for:
-
-| Issue | Severity | Action |
-|-------|----------|--------|
-| Hardcoded secrets (API keys, passwords) | BLOCK | Cannot auto-fix - user must remove |
-| Command injection (`shell=True`, `os.system`) | BLOCK | Cannot auto-fix - user must refactor |
-| Empty catch/except blocks | PROPOSE | Suggest adding error logging |
-| Duplicate code patterns | PROPOSE | Suggest extraction |
-| Unused imports | PROPOSE | Suggest removal |
-| TODO/FIXME comments | WARN | Note but allow proceed |
-
-#### 3. Handle blocking issues
-
-If BLOCK issues found:
-- List each issue with file:line reference
-- Stop the workflow
-- User must fix manually and re-run
-
-#### 4. Handle proposable fixes
-
-For each PROPOSE issue:
-- Show: file, line, problem, suggested fix
-- Ask: "Apply this fix? (y/n/all/skip)"
-- If approved: apply edit, re-stage
-- If skipped: continue without fix
-
-#### 5. Handle warnings
-
-For WARN issues:
-- Display summary
-- Continue without blocking
-
----
-
-### Step 6: Create the Commit
-
-Create the commit with the approved message:
-
-```bash
-git commit -m "$(cat <<'EOF'
-type(scope): short description
-
-Optional longer description explaining the change.
-EOF
-)"
+Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>
 ```
 
-**Important:**
-- Use HEREDOC for multi-line messages
-- Never add co-author or Claude attribution
-- Let pre-commit hooks run (never use `--no-verify`)
+**Types:** feat, fix, refactor, docs, test, chore, style
 
-**If commit fails due to pre-commit hook:**
-- Report the failure to the user
-- Show the hook output
-- Do NOT retry with `--no-verify`
-- Ask user how to proceed (fix issues or abort)
+### Phase 3: Push to Remote
 
-### Step 7: Push to Remote
-
-1. Check if branch has upstream:
-```bash
-git rev-parse --abbrev-ref @{upstream} 2>/dev/null
-```
-
-2. If no upstream, push with `-u`:
 ```bash
 git push -u origin $(git branch --show-current)
 ```
 
-3. If has upstream, regular push:
-```bash
-git push
-```
-
-**If push fails due to conflicts:**
-- Inform user about the conflict
-- Suggest: `git pull --rebase origin $DEFAULT_BRANCH` or `git merge origin/$DEFAULT_BRANCH`
-- Do NOT force push
-
-### Step 8: Create or Report PR
-
-1. Check if PR already exists:
-```bash
-gh pr list --head "$(git branch --show-current)" --json number,url,title
-```
-
-2. **If PR exists:**
-   - Report: "Changes pushed to existing PR: <URL>"
-   - Show PR title and number
-
-3. **If no PR exists:**
-   - Generate PR title from commit message (first line)
-   - Generate PR body with summary of changes
-   - Create PR:
+### Phase 4: Create/Update PR
 
 ```bash
-gh pr create --title "type(scope): description" --body "$(cat <<'EOF'
-## Summary
+# Check if PR exists
+gh pr view --json state 2>/dev/null
 
-- Brief description of changes
-
-## Changes
-
-- List of key changes made
-
-## Test Plan
-
-- How to verify these changes work
-EOF
-)"
+# Create PR if none exists
+gh pr create --title "<title>" --body "<body>"
 ```
 
-4. Report the new PR URL to the user
+## 5. Safety Validations
 
----
+| Condition | Action |
+|-----------|--------|
+| Branch is main/master | WARN, ask confirmation |
+| Committing .env files | BLOCK unless explicit |
+| Committing credentials | BLOCK - security risk |
+| Empty commit | SKIP - nothing to commit |
 
-## Branch Name Generation
+### P6: Git Safety Validation
 
-Convert commit message to valid branch name:
-
-| Input | Output |
-|-------|--------|
-| `feat(cli): add project list command` | `feat-cli-add-project-list-command` |
-| `fix: resolve memory leak in cache` | `fix-resolve-memory-leak-in-cache` |
-| `refactor(server): simplify auth flow` | `refactor-server-simplify-auth-flow` |
-
-Algorithm:
-1. Take the commit message (first line only)
-2. Lowercase everything
-3. Remove the colon after type/scope
-4. Replace `(` and `)` with `-`
-5. Replace spaces and special characters with `-`
-6. Collapse multiple hyphens to single hyphen
-7. Trim to max 50 characters at word boundary
-8. Remove trailing hyphens
-
----
-
-## Error Handling
-
-| Error | Action |
-|-------|--------|
-| Pre-commit hook fails | Show output, ask user to fix, do NOT bypass |
-| Push rejected (conflicts) | Suggest rebase/merge, do NOT force push |
-| PR creation fails | Show error, suggest manual creation |
-| Not a git repo | Inform user, exit |
-| gh CLI not installed | Inform user how to install |
-| Not authenticated to GitHub | Suggest `gh auth login` |
-
----
-
-## Output Format
-
-On success, report:
-```
-Committed: feat(cli): add project list command
-Branch: feat-cli-add-project-list-command
-Pushed to: origin/feat-cli-add-project-list-command
-PR: https://github.com/owner/repo/pull/123
+```javascript
+const gitSafetyChecks = {
+  maxRetries: 2,
+  checks: [
+    "branch !== 'main' && branch !== 'master'",
+    "!stagedFiles.some(f => f.includes('.env'))",
+    "!stagedFiles.some(f => f.includes('credential'))",
+    "commitMessage.match(/^(feat|fix|refactor|docs|test|chore|style):/)"
+  ],
+  onFailure: "BLOCK and prompt user for correction"
+};
 ```
 
+## 6. Pipeline Integration
+
+```
+/synthesis (COMPLETE)
+    |
+    +-- /commit-push-pr <-- THIS SKILL (Terminal)
+            |
+            +-- Pipeline terminates
+```
+
+### Upstream
+- /synthesis with COMPLETE status
+
+### Output
+- No downstream skill (terminal)
+
+## 7. Handoff Contract
+
+```yaml
+handoff:
+  skill: "commit-push-pr"
+  workload_slug: "{slug}"
+  status: "completed"
+  timestamp: "2026-01-28T14:35:00Z"
+  next_action:
+    skill: null
+    arguments: null
+    required: false
+    reason: "Pipeline completed - changes committed and PR created"
+```
+
+## 8. Post-Compact Recovery
+
+```javascript
+if (isPostCompactSession()) {
+  const slug = await getActiveWorkload();
+  if (slug) {
+    const lastCommit = await Bash("git log -1 --oneline");
+    console.log(`Last commit: ${lastCommit}`);
+  }
+  // Continue with current git state
+}
+```
+
 ---
 
-## Notes for the Agent
+### Version History
 
-1. **Never mention Claude** - No co-author lines, no "generated by Claude" in PR descriptions
-2. **Respect hooks** - Pre-commit hooks exist for a reason, never skip them
-3. **Be informative** - Tell the user what's happening at each step
-4. **Handle errors gracefully** - Don't leave the repo in a broken state
-5. **Ask when uncertain** - If the commit message isn't clear, ask the user
-6. **Keep it simple** - One commit per invocation, clear linear workflow
+| Version | Change |
+|---------|--------|
+| 3.1.0 | Cleaned duplicate blocks, normalized frontmatter |
+| 3.0.0 | EFL Pattern integration, git-safety-check hook |
+| 2.2.0 | Standalone execution, handoff contract |
+| 2.1.0 | V2.1.19 spec compatibility |
+| 1.1.1 | Initial git workflow automation |

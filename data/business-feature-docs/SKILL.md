@@ -1,11 +1,11 @@
 ---
 name: business-feature-docs
-description: Generate enterprise module documentation with 26-section structure and folder hierarchy. Use for module docs, enterprise features, detailed specs in docs/business-features/{Module}/. Includes README, INDEX, API-REFERENCE, detailed-features/. Triggers on "module docs", "enterprise feature docs", "business module", "26-section docs", "detailed feature specs". For single-file quick docs, use feature-docs instead.
+description: Create or update EasyPlatform business feature documentation in docs/business-features/{Module}/. Use when asked to document a feature, create module docs, update feature documentation, or add detailed feature specs. Triggers on "feature docs", "business feature documentation", "module documentation", "document feature", "update feature docs".
 allowed-tools: Read, Write, Edit, Bash, Grep, Glob, Task, TodoWrite
 ---
 
-<!-- SYNC: Source of truth is docs/templates/skills/business-feature-docs/SKILL.md -->
-<!-- Keep in sync with .github/skills/business-feature-docs/SKILL.md -->
+<!-- SOURCE OF TRUTH: docs/templates/skills/business-feature-docs/SKILL.md -->
+<!-- Synced to: .claude/skills/ and .github/skills/ -->
 
 # EasyPlatform Business Feature Documentation
 
@@ -41,34 +41,34 @@ docs/
 
 All feature documentation in `detailed-features/` MUST follow this section order:
 
-| # | Section | Stakeholder Focus |
-|---|---------|-------------------|
-| 1 | Executive Summary | PO, BA |
-| 2 | Business Value | PO, BA |
-| 3 | Business Requirements | PO, BA |
-| 4 | Business Rules | BA, Dev |
-| 5 | Process Flows | BA, Dev, Architect |
-| 6 | Design Reference | BA, UX, Dev |
-| 7 | System Design | Dev, Architect |
-| 8 | Architecture | Dev, Architect |
-| 9 | Domain Model | Dev, Architect |
-| 10 | API Reference | Dev, Architect |
-| 11 | Frontend Components | Dev |
-| 12 | Backend Controllers | Dev |
-| 13 | Cross-Service Integration | Dev, Architect |
-| 14 | Security Architecture | Dev, Architect |
-| 15 | Performance Considerations | Dev, Architect, DevOps |
-| 16 | Implementation Guide | Dev |
-| 17 | Test Specifications | QA |
-| 18 | Test Data Requirements | QA |
-| 19 | Edge Cases Catalog | QA, Dev |
-| 20 | Regression Impact | QA |
-| 21 | Troubleshooting | Dev, QA, DevOps |
-| 22 | Operational Runbook | DevOps |
-| 23 | Roadmap and Dependencies | PO, BA |
-| 24 | Related Documentation | All |
-| 25 | Glossary | PO, BA |
-| 26 | Version History | All |
+| #   | Section                    | Stakeholder Focus      |
+| --- | -------------------------- | ---------------------- |
+| 1   | Executive Summary          | PO, BA                 |
+| 2   | Business Value             | PO, BA                 |
+| 3   | Business Requirements      | PO, BA                 |
+| 4   | Business Rules             | BA, Dev                |
+| 5   | Process Flows              | BA, Dev, Architect     |
+| 6   | Design Reference           | BA, UX, Dev            |
+| 7   | System Design              | Dev, Architect         |
+| 8   | Architecture               | Dev, Architect         |
+| 9   | Domain Model               | Dev, Architect         |
+| 10  | API Reference              | Dev, Architect         |
+| 11  | Frontend Components        | Dev                    |
+| 12  | Backend Controllers        | Dev                    |
+| 13  | Cross-Service Integration  | Dev, Architect         |
+| 14  | Security Architecture      | Dev, Architect         |
+| 15  | Performance Considerations | Dev, Architect, DevOps |
+| 16  | Implementation Guide       | Dev                    |
+| 17  | Test Specifications        | QA                     |
+| 18  | Test Data Requirements     | QA                     |
+| 19  | Edge Cases Catalog         | QA, Dev                |
+| 20  | Regression Impact          | QA                     |
+| 21  | Troubleshooting            | Dev, QA, DevOps        |
+| 22  | Operational Runbook        | DevOps                 |
+| 23  | Roadmap and Dependencies   | PO, BA                 |
+| 24  | Related Documentation      | All                    |
+| 25  | Glossary                   | PO, BA                 |
+| 26  | Version History            | All                    |
 
 ---
 
@@ -77,6 +77,7 @@ All feature documentation in `detailed-features/` MUST follow this section order
 ### Step 1.1: Identify Target Module
 
 Determine which module the feature belongs to by:
+
 1. User explicitly specifies module name
 2. Feature name/domain implies module
 3. Search codebase for feature-related entities/commands
@@ -84,6 +85,7 @@ Determine which module the feature belongs to by:
 ### Step 1.2: Read Existing Documentation
 
 Before creating new docs, read existing structure:
+
 ```
 1. Read docs/BUSINESS-FEATURES.md (master index)
 2. Read docs/business-features/{Module}/INDEX.md (if exists)
@@ -94,11 +96,12 @@ Before creating new docs, read existing structure:
 ### Step 1.3: Codebase Analysis
 
 Gather evidence from source code:
+
 - **Entities**: `src/Services/{Module}/{Module}.Domain/Entities/`
 - **Commands**: `src/Services/{Module}/{Module}.Application/UseCaseCommands/`
 - **Queries**: `src/Services/{Module}/{Module}.Application/UseCaseQueries/`
 - **Controllers**: `src/Services/{Module}/{Module}.Service/Controllers/`
-- **Frontend**: `src/BravoWeb/apps/bravo-{module}/` or `src/BravoWeb/libs/apps-domains/`
+- **Frontend**: `src/Frontend/apps/playground-{module}/` or `src/Frontend/libs/apps-domains/`
 
 ---
 
@@ -107,15 +110,15 @@ Gather evidence from source code:
 ### Quick Navigation by Role
 
 ```markdown
-| Role | Priority Sections | Key Concerns |
-|------|------------------|--------------|
-| **Product Owner** | Executive Summary, Business Value, Roadmap | ROI, scope, timeline, dependencies |
-| **Business Analyst** | Business Requirements, Business Rules, Process Flows | Requirements traceability, acceptance criteria |
-| **Developer** | Architecture, Domain Model, API Reference, Implementation Guide | Code patterns, integration points |
-| **Tech Architect** | System Design, Architecture, Cross-Service Integration, Performance | System design, scalability, tech debt |
-| **QA Engineer** | Test Specifications, Test Data Requirements, Edge Cases Catalog | Test coverage, automation feasibility |
-| **QC Analyst** | All sections | Evidence verification, documentation accuracy |
-| **DevOps** | Operational Runbook, Troubleshooting, Performance | Deployment, monitoring, incident response |
+| Role                 | Priority Sections                                                   | Key Concerns                                   |
+| -------------------- | ------------------------------------------------------------------- | ---------------------------------------------- |
+| **Product Owner**    | Executive Summary, Business Value, Roadmap                          | ROI, scope, timeline, dependencies             |
+| **Business Analyst** | Business Requirements, Business Rules, Process Flows                | Requirements traceability, acceptance criteria |
+| **Developer**        | Architecture, Domain Model, API Reference, Implementation Guide     | Code patterns, integration points              |
+| **Tech Architect**   | System Design, Architecture, Cross-Service Integration, Performance | System design, scalability, tech debt          |
+| **QA Engineer**      | Test Specifications, Test Data Requirements, Edge Cases Catalog     | Test coverage, automation feasibility          |
+| **QC Analyst**       | All sections                                                        | Evidence verification, documentation accuracy  |
+| **DevOps**           | Operational Runbook, Troubleshooting, Performance                   | Deployment, monitoring, incident response      |
 ```
 
 ### Business Requirements (FR-XX)
@@ -123,13 +126,13 @@ Gather evidence from source code:
 ```markdown
 #### FR-{MOD}-01: {Requirement Title}
 
-| Aspect          | Details                                              |
-| --------------- | ---------------------------------------------------- |
-| **Description** | {What this requirement enables}                      |
-| **Scope**       | {Who can use / affected entities}                    |
-| **Validation**  | {Business rules and constraints}                     |
-| **Priority**    | {P0/P1/P2/P3}                                        |
-| **Evidence**    | `{FilePath}:{LineRange}`                             |
+| Aspect          | Details                           |
+| --------------- | --------------------------------- |
+| **Description** | {What this requirement enables}   |
+| **Scope**       | {Who can use / affected entities} |
+| **Validation**  | {Business rules and constraints}  |
+| **Priority**    | {P0/P1/P2/P3}                     |
+| **Evidence**    | `{FilePath}:{LineRange}`          |
 ```
 
 ### User Stories (US-XX)
@@ -142,6 +145,7 @@ Gather evidence from source code:
 **So that** {benefit/value}
 
 **Acceptance Criteria**:
+
 - [ ] AC-01: {Criterion with evidence reference}
 - [ ] AC-02: {Criterion with evidence reference}
 
@@ -154,12 +158,12 @@ Gather evidence from source code:
 ```markdown
 ### Value Proposition
 
-| Value Type | Description | Impact | Quantification |
-|------------|-------------|--------|----------------|
-| Revenue | {Revenue impact} | {H/M/L} | {$ or % if available} |
-| Efficiency | {Time/cost savings} | {H/M/L} | {Hours/costs saved} |
-| User Experience | {UX improvement} | {H/M/L} | {NPS/satisfaction improvement} |
-| Compliance | {Regulatory/audit benefit} | {H/M/L} | {Risk reduction} |
+| Value Type      | Description                | Impact  | Quantification                 |
+| --------------- | -------------------------- | ------- | ------------------------------ |
+| Revenue         | {Revenue impact}           | {H/M/L} | {$ or % if available}          |
+| Efficiency      | {Time/cost savings}        | {H/M/L} | {Hours/costs saved}            |
+| User Experience | {UX improvement}           | {H/M/L} | {NPS/satisfaction improvement} |
+| Compliance      | {Regulatory/audit benefit} | {H/M/L} | {Risk reduction}               |
 ```
 
 ### Business Rules
@@ -167,15 +171,15 @@ Gather evidence from source code:
 ```markdown
 ### Validation Rules
 
-| Rule ID | Rule | Condition | Action | Evidence |
-|---------|------|-----------|--------|----------|
+| Rule ID     | Rule        | Condition        | Action        | Evidence        |
+| ----------- | ----------- | ---------------- | ------------- | --------------- |
 | BR-{MOD}-01 | {Rule name} | {When condition} | {Then action} | `{File}:{Line}` |
 
 ### State Transitions
 
-| From State | Event | To State | Conditions | Evidence |
-|------------|-------|----------|------------|----------|
-| Draft | Activate | Active | {Conditions} | `{File}:{Line}` |
+| From State | Event    | To State | Conditions   | Evidence        |
+| ---------- | -------- | -------- | ------------ | --------------- |
+| Draft      | Activate | Active   | {Conditions} | `{File}:{Line}` |
 ```
 
 ### Technical Decisions Log
@@ -183,32 +187,35 @@ Gather evidence from source code:
 ```markdown
 ### Technical Decisions Log
 
-| Decision | Date | Options Considered | Chosen | Rationale | Evidence |
-|----------|------|-------------------|--------|-----------|----------|
-| {Decision title} | {Date} | {Option A, B} | {Chosen} | {Why} | `{File}:{Line}` |
+| Decision         | Date   | Options Considered | Chosen   | Rationale | Evidence        |
+| ---------------- | ------ | ------------------ | -------- | --------- | --------------- |
+| {Decision title} | {Date} | {Option A, B}      | {Chosen} | {Why}     | `{File}:{Line}` |
 
 ### Technical Debt
 
-| Item | Severity | Impact | Remediation Plan | Evidence |
-|------|----------|--------|------------------|----------|
-| {Debt item} | H/M/L | {Impact} | {Plan} | `{File}:{Line}` |
+| Item        | Severity | Impact   | Remediation Plan | Evidence        |
+| ----------- | -------- | -------- | ---------------- | --------------- |
+| {Debt item} | H/M/L    | {Impact} | {Plan}           | `{File}:{Line}` |
 ```
 
 ### Test Specifications (TC-XX)
 
 **Test Summary Table (MANDATORY)**:
+
 ```markdown
-| Category               | P0 (Critical) | P1 (High) | P2 (Medium) | P3 (Low) | Total |
-| ---------------------- | :-----------: | :-------: | :---------: | :------: | :---: |
-| {Category1}            | {N}           | {N}       | {N}         | {N}      | {N}   |
-| **Total**              | **{N}**       | **{N}**   | **{N}**     | **{N}**  | **{N}**|
+| Category    | P0 (Critical) | P1 (High) | P2 (Medium) | P3 (Low) |  Total  |
+| ----------- | :-----------: | :-------: | :---------: | :------: | :-----: |
+| {Category1} |      {N}      |    {N}    |     {N}     |   {N}    |   {N}   |
+| **Total**   |    **{N}**    |  **{N}**  |   **{N}**   | **{N}**  | **{N}** |
 ```
 
 **Test Case Format**:
+
 ```markdown
 #### TC-{MOD}-001: {Test Name} [P0]
 
 **Acceptance Criteria**:
+
 - ✅ {Passing criteria 1}
 - ✅ {Passing criteria 2}
 
@@ -217,6 +224,7 @@ Gather evidence from source code:
 **THEN** {expected outcome}
 
 **Edge Cases**:
+
 - ❌ {Invalid scenario} → {Expected error/behavior}
 
 **Evidence**: `{FilePath}:{LineRange}`
@@ -227,16 +235,16 @@ Gather evidence from source code:
 ```markdown
 ### Input Validation Edge Cases
 
-| ID | Scenario | Input | Expected Behavior | Evidence |
-|----|----------|-------|-------------------|----------|
-| EC-01 | Empty string | `""` | Validation error | `{File}:{Line}` |
-| EC-02 | Max length | `{256 chars}` | Truncate/Error | `{File}:{Line}` |
+| ID    | Scenario     | Input         | Expected Behavior | Evidence        |
+| ----- | ------------ | ------------- | ----------------- | --------------- |
+| EC-01 | Empty string | `""`          | Validation error  | `{File}:{Line}` |
+| EC-02 | Max length   | `{256 chars}` | Truncate/Error    | `{File}:{Line}` |
 
 ### Business Logic Edge Cases
 
-| ID | Scenario | Condition | Expected Behavior | Evidence |
-|----|----------|-----------|-------------------|----------|
-| EC-10 | {Scenario} | {Condition} | {Behavior} | `{File}:{Line}` |
+| ID    | Scenario   | Condition   | Expected Behavior | Evidence        |
+| ----- | ---------- | ----------- | ----------------- | --------------- |
+| EC-10 | {Scenario} | {Condition} | {Behavior}        | `{File}:{Line}` |
 ```
 
 ### Operational Runbook
@@ -252,9 +260,9 @@ Gather evidence from source code:
 
 ### Monitoring
 
-| Metric | Alert Threshold | Dashboard | Escalation |
-|--------|-----------------|-----------|------------|
-| Error Rate | >1% | {Dashboard URL} | {Team} |
+| Metric     | Alert Threshold | Dashboard       | Escalation |
+| ---------- | --------------- | --------------- | ---------- |
+| Error Rate | >1%             | {Dashboard URL} | {Team}     |
 ```
 
 ### Evidence Verification Protocol
@@ -264,24 +272,24 @@ Gather evidence from source code:
 
 ### Verification Summary
 
-| Category | Total Claims | Verified | Stale | Missing | Last Verified |
-|----------|-------------|----------|-------|---------|---------------|
-| Business Requirements | {N} | {N} | {N} | {N} | {Date} |
-| Architecture | {N} | {N} | {N} | {N} | {Date} |
-| Test Specifications | {N} | {N} | {N} | {N} | {Date} |
-| **Total** | **{N}** | **{N}** | **{N}** | **{N}** | |
+| Category              | Total Claims | Verified | Stale   | Missing | Last Verified |
+| --------------------- | ------------ | -------- | ------- | ------- | ------------- |
+| Business Requirements | {N}          | {N}      | {N}     | {N}     | {Date}        |
+| Architecture          | {N}          | {N}      | {N}     | {N}     | {Date}        |
+| Test Specifications   | {N}          | {N}      | {N}     | {N}     | {Date}        |
+| **Total**             | **{N}**      | **{N}**  | **{N}** | **{N}** |               |
 
 ### Evidence Verification Table
 
-| Claim ID | Claim | File | Documented Lines | Actual Lines | Status | Verified By |
-|----------|-------|------|-----------------|--------------|--------|-------------|
-| FR-{MOD}-01 | {Claim} | `{File}` | L{X}-{Y} | L{X}-{Y} | ✅ Verified | {Name/Date} |
+| Claim ID    | Claim   | File     | Documented Lines | Actual Lines | Status     | Verified By |
+| ----------- | ------- | -------- | ---------------- | ------------ | ---------- | ----------- |
+| FR-{MOD}-01 | {Claim} | `{File}` | L{X}-{Y}         | L{X}-{Y}     | ✅ Verified | {Name/Date} |
 
 ### Audit Trail
 
-| Date | Action | Reviewer | Notes |
-|------|--------|----------|-------|
-| {Date} | Initial verification | {Name} | {Notes} |
+| Date   | Action               | Reviewer | Notes   |
+| ------ | -------------------- | -------- | ------- |
+| {Date} | Initial verification | {Name}   | {Notes} |
 ```
 
 ### Security Architecture
@@ -289,17 +297,17 @@ Gather evidence from source code:
 ```markdown
 ### Authorization Matrix
 
-| Role | View | Create | Edit | Delete | Special Permissions |
-|------|:----:|:------:|:----:|:------:|---------------------|
-| Admin | ✅ | ✅ | ✅ | ✅ | Full access |
-| Manager | ✅ | ✅ | ✅ | ❌ | Company scope |
-| User | ✅ | ❌ | ❌ | ❌ | Own data only |
+| Role    | View  | Create | Edit  | Delete | Special Permissions |
+| ------- | :---: | :----: | :---: | :----: | ------------------- |
+| Admin   |   ✅   |   ✅    |   ✅   |   ✅    | Full access         |
+| Manager |   ✅   |   ✅    |   ✅   |   ❌    | Company scope       |
+| User    |   ✅   |   ❌    |   ❌   |   ❌    | Own data only       |
 
 ### Data Protection
 
-| Data Type | Protection | Evidence |
-|-----------|------------|----------|
-| PII | Encrypted at rest | `{File}:{Line}` |
+| Data Type | Protection        | Evidence        |
+| --------- | ----------------- | --------------- |
+| PII       | Encrypted at rest | `{File}:{Line}` |
 ```
 
 ### Glossary
@@ -307,10 +315,10 @@ Gather evidence from source code:
 ```markdown
 ## Glossary
 
-| Term | Definition | Context |
-|------|------------|---------|
-| {Term} | {Definition for non-technical stakeholders} | {Where used} |
-| {Acronym} | {Full form and meaning} | {Where used} |
+| Term      | Definition                                  | Context      |
+| --------- | ------------------------------------------- | ------------ |
+| {Term}    | {Definition for non-technical stakeholders} | {Where used} |
+| {Acronym} | {Full form and meaning}                     | {Where used} |
 ```
 
 ---
@@ -324,18 +332,18 @@ Generate AI-agent optimized companion file alongside the comprehensive documenta
 
 ### AI Companion Structure (10 Sections, ~260 lines)
 
-| Section | Content | Source from Full Doc |
-|---------|---------|---------------------|
-| Context | Purpose, entities, service | Executive Summary |
-| File Locations | Exact paths to all key files | Implementation Guide |
-| Domain Model | Properties, expressions | Domain Model |
-| API Contracts | Endpoints, request/response shapes | API Reference |
-| Business Rules | Validation, state transitions | Business Rules |
-| Patterns | Required ✅ / Anti-patterns ❌ | Architecture |
-| Integration | Events, dependencies | Cross-Service Integration |
-| Security | Authorization matrix | Security Architecture |
-| Test Scenarios | Key GIVEN/WHEN/THEN cases | Test Specifications |
-| Quick Reference | Decision tree, code snippets | Implementation Guide |
+| Section         | Content                            | Source from Full Doc      |
+| --------------- | ---------------------------------- | ------------------------- |
+| Context         | Purpose, entities, service         | Executive Summary         |
+| File Locations  | Exact paths to all key files       | Implementation Guide      |
+| Domain Model    | Properties, expressions            | Domain Model              |
+| API Contracts   | Endpoints, request/response shapes | API Reference             |
+| Business Rules  | Validation, state transitions      | Business Rules            |
+| Patterns        | Required ✅ / Anti-patterns ❌       | Architecture              |
+| Integration     | Events, dependencies               | Cross-Service Integration |
+| Security        | Authorization matrix               | Security Architecture     |
+| Test Scenarios  | Key GIVEN/WHEN/THEN cases          | Test Specifications       |
+| Quick Reference | Decision tree, code snippets       | Implementation Guide      |
 
 ### Compression Rules
 
@@ -362,21 +370,24 @@ After creating/updating module docs, update `docs/BUSINESS-FEATURES.md`:
 1. Read current content
 2. Verify module is listed in the "Detailed Module Documentation" table
 3. Add link if missing:
-   ```markdown
-   | **{Module}** | [Description] | [View Details](./business-features/{Module}/README.md) |
-   ```
+    ```markdown
+    | **{Module}** | [Description] | [View Details](./business-features/{Module}/README.md) |
+    ```
 
 ---
 
 ## Anti-Hallucination Protocols
 
 ### EVIDENCE_CHAIN_VALIDATION
+
 - Every feature claim MUST have code reference with file path and line numbers
 - Read actual source files before documenting
 - Never assume behavior without code evidence
 
 ### ACCURACY_CHECKPOINT
+
 Before writing any documentation:
+
 - "Have I read the actual code?"
 - "Are my line number references accurate?"
 - "Can I provide a code snippet as evidence?"
@@ -414,6 +425,7 @@ Before writing any documentation:
 - [ ] Master index (BUSINESS-FEATURES.md) updated
 
 ### AI Companion Checklist
+
 - [ ] AI companion file created at `README.{FeatureName}.ai.md`
 - [ ] AI companion ≤300 lines
 - [ ] File locations section complete with exact paths

@@ -1,102 +1,64 @@
 ---
 name: web-research
-description: Use this skill for requests related to web research; it provides a structured approach to conducting comprehensive web research 
+description: Query Pollinations text API with web-search models (gemini-search, perplexity-fast, nomnom, etc.). Use when you need web search grounded answers via Pollinations.
 ---
 
-# Web Research Skill
+# Web Research
 
-This skill provides a structured approach to conducting comprehensive web research using the `task` tool to spawn research subagents. It emphasizes planning, efficient delegation, and systematic synthesis of findings.
+## Available Models
 
-## When to Use This Skill
+- **gemini-search** — Google Gemini with web search grounding (default)
+- **perplexity-fast** — Perplexity AI, faster (default)
+- **perplexity** — Perplexity AI
+- **nomnom** — NomNom search model
 
-Use this skill when you need to:
-- Research complex topics requiring multiple information sources
-- Gather and synthesize current information from the web
-- Conduct comparative analysis across multiple subjects
-- Produce well-sourced research reports with clear citations
+By default, queries both **gemini-search** and **perplexity-fast** in parallel.
 
-## Research Process
+## Requirements
 
-### Step 1: Create and Save Research Plan
+- `curl`
 
-Before delegating to subagents, you MUST:
+## Authentication
 
-1. **Create a research folder** - Organize all research files in a dedicated folder relative to the current working directory:
-   ```
-   mkdir research_[topic_name]
-   ```
-   This keeps files organized and prevents clutter in the working directory.
+Set an API key in an environment variable (preferred):
 
-2. **Analyze the research question** - Break it down into distinct, non-overlapping subtopics
-
-3. **Write a research plan file** - Use the `write_file` tool to create `research_[topic_name]/research_plan.md` containing:
-   - The main research question
-   - 2-5 specific subtopics to investigate
-   - Expected information from each subtopic
-   - How results will be synthesized
-
-**Planning Guidelines:**
-- **Simple fact-finding**: 1-2 subtopics
-- **Comparative analysis**: 1 subtopic per comparison element (max 3)
-- **Complex investigations**: 3-5 subtopics
-
-### Step 2: Delegate to Research Subagents
-
-For each subtopic in your plan:
-
-1. **Use the `task` tool** to spawn a research subagent with:
-   - Clear, specific research question (no acronyms)
-   - Instructions to write findings to a file: `research_[topic_name]/findings_[subtopic].md`
-   - Budget: 3-5 web searches maximum
-
-2. **Run up to 3 subagents in parallel** for efficient research
-
-**Subagent Instructions Template:**
-```
-Research [SPECIFIC TOPIC]. Use the web_search tool to gather information.
-After completing your research, use write_file to save your findings to research_[topic_name]/findings_[subtopic].md.
-Include key facts, relevant quotes, and source URLs.
-Use 3-5 web searches maximum.
+```bash
+export POLLINATIONS_API_KEY="YOUR_KEY"
 ```
 
-### Step 3: Synthesize Findings
+Or create a local `.env` file at `.claude/skills/web-research/.env`:
 
-After all subagents complete:
+```bash
+POLLINATIONS_API_KEY="YOUR_KEY"
+```
 
-1. **Review the findings files** that were saved locally:
-   - First run `list_files research_[topic_name]` to see what files were created
-   - Then use `read_file` with the **file paths** (e.g., `research_[topic_name]/findings_*.md`)
-   - **Important**: Use `read_file` for LOCAL files only, not URLs
+If `POLLINATIONS_API_KEY` is not set, the script will prompt for a key (input hidden).
 
-2. **Synthesize the information** - Create a comprehensive response that:
-   - Directly answers the original question
-   - Integrates insights from all subtopics
-   - Cites specific sources with URLs (from the findings files)
-   - Identifies any gaps or limitations
+## Quick usage
 
-3. **Write final report** (optional) - Use `write_file` to create `research_[topic_name]/research_report.md` if requested
+```bash
+.claude/skills/web-research/scripts/web-research.sh "What is pollinations.ai?" 
+```
 
-**Note**: If you need to fetch additional information from URLs, use the `fetch_url` tool, not `read_file`.
+Choose a model:
 
-## Available Tools
+```bash
+.claude/skills/web-research/scripts/web-research.sh --model perplexity-fast "Fact-check this claim with sources"
+```
 
-You have access to:
-- **write_file**: Save research plans and findings to local files
-- **read_file**: Read local files (e.g., findings saved by subagents)
-- **list_files**: See what local files exist in a directory
-- **fetch_url**: Fetch content from URLs and convert to markdown (use this for web pages, not read_file)
-- **task**: Spawn research subagents with web_search access
+Compare multiple models:
 
-## Research Subagent Configuration
+```bash
+.claude/skills/web-research/scripts/web-research.sh --models gemini-search,perplexity-fast,nomnom "Compare answers"
+```
 
-Each subagent you spawn will have access to:
-- **web_search**: Search the web using Tavily (parameters: query, max_results, topic, include_raw_content)
-- **write_file**: Save their findings to the filesystem
+Run multi-model in parallel:
 
-## Best Practices
+```bash
+.claude/skills/web-research/scripts/web-research.sh --models gemini-search,perplexity-fast --parallel "Compare answers"
+```
 
-- **Plan before delegating** - Always write research_plan.md first
-- **Clear subtopics** - Ensure each subagent has distinct, non-overlapping scope
-- **File-based communication** - Have subagents save findings to files, not return them directly
-- **Systematic synthesis** - Read all findings files before creating final response
-- **Stop appropriately** - Don't over-research; 3-5 searches per subtopic is usually sufficient
+## Notes
+
+- Uses `https://gen.pollinations.ai/v1/chat/completions`
+- Sends `Authorization: Bearer <key>`

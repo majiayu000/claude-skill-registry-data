@@ -1,192 +1,236 @@
 ---
-name: mcp-tools
-description: 使用 FastMCP 框架开发交易相关的 MCP 工具, 包括交易所 API 集成(币安/OKX等)、行情数据获取、订单管理等.当需要创建 MCP 服务器或交易工具时触发此技能.
+name: MCP构建器
+description: 创建高质量 MCP（Model Context Protocol）服务器的指南，使大型语言模型能够通过设计良好的工具与外部服务交互。当构建 MCP 服务器以集成外部 API 或服务时使用，无论使用 Python（FastMCP）还是 Node/TypeScript（MCP SDK）。
+license: Complete terms in LICENSE.txt
 ---
 
-# FastMCP 交易工具开发指南
+# MCP Server Development Guide
 
-## 概述
+## Overview
 
-本技能指导使用 [FastMCP](https://github.com/jlowin/fastmcp) 框架开发交易相关的 MCP (Model Context Protocol) 工具.
-
-- **官方文档**: https://gofastmcp.com
-- **GitHub**: https://github.com/jlowin/fastmcp
-- **API 参考**: 见 `reference/fastmcp-api.md`
+Create MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. The quality of an MCP server is measured by how well it enables LLMs to accomplish real-world tasks.
 
 ---
 
-## 快速开始
+# Process
 
-### 依赖安装
+## 🚀 High-Level Workflow
 
-```bash
-uv add fastmcp httpx pydantic
-```
+Creating a high-quality MCP server involves four main phases:
 
-### 最小示例
+### Phase 1: Deep Research and Planning
 
-```python
-from fastmcp import FastMCP
+#### 1.1 Understand Modern MCP Design
 
-mcp = FastMCP("trading_mcp")
+**API Coverage vs. Workflow Tools:**
+Balance comprehensive API endpoint coverage with specialized workflow tools. Workflow tools can be more convenient for specific tasks, while comprehensive coverage gives agents flexibility to compose operations. Performance varies by client—some clients benefit from code execution that combines basic tools, while others work better with higher-level workflows. When uncertain, prioritize comprehensive API coverage.
 
-@mcp.tool
-async def get_price(symbol: str) -> str:
-    """获取价格"""
-    # 实现逻辑
-    pass
+**Tool Naming and Discoverability:**
+Clear, descriptive tool names help agents find the right tools quickly. Use consistent prefixes (e.g., `github_create_issue`, `github_list_repos`) and action-oriented naming.
 
-if __name__ == "__main__":
-    mcp.run()
+**Context Management:**
+Agents benefit from concise tool descriptions and the ability to filter/paginate results. Design tools that return focused, relevant data. Some clients support code execution which can help agents filter and process data efficiently.
+
+**Actionable Error Messages:**
+Error messages should guide agents toward solutions with specific suggestions and next steps.
+
+#### 1.2 Study MCP Protocol Documentation
+
+**Navigate the MCP specification:**
+
+Start with the sitemap to find relevant pages: `https://modelcontextprotocol.io/sitemap.xml`
+
+Then fetch specific pages with `.md` suffix for markdown format (e.g., `https://modelcontextprotocol.io/specification/draft.md`).
+
+Key pages to review:
+- Specification overview and architecture
+- Transport mechanisms (streamable HTTP, stdio)
+- Tool, resource, and prompt definitions
+
+#### 1.3 Study Framework Documentation
+
+**Recommended stack:**
+- **Language**: TypeScript (high-quality SDK support and good compatibility in many execution environments e.g. MCPB. Plus AI models are good at generating TypeScript code, benefiting from its broad usage, static typing and good linting tools)
+- **Transport**: Streamable HTTP for remote servers, using stateless JSON (simpler to scale and maintain, as opposed to stateful sessions and streaming responses). stdio for local servers.
+
+**Load framework documentation:**
+
+- **MCP Best Practices**: [📋 View Best Practices](./reference/mcp_best_practices.md) - Core guidelines
+
+**For TypeScript (recommended):**
+- **TypeScript SDK**: Use WebFetch to load `https://raw.githubusercontent.com/modelcontextprotocol/typescript-sdk/main/README.md`
+- [⚡ TypeScript Guide](./reference/node_mcp_server.md) - TypeScript patterns and examples
+
+**For Python:**
+- **Python SDK**: Use WebFetch to load `https://raw.githubusercontent.com/modelcontextprotocol/python-sdk/main/README.md`
+- [🐍 Python Guide](./reference/python_mcp_server.md) - Python patterns and examples
+
+#### 1.4 Plan Your Implementation
+
+**Understand the API:**
+Review the service's API documentation to identify key endpoints, authentication requirements, and data models. Use web search and WebFetch as needed.
+
+**Tool Selection:**
+Prioritize comprehensive API coverage. List endpoints to implement, starting with the most common operations.
+
+---
+
+### Phase 2: Implementation
+
+#### 2.1 Set Up Project Structure
+
+See language-specific guides for project setup:
+- [⚡ TypeScript Guide](./reference/node_mcp_server.md) - Project structure, package.json, tsconfig.json
+- [🐍 Python Guide](./reference/python_mcp_server.md) - Module organization, dependencies
+
+#### 2.2 Implement Core Infrastructure
+
+Create shared utilities:
+- API client with authentication
+- Error handling helpers
+- Response formatting (JSON/Markdown)
+- Pagination support
+
+#### 2.3 Implement Tools
+
+For each tool:
+
+**Input Schema:**
+- Use Zod (TypeScript) or Pydantic (Python)
+- Include constraints and clear descriptions
+- Add examples in field descriptions
+
+**Output Schema:**
+- Define `outputSchema` where possible for structured data
+- Use `structuredContent` in tool responses (TypeScript SDK feature)
+- Helps clients understand and process tool outputs
+
+**Tool Description:**
+- Concise summary of functionality
+- Parameter descriptions
+- Return type schema
+
+**Implementation:**
+- Async/await for I/O operations
+- Proper error handling with actionable messages
+- Support pagination where applicable
+- Return both text content and structured data when using modern SDKs
+
+**Annotations:**
+- `readOnlyHint`: true/false
+- `destructiveHint`: true/false
+- `idempotentHint`: true/false
+- `openWorldHint`: true/false
+
+---
+
+### Phase 3: Review and Test
+
+#### 3.1 Code Quality
+
+Review for:
+- No duplicated code (DRY principle)
+- Consistent error handling
+- Full type coverage
+- Clear tool descriptions
+
+#### 3.2 Build and Test
+
+**TypeScript:**
+- Run `npm run build` to verify compilation
+- Test with MCP Inspector: `npx @modelcontextprotocol/inspector`
+
+**Python:**
+- Verify syntax: `python -m py_compile your_server.py`
+- Test with MCP Inspector
+
+See language-specific guides for detailed testing approaches and quality checklists.
+
+---
+
+### Phase 4: Create Evaluations
+
+After implementing your MCP server, create comprehensive evaluations to test its effectiveness.
+
+**Load [✅ Evaluation Guide](./reference/evaluation.md) for complete evaluation guidelines.**
+
+#### 4.1 Understand Evaluation Purpose
+
+Use evaluations to test whether LLMs can effectively use your MCP server to answer realistic, complex questions.
+
+#### 4.2 Create 10 Evaluation Questions
+
+To create effective evaluations, follow the process outlined in the evaluation guide:
+
+1. **Tool Inspection**: List available tools and understand their capabilities
+2. **Content Exploration**: Use READ-ONLY operations to explore available data
+3. **Question Generation**: Create 10 complex, realistic questions
+4. **Answer Verification**: Solve each question yourself to verify answers
+
+#### 4.3 Evaluation Requirements
+
+Ensure each question is:
+- **Independent**: Not dependent on other questions
+- **Read-only**: Only non-destructive operations required
+- **Complex**: Requiring multiple tool calls and deep exploration
+- **Realistic**: Based on real use cases humans would care about
+- **Verifiable**: Single, clear answer that can be verified by string comparison
+- **Stable**: Answer won't change over time
+
+#### 4.4 Output Format
+
+Create an XML file with this structure:
+
+```xml
+<evaluation>
+  <qa_pair>
+    <question>Find discussions about AI model launches with animal codenames. One model needed a specific safety designation that uses the format ASL-X. What number X was being determined for the model named after a spotted wild cat?</question>
+    <answer>3</answer>
+  </qa_pair>
+<!-- More qa_pairs... -->
+</evaluation>
 ```
 
 ---
 
-## 项目结构
+# Reference Files
 
-```
-trading_mcp/
-├── server.py           # MCP 服务器入口
-├── tools/
-│   ├── __init__.py
-│   ├── market.py       # 行情数据工具
-│   ├── account.py      # 账户信息工具
-│   ├── order.py        # 订单管理工具
-│   └── analysis.py     # 分析工具
-├── models/
-│   ├── __init__.py
-│   └── schemas.py      # Pydantic 模型定义
-├── utils/
-│   ├── __init__.py
-│   ├── client.py       # API 客户端
-│   └── errors.py       # 错误处理
-└── pyproject.toml
-```
+## 📚 Documentation Library
 
----
+Load these resources as needed during development:
 
-## 环境变量加载 (重要)
+### Core MCP Documentation (Load First)
+- **MCP Protocol**: Start with sitemap at `https://modelcontextprotocol.io/sitemap.xml`, then fetch specific pages with `.md` suffix
+- [📋 MCP Best Practices](./reference/mcp_best_practices.md) - Universal MCP guidelines including:
+  - Server and tool naming conventions
+  - Response format guidelines (JSON vs Markdown)
+  - Pagination best practices
+  - Transport selection (streamable HTTP vs stdio)
+  - Security and error handling standards
 
-MCP 服务器必须在启动时主动加载 `.env` 文件, 因为 MCP 进程不会自动继承 shell 环境变量.
+### SDK Documentation (Load During Phase 1/2)
+- **Python SDK**: Fetch from `https://raw.githubusercontent.com/modelcontextprotocol/python-sdk/main/README.md`
+- **TypeScript SDK**: Fetch from `https://raw.githubusercontent.com/modelcontextprotocol/typescript-sdk/main/README.md`
 
-```python
-from pathlib import Path
-from dotenv import load_dotenv
+### Language-Specific Implementation Guides (Load During Phase 2)
+- [🐍 Python Implementation Guide](./reference/python_mcp_server.md) - Complete Python/FastMCP guide with:
+  - Server initialization patterns
+  - Pydantic model examples
+  - Tool registration with `@mcp.tool`
+  - Complete working examples
+  - Quality checklist
 
-# 必须在模块顶部、其他 os.environ 调用之前加载 .env
-_project_root = Path(__file__).parent.parent
-load_dotenv(_project_root / ".env")
-```
+- [⚡ TypeScript Implementation Guide](./reference/node_mcp_server.md) - Complete TypeScript guide with:
+  - Project structure
+  - Zod schema patterns
+  - Tool registration with `server.registerTool`
+  - Complete working examples
+  - Quality checklist
 
-**关键点:**
-- `load_dotenv()` 必须在任何 `os.environ.get()` 之前调用
-- 使用绝对路径定位 `.env` 文件, 避免工作目录问题
-- 修改 `.env` 后需要**重启 MCP 服务器**才能生效
-
----
-
-## 安全要求 (重要)
-
-```python
-import os
-
-# API 密钥必须使用环境变量, 禁止硬编码!
-API_KEY = os.environ.get("BINANCE_API_KEY")
-API_SECRET = os.environ.get("BINANCE_API_SECRET")
-
-if not API_KEY or not API_SECRET:
-    raise ValueError("BINANCE_API_KEY 和 BINANCE_API_SECRET 环境变量必须设置")
-```
-
-### .env 文件示例
-
-```bash
-# 项目根目录 .env 文件
-BINANCE_API_KEY=your_api_key_here
-BINANCE_API_SECRET=your_api_secret_here
-COINANK_API_KEY=your_coinank_key
-
-# 模拟交易模式 (默认开启, 防止误操作)
-TRADING_SIMULATION=true
-```
-
----
-
-## 开发规范
-
-### 命名规范
-
-- 服务器名称: `{exchange}_mcp` (如 `binance_mcp`, `okx_mcp`)
-- 工具名称: `{exchange}_{action}_{target}` (如 `binance_get_price`, `okx_place_order`)
-- 使用 snake_case
-
-### 工具分类
-
-| 类型 | 说明 | readOnlyHint | destructiveHint |
-|------|------|--------------|-----------------|
-| 行情查询 | 价格、K线、深度 | true | false |
-| 账户查询 | 余额、持仓 | true | false |
-| 下单操作 | 开仓、平仓 | false | true |
-| 订单管理 | 撤单、修改 | false | true |
-
-### 错误处理
-
-```python
-import httpx
-
-def handle_api_error(e: Exception) -> str:
-    """统一错误处理 - 必须提供清晰、可操作的错误信息"""
-    if isinstance(e, httpx.HTTPStatusError):
-        status = e.response.status_code
-        error_messages = {
-            400: "请求参数错误, 请检查交易对符号是否正确",
-            401: "API 认证失败, 请检查 API Key 配置",
-            403: "权限不足, 请检查 API Key 权限设置",
-            429: "请求频率过高, 请稍后重试",
-            418: "IP 被临时封禁, 请等待解封",
-            500: "交易所服务器错误, 请稍后重试"
-        }
-        return f"Error: {error_messages.get(status, f'API 请求失败, 状态码 {status}')}"
-    elif isinstance(e, httpx.TimeoutException):
-        return "Error: 请求超时, 请重试"
-    return f"Error: {type(e).__name__}: {str(e)}"
-```
-
----
-
-## 运行与测试
-
-### 启动服务器
-
-```bash
-# stdio 模式 (默认, 用于本地工具)
-python server.py
-
-# HTTP 模式 (用于远程服务)
-python -c "from server import mcp; mcp.run(transport='http', port=8000)"
-```
-
-### 使用 MCP Inspector 测试
-
-```bash
-npx @modelcontextprotocol/inspector python server.py
-```
-
----
-
-## 支持的交易所
-
-| 交易所 | 现货 | 合约 | API 文档 |
-|--------|------|------|----------|
-| Binance | Yes | Yes | https://binance-docs.github.io/apidocs |
-| OKX | Yes | Yes | https://www.okx.com/docs-v5 |
-| Bybit | Yes | Yes | https://bybit-exchange.github.io/docs |
-| Bitget | Yes | Yes | https://bitgetlimited.github.io/apidoc |
-
----
-
-## 参考资料
-
-- **FastMCP API 参考**: `reference/fastmcp-api.md`
-- FastMCP 官方文档: https://gofastmcp.com
-- MCP 协议规范: https://modelcontextprotocol.io
+### Evaluation Guide (Load During Phase 4)
+- [✅ Evaluation Guide](./reference/evaluation.md) - Complete evaluation creation guide with:
+  - Question creation guidelines
+  - Answer verification strategies
+  - XML format specifications
+  - Example questions and answers
+  - Running an evaluation with the provided scripts

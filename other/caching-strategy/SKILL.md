@@ -1,678 +1,446 @@
 ---
 name: caching-strategy
-description: Implement efficient caching strategies using Redis, Memcached, CDN, and cache invalidation patterns. Use when optimizing application performance, reducing database load, or improving response times.
+description: Understand the caching architecture, Cache Components (PPR), and revalidation mechanisms. Use when debugging stale content, modifying caching behavior, or understanding data freshness guarantees.
 ---
 
 # Caching Strategy
 
-## Overview
-
-Implement effective caching strategies to improve application performance, reduce latency, and decrease load on backend systems.
+> **Reference**: [Next.js Cache Components](https://nextjs.org/docs/app/getting-started/cache-components) — the official documentation for `use cache`, `cacheLife`, `cacheTag`, and Partial Prerendering.
 
 ## When to Use
 
-- Reducing database query load
-- Improving API response times
-- Handling high traffic loads
-- Caching expensive computations
-- Storing session data
-- CDN integration for static assets
-- Implementing distributed caching
-- Rate limiting and throttling
+Use this skill when:
 
-## Caching Layers
+- Understanding which data is cached vs. real-time
+- Debugging why content isn't updating after Dashboard changes
+- Configuring Saleor webhooks for cache invalidation
+- Modifying the `/api/revalidate` endpoint
+- Working with `"use cache"` and Suspense patterns
+
+---
+
+## Data Freshness Model
+
+### The Key Principle
+
+> **Display pages are cached for performance. Transactional flows are always real-time.**
+
+| Page/Component                | Data Source                                 | Freshness              | Why                         |
+| ----------------------------- | ------------------------------------------- | ---------------------- | --------------------------- |
+| **PDP (Product Detail)**      | `getProductData()`                          | ⚠️ Cached (5 min TTL)  | Performance - instant loads |
+| **Category/Collection pages** | `getCategoryData()` / `getCollectionData()` | ⚠️ Cached (5 min TTL)  | Performance                 |
+| **Homepage**                  | `getFeaturedProducts()`                     | ⚠️ Cached (5 min TTL)  | Performance                 |
+| **Navigation**                | `NavLinks`                                  | ⚠️ Cached (1 hour TTL) | Rarely changes              |
+| **Cart Drawer**               | `Checkout.find()`                           | ✅ Always fresh        | Uses `cache: "no-cache"`    |
+| **Checkout Page**             | `useCheckoutQuery()`                        | ✅ Always fresh        | Direct API call via urql    |
+| **Add to Cart action**        | Saleor mutation                             | ✅ Always fresh        | Saleor calculates price     |
+
+### Price Flow Diagram
 
 ```
-┌─────────────────────────────────────────┐
-│         Client Browser Cache            │
-├─────────────────────────────────────────┤
-│              CDN Cache                  │
-├─────────────────────────────────────────┤
-│      Application Memory Cache           │
-├─────────────────────────────────────────┤
-│      Distributed Cache (Redis)          │
-├─────────────────────────────────────────┤
-│            Database                     │
-└─────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────┐
+│                         PRICE FLOW                                  │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                     │
+│   PDP Display          Cart/Checkout          Payment               │
+│   ────────────         ─────────────          ───────               │
+│                                                                     │
+│   ┌───────────┐        ┌───────────┐         ┌───────────┐         │
+│   │  Cached   │───────▶│  FRESH    │────────▶│  FRESH    │         │
+│   │  $29.99   │  Add   │  $35.99   │  Pay    │  $35.99   │         │
+│   └───────────┘  to    └───────────┘         └───────────┘         │
+│                  Cart                                               │
+│   "use cache"          cache:"no-cache"      Saleor validates       │
+│   5 min TTL            Always from API       at checkout            │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
+
+⚠️ User may see different price in cart than on PDP if price changed.
+✅ User CANNOT checkout at stale price - Saleor always uses current price.
 ```
 
-## Implementation Examples
+### Why This Is Safe
 
-### 1. **Redis Cache Implementation (Node.js)**
+1. **Saleor is the source of truth**: When you call `checkoutLinesAdd`, Saleor calculates the price server-side using current data
+2. **Cart always fetches fresh**: `Checkout.find()` uses `cache: "no-cache"`
+3. **Checkout validates**: `checkoutComplete` will fail if something is wrong
+4. **Webhooks enable instant updates**: When configured, price changes trigger immediate cache invalidation
+
+---
+
+## Cache Components Architecture
+
+### What It Is
+
+Cache Components enable **Partial Prerendering (PPR)** - mixing static, cached, and dynamic content in a single route. The static shell is served instantly from CDN, while dynamic parts stream in via Suspense.
+
+### Current Status: ✅ ENABLED (Experimental)
+
+> ⚠️ **Note**: Cache Components are still marked **experimental** in Next.js. The patterns are functional but evolving. See [Disabling Cache Components](#disabling-cache-components) if you need to rollback.
+
+Cache Components are enabled in `next.config.js`:
+
+```javascript
+const config = {
+	cacheComponents: true,
+};
+```
+
+### How It Works
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  STATIC SHELL (Instant from CDN)                                │
+│  ┌─────────────────────────────────────────────────────────┐   │
+│  │  Header skeleton, layout, cached product data            │   │
+│  │  Source: "use cache" functions (getProductData, etc.)    │   │
+│  └─────────────────────────────────────────────────────────┘   │
+│                                                                 │
+│  ┌─────────────────────────────────────────────────────────┐   │
+│  │  <Suspense fallback={<Skeleton />}>                     │   │
+│  │    Dynamic content (streams in after initial render)     │   │
+│  │    - Variant selection (reads searchParams)              │   │
+│  │    - Logo, NavLinks (use usePathname)                    │   │
+│  │    - Cart count (reads cookies)                          │   │
+│  │  </Suspense>                                             │   │
+│  └─────────────────────────────────────────────────────────┘   │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### Cached Functions with Tags
+
+Each cached function has a **tag** for targeted invalidation:
 
 ```typescript
-import Redis from 'ioredis';
+// src/app/[channel]/(main)/products/[slug]/page.tsx
+async function getProductData(slug: string, channel: string) {
+	"use cache";
+	cacheLife("minutes"); // 5 min default TTL
+	cacheTag(`product:${slug}`); // Tag for webhook invalidation
 
-interface CacheOptions {
-  ttl?: number; // Time to live in seconds
-  prefix?: string;
+	return executePublicGraphQL(ProductDetailsDocument, {
+		variables: { slug, channel },
+	});
 }
-
-class CacheService {
-  private redis: Redis;
-  private defaultTTL = 3600; // 1 hour
-
-  constructor(redisUrl: string) {
-    this.redis = new Redis(redisUrl, {
-      retryStrategy: (times) => {
-        const delay = Math.min(times * 50, 2000);
-        return delay;
-      },
-      maxRetriesPerRequest: 3
-    });
-
-    this.redis.on('connect', () => {
-      console.log('Redis connected');
-    });
-
-    this.redis.on('error', (error) => {
-      console.error('Redis error:', error);
-    });
-  }
-
-  /**
-   * Get cached value
-   */
-  async get<T>(key: string): Promise<T | null> {
-    try {
-      const value = await this.redis.get(key);
-      if (!value) return null;
-
-      return JSON.parse(value) as T;
-    } catch (error) {
-      console.error(`Cache get error for key ${key}:`, error);
-      return null;
-    }
-  }
-
-  /**
-   * Set cached value
-   */
-  async set(
-    key: string,
-    value: any,
-    options: CacheOptions = {}
-  ): Promise<boolean> {
-    try {
-      const ttl = options.ttl || this.defaultTTL;
-      const serialized = JSON.stringify(value);
-
-      if (ttl > 0) {
-        await this.redis.setex(key, ttl, serialized);
-      } else {
-        await this.redis.set(key, serialized);
-      }
-
-      return true;
-    } catch (error) {
-      console.error(`Cache set error for key ${key}:`, error);
-      return false;
-    }
-  }
-
-  /**
-   * Delete cached value
-   */
-  async delete(key: string): Promise<boolean> {
-    try {
-      await this.redis.del(key);
-      return true;
-    } catch (error) {
-      console.error(`Cache delete error for key ${key}:`, error);
-      return false;
-    }
-  }
-
-  /**
-   * Delete multiple keys by pattern
-   */
-  async deletePattern(pattern: string): Promise<number> {
-    try {
-      const keys = await this.redis.keys(pattern);
-      if (keys.length === 0) return 0;
-
-      await this.redis.del(...keys);
-      return keys.length;
-    } catch (error) {
-      console.error(`Cache delete pattern error for ${pattern}:`, error);
-      return 0;
-    }
-  }
-
-  /**
-   * Get or set pattern - fetch from cache or compute and cache
-   */
-  async getOrSet<T>(
-    key: string,
-    fetchFn: () => Promise<T>,
-    options: CacheOptions = {}
-  ): Promise<T> {
-    // Try to get from cache
-    const cached = await this.get<T>(key);
-    if (cached !== null) {
-      return cached;
-    }
-
-    // Fetch and cache
-    const value = await fetchFn();
-    await this.set(key, value, options);
-
-    return value;
-  }
-
-  /**
-   * Implement cache-aside pattern with stale-while-revalidate
-   */
-  async getStaleWhileRevalidate<T>(
-    key: string,
-    fetchFn: () => Promise<T>,
-    options: {
-      ttl: number;
-      staleTime: number;
-    }
-  ): Promise<T> {
-    const cacheKey = `cache:${key}`;
-    const timestampKey = `cache:${key}:timestamp`;
-
-    const [cached, timestamp] = await Promise.all([
-      this.get<T>(cacheKey),
-      this.redis.get(timestampKey)
-    ]);
-
-    const now = Date.now();
-    const age = timestamp ? now - parseInt(timestamp) : Infinity;
-
-    // Return cached if fresh
-    if (cached !== null && age < options.ttl * 1000) {
-      return cached;
-    }
-
-    // Return stale while revalidating in background
-    if (cached !== null && age < options.staleTime * 1000) {
-      // Background revalidation
-      fetchFn()
-        .then(async (fresh) => {
-          await this.set(cacheKey, fresh, { ttl: options.ttl });
-          await this.redis.set(timestampKey, now.toString());
-        })
-        .catch(console.error);
-
-      return cached;
-    }
-
-    // Fetch fresh data
-    const fresh = await fetchFn();
-    await Promise.all([
-      this.set(cacheKey, fresh, { ttl: options.ttl }),
-      this.redis.set(timestampKey, now.toString())
-    ]);
-
-    return fresh;
-  }
-
-  /**
-   * Increment counter with TTL
-   */
-  async increment(key: string, ttl?: number): Promise<number> {
-    const count = await this.redis.incr(key);
-
-    if (count === 1 && ttl) {
-      await this.redis.expire(key, ttl);
-    }
-
-    return count;
-  }
-
-  /**
-   * Check if key exists
-   */
-  async exists(key: string): Promise<boolean> {
-    const result = await this.redis.exists(key);
-    return result === 1;
-  }
-
-  /**
-   * Get remaining TTL
-   */
-  async ttl(key: string): Promise<number> {
-    return await this.redis.ttl(key);
-  }
-
-  /**
-   * Close connection
-   */
-  async disconnect(): Promise<void> {
-    await this.redis.quit();
-  }
-}
-
-// Usage
-const cache = new CacheService('redis://localhost:6379');
-
-// Simple get/set
-await cache.set('user:123', { name: 'John', age: 30 }, { ttl: 3600 });
-const user = await cache.get('user:123');
-
-// Get or set pattern
-const posts = await cache.getOrSet(
-  'posts:recent',
-  async () => {
-    return await database.query('SELECT * FROM posts ORDER BY created_at DESC LIMIT 10');
-  },
-  { ttl: 300 }
-);
-
-// Stale-while-revalidate
-const data = await cache.getStaleWhileRevalidate(
-  'expensive-query',
-  async () => await runExpensiveQuery(),
-  { ttl: 300, staleTime: 600 }
-);
 ```
 
-### 2. **Cache Decorator (Python)**
+### Tag Registry
 
-```python
-import functools
-import json
-import hashlib
-from typing import Any, Callable, Optional
-from redis import Redis
-import time
+| Tag Pattern         | Used By                                        | Invalidated When          |
+| ------------------- | ---------------------------------------------- | ------------------------- |
+| `product:{slug}`    | `getProductData()`                             | Product updated in Saleor |
+| `category:{slug}`   | `getCategoryData()`                            | Category updated          |
+| `collection:{slug}` | `getCollectionData()`, `getFeaturedProducts()` | Collection updated        |
+| `navigation`        | `NavLinks`                                     | Menu structure changed    |
 
-class CacheDecorator:
-    def __init__(self, redis_client: Redis, ttl: int = 3600):
-        self.redis = redis_client
-        self.ttl = ttl
+---
 
-    def cache_key(self, func: Callable, *args, **kwargs) -> str:
-        """Generate cache key from function name and arguments."""
-        # Create deterministic key from function and arguments
-        key_parts = [
-            func.__module__,
-            func.__name__,
-            str(args),
-            str(sorted(kwargs.items()))
-        ]
-        key_string = ':'.join(key_parts)
-        key_hash = hashlib.md5(key_string.encode()).hexdigest()
-        return f"cache:{func.__name__}:{key_hash}"
+## Key Patterns
 
-    def __call__(self, func: Callable) -> Callable:
-        @functools.wraps(func)
-        def wrapper(*args, **kwargs):
-            # Generate cache key
-            cache_key = self.cache_key(func, *args, **kwargs)
+### 1. Suspense Around Dynamic Content
 
-            # Try to get from cache
-            cached = self.redis.get(cache_key)
-            if cached:
-                print(f"Cache HIT: {cache_key}")
-                return json.loads(cached)
+Any component accessing runtime data must be wrapped in Suspense.
 
-            # Cache miss - execute function
-            print(f"Cache MISS: {cache_key}")
-            result = func(*args, **kwargs)
+**What counts as "dynamic data" (triggers Suspense requirement):**
 
-            # Store in cache
-            self.redis.setex(
-                cache_key,
-                self.ttl,
-                json.dumps(result)
-            )
+| Data Access                 | Why It's Dynamic    |
+| --------------------------- | ------------------- |
+| `cookies()`                 | Per-request         |
+| `headers()`                 | Per-request         |
+| `searchParams`              | URL-dependent       |
+| `usePathname()`             | Client-side routing |
+| `useParams()`               | Client-side routing |
+| `Date.now()`                | Time-dependent      |
+| Server Actions              | Form submissions    |
+| `cache: "no-cache"` fetches | Always fresh        |
 
-            return result
+```tsx
+// Layout wraps children in Suspense
+<main className="flex-1">
+  <Suspense>{props.children}</Suspense>
+</main>
 
-        # Add cache invalidation method
-        def invalidate(*args, **kwargs):
-            cache_key = self.cache_key(func, *args, **kwargs)
-            self.redis.delete(cache_key)
-
-        wrapper.invalidate = invalidate
-        return wrapper
-
-
-# Usage
-redis = Redis(host='localhost', port=6379, db=0)
-cache = CacheDecorator(redis, ttl=300)
-
-@cache
-def get_user_profile(user_id: int) -> dict:
-    """Fetch user profile from database."""
-    print(f"Fetching user {user_id} from database...")
-    # Simulate database query
-    time.sleep(1)
-    return {
-        'id': user_id,
-        'name': 'John Doe',
-        'email': 'john@example.com'
-    }
-
-# First call - cache miss
-profile = get_user_profile(123)  # Takes 1 second
-
-# Second call - cache hit
-profile = get_user_profile(123)  # Instant
-
-# Invalidate cache
-get_user_profile.invalidate(123)
+// Header wraps NavLinks in Suspense (uses usePathname for active state)
+<Suspense fallback={<NavLinksSkeleton />}>
+  <NavLinks channel={channel} />
+</Suspense>
 ```
 
-### 3. **Multi-Level Cache**
+### 2. Public vs Authenticated Queries
+
+Two explicit GraphQL helpers:
+
+- `executePublicGraphQL` - Safe inside `"use cache"` (no cookies needed)
+- `executeAuthenticatedGraphQL` - NOT safe inside `"use cache"` (requires cookies)
 
 ```typescript
-interface CacheLevel {
-  get(key: string): Promise<any>;
-  set(key: string, value: any, ttl?: number): Promise<void>;
-  delete(key: string): Promise<void>;
+import { executePublicGraphQL, executeAuthenticatedGraphQL } from "@/lib/graphql";
+
+// ✅ Public data - safe inside "use cache"
+async function getProductData(slug: string, channel: string) {
+	"use cache";
+	return executePublicGraphQL(ProductDetailsDocument, {
+		variables: { slug, channel },
+	});
 }
 
-class MemoryCache implements CacheLevel {
-  private cache = new Map<string, { value: any; expiry: number }>();
-
-  async get(key: string): Promise<any> {
-    const item = this.cache.get(key);
-    if (!item) return null;
-
-    if (Date.now() > item.expiry) {
-      this.cache.delete(key);
-      return null;
-    }
-
-    return item.value;
-  }
-
-  async set(key: string, value: any, ttl: number = 60): Promise<void> {
-    this.cache.set(key, {
-      value,
-      expiry: Date.now() + ttl * 1000
-    });
-  }
-
-  async delete(key: string): Promise<void> {
-    this.cache.delete(key);
-  }
-
-  clear(): void {
-    this.cache.clear();
-  }
-}
-
-class RedisCache implements CacheLevel {
-  constructor(private redis: Redis) {}
-
-  async get(key: string): Promise<any> {
-    const value = await this.redis.get(key);
-    return value ? JSON.parse(value) : null;
-  }
-
-  async set(key: string, value: any, ttl: number = 3600): Promise<void> {
-    await this.redis.setex(key, ttl, JSON.stringify(value));
-  }
-
-  async delete(key: string): Promise<void> {
-    await this.redis.del(key);
-  }
-}
-
-class MultiLevelCache {
-  private levels: CacheLevel[];
-
-  constructor(levels: CacheLevel[]) {
-    this.levels = levels; // Ordered from fastest to slowest
-  }
-
-  async get<T>(key: string): Promise<T | null> {
-    for (let i = 0; i < this.levels.length; i++) {
-      const value = await this.levels[i].get(key);
-
-      if (value !== null) {
-        // Backfill faster caches
-        for (let j = 0; j < i; j++) {
-          await this.levels[j].set(key, value);
-        }
-
-        return value as T;
-      }
-    }
-
-    return null;
-  }
-
-  async set(key: string, value: any, ttl?: number): Promise<void> {
-    // Set in all cache levels
-    await Promise.all(
-      this.levels.map(level => level.set(key, value, ttl))
-    );
-  }
-
-  async delete(key: string): Promise<void> {
-    await Promise.all(
-      this.levels.map(level => level.delete(key))
-    );
-  }
-}
-
-// Usage
-const cache = new MultiLevelCache([
-  new MemoryCache(),
-  new RedisCache(redis)
-]);
-
-// Get from fastest available cache
-const data = await cache.get('user:123');
-
-// Set in all caches
-await cache.set('user:123', userData, 3600);
+// ✅ User data - NOT inside "use cache" (requires cookies)
+const { me } = await executeAuthenticatedGraphQL(CurrentUserDocument, {
+	cache: "no-cache",
+});
 ```
 
-### 4. **Cache Invalidation Strategies**
+### 3. Don't Use `searchParams` Inside `"use cache"`
 
 ```typescript
-class CacheInvalidation {
-  constructor(private cache: CacheService) {}
+// ❌ BAD - searchParams is runtime data
+export async function generateMetadata(props) {
+	"use cache";
+	const searchParams = await props.searchParams; // Error!
+}
 
-  /**
-   * Time-based invalidation (TTL)
-   */
-  async setWithTTL(key: string, value: any, seconds: number): Promise<void> {
-    await this.cache.set(key, value, { ttl: seconds });
-  }
+// ✅ GOOD - Only access params (becomes cache key)
+export async function generateMetadata(props) {
+	"use cache";
+	const params = await props.params; // OK
+}
 
-  /**
-   * Tag-based invalidation
-   */
-  async setWithTags(
-    key: string,
-    value: any,
-    tags: string[]
-  ): Promise<void> {
-    // Store value
-    await this.cache.set(key, value);
-
-    // Store tag associations
-    for (const tag of tags) {
-      await this.cache.redis.sadd(`tag:${tag}`, key);
-    }
-  }
-
-  async invalidateByTag(tag: string): Promise<number> {
-    // Get all keys with this tag
-    const keys = await this.cache.redis.smembers(`tag:${tag}`);
-
-    if (keys.length === 0) return 0;
-
-    // Delete all keys
-    await Promise.all(
-      keys.map(key => this.cache.delete(key))
-    );
-
-    // Delete tag set
-    await this.cache.redis.del(`tag:${tag}`);
-
-    return keys.length;
-  }
-
-  /**
-   * Event-based invalidation
-   */
-  async invalidateOnEvent(
-    entity: string,
-    id: string,
-    event: 'create' | 'update' | 'delete'
-  ): Promise<void> {
-    const patterns = [
-      `${entity}:${id}`,
-      `${entity}:${id}:*`,
-      `${entity}:list:*`,
-      `${entity}:count`
-    ];
-
-    for (const pattern of patterns) {
-      await this.cache.deletePattern(pattern);
-    }
-  }
-
-  /**
-   * Version-based invalidation
-   */
-  async setVersioned(
-    key: string,
-    value: any,
-    version: number
-  ): Promise<void> {
-    const versionedKey = `${key}:v${version}`;
-    await this.cache.set(versionedKey, value);
-    await this.cache.set(`${key}:version`, version);
-  }
-
-  async getVersioned(key: string): Promise<any> {
-    const version = await this.cache.get<number>(`${key}:version`);
-    if (!version) return null;
-
-    return await this.cache.get(`${key}:v${version}`);
-  }
+// ✅ GOOD - Access searchParams outside cache scope
+export async function generateMetadata(props) {
+	const searchParams = await props.searchParams; // No "use cache"
 }
 ```
 
-### 5. **HTTP Caching Headers**
+### 4. CSS Order Pattern for Mixed Static/Dynamic Layouts
+
+When you need dynamic content to appear **above** static content visually, use CSS `order`:
+
+```tsx
+// PDP: Category (dynamic) appears above Product Name (static)
+<div className="flex flex-col gap-3">
+	{/* Static shell - renders first but order:2 */}
+	<h1 className="order-2">{product.name}</h1>
+
+	{/* Dynamic - streams in, order:1 appears above h1 */}
+	<Suspense fallback={<Skeleton className="order-1" />}>
+		<VariantSection /> {/* Contains order-1 and order-3 elements */}
+	</Suspense>
+
+	{/* Static - order:4 appears last */}
+	<div className="order-4">
+		<ProductAttributes />
+	</div>
+</div>
+```
+
+**Visual result:**
+
+```
+1. Category + Sale badge  (dynamic, order-1)
+2. Product Name           (static, order-2)
+3. Variant selectors      (dynamic, order-3)
+4. Product details        (static, order-4)
+```
+
+This keeps `<h1>` in the static shell for SEO while allowing dynamic content to appear above it.
+
+### 5. GraphQL Auth Defaults
+
+Two explicit GraphQL helpers ensure you always know what data access level you're using:
+
+- `executePublicGraphQL` - Public queries only (products, menus, categories)
+- `executeAuthenticatedGraphQL` - Requires user session cookies (checkout, user data)
+
+This ensures:
+
+- Only publicly visible products are fetched
+- No user cookies in cache scope (safe for `"use cache"`)
+- No "Signature has expired" errors on public pages
 
 ```typescript
-import express from 'express';
+import { executePublicGraphQL, executeAuthenticatedGraphQL } from "@/lib/graphql";
 
-const app = express();
-
-// Cache-Control middleware
-function cacheControl(maxAge: number, options: {
-  private?: boolean;
-  noStore?: boolean;
-  noCache?: boolean;
-  mustRevalidate?: boolean;
-  staleWhileRevalidate?: number;
-} = {}) {
-  return (req: express.Request, res: express.Response, next: express.NextFunction) => {
-    const directives: string[] = [];
-
-    if (options.noStore) {
-      directives.push('no-store');
-    } else if (options.noCache) {
-      directives.push('no-cache');
-    } else {
-      directives.push(options.private ? 'private' : 'public');
-      directives.push(`max-age=${maxAge}`);
-
-      if (options.staleWhileRevalidate) {
-        directives.push(`stale-while-revalidate=${options.staleWhileRevalidate}`);
-      }
-    }
-
-    if (options.mustRevalidate) {
-      directives.push('must-revalidate');
-    }
-
-    res.setHeader('Cache-Control', directives.join(', '));
-    next();
-  };
-}
-
-// Static assets - long cache
-app.use('/static', cacheControl(31536000), express.static('public'));
-
-// API - short cache with revalidation
-app.get('/api/data',
-  cacheControl(60, { staleWhileRevalidate: 300 }),
-  (req, res) => {
-    res.json({ data: 'cached for 60s' });
-  }
-);
-
-// Dynamic content - no cache
-app.get('/api/user/profile',
-  cacheControl(0, { private: true, noCache: true }),
-  (req, res) => {
-    res.json({ user: 'always fresh' });
-  }
-);
-
-// ETag support
-app.get('/api/resource/:id', async (req, res) => {
-  const resource = await getResource(req.params.id);
-  const etag = generateETag(resource);
-
-  res.setHeader('ETag', etag);
-
-  // Check if client has current version
-  if (req.headers['if-none-match'] === etag) {
-    return res.status(304).end();
-  }
-
-  res.json(resource);
+// ✅ Public data (menus, products) - no auth, only public data
+const menu = await executePublicGraphQL(MenuDocument, {
+	variables: { slug: "footer" },
 });
 
-function generateETag(data: any): string {
-  return require('crypto')
-    .createHash('md5')
-    .update(JSON.stringify(data))
-    .digest('hex');
+// ✅ User data - requires session cookies
+let user = null;
+try {
+	const result = await executeAuthenticatedGraphQL(CurrentUserDocument, {
+		cache: "no-cache",
+	});
+	user = result.me;
+} catch {
+	// Expired token = treat as not logged in
 }
+
+// ✅ Checkout/cart - requires session cookies
+await executeAuthenticatedGraphQL(CheckoutAddLineDocument, {
+	variables: { id: checkoutId, productVariantId: variantId },
+	cache: "no-cache",
+});
+
+// ✅ App token (server-side only) - explicit header
+const channels = await executePublicGraphQL(ChannelsListDocument, {
+	headers: {
+		Authorization: `Bearer ${process.env.SALEOR_APP_TOKEN}`,
+	},
+});
 ```
 
-## Best Practices
+---
 
-### ✅ DO
-- Set appropriate TTL values
-- Implement cache warming for critical data
-- Use cache-aside pattern for reads
-- Monitor cache hit rates
-- Implement graceful degradation on cache failure
-- Use compression for large cached values
-- Namespace cache keys properly
-- Implement cache stampede prevention
-- Use consistent hashing for distributed caching
-- Monitor cache memory usage
+## Cache Invalidation
 
-### ❌ DON'T
-- Cache everything indiscriminately
-- Use caching as a fix for poor database design
-- Store sensitive data without encryption
-- Forget to handle cache misses
-- Set TTL too long for frequently changing data
-- Ignore cache invalidation strategies
-- Cache without monitoring
-- Store large objects without consideration
+### Automatic via Webhooks (Recommended)
 
-## Cache Strategies
+When configured, Saleor sends webhooks on data changes, triggering instant invalidation.
 
-| Strategy | Description | Use Case |
-|----------|-------------|----------|
-| **Cache-Aside** | Application checks cache, loads from DB on miss | General purpose |
-| **Write-Through** | Write to cache and DB simultaneously | Strong consistency needed |
-| **Write-Behind** | Write to cache, async write to DB | High write throughput |
-| **Refresh-Ahead** | Proactively refresh before expiry | Predictable access patterns |
-| **Read-Through** | Cache loads from DB automatically | Simplified code |
+**Setup in Saleor Dashboard:**
 
-## Resources
+1. Go to **Configuration → Webhooks**
+2. Create webhook pointing to: `https://your-site.com/api/revalidate`
+3. Subscribe to events:
+   - `PRODUCT_CREATED`, `PRODUCT_UPDATED`, `PRODUCT_DELETED`
+   - `CATEGORY_CREATED`, `CATEGORY_UPDATED`, `CATEGORY_DELETED`
+   - `COLLECTION_CREATED`, `COLLECTION_UPDATED`, `COLLECTION_DELETED`
+4. Copy the **secret key** to `SALEOR_WEBHOOK_SECRET` env var
 
-- [Redis Documentation](https://redis.io/documentation)
-- [Cache-Control Headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)
-- [Caching Best Practices](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/BestPractices.html)
+**What happens on webhook:**
+
+```typescript
+// Product update webhook triggers:
+revalidateTag(`product:${slug}`, "minutes"); // Invalidates "use cache" data
+revalidatePath(`/channel/products/${slug}`); // Invalidates ISR page
+```
+
+### Manual Invalidation
+
+```bash
+# Invalidate a specific product (both tag and path)
+curl "https://store.com/api/revalidate?secret=xxx&tag=product:blue-hoodie&path=/default-channel/products/blue-hoodie"
+
+# Invalidate just the cached function data
+curl "https://store.com/api/revalidate?secret=xxx&tag=product:blue-hoodie"
+
+# Invalidate navigation (uses "hours" profile)
+curl "https://store.com/api/revalidate?secret=xxx&tag=navigation&profile=hours"
+```
+
+### No Webhooks? TTL Takes Over
+
+| Data        | Default TTL |
+| ----------- | ----------- |
+| Products    | 5 minutes   |
+| Categories  | 5 minutes   |
+| Collections | 5 minutes   |
+| Navigation  | 1 hour      |
+
+---
+
+## Environment Variables
+
+```env
+# Cache invalidation
+REVALIDATE_SECRET=your-secret       # Manual revalidation (GET requests)
+SALEOR_WEBHOOK_SECRET=webhook-hmac  # Saleor webhook HMAC verification
+```
+
+---
+
+## Debugging Stale Content
+
+### Checklist
+
+1. **Is the webhook configured?**
+
+   - Check Saleor Dashboard → Webhooks → Deliveries
+
+2. **Did the webhook fire?**
+
+   - Check server logs for `[Revalidate]` entries
+
+3. **Is the tag correct?**
+
+   - Product slugs must match exactly: `product:blue-hoodie`
+
+4. **Force manual revalidation:**
+
+   ```bash
+   curl "https://store.com/api/revalidate?secret=xxx&tag=product:my-product"
+   ```
+
+5. **Check browser cache:**
+   - Hard refresh: Cmd+Shift+R / Ctrl+Shift+R
+
+---
+
+## Anti-patterns
+
+❌ **Don't use `cache: "no-cache"` for display pages** - Destroys performance  
+❌ **Don't skip webhook setup in production** - Users see stale prices  
+❌ **Don't access cookies/searchParams inside `"use cache"`** - Will error  
+❌ **Don't use `executeAuthenticatedGraphQL` inside `"use cache"`** - Requires cookies  
+❌ **Don't expose `REVALIDATE_SECRET`** - Keep it server-side only
+
+---
+
+## Disabling Cache Components
+
+If you need to rollback to standard ISR caching:
+
+### Step 1: Disable in Config
+
+```javascript
+// next.config.js
+const config = {
+	cacheComponents: false, // or comment out entirely
+};
+```
+
+### Step 2: Remove Cache Directives
+
+Remove `"use cache"`, `cacheLife()`, and `cacheTag()` from these files:
+
+| File                                                   | What to Remove                           |
+| ------------------------------------------------------ | ---------------------------------------- |
+| `src/app/[channel]/(main)/products/[slug]/page.tsx`    | `getProductData()` cache directives      |
+| `src/app/[channel]/(main)/categories/[slug]/page.tsx`  | `getCategoryData()` cache directives     |
+| `src/app/[channel]/(main)/collections/[slug]/page.tsx` | `getCollectionData()` cache directives   |
+| `src/app/[channel]/(main)/page.tsx`                    | `getFeaturedProducts()` cache directives |
+| `src/ui/components/nav/components/nav-links.tsx`       | Navigation cache directives              |
+
+### Step 3: Update Revalidation
+
+```typescript
+// src/app/api/revalidate/route.ts
+// Change from:
+revalidateTag(`product:${slug}`, "minutes");
+// To:
+revalidateTag(`product:${slug}`); // Remove second argument
+```
+
+### What You Can Keep
+
+- **Suspense boundaries** - Still useful for loading states
+- **CSS order layout** - Pure CSS, no impact
+- **`executeAuthenticatedGraphQL`** - Good separation regardless
+- **ISR via `revalidate` option** - Works as fallback
+
+---
+
+## Files Reference
+
+| File                                                   | Purpose                                  |
+| ------------------------------------------------------ | ---------------------------------------- |
+| `src/app/api/revalidate/route.ts`                      | Webhook endpoint and manual revalidation |
+| `src/app/[channel]/(main)/products/[slug]/page.tsx`    | PDP with "use cache"                     |
+| `src/app/[channel]/(main)/categories/[slug]/page.tsx`  | Category with "use cache"                |
+| `src/app/[channel]/(main)/collections/[slug]/page.tsx` | Collection with "use cache"              |
+| `src/app/[channel]/(main)/page.tsx`                    | Homepage with "use cache"                |
+| `src/ui/components/pdp/variant-section-dynamic.tsx`    | Dynamic variant section                  |
+| `src/ui/components/header.tsx`                         | Header with Suspense boundaries          |
+| `src/lib/checkout.ts`                                  | Cart operations (always fresh)           |
+| `next.config.js`                                       | `cacheComponents: true`                  |

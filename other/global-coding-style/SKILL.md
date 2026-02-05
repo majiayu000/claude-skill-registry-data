@@ -1,25 +1,26 @@
 ---
 name: Global Coding Style
-description: Follow consistent code formatting, naming conventions, TypeScript standards, and Astro component structure patterns across the entire codebase. Use this skill when writing any code file to ensure proper formatting, naming, indentation, and style consistency. When working on TypeScript files (.ts, .tsx), Astro components (.astro), React/Vue/Svelte components, configuration files, utility functions, type definitions, import statements, prop interfaces, or any code that requires formatting with Prettier or linting with ESLint.
+description: Write clean, readable code with consistent naming conventions, proper formatting, small focused functions, and DRY principles. Use this skill when writing ANY code in the project regardless of language or framework. When naming variables, functions, classes, or files. When structuring functions and deciding on their size and scope. When removing dead code, unused imports, or commented-out blocks. When applying the DRY principle to extract common logic. When ensuring consistent indentation and formatting across the codebase.
 ---
+
+## When to use this skill:
+
+- When writing any new code in the project
+- When modifying existing code files
+- When naming variables, functions, classes, constants, or files
+- When deciding how to structure a function or method
+- When a function is getting too long and needs to be split
+- When removing dead code, unused variables, or imports
+- When deleting commented-out code blocks
+- When extracting duplicate logic into reusable functions
+- When applying consistent indentation (spaces or tabs)
+- When formatting code for readability
+- When reviewing code for style consistency
+- When choosing descriptive names that reveal intent
 
 # Global Coding Style
 
 This Skill provides Claude Code with specific guidance on how to adhere to coding standards as they relate to how it should handle global coding style.
-
-## When to use this skill
-
-- When writing or editing any TypeScript (.ts, .tsx) or JavaScript (.js, .jsx) files
-- When creating or modifying Astro component files (.astro)
-- When structuring component frontmatter (imports, props, logic order)
-- When naming files, components, functions, variables, or constants
-- When defining TypeScript interfaces, types, or prop definitions
-- When organizing import statements (framework imports, components, utilities)
-- When applying code formatting rules (indentation, quotes, semicolons, line length)
-- When ensuring TypeScript strict mode compliance and avoiding `any` types
-- When using Prettier for auto-formatting or ESLint for code quality
-- When writing DRY code and extracting reusable utilities or components
-- When removing dead code, unused imports, or commented-out code blocks
 
 ## Instructions
 

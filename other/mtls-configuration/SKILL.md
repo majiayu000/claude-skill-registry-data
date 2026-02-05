@@ -7,7 +7,19 @@ description: Configure mutual TLS (mTLS) for zero-trust service-to-service commu
 
 Comprehensive guide to implementing mutual TLS for zero-trust service mesh communication.
 
-## When to Use This Skill
+## Do not use this skill when
+
+- The task is unrelated to mtls configuration
+- You need a different domain or tool outside this scope
+
+## Instructions
+
+- Clarify goals, constraints, and required inputs.
+- Apply relevant best practices and validate outcomes.
+- Provide actionable steps and verification.
+- If detailed examples are required, open `resources/implementation-playbook.md`.
+
+## Use this skill when
 
 - Implementing zero-trust networking
 - Securing service-to-service communication
@@ -92,7 +104,7 @@ spec:
     8080:
       mode: STRICT
     9090:
-      mode: DISABLE # Metrics port, no mTLS
+      mode: DISABLE  # Metrics port, no mTLS
 ```
 
 ### Template 2: Istio Destination Rule for mTLS
@@ -277,7 +289,7 @@ spec:
     matchLabels:
       app: my-app
   port: external-api
-  proxyProtocol: HTTP/1 # or TLS for passthrough
+  proxyProtocol: HTTP/1  # or TLS for passthrough
 ---
 # Skip TLS for specific port
 apiVersion: v1
@@ -285,7 +297,7 @@ kind: Service
 metadata:
   name: my-service
   annotations:
-    config.linkerd.io/skip-outbound-ports: "3306" # MySQL
+    config.linkerd.io/skip-outbound-ports: "3306"  # MySQL
 ```
 
 ## Certificate Rotation
@@ -327,7 +339,6 @@ linkerd viz tap deploy/my-app --to deploy/my-backend
 ## Best Practices
 
 ### Do's
-
 - **Start with PERMISSIVE** - Migrate gradually to STRICT
 - **Monitor certificate expiry** - Set up alerts
 - **Use short-lived certs** - 24h or less for workloads
@@ -335,7 +346,6 @@ linkerd viz tap deploy/my-app --to deploy/my-backend
 - **Log TLS errors** - For debugging and audit
 
 ### Don'ts
-
 - **Don't disable mTLS** - For convenience in production
 - **Don't ignore cert expiry** - Automate rotation
 - **Don't use self-signed certs** - Use proper CA hierarchy

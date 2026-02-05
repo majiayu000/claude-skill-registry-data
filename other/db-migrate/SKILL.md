@@ -1,51 +1,28 @@
 ---
 name: db-migrate
-description: Run D1 database migrations for Cloudflare. Use when applying schema changes, creating new tables, or modifying database structure.
-allowed-tools: Bash(wrangler:*), Bash(npx:*), Read, Glob, Grep
+description: >-
+  Database migrations and schema management. TODO: Implement for backend.
+  Invoked by: "migrate", "db migrate", "database migration", "schema change".
 ---
 
-# D1 Database Migrations
+# DB Migrate
 
-## Project Database
-- Database name: `agentic-commerce-p2p-db`
-- Location: `migrations/` directory
+**Status**: Stub - Not Implemented
+**Domain**: Backend
 
-## List Existing Migrations
-```bash
-ls -la migrations/
-```
+## Overview
 
-## Apply Migrations (Remote)
-```bash
-npx wrangler d1 execute agentic-commerce-p2p-db --remote --file=migrations/YOUR_MIGRATION.sql
-```
+This is a placeholder skill for backend repositories. It will guide database migration workflows including schema changes, data migrations, and rollback procedures.
 
-## Apply All Pending Migrations
-```bash
-npx wrangler d1 migrations apply agentic-commerce-p2p-db --remote
-```
+## TODO
 
-## Check Current Schema
-```bash
-npx wrangler d1 execute agentic-commerce-p2p-db --remote --command="SELECT name FROM sqlite_master WHERE type='table';"
-```
+- [ ] Define workflow for migration creation
+- [ ] Define workflow for migration execution
+- [ ] Define workflow for rollback procedures
+- [ ] Add templates for migration files
+- [ ] Add supporting files for common migration patterns
+- [ ] Document zero-downtime migration strategies
 
-## Creating New Migrations
-1. Create file: `migrations/NNN_description.sql`
-2. Use sequential numbering (e.g., 019, 020)
-3. Include both up and down if possible
-4. Test locally first with `--local` flag
+---
 
-## Local Testing
-```bash
-npx wrangler d1 execute agentic-commerce-p2p-db --local --file=migrations/YOUR_MIGRATION.sql
-```
-
-## Rollback
-D1 doesn't have built-in rollback. Create a reverse migration manually.
-
-## Best Practices
-- Always backup before major schema changes
-- Test migrations locally first
-- Use transactions where possible
-- Document breaking changes
+**End of Skill**

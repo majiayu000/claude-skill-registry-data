@@ -112,7 +112,7 @@ export default { plugins: [tailwindcss()] }
 
 **Comprehensive component catalog with usage patterns, installation, and composition examples.**
 
-See: `references/shadcn-components.md`
+**⚠️ MUST READ:** `references/shadcn-components.md`
 
 Covers:
 - Form & input components (Button, Input, Select, Checkbox, Date Picker, Form validation)
@@ -125,7 +125,7 @@ Covers:
 
 **Theme configuration, CSS variables, dark mode implementation, and component customization.**
 
-See: `references/shadcn-theming.md`
+**⚠️ MUST READ:** `references/shadcn-theming.md`
 
 Covers:
 - Dark mode setup with next-themes
@@ -138,7 +138,7 @@ Covers:
 
 **ARIA patterns, keyboard navigation, screen reader support, and accessible component usage.**
 
-See: `references/shadcn-accessibility.md`
+**⚠️ MUST READ:** `references/shadcn-accessibility.md`
 
 Covers:
 - Radix UI accessibility features
@@ -151,7 +151,7 @@ Covers:
 
 **Core utility classes for layout, spacing, typography, colors, borders, and shadows.**
 
-See: `references/tailwind-utilities.md`
+**⚠️ MUST READ:** `references/tailwind-utilities.md`
 
 Covers:
 - Layout utilities (Flexbox, Grid, positioning)
@@ -165,7 +165,7 @@ Covers:
 
 **Mobile-first breakpoints, responsive utilities, and adaptive layouts.**
 
-See: `references/tailwind-responsive.md`
+**⚠️ MUST READ:** `references/tailwind-responsive.md`
 
 Covers:
 - Mobile-first approach
@@ -179,7 +179,7 @@ Covers:
 
 **Config file structure, custom utilities, plugins, and theme extensions.**
 
-See: `references/tailwind-customization.md`
+**⚠️ MUST READ:** `references/tailwind-customization.md`
 
 Covers:
 - @theme directive for custom tokens
@@ -194,7 +194,7 @@ Covers:
 
 **Canvas-based design philosophy, visual communication principles, and sophisticated compositions.**
 
-See: `references/canvas-design-system.md`
+**⚠️ MUST READ:** `references/canvas-design-system.md`
 
 Covers:
 - Design philosophy approach
@@ -319,3 +319,8 @@ export function LoginForm() {
 - Tailwind UI: https://tailwindui.com
 - Headless UI: https://headlessui.com
 - v0 (AI UI Generator): https://v0.dev
+
+## IMPORTANT Task Planning Notes
+
+- Always plan and break many small todo tasks
+- Always add a final review todo task to review the works done at the end to find any fix or enhancement needed

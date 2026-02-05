@@ -1,67 +1,51 @@
 ---
 name: commit
-description: This skill should be used when the user requests "commit", "git commit", "create commit", or wants to commit staged/unstaged changes following conventional commits format
-user-invocable: true
-allowed-tools: ["Bash(git:*)", "Read", "Write", "Glob", "AskUserQuestion", "Skill"]
-argument-hint: "[no arguments needed]"
-model: haiku
-version: 0.2.0
+description: Create git commits with user approval and no Claude attribution
 ---
 
-## Background Knowledge
+# Commit Changes
 
-**Format**: `<type>[scope]: <description>` + mandatory body + optional footers
+You are tasked with creating git commits for the changes made during this session.
 
-- **Title**: ALL LOWERCASE, <50 chars, imperative mood, no period. Add `!` for breaking changes
-- **Types**: `feat`, `fix`, `docs`, `refactor`, `perf`, `test`, `chore`, `build`, `ci`, `style`
-- **Body** (REQUIRED): Bullet summary (`- ` prefix, imperative verbs) + explanation paragraph. ≤72 chars/line
-- **Footer**: `Co-Authored-By` REQUIRED; optional `Closes #123`, `BREAKING CHANGE: ...`
+## Process:
 
-See `references/format-rules.md` for complete specification and examples.
+1. **Think about what changed:**
+   - Review the conversation history and understand what was accomplished
+   - Run `git status` to see current changes
+   - Run `git diff` to understand the modifications
+   - Consider whether changes should be one commit or multiple logical commits
 
-## Phase 1: Configuration Verification
+2. **Plan your commit(s):**
+   - Identify which files belong together
+   - Draft clear, descriptive commit messages
+   - Use imperative mood in commit messages
+   - Focus on why the changes were made, not just what
 
-**Goal**: Load project-specific git configuration and valid scopes.
+3. **Present your plan to the user:**
+   - List the files you plan to add for each commit
+   - Show the commit message(s) you'll use
+   - Ask: "I plan to create [N] commit(s) with these changes. Shall I proceed?"
 
-**Actions**:
-1. **FIRST**: Read `.claude/git.local.md` to load project configuration
-2. If file not found, **load `git:config-git` skill** using the Skill tool to create it
-3. Extract valid scopes from `scopes:` list in YAML frontmatter
-4. Store these scopes for validation in Phase 3 and Phase 5
+4. **Execute upon confirmation:**
+   - Use `git add` with specific files (never use `-A` or `.`)
+   - Create commits with your planned messages
+   - Show the result with `git log --oneline -n [number]`
 
-## Phase 2: Safety Validation
+5. **Generate reasoning (after each commit):**
+   - Run: `bash .claude/scripts/generate-reasoning.sh <commit-hash> "<commit-message>"`
+   - This captures what was tried during development (build failures, fixes)
+   - The reasoning file helps future sessions understand past decisions
+   - Stored in `.git/claude/commits/<hash>/reasoning.md`
 
-**Goal**: Perform safety checks before committing.
+## Important:
+- **NEVER add co-author information or Claude attribution**
+- Commits should be authored solely by the user
+- Do not include any "Generated with Claude" messages
+- Do not add "Co-Authored-By" lines
+- Write commit messages as if the user wrote them
 
-**Actions**:
-1. Detect sensitive files (credentials, secrets, .env files)
-2. Warn about large files (>1MB) and large commits (>500 lines)
-3. Use `AskUserQuestion` tool for confirmation if issues found
-
-## Phase 3: Change Analysis
-
-**Goal**: Identify logical units of work and infer commit scopes.
-
-**Actions**:
-1. Run `git diff --cached` and `git diff` to get code differences (MUST NOT traverse files directly)
-2. Analyze diff to identify coherent logical units
-3. Infer scope(s) from file paths and changes using the valid scopes loaded in Phase 1
-4. If inferred scope not in the valid scopes list, **load `git:config-git` skill** using the Skill tool to update configuration
-
-## Phase 4: AI Code Quality Check
-
-**Goal**: Remove AI-generated slop before committing.
-
-**Actions**:
-1. Run `git diff main...HEAD` to compare against main branch
-2. Remove AI patterns: extra comments, unnecessary defensive checks, `any` casts, inconsistent style
-3. Ensure changes follow project's established patterns
-
-## Phase 5: Commit Creation
-
-**Goal**: Create atomic commits following Conventional Commits format.
-
-**Actions** (repeat for each logical unit):
-1. Draft commit message per `references/format-rules.md`
-2. Validate: title <50 chars lowercase imperative; body has bullets + explanation paragraph; footer has `Co-Authored-By`
-3. Stage relevant files and create commit
+## Remember:
+- You have the full context of what was done in this session
+- Group related changes together
+- Keep commits focused and atomic when possible
+- The user trusts your judgment - they asked you to commit

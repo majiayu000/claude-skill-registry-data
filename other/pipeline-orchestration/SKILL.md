@@ -1,18 +1,18 @@
 ---
 activation_code: PIPELINE_ORCHESTRATION_V1
-phase: 0
+phase: 2
 prerequisites:
   - PRD complete
-  - Phase 4 checkpoint passed
+  - Phase 2 checkpoint passed
 outputs:
   - Pipeline status dashboard
   - Phase transition signals
   - Error recovery instructions
 description: |
-  Master orchestrator for the entire development pipeline from Phase 1-12.
+  Master orchestrator for the entire development pipeline from Phase 2-12.
   Activates via codeword [ACTIVATE:PIPELINE_ORCHESTRATION_V1] injected by hooks
   when user wants to start automated development.
-  
+
   Activation trigger: [ACTIVATE:PIPELINE_ORCHESTRATION_V1]
 ---
 
@@ -27,14 +27,14 @@ This skill activates when the hook system injects the codeword:
 
 This occurs when:
 - User says "begin automated development" or "start pipeline"
-- Phase 4 is complete
-- User wants full automation from Phase 1-12
+- Phase 2 is complete
+- User wants full automation from Phase 5-11
 
 # Pipeline Orchestrator Skill
 
 ## What This Skill Does
 
-The **Pipeline Orchestrator** is the master controller for fully automated development from Phase 1 through Phase 12. It:
+The **Pipeline Orchestrator** is the master controller for fully automated development from Phase 5 through Phase 11. It:
 
 - **Monitors completion signals** from each phase
 - **Automatically triggers** the next phase skill
@@ -45,50 +45,50 @@ The **Pipeline Orchestrator** is the master controller for fully automated devel
 
 ## When This Skill Activates
 
-**Primary Trigger:** User completes Phase 0 (PRD creation, human validation, checkpoint passed)
+**Primary Trigger:** User completes Phase 2 (PRD creation, human validation, checkpoint passed)
 
 **Activation Phrases:**
 - "Begin automated development"
 - "Start the pipeline"
-- "Automate phases 1 through 6"
+- "Automate phases 5 through 11"
 - "Run full development pipeline"
-- "Phase 4 is complete, start automation"
+- "Phase 2 is complete, start automation"
 
 **Prerequisites:**
-- ✅ `.taskmaster/scripts/phase4-checkpoint.sh` passed
+- ✅ `.taskmaster/scripts/phase2-checkpoint.sh` passed
 - ✅ `.taskmaster/tasks.json` exists and validated
-- ✅ `.taskmaster/docs/phase0-signoff.md` exists
+- ✅ `.taskmaster/docs/phase2-signoff.md` exists
 - ✅ Git repository clean state
 
 ## Pipeline Architecture
 
 ```
-Phase 1-4 (Discovery & Planning) ────────────────────────┐
+Phase 2 (Human) ────────────────────────┐
   ✅ Checkpoint Passed                   │ MANUAL
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
                 ↓                        │
-Phase 1: Task Decomposition             │ APPROVAL
+Phase 5: Task Decomposition             │ APPROVAL
   Skill: Task-Decomposer                │ (user approves tasks)
-  Output: .signals/phase10-complete.json │
+  Output: .signals/phase5-complete.json │
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
                 ↓                        │
-Phase 2: Spec Generation                │
+Phase 6: Spec Generation                │
   Skill: Spec-Generator                 │
-  Output: .signals/phase11-complete.json │
+  Output: .signals/phase6-specs-created.json │
                 ↓                        │
-Phase 3: Implementation                 │
+Phase 7: Implementation                 │
   Skill: TDD-Implementer                │ FULLY
   Output: .signals/phase7-complete.json │ AUTONOMOUS
                 ↓                        │
-Phase 4: Integration Testing            │
+Phase 9: Integration Testing            │
   Skill: Integration-Tester             │
   Output: .signals/phase9-complete.json │
                 ↓                        │
-Phase 5: E2E & Production Validation    │
+Phase 10: E2E & Production Validation   │
   Skill: E2E-Prod-Validator             │
   Output: .signals/phase10-complete.json │
                 ↓                        │
-Phase 6: Deployment & Infrastructure    │
+Phase 11: Deployment & Infrastructure   │
   Skill: Deployment-Orchestrator        │
   Includes: Docker build & health check  │
   Output: .signals/phase11-complete.json │
@@ -101,10 +101,10 @@ Phase 6: Deployment & Infrastructure    │
 
 Each phase skill generates a completion signal file when done:
 
-### Phase 1 Signal
+### Phase 5 Signal
 ```json
 {
-  "phase": 1,
+  "phase": 5,
   "phase_name": "Task Decomposition",
   "status": "success",
   "completed_at": "2025-10-29T15:30:00Z",
@@ -115,15 +115,15 @@ Each phase skill generates a completion signal file when done:
     "subtasks_generated": 34,
     "high_complexity_tasks": [3, 5, 7, 9, 12, 15, 18, 22]
   },
-  "next_phase": 2,
+  "next_phase": 6,
   "trigger_next": true
 }
 ```
 
-### Phase 2 Signal
+### Phase 6 Signal
 ```json
 {
-  "phase": 2,
+  "phase": 6,
   "phase_name": "Spec Generation",
   "status": "success",
   "completed_at": "2025-10-29T16:45:00Z",
@@ -135,15 +135,15 @@ Each phase skill generates a completion signal file when done:
     "loosely_coupled": 5,
     "batches_completed": 3
   },
-  "next_phase": 3,
+  "next_phase": 7,
   "trigger_next": true
 }
 ```
 
-### Phase 3 Signal
+### Phase 7 Signal
 ```json
 {
-  "phase": 3,
+  "phase": 7,
   "phase_name": "Implementation",
   "status": "success",
   "completed_at": "2025-10-29T19:30:00Z",
@@ -158,15 +158,15 @@ Each phase skill generates a completion signal file when done:
     },
     "implementation_strategy": "worktree-isolation"
   },
-  "next_phase": 4,
+  "next_phase": 9,
   "trigger_next": true
 }
 ```
 
-### Phase 4 Signal
+### Phase 9 Signal
 ```json
 {
-  "phase": 4,
+  "phase": 9,
   "phase_name": "Integration Testing",
   "status": "success",
   "completed_at": "2025-10-29T20:15:00Z",
@@ -177,15 +177,15 @@ Each phase skill generates a completion signal file when done:
     "integration_tests_passing": 12,
     "coverage": "100%"
   },
-  "next_phase": 5,
+  "next_phase": 10,
   "trigger_next": true
 }
 ```
 
-### Phase 5 Signal
+### Phase 10 Signal
 ```json
 {
-  "phase": 5,
+  "phase": 10,
   "phase_name": "E2E & Production Validation",
   "status": "success",
   "completed_at": "2025-10-29T21:30:00Z",
@@ -196,15 +196,15 @@ Each phase skill generates a completion signal file when done:
     "production_readiness_score": 94,
     "blocking_issues": 0
   },
-  "next_phase": 6,
+  "next_phase": 11,
   "trigger_next": true
 }
 ```
 
-### Phase 6 Signal
+### Phase 11 Signal
 ```json
 {
-  "phase": 6,
+  "phase": 11,
   "phase_name": "Deployment",
   "status": "success",
   "completed_at": "2025-10-29T23:00:00Z",
@@ -225,7 +225,7 @@ Each phase skill generates a completion signal file when done:
 ### Error Signal
 ```json
 {
-  "phase": 3,
+  "phase": 7,
   "phase_name": "Implementation",
   "status": "error",
   "failed_at": "2025-10-29T18:15:00Z",
@@ -236,42 +236,42 @@ Each phase skill generates a completion signal file when done:
     "recovery_successful": false,
     "requires_human": true
   },
-  "checkpoint": ".taskmaster/.checkpoints/phase3-checkpoint-5.json",
+  "checkpoint": ".taskmaster/.checkpoints/phase7-checkpoint-5.json",
   "next_action": "Fix failing tests, then resume from checkpoint"
 }
 ```
 
 ## Phase Transition Rules
 
-### Phase 1 → Phase 2 Transition
+### Phase 5 → Phase 6 Transition
 ```yaml
 Triggers when:
-  - ✅ .taskmaster/.signals/phase10-complete.json exists
+  - ✅ .taskmaster/.signals/phase5-complete.json exists
   - ✅ status = "success"
   - ✅ trigger_next = true
   - ✅ All high-complexity tasks expanded
 
 Action:
-  - Load Phase 2 context
+  - Load Phase 6 context
   - Activate Spec-Generator skill
-  - Monitor for phase11-complete.json
+  - Monitor for phase6-complete.json
 ```
 
-### Phase 2 → Phase 3 Transition
+### Phase 6 → Phase 7 Transition
 ```yaml
 Triggers when:
-  - ✅ .taskmaster/.signals/phase11-complete.json exists
+  - ✅ .taskmaster/.signals/phase6-complete.json exists
   - ✅ status = "success"
   - ✅ trigger_next = true
   - ✅ All OpenSpec proposals created
 
 Action:
-  - Load Phase 3 context
+  - Load Phase 7 context
   - Activate TDD-Implementer skill
   - Monitor for phase7-complete.json
 ```
 
-### Phase 3 → Phase 4 Transition
+### Phase 7 → Phase 9 Transition
 ```yaml
 Triggers when:
   - ✅ .taskmaster/.signals/phase7-complete.json exists
@@ -281,12 +281,12 @@ Triggers when:
   - ✅ Coverage ≥80% line, ≥70% branch
 
 Action:
-  - Load Phase 4 context
+  - Load Phase 9 context
   - Activate Integration-Tester skill
   - Monitor for phase9-complete.json
 ```
 
-### Phase 4 → Phase 5 Transition
+### Phase 9 → Phase 10 Transition
 ```yaml
 Triggers when:
   - ✅ .taskmaster/.signals/phase9-complete.json exists
@@ -295,12 +295,12 @@ Triggers when:
   - ✅ 100% integration point coverage
 
 Action:
-  - Load Phase 5 context
+  - Load Phase 10 context
   - Activate E2E-Prod-Validator skill
   - Monitor for phase10-complete.json
 ```
 
-### Phase 5 → Phase 6 Transition (AUTOMATIC)
+### Phase 10 → Phase 11 Transition (AUTOMATIC)
 ```yaml
 Triggers when:
   - ✅ .taskmaster/.signals/phase10-complete.json exists
@@ -308,7 +308,7 @@ Triggers when:
   - ✅ production_readiness_score ≥90%
 
 Action:
-  - Log Phase 5 summary
+  - Log Phase 10 summary
   - Automatically activate Deployment-Orchestrator skill
   - Pipeline proceeds to production deployment
 ```
@@ -389,20 +389,20 @@ Action:
 ### Checkpoint Files
 ```
 .taskmaster/.checkpoints/
-├── phase1-checkpoint-1.json  (after complexity analysis)
-├── phase1-checkpoint-2.json  (after task 5 expanded)
-├── phase1-checkpoint-3.json  (after task 10 expanded)
-├── phase2-checkpoint-1.json  (after batch 1 complete)
-├── phase2-checkpoint-2.json  (after batch 2 complete)
-├── phase3-checkpoint-1.json  (after task 3 implemented)
-├── phase3-checkpoint-2.json  (after task 7 implemented)
+├── phase5-checkpoint-1.json  (after complexity analysis)
+├── phase5-checkpoint-2.json  (after task 5 expanded)
+├── phase5-checkpoint-3.json  (after task 10 expanded)
+├── phase6-checkpoint-1.json  (after batch 1 complete)
+├── phase6-checkpoint-2.json  (after batch 2 complete)
+├── phase7-checkpoint-1.json  (after task 3 implemented)
+├── phase7-checkpoint-2.json  (after task 7 implemented)
 └── ...
 ```
 
 ### Checkpoint Schema
 ```json
 {
-  "phase": 2,
+  "phase": 6,
   "checkpoint_number": 3,
   "created_at": "2025-10-29T16:20:00Z",
   "state": {
@@ -419,7 +419,7 @@ Action:
       "Start batch 3 (tasks 11-15)"
     ]
   },
-  "resume_command": "Continue Phase 2 from checkpoint 3: task #9"
+  "resume_command": "Continue Phase 6 from checkpoint 3: task #9"
 }
 ```
 
@@ -444,16 +444,17 @@ While pipeline runs, orchestrator provides real-time updates:
 AUTOMATED DEVELOPMENT PIPELINE
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Phase 0: Setup & Planning            ✅ COMPLETE
-Phase 1: Task Decomposition          ✅ COMPLETE (12 min)
-Phase 2: Spec Generation             ✅ COMPLETE (45 min)
-Phase 3: Implementation              🔄 IN PROGRESS (87 min)
+Phase 2: Discovery                   ✅ COMPLETE
+Phase 5: Task Decomposition          ✅ COMPLETE (12 min)
+Phase 6: Spec Generation             ✅ COMPLETE (45 min)
+Phase 7: Implementation              🔄 IN PROGRESS (87 min)
   └─ Task 15/18 complete
   └─ 127/187 tests passing
   └─ Coverage: 82% line, 74% branch
-Phase 4: Integration Testing         ⏸️  PENDING
-Phase 5: E2E & Validation            ⏸️  PENDING
-Phase 6: Deployment                  ⏸️  PENDING
+Phase 8: Code Review                 ⏸️  PENDING
+Phase 9: Integration Testing         ⏸️  PENDING
+Phase 10: E2E & Validation           ⏸️  PENDING
+Phase 11: Deployment                 ⏸️  PENDING
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Elapsed Time: 144 minutes
@@ -465,29 +466,29 @@ Estimated Remaining: 156 minutes
 
 ### Example 1: Full Pipeline Automation
 
-**User (after Phase 0 complete):**
+**User (after Phase 2 complete):**
 ```
-I've completed Phase 0 and the checkpoint passed. Begin automated development pipeline.
+I've completed Phase 2 and the checkpoint passed. Begin automated development pipeline.
 ```
 
 **Orchestrator Response:**
 ```
-✅ Phase 4 Checkpoint Verified
+✅ Phase 2 Checkpoint Verified
    - tasks.json: 18 tasks validated
    - PRD: Complete
    - Sign-off: Obtained
 
 🚀 Starting Automated Development Pipeline
 
-Phase 1: Task Decomposition
+Phase 5: Task Decomposition
   → Activating Task-Decomposer skill...
   → Analyzing complexity for 18 tasks...
   → Expanding high-complexity tasks...
-  ✅ Phase 1 Complete (12 minutes)
+  ✅ Phase 5 Complete (12 minutes)
      - 8 tasks expanded into 34 subtasks
-     - Signal: phase10-complete.json generated
+     - Signal: phase5-complete.json generated
 
-Phase 2: Spec Generation
+Phase 6: Spec Generation
   → Activating Spec-Generator skill...
   → Analyzing coupling for batch 1 (tasks 1-5)...
   → Creating OpenSpec proposals...
@@ -500,31 +501,31 @@ Phase 2: Spec Generation
 
 **Orchestrator detects error:**
 ```
-⚠️ Phase 3 Error Detected
+⚠️ Phase 7 Error Detected
    Error: 5 tests failing in user authentication module
-   
+
 🔄 Attempting Automatic Recovery
    → Analyzing test failures...
    → Identified: Missing mock for database connection
    → Adding mock configuration...
    → Re-running tests...
    ✅ Recovery Successful - All tests passing
-   
-Resuming Phase 3 Implementation...
+
+Resuming Phase 7 Implementation...
 ```
 
 ### Example 3: Human Escalation
 
 **Orchestrator encounters unknown error:**
 ```
-🚨 Phase 3 Error - Human Intervention Required
+🚨 Phase 7 Error - Human Intervention Required
 
 Error Details:
-  Phase: 3 (Implementation)
+  Phase: 7 (Implementation)
   Operation: Implementing task #12
   Error: Unable to resolve dependency conflict
-  
-Checkpoint Saved: .taskmaster/.checkpoints/phase3-checkpoint-7.json
+
+Checkpoint Saved: .taskmaster/.checkpoints/phase7-checkpoint-7.json
 
 Options:
 A) Manually resolve the dependency conflict
@@ -534,11 +535,11 @@ C) Abort pipeline
 Please respond: A, B, or C
 ```
 
-### Example 4: Phase 5 Auto-Transition
+### Example 4: Phase 10 → Phase 11 Auto-Transition
 
-**Orchestrator completes Phase 5:**
+**Orchestrator completes Phase 10:**
 ```
-✅ Phase 5 Complete: E2E & Production Validation
+✅ Phase 10 Complete: E2E & Production Validation
 
 Production Readiness Score: 94%
 
@@ -549,7 +550,7 @@ Summary:
   - Security scans: PASSED
   - No blocking issues
 
-🚀 Auto-proceeding to Phase 6: Deployment
+🚀 Auto-proceeding to Phase 11: Deployment
 
 [ACTIVATE:DEPLOYMENT_ORCHESTRATOR_V1]
 ```
@@ -565,12 +566,12 @@ Summary:
 - No cross-worktree contamination allowed
 
 ### Phase-Worktree Mapping
-1. **Phase 1**: Creates `phase-10-task-1` worktree for task decomposition
-2. **Phase 2**: Creates individual worktrees per task batch: `phase-11-task-N`
-3. **Phase 3**: Each subtask gets isolated worktree: `phase-7-task-N`
-4. **Phase 4**: Integration testing in `phase-9-task-1` worktree
-5. **Phase 5**: E2E validation in `phase-10-task-1` worktree
-6. **Phase 6**: Deployment from `phase-11-task-1` worktree
+1. **Phase 5**: Creates `phase-5-task-1` worktree for task decomposition
+2. **Phase 6**: Creates individual worktrees per task batch: `phase-6-task-N`
+3. **Phase 7**: Each subtask gets isolated worktree: `phase-7-task-N`
+4. **Phase 9**: Integration testing in `phase-9-task-1` worktree
+5. **Phase 10**: E2E validation in `phase-10-task-1` worktree
+6. **Phase 11**: Deployment from `phase-11-task-1` worktree
 
 ### Worktree Lifecycle
 ```bash
@@ -590,8 +591,8 @@ cd ./worktrees/phase-<phase>-task-<task>
 
 The orchestrator manages these phase skills with strict worktree isolation:
 
-1. **Task-Decomposer** (Phase 10) - Worktree: `phase-10-task-1`
-2. **Spec-Generator** (Phase 6) - Worktrees: `phase-11-task-N` per batch
+1. **Task-Decomposer** (Phase 5) - Worktree: `phase-5-task-1`
+2. **Spec-Generator** (Phase 6) - Worktrees: `phase-6-task-N` per batch
 3. **TDD-Implementer** (Phase 7) - Worktrees: `phase-7-task-N` per subtask
 4. **Integration-Tester** (Phase 9) - Worktree: `phase-9-task-1`
 5. **E2E-Prod-Validator** (Phase 10) - Worktree: `phase-10-task-1`
@@ -608,16 +609,16 @@ Each skill:
 ## Success Criteria
 
 Pipeline is successful when:
-- ✅ All 6 phases complete without errors
+- ✅ All 12 phases complete without errors
 - ✅ All tests passing (unit, integration, E2E)
 - ✅ Production readiness score ≥90%
-- ✅ GO decision from Phase 5
+- ✅ GO decision from Phase 10
 - ✅ Successfully deployed to production
 - ✅ All validation gates passed
 
 ## See Also
 
 - `/DEVELOPMENT_WORKFLOW.md` - Complete workflow documentation
-- `/phase4-checkpoint.sh` - Phase 0 verification script
+- `/phase2-checkpoint.sh` - Phase 2 verification script
 - `/.taskmaster/.signals/` - Completion signal files
 - `/.taskmaster/.checkpoints/` - Pipeline checkpoints

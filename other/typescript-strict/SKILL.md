@@ -1,78 +1,43 @@
 ---
 name: typescript-strict
-# prettier-ignore
-description: Use when writing TypeScript with strict mode - covers type definitions, generics, and declaration files
+description: Write type-safe TypeScript code with strict mode enabled, comprehensive type definitions, proper error handling, and elimination of any types. Use when enabling TypeScript strict mode, adding types to existing JavaScript, fixing type errors, creating type definitions, using utility types, implementing type guards, avoiding any types, creating generic types, or ensuring complete type safety across the codebase.
 ---
 
-# TypeScript Strict Mode Best Practices
+# TypeScript Strict - Type Safety Best Practices
 
-## Quick Start
+## When to use this skill
 
-```typescript
-// Enable strict in tsconfig.json
+- Enabling TypeScript strict mode in projects
+- Adding types to existing JavaScript codebases
+- Fixing TypeScript type errors systematically
+- Creating comprehensive type definitions
+- Using TypeScript utility types (Partial, Pick, Omit)
+- Implementing type guards and assertions
+- Eliminating any types from codebase
+- Creating generic, reusable typed functions
+- Ensuring null/undefined safety
+- Typing complex data structures
+- Creating discriminated unions
+- Implementing strict function signatures
+
+## When to use this skill
+
+- Ensuring type safety, preventing runtime errors.
+- When working on related tasks or features
+- During development that requires this expertise
+
+**Use when**: Ensuring type safety, preventing runtime errors.
+
+## Config
+\`\`\`json
 {
   "compilerOptions": {
     "strict": true,
     "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true
+    "noImplicitReturns": true
   }
 }
-```
+\`\`\`
 
-## Core Principles
-
-- **Strict null checks**: Handle `undefined` and `null` explicitly
-- **No implicit any**: Always declare types, avoid `any`
-- **Readonly by default**: Use `readonly` for immutable data
-- **Discriminated unions**: Use type guards with tagged unions
-
-## Type Definition Patterns
-
-### AST Node Types
-
-```typescript
-// Discriminated union for AST nodes
-type Expr =
-  | { type: "NumberLiteral"; value: number }
-  | { type: "BinaryExpr"; op: string; left: Expr; right: Expr }
-  | { type: "Identifier"; name: string };
-
-// Type guard
-function isNumberLiteral(expr: Expr): expr is Extract<Expr, { type: "NumberLiteral" }> {
-  return expr.type === "NumberLiteral";
-}
-```
-
-### Generic Types
-
-```typescript
-// Constrained generics
-function map<T, U>(arr: readonly T[], fn: (item: T, index: number) => U): U[] {
-  return arr.map(fn);
-}
-
-// Conditional types
-type Unwrap<T> = T extends Promise<infer U> ? U : T;
-```
-
-### Declaration Files
-
-```typescript
-// module.d.ts
-declare module "lea-lang" {
-  export function run(code: string): unknown;
-  export function parse(code: string): Program;
-}
-```
-
-## Common Patterns
-
-- Use `unknown` over `any` for safer type narrowing
-- Prefer `interface` for extendable types, `type` for unions
-- Use `as const` for literal types
-- Leverage `satisfies` for type checking without widening
-
-## Reference Files
-
-- [references/generics.md](references/generics.md) - Advanced generic patterns
-- [references/type-guards.md](references/type-guards.md) - Type narrowing techniques
+## Resources
+- [TypeScript Handbook](https://www.typescriptlang.org/docs/)

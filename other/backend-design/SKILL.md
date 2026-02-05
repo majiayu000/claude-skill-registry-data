@@ -1,84 +1,270 @@
 ---
 name: backend-design
-description: Designs comprehensive backend systems including RESTful APIs, microservices, database architecture, authentication/authorization, caching strategies, message queues, and scalability patterns. Produces API specifications, database schemas, architecture diagrams, and implementation guides. Use when designing backend services, APIs, data models, distributed systems, authentication flows, or when users mention backend architecture, API design, database design, microservices, or server-side development.
+description: Unified backend development skill covering API design (REST/GraphQL/tRPC), TypeScript expertise, data analysis, and code optimization principles. Use for backend architecture, API patterns, type issues, data processing, and code quality.
+allowed-tools:
+  - run_command
+  - mcp_mcp-server-neon_run_sql
+  - mcp_mcp-server-neon_list_slow_queries
+  - mcp_sequential-thinking_sequentialthinking
 ---
 
-# Backend Design
+# Backend Design Skill
 
-## Workflow
+> Unified backend development: API design, TypeScript expertise, data analysis, and code principles.
 
-Follow this systematic design process:
+## When to Use
 
-1. **Requirements Analysis**
-   - Gather functional requirements (features, operations)
-   - Define non-functional requirements (performance, scalability, availability)
-   - Identify constraints (budget, timeline, technology, compliance)
+| Trigger | Action |
+|---------|--------|
+| API design decision | Check decision tree (REST/GraphQL/tRPC) |
+| TypeScript error | Apply type patterns |
+| Data analysis needed | Use Python workflow |
+| Code optimization | Follow LEVER principles |
+| Backend architecture | Apply Three-Pass process |
 
-2. **Architecture Selection**
-   - Choose architecture pattern (monolith, microservices, serverless)
-   - Select technology stack based on requirements
-   - Define service boundaries and responsibilities
+---
 
-3. **API Design**
-   - Design RESTful endpoints with proper resource modeling
-   - Define request/response schemas and contracts
-   - Plan versioning strategy and documentation
-   - See [api-design-guide.md](references/api-design-guide.md) for REST/GraphQL/gRPC patterns
+## Content Map
 
-4. **Database Design**
-   - Model entities and relationships
-   - Design schema with normalization
-   - Plan indexing and partitioning strategies
-   - See [database-design.md](references/database-design.md) for relational and NoSQL patterns
+| Reference | Purpose |
+|-----------|---------|
+| [API Patterns](references/api-patterns.md) | REST vs GraphQL vs tRPC, auth, versioning |
+| [TypeScript Patterns](references/typescript-patterns.md) | Type gymnastics, build optimization |
+| [Data Analysis](references/data-analysis.md) | Python scripts, statistical methods |
+| [Code Principles](references/code-principles.md) | LEVER, Three-Pass, anti-patterns |
+| [Database Design](references/database-design.md) | Schema, indexing, query optimization |
 
-5. **Security Design**
-   - Design authentication flow (OAuth 2.0, JWT)
-   - Plan authorization model (RBAC, ABAC)
-   - Define data encryption and protection strategy
+---
 
-6. **Scalability & Performance**
-   - Design caching strategy (Redis, CDN)
-   - Plan load balancing and auto-scaling
-   - Define asynchronous processing with message queues
+## Core Philosophy: LEVER
 
-7. **Documentation**
-   - Create API specifications (OpenAPI/Swagger)
-   - Document architecture decisions with Mermaid diagrams
-   - Provide implementation guidelines and roadmap
+> **L**everage patterns | **E**xtend first | **V**erify reactivity | **E**liminate duplication | **R**educe complexity
 
-## Output Structure
+**"The best code is no code. The second best structure is the one that already exists."**
 
-Present your backend design with these sections:
+### Decision Tree
 
-1. **System Overview** - High-level architecture, components, technology stack
-2. **API Specification** - Endpoints, schemas, authentication, OpenAPI docs
-3. **Database Design** - ERD, schema, indexes, migration plan
-4. **Architecture Decisions** - Service decomposition, communication patterns, consistency model
-5. **Security Implementation** - Authentication/authorization flows, encryption
-6. **Scalability Plan** - Load balancing, caching, database scaling, auto-scaling
-7. **Deployment Architecture** - Containers, infrastructure, CI/CD, monitoring
-8. **Implementation Roadmap** - Phases, milestones, dependencies, risks
+```
+Before coding, ask:
+├── Can existing code handle it? → Yes: Extend
+├── Can we modify existing patterns? → Yes: Adapt
+└── Is new code reusable? → Yes: Abstract → No: Reconsider
+```
 
-## Core Principles
+### Scoring: Extend vs Create
 
-- **API-first approach** - Design and document APIs before implementation
-- **Security by design** - Build authentication, authorization, and encryption from the start
-- **Design for scalability** - Plan for growth with caching, load balancing, and horizontal scaling
-- **Plan for failure** - Include error handling, retries, circuit breakers, and graceful degradation
-- **Document thoroughly** - Create clear API specs, Mermaid architecture diagrams, and implementation guides
+| Factor | Points |
+|--------|--------|
+| Reuse data structure | +3 |
+| Reuse indexes/queries | +3 |
+| Reuse >70% code | +5 |
+| Circular dependencies | -5 |
+| Distinct domain | -3 |
 
-## Reference Files
+**Score > 5**: Extend existing code.
 
-Load additional resources based on specific needs:
+---
 
-- **Detailed Design Process**: See [backend-design-process.md](references/backend-design-process.md) for comprehensive step-by-step workflow with examples for API design, database modeling, authentication flows, and microservices patterns
+## Three-Pass Implementation
 
-- **API Design Guide**: See [api-design-guide.md](references/api-design-guide.md) when designing RESTful APIs, GraphQL schemas, or gRPC services - includes resource modeling, status codes, versioning strategies, and documentation
+| Pass | Activity | Code |
+|------|----------|------|
+| 1. Discovery | Find related code, document patterns | None |
+| 2. Design | Write interfaces, plan data flow | Minimal |
+| 3. Implementation | Execute with max reuse | Essential only |
 
-- **Database Design**: See [database-design.md](references/database-design.md) for detailed guidance on relational and NoSQL database design, normalization, indexing, partitioning, and replication strategies
+---
 
-- **Best Practices**: See [best-practices.md](references/best-practices.md) for API design, database optimization, security hardening, performance tuning, and reliability patterns
+## API Design Decision Tree
 
-- **Common Patterns**: See [common-patterns.md](references/common-patterns.md) for code examples of repository pattern, service layer, dependency injection, and other architectural patterns
+```
+Who consumes the API?
+├── TypeScript monorepo → tRPC (type-safe E2E)
+├── Multiple clients/languages → REST (universal)
+├── Complex nested data → GraphQL (flexible queries)
+└── Not sure → Ask user first!
+```
 
-- **Example Projects**: See [examples.md](references/examples.md) for complete architecture examples including e-commerce systems, real-time chat applications, and microservices implementations
+### tRPC Pattern (This Project)
+
+```typescript
+// server/featureRouter.ts
+export const featureRouter = router({
+  list: protectedProcedure.query(async ({ ctx }) => {
+    return ctx.db.select().from(table);
+  }),
+
+  create: protectedProcedure
+    .input(z.object({ name: z.string() }))
+    .mutation(async ({ ctx, input }) => {
+      const [result] = await ctx.db
+        .insert(table)
+        .values(input)
+        .returning({ id: table.id });
+      return result;
+    }),
+});
+```
+
+### API Checklist
+
+- [ ] Chosen API style for THIS context?
+- [ ] Defined consistent response format?
+- [ ] Planned versioning strategy?
+- [ ] Considered authentication needs?
+- [ ] Planned rate limiting?
+
+---
+
+## TypeScript Patterns
+
+### "Type instantiation is excessively deep"
+
+```typescript
+// ❌ Anti-Pattern
+const mutate = useMutation(api.leads.updateStatus);
+
+// ✅ Pattern: Early cast
+const mutate = useMutation((api as any).leads.updateStatus);
+```
+
+### Branded Types
+
+```typescript
+type Brand<K, T> = K & { __brand: T };
+type UserId = Brand<string, "UserId">;
+type OrderId = Brand<string, "OrderId">;
+
+// Prevents accidental mixing
+function processOrder(orderId: OrderId, userId: UserId) {}
+```
+
+### Build Performance
+
+```bash
+# Diagnose slow type checking
+npx tsc --extendedDiagnostics --incremental false
+
+# Quick validation
+bun run check
+```
+
+---
+
+## Data Analysis Workflow
+
+### Python Script Pattern
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# 1. Load data
+df = pd.read_csv("data.csv")
+
+# 2. Explore
+print(df.describe())
+
+# 3. Analyze
+summary = df.groupby("category").agg({"value": ["mean", "sum"]})
+
+# 4. Visualize
+plt.figure(figsize=(10, 6))
+summary.plot(kind="bar")
+plt.savefig("analysis.png", dpi=300)
+```
+
+### Statistical Tests
+
+| Question | Test |
+|----------|------|
+| Difference between groups | t-test, ANOVA |
+| Relationship between vars | Correlation, regression |
+| Distribution comparison | Chi-square, KS-test |
+
+---
+
+## Database & Schema Principles
+
+**Goal**: 0 new tables. Extend existing.
+
+```typescript
+// ❌ DON'T: Create separate table
+// campaignTracking: defineTable({ ... })
+
+// ✅ DO: Add optional field
+users: defineTable({
+  // ...existing
+  campaignSource: v.optional(v.string()),
+});
+```
+
+### Query Patterns
+
+```typescript
+// ❌ DON'T: Parallel queries
+// getTrialUsers vs getUsers
+
+// ✅ DO: Extend with computed props
+export const getUserStatus = query({
+  handler: async ctx => {
+    const user = await getUser(ctx);
+    return {
+      ...user,
+      isTrial: Boolean(user?.campaign),
+      daysRemaining: calculateDays(user),
+    };
+  },
+});
+```
+
+---
+
+## Anti-Patterns
+
+| Pattern | Why Bad | Fix |
+|---------|---------|-----|
+| UI-Driven DB | Schema matches components | Store logically |
+| "Just one more table" | Join complexity | Extend existing |
+| Parallel APIs | Duplication | Add flags to main |
+| Manual state sync | Race conditions | Use useQuery |
+| Sequential DB writes | Slow | Use Promise.all |
+
+---
+
+## Review Checklist
+
+### Architecture
+- [ ] Extended existing tables/queries?
+- [ ] Followed Three-Pass approach?
+- [ ] No manual state sync (useEffect)?
+- [ ] Added fields are optional?
+- [ ] New code < 50% of fresh implementation?
+
+### API
+- [ ] Consistent response format?
+- [ ] Proper status codes?
+- [ ] Rate limiting considered?
+
+### TypeScript
+- [ ] No `any` (use `unknown`)?
+- [ ] Explicit return types on exports?
+- [ ] Const assertions where applicable?
+
+---
+
+## Commands
+
+```bash
+# Type check
+bun run check
+
+# Format
+bun run format
+
+# Test
+bun test
+
+# Diagnose TS performance
+npx tsc --extendedDiagnostics
+```

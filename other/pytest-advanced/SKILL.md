@@ -1,494 +1,532 @@
 ---
 name: pytest-advanced
-description: Use when advanced Pytest features including markers, custom assertions, hooks, and coverage configuration.
-allowed-tools: [Read, Write, Edit, Bash, Glob, Grep]
+description: Advanced Python testing with pytest including fixtures, parametrization, mocking, markers, and plugins. Test async code, APIs, and databases. Use for Python testing, test automation, or CI/CD pipelines.
 ---
 
-# pytest advanced
+# Advanced pytest Testing
 
-Master advanced Pytest features including markers, custom assertions, hooks, and coverage configuration. This skill provides comprehensive coverage of essential concepts, patterns, and best practices for professional Pytest development.
+## Quick Reference
 
-## Overview
+| Command | Purpose |
+|---------|---------|
+| `pytest` | Run all tests |
+| `pytest -v` | Verbose output |
+| `pytest -k "pattern"` | Run matching tests |
+| `pytest -m marker` | Run marked tests |
+| `pytest --cov=src` | Coverage report |
+| `pytest -x` | Stop on first failure |
+| `pytest --pdb` | Debug on failure |
 
-Pytest is a powerful tool for python development, providing robust capabilities for maintaining code quality and ensuring reliable software delivery. This skill covers the fundamental through advanced aspects of working with Pytest.
+## 1. Setup
 
-## Installation and Setup
-
-### Basic Installation
-
-Setting up Pytest requires proper installation and configuration in your development environment.
+### Installation
 
 ```bash
-# Installation command specific to Pytest
-# Follow official documentation for latest version
+pip install pytest pytest-cov pytest-asyncio pytest-mock pytest-xdist
 ```
 
-### Project Configuration
+### Configuration (pyproject.toml)
 
-Create appropriate configuration files and setup for your project structure:
+```toml
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q --strict-markers"
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = [
+    "slow: marks tests as slow",
+    "integration: marks integration tests",
+    "unit: marks unit tests"
+]
+filterwarnings = [
+    "error",
+    "ignore::DeprecationWarning"
+]
 
-- Configuration file setup
-- Project structure organization
-- Team collaboration setup
-- CI/CD integration preparation
+[tool.coverage.run]
+source = ["src"]
+branch = true
+omit = ["tests/*", "*/__init__.py"]
 
-## Core Concepts
-
-### Fundamental Principles
-
-Understanding the core principles of Pytest is essential for effective usage:
-
-1. **Architecture** - How Pytest is structured and operates
-2. **Configuration** - Setting up and customizing behavior
-3. **Integration** - Working with other tools and frameworks
-4. **Best Practices** - Industry-standard approaches
-
-### Key Features
-
-Pytest provides several key features that make it valuable:
-
-- Feature 1: Core functionality
-- Feature 2: Advanced capabilities  
-- Feature 3: Integration options
-- Feature 4: Performance optimization
-- Feature 5: Extensibility
-
-### Configuration Strategy
-
-Proper configuration ensures Pytest works optimally:
-
-- Environment-specific setup
-- Team standards enforcement
-- Performance tuning
-- Error handling configuration
-
-### Advanced Usage
-
-For complex scenarios, Pytest offers advanced capabilities:
-
-- Custom extensions
-- Advanced patterns
-- Performance optimization
-- Scalability considerations
-
-## Code Examples
-
-### Example 1: Basic Setup
-
-```python
-// Basic Pytest setup
-// Demonstrates fundamental usage patterns
-// Shows proper initialization and configuration
-
-// Core setup code
-function basicSetup() {
-  // Initialize framework
-  // Configure basic options
-  // Return configured instance
-}
-
-// Usage example
-const instance = basicSetup();
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "if TYPE_CHECKING:",
+    "raise NotImplementedError"
+]
+fail_under = 80
 ```
 
-### Example 2: Configuration
+## 2. Fixtures
+
+### Basic Fixtures
 
 ```python
-// Configuration example for Pytest
-// Shows how to properly configure
-// Includes common options and patterns
+import pytest
 
-// Configuration object
-const config = {
-  option1: 'value1',
-  option2: 'value2',
-  advanced: {
-    setting1: true,
-    setting2: false
-  }
-};
+@pytest.fixture
+def sample_user():
+    """Create a sample user for testing."""
+    return {"id": 1, "name": "John", "email": "john@example.com"}
 
-// Apply configuration
-function applyConfig(config) {
-  // Validation logic
-  // Application logic
-  // Return result
-}
+@pytest.fixture
+def sample_users():
+    """Create multiple users."""
+    return [
+        {"id": 1, "name": "John"},
+        {"id": 2, "name": "Jane"},
+        {"id": 3, "name": "Bob"}
+    ]
+
+def test_user_name(sample_user):
+    assert sample_user["name"] == "John"
+
+def test_users_count(sample_users):
+    assert len(sample_users) == 3
 ```
 
-### Example 3: Advanced Pattern
+### Fixture Scopes
 
 ```python
-// Advanced usage pattern
-// Demonstrates sophisticated techniques
-// Shows best practices in action
+@pytest.fixture(scope="function")  # Default - runs for each test
+def function_fixture():
+    return create_resource()
 
-function advancedPattern() {
-  // Setup phase
-  // Execution phase
-  // Cleanup phase
-}
+@pytest.fixture(scope="class")  # Once per test class
+def class_fixture():
+    return create_resource()
+
+@pytest.fixture(scope="module")  # Once per module
+def module_fixture():
+    return create_resource()
+
+@pytest.fixture(scope="session")  # Once per test session
+def session_fixture():
+    return create_expensive_resource()
 ```
 
-### Example 4: Integration
+### Fixture with Setup/Teardown
 
 ```python
-// Integration with other tools
-// Shows real-world usage
-// Demonstrates interoperability
+@pytest.fixture
+def database_connection():
+    # Setup
+    conn = create_database_connection()
 
-function integrationExample() {
-  // Setup integration
-  // Execute workflow
-  // Handle results
-}
+    yield conn  # Provide the fixture value
+
+    # Teardown
+    conn.close()
+
+@pytest.fixture
+def temp_directory(tmp_path):
+    # tmp_path is a built-in fixture
+    test_dir = tmp_path / "test_data"
+    test_dir.mkdir()
+
+    yield test_dir
+
+    # Cleanup is automatic with tmp_path
 ```
 
-### Example 5: Error Handling
+### Fixture Factory
 
 ```python
-// Proper error handling approach
-// Defensive programming patterns
-// Graceful degradation
+@pytest.fixture
+def make_user():
+    """Factory fixture to create users with custom attributes."""
+    created_users = []
 
-function withErrorHandling() {
-  try {
-    // Main logic
-  } catch (error) {
-    // Error recovery
-  } finally {
-    // Cleanup
-  }
-}
+    def _make_user(name="John", email=None):
+        user = User(
+            name=name,
+            email=email or f"{name.lower()}@example.com"
+        )
+        created_users.append(user)
+        return user
+
+    yield _make_user
+
+    # Cleanup
+    for user in created_users:
+        user.delete()
+
+def test_multiple_users(make_user):
+    user1 = make_user("Alice")
+    user2 = make_user("Bob", "bob@test.com")
+
+    assert user1.name == "Alice"
+    assert user2.email == "bob@test.com"
 ```
 
-### Example 6: Performance Optimization
+### Conftest.py (Shared Fixtures)
 
 ```python
-// Performance-optimized implementation
-// Shows efficiency techniques
-// Demonstrates best practices
+# tests/conftest.py
+import pytest
+from myapp import create_app, db
 
-function optimizedApproach() {
-  // Efficient implementation
-  // Resource management
-  // Performance monitoring
-}
+@pytest.fixture(scope="session")
+def app():
+    """Create application for testing."""
+    app = create_app("testing")
+    return app
+
+@pytest.fixture(scope="session")
+def client(app):
+    """Create test client."""
+    return app.test_client()
+
+@pytest.fixture(scope="function")
+def database(app):
+    """Create fresh database for each test."""
+    with app.app_context():
+        db.create_all()
+        yield db
+        db.drop_all()
 ```
 
-### Example 7: Testing
+## 3. Parametrization
+
+### Basic Parametrize
 
 ```python
-// Testing approach for Pytest
-// Unit test examples
-// Integration test patterns
+@pytest.mark.parametrize("input,expected", [
+    (1, 2),
+    (2, 4),
+    (3, 6),
+    (0, 0),
+    (-1, -2)
+])
+def test_double(input, expected):
+    assert double(input) == expected
 
-function testExample() {
-  // Test setup
-  // Execution
-  // Assertions
-  // Teardown
-}
+@pytest.mark.parametrize("x,y,expected", [
+    (1, 2, 3),
+    (0, 0, 0),
+    (-1, 1, 0),
+    (100, 200, 300)
+], ids=["positive", "zeros", "mixed", "large"])
+def test_add(x, y, expected):
+    assert add(x, y) == expected
 ```
 
-### Example 8: Production Usage
+### Multiple Parametrize (Cartesian Product)
 
 ```python
-// Production-ready implementation
-// Includes monitoring and logging
-// Error recovery and resilience
+@pytest.mark.parametrize("x", [1, 2])
+@pytest.mark.parametrize("y", [10, 20])
+def test_multiply(x, y):
+    # Runs 4 tests: (1,10), (1,20), (2,10), (2,20)
+    result = x * y
+    assert result > 0
+```
 
-function productionExample() {
-  // Production configuration
-  // Monitoring setup
-  // Error handling
-  // Logging
-}
+### Parametrize with Fixtures
+
+```python
+@pytest.fixture(params=["sqlite", "postgres", "mysql"])
+def database_type(request):
+    return request.param
+
+def test_database_connection(database_type):
+    # Runs 3 times, once for each database
+    conn = connect(database_type)
+    assert conn.is_connected()
+```
+
+## 4. Markers
+
+### Built-in Markers
+
+```python
+@pytest.mark.skip(reason="Not implemented yet")
+def test_future_feature():
+    pass
+
+@pytest.mark.skipif(sys.version_info < (3, 10), reason="Requires Python 3.10+")
+def test_new_syntax():
+    pass
+
+@pytest.mark.xfail(reason="Known bug #123")
+def test_known_issue():
+    assert buggy_function() == expected
+
+@pytest.mark.xfail(strict=True)  # Must fail, or test fails
+def test_must_fail():
+    assert False
+```
+
+### Custom Markers
+
+```python
+# pytest.ini or pyproject.toml - register markers
+# [pytest]
+# markers =
+#     slow: marks tests as slow
+#     integration: integration tests
+
+@pytest.mark.slow
+def test_slow_operation():
+    time.sleep(10)
+    assert True
+
+@pytest.mark.integration
+def test_database_integration(database):
+    result = database.query("SELECT 1")
+    assert result == 1
+
+# Run specific markers
+# pytest -m slow
+# pytest -m "not slow"
+# pytest -m "integration and not slow"
+```
+
+## 5. Mocking
+
+### Using pytest-mock
+
+```python
+def test_api_call(mocker):
+    # Mock a function
+    mock_get = mocker.patch("requests.get")
+    mock_get.return_value.json.return_value = {"data": "test"}
+
+    result = fetch_data("http://api.example.com")
+
+    mock_get.assert_called_once_with("http://api.example.com")
+    assert result == {"data": "test"}
+
+def test_class_method(mocker):
+    # Mock a class method
+    mocker.patch.object(UserService, "get_user", return_value={"id": 1})
+
+    user = UserService().get_user(1)
+    assert user["id"] == 1
+
+def test_with_side_effect(mocker):
+    # Mock with side effect
+    mock_db = mocker.patch("myapp.database.query")
+    mock_db.side_effect = [
+        {"id": 1},  # First call
+        {"id": 2},  # Second call
+        DatabaseError("Connection lost")  # Third call raises
+    ]
+
+    assert get_user(1) == {"id": 1}
+    assert get_user(2) == {"id": 2}
+    with pytest.raises(DatabaseError):
+        get_user(3)
+```
+
+### Mock Context Manager
+
+```python
+def test_file_read(mocker):
+    mock_open = mocker.patch("builtins.open", mocker.mock_open(read_data="test content"))
+
+    content = read_file("test.txt")
+
+    mock_open.assert_called_once_with("test.txt", "r")
+    assert content == "test content"
+```
+
+### Spy
+
+```python
+def test_spy(mocker):
+    spy = mocker.spy(MyClass, "method")
+
+    obj = MyClass()
+    result = obj.method(1, 2)
+
+    spy.assert_called_once_with(obj, 1, 2)
+    assert result == original_result  # Spy doesn't change behavior
+```
+
+## 6. Async Testing
+
+```python
+import pytest
+import asyncio
+
+@pytest.mark.asyncio
+async def test_async_function():
+    result = await async_fetch_data()
+    assert result == expected
+
+@pytest.fixture
+async def async_client():
+    client = await create_async_client()
+    yield client
+    await client.close()
+
+@pytest.mark.asyncio
+async def test_with_async_fixture(async_client):
+    response = await async_client.get("/api/data")
+    assert response.status == 200
+
+# Timeout for async tests
+@pytest.mark.asyncio
+@pytest.mark.timeout(5)
+async def test_with_timeout():
+    await long_running_task()
+```
+
+## 7. Exception Testing
+
+```python
+def test_raises_exception():
+    with pytest.raises(ValueError):
+        raise_value_error()
+
+def test_exception_message():
+    with pytest.raises(ValueError, match=r"invalid value: \d+"):
+        raise ValueError("invalid value: 42")
+
+def test_exception_attributes():
+    with pytest.raises(CustomError) as exc_info:
+        raise CustomError("error", code=500)
+
+    assert exc_info.value.code == 500
+    assert "error" in str(exc_info.value)
+
+def test_does_not_raise():
+    with pytest.raises(ValueError):
+        pass  # This test will FAIL because no exception was raised
+```
+
+## 8. Database Testing
+
+```python
+import pytest
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+
+@pytest.fixture(scope="session")
+def engine():
+    return create_engine("sqlite:///:memory:")
+
+@pytest.fixture(scope="session")
+def tables(engine):
+    Base.metadata.create_all(engine)
+    yield
+    Base.metadata.drop_all(engine)
+
+@pytest.fixture
+def session(engine, tables):
+    """Create a new database session for each test."""
+    connection = engine.connect()
+    transaction = connection.begin()
+    Session = sessionmaker(bind=connection)
+    session = Session()
+
+    yield session
+
+    session.close()
+    transaction.rollback()
+    connection.close()
+
+def test_create_user(session):
+    user = User(name="John")
+    session.add(user)
+    session.commit()
+
+    assert session.query(User).count() == 1
+```
+
+## 9. HTTP/API Testing
+
+```python
+import pytest
+import responses
+import httpx
+
+# Using responses library
+@responses.activate
+def test_api_call():
+    responses.add(
+        responses.GET,
+        "https://api.example.com/users",
+        json={"users": [{"id": 1}]},
+        status=200
+    )
+
+    result = fetch_users()
+    assert len(result["users"]) == 1
+
+# Using pytest-httpx for async
+@pytest.mark.asyncio
+async def test_async_api(httpx_mock):
+    httpx_mock.add_response(
+        url="https://api.example.com/data",
+        json={"data": "test"}
+    )
+
+    async with httpx.AsyncClient() as client:
+        response = await client.get("https://api.example.com/data")
+
+    assert response.json() == {"data": "test"}
+
+# Flask/FastAPI testing
+@pytest.fixture
+def client(app):
+    return app.test_client()
+
+def test_endpoint(client):
+    response = client.get("/api/users")
+    assert response.status_code == 200
+    assert len(response.json) > 0
+```
+
+## 10. Parallel Testing
+
+```bash
+# Install pytest-xdist
+pip install pytest-xdist
+
+# Run tests in parallel
+pytest -n auto  # Auto-detect CPU count
+pytest -n 4     # Use 4 workers
+```
+
+```python
+# Mark tests that can't run in parallel
+@pytest.mark.no_parallel
+def test_singleton_resource():
+    pass
+```
+
+## 11. Plugins and Extensions
+
+```python
+# Custom plugin in conftest.py
+def pytest_configure(config):
+    config.addinivalue_line("markers", "custom: custom marker")
+
+def pytest_collection_modifyitems(config, items):
+    # Modify test collection
+    for item in items:
+        if "slow" in item.keywords:
+            item.add_marker(pytest.mark.timeout(60))
+
+@pytest.hookimpl(tryfirst=True)
+def pytest_runtest_makereport(item, call):
+    # Custom reporting
+    if call.when == "call" and call.excinfo is not None:
+        # Log failed tests
+        pass
 ```
 
 ## Best Practices
 
-1. **Follow conventions** - Adhere to established naming and structural patterns for consistency
-2. **Configure appropriately** - Set up framework configuration that matches project requirements
-3. **Validate inputs** - Always validate and sanitize inputs before processing
-4. **Handle errors gracefully** - Implement comprehensive error handling and recovery
-5. **Document decisions** - Comment configuration choices and non-obvious implementations
-6. **Test thoroughly** - Write comprehensive tests for all functionality
-7. **Optimize performance** - Profile and optimize critical paths
-8. **Maintain security** - Follow security best practices and guidelines
-9. **Keep updated** - Regularly update framework and dependencies
-10. **Monitor production** - Implement logging and monitoring for production systems
-
-## Common Pitfalls
-
-1. **Incorrect configuration** - Misconfiguration leads to unexpected behavior and bugs
-2. **Missing error handling** - Not handling edge cases causes production issues
-3. **Poor performance** - Not optimizing leads to scalability problems
-4. **Inadequate testing** - Insufficient test coverage misses bugs
-5. **Security vulnerabilities** - Not following security best practices exposes risks
-6. **Tight coupling** - Poor architecture makes maintenance difficult
-7. **Ignoring warnings** - Dismissing framework warnings leads to future problems
-8. **Outdated dependencies** - Using old versions exposes security risks
-9. **No monitoring** - Lack of observability makes debugging difficult
-10. **Inconsistent standards** - Team inconsistency reduces code quality
-
-## Advanced Topics
-
-### Customization
-
-Pytest allows extensive customization for specific needs:
-
-- Custom plugins and extensions
-- Behavior modification
-- Integration adapters
-- Domain-specific adaptations
-
-### Performance Tuning
-
-Optimize Pytest performance for production:
-
-- Profiling and benchmarking
-- Resource optimization
-- Caching strategies
-- Parallel execution
-
-### CI/CD Integration
-
-Integrate Pytest into continuous integration pipelines:
-
-- Automated execution
-- Result reporting
-- Quality gates
-- Deployment integration
-
-### Troubleshooting
-
-Common issues and their solutions:
-
-- Configuration errors
-- Integration problems
-- Performance issues
-- Unexpected behavior
-
-## When to Use This Skill
-
-- Setting up Pytest in new projects
-- Configuring Pytest for specific requirements
-- Migrating to Pytest from alternatives
-- Optimizing Pytest performance
-- Implementing advanced patterns
-- Troubleshooting Pytest issues
-- Integrating Pytest with CI/CD
-- Training team members on Pytest
-- Establishing team standards
-- Maintaining existing Pytest implementations
-
-## Additional Resources
-
-### Documentation
-
-- Official Pytest documentation
-- Community guides and tutorials
-- API reference materials
-- Migration guides
-
-### Tools and Utilities
-
-- Development tools
-- Testing utilities
-- Monitoring solutions
-- Helper libraries
-
-### Community
-
-- Online forums and communities
-- Open source contributions
-- Best practice repositories
-- Example implementations
-
-## Conclusion
-
-Mastering Pytest requires understanding both fundamentals and advanced concepts. This skill provides the foundation for professional-grade usage, from initial setup through production deployment. Apply these principles consistently for best results.
-
-## Detailed Configuration Examples
-
-### Configuration Option 1
-
-Comprehensive configuration example demonstrating best practices and common patterns used in production environments.
-
-```bash
-# Detailed configuration setup
-# Includes all necessary options
-# Optimized for production use
-```
-
-### Configuration Option 2
-
-Alternative configuration approach for different use cases, showing flexibility and adaptability of the framework.
-
-```bash
-# Alternative configuration
-# Different optimization strategy
-# Suitable for specific scenarios
-```
-
-### Configuration Option 3
-
-Advanced configuration for complex environments with multiple requirements and constraints.
-
-```bash
-# Advanced configuration
-# Handles complex scenarios
-# Production-ready setup
-```
-
-## Advanced Usage Patterns
-
-### Pattern 1: Modular Organization
-
-Organize your setup in a modular way to improve maintainability and scalability across large projects.
-
-Implementation details:
-
-- Separate concerns appropriately
-- Use composition over inheritance
-- Follow single responsibility principle
-- Maintain clear interfaces
-
-### Pattern 2: Performance Optimization
-
-Optimize for performance in production environments with proven strategies and techniques.
-
-Key considerations:
-
-- Profile before optimizing
-- Focus on bottlenecks
-- Cache appropriately
-- Monitor in production
-
-### Pattern 3: Error Recovery
-
-Implement robust error recovery mechanisms to handle failures gracefully.
-
-Recovery strategies:
-
-- Graceful degradation
-- Retry with backoff
-- Circuit breaker pattern
-- Comprehensive logging
-
-### Pattern 4: Testing Strategy
-
-Comprehensive testing approach ensuring code quality and reliability.
-
-Testing layers:
-
-- Unit tests for components
-- Integration tests for workflows
-- End-to-end tests for user scenarios
-- Performance tests for scalability
-
-## Integration Strategies
-
-### Integration with CI/CD
-
-Seamless integration into continuous integration and deployment pipelines.
-
-Steps:
-
-1. Configure pipeline
-2. Set up automation
-3. Define quality gates
-4. Monitor execution
-
-### Integration with Development Tools
-
-Connect with popular development tools and IDEs for improved workflow.
-
-Tools:
-
-- IDE plugins and extensions
-- CLI tools and utilities
-- Build system integration
-- Version control hooks
-
-### Integration with Monitoring
-
-Implement monitoring and observability for production systems.
-
-Monitoring aspects:
-
-- Performance metrics
-- Error tracking
-- Usage analytics
-- Health checks
-
-## Team Practices
-
-### Establishing Standards
-
-Create and maintain consistent standards across the team.
-
-Standards to define:
-
-- Naming conventions
-- Code organization
-- Documentation requirements
-- Review processes
-
-### Onboarding Process
-
-Streamline onboarding for new team members.
-
-Onboarding steps:
-
-- Initial setup guide
-- Training materials
-- Practice exercises
-- Mentorship program
-
-### Code Review Guidelines
-
-Effective code review practices for quality assurance.
-
-Review checklist:
-
-- Correctness
-- Performance
-- Security
-- Maintainability
-
-## Troubleshooting Guide
-
-### Common Issue 1
-
-Detailed troubleshooting steps for frequently encountered problem.
-
-Resolution steps:
-
-1. Identify symptoms
-2. Check configuration
-3. Verify dependencies
-4. Test solution
-
-### Common Issue 2
-
-Another common issue with comprehensive resolution approach.
-
-Diagnostic steps:
-
-1. Reproduce issue
-2. Gather logs
-3. Analyze data
-4. Apply fix
-
-### Common Issue 3
-
-Third common scenario with clear resolution path.
-
-Investigation process:
-
-1. Understand context
-2. Review recent changes
-3. Test hypotheses
-4. Implement solution
+1. **Use fixtures for setup** - Avoid repetition
+2. **Keep tests isolated** - No shared state between tests
+3. **Name tests descriptively** - `test_<what>_<condition>_<expected>`
+4. **Use parametrize** - Test multiple inputs
+5. **Mock external services** - Fast, reliable tests
+6. **Use markers** - Organize and filter tests
+7. **Run tests in parallel** - Faster CI/CD
+8. **Maintain coverage** - But focus on quality
+9. **Use conftest.py** - Share fixtures across modules
+10. **Test edge cases** - Empty, null, boundaries

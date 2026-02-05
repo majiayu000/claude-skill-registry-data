@@ -1,71 +1,121 @@
 ---
-name: competitive-analysis
-description: Help users understand and respond to competition. Use when someone is positioning against competitors, evaluating market threats, running competitive war games, or deciding how much to focus on competitors versus customers.
+name: "competitive-analysis"
+description: "Produce a Competitive Analysis Pack (competitive alternatives map, competitor landscape, differentiation & positioning hypotheses, battlecards, monitoring plan). Use for competitor research, competitive landscape, win/loss analysis, and positioning vs alternatives."
 ---
 
 # Competitive Analysis
 
-Help the user understand competitive dynamics using frameworks from 49 product leaders who have navigated competition at companies from startups to Netflix and Google.
+## Scope
 
-## How to Help
+**Covers**
+- Mapping **competitive alternatives** (status quo, workarounds, analog/non-consumption, direct + indirect competitors)
+- Building a competitor landscape grounded in **customer decision criteria**
+- Turning analysis into **actionable artifacts**: positioning hypotheses, win themes, battlecards, and a monitoring plan
 
-When the user asks for help with competitive analysis:
+**When to use**
+- “Do a competitive analysis / competitor landscape for our product.”
+- “Why are we losing deals to <competitor>?”
+- “What are the real alternatives if we didn’t exist?”
+- “Help us differentiate and position vs competitors.”
+- “Create sales battlecards and win/loss takeaways.”
 
-1. **Expand the competitive set** - Identify not just direct competitors but the status quo and workarounds
-2. **Understand the true threat** - Determine if the competition is features, distribution, or fundamental business model
-3. **Find asymmetries** - Help them identify unique advantages competitors cannot easily copy
-4. **Design the right response** - Balance competitive awareness with customer obsession
+**When NOT to use**
+- You need market sizing / TAM/SAM/SOM as the primary output (different workflow)
+- You don’t know the target customer, core use case, or the decision this analysis should support
+- You only need a quick list of competitors (no synthesis, no artifacts)
+- You’re seeking confidential or non-public competitor information (do not attempt)
 
-## Core Principles
+## Inputs
 
-### Compete against the status quo
-April Dunford: "Most folks will discount the status quo, but they shouldn't because in B2B we lose about 40% of our deals to 'no decision,' which actually means we lost to the spreadsheet, we lost to pen and paper." Position specifically against current workarounds, not just competitors.
+**Minimum required**
+- Product + target customer segment + core use case (what job is being done)
+- The decision to support (e.g., positioning, sales enablement, roadmap bets, pricing, market entry)
+- 3–10 known competitors/alternatives (or “unknown—please map them”)
+- Any available evidence (links, win/loss notes, call transcripts, customer quotes, pricing pages, reviews)
+- Constraints: geography, ICP, price band, compliance/regulation (if relevant), time box
 
-### Define competitive alternatives first
-April Dunford: "The first step in a good positioning exercise is to really understand, what do we have to position against? What do I have to beat in order to win a deal?" Look beyond direct competitors to anything customers would do if your product didn't exist.
+**Missing-info strategy**
+- Ask up to 5 questions from [references/INTAKE.md](references/INTAKE.md).
+- If answers aren’t available, proceed with explicit assumptions and label unknowns. Provide 2–3 plausible alternative scopes (narrow vs broad).
 
-### Understand industry economics deeply
-Hamilton Helmer: "Understanding whether or not there is a type of power in place is hard... the hard part is industry economics, what really are the economic relationships." Surface-level competitive analysis misses the structural forces that determine winners.
+## Outputs (deliverables)
 
-### Ground everything in external reality
-Shaun Clowes: "In everything always talk from the customer's perspective, from the market's perspective, from the competitor's perspective. The very small number of PMs do that." Great PMs differentiate by grounding work in market realities, not internal politics.
+Produce a **Competitive Analysis Pack** in Markdown (in-chat; or as files if requested):
 
-### Include the analog alternative
-Bret Taylor: "Why use this instead of Yahoo Yellow Pages? But more than anything else, why use this instead of the Yellow Pages?" Compete against the traditional, non-digital way users solve the problem.
+1) **Context snapshot** (decision, ICP, use case, constraints, time box)
+2) **Competitive alternatives map** (direct/indirect/status quo/workarounds/analog)
+3) **Competitor landscape table** (top 5–10) with evidence links + confidence
+4) **Customer decision criteria** + comparison matrix (customer POV)
+5) **Differentiation & positioning hypotheses** (why win, why lose, proof points)
+6) **Win themes + loss risks** (objections, landmines, traps)
+7) **Battlecards** (3–5 priority competitors)
+8) **Monitoring plan** (signals, cadence, owners, update triggers)
+9) **Risks / Open questions / Next steps** (always included)
 
-### Competition includes workarounds
-Jake Knapp: "What's the competition for solving that problem? How do they solve it today? And what are the alternatives? What are the workarounds?" Look beyond direct startup competitors to manual processes and existing habits.
+Templates: [references/TEMPLATES.md](references/TEMPLATES.md)
 
-### Don't blindly copy competitors
-Elena Verna: "Knowing what your competition is doing is extremely important... But blatantly copying all of these best tactics or flows because they're doing better than us - that's where things really go wrong." Use competitors for inspiration, not replication.
+## Workflow (8 steps)
 
-### Beware competitive myopia
-Tanguy Crusson: "Your competitor, if you think of what they do as an iceberg, the top side is what they've shipped in terms of features, but it's based on all this stuff they've built in terms of research." You only see their past output, not their underlying strategy.
+### 1) Intake + decision framing
+- **Inputs:** User context; [references/INTAKE.md](references/INTAKE.md).
+- **Actions:** Confirm the decision, ICP, use case, geography, and time box. Define what “good” looks like (who will use this and for what).
+- **Outputs:** Context snapshot.
+- **Checks:** A stakeholder can answer: “What decision will this analysis change?”
 
-## Questions to Help Users
+### 2) Map competitive alternatives (not just logos)
+- **Inputs:** Use case + customer job.
+- **Actions:** List what customers do *instead*: status quo, internal build, manual workaround, analog tools, agencies/outsourcing, and direct/indirect competitors. Identify the “true competitor” for the deal.
+- **Outputs:** Competitive alternatives map + short notes per alternative.
+- **Checks:** At least 1–2 non-obvious alternatives appear (workarounds / analog / non-consumption).
 
-- "What would your customer do if your product didn't exist?"
-- "What percentage of deals do you lose to 'no decision'?"
-- "What's the weakness in your competitor's greatest strength?"
-- "Is your advantage in features, distribution, or business model?"
-- "How would a competitor describe your positioning?"
-- "What market 'current' are you riding or fighting against?"
+### 3) Select the focus set + collect evidence (time-boxed)
+- **Inputs:** Alternatives map; available sources.
+- **Actions:** Pick 5–10 focus alternatives (by frequency/impact). Gather publicly available facts (positioning, features, pricing, distribution, target ICP) and internal learnings (win/loss, sales notes). Track confidence and unknowns.
+- **Outputs:** Evidence log + initial landscape table.
+- **Checks:** Each competitor row has at least 2 evidence points (link/quote/data) or is explicitly labeled “low confidence”.
 
-## Common Mistakes to Flag
+### 4) Build the comparison from the customer’s perspective
+- **Inputs:** Focus set + evidence.
+- **Actions:** Define 6–10 customer decision criteria (JTBD outcomes, constraints, trust, time-to-value, switching cost, price, ecosystem fit). Compare alternatives on criteria and surface “why they win”.
+- **Outputs:** Decision criteria list + comparison matrix.
+- **Checks:** Criteria are framed as customer outcomes/risks (not internal feature checklists).
 
-- **Ignoring the status quo** - 40% of B2B deals are lost to doing nothing, not to competitors
-- **Feature-by-feature comparison** - Distribution moats often matter more than feature sets
-- **Fast-following without context** - Competitor features reflect year-old thinking, not current strategy
-- **Assuming data creates moats** - Data advantages often diminish once competitors reach scale
-- **Over-indexing on competitors** - Great for market awareness, dangerous for product roadmap
+### 5) Derive differentiation + positioning hypotheses
+- **Inputs:** Matrix + wins/losses.
+- **Actions:** Write 2–3 positioning hypotheses: (a) who we’re for, (b) the value we deliver, (c) why we’re different vs the true alternative, (d) proof points, (e) tradeoffs/non-goals.
+- **Outputs:** Differentiation & positioning section.
+- **Checks:** Each hypothesis names the competitive alternative it’s positioning against.
 
-## Deep Dive
+### 6) Translate into win themes + battlecards
+- **Inputs:** Positioning hypotheses + competitor notes.
+- **Actions:** Create 3–5 win themes and 3–5 loss risks. Produce battlecards for priority competitors (how to win, landmines, objection handling, traps to avoid).
+- **Outputs:** Win/loss section + battlecards.
+- **Checks:** Battlecards contain do/don’t talk tracks and are usable in a live sales call.
 
-For all 63 insights from 49 guests, see `references/guest-insights.md`
+### 7) Recommend actions (product, messaging, GTM)
+- **Inputs:** Findings.
+- **Actions:** Propose 5–10 actions: product bets, messaging changes, pricing/packaging, distribution, partnerships, and “stop doing” items. Tie each action to a win theme or loss risk.
+- **Outputs:** Recommendations list with rationale and owners (if known).
+- **Checks:** Each recommendation is specific enough to execute next week/month.
 
-## Related Skills
+### 8) Monitoring + quality gate + finalize
+- **Inputs:** Draft pack.
+- **Actions:** Define monitoring signals, cadence, and update triggers. Run [references/CHECKLISTS.md](references/CHECKLISTS.md) and score with [references/RUBRIC.md](references/RUBRIC.md). Add Risks/Open questions/Next steps.
+- **Outputs:** Final Competitive Analysis Pack.
+- **Checks:** Pack is shareable as-is; assumptions and confidence levels are explicit.
 
-- Writing North Star Metrics
-- Defining Product Vision
-- Prioritizing Roadmap
-- Setting OKRs & Goals
+## Quality gate (required)
+- Use [references/CHECKLISTS.md](references/CHECKLISTS.md) and [references/RUBRIC.md](references/RUBRIC.md).
+- Always include: **Risks**, **Open questions**, **Next steps**.
+
+## Examples
+
+**Example 1 (B2B SaaS):** “We keep losing deals to Competitor X. Build a competitive alternatives map and a battlecard for X.”  
+Expected: alternatives map (incl. status quo), decision criteria, X battlecard, win themes/loss risks, and a monitoring plan.
+
+**Example 2 (Consumer subscription):** “We’re repositioning for a new segment. Analyze alternatives and propose 2 positioning hypotheses.”  
+Expected: comparison matrix by customer criteria and two clear positioning options with proof points and tradeoffs.
+
+**Boundary example:** “List every competitor in our industry worldwide.”  
+Response: narrow scope (ICP, geography, category) and propose a focused set + monitoring plan; otherwise output becomes a low-signal directory of logos.
+

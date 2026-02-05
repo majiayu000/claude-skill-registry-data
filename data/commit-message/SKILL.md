@@ -1,10 +1,9 @@
 ---
-type: skill
-name: Commit Message
-description: Generate commit messages following conventional commits with scope detection
-skillSlug: commit-message
-phases: [E, C]
-generated: 2026-01-28
-status: unfilled
-scaffoldVersion: "2.0.0"
+name: commit-message
+description: Generate commit messages
+metadata:
+  sync:
+    managed-by: sync-skills
+    refactored: '2026-01-12T01:12:40.960Z'
 ---
+@../../../.agents-common/skills/commit-message/SKILL.md

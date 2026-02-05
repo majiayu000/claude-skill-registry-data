@@ -1,88 +1,111 @@
 ---
 name: nextjs-server-components
-description: When building Next.js App Router pages and deciding between Server and Client Components.
-version: 1.0.0
-tokens: ~450
-confidence: high
-sources:
-  - https://nextjs.org/docs/app/building-your-application/rendering/server-components
-  - https://react.dev/reference/rsc/server-components
-last_validated: 2025-01-10
-next_review: 2025-01-24
-tags: [nextjs, react, rsc, server-components, frontend]
+description: Build efficient React applications using Next.js Server Components that render on the server, reducing client bundle size, improving performance, and enabling direct database access. Use when fetching data server-side, reducing JavaScript bundle size, accessing databases directly in components, implementing streaming with Suspense, creating layouts that only render once, optimizing Core Web Vitals, or building SEO-friendly applications with server-first architecture.
 ---
 
-## When to Use
-When building Next.js App Router pages and deciding between Server and Client Components.
+# Next.js Server Components - React Server Components Patterns
 
-## Patterns
+## When to use this skill
 
-### Default: Server Components
-```tsx
-// app/page.tsx - Server Component by default
-async function Page() {
-  const data = await db.query('SELECT * FROM posts');
-  return <PostList posts={data} />;
-}
+- Fetching data directly in Server Components
+- Reducing client-side JavaScript bundle size
+- Accessing databases directly without API routes
+- Implementing streaming rendering with Suspense
+- Creating layouts that render once and persist
+- Optimizing Largest Contentful Paint (LCP)
+- Building SEO-friendly server-rendered applications
+- Using server-only code (database queries, secrets)
+- Implementing server-side data transformations
+- Reducing Time to Interactive (TTI)
+- Building applications with zero client JS by default
+- Combining Server and Client Components effectively
 
-// ✅ Direct DB/API access
-// ✅ Secrets safe (never sent to client)
-// ✅ Zero client JS for this component
-```
+## When to use this skill
 
-### Client Component ("use client")
-```tsx
-'use client'
-// Only add when you NEED:
-// - useState, useEffect, useContext
-// - Event handlers (onClick, onChange)
-// - Browser APIs (localStorage, window)
+- Building Next.js 13+ apps, optimizing component rendering, managing server/client boundaries.
+- When working on related tasks or features
+- During development that requires this expertise
 
-import { useState } from 'react';
+**Use when**: Building Next.js 13+ apps, optimizing component rendering, managing server/client boundaries.
 
-export function Counter() {
-  const [count, setCount] = useState(0);
-  return <button onClick={() => setCount(c => c + 1)}>{count}</button>;
-}
-```
+## Key Concepts
 
-### Composition Pattern
-```tsx
-// Server Component (parent)
-async function Dashboard() {
-  const user = await getUser();
+Server Components (default in App Router):
+- Run only on server
+- Can directly access databases/APIs
+- Zero client JavaScript
+- Support async/await
+
+Client Components ('use client'):
+- Interactive features
+- Browser APIs
+- React hooks (useState, useEffect, etc.)
+
+## Composition Pattern
+
+```typescript
+// ✅ Server Component fetches data
+// app/page.tsx
+import { ClientComponent } from './ClientComponent';
+
+export default async function Page() {
+  const data = await fetchData(); // Server-side
+  
   return (
     <div>
-      <UserInfo user={user} />       {/* Server */}
-      <InteractiveChart />           {/* Client */}
+      <h1>Server Rendered: {data.title}</h1>
+      <ClientComponent initialData={data} />
     </div>
   );
 }
 
-// Pass server data to client as props
-<ClientComponent initialData={serverData} />
-```
+// ✅ Client Component handles interactivity
+// app/ClientComponent.tsx
+'use client';
 
-### Data Fetching in Server Components
-```tsx
-// ✅ Parallel fetching
-async function Page() {
-  const [posts, user] = await Promise.all([
-    getPosts(),
-    getUser()
-  ]);
-  return <Feed posts={posts} user={user} />;
+export function ClientComponent({ initialData }) {
+  const [count, setCount] = useState(0);
+  
+  return <button onClick={() => setCount(count + 1)}>{count}</button>;
 }
 ```
 
-## Anti-Patterns
-- Adding "use client" to every component (defeats RSC benefits)
-- Importing server-only code in client components
-- Passing functions as props from Server to Client
-- Using useEffect for data that could be fetched on server
+## Pass Server Components as Children
 
-## Verification Checklist
-- [ ] "use client" only where actually needed
-- [ ] No secrets in client components
-- [ ] Server data passed as serializable props
-- [ ] Parallel data fetching where possible
+```typescript
+// ✅ Client Component with Server Component children
+'use client';
+
+export function ClientLayout({ children }: { children: React.ReactNode }) {
+  const [isOpen, setIsOpen] = useState(false);
+  
+  return (
+    <div>
+      <button onClick={() => setIsOpen(!isOpen)}>Toggle</button>
+      {isOpen && children}
+    </div>
+  );
+}
+
+// Usage - children can be Server Components!
+<ClientLayout>
+  <ServerDataComponent /> {/* Stays on server */}
+</ClientLayout>
+```
+
+## When to Use Client Components
+
+Only use 'use client' when you need:
+- useState, useEffect, useContext
+- Browser APIs (localStorage, window)
+- Event handlers (onClick, onChange)
+- Custom hooks
+- Third-party libraries that use React hooks
+
+## Resources
+- [Server Components](https://nextjs.org/docs/app/building-your-application/rendering/server-components)
+- [Client Components](https://nextjs.org/docs/app/building-your-application/rendering/client-components)
+
+---
+
+**Remember**: Keep components server-side by default. Only add 'use client' when necessary for interactivity.

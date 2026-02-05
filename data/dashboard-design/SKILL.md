@@ -5,104 +5,162 @@ description: Design effective dashboards with clear layouts, KPI displays, data 
 
 # Dashboard Design
 
-Create effective dashboards that present data clearly and enable quick decision-making.
+Create effective, information-rich dashboards that surface key data clearly.
 
 ## Instructions
 
-1. **Prioritize key metrics** - Most important KPIs should be immediately visible
-2. **Use consistent card layouts** - Establish a grid system and stick to it
-3. **Design for scanning** - Users should grasp status at a glance
-4. **Enable drill-down** - Summary to detail progression
-5. **Consider real-time needs** - Update frequencies and loading states
+1. **Prioritize information** - Most important metrics at top-left
+2. **Use consistent card layouts** - Same styling for similar data types
+3. **Design for scanning** - Users glance, not read; make data obvious
+4. **Show context** - Compare to previous periods, show trends
+5. **Enable action** - Dashboards should lead to decisions
 
 ## Dashboard Layout Patterns
 
-### KPI Cards
+### Standard Admin Dashboard
 
 ```tsx
-interface KPICardProps {
-  title: string;
-  value: string | number;
-  change?: number;
-  changeLabel?: string;
-  icon?: React.ReactNode;
-}
-
-function KPICard({ title, value, change, changeLabel, icon }: KPICardProps) {
-  const isPositive = change && change > 0;
-  const isNegative = change && change < 0;
-
+function AdminDashboard() {
   return (
-    <div className="bg-white rounded-lg shadow p-6">
-      <div className="flex items-center justify-between">
-        <span className="text-sm font-medium text-gray-500">{title}</span>
-        {icon && <span className="text-gray-400">{icon}</span>}
-      </div>
-      <div className="mt-2">
-        <span className="text-3xl font-bold text-gray-900">{value}</span>
-      </div>
-      {change !== undefined && (
-        <div className="mt-2 flex items-center">
-          <span
-            className={`text-sm font-medium ${
-              isPositive ? 'text-green-600' : isNegative ? 'text-red-600' : 'text-gray-500'
-            }`}
-          >
-            {isPositive && '+'}
-            {change}%
-          </span>
-          {changeLabel && (
-            <span className="ml-2 text-sm text-gray-500">{changeLabel}</span>
-          )}
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
+      {/* Top Navigation */}
+      <header className="sticky top-0 z-50 bg-white dark:bg-gray-800 border-b shadow-sm">
+        <div className="flex items-center justify-between h-16 px-6">
+          <Logo />
+          <div className="flex items-center gap-4">
+            <SearchInput />
+            <NotificationBell />
+            <UserMenu />
+          </div>
         </div>
-      )}
+      </header>
+
+      <div className="flex">
+        {/* Sidebar Navigation */}
+        <aside className="hidden lg:block w-64 bg-white dark:bg-gray-800 border-r min-h-[calc(100vh-4rem)] sticky top-16">
+          <nav className="p-4 space-y-2">
+            <SidebarLink icon={HomeIcon} label="Overview" active />
+            <SidebarLink icon={ChartIcon} label="Analytics" />
+            <SidebarLink icon={UsersIcon} label="Customers" />
+            <SidebarLink icon={SettingsIcon} label="Settings" />
+          </nav>
+        </aside>
+
+        {/* Main Content */}
+        <main className="flex-1 p-6">
+          {/* Page Header */}
+          <div className="mb-6">
+            <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
+              Dashboard Overview
+            </h1>
+            <p className="text-gray-500">Welcome back, here's what's happening</p>
+          </div>
+
+          {/* KPI Cards Row */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+            <KPICard
+              title="Total Revenue"
+              value="$45,231"
+              change="+12.5%"
+              trend="up"
+            />
+            <KPICard
+              title="Active Users"
+              value="2,345"
+              change="+5.2%"
+              trend="up"
+            />
+            <KPICard
+              title="Conversion Rate"
+              value="3.2%"
+              change="-0.4%"
+              trend="down"
+            />
+            <KPICard
+              title="Avg. Order Value"
+              value="$127"
+              change="+8.1%"
+              trend="up"
+            />
+          </div>
+
+          {/* Charts Row */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+            <ChartCard title="Revenue Over Time">
+              <LineChart data={revenueData} />
+            </ChartCard>
+            <ChartCard title="Sales by Category">
+              <BarChart data={categoryData} />
+            </ChartCard>
+          </div>
+
+          {/* Data Table */}
+          <Card>
+            <CardHeader>
+              <CardTitle>Recent Orders</CardTitle>
+              <Button variant="outline" size="sm">View All</Button>
+            </CardHeader>
+            <DataTable
+              columns={orderColumns}
+              data={recentOrders}
+              pagination
+            />
+          </Card>
+        </main>
+      </div>
     </div>
   );
 }
 ```
 
-### Dashboard Grid
+### KPI Card Component
 
 ```tsx
-function DashboardLayout({ children }: { children: React.ReactNode }) {
+interface KPICardProps {
+  title: string;
+  value: string | number;
+  change?: string;
+  trend?: 'up' | 'down' | 'neutral';
+  icon?: React.ComponentType;
+  subtitle?: string;
+}
+
+function KPICard({ title, value, change, trend, icon: Icon, subtitle }: KPICardProps) {
   return (
-    <div className="min-h-screen bg-gray-100">
-      {/* Header */}
-      <header className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-          <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
-          <div className="flex items-center gap-4">
-            <DateRangePicker />
-            <RefreshButton />
+    <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700">
+      <div className="flex items-start justify-between">
+        <div>
+          <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
+            {title}
+          </p>
+          <p className="mt-2 text-3xl font-bold text-gray-900 dark:text-white">
+            {value}
+          </p>
+          {change && (
+            <div className="mt-2 flex items-center gap-1">
+              {trend === 'up' && (
+                <ArrowUpIcon className="w-4 h-4 text-green-500" />
+              )}
+              {trend === 'down' && (
+                <ArrowDownIcon className="w-4 h-4 text-red-500" />
+              )}
+              <span className={`text-sm font-medium ${
+                trend === 'up' ? 'text-green-600' :
+                trend === 'down' ? 'text-red-600' :
+                'text-gray-500'
+              }`}>
+                {change}
+              </span>
+              <span className="text-sm text-gray-400">vs last month</span>
+            </div>
+          )}
+        </div>
+        {Icon && (
+          <div className="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+            <Icon className="w-6 h-6 text-blue-600 dark:text-blue-400" />
           </div>
-        </div>
-      </header>
-
-      {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 py-6">
-        {/* KPI Row */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
-          <KPICard title="Total Revenue" value="$45,231" change={12.5} changeLabel="vs last month" />
-          <KPICard title="Orders" value="1,234" change={-2.3} changeLabel="vs last month" />
-          <KPICard title="Customers" value="5,678" change={8.1} changeLabel="vs last month" />
-          <KPICard title="Avg. Order" value="$36.70" change={4.2} changeLabel="vs last month" />
-        </div>
-
-        {/* Charts Row */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-          <ChartCard title="Revenue Over Time">
-            <RevenueChart />
-          </ChartCard>
-          <ChartCard title="Sales by Category">
-            <CategoryChart />
-          </ChartCard>
-        </div>
-
-        {/* Table Section */}
-        <div className="bg-white rounded-lg shadow">
-          <DataTable />
-        </div>
-      </main>
+        )}
+      </div>
     </div>
   );
 }
@@ -120,197 +178,206 @@ interface ChartCardProps {
 
 function ChartCard({ title, subtitle, action, children }: ChartCardProps) {
   return (
-    <div className="bg-white rounded-lg shadow">
-      <div className="px-6 py-4 border-b border-gray-200">
-        <div className="flex items-center justify-between">
-          <div>
-            <h3 className="text-lg font-medium text-gray-900">{title}</h3>
-            {subtitle && <p className="text-sm text-gray-500">{subtitle}</p>}
-          </div>
-          {action}
+    <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
+      <div className="flex items-center justify-between px-6 py-4 border-b border-gray-200 dark:border-gray-700">
+        <div>
+          <h3 className="font-semibold text-gray-900 dark:text-white">{title}</h3>
+          {subtitle && (
+            <p className="text-sm text-gray-500">{subtitle}</p>
+          )}
         </div>
+        {action}
       </div>
-      <div className="p-6">{children}</div>
+      <div className="p-6">
+        {children}
+      </div>
     </div>
   );
 }
 ```
 
-## Data Tables
+## Dashboard Grid Patterns
 
-### Sortable Data Table
+### Responsive Dashboard Grid
 
 ```tsx
-interface Column<T> {
-  key: keyof T;
-  header: string;
-  sortable?: boolean;
-  render?: (value: T[keyof T], row: T) => React.ReactNode;
-}
+// 12-column grid system
+<div className="grid grid-cols-12 gap-6">
+  {/* Full width */}
+  <div className="col-span-12">
+    <PageHeader />
+  </div>
 
-function DataTable<T extends { id: string }>({
-  data,
-  columns,
-}: {
-  data: T[];
-  columns: Column<T>[];
-}) {
-  const [sortKey, setSortKey] = useState<keyof T | null>(null);
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
+  {/* 4 equal KPI cards */}
+  <div className="col-span-12 sm:col-span-6 lg:col-span-3">
+    <KPICard />
+  </div>
+  <div className="col-span-12 sm:col-span-6 lg:col-span-3">
+    <KPICard />
+  </div>
+  <div className="col-span-12 sm:col-span-6 lg:col-span-3">
+    <KPICard />
+  </div>
+  <div className="col-span-12 sm:col-span-6 lg:col-span-3">
+    <KPICard />
+  </div>
 
-  const sortedData = useMemo(() => {
-    if (!sortKey) return data;
-    return [...data].sort((a, b) => {
-      const aVal = a[sortKey];
-      const bVal = b[sortKey];
-      const modifier = sortOrder === 'asc' ? 1 : -1;
-      return aVal < bVal ? -1 * modifier : aVal > bVal ? 1 * modifier : 0;
-    });
-  }, [data, sortKey, sortOrder]);
+  {/* 2/3 + 1/3 layout */}
+  <div className="col-span-12 lg:col-span-8">
+    <MainChart />
+  </div>
+  <div className="col-span-12 lg:col-span-4">
+    <SidePanel />
+  </div>
 
-  const handleSort = (key: keyof T) => {
-    if (sortKey === key) {
-      setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
-    } else {
-      setSortKey(key);
-      setSortOrder('asc');
-    }
-  };
-
-  return (
-    <div className="overflow-x-auto">
-      <table className="min-w-full divide-y divide-gray-200">
-        <thead className="bg-gray-50">
-          <tr>
-            {columns.map((col) => (
-              <th
-                key={String(col.key)}
-                onClick={() => col.sortable && handleSort(col.key)}
-                className={`px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider ${
-                  col.sortable ? 'cursor-pointer hover:bg-gray-100' : ''
-                }`}
-              >
-                <div className="flex items-center gap-2">
-                  {col.header}
-                  {col.sortable && sortKey === col.key && (
-                    <span>{sortOrder === 'asc' ? '↑' : '↓'}</span>
-                  )}
-                </div>
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody className="bg-white divide-y divide-gray-200">
-          {sortedData.map((row) => (
-            <tr key={row.id} className="hover:bg-gray-50">
-              {columns.map((col) => (
-                <td key={String(col.key)} className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                  {col.render ? col.render(row[col.key], row) : String(row[col.key])}
-                </td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
-}
+  {/* 50/50 split */}
+  <div className="col-span-12 md:col-span-6">
+    <ChartA />
+  </div>
+  <div className="col-span-12 md:col-span-6">
+    <ChartB />
+  </div>
+</div>
 ```
 
-## Real-Time Updates
-
-### Auto-Refresh Hook
+## Real-Time Dashboard
 
 ```tsx
-function useAutoRefresh<T>(
-  fetcher: () => Promise<T>,
-  intervalMs: number = 30000
-) {
-  const [data, setData] = useState<T | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<Error | null>(null);
-  const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
-
-  const refresh = useCallback(async () => {
-    try {
-      const result = await fetcher();
-      setData(result);
-      setLastUpdated(new Date());
-      setError(null);
-    } catch (err) {
-      setError(err instanceof Error ? err : new Error('Fetch failed'));
-    } finally {
-      setLoading(false);
-    }
-  }, [fetcher]);
+function RealTimeDashboard() {
+  const [metrics, setMetrics] = useState<Metrics | null>(null);
 
   useEffect(() => {
-    refresh();
-    const interval = setInterval(refresh, intervalMs);
-    return () => clearInterval(interval);
-  }, [refresh, intervalMs]);
+    // WebSocket for real-time updates
+    const ws = new WebSocket('wss://api.example.com/metrics');
 
-  return { data, loading, error, lastUpdated, refresh };
-}
-```
+    ws.onmessage = (event) => {
+      const data = JSON.parse(event.data);
+      setMetrics(data);
+    };
 
-### Live Status Indicator
-
-```tsx
-function LiveIndicator({ lastUpdated }: { lastUpdated: Date | null }) {
-  const [, forceUpdate] = useState({});
-
-  useEffect(() => {
-    const interval = setInterval(() => forceUpdate({}), 1000);
-    return () => clearInterval(interval);
+    return () => ws.close();
   }, []);
 
-  if (!lastUpdated) return null;
-
-  const seconds = Math.floor((Date.now() - lastUpdated.getTime()) / 1000);
-
   return (
-    <div className="flex items-center gap-2 text-sm text-gray-500">
-      <span className="relative flex h-2 w-2">
-        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
-        <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
-      </span>
-      Updated {seconds < 60 ? `${seconds}s ago` : `${Math.floor(seconds / 60)}m ago`}
+    <div className="space-y-6">
+      {/* Live indicator */}
+      <div className="flex items-center gap-2">
+        <span className="relative flex h-3 w-3">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+          <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500" />
+        </span>
+        <span className="text-sm text-gray-500">Live</span>
+        <span className="text-sm text-gray-400">
+          Updated {formatRelativeTime(metrics?.timestamp)}
+        </span>
+      </div>
+
+      {/* Real-time metrics */}
+      <div className="grid grid-cols-4 gap-4">
+        <LiveMetric
+          label="Active Users"
+          value={metrics?.activeUsers}
+          sparkline={metrics?.userHistory}
+        />
+        <LiveMetric
+          label="Requests/sec"
+          value={metrics?.requestsPerSecond}
+          unit="req/s"
+        />
+        <LiveMetric
+          label="Avg Response"
+          value={metrics?.avgResponseTime}
+          unit="ms"
+        />
+        <LiveMetric
+          label="Error Rate"
+          value={metrics?.errorRate}
+          unit="%"
+          alert={metrics?.errorRate > 1}
+        />
+      </div>
     </div>
   );
 }
 ```
 
-## Responsive Dashboard
+## Data Table for Dashboards
 
 ```tsx
-function ResponsiveDashboard() {
+interface DataTableProps<T> {
+  columns: ColumnDef<T>[];
+  data: T[];
+  pagination?: boolean;
+  searchable?: boolean;
+  actions?: (row: T) => React.ReactNode;
+}
+
+function DataTable<T>({ columns, data, pagination, searchable }: DataTableProps<T>) {
+  const [search, setSearch] = useState('');
+  const [page, setPage] = useState(1);
+  const pageSize = 10;
+
+  const filteredData = useMemo(() => {
+    if (!search) return data;
+    return data.filter(row =>
+      Object.values(row).some(val =>
+        String(val).toLowerCase().includes(search.toLowerCase())
+      )
+    );
+  }, [data, search]);
+
+  const paginatedData = useMemo(() => {
+    if (!pagination) return filteredData;
+    const start = (page - 1) * pageSize;
+    return filteredData.slice(start, start + pageSize);
+  }, [filteredData, page, pagination]);
+
   return (
-    <div className="space-y-6">
-      {/* KPIs - Stack on mobile, 4 columns on desktop */}
-      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <KPICard title="Revenue" value="$45K" />
-        <KPICard title="Orders" value="1,234" />
-        <KPICard title="Users" value="5,678" />
-        <KPICard title="Growth" value="+12%" />
-      </div>
-
-      {/* Charts - Full width on mobile, side by side on desktop */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <ChartCard title="Revenue Trend">
-          <LineChart />
-        </ChartCard>
-        <ChartCard title="Distribution">
-          <PieChart />
-        </ChartCard>
-      </div>
-
-      {/* Table - Horizontal scroll on mobile */}
-      <div className="bg-white rounded-lg shadow overflow-hidden">
-        <div className="overflow-x-auto">
-          <DataTable />
+    <div>
+      {searchable && (
+        <div className="mb-4">
+          <input
+            type="search"
+            placeholder="Search..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="px-4 py-2 border rounded-lg w-full max-w-sm"
+          />
         </div>
+      )}
+
+      <div className="overflow-x-auto">
+        <table className="w-full">
+          <thead className="bg-gray-50 dark:bg-gray-800">
+            <tr>
+              {columns.map(col => (
+                <th key={col.key} className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  {col.header}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
+            {paginatedData.map((row, i) => (
+              <tr key={i} className="hover:bg-gray-50 dark:hover:bg-gray-800">
+                {columns.map(col => (
+                  <td key={col.key} className="px-6 py-4 whitespace-nowrap text-sm">
+                    {col.render ? col.render(row) : row[col.key]}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
+
+      {pagination && (
+        <Pagination
+          page={page}
+          totalPages={Math.ceil(filteredData.length / pageSize)}
+          onPageChange={setPage}
+        />
+      )}
     </div>
   );
 }
@@ -318,24 +385,24 @@ function ResponsiveDashboard() {
 
 ## Best Practices
 
-1. **Progressive disclosure** - Show summary first, details on demand
-2. **Consistent spacing** - Use a grid system (8px base)
-3. **Color coding** - Green for good, red for bad, yellow for warning
-4. **Empty states** - Handle zero data gracefully
-5. **Loading states** - Skeleton loaders for charts and tables
-6. **Error handling** - Show retry options on failure
+1. **5-second rule** - Key metrics should be understood in 5 seconds
+2. **Above the fold** - Critical data visible without scrolling
+3. **Consistent time ranges** - All charts use same time period
+4. **Progressive disclosure** - Summary → details on demand
+5. **Empty states** - Show meaningful content when no data
+6. **Loading states** - Skeleton screens while loading
 
 ## When to Use
 
-- Analytics and reporting interfaces
-- Admin panels and back-office tools
-- Monitoring and operations dashboards
-- Business intelligence displays
-- Real-time data visualization
+- Building admin panels and back-office tools
+- Creating analytics dashboards
+- Monitoring systems and real-time displays
+- Data-heavy business applications
+- Internal tools and management interfaces
 
 ## Notes
 
-- Test with real data volumes
-- Consider print layouts for reports
-- Optimize chart rendering for large datasets
-- Provide export functionality for data tables
+- Consider user role - executives vs analysts have different needs
+- Mobile dashboards need different layouts, not just responsive
+- Performance matters - virtualize long lists, lazy load charts
+- Allow customization - users can arrange their own dashboards

@@ -1,159 +1,169 @@
 ---
 name: explain
-description: Document the reasoning behind implementation decisions as markdown files. Creates decision records that future developers can reference.
-allowed-tools: Read, Grep, Glob, Write
-user-invocable: true
+description: Explain data flows, features, and code paths in the varun.surf application with visual diagrams and step-by-step breakdowns
 ---
 
-# Explain (Decision Documentation)
+# Explain Skill
 
-Create decision records that document the reasoning behind implementation choices.
+Explain how data flows through the system, how features work, and trace code paths with clear visualizations and step-by-step breakdowns.
 
-## Philosophy
+## Instructions
 
-Good code is self-documenting for *what* it does. But *why* it does it that way? That's lost to time unless we capture it.
+When the user asks to explain something (a feature, data flow, or component), follow this process:
 
-> "Six months from now, when someone asks 'Why did we do it this way?', will there be an answer?"
+### 1. Identify What to Explain
 
-The value of this skill isn't compliance—it's **preserving context** that makes the codebase maintainable.
+Parse the user's request to determine:
+- **Data flow**: How data moves from source to destination (e.g., "explain how forecasts get to the frontend")
+- **Feature**: How a specific feature works end-to-end (e.g., "explain favorites system")
+- **Component**: How a specific service or class works internally (e.g., "explain AggregatorService")
+- **Integration**: How external APIs are integrated (e.g., "explain Windguru integration")
 
-## Config Integration
+### 2. Gather Context
 
-Check for `.inclusion-config.md` in the project root.
+Use the following tools to understand the code:
+- `Glob` to find relevant files
+- `Grep` to search for specific patterns, method calls, and references
+- `Read` to examine source code
+- `LSP` for finding definitions, references, and call hierarchies
 
-**Decisions location** (in order of precedence):
-1. `Decisions location` setting in config
-2. Existing `decisions/` directory
-3. Existing `docs/decisions/` or `docs/adr/` directory
-4. Default: create `decisions/`
+### 3. Trace the Flow
 
-If no config exists, ask the user where to store decisions or use the default.
+For data flows and features, trace the complete path:
 
-## When to Use
+```
+Entry Point → Processing Steps → Output
+```
 
-Run `/explain` after:
-- Completing a significant implementation
-- Making an architectural decision
-- Choosing between multiple valid approaches
-- Implementing something counterintuitive
-- When future developers might ask "why was it done this way?"
+Identify:
+- Entry points (API endpoints, scheduled tasks, user actions)
+- Service layer processing
+- Data transformations
+- External API calls
+- Caching layers
+- Response formatting
 
-## Input
+### 4. Create Visual Diagrams
 
-The user will provide:
-- File path(s) to explain, OR
-- Feature/change description, OR
-- Specific question ("Why did we use X instead of Y?")
+Use ASCII diagrams to visualize:
 
-If nothing provided, explain recent uncommitted changes.
+**For data flows:**
+```
+┌─────────────┐     ┌─────────────┐     ┌─────────────┐
+│   Source    │────▶│  Transform  │────▶│ Destination │
+└─────────────┘     └─────────────┘     └─────────────┘
+```
 
-## Process
+**For component interactions:**
+```
+            ┌──────────────────┐
+            │   Controller     │
+            └────────┬─────────┘
+                     │
+        ┌────────────┼────────────┐
+        ▼            ▼            ▼
+   ┌─────────┐  ┌─────────┐  ┌─────────┐
+   │Service A│  │Service B│  │Service C│
+   └─────────┘  └─────────┘  └─────────┘
+```
 
-### 1. Understand the Decisions
+**For state transitions:**
+```
+[State A] ──(action)──▶ [State B] ──(action)──▶ [State C]
+```
 
-For the code being explained, identify:
-- Key architectural choices
-- Algorithm or pattern selections
-- Library/dependency choices
-- Trade-offs that were made
-- Constraints that influenced the approach
+### 5. Provide Step-by-Step Breakdown
 
-### 2. Research Context
+Structure the explanation as:
 
-Gather context before writing:
-- What patterns exist elsewhere in the codebase?
-- Were there constraints from existing code?
-- What does the task file or PR description say?
-- What alternatives could have been used?
+1. **Overview**: High-level summary (2-3 sentences)
+2. **Entry Point**: Where the flow begins
+3. **Step-by-Step Flow**: Each processing step with file:line references
+4. **Key Code Snippets**: Important code sections (keep concise)
+5. **Data Transformations**: How data shape changes
+6. **External Dependencies**: APIs, databases, caches involved
+7. **Error Handling**: How errors are managed
+8. **Related Components**: Other parts of the system that interact
 
-### 3. Generate File Name
+### 6. Include Code References
 
-Use the pattern: `NNNN-short-description.md`
-
-- Check existing files in decisions directory
-- Use next available number (0001, 0002, etc.)
-- Keep description short (2-4 words, kebab-case)
-
-Examples:
-- `0001-use-zustand-for-state.md`
-- `0002-jwt-over-sessions.md`
-- `0003-monorepo-structure.md`
-
-### 4. Write Decision Record
-
-Create the file in the decisions directory.
+Always include file paths with line numbers for easy navigation:
+- `src/main/java/.../SpotsController.java:45` - endpoint definition
+- `src/main/java/.../AggregatorService.java:120` - data aggregation
 
 ## Output Format
 
 ```markdown
-# [Number]. [Decision Title]
+# Explaining: [Topic]
 
-**Date**: [YYYY-MM-DD]
-**Status**: Accepted
-**Context**: [What prompted this decision]
+## Overview
+[2-3 sentence summary]
 
-## Decision
+## Visual Diagram
+[ASCII diagram showing the flow]
 
-[1-2 sentence summary of what was decided]
+## Step-by-Step Flow
 
-## Why This Approach
+### 1. [Step Name]
+**File**: `path/to/file.java:line`
 
-- [Primary reason]
-- [Secondary reason]
-- [Constraint that influenced this]
+[Description of what happens]
 
-## Alternatives Considered
-
-### [Alternative A]
-
-**Pros**: [benefits]
-**Cons**: [drawbacks]
-**Why not**: [specific reason rejected]
-
-### [Alternative B]
-
-**Pros**: [benefits]
-**Cons**: [drawbacks]
-**Why not**: [specific reason rejected]
-
-## Trade-offs Accepted
-
-- [What we gave up and why it's acceptable]
-
-## Consequences
-
-- [What this decision means for future development]
-- [Things to watch out for]
-
-## Related
-
-- [Links to related code, PRs, or other decisions]
+```java
+// Key code snippet (if helpful)
 ```
 
-## After Writing
+### 2. [Next Step]
+...
 
-Output confirmation:
+## Data Transformations
+| Stage | Data Shape | Example |
+|-------|------------|---------|
+| Input | Type       | {...}   |
+| Output| Type       | {...}   |
 
-```markdown
-## Decision Record Created
+## Key Files Involved
+- `path/to/file1.java` - [purpose]
+- `path/to/file2.java` - [purpose]
 
-**File**: `decisions/0003-use-zustand-for-state.md`
-
-### Summary
-Documented decision to use Zustand over Redux for state management.
-
-### Key Points
-- Simpler API reduces boilerplate
-- Trade-off: Less ecosystem tooling
-- Revisit if: Complex state debugging needed
+## Related Features
+- [Feature 1]: [brief relation]
+- [Feature 2]: [brief relation]
 ```
 
-## Why This Matters
+## Example Topics
 
-Decision records serve multiple purposes:
-- **Onboarding**: New developers understand architectural choices
-- **Maintenance**: Future changes can respect original constraints
-- **Accountability**: Decisions are traceable and reviewable
-- **Learning**: The team builds shared understanding over time
+Common explanations users might request:
 
-Without this context, teams make the same decisions repeatedly, or worse—undo good decisions because they don't understand why they were made.
+### Data Flows
+- "How do forecasts get from Windguru to the frontend?"
+- "How are live conditions fetched and displayed?"
+- "How does the caching system work?"
+- "How does the spot data flow from JSON to API response?"
+
+### Features
+- "How does the favorites system work?"
+- "How does country filtering work?"
+- "How does the search functionality work?"
+- "How does theme switching work?"
+- "How does the kite size calculator work?"
+
+### Components
+- "How does AggregatorService orchestrate data fetching?"
+- "How do the FetchCurrentConditionsStrategy implementations work?"
+- "How does the ForecastService parse Windguru data?"
+- "How does the frontend manage state?"
+
+### Integrations
+- "How is Windguru integrated?"
+- "How is Google Maps integration working?"
+- "How does the AI analysis feature work?"
+
+## Notes
+
+- Keep explanations concise but complete
+- Use diagrams to make complex flows understandable
+- Always include file:line references for code navigation
+- Focus on the specific topic, don't over-explain tangential concerns
+- If the topic is ambiguous, ask clarifying questions
+- Reference CLAUDE.md, docs/BACKEND.md, and docs/FRONTEND.md for architectural context

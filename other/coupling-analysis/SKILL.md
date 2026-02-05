@@ -459,9 +459,9 @@ NOTE: For simple setup tasks, OpenSpec proposal may be optional.
 Task description and acceptance criteria may be sufficient.
 ```
 
-## Integration with Phase 2 Workflow
+## Integration with Phase 6 Workflow
 
-**Phase 2 Step 1 Enhancement:**
+**Phase 6 Step 1 Enhancement:**
 
 ```bash
 # Original workflow:
@@ -553,15 +553,15 @@ When coupling analysis is complete, you MUST:
 1. Output the completion signal:
    ```
    ✅ COUPLING ANALYSIS COMPLETE
-   [SIGNAL:PHASE5_START]
+   [SIGNAL:COUPLING_ANALYZED]
    ```
 
-2. **IMMEDIATELY** proceed to task decomposition by outputting:
+2. **IMMEDIATELY** proceed to specification generation by outputting:
    ```
-   [ACTIVATE:TASK_DECOMPOSER_V1]
+   [ACTIVATE:SPEC_GEN_V1]
    ```
 
-3. Begin task decomposition without waiting for user input.
+3. Begin specification generation without waiting for user input.
 
 **The pipeline is fully autonomous. Do not ask "Would you like to proceed?" - just proceed.**
 

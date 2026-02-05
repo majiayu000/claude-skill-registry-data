@@ -1,82 +1,186 @@
 ---
-name: task-generation
-description: Generate a detailed task list from a PRP. Use after a PRP is created and ready for implementation planning.
+description: This skill should be used when generating implementation tasks from PRDs, decomposing features into atomic tasks, inferring dependencies, or mapping PRD content to task metadata.
+triggers:
+  - generate tasks from PRD
+  - create tasks from requirements
+  - decompose features into tasks
+  - PRD to tasks
+  - task generation
+  - implementation tasks
 ---
 
-# Task Generation
+# Task Generation Skill
 
-Generate a detailed, step-by-step task list in Markdown format based on an existing Product Requirements Prompt (PRP).
+This skill provides structured knowledge for transforming Product Requirements Documents into Claude Code native Tasks with proper dependencies, metadata, and acceptance criteria.
 
-## When to Use This Skill
+## Core Principles
 
-Use this skill when:
-- A PRP exists at `.ai/[feature-name]/prp.md`
-- You need to break down the feature into implementable tasks
-- Planning how a junior developer will implement the feature
+### 1. Atomic Task Decomposition
 
-## Input
+Tasks should be:
+- **Single Responsibility**: Each task accomplishes one specific outcome
+- **Independent**: Minimal coupling with other tasks where possible
+- **Verifiable**: Clear completion criteria that can be objectively assessed
+- **Estimable**: Complexity can be reasonably assessed (XS/S/M/L/XL)
 
-- `feature_name` - Locates the PRP at `.ai/[feature-name]/prp.md`
+### 2. Layered Architecture Pattern
 
-## Process
-
-1. **Receive PRP Reference**: The user points to a specific PRP file
-2. **Analyze PRP**: Read and analyze the functional requirements, user stories, and other sections
-3. **Clarify Open Questions**: If there are still any open questions, ask the user for clarification and amend the PRP accordingly before proceeding
-4. **Phase 1: Generate Parent Tasks**: Based on the PRP analysis, create the main high-level tasks (3-8 parent tasks). Present these to the user in the specified format (without sub-tasks yet). Inform: "I have generated the high-level tasks. Ready to generate sub-tasks? Respond with 'go' to proceed."
-5. **Wait for Confirmation**: Pause and wait for the user to respond with "go"
-6. **Phase 2: Generate Sub-Tasks**: Once confirmed, break down each parent task into smaller, actionable sub-tasks
-7. **Identify Relevant Files**: Based on tasks and PRP, identify potential files that need creation or modification
-8. **Generate Final Output**: Combine parent tasks, sub-tasks, relevant files, and notes
-9. **Save Task List**: Save to `.ai/[feature-name]/tasks.md`
-10. **Commit Task List**: Stage and commit the new task list
-
-## Commit Message Template
+Decompose features following natural implementation layers:
 
 ```
-feat: add .ai/[feature-name]/tasks.md
-
-Generate tasks according to .ai/[feature-name]/prp.md
+Data Model → API/Service → Business Logic → UI/Frontend → Tests
 ```
 
-## Output Format
+This pattern ensures:
+- Dependencies flow in one direction
+- Each layer can be implemented and tested independently
+- Integration points are well-defined
 
-The `tasks.md` file _must_ follow this structure:
+### 3. PRD-to-Task Traceability
 
-```markdown
-# Context
+Every task should trace back to the source PRD:
+- Reference specific section numbers
+- Quote relevant user stories
+- Link acceptance criteria to PRD requirements
 
-See [prp.md][./prp.md] for the corresponding Product Requirements Prompt.
+## Task Schema
 
-# Relevant Files
+Each task created via TaskCreate follows this enhanced structure with categorized acceptance criteria and testing requirements:
 
-- `path/to/file1.ts` - Brief description of why this file is relevant
-- `path/to/file1.test.ts` - Unit tests for `file1.ts`
-- `path/to/another/file.tsx` - Brief description
-- `path/to/another/file.test.tsx` - Unit tests for `another/file.tsx`
-- `lib/utils/helpers.ts` - Utility functions needed for calculations
-- `lib/utils/helpers.test.ts` - Unit tests for helpers.ts
+```
+TaskCreate:
+  subject: "Create User data model"                    # Imperative mood
+  description: |
+    Define the User data model based on PRD section 7.3.
 
-# Tasks
+    Fields:
+    - id: UUID (primary key)
+    - email: string (unique, required)
+    - passwordHash: string (required)
+    - createdAt: timestamp
 
-- [ ] 1. Parent Task Title
-  - [ ] 1.1. Sub-task description 1.1
-  - [ ] 1.2. Sub-task description 1.2
+    **Acceptance Criteria:**
 
-- [ ] 2. Parent Task Title
-  - [ ] 2.1. Sub-task description 2.1
+    _Functional:_
+    - [ ] Schema defined with all required fields
+    - [ ] Indexes created for email lookup
+    - [ ] Migration script created
 
-- [ ] 3. Parent Task Title (may not require sub-tasks)
+    _Edge Cases:_
+    - [ ] Handle duplicate email constraint violation
+    - [ ] Support maximum email length (254 chars)
+
+    _Error Handling:_
+    - [ ] Clear error messages for constraint violations
+
+    **Testing Requirements:**
+    • Unit: Schema validation for all field types
+    • Unit: Email format validation
+    • Integration: Database persistence and retrieval
+    • Integration: Unique constraint enforcement
+
+    Source: specs/PRD-Auth.md Section 7.3
+  activeForm: "Creating User data model"              # Present continuous
+  metadata:
+    priority: critical                                # From PRD P0-P3
+    complexity: S                                     # XS/S/M/L/XL
+    source_section: "7.3 Data Models"                 # PRD section reference
+    prd_path: "specs/PRD-Auth.md"                     # Source PRD
+    feature_name: "User Authentication"               # Parent feature
+    task_uid: "specs/PRD-Auth.md:user-auth:model:001" # Unique ID for merge
 ```
 
-## Target Audience
+### Acceptance Criteria Categories
 
-Assume the primary reader is a **junior developer** who will implement the feature.
-Tasks should be clear, actionable, and provide enough context for someone less
-familiar with the codebase to complete them.
+Structure acceptance criteria into these categories:
 
-## Interaction Model
+| Category | Purpose | Examples |
+|----------|---------|----------|
+| **Functional** | Core behavior that must work | Feature works as specified, correct outputs |
+| **Edge Cases** | Boundary conditions, unusual scenarios | Empty input, max values, concurrent ops |
+| **Error Handling** | Failure scenarios and recovery | Invalid input, network failures, timeouts |
+| **Performance** | Speed and resource requirements | Response times, throughput targets |
 
-The process explicitly requires a pause after generating parent tasks to get
-user confirmation ("Go") before proceeding to generate detailed sub-tasks.
-This ensures the high-level plan aligns with user expectations.
+### Testing Requirements Section
+
+Add a Testing Requirements section below acceptance criteria. Infer test types from:
+1. **Task layer** - Data model → Unit + Integration; API → Integration + E2E
+2. **PRD testing section** - Extract explicit test requirements from Section 8
+3. **Task priority** - Higher priority → more thorough testing
+
+See `references/testing-requirements.md` for detailed test type mappings.
+
+## PRD Section Mapping
+
+Extract task information from specific PRD sections:
+
+| PRD Section | What to Extract | Task Type |
+|-------------|-----------------|-----------|
+| 5.x Functional Requirements | Feature names, priorities, user stories | Feature tasks |
+| 6.x Non-Functional Requirements | Performance, security constraints | Constraint tasks |
+| 7.x Technical Considerations | Architecture, tech stack | Infrastructure tasks |
+| 7.3 Data Models (Full-Tech) | Entity definitions | Data model tasks |
+| 7.4 API Specifications (Full-Tech) | Endpoints | API tasks |
+| 9.x Implementation Plan | Phase ordering, deliverables | Phase grouping |
+| 10.x Dependencies | Blocking relationships | Dependency inference |
+
+## Priority Mapping
+
+Convert PRD priority notation to task priority:
+
+| PRD Priority | Task Priority | Meaning |
+|--------------|---------------|---------|
+| P0 (Critical) | `critical` | Blocking release, must be done first |
+| P1 (High) | `high` | Core functionality, high value |
+| P2 (Medium) | `medium` | Important but not blocking |
+| P3 (Low) | `low` | Nice to have, can be deferred |
+
+## Complexity Estimation
+
+Estimate task complexity using T-shirt sizing:
+
+| Size | Scope | Typical Lines | Example |
+|------|-------|---------------|---------|
+| XS | Single simple function | <20 | Add config constant |
+| S | Single file, straightforward | 20-100 | Create data model |
+| M | Multiple files, moderate logic | 100-300 | Implement API endpoint |
+| L | Multiple components, significant logic | 300-800 | Build feature module |
+| XL | System-wide, complex integration | >800 | Major refactoring |
+
+## Depth-Aware Task Generation
+
+Adjust task granularity based on PRD depth level:
+
+### High-Level PRD
+- Create 1-2 tasks per feature
+- Focus on feature-level deliverables
+- Minimal technical breakdown
+- Example: "Implement user authentication feature"
+
+### Detailed PRD
+- Create 3-5 tasks per feature
+- Decompose by functional area
+- Include acceptance criteria from user stories
+- Example: "Implement login endpoint", "Create password validation"
+
+### Full-Tech PRD
+- Create 5-10 tasks per feature
+- Granular technical decomposition
+- Include data model, API, and test tasks
+- Example: "Create User model", "Implement POST /auth/login", "Add User model tests"
+
+## Merge Strategy for Re-runs
+
+When generating tasks for a PRD that already has tasks:
+
+1. **Match by task_uid**: Find existing tasks with same `metadata.task_uid`
+2. **Preserve status**: Never change status of `in_progress` or `completed` tasks
+3. **Update descriptions**: Refresh descriptions if PRD changed
+4. **Add new tasks**: Create tasks for new requirements
+5. **Flag obsolete**: Ask user about tasks that no longer map to PRD
+
+## Reference Files
+
+- `references/decomposition-patterns.md` - Feature decomposition patterns by type
+- `references/dependency-inference.md` - Automatic dependency inference rules
+- `references/testing-requirements.md` - Test type mappings and acceptance criteria patterns

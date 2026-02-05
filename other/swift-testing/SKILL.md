@@ -1,809 +1,295 @@
 ---
 name: swift-testing
-description: Swift Testing framework with @Test macro, #expect, #require, test organization, and Xcode Playgrounds. Use when user asks about testing, unit tests, @Test, #expect, #require, test suites, or Xcode Playgrounds.
-allowed-tools: Bash, Read, Write, Edit
+description: 'Expert guidance on Swift Testing best practices, patterns, and implementation. Use when developers mention: (1) Swift Testing, @Test, #expect, #require, or @Suite, (2) "use Swift Testing" or "modern testing patterns", (3) test doubles, mocks, stubs, spies, or fixtures, (4) unit tests, integration tests, or snapshot tests, (5) migrating from XCTest to Swift Testing, (6) TDD, Arrange-Act-Assert, or F.I.R.S.T. principles, (7) parameterized tests or test organization.'
 ---
+# Swift Testing
 
-# Swift Testing Framework
+## Overview
 
-Comprehensive guide to the modern Swift Testing framework, test organization, assertions, and Xcode Playgrounds for iOS 26 development.
+This skill provides expert guidance on Swift Testing, covering the modern Swift Testing framework, test doubles (mocks, stubs, spies), fixtures, integration testing, snapshot testing, and migration from XCTest. Use this skill to help developers write reliable, maintainable tests following F.I.R.S.T. principles and Arrange-Act-Assert patterns.
 
-## Prerequisites
+## Agent Behavior Contract (Follow These Rules)
 
-- Swift 6.0+ (included in Xcode 16+)
-- Xcode 26+ recommended
+1. Use Swift Testing framework (`@Test`, `#expect`, `#require`, `@Suite`) for all new tests, not XCTest.
+2. Always structure tests with clear Arrange-Act-Assert phases.
+3. Follow F.I.R.S.T. principles: Fast, Isolated, Repeatable, Self-Validating, Timely.
+4. Use proper test double terminology per Martin Fowler's taxonomy (Dummy, Fake, Stub, Spy, SpyingStub, Mock).
+5. Place fixtures close to models with `#if DEBUG`, not in test targets.
+6. Place test doubles close to interfaces with `#if DEBUG`, not in test targets.
+7. Prefer state verification over behavior verification - simpler, less brittle tests.
+8. Use `#expect` for soft assertions (continue on failure) and `#require` for hard assertions (stop on failure).
 
----
+## Quick Decision Tree
 
-## Framework Overview
+When a developer needs testing guidance, follow this decision tree:
 
-### Swift Testing vs XCTest
+1. **Starting fresh with Swift Testing?**
+   - Read `references/test-organization.md` for suites, tags, traits
+   - Read `references/async-testing.md` for async test patterns
 
-| Feature | Swift Testing | XCTest |
-|---------|--------------|--------|
-| Test marking | `@Test` macro | Method naming `test*` |
-| Assertions | `#expect`, `#require` | `XCTAssert*` |
-| Test organization | Structs, actors, classes | XCTestCase subclass |
-| Parallelism | Parallel by default | Process-based |
-| Setup/Teardown | `init`/`deinit` | `setUp`/`tearDown` |
+2. **Need to create test data?**
+   - Read `references/fixtures.md` for fixture patterns and placement
+   - Read `references/test-doubles.md` for mock/stub/spy patterns
 
-### Import
+3. **Testing multiple inputs?**
+   - Read `references/parameterized-tests.md` for parameterized testing
 
-```swift
-import Testing
-```
+4. **Testing module interactions?**
+   - Read `references/integration-testing.md` for integration test patterns
 
----
+5. **Testing UI for regressions?**
+   - Read `references/snapshot-testing.md` for snapshot testing setup
 
-## @Test Macro
+6. **Testing data structures or state?**
+   - Read `references/dump-snapshot-testing.md` for text-based snapshot testing
+
+7. **Migrating from XCTest?**
+   - Read `references/migration-xctest.md` for migration guide
+
+## Triage-First Playbook (Common Errors -> Next Best Move)
+
+- "XCTAssertEqual is unavailable" / need to modernize tests
+  - Use `references/migration-xctest.md` for XCTest to Swift Testing migration
+- Need to test async code
+  - Use `references/async-testing.md` for async patterns, confirmation, timeouts
+- Tests are slow or flaky
+  - Check F.I.R.S.T. principles, use proper mocking per `references/test-doubles.md`
+- Need deterministic test data
+  - Use `references/fixtures.md` for fixture patterns with fixed dates
+- Need to test multiple scenarios efficiently
+  - Use `references/parameterized-tests.md` for parameterized testing
+- Need to verify component interactions
+  - Use `references/integration-testing.md` for integration test patterns
+
+## Core Syntax
 
 ### Basic Test
 
 ```swift
 import Testing
 
-@Test
-func additionWorks() {
-    let result = 2 + 2
-    #expect(result == 4)
+@Test func basicTest() {
+    #expect(1 + 1 == 2)
 }
 ```
 
-### Test with Display Name
+### Test with Description
 
 ```swift
-@Test("User can create account with valid email")
-func createAccountWithValidEmail() async throws {
-    let account = try await AccountService.create(email: "test@example.com")
-    #expect(account.email == "test@example.com")
+@Test("Adding items increases cart count")
+func addItem() {
+    let cart = Cart()
+    cart.add(item)
+    #expect(cart.count == 1)
 }
 ```
 
-### Async Tests
+### Async Test
 
 ```swift
-@Test
-func fetchUserReturnsData() async throws {
-    let user = try await userService.fetch(id: "123")
-    #expect(user.name == "John Doe")
+@Test func asyncOperation() async throws {
+    let result = try await service.fetch()
+    #expect(result.isValid)
 }
 ```
 
-### Throwing Tests
+## Arrange-Act-Assert Pattern
+
+Structure every test with clear phases:
 
 ```swift
-@Test
-func invalidEmailThrows() throws {
-    #expect(throws: ValidationError.invalidEmail) {
-        try validate(email: "not-an-email")
-    }
+@Test func calculateTotal() {
+    // Given
+    let cart = ShoppingCart()
+    cart.add(Item(price: 10))
+    cart.add(Item(price: 20))
+
+    // When
+    let total = cart.calculateTotal()
+
+    // Then
+    #expect(total == 30)
 }
 ```
-
----
 
 ## Assertions
 
-### #expect
+### #expect - Soft Assertion
 
-Basic expectations:
+Continues test execution after failure:
 
 ```swift
-@Test
-func basicExpectations() {
-    let value = 42
-
-    // Equality
-    #expect(value == 42)
-
-    // Inequality
-    #expect(value != 0)
-
-    // Boolean
-    #expect(value > 0)
-
-    // With message
-    #expect(value == 42, "Value should be 42")
+@Test func multipleExpectations() {
+    let user = User(name: "Alice", age: 30)
+    #expect(user.name == "Alice")  // If fails, test continues
+    #expect(user.age == 30)        // This still runs
 }
 ```
 
-### #expect with Expressions
+### #require - Hard Assertion
+
+Stops test execution on failure:
 
 ```swift
-@Test
-func expressionExpectations() {
-    let array = [1, 2, 3]
-
-    #expect(array.count == 3)
-    #expect(array.contains(2))
-    #expect(!array.isEmpty)
-
-    let optional: String? = "hello"
-    #expect(optional != nil)
+@Test func requireExample() throws {
+    let user = try #require(fetchUser())  // Stops if nil
+    #expect(user.name == "Alice")
 }
 ```
 
-### #require
-
-Unwrap optionals and fail fast:
+### Error Testing
 
 ```swift
-@Test
-func requireUnwrapping() throws {
-    let optional: String? = "hello"
-
-    // Unwrap or fail test
-    let value = try #require(optional)
-
-    #expect(value == "hello")
-}
-
-@Test
-func requireCondition() throws {
-    let array = [1, 2, 3]
-
-    // Fail if condition is false
-    try #require(array.count > 0)
-
-    let first = try #require(array.first)
-    #expect(first == 1)
-}
-```
-
-### Testing Throws
-
-```swift
-@Test
-func throwingBehavior() {
-    // Expect any error
-    #expect(throws: (any Error).self) {
-        try riskyOperation()
-    }
-
-    // Expect specific error type
-    #expect(throws: NetworkError.self) {
-        try fetchData()
-    }
-
-    // Expect specific error value
-    #expect(throws: NetworkError.timeout) {
-        try fetchWithTimeout()
+@Test func throwsError() {
+    #expect(throws: ValidationError.self) {
+        try validate(invalidInput)
     }
 }
 
-@Test
-func noThrow() {
-    // Expect no error
-    #expect(throws: Never.self) {
-        safeOperation()
+@Test func throwsSpecificError() {
+    #expect(throws: ValidationError.emptyField) {
+        try validate("")
     }
 }
 ```
 
-### Custom Failure Messages
+## F.I.R.S.T. Principles
+
+| Principle | Description | Application |
+|-----------|-------------|-------------|
+| **Fast** | Tests execute in milliseconds | Mock expensive operations |
+| **Isolated** | Tests don't depend on each other | Fresh instance per test |
+| **Repeatable** | Same result every time | Mock dates, network, external deps |
+| **Self-Validating** | Auto-report pass/fail | Use `#expect`, never rely on `print()` |
+| **Timely** | Write tests alongside code | Use parameterized tests for edge cases |
+
+## Test Double Quick Reference
+
+Per [Martin Fowler's definition](https://martinfowler.com/articles/mocksArentStubs.html):
+
+| Type | Purpose | Verification |
+|------|---------|--------------|
+| **Dummy** | Fill parameters, never used | N/A |
+| **Fake** | Working implementation with shortcuts | State |
+| **Stub** | Provides canned answers | State |
+| **Spy** | Records calls for verification | State |
+| **SpyingStub** | Stub + Spy combined (most common) | State |
+| **Mock** | Pre-programmed expectations, self-verifies | Behavior |
+
+**Important**: What Swift community calls "Mock" is usually a **SpyingStub**.
+
+For detailed patterns, see `references/test-doubles.md`.
+
+## Test Double Placement
+
+Place test doubles **close to the interface**, not in test targets:
 
 ```swift
-@Test
-func customMessages() {
-    let user = User(name: "Alice", age: 25)
+// In PersonalRecordsCore-Interface/Sources/...
 
-    #expect(user.age >= 18, "User must be an adult, but age was \(user.age)")
+public protocol PersonalRecordsRepositoryProtocol: Sendable {
+    func getAll() async throws -> [PersonalRecord]
+    func save(_ record: PersonalRecord) async throws
 }
-```
 
----
+#if DEBUG
+public final class PersonalRecordsRepositorySpyingStub: PersonalRecordsRepositoryProtocol {
+    // Spy: Captured calls
+    public private(set) var savedRecords: [PersonalRecord] = []
 
-## Test Organization
+    // Stub: Configurable responses
+    public var recordsToReturn: [PersonalRecord] = []
+    public var errorToThrow: Error?
 
-### Test Suites with Structs
-
-```swift
-@Suite("User Authentication Tests")
-struct AuthenticationTests {
-    @Test("Valid credentials succeed")
-    func validLogin() async throws {
-        let result = try await auth.login(user: "test", pass: "password")
-        #expect(result.success)
+    public func getAll() async throws -> [PersonalRecord] {
+        if let error = errorToThrow { throw error }
+        return recordsToReturn
     }
 
-    @Test("Invalid credentials fail")
-    func invalidLogin() async throws {
-        let result = try await auth.login(user: "test", pass: "wrong")
-        #expect(!result.success)
+    public func save(_ record: PersonalRecord) async throws {
+        if let error = errorToThrow { throw error }
+        savedRecords.append(record)
     }
 }
+#endif
 ```
 
-### Nested Suites
+## Fixtures
+
+Place fixtures **close to the model**:
 
 ```swift
-@Suite("API Tests")
-struct APITests {
-    @Suite("User Endpoints")
-    struct UserEndpoints {
-        @Test func getUser() async { }
-        @Test func createUser() async { }
-    }
+// In Sources/Models/PersonalRecord.swift
 
-    @Suite("Post Endpoints")
-    struct PostEndpoints {
-        @Test func getPosts() async { }
-        @Test func createPost() async { }
-    }
+public struct PersonalRecord: Equatable, Sendable {
+    public let id: UUID
+    public let weight: Double
+    // ...
 }
-```
 
-### Using Actors for Isolation
-
-```swift
-@Suite
-actor DatabaseTests {
-    var database: TestDatabase
-
-    init() async throws {
-        database = try await TestDatabase.create()
-    }
-
-    @Test
-    func insertWorks() async throws {
-        try await database.insert(User(name: "Test"))
-        let count = try await database.count(User.self)
-        #expect(count == 1)
+#if DEBUG
+extension PersonalRecord {
+    public static func fixture(
+        id: UUID = UUID(),
+        weight: Double = 100.0
+        // ... defaults for all properties
+    ) -> PersonalRecord {
+        PersonalRecord(id: id, weight: weight)
     }
 }
+#endif
 ```
 
-### Setup and Teardown
+For detailed patterns, see `references/fixtures.md`.
 
-```swift
-@Suite
-struct DatabaseTests {
-    let database: Database
+## Test Pyramid
 
-    init() async throws {
-        // Setup - called before each test
-        database = try await Database.createInMemory()
-        try await database.migrate()
-    }
-
-    deinit {
-        // Teardown - called after each test
-        // Note: async cleanup should be done differently
-    }
-
-    @Test
-    func testInsert() async throws {
-        try await database.insert(item)
-        #expect(try await database.count() == 1)
-    }
-}
+```
+        +-------------+
+        |   UI Tests  |  5%  - End-to-end flows
+        |   (E2E)     |
+        +-------------+
+        | Integration |  15% - Module interactions
+        |    Tests    |
+        +-------------+
+        |    Unit     |  80% - Individual components
+        |    Tests    |
+        +-------------+
 ```
 
----
+## Reference Files
+
+Load these files as needed for specific topics:
+
+- **`test-organization.md`** - Suites, tags, traits, parallel execution
+- **`parameterized-tests.md`** - Testing multiple inputs efficiently
+- **`async-testing.md`** - Async patterns, confirmation, timeouts, cancellation
+- **`migration-xctest.md`** - Complete XCTest to Swift Testing migration guide
+- **`test-doubles.md`** - Complete taxonomy with examples (Dummy, Fake, Stub, Spy, SpyingStub, Mock)
+- **`fixtures.md`** - Fixture patterns, placement, and best practices
+- **`integration-testing.md`** - Module interaction testing patterns
+- **`snapshot-testing.md`** - UI regression testing with SnapshotTesting library
+- **`dump-snapshot-testing.md`** - Text-based snapshot testing for data structures
+
+## Best Practices Summary
+
+1. **Use Swift Testing for new tests** - Modern syntax, better features
+2. **Follow Arrange-Act-Assert** - Clear test structure
+3. **Apply F.I.R.S.T. principles** - Fast, Isolated, Repeatable, Self-Validating, Timely
+4. **Place fixtures near models** - With `#if DEBUG` guards
+5. **Place test doubles near interfaces** - With `#if DEBUG` guards
+6. **Prefer state verification** - Simpler, less brittle than behavior verification
+7. **Use parameterized tests** - For testing multiple inputs efficiently
+8. **Follow test pyramid** - 80% unit, 15% integration, 5% UI
+
+## Verification Checklist (When You Write Tests)
+
+- Tests follow Arrange-Act-Assert pattern
+- Test names describe behavior, not implementation
+- Fixtures use sensible defaults, not random values
+- Test doubles are minimal (only stub what's needed)
+- Async tests use proper patterns (async/await, confirmation)
+- Tests are fast (mock expensive operations)
+- Tests are isolated (no shared state)
+- Tests are repeatable (no flaky date/time dependencies)
 
-## Parameterized Tests
-
-### Basic Parameters
-
-```swift
-@Test("Validation", arguments: [
-    "test@example.com",
-    "user@domain.org",
-    "name@company.co.uk"
-])
-func validEmails(email: String) {
-    #expect(isValidEmail(email))
-}
-```
-
-### Multiple Arguments
-
-```swift
-@Test("Addition", arguments: [
-    (2, 3, 5),
-    (0, 0, 0),
-    (-1, 1, 0),
-    (100, 200, 300)
-])
-func addition(a: Int, b: Int, expected: Int) {
-    #expect(a + b == expected)
-}
-```
-
-### Zip Arguments
-
-```swift
-@Test(arguments: zip(
-    ["hello", "world", "test"],
-    [5, 5, 4]
-))
-func stringLength(string: String, expectedLength: Int) {
-    #expect(string.count == expectedLength)
-}
-```
-
-### Custom Types as Arguments
-
-```swift
-struct TestCase: CustomTestStringConvertible {
-    let input: String
-    let expected: Int
-
-    var testDescription: String {
-        "'\(input)' should have length \(expected)"
-    }
-}
-
-@Test("String lengths", arguments: [
-    TestCase(input: "hello", expected: 5),
-    TestCase(input: "", expected: 0),
-    TestCase(input: "Swift", expected: 5)
-])
-func stringLength(testCase: TestCase) {
-    #expect(testCase.input.count == testCase.expected)
-}
-```
-
----
-
-## Test Traits
-
-### .serialized
-
-Run tests sequentially:
-
-```swift
-@Suite(.serialized)
-struct OrderDependentTests {
-    @Test func step1() { }
-    @Test func step2() { }
-    @Test func step3() { }
-}
-```
-
-### .disabled
-
-Skip tests:
-
-```swift
-@Test(.disabled("Known bug, see issue #123"))
-func brokenFeature() {
-    // Won't run
-}
-
-@Test(.disabled(if: isCI, "Flaky on CI"))
-func flakyTest() {
-    // Conditionally disabled
-}
-```
-
-### .enabled
-
-Conditionally enable:
-
-```swift
-@Test(.enabled(if: ProcessInfo.processInfo.environment["RUN_SLOW_TESTS"] != nil))
-func slowIntegrationTest() async throws {
-    // Only runs when environment variable is set
-}
-```
-
-### .tags
-
-Organize with tags:
-
-```swift
-extension Tag {
-    @Tag static var critical: Self
-    @Tag static var slow: Self
-    @Tag static var integration: Self
-}
-
-@Test(.tags(.critical))
-func criticalFeature() { }
-
-@Test(.tags(.slow, .integration))
-func slowIntegrationTest() async { }
-```
-
-### .timeLimit
-
-Set execution limit:
-
-```swift
-@Test(.timeLimit(.seconds(5)))
-func mustCompleteQuickly() async throws {
-    // Fails if takes more than 5 seconds
-}
-```
-
-### .bug
-
-Reference known issues:
-
-```swift
-@Test(.bug("https://github.com/org/repo/issues/123", "Expected failure"))
-func knownIssue() {
-    // Test expected to fail
-}
-```
-
----
-
-## Parallel Execution
-
-### Default Parallel
-
-Tests run in parallel by default:
-
-```swift
-@Suite
-struct ParallelTests {
-    // These run concurrently
-    @Test func test1() async { }
-    @Test func test2() async { }
-    @Test func test3() async { }
-}
-```
-
-### Serial When Needed
-
-```swift
-@Suite(.serialized)
-struct SerialTests {
-    static var sharedState = 0
-
-    @Test func first() {
-        Self.sharedState = 1
-        #expect(Self.sharedState == 1)
-    }
-
-    @Test func second() {
-        Self.sharedState = 2
-        #expect(Self.sharedState == 2)
-    }
-}
-```
-
----
-
-## Mocking and Test Doubles
-
-### Protocol-Based Mocking
-
-```swift
-protocol UserService {
-    func fetch(id: String) async throws -> User
-}
-
-struct MockUserService: UserService {
-    var userToReturn: User?
-    var errorToThrow: Error?
-
-    func fetch(id: String) async throws -> User {
-        if let error = errorToThrow {
-            throw error
-        }
-        guard let user = userToReturn else {
-            throw TestError.notConfigured
-        }
-        return user
-    }
-}
-
-@Suite
-struct UserViewModelTests {
-    @Test
-    func fetchUserSuccess() async throws {
-        var mockService = MockUserService()
-        mockService.userToReturn = User(id: "1", name: "Test")
-
-        let viewModel = UserViewModel(service: mockService)
-        try await viewModel.loadUser(id: "1")
-
-        #expect(viewModel.user?.name == "Test")
-    }
-}
-```
-
-### Spy for Verification
-
-```swift
-final class SpyUserService: UserService {
-    var fetchCallCount = 0
-    var lastFetchedId: String?
-
-    func fetch(id: String) async throws -> User {
-        fetchCallCount += 1
-        lastFetchedId = id
-        return User(id: id, name: "Test")
-    }
-}
-
-@Test
-func loadsUserOnAppear() async throws {
-    let spy = SpyUserService()
-    let viewModel = UserViewModel(service: spy)
-
-    await viewModel.loadUser(id: "123")
-
-    #expect(spy.fetchCallCount == 1)
-    #expect(spy.lastFetchedId == "123")
-}
-```
-
----
-
-## Testing SwiftUI
-
-### Testing Observable ViewModels
-
-```swift
-@Observable
-class CounterViewModel {
-    var count = 0
-
-    func increment() {
-        count += 1
-    }
-}
-
-@Suite
-struct CounterViewModelTests {
-    @Test
-    func incrementIncreasesCount() {
-        let viewModel = CounterViewModel()
-
-        viewModel.increment()
-
-        #expect(viewModel.count == 1)
-    }
-
-    @Test
-    func multipleIncrements() {
-        let viewModel = CounterViewModel()
-
-        viewModel.increment()
-        viewModel.increment()
-        viewModel.increment()
-
-        #expect(viewModel.count == 3)
-    }
-}
-```
-
-### Testing Async ViewModels
-
-```swift
-@Observable
-@MainActor
-class UserListViewModel {
-    var users: [User] = []
-    var isLoading = false
-    private let service: UserService
-
-    init(service: UserService) {
-        self.service = service
-    }
-
-    func loadUsers() async {
-        isLoading = true
-        defer { isLoading = false }
-        users = (try? await service.fetchAll()) ?? []
-    }
-}
-
-@Suite
-struct UserListViewModelTests {
-    @Test
-    @MainActor
-    func loadUsersPopulatesArray() async {
-        var mock = MockUserService()
-        mock.usersToReturn = [User(id: "1", name: "Alice")]
-
-        let viewModel = UserListViewModel(service: mock)
-        await viewModel.loadUsers()
-
-        #expect(viewModel.users.count == 1)
-        #expect(viewModel.isLoading == false)
-    }
-}
-```
-
----
-
-## Migration from XCTest
-
-### Side-by-Side
-
-Both frameworks can coexist:
-
-```swift
-// XCTest
-import XCTest
-
-class LegacyTests: XCTestCase {
-    func testOldStyle() {
-        XCTAssertEqual(2 + 2, 4)
-    }
-}
-
-// Swift Testing
-import Testing
-
-@Test
-func newStyle() {
-    #expect(2 + 2 == 4)
-}
-```
-
-### Mapping Assertions
-
-| XCTest | Swift Testing |
-|--------|---------------|
-| `XCTAssertTrue(x)` | `#expect(x)` |
-| `XCTAssertFalse(x)` | `#expect(!x)` |
-| `XCTAssertEqual(a, b)` | `#expect(a == b)` |
-| `XCTAssertNil(x)` | `#expect(x == nil)` |
-| `XCTAssertNotNil(x)` | `try #require(x)` |
-| `XCTAssertThrowsError` | `#expect(throws:)` |
-| `XCTUnwrap(x)` | `try #require(x)` |
-
-### What to Keep in XCTest
-
-- Performance tests (`measure {}`)
-- UI tests (XCUITest)
-- Existing stable test suites
-
----
-
-## Xcode Playgrounds
-
-### #Playground Macro (iOS 26)
-
-```swift
-import SwiftUI
-
-#Playground {
-    let greeting = "Hello, Playgrounds!"
-    print(greeting)
-}
-
-#Playground("SwiftUI Preview") {
-    struct ContentView: View {
-        var body: some View {
-            Text("Hello, World!")
-        }
-    }
-
-    ContentView()
-}
-```
-
-### Named Playground Blocks
-
-```swift
-#Playground("Data Processing") {
-    let numbers = [1, 2, 3, 4, 5]
-    let doubled = numbers.map { $0 * 2 }
-    print(doubled)
-}
-
-#Playground("API Simulation") {
-    struct User: Codable {
-        let name: String
-    }
-
-    let json = #"{"name": "Alice"}"#
-    let user = try? JSONDecoder().decode(User.self, from: json.data(using: .utf8)!)
-    print(user?.name ?? "Unknown")
-}
-```
-
-### SwiftUI in Playgrounds
-
-```swift
-#Playground("Interactive UI") {
-    struct Counter: View {
-        @State private var count = 0
-
-        var body: some View {
-            VStack {
-                Text("Count: \(count)")
-                Button("Increment") {
-                    count += 1
-                }
-            }
-        }
-    }
-
-    Counter()
-}
-```
-
----
-
-## Best Practices
-
-### 1. Descriptive Test Names
-
-```swift
-// GOOD
-@Test("User cannot login with expired token")
-func expiredTokenLogin() { }
-
-// AVOID
-@Test
-func test1() { }
-```
-
-### 2. One Assertion Focus
-
-```swift
-// GOOD: Focused test
-@Test
-func userNameIsCapitalized() {
-    let user = User(name: "alice")
-    #expect(user.displayName == "Alice")
-}
-
-// AVOID: Multiple unrelated assertions
-@Test
-func userTests() {
-    let user = User(name: "alice")
-    #expect(user.displayName == "Alice")
-    #expect(user.email != nil)
-    #expect(user.createdAt <= Date())
-}
-```
-
-### 3. Use Structs for Test Suites
-
-```swift
-// GOOD: Struct-based, each test gets fresh instance
-@Suite
-struct UserTests {
-    let service = UserService()
-
-    @Test func fetch() { }
-    @Test func create() { }
-}
-```
-
-### 4. Parameterize Repetitive Tests
-
-```swift
-// GOOD: Parameterized
-@Test(arguments: ["", " ", "   "])
-func emptyStringsAreInvalid(input: String) {
-    #expect(!isValid(input))
-}
-
-// AVOID: Duplicated tests
-@Test func emptyIsInvalid() { #expect(!isValid("")) }
-@Test func spaceIsInvalid() { #expect(!isValid(" ")) }
-@Test func spacesAreInvalid() { #expect(!isValid("   ")) }
-```
-
-### 5. Use Tags for Organization
-
-```swift
-extension Tag {
-    @Tag static var unit: Self
-    @Tag static var integration: Self
-    @Tag static var slow: Self
-}
-
-// Filter in Xcode or command line
-// swift test --filter "unit"
-```
-
----
-
-## Official Resources
-
-- [Swift Testing Documentation](https://developer.apple.com/documentation/testing)
-- [Testing with Xcode](https://developer.apple.com/documentation/xcode/testing-with-xcode)
-- [WWDC24: Meet Swift Testing](https://developer.apple.com/videos/play/wwdc2024/10179/)
-- [WWDC23: Prototype with Xcode Playgrounds](https://developer.apple.com/videos/play/wwdc2023/10250/)
-- [Migrating a test from XCTest](https://developer.apple.com/documentation/testing/migratingfromxctest)

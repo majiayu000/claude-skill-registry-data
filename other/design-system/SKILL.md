@@ -1,601 +1,375 @@
 ---
-name: arcanea-design-system
-description: The complete Arcanean Design System - cosmic visual language, academy themes, component patterns, and design tokens for magical interfaces
-version: 2.0.0
-author: Arcanea
-tags: [design, ui, ux, visual, theming, css]
-triggers:
-  - design
-  - UI
-  - theme
-  - colors
-  - visual
-  - interface
-  - cosmic
-  - academy theme
+name: design-system
+description: StepLeague design system, theme configuration, CSS variables, badge styling, and UI patterns. Use when working with colors, themes, styling, badges, buttons, cards, or any visual UI changes. Keywords: CSS, theme, colors, dark mode, light mode, variables, styling, UI, design.
+compatibility: Antigravity, Claude Code, Cursor
+metadata:
+  version: "1.1"
+  project: "stepleague"
 ---
 
-# The Arcanean Design System
+# Design System Skill
 
-> *"In Arcanea, every pixel carries meaning. The visual language is not decoration - it is communication."*
+## Core Rule
 
----
+**NEVER use hardcoded Tailwind colors. ALWAYS use semantic CSS variables.**
 
-## Design Philosophy
+```tsx
+// ❌ WRONG
+<div className="bg-slate-900 text-slate-300 border-slate-700">
 
-### The Three Principles
-
-1. **Magic Over Mundane**: Every element should feel slightly extraordinary
-2. **Depth Creates Drama**: Layers, glows, and dimension suggest hidden power
-3. **Restraint Amplifies Impact**: Cosmic effects work because they're used sparingly
-
-### The Visual Metaphor
-The Arcanean UI represents **a portal into creative consciousness**:
-- Dark backgrounds = the cosmic void of infinite possibility
-- Glowing elements = activated creative energy
-- Glass surfaces = the veil between worlds
-- Gold accents = distilled wisdom and achievement
-
----
-
-## Color Architecture
-
-### The Cosmic Foundation
-
-```css
-/* === COSMIC DEPTHS === */
---cosmic-void: #0b0e14;      /* Deepest background - infinite space */
---cosmic-deep: #121826;      /* Primary background - creative space */
---cosmic-surface: #1a2332;   /* Elevated surfaces - active zones */
---cosmic-raised: #242f42;    /* Highest surfaces - focus areas */
-```
-
-### The Arcanean Gold
-```css
-/* === UNIVERSAL ACCENT === */
---gold-light: #fff4d6;       /* Whisper of light */
---gold-medium: #ffd966;      /* Warm glow */
---gold-bright: #ffcc33;      /* Active energy */
---gold-deep: #e6b800;        /* Deep wisdom */
---gold-dark: #b38600;        /* Ancient knowledge */
-```
-
-### Academy Color Palettes
-
-#### Atlantean Academy (Story/Water)
-```css
-/* Deep ocean blues with bioluminescent teal */
---atlantean-primary: #1e5a99;    /* Deep ocean */
---atlantean-teal: #26cccc;       /* Bioluminescent glow */
---atlantean-glow: #00e6e6;       /* Maximum luminescence */
-
-/* Use for: Story creation, narrative tools, text-heavy interfaces */
-```
-
-#### Draconic Academy (Visual/Sky)
-```css
-/* Crimson fire with golden scales */
---draconic-crimson: #d92952;     /* Dragon fire */
---draconic-gold: #ffc61a;        /* Scale gold */
---draconic-sky: #2d8fe6;         /* Soaring heights */
-
-/* Use for: Visual creation, image tools, canvas interfaces */
-```
-
-#### Creation & Light Academy (Music/Audio)
-```css
-/* Pure light with prismatic refractions */
---creation-gold: #ffcc33;        /* Pure light */
---creation-prism-blue: #2d85f5;  /* Refracted blue */
---creation-wave: #3dc4e6;        /* Sound frequency */
-
-/* Use for: Audio creation, music tools, frequency interfaces */
+// ✅ CORRECT
+<div className="bg-card text-foreground border-border">
 ```
 
 ---
 
-## Typography System
+## Full Documentation
 
-### Font Stack
-```css
-/* Display (Headings, Titles) */
-font-family: 'Cinzel', 'Cormorant Garamond', serif;
+**MUST READ:** [docs/THEME_SYSTEM.md](file:///docs/THEME_SYSTEM.md)
 
-/* Body (Content, UI) */
-font-family: 'Crimson Pro', 'Source Serif Pro', Georgia, serif;
+This skill is a quick reference. The full theme documentation contains:
+- Complete CSS variable reference
+- Light/dark mode implementation
+- Accessibility requirements
+- Common pitfalls and solutions
 
-/* Code (Monospace) */
-font-family: 'JetBrains Mono', 'Fira Code', monospace;
+---
+
+## Quick Reference: CSS Variables
+
+### Backgrounds
+
+| Variable | Usage |
+|----------|-------|
+| `bg-background` | Page background |
+| `bg-card` | Card/container background |
+| `bg-muted` | Muted/subtle background |
+| `bg-primary` | Primary action background |
+| `bg-secondary` | Secondary background |
+
+### Text
+
+| Variable | Usage |
+|----------|-------|
+| `text-foreground` | Primary text |
+| `text-muted-foreground` | Secondary/muted text |
+| `text-primary` | Emphasised text (brand color) |
+
+### Status Colors
+
+```tsx
+// Use HSL syntax for status colors
+className="text-[hsl(var(--success))]"  // Green
+className="text-[hsl(var(--warning))]"  // Amber
+className="text-[hsl(var(--info))]"     // Blue
+className="text-destructive"             // Red
 ```
 
-### Type Scale
-```css
---text-xs: 0.75rem;    /* 12px - Captions, labels */
---text-sm: 0.875rem;   /* 14px - Secondary content */
---text-base: 1rem;     /* 16px - Body text */
---text-lg: 1.125rem;   /* 18px - Emphasis */
---text-xl: 1.25rem;    /* 20px - Subheadings */
---text-2xl: 1.5rem;    /* 24px - Section headers */
---text-3xl: 1.875rem;  /* 30px - Page titles */
---text-4xl: 2.25rem;   /* 36px - Hero text */
---text-5xl: 3rem;      /* 48px - Display */
-```
+### With Opacity
 
-### Text Colors
-```css
---text-primary: #e6eefc;    /* Main content */
---text-secondary: #9bb1d0;  /* Supporting text */
---text-muted: #708094;      /* Tertiary content */
---text-disabled: #515b6b;   /* Inactive elements */
+```tsx
+className="bg-primary/90"                    // 90% opacity
+className="bg-[hsl(var(--success)/0.1)]"     // 10% opacity
 ```
 
 ---
 
-## Spacing System
+## Badge Components
 
-### Base Unit: 4px
-```css
---space-0: 0;
---space-1: 0.25rem;   /* 4px */
---space-2: 0.5rem;    /* 8px */
---space-3: 0.75rem;   /* 12px */
---space-4: 1rem;      /* 16px */
---space-5: 1.25rem;   /* 20px */
---space-6: 1.5rem;    /* 24px */
---space-8: 2rem;      /* 32px */
---space-10: 2.5rem;   /* 40px */
---space-12: 3rem;     /* 48px */
---space-16: 4rem;     /* 64px */
---space-20: 5rem;     /* 80px */
---space-24: 6rem;     /* 96px */
+### Two Distinct Systems
+
+| Component | Import | Use Case |
+|-----------|--------|----------|
+| `Badge` | `@/components/ui/badge` | General UI (variant prop) |
+| `SystemBadge` | `@/components/ui/SystemBadge` | Category-based (Kanban, Roadmap) |
+
+### shadcn Badge
+
+```tsx
+import { Badge } from "@/components/ui/badge";
+
+<Badge variant="default">Default</Badge>
+<Badge variant="secondary">Secondary</Badge>
+<Badge variant="destructive">Error</Badge>
+<Badge variant="outline">Outline</Badge>
 ```
 
-### Container Widths
-```css
---container-xs: 320px;
---container-sm: 640px;
---container-md: 768px;
---container-lg: 1024px;
---container-xl: 1280px;
---container-2xl: 1536px;
+### SystemBadge
+
+```tsx
+import { SystemBadge } from "@/components/ui/SystemBadge";
+
+<SystemBadge category="status" value="verified" />
+<SystemBadge category="type" value="bug" size="sm" />
+<SystemBadge category="release" value="now" />
 ```
 
----
+### Central Badge Configuration
 
-## Effect System
+All badge colors are in `src/lib/badges.ts`:
 
-### Glass Morphism
-```css
-/* Light glass - subtle depth */
-.glass-light {
-  background: rgba(18, 24, 38, 0.4);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-}
+```typescript
+import { getBadgeClass, getBadgeConfig } from '@/lib/badges';
 
-/* Standard glass - primary surfaces */
-.glass {
-  background: rgba(18, 24, 38, 0.6);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Heavy glass - important elements */
-.glass-heavy {
-  background: rgba(18, 24, 38, 0.8);
-  backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-}
-```
-
-### Glow Effects
-```css
-/* Soft glow - ambient */
-.glow-soft {
-  box-shadow: 0 0 20px rgba(155, 177, 208, 0.3);
-}
-
-/* Academy glows */
-.glow-atlantean {
-  box-shadow: 0 0 30px rgba(0, 230, 230, 0.5);
-}
-
-.glow-draconic {
-  box-shadow: 0 0 30px rgba(255, 219, 77, 0.5);
-}
-
-.glow-creation {
-  box-shadow: 0 0 30px rgba(255, 230, 128, 0.5);
-}
-```
-
-### Text Glow
-```css
-.text-glow-soft {
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-}
-
-.text-glow-atlantean {
-  text-shadow: 0 0 15px rgba(0, 230, 230, 0.6);
-}
-```
-
-### Shimmer Animation
-```css
-.shimmer {
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.1) 25%,
-    rgba(255, 204, 51, 0.1) 50%,
-    rgba(38, 204, 204, 0.1) 75%,
-    transparent 100%
-  );
-  background-size: 200% 100%;
-  animation: shimmer 3s infinite;
-}
-
-@keyframes shimmer {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
-}
+const statusClass = getBadgeClass('status', 'verified');
+const badgeConfig = getBadgeConfig('type', 'bug');
 ```
 
 ---
 
-## Component Patterns
+## Critical Patterns
 
-### Cards
-```jsx
-// Standard Arcanean Card
-<div className="
-  bg-cosmic-surface/60
-  backdrop-blur-md
-  border border-white/10
-  rounded-lg
-  p-6
-  hover:border-gold-medium/30
-  transition-all duration-300
-">
-  {children}
-</div>
+### Text Truncation
 
-// Academy-Themed Card
-<div className={cn(
-  "glass rounded-lg p-6 transition-all duration-300",
-  academy === 'atlantean' && "hover:glow-atlantean",
-  academy === 'draconic' && "hover:glow-draconic",
-  academy === 'creation' && "hover:glow-creation"
-)}>
-  {children}
-</div>
-```
+**CRITICAL:** `truncate` won't work without `min-w-0`!
 
-### Buttons
-```jsx
-// Primary Button
-<button className="
-  bg-gold-bright
-  text-cosmic-void
-  font-display font-semibold
-  px-6 py-3
-  rounded-md
-  hover:bg-gold-medium
-  active:bg-gold-deep
-  transition-colors duration-200
-">
-  {label}
-</button>
-
-// Ghost Button
-<button className="
-  bg-transparent
-  text-text-primary
-  border border-cosmic-border-bright
-  px-6 py-3
-  rounded-md
-  hover:bg-cosmic-surface
-  hover:border-gold-medium/50
-  transition-all duration-200
-">
-  {label}
-</button>
-
-// Academy Button
-<button className={cn(
-  "px-6 py-3 rounded-md font-display transition-all duration-200",
-  academy === 'atlantean' && "bg-atlantean-teal text-cosmic-void hover:glow-atlantean",
-  academy === 'draconic' && "bg-draconic-gold text-cosmic-void hover:glow-draconic",
-  academy === 'creation' && "bg-creation-gold text-cosmic-void hover:glow-creation"
-)}>
-  {label}
-</button>
-```
-
-### Inputs
-```jsx
-// Standard Input
-<input className="
-  w-full
-  bg-cosmic-surface
-  border border-cosmic-border-bright
-  text-text-primary
-  placeholder:text-text-muted
-  rounded-md
-  px-4 py-3
-  focus:outline-none
-  focus:ring-2 focus:ring-gold-medium/50
-  focus:border-gold-medium
-  transition-all duration-200
-"/>
-
-// Magical Input (with glow on focus)
-<input className="
-  w-full
-  glass-light
-  border border-white/10
-  text-text-primary
-  placeholder:text-text-muted
-  rounded-md
-  px-4 py-3
-  focus:outline-none
-  focus:glow-soft
-  focus:border-gold-bright/50
-  transition-all duration-300
-"/>
-```
-
----
-
-## Layout Patterns
-
-### The Cosmic Canvas
-```jsx
-// Full-page cosmic background
-<div className="
-  min-h-screen
-  bg-cosmic-deep
-  bg-gradient-to-b from-cosmic-void via-cosmic-deep to-cosmic-surface
-">
-  {children}
-</div>
-```
-
-### The Portal Frame
-```jsx
-// Centered content with mystical framing
-<div className="
-  min-h-screen
-  flex items-center justify-center
-  p-4
-">
-  <div className="
-    w-full max-w-lg
-    glass-heavy
-    rounded-2xl
-    p-8
-    border border-gold-medium/20
-  ">
-    {children}
+```tsx
+// ✅ CORRECT
+<div className="flex items-center gap-3">
+  <Icon className="flex-shrink-0" />        // Prevent icon shrinking
+  <div className="flex-1 min-w-0">          // Enable truncation
+    <div className="truncate">Long text...</div>
   </div>
 </div>
+
+// ❌ WRONG - truncate won't work
+<div className="flex-1">
+  <div className="truncate">Long text...</div>
+</div>
 ```
 
-### The Library Layout
-```jsx
-// Sidebar + content for exploration
-<div className="flex min-h-screen">
-  <aside className="
-    w-64
-    bg-cosmic-surface
-    border-r border-cosmic-border
-    p-6
-  ">
-    {navigation}
-  </aside>
-  <main className="flex-1 p-8">
-    {content}
-  </main>
-</div>
+### Hover States
+
+```tsx
+className="hover:bg-secondary"
+className="hover:border-primary/50"
+className="hover:bg-[hsl(var(--success)/0.1)]"
+```
+
+### Focus States
+
+```tsx
+className="focus:outline-none focus:ring-1 focus:ring-primary"
 ```
 
 ---
 
-## Animation Principles
+## ⚠️ Light/Dark Mode (CRITICAL)
 
-### The Arcanean Motion Language
+### The Rule
 
-1. **Emergence**: Elements fade in from transparency
-2. **Ascension**: Elements rise slightly as they appear
-3. **Luminescence**: Glows pulse subtly
-4. **Flow**: Transitions are smooth, never jarring
+**Every color MUST work in BOTH light AND dark mode. No exceptions.**
 
-### Standard Durations
+### How It Works
+
+| Property | Value |
+|----------|-------|
+| Framework | `next-themes` |
+| Attribute | `data-theme="light"` (NOT class-based) |
+| Default | Dark mode |
+| Toggle | User preference via settings |
+
+### CSS Variable Pattern
+
+**ALWAYS define BOTH variants:**
+
 ```css
---duration-instant: 100ms;   /* Micro-interactions */
---duration-fast: 200ms;      /* Hover states */
---duration-normal: 300ms;    /* Standard transitions */
---duration-slow: 500ms;      /* Page transitions */
---duration-glacial: 1000ms;  /* Ambient animations */
+/* In globals.css */
+:root {
+  /* Dark mode (default) */
+  --custom-color: 200 50% 50%;
+}
+
+[data-theme="light"] {
+  /* Light mode - MUST be defined! */
+  --custom-color: 200 60% 30%;  /* Darker for light bg */
+}
 ```
 
-### Easing Functions
-```css
---ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
---ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
---ease-dramatic: cubic-bezier(0.7, 0, 0.3, 1);
+### Common Mistakes
+
+```tsx
+// ❌ WRONG - Hardcoded, breaks in one theme
+<div className="bg-slate-900 text-white">
+
+// ❌ WRONG - Only works in dark mode
+<div className="bg-gray-800">
+
+// ❌ WRONG - Custom inline color
+<div style={{ backgroundColor: '#1e293b' }}>
+
+// ✅ CORRECT - Uses semantic variables
+<div className="bg-card text-foreground">
+
+// ✅ CORRECT - With opacity
+<div className="bg-muted/50">
 ```
 
-### Entrance Animations
-```css
-/* Fade + Rise */
-@keyframes emerge {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+### Testing Requirement
 
-/* Scale + Fade */
-@keyframes manifest {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
+> **ALWAYS test in BOTH themes before considering work complete.**
+> Toggle to light mode via user settings or browser dev tools.
 
-/* Glow Pulse */
-@keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(255, 204, 51, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 40px rgba(255, 204, 51, 0.6);
-  }
-}
+---
+
+## ⚠️ Contrast Requirements (CRITICAL)
+
+### WCAG 2.1 AA Standard
+
+| Text Type | Minimum Ratio |
+|-----------|---------------|
+| Body text | **4.5:1** |
+| Large text (18px+ or 14px bold) | **3:1** |
+| UI components | **3:1** |
+
+### How to Check
+
+1. Use browser DevTools color picker
+2. Or use [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
+
+### Common Problem: Muted Text
+
+```tsx
+// ❌ RISKY - muted-foreground may have low contrast
+<p className="text-muted-foreground text-sm">Small muted text</p>
+
+// ✅ SAFER - use for secondary info only, not critical content
+<p className="text-muted-foreground">Secondary description</p>
+<p className="text-foreground">Important content here</p>
+```
+
+### Status Colors Must Have Contrast
+
+```tsx
+// ✅ Status on dark background - use appropriate contrast
+<span className="text-[hsl(var(--success))]">Verified</span>
+<span className="text-destructive">Error occurred</span>
+
+// ✅ Status as background - ensure text contrast
+<Badge variant="success">Verified</Badge>  // Uses pre-defined contrast
 ```
 
 ---
 
-## Responsive Design
+## Hardcoded Colors = FORBIDDEN
 
-### Breakpoint System
-```css
-/* Mobile First */
-sm: 640px   /* Small tablets, large phones */
-md: 768px   /* Tablets */
-lg: 1024px  /* Small laptops */
-xl: 1280px  /* Desktops */
-2xl: 1536px /* Large screens */
-```
+### Zero Tolerance Policy
 
-### Responsive Patterns
-```jsx
-// Typography scaling
-<h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
-  {title}
-</h1>
+| Forbidden | Why |
+|-----------|-----|
+| `bg-slate-*` | Breaks light mode |
+| `text-gray-*` | Inconsistent theming |
+| `border-zinc-*` | Not semantic |
+| `#1e293b`, `rgb(...)` | Hardcoded |
+| `dark:` prefix | Use `data-theme` instead |
 
-// Layout switching
-<div className="
-  flex flex-col md:flex-row
-  gap-4 md:gap-8
-">
-  {children}
-</div>
+### Allowed Patterns
 
-// Visibility control
-<div className="hidden lg:block">Desktop only</div>
-<div className="lg:hidden">Mobile/Tablet only</div>
+| Pattern | Example |
+|---------|---------|
+| Semantic variables | `bg-card`, `text-foreground` |
+| Status colors (HSL) | `text-[hsl(var(--success))]` |
+| With opacity | `bg-primary/90` |
+| Custom vars in globals.css | After defining light/dark variants |
+
+### Finding Violations
+
+Search for hardcoded colors in codebase:
+
+```bash
+# Find Tailwind color classes (potential violations)
+grep -r "bg-slate\|bg-gray\|text-slate\|text-gray" src/
+grep -r "border-zinc\|bg-zinc" src/
 ```
 
 ---
 
 ## Accessibility
 
-### Focus States
-```css
-/* Always visible, beautiful focus */
-:focus-visible {
-  outline: 2px solid var(--gold-bright);
-  outline-offset: 2px;
-  border-radius: 4px;
-}
+### Screen Reader Support
+
+```tsx
+<button aria-label="Close modal">
+  <X className="h-5 w-5" />
+</button>
+
+// Always add aria-label for icon-only buttons
+<button aria-label="Delete item" className="text-destructive">
+  <Trash2 className="h-4 w-4" />
+</button>
 ```
 
-### Color Contrast
-- All text meets WCAG AA standards (4.5:1 minimum)
-- Interactive elements meet enhanced contrast (7:1)
-- Focus indicators are always visible
+### Focus Indicators
 
-### Reduced Motion
-```css
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-}
+All interactive elements must have visible focus:
+
+```tsx
+className="focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
 ```
 
 ---
 
-## Design Tokens Reference
+## shadcn/ui Components
 
-### Quick Copy
-```javascript
-const ARCANEA_TOKENS = {
-  colors: {
-    cosmic: {
-      void: '#0b0e14',
-      deep: '#121826',
-      surface: '#1a2332',
-      raised: '#242f42',
-    },
-    gold: {
-      light: '#fff4d6',
-      medium: '#ffd966',
-      bright: '#ffcc33',
-      deep: '#e6b800',
-    },
-    atlantean: {
-      primary: '#1e5a99',
-      teal: '#26cccc',
-      glow: '#00e6e6',
-    },
-    draconic: {
-      crimson: '#d92952',
-      gold: '#ffc61a',
-      sky: '#2d8fe6',
-    },
-    creation: {
-      gold: '#ffcc33',
-      prism: '#2d85f5',
-      wave: '#3dc4e6',
-    },
-  },
-  fonts: {
-    display: 'Cinzel, serif',
-    body: 'Crimson Pro, serif',
-    mono: 'JetBrains Mono, monospace',
-  },
-  radii: {
-    sm: '4px',
-    md: '8px',
-    lg: '12px',
-    xl: '16px',
-    full: '9999px',
-  },
-};
+### Installed Components
+
+| Component | Location |
+|-----------|----------|
+| `toast`, `toaster` | Notifications |
+| `dialog` | Modals |
+| `dropdown-menu` | Dropdowns |
+| `input`, `label`, `textarea` | Form fields |
+| `select`, `checkbox` | Form controls |
+| `tooltip` | Tooltips |
+| `confirm-dialog` | Confirmation prompts |
+
+### Usage
+
+```tsx
+// Toasts
+import { toast } from "@/hooks/use-toast";
+toast({ title: "Success!", description: "Saved" });
+toast({ title: "Error", variant: "destructive" });
+
+// Confirmation
+import { ConfirmDialog } from "@/components/ui/confirm-dialog";
+<ConfirmDialog
+  open={showDelete}
+  onOpenChange={setShowDelete}
+  title="Delete?"
+  variant="destructive"
+  onConfirm={handleDelete}
+/>
 ```
 
 ---
 
-## Usage Guidelines
+## Reference Files
 
-### Do
-- Use cosmic backgrounds as the foundation
-- Apply glows sparingly for emphasis
-- Let glass effects create depth
-- Use academy colors for domain context
-- Animate with purpose, not decoration
-
-### Don't
-- Make everything glow (dilutes impact)
-- Use light backgrounds (breaks the metaphor)
-- Mix academy themes haphazardly
-- Over-animate (magic becomes noise)
-- Forget accessibility
+| File | Purpose |
+|------|---------|
+| `docs/THEME_SYSTEM.md` | **Full documentation** |
+| `src/app/globals.css` | CSS variable definitions |
+| `src/lib/badges.ts` | Badge color configuration |
+| `/admin/design-system` | Live component examples |
 
 ---
 
-*"The interface is a portal. Design it as such."*
+## Checklist
+
+Before completing any UI work:
+
+- [ ] Using semantic CSS variables (not hardcoded colors)
+- [ ] Tested in BOTH light and dark themes
+- [ ] Used `min-w-0` for flex containers needing truncation
+- [ ] Used `flex-shrink-0` on icons in flex layouts
+- [ ] Added focus indicators to interactive elements
+- [ ] Text contrast meets 4.5:1 ratio
+- [ ] Updated design system page if adding new patterns
+
+---
+
+## Related Skills
+
+- `form-components` - Form field styling
+- `architecture-philosophy` - Use shadcn over custom components

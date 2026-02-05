@@ -1,7 +1,6 @@
 ---
 name: ultraqa
 description: QA cycling workflow - test, verify, fix, repeat until goal met
-user-invocable: true
 ---
 
 # UltraQA Skill
@@ -20,11 +19,11 @@ Parse the goal from arguments. Supported formats:
 
 | Invocation | Goal Type | What to Check |
 |------------|-----------|---------------|
-| `/ultraqa --tests` | tests | All test suites pass |
-| `/ultraqa --build` | build | Build succeeds with exit 0 |
-| `/ultraqa --lint` | lint | No lint errors |
-| `/ultraqa --typecheck` | typecheck | No TypeScript errors |
-| `/ultraqa --custom "pattern"` | custom | Custom success pattern in output |
+| `/oh-my-gemini:ultraqa --tests` | tests | All test suites pass |
+| `/oh-my-gemini:ultraqa --build` | build | Build succeeds with exit 0 |
+| `/oh-my-gemini:ultraqa --lint` | lint | No lint errors |
+| `/oh-my-gemini:ultraqa --typecheck` | typecheck | No TypeScript errors |
+| `/oh-my-gemini:ultraqa --custom "pattern"` | custom | Custom success pattern in output |
 
 If no structured goal provided, interpret the argument as a custom goal.
 
@@ -33,14 +32,14 @@ If no structured goal provided, interpret the argument as a custom goal.
 ### Cycle N (Max 5)
 
 1. **RUN QA**: Execute verification based on goal type
-   - `--tests`: Run `npm test` or equivalent
-   - `--build`: Run `npm run build` or equivalent
-   - `--lint`: Run `npm run lint` or equivalent
-   - `--typecheck`: Run `npm run typecheck` or `tsc --noEmit`
+   - `--tests`: Run the project's test command
+   - `--build`: Run the project's build command
+   - `--lint`: Run the project's lint command
+   - `--typecheck`: Run the project's type check command
    - `--custom`: Run appropriate command and check for pattern
    - `--interactive`: Use qa-tester for interactive CLI/service testing:
      ```
-     Task(subagent_type="oh-my-claudecode:qa-tester", model="sonnet", prompt="TEST:
+     Task(subagent_type="oh-my-gemini:qa-tester", model="gemini-pro-latest", prompt="TEST:
      Goal: [describe what to verify]
      Service: [how to start]
      Test cases: [specific scenarios to verify]")
@@ -52,7 +51,7 @@ If no structured goal provided, interpret the argument as a custom goal.
 
 3. **ARCHITECT DIAGNOSIS**: Spawn architect to analyze failure
    ```
-   Task(subagent_type="oh-my-claudecode:architect", model="opus", prompt="DIAGNOSE FAILURE:
+   Task(subagent_type="oh-my-gemini:architect", model="gemini-pro-latest", prompt="DIAGNOSE FAILURE:
    Goal: [goal type]
    Output: [test/build output]
    Provide root cause and specific fix recommendations.")
@@ -60,7 +59,7 @@ If no structured goal provided, interpret the argument as a custom goal.
 
 4. **FIX ISSUES**: Apply architect's recommendations
    ```
-   Task(subagent_type="oh-my-claudecode:executor", model="sonnet", prompt="FIX:
+   Task(subagent_type="oh-my-gemini:executor", model="gemini-pro-latest", prompt="FIX:
    Issue: [architect diagnosis]
    Files: [affected files]
    Apply the fix precisely as recommended.")
@@ -108,7 +107,7 @@ Track state in `.omc/ultraqa-state.json`:
 
 ## Cancellation
 
-User can cancel with `/cancel-ultraqa` which clears the state file.
+User can cancel with `/oh-my-gemini:cancel` which clears the state file.
 
 ## Important Rules
 
@@ -117,6 +116,19 @@ User can cancel with `/cancel-ultraqa` which clears the state file.
 3. **EARLY EXIT on pattern** - 3x same failure = stop and surface
 4. **CLEAR OUTPUT** - User should always know current cycle and status
 5. **CLEAN UP** - Clear state file on completion or cancellation
+
+## STATE CLEANUP ON COMPLETION
+
+**IMPORTANT: Delete state files on completion - do NOT just set `active: false`**
+
+When goal is met OR max cycles reached OR exiting early:
+
+```bash
+# Delete ultraqa state file
+rm -f .omc/state/ultraqa-state.json
+```
+
+This ensures clean state for future sessions. Stale state files with `active: false` should not be left behind.
 
 ---
 

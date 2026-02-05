@@ -1,96 +1,88 @@
 ---
 name: frontend-dev
-description: Frontend Developer for client-side implementation. Builds UI components, pages, and client logic. Use this skill for React, Vue, HTML/CSS, or frontend JavaScript work.
-triggers:
-  - frontend
-  - UI component
-  - React
-  - Vue
-  - client side
-  - HTML
-  - CSS
-  - JavaScript
+description: "Front-end development workflow and best practices. Componentization, state management, testing, and deployment. Trigger: When building, refactoring, or scaling front-end applications."
+skills:
+  - conventions
+  - typescript
+  - react
+  - architecture-patterns
+  - a11y
+  - humanizer
+allowed-tools:
+  - documentation-reader
+  - web-search
 ---
 
-# Frontend Developer Skill
+# Frontend Development Skill
 
-## Role Context
-You are the **Frontend Developer (FD)** — you implement the user-facing parts of the application. You write clean, maintainable frontend code.
+## Overview
 
-## Core Responsibilities
+This skill provides universal patterns for front-end development workflow, focusing on componentization, state management, testing, and deployment. It is technology-agnostic and emphasizes maintainability, scalability, and quality.
 
-1. **Component Development**: Build reusable UI components
-2. **Page Implementation**: Create complete page layouts
-3. **State Management**: Handle client-side state
-4. **API Integration**: Connect to backend services
-5. **Responsive Design**: Ensure mobile/desktop compatibility
+## When to Use
 
-## Input Requirements
+- Building, refactoring, or scaling front-end applications
+- Managing state, side effects, or data flow
+- Preparing for deployment or CI/CD
+- Reviewing or improving code quality and structure
 
-- Design specifications from Designer (DS)
-- Architecture from Architect (AR)
-- User Stories from Analyst (AN)
-- API contracts for backend integration
+## Critical Patterns
 
-## Branch Convention
+### Componentization
 
-**Always work in feature branches:**
-```bash
-git checkout -b feature/dev-[iteration]-fd-[description]
-# Example: feature/dev-2-fd-login-form
-```
+- Build small, reusable components with clear responsibilities
+- Use composition over inheritance
+- Separate UI, logic, and data concerns
 
-## Code Standards
+### State Management
 
-### Component Structure
-```typescript
-// ComponentName.tsx
-import React from 'react';
-import styles from './ComponentName.module.css';
+- Use local state for isolated logic, global state for shared data
+- Avoid prop drilling by using context or stores
+- Keep state immutable and predictable
 
-interface ComponentNameProps {
-  /** Description of prop */
-  propName: string;
-}
+### Testing
 
-/**
- * Brief description of what component does
- */
-export function ComponentName({ propName }: ComponentNameProps): JSX.Element {
-  // Implementation
-  return (
-    <div className={styles.container}>
-      {/* Content */}
-    </div>
-  );
-}
-```
+- Write unit and integration tests for components and logic
+- Use user-centric testing (simulate real interactions)
+- Automate tests in CI pipelines
 
-### File Organization
-```
-src/
-├── components/
-│   ├── common/         # Shared components
-│   └── features/       # Feature-specific components
-├── pages/              # Page components
-├── hooks/              # Custom hooks
-├── services/           # API calls
-├── utils/              # Helper functions
-└── styles/             # Global styles
-```
+### Deployment
 
-## Quality Checklist
+- Automate build, test, and deploy steps
+- Use environment variables for config
+- Monitor deployments for errors and rollbacks
 
-Before requesting review:
-- [ ] Component renders correctly
-- [ ] Props are typed (TypeScript)
-- [ ] Accessibility attributes added
-- [ ] Responsive on mobile/desktop
-- [ ] No console errors
-- [ ] CSS follows design spec
+## Decision Tree
 
-## Handoff
+- New feature? → Create isolated, testable component
+- State needed? → Use local or global store
+- Deployment? → Automate with CI/CD
+- Bug found? → Add/expand test coverage
 
-- Code → Security Advisor (SA) for review
-- Code → Tech Writer (TW) for docs
-- Approved code → Merge Agent (MA)
+## Edge Cases
+
+- State sync bugs (race conditions, stale data)
+- Build pipeline failures (misconfig, env issues)
+- Cross-browser or device-specific issues
+
+## Practical Examples
+
+### Before (monolithic component)
+
+> Large component with mixed UI, logic, and data fetching.
+
+### After (modularized)
+
+> Split into small components: UI, logic, and data separated, easier to test and maintain.
+
+### Before (no tests)
+
+> Features shipped without automated tests, leading to regressions.
+
+### After (tested)
+
+> Each component and logic path has unit/integration tests, CI runs on every PR.
+
+## References
+
+- Use with conventions, architecture-patterns, and a11y for best results.

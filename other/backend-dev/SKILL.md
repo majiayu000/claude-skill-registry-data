@@ -1,114 +1,87 @@
 ---
 name: backend-dev
-description: Backend Developer for server-side implementation. Builds APIs, services, and data layer. Use this skill for API development, database work, or server logic.
-triggers:
-  - backend
-  - API
-  - server
-  - database
-  - REST
-  - GraphQL
-  - Python
-  - Node.js
+description: "Back-end development workflow and best practices. API design, data modeling, error handling, and deployment. Trigger: When building, refactoring, or scaling back-end applications."
+skills:
+  - conventions
+  - typescript
+  - nodejs
+  - architecture-patterns
+  - humanizer
+allowed-tools:
+  - documentation-reader
+  - web-search
 ---
 
-# Backend Developer Skill
+# Backend Development Skill
 
-## Role Context
-You are the **Backend Developer (BD)** — you implement the server-side logic, APIs, and data layer. You write secure, performant backend code.
+## Overview
 
-## Core Responsibilities
+This skill provides universal patterns for back-end development workflow, focusing on API design, data modeling, error handling, and deployment. It is technology-agnostic and emphasizes maintainability, scalability, and robustness.
 
-1. **API Development**: Build RESTful or GraphQL endpoints
-2. **Business Logic**: Implement core application logic
-3. **Data Layer**: Database queries, ORM models
-4. **Authentication**: User auth, session management
-5. **Integration**: Third-party service connections
+## When to Use
 
-## Input Requirements
+- Designing, building, or refactoring APIs
+- Modeling data and business logic
+- Preparing for deployment or CI/CD
+- Reviewing or improving code quality and structure
 
-- Architecture from Architect (AR)
-- API contracts and data models
-- User Stories from Analyst (AN)
-- Database schema design
+## Critical Patterns
 
-## Branch Convention
+### API Design
 
-**Always work in feature branches:**
-```bash
-git checkout -b feature/dev-[iteration]-bd-[description]
-# Example: feature/dev-2-bd-auth-api
-```
+- Define clear, versioned contracts for endpoints
+- Use RESTful or RPC conventions as appropriate
+- Document APIs for consumers
 
-## Code Standards
+### Data Modeling
 
-### API Endpoint Structure
-```python
-# Python/FastAPI example
-from fastapi import APIRouter, HTTPException, Depends
-from typing import List
-from pydantic import BaseModel
+- Normalize data structures for consistency
+- Use validation at boundaries (input/output)
+- Separate domain logic from persistence
 
-router = APIRouter(prefix="/api/v1", tags=["resource"])
+### Error Handling
 
-class ResourceCreate(BaseModel):
-    """Input model for creating resource."""
-    name: str
-    description: str | None = None
+- Centralize error handling and logging
+- Return meaningful error messages/codes
+- Monitor and alert on failures
 
-class ResourceResponse(BaseModel):
-    """Output model for resource."""
-    id: int
-    name: str
-    description: str | None
+### Deployment
 
-@router.post("/resources", response_model=ResourceResponse)
-async def create_resource(
-    data: ResourceCreate,
-    db: Session = Depends(get_db)
-) -> ResourceResponse:
-    """
-    Create a new resource.
-    
-    Args:
-        data: Resource creation data
-        db: Database session
-        
-    Returns:
-        Created resource with ID
-        
-    Raises:
-        HTTPException: If validation fails
-    """
-    # Implementation
-    pass
-```
+- Automate build, test, and deploy steps
+- Use environment variables for config
+- Monitor deployments for errors and rollbacks
 
-### File Organization
-```
-src/
-├── api/
-│   ├── routes/         # API endpoints
-│   └── middleware/     # Request middleware
-├── models/             # Database models
-├── services/           # Business logic
-├── repositories/       # Data access
-├── schemas/            # Pydantic/validation
-└── utils/              # Helpers
-```
+## Decision Tree
 
-## Quality Checklist
+- New endpoint? → Define contract/schema and document
+- Data model change? → Migrate safely and validate
+- Deployment? → Automate with CI/CD
+- Bug found? → Add/expand test coverage
 
-Before requesting review:
-- [ ] All endpoints return proper status codes
-- [ ] Input validation implemented
-- [ ] Error handling with meaningful messages
-- [ ] Database transactions handled correctly
-- [ ] No SQL injection vulnerabilities
-- [ ] Logging at key boundaries
+## Edge Cases
 
-## Handoff
+- Data migration failures (rollback, partial data)
+- API versioning and backward compatibility
+- Security edge cases (injection, auth, rate limiting)
 
-- Code → Security Advisor (SA) for review
-- Code → Tech Writer (TW) for API docs
-- Approved code → Merge Agent (MA)
+## Practical Examples
+
+### Before (no API versioning)
+
+> All endpoints are on /api with no versioning, breaking clients on changes.
+
+### After (versioned API)
+
+> Endpoints use /api/v1, changes are documented and backward compatible.
+
+### Before (no error handling)
+
+> Errors are logged to console, users get generic 500 errors.
+
+### After (robust error handling)
+
+> Centralized error handler returns clear messages, logs with context, and triggers alerts.
+
+## References
+
+- Use with conventions, architecture-patterns, and process-documentation for best results.

@@ -1,11 +1,11 @@
 ---
 name: feature-docs
-description: Generate single-file feature documentation with verified test cases. Use for quick feature docs, feature README, any project (not enterprise modules). Outputs single markdown file with code evidence. Triggers on "quick feature docs", "feature readme", "single file docs", "verified documentation". For enterprise module hierarchy, use business-feature-docs instead.
+description: Use when the user asks to generate comprehensive feature documentation with verified test cases, create feature README with code evidence, or document a complete feature with test verification. Triggers on keywords like "feature documentation", "document feature", "comprehensive docs", "feature README", "test verification", "verified documentation".
 allowed-tools: Read, Write, Edit, Bash, Grep, Glob, Task, TodoWrite
 ---
 
-<!-- SYNC: Source of truth is docs/templates/skills/feature-docs/SKILL.md -->
-<!-- Keep in sync with .github/skills/feature-docs/SKILL.md -->
+<!-- SOURCE OF TRUTH: docs/templates/skills/feature-docs/SKILL.md -->
+<!-- Synced to: .claude/skills/ and .github/skills/ -->
 
 # Feature Documentation Generation & Verification
 

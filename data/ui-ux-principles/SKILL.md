@@ -20,9 +20,9 @@ Create intuitive, visually appealing interfaces based on proven design principle
 ### Size & Weight
 
 ```
-PRIMARY ACTION     -> Largest, boldest, most prominent
-Secondary Action   -> Medium size, less visual weight
-tertiary action    -> Smallest, subtle styling
+PRIMARY ACTION     → Largest, boldest, most prominent
+Secondary Action   → Medium size, less visual weight
+tertiary action    → Smallest, subtle styling
 ```
 
 ```tsx
@@ -106,10 +106,10 @@ const colors = {
 
 ```
 Text on white background:
-- Gray-900 (#111827) -> Contrast 16:1 (excellent)
-- Gray-700 (#374151) -> Contrast 10:1 (excellent)
-- Gray-500 (#6b7280) -> Contrast 5.2:1 (minimum for text)
-- Gray-400 (#9ca3af) -> Contrast 3.5:1 (fails for body text)
+- Gray-900 (#111827) → Contrast 16:1 ✓
+- Gray-700 (#374151) → Contrast 10:1 ✓
+- Gray-500 (#6b7280) → Contrast 5.2:1 ✓ (minimum for text)
+- Gray-400 (#9ca3af) → Contrast 3.5:1 ✗ (fails for body text)
 
 Large text (18pt+) can use 3:1 minimum contrast
 ```

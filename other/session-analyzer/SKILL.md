@@ -22,26 +22,14 @@ Esta skill analisa sessoes do Claude Code para:
 
 1. **Extrair decisoes** - Identificar escolhas feitas durante a sessao
 2. **Capturar bloqueios** - Registrar problemas encontrados e como foram resolvidos
-3. **Persistir learnings** - Salvar conhecimento em `.agentic_sdlc/sessions/`
+3. **Persistir learnings** - Salvar conhecimento em `.project/sessions/`
 4. **Alimentar RAG** - Adicionar ao corpus para consultas futuras
 
 ## Scripts Disponíveis
 
-### analyze.sh (wrapper)
+**⚠️ v3.0.0 Update:** Wrapper `analyze.sh` removido (Natural Language First principle).
 
-```bash
-# Analisar sessão mais recente
-.claude/skills/session-analyzer/scripts/analyze.sh
-
-# Analisar e persistir
-.claude/skills/session-analyzer/scripts/analyze.sh --persist
-
-# Extrair learnings para RAG corpus
-.claude/skills/session-analyzer/scripts/analyze.sh --extract-learnings
-
-# Especificar projeto
-.claude/skills/session-analyzer/scripts/analyze.sh --project /path/to/project
-```
+Use diretamente:
 
 ### extract_learnings.py
 
@@ -87,7 +75,7 @@ Learnings são persistidos automaticamente:
 
 ```yaml
 on_learning_found:
-  - persist_to: .agentic_sdlc/corpus/learnings/
+  - persist_to: .project/corpus/learnings/
   - update: rag_index
 ```
 
@@ -151,7 +139,7 @@ session_analysis_process:
     - Listar learnings identificados
 
   5_persist_results:
-    - Salvar em .agentic_sdlc/sessions/
+    - Salvar em .project/sessions/
     - Atualizar RAG corpus se relevante
     - Vincular ao projeto/fase
 ```
@@ -159,7 +147,7 @@ session_analysis_process:
 ## Formato de Output
 
 ```yaml
-# .agentic_sdlc/sessions/session-{date}-{uuid-short}.yml
+# .project/sessions/session-{date}-{uuid-short}.yml
 session_analysis:
   id: string
   analyzed_at: datetime
@@ -246,7 +234,7 @@ on_phase_complete:
 ### Com Memory Manager
 ```yaml
 on_learning_found:
-  - persist_to: .agentic_sdlc/corpus/learnings/
+  - persist_to: .project/corpus/learnings/
   - update: rag_index
 ```
 
@@ -280,6 +268,63 @@ python3 .claude/skills/session-analyzer/extract_learnings.py --persist
 - Deteccao de patterns e heuristica, nao 100% precisa
 - Informacoes sensiveis devem ser filtradas antes de persistir
 
+## Session Handoff Summaries (v2.0)
+
+### Propósito
+
+Gera resumos estruturados ao fim de cada sessão para facilitar continuidade entre sessões.
+Adaptado do claude-orchestrator para o SDLC Agêntico.
+
+### Uso
+
+```bash
+# Gerar handoff da sessão mais recente
+python3 .claude/skills/session-analyzer/scripts/handoff.py
+
+# Especificar projeto
+python3 .claude/skills/session-analyzer/scripts/handoff.py --project /path/to/project
+
+# Especificar arquivo de saída
+python3 .claude/skills/session-analyzer/scripts/handoff.py --output custom-summary.md
+
+# Modo silencioso (sem preview)
+python3 .claude/skills/session-analyzer/scripts/handoff.py --quiet
+```
+
+### Estrutura do Handoff
+
+```markdown
+# Session Summary: YYYY-MM-DD - repository
+
+## Session Metadata
+- Date, session file, repo, phase
+
+## Completed
+- [tasks that were completed]
+
+## Pending
+- [tasks still pending]
+
+## Context for Next Session
+- Current phase
+- Files modified
+- Tools used
+- Decisions made
+- Blockers
+- Notes
+```
+
+### Integração Automática
+
+O handoff é gerado automaticamente:
+- **Hook**: `session-analyzer.sh` invoca `handoff.py` após gate-check
+- **Timing**: Ao fim de cada fase (gate passage)
+- **Output**: `.project/sessions/YYYYMMDD-HHMMSS-{repo}.md`
+
+### Exemplo
+
+Ver `.claude/skills/session-analyzer/templates/handoff-example.md`
+
 ## Checklist
 
 ### Antes da Analise
@@ -291,3 +336,4 @@ python3 .claude/skills/session-analyzer/extract_learnings.py --persist
 - [ ] Revisar learnings extraidos
 - [ ] Validar decisoes identificadas
 - [ ] Adicionar ao RAG se relevante
+- [ ] Revisar handoff summary para proxima sessao

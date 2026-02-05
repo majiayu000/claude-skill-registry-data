@@ -1,6 +1,6 @@
 ---
 name: claude-automation-recommender
-description: Analyze a codebase and recommend Claude Code automations (hooks, subagents, skills, slash commands, plugins, MCP servers). Use when user asks for automation recommendations, wants to optimize their Claude Code setup, mentions improving Claude Code workflows, asks how to first set up Claude Code for a project, or wants to know what Claude Code features they should use.
+description: Analyze a codebase and recommend Claude Code automations (hooks, subagents, skills, plugins, MCP servers). Use when user asks for automation recommendations, wants to optimize their Claude Code setup, mentions improving Claude Code workflows, asks how to first set up Claude Code for a project, or wants to know what Claude Code features they should use.
 tools: Read, Glob, Grep, Bash
 ---
 
@@ -14,6 +14,7 @@ Analyze codebase patterns to recommend tailored Claude Code automations across a
 
 - **Recommend 1-2 of each type**: Don't overwhelm - surface the top 1-2 most valuable automations per category
 - **If user asks for a specific type**: Focus only on that type and provide more options (3-5 recommendations)
+- **Go beyond the reference lists**: The reference files contain common patterns, but use web search to find recommendations specific to the codebase's tools, frameworks, and libraries
 - **Tell users they can ask for more**: End by noting they can request more recommendations for any specific category
 
 ## Automation Types Overview
@@ -22,8 +23,7 @@ Analyze codebase patterns to recommend tailored Claude Code automations across a
 |------|----------|
 | **Hooks** | Automatic actions on tool events (format on save, lint, block edits) |
 | **Subagents** | Specialized reviewers/analyzers that run in parallel |
-| **Skills** | Packaged expertise with workflows and reference material |
-| **Slash Commands** | Quick, repeatable prompts with arguments |
+| **Skills** | Packaged expertise, workflows, and repeatable tasks (invoked by Claude or user via `/skill-name`) |
 | **Plugins** | Collections of skills that can be installed |
 | **MCP Servers** | External tool integrations (databases, APIs, browsers, docs) |
 
@@ -86,20 +86,30 @@ See [references/mcp-servers.md](references/mcp-servers.md) for detailed patterns
 
 #### B. Skills Recommendations
 
-See [references/skills-reference.md](references/skills-reference.md) for patterns.
+See [references/skills-reference.md](references/skills-reference.md) for details.
 
-| Codebase Signal | Recommended Skill |
-|-----------------|-------------------|
-| Complex implementation tasks | **Plan agent** - Architecture planning |
-| Large codebase | **Explore agent** - Codebase navigation |
-| Creates documents | **docx skill** - Word document generation |
-| Creates spreadsheets | **xlsx skill** - Excel creation |
-| Creates presentations | **pptx skill** - PowerPoint generation |
-| PDF workflows | **pdf skill** - PDF manipulation |
-| Frontend UI work | **frontend-design** - UI component design |
-| Needs custom Claude tools | **mcp-builder** - Build MCP servers |
-| Wants branded output | **brand-guidelines** - Apply brand styling |
-| Testing web apps | **webapp-testing** - Playwright testing |
+Create skills in `.claude/skills/<name>/SKILL.md`. Some are also available via plugins:
+
+| Codebase Signal | Skill | Plugin |
+|-----------------|-------|--------|
+| Building plugins | skill-development | plugin-dev |
+| Git commits | commit | commit-commands |
+| React/Vue/Angular | frontend-design | frontend-design |
+| Automation rules | writing-rules | hookify |
+| Feature planning | feature-dev | feature-dev |
+
+**Custom skills to create** (with templates, scripts, examples):
+
+| Codebase Signal | Skill to Create | Invocation |
+|-----------------|-----------------|------------|
+| API routes | **api-doc** (with OpenAPI template) | Both |
+| Database project | **create-migration** (with validation script) | User-only |
+| Test suite | **gen-test** (with example tests) | User-only |
+| Component library | **new-component** (with templates) | User-only |
+| PR workflow | **pr-check** (with checklist) | User-only |
+| Releases | **release-notes** (with git context) | User-only |
+| Code style | **project-conventions** | Claude-only |
+| Onboarding | **setup-dev** (with prereq script) | User-only |
 
 #### C. Hooks Recommendations
 
@@ -128,20 +138,7 @@ See [references/subagent-templates.md](references/subagent-templates.md) for tem
 | Frontend heavy | **ui-reviewer** - Accessibility review |
 | Needs more tests | **test-writer** - Test generation |
 
-#### E. Slash Command Recommendations
-
-See [references/slash-command-examples.md](references/slash-command-examples.md) for templates.
-
-| Codebase Signal | Recommended Command |
-|-----------------|---------------------|
-| Git-based workflow | `/pr-review` - Review PR changes |
-| Test suite exists | `/test [file]` - Run specific tests |
-| CI/CD configured | `/ci-fix` - Debug CI failures |
-| Changelog file | `/changelog` - Update changelog |
-| API routes | `/api-doc [route]` - Document endpoint |
-| Complex codebase | `/explain [file]` - Explain code |
-
-#### F. Plugin Recommendations
+#### E. Plugin Recommendations
 
 See [references/plugins-reference.md](references/plugins-reference.md) for available plugins.
 
@@ -180,7 +177,16 @@ I've analyzed your codebase and identified the top automations for each category
 
 #### [skill name]
 **Why**: [specific reason]
-**How**: [invocation method]
+**Create**: `.claude/skills/[name]/SKILL.md`
+**Invocation**: User-only / Both / Claude-only
+**Also available in**: [plugin-name] plugin (if applicable)
+```yaml
+---
+name: [skill-name]
+description: [what it does]
+disable-model-invocation: true  # for user-only
+---
+```
 
 ---
 
@@ -200,14 +206,6 @@ I've analyzed your codebase and identified the top automations for each category
 
 ---
 
-### 📝 Slash Commands
-
-#### /[command]
-**Why**: [specific reason]
-**Where**: `.claude/commands/[name].md`
-
----
-
 **Want more?** Ask for additional recommendations for any specific category (e.g., "show me more MCP server options" or "what other hooks would help?").
 
 **Want help implementing any of these?** Just ask and I can help you set up any of the recommendations above.
@@ -223,10 +221,18 @@ I've analyzed your codebase and identified the top automations for each category
 - Cloud infrastructure management
 
 ### When to Recommend Skills
-- Complex multi-step workflows
-- Document generation needs
-- Specialized domain knowledge needed
-- Repeatable processes with templates
+
+- Document generation (docx, xlsx, pptx, pdf — also in plugins)
+- Frequently repeated prompts or workflows
+- Project-specific tasks with arguments
+- Applying templates or scripts to tasks (skills can bundle supporting files)
+- Quick actions invoked with `/skill-name`
+- Workflows that should run in isolation (`context: fork`)
+
+**Invocation control:**
+- `disable-model-invocation: true` — User-only (for side effects: deploy, commit, send)
+- `user-invocable: false` — Claude-only (for background knowledge)
+- Default (omit both) — Both can invoke
 
 ### When to Recommend Hooks
 - Repetitive post-edit actions (formatting, linting)
@@ -237,11 +243,6 @@ I've analyzed your codebase and identified the top automations for each category
 - Specialized expertise needed (security, performance)
 - Parallel review workflows
 - Background quality checks
-
-### When to Recommend Slash Commands
-- Frequently repeated prompts
-- Commands with arguments
-- Quick project-specific workflows
 
 ### When to Recommend Plugins
 - Need multiple related skills

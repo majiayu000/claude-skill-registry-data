@@ -1,117 +1,118 @@
 ---
 name: openspec-continue-change
-description: Continue working on an OpenSpec change by creating the next artifact. Use when the user wants to progress their change, create the next artifact, or continue their workflow.
+description: 通过创建下一个产出物继续处理 OpenSpec 变更。当用户想要推进其变更、创建下一个产出物或继续其工作流程时使用。
+license: MIT
+compatibility: Requires openspec CLI.
+metadata:
+  author: openspec
+  version: "1.0"
+  generatedBy: "1.0.2"
 ---
 
-Continue working on a change by creating the next artifact.
+通过创建下一个产出物继续处理变更。
 
-**Input**: Optionally specify a change name. If omitted, MUST prompt for available changes.
+**输入**：可选指定变更名称。如果省略，检查是否可以从对话上下文中推断。如果模糊或不明确，你**必须**提示获取可用变更。
 
-**Steps**
+**步骤**
 
-1. **If no change name provided, prompt for selection**
+1. **如果没有提供变更名称，提示选择**
 
-   Run `openspec list --json` to get available changes sorted by most recently modified. Then use the **AskUserQuestion tool** to let the user select which change to work on.
+   运行 `openspec-cn list --json` 获取按最近修改排序的可用变更。然后使用 **AskUserQuestion tool** 让用户选择要处理哪个变更。
 
-   Present the top 3-4 most recently modified changes as options, showing:
-   - Change name
-   - Schema (from `schema` field if present, otherwise "spec-driven")
-   - Status (e.g., "0/5 tasks", "complete", "no tasks")
-   - How recently it was modified (from `lastModified` field)
+   展示前 3-4 个最近修改的变更作为选项，显示：
+   - 变更名称
+   - Schema（如果存在 `schema` 字段，否则为 "spec-driven"）
+   - 状态（例如："0/5 tasks", "complete", "no tasks"）
+   - 最近修改时间（来自 `lastModified` 字段）
 
-   Mark the most recently modified change as "(Recommended)" since it's likely what the user wants to continue.
+   将最近修改的变更标记为 "(推荐)"，因为它很可能是用户想要继续的。
 
-   **IMPORTANT**: Do NOT guess or auto-select a change. Always let the user choose.
+   **重要提示**：不要猜测或自动选择变更。始终让用户选择。
 
-2. **Check current status**
-
+2. **检查当前状态**
    ```bash
-   openspec status --change "<name>" --json
+   openspec-cn status --change "<name>" --json
    ```
-
    Parse the JSON to understand current state. The response includes:
-   - `schemaName`: The workflow schema being used (e.g., "spec-driven", "tdd")
+   - `schemaName`: The workflow schema being used (e.g., "spec-driven")
    - `artifacts`: Array of artifacts with their status ("done", "ready", "blocked")
    - `isComplete`: Boolean indicating if all artifacts are complete
 
-3. **Act based on status**:
+3. **根据状态行动**：
 
    ---
 
-   **If all artifacts are complete (`isComplete: true`)**:
-   - Congratulate the user
-   - Show final status including the schema used
-   - Suggest: "All artifacts created! You can now implement this change or archive it."
-   - STOP
+   **如果所有产出物已完成 (`isComplete: true`)**：
+   - 祝贺用户
+   - 显示最终状态，包括使用的 Schema
+   - 建议："所有产出物已创建！您现在可以实现此变更或将其归档。"
+   - 停止
 
    ---
 
-   **If artifacts are ready to create** (status shows artifacts with `status: "ready"`):
-   - Pick the FIRST artifact with `status: "ready"` from the status output
-   - Get its instructions:
-
+   **如果产出物准备好创建**（状态显示有 `status: "ready"` 的产出物）：
+   - 从状态输出中选择第一个 `status: "ready"` 的产出物
+   - 获取其指令：
      ```bash
-     openspec instructions <artifact-id> --change "<name>" --json
+     openspec-cn instructions <artifact-id> --change "<name>" --json
      ```
-
-   - Parse the JSON to get template, dependencies, and what it unlocks
-   - **Create the artifact file** using the template as a starting point:
+   - Parse the JSON. The key fields are:
+     - `context`: Project background (constraints for you - do NOT include in output)
+     - `rules`: Artifact-specific rules (constraints for you - do NOT include in output)
+     - `template`: The structure to use for your output file
+     - `instruction`: Schema-specific guidance
+     - `outputPath`: Where to write the artifact
+     - `dependencies`: Completed artifacts to read for context
+   - **Create the artifact file**:
      - Read any completed dependency files for context
-     - Fill in the template based on context and user's goals
+     - Use `template` as the structure - fill in its sections
+     - Apply `context` and `rules` as constraints when writing - but do NOT copy them into the file
      - Write to the output path specified in instructions
    - Show what was created and what's now unlocked
    - STOP after creating ONE artifact
 
    ---
 
-   **If no artifacts are ready (all blocked)**:
-   - This shouldn't happen with a valid schema
-   - Show status and suggest checking for issues
+   **如果没有产出物准备好（全部受阻）**：
+   - 在有效的 Schema 下不应发生这种情况
+   - 显示状态并建议检查问题
 
-4. **After creating an artifact, show progress**
-
+4. **创建产出物后，显示进度**
    ```bash
-   openspec status --change "<name>"
+   openspec-cn status --change "<name>"
    ```
 
-**Output**
+**输出**
 
-After each invocation, show:
+每次调用后，显示：
+- 创建了哪个产出物
+- 正在使用的 Schema 工作流
+- 当前进度（N/M 完成）
+- 现在解锁了哪些产出物
+- 提示："想要继续吗？只需让我继续或告诉我下一步做什么。"
 
-- Which artifact was created
-- Schema workflow being used
-- Current progress (N/M complete)
-- What artifacts are now unlocked
-- Prompt: "Want to continue? Just ask me to continue or tell me what to do next."
+**产出物创建指南**
 
-**Artifact Creation Guidelines**
+产出物类型及其用途取决于 Schema。使用指令输出中的 `instruction` 字段来了解要创建什么。
 
-The artifact types and their purpose depend on the schema. Use the `instruction` field from the instructions output to understand what to create.
-
-Common artifact patterns:
+常见的产出物模式：
 
 **spec-driven schema** (proposal → specs → design → tasks):
-
 - **proposal.md**: Ask user about the change if not clear. Fill in Why, What Changes, Capabilities, Impact.
   - The Capabilities section is critical - each capability listed will need a spec file.
-- **specs/*.md**: Create one spec per capability listed in the proposal.
+- **specs/<capability>/spec.md**: Create one spec per capability listed in the proposal's Capabilities section (use the capability name, not the change name).
 - **design.md**: Document technical decisions, architecture, and implementation approach.
 - **tasks.md**: Break down implementation into checkboxed tasks.
-
-**tdd schema** (spec → tests → implementation → docs):
-
-- **spec.md**: Feature specification defining what to build.
-- **tests/*.test.ts**: Write tests BEFORE implementation (TDD red phase).
-- **src/*.ts**: Implement to make tests pass (TDD green phase).
-- **docs/*.md**: Document the implemented feature.
 
 For other schemas, follow the `instruction` field from the CLI output.
 
 **Guardrails**
-
 - Create ONE artifact per invocation
 - Always read dependency artifacts before creating a new one
 - Never skip artifacts or create out of order
 - If context is unclear, ask the user before creating
 - Verify the artifact file exists after writing before marking progress
 - Use the schema's artifact sequence, don't assume specific artifact names
+- **IMPORTANT**: `context` and `rules` are constraints for YOU, not content for the file
+  - Do NOT copy `<context>`, `<rules>`, `<project_context>` blocks into the artifact
+  - These guide what you write, but should never appear in the output

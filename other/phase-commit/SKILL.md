@@ -92,14 +92,14 @@ phase_commit_process:
 ```
 .agentic_sdlc/intake/**
 .agentic_sdlc/projects/*/manifest.yml
-.agentic_sdlc/corpus/decisions/compliance-*.yml
+.project/corpus/decisions/compliance-*.yml
 ```
 
 ### Fase 1 - Discovery
 ```
-.agentic_sdlc/corpus/research/**
-.agentic_sdlc/corpus/docs/**
-.agentic_sdlc/references/**
+.project/corpus/research/**
+.project/corpus/docs/**
+.project/references/**
 ```
 
 ### Fase 2 - Requirements
@@ -113,7 +113,7 @@ phase_commit_process:
 ```
 .agentic_sdlc/projects/*/decisions/adr-*.yml
 .agentic_sdlc/projects/*/security/threat-model*.yml
-.agentic_sdlc/corpus/decisions/**
+.project/corpus/decisions/**
 docs/architecture/**
 ```
 
@@ -286,6 +286,9 @@ on_gate_pass:
 
 ## Notas
 
-- Esta skill NAO faz push automaticamente
-- O usuario deve aprovar o commit explicitamente em contextos criticos
+- ✅ Esta skill FAZ COMMIT **E PUSH** automaticamente (v1.7.15+)
+- ✅ Push detecta se branch tem upstream e configura automaticamente
+- ✅ Logs estruturados com Loki (skill="phase-commit")
+- ✅ Atualiza manifest.yml com commit hash e timestamp
+- ⚠️ Se push falhar, o commit local é mantido e erro é reportado
 - Commits podem ser agrupados se varias fases forem completadas rapidamente

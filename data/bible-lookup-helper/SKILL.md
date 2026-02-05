@@ -5,6 +5,12 @@ description: Expert assistant for Bible reference lookups and RPC function usage
 
 # Bible Lookup Helper
 
+## Context Files (Read First)
+
+For schema and API details, read from `Docs/context/`:
+- `Docs/context/db-schema-short.md` - Bible schema tables
+- `Docs/context/supabase-map.md` - RPC functions list
+
 ## Capabilities
 - Generate correct RPC function calls for Bible lookups
 - Validate OSIS reference formats

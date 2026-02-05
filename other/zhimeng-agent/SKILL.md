@@ -1,254 +1,347 @@
+# zhimeng-agent 自动化任务技能
+
+> 个人自动化任务集合，通过 macOS launchd 定时调度，自动执行日常任务并同步到多个平台。
+
+## 概览
+
+```
+zhimeng-agent/
+├── tasks/
+│   ├── config.py              # 统一配置
+│   ├── sync_utils.py          # 多平台同步工具
+│   ├── daily_report/          # 日报生成（0:00）
+│   ├── email_organizer/       # 邮箱整理（2:00）
+│   ├── desktop_organizer/     # 桌面整理（4:00）
+│   ├── tech_news/             # 科技新闻（7:00）
+│   └── launchd/               # macOS 定时任务配置
+├── logs/                      # 运行日志
+└── SKILL.md                   # 本文档
+```
+
+## 任务列表
+
+| 任务 | 调度时间 | 功能 | 输出目标 |
+|------|----------|------|----------|
+| daily-report | 每天 00:00 | 生成每日工作报告 | Git, Notion, Feishu, Obsidian |
+| email-organizer | 每天 02:00 | 自动归档邮件 | Obsidian |
+| desktop-organizer | 每天 04:00 | 整理桌面和下载目录 | Obsidian |
+| tech-news | 每天 07:00 | 聚合科技新闻 | Obsidian, Feishu |
+
 ---
-name: zhimeng-agent
-description: |
-  zhimeng's Agent 智能助手操作技能。
-  触发场景：用户提到"问知识库"、"发日报"、"检查Agent"、"重建索引"、"知识问答"等。
----
 
-# zhimeng's Agent 操作技能
+## 1. 日报生成 (daily-report)
 
-## 概述
+### 功能
+- 从 Git 仓库提取当日提交记录
+- 整合 Claude Code 会话摘要
+- 生成结构化的工作日报
 
-zhimeng's Agent 是基于 Obsidian 知识库的 RAG 智能问答助手，由 Claude Opus 4.5 驱动。支持知识库问答、日报同步、飞书消息推送等功能。
+### 数据源
+- Git commits（指定仓库目录）
+- Claude Code sessions（`~/.claude/projects/`）
 
-## 服务信息
+### 输出
+```markdown
+# 2026-01-07 工作日报
 
-| 项目 | 值 |
-|------|-----|
-| 服务地址 | `http://localhost:8001` |
-| 项目路径 | `/Users/qitmac001395/workspace/QAL/ideas/apps/zhimeng-agent` |
-| 知识库路径 | `/Users/qitmac001395/Documents/Obsidian Vault` |
-| 向量数据库 | ChromaDB (`data/chroma/`) |
-| LLM 模型 | `anthropic/claude-sonnet-4-20250514` |
+## 代码提交
+- feat(plan): 实现方案生成核心流程
 
-## 核心能力
+## Claude Code 会话
+- 4 个会话，总交互 23 轮
 
-| 能力 | 端点 | 用途 | 示例触发词 |
-|------|------|------|-----------|
-| 知识问答 | `POST /ask` | 基于知识库的 RAG 问答 | "问知识库"、"查一下" |
-| 健康检查 | `GET /health` | 检查服务状态和文档数量 | "检查Agent"、"服务状态" |
-| 重建索引 | `POST /index` | 重新索引 Obsidian 文档 | "重建索引"、"更新知识库" |
-| 飞书Webhook | `POST /webhook/feishu` | 接收飞书消息事件 | - |
-
-## API 详细说明
-
-### 1. 问答接口 (`POST /ask`)
-
-**请求体**:
-```json
-{
-  "question": "用户问题",
-  "top_k": 5,
-  "include_sources": true,
-  "filter_folder": null,
-  "user_id": "用户唯一标识"
-}
+## 统计
+- 提交数: 5
+- 会话数: 4
 ```
 
-**响应体**:
-```json
-{
-  "answer": "回答内容",
-  "sources": [
-    {"file": "文件名.md", "folder": "文件夹", "relevance": 0.85}
-  ],
-  "tokens_used": 1234
-}
-```
-
-**参数说明**:
-- `question` (必填): 用户问题
-- `top_k` (可选, 默认5): 检索文档数量 (1-20)
-- `include_sources` (可选, 默认true): 是否返回来源
-- `filter_folder` (可选): 限定搜索的文件夹
-- `user_id` (可选): 用户标识，用于对话记忆
-
-### 2. 健康检查 (`GET /health`)
-
-**响应体**:
-```json
-{
-  "status": "healthy",
-  "vectorstore_loaded": true,
-  "document_count": 1316
-}
-```
-
-### 3. 重建索引 (`POST /index`)
-
-**请求体**:
-```json
-{
-  "paths": ["Journal", "Projects"],
-  "force": false
-}
-```
-
-**响应体**:
-```json
-{
-  "status": "success",
-  "chunks_indexed": 1500
-}
-```
-
-## 标准操作流程 (SOP)
-
-### SOP 1: 知识库问答
-
-```
-步骤1: 检查服务状态
-  curl http://localhost:8001/health
-
-步骤2: 发送问题
-  curl -X POST http://localhost:8001/ask \
-    -H "Content-Type: application/json" \
-    -d '{"question": "你的问题", "top_k": 5}'
-
-步骤3: 解析响应中的 answer 和 sources
-```
-
-### SOP 2: 日报同步到飞书
-
-```
-步骤1: 读取今日日报
-  读取 ~/Documents/Obsidian Vault/Journal/YYYYMMDD.md
-
-步骤2: 提取关键内容
-  - 完成的工作
-  - 代码变更统计
-  - AI 消耗统计
-
-步骤3: 格式化为飞书消息
-  使用 feishu-messaging 技能发送
-
-步骤4: 发送到目标用户
-  调用 mcp__feishu__im_v1_message_create
-  收件人: 王植萌 (open_id: ou_18b8063b232cbdec73ea1541dfb74890)
-```
-
-### SOP 3: 重建知识库索引
-
-```
-步骤1: 停止正在进行的查询
-
-步骤2: 调用索引接口
-  curl -X POST http://localhost:8001/index \
-    -H "Content-Type: application/json" \
-    -d '{"force": true}'
-
-步骤3: 验证索引结果
-  curl http://localhost:8001/health
-  确认 document_count 已更新
-```
-
-### SOP 4: 启动/停止服务
-
-**启动服务**:
+### 手动运行
 ```bash
 cd /Users/qitmac001395/workspace/QAL/ideas/apps/zhimeng-agent
-poetry run uvicorn src.main:app --host 0.0.0.0 --port 8001 --reload
+poetry run python -m tasks.daily_report.main --dry-run  # 仅生成不同步
+poetry run python -m tasks.daily_report.main            # 生成并同步
 ```
 
-**启动飞书长连接** (本地开发，无需公网IP):
+---
+
+## 2. 邮箱整理 (email-organizer)
+
+### 功能
+- 使用 himalaya CLI 连接 Gmail
+- 自动归档通知类邮件
+- 按发件人分类统计
+
+### 归档规则
+优先归档以下类型：
+- 社交平台通知（LinkedIn, Twitter, Reddit 等）
+- 技术平台通知（GitHub, Stack Overflow 等）
+- 新闻简报（newsletter, digest 等）
+- 自动邮件（noreply, mailer 等）
+
+### 前置条件
+1. 安装 himalaya CLI：`brew install himalaya`
+2. 配置 Gmail App Password
+3. 创建配置文件 `~/.himalaya-config/himalaya/config.toml`
+
+### 手动运行
 ```bash
-cd /Users/qitmac001395/workspace/QAL/ideas/apps/zhimeng-agent
-poetry run python src/feishu_ws.py
+poetry run python -m tasks.email_organizer.main --dry-run  # 仅分析
+poetry run python -m tasks.email_organizer.main            # 执行归档
 ```
 
-**后台启动**:
+---
+
+## 3. 桌面整理 (desktop-organizer)
+
+### 功能
+- 扫描桌面和下载目录
+- 按文件类型分类移动
+- 清理超过30天的旧文件
+
+### 整理规则
+
+| 文件类型 | 目标目录 |
+|----------|----------|
+| 图片 (.png, .jpg, .gif) | ~/Pictures/Desktop-Archive/ |
+| 文档 (.pdf, .doc, .md) | ~/Documents/Desktop-Archive/ |
+| 压缩包 (.zip, .tar) | ~/Downloads/Archives/ |
+| 代码 (.py, .js, .java) | ~/Documents/Code-Archive/ |
+| 其他 | ~/Documents/Desktop-Other/ |
+
+### 安全特性
+- 不删除任何文件，仅移动
+- 保留最近7天的文件在原位
+- 生成详细的移动日志
+
+### 手动运行
 ```bash
-# 主服务
-nohup poetry run uvicorn src.main:app --host 0.0.0.0 --port 8001 > /tmp/zhimeng-agent.log 2>&1 &
-
-# 飞书长连接
-nohup poetry run python src/feishu_ws.py > feishu_ws.log 2>&1 &
+poetry run python -m tasks.desktop_organizer.main --dry-run  # 仅预览
+poetry run python -m tasks.desktop_organizer.main            # 执行整理
 ```
 
-## 与其他技能的集成
+---
 
-### 集成 feishu-messaging
+## 4. 科技新闻 (tech-news)
 
-日报同步工作流:
-1. 本技能读取 Obsidian 日报
-2. 格式化内容
-3. 调用 `feishu-messaging` 技能发送消息
+### 功能
+- 抓取 Hacker News 热门文章
+- 获取 GitHub 24小时热门仓库
+- 生成每日科技早报
 
-### 集成 obsidian-organize
+### 数据源
+- Hacker News Top Stories（默认15条）
+- GitHub Trending（默认10个仓库）
 
-知识库维护工作流:
-1. 使用 `obsidian-organize` 整理文档结构
-2. 触发本技能的 `/index` 重建索引
-3. 验证检索质量
+### 输出格式
+```markdown
+# 2026-01-07 (周二) 科技早报
 
-## 常见问题
+## Hacker News 热门
+1. [Article Title](url) (320分, 45评论)
 
-### Q: 服务无法启动？
+## GitHub 热门仓库
+- **[owner/repo](url)** ⭐ 1234 `Python` `AI`
+  > Repository description
+```
 
-检查:
-1. Python 环境: `poetry install`
-2. 端口占用: `lsof -i :8001`
-3. 环境变量: `config/.env` 是否存在
+### 手动运行
+```bash
+poetry run python -m tasks.tech_news.main --dry-run           # 仅生成
+poetry run python -m tasks.tech_news.main --hn-count 20       # 自定义数量
+poetry run python -m tasks.tech_news.main                     # 生成并同步
+```
 
-### Q: 检索结果不准确？
+---
 
-尝试:
-1. 重建索引: `POST /index {"force": true}`
-2. 增加 top_k 值
-3. 使用 filter_folder 限定范围
+## 安装与管理
 
-### Q: 飞书长连接断开？
+### 安装定时任务
+```bash
+cd /Users/qitmac001395/workspace/QAL/ideas/apps/zhimeng-agent/tasks/launchd
+./install.sh install
+```
 
-检查:
-1. 网络连接
-2. App 凭证是否过期
-3. 查看日志: `tail -f feishu_ws.log`
+### 查看任务状态
+```bash
+./install.sh status
+```
 
-## 配置文件
+### 立即执行任务
+```bash
+./install.sh run daily-report
+./install.sh run tech-news
+```
 
-### config/.env
+### 卸载定时任务
+```bash
+./install.sh uninstall
+```
 
-```env
-# LLM 配置
-LLM_PROVIDER=anthropic
-LLM_MODEL=claude-sonnet-4-20250514
-ANTHROPIC_API_KEY=sk-ant-xxx
+### 查看运行日志
+```bash
+# 标准输出
+tail -f logs/daily-report.log
+tail -f logs/tech-news.log
 
+# 错误日志
+tail -f logs/daily-report.error.log
+```
+
+---
+
+## 配置
+
+### 环境变量
+
+在 `.env` 文件中配置：
+
+```bash
 # 飞书配置
-FEISHU_APP_ID=cli_xxx
-FEISHU_APP_SECRET=xxx
+FEISHU_APP_ID=your_app_id
+FEISHU_APP_SECRET=your_app_secret
 
-# 服务配置
-HOST=0.0.0.0
-PORT=8001
-DEBUG=true
+# OpenAI（用于摘要生成，可选）
+OPENAI_API_KEY=your_api_key
+
+# Notion（可选）
+NOTION_TOKEN=your_token
 ```
 
-### config/settings.py
+### 核心配置文件
 
-主要配置项:
-- `obsidian_vault_path`: 知识库路径
-- `chroma_persist_dir`: 向量数据库持久化目录
-- `chunk_size`: 文档分块大小 (默认1000)
-- `chunk_overlap`: 分块重叠 (默认200)
+`tasks/config.py` 包含所有可调整参数：
 
-## 监控与日志
+```python
+@dataclass
+class TaskConfig:
+    # 调度时间（小时）
+    DAILY_REPORT_HOUR: int = 0
+    EMAIL_ORGANIZE_HOUR: int = 2
+    DESKTOP_ORGANIZE_HOUR: int = 4
+    TECH_NEWS_HOUR: int = 7
 
-### 日志位置
-- 主服务: 标准输出 或 `/tmp/zhimeng-agent.log`
-- 飞书长连接: `feishu_ws.log`
+    # 路径配置
+    IDEAS_ROOT: Path = Path("/Users/qitmac001395/workspace/QAL/ideas")
+    OBSIDIAN_VAULT: Path = Path("/Users/qitmac001395/Documents/Obsidian Vault")
 
-### 关键日志模式
+    # 飞书接收者
+    FEISHU_RECIPIENT_OPEN_ID: str = "ou_18b8063b232cbdec73ea1541dfb74890"
 ```
-INFO:src.retriever:检索到 X 个相关文档  # 检索成功
-INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages  # LLM 调用
-INFO:src.smart_agent:已更新用户 xxx 的对话历史  # 对话记忆更新
+
+---
+
+## 同步平台
+
+### Obsidian
+- 直接写入 Markdown 文件到 Obsidian Vault
+- 按任务类型分目录：`Journal/`, `News/`, `Reports/`
+
+### 飞书
+- 通过飞书 API 发送消息
+- 支持富文本和 Markdown 格式
+
+### Notion
+- 通过 Notion API 创建页面
+- 支持父页面指定
+
+### Git
+- 自动提交日报到指定仓库
+- Commit message 包含日期和摘要
+
+---
+
+## 故障排查
+
+### 任务未执行
+```bash
+# 检查任务是否加载
+launchctl list | grep zhimeng
+
+# 手动触发测试
+launchctl start com.zhimeng.tech-news
+
+# 查看系统日志
+log show --predicate 'subsystem == "com.apple.launchd"' --last 1h | grep zhimeng
 ```
 
-## 注意事项
+### Python 环境问题
+```bash
+# 确认 Poetry virtualenv 路径正确
+poetry env info --path
 
-1. **API 密钥安全**: `.env` 文件不要提交到 Git
-2. **成本控制**: 每次问答约消耗 Claude API $0.01-0.05
-3. **索引时间**: 完整重建约需 2-5 分钟 (取决于文档数量)
-4. **对话记忆**: 基于 user_id 隔离，无 user_id 时不保留历史
-5. **飞书长连接**: 需要 App 开启"机器人消息长连接"能力
+# 测试模块导入
+poetry run python -c "from tasks.config import config; print(config)"
+```
+
+### 权限问题
+```bash
+# 确保脚本可执行
+chmod +x tasks/launchd/install.sh
+
+# 确保 Python 可执行
+ls -la /Users/qitmac001395/Library/Caches/pypoetry/virtualenvs/zhimeng-agent-ORFMGT-6-py3.12/bin/python
+```
+
+---
+
+## 开发指南
+
+### 添加新任务
+
+1. 创建任务目录：
+```bash
+mkdir -p tasks/new_task
+touch tasks/new_task/__init__.py
+touch tasks/new_task/main.py
+```
+
+2. 实现主逻辑（参考现有任务结构）：
+```python
+# tasks/new_task/main.py
+from tasks.config import config
+from tasks.sync_utils import create_syncer
+
+class NewTaskRunner:
+    def run(self):
+        # 执行任务逻辑
+        content = self.generate_content()
+
+        # 同步到平台
+        syncer = create_syncer()
+        syncer.sync_content(
+            title="report-title",
+            content=content,
+            targets=["obsidian", "feishu"],
+        )
+
+def main():
+    runner = NewTaskRunner()
+    runner.run()
+
+if __name__ == "__main__":
+    main()
+```
+
+3. 创建 launchd plist 文件并安装
+
+### 测试同步
+```python
+from tasks.sync_utils import create_syncer
+
+syncer = create_syncer()
+syncer.sync_content(
+    title="test-sync",
+    content="# Test\nThis is a test.",
+    targets=["obsidian"],
+    obsidian_folder="Test",
+)
+```
+
+---
+
+## 版本历史
+
+- **v1.0.0** (2026-01-07): 初始版本
+  - 4个定时任务：日报、邮箱、桌面、新闻
+  - 多平台同步支持
+  - macOS launchd 调度

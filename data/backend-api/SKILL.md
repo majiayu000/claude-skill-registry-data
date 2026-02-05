@@ -1,24 +1,24 @@
 ---
 name: Backend API
-description: Design and implement RESTful API endpoints with proper HTTP methods, status codes, and consistent naming conventions. Use this skill when creating or modifying API routes, endpoints, or server-side request handlers. When working on files in src/pages/api/, files containing API route definitions, files implementing REST endpoints, files handling HTTP requests and responses, server middleware for API requests, API authentication and authorization logic, and files defining API versioning strategies. When designing URL structures for resources, implementing query parameter handling for filtering/sorting/pagination, setting up rate limiting for API endpoints, or configuring CORS and API security headers.
+description: Design and implement RESTful API endpoints following REST principles with clear resource-based URLs and appropriate HTTP methods. Use this skill when creating or modifying API routes, endpoints, controllers, or API handlers. When working with HTTP request/response handling, API versioning, rate limiting, or status code management. When designing URL structures, query parameters, or nested resource endpoints. When implementing API middleware, authentication endpoints, or any server-side API logic in route files, controller files, or API configuration files.
 ---
 
 # Backend API
 
-This Skill provides Claude Code with specific guidance on how to adhere to coding standards as they relate to how it should handle backend API.
-
 ## When to use this skill
 
-- When creating or editing API route files (e.g., `src/pages/api/*.ts`, `src/pages/api/*.js`)
-- When implementing RESTful endpoints with GET, POST, PUT, PATCH, DELETE methods
-- When designing resource-based URL structures and route hierarchies
-- When handling query parameters for filtering, sorting, pagination, or search functionality
-- When defining API response formats and HTTP status codes
-- When implementing API versioning strategies (URL path or header-based)
-- When setting up rate limiting, throttling, or API quota management
-- When configuring API security headers, CORS policies, or authentication middleware
-- When writing server-side request handlers or middleware functions
-- When working on API documentation or OpenAPI/Swagger specifications
+- When creating or editing API route files (e.g., `routes.rb`, `api.py`, `routes.ts`, `*.route.js`)
+- When working on API controller files or request handlers
+- When designing RESTful endpoints and URL structures
+- When implementing HTTP methods (GET, POST, PUT, PATCH, DELETE)
+- When adding API versioning or managing API versions
+- When configuring rate limiting or API throttling
+- When setting up query parameters for filtering, sorting, or pagination
+- When defining nested resource routes
+- When implementing API middleware or authentication endpoints
+- When managing HTTP status codes and API responses
+
+This Skill provides Claude Code with specific guidance on how to adhere to coding standards as they relate to how it should handle backend API.
 
 ## Instructions
 

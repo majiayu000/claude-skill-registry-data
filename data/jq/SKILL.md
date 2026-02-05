@@ -1,57 +1,88 @@
 ---
 name: jq
-description: Extract specific fields from JSON files efficiently using jq instead of reading entire files, saving 80-95% context.
+description: JSON processor for filtering, transforming, and manipulating JSON data in command line.
 ---
 
-# jq: JSON Data Extraction Tool
+# jq — JSON Processor
 
-Use jq to extract specific fields from JSON files without loading entire file contents into context.
-
-## When to Use jq vs Read
-
-**Use jq when:**
-- Need specific field(s) from structured data file
-- File is large (>50 lines) and only need subset
-- Querying nested structures
-- Filtering/transforming data
-- **Saves 80-95% context** vs reading entire file
-
-**Just use Read when:**
-- File is small (<50 lines)
-- Need to understand overall structure
-- Making edits (need full context anyway)
-
-## Common File Types
-
-JSON files where jq excels:
-- package.json, tsconfig.json
-- Lock files (package-lock.json, yarn.lock in JSON format)
-- API responses
-- Configuration files
-
-## Quick Examples
+**Basic Operations**
 
 ```bash
-# Get version from package.json
-jq -r .version package.json
+# Pretty-print JSON
+jq '.' file.json
 
-# Get nested dependency version
-jq -r '.dependencies.react' package.json
+# Filter specific field
+jq '.fieldName' file.json
 
-# List all dependencies
-jq -r '.dependencies | keys[]' package.json
+# Filter array element by index
+jq '.[index]' file.json
+
+# Output all elements from arrays
+jq '.[*]' file.json
+
+# Parse from stdin
+cat file.json | jq '.fieldName'
+
+# Load JSON from URL
+curl -s "http://example.com/file.json" | jq '.fieldName'
 ```
 
-## Core Principle
+**Filtering & Transformation**
 
-Extract exactly what is needed in one command - massive context savings compared to reading entire files.
+```bash
+# Select multiple fields
+jq '{field1: .field1, field2: .field2}' file.json
 
-## Detailed Reference
+# Query nested data
+jq '.outerField.innerField' file.json
 
-For comprehensive jq patterns, syntax, and examples, load [jq guide](./reference/jq-guide.md):
-- Core patterns (80% of use cases)
-- Real-world workflows
-- Advanced patterns
-- Pipe composition
-- Error handling
-- Integration with other tools
+# Filter by condition
+jq 'select(.fieldName == "value")' file.json
+
+# Modify field value
+jq '.fieldName = "newValue"' file.json
+
+# Delete a field
+jq 'del(.fieldName)' file.json
+```
+
+**Array Operations**
+
+```bash
+# Count elements
+jq '.arrayName | length' file.json
+
+# Apply function to each element
+jq '.arrayName[] | .fieldName' file.json
+
+# First element
+jq '.[0]' file.json
+
+# First element's key
+jq '.[0].key_name' file.json
+```
+
+**Advanced**
+
+```bash
+# Concatenate fields
+jq '.field1 + " " + .field2' file.json
+
+# Group by field
+jq 'group_by(.fieldName)' file.json
+
+# Sort by field
+jq 'sort_by(.fieldName)' file.json
+
+# Find unique values
+jq 'unique' file.json
+
+# Print keys and values
+jq 'to_entries | .[] | "\(.key): \(.value)"' file.json
+
+# Combine two JSON files
+jq -s '.[0] + .[1]' file1.json file2.json
+
+# Compact output (no whitespace)
+jq -c '.' file.json
+```

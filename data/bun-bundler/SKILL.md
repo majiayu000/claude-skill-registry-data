@@ -1,411 +1,323 @@
 ---
-name: jutsu-bun:bun-bundler
-description: Use when bundling JavaScript/TypeScript code with Bun's fast bundler. Covers building for different targets, tree-shaking, code splitting, and optimization strategies.
-allowed-tools:
-  - Read
-  - Write
-  - Edit
-  - Bash
-  - Grep
-  - Glob
+name: Bun Bundler
+description: This skill should be used when the user asks about "bun build", "Bun.build", "bundling with Bun", "code splitting", "tree shaking", "minification", "sourcemaps", "bundle optimization", "esbuild alternative", "building for production", "bundling TypeScript", "bundling for browser", "bundling for Node", or JavaScript/TypeScript bundling with Bun.
+version: 1.0.0
 ---
 
 # Bun Bundler
 
-Use this skill when bundling JavaScript/TypeScript applications with Bun's built-in bundler, which provides exceptional performance and modern features.
+Bun's bundler is a fast JavaScript/TypeScript bundler built on the same engine as Bun's runtime. It's an esbuild-compatible alternative with native performance.
 
-## Key Concepts
+## Quick Start
 
-### Basic Bundling
-
-Bun can bundle your code for different targets:
+### CLI
 
 ```bash
-# Bundle for Bun runtime
+# Basic bundle
 bun build ./src/index.ts --outdir ./dist
 
-# Bundle for browsers
-bun build ./src/index.ts --outdir ./dist --target=browser
-
-# Bundle for Node.js
-bun build ./src/index.ts --outdir ./dist --target=node
-
-# Minify output
+# Production build
 bun build ./src/index.ts --outdir ./dist --minify
+
+# Multiple entry points
+bun build ./src/index.ts ./src/worker.ts --outdir ./dist
 ```
 
-### Programmatic API
-
-Use Bun's build API in TypeScript:
+### JavaScript API
 
 ```typescript
-import { build } from "bun";
-
-await build({
+const result = await Bun.build({
   entrypoints: ["./src/index.ts"],
   outdir: "./dist",
-  target: "bun",
-  minify: true,
-  sourcemap: "external",
 });
-```
 
-### Build Targets
-
-Bun supports multiple build targets:
-
-- `bun` - Optimized for Bun runtime (default)
-- `browser` - Browser-compatible bundle
-- `node` - Node.js-compatible bundle
-
-### Output Formats
-
-Control output format:
-
-```typescript
-await build({
-  entrypoints: ["./src/index.ts"],
-  outdir: "./dist",
-  format: "esm", // or "cjs", "iife"
-});
-```
-
-## Best Practices
-
-### Entry Points Configuration
-
-Define multiple entry points for complex applications:
-
-```typescript
-await build({
-  entrypoints: [
-    "./src/client/index.ts",
-    "./src/server/index.ts",
-    "./src/worker.ts",
-  ],
-  outdir: "./dist",
-  naming: {
-    entry: "[dir]/[name].[ext]",
-    chunk: "[name]-[hash].[ext]",
-    asset: "assets/[name]-[hash].[ext]",
-  },
-});
-```
-
-### Tree Shaking
-
-Bun automatically tree-shakes unused code:
-
-```typescript
-// utils.ts
-export function used() {
-  return "used";
+if (!result.success) {
+  console.error("Build failed:", result.logs);
 }
-
-export function unused() {
-  return "unused";
-}
-
-// index.ts
-import { used } from "./utils";
-
-console.log(used()); // Only 'used' function will be bundled
 ```
 
-### Code Splitting
-
-Split code for better loading performance:
+## Bun.build Options
 
 ```typescript
-await build({
+await Bun.build({
+  // Entry points (required)
   entrypoints: ["./src/index.ts"],
+
+  // Output directory
   outdir: "./dist",
-  splitting: true, // Enable code splitting
-  target: "browser",
-});
-```
 
-### Environment Variables
+  // Target environment
+  target: "browser",  // "browser" | "bun" | "node"
 
-Replace environment variables at build time:
+  // Output format
+  format: "esm",  // "esm" | "cjs" | "iife"
 
-```typescript
-await build({
-  entrypoints: ["./src/index.ts"],
-  outdir: "./dist",
-  define: {
-    "process.env.API_URL": JSON.stringify("https://api.example.com"),
-    "process.env.NODE_ENV": JSON.stringify("production"),
-  },
-});
-```
+  // Minification
+  minify: true,  // or { whitespace: true, identifiers: true, syntax: true }
 
-### External Dependencies
-
-Mark dependencies as external to exclude from bundle:
-
-```typescript
-await build({
-  entrypoints: ["./src/index.ts"],
-  outdir: "./dist",
-  external: ["react", "react-dom"], // Don't bundle React
-  target: "browser",
-});
-```
-
-### Source Maps
-
-Generate source maps for debugging:
-
-```typescript
-await build({
-  entrypoints: ["./src/index.ts"],
-  outdir: "./dist",
-  sourcemap: "external", // or "inline", "none"
-  minify: true,
-});
-```
-
-## Common Patterns
-
-### Building a Library
-
-```typescript
-// build.ts
-import { build } from "bun";
-
-// ESM build
-await build({
-  entrypoints: ["./src/index.ts"],
-  outdir: "./dist/esm",
-  format: "esm",
-  target: "node",
-  minify: true,
-  sourcemap: "external",
-});
-
-// CJS build
-await build({
-  entrypoints: ["./src/index.ts"],
-  outdir: "./dist/cjs",
-  format: "cjs",
-  target: "node",
-  minify: true,
-  sourcemap: "external",
-});
-
-console.log("Build complete!");
-```
-
-### Building a Web Application
-
-```typescript
-// build.ts
-import { build } from "bun";
-
-await build({
-  entrypoints: ["./src/index.tsx"],
-  outdir: "./dist",
-  target: "browser",
-  format: "esm",
-  minify: true,
+  // Code splitting
   splitting: true,
-  sourcemap: "external",
-  publicPath: "/assets/",
+
+  // Source maps
+  sourcemap: "external",  // "none" | "inline" | "external" | "linked"
+
+  // Naming patterns
   naming: {
     entry: "[dir]/[name].[ext]",
     chunk: "[name]-[hash].[ext]",
-    asset: "assets/[name]-[hash].[ext]",
+    asset: "[name]-[hash].[ext]",
   },
+
+  // Define globals
   define: {
     "process.env.NODE_ENV": JSON.stringify("production"),
   },
+
+  // External packages
+  external: ["react", "react-dom"],
+
+  // Loaders
+  loader: {
+    ".svg": "text",
+    ".png": "file",
+  },
+
+  // Plugins
+  plugins: [myPlugin],
+
+  // Root directory
+  root: "./src",
+
+  // Public path for assets
+  publicPath: "/static/",
 });
 ```
 
-### Building Multiple Outputs
+## CLI Flags
 
-```typescript
-// build.ts
-import { build } from "bun";
-
-const builds = [
-  {
-    entrypoints: ["./src/index.ts"],
-    outdir: "./dist/esm",
-    format: "esm" as const,
-    target: "browser" as const,
-  },
-  {
-    entrypoints: ["./src/index.ts"],
-    outdir: "./dist/cjs",
-    format: "cjs" as const,
-    target: "node" as const,
-  },
-  {
-    entrypoints: ["./src/index.ts"],
-    outdir: "./dist/iife",
-    format: "iife" as const,
-    target: "browser" as const,
-  },
-];
-
-for (const config of builds) {
-  await build({
-    ...config,
-    minify: true,
-    sourcemap: "external",
-  });
-}
-
-console.log("All builds complete!");
+```bash
+bun build <entrypoints> [flags]
 ```
 
-### Build Script with Watching
+| Flag | Description |
+|------|-------------|
+| `--outdir` | Output directory |
+| `--outfile` | Output single file |
+| `--target` | `browser`, `bun`, `node` |
+| `--format` | `esm`, `cjs`, `iife` |
+| `--minify` | Enable minification |
+| `--minify-whitespace` | Minify whitespace only |
+| `--minify-identifiers` | Minify identifiers only |
+| `--minify-syntax` | Minify syntax only |
+| `--splitting` | Enable code splitting |
+| `--sourcemap` | `none`, `inline`, `external`, `linked` |
+| `--external` | Mark packages as external |
+| `--define` | Define compile-time constants |
+| `--loader` | Custom loaders for extensions |
+| `--public-path` | Public path for assets |
+| `--root` | Root directory |
+| `--entry-naming` | Entry point naming pattern |
+| `--chunk-naming` | Chunk naming pattern |
+| `--asset-naming` | Asset naming pattern |
+
+## Target Environments
+
+### Browser (default)
 
 ```typescript
-// watch-build.ts
-import { watch } from "fs";
-import { build } from "bun";
-
-async function buildApp() {
-  console.log("Building...");
-  await build({
-    entrypoints: ["./src/index.ts"],
-    outdir: "./dist",
-    target: "bun",
-  });
-  console.log("Build complete!");
-}
-
-// Initial build
-await buildApp();
-
-// Watch for changes
-watch("./src", { recursive: true }, async (event, filename) => {
-  console.log(`File changed: ${filename}`);
-  await buildApp();
+await Bun.build({
+  entrypoints: ["./src/index.ts"],
+  target: "browser",
+  outdir: "./dist",
 });
 ```
 
-### Plugin System
-
-Create custom build plugins:
+### Bun Runtime
 
 ```typescript
-import type { BunPlugin } from "bun";
+await Bun.build({
+  entrypoints: ["./src/server.ts"],
+  target: "bun",
+  outdir: "./dist",
+});
+```
 
-const myPlugin: BunPlugin = {
+### Node.js
+
+```typescript
+await Bun.build({
+  entrypoints: ["./src/server.ts"],
+  target: "node",
+  outdir: "./dist",
+});
+```
+
+## Code Splitting
+
+```typescript
+await Bun.build({
+  entrypoints: ["./src/index.ts", "./src/admin.ts"],
+  splitting: true,
+  outdir: "./dist",
+});
+```
+
+Shared dependencies are extracted into separate chunks automatically.
+
+## Loaders
+
+| Loader | Extensions | Output |
+|--------|------------|--------|
+| `js` | `.js`, `.mjs`, `.cjs` | JavaScript |
+| `jsx` | `.jsx` | JavaScript |
+| `ts` | `.ts`, `.mts`, `.cts` | JavaScript |
+| `tsx` | `.tsx` | JavaScript |
+| `json` | `.json` | JavaScript |
+| `toml` | `.toml` | JavaScript |
+| `text` | - | String export |
+| `file` | - | File path export |
+| `base64` | - | Base64 string |
+| `dataurl` | - | Data URL |
+| `css` | `.css` | CSS file |
+
+Custom loaders:
+
+```typescript
+await Bun.build({
+  entrypoints: ["./src/index.ts"],
+  loader: {
+    ".svg": "text",
+    ".png": "file",
+    ".woff2": "file",
+  },
+});
+```
+
+## Plugins
+
+```typescript
+const myPlugin = {
   name: "my-plugin",
   setup(build) {
-    build.onLoad({ filter: /\.custom$/ }, async (args) => {
-      const text = await Bun.file(args.path).text();
+    // Resolve hook
+    build.onResolve({ filter: /\.special$/ }, (args) => {
+      return { path: args.path, namespace: "special" };
+    });
+
+    // Load hook
+    build.onLoad({ filter: /.*/, namespace: "special" }, (args) => {
       return {
-        contents: `export default ${JSON.stringify(text)}`,
+        contents: `export default "special"`,
         loader: "js",
       };
     });
   },
 };
 
-await build({
+await Bun.build({
   entrypoints: ["./src/index.ts"],
-  outdir: "./dist",
   plugins: [myPlugin],
 });
 ```
 
-## Anti-Patterns
-
-### Don't Bundle Node Modules for Node Target
+## Build Output
 
 ```typescript
-// Bad - Bundling all dependencies for Node
-await build({
-  entrypoints: ["./src/server.ts"],
-  target: "node",
-  // Missing external configuration
-});
-
-// Good - Mark dependencies as external
-await build({
-  entrypoints: ["./src/server.ts"],
-  target: "node",
-  external: ["express", "mongoose", "*"], // "*" excludes all node_modules
-});
-```
-
-### Don't Ignore Build Errors
-
-```typescript
-// Bad - No error handling
-await build({
+const result = await Bun.build({
   entrypoints: ["./src/index.ts"],
   outdir: "./dist",
 });
 
-// Good - Handle build errors
-try {
-  const result = await build({
-    entrypoints: ["./src/index.ts"],
-    outdir: "./dist",
-  });
-
-  if (!result.success) {
-    console.error("Build failed");
-    process.exit(1);
+// Check success
+if (!result.success) {
+  for (const log of result.logs) {
+    console.error(log);
   }
-
-  console.log("Build succeeded");
-} catch (error) {
-  console.error("Build error:", error);
   process.exit(1);
+}
+
+// Access outputs
+for (const output of result.outputs) {
+  console.log(output.path);   // File path
+  console.log(output.kind);   // "entry-point" | "chunk" | "asset"
+  console.log(output.hash);   // Content hash
+  console.log(output.loader); // Loader used
+
+  // Read content
+  const text = await output.text();
 }
 ```
 
-### Don't Minify Development Builds
+## Common Patterns
+
+### Production Build
 
 ```typescript
-// Bad - Always minifying
-await build({
+await Bun.build({
   entrypoints: ["./src/index.ts"],
   outdir: "./dist",
-  minify: true, // Hard to debug in development
-});
-
-// Good - Conditional minification
-const isDev = Bun.env.NODE_ENV === "development";
-
-await build({
-  entrypoints: ["./src/index.ts"],
-  outdir: "./dist",
-  minify: !isDev,
-  sourcemap: isDev ? "inline" : "external",
+  target: "browser",
+  minify: true,
+  sourcemap: "external",
+  splitting: true,
+  define: {
+    "process.env.NODE_ENV": JSON.stringify("production"),
+  },
 });
 ```
 
-### Don't Over-Split Code
+### Library Build
 
 ```typescript
-// Bad - Excessive code splitting
-await build({
+await Bun.build({
   entrypoints: ["./src/index.ts"],
   outdir: "./dist",
-  splitting: true,
-  target: "bun", // Code splitting not needed for Bun target
-});
-
-// Good - Split only when beneficial
-await build({
-  entrypoints: ["./src/index.ts"],
-  outdir: "./dist",
-  splitting: true,
-  target: "browser", // Beneficial for browsers
+  target: "bun",
+  format: "esm",
+  external: ["*"],  // Externalize all dependencies
+  sourcemap: "external",
 });
 ```
 
-## Related Skills
+### Build Script
 
-- **bun-runtime**: Understanding Bun's runtime for target optimization
-- **bun-package-manager**: Managing build dependencies
-- **bun-testing**: Testing bundled code
+```typescript
+// build.ts
+const result = await Bun.build({
+  entrypoints: ["./src/index.ts"],
+  outdir: "./dist",
+  minify: process.env.NODE_ENV === "production",
+});
+
+if (!result.success) {
+  console.error("Build failed");
+  process.exit(1);
+}
+
+console.log(`Built ${result.outputs.length} files`);
+```
+
+Run: `bun run build.ts`
+
+## Common Errors
+
+| Error | Cause | Fix |
+|-------|-------|-----|
+| `Could not resolve` | Missing import | Install package or fix path |
+| `No matching export` | Named export missing | Check export name |
+| `Unexpected token` | Syntax error | Fix source code |
+| `Target not supported` | Invalid target | Use `browser`, `bun`, or `node` |
+
+## When to Load References
+
+Load `references/options.md` when:
+- Need complete option reference
+- Configuring advanced features
+
+Load `references/plugins.md` when:
+- Writing custom plugins
+- Understanding plugin API
+
+Load `references/macros.md` when:
+- Using compile-time macros
+- Build-time code generation

@@ -1,18 +1,18 @@
 ---
-name: "incremental-load-setup"
+name: incremental-load-setup
 description: |
-  Configure incremental load setup operations. Auto-activating skill for Data Pipelines.
+  Incremental Load Setup - Auto-activating skill for Data Pipelines.
   Triggers on: incremental load setup, incremental load setup
-  Part of the Data Pipelines skill category. Use when working with incremental load setup functionality. Trigger with phrases like "incremental load setup", "incremental setup", "incremental".
-allowed-tools: "Read, Write, Edit, Bash(cmd:*), Grep"
+  Part of the Data Pipelines skill category.
+allowed-tools: Read, Write, Edit, Bash, Grep
 version: 1.0.0
 license: MIT
-author: "Jeremy Longshore <jeremy@intentsolutions.io>"
+author: Jeremy Longshore <jeremy@intentsolutions.io>
 ---
 
 # Incremental Load Setup
 
-## Overview
+## Purpose
 
 This skill provides automated assistance for incremental load setup tasks within the Data Pipelines domain.
 
@@ -23,48 +23,18 @@ This skill activates automatically when you:
 - Ask about incremental load setup patterns or best practices
 - Need help with data pipeline skills covering etl, data transformation, workflow orchestration, and streaming data processing.
 
-## Instructions
+## Capabilities
 
-1. Provides step-by-step guidance for incremental load setup
-2. Follows industry best practices and patterns
-3. Generates production-ready code and configurations
-4. Validates outputs against common standards
+- Provides step-by-step guidance for incremental load setup
+- Follows industry best practices and patterns
+- Generates production-ready code and configurations
+- Validates outputs against common standards
 
-## Examples
+## Example Triggers
 
-**Example: Basic Usage**
-Request: "Help me with incremental load setup"
-Result: Provides step-by-step guidance and generates appropriate configurations
-
-
-## Prerequisites
-
-- Relevant development environment configured
-- Access to necessary tools and services
-- Basic understanding of data pipelines concepts
-
-
-## Output
-
-- Generated configurations and code
-- Best practice recommendations
-- Validation results
-
-
-## Error Handling
-
-| Error | Cause | Solution |
-|-------|-------|----------|
-| Configuration invalid | Missing required fields | Check documentation for required parameters |
-| Tool not found | Dependency not installed | Install required tools per prerequisites |
-| Permission denied | Insufficient access | Verify credentials and permissions |
-
-
-## Resources
-
-- Official documentation for related tools
-- Best practices guides
-- Community examples and tutorials
+- "Help me with incremental load setup"
+- "Set up incremental load setup"
+- "How do I implement incremental load setup?"
 
 ## Related Skills
 

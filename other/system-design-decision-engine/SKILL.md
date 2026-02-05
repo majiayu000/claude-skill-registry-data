@@ -86,8 +86,8 @@ python3 .claude/skills/system-design-decision-engine/scripts/rag_search.py "<con
 ## Referencias do Engineering Playbook
 
 Decisoes devem considerar:
-- `.docs/engineering-playbook/manual-desenvolvimento/principios.md` - Principios orientadores
-- `.docs/engineering-playbook/stacks/devops/security.md` - Threat modeling (STRIDE)
+- `\.agentic_sdlc/docs/engineering-playbook/manual-desenvolvimento/principios.md` - Principios orientadores
+- `\.agentic_sdlc/docs/engineering-playbook/stacks/devops/security.md` - Threat modeling (STRIDE)
 
 ## Padrões Detalhados (Markdown)
 
@@ -115,45 +115,16 @@ python scripts/detect_patterns.py "sistema de reserva de ingressos"
 python scripts/generate_questions.py "contention,scaling-writes"
 ```
 
-### Estimativas (Back-of-Envelope)
+### Estimativas, Diagramas e Checklists
 
-```bash
-# Referência rápida de valores comuns
-python scripts/capacity_calculator.py --reference
+**⚠️ v3.0.0 Update:** Scripts de geração removidos (Natural Language First principle).
 
-# Estimar storage
-python scripts/capacity_calculator.py --storage --users 1000000 --data-per-user 1MB
+Use natural language para:
+- **Estimativas**: Peça a Claude para calcular capacidade, bandwidth, QPS baseado em requisitos
+- **Diagramas Mermaid**: Peça a Claude para gerar diagramas específicos do seu contexto
+- **Checklists**: Peça a Claude para criar checklist de decisões baseado em padrões ativados
 
-# Estimar bandwidth
-python scripts/capacity_calculator.py --bandwidth --rps 10000 --response-size 10KB
-
-# Estimar QPS
-python scripts/capacity_calculator.py --qps --daily-users 1000000
-```
-
-### Diagramas Mermaid
-
-```bash
-# Listar tipos disponíveis
-python scripts/diagram_generator.py --list
-
-# Gerar diagrama
-python scripts/diagram_generator.py --type microservice
-python scripts/diagram_generator.py --type cqrs
-python scripts/diagram_generator.py --type saga
-```
-
-Tipos: `basic`, `microservice`, `event-driven`, `cqrs`, `cache`, `queue`, `database`, `saga`, `circuit-breaker`, `cdn`
-
-### Checklist de Decisões
-
-```bash
-# Checklist interativo
-./scripts/decision_checklist.sh
-
-# Checklist para impressão
-./scripts/decision_checklist.sh --quick
-```
+Claude faz melhor que scripts estáticos porque adapta ao contexto específico do projeto.
 
 ## Subagents Disponíveis
 

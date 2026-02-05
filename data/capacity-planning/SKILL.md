@@ -1,557 +1,1208 @@
 ---
 name: capacity-planning
-description: "Plan organizational capacity for construction projects. Forecast resource needs, identify capacity gaps, and support strategic planning for project pursuit and staffing."
+description: When the user wants to plan production or distribution capacity, analyze capacity requirements, optimize resource utilization, or balance capacity with demand. Also use when the user mentions "capacity analysis," "resource planning," "bottleneck analysis," "capacity expansion," "load balancing," "throughput planning," "utilization optimization," or "capacity modeling." For production scheduling, see master-production-scheduling. For long-term network capacity, see network-design.
 ---
 
 # Capacity Planning
 
-## Overview
+You are an expert in capacity planning and resource optimization. Your goal is to help organizations match capacity with demand, optimize resource utilization, identify bottlenecks, and make cost-effective capacity investment decisions.
 
-Strategic capacity planning for construction organizations. Forecast resource requirements based on project pipeline, identify capacity constraints, optimize staffing levels, and support go/no-go decisions on new project pursuits.
+## Initial Assessment
+
+Before developing capacity plans, understand:
+
+1. **Planning Context**
+   - What type of capacity? (production, warehouse, transportation, labor)
+   - Planning horizon? (short-term loading, tactical planning, strategic investment)
+   - Current capacity utilization rates?
+   - Known capacity constraints or bottlenecks?
+
+2. **Demand Profile**
+   - Demand forecast and variability?
+   - Seasonality patterns?
+   - Growth expectations?
+   - Product mix changes expected?
+
+3. **Current State**
+   - Existing capacity levels?
+   - Equipment, facilities, headcount?
+   - Operating schedules (shifts, days/week)?
+   - Current performance (OEE, yield, throughput)?
+
+4. **Constraints & Requirements**
+   - Service level targets?
+   - Budget constraints for expansion?
+   - Lead times for capacity additions?
+   - Union agreements or labor rules?
+   - Regulatory requirements?
+
+---
 
 ## Capacity Planning Framework
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                  CAPACITY PLANNING                               │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                  │
-│  DEMAND FORECAST           CAPACITY ANALYSIS        DECISIONS   │
-│  ───────────────           ─────────────────        ─────────   │
-│                                                                  │
-│  Current Projects    →     Available:               Pursue new  │
-│  • Project A (Active)      👷 PM: 5                 project?    │
-│  • Project B (Active)      👷 Supers: 12            ────────    │
-│  • Project C (Starting)    📐 Engineers: 8         ✅ Capacity  │
-│                                                    ⚠️ Stretch   │
-│  Pipeline:            →    Required:               ❌ Decline   │
-│  • Bid D (60% win)         👷 PM: 7                             │
-│  • Bid E (40% win)         👷 Supers: 15                        │
-│  • Opportunity F           📐 Engineers: 10                     │
-│                                                                  │
-│  GAP ANALYSIS:             ACTIONS:                             │
-│  • PM: -2 (deficit)        • Hire 2 PMs                         │
-│  • Supers: -3 (deficit)    • Promote from within                │
-│  • Engineers: -2 (deficit) • Partner with firm                  │
-│                                                                  │
-└─────────────────────────────────────────────────────────────────┘
-```
+### Types of Capacity Planning
 
-## Technical Implementation
+**1. Long-Term Strategic Capacity Planning**
+- **Horizon**: 2-5+ years
+- **Focus**: Major investments, facility additions
+- **Decisions**: Build new plant? Add warehouse? Outsource?
+- **Approach**: Scenario analysis, economic modeling
+
+**2. Medium-Term Tactical Capacity Planning**
+- **Horizon**: 3-18 months
+- **Focus**: Adjust workforce, add equipment, modify schedules
+- **Decisions**: Hire staff? Add shift? Lease equipment?
+- **Approach**: Aggregate planning, linear programming
+
+**3. Short-Term Operational Capacity Planning**
+- **Horizon**: Days to weeks
+- **Focus**: Load balancing, scheduling, overtime
+- **Decisions**: How to allocate work? Overtime? Outsource batch?
+- **Approach**: Scheduling algorithms, queuing theory
+
+### Capacity Strategies
+
+**Leading Strategy**
+- Add capacity in anticipation of demand
+- Ensures availability, avoids stockouts
+- Higher costs, risk of underutilization
+- Best for: Growing markets, high service requirements
+
+**Lagging Strategy**
+- Add capacity only after demand materializes
+- Lower costs, minimizes waste
+- Risk of lost sales, poor service
+- Best for: Uncertain demand, cost-sensitive markets
+
+**Matching Strategy**
+- Closely match capacity to demand
+- Balance of cost and service
+- Requires flexible capacity options
+- Best for: Moderate growth, predictable demand
+
+**Cushion Strategy**
+- Maintain buffer capacity above expected demand
+- Handles variability and surges
+- Higher fixed costs but operational flexibility
+- Best for: High variability, premium service
+
+---
+
+## Capacity Analysis Methods
+
+### Capacity Measurement
+
+**Production Capacity Metrics:**
+
+**1. Design Capacity**
+- Maximum possible output under ideal conditions
+- Theoretical maximum
+
+**2. Effective Capacity**
+- Capacity under normal working conditions
+- Accounts for breaks, maintenance, changeovers
+
+**3. Actual Output**
+- What's currently achieved
+- Reality of operations
+
+**Key Formulas:**
 
 ```python
-from dataclasses import dataclass, field
-from typing import List, Dict, Optional, Tuple
-from datetime import datetime, timedelta
-from enum import Enum
-import statistics
+def calculate_capacity_metrics(design_capacity, effective_capacity, actual_output):
+    """
+    Calculate capacity utilization and efficiency
 
-class ResourceRole(Enum):
-    PROJECT_MANAGER = "project_manager"
-    SUPERINTENDENT = "superintendent"
-    PROJECT_ENGINEER = "project_engineer"
-    ESTIMATOR = "estimator"
-    SCHEDULER = "scheduler"
-    SAFETY_MANAGER = "safety_manager"
-    QC_MANAGER = "qc_manager"
-    ADMIN = "admin"
+    Returns:
+    - utilization: actual / design capacity
+    - efficiency: actual / effective capacity
+    """
 
-class ProjectPhase(Enum):
-    PURSUIT = "pursuit"
-    PRECONSTRUCTION = "preconstruction"
-    CONSTRUCTION = "construction"
-    CLOSEOUT = "closeout"
+    utilization = (actual_output / design_capacity) * 100
+    efficiency = (actual_output / effective_capacity) * 100
 
-class OpportunityStatus(Enum):
-    IDENTIFIED = "identified"
-    PURSUING = "pursuing"
-    BID_SUBMITTED = "bid_submitted"
-    NEGOTIATING = "negotiating"
-    WON = "won"
-    LOST = "lost"
-
-@dataclass
-class StaffMember:
-    id: str
-    name: str
-    role: ResourceRole
-    capacity: float = 1.0  # FTE
-    current_assignment: str = ""
-    availability_date: datetime = None
-    skills: List[str] = field(default_factory=list)
-    max_project_value: float = 0  # Max project size they can handle
-
-@dataclass
-class ProjectDemand:
-    project_id: str
-    project_name: str
-    value: float
-    phase: ProjectPhase
-    start_date: datetime
-    end_date: datetime
-    probability: float = 1.0  # 1.0 for active, <1 for pipeline
-    resource_needs: Dict[ResourceRole, float] = field(default_factory=dict)
-
-@dataclass
-class CapacityGap:
-    role: ResourceRole
-    period_start: datetime
-    period_end: datetime
-    demand: float
-    capacity: float
-    gap: float
-    severity: str
-
-@dataclass
-class CapacityForecast:
-    forecast_date: datetime
-    horizon_months: int
-    total_demand_fte: float
-    total_capacity_fte: float
-    utilization_pct: float
-    gaps: List[CapacityGap]
-    recommendations: List[str]
-
-class CapacityPlanner:
-    """Plan organizational capacity for construction projects."""
-
-    # Typical staffing ratios by project value
-    STAFFING_RATIOS = {
-        ResourceRole.PROJECT_MANAGER: 20000000,      # 1 PM per $20M
-        ResourceRole.SUPERINTENDENT: 10000000,       # 1 Super per $10M
-        ResourceRole.PROJECT_ENGINEER: 15000000,     # 1 PE per $15M
-        ResourceRole.ESTIMATOR: 50000000,            # 1 Estimator per $50M (pursuit)
-        ResourceRole.SCHEDULER: 30000000,            # 1 Scheduler per $30M
-        ResourceRole.SAFETY_MANAGER: 25000000,       # 1 Safety per $25M
+    return {
+        'utilization': utilization,
+        'efficiency': efficiency,
+        'design_capacity': design_capacity,
+        'effective_capacity': effective_capacity,
+        'actual_output': actual_output
     }
 
-    # Phase factors (multiply by role ratio)
-    PHASE_FACTORS = {
-        ProjectPhase.PURSUIT: {"estimator": 1.5, "pm": 0.3},
-        ProjectPhase.PRECONSTRUCTION: {"pm": 0.7, "pe": 0.5, "scheduler": 0.5},
-        ProjectPhase.CONSTRUCTION: {"pm": 1.0, "super": 1.0, "pe": 1.0, "safety": 1.0},
-        ProjectPhase.CLOSEOUT: {"pm": 0.5, "pe": 0.3, "admin": 1.0}
+# Example
+design = 10000  # units per month
+effective = 8500  # accounting for maintenance, breaks
+actual = 7500  # what's produced
+
+metrics = calculate_capacity_metrics(design, effective, actual)
+print(f"Utilization: {metrics['utilization']:.1f}%")  # 75%
+print(f"Efficiency: {metrics['efficiency']:.1f}%")    # 88.2%
+```
+
+**Overall Equipment Effectiveness (OEE):**
+
+```python
+def calculate_oee(availability, performance, quality):
+    """
+    Calculate OEE (Overall Equipment Effectiveness)
+
+    Parameters:
+    - availability: uptime / planned production time
+    - performance: actual output / theoretical output at 100% speed
+    - quality: good units / total units produced
+
+    World-class OEE: > 85%
+    """
+
+    oee = availability * performance * quality * 100
+
+    return {
+        'oee': oee,
+        'availability': availability * 100,
+        'performance': performance * 100,
+        'quality': quality * 100
     }
 
-    def __init__(self, organization_name: str):
-        self.organization_name = organization_name
-        self.staff: Dict[str, StaffMember] = {}
-        self.projects: Dict[str, ProjectDemand] = {}
-        self.pipeline: Dict[str, ProjectDemand] = {}
+# Example
+availability = 0.90  # 90% uptime
+performance = 0.85   # 85% of theoretical speed
+quality = 0.95       # 95% good units
 
-    def add_staff(self, id: str, name: str, role: ResourceRole,
-                 capacity: float = 1.0, current_assignment: str = "",
-                 availability_date: datetime = None,
-                 max_project_value: float = 0) -> StaffMember:
-        """Add staff member to capacity pool."""
-        member = StaffMember(
-            id=id,
-            name=name,
-            role=role,
-            capacity=capacity,
-            current_assignment=current_assignment,
-            availability_date=availability_date or datetime.now(),
-            max_project_value=max_project_value
-        )
-        self.staff[id] = member
-        return member
+oee_metrics = calculate_oee(availability, performance, quality)
+print(f"OEE: {oee_metrics['oee']:.1f}%")  # 72.7%
+```
 
-    def add_active_project(self, id: str, name: str, value: float,
-                          phase: ProjectPhase, start_date: datetime,
-                          end_date: datetime) -> ProjectDemand:
-        """Add active project to demand forecast."""
-        # Calculate resource needs based on value and phase
-        needs = self._calculate_resource_needs(value, phase)
+### Bottleneck Analysis
 
-        project = ProjectDemand(
-            project_id=id,
-            project_name=name,
-            value=value,
-            phase=phase,
-            start_date=start_date,
-            end_date=end_date,
-            probability=1.0,
-            resource_needs=needs
-        )
-        self.projects[id] = project
-        return project
+**Theory of Constraints (TOC):**
 
-    def add_pipeline_opportunity(self, id: str, name: str, value: float,
-                                 win_probability: float,
-                                 expected_start: datetime,
-                                 duration_months: int) -> ProjectDemand:
-        """Add pipeline opportunity to demand forecast."""
-        needs = self._calculate_resource_needs(value, ProjectPhase.CONSTRUCTION)
+```python
+import pandas as pd
+import numpy as np
 
-        opportunity = ProjectDemand(
-            project_id=id,
-            project_name=name,
-            value=value,
-            phase=ProjectPhase.PURSUIT,
-            start_date=expected_start,
-            end_date=expected_start + timedelta(days=duration_months * 30),
-            probability=win_probability,
-            resource_needs=needs
-        )
-        self.pipeline[id] = opportunity
-        return opportunity
+def identify_bottleneck(process_steps):
+    """
+    Identify bottleneck in production process
 
-    def _calculate_resource_needs(self, value: float,
-                                  phase: ProjectPhase) -> Dict[ResourceRole, float]:
-        """Calculate resource needs based on project value and phase."""
-        needs = {}
+    Parameters:
+    - process_steps: list of dicts with 'name', 'capacity_per_hour', 'hours_available'
 
-        for role, ratio in self.STAFFING_RATIOS.items():
-            base_need = value / ratio
+    Returns bottleneck step and throughput
+    """
 
-            # Apply phase factor
-            phase_key = role.value.split('_')[0][:3]
-            factor = 1.0
-            if phase in self.PHASE_FACTORS:
-                factor = self.PHASE_FACTORS[phase].get(phase_key, 1.0)
+    df = pd.DataFrame(process_steps)
 
-            needs[role] = base_need * factor
+    # Calculate total capacity per period
+    df['total_capacity'] = df['capacity_per_hour'] * df['hours_available']
 
-        return needs
+    # Identify bottleneck (minimum capacity)
+    bottleneck_idx = df['total_capacity'].idxmin()
+    bottleneck = df.loc[bottleneck_idx]
 
-    def get_current_capacity(self) -> Dict[ResourceRole, float]:
-        """Get current capacity by role."""
-        capacity = {role: 0.0 for role in ResourceRole}
+    # System throughput limited by bottleneck
+    system_throughput = bottleneck['total_capacity']
 
-        for member in self.staff.values():
-            if member.availability_date <= datetime.now():
-                capacity[member.role] += member.capacity
+    # Calculate utilization based on bottleneck
+    df['utilization'] = (system_throughput / df['total_capacity']) * 100
 
-        return capacity
+    return {
+        'bottleneck_step': bottleneck['name'],
+        'system_throughput': system_throughput,
+        'bottleneck_capacity': bottleneck['total_capacity'],
+        'process_analysis': df
+    }
 
-    def get_capacity_at_date(self, target_date: datetime) -> Dict[ResourceRole, float]:
-        """Get projected capacity at future date."""
-        capacity = {role: 0.0 for role in ResourceRole}
+# Example: Manufacturing process
+process = [
+    {'name': 'Cutting', 'capacity_per_hour': 100, 'hours_available': 160},
+    {'name': 'Assembly', 'capacity_per_hour': 80, 'hours_available': 160},
+    {'name': 'Testing', 'capacity_per_hour': 120, 'hours_available': 160},
+    {'name': 'Packaging', 'capacity_per_hour': 90, 'hours_available': 160}
+]
 
-        for member in self.staff.values():
-            if member.availability_date <= target_date:
-                capacity[member.role] += member.capacity
+bottleneck_analysis = identify_bottleneck(process)
+print(f"Bottleneck: {bottleneck_analysis['bottleneck_step']}")
+print(f"System Throughput: {bottleneck_analysis['system_throughput']:,.0f} units/month")
+print("\nProcess Analysis:")
+print(bottleneck_analysis['process_analysis'])
+```
 
-        return capacity
+**Drum-Buffer-Rope (DBR) Scheduling:**
 
-    def calculate_demand(self, target_date: datetime,
-                        include_pipeline: bool = True,
-                        pipeline_threshold: float = 0.0) -> Dict[ResourceRole, float]:
-        """Calculate resource demand at date."""
-        demand = {role: 0.0 for role in ResourceRole}
+```python
+class DrumBufferRope:
+    """
+    Theory of Constraints scheduling method
 
-        # Active projects
-        for project in self.projects.values():
-            if project.start_date <= target_date <= project.end_date:
-                for role, need in project.resource_needs.items():
-                    demand[role] += need * project.probability
+    - Drum: Bottleneck sets the pace
+    - Buffer: Protect bottleneck from disruptions
+    - Rope: Pull mechanism to control material release
+    """
 
-        # Pipeline (weighted by probability)
-        if include_pipeline:
-            for opp in self.pipeline.values():
-                if opp.probability >= pipeline_threshold:
-                    if opp.start_date <= target_date <= opp.end_date:
-                        for role, need in opp.resource_needs.items():
-                            demand[role] += need * opp.probability
+    def __init__(self, bottleneck_capacity, buffer_time_days=3):
+        self.bottleneck_capacity = bottleneck_capacity
+        self.buffer_time = buffer_time_days
 
-        return demand
+    def calculate_schedule(self, demand, lead_times):
+        """
+        Create production schedule based on DBR
 
-    def identify_gaps(self, horizon_months: int = 12) -> List[CapacityGap]:
-        """Identify capacity gaps over forecast horizon."""
-        gaps = []
+        Parameters:
+        - demand: array of daily demand
+        - lead_times: dict of process step lead times
+        """
 
-        for month in range(horizon_months):
-            period_start = datetime.now() + timedelta(days=month * 30)
-            period_end = period_start + timedelta(days=30)
+        schedule = []
 
-            capacity = self.get_capacity_at_date(period_start)
-            demand = self.calculate_demand(period_start, include_pipeline=True)
+        for day, daily_demand in enumerate(demand):
+            # Bottleneck sets the pace (DRUM)
+            bottleneck_output = min(daily_demand, self.bottleneck_capacity)
 
-            for role in ResourceRole:
-                cap = capacity.get(role, 0)
-                dem = demand.get(role, 0)
-                gap = cap - dem
+            # Buffer: Start production earlier to protect bottleneck
+            buffer_start_day = max(0, day - self.buffer_time)
 
-                if gap < 0:
-                    severity = "critical" if gap < -1 else "warning"
-                    gaps.append(CapacityGap(
-                        role=role,
-                        period_start=period_start,
-                        period_end=period_end,
-                        demand=dem,
-                        capacity=cap,
-                        gap=gap,
-                        severity=severity
-                    ))
+            # Rope: Material release tied to bottleneck schedule
+            material_release = bottleneck_output
 
-        return gaps
+            schedule.append({
+                'day': day,
+                'demand': daily_demand,
+                'bottleneck_output': bottleneck_output,
+                'buffer_start': buffer_start_day,
+                'material_release': material_release
+            })
 
-    def can_pursue_project(self, value: float, start_date: datetime,
-                          duration_months: int) -> Dict:
-        """Evaluate if organization can pursue new project."""
-        # Calculate needs for potential project
-        needs = self._calculate_resource_needs(value, ProjectPhase.CONSTRUCTION)
-        end_date = start_date + timedelta(days=duration_months * 30)
+        return pd.DataFrame(schedule)
 
-        # Check capacity over project duration
-        can_staff = True
-        bottlenecks = []
+# Example usage
+dbr = DrumBufferRope(bottleneck_capacity=800, buffer_time_days=3)
 
-        current_date = start_date
-        while current_date <= end_date:
-            capacity = self.get_capacity_at_date(current_date)
-            demand = self.calculate_demand(current_date)
+# Daily demand for next 10 days
+demand = np.array([750, 850, 800, 900, 700, 800, 950, 800, 850, 800])
+lead_times = {'cutting': 1, 'assembly': 2, 'testing': 1}
 
-            for role, need in needs.items():
-                available = capacity.get(role, 0) - demand.get(role, 0)
-                if need > available:
-                    can_staff = False
-                    bottlenecks.append({
-                        "date": current_date,
-                        "role": role.value,
-                        "needed": need,
-                        "available": available,
-                        "gap": need - available
-                    })
+schedule = dbr.calculate_schedule(demand, lead_times)
+print(schedule)
+```
 
-            current_date += timedelta(days=30)
+---
 
-        # Determine recommendation
-        if can_staff:
-            recommendation = "GO - Sufficient capacity"
-        elif len(bottlenecks) <= 2:
-            recommendation = "CONDITIONAL - Minor gaps, consider hiring"
+## Capacity Planning Models
+
+### Aggregate Planning (Linear Programming)
+
+**Objective:** Minimize total costs while meeting demand
+
+**Decision Variables:**
+- Production quantity per period
+- Workforce levels
+- Overtime hours
+- Inventory levels
+- Subcontracting quantities
+
+**Costs:**
+- Regular time production
+- Overtime production
+- Hiring and firing
+- Inventory holding
+- Stockout/backorder
+- Subcontracting
+
+```python
+from pulp import *
+import pandas as pd
+import numpy as np
+
+def aggregate_planning(demand, costs, constraints, periods=12):
+    """
+    Aggregate production planning optimization
+
+    Parameters:
+    - demand: array of demand by period
+    - costs: dict with cost parameters
+    - constraints: dict with capacity constraints
+    - periods: planning horizon
+
+    Returns optimal plan
+    """
+
+    # Create problem
+    prob = LpProblem("Aggregate_Planning", LpMinimize)
+
+    # Decision variables
+    P = LpVariable.dicts("Production", range(periods), lowBound=0)
+    W = LpVariable.dicts("Workforce", range(periods), lowBound=0, cat='Integer')
+    O = LpVariable.dicts("Overtime", range(periods), lowBound=0)
+    I = LpVariable.dicts("Inventory", range(periods), lowBound=0)
+    H = LpVariable.dicts("Hire", range(periods), lowBound=0, cat='Integer')
+    F = LpVariable.dicts("Fire", range(periods), lowBound=0, cat='Integer')
+    B = LpVariable.dicts("Backorder", range(periods), lowBound=0)
+    S = LpVariable.dicts("Subcontract", range(periods), lowBound=0)
+
+    # Objective function
+    prob += lpSum([
+        # Regular production cost
+        costs['regular_cost'] * P[t] +
+        # Workforce cost
+        costs['labor_cost'] * W[t] +
+        # Overtime cost
+        costs['overtime_cost'] * O[t] +
+        # Inventory holding cost
+        costs['holding_cost'] * I[t] +
+        # Hiring cost
+        costs['hiring_cost'] * H[t] +
+        # Firing cost
+        costs['firing_cost'] * F[t] +
+        # Backorder cost
+        costs['backorder_cost'] * B[t] +
+        # Subcontracting cost
+        costs['subcontract_cost'] * S[t]
+        for t in range(periods)
+    ])
+
+    # Constraints
+
+    # Initial conditions
+    initial_workforce = constraints['initial_workforce']
+    initial_inventory = constraints['initial_inventory']
+
+    for t in range(periods):
+        # Production capacity constraint
+        prob += P[t] <= W[t] * constraints['units_per_worker'], f"Capacity_{t}"
+
+        # Overtime capacity
+        prob += O[t] <= W[t] * constraints['overtime_per_worker'], f"Overtime_{t}"
+
+        # Subcontracting capacity
+        prob += S[t] <= constraints['max_subcontract'], f"Subcontract_{t}"
+
+        # Workforce balance
+        if t == 0:
+            prob += W[t] == initial_workforce + H[t] - F[t], f"Workforce_{t}"
         else:
-            recommendation = "CAUTION - Significant capacity constraints"
+            prob += W[t] == W[t-1] + H[t] - F[t], f"Workforce_{t}"
 
-        return {
-            "can_staff": can_staff,
-            "recommendation": recommendation,
-            "resource_needs": {r.value: v for r, v in needs.items()},
-            "bottlenecks": bottlenecks[:10],
-            "actions_required": self._suggest_hiring(bottlenecks)
+        # Inventory balance
+        if t == 0:
+            prob += I[t] == initial_inventory + P[t] + O[t] + S[t] - demand[t] + B[t], f"Inventory_{t}"
+        else:
+            prob += I[t] == I[t-1] + P[t] + O[t] + S[t] - demand[t] + B[t] - B[t-1], f"Inventory_{t}"
+
+        # Minimum service level (max backorder)
+        prob += B[t] <= demand[t] * constraints['max_backorder_pct'], f"Service_{t}"
+
+    # Solve
+    prob.solve(PULP_CBC_CMD(msg=0))
+
+    # Extract results
+    results = {
+        'status': LpStatus[prob.status],
+        'total_cost': value(prob.objective),
+        'production': [P[t].varValue for t in range(periods)],
+        'workforce': [W[t].varValue for t in range(periods)],
+        'overtime': [O[t].varValue for t in range(periods)],
+        'inventory': [I[t].varValue for t in range(periods)],
+        'hired': [H[t].varValue for t in range(periods)],
+        'fired': [F[t].varValue for t in range(periods)],
+        'backorders': [B[t].varValue for t in range(periods)],
+        'subcontract': [S[t].varValue for t in range(periods)]
+    }
+
+    # Create summary DataFrame
+    df = pd.DataFrame({
+        'Period': range(1, periods + 1),
+        'Demand': demand,
+        'Production': results['production'],
+        'Workforce': results['workforce'],
+        'Overtime': results['overtime'],
+        'Inventory': results['inventory'],
+        'Backorders': results['backorders'],
+        'Subcontract': results['subcontract']
+    })
+
+    results['summary'] = df
+
+    return results
+
+# Example usage
+demand = np.array([1000, 1200, 1500, 1800, 2000, 1800,
+                   1600, 1400, 1300, 1200, 1100, 1000])
+
+costs = {
+    'regular_cost': 50,
+    'labor_cost': 2000,      # per worker per period
+    'overtime_cost': 75,
+    'holding_cost': 5,
+    'hiring_cost': 1000,
+    'firing_cost': 1500,
+    'backorder_cost': 100,
+    'subcontract_cost': 80
+}
+
+constraints = {
+    'initial_workforce': 40,
+    'initial_inventory': 500,
+    'units_per_worker': 30,
+    'overtime_per_worker': 10,
+    'max_subcontract': 500,
+    'max_backorder_pct': 0.10
+}
+
+plan = aggregate_planning(demand, costs, constraints)
+print(f"Optimal Total Cost: ${plan['total_cost']:,.0f}")
+print("\nProduction Plan:")
+print(plan['summary'])
+```
+
+### Capacity Requirements Planning (CRP)
+
+**Process:**
+1. Start with Master Production Schedule (MPS)
+2. Explode to component requirements (BOM)
+3. Calculate work center loads
+4. Identify overload/underload periods
+5. Adjust capacity or schedule
+
+```python
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+class CapacityRequirementsPlanning:
+    """
+    CRP - Calculate and analyze capacity requirements
+    based on production schedule and routings
+    """
+
+    def __init__(self, work_centers):
+        """
+        Parameters:
+        - work_centers: dict {name: {'capacity': hours, 'efficiency': 0-1}}
+        """
+        self.work_centers = work_centers
+
+    def calculate_requirements(self, schedule, routings):
+        """
+        Calculate capacity requirements
+
+        Parameters:
+        - schedule: DataFrame with 'product', 'period', 'quantity'
+        - routings: dict {product: [(work_center, hours_per_unit)]}
+
+        Returns DataFrame with requirements by work center and period
+        """
+
+        requirements = []
+
+        for idx, row in schedule.iterrows():
+            product = row['product']
+            period = row['period']
+            quantity = row['quantity']
+
+            # Get routing for product
+            routing = routings.get(product, [])
+
+            for work_center, hours_per_unit in routing:
+                total_hours = quantity * hours_per_unit
+
+                # Adjust for efficiency
+                efficiency = self.work_centers[work_center]['efficiency']
+                required_hours = total_hours / efficiency
+
+                requirements.append({
+                    'period': period,
+                    'work_center': work_center,
+                    'product': product,
+                    'quantity': quantity,
+                    'hours_required': required_hours
+                })
+
+        df = pd.DataFrame(requirements)
+
+        # Aggregate by work center and period
+        summary = df.groupby(['period', 'work_center'])['hours_required'].sum().reset_index()
+
+        # Add capacity and utilization
+        summary['capacity'] = summary['work_center'].map(
+            lambda wc: self.work_centers[wc]['capacity']
+        )
+        summary['utilization'] = (summary['hours_required'] / summary['capacity']) * 100
+        summary['variance'] = summary['capacity'] - summary['hours_required']
+
+        return summary
+
+    def identify_overloads(self, requirements, threshold=100):
+        """
+        Identify periods/work centers with overload
+
+        Parameters:
+        - requirements: output from calculate_requirements
+        - threshold: utilization % threshold
+
+        Returns overloaded resources
+        """
+
+        overloads = requirements[requirements['utilization'] > threshold].copy()
+        overloads = overloads.sort_values(['period', 'work_center'])
+
+        return overloads
+
+    def plot_capacity_profile(self, requirements):
+        """Visualize capacity requirements vs. available"""
+
+        work_centers = requirements['work_center'].unique()
+
+        fig, axes = plt.subplots(len(work_centers), 1,
+                                figsize=(12, 4 * len(work_centers)),
+                                squeeze=False)
+
+        for i, wc in enumerate(work_centers):
+            wc_data = requirements[requirements['work_center'] == wc]
+
+            ax = axes[i, 0]
+
+            # Plot capacity line
+            ax.axhline(y=wc_data['capacity'].iloc[0],
+                      color='green', linestyle='--',
+                      linewidth=2, label='Capacity')
+
+            # Plot requirements
+            ax.bar(wc_data['period'], wc_data['hours_required'],
+                  alpha=0.7, label='Required')
+
+            # Highlight overloads
+            overload = wc_data[wc_data['utilization'] > 100]
+            if not overload.empty:
+                ax.bar(overload['period'], overload['hours_required'],
+                      color='red', alpha=0.7, label='Overload')
+
+            ax.set_title(f'{wc} - Capacity Profile')
+            ax.set_xlabel('Period')
+            ax.set_ylabel('Hours')
+            ax.legend()
+            ax.grid(True, alpha=0.3)
+
+        plt.tight_layout()
+        return fig
+
+# Example usage
+work_centers = {
+    'Cutting': {'capacity': 160, 'efficiency': 0.90},
+    'Welding': {'capacity': 160, 'efficiency': 0.85},
+    'Assembly': {'capacity': 160, 'efficiency': 0.92},
+    'Inspection': {'capacity': 160, 'efficiency': 0.95}
+}
+
+crp = CapacityRequirementsPlanning(work_centers)
+
+# Production schedule
+schedule = pd.DataFrame({
+    'product': ['A', 'A', 'B', 'B', 'C', 'C'] * 3,
+    'period': [1, 2, 1, 2, 1, 2] * 3,
+    'quantity': [100, 120, 80, 90, 60, 70] * 3
+})
+
+# Routings: hours per unit at each work center
+routings = {
+    'A': [('Cutting', 0.5), ('Welding', 0.8), ('Assembly', 1.0), ('Inspection', 0.3)],
+    'B': [('Cutting', 0.6), ('Assembly', 1.2), ('Inspection', 0.4)],
+    'C': [('Cutting', 0.4), ('Welding', 1.0), ('Assembly', 0.8), ('Inspection', 0.2)]
+}
+
+# Calculate requirements
+requirements = crp.calculate_requirements(schedule, routings)
+print("Capacity Requirements:")
+print(requirements)
+
+# Identify overloads
+overloads = crp.identify_overloads(requirements)
+if not overloads.empty:
+    print("\nOverloaded Resources:")
+    print(overloads[['period', 'work_center', 'utilization', 'variance']])
+else:
+    print("\nNo overloads detected")
+
+# Plot
+crp.plot_capacity_profile(requirements)
+```
+
+---
+
+## Capacity Expansion Analysis
+
+### Economic Analysis of Capacity Investments
+
+**Net Present Value (NPV) Analysis:**
+
+```python
+import numpy as np
+
+def npv_capacity_investment(initial_investment, annual_benefits,
+                           annual_costs, discount_rate, years):
+    """
+    Calculate NPV of capacity investment
+
+    Parameters:
+    - initial_investment: upfront cost
+    - annual_benefits: revenue increase per year
+    - annual_costs: operating costs per year
+    - discount_rate: cost of capital (e.g., 0.10 for 10%)
+    - years: investment horizon
+    """
+
+    cash_flows = [-initial_investment]
+
+    for year in range(1, years + 1):
+        net_benefit = annual_benefits - annual_costs
+        discounted_benefit = net_benefit / ((1 + discount_rate) ** year)
+        cash_flows.append(discounted_benefit)
+
+    npv = sum(cash_flows)
+
+    # Calculate IRR (Internal Rate of Return)
+    irr = np.irr([-initial_investment] + [annual_benefits - annual_costs] * years)
+
+    # Payback period
+    cumulative = -initial_investment
+    payback = None
+    for year in range(1, years + 1):
+        cumulative += (annual_benefits - annual_costs)
+        if cumulative > 0 and payback is None:
+            payback = year
+
+    return {
+        'npv': npv,
+        'irr': irr * 100,
+        'payback_years': payback,
+        'total_investment': initial_investment,
+        'annual_net_benefit': annual_benefits - annual_costs
+    }
+
+# Example: Evaluate new production line
+investment_analysis = npv_capacity_investment(
+    initial_investment=5_000_000,
+    annual_benefits=2_000_000,    # Increased revenue
+    annual_costs=800_000,          # Operating costs
+    discount_rate=0.12,            # 12% cost of capital
+    years=10
+)
+
+print("Investment Analysis:")
+print(f"  NPV: ${investment_analysis['npv']:,.0f}")
+print(f"  IRR: {investment_analysis['irr']:.1f}%")
+print(f"  Payback: {investment_analysis['payback_years']} years")
+
+if investment_analysis['npv'] > 0:
+    print("\n✓ Investment is financially viable")
+else:
+    print("\n✗ Investment is not viable at this discount rate")
+```
+
+### Decision Tree Analysis for Capacity Timing
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+class CapacityDecisionTree:
+    """
+    Decision tree for capacity expansion timing
+    under demand uncertainty
+    """
+
+    def __init__(self):
+        self.scenarios = []
+
+    def add_scenario(self, name, probability, demand_growth,
+                    expand_now_cost, expand_later_cost,
+                    revenue_per_unit, shortage_cost):
+        """Add demand scenario"""
+
+        self.scenarios.append({
+            'name': name,
+            'probability': probability,
+            'demand_growth': demand_growth,
+            'expand_now_cost': expand_now_cost,
+            'expand_later_cost': expand_later_cost,
+            'revenue_per_unit': revenue_per_unit,
+            'shortage_cost': shortage_cost
+        })
+
+    def evaluate_expand_now(self, current_capacity, periods=5):
+        """Calculate expected value of expanding now"""
+
+        ev = 0
+
+        for scenario in self.scenarios:
+            # Cost of expanding now
+            cost = -scenario['expand_now_cost']
+
+            # Benefits over periods
+            for period in range(1, periods + 1):
+                demand = current_capacity * (1 + scenario['demand_growth']) ** period
+                capacity_after_expansion = current_capacity * 1.5  # Assume 50% expansion
+
+                # Revenue from meeting demand
+                served = min(demand, capacity_after_expansion)
+                revenue = served * scenario['revenue_per_unit']
+
+                # Discount
+                discounted_revenue = revenue / (1.10 ** period)
+                cost += discounted_revenue
+
+            # Weight by probability
+            ev += cost * scenario['probability']
+
+        return ev
+
+    def evaluate_expand_later(self, current_capacity, expand_period=3, periods=5):
+        """Calculate expected value of expanding later"""
+
+        ev = 0
+
+        for scenario in self.scenarios:
+            cost = 0
+
+            for period in range(1, periods + 1):
+                demand = current_capacity * (1 + scenario['demand_growth']) ** period
+
+                if period < expand_period:
+                    # Before expansion: limited by current capacity
+                    served = min(demand, current_capacity)
+                    shortage = max(0, demand - current_capacity)
+
+                    revenue = served * scenario['revenue_per_unit']
+                    shortage_penalty = shortage * scenario['shortage_cost']
+
+                    discounted_value = (revenue - shortage_penalty) / (1.10 ** period)
+
+                elif period == expand_period:
+                    # Expansion happens
+                    expansion_cost = -scenario['expand_later_cost']
+                    served = min(demand, current_capacity * 1.5)
+                    revenue = served * scenario['revenue_per_unit']
+
+                    discounted_value = (expansion_cost + revenue) / (1.10 ** period)
+
+                else:
+                    # After expansion
+                    served = min(demand, current_capacity * 1.5)
+                    revenue = served * scenario['revenue_per_unit']
+
+                    discounted_value = revenue / (1.10 ** period)
+
+                cost += discounted_value
+
+            # Weight by probability
+            ev += cost * scenario['probability']
+
+        return ev
+
+    def evaluate_no_expansion(self, current_capacity, periods=5):
+        """Calculate expected value of not expanding"""
+
+        ev = 0
+
+        for scenario in self.scenarios:
+            cost = 0
+
+            for period in range(1, periods + 1):
+                demand = current_capacity * (1 + scenario['demand_growth']) ** period
+
+                # Limited by current capacity
+                served = min(demand, current_capacity)
+                shortage = max(0, demand - current_capacity)
+
+                revenue = served * scenario['revenue_per_unit']
+                shortage_penalty = shortage * scenario['shortage_cost']
+
+                discounted_value = (revenue - shortage_penalty) / (1.10 ** period)
+                cost += discounted_value
+
+            # Weight by probability
+            ev += cost * scenario['probability']
+
+        return ev
+
+    def recommend(self, current_capacity):
+        """Determine optimal capacity decision"""
+
+        ev_now = self.evaluate_expand_now(current_capacity)
+        ev_later = self.evaluate_expand_later(current_capacity)
+        ev_no = self.evaluate_no_expansion(current_capacity)
+
+        results = {
+            'expand_now': ev_now,
+            'expand_later': ev_later,
+            'no_expansion': ev_no
         }
 
-    def _suggest_hiring(self, bottlenecks: List[Dict]) -> List[str]:
-        """Suggest hiring actions based on gaps."""
-        if not bottlenecks:
-            return []
+        best_option = max(results, key=results.get)
 
-        # Aggregate gaps by role
-        role_gaps = {}
-        for b in bottlenecks:
-            role = b['role']
-            if role not in role_gaps:
-                role_gaps[role] = 0
-            role_gaps[role] = max(role_gaps[role], b['gap'])
+        return {
+            'recommendation': best_option,
+            'expected_values': results,
+            'best_ev': results[best_option]
+        }
 
-        actions = []
-        for role, gap in sorted(role_gaps.items(), key=lambda x: -x[1]):
-            hires = int(gap) + 1
-            actions.append(f"Hire {hires} {role}(s) - Gap: {gap:.1f} FTE")
+# Example usage
+dt = CapacityDecisionTree()
 
-        return actions
+# Add demand scenarios
+dt.add_scenario(
+    name='High Growth',
+    probability=0.30,
+    demand_growth=0.15,
+    expand_now_cost=10_000_000,
+    expand_later_cost=12_000_000,
+    revenue_per_unit=100,
+    shortage_cost=50
+)
 
-    def generate_forecast(self, horizon_months: int = 12) -> CapacityForecast:
-        """Generate capacity forecast."""
-        gaps = self.identify_gaps(horizon_months)
+dt.add_scenario(
+    name='Moderate Growth',
+    probability=0.50,
+    demand_growth=0.08,
+    expand_now_cost=10_000_000,
+    expand_later_cost=12_000_000,
+    revenue_per_unit=100,
+    shortage_cost=50
+)
 
-        # Calculate totals
-        capacity = self.get_current_capacity()
-        demand = self.calculate_demand(datetime.now())
+dt.add_scenario(
+    name='Low Growth',
+    probability=0.20,
+    demand_growth=0.03,
+    expand_now_cost=10_000_000,
+    expand_later_cost=12_000_000,
+    revenue_per_unit=100,
+    shortage_cost=50
+)
 
-        total_capacity = sum(capacity.values())
-        total_demand = sum(demand.values())
-        utilization = (total_demand / total_capacity * 100) if total_capacity > 0 else 0
+# Get recommendation
+current_capacity = 100000  # units per year
+recommendation = dt.recommend(current_capacity)
 
-        # Generate recommendations
-        recommendations = []
+print("Capacity Expansion Decision Analysis:")
+print(f"\nExpected Values:")
+for option, ev in recommendation['expected_values'].items():
+    print(f"  {option}: ${ev:,.0f}")
 
-        if utilization > 90:
-            recommendations.append("High utilization - consider hiring")
-        elif utilization < 60:
-            recommendations.append("Low utilization - review project pipeline")
-
-        # Role-specific recommendations
-        critical_gaps = [g for g in gaps if g.severity == "critical"]
-        gap_roles = set(g.role.value for g in critical_gaps)
-        for role in gap_roles:
-            recommendations.append(f"Critical gap in {role} - immediate action needed")
-
-        return CapacityForecast(
-            forecast_date=datetime.now(),
-            horizon_months=horizon_months,
-            total_demand_fte=total_demand,
-            total_capacity_fte=total_capacity,
-            utilization_pct=utilization,
-            gaps=gaps,
-            recommendations=recommendations
-        )
-
-    def generate_report(self) -> str:
-        """Generate capacity planning report."""
-        forecast = self.generate_forecast()
-
-        lines = [
-            "# Capacity Planning Report",
-            "",
-            f"**Organization:** {self.organization_name}",
-            f"**Report Date:** {forecast.forecast_date.strftime('%Y-%m-%d')}",
-            "",
-            "## Executive Summary",
-            "",
-            f"| Metric | Value |",
-            f"|--------|-------|",
-            f"| Active Projects | {len(self.projects)} |",
-            f"| Pipeline Opportunities | {len(self.pipeline)} |",
-            f"| Total Staff | {len(self.staff)} |",
-            f"| Current Capacity (FTE) | {forecast.total_capacity_fte:.1f} |",
-            f"| Current Demand (FTE) | {forecast.total_demand_fte:.1f} |",
-            f"| Utilization | {forecast.utilization_pct:.0f}% |",
-            "",
-            "## Capacity by Role",
-            "",
-            "| Role | Capacity | Demand | Gap |",
-            "|------|----------|--------|-----|"
-        ]
-
-        capacity = self.get_current_capacity()
-        demand = self.calculate_demand(datetime.now())
-
-        for role in ResourceRole:
-            cap = capacity.get(role, 0)
-            dem = demand.get(role, 0)
-            gap = cap - dem
-            gap_icon = "✅" if gap >= 0 else "⚠️" if gap > -1 else "🔴"
-            lines.append(
-                f"| {role.value} | {cap:.1f} | {dem:.1f} | {gap:+.1f} {gap_icon} |"
-            )
-
-        # Active projects
-        lines.extend([
-            "",
-            "## Active Projects",
-            "",
-            "| Project | Value | Phase | End Date |",
-            "|---------|-------|-------|----------|"
-        ])
-
-        for p in sorted(self.projects.values(), key=lambda x: x.value, reverse=True):
-            lines.append(
-                f"| {p.project_name} | ${p.value:,.0f} | {p.phase.value} | "
-                f"{p.end_date.strftime('%Y-%m-%d')} |"
-            )
-
-        # Pipeline
-        if self.pipeline:
-            lines.extend([
-                "",
-                "## Pipeline",
-                "",
-                "| Opportunity | Value | Probability | Expected Start |",
-                "|-------------|-------|-------------|----------------|"
-            ])
-
-            for p in sorted(self.pipeline.values(), key=lambda x: -x.probability):
-                lines.append(
-                    f"| {p.project_name} | ${p.value:,.0f} | {p.probability:.0%} | "
-                    f"{p.start_date.strftime('%Y-%m-%d')} |"
-                )
-
-        # Gaps
-        critical_gaps = [g for g in forecast.gaps if g.severity == "critical"]
-        if critical_gaps:
-            lines.extend([
-                "",
-                f"## Critical Capacity Gaps ({len(critical_gaps)})",
-                "",
-                "| Role | Period | Gap |",
-                "|------|--------|-----|"
-            ])
-
-            for gap in critical_gaps[:10]:
-                lines.append(
-                    f"| {gap.role.value} | {gap.period_start.strftime('%Y-%m')} | "
-                    f"{gap.gap:.1f} FTE |"
-                )
-
-        # Recommendations
-        if forecast.recommendations:
-            lines.extend([
-                "",
-                "## Recommendations",
-                ""
-            ])
-            for rec in forecast.recommendations:
-                lines.append(f"- {rec}")
-
-        return "\n".join(lines)
+print(f"\n✓ Recommendation: {recommendation['recommendation'].upper()}")
+print(f"  Expected Value: ${recommendation['best_ev']:,.0f}")
 ```
 
-## Quick Start
+---
+
+## Flexible Capacity Strategies
+
+### Options for Capacity Flexibility
+
+**1. Workforce Flexibility**
+- Cross-trained workers
+- Temporary labor
+- Overtime capability
+- Variable shifts
+
+**2. Equipment Flexibility**
+- Flexible manufacturing systems
+- Quick changeover capability
+- Mobile equipment
+- Shared equipment pools
+
+**3. Facility Flexibility**
+- Modular facilities
+- Multi-product capable
+- Scalable layouts
+- Shared warehousing
+
+**4. Partnership Flexibility**
+- Contract manufacturing
+- Co-packing arrangements
+- 3PL relationships
+- Supplier flexibility
+
+**Flexibility Valuation:**
 
 ```python
-from datetime import datetime, timedelta
+def value_of_flexibility(demand_scenarios, fixed_capacity,
+                        flexible_capacity, flexibility_cost):
+    """
+    Calculate value of flexible capacity using real options approach
 
-# Initialize planner
-planner = CapacityPlanner("ABC Construction")
+    Parameters:
+    - demand_scenarios: list of (probability, demand) tuples
+    - fixed_capacity: base capacity level
+    - flexible_capacity: additional flexible capacity available
+    - flexibility_cost: cost per unit of flexible capacity
 
-# Add staff
-planner.add_staff("PM-001", "John Smith", ResourceRole.PROJECT_MANAGER)
-planner.add_staff("PM-002", "Jane Doe", ResourceRole.PROJECT_MANAGER)
-planner.add_staff("SUP-001", "Mike Johnson", ResourceRole.SUPERINTENDENT)
-planner.add_staff("SUP-002", "Bob Williams", ResourceRole.SUPERINTENDENT)
-planner.add_staff("SUP-003", "Tom Brown", ResourceRole.SUPERINTENDENT)
-planner.add_staff("PE-001", "Sarah Davis", ResourceRole.PROJECT_ENGINEER)
-planner.add_staff("PE-002", "Chris Wilson", ResourceRole.PROJECT_ENGINEER)
+    Returns value of flexibility option
+    """
 
-# Add active projects
-planner.add_active_project(
-    "PRJ-001", "Downtown Tower",
-    value=25000000,
-    phase=ProjectPhase.CONSTRUCTION,
-    start_date=datetime(2024, 6, 1),
-    end_date=datetime(2025, 12, 31)
+    # Expected value with fixed capacity only
+    ev_fixed = 0
+    for prob, demand in demand_scenarios:
+        served = min(demand, fixed_capacity)
+        revenue = served * 100  # Revenue per unit
+        shortage_cost = max(0, demand - fixed_capacity) * 50
+
+        ev_fixed += prob * (revenue - shortage_cost)
+
+    # Expected value with flexibility
+    ev_flexible = 0
+    for prob, demand in demand_scenarios:
+        # Use flexible capacity only if needed
+        if demand > fixed_capacity:
+            flexible_used = min(demand - fixed_capacity, flexible_capacity)
+            total_served = fixed_capacity + flexible_used
+        else:
+            flexible_used = 0
+            total_served = demand
+
+        revenue = total_served * 100
+        flexibility_usage_cost = flexible_used * flexibility_cost
+        shortage_cost = max(0, demand - total_served) * 50
+
+        ev_flexible += prob * (revenue - flexibility_usage_cost - shortage_cost)
+
+    value_of_flexibility = ev_flexible - ev_fixed
+
+    return {
+        'ev_without_flexibility': ev_fixed,
+        'ev_with_flexibility': ev_flexible,
+        'value_of_flexibility': value_of_flexibility,
+        'flexibility_cost': flexible_capacity * flexibility_cost
+    }
+
+# Example
+demand_scenarios = [
+    (0.20, 8000),   # Low demand
+    (0.50, 10000),  # Expected demand
+    (0.30, 13000)   # High demand
+]
+
+result = value_of_flexibility(
+    demand_scenarios=demand_scenarios,
+    fixed_capacity=10000,
+    flexible_capacity=3000,
+    flexibility_cost=15  # Extra cost per unit for flexible capacity
 )
 
-planner.add_active_project(
-    "PRJ-002", "Hospital Wing",
-    value=40000000,
-    phase=ProjectPhase.CONSTRUCTION,
-    start_date=datetime(2024, 9, 1),
-    end_date=datetime(2026, 6, 30)
-)
+print("Flexibility Analysis:")
+print(f"  EV without flexibility: ${result['ev_without_flexibility']:,.0f}")
+print(f"  EV with flexibility: ${result['ev_with_flexibility']:,.0f}")
+print(f"  Value of flexibility: ${result['value_of_flexibility']:,.0f}")
 
-# Add pipeline opportunities
-planner.add_pipeline_opportunity(
-    "OPP-001", "Office Complex",
-    value=30000000,
-    win_probability=0.6,
-    expected_start=datetime(2025, 3, 1),
-    duration_months=18
-)
-
-# Check if can pursue new project
-evaluation = planner.can_pursue_project(
-    value=20000000,
-    start_date=datetime(2025, 6, 1),
-    duration_months=12
-)
-print(f"Recommendation: {evaluation['recommendation']}")
-for action in evaluation['actions_required']:
-    print(f"  - {action}")
-
-# Generate forecast
-forecast = planner.generate_forecast()
-print(f"Utilization: {forecast.utilization_pct:.0f}%")
-print(f"Critical gaps: {len([g for g in forecast.gaps if g.severity == 'critical'])}")
-
-# Generate report
-print(planner.generate_report())
+if result['value_of_flexibility'] > result['flexibility_cost']:
+    print(f"\n✓ Flexibility is valuable (worth ${result['value_of_flexibility']:,.0f})")
+else:
+    print(f"\n✗ Flexibility not cost-effective")
 ```
 
-## Requirements
+---
 
-```bash
-pip install (no external dependencies)
-```
+## Tools & Libraries
+
+### Python Libraries
+
+**Optimization:**
+- `pulp`: Linear programming for aggregate planning
+- `pyomo`: Advanced optimization modeling
+- `scipy.optimize`: Optimization algorithms
+- `gekko`: Dynamic optimization
+
+**Simulation:**
+- `simpy`: Discrete-event simulation
+- `numpy`: Numerical computations
+- `pandas`: Data analysis
+
+**Visualization:**
+- `matplotlib`, `seaborn`: Charts and graphs
+- `plotly`: Interactive dashboards
+- `networkx`: Process flow diagrams
+
+### Commercial Software
+
+**Capacity Planning Systems:**
+- **SAP APO**: Advanced Planning & Optimization
+- **Oracle ASCP**: Advanced Supply Chain Planning
+- **Kinaxis RapidResponse**: S&OP with capacity planning
+- **Blue Yonder**: Capacity planning modules
+- **Anaplan**: Cloud planning platform
+
+**Simulation:**
+- **AnyLogic**: Multi-method simulation
+- **Arena**: Discrete-event simulation
+- **Simio**: 3D simulation with capacity analysis
+
+**ERP Capacity Planning:**
+- **SAP**: Work Center Planning, CRP
+- **Oracle**: Capacity Requirements Planning
+- **Microsoft Dynamics**: Capacity Planning
+- **Infor**: Production Capacity Planning
+
+---
+
+## Common Challenges & Solutions
+
+### Challenge: Uncertain Demand
+
+**Problem:**
+- Hard to size capacity
+- Risk of over/under investment
+- Volatility makes planning difficult
+
+**Solutions:**
+- Scenario planning and sensitivity analysis
+- Build in flexibility (temporary labor, overtime, outsourcing)
+- Modular capacity additions (smaller increments)
+- Postponement strategies
+- Real options analysis for timing
+
+### Challenge: Lumpy Capacity Additions
+
+**Problem:**
+- Can't add small increments
+- Must add entire production line or facility
+- Creates periods of over-capacity
+
+**Solutions:**
+- Phased expansion plans
+- Start with higher utilization targets
+- Alternative uses for excess capacity (contract production)
+- Financial analysis with longer payback periods
+- Consider leasing vs. buying
+
+### Challenge: Bottleneck Shifting
+
+**Problem:**
+- Expand one resource, bottleneck moves elsewhere
+- Whack-a-mole problem
+- Unbalanced capacity
+
+**Solutions:**
+- System-wide capacity analysis (not just one resource)
+- Theory of Constraints approach
+- Balanced capacity investments
+- Buffer inventories at bottlenecks
+- Process redesign to eliminate bottlenecks
+
+### Challenge: Long Lead Times
+
+**Problem:**
+- Takes 12-24+ months to add capacity
+- Demand may change by then
+- Hard to react quickly
+
+**Solutions:**
+- Leading capacity strategy (anticipate growth)
+- Modular/flexible facilities (faster deployment)
+- Pre-engineered solutions
+- Partnerships for quick capacity (contract manufacturing)
+- Continuous planning and forecasting
+
+### Challenge: Seasonal Demand
+
+**Problem:**
+- Need capacity for peak, idle rest of year
+- High fixed costs
+- Utilization swings
+
+**Solutions:**
+- Flexible workforce (temporary, seasonal hires)
+- Build inventory in low season for high season
+- Produce complementary products (counter-seasonal)
+- Demand smoothing (promotions in off-season)
+- Outsource peak production
+
+---
+
+## Output Format
+
+### Capacity Plan Report
+
+**Executive Summary:**
+- Current capacity status and utilization
+- Demand forecast and capacity gaps
+- Recommended capacity strategy
+- Investment requirements and timeline
+
+**Current State Analysis:**
+
+| Resource | Available Capacity | Current Utilization | Effective Capacity | OEE |
+|----------|-------------------|---------------------|-------------------|-----|
+| Line 1 | 10,000 units/mo | 85% | 8,500 units/mo | 72% |
+| Line 2 | 8,000 units/mo | 92% | 7,360 units/mo | 78% |
+| Warehouse | 50,000 sq ft | 78% | 39,000 sq ft | N/A |
+| Labor | 120 FTE | 88% | 105.6 FTE | N/A |
+
+**Capacity Requirements Forecast:**
+
+| Period | Demand Forecast | Required Capacity | Current Capacity | Gap | Utilization |
+|--------|----------------|-------------------|------------------|-----|-------------|
+| Q1 2025 | 15,000 | 15,750 | 18,000 | -2,250 | 88% |
+| Q2 2025 | 17,500 | 18,375 | 18,000 | +375 | 102% |
+| Q3 2025 | 19,000 | 19,950 | 18,000 | +1,950 | 111% |
+| Q4 2025 | 20,000 | 21,000 | 18,000 | +3,000 | 117% |
+
+**Bottleneck Analysis:**
+
+- **Current Bottleneck**: Assembly line (8,000 units/month capacity)
+- **Impact**: Limits system throughput to 8,000 units/month
+- **Constraint Duration**: Expected through Q3 2025
+- **Recommended Action**: Add second assembly line
+
+**Capacity Strategy Recommendation:**
+
+**Option 1: Expand Now (Recommended)**
+- Add assembly line and warehouse space
+- Investment: $3.5M
+- Timeline: Ready by Q2 2025
+- NPV: $2.1M (10-year horizon)
+- Avoids shortage costs and lost revenue
+
+**Option 2: Flexible Capacity**
+- Use contract manufacturing for 20% of volume
+- Variable cost: +$15/unit
+- Lower fixed investment
+- Maintains service during growth
+
+**Option 3: Delay Expansion**
+- Wait until Q3 2025
+- Risk of lost sales: $1.2M
+- Lower upfront investment
+- Higher long-term costs
+
+**Implementation Plan:**
+- Month 1-2: Finalize design and vendors
+- Month 3-4: Equipment procurement
+- Month 5-6: Installation and testing
+- Month 7: Production ramp-up
+- Month 8: Full capacity achieved
+
+---
+
+## Questions to Ask
+
+If you need more context:
+1. What type of capacity? (production, warehouse, transportation, labor)
+2. What's the planning horizon? (short-term, tactical, strategic)
+3. Current capacity utilization rates?
+4. Demand forecast and growth expectations?
+5. Known bottlenecks or constraints?
+6. Budget available for capacity investments?
+7. Service level requirements?
+8. Current operating schedule (shifts, days per week)?
+
+---
+
+## Related Skills
+
+- **master-production-scheduling**: For detailed production scheduling
+- **demand-forecasting**: For capacity requirements forecasting
+- **sales-operations-planning**: For integrated capacity planning in S&OP
+- **network-design**: For facility capacity in network optimization
+- **production-scheduling**: For shop floor capacity utilization
+- **scenario-planning**: For capacity planning under uncertainty
+- **workforce-scheduling**: For labor capacity planning
+- **facility-location-problem**: For location-capacity decisions

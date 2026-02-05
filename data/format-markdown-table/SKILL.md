@@ -21,7 +21,6 @@ Create properly formatted markdown tables with alignment and consistent spacing.
 Accept headers and rows as input.
 
 **Expected Input**:
-
 ```json
 {
   "headers": ["Column 1", "Column 2", "Column 3"],
@@ -34,7 +33,6 @@ Accept headers and rows as input.
 ```
 
 **Alignment** (optional):
-
 - `left`: Left-aligned (default)
 - `center`: Center-aligned
 - `right`: Right-aligned
@@ -44,7 +42,6 @@ Accept headers and rows as input.
 Determine maximum width for each column.
 
 **Width Calculation**:
-
 - Include header width
 - Include all row values
 - Add padding (1 space on each side)
@@ -55,7 +52,6 @@ Determine maximum width for each column.
 Create header row with proper spacing.
 
 **Format**:
-
 ```
 | Header 1 | Header 2 | Header 3 |
 ```
@@ -65,13 +61,11 @@ Create header row with proper spacing.
 Create separator with alignment indicators.
 
 **Alignment Indicators**:
-
 - Left: `:---` or `---`
 - Center: `:---:`
 - Right: `---:`
 
 **Format**:
-
 ```
 |----------|:--------:|---------:|
 ```
@@ -81,7 +75,6 @@ Create separator with alignment indicators.
 Create data rows with consistent spacing.
 
 **Format**:
-
 ```
 | Value 1  | Value 2  | Value 3  |
 | Value 4  | Value 5  | Value 6  |
@@ -92,12 +85,11 @@ Create data rows with consistent spacing.
 Return formatted markdown table.
 
 **Expected Output**:
-
 ```markdown
 | Column 1 | Column 2 | Column 3 |
-| -------- | :------: | -------: |
-| Value 1  | Value 2  |  Value 3 |
-| Value 4  | Value 5  |  Value 6 |
+|----------|:--------:|---------:|
+| Value 1  | Value 2  | Value 3  |
+| Value 4  | Value 5  | Value 6  |
 ```
 
 ## Error Handling
@@ -112,7 +104,6 @@ Return formatted markdown table.
 ### Example 1: Simple Statistics Table
 
 **Input**:
-
 ```json
 {
   "headers": ["Metric", "Count", "Percentage"],
@@ -126,10 +117,9 @@ Return formatted markdown table.
 ```
 
 **Output**:
-
 ```markdown
 | Metric        | Count | Percentage |
-| ------------- | ----: | ---------: |
+|---------------|------:|-----------:|
 | Critical Bugs |     3 |        13% |
 | High Bugs     |     8 |        35% |
 | Medium Bugs   |    12 |        52% |
@@ -138,7 +128,6 @@ Return formatted markdown table.
 ### Example 2: Comparison Table
 
 **Input**:
-
 ```json
 {
   "headers": ["Feature", "Before", "After"],
@@ -152,19 +141,17 @@ Return formatted markdown table.
 ```
 
 **Output**:
-
 ```markdown
-| Feature     | Before | After  |
-| ----------- | :----: | :----: |
-| Build Time  |  45s   |  12s   |
-| Test Time   | 2m 30s | 1m 15s |
-| Bundle Size | 2.3 MB | 1.8 MB |
+| Feature     | Before  |  After  |
+|-------------|:-------:|:-------:|
+| Build Time  |   45s   |   12s   |
+| Test Time   | 2m 30s  | 1m 15s  |
+| Bundle Size | 2.3 MB  | 1.8 MB  |
 ```
 
 ### Example 3: Priority Distribution
 
 **Input**:
-
 ```json
 {
   "headers": ["Priority", "Open", "Fixed", "Total"],
@@ -177,10 +164,9 @@ Return formatted markdown table.
 ```
 
 **Output**:
-
 ```markdown
 | Priority | Open | Fixed | Total |
-| -------- | ---- | ----- | ----- |
+|----------|------|-------|-------|
 | P0       | 2    | 5     | 7     |
 | P1       | 5    | 3     | 8     |
 | P2       | 12   | 8     | 20    |
@@ -189,7 +175,6 @@ Return formatted markdown table.
 ### Example 4: Empty Rows (Header Only)
 
 **Input**:
-
 ```json
 {
   "headers": ["Name", "Value", "Status"],
@@ -198,10 +183,9 @@ Return formatted markdown table.
 ```
 
 **Output**:
-
 ```markdown
 | Name | Value | Status |
-| ---- | ----- | ------ |
+|------|-------|--------|
 ```
 
 ## Validation

@@ -1,25 +1,25 @@
 ---
 name: Frontend CSS
-description: Write Tailwind CSS utility classes and component styles following scoped CSS patterns, design tokens, responsive breakpoints, and dark mode support. Use this skill when styling components, creating layouts, implementing design systems, or writing CSS/Tailwind classes. When working on Astro component style blocks, Tailwind configuration files, global CSS files, CSS custom properties and design tokens, component scoped styles, responsive breakpoints and media queries, dark mode theming, CSS Grid and Flexbox layouts, animation and transition styles, or Tailwind @apply directives and utility composition.
+description: Write and maintain CSS using consistent methodology (Tailwind, BEM, CSS modules, utility classes) while following the project's design system and avoiding framework overrides. Use this skill when writing CSS styles, applying CSS classes, working with CSS frameworks, or implementing visual designs. When editing CSS files (`.css`, `.scss`, `.sass`), applying Tailwind utility classes, using CSS modules, or styling components. When maintaining design tokens, creating design systems, or ensuring visual consistency. When working with colors, spacing, typography, or any visual styling in stylesheets or component files.
 ---
 
 # Frontend CSS
 
-This Skill provides Claude Code with specific guidance on how to adhere to coding standards as they relate to how it should handle frontend CSS.
-
 ## When to use this skill
 
-- When writing Tailwind CSS utility classes in component markup
-- When creating scoped component styles in `<style>` blocks within .astro files
-- When configuring Tailwind (tailwind.config.mjs) with custom colors, spacing, or breakpoints
-- When defining global styles in CSS files (e.g., src/styles/global.css)
-- When implementing CSS custom properties (CSS variables) for design tokens
-- When creating responsive layouts using CSS Grid or Flexbox
-- When implementing media queries for different screen sizes
-- When setting up dark mode theming with CSS or Tailwind's dark: variant
-- When writing CSS animations, transitions, or keyframe animations
-- When using BEM methodology for class naming in custom CSS
-- When optimizing CSS performance (critical CSS, lazy loading, purging unused styles)
+- When writing or editing CSS files (`.css`, `.scss`, `.sass`, `.less`)
+- When applying Tailwind CSS utility classes in component files
+- When using CSS modules or CSS-in-JS solutions
+- When implementing BEM methodology or other CSS naming conventions
+- When defining or using design tokens (colors, spacing, typography)
+- When creating or maintaining design systems
+- When styling React, Vue, or other framework components
+- When optimizing CSS for production (purging, tree-shaking)
+- When ensuring visual consistency across the application
+- When working with CSS frameworks (Tailwind, Bootstrap, etc.)
+- When implementing custom styles or theme configurations
+
+This Skill provides Claude Code with specific guidance on how to adhere to coding standards as they relate to how it should handle frontend CSS.
 
 ## Instructions
 

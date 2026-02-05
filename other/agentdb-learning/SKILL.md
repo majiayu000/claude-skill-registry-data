@@ -1,6 +1,15 @@
 ---
 name: "AgentDB Learning Plugins"
+version: "1.0.0"
 description: "Create and train AI learning plugins with AgentDB's 9 reinforcement learning algorithms. Includes Decision Transformer, Q-Learning, SARSA, Actor-Critic, and more. Use when building self-learning agents, implementing RL, or optimizing agent behavior through experience."
+category: ai-ml
+tags:
+  - agentdb
+  - reinforcement-learning
+  - machine-learning
+  - ai-training
+  - plugins
+author: Smith Horn
 ---
 
 # AgentDB Learning Plugins
@@ -125,14 +134,12 @@ npx agentdb@latest create-plugin -t decision-transformer -n dt-agent
 ```
 
 **Use Cases**:
-
 - Learn from historical data
 - Imitation learning from expert demonstrations
 - Safe learning without environment interaction
 - Sequence modeling tasks
 
 **Configuration**:
-
 ```json
 {
   "algorithm": "decision-transformer",
@@ -155,14 +162,12 @@ npx agentdb@latest create-plugin -t q-learning -n q-agent
 ```
 
 **Use Cases**:
-
 - Grid worlds, board games
 - Navigation tasks
 - Resource allocation
 - Discrete decision-making
 
 **Configuration**:
-
 ```json
 {
   "algorithm": "q-learning",
@@ -184,13 +189,11 @@ npx agentdb@latest create-plugin -t sarsa -n sarsa-agent
 ```
 
 **Use Cases**:
-
 - Safety-critical applications
 - Risk-sensitive decision-making
 - Online learning with exploration
 
 **Configuration**:
-
 ```json
 {
   "algorithm": "sarsa",
@@ -211,13 +214,11 @@ npx agentdb@latest create-plugin -t actor-critic -n ac-agent
 ```
 
 **Use Cases**:
-
 - Continuous control (robotics, simulations)
 - Complex action spaces
 - Multi-agent coordination
 
 **Configuration**:
-
 ```json
 {
   "algorithm": "actor-critic",
@@ -235,7 +236,6 @@ npx agentdb@latest create-plugin -t actor-critic -n ac-agent
 **Strengths**: Minimizes labeling cost, focuses on uncertain samples
 
 **Use Cases**:
-
 - Human feedback incorporation
 - Label-efficient training
 - Uncertainty sampling
@@ -248,7 +248,6 @@ npx agentdb@latest create-plugin -t actor-critic -n ac-agent
 **Strengths**: Improves model robustness, adversarial defense
 
 **Use Cases**:
-
 - Security applications
 - Robust decision-making
 - Adversarial defense
@@ -261,7 +260,6 @@ npx agentdb@latest create-plugin -t actor-critic -n ac-agent
 **Strengths**: Stable learning, faster convergence on hard tasks
 
 **Use Cases**:
-
 - Complex multi-stage tasks
 - Hard exploration problems
 - Skill composition
@@ -274,7 +272,6 @@ npx agentdb@latest create-plugin -t actor-critic -n ac-agent
 **Strengths**: Privacy-preserving, scalable
 
 **Use Cases**:
-
 - Multi-agent systems
 - Privacy-sensitive data
 - Distributed training
@@ -287,7 +284,6 @@ npx agentdb@latest create-plugin -t actor-critic -n ac-agent
 **Strengths**: Faster learning on new tasks, better generalization
 
 **Use Cases**:
-
 - Task families
 - Transfer learning
 - Domain adaptation
@@ -512,7 +508,6 @@ npx agentdb@latest list-templates
 ## Troubleshooting
 
 ### Issue: Training not converging
-
 ```typescript
 // Reduce learning rate
 await adapter.train({
@@ -523,7 +518,6 @@ await adapter.train({
 ```
 
 ### Issue: Overfitting
-
 ```typescript
 // Use validation split
 await adapter.train({
@@ -539,7 +533,6 @@ await adapter.retrieveWithReasoning(queryEmbedding, {
 ```
 
 ### Issue: Slow training
-
 ```bash
 # Enable quantization for faster inference
 # Use binary quantization (32x faster)
@@ -550,9 +543,9 @@ await adapter.retrieveWithReasoning(queryEmbedding, {
 ## Learn More
 
 - **Algorithm Papers**: See docs/algorithms/ for detailed papers
-- **GitHub**: <https://github.com/ruvnet/agentic-flow/tree/main/packages/agentdb>
+- **GitHub**: https://github.com/ruvnet/agentic-flow/tree/main/packages/agentdb
 - **MCP Integration**: `npx agentdb@latest mcp`
-- **Website**: <https://agentdb.ruv.io>
+- **Website**: https://agentdb.ruv.io
 
 ---
 

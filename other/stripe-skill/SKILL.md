@@ -1,339 +1,205 @@
 ---
-name: stripe
-slug: stripe-integration
-version: 1.0.0
-category: integration
-description: Complete Stripe payment integration with checkout, pricing, and subscription management
-triggers:
-  - pattern: "stripe|payment|checkout|subscription|pricing"
-    confidence: 0.8
-    examples:
-      - "add Stripe payments"
-      - "create checkout flow"
-      - "setup subscription billing"
-      - "integrate payment processing"
-      - "add pricing page with Stripe"
-mcp_dependencies:
-  - server: stripe
-    required: false
-    capabilities:
-      - "payments"
-      - "subscriptions"
+name: stripe-integration
+description: Guide for integrating Stripe payments into an existing project. Covers one-time payments, subscriptions, and advanced patterns with security best practices.
 ---
 
-# Stripe Integration Skill
+# Stripe Integration Guide
 
-Complete Stripe payment integration template with React components, hooks, and server-side setup. This template provides a production-ready payment flow with checkout, pricing cards, and subscription management.
+This skill helps you integrate Stripe into an existing project. It provides decision trees, code patterns, and security checklists.
 
-## Overview
+## Prerequisites
 
-This template includes:
-- **Stripe Client Setup** - Server-side Stripe SDK configuration
-- **React Hooks** - useStripeCheckout for payment flows
-- **UI Components** - CheckoutButton and PricingCard components
-- **Type Safety** - Full TypeScript support
-- **Error Handling** - Comprehensive error management
-- **Webhook Support** - Handle Stripe events
+- Stripe account (test mode is fine)
+- Node.js 18+ (or equivalent runtime)
+- Existing web application with backend capability
 
-## When to Use This Template
+## Step 1: Determine Integration Type
 
-Use this template when you need:
-- Payment processing integration
-- Subscription billing setup
-- One-time checkout flows
-- Pricing page implementation
-- Customer portal integration
-- Webhook event handling
+Ask the user these questions to determine the right pattern:
 
-## What's Included
+### Q1: What payment model do you need?
 
-### Code Files
+| Answer | Go to |
+|--------|-------|
+| One-time payment (buy a product/service once) | `patterns/one-time-checkout.md` |
+| Subscription (recurring billing) | `patterns/subscription.md` |
+| Usage-based billing (metered) | `patterns/usage-based.md` |
+| Custom payment flow (full control) | `patterns/payment-intent.md` |
 
-- `code/client.ts` - Stripe SDK setup and server-side utilities
-- `code/hooks.ts` - React hooks for checkout and payments
-- `code/components/checkout-button.tsx` - Checkout button component
-- `code/components/pricing-card.tsx` - Pricing display component
+### Q2: Do you need multi-party payments?
 
-### Configuration
+| Answer | Action |
+|--------|--------|
+| Yes (marketplace, platform fees) | Also read `patterns/connect.md` |
+| No | Skip Connect |
 
-- `mcp/config.json` - MCP server configuration for Stripe
-- `env/.env.template` - Required environment variables
+### Q3: What's your tech stack?
 
-### Documentation
+| Stack | Additional Guide |
+|-------|------------------|
+| Next.js (App Router) | `stacks/nextjs.md` |
+| Express.js | `stacks/express.md` |
+| Serverless (Vercel/Netlify Functions) | `stacks/serverless.md` |
+| Other | Use Express guide as reference |
 
-- `docs/README.md` - Complete setup and usage guide
+## Step 2: Core Principles (MUST READ)
 
-## Quick Start
+Before writing any code, understand these non-negotiable rules:
 
-1. **Install Dependencies**
-   ```bash
-   npm install stripe @stripe/stripe-js
-   ```
+### 2.1 Server-Side PaymentIntent Creation
 
-2. **Configure Environment Variables**
-   ```bash
-   cp templates/stripe/env/.env.template .env.local
-   # Add your Stripe keys
-   ```
+```javascript
+// WRONG - Client-side (attackers can modify amount)
+const paymentIntent = await stripe.paymentIntents.create({
+  amount: userProvidedAmount, // DANGEROUS!
+  currency: 'usd',
+});
 
-3. **Copy Template Files**
-   ```bash
-   # Use the template loader utility
-   npx tsx scripts/load-template.ts stripe
-   ```
+// CORRECT - Server-side with validated amount
+app.post('/create-payment-intent', async (req, res) => {
+  const { productId } = req.body;
+  const product = await db.products.findById(productId);
 
-4. **Create Stripe Products**
-   - Go to Stripe Dashboard
-   - Create products and prices
-   - Copy price IDs to your code
+  const paymentIntent = await stripe.paymentIntents.create({
+    amount: product.priceInCents, // From YOUR database
+    currency: 'usd',
+  });
 
-## Key Features
+  res.json({ clientSecret: paymentIntent.client_secret });
+});
+```
 
-### 1. Checkout Flow
+### 2.2 Webhook Idempotency
 
-Create seamless checkout experiences:
+Stripe may send the same event multiple times. You MUST handle duplicates:
 
-```typescript
-import { useStripeCheckout } from '@/lib/stripe/hooks'
+```javascript
+app.post('/webhook', async (req, res) => {
+  const event = stripe.webhooks.constructEvent(/*...*/);
 
-function PayButton() {
-  const { createCheckout, isLoading } = useStripeCheckout()
-
-  const handleCheckout = async () => {
-    await createCheckout({
-      priceId: 'price_1234',
-      successUrl: '/success',
-      cancelUrl: '/pricing',
-    })
+  // Check if already processed
+  const existing = await db.processedEvents.findById(event.id);
+  if (existing) {
+    return res.status(200).json({ received: true }); // Already handled
   }
 
-  return (
-    <button onClick={handleCheckout} disabled={isLoading}>
-      {isLoading ? 'Loading...' : 'Buy Now'}
-    </button>
-  )
-}
+  // Process the event
+  await handleEvent(event);
+
+  // Mark as processed
+  await db.processedEvents.create({ id: event.id, processedAt: new Date() });
+
+  res.status(200).json({ received: true });
+});
 ```
 
-### 2. Subscription Management
+### 2.3 Async Webhook Processing
 
-Handle recurring billing:
+Return 2xx immediately, process business logic asynchronously:
 
-```typescript
-import { createSubscription } from '@/lib/stripe/client'
+```javascript
+// WRONG - Synchronous processing (may timeout)
+app.post('/webhook', async (req, res) => {
+  const event = verifyEvent(req);
+  await sendEmail(event);           // Slow!
+  await updateDatabase(event);      // Slow!
+  await notifyExternalService(event); // May fail!
+  res.status(200).send();
+});
 
-const subscription = await createSubscription({
-  customerId: 'cus_1234',
-  priceId: 'price_recurring',
-  metadata: {
-    userId: user.id,
-  },
-})
+// CORRECT - Queue for async processing
+app.post('/webhook', async (req, res) => {
+  const event = verifyEvent(req);
+  await queue.add('stripe-event', event); // Fast enqueue
+  res.status(200).json({ received: true }); // Return immediately
+});
 ```
 
-### 3. Customer Portal
+### 2.4 Currency in Smallest Units
 
-Let customers manage subscriptions:
+Always use cents (or smallest unit), never dollars:
 
-```typescript
-import { createCustomerPortalSession } from '@/lib/stripe/client'
+```javascript
+// WRONG
+amount: 19.99  // Floating point errors!
 
-const portalUrl = await createCustomerPortalSession({
-  customerId: 'cus_1234',
-  returnUrl: '/dashboard',
-})
+// CORRECT
+amount: 1999   // $19.99 in cents
 ```
 
-### 4. Webhook Handling
+### 2.5 Environment Variables
 
-Process Stripe events:
-
-```typescript
-import { handleStripeWebhook } from '@/lib/stripe/webhooks'
-
-// app/api/webhooks/stripe/route.ts
-export async function POST(request: Request) {
-  const signature = request.headers.get('stripe-signature')!
-  const body = await request.text()
-
-  const event = await handleStripeWebhook(body, signature)
-
-  switch (event.type) {
-    case 'checkout.session.completed':
-      // Handle successful checkout
-      break
-    case 'customer.subscription.updated':
-      // Handle subscription changes
-      break
-  }
-
-  return new Response(JSON.stringify({ received: true }), {
-    status: 200,
-  })
-}
-```
-
-## Component Usage
-
-### Checkout Button
-
-```tsx
-import { CheckoutButton } from '@/components/stripe/checkout-button'
-
-<CheckoutButton
-  priceId="price_1234"
-  variant="primary"
-  size="lg"
->
-  Subscribe Now
-</CheckoutButton>
-```
-
-### Pricing Card
-
-```tsx
-import { PricingCard } from '@/components/stripe/pricing-card'
-
-<PricingCard
-  name="Pro Plan"
-  price={29}
-  interval="month"
-  features={[
-    'Unlimited projects',
-    'Advanced analytics',
-    'Priority support',
-  ]}
-  priceId="price_1234"
-  highlighted={true}
-/>
-```
-
-## Security Best Practices
-
-### Never Expose Secret Keys
-
-- Always use environment variables
-- Keep `STRIPE_SECRET_KEY` server-side only
-- Use `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` for client
-
-### Validate Webhooks
-
-- Always verify webhook signatures
-- Use Stripe's webhook secret
-- Handle duplicate events
-
-### Idempotency
-
-- Use idempotency keys for critical operations
-- Prevent duplicate charges
-- Handle retry scenarios
-
-## Testing
-
-### Test Mode
-
-All operations work in test mode:
+Never hardcode API keys:
 
 ```bash
-# Use test keys
-STRIPE_SECRET_KEY=sk_test_...
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_...
+# .env
+STRIPE_SECRET_KEY=sk_test_xxx
+STRIPE_PUBLISHABLE_KEY=pk_test_xxx
+STRIPE_WEBHOOK_SECRET=whsec_xxx
 ```
 
-### Test Cards
+```javascript
+// WRONG
+const stripe = require('stripe')('sk_test_xxx');
 
-- Success: `4242 4242 4242 4242`
-- Decline: `4000 0000 0000 0002`
-- 3D Secure: `4000 0025 0000 3155`
-
-### Webhook Testing
-
-```bash
-# Install Stripe CLI
-stripe listen --forward-to localhost:3000/api/webhooks/stripe
-
-# Trigger test events
-stripe trigger checkout.session.completed
+// CORRECT
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 ```
 
-## Common Patterns
+## Step 3: Implementation Checklist
 
-### One-Time Payment
+After implementing, verify these items:
 
-```typescript
-const checkout = await createCheckoutSession({
-  mode: 'payment',
-  lineItems: [
-    {
-      price: 'price_1234',
-      quantity: 1,
-    },
-  ],
-})
-```
+### Security Checklist
 
-### Subscription with Trial
+- [ ] API keys are in environment variables, not code
+- [ ] Webhook signature is verified
+- [ ] PaymentIntent is created server-side only
+- [ ] Amounts come from your database, not client requests
+- [ ] HTTPS is enforced in production
+- [ ] Webhook endpoint is not rate-limited by your own middleware
 
-```typescript
-const checkout = await createCheckoutSession({
-  mode: 'subscription',
-  lineItems: [
-    {
-      price: 'price_recurring',
-      quantity: 1,
-    },
-  ],
-  subscriptionData: {
-    trialPeriodDays: 14,
-  },
-})
-```
+### Reliability Checklist
 
-### Usage-Based Billing
+- [ ] Webhook events are deduplicated by event.id
+- [ ] Webhook handler returns 2xx within 5 seconds
+- [ ] Failed webhook processing is retried via queue
+- [ ] Database transactions wrap payment state changes
 
-```typescript
-await stripe.subscriptionItems.createUsageRecord(
-  'si_1234',
-  {
-    quantity: 100,
-    timestamp: Math.floor(Date.now() / 1000),
-  }
-)
-```
+### Testing Checklist
 
-## Troubleshooting
+- [ ] Tested with `4242 4242 4242 4242` (success)
+- [ ] Tested with `4000 0000 0000 0002` (decline)
+- [ ] Tested with `4000 0025 0000 3155` (requires 3D Secure)
+- [ ] Tested webhook with Stripe CLI: `stripe listen --forward-to localhost:3000/webhook`
+- [ ] Tested duplicate webhook handling
 
-### Common Errors
+## Step 4: Go-Live Checklist
 
-**"No such price"**
-- Verify price ID is correct
-- Check you're using the right API mode (test/live)
+Before switching to live mode:
 
-**"Invalid API Key"**
-- Ensure environment variables are set
-- Restart dev server after changing .env
+- [ ] Replace test keys with live keys
+- [ ] Update webhook endpoint in Stripe Dashboard
+- [ ] Verify webhook signing secret is updated
+- [ ] Test one real transaction with small amount
+- [ ] Set up monitoring/alerting for failed payments
+- [ ] Document refund process for support team
 
-**"Webhook signature verification failed"**
-- Check webhook secret is correct
-- Ensure raw body is passed to verification
+## Quick Reference: Test Card Numbers
 
-## Environment Variables
+| Card Number | Scenario |
+|-------------|----------|
+| `4242 4242 4242 4242` | Success |
+| `4000 0000 0000 0002` | Decline |
+| `4000 0025 0000 3155` | Requires 3D Secure |
+| `4000 0000 0000 9995` | Insufficient funds |
+| `4000 0000 0000 0069` | Expired card |
 
-Required variables (see `env/.env.template`):
+Any future expiry date and any 3-digit CVC will work in test mode.
 
-- `STRIPE_SECRET_KEY` - Server-side API key
-- `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` - Client-side publishable key
-- `STRIPE_WEBHOOK_SECRET` - Webhook signing secret
+## Related Documentation
 
-## Resources
-
-- [Stripe Documentation](https://stripe.com/docs)
-- [Stripe Dashboard](https://dashboard.stripe.com)
-- [Webhook Events Reference](https://stripe.com/docs/api/events/types)
-- [Test Cards](https://stripe.com/docs/testing)
-
----
-
-**Template Version:** 1.0.0
-**Last Updated:** 2026-01-04
-**Maintainer:** Turbocat Agent System
+- `essentials/webhook-handling.md` - Deep dive into webhooks
+- `essentials/error-handling.md` - Error categorization and recovery
+- `essentials/idempotency.md` - Preventing duplicate operations
+- `essentials/security-checklist.md` - Full security audit checklist

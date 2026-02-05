@@ -1,7 +1,6 @@
 ---
 name: learner
 description: Extract a learned skill from the current conversation
-user-invocable: true
 ---
 
 # Learner Skill
@@ -27,7 +26,7 @@ If a potential skill fails any of these questions, it's not worth saving.
 
 ## Recognition Pattern
 
-Use /learner ONLY after:
+Use /oh-my-gemini:learner ONLY after:
 - Solving a tricky bug that required deep investigation
 - Discovering a non-obvious workaround specific to this codebase
 - Finding a hidden gotcha that wastes time when forgotten
@@ -63,7 +62,7 @@ The system REJECTS skills that are:
 
 **Step 3: Save Location**
 
-- **User-level**: ~/.claude/skills/omc-learned/ - Rare. Only for truly portable insights.
+- **User-level**: ~/.gemini-cli/skills/omc-learned/ - Rare. Only for truly portable insights.
 - **Project-level**: .omc/skills/ - Default. Version-controlled with repo.
 
 ### What Makes a USEFUL Skill
@@ -132,5 +131,5 @@ If code helps, show it - but as illustration of the principle, not copy-paste ma
 
 ## Related Commands
 
-- /note - Save quick notes that survive compaction (less formal than skills)
-- /ralph - Start a development loop with learning capture
+- /oh-my-gemini:note - Save quick notes that survive compaction (less formal than skills)
+- /oh-my-gemini:ralph - Start a development loop with learning capture

@@ -1,12 +1,11 @@
 ---
 name: typescript-lsp
-description: REQUIRED for searching code in *.ts, *.tsx, *.js, *.jsx files. Use INSTEAD of Grep for TypeScript/JavaScript - provides type-aware symbol search that understands imports, exports, and relationships. Activate before reading, editing, or searching TypeScript code to verify signatures and find references.
+description: Search TypeScript SYMBOLS (functions, types, classes) - NOT text. Use Glob to find files, Grep for text search, LSP for symbol search. Provides type-aware results that understand imports, exports, and relationships.
 license: ISC
 compatibility: Requires bun
 allowed-tools: Bash
 metadata:
   file-triggers: "*.ts,*.tsx,*.js,*.jsx"
-  replaces-tools: Grep
 ---
 
 # TypeScript LSP Skill
@@ -24,14 +23,25 @@ Use these tools to:
 - **Verify before editing** - Check all usages before modifying or deleting exports
 - **Navigate code** - Jump to definitions, find implementations
 
-## When to Use LSP vs Grep/Glob
+## When to Use Each Tool
+
+| Tool | Purpose |
+|------|---------|
+| **Glob** | Find files by pattern |
+| **Grep** | Search text content |
+| **lsp-find** | Search TypeScript symbols |
+| **lsp-hover** | Get type info + TSDoc documentation |
+| **lsp-refs** | Find all references to a symbol |
+| **lsp-analyze** | Batch analysis of file structure |
+
+### LSP vs Grep/Glob
 
 | Task | Use LSP | Use Grep/Glob |
 |------|---------|---------------|
-| Find all usages of a function/type | ✅ `lsp-references` | ❌ Misses re-exports, aliases |
+| Find all usages of a function/type | ✅ `lsp-refs` | ❌ Misses re-exports, aliases |
 | Search for a symbol by name | ✅ `lsp-find` | ❌ Matches strings, comments |
+| Get type signature + TSDoc | ✅ `lsp-hover` | ❌ Not possible |
 | Understand file exports | ✅ `lsp-analyze --exports` | ❌ Doesn't resolve re-exports |
-| Get type signature | ✅ `lsp-hover` | ❌ Not possible |
 | Find files by pattern | ❌ | ✅ `Glob` |
 | Search non-TS files (md, json) | ❌ | ✅ `Grep` |
 | Search for text in comments/strings | ❌ | ✅ `Grep` |

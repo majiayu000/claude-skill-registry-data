@@ -1,160 +1,424 @@
 ---
-name: Notifications
-description: Push notifications and in-app alerts
+name: notifications
+description: Webhook payload schemas, provider configurations, event types, and retry logic for notification delivery
 ---
 
-# Notifications
+# Notifications Skill
+# Project Autopilot - Webhook notification system
+# Copyright (c) 2026 Jeremy McSpadden <jeremy@fluxlabs.net>
 
-## Setup
+Reference this skill for webhook configuration, payload formatting, and notification delivery.
 
-```typescript
-import * as Notifications from 'expo-notifications';
+---
 
-// Configure handler
-Notifications.setNotificationHandler({
-  handleNotification: async () => ({
-    shouldShowAlert: true,
-    shouldPlaySound: true,
-    shouldSetBadge: true,
-  }),
-});
-```
+## Provider Configurations
 
-## Request Permissions
+### Slack
 
-```typescript
-async function requestPermissions() {
-  const { status } = await Notifications.requestPermissionsAsync();
-  return status === 'granted';
+```json
+{
+  "provider": "slack",
+  "type": "incoming_webhook",
+  "setup_url": "https://api.slack.com/messaging/webhooks",
+  "url_format": "https://hooks.slack.com/services/T00/B00/xxx",
+  "features": ["attachments", "blocks", "buttons", "mentions"],
+  "rate_limit": "1 msg/sec"
 }
 ```
 
-## Local Notifications
-
-```typescript
-// Schedule immediate notification
-await Notifications.scheduleNotificationAsync({
-  content: {
-    title: 'New Chapter',
-    body: 'Manga X has a new chapter!',
-    data: { mangaId: '123', type: 'new_chapter' },
-  },
-  trigger: null, // Immediate
-});
-
-// Schedule delayed notification
-await Notifications.scheduleNotificationAsync({
-  content: {
-    title: 'Reminder',
-    body: 'Continue reading...',
-  },
-  trigger: { seconds: 3600 }, // 1 hour
-});
-
-// Cancel all
-await Notifications.cancelAllScheduledNotificationsAsync();
-```
-
-## Notification Listeners
-
-```typescript
-useEffect(() => {
-  // Notification received while app is open
-  const receivedSub = Notifications.addNotificationReceivedListener(
-    (notification) => {
-      console.log('Received:', notification);
-    }
-  );
-
-  // User tapped notification
-  const responseSub = Notifications.addNotificationResponseReceivedListener(
-    (response) => {
-      const data = response.notification.request.content.data;
-      if (data.type === 'new_chapter') {
-        navigation.navigate('MangaDetail', { mangaId: data.mangaId });
-      }
-    }
-  );
-
-  return () => {
-    receivedSub.remove();
-    responseSub.remove();
-  };
-}, []);
-```
-
-## Notification Service
-
-```typescript
-// services/notificationService.ts
-import * as Notifications from 'expo-notifications';
-
-export const notificationService = {
-  async notifyNewChapter(manga: Manga, chapter: Chapter) {
-    await Notifications.scheduleNotificationAsync({
-      content: {
-        title: manga.title,
-        body: `Chapter ${chapter.chapNum} is available`,
-        data: { mangaId: manga.id, chapterId: chapter.id },
-      },
-      trigger: null,
-    });
-  },
-
-  async notifyDownloadComplete(manga: Manga, chapterCount: number) {
-    await Notifications.scheduleNotificationAsync({
-      content: {
-        title: 'Download Complete',
-        body: `${manga.title} - ${chapterCount} chapters`,
-        data: { mangaId: manga.id, type: 'download' },
-      },
-      trigger: null,
-    });
-  },
-};
-```
-
-## Progress Notifications (Android)
-
-```typescript
-// For download progress, use BackgroundService notifications
-import BackgroundService from 'react-native-background-actions';
-
-await BackgroundService.updateNotification({
-  taskTitle: 'Downloading',
-  taskDesc: `${current}/${total} pages`,
-  progressBar: { max: total, value: current },
-});
-```
-
-## Badge Count
-
-```typescript
-// Set badge
-await Notifications.setBadgeCountAsync(5);
-
-// Clear badge
-await Notifications.setBadgeCountAsync(0);
-
-// Get badge
-const count = await Notifications.getBadgeCountAsync();
-```
-
-## App Config
+### Discord
 
 ```json
-// app.json
 {
-  "expo": {
-    "plugins": [
-      [
-        "expo-notifications",
+  "provider": "discord",
+  "type": "webhook",
+  "setup_url": "https://discord.com/developers/docs/resources/webhook",
+  "url_format": "https://discord.com/api/webhooks/{id}/{token}",
+  "features": ["embeds", "mentions", "files"],
+  "rate_limit": "5 msg/sec per channel"
+}
+```
+
+### Microsoft Teams
+
+```json
+{
+  "provider": "teams",
+  "type": "connector",
+  "setup_url": "https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/",
+  "url_format": "https://outlook.office.com/webhook/{guid}",
+  "features": ["adaptive_cards", "actions", "mentions"],
+  "rate_limit": "4 msg/sec per connector"
+}
+```
+
+### Generic Webhook
+
+```json
+{
+  "provider": "webhook",
+  "type": "http_post",
+  "url_format": "any valid URL",
+  "features": ["custom_payload", "custom_headers"],
+  "rate_limit": "none (user configured)"
+}
+```
+
+---
+
+## Payload Schemas
+
+### Slack Attachment Format
+
+```json
+{
+  "text": "Notification text (shown in notifications)",
+  "attachments": [
+    {
+      "fallback": "Plain text fallback",
+      "color": "#36a64f",
+      "pretext": "Optional text above attachment",
+      "author_name": "Autopilot",
+      "author_icon": "https://example.com/icon.png",
+      "title": "Attachment title",
+      "title_link": "https://example.com",
+      "text": "Attachment body text",
+      "fields": [
         {
-          "icon": "./assets/icon.png",
-          "color": "#FA6432"
+          "title": "Field Title",
+          "value": "Field value",
+          "short": true
+        }
+      ],
+      "footer": "Footer text",
+      "footer_icon": "https://example.com/footer.png",
+      "ts": 1706540400
+    }
+  ]
+}
+```
+
+### Slack Block Format
+
+```json
+{
+  "blocks": [
+    {
+      "type": "header",
+      "text": {
+        "type": "plain_text",
+        "text": "Phase Complete"
+      }
+    },
+    {
+      "type": "section",
+      "fields": [
+        {
+          "type": "mrkdwn",
+          "text": "*Phase:*\n003: Auth"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*Cost:*\n$0.85"
         }
       ]
-    ]
+    },
+    {
+      "type": "actions",
+      "elements": [
+        {
+          "type": "button",
+          "text": { "type": "plain_text", "text": "View Details" },
+          "url": "https://example.com/details"
+        }
+      ]
+    }
+  ]
+}
+```
+
+### Discord Embed Format
+
+```json
+{
+  "content": "Optional text outside embed",
+  "embeds": [
+    {
+      "title": "Embed Title",
+      "description": "Embed description",
+      "url": "https://example.com",
+      "color": 3066993,
+      "fields": [
+        {
+          "name": "Field Name",
+          "value": "Field Value",
+          "inline": true
+        }
+      ],
+      "author": {
+        "name": "Autopilot",
+        "icon_url": "https://example.com/icon.png"
+      },
+      "footer": {
+        "text": "Footer text",
+        "icon_url": "https://example.com/footer.png"
+      },
+      "timestamp": "2026-01-29T12:00:00.000Z"
+    }
+  ]
+}
+```
+
+### Teams MessageCard Format
+
+```json
+{
+  "@type": "MessageCard",
+  "@context": "http://schema.org/extensions",
+  "themeColor": "36a64f",
+  "summary": "Summary text",
+  "sections": [
+    {
+      "activityTitle": "Activity Title",
+      "activitySubtitle": "Subtitle",
+      "activityImage": "https://example.com/image.png",
+      "facts": [
+        {
+          "name": "Fact Name",
+          "value": "Fact Value"
+        }
+      ],
+      "markdown": true
+    }
+  ],
+  "potentialAction": [
+    {
+      "@type": "OpenUri",
+      "name": "View Details",
+      "targets": [
+        {
+          "os": "default",
+          "uri": "https://example.com"
+        }
+      ]
+    }
+  ]
+}
+```
+
+### Generic Webhook Format
+
+```json
+{
+  "event": "phase_complete",
+  "timestamp": "2026-01-29T12:00:00.000Z",
+  "project": {
+    "name": "my-project",
+    "path": "/path/to/project"
+  },
+  "phase": {
+    "id": "003",
+    "name": "Authentication",
+    "status": "complete"
+  },
+  "cost": {
+    "estimated": 0.85,
+    "actual": 0.92,
+    "variance": 8.2
+  },
+  "tasks": {
+    "total": 8,
+    "completed": 8
   }
 }
 ```
+
+---
+
+## Event Types
+
+### Lifecycle Events
+
+| Event | When Triggered | Data |
+|-------|----------------|------|
+| `phase_start` | Phase begins | Phase info, estimate |
+| `phase_complete` | Phase passes gate | Phase info, cost, tasks |
+| `build_complete` | All phases done | Summary stats |
+| `build_failed` | Error occurs | Error details |
+
+### Budget Events
+
+| Event | When Triggered | Data |
+|-------|----------------|------|
+| `budget_warning` | Warn threshold hit | Current cost, threshold |
+| `budget_alert` | Alert threshold hit | Current cost, threshold |
+| `budget_exceeded` | Max budget hit | Current cost, max |
+
+### State Events
+
+| Event | When Triggered | Data |
+|-------|----------------|------|
+| `checkpoint_created` | Save point made | Checkpoint info |
+| `rollback` | Rollback executed | From/to phases |
+| `project_paused` | Execution paused | Current state |
+| `project_resumed` | Execution resumed | Resume state |
+
+---
+
+## Color Codes
+
+### Status Colors
+
+| Status | Hex | Slack | Discord |
+|--------|-----|-------|---------|
+| Success | `#36a64f` | `good` | 3586615 |
+| Warning | `#ff9900` | `warning` | 16750848 |
+| Danger | `#ff0000` | `danger` | 16711680 |
+| Info | `#3498db` | N/A | 3447003 |
+
+### Usage
+
+```javascript
+// Slack
+{ "color": "good" }  // or "#36a64f"
+
+// Discord
+{ "color": 3586615 }  // Integer representation
+```
+
+---
+
+## Configuration Schema
+
+### Global Config Structure
+
+```json
+{
+  "notifications": {
+    "enabled": true,
+    "webhooks": {
+      "slack": {
+        "url": "https://hooks.slack.com/services/...",
+        "enabled": true,
+        "addedAt": "2026-01-29T00:00:00Z",
+        "lastTest": "2026-01-29T12:00:00Z",
+        "lastTestSuccess": true
+      },
+      "discord": {
+        "url": "https://discord.com/api/webhooks/...",
+        "enabled": true,
+        "addedAt": "2026-01-29T00:00:00Z"
+      }
+    },
+    "events": {
+      "phase_complete": ["slack", "discord"],
+      "build_complete": ["slack", "discord"],
+      "budget_alert": ["slack"],
+      "build_failed": ["slack", "discord"],
+      "checkpoint_created": []
+    },
+    "defaults": {
+      "retryOnFailure": true,
+      "maxRetries": 3,
+      "retryDelayMs": [1000, 5000, 30000]
+    }
+  }
+}
+```
+
+---
+
+## Retry Logic
+
+### Exponential Backoff
+
+```
+Attempt 1: Immediate
+Attempt 2: Wait 1 second
+Attempt 3: Wait 5 seconds
+Attempt 4: Wait 30 seconds
+(Give up after attempt 4)
+```
+
+### Retry Conditions
+
+| HTTP Status | Retry? | Reason |
+|-------------|--------|--------|
+| 200-299 | No | Success |
+| 400 | No | Bad request (fix payload) |
+| 401, 403 | No | Auth error (fix config) |
+| 404 | No | Endpoint not found |
+| 429 | Yes | Rate limited |
+| 500-599 | Yes | Server error |
+| Timeout | Yes | Network issue |
+
+---
+
+## Security Considerations
+
+### URL Storage
+
+- Store webhook URLs in global config only
+- Never log full URLs (mask tokens)
+- Validate URL format before storing
+
+### Payload Sanitization
+
+- Never include sensitive data in notifications
+- Mask API keys, tokens, passwords
+- Limit error messages to safe excerpts
+
+### Verification
+
+- Verify webhook URL on add
+- Re-verify periodically
+- Track delivery success rate
+
+---
+
+## Testing
+
+### Test Payload
+
+```json
+{
+  "text": "🧪 Autopilot Test Notification",
+  "attachments": [{
+    "color": "#3498db",
+    "title": "Test Notification",
+    "text": "This is a test from Autopilot notification system.",
+    "fields": [
+      { "title": "Project", "value": "my-project", "short": true },
+      { "title": "Time", "value": "2026-01-29 12:00:00", "short": true }
+    ],
+    "footer": "Autopilot • Test Mode"
+  }]
+}
+```
+
+### Verification Response
+
+```json
+{
+  "success": true,
+  "provider": "slack",
+  "latency_ms": 245,
+  "response": {
+    "ok": true
+  }
+}
+```
+
+---
+
+## Troubleshooting
+
+### Common Issues
+
+| Issue | Cause | Fix |
+|-------|-------|-----|
+| `429 Too Many Requests` | Rate limited | Wait and retry |
+| `400 Bad Request` | Invalid payload | Check format |
+| `404 Not Found` | Webhook deleted | Reconfigure |
+| `Timeout` | Network issue | Check connectivity |
+| `SSL Error` | Cert issue | Update CA certs |

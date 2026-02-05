@@ -1,8 +1,3 @@
----
-name: claude-code
-description: "Claude Code CLI tool expertise. Features: autonomous coding, slash commands, MCP servers, Agent Skills, hooks, plugins, CI/CD integration. Capabilities: setup/config, troubleshooting, skill creation, MCP integration, enterprise deployment, workflow automation. Actions: configure, troubleshoot, create, deploy, integrate Claude Code. Keywords: Claude Code, Anthropic, CLI tool, slash command, MCP server, Agent Skill, hook, plugin, CI/CD, enterprise, CLAUDE.md, agentic coding, terminal tool, workflow automation, code generation, skill creation, configuration, authentication, API key. Use when: learning Claude Code features, configuring settings, creating skills/hooks, setting up MCP servers, troubleshooting issues, CI/CD integration, enterprise deployment questions."
----
-
 # Claude Code Expert
 
 Claude Code is Anthropic's agentic coding tool that lives in the terminal and helps turn ideas into code faster. It combines autonomous planning, execution, and validation with extensibility through skills, plugins, MCP servers, and hooks.
@@ -10,6 +5,7 @@ Claude Code is Anthropic's agentic coding tool that lives in the terminal and he
 ## When to Use This Skill
 
 Use when users need help with:
+
 - Understanding Claude Code features and capabilities
 - Installation, setup, and authentication
 - Using slash commands for development workflows
@@ -24,6 +20,7 @@ Use when users need help with:
 - Cost tracking and optimization
 
 **Activation examples:**
+
 - "How do I use Claude Code?"
 - "What slash commands are available?"
 - "How to set up MCP servers?"
@@ -50,17 +47,20 @@ Use when users need help with:
 Load these references when needed for detailed guidance:
 
 ### Getting Started
+
 - **Installation & Setup**: `references/getting-started.md`
   - Prerequisites, installation methods, authentication, first run
 
 ### Development Workflows
+
 - **Slash Commands**: `references/slash-commands.md`
-  - Complete command catalog: /cook, /plan, /debug, /test, /fix:*, /docs:*, /git:*, /design:*, /content:*
+  - Complete command catalog: /cook, /plan, /debug, /test, /fix:_, /docs:_, /git:_, /design:_, /content:\*
 
 - **Agent Skills**: `references/agent-skills.md`
   - Creating skills, skill.json format, best practices, API usage
 
 ### Integration & Extension
+
 - **MCP Integration**: `references/mcp-integration.md`
   - Configuration, common servers, remote servers
 
@@ -68,10 +68,12 @@ Load these references when needed for detailed guidance:
   - Hook types, configuration, environment variables, plugin structure, installation
 
 ### Configuration & Settings
+
 - **Configuration**: `references/configuration.md`
   - Settings hierarchy, key settings, model configuration, output styles
 
 ### Enterprise & Production
+
 - **Enterprise Features**: `references/enterprise-features.md`
   - IAM, SSO, RBAC, sandboxing, audit logging, deployment options, monitoring
 
@@ -82,6 +84,7 @@ Load these references when needed for detailed guidance:
   - GitHub Actions, GitLab CI/CD workflow examples
 
 ### Advanced Usage
+
 - **Advanced Features**: `references/advanced-features.md`
   - Extended thinking, prompt caching, checkpointing, memory management
 
@@ -97,6 +100,7 @@ Load these references when needed for detailed guidance:
 ## Common Workflows
 
 ### Feature Implementation
+
 ```bash
 /cook implement user authentication with JWT
 # Or plan first
@@ -104,6 +108,7 @@ Load these references when needed for detailed guidance:
 ```
 
 ### Bug Fixing
+
 ```bash
 /fix:fast the login button is not working
 /debug the API returns 500 errors intermittently
@@ -111,6 +116,7 @@ Load these references when needed for detailed guidance:
 ```
 
 ### Code Review & Testing
+
 ```bash
 claude "review my latest commit"
 /test
@@ -118,6 +124,7 @@ claude "review my latest commit"
 ```
 
 ### Documentation
+
 ```bash
 /docs:init      # Create initial documentation
 /docs:update    # Update existing docs
@@ -125,6 +132,7 @@ claude "review my latest commit"
 ```
 
 ### Git Operations
+
 ```bash
 /git:cm                    # Stage and commit
 /git:cp                    # Stage, commit, and push
@@ -132,6 +140,7 @@ claude "review my latest commit"
 ```
 
 ### Design & Content
+
 ```bash
 /design:fast create landing page for SaaS product
 /content:good write product description for new feature
@@ -145,8 +154,10 @@ When responding to Claude Code questions:
 2. **Load relevant references** from the Quick Reference section above
 3. **Provide specific guidance** using information from loaded references
 4. **Include examples** when helpful
+5. **Reference documentation links** from llms.txt when appropriate
 
 **Loading references:**
+
 - Read reference files only when needed for the specific question
 - Multiple references can be loaded for complex queries
 - Use grep patterns if searching within references
@@ -178,10 +189,8 @@ When responding to Claude Code questions:
 **For best practices:** Load `references/best-practices.md`
 
 **Documentation links:**
-- llms.txt: https://context7.com/websites/claude_en_claude-code/llms.txt?tokens=10000
-  - Search for specific topics: `https://context7.com/websites/claude_en_claude-code/llms.txt?topic=<topic>&tokens=5000`
-  - Eg. Search for "subagent": `https://context7.com/websites/claude_en_claude-code/llms.txt?topic=subagent&tokens=5000`
-- Main docs: https://docs.claude.com/en/docs/claude-code/
+
+- Main docs: https://docs.claude.com/claude-code
 - GitHub: https://github.com/anthropics/claude-code
 - Support: support.claude.com
 

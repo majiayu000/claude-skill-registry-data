@@ -1,357 +1,108 @@
 ---
 name: pr-operations
-description: Pull request lifecycle procedures including create, CI check, merge, and review.
+description: Use when working with PR review comments, resolving threads, or replying to discussion comments. Essential for understanding the correct erk exec commands for PR thread operations.
 ---
 
 # PR Operations Skill
 
-Pull request lifecycle procedures including create, CI check, merge, and review.
+## Core Rule
 
-## When Used
+> **CRITICAL: Use ONLY `erk exec` Commands for PR Thread Operations**
+>
+> - ❌ DO NOT use raw `gh api` calls for thread operations
+> - ❌ DO NOT use `gh pr` commands directly for thread resolution
+> - ✅ ONLY use `erk exec` commands listed below
+>
+> The `erk exec` commands handle thread resolution correctly. Raw API calls only reply without resolving.
 
-| Agent    | Phase       |
-| -------- | ----------- |
-| pr-agent | All actions |
+## Quick Reference
 
-## CLI Tools
+| Command                       | Purpose                         | Key Point                      |
+| ----------------------------- | ------------------------------- | ------------------------------ |
+| `get-pr-review-comments`      | Fetch unresolved review threads | Returns threads with line info |
+| `get-pr-discussion-comments`  | Fetch PR discussion comments    | Returns top-level comments     |
+| `resolve-review-thread`       | Reply AND resolve a thread      | Does both in one operation     |
+| `reply-to-discussion-comment` | Reply to discussion comment     | For non-code feedback          |
+| `post-pr-inline-comment`      | Post new inline comment         | Creates new review thread      |
 
-All operations use GitHub CLI (`gh`):
+## When to Use Each Command
 
-```bash
-# Verify gh CLI is authenticated
-gh auth status
-
-# If not authenticated, run:
-gh auth login
-```
-
-### gh CLI Command Reference
-
-| Operation            | Command                                                       |
-| -------------------- | ------------------------------------------------------------- |
-| List PRs             | `gh pr list`                                                  |
-| View PR              | `gh pr view <number>`                                         |
-| Create PR            | `gh pr create --title "..." --body "..."`                     |
-| Merge PR             | `gh pr merge <number> --squash --delete-branch`               |
-| Review PR            | `gh pr review <number> --approve/--comment/--request-changes` |
-| Check CI             | `gh pr checks <number>`                                       |
-| PR Diff              | `gh pr diff <number>`                                         |
-| Close PR             | `gh pr close <number>`                                        |
-| View PR comments     | `gh api repos/{owner}/{repo}/pulls/<number>/comments`         |
-| View review comments | `gh api repos/{owner}/{repo}/pulls/<number>/reviews`          |
-| View issue comments  | `gh pr view <number> --comments`                              |
-
-**Note:** For `{owner}/{repo}`, use: `gh repo view --json owner,name -q '"\(.owner.login)/\(.name)"'`
-
-### Viewing PR Comments
+### Fetching Comments
 
 ```bash
-# View conversation/issue-style comments on PR
-gh pr view <number> --comments
+# Get all unresolved review threads (code comments)
+erk exec get-pr-review-comments
 
-# View inline code review comments (requires API)
-gh api repos/{owner}/{repo}/pulls/<number>/comments
+# Get all discussion comments (top-level PR comments)
+erk exec get-pr-discussion-comments
 
-# View reviews with their comments
-gh api repos/{owner}/{repo}/pulls/<number>/reviews
-
-# Get owner/repo from current directory
-gh repo view --json owner,name -q '"\(.owner.login)/\(.name)"'
+# Include resolved threads (for reference)
+erk exec get-pr-review-comments --all
 ```
 
-**For Linear issue linking:** Include `Fixes LIN-123` in PR body to auto-link.
-
-**Note:** The github MCP server has been replaced with `gh` CLI. All GitHub operations use Bash tool with gh commands.
-
-## Procedures
-
-### 1. Create PR
-
-Create a pull request from current branch:
-
-**Pre-requisites:**
+### Resolving Review Threads
 
 ```bash
-# Ensure branch is pushed
-git push -u origin <branch>
-
-# Verify all checks pass locally
-pnpm lint && pnpm typecheck && pnpm test:run
+# Always use this to resolve review threads - it replies AND resolves
+erk exec resolve-review-thread --thread-id "PRRT_abc123" --comment "Fixed in commit abc1234"
 ```
 
-**Create PR:**
+### Replying to Discussion Comments
 
 ```bash
-gh pr create --title "<type>: <description>" --body "$(cat <<'EOF'
-## Summary
-
-- <bullet point 1>
-- <bullet point 2>
-
-## Test Plan
-
-- [ ] Unit tests pass
-- [ ] Type checks pass
-- [ ] Manual testing completed
-
-🤖 Generated with Claude Code
-EOF
-)"
+# For PR discussion comments (not code review threads)
+erk exec reply-to-discussion-comment --comment-id 12345 --reply "**Action taken:** Updated the docs as requested."
 ```
 
-**With Linear issue linking:**
+## Common Mistakes
 
-```bash
-gh pr create --title "<type>: <description>" --body "$(cat <<'EOF'
-## Summary
+| Mistake                                        | Why It's Wrong                | Correct Approach                      |
+| ---------------------------------------------- | ----------------------------- | ------------------------------------- |
+| Using `gh api repos/.../comments/{id}/replies` | Only replies, doesn't resolve | Use `erk exec resolve-review-thread`  |
+| Using `gh pr comment`                          | Doesn't resolve threads       | Use `erk exec resolve-review-thread`  |
+| Skipping resolution for outdated threads       | Threads stay open in PR       | Always resolve, even if already fixed |
+| Generic replies like "Noted"                   | Not useful for PR history     | Include investigation findings        |
 
-- <bullet points>
+## Replying vs Resolving
 
-Fixes LIN-123
+> **IMPORTANT: Replying ≠ Resolving**
+>
+> - **Replying** (via raw `gh api .../replies`): Adds a comment but thread stays OPEN
+> - **Resolving** (via `erk exec resolve-review-thread`): Adds a comment AND marks thread as RESOLVED
+>
+> Always use `erk exec resolve-review-thread` - it does both in one operation.
 
-## Test Plan
+## Comment Classification Model
 
-- [ ] Tests pass
+When analyzing PR feedback, classify comments by complexity and group into batches.
 
-🤖 Generated with Claude Code
-EOF
-)"
-```
+### Complexity Categories
 
----
+- **Local fix**: Single comment → single location change (e.g., "Fix typo", "Add type annotation")
+- **Multi-location**: Single comment → changes in multiple spots in one file
+- **Cross-cutting**: Single comment → changes across multiple files
+- **Related**: Multiple comments that inform a single unified change
 
-### 2. Create Draft PR
+### Batch Ordering
 
-Create a work-in-progress PR:
+Process batches from simplest to most complex:
 
-```bash
-gh pr create --draft --title "WIP: <description>" --body "$(cat <<'EOF'
-## Summary
+| Batch | Complexity                 | Description                         | Example                                                   |
+| ----- | -------------------------- | ----------------------------------- | --------------------------------------------------------- |
+| 1     | Local fixes                | One file, one location per comment  | "Use LBYL pattern at line 42"                             |
+| 2     | Single-file multi-location | One file, multiple locations        | "Rename this variable everywhere in this file"            |
+| 3     | Cross-cutting              | Multiple files affected             | "Update all callers of this function"                     |
+| 4     | Complex/Related            | Multiple comments inform one change | "Fold validate into prepare" + "Use union types for this" |
 
-Work in progress - not ready for review.
+**Note**: Discussion comments requiring doc updates go in Batch 3 (cross-cutting).
 
-## TODO
+### Batch Confirmation Flow
 
-- [ ] Item 1
-- [ ] Item 2
+- **Batch 1-2 (simple)**: Auto-proceed without confirmation
+- **Batch 3-4 (complex)**: Show plan and wait for user approval
 
-🤖 Generated with Claude Code
-EOF
-)"
-```
+## Detailed Documentation
 
----
+For complete command documentation including JSON output formats, options, and examples:
 
-### 3. Check CI Status
-
-Monitor CI/CD pipeline:
-
-```bash
-# Get PR number
-gh pr view --json number -q .number
-
-# Check status
-gh pr checks <number>
-```
-
-**Poll until complete:**
-
-```bash
-# Wait for checks to complete
-gh pr checks <number> --watch
-```
-
-**Interpret results:**
-
-| Status  | Meaning                   | Action         |
-| ------- | ------------------------- | -------------- |
-| pass    | All checks passed         | Ready to merge |
-| fail    | One or more checks failed | Fix and push   |
-| pending | Checks still running      | Wait           |
-
----
-
-### 4. Merge PR
-
-Merge after CI passes:
-
-**Squash merge (default, recommended):**
-
-```bash
-gh pr merge <number> --squash --delete-branch
-```
-
-**Merge commit:**
-
-```bash
-gh pr merge <number> --merge --delete-branch
-```
-
-**Rebase merge:**
-
-```bash
-gh pr merge <number> --rebase --delete-branch
-```
-
-**Post-merge cleanup:**
-
-```bash
-git checkout main
-git pull origin main
-```
-
----
-
-### 5. Review PR
-
-Analyze a PR for review:
-
-**Get PR info:**
-
-```bash
-gh pr view <number>
-gh pr diff <number>
-gh pr view <number> --json files,additions,deletions
-```
-
-**Review checklist:**
-
-1. **Code quality**
-   - Functions < 30 lines
-   - No deep nesting
-   - Clear naming
-
-2. **Security**
-   - No hardcoded secrets
-   - Input validation
-   - No console.log
-
-3. **Testing**
-   - Tests for new code
-   - Tests pass
-   - Coverage adequate
-
-4. **Patterns**
-   - Follows project conventions
-   - Uses established patterns
-   - No unnecessary abstraction
-
-**Submit review:**
-
-```bash
-# Approve
-gh pr review <number> --approve --body "LGTM"
-
-# Request changes
-gh pr review <number> --request-changes --body "Please address:
-- Issue 1
-- Issue 2"
-
-# Comment only
-gh pr review <number> --comment --body "Suggestions:
-- Consider X"
-```
-
----
-
-### 6. Update PR
-
-Add commits to an existing PR:
-
-```bash
-# Make changes
-git add <files>
-git commit -m "fix: address review feedback"
-git push
-```
-
-**Force push after rebase:**
-
-```bash
-git rebase origin/main
-git push --force-with-lease
-```
-
----
-
-### 7. Close PR
-
-Close without merging:
-
-```bash
-gh pr close <number>
-```
-
-**With deletion of branch:**
-
-```bash
-gh pr close <number> --delete-branch
-```
-
-## Error Handling
-
-| Error          | How to Handle                             |
-| -------------- | ----------------------------------------- |
-| CI failing     | Check logs: `gh pr checks <n> --web`      |
-| Merge conflict | Rebase and resolve: `git rebase main`     |
-| Not pushed     | Push first: `git push -u origin <branch>` |
-| No permission  | Request access or ask maintainer          |
-| Draft PR       | Mark ready: `gh pr ready <number>`        |
-
-## Output
-
-### PR Created
-
-```markdown
-## PR Created
-
-**URL:** https://github.com/owner/repo/pull/123
-
-**Title:** feat: add prompt manager CRUD
-
-**Status:** Ready for review
-
-**Next Steps:**
-
-1. Wait for CI to pass
-2. Request review if needed
-3. Address feedback
-4. Merge when approved
-```
-
-### PR Merged
-
-```markdown
-## PR Merged
-
-**PR:** #123 - feat: add prompt manager CRUD
-
-**Merge Type:** Squash
-
-**Branch Deleted:** Yes
-
-**Local Cleanup:**
-
-- Switched to main
-- Pulled latest changes
-```
-
-### PR Review
-
-```markdown
-## PR Review: #123
-
-**Verdict:** APPROVE / REQUEST_CHANGES / COMMENT
-
-**Summary:**
-
-- <finding 1>
-- <finding 2>
-
-**Issues Found:**
-
-1. [CRITICAL] <issue>
-2. [SUGGESTION] <suggestion>
-
-**Recommendation:** <action>
-```
+@references/commands.md

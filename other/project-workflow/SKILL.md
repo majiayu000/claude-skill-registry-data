@@ -1,220 +1,258 @@
 ---
-name: Project Workflow & Build System
-description: Guides AI agents through TDD workflow, build system safety, git operations, and TODO management for gem development. Use this when starting development sessions, managing tasks, or needing workflow clarification.
+name: project-workflow
+description: |
+  Nine integrated slash commands for complete project lifecycle: /explore-idea, /plan-project, /plan-feature, /wrap-session, /continue-session, /workflow, /release, /brief, /reflect.
+
+  Use when starting projects, managing sessions across context windows, capturing learnings, or preparing releases. Saves 35-55 minutes per lifecycle.
+user-invocable: true
 ---
 
-# Project Workflow & Build System
+# Project Workflow Skill
 
-Development workflow, build system permissions, and git safety protocols for PicoRuby development.
+9 integrated slash commands for complete project lifecycle automation: idea validation → planning → execution → session management → context preservation → release.
 
-## Your Role
+**Time savings**: 35-55 minutes per project lifecycle
 
-**You are the developer of the `pra` gem** — a CLI tool for PicoRuby application development on ESP32.
+## Installation
 
-- **Primary role**: Implement and maintain the `pra` gem itself
-- **User perspective**: Temporarily adopt when designing user-facing features (commands, templates, documentation)
-- **Key distinction**:
-  - Files in `lib/picotorokko/`, `test/`, gem configuration → You develop these
-  - Files in `docs/github-actions/`, templates → These are for `pra` users (not executed during gem development)
-  - When `pra` commands are incomplete, add to TODO.md — don't rush implementation unless explicitly required
+**Marketplace**: `/plugin install project-workflow@claude-skills`
 
-## Directory Structure
+**Manual**: Copy `commands/*.md` to `~/.claude/commands/`
+
+## The 7 Commands
+
+### 1. `/explore-idea` - Pre-Planning Exploration
+
+**Use when**: Rough idea that needs tech stack validation, scope management, or research before planning.
+
+**Creates**: PROJECT_BRIEF.md with validated decisions → hands off to /plan-project
+
+**Time savings**: 10-15 min
+
+---
+
+### 2. `/plan-project` - Generate Project Planning Docs
+
+**Use when**: Starting new project with clear requirements, or after /explore-idea.
+
+**Creates**: IMPLEMENTATION_PHASES.md, SESSION.md, DATABASE_SCHEMA.md (if needed), API_ENDPOINTS.md (if needed), ARCHITECTURE.md
+
+**Invokes**: project-planning skill
+
+**Time savings**: 5-7 min
+
+---
+
+### 3. `/plan-feature` - Add Features to Existing Projects
+
+**Use when**: Adding feature to existing project with SESSION.md + IMPLEMENTATION_PHASES.md.
+
+**Does**: Generates new phases via project-planning skill, integrates into IMPLEMENTATION_PHASES.md with renumbering, updates SESSION.md.
+
+**Time savings**: 7-10 min
+
+---
+
+### 4. `/wrap-session` - End-of-Session Checkpoint
+
+**Use when**: Context full (>150k tokens), end of work session, or before task switch.
+
+**Does**: Task agent analyzes session → updates SESSION.md (progress, Next Action, blockers) → git checkpoint commit → formatted handoff summary.
+
+**Time savings**: 2-3 min
+
+---
+
+### 5. `/continue-session` - Start-of-Session Context Loading
+
+**Use when**: Starting new session or after /wrap-session checkpoint.
+
+**Does**: Explore agent loads SESSION.md + planning docs → shows git history + session summary (phase, progress, Next Action, blockers) → optionally opens file → asks permission to continue.
+
+**Time savings**: 1-2 min
+
+---
+
+### 6. `/workflow` - Interactive Workflow Guide
+
+**Use when**: First time user, unsure which command to use, or need quick reference.
+
+**Does**: Shows all 7 commands → context-aware guidance with decision trees → offers to execute appropriate command.
+
+---
+
+### 7. `/release` - Pre-Release Safety Checks
+
+**Use when**: Ready to push to public GitHub or create release.
+
+**8 Phases**:
+1. **Critical Safety** (BLOCKERS): Secrets scan (gitleaks), personal artifacts check, git remote verification
+2. **Documentation** (REQUIRED): LICENSE, README (>100 words), CONTRIBUTING.md (>500 LOC), CODE_OF_CONDUCT (>1000 LOC)
+3. **Configuration**: .gitignore, package.json, git branch warning
+4. **Quality** (NON-BLOCKING): Build test, npm audit, large files (>1MB)
+5. **Report**: Blockers/warnings/recommendations + safe to release verdict
+6-8. **Auto-Fix & Publish**: Fix issues, release prep commit, optional git tag + GitHub release
+
+**Time savings**: 10-15 min
+
+---
+
+### 8. `/brief` - Context Preservation Document
+
+**Use when**: Before clearing context, to preserve key decisions and requirements for future sessions.
+
+**Creates**: `docs/brief-[slug].md` with extracted information from current conversation.
+
+**Does**: Analyzes conversation → extracts what's being built, decisions made, technical details → creates organized markdown file → optionally creates GitHub issue for tracking.
+
+**Time savings**: 3-5 min
+
+---
+
+### 9. `/reflect` - Capture Operational Knowledge
+
+**Use when**: Before context compaction, after completing significant work, or when valuable learnings accumulated.
+
+**Does**: Reviews conversation → identifies workflows discovered, patterns learned, tool sequences, corrections made → routes each learning to appropriate destination (rules, CLAUDE.md, skills, docs) → optionally suggests automation (scripts, commands, custom agents).
+
+**Key Feature**: Considers whether processes should become custom agents when they require reasoning/decisions, benefit from parallel execution, or involve research/exploration.
+
+**Time savings**: 5-10 min
+
+---
+
+## Workflow Examples
+
+**Full**: /explore-idea → /plan-project → work → /wrap-session → /continue-session → /plan-feature (if needed) → repeat → /reflect → /release
+
+**Quick** (clear requirements): /plan-project → work → /wrap-session → /continue-session → /release
+
+**Context Preservation**: /brief (before clearing context), /reflect (capture learnings)
+
+**Helpers**: /workflow (guidance), /plan-feature (add feature), /release (publish)
+
+---
+
+## Integration
+
+**project-planning**: Invoked by /plan-project and /plan-feature (generates IMPLEMENTATION_PHASES.md, DATABASE_SCHEMA.md, API_ENDPOINTS.md)
+
+**project-session-management**: SESSION.md protocol for /wrap-session and /continue-session
+
+**Claude Code agents**: /wrap-session (Task agent), /continue-session + /explore-idea (Explore agent)
+
+---
+
+## Command Relationships
 
 ```
-.
-├── lib/picotorokko/                   # Gem implementation
-├── test/                      # Test suite
-├── docs/github-actions/       # User-facing templates
-├── storage/home/              # Example application code
-├── patch/                     # Repository patches
-├── .cache/                    # Cached repositories (git-ignored)
-├── build/                     # Build environments (git-ignored)
-└── TODO.md                    # Task tracking
+EXPLORATION PHASE
+/explore-idea (optional)
+    ↓
+    Creates PROJECT_BRIEF.md
+    ↓
+PLANNING PHASE
+/plan-project (reads PROJECT_BRIEF.md if exists)
+    ↓
+    Creates IMPLEMENTATION_PHASES.md + SESSION.md
+    ↓
+EXECUTION PHASE
+Work on phases
+    ↓
+/wrap-session (when context full)
+    ↓
+    Updates SESSION.md, git checkpoint
+    ↓
+/continue-session (new session)
+    ↓
+    Loads SESSION.md, continues work
+    ↓
+/plan-feature (when need new features)
+    ↓
+    Adds phases to IMPLEMENTATION_PHASES.md
+    ↓
+Continue wrap → resume cycle
+    ↓
+CONTEXT PRESERVATION
+/brief (before clearing context)
+    ↓
+    Creates docs/brief-[slug].md
+    ↓
+/reflect (capture learnings)
+    ↓
+    Routes knowledge to rules, docs, CLAUDE.md
+    ↓
+RELEASE PHASE
+/release (when ready to publish)
+    ↓
+    Safety checks → GitHub release
+
+HELPER
+/workflow (anytime)
+    ↓
+    Interactive guidance
 ```
 
-## Rake Commands Permissions
+---
 
-### ✅ Always Allowed (Safe, Read-Only)
+## Time Savings Breakdown
 
-```bash
-rake monitor      # Watch UART output in real-time
-rake check_env    # Verify ESP32 and build environment
-```
+| Command | Time Saved | Tasks Automated |
+|---------|------------|-----------------|
+| `/explore-idea` | 10-15 min | Research, validation, scope management, tech stack evaluation |
+| `/plan-project` | 5-7 min | Planning doc generation, git setup, phase structuring |
+| `/plan-feature` | 7-10 min | Feature planning, phase integration, doc updates |
+| `/wrap-session` | 2-3 min | SESSION.md updates, git checkpoint, handoff summary |
+| `/continue-session` | 1-2 min | Context loading, git history review, next action display |
+| `/workflow` | Instant | Navigation, decision trees, command selection |
+| `/release` | 10-15 min | Secret scanning, doc validation, build testing, release creation |
+| `/brief` | 3-5 min | Context extraction, decisions capture, markdown generation |
+| `/reflect` | 5-10 min | Learning extraction, knowledge routing, automation suggestions |
 
-### ❓ Ask First (Time-Consuming)
+**Total per project lifecycle:** 45-70 minutes
 
-```bash
-rake build        # Compile firmware (2-5 min)
-rake cleanbuild   # Clean + rebuild
-rake flash        # Upload to hardware (requires device)
-```
+---
 
-### 🚫 Never Execute (Destructive)
+## Prerequisites
 
-```bash
-rake init         # Contains git reset --hard
-rake update       # Destructive git operations
-rake buildall     # Combines destructive ops
-```
+**All**: Claude Code CLI, git repo (recommended)
 
-**Rationale**: Protect work-in-progress from accidental `git reset --hard`.
+**/plan-feature**: Existing SESSION.md + IMPLEMENTATION_PHASES.md
 
-## Git Safety Protocol
+**/wrap-session, /continue-session**: SESSION.md (created by /plan-project)
 
-- ✅ Use `commit` subagent for all commits
-- ❌ Never: `git push`, `git push --force`, raw `git commit`
-- ❌ Never: `git reset --hard`, `git rebase -i`
-- ✅ Safe: `git status`, `git log`, `git diff`
+**/release**: Git repo with commits, package.json (Node.js), remote URL (for publishing)
 
-## Session Flow: Tidy First + TDD + RuboCop + TODO Management
+---
 
-### Understanding TODO.md Structure (CRITICAL)
+## Troubleshooting
 
-**Important**: TODO.md is NOT just a checklist — it's a **workflow guide** supporting t-wada style TDD.
+**/plan-project "No project description"**: Use /explore-idea first or discuss project with Claude
 
-**Key concepts**:
-- **Each TODO task** = exactly one Micro-Cycle (1-5 minutes)
-- **Phase structure** = Organized chunks of related tasks
-- **[TODO-INFRASTRUCTURE-*] markers** = Cross-phase dependencies that MUST be resolved before proceeding
-- **Test-first architecture** = Phase 0 (Test Infrastructure) comes BEFORE all feature work
+**/plan-feature "Prerequisites not met"**: Run /plan-project first (creates SESSION.md + IMPLEMENTATION_PHASES.md)
 
-**When starting a phase**:
-1. Read the phase description carefully
-2. Look for "⚠️ Check for [TODO-INFRASTRUCTURE-*]" warnings
-3. If any [TODO-INFRASTRUCTURE-*] markers exist from previous phases:
-   - STOP
-   - Review what they mean
-   - Resolve them in TDD cycles BEFORE proceeding
-4. Start first task in the phase
+**/wrap-session "No git repository"**: Run `git init`
 
-**Example from picotorokko refactoring**:
-- Phase 0 discovers: `[TODO-INFRASTRUCTURE-DEVICE-COMMAND]` (Thor env name parsing)
-- Phase 2 proceeds normally
-- Phase 5 has warning: "Check [TODO-INFRASTRUCTURE-DEVICE-COMMAND] before starting"
-- Must resolve in Phase 5 TDD before moving to documentation
+**/continue-session "SESSION.md not found"**: Run /plan-project
 
-### Micro-Cycle (1-5 minutes per iteration)
+**/release "Secrets detected"**: Add to .gitignore, remove from git history
 
-**Goal**: Complete one Red-Green-RuboCop-Refactor-Commit cycle per TODO task
+---
 
-```
-1. RED: Write one failing test
-   bundle exec rake test → Verify failure ❌
+## Version History
 
-2. GREEN: Write minimal code to pass test
-   bundle exec rake test → Verify pass ✅
-   bundle exec rubocop -A → Auto-fix violations
+**1.1.0** (2026-01-11)
+- Added `/brief` command for context preservation
+- Added `/reflect` command for capturing operational knowledge
+- `/reflect` now suggests custom agents for processes requiring reasoning
+- Total commands: 9
 
-3. REFACTOR: Improve code quality
-   - Apply Tidy First principles (guard clauses, symmetry, clarity)
-   - Fix remaining RuboCop violations manually
-   - Understand WHY each violation exists
-   - bundle exec rubocop → Verify 0 violations
+**1.0.0** (2025-11-12)
+- Initial release
+- 7 integrated slash commands
+- Plugin marketplace distribution
+- Command bundling via plugin.json
 
-4. VERIFY & COMMIT: All quality gates must pass
-   bundle exec rake ci → Tests + RuboCop + Coverage ✅
-   Use `commit` subagent with clear, imperative message
+---
 
-5. UPDATE TODO.md
-   - Immediately mark task complete
-   - Record any [TODO-INFRASTRUCTURE-*] discoveries
-   - Move to next task
-```
-
-### Quality Gates (ALL must pass before commit)
-
-```bash
-# Gate 1: Tests pass
-bundle exec rake test
-✅ Expected: All tests pass
-
-# Gate 2: RuboCop: 0 violations
-bundle exec rubocop
-✅ Expected: "26 files inspected, 0 offenses"
-
-# Gate 3: Coverage (CI mode)
-bundle exec rake ci
-✅ Expected: Line: ≥ 80%, Branch: ≥ 50%
-```
-
-### Macro-Cycle (Phase completion)
-
-```
-1. Read TODO.md phase description
-   - Check for [TODO-INFRASTRUCTURE-*] warnings
-   - Understand task granularity (each = 1-5 min)
-
-2. Check for unresolved [TODO-INFRASTRUCTURE-*] markers
-   - If found: Resolve in TDD cycles BEFORE proceeding
-   - If none: Proceed to first task
-
-3. Repeat Micro-Cycle for each task in phase
-   - Each task is exactly one TDD cycle
-   - Commit after each cycle
-   - Update TODO.md immediately (remove completed tasks)
-   - Record any infrastructure issues with [TODO-INFRASTRUCTURE-*]
-
-4. After phase completion
-   - Verify all [TODO-INFRASTRUCTURE-*] markers from this phase resolved
-   - Verify no hanging infrastructure markers
-   - If new [TODO-INFRASTRUCTURE-*] created: Mark which phase will handle it
-
-5. User verifies
-   - Full test suite passes: `rake ci`
-   - Manual testing if needed
-   - Code review if applicable
-```
-
-### Key Principles
-
-**Test-First Architecture (Phase 0 Priority)**
-- Phase 0: Test Infrastructure (HIGHEST PRIORITY, 3-4 days)
-- Establishes solid test foundation BEFORE any feature work
-- All [TODO-INFRASTRUCTURE-*] issues resolved early
-- Unblocks downstream phases for clean TDD
-
-**[TODO-INFRASTRUCTURE-*] Marker Discipline**
-- 🚨 NEVER skip markers — STOP and resolve immediately
-- 📌 Found in phase descriptions with specific context
-- 📝 Record new ones during implementation
-- ✅ Must be resolved before final verification
-
-**Tidy First (Kent Beck)**
-- Small refactoring steps (1-5 minutes each)
-- Each step improves code understanding
-- Changes compound into massive improvements without risk
-- Example: Extract constant, rename variable, simplify guard clause
-
-**t-wada style TDD**
-- One test at a time
-- Minimal code to pass (no gold-plating)
-- Red-Green-Refactor cycle is fast
-- Test is always green after Refactor phase
-- Each TODO task = one complete cycle
-
-**RuboCop as Quality Gate**
-- ✅ Auto-fix violations automatically (`rubocop -A`)
-- ✅ Understand and fix remaining violations manually
-- 🚫 NEVER add `# rubocop:disable` comments
-- 🚫 NEVER commit with RuboCop violations
-
-### Absolutely Forbidden
-
-- 🚫 Committing with RuboCop violations
-- 🚫 Adding `# rubocop:disable` comments
-- 🚫 Writing fake/trivial tests
-- 🚫 Lowering coverage thresholds
-- 🚫 Large, multi-function changes per commit
-- 🚫 Skipping [TODO-INFRASTRUCTURE-*] markers — MUST resolve before proceeding
-- 🚫 Batching test problems for later — Record as [TODO-INFRASTRUCTURE-*] and resolve in TDD immediately
-
-### When to Ask User
-
-**MUST ask in these scenarios**:
-1. Refactoring direction unclear (how to split method?)
-2. Test strategy controversial (what should we test?)
-3. Trade-off between simplicity and completeness
-4. RuboCop violation needs architectural decision
-5. [TODO-INFRASTRUCTURE-*] marker requires design decision
-
-See `.claude/docs/testing-guidelines.md` for detailed examples.
+**Issues**: https://github.com/jezweb/claude-skills/issues | **Author**: Jeremy Dawes (jeremy@jezweb.net) | **License**: MIT

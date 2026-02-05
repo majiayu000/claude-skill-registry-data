@@ -1,180 +1,499 @@
 ---
 name: documentation-sync
-description: Keep documentation in sync with code changes. Use when implementing features, modifying APIs, changing architecture, adding configuration, updating security, or making any changes that affect user-facing or developer-facing documentation.
+description: Synchronize version numbers across any project type using version file adapters
+user-invocable: false
 ---
 
-# Documentation Synchronization Skill
+# Documentation Sync
 
-## Overview
+## Purpose
 
-This skill ensures documentation in the `docs/` directory remains synchronized with codebase changes, maintaining accuracy and completeness for both users and developers.
+Updates version numbers in version files (using appropriate adapters) and documentation files for any project type. Supports Node.js, Python, Rust, Go, Java, generic projects, and Claude Code plugins. Handles multiple version files and documentation references.
 
-## Core Principle
+## Input Context
 
-**Documentation is part of the definition of done**. No code change is complete until the relevant documentation is updated.
+Requires:
+- **Project Configuration**: Output from `detect-project-type` skill
+- **Old Version**: Previous version string (e.g., "1.1.0")
+- **New Version**: New version string (e.g., "1.2.0")
 
-## When to Use This Skill
+## Workflow
 
-Activate this skill when:
+### 1. Load Project Configuration
 
-- **API Changes**: Adding/modifying REST or GraphQL endpoints
-- **Database Changes**: Adding entities, modifying schema
-- **Architecture Changes**: Changing design patterns, component structure
-- **Configuration Changes**: Adding environment variables, config options
-- **Security Changes**: Modifying authentication, authorization
-- **Testing Changes**: Adding test strategies, new test types
-- **Performance Changes**: Optimizations, benchmarking
-- **Feature Implementation**: New user-facing features
+Use configuration from `detect-project-type`:
+- `version_files` - List of version files with adapters
+- `documentation_files` - Files to search for version references
+- `project_type` - Determines file update strategy
 
-## Core Documentation Files
+### 2. Update Version Files
 
-### API and Integration
+For each version file, use the appropriate adapter to update the version.
 
-| File                    | Purpose                         | Update When      |
-| ----------------------- | ------------------------------- | ---------------- |
-| `docs/api-endpoints.md` | REST/GraphQL endpoints, schemas | API changes      |
-| `docs/user-guide.md`    | User-facing features            | Feature changes  |
-| `docs/security.md`      | Auth, authorization             | Security changes |
+See [Version Adapters Reference](../../docs/version-adapters.md) for implementation details.
 
-### Architecture and Design
+**JSON files (package.json, plugin.json, etc.):**
+```bash
+file="package.json"
+old_version="1.1.0"
+new_version="1.2.0"
 
-| File                              | Purpose                 | Update When          |
-| --------------------------------- | ----------------------- | -------------------- |
-| `docs/design-and-architecture.md` | System design, patterns | Architecture changes |
-| `docs/developer-guide.md`         | Dev patterns, examples  | Dev workflow changes |
-| `docs/glossary.md`                | Domain terminology      | New domain concepts  |
+# Update using jq
+jq --indent 2 ".version = \"$new_version\"" "$file" > tmp.json && mv tmp.json "$file"
 
-### Operations and Configuration
+# Verify update
+updated_version=$(jq -r '.version' "$file")
+if [ "$updated_version" = "$new_version" ]; then
+  echo "✓ Updated $file: $old_version → $new_version"
+else
+  echo "✗ Failed to update $file"
+fi
+```
 
-| File                             | Purpose             | Update When    |
-| -------------------------------- | ------------------- | -------------- |
-| `docs/advanced-configuration.md` | Env vars, config    | Config changes |
-| `docs/getting-started.md`        | Setup, installation | Setup changes  |
-| `docs/operational.md`            | Monitoring, logging | Ops changes    |
+**TOML files (Cargo.toml, pyproject.toml):**
+```bash
+file="Cargo.toml"
 
-### Development
+# Update version in [package] section
+sed -i '/^\[package\]/,/^\[/ s/^version = ".*"/version = "'"$new_version"'"/' "$file"
 
-| File                  | Purpose                   | Update When      |
-| --------------------- | ------------------------- | ---------------- |
-| `docs/testing.md`     | Test strategies           | Test changes     |
-| `docs/performance.md` | Benchmarks, optimizations | Performance work |
-| `docs/onboarding.md`  | New dev onboarding        | Process changes  |
+# For pyproject.toml [project] section
+sed -i '/^\[project\]/,/^\[/ s/^version = ".*"/version = "'"$new_version"'"/' pyproject.toml
 
-### Versioning
+# For pyproject.toml [tool.poetry] section
+sed -i '/^\[tool.poetry\]/,/^\[/ s/^version = ".*"/version = "'"$new_version"'"/' pyproject.toml
 
-| File                    | Purpose      | Update When         |
-| ----------------------- | ------------ | ------------------- |
-| `docs/versioning.md`    | Version info | Version bumps       |
-| `docs/release-notes.md` | Changelog    | Significant changes |
+# Verify
+updated_version=$(grep '^version = ' "$file" | head -1 | sed 's/version = "\(.*\)"/\1/')
+```
 
-## Documentation Update Workflow
+**Python __version__.py files:**
+```bash
+file="src/mypackage/__version__.py"
 
-### Quick Reference
+# Update __version__ variable
+sed -i 's/^__version__ = ".*"/__version__ = "'"$new_version"'"/' "$file"
 
-**For each code change**:
+# Verify
+updated_version=$(grep '^__version__ = ' "$file" | sed 's/__version__ = "\(.*\)"/\1/')
+```
 
-1. **Identify Impact**: Which docs need updates?
-2. **Update Content**: Follow scenario-specific patterns
-3. **Cross-Reference**: Ensure links remain valid
-4. **Validate Examples**: Test all code samples
-5. **Review Checklist**: Use pre-commit checklist
+**Text files (VERSION, version.txt):**
+```bash
+file="VERSION"
 
-### Common Update Scenarios
+# Simply write new version
+echo "$new_version" > "$file"
 
-| Change Type           | Primary Docs                                | Commands                     | Guide                                                                               |
-| --------------------- | ------------------------------------------- | ---------------------------- | ----------------------------------------------------------------------------------- |
-| **REST Endpoint**     | `api-endpoints.md`                          | `make generate-openapi-spec` | [api-endpoints.md](update-scenarios/api-endpoints.md)                               |
-| **GraphQL Operation** | `api-endpoints.md`                          | `make generate-graphql-spec` | [api-endpoints.md](update-scenarios/api-endpoints.md)                               |
-| **Database Schema**   | `design-and-architecture.md`                | -                            | [database-and-architecture.md](update-scenarios/database-and-architecture.md)       |
-| **Domain Model**      | `design-and-architecture.md`, `glossary.md` | -                            | [database-and-architecture.md](update-scenarios/database-and-architecture.md)       |
-| **Configuration**     | `advanced-configuration.md`                 | -                            | [configuration-and-operations.md](update-scenarios/configuration-and-operations.md) |
-| **Authentication**    | `security.md`, `api-endpoints.md`           | -                            | [configuration-and-operations.md](update-scenarios/configuration-and-operations.md) |
-| **Testing**           | `testing.md`                                | -                            | [configuration-and-operations.md](update-scenarios/configuration-and-operations.md) |
-| **Performance**       | `performance.md`                            | -                            | [configuration-and-operations.md](update-scenarios/configuration-and-operations.md) |
+# Verify
+updated_version=$(cat "$file" | tr -d '[:space:]')
+```
 
-**See detailed guides**: [update-scenarios/](update-scenarios/) directory
+**Gradle files:**
+```bash
+# gradle.properties
+sed -i 's/^version=.*/version='"$new_version"'/' gradle.properties
 
-## Documentation Quality Standards
+# build.gradle (single quotes)
+sed -i "s/^version = '.*'/version = '${new_version}'/" build.gradle
 
-### Consistency
+# build.gradle (double quotes)
+sed -i 's/^version = ".*"/version = "'"$new_version"'"/' build.gradle
+```
 
-- ✅ Follow existing doc structure and formatting
-- ✅ Use terminology from `docs/glossary.md`
-- ✅ Include code examples with syntax highlighting
-- ✅ Add cross-references to related sections
+**Maven pom.xml:**
+```bash
+# Replace first <version> tag (project version)
+sed -i '0,/<version>.*<\/version>/s//<version>'"$new_version"'<\/version>/' pom.xml
+```
 
-### Completeness
+**Multiple version files:**
+Update all files in sequence, tracking successes and failures:
 
-- ✅ Document all public APIs and endpoints
-- ✅ Include error handling and edge cases
-- ✅ Provide basic and advanced examples
-- ✅ Update version info when needed
+```bash
+updated_files=()
+failed_files=()
 
-### Maintenance
+for version_file_config in "${version_files[@]}"; do
+  file_path="${version_file_config[path]}"
+  adapter="${version_file_config[adapter]}"
 
-- ✅ Remove outdated information
-- ✅ Update release notes for significant changes
-- ✅ Validate all links and references
-- ✅ Update diagrams if architecture changes
+  # Update using appropriate adapter
+  case "$adapter" in
+    "json")
+      jq --indent 2 ".version = \"$new_version\"" "$file_path" > tmp.json && mv tmp.json "$file_path"
+      ;;
+    "toml")
+      # ... toml update logic
+      ;;
+    "python-file")
+      # ... python file update logic
+      ;;
+    # ... other adapters
+  esac
 
-**See detailed standards**: [reference/quality-standards.md](reference/quality-standards.md)
+  # Verify update succeeded
+  if verify_version_updated "$file_path" "$new_version"; then
+    updated_files+=("$file_path")
+  else
+    failed_files+=("$file_path")
+  fi
+done
+```
 
-## Pre-Commit Checklist
+### 3. Update Documentation Files
 
-Before committing code with documentation updates:
+Search documentation files for version references and update them.
 
-- [ ] **Identify Impact**: Determine which docs need updates
-- [ ] **Update Content**: Apply scenario-specific patterns
-- [ ] **Cross-Reference**: Verify all links remain valid
-- [ ] **Test Examples**: Run all code examples
-- [ ] **Check Consistency**: Verify terminology matches glossary
-- [ ] **Update Specs**: Run `make generate-openapi-spec` or `make generate-graphql-spec` if needed
-- [ ] **Review Changes**: Ensure completeness and accuracy
+Use `documentation_files` from configuration (default: `["README.md"]`, supports globs).
 
-**See complete workflow**: [reference/workflow-checklist.md](reference/workflow-checklist.md)
+**Find all documentation files:**
+```bash
+doc_files=()
 
-## Integration with Development
+for pattern in "${documentation_files[@]}"; do
+  # Expand glob patterns
+  if [[ "$pattern" == *"*"* ]]; then
+    # Use find for glob patterns like "docs/**/*.md"
+    while IFS= read -r file; do
+      doc_files+=("$file")
+    done < <(find . -path "./$pattern" -type f)
+  else
+    # Direct file path
+    if [ -f "$pattern" ]; then
+      doc_files+=("$pattern")
+    fi
+  done
+done
+```
 
-### During Development
+**For each documentation file, perform context-aware version replacement:**
 
-**Documentation is code**:
+```bash
+for doc_file in "${doc_files[@]}"; do
+  echo "Processing $doc_file..."
 
-- Update docs in same PR as code changes
-- Test documentation examples
-- Validate links and references
+  # Create backup
+  cp "$doc_file" "${doc_file}.bak"
 
-### During Code Review
+  # Perform replacements (context-aware)
 
-**Reviewers check**:
+  # 1. Version badges (shields.io, etc.)
+  sed -i "s/version-${old_version//./-}/version-${new_version//./-}/g" "$doc_file"
+  sed -i "s/v${old_version}-/v${new_version}-/g" "$doc_file"
 
-- Documentation accuracy
-- Completeness of examples
-- Terminology consistency
-- Link validity
+  # 2. Installation commands
+  # npm install package@1.1.0 → package@1.2.0
+  sed -i "s/@${old_version}/@${new_version}/g" "$doc_file"
 
-### During CI/CD
+  # pip install package==1.1.0 → package==1.2.0
+  sed -i "s/==${old_version}/==${new_version}/g" "$doc_file"
 
-**Automated checks**:
+  # cargo add package@1.1.0 → package@1.2.0
+  # (already covered by @version pattern)
 
-- Documentation links validation
-- Example code syntax checking
-- Spec generation and validation
+  # 3. Git tag references
+  # v1.1.0 → v1.2.0 (when followed by space, ), or end of line)
+  sed -i "s/v${old_version}\([^0-9]\)/v${new_version}\1/g" "$doc_file"
+  sed -i "s/v${old_version}$/v${new_version}/g" "$doc_file"
 
-## Supporting Files
+  # 4. Standalone version numbers in specific contexts
+  # "Version 1.1.0" → "Version 1.2.0"
+  sed -i "s/Version ${old_version}/Version ${new_version}/g" "$doc_file"
+  sed -i "s/version ${old_version}/version ${new_version}/g" "$doc_file"
 
-For detailed guides, examples, and standards:
+  # 5. In code blocks (more conservative - only in known safe contexts)
+  # Only replace if part of package reference
+  sed -i "s/\"${old_version}\"/\"${new_version}\"/g" "$doc_file"
+  sed -i "s/'${old_version}'/'${new_version}'/g" "$doc_file"
 
-- **[update-scenarios/api-endpoints.md](update-scenarios/api-endpoints.md)** - REST and GraphQL documentation
-- **[update-scenarios/database-and-architecture.md](update-scenarios/database-and-architecture.md)** - Schema and design docs
-- **[update-scenarios/configuration-and-operations.md](update-scenarios/configuration-and-operations.md)** - Config, security, testing, performance
-- **[reference/quality-standards.md](reference/quality-standards.md)** - Documentation quality guidelines
-- **[reference/workflow-checklist.md](reference/workflow-checklist.md)** - Complete update workflow
+  # Count changes
+  changes=$(diff -u "${doc_file}.bak" "$doc_file" | grep '^[-+]' | wc -l)
 
-## Success Criteria
+  if [ $changes -gt 0 ]; then
+    echo "✓ Updated $doc_file ($changes lines changed)"
+    rm "${doc_file}.bak"
+  else
+    echo "  No version references found in $doc_file"
+    mv "${doc_file}.bak" "$doc_file"  # Restore original
+  fi
+done
+```
 
-- ✅ All affected docs updated
-- ✅ Code examples tested and working
-- ✅ Links and references valid
-- ✅ Terminology consistent
-- ✅ Release notes updated
-- ✅ Docs reflect actual code behavior
+**Conservative replacement strategy:**
+- Only replace version strings in known safe contexts
+- Avoid replacing arbitrary numbers (could be dates, IDs, etc.)
+- Use word boundaries and context markers
+- Verify replacements made sense (count changes, show diff)
+
+### 4. Project-Specific Updates
+
+Some project types have additional files to update:
+
+**Node.js (package-lock.json):**
+```bash
+if [ -f "package-lock.json" ]; then
+  # Update version in lockfile (both root and package entry)
+  jq ".version = \"$new_version\"" package-lock.json > tmp.json && mv tmp.json package-lock.json
+  jq ".packages[\"\"].version = \"$new_version\"" package-lock.json > tmp.json && mv tmp.json package-lock.json
+fi
+```
+
+**Python (setuptools-scm):**
+If using setuptools-scm, version is managed by git tags - no file updates needed.
+
+**Rust (Cargo.lock):**
+If exists, update with:
+```bash
+cargo update --workspace
+```
+
+**Go:**
+No files to update - versions managed by git tags only.
+
+### 5. Generate Git Diff
+
+Create a summary of all changes:
+
+```bash
+# Stage all modified files
+git add -u
+
+# Generate diff
+git diff --cached > /tmp/release-diff.patch
+
+# Display summary
+echo "Files modified:"
+git diff --cached --name-only
+
+echo ""
+echo "Diff summary:"
+git diff --cached --stat
+```
+
+### 6. Validation
+
+Verify all updates were successful:
+
+```bash
+validation_errors=()
+
+# Check each version file
+for file in "${updated_files[@]}"; do
+  actual_version=$(read_version_from_file "$file")
+
+  if [ "$actual_version" != "$new_version" ]; then
+    validation_errors+=("$file: expected $new_version, got $actual_version")
+  fi
+done
+
+# If any errors, return them
+if [ ${#validation_errors[@]} -gt 0 ]; then
+  echo "✗ Validation failed:"
+  printf '%s\n' "${validation_errors[@]}"
+  exit 1
+fi
+```
+
+## Output Format
+
+Return:
+
+```json
+{
+  "files_updated": [
+    "package.json",
+    "README.md",
+    "docs/installation.md"
+  ],
+  "version_files": [
+    {
+      "path": "package.json",
+      "old_version": "1.1.0",
+      "new_version": "1.2.0",
+      "adapter": "json",
+      "success": true
+    }
+  ],
+  "documentation_files": [
+    {
+      "path": "README.md",
+      "changes": 5,
+      "patterns_matched": ["version badge", "installation command", "git tag reference"]
+    },
+    {
+      "path": "docs/installation.md",
+      "changes": 2,
+      "patterns_matched": ["installation command"]
+    }
+  ],
+  "warnings": [],
+  "git_diff_summary": {
+    "files_changed": 3,
+    "insertions": 8,
+    "deletions": 8
+  }
+}
+```
+
+## Examples
+
+### Example 1: Node.js Project
+
+**Input:**
+- Project type: `nodejs`
+- Old version: `1.1.0`
+- New version: `1.2.0`
+- Version files: `["package.json"]`
+- Documentation files: `["README.md"]`
+
+**Operations:**
+1. Update `package.json`: `"version": "1.1.0"` → `"version": "1.2.0"`
+2. Update `package-lock.json` (if exists)
+3. Update `README.md`: version badge, install command
+
+**Output:**
+```json
+{
+  "files_updated": ["package.json", "package-lock.json", "README.md"],
+  "version_files": [
+    {
+      "path": "package.json",
+      "old_version": "1.1.0",
+      "new_version": "1.2.0",
+      "success": true
+    }
+  ],
+  "documentation_files": [
+    {
+      "path": "README.md",
+      "changes": 3,
+      "patterns_matched": ["version badge", "npm install"]
+    }
+  ]
+}
+```
+
+### Example 2: Python Project with Multiple Version Files
+
+**Input:**
+- Project type: `python`
+- Old version: `2.1.0`
+- New version: `3.0.0`
+- Version files:
+  - `pyproject.toml`
+  - `src/mypackage/__version__.py`
+
+**Operations:**
+1. Update `pyproject.toml` [project] section
+2. Update `src/mypackage/__version__.py`
+3. Update `README.md` references
+
+**Output:**
+```json
+{
+  "version_files": [
+    {
+      "path": "pyproject.toml",
+      "old_version": "2.1.0",
+      "new_version": "3.0.0",
+      "adapter": "toml",
+      "success": true
+    },
+    {
+      "path": "src/mypackage/__version__.py",
+      "old_version": "2.1.0",
+      "new_version": "3.0.0",
+      "adapter": "python-file",
+      "success": true
+    }
+  ]
+}
+```
+
+### Example 3: Rust Crate
+
+**Input:**
+- Project type: `rust`
+- Old version: `0.3.1`
+- New version: `0.3.2`
+- Version files: `["Cargo.toml"]`
+
+**Operations:**
+1. Update `Cargo.toml` [package].version
+2. Run `cargo update` to update `Cargo.lock`
+3. Update documentation
+
+### Example 4: Go Module
+
+**Input:**
+- Project type: `go`
+- Old version: `1.5.0`
+- New version: `1.6.0`
+- Version files: `[]` (versions via tags only)
+
+**Operations:**
+1. No version files to update (Go uses git tags)
+2. Update README.md and docs with new version references
+
+**Output:**
+```json
+{
+  "version_files": [],
+  "documentation_files": [
+    {
+      "path": "README.md",
+      "changes": 2,
+      "patterns_matched": ["version reference", "go get command"]
+    }
+  ],
+  "notes": ["Go project: version managed via git tags only"]
+}
+```
+
+## Error Handling
+
+**File update failure:**
+```json
+{
+  "version_files": [
+    {
+      "path": "package.json",
+      "success": false,
+      "error": "Permission denied"
+    }
+  ]
+}
+```
+
+**Version mismatch after update:**
+```json
+{
+  "warnings": [
+    "package.json: expected 1.2.0 after update, but still reads 1.1.0",
+    "File may need manual review"
+  ]
+}
+```
+
+**Documentation file not found:**
+```json
+{
+  "warnings": [
+    "Documentation file not found: docs/installation.md",
+    "Specified in configuration but does not exist"
+  ]
+}
+```
+
+## Integration Notes
+
+This skill is invoked by the `/release` command in Phase 4. The command will:
+1. Display git diff of all changes
+2. Allow user to review before proceeding
+3. Stage all modified files for commit in Phase 6
+
+## Reference Documentation
+
+- [Version Adapters Reference](../../docs/version-adapters.md) - Adapter implementation details
+- [Configuration Reference](../../docs/configuration.md) - Configuring version and documentation files

@@ -1,118 +1,53 @@
 ---
 name: changelog
-description: "Generate changelog entries. Use on releases or PR merges. Parses git commits, categorizes changes, formats changelog entries, and updates CHANGELOG.md."
+description: Set up git-cliff for automated changelog generation. Use `/changelog init` to initialize in a new project.
+argument-hint: init
+allowed-tools: Bash, Read, Write, Edit
+user-invocable: true
 ---
 
 # Changelog Skill
 
-Automate changelog generation from git commits and pull requests.
+Manage automated changelog generation using git-cliff for ZeroAE projects.
 
-## When to Use
+## Commands
 
-Use this skill when:
-- On release or version bump
-- When PR is merged
-- When user requests changelog
-- Before creating release
-- When preparing release notes
+| Command | Description |
+|---------|-------------|
+| `/changelog init` | Set up git-cliff in a new project |
 
-## Capabilities
+## init
 
-### 1. Parse Git Commits
+Set up git-cliff configuration and GitHub Actions workflow.
 
-Extract information from commits:
-- Parse commit messages following conventional commits format
-- Extract type (feat, fix, docs, refactor, etc.)
-- Extract scope (component/module)
-- Extract description
-- Extract breaking changes
-- Extract issue references (#123)
+### Process
 
-### 2. Categorize Changes
-
-Organize changes by category:
-- **Features** (`feat`): New functionality
-- **Bug Fixes** (`fix`): Bug fixes
-- **Documentation** (`docs`): Documentation changes
-- **Refactoring** (`refactor`): Code refactoring
-- **Performance** (`perf`): Performance improvements
-- **Tests** (`test`): Test additions/changes
-- **Chores** (`chore`): Maintenance tasks
-- **Breaking Changes** (`BREAKING CHANGE`): Breaking changes
-
-### 3. Format Changelog Entries
-
-Create formatted changelog entry:
-- Use standard changelog format
-- Group by category
-- Include issue references
-- Highlight breaking changes
-- Include contributor credits if available
-
-### 4. Update CHANGELOG.md
-
-Update changelog file:
-- Add new entry at top
-- Follow existing format
-- Include version number
-- Include release date
-- Maintain chronological order
-
-## Commit Message Format
-
-Follows conventional commits (from `.cursor/rules/git-workflow.mdc`):
-```
-type(scope): subject
-
-body (optional)
-
-footer (optional)
+1. **Check Current State**
+```bash
+ls cliff.toml 2>/dev/null
+ls .github/workflows/release.yml 2>/dev/null
 ```
 
-Types:
-- `feat`: New feature
-- `fix`: Bug fix
-- `docs`: Documentation
-- `style`: Formatting
-- `refactor`: Code refactoring
-- `test`: Tests
-- `chore`: Maintenance
+2. **Create cliff.toml**
 
-## Changelog Format
+If missing, create `cliff.toml` in project root using [cliff-config.toml](cliff-config.toml).
 
-```markdown
-## [Version] - YYYY-MM-DD
+3. **Update Release Workflow**
 
-### Added
-- New feature description (#123)
+If `.github/workflows/release.yml` exists, add the changelog generation step from [workflow-snippet.yml](workflow-snippet.yml).
 
-### Changed
-- Change description (#456)
+If no release workflow exists, inform the user they need to create one first.
 
-### Fixed
-- Bug fix description (#789)
-
-### Breaking Changes
-- Breaking change description (#999)
+4. **Verify Setup**
+```bash
+git cliff --unreleased
 ```
 
-## Workflow
+### Output
 
-1. **Get Commits**: Fetch commits since last release or tag
-2. **Parse Messages**: Extract information from commit messages
-3. **Categorize**: Group changes by type
-4. **Format**: Generate formatted changelog entry
-5. **Update File**: Add entry to CHANGELOG.md
-6. **Validate**: Check format and completeness
+Report what was created/updated and any manual steps needed.
 
-## Related Resources
+## Reference Files
 
-### Rules
-- `.cursor/rules/git-workflow.mdc` - Commit message format
-- `.cursor/rules/documentation-standards.mdc` - Documentation standards
-
-### Subagents
-- `.cursor/agents/changelog-generator.md` - Changelog generation subagent
-
-### Commands
-- `/auto-changelog` - Generate changelog automatically
+- [cliff-config.toml](cliff-config.toml) - Standard git-cliff configuration
+- [workflow-snippet.yml](workflow-snippet.yml) - GitHub Actions release job snippet

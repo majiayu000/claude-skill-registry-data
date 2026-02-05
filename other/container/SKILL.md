@@ -1,275 +1,318 @@
 ---
 name: container
-description: "Intermediate scope for inheritance — like OpenLaszlo's <node>"
-license: MIT
-tier: 1
-allowed-tools:
-  - read_file
-  - write_file
-related: [room, object, adventure, prototype, logistic-container]
-tags: [moollm, scope, inheritance, hierarchy, composition]
+description: Container engine abstraction, Docker/Podman patterns, path handling, Linux-only policy
+disable-model-invocation: false
 ---
 
-# Container
+# Container Engine Skill
 
-> **Intermediate scopes that provide inheritance without being navigable rooms.**
+This skill covers the container runtime implementation in Invowk, including the engine abstraction layer, Docker/Podman support, and sandbox-aware execution.
 
-Containers are directories that define shared properties for their children,
-without themselves being places you can "go to."
-
-## The OpenLaszlo Inspiration
-
-In OpenLaszlo (Don Hopkins' earlier work!), `<node>` was a fundamental building block:
-
-```xml
-<!-- OpenLaszlo: <node> provides inheritance without visual layout -->
-<node name="mazeDefaults">
-  <attribute name="isDark" value="true"/>
-  <attribute name="hasDanger" value="true"/>
-</node>
-
-<view extends="mazeDefaults">
-  <!-- Inherits isDark, hasDanger -->
-</view>
-```
-
-MOOLLM's `CONTAINER.yml` does the same for adventure directories:
-
-```yaml
-# maze/CONTAINER.yml
-container:
-  name: "The Twisty Maze"
-  
-  inherits:
-    is_dark: true
-    is_dangerous: true
-    grue_rules:
-      can_appear: true
-```
-
-All rooms inside `maze/` automatically inherit these properties!
+Use this skill when working on:
+- `internal/container/` - Container engine abstraction
+- `internal/runtime/container.go` - Container runtime implementation
+- `internal/provision/` - Container provisioning logic
+- Container-related tests
 
 ---
 
-## Container vs Room vs Meta
+## Linux-Only Container Support
 
-| Type | File | Navigable? | Inherits to children? |
-|------|------|------------|----------------------|
-| Room | `ROOM.yml` | ✅ Yes | ❌ No |
-| Container | `CONTAINER.yml` | ❌ No | ✅ Yes |
-| Meta | `.meta.yml` | ❌ No | ❌ No (just metadata) |
+**CRITICAL: The container runtime ONLY supports Linux containers.**
 
-**Use Container when:**
-- You want to define shared properties
-- Children should inherit automatically
-- The directory itself is not a place
+| Supported | NOT Supported |
+|-----------|---------------|
+| Debian-based images (`debian:stable-slim`) | Alpine-based images (`alpine:*`) |
+| Standard Linux containers | Windows container images |
 
-**Use Room when:**
-- The directory is a navigable location
-- It has exits and can be entered
+**Why no Alpine:** musl-based environments have many subtle gotchas; we prioritize reliability over image size.
 
-**Use .meta.yml when:**
-- Just declaring "this is a system directory"
-- No inheritance needed
+**Why no Windows containers:** They're rarely used and would introduce too much extra complexity to Invowk's auto-provisioning logic.
+
+**In tests, docs, and examples:** Always use `debian:stable-slim` as the reference image.
 
 ---
 
-## Inheritance Rules
+## Engine Interface
 
-### Cascade Down
+The `Engine` interface (`engine.go`) defines the unified contract for all container operations:
 
-Properties in `inherits:` flow to ALL descendants:
+```go
+type Engine interface {
+    // Core operations
+    Build(ctx context.Context, opts BuildOptions) (*BuildResult, error)
+    Run(ctx context.Context, opts RunOptions) (*RunResult, error)
+    Remove(ctx context.Context, containerID string) error
+    ImageExists(ctx context.Context, image string) (bool, error)
+    RemoveImage(ctx context.Context, image string) error
 
-```
-maze/
-├── CONTAINER.yml       # inherits: { is_dark: true }
-├── room-a/
-│   └── ROOM.yml        # Inherits is_dark: true
-├── room-b/
-│   └── ROOM.yml        # Inherits is_dark: true
-└── deep/
-    └── CONTAINER.yml   # Can add MORE inherits
-        └── room-c/
-            └── ROOM.yml # Inherits from BOTH containers!
-```
+    // Metadata
+    Name() string
+    Version(ctx context.Context) (string, error)
+    Available() bool
 
-### Override by Redefining
-
-Children can override inherited values:
-
-```yaml
-# maze/room-f/ROOM.yml
-room:
-  name: "The Treasure Chamber"
-  is_dark: false  # Override! This room has magical light
+    // Interactive mode support
+    BuildRunArgs(opts RunOptions) []string
+    BinaryPath() string
+}
 ```
 
-### Merge, Don't Replace
-
-For objects and arrays, inheritance MERGES:
-
-```yaml
-# maze/CONTAINER.yml
-container:
-  inherits:
-    rules:
-      - "Grues patrol in darkness"
-      
-# maze/room-g/ROOM.yml  
-room:
-  rules:
-    - "This room has a pit trap"  # ADDS to inherited rules
-```
-
-Result: room-g has BOTH rules.
+**Key Pattern:** The interface doesn't expose vendor-specific methods. Methods like `Exec()` and `InspectImage()` exist only on concrete types.
 
 ---
 
-## Defaults vs Inherits
+## BaseCLIEngine Embedding Pattern
 
-| Field | Purpose |
-|-------|---------|
-| `inherits` | Properties that children GET automatically |
-| `defaults` | Values to use IF a child doesn't define them |
+Both Docker and Podman engines embed `BaseCLIEngine` (`engine_base.go`) for shared CLI command construction:
 
-```yaml
-container:
-  # Every child room IS dark (forced)
-  inherits:
-    is_dark: true
-    
-  # If a room doesn't define atmosphere, use this
-  defaults:
-    room:
-      atmosphere: "damp and musty"
+```go
+type BaseCLIEngine struct {
+    binaryPath         string
+    execCommand        ExecCommandFunc       // For mocking in tests
+    volumeFormatter    VolumeFormatFunc      // SELinux label injection
+    runArgsTransformer RunArgsTransformer    // Podman --userns=keep-id
+}
+```
+
+### Responsibilities
+
+| Method | Purpose |
+|--------|---------|
+| `BuildArgs()`, `RunArgs()` | Construct CLI arguments |
+| `RunCommand()`, `RunCommandCombined()` | Execute commands |
+| `FormatVolumeMount()`, `ParseVolumeMount()` | Volume mount handling |
+| `ResolveDockerfilePath()` | Path resolution with traversal protection |
+
+### Functional Options
+
+```go
+// For testing - inject mock command executor
+eng := NewDockerEngine(WithExecCommand(mockExec))
+
+// For Podman - SELinux label injection
+eng := NewPodmanEngine(WithVolumeFormatter(selinuxFormatter))
+
+// For Podman - rootless mode
+eng := NewPodmanEngine(WithRunArgsTransformer(usernsKeepID))
 ```
 
 ---
 
-## Use Cases
+## Docker vs Podman Implementation
 
-### Maze with Grue Rules
+### Docker (`docker.go`)
 
-```yaml
-# maze/CONTAINER.yml
-container:
-  name: "The Twisty Maze"
-  description: "Passages all alike... or are they?"
-  
-  inherits:
-    is_dark: true
-    is_dangerous: true
-    grue_rules:
-      can_appear: true
-      safe_with_light: true
-      
-  rules:
-    - "No teleportation"
-    - "Breadcrumbs disappear after 3 turns"
-    - "Echoes alert nearby rooms"
-    
-  ambient:
-    sound: "dripping water"
-    smell: "wet stone"
-    temperature: cold
+Minimal implementation—mostly delegates to `BaseCLIEngine`:
+
+```go
+type DockerEngine struct {
+    *BaseCLIEngine
+}
+
+func NewDockerEngine(opts ...Option) (*DockerEngine, error) {
+    path, err := exec.LookPath("docker")
+    if err != nil {
+        return nil, err
+    }
+    return &DockerEngine{BaseCLIEngine: newBase(path, opts...)}, nil
+}
 ```
 
-### Animal Character Category
+### Podman (`podman.go`)
 
-```yaml
-# characters/animals/CONTAINER.yml
-container:
-  name: "Animal Characters"
-  description: "Non-human beings with souls"
-  
-  inherits:
-    type: animal
-    has_instincts: true
-    
-  defaults:
-    character:
-      can_speak_human: false
-      pet_able: true
-      diet: omnivore
+More complex due to Linux-specific features:
+
+**Binary Discovery:**
+```go
+// Tries podman first, then podman-remote (for immutable distros like Silverblue)
+path, err := exec.LookPath("podman")
+if err != nil {
+    path, err = exec.LookPath("podman-remote")
+}
 ```
 
-### Kitchen Appliances
+**Automatic Enhancements:**
 
-```yaml
-# kitchen/appliances/CONTAINER.yml
-container:
-  name: "Kitchen Appliances"
-  
-  inherits:
-    type: appliance
-    requires_power: true
-    
-  defaults:
-    object:
-      breakable: true
-      fixable_with: "wrench"
+1. **SELinux Volume Labels**: Automatically adds `:z` labels to volumes on SELinux systems
+   ```go
+   // Checks /sys/fs/selinux existence (more reliable than checking enforce status)
+   func isSELinuxPresent() bool {
+       _, err := os.Stat("/sys/fs/selinux")
+       return err == nil
+   }
+   ```
+
+2. **Rootless Compatibility**: Injects `--userns=keep-id` to preserve host UID/GID
+   ```go
+   // Only transforms 'run' commands, inserted before image name
+   func makeUsernsKeepIDAdder() RunArgsTransformer { ... }
+   ```
+
+---
+
+## Path Handling (Host vs Container)
+
+**CRITICAL:** Container paths always use forward slashes (`/`), regardless of host platform.
+
+### Two Path Domains
+
+| Domain | Separator | Example |
+|--------|-----------|---------|
+| Host paths | Platform-native (`\` on Windows) | `C:\app\config.json` |
+| Container paths | Always `/` | `/workspace/script.sh` |
+
+### Conversion Pattern
+
+```go
+// Converting host path to container path
+containerPath := "/workspace/" + filepath.ToSlash(relPath)
+
+// WRONG: filepath.Join uses backslashes on Windows
+containerPath := filepath.Join("/workspace", relPath)  // Broken on Windows!
+```
+
+### Path Security
+
+`ResolveDockerfilePath()` includes path traversal detection to prevent `../..` escapes.
+
+See `.claude/rules/windows.md` for comprehensive path handling guidance.
+
+---
+
+## SandboxAwareEngine Wrapper
+
+The `SandboxAwareEngine` (`sandbox_engine.go`) is a decorator for Flatpak/Snap execution:
+
+**Problem:** Container engines run on the host, not inside the sandbox. Paths don't match.
+
+**Solution:** Execute commands via `flatpak-spawn --host` or `snap run --shell`.
+
+```go
+type SandboxAwareEngine struct {
+    wrapped     Engine
+    sandboxType platform.SandboxType
+}
+
+// Factory function wraps engine if sandbox detected
+func NewEngine(preferredType EngineType) (Engine, error) {
+    engine := createEngine(preferredType)
+    return NewSandboxAwareEngine(engine), nil  // Auto-wraps if needed
+}
 ```
 
 ---
 
-## Resolution Order
+## Engine Factory Functions
 
-When looking up a property:
+### Preference with Fallback
 
-1. **Self** — Check the object/room itself
-2. **Parent Container** — Check `CONTAINER.yml` in parent dir
-3. **Grandparent Container** — Keep going up
-4. **Adventure Defaults** — `ADVENTURE.yml` defaults
-5. **Prototype** — The skill template
-
+```go
+// Tries preferred engine first, falls back to alternative
+engine, err := container.NewEngine(container.Podman)  // or container.Docker
 ```
-maze/deep/room-c/ROOM.yml
-    ↓ inherits from
-maze/deep/CONTAINER.yml
-    ↓ inherits from  
-maze/CONTAINER.yml
-    ↓ inherits from
-ADVENTURE.yml (if it has defaults)
-    ↓ inherits from
-skills/room/ROOM.yml.tmpl
+
+### Auto-Detection
+
+```go
+// Tries Podman first (better for rootless), then Docker
+engine, err := container.AutoDetectEngine()
+```
+
+Both return wrapped `SandboxAwareEngine`.
+
+---
+
+## Exit Code Handling
+
+Container engines distinguish between process exit codes and errors:
+
+```go
+result := &RunResult{}
+if err != nil {
+    var exitErr *exec.ExitError
+    if errors.As(err, &exitErr) {
+        result.ExitCode = exitErr.ExitCode()  // Process exited non-zero
+    } else {
+        result.ExitCode = 1
+        result.Error = err  // Actual error (network, etc.)
+    }
+}
 ```
 
 ---
 
-## Linter Behavior
+## Testing Patterns
 
-The linter recognizes `CONTAINER.yml`:
+### Unit Tests with Mocked Commands
 
-```bash
-📂 Phase 1: Discovery
-   Found: 36 rooms, 54 objects, 6 characters
-   Found: 2 containers  # NEW!
+```go
+func TestDockerBuild(t *testing.T) {
+    var capturedArgs []string
+    mockExec := func(name string, args ...string) *exec.Cmd {
+        capturedArgs = args
+        return exec.Command("echo", "ok")
+    }
+
+    eng, _ := NewDockerEngine(WithExecCommand(mockExec))
+    eng.Build(ctx, opts)
+
+    // Verify expected arguments
+    assert.Contains(t, capturedArgs, "--no-cache")
+}
 ```
 
-Containers suppress the "missing type declaration" warning:
+### Integration Tests
 
-```yaml
-# Before: maze/ triggers warning
-⚠️ Directory has room children but no ROOM.yml
-
-# After: maze/CONTAINER.yml exists
-✅ maze/ is a container (not a room)
+```go
+func TestDockerBuild_Integration(t *testing.T) {
+    if testing.Short() {
+        t.Skip("skipping integration test in short mode")
+    }
+    // Test with real container engine
+}
 ```
+
+### testscript HOME Fix
+
+Container tests using testscript need `HOME` set to a writable directory:
+
+```go
+Setup: func(env *testscript.Env) error {
+    // Docker/Podman CLI requires valid HOME for config storage
+    env.Setenv("HOME", env.WorkDir)
+    return nil
+},
+```
+
+### Container Test Timeout Strategy
+
+Multi-layer timeout strategy prevents indefinite hangs:
+
+1. **Per-test deadline** (3 minutes): `testscript.Params{Deadline: deadline}`
+2. **Cleanup via `env.Defer()`**: Removes orphaned containers
+3. **CI explicit timeout** (15 minutes): Safety net for catastrophic failures
 
 ---
 
-## Related Patterns
+## File Organization
 
-- **Prototype Inheritance** (Self/JavaScript) — Objects inherit from prototypes
-- **Lexical Scope** (Lisp/JavaScript) — Inner scopes access outer variables
-- **Cascading** (CSS) — Styles flow from parent to child
-- **XML Namespaces** — Context flows through the tree
+| File | Purpose |
+|------|---------|
+| `engine.go` | Interface, factories, engine types |
+| `engine_base.go` | Shared CLI implementation |
+| `docker.go` | Docker concrete implementation |
+| `podman.go` | Podman + SELinux/rootless logic |
+| `sandbox_engine.go` | Flatpak/Snap wrapper decorator |
+| `doc.go` | Package documentation |
 
 ---
 
-## Credits
+## Common Pitfalls
 
-- **OpenLaszlo** — The `<node>` element as non-visual scope
-- **Self** — Prototype inheritance without classes
-- **CSS** — The cascade as inheritance mechanism
-- **Don Hopkins** — For remembering OpenLaszlo! 🎉
+| Pitfall | Symptom | Fix |
+|---------|---------|-----|
+| Using `filepath.Join()` for container paths | Backslashes on Windows | Use string concat with `/` or `filepath.ToSlash()` |
+| Forgetting `HOME` in testscript | "mkdir /no-home: permission denied" | Set `HOME` to `env.WorkDir` in Setup |
+| Testing with Alpine images | Unexpected musl behavior | Always use `debian:stable-slim` |
+| Missing SELinux labels | Permission denied in Podman | Use Podman's auto-labeling or explicit `:z` |
+| Container tests hanging | CI timeout | Use per-test deadline + cleanup in `env.Defer()` |

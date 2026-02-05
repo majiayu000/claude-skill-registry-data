@@ -1,140 +1,38 @@
 ---
 name: workflow-patterns
-description: Reusable workflow patterns for skills and agents including sequential checklists, conditional routing, validation loops, and progressive disclosure. Use when designing structured procedures.
+description: Use this skill when implementing tasks according to Conductor's TDD
+  workflow, handling phase checkpoints, managing git commits for tasks, or
+  understanding the verification protocol.
+metadata:
+  version: 1.0.0
 ---
 
 # Workflow Patterns
 
-Reusable patterns for structuring workflows in skills and agents.
+Guide for implementing tasks using Conductor's TDD workflow, managing phase checkpoints, handling git commits, and executing the verification protocol that ensures quality throughout implementation.
 
-## Sequential with Checklist
+## Use this skill when
 
-Use when steps must be completed in order with tracking:
+- Implementing tasks from a track's plan.md
+- Following TDD red-green-refactor cycle
+- Completing phase checkpoints
+- Managing git commits and notes
+- Understanding quality assurance gates
+- Handling verification protocols
+- Recording progress in plan files
 
-```markdown
-## Form Processing Workflow
+## Do not use this skill when
 
-Track progress:
-- [ ] Step 1: Analyze form (run analyze_form.py)
-- [ ] Step 2: Create field mapping
-- [ ] Step 3: Validate (run validate.py)
-- [ ] Step 4: Fill form
-- [ ] Step 5: Verify output
-```
+- The task is unrelated to workflow patterns
+- You need a different domain or tool outside this scope
 
-**When to use**: Multi-step processes where completion tracking matters.
+## Instructions
 
-## Conditional Routing
+- Clarify goals, constraints, and required inputs.
+- Apply relevant best practices and validate outcomes.
+- Provide actionable steps and verification.
+- If detailed examples are required, open `resources/implementation-playbook.md`.
 
-Use when different paths apply based on context:
+## Resources
 
-```markdown
-## Document Workflow
-
-1. Determine task type:
-   - **Creating new?** -> Follow Creation workflow
-   - **Editing existing?** -> Follow Editing workflow
-
-## Creation workflow
-[steps for new documents]
-
-## Editing workflow
-[steps for existing documents]
-```
-
-**When to use**: Tasks with distinct modes or branches.
-
-## Validation Loop
-
-Use when iterative refinement is needed:
-
-```markdown
-1. Make changes
-2. Validate: `python validate.py`
-3. If errors:
-   - Fix issues
-   - Return to step 2
-4. Only proceed when validation passes
-```
-
-**When to use**: Operations requiring correctness verification.
-
-## Progressive Disclosure Patterns
-
-### Pattern 1: Quick Start + References
-
-Front-load common usage, defer details:
-
-```markdown
-## Quick start
-[Most common usage - get user productive fast]
-
-## Advanced
-- **Forms**: See [FORMS.md](references/forms.md)
-- **API details**: See [REFERENCE.md](references/reference.md)
-```
-
-### Pattern 2: Domain Organization
-
-Organize by topic when multiple domains exist:
-
-```
-bigquery/
-  SKILL.md (overview + navigation)
-  references/
-    finance.md
-    sales.md
-    product.md
-```
-
-### Pattern 3: Conditional Depth
-
-Provide escape hatches for advanced needs:
-
-```markdown
-## Basic usage
-[Simple approach that works 80% of the time]
-
-**For tracked changes**: See [REDLINING.md](references/redlining.md)
-**For batch processing**: See [BATCH.md](references/batch.md)
-```
-
-## Degrees of Freedom
-
-Match instruction specificity to the situation:
-
-| Situation | Freedom Level | Example |
-|-----------|---------------|---------|
-| Multiple valid approaches | High | "Analyze code structure and suggest improvements" |
-| Preferred pattern exists | Medium | "Use this template, customize as needed" |
-| Fragile/critical operation | Low | "Run exactly: `python migrate.py --verify`" |
-
-## Combining Patterns
-
-Patterns can be nested:
-
-```markdown
-## Main Workflow
-
-1. Determine mode:
-   - **Quick fix?** -> Use Quick Fix workflow
-   - **Full analysis?** -> Use Analysis workflow
-
-## Quick Fix workflow
-- [ ] Identify issue
-- [ ] Apply fix
-- [ ] Validate: `npm test`
-- [ ] If fails, return to step 2
-
-## Analysis workflow
-See [DEEP_ANALYSIS.md](references/deep-analysis.md) for comprehensive steps.
-```
-
-## Anti-Patterns
-
-| Anti-Pattern | Problem | Fix |
-|--------------|---------|-----|
-| No clear entry point | User doesn't know where to start | Add "Quick Start" section |
-| Too many branches | Decision paralysis | Provide sensible defaults |
-| No validation step | Errors discovered too late | Add explicit verification |
-| References too deep | Content hard to find | Keep one level from SKILL.md |
+- `resources/implementation-playbook.md` for detailed patterns and examples.

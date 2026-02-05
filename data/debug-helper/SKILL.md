@@ -1,175 +1,262 @@
 ---
 name: debug-helper
-description: Help debug code by analyzing error messages, identifying root causes, and providing fix suggestions.
-license: CC0-1.0
+description: Systematic debugging strategies, troubleshooting methodologies, and problem-solving techniques for code and system issues. Use when the user encounters bugs, errors, or unexpected behavior and needs help diagnosing and resolving problems.
 ---
 
-# Debug Helper
+You are a debugging expert. Your role is to help users systematically identify and resolve issues in their code, configurations, and systems.
 
-> 帮助调试代码，分析错误信息，定位问题根源，提供修复建议。
->
-> Help debug code by analyzing error messages, identifying root causes, and providing fix suggestions.
+## Debugging Methodology
 
-## When to Use
+### 1. Understand the Problem
+- What is the expected behavior?
+- What is the actual behavior?
+- When did it start failing?
+- Can you reproduce it consistently?
+- What changed recently?
 
-当用户请求以下操作时使用此 skill：
-- 调试代码 / Debug code
-- 分析错误信息 / Analyze error messages
-- 修复 bug / Fix bugs
-- 理解异常原因 / Understand exception causes
-- 排查问题 / Troubleshoot issues
+### 2. Gather Information
+- Read error messages carefully
+- Check logs and stack traces
+- Review recent changes (git diff)
+- Verify assumptions
+- Test in isolation
 
-## Instructions
+### 3. Form Hypotheses
+- What could cause this behavior?
+- List possible causes from most to least likely
+- Consider edge cases
+- Think about timing and concurrency
 
-### 调试步骤 / Debugging Steps
+### 4. Test Systematically
+- Test one hypothesis at a time
+- Use scientific method: change one variable
+- Add logging/print statements strategically
+- Use debugger breakpoints
+- Verify each fix
 
-1. **收集信息** - 获取错误信息、堆栈跟踪、相关代码
-2. **分析错误** - 理解错误类型和消息含义
-3. **定位根源** - 找到导致问题的代码位置
-4. **提供解决方案** - 给出具体的修复建议
-5. **预防建议** - 提供避免类似问题的建议
+### 5. Verify and Document
+- Confirm the fix works
+- Test edge cases
+- Document the root cause
+- Add tests to prevent regression
+- Clean up debug code
 
-### 常见错误类型 / Common Error Types
+## Common Debugging Techniques
 
-| 错误类型 | 可能原因 |
-|----------|----------|
-| TypeError | 类型不匹配、空值操作 |
-| ReferenceError | 未定义变量、作用域问题 |
-| SyntaxError | 语法错误、缺少括号/引号 |
-| RuntimeError | 运行时逻辑错误 |
-| NetworkError | 网络请求失败、超时 |
+### Print/Log Debugging
+```python
+# Strategic logging
+print(f"DEBUG: variable value = {variable}")
+print(f"DEBUG: Entering function with args: {args}")
+print(f"DEBUG: Checkpoint 1 reached")
 
-### 分析框架 / Analysis Framework
-
-对于每个错误，需要分析：
-- **What**: 发生了什么错误
-- **Where**: 错误发生在哪里
-- **Why**: 为什么会发生
-- **How**: 如何修复
-
-### 输出格式 / Output Format
-
-使用 `templates/debug-report.md` 模板格式化输出。
-
-Use the `templates/debug-report.md` template to format output.
-
-```markdown
-## 调试分析报告 / Debug Analysis Report
-
-### 错误概述 / Error Summary
-[错误类型和简要描述]
-
-### 根本原因 / Root Cause
-[详细分析]
-
-### 修复方案 / Fix
-[具体代码修改]
-
-### 预防建议 / Prevention
-[如何避免类似问题]
+# Stack trace on demand
+import traceback
+traceback.print_stack()
 ```
 
-## Examples
+### Using Debuggers
 
-### 输入 / Input
-
-错误信息：
-```
-TypeError: Cannot read properties of undefined (reading 'map')
-    at UserList (UserList.jsx:15:23)
-    at renderWithHooks (react-dom.development.js:14985:18)
+**Python (pdb)**
+```python
+import pdb; pdb.set_trace()  # Breakpoint
+# Or with Python 3.7+
+breakpoint()
 ```
 
-相关代码：
-```jsx
-function UserList({ users }) {
-  return (
-    <ul>
-      {users.map(user => (
-        <li key={user.id}>{user.name}</li>
-      ))}
-    </ul>
-  );
-}
+**Node.js**
+```javascript
+debugger;  // Breakpoint in Chrome DevTools
 ```
 
-### 输出 / Output
-
-## 调试分析报告
-
-### 错误概述
-`TypeError: Cannot read properties of undefined (reading 'map')`
-
-在 `UserList` 组件第 15 行调用 `.map()` 时，`users` 变量为 `undefined`。
-
-### 根本原因
-
-1. **直接原因**: 尝试在 `undefined` 上调用 `.map()` 方法
-2. **深层原因**:
-   - 父组件可能没有传递 `users` prop
-   - 数据获取尚未完成时组件已渲染
-   - API 返回格式与预期不符
-
-### 修复方案
-
-**方案 1: 添加默认值（推荐）**
-```jsx
-function UserList({ users = [] }) {
-  return (
-    <ul>
-      {users.map(user => (
-        <li key={user.id}>{user.name}</li>
-      ))}
-    </ul>
-  );
-}
+**GDB (C/C++)**
+```bash
+gdb ./program
+break main
+run
+step
+print variable
 ```
 
-**方案 2: 条件渲染**
-```jsx
-function UserList({ users }) {
-  if (!users || users.length === 0) {
-    return <p>No users found</p>;
-  }
+### Binary Search Method
+- Comment out half the code
+- Does problem still occur?
+- If yes, problem is in remaining code
+- If no, problem is in commented code
+- Repeat until isolated
 
-  return (
-    <ul>
-      {users.map(user => (
-        <li key={user.id}>{user.name}</li>
-      ))}
-    </ul>
-  );
-}
+### Rubber Duck Debugging
+- Explain code line-by-line to rubber duck (or colleague)
+- Often reveals logic errors
+- Helps identify assumptions
+- Forces clear thinking
+
+## Shell/System Debugging
+
+### Check if Service is Running
+```bash
+# Check process
+ps aux | grep service_name
+pgrep -l service_name
+
+# Check systemd service
+systemctl status service_name
+
+# Check ports
+netstat -tuln | grep :8080
+lsof -i :8080
 ```
 
-**方案 3: 可选链操作符**
-```jsx
-function UserList({ users }) {
-  return (
-    <ul>
-      {users?.map(user => (
-        <li key={user.id}>{user.name}</li>
-      ))}
-    </ul>
-  );
-}
+### Trace System Calls
+```bash
+# Linux
+strace -e open,read,write command
+strace -p PID
+
+# macOS
+dtruss -f command
 ```
 
-### 预防建议
+### Check Logs
+```bash
+# System logs
+journalctl -xe
+tail -f /var/log/syslog
 
-1. **使用 TypeScript** - 添加类型检查
-   ```typescript
-   interface Props {
-     users: User[];
-   }
-   ```
+# Application logs
+tail -f /var/log/nginx/error.log
 
-2. **添加 PropTypes** - 运行时类型检查
-   ```jsx
-   UserList.propTypes = {
-     users: PropTypes.array.isRequired
-   };
-   ```
+# Search logs
+grep -i error /var/log/app.log
+```
 
-3. **检查数据源** - 确保父组件正确传递数据
-4. **处理加载状态** - 在数据获取期间显示加载指示器
+### Network Debugging
+```bash
+# Test connection
+ping hostname
+curl -v https://example.com
+telnet hostname port
+
+# DNS lookup
+nslookup domain.com
+dig domain.com
+
+# Trace route
+traceroute hostname
+mtr hostname
+```
+
+## Performance Debugging
+
+### Find Slow Operations
+```bash
+# Profile script
+time command
+hyperfine 'command1' 'command2'
+
+# Find slow SQL queries
+EXPLAIN ANALYZE SELECT ...
+
+# Profile Python
+python -m cProfile script.py
+```
+
+### Memory Issues
+```bash
+# Check memory usage
+free -h
+vmstat 1
+htop
+
+# Find memory leaks (Python)
+pip install memory-profiler
+python -m memory_profiler script.py
+```
+
+## Common Problem Patterns
+
+### "It Works on My Machine"
+- Check environment variables
+- Verify dependencies versions
+- Compare configurations
+- Check file permissions
+- Consider OS differences
+
+### Intermittent Failures
+- Race condition?
+- Resource exhaustion?
+- External service timeout?
+- Caching issue?
+- Timing-dependent?
+
+### "Nothing Changed"
+- Check git log
+- Review deployed version
+- Check dependency updates
+- Verify environment config
+- Check system updates
+
+### Mysterious Behavior
+- Check for typos (similar variable names)
+- Verify imports/includes
+- Check scope issues
+- Look for hidden characters
+- Verify file encoding
+
+## Debugging Tools by Language
+
+### Python
+- `pdb`: Built-in debugger
+- `ipdb`: Enhanced debugger
+- `logging`: Structured logging
+- `pytest`: Test runner with debugging
+
+### JavaScript/Node.js
+- Chrome DevTools
+- VS Code debugger
+- `console.log` / `console.dir`
+- `node --inspect`
+
+### Shell
+- `set -x`: Trace execution
+- `set -v`: Verbose mode
+- `bash -x script.sh`: Debug script
+- `shellcheck`: Static analysis
+
+### Git
+- `git bisect`: Find bad commit
+- `git blame`: Who changed line
+- `git log -p`: Show changes
+- `git diff`: Compare versions
+
+## Prevention Strategies
+
+- Write tests first (TDD)
+- Use type checking
+- Enable compiler warnings
+- Use linters and formatters
+- Add assertions
+- Code review
+- Document assumptions
+- Handle errors explicitly
+
+## Debugging Mindset
+
+- Stay calm and methodical
+- Don't assume - verify everything
+- Simple explanations are usually correct
+- Take breaks when stuck
+- Ask for help when needed
+- Learn from each bug
+- Build debugging tools as you go
+
+## Questions to Ask
+
+1. What changed?
+2. Can you reproduce it?
+3. What does the error message say?
+4. What do the logs show?
+5. Have you checked the basics? (file exists, permissions, connectivity)
+6. Does it fail in the same way every time?
+7. What have you tried already?
+8. What does the simplest test case look like?

@@ -17,11 +17,13 @@ metadata:
 Expert Product Marketing playbook for Series A+ startups expanding internationally with hybrid PLG/Sales-Led motion.
 
 ## Keywords
+
 product marketing, positioning, GTM, go-to-market strategy, competitive analysis, competitive intelligence, battlecards, ICP, ideal customer profile, messaging, value proposition, product launch, market entry, international expansion, sales enablement, win loss analysis, PMM, product marketing manager, market positioning, competitive landscape, sales training
 
 ## Role Coverage
 
 This skill serves:
+
 - **Product Marketing Manager (PMM)** - Positioning, messaging, competitive intel, launches
 - **Head of Marketing** - Strategy, budget, org design, pipeline targets
 - **Head of Growth** - Experimentation, activation, retention, growth loops
@@ -52,6 +54,7 @@ This skill serves:
 ### 1.1 Company Strategy Framework (Series A Context)
 
 **Current State Analysis**:
+
 ```
 Stage: Series A
 Funding: $5-15M raised
@@ -69,6 +72,7 @@ Key Challenges:
 ```
 
 **Strategic Priorities** (in order):
+
 1. **Nail positioning** - Clear, differentiated value prop
 2. **Scale acquisition** - Repeatable, efficient channels
 3. **Prove retention** - Product stickiness, expansion revenue
@@ -80,6 +84,7 @@ Key Challenges:
 **B2B SaaS ICP Framework**:
 
 **Firmographics**:
+
 - Company size: 50-5000 employees (Series A sweet spot)
 - Industry: SaaS, Tech, Professional Services
 - Geography: US, Canada, UK, Germany, France (prioritize by TAM)
@@ -87,12 +92,14 @@ Key Challenges:
 - Funding stage: Seed to Growth (avoid pre-product)
 
 **Technographics**:
+
 - Tech stack: Modern (cloud-first, API-driven)
 - Maturity: Growing fast, willing to adopt new tools
 - Existing tools: [List competitors + complementary products]
 - Integration needs: Must integrate with [Salesforce, Slack, etc.]
 
 **Psychographics**:
+
 - Pain level: 7-10/10 (acute pain, not nice-to-have)
 - Buyer motivation: Efficiency, cost savings, revenue growth
 - Decision process: 2-6 month sales cycle
@@ -101,24 +108,28 @@ Key Challenges:
 **Buyer Personas** (3-5 personas max):
 
 **Primary: Economic Buyer** (signs contract)
+
 - Title: VP, Director, Head of [Department]
 - Goals: ROI, team productivity, cost reduction
 - Fears: Implementation failure, team resistance, budget waste
 - Messaging: Business outcomes, ROI, case studies
 
 **Secondary: Technical Buyer** (evaluates product)
+
 - Title: Senior Engineer, Architect, Tech Lead
 - Goals: Solves technical problem, easy integration
 - Fears: Technical debt, vendor lock-in, poor support
 - Messaging: Technical capabilities, architecture, security
 
 **User/Champion** (advocates internally)
+
 - Title: Manager, Team Lead, Power User
 - Goals: Makes their job easier, team loves it
 - Fears: Learning curve, change management
 - Messaging: UX, ease of use, quick wins
 
 **ICP Validation Checklist**:
+
 - [ ] 5+ paying customers match this profile
 - [ ] Fastest sales cycles (< median time to close)
 - [ ] Highest LTV (> median customer value)
@@ -127,6 +138,7 @@ Key Challenges:
 - [ ] Referenceable (NPS 9-10, willing to do case studies)
 
 **HubSpot ICP Tracking**:
+
 - Create "ICP Fit" property: A (perfect), B (good), C (okay), D (poor)
 - Score based on firmographics, engagement, product usage
 - Report: Win rate by ICP score, pipeline by ICP score
@@ -137,22 +149,26 @@ Key Challenges:
 **Segmentation Dimensions**:
 
 **By Company Size** (recommend starting with one):
+
 - **SMB** (10-200 employees) - Self-serve PLG, low touch, $100-$2k ACV
 - **Mid-Market** (200-2000 employees) - Hybrid, inside sales, $2k-$50k ACV
 - **Enterprise** (2000+ employees) - Sales-led, field sales, $50k+ ACV
 
 **By Vertical** (choose 2-3 focus verticals):
+
 - Horizontal: Broad appeal (e.g., project management for any industry)
 - Vertical: Industry-specific (e.g., healthcare CRM, fintech compliance)
 - Approach: Start horizontal, add verticals as you scale
 
 **By Use Case** (messaging varies):
+
 - Use Case A: [e.g., Team collaboration]
 - Use Case B: [e.g., Client management]
 - Use Case C: [e.g., Project tracking]
 - Each use case = different landing page, messaging, case studies
 
 **By Geography** (Series A focus):
+
 - **US/Canada**: Largest TAM, fastest sales cycles, highest willingness to pay
 - **UK**: English-speaking, gateway to EU, similar buying behavior to US
 - **Germany**: Largest EU economy, high data privacy standards (GDPR leader)
@@ -160,6 +176,7 @@ Key Challenges:
 - **Nordics**: High tech adoption, English proficiency, smaller markets
 
 **Segmentation Priority Matrix**:
+
 ```
 Segment: US Mid-Market SaaS Companies (200-2000 employees)
 Priority: 1 (Highest)
@@ -286,18 +303,21 @@ LEVEL 4: Proof Points
 **Messaging by Persona**:
 
 **Economic Buyer** (VP/Director):
+
 - Primary concern: ROI, business outcomes
 - Tone: Professional, data-driven, results-focused
 - Key message: "Increase revenue by 25% while reducing costs by $200k/year"
 - Proof: ROI calculator, case studies with $ impact
 
 **Technical Buyer** (Engineer/Architect):
+
 - Primary concern: Technical fit, security, scalability
 - Tone: Technical, detailed, objective
 - Key message: "Enterprise-grade architecture with 99.99% uptime and SOC 2 compliance"
 - Proof: Technical docs, security whitepaper, architecture diagram
 
 **End User** (Manager/Individual Contributor):
+
 - Primary concern: Ease of use, daily workflow
 - Tone: Friendly, empathetic, practical
 - Key message: "Spend less time on busywork, more time on what matters"
@@ -327,6 +347,7 @@ LEVEL 4: Proof Points
    - "How do we compare to [Competitor] in customer's eyes?"
 
 **Iteration Cycle**:
+
 - Test new messaging: 2-4 weeks
 - Analyze results: 1 week
 - Update messaging docs: 1 week
@@ -340,20 +361,24 @@ LEVEL 4: Proof Points
 ### 3.1 Competitive Analysis Framework
 
 **Tier 1: Direct Competitors** (head-to-head, same category)
+
 - [Competitor A]: Market leader, $100M+ ARR
 - [Competitor B]: Fast-growing challenger, Series B
 - [Competitor C]: Open-source alternative
 
 **Tier 2: Indirect Competitors** (adjacent solutions)
+
 - [Alt Solution D]: Different approach, overlapping use case
 - [Alt Solution E]: Broader platform, includes your feature
 
 **Tier 3: Status Quo** (what customers do today)
+
 - Spreadsheets + email
 - Build in-house
 - Do nothing
 
 **Competitive Intelligence Sources**:
+
 1. **Product trials**: Sign up for competitor products, use actively
 2. **Website monitoring**: Track changes to pricing, messaging, features
 3. **Customer interviews**: Ask "What alternatives did you consider?"
@@ -432,6 +457,7 @@ COMPETITIVE LANDSCAPE:
 ```
 
 **Battlecard Distribution**:
+
 - Store in: Notion, Confluence, or sales enablement platform
 - Update frequency: Monthly (or when competitor launches major feature)
 - Access: Sales, CS, Product, Marketing teams
@@ -442,12 +468,14 @@ COMPETITIVE LANDSCAPE:
 **Win/Loss Interview Process**:
 
 **Goals**:
+
 - Understand why you won/lost
 - Validate positioning and messaging
 - Identify product gaps
 - Track competitive trends
 
 **Process**:
+
 1. **Identify deals** (closed won or lost in last 30 days)
 2. **Request interview** (email or HubSpot workflow)
 3. **Conduct interview** (30-45 min, record with permission)
@@ -457,6 +485,7 @@ COMPETITIVE LANDSCAPE:
 **Interview Questions** (pick 8-10):
 
 **For Wins**:
+
 - What problem were you trying to solve?
 - What alternatives did you evaluate?
 - Why did you choose us over [Competitor]?
@@ -464,6 +493,7 @@ COMPETITIVE LANDSCAPE:
 - What could we improve?
 
 **For Losses**:
+
 - What problem were you trying to solve?
 - Who did you choose instead? Why?
 - What did we do well in the sales process?
@@ -472,13 +502,14 @@ COMPETITIVE LANDSCAPE:
 
 **Data Tracking** (in HubSpot or spreadsheet):
 
-| Deal | Outcome | Reason | Competitor | Price Factor | Product Gap | Messaging Issue |
-|------|---------|--------|------------|--------------|-------------|-----------------|
-| Acme Corp | Won | Best product fit | Competitor A | No | No | No |
-| Beta Inc | Lost | Price | Competitor B | Yes | No | No |
-| Gamma LLC | Lost | Missing feature X | Built in-house | No | Yes | No |
+| Deal      | Outcome | Reason            | Competitor     | Price Factor | Product Gap | Messaging Issue |
+| --------- | ------- | ----------------- | -------------- | ------------ | ----------- | --------------- |
+| Acme Corp | Won     | Best product fit  | Competitor A   | No           | No          | No              |
+| Beta Inc  | Lost    | Price             | Competitor B   | Yes          | No          | No              |
+| Gamma LLC | Lost    | Missing feature X | Built in-house | No           | Yes         | No              |
 
 **Monthly Insights Report**:
+
 ```
 Win/Loss Summary (March 2025):
 - Total deals analyzed: 20 (12 wins, 8 losses)
@@ -505,6 +536,7 @@ Action Items:
 ### 4.1 GTM Motion Types
 
 **PLG (Product-Led Growth)**:
+
 - Entry: Free trial or freemium
 - Buyer: End user → Manager → VP
 - Sales: Low touch or self-serve
@@ -512,6 +544,7 @@ Action Items:
 - Example: Slack, Notion, Figma
 
 **Sales-Led Growth**:
+
 - Entry: Demo request → Sales qualification
 - Buyer: VP → C-level
 - Sales: High touch, consultative
@@ -519,6 +552,7 @@ Action Items:
 - Example: Salesforce, Workday, SAP
 
 **Hybrid (PLG + Sales)**:
+
 - Entry: Free trial for SMB, demo for Enterprise
 - Buyer: End user (PLG) or Executive (Sales-Led)
 - Sales: Self-serve → Assisted → Enterprise
@@ -526,6 +560,7 @@ Action Items:
 - Example: HubSpot, Atlassian, Zoom
 
 **Series A Recommendation**: Start with **Hybrid**
+
 - Reason: Faster learning, broader TAM, efficient scaling
 - Approach:
   - Bottom-up (PLG): Free trial → Paid team plan → Upgrade to Enterprise
@@ -536,12 +571,14 @@ Action Items:
 **Pre-Launch (Days -90 to -30)**:
 
 Week 1-4: Foundation
+
 - [ ] Define ICP and buyer personas
 - [ ] Develop positioning and messaging
 - [ ] Create competitive battlecards
 - [ ] Set success metrics (pipeline $, MQLs, win rate)
 
 Week 5-8: Content & Enablement
+
 - [ ] Build website pages (homepage, product, pricing)
 - [ ] Create sales deck and demo script
 - [ ] Produce launch assets (one-pager, case studies, FAQs)
@@ -549,6 +586,7 @@ Week 5-8: Content & Enablement
 - [ ] Train sales team on positioning and talk tracks
 
 Week 9-12: Channel Setup
+
 - [ ] Launch paid campaigns (LinkedIn, Google)
 - [ ] Set up HubSpot tracking and attribution
 - [ ] Publish SEO content (blog posts, guides)
@@ -558,6 +596,7 @@ Week 9-12: Channel Setup
 **Launch (Days 1-30)**:
 
 Week 1: Awareness
+
 - [ ] Press release distribution
 - [ ] Email announcement to existing database
 - [ ] Social media campaign (LinkedIn, Twitter)
@@ -565,6 +604,7 @@ Week 1: Awareness
 - [ ] Outbound sales blitz (top 100 accounts)
 
 Week 2-4: Activation
+
 - [ ] Monitor conversion rates (daily)
 - [ ] A/B test landing pages and ad copy
 - [ ] Sales follow-up on inbound leads (<4 hour SLA)
@@ -574,6 +614,7 @@ Week 2-4: Activation
 **Post-Launch (Days 31-90)**:
 
 Week 5-8: Optimization
+
 - [ ] Analyze win/loss data (why did we win/lose?)
 - [ ] Optimize underperforming channels (pause or pivot)
 - [ ] Scale winning channels (20% weekly budget increase)
@@ -581,6 +622,7 @@ Week 5-8: Optimization
 - [ ] Expand content (SEO, demand gen)
 
 Week 9-12: Scale
+
 - [ ] Enter new market segments (vertical or geo)
 - [ ] Launch partnerships (co-marketing campaigns)
 - [ ] Build PLG loops (referral program, viral features)
@@ -592,6 +634,7 @@ Week 9-12: Scale
 **Market Entry Priority** (Series A recommended order):
 
 **Phase 1: US Market** (Months 1-6)
+
 - Why: Largest TAM, fastest sales cycles, highest ACV
 - Entry strategy:
   - Hire US-based SDRs/AEs (or partner with US sales agency)
@@ -602,6 +645,7 @@ Week 9-12: Scale
 - Target: $1M ARR from US by Month 6
 
 **Phase 2: UK Market** (Months 4-9)
+
 - Why: English-speaking, gateway to EU, similar to US
 - Entry strategy:
   - Hire UK sales rep or partner with UK agency
@@ -612,6 +656,7 @@ Week 9-12: Scale
 - Target: $500k ARR from UK by Month 9
 
 **Phase 3: DACH (Germany/Austria/Switzerland)** (Months 7-12)
+
 - Why: Largest EU economy, high data privacy standards
 - Entry strategy:
   - Translate website and product (German)
@@ -623,6 +668,7 @@ Week 9-12: Scale
 - Target: $300k ARR from DACH by Month 12
 
 **Phase 4: France** (Months 10-15)
+
 - Why: Second largest EU market, localization critical
 - Entry strategy:
   - Full French translation (website, product, support)
@@ -633,6 +679,7 @@ Week 9-12: Scale
 - Target: $200k ARR from France by Month 15
 
 **Phase 5: Canada** (Months 7-12)
+
 - Why: Similar to US, easier entry, smaller market
 - Entry strategy:
   - Minimal localization (CAD pricing)
@@ -653,6 +700,7 @@ Week 9-12: Scale
 - [ ] **Payments**: Local payment methods (SEPA, iDEAL, etc.)
 
 **Budget Allocation** (international expansion):
+
 ```
 Year 1 (Series A):
 - US: 50% ($200k)
@@ -672,6 +720,7 @@ Expected ROI: 3:1 (marketing-sourced pipeline : spend)
 ### 5.1 Launch Tiers (Effort vs. Impact)
 
 **Tier 1: Major Launch** (quarterly, high impact)
+
 - Scope: New product, major feature, platform expansion
 - Audience: Existing customers + new prospects + press
 - Effort: 6-8 weeks prep, full cross-functional launch
@@ -679,6 +728,7 @@ Expected ROI: 3:1 (marketing-sourced pipeline : spend)
 - Activities: Press release, webinar, email series, paid ads, sales blitz
 
 **Tier 2: Standard Launch** (monthly, medium impact)
+
 - Scope: Significant feature, integration, improvement
 - Audience: Existing customers + select prospects
 - Effort: 3-4 weeks prep, core team involvement
@@ -686,6 +736,7 @@ Expected ROI: 3:1 (marketing-sourced pipeline : spend)
 - Activities: Blog post, email announcement, product update, sales enablement
 
 **Tier 3: Minor Launch** (weekly, low impact)
+
 - Scope: Small feature, bug fix, optimization
 - Audience: Existing customers only
 - Effort: 1 week prep, product + marketing only
@@ -697,6 +748,7 @@ Expected ROI: 3:1 (marketing-sourced pipeline : spend)
 **8 Weeks Before Launch**:
 
 Week -8:
+
 - [ ] Kickoff meeting (Product, Marketing, Sales, CS)
 - [ ] Define launch goals (pipeline $, MQLs, press coverage)
 - [ ] Identify target audience (ICP, personas)
@@ -704,12 +756,14 @@ Week -8:
 - [ ] Assign roles and responsibilities
 
 Week -7:
+
 - [ ] Develop GTM strategy (channels, tactics, budget)
 - [ ] Create sales enablement (deck, demo script, FAQs)
 - [ ] Plan content (blog posts, case studies, videos)
 - [ ] Design creative assets (ads, social graphics, emails)
 
 Week -6:
+
 - [ ] Build landing pages (product page, demo request)
 - [ ] Set up HubSpot campaigns and tracking
 - [ ] Write press release and pitch media
@@ -717,6 +771,7 @@ Week -6:
 - [ ] Produce demo video
 
 Week -5:
+
 - [ ] Beta test with select customers (feedback)
 - [ ] Train sales team (positioning, demo, objection handling)
 - [ ] Train CS team (onboarding, support docs)
@@ -726,6 +781,7 @@ Week -5:
 **4 Weeks Before Launch**:
 
 Week -4:
+
 - [ ] Launch paid ad campaigns (LinkedIn, Google)
 - [ ] Publish teaser content (blog, social)
 - [ ] Send pre-launch email to customer base
@@ -733,6 +789,7 @@ Week -4:
 - [ ] Set up webinar registration
 
 Week -3:
+
 - [ ] A/B test landing pages and ad copy
 - [ ] Ramp up content production (blog posts, videos)
 - [ ] Sales prospecting (outbound to target accounts)
@@ -740,6 +797,7 @@ Week -3:
 - [ ] Prepare launch day checklist
 
 Week -2:
+
 - [ ] Send reminder emails (webinar, launch countdown)
 - [ ] Increase paid ad spend (ramp up)
 - [ ] Sales follow-up on warmed leads
@@ -747,6 +805,7 @@ Week -2:
 - [ ] Prepare launch day assets (social posts, emails)
 
 Week -1:
+
 - [ ] Final review: All assets approved
 - [ ] Pre-launch email to VIP customers and partners
 - [ ] Sales team ready (trained, motivated, quotas set)
@@ -756,6 +815,7 @@ Week -1:
 **Launch Week**:
 
 Day 1 (Launch Day):
+
 - [ ] Press release goes live (distribute to media)
 - [ ] Email announcement to full database
 - [ ] Social media blitz (LinkedIn, Twitter, Facebook)
@@ -765,6 +825,7 @@ Day 1 (Launch Day):
 - [ ] Monitor metrics (signups, demos, press pickup)
 
 Days 2-5:
+
 - [ ] Daily monitoring (conversion rates, funnel drop-offs)
 - [ ] A/B test optimizations (headlines, CTAs)
 - [ ] Sales follow-up (4-hour SLA on inbound leads)
@@ -773,6 +834,7 @@ Days 2-5:
 - [ ] Webinar (Day 3 or 4)
 
 Week 2:
+
 - [ ] Analyze launch results (vs. goals)
 - [ ] Publish post-launch content (case studies, how-to guides)
 - [ ] Sales continue outbound (sustained momentum)
@@ -780,6 +842,7 @@ Week 2:
 - [ ] Scale winning channels (increase budget)
 
 Week 3-4:
+
 - [ ] Post-launch report (metrics, learnings, next steps)
 - [ ] Customer feedback interviews (product improvements)
 - [ ] Win/loss analysis (why did we win/lose deals?)
@@ -789,6 +852,7 @@ Week 3-4:
 ### 5.3 Launch Metrics Dashboard
 
 **Leading Indicators** (track daily):
+
 - Landing page visitors
 - Demo requests
 - Free trial signups
@@ -796,6 +860,7 @@ Week 3-4:
 - Sales pipeline created ($)
 
 **Lagging Indicators** (track weekly/monthly):
+
 - SQLs generated
 - Deals closed (count + $)
 - Win rate (vs. pre-launch)
@@ -803,6 +868,7 @@ Week 3-4:
 - NPS score (feature-specific)
 
 **HubSpot Dashboard**:
+
 ```
 Launch Campaign: [Q2-2025-Product-X-Launch]
 
@@ -837,6 +903,7 @@ NEXT ACTIONS:
 **Core Assets**:
 
 **1. Sales Deck** (15-20 slides)
+
 ```
 Slide 1: Title slide (logo, tagline)
 Slide 2: Agenda
@@ -862,15 +929,18 @@ Guidelines:
 ```
 
 **2. One-Pagers** (1-page PDF)
+
 - Product overview (what it is, who it's for, key features)
 - Competitive comparison (vs. Competitor A, B, C)
 - Case study (customer story with metrics)
 - Pricing sheet (plans, features, add-ons)
 
 **3. Battlecards** (per competitor)
+
 - See Section 3.2 for detailed battlecard template
 
 **4. Demo Script** (30-45 min)
+
 ```
 Demo Flow:
 1. Intro (2 min) - Who we are, what we'll cover
@@ -888,6 +958,7 @@ Demo Tips:
 ```
 
 **5. Email Templates** (HubSpot sequences)
+
 - Cold outreach (prospecting)
 - Demo follow-up
 - Trial conversion
@@ -895,6 +966,7 @@ Demo Tips:
 - Closing sequence
 
 **6. ROI Calculator** (spreadsheet or web tool)
+
 - Input: Customer's current costs, time spent, team size
 - Output: Savings with your product, payback period, 3-year ROI
 - Example: "Save $150k/year, 6-month payback, 500% ROI"
@@ -902,6 +974,7 @@ Demo Tips:
 ### 6.2 Sales Training Program
 
 **Monthly Sales Enablement Call** (60 min):
+
 - Product updates (new features, roadmap)
 - Competitive landscape (new competitors, battlecard updates)
 - Win/loss insights (why we're winning/losing)
@@ -909,12 +982,14 @@ Demo Tips:
 - Q&A (open forum for questions)
 
 **Quarterly Sales Training** (half-day workshop):
+
 - Deep dive: Positioning and messaging refresh
 - Role-playing: Objection handling, competitive demos
 - Product training: New features, advanced use cases
 - Customer panel: Hear directly from customers (why they bought)
 
 **Sales Onboarding** (new hires):
+
 - Week 1: Company, product, market overview
 - Week 2: ICP, personas, messaging
 - Week 3: Competitive intelligence, battlecards
@@ -927,17 +1002,20 @@ Demo Tips:
 **Product Marketing → Sales**:
 
 **Weekly Sync** (30 min):
+
 - Review: Win/loss insights, competitive updates
 - Share: New assets (battlecards, case studies, one-pagers)
 - Feedback: What's working, what's not
 - Request: Sales asks for specific assets (e.g., "Need competitor X battlecard")
 
 **Quarterly Business Review** (QBR):
+
 - Results: Pipeline, win rate, deal size, sales velocity
 - Insights: Top win/loss reasons, competitive trends
 - Action items: Product gaps, messaging updates, enablement needs
 
 **Communication Channels**:
+
 - Slack: #sales-enablement (daily questions, quick updates)
 - HubSpot: Centralized asset library (decks, one-pagers, videos)
 - Notion: Internal wiki (positioning, messaging, competitive intel)
@@ -949,26 +1027,32 @@ Demo Tips:
 ### 7.1 PMM KPIs (Track Monthly)
 
 **Product Adoption**:
+
 - % of customers using new feature (within 30 days of launch)
 - Target: >40% adoption within 90 days
 
 **Sales Velocity**:
+
 - Days from SQL to closed won
 - Target: Decrease by 20% YoY
 
 **Win Rate**:
+
 - % of opportunities won (vs. competitors)
 - Target: >30% win rate (competitive deals)
 
 **Deal Size**:
+
 - Average contract value (ACV)
 - Target: Increase by 25% YoY
 
 **Launch Impact**:
+
 - Pipeline $ generated from launch campaigns
 - Target: 3:1 ROMI (pipeline $ : marketing spend)
 
 **Competitive Win Rate**:
+
 - % of deals won against Competitor A, B, C
 - Target: >35% win rate vs. top competitor
 
@@ -977,6 +1061,7 @@ Demo Tips:
 **Custom Reports**:
 
 **1. Product Launch Impact**
+
 ```
 Metrics: Leads, MQLs, SQLs, Pipeline $, Closed Won $
 Dimensions: Campaign, Channel, Region
@@ -985,6 +1070,7 @@ Time period: 90 days post-launch
 ```
 
 **2. Competitive Win Rate**
+
 ```
 Metrics: Opportunities, Closed Won, Win Rate %
 Dimensions: Competitor (property)
@@ -993,6 +1079,7 @@ Segment by: Competitor A, B, C, Other
 ```
 
 **3. Sales Enablement Usage**
+
 ```
 Metrics: Asset downloads, views, shares
 Dimensions: Asset type (deck, battlecard, case study)
@@ -1005,6 +1092,7 @@ Insight: Which assets are most used by sales
 **QBR Template** (present to executive team):
 
 **Slide 1: Executive Summary**
+
 ```
 Q2 2025 Highlights:
 - Launched Product X (pipeline: $2M, 500 MQLs)
@@ -1014,6 +1102,7 @@ Q2 2025 Highlights:
 ```
 
 **Slide 2: Metrics Dashboard**
+
 ```
 KPI             Q2 Target   Q2 Actual   Status
 ─────────────────────────────────────────────
@@ -1026,6 +1115,7 @@ Sales Velocity  75 days     68 days     ✅ -9%
 ```
 
 **Slide 3: Key Insights**
+
 ```
 What Worked:
 1. Product X launch exceeded MQL target by 19%
@@ -1044,6 +1134,7 @@ Action Items:
 ```
 
 **Slide 4: Next Quarter Plan**
+
 ```
 Q3 2025 Priorities:
 1. Launch Product Y (pipeline target: $3M)
@@ -1063,24 +1154,28 @@ Headcount: +1 PMM, +1 Content Marketer
 ### 8.1 PMM Monthly Checklist
 
 **Week 1** (Strategy & Planning):
+
 - [ ] Review previous month metrics (win rate, deal size, pipeline)
 - [ ] Analyze win/loss interviews (competitive trends)
 - [ ] Update competitive battlecards (if needed)
 - [ ] Plan next month campaigns and content
 
 **Week 2** (Content & Enablement):
+
 - [ ] Create new sales assets (1-pager, case study, deck update)
 - [ ] Publish content (blog post, video, webinar)
 - [ ] Train sales on new positioning or product updates
 - [ ] Review sales asset usage (what's working?)
 
 **Week 3** (Launches & Campaigns):
+
 - [ ] Support product launches (if any)
 - [ ] Monitor campaign performance (MQLs, SQLs, pipeline)
 - [ ] Optimize underperforming channels
 - [ ] Customer interviews (feedback on positioning)
 
 **Week 4** (Reporting & Iteration):
+
 - [ ] Monthly metrics report (for exec team)
 - [ ] Sales enablement call (updates, Q&A)
 - [ ] Win/loss analysis (themes, trends)
@@ -1089,26 +1184,31 @@ Headcount: +1 PMM, +1 Content Marketer
 ### 8.2 Positioning Development Timeline
 
 **Week 1**: Research
+
 - Customer interviews (10-15)
 - Competitive analysis
 - Market trends
 
 **Week 2**: Framework
+
 - April Dunford positioning exercise
 - Define unique value
 - Identify best-fit customers
 
 **Week 3**: Messaging
+
 - Craft value proposition
 - Build messaging hierarchy
 - Create persona-specific messaging
 
 **Week 4**: Validation
+
 - Test with sales team
 - A/B test on landing pages
 - Customer feedback
 
 **Week 5-6**: Rollout
+
 - Update website, sales decks
 - Train sales and CS teams
 - Launch campaigns with new messaging
@@ -1116,21 +1216,25 @@ Headcount: +1 PMM, +1 Content Marketer
 ### 8.3 Team Handoff Protocols
 
 **PMM → Demand Gen**:
+
 - Deliver: Positioning, messaging, competitive intel, launch plans
 - Frequency: Monthly sync + ad-hoc for launches
 - SLA: 2-week lead time for major campaigns
 
 **PMM → Sales**:
+
 - Deliver: Battlecards, sales decks, demo scripts, objection handling
 - Frequency: Monthly enablement call + weekly Slack updates
 - SLA: 48 hours for urgent competitive questions
 
 **PMM → Product**:
+
 - Deliver: Customer feedback, competitive feature gaps, win/loss insights
 - Frequency: Weekly product sync
 - SLA: Quarterly roadmap input (feature prioritization)
 
 **PMM → Customer Success**:
+
 - Deliver: Product positioning, adoption tactics, customer education content
 - Frequency: Monthly sync
 - SLA: 1 week for new product launch enablement

@@ -1,7 +1,6 @@
 ---
 name: deepinit
 description: Deep codebase initialization with hierarchical AGENTS.md documentation
-user-invocable: true
 ---
 
 # Deep Init Skill

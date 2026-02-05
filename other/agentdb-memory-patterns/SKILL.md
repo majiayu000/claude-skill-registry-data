@@ -1,6 +1,15 @@
 ---
 name: "AgentDB Memory Patterns"
+version: "1.0.0"
 description: "Implement persistent memory patterns for AI agents using AgentDB. Includes session memory, long-term storage, pattern learning, and context management. Use when building stateful agents, chat systems, or intelligent assistants."
+category: ai-ml
+tags:
+  - agentdb
+  - memory
+  - persistence
+  - ai-agents
+  - context-management
+author: Smith Horn
 ---
 
 # AgentDB Memory Patterns
@@ -108,7 +117,6 @@ const context = await adapter.retrieveWithReasoning(queryEmbedding, {
 ## Memory Patterns
 
 ### 1. Session Memory
-
 ```typescript
 class SessionMemory {
   async storeMessage(role: string, content: string) {
@@ -131,7 +139,6 @@ class SessionMemory {
 ```
 
 ### 2. Long-Term Memory
-
 ```typescript
 // Store important facts
 await db.storeFact({
@@ -149,7 +156,6 @@ const prefs = await db.getFacts({
 ```
 
 ### 3. Pattern Learning
-
 ```typescript
 // Learn from successful interactions
 await db.storePattern({
@@ -166,7 +172,6 @@ const pattern = await db.matchPattern(currentContext);
 ## Advanced Patterns
 
 ### Hierarchical Memory
-
 ```typescript
 // Organize memory in hierarchy
 await memory.organize({
@@ -178,7 +183,6 @@ await memory.organize({
 ```
 
 ### Memory Consolidation
-
 ```typescript
 // Periodically consolidate memories
 await memory.consolidate({
@@ -308,7 +312,6 @@ npx agentdb@latest plugin-info <name>
 ## Troubleshooting
 
 ### Issue: Memory growing too large
-
 ```bash
 # Check database size
 npx agentdb@latest stats ./agents.db
@@ -318,14 +321,12 @@ npx agentdb@latest stats ./agents.db
 ```
 
 ### Issue: Slow search performance
-
 ```bash
 # Enable HNSW indexing and caching
 # Results: <100µs search time
 ```
 
 ### Issue: Migration from legacy ReasoningBank
-
 ```bash
 # Automatic migration with validation
 npx agentdb@latest migrate --source .swarm/memory.db
@@ -341,7 +342,7 @@ npx agentdb@latest migrate --source .swarm/memory.db
 
 ## Learn More
 
-- GitHub: <https://github.com/ruvnet/agentic-flow/tree/main/packages/agentdb>
+- GitHub: https://github.com/ruvnet/agentic-flow/tree/main/packages/agentdb
 - Documentation: node_modules/agentic-flow/docs/AGENTDB_INTEGRATION.md
 - MCP Integration: `npx agentdb@latest mcp` for Claude Code
-- Website: <https://agentdb.ruv.io>
+- Website: https://agentdb.ruv.io

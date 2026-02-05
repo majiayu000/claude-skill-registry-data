@@ -1,181 +1,91 @@
 ---
 name: typescript
-description: |
-  Provides comprehensive TypeScript development expertise and coding standards. Ensures type safety through strict type checking, implements clean code patterns, and maintains consistent architectural decisions. Specializes in advanced type system features including generics, conditional types, mapped types, and template literal types.
-  Use when: working with TypeScript files (.ts/.tsx), defining type definitions and interfaces, implementing generic programming patterns, designing type-safe APIs, handling complex type transformations, integrating TypeScript with React/Vue/Angular frameworks, configuring strict mode settings, resolving type errors, or optimizing type performance in large codebases.
+description: This skill should be used when the user asks to "optimize TypeScript performance", "speed up tsc compilation", "configure tsconfig.json", "fix type errors", "improve async patterns", or encounters TS errors (TS2322, TS2339, "is not assignable to"). Also triggers on .ts, .tsx, .d.ts file work involving type definitions, module organization, or memory management. Does NOT cover TypeScript basics, framework-specific patterns, or testing.
 ---
 
-# TypeScript Coding Standards
+# TypeScript Best Practices
 
-## Basic Principles
+Comprehensive performance optimization guide for TypeScript applications. Contains 42 rules across 8 categories, prioritized by impact to guide automated refactoring and code generation.
 
-### One Function, One Responsibility
+## When to Apply
 
-- If function name connects with "and" or "or", it's a signal to split
-- If test cases are needed for each if branch, it's a signal to split
+Reference these guidelines when:
+- Configuring tsconfig.json for a new or existing project
+- Writing complex type definitions or generics
+- Optimizing async/await patterns and data fetching
+- Organizing modules and managing imports
+- Reviewing code for compilation or runtime performance
 
-### Conditional and Loop Depth Limited to 2 Levels
+## Rule Categories by Priority
 
-- Minimize depth using early return whenever possible
-- If still heavy, extract into separate functions
+| Priority | Category | Impact | Prefix |
+|----------|----------|--------|--------|
+| 1 | Type System Performance | CRITICAL | `type-` |
+| 2 | Compiler Configuration | CRITICAL | `tscfg-` |
+| 3 | Async Patterns | HIGH | `async-` |
+| 4 | Module Organization | HIGH | `module-` |
+| 5 | Type Safety Patterns | MEDIUM-HIGH | `safety-` |
+| 6 | Memory Management | MEDIUM | `mem-` |
+| 7 | Runtime Optimization | LOW-MEDIUM | `runtime-` |
+| 8 | Advanced Patterns | LOW | `advanced-` |
 
-### Make Function Side Effects Explicit
+## Table of Contents
 
-- Example: If `getUser` also runs `updateLastAccess()`, specify it in the function name
+1. [Type System Performance](references/_sections.md#1-type-system-performance) — **CRITICAL**
+   - 1.1 [Add Explicit Return Types to Exported Functions](references/type-explicit-return-types.md) — CRITICAL (30-50% faster declaration emit)
+   - 1.2 [Avoid Deeply Nested Generic Types](references/type-avoid-deep-generics.md) — CRITICAL (prevents exponential instantiation cost)
+   - 1.3 [Avoid Large Union Types](references/type-avoid-large-unions.md) — CRITICAL (quadratic O(n²) comparison cost)
+   - 1.4 [Extract Conditional Types to Named Aliases](references/type-extract-conditional-types.md) — CRITICAL (enables compiler caching, prevents re-evaluation)
+   - 1.5 [Limit Type Recursion Depth](references/type-limit-recursion-depth.md) — CRITICAL (prevents exponential type expansion)
+   - 1.6 [Prefer Interfaces Over Type Intersections](references/type-interfaces-over-intersections.md) — CRITICAL (2-5× faster type resolution)
+   - 1.7 [Simplify Complex Mapped Types](references/type-simplify-mapped-types.md) — CRITICAL (reduces type computation by 50-80%)
+2. [Compiler Configuration](references/_sections.md#2-compiler-configuration) — **CRITICAL**
+   - 2.1 [Configure Include and Exclude Properly](references/tscfg-exclude-properly.md) — CRITICAL (prevents scanning thousands of unnecessary files)
+   - 2.2 [Enable Incremental Compilation](references/tscfg-enable-incremental.md) — CRITICAL (50-90% faster rebuilds)
+   - 2.3 [Enable skipLibCheck for Faster Builds](references/tscfg-skip-lib-check.md) — CRITICAL (20-40% faster compilation)
+   - 2.4 [Enable strictFunctionTypes for Faster Variance Checks](references/tscfg-strict-function-types.md) — CRITICAL (enables optimized variance checking)
+   - 2.5 [Use isolatedModules for Single-File Transpilation](references/tscfg-isolate-modules.md) — CRITICAL (80-90% faster transpilation with bundlers)
+   - 2.6 [Use Project References for Large Codebases](references/tscfg-project-references.md) — CRITICAL (60-80% faster incremental builds)
+3. [Async Patterns](references/_sections.md#3-async-patterns) — **HIGH**
+   - 3.1 [Annotate Async Function Return Types](references/async-explicit-return-types.md) — HIGH (prevents runtime errors, improves inference)
+   - 3.2 [Avoid await Inside Loops](references/async-avoid-loop-await.md) — HIGH (N× faster for N iterations, 10 users = 10× improvement)
+   - 3.3 [Avoid Unnecessary async/await](references/async-avoid-unnecessary-async.md) — HIGH (eliminates microtask queue overhead)
+   - 3.4 [Defer await Until Value Is Needed](references/async-defer-await.md) — HIGH (enables implicit parallelization)
+   - 3.5 [Use Promise.all for Independent Operations](references/async-parallel-promises.md) — HIGH (2-10× improvement in I/O-bound code)
+4. [Module Organization](references/_sections.md#4-module-organization) — **HIGH**
+   - 4.1 [Avoid Barrel File Imports](references/module-avoid-barrel-imports.md) — HIGH (200-800ms import cost, 30-50% larger bundles)
+   - 4.2 [Avoid Circular Dependencies](references/module-avoid-circular-dependencies.md) — HIGH (prevents runtime undefined errors and slow compilation)
+   - 4.3 [Control @types Package Inclusion](references/module-control-types-inclusion.md) — HIGH (prevents type conflicts and reduces memory usage)
+   - 4.4 [Use Dynamic Imports for Large Modules](references/module-dynamic-imports.md) — HIGH (reduces initial bundle by 30-70%)
+   - 4.5 [Use Type-Only Imports for Types](references/module-use-type-imports.md) — HIGH (eliminates runtime imports for type information)
+5. [Type Safety Patterns](references/_sections.md#5-type-safety-patterns) — **MEDIUM-HIGH**
+   - 5.1 [Enable strictNullChecks](references/safety-strict-null-checks.md) — MEDIUM-HIGH (prevents null/undefined runtime errors)
+   - 5.2 [Prefer unknown Over any](references/safety-prefer-unknown-over-any.md) — MEDIUM-HIGH (forces type narrowing, prevents runtime errors)
+   - 5.3 [Use Assertion Functions for Validation](references/safety-assertion-functions.md) — MEDIUM-HIGH (reduces validation boilerplate by 50-70%)
+   - 5.4 [Use const Assertions for Literal Types](references/safety-const-assertions.md) — MEDIUM-HIGH (preserves literal types, enables better inference)
+   - 5.5 [Use Exhaustive Checks for Union Types](references/safety-exhaustive-checks.md) — MEDIUM-HIGH (prevents 100% of missing case errors at compile time)
+   - 5.6 [Use Type Guards for Runtime Type Checking](references/safety-use-type-guards.md) — MEDIUM-HIGH (eliminates type assertions, catches errors at boundaries)
+6. [Memory Management](references/_sections.md#6-memory-management) — **MEDIUM**
+   - 6.1 [Avoid Closure Memory Leaks](references/mem-avoid-closure-leaks.md) — MEDIUM (prevents retained references in long-lived callbacks)
+   - 6.2 [Avoid Global State Accumulation](references/mem-avoid-global-state.md) — MEDIUM (prevents unbounded memory growth)
+   - 6.3 [Clean Up Event Listeners](references/mem-cleanup-event-listeners.md) — MEDIUM (prevents unbounded memory growth)
+   - 6.4 [Clear Timers and Intervals](references/mem-clear-timers.md) — MEDIUM (prevents callback retention and repeated execution)
+   - 6.5 [Use WeakMap for Object Metadata](references/mem-use-weakmap-for-metadata.md) — MEDIUM (prevents memory leaks, enables automatic cleanup)
+7. [Runtime Optimization](references/_sections.md#7-runtime-optimization) — **LOW-MEDIUM**
+   - 7.1 [Avoid Object Spread in Hot Loops](references/runtime-avoid-object-spread-in-loops.md) — LOW-MEDIUM (reduces object allocations by N×)
+   - 7.2 [Cache Property Access in Loops](references/runtime-cache-property-access.md) — LOW-MEDIUM (reduces property lookups by N×)
+   - 7.3 [Prefer Native Array Methods Over Lodash](references/runtime-prefer-array-methods.md) — LOW-MEDIUM (eliminates library overhead, enables tree-shaking)
+   - 7.4 [Use for-of for Simple Iteration](references/runtime-use-for-of-for-iteration.md) — LOW-MEDIUM (reduces iteration boilerplate by 30-50%)
+   - 7.5 [Use Modern String Methods](references/runtime-use-string-methods.md) — LOW-MEDIUM (2-5× faster than regex for simple patterns)
+   - 7.6 [Use Set/Map for O(1) Lookups](references/runtime-use-set-for-lookups.md) — LOW-MEDIUM (O(n) to O(1) per lookup)
+8. [Advanced Patterns](references/_sections.md#8-advanced-patterns) — **LOW**
+   - 8.1 [Use Branded Types for Type-Safe IDs](references/advanced-branded-types.md) — LOW (prevents mixing incompatible ID types)
+   - 8.2 [Use satisfies for Type Validation with Inference](references/advanced-satisfies-operator.md) — LOW (prevents property access errors, enables 100% autocomplete accuracy)
+   - 8.3 [Use Template Literal Types for String Patterns](references/advanced-template-literal-types.md) — LOW (prevents 100% of string format errors at compile time)
 
-### Convert Magic Numbers/Strings to Constants When Possible
+## References
 
-- Declare at the top of the file or class where used
-- Consider separating into a constants file if there are many
-
-### Function Order by Call Order
-
-- Follow class access modifier declaration order rules if clear
-- Otherwise, order top-to-bottom for easy reading by call order
-
-### Review External Libraries for Complex Implementations
-
-- When logic is complex and tests become bloated
-- If industry-standard libraries exist, use them
-- When security, accuracy, or performance optimization is critical
-- When browser/platform compatibility or edge cases are numerous
-
-### Modularization (Prevent Code Duplication and Pattern Repetition)
-
-- Absolutely forbid code repetition
-- Modularize similar patterns into reusable forms
-- Allow pre-modularization if reuse is confirmed
-- Avoid excessive abstraction
-- Modularization levels:
-  - Same file: Extract into separate function
-  - Multiple files: Separate into different file
-  - Multiple projects/domains: Separate into package
-
-### Variable and Function Names
-
-- Clear purpose while being concise
-- Forbid abbreviations outside industry standards (id, api, db, err, etc.)
-- Don't repeat context from the parent scope
-- Boolean variables use `is`, `has`, `should` prefixes
-- Function names are verbs or verb+noun forms
-- Plural rules:
-  - Pure arrays: "s" suffix (`users`)
-  - Wrapped object: "list" suffix (`userList`)
-  - Specific data structure: Explicit (`userSet`, `userMap`)
-  - Already plural words: Use as-is
-
-### Field Order
-
-- Alphabetically ascending by default
-- Maintain consistency in usage
-- Also alphabetically ordered in destructuring assignment
-
-### Error Handling
-
-- Error handling level: Handle where meaningful response is possible
-- Error messages: Technical details for logs, actionable guidance for users
-- Error classification: Distinguish between expected and unexpected errors
-- Error propagation: Add context when propagating up the call stack
-- Recovery vs. fast fail: Recover from expected errors with fallback
-- Error types: For domain-specific failures, create custom error classes extending `Error`. Never throw non-Error objects
-- Async errors: Always handle Promise rejection. Use try-catch for async/await, .catch() for promise chains
-
-## Package Management
-
-### Package Manager
-
-- Use pnpm as default package manager
-- Forbid npm, yarn (prevent lock file conflicts)
-
-## File Structure
-
-### Common for All Files
-
-1. Import statements (grouped)
-2. Constant definitions (alphabetically ordered if multiple)
-3. Type/Interface definitions (alphabetically ordered if multiple)
-4. Main content (see below)
-
-### Inside Classes
-
-- Decorators
-- private readonly members
-- readonly members
-- constructor
-- public methods (alphabetically ordered)
-- protected methods (alphabetically ordered)
-- private methods (alphabetically ordered)
-
-### Function Placement in Function-Based Files
-
-- Main exported function
-- Additional exported functions (alphabetically ordered, avoid many)
-- Helper functions
-
-## Function Writing
-
-### Use Arrow Functions
-
-- Always use arrow functions except for class methods
-- Forbid function keyword entirely (exceptions: generator function\*, function hoisting etc. technically impossible cases only)
-
-### Function Arguments: Flat vs Object
-
-- Use flat if single argument or uncertain of future additions
-- Use object form for 2+ arguments in most cases. Allow flat form when:
-  - All required arguments without boolean arguments
-  - All required arguments with clear order (e.g., (width,height), (start,end), (min,max), (from,to))
-
-## Type System
-
-### Type Safety
-
-- Forbid unsafe type bypasses like any, as, !, @ts-ignore, @ts-expect-error
-- Exceptions: Missing or incorrect external library types, rapid development needed (clarify reason in comments)
-- Allow some unknown type when type guard is clear
-- Allow as assertion when literal type (as const) needed
-- Allow as assertion when widening literal/HTML types to broader types
-- Allow "!" assertion when type narrowing impossible after type guard due to TypeScript limitation
-- Allow @ts-ignore, @ts-expect-error in test code (absolutely forbid in production)
-
-### Interface vs Type
-
-- Prioritize Type in all cases by default
-- Use Interface only for these exceptions:
-  - Public API provided to external users like library public API
-  - Need to extend existing interface like external libraries
-  - Designing OOP-style classes where implementation contract must be clearly defined
-
-### null/undefined Handling
-
-- Actively use Optional Chaining (`?.`)
-- Provide defaults with Nullish Coalescing (`??`)
-- Distinguish between `null` and `undefined` by semantic meaning:
-  - `undefined`: Uninitialized state, optional parameters, value not assigned yet
-  - `null`: Intentional absence of value (similar to Go's nil)
-- Examples:
-  - Optional field: `{ name?: string }` → can be `undefined`
-  - Intentionally cleared value: `user.profileImage = null`
-  - External API responses may use either convention
-
-## Code Style
-
-### Maintain Immutability
-
-- Use `const` whenever possible, minimize `let`
-- Create new values instead of directly modifying arrays/objects
-- Use `spread`, `filter`, `map` instead of `push`, `splice`
-- Exceptions: Extremely performance-critical cases
-
-## Recommended Libraries
-
-- Testing: Jest, Playwright
-- Utilities: es-toolkit, dayjs
-- HTTP: ky, @tanstack/query, @apollo/client
-- Form: React Hook Form
-- Type validation: zod
-- UI: Tailwind + shadcn/ui
-- ORM: Prisma (Drizzle if edge support important)
-- State management: zustand
-- Code formatting: prettier, eslint
-- Build: tsup
+1. [https://github.com/microsoft/TypeScript/wiki/Performance](https://github.com/microsoft/TypeScript/wiki/Performance)
+2. [https://www.typescriptlang.org/docs/handbook/](https://www.typescriptlang.org/docs/handbook/)
+3. [https://v8.dev/blog](https://v8.dev/blog)
+4. [https://nodejs.org/en/learn/diagnostics/memory](https://nodejs.org/en/learn/diagnostics/memory)

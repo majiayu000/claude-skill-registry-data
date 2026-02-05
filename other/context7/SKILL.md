@@ -1,65 +1,85 @@
 ---
 name: context7
-description: Query up-to-date library documentation and code examples before implementing features.
-agents: [blaze, rex, nova, tap, spark, grizz, bolt, cleo, cipher, tess, morgan]
-triggers: [documentation, docs, library, api, how to use, examples]
+description: 获取软件库、框架和工具的最新文档
 ---
 
-# Context7 (Library Documentation)
+# Context7
 
-Use Context7 to query **up-to-date documentation** for any library before implementing code.
+## Overview
 
-## Tools
-
-| Tool | Purpose |
-|------|---------|
-| `context7_resolve_library_id` | Find the Context7 ID for a library |
-| `context7_get_library_docs` | Query documentation for a specific topic |
+This skill enables retrieval of current documentation for software libraries and components by querying the Context7 API via curl. Use it instead of relying on potentially outdated training data.
 
 ## Workflow
 
-**Always query docs before implementing:**
+### Step 1: Search for the Library
 
-```
-1. resolve_library_id({ libraryName: "effect typescript" })
-   → Returns: /effect-ts/effect
+To find the Context7 library ID, query the search endpoint:
 
-2. get_library_docs({ 
-     context7CompatibleLibraryID: "/effect-ts/effect", 
-     topic: "schema validation" 
-   })
-   → Returns: Up-to-date documentation
+```bash
+curl -s "https://context7.com/api/v2/libs/search?libraryName=LIBRARY_NAME&query=TOPIC" | jq '.results[0]'
 ```
 
-## Common Library IDs
+**Parameters:**
+- `libraryName` (required): The library name to search for (e.g., "react", "nextjs", "fastapi", "axios")
+- `query` (required): A description of the topic for relevance ranking
 
-| Library | Context7 ID |
-|---------|-------------|
-| Effect | `/effect-ts/effect` |
-| Better Auth | `/better-auth/better-auth` |
-| Next.js | `/vercel/next.js` |
-| React | `/facebook/react` |
-| TanStack Query | `/tanstack/query` |
-| Drizzle ORM | `/drizzle-team/drizzle-orm` |
-| Elysia | `elysiajs` |
-| Axum | `/tokio-rs/axum` |
+**Response fields:**
+- `id`: Library identifier for the context endpoint (e.g., `/websites/react_dev_reference`)
+- `title`: Human-readable library name
+- `description`: Brief description of the library
+- `totalSnippets`: Number of documentation snippets available
 
-## Best Practices
+### Step 2: Fetch Documentation
 
-1. **Always resolve first** - Don't guess library IDs
-2. **Be specific with topics** - "schema validation" not just "validation"
-3. **Query before coding** - Get current patterns, not outdated knowledge
-4. **Check multiple topics** - Query auth, then session, then middleware separately
+To retrieve documentation, use the library ID from step 1:
 
-## Example Queries
-
+```bash
+curl -s "https://context7.com/api/v2/context?libraryId=LIBRARY_ID&query=TOPIC&type=txt"
 ```
-# React patterns
-get_library_docs({ libraryId: "/facebook/react", topic: "useEffect cleanup" })
 
-# Authentication
-get_library_docs({ libraryId: "/better-auth/better-auth", topic: "next.js integration" })
+**Parameters:**
+- `libraryId` (required): The library ID from search results
+- `query` (required): The specific topic to retrieve documentation for
+- `type` (optional): Response format - `json` (default) or `txt` (plain text, more readable)
 
-# Type-safe APIs
-get_library_docs({ libraryId: "/effect-ts/effect", topic: "tagged errors" })
+## Examples
+
+### React hooks documentation
+
+```bash
+# Find React library ID
+curl -s "https://context7.com/api/v2/libs/search?libraryName=react&query=hooks" | jq '.results[0].id'
+# Returns: "/websites/react_dev_reference"
+
+# Fetch useState documentation
+curl -s "https://context7.com/api/v2/context?libraryId=/websites/react_dev_reference&query=useState&type=txt"
 ```
+
+### Next.js routing documentation
+
+```bash
+# Find Next.js library ID
+curl -s "https://context7.com/api/v2/libs/search?libraryName=nextjs&query=routing" | jq '.results[0].id'
+
+# Fetch app router documentation
+curl -s "https://context7.com/api/v2/context?libraryId=/vercel/next.js&query=app+router&type=txt"
+```
+
+### FastAPI dependency injection
+
+```bash
+# Find FastAPI library ID
+curl -s "https://context7.com/api/v2/libs/search?libraryName=fastapi&query=dependencies" | jq '.results[0].id'
+
+# Fetch dependency injection documentation
+curl -s "https://context7.com/api/v2/context?libraryId=/fastapi/fastapi&query=dependency+injection&type=txt"
+```
+
+## Tips
+
+- Use `type=txt` for more readable output
+- Use `jq` to filter and format JSON responses
+- Be specific with the `query` parameter to improve relevance ranking
+- If the first search result is not correct, check additional results in the array
+- URL-encode query parameters containing spaces (use `+` or `%20`)
+- No API key is required for basic usage (rate-limited)

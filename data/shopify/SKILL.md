@@ -1,319 +1,623 @@
 ---
-name: shopify
-description: Build Shopify applications, extensions, and themes using GraphQL/REST APIs, Shopify CLI, Polaris UI components, and Liquid templating. Capabilities include app development with OAuth authentication, checkout UI extensions for customizing checkout flow, admin UI extensions for dashboard integration, POS extensions for retail, theme development with Liquid, webhook management, billing API integration, product/order/customer management. Use when building Shopify apps, implementing checkout customizations, creating admin interfaces, developing themes, integrating payment processing, managing store data via APIs, or extending Shopify functionality.
+name: shopify-expert
+description: Comprehensive Shopify development expert with access to 24 official documentation files covering APIs (GraphQL Admin, Storefront, REST), app development, themes, Liquid, Hydrogen, checkout, extensions, webhooks, Functions, CLI, subscriptions, payments, and all platform features. Invoke when user mentions Shopify, e-commerce, online store, product management, orders, checkout, themes, or headless commerce.
+allowed-tools: Read, Write, Edit, Grep, Glob, Bash, WebFetch
+model: sonnet
 ---
 
-# Shopify Development
+# Shopify Development Expert
 
-Comprehensive guide for building on Shopify platform: apps, extensions, themes, and API integrations.
+## Purpose
 
-## Platform Overview
+Provide comprehensive, accurate guidance for building on Shopify's platform based on 24+ official documentation files. Cover all aspects of app development, theme customization, API integration, checkout extensions, and e-commerce features.
 
-**Core Components:**
-- **Shopify CLI** - Development workflow tool
-- **GraphQL Admin API** - Primary API for data operations (recommended)
-- **REST Admin API** - Legacy API (maintenance mode)
-- **Polaris UI** - Design system for consistent interfaces
-- **Liquid** - Template language for themes
+## Documentation Coverage
 
-**Extension Points:**
-- Checkout UI - Customize checkout experience
-- Admin UI - Extend admin dashboard
-- POS UI - Point of Sale customization
-- Customer Account - Post-purchase pages
-- Theme App Extensions - Embedded theme functionality
+**Full access to official Shopify documentation (when available):**
+- **Location:** `docs/shopify/`
+- **Files:** 25 markdown files
+- **Coverage:** Complete API reference, guides, best practices, and implementation patterns
 
-## Quick Start
-
-### Prerequisites
-
+**Note:** Documentation must be pulled separately:
 ```bash
-# Install Shopify CLI
-npm install -g @shopify/cli@latest
-
-# Verify installation
-shopify version
+pipx install docpull
+docpull https://shopify.dev/docs -o .claude/skills/shopify/docs
 ```
 
-### Create New App
+**Major Areas:**
+- GraphQL Admin API (products, orders, customers, inventory)
+- Storefront API (cart, checkout, customer accounts)
+- REST Admin API (legacy support)
+- App development (authentication, webhooks, extensions)
+- Theme development (Liquid, sections, blocks)
+- Headless commerce (Hydrogen, Oxygen)
+- Checkout customization (UI extensions, validation)
+- Shopify Functions (discounts, delivery, payments)
+- POS extensions (in-person sales)
+- Subscriptions and selling plans
+- Metafields and custom data
+- Shopify Flow automation
+- CLI and development tools
+- Privacy and compliance
+- Performance optimization
 
-```bash
-# Initialize app
-shopify app init
+## When to Use
 
-# Start development server
-shopify app dev
+Invoke when user mentions:
+- **Platform:** Shopify, e-commerce, online store, merchant
+- **APIs:** GraphQL, REST, Storefront API, Admin API
+- **Products:** product management, collections, variants, inventory
+- **Orders:** order processing, fulfillment, shipping
+- **Customers:** customer data, accounts, authentication
+- **Checkout:** checkout customization, payment methods, delivery options
+- **Themes:** Liquid templates, theme development, sections, blocks
+- **Apps:** app development, extensions, webhooks, OAuth
+- **Headless:** Hydrogen, React, headless commerce, Oxygen
+- **Functions:** Shopify Functions, custom logic, discounts
+- **Subscriptions:** recurring billing, selling plans, subscriptions
+- **Tools:** Shopify CLI, development workflow
+- **POS:** point of sale, retail, in-person payments
 
-# Generate extension
-shopify app generate extension --type checkout_ui_extension
+## How to Use Documentation
 
-# Deploy
-shopify app deploy
+When answering questions:
+
+1. **Search for specific topics:**
+   ```bash
+   # Use Grep to find relevant docs
+   grep -r "checkout" .claude/skills/shopify/docs/ --include="*.md"
+   ```
+
+2. **Read specific documentation:**
+   ```bash
+   # API docs
+   cat .claude/skills/shopify/docs/shopify/api-admin-graphql.md
+   cat .claude/skills/shopify/docs/shopify/api-storefront.md
+   ```
+
+3. **Find implementation guides:**
+   ```bash
+   # List all guides
+   ls .claude/skills/shopify/docs/shopify/
+   ```
+
+## Core Authentication
+
+### OAuth 2.0 Flow
+
+```javascript
+// Redirect to Shopify OAuth
+const authUrl = `https://${shop}/admin/oauth/authorize?` +
+  `client_id=${process.env.SHOPIFY_API_KEY}&` +
+  `scope=read_products,write_products&` +
+  `redirect_uri=${redirectUri}&` +
+  `state=${nonce}`;
+
+// Exchange code for access token
+const response = await fetch(
+  `https://${shop}/admin/oauth/access_token`,
+  {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      client_id: process.env.SHOPIFY_API_KEY,
+      client_secret: process.env.SHOPIFY_API_SECRET,
+      code
+    })
+  }
+);
+
+const { access_token } = await response.json();
 ```
 
-### Theme Development
+### Session Tokens (Modern Embedded Apps)
 
-```bash
-# Initialize theme
-shopify theme init
+```javascript
+import { shopifyApi } from '@shopify/shopify-api';
 
-# Start local preview
-shopify theme dev
-
-# Pull from store
-shopify theme pull --live
-
-# Push to store
-shopify theme push --development
+const shopify = shopifyApi({
+  apiKey: process.env.SHOPIFY_API_KEY,
+  apiSecretKey: process.env.SHOPIFY_API_SECRET,
+  scopes: ['read_products', 'write_products'],
+  hostName: process.env.HOST,
+  isEmbeddedApp: true,
+});
 ```
 
-## Development Workflow
+## GraphQL Admin API
 
-### 1. App Development
-
-**Setup:**
-```bash
-shopify app init
-cd my-app
-```
-
-**Configure Access Scopes** (`shopify.app.toml`):
-```toml
-[access_scopes]
-scopes = "read_products,write_products,read_orders"
-```
-
-**Start Development:**
-```bash
-shopify app dev  # Starts local server with tunnel
-```
-
-**Add Extensions:**
-```bash
-shopify app generate extension --type checkout_ui_extension
-```
-
-**Deploy:**
-```bash
-shopify app deploy  # Builds and uploads to Shopify
-```
-
-### 2. Extension Development
-
-**Available Types:**
-- Checkout UI - `checkout_ui_extension`
-- Admin Action - `admin_action`
-- Admin Block - `admin_block`
-- POS UI - `pos_ui_extension`
-- Function - `function` (discounts, payment, delivery, validation)
-
-**Workflow:**
-```bash
-shopify app generate extension
-# Select type, configure
-shopify app dev  # Test locally
-shopify app deploy  # Publish
-```
-
-### 3. Theme Development
-
-**Setup:**
-```bash
-shopify theme init
-# Choose Dawn (reference theme) or start fresh
-```
-
-**Local Development:**
-```bash
-shopify theme dev
-# Preview at localhost:9292
-# Auto-syncs to development theme
-```
-
-**Deployment:**
-```bash
-shopify theme push --development  # Push to dev theme
-shopify theme publish --theme=123  # Set as live
-```
-
-## When to Build What
-
-### Build an App When:
-- Integrating external services
-- Adding functionality across multiple stores
-- Building merchant-facing admin tools
-- Managing store data programmatically
-- Implementing complex business logic
-- Charging for functionality
-
-### Build an Extension When:
-- Customizing checkout flow
-- Adding fields/features to admin pages
-- Creating POS actions for retail
-- Implementing discount/payment/shipping rules
-- Extending customer account pages
-
-### Build a Theme When:
-- Creating custom storefront design
-- Building unique shopping experiences
-- Customizing product/collection pages
-- Implementing brand-specific layouts
-- Modifying homepage/content pages
-
-### Combination Approach:
-**App + Theme Extension:**
-- App handles backend logic and data
-- Theme extension provides storefront UI
-- Example: Product reviews, wishlists, size guides
-
-## Essential Patterns
-
-### GraphQL Product Query
+### Query Products
 
 ```graphql
-query GetProducts($first: Int!) {
-  products(first: $first) {
+query {
+  products(first: 10) {
     edges {
       node {
         id
         title
         handle
+        priceRange {
+          minVariantPrice {
+            amount
+            currencyCode
+          }
+        }
         variants(first: 5) {
           edges {
             node {
               id
-              price
+              sku
               inventoryQuantity
             }
           }
         }
       }
     }
-    pageInfo {
-      hasNextPage
-      endCursor
+  }
+}
+```
+
+### Create Product
+
+```graphql
+mutation {
+  productCreate(input: {
+    title: "New Product"
+    vendor: "My Store"
+    productType: "Apparel"
+    variants: [{
+      price: "29.99"
+      sku: "PROD-001"
+    }]
+  }) {
+    product {
+      id
+      title
+    }
+    userErrors {
+      field
+      message
     }
   }
 }
 ```
 
-### Checkout Extension (React)
+### Fetch Orders
 
-```javascript
-import { reactExtension, BlockStack, TextField, Checkbox } from '@shopify/ui-extensions-react/checkout';
-
-export default reactExtension('purchase.checkout.block.render', () => <Extension />);
-
-function Extension() {
-  const [message, setMessage] = useState('');
-
-  return (
-    <BlockStack>
-      <TextField label="Gift Message" value={message} onChange={setMessage} />
-    </BlockStack>
-  );
+```graphql
+query {
+  orders(first: 25, query: "fulfillment_status:unfulfilled") {
+    edges {
+      node {
+        id
+        name
+        createdAt
+        totalPriceSet {
+          shopMoney {
+            amount
+            currencyCode
+          }
+        }
+        customer {
+          email
+        }
+        lineItems(first: 10) {
+          edges {
+            node {
+              title
+              quantity
+            }
+          }
+        }
+      }
+    }
+  }
 }
 ```
 
-### Liquid Product Display
+## Storefront API
+
+### Create Cart
+
+```graphql
+mutation {
+  cartCreate(input: {
+    lines: [{
+      merchandiseId: "gid://shopify/ProductVariant/123"
+      quantity: 1
+    }]
+  }) {
+    cart {
+      id
+      checkoutUrl
+      cost {
+        totalAmount {
+          amount
+          currencyCode
+        }
+      }
+    }
+  }
+}
+```
+
+### Update Cart
+
+```graphql
+mutation {
+  cartLinesUpdate(
+    cartId: "gid://shopify/Cart/xyz"
+    lines: [{
+      id: "gid://shopify/CartLine/abc"
+      quantity: 2
+    }]
+  ) {
+    cart {
+      id
+      lines(first: 10) {
+        edges {
+          node {
+            quantity
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+## Webhooks
+
+### Setup Webhook
+
+```javascript
+// Register webhook via API
+const webhook = await shopify.webhooks.register({
+  topic: 'ORDERS_CREATE',
+  address: 'https://your-app.com/webhooks/orders-create',
+  format: 'json'
+});
+```
+
+### Verify Webhook
+
+```javascript
+import crypto from 'crypto';
+
+function verifyWebhook(body, hmacHeader, secret) {
+  const hash = crypto
+    .createHmac('sha256', secret)
+    .update(body, 'utf8')
+    .digest('base64');
+
+  return hash === hmacHeader;
+}
+
+// In webhook handler
+app.post('/webhooks/orders-create', async (req, res) => {
+  const hmac = req.headers['x-shopify-hmac-sha256'];
+  const body = await req.text();
+
+  if (!verifyWebhook(body, hmac, process.env.SHOPIFY_API_SECRET)) {
+    return res.status(401).send('Invalid HMAC');
+  }
+
+  const order = JSON.parse(body);
+  // Process order...
+
+  res.status(200).send('OK');
+});
+```
+
+## Liquid Templates
+
+### Basic Liquid
 
 ```liquid
-{% for product in collection.products %}
-  <div class="product-card">
-    <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
-    <h3>{{ product.title }}</h3>
-    <p>{{ product.price | money }}</p>
-    <a href="{{ product.url }}">View Details</a>
-  </div>
+<!-- Output product title -->
+{{ product.title }}
+
+<!-- Conditional logic -->
+{% if product.available %}
+  <button>Add to Cart</button>
+{% else %}
+  <span>Sold Out</span>
+{% endif %}
+
+<!-- Loop through variants -->
+{% for variant in product.variants %}
+  <option value="{{ variant.id }}">
+    {{ variant.title }} - {{ variant.price | money }}
+  </option>
 {% endfor %}
 ```
 
-## Best Practices
+### Custom Section
 
-**API Usage:**
-- Prefer GraphQL over REST for new development
-- Request only needed fields to reduce costs
-- Implement pagination for large datasets
-- Use bulk operations for batch processing
-- Respect rate limits (cost-based for GraphQL)
+```liquid
+{% schema %}
+{
+  "name": "Featured Product",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product"
+    }
+  ]
+}
+{% endschema %}
 
-**Security:**
-- Store API credentials in environment variables
-- Verify webhook signatures
-- Use OAuth for public apps
-- Request minimal access scopes
-- Implement session tokens for embedded apps
-
-**Performance:**
-- Cache API responses when appropriate
-- Optimize images in themes
-- Minimize Liquid logic complexity
-- Use async loading for extensions
-- Monitor query costs in GraphQL
-
-**Testing:**
-- Use development stores for testing
-- Test across different store plans
-- Verify mobile responsiveness
-- Check accessibility (keyboard, screen readers)
-- Validate GDPR compliance
-
-## Reference Documentation
-
-Detailed guides for advanced topics:
-
-- **[App Development](references/app-development.md)** - OAuth, APIs, webhooks, billing
-- **[Extensions](references/extensions.md)** - Checkout, Admin, POS, Functions
-- **[Themes](references/themes.md)** - Liquid, sections, deployment
-
-## Scripts
-
-**[shopify_init.py](scripts/shopify_init.py)** - Initialize Shopify projects interactively
-```bash
-python scripts/shopify_init.py
+{% if section.settings.product %}
+  {% assign product = section.settings.product %}
+  <div class="featured-product">
+    <img src="{{ product.featured_image | img_url: '500x' }}" alt="{{ product.title }}">
+    <h2>{{ product.title }}</h2>
+    <p>{{ product.price | money }}</p>
+  </div>
+{% endif %}
 ```
 
-## Troubleshooting
+## Shopify Functions
 
-**Rate Limit Errors:**
-- Monitor `X-Shopify-Shop-Api-Call-Limit` header
-- Implement exponential backoff
-- Use bulk operations for large datasets
+### Discount Function
 
-**Authentication Failures:**
-- Verify access token validity
-- Check required scopes granted
-- Ensure OAuth flow completed
+```javascript
+// Function to apply volume discount
+export default (input) => {
+  const quantity = input.cart.lines.reduce((sum, line) => sum + line.quantity, 0);
 
-**Extension Not Appearing:**
-- Verify extension target correct
-- Check extension published
-- Ensure app installed on store
+  let discountPercentage = 0;
+  if (quantity >= 10) discountPercentage = 20;
+  else if (quantity >= 5) discountPercentage = 10;
 
-**Webhook Not Receiving:**
-- Verify webhook URL accessible
-- Check signature validation
-- Review logs in Partner Dashboard
+  if (discountPercentage > 0) {
+    return {
+      discounts: [{
+        message: `${discountPercentage}% volume discount`,
+        targets: [{
+          orderSubtotal: {
+            excludedVariantIds: []
+          }
+        }],
+        value: {
+          percentage: {
+            value: discountPercentage.toString()
+          }
+        }
+      }]
+    };
+  }
+
+  return { discounts: [] };
+};
+```
+
+### Delivery Customization
+
+```javascript
+// Hide specific delivery options
+export default (input) => {
+  const operations = [];
+
+  // Hide express shipping for orders under $100
+  const cartTotal = parseFloat(input.cart.cost.subtotalAmount.amount);
+
+  if (cartTotal < 100) {
+    const expressOptions = input.cart.deliveryGroups[0].deliveryOptions
+      .filter(option => option.title.toLowerCase().includes('express'));
+
+    expressOptions.forEach(option => {
+      operations.push({
+        hide: {
+          deliveryOptionHandle: option.handle
+        }
+      });
+    });
+  }
+
+  return { operations };
+};
+```
+
+## Hydrogen (Headless Commerce)
+
+### Product Page
+
+```typescript
+// app/routes/products.$handle.tsx
+import {json, LoaderFunctionArgs} from '@shopify/remix-oxygen';
+import {useLoaderData} from '@remix-run/react';
+
+export async function loader({params, context}: LoaderFunctionArgs) {
+  const {product} = await context.storefront.query(PRODUCT_QUERY, {
+    variables: {handle: params.handle},
+  });
+
+  return json({product});
+}
+
+export default function Product() {
+  const {product} = useLoaderData<typeof loader>();
+
+  return (
+    <div>
+      <h1>{product.title}</h1>
+      <img src={product.featuredImage.url} alt={product.title} />
+      <p>{product.description}</p>
+      <AddToCartButton productId={product.id} />
+    </div>
+  );
+}
+
+const PRODUCT_QUERY = `#graphql
+  query Product($handle: String!) {
+    product(handle: $handle) {
+      id
+      title
+      description
+      featuredImage {
+        url
+        altText
+      }
+      variants(first: 10) {
+        nodes {
+          id
+          price {
+            amount
+            currencyCode
+          }
+        }
+      }
+    }
+  }
+`;
+```
+
+## Shopify CLI
+
+### Common Commands
+
+```bash
+# Create new app
+shopify app init
+
+# Start development server
+shopify app dev
+
+# Deploy app
+shopify app deploy
+
+# Create extension
+shopify app generate extension
+
+# Create theme
+shopify theme init
+
+# Serve theme locally
+shopify theme dev --store=your-store.myshopify.com
+
+# Push theme
+shopify theme push
+
+# Pull theme
+shopify theme pull
+```
+
+## Testing
+
+### Test Stores
+
+1. Create Partner account: https://partners.shopify.com
+2. Create development store
+3. Install your app
+4. Test features
+
+### Test Data
+
+```javascript
+// Create test product
+const product = await shopify.rest.Product.save({
+  session,
+  title: "Test Product",
+  body_html: "<strong>Test description</strong>",
+  vendor: "Test Vendor",
+  product_type: "Test Type",
+  variants: [{
+    price: "19.99",
+    sku: "TEST-001"
+  }]
+});
+
+// Create test order
+const order = await shopify.rest.Order.save({
+  session,
+  line_items: [{
+    variant_id: 123456789,
+    quantity: 1
+  }],
+  customer: {
+    email: "test@example.com"
+  }
+});
+```
+
+## Security Best Practices
+
+1. **API Keys:**
+   - Store in environment variables
+   - Never commit to version control
+   - Use separate keys per environment
+   - Rotate if compromised
+
+2. **Webhooks:**
+   - ALWAYS verify HMAC signatures
+   - Use HTTPS endpoints only
+   - Return 200 immediately
+   - Process async
+
+3. **Access Scopes:**
+   - Request minimal scopes
+   - Document why each scope is needed
+   - Review periodically
+
+4. **Rate Limits:**
+   - Respect API rate limits
+   - Implement exponential backoff
+   - Monitor API usage
+
+## Common Errors
+
+### API Authentication
+
+- `Invalid access token` - Check token is valid and has correct scopes
+- `Shop not found` - Verify shop domain format
+- `Missing access token` - Include X-Shopify-Access-Token header
+
+### GraphQL Errors
+
+- `User errors` - Check `userErrors` field in response
+- `Throttled` - Reduce request rate
+- `Field not found` - Verify API version supports field
+
+### Webhook Issues
+
+- `Invalid HMAC` - Check webhook secret and verification logic
+- `Delivery failed` - Ensure endpoint returns 200 within timeout
+- `Not receiving webhooks` - Check webhook registration and endpoint URL
 
 ## Resources
 
-**Official Documentation:**
-- Shopify Docs: https://shopify.dev/docs
-- GraphQL API: https://shopify.dev/docs/api/admin-graphql
-- Shopify CLI: https://shopify.dev/docs/api/shopify-cli
-- Polaris: https://polaris.shopify.com
+- **Dashboard:** https://partners.shopify.com
+- **Documentation:** https://shopify.dev
+- **GraphiQL Admin:** https://shopify.dev/docs/apps/tools/graphiql-admin-api
+- **Community:** https://community.shopify.com
+- **Status:** https://www.shopifystatus.com
 
-**Tools:**
-- GraphiQL Explorer (Admin → Settings → Apps → Develop apps)
-- Partner Dashboard (app management)
-- Development stores (free testing)
+## Documentation Quick Reference
 
-**API Versioning:**
-- Quarterly releases (YYYY-MM format)
-- Current: 2025-01
-- 12-month support per version
-- Test before version updates
+**Need to find something specific?**
 
----
+```bash
+# Search all docs
+grep -r "search term" .claude/skills/shopify/docs/
 
-**Note:** This skill covers Shopify platform as of January 2025. Refer to official documentation for latest updates.
+# Find specific topics
+ls .claude/skills/shopify/docs/shopify/
+
+# Read specific guide
+cat .claude/skills/shopify/docs/shopify/webhooks.md
+```
+
+**Common doc files:**
+- `api-admin-graphql.md` - GraphQL Admin API
+- `api-storefront.md` - Storefront API
+- `authentication.md` - OAuth and auth flows
+- `webhooks.md` - Webhook handling
+- `apps.md` - App development
+- `themes.md` - Theme development
+- `liquid.md` - Liquid reference
+- `hydrogen.md` - Headless commerce
+- `checkout.md` - Checkout customization
+- `functions.md` - Shopify Functions
+- `cli.md` - CLI commands

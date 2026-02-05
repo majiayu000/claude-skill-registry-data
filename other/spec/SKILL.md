@@ -1,121 +1,219 @@
 ---
 name: spec
-description: Create feature specs for context continuity across agent sessions. Use when starting a new feature or when user runs /spec new.
+description: Specification management - creating, organizing, and maintaining spec items with acceptance criteria and traits.
 ---
 
-# /spec - Feature Spec Management
+# Spec - Specification Management
 
-## Commands
-
-### /spec new <name>
-
-Creates a feature spec directory with standard template files.
-
-<steps>
-<step action="slugify">lowercase name, replace spaces with hyphens → `<slug>`</step>
-<step action="check-exists">error if `specs/<slug>/` exists</step>
-<step action="mkdir">`specs/<slug>/`</step>
-<step action="create-files">write all templates below to `specs/<slug>/`</step>
-<step action="create-examples" condition="feature produces executable code">create `examples/` with TEST_LOG.md</step>
-<step action="populate">fill AGENTS.md from conversation context:
-  - Overview: what the user asked for
-  - Key Files: initial guesses based on feature scope
-  - Quick Start: first implementation steps
-  - Conventions: placeholder if unknown</step>
-</steps>
-
-<templates dir="specs/<slug>/">
-
-<template file="AGENTS.md">
-# <Title> - Agent Instructions
-
-Read this file first when working on this feature.
-
-## Overview
-<!-- 1-2 sentences: what we're building and why -->
-
-## Key Files
-<!-- update as you work. format: `path/to/file.ts` - purpose -->
-
-## Conventions
-<!-- feature-specific patterns, constraints, or gotchas -->
+Specifications define WHAT to build. Tasks track the WORK of building it. This skill covers creating and managing spec items, writing acceptance criteria, and using traits for cross-cutting behaviors.
 
 ## Quick Start
-<!-- for a new agent: what to read first, what to do first -->
-</template>
 
-<template file="design.md">
-# <Title> - Design
+```bash
+# Explore what exists
+kspec item list                      # List all spec items
+kspec item types                     # Available item types
+kspec trait list                     # Available traits
 
-## Overview
+# Create a spec item
+kspec item add --under @parent --title "Feature Name" --type feature --slug my-feature
 
-(brief technical approach - fill in during design phase)
+# Add acceptance criteria
+kspec item ac add @my-feature --given "precondition" --when "action" --then "result"
 
-## Key Components
+# Apply a trait (if project has traits)
+kspec item trait add @my-feature @some-trait
 
-(to be defined)
+# Validate spec quality
+kspec validate
+```
 
-## Data Flow
+## When to Use This Skill
 
-(to be defined)
-</template>
+Use `/spec` when you need to:
+- Create or update spec items (features, requirements, etc.)
+- Write or refine acceptance criteria
+- Apply traits to specs
+- Understand spec hierarchy and organization
+- Validate spec quality
 
-<template file="ledger.md">
-# <Title> - Ledger
+**Not for task management** - use `/kspec` for task workflows.
 
-## Status
+## Core Concepts
 
-- **Phase**: design
-- **Blocked**: no
+### Item Types
 
-## Done
+Specs are organized in a hierarchy of typed items:
 
-(nothing yet)
+| Type | Purpose |
+|------|---------|
+| module | High-level organizational grouping |
+| feature | User-facing capability |
+| requirement | Specific testable behavior |
+| constraint | Limitation or boundary |
+| decision | Architectural choice (ADR-style) |
+| trait | Reusable AC bundle |
 
-## Next
+See [docs/item-types.md](docs/item-types.md) for detailed guidance on when to use each type.
 
-- [ ] Define the technical approach
+### Acceptance Criteria
 
-## Context
+AC define testable outcomes using Given/When/Then format:
 
-(gotchas, non-obvious things discovered)
-</template>
+```yaml
+given: a registered user
+when: they enter valid credentials
+then: they are logged in and see their dashboard
+```
 
-<template file="decisions.md">
-# <Title> - Decisions
+See [docs/acceptance-criteria.md](docs/acceptance-criteria.md) for writing guidelines.
 
-Log non-obvious technical choices here.
+### Traits
 
----
+Traits are reusable bundles of acceptance criteria for cross-cutting concerns (e.g., JSON output, confirmation prompts). When a spec implements a trait, it inherits the trait's AC.
 
-(No decisions recorded yet)
-</template>
+```bash
+# Discover available traits
+kspec trait list
 
-<template file="future-work.md">
-# <Title> - Future Work
+# Apply trait to spec
+kspec item trait add @my-command @trait-json-output
+```
 
-Ideas and improvements deferred for later.
+See [docs/traits.md](docs/traits.md) for the full trait system guide.
 
-(Nothing yet)
-</template>
+## Command Reference
 
-<template file="examples/TEST_LOG.md" condition="feature produces executable code">
-# <Title> - Test Log
+### Item Commands
 
-Execution results for verification examples.
+```bash
+# View items
+kspec item get <ref>                 # Get item details
+kspec item list [--type <type>]      # List items, optionally filtered
+kspec item types                     # List available types
 
----
+# Create items
+kspec item add --under <parent> --title "..." --type <type> [--slug <slug>]
 
-(No examples run yet)
-</template>
+# Update items
+kspec item set <ref> --title "..."   # Update specific fields
+kspec item set <ref> --description "..."
+kspec item set <ref> --status <implementation-status>
+kspec item patch <ref> --data '{...}'  # Complex updates
 
-</templates>
+# Delete items
+kspec item delete <ref> [--force]
+```
 
-<example-log-format>
-### example_name.py
-**Status:** PASS | FAIL
-**Date:** YYYY-MM-DD
-**Description:** What this example verifies.
-**Result:** What happened when run.
----
-</example-log-format>
+### Acceptance Criteria Commands
+
+```bash
+# View AC
+kspec item ac list <ref>             # List AC for an item
+
+# Add AC
+kspec item ac add <ref> --given "..." --when "..." --then "..."
+
+# Update AC
+kspec item ac set <ref> <ac-id> --then "updated result"
+
+# Remove AC
+kspec item ac remove <ref> <ac-id> [--force]
+```
+
+### Trait Commands
+
+```bash
+# Discover traits
+kspec trait list                     # All traits with AC counts
+kspec trait get <ref>                # Trait details including AC
+
+# Apply/remove traits from specs
+kspec item trait add <spec-ref> <trait-ref>
+kspec item trait remove <spec-ref> <trait-ref>
+
+# Create new traits (when needed)
+kspec trait add "Trait Name" --description "..." [--slug <slug>]
+```
+
+### Validation
+
+```bash
+kspec validate                       # Check spec quality
+```
+
+Validation reports:
+- Missing acceptance criteria
+- Broken references
+- Missing descriptions
+- Orphaned specs (no linked tasks)
+
+## Workflow Patterns
+
+### Creating a New Feature
+
+```bash
+# 1. Find the appropriate parent
+kspec item list --type module
+
+# 2. Create the feature
+kspec item add --under @cli-module --title "JSON Export" --type feature --slug json-export
+
+# 3. Add description
+kspec item set @json-export --description "Export data in JSON format for integration with other tools"
+
+# 4. Add acceptance criteria
+kspec item ac add @json-export --given "data exists" --when "user runs export --json" --then "valid JSON is written to stdout"
+kspec item ac add @json-export --given "no data" --when "user runs export --json" --then "empty array [] is returned"
+
+# 5. Apply relevant traits
+kspec item trait add @json-export @trait-json-output
+
+# 6. Validate
+kspec validate
+
+# 7. Derive task when ready to implement
+kspec derive @json-export
+```
+
+### Updating Existing Specs
+
+```bash
+# Get current state
+kspec item get @existing-feature
+
+# Update fields
+kspec item set @existing-feature --description "Updated description"
+
+# Add missing AC
+kspec item ac add @existing-feature --given "..." --when "..." --then "..."
+
+# Update implementation status
+kspec item set @existing-feature --status implemented
+```
+
+### Validating Spec Quality
+
+```bash
+# Run validation
+kspec validate
+
+# Address issues:
+# - Add AC to items without them
+# - Fix broken references
+# - Add descriptions to items
+```
+
+## Key Principles
+
+1. **Spec before task** - Define what to build before tracking the work
+2. **AC is required** - Specs without acceptance criteria are incomplete
+3. **Use CLI, not YAML** - Commands maintain consistency and auto-commit
+4. **Validate regularly** - Run `kspec validate` to catch issues early
+5. **Traits for patterns** - If 3+ specs need the same behavior, consider a trait
+
+## Related Skills
+
+- `/kspec` - Task and spec management (primary workflow)
+- `/spec-plan` - Translating approved plans to specs
+- `/triage` - Processing inbox using spec-first approach

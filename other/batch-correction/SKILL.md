@@ -1,5 +1,5 @@
 ---
-name: bio-crispr-batch-correction
+name: bio-crispr-screens-batch-correction
 description: Batch effect correction for CRISPR screens. Covers normalization across batches, technical replicate handling, and batch-aware analysis. Use when combining screens from multiple batches or correcting systematic technical variation.
 tool_type: python
 primary_tool: scipy
@@ -284,7 +284,7 @@ plot_batch_effect(counts_df, [1,1,1,2,2,2], sample_cols, 'batch_pca.png')
 
 ## Related Skills
 
-- **mageck-analysis** - Batch-aware MAGeCK analysis
-- **screen-qc** - Quality control before correction
-- **hit-calling** - Analysis after batch correction
-- **library-design** - Control guide design
+- mageck-analysis - Batch-aware MAGeCK analysis
+- screen-qc - Quality control before correction
+- hit-calling - Analysis after batch correction
+- library-design - Control guide design

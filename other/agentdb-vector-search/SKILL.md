@@ -1,6 +1,15 @@
 ---
 name: "AgentDB Vector Search"
+version: "1.0.0"
 description: "Implement semantic vector search with AgentDB for intelligent document retrieval, similarity matching, and context-aware querying. Use when building RAG systems, semantic search engines, or intelligent knowledge bases."
+category: ai-ml
+tags:
+  - agentdb
+  - vector-search
+  - semantic-search
+  - rag
+  - embeddings
+author: Smith Horn
 ---
 
 # AgentDB Vector Search
@@ -119,7 +128,6 @@ const results = await adapter.retrieveWithReasoning(queryEmbedding, {
 ## Core Features
 
 ### 1. Vector Storage
-
 ```typescript
 // Store with automatic embedding
 await db.storeWithEmbedding({
@@ -129,7 +137,6 @@ await db.storeWithEmbedding({
 ```
 
 ### 2. Similarity Search
-
 ```typescript
 // Find similar documents
 const similar = await db.findSimilar("quantum computing", {
@@ -139,7 +146,6 @@ const similar = await db.findSimilar("quantum computing", {
 ```
 
 ### 3. Hybrid Search (Vector + Metadata)
-
 ```typescript
 // Combine vector similarity with metadata filtering
 const results = await db.hybridSearch({
@@ -155,7 +161,6 @@ const results = await db.hybridSearch({
 ## Advanced Usage
 
 ### RAG (Retrieval Augmented Generation)
-
 ```typescript
 // Build RAG pipeline
 async function ragQuery(question: string) {
@@ -174,7 +179,6 @@ Question: ${question}`;
 ```
 
 ### Batch Operations
-
 ```typescript
 // Efficient batch storage
 await db.batchStore(documents.map(doc => ({
@@ -217,7 +221,6 @@ npx agentdb@latest benchmark
 AgentDB provides multiple quantization strategies for memory efficiency:
 
 ### Binary Quantization (32x reduction)
-
 ```typescript
 const adapter = await createAgentDBAdapter({
   quantizationType: 'binary',  // 768-dim → 96 bytes
@@ -225,7 +228,6 @@ const adapter = await createAgentDBAdapter({
 ```
 
 ### Scalar Quantization (4x reduction)
-
 ```typescript
 const adapter = await createAgentDBAdapter({
   quantizationType: 'scalar',  // 768-dim → 768 bytes
@@ -233,7 +235,6 @@ const adapter = await createAgentDBAdapter({
 ```
 
 ### Product Quantization (8-16x reduction)
-
 ```typescript
 const adapter = await createAgentDBAdapter({
   quantizationType: 'product',  // 768-dim → 48-96 bytes
@@ -256,19 +257,16 @@ npx agentdb@latest query ./db.sqlite "[...]" -m dot
 ## Advanced Features
 
 ### HNSW Indexing
-
 - **O(log n) search complexity**
 - **Sub-millisecond retrieval** (<100µs)
 - **Automatic index building**
 
 ### Caching
-
 - **1000 pattern in-memory cache**
 - **<1ms pattern retrieval**
 - **Automatic cache invalidation**
 
 ### MMR (Maximal Marginal Relevance)
-
 - **Diverse result sets**
 - **Avoid redundancy**
 - **Balance relevance and diversity**
@@ -285,7 +283,6 @@ npx agentdb@latest query ./db.sqlite "[...]" -m dot
 ## Troubleshooting
 
 ### Issue: Slow search performance
-
 ```bash
 # Check if HNSW indexing is enabled (automatic)
 npx agentdb@latest stats ./vectors.db
@@ -294,14 +291,12 @@ npx agentdb@latest stats ./vectors.db
 ```
 
 ### Issue: High memory usage
-
 ```bash
 # Enable binary quantization (32x reduction)
 # Use in adapter: quantizationType: 'binary'
 ```
 
 ### Issue: Poor relevance
-
 ```bash
 # Adjust similarity threshold
 npx agentdb@latest query ./db.sqlite "[...]" -t 0.8  # Higher threshold
@@ -311,7 +306,6 @@ npx agentdb@latest query ./db.sqlite "[...]" -t 0.8  # Higher threshold
 ```
 
 ### Issue: Wrong dimensions
-
 ```bash
 # Check embedding model dimensions:
 # - OpenAI ada-002: 1536
@@ -346,9 +340,9 @@ npx agentdb@latest stats ./vectors.db
 
 ## Learn More
 
-- GitHub: <https://github.com/ruvnet/agentic-flow/tree/main/packages/agentdb>
+- GitHub: https://github.com/ruvnet/agentic-flow/tree/main/packages/agentdb
 - Documentation: node_modules/agentic-flow/docs/AGENTDB_INTEGRATION.md
 - MCP Integration: `npx agentdb@latest mcp` for Claude Code
-- Website: <https://agentdb.ruv.io>
+- Website: https://agentdb.ruv.io
 - CLI Help: `npx agentdb@latest --help`
 - Command Help: `npx agentdb@latest help <command>`

@@ -1,7 +1,9 @@
 ---
 name: microsoft-agent-framework
-version: 0.1.0-preview
-description: Expert knowledge of Microsoft Agent Framework for building production AI agents and workflows. Use when building agents with Microsoft's framework, multi-agent orchestration, or tool integration.
+version: 0.1.0
+description: |
+  Comprehensive knowledge of Microsoft Agent Framework for building production AI agents and workflows.
+  Auto-activates for agent building, workflow design, AutoGen migration, and enterprise AI tasks.
 ---
 
 # Microsoft Agent Framework Skill

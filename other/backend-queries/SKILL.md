@@ -1,24 +1,25 @@
 ---
 name: Backend Queries
-description: Write secure, optimized database queries using parameterized statements, proper indexing, and efficient data fetching patterns. Use this skill when writing database queries, ORM query methods, SQL statements, or data access layer code. When working on files containing Prisma queries, TypeORM query builders, raw SQL statements, database transaction logic, eager loading and joins, query optimization code, files implementing data pagination or filtering, cache strategies for expensive queries, or files handling database connection pooling and query timeouts.
+description: Write secure, performant database queries using parameterized queries, proper eager loading, and transaction management. Use this skill when writing database queries, ORM operations, raw SQL statements, or repository methods. When working on files in repositories/, queries/, services/, or any code that interacts with the database. When optimizing query performance, preventing N+1 queries, implementing transactions, adding query timeouts, or caching expensive queries. When reviewing code for SQL injection vulnerabilities.
 ---
+
+## When to use this skill:
+
+- When writing database queries (ORM or raw SQL)
+- When creating repository or data access layer methods
+- When working on files in repositories/, queries/, services/, or dal/ directories
+- When using SELECT statements and choosing which columns to fetch
+- When implementing eager loading or joins to prevent N+1 queries
+- When wrapping related operations in database transactions
+- When adding indexes to optimize WHERE, JOIN, or ORDER BY clauses
+- When implementing query timeouts for long-running queries
+- When caching results of expensive or frequently-run queries
+- When reviewing code for SQL injection vulnerabilities
+- When using parameterized queries to prevent injection attacks
 
 # Backend Queries
 
 This Skill provides Claude Code with specific guidance on how to adhere to coding standards as they relate to how it should handle backend queries.
-
-## When to use this skill
-
-- When writing database queries using ORMs (Prisma, TypeORM, Drizzle, Sequelize)
-- When constructing raw SQL queries or parameterized statements
-- When implementing data fetching logic in API routes or server components
-- When using query builders or constructing complex WHERE clauses
-- When implementing pagination, filtering, sorting, or search functionality
-- When writing JOIN queries or eager loading related data to avoid N+1 problems
-- When implementing database transactions for data consistency
-- When optimizing slow queries or adding query performance monitoring
-- When setting up query caching strategies or read replicas
-- When implementing query timeouts or connection pooling configurations
 
 ## Instructions
 

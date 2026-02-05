@@ -1,379 +1,672 @@
 ---
 name: documentation-generation
-description: Generate quality documentation - READMEs, API docs, inline comments. Use when creating new project documentation, updating existing docs, or ensuring documentation stays in sync with code. Covers README patterns, JSDoc, OpenAPI, and architecture docs.
-version: 1.0.0
-author: Claude Code SDK
-tags: [documentation, readme, api-docs, comments]
+description: Create comprehensive technical documentation including API docs, component libraries, README files, architecture diagrams, and developer guides using tools like JSDoc, Storybook, or Docusaurus. Use when documenting APIs, creating component documentation, writing README files, generating API references, documenting architecture decisions, creating onboarding guides, maintaining changelogs, documenting configuration options, or building developer documentation sites.
 ---
 
-# Documentation Generation
+# Documentation Generation - Creating Clear, Maintainable Docs
 
-Generate quality documentation that stays in sync with code. From READMEs to API docs to architecture documentation.
+## When to use this skill
 
-## Quick Reference
+- Documenting REST or GraphQL APIs
+- Creating component libraries with Storybook
+- Writing comprehensive README files
+- Generating API reference documentation
+- Documenting architecture decisions (ADRs)
+- Creating developer onboarding guides
+- Maintaining changelogs and release notes
+- Documenting configuration and environment variables
+- Building documentation sites with Docusaurus
+- Writing inline code documentation (JSDoc, TSDoc)
+- Creating visual architecture diagrams
+- Documenting deployment and operational procedures
 
-| Doc Type | Primary File | When to Use |
-|----------|--------------|-------------|
-| Project README | `README.md` | New project, major updates |
-| API Documentation | JSDoc/docstrings | New functions, API changes |
-| OpenAPI/Swagger | `openapi.yaml` | REST API documentation |
-| Architecture | `ARCHITECTURE.md` | System design, major components |
-| Change Log | `CHANGELOG.md` | Each release |
-| Migration Guide | `MIGRATION.md` | Breaking changes |
+## When to use this skill
 
-## Documentation Principles
+- Creating API documentation, writing technical guides, generating code documentation, or maintaining project wikis.
+- When working on related tasks or features
+- During development that requires this expertise
 
-### 1. Document the Why, Not Just the What
+**Use when**: Creating API documentation, writing technical guides, generating code documentation, or maintaining project wikis.
 
-```markdown
-// Bad: Documents what the code does (obvious from code)
-// Increments counter by 1
+## Core Principles
 
-// Good: Documents why
-// Prevents race condition by using atomic increment
+1. **Docs as Code** - Version control, review process, automated generation
+2. **Single Source of Truth** - Generate from code when possible
+3. **Keep It Fresh** - Automated checks for outdated docs
+4. **Examples Over Explanations** - Show, don't just tell
+5. **Audience-Specific** - Different docs for different users
+
+## API Documentation
+
+### 1. **OpenAPI/Swagger (REST APIs)**
+
+```typescript
+// ✅ JSDoc comments for automatic documentation
+/**
+ * @swagger
+ * /users:
+ *   get:
+ *     summary: List all users
+ *     description: Returns a paginated list of users
+ *     tags:
+ *       - Users
+ *     parameters:
+ *       - in: query
+ *         name: page
+ *         schema:
+ *           type: integer
+ *           default: 1
+ *         description: Page number
+ *       - in: query
+ *         name: limit
+ *         schema:
+ *           type: integer
+ *           default: 20
+ *         description: Items per page
+ *     responses:
+ *       200:
+ *         description: Success
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 data:
+ *                   type: array
+ *                   items:
+ *                     $ref: '#/components/schemas/User'
+ *                 meta:
+ *                   type: object
+ *                   properties:
+ *                     page:
+ *                       type: integer
+ *                     total:
+ *                       type: integer
+ */
+app.get('/users', async (req, res) => {
+  // Implementation
+});
+
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     User:
+ *       type: object
+ *       required:
+ *         - id
+ *         - email
+ *       properties:
+ *         id:
+ *           type: string
+ *           example: "123"
+ *         email:
+ *           type: string
+ *           format: email
+ *           example: "user@example.com"
+ *         name:
+ *           type: string
+ *           example: "John Doe"
+ *         createdAt:
+ *           type: string
+ *           format: date-time
+ */
 ```
 
-### 2. Keep Docs Close to Code
+```typescript
+// Setup Swagger UI
+import swaggerJsdoc from 'swagger-jsdoc';
+import swaggerUi from 'swagger-ui-express';
 
-| Pattern | Benefit |
-|---------|---------|
-| JSDoc above functions | Updates when code changes |
-| README.md in package | Visible in package managers |
-| Inline comments | Context at point of use |
+const options = {
+  definition: {
+    openapi: '3.0.0',
+    info: {
+      title: 'My API',
+      version: '1.0.0',
+      description: 'API documentation',
+    },
+    servers: [
+      {
+        url: 'http://localhost:3000',
+        description: 'Development server',
+      },
+    ],
+  },
+  apis: ['./routes/*.ts'], // Files with @swagger comments
+};
 
-### 3. Use Examples Liberally
+const specs = swaggerJsdoc(options);
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
+```
 
-Every API function should have at least one working example. Examples are:
-- Tested implicitly when code runs
-- More useful than prose descriptions
-- Easier to keep up to date
+### 2. **TypeDoc (TypeScript)**
 
-## README Structure
+```typescript
+// ✅ JSDoc comments for TypeDoc
+/**
+ * Represents a user in the system
+ */
+export interface User {
+  /** Unique identifier */
+  id: string;
+  /** User's email address */
+  email: string;
+  /** User's display name */
+  name: string;
+  /** Account creation timestamp */
+  createdAt: Date;
+}
 
-A good README follows this structure:
+/**
+ * Service for managing users
+ * @example
+ * ```typescript
+ * const userService = new UserService();
+ * const user = await userService.createUser({
+ *   email: 'user@example.com',
+ *   name: 'John Doe'
+ * });
+ * ```
+ */
+export class UserService {
+  /**
+   * Creates a new user
+   * @param data - User creation data
+   * @returns The created user
+   * @throws {ValidationError} If email is invalid
+   * @throws {ConflictError} If email already exists
+   */
+  async createUser(data: CreateUserData): Promise<User> {
+    // Implementation
+  }
+
+  /**
+   * Finds a user by ID
+   * @param id - User ID
+   * @returns User object or null if not found
+   */
+  async findById(id: string): Promise<User | null> {
+    // Implementation
+  }
+}
+```
+
+```json
+// typedoc.json
+{
+  "entryPoints": ["src/index.ts"],
+  "out": "docs",
+  "plugin": ["typedoc-plugin-markdown"],
+  "excludePrivate": true,
+  "includeVersion": true
+}
+```
+
+```bash
+# Generate documentation
+npx typedoc
+```
+
+### 3. **GraphQL Documentation (Auto-generated)**
+
+```typescript
+// GraphQL schema with descriptions
+const typeDefs = gql`
+  """
+  Represents a user in the system
+  """
+  type User {
+    """Unique identifier"""
+    id: ID!
+    
+    """User's email address"""
+    email: String!
+    
+    """User's display name"""
+    name: String!
+    
+    """Posts authored by this user"""
+    posts: [Post!]!
+  }
+
+  """
+  Input for creating a new user
+  """
+  input CreateUserInput {
+    """Valid email address"""
+    email: String!
+    
+    """Display name (3-50 characters)"""
+    name: String!
+    
+    """Password (minimum 8 characters)"""
+    password: String!
+  }
+
+  type Query {
+    """
+    Get a single user by ID
+    @example
+    query {
+      user(id: "123") {
+        id
+        email
+        name
+      }
+    }
+    """
+    user(id: ID!): User
+    
+    """
+    List all users with pagination
+    """
+    users(limit: Int = 20, offset: Int = 0): [User!]!
+  }
+`;
+
+// GraphQL Playground provides interactive docs automatically
+```
+
+## Code Documentation
+
+### 1. **README.md Template**
 
 ```markdown
 # Project Name
 
-One-sentence description of what this does.
-
-## Quick Start
-
-\`\`\`bash
-npm install package-name
-\`\`\`
-
-\`\`\`typescript
-import { main } from 'package-name';
-main();
-\`\`\`
+Brief description of what this project does.
 
 ## Features
 
-- Feature 1 - brief description
-- Feature 2 - brief description
-
-## Installation
-
-Detailed installation instructions.
-
-## Usage
-
-### Basic Usage
-...
-
-### Advanced Usage
-...
-
-## API Reference
-
-Link to detailed API docs or inline reference.
-
-## Configuration
-
-Environment variables, config files.
-
-## Contributing
-
-How to contribute.
-
-## License
-
-License information.
-```
-
-### README Anti-Patterns
-
-| Avoid | Instead |
-|-------|---------|
-| Wall of text | Short paragraphs, bullet points |
-| Outdated examples | Use tested code snippets |
-| Missing quick start | Add minimal working example |
-| No installation | Include all setup steps |
-
-## Inline Documentation
-
-### JSDoc for TypeScript/JavaScript
-
-```typescript
-/**
- * Calculates the total price including tax.
- *
- * @param items - Array of items with price property
- * @param taxRate - Tax rate as decimal (e.g., 0.08 for 8%)
- * @returns Total price with tax applied
- *
- * @example
- * ```typescript
- * const items = [{ price: 10 }, { price: 20 }];
- * calculateTotal(items, 0.08); // 32.40
- * ```
- *
- * @throws {Error} If taxRate is negative
- */
-function calculateTotal(items: Item[], taxRate: number): number {
-  // implementation
-}
-```
-
-### Python Docstrings
-
-```python
-def calculate_total(items: list[Item], tax_rate: float) -> float:
-    """Calculate the total price including tax.
-
-    Args:
-        items: List of items with price attribute.
-        tax_rate: Tax rate as decimal (e.g., 0.08 for 8%).
-
-    Returns:
-        Total price with tax applied.
-
-    Raises:
-        ValueError: If tax_rate is negative.
-
-    Example:
-        >>> items = [Item(price=10), Item(price=20)]
-        >>> calculate_total(items, 0.08)
-        32.40
-    """
-```
-
-### When to Comment
-
-| Do Comment | Don't Comment |
-|------------|---------------|
-| Complex algorithms | Obvious operations |
-| Business rules | What the code literally does |
-| Non-obvious side effects | Self-explanatory names |
-| Performance optimizations | Getters/setters |
-| Workarounds and hacks | Every line |
-
-## Workflow: Document New Project
-
-### Prerequisites
-- [ ] Project structure exists
-- [ ] Main functionality works
-- [ ] Package.json/pyproject.toml configured
-
-### Steps
-
-1. **Create README.md**
-   - [ ] Add project name and description
-   - [ ] Write quick start with minimal example
-   - [ ] Document installation steps
-   - [ ] Add usage examples
-
-2. **Add API Documentation**
-   - [ ] Add JSDoc/docstrings to public functions
-   - [ ] Include @example for each function
-   - [ ] Document parameters and return types
-   - [ ] Note any thrown exceptions
-
-3. **Create Architecture Doc (if needed)**
-   - [ ] Diagram main components
-   - [ ] Explain data flow
-   - [ ] Document key decisions
-
-4. **Initialize Changelog**
-   - [ ] Create CHANGELOG.md
-   - [ ] Add initial version entry
-
-### Validation
-- [ ] README has working quick start
-- [ ] All public APIs documented
-- [ ] Examples are runnable
-- [ ] No broken links
-
-## Workflow: Update Existing Documentation
-
-### Steps
-
-1. **Identify Stale Docs**
-   - [ ] Check README against current behavior
-   - [ ] Verify API docs match signatures
-   - [ ] Test example code snippets
-
-2. **Update Documentation**
-   - [ ] Fix outdated examples
-   - [ ] Update API references
-   - [ ] Add missing sections
-
-3. **Validate**
-   - [ ] Run example code
-   - [ ] Check all links work
-   - [ ] Review for consistency
-
-## Workflow: Generate API Docs
-
-### For TypeScript (TypeDoc)
-
-```bash
-# Install
-bun add -d typedoc
-
-# Generate
-bunx typedoc --out docs src/index.ts
-```
-
-### For Python (Sphinx)
-
-```bash
-# Install
-pip install sphinx sphinx-autodoc-typehints
-
-# Generate
-sphinx-apidoc -o docs/api src/
-sphinx-build -b html docs docs/_build
-```
-
-### For OpenAPI
-
-See [API-DOCS.md](./API-DOCS.md) for detailed OpenAPI generation patterns.
-
-## Keeping Docs in Sync
-
-### Automated Approaches
-
-| Approach | Tool | Use Case |
-|----------|------|----------|
-| TypeDoc | TypeScript | Generate from JSDoc |
-| Sphinx | Python | Generate from docstrings |
-| OpenAPI Generator | REST | Generate from spec |
-| Storybook | React | Component documentation |
-
-### Manual Checklist
-
-Add to PR template:
-
-```markdown
-## Documentation
-- [ ] README updated (if public API changed)
-- [ ] JSDoc/docstrings added for new functions
-- [ ] CHANGELOG updated
-- [ ] Migration guide updated (if breaking change)
-```
-
-### Documentation Tests
-
-```typescript
-// In test file
-import { exampleCode } from '../docs/examples';
-
-test('documentation examples work', async () => {
-  // Run the example code from docs
-  const result = await exampleCode();
-  expect(result).toBeDefined();
-});
-```
-
-## Common Documentation Tasks
-
-### Add JSDoc to Existing Code
-
-```typescript
-// Before
-function processData(data, options) {
-  // ...
-}
-
-// After
-/**
- * Processes raw data according to specified options.
- *
- * @param data - Raw data to process
- * @param options - Processing configuration
- * @param options.validate - Whether to validate input (default: true)
- * @param options.transform - Transform function to apply
- * @returns Processed data object
- *
- * @example
- * ```typescript
- * const result = processData(rawData, { validate: true });
- * ```
- */
-function processData(data: RawData, options: ProcessOptions): ProcessedData {
-  // ...
-}
-```
-
-### Generate README from Template
-
-For a TypeScript library:
-
-```markdown
-# {package-name}
-
-{one-line-description}
-
-[![npm version](https://badge.fury.io/js/{package-name}.svg)](https://www.npmjs.com/package/{package-name})
-
-## Installation
-
-\`\`\`bash
-npm install {package-name}
-# or
-bun add {package-name}
-\`\`\`
+- 🚀 Feature 1
+- 📦 Feature 2
+- ⚡ Feature 3
 
 ## Quick Start
 
-\`\`\`typescript
-import { main } from '{package-name}';
+\`\`\`bash
+# Install dependencies
+npm install
 
-const result = main();
-console.log(result);
+# Run development server
+npm run dev
+
+# Run tests
+npm test
 \`\`\`
 
-## API
+## Installation
 
-### `main(options?)`
+Detailed installation instructions...
 
-Main entry point.
+## Usage
 
-**Parameters:**
-- `options.debug` (boolean): Enable debug mode
+Basic usage examples:
 
-**Returns:** Result object
+\`\`\`typescript
+import { MyLibrary } from 'my-library';
+
+const instance = new MyLibrary({
+  apiKey: 'your-key'
+});
+
+const result = await instance.doSomething();
+\`\`\`
+
+## API Reference
+
+See [API Documentation](./docs/api.md)
+
+## Configuration
+
+Environment variables:
+
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `DATABASE_URL` | PostgreSQL connection string | - |
+| `PORT` | Server port | `3000` |
+| `NODE_ENV` | Environment | `development` |
+
+## Contributing
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md)
 
 ## License
 
 MIT
 ```
 
-## Debugging Documentation Issues
+### 2. **CHANGELOG.md**
 
-| Issue | Solution |
-|-------|----------|
-| Outdated examples | Set up doc tests |
-| Broken links | Use relative links, add link checker |
-| Missing docs | Add to PR checklist |
-| Inconsistent style | Use doc linter (markdownlint) |
+```markdown
+# Changelog
 
-## Reference Files
+All notable changes to this project will be documented in this file.
 
-| File | Contents |
-|------|----------|
-| [README-PATTERNS.md](./README-PATTERNS.md) | README generation, project documentation patterns |
-| [API-DOCS.md](./API-DOCS.md) | API documentation, JSDoc, docstrings, OpenAPI |
-| [MAINTENANCE.md](./MAINTENANCE.md) | Keeping docs up to date, validation strategies |
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+### Added
+- New feature X
+- Support for Y
+
+### Changed
+- Improved performance of Z
+
+### Deprecated
+- Old API endpoint /v1/users (use /v2/users instead)
+
+### Removed
+- Unused dependency foo
+
+### Fixed
+- Bug in authentication flow
+- Memory leak in WebSocket handler
+
+### Security
+- Updated dependencies with security vulnerabilities
+
+## [2.1.0] - 2024-01-15
+
+### Added
+- User profile customization
+- Dark mode support
+
+### Fixed
+- Login redirect issue
+
+## [2.0.0] - 2024-01-01
+
+### Changed
+- **BREAKING**: Renamed `getUser()` to `fetchUser()`
+- **BREAKING**: Changed response format for `/api/users`
+
+### Migration Guide
+
+\`\`\`typescript
+// Before
+const user = await api.getUser(id);
+
+// After
+const user = await api.fetchUser(id);
+\`\`\`
+```
+
+### 3. **JSDoc for Functions**
+
+```typescript
+/**
+ * Calculates the total price including tax and shipping
+ * 
+ * @param items - Array of cart items
+ * @param options - Calculation options
+ * @param options.taxRate - Tax rate as decimal (e.g., 0.08 for 8%)
+ * @param options.shippingCost - Flat shipping cost
+ * @returns Total price object
+ * 
+ * @example
+ * ```typescript
+ * const total = calculateTotal(
+ *   [{ price: 10, quantity: 2 }],
+ *   { taxRate: 0.08, shippingCost: 5 }
+ * );
+ * // Returns: { subtotal: 20, tax: 1.6, shipping: 5, total: 26.6 }
+ * ```
+ * 
+ * @throws {ValidationError} If items array is empty
+ * @throws {ValidationError} If taxRate is negative
+ */
+export function calculateTotal(
+  items: CartItem[],
+  options: {
+    taxRate: number;
+    shippingCost: number;
+  }
+): TotalPrice {
+  // Implementation
+}
+```
+
+## Documentation Sites
+
+### 1. **VitePress (Modern Static Site)**
+
+```markdown
+<!-- docs/index.md -->
+---
+layout: home
+hero:
+  name: My Library
+  text: A modern TypeScript library
+  tagline: Fast, type-safe, and easy to use
+  actions:
+    - theme: brand
+      text: Get Started
+      link: /guide/
+    - theme: alt
+      text: View on GitHub
+      link: https://github.com/user/repo
+features:
+  - title: Fast
+    details: Built with performance in mind
+  - title: Type-safe
+    details: Full TypeScript support
+  - title: Simple
+    details: Easy to learn and use
+---
+
+<!-- docs/guide/index.md -->
+# Getting Started
+
+## Installation
+
+::: code-group
+\`\`\`bash [npm]
+npm install my-library
+\`\`\`
+
+\`\`\`bash [yarn]
+yarn add my-library
+\`\`\`
+
+\`\`\`bash [pnpm]
+pnpm add my-library
+\`\`\`
+:::
+
+## Quick Example
+
+\`\`\`typescript
+import { createClient } from 'my-library';
+
+const client = createClient({
+  apiKey: process.env.API_KEY
+});
+
+const data = await client.fetch('/users');
+\`\`\`
+
+## Next Steps
+
+- [Configuration](/guide/configuration)
+- [API Reference](/api/)
+- [Examples](/examples/)
+```
+
+```typescript
+// docs/.vitepress/config.ts
+import { defineConfig } from 'vitepress';
+
+export default defineConfig({
+  title: 'My Library',
+  description: 'Documentation for My Library',
+  
+  themeConfig: {
+    nav: [
+      { text: 'Guide', link: '/guide/' },
+      { text: 'API', link: '/api/' },
+      { text: 'Examples', link: '/examples/' }
+    ],
+    
+    sidebar: {
+      '/guide/': [
+        {
+          text: 'Introduction',
+          items: [
+            { text: 'Getting Started', link: '/guide/' },
+            { text: 'Installation', link: '/guide/installation' },
+            { text: 'Configuration', link: '/guide/configuration' }
+          ]
+        },
+        {
+          text: 'Core Concepts',
+          items: [
+            { text: 'Authentication', link: '/guide/auth' },
+            { text: 'Data Fetching', link: '/guide/fetching' }
+          ]
+        }
+      ]
+    },
+    
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/user/repo' }
+    ]
+  }
+});
+```
+
+### 2. **Docusaurus (React-based)**
+
+```jsx
+// docusaurus.config.js
+module.exports = {
+  title: 'My Library',
+  tagline: 'A modern TypeScript library',
+  url: 'https://mylib.dev',
+  baseUrl: '/',
+  
+  presets: [
+    [
+      '@docusaurus/preset-classic',
+      {
+        docs: {
+          sidebarPath: require.resolve('./sidebars.js'),
+          editUrl: 'https://github.com/user/repo/edit/main/',
+        },
+        blog: {
+          showReadingTime: true,
+        },
+        theme: {
+          customCss: require.resolve('./src/css/custom.css'),
+        },
+      },
+    ],
+  ],
+  
+  themeConfig: {
+    navbar: {
+      title: 'My Library',
+      items: [
+        { to: '/docs/intro', label: 'Docs', position: 'left' },
+        { to: '/blog', label: 'Blog', position: 'left' },
+        {
+          href: 'https://github.com/user/repo',
+          label: 'GitHub',
+          position: 'right',
+        },
+      ],
+    },
+  },
+};
+```
+
+## Automated Checks
+
+### 1. **Link Checking**
+
+```yaml
+# .github/workflows/docs.yml
+name: Check Docs
+
+on: [push, pull_request]
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Check broken links
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          folder-path: 'docs/'
+          config-file: '.markdown-link-check.json'
+```
+
+### 2. **Code Examples Testing**
+
+```typescript
+// Extract and test code examples from markdown
+import { readFileSync } from 'fs';
+
+describe('Documentation Examples', () => {
+  it('README example works', () => {
+    const readme = readFileSync('README.md', 'utf-8');
+    const codeBlocks = readme.match(/```typescript\n([\s\S]*?)```/g);
+    
+    // Test each code block
+    for (const block of codeBlocks) {
+      const code = block.replace(/```typescript\n/, '').replace(/```$/, '');
+      expect(() => eval(code)).not.toThrow();
+    }
+  });
+});
+```
+
+## Documentation Checklist
+
+```
+Essential Documentation:
+□ README.md with quick start
+□ CHANGELOG.md with versions
+□ LICENSE file
+□ CONTRIBUTING.md for contributors
+□ API reference documentation
+□ Configuration guide
+
+Code Documentation:
+□ JSDoc comments on public APIs
+□ Type definitions exported
+□ Examples for complex functions
+□ Error conditions documented
+□ Breaking changes noted
+
+Quality:
+□ No broken links
+□ Code examples tested
+□ Screenshots up to date
+□ Search functionality
+□ Mobile-responsive
+□ Accessible (WCAG)
+
+Maintenance:
+□ Automated generation from code
+□ Versioned documentation
+□ CI/CD checks for docs
+□ Deprecation warnings visible
+□ Migration guides for breaking changes
+```
+
+## Resources
+
+- [Write the Docs](https://www.writethedocs.org/)
+- [The Good Docs Project](https://thegooddocsproject.dev/)
+- [VitePress](https://vitepress.dev/)
+- [Docusaurus](https://docusaurus.io/)
+
+---
+
+**Remember**: Documentation is part of your product. Keep it accurate, accessible, and up-to-date.

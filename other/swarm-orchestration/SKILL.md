@@ -1,6 +1,16 @@
 ---
 name: "Swarm Orchestration"
+version: "1.0.0"
 description: "Orchestrate multi-agent swarms with agentic-flow for parallel task execution, dynamic topology, and intelligent coordination. Use when scaling beyond single agents, implementing complex workflows, or building distributed AI systems."
+category: orchestration
+tags:
+  - swarm
+  - orchestration
+  - multi-agent
+  - distributed
+  - topology
+  - coordination
+author: Smith Horn
 ---
 
 # Swarm Orchestration
@@ -35,7 +45,6 @@ npx agentic-flow hooks task-orchestrate \
 ## Topology Patterns
 
 ### 1. Mesh (Peer-to-Peer)
-
 ```typescript
 // Equal peers, distributed decision-making
 await swarm.init({
@@ -46,7 +55,6 @@ await swarm.init({
 ```
 
 ### 2. Hierarchical (Queen-Worker)
-
 ```typescript
 // Centralized coordination, specialized workers
 await swarm.init({
@@ -57,7 +65,6 @@ await swarm.init({
 ```
 
 ### 3. Adaptive (Dynamic)
-
 ```typescript
 // Automatically switches topology based on task
 await swarm.init({
@@ -69,7 +76,6 @@ await swarm.init({
 ## Task Orchestration
 
 ### Parallel Execution
-
 ```typescript
 // Execute tasks concurrently
 const results = await swarm.execute({
@@ -84,7 +90,6 @@ const results = await swarm.execute({
 ```
 
 ### Pipeline Execution
-
 ```typescript
 // Sequential pipeline with dependencies
 await swarm.pipeline([
@@ -96,7 +101,6 @@ await swarm.pipeline([
 ```
 
 ### Adaptive Execution
-
 ```typescript
 // Let swarm decide execution strategy
 await swarm.autoOrchestrate({
@@ -125,7 +129,6 @@ const schema = await swarm.memory.retrieve('api-schema');
 ## Advanced Features
 
 ### Load Balancing
-
 ```typescript
 // Automatic work distribution
 await swarm.enableLoadBalancing({
@@ -135,7 +138,6 @@ await swarm.enableLoadBalancing({
 ```
 
 ### Fault Tolerance
-
 ```typescript
 // Handle agent failures
 await swarm.setResiliency({
@@ -145,7 +147,6 @@ await swarm.setResiliency({
 ```
 
 ### Performance Monitoring
-
 ```typescript
 // Track swarm metrics
 const metrics = await swarm.getMetrics();
@@ -176,11 +177,9 @@ npx agentic-flow hooks session-restore --session-id "swarm-001"
 ## Troubleshooting
 
 ### Issue: Agents not coordinating
-
 **Solution**: Verify memory access and enable hooks
 
 ### Issue: Poor performance
-
 **Solution**: Check topology (use adaptive) and enable load balancing
 
 ## Learn More

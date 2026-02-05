@@ -1,50 +1,21 @@
 ---
-name: Suggest a Skill
-about: Suggest a new skill to be added to the list
-title: '[SKILL] '
-labels: 'new-skill'
-assignees: ''
+name: suggest_skill
+description: 現在の状況やタスクに合わせて、今使うべきおススメのスキルを提案する
 ---
 
-## Skill Information
+# Suggest Skill
 
-**Skill Name:**
+現在の作業状況、直近のコマンド実行結果、またはユーザーの意図を分析し、利用可能なエージェントスキルの中から最適なものを提案します。
 
-**Repository URL (if exists):**
+## 手順
 
-**Category:**
-- [ ] 🧪 Testing & Quality
-- [ ] 🐛 Debugging & Troubleshooting
-- [ ] 🤝 Collaboration & Workflow
-- [ ] ⚙️ Development & Architecture
-- [ ] 🔒 Security & Performance
-- [ ] 📚 Documentation & Automation
-- [ ] 🎯 Meta Skills
+1.  **コンテキストの把握**:
+    *   直前に実行したコマンド（テストの失敗、ビルドエラーなど）を確認します。
+    *   現在のファイル編集状況（ソースコードの変更、ドキュメントの更新など）を確認します。
 
-## Description
+2.  **スキルの選定**:
+    *   `list_skills` スキルで定義されている全スキルの中から、次のアクションとして妥当なものを複数提案します。
+    *   例: テストが通った直後なら `wrap_up` を提案。
 
-Provide a clear, concise description (max 150 characters):
-
-
-
-## Use Case
-
-When and why would developers use this skill?
-
-
-
-## Skill Status
-
-- [ ] Skill already exists (provide link)
-- [ ] Skill doesn't exist yet (community-needed)
-- [ ] I'm willing to build this skill
-
-## Additional Context
-
-Add any other context, examples, or screenshots:
-
-
-
----
-
-**Suggested by:** @[your-github-username]
+3.  **提案理由の提示**:
+    *   なぜそのスキルをおススメするのか、どのようなメリットがあるのかを簡潔に説明します。

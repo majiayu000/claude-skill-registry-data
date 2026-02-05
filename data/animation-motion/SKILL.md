@@ -9,70 +9,96 @@ Create smooth, purposeful animations that enhance user experience.
 
 ## Instructions
 
-1. **Animate with purpose** - Every animation should serve a function
-2. **Keep it subtle** - 200-400ms for most UI transitions
-3. **Respect reduced motion** - Honor user preferences
-4. **Optimize performance** - Use transform and opacity
-5. **Use consistent easing** - Create a motion language
+1. **Animate with purpose** - Motion should guide, not distract
+2. **Keep it fast** - Most UI animations should be 150-300ms
+3. **Use easing curves** - Never use linear timing for UI
+4. **Respect preferences** - Honor `prefers-reduced-motion`
+5. **Optimize performance** - Animate `transform` and `opacity` only
 
-## Framer Motion Basics
+## Framer Motion (Recommended)
 
-### Simple Animations
+### Setup
+
+```bash
+npm install framer-motion
+```
+
+### Basic Animations
 
 ```tsx
 import { motion } from 'framer-motion';
 
 // Fade in on mount
-<motion.div
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  transition={{ duration: 0.3 }}
->
-  Content
-</motion.div>
+function FadeIn({ children }: { children: React.ReactNode }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.3 }}
+    >
+      {children}
+    </motion.div>
+  );
+}
 
-// Slide up with spring
-<motion.div
-  initial={{ y: 20, opacity: 0 }}
-  animate={{ y: 0, opacity: 1 }}
-  transition={{
-    type: 'spring',
-    stiffness: 300,
-    damping: 30,
-  }}
->
-  Content
-</motion.div>
+// Slide up on mount
+function SlideUp({ children }: { children: React.ReactNode }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, ease: 'easeOut' }}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+// Scale on hover
+function ScaleButton({ children }: { children: React.ReactNode }) {
+  return (
+    <motion.button
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+    >
+      {children}
+    </motion.button>
+  );
+}
 ```
 
-### Exit Animations
+### Enter/Exit Animations
 
 ```tsx
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
-function Modal({ isOpen, onClose, children }) {
+function Modal({ isOpen, onClose, children }: ModalProps) {
   return (
     <AnimatePresence>
       {isOpen && (
         <>
           {/* Backdrop */}
           <motion.div
-            className="fixed inset-0 bg-black/50"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 bg-black/50"
             onClick={onClose}
           />
 
-          {/* Modal content */}
+          {/* Modal */}
           <motion.div
-            className="fixed inset-0 flex items-center justify-center"
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ duration: 0.2 }}
+            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.95, y: 20 }}
+            transition={{ duration: 0.2, ease: 'easeOut' }}
+            className="fixed inset-0 flex items-center justify-center p-4"
           >
-            {children}
+            <div className="bg-white rounded-xl shadow-xl max-w-md w-full p-6">
+              {children}
+            </div>
           </motion.div>
         </>
       )}
@@ -81,34 +107,10 @@ function Modal({ isOpen, onClose, children }) {
 }
 ```
 
-### Gesture Animations
-
-```tsx
-import { motion } from 'framer-motion';
-
-<motion.button
-  whileHover={{ scale: 1.05 }}
-  whileTap={{ scale: 0.95 }}
-  transition={{ type: 'spring', stiffness: 400, damping: 17 }}
->
-  Click me
-</motion.button>
-
-// Drag
-<motion.div
-  drag
-  dragConstraints={{ left: 0, right: 300, top: 0, bottom: 300 }}
-  dragElastic={0.1}
-  whileDrag={{ scale: 1.1 }}
->
-  Drag me
-</motion.div>
-```
-
 ### List Animations
 
 ```tsx
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const container = {
   hidden: { opacity: 0 },
@@ -125,18 +127,21 @@ const item = {
   show: { opacity: 1, y: 0 },
 };
 
-function List({ items }) {
+function AnimatedList({ items }: { items: Item[] }) {
   return (
-    <motion.ul
-      variants={container}
-      initial="hidden"
-      animate="show"
-    >
-      {items.map((data) => (
-        <motion.li key={data.id} variants={item}>
-          {data.title}
-        </motion.li>
-      ))}
+    <motion.ul variants={container} initial="hidden" animate="show">
+      <AnimatePresence mode="popLayout">
+        {items.map((item) => (
+          <motion.li
+            key={item.id}
+            variants={item}
+            exit={{ opacity: 0, x: -100 }}
+            layout
+          >
+            <ItemCard {...item} />
+          </motion.li>
+        ))}
+      </AnimatePresence>
     </motion.ul>
   );
 }
@@ -147,28 +152,31 @@ function List({ items }) {
 ```tsx
 import { motion, LayoutGroup } from 'framer-motion';
 
-function Tabs({ tabs, activeTab, onTabChange }) {
+function ExpandableCard({ id, title, content, isExpanded, onToggle }: Props) {
   return (
     <LayoutGroup>
-      <div className="flex space-x-2">
-        {tabs.map((tab) => (
-          <button
-            key={tab.id}
-            onClick={() => onTabChange(tab.id)}
-            className="relative px-4 py-2"
-          >
-            {tab.label}
-            {activeTab === tab.id && (
-              <motion.div
-                layoutId="activeTab"
-                className="absolute inset-0 bg-blue-100 rounded-lg"
-                style={{ zIndex: -1 }}
-                transition={{ type: 'spring', stiffness: 500, damping: 30 }}
-              />
-            )}
-          </button>
-        ))}
-      </div>
+      <motion.div
+        layout
+        onClick={onToggle}
+        className="bg-white rounded-xl p-4 cursor-pointer"
+      >
+        <motion.h3 layout="position" className="font-semibold">
+          {title}
+        </motion.h3>
+
+        <AnimatePresence>
+          {isExpanded && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <p className="mt-4 text-gray-600">{content}</p>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </motion.div>
     </LayoutGroup>
   );
 }
@@ -181,32 +189,38 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 
 function ParallaxHero() {
   const { scrollY } = useScroll();
+
+  // Parallax effect - image moves slower than scroll
   const y = useTransform(scrollY, [0, 500], [0, 150]);
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   return (
-    <motion.div
-      style={{ y, opacity }}
-      className="h-screen flex items-center justify-center"
-    >
-      <h1 className="text-6xl font-bold">Welcome</h1>
-    </motion.div>
+    <div className="relative h-screen overflow-hidden">
+      <motion.div
+        style={{ y }}
+        className="absolute inset-0"
+      >
+        <img src="/hero.jpg" className="w-full h-full object-cover" />
+      </motion.div>
+
+      <motion.div
+        style={{ opacity }}
+        className="relative z-10 flex items-center justify-center h-full"
+      >
+        <h1 className="text-6xl font-bold text-white">Welcome</h1>
+      </motion.div>
+    </div>
   );
 }
 
-// Scroll-triggered animation
-import { useInView } from 'framer-motion';
-
-function FadeInSection({ children }) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
-
+// Reveal on scroll
+function ScrollReveal({ children }: { children: React.ReactNode }) {
   return (
     <motion.div
-      ref={ref}
       initial={{ opacity: 0, y: 50 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      transition={{ duration: 0.5 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-100px' }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
     >
       {children}
     </motion.div>
@@ -214,86 +228,84 @@ function FadeInSection({ children }) {
 }
 ```
 
-## CSS Animations
-
-### Keyframe Animations
-
-```css
-/* Tailwind config */
-animation: {
-  'fade-in': 'fadeIn 0.3s ease-out',
-  'slide-up': 'slideUp 0.3s ease-out',
-  'spin-slow': 'spin 3s linear infinite',
-  'pulse-subtle': 'pulse 2s ease-in-out infinite',
-},
-keyframes: {
-  fadeIn: {
-    '0%': { opacity: '0' },
-    '100%': { opacity: '1' },
-  },
-  slideUp: {
-    '0%': { transform: 'translateY(10px)', opacity: '0' },
-    '100%': { transform: 'translateY(0)', opacity: '1' },
-  },
-}
-```
-
-### Transition Classes
+### Gesture Animations
 
 ```tsx
-// Hover transitions
-<button className="
-  transition-all duration-200 ease-out
-  hover:scale-105 hover:shadow-lg
-  active:scale-95
-">
-  Click me
-</button>
+import { motion, useDragControls } from 'framer-motion';
 
-// Color transitions
-<div className="
-  transition-colors duration-300
-  bg-gray-100 hover:bg-gray-200
-  dark:bg-gray-800 dark:hover:bg-gray-700
-">
-  Content
-</div>
+function DraggableCard() {
+  return (
+    <motion.div
+      drag
+      dragConstraints={{ left: -100, right: 100, top: -100, bottom: 100 }}
+      dragElastic={0.1}
+      whileDrag={{ scale: 1.05, cursor: 'grabbing' }}
+      className="w-48 h-48 bg-blue-500 rounded-xl cursor-grab"
+    />
+  );
+}
+
+function SwipeToDelete({ onDelete }: { onDelete: () => void }) {
+  return (
+    <motion.div
+      drag="x"
+      dragConstraints={{ left: 0, right: 0 }}
+      onDragEnd={(_, info) => {
+        if (info.offset.x < -100) {
+          onDelete();
+        }
+      }}
+      className="bg-white p-4 rounded-lg"
+    >
+      Swipe left to delete
+    </motion.div>
+  );
+}
 ```
 
 ## Loading States
 
-### Skeleton Loading
+### Skeleton Loader
 
 ```tsx
-function SkeletonCard() {
+function Skeleton({ className = '' }: { className?: string }) {
   return (
-    <div className="animate-pulse">
-      <div className="h-48 bg-gray-200 rounded-lg" />
-      <div className="mt-4 space-y-3">
-        <div className="h-4 bg-gray-200 rounded w-3/4" />
-        <div className="h-4 bg-gray-200 rounded w-1/2" />
+    <div
+      className={`animate-pulse bg-gray-200 dark:bg-gray-700 rounded ${className}`}
+    />
+  );
+}
+
+function CardSkeleton() {
+  return (
+    <div className="bg-white rounded-xl p-6 space-y-4">
+      <Skeleton className="h-6 w-3/4" />
+      <Skeleton className="h-4 w-full" />
+      <Skeleton className="h-4 w-5/6" />
+      <div className="flex gap-4 pt-4">
+        <Skeleton className="h-10 w-24" />
+        <Skeleton className="h-10 w-24" />
       </div>
     </div>
   );
 }
 ```
 
-### Spinner Component
+### Spinner
 
 ```tsx
-function Spinner({ size = 'md' }) {
+function Spinner({ size = 'md' }: { size?: 'sm' | 'md' | 'lg' }) {
   const sizes = {
     sm: 'w-4 h-4',
-    md: 'w-6 h-6',
-    lg: 'w-8 h-8',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12',
   };
 
   return (
     <svg
-      className={`animate-spin ${sizes[size]} text-blue-600`}
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
+      className={`animate-spin text-blue-600 ${sizes[size]}`}
       viewBox="0 0 24 24"
+      fill="none"
     >
       <circle
         className="opacity-25"
@@ -313,7 +325,78 @@ function Spinner({ size = 'md' }) {
 }
 ```
 
-## Reduced Motion Support
+### Progress Bar
+
+```tsx
+function ProgressBar({ value, max = 100 }: { value: number; max?: number }) {
+  const percentage = Math.min((value / max) * 100, 100);
+
+  return (
+    <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+      <motion.div
+        className="h-full bg-blue-600"
+        initial={{ width: 0 }}
+        animate={{ width: `${percentage}%` }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
+      />
+    </div>
+  );
+}
+```
+
+## CSS Animations
+
+### Tailwind Animations
+
+```tsx
+// Built-in Tailwind animations
+<div className="animate-spin">Spinner</div>
+<div className="animate-ping">Ping</div>
+<div className="animate-pulse">Pulse</div>
+<div className="animate-bounce">Bounce</div>
+
+// Custom animation in tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      animation: {
+        'fade-in': 'fadeIn 0.3s ease-out',
+        'slide-up': 'slideUp 0.4s ease-out',
+        'scale-in': 'scaleIn 0.2s ease-out',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(20px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        scaleIn: {
+          '0%': { transform: 'scale(0.95)', opacity: '0' },
+          '100%': { transform: 'scale(1)', opacity: '1' },
+        },
+      },
+    },
+  },
+};
+```
+
+### CSS Transitions
+
+```tsx
+<button className="
+  bg-blue-600 text-white px-4 py-2 rounded-lg
+  transition-all duration-200 ease-out
+  hover:bg-blue-700 hover:shadow-lg hover:-translate-y-0.5
+  active:translate-y-0 active:shadow-md
+">
+  Hover Me
+</button>
+```
+
+## Respecting User Preferences
 
 ```tsx
 import { useReducedMotion } from 'framer-motion';
@@ -323,9 +406,9 @@ function AnimatedComponent() {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 20 }}
+      initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: shouldReduceMotion ? 0 : 0.3 }}
+      transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.4 }}
     >
       Content
     </motion.div>
@@ -334,9 +417,10 @@ function AnimatedComponent() {
 
 // CSS approach
 @media (prefers-reduced-motion: reduce) {
-  * {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
 }
@@ -344,46 +428,32 @@ function AnimatedComponent() {
 
 ## Performance Tips
 
-1. **Animate transform and opacity only** - GPU accelerated
-2. **Use `will-change` sparingly** - For complex animations
+1. **Animate only transform and opacity** - GPU accelerated
+2. **Use `will-change` sparingly** - Only for complex animations
 3. **Avoid layout thrashing** - Don't animate width/height
-4. **Use `AnimatePresence` mode="wait"** - Prevent animation overlap
-5. **Lazy load animations** - For below-fold content
+4. **Use `layout` prop carefully** - Can cause reflows
+5. **Debounce scroll handlers** - Prevent jank
 
 ```tsx
-// GPU-optimized animation
-<motion.div
-  animate={{ x: 100 }}  // Good: transform
-  // animate={{ left: 100 }}  // Bad: layout property
-/>
+// Good - GPU accelerated
+<motion.div animate={{ x: 100, opacity: 0.5 }} />
 
-// will-change for complex animations
-<div style={{ willChange: 'transform' }}>
-  Heavy animation here
-</div>
+// Bad - causes reflow
+<motion.div animate={{ width: 200, marginLeft: 100 }} />
 ```
-
-## Best Practices
-
-1. **200-400ms for transitions** - Feels responsive
-2. **Spring for interactive elements** - Natural feel
-3. **Ease-out for enter** - Elements arrive and settle
-4. **Ease-in for exit** - Elements accelerate away
-5. **Stagger lists** - 50-100ms between items
-6. **Match motion to meaning** - Slide for navigation, fade for content
 
 ## When to Use
 
 - Page transitions and navigation
-- Modal and dialog animations
-- Loading and progress states
-- Micro-interactions and feedback
-- Scroll-driven effects
-- Interactive data visualizations
+- Loading and skeleton states
+- Interactive UI elements
+- Feedback and confirmations
+- Onboarding and tutorials
+- Data visualization transitions
 
 ## Notes
 
-- Test on lower-end devices
-- Always respect prefers-reduced-motion
-- Keep animations consistent across the app
-- Don't animate everything - be selective
+- Framer Motion adds ~30kb to bundle (gzipped)
+- Use CSS for simple hover/focus transitions
+- Test animations at 0.25x speed to verify smoothness
+- Consider motion sickness - avoid excessive movement

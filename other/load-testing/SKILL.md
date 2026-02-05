@@ -1,210 +1,564 @@
 ---
 name: load-testing
-description: Create and manage K6 load tests for REST and GraphQL APIs. Use when creating load tests, writing K6 scripts, testing API performance, debugging load test failures, or setting up performance monitoring. Covers REST endpoints, GraphQL operations, data generation, IRI handling, configuration patterns, and performance troubleshooting.
+description: Auto-activates when user mentions load test, performance test, stress test, k6, Artillery, benchmark, or scalability testing. Expert in designing and executing performance tests.
+category: testing
 ---
 
-# Load Testing Skill
+# Load Testing & Performance Testing
 
-## Overview
+Creates comprehensive load tests using k6, Artillery, and other tools to validate application performance under stress.
 
-This skill provides guidance for creating and managing K6 load tests for both REST and GraphQL APIs following VilnaCRM ecosystem patterns.
+## When This Activates
 
-## Core Principles
+- User says: "load test this", "performance test", "stress test", "benchmark"
+- User mentions: "k6", "Artillery", "JMeter", "Gatling", "scalability"
+- Performance validation needed
+- Pre-production testing
+- Capacity planning questions
 
-### 1. Individual Endpoint Testing
+## Load Testing Tools Comparison
 
-- Create separate test scripts for each endpoint (REST) or operation (GraphQL)
-- Follow the pattern: `createResource.js`, `getResource.js`, `updateResource.js`, `deleteResource.js`
-- For GraphQL: `graphQLCreateResource.js`, `graphQLGetResource.js`, etc.
-- Avoid composite/random operation scripts for better debugging and clarity
+### k6 (Recommended)
+- **Best for:** Modern apps, APIs, microservices
+- **Language:** JavaScript/TypeScript
+- **Pros:** Cloud-native, great metrics, scriptable
+- **Use when:** Testing REST APIs, GraphQL, WebSocket
 
-### 2. Deterministic Testing
+### Artillery
+- **Best for:** Quick tests, CI/CD integration
+- **Language:** YAML + JavaScript
+- **Pros:** Simple config, plugins, HTTP/WS/Socket.io
+- **Use when:** Simple scenarios, rapid testing
 
-- **NEVER use random operations** in load tests
-- Use predictable, iteration-based patterns (`__ITER % N`)
-- Ensure reproducible results for reliable performance analysis
+### Apache JMeter
+- **Best for:** Enterprise apps, complex scenarios
+- **Language:** GUI-based + Java
+- **Pros:** Mature, extensive protocols, GUI
+- **Use when:** Legacy systems, complex workflows
 
-### 3. Proper Resource Management
+## k6 Load Testing
 
-- Implement `setup()` function to create test dependencies
-- Implement `teardown()` function to clean up test data
-- Use proper IRI handling for REST APIs
-- Use proper ID handling for GraphQL queries/mutations
-
-### 4. Automatic Integration
-
-- All test scripts are automatically discovered from `tests/Load/scripts/`
-- No separate commands needed - GraphQL and REST tests run together
-- Use existing Makefile commands
-
-## Available Commands
-
-```bash
-# All load tests (REST + GraphQL)
-make load-tests
-
-# Specific load levels
-make smoke-load-tests      # Minimal load (2-5 VUs, 10s)
-make average-load-tests    # Normal load (10-20 VUs, 2-3 min)
-make stress-load-tests     # High load (30-80 VUs, 5-15 min)
-make spike-load-tests      # Extreme load (100-200 VUs, 1-3 min)
-
-# Individual script
-make execute-load-tests-script scenario=createCustomer
-make execute-load-tests-script scenario=graphQLCreateCustomer
-
-# List all available scenarios
-./tests/Load/get-load-test-scenarios.sh
-```
-
-## Quick Start Guide
-
-### 1. Choose Test Type
-
-- **REST API**: Use for HTTP endpoint testing
-- **GraphQL**: Use for GraphQL query/mutation testing
-
-### 2. Create Test Script
-
-```bash
-# Create in tests/Load/scripts/
-touch tests/Load/scripts/yourOperation.js         # REST
-touch tests/Load/scripts/graphQLYourOperation.js  # GraphQL
-```
-
-### 3. Follow Script Structure
-
-See **Supporting Files** below for detailed templates and examples.
-
-### 4. Add Configuration
-
-Update `tests/Load/config.json.dist` with script parameters.
-
-### 5. Test and Verify
-
-```bash
-# Test with smoke load first
-make smoke-load-tests
-
-# Verify cleanup
-# Check no test data remains in database
-```
-
-## Load Test Levels
-
-| Level       | VUs     | Duration     | Success Rate | Purpose                           |
-| ----------- | ------- | ------------ | ------------ | --------------------------------- |
-| **Smoke**   | 2-5     | 10 seconds   | 100%         | Basic functionality verification  |
-| **Average** | 10-20   | 2-3 minutes  | >99%         | Normal traffic simulation         |
-| **Stress**  | 30-80   | 5-15 minutes | >95%         | Find breaking points              |
-| **Spike**   | 100-200 | 1-3 minutes  | >90%         | Test resilience under sudden load |
-
-## Common Pitfalls
-
-### ❌ Don't Do This
+### Basic Load Test
 
 ```javascript
-// Random operations - unpredictable results
-const operation = Math.random();
+// load-test.js
+import http from 'k6/http';
+import { check, sleep } from 'k6';
+import { Rate, Trend, Counter } from 'k6/metrics';
 
-// Hardcoded test data
-const email = 'test@example.com'; // Will cause conflicts
+// Custom metrics
+const errorRate = new Rate('errors');
+const checkDuration = new Trend('check_duration');
+const requests = new Counter('requests');
 
-// Missing cleanup in teardown()
-```
+// Test configuration
+export const options = {
+  stages: [
+    { duration: '2m', target: 10 },   // Ramp up to 10 users
+    { duration: '5m', target: 10 },   // Stay at 10 users
+    { duration: '2m', target: 50 },   // Ramp up to 50 users
+    { duration: '5m', target: 50 },   // Stay at 50 users
+    { duration: '2m', target: 100 },  // Ramp up to 100 users
+    { duration: '5m', target: 100 },  // Stay at 100 users
+    { duration: '2m', target: 0 },    // Ramp down
+  ],
+  thresholds: {
+    http_req_duration: ['p(95)<500', 'p(99)<1000'], // 95% < 500ms, 99% < 1s
+    http_req_failed: ['rate<0.01'],                  // Error rate < 1%
+    errors: ['rate<0.1'],                            // Custom error rate < 10%
+  },
+};
 
-### ✅ Do This Instead
+const BASE_URL = __ENV.BASE_URL || 'http://localhost:3000';
+const API_TOKEN = __ENV.API_TOKEN || '';
 
-```javascript
-// Deterministic operations
-const operationIndex = __ITER % 3;
+export default function () {
+  const params = {
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${API_TOKEN}`,
+    },
+    tags: { name: 'GetUsers' },
+  };
 
-// Dynamic test data
-const email = `test_${Date.now()}_${randomString(6)}@example.com`;
+  // GET request
+  let response = http.get(`${BASE_URL}/api/users`, params);
+  
+  const checkResult = check(response, {
+    'status is 200': (r) => r.status === 200,
+    'response time < 500ms': (r) => r.timings.duration < 500,
+    'has users': (r) => JSON.parse(r.body).data.length > 0,
+  });
 
-// Proper cleanup
-export function teardown(data) {
-  // Clean up all created resources
+  errorRate.add(!checkResult);
+  checkDuration.add(response.timings.duration);
+  requests.add(1);
+
+  // POST request
+  const payload = JSON.stringify({
+    name: 'Test User',
+    email: `test-${Date.now()}@example.com`,
+  });
+
+  response = http.post(`${BASE_URL}/api/users`, payload, params);
+  
+  check(response, {
+    'user created': (r) => r.status === 201,
+  });
+
+  sleep(1); // Think time between requests
+}
+
+export function handleSummary(data) {
+  return {
+    'summary.json': JSON.stringify(data),
+    stdout: textSummary(data, { indent: ' ', enableColors: true }),
+  };
 }
 ```
 
-## Checklist for New Load Tests
+### Advanced Scenarios
 
-### Before Creating
+```javascript
+// advanced-test.js
+import http from 'k6/http';
+import { check, group, sleep } from 'k6';
+import { SharedArray } from 'k6/data';
+import papaparse from 'https://jslib.k6.io/papaparse/5.1.1/index.js';
 
-- [ ] Identify the specific endpoint/operation to test
-- [ ] Determine if REST or GraphQL (or both)
-- [ ] Identify required dependencies (types, statuses, etc.)
-- [ ] Plan realistic test data generation
-- [ ] Choose appropriate load test parameters
+// Load test data
+const users = new SharedArray('users', function () {
+  return papaparse.parse(open('./users.csv'), { header: true }).data;
+});
 
-### During Creation
+export const options = {
+  scenarios: {
+    // Scenario 1: Constant load
+    constant_load: {
+      executor: 'constant-vus',
+      vus: 50,
+      duration: '5m',
+    },
+    // Scenario 2: Ramping load
+    ramping_load: {
+      executor: 'ramping-vus',
+      startVUs: 0,
+      stages: [
+        { duration: '5m', target: 100 },
+        { duration: '10m', target: 100 },
+        { duration: '5m', target: 0 },
+      ],
+      gracefulRampDown: '30s',
+    },
+    // Scenario 3: Stress test
+    stress_test: {
+      executor: 'ramping-arrival-rate',
+      startRate: 50,
+      timeUnit: '1s',
+      preAllocatedVUs: 500,
+      maxVUs: 1000,
+      stages: [
+        { duration: '2m', target: 100 },
+        { duration: '5m', target: 200 },
+        { duration: '2m', target: 500 },
+        { duration: '5m', target: 500 },
+        { duration: '2m', target: 0 },
+      ],
+    },
+  },
+};
 
-- [ ] Follow the appropriate script structure template
-- [ ] Implement proper setup/teardown functions
-- [ ] Use deterministic operations (no random)
-- [ ] Handle IRI/ID paths correctly
-- [ ] Add configuration to `config.json.dist`
-- [ ] Use proper naming: `graphQL` prefix for GraphQL tests
+export default function () {
+  const user = users[Math.floor(Math.random() * users.length)];
 
-### After Creation
+  group('User Flow', function () {
+    // 1. Login
+    group('Login', function () {
+      const loginRes = http.post(`${BASE_URL}/api/auth/login`, JSON.stringify({
+        email: user.email,
+        password: user.password,
+      }), {
+        headers: { 'Content-Type': 'application/json' },
+      });
 
-- [ ] Verify automatic discovery: `./tests/Load/get-load-test-scenarios.sh`
-- [ ] Test with smoke load first
-- [ ] Verify 100% success rate in controlled environment
-- [ ] Check that cleanup works properly (no leftover data)
-- [ ] Document any special requirements
+      check(loginRes, {
+        'login successful': (r) => r.status === 200,
+      });
 
-## Performance Monitoring
+      const token = loginRes.json('token');
+      
+      // 2. Get profile
+      group('Get Profile', function () {
+        const profileRes = http.get(`${BASE_URL}/api/profile`, {
+          headers: {
+            'Authorization': `Bearer ${token}`,
+          },
+        });
 
-### Success Criteria
+        check(profileRes, {
+          'profile loaded': (r) => r.status === 200,
+        });
+      });
 
-- **Smoke Tests**: 100% success rate
-- **Average Tests**: >99% success rate
-- **Stress Tests**: >95% success rate
-- **Response Times**: <threshold configured per endpoint
+      // 3. Create post
+      group('Create Post', function () {
+        const postRes = http.post(`${BASE_URL}/api/posts`, JSON.stringify({
+          title: 'Load Test Post',
+          content: 'This is a test post from k6',
+        }), {
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`,
+          },
+        });
 
-### Key Metrics
+        check(postRes, {
+          'post created': (r) => r.status === 201,
+        });
+      });
+    });
+  });
 
-- HTTP status codes (201, 200, 204 for success)
-- Response times (avg, p95, p99)
-- Error rates and types
-- Throughput (requests per second)
+  sleep(Math.random() * 3 + 2); // Random think time 2-5s
+}
+```
 
-## Supporting Files
+### GraphQL Load Test
 
-For detailed patterns, examples, and reference documentation:
+```javascript
+// graphql-test.js
+import http from 'k6/http';
+import { check } from 'k6';
 
-- **[rest-api-patterns.md](rest-api-patterns.md)** - REST API script templates and patterns
-- **[graphql-patterns.md](graphql-patterns.md)** - GraphQL script templates and patterns
-- **[examples/](examples/)** - Complete working examples
-- **[reference/configuration.md](reference/configuration.md)** - Configuration patterns and guidelines
-- **[reference/utils-extensions.md](reference/utils-extensions.md)** - Extending the Utils class
-- **[reference/troubleshooting.md](reference/troubleshooting.md)** - Common issues and solutions
+export const options = {
+  vus: 50,
+  duration: '5m',
+  thresholds: {
+    http_req_duration: ['p(95)<1000'],
+  },
+};
 
-## Quick Reference
+const GRAPHQL_ENDPOINT = `${__ENV.BASE_URL}/graphql`;
 
-### REST API Test Structure
+export default function () {
+  const query = `
+    query GetPosts($first: Int!) {
+      posts(first: $first) {
+        edges {
+          node {
+            id
+            title
+            author {
+              name
+            }
+          }
+        }
+      }
+    }
+  `;
 
-1. Import required modules
-2. Create Utils and ScenarioUtils instances
-3. Export options from scenarioUtils
-4. Implement setup() for dependencies
-5. Implement default function for main test logic
-6. Implement teardown() for cleanup
-7. Use IRI format for resource references
+  const variables = { first: 20 };
 
-### GraphQL Test Structure
+  const response = http.post(
+    GRAPHQL_ENDPOINT,
+    JSON.stringify({ query, variables }),
+    {
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${__ENV.API_TOKEN}`,
+      },
+    }
+  );
 
-1. Import required modules
-2. Create Utils and ScenarioUtils instances
-3. Export options from scenarioUtils
-4. Use REST API in setup() for faster dependency creation
-5. Use GraphQL in default function for actual testing
-6. Use REST API in teardown() for faster cleanup
-7. Handle full IRI format in queries/mutations
-8. Validate response.data and check for errors
+  check(response, {
+    'no errors': (r) => !r.json('errors'),
+    'has data': (r) => r.json('data.posts.edges.length') > 0,
+  });
+}
+```
 
----
+## Artillery Load Testing
 
-This skill ensures consistent, professional, and effective load testing for both REST and GraphQL APIs across all VilnaCRM projects.
+### Basic Configuration
+
+```yaml
+# artillery.yml
+config:
+  target: "http://localhost:3000"
+  phases:
+    - duration: 60
+      arrivalRate: 10     # 10 users per second
+      name: "Warm up"
+    - duration: 300
+      arrivalRate: 50     # 50 users per second
+      name: "Sustained load"
+    - duration: 120
+      arrivalRate: 100    # 100 users per second
+      name: "Spike"
+  
+  processor: "./helpers.js"
+  
+  variables:
+    apiToken: "{{ $processEnvironment.API_TOKEN }}"
+  
+  plugins:
+    expect: {}
+    metrics-by-endpoint: {}
+
+scenarios:
+  - name: "User Registration and Login"
+    flow:
+      - post:
+          url: "/api/auth/register"
+          json:
+            email: "user-{{ $randomString() }}@example.com"
+            name: "Test User"
+            password: "password123"
+          capture:
+            - json: "$.token"
+              as: "authToken"
+          expect:
+            - statusCode: 201
+            - contentType: json
+            - hasProperty: token
+
+      - get:
+          url: "/api/profile"
+          headers:
+            Authorization: "Bearer {{ authToken }}"
+          expect:
+            - statusCode: 200
+
+      - post:
+          url: "/api/posts"
+          headers:
+            Authorization: "Bearer {{ authToken }}"
+          json:
+            title: "Test Post"
+            content: "This is a test"
+          expect:
+            - statusCode: 201
+
+  - name: "Browse Posts"
+    weight: 3
+    flow:
+      - get:
+          url: "/api/posts?page=1&limit=20"
+          expect:
+            - statusCode: 200
+            - hasProperty: data
+
+      - think: 2  # Wait 2 seconds
+
+      - get:
+          url: "/api/posts/{{ $randomNumber(1, 100) }}"
+          expect:
+            - statusCode: [200, 404]
+```
+
+```javascript
+// helpers.js
+module.exports = {
+  generateRandomEmail,
+  logResponse,
+};
+
+function generateRandomEmail(context, events, done) {
+  context.vars.email = `user-${Date.now()}@example.com`;
+  return done();
+}
+
+function logResponse(requestParams, response, context, ee, next) {
+  if (response.statusCode >= 400) {
+    console.error(`Error ${response.statusCode}: ${response.body}`);
+  }
+  return next();
+}
+```
+
+## Running Tests
+
+```bash
+# k6
+k6 run load-test.js
+k6 run --vus 100 --duration 5m load-test.js
+k6 run --env BASE_URL=https://api.example.com load-test.js
+
+# k6 Cloud
+k6 cloud load-test.js
+
+# Artillery
+artillery run artillery.yml
+artillery run --target https://api.example.com artillery.yml
+
+# Artillery with environment
+API_TOKEN=xxx artillery run artillery.yml
+
+# Generate HTML report
+artillery run --output report.json artillery.yml
+artillery report report.json
+```
+
+## CI/CD Integration
+
+### GitHub Actions
+
+```yaml
+# .github/workflows/load-test.yml
+name: Load Test
+
+on:
+  schedule:
+    - cron: '0 2 * * *'  # Run daily at 2 AM
+  workflow_dispatch:
+
+jobs:
+  load-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Run k6 load test
+        uses: grafana/k6-action@v0.3.0
+        with:
+          filename: tests/load-test.js
+          cloud: true
+          token: ${{ secrets.K6_CLOUD_TOKEN }}
+        env:
+          BASE_URL: ${{ secrets.STAGING_URL }}
+          API_TOKEN: ${{ secrets.API_TOKEN }}
+      
+      - name: Upload results
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: load-test-results
+          path: summary.json
+```
+
+## Performance Benchmarking
+
+```javascript
+// benchmark.js
+import http from 'k6/http';
+import { check } from 'k6';
+
+export const options = {
+  scenarios: {
+    baseline: {
+      executor: 'constant-vus',
+      vus: 1,
+      duration: '1m',
+      tags: { test_type: 'baseline' },
+    },
+  },
+};
+
+export default function () {
+  const endpoints = [
+    '/api/users',
+    '/api/posts',
+    '/api/comments',
+  ];
+
+  endpoints.forEach(endpoint => {
+    const response = http.get(`${BASE_URL}${endpoint}`);
+    
+    check(response, {
+      [`${endpoint} status 200`]: (r) => r.status === 200,
+    });
+  });
+}
+
+export function handleSummary(data) {
+  const baseline = {
+    endpoints: {},
+    timestamp: new Date().toISOString(),
+  };
+
+  for (const [name, metric] of Object.entries(data.metrics)) {
+    if (name.includes('http_req_duration')) {
+      baseline.endpoints[name] = {
+        avg: metric.values.avg,
+        p95: metric.values['p(95)'],
+        p99: metric.values['p(99)'],
+      };
+    }
+  }
+
+  return {
+    'baseline.json': JSON.stringify(baseline, null, 2),
+  };
+}
+```
+
+## Analyzing Results
+
+### Key Metrics to Monitor
+
+1. **Response Time**
+   - Average, p95, p99
+   - Target: p95 < 500ms, p99 < 1s
+
+2. **Error Rate**
+   - HTTP 4xx, 5xx errors
+   - Target: < 1%
+
+3. **Throughput**
+   - Requests per second
+   - Target: Based on requirements
+
+4. **Concurrent Users**
+   - Maximum sustainable load
+   - Target: Based on traffic projections
+
+### Identifying Bottlenecks
+
+```javascript
+// Find slow endpoints
+const slowRequests = data.metrics.http_req_duration.values;
+console.log(`Average: ${slowRequests.avg}ms`);
+console.log(`p95: ${slowRequests['p(95)']}ms`);
+console.log(`p99: ${slowRequests['p(99)']}ms`);
+
+// Check error patterns
+const failedRequests = data.metrics.http_req_failed.values.rate;
+if (failedRequests > 0.01) {
+  console.error(`Error rate: ${failedRequests * 100}%`);
+}
+```
+
+## Best Practices
+
+### Test Types
+
+1. **Smoke Test:** 1-2 VUs, 1-2 minutes
+   - Verify system works under minimal load
+
+2. **Load Test:** Expected normal/peak load, 5-15 minutes
+   - Validate performance under typical conditions
+
+3. **Stress Test:** Beyond peak load, gradually increase
+   - Find breaking point
+
+4. **Spike Test:** Sudden large increase, then drop
+   - Test auto-scaling, recovery
+
+5. **Soak Test:** Moderate load, 1+ hours
+   - Find memory leaks, degradation
+
+### Checklist
+
+- [ ] Define performance requirements (SLAs)
+- [ ] Identify critical user flows
+- [ ] Prepare test data (users, content)
+- [ ] Set up realistic scenarios
+- [ ] Configure appropriate thresholds
+- [ ] Test in staging environment first
+- [ ] Monitor system resources during tests
+- [ ] Analyze results against baselines
+- [ ] Document bottlenecks and fixes
+- [ ] Run tests regularly (CI/CD)
+- [ ] Compare results over time
+
+**Design load tests, execute tests, analyze results, provide optimization recommendations.**

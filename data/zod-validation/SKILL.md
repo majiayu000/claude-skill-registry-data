@@ -1,21 +1,11 @@
 ---
 name: zod-validation
-description: Runtime type validation with Zod for schema definition, form validation, API contracts, and TypeScript type inference. Use when validating user input, defining API schemas, or building type-safe data pipelines. Triggers on zod, schema validation, form validation, type inference, runtime validation, typescript validation.
+description: Runtime type validation with Zod for schema definition, form validation, API contracts, and TypeScript type inference. Use when validating user input, defining API schemas, or building type-safe data pipelines.
 ---
 
 # Zod Validation Skill
 
 > TypeScript-first schema validation with static type inference
-
-## Triggers
-
-Use this skill when:
-- Defining TypeScript schemas with runtime validation
-- Validating form inputs with react-hook-form
-- Creating type-safe API request/response contracts
-- Building environment variable validation
-- Implementing custom validation logic with refinements
-- Keywords: zod, z.object, z.string, z.number, safeParse, zodResolver, schema validation
 
 ## Quick Reference
 
@@ -609,7 +599,7 @@ function loadEnv() {
   const result = EnvSchema.safeParse(process.env);
 
   if (!result.success) {
-    console.error("Invalid environment variables:");
+    console.error("❌ Invalid environment variables:");
     console.error(result.error.flatten().fieldErrors);
     process.exit(1);
   }
@@ -676,8 +666,53 @@ function getOrder(id: OrderId) {
 const userId = UserId.parse("123e4567-e89b-12d3-a456-426614174000");
 const orderId = OrderId.parse("123e4567-e89b-12d3-a456-426614174000");
 
-getUser(userId); // OK
-getUser(orderId); // Type error
+getUser(userId); // ✅ OK
+getUser(orderId); // ❌ Type error
+```
+
+### 4. Lazy Schemas (Recursive Types)
+
+```typescript
+interface Category {
+  name: string;
+  subcategories: Category[];
+}
+
+const CategorySchema: z.ZodType<Category> = z.lazy(() =>
+  z.object({
+    name: z.string(),
+    subcategories: z.array(CategorySchema),
+  }),
+);
+```
+
+### 5. Error Handling Pattern
+
+```typescript
+function parseOrThrow<T extends z.ZodSchema>(
+  schema: T,
+  data: unknown,
+  context?: string,
+): z.infer<T> {
+  const result = schema.safeParse(data);
+  if (!result.success) {
+    const message = context
+      ? `Validation failed for ${context}`
+      : "Validation failed";
+    throw new ValidationError(message, result.error);
+  }
+  return result.data;
+}
+
+class ValidationError extends Error {
+  constructor(
+    message: string,
+    public readonly zodError: z.ZodError,
+  ) {
+    super(message);
+    this.name = "ValidationError";
+  }
+}
 ```
 
 ---

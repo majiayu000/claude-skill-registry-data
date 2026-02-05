@@ -1,11 +1,11 @@
 ---
 name: axiom-liquid-glass
 description: Use when implementing Liquid Glass effects, reviewing UI for Liquid Glass adoption, debugging visual artifacts, optimizing performance, or requesting expert review of Liquid Glass implementation - provides comprehensive design principles, API patterns, and troubleshooting guidance from WWDC 2025. Includes design review pressure handling and professional push-back frameworks
-user-invocable: true
-skill_type: discipline
-version: 1.2.0
-last_updated: Added new iOS 26 APIs and backward compatibility guidance
-apple_platforms: iOS 26+, iPadOS 26+, macOS Tahoe+, axiom-visionOS 3+
+license: MIT
+compatibility: iOS 26+, iPadOS 26+, macOS Tahoe+, axiom-visionOS 3+
+metadata:
+  version: "1.2.0"
+  last-updated: "Added new iOS 26 APIs and backward compatibility guidance"
 ---
 
 # Liquid Glass — Apple's New Material Design System
@@ -360,6 +360,10 @@ Button("Action") {}
 ---
 
 ## Legibility & Contrast
+
+### Vibrant Text and Tint Colors
+
+SwiftUI automatically uses a **vibrant text color** within glass effects that adapts to maintain legibility against colorful backgrounds. Tints applied to glass elements also use vibrant color that adapts to the content behind them. You do not need to manually adjust text or tint colors — the system handles this.
 
 ### Automatic Legibility Features
 
@@ -1001,7 +1005,7 @@ struct PhotoGalleryView: View {
 
 ### Toolbar Modifiers **NEW in iOS 26**
 
-#### `.toolbar` with `Spacer(.fixed)`
+#### `.toolbar` with `ToolbarSpacer(.fixed)`
 
 Separates toolbar button groups with fixed spacing.
 
@@ -1011,7 +1015,7 @@ Separates toolbar button groups with fixed spacing.
         Button("Up") { }
         Button("Down") { }
 
-        Spacer(.fixed) // Fixed spacer separates groups
+        ToolbarSpacer(.fixed) // Fixed spacer separates groups
 
         Button("Settings") { }
     }
@@ -1116,12 +1120,12 @@ Button("Action") { }
 
 **Availability**: iOS 26+, iPadOS 26+, macOS Tahoe+
 
-#### `tabBarMinimizationBehavior(_:)` **NEW in iOS 26**
+#### `tabBarMinimizeBehavior(_:)` **NEW in iOS 26**
 
 Configures tab bar to minimize when scrolling to elevate underlying content.
 
 ```swift
-func tabBarMinimizationBehavior(_ behavior: TabBarMinimizationBehavior) -> some View
+func tabBarMinimizeBehavior(_ behavior: TabBarMinimizeBehavior) -> some View
 ```
 
 **Parameters**:
@@ -1135,10 +1139,56 @@ TabView {
     ContentView()
         .tabItem { Label("Home", systemImage: "house") }
 }
-.tabBarMinimizationBehavior(.onScrollDown) // Minimize when scrolling down
+.tabBarMinimizeBehavior(.onScrollDown) // Minimize when scrolling down
 ```
 
 **Visual Effect** Tab bar recedes when scrolling down, expands when scrolling up. Content gains more screen space.
+
+**Gotcha**: Tab bar blur only activates when the tab bar overlays scrollable content. If non-scrollable views (buttons, fixed VStacks) sit between your list and the tab bar, you get a solid background instead of blur. Ensure your primary scrollable view is the outermost content layer.
+
+```swift
+// ❌ Solid background — Button breaks scrollable overlay
+VStack {
+    List { /* items */ }
+    Button("Add") { }  // Sits between list and tab bar
+}
+
+// ✅ Blurred background — List extends under tab bar
+ZStack(alignment: .bottomTrailing) {
+    List { /* items */ }  // Scrollable content under tab bar
+    Button(action: { }) {
+        Label("Add", systemImage: "plus")
+            .labelStyle(.iconOnly).padding()
+    }
+    .glassEffect(.regular.interactive())
+    .padding([.bottom, .trailing], 12)
+}
+```
+
+**Availability**: iOS 26+
+
+#### Floating Glass Buttons
+
+Liquid Glass replaces bottom-anchored action buttons with floating glass buttons. Use `.glassEffect(.regular.interactive())` on a `ZStack`-overlaid button:
+
+```swift
+ZStack(alignment: .bottomTrailing) {
+    ScrollView {
+        // Main content
+    }
+
+    Button(action: { addItem() }) {
+        Label("Add Item", systemImage: "plus")
+            .bold()
+            .labelStyle(.iconOnly)
+            .padding()
+    }
+    .glassEffect(.regular.interactive())
+    .padding([.bottom, .trailing], 12)
+}
+```
+
+**When to use**: Replace pre-iOS 26 bottom-bar action buttons that no longer fit the layered Liquid Glass design.
 
 **Availability**: iOS 26+
 
@@ -1165,7 +1215,7 @@ enum ScrollEdgeStyle {
 
 #### `GlassEffectContainer` **NEW in iOS 26**
 
-Container for combining multiple Liquid Glass effects with optimized rendering performance.
+Container for combining multiple Liquid Glass effects with correct visual behavior.
 
 ```swift
 struct GlassEffectContainer<Content: View>: View {
@@ -1173,11 +1223,11 @@ struct GlassEffectContainer<Content: View>: View {
 }
 ```
 
-**Use case** When applying Liquid Glass effects to multiple custom elements. Optimizes performance and enables fluid morphing between glass shapes.
+**Why this is essential**: Glass samples content from an area larger than itself to produce its reflections and refractions. However, **glass cannot sample other glass** — nearby glass elements in different containers will produce inconsistent visual behavior. Using a `GlassEffectContainer` allows elements to share their sampling region, providing a consistent visual result.
 
 #### Example
 ```swift
-// ✅ Combine effects in container for optimization
+// ✅ Shared sampling region — consistent visual result
 GlassEffectContainer {
     HStack {
         Button("Action 1") { }
@@ -1190,20 +1240,52 @@ GlassEffectContainer {
             .glassEffect()
     }
 }
+
+// ❌ Separate containers — inconsistent glass behavior
+HStack {
+    Button("Action 1") { }.glassEffect()  // Samples independently
+    Button("Action 2") { }.glassEffect()  // Can't sample neighbor's glass
+}
 ```
 
 #### Benefits
-- Optimizes rendering performance
+- Correct visual behavior (shared sampling region)
 - Fluidly morphs Liquid Glass shapes into each other
+- Optimizes rendering performance
 - Reduces compositor overhead
-- Better animation performance
 
 #### When to use
-- Multiple custom Liquid Glass elements
+- Multiple custom Liquid Glass elements near each other
 - Morphing animations between glass shapes
-- Performance-critical interfaces
+- Any time glass elements are visually adjacent
 
 **Availability**: iOS 26+, iPadOS 26+, macOS Tahoe+, axiom-visionOS 3+
+
+#### `glassEffectID` **NEW in iOS 26**
+
+Enables fluid morphing transitions between glass elements using a namespace. When elements share a namespace and transition between states, glass morphs fluidly between shapes.
+
+```swift
+@Namespace private var glassNamespace
+
+// Associate glass elements with IDs in the namespace
+ForEach(badges) { badge in
+    BadgeView(badge: badge)
+        .glassEffect()
+        .glassEffectID(badge.id, in: glassNamespace)
+}
+
+// A toolbar button with the same namespace absorbs/expands badges
+Button("Awards", systemImage: "star.fill") {
+    toggleBadges()
+}
+.glassEffect()
+.glassEffectID("awards", in: glassNamespace)
+```
+
+**Use case**: Award badges expanding from a toolbar button, controls morphing between states, expanding/collapsing glass elements.
+
+**Availability**: iOS 26+, iPadOS 26+, macOS Tahoe+
 
 ---
 
@@ -1242,7 +1324,7 @@ To ship with latest SDKs while maintaining previous appearance:
 
 ## Resources
 
-**WWDC**: 2025-219, 2025-323, 2025-256
+**WWDC**: 2025-219, 2025-256, 2025-323 (Build a SwiftUI app with the new design)
 
 **Docs**: /technologyoverviews/adopting-liquid-glass, /swiftui/landmarks-building-an-app-with-liquid-glass, /swiftui/applying-liquid-glass-to-custom-views
 

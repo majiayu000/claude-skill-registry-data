@@ -1,25 +1,26 @@
 ---
 name: Global Validation
-description: Implement runtime validation and type safety using Zod schemas for Content Collections, API inputs, form data, and environment variables. Use this skill when validating user input, API requests, content schemas, or ensuring data integrity. When working on Content Collections schema definitions in src/content/config.ts, API route input validation with Zod, form validation (server-side and client-side), environment variable validation, component prop validation with runtime checks, URL and query parameter validation, request body and form data sanitization, TypeScript runtime type validation, or custom Zod refinements and transformations.
+description: Implement comprehensive input validation with server-side security, client-side UX feedback, sanitization, and consistent error messages. Use this skill when validating user input in forms, API endpoints, or data processing. When writing validation rules for data types, formats, ranges, or required fields. When sanitizing input to prevent injection attacks (SQL, XSS, command injection). When providing field-specific error messages to users. When implementing validation at system boundaries like API endpoints or background jobs.
 ---
+
+## When to use this skill:
+
+- When validating user input from forms or UI
+- When validating data at API endpoints
+- When implementing server-side validation (required for security)
+- When adding client-side validation for better UX
+- When writing validation rules for data types and formats
+- When checking ranges, lengths, or required fields
+- When sanitizing input to prevent SQL injection or XSS
+- When creating field-specific validation error messages
+- When using allowlists instead of blocklists for validation
+- When validating business rules (sufficient balance, valid dates)
+- When ensuring consistent validation across all entry points
+- When reviewing code for input sanitization and security
 
 # Global Validation
 
 This Skill provides Claude Code with specific guidance on how to adhere to coding standards as they relate to how it should handle global validation.
-
-## When to use this skill
-
-- When defining Content Collection Zod schemas in src/content/config.ts
-- When validating API route inputs (query params, request body, headers)
-- When implementing server-side form validation in API endpoints
-- When validating environment variables on application startup
-- When adding client-side HTML5 form validation attributes
-- When sanitizing user input to prevent XSS attacks
-- When validating URLs, emails, or other formatted data types
-- When implementing component prop validation for critical components
-- When using Zod safeParse for validation with detailed error messages
-- When creating custom Zod refinements for complex validation rules
-- When ensuring type safety at runtime, not just compile-time
 
 ## Instructions
 

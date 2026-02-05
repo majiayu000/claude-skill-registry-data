@@ -1,143 +1,246 @@
----
-name: web-performance
-description: |
-  Next.jsアプリケーションのパフォーマンス最適化スキル。
-  Core Web Vitals（LCP、FID、CLS）改善、バンドルサイズ削減、画像・フォント最適化を提供する。
+# Web Performance Optimization Skill
 
-  Anchors:
-  • 『High Performance Browser Networking』(Ilya Grigorik) / 適用: ネットワーク最適化 / 目的: レイテンシ削減
-  • Web Vitals (Google) / 適用: Core Web Vitals測定 / 目的: UXメトリクス改善
-  • Next.js Documentation / 適用: next/image, next/font, App Router / 目的: フレームワーク最適化
+Next.js 15 App Router向けのCore Web Vitals最適化スキル。
 
-  Trigger:
-  Use when optimizing Core Web Vitals (LCP, FID, CLS), reducing bundle size, implementing image optimization with next/image, or optimizing font loading with next/font.
-allowed-tools:
-  - Read
-  - Write
-  - Edit
-  - Bash
-  - Glob
-  - Grep
-  - Task
 ---
 
-# Web Performance
+## 使用タイミング
 
-## 概要
+- Vercel Speed Insightsでスコアが90未満
+- Lighthouseスコアが低い
+- ページ読み込みが遅いと感じる
+- 新しいページ/コンポーネント作成時のパフォーマンス考慮
 
-Next.jsアプリケーションのパフォーマンス最適化を専門とするスキル。
-Core Web Vitals（LCP、FID、CLS）改善、バンドルサイズ削減、画像最適化、フォント最適化を通じて、ページ速度向上とユーザー体験改善を実現する。
+---
 
-## ワークフロー
+## Core Web Vitals 目標値
 
-### Phase 1: パフォーマンス監査
+| 指標 | Good | Needs Improvement | Poor |
+|------|------|-------------------|------|
+| **LCP** (Largest Contentful Paint) | < 2.5s | 2.5s - 4.0s | > 4.0s |
+| **INP** (Interaction to Next Paint) | < 200ms | 200ms - 500ms | > 500ms |
+| **CLS** (Cumulative Layout Shift) | < 0.1 | 0.1 - 0.25 | > 0.25 |
+| **FCP** (First Contentful Paint) | < 1.8s | 1.8s - 3.0s | > 3.0s |
+| **TTFB** (Time to First Byte) | < 800ms | 800ms - 1800ms | > 1800ms |
 
-**目的**: 現状のパフォーマンスを測定しボトルネックを特定
+---
 
-**アクション**:
+## Lighthouse アクセシビリティ
 
-1. Lighthouse/PageSpeed Insightsでベースライン測定
-2. Core Web Vitals（LCP、FID、CLS）の現在値を記録
-3. `scripts/analyze-bundle.mjs` でバンドルサイズを分析
-4. 問題の優先度を策定
+**目標: 100%**
 
-**Task**: `agents/performance-auditor.md` を参照
+### コントラスト要件 (WCAG 2.1)
 
-### Phase 2: 最適化実装
+| テキストサイズ | 最小コントラスト比 |
+|---------------|-------------------|
+| 通常テキスト (< 18px) | **4.5:1** |
+| 大きいテキスト (≥ 18px bold / ≥ 24px) | **3:1** |
+| UI コンポーネント・アイコン | **3:1** |
 
-**目的**: 特定した問題に対する最適化を実装
+### 半透明背景での注意
 
-**アクション（問題種別に応じて選択）**:
+Glassmorphism等の半透明背景は、下層のコンテンツと混ざって実効背景色が変わる。
 
-| 問題           | エージェント        | 主な施策                     |
-| -------------- | ------------------- | ---------------------------- |
-| LCP（画像）    | image-optimizer     | next/image、priority属性     |
-| FID            | bundle-optimizer    | コード分割、動的インポート   |
-| CLS            | rendering-optimizer | フォント最適化、アスペクト比 |
-| バンドルサイズ | bundle-optimizer    | Tree Shaking、個別インポート |
+```tsx
+// 危険: 半透明背景でのmutedテキスト
+<section className="bg-black/45">
+  <p className="text-slate-400">...</p>  // コントラスト不足の可能性
+</section>
 
-**Task**: 問題種別に応じたエージェントを参照
+// 安全: 十分な不透明度 + 白テキスト
+<section className="bg-black/60">
+  <p className="text-white">...</p>
+</section>
+```
 
-### Phase 3: 検証と記録
+### 確認コマンド
 
-**目的**: 改善効果を測定し記録
+```bash
+npm run dev
+lighthouse http://localhost:3000 --only-categories=accessibility --view
+```
 
-**アクション**:
+---
 
-1. Lighthouse/Core Web Vitalsで改善後のメトリクスを測定
-2. 改善前後の差分を記録
-3. `scripts/log_usage.mjs` で実行記録を保存
-4. 必要に応じてPhase 2に戻りイテレーション
+## 診断フロー
 
-## Task仕様ナビ
+### Phase 1: 計測
 
-| Task               | 説明                                                  | 参照                            |
-| ------------------ | ----------------------------------------------------- | ------------------------------- |
-| パフォーマンス監査 | Lighthouse分析、Core Web Vitals測定、ボトルネック特定 | `agents/performance-auditor.md` |
-| 画像最適化         | next/image活用、priority設定、placeholder実装         | `agents/image-optimizer.md`     |
-| バンドル最適化     | コード分割、動的インポート、Tree Shaking              | `agents/bundle-optimizer.md`    |
-| レンダリング最適化 | フォント最適化、CLS防止、スケルトンUI                 | `agents/rendering-optimizer.md` |
+```bash
+# Lighthouse CLI（ローカル）
+npx lighthouse https://example.com --view --preset=desktop
+npx lighthouse https://example.com --view --preset=perf --emulated-form-factor=mobile
 
-## ベストプラクティス
+# Bundle分析
+npm run build
+npx @next/bundle-analyzer
+```
 
-### すべきこと
+### Phase 2: 問題特定
 
-- 最適化の前後でメトリクスを必ず測定する
-- LCP対象画像にはpriority属性を付与する
-- next/fontでフォントを最適化しCLSを防止する
-- Server Componentsを活用しクライアントバンドルを削減する
-- 重いライブラリは動的インポートで遅延読み込みする
-- 画像にwidth/heightまたはaspect-ratioを指定する
+1. **LCP が遅い場合**
+   - ヒーロー画像の最適化
+   - フォント読み込み
+   - Server Component活用
 
-### 避けるべきこと
+2. **INP が遅い場合**
+   - クライアントサイドJSの削減
+   - イベントハンドラの最適化
+   - `useTransition` / `useDeferredValue`
 
-- メトリクス測定なしで最適化完了と判断する
-- 全ての画像にpriority属性を付与する（LCP画像のみ）
-- Barrel Fileからの一括インポート
-- use clientを不必要に広範囲に適用する
-- 過度な最適化でメンテナンス性を犠牲にする
+3. **CLS が高い場合**
+   - 画像のwidth/height指定
+   - フォントのfont-display: swap
+   - 動的コンテンツの事前サイズ確保
 
-## リソース参照
+4. **FCP が遅い場合**
+   - 初期HTMLサイズ削減
+   - クリティカルCSSのインライン化
+   - render-blockingリソースの削減
 
-### agents/（Task仕様書）
+---
 
-| エージェント        | パス                            | 用途               |
-| ------------------- | ------------------------------- | ------------------ |
-| performance-auditor | `agents/performance-auditor.md` | パフォーマンス監査 |
-| image-optimizer     | `agents/image-optimizer.md`     | 画像最適化         |
-| bundle-optimizer    | `agents/bundle-optimizer.md`    | バンドル最適化     |
-| rendering-optimizer | `agents/rendering-optimizer.md` | レンダリング最適化 |
+## Next.js 15 最適化パターン
 
-### references/（詳細知識）
+### 1. Server Components優先
 
-| リソース        | パス                                  | 用途                 |
-| --------------- | ------------------------------------- | -------------------- |
-| Core Web Vitals | `references/core-web-vitals.md`       | メトリクス定義と閾値 |
-| 最適化パターン  | `references/optimization-patterns.md` | 実装パターン集       |
-| 画像最適化      | `references/image-optimization.md`    | next/image詳細       |
-| コード分割      | `references/code-splitting.md`        | 分割戦略             |
-| 動的インポート  | `references/dynamic-import.md`        | next/dynamic詳細     |
-| フォント最適化  | `references/font-optimization.md`     | next/font詳細        |
+```tsx
+// BAD: 不要なクライアントコンポーネント
+'use client'
+export function StaticContent() {
+  return <div>This doesn't need to be a client component</div>
+}
 
-### scripts/（自動化処理）
+// GOOD: Server Componentのまま
+export function StaticContent() {
+  return <div>Server rendered, zero JS</div>
+}
+```
 
-| スクリプト         | 用途         | 使用例                                        |
-| ------------------ | ------------ | --------------------------------------------- |
-| analyze-bundle.mjs | バンドル分析 | `node scripts/analyze-bundle.mjs`             |
-| log_usage.mjs      | 使用記録     | `node scripts/log_usage.mjs --result success` |
-| validate-skill.mjs | 構造検証     | `node scripts/validate-skill.mjs -v`          |
+### 2. 画像最適化
 
-### assets/（テンプレート）
+```tsx
+// BAD: サイズ未指定
+<img src="/hero.jpg" alt="Hero" />
 
-| テンプレート       | パス                                 | 用途                     |
-| ------------------ | ------------------------------------ | ------------------------ |
-| 動的インポート     | `assets/dynamic-import-template.md`  | next/dynamicテンプレート |
-| 画像コンポーネント | `assets/image-component-template.md` | next/imageテンプレート   |
+// GOOD: next/image + priority + sizes
+import Image from 'next/image'
 
-## 変更履歴
+<Image
+  src="/hero.jpg"
+  alt="Hero"
+  width={1200}
+  height={630}
+  priority  // LCP要素には必須
+  sizes="(max-width: 768px) 100vw, 1200px"
+/>
+```
 
-| Version | Date       | Changes                                             |
-| ------- | ---------- | --------------------------------------------------- |
-| 2.0.0   | 2026-01-01 | 18-skills.md仕様に完全準拠。4エージェント体制に拡張 |
-| 1.1.0   | 2025-12-31 | ワークフロー詳細化、Task仕様ナビ追加                |
-| 1.0.0   | 2025-12-24 | 初版作成                                            |
+### 3. フォント最適化
+
+```tsx
+// app/layout.tsx
+import { Inter } from 'next/font/google'
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',  // CLSを防ぐ
+  preload: true,
+})
+```
+
+### 4. 動的インポート
+
+```tsx
+// BAD: 常に読み込み
+import HeavyComponent from './HeavyComponent'
+
+// GOOD: 必要時に読み込み
+import dynamic from 'next/dynamic'
+
+const HeavyComponent = dynamic(() => import('./HeavyComponent'), {
+  loading: () => <Skeleton />,
+  ssr: false,  // クライアントのみで必要な場合
+})
+```
+
+### 5. Suspenseバウンダリ
+
+```tsx
+// BAD: 全体が待機
+export default async function Page() {
+  const data = await fetchSlowData()
+  return <Content data={data} />
+}
+
+// GOOD: 部分的にストリーミング
+import { Suspense } from 'react'
+
+export default function Page() {
+  return (
+    <div>
+      <Header />  {/* すぐに表示 */}
+      <Suspense fallback={<Skeleton />}>
+        <SlowContent />  {/* 後からストリーミング */}
+      </Suspense>
+    </div>
+  )
+}
+```
+
+### 6. 並列データフェッチ
+
+```tsx
+// BAD: ウォーターフォール
+const user = await getUser()
+const posts = await getPosts(user.id)
+const comments = await getComments(posts[0].id)
+
+// GOOD: 並列実行
+const [user, settings] = await Promise.all([
+  getUser(),
+  getSettings(),
+])
+```
+
+---
+
+## チェックリスト
+
+### LCP改善
+- [ ] ヒーロー画像に `priority` 属性
+- [ ] `next/image` で適切な `sizes` 指定
+- [ ] フォントに `display: swap`
+- [ ] 初期表示コンテンツはServer Component
+
+### INP改善
+- [ ] `'use client'` は最小範囲
+- [ ] 重い処理は `useTransition` でラップ
+- [ ] イベントハンドラは軽量に
+- [ ] `useDeferredValue` で低優先度更新
+
+### CLS改善
+- [ ] 全画像に width/height
+- [ ] スケルトンローダーは実際のサイズと同じ
+- [ ] 動的コンテンツの領域を事前確保
+- [ ] Webフォントのフォールバック設定
+
+### アクセシビリティ
+- [ ] Lighthouse Accessibility 100%
+- [ ] 半透明背景では text-white 使用
+- [ ] バッジのコントラスト確認
+- [ ] 無効ボタンは text-white/70 以上
+
+### バンドルサイズ
+- [ ] 動的インポートで初期バンドル削減
+- [ ] 未使用の依存関係を削除
+- [ ] `optimizePackageImports` 設定
+- [ ] Bundle Analyzerで定期確認
+
+---
+
+## 参考リソース
+
+- [Vercel: Optimizing Core Web Vitals](https://vercel.com/docs/speed-insights)
+- [Next.js: Optimizing](https://nextjs.org/docs/app/building-your-application/optimizing)
+- [web.dev: Core Web Vitals](https://web.dev/articles/vitals)

@@ -1,161 +1,280 @@
 ---
 name: changelog-update
-description: Update CHANGELOG.md [Unreleased] section with business-focused entries via systematic file review
-triggers:
-  - changelog update
-  - update changelog
-  - changelog-update
-activation: user-invoked
+description: Generate changelog entries from commits for any project type
+user-invocable: false
 ---
 
-# Changelog-Update Skill
+# Changelog Update
 
-Update CHANGELOG.md with business-focused entries by systematically reviewing file changes.
+## Purpose
 
-**Note**: For automated release notes from conventional commits, use the `release-notes` skill instead.
+Generates changelog entries from git commits, categorizes changes into Added/Changed/Fixed/Breaking sections following configurable changelog format (default: keep-a-changelog), and updates or creates the changelog file for any project type.
 
-## When to Use
+## Input Context
 
-- **During development**: Document feature/fix for users before PR/merge
-- **PR preparation**: Add business-focused entry to CHANGELOG.md
-- **Manual documentation**: When commits don't capture full business impact
-
-**Don't use for releases**: Use `release-notes` skill to generate versioned release docs.
-
-## Pre-Execution Checklist
-
-1. [ ] Find existing CHANGELOG.md location
-   - Check root: `./CHANGELOG.md` (preferred)
-   - Fallback: `./docs/CHANGELOG.md`
-   - If not found: Create at root
-
-2. [ ] Read current changelog to understand format and last entries
+Requires:
+- **Project Configuration**: Output from `detect-project-type` skill
+- **Version**: New version number (e.g., "1.2.0")
+- **Custom Message** (optional): User-provided commit message overrides auto-generation
+- **Last Tag**: Git tag of previous release (optional)
 
 ## Workflow
 
-### Step 1: Gather Changes
+### 1. Load Changelog Configuration
 
-Determine change scope:
-- **PR-based**: `git diff origin/develop...HEAD --name-only`
-- **Branch-based**: `git log origin/develop..HEAD --oneline`
-- **Commit-based**: `git show {commit} --name-only`
+Use configuration from `detect-project-type`:
+- `changelog_file` - Path to changelog file (default: `CHANGELOG.md`)
+- `changelog_format` - Format to use (default: `keep-a-changelog`)
+- `tag_pattern` - For finding commits since last tag
 
-### Step 2: Create Temp Notes File
+### 2. Determine Changelog File Path
 
-Create `.ai/workspace/changelog-notes-{YYMMDD-HHMM}.md`:
+Use `changelog_file` from configuration:
 
-```markdown
-# Changelog Review Notes - {date}
-
-## Files Changed
-- [ ] file1.ts -
-- [ ] file2.cs -
-
-## Categories
-### Added (new features)
--
-
-### Changed (modifications to existing)
--
-
-### Fixed (bug fixes)
--
-
-### Deprecated
--
-
-### Removed
--
-
-### Security
--
-
-## Business Summary
-<!-- What does this mean for users? -->
+```bash
+changelog_file="CHANGELOG.md"  # from config, can be:
+# - CHANGELOG.md (standard)
+# - HISTORY.md (alternative)
+# - CHANGES.rst (Python projects)
+# - NEWS.md (GNU projects)
+# - {package}/CHANGELOG.md (monorepos)
 ```
 
-### Step 3: Systematic File Review
-
-For each changed file:
-1. Read file or diff
-2. Identify business impact (not just technical change)
-3. Check box and note in temp file
-4. Categorize into appropriate section
-
-**Business Focus Guidelines**:
-- ❌ "Added `StageCategory` enum"
-- ✅ "Added stage categories (Sourced, Applied, Interviewing, etc.) for pipeline tracking"
-- ❌ "Created `PipelineController.cs`"
-- ✅ "Added API endpoints for pipeline management"
-
-### Step 4: Holistic Review
-
-Read temp notes file completely. Ask:
-- What's the main feature/fix?
-- Who benefits and how?
-- What can users now do that they couldn't before?
-
-### Step 5: Generate Changelog Entry
-
-Format (Keep a Changelog):
-
+Check if file exists. If not, create with initial structure based on format:
 ```markdown
-## [Unreleased]
+# Changelog
 
-### {Feature/Module Name}: {Feature Title}
+All notable changes to this project will be documented in this file.
 
-**Feature/Fix**: {One-line business description}
-
-#### Added
-- {Business-focused item}
-
-#### Changed
-- {What behavior changed}
-
-#### Fixed
-- {What issue was resolved}
+The format is based on [Keep a Changelog](https://keepachangelog.com/).
 ```
 
-### Step 6: Update Changelog
+### 3. Gather Commits
 
-1. Read existing CHANGELOG.md
-2. Insert new entry under [Unreleased] section
-3. If no [Unreleased] section, create it after the header
+Get commits since last release tag:
+```bash
+if [ -n "$last_tag" ]; then
+  git log ${last_tag}..HEAD --oneline --no-merges
+else
+  # First release - get all commits
+  git log --oneline --no-merges
+fi
+```
 
-### Step 7: Cleanup
+For monorepo projects, optionally filter commits by package directory:
+```bash
+# Filter commits that touched this package only
+git log ${last_tag}..HEAD --oneline --no-merges -- packages/my-lib/
+```
 
-Delete temp notes file: `.ai/workspace/changelog-notes-*.md`
+### 3. Categorize Commits
+
+Parse each commit message and categorize:
+
+**Added (new features):**
+- `feat:` or `feat(scope):`
+- Commit messages starting with "add", "create", "implement"
+
+**Changed (modifications to existing features):**
+- Commit messages starting with "update", "modify", "change", "refactor"
+- `refactor:` prefix
+
+**Fixed (bug fixes):**
+- `fix:` or `fix(scope):`
+- Commit messages starting with "fix", "correct", "resolve"
+
+**Breaking Changes:**
+- `BREAKING CHANGE:` in body
+- `!` after type (e.g., `feat!:`)
+- Extract breaking change description from body
+
+**Uncategorized:**
+- Other types (`chore:`, `docs:`, `test:`, `style:`) → skip or place in "Changed"
+
+### 4. Format Changelog Entry
+
+Generate entry following this format:
+
+```markdown
+## Version {version} - {date}
+
+### Breaking Changes
+- Description of breaking change 1
+- Description of breaking change 2
+
+### Added
+- New feature description 1
+- New feature description 2
+
+### Changed
+- Change description 1
+- Change description 2
+
+### Fixed
+- Bug fix description 1
+- Bug fix description 2
+```
+
+**Formatting rules:**
+- Date format: YYYY-MM-DD (use today's date)
+- Strip conventional commit prefixes from descriptions
+- Capitalize first letter of each entry
+- Remove trailing periods
+- Skip empty sections
+- If custom message provided, use it for the entire entry
+
+### 5. Insert Entry into Changelog
+
+Read existing changelog file, parse structure, and insert new entry:
+- Place after the file header (before any existing version entries)
+- Preserve all existing entries unchanged
+- Maintain consistent formatting (2 blank lines between versions)
+
+### 6. Generate Commit Message
+
+Create a commit message from the changelog content:
+```
+Release {scope} v{version}
+
+{changelog-entry-body}
+
+Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>
+```
+
+## Output Format
+
+Return:
+
+```
+{
+  "changelog_path": "plugins/daily-carry/CHANGELOG.md",
+  "new_entry": "## Version 1.2.0 - 2026-01-12\n\n### Added\n- New deployment skill\n\n### Fixed\n- Version detection logic",
+  "commit_message": "Release plugin:daily-carry v1.2.0\n\nAdded:\n- New deployment skill\n\nFixed:\n- Version detection logic\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>",
+  "categories": {
+    "added": 1,
+    "changed": 0,
+    "fixed": 1,
+    "breaking": 0
+  },
+  "file_created": false
+}
+```
 
 ## Examples
 
-### Good Entry
-```markdown
-### bravoTALENTS: Hiring Process Management
+### Example 1: Feature and Fix Commits
 
-**Feature**: Customizable hiring process/pipeline management for recruitment workflows.
+**Input:**
+- Scope: `plugin:daily-carry`
+- Version: `1.2.0`
+- Last tag: `daily-carry-v1.1.0`
 
-#### Added
-- Drag-and-drop pipeline stage builder with default templates
-- Stage categories (Sourced, Applied, Interviewing, Offered, Hired, Rejected)
-- Pipeline duplication for quick setup
-- Multi-language stage names (EN/VI)
+**Commits:**
+```
+feat: add deploy-otterstack command
+fix: correct git push error handling
+docs: update README with examples
 ```
 
-### Bad Entry (Too Technical)
+**Generated Entry:**
 ```markdown
-### Pipeline Changes
+## Version 1.2.0 - 2026-01-12
 
-#### Added
-- Pipeline.cs entity
-- StageCategory enum
-- PipelineController
-- SavePipelineCommand
+### Added
+- Add deploy-otterstack command
+
+### Fixed
+- Correct git push error handling
 ```
 
-## Anti-Patterns
+**Output:**
+```
+{
+  "changelog_path": "plugins/daily-carry/CHANGELOG.md",
+  "new_entry": "## Version 1.2.0 - 2026-01-12\n\n### Added\n- Add deploy-otterstack command\n\n### Fixed\n- Correct git push error handling",
+  "commit_message": "Release plugin:daily-carry v1.2.0\n\nAdded:\n- Add deploy-otterstack command\n\nFixed:\n- Correct git push error handling\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>",
+  "categories": {
+    "added": 1,
+    "changed": 0,
+    "fixed": 1,
+    "breaking": 0
+  },
+  "file_created": false
+}
+```
 
-1. ❌ Creating new changelog in docs/ when root exists
-2. ❌ Skipping file review (leads to missed changes)
-3. ❌ Technical jargon without business context
-4. ❌ Forgetting to delete temp notes file
-5. ❌ Not using [Unreleased] section
+### Example 2: Breaking Change
+
+**Input:**
+- Scope: `marketplace`
+- Version: `2.0.0`
+
+**Commits:**
+```
+feat!: change marketplace schema structure
+
+BREAKING CHANGE: marketplace.json now requires plugins array with explicit versions
+```
+
+**Generated Entry:**
+```markdown
+## Version 2.0.0 - 2026-01-12
+
+### Breaking Changes
+- marketplace.json now requires plugins array with explicit versions
+
+### Added
+- Change marketplace schema structure
+```
+
+### Example 3: Custom Message Override
+
+**Input:**
+- Scope: `variants`
+- Version: `1.2.0`
+- Custom message: "Update Android and TypeScript variants with new git workflow patterns"
+
+**Generated Entry:**
+```markdown
+## Version 1.2.0 - 2026-01-12
+
+- Update Android and TypeScript variants with new git workflow patterns
+```
+
+**Commit Message:**
+```
+Release variants v1.2.0
+
+Update Android and TypeScript variants with new git workflow patterns
+
+Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>
+```
+
+### Example 4: First Release (No Commits to Parse)
+
+**Input:**
+- Scope: `plugin:new-plugin`
+- Version: `1.0.0`
+- No last tag
+
+**Generated Entry:**
+```markdown
+## Version 1.0.0 - 2026-01-12
+
+### Added
+- Initial release of new-plugin
+```
+
+## Error Handling
+
+- **Git errors**: Return error if git log fails
+- **File write errors**: Return error if changelog file cannot be written
+- **Invalid date**: Use current system date as fallback
+- **Empty commits**: Generate minimal entry with "Initial release" or "Version bump"
+
+## Integration Notes
+
+This skill is invoked by the `/release` command in Phase 3. The command will:
+1. Display the generated changelog entry
+2. Allow user to edit before finalizing
+3. Use the commit message for git operations in Phase 6

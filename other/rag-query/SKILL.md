@@ -76,10 +76,10 @@ results = query(
 
 ## Estrutura do Corpus
 
-O corpus RAG esta consolidado em `.agentic_sdlc/corpus/`:
+O corpus RAG esta consolidado em `.project/corpus/`:
 
 ```
-.agentic_sdlc/corpus/
+.project/corpus/
 ├── decisions/           # ADRs e decisoes
 │   └── *.yml
 ├── docs/                # Documentacao oficial
@@ -96,7 +96,7 @@ O corpus RAG esta consolidado em `.agentic_sdlc/corpus/`:
 **Nota**: Por compatibilidade, o sistema tambem busca em:
 - `.claude/knowledge/` (legado)
 - `.claude/memory/` (legado)
-- `.agentic_sdlc/references/` (documentos externos via reference-indexer)
+- `.project/references/` (documentos externos via reference-indexer)
 
 ## Formato de Resultado
 
@@ -127,8 +127,8 @@ query_result:
 ### Com memory-manager
 
 O rag-query le dados salvos pelo memory-manager:
-- Decisoes em `.agentic_sdlc/corpus/decisions/` (ou `.claude/memory/decisions/` legado)
-- Learnings em `.agentic_sdlc/corpus/learnings/` (ou `.claude/memory/learnings/` legado)
+- Decisoes em `.project/corpus/decisions/` (ou `.claude/memory/decisions/` legado)
+- Learnings em `.project/corpus/learnings/` (ou `.claude/memory/learnings/` legado)
 - Contextos em `.agentic_sdlc/projects/*/context/` (ou `.claude/memory/context/` legado)
 
 ### Com rag-curator
@@ -143,7 +143,7 @@ O rag-curator adiciona e organiza o corpus que o rag-query consulta.
 #!/usr/bin/env python3
 """
 Consulta o corpus de conhecimento do projeto.
-Suporta paths consolidados (.agentic_sdlc/corpus/) e legados (.claude/).
+Suporta paths consolidados (.project/corpus/) e legados (.claude/).
 """
 import yaml
 from pathlib import Path
@@ -151,9 +151,9 @@ from typing import List, Dict, Any, Optional
 import re
 
 # Paths consolidados (preferencia)
-CORPUS_DIR = Path(".agentic_sdlc/corpus")
+CORPUS_DIR = Path(".project/corpus")
 PROJECTS_DIR = Path(".agentic_sdlc/projects")
-REFERENCES_DIR = Path(".agentic_sdlc/references")
+REFERENCES_DIR = Path(".project/references")
 
 # Paths legados (fallback)
 KNOWLEDGE_DIR = Path(".claude/knowledge")

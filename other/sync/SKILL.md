@@ -1,46 +1,91 @@
 ---
 name: sync
-description: Real-time sync with Supabase, Loro CRDT, and IndexedDB. Use when working on files in src/lib/sync/.
+description: Start-of-session sync - pull latest, check handoffs, reviews, and blocked items
+disable-model-invocation: true
+allowed-tools: Bash(yurtle-kanban *), Bash(git *), Read, Glob
 ---
 
-# Sync Guidelines
+# Agent Sync
 
-## Core Principles
+Run at the start of each session to sync with other agents and see what needs attention.
 
-1. **Server is source of truth** - IndexedDB is a cache
-2. **All ops kept forever** - no pruning, enables full audit trail
-3. **Shallow snapshots for fast start** - performance only, not compaction
-4. **Encryption at rest** - server sees encrypted blobs + plaintext version metadata
+## Steps
 
-## Persistence Flow
+### 1. Pull Latest
 
-| Event            | IndexedDB              | Server                    |
-| ---------------- | ---------------------- | ------------------------- |
-| Local change     | **Immediate**          | **Throttled** (~2s)       |
-| Tab hidden/close | Immediate              | Flush pending             |
-| Cold start       | Load snapshot → usable | Background sync           |
+```bash
+git fetch origin main
+git checkout main
+git pull origin main
+```
 
-## Critical Rules
+### 2. Check for Handoffs
 
-1. **IndexedDB writes immediate** - crash safety
-2. **Server pushes throttled** - use `lodash-es` throttle, ~2s
-3. **Encrypt before storage** - never plaintext in IndexedDB or server
-4. **Version vector plaintext** - enables server filtering without decryption
-5. **`has_unpushed` flag critical** - server must send ops (not snapshot) if client has local changes
-6. **Flush on visibility change** - don't lose data on tab switch
+Look for handoff notes addressed to this agent:
 
-## Key Details
+```bash
+# List recent handoffs
+ls -la kanban-work/handoffs/ 2>/dev/null | tail -10
 
-- loro-mirror auto-commits on `setState()` - no manual debouncing
-- `subscribeLocalUpdates` fires after each commit with binary update
-- Snapshot refresh: ops > 1000 OR bytes > 1MB (not time-based)
+# Check for unread handoffs (files modified in last 24h)
+find kanban-work/handoffs/ -name "*.md" -mtime -1 2>/dev/null
+```
 
-## Conflict Resolution
+If handoffs exist, read them and summarize what needs attention.
 
-Loro handles automatically: last-write-wins per field, set union for arrays.
+### 3. Check Items in Review
 
-## UI States
+```bash
+yurtle-kanban list --status review
+```
 
-- **Saved** - all pushed
-- **Saving...** - pending in buffer
-- **Offline** - can't reach server
+Can this agent help review any of these? Show the list and offer to run `/review EXP-XXX`.
+
+### 4. Check Blocked Items
+
+```bash
+yurtle-kanban list --status blocked
+```
+
+Can this agent unblock any of these? Show blockers and reasons.
+
+### 5. Check My In-Progress Items
+
+```bash
+yurtle-kanban list --status in_progress
+```
+
+Are any of these assigned to this agent or stale? Recommend:
+- Resume work on existing item, OR
+- Pick up new work if nothing in progress
+
+### 6. Show Ready Work
+
+```bash
+# Show ready items filtered by agent capability if tags exist
+yurtle-kanban list --status ready --limit 5
+```
+
+### 7. Generate Sync Summary
+
+Output a summary like:
+
+```
+## Agent Sync Complete
+
+**Handoffs:** X pending (read them with `cat kanban-work/handoffs/...`)
+**Reviews:** X items need review
+**Blocked:** X items blocked
+**In Progress:** X items (Y assigned to me)
+**Ready:** X items available
+
+### Recommended Next Action
+[Pick the most important thing to do]
+```
+
+## Tips
+
+- Run `/sync` at the start of every session
+- If there are handoffs, read them first
+- If there are reviews from other agents, consider helping
+- Check blocked items - you might be able to unblock someone

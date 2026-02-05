@@ -39,9 +39,9 @@ de uma fase do SDLC para a proxima. Cada gate tem:
 ## Referencias de Padroes
 
 Os gates validam conformidade com:
-- `.docs/engineering-playbook/manual-desenvolvimento/qualidade.md` - Criterios de qualidade
-- `.docs/engineering-playbook/manual-desenvolvimento/testes.md` - Requisitos de teste
-- `.docs/engineering-playbook/stacks/devops/security.md` - Requisitos de seguranca
+- `\.agentic_sdlc/docs/engineering-playbook/manual-desenvolvimento/qualidade.md` - Criterios de qualidade
+- `\.agentic_sdlc/docs/engineering-playbook/manual-desenvolvimento/testes.md` - Requisitos de teste
+- `\.agentic_sdlc/docs/engineering-playbook/stacks/devops/security.md` - Requisitos de seguranca
 
 ## Como Usar
 

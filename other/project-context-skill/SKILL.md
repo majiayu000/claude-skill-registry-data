@@ -1,139 +1,144 @@
 ---
-name: project-context
-category: context
-version: 1.0.0
-description: NodeJS-Starter-V1 specific knowledge
-priority: 2
+name: project-context-skill
+description: |
+  Maintains project context and progress tracking across Claude sessions.
+  Use at session start to load context, on session end to save progress.
+  Triggers: "load project context", "save context", "end session", "what was I working on",
+  "switch to [project]", "done for today". Works in both Claude Code and Claude Desktop.
 ---
 
-# Project Context Skill
+# Project Context Loader
 
-Project-specific knowledge for NodeJS-Starter-V1.
+## MANDATORY: Project Detection (Run First)
 
-## Technology Stack
+Before ANY other action, identify which project the user is in:
 
-### Frontend
-- **Framework**: Next.js 15 (App Router)
-- **UI Library**: React 19
-- **Styling**: Tailwind v4
-- **Components**: shadcn/ui
-- **Icons**: AI-generated custom (NO Lucide)
-
-### Backend
-- **Framework**: FastAPI (Python 3.12)
-- **Agents**: LangGraph
-- **Validation**: Pydantic
-- **Async**: asyncio
-
-### Database
-- **Platform**: Supabase
-- **Database**: PostgreSQL
-- **Vectors**: pgvector
-- **Auth**: Row Level Security (RLS)
-
-### Tooling
-- **Monorepo**: Turborepo + pnpm workspaces
-- **Package Manager**: pnpm 9+
-- **Node**: 20+
-- **Python**: 3.12+
-
-## Architecture Patterns
-
-### Monorepo Structure
-```
-apps/
-  web/          # Next.js frontend
-  backend/      # FastAPI backend
-packages/
-  shared/       # Shared types
-  config/       # Shared configs
-```
-
-### Layer Separation
-```
-Frontend: Components → Hooks → API Routes → Services
-Backend:  API → Agents → Tools → Graphs → State
-Database: Tables → RLS → Functions → Triggers
-```
-
-**Rule**: No cross-layer imports
-
-### Verification-First
-- Prove It Works
-- Honest Failure Reporting
-- No Assumptions
-- Root Cause First
-- One Fix at a Time
-
-## Key Systems
-
-### Agent Orchestration
-- Master orchestrator coordinates subagents
-- Independent verification (no self-attestation)
-- Context partitioning for token efficiency
-
-### Tool Registry
-- Advanced tool search
-- Programmatic calling
-- Dependency resolution
-
-### Long-Running Agents
-- Multi-session via progress files
-- State persistence
-- Resume capability
-
-### Memory System
-- Vector-based (pgvector)
-- Persistent knowledge
-- Domain-specific memory
-
-## Australian Context
-
-- **Language**: en-AU (always)
-- **Currency**: AUD
-- **Locations**: Brisbane (primary), Sydney, Melbourne
-- **Regulations**: Privacy Act 1988, WCAG 2.1 AA
-
-## Design System
-
-- **Aesthetic**: 2025-2026 modern (Bento, glassmorphism)
-- **NO Lucide icons**: AI-generated custom only
-- **Primary Color**: #0D9488 (teal)
-- **Shadows**: Soft colored (never pure black)
-
-## Commands
+### Claude Code (Terminal)
 
 ```bash
-# Development
-pnpm dev                          # All services
-pnpm dev --filter=web             # Frontend only
-
-# Database
-supabase start && supabase db push
-
-# Quality
-pnpm turbo run type-check lint test
-
-# Pre-PR
-pnpm turbo run type-check lint test && echo "✅ Ready"
+pwd  # Get current working directory
 ```
 
-## Migrations
+1. Run `pwd` to get current directory
+2. Extract project name from path (last folder name)
+3. Load `<pwd>/.claude/PROJECT_CONTEXT.md`
+4. **VERIFY**: Does the `# <project-name>` header match the folder name?
+   - **YES** → Display context and proceed
+   - **NO** → WARN: "Context mismatch! File says [X] but you're in [Y]. Regenerating..."
+   - **FILE MISSING** → Auto-generate (see below)
 
-8 total migrations in `supabase/migrations/`:
-1. init - UUID, triggers
-2. auth_schema - profiles, RLS
-3. enable_pgvector - vectors
-4. state_tables - conversations, tasks
-5. audit_evidence - verification
-6. copywriting_consistency - business data
-7. agent_runs_realtime - real-time status
-8. domain_memory - persistent memory
+### Claude Desktop (No Terminal)
 
-## Never
+If `pwd` is unavailable (Claude Desktop environment):
 
-- Use American spelling
-- Use Lucide icons
-- Skip verification
-- Cross layer boundaries
-- Self-verify own work
+1. Check if user already specified a project in their message
+2. If not, ASK: "Which project are you working on today?"
+3. Use the projects list at `reference/projects-list.md` if available
+4. Load: `/Users/tmkipper/Desktop/tk_projects/{project-name}/.claude/PROJECT_CONTEXT.md`
+
+**To switch projects**: User says "switch to [project-name]" or "working on [project]"
+
+---
+
+## On Session Start
+
+After project detection:
+
+### 1. Load Context File
+```
+<project-root>/.claude/PROJECT_CONTEXT.md
+```
+
+### 2. Verify Against Git State
+```bash
+git status            # Current branch, modified files
+git log --oneline -5  # Recent commits
+```
+
+Flag discrepancies:
+- TODO marked done in commits? → Move to "Done"
+- Branch changed? → Update context header
+- Stale info? → Remove it
+
+### 3. Display to User
+Show a brief summary:
+```
+📍 Project: [name]
+🌿 Branch: [branch]
+📅 Last updated: [date]
+
+Focus items: [count]
+```
+
+---
+
+## On Session End
+
+Triggers: "done", "end session", "save context", "done for today"
+
+1. Review conversation for completed work
+2. Update PROJECT_CONTEXT.md:
+   - Move completed TODOs to "Done (This Session)"
+   - Update Status based on commits made
+   - Preserve untouched Focus items
+   - **Clear previous session's Done list** (prevents accumulation)
+   - Update timestamp
+3. Show user the updated context
+
+---
+
+## Auto-Generate Context
+
+When no PROJECT_CONTEXT.md exists, create from:
+
+1. `.claude/CLAUDE.md` or `CLAUDE.md` (project docs)
+2. `git log --oneline -5` (recent activity)
+3. `git status` (current state)
+4. `package.json` / `pyproject.toml` / `requirements.txt` (tech stack)
+
+Write to: `<project-root>/.claude/PROJECT_CONTEXT.md`
+
+---
+
+## Context File Format
+
+See `reference/template.md` for full template.
+
+```markdown
+# <project-name>
+
+**Branch**: <branch> | **Updated**: <YYYY-MM-DD>
+
+## Status
+<2-3 sentences: current state>
+
+## Today's Focus
+1. [ ] <task>
+2. [ ] <task>
+
+## Done (This Session)
+- <populated on session end, cleared on next session start>
+
+## Blockers
+<none or list>
+
+## Tech Stack
+<single line: Python 3.11 | FastAPI | PostgreSQL>
+```
+
+---
+
+## Key Rules
+
+1. **ALWAYS detect project first** - Never assume from previous session
+2. **One project = one context file** - No cross-contamination
+3. **Verify context matches pwd** - Warn on mismatch
+4. **Clear Done list each session** - Prevents infinite accumulation
+5. **Never store data in this SKILL.md** - Always use project's own file
+
+---
+
+## Reference Files
+
+- `reference/template.md` - Full context file template with examples
+- `reference/projects-list.md` - Tim's projects list for Claude Desktop

@@ -1,458 +1,259 @@
 ---
 name: testing-patterns
-description: |
-  Comprehensive testing patterns for Jest, Vitest, Playwright, and React Testing Library.
-  Use when writing unit tests, integration tests, or E2E tests.
-allowed-tools: Read, Write, Edit, Bash, Grep, Glob
+description: Jest testing patterns, factory functions, mocking strategies, and TDD workflow. Use when writing unit tests, creating test factories, or following TDD red-green-refactor cycle.
 ---
 
-# Testing Patterns & Best Practices
+# Testing Patterns and Utilities
 
-## Testing Principles
+## Testing Philosophy
 
-### 1. Test Behavior, Not Implementation
-- Test what the code does, not how it does it
-- Tests shouldn't break when refactoring
-- Focus on inputs and outputs
+**Test-Driven Development (TDD):**
+- Write failing test FIRST
+- Implement minimal code to pass
+- Refactor after green
+- Never write production code without a failing test
 
-### 2. Arrange-Act-Assert (AAA)
+**Behavior-Driven Testing:**
+- Test behavior, not implementation
+- Focus on public APIs and business requirements
+- Avoid testing implementation details
+- Use descriptive test names that describe behavior
+
+**Factory Pattern:**
+- Create `getMockX(overrides?: Partial<X>)` functions
+- Provide sensible defaults
+- Allow overriding specific properties
+- Keep tests DRY and maintainable
+
+## Test Utilities
+
+### Custom Render Function
+
+Create a custom render that wraps components with required providers:
+
 ```typescript
-// Arrange - Set up test data
-const user = { name: 'John', email: 'john@example.com' }
+// src/utils/testUtils.tsx
+import { render } from '@testing-library/react-native';
+import { ThemeProvider } from './theme';
 
-// Act - Execute the code
-const result = validateUser(user)
-
-// Assert - Verify the outcome
-expect(result.isValid).toBe(true)
+export const renderWithTheme = (ui: React.ReactElement) => {
+  return render(
+    <ThemeProvider>{ui}</ThemeProvider>
+  );
+};
 ```
 
-### 3. Test Isolation
-- Each test should be independent
-- No shared state between tests
-- Clean up after each test
-
-## Unit Testing Patterns
-
-### Basic Test Structure
-
+**Usage:**
 ```typescript
-describe('UserService', () => {
-  describe('createUser', () => {
-    it('should create user with valid data', async () => {
-      const userData = { name: 'John', email: 'john@example.com' }
-      const result = await userService.createUser(userData)
-      
-      expect(result).toMatchObject({
-        id: expect.any(String),
-        name: 'John',
-        email: 'john@example.com'
-      })
-    })
+import { renderWithTheme } from 'utils/testUtils';
+import { screen } from '@testing-library/react-native';
 
-    it('should throw error for invalid email', async () => {
-      const userData = { name: 'John', email: 'invalid' }
-      
-      await expect(userService.createUser(userData))
-        .rejects
-        .toThrow('Invalid email format')
-    })
-  })
-})
+it('should render component', () => {
+  renderWithTheme(<MyComponent />);
+  expect(screen.getByText('Hello')).toBeTruthy();
+});
 ```
 
-### Mocking Patterns
+## Factory Pattern
+
+### Component Props Factory
 
 ```typescript
-// Mock a module
-jest.mock('./database', () => ({
-  query: jest.fn()
-}))
+import { ComponentProps } from 'react';
 
-// Mock implementation
-const mockQuery = jest.mocked(query)
-mockQuery.mockResolvedValue([{ id: '1', name: 'Test' }])
-
-// Spy on method
-const spy = jest.spyOn(userService, 'sendEmail')
-spy.mockResolvedValue(undefined)
-
-// Verify mock was called
-expect(mockQuery).toHaveBeenCalledWith(
-  'SELECT * FROM users WHERE id = ?',
-  ['123']
-)
-expect(mockQuery).toHaveBeenCalledTimes(1)
-```
-
-### Testing Async Code
-
-```typescript
-// Async/await
-it('should fetch user data', async () => {
-  const user = await fetchUser('123')
-  expect(user.name).toBe('John')
-})
-
-// Testing promises that reject
-it('should handle fetch errors', async () => {
-  await expect(fetchUser('invalid'))
-    .rejects
-    .toThrow('User not found')
-})
-
-// Testing timers
-it('should debounce calls', () => {
-  jest.useFakeTimers()
-  
-  const callback = jest.fn()
-  const debounced = debounce(callback, 100)
-  
-  debounced()
-  debounced()
-  debounced()
-  
-  expect(callback).not.toHaveBeenCalled()
-  
-  jest.advanceTimersByTime(100)
-  
-  expect(callback).toHaveBeenCalledTimes(1)
-})
-```
-
-### Testing Error Handling
-
-```typescript
-it('should handle network errors gracefully', async () => {
-  mockFetch.mockRejectedValue(new Error('Network error'))
-  
-  const result = await fetchDataWithRetry('/api/data')
-  
-  expect(result).toEqual({ error: 'Failed to fetch data' })
-  expect(mockFetch).toHaveBeenCalledTimes(3) // Retried 3 times
-})
-```
-
-## React Testing Library Patterns
-
-### Component Testing
-
-```typescript
-import { render, screen, fireEvent, waitFor } from '@testing-library/react'
-
-describe('LoginForm', () => {
-  it('should submit form with credentials', async () => {
-    const onSubmit = jest.fn()
-    render(<LoginForm onSubmit={onSubmit} />)
-    
-    // Find elements by accessible roles/text
-    const emailInput = screen.getByLabelText(/email/i)
-    const passwordInput = screen.getByLabelText(/password/i)
-    const submitButton = screen.getByRole('button', { name: /sign in/i })
-    
-    // Interact with form
-    fireEvent.change(emailInput, { target: { value: 'test@example.com' } })
-    fireEvent.change(passwordInput, { target: { value: 'password123' } })
-    fireEvent.click(submitButton)
-    
-    // Assert
-    await waitFor(() => {
-      expect(onSubmit).toHaveBeenCalledWith({
-        email: 'test@example.com',
-        password: 'password123'
-      })
-    })
-  })
-
-  it('should display validation errors', async () => {
-    render(<LoginForm onSubmit={jest.fn()} />)
-    
-    fireEvent.click(screen.getByRole('button', { name: /sign in/i }))
-    
-    expect(await screen.findByText(/email is required/i)).toBeInTheDocument()
-    expect(await screen.findByText(/password is required/i)).toBeInTheDocument()
-  })
-})
-```
-
-### Testing Custom Hooks
-
-```typescript
-import { renderHook, act } from '@testing-library/react'
-
-describe('useCounter', () => {
-  it('should increment counter', () => {
-    const { result } = renderHook(() => useCounter(0))
-    
-    expect(result.current.count).toBe(0)
-    
-    act(() => {
-      result.current.increment()
-    })
-    
-    expect(result.current.count).toBe(1)
-  })
-
-  it('should reset counter', () => {
-    const { result } = renderHook(() => useCounter(5))
-    
-    act(() => {
-      result.current.increment()
-      result.current.reset()
-    })
-    
-    expect(result.current.count).toBe(5)
-  })
-})
-```
-
-### Testing with Context
-
-```typescript
-const wrapper = ({ children }) => (
-  <AuthProvider>
-    <ThemeProvider>
-      {children}
-    </ThemeProvider>
-  </AuthProvider>
-)
-
-it('should use auth context', () => {
-  render(<UserProfile />, { wrapper })
-  
-  expect(screen.getByText('Logged in as John')).toBeInTheDocument()
-})
-```
-
-## Playwright E2E Patterns
-
-### Basic Page Testing
-
-```typescript
-import { test, expect } from '@playwright/test'
-
-test.describe('Authentication', () => {
-  test('should login successfully', async ({ page }) => {
-    await page.goto('/login')
-    
-    await page.fill('[data-testid="email"]', 'user@example.com')
-    await page.fill('[data-testid="password"]', 'password123')
-    await page.click('[data-testid="submit"]')
-    
-    await expect(page).toHaveURL('/dashboard')
-    await expect(page.locator('[data-testid="welcome"]'))
-      .toContainText('Welcome, User')
-  })
-
-  test('should show error for invalid credentials', async ({ page }) => {
-    await page.goto('/login')
-    
-    await page.fill('[data-testid="email"]', 'wrong@example.com')
-    await page.fill('[data-testid="password"]', 'wrongpassword')
-    await page.click('[data-testid="submit"]')
-    
-    await expect(page.locator('[data-testid="error"]'))
-      .toContainText('Invalid credentials')
-  })
-})
-```
-
-### Page Object Model
-
-```typescript
-// pages/LoginPage.ts
-export class LoginPage {
-  constructor(private page: Page) {}
-
-  async goto() {
-    await this.page.goto('/login')
-  }
-
-  async login(email: string, password: string) {
-    await this.page.fill('[data-testid="email"]', email)
-    await this.page.fill('[data-testid="password"]', password)
-    await this.page.click('[data-testid="submit"]')
-  }
-
-  async getErrorMessage() {
-    return this.page.locator('[data-testid="error"]').textContent()
-  }
-}
-
-// tests/login.spec.ts
-test('should login', async ({ page }) => {
-  const loginPage = new LoginPage(page)
-  await loginPage.goto()
-  await loginPage.login('user@example.com', 'password123')
-  
-  await expect(page).toHaveURL('/dashboard')
-})
-```
-
-### API Testing with Playwright
-
-```typescript
-test('should create user via API', async ({ request }) => {
-  const response = await request.post('/api/users', {
-    data: {
-      name: 'John',
-      email: 'john@example.com'
-    }
-  })
-  
-  expect(response.ok()).toBeTruthy()
-  
-  const user = await response.json()
-  expect(user).toMatchObject({
-    id: expect.any(String),
-    name: 'John',
-    email: 'john@example.com'
-  })
-})
-```
-
-### Visual Testing
-
-```typescript
-test('should match screenshot', async ({ page }) => {
-  await page.goto('/dashboard')
-  
-  await expect(page).toHaveScreenshot('dashboard.png', {
-    maxDiffPixels: 100
-  })
-})
-```
-
-## Test Data Patterns
-
-### Factory Pattern
-
-```typescript
-// factories/user.factory.ts
-export function createUser(overrides?: Partial<User>): User {
+const getMockMyComponentProps = (
+  overrides?: Partial<ComponentProps<typeof MyComponent>>
+) => {
   return {
-    id: faker.string.uuid(),
-    name: faker.person.fullName(),
-    email: faker.internet.email(),
-    createdAt: new Date(),
-    ...overrides
-  }
-}
+    title: 'Default Title',
+    count: 0,
+    onPress: jest.fn(),
+    isLoading: false,
+    ...overrides,
+  };
+};
 
 // Usage in tests
-const user = createUser({ name: 'Custom Name' })
+it('should render with custom title', () => {
+  const props = getMockMyComponentProps({ title: 'Custom Title' });
+  renderWithTheme(<MyComponent {...props} />);
+  expect(screen.getByText('Custom Title')).toBeTruthy();
+});
 ```
 
-### Builder Pattern
+### Data Factory
 
 ```typescript
-class UserBuilder {
-  private user: Partial<User> = {}
-
-  withName(name: string) {
-    this.user.name = name
-    return this
-  }
-
-  withEmail(email: string) {
-    this.user.email = email
-    return this
-  }
-
-  asAdmin() {
-    this.user.role = 'admin'
-    return this
-  }
-
-  build(): User {
-    return {
-      id: faker.string.uuid(),
-      name: this.user.name ?? faker.person.fullName(),
-      email: this.user.email ?? faker.internet.email(),
-      role: this.user.role ?? 'user',
-      createdAt: new Date()
-    }
-  }
+interface User {
+  id: string;
+  name: string;
+  email: string;
+  role: 'admin' | 'user';
 }
 
+const getMockUser = (overrides?: Partial<User>): User => {
+  return {
+    id: '123',
+    name: 'John Doe',
+    email: 'john@example.com',
+    role: 'user',
+    ...overrides,
+  };
+};
+
 // Usage
-const adminUser = new UserBuilder().withName('Admin').asAdmin().build()
+it('should display admin badge for admin users', () => {
+  const user = getMockUser({ role: 'admin' });
+  renderWithTheme(<UserCard user={user} />);
+  expect(screen.getByText('Admin')).toBeTruthy();
+});
 ```
 
-## Coverage Requirements
+## Mocking Patterns
 
-### Minimum Coverage Targets
-- **80% overall** for all code
-- **100% required** for:
-  - Financial calculations
-  - Authentication logic
-  - Security-critical code
-  - Core business logic
+### Mocking Modules
 
-### Running Coverage
+```typescript
+// Mock entire module
+jest.mock('utils/analytics');
 
-```bash
-# Jest
-npm test -- --coverage
+// Mock with factory function
+jest.mock('utils/analytics', () => ({
+  Analytics: {
+    logEvent: jest.fn(),
+  },
+}));
 
-# Vitest
-npx vitest run --coverage
-
-# Check thresholds
-npm test -- --coverage --coverageThreshold='{"global":{"lines":80}}'
+// Access mock in test
+const mockLogEvent = jest.requireMock('utils/analytics').Analytics.logEvent;
 ```
 
-## Edge Cases to Test
+### Mocking GraphQL Hooks
 
-- [ ] Null/undefined inputs
-- [ ] Empty arrays/strings
-- [ ] Boundary values (0, -1, MAX_INT)
-- [ ] Unicode characters
-- [ ] Very long strings
-- [ ] Concurrent operations
-- [ ] Network failures
-- [ ] Timeout scenarios
-- [ ] Permission denied errors
+```typescript
+jest.mock('./GetItems.generated', () => ({
+  useGetItemsQuery: jest.fn(),
+}));
+
+const mockUseGetItemsQuery = jest.requireMock(
+  './GetItems.generated'
+).useGetItemsQuery as jest.Mock;
+
+// In test
+mockUseGetItemsQuery.mockReturnValue({
+  data: { items: [] },
+  loading: false,
+  error: undefined,
+});
+```
+
+## Test Structure
+
+```typescript
+describe('ComponentName', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
+  describe('Rendering', () => {
+    it('should render component with default props', () => {});
+    it('should render loading state when loading', () => {});
+  });
+
+  describe('User interactions', () => {
+    it('should call onPress when button is clicked', async () => {});
+  });
+
+  describe('Edge cases', () => {
+    it('should handle empty data gracefully', () => {});
+  });
+});
+```
+
+## Query Patterns
+
+```typescript
+// Element must exist
+expect(screen.getByText('Hello')).toBeTruthy();
+
+// Element should not exist
+expect(screen.queryByText('Goodbye')).toBeNull();
+
+// Element appears asynchronously
+await waitFor(() => {
+  expect(screen.findByText('Loaded')).toBeTruthy();
+});
+```
+
+## User Interaction Patterns
+
+```typescript
+import { fireEvent, screen } from '@testing-library/react-native';
+
+it('should submit form on button click', async () => {
+  const onSubmit = jest.fn();
+  renderWithTheme(<LoginForm onSubmit={onSubmit} />);
+
+  fireEvent.changeText(screen.getByLabelText('Email'), 'user@example.com');
+  fireEvent.changeText(screen.getByLabelText('Password'), 'password123');
+  fireEvent.press(screen.getByTestId('login-button'));
+
+  await waitFor(() => {
+    expect(onSubmit).toHaveBeenCalled();
+  });
+});
+```
 
 ## Anti-Patterns to Avoid
 
-### Testing Implementation Details
-```typescript
-// BAD: Testing internal state
-expect(component.state.isLoading).toBe(true)
+### Testing Mock Behavior Instead of Real Behavior
 
-// GOOD: Testing visible behavior
-expect(screen.getByTestId('spinner')).toBeInTheDocument()
+```typescript
+// Bad - testing the mock
+expect(mockFetchData).toHaveBeenCalled();
+
+// Good - testing actual behavior
+expect(screen.getByText('John Doe')).toBeTruthy();
 ```
 
-### Brittle Selectors
-```typescript
-// BAD: Fragile selectors
-page.locator('.btn-primary.mt-4.px-6')
+### Not Using Factories
 
-// GOOD: Semantic selectors
-page.locator('[data-testid="submit-button"]')
-page.getByRole('button', { name: 'Submit' })
+```typescript
+// Bad - duplicated, inconsistent test data
+it('test 1', () => {
+  const user = { id: '1', name: 'John', email: 'john@test.com', role: 'user' };
+});
+it('test 2', () => {
+  const user = { id: '2', name: 'Jane', email: 'jane@test.com' }; // Missing role!
+});
+
+// Good - reusable factory
+const user = getMockUser({ name: 'Custom Name' });
 ```
 
-### Over-Mocking
-```typescript
-// BAD: Mocking everything
-jest.mock('./utils')
-jest.mock('./helpers')
-jest.mock('./constants')
+## Best Practices
 
-// GOOD: Only mock external dependencies
-jest.mock('./api-client')
+1. **Always use factory functions** for props and data
+2. **Test behavior, not implementation**
+3. **Use descriptive test names**
+4. **Organize with describe blocks**
+5. **Clear mocks between tests**
+6. **Keep tests focused** - one behavior per test
+
+## Running Tests
+
+```bash
+# Run all tests
+npm test
+
+# Run with coverage
+npm run test:coverage
+
+# Run specific file
+npm test ComponentName.test.tsx
 ```
 
-## Checklist
+## Integration with Other Skills
 
-- [ ] Tests follow AAA pattern
-- [ ] Each test has single assertion focus
-- [ ] No shared state between tests
-- [ ] Proper cleanup in afterEach
-- [ ] Meaningful test descriptions
-- [ ] Edge cases covered
-- [ ] Async code properly awaited
-- [ ] Coverage meets thresholds
+- **react-ui-patterns**: Test all UI states (loading, error, empty, success)
+- **systematic-debugging**: Write test that reproduces bug before fixing

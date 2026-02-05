@@ -8,6 +8,7 @@ description: Agile product ownership toolkit for Senior Product Owner including 
 Complete toolkit for Product Owners to excel at backlog management and sprint execution.
 
 ## Core Capabilities
+
 - INVEST-compliant user story generation
 - Automatic acceptance criteria creation
 - Sprint capacity planning
@@ -17,13 +18,16 @@ Complete toolkit for Product Owners to excel at backlog management and sprint ex
 ## Key Scripts
 
 ### user_story_generator.py
+
 Generates well-formed user stories with acceptance criteria from epics.
 
-**Usage**: 
+**Usage**:
+
 - Generate stories: `python scripts/user_story_generator.py`
 - Plan sprint: `python scripts/user_story_generator.py sprint [capacity]`
 
 **Features**:
+
 - Breaks epics into stories
 - INVEST criteria validation
 - Automatic point estimation

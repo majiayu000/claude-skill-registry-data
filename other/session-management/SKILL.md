@@ -1,127 +1,107 @@
 ---
 name: session-management
-description: Apply when initializing, saving, resuming, or closing a work session
+description: Implements secure session management with JWT tokens, Redis storage, refresh flows, and proper cookie configuration. Use when building authentication systems, managing user sessions, or implementing secure logout functionality.
 ---
 
-# Session Management Guide
+# Session Management
 
-## Phase Tracking
+Implement secure session management with proper token handling and storage.
 
-Sessions track EDIRD phases:
-- NOTES.md: "Current Phase" section with phase, last verb, gate status
-- PROGRESS.md: "Phase Plan" section with 5 phases and status
+## Token-Based Sessions
 
-## MUST-NOT-FORGET
+```javascript
+const jwt = require('jsonwebtoken');
 
-- Session folder location: `[DEFAULT_SESSIONS_FOLDER]/_YYYY-MM-DD_[SessionTopicCamelCase]/`
-- Default: `[DEFAULT_SESSIONS_FOLDER]` = `[WORKSPACE_FOLDER]` (override in `!NOTES.md`)
-- Required files: NOTES.md, PROBLEMS.md, PROGRESS.md
-- Lifecycle: Init → Work → Save → Resume → Close → Archive
-- Sync session PROBLEMS.md to project on /session-close
-- Phase tracking: NOTES.md has current phase, PROGRESS.md has full phase plan
+function generateTokens(user) {
+  const accessToken = jwt.sign(
+    { userId: user.id, role: user.role, type: 'access' },
+    process.env.JWT_SECRET,
+    { expiresIn: '1h' }
+  );
 
-## Session Lifecycle
+  const refreshToken = jwt.sign(
+    { userId: user.id, type: 'refresh' },
+    process.env.REFRESH_SECRET,
+    { expiresIn: '7d' }
+  );
 
-1. **Init** (`/session-new`): Create session folder with tracking files
-2. **Work**: Create specs, plans, implement, track progress
-3. **Save** (`/session-save`): Document findings, commit changes
-4. **Resume** (`/session-resume`): Re-read session documents, continue work
-5. **Close** (`/session-close`): Sync findings to project files, archive
-
-## Session Folder Location
-
-**Base:** `[DEFAULT_SESSIONS_FOLDER]` (default: `[WORKSPACE_FOLDER]`, can be overridden in `!NOTES.md`)
-
-**Format:** `[DEFAULT_SESSIONS_FOLDER]/_YYYY-MM-DD_[SessionTopicCamelCase]/`
-
-**Example:** `_PrivateSessions/_2026-01-12_FixAuthenticationBug/`
-
-## Required Session Files
-
-Use templates from this skill folder:
-
-- **NOTES.md** (`NOTES_TEMPLATE.md`): Key information, agent instructions, working patterns
-- **PROBLEMS.md** (`PROBLEMS_TEMPLATE.md`): Problems found and their status (Open/Resolved/Deferred)
-- **PROGRESS.md** (`PROGRESS_TEMPLATE.md`): To-do list, done items, tried-but-not-used approaches
-
-## Assumed Workflow
-
-```
-1. INIT: User initializes session (`/session-new`)
-   └── Session folder, NOTES.md, PROBLEMS.md, PROGRESS.md created
-
-2. PREPARE (one of):
-   A) User prepares work manually
-      └── Creates INFO / SPEC / IMPL documents, tracks progress
-   B) User explains problem, agent assists
-      └── Updates Problems, Progress, Notes → researches → creates documents
-
-3. WORK: User or agent implements
-   └── Makes decisions, creates tests, implements, verifies
-   └── Progress and findings tracked continuously
-
-4. SAVE: User saves session for later (`/session-save`)
-   └── Everything updated and committed
-
-5. RESUME: User resumes session (`/session-resume`)
-   └── Agent primes from session files, executes workflows in Notes
-   └── Continue with steps 2-3
-
-6. CLOSE: User closes session (`/session-close`)
-   └── Everything updated, committed, synced to project/workspace
-
-7. ARCHIVE: User archives session
-   └── Session folder moved to _Archive/
+  return { accessToken, refreshToken };
+}
 ```
 
-## ID System
+## Redis Session Storage
 
-See `[AGENT_FOLDER]/rules/devsystem-ids.md` rule (always-on) for complete ID system.
+```javascript
+const redis = require('redis');
+const client = redis.createClient();
 
-**Quick Reference:**
-- Document: `[TOPIC]-[DOC][NN]` (IN, SP, IP, TP)
-  - Example: `CRWL-SP01`, `AUTH-IP01`
-- Tracking: `[TOPIC]-[TYPE]-[NNN]` (BG = Bug, FT = Feature, PR = Problem, FX = Fix, TK = Task)
-  - Example: `SAP-BG-001`, `UI-PR-003`, `GLOB-TK-015`
-- Topic Registry: Maintained in project NOTES.md
+class SessionStore {
+  async create(userId, sessionData) {
+    const sessionId = crypto.randomUUID();
+    await client.hSet(`sessions:${userId}`, sessionId, JSON.stringify({
+      ...sessionData,
+      createdAt: Date.now()
+    }));
+    await client.expire(`sessions:${userId}`, 86400 * 7);
+    return sessionId;
+  }
 
-## Session Init Template
-
-### NOTES.md
-```markdown
-# Session Notes
-
-## Session Info
-- **Started**: [DATE]
-- **Goal**: [Brief description]
-
-## Key Decisions
-
-## Important Findings
-
-## Workflows to Run on Resume
+  async invalidateAll(userId) {
+    await client.del(`sessions:${userId}`);
+  }
+}
 ```
 
-### PROBLEMS.md
-```markdown
-# Session Problems
+## Cookie Configuration
 
-## Open
-
-## Resolved
-
-## Deferred
+```javascript
+app.use(session({
+  name: 'session',
+  secret: process.env.SESSION_SECRET,
+  cookie: {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === 'production',
+    sameSite: 'strict',
+    maxAge: 3600000, // 1 hour
+    domain: '.example.com'
+  },
+  resave: false,
+  saveUninitialized: false
+}));
 ```
 
-### PROGRESS.md
-```markdown
-# Session Progress
+## Token Refresh Flow
 
-## To Do
+```javascript
+app.post('/auth/refresh', async (req, res) => {
+  const { refreshToken } = req.cookies;
 
-## In Progress
+  try {
+    const payload = jwt.verify(refreshToken, process.env.REFRESH_SECRET);
+    if (payload.type !== 'refresh') throw new Error('Invalid token type');
 
-## Done
+    const user = await User.findById(payload.userId);
+    const tokens = generateTokens(user);
 
-## Tried But Not Used
+    res.cookie('accessToken', tokens.accessToken, cookieOptions);
+    res.json({ success: true });
+  } catch (err) {
+    res.status(401).json({ error: 'Invalid refresh token' });
+  }
+});
 ```
+
+## Security Requirements
+
+- Use HTTPS exclusively
+- Set httpOnly and sameSite on cookies
+- Implement proper token expiration
+- Use strong, unique secrets per environment
+- Validate signatures on every request
+
+## Never Do
+
+- Store sensitive data in tokens
+- Transmit tokens via URL parameters
+- Use weak or shared secrets
+- Skip signature validation

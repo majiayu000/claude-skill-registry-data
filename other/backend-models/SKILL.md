@@ -1,24 +1,25 @@
 ---
 name: Backend Models
-description: Define database models and schemas with proper data types, constraints, relationships, and validation rules. Use this skill when creating or modifying database models, ORM entities, schema definitions, or data validation layers. When working on Prisma schema files, TypeORM entities, Drizzle schema definitions, Mongoose models, database model classes, files defining table structures and relationships, validation schemas for database entities, or files implementing data integrity constraints and cascading behaviors.
+description: Define database models and schemas with proper naming, data types, constraints, relationships, and indexing strategies. Use this skill when creating or modifying database models, entity definitions, or schema files. When working on files like models.py, models/*.ts, entities/*.ts, schema.prisma, or ORM model definitions. When defining table structures, setting up foreign key relationships, adding database constraints (NOT NULL, UNIQUE), choosing appropriate data types, or implementing model-level validation.
 ---
+
+## When to use this skill:
+
+- When creating new database model or entity files
+- When modifying existing model definitions
+- When working on files in models/, entities/, or schema/ directories
+- When defining table columns and their data types
+- When setting up relationships between models (one-to-one, one-to-many, many-to-many)
+- When adding database constraints (NOT NULL, UNIQUE, foreign keys)
+- When creating indexes on foreign keys and frequently queried columns
+- When adding timestamps (created_at, updated_at) to models
+- When implementing cascade behaviors for relationships
+- When balancing database normalization with query performance
+- When adding model-level validation rules
 
 # Backend Models
 
 This Skill provides Claude Code with specific guidance on how to adhere to coding standards as they relate to how it should handle backend models.
-
-## When to use this skill
-
-- When creating or modifying Prisma schema files (schema.prisma)
-- When defining TypeORM entities or Drizzle schema definitions
-- When writing Mongoose schemas or Sequelize models
-- When implementing database table structures with columns and data types
-- When defining relationships between models (one-to-one, one-to-many, many-to-many)
-- When adding database constraints (NOT NULL, UNIQUE, CHECK, foreign keys)
-- When creating indexes on model fields for query performance
-- When implementing model-level validation rules or business logic
-- When defining cascade behaviors for related data (CASCADE, SET NULL, RESTRICT)
-- When setting up timestamps (createdAt, updatedAt) or soft delete functionality
 
 ## Instructions
 

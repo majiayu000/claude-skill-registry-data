@@ -1,521 +1,353 @@
 ---
-name: dotnet-project-structure
-description: Modern .NET project structure including .slnx solution format, Directory.Build.props, central package management, SourceLink, version management with RELEASE_NOTES.md, and SDK pinning with global.json.
-invocable: false
+name: project-structure
+description: Organize project folders following industry best practices. Use when setting up new projects, reorganizing codebases, or when folder structure becomes messy. Covers Next.js, Bulletproof React, and FSD patterns.
+allowed-tools: Read, Glob, Grep, Edit, Write, Bash
+license: MIT
+metadata:
+  author: antigravity-team
+  version: "1.0"
 ---
 
-# .NET Project Structure and Build Configuration
+# Project Structure
 
-## When to Use This Skill
+프로젝트 폴더 구조를 업계 표준에 맞게 정리하는 스킬입니다.
 
-Use this skill when:
-- Setting up a new .NET solution with modern best practices
-- Configuring centralized build properties across multiple projects
-- Implementing central package version management
-- Setting up SourceLink for debugging and NuGet packages
-- Automating version management with release notes
-- Pinning SDK versions for consistent builds
+## Core Principles
 
-## Related Skills
+> **"바탕화면에 코드를 두지 않는다"**
+> **"분류 기준을 섞지 않는다"**
 
-- **`dotnet-local-tools`** - Managing local .NET tools with dotnet-tools.json
-- **`microsoft-extensions-configuration`** - Configuration validation patterns
+## Safety Rules
 
----
+| 명령어 | 상태 | 대안 |
+|--------|------|------|
+| `rm -rf` | 🔴 **금지** | `_legacy/`로 이동 |
+| `rm` | 🔴 **금지** | `_legacy/`로 이동 |
+| `mv` to `_legacy/` | ✅ 허용 | 기본 정리 방식 |
+| `mkdir` | ✅ 허용 | 새 구조 생성 |
 
-## Solution File Format (.slnx)
-
-The `.slnx` format is the modern XML-based solution file format introduced in .NET 9. It replaces the traditional `.sln` format.
-
-### Benefits Over Traditional .sln
-
-| Aspect | .sln (Legacy) | .slnx (Modern) |
-|--------|---------------|----------------|
-| Format | Custom text format | Standard XML |
-| Readability | GUIDs, cryptic syntax | Clean, human-readable |
-| Version control | Hard to diff/merge | Easy to diff/merge |
-| Editing | IDE required | Any text editor |
-
-### Version Requirements
-
-| Tool | Minimum Version |
-|------|-----------------|
-| .NET SDK | 9.0.200 |
-| Visual Studio | 17.13 |
-| MSBuild | Visual Studio Build Tools 17.13 |
-
-**Note:** Starting with .NET 10, `dotnet new sln` creates `.slnx` files by default. In .NET 9, you must explicitly migrate or specify the format.
-
-### Example .slnx File
-
-```xml
-<Solution>
-  <Folder Name="/build/">
-    <File Path="Directory.Build.props" />
-    <File Path="Directory.Packages.props" />
-    <File Path="global.json" />
-    <File Path="NuGet.Config" />
-    <File Path="README.md" />
-  </Folder>
-  <Folder Name="/src/">
-    <Project Path="src/MyApp/MyApp.csproj" />
-    <Project Path="src/MyApp.Core/MyApp.Core.csproj" />
-  </Folder>
-  <Folder Name="/tests/">
-    <Project Path="tests/MyApp.Tests/MyApp.Tests.csproj" />
-  </Folder>
-</Solution>
-```
-
-### Migrating from .sln to .slnx
-
-Use the `dotnet sln migrate` command to convert existing solutions:
+### 정리 방식
 
 ```bash
-# Migrate a specific solution file
-dotnet sln MySolution.sln migrate
+# ❌ NEVER: 삭제
+rm -rf old-folder
 
-# Or if only one .sln exists in the directory, just run:
-dotnet sln migrate
+# ✅ ALWAYS: 레거시 폴더로 이동
+mkdir -p _legacy
+mv old-folder _legacy/old-folder_$(date +%Y%m%d)
 ```
 
-**Important:** Do not keep both `.sln` and `.slnx` files in the same repository. This causes issues with automatic solution detection and can lead to sync problems. After migration, delete the old `.sln` file.
+---
 
-You can also migrate in Visual Studio:
-1. Open the solution
-2. Select the Solution in Solution Explorer
-3. Go to **File > Save Solution As...**
-4. Change "Save as type" to **Xml Solution File (*.slnx)**
+## Part 1: 개발 루트 디렉토리
 
-### Creating a New .slnx Solution
+### 권장 루트 위치
 
 ```bash
-# .NET 10+: Creates .slnx by default
-dotnet new sln --name MySolution
-
-# .NET 9: Specify the format explicitly
-dotnet new sln --name MySolution --format slnx
-
-# Add projects (works the same for both formats)
-dotnet sln add src/MyApp/MyApp.csproj
+~/dev        # 가장 추천
+~/code
+~/workspace
+~/git
 ```
 
-### Recommendation
+### 컨텍스트(목적) 중심 구조 (추천)
 
-**If you're using .NET 9.0.200 or later, migrate your solutions to .slnx.** The benefits are significant:
-- Dramatically fewer merge conflicts (no random GUIDs changing)
-- Human-readable and editable in any text editor
-- Consistent with modern `.csproj` format
-- Better diff/review experience in pull requests
-
----
-
-## Directory.Build.props
-
-`Directory.Build.props` provides centralized build configuration that applies to all projects in a directory tree. Place it at the solution root.
-
-### Complete Example
-
-```xml
-<Project>
-  <!-- Metadata -->
-  <PropertyGroup>
-    <Authors>Your Team</Authors>
-    <Company>Your Company</Company>
-    <!-- Dynamic copyright year - updates automatically -->
-    <Copyright>Copyright © 2020-$([System.DateTime]::Now.Year) Your Company</Copyright>
-    <Product>Your Product</Product>
-    <PackageProjectUrl>https://github.com/yourorg/yourrepo</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/yourorg/yourrepo</RepositoryUrl>
-    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <PackageTags>your;tags;here</PackageTags>
-  </PropertyGroup>
-
-  <!-- C# Language Settings -->
-  <PropertyGroup>
-    <LangVersion>latest</LangVersion>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <NoWarn>$(NoWarn);CS1591</NoWarn> <!-- Missing XML comments -->
-  </PropertyGroup>
-
-  <!-- Version Management -->
-  <PropertyGroup>
-    <VersionPrefix>1.0.0</VersionPrefix>
-    <PackageReleaseNotes>See RELEASE_NOTES.md</PackageReleaseNotes>
-  </PropertyGroup>
-
-  <!-- Target Framework Definitions (reusable properties) -->
-  <PropertyGroup>
-    <NetStandardLibVersion>netstandard2.0</NetStandardLibVersion>
-    <NetLibVersion>net8.0</NetLibVersion>
-    <NetTestVersion>net9.0</NetTestVersion>
-  </PropertyGroup>
-
-  <!-- SourceLink Configuration -->
-  <PropertyGroup>
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <EmbedUntrackedSources>true</EmbedUntrackedSources>
-    <IncludeSymbols>true</IncludeSymbols>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
-  </ItemGroup>
-
-  <!-- NuGet Package Assets -->
-  <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)logo.png" Pack="true" PackagePath="\" />
-    <None Include="$(MSBuildThisFileDirectory)README.md" Pack="true" PackagePath="\" />
-  </ItemGroup>
-
-  <PropertyGroup>
-    <PackageIcon>logo.png</PackageIcon>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
-  </PropertyGroup>
-
-  <!-- Global Using Statements -->
-  <ItemGroup>
-    <Using Include="System.Collections.Immutable" />
-  </ItemGroup>
-</Project>
+```
+~/dev/
+├── work/              # 회사 업무
+│   ├── company-a/
+│   │   ├── backend-api/
+│   │   └── frontend-ui/
+│   └── company-b/
+├── personal/          # 개인/사이드 프로젝트
+│   ├── my-blog/
+│   └── todo-app/
+├── study/             # 강의/책 실습
+│   ├── algorithm-101/
+│   └── react-course/
+├── open-source/       # Fork/기여 프로젝트
+│   └── some-lib/
+├── playground/        # 일회성 테스트 (샌드박스)
+│   └── test-script.py
+└── dotfiles/          # 개인 설정 파일 버전관리
 ```
 
-### Key Patterns
+### 호스트(Source) 중심 구조 (Go 스타일)
 
-#### Dynamic Copyright Year
-
-```xml
-<Copyright>Copyright © 2020-$([System.DateTime]::Now.Year) Your Company</Copyright>
 ```
-
-Uses MSBuild property functions to insert current year at build time. No manual updates needed.
-
-#### Reusable Target Framework Properties
-
-Define target frameworks once, reference everywhere:
-
-```xml
-<!-- In Directory.Build.props -->
-<PropertyGroup>
-  <NetLibVersion>net8.0</NetLibVersion>
-  <NetTestVersion>net9.0</NetTestVersion>
-</PropertyGroup>
-
-<!-- In MyApp.csproj -->
-<PropertyGroup>
-  <TargetFramework>$(NetLibVersion)</TargetFramework>
-</PropertyGroup>
-
-<!-- In MyApp.Tests.csproj -->
-<PropertyGroup>
-  <TargetFramework>$(NetTestVersion)</TargetFramework>
-</PropertyGroup>
-```
-
-#### SourceLink for NuGet Packages
-
-SourceLink enables step-through debugging of NuGet packages:
-
-```xml
-<PropertyGroup>
-  <PublishRepositoryUrl>true</PublishRepositoryUrl>
-  <EmbedUntrackedSources>true</EmbedUntrackedSources>
-  <IncludeSymbols>true</IncludeSymbols>
-  <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-</PropertyGroup>
-
-<ItemGroup>
-  <!-- Choose the right provider for your source control -->
-  <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
-  <!-- Or: Microsoft.SourceLink.AzureRepos.Git -->
-  <!-- Or: Microsoft.SourceLink.GitLab -->
-  <!-- Or: Microsoft.SourceLink.Bitbucket.Git -->
-</ItemGroup>
+~/dev/
+├── github.com/
+│   ├── my-username/
+│   │   └── project-a/
+│   └── other-user/
+│       └── awesome-lib/
+├── gitlab.com/
+│   └── company-group/
+│       └── company-project/
+└── bitbucket.org/
 ```
 
 ---
 
-## Directory.Packages.props - Central Package Management
+## Part 2: 프로젝트 내부 구조
 
-Central Package Management (CPM) provides a single source of truth for all NuGet package versions.
+### 기본 프로젝트 스캐폴딩
 
-### Setup
-
-```xml
-<Project>
-  <PropertyGroup>
-    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
-  </PropertyGroup>
-
-  <!-- Define version variables for related packages -->
-  <PropertyGroup>
-    <AkkaVersion>1.5.35</AkkaVersion>
-    <AspireVersion>9.1.0</AspireVersion>
-  </PropertyGroup>
-
-  <!-- Application Dependencies -->
-  <ItemGroup Label="App Dependencies">
-    <PackageVersion Include="Akka" Version="$(AkkaVersion)" />
-    <PackageVersion Include="Akka.Cluster" Version="$(AkkaVersion)" />
-    <PackageVersion Include="Akka.Persistence" Version="$(AkkaVersion)" />
-    <PackageVersion Include="Microsoft.Extensions.Hosting" Version="9.0.0" />
-  </ItemGroup>
-
-  <!-- Build/Tooling Dependencies -->
-  <ItemGroup Label="Build Dependencies">
-    <PackageVersion Include="Microsoft.SourceLink.GitHub" Version="8.0.0" />
-  </ItemGroup>
-
-  <!-- Test Dependencies -->
-  <ItemGroup Label="Test Dependencies">
-    <PackageVersion Include="xunit" Version="2.9.3" />
-    <PackageVersion Include="xunit.runner.visualstudio" Version="3.0.1" />
-    <PackageVersion Include="FluentAssertions" Version="7.0.0" />
-    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
-    <PackageVersion Include="coverlet.collector" Version="6.0.3" />
-  </ItemGroup>
-</Project>
 ```
-
-### Consuming Packages (No Version Needed)
-
-```xml
-<!-- In MyApp.csproj -->
-<ItemGroup>
-  <PackageReference Include="Akka" />
-  <PackageReference Include="Akka.Cluster" />
-  <PackageReference Include="Microsoft.Extensions.Hosting" />
-</ItemGroup>
-
-<!-- In MyApp.Tests.csproj -->
-<ItemGroup>
-  <PackageReference Include="xunit" />
-  <PackageReference Include="FluentAssertions" />
-  <PackageReference Include="Microsoft.NET.Test.Sdk" />
-</ItemGroup>
-```
-
-### Benefits
-
-1. **Single source of truth** - All versions in one file
-2. **No version drift** - All projects use same versions
-3. **Easy updates** - Change once, applies everywhere
-4. **Grouped packages** - Version variables for related packages (e.g., all Akka packages)
-
----
-
-## global.json - SDK Version Pinning
-
-Pin the .NET SDK version for consistent builds across all environments.
-
-```json
-{
-  "sdk": {
-    "version": "9.0.200",
-    "rollForward": "latestFeature"
-  }
-}
-```
-
-### Roll Forward Policies
-
-| Policy | Behavior |
-|--------|----------|
-| `disable` | Exact version required |
-| `patch` | Same major.minor, latest patch |
-| `feature` | Same major, latest minor.patch |
-| `latestFeature` | Same major, latest feature band |
-| `minor` | Same major, latest minor |
-| `latestMinor` | Same major, latest minor |
-| `major` | Latest SDK (not recommended) |
-
-**Recommended:** `latestFeature` - Allows patch updates within the same feature band.
-
----
-
-## Version Management with RELEASE_NOTES.md
-
-### Release Notes Format
-
-```markdown
-#### 1.2.0 January 15th 2025 ####
-
-- Added new feature X
-- Fixed bug in Y
-- Improved performance of Z
-
-#### 1.1.0 December 10th 2024 ####
-
-- Initial release with features A, B, C
-```
-
-### Parsing Script (getReleaseNotes.ps1)
-
-```powershell
-function Get-ReleaseNotes {
-    param (
-        [Parameter(Mandatory=$true)]
-        [string]$MarkdownFile
-    )
-
-    $content = Get-Content -Path $MarkdownFile -Raw
-    $sections = $content -split "####"
-
-    $result = [PSCustomObject]@{
-        Version      = $null
-        Date         = $null
-        ReleaseNotes = $null
-    }
-
-    if ($sections.Count -ge 3) {
-        $header = $sections[1].Trim()
-        $releaseNotes = $sections[2].Trim()
-
-        $headerParts = $header -split " ", 2
-        if ($headerParts.Count -eq 2) {
-            $result.Version = $headerParts[0]
-            $result.Date = $headerParts[1]
-        }
-
-        $result.ReleaseNotes = $releaseNotes
-    }
-
-    return $result
-}
-```
-
-### Version Bump Script (bumpVersion.ps1)
-
-```powershell
-function UpdateVersionAndReleaseNotes {
-    param (
-        [Parameter(Mandatory=$true)]
-        [PSCustomObject]$ReleaseNotesResult,
-        [Parameter(Mandatory=$true)]
-        [string]$XmlFilePath
-    )
-
-    $xmlContent = New-Object XML
-    $xmlContent.Load($XmlFilePath)
-
-    # Update VersionPrefix
-    $versionElement = $xmlContent.SelectSingleNode("//VersionPrefix")
-    $versionElement.InnerText = $ReleaseNotesResult.Version
-
-    # Update PackageReleaseNotes
-    $notesElement = $xmlContent.SelectSingleNode("//PackageReleaseNotes")
-    $notesElement.InnerText = $ReleaseNotesResult.ReleaseNotes
-
-    $xmlContent.Save($XmlFilePath)
-}
-```
-
-### Build Script (build.ps1)
-
-```powershell
-# Load helper scripts
-. "$PSScriptRoot\scripts\getReleaseNotes.ps1"
-. "$PSScriptRoot\scripts\bumpVersion.ps1"
-
-# Parse release notes and update Directory.Build.props
-$releaseNotes = Get-ReleaseNotes -MarkdownFile (Join-Path -Path $PSScriptRoot -ChildPath "RELEASE_NOTES.md")
-UpdateVersionAndReleaseNotes -ReleaseNotesResult $releaseNotes -XmlFilePath (Join-Path -Path $PSScriptRoot -ChildPath "Directory.Build.props")
-
-Write-Output "Updated to version $($releaseNotes.Version)"
-```
-
-### CI/CD Integration
-
-```yaml
-# GitHub Actions example
-- name: Update version from release notes
-  shell: pwsh
-  run: ./build.ps1
-
-- name: Build
-  run: dotnet build -c Release
-
-- name: Pack with tag version
-  run: dotnet pack -c Release /p:PackageVersion=${{ github.ref_name }}
-
-- name: Push to NuGet
-  run: dotnet nuget push **/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+project-name/
+├── src/              # 실제 소스 코드
+├── assets/           # 이미지, 폰트, 정적 파일
+├── config/           # 설정 파일
+├── docs/             # 문서화 자료
+├── scripts/          # 빌드/배포 스크립트
+├── tests/            # 테스트 코드
+├── dist/             # 빌드 결과물 (Git 제외)
+├── _legacy/          # 정리된 레거시 코드
+├── .gitignore
+├── .env.example      # 환경변수 예시 (.env는 Git 제외)
+├── README.md
+└── LICENSE
 ```
 
 ---
 
-## NuGet.Config
+## Part 3: 프론트엔드 아키텍처 패턴
 
-Configure NuGet sources and behavior:
+### Pattern A: Next.js App Router + Colocation
 
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<configuration>
-  <solution>
-    <add key="disableSourceControlIntegration" value="true" />
-  </solution>
+> 라우트(페이지) 기준으로 폴더 생성, 필요한 파일을 같은 폴더에 배치
 
-  <packageSources>
-    <clear />
-    <add key="nuget.org" value="https://api.nuget.org/v3/index.json" />
-    <!-- Add private feeds if needed -->
-    <!-- <add key="MyCompany" value="https://pkgs.dev.azure.com/myorg/_packaging/myfeed/nuget/v3/index.json" /> -->
-  </packageSources>
-</configuration>
+```
+app/
+├── (marketing)/           # Route Group (URL에 미반영)
+│   ├── page.tsx
+│   ├── components/        # 이 라우트 전용 컴포넌트
+│   │   └── Hero.tsx
+│   └── styles.css
+├── dashboard/
+│   ├── layout.tsx
+│   ├── page.tsx
+│   ├── loading.tsx
+│   ├── error.tsx
+│   └── components/
+│       ├── DashboardHeader.tsx
+│       └── DashboardStats.tsx
+├── api/
+│   └── users/
+│       └── route.ts
+└── globals.css
+lib/                       # 공용 유틸리티
+components/                # 전역 공용 컴포넌트
 ```
 
-**Key Settings:**
-- `<clear />` - Remove inherited/default sources for reproducible builds
-- `disableSourceControlIntegration` - Prevents TFS/Git integration issues
+**적합한 경우**: Next.js 기반 프로젝트
 
 ---
 
-## Complete Project Structure
+### Pattern B: Bulletproof React (Feature-based)
+
+> 기능(Feature) 단위로 묶어서 유지보수 용이한 구조
 
 ```
-MySolution/
-├── .config/
-│   └── dotnet-tools.json           # Local .NET tools
-├── .github/
-│   └── workflows/
-│       ├── pr-validation.yml       # PR checks
-│       └── release.yml             # NuGet publishing
-├── scripts/
-│   ├── getReleaseNotes.ps1         # Parse RELEASE_NOTES.md
-│   └── bumpVersion.ps1             # Update Directory.Build.props
-├── src/
-│   ├── MyApp/
-│   │   └── MyApp.csproj
-│   └── MyApp.Core/
-│       └── MyApp.Core.csproj
-├── tests/
-│   └── MyApp.Tests/
-│       └── MyApp.Tests.csproj
-├── Directory.Build.props           # Centralized build config
-├── Directory.Packages.props        # Central package versions
-├── MySolution.slnx                 # Modern solution file
-├── global.json                     # SDK version pinning
-├── NuGet.Config                    # Package source config
-├── build.ps1                       # Build orchestration
-├── RELEASE_NOTES.md                # Version history
-├── README.md                       # Project documentation
-└── logo.png                        # Package icon
+src/
+├── app/                   # 앱 초기화 (라우터, 엔트리, 전역 설정)
+│   ├── routes/
+│   ├── App.tsx
+│   └── main.tsx
+├── assets/
+├── components/            # 완전 공용 UI
+│   ├── Button/
+│   ├── Modal/
+│   └── Form/
+├── config/
+├── features/              # 🔑 핵심: 기능 단위
+│   ├── auth/
+│   │   ├── api/
+│   │   ├── components/
+│   │   ├── hooks/
+│   │   ├── types/
+│   │   └── index.ts
+│   ├── users/
+│   │   ├── api/
+│   │   ├── components/
+│   │   ├── hooks/
+│   │   └── index.ts
+│   └── dashboard/
+├── hooks/                 # 전역 훅
+├── lib/                   # 외부 라이브러리 래퍼
+├── providers/
+├── stores/
+├── testing/
+├── types/                 # 전역 타입
+└── utils/                 # 전역 유틸리티
+```
+
+**적합한 경우**: 팀 규모가 크거나 기능이 많은 React 프로젝트
+
+---
+
+### Pattern C: Feature-Sliced Design (FSD)
+
+> 계층(Layer)으로 분류하는 아키텍처 방법론
+
+```
+src/
+├── app/                   # Layer 1: 앱 초기화
+│   ├── providers/
+│   ├── styles/
+│   └── index.tsx
+├── pages/                 # Layer 2: 페이지 (라우트)
+│   ├── home/
+│   ├── profile/
+│   └── settings/
+├── widgets/               # Layer 3: 독립적인 UI 블록
+│   ├── header/
+│   ├── sidebar/
+│   └── footer/
+├── features/              # Layer 4: 사용자 시나리오
+│   ├── auth/
+│   ├── comments/
+│   └── likes/
+├── entities/              # Layer 5: 비즈니스 엔티티
+│   ├── user/
+│   ├── post/
+│   └── comment/
+└── shared/                # Layer 6: 공유 리소스
+    ├── ui/
+    ├── lib/
+    ├── api/
+    └── config/
+```
+
+**적합한 경우**: 규칙을 팀이 같이 지킬 수 있는 중대형 프로젝트
+
+---
+
+## Part 4: 하이브리드 패턴 (Next.js + Feature)
+
+> Next.js App Router를 뼈대로, features 방식을 섞은 실용적 구조
+
+```
+app/                       # Next.js App Router
+├── (marketing)/
+├── dashboard/
+└── api/
+src/
+├── components/            # 전역 공용 컴포넌트
+├── features/              # Bulletproof 스타일 기능 단위
+│   ├── auth/
+│   ├── users/
+│   └── analytics/
+├── hooks/
+├── lib/
+├── types/
+└── utils/
 ```
 
 ---
 
-## Quick Reference
+## Workflow: 폴더 정리
 
-| File | Purpose |
-|------|---------|
-| `MySolution.slnx` | Modern XML solution file |
-| `Directory.Build.props` | Centralized build properties |
-| `Directory.Packages.props` | Central package version management |
-| `global.json` | SDK version pinning |
-| `NuGet.Config` | Package source configuration |
-| `RELEASE_NOTES.md` | Version history (parsed by build) |
-| `build.ps1` | Build orchestration script |
-| `.config/dotnet-tools.json` | Local .NET tools |
+### 1. 현재 구조 분석
+
+```bash
+# 최상위 폴더 확인
+ls -la
+
+# 트리 구조 확인 (2단계)
+find . -maxdepth 2 -type d | head -30
+```
+
+### 2. 레거시 폴더 생성
+
+```bash
+mkdir -p _legacy
+```
+
+### 3. 정리 대상 이동
+
+```bash
+# 날짜 태그 붙여서 이동
+mv messy-folder _legacy/messy-folder_$(date +%Y%m%d)
+```
+
+### 4. 새 구조 생성
+
+```bash
+# Bulletproof 구조 예시
+mkdir -p src/{app,assets,components,config,features,hooks,lib,types,utils}
+mkdir -p src/features/{auth,users}/{api,components,hooks,types}
+```
+
+### 5. 파일 이동
+
+```bash
+# 기능별로 파일 이동
+mv src/components/LoginForm.tsx src/features/auth/components/
+mv src/hooks/useAuth.ts src/features/auth/hooks/
+```
+
+---
+
+## Naming Conventions
+
+| 규칙 | 예시 | 설명 |
+|------|------|------|
+| kebab-case | `my-project` | 폴더명 (공백 금지) |
+| PascalCase | `UserProfile.tsx` | React 컴포넌트 |
+| camelCase | `useAuth.ts` | 훅, 유틸리티 |
+| UPPER_CASE | `API_URL` | 상수 |
+
+## Anti-patterns
+
+```
+❌ 언어별 분류
+~/dev/python/
+~/dev/javascript/
+→ React + Django 프로젝트는 어디에?
+
+❌ 바탕화면 사용
+~/Desktop/새 폴더/test1/asdf/
+→ ~/dev/playground/ 사용
+
+❌ 공백 있는 폴더명
+My Project/
+→ my-project/
+
+❌ 타입별로만 분류 (규모가 클 때)
+src/
+├── components/  # 100개 컴포넌트
+├── hooks/       # 50개 훅
+└── utils/       # 30개 유틸
+→ features/ 단위로 그룹화
+```
+
+## Quick Setup Scripts
+
+### macOS/Linux: 개발 루트 생성
+
+```bash
+mkdir -p ~/dev/{work,personal,study,open-source,playground,dotfiles}
+```
+
+### 프로젝트 스캐폴딩
+
+```bash
+# 프로젝트 기본 구조
+mkdir -p {src,assets,config,docs,scripts,tests,_legacy}
+touch README.md .gitignore .env.example
+```
+
+### Bulletproof React 구조
+
+```bash
+mkdir -p src/{app/routes,assets,components,config,features,hooks,lib,providers,stores,testing,types,utils}
+```
+
+---
+
+## References
+
+- [Next.js Project Structure](https://nextjs.org/docs/getting-started/project-structure)
+- [Bulletproof React](https://github.com/alan2207/bulletproof-react)
+- [Feature-Sliced Design](https://feature-sliced.design)

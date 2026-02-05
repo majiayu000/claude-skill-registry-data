@@ -1,570 +1,282 @@
 ---
 name: resend
-description: Sends transactional emails with Resend including React Email templates, API integration, and Next.js setup. Use when sending emails, creating email templates, or integrating transactional email in applications.
+description: >
+  Implement email notifications for PhotoVault using Resend and React Email.
+  Use when working with email templates, transactional emails, notification
+  triggers, deliverability issues, or styling email content. Includes
+  PhotoVault branding and template patterns.
 ---
 
-# Resend
+# ⚠️ MANDATORY WORKFLOW - DO NOT SKIP
 
-Modern email API for developers with React Email support.
+**When this skill activates, you MUST follow the expert workflow before writing any code:**
 
-## Quick Start
+1. **Spawn Domain Expert** using the Task tool with this prompt:
+   ```
+   Read the expert prompt at: C:\Users\natha\Stone-Fence-Brain\VENTURES\PhotoVault\claude\experts\resend-expert.md
 
-**Install:**
-```bash
-npm install resend
-```
+   Then research the codebase and write an implementation plan to: docs/claude/plans/email-[task-name]-plan.md
 
-**Environment variable:**
-```bash
-# .env.local
-RESEND_API_KEY=re_...
-```
+   Task: [describe the user's request]
+   ```
 
-## Basic Usage
+2. **Spawn QA Critic** after expert returns, using Task tool:
+   ```
+   Read the QA critic prompt at: C:\Users\natha\Stone-Fence-Brain\VENTURES\PhotoVault\claude\experts\qa-critic-expert.md
 
-### Send Simple Email
+   Review the plan at: docs/claude/plans/email-[task-name]-plan.md
+   Write critique to: docs/claude/plans/email-[task-name]-critique.md
+   ```
 
-```typescript
-import { Resend } from 'resend';
+3. **Present BOTH plan and critique to user** - wait for approval before implementing
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+**DO NOT read files and start coding. DO NOT rationalize that "this is simple." Follow the workflow.**
 
-const { data, error } = await resend.emails.send({
-  from: 'Acme <noreply@acme.com>',
-  to: ['user@example.com'],
-  subject: 'Hello World',
-  html: '<p>Welcome to our app!</p>',
-});
-```
+---
 
-### API Route (Next.js App Router)
+# Resend Email Integration
 
-```typescript
-// app/api/send/route.ts
-import { Resend } from 'resend';
-import { NextResponse } from 'next/server';
+## Core Principles
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+### Email HTML is NOT Web HTML
 
-export async function POST(req: Request) {
-  const { to, subject, message } = await req.json();
-
-  try {
-    const { data, error } = await resend.emails.send({
-      from: 'Acme <noreply@acme.com>',
-      to: [to],
-      subject,
-      html: `<p>${message}</p>`,
-    });
-
-    if (error) {
-      return NextResponse.json({ error }, { status: 400 });
-    }
-
-    return NextResponse.json({ data });
-  } catch (error) {
-    return NextResponse.json(
-      { error: 'Failed to send email' },
-      { status: 500 }
-    );
-  }
-}
-```
-
-## React Email Templates
-
-### Install React Email
-
-```bash
-npm install @react-email/components
-```
-
-### Create Template
+Email clients strip `<style>` tags, ignore CSS classes, and render tables differently. Everything must be inline.
 
 ```tsx
-// emails/welcome.tsx
-import {
-  Body,
-  Button,
-  Container,
-  Head,
-  Heading,
-  Html,
-  Img,
-  Link,
-  Preview,
-  Section,
-  Text,
-} from '@react-email/components';
+// ❌ BAD: CSS classes don't work
+<div className="button">Click me</div>
 
-interface WelcomeEmailProps {
-  username: string;
-  loginUrl: string;
+// ✅ GOOD: Inline styles
+<a href={url} style={{
+  backgroundColor: '#f59e0b',
+  color: '#000000',
+  padding: '12px 24px',
+  borderRadius: '8px',
+  textDecoration: 'none',
+  display: 'inline-block',
+}}>
+  Click me
+</a>
+```
+
+### Mobile First (60%+ opens)
+
+Most emails are read on phones. Design for 320px width first.
+
+```tsx
+const container = {
+  maxWidth: '600px',
+  padding: '20px',
+  margin: '0 auto',
+}
+```
+
+### Every Email Needs a Preview
+
+The preview text appears in the inbox next to the subject.
+
+```tsx
+import { Preview } from '@react-email/components'
+<Preview>Your gallery "Smith Wedding" is ready with 247 photos</Preview>
+```
+
+## Anti-Patterns
+
+**Using CSS classes or external stylesheets**
+```tsx
+// WRONG: Won't render
+<style>{`.button { background: blue; }`}</style>
+<a className="button">Click</a>
+
+// RIGHT: Inline everything
+<a style={{ backgroundColor: 'blue', padding: '12px 24px' }}>Click</a>
+```
+
+**Using flexbox or grid**
+```tsx
+// WRONG: Not supported in most email clients
+<div style={{ display: 'flex' }}>
+
+// RIGHT: Use tables for layout
+import { Row, Column } from '@react-email/components'
+<Row>
+  <Column>Left content</Column>
+  <Column>Right content</Column>
+</Row>
+```
+
+**Forgetting alt text on images**
+```tsx
+// WRONG: Images often blocked
+<Img src={url} />
+
+// RIGHT: Always include meaningful alt
+<Img src={url} alt="Preview of your wedding photos" />
+```
+
+**Generic subject lines**
+```typescript
+// WRONG: Low open rate
+subject: 'Update from PhotoVault'
+
+// RIGHT: Specific and actionable
+subject: 'Your "Smith Wedding" gallery is ready - 247 photos inside'
+```
+
+**Not handling send failures**
+```typescript
+// WRONG: Silent failure
+await resend.emails.send({ ... })
+
+// RIGHT: Handle errors
+const { data, error } = await resend.emails.send({ ... })
+if (error) {
+  console.error('Email failed:', error)
+}
+```
+
+## Email Template Pattern
+
+```tsx
+// src/lib/email/templates/gallery-ready.tsx
+import {
+  Body, Container, Head, Heading, Html,
+  Img, Link, Preview, Section, Text,
+} from '@react-email/components'
+
+interface GalleryReadyEmailProps {
+  clientName: string
+  galleryName: string
+  photoCount: number
+  previewImageUrl: string
+  galleryUrl: string
 }
 
-export function WelcomeEmail({ username, loginUrl }: WelcomeEmailProps) {
+export function GalleryReadyEmail({
+  clientName, galleryName, photoCount, previewImageUrl, galleryUrl,
+}: GalleryReadyEmailProps) {
   return (
     <Html>
       <Head />
-      <Preview>Welcome to Acme - Your account is ready!</Preview>
+      <Preview>Your "{galleryName}" gallery is ready - {photoCount} photos inside</Preview>
       <Body style={main}>
         <Container style={container}>
-          <Img
-            src="https://acme.com/logo.png"
-            width={48}
-            height={48}
-            alt="Acme"
-          />
-          <Heading style={h1}>Welcome, {username}!</Heading>
+          <Img src="https://photovault.photo/logo.png" alt="PhotoVault" width={150} />
+          <Heading style={heading}>Hi {clientName}!</Heading>
           <Text style={text}>
-            Thanks for signing up for Acme. We're excited to have you on board.
+            Your photos from <strong>{galleryName}</strong> are ready.
+            Your photographer has uploaded {photoCount} photos.
           </Text>
-          <Section style={buttonContainer}>
-            <Button style={button} href={loginUrl}>
-              Get Started
-            </Button>
+          {previewImageUrl && (
+            <Img src={previewImageUrl} alt={`Preview from ${galleryName}`} width={560} />
+          )}
+          <Section style={{ textAlign: 'center', marginTop: '30px' }}>
+            <Link href={galleryUrl} style={button}>View Your Photos</Link>
           </Section>
-          <Text style={footer}>
-            If you didn't create an account, you can safely ignore this email.
-          </Text>
         </Container>
       </Body>
     </Html>
-  );
+  )
 }
 
 const main = {
-  backgroundColor: '#f6f9fc',
-  fontFamily:
-    '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif',
-};
+  backgroundColor: '#0a0a0a',
+  fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+}
 
-const container = {
-  backgroundColor: '#ffffff',
-  margin: '0 auto',
-  padding: '40px 20px',
-  borderRadius: '5px',
-  maxWidth: '465px',
-};
-
-const h1 = {
-  color: '#1f2937',
-  fontSize: '24px',
-  fontWeight: '600',
-  lineHeight: '40px',
-  margin: '0 0 20px',
-};
-
-const text = {
-  color: '#4b5563',
-  fontSize: '14px',
-  lineHeight: '24px',
-  margin: '0 0 20px',
-};
-
-const buttonContainer = {
-  textAlign: 'center' as const,
-  margin: '30px 0',
-};
-
+const container = { maxWidth: '600px', margin: '0 auto', padding: '40px 20px' }
+const heading = { color: '#ffffff', fontSize: '28px', fontWeight: 'bold' }
+const text = { color: '#a3a3a3', fontSize: '16px', lineHeight: '26px' }
 const button = {
-  backgroundColor: '#3b82f6',
-  borderRadius: '5px',
-  color: '#fff',
-  fontSize: '14px',
-  fontWeight: '600',
+  backgroundColor: '#f59e0b',
+  color: '#000000',
+  padding: '14px 28px',
+  borderRadius: '8px',
   textDecoration: 'none',
-  textAlign: 'center' as const,
+  fontWeight: 'bold',
   display: 'inline-block',
-  padding: '12px 30px',
-};
-
-const footer = {
-  color: '#9ca3af',
-  fontSize: '12px',
-  lineHeight: '16px',
-  margin: '20px 0 0',
-};
-
-export default WelcomeEmail;
+}
 ```
 
-### Send with Template
+## Email Service
 
 ```typescript
-// app/api/send-welcome/route.ts
-import { Resend } from 'resend';
-import { WelcomeEmail } from '@/emails/welcome';
-import { NextResponse } from 'next/server';
+// src/lib/email/email-service.ts
+import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY)
 
-export async function POST(req: Request) {
-  const { email, username } = await req.json();
+interface SendEmailParams {
+  to: string | string[]
+  subject: string
+  react: React.ReactElement
+  replyTo?: string
+}
 
+export async function sendEmail({ to, subject, react, replyTo }: SendEmailParams) {
   try {
     const { data, error } = await resend.emails.send({
-      from: 'Acme <noreply@acme.com>',
-      to: [email],
-      subject: 'Welcome to Acme!',
-      react: WelcomeEmail({
-        username,
-        loginUrl: `${process.env.NEXT_PUBLIC_APP_URL}/login`,
-      }),
-    });
+      from: 'PhotoVault <noreply@photovault.photo>',
+      to: Array.isArray(to) ? to : [to],
+      subject,
+      react,
+      replyTo: replyTo || 'support@photovault.photo',
+    })
 
     if (error) {
-      return NextResponse.json({ error }, { status: 400 });
+      console.error('[Email] Send failed:', error)
+      return { success: false, error }
     }
 
-    return NextResponse.json({ data });
+    console.log('[Email] Sent successfully:', data?.id)
+    return { success: true, id: data?.id }
   } catch (error) {
-    return NextResponse.json(
-      { error: 'Failed to send email' },
-      { status: 500 }
-    );
+    console.error('[Email] Unexpected error:', error)
+    return { success: false, error }
   }
 }
 ```
 
-## Common Email Templates
+## PhotoVault Configuration
 
-### Password Reset
+### Templates Needed
 
-```tsx
-// emails/password-reset.tsx
-import {
-  Body,
-  Button,
-  Container,
-  Head,
-  Heading,
-  Html,
-  Preview,
-  Text,
-} from '@react-email/components';
+| Template | Trigger | Recipient |
+|----------|---------|-----------|
+| `gallery-ready` | Photographer marks ready | Client |
+| `payment-success` | Checkout completed | Client |
+| `payment-failed` | Invoice failed | Client |
+| `invitation` | Photographer invites client | Client |
+| `commission-earned` | Client pays | Photographer |
 
-interface PasswordResetProps {
-  resetUrl: string;
-  expiresIn: string;
-}
+### Branding
 
-export function PasswordResetEmail({ resetUrl, expiresIn }: PasswordResetProps) {
-  return (
-    <Html>
-      <Head />
-      <Preview>Reset your password</Preview>
-      <Body style={main}>
-        <Container style={container}>
-          <Heading style={h1}>Reset Your Password</Heading>
-          <Text style={text}>
-            We received a request to reset your password. Click the button below
-            to create a new password.
-          </Text>
-          <Button style={button} href={resetUrl}>
-            Reset Password
-          </Button>
-          <Text style={text}>
-            This link will expire in {expiresIn}. If you didn't request a
-            password reset, you can safely ignore this email.
-          </Text>
-        </Container>
-      </Body>
-    </Html>
-  );
-}
-```
+| Element | Value |
+|---------|-------|
+| Primary color | `#f59e0b` (amber) |
+| Background | `#0a0a0a` (near black) |
+| Text | `#a3a3a3` (gray) |
+| Headings | `#ffffff` (white) |
 
-### Order Confirmation
-
-```tsx
-// emails/order-confirmation.tsx
-import {
-  Body,
-  Column,
-  Container,
-  Head,
-  Heading,
-  Hr,
-  Html,
-  Preview,
-  Row,
-  Section,
-  Text,
-} from '@react-email/components';
-
-interface OrderItem {
-  name: string;
-  quantity: number;
-  price: number;
-}
-
-interface OrderConfirmationProps {
-  orderNumber: string;
-  items: OrderItem[];
-  total: number;
-  shippingAddress: string;
-}
-
-export function OrderConfirmationEmail({
-  orderNumber,
-  items,
-  total,
-  shippingAddress,
-}: OrderConfirmationProps) {
-  return (
-    <Html>
-      <Head />
-      <Preview>Order {orderNumber} confirmed</Preview>
-      <Body style={main}>
-        <Container style={container}>
-          <Heading style={h1}>Order Confirmed</Heading>
-          <Text style={text}>
-            Thanks for your order! Your order number is{' '}
-            <strong>{orderNumber}</strong>.
-          </Text>
-
-          <Section style={orderSection}>
-            <Heading as="h2" style={h2}>
-              Order Summary
-            </Heading>
-            {items.map((item, index) => (
-              <Row key={index} style={itemRow}>
-                <Column>
-                  <Text style={itemName}>{item.name}</Text>
-                  <Text style={itemQuantity}>Qty: {item.quantity}</Text>
-                </Column>
-                <Column style={priceColumn}>
-                  <Text style={itemPrice}>${item.price.toFixed(2)}</Text>
-                </Column>
-              </Row>
-            ))}
-            <Hr style={hr} />
-            <Row>
-              <Column>
-                <Text style={totalLabel}>Total</Text>
-              </Column>
-              <Column style={priceColumn}>
-                <Text style={totalPrice}>${total.toFixed(2)}</Text>
-              </Column>
-            </Row>
-          </Section>
-
-          <Section>
-            <Heading as="h2" style={h2}>
-              Shipping Address
-            </Heading>
-            <Text style={text}>{shippingAddress}</Text>
-          </Section>
-        </Container>
-      </Body>
-    </Html>
-  );
-}
-```
-
-## Email Options
-
-### Full Options
-
-```typescript
-const { data, error } = await resend.emails.send({
-  // Required
-  from: 'Acme <noreply@acme.com>',
-  to: ['user@example.com'],
-  subject: 'Hello',
-
-  // Content (one of these)
-  html: '<p>Hello</p>',
-  text: 'Hello',
-  react: EmailTemplate({ props }),
-
-  // Optional
-  cc: ['cc@example.com'],
-  bcc: ['bcc@example.com'],
-  replyTo: 'support@acme.com',
-  headers: {
-    'X-Custom-Header': 'value',
-  },
-  attachments: [
-    {
-      filename: 'invoice.pdf',
-      content: Buffer.from(pdfContent),
-    },
-  ],
-  tags: [
-    { name: 'category', value: 'transactional' },
-  ],
-});
-```
-
-### Multiple Recipients
-
-```typescript
-// To multiple addresses
-await resend.emails.send({
-  from: 'Acme <noreply@acme.com>',
-  to: ['user1@example.com', 'user2@example.com'],
-  subject: 'Team Update',
-  html: '<p>Hello team!</p>',
-});
-
-// Batch send (different emails)
-const { data, error } = await resend.batch.send([
-  {
-    from: 'Acme <noreply@acme.com>',
-    to: ['user1@example.com'],
-    subject: 'Welcome User 1',
-    html: '<p>Hello User 1!</p>',
-  },
-  {
-    from: 'Acme <noreply@acme.com>',
-    to: ['user2@example.com'],
-    subject: 'Welcome User 2',
-    html: '<p>Hello User 2!</p>',
-  },
-]);
-```
-
-## Attachments
-
-```typescript
-import { readFileSync } from 'fs';
-
-// From file
-const attachment = readFileSync('./invoice.pdf');
-
-await resend.emails.send({
-  from: 'Acme <noreply@acme.com>',
-  to: ['user@example.com'],
-  subject: 'Your Invoice',
-  html: '<p>Please find your invoice attached.</p>',
-  attachments: [
-    {
-      filename: 'invoice.pdf',
-      content: attachment,
-    },
-  ],
-});
-
-// From URL
-await resend.emails.send({
-  from: 'Acme <noreply@acme.com>',
-  to: ['user@example.com'],
-  subject: 'Your Report',
-  html: '<p>Please find your report attached.</p>',
-  attachments: [
-    {
-      filename: 'report.pdf',
-      path: 'https://example.com/reports/report.pdf',
-    },
-  ],
-});
-```
-
-## Preview Emails
-
-### Development Server
+### Environment Variables
 
 ```bash
-npm install react-email -D
+RESEND_API_KEY=re_...
+FROM_EMAIL=PhotoVault <noreply@photovault.photo>
 ```
 
-```json
-{
-  "scripts": {
-    "email": "email dev --dir emails"
-  }
-}
-```
+## Testing Emails
 
 ```bash
-npm run email
+# Preview locally
+npx react-email dev
 ```
 
-Opens at `http://localhost:3000` to preview templates.
+## Deliverability Checklist
 
-## Server Actions
-
-```typescript
-// app/actions/email.ts
-'use server';
-
-import { Resend } from 'resend';
-import { WelcomeEmail } from '@/emails/welcome';
-
-const resend = new Resend(process.env.RESEND_API_KEY);
-
-export async function sendWelcomeEmail(email: string, username: string) {
-  try {
-    const { data, error } = await resend.emails.send({
-      from: 'Acme <noreply@acme.com>',
-      to: [email],
-      subject: 'Welcome to Acme!',
-      react: WelcomeEmail({ username, loginUrl: '/login' }),
-    });
-
-    if (error) {
-      return { success: false, error: error.message };
-    }
-
-    return { success: true, messageId: data?.id };
-  } catch (error) {
-    return { success: false, error: 'Failed to send email' };
-  }
-}
-```
-
-## Webhooks
-
-```typescript
-// app/api/webhooks/resend/route.ts
-import { NextResponse } from 'next/server';
-
-export async function POST(req: Request) {
-  const payload = await req.json();
-
-  switch (payload.type) {
-    case 'email.sent':
-      console.log('Email sent:', payload.data.email_id);
-      break;
-    case 'email.delivered':
-      console.log('Email delivered:', payload.data.email_id);
-      break;
-    case 'email.bounced':
-      console.log('Email bounced:', payload.data.email_id);
-      // Handle bounce - update user record
-      break;
-    case 'email.complained':
-      console.log('Spam complaint:', payload.data.email_id);
-      // Handle complaint - unsubscribe user
-      break;
-  }
-
-  return NextResponse.json({ received: true });
-}
-```
-
-## Best Practices
-
-1. **Use React Email** - Type-safe, reusable templates
-2. **Verify domain** - Better deliverability
-3. **Handle errors** - Check for error response
-4. **Use batch for bulk** - More efficient
-5. **Preview before sending** - Use email dev server
-
-## Common Mistakes
-
-| Mistake | Fix |
-|---------|-----|
-| Unverified domain | Verify in Resend dashboard |
-| Missing from address | Use verified domain email |
-| Not handling errors | Check error response |
-| Inline styles missing | Use style objects in React Email |
-| Large attachments | Keep under 40MB |
-
-## Reference Files
-
-- [references/templates.md](references/templates.md) - More template examples
-- [references/webhooks.md](references/webhooks.md) - Webhook events
-- [references/domains.md](references/domains.md) - Domain verification
+1. ✅ Domain verified in Resend (DKIM, SPF)
+2. ✅ FROM address uses verified domain
+3. ✅ Subject line is specific, not spammy
+4. ✅ Alt text on all images
+5. ✅ No URL shorteners
+6. ✅ Reply-to address is valid

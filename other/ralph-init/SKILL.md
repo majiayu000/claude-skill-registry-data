@@ -1,7 +1,6 @@
 ---
 name: ralph-init
 description: Initialize a PRD (Product Requirements Document) for structured ralph-loop execution
-user-invocable: true
 ---
 
 # Ralph Init Skill
@@ -55,7 +54,7 @@ Started: [ISO timestamp]
 3. **Independent stories**: Minimize dependencies between stories
 4. **Priority order**: Foundational work (DB, types) before UI
 
-After creating files, report summary and suggest running `/ralph-loop` to start.
+After creating files, report summary and suggest running `/oh-my-gemini:ralph-loop` to start.
 
 Task to break down:
 {{ARGUMENTS}}

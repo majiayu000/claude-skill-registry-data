@@ -1,355 +1,152 @@
 ---
 name: feature-investigation
-description: Use when the user asks to investigate, explore, understand, explain, or analyze how an existing feature or logic works. Triggers on keywords like "how does", "explain", "what is the logic", "investigate", "understand", "where is", "trace", "walk through", "show me how".
+description: >-
+  Investigate and explain how existing features/logic work. READ-ONLY exploration.
+  Triggers: how does, explain, what is the logic, investigate, understand, where is,
+  trace, walk through, show me how.
+  NOT for: implementing (use feature-implementation), debugging (use debugging).
+version: 2.0.0
 allowed-tools: Read, Grep, Glob, Task, WebFetch, WebSearch, TodoWrite
 infer: true
 ---
 
-> **Skill Variant:** Use this skill for **investigating and understanding** existing features or logic. This is a READ-ONLY exploration skill - no code changes. For implementing new features, use `feature-implementation`. For debugging, use `bug-diagnosis`.
+# Feature Investigation
 
-# Feature Investigation & Logic Exploration
+READ-ONLY exploration skill for understanding existing features. No code changes.
 
-You are to operate as an expert full-stack dotnet angular principal developer and software architect to investigate and explain how an existing feature or logic works in `[feature-description-or-question]`.
+## Mode Selection
 
-**IMPORTANT**: Always thinks hard, plan step by step to-do list first before execute. Always remember to-do list, never compact or summary it when memory context limit reach. Always preserve and carry your to-do list through every operation. Todo list must cover all phases, from start to end, include child tasks in each phases too, everything is flatted out into a long detailed todo list.
+| Mode            | Use When                                     | Workflow                                           |
+| --------------- | -------------------------------------------- | -------------------------------------------------- |
+| **Interactive** | User available, exploratory question         | Real-time collaboration, iterative tracing         |
+| **Autonomous**  | Deep analysis, complex cross-service tracing | Structured 4-phase workflow with analysis artifact |
 
-**KEY DIFFERENCE FROM OTHER SKILLS**: This is a **READ-ONLY investigation skill**. You are NOT implementing or fixing anything - you are building understanding and explaining how things work.
+## Workflow
 
----
+1. **Discovery** - Search codebase for all files related to the feature/question. Prioritize: Entities > Commands/Queries > EventHandlers > Controllers > Consumers > Components.
+2. **Knowledge Graph** - Read and analyze each file. Document purpose, symbols, dependencies, data flow. Batch in groups of 10, update progress after each batch.
+3. **Flow Mapping** - Trace entry points through processing pipeline to exit points. Map data transformations, persistence, side effects, cross-service boundaries.
+4. **Analysis** - Extract business rules, validation logic, authorization, error handling. Document happy path and edge cases.
+5. **Synthesis** - Write executive summary answering the original question. Include key files, patterns used, and text-based flow diagrams.
+6. **Present** - Deliver findings using the structured output format. Offer deeper dives on subtopics.
 
-## Core Anti-Hallucination Protocols
+## ⚠️ MUST READ Before Investigation
 
-### ASSUMPTION_VALIDATION_CHECKPOINT
+**IMPORTANT: You MUST read these files before starting. Do NOT skip.**
 
-Before every major operation:
+- **⚠️ MUST READ** `.claude/skills/shared/anti-hallucination-protocol.md` — Assumption validation, evidence chains, context anchoring
+- **⚠️ MUST READ** `.claude/skills/shared/knowledge-graph-template.md` — Per-file analysis structure
 
-1. "What assumptions am I making about [X]?"
-2. "Have I verified this with actual code evidence?"
-3. "Could I be wrong about [specific pattern/relationship]?"
+**If preceded by `/scout`:** Use Scout's numbered file list as analysis targets. Skip redundant discovery. Prioritize HIGH PRIORITY files first.
 
-### EVIDENCE_CHAIN_VALIDATION
+## Investigation Techniques
 
-Before claiming any relationship:
+### Discovery Search Patterns
 
-- "I believe X calls Y because..." → show actual code
-- "This follows pattern Z because..." → cite specific examples
-- "Service A owns B because..." → grep for actual boundaries
+#### File Discovery by Feature Name
 
-### TOOL_EFFICIENCY_PROTOCOL
-
-- Batch multiple Grep searches into single calls with OR patterns
-- Use parallel Read operations for related files
-- Combine semantic searches with related keywords
-
-### CONTEXT_ANCHOR_SYSTEM
-
-Every 10 operations:
-
-1. Re-read the original question from the `## Metadata` section
-2. Verify the current operation aligns with answering the question
-3. Check if we're investigating the right thing
-4. Update the `Current Focus` bullet point within the `## Progress` section
-
----
-
-## Quick Reference Checklist
-
-Before any major operation:
-
-- [ ] ASSUMPTION_VALIDATION_CHECKPOINT
-- [ ] EVIDENCE_CHAIN_VALIDATION
-- [ ] TOOL_EFFICIENCY_PROTOCOL
-
-Every 10 operations:
-
-- [ ] CONTEXT_ANCHOR_CHECK
-- [ ] Update 'Current Focus' in `## Progress` section
-
-Emergency:
-
-- **Context Drift** → Re-read `## Metadata` section
-- **Assumption Creep** → Halt, validate with code
-- **Evidence Gap** → Mark as "inferred"
-
----
-
-## PHASE 1: EXTERNAL MEMORY-DRIVEN FEATURE INVESTIGATION
-
-Your sole objective is to build a structured knowledge model in a Markdown analysis file at `.ai/workspace/analysis/[feature-name]-investigation.md` with systematic external memory management.
-
-### PHASE 1A: INITIALIZATION AND DISCOVERY
-
-1. **Initialize** the analysis file with:
-    - `## Metadata` heading with original question in markdown box
-    - `## Investigation Question` - clearly state what we're trying to understand
-    - Create headings: `## Progress`, `## Assumptions`, `## File List`, `## Knowledge Graph`, `## Data Flow`, `## Findings`
-
-2. **Populate `## Progress`** with:
-    - **Phase**: 1
-    - **Items Processed**: 0
-    - **Total Items**: 0
-    - **Current Operation**: "initialization"
-    - **Current Focus**: "[original investigation question]"
-
-3. **Discovery searches** to find all related files:
-    - Semantic search and grep search all keywords from the question
-    - Prioritize: **Domain Entities, Commands, Queries, Event Handlers, Controllers, Background Jobs, Consumers, Components**
-    - Additional targeted searches:
-        - `.*EventHandler.*{FeatureName}|{FeatureName}.*EventHandler`
-        - `.*BackgroundJob.*{FeatureName}|{FeatureName}.*BackgroundJob`
-        - `.*Consumer.*{FeatureName}|{FeatureName}.*Consumer`
-        - `.*Service.*{FeatureName}|{FeatureName}.*Service`
-        - `.*Component.*{FeatureName}|{FeatureName}.*Component`
-    - Save ALL file paths to `## File List`
-
-### PHASE 1B: KNOWLEDGE GRAPH CONSTRUCTION
-
-**IMPORTANT: MUST DO WITH TODO LIST**
-
-1. Count total files, split into batches of 10 files in priority order
-2. Insert batch analysis tasks into todo list
-
-For each file, document in `## Knowledge Graph`:
-
-- `filePath`: Full path
-- `type`: Component classification
-- `architecturalPattern`: Design pattern used
-- `content`: Purpose and logic summary
-- `symbols`: Classes, interfaces, methods
-- `dependencies`: Imports/using statements
-- `businessContext`: Business logic contribution
-- `referenceFiles`: Files using this file's symbols
-- `relevanceScore`: 1-10 (to the investigation question)
-- `evidenceLevel`: "verified" or "inferred"
-- `platformAbstractions`: Platform base classes
-- `serviceContext`: Microservice ownership
-
-**Investigation-Specific Fields:**
-
-- `entryPoints`: How this code is triggered/called
-- `outputPoints`: What this code produces/returns
-- `dataTransformations`: How data is modified
-- `externalDependencies`: External services, APIs, databases accessed
-- `configurationDependencies`: Config values, feature flags, settings
-- `conditionalLogic`: Key decision points and branches
-- `errorScenarios`: What can go wrong, error handling
-
-**For Consumers/Message Bus:**
-
-- `messageBusMessage`: Message type consumed
-- `messageBusProducers`: Who sends this message (grep across all services)
-- `crossServiceIntegration`: Cross-service data flow
-
-**MANDATORY**: After every 10 files, update `Items Processed` and run `CONTEXT_ANCHOR_CHECK`.
-
-### PHASE 1C: DATA FLOW MAPPING
-
-Under `## Data Flow`, document:
-
-1. **Entry Points**: Where the feature begins (API endpoint, UI action, scheduled job, message)
-2. **Processing Pipeline**: Step-by-step flow through the code
-3. **Data Transformations**: How data changes at each step
-4. **Persistence Points**: Where data is saved/loaded
-5. **Exit Points**: Final outputs (responses, events, side effects)
-6. **Cross-Service Flows**: If data crosses service boundaries
-
-Create a text-based flow diagram:
-
-```
-[Entry] → [Step 1] → [Step 2] → [Step 3] → [Exit]
-              ↓           ↓
-         [Side Effect] [Database]
+```regex
+.*EventHandler.*{FeatureName}|{FeatureName}.*EventHandler
+.*BackgroundJob.*{FeatureName}|{FeatureName}.*BackgroundJob
+.*Consumer.*{FeatureName}|{FeatureName}.*Consumer
+.*Service.*{FeatureName}|{FeatureName}.*Service
+.*Component.*{FeatureName}|{FeatureName}.*Component
 ```
 
----
+#### Priority Order for Analysis
 
-## PHASE 2: COMPREHENSIVE ANALYSIS
+1. **Domain Entities** - Core business objects
+2. **Commands/Queries** - CQRS entry points (`UseCaseCommands/`, `UseCaseQueries/`)
+3. **Event Handlers** - Side effects (`UseCaseEvents/`, `*EventHandler.cs`)
+4. **Controllers** - API endpoints (`Controllers/`, `*Controller.cs`)
+5. **Consumers** - Cross-service (`*Consumer.cs`, `*BusMessage.cs`)
+6. **Background Jobs** - Scheduled processing (`*BackgroundJob*.cs`, `*Job.cs`)
+7. **Components/Stores** - Frontend (`*.component.ts`, `*.store.ts`)
+8. **Services/Helpers** - Supporting logic (`*Service.cs`, `*Helper.cs`)
 
-### PHASE 2A: WORKFLOW ANALYSIS
+### Dependency Tracing
 
-Document under `## Workflow Analysis`:
+#### Backend (C#)
 
-1. **Happy Path**: Normal successful execution flow
-2. **Error Paths**: How errors are handled at each stage
-3. **Edge Cases**: Special conditions and their handling
-4. **Authorization**: Permission checks and security gates
-5. **Validation**: Input validation at each layer
+| Looking for                    | Search pattern                                                                  |
+| ------------------------------ | ------------------------------------------------------------------------------- |
+| Who calls this method          | Grep method name across `*.cs`                                                  |
+| Who injects this service       | Grep interface name in constructors                                             |
+| What events this entity raises | Grep `PlatformCqrsEntityEvent<EntityName>`                                      |
+| Cross-service consumers        | Grep `*BusMessage` type across all services                                     |
+| Repository usage               | Grep `IRepository<EntityName>` or `IPlatformQueryableRootRepository<EntityName` |
 
-### PHASE 2B: ARCHITECTURAL ANALYSIS
+#### Frontend (TypeScript)
 
-Document under `## Architectural Analysis`:
+| Looking for              | Search pattern                                                    |
+| ------------------------ | ----------------------------------------------------------------- |
+| Who uses this component  | Grep selector `app-component-name` in `*.html`                    |
+| Who imports this service | Grep service class name in `*.ts`                                 |
+| Store effects chain      | Trace `effectSimple` -> API call -> `tapResponse` -> state update |
+| Route entry              | Grep component name in `*routing*.ts`                             |
 
-1. **Layers Involved**: Domain, Application, Infrastructure, Presentation
-2. **Patterns Used**: CQRS, Repository, Event Sourcing, etc.
-3. **Service Boundaries**: Which microservices are involved
-4. **Integration Points**: External systems, message bus, APIs
-5. **State Management**: Frontend state patterns (stores, signals)
+### Data Flow Mapping
 
-### PHASE 2C: BUSINESS LOGIC EXTRACTION
+Document flow as text diagram:
 
-Document under `## Business Logic`:
-
-1. **Core Business Rules**: What rules govern this feature
-2. **Validation Rules**: Input/data validation
-3. **Calculations**: Any computations performed
-4. **State Transitions**: Entity state changes
-5. **Side Effects**: Notifications, events, external calls
-
----
-
-## PHASE 3: FINDINGS SYNTHESIS
-
-### PHASE 3A: EXECUTIVE SUMMARY
-
-Write a clear, concise answer to the original question under `## Executive Summary`:
-
-- **One-paragraph answer** to the user's question
-- **Key files** involved (top 5-10 most important)
-- **Key patterns** used
-
-### PHASE 3B: DETAILED EXPLANATION
-
-Under `## Detailed Explanation`:
-
-1. **Step-by-step walkthrough** of how the feature works
-2. **Code references** with file:line for each step
-3. **Why it works this way** - architectural decisions
-
-### PHASE 3C: VISUAL REPRESENTATION
-
-Under `## Diagrams`:
-
-1. **Sequence Diagram** (text-based) showing component interactions
-2. **Data Flow Diagram** showing data transformations
-3. **Component Diagram** showing file relationships
-
-```
-┌─────────────┐     ┌─────────────┐     ┌─────────────┐
-│  Component  │────>│   Command   │────>│   Handler   │
-└─────────────┘     └─────────────┘     └─────────────┘
-                                               │
-                                               v
-                                        ┌─────────────┐
-                                        │ Repository  │
-                                        └─────────────┘
+```text
+[Entry Point] --> [Step 1: Validation] --> [Step 2: Processing] --> [Step 3: Persistence]
+                                                  |
+                                                  v
+                                          [Side Effect: Event]
 ```
 
-### PHASE 3D: RELATED DISCOVERIES
+#### Flow Documentation Checklist
 
-Under `## Related Discoveries`:
+1. **Entry Points** - API endpoint, UI action, scheduled job, message bus
+2. **Processing Pipeline** - Step-by-step through handlers
+3. **Data Transformations** - How data changes at each step
+4. **Persistence Points** - Where data is saved/loaded
+5. **Exit Points** - Responses, events, side effects
+6. **Cross-Service Flows** - Message bus boundaries
 
-- **Connected Features**: Other features that interact with this one
-- **Shared Components**: Reusable code discovered
-- **Potential Issues**: Any concerns or technical debt noticed
-- **Documentation Gaps**: Missing or outdated documentation
+### Common Investigation Scenarios
 
----
-
-## PHASE 4: PRESENTATION
-
-Present your findings to the user in a clear, organized format:
-
-1. **Start with the answer** - directly address their question
-2. **Provide evidence** - show the code that supports your answer
-3. **Explain the flow** - walk through the logic step by step
-4. **Offer deeper dives** - mention areas you can explain further
-
-### Response Format
-
-```markdown
-## Answer
-
-[Direct answer to the question in 1-2 paragraphs]
-
-## How It Works
-
-### 1. [First Step]
-
-[Explanation with code reference at `file:line`]
-
-### 2. [Second Step]
-
-[Explanation with code reference at `file:line`]
-
-...
-
-## Key Files
-
-| File                  | Purpose   |
-| --------------------- | --------- |
-| `path/to/file.cs:123` | [Purpose] |
-
-## Data Flow
-
-[Text diagram showing the flow]
-
-## Want to Know More?
-
-I can explain further:
-
-- [Topic 1]
-- [Topic 2]
-- [Topic 3]
-```
-
----
-
-## Investigation Guidelines
-
-- **Evidence-based investigation**: Every claim must have code evidence
-- **Service boundary awareness**: Understand which service owns what
-- **Platform pattern recognition**: Identify Easy.Platform patterns used
-- **Cross-service tracing**: Follow message bus flows across services
-- **Read-only exploration**: Never suggest changes unless asked
-- **Question-focused**: Always tie findings back to the original question
-- **Layered explanation**: Start simple, offer deeper detail if requested
-
----
-
-## Common Investigation Scenarios
-
-### "How does feature X work?"
+#### "How does feature X work?"
 
 1. Find entry points (API, UI, job)
 2. Trace through command/query handlers
 3. Document entity changes
 4. Map side effects (events, notifications)
 
-### "Where is the logic for Y?"
+#### "Where is the logic for Y?"
 
-1. Search for keywords in commands, queries, entities
+1. Search keywords in commands, queries, entities
 2. Check event handlers for side effect logic
 3. Look in helper/service classes
 4. Check frontend stores and components
 
-### "What happens when Z occurs?"
+#### "What happens when Z occurs?"
 
-1. Identify the trigger (user action, event, schedule)
+1. Identify trigger (user action, event, schedule)
 2. Trace the handler chain
 3. Document all side effects
 4. Map error handling
 
-### "Why does A behave like B?"
+#### "Why does A behave like B?"
 
 1. Find the relevant code path
 2. Identify decision points
 3. Check configuration/feature flags
 4. Document business rules
 
----
+### Platform Pattern Recognition
 
-## Platform-Specific Investigation Patterns
-
-### Backend Patterns to Look For
+#### Backend Patterns
 
 - `PlatformCqrsCommand` / `PlatformCqrsQuery` - CQRS entry points
 - `PlatformCqrsEntityEventApplicationHandler` - Side effects
 - `PlatformApplicationMessageBusConsumer` - Cross-service consumers
-- `IPlatformQueryableRootRepository` / `IPlatformQueryableRootRepository` - Data access
+- `IPlatformQueryableRootRepository` - Data access
 - `PlatformValidationResult` - Validation logic
 - `[PlatformAuthorize]` - Authorization
 
-### Frontend Patterns to Look For
+#### Frontend Patterns
 
 - `AppBaseVmStoreComponent` - State management components
 - `PlatformVmStore` - Store implementations
@@ -357,12 +154,149 @@ I can explain further:
 - `observerLoadingErrorState` - Loading/error states
 - API services extending `PlatformApiService`
 
----
+## Evidence Collection
 
-## See Also
+### Analysis File Setup
 
-- `feature-implementation` skill - For implementing new features (code changes)
-- `bug-diagnosis` skill - For debugging and fixing issues
-- `tasks-feature-implementation` skill - Autonomous feature implementation variant
-- `.ai/prompts/context.md` - Platform patterns and context
-- `CLAUDE.md` - Codebase instructions
+Autonomous mode writes analysis to `.ai/workspace/analysis/[feature-name]-investigation.md` with:
+
+```markdown
+## Metadata
+> Original question: [user's exact question]
+
+## Investigation Question
+[Clearly stated investigation goal]
+
+## Progress
+- **Phase**: 1
+- **Items Processed**: 0 / [total]
+- **Current Focus**: [original question]
+
+## File List
+[All discovered files, grouped by priority]
+
+## Knowledge Graph
+[Per-file analysis entries - see template below]
+
+## Data Flow
+[Flow diagrams and pipeline documentation]
+
+## Findings
+[Populated in Phase 2+]
+```
+
+### Per-File Analysis Entry
+
+For each file, document in `## Knowledge Graph`:
+
+#### Core Fields
+
+- `filePath`: Full path
+- `type`: Component classification (Entity, Command, Handler, Controller, Component, Store, etc.)
+- `architecturalPattern`: Design pattern used
+- `content`: Purpose and logic summary
+- `symbols`: Key classes, interfaces, methods
+- `dependencies`: Imports/injections
+- `relevanceScore`: 1-10 (to investigation question)
+- `evidenceLevel`: "verified" or "inferred"
+
+#### Investigation-Specific Fields
+
+- `entryPoints`: How this code is triggered/called
+- `outputPoints`: What this code produces/returns
+- `dataTransformations`: How data is modified
+- `conditionalLogic`: Key decision points and branches
+- `errorScenarios`: What can go wrong, error handling
+- `externalDependencies`: External services, APIs, databases
+
+#### Cross-Service Fields (if applicable)
+
+- `messageBusMessage`: Message type consumed/produced
+- `messageBusProducers`: Who sends this message
+- `crossServiceIntegration`: Cross-service data flow
+
+**Rule:** After every 10 files, update progress and re-check alignment with original question.
+
+### Structured Findings Format
+
+#### Phase 2: Comprehensive Analysis
+
+##### Workflow Analysis
+
+1. **Happy Path** - Normal successful execution flow
+2. **Error Paths** - How errors are handled at each stage
+3. **Edge Cases** - Special conditions
+4. **Authorization** - Permission checks
+5. **Validation** - Input validation at each layer
+
+##### Business Logic Extraction
+
+1. **Core Business Rules** - What rules govern this feature
+2. **State Transitions** - Entity state changes
+3. **Side Effects** - Notifications, events, external calls
+
+#### Phase 3: Synthesis
+
+##### Executive Summary
+
+- One-paragraph answer to user's question
+- Top 5-10 key files
+- Key patterns used
+
+##### Detailed Explanation
+
+- Step-by-step walkthrough with `file:line` references
+- Architectural decisions explained
+
+##### Diagrams
+
+```text
++-----------+     +-----------+     +-----------+
+| Component |---->|  Command  |---->|  Handler  |
++-----------+     +-----------+     +-----------+
+                                          |
+                                          v
+                                    +-----------+
+                                    |Repository |
+                                    +-----------+
+```
+
+## Output Format
+
+```markdown
+## Answer
+[Direct answer in 1-2 paragraphs]
+
+## How It Works
+### 1. [Step] - [Explanation with `file:line` reference]
+### 2. [Step] - [Explanation with `file:line` reference]
+
+## Key Files
+| File | Purpose |
+| ---- | ------- |
+
+## Data Flow
+[Text diagram: Entry -> Processing -> Persistence -> Side Effects]
+
+## Want to Know More?
+- [Subtopic 1]
+- [Subtopic 2]
+```
+
+## Guidelines
+
+- **Evidence-based**: Every claim needs code evidence. Mark unverified claims as "inferred".
+- **Question-focused**: Tie all findings back to the original question.
+- **Read-only**: Never suggest changes unless explicitly asked.
+- **Layered explanation**: Start simple, offer deeper detail on request.
+
+## Related Skills
+
+- `feature-implementation` - Implementing new features (code changes)
+- `debugging` - Debugging and fixing issues
+- `scout` - Quick codebase discovery (run before investigation)
+
+## IMPORTANT Task Planning Notes
+
+- Always plan and break many small todo tasks
+- Always add a final review todo task to review the works done at the end to find any fix or enhancement needed

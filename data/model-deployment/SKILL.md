@@ -1,392 +1,304 @@
 ---
-name: Model Deployment
-description: Deploy machine learning models to production using Flask, FastAPI, Docker, cloud platforms (AWS, GCP, Azure), and model serving frameworks
+name: model-deployment
+description: Deploy ML models with FastAPI, Docker, Kubernetes. Use for serving predictions, containerization, monitoring, drift detection, or encountering latency issues, health check failures, version conflicts.
+keywords: model deployment, FastAPI, Docker, Kubernetes, ML serving, model monitoring, drift detection, A/B testing, CI/CD, mlops, production ml, model versioning, health checks, Prometheus, containerization, rolling updates, blue-green deployment, canary deployment, model registry
+license: MIT
 ---
 
-# Model Deployment
+# ML Model Deployment
 
-## Overview
+Deploy trained models to production with proper serving and monitoring.
 
-Model deployment is the process of taking a trained machine learning model and making it available for production use through APIs, web services, or batch processing systems.
+## Deployment Options
 
-## When to Use
+| Method | Use Case | Latency |
+|--------|----------|---------|
+| REST API | Web services | Medium |
+| Batch | Large-scale processing | N/A |
+| Streaming | Real-time | Low |
+| Edge | On-device | Very low |
 
-- When productionizing trained models for real-world inference and predictions
-- When building REST APIs or web services for model serving
-- When scaling predictions to serve multiple users or applications
-- When deploying models to cloud platforms, edge devices, or containers
-- When implementing CI/CD pipelines for ML model updates
-- When creating batch processing systems for large-scale predictions
-
-## Deployment Approaches
-
-- **REST APIs**: Flask, FastAPI for synchronous inference
-- **Batch Processing**: Scheduled jobs for large-scale predictions
-- **Real-time Streaming**: Kafka, Spark Streaming for continuous data
-- **Serverless**: AWS Lambda, Google Cloud Functions
-- **Edge Deployment**: TensorFlow Lite, ONNX for edge devices
-- **Model Serving**: TensorFlow Serving, Seldon Core, BentoML
-
-## Key Considerations
-
-- **Model Format**: Pickle, SavedModel, ONNX, PMML
-- **Scalability**: Load balancing, auto-scaling
-- **Latency**: Response time requirements
-- **Monitoring**: Model drift, performance metrics
-- **Versioning**: Multiple model versions in production
-
-## Python Implementation
+## FastAPI Model Server
 
 ```python
-import numpy as np
-import pandas as pd
-import pickle
-import json
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.preprocessing import StandardScaler
-from sklearn.datasets import make_classification
+from fastapi import FastAPI
+from pydantic import BaseModel
 import joblib
+import numpy as np
 
-# FastAPI for REST API
-from fastapi import FastAPI, HTTPException, BackgroundTasks
-from pydantic import BaseModel, Field
-import uvicorn
-
-# For model serving
-import mlflow.pyfunc
-import mlflow.sklearn
-
-# Docker and deployment
-import logging
-import time
-from typing import List, Dict
-
-# Configure logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
-
-print("=== 1. Train and Save Model ===")
-
-# Create dataset
-X, y = make_classification(n_samples=1000, n_features=20, random_state=42)
-scaler = StandardScaler()
-X_scaled = scaler.fit_transform(X)
-
-# Train model
-model = RandomForestClassifier(n_estimators=100, max_depth=10, random_state=42)
-model.fit(X_scaled, y)
-
-# Save model and preprocessing
-model_path = '/tmp/model.pkl'
-scaler_path = '/tmp/scaler.pkl'
-
-joblib.dump(model, model_path)
-joblib.dump(scaler, scaler_path)
-
-print(f"Model saved to {model_path}")
-print(f"Scaler saved to {scaler_path}")
-
-# 2. Model Serving Class
-print("\n=== 2. Model Serving Class ===")
-
-class ModelPredictor:
-    def __init__(self, model_path, scaler_path):
-        self.model = joblib.load(model_path)
-        self.scaler = joblib.load(scaler_path)
-        self.load_time = time.time()
-        self.predictions_count = 0
-        logger.info("Model loaded successfully")
-
-    def predict(self, features: List[List[float]]) -> Dict:
-        try:
-            X = np.array(features)
-            X_scaled = self.scaler.transform(X)
-            predictions = self.model.predict(X_scaled)
-            probabilities = self.model.predict_proba(X_scaled)
-
-            self.predictions_count += len(X)
-
-            return {
-                'predictions': predictions.tolist(),
-                'probabilities': probabilities.tolist(),
-                'count': len(X),
-                'timestamp': time.time()
-            }
-        except Exception as e:
-            logger.error(f"Prediction error: {str(e)}")
-            raise
-
-    def health_check(self) -> Dict:
-        return {
-            'status': 'healthy',
-            'uptime': time.time() - self.load_time,
-            'predictions': self.predictions_count
-        }
-
-# Initialize predictor
-predictor = ModelPredictor(model_path, scaler_path)
-
-# 3. FastAPI Application
-print("\n=== 3. FastAPI Application ===")
-
-app = FastAPI(
-    title="ML Model API",
-    description="Production ML model serving API",
-    version="1.0.0"
-)
+app = FastAPI()
+model = joblib.load('model.pkl')
 
 class PredictionRequest(BaseModel):
-    features: List[List[float]] = Field(..., example=[[1.0, 2.0, 3.0]])
+    features: list[float]
 
 class PredictionResponse(BaseModel):
-    predictions: List[int]
-    probabilities: List[List[float]]
-    count: int
-    timestamp: float
+    prediction: float
+    probability: float
 
-class HealthResponse(BaseModel):
-    status: str
-    uptime: float
-    predictions: int
+@app.get('/health')
+def health():
+    return {'status': 'healthy'}
 
-@app.get("/health", response_model=HealthResponse)
-async def health_check():
-    """Health check endpoint"""
-    return predictor.health_check()
+@app.post('/predict', response_model=PredictionResponse)
+def predict(request: PredictionRequest):
+    features = np.array(request.features).reshape(1, -1)
+    prediction = model.predict(features)[0]
+    probability = model.predict_proba(features)[0].max()
+    return PredictionResponse(prediction=prediction, probability=probability)
+```
 
-@app.post("/predict", response_model=PredictionResponse)
-async def predict(request: PredictionRequest):
-    """Make predictions"""
-    try:
-        result = predictor.predict(request.features)
-        return result
-    except Exception as e:
-        raise HTTPException(status_code=400, detail=str(e))
+## Docker Deployment
 
-@app.post("/predict-batch")
-async def predict_batch(requests: List[PredictionRequest], background_tasks: BackgroundTasks):
-    """Batch prediction with background processing"""
-    all_features = []
-    for req in requests:
-        all_features.extend(req.features)
-
-    result = predictor.predict(all_features)
-    background_tasks.add_task(logger.info, f"Batch prediction processed: {result['count']} samples")
-    return result
-
-@app.get("/stats")
-async def get_stats():
-    """Get model statistics"""
-    return {
-        'model_type': type(predictor.model).__name__,
-        'n_estimators': predictor.model.n_estimators,
-        'max_depth': predictor.model.max_depth,
-        'feature_importance': predictor.model.feature_importances_.tolist(),
-        'total_predictions': predictor.predictions_count
-    }
-
-# 4. Dockerfile template
-print("\n=== 4. Dockerfile Template ===")
-
-dockerfile_content = '''FROM python:3.9-slim
+```dockerfile
+FROM python:3.11-slim
 
 WORKDIR /app
-
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY model.pkl .
-COPY scaler.pkl .
 COPY app.py .
 
 EXPOSE 8000
-
 CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
-'''
+```
 
-print("Dockerfile content:")
-print(dockerfile_content)
+## Model Monitoring
 
-# 5. Requirements file
-print("\n=== 5. Requirements.txt ===")
-
-requirements = """fastapi==0.104.1
-uvicorn[standard]==0.24.0
-numpy==1.24.0
-pandas==2.1.0
-scikit-learn==1.3.2
-joblib==1.3.2
-pydantic==2.5.0
-mlflow==2.8.1
-"""
-
-print("Requirements:")
-print(requirements)
-
-# 6. Docker Compose for deployment
-print("\n=== 6. Docker Compose Template ===")
-
-docker_compose = '''version: '3.8'
-
-services:
-  ml-api:
-    build: .
-    ports:
-      - "8000:8000"
-    environment:
-      - LOG_LEVEL=info
-      - WORKERS=4
-    restart: unless-stopped
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
-      interval: 10s
-      timeout: 5s
-      retries: 3
-
-  ml-monitor:
-    image: prom/prometheus:latest
-    ports:
-      - "9090:9090"
-    volumes:
-      - ./prometheus.yml:/etc/prometheus/prometheus.yml
-    command:
-      - "--config.file=/etc/prometheus/prometheus.yml"
-
-  ml-dashboard:
-    image: grafana/grafana:latest
-    ports:
-      - "3000:3000"
-    environment:
-      - GF_SECURITY_ADMIN_PASSWORD=admin
-    volumes:
-      - ./grafana/dashboards:/etc/grafana/provisioning/dashboards
-'''
-
-print("Docker Compose content:")
-print(docker_compose)
-
-# 7. Testing the API
-print("\n=== 7. Testing the API ===")
-
-def test_predictor():
-    # Test single prediction
-    test_features = [[1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0,
-                     1.1, 2.1, 3.1, 4.1, 5.1, 6.1, 7.1, 8.1, 9.1, 10.1]]
-
-    result = predictor.predict(test_features)
-    print(f"Prediction result: {result}")
-
-    # Health check
-    health = predictor.health_check()
-    print(f"Health status: {health}")
-
-    # Batch predictions
-    batch_features = [
-        [1.0] * 20,
-        [2.0] * 20,
-        [3.0] * 20,
-    ]
-    batch_result = predictor.predict(batch_features)
-    print(f"Batch prediction: {batch_result['count']} samples processed")
-
-test_predictor()
-
-# 8. Model versioning and registry
-print("\n=== 8. Model Registry with MLflow ===")
-
-# Log model to MLflow
-with mlflow.start_run():
-    mlflow.sklearn.log_model(model, "model")
-    mlflow.log_param("max_depth", 10)
-    mlflow.log_param("n_estimators", 100)
-    mlflow.log_metric("accuracy", 0.95)
-
-    model_uri = "runs:/" + mlflow.active_run().info.run_id + "/model"
-    print(f"Model logged to MLflow: {model_uri}")
-
-# 9. Deployment monitoring code
-print("\n=== 9. Monitoring Setup ===")
-
+```python
 class ModelMonitor:
     def __init__(self):
         self.predictions = []
         self.latencies = []
 
-    def log_prediction(self, features, prediction, latency):
+    def log_prediction(self, input_data, prediction, latency):
         self.predictions.append({
-            'timestamp': time.time(),
-            'features_mean': np.mean(features),
+            'input': input_data,
             'prediction': prediction,
-            'latency_ms': latency * 1000
+            'latency': latency,
+            'timestamp': datetime.now()
         })
 
-    def check_model_drift(self):
-        if len(self.predictions) < 100:
-            return {'drift_detected': False}
-
-        recent_predictions = [p['prediction'] for p in self.predictions[-100:]]
-        historical_mean = np.mean([p['prediction'] for p in self.predictions[:-100]])
-        recent_mean = np.mean(recent_predictions)
-
-        drift = abs(recent_mean - historical_mean) > 0.1
-
-        return {
-            'drift_detected': drift,
-            'historical_mean': float(historical_mean),
-            'recent_mean': float(recent_mean),
-            'threshold': 0.1
-        }
-
-    def get_stats(self):
-        if not self.latencies:
-            return {}
-
-        return {
-            'avg_latency_ms': np.mean(self.latencies) * 1000,
-            'p95_latency_ms': np.percentile(self.latencies, 95) * 1000,
-            'p99_latency_ms': np.percentile(self.latencies, 99) * 1000,
-            'total_predictions': len(self.predictions)
-        }
-
-monitor = ModelMonitor()
-
-print("\nDeployment setup completed!")
-print("To run FastAPI server: uvicorn app:app --reload")
+    def detect_drift(self, reference_distribution):
+        # Compare current predictions to reference
+        pass
 ```
 
 ## Deployment Checklist
 
-- Model format and serialization
-- Input/output validation
-- Error handling and logging
-- Authentication and security
-- Rate limiting and throttling
-- Health check endpoints
-- Monitoring and alerting
-- Version management
-- Rollback procedures
+- [ ] Model validated on test set
+- [ ] API endpoints documented
+- [ ] Health check endpoint
+- [ ] Authentication configured
+- [ ] Logging and monitoring setup
+- [ ] Model versioning in place
+- [ ] Rollback procedure documented
 
-## Cloud Deployment Options
+## Quick Start: Deploy Model in 6 Steps
 
-- **AWS**: SageMaker, Lambda, EC2
-- **GCP**: Vertex AI, Cloud Run, App Engine
-- **Azure**: Machine Learning, App Service
-- **Kubernetes**: Self-managed on-premises
+```bash
+# 1. Save trained model
+import joblib
+joblib.dump(model, 'model.pkl')
 
-## Performance Optimization
+# 2. Create FastAPI app (see references/fastapi-production-server.md)
+# app.py with /predict and /health endpoints
 
-- Model quantization for smaller size
-- Caching predictions
-- Batch processing
-- GPU acceleration
-- Request pooling
+# 3. Create Dockerfile
+cat > Dockerfile << 'EOF'
+FROM python:3.11-slim
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY app.py model.pkl ./
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
+EOF
 
-## Deliverables
+# 4. Build and test locally
+docker build -t model-api:v1.0.0 .
+docker run -p 8000:8000 model-api:v1.0.0
 
-- Deployed model endpoint
-- API documentation
-- Docker configuration
-- Monitoring dashboard
-- Deployment guide
-- Performance benchmarks
-- Scaling recommendations
+# 5. Push to registry
+docker tag model-api:v1.0.0 registry.example.com/model-api:v1.0.0
+docker push registry.example.com/model-api:v1.0.0
+
+# 6. Deploy to Kubernetes
+kubectl apply -f deployment.yaml
+kubectl rollout status deployment/model-api
+```
+
+## Known Issues Prevention
+
+### 1. No Health Checks = Downtime
+**Problem**: Load balancer sends traffic to unhealthy pods, causing 503 errors.
+
+**Solution**: Implement both liveness and readiness probes:
+```python
+# app.py
+@app.get("/health")  # Liveness: Is service alive?
+async def health():
+    return {"status": "healthy"}
+
+@app.get("/ready")  # Readiness: Can handle traffic?
+async def ready():
+    try:
+        _ = model_store.model  # Verify model loaded
+        return {"status": "ready"}
+    except:
+        raise HTTPException(503, "Not ready")
+```
+
+```yaml
+# deployment.yaml
+livenessProbe:
+  httpGet:
+    path: /health
+    port: 8000
+  initialDelaySeconds: 30
+readinessProbe:
+  httpGet:
+    path: /ready
+    port: 8000
+  initialDelaySeconds: 5
+```
+
+### 2. Model Not Found Errors in Container
+**Problem**: `FileNotFoundError: model.pkl` when container starts.
+
+**Solution**: Verify model file is copied in Dockerfile and path matches:
+```dockerfile
+# ❌ Wrong: Model in wrong directory
+COPY model.pkl /app/models/  # But code expects /app/model.pkl
+
+# ✅ Correct: Consistent paths
+COPY model.pkl /models/model.pkl
+ENV MODEL_PATH=/models/model.pkl
+
+# In Python:
+model_path = os.getenv("MODEL_PATH", "/models/model.pkl")
+```
+
+### 3. Unhandled Input Validation = 500 Errors
+**Problem**: Invalid inputs crash API with unhandled exceptions.
+
+**Solution**: Use Pydantic for automatic validation:
+```python
+from pydantic import BaseModel, Field, validator
+
+class PredictionRequest(BaseModel):
+    features: List[float] = Field(..., min_items=1, max_items=100)
+
+    @validator('features')
+    def validate_finite(cls, v):
+        if not all(np.isfinite(val) for val in v):
+            raise ValueError("All features must be finite")
+        return v
+
+# FastAPI auto-validates and returns 422 for invalid requests
+@app.post("/predict")
+async def predict(request: PredictionRequest):
+    # Request is guaranteed valid here
+    pass
+```
+
+### 4. No Drift Monitoring = Silent Degradation
+**Problem**: Model performance degrades over time, no one notices until users complain.
+
+**Solution**: Implement drift detection (see references/model-monitoring-drift.md):
+```python
+monitor = ModelMonitor(reference_data=training_data, drift_threshold=0.1)
+
+@app.post("/predict")
+async def predict(request: PredictionRequest):
+    prediction = model.predict(features)
+    monitor.log_prediction(features, prediction, latency)
+
+    # Alert if drift detected
+    if monitor.should_retrain():
+        alert_manager.send_alert("Model drift detected - retrain recommended")
+
+    return prediction
+```
+
+### 5. Missing Resource Limits = OOM Kills
+**Problem**: Pod killed by Kubernetes OOMKiller, service goes down.
+
+**Solution**: Set memory/CPU limits and requests:
+```yaml
+resources:
+  requests:
+    memory: "512Mi"  # Guaranteed
+    cpu: "500m"
+  limits:
+    memory: "1Gi"    # Max allowed
+    cpu: "1000m"
+
+# Monitor actual usage:
+kubectl top pods
+```
+
+### 6. No Rollback Plan = Stuck on Bad Deploy
+**Problem**: New model version has bugs, no way to revert quickly.
+
+**Solution**: Tag images with versions, keep previous deployment:
+```bash
+# Deploy with version tag
+kubectl set image deployment/model-api model-api=registry/model-api:v1.2.0
+
+# If issues, rollback to previous
+kubectl rollout undo deployment/model-api
+
+# Or specify version
+kubectl set image deployment/model-api model-api=registry/model-api:v1.1.0
+```
+
+### 7. Synchronous Prediction = Slow Batch Processing
+**Problem**: Processing 10,000 predictions one-by-one takes hours.
+
+**Solution**: Implement batch endpoint:
+```python
+@app.post("/predict/batch")
+async def predict_batch(request: BatchPredictionRequest):
+    # Process all at once (vectorized)
+    features = np.array(request.instances)
+    predictions = model.predict(features)  # Much faster!
+    return {"predictions": predictions.tolist()}
+```
+
+### 8. No CI/CD Validation = Deploy Bad Models
+**Problem**: Deploying model that fails basic tests, breaking production.
+
+**Solution**: Validate in CI pipeline (see references/cicd-ml-models.md):
+```yaml
+# .github/workflows/deploy.yml
+- name: Validate model performance
+  run: |
+    python scripts/validate_model.py \
+      --model model.pkl \
+      --test-data test.csv \
+      --min-accuracy 0.85  # Fail if below threshold
+```
+
+## Best Practices
+
+- **Version everything**: Models (semantic versioning), Docker images, deployments
+- **Monitor continuously**: Latency, error rate, drift, resource usage
+- **Test before deploy**: Unit tests, integration tests, performance benchmarks
+- **Deploy gradually**: Canary (10%), then full rollout
+- **Plan for rollback**: Keep previous version, document procedure
+- **Log predictions**: Enable debugging and drift detection
+- **Set resource limits**: Prevent OOM kills and resource contention
+- **Use health checks**: Enable proper load balancing
+
+## When to Load References
+
+Load reference files for detailed implementations:
+
+- **FastAPI Production Server**: Load `references/fastapi-production-server.md` for complete production-ready FastAPI implementation with error handling, validation (Pydantic models), logging, health/readiness probes, batch predictions, model versioning, middleware, exception handlers, and performance optimizations (caching, async)
+
+- **Model Monitoring & Drift**: Load `references/model-monitoring-drift.md` for ModelMonitor implementation with KS-test drift detection, Jensen-Shannon divergence, Prometheus metrics integration, alert configuration (Slack, email), continuous monitoring service, and dashboard endpoints
+
+- **Containerization & Deployment**: Load `references/containerization-deployment.md` for multi-stage Dockerfiles, model versioning in containers, Docker Compose setup, A/B testing with Nginx, Kubernetes deployments (rolling update, blue-green, canary), GitHub Actions CI/CD, and deployment checklists
+
+- **CI/CD for ML Models**: Load `references/cicd-ml-models.md` for complete GitHub Actions pipeline with model validation, data validation, automated testing, security scanning, performance benchmarks, automated rollback, and deployment strategies

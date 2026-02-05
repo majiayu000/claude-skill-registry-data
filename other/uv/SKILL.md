@@ -1,376 +1,378 @@
 ---
 name: uv
-description: Expert guidance for Astral's uv - an extremely fast Python package and project manager. Use when working with Python projects, managing dependencies, creating scripts with PEP 723 metadata, installing tools, managing Python versions, or configuring package indexes. Covers project initialization, dependency management, virtual environments, tool installation, workspace configuration, CI/CD integration, and migration from pip/poetry.
+description: "Modern Python package and project management using uv. MUST BE USED for any Python-related tasks including working with Python projects, managing dependencies, running Python code/tests, or installing CLI tools. Prefer uv over pip/poetry/conda for all Python packaging work."
 ---
 
-# uv: Modern Python Package and Project Manager
+# uv — Modern Python Package and Project Management
 
-## Overview
+<mission_control>
+<objective>Use uv as the single source of truth for all Python packaging and environment management</objective>
+<success_criteria>Python project uses uv consistently, with standalone scripts preferred over projects unless explicitly requested</success_criteria>
+</mission_control>
 
-uv is Astral's extremely fast Python package and project manager written in Rust, designed as a unified replacement for pip, pip-tools, pipx, poetry, pyenv, and virtualenv. It delivers 10-100x faster performance while providing modern dependency management with lockfiles and reproducible environments.
+<trigger>When working with Python projects (pyproject.toml/uv.lock), managing dependencies, running Python code/tests, installing CLI tools (ruff, pytest), or migrating from pip/poetry/conda.</trigger>
 
-## When to Use This Skill
+<interaction_schema>
+DETECT CONTEXT → SELECT MODE → EXECUTE WORKFLOW → VALIDATE
+</interaction_schema>
 
-Use this skill when:
+uv is Astral's fast Python package and project manager. Use uv as the single source of truth for Python packaging and environments unless explicitly told otherwise.
 
-- Initializing new Python projects or scripts
-- Managing project dependencies with pyproject.toml
-- Creating portable single-file scripts with PEP 723 inline metadata
-- Installing or running command-line tools (ruff, black, httpie, etc.)
-- Managing Python interpreter versions
-- Setting up virtual environments
-- Configuring package indexes or private registries
-- Migrating from pip, pip-tools, poetry, or conda
-- Configuring CI/CD pipelines for Python projects
-- Setting up Docker containers for Python applications
-- Troubleshooting dependency resolution or build failures
+---
 
-## Core Capabilities
+## Philosophy
 
-### 1. Project Initialization and Management
+**Standalone scripts > Projects > Legacy**
 
-**Initialize new projects:**
+uv prioritizes simplicity and portability. Default to single-file scripts with PEP 723 metadata. Only create full projects when explicitly requested or when the task demands multiple files, tests, or publishing.
 
-```bash
-# Standard project with recommended structure
-uv init myproject
+**One tool, unified workflow**
 
-# Application project (default)
-uv init myapp --app
+- `uv run` executes everything (scripts, modules, project commands)
+- `uv add` manages dependencies (projects and scripts)
+- `uv lock` ensures reproducibility
+- `uv sync` keeps environments consistent
 
-# Library/package project (includes src/ layout)
-uv init mylib --lib --build-backend hatchling
+**Performance through sharing**
 
-# Bare project (pyproject.toml only)
-uv init --bare
-```
+uv's global cache is shared across projects, scripts, and tools. Download once, use everywhere.
 
-**Project structure created:**
+---
 
-```text
-myproject/
-├── .venv/           # Virtual environment (auto-created)
-├── .python-version  # Pinned Python version
-├── README.md
-├── main.py          # Sample entry point
-├── pyproject.toml   # Project metadata and dependencies
-└── uv.lock          # Lockfile (like Cargo.lock or package-lock.json)
-```
+## Detect Your Context
 
-### 2. Dependency Management
+<context>
+Three modes, one unified tool:
 
-**Add dependencies to project:**
+| Context                | Indicator                        | Mode               |
+| ---------------------- | -------------------------------- | ------------------ |
+| **uv project**         | `pyproject.toml` with `uv.lock`  | Project mode       |
+| **standalone script**  | Single `.py` with `# /// script` | Script mode        |
+| **legacy environment** | `requirements.txt` or `setup.py` | Pip interface mode |
 
-```bash
-# Production dependencies
-uv add requests 'flask>=2.0,<3.0' pydantic
+</context>
 
-# Development dependencies
-uv add --dev pytest pytest-cov ruff mypy black
+---
 
-# Optional dependency groups
-uv add --group docs sphinx sphinx-rtd-theme
-uv add --group test pytest-asyncio hypothesis
+<absolute_constraints>
+CRITICAL: Never mix pip/poetry/conda with uv in the same project. Choose one tool per project and stick with it.
 
-# From various sources
-uv add git+https://github.com/psf/requests@main
-uv add --editable ./local-package
-uv add ../sibling-package
-```
+ALWAYS prefer uv for new Python projects over pip, poetry, or conda.
 
-**Remove dependencies:**
+ONLY use uv's pip interface (uv pip ...) when working with legacy environments that cannot be converted to uv projects.
 
-```bash
-uv remove requests flask
-uv remove --dev pytest
-uv remove --group docs sphinx
-```
+PREFER standalone scripts with PEP 723 metadata for single-file or quick tasks. ONLY create pyproject.toml (full project) when the user explicitly requests it or the task requires multiple files, tests, or publishing.
+</absolute_constraints>
 
-**Lock and sync environments:**
+---
 
-```bash
-# Update lockfile with latest compatible versions
-uv lock
+## Mode Decision Router
 
-# Upgrade all packages
-uv lock --upgrade
+<router>
+flowchart TD
+    Start[Python task] --> Exists{Project exists?}
+    Exists -->|Yes, pyproject.toml| UV[uv project mode]
+    Exists -->|No| TaskType{Task type?}
 
-# Upgrade specific packages
-uv lock --upgrade-package requests --upgrade-package flask
+    TaskType -->|Single file/quick| Script[standalone script mode]
+    TaskType -->|User requested project| UVInit[create new project]
+    TaskType -->|Multi-file/tests/publish| UVInit
+    TaskType -->|requirements.txt only| Legacy[legacy mode]
 
-# Install all dependencies from lockfile
-uv sync
+    UV --> UVRun[uv add/lock/sync/run]
+    Script --> ScriptRun[uv run script.py with PEP 723]
+    UVInit --> Init[uv init]
+    Legacy --> UVPip[uv pip install/sync]
 
-# Install without dev dependencies (production)
-uv sync --no-dev
+    UVRun --> Done[Execute workflow]
+    ScriptRun --> Done
+    Init --> Done
+    UVPip --> Done
 
-# Install with optional groups
-uv sync --extra docs --extra test
+</router>
 
-# Sync without updating lockfile (CI mode)
-uv sync --frozen
+**Priority**: Standalone scripts > Projects. Only create pyproject.toml when explicitly requested or task requires it.
 
-# Error if lockfile out of sync (strict CI mode)
-uv sync --locked
-```
+---
 
-### 3. Running Code in Project Context
+## Core Workflows
 
-**Execute scripts and commands:**
+### Standalone Scripts (PEP 723) — PREFERRED for Single-File Tasks
+
+**Default to standalone scripts for quick tasks, single-file utilities, or when the user hasn't explicitly requested a project structure.**
 
 ```bash
-# Run Python script in project environment
-uv run python script.py
+# Create script with PEP 723 metadata
+uv init --script script.py --python 3.12
 
-# Run module (like python -m)
-uv run -m pytest
-uv run -m flask run --port 8000
-
-# Run with specific Python version
-uv run --python 3.11 script.py
-uv run --python pypy@3.9 test.py
-
-# Run without syncing first (use current environment state)
-uv run --frozen script.py
-
-# Run with additional temporary dependencies
-uv run --with httpx --with rich script.py
-
-# Run without project dependencies (standalone)
-uv run --no-project example.py
-
-# Run with environment variables from file
-uv run --env-file .env script.py
-```
-
-### 4. PEP 723 Inline Script Metadata
-
-**Create portable single-file scripts with dependencies:**
-
-```bash
-# Initialize script with metadata block
-uv init --script example.py --python 3.12
-
-# Add dependencies to existing script
-uv add --script example.py requests rich
-```
-
-**Example script structure:**
-
-```python
-#!/usr/bin/env -S uv --quiet run --active --script
+# OR manually create script with inline dependencies:
+cat > myscript.py << 'EOF'
 # /// script
 # requires-python = ">=3.11"
 # dependencies = [
-#   "requests>=2.31",
-#   "rich>=13.0",
+#     "requests",
+#     "rich",
 # ]
 # ///
 
 import requests
 from rich import print
 
-response = requests.get("https://api.github.com/repos/astral-sh/uv")
-print(f"Stars: {response.json()['stargazers_count']}")
+# Your code here
+EOF
+
+# Run script (uv auto-honors PEP 723 metadata)
+uv run myscript.py
+
+# Add/remove script dependencies
+uv add --script myscript.py beautifulsoup4
+uv remove --script myscript.py rich
+
+# Run with temporary extra dependency
+uv run --with httpx myscript.py
+
+# Lock script for reproducibility (optional)
+uv lock --script myscript.py    # generates myscript.py.lock
 ```
 
-**Run scripts:**
+**When to use standalone scripts:**
 
-```bash
-# Auto-creates isolated environment and runs
-uv run example.py
+- Quick utilities or one-off tasks
+- Single-file scripts that need dependencies
+- Data processing or scraping scripts
+- Prototyping before committing to a project
+- When user hasn't explicitly requested a "project"
 
-# Run with additional dependencies
-uv run --with beautifulsoup4 example.py
+**PEP 723 metadata format:**
 
-# Lock script for reproducibility
-uv lock --script example.py  # Creates example.py.lock
+```python
+#!/usr/bin/env -S uv run
+# /// script
+# requires-python = ">=3.11"
+# dependencies = [
+#     "requests>=2.28",
+#     "rich",
+# ]
+#
+# [tool.uv]
+# exclude-newer = "2026-01-01T00:00:00Z"  # Optional: temporal reproducibility
+# ///
 
-# Make executable and run directly
-chmod +x example.py
-./example.py
+import requests
+from rich import print
 ```
 
-**Best practices for scripts:**
+**Temporal reproducibility (optional):**
 
-- Always include `requires-python` for compatibility
-- Use version constraints for critical dependencies
-- Lock scripts before sharing for reproducibility
-- Add `exclude-newer` in `[tool.uv]` for time-based pinning
+Add `exclude-newer` in `[tool.uv]` to limit dependencies to those published before a specific date (RFC 3339 format). This guarantees identical behavior even as new package versions are released.
 
-### 5. Tool Management
+**Making scripts directly executable:**
 
-**One-off tool execution (ephemeral environments):**
+- Add shebang `#!/usr/bin/env -S uv run` at the top
+- Run `chmod +x script.py` to make executable
+- Execute directly: `./script.py`
+
+**uv run options for scripts:**
+
+- `uv run --python 3.13 script.py` - Force specific Python version
+- `uv run --with "dep==version" script.py` - Add temporary dependency
+- `uv run --no-cache script.py` - Bypass cache for debugging
+- `uv run --isolated script.py` - Create isolated environment (useful in CI)
+
+**Advanced uv run patterns:**
 
 ```bash
-# Run tool without installing (uvx is alias)
-uvx ruff check
-uvx pycowsay "hello from uv"
+# Run from stdin
+echo 'print("hello")' | uv run -
 
-# Run specific version
-uvx ruff@0.3.0 check
-uvx --from 'ruff>=0.3.0,<0.4.0' ruff check
-
-# Run tool from different package
-uvx --from httpie http GET example.com
-
-# Run with plugin/additional dependencies
-uvx --with mkdocs-material mkdocs serve
+# Run script from URL
+uv run https://raw.githubusercontent.com/user/repo/main/script.py
 ```
 
-**Persistent tool installation:**
+---
+
+### New Project — ONLY when Explicitly Requested or Required
 
 ```bash
-# Install tool globally (adds to PATH)
+# Initialize project (creates app with main.py)
+uv init myproject
+cd myproject
+
+# OR initialize library project
+uv init --lib mylib
+
+# uv init creates:
+# - pyproject.toml (project metadata)
+# - .gitignore (well-configured)
+# - .python-version (Python version pin)
+# - README.md (basic template)
+# - main.py (for apps) or src/ structure (for libs)
+
+# Set Python version (optional but recommended)
+uv python pin 3.12
+
+# Add dependencies
+uv add requests "flask>=2.0,<3.0" pydantic
+uv add --dev pytest pytest-cov ruff
+
+# Lock and sync
+uv lock      # creates uv.lock
+uv sync      # creates .venv and installs
+
+# Run things
+uv run python main.py
+uv run pytest
+uv run ruff check .
+```
+
+**uv run automatic verification:**
+
+Before executing, `uv run` automatically:
+
+- Verifies `pyproject.toml` and `uv.lock` are synchronized
+- Updates `.venv` if lockfile or dependencies changed
+- Ensures environment consistency before each command
+
+This eliminates "works on my machine" issues caused by desynchronized environments.
+
+### Day-to-Day Project Work
+
+```bash
+# Add dependencies
+uv add <package>                    # production
+uv add --dev <package>              # development
+uv add --group docs <package>       # optional group
+
+# Remove dependencies
+uv remove <package>
+uv remove --dev <package>
+
+# Keep environment consistent
+uv lock      # after modifying pyproject.toml
+uv sync      # update .venv from uv.lock
+
+# Run commands in project context
+uv run python script.py
+uv run -m pytest
+uv run -m flask run --port 8000
+
+# Build and publish
+uv build              # wheel + sdist
+uv publish            # publish to PyPI
+```
+
+**Modern pyproject.toml with dependency-groups:**
+
+```toml
+[project]
+name = "myapp"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi>=0.115",
+  "pydantic>=2",
+]
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.7"]
+docs = ["mkdocs>=1.6"]
+
+[tool.uv]
+managed = true  # Let uv manage .venv and uv.lock
+```
+
+**When to create a project:**
+
+- User explicitly requests a "project" or "package"
+- Multiple files/modules are needed
+- Tests are required
+- Publishing to PyPI is planned
+- Workspace/monorepo structure is needed
+
+### Running Tools
+
+```bash
+# One-off tool usage
+uvx ruff check .
+uvx black .
+uvx ruff@0.3.0 check .    # specific version
+
+# Persistent tools
 uv tool install ruff black mypy
-
-# Install with version constraint
-uv tool install 'httpie>0.1.0'
-
-# Install from git
-uv tool install git+https://github.com/httpie/cli
-
-# Install with additional packages
-uv tool install mkdocs --with mkdocs-material
-
-# Upgrade tools
-uv tool upgrade ruff
-uv tool upgrade --all
-
-# List installed tools
 uv tool list
-uv tool list --show-paths
-
-# Uninstall tool
 uv tool uninstall ruff
-
-# Update shell configuration for tools
-uv tool update-shell
 ```
 
-### 6. Python Version Management
-
-**Install and manage Python versions:**
+### Python Version Management
 
 ```bash
-# Install specific Python version (auto-downloads if needed)
+# Install Python versions
 uv python install 3.12
-uv python install 3.11 3.12 3.13  # Multiple at once
+uv python install 3.12 3.13    # Install multiple versions
+uv python list                 # List available versions
 
-# List available versions
-uv python list
-uv python list --all-versions
+# Upgrade installed Python to latest patch
+uv python upgrade 3.13
 
-# Pin Python version for project
-uv python pin 3.12  # Creates .python-version
+# Pin project to specific version
+uv python pin 3.12    # creates .python-version
 
-# Find Python executable
-uv python find 3.11
-
-# Upgrade Python installations
-uv python upgrade 3.11
-uv python upgrade --all
-
-# Use specific Python for command
-uv run --python 3.11 script.py
-uv venv --python 3.12.0
+# Find available versions
+uv python find 3.12    # Find matching 3.12.x version
 ```
 
-**Python is automatically downloaded when needed:**
-
-- Supports CPython, PyPy, GraalPy, and other implementations
-- Managed installations stored in `~/.local/share/uv/python/` (Unix)
-- Preference configurable: `only-managed`, `managed`, `system`, `only-system`
-
-### 7. Virtual Environment Management
-
-**Create virtual environments:**
+### Virtual Environments
 
 ```bash
-# Create in .venv directory (default)
-uv venv
-
-# Create with specific Python version
+# Create venv (rarely needed in uv projects)
+uv venv                # creates .venv
 uv venv --python 3.11
-uv venv --python pypy3.9
 
-# Create with custom path
-uv venv myenv
-
-# Create with system packages access
-uv venv --system-site-packages
-
-# Create with seed packages (pip, setuptools, wheel)
-uv venv --seed
-
-# Activate (standard Python activation)
-source .venv/bin/activate  # Unix
-.venv\Scripts\activate     # Windows
+# Activate normally
+source .venv/bin/activate    # Unix
+.venv\Scripts\activate       # Windows
 ```
 
-**Warning**: Running `uv venv` again **wipes existing environment** without confirmation.
+**Note**: In uv projects, `uv sync` and `uv run` manage the venv automatically. Use `uv venv` only for legacy projects.
 
-### 8. pip-Compatible Interface
+---
 
-**Direct pip replacement commands:**
+## Legacy Pip Interface
+
+Use ONLY when working with legacy environments that cannot be converted to uv projects:
 
 ```bash
 # Install packages
 uv pip install flask requests
 uv pip install -r requirements.txt
-uv pip install -e .  # Editable install
 
-# Install from git
-uv pip install git+https://github.com/psf/requests
-uv pip install git+https://github.com/pallets/flask@main
+# Lock and sync requirements.txt style
+uv pip compile requirements.in -o requirements.lock
+uv pip compile --universal requirements.in -o requirements.txt    # Multi-platform
+uv pip sync requirements.lock
 
-# Compile requirements (like pip-compile)
-uv pip compile pyproject.toml -o requirements.txt
-uv pip compile requirements.in -o requirements.txt
-uv pip compile --upgrade-package ruff requirements.in
-
-# Sync environment to exact requirements (like pip-sync)
-uv pip sync requirements.txt
-
-# Uninstall packages
-uv pip uninstall flask requests
-uv pip uninstall -r requirements.txt
-
-# List installed packages
+# Inspect environments
 uv pip list
-uv pip list --format json
-uv pip freeze > requirements.txt
-
-# Show package info
-uv pip show requests
-
-# Check for conflicts
-uv pip check
-
-# Display dependency tree
+uv pip show <pkg>
 uv pip tree
-uv pip tree --depth 2
-
-# Check if package is installed
-uv pip freeze | grep -q '^requests=='
-uv pip list --format json | jq -e '.[] | select(.name == "requests")'
-uv pip show requests
+uv pip check
 ```
 
-**Package check benchmarks** (76 packages installed):
+**Platform-specific dependencies migration:**
 
-| Command                     | Time  | Output Size |
-| --------------------------- | ----- | ----------- |
-| `uv pip freeze`             | ~8ms  | ~1.5 KB     |
-| `uv pip list`               | ~10ms | ~2.5 KB     |
-| `uv pip list --format json` | ~10ms | ~3.2 KB     |
-| `uv pip show <pkg>`         | ~40ms | ~0.3 KB     |
+For projects with platform-specific requirements (previously multiple requirements files), use:
 
-`uv pip show` is slower because it resolves `Requires` and `Required-by` relationships.
+```bash
+uv pip compile --universal requirements.in -o requirements.txt
+```
 
-### 9. Workspace Management (Monorepos)
+This generates a single requirements.txt with appropriate platform markers, which can then be imported into a uv project.
 
-**Configure workspaces in root pyproject.toml:**
+---
+
+## Workspaces (Monorepo)
+
+Root `pyproject.toml`:
 
 ```toml
 [tool.uv.workspace]
@@ -378,7 +380,7 @@ members = ["packages/*", "apps/*"]
 exclude = ["packages/deprecated"]
 ```
 
-**Workspace dependency references:**
+Workspace dependencies:
 
 ```toml
 [project]
@@ -388,482 +390,307 @@ dependencies = ["shared-lib", "core-utils"]
 [tool.uv.sources]
 shared-lib = { workspace = true }
 core-utils = { workspace = true }
+my-private-pkg = { git = "https://github.com/user/repo.git" }
+local-pkg = { path = "../local-package" }
 ```
 
-**Workspace commands:**
+uv automatically handles Git repositories and local path dependencies via `[tool.uv.sources]`.
+
+Commands:
 
 ```bash
-# Build specific workspace package
-uv build --package my-package
-
-# Run in workspace package context
+uv lock                          # single lockfile for all members
+uv sync --all-packages           # sync all workspace members
 uv run --package my-package python script.py
-
-# Lock workspace (single lockfile for all members)
-uv lock
-```
-
-### 10. Package Building and Publishing
-
-**Build distributions:**
-
-```bash
-# Build wheel and source distribution
-uv build
-
-# Build only wheel
-uv build --wheel
-
-# Build specific workspace package
 uv build --package my-package
-
-# Output to custom directory
-uv build --out-dir dist/
 ```
 
-**Publish to PyPI:**
+**Workspace constraint:**
 
-```bash
-# Publish directly with uv
-uv publish
+Workspaces impose a single `requires-python` constraint for all members, calculated as the intersection of all member requirements. If a package needs testing on an unsupported Python version, use path dependencies with separate projects instead.
 
-# Publish with token
-uv publish --token $PYPI_TOKEN
+**uv.lock is universal across platforms:**
 
-# Publish to test PyPI
-uv publish --publish-url https://test.pypi.org/legacy/
+- One lockfile works for Linux, macOS, and Windows
+- Replaces multiple platform-specific requirements files
+- Contains exact versions, URLs, and platform markers
+- Commit uv.lock for reproducible builds across all platforms
+- Never edit uv.lock manually - it's generated automatically
 
-# Smoke test before publishing
-uv run --isolated --no-project --with dist/*.whl python -c "import my_package"
-```
+---
 
-## Configuration
+## CI and Docker
 
-### pyproject.toml Structure
-
-**Standard project configuration:**
-
-```toml
-[project]
-name = "myproject"
-version = "1.0.0"
-description = "My awesome project"
-requires-python = ">=3.11"
-dependencies = [
-    "fastapi>=0.115.2",
-    "pydantic>=2.5.3",
-]
-
-# Development dependencies using PEP 735 dependency groups
-[dependency-groups]
-dev = [
-    "pytest>=8.4.2",
-    "pytest-cov>=6.0.0",
-    "pytest-mock>=3.15.1",
-    "ruff>=0.13.3",
-    "pyright>=1.1.406",
-    "mypy>=1.18.2",
-    "pre-commit>=4.3.0",
-]
-docs = ["sphinx>=7.0", "sphinx-rtd-theme>=1.3.0"]
-test = ["pytest-cov>=6.0.0", "pytest-asyncio>=0.21.0"]
-
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
-
-[tool.uv]
-# Core settings
-managed = true
-package = true
-default-groups = ["dev"]
-
-# Resolution
-resolution = "highest"  # or "lowest", "lowest-direct"
-index-strategy = "first-index"
-
-# Build configuration
-compile-bytecode = true
-no-build-isolation-package = ["flash-attn"]
-
-# Python management
-python-preference = "managed"
-python-downloads = "automatic"
-
-# Custom package sources
-[tool.uv.sources]
-torch = { index = "pytorch-cu121" }
-internal-lib = { workspace = true }
-
-# Custom indexes
-[[tool.uv.index]]
-name = "pytorch-cu121"
-url = "https://download.pytorch.org/whl/cu121"
-explicit = true
-```
-
-### Environment Variables
-
-**Key environment variables:**
-
-```bash
-# Cache and directories
-export UV_CACHE_DIR="/custom/cache"
-export UV_PROJECT_ENVIRONMENT=".venv"
-
-# Python management
-export UV_PYTHON_PREFERENCE="managed"
-export UV_PYTHON_DOWNLOADS="automatic"
-
-# Network configuration
-export UV_CONCURRENT_DOWNLOADS=20
-export UV_CONCURRENT_BUILDS=8
-
-# Index authentication
-export UV_INDEX_PRIVATE_USERNAME="user"
-export UV_INDEX_PRIVATE_PASSWORD="pass"
-
-# Preview features
-export UV_PREVIEW=1
-
-# Disable cache
-export UV_NO_CACHE=1
-
-# System Python
-export UV_SYSTEM_PYTHON=1
-```
-
-For complete configuration reference, see `references/configuration.md`.
-
-## Common Workflows
-
-### Starting a New Project
-
-```bash
-# 1. Initialize project
-uv init myproject
-cd myproject
-
-# 2. Add dependencies
-uv add fastapi uvicorn sqlalchemy
-
-# 3. Add dev dependencies
-uv add --dev pytest ruff mypy
-
-# 4. Run application
-uv run python main.py
-
-# 5. Run tests
-uv run pytest
-```
-
-### Creating a Portable Script
-
-```bash
-# 1. Create script with metadata
-uv init --script analyze.py --python 3.11
-
-# 2. Add dependencies
-uv add --script analyze.py pandas matplotlib
-
-# 3. Edit script content
-# (add your code to analyze.py)
-
-# 4. Lock for reproducibility
-uv lock --script analyze.py
-
-# 5. Make executable
-chmod +x analyze.py
-
-# 6. Run
-./analyze.py
-```
-
-### Migrating from pip/requirements.txt
-
-```bash
-# 1. Initialize project
-uv init --bare
-
-# 2. Import dependencies
-uv add -r requirements.txt
-uv add --dev -r requirements-dev.txt
-
-# 3. Remove old files
-rm requirements.txt requirements-dev.txt
-
-# 4. Use uv commands going forward
-uv sync  # Install dependencies
-uv add new-package  # Add new dependency
-```
-
-### Migrating from Poetry
-
-```bash
-# Option 1: Automated migration
-uvx migrate-to-uv
-uvx migrate-to-uv --dry-run  # Preview first
-
-# Option 2: Manual conversion
-# - Convert [tool.poetry] to [project]
-# - Convert poetry.lock to uv.lock: uv lock
-# - Use uv commands instead of poetry commands
-```
-
-### CI/CD Integration (GitHub Actions)
-
-**Basic CI workflow:**
+### GitHub Actions Pattern
 
 ```yaml
-name: CI
-on: [push, pull_request]
+- name: Set up uv
+  uses: astral-sh/setup-uv@v6
 
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+- name: Cache uv
+  uses: actions/cache@v4
+  with:
+    path: ~/.cache/uv
+    key: ${{ runner.os }}-uv-${{ hashFiles('**/uv.lock') }}
+    restore-keys: |
+      ${{ runner.os }}-uv-
 
-      - name: Install uv
-        uses: astral-sh/setup-uv@v6
-        with:
-          enable-cache: true
-
-      - name: Set up Python
-        run: uv python install 3.11
-
-      - name: Install dependencies
-        run: uv sync --frozen --all-extras
-
-      - name: Run tests
-        run: uv run pytest
-
-      - name: Run linters
-        run: |
-          uv run ruff check .
-          uv run mypy .
+- run: uv python install 3.12
+- run: uv sync --frozen --all-extras # fail if lockfile out of date
+- run: uv run pytest
+- run: uv run ruff check .
 ```
 
-**Publishing workflow with trusted publishing:**
+**CI cache best practices:**
 
-```yaml
-name: Publish
-on:
-  push:
-    tags:
-      - v*
+- Use `UV_CACHE_DIR` environment variable for explicit cache location
+- Include uv.lock hash in cache key for automatic invalidation
+- Run `uv cache prune` periodically in CI to prevent unbounded growth
 
-jobs:
-  publish:
-    runs-on: ubuntu-latest
-    environment:
-      name: pypi
-    permissions:
-      id-token: write
-      contents: read
-    steps:
-      - uses: actions/checkout@v5
-      - uses: astral-sh/setup-uv@v6
-      - run: uv python install 3.13
-      - run: uv build
-      - run: uv run --isolated --no-project --with dist/*.whl tests/smoke_test.py
-      - run: uv publish # Uses trusted publishing
-```
-
-### Docker Integration
+### Docker Pattern
 
 ```dockerfile
-FROM python:3.12-slim
-
-# Install uv
+# Install uv (official installer)
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /usr/local/bin/uv
 
-WORKDIR /app
-
-# Copy dependency files
+# Copy project files
 COPY pyproject.toml uv.lock ./
 
 # Install dependencies
 RUN uv sync --frozen --no-dev
 
-# Copy application
-COPY . .
-
-# Use virtual environment
+# Use .venv as environment
 ENV PATH="/app/.venv/bin:$PATH"
-
+ENV PYTHONUNBUFFERED=1
 CMD ["python", "main.py"]
 ```
 
-### Git Hook Integration (pre-commit / prek)
-
-**Configure uv-managed tools in `.pre-commit-config.yaml`:**
-
-**Note**: Both pre-commit and prek use the same configuration file with identical syntax.
-
-```yaml
-# .pre-commit-config.yaml
-repos:
-  - repo: local
-    hooks:
-      - id: custom-hook
-        name: Run Custom Hook
-        entry: uv run my-hook-script
-        language: system
-        stages: [commit]
-        pass_filenames: false
-        always_run: true
-```
-
-**Benefits of uv run in git hooks:**
-
-- Uses project's locked dependencies automatically
-- No separate hook environment needed
-- Ensures consistency between development and git hook checks
-- Works with both pre-commit (Python) and prek (Rust)
+---
 
 ## Troubleshooting
 
-### "Externally Managed" Error
+| Symptom                    | Solution                                                                |
+| -------------------------- | ----------------------------------------------------------------------- |
+| "Externally managed" error | Use virtualenv: `uv venv`                                               |
+| Build failures             | Check for missing compilers/headers, try tightening version constraints |
+| Lockfile out of sync       | Run `uv lock` to regenerate `uv.lock`                                   |
+| Cache issues               | Run `uv cache clean` or `uv cache prune`                                |
+| Wrong Python version       | Run `uv run --python 3.13 script.py` to force version                   |
 
-**Problem**: `error: The interpreter is externally managed`
-
-**Solution**: Use virtual environments instead of `--system`:
-
-```bash
-uv venv
-source .venv/bin/activate
-uv pip install package
-```
-
-### Build Failures
-
-**Problem**: Package fails to build from source
-
-**Common causes**:
-
-- Missing system dependencies (compilers, headers)
-- Python version incompatibility
-- Outdated package version
-
-**Solutions**:
-
-- Install system dependencies: `apt-get install python3-dev build-essential`
-- Add version constraints: `uv add "numpy>=1.20"`
-- Check error message for missing modules
-
-### Lockfile Out of Sync
-
-**Problem**: Dependencies changed but lockfile not updated
-
-**Solutions**:
+### Cache Management
 
 ```bash
-uv lock           # Regenerate lockfile
-uv sync --locked  # Error if out of sync (CI mode)
-uv sync --frozen  # Don't update lockfile
+uv cache dir          # Show cache location
+uv cache clean        # Clear all caches
+uv cache prune        # Remove unused entries only
 ```
 
-### Cache Issues
+**Cache location by platform:**
 
-**Problem**: Stale cache causing problems
+- macOS/Linux: `$HOME/.cache/uv` or `$XDG_CACHE_HOME/uv`
+- Windows: `%LOCALAPPDATA%\uv\cache`
+- Override with `UV_CACHE_DIR` environment variable
 
-**Solutions**:
+**Global cache sharing:**
 
-```bash
-uv cache clean          # Clean entire cache
-uv cache prune          # Remove unreachable entries
-uv --no-cache <command> # Bypass cache temporarily
-```
+uv's cache is shared across:
+
+- All projects on the same machine
+- Standalone PEP 723 scripts
+- Tools installed via `uv tool`
+
+This deduplication means:
+
+- Downloading a package once makes it available to all contexts
+- Switching between projects is nearly instantaneous with warm cache
+- Disk usage is minimized across the entire development environment
+
+**Ephemeral environments:**
+
+- PEP 723 scripts create isolated environments per execution
+- These environments are cached and reused for subsequent runs
+- No manual environment management required
+- Each script runs in its own sandbox, preventing dependency conflicts
 
 ### Common Pitfalls
 
-**1. Forgetting to sync after adding dependencies:**
+- Forgetting `uv sync` after `uv add`
+- Using `uv venv` on existing project and wiping the environment
+- Not using `--frozen` in CI, so lockfile drift goes unnoticed
+- Wrong glob patterns in workspace members (`["packages/"]` vs `["packages/*"]`)
+- Not caching `~/.cache/uv` in CI, leading to slower builds
+
+---
+
+## Migration Patterns
+
+### From pip/requirements.txt
+
+**Best practice with constraints (preserves locked versions):**
 
 ```bash
-uv add requests  # Adds to pyproject.toml and updates lockfile
-uv sync          # Required to actually install the package
+# Initialize new project
+uv init
+
+# Import with constraints (preserves exact versions from requirements.txt)
+uv add -r requirements.in -c requirements.txt
+
+# For dev dependencies
+uv add --dev -r requirements-dev.in -c requirements-dev.txt
+
+# For custom groups
+uv add --group docs -r requirements-docs.in -c requirements-docs.txt
+
+# Lock and sync
+uv lock
+uv sync
 ```
 
-**2. Incorrect workspace glob patterns:**
-
-- Wrong: `members = ["packages/"]` (missing asterisk)
-- Correct: `members = ["packages/*"]`
-
-**3. Missing build-system for libraries:**
-
-Libraries and packages require a `[build-system]` section:
-
-```toml
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
-```
-
-**4. Wrong file mode for TOML operations:**
-
-- Use text mode `'r'` and `'w'` with tomlkit
-- Do not use binary mode `'rb'` or `'wb'`
-
-**5. Incorrect workspace source syntax:**
-
-- Wrong: `{ workspace = "true" }` (string "true")
-- Correct: `{ workspace = true }` (boolean true)
-
-**6. Not using --frozen in CI:**
+**Simple migration (for loose requirements):**
 
 ```bash
-# CI should fail if lockfile is outdated
-uv sync --frozen
+uv init
+uv add -r requirements.txt
+uv sync
 ```
 
-**7. Incompatible Python version ranges in workspaces:**
+### From Poetry
 
-All workspace members must have compatible `requires-python` ranges. If one member requires `>=3.11` and another requires `>=3.12`, the workspace will use `>=3.12`.
+```bash
+# Initialize new project
+uv init --lib || uv init
+cp pyproject.toml pyproject.backup
 
-For more troubleshooting scenarios, see `references/troubleshooting.md`.
+# Manually migrate dependencies from Poetry sections
+# Extract from [tool.poetry.dependencies] and add with uv:
+uv add <production-deps>
+uv add --dev <dev-deps>
 
-## Resources
+# Lock and test
+uv lock
+uv sync
+uv run pytest
+```
 
-This skill includes comprehensive reference documentation:
+### Export to Other Formats
 
-### references/
+```bash
+# Export to PEP 751 pylock.toml for interoperability
+uv export -o pylock.toml
 
-- `cli_reference.md` - Complete CLI commands and arguments reference
-- `configuration.md` - All configuration options and environment variables
-- `workflows.md` - Detailed workflow guides and examples
-- `troubleshooting.md` - Common issues and solutions
+# Export to requirements.txt format
+uv export -o requirements.txt
+```
 
-### assets/
+---
 
-- `pyproject_templates/` - Example pyproject.toml configurations
-- `script_examples/` - PEP 723 script templates
-- `docker_examples/` - Docker configuration templates
-- `github_actions/` - CI/CD workflow examples
+## Dynamic Sourcing Protocol
 
-## Key Principles
+<fetch_protocol>
+**MANDATORY FETCH**: Before using uv, fetch the content from https://docs.astral.sh/uv/
 
-1. **Speed**: uv is 10-100x faster than traditional tools
-2. **Reproducibility**: Lockfiles ensure consistent environments
-3. **Simplicity**: Single tool replaces multiple Python tools
-4. **Modern Standards**: PEP 723 scripts, standard pyproject.toml
-5. **Developer Experience**: Automatic Python installation, smart defaults
+This contains the authoritative and complete CLI reference. The local skill focuses on Seed System philosophy and patterns.
+</fetch_protocol>
 
-## Version Information
+---
 
-Current latest version: **0.9.5** (October 2025)
+## Navigation
 
-Key recent features:
+**Official Documentation**:
 
-- Python 3.14 support with free-threaded builds
-- Enhanced authentication system
-- Advanced build configuration
-- Workspace improvements
-- Docker image optimizations
+- Complete CLI reference → https://docs.astral.sh/uv/
 
-## External Resources
+**Local References**:
 
-- Official docs: <https://docs.astral.sh/uv/>
-- GitHub: <https://github.com/astral-sh/uv>
-- Concepts guide: <https://docs.astral.sh/uv/concepts/>
-- Migration guides: <https://docs.astral.sh/uv/guides/migration/>
+| If you need...             | See...                            |
+| -------------------------- | --------------------------------- |
+| Seed System usage patterns | `references/cli-reference.md`     |
+| Complete workflow examples | `references/workflow-examples.md` |
+
+---
+
+## Summary
+
+**Default to uv for all Python packaging work.**
+
+**Priority: Standalone scripts > Projects. Use standalone scripts with PEP 723 for single-file tasks.**
+
+**Key principles for 2026:**
+
+- **Standalone scripts (preferred)**: `uv init --script` or manual PEP 723 → `uv run script.py`
+  - Use shebang `#!/usr/bin/env -S uv run` for executable scripts
+  - Add inline dependencies with `uv add --script script.py <pkg>`
+  - Lock scripts for reproducibility with `uv lock --script script.py`
+  - Use `exclude-newer` for temporal reproducibility (optional)
+
+- **Projects (only when explicitly requested)**: `uv init` → `uv add` → `uv lock` → `uv sync` → `uv run`
+  - `uv init --app` for applications, `uv init --lib` for libraries
+  - Creates: pyproject.toml, .gitignore, .python-version, README.md, main.py
+  - Use `[dependency-groups]` instead of multiple requirements files
+  - `uv.lock` is universal across platforms (one file for Linux/macOS/Windows)
+
+- **CLI tools**: `uvx <tool>` for one-offs, `uv tool install` for frequent use
+
+- **Migration**:
+  - Prefer `uv add -r requirements.in -c requirements.txt` to preserve locked versions
+  - Use `uv pip compile --universal` for platform-specific dependencies
+  - Git and path dependencies auto-handled via `[tool.uv.sources]`
+
+- **CI/Docker**:
+  - Use `UV_CACHE_DIR` for explicit cache location
+  - Cache `~/.cache/uv` with uv.lock in cache key
+  - Use `uv sync --frozen` to catch lockfile drift
+  - Use `uv run --isolated` for clean CI environments
+
+- **Performance** (quantified benchmarks from RealPython):
+  - JupyterLab install: 2.6s (uv) vs 21.4s (pip) = **8× faster**
+  - requirements.txt: 2.17s (uv) vs 9.97s (pip) = **4.6× faster**
+  - Cold cache: **8-10× faster** than pip
+  - Hot cache: **80-115× faster** than pip
+  - Due to Rust implementation, parallel downloads, and global cache sharing
+
+---
+
+## Absolute Constraints
+
+<critical_constraint>
+MANDATORY: ALWAYS prefer uv over pip/poetry/conda for new Python projects
+MANDATORY: NEVER mix pip/poetry/conda with uv in the same project
+MANDATORY: PREFER standalone scripts (PEP 723) over projects for single-file tasks
+MANDATORY: ONLY create pyproject.toml when explicitly requested or task requires multiple files/tests/publishing
+
+Standalone scripts are preferred for quick tasks and single-file utilities. Only create full projects when:
+
+- User explicitly requests a "project" or "package"
+- Multiple files/modules are needed
+- Tests are required
+- Publishing to PyPI is planned
+
+uv MUST be used for all Python packaging work unless explicitly told otherwise.
+</critical_constraint>
+
+---
+
+## Genetic Code
+
+This component carries essential Seed System principles for context: fork isolation:
+
+<critical_constraint>
+MANDATORY: All components MUST be self-contained (zero .claude/rules dependency)
+MANDATORY: Achieve 80-95% autonomy (0-5 AskUserQuestion rounds per session)
+MANDATORY: Description MUST use What-When-Not format in third person
+MANDATORY: No component references another component by name in description
+MANDATORY: Progressive disclosure - references/ for detailed content
+MANDATORY: Use XML for control (mission_control, critical_constraint), Markdown for data
+No exceptions. Portability invariant must be maintained.
+</critical_constraint>
+
+**Delta Standard**: Good Component = Expert Knowledge − What Claude Already Knows
+
+**Recognition Questions**:
+
+- "Would Claude know this without being told?" → Delete (zero delta)
+- "Can this work standalone?" → Fix if no (non-self-sufficient)
+- "Did I read the actual file, or just see it in grep?" → Verify before claiming
+
+---

@@ -2,7 +2,7 @@
   "name": "web-test-wallet-setup",
   "description": "Set up MetaMask wallet extension for Web3 DApp testing - download extension, import wallet from private key. Run at test start if tests/config.yaml has web3.enabled=true.",
   "repo": "automata-network/agent-skills",
-  "category": "testing",
+  "category": "data",
   "tags": [
     "web",
     "test",
@@ -10,5 +10,6 @@
     "setup"
   ],
   "stars": 0,
-  "source": "local"
+  "source": "local",
+  "dir_name": "web-test-wallet-setup"
 }

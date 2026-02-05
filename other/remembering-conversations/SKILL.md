@@ -1,54 +1,69 @@
 ---
-name: remembering-conversations
-description: ALWAYS USE THIS SKILL WHEN STARTING ANY KIND OF WORK, NO MATTER HOW TRIVIAL.  You have no memory between sessions and will reinvent solutions or repeat past mistakes UNLESS YOU USE THIS SKILL. Gives you perfect recall of all your past conversations and projects.
+name: Remembering Conversations
+description: Search previous Claude Code conversations for facts, patterns, decisions, and context using semantic or text search
+when_to_use: when partner mentions past discussions, debugging familiar issues, or seeking historical context about decisions and patterns
+version: 1.1.0
 ---
 
 # Remembering Conversations
 
-**Core principle:** Search before reinventing. Searching costs nothing; reinventing or repeating mistakes costs everything.
+Search archived conversations using semantic similarity or exact text matching.
 
-## Mandatory: Use the Search Agent
+**Core principle:** Search before reinventing.
 
-**YOU MUST dispatch the search-conversations agent for any historical search.**
+**Announce:** "I'm searching previous conversations for [topic]."
 
-Announce: "Dispatching search agent to find [topic]."
-
-Then use the Task tool with `subagent_type: "search-conversations"`:
-
-```
-Task tool:
-  description: "Search past conversations for [topic]"
-  prompt: "Search for [specific query or topic]. Focus on [what you're looking for - e.g., decisions, patterns, gotchas, code examples]."
-  subagent_type: "search-conversations"
-```
-
-The agent will:
-1. Search with the `search` tool
-2. Read top 2-5 results with the `show` tool
-3. Synthesize findings (200-1000 words)
-4. Return actionable insights + sources
-
-**Saves 50-100x context vs. loading raw conversations.**
+**Setup:** See INDEXING.md
 
 ## When to Use
 
-Search proactively:
-- Before implementing features
-- Before making architectural decisions
-- When debugging (especially familiar-seeming issues)
-- When partner mentions past work
-- At the start of ANY non-trivial task
+**Search when:**
+- Your human partner mentions "we discussed this before"
+- Debugging similar issues
+- Looking for architectural decisions or patterns
+- Before implementing something familiar
 
-Don't search:
-- For info in current conversation
-- For current codebase structure (use Grep/Read)
+**Don't search when:**
+- Info in current conversation
+- Question about current codebase (use Grep/Read)
 
-## Direct Tool Access (Discouraged)
+## In-Session Use
 
-You CAN use MCP tools directly, but DON'T:
-- `mcp__plugin_episodic-memory_episodic-memory__search`
-- `mcp__plugin_episodic-memory_episodic-memory__show`
+**Always use subagents** (50-100x context savings). See skills/using-skills for workflow.
 
-Using these directly wastes your context window. Always dispatch the agent instead.
+**Manual/CLI use:** Direct search (below) for humans outside Claude Code sessions.
 
-See MCP-TOOLS.md for complete API reference if needed for advanced usage.
+## Direct Search (Manual/CLI)
+
+**Tool:** `${SUPERPOWERS_SKILLS_ROOT}/skills/collaboration/remembering-conversations/tool/search-conversations`
+
+**Modes:**
+```bash
+search-conversations "query"              # Vector similarity (default)
+search-conversations --text "exact"       # Exact string match
+search-conversations --both "query"       # Both modes
+```
+
+**Flags:**
+```bash
+--after YYYY-MM-DD    # Filter by date
+--before YYYY-MM-DD   # Filter by date
+--limit N             # Max results (default: 10)
+--help                # Full usage
+```
+
+**Examples:**
+```bash
+# Semantic search
+search-conversations "React Router authentication errors"
+
+# Find git SHA
+search-conversations --text "a1b2c3d4"
+
+# Time range
+search-conversations --after 2025-09-01 "refactoring"
+```
+
+Returns: project, date, conversation summary, matched exchange, similarity %, file path.
+
+**For details:** Run `search-conversations --help`

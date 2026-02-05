@@ -1,300 +1,438 @@
 ---
 name: skill-reviewer
-description: |
-  既存スキルの品質をレビューし、改善提案を行うスキル。
-  以下の状況で使用:
-  (1) ユーザーが「[スキル名]をレビューして」「[スキル名]の品質を確認して」と依頼した時
-  (2) ユーザーが明示的に「/skill-reviewer」を実行した時
-  (3) スキル開発完了後、公開前の最終チェックを求められた時
+description: Evaluates skill effectiveness, suggests improvements to instructions, identifies missing edge cases, and recommends structure changes.
 ---
 
 # Skill Reviewer
 
-既存スキルの品質をレビューし、チェックリストに基づいて改善提案を行う。
+## Purpose
 
-## ペルソナ
+The Skill Reviewer provides comprehensive quality assurance and improvement recommendations for Claude Code skills. It evaluates skills against official Anthropic guidelines, identifies clarity issues, detects missing edge cases, and suggests structural improvements. Use this skill to validate skill quality, identify gaps, and ensure skills meet professional standards before distribution.
 
-スキル設計とプロンプトエンジニアリングのシニアアーキテクト。
-Progressive Disclosure原則とAnthropicのベストプラクティスに精通。
+## When to Use
 
-## ゴール
+- **Evaluating New Skills**: Review skills before adding to project or distributing
+- **Improving Existing Skills**: Identify gaps and enhancement opportunities
+- **Quality Assurance**: Ensure skills meet Anthropic guidelines
+- **Documentation Audit**: Check for clarity, completeness, and accessibility
+- **Structure Validation**: Verify proper organization and naming conventions
+- **Edge Case Testing**: Identify scenarios the skill doesn't handle
+- **Pre-Release Review**: Final validation before skill distribution
+- **Team Standards**: Ensure consistency across skill libraries
 
-開発されたスキルを本番環境で使用可能なレベルに引き上げる。
+## Capabilities
 
-## ワークフロー
+- **Metadata Validation**: Check YAML frontmatter, name conventions, description completeness
+- **Documentation Audit**: Evaluate clarity, completeness, and user accessibility
+- **Structure Assessment**: Verify directory organization, file hierarchy, and naming patterns
+- **Functionality Coverage**: Identify missing capabilities and edge cases
+- **Instruction Quality**: Analyze step-by-step guides, examples, and usage patterns
+- **Guideline Compliance**: Verify adherence to Anthropic skill standards
+- **Cross-Reference Validation**: Check links to related skills and documentation
+- **Risk Identification**: Spot potential issues, confusion points, and improvement areas
+- **Score Generation**: Provide overall skill quality score (0-100) with grade (A-F)
+- **Improvement Roadmap**: Generate prioritized recommendations for enhancements
 
-1. **スキル情報の取得**: ユーザーにレビュー対象スキルを確認
-2. **ファイル読み込み**: SKILL.md、references/、scripts/、assets/を探索
-3. **チェックリスト評価**: 各フェーズの項目を順次確認
-4. **対話形式レポート**: 問題点と改善提案を段階的に提示
-5. **優先度付け**: Critical/High/Medium/Lowで優先順位を提示
+## Evaluation Framework
 
-## チェックリストの活用
+### 1. Metadata Quality (20 points)
 
-詳細なチェック項目は `references/check-list.md` を参照。
+**YAML Frontmatter**
 
-### 評価フェーズ
+- ✅ Valid YAML syntax
+- ✅ Required fields present: `name`, `description`
+- ✅ Consistent naming (kebab-case, lowercase)
+- ✅ Description is one concise sentence
 
-レビューは以下の4フェーズで実施:
+**Naming Conventions**
 
-#### 1. 事前準備フェーズ
+- ✅ Directory name matches skill name
+- ✅ Descriptive verb-based names (not "helper", "tool", "manager")
+- ✅ Clear intent without jargon
+- ✅ Consistent with project patterns
 
-以下の観点で評価:
+### 2. Documentation Quality (25 points)
 
-- **要件の理解**: スキルの目的が1-2文で明確に説明できるか、具体的シナリオが3つ以上あるか、境界が明確か
-- **ユースケースの定義**: 実際のユーザー発話を想定しているか、動作が段階的に説明されているか、成功基準が検証可能か、エッジケースが想定されているか
-- **リソースの計画**: 参照資料・スクリプト・アセットの必要性と分類が適切か
-- **メタデータの設計**: name、descriptionの形式と内容が適切か
-- **実装スタイルの指定**: Degrees of Freedom、エラーハンドリング、ユーザーインタラクション、出力形式が明確か
-- **トリガーの検証**: トリガーパターンが5-10個あり、具体的で適切な範囲か
+**Structure & Organization**
 
-#### 2. 実装フェーズ
+- ✅ Clear heading hierarchy (H1 → H2 → H3)
+- ✅ Logical content flow
+- ✅ Proper use of formatting (bold, code, lists)
+- ✅ Consistent voice and tone
 
-以下の観点で評価:
+**Content Completeness**
 
-- **frontmatter完全性**: YAML構文が正しいか、必須フィールド（name、description）が含まれるか
-- **body明瞭性**: 命令形で記述されているか、500行以内に収まっているか、参照ファイルへのリンクが明示されているか
-- **resources構成**: references/、scripts/、assets/が適切に分類・配置されているか
+- ✅ Purpose section present and clear
+- ✅ "When to Use" section with scenarios
+- ✅ Capabilities listed with specifics
+- ✅ Usage examples with code snippets
+- ✅ Best practices documented
+- ✅ Troubleshooting section for common issues
 
-#### 3. 検証フェーズ
+**Clarity & Accessibility**
 
-以下の観点で評価:
+- ✅ Jargon-free or well-explained
+- ✅ Active voice preferred
+- ✅ Concrete examples over abstract concepts
+- ✅ Appropriate detail level for audience
 
-- **トリガー動作**: descriptionに記載されたトリガーが実際に機能するか
-- **エラーハンドリング**: 異常系の挙動が文書化されているか
-- **出力形式**: 期待される出力が具体的に説明されているか
+### 3. Structure & Organization (20 points)
 
-#### 4. 公開前フェーズ
+**File Organization**
 
-以下の観点で評価:
+- ✅ SKILL.md in root of skill directory
+- ✅ `scripts/` subdirectory for automation (lowercase, if needed)
+- ✅ `references/` subdirectory for detailed docs (lowercase, if needed)
+- ✅ `assets/` subdirectory for templates/boilerplate (lowercase, if needed)
+- ✅ README.md for development notes (excluded from distribution)
 
-- **ドキュメント完全性**: README.md等の余分なファイルがないか、必要な情報が揃っているか
-- **保守性**: 他の開発者が理解・修正できる構造か
+**Directory Conventions**
 
-詳細な評価基準は `references/check-list.md` を確認すること。
+- ✅ Lowercase directory names
+- ✅ No nested subdirectories in `references/`
+- ✅ Single-level organization
+- ✅ Consistent naming patterns
 
-## レビュー実行プロセス
+**File Size Constraints**
 
-### ステップ1: スキル特定とファイル探索
+- ✅ SKILL.md under 500 lines (move excessive detail to `references/`)
+- ✅ Reference files over 100 lines have table of contents
+- ✅ Executable scripts have proper permissions (`chmod +x`)
 
-1. レビュー対象のスキル名を確認（ユーザーから明示的に指定されていない場合は質問）
-2. スキルのディレクトリパスを特定（例: `.claude/skills/skill-name/`）
-3. 以下のファイル・ディレクトリを探索:
-   - `SKILL.md`（必須）
-   - `references/`（オプション）
-   - `scripts/`（オプション）
-   - `assets/`（オプション）
-4. 各ファイルの内容を読み込み、構成を把握
+### 4. Functionality & Coverage (20 points)
 
-### ステップ2: チェックリスト評価
+**Scope & Capabilities**
 
-`references/check-list.md` を読み込み、各フェーズの項目を順次確認。
+- ✅ Clear boundaries of what skill does/doesn't do
+- ✅ Realistic capability claims
+- ✅ No overpromising functionality
+- ✅ Dependencies clearly documented
 
-各項目について以下のいずれかで判定:
+**Edge Cases & Error Handling**
 
-- ✅ **PASS**: 基準を満たしている
-- ⚠️ **WARNING**: 改善推奨（必須ではないが品質向上のため）
-- ❌ **FAIL**: 改善必須（基準を満たしていない）
+- ✅ Anticipated edge cases addressed
+- ✅ Error scenarios handled gracefully
+- ✅ Fallback strategies documented
+- ✅ Limitations explicitly stated
 
-評価時のポイント:
+**Practical Applicability**
 
-- **全項目を一度に評価しない**: フェーズごとに区切って段階的に評価
-- **具体的な根拠を示す**: 「不足」ではなく「SKILL.mdのX行目にY情報がない」と具体的に指摘
-- **改善案を提示**: 問題点だけでなく、具体的な改善例を提示
+- ✅ Real-world usage scenarios covered
+- ✅ Examples are realistic and actionable
+- ✅ Step-by-step guides are complete
+- ✅ Expected outcomes clearly defined
 
-### ステップ3: 対話形式レポート提示
+### 5. Guideline Compliance (15 points)
 
-フェーズごとに結果をセクション分けして提示:
+**Anthropic Standards**
 
-```markdown
-## 📋 レビュー開始: [スキル名]
+- ✅ Follows official skill guidelines
+- ✅ Proper YAML syntax validation
+- ✅ Description includes "when to use" triggers
+- ✅ No auxiliary docs mixed with skill content
 
-**概要**: [スキルの目的を1-2文で要約]
+**Project Standards**
 
----
+- ✅ Aligns with project conventions
+- ✅ Consistent with similar skills
+- ✅ Follows naming patterns
+- ✅ Uses established templates
 
-## 🔍 事前準備フェーズの評価
+**Best Practices**
 
-### 要件の理解
+- ✅ Clear value proposition
+- ✅ Appropriate scope (not too broad)
+- ✅ Progressive content disclosure
+- ✅ Links to related resources
 
-✅ **スキルの目的**: 明確（"XXXを実行する"と1文で説明可能）
+## Usage
 
-⚠️ **具体的シナリオ**: 2つしか想定されていない
-   **推奨**: 最低3つのユースケースを文書化
+### Basic Review
 
-❌ **境界の明確化**: スキルの範囲が不明瞭
-   **問題**: SKILL.mdに「何を含まないか」の記述がない
-   **改善案**:
-   ```markdown
-   ## スキルの範囲
-
-   このスキルは以下を含む:
-   - ...
-
-   このスキルは以下を含まない:
-   - ...
-   ```
-   **優先度**: Medium
-
-### ユースケースの定義
-
-✅ **実際のユーザー発話**: 想定されている（description参照）
-
-❌ **エッジケース**: 異常系の想定が不足
-   **問題**: SKILL.mdに失敗パターンの記述なし
-   **改善案**:
-   ```markdown
-   ## エラーハンドリング
-
-   - ファイルが見つからない場合: エラーメッセージを表示してユーザーに確認
-   - パーミッションエラー: sudo実行を提案
-   - タイムアウト: リトライ回数と間隔を指定
-   ```
-   **優先度**: High
-
----
-
-## 📝 実装フェーズの評価
-
-### frontmatter完全性
-
-✅ **YAML構文**: 正しい
-
-❌ **description**: トリガー例が不足
-   **問題**: descriptionに具体的なトリガーパターンが1つしかない
-   **改善案**:
-   ```yaml
-   description: |
-     既存スキルの品質をレビューし、改善提案を行うスキル。
-     以下の状況で使用:
-     (1) ユーザーが「[スキル名]をレビューして」「[スキル名]の品質を確認して」「[スキル名]を評価して」と依頼した時
-     (2) ユーザーが明示的に「/skill-reviewer [スキル名]」を実行した時
-     (3) スキル開発完了後、「公開前にチェックして」「最終確認して」と求められた時
-     (4) スキル改善時、「どこを直すべきか教えて」と相談された時
-   ```
-   **優先度**: High
-
-### body明瞭性
-
-✅ **命令形記述**: 全て命令形で記述されている
-
-⚠️ **行数**: 520行（500行以内推奨を超過）
-   **推奨**: 詳細な例や説明をreferences/に分離
-   **優先度**: Low
-
----
-
-## 🧪 検証フェーズの評価
-
-### トリガー動作
-
-✅ **description記載トリガー**: 想定通りに機能
-
-### 出力形式
-
-✅ **具体的な出力例**: SKILL.mdに記載されている
-
----
-
-## 📤 公開前フェーズの評価
-
-### ドキュメント完全性
-
-✅ **余分なファイルなし**: README.md等の不要ファイルがない
-
-### 保守性
-
-✅ **理解しやすい構造**: 他の開発者が修正可能
-
----
-
-## 📊 総合評価
-
-### 問題サマリー
-
-- 🔴 Critical: 0件
-- 🟠 High: 2件
-- 🟡 Medium: 1件
-- 🟢 Low: 1件
-
-### 🎯 優先改善アクション
-
-1. **[High]** エッジケースの文書化
-   - **実施内容**: SKILL.mdにエラーハンドリングセクション追加
-   - **期待効果**: ユーザーが問題発生時の挙動を予測可能に
-
-2. **[High]** トリガーパターンの拡充
-   - **実施内容**: descriptionに5-10個の具体例を追加
-   - **期待効果**: スキル発動の精度向上、誤トリガー削減
-
-3. **[Medium]** スキルの境界明確化
-   - **実施内容**: SKILL.mdに「含む/含まない」セクション追加
-   - **期待効果**: ユーザーの期待値調整、他スキルとの棲み分け明確化
-
-4. **[Low]** SKILL.md行数削減
-   - **実施内容**: 詳細な例や補足説明をreferences/に移動
-   - **期待効果**: トークン効率向上、Progressive Disclosure原則準拠
+```bash
+# User: "Review the react-component-scaffolder skill"
+# Skill Reviewer will:
+# 1. Read the SKILL.md file
+# 2. Evaluate against all criteria
+# 3. Generate comprehensive review report
+# 4. Provide improvement recommendations
+# 5. Output skill-reviewer_report.md
 ```
 
-### ステップ4: 総括と優先アクション
+### Structure Review
 
-全フェーズの評価完了後、以下を提示:
+```bash
+# User: "Check the directory structure of the fastapi-endpoint-scaffolder skill"
+# Skill Reviewer will:
+# 1. Verify SKILL.md location and format
+# 2. Check subdirectory organization
+# 3. Validate file naming conventions
+# 4. Review file permissions and sizes
+# 5. Recommend structural improvements
+```
 
-1. **問題サマリー**: Critical/High/Medium/Lowごとの件数
-2. **優先改善アクション**: 優先度順に並べた具体的なアクション（実施内容と期待効果を明記）
+### Edge Case Analysis
 
-## 出力形式
+```bash
+# User: "Identify missing edge cases in the component-builder skill"
+# Skill Reviewer will:
+# 1. Analyze described capabilities
+# 2. Brainstorm unhandled scenarios
+# 3. Test against common failure modes
+# 4. List missing functionality
+# 5. Recommend coverage improvements
+```
 
-対話形式で段階的にフィードバックを提供:
+### Compliance Check
 
-1. **フェーズごとの評価**: 各フェーズの結果を順次提示（一度に全て出力しない）
-2. **問題検出時の即座提案**: 問題を見つけたら即座に改善提案を提示
-3. **最後に優先度付きリスト**: 全評価完了後、優先度順のアクションリストを提示
+```bash
+# User: "Verify that my-new-skill follows Anthropic guidelines"
+# Skill Reviewer will:
+# 1. Validate YAML frontmatter
+# 2. Check naming conventions
+# 3. Verify description completeness
+# 4. Review against official standards
+# 5. Report compliance status
+```
 
-### 出力例テンプレート
+## Examples
 
-ステップ3の例を参照。
+### Example 1: Quality Review Report
 
-重要ポイント:
+**Skill Reviewed**: `jest-test-scaffolder`
 
-- **絵文字の活用**: 📋 🔍 📝 🧪 📤 📊 🎯 ✅ ⚠️ ❌ 🔴 🟠 🟡 🟢 等で視認性向上
-- **セクション分け**: フェーズごとに明確に区切る（`---`使用）
-- **具体的な改善案**: コードブロックや箇条書きで具体例を提示
-- **優先度の明示**: Critical/High/Medium/Lowを各問題に付与
+**Review Output**:
 
-## 注意事項
+```
+# Skill Review: jest-test-scaffolder
 
-### トークン効率
+## Overall Score: 87/100 (Grade: B+)
 
-- `references/check-list.md`は小さい（56行）ため、初回に全体読み込み
-- 対象スキルのreferences/が複数ある場合、内容を推測してから選択的読み込み
-- SKILL.mdと対象スキルのファイル群はGlobで探索→必要箇所のみRead
+### Metadata Quality: 18/20
+✅ Valid YAML frontmatter
+✅ Clear, concise description
+❌ Description could include mention of "Jest" specifically
+⚠️  Consider adding example output reference
 
-### Progressive Disclosure原則
+### Documentation Quality: 23/25
+✅ Comprehensive "When to Use" section
+✅ Clear capabilities list
+❌ Missing troubleshooting section
+⚠️  One example could show error handling
 
-- 全項目を一度に評価せず、フェーズごとに区切る
-- 問題が多い場合は重要度順に段階的提示（一度に10個以上の問題を提示しない）
-- 詳細なチェック基準は`references/check-list.md`に委譲
+### Structure & Organization: 19/20
+✅ Proper directory structure
+✅ SKILL.md under 500 lines
+❌ Reference files lack table of contents
+⚠️  Consider adding assets/ directory for templates
 
-### 具体性
+### Functionality & Coverage: 19/20
+✅ Real-world scenarios covered
+✅ Clear step-by-step guide
+⚠️  Missing edge case: TypeScript strict mode configuration
+⚠️  No mention of coverage threshold testing
 
-- 抽象的指摘（「不十分」「改善が必要」）ではなく、具体的な問題箇所と改善案を提示
-- 改善案はコード例や文言例で示す
-- 優先度の根拠を明確に説明（「なぜHighなのか」）
+### Guideline Compliance: 14/15
+✅ Follows Anthropic standards
+⚠️  Could strengthen "when to use" language
 
-### 対話形式の重視
+## Recommendations
 
-- 一方的なレポート出力ではなく、ユーザーとの対話を促す
-- 問題検出時は「この部分を改善しますか?」と確認
-- 優先度の高い問題から順に提示し、ユーザーの反応を見て次に進む
+### Priority 1 (Critical)
+1. Add troubleshooting section for common Jest configuration issues
+2. Document edge case: TypeScript strict mode with React Testing Library
 
-## チェックリスト詳細参照
+### Priority 2 (High)
+1. Add table of contents to reference files
+2. Include example output in capabilities section
+3. Add coverage threshold testing to best practices
 
-各フェーズの詳細なチェック項目は `references/check-list.md` を確認すること。
+### Priority 3 (Nice to Have)
+1. Create templates/ directory with example test files
+2. Add video walkthrough link
+3. Document advanced patterns for custom matchers
 
-主要チェックポイント:
+## Usage Statistics
+- User Feedback: 4.2/5 ⭐
+- Effectiveness: High (solving real problems)
+- Complexity: Medium
+```
 
-- **事前準備**: 要件の理解、ユースケース定義、リソース計画、メタデータ設計、実装スタイル、トリガー検証
-- **実装**: frontmatter完全性、body明瞭性、resources構成
-- **検証**: トリガー動作、エラーハンドリング、出力形式
-- **公開前**: ドキュメント完全性、保守性
+### Example 2: Edge Case Analysis
+
+**Skill Reviewed**: `deployment-manager`
+
+**Edge Cases Identified**:
+
+```markdown
+## Missing Edge Case Coverage
+
+### Unhandled Scenarios
+
+1. **Deployment Timeout**: No guidance on stuck deployments
+2. **Rollback Failures**: What if rollback fails?
+3. **Multi-Region**: Only documents single-region deployment
+4. **Authentication Expiry**: No mention of credential refresh during long deployments
+5. **Partial Failures**: Handling when some services deploy but others fail
+6. **Concurrent Deployments**: What happens if two deployments run simultaneously?
+7. **Resource Constraints**: No mention of memory/disk requirements
+8. **Network Interruptions**: Handling transient network failures
+
+### Recommended Additions
+
+- Add deployment timeout configuration section
+- Document rollback procedures in detail
+- Include multi-region deployment guide
+- Add environment variable validation step
+- Create contingency/recovery procedures
+- Add resource requirements documentation
+```
+
+### Example 3: Structure Recommendations
+
+**Skill Reviewed**: `component-builder`
+
+**Structure Improvements**:
+
+```markdown
+## Current Structure
+```
+
+.claude/skills/component-builder/
+├── SKILL.md (620 lines - exceeds 500 limit)
+└── README.md
+
+```
+
+## Recommended Structure
+```
+
+.claude/skills/component-builder/
+├── SKILL.md (380 lines - main overview)
+├── README.md (development notes, not distributed)
+├── references/
+│ ├── MATERIAL_DESIGN_3_TOKENS.md (detailed token reference)
+│ ├── COMPONENT_PATTERNS.md (advanced patterns, 150+ lines, includes TOC)
+│ └── TYPESCRIPT_SETUP.md (TypeScript configuration guide)
+├── scripts/
+│ ├── generate-component.sh (executable)
+│ └── validate-m3-tokens.py (executable)
+└── assets/
+├── component.tsx.template
+├── component.test.tsx.template
+└── component.stories.tsx.template
+
+```
+
+## Benefits
+- SKILL.md within 500-line limit (progressive disclosure)
+- Reference files organized by topic
+- Reusable templates in assets/
+- Automation scripts clearly separated
+- Better content navigation
+```
+
+## Best Practices
+
+### For Skill Developers
+
+1. **Self-Review First**: Use this skill before distributing
+2. **Iterate Based on Feedback**: Implement recommendations progressively
+3. **Test Your Examples**: Verify all code snippets work
+4. **Get Peer Review**: Have teammates review critical skills
+5. **Version Your Skills**: Track changes and improvements
+
+### For Skill Maintenance
+
+1. **Regular Audits**: Review skills quarterly
+2. **User Feedback**: Incorporate reports and suggestions
+3. **Update Examples**: Keep code samples current
+4. **Expand Coverage**: Add edge cases as they're discovered
+5. **Archive Old Skills**: Retire obsolete skills clearly
+
+### For Skill Distribution
+
+1. **Pre-Release Review**: Score ≥80 before distribution
+2. **Document Dependencies**: List required tools/knowledge
+3. **Provide Feedback Mechanism**: How users report issues
+4. **Create Support Resources**: Links to help and troubleshooting
+5. **Plan Updates**: Version numbering and upgrade path
+
+## Scoring Guidelines
+
+### Grade Scale
+
+- **A (90-100)**: Exceptional - Ready for distribution, exemplary quality
+- **B (80-89)**: Good - Ready for distribution, minor improvements suggested
+- **C (70-79)**: Satisfactory - Usable but needs improvements before wider sharing
+- **D (60-69)**: Poor - Needs significant work before distribution
+- **F (Below 60)**: Inadequate - Not ready for release, major rework required
+
+### Minimum Distribution Standards
+
+- ✅ Score ≥ 80 (Grade B or higher)
+- ✅ All Priority 1 recommendations addressed
+- ✅ Comprehensive documentation
+- ✅ Tested examples and workflows
+- ✅ Clear scope and limitations
+
+## Troubleshooting
+
+### Issue: Score Below 80
+
+**Solution**:
+
+1. Address all Priority 1 recommendations first
+2. Add missing sections (troubleshooting, edge cases)
+3. Improve documentation clarity
+4. Get peer review for feedback
+5. Iterate and re-review
+
+### Issue: Unclear Recommendations
+
+**Solution**:
+
+1. Request specific examples
+2. Ask for comparison with high-scoring skill
+3. Discuss recommendations with team
+4. Review Anthropic guidelines for clarification
+5. Request follow-up review after changes
+
+### Issue: Scope Too Broad
+
+**Solution**:
+
+1. Break into smaller, focused skills
+2. Move advanced topics to references/
+3. Focus on core use case
+4. Create related skills for extensions
+5. Use "Related Skills" to connect them
+
+## Related Skills
+
+- [skill-creator](.../skill-creator/SKILL.md) - Create new Claude Code skills
+- [task-delegator](.../task-delegator/SKILL.md) - Delegate review tasks to specialized agents
+- [code-reviewer](.../code-reviewer/SKILL.md) - Review code quality and structure
+- [project-health-checker](.../project-health-checker/SKILL.md) - Comprehensive project validation
+- [audit-agent](.../audit-agent/SKILL.md) - Security and quality audits
+
+## Related Documentation
+
+- [Anthropic Skill Guidelines](https://github.com/anthropics/skills/blob/main/skill-creator/SKILL.md)
+- [SKILL_GUIDELINES_AUDIT.md](./.claude/docs/SKILL_GUIDELINES_AUDIT.md) - Project skill audit
+- [Skill Development Best Practices](CLAUDE.md#skills-development--tooling)
+
+## Summary
+
+The Skill Reviewer provides systematic, objective evaluation of Claude Code skills across five key dimensions: metadata, documentation, structure, functionality, and guideline compliance. Use it to ensure skills meet professional standards, identify improvement opportunities, and maintain consistent quality across skill libraries.
+
+**Quick Checklist for High-Quality Skills:**
+
+- ✅ Score ≥ 80/100 (Grade B or higher)
+- ✅ Clear, concise description with "when to use"
+- ✅ Comprehensive documentation with examples
+- ✅ Proper directory structure and naming
+- ✅ Addressed Priority 1 recommendations
+- ✅ All claims tested and verified
+- ✅ Edge cases documented
+- ✅ Related skills and references linked

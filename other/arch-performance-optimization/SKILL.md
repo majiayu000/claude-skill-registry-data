@@ -1,306 +1,58 @@
 ---
-name: performance-optimization
-description: Use when analyzing and improving performance for database queries, API endpoints, or frontend rendering.
+name: arch-performance-optimization
+description: Use when analyzing and improving performance for database queries, API endpoints, frontend rendering, or cross-service communication. Triage skill that routes to database-optimization, frontend-patterns, or provides API/job/cross-service profiling guidance.
 allowed-tools: Read, Write, Edit, Grep, Glob, Bash, Task
+infer: true
 ---
 
-# Performance Optimization Workflow
+# Performance Optimization
 
-## When to Use This Skill
-- Slow API response times
-- Database query optimization
-- Frontend rendering issues
-- Memory usage concerns
-- Scalability planning
+Triage skill for performance issues. Routes to the correct sub-tool or reference based on bottleneck type.
 
-## Pre-Flight Checklist
-- [ ] Identify performance bottleneck
-- [ ] Gather baseline metrics
-- [ ] Determine acceptable thresholds
-- [ ] Plan measurement approach
-
-## Performance Analysis Framework
-
-### Step 1: Identify Bottleneck Type
+## Decision Tree
 
 ```
-Performance Issue
-├── Database (slow queries, N+1)
-├── API (serialization, processing)
-├── Network (payload size, latency)
-└── Frontend (rendering, bundle size)
+Performance Issue?
+├── Database (slow queries, N+1, indexes, pagination)
+│   → Invoke database-optimization skill (covers all DB patterns)
+├── Frontend (rendering, bundle size, change detection)
+│   → ⚠️ MUST READ docs/claude/frontend-patterns.md
+│   → Key: OnPush, trackBy, lazy loading, virtual scroll, tree-shaking
+├── API/Endpoint (response time, payload, serialization)
+│   → ⚠️ MUST READ references/performance-patterns.md (parallel queries, caching, DTOs)
+├── Background Jobs (throughput, batch processing)
+│   → ⚠️ MUST READ references/performance-patterns.md (bounded parallelism, batch ops)
+└── Cross-Service (message bus, eventual consistency)
+    → ⚠️ MUST READ references/performance-patterns.md (payload size, idempotency)
 ```
 
-### Step 2: Measure Baseline
+## Quick Assessment Checklist
 
-```bash
-# API response time
-curl -w "@curl-format.txt" -o /dev/null -s "http://api/endpoint"
+1. **Identify** bottleneck type using decision tree above
+2. **Measure** baseline (response time, query count, bundle size)
+3. **Route** to correct sub-tool or reference
+4. **Apply** patterns from the routed resource
+5. **Verify** improvement against baseline
+6. **Monitor** for regressions
 
-# Database query time (SQL Server)
-SET STATISTICS TIME ON;
-SELECT * FROM Table WHERE ...;
+## EP-Specific Quick Wins
 
-# Frontend bundle analysis
-npm run build -- --stats-json
-npx webpack-bundle-analyzer stats.json
-```
+- **Parallel tuple queries**: `var (a, b) = await (queryA, queryB);`
+- **Eager loading**: `repo.GetAllAsync(filter, ct, e => e.Related)`
+- **Projections**: `.Select(e => new { e.Id, e.Name })` instead of full entity
+- **Full-text search**: `searchService.Search(q, text, Entity.SearchColumns())`
+- **Batch updates**: `repo.UpdateManyAsync(items, dismissSendEvent: true, checkDiff: false)`
+- **Paged processing**: `PageBy(skip, take)` at database level
 
-## Database Optimization
+For detailed patterns, profiling commands, and anti-patterns:
+**⚠️ MUST READ:** `.claude/skills/arch-performance-optimization/references/performance-patterns.md`
 
-### N+1 Query Detection
-```csharp
-// :x: N+1 Problem
-var employees = await repo.GetAllAsync();
-foreach (var emp in employees)
-{
-    // Each iteration queries database!
-    Console.WriteLine(emp.Department.Name);
-}
+## Approval Gate
 
-// :white_check_mark: Eager Loading
-var employees = await repo.GetAllAsync(
-    e => e.CompanyId == companyId,
-    ct,
-    e => e.Department,      // Include Department
-    e => e.Manager          // Include Manager
-);
-```
+Present findings and optimization plan. Wait for explicit user approval before making changes -- performance optimizations can have wide-reaching side effects.
 
-### Query Optimization
-```csharp
-// :x: Loading all columns
-var employees = await repo.GetAllAsync();
-var names = employees.Select(e => e.Name);
 
-// :white_check_mark: Projection
-var names = await repo.GetAllAsync(
-    q => q.Where(e => e.IsActive)
-          .Select(e => e.Name));
-```
+## IMPORTANT Task Planning Notes
 
-### Index Recommendations
-```sql
--- Frequently filtered columns
-CREATE INDEX IX_Employee_CompanyId ON Employees(CompanyId);
-CREATE INDEX IX_Employee_Status ON Employees(Status);
-
--- Composite index for common queries
-CREATE INDEX IX_Employee_Company_Status
-ON Employees(CompanyId, Status)
-INCLUDE (FullName, Email);
-
--- Full-text search index
-CREATE FULLTEXT INDEX ON Employees(FullName, Email);
-```
-
-### Paging Patterns
-```csharp
-// :x: Loading all then paging in memory
-var all = await repo.GetAllAsync();
-var page = all.Skip(skip).Take(take);
-
-// :white_check_mark: Database-level paging
-var page = await repo.GetAllAsync(
-    (uow, q) => q
-        .Where(e => e.IsActive)
-        .OrderBy(e => e.Id)
-        .Skip(skip)
-        .Take(take));
-```
-
-## API Optimization
-
-### Parallel Operations
-```csharp
-// :x: Sequential
-var users = await userRepo.GetAllAsync();
-var companies = await companyRepo.GetAllAsync();
-var settings = await settingsRepo.GetAllAsync();
-
-// :white_check_mark: Parallel (Tuple Await)
-var (users, companies, settings) = await (
-    userRepo.GetAllAsync(),
-    companyRepo.GetAllAsync(),
-    settingsRepo.GetAllAsync()
-);
-```
-
-### Response Size
-```csharp
-// :x: Returning entire entity
-return new Result { Employee = employee };
-
-// :white_check_mark: Return only needed fields
-return new Result
-{
-    Id = employee.Id,
-    Name = employee.FullName,
-    Status = employee.Status
-};
-```
-
-### Caching
-```csharp
-// Static data caching
-private static readonly ConcurrentDictionary<string, LookupData> _cache = new();
-
-public async Task<LookupData> GetLookupAsync(string key)
-{
-    if (_cache.TryGetValue(key, out var cached))
-        return cached;
-
-    var data = await LoadFromDbAsync(key);
-    _cache.TryAdd(key, data);
-    return data;
-}
-```
-
-## Frontend Optimization
-
-### Bundle Size
-```typescript
-// :x: Import entire library
-import _ from 'lodash';
-
-// :white_check_mark: Import specific functions
-import { debounce } from 'lodash-es/debounce';
-```
-
-### Lazy Loading
-```typescript
-// :white_check_mark: Lazy load routes
-const routes: Routes = [
-  {
-    path: 'feature',
-    loadChildren: () => import('./feature/feature.module')
-      .then(m => m.FeatureModule)
-  }
-];
-```
-
-### Change Detection
-```typescript
-// :white_check_mark: OnPush for performance
-@Component({
-  changeDetection: ChangeDetectionStrategy.OnPush
-})
-
-// :white_check_mark: Track-by for lists
-trackByItem = this.ngForTrackByItemProp<Item>('id');
-
-// Template
-@for (item of items; track trackByItem)
-```
-
-### Virtual Scrolling
-```typescript
-// For large lists
-import { CdkVirtualScrollViewport } from '@angular/cdk/scrolling';
-
-<cdk-virtual-scroll-viewport itemSize="50">
-  @for (item of items; track item.id) {
-    <div class="item">{{ item.name }}</div>
-  }
-</cdk-virtual-scroll-viewport>
-```
-
-## Background Job Optimization
-
-### Bounded Parallelism
-```csharp
-// :x: Unbounded
-await items.ParallelAsync(ProcessAsync);
-
-// :white_check_mark: Bounded
-await items.ParallelAsync(ProcessAsync, maxConcurrent: 5);
-```
-
-### Batch Processing
-```csharp
-// :x: One at a time
-foreach (var item in items)
-    await repo.UpdateAsync(item);
-
-// :white_check_mark: Batch update
-await repo.UpdateManyAsync(items, dismissSendEvent: true);
-```
-
-## Performance Monitoring
-
-### Logging Slow Operations
-```csharp
-var sw = Stopwatch.StartNew();
-var result = await ExecuteOperation();
-sw.Stop();
-
-if (sw.ElapsedMilliseconds > 1000)
-    Logger.LogWarning("Slow operation: {Ms}ms", sw.ElapsedMilliseconds);
-```
-
-### Database Query Logging
-```csharp
-// In DbContext configuration
-optionsBuilder.LogTo(
-    Console.WriteLine,
-    new[] { DbLoggerCategory.Database.Command.Name },
-    LogLevel.Information);
-```
-
-## Performance Checklist
-
-### Database
-- [ ] Indexes on filtered columns
-- [ ] Eager loading for relations
-- [ ] Projection for partial data
-- [ ] Paging at database level
-- [ ] No N+1 queries
-
-### API
-- [ ] Parallel operations where possible
-- [ ] Response DTOs (not entities)
-- [ ] Caching for static data
-- [ ] Pagination for lists
-
-### Frontend
-- [ ] Lazy loading for routes
-- [ ] OnPush change detection
-- [ ] Track-by for lists
-- [ ] Virtual scrolling for large lists
-- [ ] Tree-shaking imports
-
-### Background Jobs
-- [ ] Bounded parallelism
-- [ ] Batch operations
-- [ ] Paged processing
-- [ ] Appropriate scheduling
-
-## Anti-Patterns to AVOID
-
-:x: **SELECT * in production**
-```csharp
-var all = await context.Table.ToListAsync();
-```
-
-:x: **Synchronous I/O**
-```csharp
-var result = asyncOperation.Result;  // Blocks thread
-```
-
-:x: **Unbounded result sets**
-```csharp
-await repo.GetAllAsync();  // Could be millions
-```
-
-:x: **Repeated database calls in loops**
-```csharp
-foreach (var id in ids)
-    await repo.GetByIdAsync(id);  // N queries
-```
-
-## Verification Checklist
-- [ ] Baseline metrics recorded
-- [ ] Bottleneck identified and addressed
-- [ ] Changes measured against baseline
-- [ ] No new performance issues introduced
-- [ ] Monitoring in place
+- Always plan and break many small todo tasks
+- Always add a final review todo task to review the works done at the end to find any fix or enhancement needed

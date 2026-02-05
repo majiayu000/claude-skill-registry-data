@@ -1,579 +1,360 @@
 ---
 name: pull-request
-description: Use when creating, updating, or commenting on GitHub pull requests - focuses on material impact, safety, and human reviewability
+description: PR lifecycle management - create PRs with proper commits, merge with validation, and manage PR comments
+context: fork
 ---
 
-# GitHub PR Communication Skill
+You are a Pull Request lifecycle specialist for the vm0 project. Your role is to handle PR creation, merging, and comment management.
 
-Use this skill for creating, updating, or commenting on GitHub pull requests. Focus on material impact, safe operations, and respecting busy reviewers.
+**Note**: For CI monitoring and auto-fixing, use the `pr-check` skill. For code review, use the `pr-review` skill.
 
-## When to Use This Skill
+## Operations
 
-- Creating PRs from feature branches
-- Updating PR descriptions after significant changes
-- Adding comments to communicate with reviewers
-- Any PR communication task
+This skill supports four main operations. Parse the `args` parameter to determine which operation to perform:
 
-## Announcement
+1. **create** - Create a new PR or update existing one
+2. **merge** - Validate checks and merge PR
+3. **list** - List open pull requests for the repository
+4. **comment [pr-id]** - Summarize conversation and post as PR comment
 
-Always announce at start:
+When invoked, check the args to determine the operation and execute accordingly.
 
-```
-"I'm using the gh-pr skill to <create|update|comment on> the pull request."
-```
+---
 
-## Core Principles
+# Operation 1: Create PR
 
-1. **Safety first:** All PR bodies written to `.scratch/pr-bodies/` before use with `gh --body-file`
-2. **Material impact:** Focus on why changes matter, not metrics or file counts
-3. **Smart merge:** Detect manual edits, only update when changes are material
-4. **Human-friendly:** Concise, warm tone; assume busy reviewer
-5. **Flexible workflow:** Explicit commands when clear, smart routing when ambiguous
+## Workflow
 
-## File Structure
-
-```
-.scratch/pr-bodies/
-  drafts/
-    <slugified-title>.md          # Draft body before PR creation
-  <pr-number>/
-    metadata.json                  # PR metadata and state
-    <timestamp>-body.md           # Timestamped snapshots of generated bodies
-    <timestamp>-comment.md        # Comment drafts
-```
-
-### Metadata Schema
-
-```json
-{
-  "pr_number": 123,
-  "branch": "feature/add-skill",
-  "base": "main",
-  "title": "Add spotlight exclusion skill",
-  "created_at": "2025-11-07T10:30:00Z",
-  "last_generated_hash": "abc123def456",
-  "last_updated_at": "2025-11-07T16:45:30Z",
-  "manual_edits_detected": false
-}
-```
-
-## Trigger Patterns
-
-### Explicit Triggers (Always Honored)
-
-- **"create a PR"** / **"open a PR"** → Create flow
-- **"update the PR body/description"** → Update body flow
-- **"comment on the PR"** / **"add a PR comment"** → Comment flow
-
-### Ambiguous Triggers (Smart Routing)
-
-**"update the PR":**
-
-- No PR exists → Error: "No PR found for this branch. Did you mean to create one?"
-- PR exists, no reviews → Update body
-- PR exists, has reviews → Ask: "This PR has reviews. Update body or add comment?"
-
-**"communicate the changes":**
-
-- PR exists, no reviews yet → Update body
-- PR exists, has reviews → Add comment (generates notifications)
-
-## Operation Flows
-
-### 1. Create PR
-
-```
-☐ Check if PR already exists
-  - gh pr view --json number 2>/dev/null
-  - If exists → error or route to update
-
-☐ Gather information
-  - Commits: git log <base>..HEAD
-  - Check for PR template (.github/pull_request_template.md, etc.)
-  - Check for CONTRIBUTING.md
-  - Analyze commit messages and diffs
-
-☐ Generate PR content
-  - Title: from branch name or first commit (imperative mood, <72 chars)
-  - Body:
-    * Follow template structure if exists
-    * Summary: 2-4 bullets of material impact
-    * Test plan: if non-obvious
-    * NO H1 heading (GitHub shows title separately)
-    * NO metrics (# tests, # files, etc.)
-    * Concise, warm tone
-
-☐ Draft review
-  - Write to .scratch/pr-bodies/drafts/<slug>.md
-  - Show draft to user: "Here's the draft PR. Does this look good?"
-  - Allow edits before creating
-
-☐ Create PR
-  - gh pr create --title "..." --body-file .scratch/pr-bodies/drafts/<slug>.md
-  - Capture PR number from output
-
-☐ Archive and track
-  - mkdir -p .scratch/pr-bodies/<number>/
-  - mv draft to <number>/<timestamp>-body.md
-  - Write metadata.json with hash of generated body
-  - rm .scratch/pr-bodies/drafts/<slug>.md
-```
-
-### 2. Update PR Body
-
-```
-☐ Verify PR exists
-  - gh pr view --json number,body,title,state
-  - Load metadata.json if exists
-  - Check state (error if closed/merged unless user confirms)
-
-☐ Detect manual edits
-  - Hash current body: echo "$body" | shasum -a 256
-  - Compare to last_generated_hash in metadata
-  - If differs:
-    * Compute diff: diff <(echo "$last_generated") <(echo "$current")
-    * Analyze: whitespace-only vs content changes
-    * If material: show diff, ask "Overwrite manual edits, merge, or cancel?"
-
-☐ Check for material changes
-  - Re-analyze full commit range: <base>..HEAD
-  - Compare to previous analysis
-  - If no material change:
-    * "The current PR description is still accurate."
-    * Skip update unless user forces
-
-☐ Generate updated body
-  - Follow same content guidelines as create
-  - Re-analyze all commits in range
-
-☐ Draft review
-  - Write to .scratch/pr-bodies/<number>/<timestamp>-body.md
-  - Show diff: current vs proposed
-  - "Here's what would change. Look good?"
-
-☐ Update PR
-  - gh pr edit <number> --body-file <file>
-  - Update metadata.json (hash, timestamp, manual_edits_detected)
-```
-
-### 3. Add PR Comment
-
-```
-☐ Verify PR exists
-  - gh pr view --json number,title,reviews,comments
-  - Check for review activity
-
-☐ Determine comment content
-  - Analyze recent commits since last update
-  - Focus on: what changed and why
-  - Common scenarios:
-    * Responding to review feedback
-    * Noting significant additions after initial review
-    * Summarizing a batch of changes
-
-☐ Draft comment
-  - Write to .scratch/pr-bodies/<number>/<timestamp>-comment.md
-  - Tone: conversational, helpful, concise (3-5 sentences)
-  - Structure: "I've updated the PR to address..."
-  - Show draft to user
-
-☐ Post comment
-  - gh pr comment <number> --body-file <file>
-  - Optional: Update metadata.json with comment timestamp
-```
-
-## Decision Matrix: Update Body vs Comment
-
-**Prefer UPDATE BODY when:**
-
-- PR has no reviews/comments yet
-- User explicitly says "update description/body"
-- Material scope change that needs description rewrite
-
-**Prefer COMMENT when:**
-
-- PR has review activity (comments, requested changes)
-- User mentions "responding to feedback"
-- Batch of changes after initial review
-- Want to notify watchers (comments generate notifications, body updates don't)
-
-## Content Guidelines
-
-### PR Title Format
-
-- **Imperative mood:** "Add", "Fix", "Update", "Refactor"
-- **Concise:** < 72 characters ideal
-- **Capitalize** first word
-- **No period** at end
-- **Derive from:** Branch name (if semantic) or first commit message
-
-### PR Body Structure
-
-**When PR template exists:**
-
-- Follow template structure exactly
-- Fill sections based on commit analysis
-- Preserve template comments/instructions
-
-**When no template exists:**
-
-```markdown
-## Summary
-
-- Material impact point 1
-- Material impact point 2
-- Material impact point 3 (if needed)
-
-## Test plan
-
-- How to verify the changes work
-- Only if non-obvious or requires manual testing
-
-[Optional sections based on context:]
-
-## Breaking changes
-
-## Migration notes
-
-## Follow-up work
-```
-
-### Content Principles
-
-**✅ DO:**
-
-- Focus on material impact: "Enables pattern-based Spotlight exclusions for easier maintenance"
-- Be concise yet warm: "This makes it easier to manage exclusions at scale."
-- Explain why it matters, what problem it solves
-- Include non-obvious testing steps
-
-**❌ DON'T - Common Anti-Patterns:**
-
-**Metrics (unless PR is specifically about them):**
-- ❌ "Added 15 tests" → ✅ "Added test coverage for edge cases"
-- ❌ "Modified 8 files across 3 modules" → ✅ Say nothing (diff shows this)
-- ❌ "Reduced runtime from 2.5s to 1.2s" → ✅ Only if PR is about performance
-- ❌ "Added 250 lines of code" → ✅ Never mention line counts
-- ❌ "Test coverage increased to 85%" → ✅ Only if PR is about coverage
-
-**Implementation details visible in diff:**
-- ❌ "Created new `PatternExpander` class" → ✅ Say nothing (diff shows this)
-- ❌ "Refactored into smaller functions" → ✅ Say nothing unless it's the PR's focus
-- ❌ "Used async/await pattern" → ✅ Say nothing (implementation detail)
-- ❌ "Added error handling" → ✅ Only if error handling is the PR's focus
-
-**Over-explaining/verbose:**
-- ❌ "This change significantly improves the developer experience by implementing a novel approach..."
-- ✅ "Makes it easier to maintain exclusions at scale"
-- ❌ "After careful consideration of multiple approaches, we decided to..."
-- ✅ Just describe what it does and why it matters
-
-**Other common mistakes:**
-- ❌ Use H1 heading (GitHub shows title separately, causes duplication)
-- ❌ List technologies used unless it's a new dependency worth noting
-- ❌ Describe file structure changes unless it's an architectural shift
-- ❌ Mention "following best practices" (assumed)
-- ❌ Say "easy to" or "simple to" (condescending)
-
-**The rule:** If a reviewer can see it in the diff or CI output, don't put it in the PR body unless it's the central focus of the PR.
-
-### Following Repository Guidelines
-
-**Search for PR templates:**
-
-```
-- .github/pull_request_template.md
-- .github/PULL_REQUEST_TEMPLATE.md
-- .github/PULL_REQUEST_TEMPLATE/*.md
-```
-
-**Search for CONTRIBUTING.md:**
-
-```
-- CONTRIBUTING.md
-- .github/CONTRIBUTING.md
-- docs/CONTRIBUTING.md
-```
-
-**If found:** Extract PR-related guidance (required info, checklists, style) and incorporate into body generation.
-
-### Comment Content Guidelines
-
-**Structure:**
-
-```markdown
-I've updated the PR to address the feedback:
-
-- Point about what changed
-- Another significant change
-- Why these changes were made
-
-[Optional: specific response to review comment if relevant]
-```
-
-**Tone:**
-
-- Conversational but professional
-- Acknowledge reviewers' input
-- Explain reasoning when non-obvious
-- Keep brief (3-5 sentences typical)
-
-## Error Handling & Edge Cases
-
-### Safety Checks
-
-**Before creating PR:**
-
-- ✓ Current branch is not main/master
-- ✓ Branch has commits ahead of base
-- ✓ gh CLI is installed and authenticated
-- ✓ User has reviewed draft
-
-**Before updating PR body:**
-
-- ✓ PR exists and is open (warn if closed/merged)
-- ✓ Manual edits check complete
-- ✓ User has reviewed diff
-
-**Before posting comment:**
-
-- ✓ PR exists
-- ✓ Comment is not empty
-- ✓ User has reviewed content
-
-### Common Errors
-
-**No PR exists (when updating/commenting):**
-
-```
-Error: "No PR found for branch '<branch-name>'.
-Would you like to create one?"
-
-Action: Offer to route to create flow
-```
-
-**Multiple PRs for branch:**
-
-```
-1. gh pr list --head <branch> --state open
-2. If exactly 1 open PR → use it
-3. If 0 open PRs:
-   - Check: gh pr list --head <branch> --state all
-   - "No open PR found. Last PR was #123 (closed/merged)."
-   - Offer to create new PR
-4. If >1 open PR (rare):
-   - "Found multiple open PRs: #123, #456. Which one?"
-```
-
-**Not on a branch / on main:**
-
-```
-Error: "Currently on '<branch>'.
-PRs should be created from feature branches, not main/master."
-
-Action: Stop, suggest creating a branch first
-```
-
-**gh CLI not available:**
-
-```
-Error: "GitHub CLI (gh) not found. Install with: brew install gh"
-```
-
-**gh not authenticated:**
-
-```
-Error: "GitHub CLI not authenticated. Run: gh auth login"
-```
-
-### Edge Cases
-
-**Manual edits detected:**
-
-```
-1. Show diff: "The PR body has been manually edited. Here's what changed:"
-2. Ask: "Overwrite manual edits, merge, or cancel?"
-   - Overwrite: Replace with new generated body
-   - Merge: Preserve manually-added sections
-   - Cancel: Keep current body
-```
-
-**No material changes in update:**
-
-```
-"Analyzed commits - no material changes to scope or impact.
-The current PR description is still accurate."
-
-Action: Skip update unless user forces
-```
-
-**Draft in progress:**
-
-```
-"Found existing draft for '<title>'.
-Use existing draft, create new, or cancel?"
-```
-
-**Scratch directory doesn't exist:**
-
-```
-mkdir -p .scratch/pr-bodies/drafts
-```
-
-## Change Detection Algorithm
+### Step 1: Check Current Branch and PR Status
 
 ```bash
-# 1. Quick hash check
-current_hash=$(gh pr view body -q .body < number > --json | shasum -a 256)
-last_hash=$(jq -r .last_generated_hash .scratch/pr-bodies/ < number > /metadata.json)
+# Get current branch
+current_branch=$(git branch --show-current)
 
-# 2. If hashes match → no changes
-if [ "$current_hash" = "$last_hash" ]; then
-  echo "No manual edits detected"
-  exit 0
+# Check if on main branch
+if [ "$current_branch" = "main" ]; then
+    need_new_branch=true
+else
+    # Check if current branch has a PR and if it's merged
+    pr_status=$(gh pr view --json state,mergedAt 2>/dev/null)
+    if [ $? -eq 0 ]; then
+        is_merged=$(echo "$pr_status" | jq -r '.mergedAt')
+        pr_state=$(echo "$pr_status" | jq -r '.state')
+
+        if [ "$is_merged" != "null" ] || [ "$pr_state" = "MERGED" ]; then
+            need_new_branch=true
+        else
+            need_new_branch=false
+        fi
+    else
+        need_new_branch=false
+    fi
 fi
-
-# 3. If hashes differ → compute diff
-gh pr view body -q .body < number > --json > /tmp/current.md
-cat .scratch/pr-bodies/ < number > / < last-timestamp > -body.md > /tmp/last.md
-diff -u /tmp/last.md /tmp/current.md
-
-# 4. Analyze diff
-# - Whitespace only? → Not material
-# - Content changes? → Material, set manual_edits_detected = true
 ```
 
-## Integration with Other Skills
+### Step 2: Create Feature Branch (if needed)
 
-**working-in-scratch-areas:**
-
-- All drafts go to `.scratch/pr-bodies/`
-- Auto-creates directory structure
-
-**git-preferences-and-practices:**
-
-- Respects git workflow preferences
-- Works with branch naming conventions
-
-**Repository conventions:**
-
-- Checks for ADRs and references them
-- Links to docs/plans if design doc exists
-
-## Example Workflows
-
-### Creating a PR
-
-```
-User: "create a PR for this branch"
-
-Claude: "I'm using the gh-pr skill to create the pull request."
-[Analyzes commits: 5 commits adding spotlight exclusion patterns]
-[Checks for templates: none found]
-[Generates draft in .scratch/pr-bodies/drafts/add-spotlight-patterns.md]
-
-Claude: "Here's the draft PR. The summary focuses on the pattern-based
-approach and easier maintenance. Does this look good?"
-
-[Shows draft content]
-
-User: "yes"
-
-Claude: [Creates PR #123]
-"Created PR #123: Add spotlight exclusion patterns
-https://github.com/user/repo/pull/123"
-```
-
-### Updating After Changes
-
-```
-User: "update the PR"
-
-Claude: "I'm using the gh-pr skill to update the pull request."
-[Checks PR #123]
-[Hash check: no manual edits]
-[Analyzes commits: 3 new commits adding monitoring tools]
-
-Claude: "I've added 3 commits since the PR was created. The scope has
-expanded to include monitoring tools. Should I update the description?"
-
-User: "yes"
-
-Claude: [Generates new body]
-"Here's what would change in the description:
-
-+ ## Monitoring
-+ Includes live monitoring and activity analysis tools
-
-Look good?"
-
-User: "yes"
-
-Claude: [Updates PR]
-"Updated PR #123 description"
-```
-
-### Adding a Comment
-
-```
-User: "comment on the PR about the changes"
-
-Claude: "I'm using the gh-pr skill to comment on the pull request."
-[Checks PR #123: has 2 review comments]
-
-Claude: "This PR has review comments. I'll add a comment about the
-recent updates. Here's the draft:
-
----
-I've updated the PR to address the feedback:
-- Added input validation for pattern file paths
-- Improved error messages for invalid patterns
-- Updated tests to cover edge cases
-
-The validation now catches malformed patterns before attempting expansion.
----
-
-Look good?"
-
-User: "yes"
-
-Claude: [Posts comment]
-"Added comment to PR #123"
-```
-
-## File Management
-
-**Keep:**
-
-- metadata.json (permanent record)
-- Last 5 timestamped bodies/comments
-- Current draft (if in progress)
-
-**Clean up:**
-
-- Completed drafts after PR creation
-- Old timestamped files (optional: >30 days)
-
-## Implementation Notes
-
-**Hash algorithm:** Use `shasum -a 256` for consistency
-
-**Timestamp format:** ISO 8601 with hyphens for filenames: `2025-11-07T10-30-00`
-
-**Slugification:** Lowercase, hyphens, strip special chars: "Add Spotlight Skill" → "add-spotlight-skill"
-
-**Base branch detection:**
+**Branch Naming Convention**: `<type>/<short-description>`
+- Examples: `fix/typescript-errors`, `feat/add-cli-command`, `docs/update-readme`
 
 ```bash
-# Try to detect from gh pr view first
-base=$(gh pr view --json baseRefName -q .baseRefName 2> /dev/null)
-
-# Fall back to common defaults
-if [ -z "$base" ]; then
-  if git show-ref --verify --quiet refs/heads/main; then
-    base="main"
-  else
-    base="master"
-  fi
+if [ "$need_new_branch" = "true" ]; then
+    git checkout main
+    git pull origin main
+    git checkout -b <branch-name>
 fi
 ```
+
+### Step 3: Analyze Changes
+
+1. Run `git status` to see all changes
+2. Run `git diff` to understand the nature of changes
+3. Review recent commits with `git log --oneline -5` for style consistency
+4. Determine the appropriate commit type and message
+
+### Step 4: Run Pre-Commit Checks
+
+**CRITICAL**: All checks MUST pass before committing.
+
+```bash
+cd turbo
+
+pnpm install
+pnpm format           # Auto-format code
+pnpm lint             # Check for linting issues
+pnpm check-types      # Verify TypeScript type safety
+pnpm test             # Run all tests
+```
+
+**If checks fail:**
+1. Auto-fix formatting/linting issues
+2. For type errors: review and fix manually
+3. For test failures: debug and fix
+4. Re-run checks until all pass
+
+### Step 5: Stage, Commit, and Push
+
+```bash
+git add -A
+git commit -m "<type>: <description>"
+git push -u origin <branch-name>  # -u for new branches
+```
+
+### Step 6: Create Pull Request
+
+```bash
+gh pr create --title "<type>: <description>" --body "<brief description>"
+gh pr view --json url -q .url
+```
+
+## Commit Message Rules
+
+### Format:
+```
+<type>[optional scope]: <description>
+```
+
+### Valid Types:
+- `feat`: New feature (triggers minor release)
+- `fix`: Bug fix (triggers patch release)
+- `docs`: Documentation changes
+- `style`: Code style changes
+- `refactor`: Code refactoring
+- `test`: Test additions/changes
+- `chore`: Build/auxiliary tool changes
+- `ci`: CI configuration changes
+- `perf`: Performance improvements
+- `build`: Build system changes
+- `revert`: Revert previous commit
+
+### Requirements:
+- Type must be lowercase
+- Description must start with lowercase
+- No period at the end
+- Keep under 100 characters
+- Use imperative mood (add, not added)
+
+### Examples:
+- `feat: add user authentication system`
+- `fix: resolve database connection timeout`
+- `docs(api): update endpoint documentation`
+
+---
+
+# Operation 2: Merge PR
+
+## Workflow
+
+### Step 1: Check PR Status and CI Checks
+
+```bash
+gh pr view --json number,title,state
+gh pr checks
+```
+
+**Check Status:**
+- `pass`: Completed successfully
+- `fail`: Must be fixed before merge
+- `pending`: Still running, need to wait
+- `skipping`: Skipped (acceptable)
+
+**Retry Logic:**
+- Wait 30 seconds between retries
+- Retry up to 3 times (90 seconds max)
+- Only proceed when all non-skipped checks pass
+
+### Step 2: Fetch Latest and Show Summary
+
+```bash
+git fetch origin
+git diff origin/main...HEAD --stat
+gh pr view --json title -q '.title'
+```
+
+### Step 3: Merge the PR
+
+**Strategy**: Squash and merge
+
+```bash
+gh pr merge --squash --delete-branch
+sleep 3
+gh pr view --json state,mergedAt
+```
+
+**Why squash merge:**
+- Keeps main branch history clean and linear
+- Combines all commits into single commit
+- Automatically deletes feature branch
+
+### Step 4: Switch to Main and Pull Latest
+
+```bash
+git checkout main
+git pull origin main
+git log --oneline -1
+```
+
+## Error Handling
+
+### No PR Found:
+```
+Error: No PR found for current branch
+```
+
+### CI Checks Failing:
+```
+CI Checks Failed
+
+The following checks are failing:
+- <check-name>: fail - <url>
+
+Action required: Fix failing checks before merging
+Retrying in 30 seconds... (Attempt N/3)
+```
+
+### Merge Conflicts:
+```
+Merge failed: conflicts detected
+
+Please resolve conflicts manually:
+1. git fetch origin
+2. git merge origin/main
+3. Resolve conflicts
+4. Push changes
+5. Try merge again
+```
+
+---
+
+# Output Formats
+
+## Create PR Output:
+```
+PR Creation Workflow
+
+Current Status:
+   Branch: <branch-name>
+   Status: <new/existing>
+
+Actions Completed:
+   1. [Branch created/Using existing branch]
+   2. Pre-commit checks: PASSED
+   3. Changes staged: <file count> files
+   4. Committed: <commit message>
+   5. Pushed to remote
+   6. PR created
+
+Pull Request: <PR URL>
+```
+
+## Merge Output:
+```
+PR Merge Workflow
+
+PR Information:
+   Number: #<number>
+   Title: <title>
+
+CI Checks: All passed
+
+Changes Summary:
+   Files changed: <count>
+   Insertions: +<count>
+   Deletions: -<count>
+
+Actions Completed:
+   1. CI checks validated
+   2. PR squash merged
+   3. Feature branch deleted
+   4. Switched to main
+   5. Pulled latest changes
+
+Latest commit: <hash> <message>
+```
+
+---
+
+# Operation 3: List PRs
+
+List all open pull requests in the current repository.
+
+## Workflow
+
+```bash
+gh pr list --state open
+```
+
+Display the list of open PRs with their numbers, titles, and branch names.
+
+---
+
+# Operation 4: Comment
+
+Summarize conversation discussion and post as PR comment for follow-up.
+
+## Arguments
+
+- `comment [pr-id]` - Post conversation summary to specific PR
+
+## Workflow
+
+### Step 1: Detect PR Number
+
+If PR ID not provided, detect from conversation context or current branch.
+
+### Step 2: Analyze Conversation
+
+Review recent conversation to identify:
+- Key discussion points and decisions
+- Technical findings or analysis results
+- Action items or follow-up tasks
+- Recommendations or suggestions
+- Open questions requiring input
+
+### Step 3: Structure Comment
+
+Organize based on content type (technical memo, follow-up tasks, etc.):
+
+```markdown
+## [Topic from Discussion]
+
+[Summary of key points]
+
+### Action Items
+- [ ] Task 1
+- [ ] Task 2
+
+### Technical Notes
+[If applicable]
+```
+
+### Step 4: Post Comment
+
+```bash
+gh pr comment "$PR_NUMBER" --body "$COMMENT_CONTENT"
+```
+
+---
+
+# Best Practices
+
+1. **Always check branch status first** - Don't assume the current state
+2. **Run pre-commit checks** - Never skip quality checks
+3. **Never merge with failing checks** - Code quality is non-negotiable
+4. **Use squash merge** - Keeps main history clean
+5. **Confirm merge completion** - Verify PR state is MERGED
+6. **Keep user informed** - Clear status at each step
+
+## Related Skills
+
+- **pr-check** - CI monitoring and auto-fixing
+- **pr-review** - Code review and feedback
+
+## Prerequisites
+
+- GitHub CLI (`gh`) installed and authenticated
+- Not on main branch (for create/merge)
+- All dependencies installed
+- Proper repository permissions
+
+Your goal is to make the PR lifecycle smooth, consistent, and compliant with project standards.

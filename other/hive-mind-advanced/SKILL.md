@@ -11,6 +11,57 @@ author: Claude Flow Team
 
 Master the advanced Hive Mind collective intelligence system for sophisticated multi-agent coordination using queen-led architecture, Byzantine consensus, and collective memory.
 
+## CRITICAL: Tool Permissions for Background Agents (SMI-1823)
+
+**WARNING**: Background agents spawned with `Task()` can lose tool permissions mid-execution, causing "Permission to use Read has been auto-denied" errors.
+
+**ALWAYS specify `allowed_tools` explicitly in ALL Task() calls:**
+
+```javascript
+// CORRECT - Always include allowed_tools
+Task({
+  description: "Implement feature",
+  prompt: "...",
+  allowed_tools: ["Read", "Edit", "Write", "Bash", "Grep", "Glob"],  // REQUIRED
+  run_in_background: true
+})
+
+// INCORRECT - Will fail with permission errors
+Task({
+  description: "Implement feature",
+  prompt: "...",
+  run_in_background: true  // Missing allowed_tools!
+})
+```
+
+### Default Tool Lists by Agent Type
+
+| Agent Type | Default `allowed_tools` |
+|------------|-------------------------|
+| `coder` | `["Read", "Edit", "Write", "Bash", "Grep", "Glob"]` |
+| `tester` | `["Read", "Bash", "Grep", "Glob"]` |
+| `reviewer` | `["Read", "Grep", "Glob"]` |
+| `researcher` | `["Read", "WebFetch", "WebSearch", "Grep", "Glob"]` |
+| `architect` | `["Read", "Write", "Grep", "Glob"]` |
+| `analyst` | `["Read", "Grep", "Glob"]` |
+| `optimizer` | `["Read", "Edit", "Bash", "Grep", "Glob"]` |
+| `documenter` | `["Read", "Write", "Grep", "Glob"]` |
+
+**Copy-paste ready tool arrays:**
+```javascript
+// Coder tools
+const CODER_TOOLS = ["Read", "Edit", "Write", "Bash", "Grep", "Glob"];
+
+// Tester tools
+const TESTER_TOOLS = ["Read", "Bash", "Grep", "Glob"];
+
+// Reviewer tools
+const REVIEWER_TOOLS = ["Read", "Grep", "Glob"];
+
+// Researcher tools
+const RESEARCHER_TOOLS = ["Read", "WebFetch", "WebSearch", "Grep", "Glob"];
+```
+
 ## Overview
 
 The Hive Mind system represents the pinnacle of multi-agent coordination in Claude Flow, implementing a queen-led hierarchical architecture where a strategic queen coordinator directs specialized worker agents through collective decision-making and shared memory.
@@ -20,13 +71,11 @@ The Hive Mind system represents the pinnacle of multi-agent coordination in Clau
 ### Architecture Patterns
 
 **Queen-Led Coordination**
-
 - Strategic queen agents orchestrate high-level objectives
 - Tactical queens manage mid-level execution
 - Adaptive queens dynamically adjust strategies based on performance
 
 **Worker Specialization**
-
 - Researcher agents: Analysis and investigation
 - Coder agents: Implementation and development
 - Analyst agents: Data processing and metrics
@@ -37,7 +86,6 @@ The Hive Mind system represents the pinnacle of multi-agent coordination in Clau
 - Documenter agents: Documentation generation
 
 **Collective Memory System**
-
 - Shared knowledge base across all agents
 - LRU cache with memory pressure handling
 - SQLite persistence with WAL mode
@@ -55,10 +103,62 @@ Queen vote counts as 3x weight, providing strategic guidance.
 **Byzantine Fault Tolerance**
 Requires 2/3 majority for decision approval, ensuring robust consensus even with faulty agents.
 
+## Prerequisites (REQUIRED for MCP Integration)
+
+### Claude-Flow MCP Server Configuration
+
+For MCP-based agent spawning (recommended), the claude-flow MCP server must be configured:
+
+**Option A - Via CLI:**
+```bash
+claude mcp add claude-flow -- npx claude-flow@alpha mcp start
+```
+
+**Option B - Via .mcp.json (recommended for projects):**
+```json
+{
+  "mcpServers": {
+    "claude-flow": {
+      "command": "npx",
+      "args": ["claude-flow@alpha", "mcp", "start"],
+      "env": {
+        "CLAUDE_FLOW_LOG_LEVEL": "info",
+        "CLAUDE_FLOW_MEMORY_BACKEND": "sqlite"
+      }
+    }
+  }
+}
+```
+
+**Verify configuration:**
+```bash
+claude mcp list | grep claude-flow
+```
+
+### MCP vs CLI Usage
+
+| Method | Command | When to Use |
+|--------|---------|-------------|
+| **MCP** | `mcp__claude-flow__swarm_init()` | Within Claude Code sessions (recommended) |
+| **CLI** | `npx claude-flow hive-mind init` | Terminal scripts, CI/CD, standalone |
+
+MCP provides tighter integration with Claude Code's agent system and enables proper specialist agent spawning.
+
 ## Getting Started
 
 ### 1. Initialize Hive Mind
 
+**Via MCP (within Claude Code):**
+```javascript
+mcp__claude-flow__swarm_init({
+  topology: "hierarchical",
+  maxAgents: 4,
+  queen_model: "sonnet",
+  worker_model: "haiku"
+})
+```
+
+**Via CLI (terminal):**
 ```bash
 # Basic initialization
 npx claude-flow hive-mind init
@@ -123,7 +223,6 @@ npx claude-flow hive-mind stop <session-id>
 ```
 
 **Session Features**
-
 - Automatic checkpoint creation
 - Progress tracking with completion percentages
 - Parent-child process management
@@ -166,7 +265,6 @@ await memory.store('api-patterns', {
 ```
 
 **Memory Types**
-
 - `knowledge`: Permanent insights (no TTL)
 - `context`: Session context (1 hour TTL)
 - `task`: Task-specific data (30 min TTL)
@@ -198,7 +296,6 @@ await memory.associate('rest-api', 'authentication', 0.9);
 **Automatic Worker Assignment**
 
 The system intelligently assigns tasks based on:
-
 - Keyword matching with agent specialization
 - Historical performance metrics
 - Worker availability and load
@@ -235,13 +332,32 @@ Generate Claude Code spawn commands directly:
 npx claude-flow hive-mind spawn "Build REST API" --claude
 ```
 
-Output:
-
+Output (with required allowed_tools):
 ```javascript
-Task("Queen Coordinator", "Orchestrate REST API development...", "coordinator")
-Task("Backend Developer", "Implement Express routes...", "backend-dev")
-Task("Database Architect", "Design PostgreSQL schema...", "code-analyzer")
-Task("Test Engineer", "Create Jest test suite...", "tester")
+Task({
+  description: "Queen Coordinator",
+  prompt: "Orchestrate REST API development...",
+  allowed_tools: ["Read", "Write", "Grep", "Glob"],  // REQUIRED
+  run_in_background: true
+})
+Task({
+  description: "Backend Developer",
+  prompt: "Implement Express routes...",
+  allowed_tools: ["Read", "Edit", "Write", "Bash", "Grep", "Glob"],  // REQUIRED
+  run_in_background: true
+})
+Task({
+  description: "Database Architect",
+  prompt: "Design PostgreSQL schema...",
+  allowed_tools: ["Read", "Write", "Grep", "Glob"],  // REQUIRED
+  run_in_background: true
+})
+Task({
+  description: "Test Engineer",
+  prompt: "Create Jest test suite...",
+  allowed_tools: ["Read", "Bash", "Grep", "Glob"],  // REQUIRED
+  run_in_background: true
+})
 ```
 
 ### With SPARC Methodology
@@ -275,13 +391,11 @@ npx claude-flow hive-mind spawn "Review PR #123" --queen-type tactical
 The collective memory system includes advanced optimizations:
 
 **LRU Cache**
-
 - Configurable cache size (default: 1000 entries)
 - Memory pressure handling (default: 50MB)
 - Automatic eviction of least-used entries
 
 **Database Optimization**
-
 - WAL (Write-Ahead Logging) mode
 - 64MB cache size
 - 256MB memory mapping
@@ -289,7 +403,6 @@ The collective memory system includes advanced optimizations:
 - Automatic ANALYZE and OPTIMIZE
 
 **Object Pooling**
-
 - Query result pooling
 - Memory entry pooling
 - Reduced garbage collection pressure
@@ -311,14 +424,12 @@ const insights = hiveMind.getPerformanceInsights();
 ### Task Execution
 
 **Parallel Processing**
-
 - Batch agent spawning (5 agents per batch)
 - Concurrent task orchestration
 - Async operation optimization
 - Non-blocking task assignment
 
 **Benchmarks**
-
 - 10-20x faster batch spawning
 - 2.8-4.4x speed improvement overall
 - 32.3% token reduction
@@ -361,21 +472,18 @@ const insights = hiveMind.getPerformanceInsights();
 Hive Mind integrates with Claude Flow hooks for automation:
 
 **Pre-Task Hooks**
-
 - Auto-assign agents by file type
 - Validate objective complexity
 - Optimize topology selection
 - Cache search patterns
 
 **Post-Task Hooks**
-
 - Auto-format deliverables
 - Train neural patterns
 - Update collective memory
 - Analyze performance bottlenecks
 
 **Session Hooks**
-
 - Generate session summaries
 - Persist checkpoint data
 - Track comprehensive metrics
@@ -386,19 +494,16 @@ Hive Mind integrates with Claude Flow hooks for automation:
 ### 1. Choose the Right Queen Type
 
 **Strategic Queens** - For research, planning, and analysis
-
 ```bash
 npx claude-flow hive-mind spawn "Research ML frameworks" --queen-type strategic
 ```
 
 **Tactical Queens** - For implementation and execution
-
 ```bash
 npx claude-flow hive-mind spawn "Build authentication" --queen-type tactical
 ```
 
 **Adaptive Queens** - For optimization and dynamic tasks
-
 ```bash
 npx claude-flow hive-mind spawn "Optimize performance" --queen-type adaptive
 ```
@@ -406,7 +511,6 @@ npx claude-flow hive-mind spawn "Optimize performance" --queen-type adaptive
 ### 2. Leverage Consensus
 
 Use consensus for critical decisions:
-
 - Architecture pattern selection
 - Technology stack choices
 - Implementation approach
@@ -416,7 +520,6 @@ Use consensus for critical decisions:
 ### 3. Utilize Collective Memory
 
 **Store Learnings**
-
 ```javascript
 // After successful pattern implementation
 await memory.store('auth-pattern', {
@@ -428,7 +531,6 @@ await memory.store('auth-pattern', {
 ```
 
 **Build Associations**
-
 ```javascript
 // Link related concepts
 await memory.associate('jwt-auth', 'refresh-tokens', 0.9);
@@ -451,7 +553,6 @@ npx claude-flow hive-mind memory
 ### 5. Session Management
 
 **Checkpoint Frequently**
-
 ```javascript
 // Create checkpoints at key milestones
 await sessionManager.saveCheckpoint(
@@ -462,7 +563,6 @@ await sessionManager.saveCheckpoint(
 ```
 
 **Resume Sessions**
-
 ```bash
 # Resume from any previous state
 npx claude-flow hive-mind resume <session-id>
@@ -473,7 +573,6 @@ npx claude-flow hive-mind resume <session-id>
 ### Memory Issues
 
 **High Memory Usage**
-
 ```bash
 # Run garbage collection
 npx claude-flow hive-mind memory --gc
@@ -486,7 +585,6 @@ npx claude-flow hive-mind memory --export --clear
 ```
 
 **Low Cache Hit Rate**
-
 ```javascript
 // Increase cache size in config
 {
@@ -498,7 +596,6 @@ npx claude-flow hive-mind memory --export --clear
 ### Performance Issues
 
 **Slow Task Assignment**
-
 ```javascript
 // Enable worker type caching
 // The system caches best worker matches for 5 minutes
@@ -506,7 +603,6 @@ npx claude-flow hive-mind memory --export --clear
 ```
 
 **High Queue Utilization**
-
 ```javascript
 // Increase async queue concurrency
 {
@@ -517,7 +613,6 @@ npx claude-flow hive-mind memory --export --clear
 ### Consensus Failures
 
 **No Consensus Reached (Byzantine)**
-
 ```bash
 # Switch to weighted consensus for more decisive results
 npx claude-flow hive-mind spawn "..." --consensus weighted
@@ -696,14 +791,12 @@ npx claude-flow hive-mind spawn "Review PR #456" \
 ## Skill Progression
 
 ### Beginner
-
 1. Initialize hive mind
 2. Spawn basic swarms
 3. Monitor status
 4. Use majority consensus
 
 ### Intermediate
-
 1. Configure queen types
 2. Implement session management
 3. Use weighted consensus
@@ -711,7 +804,6 @@ npx claude-flow hive-mind spawn "Review PR #456" \
 5. Enable auto-scaling
 
 ### Advanced
-
 1. Byzantine fault tolerance
 2. Memory optimization
 3. Custom worker types

@@ -1,43 +1,43 @@
 ---
-name: localization
-description: Implement localization for the .NET 8 WPF widget host app using resource files, culture switching, and RTL considerations. Use when adding RESX resources, binding localized strings, or supporting multiple cultures.
+name: iOS Localization & Assets
+description: Standards for String Catalogs, L10n, and Asset Management.
+metadata:
+  labels: [ios, localization, l10n, assets, xcassets]
+  triggers:
+    files: ['**/*.stringcatalog', '**/*.xcassets', '**/*.strings']
+    keywords: [LocalizedStringResource, NSLocalizedString, String(localized:)]
 ---
 
-# Localization
+# iOS Localization & Assets Standards
 
-## Overview
+## **Priority: P1**
 
-Deliver localized UI text and culture-aware formatting with runtime culture switching.
+## Implementation Guidelines
 
-## Core areas
+### Localization (L10n)
 
-- RESX resources and resource dictionaries
-- Culture switching at runtime
-- RTL layout considerations
+- **String Catalogs (.stringcatalog)**: Use for primary localization in Xcode 15+. It provides a visual editor and compile-time checks for missing translations.
+- **Native Implementation**: Use `String(localized: "key")` or `LocalizedStringResource`. Avoid manual `NSLocalizedString` where possible.
+- **Pluralization**: Use String Catalogs' built-in pluralization support instead of complex code logic.
+- **Formatting**: Use `Formatted` API for dates, numbers, and currencies to respect the user's locale.
 
-## Definition of done (DoD)
+### Asset Management
 
-- No hardcoded user-visible strings in XAML or code
-- All strings in RESX files with stable keys
-- Dates/numbers use culture-aware formatting
-- Culture switching works without app restart
-- UI tested in at least one RTL language if RTL support is claimed
+- **Asset Catalogs (.xcassets)**: Keep assets organized. Use folders with "Provides Namespace" enabled for large projects.
+- **SF Symbols**: Use for standard icons to ensure consistency and accessibility.
+- **Vector Assets**: Use PDF or SVG and enable "Preserve Vector Data" for resolution independence.
 
-## Workflow
+### Best Practices
 
-1. Define base resources and culture-specific RESX files.
-2. Bind localized strings in XAML or view models.
-3. Implement runtime culture switching in the shell.
-4. Validate RTL layouts for languages that require it.
+- **Hardcoded Strings**: Never use hardcoded strings in UI. Every user-facing string must be localized.
+- **Base Bundle**: Ensure `Base` localization is complete before adding other languages.
 
-## Guidance
+## Anti-Patterns
 
-- Keep resource keys stable and descriptive.
-- Use culture-aware formatting for dates and numbers.
-- Avoid hard-coded UI strings.
+- **Manual String Formatting**: `**No manual currency symbol concat**: Use NumberFormatter or .formatted(.currency).`
+- **Loose Asset Files**: `**No loose png/jpg files in repo**: Always use Asset Catalogs.`
+- **Untranslated Keys**: `**No placeholder strings**: Ensure 100% coverage in String Catalogs.`
 
 ## References
 
-- `references/resources.md` for RESX patterns.
-- `references/culture-switching.md` for runtime switch guidance.
-- `references/rtl.md` for RTL layout considerations.
+- [L10n & Asset Organization](references/implementation.md)

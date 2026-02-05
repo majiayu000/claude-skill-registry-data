@@ -15,7 +15,7 @@ World-class senior data engineer skill for production-grade AI/ML/Data systems.
 # Core Tool 1
 python scripts/pipeline_orchestrator.py --input data/ --output results/
 
-# Core Tool 2  
+# Core Tool 2
 python scripts/data_quality_validator.py --target project/ --analyze
 
 # Core Tool 3
@@ -141,15 +141,18 @@ High-throughput inference system:
 ## Performance Targets
 
 **Latency:**
+
 - P50: < 50ms
 - P95: < 100ms
 - P99: < 200ms
 
 **Throughput:**
+
 - Requests/second: > 1000
 - Concurrent users: > 10,000
 
 **Availability:**
+
 - Uptime: 99.9%
 - Error rate: < 0.1%
 

@@ -1,416 +1,463 @@
 ---
 name: agent-workflow
-description: Expert system for designing and architecting AI agent workflows based on proven Meta methodologies. Use when users need to build AI agents, create agent workflows, solve problems using agentic systems, integrate multiple tools into agent architectures, or need guidance on agent design patterns. Helps translate business problems into structured agent solutions with clear scope, tool integration, and multi-layer architecture planning.
+description: Complete workflow for building, implementing, and testing goal-driven agents. Orchestrates building-agents-* and testing-agent skills. Use when starting a new agent project, unsure which skill to use, or need end-to-end guidance.
+license: Apache-2.0
+metadata:
+  author: hive
+  version: "2.0"
+  type: workflow-orchestrator
+  orchestrates:
+    - building-agents-core
+    - building-agents-construction
+    - building-agents-patterns
+    - testing-agent
+    - setup-credentials
 ---
 
-# Agent Workflow Designer
+# Agent Development Workflow
+
+Complete Standard Operating Procedure (SOP) for building production-ready goal-driven agents.
 
 ## Overview
 
-This skill guides the design and architecture of AI agent workflows using proven methodologies. When a user presents a problem, this skill helps structure an agent-based solution following the 9-step building process and 8-layer architecture framework validated at Meta.
+This workflow orchestrates specialized skills to take you from initial concept to production-ready agent:
 
-## Workflow Decision Tree
+1. **Understand Concepts** → `/building-agents-core` (optional)
+2. **Build Structure** → `/building-agents-construction`
+3. **Optimize Design** → `/building-agents-patterns` (optional)
+4. **Setup Credentials** → `/setup-credentials` (if agent uses tools requiring API keys)
+5. **Test & Validate** → `/testing-agent`
 
-When a user shares a problem or requests agent design help:
+## When to Use This Workflow
 
-1. **Assess the problem scope**
-   - Is the problem clearly defined? → Proceed to Problem Analysis
-   - Is the problem vague? → Ask clarifying questions about desired outcomes and constraints
+Use this meta-skill when:
+- Starting a new agent from scratch
+- Unclear which skill to use first
+- Need end-to-end guidance for agent development
+- Want consistent, repeatable agent builds
 
-2. **Determine architecture complexity**
-   - Simple task (single action)? → Single agent with basic tools
-   - Complex task (multiple sub-tasks)? → Consider multi-agent orchestration
-   - Integration task (connecting systems)? → Focus on Layer 4 (Tooling) design
+**Skip this workflow** if:
+- You only need to test an existing agent → use `/testing-agent` directly
+- You know exactly which phase you're in → use specific skill directly
 
-3. **Follow the appropriate workflow**
-   - **New agent from scratch** → Apply 9-Step Building Process
-   - **Existing agent improvement** → Focus on specific layers needing enhancement
-   - **Tool integration problem** → Apply MCP and tooling patterns
+## Quick Decision Tree
 
-## 9-Step Agent Building Process
-
-Use this sequential workflow when designing a new agent from scratch:
-
-### Step 1: Define Purpose and Scope
-
-**Key principle:** Start with job-to-be-done, not technology.
-
-Ask the user:
-- What specific outcome does the end user need?
-- What are the constraints (budget, time, resources)?
-- What's the success metric?
-
-**Bad scope example:**
-"An AI assistant for customer service"
-
-**Good scope example:**
-"An agent that takes customer complaints, pulls order history from Shopify API, and drafts refund approvals for orders under $200"
-
-**Decision point:** Narrow scope = better performance. Resist building Swiss Army knives.
-
-### Step 2: Structure Inputs and Outputs
-
-Treat the agent as a function with structured interfaces:
-
-**Inputs:**
-- Use JSON schemas or Pydantic models, not free text
-- Define required vs. optional fields
-- Specify data types and validation rules
-
-**Outputs:**
-- Return data objects, not prose
-- Define clear error states
-- Include confidence scores when relevant
-
-**Example structure:**
-```json
-Input: {
-  "complaint_text": "string",
-  "customer_id": "string",
-  "order_id": "string (optional)"
-}
-
-Output: {
-  "action": "approve_refund | escalate | request_info",
-  "refund_amount": "number",
-  "reasoning": "string",
-  "confidence": "number"
-}
+```
+"Need to understand agent concepts" → building-agents-core
+"Build a new agent" → building-agents-construction
+"Optimize my agent design" → building-agents-patterns
+"Set up API keys for my agent" → setup-credentials
+"Test my agent" → testing-agent
+"Not sure what I need" → Read phases below, then decide
+"Agent has structure but needs implementation" → See agent directory STATUS.md
 ```
 
-### Step 3: Write System Instructions
+## Phase 0: Understand Concepts (Optional)
 
-**Critical:** Spend 80% of design time here.
+**Duration**: 5-10 minutes
+**Skill**: `/building-agents-core`
+**Input**: Questions about agent architecture
+
+### When to Use
 
-Include in system prompt:
-- **Role definition:** "You are a sales qualification specialist..."
-- **Behavioral guidelines:** "Always ask for budget before proposing solutions"
-- **Output format requirements:** Specify JSON structure, word limits, tone
-- **Edge case handling:** What to do when data is missing or ambiguous
+- First time building an agent
+- Need to understand node types, edges, goals
+- Want to validate tool availability
+- Learning about pause/resume architecture
 
-**Testing strategy:** A great system prompt can make GPT-3.5 outperform poorly prompted GPT-4.
+### What This Phase Provides
+
+- Architecture overview (Python packages, not JSON)
+- Core concepts (Goal, Node, Edge, Pause/Resume)
+- Tool discovery and validation procedures
+- Workflow overview
 
-### Step 4: Enable Reasoning and External Actions
+**Skip this phase** if you already understand agent fundamentals.
 
-**ReAct Framework Pattern:**
-1. **Reason:** Analyze the current state and decide next action
-2. **Act:** Call an API, use a tool, or make a decision
-3. **Observe:** Review the result and determine if goal is achieved
+## Phase 1: Build Agent Structure
 
-**Start simple:**
-- Begin with if/then logic before complex reasoning chains
-- Add tools incrementally (don't overwhelm with 50 tools at once)
-- Test each tool integration independently
+**Duration**: 15-30 minutes
+**Skill**: `/building-agents-construction`
+**Input**: User requirements ("Build an agent that...")
 
-**Common tools to integrate:**
-- Calculators for math operations
-- Web browsers for research
-- Database queries for data retrieval
-- API calls to external systems
+### What This Phase Does
 
-### Step 5: Orchestrate Multiple Agents (When Needed)
+Creates the complete agent architecture:
+- Package structure (`exports/agent_name/`)
+- Goal with success criteria and constraints
+- Workflow graph (nodes and edges)
+- Node specifications
+- CLI interface
+- Documentation
 
-**When to use multi-agent architecture:**
-- Task has clearly separable sub-tasks
-- Different sub-tasks require different expertise
-- Parallel processing would improve speed
+### Process
 
-**When NOT to use multi-agent:**
-- Simple linear workflows
-- Tasks that require continuous context
-- When handoff complexity exceeds benefit
+1. **Create package** - Directory structure with skeleton files
+2. **Define goal** - Success criteria and constraints written to agent.py
+3. **Design nodes** - Each node approved and written incrementally
+4. **Connect edges** - Workflow graph with conditional routing
+5. **Finalize** - Agent class, exports, and documentation
 
-**Common 4-agent pattern:**
-1. **Research Agent:** Gathers information from sources
-2. **Analysis Agent:** Processes and synthesizes data
-3. **Writing Agent:** Creates structured outputs
-4. **QA Agent:** Reviews quality and accuracy
+### Outputs
 
-**Keep handoffs simple:** Complex orchestration = complex failures.
+- ✅ `exports/agent_name/` package created
+- ✅ Goal defined in agent.py
+- ✅ 3-5 success criteria defined
+- ✅ 1-5 constraints defined
+- ✅ 5-10 nodes specified in nodes/__init__.py
+- ✅ 8-15 edges connecting workflow
+- ✅ Validated structure (passes `python -m agent_name validate`)
+- ✅ README.md with usage instructions
+- ✅ CLI commands (info, validate, run, shell)
 
-### Step 6: Implement Memory and Context
+### Success Criteria
 
-Three types of memory to consider:
+You're ready for Phase 2 when:
+- Agent structure validates without errors
+- All nodes and edges are defined
+- CLI commands work (info, validate)
+- You see: "Agent complete: exports/agent_name/"
 
-**Conversation history:**
-- What happened this session
-- Recent user interactions
-- Current task state
+### Common Outputs
 
-**User context:**
-- User preferences and settings
-- Past interaction patterns
-- Historical decisions
+The building-agents-construction skill produces:
+```
+exports/agent_name/
+├── __init__.py          (package exports)
+├── __main__.py          (CLI interface)
+├── agent.py             (goal, graph, agent class)
+├── nodes/__init__.py    (node specifications)
+├── config.py            (configuration)
+├── implementations.py   (may be created for Python functions)
+└── README.md            (documentation)
+```
 
-**Knowledge retrieval:**
-- Relevant information from knowledge base
-- Similar past cases
-- Domain-specific context
+### Next Steps
 
-**Implementation guidance:**
-- Start with simple conversation buffers
-- Add vector databases only when needing semantic search across large datasets
-- Consider memory retrieval latency in architecture
+**If structure complete and validated:**
+→ Check `exports/agent_name/STATUS.md` or `IMPLEMENTATION_GUIDE.md`
+→ These files explain implementation options
+→ You may need to add Python functions or MCP tools (not covered by current skills)
 
-### Step 7: Add Multimedia Capabilities
+**If want to optimize design:**
+→ Proceed to Phase 1.5 (building-agents-patterns)
 
-Modern agents should handle:
-- Voice input/output for accessibility
-- Image understanding for visual tasks
-- Document processing (PDF, DOCX, spreadsheets)
+**If ready to test:**
+→ Proceed to Phase 2
 
-**Strategic approach:** Add capabilities based on actual user needs, not "nice-to-haves."
+## Phase 1.5: Optimize Design (Optional)
 
-### Step 8: Format and Deliver Results
+**Duration**: 10-15 minutes
+**Skill**: `/building-agents-patterns`
+**Input**: Completed agent structure
 
-**Output is your product's UX.** Design outputs for:
+### When to Use
 
-**Human consumption:**
-- Clear formatting and structure
-- Scannable with headers and bullets
-- Professional appearance
+- Want to add pause/resume functionality
+- Need error handling patterns
+- Want to optimize performance
+- Need examples of complex routing
+- Want best practices guidance
 
-**System consumption:**
-- Valid JSON/XML
-- Consistent field names
-- Error codes for handling
+### What This Phase Provides
 
-**Quality standard:** Great agent outputs look like a human created them.
+- Practical examples and patterns
+- Pause/resume architecture
+- Error handling strategies
+- Anti-patterns to avoid
+- Performance optimization techniques
+
+**Skip this phase** if your agent design is straightforward.
 
-### Step 9: Build Interface or API
+## Phase 2: Test & Validate
 
-Delivery method options:
-- Chat interface for conversational tasks
-- API endpoints for system integration
-- Integration with existing tools (Slack, email, CRM)
-
-**Best practice:** The best agents feel invisible—they just make things happen.
-
-## 8-Layer Architecture Framework
-
-When analyzing agent architecture needs, consider which layers require attention:
-
-### Layer 1: Infrastructure
-**Foundation:** Cloud, databases, APIs, compute resources
-
-**Key considerations:**
-- GPU/TPU requirements for inference
-- Data storage and retrieval speed
-- Load balancing for scale
-- Monitoring and observability
-
-**Common mistake:** Underestimating compute needs—agents make more API calls than traditional apps.
-
-### Layer 2: Agent Internet
-**Operating system for agents:** Identity, state management, inter-agent communication
-
-**Current state:** Mostly custom-built, but platforms like LangChain and CrewAI are emerging.
-
-### Layer 3: Protocol
-**Standards for interoperability:** MCP (Model Context Protocol) is becoming the standard
-
-**Key principle:** Bet on open standards, not proprietary solutions. MCP allows any tool to work with any agent.
-
-### Layer 4: Tooling Enrichment
-**Agent superpowers:** RAG systems, function calling, external integrations
-
-**Quality over quantity:** 5 rock-solid tools > 50 flaky integrations
-
-**Tool categories:**
-- Data retrieval (databases, APIs)
-- Computation (calculators, processors)
-- Communication (email, messaging)
-- Content creation (documents, reports)
-
-### Layer 5: Cognition Reasoning
-**The brain:** Planning, decision-making, error handling
-
-**Critical elements:**
-- Guardrails to prevent hallucinations
-- Error recovery strategies
-- Confidence scoring
-- Graceful degradation
-
-**User forgiveness:** Users forgive agents that fail gracefully, not ones that spiral into nonsense.
-
-### Layer 6: Memory Personalization
-**Human touch:** Personal context, preferences, conversation history
-
-**Start simple:** Store user preferences and conversation context before building complex personalization.
-
-### Layer 7: Application
-**User-facing products:** The actual agent functionality users interact with
-
-**Focus strategy:** Nail one use case before expanding to others.
-
-### Layer 8: Ops Governance
-**Risk management:** Monitoring, cost control, privacy, oversight
-
-**Build from day one:** Retrofitting governance is expensive and painful.
-
-**Key components:**
-- Cost tracking per agent action
-- Privacy enforcement and data handling
-- Human-in-the-loop for critical decisions
-- Audit logs and compliance
-
-## Problem-to-Solution Workflow
-
-When a user presents a problem:
-
-**Step 1: Clarify the problem**
-- What's the current manual process?
-- What's the desired outcome?
-- What are the constraints (time, cost, technical)?
-- What data sources are available?
-
-**Step 2: Assess agent appropriateness**
-Not every problem needs an agent. Consider:
-- Is the task repetitive and rule-based?
-- Does it require decision-making with context?
-- Would automation provide significant value?
-- Is the problem scope clear and bounded?
-
-**Step 3: Map to architecture**
-Using the 8 layers, identify which need focus:
-- Simple task → Focus on Layers 4, 5, 7 (tools, reasoning, application)
-- Complex integration → Add Layer 3 (protocol) emphasis
-- Scalability concern → Prioritize Layers 1, 8 (infrastructure, ops)
-
-**Step 4: Design workflow**
-Apply the 9-step building process, calling out:
-- Critical decision points
-- Tool integration requirements
-- Multi-agent needs (if any)
-- Memory and context strategy
-
-**Step 5: Identify implementation path**
-Based on user's role and resources:
-- **For PMs:** High-level architecture and tool selection
-- **For engineers:** Detailed technical implementation with code patterns
-- **For product teams:** Full stack from requirements to monitoring
-
-## Tool Integration Patterns
-
-### MCP (Model Context Protocol) Integration
-
-When tools support MCP:
-1. Agent discovers available tools
-2. Agent calls tools using standardized interface
-3. Tool returns structured response
-4. Agent processes and continues workflow
-
-**Advantage:** Write once, use with any agent.
-
-### Custom API Integration
-
-When building custom integrations:
-1. Define clear API contract (inputs/outputs)
-2. Implement error handling and retries
-3. Add rate limiting and caching
-4. Monitor usage and costs
-5. Document for agent consumption
-
-### Common Integration Scenarios
-
-**CRM Integration (Salesforce, HubSpot):**
-- Read customer data
-- Create/update records
-- Search across objects
-- Trigger workflows
-
-**Communication Tools (Slack, Email):**
-- Send messages/notifications
-- Read incoming requests
-- Monitor channels
-- Respond to mentions
-
-**Data Sources (Databases, APIs):**
-- Query structured data
-- Retrieve documents
-- Search knowledge bases
-- Aggregate information
-
-## Decision Framework: Single vs. Multi-Agent
-
-### Use Single Agent When:
-- Task is linear and sequential
-- Context must be maintained throughout
-- Decision-making is unified
-- Complexity of orchestration > benefit
-
-### Use Multi-Agent When:
-- Clear task separation exists
-- Sub-tasks need different expertise
-- Parallel processing improves performance
-- Quality benefits from specialization
-
-**Example - Customer Support:**
-
-**Single agent sufficient for:**
-"Take customer complaint, pull order history, draft refund approval"
-
-**Multi-agent beneficial for:**
-"Monitor social media, categorize issues, research solutions, generate responses, escalate critical cases, track resolution"
-
-## Common Pitfalls and Solutions
-
-### Pitfall 1: Scope Creep
-**Problem:** Trying to build a general-purpose assistant
-**Solution:** Define narrow, specific job-to-be-done with clear success metrics
-
-### Pitfall 2: Tool Overload
-**Problem:** Giving agent 50+ tools upfront
-**Solution:** Start with 5 essential tools, add incrementally based on actual needs
-
-### Pitfall 3: Skipping System Prompt
-**Problem:** Generic or minimal instructions
-**Solution:** Invest 80% of time crafting detailed system prompt with examples and edge cases
-
-### Pitfall 4: No Error Handling
-**Problem:** Agent breaks on unexpected inputs
-**Solution:** Design graceful degradation, clear error states, and fallback behaviors
-
-### Pitfall 5: Ignoring Costs
-**Problem:** Runaway API costs from inefficient agent design
-**Solution:** Build cost monitoring from day one, implement caching, optimize prompt length
-
-### Pitfall 6: Over-Engineering Architecture
-**Problem:** Building all 8 layers simultaneously
-**Solution:** Start with Layers 4, 5, 7 (tools, reasoning, application), add others as needed
-
-## Output Format
-
-When providing agent workflow solutions, structure the response as:
-
-1. **Problem Restatement:** Confirm understanding of the user's need
-2. **Agent Architecture Recommendation:** Single vs. multi-agent, with rationale
-3. **Step-by-Step Workflow:** Apply relevant steps from the 9-step process
-4. **Tool Integration Plan:** Specific tools needed and integration approach
-5. **Layer Analysis:** Which of the 8 layers need focus and why
-6. **Implementation Guidance:** Prioritized next steps based on user's role
-7. **Success Metrics:** How to measure if the agent is working
-
-## Agent Taxonomy Quick Reference
-
-When users ask about existing tools:
-
-**Category 1: Consumer Agents (Built-In)**
-- Examples: ChatGPT Agent, Claude, Gemini, Grok
-- Best for: Quick tasks, research, content creation
-- User type: Everyone, especially PMs
-
-**Category 2: No-Code Builders**
-- Examples: Zapier Central, n8n, Make
-- Best for: Workflow automation without coding
-- User type: PMs, operations teams
-
-**Category 3: Developer-First Platforms**
-- Examples: LangChain, CrewAI, AutoGen, Swarm
-- Best for: Custom agent features in products
-- User type: Engineering teams
-
-**Category 4: Specialized Agent Apps**
-- Examples: Cursor (coding), Perplexity (research), Notion AI (writing)
-- Best for: Specific job-to-be-done with deep specialization
-- User type: Domain-specific professionals
+**Duration**: 20-40 minutes
+**Skill**: `/testing-agent`
+**Input**: Working agent from Phase 1
+
+### What This Phase Does
+
+Creates comprehensive test suite:
+- Constraint tests (verify hard requirements)
+- Success criteria tests (measure goal achievement)
+- Edge case tests (handle failures gracefully)
+- Integration tests (end-to-end workflows)
+
+### Process
+
+1. **Analyze agent** - Read goal, constraints, success criteria
+2. **Generate tests** - Create pytest files in `exports/agent_name/tests/`
+3. **User approval** - Review and approve each test
+4. **Run evaluation** - Execute tests and collect results
+5. **Debug failures** - Identify and fix issues
+6. **Iterate** - Repeat until all tests pass
+
+### Outputs
+
+- ✅ Test files in `exports/agent_name/tests/`
+- ✅ Test report with pass/fail metrics
+- ✅ Coverage of all success criteria
+- ✅ Coverage of all constraints
+- ✅ Edge case handling verified
+
+### Success Criteria
+
+You're done when:
+- All tests pass
+- All success criteria validated
+- All constraints verified
+- Agent handles edge cases
+- Test coverage is comprehensive
+
+### Next Steps
+
+**Agent ready for:**
+- Production deployment
+- Integration into larger systems
+- Documentation and handoff
+- Continuous monitoring
+
+## Phase Transitions
+
+### From Phase 1 to Phase 2
+
+**Trigger signals:**
+- "Agent complete: exports/..."
+- Structure validation passes
+- README indicates implementation complete
+
+**Before proceeding:**
+- Verify agent can be imported: `from exports.agent_name import default_agent`
+- Check if implementation is needed (see STATUS.md or IMPLEMENTATION_GUIDE.md)
+- Confirm agent executes without import errors
+
+### Skipping Phases
+
+**When to skip Phase 1:**
+- Agent structure already exists
+- Only need to add tests
+- Modifying existing agent
+
+**When to skip Phase 2:**
+- Prototyping or exploring
+- Agent not production-bound
+- Manual testing sufficient
+
+## Common Patterns
+
+### Pattern 1: Complete New Build (Simple)
+
+```
+User: "Build an agent that monitors files"
+→ Use /building-agents-construction
+→ Agent structure created
+→ Use /testing-agent
+→ Tests created and passing
+→ Done: Production-ready agent
+```
+
+### Pattern 1b: Complete New Build (With Learning)
+
+```
+User: "Build an agent (first time)"
+→ Use /building-agents-core (understand concepts)
+→ Use /building-agents-construction (build structure)
+→ Use /building-agents-patterns (optimize design)
+→ Use /testing-agent (validate)
+→ Done: Production-ready agent
+```
+
+### Pattern 2: Test Existing Agent
+
+```
+User: "Test my agent at exports/my_agent"
+→ Skip Phase 1
+→ Use /testing-agent directly
+→ Tests created
+→ Done: Validated agent
+```
+
+### Pattern 3: Iterative Development
+
+```
+User: "Build an agent"
+→ Use /building-agents-construction (Phase 1)
+→ Implementation needed (see STATUS.md)
+→ [User implements functions]
+→ Use /testing-agent (Phase 2)
+→ Tests reveal bugs
+→ [Fix bugs manually]
+→ Re-run tests
+→ Done: Working agent
+```
+
+### Pattern 4: Complex Agent with Patterns
+
+```
+User: "Build an agent with multi-turn conversations"
+→ Use /building-agents-core (learn pause/resume)
+→ Use /building-agents-construction (build structure)
+→ Use /building-agents-patterns (implement pause/resume pattern)
+→ Use /testing-agent (validate conversation flows)
+→ Done: Complex conversational agent
+```
+
+## Skill Dependencies
+
+```
+agent-workflow (meta-skill)
+    │
+    ├── building-agents-core (foundational)
+    │   ├── Architecture concepts
+    │   ├── Node/Edge/Goal definitions
+    │   ├── Tool discovery procedures
+    │   └── Workflow overview
+    │
+    ├── building-agents-construction (procedural)
+    │   ├── Creates package structure
+    │   ├── Defines goal
+    │   ├── Adds nodes incrementally
+    │   ├── Connects edges
+    │   ├── Finalizes agent class
+    │   └── Requires: building-agents-core
+    │
+    ├── building-agents-patterns (reference)
+    │   ├── Best practices
+    │   ├── Pause/resume patterns
+    │   ├── Error handling
+    │   ├── Anti-patterns
+    │   └── Performance optimization
+    │
+    └── testing-agent
+        ├── Reads agent goal
+        ├── Generates tests
+        ├── Runs evaluation
+        └── Reports results
+```
+
+## Troubleshooting
+
+### "Agent structure won't validate"
+
+- Check node IDs match between nodes/__init__.py and agent.py
+- Verify all edges reference valid node IDs
+- Ensure entry_node exists in nodes list
+- Run: `PYTHONPATH=core:exports python -m agent_name validate`
+
+### "Agent has structure but won't run"
+
+- Check for STATUS.md or IMPLEMENTATION_GUIDE.md in agent directory
+- Implementation may be needed (Python functions or MCP tools)
+- This is expected - building-agents-construction creates structure, not implementation
+- See implementation guide for completion options
+
+### "Tests are failing"
+
+- Review test output for specific failures
+- Check agent goal and success criteria
+- Verify constraints are met
+- Use `/testing-agent` to debug and iterate
+- Fix agent code and re-run tests
+
+### "Not sure which phase I'm in"
+
+Run these checks:
+
+```bash
+# Check if agent structure exists
+ls exports/my_agent/agent.py
+
+# Check if it validates
+PYTHONPATH=core:exports python -m my_agent validate
+
+# Check if tests exist
+ls exports/my_agent/tests/
+
+# If structure exists and validates → Phase 2 (testing)
+# If structure doesn't exist → Phase 1 (building)
+# If tests exist but failing → Debug phase
+```
+
+## Best Practices
+
+### For Phase 1 (Building)
+
+1. **Start with clear requirements** - Know what the agent should do
+2. **Define success criteria early** - Measurable goals drive design
+3. **Keep nodes focused** - One responsibility per node
+4. **Use descriptive names** - Node IDs should explain purpose
+5. **Validate incrementally** - Check structure after each major addition
+
+### For Phase 2 (Testing)
+
+1. **Test constraints first** - Hard requirements must pass
+2. **Mock external dependencies** - Use mock mode for LLMs/APIs
+3. **Cover edge cases** - Test failures, not just success paths
+4. **Iterate quickly** - Fix one test at a time
+5. **Document test patterns** - Future tests follow same structure
+
+### General Workflow
+
+1. **Use version control** - Git commit after each phase
+2. **Document decisions** - Update README with changes
+3. **Keep iterations small** - Build → Test → Fix → Repeat
+4. **Preserve working states** - Tag successful iterations
+5. **Learn from failures** - Failed tests reveal design issues
+
+## Exit Criteria
+
+You're done with the workflow when:
+
+✅ Agent structure validates
+✅ All tests pass
+✅ Success criteria met
+✅ Constraints verified
+✅ Documentation complete
+✅ Agent ready for deployment
+
+## Additional Resources
+
+- **building-agents-core**: See `.claude/skills/building-agents-core/SKILL.md`
+- **building-agents-construction**: See `.claude/skills/building-agents-construction/SKILL.md`
+- **building-agents-patterns**: See `.claude/skills/building-agents-patterns/SKILL.md`
+- **testing-agent**: See `.claude/skills/testing-agent/SKILL.md`
+- **Agent framework docs**: See `core/README.md`
+- **Example agents**: See `exports/` directory
+
+## Summary
+
+This workflow provides a proven path from concept to production-ready agent:
+
+1. **Learn** with `/building-agents-core` → Understand fundamentals (optional)
+2. **Build** with `/building-agents-construction` → Get validated structure
+3. **Optimize** with `/building-agents-patterns` → Apply best practices (optional)
+4. **Test** with `/testing-agent` → Get verified functionality
+
+The workflow is **flexible** - skip phases as needed, iterate freely, and adapt to your specific requirements. The goal is **production-ready agents** built with **consistent, repeatable processes**.
+
+## Skill Selection Guide
+
+**Choose building-agents-core when:**
+- First time building agents
+- Need to understand architecture
+- Validating tool availability
+- Learning about node types and edges
+
+**Choose building-agents-construction when:**
+- Actually building an agent
+- Have clear requirements
+- Ready to write code
+- Want step-by-step guidance
+
+**Choose building-agents-patterns when:**
+- Agent structure complete
+- Need advanced patterns
+- Implementing pause/resume
+- Optimizing performance
+- Want best practices
+
+**Choose testing-agent when:**
+- Agent structure complete
+- Ready to validate functionality
+- Need comprehensive test coverage
+- Debugging agent behavior

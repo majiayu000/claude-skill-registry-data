@@ -1,363 +1,416 @@
 ---
 name: environment-management
-description: Environment configuration patterns, secret handling, and multi-environment management. Reference this skill when managing environments.
+description: Auto-activates when user mentions environment variables, .env files, secrets management, configuration, or multi-environment setup. Manages environment configs securely.
+category: devops
 ---
 
-# Environment Management Skill
-# Project Autopilot - Configuration and secrets patterns
-# Copyright (c) 2026 Jeremy McSpadden <jeremy@fluxlabs.net>
+# Environment Management
 
-Comprehensive patterns for managing environment configurations securely.
+Manages environment variables, secrets, and multi-environment configurations securely.
 
----
+## When This Activates
 
-## Environment File Hierarchy
+- User says: "setup environment variables", "manage secrets", "create .env"
+- User mentions: ".env file", "environment config", "secrets management"
+- Files: `.env`, `.env.example`, `.env.local`, `config/*`
+- Questions about configuration or environment setup
 
-### File Priority (Highest to Lowest)
+## Environment File Structure
 
-```
-1. .env.local          # Local overrides (never committed)
-2. .env.{environment}  # Environment-specific (staging, production)
-3. .env                # Default values (can be committed)
-```
-
-### Example Structure
+### .env.example (Template)
 
 ```bash
-project/
-├── .env                 # Defaults (committed)
-├── .env.example         # Template (committed)
-├── .env.local           # Local secrets (gitignored)
-├── .env.staging         # Staging config
-├── .env.production      # Production config (no secrets!)
-└── .gitignore
+# .env.example - Commit this to git (no secrets!)
+
+# Application
+NODE_ENV=development
+PORT=3000
+APP_URL=http://localhost:3000
+
+# Database
+DATABASE_URL=postgresql://user:password@localhost:5432/dbname
+# DATABASE_URL format: postgresql://USER:PASSWORD@HOST:PORT/DATABASE
+
+# Authentication
+JWT_SECRET=your-super-secret-jwt-key-here-min-32-chars
+JWT_EXPIRES_IN=7d
+SESSION_SECRET=your-session-secret-here
+
+# External APIs
+STRIPE_PUBLIC_KEY=pk_test_...
+STRIPE_SECRET_KEY=sk_test_...
+STRIPE_WEBHOOK_SECRET=whsec_...
+
+SENDGRID_API_KEY=SG....
+SENDGRID_FROM_EMAIL=noreply@example.com
+
+# OAuth (optional)
+GOOGLE_CLIENT_ID=your-google-client-id
+GOOGLE_CLIENT_SECRET=your-google-client-secret
+GITHUB_CLIENT_ID=your-github-client-id
+GITHUB_CLIENT_SECRET=your-github-client-secret
+
+# Feature Flags
+ENABLE_ANALYTICS=false
+ENABLE_DEBUG_MODE=false
+
+# Redis (optional)
+REDIS_URL=redis://localhost:6379
 ```
 
-### .gitignore Pattern
+### .env (Actual - NEVER commit!)
 
-```gitignore
-# Environment files
+```bash
+# .env - Add to .gitignore!
+
+NODE_ENV=development
+PORT=3000
+APP_URL=http://localhost:3000
+
+DATABASE_URL=postgresql://postgres:mypassword123@localhost:5432/myapp_dev
+
+JWT_SECRET=super-secret-jwt-key-change-this-in-production-min-32-characters
+JWT_EXPIRES_IN=7d
+
+STRIPE_PUBLIC_KEY=pk_test_51abc123...
+STRIPE_SECRET_KEY=sk_test_51xyz789...
+```
+
+## Environment Tiers
+
+### Development (.env.development)
+
+```bash
+NODE_ENV=development
+DEBUG=true
+LOG_LEVEL=debug
+
+DATABASE_URL=postgresql://postgres:postgres@localhost:5432/myapp_dev
+REDIS_URL=redis://localhost:6379
+
+# Use test/sandbox API keys
+STRIPE_SECRET_KEY=sk_test_...
+SENDGRID_API_KEY=SG.test...
+
+# Disable features in dev
+ENABLE_ANALYTICS=false
+ENABLE_RATE_LIMITING=false
+```
+
+### Staging (.env.staging)
+
+```bash
+NODE_ENV=staging
+DEBUG=false
+LOG_LEVEL=info
+
+DATABASE_URL=postgresql://user:pass@staging-db.example.com:5432/myapp_staging
+REDIS_URL=redis://staging-redis.example.com:6379
+
+# Staging API keys
+STRIPE_SECRET_KEY=sk_test_...
+SENDGRID_API_KEY=SG....
+
+# Enable some features
+ENABLE_ANALYTICS=true
+ENABLE_RATE_LIMITING=true
+```
+
+### Production (.env.production)
+
+```bash
+NODE_ENV=production
+DEBUG=false
+LOG_LEVEL=error
+
+DATABASE_URL=postgresql://user:securepass@prod-db.example.com:5432/myapp_prod
+REDIS_URL=redis://prod-redis.example.com:6379
+
+# Production API keys (LIVE!)
+STRIPE_SECRET_KEY=sk_live_...
+SENDGRID_API_KEY=SG....
+
+# All features enabled
+ENABLE_ANALYTICS=true
+ENABLE_RATE_LIMITING=true
+ENABLE_MONITORING=true
+```
+
+## Loading Environment Variables
+
+### Node.js (with dotenv)
+
+```typescript
+// config.ts
+import 'dotenv/config';
+import { z } from 'zod';
+
+// Define schema for validation
+const envSchema = z.object({
+  NODE_ENV: z.enum(['development', 'staging', 'production']),
+  PORT: z.string().transform(Number),
+  APP_URL: z.string().url(),
+  DATABASE_URL: z.string().url(),
+  JWT_SECRET: z.string().min(32),
+  JWT_EXPIRES_IN: z.string(),
+  STRIPE_SECRET_KEY: z.string().startsWith('sk_'),
+  SENDGRID_API_KEY: z.string(),
+  REDIS_URL: z.string().url().optional(),
+});
+
+// Parse and validate
+const env = envSchema.parse(process.env);
+
+export const config = {
+  env: env.NODE_ENV,
+  port: env.PORT,
+  appUrl: env.APP_URL,
+  database: {
+    url: env.DATABASE_URL,
+  },
+  jwt: {
+    secret: env.JWT_SECRET,
+    expiresIn: env.JWT_EXPIRES_IN,
+  },
+  stripe: {
+    secretKey: env.STRIPE_SECRET_KEY,
+  },
+  sendgrid: {
+    apiKey: env.SENDGRID_API_KEY,
+  },
+  redis: {
+    url: env.REDIS_URL,
+  },
+} as const;
+
+// Type-safe access
+export type Config = typeof config;
+```
+
+### Next.js (Built-in Support)
+
+```typescript
+// next.config.js
+module.exports = {
+  env: {
+    // Public variables (exposed to browser)
+    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
+    NEXT_PUBLIC_STRIPE_PUBLIC_KEY: process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY,
+  },
+  // Server-side only
+  serverRuntimeConfig: {
+    DATABASE_URL: process.env.DATABASE_URL,
+    STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY,
+  },
+};
+```
+
+### Python (with python-dotenv)
+
+```python
+# config.py
+from dotenv import load_dotenv
+import os
+from pydantic import BaseSettings, Field, PostgresDsn
+
+load_dotenv()
+
+class Settings(BaseSettings):
+    app_name: str = "MyApp"
+    debug: bool = Field(False, env='DEBUG')
+    database_url: PostgresDsn
+    jwt_secret: str = Field(..., min_length=32)
+    stripe_secret_key: str
+    
+    class Config:
+        env_file = '.env'
+        case_sensitive = False
+
+settings = Settings()
+```
+
+## Secrets Management
+
+### Using Environment Variables in CI/CD
+
+#### GitHub Actions
+
+```yaml
+# .github/workflows/deploy.yml
+- name: Deploy
+  env:
+    DATABASE_URL: ${{ secrets.DATABASE_URL }}
+    JWT_SECRET: ${{ secrets.JWT_SECRET }}
+    STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
+  run: npm run deploy
+```
+
+#### Docker Compose
+
+```yaml
+# docker-compose.yml
+services:
+  app:
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+      - JWT_SECRET=${JWT_SECRET}
+    env_file:
+      - .env
+```
+
+### Cloud Providers
+
+#### Vercel
+
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Add secrets
+vercel env add DATABASE_URL
+vercel env add JWT_SECRET
+
+# Pull environment variables
+vercel env pull .env.local
+```
+
+#### Railway
+
+```bash
+# Install Railway CLI
+npm i -g @railway/cli
+
+# Link project
+railway link
+
+# Add variables
+railway variables set DATABASE_URL=...
+```
+
+#### AWS Systems Manager (Parameter Store)
+
+```bash
+# Store parameter
+aws ssm put-parameter \
+  --name "/myapp/prod/DATABASE_URL" \
+  --value "postgresql://..." \
+  --type "SecureString"
+
+# Retrieve parameter
+aws ssm get-parameter \
+  --name "/myapp/prod/DATABASE_URL" \
+  --with-decryption \
+  --query "Parameter.Value"
+```
+
+## Security Best Practices
+
+### 1. Never Commit Secrets
+
+```bash
+# .gitignore
+.env
 .env.local
 .env.*.local
-.env.development.local
-.env.staging.local
-.env.production.local
-
-# Secret files
+.env.production
 *.pem
 *.key
 secrets/
 ```
 
----
-
-## Variable Naming Conventions
-
-### Prefixes
-
-| Prefix | Usage | Example |
-|--------|-------|---------|
-| `NEXT_PUBLIC_` | Client-exposed (Next.js) | `NEXT_PUBLIC_API_URL` |
-| `VITE_` | Client-exposed (Vite) | `VITE_API_URL` |
-| `REACT_APP_` | Client-exposed (CRA) | `REACT_APP_API_URL` |
-| (none) | Server-only | `DATABASE_URL` |
-
-### Categories
+### 2. Use Secret Scanning
 
 ```bash
-# Application
-NODE_ENV=development
-PORT=3000
-LOG_LEVEL=debug
+# Install git-secrets
+git secrets --install
+git secrets --register-aws
 
-# Database
-DATABASE_URL=postgres://...
-REDIS_URL=redis://...
+# Scan for secrets
+git secrets --scan
 
-# Authentication
-JWT_SECRET=...
-SESSION_SECRET=...
-OAUTH_CLIENT_ID=...
-OAUTH_CLIENT_SECRET=...
-
-# Third-Party Services
-STRIPE_SECRET_KEY=...
-SENDGRID_API_KEY=...
-AWS_ACCESS_KEY_ID=...
-
-# Feature Flags
-FEATURE_NEW_CHECKOUT=true
-FEATURE_DARK_MODE=false
-
-# Public/Client
-NEXT_PUBLIC_API_URL=https://api.example.com
-NEXT_PUBLIC_SITE_URL=https://example.com
+# Pre-commit hook
+git secrets --install ~/.git-templates/git-secrets
+git config --global init.templateDir ~/.git-templates/git-secrets
 ```
 
----
-
-## Secret Management
-
-### Never Do This
-
-```bash
-# ❌ Hardcoded in code
-const apiKey = 'sk_live_abc123';
-
-# ❌ Committed to git
-DATABASE_URL=postgres://user:realpassword@prod.db.com/app
-
-# ❌ Logged or exposed
-console.log('API Key:', process.env.API_KEY);
-```
-
-### Secure Patterns
+### 3. Rotate Secrets Regularly
 
 ```typescript
-// ✅ Environment variable
-const apiKey = process.env.API_KEY;
-if (!apiKey) {
-  throw new Error('API_KEY environment variable required');
-}
+// secret-rotation.ts
+import { scheduleJob } from 'node-schedule';
 
-// ✅ Validation on startup
-function validateEnv() {
-  const required = ['DATABASE_URL', 'JWT_SECRET', 'API_KEY'];
-  const missing = required.filter(key => !process.env[key]);
+// Rotate JWT secret weekly
+scheduleJob('0 0 * * 0', async () => {
+  const newSecret = generateSecureSecret();
+  await updateSecret('JWT_SECRET', newSecret);
+  await notifyAdmins('JWT secret rotated');
+});
+```
 
-  if (missing.length > 0) {
-    throw new Error(`Missing required env vars: ${missing.join(', ')}`);
+### 4. Validate Environment Variables
+
+```typescript
+// startup.ts
+const requiredEnvVars = [
+  'DATABASE_URL',
+  'JWT_SECRET',
+  'STRIPE_SECRET_KEY',
+];
+
+for (const varName of requiredEnvVars) {
+  if (!process.env[varName]) {
+    throw new Error(`Missing required environment variable: ${varName}`);
   }
 }
-
-// ✅ Type-safe env with Zod
-import { z } from 'zod';
-
-const envSchema = z.object({
-  NODE_ENV: z.enum(['development', 'staging', 'production']),
-  DATABASE_URL: z.string().url(),
-  JWT_SECRET: z.string().min(32),
-  PORT: z.coerce.number().default(3000),
-});
-
-export const env = envSchema.parse(process.env);
 ```
 
-### Secret Rotation
+## Environment Detection
 
 ```typescript
-// Support multiple keys during rotation
-const apiKeys = [
-  process.env.API_KEY_NEW,
-  process.env.API_KEY_OLD,
-].filter(Boolean);
+// env.ts
+export const isDevelopment = process.env.NODE_ENV === 'development';
+export const isStaging = process.env.NODE_ENV === 'staging';
+export const isProduction = process.env.NODE_ENV === 'production';
+export const isTest = process.env.NODE_ENV === 'test';
 
-function validateApiKey(key: string): boolean {
-  return apiKeys.includes(key);
-}
-```
-
----
-
-## Multi-Environment Setup
-
-### Environment Matrix
-
-| Variable | Development | Staging | Production |
-|----------|-------------|---------|------------|
-| `NODE_ENV` | development | staging | production |
-| `DATABASE_URL` | localhost | staging.db | prod.db |
-| `LOG_LEVEL` | debug | info | warn |
-| `API_URL` | localhost:3000 | staging.api | api.com |
-| `FEATURE_X` | true | true | false |
-
-### Configuration by Environment
-
-```typescript
-// config/index.ts
-const configs = {
-  development: {
-    api: {
-      url: 'http://localhost:3000',
-      timeout: 30000,
-    },
-    features: {
-      debugMode: true,
-      mockPayments: true,
-    },
-  },
-  staging: {
-    api: {
-      url: 'https://staging.api.com',
-      timeout: 10000,
-    },
-    features: {
-      debugMode: true,
-      mockPayments: true,
-    },
-  },
-  production: {
-    api: {
-      url: 'https://api.com',
-      timeout: 5000,
-    },
-    features: {
-      debugMode: false,
-      mockPayments: false,
-    },
-  },
+// Feature flags based on environment
+export const features = {
+  analytics: isProduction || isStaging,
+  debugMode: isDevelopment,
+  rateLimiting: isProduction || isStaging,
+  verboseLogging: isDevelopment || isStaging,
 };
-
-export const config = configs[process.env.NODE_ENV || 'development'];
 ```
 
----
-
-## .env.example Template
+## Migration Guide
 
 ```bash
-# Application
-NODE_ENV=development
-PORT=3000
-LOG_LEVEL=debug
+# 1. Create .env.example from current .env (remove values)
+cat .env | sed 's/=.*/=/' > .env.example
 
-# Database
-# Format: postgres://user:password@host:port/database
-DATABASE_URL=postgres://user:password@localhost:5432/myapp
+# 2. Verify no secrets in .env.example
+grep -E "(secret|password|key)" .env.example
 
-# Redis (optional)
-REDIS_URL=redis://localhost:6379
+# 3. Add .env to .gitignore
+echo ".env" >> .gitignore
 
-# Authentication
-# Generate with: openssl rand -base64 32
-JWT_SECRET=your-jwt-secret-min-32-chars-here
-JWT_EXPIRES_IN=7d
-
-# OAuth (Google)
-GOOGLE_CLIENT_ID=your-google-client-id
-GOOGLE_CLIENT_SECRET=your-google-client-secret
-
-# Third-Party Services
-STRIPE_SECRET_KEY=sk_test_...
-STRIPE_WEBHOOK_SECRET=whsec_...
-SENDGRID_API_KEY=SG....
-
-# AWS (optional)
-AWS_ACCESS_KEY_ID=
-AWS_SECRET_ACCESS_KEY=
-AWS_REGION=us-east-1
-S3_BUCKET=my-bucket
-
-# Public (safe for client)
-NEXT_PUBLIC_API_URL=http://localhost:3000
-NEXT_PUBLIC_SITE_URL=http://localhost:3000
-
-# Feature Flags
-FEATURE_NEW_DASHBOARD=false
-FEATURE_DARK_MODE=true
+# 4. Remove .env from git history (if committed)
+git filter-branch --force --index-filter \
+  "git rm --cached --ignore-unmatch .env" \
+  --prune-empty --tag-name-filter cat -- --all
 ```
 
----
+## Checklist
 
-## CI/CD Environment Management
-
-### GitHub Actions
-
-```yaml
-# Using secrets
-env:
-  DATABASE_URL: ${{ secrets.DATABASE_URL }}
-  JWT_SECRET: ${{ secrets.JWT_SECRET }}
-
-# Using environments
-jobs:
-  deploy:
-    environment: production
-    env:
-      DATABASE_URL: ${{ secrets.DATABASE_URL }}
-```
-
-### Setting Secrets
-
-```bash
-# GitHub CLI
-gh secret set DATABASE_URL --body "postgres://..."
-
-# Vercel
-vercel env add DATABASE_URL production
-
-# Railway
-railway variables set DATABASE_URL="postgres://..."
-```
-
----
-
-## Validation Schema
-
-```typescript
-// env.schema.ts
-import { z } from 'zod';
-
-export const envSchema = z.object({
-  // Application
-  NODE_ENV: z.enum(['development', 'staging', 'production']),
-  PORT: z.coerce.number().min(1).max(65535).default(3000),
-  LOG_LEVEL: z.enum(['debug', 'info', 'warn', 'error']).default('info'),
-
-  // Database
-  DATABASE_URL: z.string().url().startsWith('postgres'),
-
-  // Authentication
-  JWT_SECRET: z.string().min(32, 'JWT_SECRET must be at least 32 characters'),
-  JWT_EXPIRES_IN: z.string().default('7d'),
-
-  // Optional services
-  REDIS_URL: z.string().url().optional(),
-  STRIPE_SECRET_KEY: z.string().startsWith('sk_').optional(),
-
-  // Public
-  NEXT_PUBLIC_API_URL: z.string().url(),
-});
-
-// Validate on import
-export const env = envSchema.parse(process.env);
-```
-
----
-
-## Troubleshooting
-
-### Common Issues
-
-| Issue | Cause | Solution |
-|-------|-------|----------|
-| Var undefined in browser | Missing public prefix | Add `NEXT_PUBLIC_` |
-| Var undefined in server | Not loaded | Check dotenv config |
-| Different values per env | Wrong file loaded | Check NODE_ENV |
-| Secrets in logs | Logging env | Never log secrets |
-
-### Debug Environment
-
-```bash
-# List all env vars (careful with secrets!)
-printenv | grep -i "database\|api\|secret" | sed 's/=.*/=***/'
-
-# Check specific var
-echo $DATABASE_URL | head -c 30
-
-# Verify .env loaded
-node -e "require('dotenv').config(); console.log(Object.keys(process.env).filter(k => k.includes('DATABASE')))"
-```
-
----
-
-## Best Practices Checklist
-
-- [ ] All secrets in environment variables
-- [ ] .env.example documents all variables
-- [ ] Validation on application startup
-- [ ] Different configs per environment
-- [ ] Secrets never logged or exposed
-- [ ] .gitignore covers all secret files
-- [ ] CI/CD uses secrets management
+- [ ] .env.example created (no secrets!)
+- [ ] .env added to .gitignore
+- [ ] All secrets in environment variables (not hardcoded)
+- [ ] Environment variables validated at startup
+- [ ] Separate configs for dev/staging/prod
+- [ ] Secrets management tool configured (GitHub Secrets, etc.)
+- [ ] Type-safe environment variable access
+- [ ] Documentation of all required variables
 - [ ] Secret rotation plan in place
+- [ ] Git secrets scanning enabled
+
+**Generate environment configs, present to user, create files with approval.**

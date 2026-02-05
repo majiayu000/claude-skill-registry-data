@@ -1,145 +1,186 @@
 ---
 name: quality-gates
-description: Pre-commit quality validation procedures. Use when validating code quality before committing or in CI/CD.
+description: Understanding and passing workflow quality gates (validate, dry, pytest, ruff, typecheck)
 ---
 
-# SKILL: Quality Gates
+# Quality Gates Skill
 
-> **Purpose**: Pre-commit quality validation procedures (type-check, lint, todos, branch guard)
-> **Target**: Coder Agent, pre-commit hooks, CI/CD pipelines
+Use this skill to understand what each quality gate checks and how to ensure your workflow passes all gates.
 
----
+## Default Gates
 
-## Quick Start
+### 1. validate - Structural Validation
 
-### When to Use This Skill
+**What it checks**:
+- run.py exists and is valid Python
+- PEP 723 metadata is present (`# /// script`)
+- Required dependencies are declared (pydantic, rich)
+- BaseWorkflow is subclassed
+- run() method is implemented
+- Imported tools exist in tools/ directory
 
-- Before committing code (pre-commit hooks)
-- Validating code quality in CI/CD
-- Ensuring all todos complete before commit
-- Preventing commits to protected branches
-
-### Quick Reference
-
-```bash
-# Type check validation
-npm run type-check  # or: tsc --noEmit
-
-# Lint validation
-npm run lint  # or: eslint . --ext .ts,.tsx
-
-# Todo validation
-/03_close  # Validates all SCs complete before closing plan
-
-# Branch guard (Git native)
-git config --global receive.denyDeleteCurrent warn
+**Common failures**:
+```
+✗ Missing PEP 723 metadata block
+✗ run.py must subclass BaseWorkflow
+✗ Workflow class must implement run() method
+✗ Tool not found: yahoo_finance (imported from tools.yahoo_finance)
 ```
 
-## Core Concepts
+**How to fix**:
+- Add PEP 723 block at top of run.py
+- Ensure class inherits from `BaseWorkflow[ParamsType]`
+- Implement `def run(self) -> int:` method
+- Create missing tools in tools/ directory
 
-### Quality Gates Philosophy
+### 2. dry - Dry Run
 
-**Pre-commit hooks** enforce quality standards before code enters the repository.
+**What it checks**:
+- Workflow executes with mock data (no real API calls)
+- dry_run.py exists and provides mocks
+- No crashes or unhandled exceptions
+- Returns exit code 0
 
-**Skills as procedures, hooks as automation**:
-- Skills document the **what** and **how** (this file)
-- Hooks execute the procedures automatically
-- CI provides fallback enforcement
-- Developer autonomy preserved (opt-in hooks)
+**Common failures**:
+```
+✗ dry_run.py not found
+✗ KeyError: 'api_key' (accessing env var in dry run)
+✗ ConnectionError: API not available (real network call in dry run)
+```
 
-**Why Opt-In Hooks?**
-- Mandatory hooks improve baseline quality but create friction
-- Skills + CI yields consistent enforcement while preserving autonomy
-- Developers can choose strictness level (off/stop/strict profile)
+**How to fix**:
+- Create dry_run.py with mock functions
+- Replace all external calls with mocks
+- Use DryRunContext to log mock behavior
+- Test locally: `raw run workflow --dry`
 
-## Procedures
+## Optional Gates
 
-### Type Check Validation
+### 3. pytest - Unit Tests
 
-**Command**: `tsc --noEmit` or `npm run type-check`
+**What it checks**:
+- All tests in test.py pass
+- No test failures or errors
 
-**Output**: Success (exit 0) | Type errors with file/line (exit 1)
-
-**Example Failure**: `src/auth/login.ts:15:11 - error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.`
-
-### Lint Validation
-
-**Command**: `npx eslint . --ext .ts,.tsx` or `npm run lint`
-
-**Output**: Success (exit 0) | Lint errors with file/line/rule (exit 1)
-
-**Example Failure**: `src/utils/format.ts:42:5  error  Unused vars  no-unused-vars`
-
-### Todo Validation
-
-**Command**: `/03_close`
-
-**Steps**: Read plan → Check all SCs `[x]` → Verify evidence → Block if incomplete
-
-**Example Block**: `⚠️  Incomplete SCs detected: - [ ] SC-3: Add unit tests (evidence missing)`
-
-### Branch Guard
-
-**Purpose**: Prevent accidental commits to protected branches
-
-**Git Config**: `git config --global receive.denyDeleteCurrent warn`
-
-**Pre-commit Hook**: Check if `CURRENT_BRANCH` in `main master develop` → exit 1 if protected
-
-## Quality Gates Summary
-
-| Gate | Command | Exit 0 | Exit 1 |
-|------|---------|--------|--------|
-| **Type Check** | `tsc --noEmit` | No type errors | Type errors found |
-| **Lint** | `npm run lint` | No lint errors | Lint violations found |
-| **Todos** | `/03_close` | All SCs complete | Incomplete SCs |
-| **Branch Guard** | Pre-commit hook | Safe to commit | Protected branch |
-
-## Integration Patterns
-
-### Pre-commit Hook Setup
-
-**Note**: Pre-commit hooks were removed in v4.4.14 as part of skill-based architecture migration. Use the docs-verify skill for documentation validation instead.
-
-### CI/CD Integration
-
+**Enable in .raw/config.yaml**:
 ```yaml
-# .github/workflows/quality.yml
-jobs:
-  quality:
-    steps:
-      - name: Type check
-        run: npm run type-check
-      - name: Lint
-        run: npm run lint
-      - name: Test
-        run: npm test
+builder:
+  gates:
+    optional:
+      pytest:
+        command: "pytest test.py -v"
+        timeout_seconds: 60
 ```
 
-## Troubleshooting
+**Common failures**:
+```
+✗ AssertionError: Expected 0 but got 1
+✗ ModuleNotFoundError: No module named 'workflow_name'
+```
 
-### Type Check Failures
+**How to fix**:
+- Write tests that match actual behavior
+- Import workflow class correctly
+- Run pytest locally to debug
 
-**Causes**: Missing types `npm install --save-dev @types/node` | Incorrect tsconfig | Third-party types
+### 4. ruff - Linting & Formatting
 
-**Debug**: `tsc --noEmit --listFiles` | `tsc --noEmit src/problem.ts`
+**What it checks**:
+- Code follows Python style guide
+- No unused imports
+- Consistent formatting
 
-### Lint Failures
+**Enable in .raw/config.yaml**:
+```yaml
+builder:
+  gates:
+    optional:
+      ruff:
+        command: "ruff check . && ruff format . --check"
+        timeout_seconds: 30
+```
 
-**Solution**: Update `.eslintrc.js` rules or `// eslint-disable-next-line`
+**Common failures**:
+```
+✗ F401 'sys' imported but unused
+✗ E501 Line too long (92 > 88 characters)
+```
 
-**Auto-fix**: `npx eslint . --fix`
+**How to fix**:
+- Remove unused imports
+- Run `ruff format .` to auto-format
+- Run `ruff check --fix .` for auto-fixes
 
-## Best Practices
+### 5. typecheck - Type Validation
 
-- **Run locally first**: Fix quality issues before pushing
-- **Automate in CI**: Always run quality gates in CI/CD
-- **Clear error messages**: Make failures easy to understand
-- **Fast feedback**: Optimize for quick execution (<30s)
-- **Graceful degradation**: Allow opting out with clear warnings
+**What it checks**:
+- Type hints are correct
+- No type mismatches
 
-## Further Reading
+**Enable in .raw/config.yaml**:
+```yaml
+builder:
+  gates:
+    optional:
+      typecheck:
+        command: "mypy run.py"
+        timeout_seconds: 60
+```
 
-**Internal**: @.claude/skills/quality-gates/REFERENCE.md - Complete hook scripts, CI/CD integration, troubleshooting | @.claude/skills/ralph-loop/SKILL.md - Quality gates in Ralph Loop
+## Gate Failure Strategy
 
-**External**: [Husky](https://github.com/typicode/husky) | [pre-commit](https://pre-commit.com/)
+When gates fail:
+
+1. **Read the error message carefully**
+   - Gate output is saved to `.raw/builds/<build_id>/logs/<gate>.log`
+   - Contains full error details
+
+2. **Fix one gate at a time**
+   - Start with `validate` (structural issues)
+   - Then `dry` (runtime issues)
+   - Finally optional gates (quality issues)
+
+3. **Test locally before rebuilding**
+   ```bash
+   raw validate workflow-id  # Check validation
+   raw run workflow-id --dry # Check dry run
+   pytest test.py            # Check tests
+   ```
+
+4. **Common patterns**:
+   - validate fails → Fix run.py structure
+   - dry fails → Add/fix mocks in dry_run.py
+   - pytest fails → Fix tests or implementation
+   - ruff fails → Run auto-formatters
+   - typecheck fails → Add/fix type hints
+
+## Example: Fixing Validation Failure
+
+```
+✗ Validation failed
+Errors:
+  • Missing PEP 723 metadata block (# /// script)
+  • Tool not found: yahoo_finance (imported from tools.yahoo_finance)
+```
+
+**Steps to fix**:
+1. Add PEP 723 block to run.py:
+   ```python
+   #!/usr/bin/env python3
+   # /// script
+   # requires-python = ">=3.10"
+   # dependencies = ["pydantic>=2.0", "rich>=13.0", "yfinance>=0.2"]
+   # ///
+   ```
+
+2. Create tools/yahoo_finance/:
+   ```bash
+   mkdir -p tools/yahoo_finance
+   touch tools/yahoo_finance/__init__.py
+   # Create tools/yahoo_finance/tool.py
+   ```
+
+3. Validate again:
+   ```bash
+   raw validate workflow-id
+   ```

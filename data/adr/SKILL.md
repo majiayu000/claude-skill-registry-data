@@ -1,130 +1,62 @@
 ---
 name: adr
-description: "Create Architecture Decision Records through interactive conversation. Use when making technology choices, architecture patterns, or third-party service selections."
-model: claude-opus-4-5-20251101
-allowed-tools: Read, Write, Edit, Glob, Grep, WebSearch
+description: Manage Architecture Decision Records and ADR-aligned development. Use when user says "we should use", "let's go with", asks "why did we choose X?", implements a feature that may have an ADR, updates ADR status, or needs to check alignment with existing decisions.
 ---
 
-# /adr
+# INSTRUCTIONS
 
-Create Architecture Decision Records through interactive conversation.
+Manage Architecture Decision Records (ADRs) throughout their lifecycle: read existing decisions, write new ones, and ensure development aligns with documented decisions.
 
-## Usage
+- **Template**: See `template.md` for the MADR structure (status, context, drivers, options, consequences)
+- **Operations**: See `operations.md` for directory discovery, naming conventions, commit integration, deprecation (`_` prefix), and ADR-aligned development workflow
+- **Queries**: See `queries.md` for finding ADRs by topic, status, or relationship
 
-```bash
-/adr                                      # Start conversation
-/adr "database selection for coordinatr"  # Provide topic
-```
+## Modes
 
-## Output Location
+### Read Mode
+**Trigger**: "why did we choose X?", "what's our approach to Y?", "is there an ADR for Z?"
 
-ADRs live with code in `spaces/`:
+1. Discover ADR directory (see `operations.md`)
+2. Search for relevant ADRs by keyword/topic
+3. Summarize the decision and its rationale
+4. Note if the ADR is active, deprecated, or superseded
 
-```
-spaces/[project]/docs/project/adrs/
-├── ADR-001-database-choice.md
-├── ADR-002-auth-strategy.md
-└── ADR-003-testing-strategy.md
-```
+### Write Mode
+**Trigger**: "we should use", "let's go with", "I've decided to", trade-off discussions
 
-## Execution Flow
+1. Check for existing ADRs on the topic (may need to supersede)
+2. Gather information through clarifying questions
+3. Draft ADR using `template.md`
+4. Save and commit (amend later if needed)
 
-### 1. Gather Context
+### ADR-Aligned Development Mode
+**Trigger**: Implementing features, making architectural changes, deviating from existing patterns
 
-```bash
-# Current architecture
-Read: spaces/[project]/docs/project/architecture-overview.md
+1. **Before implementation**: Check for relevant ADRs
+2. **During implementation**: Reference ADR in commits
+3. **On completion**: Update ADR status (proposed → accepted)
+4. **On deviation**: Create superseding ADR, deprecate old one with `_` prefix
 
-# Existing ADRs
-Glob: spaces/[project]/docs/project/adrs/ADR-*.md
+## Quality Checklist
 
-# Project context
-Read: ideas/[project]/project-brief.md
+Before finalizing an ADR:
 
-# Relevant research
-Glob: resources/research/*.md
-```
+- [ ] Title clearly states the decision (not the problem)
+- [ ] Context explains WHY this decision is needed now
+- [ ] At least 2 options were genuinely considered
+- [ ] Decision drivers link to actual project constraints
+- [ ] Consequences include both positive AND negative impacts
+- [ ] Confirmation section describes how to validate the decision
 
-### 2. Interactive Conversation
+## Anti-Patterns
 
-Ask one at a time:
+- **Decision without options**: Always document alternatives considered
+- **Vague consequences**: Be specific about trade-offs
+- **Missing "why"**: The ADR should answer "why this, why now"
+- **Orphan ADRs**: Link to related ADRs when relevant
+- **Stale ADRs**: Update status when implemented or superseded
+- **Undocumented deviation**: If you deviate from an ADR, create a new one
 
-1. **What decision needs to be made?**
-2. **Why is this decision needed now?**
-3. **What options are you considering?** (2-4 alternatives)
-4. **What are the constraints?** (time, budget, skills)
-5. **What are the trade-offs for each?**
-6. **Which option do you prefer and why?**
+## Reference
 
-### 3. Research Support
-
-If user unsure about options:
-- Check existing research in `resources/research/`
-- Suggest `/research` for deeper dive
-- Use WebSearch for current best practices
-
-### 4. Create ADR Document
-
-```markdown
-# ADR-###: [Decision Title]
-
-**Status**: Accepted
-**Date**: YYYY-MM-DD
-**Decision Makers**: [who was involved]
-
-## Context
-[Why this decision is needed]
-
-## Decision
-We will use **[chosen option]** because [rationale].
-
-## Options Considered
-
-### Option 1: [Name]
-**Pros**: ...
-**Cons**: ...
-
-### Option 2: [Name]
-**Pros**: ...
-**Cons**: ...
-
-## Consequences
-
-### Positive
-- What we gain
-
-### Negative
-- What we lose
-- Technical debt accepted
-
-### Risks
-- Risk and mitigation
-
-## Related Decisions
-- Links to related ADRs/specs
-
-## References
-- Documentation links
-```
-
-## When to Use
-
-- Technology/framework selection
-- Architecture patterns
-- Third-party service choices
-- Data modeling approaches
-- Cross-project standards
-
-**Not for**: Implementation details, temporary decisions, already-decided standards
-
-## ADR Lifecycle
-
-1. **Accepted** - Decision made, actively followed
-2. **Deprecated** - No longer relevant
-3. **Superseded** - Replaced by newer ADR
-
-## Workflow
-
-```
-/brief -> /research -> /adr -> /spec
-```
+Based on [MADR - Markdown Architectural Decision Records](https://adr.github.io/madr/) (Version 4.0, 2024)

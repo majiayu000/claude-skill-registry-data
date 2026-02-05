@@ -1,72 +1,111 @@
 ---
 name: designing-systems
-description: Design scalable, reliable software systems. Use when planning new systems, major features, or architecture changes. Covers C4 diagrams, trade-off analysis, and system decomposition.
-allowed-tools: Read, Write, Glob, Grep
+description: Create and manage design systems with tokens, color palettes, typography scales, and spacing systems. Use when user asks about design tokens, theming, color schemes, or consistent styling.
+allowed-tools: Read, Write, Edit, Glob, Grep, Task
+user-invocable: true
 ---
 
 # Designing Systems
 
-## Workflows
+Create consistent, scalable design systems with tokens.
 
-- [ ] **Requirements**: Gather functional and non-functional requirements
-- [ ] **Diagrams**: Create C4 diagrams (Context, Container)
-- [ ] **Data**: Define data model and storage strategy
-- [ ] **API**: Define interfaces and contracts
-- [ ] **Risks**: Identify single points of failure
-- [ ] **Document**: Save to `./artifacts/adr_[topic].md`
+## APEX WORKFLOW
 
-## Feedback Loops
+### Phase 0: ANALYZE EXISTING (CRITICAL)
 
-1. Draft design document
-2. Review with stakeholders
-3. Create POC for risky components
-4. Refine design based on POC
-5. Finalize ADR
+```
+Task: explore-codebase
+Prompt: "Find existing design tokens: CSS variables, Tailwind config,
+color palette, typography, spacing patterns"
+```
 
-## Blueprint Template
+**If design system exists:** Document and extend it.
+**If no design system:** Create new following this guide.
 
-Every system design should include:
+## Design Token Categories
 
-1. **High-Level Diagram**: Mermaid graph showing components
-2. **Component Boundaries**: Clear responsibility definitions
-3. **API Definitions**: OpenAPI or GraphQL specs
-4. **Data Models**: Schema definitions
-5. **Trade-off Analysis**: Rationale for key decisions
+| Category | Format | Example |
+|----------|--------|---------|
+| Colors | OKLCH | `oklch(55% 0.20 260)` |
+| Typography | rem | `--text-lg: 1.125rem` |
+| Spacing | rem (4px grid) | `--spacing-4: 1rem` |
+| Radius | px/rem | `--radius-lg: 0.75rem` |
+| Shadows | CSS | `--shadow-md: ...` |
 
-## C4 Model Levels
+## Color System (OKLCH 2026)
 
-### Level 1: Context
-Who uses the system? What external systems does it interact with?
+```css
+/* Primary palette - OKLCH for P3 wide gamut */
+--color-primary-500: oklch(55% 0.20 260);
+--color-primary-600: oklch(48% 0.18 260);
 
-### Level 2: Container
-What are the major deployable units? (APIs, databases, queues)
+/* Semantic mapping */
+--color-background: var(--color-neutral-50);
+--color-foreground: var(--color-neutral-900);
+--color-muted: var(--color-neutral-100);
+--color-border: var(--color-neutral-200);
 
-### Level 3: Component
-What are the major building blocks within each container?
+/* Dark mode */
+.dark {
+  --color-background: var(--color-neutral-900);
+  --color-foreground: var(--color-neutral-50);
+}
+```
 
-### Level 4: Code
-Class/function level (usually not needed in architecture docs)
+## Typography Scale (1.25 ratio)
 
-## Trade-off Analysis
+```css
+/* FORBIDDEN: Inter, Roboto, Arial */
+/* USE: Clash Display, Satoshi, Bricolage Grotesque */
 
-For major decisions, explicitly document:
+--font-display: 'Clash Display', sans-serif;
+--font-sans: 'Satoshi', sans-serif;
+--font-mono: 'JetBrains Mono', monospace;
 
-| Decision | Option A | Option B |
-|----------|----------|----------|
-| Pros | ... | ... |
-| Cons | ... | ... |
-| When to Choose | ... | ... |
+--text-sm: 0.875rem;   /* 14px */
+--text-base: 1rem;     /* 16px */
+--text-lg: 1.125rem;   /* 18px */
+--text-xl: 1.25rem;    /* 20px */
+--text-2xl: 1.5rem;    /* 24px */
+```
 
-## Non-Functional Requirements
+## Spacing (4px grid)
 
-Always consider:
-- **Scalability**: Expected load, growth rate
-- **Availability**: SLA targets, failure modes
-- **Latency**: P50, P95, P99 requirements
-- **Security**: Authentication, authorization, data protection
-- **Cost**: Infrastructure, operational overhead
+```css
+--spacing-1: 0.25rem;  /* 4px */
+--spacing-2: 0.5rem;   /* 8px */
+--spacing-4: 1rem;     /* 16px */
+--spacing-6: 1.5rem;   /* 24px */
+--spacing-8: 2rem;     /* 32px */
+```
 
-## Resources
+## Tailwind v4 Config
 
-- [System Design Template](./resources/system-design.template.md)
-- [ADR Template](./resources/adr.template.md)
+```css
+/* app.css - CSS-first config */
+@import "tailwindcss";
+
+@theme {
+  --color-primary-*: oklch(55% 0.20 260);
+  --font-display: 'Clash Display', sans-serif;
+  --radius-lg: 0.75rem;
+}
+```
+
+## Validation
+
+```
+[ ] Existing tokens documented (Phase 0)
+[ ] No forbidden fonts (Inter/Roboto/Arial)
+[ ] OKLCH colors for wide gamut
+[ ] Dark mode variables defined
+[ ] Tailwind v4 @theme configured
+```
+
+## References
+
+- **UI Visual Design**: `../../references/ui-visual-design.md` (visual hierarchy, spacing system, 2026 trends)
+- **Color System**: `../../references/color-system.md`
+- **Typography**: `../../references/typography.md`
+- **Theme Presets**: `../../references/theme-presets.md`
+- **Tailwind Best Practices**: `../../references/tailwind-best-practices.md`

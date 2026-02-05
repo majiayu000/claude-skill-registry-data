@@ -1,52 +1,129 @@
 ---
 name: generating-orm-code
 description: |
-  This skill enables Claude to generate ORM models and database schemas. It is triggered when the user requests the creation of ORM models, database schemas, or wishes to generate code for interacting with databases. The skill supports various ORMs including TypeORM, Prisma, Sequelize, SQLAlchemy, Django ORM, Entity Framework, and Hibernate. Use this skill when the user mentions terms like "ORM model", "database schema", "generate entities", "create migrations", or specifies a particular ORM framework like "TypeORM entities" or "SQLAlchemy models". It facilitates both database-to-code and code-to-database schema generation.
-allowed-tools: Read, Write, Edit, Grep, Glob, Bash
+  Execute use when you need to work with ORM code generation.
+  This skill provides ORM model and code generation with comprehensive guidance and automation.
+  Trigger with phrases like "generate ORM models", "create entity classes",
+  or "scaffold database models".
+  
+allowed-tools: Read, Write, Edit, Grep, Glob, Bash(psql:*), Bash(mysql:*), Bash(mongosh:*)
 version: 1.0.0
+author: Jeremy Longshore <jeremy@intentsolutions.io>
+license: MIT
 ---
+# Orm Code Generator
+
+This skill provides automated assistance for orm code generator tasks.
+
+## Prerequisites
+
+Before using this skill, ensure:
+- Required credentials and permissions for the operations
+- Understanding of the system architecture and dependencies
+- Backup of critical data before making structural changes
+- Access to relevant documentation and configuration files
+- Monitoring tools configured for observability
+- Development or staging environment available for testing
+
+## Instructions
+
+### Step 1: Assess Current State
+1. Review current configuration, setup, and baseline metrics
+2. Identify specific requirements, goals, and constraints
+3. Document existing patterns, issues, and pain points
+4. Analyze dependencies and integration points
+5. Validate all prerequisites are met before proceeding
+
+### Step 2: Design Solution
+1. Define optimal approach based on best practices
+2. Create detailed implementation plan with clear steps
+3. Identify potential risks and mitigation strategies
+4. Document expected outcomes and success criteria
+5. Review plan with team or stakeholders if needed
+
+### Step 3: Implement Changes
+1. Execute implementation in non-production environment first
+2. Verify changes work as expected with thorough testing
+3. Monitor for any issues, errors, or performance impacts
+4. Document all changes, decisions, and configurations
+5. Prepare rollback plan and recovery procedures
+
+### Step 4: Validate Implementation
+1. Run comprehensive tests to verify all functionality
+2. Compare performance metrics against baseline
+3. Confirm no unintended side effects or regressions
+4. Update all relevant documentation
+5. Obtain approval before production deployment
+
+### Step 5: Deploy to Production
+1. Schedule deployment during appropriate maintenance window
+2. Execute implementation with real-time monitoring
+3. Watch closely for any issues or anomalies
+4. Verify successful deployment and functionality
+5. Document completion, metrics, and lessons learned
+
+## Output
+
+This skill produces:
+
+**Implementation Artifacts**: Scripts, configuration files, code, and automation tools
+
+**Documentation**: Comprehensive documentation of changes, procedures, and architecture
+
+**Test Results**: Validation reports, test coverage, and quality metrics
+
+**Monitoring Configuration**: Dashboards, alerts, metrics, and observability setup
+
+**Runbooks**: Operational procedures for maintenance, troubleshooting, and incident response
+
+## Error Handling
+
+**Permission and Access Issues**:
+- Verify credentials and permissions for all operations
+- Request elevated access if required for specific tasks
+- Document all permission requirements for automation
+- Use separate service accounts for privileged operations
+- Implement least-privilege access principles
+
+**Connection and Network Failures**:
+- Check network connectivity, firewalls, and security groups
+- Verify service endpoints, DNS resolution, and routing
+- Test connections using diagnostic and troubleshooting tools
+- Review network policies, ACLs, and security configurations
+- Implement retry logic with exponential backoff
+
+**Resource Constraints**:
+- Monitor resource usage (CPU, memory, disk, network)
+- Implement throttling, rate limiting, or queue mechanisms
+- Schedule resource-intensive tasks during low-traffic periods
+- Scale infrastructure resources if consistently hitting limits
+- Optimize queries, code, or configurations for efficiency
+
+**Configuration and Syntax Errors**:
+- Validate all configuration syntax before applying changes
+- Test configurations thoroughly in non-production first
+- Implement automated configuration validation checks
+- Maintain version control for all configuration files
+- Keep previous working configuration for quick rollback
+
+## Resources
+
+**Configuration Templates**: `{baseDir}/templates/orm-code-generator/`
+
+**Documentation and Guides**: `{baseDir}/docs/orm-code-generator/`
+
+**Example Scripts and Code**: `{baseDir}/examples/orm-code-generator/`
+
+**Troubleshooting Guide**: `{baseDir}/docs/orm-code-generator-troubleshooting.md`
+
+**Best Practices**: `{baseDir}/docs/orm-code-generator-best-practices.md`
+
+**Monitoring Setup**: `{baseDir}/monitoring/orm-code-generator-dashboard.json`
 
 ## Overview
 
-This skill empowers Claude to automate the creation of Object-Relational Mapping (ORM) models and database schemas, significantly accelerating backend development. It handles generating code for various ORM frameworks, simplifying database interactions.
-
-## How It Works
-
-1. **Identify ORM and Language**: The skill parses the user's request to determine the target ORM framework (e.g., TypeORM, SQLAlchemy) and programming language (e.g., TypeScript, Python).
-2. **Schema/Model Definition**: Based on the request, the skill either interprets an existing database schema or defines a new schema based on provided model specifications.
-3. **Code Generation**: The skill generates the corresponding ORM model code, including entities, relationships, and any necessary configuration files, tailored to the chosen ORM framework.
-
-## When to Use This Skill
-
-This skill activates when you need to:
-- Create ORM models from a database schema.
-- Generate a database schema from existing ORM models.
-- Generate model code for a specific ORM framework (e.g., TypeORM, Prisma).
+This skill provides automated assistance for the described functionality.
 
 ## Examples
 
-### Example 1: Generating TypeORM entities
-
-User request: "Generate TypeORM entities for a blog with users, posts, and comments, including relationships and validation rules."
-
-The skill will:
-1. Generate TypeScript code defining TypeORM entities for `User`, `Post`, and `Comment`, including properties, relationships (e.g., one-to-many), and validation decorators.
-2. Output the generated code, ready to be integrated into a TypeORM project.
-
-### Example 2: Creating a SQLAlchemy schema
-
-User request: "Create a SQLAlchemy schema for an e-commerce application with products, categories, and orders."
-
-The skill will:
-1. Generate Python code defining SQLAlchemy models for `Product`, `Category`, and `Order`, including relationships (e.g., many-to-one), data types, and primary/foreign key constraints.
-2. Output the generated code, ready to be used with SQLAlchemy.
-
-## Best Practices
-
-- **Specificity**: Be as specific as possible about the desired ORM framework and data model.
-- **Relationships**: Clearly define relationships between entities (e.g., one-to-many, many-to-many).
-- **Validation**: Specify validation rules to ensure data integrity.
-
-## Integration
-
-This skill integrates with other code generation tools and plugins within Claude Code, allowing for seamless integration into existing projects and workflows. It can be used in conjunction with database migration tools to create and manage database schemas.
+Example usage patterns will be demonstrated in context.

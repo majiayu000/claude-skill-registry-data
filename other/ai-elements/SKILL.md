@@ -1,216 +1,170 @@
 ---
 name: ai-elements
-description: AI Elements component library for AI-native applications. Use when building chatbots, AI workflows, or integrating with Vercel AI SDK's useChat hook.
+description: Create new AI chat interface components for the ai-elements library following established composable patterns, shadcn/ui integration, and Vercel AI SDK conventions. Use when creating new components in packages/elements/src or when the user asks to add a new component to ai-elements.
 ---
 
 # AI Elements
 
-Build AI-native applications with pre-built components on shadcn/ui.
+[AI Elements](https://www.npmjs.com/package/ai-elements) is a component library and custom registry built on top of [shadcn/ui](https://ui.shadcn.com/) to help you build AI-native applications faster. It provides pre-built components like conversations, messages and more.
+
+Installing AI Elements is straightforward and can be done in a couple of ways. You can use the dedicated CLI command for the fastest setup, or integrate via the standard shadcn/ui CLI if you've already adopted shadcn's workflow.
+
+
 
 ## Quick Start
 
-```bash
-# Install all AI Elements components
-bunx --bun ai-elements@latest
-# or via shadcn CLI
-bunx --bun shadcn@latest add @ai-elements/all
+Here are some basic examples of what you can achieve using components from AI Elements.
 
-# Install AI SDK dependencies
-bun add ai @ai-sdk/react zod
-```
 
-Components install to `@/components/ai-elements/`.
 
-## Component Quick Reference
+## Prerequisites
 
-### Chatbot Components
+Before installing AI Elements, make sure your environment meets the following requirements:
 
-| Component | Purpose |
-|-----------|---------|
-| `Conversation` | Auto-scroll chat container |
-| `Message` | Single message wrapper (user/assistant) |
-| `MessageResponse` | Streaming markdown renderer (uses `streamdown`) |
-| `PromptInput` | Rich input with attachments, model picker |
-| `Reasoning` | Collapsible thinking display |
-| `Sources` | Citation/reference display |
-| `Tool` | Tool execution visualization |
-| `ChainOfThought` | Step-by-step breakdown |
-| `InlineCitation` | Inline citation badge with hover card carousel |
-| `Plan` | Collapsible plan card with streaming title |
-| `Task` | Collapsible task breakdown display |
-| `Queue` | Todo/message queue with sections |
+- [Node.js](https://nodejs.org/en/download/), version 18 or later
+- A [Next.js](https://nextjs.org/) project with the [AI SDK](https://ai-sdk.dev/) installed.
+- [shadcn/ui](https://ui.shadcn.com/) installed in your project. If you don't have it installed, running any install command will automatically install it for you.
+- We also highly recommend using the [AI Gateway](https://vercel.com/docs/ai-gateway) and adding `AI_GATEWAY_API_KEY` to your `env.local` so you don't have to use an API key from every provider. AI Gateway also gives $5 in usage per month so you can experiment with models. You can obtain an API key [here](https://vercel.com/d?to=%2F%5Bteam%5D%2F%7E%2Fai%2Fapi-keys&title=Get%20your%20AI%20Gateway%20key).
 
-### Workflow Components
 
-| Component | Purpose |
-|-----------|---------|
-| `Canvas` | React Flow wrapper for visual workflows |
-| `Node` | Workflow node with header/content/footer |
-| `Edge` | Animated/temporary edge connections |
-| `Controls` | Zoom/fit view controls |
-| `Panel` | Positioned overlay panels |
-| `Context` | Token usage tracking display |
 
-### Utility Components
+## Installing Components
 
-| Component | Purpose |
-|-----------|---------|
-| `CodeBlock` | Syntax highlighted code (Shiki) |
-| `Loader` | Loading indicator |
-| `Shimmer` | Streaming text effect |
-| `Confirmation` | Tool confirmation dialog |
-| `Suggestion` | Quick action chips |
-| `ModelSelector` | Model picker dialog with provider logos |
-| `OpenIn` | Open query in external chat (ChatGPT, Claude, etc.) |
-| `WebPreview` | Iframe preview with URL bar and console |
+You can install AI Elements components using either the AI Elements CLI or the shadcn/ui CLI. Both achieve the same result: adding the selected component’s code and any needed dependencies to your project.
 
-## Core Integration Pattern
+The CLI will download the component’s code and integrate it into your project’s directory (usually under your components folder). By default, AI Elements components are added to the `@/components/ai-elements/` directory (or whatever folder you’ve configured in your shadcn components settings).
 
-```tsx
-'use client';
-import { useChat } from '@ai-sdk/react';
-import { Conversation, ConversationContent } from '@/components/ai-elements/conversation';
-import { Message, MessageContent, MessageResponse } from '@/components/ai-elements/message';
-import { Reasoning, ReasoningTrigger, ReasoningContent } from '@/components/ai-elements/reasoning';
-import { Sources, SourcesTrigger, SourcesContent, Source } from '@/components/ai-elements/sources';
+After running the command, you should see a confirmation in your terminal that the files were added. You can then proceed to use the component in your code.
 
-export function Chat() {
-  const { messages, sendMessage, status } = useChat();
+## Usage
+
+Once an AI Elements component is installed, you can import it and use it in your application like any other React component. The components are added as part of your codebase (not hidden in a library), so the usage feels very natural.
+
+## Example
+
+After installing AI Elements components, you can use them in your application like any other React component. For example:
+
+```tsx title="conversation.tsx"
+"use client";
+
+import {
+  Message,
+  MessageContent,
+  MessageResponse,
+} from "@/components/ai-elements/message";
+import { useChat } from "@ai-sdk/react";
+
+const Example = () => {
+  const { messages } = useChat();
 
   return (
-    <Conversation>
-      <ConversationContent>
-        {messages.map((message) => (
-          <div key={message.id}>
-            {message.parts.map((part, i) => {
+    <>
+      {messages.map(({ role, parts }, index) => (
+        <Message from={role} key={index}>
+          <MessageContent>
+            {parts.map((part, i) => {
               switch (part.type) {
-                case 'text':
+                case "text":
                   return (
-                    <Message key={i} from={message.role}>
-                      <MessageContent>
-                        <MessageResponse>{part.text}</MessageResponse>
-                      </MessageContent>
-                    </Message>
+                    <MessageResponse key={`${role}-${i}`}>
+                      {part.text}
+                    </MessageResponse>
                   );
-                case 'reasoning':
-                  return (
-                    <Reasoning key={i} isStreaming={status === 'streaming'}>
-                      <ReasoningTrigger />
-                      <ReasoningContent>{part.text}</ReasoningContent>
-                    </Reasoning>
-                  );
-                case 'source-url':
-                  return <Source key={i} href={part.url} title={part.title} />;
               }
             })}
-          </div>
-        ))}
-      </ConversationContent>
-    </Conversation>
+          </MessageContent>
+        </Message>
+      ))}
+    </>
   );
+};
+
+export default Example;
+```
+
+In the example above, we import the `Message` component from our AI Elements directory and include it in our JSX. Then, we compose the component with the `MessageContent` and `MessageResponse` subcomponents. You can style or configure the component just as you would if you wrote it yourself – since the code lives in your project, you can even open the component file to see how it works or make custom modifications.
+
+## Extensibility
+
+All AI Elements components take as many primitive attributes as possible. For example, the `Message` component extends `HTMLAttributes<HTMLDivElement>`, so you can pass any props that a `div` supports. This makes it easy to extend the component with your own styles or functionality.
+
+## Customization
+
+
+
+After installation, no additional setup is needed. The component’s styles (Tailwind CSS classes) and scripts are already integrated. You can start interacting with the component in your app immediately.
+
+For example, if you'd like to remove the rounding on `Message`, you can go to `components/ai-elements/message.tsx` and remove `rounded-lg` as follows:
+
+```tsx title="components/ai-elements/message.tsx" highlight="8"
+export const MessageContent = ({
+  children,
+  className,
+  ...props
+}: MessageContentProps) => (
+  <div
+    className={cn(
+      "flex flex-col gap-2 text-sm text-foreground",
+      "group-[.is-user]:bg-primary group-[.is-user]:text-primary-foreground group-[.is-user]:px-4 group-[.is-user]:py-3",
+      className
+    )}
+    {...props}
+  >
+    <div className="is-user:dark">{children}</div>
+  </div>
+);
+```
+
+## Troubleshooting
+
+## Why are my components not styled?
+
+Make sure your project is configured correctly for shadcn/ui in Tailwind 4 - this means having a `globals.css` file that imports Tailwind and includes the shadcn/ui base styles.
+
+## I ran the AI Elements CLI but nothing was added to my project
+
+Double-check that:
+
+- Your current working directory is the root of your project (where `package.json` lives).
+- Your components.json file (if using shadcn-style config) is set up correctly.
+- You’re using the latest version of the AI Elements CLI:
+
+```bash title="Terminal"
+npx ai-elements@latest
+```
+
+If all else fails, feel free to open an [issue on GitHub](https://github.com/vercel/ai-elements/issues).
+
+## Theme switching doesn’t work — my app stays in light mode
+
+Ensure your app is using the same data-theme system that shadcn/ui and AI Elements expect. The default implementation toggles a data-theme attribute on the `<html>` element. Make sure your tailwind.config.js is using class or data- selectors accordingly:
+
+## The component imports fail with “module not found”
+
+Check the file exists. If it does, make sure your `tsconfig.json` has a proper paths alias for `@/` i.e.
+
+```json title="tsconfig.json"
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+    }
+  }
 }
 ```
 
-## API Route Pattern
+## My AI coding assistant can't access AI Elements components
 
-```typescript
-// app/api/chat/route.ts
-import { streamText, UIMessage, convertToModelMessages } from 'ai';
+1. Verify your config file syntax is valid JSON.
+2. Check that the file path is correct for your AI tool.
+3. Restart your coding assistant after making changes.
+4. Ensure you have a stable internet connection.
 
-export const maxDuration = 30;
+## Still stuck?
 
-export async function POST(req: Request) {
-  const { messages, model }: { messages: UIMessage[]; model: string } = await req.json();
+If none of these answers help, open an [issue on GitHub](https://github.com/vercel/ai-elements/issues) and someone will be happy to assist.
 
-  const result = streamText({
-    model,
-    messages: convertToModelMessages(messages),
-    system: 'You are a helpful assistant.',
-  });
+## Available Components
 
-  return result.toUIMessageStreamResponse({
-    sendSources: true,
-    sendReasoning: true,
-  });
-}
-```
-
-## Key Patterns
-
-### Message Parts Switching
-
-Messages have `parts` array. Switch on `part.type`:
-- `text` - Regular text content
-- `reasoning` - Model thinking/reasoning
-- `source-url` - Citation with URL
-- `tool-*` - Tool invocations (input, output, error)
-
-### Compound Components
-
-Most components use compound pattern:
-```tsx
-<Conversation>
-  <ConversationContent>{/* messages */}</ConversationContent>
-  <ConversationScrollButton />
-</Conversation>
-
-<Message from="assistant">
-  <MessageContent>
-    <MessageResponse>{text}</MessageResponse>
-  </MessageContent>
-  <MessageActions>
-    <MessageAction label="Copy"><CopyIcon /></MessageAction>
-  </MessageActions>
-</Message>
-```
-
-### File Attachments
-
-```tsx
-<PromptInput onSubmit={handleSubmit} globalDrop multiple>
-  <PromptInputHeader>
-    <PromptInputAttachments>
-      {(attachment) => <PromptInputAttachment data={attachment} />}
-    </PromptInputAttachments>
-  </PromptInputHeader>
-  <PromptInputBody>
-    <PromptInputTextarea />
-  </PromptInputBody>
-  <PromptInputFooter>
-    <PromptInputTools>
-      <PromptInputActionMenu>
-        <PromptInputActionMenuTrigger />
-        <PromptInputActionMenuContent>
-          <PromptInputActionAddAttachments />
-        </PromptInputActionMenuContent>
-      </PromptInputActionMenu>
-    </PromptInputTools>
-    <PromptInputSubmit status={status} />
-  </PromptInputFooter>
-</PromptInput>
-```
-
-## References
-
-- [Chatbot Components](references/chatbot.md) - Conversation, Message, PromptInput, Reasoning, Sources, Tool, InlineCitation, Plan, Task, Queue
-- [Workflow Components](references/workflow.md) - Canvas, Node, Edge, Controls
-- [Utility Components](references/utilities.md) - CodeBlock, Loader, Shimmer, ModelSelector, OpenIn, WebPreview
-- [AI SDK Integration](references/integration.md) - useChat, API routes, message parts
-
-## Dependencies
-
-Key dependencies used by AI Elements:
-
-| Package | Purpose |
-|---------|---------|
-| `streamdown` | Streaming markdown renderer for `MessageResponse` and `Reasoning` |
-| `shiki` | Syntax highlighting for `CodeBlock` |
-| `use-stick-to-bottom` | Auto-scroll behavior for `Conversation` |
-| `motion` | Animations for `Shimmer` |
-| `tokenlens` | Token cost calculation for `Context` |
-
-## Package Manager
-
-**Always use bun**, never npm:
-- `bun add` (not npm install)
-- `bunx --bun` (not npx)
+See the `references/` folder for detailed documentation on each component.

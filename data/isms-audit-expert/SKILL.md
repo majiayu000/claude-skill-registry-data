@@ -10,9 +10,11 @@ Expert-level Information Security Management System (ISMS) auditing with compreh
 ## Core ISMS Auditing Competencies
 
 ### 1. ISO 27001 ISMS Audit Program Management
+
 Design and manage comprehensive ISMS audit programs ensuring systematic security evaluation and continuous improvement.
 
 **ISMS Audit Program Framework:**
+
 ```
 ISMS AUDIT PROGRAM MANAGEMENT
 ├── Security Audit Planning
@@ -38,9 +40,11 @@ ISMS AUDIT PROGRAM MANAGEMENT
 ```
 
 ### 2. Risk-Based Security Audit Planning
+
 Develop strategic security audit plans based on information security risks, threat landscape, and ISMS performance.
 
 **Security Audit Risk Assessment:**
+
 1. **Information Security Risk Evaluation**
    - Asset criticality and threat exposure analysis
    - Security control effectiveness assessment
@@ -60,9 +64,11 @@ Develop strategic security audit plans based on information security risks, thre
    - Compliance scanning and automated testing
 
 ### 3. ISO 27001 Audit Execution and Methodology
+
 Conduct systematic ISMS audits using proven methodologies ensuring comprehensive security assessment.
 
 **ISMS Audit Execution Process:**
+
 1. **Security Audit Preparation**
    - **Pre-audit Security Review**: Follow scripts/security-audit-prep.py
    - **Technical Assessment Planning**: Security testing scope and methods
@@ -82,9 +88,11 @@ Conduct systematic ISMS audits using proven methodologies ensuring comprehensive
    - **Compliance Status Reporting**: ISO 27001 and regulatory compliance
 
 ### 4. Security Control Assessment and Testing
+
 Conduct comprehensive security control assessments ensuring effective security implementation and operation.
 
 **Security Control Assessment Framework:**
+
 ```
 ISO 27002 CONTROL ASSESSMENT
 ├── Organizational Security Controls
@@ -116,9 +124,11 @@ ISO 27002 CONTROL ASSESSMENT
 ## Advanced ISMS Audit Applications
 
 ### Technical Security Testing Integration
+
 Integrate technical security assessments with ISMS auditing ensuring comprehensive security verification.
 
 **Technical Security Assessment:**
+
 1. **Vulnerability Assessment Integration**
    - Network vulnerability scanning and analysis
    - Application security testing and code review
@@ -138,18 +148,22 @@ Integrate technical security assessments with ISMS auditing ensuring comprehensi
    - Incident response procedure validation
 
 ### Cybersecurity Compliance Auditing
+
 Conduct specialized cybersecurity compliance audits addressing regulatory and industry requirements.
 
 **Cybersecurity Compliance Framework:**
+
 - **Healthcare Cybersecurity**: HIPAA Security Rule and healthcare-specific requirements
 - **Medical Device Cybersecurity**: FDA cybersecurity guidance and IEC 62304 integration
 - **Financial Services**: PCI DSS and financial industry security standards
 - **Critical Infrastructure**: NIST Cybersecurity Framework and sector-specific guidelines
 
 ### Cloud Security Auditing
+
 Assess cloud security implementations ensuring comprehensive cloud service security verification.
 
 **Cloud Security Audit Approach:**
+
 1. **Cloud Service Provider Assessment**
    - CSP security certification and compliance verification
    - Shared responsibility model implementation review
@@ -165,9 +179,11 @@ Assess cloud security implementations ensuring comprehensive cloud service secur
 ## Security Auditor Competency and Development
 
 ### Security Auditor Technical Competency
+
 Develop and maintain security auditor technical competency ensuring effective security assessment capabilities.
 
 **Security Auditor Competency Framework:**
+
 ```
 SECURITY AUDITOR COMPETENCY
 ├── Technical Security Knowledge
@@ -194,9 +210,11 @@ SECURITY AUDITOR COMPETENCY
 ```
 
 ### Security Audit Tool Proficiency
+
 Maintain proficiency with security audit tools and technologies ensuring effective technical assessment.
 
 **Security Audit Tool Categories:**
+
 - **Vulnerability Scanners**: Network, web application, and database vulnerability assessment
 - **Penetration Testing Tools**: Exploitation frameworks and security testing utilities
 - **Configuration Assessment**: System and application configuration analysis
@@ -205,9 +223,11 @@ Maintain proficiency with security audit tools and technologies ensuring effecti
 ## External Security Audit Coordination
 
 ### ISO 27001 Certification Audit Support
+
 Prepare organization for ISO 27001 certification audits ensuring successful certification and maintenance.
 
 **Certification Audit Preparation:**
+
 1. **Pre-certification Readiness**
    - Internal ISMS audit completion and closure
    - Security control implementation verification
@@ -221,9 +241,11 @@ Prepare organization for ISO 27001 certification audits ensuring successful cert
    - Certification body relationship management
 
 ### Regulatory Security Inspection Preparation
+
 Prepare organization for regulatory security inspections and compliance assessments.
 
 **Regulatory Inspection Coordination:**
+
 - **Healthcare Inspections**: OCR HIPAA security audits and assessments
 - **Financial Services**: Regulatory cybersecurity examinations
 - **Critical Infrastructure**: Sector-specific security assessments
@@ -232,9 +254,11 @@ Prepare organization for regulatory security inspections and compliance assessme
 ## ISMS Audit Performance and Improvement
 
 ### Security Audit Performance Metrics
+
 Monitor ISMS audit program effectiveness ensuring continuous security improvement and compliance.
 
 **Security Audit KPIs:**
+
 - **Security Control Effectiveness**: Control implementation and operation success
 - **Security Finding Resolution**: Finding closure rates and timelines
 - **Security Risk Mitigation**: Risk reduction and residual risk management
@@ -242,9 +266,11 @@ Monitor ISMS audit program effectiveness ensuring continuous security improvemen
 - **Security Incident Prevention**: Audit-driven security improvement effectiveness
 
 ### ISMS Audit Program Optimization
+
 Continuously improve ISMS audit program through methodology enhancement and technology integration.
 
 **Audit Program Enhancement:**
+
 1. **Security Audit Technology Integration**
    - Automated security scanning and assessment
    - Continuous security monitoring integration
@@ -260,12 +286,14 @@ Continuously improve ISMS audit program through methodology enhancement and tech
 ## Resources
 
 ### scripts/
+
 - `isms-audit-scheduler.py`: Risk-based ISMS audit planning and scheduling
 - `security-audit-prep.py`: Security audit preparation and checklist automation
 - `security-control-tester.py`: Automated security control verification testing
 - `compliance-reporting.py`: ISO 27001 and regulatory compliance reporting
 
 ### references/
+
 - `iso27001-audit-methodology.md`: Complete ISO 27001 audit framework and procedures
 - `security-control-testing-guide.md`: Technical security control assessment methodologies
 - `external-pentest-guide.md`: External penetration testing coordination and oversight
@@ -273,6 +301,7 @@ Continuously improve ISMS audit program through methodology enhancement and tech
 - `regulatory-security-compliance.md`: Multi-jurisdictional security compliance requirements
 
 ### assets/
+
 - `isms-audit-templates/`: ISMS audit plan, checklist, and report templates
 - `security-testing-tools/`: Security assessment and testing automation scripts
 - `compliance-checklists/`: ISO 27001 and regulatory compliance verification checklists

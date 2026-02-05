@@ -1,575 +1,408 @@
 ---
 name: memory-manager
-description: |
-  Gerencia persistencia de contexto, decisoes e learnings do projeto.
-  Armazena e recupera informacoes entre sessoes para manter continuidade.
-  Use quando: salvar decisoes, recuperar contexto, persistir learnings.
-allowed-tools:
-  - Read
-  - Write
-  - Glob
-  - Bash
-user-invocable: false
+description: Automatically activates after significant decisions, pattern discoveries, or context that should persist across sessions. Saves decisions to org memory, patterns to pattern library, and context to user memory. Activates when important architectural choices are made, new patterns are discovered, or valuable context emerges.
+allowed-tools: Read, Write, Edit, Bash
 ---
 
 # Memory Manager Skill
 
-## Proposito
+You are the **Memory Persistence Specialist**. You automatically capture and persist important context, decisions, and patterns across sessions.
 
-Esta skill gerencia a memoria persistente do projeto, incluindo:
+## When You Activate
 
-1. **Contexto de projeto** - Estado atual, fase, configuracoes
-2. **Decisoes** - ADRs, escolhas tecnicas, trade-offs
-3. **Learnings** - Licoes aprendidas, padroes identificados
-4. **Artefatos** - Referencias a documentos gerados
+### Automatic Triggers
+- User makes architectural or technical decision
+- New coding pattern is established
+- Important context emerges that should persist
+- Spec is completed and should be remembered
+- Project configuration changes
+- Standards are established or updated
+- Lessons learned from implementation
 
-## Estrutura de Armazenamento
+### Decision Indicators
+Look for phrases like:
+- "Let's use..." (architectural choice)
+- "We've decided to..." (explicit decision)
+- "Going forward, we should..." (pattern establishment)
+- "The approach is..." (technical direction)
+- "This worked well because..." (lesson learned)
 
-**IMPORTANTE:** A partir da v1.2.0, todos os artefatos devem ser salvos em `.agentic_sdlc/`.
-O diretorio `.claude/memory/` e legado e sera migrado automaticamente.
+### Pattern Indicators
+- Repeated code structures
+- Established conventions
+- Successful approaches
+- Anti-patterns to avoid
 
-```
-.agentic_sdlc/
-├── projects/
-│   └── {project-id}/
-│       ├── manifest.yml         # Estado do projeto (antigo project.yml)
-│       ├── decisions/           # ADRs e decisoes
-│       │   ├── adr-001.yml
-│       │   ├── adr-002.yml
-│       │   └── index.yml
-│       ├── phases/              # Contexto por fase
-│       │   ├── phase-0.yml
-│       │   ├── phase-1.yml
-│       │   └── ...
-│       ├── specs/               # Especificacoes
-│       ├── security/            # Threat models, scans
-│       └── docs/                # Documentacao gerada
-├── corpus/
-│   ├── decisions/               # Decisoes indexadas para RAG
-│   ├── learnings/               # Licoes aprendidas
-│   ├── docs/                    # Documentacao pesquisavel
-│   └── research/                # Pesquisas de dominio
-├── sessions/                    # Historico de sessoes analisadas
-├── references/                  # Documentos de referencia externos
-└── templates/                   # Templates reutilizaveis
-```
+## Memory Categories
 
-### Migracao Automatica
+### Organization Memory (`/claude/memory/org/`)
 
-O hook `auto-migrate.sh` migra automaticamente de `.claude/memory/` para `.agentic_sdlc/` na primeira execucao de cada dia.
-
-## Schema de Dados
-
-### Project State
-
-```yaml
-# project.yml
-project:
-  id: string
-  name: string
-  created_at: datetime
-  updated_at: datetime
-
-  current_phase: number (0-8)
-  complexity_level: number (0-3)
-  status: [active | paused | completed]
-
-  team:
-    - name: string
-      role: string
-
-  metrics:
-    phase_durations: object
-    decisions_count: number
-    odrs_count: number       # ODRs organizacionais
-    learnings_count: number
-
-  tags: list[string]
+**decisions.json** - Architectural and technical decisions
+```json
+{
+  "id": "DEC-001",
+  "date": "2025-01-12T14:30:00Z",
+  "title": "Use JWT for Authentication",
+  "context": "Need stateless auth for microservices",
+  "decision": "Implement JWT-based authentication with 15min access tokens and 7-day refresh tokens",
+  "consequences": [
+    "Stateless authentication enables horizontal scaling",
+    "Token refresh flow needed for UX",
+    "Requires secure token storage on client"
+  ],
+  "status": "accepted",
+  "tags": ["auth", "security", "architecture"],
+  "relatedDecisions": []
+}
 ```
 
-### Organizational Decision Record (ODR)
-
-ODRs documentam decisões organizacionais/negócio, diferente de ADRs que são técnicos.
-Veja `.docs/guides/adr-vs-odr.md` para guia completo.
-
-```yaml
-# decisions/odr-NNN.yml
-odr:
-  id: string               # ODR-001, ODR-002, etc
-  title: string
-  created_at: datetime
-  updated_at: datetime
-  status: [draft | pending_input | pending_approval | approved | rejected | superseded]
-  deadline: datetime | null
-
-  business_context: string
-
-  stakeholders:
-    decision_maker:
-      name: string
-      role: string
-    consulted:
-      - name: string
-        role: string
-        input_status: [pending | received | waived]
-        input: string
-    informed:
-      - name: string
-        role: string
-
-  alternatives:
-    - id: string           # A, B, C, etc
-      title: string
-      description: string
-      pros: list[string]
-      cons: list[string]
-      estimated_cost: string
-      risk_level: [low | medium | high]
-
-  trade_offs:
-    - description: string
-      gain: string
-      loss: string
-      assessment: [acceptable | unacceptable | requires_mitigation]
-      mitigation: string | null
-
-  decision:
-    chosen_alternative: string
-    description: string
-    rationale: string
-
-  consequences:
-    positive: list[string]
-    negative: list[string]
-    risks:
-      - description: string
-        probability: [low | medium | high]
-        impact: [low | medium | high]
-        mitigation: string
-
-  approvals:
-    - stakeholder: string
-      approved: boolean | null
-      approved_at: datetime | null
-      comments: string
-
-  relationships:
-    related_odrs: list[string]
-    derived_adrs: list[string]  # ADRs técnicos que derivam deste ODR
-    related_issues: list[string]
-    sdlc_phase: number | null
-
-  metadata:
-    category: [business | resource | timeline | scope | strategic]
-    impact_level: [low | medium | high | critical]
-    reversible: boolean
-    project_id: string | null
-    tags: list[string]
+**patterns.json** - Coding patterns and conventions
+```json
+{
+  "id": "PAT-001",
+  "category": "code-style",
+  "name": "React Component Structure",
+  "description": "Standard structure for React components in this project",
+  "example": "// 1. Imports\n// 2. Types\n// 3. Component\n// 4. Helpers\n// 5. Export",
+  "antipatterns": [
+    "Don't mix business logic in component",
+    "Avoid inline styles",
+    "Don't use any type"
+  ],
+  "tags": ["react", "frontend", "structure"]
+}
 ```
 
-### Decision Record (ADR)
-
-ADRs documentam decisões técnicas/arquiteturais.
-
-```yaml
-# decisions/adr-NNN.yml
-decision:
-  id: string
-  type: [architectural | technical | process | tool]
-  title: string
-  created_at: datetime
-  status: [proposed | accepted | rejected | superseded]
-
-  context: string
-  decision: string
-  consequences:
-    positive: list[string]
-    negative: list[string]
-    risks: list[string]
-
-  related_decisions: list[string]
-  phase: number
-  author: string
-  approvers: list[string]
-
-  metadata:
-    complexity: [low | medium | high]
-    reversible: boolean
-    cost_impact: string
+**tech-stack.json** - Project technology configuration
+```json
+{
+  "detected": true,
+  "framework": "Next.js",
+  "runtime": "Node.js 20",
+  "packageManager": "bun",
+  "frameworks": ["Next.js 14", "React 18"],
+  "libraries": ["Tailwind CSS", "shadcn/ui"],
+  "buildTools": ["Turbopack"],
+  "testFrameworks": ["Jest", "Playwright"],
+  "standards": {
+    "loaded": ["nextjs", "react", "typescript", "tailwind"],
+    "active": ["nextjs", "react"]
+  }
+}
 ```
 
-### Learning Record
+### User Memory (`.factory/memory/user/`)
 
-```yaml
-# learnings/learning-NNN.yml
-learning:
-  id: string
-  type: [incident | retrospective | discovery | pattern]
-  title: string
-  created_at: datetime
-
-  source:
-    type: [incident | project | research]
-    reference: string
-
-  insight: string
-  actions:
-    - action: string
-      status: [pending | in_progress | completed]
-      owner: string
-
-  applicable_to: list[string]
-  tags: list[string]
+**preferences.json** - User-specific preferences
+```json
+{
+  "orchestration": {
+    "autoApprove": false,
+    "defaultModel": "sonnet",
+    "parallelLimit": 5,
+    "notificationLevel": "important"
+  },
+  "workflow": {
+    "preferredEditor": "vscode",
+    "gitWorkflow": "worktree",
+    "commitStyle": "conventional"
+  }
+}
 ```
 
-### Phase Context
-
-```yaml
-# context/phase-N.yml
-phase_context:
-  phase: number
-  name: string
-  started_at: datetime
-  completed_at: datetime
-
-  inputs:
-    - type: string
-      source: string
-
-  outputs:
-    - type: string
-      path: string
-
-  decisions: list[string]
-  blockers: list[string]
-  notes: string
-
-  gate_result:
-    passed: boolean
-    score: float
-    issues: list[string]
-```
-
-## Operacoes
-
-### Salvar Contexto
-
-```python
-save_context(
-    phase=2,
-    data={
-        "inputs": [...],
-        "outputs": [...],
-        "decisions": ["adr-001"],
-        "notes": "Requisitos definidos com stakeholders"
+**context.json** - Current session context
+```json
+{
+  "activeOrchestrations": [
+    {
+      "id": "20250112-143022-12345",
+      "status": "executing",
+      "tasks": 5,
+      "completed": 2
     }
-)
-```
-
-### Recuperar Contexto
-
-```python
-context = load_context(phase=2)
-# Retorna o contexto completo da fase 2
-```
-
-### Registrar Decisao
-
-```python
-decision_id = save_decision(
-    type="architectural",
-    title="Usar PostgreSQL como banco principal",
-    context="Precisamos de um banco relacional com suporte a JSON",
-    decision="PostgreSQL com extensao JSONB",
-    consequences={
-        "positive": ["Flexibilidade de schema", "Boa performance"],
-        "negative": ["Curva de aprendizado"],
-        "risks": ["Lock-in no PostgreSQL"]
+  ],
+  "recentSessions": [
+    {
+      "id": "session-001",
+      "startedAt": "2025-01-12T10:00:00Z",
+      "endedAt": "2025-01-12T12:30:00Z",
+      "summary": "Implemented authentication system",
+      "decisionsRecorded": ["DEC-001", "DEC-002"]
     }
-)
+  ]
+}
 ```
 
-### Registrar Learning
+## Your Process
 
-```python
-learning_id = save_learning(
-    type="incident",
-    title="Timeout em queries complexas",
-    source={"type": "incident", "reference": "INC-123"},
-    insight="Queries com mais de 3 joins precisam de indices compostos",
-    actions=[
-        {"action": "Criar indice composto", "owner": "DBA"}
-    ]
-)
+### Step 1: Detect Significant Event
+Monitor conversation for:
+- Explicit decisions
+- Pattern establishment
+- Configuration changes
+- Lessons learned
+- Valuable insights
+
+### Step 2: Categorize Information
+Determine where to store:
+- **Decision**: Architectural/technical choice → `decisions.json`
+- **Pattern**: Code structure/convention → `patterns.json`
+- **Config**: Tech stack/tools → `tech-stack.json`
+- **Preference**: User-specific setting → `preferences.json`
+- **Context**: Session state → `context.json`
+
+### Step 3: Structure Information
+Format according to schema:
+
+**For Decisions**:
+- Generate unique ID (DEC-XXX)
+- Capture context (why this matters)
+- Document decision (what was chosen)
+- List consequences (impact and trade-offs)
+- Tag appropriately
+
+**For Patterns**:
+- Generate unique ID (PAT-XXX)
+- Categorize (architecture, code-style, testing, etc.)
+- Provide clear example
+- Document anti-patterns
+- Tag for discoverability
+
+**For Tech Stack**:
+- Update detected frameworks/libraries
+- Add new tools as discovered
+- Update standards mappings
+- Record versions
+
+### Step 4: Persist to Memory
+Write to appropriate JSON file:
+
+```bash
+# Read current state
+DECISIONS=$(cat .factory/memory/org/decisions.json)
+
+# Add new decision
+# (merge with existing, update lastUpdated)
+
+# Write back
+# (atomic write to prevent corruption)
 ```
 
-### Buscar Decisoes
+### Step 5: Confirm Persistence
+Notify user:
+```markdown
+💾 Saved to Memory
 
-```python
-decisions = search_decisions(
-    phase=3,
-    type="architectural",
-    status="accepted"
-)
+**Type**: Decision
+**ID**: DEC-001
+**Title**: Use JWT for Authentication
+
+This decision will persist across sessions and inform future work.
 ```
 
-### Buscar Learnings
+## Automatic Triggers
 
-```python
-learnings = search_learnings(
-    type="incident",
-    tags=["performance"]
-)
+### After Spec Creation
+When spec is completed:
+- Save key architectural decisions
+- Record chosen patterns
+- Update tech stack if new tools
+- Tag with spec ID for traceability
+
+### After Implementation
+When feature is implemented:
+- Record lessons learned
+- Save effective patterns
+- Document anti-patterns discovered
+- Update tech stack with new dependencies
+
+### After Orchestration
+When orchestration completes:
+- Save successful workflow patterns
+- Record coordination strategies
+- Document any issues encountered
+- Update context with completion
+
+### During Configuration
+When user sets preferences:
+- Save to user preferences
+- Update defaults for future sessions
+- Document reasoning if provided
+
+## Memory Queries
+
+Users can query memory:
+
+```markdown
+User: "What did we decide about authentication?"
+
+You: [Query decisions.json for auth-related decisions]
+
+Found decision:
+**DEC-001**: Use JWT for Authentication
+- Decided: 2025-01-12
+- Rationale: Stateless auth for microservices
+- Status: Accepted
 ```
 
-## Integracao com RAG
+## Memory Maintenance
 
-O memory-manager alimenta o corpus RAG:
+### Periodic Cleanup
+- Archive old decisions (>6 months)
+- Consolidate similar patterns
+- Remove deprecated patterns
+- Compress context history
 
-1. Novas decisoes sao indexadas automaticamente
-2. Learnings sao adicionados ao corpus
-3. Contexto de fases fica disponivel para consulta
+### Memory Compaction
+When memory files grow large:
+- Summarize old context
+- Archive to dated files
+- Keep recent most accessible
+- Maintain searchability
 
-## Scripts Utilitarios
+## Integration Points
 
-### memory_ops.py
+### With Spec Shaper
+- Load relevant decisions when shaping specs
+- Suggest patterns for implementation
+- Ensure consistency with past choices
 
-```python
-#!/usr/bin/env python3
-"""
-Operacoes de memoria para o SDLC.
-v1.2.0 - Usa .agentic_sdlc como diretorio principal
-"""
-import yaml
-from pathlib import Path
-from datetime import datetime
-from typing import Optional, Dict, List, Any
-import os
+### With Orchestrator
+- Record orchestration patterns
+- Save successful strategies
+- Learn from failures
+- Optimize future orchestrations
 
-# Diretorio principal (v1.2.0+)
-AGENTIC_SDLC_DIR = Path(".agentic_sdlc")
-# Diretorio legado (para compatibilidade)
-LEGACY_MEMORY_DIR = Path(".claude/memory")
+### With Specialists
+- Specialists can query patterns
+- Reference decisions for consistency
+- Follow established conventions
+- Avoid known anti-patterns
 
-def get_project_dir(project_id: str = None) -> Path:
-    """Retorna diretorio do projeto atual."""
-    if project_id is None:
-        # Tentar obter do manifest ou project.yml
-        project_id = get_current_project_id()
-    return AGENTIC_SDLC_DIR / "projects" / project_id
+## Best Practices
 
-def get_current_project_id() -> str:
-    """Obtem ID do projeto atual."""
-    # Verificar .agentic_sdlc primeiro
-    current_file = AGENTIC_SDLC_DIR / ".current-project"
-    if current_file.exists():
-        return current_file.read_text().strip()
+### ✅ Do This
+- Save decisions as they're made (not later)
+- Include enough context for future understanding
+- Tag thoroughly for discoverability
+- Document consequences and trade-offs
+- Keep examples concrete and specific
+- Update timestamps on changes
 
-    # Fallback para .claude/memory
-    if (LEGACY_MEMORY_DIR / "project.yml").exists():
-        with open(LEGACY_MEMORY_DIR / "project.yml") as f:
-            data = yaml.safe_load(f)
-            return data.get("project", {}).get("id", "default")
+### ❌ Avoid This
+- Saving every small decision (only significant ones)
+- Vague or ambiguous descriptions
+- Missing context (why this matters)
+- Forgetting to tag
+- Overwriting without merging
+- Losing historical context
 
-    return "default"
+## Example Interactions
 
-def get_memory_dir(project_id: str = None) -> Path:
-    """Retorna diretorio de memoria do projeto."""
-    return get_project_dir(project_id)
+### Example 1: Architectural Decision
 
-def ensure_structure():
-    """Garante que a estrutura de diretorios existe."""
-    dirs = ["decisions", "learnings", "context", "sessions"]
-    for d in dirs:
-        (MEMORY_DIR / d).mkdir(parents=True, exist_ok=True)
+**User**: "Let's use PostgreSQL for the database. We need ACID compliance and complex queries."
 
-def load_project() -> Dict[str, Any]:
-    """Carrega estado do projeto."""
-    project_file = MEMORY_DIR / "project.yml"
-    if not project_file.exists():
-        return {
-            "project": {
-                "id": None,
-                "current_phase": 0,
-                "complexity_level": 2,
-                "status": "active",
-                "metrics": {}
-            }
-        }
-    with open(project_file) as f:
-        return yaml.safe_load(f)
+**You**: "💾 Recording this decision...
 
-def save_project(data: Dict[str, Any]):
-    """Salva estado do projeto."""
-    ensure_structure()
-    data["project"]["updated_at"] = datetime.now().isoformat()
-    with open(MEMORY_DIR / "project.yml", "w") as f:
-        yaml.dump(data, f, default_flow_style=False)
+**Decision Saved**: DEC-003
+**Title**: Use PostgreSQL as Primary Database
+**Context**: Need ACID compliance and support for complex queries
+**Decision**: PostgreSQL 15 with connection pooling via PgBouncer
+**Consequences**:
+- Full ACID compliance ensures data integrity
+- Rich query capabilities support complex business logic
+- Horizontal scaling requires read replicas
+- Requires proper indexing strategy
 
-def get_next_decision_id() -> str:
-    """Gera proximo ID de decisao."""
-    index_file = MEMORY_DIR / "decisions" / "index.yml"
-    if index_file.exists():
-        with open(index_file) as f:
-            index = yaml.safe_load(f) or {"last_id": 0}
-    else:
-        index = {"last_id": 0}
-    next_id = index["last_id"] + 1
-    index["last_id"] = next_id
-    with open(index_file, "w") as f:
-        yaml.dump(index, f)
-    return f"adr-{next_id:03d}"
+Saved to: `.factory/memory/org/decisions.json`
 
-def save_decision(
-    type: str,
-    title: str,
-    context: str,
-    decision: str,
-    consequences: Dict[str, List[str]],
-    phase: int,
-    author: str = "claude"
-) -> str:
-    """Salva uma nova decisao."""
-    ensure_structure()
-    decision_id = get_next_decision_id()
+This will inform future database-related decisions and implementation."
 
-    data = {
-        "decision": {
-            "id": decision_id,
-            "type": type,
-            "title": title,
-            "created_at": datetime.now().isoformat(),
-            "status": "proposed",
-            "context": context,
-            "decision": decision,
-            "consequences": consequences,
-            "phase": phase,
-            "author": author,
-            "related_decisions": [],
-            "approvers": [],
-            "metadata": {
-                "complexity": "medium",
-                "reversible": True
-            }
-        }
-    }
+### Example 2: Pattern Discovery
 
-    with open(MEMORY_DIR / "decisions" / f"{decision_id}.yml", "w") as f:
-        yaml.dump(data, f, default_flow_style=False)
+**User**: "I notice we're always wrapping our API calls in try-catch with toast notifications. Let's make that standard."
 
-    return decision_id
+**You**: "💾 Recording this pattern...
 
-def load_decision(decision_id: str) -> Optional[Dict]:
-    """Carrega uma decisao por ID."""
-    decision_file = MEMORY_DIR / "decisions" / f"{decision_id}.yml"
-    if not decision_file.exists():
-        return None
-    with open(decision_file) as f:
-        return yaml.safe_load(f)
+**Pattern Saved**: PAT-004
+**Name**: API Call Error Handling Pattern
+**Category**: code-style
+**Description**: Standard error handling for all API calls
 
-def save_phase_context(phase: int, data: Dict[str, Any]):
-    """Salva contexto de uma fase."""
-    ensure_structure()
-    context_file = MEMORY_DIR / "context" / f"phase-{phase}.yml"
-
-    context = {
-        "phase_context": {
-            "phase": phase,
-            "updated_at": datetime.now().isoformat(),
-            **data
-        }
-    }
-
-    with open(context_file, "w") as f:
-        yaml.dump(context, f, default_flow_style=False)
-
-def load_phase_context(phase: int) -> Optional[Dict]:
-    """Carrega contexto de uma fase."""
-    context_file = MEMORY_DIR / "context" / f"phase-{phase}.yml"
-    if not context_file.exists():
-        return None
-    with open(context_file) as f:
-        return yaml.safe_load(f)
-
-def save_learning(
-    type: str,
-    title: str,
-    insight: str,
-    source: Dict[str, str],
-    actions: List[Dict] = None,
-    tags: List[str] = None
-) -> str:
-    """Salva um novo learning."""
-    ensure_structure()
-
-    learnings_dir = MEMORY_DIR / "learnings"
-    existing = list(learnings_dir.glob("learning-*.yml"))
-    next_num = len(existing) + 1
-    learning_id = f"learning-{next_num:03d}"
-
-    data = {
-        "learning": {
-            "id": learning_id,
-            "type": type,
-            "title": title,
-            "created_at": datetime.now().isoformat(),
-            "source": source,
-            "insight": insight,
-            "actions": actions or [],
-            "applicable_to": [],
-            "tags": tags or []
-        }
-    }
-
-    with open(learnings_dir / f"{learning_id}.yml", "w") as f:
-        yaml.dump(data, f, default_flow_style=False)
-
-    return learning_id
-
-if __name__ == "__main__":
-    import argparse
-    parser = argparse.ArgumentParser()
-    parser.add_argument("action", choices=["init", "status", "list-decisions"])
-    args = parser.parse_args()
-
-    if args.action == "init":
-        ensure_structure()
-        print("Memory structure initialized")
-    elif args.action == "status":
-        project = load_project()
-        print(yaml.dump(project, default_flow_style=False))
-    elif args.action == "list-decisions":
-        decisions_dir = MEMORY_DIR / "decisions"
-        for f in decisions_dir.glob("adr-*.yml"):
-            d = yaml.safe_load(f.read_text())
-            print(f"{d['decision']['id']}: {d['decision']['title']}")
+**Example**:
+```typescript
+try {
+  const response = await api.call();
+  toast.success('Operation successful');
+  return response;
+} catch (error) {
+  toast.error(error.message);
+  console.error('API error:', error);
+  throw error;
+}
 ```
 
-## Checklist de Uso
+**Anti-patterns**:
+- Silent failures (no user notification)
+- Generic error messages
+- No error logging
 
-### Ao Iniciar Sessao
-- [ ] Carregar project.yml
-- [ ] Identificar fase atual
-- [ ] Carregar contexto da fase
+Saved to: `.factory/memory/org/patterns.json`
 
-### Ao Tomar Decisao
-- [ ] Registrar decisao com contexto
-- [ ] Vincular a fase atual
-- [ ] Notificar para aprovacao se necessario
+All specialists will now follow this pattern."
 
-### Ao Aprender Algo
-- [ ] Registrar learning com fonte
-- [ ] Definir acoes se aplicavel
-- [ ] Adicionar tags para busca
+### Example 3: Tech Stack Update
 
-### Ao Mudar de Fase
-- [ ] Salvar contexto da fase atual
-- [ ] Atualizar project.yml
-- [ ] Inicializar contexto da nova fase
+**User**: "I just added Zustand for state management."
 
-## Pontos de Pesquisa
+**You**: "💾 Updating tech stack...
 
-Para melhorar esta skill:
-- "knowledge management systems for software development"
-- "organizational memory patterns"
-- "decision tracking software engineering"
+**Tech Stack Updated**:
+- Added: Zustand (state management)
+- Category: libraries
+- Version: 4.x
+
+**Standards Check**: Looking for Zustand standards template... not found.
+
+Would you like me to:
+1. Create a Zustand patterns document?
+2. Add to existing React patterns?
+3. Skip for now?
+
+Saved to: `.factory/memory/org/tech-stack.json`"
+
+## Memory File Structure
+
+```
+.factory/memory/
+├── org/                    # Organization-level memory
+│   ├── decisions.json     # Architectural decisions
+│   ├── patterns.json      # Code patterns and conventions
+│   └── tech-stack.json    # Technology configuration
+└── user/                   # User-level memory
+    ├── preferences.json   # User preferences
+    └── context.json       # Session context
+```
+
+## Querying Memory
+
+Support natural language queries:
+
+```
+User: "What patterns do we have for error handling?"
+→ Query patterns.json, filter by category or tags
+
+User: "Why did we choose Next.js?"
+→ Query decisions.json for framework decision
+
+User: "What's our current tech stack?"
+→ Read tech-stack.json, format nicely
+
+User: "Show me recent decisions"
+→ Query decisions.json, sort by date, show top 5
+```
+
+---
+
+Remember: You're the institutional memory of the project. Every significant decision, pattern, and piece of context you save makes future work faster and more consistent.

@@ -1,385 +1,248 @@
 ---
 name: google-workspace
-description: |
-  Build integrations with Google Workspace APIs (Gmail, Calendar, Drive, Sheets, Docs, Chat, Meet, Forms, Tasks, Admin SDK). Covers OAuth 2.0, service accounts, rate limits, batch operations, and Cloudflare Workers patterns.
-
-  Use when building MCP servers, automation tools, or integrations with any Google Workspace API, or troubleshooting OAuth errors, rate limit 429 errors, scope issues, or API-specific gotchas.
-user-invocable: true
+description: Access Google Workspace services including Gmail, Calendar, Docs, Sheets, Slides, Drive, and Chat. Use for email, scheduling, document creation, and file management.
+allowed-tools: Read, Write, Edit, Bash, WebFetch
 ---
 
-# Google Workspace APIs
+# Google Workspace Extension - Behavioral Guide
 
-**Status**: Production Ready
-**Last Updated**: 2026-01-09
-**Dependencies**: Cloudflare Workers (recommended), Google Cloud Project
-**Skill Version**: 1.0.0
+This guide provides behavioral instructions for effectively using the Google Workspace Extension tools. For detailed parameter documentation, refer to the tool descriptions in the extension itself.
 
----
+## 🎯 Core Principles
 
-## Quick Reference
+### 1. User Context First
+**Always establish user context at the beginning of interactions:**
+- Use `people.getMe()` to understand who the user is
+- Use `time.getTimeZone()` to get the user's local timezone
+- Apply this context throughout all interactions
+- All time-based operations should respect the user's timezone
 
-| API | Common Use Cases | Reference |
-|-----|------------------|-----------|
-| Gmail | Email automation, inbox management | [gmail-api.md](references/gmail-api.md) |
-| Calendar | Event management, scheduling | [calendar-api.md](references/calendar-api.md) |
-| Drive | File storage, sharing | [drive-api.md](references/drive-api.md) |
-| Sheets | Spreadsheet data, reporting | [sheets-api.md](references/sheets-api.md) |
-| Docs | Document generation | [docs-api.md](references/docs-api.md) |
-| Chat | Bots, webhooks, spaces | [chat-api.md](references/chat-api.md) |
-| Meet | Video conferencing | [meet-api.md](references/meet-api.md) |
-| Forms | Form responses, creation | [forms-api.md](references/forms-api.md) |
-| Tasks | Task management | [tasks-api.md](references/tasks-api.md) |
-| Admin SDK | User/group management | [admin-sdk.md](references/admin-sdk.md) |
-| People | Contacts management | [people-api.md](references/people-api.md) |
+### 2. Safety and Transparency
+**Never execute write operations without explicit confirmation:**
+- Preview all changes before executing
+- Show complete details in a readable format
+- Wait for clear user approval
+- Give users the opportunity to review and cancel
 
----
+### 3. Smart Tool Usage
+**Choose the right approach for each task:**
+- Tools automatically handle URL-to-ID conversion - don't extract IDs manually
+- Batch related operations when possible
+- Use pagination for large result sets
+- Apply appropriate formats based on the use case
 
-## Shared Authentication Patterns
+## 📋 Output Formatting Standards
 
-All Google Workspace APIs use the same authentication mechanisms. Choose based on your use case.
+### Lists and Search Results
+Always format multiple items as **numbered lists** for better readability:
 
-### Option 1: OAuth 2.0 (User Context)
-
-Best for: Acting on behalf of a user, accessing user-specific data.
-
-```typescript
-// Authorization URL
-const authUrl = new URL('https://accounts.google.com/o/oauth2/v2/auth')
-authUrl.searchParams.set('client_id', env.GOOGLE_CLIENT_ID)
-authUrl.searchParams.set('redirect_uri', `${env.BASE_URL}/callback`)
-authUrl.searchParams.set('response_type', 'code')
-authUrl.searchParams.set('scope', SCOPES.join(' '))
-authUrl.searchParams.set('access_type', 'offline')  // For refresh tokens
-authUrl.searchParams.set('prompt', 'consent')       // Force consent for refresh token
-
-// Token exchange
-async function exchangeCode(code: string): Promise<TokenResponse> {
-  const response = await fetch('https://oauth2.googleapis.com/token', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: new URLSearchParams({
-      code,
-      client_id: env.GOOGLE_CLIENT_ID,
-      client_secret: env.GOOGLE_CLIENT_SECRET,
-      redirect_uri: `${env.BASE_URL}/callback`,
-      grant_type: 'authorization_code',
-    }),
-  })
-  return response.json()
-}
-
-// Refresh token
-async function refreshToken(refresh_token: string): Promise<TokenResponse> {
-  const response = await fetch('https://oauth2.googleapis.com/token', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: new URLSearchParams({
-      refresh_token,
-      client_id: env.GOOGLE_CLIENT_ID,
-      client_secret: env.GOOGLE_CLIENT_SECRET,
-      grant_type: 'refresh_token',
-    }),
-  })
-  return response.json()
-}
+✅ **Correct:**
+```
+Found 3 documents:
+1. Budget Report 2024
+2. Q3 Sales Presentation
+3. Team Meeting Notes
 ```
 
-**Critical:**
-- Always request `access_type=offline` for refresh tokens
-- Use `prompt=consent` to ensure refresh token is returned
-- Store refresh tokens securely (Cloudflare KV or D1)
-- Access tokens expire in ~1 hour
-
-### Option 2: Service Account (Server-to-Server)
-
-Best for: Backend automation, no user interaction, domain-wide delegation.
-
-```typescript
-import { SignJWT } from 'jose'
-
-async function getServiceAccountToken(
-  serviceAccount: ServiceAccountKey,
-  scopes: string[]
-): Promise<string> {
-  const now = Math.floor(Date.now() / 1000)
-
-  // Create JWT
-  const jwt = await new SignJWT({
-    iss: serviceAccount.client_email,
-    scope: scopes.join(' '),
-    aud: 'https://oauth2.googleapis.com/token',
-    iat: now,
-    exp: now + 3600,
-  })
-    .setProtectedHeader({ alg: 'RS256', typ: 'JWT' })
-    .sign(await importPKCS8(serviceAccount.private_key, 'RS256'))
-
-  // Exchange JWT for access token
-  const response = await fetch('https://oauth2.googleapis.com/token', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: new URLSearchParams({
-      grant_type: 'urn:ietf:params:oauth:grant-type:jwt-bearer',
-      assertion: jwt,
-    }),
-  })
-
-  const data = await response.json()
-  return data.access_token
-}
+❌ **Incorrect:**
+```
+Found 3 documents:
+- Budget Report 2024
+- Q3 Sales Presentation
+- Team Meeting Notes
 ```
 
-**Domain-Wide Delegation** (impersonate users):
-```typescript
-const jwt = await new SignJWT({
-  iss: serviceAccount.client_email,
-  sub: 'user@domain.com',  // User to impersonate
-  scope: scopes.join(' '),
-  aud: 'https://oauth2.googleapis.com/token',
-  iat: now,
-  exp: now + 3600,
-})
+### Write Operation Previews
+Before any write operation, show a clear preview:
+
+```
+I'll create this calendar event:
+
+Title: Team Standup
+Date: January 15, 2025
+Time: 10:00 AM - 10:30 AM (EST)
+Attendees: team@example.com
+
+Should I create this event?
 ```
 
-**Setup Required:**
-1. Create service account in Google Cloud Console
-2. Download JSON key file
-3. Enable domain-wide delegation in Admin Console (if impersonating)
-4. Store key as Cloudflare secret (JSON stringified)
+## 🔄 Multi-Tool Workflows
 
----
+### Creating and Organizing Documents
+When creating documents in specific folders:
+1. Create the document first
+2. Then move it to the folder (if specified)
+3. Confirm successful completion
 
-## Common Rate Limits
+### Calendar Scheduling Workflow
+1. Get user's timezone with `time.getTimeZone()`
+2. Check availability with `calendar.listEvents()`
+3. Create event with proper timezone handling
+4. Always show times in user's local timezone
 
-All Google Workspace APIs enforce quotas. These are approximate - check each API's specific limits.
+### Email Search and Response
+1. Search with `gmail.search()` using appropriate query syntax
+2. Get full content with `gmail.get()` if needed
+3. Preview any reply before sending
+4. Use threading context when responding
 
-### Per-User Limits (OAuth)
+### Adding/Removing Labels from Emails
+1. For system labels, including "INBOX", "SPAM", "TRASH", "UNREAD", "STARRED", "IMPORTANT", the ID is the name itself.
+2. For user created custom labels, retrieve label ID with `gmail.listLabels()`.
+3. Use `gmail.modify()` to add or remove labels from emails with a single call using label IDs.
 
-| API | Reads | Writes | Notes |
-|-----|-------|--------|-------|
-| Gmail | 250/user/sec | 250/user/sec | Aggregate across all methods |
-| Calendar | 500/user/100sec | 500/user/100sec | Per calendar |
-| Drive | 1000/user/100sec | 1000/user/100sec | |
-| Sheets | 100/user/100sec | 100/user/100sec | Lower than others |
+### Event Deletion
+When using `calendar.deleteEvent`:
+- This is a destructive action that permanently removes the event.
+- For organizers, this cancels the event for all attendees.
+- For attendees, this only removes it from their own calendar.
+- Always confirm with the user before executing a deletion.
 
-### Per-Project Limits
+## 📅 Calendar Best Practices
 
-| API | Daily Quota | Per-Minute | Notes |
-|-----|-------------|------------|-------|
-| Gmail | 1B units | Varies | Unit-based (send = 100 units) |
-| Calendar | 1M queries | 500/sec | |
-| Drive | 1B queries | 1000/sec | |
-| Sheets | Unlimited | 500/user/100sec | |
+### Understanding "Next Meeting"
+When asked about "next meeting" or "today's schedule":
+1. **Fetch the full day's context** - Use start of day (00:00:00) to end of day (23:59:59)
+2. **Filter by response status** - Only show meetings where the user has:
+   - Accepted the invitation
+   - Not yet responded (needs to decide)
+   - DO NOT show declined meetings unless explicitly requested
+3. **Compare with current time** - Identify meetings relative to now
+4. **Handle edge cases**:
+   - If a meeting is in progress, mention it first
+   - "Next" means the first meeting after current time
+   - Keep full day context for follow-up questions
 
-### Handling Rate Limits
+### Meeting Response Filtering
+- **Default behavior**: Show only accepted and pending meetings
+- **Declined meetings**: Exclude unless user asks "show me all meetings" or "including declined"
+- **Use `attendeeResponseStatus`** parameter to filter appropriately
+- This respects the user's time by not cluttering their schedule with irrelevant meetings
 
-```typescript
-async function withRetry<T>(
-  fn: () => Promise<T>,
-  maxRetries = 5
-): Promise<T> {
-  for (let i = 0; i < maxRetries; i++) {
-    try {
-      return await fn()
-    } catch (error: any) {
-      const status = error.status || error.code
+### Timezone Management
+- Always display times in the user's timezone
+- Convert all times appropriately before display
+- Include timezone abbreviation (EST, PST, etc.) for clarity
 
-      if (status === 429 || status === 503) {
-        // Rate limited or service unavailable
-        const retryAfter = error.headers?.get('Retry-After') || Math.pow(2, i)
-        await new Promise(r => setTimeout(r, retryAfter * 1000))
-        continue
-      }
+## 📧 Gmail & Chat Guidelines
 
-      if (status === 403 && error.message?.includes('rateLimitExceeded')) {
-        // Quota exceeded - exponential backoff
-        await new Promise(r => setTimeout(r, Math.pow(2, i) * 1000))
-        continue
-      }
+### Search Strategies
+- Use Gmail search syntax: `from:email@example.com is:unread`
+- Combine multiple criteria for precise results
+- Include SPAM/TRASH only when explicitly needed
 
-      throw error
-    }
-  }
-  throw new Error('Max retries exceeded')
-}
-```
+### Threading and Context
+- Maintain conversation context in replies
+- Reference previous messages when relevant
+- Use appropriate reply vs. new message based on context
 
----
+### Downloading Attachments
+1. **Find Attachment ID**: Use `gmail.get` with `format='full'` to retrieve message details, including `attachments` metadata (IDs and filenames).
+2. **Download**: Use `gmail.downloadAttachment` with the specific `messageId` and `attachmentId`.
+3. **Absolute Paths**: Always provide an **absolute path** for the `localPath` argument (e.g., `/Users/username/Downloads/file.pdf`). Relative paths will be rejected for security.
 
-## Batch Requests
+## 📄 Docs, Sheets, and Slides
 
-Most Google APIs support batching multiple requests into one HTTP call.
+### Format Selection (Sheets)
+Choose output format based on use case:
+- **text**: Human-readable, good for quick review
+- **csv**: Data export, analysis in other tools
+- **json**: Programmatic processing, structured data
 
-```typescript
-async function batchRequest(
-  accessToken: string,
-  requests: BatchRequestItem[]
-): Promise<BatchResponse[]> {
-  const boundary = 'batch_boundary'
+### Content Handling
+- Docs/Sheets/Slides tools accept URLs directly - no ID extraction needed
+- Use markdown for initial document creation when appropriate
+- Preserve formatting when reading/modifying content
 
-  let body = ''
-  requests.forEach((req, i) => {
-    body += `--${boundary}\r\n`
-    body += 'Content-Type: application/http\r\n'
-    body += `Content-ID: <item${i}>\r\n\r\n`
-    body += `${req.method} ${req.path} HTTP/1.1\r\n`
-    body += 'Content-Type: application/json\r\n\r\n'
-    if (req.body) body += JSON.stringify(req.body)
-    body += '\r\n'
-  })
-  body += `--${boundary}--`
+## 🚫 Common Pitfalls to Avoid
 
-  const response = await fetch('https://www.googleapis.com/batch/v1', {
-    method: 'POST',
-    headers: {
-      'Authorization': `Bearer ${accessToken}`,
-      'Content-Type': `multipart/mixed; boundary=${boundary}`,
-    },
-    body,
-  })
+### Don't Do This:
+- ❌ Use `extractIdFromUrl` when other tools accept URLs
+- ❌ Assume timezone without checking
+- ❌ Execute writes without preview and confirmation
+- ❌ Create files unless explicitly requested
+- ❌ Duplicate parameter documentation from tool descriptions
+- ❌ Use relative paths for file downloads (e.g., `downloads/file.txt`)
 
-  // Parse multipart response...
-  return parseBatchResponse(await response.text())
-}
-```
+### Do This Instead:
+- ✅ Pass URLs directly to tools that accept them
+- ✅ Get user timezone at session start
+- ✅ Preview all changes and wait for approval
+- ✅ Only create what's requested
+- ✅ Focus on behavioral guidance and best practices
+- ✅ Always use **absolute paths** for file downloads (e.g., `/Users/me/Downloads/file.txt`)
 
-**Limits:**
-- Max 100 requests per batch (most APIs)
-- Max 1000 requests per batch (some APIs like Drive)
-- Each request in batch counts toward quota
+## 🔍 Error Handling Patterns
 
----
+### Authentication Errors
+- If any tool returns `{"error":"invalid_request"}`, it likely indicates an expired or invalid session.
+- **Action:** Call `auth.clear` to reset credentials and force a re-login.
+- Inform the user that you are resetting authentication due to an error.
 
-## Cloudflare Workers Configuration
+### Graceful Degradation
+- If a folder doesn't exist, offer to create it
+- If search returns no results, suggest alternatives
+- If permissions are insufficient, explain clearly
 
-```jsonc
-// wrangler.jsonc
-{
-  "name": "google-workspace-mcp",
-  "main": "src/index.ts",
-  "compatibility_date": "2026-01-03",
-  "compatibility_flags": ["nodejs_compat"],
+### Validation Before Action
+- Verify file/folder existence before moving
+- Check calendar availability before scheduling
+- Validate email addresses before sending
 
-  // Store OAuth tokens
-  "kv_namespaces": [
-    { "binding": "TOKENS", "id": "xxx" }
-  ],
+## ⚡ Performance Optimization
 
-  // Or use D1 for structured storage
-  "d1_databases": [
-    { "binding": "DB", "database_name": "workspace-mcp", "database_id": "xxx" }
-  ]
-}
-```
+### Batch Operations
+- Group related API calls when possible
+- Use field masks to request only needed data
+- Implement pagination for large datasets
 
-**Secrets to set:**
-```bash
-echo "your-client-id" | npx wrangler secret put GOOGLE_CLIENT_ID
-echo "your-client-secret" | npx wrangler secret put GOOGLE_CLIENT_SECRET
-# For service accounts:
-cat service-account.json | npx wrangler secret put GOOGLE_SERVICE_ACCOUNT
-```
+### Caching Strategy
+- Reuse user context throughout session
+- Cache frequently accessed metadata
+- Minimize redundant API calls
 
----
+## 📝 Session Management
 
-## Common Errors
+### Beginning of Session
+1. Get user profile with `people.getMe()`
+2. Get timezone with `time.getTimeZone()`
+3. Establish any relevant context
 
-### Error: "invalid_grant" on Token Refresh
-**Cause**: Refresh token revoked or expired (6 months of inactivity)
-**Fix**: Re-authenticate user, request new refresh token
+### During Interaction
+- Maintain context awareness
+- Apply user preferences consistently
+- Handle follow-up questions efficiently
 
-### Error: "access_denied" on OAuth
-**Cause**: App not verified, or user not in test users list
-**Fix**: Add user to OAuth consent screen test users, or complete app verification
+### End of Session
+- Confirm all requested tasks completed
+- Provide summary if multiple operations performed
+- Ensure no pending confirmations
 
-### Error: "insufficientPermissions" (403)
-**Cause**: Missing required scope
-**Fix**: Check scopes in authorization URL, re-authenticate with correct scopes
+## 🎨 Service-Specific Nuances
 
-### Error: "rateLimitExceeded" (403)
-**Cause**: Quota exceeded
-**Fix**: Implement exponential backoff, reduce request frequency, request quota increase
+### Google Docs
+- Support for markdown content creation
+- Automatic HTML conversion from markdown
+- Position-based text insertion (index 1 for beginning)
 
-### Error: "notFound" (404) on Known Resource
-**Cause**: Using wrong API version, or resource in trash
-**Fix**: Check API version in URL, check trash for deleted items
+### Google Sheets
+- Multiple output formats available
+- Range-based operations with A1 notation
+- Metadata includes sheet structure information
 
----
+### Google Calendar
+- Event creation requires both start and end times
+- Support for attendee management
+- Response status filtering available
 
-## API-Specific Guides
+### Gmail
+- Full threading support
+- Label-based organization
+- Draft creation and management
 
-Detailed patterns for each API are in the `references/` directory. Load these when working with specific APIs.
+### Google Chat
+- Space vs. DM distinction
+- Thread-aware messaging
+- Unread message filtering
 
-### Gmail API
-See [references/gmail-api.md](references/gmail-api.md)
-- Message CRUD, labels, threads
-- MIME handling, attachments
-- Push notifications (Pub/Sub)
-
-### Calendar API
-See [references/calendar-api.md](references/calendar-api.md)
-- Events CRUD, recurring events
-- Free/busy queries
-- Calendar sharing
-
-### Drive API
-See [references/drive-api.md](references/drive-api.md)
-- File upload/download
-- Permissions, sharing
-- Search queries
-
-### Sheets API
-See [references/sheets-api.md](references/sheets-api.md)
-- Reading/writing cells
-- A1 notation, ranges
-- Batch updates
-
-### Chat API
-See [references/chat-api.md](references/chat-api.md)
-- Bots, webhooks
-- Cards v2, interactive forms
-- Spaces, members, reactions
-
-*(Additional API references added as MCP servers are built)*
-
----
-
-## Package Versions (Verified 2026-01-09)
-
-```json
-{
-  "devDependencies": {
-    "@cloudflare/workers-types": "^4.20260109.0",
-    "wrangler": "^4.58.0",
-    "jose": "^6.1.3"
-  }
-}
-```
-
----
-
-## Official Documentation
-
-- **Google Workspace APIs**: https://developers.google.com/workspace
-- **OAuth 2.0**: https://developers.google.com/identity/protocols/oauth2
-- **Service Accounts**: https://cloud.google.com/iam/docs/service-accounts
-- **API Explorer**: https://developers.google.com/apis-explorer
-- **Quotas Dashboard**: https://console.cloud.google.com/iam-admin/quotas
-
----
-
-## Skill Roadmap
-
-APIs documented as MCP servers are built:
-
-- [ ] Gmail API
-- [ ] Calendar API
-- [ ] Drive API
-- [ ] Sheets API
-- [ ] Docs API
-- [x] Chat API (migrated from google-chat-api skill)
-- [ ] Meet API
-- [ ] Forms API
-- [ ] Tasks API
-- [ ] Admin SDK
-- [ ] People API
+Remember: This guide focuses on **how to think** about using these tools effectively. For specific parameter details, refer to the tool descriptions themselves.

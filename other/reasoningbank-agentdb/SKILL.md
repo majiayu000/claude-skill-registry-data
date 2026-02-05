@@ -1,6 +1,15 @@
 ---
 name: "ReasoningBank with AgentDB"
+version: "1.0.0"
 description: "Implement ReasoningBank adaptive learning with AgentDB's 150x faster vector database. Includes trajectory tracking, verdict judgment, memory distillation, and pattern recognition. Use when building self-learning agents, optimizing decision-making, or implementing experience replay systems."
+category: ai-ml
+tags:
+  - reasoningbank
+  - agentdb
+  - adaptive-learning
+  - pattern-recognition
+  - experience-replay
+author: Smith Horn
 ---
 
 # ReasoningBank with AgentDB
@@ -401,7 +410,6 @@ npx agentdb@latest stats .agentdb/reasoningbank.db
 ## Troubleshooting
 
 ### Issue: Migration fails
-
 ```bash
 # Check source database exists
 ls -la .swarm/memory.db
@@ -411,7 +419,6 @@ DEBUG=agentdb:* npx agentdb@latest migrate --source .swarm/memory.db
 ```
 
 ### Issue: Low confidence scores
-
 ```typescript
 // Enable context synthesis for better quality
 const result = await rb.retrieveWithReasoning(embedding, {
@@ -422,7 +429,6 @@ const result = await rb.retrieveWithReasoning(embedding, {
 ```
 
 ### Issue: Memory growing too large
-
 ```typescript
 // Enable automatic optimization
 const result = await rb.retrieveWithReasoning(embedding, {
@@ -438,9 +444,9 @@ await rb.optimize();
 ## Learn More
 
 - **AgentDB Integration**: node_modules/agentic-flow/docs/AGENTDB_INTEGRATION.md
-- **GitHub**: <https://github.com/ruvnet/agentic-flow/tree/main/packages/agentdb>
+- **GitHub**: https://github.com/ruvnet/agentic-flow/tree/main/packages/agentdb
 - **MCP Integration**: `npx agentdb@latest mcp`
-- **Website**: <https://agentdb.ruv.io>
+- **Website**: https://agentdb.ruv.io
 
 ---
 

@@ -229,12 +229,12 @@ A web application for managing user tasks with real-time collaboration features.
 ## For AI Agents
 
 ### Working In This Directory
-- Always install dependencies after modifying the project manifest
+- Always run `npm install` after modifying package.json
 - Use TypeScript strict mode
 - Follow ESLint rules
 
 ### Testing Requirements
-- Run tests before committing
+- Run `npm test` before committing
 - Ensure >80% coverage
 
 ### Common Patterns

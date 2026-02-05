@@ -1,126 +1,180 @@
 ---
-name: prompting
-description: "PROACTIVE: This skill SHOULD BE USED AUTOMATICALLY when writing prompts, system prompts, crafting instructions for LLMs, or optimizing AI interactions. Triggers on: write prompt, system prompt, prompt engineering, optimize prompt, better prompt, prompt template, instruction design, context engineering, SKILL.md description, agent instructions. Use for CRAFTING LLM PROMPTS. Model-agnostic best practices for coding agents."
+name: Prompting
+description: Meta-prompting system for dynamic prompt generation using templates, standards, and patterns. USE WHEN meta-prompting, template generation, prompt optimization, or programmatic prompt composition.
 ---
 
-# Prompting - Model-Agnostic Best Practices (Late 2025)
+## Customization
 
-Optimal prompt standards for coding agents. Applies to all models (Claude, GPT, Gemini, Grok).
+**Before executing, check for user customizations at:**
+`~/.claude/skills/CORE/USER/SKILLCUSTOMIZATIONS/Prompting/`
 
-**Paradigm**: Context Engineering > Prompt Engineering. Focus on designing information systems, not "perfect wording". API-level configs (effort, reasoning_effort, thinking_level) are separate from prompt text.
+If this directory exists, load and apply any PREFERENCES.md, configurations, or resources found there. These override default behavior. If the directory does not exist, proceed with skill defaults.
 
-## Quick Reference (Use First)
 
-Before writing/reviewing any prompt, verify:
+## 🚨 MANDATORY: Voice Notification (REQUIRED BEFORE ANY ACTION)
 
+**You MUST send this notification BEFORE doing anything else when this skill is invoked.**
+
+1. **Send voice notification**:
+   ```bash
+   curl -s -X POST http://localhost:8888/notify \
+     -H "Content-Type: application/json" \
+     -d '{"message": "Running the WORKFLOWNAME workflow in the Prompting skill to ACTION"}' \
+     > /dev/null 2>&1 &
+   ```
+
+2. **Output text notification**:
+   ```
+   Running the **WorkflowName** workflow in the **Prompting** skill to ACTION...
+   ```
+
+**This is not optional. Execute this curl command immediately upon skill invocation.**
+
+# Prompting - Meta-Prompting & Template System
+
+**Invoke when:** meta-prompting, template generation, prompt optimization, programmatic prompt composition, creating dynamic agents, generating structured prompts from data.
+
+## Overview
+
+The Prompting skill owns ALL prompt engineering concerns:
+- **Standards** - Anthropic best practices, Claude 4.x patterns, empirical research
+- **Templates** - Handlebars-based system for programmatic prompt generation
+- **Tools** - Template rendering, validation, and composition utilities
+- **Patterns** - Reusable prompt primitives and structures
+
+This is the "standard library" for prompt engineering - other skills reference these resources when they need to generate or optimize prompts.
+
+## Core Components
+
+### 1. Standards.md
+Complete prompt engineering documentation based on:
+- Anthropic's Claude 4.x Best Practices (November 2025)
+- Context engineering principles
+- The Fabric prompt pattern system
+- 1,500+ academic papers on prompt optimization
+
+**Key Topics:**
+- Markdown-first design (NO XML tags)
+
+
+## Usage Examples
+
+### Example 1: Using Briefing Template (Agent Skill)
+
+```typescript
+// skills/Agents/Tools/AgentFactory.ts
+import { renderTemplate } from '~/.claude/skills/Prompting/Tools/RenderTemplate.ts';
+
+const prompt = renderTemplate('Primitives/Briefing.hbs', {
+  briefing: { type: 'research' },
+  agent: { id: 'EN-1', name: 'Skeptical Thinker', personality: {...} },
+  task: { description: 'Analyze security architecture', questions: [...] },
+  output_format: { type: 'markdown' }
+});
 ```
-[ ] Structure: Clear XML/Markdown sections (context → task → constraints → output)
-[ ] Order: Long context BEFORE query (+30% quality)
-[ ] Task: ONE atomic, explicit action
-[ ] Output: Format defined (JSON schema, structure)
-[ ] Positive: "Do X" instead of "Don't Y"
-[ ] Reasoning: Zero-shot for reasoning models (no manual CoT)
-[ ] Examples: Few-shot ONLY for format, not logic
-[ ] Caching: Static content first, dynamic last
-[ ] Simplicity: Start simple, add complexity only if needed (Stanford 8-word)
+
+### Example 2: Using Structure Template (Workflow)
+
+```yaml
+# Data: phased-analysis.yaml
+phases:
+  - name: Discovery
+    purpose: Identify attack surface
+    steps:
+      - action: Map entry points
+        instructions: List all external interfaces...
+  - name: Analysis
+    purpose: Assess vulnerabilities
+    steps:
+      - action: Test boundaries
+        instructions: Probe each entry point...
 ```
 
-## Decision Flow
-
-```
-Task Type?
-│
-├─ Simple (1 step) ────────────► Direct instruction, no CoT
-│
-├─ Complex reasoning
-│   ├─ Reasoning model (o3/o4/GPT-5/Claude thinking)
-│   │   └─► Zero-shot + explicit goal only
-│   └─ Standard model
-│       └─► Structured prompt + optional CoT
-│
-├─ Code generation ────────────► Define: language, framework, style
-│                                Provide: context files, dependencies
-│                                Specify: output format, tests
-│
-└─ Multi-step workflow ────────► Break into atomic tasks
-                                 Use Orchestrator-Worker pattern
-                                 Include verification steps
+```bash
+bun run RenderTemplate.ts \
+  --template Primitives/Structure.hbs \
+  --data phased-analysis.yaml
 ```
 
-## Core Structure Template
+### Example 3: Custom Agent with Voice Mapping
 
-```xml
-<context>
-  [Background, project details - place LONG documents here]
-</context>
-<task>
-  [ONE specific action required]
-</task>
-<constraints>
-  [Boundaries, limitations]
-</constraints>
-<output_format>
-  [Exact format: JSON schema, markdown structure]
-</output_format>
+```typescript
+// Generate specialized agent with appropriate voice
+const agent = composeAgent(['security', 'skeptical', 'thorough'], task, traits);
+// Returns: { name, traits, voice: 'default', voiceId: 'VOICE_ID...' }
 ```
 
-For **system prompts** (coding agents):
+## Integration with Other Skills
 
-```xml
-<role>[Expert domain]</role>
-<capabilities>[Tools, what agent CAN do]</capabilities>
-<constraints>[Security rules, boundaries]</constraints>
-<workflow>[Step-by-step process]</workflow>
-<output_standards>[Code style, testing requirements]</output_standards>
-```
+### Agents Skill
+- Uses `Templates/Primitives/Briefing.hbs` for agent context handoff
+- Uses `RenderTemplate.ts` to compose dynamic agents
+- Maintains agent-specific template: `Agents/Templates/DynamicAgent.hbs`
 
-## Key Principles
+### Evals Skill
+- Uses eval-specific templates: Judge, Rubric, TestCase, Comparison, Report
+- Leverages `RenderTemplate.ts` for eval prompt generation
+- Eval templates may be stored in `Evals/Templates/` but use Prompting's engine
 
-| Principle | Do This | Avoid This |
-|-----------|---------|------------|
-| **Structure** | XML/Markdown sections | Wall of text |
-| **Context** | Long docs BEFORE query | Query before context (-30%) |
-| **Specificity** | "Dashboard with filtering, export, real-time" | "Create dashboard" |
-| **Instructions** | "Return only JSON" | "Don't add explanations" |
-| **Reasoning models** | Zero-shot, explicit goal | Manual "think step-by-step" |
-| **Examples** | Few-shot for FORMAT only | Few-shot for logic (hurts reasoning) |
-| **Caching** | Static first, dynamic last | Dynamic content first |
+### Development Skill
+- References `Standards.md` for prompt best practices
+- Uses `Structure.hbs` for workflow patterns
+- Applies `Gate.hbs` for validation checklists
 
-## Technique Selection
+## Token Efficiency
 
-| Technique | Use When | Avoid When |
-|-----------|----------|------------|
-| **Extended Thinking** | Complex math, multi-step planning | Pattern recognition, simple tasks (can HURT -36%) |
-| **Atom of Thoughts** | Parallelizable problems | Creative writing |
-| **Tree of Thoughts** | Multiple valid paths | Simple queries |
-| **ReAct** | Tool use, external data | Pure reasoning |
-| **Self-Consistency** | High-stakes decisions | Speed-critical |
-| **Role Reversal** | Need +40% accuracy | Quick drafts |
+The templating system eliminated **~35,000 tokens (65% reduction)** across PAI:
 
-See details: `references/techniques.md`
+| Area | Before | After | Savings |
+|------|--------|-------|---------|
+| SKILL.md Frontmatter | 20,750 | 8,300 | 60% |
+| Agent Briefings | 6,400 | 1,900 | 70% |
+| Voice Notifications | 6,225 | 725 | 88% |
+| Workflow Steps | 7,500 | 3,000 | 60% |
+| **TOTAL** | ~53,000 | ~18,000 | **65%** |
 
-## Context Stack (Priority Order)
+## Best Practices
 
-1. System Instructions (role, rules) - **cached**
-2. Long-Term Memory (preferences)
-3. Retrieved Documents (RAG)
-4. Tool Definitions - **cached**
-5. Conversation History
-6. Current Task - **last for recency**
+### 1. Separation of Concerns
+- **Templates**: Structure and formatting only
+- **Data**: Content and parameters (YAML/JSON)
+- **Logic**: Rendering and validation (TypeScript)
 
-## Security
+### 2. Keep Templates Simple
+- Avoid complex logic in templates
+- Use Handlebars helpers for transformations
+- Business logic belongs in TypeScript, not templates
 
-- Separate system/user content with XML tags
-- Validate user inputs before embedding
-- Validate OUTPUT, not reasoning (CoT hijackable 94-99%)
-- Mark sensitive context with explicit boundaries
+### 3. DRY Principle
+- Extract repeated patterns into partials
+- Use presets for common configurations
+- Single source of truth for definitions
+
+### 4. Version Control
+- Templates and data in separate files
+- Track changes independently
+- Enable A/B testing of structures
 
 ## References
 
-Load as needed for detailed guidance:
+**Primary Documentation:**
+- `Standards.md` - Complete prompt engineering guide
+- `Templates/README.md` - Template system overview (if preserved)
+- `Tools/RenderTemplate.ts` - Implementation details
 
-- `references/techniques.md` - AoT, ToT, ReAct, Self-Consistency, Role Reversal, Extended Thinking
-- `references/anti-patterns.md` - Full list of what to avoid with explanations
-- `references/agentic-patterns.md` - Orchestrator-Worker, Reflexion, Plan-Execute, Tool Orchestration
-- `references/memory-patterns.md` - CoALA Framework: Procedural, Semantic, Episodic memory
-- `references/meta-prompting.md` - LLM self-optimization workflow
+**Research Foundation:**
+- Anthropic: "Claude 4.x Best Practices" (November 2025)
+- Anthropic: "Effective Context Engineering for AI Agents"
+- Anthropic: "Prompt Templates and Variables"
+- The Fabric System (January 2024)
+- "The Prompt Report" - arXiv:2406.06608
+- "The Prompt Canvas" - arXiv:2412.05127
+
+**Related Skills:**
+- Agents - Dynamic agent composition
+- Evals - LLM-as-Judge prompting
+- Development - Spec-driven development patterns
+
+---
+
+**Philosophy:** Prompts that write prompts. Structure is code, content is data. Meta-prompting enables dynamic composition where the same template with different data generates specialized agents, workflows, and evaluation frameworks. This is core PAI DNA - programmatic prompt generation at scale.

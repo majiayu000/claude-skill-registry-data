@@ -1,24 +1,24 @@
 ---
 name: Backend Migrations
-description: Create and manage database schema migrations with reversible changes, clear naming, and safe deployment practices. Use this skill when writing database migration files, modifying database schemas, creating migration scripts, or managing database version control. When working on migration files in database migration directories, files defining schema changes (CREATE TABLE, ALTER TABLE, DROP TABLE), migration rollback/down methods, database index creation scripts, seed data or data migration files, ORM migration configurations (Prisma, Drizzle, TypeORM), or files handling database versioning and migration history.
+description: Create and manage database migrations with reversible changes, zero-downtime deployments, and proper version control. Use this skill when creating database migration files, modifying database schemas, adding or removing tables or columns, creating indexes, or managing database versioning. When working with migration files (e.g., `*_migration.rb`, `*.migration.ts`, `alembic/versions/*.py`), schema changes, or database rollback procedures. When implementing backwards-compatible database changes or separating schema migrations from data migrations.
 ---
 
 # Backend Migrations
 
-This Skill provides Claude Code with specific guidance on how to adhere to coding standards as they relate to how it should handle backend migrations.
-
 ## When to use this skill
 
-- When creating new database migration files or scripts
-- When modifying existing database schemas (adding/removing/altering tables or columns)
-- When writing migration rollback methods or down migrations for safe reversals
-- When creating database indexes, constraints, or foreign keys
-- When implementing data migrations or transformations alongside schema changes
-- When working with ORM migration tools (Prisma, Drizzle, TypeORM, Sequelize, etc.)
-- When planning zero-downtime deployments that require backwards-compatible schema changes
-- When managing database migration version history or migration ordering
-- When creating seed data files or initial database setup scripts
-- When documenting migration dependencies or complex schema changes
+- When creating new database migration files
+- When editing existing migration files to add rollback/down methods
+- When adding, removing, or modifying database tables
+- When adding, removing, or modifying database columns
+- When creating or dropping database indexes
+- When implementing zero-downtime deployment strategies
+- When separating schema changes from data migrations
+- When working with migration version control
+- When planning backwards-compatible database changes
+- When working in migration directories or with migration tools (e.g., Alembic, ActiveRecord, Prisma Migrate, Flyway)
+
+This Skill provides Claude Code with specific guidance on how to adhere to coding standards as they relate to how it should handle backend migrations.
 
 ## Instructions
 

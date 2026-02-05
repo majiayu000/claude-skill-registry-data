@@ -1,6 +1,7 @@
 ---
 name: search-router
 description: Choose the right search tool for each query type
+user-invocable: false
 ---
 
 # Search Tool Router

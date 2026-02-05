@@ -1,42 +1,40 @@
 ---
 name: compound-engineering
-description: Compound Engineering methodology - Plan→Work→Review→Compound loop where each unit of work makes subsequent work easier. Use when implementing features, fixing bugs, or any development work.
-agents: [rex, nova, blaze, grizz, bolt, tap, spark, vex]
-triggers: [compound, plan, review, learnings, patterns, methodology]
+description: "Compound Engineering workflow for AI-assisted development. Use when planning features, executing work, reviewing code, or codifying learnings. Follows the Plan → Work → Review → Compound loop where each unit of engineering makes subsequent work easier. Triggers on: plan this feature, implement this, review this code, compound learnings, create implementation plan, systematic development."
 ---
-
-# Compound Engineering
-
-A development methodology where each unit of work makes subsequent work easier—not harder.
+This skill implements Compound Engineering—a development methodology where each unit of work makes subsequent work easier, not harder. Inspired by Every.to's engineering approach.
 
 ## Core Philosophy
 
-> "Each unit of engineering work should make subsequent units of work easier—not harder."
+**Each unit of engineering work should make subsequent units of work easier—not harder.**
 
-Traditional development accumulates technical debt. Every feature adds complexity. Compound engineering inverts this by creating a learning loop where each bug, failed test, or problem-solving insight gets documented and reused.
+Traditional development accumulates technical debt. Every feature adds complexity. Every change increases maintenance burden. Compound engineering inverts this by creating a learning loop where each bug, failed test, or problem-solving insight gets documented and used by future work.
 
-## The Compound Loop
+## The Compound Engineering Loop
 
 ```
-Plan (40%) → Work (20%) → Review (20%) → Compound (20%)
+Plan → Work → Review → Compound → (repeat)
 ```
 
-**80% of compound engineering is in planning and review. 20% is in execution.**
+1. **Plan (40%)**: Research approaches, synthesize information into detailed implementation plans
+2. **Work (20%)**: Execute the plan systematically with continuous validation
+3. **Review (20%)**: Evaluate output quality and identify learnings
+4. **Compound (20%)**: Feed results back into the system to make the next loop better
 
----
+80% of compound engineering is in planning and review. 20% is in execution.
 
-## Phase 1: Plan (40% of effort)
+## Step 1: Plan
 
-Before writing any code, create a comprehensive plan.
+Before writing any code, create a comprehensive plan. Good plans start with research:
 
 ### Research Phase
-
-1. **Codebase Analysis**: Search for similar patterns, conventions, and prior art
+1. **Codebase Analysis**: Search for similar patterns, conventions, and prior art in the codebase
 2. **Commit History**: Use `git log` to understand how related features were built
-3. **Documentation**: Check AGENTS.md files in relevant directories
+3. **Documentation**: Check README, AGENTS.md, and inline documentation
 4. **External Research**: Search for best practices relevant to the problem
 
-### Plan Structure
+### Plan Document Structure
+Create a plan document (markdown) with:
 
 ```markdown
 # Feature: [Name]
@@ -44,67 +42,87 @@ Before writing any code, create a comprehensive plan.
 ## Context
 - What problem does this solve?
 - Who is affected?
-- Current vs desired behavior?
+- What's the current behavior vs desired behavior?
 
 ## Research Findings
-- Similar patterns in codebase: [file links]
-- Relevant prior implementations: [commit refs]
-- Best practices discovered: [references]
+- Similar patterns found in codebase: [list with file links]
+- Relevant prior implementations: [commit references]
+- Best practices discovered: [external references]
 
 ## Acceptance Criteria
 - [ ] Criterion 1 (testable)
 - [ ] Criterion 2 (testable)
+- [ ] Criterion 3 (testable)
 
 ## Technical Approach
 1. Step 1: [specific action]
 2. Step 2: [specific action]
+3. Step 3: [specific action]
+
+## Code Examples
+[Include code snippets that follow existing patterns]
+
+## Testing Strategy
+- Unit tests: [what to test]
+- Integration tests: [what to test]
+- Manual verification: [steps]
 
 ## Risks & Mitigations
 - Risk 1: [mitigation]
+- Risk 2: [mitigation]
 ```
 
----
+### Detail Levels
+- **Minimal**: Quick issues for simple features (1-2 hours work)
+- **Standard**: Issues with technical considerations (1-2 days work)
+- **Comprehensive**: Major features requiring architecture decisions (multi-day work)
 
-## Phase 2: Work (20% of effort)
+## Step 2: Work
 
-Execute the plan systematically.
+Execute the plan systematically:
 
 ### Execution Workflow
-
-1. **Create isolated environment**: Feature branch or worktree
-2. **Break into tasks**: One task at a time
-3. **Validate continuously**: Run tests after each change
-4. **Commit incrementally**: Small, focused commits
+1. **Create isolated environment**: Use feature branch or git worktree
+2. **Break down into tasks**: Create TODO list from plan
+3. **Execute systematically**: One task at a time
+4. **Validate continuously**: Run tests after each change
+5. **Commit incrementally**: Small, focused commits with clear messages
 
 ### Working Principles
-
 - Follow existing patterns discovered in research
 - Run tests after every meaningful change
-- If something fails, understand WHY before proceeding
-- Keep changes focused—no scope creep
+- If something fails, understand why before proceeding
+- Keep changes focused—don't scope creep
 
-### Quality Checks
-
+### Quality Checks During Work
 ```bash
-# After each change:
-cargo fmt --all --check    # or npm run lint
-cargo clippy --all-targets # or npm run typecheck
-cargo test                 # or npm test
+# After each change, verify:
+npm run typecheck  # or equivalent
+npm test           # run affected tests
+npm run lint       # check code quality
 ```
 
----
+## Step 3: Review
 
-## Phase 3: Review (20% of effort)
-
-Before completing, perform comprehensive review.
+Before merging, perform comprehensive review:
 
 ### Review Checklist
 
 **Code Quality**
 - [ ] Follows existing codebase patterns and conventions
-- [ ] No unnecessary complexity
+- [ ] No unnecessary complexity—prefer duplication over wrong abstraction
 - [ ] Clear naming that matches project conventions
-- [ ] No debug code left behind
+- [ ] No debug code or console.logs left behind
+
+**Security**
+- [ ] No secrets or sensitive data exposed
+- [ ] Input validation where needed
+- [ ] Safe handling of user data
+
+**Performance**
+- [ ] No obvious performance regressions
+- [ ] Database queries are efficient (no N+1)
+- [ ] Appropriate caching if applicable
 
 **Testing**
 - [ ] Tests cover acceptance criteria
@@ -114,224 +132,119 @@ Before completing, perform comprehensive review.
 **Architecture**
 - [ ] Change is consistent with system design
 - [ ] No unnecessary coupling introduced
+- [ ] Follows separation of concerns
 
 ### Multi-Perspective Review
+Consider the code from different angles:
+- **Maintainer perspective**: Will this be easy to modify in 6 months?
+- **Performance perspective**: Any bottlenecks?
+- **Security perspective**: Any vulnerabilities?
+- **Simplicity perspective**: Can this be simpler?
 
-Consider code from different angles:
-- **Maintainer**: Will this be easy to modify in 6 months?
-- **Performance**: Any bottlenecks?
-- **Security**: Any vulnerabilities?
-- **Simplicity**: Can this be simpler?
+## Step 4: Compound
 
----
-
-## Phase 4: Compound (20% of effort)
-
-Capture learnings to make future work easier.
+This is where the magic happens—capture learnings to make future work easier:
 
 ### What to Compound
 
-**Patterns**: Document new patterns discovered
+**Patterns**: Document new patterns discovered or created
 ```markdown
 ## Pattern: [Name]
 When to use: [context]
-Implementation: [example]
+Implementation: [example code]
 See: [file reference]
 ```
 
-**Decisions**: Record why approaches were chosen
+**Decisions**: Record why certain approaches were chosen
 ```markdown
 ## Decision: [Choice Made]
 Context: [situation]
-Options: [alternatives]
+Options considered: [alternatives]
 Rationale: [why this choice]
+Consequences: [trade-offs]
 ```
 
 **Failures**: Turn every bug into a lesson
 ```markdown
 ## Lesson: [What Went Wrong]
-Symptom: [observed]
+Symptom: [what was observed]
 Root cause: [actual problem]
 Fix: [solution]
-Prevention: [how to avoid]
+Prevention: [how to avoid in future]
 ```
 
 ### Where to Codify Learnings
 
-| Type | Location | Duration |
-|------|----------|----------|
-| Feature-specific context | `progress.txt` | Current feature only |
-| Permanent patterns | `AGENTS.md` | Forever |
-| Code-level gotchas | Inline comments | With the code |
-| Regression prevention | Test cases | Forever |
+1. **AGENTS.md**: Project-wide guidance that applies everywhere
+2. **Subdirectory AGENTS.md**: Specific guidance for subsystems
+3. **Inline comments**: Only when the code isn't self-explanatory
+4. **Test cases**: Turn bugs into regression tests
 
----
-
-## Task Discovery (During Work)
-
-**Liberally create new tasks** when you discover issues during implementation.
-
-### What Triggers a New Task
-
-| Discovery | Action |
-|-----------|--------|
-| Failing test or test gap | Create task: "Write tests for X" |
-| Code needing refactoring | Create task: "Refactor Y for clarity" |
-| Missing error handling | Create task: "Add error handling for Z" |
-| Documentation gap | Create task: "Document A module" |
-| TODOs or FIXMEs in code | Create task with specific fix |
-| Build/lint warnings | Create task: "Fix linting in B" |
-| Performance issues | Create task: "Optimize C operation" |
-
-### How to Create Tasks
-
-Use the Linear API or MCP tools to create immediately:
-
-```
-Create task:
-- Title: "Fix: [specific issue]"
-- Description: "[What you found, why it matters]"
-- Dependencies: Set appropriately
-- Agent: Same service agent that found it
-```
-
-**Do NOT batch for later.** Create the task when you discover the issue, then continue your current work.
-
-### Compounding Questions
+### Compounding in Practice
 
 After completing work, ask:
 - What did I learn that others should know?
-- What mistake can be prevented?
+- What mistake did I make that can be prevented?
 - What pattern did I discover or create?
 - What decision was made and why?
 
-Document in appropriate location so future work benefits.
+Document these in the appropriate location so future agents (and humans) benefit.
 
----
+## Practical Commands
 
-## Memory Architecture
-
-### Short-Term Memory: progress.txt
-
-For the **current feature only**. Reset between features.
-
-```markdown
-# Progress Log
-Started: [date]
-Feature: [name]
-Parent Task: [parent-task-id]
-
-## Codebase Patterns  ← SCANNED FIRST EACH ITERATION
-- Pattern 1 discovered
-- Pattern 2 discovered
-
----
-## [Date] - [Task]
-- What was implemented
-- Files changed
-- Learnings for future iterations
+### Planning a Feature
+```
+Plan implementation for: [describe feature]
+- Research the codebase for similar patterns
+- Check git history for related changes
+- Create a detailed plan with acceptance criteria
+- Include code examples that match existing patterns
 ```
 
-### Long-Term Memory: AGENTS.md
-
-Permanent learnings that anyone should know.
-
-```markdown
-## Learnings
-
-### [Category]
-- Pattern: [description]
-- Gotcha: [what to avoid]
-- Dependency: [what relies on what]
+### Executing Work
+```
+Execute this plan: [plan reference]
+- Create feature branch
+- Break into TODO list
+- Work through systematically
+- Run tests after each change
+- Create PR when complete
 ```
 
-**Rule:** If it only matters for this feature → progress.txt. If anyone editing this code should know → AGENTS.md.
-
----
-
-## Progress Archiving (Feature Boundaries)
-
-When starting a **new feature**, archive the previous progress.txt.
-
-### When to Archive
-
-- Starting work on a different parent task
-- Parent task ID in progress.txt differs from current task
-- Previous feature is complete
-
-### Archive Process
-
-```bash
-# 1. Check if progress.txt has content from previous feature
-cat progress.txt
-
-# 2. If different feature, archive it
-DATE=$(date +%Y-%m-%d)
-FEATURE="previous-feature-name"
-mkdir -p archive/$DATE-$FEATURE
-mv progress.txt archive/$DATE-$FEATURE/
-
-# 3. Create fresh progress.txt
-cat > progress.txt << 'EOF'
-# Progress Log
-Started: [today's date]
-Feature: [new feature name]
-Parent Task: [new-parent-task-id]
-
-## Codebase Patterns
-(Patterns discovered during this feature - copy relevant ones from archive)
-
----
-EOF
-
-# 4. Commit the archive
-git add archive/ progress.txt
-git commit -m "chore: archive progress for [previous-feature]"
+### Reviewing Code
+```
+Review this change: [PR/diff reference]
+- Check for code quality issues
+- Look for security concerns
+- Evaluate performance implications
+- Verify test coverage
+- Suggest improvements
 ```
 
-### Preserving Valuable Patterns
+### Compounding Learnings
+```
+Compound learnings from: [work just completed]
+- What patterns were used or created?
+- What decisions were made and why?
+- What failures occurred and how to prevent them?
+- Update AGENTS.md with relevant guidance
+```
 
-When resetting progress.txt:
+## Key Principles
 
-1. Review the archived "Codebase Patterns" section
-2. Copy patterns that are **still relevant** to the new progress.txt
-3. Do NOT copy task-specific entries (those belong in archive)
-
-### Why Archive?
-
-- Fresh context prevents tunnel vision
-- Each feature starts clean
-- Valuable patterns preserved, noise discarded
-- Easy to reference past feature learnings
-
----
+1. **Prefer duplication over wrong abstraction**: Simple, clear code beats complex abstractions
+2. **Document as you go**: Every command generates documentation that makes future work easier
+3. **Quality compounds**: High-quality code is easier to modify
+4. **Systematic beats heroic**: Consistent processes beat individual heroics
+5. **Knowledge should be codified**: Learnings should be captured and reused
 
 ## Success Metrics
 
 You're doing compound engineering well when:
 - Each feature takes less effort than the last similar feature
 - Bugs become one-time events (documented and prevented)
-- New work can be started quickly (patterns are established)
-- Code reviews surface fewer issues (patterns are followed)
-- Technical debt decreases over time
+- New team members can be productive quickly (institutional knowledge is accessible)
+- Code reviews surface fewer issues (patterns are established and followed)
+- Technical debt decreases over time (learnings compound)
 
----
-
-## Iron Law
-
-```
-DOCUMENT BEFORE MOVING ON
-```
-
-If you learned something, write it down before starting the next task.
-
----
-
-## Quick Reference
-
-| Phase | Time | Key Activities |
-|-------|------|----------------|
-| **Plan** | 40% | Research, find patterns, write plan |
-| **Work** | 20% | Execute plan, validate continuously |
-| **Review** | 20% | Multi-perspective check, quality gates |
-| **Compound** | 20% | Document patterns, decisions, lessons |
+Remember: You're not just building features—you're building a development system that gets better with each use.

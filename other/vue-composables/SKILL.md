@@ -1,477 +1,209 @@
 ---
 name: vue-composables
-description: Patterns for Vue 3 composables with localStorage persistence in Nuxt 4. Activate when creating composables, working with useProgress, useQuiz, useCertificate, or localStorage.
+description: >-
+  Develops Vue 3 Composition API patterns and custom composables. Activates when creating composables,
+  using ref/reactive/computed, working with watchers, lifecycle hooks, provide/inject, or when user
+  mentions composable, reactive, ref, computed, watch, Vue composition, or state management.
 ---
 
-# Vue Composables Patterns (Nuxt 4)
+# Vue Composables Development
 
-## Activation Triggers
-- Creating new composables in `app/composables/` directory
-- Working with reactive state management
-- Implementing localStorage persistence
-- Building useProgress, useQuiz, or useCertificate
+## When to Apply
 
-## Nuxt 4 Composables Location
+Activate this skill when:
 
-```
-app/
-└── composables/
-    ├── useProgress.ts
-    ├── useQuiz.ts
-    └── useCertificate.ts
-```
+- Creating custom composables
+- Using Composition API features (ref, reactive, computed)
+- Working with watchers and lifecycle hooks
+- Implementing provide/inject patterns
+- Managing component state with Composition API
 
-## Composable Structure Template
+## Documentation
 
-```typescript
-// app/composables/useExample.ts
-import { ref, computed, readonly } from 'vue'
+Use `search-docs` for detailed Vue 3 Composition API patterns and documentation.
 
-export function useExample() {
-  // Private state
-  const _state = ref<StateType>(initialValue)
+## Basic Usage
 
-  // Computed values
-  const derivedValue = computed(() => {
-    return _state.value.something
-  })
+### Refs and Reactive
 
-  // Actions
-  function doSomething(param: ParamType) {
-    _state.value = // update logic
-  }
+<code-snippet name="Refs and Reactive" lang="typescript">
+import { ref, reactive, computed } from 'vue';
 
-  // Return public API
-  return {
-    state: readonly(_state),  // Prevent external mutation
-    derivedValue,
-    doSomething
-  }
-}
-```
+// Ref for primitives
+const count = ref(0);
+count.value++; // Access with .value
 
-## useProgress Implementation
+// Reactive for objects
+const state = reactive({
+    name: '',
+    items: [],
+});
+state.name = 'Updated'; // Direct access
 
-```typescript
-// app/composables/useProgress.ts
-import type { UserProgress, SubtopicProgress } from '~/data/types'
+// Computed
+const doubled = computed(() => count.value * 2);
+</code-snippet>
 
-const STORAGE_KEY = 'devops-lms-progress'
+### Custom Composables
 
-export function useProgress() {
-  // Use useState for cross-component reactivity (SSR-safe)
-  const progress = useState<UserProgress>('user-progress', () => {
-    return loadFromStorage() ?? createDefaultProgress()
-  })
+Create reusable logic with composables:
 
-  // Load from localStorage (client-side only)
-  function loadFromStorage(): UserProgress | null {
-    if (typeof window === 'undefined') return null
-    try {
-      const stored = localStorage.getItem(STORAGE_KEY)
-      return stored ? JSON.parse(stored) : null
-    } catch (e) {
-      console.warn('Failed to load progress from localStorage', e)
-      return null
+<code-snippet name="Custom Composable" lang="typescript">
+// composables/useCounter.ts
+import { ref, computed } from 'vue';
+
+export function useCounter(initial = 0) {
+    const count = ref(initial);
+
+    const doubled = computed(() => count.value * 2);
+
+    function increment() {
+        count.value++;
     }
-  }
 
-  // Create default progress structure
-  function createDefaultProgress(): UserProgress {
+    function decrement() {
+        count.value--;
+    }
+
     return {
-      startedAt: new Date().toISOString(),
-      phases: {}
-    }
-  }
+        count,
+        doubled,
+        increment,
+        decrement,
+    };
+}
+</code-snippet>
 
-  // Save to localStorage
-  function saveToStorage() {
-    if (typeof window === 'undefined') return
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(progress.value))
-    } catch (e) {
-      console.warn('Failed to save progress to localStorage', e)
-    }
-  }
+### Watchers
 
-  // Ensure nested structure exists
-  function ensureStructure(phaseId: string, topicId: string) {
-    if (!progress.value.phases[phaseId]) {
-      progress.value.phases[phaseId] = { topics: {} }
-    }
-    if (!progress.value.phases[phaseId].topics[topicId]) {
-      progress.value.phases[phaseId].topics[topicId] = { subtopics: {} }
-    }
-  }
+<code-snippet name="Watchers" lang="typescript">
+import { ref, watch, watchEffect } from 'vue';
 
-  // Mark a subtopic as complete
-  function markComplete(phaseId: string, topicId: string, subtopicId: string) {
-    ensureStructure(phaseId, topicId)
-    
-    progress.value.phases[phaseId].topics[topicId].subtopics[subtopicId] = {
-      completed: true,
-      completedAt: new Date().toISOString(),
-      quizScore: null
-    }
-    
-    saveToStorage()
-  }
+const search = ref('');
 
-  // Record quiz score
-  function recordQuizScore(
-    phaseId: string, 
-    topicId: string, 
-    subtopicId: string, 
-    score: number
-  ) {
-    ensureStructure(phaseId, topicId)
-    
-    const subtopic = progress.value.phases[phaseId].topics[topicId].subtopics[subtopicId]
-    if (subtopic) {
-      subtopic.quizScore = score
-      subtopic.quizCompletedAt = new Date().toISOString()
-    } else {
-      progress.value.phases[phaseId].topics[topicId].subtopics[subtopicId] = {
-        completed: false,
-        completedAt: null,
-        quizScore: score,
-        quizCompletedAt: new Date().toISOString()
-      }
-    }
-    
-    saveToStorage()
-  }
+// Watch specific ref
+watch(search, (newValue, oldValue) => {
+    console.log(`Search changed from ${oldValue} to ${newValue}`);
+});
 
-  // Check if specific item is complete
-  function isComplete(phaseId: string, topicId?: string, subtopicId?: string): boolean {
-    if (!topicId) {
-      // Check entire phase
-      const phase = progress.value.phases[phaseId]
-      if (!phase) return false
-      // Would need roadmap data to check all topics
-      return false
-    }
-    
-    if (!subtopicId) {
-      // Check entire topic
-      const topic = progress.value.phases[phaseId]?.topics[topicId]
-      if (!topic) return false
-      // Would need roadmap data to check all subtopics
-      return false
-    }
-    
-    // Check specific subtopic
-    return !!progress.value.phases[phaseId]?.topics[topicId]?.subtopics[subtopicId]?.completed
-  }
+// Watch with options
+watch(search, (value) => {
+    fetchResults(value);
+}, { immediate: true, debounce: 300 });
 
-  // Get completion count
-  function getCompletedCount(): number {
-    let count = 0
-    for (const phase of Object.values(progress.value.phases)) {
-      for (const topic of Object.values(phase.topics)) {
-        for (const subtopic of Object.values(topic.subtopics)) {
-          if (subtopic.completed) count++
+// Watch multiple sources
+watch([firstName, lastName], ([first, last]) => {
+    fullName.value = `${first} ${last}`;
+});
+
+// watchEffect - auto-tracks dependencies
+watchEffect(() => {
+    console.log(`Count is: ${count.value}`);
+});
+</code-snippet>
+
+### Lifecycle Hooks
+
+<code-snippet name="Lifecycle Hooks" lang="typescript">
+import { onMounted, onUnmounted, onBeforeMount } from 'vue';
+
+onBeforeMount(() => {
+    // Before component mounts
+});
+
+onMounted(() => {
+    // Component mounted - DOM available
+    window.addEventListener('resize', handleResize);
+});
+
+onUnmounted(() => {
+    // Cleanup
+    window.removeEventListener('resize', handleResize);
+});
+</code-snippet>
+
+### Async Composables
+
+<code-snippet name="Async Composable" lang="typescript">
+// composables/useFetch.ts
+import { ref, watchEffect } from 'vue';
+
+export function useFetch<T>(url: string) {
+    const data = ref<T | null>(null);
+    const error = ref<Error | null>(null);
+    const loading = ref(false);
+
+    async function execute() {
+        loading.value = true;
+        error.value = null;
+
+        try {
+            const response = await fetch(url);
+            data.value = await response.json();
+        } catch (e) {
+            error.value = e as Error;
+        } finally {
+            loading.value = false;
         }
-      }
     }
-    return count
-  }
 
-  // Export/Import for data portability
-  function exportProgress(): string {
-    return JSON.stringify(progress.value, null, 2)
-  }
+    execute();
 
-  function importProgress(data: string) {
-    try {
-      const parsed = JSON.parse(data) as UserProgress
-      progress.value = parsed
-      saveToStorage()
-      return true
-    } catch {
-      return false
-    }
-  }
-
-  // Reset all progress
-  function resetProgress() {
-    progress.value = createDefaultProgress()
-    saveToStorage()
-  }
-
-  return {
-    progress: readonly(progress),
-    markComplete,
-    recordQuizScore,
-    isComplete,
-    getCompletedCount,
-    exportProgress,
-    importProgress,
-    resetProgress
-  }
+    return { data, error, loading, refetch: execute };
 }
-```
+</code-snippet>
 
-## useQuiz Implementation
+### Provide/Inject
 
-```typescript
-// app/composables/useQuiz.ts
-import type { Quiz, QuizQuestion, QuizAnswer } from '~/data/types'
+<code-snippet name="Provide Inject" lang="typescript">
+// Parent component
+import { provide, ref } from 'vue';
 
-export function useQuiz(quiz: Ref<Quiz> | Quiz) {
-  const quizData = isRef(quiz) ? quiz : ref(quiz)
-  
-  const currentIndex = ref(0)
-  const answers = ref<QuizAnswer[]>([])
-  const isComplete = ref(false)
-  const score = ref(0)
+const theme = ref('dark');
+provide('theme', theme);
 
-  const currentQuestion = computed(() => 
-    quizData.value.questions[currentIndex.value]
-  )
-  
-  const totalQuestions = computed(() => 
-    quizData.value.questions.length
-  )
-  
-  const isLastQuestion = computed(() => 
-    currentIndex.value === totalQuestions.value - 1
-  )
-  
-  const isFirstQuestion = computed(() => 
-    currentIndex.value === 0
-  )
+// Child component (any depth)
+import { inject } from 'vue';
 
-  const passed = computed(() => 
-    score.value >= quizData.value.passingScore
-  )
+const theme = inject('theme', ref('light')); // With default
+</code-snippet>
 
-  function submitAnswer(selected: string | string[] | boolean) {
-    answers.value[currentIndex.value] = {
-      questionIndex: currentIndex.value,
-      selected
-    }
-  }
+### Type-Safe Composables
 
-  function nextQuestion() {
-    if (!isLastQuestion.value) {
-      currentIndex.value++
-    }
-  }
+<code-snippet name="Typed Composables" lang="typescript">
+import { ref, type Ref } from 'vue';
 
-  function previousQuestion() {
-    if (!isFirstQuestion.value) {
-      currentIndex.value--
-    }
-  }
-
-  function goToQuestion(index: number) {
-    if (index >= 0 && index < totalQuestions.value) {
-      currentIndex.value = index
-    }
-  }
-
-  function finishQuiz() {
-    score.value = calculateScore()
-    isComplete.value = true
-  }
-
-  function calculateScore(): number {
-    let correct = 0
-    
-    answers.value.forEach((answer, index) => {
-      const question = quizData.value.questions[index]
-      if (isAnswerCorrect(answer, question)) {
-        correct++
-      }
-    })
-    
-    return Math.round((correct / totalQuestions.value) * 100)
-  }
-
-  function isAnswerCorrect(answer: QuizAnswer, question: QuizQuestion): boolean {
-    if (!answer) return false
-    
-    switch (question.type) {
-      case 'single':
-        return answer.selected === question.correctAnswer
-      
-      case 'multiple':
-        const selected = answer.selected as string[]
-        const correct = question.correctAnswers!
-        return (
-          selected.length === correct.length &&
-          selected.every(s => correct.includes(s))
-        )
-      
-      case 'true-false':
-        return answer.selected === question.correctAnswer
-      
-      default:
-        return false
-    }
-  }
-
-  function getAnswerForQuestion(index: number): QuizAnswer | undefined {
-    return answers.value[index]
-  }
-
-  function reset() {
-    currentIndex.value = 0
-    answers.value = []
-    isComplete.value = false
-    score.value = 0
-  }
-
-  return {
-    // State (readonly)
-    currentIndex: readonly(currentIndex),
-    currentQuestion,
-    totalQuestions,
-    isLastQuestion,
-    isFirstQuestion,
-    answers: readonly(answers),
-    isComplete: readonly(isComplete),
-    score: readonly(score),
-    passed,
-    
-    // Actions
-    submitAnswer,
-    nextQuestion,
-    previousQuestion,
-    goToQuestion,
-    finishQuiz,
-    getAnswerForQuestion,
-    reset
-  }
-}
-```
-
-## useCertificate Implementation
-
-```typescript
-// app/composables/useCertificate.ts
-import type { CertificateData } from '~/data/types'
-
-export function useCertificate() {
-  const isGenerating = ref(false)
-  const error = ref<string | null>(null)
-
-  function generateCertificateId(): string {
-    const timestamp = Date.now().toString(36)
-    const random = Math.random().toString(36).substring(2, 8)
-    return `DEVOPS-${timestamp}-${random}`.toUpperCase()
-  }
-
-  function calculateTotalHours(completedLessons: number): number {
-    // Assuming average 15 minutes per lesson
-    return Math.round((completedLessons * 15) / 60)
-  }
-
-  async function generatePDF(data: CertificateData): Promise<Blob | null> {
-    if (typeof window === 'undefined') return null
-    
-    isGenerating.value = true
-    error.value = null
-    
-    try {
-      // Dynamic imports for client-side only
-      const [{ default: html2canvas }, { default: jsPDF }] = await Promise.all([
-        import('html2canvas'),
-        import('jspdf')
-      ])
-      
-      const element = document.getElementById('certificate-preview')
-      if (!element) {
-        throw new Error('Certificate element not found')
-      }
-      
-      const canvas = await html2canvas(element, {
-        scale: 2,
-        backgroundColor: '#1f2937'
-      })
-      
-      const imgData = canvas.toDataURL('image/png')
-      const pdf = new jsPDF({
-        orientation: 'landscape',
-        unit: 'mm',
-        format: 'a4'
-      })
-      
-      const imgWidth = 297 // A4 landscape width
-      const imgHeight = (canvas.height * imgWidth) / canvas.width
-      
-      pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight)
-      
-      return pdf.output('blob')
-    } catch (e) {
-      error.value = e instanceof Error ? e.message : 'Failed to generate PDF'
-      return null
-    } finally {
-      isGenerating.value = false
-    }
-  }
-
-  async function downloadCertificate(data: CertificateData) {
-    const blob = await generatePDF(data)
-    if (!blob) return
-    
-    const url = URL.createObjectURL(blob)
-    const link = document.createElement('a')
-    link.href = url
-    link.download = `DevOps-Certificate-${data.certificateId}.pdf`
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
-    URL.revokeObjectURL(url)
-  }
-
-  return {
-    isGenerating: readonly(isGenerating),
-    error: readonly(error),
-    generateCertificateId,
-    calculateTotalHours,
-    generatePDF,
-    downloadCertificate
-  }
-}
-```
-
-## SSR Compatibility Patterns
-
-```typescript
-// Always check for window/client-side
-function useClientSideFeature() {
-  const isClient = ref(false)
-  
-  onMounted(() => {
-    isClient.value = true
-    // Now safe to access localStorage, window, etc.
-  })
-  
-  return { isClient }
+interface UseModalReturn {
+    isOpen: Ref<boolean>;
+    open: () => void;
+    close: () => void;
+    toggle: () => void;
 }
 
-// Use useState for SSR-safe shared state
-const sharedState = useState('key', () => defaultValue)
+export function useModal(): UseModalReturn {
+    const isOpen = ref(false);
 
-// Use useAsyncData for data fetching
-const { data } = await useAsyncData('key', () => fetchData())
-
-// Lazy load client-only modules
-const loadClientLib = async () => {
-  if (typeof window === 'undefined') return null
-  const lib = await import('client-only-lib')
-  return lib
+    return {
+        isOpen,
+        open: () => (isOpen.value = true),
+        close: () => (isOpen.value = false),
+        toggle: () => (isOpen.value = !isOpen.value),
+    };
 }
-```
+</code-snippet>
 
-## Best Practices
+## Composable Conventions
 
-1. **Always use `readonly()` for exposed state** - Prevents accidental mutations
-2. **Check `typeof window` before localStorage** - Prevents SSR errors  
-3. **Use `useState` for cross-component state** - Nuxt's SSR-safe alternative to global refs
-4. **Wrap localStorage in try/catch** - Handles quota errors and private browsing
-5. **Provide TypeScript types for all returns** - Better DX and error catching
-6. **Use `isRef` to handle both ref and raw values** - More flexible composable APIs
-7. **Dynamic imports for browser-only libs** - html2canvas, jsPDF, etc.
+- Name composables with `use` prefix: `useCounter`, `useFetch`
+- Place in `composables/` directory
+- Return refs, not raw values (maintains reactivity)
+- Document parameters and return types
+- Clean up side effects in `onUnmounted`
+
+## Common Pitfalls
+
+- Destructuring reactive objects (loses reactivity) - use `toRefs()`
+- Forgetting `.value` when accessing refs in script
+- Not cleaning up event listeners or intervals in `onUnmounted`
+- Creating composables that don't return reactive references
+- Using `ref` when `reactive` is more appropriate for complex objects

@@ -1,57 +1,50 @@
 ---
-name: New Skill Proposal
-about: Propose a new skill to add
+name: Suggest a Skill
+about: Suggest a new skill to be added to the list
 title: '[SKILL] '
-labels: new-skill
+labels: 'new-skill'
 assignees: ''
 ---
 
-## Skill Name
+## Skill Information
 
-What should this skill be called?
+**Skill Name:**
 
-## Category
+**Repository URL (if exists):**
 
-- [ ] dbt
-- [ ] Snowflake
-- [ ] Airflow
-- [ ] Other: ___
+**Category:**
+- [ ] 🧪 Testing & Quality
+- [ ] 🐛 Debugging & Troubleshooting
+- [ ] 🤝 Collaboration & Workflow
+- [ ] ⚙️ Development & Architecture
+- [ ] 🔒 Security & Performance
+- [ ] 📚 Documentation & Automation
+- [ ] 🎯 Meta Skills
 
-## Purpose
+## Description
 
-What workflow does this skill encode?
+Provide a clear, concise description (max 150 characters):
 
-## Trigger Conditions
 
-When should this skill activate? List keywords or patterns:
 
-- ...
-- ...
+## Use Case
 
-## Workflow Steps
+When and why would developers use this skill?
 
-What steps should Claude follow?
 
-1. ...
-2. ...
-3. ...
 
-## Common Mistakes to Prevent
+## Skill Status
 
-What errors does this workflow help avoid?
+- [ ] Skill already exists (provide link)
+- [ ] Skill doesn't exist yet (community-needed)
+- [ ] I'm willing to build this skill
 
-- ...
-- ...
+## Additional Context
 
-## Example Task
+Add any other context, examples, or screenshots:
 
-**Task:** "..."
 
-**Expected behavior with skill:**
-...
 
-## Willingness to Contribute
+---
 
-- [ ] I'd like to implement this skill myself
-- [ ] I'd like help implementing this
-- [ ] I'm just suggesting the idea
+**Suggested by:** @[your-github-username]

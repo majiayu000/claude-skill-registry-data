@@ -1,158 +1,160 @@
 ---
 name: local-review
-description: Review current changes against project guidelines before PR
-allowed-tools: Read, Grep, Glob, Bash
-context: fork
-agent: reviewer
+description: Pre-PR quality review - verify AC coverage, test quality, E2E preference, and test isolation.
 ---
+
+Base directory for this skill: /home/chapel/Projects/kynetic-spec/.claude/skills/local-review
 
 # Local Review
 
-Perform a comprehensive self-review of changes before creating a pull request.
+Quality enforcement for pre-PR review. Use before creating a PR to catch issues early.
 
-## Instructions
+## Quick Start
 
-1. **Gather Context**
-   - Get current branch name
-   - Find associated workflow folder
-   - Read the original issue/concept and plan
+```bash
+# Start the workflow
+kspec workflow start @local-review
+kspec workflow next --input spec_ref="@spec-slug"
+```
 
-2. **Get Changes**
-   - Run `git diff main...HEAD` to see all changes
-   - Run `git log main...HEAD --oneline` to see commits
-   - List all modified files
+## When to Use
 
-3. **Review Against Guidelines**
+- Before creating a PR
+- When spawning a review subagent
+- After completing implementation, before shipping
 
-   ### CODING_GUIDELINES.md Checklist
+## Workflow Overview
 
-   **Architecture**
-   - [ ] Three-layer command pattern followed (Cobra → Wrapper → Execute)
-   - [ ] Config loaded once and passed through
-   - [ ] Using `internal/git/` wrappers, not direct git calls
-   - [ ] Custom error types from `internal/errors`
+6-step quality gate with strict checks:
 
-   **Code Style**
-   - [ ] Imports organized: stdlib, third-party, local
-   - [ ] Naming conventions followed
-   - [ ] Exported functions documented
-   - [ ] No ignored errors
+1. **Get Spec & ACs** - Read acceptance criteria
+2. **AC Coverage** - Every AC must have test (MUST-FIX)
+3. **Test Quality** - No fluff tests (MUST-FIX)
+4. **Test Strategy** - Prefer E2E over unit
+5. **Test Isolation** - Tests in temp dirs (MUST-FIX)
+6. **Report** - List all blocking issues
 
-   **Configuration Precedence**
-   - [ ] Three-layer hierarchy: defaults → git config → flags
-   - [ ] Pointer types for optional booleans
-   - [ ] Flags always win
+## Review Criteria
 
-   **Anti-Engineering**
-   - [ ] No unnecessary abstractions
-   - [ ] No premature optimization
-   - [ ] Changes focused on the task
+### 1. AC Coverage (MUST-FIX)
 
-   ### TESTING_GUIDELINES.md Checklist
+Every acceptance criterion MUST have at least one test that validates it.
 
-   **Test Structure**
-   - [ ] One test case per function (no table-driven for integration)
-   - [ ] Descriptive test names
-   - [ ] Test comments with Steps section
+**How to check:**
+```bash
+# Find AC annotations in tests
+grep -r "// AC: @spec-ref" tests/
 
-   **Test Implementation**
-   - [ ] Using testutil helpers
-   - [ ] Proper setup/cleanup
-   - [ ] Testing success and error paths
+# Compare against spec ACs
+kspec item get @spec-ref
+```
 
-   **Working Directory**
-   - [ ] Using `cmd.Dir`, not `os.Chdir()` where possible
-   - [ ] If `os.Chdir()` used, proper save/restore
+**Annotation format:**
+```typescript
+// AC: @spec-ref ac-1
+it('should validate input when given invalid data', () => {
+  // Test implementation
+});
+```
 
-   ### COMMIT_GUIDELINES.md Checklist
+Missing AC coverage is a **blocking issue**, not a suggestion.
 
-   - [ ] Commit messages follow format
-   - [ ] Subject line ≤50 characters
-   - [ ] Type matches change (feat/fix/refactor/test/docs)
-   - [ ] Issue referenced in footer
-   - [ ] No AI attribution lines
+### 2. Test Quality (MUST-FIX)
 
-   ### Documentation Checklist
+All tests must properly validate their intended purpose.
 
-   - [ ] Manpage updated if command/options changed
-   - [ ] Config documentation updated if config changed
-   - [ ] Help text updated
+**Valid tests:**
+- AC-specific tests that validate acceptance criteria
+- Edge case tests that catch real bugs
+- Integration tests that verify components work together
 
-4. **Code Quality Checks**
-   ```bash
-   # Build check
-   go build ./...
+**Fluff tests to reject:**
+- Tests that always pass regardless of implementation
+- Tests that only verify implementation details
+- Tests that mock everything and verify nothing
 
-   # Test check
-   go test ./...
+**Litmus test:** Would this test fail if the feature breaks?
 
-   # Format check
-   go fmt ./...
+### 3. Test Strategy (Advisory)
 
-   # Vet check
-   go vet ./...
-   ```
+Prefer end-to-end tests over unit tests.
 
-5. **Generate Review Report**
+**Good:** Test the CLI as a user would invoke it
+```typescript
+it('should list tasks', async () => {
+  const result = await kspec(['task', 'list'], tempDir);
+  expect(result.exitCode).toBe(0);
+  expect(result.stdout).toContain('task-slug');
+});
+```
 
-   Create a summary with:
+**Less good:** Only unit testing internal functions
+```typescript
+it('should format task', () => {
+  const formatted = formatTask(mockTask);
+  expect(formatted).toBe('...');
+});
+```
 
-   ```markdown
-   # Local Review: <branch-name>
+Unit tests are okay for complex logic, but E2E proves the feature works.
 
-   ## Summary
-   - Files changed: <count>
-   - Lines added: <count>
-   - Lines removed: <count>
-   - Commits: <count>
+### 4. Test Isolation (MUST-FIX)
 
-   ## Checklist Results
+All tests MUST run in temp directories, not the kspec repo.
 
-   ### Passed
-   - <item 1>
-   - <item 2>
+**Why this matters:**
+- Prevents nested worktree issues
+- Prevents data corruption in real `.kspec/`
+- Ensures tests are reproducible
 
-   ### Issues Found
-   - [ ] <issue 1> - <file:line> - <description>
-   - [ ] <issue 2> - <file:line> - <description>
+**Correct pattern:**
+```typescript
+let tempDir: string;
 
-   ### Warnings
-   - <warning 1>
+beforeEach(async () => {
+  tempDir = await createTempDir();
+  await initGitRepo(tempDir);
+  await setupTempFixtures(tempDir);
+});
 
-   ## Quality Checks
-   - Build: PASS/FAIL
-   - Tests: PASS/FAIL (<count> passed)
-   - Format: PASS/FAIL
-   - Vet: PASS/FAIL
+afterEach(async () => {
+  await cleanupTempDir(tempDir);
+});
+```
 
-   ## Recommendations
-   1. <recommendation>
-   2. <recommendation>
+**Wrong pattern:**
+```typescript
+// NEVER do this - tests run in actual kspec repo
+it('should work', async () => {
+  const result = await kspec(['task', 'list']);  // No tempDir!
+});
+```
 
-   ## Ready for PR?
-   <YES/NO - explain if NO>
-   ```
+## Example Review Prompt
 
-6. **Report Findings**
-   - If issues found, list them with specific file:line references
-   - Suggest fixes for each issue
-   - Indicate if changes are PR-ready
+When spawning a subagent for review:
 
-## Issue Categories
+```
+Review this implementation against the spec @spec-ref. Be strict:
+- Every AC must have test coverage with // AC: annotation
+- Missing tests are blocking issues, not suggestions
+- Prioritize E2E tests over unit tests
+- Verify tests run in temp dirs, not kspec repo
+- Reject fluff tests that don't validate real behavior
+- List any issues as MUST-FIX
+```
 
-### Blocking (must fix)
-- Test failures
-- Build errors
-- Missing error handling
-- Security concerns
-- Guideline violations
+## Issue Severity
 
-### Warnings (should fix)
-- Missing documentation
-- Inconsistent naming
-- Suboptimal patterns
+| Issue | Severity | Action |
+|-------|----------|--------|
+| Missing AC coverage | MUST-FIX | Add tests before PR |
+| Fluff test | MUST-FIX | Rewrite or remove |
+| Tests not isolated | MUST-FIX | Move to temp dirs |
+| No E2E tests | Advisory | Consider adding |
 
-### Suggestions (nice to have)
-- Code clarity improvements
-- Additional test cases
-- Performance optimizations
+## Integration
+
+- **After task work**: Run local review before `/pr`
+- **Before merge**: Complements `@pr-review-merge` workflow
+- **In CI**: Automated review also runs but local catches issues earlier

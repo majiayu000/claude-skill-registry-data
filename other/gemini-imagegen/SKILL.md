@@ -1,11 +1,11 @@
 ---
 name: gemini-imagegen
-description: Generate and edit images using the Gemini API (Nano Banana Pro). Use this skill when creating images from text prompts, editing existing images, applying style transfers, generating logos with text, creating stickers, product mockups, or any image generation/manipulation task. Supports text-to-image, image editing, multi-turn refinement, and composition from multiple reference images.
+description: This skill should be used when generating and editing images using the Gemini API (Nano Banana Pro). It applies when creating images from text prompts, editing existing images, applying style transfers, generating logos with text, creating stickers, product mockups, or any image generation/manipulation task. Supports text-to-image, image editing, multi-turn refinement, and composition from multiple reference images.
 ---
 
 # Gemini Image Generation (Nano Banana Pro)
 
-Generate and edit images using Google's Gemini API. The environment variable `GEMINI_API_KEY` must be set.
+Generate and edit images using Google's Gemini API. Use `op run -- uv run ...` to run Python scripts.
 
 ## Default Model
 
@@ -27,6 +27,46 @@ Generate and edit images using Google's Gemini API. The environment variable `GE
 
 ### Available Resolutions
 `1K` (default), `2K`, `4K`
+
+## CLI Scripts
+
+Ready-to-use scripts for common tasks. All scripts are in the `scripts/` directory.
+
+### Generate Image from Text
+
+```bash
+op run -- uv run scripts/generate.py "A sunset over mountains" -o sunset.jpg
+op run -- uv run scripts/generate.py "A minimalist logo" --aspect 1:1 --size 2K -o logo.jpg
+```
+
+Options:
+- `-o, --output`: Output file path (default: output.jpg)
+- `--aspect`: Aspect ratio (1:1, 16:9, 9:16, etc.)
+- `--size`: Resolution (1K, 2K, 4K)
+
+### Edit an Existing Image
+
+```bash
+op run -- uv run scripts/edit.py input.jpg "Add a sunset to the sky" -o edited.jpg
+op run -- uv run scripts/edit.py photo.png "Make it look like a watercolor painting" --size 2K
+```
+
+Options:
+- `-o, --output`: Output file path (default: edited.jpg)
+- `--size`: Resolution (1K, 2K, 4K)
+
+### Compose Multiple Images
+
+```bash
+op run -- uv run scripts/compose.py "Create a group photo in an office" person1.jpg person2.jpg -o group.jpg
+op run -- uv run scripts/compose.py "Combine these into a collage" img1.png img2.png img3.png --aspect 16:9
+```
+
+Options:
+- `-o, --output`: Output file path (default: composed.jpg)
+- `--aspect`: Aspect ratio for output
+- `--size`: Resolution (1K, 2K, 4K)
+- Supports up to 14 input images
 
 ## Core API Pattern
 

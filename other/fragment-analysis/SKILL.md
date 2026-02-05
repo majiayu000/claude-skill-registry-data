@@ -1,239 +1,196 @@
 ---
-name: bio-restriction-fragment-analysis
-description: Analyze restriction digest fragments using Biopython Bio.Restriction. Predict fragment sizes, get fragment sequences, simulate gel electrophoresis patterns, and perform double digests.
+name: bio-fragment-analysis
+description: Analyzes cfDNA fragment size distributions and fragmentomics features using FinaleToolkit or Griffin. Extracts nucleosome positioning patterns, fragment ratios, and DELFI-style fragmentation profiles for cancer detection. Use when leveraging fragment patterns for tumor detection or tissue-of-origin analysis.
 tool_type: python
-primary_tool: Bio.Restriction
+primary_tool: FinaleToolkit
 ---
 
 # Fragment Analysis
 
-## Get Fragment Sizes
+Analyze cfDNA fragmentomics for cancer detection and characterization.
+
+## Tool Selection
+
+| Tool | Description | Use Case |
+|------|-------------|----------|
+| FinaleToolkit | DELFI-style patterns, MIT license | General fragmentomics |
+| Griffin | Nucleosome profiling | Tissue deconvolution |
+
+Note: DELFI is a commercial company, NOT software. Use FinaleToolkit (MIT license) which replicates DELFI patterns and is 50x faster.
+
+## Fragment Size Metrics
 
 ```python
-from Bio import SeqIO
-from Bio.Restriction import EcoRI
+import pysam
+import numpy as np
+import pandas as pd
 
-record = SeqIO.read('sequence.fasta', 'fasta')
-seq = record.seq
 
-# catalyze() returns tuple: (fragments_5prime, fragments_3prime)
-# For standard use, take the first element
-fragments = EcoRI.catalyze(seq)[0]
+def calculate_fragment_metrics(bam_path):
+    '''
+    Calculate cfDNA fragment metrics.
 
-# fragments is tuple of Seq objects
-sizes = [len(f) for f in fragments]
-print(f'Fragment sizes: {sorted(sizes, reverse=True)}')
+    Key ratios for cancer detection:
+    - Short (100-150 bp) vs Long (151-220 bp)
+    - ctDNA tends to be shorter than normal cfDNA
+    '''
+    bam = pysam.AlignmentFile(bam_path, 'rb')
+    sizes = []
+
+    for read in bam.fetch():
+        if read.is_proper_pair and not read.is_secondary and read.template_length > 0:
+            sizes.append(read.template_length)
+
+    bam.close()
+    sizes = np.array(sizes)
+
+    # DELFI-style ratios
+    short = np.sum((sizes >= 100) & (sizes <= 150))
+    long = np.sum((sizes >= 151) & (sizes <= 220))
+
+    metrics = {
+        'total_fragments': len(sizes),
+        'median_size': np.median(sizes),
+        'mean_size': np.mean(sizes),
+        'short_fragments': short,
+        'long_fragments': long,
+        'short_long_ratio': short / long if long > 0 else np.nan,
+        # Mononucleosome peak
+        'mono_peak_fraction': np.sum((sizes >= 150) & (sizes <= 180)) / len(sizes)
+    }
+
+    return metrics
 ```
 
-## Linear vs Circular Digestion
+## FinaleToolkit Analysis
 
 ```python
-from Bio.Restriction import EcoRI
+import finaletoolkit as ft
+import pandas as pd
 
-# Linear DNA
-fragments_linear = EcoRI.catalyze(seq, linear=True)[0]
 
-# Circular DNA (plasmid)
-fragments_circular = EcoRI.catalyze(seq, linear=False)[0]
+def run_finaletoolkit(bam_path, output_prefix):
+    '''
+    Run FinaleToolkit for DELFI-style fragmentomics.
+    FinaleToolkit 0.7.1+ required.
+    '''
+    # Extract fragment sizes
+    fragments = ft.read_fragments(bam_path)
 
-# Circular produces one fewer fragment (ends join)
-print(f'Linear: {len(fragments_linear)} fragments')
-print(f'Circular: {len(fragments_circular)} fragments')
+    # Calculate genome-wide fragmentation profile
+    # 5Mb bins as in DELFI
+    profile = ft.calculate_fragmentation_profile(
+        fragments,
+        bin_size=5_000_000,
+        short_range=(100, 150),
+        long_range=(151, 220)
+    )
+
+    profile.to_csv(f'{output_prefix}_frag_profile.csv')
+
+    # Calculate coverage-corrected ratios
+    ratios = ft.calculate_short_long_ratios(
+        fragments,
+        bin_size=5_000_000,
+        gc_correct=True
+    )
+
+    return profile, ratios
 ```
 
-## Get Fragment Sequences
+## Griffin Nucleosome Profiling
 
 ```python
-from Bio.Restriction import EcoRI
+import subprocess
 
-fragments = EcoRI.catalyze(seq)[0]
 
-for i, frag in enumerate(fragments, 1):
-    print(f'Fragment {i}: {len(frag)} bp')
-    print(f'  5\' end: {frag[:20]}...')
-    print(f'  3\' end: ...{frag[-20:]}')
+def run_griffin(bam_path, sites_bed, output_dir):
+    '''
+    Run Griffin for nucleosome positioning analysis.
+    Griffin 0.2.0+ required.
+    '''
+    # Griffin analyzes nucleosome accessibility around regulatory sites
+    subprocess.run([
+        'griffin',
+        '--bam', bam_path,
+        '--sites', sites_bed,  # TSS, CTCF, etc.
+        '--output', output_dir,
+        '--window', '2000',  # bp around site
+        '--fragment_length', '120-180'
+    ], check=True)
 ```
 
-## Double Digest
+## Genome-Wide Fragmentation Profile
 
 ```python
-from Bio.Restriction import EcoRI, BamHI, RestrictionBatch
+import pysam
+import numpy as np
 
-# Method 1: Sequential digestion
-frags_ecori = EcoRI.catalyze(seq)[0]
-final_fragments = []
-for frag in frags_ecori:
-    sub_frags = BamHI.catalyze(frag)[0]
-    final_fragments.extend(sub_frags)
 
-# Method 2: Using RestrictionBatch
-batch = RestrictionBatch([EcoRI, BamHI])
-# Note: RestrictionBatch doesn't have catalyze, use Analysis
+def calculate_binned_profile(bam_path, bin_size=5_000_000, chromosomes=None):
+    '''
+    Calculate fragment profiles in genomic bins.
+    Similar to DELFI approach.
+    '''
+    if chromosomes is None:
+        chromosomes = [f'chr{i}' for i in range(1, 23)]
 
-# Method 3: Manual calculation from positions
-ecori_sites = EcoRI.search(seq)
-bamhi_sites = BamHI.search(seq)
-all_sites = sorted(set(ecori_sites + bamhi_sites))
+    bam = pysam.AlignmentFile(bam_path, 'rb')
 
-fragment_sizes = []
-for i in range(len(all_sites) - 1):
-    fragment_sizes.append(all_sites[i + 1] - all_sites[i])
-# Add terminal fragments
-fragment_sizes.insert(0, all_sites[0])
-fragment_sizes.append(len(seq) - all_sites[-1])
+    profiles = {}
+
+    for chrom in chromosomes:
+        try:
+            chrom_len = bam.get_reference_length(chrom)
+        except Exception:
+            continue
+
+        n_bins = (chrom_len // bin_size) + 1
+        short_counts = np.zeros(n_bins)
+        long_counts = np.zeros(n_bins)
+
+        for read in bam.fetch(chrom):
+            if not read.is_proper_pair or read.is_secondary:
+                continue
+            if read.template_length <= 0:
+                continue
+
+            bin_idx = read.reference_start // bin_size
+            if bin_idx >= n_bins:
+                continue
+
+            size = read.template_length
+            if 100 <= size <= 150:
+                short_counts[bin_idx] += 1
+            elif 151 <= size <= 220:
+                long_counts[bin_idx] += 1
+
+        # Calculate ratio per bin
+        with np.errstate(divide='ignore', invalid='ignore'):
+            ratios = short_counts / long_counts
+            ratios[~np.isfinite(ratios)] = np.nan
+
+        profiles[chrom] = {
+            'short': short_counts,
+            'long': long_counts,
+            'ratio': ratios
+        }
+
+    bam.close()
+    return profiles
 ```
 
-## Calculate Fragment Sizes from Positions
+## Interpretation
 
-```python
-def fragments_from_positions(seq_len, cut_positions, linear=True):
-    '''Calculate fragment sizes from cut positions'''
-    if not cut_positions:
-        return [seq_len]
-
-    positions = sorted(cut_positions)
-    fragments = []
-
-    if linear:
-        # First fragment: start to first cut
-        fragments.append(positions[0])
-        # Middle fragments
-        for i in range(len(positions) - 1):
-            fragments.append(positions[i + 1] - positions[i])
-        # Last fragment: last cut to end
-        fragments.append(seq_len - positions[-1])
-    else:
-        # Circular: all fragments between cuts
-        for i in range(len(positions) - 1):
-            fragments.append(positions[i + 1] - positions[i])
-        # Wrap-around fragment
-        fragments.append((seq_len - positions[-1]) + positions[0])
-
-    return fragments
-
-# Usage
-sites = EcoRI.search(seq)
-sizes = fragments_from_positions(len(seq), sites, linear=True)
-print(f'Fragment sizes: {sorted(sizes, reverse=True)}')
-```
-
-## Simulate Gel Pattern
-
-```python
-def simulate_gel(fragment_sizes, ladder=None):
-    '''Print a text-based gel simulation'''
-    if ladder is None:
-        ladder = [10000, 8000, 6000, 5000, 4000, 3000, 2000, 1500, 1000, 750, 500, 250]
-
-    max_size = max(max(fragment_sizes), max(ladder))
-
-    print('Ladder  |  Digest')
-    print('-' * 30)
-
-    for size in sorted(ladder + fragment_sizes, reverse=True):
-        ladder_mark = f'{size:>6}' if size in ladder else '      '
-        digest_mark = '====' if size in fragment_sizes else ''
-        print(f'{ladder_mark}  |  {digest_mark}')
-
-# Usage
-sizes = [len(f) for f in EcoRI.catalyze(seq)[0]]
-simulate_gel(sizes)
-```
-
-## Detailed Fragment Report
-
-```python
-from Bio.Restriction import EcoRI, BamHI
-
-def fragment_report(seq, enzyme, linear=True):
-    '''Generate detailed fragment analysis'''
-    sites = enzyme.search(seq, linear=linear)
-    fragments = enzyme.catalyze(seq, linear=linear)[0]
-
-    print(f'Enzyme: {enzyme}')
-    print(f'Recognition site: {enzyme.site}')
-    print(f'Number of sites: {len(sites)}')
-    print(f'Cut positions: {sites}')
-    print(f'\nFragments ({len(fragments)}):')
-
-    sizes = sorted([len(f) for f in fragments], reverse=True)
-    total = sum(sizes)
-
-    for i, size in enumerate(sizes, 1):
-        pct = (size / total) * 100
-        print(f'  {i}. {size:6d} bp ({pct:5.1f}%)')
-
-    print(f'\nTotal: {total} bp')
-    return sizes
-
-# Usage
-sizes = fragment_report(seq, EcoRI)
-```
-
-## Compare Expected vs Observed Fragments
-
-```python
-def compare_fragments(expected, observed, tolerance=50):
-    '''Compare expected fragment sizes with observed (from gel)'''
-    matched = []
-    unmatched_exp = list(expected)
-    unmatched_obs = list(observed)
-
-    for exp in expected:
-        for obs in observed:
-            if abs(exp - obs) <= tolerance:
-                matched.append((exp, obs))
-                if exp in unmatched_exp:
-                    unmatched_exp.remove(exp)
-                if obs in unmatched_obs:
-                    unmatched_obs.remove(obs)
-                break
-
-    print('Matched fragments:')
-    for exp, obs in matched:
-        print(f'  Expected: {exp}, Observed: {obs}')
-
-    if unmatched_exp:
-        print(f'\nMissing (expected but not observed): {unmatched_exp}')
-    if unmatched_obs:
-        print(f'\nExtra (observed but not expected): {unmatched_obs}')
-
-# Usage
-expected = [3000, 2000, 1500, 500]
-observed = [3050, 2000, 1480, 510, 200]  # From gel
-compare_fragments(expected, observed)
-```
-
-## Fragment with Sequence Context
-
-```python
-from Bio.Restriction import EcoRI
-
-def annotated_fragments(seq, enzyme, context=50):
-    '''Get fragments with surrounding sequence context'''
-    sites = enzyme.search(seq)
-    fragments = enzyme.catalyze(seq)[0]
-
-    print(f'{enzyme} digest ({len(fragments)} fragments):')
-
-    for i, (frag, site) in enumerate(zip(fragments, [0] + sites), 1):
-        print(f'\nFragment {i}: {len(frag)} bp (starts at {site})')
-        print(f"  5' sequence: {str(frag[:context])}...")
-        print(f"  3' sequence: ...{str(frag[-context:])}")
-
-# Usage
-annotated_fragments(seq, EcoRI)
-```
-
-## Notes
-
-- **catalyze() returns tuple** - use `[0]` to get 5' fragments
-- **Fragment order** - fragments returned in 5' to 3' order
-- **Circular DNA** - produces n fragments from n cuts (not n+1)
-- **Double digest** - combine cut positions, then calculate fragments
+| Pattern | Interpretation |
+|---------|----------------|
+| Higher short/long ratio | Possible tumor signal |
+| Altered nucleosome positioning | Epigenetic changes |
+| Tissue-specific patterns | Tissue of origin |
+| Modal peak shift | cfDNA quality issue or biology |
 
 ## Related Skills
 
-- restriction-sites - Find cut positions for fragment calculation
-- restriction-mapping - Visualize fragment positions
-- enzyme-selection - Choose enzymes for desired fragments
+- cfdna-preprocessing - Preprocess before fragment analysis
+- tumor-fraction-estimation - Complement with CNV-based estimation
+- methylation-based-detection - Alternative detection approach

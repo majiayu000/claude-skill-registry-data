@@ -1,470 +1,640 @@
 ---
 name: ollama
-description: Ollama API Documentation
+description: "Run local LLMs with Ollama. Configure models, manage resources, and integrate with applications. Use for local AI, private LLM deployments, and offline inference."
 ---
 
 # Ollama Skill
 
-Comprehensive assistance with Ollama development - the local AI model runtime for running and interacting with large language models programmatically.
-
-## When to Use This Skill
-
-This skill should be triggered when:
-- Running local AI models with Ollama
-- Building applications that interact with Ollama's API
-- Implementing chat completions, embeddings, or streaming responses
-- Setting up Ollama authentication or cloud models
-- Configuring Ollama server (environment variables, ports, proxies)
-- Using Ollama with OpenAI-compatible libraries
-- Troubleshooting Ollama installations or GPU compatibility
-- Implementing tool calling, structured outputs, or vision capabilities
-- Working with Ollama in Docker or behind proxies
-- Creating, copying, pushing, or managing Ollama models
+Complete guide for Ollama - run LLMs locally.
 
 ## Quick Reference
 
-### 1. Basic Chat Completion (cURL)
+### Popular Models
+| Model | Size | Use Case |
+|-------|------|----------|
+| **llama3.2** | 3B/11B | General purpose |
+| **mistral** | 7B | Fast, capable |
+| **codellama** | 7B/13B/34B | Code generation |
+| **phi3** | 3.8B | Compact, fast |
+| **gemma2** | 2B/9B/27B | Google's model |
+| **qwen2.5** | 0.5B-72B | Multilingual |
+| **deepseek-coder** | 6.7B/33B | Code specialist |
 
-Generate a simple chat response:
-
+### Commands
 ```bash
-curl http://localhost:11434/api/chat -d '{
-  "model": "gemma3",
-  "messages": [
-    {
-      "role": "user",
-      "content": "Why is the sky blue?"
-    }
-  ]
-}'
+ollama run <model>    # Interactive chat
+ollama pull <model>   # Download model
+ollama list           # List installed
+ollama rm <model>     # Remove model
+ollama serve          # Start server
 ```
 
-### 2. Simple Text Generation (cURL)
+---
 
-Generate a text response from a prompt:
+## 1. Installation
 
+### macOS
+```bash
+# Download from ollama.ai or:
+brew install ollama
+```
+
+### Linux
+```bash
+curl -fsSL https://ollama.ai/install.sh | sh
+```
+
+### Windows
+```powershell
+# Download installer from ollama.ai
+# Or use WSL2 with Linux instructions
+```
+
+### Docker
+```bash
+docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
+
+# With GPU support
+docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 ollama/ollama
+```
+
+---
+
+## 2. Basic Usage
+
+### Run Models
+```bash
+# Run interactively
+ollama run llama3.2
+
+# Run with prompt
+ollama run llama3.2 "Explain quantum computing"
+
+# Run specific size
+ollama run llama3.2:3b
+ollama run llama3.2:11b
+
+# Run with system prompt
+ollama run llama3.2 --system "You are a helpful coding assistant"
+```
+
+### Model Management
+```bash
+# Pull model
+ollama pull mistral
+
+# List models
+ollama list
+
+# Show model info
+ollama show llama3.2
+
+# Show model file
+ollama show llama3.2 --modelfile
+
+# Copy model
+ollama cp llama3.2 my-llama
+
+# Remove model
+ollama rm mistral
+```
+
+---
+
+## 3. REST API
+
+### Generate Completion
 ```bash
 curl http://localhost:11434/api/generate -d '{
-  "model": "gemma3",
-  "prompt": "Why is the sky blue?"
+  "model": "llama3.2",
+  "prompt": "Why is the sky blue?",
+  "stream": false
 }'
 ```
 
-### 3. Python Chat with OpenAI Library
+### Chat Completion
+```bash
+curl http://localhost:11434/api/chat -d '{
+  "model": "llama3.2",
+  "messages": [
+    {"role": "system", "content": "You are a helpful assistant."},
+    {"role": "user", "content": "Hello!"}
+  ],
+  "stream": false
+}'
+```
 
-Use Ollama with the OpenAI Python library:
+### Streaming
+```bash
+curl http://localhost:11434/api/chat -d '{
+  "model": "llama3.2",
+  "messages": [{"role": "user", "content": "Write a poem"}],
+  "stream": true
+}'
+```
 
+### Embeddings
+```bash
+curl http://localhost:11434/api/embed -d '{
+  "model": "llama3.2",
+  "input": "The quick brown fox"
+}'
+```
+
+### List Models (API)
+```bash
+curl http://localhost:11434/api/tags
+```
+
+---
+
+## 4. Python Integration
+
+### Official Library
+```bash
+pip install ollama
+```
+
+### Basic Usage
 ```python
-from openai import OpenAI
+import ollama
 
-client = OpenAI(
-    base_url='http://localhost:11434/v1/',
-    api_key='ollama',  # required but ignored
-)
-
-chat_completion = client.chat.completions.create(
-    messages=[
-        {
-            'role': 'user',
-            'content': 'Say this is a test',
-        }
-    ],
+# Generate
+response = ollama.generate(
     model='llama3.2',
+    prompt='What is Python?'
+)
+print(response['response'])
+
+# Chat
+response = ollama.chat(
+    model='llama3.2',
+    messages=[
+        {'role': 'system', 'content': 'You are a helpful assistant.'},
+        {'role': 'user', 'content': 'Hello!'}
+    ]
+)
+print(response['message']['content'])
+```
+
+### Streaming
+```python
+# Stream generate
+for chunk in ollama.generate(model='llama3.2', prompt='Hello', stream=True):
+    print(chunk['response'], end='', flush=True)
+
+# Stream chat
+for chunk in ollama.chat(
+    model='llama3.2',
+    messages=[{'role': 'user', 'content': 'Write a story'}],
+    stream=True
+):
+    print(chunk['message']['content'], end='', flush=True)
+```
+
+### Embeddings
+```python
+# Single embedding
+response = ollama.embed(
+    model='llama3.2',
+    input='Hello, world!'
+)
+embedding = response['embeddings'][0]
+
+# Multiple embeddings
+response = ollama.embed(
+    model='llama3.2',
+    input=['Hello', 'World']
+)
+embeddings = response['embeddings']
+```
+
+### Async Support
+```python
+import asyncio
+import ollama
+
+async def main():
+    response = await ollama.AsyncClient().chat(
+        model='llama3.2',
+        messages=[{'role': 'user', 'content': 'Hello!'}]
+    )
+    print(response['message']['content'])
+
+asyncio.run(main())
+```
+
+---
+
+## 5. LangChain Integration
+
+### Setup
+```python
+from langchain_ollama import ChatOllama, OllamaEmbeddings
+
+# Chat model
+llm = ChatOllama(
+    model="llama3.2",
+    temperature=0.7
+)
+
+# Embeddings
+embeddings = OllamaEmbeddings(model="llama3.2")
+```
+
+### Use in Chains
+```python
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.output_parsers import StrOutputParser
+
+prompt = ChatPromptTemplate.from_template("Explain {topic} simply")
+chain = prompt | llm | StrOutputParser()
+
+result = chain.invoke({"topic": "machine learning"})
+```
+
+---
+
+## 6. Custom Models (Modelfile)
+
+### Basic Modelfile
+```dockerfile
+# Modelfile
+FROM llama3.2
+
+# Set parameters
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9
+PARAMETER num_ctx 4096
+
+# Set system prompt
+SYSTEM """You are a helpful coding assistant specialized in Python.
+Always provide clear, well-commented code examples."""
+```
+
+### Create Custom Model
+```bash
+# Create model from Modelfile
+ollama create my-coder -f ./Modelfile
+
+# Run custom model
+ollama run my-coder
+```
+
+### Advanced Modelfile
+```dockerfile
+FROM llama3.2:11b
+
+# Model parameters
+PARAMETER temperature 0.8
+PARAMETER top_k 40
+PARAMETER top_p 0.9
+PARAMETER repeat_penalty 1.1
+PARAMETER num_ctx 8192
+PARAMETER num_predict 2048
+PARAMETER stop "<|im_end|>"
+
+# System message
+SYSTEM """You are an expert software architect. You provide:
+1. Clear architectural recommendations
+2. Design pattern suggestions
+3. Best practices for scalability
+4. Security considerations"""
+
+# Template (for custom formats)
+TEMPLATE """{{ if .System }}<|im_start|>system
+{{ .System }}<|im_end|>
+{{ end }}{{ if .Prompt }}<|im_start|>user
+{{ .Prompt }}<|im_end|>
+{{ end }}<|im_start|>assistant
+{{ .Response }}<|im_end|>"""
+```
+
+### Import GGUF Models
+```dockerfile
+# Import from GGUF file
+FROM ./model.gguf
+
+PARAMETER temperature 0.7
+SYSTEM "You are a helpful assistant."
+```
+
+```bash
+ollama create custom-model -f Modelfile
+```
+
+---
+
+## 7. Vision Models
+
+### Using Vision
+```python
+import ollama
+import base64
+
+# From file
+with open('image.jpg', 'rb') as f:
+    image_data = base64.b64encode(f.read()).decode()
+
+response = ollama.chat(
+    model='llava',
+    messages=[{
+        'role': 'user',
+        'content': 'What is in this image?',
+        'images': [image_data]
+    }]
+)
+print(response['message']['content'])
+```
+
+### Via API
+```bash
+curl http://localhost:11434/api/chat -d '{
+  "model": "llava",
+  "messages": [{
+    "role": "user",
+    "content": "Describe this image",
+    "images": ["base64-encoded-image"]
+  }]
+}'
+```
+
+---
+
+## 8. Code Models
+
+### CodeLlama
+```bash
+# Pull code model
+ollama pull codellama
+
+# Or specialized variants
+ollama pull codellama:7b-instruct
+ollama pull codellama:13b-python
+```
+
+### Code Generation
+```python
+response = ollama.generate(
+    model='codellama',
+    prompt='''Write a Python function that:
+1. Takes a list of numbers
+2. Returns the median value
+3. Handles empty lists'''
+)
+print(response['response'])
+```
+
+### DeepSeek Coder
+```bash
+ollama pull deepseek-coder:6.7b
+```
+
+```python
+response = ollama.chat(
+    model='deepseek-coder:6.7b',
+    messages=[{
+        'role': 'user',
+        'content': 'Write a REST API in FastAPI for user management'
+    }]
 )
 ```
 
-### 4. Vision Model (Image Analysis)
+---
 
-Ask questions about images:
+## 9. Performance Tuning
 
+### Context Length
 ```python
-from openai import OpenAI
+# Increase context window
+response = ollama.generate(
+    model='llama3.2',
+    prompt='Long document here...',
+    options={
+        'num_ctx': 8192  # Default is 2048
+    }
+)
+```
 
-client = OpenAI(base_url="http://localhost:11434/v1/", api_key="ollama")
+### GPU Layers
+```python
+# Control GPU usage
+response = ollama.generate(
+    model='llama3.2',
+    prompt='Hello',
+    options={
+        'num_gpu': 50  # Number of layers on GPU
+    }
+)
+```
 
-response = client.chat.completions.create(
-    model="llava",
-    messages=[
-        {
-            "role": "user",
-            "content": [
-                {"type": "text", "text": "What's in this image?"},
-                {
-                    "type": "image_url",
-                    "image_url": "data:image/png;base64,iVBORw0KG...",
-                },
-            ],
+### Parameters
+```python
+response = ollama.generate(
+    model='llama3.2',
+    prompt='Creative writing prompt',
+    options={
+        'temperature': 0.9,      # Creativity (0-2)
+        'top_p': 0.95,           # Nucleus sampling
+        'top_k': 40,             # Top-k sampling
+        'repeat_penalty': 1.1,   # Reduce repetition
+        'num_predict': 500,      # Max tokens
+        'seed': 42               # Reproducibility
+    }
+)
+```
+
+---
+
+## 10. Server Configuration
+
+### Environment Variables
+```bash
+# Change host/port
+OLLAMA_HOST=0.0.0.0:11434 ollama serve
+
+# Custom model directory
+OLLAMA_MODELS=/path/to/models ollama serve
+
+# Limit GPU memory
+OLLAMA_GPU_MEMORY=4096 ollama serve
+```
+
+### Docker Compose
+```yaml
+services:
+  ollama:
+    image: ollama/ollama
+    container_name: ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    restart: unless-stopped
+
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: open-webui
+    ports:
+      - "3000:8080"
+    volumes:
+      - open-webui:/app/backend/data
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+    depends_on:
+      - ollama
+    restart: unless-stopped
+
+volumes:
+  ollama_data:
+  open-webui:
+```
+
+---
+
+## 11. Common Patterns
+
+### RAG with Ollama
+```python
+import ollama
+from langchain_ollama import OllamaEmbeddings
+from langchain_chroma import Chroma
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+
+# Create embeddings
+embeddings = OllamaEmbeddings(model="llama3.2")
+
+# Create vector store
+vectorstore = Chroma.from_texts(
+    texts=["Document 1...", "Document 2..."],
+    embedding=embeddings
+)
+
+# Query
+def rag_query(question: str) -> str:
+    # Retrieve relevant docs
+    docs = vectorstore.similarity_search(question, k=3)
+    context = "\n".join(doc.page_content for doc in docs)
+
+    # Generate answer
+    response = ollama.chat(
+        model='llama3.2',
+        messages=[
+            {'role': 'system', 'content': f'Answer using this context:\n{context}'},
+            {'role': 'user', 'content': question}
+        ]
+    )
+    return response['message']['content']
+```
+
+### Function Calling
+```python
+import json
+
+tools = [
+    {
+        "name": "get_weather",
+        "description": "Get weather for a location",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "location": {"type": "string", "description": "City name"}
+            },
+            "required": ["location"]
         }
-    ],
-    max_tokens=300,
-)
-```
+    }
+]
 
-### 5. Generate Embeddings
-
-Create vector embeddings for text:
-
-```python
-client = OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")
-
-embeddings = client.embeddings.create(
-    model="all-minilm",
-    input=["why is the sky blue?", "why is the grass green?"],
-)
-```
-
-### 6. Structured Outputs (JSON Schema)
-
-Get structured JSON responses:
-
-```python
-from pydantic import BaseModel
-from openai import OpenAI
-
-client = OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")
-
-class FriendInfo(BaseModel):
-    name: str
-    age: int
-    is_available: bool
-
-class FriendList(BaseModel):
-    friends: list[FriendInfo]
-
-completion = client.beta.chat.completions.parse(
-    temperature=0,
-    model="llama3.1:8b",
+response = ollama.chat(
+    model='llama3.2',
     messages=[
-        {"role": "user", "content": "Return a list of friends in JSON format"}
-    ],
-    response_format=FriendList,
+        {'role': 'system', 'content': f'You have these tools: {json.dumps(tools)}. Call them by returning JSON with "tool" and "arguments".'},
+        {'role': 'user', 'content': 'What is the weather in Paris?'}
+    ]
 )
 
-friends_response = completion.choices[0].message
-if friends_response.parsed:
-    print(friends_response.parsed)
+# Parse tool call from response
 ```
 
-### 7. JavaScript/TypeScript Chat
+### Batch Processing
+```python
+import ollama
+from concurrent.futures import ThreadPoolExecutor
 
-Use Ollama with the OpenAI JavaScript library:
+def process_item(item):
+    response = ollama.generate(
+        model='llama3.2',
+        prompt=f"Summarize: {item}"
+    )
+    return response['response']
 
-```javascript
-import OpenAI from "openai";
+items = ["Document 1", "Document 2", "Document 3"]
 
-const openai = new OpenAI({
-  baseURL: "http://localhost:11434/v1/",
-  apiKey: "ollama",  // required but ignored
-});
-
-const chatCompletion = await openai.chat.completions.create({
-  messages: [{ role: "user", content: "Say this is a test" }],
-  model: "llama3.2",
-});
+with ThreadPoolExecutor(max_workers=3) as executor:
+    results = list(executor.map(process_item, items))
 ```
 
-### 8. Authentication for Cloud Models
+---
 
-Sign in to use cloud models:
+## 12. Troubleshooting
 
+### Common Issues
+
+**Model not found:**
 ```bash
-# Sign in from CLI
-ollama signin
+# Pull the model first
+ollama pull llama3.2
 
-# Then use cloud models
-ollama run gpt-oss:120b-cloud
+# Check available models
+ollama list
 ```
 
-Or use API keys for direct cloud access:
-
+**Out of memory:**
 ```bash
-export OLLAMA_API_KEY=your_api_key
+# Use smaller model
+ollama run llama3.2:3b  # Instead of 11b
 
-curl https://ollama.com/api/generate \
-  -H "Authorization: Bearer $OLLAMA_API_KEY" \
-  -d '{
-    "model": "gpt-oss:120b",
-    "prompt": "Why is the sky blue?",
-    "stream": false
-  }'
+# Or reduce context
+ollama run llama3.2 --num-ctx 2048
 ```
 
-### 9. Configure Ollama Server
-
-Set environment variables for server configuration:
-
-**macOS:**
+**Slow generation:**
 ```bash
-# Set environment variable
-launchctl setenv OLLAMA_HOST "0.0.0.0:11434"
+# Check GPU usage
+nvidia-smi
 
-# Restart Ollama application
+# Ensure model fits in VRAM
+# Or use quantized versions
+ollama pull llama3.2:3b-q4_0
 ```
 
-**Linux (systemd):**
+**Connection refused:**
 ```bash
-# Edit service
-systemctl edit ollama.service
+# Start server first
+ollama serve
 
-# Add under [Service]
-Environment="OLLAMA_HOST=0.0.0.0:11434"
-
-# Reload and restart
-systemctl daemon-reload
-systemctl restart ollama
+# Check if running
+curl http://localhost:11434/api/tags
 ```
 
-**Windows:**
-```
-1. Quit Ollama from task bar
-2. Search "environment variables" in Settings
-3. Edit or create OLLAMA_HOST variable
-4. Set value: 0.0.0.0:11434
-5. Restart Ollama from Start menu
-```
-
-### 10. Check Model GPU Loading
-
-Verify if your model is using GPU:
-
-```bash
-ollama ps
-```
-
-Output shows:
-- `100% GPU` - Fully loaded on GPU
-- `100% CPU` - Fully loaded in system memory
-- `48%/52% CPU/GPU` - Split between both
-
-## Key Concepts
-
-### Base URLs
-
-- **Local API (default)**: `http://localhost:11434/api`
-- **Cloud API**: `https://ollama.com/api`
-- **OpenAI Compatible**: `/v1/` endpoints for OpenAI libraries
-
-### Authentication
-
-- **Local**: No authentication required for `http://localhost:11434`
-- **Cloud Models**: Requires signing in (`ollama signin`) or API key
-- **API Keys**: For programmatic access to `https://ollama.com/api`
-
-### Models
-
-- **Local Models**: Run on your machine (e.g., `gemma3`, `llama3.2`, `qwen3`)
-- **Cloud Models**: Suffix `-cloud` (e.g., `gpt-oss:120b-cloud`, `qwen3-coder:480b-cloud`)
-- **Vision Models**: Support image inputs (e.g., `llava`)
-
-### Common Environment Variables
-
-- `OLLAMA_HOST` - Change bind address (default: `127.0.0.1:11434`)
-- `OLLAMA_CONTEXT_LENGTH` - Context window size (default: `2048` tokens)
-- `OLLAMA_MODELS` - Model storage directory
-- `OLLAMA_ORIGINS` - Allow additional web origins for CORS
-- `HTTPS_PROXY` - Proxy server for model downloads
-
-### Error Handling
-
-**Status Codes:**
-- `200` - Success
-- `400` - Bad Request (invalid parameters)
-- `404` - Not Found (model doesn't exist)
-- `429` - Too Many Requests (rate limit)
-- `500` - Internal Server Error
-- `502` - Bad Gateway (cloud model unreachable)
-
-**Error Format:**
-```json
-{
-  "error": "the model failed to generate a response"
-}
-```
-
-### Streaming vs Non-Streaming
-
-- **Streaming** (default): Returns response chunks as JSON objects (NDJSON)
-- **Non-Streaming**: Set `"stream": false` to get complete response in one object
-
-## Reference Files
-
-This skill includes comprehensive documentation in `references/`:
-
-- **llms-txt.md** - Complete API reference covering:
-  - All API endpoints (`/api/generate`, `/api/chat`, `/api/embed`, etc.)
-  - Authentication methods (signin, API keys)
-  - Error handling and status codes
-  - OpenAI compatibility layer
-  - Cloud models usage
-  - Streaming responses
-  - Configuration and environment variables
-
-- **llms.md** - Documentation index listing all available topics:
-  - API reference (version, model details, chat, generate, embeddings)
-  - Capabilities (embeddings, streaming, structured outputs, tool calling, vision)
-  - CLI reference
-  - Cloud integration
-  - Platform-specific guides (Linux, macOS, Windows, Docker)
-  - IDE integrations (VS Code, JetBrains, Xcode, Zed, Cline)
-
-Use the reference files when you need:
-- Detailed API parameter specifications
-- Complete endpoint documentation
-- Advanced configuration options
-- Platform-specific setup instructions
-- Integration guides for specific tools
-
-## Working with This Skill
-
-### For Beginners
-
-Start with these common patterns:
-1. **Simple generation**: Use `/api/generate` endpoint with a prompt
-2. **Chat interface**: Use `/api/chat` with messages array
-3. **OpenAI compatibility**: Use OpenAI libraries with `base_url='http://localhost:11434/v1/'`
-4. **Check GPU usage**: Run `ollama ps` to verify model loading
-
-Read `llms-txt.md` section on "Introduction" and "Quickstart" for foundational concepts.
-
-### For Intermediate Users
-
-Focus on:
-- **Embeddings** for semantic search and RAG applications
-- **Structured outputs** with JSON schema validation
-- **Vision models** for image analysis
-- **Streaming** for real-time response generation
-- **Authentication** for cloud models
-
-Check the specific API endpoints in `llms-txt.md` for detailed parameter options.
-
-### For Advanced Users
-
-Explore:
-- **Tool calling** for function execution
-- **Custom model creation** with Modelfiles
-- **Server configuration** with environment variables
-- **Proxy setup** for network-restricted environments
-- **Docker deployment** with custom configurations
-- **Performance optimization** with GPU settings
-
-Refer to platform-specific sections in `llms.md` and configuration details in `llms-txt.md`.
-
-### Common Use Cases
-
-**Building a chatbot:**
-1. Use `/api/chat` endpoint
-2. Maintain message history in your application
-3. Stream responses for better UX
-4. Handle errors gracefully
-
-**Creating embeddings for search:**
-1. Use `/api/embed` endpoint
-2. Store embeddings in vector database
-3. Perform similarity search
-4. Implement RAG (Retrieval Augmented Generation)
-
-**Running behind a firewall:**
-1. Set `HTTPS_PROXY` environment variable
-2. Configure proxy in Docker if containerized
-3. Ensure certificates are trusted
-
-**Using cloud models:**
-1. Run `ollama signin` once
-2. Pull cloud models with `-cloud` suffix
-3. Use same API endpoints as local models
-
-## Troubleshooting
-
-### Model Not Loading on GPU
-
-**Check:**
-```bash
-ollama ps
-```
-
-**Solutions:**
-- Verify GPU compatibility in documentation
-- Check CUDA/ROCm installation
-- Review available VRAM
-- Try smaller model variants
-
-### Cannot Access Ollama Remotely
-
-**Problem:** Ollama only accessible from localhost
-
-**Solution:**
-```bash
-# Set OLLAMA_HOST to bind to all interfaces
-export OLLAMA_HOST="0.0.0.0:11434"
-```
-
-See "How do I configure Ollama server?" in `llms-txt.md` for platform-specific instructions.
-
-### Proxy Issues
-
-**Problem:** Cannot download models behind proxy
-
-**Solution:**
-```bash
-# Set proxy (HTTPS only, not HTTP)
-export HTTPS_PROXY=https://proxy.example.com
-
-# Restart Ollama
-```
-
-See "How do I use Ollama behind a proxy?" in `llms-txt.md`.
-
-### CORS Errors in Browser
-
-**Problem:** Browser extension or web app cannot access Ollama
-
-**Solution:**
-```bash
-# Allow specific origins
-export OLLAMA_ORIGINS="chrome-extension://*,moz-extension://*"
-```
-
-See "How can I allow additional web origins?" in `llms-txt.md`.
-
-## Resources
-
-### Official Documentation
-- Main docs: https://docs.ollama.com
-- API Reference: https://docs.ollama.com/api
-- Model Library: https://ollama.com/models
-
-### Official Libraries
-- Python: https://github.com/ollama/ollama-python
-- JavaScript: https://github.com/ollama/ollama-js
-
-### Community
-- GitHub: https://github.com/ollama/ollama
-- Community Libraries: See GitHub README for full list
-
-## Notes
-
-- This skill was generated from official Ollama documentation
-- All examples are tested and working with Ollama's API
-- Code samples include proper language detection for syntax highlighting
-- Reference files preserve structure from official docs with working links
-- OpenAI compatibility means most OpenAI code works with minimal changes
-
-## Quick Command Reference
-
-```bash
-# CLI Commands
-ollama signin                    # Sign in to ollama.com
-ollama run gemma3               # Run a model interactively
-ollama pull gemma3              # Download a model
-ollama ps                       # List running models
-ollama list                     # List installed models
-
-# Check API Status
-curl http://localhost:11434/api/version
-
-# Environment Variables (Common)
-export OLLAMA_HOST="0.0.0.0:11434"
-export OLLAMA_CONTEXT_LENGTH=8192
-export OLLAMA_ORIGINS="*"
-export HTTPS_PROXY="https://proxy.example.com"
-```
+---
+
+## Best Practices
+
+1. **Right-size models** - Use smallest that works
+2. **Quantization** - Use Q4 for speed
+3. **Custom models** - Tune for your use case
+4. **Batch requests** - Reduce overhead
+5. **Cache responses** - Avoid repeat queries
+6. **Monitor resources** - Watch GPU/CPU
+7. **Use streaming** - Better UX
+8. **Set timeouts** - Handle slow responses
+9. **Test prompts** - Iterate on system messages
+10. **Keep updated** - New models regularly

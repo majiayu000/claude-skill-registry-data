@@ -1,229 +1,217 @@
 ---
 name: doc-generator
-description: |
-
-  Triggers: documentation, generate docs, write docs, technical writing
-  Generate or remediate documentation with human-quality writing and style adherence.
-
-  Triggers: generate documentation, write readme, create guide, doc generation,
-  technical writing, remediate docs, polish content, clean up docs
-
-  Use when: creating new documentation, rewriting AI-generated content,
-  applying style profiles to content, polishing drafts
-
-  DO NOT use when: just detecting slop - use slop-detector for analysis only.
-  DO NOT use when: learning styles - use style-learner first.
-
-  Use this skill to produce human-quality documentation.
-category: artifact-generation
-tags: [documentation, writing, generation, remediation, polish]
-tools: [Read, Write, Edit, TodoWrite]
-complexity: medium
-estimated_tokens: 1600
-progressive_loading: true
-modules:
-  - generation-guidelines
-  - remediation-workflow
-  - quality-gates
-dependencies:
-  - scribe:shared
-  - scribe:slop-detector
-  - scribe:style-learner
+description: Generates comprehensive documentation from code, APIs, and specifications. Creates API documentation, developer guides, architecture docs, and user manuals with examples and tutorials.
+version: 1.0
+model: sonnet
+invoked_by: both
+user_invocable: true
+tools: [Read, Write, Glob, Grep]
+best_practices:
+  - Extract documentation from code comments
+  - Generate OpenAPI/Swagger specs from code
+  - Create comprehensive examples
+  - Include troubleshooting guides
+  - Follow documentation standards
+error_handling: graceful
+streaming: supported
+templates: [api-docs, developer-guide, architecture-docs, user-manual]
 ---
 
-# Documentation Generator Skill
+**Mode: Cognitive/Prompt-Driven** — No standalone utility script; use via agent context.
 
-Create and remediate documentation that reads as human-written.
+<identity>
+Documentation Generator Skill - Generates comprehensive documentation from code, APIs, and specifications including API docs, developer guides, architecture documentation, and user manuals.
+</identity>
 
-## Core Writing Principles
+<capabilities>
+- Generating API documentation
+- Creating developer guides
+- Documenting architecture
+- Creating user manuals
+- Generating OpenAPI/Swagger specs
+- Updating existing documentation
+</capabilities>
 
-These principles override defaults and must guide all content:
+<instructions>
+<execution_process>
 
-### 1. Ground Every Claim
+### Step 1: Identify Documentation Type
 
-Explain WHY with specifics. If you catch yourself writing "ensures," "comprehensive," or "holistic" without evidence, pause.
+Determine documentation type:
 
-Before: "This provides comprehensive coverage."
-After: "This covers all 47 API endpoints in v2.3."
+- **API Documentation**: Endpoint references
+- **Developer Guide**: Setup and usage
+- **Architecture Docs**: System overview
+- **User Manual**: Feature guides
 
-### 2. Trim Rhetorical Crutches
+### Step 2: Extract Information
 
-Skip formulaic openings and forced wrap-ups. End sections once useful information is delivered.
+Gather documentation content:
 
-Remove: "In today's fast-paced world...", "In conclusion..."
+- Read code and comments
+- Analyze API endpoints
+- Extract examples
+- Understand architecture
 
-### 3. Use Specifics
+### Step 3: Generate Documentation
 
-Numbers, commands, filenames, or short anecdotes beat adjectives. If there's no concrete detail, acknowledge what's unknown.
+Create documentation:
 
-Before: "enterprise-ready solution"
-After: "tested with 10M requests/day in production"
+- Follow documentation templates
+- Include examples
+- Add troubleshooting
+- Create clear structure
 
-### 4. Balance Bullets with Narrative
+### Step 4: Validate Documentation
 
-Bullets summarize actionable items. Long bullet waterfalls invite slop. Convert multi-line bullets to short paragraphs when nuance matters.
+Validate quality:
 
-### 5. Watch for Linguistic Tics
+- Check completeness
+- Verify examples work
+- Ensure clarity
+- Validate links
+  </execution_process>
 
-Overuse of em dashes, mirrored structures, or catchphrases is a giveaway. Read sections aloud. If they sound like templated emails, rework them.
+<integration>
+**Integration with Technical Writer Agent**:
+- Uses this skill for documentation generation
+- Ensures documentation quality
+- Validates completeness
 
-### 6. Show Authorial Perspective
+**Integration with Developer Agent**:
 
-Mention decisions, risks, or why a choice was made. A consistent team voice beats neutral boilerplate.
+- Generates API documentation
+- Creates inline documentation
+- Updates docs with code changes
+  </integration>
 
-Before: "The system uses Redis."
-After: "We chose Redis over Memcached because sorted sets power our leaderboard."
+<best_practices>
 
-### 7. Avoid Ambiguous Cliches
+1. **Extract from Code**: Use code as source of truth
+2. **Include Examples**: Provide working examples
+3. **Keep Updated**: Sync docs with code
+4. **Clear Structure**: Organize logically
+5. **User-Focused**: Write for users, not system
+   </best_practices>
+   </instructions>
 
-Remove phrases like "keeps us honest" or "isn't just X, it's Y." Speak directly about the topic.
+<examples>
+<formatting_example>
+**API Documentation**
 
-### 8. Vocabulary Substitutions
+````markdown
+# Users API
 
-| Instead of | Use |
-|------------|-----|
-| fallback | default, secondary |
-| leverage | use |
-| utilize | use |
-| facilitate | help, enable |
-| comprehensive | thorough, complete |
+## Endpoints
 
-### 9. Limit Humanizing Constructs
+### GET /api/users
 
-"Lives under," "speaks to," and similar phrases only make sense for living things.
+List all users with pagination.
 
-### 10. Imperative Mood for Docstrings
+**Query Parameters:**
 
-"Validate" not "Validates" (per PEP 257, pydocstyle, ruff).
+- `page` (number): Page number (default: 1)
+- `limit` (number): Items per page (default: 10)
 
-## Required TodoWrite Items
+**Response:**
 
-1. `doc-generator:scope-defined` - Target files and type identified
-2. `doc-generator:style-loaded` - Style profile applied (if available)
-3. `doc-generator:content-drafted` - Initial content created
-4. `doc-generator:slop-scanned` - AI markers checked
-5. `doc-generator:quality-verified` - Principles checklist passed
-6. `doc-generator:user-approved` - Final approval received
-
-## Mode: Generation
-
-For new documentation:
-
-### Step 1: Define Scope
-
-```markdown
-## Generation Request
-
-**Type**: [README/Guide/API docs/Tutorial]
-**Audience**: [developers/users/admins]
-**Length target**: [~X words or sections]
-**Style profile**: [profile name or "default"]
+```json
+{
+  "data": [
+    {
+      "id": "uuid",
+      "email": "user@example.com",
+      "name": "User Name"
+    }
+  ],
+  "pagination": {
+    "page": 1,
+    "limit": 10,
+    "total": 100
+  }
+}
 ```
+````
 
-### Step 2: Load Style (if available)
-
-If a style profile exists:
-```bash
-cat .scribe/style-profile.yaml
-```
-
-Apply voice, vocabulary, and structural guidelines.
-
-### Step 3: Draft Content
-
-Follow the 10 core principles above. For each section:
-
-1. Start with the essential information
-2. Add context only if it adds value
-3. Use specific examples
-4. Prefer prose over bullets
-5. End when information is complete (no summary padding)
-
-### Step 4: Run Slop Detector
-
-```
-Skill(scribe:slop-detector)
-```
-
-Fix any findings before proceeding.
-
-### Step 5: Quality Gate
-
-Verify against checklist:
-- [ ] No tier-1 slop words
-- [ ] Em dash count < 3 per 1000 words
-- [ ] Bullet ratio < 40%
-- [ ] All claims grounded with specifics
-- [ ] No formulaic openers or closers
-- [ ] Authorial perspective present
-- [ ] No emojis (unless explicitly requested)
-
-## Mode: Remediation
-
-For cleaning up existing content:
-
-Load: `@modules/remediation-workflow.md`
-
-### Step 1: Analyze Current State
+**Example:**
 
 ```bash
-# Get slop score
-Skill(scribe:slop-detector) --target file.md
+curl -X GET "http://localhost:3000/api/users?page=1&limit=10"
 ```
 
-### Step 2: Section-by-Section Approach
+````
+</formatting_example>
 
-For large files (>200 lines), edit incrementally:
+<formatting_example>
+**Developer Guide**
 
 ```markdown
-## Section: [Name] (Lines X-Y)
+# Developer Guide
 
-**Current slop score**: X.X
-**Issues found**: [list]
+## Getting Started
 
-**Proposed changes**:
-1. [Change 1]
-2. [Change 2]
+### Prerequisites
+- Node.js 18+
+- pnpm 8+
 
-**Before**:
-> [current text]
+### Installation
+```bash
+pnpm install
+````
 
-**After**:
-> [proposed text]
+### Development
 
-Proceed? [Y/n/edit]
+```bash
+pnpm dev
 ```
 
-### Step 3: Preserve Intent
+## Architecture
 
-Never change WHAT is said, only HOW. If meaning is unclear, ask.
+[Architecture overview]
 
-### Step 4: Re-verify
+## Development Workflow
 
-After edits, re-run slop-detector to confirm improvement.
+[Development process]
 
-## Docstring-Specific Rules
+```
+</formatting_example>
+</examples>
 
-When editing code comments:
+<examples>
+<usage_example>
+**Example Commands**:
 
-1. **ONLY modify docstring/comment text**
-2. **Never change surrounding code**
-3. **Use imperative mood** ("Validate input" not "Validates input")
-4. **Brief is better** - remove filler
-5. **Keep Args/Returns structure** if present
+```
 
-## Integration with Other Skills
+# Generate API documentation
 
-| Skill | When to Use |
-|-------|-------------|
-| slop-detector | After drafting, before approval |
-| style-learner | Before generation to load profile |
-| sanctum:doc-updates | For broader doc maintenance |
+Generate API documentation for app/api/users
 
-## Exit Criteria
+# Generate developer guide
 
-- Content created or remediated
-- Slop score < 1.5 (clean rating)
-- Quality gate checklist passed
-- User approval received
-- No emojis present (unless specified)
+Generate developer guide for this project
+
+# Generate architecture docs
+
+Generate architecture documentation
+
+# Generate OpenAPI spec
+
+Generate OpenAPI specification from API routes
+
+```
+</usage_example>
+</examples>
+
+## Memory Protocol (MANDATORY)
+
+**Before starting:**
+Read `.claude/context/memory/learnings.md`
+
+**After completing:**
+- New pattern -> `.claude/context/memory/learnings.md`
+- Issue found -> `.claude/context/memory/issues.md`
+- Decision made -> `.claude/context/memory/decisions.md`
+
+> ASSUME INTERRUPTION: If it's not in memory, it didn't happen.
+```

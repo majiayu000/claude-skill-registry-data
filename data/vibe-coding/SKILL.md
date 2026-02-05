@@ -1,62 +1,114 @@
 ---
-name: vibe-coding
-description: Help users build software using AI coding tools. Use when someone is using AI to generate code, building prototypes without deep technical skills, or exploring how non-engineers can create functional software through natural language.
+name: "vibe-coding"
+description: "Turn an idea into a functional, demo-ready prototype using AI-assisted “vibe coding” (timeboxed build loop, prompt pack, build plan, demo script, and safety checks). Use for rapid prototyping and proving concepts in AI & Technology."
 ---
 
 # Vibe Coding
 
-Help the user build software using AI tools and natural language, using frameworks and insights from 3 product leaders.
+## Scope
 
-## How to Help
+**Covers**
+- Timeboxed, AI-assisted rapid prototyping (“vibe coding”) to produce a functional demo (not slides)
+- Turning a rough idea into a buildable prototype spec + task board + prompt pack
+- A tight iteration loop: generate → run → verify → adjust → log decisions
+- “Build tools to build the thing” when it meaningfully speeds up the demo (timeboxed)
+- Safe use of coding agents: least privilege, no secrets, small diffs, validation, rollback
 
-When the user asks for help with vibe coding:
+**When to use**
+- “Vibe code a working prototype we can demo in 30–90 minutes.”
+- “Replace this Figma concept with a clickable prototype.”
+- “I’m not an engineer—help me build a small app/tool with AI and ship a demo.”
+- “Turn this AI feature idea into a proof-of-concept with a clear build loop and demo script.”
 
-1. **Understand the goal** - Ask what they're trying to build and who it's for (prototype, internal tool, production app)
-2. **Guide the approach** - Help them break down the problem into smaller pieces for iterative AI prompts
-3. **Set expectations** - Discuss what vibe coding is good for (prototypes, MVPs) versus when professional engineering is needed
-4. **Coach on iteration** - Help them understand how to refine output through follow-up prompts
+**When NOT to use**
+- You need a production-grade system, hardening, scaling, or security review (use `building-with-llms` + engineering process).
+- You need upstream problem framing, strategy, or PRD-level alignment (use `problem-definition`, `writing-prds`).
+- The work is high-stakes/irreversible (payments, auth, medical, legal, safety-critical) without human owners and reviews.
+- The request is “build anything” with no demo target; do intake first and narrow to one scenario.
 
-## Core Principles
+## Inputs
 
-### Vibe coding is a new skill
-Elena Verna: "I vibe code myself so I would put that as even as a skill on my resume now." This is a distinct, transformative skill for non-technical roles - PMs, marketers, designers - to build functional software using natural language.
+**Minimum required**
+- Prototype goal: what should a user be able to do in the demo (1–3 “happy path” tasks)
+- Target user + context (who uses it, where it fits)
+- Timebox (e.g., 30/60/90 minutes) + demo audience (internal, customer, exec)
+- Platform preference (web app, mobile, CLI, spreadsheet, etc.) and constraints (privacy, data sensitivity)
+- Data/integrations: mock data ok? any APIs needed? (default to mock)
 
-### Replace Figma with prototypes
-Kevin Weil: "Instead of showing stuff in Figma, we should be showing prototypes that people are vibe coding over the course of 30 minutes to illustrate proofs of concept." Functional code prototypes can be built in the time it takes to create static mockups.
+**Missing-info strategy**
+- Ask up to 5 questions from [references/INTAKE.md](references/INTAKE.md) (3–5 at a time).
+- If details remain missing, proceed with explicit assumptions and offer 2–3 options (e.g., mock vs real data; simple UI vs polished).
+- If asked to run commands or write/modify files, request confirmation, keep changes in a dedicated folder, and include rollback guidance.
 
-### Build tools to build tools
-Alexander Embiricos: "They'll vibe code an animation editor and then they use the animation editor to build the animation." Non-engineers can now build functional software and custom tools without deep technical mastery.
+## Outputs (deliverables)
 
-### Go beyond prompt engineering
-Vibe coding is not just writing prompts - it's iteratively building functional software through conversation with AI. It requires understanding how to break problems down, test outputs, and refine through follow-up.
+Produce a **Vibe Coding Prototype Pack** (in chat; or as files if requested), in this order:
 
-### Know the limits
-Vibe-coded software is great for prototypes, internal tools, and MVPs. Production-grade systems with complex requirements still need professional engineering review.
+1) **Vibe Coding Brief** (goal, demo scenario, non-goals, constraints, timebox)
+2) **Prototype Spec** (user flow, screens/components, data model, acceptance criteria, “fake vs real” decisions)
+3) **Prompt Pack** (copy/paste prompts to drive the coding agent safely and efficiently)
+4) **Build Plan + Task Board** (vertical slices with checks/tests per slice)
+5) **Demo Script + Runbook** (how to run, how to demo, what to say, what to avoid)
+6) **Risks / Open questions / Next steps** (always included)
 
-## Questions to Help Users
+Templates: [references/TEMPLATES.md](references/TEMPLATES.md)
 
-- "What are you trying to build, and who will use it?"
-- "Is this a throwaway prototype or something that needs to scale?"
-- "Can you break this down into smaller pieces to build incrementally?"
-- "What's the simplest version that would let you test your hypothesis?"
-- "Have you tried describing what's not working and asking the AI to fix it?"
-- "Do you need this to be production-grade, or is it okay if it's rough?"
+## Workflow (7 steps)
 
-## Common Mistakes to Flag
+### 1) Pick a single demo outcome (kill ambiguity fast)
+- **Inputs:** Initial idea, timebox, target audience.
+- **Actions:** Write a one-sentence demo promise (“In 60 minutes we will demo…”) + 3–5 non-goals. Choose one “hero” scenario and what can be faked.
+- **Outputs:** Draft **Vibe Coding Brief**.
+- **Checks:** The demo promise is specific, observable, and fits the timebox.
 
-- **Trying to build everything at once** - Break complex projects into smaller, iterative builds
-- **Not testing the output** - Always run and test what the AI generates; don't assume it works
-- **Expecting production quality** - Vibe-coded apps are great for validation but may need engineering for production
-- **Unclear specifications** - The clearer your description of what you want, the better the output
-- **Giving up after one try** - Vibe coding is iterative; refine through follow-up prompts
+### 2) Define the prototype’s contract (what exists, what’s mocked)
+- **Inputs:** Demo scenario, platform preference, constraints.
+- **Actions:** Specify the minimum user flow, screens/components, and data shape. Decide: mock data vs real data; stub integrations vs live.
+- **Outputs:** Draft **Prototype Spec**.
+- **Checks:** Acceptance criteria exist for each user-visible step; “fake vs real” is explicit.
 
-## Deep Dive
+### 3) Set the build loop + guardrails (how we’ll vibe code safely)
+- **Inputs:** Repo/app context (if any), constraints, desired stack.
+- **Actions:** Create a **Prompt Pack** that forces: small diffs, clear file list, run instructions, and “ask before risky actions.” Create a task board of 3–8 vertical slices.
+- **Outputs:** **Prompt Pack** + **Build Plan + Task Board**.
+- **Checks:** Every slice has a Definition of Done and a quick validation method (manual steps or tests).
 
-For all 3 insights from 3 guests, see `references/guest-insights.md`
+### 4) Scaffold the thinnest runnable slice (end-to-end)
+- **Inputs:** Prompt pack, chosen platform/stack, prototype spec.
+- **Actions:** Generate a minimal skeleton that runs. Implement the hero path with mock data. Capture run commands and known limitations.
+- **Outputs:** Runnable prototype + run notes (for the runbook).
+- **Checks:** A fresh user can run it in ≤ 5 minutes; the hero path is demonstrable.
 
-## Related Skills
+### 5) Iterate in vertical slices (generate → run → verify → log)
+- **Inputs:** Task board, working prototype.
+- **Actions:** For each slice: request a plan + diff, apply changes, run, verify against acceptance criteria, and record decisions/bugs. Avoid broad refactors; prefer incremental improvements.
+- **Outputs:** Updated prototype + iteration notes.
+- **Checks:** Each slice ends with a user-visible improvement and a validated run.
 
-- Writing PRDs
-- Usability Testing
-- Building with LLMs
-- Shipping Products
+### 6) Optional: build a tool to build the thing (timeboxed)
+- **Inputs:** Repeated friction (editing, generating, transforming content).
+- **Actions:** If it reduces time-to-demo, vibe code a tiny helper tool (editor, generator, script) and immediately use it to advance the prototype.
+- **Outputs:** Helper tool + note on how it accelerates the workflow.
+- **Checks:** The helper tool saves time within the current timebox; otherwise cut it.
+
+### 7) Package the demo + quality gate + handoff
+- **Inputs:** Prototype + all draft artifacts.
+- **Actions:** Write the demo script + runbook. Run [references/CHECKLISTS.md](references/CHECKLISTS.md) and score with [references/RUBRIC.md](references/RUBRIC.md). Finalize **Risks / Open questions / Next steps**.
+- **Outputs:** Final **Vibe Coding Prototype Pack**.
+- **Checks:** A stakeholder can demo it without you; risks and next steps are explicit and owned.
+
+## Quality gate (required)
+- Use [references/CHECKLISTS.md](references/CHECKLISTS.md) and [references/RUBRIC.md](references/RUBRIC.md).
+- Always include: **Risks**, **Open questions**, **Next steps**.
+
+## Examples
+
+**Example 1 (30–60 min prototype):** “Use `vibe-coding` to build a demo-ready web prototype of an ‘AI meeting notes → action items’ tool. Mock the LLM output. Output the full Vibe Coding Prototype Pack.”  
+Expected: brief + spec + prompt pack + task board + demo script; prototype plan defaults to mock data and a single hero flow.
+
+**Example 2 (non-engineer builder):** “I’m a PM. Use `vibe-coding` to help me create a clickable prototype of an onboarding checklist app in 45 minutes. I need a demo script for my team.”  
+Expected: tight scope, fake data, vertical slices, and a runbook optimized for demo reliability.
+
+**Boundary example:** “Vibe code a production payments backend and deploy it.”  
+Response: out of scope; propose a prototype-only approach (mock payments), identify required security/engineering owners, and recommend a separate production plan.
+
