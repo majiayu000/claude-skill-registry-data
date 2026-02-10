@@ -1,5 +1,6 @@
 ---
 name: meta-tags-optimizer
+version: "1.0"
 description: Creates and optimizes meta tags including title tags, meta descriptions, Open Graph tags, and Twitter cards for maximum click-through rates and social sharing engagement.
 ---
 
@@ -397,26 +398,26 @@ When a user requests meta tag optimization:
 
 ## Example
 
-**User**: "Create meta tags for a blog post about 'how to start a podcast in 2024'"
+**User**: "Create meta tags for a blog post about 'how to start a podcast in [current year]'"
 
 **Output**:
 
 ```markdown
-## Meta Tags: How to Start a Podcast (2024)
+## Meta Tags: How to Start a Podcast ([current year])
 
 ### Title Tag
 ```html
-<title>How to Start a Podcast in 2024: Complete Beginner's Guide</title>
+<title>How to Start a Podcast in [current year]: Complete Beginner's Guide</title>
 ```
-**Length**: 54 characters ✅
+**Length**: ~55 characters ✅
 **Keyword**: "how to start a podcast" at front ✅
 **Power Words**: "Complete", "Beginner's" ✅
 
 ### Meta Description
 ```html
-<meta name="description" content="Learn how to start a podcast in 2024 with our step-by-step guide. Covers equipment, hosting, recording, and launching your first episode. Start podcasting today!">
+<meta name="description" content="Learn how to start a podcast in [current year] with our step-by-step guide. Covers equipment, hosting, recording, and launching your first episode. Start podcasting today!">
 ```
-**Length**: 158 characters ✅
+**Length**: ~163 characters ✅
 **Keyword**: Included naturally ✅
 **CTA**: "Start podcasting today!" ✅
 
@@ -424,27 +425,27 @@ When a user requests meta tag optimization:
 
 ```html
 <!-- Primary Meta Tags -->
-<title>How to Start a Podcast in 2024: Complete Beginner's Guide</title>
-<meta name="description" content="Learn how to start a podcast in 2024 with our step-by-step guide. Covers equipment, hosting, recording, and launching your first episode. Start podcasting today!">
+<title>How to Start a Podcast in [current year]: Complete Beginner's Guide</title>
+<meta name="description" content="Learn how to start a podcast in [current year] with our step-by-step guide. Covers equipment, hosting, recording, and launching your first episode. Start podcasting today!">
 <link rel="canonical" href="https://yoursite.com/how-to-start-a-podcast/">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://yoursite.com/how-to-start-a-podcast/">
-<meta property="og:title" content="How to Start a Podcast in 2024 (Complete Guide)">
+<meta property="og:title" content="How to Start a Podcast in [current year] (Complete Guide)">
 <meta property="og:description" content="Everything you need to launch your podcast: equipment recommendations, hosting platforms, recording tips, and step-by-step launch checklist. No experience required.">
-<meta property="og:image" content="https://yoursite.com/images/podcast-guide-2024.jpg">
+<meta property="og:image" content="https://yoursite.com/images/podcast-guide.jpg">
 <meta property="og:site_name" content="Your Site Name">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="How to Start a Podcast in 2024 🎙️">
+<meta name="twitter:title" content="How to Start a Podcast in [current year]">
 <meta name="twitter:description" content="Complete beginner's guide to launching your podcast. Equipment, hosting, recording, and more.">
-<meta name="twitter:image" content="https://yoursite.com/images/podcast-guide-2024.jpg">
+<meta name="twitter:image" content="https://yoursite.com/images/podcast-guide.jpg">
 <meta name="twitter:site" content="@YourHandle">
 
 <!-- Article Tags -->
-<meta property="article:published_time" content="2024-01-15T08:00:00+00:00">
+<meta property="article:published_time" content="[YYYY-MM-DD]T08:00:00+00:00">
 <meta property="article:author" content="https://yoursite.com/author/name">
 <meta property="article:section" content="Podcasting">
 <meta property="article:tag" content="podcasting">
@@ -454,13 +455,13 @@ When a user requests meta tag optimization:
 ### A/B Test Variations
 
 **Title Variation B**:
-"Start a Podcast in 2024: Step-by-Step Guide (+ Free Checklist)"
+"Start a Podcast in [current year]: Step-by-Step Guide (+ Free Checklist)"
 
 **Title Variation C**:
-"How to Start a Podcast: 2024 Guide [Equipment + Software + Tips]"
+"How to Start a Podcast: [current year] Guide [Equipment + Software + Tips]"
 
 **Description Variation B**:
-"Want to start a podcast in 2024? This guide covers everything: equipment ($100 budget option), best hosting platforms, recording tips, and how to get your first 1,000 listeners."
+"Want to start a podcast in [current year]? This guide covers everything: equipment ($100 budget option), best hosting platforms, recording tips, and how to get your first 1,000 listeners."
 ```
 
 ## Page-Type Templates

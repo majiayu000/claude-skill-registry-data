@@ -1,5 +1,6 @@
 ---
 name: content-refresher
+version: "1.0"
 description: Identifies and updates outdated content to restore and improve search rankings. Analyzes content freshness, adds new information, updates statistics, and optimizes for current SEO and GEO best practices.
 ---
 
@@ -142,7 +143,7 @@ When a user requests content refresh help:
    ```
    ```
 
-2. **Analyze Individual Content for Refresh**
+3. **Analyze Individual Content for Refresh**
 
    ```markdown
    ## Content Refresh Analysis: [Title]
@@ -178,7 +179,7 @@ When a user requests content refresh help:
    5. **GEO potential**: [AI citation opportunities]
    ```
 
-3. **Identify Specific Updates Needed**
+4. **Identify Specific Updates Needed**
 
    ```markdown
    ## Refresh Requirements
@@ -187,7 +188,7 @@ When a user requests content refresh help:
    
    | Element | Current | Update Needed |
    |---------|---------|---------------|
-   | Year references | "2023" | Update to 2024 |
+   | Year references | "[old year]" | Update to [current year] |
    | Statistics | "[old stat]" | Find current data |
    | Tool mentions | "[old tool]" | Add newer tools |
    | Links | [X] broken | Fix or replace |
@@ -221,7 +222,7 @@ When a user requests content refresh help:
    - [ ] Create standalone factual statements
    ```
 
-4. **Create Refresh Plan**
+5. **Create Refresh Plan**
 
    ```markdown
    ## Content Refresh Plan
@@ -238,7 +239,7 @@ When a user requests content refresh help:
    
    **Update/Expand**:
    - [Section 3] - Update statistics, add [X] words
-   - [Section 4] - Add new examples from 2024
+   - [Section 4] - Add new examples from [current year]
    
    **Add New Sections**:
    - [New Section 1] - [description, ~X words]
@@ -285,7 +286,7 @@ When a user requests content refresh help:
    | [img 2] | Keep | Update alt text |
    ```
 
-5. **Write Refresh Content**
+6. **Write Refresh Content**
 
    ```markdown
    ## Refreshed Content Sections
@@ -311,7 +312,7 @@ When a user requests content refresh help:
    > "[Old statement with outdated stat]"
    
    **With**:
-   > "[New statement with current stat] (Source, 2024)"
+   > "[New statement with current stat] (Source, [current year])"
    
    ### New FAQ Section
    
@@ -330,7 +331,7 @@ When a user requests content refresh help:
    [Direct answer]
    ```
 
-6. **Optimize for GEO During Refresh**
+7. **Optimize for GEO During Refresh**
 
    ```markdown
    ## GEO Enhancement Opportunities
@@ -349,7 +350,7 @@ When a user requests content refresh help:
    **Into**:
    > "Email marketing delivers an average ROI of $42 for every $1 
    > invested, making it the highest-ROI digital marketing channel 
-   > according to the Data & Marketing Association (2024)."
+   > according to the Data & Marketing Association ([current year])."
    
    ### Add Q&A Sections
    
@@ -367,7 +368,7 @@ When a user requests content refresh help:
    - Use recent sources (last 2 years)
    ```
 
-7. **Generate Republishing Strategy**
+8. **Generate Republishing Strategy**
 
    ```markdown
    ## Republishing Strategy
@@ -403,7 +404,7 @@ When a user requests content refresh help:
    ### Promotion Strategy
    
    **Immediately after refresh**:
-   - [ ] Share on social media as "updated for 2024"
+   - [ ] Share on social media as "updated for [current year]"
    - [ ] Send to email list if significant update
    - [ ] Update internal links with fresh anchors
    - [ ] Reach out for new backlinks
@@ -415,7 +416,7 @@ When a user requests content refresh help:
    - [ ] Check AI citation improvements
    ```
 
-8. **Create Refresh Report**
+9. **Create Refresh Report**
 
    ```markdown
    # Content Refresh Report

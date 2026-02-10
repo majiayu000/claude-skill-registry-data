@@ -142,6 +142,7 @@ Tables > Mermaid/ASCII diagrams > Lists > Text
 - ADR links populated
 - Patterns auto-detected and added to catalog
 - Self-validation passed (SCOPE, sections, format)
+- **Actuality verified:** all document facts match current code (paths, functions, APIs, configs exist and are accurate)
 - Status returned to coordinator
 
 ## Reference Files

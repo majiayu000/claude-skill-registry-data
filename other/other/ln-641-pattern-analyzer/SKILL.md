@@ -25,9 +25,10 @@ L3 Worker that analyzes a single architectural pattern against best practices an
 ```
 - pattern: string          # Pattern name (e.g., "Job Processing")
 - locations: string[]      # Known file paths/directories
-- adr_reference: string    # Path to related ADR (if exists)
 - bestPractices: object    # Best practices from MCP Ref/Context7/WebSearch
 ```
+
+> **Note:** All patterns arrive pre-verified (passed ln-640 Phase 1d applicability gate with >= 2 structural components confirmed).
 
 ## Workflow
 
@@ -61,7 +62,7 @@ FOR EACH file IN files (limit: 10 key files):
 
 | Score | Source in scoring_rules.md | Max |
 |-------|---------------------------|-----|
-| Compliance | "Compliance Score" section — ADR, naming, conventions, anti-patterns | 100 |
+| Compliance | "Compliance Score" section — industry standard, naming, conventions, anti-patterns | 100 |
 | Completeness | "Completeness Score" section — required components table (per pattern), error handling, tests | 100 |
 | Quality | "Quality Score" section — method length, complexity, code smells, SOLID | 100 |
 | Implementation | "Implementation Score" section — compiles, production usage, integration, monitoring | 100 |
@@ -85,8 +86,8 @@ FOR EACH bestPractice NOT implemented:
   })
 
 gaps = {
-  undocumented: aspects found in code but not in ADR,
-  unimplemented: ADR decisions not found in code
+  missingComponents: required components not found in code,
+  inconsistencies: conflicting or incomplete implementations
 }
 ```
 
@@ -125,10 +126,10 @@ overall_score = average(compliance, completeness, quality, implementation) / 10
     }
   ],
   "gaps": {
-    "undocumented": ["Error recovery strategy"],
-    "unimplemented": ["Job prioritization from ADR"]
+    "missingComponents": ["Dead letter queue"],
+    "inconsistencies": ["Retry config exists but no backoff strategy"]
   },
-  "recommendations": ["Create ADR for dead letter queue strategy"]
+  "recommendations": ["Add DLQ configuration for failed jobs"]
 }
 ```
 
@@ -146,7 +147,7 @@ overall_score = average(compliance, completeness, quality, implementation) / 10
 - Key files read and analyzed
 - 4 scores calculated using scoring_rules.md Detection patterns
 - Issues identified with severity, category, suggestion, effort
-- Gaps documented (undocumented, unimplemented)
+- Gaps documented (missing components, inconsistencies)
 - Recommendations provided
 - Structured result returned to coordinator
 

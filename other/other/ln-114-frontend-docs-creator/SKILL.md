@@ -96,6 +96,7 @@ Tables (colors, typography, spacing) > Lists (component inventory) > Text
 - Document created if applicable
 - Design system, typography, colors documented
 - WCAG references included
+- **Actuality verified:** all document facts match current code (paths, functions, APIs, configs exist and are accurate)
 - Status returned to coordinator
 
 ## Reference Files

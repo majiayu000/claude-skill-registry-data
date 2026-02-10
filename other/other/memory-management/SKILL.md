@@ -1,5 +1,6 @@
 ---
 name: memory-management
+version: "1.0"
 description: Manages a two-layer memory system (hot cache + cold storage) for SEO/GEO project context, tracking keywords, competitors, metrics, and campaign status with intelligent promotion/demotion.
 ---
 
@@ -127,6 +128,7 @@ project-root/
     ├── audits/
     │   ├── technical/                 # Technical SEO audits
     │   ├── content/                   # Content audits
+    │   ├── domain/                    # Domain authority (CITE) audits
     │   └── backlink/                  # Backlink audits
     ├── content-calendar/
     │   ├── active-calendar.md         # Current quarter
@@ -198,6 +200,8 @@ _Detailed analyses: memory/competitors/_
 | Total Keywords Ranking | [X] | [X] | [+/-X] | [target] |
 | Page 1 Rankings | [X] | [X] | [+/-X] | [target] |
 | Domain Authority | [X] | [X] | [+/-X] | [target] |
+| CITE Score | [X] | [X] | [+/-X] | [target] |
+| Last Content Audit Score | [score]/100 | ([rating]) | — [date] | [page audited] |
 | Total Backlinks | [X] | [X] | [+/-X%] | [target] |
 
 _Historical data: memory/reports/_
@@ -466,6 +470,18 @@ This skill coordinates with other SEO skills:
 - Track target keyword and publish date
 - Set reminder to check performance in 30 days
 
+**When content-quality-auditor runs:**
+- Save full report to `memory/audits/content/YYYY-MM-DD-core-eeat-[page-slug].md`
+- Update CLAUDE.md Key Metrics with latest score
+- If score < 60 (Poor/Low), flag in Active Campaigns section
+- Track dimension scores for trend analysis
+
+**When domain-authority-auditor runs:**
+- Save full report to memory/audits/domain/YYYY-MM-DD-cite-audit.md
+- Update CITE Score in CLAUDE.md Key Metrics Snapshot
+- Note veto item status and dimension scores
+- Compare against previous CITE audit if available
+
 ## Validation Checkpoints
 
 ### Structure Validation
@@ -666,6 +682,13 @@ Compare memory with [other project name]
 
 Identifies keyword overlaps, competitor intersections, and strategy similarities across multiple projects.
 
+## Practical Limitations
+
+- **Concurrent access**: If multiple Claude sessions update memory simultaneously, later writes may overwrite earlier ones. Mitigate by using timestamped filenames for audit reports rather than overwriting a single file.
+- **Cold storage retrieval**: Files in `memory/` subdirectories are only loaded when explicitly requested. They do not appear in Claude's context automatically. The hot cache (`CLAUDE.md`) is the primary cross-session mechanism.
+- **CLAUDE.md size**: The hot cache should stay concise (<200 lines). If it grows too large, archive older metrics to cold storage.
+- **Data freshness**: Memory reflects the last time each skill was run. Stale data (>90 days) should be flagged for refresh.
+
 ## Tips for Success
 
 1. **Keep hot cache lean** - CLAUDE.md should never exceed 150 lines. If it grows larger, aggressively demote.
@@ -696,4 +719,5 @@ Identifies keyword overlaps, competitor intersections, and strategy similarities
 - [performance-reporter](../../monitor/performance-reporter/) - Creates reports that trigger memory updates
 - [content-gap-analysis](../../research/content-gap-analysis/) - Identifies optimization priorities for hot cache
 - [seo-content-writer](../../build/seo-content-writer/) - Logs published content to memory calendar
-- [content-quality-auditor](../content-quality-auditor/) - Audit results stored in memory for tracking
+- [content-quality-auditor](../content-quality-auditor/) — Content audit results stored in memory for tracking
+- [domain-authority-auditor](../domain-authority-auditor/) — CITE domain audit results stored in memory for tracking

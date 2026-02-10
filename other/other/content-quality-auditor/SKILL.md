@@ -1,5 +1,6 @@
 ---
 name: content-quality-auditor
+version: "1.0"
 description: Runs a full CORE-EEAT 80-item content quality audit, scoring content across 8 dimensions with weighted scoring by content type. Produces a detailed report with per-item scores, dimension analysis, and a prioritized action plan.
 ---
 
@@ -163,7 +164,52 @@ Same format for Exp, Ept, A, T dimensions.
 [Same format]
 ```
 
-**Note**: Some EEAT items (A01 Backlink Profile, A05 Brand Recognition, A07 Knowledge Graph Presence, etc.) may require site-level data not available from content alone. Score what is observable; mark unverifiable items as "N/A — requires site-level data" and exclude from dimension average.
+#### Complete Item Reference
+
+| ID | Item | ID | Item |
+|----|------|----|------|
+| C01 | Intent Alignment | Exp01 | First-Person Narrative |
+| C02 | Direct Answer | Exp02 | Sensory Details |
+| C03 | Query Coverage | Exp03 | Process Documentation |
+| C04 | Definition First | Exp04 | Tangible Proof |
+| C05 | Topic Scope | Exp05 | Usage Duration |
+| C06 | Audience Targeting | Exp06 | Problems Encountered |
+| C07 | Semantic Coherence | Exp07 | Before/After Comparison |
+| C08 | Use Case Mapping | Exp08 | Quantified Metrics |
+| C09 | FAQ Coverage | Exp09 | Repeated Testing |
+| C10 | Semantic Closure | Exp10 | Limitations Acknowledged |
+| O01 | Heading Hierarchy | Ept01 | Author Identity |
+| O02 | Summary Box | Ept02 | Credentials Display |
+| O03 | Data Tables | Ept03 | Professional Vocabulary |
+| O04 | List Formatting | Ept04 | Technical Depth |
+| O05 | Schema Markup | Ept05 | Methodology Rigor |
+| O06 | Section Chunking | Ept06 | Edge Case Awareness |
+| O07 | Visual Hierarchy | Ept07 | Historical Context |
+| O08 | Anchor Navigation | Ept08 | Reasoning Transparency |
+| O09 | Information Density | Ept09 | Cross-domain Integration |
+| O10 | Multimedia Structure | Ept10 | Editorial Process |
+| R01 | Data Precision | A01 | Backlink Profile |
+| R02 | Citation Density | A02 | Media Mentions |
+| R03 | Source Hierarchy | A03 | Industry Awards |
+| R04 | Evidence-Claim Mapping | A04 | Publishing Record |
+| R05 | Methodology Transparency | A05 | Brand Recognition |
+| R06 | Timestamp & Versioning | A06 | Social Proof |
+| R07 | Entity Precision | A07 | Knowledge Graph Presence |
+| R08 | Internal Link Graph | A08 | Entity Consistency |
+| R09 | HTML Semantics | A09 | Partnership Signals |
+| R10 | Content Consistency | A10 | Community Standing |
+| E01 | Original Data | T01 | Legal Compliance |
+| E02 | Novel Framework | T02 | Contact Transparency |
+| E03 | Primary Research | T03 | Security Standards |
+| E04 | Contrarian View | T04 | Disclosure Statements |
+| E05 | Proprietary Visuals | T05 | Editorial Policy |
+| E06 | Gap Filling | T06 | Correction & Update Policy |
+| E07 | Practical Tools | T07 | Ad Experience |
+| E08 | Depth Advantage | T08 | Risk Disclaimers |
+| E09 | Synthesis Value | T09 | Review Authenticity |
+| E10 | Forward Insights | T10 | Customer Support |
+
+**Note on site-level items**: Most Authority items (A01-A10) and several Trust items (T01-T03, T05, T07, T10) require site-level or organization-level data that may not be observable from a single page. When auditing a standalone page without site context, mark these as "N/A — requires site-level data" and exclude from the dimension average.
 
 ### Step 4: Scoring & Report
 
@@ -281,16 +327,21 @@ Sorted by: weight × points lost (highest impact first)
 ## Tips for Success
 
 1. **Start with veto items** — T04, C01, R10 are deal-breakers regardless of total score
+   > These veto items are defined at the skill level based on their critical impact on content trustworthiness. The source CORE-EEAT benchmark marks these as "Dual priority" items but does not label them as veto.
 2. **Focus on high-weight dimensions** — Different content types prioritize different dimensions
 3. **GEO-First items matter most for AI visibility** — Prioritize items tagged GEO 🎯 if AI citation is the goal
 4. **Some EEAT items need site-level data** — Don't penalize content for things only observable at the site level (backlinks, brand recognition)
 5. **Use the weighted score, not just the raw average** — A product review with strong Exclusivity matters more than strong Authority
 6. **Re-audit after improvements** — Run again to verify score improvements and catch regressions
+7. **Pair with CITE for domain-level context** — A high content score on a low-authority domain signals a different priority than the reverse; run [domain-authority-auditor](../domain-authority-auditor/) for the full 120-item picture
 
 ## Related Skills
 
+- [domain-authority-auditor](../domain-authority-auditor/) — Domain-level CITE audit (40 items) — the sister skill for full 120-item assessment
 - [seo-content-writer](../../build/seo-content-writer/) — Write content that scores high on CORE dimensions
 - [geo-content-optimizer](../../build/geo-content-optimizer/) — Optimize for GEO-First items
 - [content-refresher](../../optimize/content-refresher/) — Update content to improve weak dimensions
 - [on-page-seo-auditor](../../optimize/on-page-seo-auditor/) — Technical on-page audit (complements this skill)
+- [technical-seo-checker](../../optimize/technical-seo-checker/) — Technical signals contributing to trust dimension
+- [internal-linking-optimizer](../../optimize/internal-linking-optimizer/) — Linking quality signals for content audit
 - [memory-management](../memory-management/) — Store audit results for tracking over time

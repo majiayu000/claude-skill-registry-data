@@ -1,5 +1,6 @@
 ---
 name: backlink-analyzer
+version: "1.0"
 description: Analyzes backlink profiles to understand link authority, identify toxic links, discover link building opportunities, and monitor competitor link acquisition. Essential for off-page SEO strategy.
 ---
 
@@ -417,6 +418,20 @@ When a user requests backlink analysis:
    | Toxic link % | [X]% | <5% |
    ```
 
+### CITE Item Mapping
+
+When running `domain-authority-auditor` after this analysis, the following data feeds directly into CITE scoring:
+
+| Backlink Metric | CITE Item | Dimension |
+|----------------|-----------|-----------|
+| Referring domains count | C01 (Referring Domain Volume) | Citation |
+| Authority distribution (DA breakdown) | C02 (Authority Distribution) | Citation |
+| Link velocity | C04 (Link Velocity) | Citation |
+| Geographic distribution | C10 (Geographic Distribution) | Citation |
+| Dofollow/Nofollow ratio | T02 (Protocol Compliance) | Trust |
+| Toxic link analysis | T01 (HTTPS + Technical Security), T03 (Link-Traffic Coherence) | Trust |
+| Competitive link intersection | T05 (Profile Uniqueness) | Trust |
+
 ## Validation Checkpoints
 
 ### Input Validation
@@ -484,8 +499,9 @@ If you acquire links from top 10 opportunities:
 
 ## Related Skills
 
-- [competitor-analysis](../../research/competitor-analysis/) - Full competitor analysis
-- [content-gap-analysis](../../research/content-gap-analysis/) - Create linkable content
-- [alert-manager](../alert-manager/) - Set up link alerts
-- [performance-reporter](../performance-reporter/) - Include in reports
+- [domain-authority-auditor](../../cross-cutting/domain-authority-auditor/) — Backlink data feeds directly into CITE C dimension; run after this analysis for full domain scoring
+- [competitor-analysis](../../research/competitor-analysis/) — Full competitor analysis
+- [content-gap-analysis](../../research/content-gap-analysis/) — Create linkable content
+- [alert-manager](../alert-manager/) — Set up link alerts
+- [performance-reporter](../performance-reporter/) — Include in reports
 

@@ -1,6 +1,6 @@
 ---
 name: ln-623-code-principles-auditor
-description: "Code principles audit worker (L3). Checks DRY (10 types), KISS/YAGNI, TODOs, error handling, DI patterns. Returns findings with severity, location, effort, pattern_signature."
+description: "Code principles audit worker (L3). Checks DRY (10 types), KISS/YAGNI, error handling, DI patterns. Returns findings with severity, location, effort, pattern_signature."
 allowed-tools: Read, Grep, Glob, Bash
 ---
 
@@ -84,20 +84,7 @@ Receives `contextStore` with: `tech_stack`, `best_practices`, `principles`, `cod
 | Interface with 1 implementation | Grep interface → count implementors | MEDIUM: premature abstraction | Remove interface, use class directly | M |
 | Premature generics (used with 1 type) | Grep generic usage → count type params | LOW: over-engineering | Replace generic with concrete type | S |
 
-### 4. TODO/FIXME/HACK Comments
-
-- Grep for `TODO`, `FIXME`, `HACK`, `XXX`, `OPTIMIZE`
-- Check age (git blame) — old TODOs are higher severity
-
-| Severity | Criteria |
-|----------|----------|
-| **HIGH** | TODO in critical path (auth, payment) >6 months old |
-| **MEDIUM** | FIXME/HACK with explanation |
-| **LOW** | Recent TODO (<1 month) with plan |
-
-**Effort:** Varies (S for simple TODO, L for architectural HACK)
-
-### 5. Missing Error Handling
+### 4. Missing Error Handling
 
 - Find async functions without try-catch
 - Check API routes without error middleware
@@ -111,7 +98,7 @@ Receives `contextStore` with: `tech_stack`, `best_practices`, `principles`, `cod
 
 **Effort:** M
 
-### 6. Centralized Error Handling
+### 5. Centralized Error Handling
 
 - Search for centralized error handler: `ErrorHandler`, `errorHandler`, `error-handler.*`
 - Check if middleware delegates to handler
@@ -130,7 +117,7 @@ Receives `contextStore` with: `tech_stack`, `best_practices`, `principles`, `cod
 
 **Effort:** M-L
 
-### 7. Dependency Injection / Centralized Init
+### 6. Dependency Injection / Centralized Init
 
 - Check for DI container: `inversify`, `awilix`, `tsyringe` (Node), `dependency_injector` (Python), Spring `@Autowired` (Java), ASP.NET `IServiceCollection` (C#)
 - Grep for `new SomeService()` in business logic (direct instantiation)
@@ -146,7 +133,7 @@ Receives `contextStore` with: `tech_stack`, `best_practices`, `principles`, `cod
 
 **Effort:** L
 
-### 8. Missing Best Practices Guide
+### 7. Missing Best Practices Guide
 
 - Check for: `docs/architecture.md`, `docs/best-practices.md`, `ARCHITECTURE.md`, `CONTRIBUTING.md`
 
@@ -211,7 +198,6 @@ Return JSON with additional fields for DRY findings:
 - **Tag findings:** Include `domain` field in each finding when domain-aware
 - **Pattern signatures:** Include `pattern_id` + `pattern_signature` for every DRY finding
 - **Context-aware:** Use project's `principles.md` to define what's acceptable
-- **Age matters:** Old TODOs are higher severity than recent ones
 - **Effort realism:** S = <1h, M = 1-4h, L = >4h
 - **Exclusions:** Skip generated code, vendor, migrations (see `detection_patterns.md#exclusions`)
 
@@ -220,8 +206,8 @@ Return JSON with additional fields for DRY findings:
 - contextStore parsed (including domain_mode and current_domain)
 - scan_path determined (domain path or codebase root)
 - Detection patterns loaded from `references/detection_patterns.md`
-- All 8 checks completed (scoped to scan_path):
-  - DRY (10 subcategories: 1.1-1.10), KISS, YAGNI, TODOs, Error Handling, Centralized Errors, DI/Init, Best Practices Guide
+- All 7 checks completed (scoped to scan_path):
+  - DRY (10 subcategories: 1.1-1.10), KISS, YAGNI, Error Handling, Centralized Errors, DI/Init, Best Practices Guide
 - Recommendations selected via `references/refactoring_decision_tree.md`
 - Findings collected with severity, location, effort, pattern_id, pattern_signature, recommendation, domain
 - Score calculated per `shared/references/audit_scoring.md`

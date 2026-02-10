@@ -1,5 +1,6 @@
 ---
 name: competitor-analysis
+version: "1.0"
 description: Analyzes competitor SEO and GEO strategies including their ranking keywords, content approaches, backlink profiles, and AI citation patterns. Reveals opportunities to outperform competition.
 ---
 
@@ -316,7 +317,19 @@ When a user requests competitor analysis:
    | Keywords Top 10 | [X] | [X] | [X] | [X] |
    | Backlinks | [X] | [X] | [X] | [X] |
    | Content Pages | [X] | [X] | [X] | [X] |
-   
+
+   **Domain Authority Comparison (Recommended)**
+
+   When domain-level comparison is needed, run the [domain-authority-auditor](../../cross-cutting/domain-authority-auditor/) for each competitor to get CITE scores:
+
+   | Domain | CITE Score | C (Citation) | I (Identity) | T (Trust) | E (Eminence) | Veto |
+   |--------|-----------|-------------|-------------|----------|-------------|------|
+   | Your domain | [score] | [score] | [score] | [score] | [score] | [pass/fail] |
+   | Competitor 1 | [score] | [score] | [score] | [score] | [score] | [pass/fail] |
+   | Competitor 2 | [score] | [score] | [score] | [score] | [score] | [pass/fail] |
+
+   This reveals domain authority gaps that inform link building and brand strategy beyond keyword-level competition.
+
    ## Competitor Strengths to Learn From
    
    ### [Competitor 1]
@@ -494,9 +507,10 @@ How has [competitor]'s SEO strategy evolved over the past year?
 
 ## Related Skills
 
-- [keyword-research](../keyword-research/) - Research keywords competitors rank for
-- [content-gap-analysis](../content-gap-analysis/) - Find content opportunities
-- [backlink-analyzer](../../monitor/backlink-analyzer/) - Deep-dive into backlinks
-- [serp-analysis](../serp-analysis/) - Understand search result composition
-- [memory-management](../../cross-cutting/memory-management/) - Store competitor data in project memory
+- [domain-authority-auditor](../../cross-cutting/domain-authority-auditor/) — Compare CITE domain authority scores across competitors for domain-level benchmarking
+- [keyword-research](../keyword-research/) — Research keywords competitors rank for
+- [content-gap-analysis](../content-gap-analysis/) — Find content opportunities
+- [backlink-analyzer](../../monitor/backlink-analyzer/) — Deep-dive into backlinks
+- [serp-analysis](../serp-analysis/) — Understand search result composition
+- [memory-management](../../cross-cutting/memory-management/) — Store competitor data in project memory
 

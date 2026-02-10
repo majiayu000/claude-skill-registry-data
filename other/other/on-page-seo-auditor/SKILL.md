@@ -1,5 +1,6 @@
 ---
 name: on-page-seo-auditor
+version: "1.0"
 description: Performs comprehensive on-page SEO audits to identify optimization opportunities including title tags, meta descriptions, headers, content quality, internal linking, and image optimization.
 ---
 
@@ -549,6 +550,7 @@ When a user requests an on-page SEO audit:
 - [seo-content-writer](../../build/seo-content-writer/) - Create optimized content
 - [technical-seo-checker](../technical-seo-checker/) - Technical SEO audit
 - [meta-tags-optimizer](../../build/meta-tags-optimizer/) - Optimize meta tags
+- [serp-analysis](../../research/serp-analysis/) - SERP context for audit findings
 - [content-refresher](../content-refresher/) - Update existing content
 - [content-quality-auditor](../../cross-cutting/content-quality-auditor/) - Full 80-item CORE-EEAT audit
 

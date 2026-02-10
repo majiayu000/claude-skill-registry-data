@@ -1,5 +1,6 @@
 ---
 name: seo-content-writer
+version: "1.0"
 description: Creates high-quality, SEO-optimized content that ranks in search engines. Applies on-page SEO best practices, keyword optimization, and content structure for maximum visibility and engagement.
 ---
 
@@ -116,8 +117,12 @@ When a user requests SEO content:
    | R02 | Citation Density | ≥1 external citation per 500 words |
    | R04 | Evidence-Claim Mapping | Every claim backed by evidence |
    | R07 | Entity Precision | Full names for people/orgs/products |
+   | C03 | Query Coverage | Cover ≥3 query variants (synonyms, long-tail) |
+   | O08 | Anchor Navigation | Table of contents with jump links |
+   | O10 | Multimedia Structure | Images/videos have captions and carry information |
+   | E07 | Practical Tools | Include downloadable templates, checklists, or calculators |
 
-   _These 12 items apply across all content types. For content-type-specific dimension weights, see the Content-Type Weight Table in [core-eeat-benchmark.md](../../references/core-eeat-benchmark.md)._
+   _These 16 items apply across all content types. For content-type-specific dimension weights, see the Content-Type Weight Table in [core-eeat-benchmark.md](../../references/core-eeat-benchmark.md)._
    _Full 80-item benchmark: [references/core-eeat-benchmark.md](../../references/core-eeat-benchmark.md)_
    _For complete content quality audit: use [content-quality-auditor](../../cross-cutting/content-quality-auditor/)_
    ```
@@ -145,7 +150,7 @@ When a user requests SEO content:
    [What unique perspective or value will this content provide?]
    ```
 
-3. **Create Optimized Title**
+4. **Create Optimized Title**
 
    ```markdown
    ### Title Optimization
@@ -169,7 +174,7 @@ When a user requests SEO content:
    **Recommended**: [Best option with reasoning]
    ```
 
-4. **Write Meta Description**
+5. **Write Meta Description**
 
    ```markdown
    ### Meta Description
@@ -189,7 +194,7 @@ When a user requests SEO content:
    - ✅ CTA or curiosity hook
    ```
 
-5. **Structure Content with SEO Headers**
+6. **Structure Content with SEO Headers**
 
    ```markdown
    ### Content Structure
@@ -224,7 +229,7 @@ When a user requests SEO content:
    - Clear call-to-action
    ```
 
-6. **Apply On-Page SEO Best Practices**
+7. **Apply On-Page SEO Best Practices**
 
    ```markdown
    ### On-Page SEO Checklist
@@ -260,7 +265,7 @@ When a user requests SEO content:
    - [ ] URL slug includes keyword
    ```
 
-7. **Write the Content**
+8. **Write the Content**
 
    Follow this structure:
 
@@ -331,7 +336,7 @@ When a user requests SEO content:
    [Clear call-to-action: what should reader do next?]
    ```
 
-8. **Optimize for Featured Snippets**
+9. **Optimize for Featured Snippets**
 
    ```markdown
    ### Featured Snippet Optimization
@@ -349,7 +354,7 @@ When a user requests SEO content:
    Number each step clearly: "Step 1:", "Step 2:", etc.
    ```
 
-9. **Add Internal/External Links**
+10. **Add Internal/External Links**
 
    ```markdown
    ### Link Recommendations
@@ -363,7 +368,7 @@ When a user requests SEO content:
    2. "[anchor text]" → [authoritative-source.com] (supports: [claim])
    ```
 
-10. **Final SEO Review**
+11. **Final SEO Review**
 
     ```markdown
     ### Content SEO Score
@@ -388,7 +393,7 @@ When a user requests SEO content:
     2. [Suggestion]
     ```
 
-11. **CORE-EEAT Self-Check**
+12. **CORE-EEAT Self-Check**
 
     After writing, verify content against loaded CORE-EEAT constraints:
 
@@ -409,6 +414,10 @@ When a user requests SEO content:
     | R02 | ≥1 citation per 500 words | ✅/⚠️/❌ | [notes] |
     | R04 | Claims backed by evidence | ✅/⚠️/❌ | [notes] |
     | R07 | Full entity names used | ✅/⚠️/❌ | [notes] |
+    | C03 | ≥3 query variants covered | ✅/⚠️/❌ | [notes] |
+    | O08 | Table of contents with jump links | ✅/⚠️/❌ | [notes] |
+    | O10 | Images/videos captioned and informative | ✅/⚠️/❌ | [notes] |
+    | E07 | Downloadable template/checklist included | ✅/⚠️/❌ | [notes] |
 
     **Items Needing Attention**: [list any ⚠️/❌ items]
 
@@ -601,5 +610,8 @@ Write an ultimate guide about [topic] (3,000+ words) targeting [keyword]
 - [geo-content-optimizer](../geo-content-optimizer/) - Optimize for AI citations
 - [meta-tags-optimizer](../meta-tags-optimizer/) - Create compelling meta tags
 - [on-page-seo-auditor](../../optimize/on-page-seo-auditor/) - Audit SEO elements
+- [internal-linking-optimizer](../../optimize/internal-linking-optimizer/) - Place internal links during content writing
+- [content-refresher](../../optimize/content-refresher/) - Refresh and update existing content
 - [content-quality-auditor](../../cross-cutting/content-quality-auditor/) - Full 80-item CORE-EEAT audit
+- [memory-management](../../cross-cutting/memory-management/) - Track content performance over time
 

@@ -1,5 +1,6 @@
 ---
 name: internal-linking-optimizer
+version: "1.0"
 description: Analyzes and optimizes internal link structure to improve site architecture, distribute page authority, and help search engines understand content relationships. Creates strategic internal linking plans.
 ---
 
@@ -152,6 +153,8 @@ When a user requests internal linking optimization:
    ```
 
 3. **Analyze Anchor Text Distribution**
+
+   > **CORE-EEAT alignment**: Internal linking quality maps to R08 (Internal Link Graph) in the CORE-EEAT benchmark -- use descriptive anchors, ensure links support topical authority. See [content-quality-auditor](../../cross-cutting/content-quality-auditor/) for full audit.
 
    ```markdown
    ## Anchor Text Analysis
@@ -467,4 +470,5 @@ When a user requests internal linking optimization:
 - [seo-content-writer](../../build/seo-content-writer/) - Create linkable content
 - [on-page-seo-auditor](../on-page-seo-auditor/) - Audit overall on-page SEO
 - [technical-seo-checker](../technical-seo-checker/) - Check crawlability
+- [content-quality-auditor](../../cross-cutting/content-quality-auditor/) - Full 80-item CORE-EEAT audit
 

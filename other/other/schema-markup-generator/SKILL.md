@@ -1,5 +1,6 @@
 ---
 name: schema-markup-generator
+version: "1.0"
 description: Generates structured data markup (Schema.org JSON-LD) to enable rich results in search engines including FAQ snippets, How-To cards, Product listings, Reviews, and more.
 ---
 
@@ -462,17 +463,18 @@ When a user requests schema markup:
      {
        "@context": "https://schema.org",
        "@type": "Article",
-       // Article properties...
+       "headline": "[Article title]",
+       "author": { "@type": "Person", "name": "[Author name]" }
      },
      {
        "@context": "https://schema.org",
        "@type": "FAQPage",
-       // FAQ properties...
+       "mainEntity": [{ "@type": "Question", "name": "[Question]", "acceptedAnswer": { "@type": "Answer", "text": "[Answer]" } }]
      },
      {
        "@context": "https://schema.org",
        "@type": "BreadcrumbList",
-       // Breadcrumb properties...
+       "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "[URL]" }]
      }
    ]
    </script>

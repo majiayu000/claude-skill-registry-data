@@ -1,5 +1,6 @@
 ---
 name: performance-reporter
+version: "1.0"
 description: Generates comprehensive SEO and GEO performance reports combining rankings, traffic, backlinks, and AI visibility metrics. Creates executive summaries and detailed analyses for stakeholder reporting.
 ---
 
@@ -24,8 +25,9 @@ This skill creates comprehensive SEO and GEO performance reports that combine mu
 3. **Executive Summaries**: Creates high-level overviews
 4. **Visual Reports**: Presents data in clear formats
 5. **Benchmark Comparison**: Tracks against goals and competitors
-6. **ROI Calculation**: Measures SEO investment returns
-7. **Recommendations**: Suggests actions based on data
+6. **Content Quality Tracking**: Integrates CORE-EEAT scores across audited pages
+7. **ROI Calculation**: Measures SEO investment returns
+8. **Recommendations**: Suggests actions based on data
 
 ## How to Use
 
@@ -265,7 +267,76 @@ When a user requests a performance report:
    | [query] | Yes | No | [gap] | [action] |
    ```
 
-6. **Report Backlink Performance**
+6. **Report Domain Authority (CITE Score)**
+
+   If a CITE domain audit has been run previously (via domain-authority-auditor), include domain authority trends:
+
+   ```markdown
+   ## Domain Authority (CITE Score)
+
+   ### CITE Score Summary
+
+   | Metric | This Period | Last Period | Change |
+   |--------|-------------|-------------|--------|
+   | CITE Score | [X]/100 | [Y]/100 | [+/-Z] |
+   | C — Citation | [X]/100 | [Y]/100 | [+/-Z] |
+   | I — Identity | [X]/100 | [Y]/100 | [+/-Z] |
+   | T — Trust | [X]/100 | [Y]/100 | [+/-Z] |
+   | E — Eminence | [X]/100 | [Y]/100 | [+/-Z] |
+
+   **Veto Status**: ✅ No triggers / ⚠️ [item] triggered
+
+   ### Key Changes
+
+   - [Notable improvement or concern 1]
+   - [Notable improvement or concern 2]
+
+   _For full 40-item evaluation, run `/seo:audit-domain`_
+   ```
+
+   **Note**: If no previous CITE audit exists, note this section as "Not yet evaluated — run domain-authority-auditor for baseline" and skip.
+
+7. **Content Quality (CORE-EEAT Score)**
+
+   If content-quality-auditor has been run on key pages (via `/seo:audit-page`), include content quality metrics:
+
+   ```markdown
+   ## Content Quality (CORE-EEAT Score)
+
+   ### Content Quality Summary
+
+   | Metric | Value |
+   |--------|-------|
+   | Pages Audited | [count] |
+   | Average CORE-EEAT Score | [score]/100 ([rating]) |
+   | Average GEO Score (CORE) | [score]/100 |
+   | Average SEO Score (EEAT) | [score]/100 |
+   | Veto Items Triggered | [count] ([item IDs]) |
+
+   ### Dimension Averages Across Audited Pages
+
+   | Dimension | Average Score | Trend |
+   |-----------|--------------|-------|
+   | C — Contextual Clarity | [score] | [↑/↓/→] |
+   | O — Organization | [score] | [↑/↓/→] |
+   | R — Referenceability | [score] | [↑/↓/→] |
+   | E — Exclusivity | [score] | [↑/↓/→] |
+   | Exp — Experience | [score] | [↑/↓/→] |
+   | Ept — Expertise | [score] | [↑/↓/→] |
+   | A — Authority | [score] | [↑/↓/→] |
+   | T — Trust | [score] | [↑/↓/→] |
+
+   ### Key Content Quality Changes
+
+   - [Notable score changes since last report]
+   - [Pages with significant quality improvements/declines]
+
+   _For full 80-item evaluation, run `/seo:audit-page` on individual pages. See CORE-EEAT benchmark for methodology._
+   ```
+
+   **Note**: If no content quality audit exists, note this section as "Content quality not yet evaluated — run `/seo:audit-page` on key landing pages to establish baseline" and skip.
+
+8. **Report Backlink Performance**
 
    ```markdown
    ## Backlink Performance
@@ -301,7 +372,7 @@ When a user requests a performance report:
    Your referring domains rank #[X] of [Y] competitors.
    ```
 
-7. **Report Content Performance**
+9. **Report Content Performance**
 
    ```markdown
    ## Content Performance
@@ -336,7 +407,7 @@ When a user requests a performance report:
    | [Title 2] | $[X] | $[Y] | [Z]% |
    ```
 
-8. **Generate Recommendations**
+10. **Generate Recommendations**
 
    ```markdown
    ## Recommendations & Next Steps
@@ -371,7 +442,7 @@ When a user requests a performance report:
    | Referring Domains | [X] | [Y] | [action] |
    ```
 
-9. **Compile Full Report**
+11. **Compile Full Report**
 
    ```markdown
    # [Company] SEO & GEO Performance Report
@@ -386,12 +457,14 @@ When a user requests a performance report:
    2. Organic Traffic Performance
    3. Keyword Rankings
    4. GEO/AI Visibility
-   5. Backlink Analysis
-   6. Content Performance
-   7. Technical Health
-   8. Competitive Landscape
-   9. Recommendations
-   10. Appendix
+   5. Domain Authority (CITE Score)
+   6. Content Quality (CORE-EEAT Score)
+   7. Backlink Analysis
+   8. Content Performance
+   9. Technical Health
+   10. Competitive Landscape
+   11. Recommendations
+   12. Appendix
    
    ---
    
@@ -465,9 +538,11 @@ Focus on: Progress against goals, wins, clear recommendations
 
 ## Related Skills
 
-- [rank-tracker](../rank-tracker/) - Detailed ranking data
-- [backlink-analyzer](../backlink-analyzer/) - Link profile data
-- [alert-manager](../alert-manager/) - Set up report triggers
-- [serp-analysis](../../research/serp-analysis/) - SERP composition data
-- [memory-management](../../cross-cutting/memory-management/) - Archive reports in project memory
+- [content-quality-auditor](../../cross-cutting/content-quality-auditor/) — Include CORE-EEAT scores as page-level content quality KPIs
+- [domain-authority-auditor](../../cross-cutting/domain-authority-auditor/) — Include CITE score as a domain-level KPI in periodic reports
+- [rank-tracker](../rank-tracker/) — Detailed ranking data
+- [backlink-analyzer](../backlink-analyzer/) — Link profile data
+- [alert-manager](../alert-manager/) — Set up report triggers
+- [serp-analysis](../../research/serp-analysis/) — SERP composition data
+- [memory-management](../../cross-cutting/memory-management/) — Archive reports in project memory
 

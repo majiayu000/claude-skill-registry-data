@@ -1,5 +1,6 @@
 ---
 name: technical-seo-checker
+version: "1.0"
 description: Performs technical SEO audits covering site speed, crawlability, indexability, mobile-friendliness, security, and structured data. Identifies technical issues preventing optimal search performance.
 ---
 
@@ -355,6 +356,8 @@ When a user requests a technical SEO audit:
 
 7. **Audit Structured Data**
 
+   > **CORE-EEAT alignment**: Schema markup quality maps to O05 (Schema Markup) in the CORE-EEAT benchmark. See [content-quality-auditor](../../cross-cutting/content-quality-auditor/) for full content quality audit.
+
    ```markdown
    ## Structured Data Analysis
    
@@ -561,4 +564,6 @@ When a user requests a technical SEO audit:
 - [schema-markup-generator](../../build/schema-markup-generator/) - Fix schema issues
 - [performance-reporter](../../monitor/performance-reporter/) - Monitor improvements
 - [internal-linking-optimizer](../internal-linking-optimizer/) - Fix link issues
+- [alert-manager](../../monitor/alert-manager/) - Set up alerts for technical issues found
+- [content-quality-auditor](../../cross-cutting/content-quality-auditor/) - Full 80-item CORE-EEAT audit
 

@@ -1,5 +1,6 @@
 ---
 name: serp-analysis
+version: "1.0"
 description: Analyzes search engine results pages (SERPs) to understand ranking factors, SERP features, user intent patterns, and AI overview triggers. Essential for understanding what it takes to rank.
 ---
 
@@ -436,7 +437,7 @@ When a user requests SERP analysis:
 
 Buzzsprout's guide succeeds because:
 1. **Comprehensive** - Covers every step in detail
-2. **Updated** - "2024" in title, recent updates
+2. **Updated** - Current year in title, recent updates
 3. **Structured** - Clear numbered steps (owns featured snippet)
 4. **Authoritative** - Podcast hosting company (topical authority)
 5. **Supporting content** - Links to detailed sub-guides
@@ -520,4 +521,7 @@ Analyze mobile vs desktop SERP differences for [keyword]
 - [competitor-analysis](../competitor-analysis/) - Deep dive on ranking competitors
 - [on-page-seo-auditor](../../optimize/on-page-seo-auditor/) - Optimize based on findings
 - [geo-content-optimizer](../../build/geo-content-optimizer/) - Optimize for AI citations
+- [meta-tags-optimizer](../../build/meta-tags-optimizer/) - Optimize SERP appearance with meta tags
+- [rank-tracker](../../monitor/rank-tracker/) - Track keyword position changes in SERPs
+- [performance-reporter](../../monitor/performance-reporter/) - Report on SERP performance metrics
 

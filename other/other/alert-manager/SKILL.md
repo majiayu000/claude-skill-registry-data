@@ -1,5 +1,6 @@
 ---
 name: alert-manager
+version: "1.0"
 description: Sets up and manages alerts for critical SEO and GEO metrics including ranking drops, traffic changes, technical issues, and competitor movements. Enables proactive monitoring and quick response to issues.
 ---
 

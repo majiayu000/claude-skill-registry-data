@@ -1,5 +1,6 @@
 ---
 name: content-gap-analysis
+version: "1.0"
 description: Identifies content opportunities by finding topics and keywords your competitors cover that you don't. Reveals untapped content potential and strategic gaps in your content strategy.
 ---
 
@@ -517,4 +518,7 @@ Find gaps in our [commercial/informational] intent content
 - [competitor-analysis](../competitor-analysis/) - Understand competitor strategies
 - [seo-content-writer](../../build/seo-content-writer/) - Create gap-filling content
 - [content-refresher](../../optimize/content-refresher/) - Improve existing content
+- [internal-linking-optimizer](../../optimize/internal-linking-optimizer/) - Identify and fix internal linking gaps
+- [backlink-analyzer](../../monitor/backlink-analyzer/) - Analyze link gap opportunities
+- [memory-management](../../cross-cutting/memory-management/) - Track content gaps over time
 

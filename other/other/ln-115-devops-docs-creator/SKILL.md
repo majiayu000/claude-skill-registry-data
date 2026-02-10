@@ -110,6 +110,7 @@ Tables (env vars, ports, services) > Lists (setup steps) > Text
 - Document created if applicable
 - Setup steps, deployment, troubleshooting documented
 - All env vars from .env.example included
+- **Actuality verified:** all document facts match current code (paths, functions, APIs, configs exist and are accurate)
 - Status returned to coordinator
 
 ## Reference Files

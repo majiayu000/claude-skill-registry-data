@@ -1,5 +1,6 @@
 ---
 name: rank-tracker
+version: "1.0"
 description: Tracks and analyzes keyword ranking positions over time for both traditional search results and AI-generated responses. Monitors ranking changes, identifies trends, and alerts on significant movements.
 ---
 

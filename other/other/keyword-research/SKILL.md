@@ -1,5 +1,6 @@
 ---
 name: keyword-research
+version: "1.0"
 description: Discovers high-value keywords with search intent analysis, difficulty assessment, and content opportunity mapping. Essential for starting any SEO or GEO content strategy.
 ---
 
@@ -131,7 +132,7 @@ When a user requests keyword research:
    |--------|---------|---------|--------------|
    | Informational | what, how, why, guide, learn | "what is SEO" | Blog posts, guides |
    | Navigational | brand names, specific sites | "google analytics login" | Homepage, product pages |
-   | Commercial | best, review, vs, compare | "best SEO tools 2024" | Comparison posts, reviews |
+   | Commercial | best, review, vs, compare | "best SEO tools [current year]" | Comparison posts, reviews |
    | Transactional | buy, price, discount, order | "buy SEO software" | Product pages, pricing |
 
 5. **Assess Keyword Difficulty**
@@ -303,7 +304,7 @@ When a user requests keyword research:
 ```markdown
 # Keyword Research Report: Project Management Software
 
-**Generated**: December 2024
+**Generated**: [current month and year]
 **Target Audience**: Small business owners and teams
 **Business Goal**: Software signups and trials
 
@@ -334,7 +335,7 @@ When a user requests keyword research:
 | Keyword | Volume | Difficulty | Intent | Score |
 |---------|--------|------------|--------|-------|
 | project management software | 18,000 | 72 | Commercial | 65 |
-| best project management tools 2024 | 8,500 | 65 | Commercial | 62 |
+| best project management tools [current year] | 8,500 | 65 | Commercial | 62 |
 | project management app | 12,000 | 68 | Commercial | 58 |
 
 ### GEO Opportunities (AI-citation potential)
@@ -430,5 +431,6 @@ Research local keywords for [business type] in [city/region]
 - [content-gap-analysis](../content-gap-analysis/) - Find missing keyword opportunities
 - [seo-content-writer](../../build/seo-content-writer/) - Create content for target keywords
 - [geo-content-optimizer](../../build/geo-content-optimizer/) - Optimize for AI citations
+- [rank-tracker](../../monitor/rank-tracker/) - Monitor keyword position changes over time
 - [memory-management](../../cross-cutting/memory-management/) - Store keyword data in project memory
 
