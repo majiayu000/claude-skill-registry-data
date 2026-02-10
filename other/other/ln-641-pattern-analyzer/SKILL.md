@@ -1,0 +1,160 @@
+---
+name: ln-641-pattern-analyzer
+description: L3 Worker. Analyzes single pattern implementation, calculates 4 scores (compliance, completeness, quality, implementation), identifies gaps and issues. Usually invoked by ln-640, can also analyze a specific pattern on user request.
+---
+
+# Pattern Analyzer
+
+L3 Worker that analyzes a single architectural pattern against best practices and calculates 4 scores.
+
+## Purpose & Scope
+- Analyze ONE pattern per invocation (receives pattern name, locations, best practices from coordinator)
+- Find all implementations in codebase (Glob/Grep)
+- Validate implementation exists and works
+- Calculate 4 scores: compliance, completeness, quality, implementation
+- Identify gaps and issues with severity and effort estimates
+- Return structured analysis result to coordinator
+
+**Out of Scope** (owned by ln-624-code-quality-auditor):
+- Cyclomatic complexity thresholds (>10, >20)
+- Method/class length thresholds (>50, >100, >500 lines)
+- Quality Score focuses on pattern-specific quality (SOLID within pattern, pattern-level smells), not generic code metrics
+
+## Input (from ln-640 coordinator)
+
+```
+- pattern: string          # Pattern name (e.g., "Job Processing")
+- locations: string[]      # Known file paths/directories
+- adr_reference: string    # Path to related ADR (if exists)
+- bestPractices: object    # Best practices from MCP Ref/Context7/WebSearch
+```
+
+## Workflow
+
+### Phase 1: Find Implementations
+
+**MANDATORY READ:** Load `../ln-640-pattern-evolution-auditor/references/pattern_library.md` — use "Pattern Detection (Grep)" table for detection keywords per pattern.
+
+```
+IF pattern.source == "adaptive":
+  # Pattern discovered by coordinator Phase 1b — evidence already provided
+  files = pattern.evidence.files
+  SKIP detection keyword search (already done in Phase 1b)
+ELSE:
+  # Baseline pattern — use library detection keywords
+  files = Glob(locations)
+  additional = Grep("{pattern_keywords}", "**/*.{ts,js,py,rb,cs,java}")
+  files = deduplicate(files + additional)
+```
+
+### Phase 2: Read and Analyze Code
+
+```
+FOR EACH file IN files (limit: 10 key files):
+  Read(file)
+  Extract: components, patterns, error handling, logging, tests
+```
+
+### Phase 3: Calculate 4 Scores
+
+**MANDATORY READ:** Load `../ln-640-pattern-evolution-auditor/references/scoring_rules.md` — follow Detection column for each criterion.
+
+| Score | Source in scoring_rules.md | Max |
+|-------|---------------------------|-----|
+| Compliance | "Compliance Score" section — ADR, naming, conventions, anti-patterns | 100 |
+| Completeness | "Completeness Score" section — required components table (per pattern), error handling, tests | 100 |
+| Quality | "Quality Score" section — method length, complexity, code smells, SOLID | 100 |
+| Implementation | "Implementation Score" section — compiles, production usage, integration, monitoring | 100 |
+
+**Scoring process for each criterion:**
+1. Run the Detection Grep/Glob from scoring_rules.md
+2. If matches found → add points per criterion
+3. If anti-pattern/smell detected → subtract per deduction table
+4. Document evidence: file path + line for each score justification
+
+### Phase 4: Identify Issues and Gaps
+
+```
+FOR EACH bestPractice NOT implemented:
+  issues.append({
+    severity: "HIGH" | "MEDIUM" | "LOW",
+    category: "compliance" | "completeness" | "quality" | "implementation",
+    issue: description,
+    suggestion: how to fix,
+    effort: "S" | "M" | "L"
+  })
+
+gaps = {
+  undocumented: aspects found in code but not in ADR,
+  unimplemented: ADR decisions not found in code
+}
+```
+
+### Phase 5: Calculate Overall Score
+
+```
+overall_score = average(compliance, completeness, quality, implementation) / 10
+```
+
+### Phase 6: Return Result
+
+```json
+{
+  "pattern": "Job Processing",
+  "overall_score": 7.9,
+  "scores": {
+    "compliance": 72,
+    "completeness": 85,
+    "quality": 68,
+    "implementation": 90
+  },
+  "checks": [
+    {"id": "compliance_check", "name": "Compliance", "status": "passed|warning|failed", "details": "..."},
+    {"id": "completeness_check", "name": "Completeness", "status": "...", "details": "..."},
+    {"id": "quality_check", "name": "Quality", "status": "...", "details": "..."},
+    {"id": "implementation_check", "name": "Implementation", "status": "...", "details": "..."}
+  ],
+  "codeReferences": ["src/jobs/processor.ts", "src/workers/base.ts"],
+  "issues": [
+    {
+      "severity": "HIGH",
+      "category": "completeness",
+      "issue": "No dead letter queue",
+      "suggestion": "Add Bull DLQ configuration",
+      "effort": "M"
+    }
+  ],
+  "gaps": {
+    "undocumented": ["Error recovery strategy"],
+    "unimplemented": ["Job prioritization from ADR"]
+  },
+  "recommendations": ["Create ADR for dead letter queue strategy"]
+}
+```
+
+## Critical Rules
+
+- **One pattern only:** Analyze only the pattern passed by coordinator
+- **Read before score:** Never score without reading actual code
+- **Detection-based scoring:** Use Grep/Glob patterns from scoring_rules.md, not assumptions
+- **Effort estimates:** Always provide S/M/L for each issue
+- **Code references:** Always include file paths for findings
+
+## Definition of Done
+
+- All implementations found via Glob/Grep (using pattern_library.md keywords or adaptive evidence)
+- Key files read and analyzed
+- 4 scores calculated using scoring_rules.md Detection patterns
+- Issues identified with severity, category, suggestion, effort
+- Gaps documented (undocumented, unimplemented)
+- Recommendations provided
+- Structured result returned to coordinator
+
+## Reference Files
+
+- Scoring rules: `../ln-640-pattern-evolution-auditor/references/scoring_rules.md`
+- Pattern library: `../ln-640-pattern-evolution-auditor/references/pattern_library.md`
+
+---
+**Version:** 2.0.0
+**Last Updated:** 2026-02-08
