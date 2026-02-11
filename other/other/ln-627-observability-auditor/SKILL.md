@@ -129,6 +129,22 @@ Receives `contextStore` with tech stack, framework, codebase root.
 - **Audit scoring formula:** `shared/references/audit_scoring.md`
 - **Audit output schema:** `shared/references/audit_output_schema.md`
 
+## Critical Rules
+
+- **Do not auto-fix:** Report only, never inject logging or endpoints
+- **Framework-aware detection:** Adapt patterns to project's tech stack (winston/pino for Node, logrus/zap for Go, etc.)
+- **Effort realism:** S = <1h, M = 1-4h, L = >4h
+- **Exclusions:** Skip test files for console.log detection, skip dev-only scripts
+- **Context-sensitive severity:** console.log in production code = MEDIUM, in dev utilities = LOW
+
+## Definition of Done
+
+- contextStore parsed (tech stack and framework identified)
+- All 5 checks completed (structured logging, health endpoints, metrics, request tracing, log levels)
+- Findings collected with severity, location, effort, recommendation
+- Score calculated per `shared/references/audit_scoring.md`
+- JSON returned to coordinator
+
 ---
 **Version:** 3.0.0
 **Last Updated:** 2025-12-23

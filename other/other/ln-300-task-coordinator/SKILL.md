@@ -107,5 +107,5 @@ Mark each as in_progress when starting, completed when done.
 - Auto-discovery notes: `CLAUDE.md`, `docs/tasks/kanban_board.md`
 
 ---
-**Version:** 4.0.0 (BREAKING: Added Task Independence Validation in Phase 2 Decompose - checks that Task N does NOT depend on Task N+1/N+2. Works with Foundation-First order to ensure sequential task execution per BMAD Method best practices.)
+**Version:** 4.0.0
 **Last Updated:** 2026-02-03

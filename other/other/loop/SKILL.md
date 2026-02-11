@@ -1,8 +1,7 @@
 ---
 name: loop
 description: Start autonomous iteration loop. Triggers on "loop", "keep going", "continue until done", "implement feature", "fix all", "loop status", "cancel loop".
-model: sonnet
-allowed-tools: Bash, Read, Task, Skill, AskUserQuestion
+model: opus
 ---
 
 # Loop
@@ -21,13 +20,13 @@ Scan for: intent brief → spec input | shape output (criteria[]/mustNot[]/shape
 
 Score on 5 dimensions (0-2 each, max 10):
 
-| Dimension | 0 | 1 | 2 |
-|-----------|---|---|---|
-| **Outcome** | "Make it better" | "Improve performance" | "p95 latency <100ms" |
-| **Scope** | "Fix the app" | "Fix auth" | "Fix /api/auth/token" |
-| **Constraints** | None stated | "Use existing stack" | "No new deps, <500 LOC" |
-| **Success** | None stated | "Tests pass" | "All tests + manual QA" |
-| **Done** | Implied | "When it works" | "PR merged to main" |
+| Dimension       | 0                | 1                     | 2                       |
+| --------------- | ---------------- | --------------------- | ----------------------- |
+| **Outcome**     | "Make it better" | "Improve performance" | "p95 latency <100ms"    |
+| **Scope**       | "Fix the app"    | "Fix auth"            | "Fix /api/auth/token"   |
+| **Constraints** | None stated      | "Use existing stack"  | "No new deps, <500 LOC" |
+| **Success**     | None stated      | "Tests pass"          | "All tests + manual QA" |
+| **Done**        | Implied          | "When it works"       | "PR merged to main"     |
 
 ```dot
 digraph SpecDecision {
@@ -46,12 +45,12 @@ digraph SpecDecision {
 }
 ```
 
-| Fit Score | Shape | Behavior |
-|-----------|-------|----------|
-| 35+ | Tool | Autonomous, milestones only |
-| 25-34 | Tool-review | Checkpoint major steps |
-| 15-24 | Colleague | Iterate each step |
-| <15 | BLOCKED | Clarify first |
+| Fit Score | Shape       | Behavior                    |
+| --------- | ----------- | --------------------------- |
+| 35+       | Tool        | Autonomous, milestones only |
+| 25-34     | Tool-review | Checkpoint major steps      |
+| 15-24     | Colleague   | Iterate each step           |
+| <15       | BLOCKED     | Clarify first               |
 
 Guided: [SCORING] block. spec × 5 + domain (0-10) — tiers 10 apart = domain's range, so domain shifts ±1 tier
 
@@ -77,7 +76,7 @@ Work Items (every criteria[] entry maps to ≥1 item):
 2. [imperative action] — [verify command] → criteria: [names]
 ```
 
-Mark dependencies. Decompose by horizon: Tactical → maximize parallel items per wave | Strategic → phase by dependency chain | Existential → foundation layers first. Announce:
+Mark dependencies. Decompose by horizon: Tactical → maximize parallel items per wave | Strategic → phase by dependency chain | Existential → foundation layers first. If Disposable=yes from shape: items target proof-of-concept, not production — keep items ≤ 3, expect to discard. Announce:
 
 ```
 [LOOP] Starting | Shape: {shape} | Horizon: {horizon} | Items: {N} | Feasible: {axis} — {bound}
@@ -92,20 +91,22 @@ Would reframe if {what finding would change the plan, not just delay it}
 **Wave** = work items with no unresolved dependencies. Within wave: reversible before irreversible.
 
 Spawn per ready item: `Task(prompt="EXECUTE. [session + criteria + mustNot + intent ACCEPTANCE criteria]\n\n[work item]\n\nVerify against ACCEPTANCE criteria and STOP conditions from the intent brief.", subagent_type="general-purpose")`
-Include in spawn prompt: "Retrieve facts (APIs, types, dependencies, current docs) using available tools before asserting from memory."
-Review: panel checks scope compliance per wave.
+Include in spawn prompt: "Retrieve facts (APIs, types, dependencies, current docs) using available tools before asserting from memory. Per work item: WHAT/WHY questions (intent, preference, priority) → ask the user. HOW/WHAT-EXISTS questions (API, file, dependency) → retrieve with tools."
+Review: run the consult skill: Skill(skill="hope:consult", args="panel checks scope compliance per wave")
 
 Wave report must satisfy ALL:
+
 1. `[WAVE {N}]` header, per item: `{done ≤10w} | Verify: {PASS/FAIL}` — cite command + exit state
 2. Footer: `[WAVE {N} COMPLETE] Done: {n} | Carry: {n} | Stall: {n}` — must equal total
-3. Carry = verification weaker than execution output — retry next wave
-4. Stall → diagnose from execution output — revise remaining if assumptions broke
+3. `[LEARN] What this wave revealed: [one insight ≤15w about the problem domain, not the process]`
+4. Carry = verification weaker than execution output — retry next wave with feedback: include `[VERIFY] FAIL: [reason]` in spawn prompt so retry transforms with context, not from scratch
+5. Stall → diagnose from execution output — revise remaining if assumptions broke
 
 ---
 
 ## Step 5: Thorough Expert Review
 
-When all items complete, expert panel reviews completed work against spec.
+When all items complete, expert panel Skill(skill="hope:consult", args="reviews completed work against spec") .
 
 - Findings: BLOCKER / REFRAME / WARNING
 - Checks against mustNot constraints
@@ -118,15 +119,16 @@ When all items complete, expert panel reviews completed work against spec.
 ## Step 6: Completion
 
 ### Pre-Work Gate — cite evidence or STOP:
-  Verification method locked  → [pass/fail] → [cite verification{} from shape]
-  ≥2 mustNot in mustNot[]     → [pass/fail] → [cite mustNot items]
+
+Verification method locked → [pass/fail] → [cite verification{} from shape]
+≥2 mustNot in mustNot[] → [pass/fail] → [cite mustNot items]
 
 ### Verification Tiers
 
-| Tier | Budget | Scope |
-|------|--------|-------|
-| **Quick** | < 5s | Lint or type-check |
-| **Standard** | < 30s | Lint + types + tests |
+| Tier         | Budget | Scope                 |
+| ------------ | ------ | --------------------- |
+| **Quick**    | < 5s   | Lint or type-check    |
+| **Standard** | < 30s  | Lint + types + tests  |
 | **Thorough** | < 2min | Full suite + evidence |
 
 Run thorough. Report with evidence:
@@ -165,12 +167,12 @@ User: Adjust → re-enter loop (Step 1) | Proceed → emit `<loop-complete>` + q
 **Cancel** ("cancel loop", "stop", "abort"): Report completed/remaining. Current iteration completes before cancel.
 **Status** ("loop status", "progress"): Scan for `[LOOP] Starting`, `[WAVE N COMPLETE]`, `<loop-complete>` markers.
 
-| Trigger | Threshold | Action |
-|---------|-----------|--------|
-| Max iterations | User-configured | Pause, announce progress |
-| Budget exceeded | User-configured | Pause, offer continue |
-| mustNot true | From shape output | Stop immediately |
-| Would-reframe-if true | From shape output | Pause, surface finding |
+| Trigger               | Threshold         | Action                   |
+| --------------------- | ----------------- | ------------------------ |
+| Max iterations        | User-configured   | Pause, announce progress |
+| Budget exceeded       | User-configured   | Pause, offer continue    |
+| mustNot true          | From shape output | Stop immediately         |
+| Would-reframe-if true | From shape output | Pause, surface finding   |
 
 ## Boundary
 

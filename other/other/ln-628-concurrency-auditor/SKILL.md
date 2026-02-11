@@ -189,6 +189,22 @@ Receives `contextStore` with tech stack, language, codebase root.
 - **Audit scoring formula:** `shared/references/audit_scoring.md`
 - **Audit output schema:** `shared/references/audit_output_schema.md`
 
+## Critical Rules
+
+- **Do not auto-fix:** Report only, concurrency fixes require careful human review
+- **Language-aware detection:** Use language-specific patterns (Go sync.Mutex, Python asyncio.Lock, Java synchronized)
+- **Effort realism:** S = <1h, M = 1-4h, L = >4h
+- **Critical path escalation:** Race conditions in payment/auth = CRITICAL, regardless of other factors
+- **Exclusions:** Skip test files, skip single-threaded CLI tools, skip generated code
+
+## Definition of Done
+
+- contextStore parsed (language and concurrency model identified)
+- All 6 checks completed (race conditions, missing await, resource contention, thread safety, deadlock potential, blocking I/O)
+- Findings collected with severity, location, effort, recommendation
+- Score calculated per `shared/references/audit_scoring.md`
+- JSON returned to coordinator
+
 ---
 **Version:** 3.0.0
 **Last Updated:** 2025-12-23

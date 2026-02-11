@@ -158,6 +158,23 @@ For each E2E test, calculate Usefulness Score = Impact × Probability
 }
 ```
 
+## Critical Rules
+
+- **Do not auto-fix:** Report only
+- **Risk-based only:** Prioritize by business impact (Money > Security > Data), not by code coverage percentage
+- **Effort realism:** S = <1h, M = 1-4h, L = >4h
+- **Usefulness Score threshold:** Only flag E2E tests with Score <15 as wasteful
+- **No pyramid enforcement:** Do not recommend E2E/Integration/Unit ratios — focus on critical path coverage
+
+## Definition of Done
+
+- contextStore parsed (critical paths, user journeys, test file list)
+- Critical paths identified (Money, Security, Data) with Priority scores
+- All 3 checks completed (critical path coverage, user journey coverage, E2E usefulness validation)
+- Findings collected with severity, location, effort, recommendation
+- Score calculated per `shared/references/audit_scoring.md`
+- JSON returned to coordinator
+
 ## Reference Files
 
 - **Audit scoring formula:** `shared/references/audit_scoring.md`

@@ -7,7 +7,7 @@ description: Orchestrates full decomposition (scope → Epics → Stories) by de
 
 Top-level orchestrator for complete initiative decomposition from scope to User Stories through Epic and Story coordinators.
 
-## Overview
+## Purpose
 
 ### What This Skill Does
 
@@ -385,6 +385,15 @@ After ln-200-scope-decomposer completes:
 
 ---
 
+## Reference Files
+
+- **Configuration source:** `docs/tasks/kanban_board.md` (Team ID, Next Epic Number)
+- **Epic coordinator:** `ln-210-epic-coordinator/SKILL.md`
+- **Story coordinator:** `ln-220-story-coordinator/SKILL.md`
+- **Numbering conventions:** `shared/references/numbering_conventions.md` (Epic 0 reserved)
+
+---
+
 ## Chat Output Prefix
 
 Use emoji prefix for visual differentiation:
@@ -394,5 +403,5 @@ Use emoji prefix for visual differentiation:
 
 ---
 
-**Version:** 2.0.0 (BREAKING: Complete rewrite following ln-400 Pure Orchestrator Pattern. Removed Phase 1 User Confirmation. Removed false "AUTOMATIC" claims. Added Epic 0 for Infrastructure. Added Sequential Story Decomposition explanation. Added Critical Rules section. Realistic time estimates (2-3h). Removed REPLAN mode (not applicable to top orchestrator - use ln-210/ln-220 REPLAN modes instead).)
+**Version:** 2.0.0
 **Last Updated:** 2025-11-20

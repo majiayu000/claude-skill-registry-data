@@ -70,7 +70,7 @@ Research industry standards and create project documentation in one workflow.
 | **Feasibility** | Can we build it? | PoC, prototypes, local tests | "Is it technically possible?" |
 | **Feature Demand** | Feature viability | Competitor features + blogs/socials + user complaints | "Is this feature worth building?" |
 
-## Workflow by doc_type
+## Workflow
 
 | doc_type | Purpose | Research Source | Template | Output Path | Words |
 |----------|---------|-----------------|----------|-------------|-------|

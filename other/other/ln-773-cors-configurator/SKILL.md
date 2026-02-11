@@ -209,5 +209,25 @@ Before completing, verify:
 
 ---
 
+## Critical Rules
+
+- **Never use wildcard `*` origin with credentials** — security violation per CORS spec
+- **Production origins from environment variables only** — no hardcoded URLs in code
+- **Separate Development and Production policies** — permissive locally, restrictive in production
+- **Idempotent** — if `AddCors`/`UseCors` or `CORSMiddleware` exists, return `status: "skipped"`
+- **Enable preflight caching in Production** — MaxAge 86400 (24h) to reduce OPTIONS requests
+
+## Definition of Done
+
+- Context Store received (stack, project root, environment)
+- Frontend origins detected (port/framework auto-detection)
+- User decisions collected (origins, methods, credentials, cache duration)
+- CORS configuration generated with environment-specific policies
+- Security checklist verified (no wildcard + credentials, explicit methods, env-based origins)
+- Syntax validated (`dotnet build` or `py_compile`)
+- Structured JSON response returned to ln-770 coordinator
+
+---
+
 **Version:** 2.0.0
 **Last Updated:** 2026-01-10

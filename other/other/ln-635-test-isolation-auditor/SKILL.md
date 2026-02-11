@@ -357,6 +357,25 @@ Receives `contextStore` with isolation checklist, anti-patterns catalog, test fi
 
 **Note:** Findings are flattened into single array. Use `principle` field prefix (Test Isolation / Determinism / Anti-Patterns) to identify issue category.
 
+## Critical Rules
+
+- **Do not auto-fix:** Report only
+- **Effort realism:** S = <1h, M = 1-4h, L = >4h
+- **Flat findings:** Merge isolation + determinism + anti-patterns into single findings array, use `principle` prefix to distinguish
+- **Cross-reference ln-631:** Framework Tester anti-pattern (Rule 6) references ln-631 findings — do not duplicate
+- **Context-aware:** Supertest with real Express app is acceptable for integration tests
+
+## Definition of Done
+
+- contextStore parsed (isolation checklist, anti-patterns catalog, test file list)
+- All 3 audit groups completed:
+  - Isolation (6 categories: APIs, DB, FS, Time, Random, Network)
+  - Determinism (4 checks: flaky, time-dependent, order-dependent, shared state)
+  - Anti-patterns (6 checks: Liar, Giant, Slow Poke, Conjoined Twins, Happy Path, Framework Tester)
+- Findings collected with severity, location, effort, recommendation
+- Score calculated per `shared/references/audit_scoring.md`
+- JSON returned to coordinator
+
 ## Reference Files
 
 - **Audit scoring formula:** `shared/references/audit_scoring.md`

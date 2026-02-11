@@ -156,5 +156,5 @@ When invoked in Plan Mode (agent cannot execute), generate execution plan instea
 - Auto-discovery: `CLAUDE.md`, `docs/tasks/kanban_board.md`
 
 ---
-**Version:** 4.0.0 (Restructured: removed duplications, consolidated sections, ~35% reduction)
+**Version:** 4.0.0
 **Last Updated:** 2026-01-29

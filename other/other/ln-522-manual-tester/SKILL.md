@@ -285,5 +285,5 @@ cp references/templates/template-document-format.sh {NN}-feature/test-{format}.s
 - Research findings: ln-521-test-researcher creates "## Test Research" comment on Story
 
 ---
-**Version:** 1.0.0 (Renamed from ln-512, Phase 0 Research moved to ln-521-test-researcher)
+**Version:** 1.0.0
 **Last Updated:** 2026-01-15

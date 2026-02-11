@@ -138,5 +138,11 @@ Return structured results to orchestrator.
 
 ---
 
+## Reference Files
+
+- Parent: `../ln-780-bootstrap-verifier/SKILL.md`
+
+---
+
 **Version:** 2.0.0
 **Last Updated:** 2026-01-10

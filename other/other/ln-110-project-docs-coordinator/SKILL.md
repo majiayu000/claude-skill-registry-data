@@ -211,5 +211,5 @@ ln-110-project-docs-coordinator (this skill)
 - Guides: `references/guides/automatic_analysis_guide.md`, `critical_questions.md`, `troubleshooting.md`
 
 ---
-**Version:** 2.1.0 (Added Documentation Standards passed to workers)
+**Version:** 2.1.0
 **Last Updated:** 2025-01-12

@@ -120,5 +120,5 @@ Tables/ASCII > Lists (enumerations only) > Text (last resort)
 - Questions: `references/questions_root.md` (Q1-Q22)
 
 ---
-**Version:** 2.1.0 (Added NO_CODE, Stack Adaptation, Format Priority rules to Critical Notes)
+**Version:** 2.1.0
 **Last Updated:** 2025-01-12

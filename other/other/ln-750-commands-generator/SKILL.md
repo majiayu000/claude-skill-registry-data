@@ -70,5 +70,27 @@ Templates and full variable list: see `ln-751-command-templates/references/`
 
 ---
 
+## Critical Rules
+
+- **Detect before generate:** Only create commands for detected stack components (no empty templates)
+- **Variable completeness:** All `{{VARIABLE}}` placeholders must be resolved before delegation
+- **Delegate via Task:** All template rendering goes through ln-751 with context isolation
+- **No hardcoded paths:** All paths derived from project structure analysis, not assumptions
+
+## Definition of Done
+
+- Project structure analyzed and tech stack detected
+- Variables extracted (project name, ports, roots, stack)
+- Commands delegated to ln-751 with correct template name and variables
+- All generated `.claude/commands/*.md` files verified to exist
+- No unresolved `{{VARIABLE}}` placeholders remain in output
+
+## Reference Files
+
+- **Variables reference:** [references/variables_reference.md](references/variables_reference.md)
+- **Questions:** [references/questions_commands.md](references/questions_commands.md)
+
+---
+
 **Version:** 2.0.0
 **Last Updated:** 2026-01-10

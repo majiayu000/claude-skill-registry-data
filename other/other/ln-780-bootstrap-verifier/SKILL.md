@@ -134,5 +134,13 @@ Use Skill tool to delegate work:
 
 ---
 
+## Reference Files
+
+- Worker: `../ln-781-build-verifier/SKILL.md`
+- Worker: `../ln-782-test-runner/SKILL.md`
+- Worker: `../ln-783-container-launcher/SKILL.md`
+
+---
+
 **Version:** 2.0.0
 **Last Updated:** 2026-01-10

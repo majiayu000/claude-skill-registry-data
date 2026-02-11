@@ -7,6 +7,10 @@ description: Creates reference documentation structure + smart documents (ADRs/G
 
 This skill creates the reference documentation structure (docs/reference/) and **smart documents** (ADRs, Guides, Manuals) based on project's TECH_STACK. Documents are created only when justified (nontrivial technology choices with alternatives).
 
+## Purpose
+
+Create the reference documentation directory structure (docs/reference/) with README hub, then generate ADRs, Guides, and Manuals only for justified (nontrivial) technology choices based on TECH_STACK from Context Store.
+
 ## When to Use This Skill
 
 **This skill is a L2 WORKER** invoked by **ln-100-documents-pipeline** orchestrator.
@@ -39,7 +43,7 @@ This skill should be used directly when:
 
 **TECH_STACK** is used for smart document creation in Phase 2.
 
-## How It Works
+## Workflow
 
 The skill follows a 4-phase workflow: **CREATE STRUCTURE** → **SMART DOCUMENT CREATION** → **VALIDATE STRUCTURE** → **VALIDATE CONTENT**. Phase 2 creates documents only for justified technology choices.
 
@@ -387,7 +391,7 @@ docs/
 
 ---
 
-## Reference Files Used
+## Reference Files
 
 ### Templates
 
@@ -452,6 +456,14 @@ Tables (Do/Don't/When) > ASCII diagrams > Lists > Text
 
 ---
 
+## Critical Rules
+
+- **Justified creation only:** Documents are created only for nontrivial technology choices with real alternatives; trivial/obvious selections are skipped
+- **NO_CODE_EXAMPLES:** Guides document patterns (Do/Don't/When tables), not implementations; no code blocks >5 lines
+- **Stack adaptation:** ADR alternatives must be stack-appropriate (React vs Vue, not React vs Django); links must match platform docs
+- **Format priority:** Tables (Do/Don't/When) > ASCII diagrams > Lists > Text
+- **Idempotent:** Checks existence before creation; safe to run multiple times
+
 ## Definition of Done
 
 Before completing work, verify ALL checkpoints:
@@ -500,5 +512,5 @@ Before completing work, verify ALL checkpoints:
 
 ---
 
-**Version:** 8.2.0 (Added Stack Adaptation and Format Priority rules)
+**Version:** 8.2.0
 **Last Updated:** 2025-01-12

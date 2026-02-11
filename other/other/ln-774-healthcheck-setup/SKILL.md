@@ -261,5 +261,24 @@ startupProbe:
 
 ---
 
+## Critical Rules
+
+- **Three separate endpoints** — `/health/live`, `/health/ready`, `/health/startup` per Kubernetes best practices
+- **Liveness must not check dependencies** — only confirms app is alive (avoids cascade restarts)
+- **Readiness checks all dependencies** — DB, Redis, RabbitMQ connectivity verified
+- **Auto-detect dependencies from project files** — scan csproj/requirements for known packages
+- **Idempotent** — if `AddHealthChecks`/`MapHealthChecks` or `/health` route exists, return `status: "skipped"`
+
+## Definition of Done
+
+- Context Store received (stack, project root)
+- Dependencies detected (PostgreSQL, MySQL, Redis, RabbitMQ, MongoDB)
+- Health check endpoints generated (live, ready, startup) for detected stack
+- Kubernetes probe manifest snippet generated with proper timing parameters
+- Syntax validated (`dotnet build` or `py_compile`)
+- Structured JSON response returned to ln-770 coordinator
+
+---
+
 **Version:** 2.0.0
 **Last Updated:** 2026-01-10

@@ -96,13 +96,13 @@ Read package.json and categorize dependencies for upgrade priority.
 
 ### Detection
 
+**MANDATORY READ:** Load [breaking_changes_patterns.md](../ln-710-dependency-upgrader/references/breaking_changes_patterns.md) for full patterns.
+
 1. Compare current vs latest major versions
-2. Check [breaking_changes_patterns.md](../ln-710-dependency-upgrader/references/breaking_changes_patterns.md)
+2. Check breaking_changes_patterns.md for known patterns
 3. Query Context7/Ref for migration guides
 
 ### Common Breaking Changes
-
-**MANDATORY READ:** Load [breaking_changes_patterns.md](../ln-710-dependency-upgrader/references/breaking_changes_patterns.md) for full patterns.
 
 | Package | Breaking Version | Key Changes |
 |---------|------------------|-------------|
@@ -274,6 +274,19 @@ Restore package.json and lock file from git, then run clean install to restore p
 
 - [breaking_changes_patterns.md](../ln-710-dependency-upgrader/references/breaking_changes_patterns.md)
 - [npm_peer_resolution.md](references/npm_peer_resolution.md)
+
+---
+
+## Definition of Done
+
+- Lock file and package.json verified present
+- Dependencies categorized and prioritized (peer deps first)
+- Security audit completed (critical blocks upgrade)
+- Outdated packages identified via `npm/yarn/pnpm outdated`
+- Breaking changes detected via breaking_changes_patterns.md and MCP tools
+- Upgrades applied in priority order with rollback on failure
+- Build and type checks pass after upgrades
+- Report returned with major/minor/patch counts, migrations, and build status
 
 ---
 

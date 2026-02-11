@@ -213,15 +213,23 @@ Invoke ln-302-task-replanner worker with taskType: "test"
 
 **Usage**: Workers (ln-301, ln-302) load via Template Loading logic
 
+## Critical Rules
+
+- **Manual results required:** Never plan tests without ln-522 manual testing results — guessing coverage is worse than no tests
+- **E2E-first, not unit-first:** Baseline is always 2 E2E (positive + negative); unit/integration added only for Priority >= 15
+- **No framework testing:** Every test must validate OUR business logic; never test library/framework behavior
+- **Auto-trim enforcement:** If total tests exceed 7, auto-trim to baseline 2 + top 5 by Priority score
+- **Delegate, don't create:** Task creation goes through ln-301/ln-302 workers; this skill generates the plan only
+
 ## Best Practices
 
 **Minimum Viable Testing:** Start with 2 E2E tests (positive + negative). Add more ONLY with critical justification. Realistic goal: 2-7 tests per Story.
 
 **Risk-Based Testing:** Prioritize by Business Impact x Probability. E2E-first from ACTUAL manual testing results. Priority >=15 scenarios covered by tests.
 
-**Expected-Based Testing:** For deterministic tests, compare actual vs expected using `diff`. See [ln-522-manual-tester Test Design Principles](../ln-522-manual-tester/SKILL.md#test-design-principles).
+**Expected-Based Testing:** For deterministic tests, compare actual vs expected using `diff`. **MANDATORY READ:** Load `../ln-522-manual-tester/SKILL.md` — section "Test Design Principles".
 
 ---
 
-**Version:** 1.0.0 (Initial release - extracted from ln-520-test-planner)
+**Version:** 1.0.0
 **Last Updated:** 2026-01-15

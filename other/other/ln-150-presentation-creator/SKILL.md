@@ -7,6 +7,10 @@ description: Builds interactive HTML presentation with 6 tabs (Overview, Require
 
 This skill creates an interactive, self-contained HTML presentation from existing project documentation. It transforms Markdown documents into a professional, navigable web presentation with diagrams, collapsible sections, and modern UI.
 
+## Purpose
+
+Transforms existing Markdown documentation into an interactive, self-contained HTML presentation with 6 tabs (Overview, Requirements, Architecture/C4, Tech Spec, Roadmap, Guides) and Mermaid diagram support.
+
 ## When to Use This Skill
 
 **This skill is a L2 WORKER** invoked by **ln-100-documents-pipeline** orchestrator OR used standalone.
@@ -30,7 +34,7 @@ Use this skill when:
 - `docs/reference/guides/*.md` (How-to guides)
 - `docs/tasks/kanban_board.md` (Epic Story Counters for Roadmap)
 
-## How It Works
+## Workflow
 
 The skill follows a **7-phase workflow**: READ DOCS → VALIDATE SOURCE EXISTS → VALIDATE SOURCE QUALITY → CREATE DIR → COPY TEMPLATES → INJECT CONTENT → BUILD HTML.
 
@@ -473,6 +477,28 @@ node build-presentation.js
 | **7. BUILD HTML** | ✅ `node build-presentation.js` executed ✅ presentation_final.html created (~120-150 KB) ✅ Tested in browser |
 
 **Output:** docs/presentation/presentation_final.html + assets/ + README.md
+
+---
+
+## Critical Rules
+
+- **3 required files:** requirements.md, architecture.md, tech_stack.md must exist — STOP execution if missing
+- **Never overwrite assets/:** Existing assets/ directory is preserved (user customizations); only presentation_final.html is regenerated
+- **Delete ALL example blocks:** Every `<!-- EXAMPLE START -->...<!-- EXAMPLE END -->` must be removed; no hardcoded e-commerce data in output
+- **Never edit presentation_final.html directly:** It is a generated file; edit source files in assets/ and rebuild
+- **Node.js v18+ required:** Build script depends on Node.js for assembling final HTML
+
+---
+
+## Reference Files
+
+- **Detailed phase workflow:** `references/phases_detailed.md`
+- **Presentation README template:** `references/presentation_readme_template.md`
+- **HTML template:** `references/presentation_template.html`
+- **Styles:** `references/styles.css`
+- **Scripts:** `references/scripts.js`
+- **Build script:** `references/build-presentation.js`
+- **Tab templates:** `references/tabs/tab_overview.html`, `tab_requirements.html`, `tab_architecture.html`, `tab_technical_spec.html`, `tab_roadmap.html`, `tab_guides.html`
 
 ---
 

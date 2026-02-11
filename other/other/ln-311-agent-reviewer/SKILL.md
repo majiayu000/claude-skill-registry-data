@@ -82,6 +82,14 @@ agent_stats:
 - **Persist** prompts and results in `.agent-review/{agent}/` — do NOT delete
 - Ensure `.agent-review/.gitignore` exists before creating files
 
+## Definition of Done
+- All available agents executed (or gracefully failed with logged reason)
+- Prompts persisted in `.agent-review/{agent}/` for each agent
+- Raw results persisted in `.agent-review/{agent}/` (no cleanup)
+- Suggestions filtered by confidence >= 90 AND impact_percent > 2
+- Deduplicated suggestions returned to parent skill with verdict and agent_stats
+- `.agent-review/.gitignore` exists; `.agent-review/` added to project `.gitignore`
+
 ## Reference Files
 - **Agent delegation pattern:** `shared/references/agent_delegation_pattern.md`
 - **Prompt template:** `shared/agents/prompt_templates/story_review.md`

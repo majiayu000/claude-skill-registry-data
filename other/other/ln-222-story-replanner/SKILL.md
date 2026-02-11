@@ -5,6 +5,9 @@ description: Replans Stories when Epic requirements change. Compares IDEAL vs ex
 
 # Story Replanner
 
+## Purpose
+Replans existing Stories when Epic requirements change. Compares IDEAL plan vs existing Stories, categorizes operations (KEEP/UPDATE/OBSOLETE/CREATE), and executes changes in Linear. Invoked by ln-220-story-coordinator.
+
 Universal replanner worker for updating Stories in Epic when requirements change. Invoked by ln-220-story-coordinator (count ≥ 1).
 
 ## When Invoked

@@ -140,6 +140,23 @@ Receives `contextStore` with tech stack, codebase root.
 - **Audit scoring formula:** `shared/references/audit_scoring.md`
 - **Audit output schema:** `shared/references/audit_output_schema.md`
 
+## Critical Rules
+
+- **Do not auto-fix:** Report only, never delete code
+- **Age-aware severity:** Legacy shims >6 months = MEDIUM, <3 months = LOW
+- **Effort realism:** S = <1h, M = 1-4h, L = >4h
+- **Exclusions:** Skip generated code, vendor, migrations, test fixtures
+- **Git-aware:** Recommend deletion confidently -- git history preserves old code
+
+## Definition of Done
+
+- contextStore parsed
+- All 4 checks completed (unreachable code, unused imports/vars/functions, commented-out code, legacy shims)
+- Clean code checklist loaded from `shared/references/clean_code_checklist.md`
+- Findings collected with severity, location, effort, recommendation
+- Score calculated per `shared/references/audit_scoring.md`
+- JSON returned to coordinator
+
 ---
 **Version:** 3.0.0
 **Last Updated:** 2025-12-23

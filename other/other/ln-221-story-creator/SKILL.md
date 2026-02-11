@@ -5,6 +5,9 @@ description: Creates Stories from IDEAL plan (CREATE) or appends user-requested 
 
 # Story Creator
 
+## Purpose
+Creates Story documents in Linear from IDEAL plan (CREATE mode) or appends user-requested Stories to existing Epic (ADD mode). Invoked by ln-220-story-coordinator.
+
 Universal factory worker for creating Stories. Supports two modes:
 - **CREATE MODE**: Epic has no Stories → create from IDEAL plan (5-10 Stories)
 - **ADD MODE**: Epic has Stories → append new Story(s) from user request

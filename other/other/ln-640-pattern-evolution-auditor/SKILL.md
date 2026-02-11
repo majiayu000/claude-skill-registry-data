@@ -53,6 +53,16 @@ Task(description: "[Audit/Create] via ln-6XX",
 ```
 1. Load docs/project/patterns_catalog.md
    IF missing → create from shared/templates/patterns_template.md
+   IF exists → verify template conformance:
+     required_sections = ["Score Legend", "Pattern Inventory", "Discovered Patterns",
+       "Layer Boundary Status", "API Contract Status", "Quick Wins",
+       "Patterns Requiring Attention", "Pattern Recommendations",
+       "Excluded Patterns", "Summary"]
+     FOR EACH section IN required_sections:
+       IF section NOT found in catalog:
+         → Append section from shared/templates/patterns_template.md
+     Verify table columns match template (e.g., Recommendation in Quick Wins)
+     IF columns mismatch → update table headers, preserve existing data rows
 
 2. Load docs/reference/adrs/*.md → link patterns to ADRs
    Load docs/reference/guides/*.md → link patterns to Guides

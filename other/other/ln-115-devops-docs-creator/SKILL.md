@@ -118,5 +118,5 @@ Tables (env vars, ports, services) > Lists (setup steps) > Text
 - Questions: `references/questions_devops.md` (Q46-Q51)
 
 ---
-**Version:** 1.1.0 (Added NO_CODE, Stack Adaptation, Format Priority rules)
+**Version:** 1.1.0
 **Last Updated:** 2025-01-12

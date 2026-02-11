@@ -7,6 +7,10 @@ description: Creates test documentation (testing-strategy.md + tests/README.md).
 
 This skill creates and validates test documentation: testing-strategy.md (universal testing philosophy) + tests/README.md (test organization structure and Story-Level Test Task Pattern).
 
+## Purpose
+
+Creates and validates test documentation (testing-strategy.md + tests/README.md) establishing universal testing philosophy, Risk-Based Testing strategy, and Story-Level Test Task Pattern for any project.
+
 ## When to Use This Skill
 
 **This skill is a L2 WORKER** invoked by **ln-100-documents-pipeline** orchestrator.
@@ -17,7 +21,7 @@ This skill should be used directly when:
 - Setting up test philosophy and structure documentation for existing project
 - NOT creating full documentation structure (use ln-100-documents-pipeline for complete setup)
 
-## How It Works
+## Workflow
 
 The skill follows a 3-phase workflow: **CREATE** → **VALIDATE STRUCTURE** → **VALIDATE CONTENT**. Each phase builds on the previous, ensuring complete structure and semantic validation.
 
@@ -326,7 +330,17 @@ tests/
 
 ---
 
-## Reference Files Used
+## Critical Rules
+
+- **Documentation only:** This skill creates test DOCUMENTATION, NOT actual test code
+- **3-phase pipeline:** CREATE → VALIDATE STRUCTURE → VALIDATE CONTENT (no phase skipping)
+- **Auto-discovery first:** Scan test frameworks and directory structure before falling back to defaults
+- **Idempotent execution:** Checks existence before creation; re-validates on each run without duplication
+- **SCOPE tags required:** Both files must have `<!-- SCOPE: ... -->` tag in first 5 lines
+
+---
+
+## Reference Files
 
 - **Risk-based testing methodology:** `shared/references/risk_based_testing_guide.md`
 
@@ -451,5 +465,5 @@ Before completing work, verify ALL checkpoints:
 
 ---
 
-**Version:** 7.2.0 (Added tests/manual/results/ structure creation and .gitignore entry)
+**Version:** 7.2.0
 **Last Updated:** 2026-01-15

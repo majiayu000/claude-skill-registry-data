@@ -151,5 +151,5 @@ Tables > Mermaid/ASCII diagrams > Lists > Text
 - Questions: `references/questions_core.md` (Q23-Q38)
 
 ---
-**Version:** 2.2.0 (Added Stack Adaptation and Format Priority rules)
+**Version:** 2.2.0
 **Last Updated:** 2025-01-12

@@ -145,5 +145,15 @@ Task(description: "Dependency vulnerability scan via ln-625",
 
 ---
 
+## Critical Rules
+
+- **Always pass `mode=vulnerabilities_only` to ln-625** — full audit mode is not appropriate for bootstrap context
+- **Preserve existing configs** — if `.gitleaks.toml`, `SECURITY.md`, or `.pre-commit-config.yaml` exist, update rather than overwrite
+- **Use Task tool with `subagent_type: "general-purpose"`** for all worker delegations (context isolation)
+- **Never fail on missing tools** — log warnings for unavailable scanners, continue with available ones
+- **Critical findings block completion** — flag for immediate attention before returning to parent
+
+---
+
 **Version:** 3.0.0
 **Last Updated:** 2026-02-05

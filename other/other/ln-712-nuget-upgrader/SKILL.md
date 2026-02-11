@@ -226,5 +226,17 @@ Options:
 
 ---
 
+## Definition of Done
+
+- All .csproj files discovered (via solution or recursive scan)
+- Security audit completed (`dotnet list package --vulnerable`)
+- Outdated packages identified via dotnet-outdated
+- Breaking changes detected via breaking_changes_patterns.md and MCP tools
+- Upgrades applied in priority order (SDK > Framework > EF Core > other)
+- `dotnet restore`, `dotnet build`, `dotnet test` all pass
+- Report returned with projects updated, upgrades applied, and build/test status
+
+---
+
 **Version:** 1.1.0
 **Last Updated:** 2026-01-10

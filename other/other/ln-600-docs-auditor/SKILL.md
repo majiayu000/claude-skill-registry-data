@@ -113,6 +113,15 @@ FOR doc IN [CLAUDE.md, docs/README.md, docs/project/*.md]:
 - Size limits and targets: [references/size_limits.md](references/size_limits.md)
 - Detailed checklist: [references/audit_checklist.md](references/audit_checklist.md)
 
+## Definition of Done
+
+- All .md files in project scanned and hierarchy tree built from CLAUDE.md
+- Categories 1-7 (structural) audited with score X/10 each
+- Category 8 (semantic) delegated to ln-601 for each target document; scores collected
+- Overall Compliance Score calculated (average of 8 categories)
+- Critical Findings listed with file:line, category, and fix suggestion
+- Recommended Actions table generated with priority, action, location, category
+
 ## Critical Notes
 
 - **Fix content, not rules:** NEVER modify standards/rules files (*_standards.md, *_rules.md, *_limits.md) to make violations pass. Always fix the violating files instead.

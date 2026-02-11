@@ -37,5 +37,5 @@ Runs the existing test suite to ensure no regressions after implementation chang
 - Risk-based limits used downstream: `../shared/references/risk_based_testing_guide.md`
 
 ---
-**Version:** 3.1.0 (Added mandatory runbook.md reading before test execution)
+**Version:** 3.1.0
 **Last Updated:** 2026-01-09

@@ -131,6 +131,22 @@ Receives `contextStore` with tech stack, deployment type, codebase root.
 - **Audit scoring formula:** `shared/references/audit_scoring.md`
 - **Audit output schema:** `shared/references/audit_output_schema.md`
 
+## Critical Rules
+
+- **Do not auto-fix:** Report only, lifecycle changes risk downtime
+- **Deployment-aware:** Adapt probe checks to deployment type (Kubernetes = probes required, bare metal = optional)
+- **Effort realism:** S = <1h, M = 1-4h, L = >4h
+- **Exclusions:** Skip CLI tools and scripts (no long-running lifecycle), skip serverless functions (platform-managed lifecycle)
+- **Initialization order matters:** Flag DB usage before DB init as HIGH regardless of context
+
+## Definition of Done
+
+- contextStore parsed (deployment type identified)
+- All 5 checks completed (bootstrap order, graceful shutdown, resource cleanup, signal handling, probes)
+- Findings collected with severity, location, effort, recommendation
+- Score calculated per `shared/references/audit_scoring.md`
+- JSON returned to coordinator
+
 ---
 **Version:** 3.0.0
 **Last Updated:** 2025-12-23

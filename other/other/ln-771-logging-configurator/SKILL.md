@@ -226,5 +226,24 @@ This skill is idempotent:
 
 ---
 
+## Critical Rules
+
+- **Use MCP ref/Context7 for current API** — do not hardcode Serilog/structlog config from memory
+- **Idempotent** — if Serilog or structlog already configured, return `status: "skipped"` immediately
+- **Environment-aware log levels** — Debug for Development, Information for Production (never Warning default)
+- **Always include correlation ID enrichment** — required for distributed tracing
+- **Return structured response** — `files_created`, `packages_added`, `registration_code` for coordinator aggregation
+
+## Definition of Done
+
+- Context Store received and validated (stack, framework, version)
+- Best practices researched via MCP tools for target stack
+- User decisions collected (format, enrichment, sinks, log levels)
+- Configuration files generated (extensions/config + appsettings or Python modules)
+- Syntax validated (`dotnet build` or `py_compile`)
+- Structured JSON response returned to ln-770 coordinator
+
+---
+
 **Version:** 2.0.0
 **Last Updated:** 2026-01-10

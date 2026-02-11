@@ -203,5 +203,25 @@ app.add_exception_handler(RequestValidationError, validation_exception_handler)
 
 ---
 
+## Critical Rules
+
+- **Use ProblemDetails (RFC 7807) by default** — standardized error response format
+- **Hide stack traces in Production** — environment-aware detail level is mandatory
+- **Use MCP ref for current patterns** — do not hardcode middleware from memory
+- **Idempotent** — if `GlobalExceptionMiddleware` or `exception_handlers.py` exists, return `status: "skipped"`
+- **Map all custom exceptions to HTTP status codes** — no unhandled exception types reaching the client
+
+## Definition of Done
+
+- Context Store received (stack, framework, environment)
+- Error handling patterns researched via MCP tools
+- GlobalExceptionMiddleware generated (.NET) or exception handlers generated (Python)
+- Custom exception classes created (AppException, ValidationException, NotFoundException)
+- Error response model created (ProblemDetails format)
+- Syntax validated (`dotnet build` or `py_compile`)
+- Structured JSON response returned to ln-770 coordinator
+
+---
+
 **Version:** 2.0.0
 **Last Updated:** 2026-01-10

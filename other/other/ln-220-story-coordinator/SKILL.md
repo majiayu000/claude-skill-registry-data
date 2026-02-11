@@ -7,6 +7,10 @@ description: CREATE/REPLAN Stories for Epic (5-10 Stories). Delegates ln-001-sta
 
 Universal Story management coordinator that delegates CREATE/REPLAN operations to specialized workers after building IDEAL Story plan.
 
+## Purpose
+
+Coordinates Story creation (CREATE), replanning (REPLAN), and appending (ADD) for a given Epic, producing 5-10 User Stories with standards research, Decompose-First Pattern, and delegation to ln-221/ln-222 workers.
+
 ## When to Use This Skill
 
 Use when:
@@ -31,7 +35,7 @@ Use when:
 
 **MANDATORY READ:** Load `shared/references/creation_quality_checklist.md` §Story Creation Checklist for validation criteria that ln-310 will enforce.
 
-## How It Works
+## Workflow
 
 ### Phase 1: Context Assembly
 
@@ -357,6 +361,16 @@ Mark each as in_progress when starting, completed when done.
 
 ---
 
+## Critical Rules
+
+- **Decompose-First:** Build IDEAL Story plan before checking existing Stories (prevents anchoring to suboptimal structure)
+- **Vertical slicing only:** Each Story = one user journey end-to-end (UI -> API -> Service -> DB); no horizontal/technical-only Stories
+- **Standards research before generation:** Phase 2 (ln-001) must complete before Story documents are created; results go into all Story Technical Notes
+- **Orchestrator loads metadata only:** ID, title, status (~50 tokens per Story); workers load full descriptions (~5,000 tokens) when needed
+- **Test Strategy section left empty:** Tests are planned later by test planner, not at Story creation time
+
+---
+
 ## Integration with Ecosystem
 
 **Calls:**
@@ -484,5 +498,5 @@ Mark each as in_progress when starting, completed when done.
 
 ---
 
-**Version:** 5.0.0 (BREAKING: Added AC Quality Validation in Phase 3 (completeness: happy path + errors + edge cases; specificity: HTTP codes + timing). Updated INVEST Independent criterion with forward dependency check. Added Database Creation Principle to Story Grouping Guidelines per BMAD Method best practices.)
+**Version:** 5.0.0
 **Last Updated:** 2026-02-03

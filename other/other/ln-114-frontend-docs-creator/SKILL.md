@@ -104,5 +104,5 @@ Tables (colors, typography, spacing) > Lists (component inventory) > Text
 - Questions: `references/questions_frontend.md` (Q43-Q45)
 
 ---
-**Version:** 1.1.0 (Added NO_CODE, Stack Adaptation, Format Priority rules)
+**Version:** 1.1.0
 **Last Updated:** 2025-01-12

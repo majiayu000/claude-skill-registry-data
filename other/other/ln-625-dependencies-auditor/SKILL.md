@@ -188,6 +188,22 @@ Receives `contextStore` with tech stack, package manifest paths, codebase root.
 | `shared/references/audit_scoring.md` | Audit scoring formula |
 | `shared/references/audit_output_schema.md` | Audit output schema |
 
+## Critical Rules
+
+- **Do not auto-fix:** Report only, never modify package manifests or lock files
+- **Mode-aware execution:** In `vulnerabilities_only` mode, skip checks 1-4 entirely
+- **Effort realism:** S = <1h, M = 1-4h, L = >4h
+- **CVSS-based severity:** Map vulnerability severity strictly via `shared/references/cvss_severity_mapping.md`
+- **Exclusions:** Skip devDependencies for vulnerability severity escalation, skip vendored/bundled deps
+
+## Definition of Done
+
+- contextStore parsed (including mode parameter)
+- All applicable checks completed (5 for full, 1 for vulnerabilities_only)
+- Findings collected with severity, location, effort, fix_type, recommendation
+- Score calculated per `shared/references/audit_scoring.md`
+- JSON returned to coordinator
+
 ---
 **Version:** 4.0.0
 **Last Updated:** 2026-02-05

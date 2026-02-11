@@ -7,6 +7,10 @@ description: CREATE/REPLAN Epics from scope (3-7 Epics). Batch Preview + Auto-ex
 
 Universal Epic management coordinator that handles both creation and replanning through scope decomposition.
 
+## Purpose
+
+Coordinates Epic creation (CREATE) and replanning (REPLAN) from scope decomposition, producing 3-7 Linear Projects with batch preview, auto-extraction from docs/HTML, and Decompose-First Pattern.
+
 ## When to Use This Skill
 
 This skill should be used when:
@@ -48,7 +52,7 @@ Auto-discovers Team ID and Next Epic Number from `docs/tasks/kanban_board.md`:
 - **Team ID:** Reads Linear Configuration table → Fallback: Ask user directly
 - **Next Epic Number:** Reads Next Epic Number field → Fallback: Ask user directly
 
-**Details:** See CLAUDE.md sections "Configuration Auto-Discovery" and "Linear Integration".
+**MANDATORY READ:** Load `CLAUDE.md` — sections "Configuration Auto-Discovery" and "Linear Integration".
 
 **Step 2: Project Research**
 
@@ -390,6 +394,16 @@ Next Steps:
 5. Execute operations in Linear + update kanban_board.md
 
 **Constraints:** Never auto-update/archive Epics with Stories In Progress. Never delete (use archived). Always require confirmation.
+
+---
+
+## Critical Rules
+
+- **Decompose-First:** Always build IDEAL Epic plan before checking existing Epics (prevents anchoring to outdated structure)
+- **Epic 0 reserved for Infrastructure:** Business domains start from Epic 1; Epic 0 auto-proposed when new project, multi-stack, or infra requirements detected
+- **Auto-extract before asking:** Extract Q1-Q5 from docs (requirements.md, architecture.md, tech_stack.md) + HTML; ask user only for missing info in a single batch
+- **Never auto-update Epics with In Progress Stories:** REPLAN mode requires user confirmation; Epics with active Stories get warnings, not silent changes
+- **Linear title format:** "Epic {Next Epic Number}: {Domain Title}" — sequential numbering from kanban_board.md
 
 ---
 

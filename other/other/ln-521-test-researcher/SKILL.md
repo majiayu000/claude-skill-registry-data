@@ -153,5 +153,5 @@ _This research informs both manual tests (ln-522) and automated tests (ln-523)._
 
 ---
 
-**Version:** 1.0.0 (Initial release - extracted from ln-522-manual-tester Phase 0)
+**Version:** 1.0.0
 **Last Updated:** 2026-01-15

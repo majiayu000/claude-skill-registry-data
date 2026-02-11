@@ -183,6 +183,23 @@ Decision: REVIEW (if E2E covers, remove; else keep)
 
 **Note:** Tests with Usefulness Score ≥15 (KEEP) are NOT included in findings — only issues are reported.
 
+## Critical Rules
+
+- **Do not auto-fix:** Report only
+- **Effort realism:** S = <1h, M = 1-4h, L = >4h
+- **Score objectivity:** Base Impact and Probability on code analysis, not assumptions
+- **KEEP tests not reported:** Only REVIEW and REMOVE decisions appear in findings
+- **Cross-reference E2E:** REVIEW decisions depend on whether E2E already covers the scenario
+
+## Definition of Done
+
+- contextStore parsed (Impact/Probability matrices, test file list)
+- Usefulness Score calculated for each test (Impact x Probability)
+- Decisions classified: KEEP (>=15), REVIEW (10-14), REMOVE (<10)
+- Findings collected with severity, location, effort, recommendation
+- Score calculated per `shared/references/audit_scoring.md`
+- JSON returned to coordinator
+
 ## Reference Files
 
 - **Audit scoring formula:** `shared/references/audit_scoring.md`

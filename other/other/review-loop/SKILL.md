@@ -19,10 +19,9 @@ First, check if `code-simplifier:code-simplifier` subagent is available in your 
 **If code-simplifier IS available:**
 ```
 TaskCreate(subject: "Simplify code", description: "Run code-simplifier before review", activeForm: "Simplifying code")
-TaskCreate(subject: "Iteration 1: Review", description: "Review and fix", activeForm: "Running iteration 1", metadata: {"iteration": 1, "of": 4})
-TaskCreate(subject: "Iteration 2: Review", description: "Review and fix", activeForm: "Running iteration 2", metadata: {"iteration": 2, "of": 4})
-TaskCreate(subject: "Iteration 3: Review", description: "Review and fix", activeForm: "Running iteration 3", metadata: {"iteration": 3, "of": 4})
-TaskCreate(subject: "Iteration 4: Review", description: "Review and fix", activeForm: "Running iteration 4", metadata: {"iteration": 4, "of": 4})
+TaskCreate(subject: "Iteration 1: Review", description: "Review and fix", activeForm: "Running iteration 1", metadata: {"iteration": 1, "of": 3})
+TaskCreate(subject: "Iteration 2: Review", description: "Review and fix", activeForm: "Running iteration 2", metadata: {"iteration": 2, "of": 3})
+TaskCreate(subject: "Iteration 3: Review", description: "Review and fix", activeForm: "Running iteration 3", metadata: {"iteration": 3, "of": 3})
 ```
 
 Then set dependencies (ITER1 blocked by SIMPLIFY):
@@ -30,23 +29,20 @@ Then set dependencies (ITER1 blocked by SIMPLIFY):
 TaskUpdate(taskId: ITER1, addBlockedBy: [SIMPLIFY])
 TaskUpdate(taskId: ITER2, addBlockedBy: [ITER1])
 TaskUpdate(taskId: ITER3, addBlockedBy: [ITER2])
-TaskUpdate(taskId: ITER4, addBlockedBy: [ITER3])
 TaskUpdate(taskId: SIMPLIFY, status: "in_progress")
 ```
 
 **If code-simplifier is NOT available:**
 ```
-TaskCreate(subject: "Iteration 1: Review", description: "Review and fix", activeForm: "Running iteration 1", metadata: {"iteration": 1, "of": 4})
-TaskCreate(subject: "Iteration 2: Review", description: "Review and fix", activeForm: "Running iteration 2", metadata: {"iteration": 2, "of": 4})
-TaskCreate(subject: "Iteration 3: Review", description: "Review and fix", activeForm: "Running iteration 3", metadata: {"iteration": 3, "of": 4})
-TaskCreate(subject: "Iteration 4: Review", description: "Review and fix", activeForm: "Running iteration 4", metadata: {"iteration": 4, "of": 4})
+TaskCreate(subject: "Iteration 1: Review", description: "Review and fix", activeForm: "Running iteration 1", metadata: {"iteration": 1, "of": 3})
+TaskCreate(subject: "Iteration 2: Review", description: "Review and fix", activeForm: "Running iteration 2", metadata: {"iteration": 2, "of": 3})
+TaskCreate(subject: "Iteration 3: Review", description: "Review and fix", activeForm: "Running iteration 3", metadata: {"iteration": 3, "of": 3})
 ```
 
 Then set dependencies and start:
 ```
 TaskUpdate(taskId: ITER2, addBlockedBy: [ITER1])
 TaskUpdate(taskId: ITER3, addBlockedBy: [ITER2])
-TaskUpdate(taskId: ITER4, addBlockedBy: [ITER3])
 TaskUpdate(taskId: ITER1, status: "in_progress")
 ```
 
@@ -98,17 +94,31 @@ digraph review_loop {
 
 ## Step 2: Get Config
 
-If args provided, use them. Otherwise:
+Capture three values — user args override setup.sh defaults:
+
+| Variable | Source | Description |
+|----------|--------|-------------|
+| `REPO_PATH` | args or `pwd` | Repository root to operate in |
+| `TARGET_BRANCH` | args or PR/git detection | Branch to diff against |
+| `REVIEW_DIR` | setup.sh | Temp directory for review files |
+
+If args provided (e.g., `/review-loop path=/some/repo target=main`), use them. Otherwise run:
 ```
 ~/.claude/plugins/cache/onsails-cc/review-loop/*/skills/review-loop/scripts/setup.sh
 ```
+
+**All subagents MUST receive REPO_PATH.** Subagents inherit the session's original cwd, not the current shell cwd.
 
 ## Step 2.5: Code Simplification (if available)
 
 If `code-simplifier:code-simplifier` subagent is available, dispatch it to simplify code changes between current branch and TARGET_BRANCH:
 ```
 Task(subagent_type: "code-simplifier:code-simplifier",
-     prompt: "Simplify code changes between HEAD and ${TARGET_BRANCH}. Focus only on files modified in this branch.")
+     prompt: "REPO_PATH: ${REPO_PATH}
+TARGET_BRANCH: ${TARGET_BRANCH}
+
+cd to REPO_PATH first. Simplify code changes between HEAD and TARGET_BRANCH.
+Focus only on files modified in this branch.")
 TaskUpdate(taskId: SIMPLIFY, status: "completed")
 ```
 
@@ -120,7 +130,11 @@ TaskUpdate(taskId: SIMPLIFY, status: "completed")
 4. Dispatch reviewer:
    ```
    Task(subagent_type: "review-loop:local-reviewer",
-        prompt: "OUTPUT: ${REVIEW_DIR}/iterN.md\nTARGET: ${TARGET_BRANCH}")
+        prompt: "REPO_PATH: ${REPO_PATH}
+OUTPUT: ${REVIEW_DIR}/iterN.md
+TARGET_BRANCH: ${TARGET_BRANCH}
+
+cd to REPO_PATH first.")
    ```
    **Reviewer returns a summary.** Display it to user.
 5. **Read findings and triage (YOU do this, not a subagent):**
@@ -149,15 +163,18 @@ TaskUpdate(taskId: SIMPLIFY, status: "completed")
    TaskUpdate(taskId: FIX_TASK, status: "in_progress")
    Task(subagent_type: "general-purpose",
         description: "Fix: [issue title]",
-        prompt: "Fix this specific issue:
+        prompt: "REPO_PATH: ${REPO_PATH}
 
+cd to REPO_PATH first.
+
+Fix this specific issue:
    File: [file]:[line]
    Issue: [description]
    Severity: [severity]
 
-   Make minimal changes to fix ONLY this issue.
-   Do not fix other issues. Do not refactor surrounding code.
-   Run relevant tests after fixing if test infrastructure exists.")
+Make minimal changes to fix ONLY this issue.
+Do not fix other issues. Do not refactor surrounding code.
+Run relevant tests after fixing if test infrastructure exists.")
    TaskUpdate(taskId: FIX_TASK, status: "completed")
    ```
 
@@ -181,7 +198,7 @@ Is ${metadata.iteration} < ${metadata.of}?
 
 **DO NOT STOP after fixes complete.** Fixing is a sub-step, not the end of the loop.
 
-**WHY 4+ iterations are mandatory:**
+**WHY 3 iterations are mandatory:**
 - Reviewers find different issues on different passes
 - Fixes may introduce new problems
 - Context builds across iterations
@@ -194,11 +211,11 @@ Is ${metadata.iteration} < ${metadata.of}?
 
 ## Step 4: Completion
 
-After 4+ iterations with no critical/major:
+After 3 iterations with no critical/major:
 
 1. **Mark final iteration task completed:**
    ```
-   TaskUpdate(taskId: ITER4, status: "completed")
+   TaskUpdate(taskId: ITER3, status: "completed")
    ```
 
 2. **Verify all tasks completed:**
@@ -222,15 +239,15 @@ After 4+ iterations with no critical/major:
 | "I know what review-loop does" | You pattern-matched. Read the skill. TaskCreate FIRST. |
 | "Let me run setup first" | NO. TaskCreate comes before setup.sh |
 | "I'll create tasks after starting" | NO. Tasks FIRST, always. |
-| "Two iterations enough" | NO. Minimum 4. |
+| "Two iterations enough" | NO. Minimum 3. |
 | "I'll fix this quickly" | NO. Dispatch a fix subagent per issue. |
 | "I'll batch all fixes in one subagent" | NO. One Task per fix. Never batch. |
 | "I'll dispatch fix coordinator" | NO. YOU triage and dispatch fix subagents directly. |
 | "Would you like me to..." | NO. Never ask. Execute. |
 | "Skip code-simplifier, it's optional" | Check availability first. If available, run it. |
-| "No issues found, stopping early" | NO. Reviewers find different issues each pass. Run all 4. |
+| "No issues found, stopping early" | NO. Reviewers find different issues each pass. Run all 3. |
 | "All were false-positives, done" | NO. Next iteration may find real issues. Continue. |
-| "Code is clean after iteration 1" | NO. Run all 4 iterations. First pass misses subtle issues. |
+| "Code is clean after iteration 1" | NO. Run all 3 iterations. First pass misses subtle issues. |
 | "Fixes done, I'm done" | NO. Fixing is a sub-step. Go to CHECKPOINT, check iteration count. |
 
 ## Red Flags - STOP IMMEDIATELY
@@ -243,7 +260,7 @@ If you catch yourself:
 - Batching multiple fixes into one subagent → STOP
 - Asking permission → STOP
 - Skipping code-simplifier without checking availability → STOP
-- Stopping before iteration 4 because "no issues" → STOP
+- Stopping before iteration 3 because "no issues" → STOP
 - Skipping iterations because "all false-positives" → STOP
 - **Ending response after fixes complete** → STOP (go to CHECKPOINT)
 - **Not checking metadata.iteration after fixes** → STOP (read the task, check the count)
@@ -254,7 +271,7 @@ If you catch yourself:
 
 1. TaskCreate BEFORE anything else
 2. Check code-simplifier availability, run if present
-3. MINIMUM 4 review iterations
+3. MINIMUM 3 review iterations
 4. ONLY Task tool on code (dispatch subagents)
 5. SEQUENTIAL iterations
 6. ONE fix subagent per issue — never batch

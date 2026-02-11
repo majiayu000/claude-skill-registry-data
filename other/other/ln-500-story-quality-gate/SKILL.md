@@ -162,5 +162,5 @@ Skill(skill: "ln-520-test-planner", args: "{storyId}")
 - **Risk-based testing:** `shared/references/risk_based_testing_guide.md`
 
 ---
-**Version:** 7.0.0 (BREAKING: Split into thin orchestrator ln-500 + quality coordinator ln-510)
+**Version:** 7.0.0
 **Last Updated:** 2026-02-09

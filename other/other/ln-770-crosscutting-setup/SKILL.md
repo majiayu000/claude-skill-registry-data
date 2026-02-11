@@ -237,5 +237,27 @@ This skill is idempotent:
 
 ---
 
+## Critical Rules
+
+- **Skip already configured concerns** — Phase 2 detection must gate worker invocation (set `skip: true`)
+- **Pass Context Store to every worker** — workers depend on `STACK`, `FRAMEWORK`, `PROJECT_ROOT`
+- **Generate aggregation file only for workers that ran** — do not add registration calls for skipped concerns
+- **Support only .NET and Python** — detect via `*.csproj` or `pyproject.toml`/`requirements.txt` + FastAPI
+- **Idempotent execution** — re-running must not duplicate configs or break existing setup
+
+## Definition of Done
+
+- Project stack detected and stored in Context Store
+- Existing configurations detected (Phase 2 complete)
+- All unconfigured concerns delegated to workers (ln-771 through ln-775)
+- Aggregation entry point generated (`ServiceExtensions.cs` or `middleware/__init__.py`)
+- Summary report displayed with configured/skipped concerns and package install commands
+
+## Reference Files
+
+- Worker skills: `ln-771-logging-configurator/SKILL.md` through `ln-775-api-docs-generator/SKILL.md`
+
+---
+
 **Version:** 2.0.0
 **Last Updated:** 2026-01-10

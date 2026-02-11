@@ -82,6 +82,16 @@ agent_stats:
 - **Persist** prompts and results in `.agent-review/{agent}/` — do NOT delete
 - Ensure `.agent-review/.gitignore` exists before creating files
 
+## Definition of Done
+
+- Health check executed; available agents identified (or SKIPPED returned if none)
+- Story + Done implementation Tasks fetched from Linear (or local files)
+- `.agent-review/` directory created with `.gitignore` and per-agent subdirs
+- Prompt built from template with story/task references, saved per agent
+- All available agents executed in parallel; raw results saved to `.agent-review/{agent}/`
+- Suggestions aggregated, deduplicated by (area, issue), filtered (confidence >= 90, impact > 2%)
+- JSON result returned to parent skill with verdict, suggestions list, and agent_stats
+
 ## Reference Files
 - **Agent delegation pattern:** `shared/references/agent_delegation_pattern.md`
 - **Prompt template:** `shared/agents/prompt_templates/code_review.md`

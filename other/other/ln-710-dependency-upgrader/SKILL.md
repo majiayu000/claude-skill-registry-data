@@ -227,5 +227,17 @@ Options:
 
 ---
 
+## Definition of Done
+
+- Pre-flight checks passed (clean git state, backup branch created)
+- All package managers detected from indicator files
+- Security audit completed per manager (critical vulns block upgrade)
+- Workers delegated via Task tool with context isolation
+- Worker results collected with upgrade/skip/fail counts
+- Build verified after all upgrades applied
+- Summary report generated with totalPackages, upgraded, skipped, failed, buildVerified
+
+---
+
 **Version:** 1.1.0
 **Last Updated:** 2026-01-10

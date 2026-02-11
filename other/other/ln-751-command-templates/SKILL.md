@@ -62,5 +62,30 @@ Common variables:
 
 ---
 
+## Critical Rules
+
+- **Template-driven only:** All output generated from `references/` templates, never freeform
+- **Full substitution:** Every `{{VARIABLE}}` must be replaced; fail if any placeholder unresolved
+- **Write to correct path:** Output always goes to `.claude/commands/`, never elsewhere
+- **No template modification:** Templates in `references/` are read-only; only output files are written
+
+## Definition of Done
+
+- Template loaded from `references/{template}.md`
+- All `{{VARIABLE}}` placeholders substituted with values from ln-750
+- Output written to `.claude/commands/{command}.md`
+- Success/failure reported back to coordinator
+
+## Reference Files
+
+- **refresh_context_template.md:** [references/refresh_context_template.md](references/refresh_context_template.md)
+- **refresh_infrastructure_template.md:** [references/refresh_infrastructure_template.md](references/refresh_infrastructure_template.md)
+- **build_and_test_template.md:** [references/build_and_test_template.md](references/build_and_test_template.md)
+- **ui_testing_template.md:** [references/ui_testing_template.md](references/ui_testing_template.md)
+- **deploy_template.md:** [references/deploy_template.md](references/deploy_template.md)
+- **database_ops_template.md:** [references/database_ops_template.md](references/database_ops_template.md)
+
+---
+
 **Version:** 2.0.0
 **Last Updated:** 2026-01-10

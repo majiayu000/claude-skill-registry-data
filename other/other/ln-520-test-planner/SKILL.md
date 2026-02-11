@@ -146,5 +146,5 @@ Task(description: "[Phase N] test planning via ln-52X",
 
 ---
 
-**Version:** 4.0.0 (Refactored to Orchestrator pattern - delegates to ln-521/522/523 workers)
+**Version:** 4.0.0
 **Last Updated:** 2026-01-15

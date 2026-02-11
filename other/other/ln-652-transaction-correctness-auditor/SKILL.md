@@ -187,6 +187,11 @@ Return JSON to coordinator:
 - Score calculated
 - JSON returned to coordinator
 
+## Reference Files
+
+- **Audit scoring formula:** `shared/references/audit_scoring.md`
+- **Audit output schema:** `shared/references/audit_output_schema.md`
+
 ---
 **Version:** 1.0.0
 **Last Updated:** 2026-02-04

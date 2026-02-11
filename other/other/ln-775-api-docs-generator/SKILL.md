@@ -245,5 +245,25 @@ security = HTTPBearer()
 
 ---
 
+## Critical Rules
+
+- **Use MCP ref for current Swashbuckle/FastAPI API** — do not hardcode configuration from memory
+- **Auto-detect auth scheme** — scan for JWT, OAuth2, or API Key and configure security definition accordingly
+- **Enable XML documentation in .NET** — update csproj with `GenerateDocumentationFile` and suppress warning 1591
+- **FastAPI: customize, not replace** — built-in OpenAPI works by default, only add custom schema/security
+- **Idempotent** — if `AddSwaggerGen`/`UseSwagger` exists, return `status: "skipped"`
+
+## Definition of Done
+
+- Context Store received (stack, project root)
+- API structure analyzed (controllers/routers, auth method, versioning)
+- Documentation standards researched via MCP tools
+- Swagger/OpenAPI configuration generated with API info and security scheme
+- XML comments enabled (.NET) or custom OpenAPI schema configured (Python)
+- Syntax validated (`dotnet build` or `py_compile`)
+- Structured JSON response returned to ln-770 coordinator
+
+---
+
 **Version:** 2.0.0
 **Last Updated:** 2026-01-10

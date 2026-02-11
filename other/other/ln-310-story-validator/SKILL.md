@@ -99,7 +99,7 @@ Phase 6: Approve & Notify
   - Display tabular output to terminal
 ```
 
-## Workflow Overview
+## Workflow
 
 ### Phase 1: Discovery & Loading
 
@@ -306,6 +306,13 @@ Output explicit mapping:
 
 Verify all 19 criteria (#1-#19) from Auto-Fix Actions pass with concrete evidence (doc path, MCP result, Linear update) before proceeding to Phase 6.
 
+## Critical Rules
+- All 19 criteria MUST be verified with concrete evidence (doc path, MCP result, Linear update) before Phase 6 (Self-Audit Protocol)
+- Fix execution order is strict: Structural -> Standards -> Solution -> Workflow -> Quality -> Dependencies -> Traceability (standards before YAGNI/KISS)
+- Never approve with Penalty Points > 0; all violations must be auto-fixed to zero
+- Test Strategy section must exist but remain empty (testing handled separately by other skills)
+- In Plan Mode, MUST stop after Phase 3 and wait for user approval before applying any fixes
+
 ## Definition of Done
 
 - Phases 1-6 completed: metadata loaded, research done, penalties calculated, fixes applied, agent review done, Story approved.
@@ -377,5 +384,5 @@ Verify all 19 criteria (#1-#19) from Auto-Fix Actions pass with concrete evidenc
 - **Linear integration:** `../shared/templates/linear_integration.md`
 
 ---
-**Version:** 7.0.0 (BREAKING: Added 2 new criteria #18-#19 for Story/Task dependencies per BMAD Method. Expanded criterion #4 with AC completeness/specificity, #9 with Database Creation Principle, #13 with forward dependency checks, #17 with STRONG/WEAK/MISSING coverage quality. Total 19 criteria, max 60 penalty points.)
+**Version:** 7.0.0
 **Last Updated:** 2026-02-03

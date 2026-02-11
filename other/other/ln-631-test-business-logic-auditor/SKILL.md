@@ -155,6 +155,22 @@ Receives `contextStore` with framework detection patterns, tech stack, test file
 }
 ```
 
+## Critical Rules
+
+- **Do not auto-fix:** Report only
+- **Framework-specific patterns:** Match detection patterns to project's actual tech stack
+- **Effort realism:** S = <1h, M = 1-4h, L = >4h
+- **Context-aware:** Custom wrappers around libraries (e.g., custom hook using useState) are OUR code — do not flag
+- **Exclude test helpers:** Do not flag shared test utilities that import libraries for mocking setup
+
+## Definition of Done
+
+- contextStore parsed (tech_stack, framework detection patterns, test file list)
+- All 6 checks completed (framework, ORM, crypto, JWT, HTTP client, React hooks)
+- Findings collected with severity, location, effort, recommendation
+- Score calculated per `shared/references/audit_scoring.md`
+- JSON returned to coordinator
+
 ## Reference Files
 
 - **Audit scoring formula:** `shared/references/audit_scoring.md`

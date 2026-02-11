@@ -88,6 +88,15 @@ Audit code comments and docstrings quality. Universal for any tech stack.
 
 - Comment rules and patterns: [references/comments_rules.md](references/comments_rules.md)
 
+## Definition of Done
+
+- All source files scanned (tech stack auto-detected)
+- Inline comments and docstrings/JSDoc extracted and parsed
+- All 6 categories audited with score X/10 each (WHY-not-WHAT, Density, Forbidden, Docstrings, Actuality, Legacy)
+- Comment-to-code density ratio calculated and compared against 15-20% target
+- Critical Findings listed with file:line, category, and fix suggestion
+- Recommended Actions table generated with priority, action, location, category
+
 ## Critical Notes
 
 - **Fix code, not rules:** NEVER modify rules files (*_rules.md, *_standards.md) to make violations pass. Always fix the code instead.

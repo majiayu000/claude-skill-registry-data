@@ -203,5 +203,17 @@ Options:
 
 ---
 
+## Definition of Done
+
+- Package manager detected (pip/poetry/pipenv) from indicator files
+- Security audit completed (pip-audit/poetry audit/pipenv check)
+- Outdated packages identified and listed
+- Upgrades applied with requirements.txt/pyproject.toml updated
+- Breaking changes handled via MCP migration guides
+- Import tests and pytest pass after upgrades
+- Report returned with upgrades applied and verification status
+
+---
+
 **Version:** 1.1.0
 **Last Updated:** 2026-01-10

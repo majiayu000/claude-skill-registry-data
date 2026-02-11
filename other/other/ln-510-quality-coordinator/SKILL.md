@@ -128,5 +128,5 @@ issues:
 - Tech stack/linters: `docs/project/tech_stack.md`
 
 ---
-**Version:** 7.0.0 (BREAKING: Simplified to single-pass quality coordinator. Pass 2 test verification moved to ln-500.)
+**Version:** 7.0.0
 **Last Updated:** 2026-02-09

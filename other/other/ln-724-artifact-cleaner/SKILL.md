@@ -319,5 +319,16 @@ Claude: Invokes ln-724-artifact-cleaner
 
 ---
 
+## Definition of Done
+
+- At least one platform detected (Replit/StackBlitz/CodeSandbox/Glitch)
+- All platform artifacts scanned and previewed to user
+- User confirmation received before any deletions
+- Platform files, directories, dependencies, build config, and comments cleaned
+- .gitignore entries for platform files removed
+- Cleanup report generated with deleted/modified file counts
+
+---
+
 **Version:** 2.0.0
 **Last Updated:** 2026-02-07

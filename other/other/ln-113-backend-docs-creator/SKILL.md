@@ -106,5 +106,5 @@ Tables (endpoints, schemas) > Mermaid (ER diagrams) > Lists > Text
 - Questions: `references/questions_backend.md` (Q39-Q42)
 
 ---
-**Version:** 1.2.0 (Added Stack Adaptation and Format Priority rules)
+**Version:** 1.2.0
 **Last Updated:** 2025-01-12

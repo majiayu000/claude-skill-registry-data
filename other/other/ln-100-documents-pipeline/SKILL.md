@@ -7,6 +7,10 @@ description: "Top orchestrator for complete doc system. Delegates to ln-110 coor
 
 This skill orchestrates the creation of a complete documentation system by invoking L2 coordinator + 4 L2 workers. The coordinator (ln-110) delegates to 5 L3 workers for project docs; other L2 workers handle reference/tasks/test/presentation domains. Each component validates its own output.
 
+## Purpose
+
+Top-level orchestrator that creates a complete project documentation system in one invocation. Chains ln-110 coordinator + ln-120/130/140/150 workers sequentially, then runs global cleanup (deduplication, orphan archival, cross-link validation).
+
 ## Architecture
 
 ```
@@ -43,7 +47,7 @@ This skill should be used when:
 
 **Note**: Each worker now validates its own output in Phase 2/3. Orchestrator handles global operations only.
 
-## How It Works
+## Workflow
 
 The skill follows a 7-phase orchestration workflow: **Legacy Migration (optional)** → User confirmation → Invoke coordinator + 4 workers sequentially → Global cleanup → **Documentation Audit (optional)** → Summary. Phase 3 (validation) is intentionally skipped - each component validates its own output.
 
@@ -640,6 +644,20 @@ If any invoked skill fails:
 
 ---
 
+## Critical Rules
+
+- **Idempotent:** Creates only missing files; existing files are preserved without overwrite
+- **Sequential invocation:** Workers must be invoked in order (ln-110 -> ln-120 -> ln-130 -> ln-140 -> ln-150); each verified before next
+- **Global cleanup mandatory:** Phase 4 (deduplication, orphan archival, SSoT consolidation, cross-link validation) runs after all workers complete
+- **User confirmation required:** Pre-flight check and explicit approval before any file creation
+- **NO_CODE Rule:** All generated documents use tables/ASCII/links; no code blocks >5 lines
+
+## Reference Files
+
+- Legacy detection patterns: `references/legacy_detection_patterns.md`
+- Worker skills: `ln-110-project-docs-coordinator`, `ln-120-reference-docs-creator`, `ln-130-tasks-docs-creator`, `ln-140-test-docs-creator`, `ln-150-presentation-creator`
+- Audit skills (optional): `ln-600-docs-auditor`, `ln-610-code-comments-auditor`
+
 ## Definition of Done
 
 Before completing work, verify ALL checkpoints:
@@ -700,5 +718,5 @@ Before completing work, verify ALL checkpoints:
 
 ---
 
-**Version:** 8.1.0 (Added Documentation Standards section with NO_CODE, Stack Adaptation, Format Priority rules)
+**Version:** 8.1.0
 **Last Updated:** 2025-01-12

@@ -231,5 +231,5 @@ Formula: `Code Quality Score = 100 - metric_penalties - issue_penalties`
 - Agent delegation: `shared/references/agent_delegation_pattern.md`
 
 ---
-**Version:** 5.0.0 (Added 3-level MCP Ref validation: Optimality, Best Practices, Performance with PERF-ALG/CFG/PTN/DB subcategories)
+**Version:** 5.0.0
 **Last Updated:** 2026-01-29

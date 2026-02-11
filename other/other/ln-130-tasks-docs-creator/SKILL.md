@@ -7,6 +7,10 @@ description: Creates task management documentation (docs/tasks/README.md + kanba
 
 This skill creates task management documentation: docs/tasks/README.md (task management system rules) and docs/tasks/kanban_board.md (Linear integration with Epic Story Counters).
 
+## Purpose
+
+Create and validate task management documentation (docs/tasks/). Generates README.md with workflow rules and kanban_board.md with Linear integration, including interactive setup for team UUID/Key configuration.
+
 ## When to Use This Skill
 
 **This skill is a L2 WORKER** invoked by **ln-100-documents-pipeline** orchestrator OR used standalone.
@@ -19,7 +23,7 @@ Use this skill when:
 
 **Part of workflow**: ln-100-documents-pipeline → ln-110-project-docs-coordinator → ln-120-reference-docs-creator → **ln-130-tasks-docs-creator** → ln-140-test-docs-creator (optional) → ln-150-presentation-creator
 
-## How It Works
+## Workflow
 
 The skill follows a **3-phase workflow**: CREATE → VALIDATE STRUCTURE → VALIDATE CONTENT.
 
@@ -375,7 +379,7 @@ docs/
 
 ---
 
-## Reference Files Used
+## Reference Files
 
 ### Templates
 
@@ -429,6 +433,14 @@ docs/
 **Idempotent**: Yes - checks file existence, re-validates, auto-fixes, updates Linear Configuration if placeholders detected
 
 ---
+
+## Critical Rules
+
+- **Idempotent:** Checks file existence before creation; preserves existing files; safe to re-run
+- **Linear UUID validation:** Team UUID must match `/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/`; Team Key must match `/^[A-Z]{2,4}$/`
+- **Placeholder detection:** If `[TEAM_NAME]`, `[TEAM_UUID]`, or `[TEAM_KEY]` found in kanban_board.md, enter interactive setup mode and prompt user
+- **SCOPE tags required:** Both README.md and kanban_board.md must have `<!-- SCOPE: ... -->` in first 5 lines
+- **Story-Level Test Task Pattern:** Tests consolidated in final Story task, not scattered across implementation tasks
 
 ## Definition of Done
 
@@ -493,5 +505,5 @@ Before completing work, verify ALL checkpoints:
 
 ---
 
-**Version:** 7.1.0 (Added Documentation Standards section)
+**Version:** 7.1.0
 **Last Updated:** 2025-01-12

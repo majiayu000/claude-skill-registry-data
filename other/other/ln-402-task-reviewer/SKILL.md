@@ -179,5 +179,5 @@ Step 7: Update & Commit
 - Kanban format: `docs/tasks/kanban_board.md`
 
 ---
-**Version:** 5.0.0 (BREAKING: Added Agent Review step 6 with parallel codex+gemini aggregation. Commit on Done. AC Validation step 4.)
+**Version:** 5.0.0
 **Last Updated:** 2026-02-07

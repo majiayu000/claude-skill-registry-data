@@ -108,5 +108,5 @@ Runs a single Story final test task (label "tests") through implementation/execu
 - Kanban format: `docs/tasks/kanban_board.md`
 
 ---
-**Version:** 3.2.0 (Added Test Writing Principles: strict assertions, expected-based testing, golden rule)
+**Version:** 3.2.0
 **Last Updated:** 2026-01-15

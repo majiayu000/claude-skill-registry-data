@@ -7,6 +7,10 @@ description: Research standards/patterns via MCP Ref. Generates Standards Resear
 
 This skill researches industry standards and architectural patterns using MCP Ref to generate Standards Research for Story Technical Notes.
 
+## Purpose
+
+Research industry standards, RFCs, and architectural patterns for a given Epic/Story domain. Produce a Standards Research section (tables + links, no code) for insertion into Story Technical Notes.
+
 ## When to Use This Skill
 
 This skill should be used when:
@@ -20,7 +24,7 @@ This skill should be used when:
 - **ln-300-task-coordinator** (optional) - research for complex Stories
 - **Manual** - user can invoke directly for Epic/Story research
 
-## How It Works
+## Workflow
 
 The skill follows a 6-phase workflow focused on standards and architectural patterns.
 
@@ -228,7 +232,24 @@ Stack Detection → Identify → Ref Research → Existing Guides → Standards 
 
 ---
 
-## References
+## Critical Rules
+
+- **NO_CODE:** Output contains tables and links to official docs only; no code snippets
+- **Format Priority:** Tables + ASCII diagrams first, lists second, text last resort
+- **Stack-aware queries:** All MCP Ref calls must include detected `query_prefix` (e.g., "C# ASP.NET Core")
+- **Standards over libraries:** Focus on RFCs and architectural patterns; library details are researched at Task level
+- **Time-box:** Maximum 15-20 minutes per Epic; research is done once and reused for all Stories
+
+## Definition of Done
+
+- Stack detected (or skipped if undetectable) and `query_prefix` set
+- Libraries and Story domain extracted from Epic/Story description
+- MCP Ref research completed for standards/RFCs and architectural patterns
+- Existing guides in `docs/guides/` scanned and matched
+- Standards Research output generated in Markdown (tables + links, no code)
+- Output returned to calling skill (ln-220, ln-300) or displayed to user
+
+## Reference Files
 
 **Tools:**
 - `mcp__Ref__ref_search_documentation()` - Search best practices and standards
