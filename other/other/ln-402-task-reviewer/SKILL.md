@@ -160,9 +160,33 @@ Step 7: Update & Commit
    - **If Done:** commit ALL uncommitted changes in the branch (not just task-related files): `git add -A && git commit -m "Implement {task_id}: {task_title}"`. This includes any changes from previous tasks, auto-fixes, or generated files — everything currently unstaged/staged goes into this commit.
 7) **Update:** Set task status in Linear; update kanban: if Done → **remove task from kanban** (Done section tracks Stories only, not individual Tasks); if To Rework → move task to To Rework section; add review comment with findings/actions. If side-effect bugs created, mention them in comment.
 
+## Review Quality Score
+
+**Context:** Quantitative review result helps ln-400 orchestrator make data-driven decisions and tracks review consistency.
+
+**Formula:** `Quality Score = 100 - (20 × BLOCKER_count) - (10 × CONCERN_count) - (3 × NIT_count)`
+
+**Classify each finding from Steps 3-5:**
+
+| Category | Weight | Examples |
+|----------|--------|----------|
+| BLOCKER | -20 | AC not met, security issue, missing error handling, wrong approach |
+| CONCERN | -10 | Suboptimal pattern, missing docs, test gaps |
+| NIT | -3 | Naming, style, minor cleanup |
+
+**Verdict mapping:**
+
+| Score | Verdict | Action |
+|-------|---------|--------|
+| 90-100 | Done | Accept, apply nit fixes inline |
+| 70-89 | Done (with notes) | Accept, document concerns for future |
+| <70 | To Rework | Send back with fix guidance per finding |
+
+**Note:** Side-effect bugs (Step 5) do NOT affect current task's quality score — they become separate [BUG] tasks.
+
 ## Critical Rules
 - One task at a time; side-effect bugs → separate [BUG] tasks (not scope creep).
-- Zero tolerance: fix now or send back with guidance. Never mark Done with unresolved in-scope issues.
+- Quality gate: all in-scope issues resolved before Done, OR send back with clear fix guidance.
 - Test-task violations (limits/priority ≤15) → To Rework.
 - Keep task language (EN/RU) in edits/comments.
 

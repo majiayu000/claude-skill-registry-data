@@ -1,7 +1,7 @@
 ---
 name: backlink-analyzer
-version: "1.0"
 description: Analyzes backlink profiles to understand link authority, identify toxic links, discover link building opportunities, and monitor competitor link acquisition. Essential for off-page SEO strategy.
+geo-relevance: "low"
 ---
 
 # Backlink Analyzer
@@ -425,11 +425,11 @@ When running `domain-authority-auditor` after this analysis, the following data 
 | Backlink Metric | CITE Item | Dimension |
 |----------------|-----------|-----------|
 | Referring domains count | C01 (Referring Domain Volume) | Citation |
-| Authority distribution (DA breakdown) | C02 (Authority Distribution) | Citation |
+| Authority distribution (DA breakdown) | C02 (Referring Domains Quality) | Citation |
 | Link velocity | C04 (Link Velocity) | Citation |
-| Geographic distribution | C10 (Geographic Distribution) | Citation |
-| Dofollow/Nofollow ratio | T02 (Protocol Compliance) | Trust |
-| Toxic link analysis | T01 (HTTPS + Technical Security), T03 (Link-Traffic Coherence) | Trust |
+| Geographic distribution | C10 (Link Source Diversity) | Citation |
+| Dofollow/Nofollow ratio | T02 (Dofollow Ratio Normality) | Trust |
+| Toxic link analysis | T01 (Link Profile Naturalness), T03 (Link-Traffic Coherence) | Trust |
 | Competitive link intersection | T05 (Profile Uniqueness) | Trust |
 
 ## Validation Checkpoints
@@ -497,6 +497,93 @@ If you acquire links from top 10 opportunities:
 4. **Diversify your profile** - Mix of link types and anchors
 5. **Disavow carefully** - Only disavow clearly toxic links
 
+## Link Quality Assessment Framework
+
+### Link Quality Scoring Matrix
+
+| Factor | Weight | Score 1 (Low) | Score 3 (Medium) | Score 5 (High) |
+|--------|--------|--------------|------------------|----------------|
+| Domain Authority | 25% | DR <20 | DR 20-50 | DR 50+ |
+| Topical Relevance | 25% | Unrelated niche | Broadly related | Same niche/topic |
+| Traffic to Page | 15% | No traffic | Some traffic | Significant traffic |
+| Link Position | 15% | Footer/sidebar | Body (generic) | Body (contextual, editorial) |
+| Anchor Text | 10% | Generic/naked URL | Partial match | Descriptive, natural |
+| Follow Status | 10% | Nofollow/UGC | Sponsored (disclosed) | Dofollow, editorial |
+
+**Link Quality Score** = Sum(Factor x Weight) — High (4-5), Medium (2.5-3.9), Low (<2.5)
+
+### Toxic Link Identification Criteria
+
+| Red Flag | Risk Level | Action |
+|----------|-----------|--------|
+| From PBN (Private Blog Network) | Critical | Disavow |
+| Paid link without nofollow | Critical | Contact webmaster, then disavow |
+| From hacked/spam site | Critical | Disavow |
+| Exact match anchor from low-quality site | High | Monitor, consider disavow |
+| From link farm / directory network | High | Disavow |
+| From irrelevant foreign language site | Medium | Monitor |
+| Sitewide footer/sidebar link | Medium | Request removal or nofollow |
+| From scraper/auto-generated content | Medium | Disavow |
+| Reciprocal link schemes | Low-Medium | Reduce reciprocal ratio |
+
+## Link Building Strategy Matrix
+
+### Strategy Comparison
+
+| Strategy | Difficulty | Scalability | Link Quality | Time to Results | Best For |
+|----------|-----------|-------------|-------------|-----------------|---------|
+| **Guest Posting** | Medium | Medium | Medium-High | 1-3 months | Building relationships + links |
+| **Digital PR** | High | High | Very High | 2-6 months | Brand authority + high-DR links |
+| **Broken Link Building** | Low-Medium | Medium | Medium | 1-2 months | Quick wins at scale |
+| **Resource Page Links** | Low | Low | Medium | 1-2 months | Niche-relevant links |
+| **HARO/Source Pitching** | Medium | Medium | High | 1-3 months | Authority + press mentions |
+| **Original Research** | High | Very High | Very High | 3-6 months | Long-term link magnet |
+| **Free Tools/Calculators** | Very High | Very High | Very High | 6-12 months | Passive link acquisition |
+| **Skyscraper Technique** | Medium | Low | Medium-High | 2-4 months | Outranking specific content |
+| **Unlinked Mentions** | Low | Low | High | 1-2 weeks | Converting existing brand mentions |
+| **Community Engagement** | Low | Low | Low-Medium | Ongoing | Niche authority building |
+
+### Link Building Cadence
+
+| Site Stage | Monthly Link Target | Strategy Focus |
+|-----------|-------------------|---------------|
+| New site (0-6 months) | 5-10 quality links | Guest posts, resource pages, HARO |
+| Growing (6-18 months) | 10-25 quality links | Digital PR, original research, skyscraper |
+| Established (18+ months) | Maintenance + strategic | Passive from content, digital PR campaigns |
+
+## Outreach Best Practices
+
+### Email Outreach Framework
+
+**Subject Line Formulas:**
+- "Quick question about [their article title]"
+- "Resource for your [topic] page"
+- "[Mutual connection] suggested I reach out"
+- "Found a broken link on [their page]"
+
+**Email Structure:**
+1. Personal hook (reference their specific content — prove you read it)
+2. Value proposition (what's in it for them, not you)
+3. The ask (specific, easy to act on)
+4. Social proof (brief — one line max)
+5. Easy opt-out (no pressure)
+
+### Outreach Response Rate Benchmarks
+
+| Approach | Average Response Rate | Average Link Win Rate |
+|----------|---------------------|---------------------|
+| Broken link building | 8-12% | 3-5% |
+| Guest post pitching | 5-10% | 2-4% |
+| Resource page outreach | 6-10% | 2-4% |
+| Unlinked mention | 15-25% | 10-15% |
+| HARO pitching | 3-8% | 1-3% |
+| Digital PR campaign | 5-15% | 2-8% |
+
+## Reference Materials
+
+- [Link Quality Rubric](./references/link-quality-rubric.md) — Quality scoring matrix with weighted factors and toxic link identification criteria
+- [Outreach Templates](./references/outreach-templates.md) — Email frameworks, subject line formulas, and response rate benchmarks
+
 ## Related Skills
 
 - [domain-authority-auditor](../../cross-cutting/domain-authority-auditor/) — Backlink data feeds directly into CITE C dimension; run after this analysis for full domain scoring
@@ -504,4 +591,5 @@ If you acquire links from top 10 opportunities:
 - [content-gap-analysis](../../research/content-gap-analysis/) — Create linkable content
 - [alert-manager](../alert-manager/) — Set up link alerts
 - [performance-reporter](../performance-reporter/) — Include in reports
+- [entity-optimizer](../../cross-cutting/entity-optimizer/) — Branded backlinks strengthen entity signals
 

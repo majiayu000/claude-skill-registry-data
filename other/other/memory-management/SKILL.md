@@ -1,7 +1,7 @@
 ---
 name: memory-management
-version: "1.0"
 description: Manages a two-layer memory system (hot cache + cold storage) for SEO/GEO project context, tracking keywords, competitors, metrics, and campaign status with intelligent promotion/demotion.
+geo-relevance: "low"
 ---
 
 # Memory Management
@@ -711,13 +711,19 @@ Identifies keyword overlaps, competitor intersections, and strategy similarities
 
 10. **Use memory for continuity** - If you switch between different analysis sessions, memory ensures nothing is forgotten.
 
+## Reference Materials
+
+- [CORE-EEAT Content Benchmark](../../references/core-eeat-benchmark.md) — Content quality scoring stored in memory
+- [CITE Domain Rating](../../references/cite-domain-rating.md) — Domain authority scoring stored in memory
+
 ## Related Skills
 
-- [rank-tracker](../../monitor/rank-tracker/) - Provides ranking data to update memory
-- [competitor-analysis](../../research/competitor-analysis/) - Generates competitor reports for storage
-- [keyword-research](../../research/keyword-research/) - Discovers keywords to add to memory
-- [performance-reporter](../../monitor/performance-reporter/) - Creates reports that trigger memory updates
-- [content-gap-analysis](../../research/content-gap-analysis/) - Identifies optimization priorities for hot cache
-- [seo-content-writer](../../build/seo-content-writer/) - Logs published content to memory calendar
+- [rank-tracker](../../monitor/rank-tracker/) — Provides ranking data to update memory
+- [competitor-analysis](../../research/competitor-analysis/) — Generates competitor reports for storage
+- [keyword-research](../../research/keyword-research/) — Discovers keywords to add to memory
+- [performance-reporter](../../monitor/performance-reporter/) — Creates reports that trigger memory updates
+- [content-gap-analysis](../../research/content-gap-analysis/) — Identifies optimization priorities for hot cache
+- [seo-content-writer](../../build/seo-content-writer/) — Logs published content to memory calendar
 - [content-quality-auditor](../content-quality-auditor/) — Content audit results stored in memory for tracking
 - [domain-authority-auditor](../domain-authority-auditor/) — CITE domain audit results stored in memory for tracking
+- [entity-optimizer](../entity-optimizer/) — Store entity audit results for tracking over time

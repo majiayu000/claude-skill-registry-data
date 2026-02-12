@@ -209,7 +209,7 @@ NEXT STEPS:
 
 | Rule | Description |
 |------|-------------|
-| **Standards Research Insertion** | MUST insert in EVERY Story Technical Notes → Library Research |
+| **Standards Research Insertion** | MUST insert in EVERY Story Technical Notes → Library Research (prevents outdated library choices causing rework in ln-400) |
 | **INVEST Validation** | All Stories must pass before creation (stop if ANY fails) |
 | **Template Ownership** | This skill owns story_template_universal.md in references/ |
 | **Epic Grouping** | Reuse Epic header if exists (search by Epic number), don't duplicate |

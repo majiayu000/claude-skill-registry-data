@@ -60,7 +60,7 @@ Do NOT use if:
 
 ### Sequential Story Decomposition
 
-**CRITICAL CONSTRAINT:** Epic N Stories MUST complete before Epic N+1 starts.
+**CRITICAL CONSTRAINT:** Epic N Stories MUST complete before Epic N+1 starts (ln-220 includes user interaction — interactive dialog cannot be parallelized across Epics).
 
 **Why sequential?**
 - ln-220-story-coordinator includes user interaction (Story preview confirmation)

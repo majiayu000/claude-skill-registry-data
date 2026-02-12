@@ -282,6 +282,18 @@ Mark each as in_progress when starting, completed when worker returns success.
 
 **Process**:
 
+**4.0 Documentation Quality Check**
+
+Quick quality check per created document:
+
+| # | Check | PASS | FAIL |
+|---|-------|------|------|
+| 1 | **Completeness** | All template sections filled (no TODOs remaining) | Empty sections or placeholder text |
+| 2 | **Accuracy** | Tech stack matches actual project files | References non-existent frameworks |
+| 3 | **Actuality** | Dates and versions match current state | Outdated references |
+
+**Gate:** All FAIL items → fix inline before continuing cleanup. Report quality summary in Phase 5.
+
 **4.1 Scan for duplicate content**
 
 1. **Read all .md files in docs/**

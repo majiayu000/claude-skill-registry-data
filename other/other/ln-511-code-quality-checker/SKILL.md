@@ -124,7 +124,10 @@ Formula: `Code Quality Score = 100 - metric_penalties - issue_penalties`
    - Subtract issue penalties (see Issue penalties table)
 
 6) Output verdict with score and structured issues. Add Linear comment with findings.
-7) **Agent Review (Delegated to ln-512):**
+7) **Agent Review (MANDATORY — Delegated to ln-512):**
+
+   > **MANDATORY STEP:** This step MUST execute after Step 6. DO NOT skip. If agents unavailable, ln-512 returns SKIPPED — acceptable. But invocation MUST happen.
+
    Invoke `Skill(skill="ln-512-agent-reviewer", args="{storyId}")`.
    - ln-512 gets Story/Task references from Linear, builds prompt with references, runs agents in parallel, persists prompts and results in `.agent-review/{agent}/`.
    - Merge returned suggestions into issues list (same prefixes: SEC-, PERF-, MNT-, ARCH-, BP-, OPT-).

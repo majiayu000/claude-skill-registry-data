@@ -184,6 +184,25 @@ Type "confirm" to proceed, or modify the list
 
 **Output:** Approved Epic list (Epic 0-N or Epic 1-N) ready for next phase
 
+### Epic Quality Gate
+
+**Context:** Structured quality check before creating Epics ensures scope clarity and prevents rework during Story decomposition.
+
+For each proposed Epic, validate 5 criteria:
+
+| # | Criterion | PASS | FAIL |
+|---|-----------|------|------|
+| 1 | **Scope clarity** | Clear In/Out boundaries | Vague or overlapping with other Epics |
+| 2 | **Success criteria** | Measurable ("<200ms", ">98%") | Vague ("fast", "reliable") |
+| 3 | **Risk documentation** | Dependencies/blockers identified | Risks section empty or generic |
+| 4 | **Balance** | Similar scope size across Epics (±30%) | One Epic has 80% of work |
+| 5 | **Independence** | No circular Epic dependencies | Epics block each other |
+
+**Quality Score = count of PASS criteria (0-5)**
+- 5/5: Proceed to creation
+- 3-4/5: Show warnings, user decides
+- <3/5: Rework Epic structure before creation
+
 ---
 
 ### Phase 3: Check Existing Epics

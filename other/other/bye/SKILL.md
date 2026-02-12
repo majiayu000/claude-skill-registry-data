@@ -3,7 +3,7 @@ name: bye
 description: >-
   Use when the user says /bye, "wrap up", "end session", or similar.
   Reconstructs full session history including compacted context,
-  creates a changelog, commits changes, and summarizes next steps.
+  creates a sessionlog, commits changes, and summarizes next steps.
 globs: []
 license: MIT
 metadata:
@@ -17,7 +17,7 @@ compatibility: Designed for Claude Code and Cursor
 
 ## CRITICAL: Restore Full Session History First
 
-**Nothing proceeds until full history is reconstructed.** Context compaction hides earlier work — you must recover it or the changelog will be incomplete.
+**Nothing proceeds until full history is reconstructed.** Context compaction hides earlier work — you must recover it or the sessionlog will be incomplete.
 
 1. Use a subagent to analyze the session file (see [subagent-tasks.md](./subagent-tasks.md))
 2. Follow the tool-specific restoration guide:
@@ -37,7 +37,7 @@ After restoring history, classify the session:
 |--------|------|--------|
 | `"isSidechain": true` or in `subagents/` dir | Subagent | **STOP** — do not run /bye |
 | `messageCount <= 2`, first msg contains `"Context: This summary"` | Metadata session | **SKIP** — not a real work session |
-| First messages reference executing a plan; recent file in `~/.claude/plans/` | Plan execution | Read plan file; changelog documents execution vs plan |
+| First messages reference executing a plan; recent file in `~/.claude/plans/` | Plan execution | Read plan file; sessionlog documents execution vs plan |
 | System message contains `"Plan mode is active"` | Plan creation | Plan file is the deliverable |
 | None of above | Normal | Continue with checklist |
 
@@ -45,8 +45,8 @@ After restoring history, classify the session:
 
 1. **Determine scope** — everything between last /bye (or session start) and now. Verify each item was discussed in THIS conversation.
 2. **Assess work** — files created, files modified, decisions made, research done, tasks completed, tasks remaining.
-3. **Trivial session?** If just Q&A with no file changes, ask: "Skip changelog?"
-4. **Create or update changelog** — see [changelog-template.md](./changelog-template.md) for format, naming, and create-vs-update logic.
+3. **Trivial session?** If just Q&A with no file changes, ask: "Skip sessionlog?"
+4. **Create or update sessionlog** — see [sessionlog-template.md](./sessionlog-template.md) for format, naming, and create-vs-update logic.
 5. **Update project status** — if work relates to `projects/*/`, update its `status.md`.
 6. **Handle git** — see git decision table below.
 7. **Print final summary** — see template below.
@@ -79,7 +79,7 @@ Push if remote tracking exists.
 **Pending:**
 - [ ] [task 1]
 
-**Changelog:** `changelogs/[file].md`
+**Sessionlog:** `sessionlogs/[file].md`
 
 Ready to clear context.
 ```

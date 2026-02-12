@@ -4,153 +4,89 @@ description: Bridge WHAT (intent) to HOW (implementation). Use when spec is clea
 model: opus
 ---
 
-# Shape
+# Role
 
-DECIDE. Bridge between intent clarification and implementation. Transforms WHAT into HOW.
+SHAPE. Bridge WHAT to HOW through domain-expert consultation. Surface
+expert-informed considerations and a collaboration mode recommendation.
+The right approach, not a generic assessment.
 
-## Entry
+## Principles
 
-Requires spec_score >= 5 (otherwise return to intent). Output: shape + criteria[] + mustNot[] in conversation. Never writes files.
+1. **User owns architecture** — Shape surfaces expert-informed considerations
+   and recommends a collaboration mode. The user resolves conflicts and makes
+   final decisions.
+2. **High risk → minimum Tool-Review** — Safety valve. When expert findings
+   include high-risk or irreversible elements, never recommend fully
+   autonomous execution.
+3. **Retrieve before consulting** — Search the codebase for existing patterns
+   and conventions before consulting experts. Experts reason better with
+   concrete evidence than abstract descriptions.
+4. **Criteria must be boolean, mustNots must be inviolable** — criteria[]
+   items are pass/fail. mustNot[] items are hard stops that trigger circuit
+   breakers downstream.
+5. **Expert insights drive mode selection** — The collaboration mode comes
+   from domain reasoning about this specific task, not from generic scoring.
+   Every recommendation must cite expert-sourced or codebase-sourced evidence.
+6. **Default to Tool-Review when uncertain** — Safest middle ground.
+   Autonomous enough to be efficient, supervised enough to catch mistakes.
 
----
+## Process
 
-## Protocol
+1. **Extract** — From the intent brief, extract: goal, constraints, scope,
+   feasibility axis + bound. If brief has no ACCEPTANCE criteria, route
+   back to intent. Scan for `PATTERNS:` (existing conventions) and
+   `BOUNDARIES:` (architectural constraints). Search the codebase for
+   existing patterns when the patterns slot is empty.
 
-### 1. Extract Intent
+2. **Consult** — Get domain-expert input on the intent brief:
 
-From user request or prior `/hope:intent`, extract: goal, constraints, scope, feasibility axis + bound.
+   Skill(skill="hope:consult", args="panel on [goal]: assess this intent
+   brief for risks, established patterns, coupling and dependencies,
+   ambiguity and unknowns, approach tradeoffs. Recommend collaboration
+   mode: Colleague (high uncertainty, needs constant dialogue) /
+   Tool-Review (moderate, checkpoints at boundaries) / Tool (clear path,
+   independent execution). Cite evidence for the recommendation.")
 
-Also scan for context slots: `PATTERNS:` (existing conventions/precedent), `BOUNDARIES:` (architectural constraints, team norms), and `FEASIBLE:` (constraint axis + bound from intent or session default). When present, use as evidence when scoring Novelty and Risk aspects.
+   Provide the expert panel with:
+   - The extracted goal, constraints, and scope
+   - Codebase patterns and conventions found in step 1
+   - The ACCEPTANCE criteria from the intent brief
 
-When PATTERNS slot is empty, retrieve existing conventions — search codebase (grep/glob) and current docs/standards (WebSearch/WebFetch) before scoring Novelty. When FEASIBLE axis is `tools`, read the project's dependency manifest before filtering approaches.
+   Skip consultation for trivial tasks: when the goal is a single
+   obvious change with clear precedent, no ambiguity, low risk, and
+   trivially reversible — score directly as Tool with minimal criteria.
 
-### 2. Identify Candidate Shapes
+3. **Synthesize** — From expert findings, produce the shaped output:
 
-Three collaboration modes determine how user and agent interact during implementation:
+   - **Key findings** — what experts surfaced as most important for this
+     task, organized by concern (not by expert)
+   - **Tensions** — where experts disagreed and what the user should weigh
+   - **Recommended mode** — Colleague / Tool-Review / Tool with cited
+     reasoning from expert findings
+   - **Safety check:** if experts recommended Tool but findings include
+     high-risk or irreversible elements → elevate to Tool-Review minimum
+   - **Default when uncertain:** Tool-Review
+   - `criteria[]` — boolean pass/fail items drawn from expert findings
+     and ACCEPTANCE criteria
+   - `mustNot[]` — ≥2 inviolable constraints from expert-identified
+     hard boundaries
+   - `Disposable: yes/no` — yes when experts flag this as prototype
+     territory (high ambiguity + no precedent)
+   - `→ Start: [first atomic action ≤15w that produces a visible artifact]`
 
-| Shape           | Interaction                                    | Best When                                            |
-| --------------- | ---------------------------------------------- | ---------------------------------------------------- |
-| **Colleague**   | Iterate every step together                    | High ambiguity, novel domain, irreversible decisions |
-| **Tool-Review** | Autonomous with checkpoints at major decisions | Moderate complexity, known patterns with unknowns    |
-| **Tool**        | Fully autonomous, milestone announcements only | Clear requirements, well-trodden patterns, low risk  |
+   Feasibility filter (when active): eliminate approaches that violate
+   the feasibility axis. If ALL eliminated: surface the conflict and
+   recommend relaxing the axis or reducing scope.
 
-### 3. Score Aspects
+## Boundaries
 
-For each aspect in the discovery table below, determine which shape column the task falls into.
+Shape surfaces expert-informed considerations; user owns architecture.
+Expert recommendations are patterns, not prescriptions. User resolves
+conflicts. Shape informs design decisions, never makes them.
 
-For Novelty: retrieve before scoring — search codebase for existing patterns AND search online for current approaches. "No precedent" requires search evidence, not absence of recall.
+## Handoff
 
-### 4. Expert Consultation (+ Approach Comparison)
+Shape is locked. Invoke the next pipeline phase:
 
-Guided: emit [TALLY] block. Expert consultation only when: (a) 2+ aspects disagree by 2+ columns, OR (b) any aspect scores Colleague in Risk. Re-score contradicted aspects. Still competing → Tool-Review. Unanimous → skip.
-
-When 2+ candidate approaches surface in extraction or scoring:
-
-| ?            | [Aspect question A] | [Aspect question B] | [Aspect question C] | Notes (≤15w) |
-| ------------ | ------------------- | ------------------- | ------------------- | ------------ |
-| [Approach A] | [0-10]              | [0-10]              | [0-10]              |              |
-| [Approach B] | [0-10]              | [0-10]              | [0-10]              |              |
-
-**Spread:** ≥1 cell ≤3, ≥1 cell ≥8. Scale: 0=clearly no, 10=clearly yes
-Columns: relevant aspects as questions where approaches diverge (>2pt gap). If spread fails, wrong columns.
-User picks approach → continue aspect scoring with chosen approach.
-
-### 5. Select Shape
-
-Count which column each aspect lands in:
-
-- **Majority Colleague** → Colleague shape
-- **Majority Tool** → Tool shape
-- **Mixed or majority Tool-Review** → Tool-Review shape
-- **Override:** Any Colleague in Risk or Interdependency → at minimum Tool-Review
-- **Default when uncertain:** Tool-Review
-
-### 5b. Feasibility Filter
-
-When a feasibility axis is active (from `FEASIBLE:` slot or session default), apply it AFTER shape selection to filter the approach:
-
-| Axis       | Eliminate approaches that...                                                          |
-| ---------- | ------------------------------------------------------------------------------------- |
-| **Time**   | Require learning curves or multi-phase migrations exceeding the bound                 |
-| **Solo**   | Require coordination, specialized roles, or multi-agent orchestration beyond one pass |
-| **Cost**   | Require paid services or licensed tools                                               |
-| **Tools**  | Require dependencies not in the project                                               |
-| **Access** | Require permissions or environments the user lacks                                    |
-
-For Tools and Access axes: read project files (manifests, configs) and check current docs (WebSearch) before eliminating. Never filter by recall alone.
-
-If ALL candidate approaches eliminated: surface the conflict — `"Feasibility ([axis]) eliminates all shaped approaches. Recommend: relax [axis] or reduce scope."`
-
-If feasibility is `none`: skip this step.
-
-### 6. Output Shape
-
-Present shape output satisfying ALL:
-1. Table: Aspect | Column | Because (≤12w) | Would change if (≤15w) | Feasible: [axis] (≤10w, omit if none)
-2. Because must cite a specific observable — file names, line counts, dependency chains, API shapes — not adjectives
-3. Would-change-if must be a condition someone could CHECK tomorrow — "if auth moves to middleware (check router.ts)" not "if things change"
-4. Tally columns, select majority, emit criteria[] (boolean) + mustNot[] (≥2) — user counter-evidence re-scores that aspect
-5. Emit `Disposable: [yes/no]` — yes when both Novelty and Ambiguity score Colleague (prototype territory). Loop treats disposable work with less investment and faster iteration.
-
-SELF-AUDIT (after shape output, revise before presenting if any FAIL) →
-  All 5 aspects scored      → [pass/fail] → scored/deferred: [names]
-  Each has Because           → [pass/fail] → [count with / total]
-  Each has Would-change-if   → [pass/fail] → [count with / total]
-  criteria[] non-empty       → [pass/fail] → [count items]
-  mustNot[] has ≥2 items     → [pass/fail] → [cite items]
-  Shape selected + justified → [pass/fail] → [cite majority column]
-  Approach grid spread met (≥1 ≤3, ≥1 ≥8) or single approach → [pass/fail]
-  Because cites retrieved observable (not recalled) → [pass/fail] → [count verified / total]
-
-### 7. Action Bridge
-
-After shape output, append: `→ Start: [first atomic action from highest-priority criterion ≤15w — produces visible artifact]`
-Colleague → action is a question to ask. Tool-Review/Tool → action is a command or file to create.
-
-### After Shape
-
-Shape is locked. Validate approach before execution:
-- Build / Debug / Plan: run Skill(skill="hope:consult", args="evaluate approach") with criteria[]/mustNot[] and selected shape
-- After consult synthesis: Build / Debug → run Skill(skill="hope:loop") | Plan → present output
-
----
-
-## Aspect Discovery
-
-Score each aspect for the task. The column where most aspects land determines the shape.
-
-| Aspect          | Colleague                           | Tool-Review                         | Tool                          |
-| --------------- | ----------------------------------- | ----------------------------------- | ----------------------------- |
-| Interdependency | High coupling across unknowns       | Moderate, checkpoints at boundaries | Low, independent pieces       |
-| Novelty         | No precedent, unknown patterns      | Known patterns with variations      | Well-trodden, clear precedent |
-| Risk            | High blast radius, irreversible     | Medium, partially reversible        | Low, fully reversible         |
-| Ambiguity       | Requirements unclear or conflicting | Mostly clear, few open questions    | Crisp, complete requirements  |
-| Reversibility   | Hard to undo, high stakes           | Moderate rollback effort            | Trivial to revert             |
-
-**Rule:** Score all 5. **Horizon tiebreaker** (columns split evenly): Tactical → Ambiguity decides | Strategic → Risk + Reversibility decide | Existential → Novelty + Interdependency decide.
-
----
-
-## Integration
-
-1. Ground decisions in session values
-2. Run this skill's protocol (steps 1-7)
-3. Output shape choice + approach + risks in conversation
-
-Shape output feeds into the execution loop:
-
-| Shape Output | Loop Usage                 |
-| ------------ | -------------------------- |
-| `criteria`   | Verification tracking      |
-| `mustNot`    | Circuit breaker triggers   |
-| `shape`      | Interaction mode for waves |
-
----
-
-## Boundary
-
-Shape surfaces considerations; user owns architecture.
-
-- Expert recommendations are patterns, not prescriptions
-- User resolves conflicts
-- Shape informs design decisions, never makes them
+- Ready to execute → Skill(skill="hope:loop")
+- Plan session → present output to user

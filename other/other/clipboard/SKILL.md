@@ -58,6 +58,7 @@ Expected format: `<content-type> <album-name> <track-number>`
 - `style` - Suno Style Box
 - `streaming-lyrics` - Streaming Lyrics (for distributors)
 - `all` - All Suno inputs (Style + Lyrics combined)
+- `suno` - JSON object (title + style + lyrics) for Suno auto-fill via Tampermonkey
 
 Examples:
 - `/clipboard lyrics sample-album 03`
@@ -74,69 +75,15 @@ Content types: lyrics, style, streaming-lyrics, all
 Example: /clipboard lyrics sample-album 03
 ```
 
-## Step 3: Read Config (REQUIRED)
+## Step 3: Extract Content via MCP
 
-```bash
-cat ~/.bitwize-music/config.yaml
-```
+Call `format_for_clipboard(album_slug, track_slug, content_type)` — extracts and formats the requested content in one call.
 
-Extract:
-- `paths.content_root` → Base content directory
-- `artist.name` → Artist name
+- `content_type`: `"lyrics"`, `"style"`, `"streaming"`, `"all"`, or `"suno"`
+- Returns the formatted content ready for clipboard
+- Handles track resolution, section extraction, and formatting automatically
 
-## Step 4: Find Track File
-
-Search for track file matching the number:
-
-```bash
-find {content_root}/artists/{artist}/albums/*/{{album}}/tracks/ -name "{track-number}-*.md" 2>/dev/null
-```
-
-Example: For track `03`, finds `03-t-day-beach.md` or `03-whatever.md`
-
-**If not found:**
-```
-Error: Track {track-number} not found in album {album}
-```
-
-## Step 5: Extract Content
-
-Read the track file and extract the requested section.
-
-### For "lyrics" (Suno Lyrics Box)
-
-Extract everything between:
-```markdown
-### Lyrics Box
-```
-and the next `##` or `###` heading.
-
-### For "style" (Suno Style Box)
-
-Extract everything between:
-```markdown
-### Style Box
-```
-and the next `##` or `###` heading.
-
-### For "streaming-lyrics" (Streaming Lyrics)
-
-Extract everything between:
-```markdown
-## Streaming Lyrics
-```
-and the next `##` heading.
-
-### For "all" (Combined Suno Inputs)
-
-Combine both Style Box and Lyrics Box with a separator:
-```
-[Style Box content]
-
----
-
-[Lyrics Box content]
-```
+**If track not found:** MCP returns an error with available tracks.
 
 ## Step 6: Copy to Clipboard
 
@@ -234,6 +181,23 @@ Contents:
 - Lyrics Box
 ```
 
+### Copy Suno Auto-Fill JSON
+
+```
+/clipboard suno sample-album 01
+```
+
+Output:
+```
+✓ Copied to clipboard: suno auto-fill JSON from track 01
+  Album: sample-album
+  Track: 01-intro.md
+
+Clipboard contains JSON with: title, style, lyrics
+Paste into Suno with the Tampermonkey auto-fill script (Ctrl+Shift+V).
+See tools/userscripts/README.md for setup.
+```
+
 ---
 
 ## Implementation Notes
@@ -244,9 +208,8 @@ Contents:
 - Linux users may have either `xclip` or `xsel`
 
 **Content Extraction:**
-- Use sed/awk to extract sections between markdown headings
-- Trim leading/trailing whitespace
-- Preserve internal formatting (blank lines, indentation)
+- MCP `format_for_clipboard` handles all section extraction and formatting
+- No manual file parsing needed
 
 **Multiple Matches:**
 - If track number matches multiple files (shouldn't happen), use the first match

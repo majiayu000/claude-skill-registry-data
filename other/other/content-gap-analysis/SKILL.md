@@ -1,7 +1,7 @@
 ---
 name: content-gap-analysis
-version: "1.0"
 description: Identifies content opportunities by finding topics and keywords your competitors cover that you don't. Reveals untapped content potential and strategic gaps in your content strategy.
+geo-relevance: "medium"
 ---
 
 # Content Gap Analysis
@@ -512,13 +512,69 @@ Find gaps in our [commercial/informational] intent content
 5. **Update regularly** - Gaps change as competitors publish
 6. **Include GEO opportunities** - Don't just optimize for traditional search
 
+## Content Audit Comparison Framework
+
+### Content Coverage Matrix
+
+Map content coverage across competitors by topic and format:
+
+| Topic/Theme | Your Content | Competitor A | Competitor B | Gap? | Priority |
+|------------|-------------|-------------|-------------|------|----------|
+| [Topic 1] | Blog post | Blog series, webinar | Nothing | Opp for B | High |
+| [Topic 2] | Nothing | Whitepaper | Blog, video | Gap for you | High |
+| [Topic 3] | Case study | Nothing | Case study | Parity | Low |
+
+### Content Type Coverage Matrix
+
+| Content Format | You | Comp A | Comp B | Comp C | Market Expectation |
+|---------------|-----|--------|--------|--------|-------------------|
+| Blog posts | ✅ | ✅ | ✅ | ✅ | Table stakes |
+| How-to guides | ✅ | ✅ | ❌ | ✅ | Expected |
+| Video content | ❌ | ✅ | ✅ | ✅ | Growing expectation |
+| Interactive tools | ❌ | ❌ | ❌ | ✅ | Differentiator |
+| Research/data | ❌ | ✅ | ❌ | ❌ | High-value linkbait |
+| Templates/downloads | ✅ | ❌ | ✅ | ❌ | Lead generation |
+| Podcasts | ❌ | ❌ | ✅ | ❌ | Emerging |
+| Comparison pages | ✅ | ✅ | ✅ | ❌ | Commercial intent |
+
+## Funnel Stage Gap Analysis
+
+### Content Funnel Mapping
+
+| Funnel Stage | Content Purpose | Expected Formats | Gap Signals |
+|-------------|----------------|-----------------|------------|
+| Awareness | Attract new visitors | Blog, social, video, PR | Low organic traffic, low brand searches |
+| Consideration | Educate and engage | Guides, comparisons, webinars | High bounce rate, low pages/session |
+| Decision | Convert visitors | Case studies, pricing, demos, trials | Low conversion rate |
+| Retention | Keep customers | Help docs, email sequences, community | High churn, low engagement |
+| Advocacy | Turn customers to promoters | Review programs, referral content | Low referral traffic |
+
+## Gap Prioritization Scoring
+
+### Impact x Effort Matrix
+
+Score each gap 1-5 on both dimensions:
+
+| Impact Factor | Weight | How to Assess |
+|--------------|--------|--------------|
+| Search demand | 30% | Keyword volume for gap topic |
+| Competitive density | 25% | How many competitors cover this? |
+| Business relevance | 25% | How close to your core offering? |
+| Funnel stage need | 20% | Which funnel stages are weakest? |
+
+**Priority** = High Impact + Low Effort first
+
+## Reference Materials
+
+- [Gap Analysis Frameworks](./references/gap-analysis-frameworks.md) — Content audit templates, funnel mapping, and gap prioritization methodologies
+
 ## Related Skills
 
-- [keyword-research](../keyword-research/) - Deep-dive on gap keywords
-- [competitor-analysis](../competitor-analysis/) - Understand competitor strategies
-- [seo-content-writer](../../build/seo-content-writer/) - Create gap-filling content
-- [content-refresher](../../optimize/content-refresher/) - Improve existing content
-- [internal-linking-optimizer](../../optimize/internal-linking-optimizer/) - Identify and fix internal linking gaps
-- [backlink-analyzer](../../monitor/backlink-analyzer/) - Analyze link gap opportunities
-- [memory-management](../../cross-cutting/memory-management/) - Track content gaps over time
+- [keyword-research](../keyword-research/) — Deep-dive on gap keywords
+- [competitor-analysis](../competitor-analysis/) — Understand competitor strategies
+- [seo-content-writer](../../build/seo-content-writer/) — Create gap-filling content
+- [content-refresher](../../optimize/content-refresher/) — Refresh existing content to fill identified gaps
+- [internal-linking-optimizer](../../optimize/internal-linking-optimizer/) — Identify and fix internal linking gaps
+- [backlink-analyzer](../../monitor/backlink-analyzer/) — Analyze link gap opportunities
+- [memory-management](../../cross-cutting/memory-management/) — Track content gaps over time
 

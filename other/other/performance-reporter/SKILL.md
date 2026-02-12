@@ -1,7 +1,7 @@
 ---
 name: performance-reporter
-version: "1.0"
 description: Generates comprehensive SEO and GEO performance reports combining rankings, traffic, backlinks, and AI visibility metrics. Creates executive summaries and detailed analyses for stakeholder reporting.
+geo-relevance: "medium"
 ---
 
 # Performance Reporter
@@ -505,9 +505,138 @@ When a user requests a performance report:
 
 ## Example
 
-**User**: "Create a monthly SEO report for December 2024"
+**User**: "Create a monthly SEO report for cloudhosting.com for January 2025"
 
-**Output**: [Full report following the structure above with period-specific data and insights]
+**Output**:
+
+```markdown
+# CloudHosting SEO & GEO Performance Report
+
+**Domain**: cloudhosting.com
+**Period**: January 1-31, 2025
+**Comparison**: vs December 2024
+**Prepared**: February 3, 2025
+
+---
+
+## Executive Summary
+
+### Overall Performance: Good
+
+**Key Highlights**:
+
+🟢 **Wins**:
+- Organic traffic increased 15.3% (45,200 → 52,100 sessions)
+- 4 new Top 10 keyword rankings in "cloud hosting" cluster
+- Organic conversions up 11.8% (612 → 684 trial signups)
+
+🟡 **Watch Areas**:
+- Mobile page speed declining (LCP 3.1s → 3.4s)
+- Competitor SiteGround gaining on "managed cloud hosting" terms
+
+🔴 **Action Required**:
+- Fix crawl errors on /pricing/ pages (37 404s detected)
+
+### Key Metrics at a Glance
+
+| Metric | Jan 2025 | Dec 2024 | Change | Target | Status |
+|--------|----------|----------|--------|--------|--------|
+| Organic Traffic | 52,100 | 45,200 | +15.3% | 50,000 | ✅ |
+| Keywords Top 10 | 87 | 79 | +8 | 90 | ⚠️ |
+| Organic Conversions | 684 | 612 | +11.8% | 700 | ⚠️ |
+| Domain Rating | 54 | 53 | +1 | 55 | ⚠️ |
+| AI Citations | 18 | 12 | +50.0% | 20 | ⚠️ |
+
+### SEO ROI
+
+**Investment**: $8,200 (content production, tools, link building)
+**Organic Revenue**: $41,040 (684 trials × 12% close rate × $500 MRR)
+**ROI**: 400%
+
+---
+
+## Organic Traffic Analysis
+
+### Traffic Overview
+
+| Metric | Jan 2025 | vs Dec 2024 | vs Jan 2024 |
+|--------|----------|-------------|-------------|
+| Sessions | 52,100 | +15.3% | +38.2% |
+| Users | 41,680 | +14.1% | +35.7% |
+| Pageviews | 98,990 | +12.6% | +29.4% |
+| Avg. Session Duration | 2m 48s | +6.2% | +18.3% |
+| Bounce Rate | 42.3% | -3.1% | -8.7% |
+
+### Top Performing Pages
+
+| Page | Sessions | Change | Conversions |
+|------|----------|--------|-------------|
+| /guide/cloud-hosting | 8,420 | +22.1% | 142 |
+| /compare/aws-vs-gcp | 5,310 | +31.4% | 87 |
+| /pricing | 4,890 | +9.8% | 201 |
+
+---
+
+## GEO (AI Visibility) Performance
+
+### AI Citation Overview
+
+| Metric | Jan 2025 | Dec 2024 | Change |
+|--------|----------|----------|--------|
+| Keywords with AI Overview | 34/120 | 28/120 | +6 |
+| Your AI Citations | 18 | 12 | +50.0% |
+| Citation Rate | 15.0% | 10.0% | +5.0% |
+| Avg Citation Position | 2.4 | 3.1 | +0.7 |
+
+### GEO Wins This Period
+
+| Query | Citation Status | Source Page | Impact |
+|-------|-----------------|-------------|--------|
+| "best cloud hosting for startups" | 🆕 New citation | /guide/cloud-hosting | High visibility |
+| "cloud hosting vs shared hosting" | ⬆️ Position 4→2 | /compare/cloud-vs-shared | Better exposure |
+| "managed cloud hosting benefits" | 🆕 New citation | /features/managed | High visibility |
+
+---
+
+## Domain Authority (CITE Score)
+
+### CITE Score Summary
+
+| Metric | Jan 2025 | Dec 2024 | Change |
+|--------|----------|----------|--------|
+| CITE Score | 71/100 | 67/100 | +4 |
+| C — Citation | 68/100 | 65/100 | +3 |
+| I — Identity | 55/100 | 52/100 | +3 |
+| T — Trust | 82/100 | 80/100 | +2 |
+| E — Eminence | 61/100 | 58/100 | +3 |
+
+**Veto Status**: ✅ No triggers
+
+_For full 40-item evaluation, run `/seo:audit-domain`_
+
+---
+
+## Recommendations & Next Steps
+
+### Immediate Actions (This Week)
+
+| Priority | Action | Expected Impact | Owner |
+|----------|--------|-----------------|-------|
+| P0 | Fix 37 crawl errors on /pricing/ pages | Recover ~800 lost sessions/month | Dev team |
+
+### Short-term (This Month)
+
+| Priority | Action | Expected Impact | Owner |
+|----------|--------|-----------------|-------|
+| P1 | Optimize mobile LCP on top 10 landing pages | Improve mobile rankings for 15+ keywords | Dev team |
+| P1 | Publish 3 comparison pages targeting AI Overview queries | +5-8 new AI citations | Content team |
+
+### Long-term (This Quarter)
+
+| Priority | Action | Expected Impact | Owner |
+|----------|--------|-----------------|-------|
+| P2 | Build Wikidata entry and Schema.org for CloudHost Inc. | Strengthen CITE Identity score by +10 pts | SEO lead |
+```
 
 ## Report Templates by Audience
 
@@ -536,6 +665,123 @@ Focus on: Progress against goals, wins, clear recommendations
 5. **Customize for audience** - Executives need different info than technical teams
 6. **Track GEO metrics** - AI visibility is increasingly important
 
+## SEO/GEO Metric Definitions and Benchmarks
+
+### Organic Search Metrics
+
+| Metric | Definition | Good Range | Warning | Source |
+|--------|-----------|-----------|---------|--------|
+| Organic sessions | Visits from organic search | Growing MoM | >10% decline | ~~analytics |
+| Keyword visibility | % of target keywords in top 100 | >60% | <40% | ~~SEO tool |
+| Average position | Mean position across tracked keywords | <20 | >30 | ~~search console |
+| Organic CTR | Clicks / impressions from search | >3% | <1.5% | ~~search console |
+| Pages indexed | Pages in Google index | Growing | Dropping | ~~search console |
+| Organic conversion rate | Conversions / organic sessions | >2% | <0.5% | ~~analytics |
+| Non-brand organic traffic | Organic traffic minus brand searches | >50% of total organic | <30% | ~~analytics |
+
+### GEO/AI Visibility Metrics
+
+| Metric | Definition | Good Range | Warning | Source |
+|--------|-----------|-----------|---------|--------|
+| AI citation rate | % of monitored queries citing your content | >20% | <5% | ~~AI monitor |
+| AI citation position | Average position in AI response citations | Top 3 sources | Not cited | ~~AI monitor |
+| AI answer coverage | % of your topics appearing in AI answers | Growing | Declining | ~~AI monitor |
+| Brand mention in AI | Times your brand is mentioned in AI responses | Growing | Zero | ~~AI monitor |
+
+### Domain Authority Metrics
+
+| Metric | Definition | Good Range | Warning | Source |
+|--------|-----------|-----------|---------|--------|
+| Domain Rating/Authority | Overall domain strength | Growing | Declining | ~~SEO tool |
+| Referring domains | Unique domains linking to you | Growing MoM | Loss >10% MoM | ~~link database |
+| Backlink growth rate | Net new backlinks per month | Positive | Negative trend | ~~link database |
+| Toxic link ratio | Toxic links / total links | <5% | >10% | ~~link database |
+
+## Reporting Templates by Audience
+
+### Executive Report (C-Suite / Leadership)
+
+**Focus:** Business outcomes, ROI, competitive position
+**Length:** 1 page + appendix
+**Frequency:** Monthly or Quarterly
+
+| Section | Content |
+|---------|---------|
+| Traffic & Revenue | Organic traffic trend + attributed revenue |
+| Competitive Position | Visibility share vs. top 3 competitors |
+| AI Visibility | AI citation trend and coverage |
+| Key Wins | Top 3 achievements with business impact |
+| Risks | Top 3 concerns with proposed mitigation |
+| Investment Ask | Resources needed for next period |
+
+### Marketing Team Report
+
+**Focus:** Channel performance, content effectiveness, technical health
+**Length:** 2-3 pages
+**Frequency:** Monthly
+
+| Section | Content |
+|---------|---------|
+| Keyword Performance | Rankings gained/lost, new keywords discovered |
+| Content Performance | Top pages by traffic, engagement, conversions |
+| Technical Health | Crawl errors, speed scores, indexation |
+| Backlink Profile | New links, lost links, quality assessment |
+| GEO Performance | AI citation changes, new citations |
+| Action Items | P0-P3 prioritized task list |
+
+### Technical SEO Report
+
+**Focus:** Crawlability, indexation, speed, errors
+**Length:** Detailed
+**Frequency:** Weekly or Bi-weekly
+
+| Section | Content |
+|---------|---------|
+| Crawl Stats | Pages crawled, errors, crawl budget usage |
+| Index Coverage | Indexed/excluded/errored pages |
+| Core Web Vitals | LCP, CLS, INP trends |
+| Error Log | New 4xx/5xx errors with resolution status |
+| Schema Validation | New warnings, rich result eligibility |
+| Technical Debt | Outstanding issues by priority |
+
+## Trend Analysis Framework
+
+### Period-Over-Period Analysis
+
+| Comparison | Best For | Limitation |
+|-----------|---------|-----------|
+| Week over week (WoW) | Detecting sudden changes | Noisy, affected by day-of-week patterns |
+| Month over month (MoM) | Identifying trends | Seasonal bias |
+| Year over year (YoY) | Accounting for seasonality | Does not reflect recent trajectory |
+| Rolling 30-day average | Smoothing noise | Lags behind real changes |
+
+### Trend Interpretation Guidelines
+
+| Pattern | Likely Cause | Recommended Action |
+|---------|-------------|-------------------|
+| Steady growth | Strategy is working | Continue, optimize high performers |
+| Sudden spike then drop | Viral content or algorithm volatility | Investigate cause, build on if repeatable |
+| Gradual decline | Content decay, competition, technical debt | Comprehensive audit needed |
+| Flat line | Plateau — existing strategy maxed out | New content areas, new link strategies |
+| Seasonal pattern | Industry/demand cycles | Plan content calendar around peaks |
+
+## SEO Attribution Guidance
+
+### Attribution Challenges in SEO
+
+| Challenge | Impact | Mitigation |
+|----------|--------|-----------|
+| Long conversion paths | SEO rarely gets last-touch credit | Use assisted conversions report |
+| Brand vs. non-brand | Brand searches inflate organic metrics | Always separate brand/non-brand |
+| Cross-device journeys | Mobile search to desktop conversion | Enable cross-device tracking |
+| SEO + paid overlap | Cannibalization or lift? | Test turning off paid for branded terms |
+| Content assists sales | Hard to attribute | Track content touches in CRM |
+
+## Reference Materials
+
+- [KPI Definitions](../../references/kpi-definitions.md) — Complete SEO/GEO metric definitions with benchmarks, good ranges, and warning thresholds
+- [Report Templates](./references/report-templates.md) — Report templates by audience (executive, marketing, technical, client)
+
 ## Related Skills
 
 - [content-quality-auditor](../../cross-cutting/content-quality-auditor/) — Include CORE-EEAT scores as page-level content quality KPIs
@@ -545,4 +791,6 @@ Focus on: Progress against goals, wins, clear recommendations
 - [alert-manager](../alert-manager/) — Set up report triggers
 - [serp-analysis](../../research/serp-analysis/) — SERP composition data
 - [memory-management](../../cross-cutting/memory-management/) — Archive reports in project memory
+- [entity-optimizer](../../cross-cutting/entity-optimizer/) — Track branded search and Knowledge Panel metrics
+- [technical-seo-checker](../../optimize/technical-seo-checker/) — Technical health data feeds into reports
 

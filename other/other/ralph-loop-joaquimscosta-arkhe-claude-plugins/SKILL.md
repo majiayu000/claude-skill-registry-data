@@ -59,12 +59,15 @@ Tasks are stored in `.ralph/current-taskset/tasks.json`:
     {
       "id": "setup-001",
       "description": "Initialize project",
+      "verificationTier": "build",
       "passes": false,
       "iteration_completed": null
     }
   ]
 }
 ```
+
+Valid `verificationTier` values: `"build"` (default), `"visual"`, `"api"`, `"e2e"`. See [WORKFLOW.md](WORKFLOW.md) for details.
 
 ## Completion Signal
 

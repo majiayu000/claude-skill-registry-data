@@ -1,7 +1,7 @@
 ---
 name: seo-content-writer
-version: "1.0"
 description: Creates high-quality, SEO-optimized content that ranks in search engines. Applies on-page SEO best practices, keyword optimization, and content structure for maximum visibility and engagement.
+geo-relevance: "medium"
 ---
 
 # SEO Content Writer
@@ -252,7 +252,7 @@ When a user requests SEO content:
    - [ ] Expert quotes or citations (for E-E-A-T)
    
    **Readability**:
-   - [ ] Short paragraphs (2-4 sentences)
+   - [ ] Paragraphs of 3-5 sentences (per CORE-EEAT O06 Section Chunking standard)
    - [ ] Varied sentence length
    - [ ] Bullet points and lists
    - [ ] Bold key phrases
@@ -433,7 +433,7 @@ When a user requests SEO content:
 - [ ] Competitor URLs reviewed or target SERP features identified
 
 ### Output Validation
-- [ ] Keyword density within 1-2% for primary keyword
+- [ ] Keyword density within 1-2% for primary keyword (Note: Keyword density is a guideline, not a hard rule. Modern search engines prioritize semantic relevance and natural language over exact density targets. Focus on covering the topic comprehensively with semantic variants rather than hitting a specific percentage.)
 - [ ] All sections from outline covered completely
 - [ ] Internal links included (2-5 relevant links)
 - [ ] FAQ section present with at least 3 questions
@@ -606,12 +606,14 @@ Write an ultimate guide about [topic] (3,000+ words) targeting [keyword]
 
 ## Related Skills
 
-- [keyword-research](../../research/keyword-research/) - Find keywords to target
-- [geo-content-optimizer](../geo-content-optimizer/) - Optimize for AI citations
-- [meta-tags-optimizer](../meta-tags-optimizer/) - Create compelling meta tags
-- [on-page-seo-auditor](../../optimize/on-page-seo-auditor/) - Audit SEO elements
-- [internal-linking-optimizer](../../optimize/internal-linking-optimizer/) - Place internal links during content writing
-- [content-refresher](../../optimize/content-refresher/) - Refresh and update existing content
-- [content-quality-auditor](../../cross-cutting/content-quality-auditor/) - Full 80-item CORE-EEAT audit
-- [memory-management](../../cross-cutting/memory-management/) - Track content performance over time
+- [keyword-research](../../research/keyword-research/) — Find keywords to target
+- [geo-content-optimizer](../geo-content-optimizer/) — Optimize for AI citations
+- [meta-tags-optimizer](../meta-tags-optimizer/) — Create compelling meta tags
+- [on-page-seo-auditor](../../optimize/on-page-seo-auditor/) — Audit SEO elements
+- [internal-linking-optimizer](../../optimize/internal-linking-optimizer/) — Place internal links during content writing
+- [content-refresher](../../optimize/content-refresher/) — Refresh and update existing content
+- [content-quality-auditor](../../cross-cutting/content-quality-auditor/) — Full 80-item CORE-EEAT audit
+- [memory-management](../../cross-cutting/memory-management/) — Track content performance over time
+- [content-gap-analysis](../../research/content-gap-analysis/) — Identify content opportunities to write about
+- [schema-markup-generator](../schema-markup-generator/) — Add structured data to published content
 

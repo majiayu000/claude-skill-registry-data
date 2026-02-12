@@ -1,7 +1,7 @@
 ---
 name: internal-linking-optimizer
-version: "1.0"
 description: Analyzes and optimizes internal link structure to improve site architecture, distribute page authority, and help search engines understand content relationships. Creates strategic internal linking plans.
+geo-relevance: "low"
 ---
 
 # Internal Linking Optimizer
@@ -464,11 +464,93 @@ When a user requests internal linking optimization:
 4. **Link to important pages** - Distribute authority strategically
 5. **Regular audits** - Internal links need maintenance as content grows
 
+## Link Architecture Patterns
+
+### Common Architecture Models
+
+| Model | Description | Best For | Limitations |
+|-------|------------|---------|------------|
+| **Hub-and-Spoke** | Central pillar links to/from cluster pages | Topic authority, content hubs | Can isolate topic clusters |
+| **Silo Structure** | Strict category hierarchies, vertical linking | Large e-commerce, strict taxonomy | Limits cross-topic discovery |
+| **Flat Architecture** | All pages 2-3 clicks from homepage | Small sites (<100 pages) | Doesn't scale to large sites |
+| **Pyramid** | Homepage → Categories → Subcategories → Pages | News sites, large blogs | Deep pages get less authority |
+| **Mesh/Matrix** | Cross-links between related content freely | Knowledge bases, wikis | Can become chaotic without rules |
+
+### Hub-and-Spoke Implementation
+
+```
+Homepage
+  └── Topic Hub A (pillar page)
+  │     ├── Cluster Article A1 ←→ A2
+  │     ├── Cluster Article A2 ←→ A3
+  │     └── Cluster Article A3 ←→ A1
+  └── Topic Hub B (pillar page)
+        ├── Cluster Article B1 ←→ B2
+        └── Cluster Article B2 ←→ B1
+
+Cross-links: A2 → B1 (related subtopics)
+```
+
+## Anchor Text Diversity Framework
+
+### Anchor Text Types
+
+| Type | Example | Target Distribution | Risk Level |
+|------|---------|-------------------|------------|
+| Exact match | "keyword research tools" | 10-15% | Over-optimization risk if higher |
+| Partial match | "best tools for keyword research" | 20-30% | Safe, natural variation |
+| Branded | "Ahrefs keyword explorer" | 15-25% | Always safe |
+| Generic | "click here", "learn more", "read this" | 5-10% | Low SEO value |
+| Descriptive/natural | "this comprehensive guide covers..." | 20-30% | Most natural, recommended |
+| Naked URL | "example.com/page" | 5-10% | Natural for citations |
+
+### Anchor Text Best Practices
+- Vary anchor text for the same target page
+- Use descriptive text that tells users AND search engines what to expect
+- Never use identical anchor text for different target pages
+- Monitor for accidental over-optimization of commercial keywords
+
+## Link Equity Flow Model
+
+### Link Equity Distribution
+
+| Page Position | Equity Received | Action to Increase |
+|--------------|----------------|-------------------|
+| Homepage | Highest (all external links flow here) | Distribute to key pages via prominent links |
+| Category pages | High (linked from homepage + child pages) | Link to from blog posts, not just nav |
+| Top content | Medium-High (if well-linked internally) | Increase internal links from other strong pages |
+| Deep pages | Low (few internal links) | Add contextual links from related pages |
+| Orphan pages | Zero (no internal links!) | Critical: add at least 3 internal links |
+
+### Link Equity Optimization Rules
+1. **Link from strong pages to weak pages** — pages with high authority should link to priority pages
+2. **Reduce click depth** — important pages should be within 3 clicks of homepage
+3. **Fix orphan pages** — every page needs at least one internal link
+4. **Use contextual links** — links within body content pass more value than navigation/footer links
+5. **Limit links per page** — diminishing returns above 100 internal links per page
+
+## Internal Link Audit Checklist
+
+| Check | Tool/Method | Pass Criteria |
+|-------|------------|--------------|
+| Orphan pages | Crawl report | Zero orphan pages |
+| Click depth | Crawl report | All priority pages ≤3 clicks from home |
+| Broken internal links | Crawl report | Zero 404 internal links |
+| Redirect chains | Crawl report | No chain >2 redirects |
+| Anchor text diversity | Manual audit | No anchor text >30% exact match |
+| Bidirectional links | Manual audit | Related pages link to each other |
+| Navigation consistency | Manual audit | Key pages in main nav |
+| Contextual links per page | Manual audit | 3-5 contextual links per 1000 words |
+
+## Reference Materials
+
+- [Link Architecture Patterns](./references/link-architecture-patterns.md) — Architecture models, implementation guides, and link equity optimization strategies
+
 ## Related Skills
 
-- [content-gap-analysis](../../research/content-gap-analysis/) - Find content to link to
-- [seo-content-writer](../../build/seo-content-writer/) - Create linkable content
-- [on-page-seo-auditor](../on-page-seo-auditor/) - Audit overall on-page SEO
-- [technical-seo-checker](../technical-seo-checker/) - Check crawlability
-- [content-quality-auditor](../../cross-cutting/content-quality-auditor/) - Full 80-item CORE-EEAT audit
-
+- [content-gap-analysis](../../research/content-gap-analysis/) — Find content to link to
+- [seo-content-writer](../../build/seo-content-writer/) — Create linkable content
+- [on-page-seo-auditor](../on-page-seo-auditor/) — Audit overall on-page SEO
+- [technical-seo-checker](../technical-seo-checker/) — Check crawlability
+- [content-quality-auditor](../../cross-cutting/content-quality-auditor/) — Full 80-item CORE-EEAT audit
+- [schema-markup-generator](../../build/schema-markup-generator/) — Breadcrumb and navigation schema

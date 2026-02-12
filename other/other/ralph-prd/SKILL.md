@@ -46,9 +46,22 @@ Ask these discovery questions:
 8. **Integrations** - Third-party services?
 9. **Success Criteria** - How do we know it's done?
 
+### Question Specificity for Destructive Operations
+
+When discovery questions involve deleting files, removing dependencies, or other destructive changes:
+
+- **Always include full paths** of items being deleted or modified
+- **State size/scope** — file count, line count, component count
+- **Explicitly state what will NOT be affected**
+- **Frame as confirmation, not open question** — "Deleting X, Y, Z. Proceed?" not "What should be deleted?"
+
+See [EXAMPLES.md](EXAMPLES.md) for vague-vs-specific anti-patterns.
+
 ## Task Generation
 
-Convert features into atomic tasks with categories: `setup`, `feature`, `integration`, `styling`, `testing`. See [WORKFLOW.md](WORKFLOW.md) for task format and categories.
+Convert features into atomic tasks with categories: `setup`, `feature`, `integration`, `styling`, `testing`, `verification`. See [WORKFLOW.md](WORKFLOW.md) for task format and categories.
+
+**Final verification task:** Always include a final task with `verificationTier: "visual"` (UI projects) or `"api"` (API-only projects) that verifies the complete application works end-to-end. This catches issues that individual task verification misses.
 
 ## Workflow
 

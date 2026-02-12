@@ -1,7 +1,7 @@
 ---
 name: on-page-seo-auditor
-version: "1.0"
 description: Performs comprehensive on-page SEO audits to identify optimization opportunities including title tags, meta descriptions, headers, content quality, internal linking, and image optimization.
+geo-relevance: "medium"
 ---
 
 # On-Page SEO Auditor
@@ -489,9 +489,61 @@ When a user requests an on-page SEO audit:
 
 ## Example
 
-**User**: "Audit the on-page SEO of my blog post about 'email marketing tips'"
+**User**: "Audit the on-page SEO of https://example.com/best-noise-cancelling-headphones targeting 'best noise cancelling headphones'"
 
-**Output**: [Comprehensive audit following the structure above with specific findings and recommendations]
+**Output**:
+
+```markdown
+# On-Page SEO Audit Report
+
+**Page**: https://example.com/best-noise-cancelling-headphones
+**Target Keyword**: best noise cancelling headphones
+**Secondary Keywords**: wireless noise cancelling headphones, ANC headphones, noise cancelling headphones review
+**Page Type**: commercial (reviews/roundup)
+**Audit Date**: 2025-01-15
+
+## Summary
+
+| Audit Area | Score | Key Finding |
+|------------|-------|-------------|
+| Title Tag | 8/10 | Good keyword placement; slightly long at 63 chars |
+| Meta Description | 6/10 | Missing CTA; keyword present but generic copy |
+| Header Structure | 9/10 | Clean hierarchy; H2s cover all major products |
+| Content Quality | 7/10 | 2,400 words is solid; lacks original test data |
+| Keyword Optimization | 8/10 | Strong placement; density at 1.2% is healthy |
+| Internal Links | 5/10 | Only 2 internal links; missing links to brand pages |
+| Images | 6/10 | 3/8 images missing alt text; no WebP format |
+| Technical Elements | 7/10 | Missing Product schema; good URL and mobile |
+
+## Overall Score: 71/100
+
+Calculation: (8x0.15 + 6x0.05 + 9x0.10 + 7x0.25 + 8x0.15 + 5x0.10 + 6x0.10 + 7x0.10) x 10 = 71
+
+Score Breakdown:
+████████░░ Title Tag:        8/10  (15%)
+██████░░░░ Meta Description: 6/10  ( 5%)
+█████████░ Headers:          9/10  (10%)
+███████░░░ Content:          7/10  (25%)
+████████░░ Keywords:         8/10  (15%)
+█████░░░░░ Internal Links:   5/10  (10%)
+██████░░░░ Images:           6/10  (10%)
+███████░░░ Technical:        7/10  (10%)
+
+## Priority Issues
+
+### Critical
+1. **Internal linking severely underdeveloped** — Only 2 internal links found. Add links to individual headphone review pages (/sony-wh1000xm5-review, /bose-qc-ultra-review) and the headphones category page. Target 5-8 contextual internal links.
+2. **3 product images missing alt text** — Images for Sony WH-1000XM5, Bose QC Ultra, and Apple AirPods Max have empty alt attributes. Each missing alt tag is a lost ranking signal in Google Images.
+
+### Important
+1. **Meta description lacks call-to-action** — Current description states facts but does not compel clicks. Add "Compare prices and features" or "See our top picks" to drive CTR.
+
+## Quick Wins
+
+1. **Add alt text to 3 images** (5 min) — Use descriptive text like "Sony WH-1000XM5 noise cancelling headphones on desk" instead of empty attributes.
+2. **Rewrite meta description with CTA** (5 min) — Change to: "Compare the 10 best noise cancelling headphones for 2025. Expert-tested picks from Sony, Bose, and Apple with pros, cons, and pricing. See our top picks."
+3. **Add 4+ internal links** (10 min) — Link product names to their individual review pages and add a "See all headphones" link to the category hub.
+```
 
 ## Audit Checklists by Page Type
 
@@ -545,12 +597,132 @@ When a user requests an on-page SEO audit:
 4. **Audit regularly** - Content degrades over time
 5. **Test changes** - Track ranking changes after updates
 
+## Scoring Rubric
+
+### Section Weight Distribution
+
+| Audit Section | Weight | Max Score | Rationale |
+|--------------|--------|-----------|-----------|
+| Title Tag | 15% | 15 | Strongest single ranking signal |
+| Meta Description | 5% | 5 | CTR impact, not direct ranking factor |
+| Header Structure | 10% | 10 | Content organization, semantic signals |
+| Content Quality | 25% | 25 | Strongest holistic ranking factor |
+| Keyword Optimization | 15% | 15 | Relevance signals |
+| Internal/External Links | 10% | 10 | Authority flow, context signals |
+| Image Optimization | 10% | 10 | Accessibility + image search opportunity |
+| Page-Level Technical | 10% | 10 | Core Web Vitals, mobile, security |
+
+### Scoring Scale per Factor
+
+| Score | Meaning | Action Required |
+|-------|---------|-----------------|
+| 10/10 | Excellent — follows all best practices | None |
+| 7-9/10 | Good — minor improvements possible | Optional optimization |
+| 4-6/10 | Needs work — notable issues | Fix within this week |
+| 1-3/10 | Poor — significant problems | Fix immediately (Critical) |
+| 0/10 | Missing or broken | Fix immediately (Blocking) |
+
+### Scoring Conversion Formula
+
+Each section is scored out of 10, then converted to the 100-point overall score using section weights:
+
+```
+Overall Score = Sum of (section_score x section_weight) x 10
+```
+
+Where section weights are: Title 0.15, Meta 0.05, Headers 0.10, Content 0.25, Keywords 0.15, Links 0.10, Images 0.10, Technical 0.10.
+
+**Worked example:**
+
+| Section | Score /10 | Weight | Weighted |
+|---------|-----------|--------|----------|
+| Title Tag | 8 | 0.15 | 1.20 |
+| Meta Description | 6 | 0.05 | 0.30 |
+| Header Structure | 9 | 0.10 | 0.90 |
+| Content Quality | 7 | 0.25 | 1.75 |
+| Keyword Optimization | 8 | 0.15 | 1.20 |
+| Internal/External Links | 5 | 0.10 | 0.50 |
+| Image Optimization | 6 | 0.10 | 0.60 |
+| Page-Level Technical | 7 | 0.10 | 0.70 |
+| **Total** | | **1.00** | **7.15** |
+
+**Overall Score** = 7.15 x 10 = **71 / 100**
+
+## Common Issue Resolution Playbook
+
+### Title Tag Issues
+
+| Issue | Impact | Quick Fix Template |
+|-------|--------|-------------------|
+| Missing title | Critical | Add: "[Primary Keyword]: [Benefit] | [Brand]" |
+| Too long (>60 chars) | Medium | Shorten: move brand to end, remove filler words |
+| Too short (<30 chars) | Medium | Expand: add modifier, benefit, or year |
+| Missing keyword | High | Rewrite to include primary keyword in first half |
+| Duplicate title | High | Make each page title unique; add page-specific modifier |
+
+### Meta Description Issues
+
+| Issue | Impact | Quick Fix Template |
+|-------|--------|-------------------|
+| Missing description | Medium | Write: "[What this page covers]. [Key benefit]. [CTA]." (150-160 chars) |
+| Too long (>160 chars) | Low | Trim from end; ensure core message fits in 150 chars |
+| Missing keyword | Low | Naturally incorporate primary keyword |
+| No CTA | Low | Add: "Learn more", "Discover", "Find out", "Get started" |
+| Duplicated across pages | Medium | Write unique description for each page |
+
+### Header Issues
+
+| Issue | Impact | Quick Fix |
+|-------|--------|-----------|
+| Missing H1 | Critical | Add one H1 per page containing primary keyword |
+| Multiple H1s | High | Keep one H1, convert others to H2 |
+| Skipped heading levels | Medium | Use sequential hierarchy: H1→H2→H3 |
+| Headers not descriptive | Medium | Rewrite to include keyword variations |
+| No H2s (single long block) | Medium | Break content into sections with descriptive H2s every 200-300 words |
+
+### Content Issues
+
+| Issue | Impact | Quick Fix |
+|-------|--------|-----------|
+| Thin content (<300 words) | Critical | Expand with subtopics, FAQ, examples |
+| Keyword stuffing (>3%) | High | Reduce usage, use synonyms and related terms |
+| No structured data | Medium | Add relevant schema (FAQ, HowTo, Article) |
+| Missing internal links | Medium | Add 3-5 contextual internal links |
+| No images | Low | Add 2-3 relevant images with alt text |
+
+## Industry Benchmark Data
+
+### Content Length Benchmarks by Query Type
+
+| Query Type | Top 10 Average Word Count | Recommended Minimum |
+|-----------|--------------------------|-------------------|
+| Informational (guides) | 2,200 words | 1,500 words |
+| Commercial (reviews) | 1,800 words | 1,200 words |
+| Transactional (product) | 800 words | 500 words |
+| Local (service pages) | 600 words | 400 words |
+| Definition queries | 1,200 words | 800 words |
+
+### Page Speed Benchmarks
+
+| Metric | Good | Needs Improvement | Poor |
+|--------|------|-------------------|------|
+| LCP | ≤2.5s | 2.5-4.0s | >4.0s |
+| FID/INP | ≤100ms/200ms | 100-300ms | >300ms |
+| CLS | ≤0.1 | 0.1-0.25 | >0.25 |
+| TTFB | ≤800ms | 800-1800ms | >1800ms |
+
+## Reference Materials
+
+- [Scoring Rubric](./references/scoring-rubric.md) — Detailed scoring criteria, weight distribution, and grade boundaries for on-page audits
+
 ## Related Skills
 
-- [seo-content-writer](../../build/seo-content-writer/) - Create optimized content
-- [technical-seo-checker](../technical-seo-checker/) - Technical SEO audit
-- [meta-tags-optimizer](../../build/meta-tags-optimizer/) - Optimize meta tags
-- [serp-analysis](../../research/serp-analysis/) - SERP context for audit findings
-- [content-refresher](../content-refresher/) - Update existing content
-- [content-quality-auditor](../../cross-cutting/content-quality-auditor/) - Full 80-item CORE-EEAT audit
+- [seo-content-writer](../../build/seo-content-writer/) — Create optimized content
+- [technical-seo-checker](../technical-seo-checker/) — Technical SEO audit
+- [meta-tags-optimizer](../../build/meta-tags-optimizer/) — Optimize meta tags
+- [serp-analysis](../../research/serp-analysis/) — SERP context for audit findings
+- [content-refresher](../content-refresher/) — Update existing content
+- [content-quality-auditor](../../cross-cutting/content-quality-auditor/) — Full 80-item CORE-EEAT audit
+- [internal-linking-optimizer](../internal-linking-optimizer/) — Optimize internal link structure
+- [schema-markup-generator](../../build/schema-markup-generator/) — Validate and generate schema markup
 

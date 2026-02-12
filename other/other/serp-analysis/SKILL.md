@@ -1,7 +1,7 @@
 ---
 name: serp-analysis
-version: "1.0"
 description: Analyzes search engine results pages (SERPs) to understand ranking factors, SERP features, user intent patterns, and AI overview triggers. Essential for understanding what it takes to rank.
+geo-relevance: "high"
 ---
 
 # SERP Analysis
@@ -515,13 +515,79 @@ Analyze mobile vs desktop SERP differences for [keyword]
 5. **Study the outliers** - Why does a weaker site rank? Opportunity!
 6. **Consider AI Overview optimization** - Growing importance
 
+## SERP Feature Taxonomy
+
+### Feature Types and Trigger Conditions
+
+| SERP Feature | Trigger Conditions | Content Requirements | Optimization Approach |
+|-------------|-------------------|---------------------|---------------------|
+| Featured Snippet (paragraph) | Question/definition queries | 40-60 word direct answer under H2 | Answer immediately, then elaborate |
+| Featured Snippet (list) | "How to", "best", "top" queries | Numbered/bulleted list with clear items | Use numbered steps or ranked lists |
+| Featured Snippet (table) | Comparison/data queries | Well-structured HTML table | Create comparison tables |
+| People Also Ask | Most informational queries | Concise answer paragraphs | Target PAA questions as H2/H3s |
+| Knowledge Panel | Entity queries | Schema markup, Wikipedia presence | Structured data + authoritative citations |
+| Image Pack | Visual/product queries | Optimized images with alt text | Descriptive filenames, proper alt text |
+| Video Carousel | How-to/tutorial queries | Video content with transcripts | YouTube optimization, video schema |
+| Local Pack | Location-based queries | Google Business Profile | Local SEO optimization |
+| Shopping Results | Product/purchase queries | Product schema, Google Merchant | Product feed optimization |
+| Sitelinks | Navigational/brand queries | Clear site structure | Logical hierarchy, breadcrumbs |
+
+### AI Overview Analysis Framework
+
+| Analysis Dimension | What to Look For | Why It Matters |
+|-------------------|-----------------|----------------|
+| **Trigger Rate** | Does this query generate an AI Overview? | Not all queries have AI responses |
+| **Source Selection** | Which domains are cited? How many? | Reveals authority signals AI uses |
+| **Citation Format** | Direct quotes vs. synthesized content | Shows what content format AI prefers |
+| **Answer Structure** | Bullet points, paragraphs, tables | Indicates optimal content formatting |
+| **Fact Patterns** | Statistics, definitions, lists cited | Shows what content elements get cited |
+| **Update Sensitivity** | How fresh are cited sources? | Reveals recency bias strength |
+
+### Search Intent Signals from SERP Composition
+
+| SERP Composition | Implied Intent | Content Strategy |
+|-----------------|---------------|-----------------|
+| All blog posts / articles | Informational | Create comprehensive guide |
+| Product pages + shopping | Transactional | Optimize product/category page |
+| Mix of reviews + products | Commercial investigation | Create comparison/review content |
+| Videos dominate | Visual/instructional | Create video content + transcript |
+| Local pack present | Local intent | Local SEO optimization |
+| News results present | Trending/current | Timely, newsworthy content |
+| Forum/Reddit results | Community/opinion | Create opinionated, discussion-worthy content |
+
+## SERP Volatility Assessment
+
+### Volatility Indicators
+
+| Indicator | Stability Signal | Volatility Signal |
+|-----------|-----------------|-------------------|
+| Top 3 age | Same pages for 6+ months | New pages in top 3 within 3 months |
+| Domain diversity | 2-3 domains dominate top 10 | 8+ different domains in top 10 |
+| SERP feature changes | Same features consistently | Features appearing/disappearing |
+| Algorithm sensitivity | Positions stable through updates | Major position shifts during updates |
+
+### Opportunity Assessment Based on SERP
+
+| SERP Signal | Opportunity Level | Recommended Action |
+|------------|------------------|-------------------|
+| Low-authority sites in top 5 | High | Create superior content to outrank |
+| Outdated content ranking | High | Publish fresh, updated content |
+| Thin content ranking | High | Create comprehensive coverage |
+| Forums/UGC ranking | High | Create authoritative alternative |
+| All DR 90+ sites | Low | Target related long-tail instead |
+| AI Overview with few sources | Medium | Optimize for AI citation |
+
+## Reference Materials
+
+- [SERP Feature Taxonomy](./references/serp-feature-taxonomy.md) — Complete taxonomy of SERP features with trigger conditions and optimization approaches
+
 ## Related Skills
 
-- [keyword-research](../keyword-research/) - Find keywords to analyze
-- [competitor-analysis](../competitor-analysis/) - Deep dive on ranking competitors
-- [on-page-seo-auditor](../../optimize/on-page-seo-auditor/) - Optimize based on findings
-- [geo-content-optimizer](../../build/geo-content-optimizer/) - Optimize for AI citations
-- [meta-tags-optimizer](../../build/meta-tags-optimizer/) - Optimize SERP appearance with meta tags
-- [rank-tracker](../../monitor/rank-tracker/) - Track keyword position changes in SERPs
-- [performance-reporter](../../monitor/performance-reporter/) - Report on SERP performance metrics
+- [keyword-research](../keyword-research/) — Find keywords to analyze
+- [competitor-analysis](../competitor-analysis/) — Deep dive on ranking competitors
+- [on-page-seo-auditor](../../optimize/on-page-seo-auditor/) — Optimize based on findings
+- [geo-content-optimizer](../../build/geo-content-optimizer/) — Optimize for AI citations
+- [meta-tags-optimizer](../../build/meta-tags-optimizer/) — Optimize SERP appearance with meta tags
+- [rank-tracker](../../monitor/rank-tracker/) — Track keyword position changes in SERPs
+- [performance-reporter](../../monitor/performance-reporter/) — Track SERP visibility metrics over time
 

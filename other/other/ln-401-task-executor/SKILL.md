@@ -82,6 +82,22 @@ Step 6: Finish
 5) **Quality:** Run typecheck and lint (or project equivalents); ensure instructions in Existing Code Impact are addressed.
 6) **Finish:** Mark task To Review (Linear: update_issue; File: Edit status line); update kanban to To Review; add summary comment (what changed, tests run, docs touched).
 
+## Pre-Submission Checklist
+
+**Context:** Self-assessment before To Review reduces review round-trips and catches obvious issues early.
+
+Before setting To Review, verify all 5 items:
+
+| # | Check | Verify |
+|---|-------|--------|
+| 1 | **Approach alignment** | Implementation matches Story Technical Approach |
+| 2 | **Clean code** | No dead code, no backward-compat shims, unused imports removed |
+| 3 | **Config hygiene** | No hardcoded creds/URLs/magic numbers |
+| 4 | **Docs updated** | Affected Components docs reflect changes |
+| 5 | **Tests pass** | Existing tests still pass after changes |
+
+**If any check fails:** Fix before setting To Review. Do not rely on reviewer to catch preventable issues.
+
 ## Critical Rules
 - Single-task updates only; no bulk status changes.
 - Keep language of the task (EN/RU) in edits/comments.

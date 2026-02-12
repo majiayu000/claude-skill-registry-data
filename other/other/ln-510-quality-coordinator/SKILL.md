@@ -28,7 +28,9 @@ Single-pass coordinator for code quality checks. Invokes workers and returns agg
 
 **Input:** Story ID from ln-500-story-quality-gate
 
-### Phase 2: Code Quality (delegate to ln-511)
+### Phase 2: Code Quality (MANDATORY — delegate to ln-511)
+
+> **MANDATORY STEP:** ln-511 invocation required. ln-511 internally invokes ln-512 for agent review — this chain MUST NOT be broken.
 
 1) **Invoke ln-511-code-quality-checker** via Skill tool
    - ln-511 runs code metrics, MCP Ref validation (OPT/BP/PERF), static analysis

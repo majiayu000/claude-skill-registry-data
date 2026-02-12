@@ -23,7 +23,7 @@ Workers (ln-301, ln-302) handle the actual Linear/File operations based on detec
 ## When to Use
 - Need tasks for a Story with clear AC/Technical Notes
 - Story requirements changed and existing tasks must be updated
-- NOT for test tasks or refactoring tasks (created by other orchestrators)
+- Only for implementation tasks (test tasks → ln-404, refactoring → quality gate)
 
 ## Quality Criteria
 
@@ -35,6 +35,24 @@ Workers (ln-301, ln-302) handle the actual Linear/File operations based on detec
 - **Phase 3 Check & Detect Mode:** Query Linear for existing tasks (metadata only). Detect mode by count + user keywords (add/replan).
 - **Phase 4 Delegate:** Call the right worker with Story data, IDEAL plan/append request, guide links, existing task IDs if any; autoApprove=true.
 - **Phase 5 Verify:** Ensure worker returns URLs/summary and updated kanban_board.md; report result.
+
+## Task Plan Readiness Score
+
+**Context:** Validates plan quality before delegation to workers, preventing rework.
+
+After building IDEAL plan (Phase 2), score 4 criteria:
+
+| # | Criterion | Check |
+|---|-----------|-------|
+| 1 | **Independence** | No forward dependencies between tasks (Task N uses only 1..N-1) |
+| 2 | **AC clarity** | Each task has specific acceptance criteria with measurable outcomes |
+| 3 | **Tech confidence** | All referenced technologies/patterns are known or researched |
+| 4 | **Scope isolation** | Tasks don't overlap with other Stories' scope |
+
+**Score = count of PASS criteria (0-4)**
+- 4/4: Delegate to worker
+- 2-3/4: Show warnings to user, fix or proceed
+- <2/4: Rework plan before delegation
 
 ## Task Independence Validation
 

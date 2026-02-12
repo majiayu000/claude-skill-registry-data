@@ -222,6 +222,18 @@ RICE = (Reach x Impact x Confidence) / Effort
 
 **Confidence (0.5-1.0):** Data quality (from Step 3.2)
 
+**Data Confidence Assessment:**
+
+For each RICE factor, assess data confidence level:
+
+| Confidence | Criteria | Score Modifier |
+|------------|----------|----------------|
+| HIGH | Multiple authoritative sources (Gartner, Statista, SEC filings) | Factor used as-is |
+| MEDIUM | 1-2 sources, mixed quality (blog + report) | Factor ±25% range shown |
+| LOW | No sources, team estimate only | Factor ±50% range shown |
+
+**Output:** Show confidence per factor in prioritization table + RICE range (optimistic/pessimistic) to make uncertainty explicit.
+
 **Effort (1-10):** Person-months
 | Score | Time | Story Indicators |
 |-------|------|------------------|

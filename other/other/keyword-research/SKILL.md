@@ -1,7 +1,7 @@
 ---
 name: keyword-research
-version: "1.0"
 description: Discovers high-value keywords with search intent analysis, difficulty assessment, and content opportunity mapping. Essential for starting any SEO or GEO content strategy.
+geo-relevance: "medium"
 ---
 
 # Keyword Research
@@ -163,6 +163,12 @@ When a user requests keyword research:
 6. **Calculate Opportunity Score**
 
    Formula: `Opportunity = (Volume × Intent Value) / Difficulty`
+
+   **Intent Value** assigns a numeric weight by search intent:
+   - Informational = 1
+   - Navigational = 1
+   - Commercial = 2
+   - Transactional = 3
 
    ```markdown
    ### Opportunity Matrix
@@ -425,12 +431,107 @@ Research local keywords for [business type] in [city/region]
 6. **Include GEO keywords** in your strategy for AI visibility
 7. **Review quarterly** - keyword dynamics change over time
 
+## Keyword Intent Taxonomy
+
+Understanding search intent is critical for keyword selection and content planning.
+
+### Intent Classification Matrix
+
+| Intent Type | User Goal | SERP Signals | Content Strategy | Conversion Potential |
+|------------|-----------|--------------|-----------------|---------------------|
+| Informational | Learn something | Featured snippets, PAA, knowledge panels | Guides, tutorials, explainers | Low (nurture) |
+| Navigational | Find specific site/page | Brand results, sitelinks | Brand pages, login pages | Medium (brand) |
+| Commercial Investigation | Research before buying | Comparison results, reviews, "best" lists | Comparisons, reviews, buying guides | High (mid-funnel) |
+| Transactional | Complete an action | Shopping results, ads, product pages | Product pages, pricing, signup | Highest (bottom-funnel) |
+
+### Intent Signal Words
+
+| Intent | Signal Words | Example Keywords |
+|--------|-------------|-----------------|
+| Informational | how, what, why, when, guide, tutorial, learn, examples | "how to improve SEO", "what is schema markup" |
+| Navigational | [brand name], login, sign in, official, website | "Ahrefs login", "Google Search Console" |
+| Commercial | best, top, review, comparison, vs, alternative, pricing | "best SEO tools 2026", "Ahrefs vs SEMrush" |
+| Transactional | buy, purchase, discount, coupon, free trial, download, hire | "buy Ahrefs subscription", "SEO audit tool free" |
+
+## Topic Cluster Architecture
+
+### Hub-and-Spoke Model
+
+```
+                    ┌──────────────┐
+              ┌─────│  Sub-topic A  │
+              │     └──────────────┘
+              │     ┌──────────────┐
+┌─────────┐   ├─────│  Sub-topic B  │
+│  PILLAR  │───┤     └──────────────┘
+│  PAGE    │   ├─────┌──────────────┐
+└─────────┘   │     │  Sub-topic C  │
+              │     └──────────────┘
+              └─────┌──────────────┐
+                    │  Sub-topic D  │
+                    └──────────────┘
+```
+
+**Pillar Page**: Comprehensive overview (3,000-5,000 words) targeting broad keyword
+**Cluster Pages**: Focused articles (1,500-2,500 words) targeting specific long-tail keywords
+**Internal Links**: Every cluster page links to pillar; pillar links to all cluster pages
+
+### Topic Cluster Planning Template
+
+| Pillar Topic | Pillar Keyword | Cluster Topic | Cluster Keyword | Volume | Difficulty | Status |
+|-------------|---------------|--------------|----------------|--------|-----------|--------|
+| [Broad topic] | [Head keyword] | [Subtopic 1] | [Long-tail 1] | [X] | [X] | [Draft/Published] |
+
+## Keyword Prioritization Framework
+
+**Which score to use**: Use the Priority Score (below) for initial keyword triage and shortlisting. Use the Opportunity Score (Step 6 above) for final content calendar prioritization, where the additional GEO and competitive factors provide more nuanced ranking.
+
+### Priority Scoring Matrix
+
+Score each keyword 1-5 on these factors, then calculate weighted total:
+
+| Factor | Weight | Score 1 (Low) | Score 5 (High) |
+|--------|--------|---------------|----------------|
+| Search Volume | 20% | <100/mo | >10,000/mo |
+| Keyword Difficulty | 25% | KD >80 (hard) | KD <20 (easy) |
+| Business Relevance | 30% | Tangential to offering | Core to offering |
+| Search Intent Match | 15% | Informational only | Transactional/commercial |
+| Trend Direction | 10% | Declining | Growing |
+
+**Priority Score** = Σ(Factor Weight × Score) / 5
+
+### Priority Categories
+
+| Priority | Score Range | Action |
+|----------|------------|--------|
+| P0 — Must Target | 4.0-5.0 | Create content immediately |
+| P1 — High Value | 3.0-3.9 | Queue for next content sprint |
+| P2 — Opportunity | 2.0-2.9 | Plan for future content calendar |
+| P3 — Monitor | 1.0-1.9 | Track but don't prioritize |
+
+## Seasonal Keyword Patterns
+
+### Seasonal Analysis Framework
+
+| Season Trigger | Example Keywords | Planning Lead Time | Content Strategy |
+|---------------|-----------------|-------------------|-----------------|
+| Calendar events | "Black Friday SEO", "New Year marketing plan" | 3-4 months ahead | Publish 6-8 weeks before peak |
+| Industry events | "[Conference] takeaways", "Google algorithm update" | 1-2 months / reactive | Pre-plan templates, react quickly |
+| Budget cycles | "marketing budget template Q1", "SEO ROI report" | 2-3 months ahead | Target planning season (Oct-Dec) |
+| Seasonal demand | "summer marketing ideas", "holiday email campaigns" | 2-3 months ahead | Refresh annually with new data |
+
+## Reference Materials
+
+- [Keyword Intent Taxonomy](./references/keyword-intent-taxonomy.md) — Complete intent classification with signal words and content strategies
+- [Topic Cluster Templates](./references/topic-cluster-templates.md) — Hub-and-spoke architecture templates for pillar and cluster content
+
 ## Related Skills
 
-- [competitor-analysis](../competitor-analysis/) - See what keywords competitors rank for
-- [content-gap-analysis](../content-gap-analysis/) - Find missing keyword opportunities
-- [seo-content-writer](../../build/seo-content-writer/) - Create content for target keywords
-- [geo-content-optimizer](../../build/geo-content-optimizer/) - Optimize for AI citations
-- [rank-tracker](../../monitor/rank-tracker/) - Monitor keyword position changes over time
-- [memory-management](../../cross-cutting/memory-management/) - Store keyword data in project memory
+- [competitor-analysis](../competitor-analysis/) — See what keywords competitors rank for
+- [content-gap-analysis](../content-gap-analysis/) — Find missing keyword opportunities
+- [seo-content-writer](../../build/seo-content-writer/) — Create content for target keywords
+- [geo-content-optimizer](../../build/geo-content-optimizer/) — Optimize for AI citations
+- [rank-tracker](../../monitor/rank-tracker/) — Monitor keyword position changes over time
+- [memory-management](../../cross-cutting/memory-management/) — Store keyword data in project memory
+- [serp-analysis](../serp-analysis/) — SERP patterns inform keyword strategy
 

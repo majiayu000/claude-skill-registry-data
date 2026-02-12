@@ -179,10 +179,10 @@ Each Story creates ONLY the tables it needs (not all tables upfront).
 
 3. **Story Size:** Limits per `creation_quality_checklist.md` #9. Outside range → split or merge.
 
-**Over-decomposition indicators:**
-- ❌ Purely technical (no user value)
-- ❌ Title starts with "Add", "Create", "Update" (likely Task)
-- ❌ Crosses only 1-2 layers (not vertical)
+**Each Story must pass these checks:**
+- ✅ Delivers user value (not purely technical)
+- ✅ Title describes user capability, not implementation action
+- ✅ Crosses 3+ layers (vertical slice: UI → API → Service → DB)
 
 4. **Build IDEAL Plan "in mind":**
    - Each Story: persona + capability + business value
@@ -199,16 +199,22 @@ Each Story creates ONLY the tables it needs (not all tables upfront).
 - ❌ BAD: "Login should be fast" (vague, not measurable)
 - ✅ GOOD: "Then receive token <200ms" (specific, measurable)
 
-**INVEST Checklist:**
+**INVEST Score (0-6 per Story):**
 
-| Criterion | Check | ✅ GOOD | ❌ BAD |
-|-----------|-------|---------|--------|
-| **Independent** | Can develop/deploy without blocking others + NO forward dependencies | "Request OAuth token" (Story N uses only N-1) | "Validate token depends on Story N+2 refresh flow" (forward dependency!) |
-| **Negotiable** | AC focus on WHAT, not HOW | "User gets valid token" (what) | "Use authlib 1.3.0, store in Redis" (how) |
-| **Valuable** | Clear business value | "User refreshes expired token to maintain session" | "Add token_refresh table" (no user value) |
-| **Estimable** | Size within checklist #9 range | Clear scope, known patterns, researched standards | "Implement authentication" (too vague) |
-| **Small** | AC/hours/tests per checklist #9 | Within limits | Exceeds limits → split |
-| **Testable** | AC measurable | "Given valid refresh token, Then receive token <200ms" | "Token refresh should be fast" (not measurable) |
+| # | Criterion | Check | +1 if PASS |
+|---|-----------|-------|------------|
+| 1 | **Independent** | No forward dependencies (Story N uses only 1..N-1) | ✅ |
+| 2 | **Negotiable** | AC focus on WHAT, not HOW (no library versions, no implementation details) | ✅ |
+| 3 | **Valuable** | Clear "So that [business value]" — not purely technical | ✅ |
+| 4 | **Estimable** | Size within checklist #9 range, known patterns | ✅ |
+| 5 | **Small** | 3-5 AC, 6-20 hours, vertical slice | ✅ |
+| 6 | **Testable** | AC measurable with Given/When/Then and specific values | ✅ |
+
+**Gate:** Score ≥ 4 → proceed. Score < 4 → rework Story before creation.
+
+**Examples:**
+- ❌ Score 2/6: "Create user table" (fails Independent, Valuable, Small, Testable)
+- ✅ Score 6/6: "User registration" with 4 GWT AC, 12h, full vertical slice
 
 **Output:** IDEAL Story plan (5-10 Stories) with titles, statements, core AC, ordering
 

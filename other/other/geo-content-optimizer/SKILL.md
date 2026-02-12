@@ -1,7 +1,7 @@
 ---
 name: geo-content-optimizer
-version: "1.0"
 description: Optimizes content for Generative Engine Optimization (GEO) to increase chances of being cited by AI systems like ChatGPT, Claude, Perplexity, and Google AI Overviews. Makes content AI-friendly while maintaining SEO value.
+geo-relevance: "high"
 ---
 
 # GEO Content Optimizer
@@ -572,11 +572,11 @@ Use this checklist for any content:
 
 ## Related Skills
 
-- [seo-content-writer](../seo-content-writer/) - Create SEO content to optimize
-- [schema-markup-generator](../schema-markup-generator/) - Add structured data
-- [keyword-research](../../research/keyword-research/) - Identify keyword targets for GEO optimization
-- [content-refresher](../../optimize/content-refresher/) - Update content for freshness
-- [serp-analysis](../../research/serp-analysis/) - Analyze AI Overview patterns
-- [content-quality-auditor](../../cross-cutting/content-quality-auditor/) - Full 80-item CORE-EEAT audit
+- [seo-content-writer](../seo-content-writer/) — Create SEO content to optimize
+- [schema-markup-generator](../schema-markup-generator/) — Add structured data
+- [keyword-research](../../research/keyword-research/) — Identify keyword targets for GEO optimization
+- [content-refresher](../../optimize/content-refresher/) — Update content for freshness
+- [serp-analysis](../../research/serp-analysis/) — Analyze AI Overview patterns
+- [content-quality-auditor](../../cross-cutting/content-quality-auditor/) — Full 80-item CORE-EEAT audit
 - [domain-authority-auditor](../../cross-cutting/domain-authority-auditor/) — Domain-level AI citation signals (CITE C05-C08) complement page-level GEO optimization
 

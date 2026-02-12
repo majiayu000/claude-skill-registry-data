@@ -1,7 +1,7 @@
 ---
 name: content-refresher
-version: "1.0"
 description: Identifies and updates outdated content to restore and improve search rankings. Analyzes content freshness, adds new information, updates statistics, and optimizes for current SEO and GEO best practices.
+geo-relevance: "medium"
 ---
 
 # Content Refresher
@@ -478,9 +478,102 @@ When a user requests content refresh help:
 
 ## Example
 
-**User**: "Refresh my 2022 blog post about 'social media marketing strategies'"
+**User**: "Refresh my blog post about 'best cloud hosting providers'"
 
-**Output**: [Full analysis and refresh plan following structure above, including specific outdated elements, new sections to add, statistics to update, and GEO enhancements]
+**Output**:
+
+```markdown
+### CORE-EEAT Quick Assessment
+
+**Content**: "Best Cloud Hosting Providers 2023"
+**Content Type**: Commercial comparison / listicle
+
+| Dimension | Quick Score | Key Weakness | Refresh Priority |
+|-----------|-----------|--------------|-----------------|
+| C — Contextual Clarity | 60/100 | Title says 2023 — stale intent signal | 🔴 |
+| O — Organization | 75/100 | Good comparison tables but no summary box | 🟡 |
+| R — Referenceability | 35/100 | Pricing from Q1 2023, 3 broken links | 🔴 |
+| E — Exclusivity | 50/100 | No original benchmarks or test data | 🟡 |
+| Exp — Experience | 30/100 | No first-person testing narrative | 🔴 |
+| Ept — Expertise | 65/100 | Author bio present but lacks credentials | 🟡 |
+| A — Authority | 55/100 | 12 backlinks, was ranking page 1 | 🟢 |
+| T — Trust | 60/100 | Affiliate links present but not disclosed | 🔴 |
+
+**Weakest Dimensions** (focus refresh here):
+1. **Experience** — Add hands-on testing results ("We migrated a test site to each provider")
+2. **Referenceability** — Replace all 2023 pricing/uptime data with current figures
+
+## Content Refresh Analysis: Best Cloud Hosting Providers 2023
+
+**URL**: cloudhosting.com/best-cloud-hosting
+**Published**: 2023-02-14
+**Last Updated**: Never
+**Word Count**: 2,100
+
+### Performance Metrics
+
+| Metric | 6 Mo Ago | Current | Change |
+|--------|----------|---------|--------|
+| Organic Traffic | 3,200/mo | 1,400/mo | -56% |
+| Avg Position | 4.2 | 14.8 | ↓ 10.6 |
+| Impressions | 18,000 | 9,500 | -47% |
+| CTR | 6.1% | 2.3% | -3.8% |
+
+### Content Decay Signals Identified
+
+1. **Outdated year in title and H1** — "2023" signals stale content to users and search engines
+2. **Pricing data 18+ months old** — AWS Lightsail listed at $3.50/mo (now $5/mo), DigitalOcean at $4/mo (now $6/mo)
+3. **Missing new entrants** — No mention of Hetzner Cloud or Vultr, which 4/5 top competitors now cover
+4. **3 broken outbound links** — Provider comparison pages that have moved or been retired
+
+### Refresh vs. Rewrite Decision
+
+| Factor | Assessment |
+|--------|-----------|
+| Content quality | Good structure, solid comparison tables — foundation is sound |
+| URL equity | 12 referring domains, 18 months old |
+| Scope of changes | ~40% of content needs updating |
+| Search intent | Unchanged — still commercial comparison |
+
+**Decision**: **REFRESH** — The URL has earned backlinks, the structure is solid, and less than 50% needs rewriting. Keep the URL, update in place.
+
+## Content Refresh Plan
+
+**Current Title**: "Best Cloud Hosting Providers 2023"
+**Refreshed Title**: "Best Cloud Hosting Providers 2024: 7 Platforms Tested & Compared"
+
+### Specific Refresh Actions
+
+1. **Update all pricing and specs** (~30 min)
+   - Replace 2023 pricing for all 5 listed providers with current data
+   - Add uptime stats from the last 12 months (source: UptimeRobot public status pages)
+   - Update feature comparison table with current plan tiers
+
+2. **Add 2 missing providers + testing narrative** (~600 words)
+   - Add Hetzner Cloud and Vultr sections with same comparison format
+   - Write intro paragraph: "We deployed a WordPress benchmark site to each provider and measured TTFB, uptime, and support response times over 30 days"
+
+3. **Add affiliate disclosure and FAQ section** (~200 words)
+   - Add disclosure statement below introduction: "This post contains affiliate links. See our editorial policy."
+   - Add FAQ with 4 questions targeting People Also Ask (e.g., "What is the cheapest cloud hosting?", "Is cloud hosting faster than shared hosting?")
+   - Implement FAQ schema markup for rich result eligibility
+
+4. **Fix broken links and update internal links** (~15 min)
+   - Replace 3 broken outbound links with current provider URLs
+   - Add internal links to cloudhosting.com/vps-vs-cloud and cloudhosting.com/hosting-speed-test
+
+### Republishing Strategy
+
+**Recommendation**: Update Published Date — this is a major overhaul (40%+ new content, new providers, fresh test data). Update `dateModified` in Article schema, resubmit URL in Search Console, and share on social as "Updated for 2024."
+
+### Expected Outcomes
+
+| Metric | Current | 30-Day Target | 90-Day Target |
+|--------|---------|---------------|---------------|
+| Avg Position | 14.8 | 8-10 | 3-6 |
+| Organic Traffic | 1,400/mo | 2,200/mo | 3,500/mo |
+| Featured Snippets | 0 | 1 (FAQ) | 2+ |
+```
 
 ## Content Refresh Checklist
 
@@ -528,11 +621,85 @@ When a user requests content refresh help:
 5. **Schedule regular audits** - Check content health quarterly
 6. **Optimize for GEO** - Every refresh is a GEO opportunity
 
+## Content Decay Signal Taxonomy
+
+### Decay Indicators
+
+| Signal | Source | Severity | Detection Method |
+|--------|--------|----------|-----------------|
+| Traffic decline >20% MoM | Analytics | High | Monthly traffic comparison |
+| Position drop >5 positions | Rank tracker | High | Weekly rank monitoring |
+| Outdated statistics/dates | Manual review | Medium | Annual content audit |
+| Broken external links | Crawler | Medium | Monthly crawl reports |
+| Decreased CTR | Search Console | Medium | Quarterly CTR analysis |
+| Competitor new content | SERP monitoring | Medium | Monthly SERP checks |
+| User engagement drop | Analytics | Low | Quarterly engagement review |
+| Index coverage issues | Search Console | High | Weekly coverage monitoring |
+
+### Content Decay Stages
+
+| Stage | Symptoms | Urgency | Recommended Action |
+|-------|---------|---------|-------------------|
+| **Early decay** | Slight traffic/position dip | Low | Monitor for 2-4 weeks |
+| **Active decay** | Consistent decline across 2+ months | Medium | Schedule refresh within 2 weeks |
+| **Significant decay** | 50%+ traffic loss, page 2+ | High | Immediate refresh or rewrite |
+| **Terminal decay** | No organic traffic, deindexed | Critical | Rewrite, redirect, or retire |
+
+## Refresh vs. Rewrite Decision Framework
+
+| Factor | Refresh (Update) | Rewrite (New version) |
+|--------|-----------------|---------------------|
+| Content quality | Good foundation, needs updating | Fundamentally flawed or outdated approach |
+| Position | Was ranking well, now dropping | Never ranked well despite optimization |
+| URL age | 1+ years, has earned backlinks | Young URL with no backlink equity |
+| Backlinks | Has external links pointing to it | No backlinks worth preserving |
+| Scope of changes needed | <50% of content changing | >50% needs rewriting |
+| Search intent | Intent hasn't changed | Search intent has evolved |
+
+**Decision rule:** If the URL has backlinks and was ranking, REFRESH. If not, consider REWRITE at a new URL (with 301 redirect if old URL has any equity).
+
+## Content Lifecycle Model
+
+```
+CREATE → PROMOTE → MAINTAIN → REFRESH → [REFRESH again] or RETIRE
+  │         │          │          │                          │
+  │      Month 1    Month 2-6   Month 6-12              When terminal
+  │    Social,      Monitor     Update facts,            301 redirect
+  │    outreach,    rankings,   add new sections,         to related
+  │    email        fix issues  improve depth              content
+```
+
+### Lifecycle Actions by Phase
+
+| Phase | Duration | Key Actions | Metrics to Track |
+|-------|----------|------------|-----------------|
+| Create | Week 1 | Publish, submit to Search Console | Indexation |
+| Promote | Month 1 | Social shares, email, outreach | Referral traffic, backlinks |
+| Maintain | Months 2-6 | Monitor, fix broken links, respond to comments | Rankings, traffic trend |
+| Refresh | Months 6-12+ | Update data, add sections, improve structure | Traffic recovery, new keywords |
+| Retire | When terminal | 301 redirect to best alternative | Redirect traffic recovery |
+
+## Update Strategy by Content Type
+
+| Content Type | Refresh Frequency | Key Updates | Shelf Life |
+|-------------|-------------------|------------|-----------|
+| Statistics roundups | Every 6 months | Replace old stats, add new sources | 6-12 months |
+| Tool comparisons | Every 3-6 months | Update pricing, features, screenshots | 3-6 months |
+| How-to guides | Annually | Update steps, screenshots, links | 12-18 months |
+| Evergreen guides | Every 12-18 months | Add new sections, update examples | 18-24 months |
+| News/trend content | Don't refresh | Archive or redirect | 1-3 months |
+| Case studies | Rarely | Update results if available | 2-3 years |
+| Glossary/definitions | As needed | Update when definitions evolve | 2-5 years |
+
+## Reference Materials
+
+- [Content Decay Signals](./references/content-decay-signals.md) — Decay indicators, lifecycle stages, and refresh triggers by content type
+
 ## Related Skills
 
-- [content-gap-analysis](../../research/content-gap-analysis/) - Find what to add
-- [seo-content-writer](../../build/seo-content-writer/) - Write new sections
-- [geo-content-optimizer](../../build/geo-content-optimizer/) - Enhance for AI
-- [on-page-seo-auditor](../on-page-seo-auditor/) - Audit refreshed content
-- [content-quality-auditor](../../cross-cutting/content-quality-auditor/) - Full 80-item CORE-EEAT audit
+- [content-gap-analysis](../../research/content-gap-analysis/) — Find what to add
+- [seo-content-writer](../../build/seo-content-writer/) — Write new sections
+- [geo-content-optimizer](../../build/geo-content-optimizer/) — Enhance for AI
+- [on-page-seo-auditor](../on-page-seo-auditor/) — Audit refreshed content
+- [content-quality-auditor](../../cross-cutting/content-quality-auditor/) — Full 80-item CORE-EEAT audit
 

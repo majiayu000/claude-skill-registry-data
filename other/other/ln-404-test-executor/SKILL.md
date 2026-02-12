@@ -49,7 +49,7 @@ Runs a single Story final test task (label "tests") through implementation/execu
 
 ## Test Failure Analysis Protocol
 
-**CRITICAL:** When a **newly written test** fails, STOP and analyze BEFORE changing anything.
+**CRITICAL:** When a **newly written test** fails, STOP and analyze BEFORE changing anything (failing new tests often indicate implementation bugs, not test issues — fixing blindly masks root cause).
 
 **Step 1: Verify Test Correctness**
 - Does test match AC requirements exactly? (Given/When/Then from Story)

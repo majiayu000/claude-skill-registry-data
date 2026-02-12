@@ -34,6 +34,7 @@ L2 Coordinator that analyzes implemented architectural patterns against current 
 | ln-641-pattern-analyzer | Calculate 4 scores per pattern | Phase 5 |
 | ln-642-layer-boundary-auditor | Detect layer violations | Phase 4 |
 | ln-643-api-contract-auditor | Audit API contracts, DTOs, layer leakage | Phase 4 |
+| ln-644-dependency-graph-auditor | Build dependency graph, detect cycles, validate boundaries, calculate metrics | Phase 4 |
 
 **Prompt template:**
 ```
@@ -184,11 +185,11 @@ ELSE:
   domain_mode = "global"
 ```
 
-### Phase 4: Layer Boundary + API Contract Audit
+### Phase 4: Layer Boundary + API Contract + Dependency Graph Audit
 
 ```
 IF domain_mode == "domain-aware":
-  # Per-domain invocation of ln-642 and ln-643
+  # Per-domain invocation of ln-642, ln-643, ln-644
   FOR EACH domain IN domains (parallel):
     Task(ln-642-layer-boundary-auditor)
       Input: architecture_path, codebase_root, skip_violations,
@@ -196,11 +197,16 @@ IF domain_mode == "domain-aware":
     Task(ln-643-api-contract-auditor)
       Input: pattern="API Contracts", locations=[domain.path], bestPractices,
              domain_mode="domain-aware", current_domain=domain.name, scan_path=domain.path
+    Task(ln-644-dependency-graph-auditor)
+      Input: architecture_path, codebase_root,
+             domain_mode="domain-aware", current_domain=domain.name, scan_path=domain.path
 ELSE:
   Task(ln-642-layer-boundary-auditor)
     Input: architecture_path, codebase_root, skip_violations
   Task(ln-643-api-contract-auditor)
     Input: pattern="API Contracts", locations=[service_dirs, api_dirs], bestPractices
+  Task(ln-644-dependency-graph-auditor)
+    Input: architecture_path, codebase_root
 
 # Apply layer deductions to affected patterns (per scoring_rules.md)
 FOR EACH violation IN ln642_violations:
@@ -223,6 +229,7 @@ FOR EACH pattern IN catalog WHERE pattern.status == "VERIFIED":
   - ln-641 returns: `{overall_score, scores: {compliance, completeness, quality, implementation}, issues: [], gaps: {}}`
   - ln-642 returns: `{category, score, total_issues, critical, high, medium, low, findings: [], domain, scan_path}`
   - ln-643 returns: `{overall_score, scores: {compliance, completeness, quality, implementation}, issues: [], domain, scan_path}`
+  - ln-644 returns: `{category, score, total_issues, critical, high, medium, low, architecture: {detected, confidence, zones}, graph_stats: {modules_analyzed, edges, cycles_detected, ccd, nccd}, cycles: [], boundary_violations: [], sdp_violations: [], metrics: {}, baseline: {new, resolved, frozen}, findings: [], domain, scan_path}`
 
   # Merge layer violations from Phase 4
   pattern.issues += layer_violations.filter(v => v.pattern == pattern)
@@ -255,6 +262,27 @@ IF domain_mode == "domain-aware":
         domains: domains_with_issue,
         recommendation: "Create cross-cutting architectural fix"
       })
+
+  # Cross-domain cycles (ln-644)
+  FOR EACH cycle IN ln644_cycles:
+    domains_in_cycle = unique(cycle.path.map(m => m.domain))
+    IF len(domains_in_cycle) >= 2:
+      systemic_findings.append({
+        severity: "CRITICAL",
+        issue: f"Cross-domain dependency cycle: {cycle.path} spans {len(domains_in_cycle)} domains",
+        domains: domains_in_cycle,
+        recommendation: "Decouple via domain events or extract shared module"
+      })
+
+  # Cross-domain SDP violations (ln-644)
+  FOR EACH sdp IN ln644_sdp_violations:
+    IF sdp.from.domain != sdp.to.domain:
+      systemic_findings.append({
+        severity: "HIGH",
+        issue: f"Cross-domain stability violation: {sdp.from} (I={sdp.I_from}) depends on {sdp.to} (I={sdp.I_to})",
+        domains: [sdp.from.domain, sdp.to.domain],
+        recommendation: "Apply DIP: extract interface at domain boundary"
+      })
 ```
 
 ### Phase 6: Gap Analysis
@@ -276,9 +304,10 @@ gaps = {
 pattern_scores = [p.overall_score for p in ln641_results]  # Each 0-10
 layer_score = ln642_result.score                            # 0-10
 api_score = ln643_result.overall_score                      # 0-10
+graph_score = ln644_result.score                            # 0-10
 
 # Step 2: Calculate architecture_health_score
-all_scores = pattern_scores + [layer_score, api_score]
+all_scores = pattern_scores + [layer_score, api_score, graph_score]
 architecture_health_score = round(average(all_scores) * 10)  # 0-100 scale
 
 # Status mapping:
@@ -330,6 +359,16 @@ architecture_health_score = round(average(all_scores) * 10)  # 0-100 scale
   "requires_attention": [
     {"pattern": "Event-Driven", "avg_score": 58, "critical_issues": ["No DLQ", "No schema versioning"]}
   ],
+  "dependency_graph": {
+    "architecture_detected": "hybrid",
+    "architecture_confidence": "MEDIUM",
+    "modules_analyzed": 12,
+    "cycles_detected": 2,
+    "boundary_violations": 3,
+    "sdp_violations": 1,
+    "nccd": 1.3,
+    "score": 6.5
+  },
   "cross_domain_issues": [
     {
       "severity": "CRITICAL",
@@ -357,6 +396,7 @@ architecture_health_score = round(average(all_scores) * 10)  # 0-100 scale
 - Domain discovery completed (global or domain-aware mode selected)
 - Layer boundaries audited via ln-642 (violations detected, coverage calculated)
 - API contracts audited via ln-643
+- Dependency graph built, cycles detected, boundary rules validated, metrics calculated via ln-644
 - All patterns analyzed via ln-641 (4 scores with layer deductions applied)
 - If domain-aware: cross-domain aggregation completed (systemic issues identified)
 - Gaps identified (undocumented, missing components, layer violations, inconsistent, systemic)
@@ -374,6 +414,7 @@ architecture_health_score = round(average(all_scores) * 10)  # 0-100 scale
 - Pattern analysis: `../ln-641-pattern-analyzer/SKILL.md`
 - Layer boundary audit: `../ln-642-layer-boundary-auditor/SKILL.md`
 - API contract audit: `../ln-643-api-contract-auditor/SKILL.md`
+- Dependency graph audit: `../ln-644-dependency-graph-auditor/SKILL.md`
 
 ---
 **Version:** 2.0.0

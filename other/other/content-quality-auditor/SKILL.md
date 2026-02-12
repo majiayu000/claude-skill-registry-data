@@ -1,7 +1,7 @@
 ---
 name: content-quality-auditor
-version: "1.0"
 description: Runs a full CORE-EEAT 80-item content quality audit, scoring content across 8 dimensions with weighted scoring by content type. Produces a detailed report with per-item scores, dimension analysis, and a prioritized action plan.
+geo-relevance: "high"
 ---
 
 # Content Quality Auditor
@@ -248,6 +248,21 @@ Calculate scores and generate the final report:
 
 **Rating Scale**: 90-100 Excellent | 75-89 Good | 60-74 Medium | 40-59 Low | 0-39 Poor
 
+### N/A Item Handling
+
+When an item cannot be evaluated (e.g., A01 Backlink Profile requires site-level data not available):
+
+1. Mark the item as "N/A" with reason
+2. Exclude N/A items from the dimension score calculation
+3. Dimension Score = (sum of scored items) / (number of scored items x 10) x 100
+4. If more than 50% of a dimension's items are N/A, flag the dimension as "Insufficient Data" and exclude it from the weighted total
+5. Recalculate weighted total using only dimensions with sufficient data, re-normalizing weights to sum to 100%
+
+**Example**: Authority dimension with 8 N/A items and 2 scored items (A05=8, A07=5):
+- Dimension score = (8+5) / (2 x 10) x 100 = 65
+- But 8/10 items are N/A (>50%), so flag as "Insufficient Data -- Authority"
+- Exclude A dimension from weighted total; redistribute its weight proportionally to remaining dimensions
+
 ### Per-Item Scores
 
 #### CORE — Content Body (40 Items)
@@ -320,20 +335,67 @@ Sorted by: weight × points lost (highest impact first)
 
 ## Example
 
-**User**: "Audit this article about email marketing best practices for CORE-EEAT quality"
+**User**: "Audit this blog post against CORE-EEAT: [paste of 'Best Project Management Tools for Remote Teams 2025']"
 
-**Output**: [Full audit report following the structure above, with all 80 items scored, dimension and total scores calculated using Blog Post weights (C:25%, O:10%, R:10%, E:20%, Exp:10%, Ept:10%, A:5%, T:10%), Top 5 improvements identified, and action plan generated]
+**Output** (partial -- showing one dimension to demonstrate format):
+
+```markdown
+## CORE-EEAT Audit Report
+
+### Overview
+
+- **Content**: "Best Project Management Tools for Remote Teams 2025"
+- **Content Type**: Blog Post / Comparison
+- **Audit Date**: 2025-06-15
+- **Veto Status**: No triggers
+
+### C -- Contextual Clarity (scored dimension example)
+
+| ID  | Check Item         | Score   | Points | Notes                                                       |
+|-----|--------------------|---------|--------|-------------------------------------------------------------|
+| C01 | Intent Alignment   | Pass    | 10     | Matches "best X" comparison intent; title and body aligned  |
+| C02 | Direct Answer      | Partial | 5      | Answer appears in first 300 words but no summary box        |
+| C03 | Query Coverage     | Pass    | 10     | Covers "project management tools", "remote team software", "best PM tools" |
+| C04 | Definition First   | Pass    | 10     | Key terms ("PM tool", "async collaboration") defined on first use |
+| C05 | Topic Scope        | Partial | 5      | States what's covered but not what's excluded               |
+| C06 | Audience Targeting | Pass    | 10     | Explicitly targets "remote team leads and managers"         |
+| C07 | Semantic Coherence | Pass    | 10     | Logical flow: intro > criteria > tools > comparison > verdict |
+| C08 | Use Case Mapping   | Pass    | 10     | Decision matrix for team size, budget, and features         |
+| C09 | FAQ Coverage       | Fail    | 0      | No FAQ section despite long-tail potential ("free PM tools for small teams") |
+| C10 | Semantic Closure   | Partial | 5      | Conclusion present but doesn't loop back to opening promise |
+
+**C Dimension Score**: 75/100 (Good)
+**Blog Post weight for C**: 25%
+**Weighted contribution**: 18.75
+
+#### Priority Improvements from C Dimension
+
+1. **C09 FAQ Coverage** -- Add FAQ section with 3-5 long-tail questions
+   - Current: Fail (0) | Potential gain: 2.5 weighted points
+   - Action: Add FAQ with "Are there free PM tools for small remote teams?", "How to migrate between PM tools?", etc.
+
+2. **C02 Direct Answer** -- Add a summary box above the fold
+   - Current: Partial (5) | Potential gain: 1.25 weighted points
+   - Action: Insert a "Top 3 Picks" callout box in the first 150 words
+
+[... remaining 7 dimensions (O, R, E, Exp, Ept, A, T) follow the same per-item format ...]
+[... then: Dimension Scores table, Top 5 Priority Improvements, Action Plan, Recommended Next Steps ...]
+```
 
 ## Tips for Success
 
 1. **Start with veto items** — T04, C01, R10 are deal-breakers regardless of total score
-   > These veto items are defined at the skill level based on their critical impact on content trustworthiness. The source CORE-EEAT benchmark marks these as "Dual priority" items but does not label them as veto.
+   > These veto items are consistent with the CORE-EEAT benchmark (Section 3), which defines them as items that can override the overall score.
 2. **Focus on high-weight dimensions** — Different content types prioritize different dimensions
 3. **GEO-First items matter most for AI visibility** — Prioritize items tagged GEO 🎯 if AI citation is the goal
 4. **Some EEAT items need site-level data** — Don't penalize content for things only observable at the site level (backlinks, brand recognition)
 5. **Use the weighted score, not just the raw average** — A product review with strong Exclusivity matters more than strong Authority
 6. **Re-audit after improvements** — Run again to verify score improvements and catch regressions
 7. **Pair with CITE for domain-level context** — A high content score on a low-authority domain signals a different priority than the reverse; run [domain-authority-auditor](../domain-authority-auditor/) for the full 120-item picture
+
+## Reference Materials
+
+- [CORE-EEAT Content Benchmark](../../references/core-eeat-benchmark.md) — Full 80-item benchmark with dimension definitions, scoring criteria, and GEO-First item markers
 
 ## Related Skills
 
@@ -345,3 +407,5 @@ Sorted by: weight × points lost (highest impact first)
 - [technical-seo-checker](../../optimize/technical-seo-checker/) — Technical signals contributing to trust dimension
 - [internal-linking-optimizer](../../optimize/internal-linking-optimizer/) — Linking quality signals for content audit
 - [memory-management](../memory-management/) — Store audit results for tracking over time
+- [entity-optimizer](../entity-optimizer/) — Entity presence audit across Knowledge Graph and AI systems
+- [performance-reporter](../../monitor/performance-reporter/) — Track content quality trends over time

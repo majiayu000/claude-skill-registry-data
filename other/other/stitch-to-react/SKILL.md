@@ -27,7 +27,7 @@ Glob: design-intent/google-stitch/{feature}/exports/*.png
 **If exports NOT found:**
 1. Check if user specified wrong path - ask for correct location
 2. Suggest running `/stitch-generate` first to create exports
-3. Fall back to design docs: Check `/design-intent/specs/` for feature specs or screenshots
+3. Fall back to design docs: Check `/design-intent/patterns/` for established patterns or project directories for screenshots
 4. If no design assets exist, inform user and offer to help create them
 
 **Report findings:**

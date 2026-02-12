@@ -1,7 +1,7 @@
 ---
 name: competitor-analysis
-version: "1.0"
 description: Analyzes competitor SEO and GEO strategies including their ranking keywords, content approaches, backlink profiles, and AI citation patterns. Reveals opportunities to outperform competition.
+geo-relevance: "medium"
 ---
 
 # Competitor Analysis
@@ -505,6 +505,86 @@ How has [competitor]'s SEO strategy evolved over the past year?
 5. **Monitor regularly** - competitor strategies evolve
 6. **Focus on actionable insights** - what can you actually implement?
 
+## Messaging Comparison Framework
+
+### Messaging Matrix
+
+Compare competitor messaging across key dimensions:
+
+| Dimension | Your Site | Competitor A | Competitor B | Competitor C |
+|-----------|-----------|-------------|-------------|-------------|
+| Core value proposition | | | | |
+| Primary CTA | | | | |
+| Hero headline | | | | |
+| Tone/Voice | | | | |
+| Key differentiator claim | | | | |
+| Social proof type | | | | |
+| Category framing | | | | |
+| Target audience signal | | | | |
+
+### Narrative Analysis Framework
+
+For each competitor, identify their story arc:
+
+| Element | Description | How to Identify |
+|---------|------------|----------------|
+| **Villain** | Problem or enemy they position against | Homepage hero, "why us" page — what status quo do they attack? |
+| **Hero** | Who is the hero in their story | Customer stories, case studies — is the hero the customer or the product? |
+| **Transformation** | What before/after do they promise | Results pages, testimonials — what measurable change? |
+| **Stakes** | What happens if you don't act | Risk messaging, urgency signals — FOMO or loss framing? |
+
+### Value Proposition Comparison
+
+For each competitor, extract:
+
+```
+**[Competitor Name]**
+- Promise: what they promise the customer will achieve
+- Evidence: how they prove it (data, testimonials, demos)
+- Mechanism: how their product delivers (the "how it works")
+- Uniqueness: what they claim only they can do
+```
+
+## Positioning Strategy Frameworks
+
+### Positioning Map (2x2 Matrix)
+
+Plot competitors on key dimension pairs:
+
+| Axis Pair | Best For |
+|-----------|---------|
+| Price vs. Capability | Understanding market tiers |
+| Ease of Use vs. Power | Evaluating UX tradeoffs |
+| SMB vs. Enterprise Focus | Identifying segment gaps |
+| Point Solution vs. Platform | Finding positioning space |
+| Established vs. Innovative | Timing market entry |
+
+### Positioning Statement Reverse-Engineering
+
+For each competitor, reconstruct their implicit positioning:
+
+> For **[target audience]**, **[product]** is the **[category]** that **[key benefit]** because **[reason to believe]**.
+
+## Competitive Battlecard Template
+
+### Quick Reference Card Structure
+
+| Section | Content |
+|---------|---------|
+| **Overview** | One-sentence description + target customer + pricing model |
+| **Their Pitch** | Tagline + top 3 claimed differentiators |
+| **Strengths** | Where they genuinely compete well (be honest) |
+| **Weaknesses** | Consistent complaints from reviews, technical limitations |
+| **Your Differentiators** | 3-5 specific ways you're different, with proof |
+| **Objection Handling** | "If they say X → respond with Y" table |
+| **Landmines to Set** | Questions that highlight your advantages |
+| **Win/Loss Themes** | Common reasons deals are won/lost against them |
+
+## Reference Materials
+
+- [Battlecard Template](./references/battlecard-template.md) — Quick-reference competitive battlecard for sales and marketing teams
+- [Positioning Frameworks](./references/positioning-frameworks.md) — Positioning maps, strategy matrices, and differentiation frameworks
+
 ## Related Skills
 
 - [domain-authority-auditor](../../cross-cutting/domain-authority-auditor/) — Compare CITE domain authority scores across competitors for domain-level benchmarking
@@ -513,4 +593,5 @@ How has [competitor]'s SEO strategy evolved over the past year?
 - [backlink-analyzer](../../monitor/backlink-analyzer/) — Deep-dive into backlinks
 - [serp-analysis](../serp-analysis/) — Understand search result composition
 - [memory-management](../../cross-cutting/memory-management/) — Store competitor data in project memory
+- [entity-optimizer](../../cross-cutting/entity-optimizer/) — Compare entity presence against competitors
 
