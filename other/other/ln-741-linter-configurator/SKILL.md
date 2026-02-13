@@ -3,6 +3,8 @@ name: ln-741-linter-configurator
 description: Configures ESLint, Prettier, Ruff, and .NET analyzers
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # ln-741-linter-configurator
 
 **Type:** L3 Worker

@@ -1,6 +1,7 @@
 ---
 name: creating-pr
 description: Creates GitHub Pull Requests with existing PR detection, branch pushing, and intelligent title/body generation. Use when user requests to create pull request, open PR, update PR, push for review, ready for review, send for review, get this reviewed, make a PR, share code, request review, create draft PR, submit for review, run /create-pr command, or mentions "PR", "pull request", "merge request", "code review", "GitHub PR", or "draft".
+model: haiku
 ---
 
 # ⚠️ CRITICAL CONSTRAINTS

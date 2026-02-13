@@ -3,6 +3,8 @@ name: ln-200-scope-decomposer
 description: Orchestrates full decomposition (scope → Epics → Stories) by delegating ln-210 → ln-220. Sequential Story decomposition per Epic. Epic 0 for Infrastructure.
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # Scope Decomposer (Top Orchestrator)
 
 Top-level orchestrator for complete initiative decomposition from scope to User Stories through Epic and Story coordinators.

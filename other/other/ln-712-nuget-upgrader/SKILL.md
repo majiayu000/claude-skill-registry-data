@@ -3,6 +3,8 @@ name: ln-712-nuget-upgrader
 description: Upgrades .NET NuGet packages with breaking change handling
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # ln-712-nuget-upgrader
 
 **Type:** L3 Worker

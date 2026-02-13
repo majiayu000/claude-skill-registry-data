@@ -1,6 +1,7 @@
 ---
 name: cleaning-up-branches
 description: Deletes merged git branches (local and remote) and flags stale unmerged branches for manual review. Use when user mentions "cleanup branches", "delete merged branches", "prune old branches", "remove stale branches", "branch cleanup", or runs /cleanup-branches command.
+model: haiku
 ---
 
 # Branch Cleanup

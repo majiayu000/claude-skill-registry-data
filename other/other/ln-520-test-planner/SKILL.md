@@ -3,6 +3,8 @@ name: ln-520-test-planner
 description: "Orchestrates test planning pipeline (research → manual → auto tests). Coordinates ln-521, ln-522, ln-523. Invoked by ln-500-story-quality-gate."
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # Test Planning Orchestrator
 
 Coordinates the complete test planning pipeline for a Story by delegating to specialized workers.

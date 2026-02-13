@@ -3,6 +3,8 @@ name: ln-110-project-docs-coordinator
 description: Coordinates project documentation creation. Gathers context once, detects project type, delegates to 5 L3 workers (ln-111-115). L2 Coordinator invoked by ln-100.
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # Project Documentation Coordinator
 
 L2 Coordinator that gathers project context once and delegates document creation to specialized L3 workers.

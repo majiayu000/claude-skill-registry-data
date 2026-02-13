@@ -3,6 +3,8 @@ name: ln-724-artifact-cleaner
 description: "Universal platform artifact cleaner: Replit, StackBlitz, CodeSandbox, Glitch"
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # ln-724-artifact-cleaner
 
 **Type:** L3 Worker

@@ -3,6 +3,8 @@ name: ln-700-project-bootstrap
 description: "Universal project bootstrapper: CREATE new or TRANSFORM existing project to production-ready structure"
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # ln-700-project-bootstrap
 
 **Type:** L1 Top Orchestrator

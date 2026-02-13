@@ -3,6 +3,8 @@ name: ln-130-tasks-docs-creator
 description: Creates task management documentation (docs/tasks/README.md + kanban_board.md). L2 Worker in ln-100-documents-pipeline. Sets up Linear integration and task tracking rules.
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # Tasks Documentation Creator
 
 This skill creates task management documentation: docs/tasks/README.md (task management system rules) and docs/tasks/kanban_board.md (Linear integration with Epic Story Counters).

@@ -3,6 +3,8 @@ name: ln-721-frontend-restructure
 description: "Frontend structure worker: SCAFFOLD new React project or RESTRUCTURE existing monolith to component-based architecture"
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # ln-721-frontend-restructure
 
 **Type:** L3 Worker

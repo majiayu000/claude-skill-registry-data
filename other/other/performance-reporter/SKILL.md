@@ -1,7 +1,32 @@
 ---
 name: performance-reporter
-description: Generates comprehensive SEO and GEO performance reports combining rankings, traffic, backlinks, and AI visibility metrics. Creates executive summaries and detailed analyses for stakeholder reporting.
-geo-relevance: "medium"
+description: 'Use when the user asks to "generate SEO report", "performance report", "traffic report", "SEO dashboard", "report to stakeholders", "show me the numbers", "monthly SEO report", or "present SEO results to my boss". Generates comprehensive SEO and GEO performance reports combining rankings, traffic, backlinks, and AI visibility metrics. Creates executive summaries and detailed analyses for stakeholder reporting. For detailed rank tracking, see rank-tracker. For link-specific analysis, see backlink-analyzer.'
+license: Apache-2.0
+metadata:
+  author: aaron-he-zhu
+  version: "2.0.0"
+  geo-relevance: "medium"
+  tags:
+    - seo
+    - geo
+    - performance report
+    - seo report
+    - traffic analysis
+    - seo dashboard
+    - executive summary
+    - analytics report
+    - kpi tracking
+  triggers:
+    - "generate SEO report"
+    - "performance report"
+    - "traffic report"
+    - "SEO dashboard"
+    - "report to stakeholders"
+    - "monthly report"
+    - "SEO analytics"
+    - "show me the numbers"
+    - "monthly SEO report"
+    - "present SEO results to my boss"
 ---
 
 # Performance Reporter
@@ -779,7 +804,7 @@ Focus on: Progress against goals, wins, clear recommendations
 
 ## Reference Materials
 
-- [KPI Definitions](../../references/kpi-definitions.md) — Complete SEO/GEO metric definitions with benchmarks, good ranges, and warning thresholds
+- [KPI Definitions](./references/kpi-definitions.md) — Complete SEO/GEO metric definitions with benchmarks, good ranges, and warning thresholds
 - [Report Templates](./references/report-templates.md) — Report templates by audience (executive, marketing, technical, client)
 
 ## Related Skills

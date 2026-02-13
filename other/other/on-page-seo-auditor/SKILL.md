@@ -1,7 +1,31 @@
 ---
 name: on-page-seo-auditor
-description: Performs comprehensive on-page SEO audits to identify optimization opportunities including title tags, meta descriptions, headers, content quality, internal linking, and image optimization.
-geo-relevance: "medium"
+description: 'Use when the user asks to "audit page SEO", "on-page SEO check", "SEO score", "page optimization", "what SEO issues does this page have", "what is wrong with this page SEO", "score my page", or "why is this page not ranking". Performs comprehensive on-page SEO audits to identify optimization opportunities including title tags, meta descriptions, headers, content quality, internal linking, and image optimization. For server, speed, and crawl issues, see technical-seo-checker. For full EEAT content quality scoring, see content-quality-auditor.'
+license: Apache-2.0
+metadata:
+  author: aaron-he-zhu
+  version: "2.0.0"
+  geo-relevance: "medium"
+  tags:
+    - seo
+    - on-page audit
+    - page optimization
+    - seo audit
+    - content optimization
+    - header tags
+    - image optimization
+    - seo score
+  triggers:
+    - "audit page SEO"
+    - "on-page SEO check"
+    - "SEO score"
+    - "page optimization"
+    - "what SEO issues"
+    - "check my page"
+    - "on-page audit"
+    - "what's wrong with this page's SEO"
+    - "score my page"
+    - "why isn't this page ranking"
 ---
 
 # On-Page SEO Auditor

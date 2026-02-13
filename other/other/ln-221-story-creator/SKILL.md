@@ -3,6 +3,8 @@ name: ln-221-story-creator
 description: Creates Stories from IDEAL plan (CREATE) or appends user-requested Stories (ADD). Generates 8-section documents, validates INVEST, creates in Linear. Invoked by ln-220.
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # Story Creator
 
 ## Purpose
@@ -89,13 +91,13 @@ For EACH Story in IDEAL plan:
 
 | Section | Content |
 |---------|---------|
-| **1. Story Statement** | As a [persona] / I want [capability] / So that [value] |
+| **1. Story** | As a [persona] / I want [capability] / So that [value] |
 | **2. Context** | Current Situation (from Epic Scope Out) / Desired Outcome (from Epic Success Criteria) |
-| **3. AC** | Copy AC from idealPlan (3-5 GWT scenarios) |
-| **4. Tasks** | Placeholder: "Tasks created via ln-300-task-coordinator after ln-310-story-validator" |
+| **3. Acceptance Criteria** | Copy AC from idealPlan (3-5 GWT scenarios) |
+| **4. Implementation Tasks** | Placeholder: "Tasks created via ln-300-task-coordinator after ln-310-story-validator" |
 | **5. Test Strategy** | Copy test counts from idealPlan, Risk-Based Testing note |
 | **6. Technical Notes** | **INSERT Standards Research** in Library Research subsection |
-| **7. DoD** | Standard checklist from template |
+| **7. Definition of Done** | Standard checklist from template |
 | **8. Dependencies** | Empty OR "Depends On: US00X" if ordering implies dependency |
 
 **Output:** Array of N complete Story documents (5-10) with Standards Research inserted.

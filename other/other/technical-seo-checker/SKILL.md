@@ -1,7 +1,33 @@
 ---
 name: technical-seo-checker
-description: Performs technical SEO audits covering site speed, crawlability, indexability, mobile-friendliness, security, and structured data. Identifies technical issues preventing optimal search performance.
-geo-relevance: "low"
+description: 'Use when the user asks to "technical SEO audit", "check page speed", "crawl issues", "Core Web Vitals", "site indexing problems", "my site is slow", "Google cannot crawl my site", "mobile issues", or "indexing problems". Performs technical SEO audits covering site speed, crawlability, indexability, mobile-friendliness, security, and structured data. Identifies technical issues preventing optimal search performance. For content and heading element issues, see on-page-seo-auditor. For link architecture, see internal-linking-optimizer.'
+license: Apache-2.0
+metadata:
+  author: aaron-he-zhu
+  version: "2.0.0"
+  geo-relevance: "low"
+  tags:
+    - seo
+    - technical seo
+    - page speed
+    - core web vitals
+    - crawlability
+    - indexability
+    - mobile-friendly
+    - site speed
+    - security audit
+  triggers:
+    - "technical SEO audit"
+    - "check page speed"
+    - "crawl issues"
+    - "Core Web Vitals"
+    - "site indexing problems"
+    - "mobile-friendly check"
+    - "site speed"
+    - "my site is slow"
+    - "Google can't crawl my site"
+    - "mobile issues"
+    - "indexing problems"
 ---
 
 # Technical SEO Checker
@@ -722,8 +748,8 @@ Score Breakdown:
 
 ## Reference Materials
 
-- [robots.txt Reference](../../references/robots-txt-reference.md) - Syntax guide, templates, common configurations
-- [HTTP Status Codes](../../references/http-status-codes.md) - SEO impact of each status code, redirect best practices
+- [robots.txt Reference](./references/robots-txt-reference.md) - Syntax guide, templates, common configurations
+- [HTTP Status Codes](./references/http-status-codes.md) - SEO impact of each status code, redirect best practices
 
 ## Related Skills
 

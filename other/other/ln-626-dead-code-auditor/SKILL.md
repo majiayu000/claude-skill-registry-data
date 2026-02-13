@@ -4,6 +4,8 @@ description: Dead code & legacy audit worker (L3). Checks unreachable code, unus
 allowed-tools: Read, Grep, Glob, Bash
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # Dead Code Auditor (L3 Worker)
 
 Specialized worker auditing unused and unreachable code.

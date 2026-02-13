@@ -4,6 +4,8 @@ description: "Coordinates 9 specialized audit workers (security, build, architec
 allowed-tools: Read, Grep, Glob, Bash, WebFetch, WebSearch, mcp__Ref, mcp__context7, Skill
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # Codebase Auditor (L2 Coordinator)
 
 Coordinates 9 specialized audit workers to perform comprehensive codebase quality analysis.

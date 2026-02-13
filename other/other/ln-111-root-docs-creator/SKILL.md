@@ -3,6 +3,8 @@ name: ln-111-root-docs-creator
 description: Creates 4 root documentation files (CLAUDE.md, docs/README.md, documentation_standards.md, principles.md). L3 Worker invoked by ln-110-project-docs-coordinator.
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # Root Documentation Creator
 
 L3 Worker that creates 4 root documentation files using templates and Context Store from coordinator.

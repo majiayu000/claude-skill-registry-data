@@ -1,7 +1,32 @@
 ---
 name: alert-manager
-description: Sets up and manages alerts for critical SEO and GEO metrics including ranking drops, traffic changes, technical issues, and competitor movements. Enables proactive monitoring and quick response to issues.
-geo-relevance: "low"
+description: 'Use when the user asks to "set up SEO alerts", "monitor rankings", "notify me when rankings drop", "traffic alerts", "watch competitor changes", "alert me if rankings drop", "notify me of traffic changes", or "watch my keywords for changes". Sets up and manages alerts for critical SEO and GEO metrics including ranking drops, traffic changes, technical issues, and competitor movements. Enables proactive monitoring and quick response to issues. For detailed rank analysis, see rank-tracker. For comprehensive reporting, see performance-reporter.'
+license: Apache-2.0
+metadata:
+  author: aaron-he-zhu
+  version: "2.0.0"
+  geo-relevance: "low"
+  tags:
+    - seo
+    - geo
+    - alerts
+    - monitoring
+    - ranking alerts
+    - traffic monitoring
+    - competitor alerts
+    - seo notifications
+    - proactive monitoring
+  triggers:
+    - "set up SEO alerts"
+    - "monitor rankings"
+    - "notify me when rankings drop"
+    - "traffic alerts"
+    - "watch competitor changes"
+    - "alert me"
+    - "ranking notifications"
+    - "alert me if rankings drop"
+    - "notify me of traffic changes"
+    - "watch my keywords for changes"
 ---
 
 # Alert Manager

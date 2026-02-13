@@ -1,7 +1,9 @@
 ---
 name: ln-300-task-coordinator
-description: Orchestrates task operations. Analyzes Story, builds optimal plan (1-6 implementation tasks), delegates to ln-301-task-creator (CREATE/ADD) or ln-302-task-replanner (REPLAN). Auto-discovers team ID.
+description: Orchestrates task operations. Analyzes Story, builds optimal plan (1-8 implementation tasks), delegates to ln-301-task-creator (CREATE/ADD) or ln-302-task-replanner (REPLAN). Auto-discovers team ID.
 ---
+
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
 
 # Linear Task Planner (Orchestrator)
 
@@ -9,7 +11,7 @@ Coordinates creation or replanning of implementation tasks for a Story. Builds t
 
 ## Purpose & Scope
 - Auto-discover Team ID, load Story context (AC, Technical Notes, Context)
-- Build optimal implementation task plan (1-6 implementation tasks; NO test/refactoring tasks) in Foundation-First order
+- Build optimal implementation task plan (1-8 implementation tasks; NO test/refactoring tasks) in Foundation-First order
 - Detect mode and delegate: CREATE/ADD -> ln-301-task-creator, REPLAN -> ln-302-task-replanner
 - Strip any Non-Functional Requirements; only functional scope becomes tasks
 - Never creates/updates Linear or kanban directly (workers do)
@@ -31,7 +33,7 @@ Workers (ln-301, ln-302) handle the actual Linear/File operations based on detec
 
 ## Workflow (concise)
 - **Phase 1 Discovery:** Auto-discover Team ID (docs/tasks/kanban_board.md); parse Story ID from request.
-- **Phase 2 Decompose (always):** Load Story (AC, Technical Notes, Context), assess complexity, build IDEAL plan (1-6 implementation tasks only), apply Foundation-First execution order, **validate Task Independence**, extract guide links.
+- **Phase 2 Decompose (always):** Load Story (AC, Technical Notes, Context), assess complexity, build IDEAL plan (1-8 implementation tasks only), apply Foundation-First execution order, **validate Task Independence**, extract guide links.
 - **Phase 3 Check & Detect Mode:** Query Linear for existing tasks (metadata only). Detect mode by count + user keywords (add/replan).
 - **Phase 4 Delegate:** Call the right worker with Story data, IDEAL plan/append request, guide links, existing task IDs if any; autoApprove=true.
 - **Phase 5 Verify:** Ensure worker returns URLs/summary and updated kanban_board.md; report result.
@@ -96,7 +98,7 @@ Mark each as in_progress when starting, completed when done.
 ## Critical Rules
 - Decompose-first: always build IDEAL plan before looking at existing tasks.
 - Foundation-First execution order per `creation_quality_checklist.md` #13.
-- Task limits: 1-6 implementation tasks, 3-5h each; cap total at 6. Test task created later by test planner.
+- Task limits: 1-8 implementation tasks, 3-5h each (3-5 tasks optimal). Test task created later by test planner.
 - Linear creation must be sequential: create one task, confirm success, then create the next (no bulk) to catch errors early.
 - **HARD CONSTRAINT:** This skill creates ONLY implementation tasks (taskType=implementation). NEVER include test tasks, manual testing tasks, or refactoring tasks in the plan. Test tasks are created LATER by test planner (after manual testing passes). Refactoring tasks are created by quality gate when code quality issues found.
 - No code snippets in descriptions; workers own task documents and Linear/kanban updates.
@@ -104,7 +106,7 @@ Mark each as in_progress when starting, completed when done.
 
 ## Definition of Done (orchestrator)
 - Team ID discovered; Story ID parsed.
-- Story loaded; IDEAL plan built (1-6 implementation tasks only) with Foundation-First order and guide links.
+- Story loaded; IDEAL plan built (1-8 implementation tasks only) with Foundation-First order and guide links.
 - **NO test or refactoring tasks** in IDEAL plan (only taskType=implementation).
 - Existing tasks counted; mode selected (CREATE/ADD/REPLAN or ask).
 - Worker invoked with correct payload and autoApprove=true.

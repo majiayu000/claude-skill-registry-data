@@ -3,6 +3,8 @@ name: ln-600-docs-auditor
 description: Audit project documentation quality across 8 categories (Hierarchy, SSOT, Compactness, Requirements, Actuality, Legacy, Stack Adaptation, Semantic Content). Delegates to ln-601 for deep semantic verification of project documents. Use when documentation needs quality review, after major doc updates, or as part of ln-100-documents-pipeline. Outputs Compliance Score X/10 per category + Findings + Recommended Actions.
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # Documentation Auditor
 
 Audit project documentation quality. Universal for any tech stack.

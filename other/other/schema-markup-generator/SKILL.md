@@ -1,7 +1,33 @@
 ---
 name: schema-markup-generator
-description: Generates structured data markup (Schema.org JSON-LD) to enable rich results in search engines including FAQ snippets, How-To cards, Product listings, Reviews, and more.
-geo-relevance: "medium"
+description: 'Use when the user asks to "add schema markup", "generate structured data", "JSON-LD", "rich snippets", "FAQ schema", "add FAQ rich results", "I want star ratings in Google", "product markup", or "recipe schema". Generates structured data markup (Schema.org JSON-LD) to enable rich results in search engines including FAQ snippets, How-To cards, Product listings, Reviews, and more. For meta tag optimization, see meta-tags-optimizer. For broader technical SEO, see technical-seo-checker.'
+license: Apache-2.0
+metadata:
+  author: aaron-he-zhu
+  version: "2.0.0"
+  geo-relevance: "medium"
+  tags:
+    - seo
+    - schema markup
+    - structured data
+    - json-ld
+    - rich results
+    - rich snippets
+    - faq schema
+    - how-to schema
+    - product schema
+  triggers:
+    - "add schema markup"
+    - "generate structured data"
+    - "JSON-LD"
+    - "rich snippets"
+    - "FAQ schema"
+    - "schema.org"
+    - "structured data markup"
+    - "add FAQ rich results"
+    - "I want star ratings in Google"
+    - "product markup"
+    - "recipe schema"
 ---
 
 # Schema Markup Generator

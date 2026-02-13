@@ -3,6 +3,8 @@ name: ln-311-agent-reviewer
 description: "Worker that runs parallel external agent reviews (Codex + Gemini) on Story/Tasks. Background tasks, process-as-arrive, critical verification with debate. Returns filtered suggestions for Story validation."
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # Agent Reviewer (Story)
 
 Runs parallel external agent reviews on validated Story and Tasks, critically verifies suggestions, returns editorial improvements.
@@ -25,7 +27,7 @@ Runs parallel external agent reviews on validated Story and Tasks, critically ve
 
 ## Workflow
 
-**MANDATORY READ:** Load `shared/references/agent_delegation_pattern.md` for Reference Passing Pattern, Review Persistence Pattern, and Agent Timeout Policy.
+**MANDATORY READ:** Load `shared/references/agent_delegation_pattern.md` for Reference Passing Pattern, Review Persistence Pattern, Agent Timeout Policy, and Debate Protocol (Challenge Round 1 + Follow-Up Round).
 
 1) **Health check:** `python shared/agents/agent_runner.py --health-check`
    - Filter output by `skill_groups` containing "311"
@@ -35,7 +37,11 @@ Runs parallel external agent reviews on validated Story and Tasks, critically ve
 2) **Get references:** Call Linear MCP `get_issue(storyId)` -> extract URL + identifier. Call `list_issues(filter: {parent: {id: storyId}})` -> extract child Task URLs/identifiers.
    - If project stores tasks locally (e.g., `docs/tasks/`) -> use local file paths instead of Linear URLs.
 
-3) **Ensure .agent-review/:** Create `.agent-review/{agent}/` dirs for each available agent (e.g., `codex/`, `gemini/`). Create `.agent-review/.gitignore` with content `*` + `!.gitignore`. Add `.agent-review/` to project root `.gitignore` if missing.
+3) **Ensure .agent-review/:**
+   - If `.agent-review/` exists -> reuse as-is, do NOT recreate `.gitignore`
+   - If `.agent-review/` does NOT exist -> create it + `.agent-review/.gitignore` (content: `*` + `!.gitignore`)
+   - Create `.agent-review/{agent}/` subdirs only if they don't exist
+   - Do NOT add `.agent-review/` to project root `.gitignore`
 
 4) **Build prompt:** Read template `shared/agents/prompt_templates/story_review.md`.
    - Replace `{story_ref}` with `- Linear: {url}` or `- File: {path}`
@@ -51,6 +57,7 @@ Runs parallel external agent reviews on validated Story and Tasks, critically ve
    b) When first agent completes (background task notification):
       - Read its result file from `.agent-review/{agent}/{identifier}_storyreview_result.md`
       - Parse JSON between `<!-- AGENT_REVIEW_RESULT -->` / `<!-- END_AGENT_REVIEW_RESULT -->` markers
+      - Parse `session_id` from runner JSON output; write `.agent-review/{agent}/{identifier}_session.json`: `{"agent": "...", "session_id": "...", "review_type": "storyreview", "created_at": "..."}`
       - Proceed to Step 6 (Critical Verification) for this agent's suggestions
 
    c) When second agent completes:
@@ -60,40 +67,23 @@ Runs parallel external agent reviews on validated Story and Tasks, critically ve
 
    d) If an agent fails: log failure, continue with available results
 
-6) **Critical Verification + Debate:**
+6) **Critical Verification + Debate** (per Debate Protocol in `shared/references/agent_delegation_pattern.md`):
 
    For EACH suggestion from agent results:
 
-   a) **Claude Evaluation:** Independently assess the suggestion:
-      - Is the issue real? (check codebase/Story yourself)
-      - Is the suggestion actionable and correct?
-      - Does it conflict with project patterns or architectural decisions?
+   a) **Claude Evaluation:** Independently assess — is the issue real? Actionable? Conflicts with project patterns?
 
-   b) **Decision:**
+   b) **AGREE** → accept as-is. **DISAGREE/UNCERTAIN** → initiate challenge.
 
-      | Claude Assessment | Action |
-      |-------------------|--------|
-      | AGREE | Accept suggestion as-is |
-      | DISAGREE or UNCERTAIN | Initiate challenge (step 6c) |
+   c) **Challenge + Follow-Up (with session resume):** Follow Debate Protocol (Challenge Round 1 → Follow-Up Round if not resolved). Resume agent's review session for full context continuity:
+      - Read `session_id` from `.agent-review/{agent}/{identifier}_session.json`
+      - Run with `--resume-session {session_id}` — agent continues in same session, preserving file analysis and reasoning
+      - If `session_resumed: false` in result → log warning, result still valid (stateless fallback)
+      - `{review_type}` = "Story/Tasks"
+      - Challenge files: `.agent-review/{agent}/{identifier}_storyreview_challenge_{N}_prompt.md` / `_result.md`
+      - Follow-up files: `.agent-review/{agent}/{identifier}_storyreview_followup_{N}_prompt.md` / `_result.md`
 
-   c) **Challenge Round** (1 round max per suggestion):
-      - Build prompt from `shared/agents/prompt_templates/challenge_review.md`
-      - Fill placeholders: `{review_type}` = "Story/Tasks", `{story_ref}`, `{area}`, `{issue}`, `{suggestion}`, `{reason}`, `{confidence}`, `{counterargument}` = Claude's specific objection
-      - Save to `.agent-review/{agent}/{identifier}_storyreview_challenge_{N}_prompt.md`
-      - Run: `python shared/agents/agent_runner.py --agent {same_agent} --prompt-file .agent-review/{agent}/{identifier}_storyreview_challenge_{N}_prompt.md --output-file .agent-review/{agent}/{identifier}_storyreview_challenge_{N}_result.md --cwd {cwd}`
-      - Parse challenge response
-
-   d) **Resolution:**
-
-      | Agent Response | Action |
-      |----------------|--------|
-      | DEFEND + convincing evidence (cites standard/code Claude missed, confidence >= 85) | Accept agent's suggestion |
-      | DEFEND + weak evidence | Reject (Claude's position wins) |
-      | WITHDRAW | Reject suggestion |
-      | MODIFY + acceptable revision | Accept modified version |
-      | MODIFY + still disagree | Reject |
-
-   e) **Persist:** challenge prompts and results in `.agent-review/{agent}/`
+   d) **Persist:** all challenge and follow-up prompts/results in `.agent-review/{agent}/`
 
 7) **Aggregate + Return:** Collect ACCEPTED suggestions only (after verification + debate).
    Deduplicate by `(area, issue)` — keep higher confidence.
@@ -111,20 +101,28 @@ suggestions:
     confidence: 95
     impact_percent: 15
     source: "codex-review"
-    resolution: "accepted | accepted_after_debate | rejected"
+    resolution: "accepted | accepted_after_debate | accepted_after_followup | rejected"
 agent_stats:
   - name: "codex-review"
     duration_s: 8.2
     suggestion_count: 2
     accepted_count: 1
     challenged_count: 1
+    followup_count: 1
     status: "success | failed | timeout"
 debate_log:
   - suggestion_summary: "Missing rate limiting on POST /api/users"
     agent: "codex-review"
-    claude_position: "Rate limiting exists in nginx config"
-    agent_decision: "DEFEND"
-    resolution: "accepted_after_debate"
+    rounds:
+      - round: 1
+        claude_position: "Rate limiting exists in nginx config"
+        agent_decision: "DEFEND"
+        resolution: "follow_up"
+      - round: 2
+        claude_position: "Nginx config covers /api/* routes, agent cited only app-level"
+        agent_decision: "MODIFY"
+        resolution: "accepted_after_followup"
+    final_resolution: "accepted_after_followup"
 ```
 
 ## Fallback Rules
@@ -146,7 +144,7 @@ debate_log:
 - JSON output schema required from agents (via `--json` / `--output-format json`)
 - Log all attempts for user visibility (agent name, duration, suggestion count)
 - **Persist** prompts, results, and challenge artifacts in `.agent-review/{agent}/` — do NOT delete
-- Ensure `.agent-review/.gitignore` exists before creating files
+- Ensure `.agent-review/.gitignore` exists before creating files (only create if `.agent-review/` is new)
 - **MANDATORY INVOCATION:** Parent skills MUST invoke this skill. Returns SKIPPED gracefully if agents unavailable. Parent must NOT pre-check and skip.
 - **NO TIMEOUT KILL:** Do NOT kill agent background tasks if they are running. Agents have no time limit as long as they have not crashed with an error. Only a hard crash (non-zero exit code, connection error) is treated as failure. TaskStop is FORBIDDEN for agent tasks.
 - **CRITICAL VERIFICATION:** Do NOT trust agent suggestions blindly. Claude MUST independently verify each suggestion and debate if disagreeing. Accept only after verification.
@@ -156,10 +154,12 @@ debate_log:
 - Prompts persisted in `.agent-review/{agent}/` for each agent
 - Raw results persisted in `.agent-review/{agent}/` (no cleanup)
 - Each suggestion critically verified by Claude; challenges executed for disagreements
-- Challenge prompts and results persisted alongside review artifacts
+- Follow-up rounds executed for suggestions rejected after Round 1 (DEFEND+weak / MODIFY+disagree)
+- Challenge and follow-up prompts/results persisted alongside review artifacts
 - Accepted suggestions filtered by confidence >= 90 AND impact_percent > 2
 - Deduplicated verified suggestions returned to parent skill with verdict, agent_stats, and debate_log
-- `.agent-review/.gitignore` exists; `.agent-review/` added to project `.gitignore`
+- `.agent-review/.gitignore` exists (created only if `.agent-review/` was new)
+- Session files persisted in `.agent-review/{agent}/{identifier}_session.json` for debate resume
 
 ## Reference Files
 - **Agent delegation pattern:** `shared/references/agent_delegation_pattern.md`

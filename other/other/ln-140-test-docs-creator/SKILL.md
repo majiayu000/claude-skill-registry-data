@@ -3,6 +3,8 @@ name: ln-140-test-docs-creator
 description: Creates test documentation (testing-strategy.md + tests/README.md). Establishes testing philosophy and Story-Level Test Task Pattern. L2 Worker in ln-100-documents-pipeline workflow.
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # Test Documentation Creator
 
 This skill creates and validates test documentation: testing-strategy.md (universal testing philosophy) + tests/README.md (test organization structure and Story-Level Test Task Pattern).

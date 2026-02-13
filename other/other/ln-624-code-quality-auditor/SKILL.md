@@ -4,6 +4,8 @@ description: "Code quality audit worker (L3). Checks cyclomatic complexity, deep
 allowed-tools: Read, Grep, Glob, Bash
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # Code Quality Auditor (L3 Worker)
 
 Specialized worker auditing code complexity, method signatures, algorithms, and constants management.

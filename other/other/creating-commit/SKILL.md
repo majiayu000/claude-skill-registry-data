@@ -1,6 +1,7 @@
 ---
 name: creating-commit
 description: Creates context-aware git commits with smart pre-commit checks, submodule support, and conventional commit message generation. Use when user requests to commit changes, stage and commit, check in code, save work, save changes, push my code, finalize changes, add to git, create commits, run /commit command, or mentions "git commit", "commit message", "conventional commits", "stage files", "git add", or needs help with commits.
+model: haiku
 ---
 
 # ⚠️ CRITICAL CONSTRAINTS

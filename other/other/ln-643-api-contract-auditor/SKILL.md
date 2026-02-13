@@ -4,6 +4,8 @@ description: "API contract audit worker (L3). Checks layer leakage in method sig
 allowed-tools: Read, Grep, Glob, Bash
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # API Contract Auditor (L3 Worker)
 
 Specialized worker auditing API contracts, method signatures at service boundaries, and DTO usage patterns.

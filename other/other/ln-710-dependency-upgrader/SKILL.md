@@ -3,6 +3,8 @@ name: ln-710-dependency-upgrader
 description: Coordinates dependency upgrades across all detected package managers
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # ln-710-dependency-upgrader
 
 **Type:** L2 Domain Coordinator

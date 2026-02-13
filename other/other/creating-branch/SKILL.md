@@ -1,6 +1,7 @@
 ---
 name: creating-branch
 description: Creates feature branches with optimized short naming, auto-incrementing, and commit type detection (feat/fix/refactor). Supports manual descriptions and auto-generation from uncommitted git changes. Use when user requests to create branch, start new branch, make branch, checkout new branch, switch branch, new task, start working on, begin work on feature, begin feature, create feature branch, run /create-branch command, or mentions "branch", "feature", "new feature", "feat", "fix", or "checkout".
+model: haiku
 ---
 
 # Git Branch Creation Workflow

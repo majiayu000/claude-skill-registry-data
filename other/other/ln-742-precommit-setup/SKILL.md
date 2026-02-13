@@ -3,6 +3,8 @@ name: ln-742-precommit-setup
 description: Configures Husky, lint-staged, commitlint, and Python pre-commit
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # ln-742-precommit-setup
 
 **Type:** L3 Worker

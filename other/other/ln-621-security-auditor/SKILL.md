@@ -4,6 +4,8 @@ description: Security audit worker (L3). Scans codebase for hardcoded secrets, S
 allowed-tools: Read, Grep, Glob, Bash
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # Security Auditor (L3 Worker)
 
 Specialized worker auditing security vulnerabilities in codebase.

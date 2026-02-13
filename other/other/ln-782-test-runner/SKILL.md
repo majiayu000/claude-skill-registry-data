@@ -3,6 +3,8 @@ name: ln-782-test-runner
 description: Executes all test suites and reports results with coverage
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # ln-782-test-runner
 
 **Type:** L3 Worker

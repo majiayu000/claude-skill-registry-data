@@ -3,6 +3,8 @@ name: ln-720-structure-migrator
 description: "Coordinates project structure: SCAFFOLD new or RESTRUCTURE existing to Clean Architecture"
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # ln-720-structure-migrator
 
 **Type:** L2 Domain Coordinator

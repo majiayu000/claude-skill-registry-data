@@ -4,6 +4,8 @@ description: Build health audit worker (L3). Checks compiler/linter errors, depr
 allowed-tools: Read, Grep, Glob, Bash
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # Build Health Auditor (L3 Worker)
 
 Specialized worker auditing build health and code quality tooling.

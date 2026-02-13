@@ -4,6 +4,8 @@ description: Application lifecycle audit worker (L3). Checks bootstrap initializ
 allowed-tools: Read, Grep, Glob, Bash
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # Lifecycle Auditor (L3 Worker)
 
 Specialized worker auditing application lifecycle and entry points.

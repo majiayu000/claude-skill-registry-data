@@ -3,6 +3,8 @@ name: ln-310-story-validator
 description: Validates Stories/Tasks with GO/NO-GO verdict, Readiness Score (1-10), Penalty Points, and Anti-Hallucination verification. Auto-fixes to reach 0 points, delegates to ln-002 for docs. Use when reviewing Stories before execution or when user requests validation.
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # Story Verification Skill
 
 Validate Stories/Tasks with explicit GO/NO-GO verdict, Readiness Score, and Anti-Hallucination verification.
@@ -34,7 +36,7 @@ Validate Stories/Tasks with explicit GO/NO-GO verdict, Readiness Score, and Anti
 | LOW | 1 | Structural/cosmetic issues |
 
 **Workflow:**
-1. Audit: Calculate penalty points for all 20 criteria
+1. Audit: Calculate penalty points for all 21 criteria
 2. Fix: Auto-fix and zero out points
 3. Report: Total Before -> 0 After
 
@@ -66,14 +68,14 @@ When operating in any mode, skill MUST create detailed todo checklist tracking A
 Phase 1: Discovery & Loading
   - Auto-discover configuration (Team ID, docs)
   - Load Story metadata (ID, title, status, labels)
-  - Load Tasks metadata (3-8 implementation tasks)
+  - Load Tasks metadata (1-8 implementation tasks)
 
 Phase 2: Research & Audit
   - Extract technical domains from Story/Tasks
   - Delegate documentation creation to ln-002
   - Research via MCP Ref (RFC, OWASP, library versions)
   - Verify technical claims (Anti-Hallucination)
-  - Calculate Penalty Points (20 criteria)
+  - Calculate Penalty Points (21 criteria)
 
 Phase 3: Audit Results & Fix Plan
   - Display Penalty Points table and fix plan
@@ -82,7 +84,7 @@ Phase 3: Audit Results & Fix Plan
 Phase 4: Auto-Fix (8 groups)
   - Fix Structural violations (#1-#4)
   - Fix Standards violations (#5)
-  - Fix Solution violations (#6)
+  - Fix Solution violations (#6, #21)
   - Fix Workflow violations (#7-#13)
   - Fix Quality violations (#14-#15)
   - Fix Dependencies violations (#18-#19)
@@ -107,7 +109,7 @@ Phase 6: Approve & Notify
 **Step 1: Configuration & Metadata Loading**
 - Auto-discover configuration: Team ID (`docs/tasks/kanban_board.md`), project docs (`CLAUDE.md`), epic from Story.project
 - Load metadata only: Story ID/title/status/labels, child Task IDs/titles/status/labels
-- Expect 3-8 implementation tasks; record parentId for filtering
+- Expect 1-8 implementation tasks; record parentId for filtering
 - Rationale: keep loading light; full descriptions arrive in Phase 2
 
 ### Phase 2: Research & Audit
@@ -140,7 +142,7 @@ Phase 6: Approve & Notify
 - Status: VERIFIED (all sourced) or FLAGGED (list unverified)
 
 **Step 5: Penalty Points Calculation**
-- Evaluate all 20 criteria against Story/Tasks
+- Evaluate all 21 criteria against Story/Tasks
 - Assign penalty points per violation (CRITICAL=10, HIGH=5, MEDIUM=3, LOW=1)
 - Calculate total penalty points
 - Build fix plan for each violation
@@ -158,7 +160,7 @@ Phase 6: Approve & Notify
 
 ### Phase 4: Auto-Fix
 
-**Execute fixes for ALL 20 criteria on the spot.**
+**Execute fixes for ALL 21 criteria on the spot.**
 
 - Execution order (8 groups):
   1. **Structural (#1-#4)** — Story/Tasks template compliance + AC completeness/specificity
@@ -212,11 +214,12 @@ Invoke `Skill(skill="ln-311-agent-reviewer", args="{storyId}")`.
 |---|-----------|----------------|---------|------------------|
 | 5 | Standards Compliance | Each technical decision references specific RFC/OWASP/REST standard by number | CRITICAL (10) | Query MCP Ref; update Technical Notes with compliant approach |
 
-### Solution (#6)
+### Solution (#6, #21)
 
 | # | Criterion | What it checks | Penalty | Auto-fix actions |
 |---|-----------|----------------|---------|------------------|
 | 6 | Library & Version | Libraries are latest stable | HIGH (5) | Query Context7; update to recommended versions |
+| 21 | Alternative Solutions | Story approach is optimal vs modern alternatives | MEDIUM (3) | Search MCP Ref + web for alternatives; if better option found — add "Alternative Considered" note to Technical Notes with trade-off comparison |
 
 ### Workflow (#7-#13)
 
@@ -224,7 +227,7 @@ Invoke `Skill(skill="ln-311-agent-reviewer", args="{storyId}")`.
 |---|-----------|----------------|---------|------------------|
 | 7 | Test Strategy | Section exists but empty | LOW (1) | Ensure section present; leave empty (testing handled separately) |
 | 8 | Documentation Integration | No standalone doc tasks | MEDIUM (3) | Remove doc-only tasks; fold into implementation DoD |
-| 9 | Story Size | 3-8 tasks; 3-5h each | MEDIUM (3) | If <3 or >8, add TODO; flag task size issues |
+| 9 | Story Size | 1-8 tasks (3-5 optimal); 3-5h each | MEDIUM (3) | If >8, add TODO; flag task size issues |
 | 10 | Test Task Cleanup | No premature test tasks | MEDIUM (3) | Remove test tasks before final; testing appears later |
 | 11 | YAGNI | Each Task maps to ≥1 Story AC; no tasks without AC justification | MEDIUM (3) | Move speculative items to Out of Scope unless standards require |
 | 12 | KISS | No task requires >3 new abstractions; if >3 → split or simplify | MEDIUM (3) | Simplify unless standards require complexity |
@@ -257,7 +260,7 @@ Invoke `Skill(skill="ln-311-agent-reviewer", args="{storyId}")`.
 |---|-----------|----------------|---------|------------------|
 | 20 | Risk Analysis | Unmitigated implementation risks (architecture, errors, scalability, data integrity, integration, SPOF) | HIGH (5) per risk, max 15 | Score via Impact x Probability matrix; add TODO sections for Priority 15-19; FLAG for human review at Priority >= 20; skip at Priority <= 8 |
 
-**Maximum Penalty:** 75 points
+**Maximum Penalty:** 78 points
 
 ## Final Assessment Model
 
@@ -314,10 +317,10 @@ Output explicit mapping:
 
 ## Self-Audit Protocol (Mandatory)
 
-Verify all 20 criteria (#1-#20) from Auto-Fix Actions pass with concrete evidence (doc path, MCP result, Linear update) before proceeding to Phase 6.
+Verify all 21 criteria (#1-#21) from Auto-Fix Actions pass with concrete evidence (doc path, MCP result, Linear update) before proceeding to Phase 6.
 
 ## Critical Rules
-- All 20 criteria MUST be verified with concrete evidence (doc path, MCP result, Linear update) before Phase 6 (Self-Audit Protocol)
+- All 21 criteria MUST be verified with concrete evidence (doc path, MCP result, Linear update) before Phase 6 (Self-Audit Protocol)
 - Fix execution order is strict: Structural -> Standards -> Solution -> Workflow -> Quality -> Dependencies -> Risk -> Traceability (standards before YAGNI/KISS)
 - Never approve with Penalty Points > 0; all violations must be auto-fixed to zero
 - Test Strategy section must exist but remain empty (testing handled separately by other skills)
@@ -326,7 +329,7 @@ Verify all 20 criteria (#1-#20) from Auto-Fix Actions pass with concrete evidenc
 ## Definition of Done
 
 - Phases 1-6 completed: metadata loaded, research done, penalties calculated, fixes applied, agent review done, Story approved.
-- Penalty Points = 0 (all 20 criteria fixed). Readiness Score ≥ 5.
+- Penalty Points = 0 (all 21 criteria fixed). Readiness Score ≥ 5.
 - Anti-Hallucination: VERIFIED (all claims sourced via MCP).
 - AC Coverage: 100% (each AC mapped to ≥1 Task).
 - Agent Review: ln-311 invoked; suggestions aggregated, validated, accepted applied (or SKIPPED if no agents).

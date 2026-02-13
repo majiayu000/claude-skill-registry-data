@@ -3,6 +3,8 @@ name: ln-220-story-coordinator
 description: CREATE/REPLAN Stories for Epic (5-10 Stories). Delegates ln-001-standards-researcher for standards research. Decompose-First Pattern. Auto-discovers team/Epic.
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # Story Coordinator
 
 Universal Story management coordinator that delegates CREATE/REPLAN operations to specialized workers after building IDEAL Story plan.

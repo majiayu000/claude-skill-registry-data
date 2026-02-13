@@ -65,6 +65,11 @@ snapshot output and become stale after navigation.
 | `snapshot [--filename=f]` | Accessibility tree — structured, token-efficient |
 | `pdf [--filename=f]` | Generate PDF of the page |
 
+> **Important:** `--filename` resolves relative to the working directory, NOT `outputDir`.
+> When using `--filename`, always prepend the project's `outputDir` value
+> (check `.playwright/cli.config.json`; defaults to `.playwright-cli`).
+> Example: `playwright-cli screenshot --filename=<outputDir>/my-screenshot.png`
+
 ### Tabs
 
 | Command | Description |
@@ -113,13 +118,13 @@ playwright-cli open <url> --config=config.json  # Custom config file
 playwright-cli open <url> --extension           # Connect via browser extension
 ```
 
-Create `playwright-cli.json` in the project root for persistent settings:
+Create `.playwright/cli.config.json` in the project for persistent settings:
 
 ```json
-{ "browserName": "chromium", "headless": true, "actionTimeout": 5000, "navigationTimeout": 60000 }
+{ "browser": { "browserName": "chromium", "launchOptions": { "headless": true } }, "outputDir": ".playwright-cli", "timeouts": { "action": 5000, "navigation": 60000 } }
 ```
 
-Other options: `allowedOrigins`, `blockedOrigins`, `saveVideo`, `outputDir`.
+Other options: `network.allowedOrigins`, `network.blockedOrigins`, `saveVideo`.
 Environment variables use `PLAYWRIGHT_MCP_` prefix (e.g., `PLAYWRIGHT_MCP_BROWSER=firefox`).
 
 ## Common Pitfalls

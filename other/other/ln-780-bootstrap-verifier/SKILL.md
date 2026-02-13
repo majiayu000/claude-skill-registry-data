@@ -3,6 +3,8 @@ name: ln-780-bootstrap-verifier
 description: Orchestrates final verification - build, test, and container health checks
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # ln-780-bootstrap-verifier
 
 **Type:** L2 Domain Coordinator

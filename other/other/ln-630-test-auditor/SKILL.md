@@ -4,6 +4,8 @@ description: Test suite audit coordinator (L2). Delegates to 5 workers (Business
 allowed-tools: Read, Grep, Glob, Bash, mcp__Ref, mcp__context7, mcp__linear-server, Skill
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # Test Suite Auditor (L2 Coordinator)
 
 Coordinates comprehensive test suite audit across 6 quality categories using 5 specialized workers.

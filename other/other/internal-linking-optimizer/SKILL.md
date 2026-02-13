@@ -1,7 +1,31 @@
 ---
 name: internal-linking-optimizer
-description: Analyzes and optimizes internal link structure to improve site architecture, distribute page authority, and help search engines understand content relationships. Creates strategic internal linking plans.
-geo-relevance: "low"
+description: 'Use when the user asks to "fix internal links", "improve site architecture", "link structure", "distribute page authority", "internal linking strategy", "orphan pages", "site architecture is messy", or "pages have no links pointing to them". Analyzes and optimizes internal link structure to improve site architecture, distribute page authority, and help search engines understand content relationships. Creates strategic internal linking plans. For a broader on-page audit, see on-page-seo-auditor. For external link analysis, see backlink-analyzer.'
+license: Apache-2.0
+metadata:
+  author: aaron-he-zhu
+  version: "2.0.0"
+  geo-relevance: "low"
+  tags:
+    - seo
+    - internal linking
+    - site architecture
+    - link structure
+    - page authority
+    - link equity
+    - content silos
+    - navigation optimization
+  triggers:
+    - "fix internal links"
+    - "improve site architecture"
+    - "link structure"
+    - "distribute page authority"
+    - "internal linking strategy"
+    - "site navigation"
+    - "link equity"
+    - "orphan pages"
+    - "site architecture is messy"
+    - "pages have no links pointing to them"
 ---
 
 # Internal Linking Optimizer

@@ -3,6 +3,8 @@ name: ln-114-frontend-docs-creator
 description: Creates design_guidelines.md for frontend projects. L3 Worker invoked CONDITIONALLY when hasFrontend detected.
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # Frontend Documentation Creator
 
 L3 Worker that creates design_guidelines.md. CONDITIONAL - only invoked when project has frontend.

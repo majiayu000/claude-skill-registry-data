@@ -1,7 +1,32 @@
 ---
 name: geo-content-optimizer
-description: Optimizes content for Generative Engine Optimization (GEO) to increase chances of being cited by AI systems like ChatGPT, Claude, Perplexity, and Google AI Overviews. Makes content AI-friendly while maintaining SEO value.
-geo-relevance: "high"
+description: 'Use when the user asks to "optimize for AI", "get cited by ChatGPT", "AI optimization", "appear in AI answers", "GEO optimization", "get cited by AI", "show up in ChatGPT answers", "AI does not mention my brand", or "make content AI-quotable". Optimizes content for Generative Engine Optimization (GEO) to increase chances of being cited by AI systems like ChatGPT, Claude, Perplexity, and Google AI Overviews. Makes content AI-friendly while maintaining SEO value. For SEO-focused writing, see seo-content-writer. For entity and brand presence, see entity-optimizer.'
+license: Apache-2.0
+metadata:
+  author: aaron-he-zhu
+  version: "2.0.0"
+  geo-relevance: "high"
+  tags:
+    - geo
+    - ai optimization
+    - ai citations
+    - chatgpt
+    - perplexity
+    - google ai overviews
+    - generative engine optimization
+    - llm optimization
+  triggers:
+    - "optimize for AI"
+    - "get cited by ChatGPT"
+    - "AI optimization"
+    - "appear in AI answers"
+    - "GEO optimization"
+    - "AI-friendly content"
+    - "LLM citations"
+    - "get cited by AI"
+    - "show up in ChatGPT answers"
+    - "AI doesn't mention my brand"
+    - "make content AI-quotable"
 ---
 
 # GEO Content Optimizer

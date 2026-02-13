@@ -1,6 +1,7 @@
 ---
 name: listing-stale-branches
 description: Lists local and remote git branches that are candidates for cleanup — merged but not deleted, and inactive branches with no commits in a configurable period (default 3 months). Use when user mentions "stale branches", "old branches", "branch cleanup", "prune branches", "dead branches", "unused branches", "inactive branches", "branch hygiene", or asks to "list branches to delete", "find stale branches", or runs /stale-branches command.
+model: haiku
 ---
 
 # Stale Branch Detection

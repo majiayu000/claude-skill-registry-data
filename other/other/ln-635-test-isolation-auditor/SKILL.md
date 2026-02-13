@@ -4,6 +4,8 @@ description: Test Isolation + Anti-Patterns audit worker (L3). Checks isolation 
 allowed-tools: Read, Grep, Glob, Bash
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # Test Isolation & Anti-Patterns Auditor (L3 Worker)
 
 Specialized worker auditing test isolation and detecting anti-patterns.

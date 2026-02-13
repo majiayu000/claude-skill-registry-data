@@ -3,6 +3,8 @@ name: ln-783-container-launcher
 description: Builds and launches Docker containers with health verification using best practices
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # ln-783-container-launcher
 
 **Type:** L3 Worker

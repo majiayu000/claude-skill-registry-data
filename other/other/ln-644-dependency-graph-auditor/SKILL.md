@@ -3,6 +3,8 @@ name: ln-644-dependency-graph-auditor
 description: "L3 Worker. Builds module dependency graph, detects transitive cycles (DFS), validates boundary rules (forbidden/allowed/required), calculates coupling metrics (Ca/Ce/I, CCD/NCCD). Adaptive architecture detection: custom rules > docs > auto-detect. Supports hybrid architectures."
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # Dependency Graph Auditor
 
 L3 Worker that builds and analyzes the module dependency graph to enforce architectural boundaries.

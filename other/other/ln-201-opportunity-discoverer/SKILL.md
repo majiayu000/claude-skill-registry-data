@@ -3,6 +3,8 @@ name: ln-201-opportunity-discoverer
 description: Traffic-First opportunity discovery. KILL funnel filters ideas by traffic channel, demand, competition, revenue, interest, MVP-ability. Outputs one idea + one channel recommendation.
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # Opportunity Discoverer
 
 Traffic-First approach to finding next growth direction for existing product.

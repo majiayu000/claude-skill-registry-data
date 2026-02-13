@@ -4,6 +4,8 @@ description: "Dependencies audit worker (L3). Checks outdated packages, unused d
 allowed-tools: Read, Grep, Glob, Bash
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # Dependencies & Reuse Auditor (L3 Worker)
 
 Specialized worker auditing dependency management, code reuse, and security vulnerabilities.

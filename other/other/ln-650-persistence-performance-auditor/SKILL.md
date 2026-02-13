@@ -4,6 +4,8 @@ description: "Coordinates 3 specialized audit workers (query efficiency, transac
 allowed-tools: Read, Grep, Glob, Bash, WebFetch, WebSearch, mcp__Ref, mcp__context7, mcp__linear-server, Skill
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # Persistence & Performance Auditor (L2 Coordinator)
 
 Coordinates 3 specialized audit workers to perform database efficiency, transaction correctness, and runtime performance analysis.

@@ -4,6 +4,8 @@ description: Coverage Gaps audit worker (L3). Identifies missing tests for criti
 allowed-tools: Read, Grep, Glob, Bash
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # Coverage Gaps Auditor (L3 Worker)
 
 Specialized worker identifying missing tests for critical business logic.

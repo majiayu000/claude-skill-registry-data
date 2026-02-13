@@ -3,6 +3,8 @@ name: ln-713-pip-upgrader
 description: Upgrades Python pip/poetry/pipenv dependencies with breaking change handling
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # ln-713-pip-upgrader
 
 **Type:** L3 Worker

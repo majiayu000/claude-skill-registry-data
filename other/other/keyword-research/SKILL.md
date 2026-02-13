@@ -1,7 +1,32 @@
 ---
 name: keyword-research
-description: Discovers high-value keywords with search intent analysis, difficulty assessment, and content opportunity mapping. Essential for starting any SEO or GEO content strategy.
-geo-relevance: "medium"
+description: 'Use when the user asks to "find keywords", "keyword research", "what should I write about", "identify ranking opportunities", "topic ideas", "what are people searching for", "which keywords should I target", or "give me keyword ideas". Discovers high-value keywords with search intent analysis, difficulty assessment, and content opportunity mapping. Essential for starting any SEO or GEO content strategy. For analyzing competitor keywords specifically, see competitor-analysis. For content topic gaps, see content-gap-analysis.'
+license: Apache-2.0
+metadata:
+  author: aaron-he-zhu
+  version: "2.0.0"
+  geo-relevance: "medium"
+  tags:
+    - seo
+    - geo
+    - keywords
+    - search intent
+    - content strategy
+    - topic research
+    - content planning
+    - search volume
+    - long-tail keywords
+  triggers:
+    - "find keywords"
+    - "keyword research"
+    - "what should I write about"
+    - "identify ranking opportunities"
+    - "topic ideas"
+    - "search volume"
+    - "content opportunities"
+    - "what are people searching for"
+    - "which keywords should I target"
+    - "give me keyword ideas"
 ---
 
 # Keyword Research

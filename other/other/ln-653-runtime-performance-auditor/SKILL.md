@@ -4,6 +4,8 @@ description: "Runtime performance audit worker (L3). Checks blocking IO in async
 allowed-tools: Read, Grep, Glob, Bash
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # Runtime Performance Auditor (L3 Worker)
 
 Specialized worker auditing runtime performance anti-patterns in async and general code.

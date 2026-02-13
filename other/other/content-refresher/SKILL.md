@@ -1,7 +1,31 @@
 ---
 name: content-refresher
-description: Identifies and updates outdated content to restore and improve search rankings. Analyzes content freshness, adds new information, updates statistics, and optimizes for current SEO and GEO best practices.
-geo-relevance: "medium"
+description: 'Use when the user asks to "update old content", "refresh content", "content is outdated", "improve declining rankings", "revive old blog posts", "this post is outdated", "traffic is declining on this page", or "rankings dropped for this article". Identifies and updates outdated content to restore and improve search rankings. Analyzes content freshness, adds new information, updates statistics, and optimizes for current SEO and GEO best practices. For writing new content from scratch, see seo-content-writer. For auditing without rewriting, see on-page-seo-auditor.'
+license: Apache-2.0
+metadata:
+  author: aaron-he-zhu
+  version: "2.0.0"
+  geo-relevance: "medium"
+  tags:
+    - seo
+    - geo
+    - content refresh
+    - content update
+    - outdated content
+    - content decay
+    - ranking recovery
+    - content optimization
+  triggers:
+    - "update old content"
+    - "refresh content"
+    - "content is outdated"
+    - "improve declining rankings"
+    - "revive old blog posts"
+    - "content decay"
+    - "ranking dropped"
+    - "this post is outdated"
+    - "traffic is declining on this page"
+    - "rankings dropped for this article"
 ---
 
 # Content Refresher

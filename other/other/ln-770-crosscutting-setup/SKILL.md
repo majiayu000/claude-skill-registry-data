@@ -3,6 +3,8 @@ name: ln-770-crosscutting-setup
 description: Coordinates logging, error handling, CORS, health checks, and API docs
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # ln-770-crosscutting-setup
 
 **Type:** L2 Domain Coordinator

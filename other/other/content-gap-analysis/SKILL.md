@@ -1,7 +1,30 @@
 ---
 name: content-gap-analysis
-description: Identifies content opportunities by finding topics and keywords your competitors cover that you don't. Reveals untapped content potential and strategic gaps in your content strategy.
-geo-relevance: "medium"
+description: 'Use when the user asks to "find content gaps", "what am I missing", "topics to cover", "content opportunities", "what do competitors write about that I do not", "what topics am I missing", "topics my competitors cover that I lack", or "where are my content blind spots". Identifies content opportunities by finding topics and keywords your competitors cover that you do not. Reveals untapped content potential and strategic gaps in your content strategy. For broader competitive intelligence, see competitor-analysis. For general keyword discovery, see keyword-research.'
+license: Apache-2.0
+metadata:
+  author: aaron-he-zhu
+  version: "2.0.0"
+  geo-relevance: "medium"
+  tags:
+    - seo
+    - geo
+    - content gaps
+    - content opportunities
+    - topic analysis
+    - content strategy
+    - competitive content
+  triggers:
+    - "find content gaps"
+    - "what am I missing"
+    - "topics to cover"
+    - "content opportunities"
+    - "what do competitors write about"
+    - "untapped topics"
+    - "content strategy gaps"
+    - "what topics am I missing"
+    - "they cover this but I don't"
+    - "where are my content blind spots"
 ---
 
 # Content Gap Analysis

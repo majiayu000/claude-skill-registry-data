@@ -3,6 +3,8 @@ name: ln-230-story-prioritizer
 description: RICE prioritization per Story with market research. Generates consolidated prioritization table in docs/market/[epic-slug]/prioritization.md. L2 worker called after ln-220.
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # Story Prioritizer
 
 Evaluate Stories using RICE scoring with market research. Generate consolidated prioritization table for Epic.

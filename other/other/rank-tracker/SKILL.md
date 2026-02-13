@@ -1,7 +1,31 @@
 ---
 name: rank-tracker
-description: Tracks and analyzes keyword ranking positions over time for both traditional search results and AI-generated responses. Monitors ranking changes, identifies trends, and alerts on significant movements.
-geo-relevance: "medium"
+description: 'Use when the user asks to "track rankings", "check keyword positions", "ranking changes", "monitor SERP positions", "how am I ranking", "where do I rank for this keyword", "did my rankings change", or "keyword position tracking". Tracks and analyzes keyword ranking positions over time for both traditional search results and AI-generated responses. Monitors ranking changes, identifies trends, and alerts on significant movements. For automated alerting, see alert-manager. For comprehensive reports, see performance-reporter.'
+license: Apache-2.0
+metadata:
+  author: aaron-he-zhu
+  version: "2.0.0"
+  geo-relevance: "medium"
+  tags:
+    - seo
+    - geo
+    - rank tracking
+    - keyword positions
+    - serp monitoring
+    - ranking trends
+    - position tracking
+    - ai ranking
+  triggers:
+    - "track rankings"
+    - "check keyword positions"
+    - "ranking changes"
+    - "monitor SERP positions"
+    - "how am I ranking"
+    - "keyword tracking"
+    - "position monitoring"
+    - "where do I rank for this keyword"
+    - "did my rankings change"
+    - "keyword position tracking"
 ---
 
 # Rank Tracker

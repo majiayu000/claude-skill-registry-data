@@ -3,6 +3,8 @@ name: ln-642-layer-boundary-auditor
 description: "L3 Worker. Audits layer boundaries + cross-layer consistency: I/O violations, transaction boundaries (commit ownership), session ownership (DI vs local)."
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # Layer Boundary Auditor
 
 L3 Worker that audits architectural layer boundaries and detects violations.

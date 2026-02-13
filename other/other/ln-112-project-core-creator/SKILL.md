@@ -3,6 +3,8 @@ name: ln-112-project-core-creator
 description: Creates 4 core project docs (requirements.md, architecture.md, tech_stack.md, patterns_catalog.md). L3 Worker invoked by ln-110-project-docs-coordinator. ALWAYS created.
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # Project Core Documentation Creator
 
 L3 Worker that creates 4 core project documentation files. These are ALWAYS created regardless of project type.

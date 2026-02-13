@@ -3,6 +3,8 @@ name: ln-301-task-creator
 description: Creates ALL task types (implementation, refactoring, test). Generates task documents from templates, validates type rules, creates in Linear, updates kanban. Invoked by orchestrators.
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # Universal Task Creator
 
 Worker that generates task documents and creates Linear issues for implementation, refactoring, or test tasks as instructed by orchestrators.
@@ -25,7 +27,7 @@ Worker that generates task documents and creates Linear issues for implementatio
 
 ## Inputs
 - Common: `taskType`, teamId, Story data (id/title/description with AC, Technical Notes, Context).
-- Implementation CREATE: idealPlan (1-6 tasks), guideLinks.
+- Implementation CREATE: idealPlan (1-8 tasks), guideLinks.
 - Implementation ADD: appendMode=true, newTaskDescription, guideLinks.
 - Refactoring: codeQualityIssues, refactoringPlan, affectedComponents.
 - Test: manualTestResults, testPlan (E2E 2-5, Integration 0-8, Unit 0-15, Priority ≤15), infra/doc/cleanup items.

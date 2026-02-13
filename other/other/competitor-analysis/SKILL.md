@@ -1,7 +1,30 @@
 ---
 name: competitor-analysis
-description: Analyzes competitor SEO and GEO strategies including their ranking keywords, content approaches, backlink profiles, and AI citation patterns. Reveals opportunities to outperform competition.
-geo-relevance: "medium"
+description: 'Use when the user asks to "analyze competitors", "competitor SEO", "who ranks for", "competitive analysis", "what are my competitors doing", "what are they doing differently", "why do they rank higher", or "spy on competitor SEO". Analyzes competitor SEO and GEO strategies including their ranking keywords, content approaches, backlink profiles, and AI citation patterns. Reveals opportunities to outperform competition. For content-focused gap analysis, see content-gap-analysis. For link profile specifics, see backlink-analyzer.'
+license: Apache-2.0
+metadata:
+  author: aaron-he-zhu
+  version: "2.0.0"
+  geo-relevance: "medium"
+  tags:
+    - seo
+    - geo
+    - competitor analysis
+    - competitive intelligence
+    - benchmarking
+    - market analysis
+    - ranking analysis
+  triggers:
+    - "analyze competitors"
+    - "competitor SEO"
+    - "who ranks for"
+    - "competitive analysis"
+    - "what are my competitors doing"
+    - "competitor keywords"
+    - "competitor backlinks"
+    - "what are they doing differently"
+    - "why do they rank higher"
+    - "spy on competitor SEO"
 ---
 
 # Competitor Analysis

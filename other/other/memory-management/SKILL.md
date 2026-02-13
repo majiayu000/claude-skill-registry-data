@@ -1,7 +1,31 @@
 ---
 name: memory-management
-description: Manages a two-layer memory system (hot cache + cold storage) for SEO/GEO project context, tracking keywords, competitors, metrics, and campaign status with intelligent promotion/demotion.
-geo-relevance: "low"
+description: 'Use when the user asks to "remember project context", "save SEO data", "track campaign progress", "store keyword data", "manage project memory", "remember this for next time", "save my keyword data", or "keep track of this campaign". Manages a two-layer memory system (hot cache + cold storage) for SEO/GEO project context, tracking keywords, competitors, metrics, and campaign status with intelligent promotion/demotion.'
+license: Apache-2.0
+metadata:
+  author: aaron-he-zhu
+  version: "2.0.0"
+  geo-relevance: "low"
+  tags:
+    - seo
+    - geo
+    - project memory
+    - context management
+    - campaign tracking
+    - data persistence
+    - keyword tracking
+    - project context
+  triggers:
+    - "remember project context"
+    - "save SEO data"
+    - "track campaign progress"
+    - "store keyword data"
+    - "manage project memory"
+    - "save progress"
+    - "project context"
+    - "remember this for next time"
+    - "save my keyword data"
+    - "keep track of this campaign"
 ---
 
 # Memory Management

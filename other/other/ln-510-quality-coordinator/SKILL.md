@@ -3,6 +3,8 @@ name: ln-510-quality-coordinator
 description: "Coordinates code quality checks: ln-511 code quality, ln-512 agent review, ln-513 regression. Single-pass, returns results to ln-500."
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # Quality Coordinator
 
 Single-pass coordinator for code quality checks. Invokes workers and returns aggregated results to ln-500.

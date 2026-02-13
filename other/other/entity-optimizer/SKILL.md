@@ -1,7 +1,32 @@
 ---
 name: entity-optimizer
-description: 'Use when the user asks to "optimize entity presence", "build knowledge graph", "improve knowledge panel", "entity audit", or "establish brand entity". Works standalone with public search and AI query testing; supercharged when you connect ~~knowledge graph + ~~SEO tool + ~~AI monitor for automated entity analysis.'
-geo-relevance: "high"
+description: 'Use when the user asks to "optimize entity presence", "build knowledge graph", "improve knowledge panel", "entity audit", "establish brand entity", "Google does not know my brand", "no knowledge panel", or "establish my brand as an entity". Works standalone with public search and AI query testing; supercharged when you connect ~~knowledge graph + ~~SEO tool + ~~AI monitor for automated entity analysis. For structured data implementation, see schema-markup-generator. For content-level AI optimization, see geo-content-optimizer.'
+license: Apache-2.0
+metadata:
+  author: aaron-he-zhu
+  version: "2.0.0"
+  geo-relevance: "high"
+  tags:
+    - seo
+    - geo
+    - entity optimization
+    - knowledge graph
+    - knowledge panel
+    - brand entity
+    - entity disambiguation
+    - wikidata
+    - structured entities
+  triggers:
+    - "optimize entity presence"
+    - "build knowledge graph"
+    - "improve knowledge panel"
+    - "entity audit"
+    - "establish brand entity"
+    - "knowledge panel"
+    - "entity disambiguation"
+    - "Google doesn't know my brand"
+    - "no knowledge panel"
+    - "establish my brand as an entity"
 ---
 
 # Entity Optimizer

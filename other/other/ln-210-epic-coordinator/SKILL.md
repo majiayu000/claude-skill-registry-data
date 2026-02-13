@@ -3,6 +3,8 @@ name: ln-210-epic-coordinator
 description: CREATE/REPLAN Epics from scope (3-7 Epics). Batch Preview + Auto-extraction. Decompose-First Pattern. Auto-discovers team ID.
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # Epic Coordinator
 
 Universal Epic management coordinator that handles both creation and replanning through scope decomposition.

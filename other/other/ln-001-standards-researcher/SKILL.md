@@ -3,6 +3,8 @@ name: ln-001-standards-researcher
 description: Research standards/patterns via MCP Ref. Generates Standards Research for Story Technical Notes subsection. Reusable worker.
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # Standards Researcher (Worker)
 
 This skill researches industry standards and architectural patterns using MCP Ref to generate Standards Research for Story Technical Notes.

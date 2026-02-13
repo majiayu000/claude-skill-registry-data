@@ -1,7 +1,32 @@
 ---
 name: meta-tags-optimizer
-description: Creates and optimizes meta tags including title tags, meta descriptions, Open Graph tags, and Twitter cards for maximum click-through rates and social sharing engagement.
-geo-relevance: "low"
+description: 'Use when the user asks to "optimize title tag", "write meta description", "improve CTR", "Open Graph tags", "social media preview", "my title tag needs work", "low click-through rate", "fix my meta tags", or "OG tags not showing". Creates and optimizes meta tags including title tags, meta descriptions, Open Graph tags, and Twitter cards for maximum click-through rates and social sharing engagement. For a broader on-page audit, see on-page-seo-auditor. For structured data markup, see schema-markup-generator.'
+license: Apache-2.0
+metadata:
+  author: aaron-he-zhu
+  version: "2.0.0"
+  geo-relevance: "low"
+  tags:
+    - seo
+    - meta tags
+    - title tag
+    - meta description
+    - open graph
+    - twitter cards
+    - ctr optimization
+    - social sharing
+  triggers:
+    - "optimize title tag"
+    - "write meta description"
+    - "improve CTR"
+    - "Open Graph tags"
+    - "social media preview"
+    - "title optimization"
+    - "meta tags"
+    - "my title tag needs work"
+    - "low click-through rate"
+    - "fix my meta tags"
+    - "OG tags not showing"
 ---
 
 # Meta Tags Optimizer

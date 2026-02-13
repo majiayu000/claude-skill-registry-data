@@ -1,6 +1,6 @@
 ---
 name: sdlc-develop
-description: Orchestrates 6-phase SDLC pipeline (discovery, requirements, architecture, workstreams, implementation, summary) for guided feature development. Use when user runs /develop command, requests spec-driven development, wants to create implementation plans with architecture decisions, or mentions "SDLC", "spec-driven", "plan feature", "development pipeline". Supports plan persistence, wave-based resume, autonomous mode, and architecture/implementation verification.
+description: Orchestrates 6-phase SDLC pipeline (discovery, requirements, architecture, workstreams, implementation, summary) for guided feature development. Use when user runs /core:develop command, requests spec-driven development, wants to create implementation plans with architecture decisions, or mentions "SDLC", "spec-driven", "plan feature", "development pipeline". Supports plan persistence, wave-based resume, autonomous mode, and architecture/implementation verification.
 ---
 
 # ⚠️ CRITICAL EXECUTION PROTOCOL
@@ -40,11 +40,11 @@ Lightweight orchestrator for 6-phase software development lifecycle with progres
 ## Quick Start
 
 ```bash
-/develop add user authentication         # Full 6-phase pipeline
-/develop add logout button --auto        # Autonomous mode
-/develop create plan for dashboard --plan-only  # Plan only
-/develop @arkhe/specs/01-user-auth/      # Resume existing plan
-/develop add dashboard page with charts  # UI work → triggers Stitch workflow
+/core:develop add user authentication         # Full 6-phase pipeline
+/core:develop add logout button --auto        # Autonomous mode
+/core:develop create plan for dashboard --plan-only  # Plan only
+/core:develop @arkhe/specs/01-user-auth/      # Resume existing plan
+/core:develop add dashboard page with charts  # UI work → triggers Stitch workflow
 ```
 
 ### UI Features with Stitch Integration
@@ -155,7 +155,7 @@ Artifacts are saved incrementally at each phase checkpoint to prevent data loss:
 | 4 | tasks.md (Status updates) + wave-{N}-context.md | After each wave checkpoint |
 | 5 | tasks.md (checkbox sync) | Before completion summary |
 
-**Crash Recovery:** If session ends mid-phase, resume with `/develop @{spec_path}/` and artifacts from completed phases are preserved.
+**Crash Recovery:** If session ends mid-phase, resume with `/core:develop @{spec_path}/` and artifacts from completed phases are preserved.
 
 ## Templates
 

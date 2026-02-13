@@ -4,6 +4,8 @@ description: Risk-Based Value audit worker (L3). Calculates Usefulness Score = I
 allowed-tools: Read, Grep, Glob, Bash
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # Risk-Based Value Auditor (L3 Worker)
 
 Specialized worker calculating Usefulness Score for each test.

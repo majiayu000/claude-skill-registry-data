@@ -1,7 +1,31 @@
 ---
 name: domain-authority-auditor
-description: Runs a full CITE 40-item domain authority audit, scoring domains across 4 dimensions with weighted scoring by domain type. Produces a detailed report with per-item scores, dimension analysis, veto checks, and a prioritized action plan.
-geo-relevance: "medium"
+description: 'Use when the user asks to "audit domain authority", "domain trust score", "CITE audit", "how authoritative is my site", "domain credibility check", "is my domain trustworthy", or "domain credibility score". Runs a full CITE 40-item domain authority audit, scoring domains across 4 dimensions with weighted scoring by domain type. Produces a detailed report with per-item scores, dimension analysis, veto checks, and a prioritized action plan. For content-level assessment, see content-quality-auditor. For link profile details, see backlink-analyzer.'
+license: Apache-2.0
+metadata:
+  author: aaron-he-zhu
+  version: "2.0.0"
+  geo-relevance: "medium"
+  tags:
+    - seo
+    - geo
+    - domain authority
+    - domain audit
+    - site trust
+    - credibility
+    - cite framework
+    - domain rating
+    - domain scoring
+  triggers:
+    - "audit domain authority"
+    - "domain trust score"
+    - "CITE audit"
+    - "how authoritative is my site"
+    - "domain credibility check"
+    - "domain rating"
+    - "site authority"
+    - "is my domain trustworthy"
+    - "domain credibility score"
 ---
 
 # Domain Authority Auditor
