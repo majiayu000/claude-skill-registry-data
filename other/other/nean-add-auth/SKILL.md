@@ -2,7 +2,6 @@
 name: nean-add-auth
 description: Add authentication to a NEAN project using Passport.js with JWT and optional OAuth.
 argument-hint: "[--providers local,google,github] [--with-refresh-tokens]"
-disable-model-invocation: true
 allowed-tools: Bash, Write, Read, Glob, Grep
 ---
 

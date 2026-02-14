@@ -2,7 +2,6 @@
 name: ios-unit-test
 description: Run iOS unit/UI tests, report results, and optionally fix failures.
 argument-hint: "[--scheme <name>] [--project <path>] [--configuration NonProd|Prod] [--no-fix]"
-disable-model-invocation: true
 allowed-tools: Bash, Read, Glob, Grep, Write
 ---
 

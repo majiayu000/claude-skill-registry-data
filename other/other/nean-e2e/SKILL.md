@@ -2,7 +2,6 @@
 name: nean-e2e
 description: Manage Playwright E2E tests for critical user journeys.
 argument-hint: "[--add <journey>] [--run] [--report] [--fix]"
-disable-model-invocation: true
 allowed-tools: Bash, Write, Read, Glob, Grep
 ---
 

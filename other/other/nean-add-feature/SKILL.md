@@ -2,7 +2,6 @@
 name: nean-add-feature
 description: Scaffold a new feature with NestJS module, TypeORM entity, DTOs, and Angular components.
 argument-hint: "<feature-name> [--no-ui] [--no-api] [--no-entity]"
-disable-model-invocation: true
 allowed-tools: Bash, Write, Read, Glob, Grep
 ---
 

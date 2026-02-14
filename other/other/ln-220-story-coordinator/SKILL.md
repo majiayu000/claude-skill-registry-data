@@ -353,6 +353,18 @@ Skill(
 
 **Output:** Created Story URL + summary from worker
 
+---
+
+### Phase 6: Commit
+
+After worker completes (any mode: CREATE/REPLAN/ADD):
+
+1. `git add docs/tasks/kanban_board.md` (updated by worker)
+2. `git commit -m "ln-220: {MODE} Stories for Epic {N}"`
+   - CREATE: `"ln-220: create Stories US{first}-US{last} for Epic {N}"`
+   - REPLAN: `"ln-220: replan Stories for Epic {N}"`
+   - ADD: `"ln-220: add Story US{num} to Epic {N}"`
+
 **TodoWrite format (mandatory):**
 Add phases to todos before starting:
 ```
@@ -360,8 +372,9 @@ Add phases to todos before starting:
 - Phase 2: Standards Research via ln-221 (pending)
 - Phase 3: Build IDEAL Story Plan (pending)
 - Phase 4: Check Existing Stories (pending)
-- Phase 5: Delegate to ln-222/ln-223 (pending)
+- Phase 5: Delegate to ln-221/ln-222 (pending)
 - Wait for worker result (pending)
+- Phase 6: Commit kanban changes (pending)
 ```
 Mark each as in_progress when starting, completed when done.
 
@@ -431,6 +444,9 @@ Mark each as in_progress when starting, completed when done.
 - [ ] Called ln-221-story-creator (Phase 5a) OR ln-222-story-replanner (Phase 5b) via Skill tool
 - [ ] Passed epicData, idealPlan, standardsResearch, teamId, autoApprove
 - [ ] Received output from worker (Story URLs + summary + next steps)
+
+**✅ Phase 6: Commit Complete:**
+- [ ] Kanban board changes committed with descriptive message
 
 ---
 

@@ -47,6 +47,10 @@ High-confidence corrections:
 
 - `~/.claude/CLAUDE.md` - Global learnings (model names, general patterns)
 - `./CLAUDE.md` - Project-specific learnings (conventions, tools, structure)
+- `./CLAUDE.local.md` - Personal learnings (machine-specific, gitignored)
+- `./.claude/rules/*.md` - Modular rules with optional path-scoping
+- `~/.claude/rules/*.md` - Global modular rules
+- `~/.claude/projects/<project>/memory/*.md` - Auto memory (low-confidence, exploratory)
 - `commands/*.md` - Skill improvements (corrections during skill execution)
 
 ## Example Interaction

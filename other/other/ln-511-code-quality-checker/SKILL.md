@@ -53,9 +53,20 @@ Formula: `Code Quality Score = 100 - metric_penalties - issue_penalties`
 | SEC- | Security (auth, validation, secrets) | high | — |
 | PERF- | Performance (algorithms, configs, bottlenecks) | medium/high | ✓ Required |
 | MNT- | Maintainability (DRY, SOLID, complexity, dead code) | medium | — |
-| ARCH- | Architecture (layers, boundaries, patterns) | medium | — |
+| ARCH- | Architecture (layers, boundaries, patterns, contracts) | medium | — |
 | BP- | Best Practices (implementation differs from recommended) | medium | ✓ Required |
 | OPT- | Optimality (better approach exists for this goal) | medium | ✓ Required |
+
+**ARCH- subcategories:**
+
+| Prefix | Category | Severity |
+|--------|----------|----------|
+| ARCH-LB- | Layer Boundary: I/O outside infra, HTTP in domain | high |
+| ARCH-TX- | Transaction Boundaries: commit() in 3+ layers, mixed UoW ownership | high (CRITICAL if auth/payment) |
+| ARCH-DTO- | Missing DTO (4+ params without DTO), Entity Leakage (ORM entity in API response) | medium (high if auth/payment) |
+| ARCH-DI- | Dependency Injection: direct instantiation in business logic, mixed DI+imports | medium |
+| ARCH-CEH- | Centralized Error Handling: no global handler, stack traces in prod, uncaughtException | medium (high if no handler at all) |
+| ARCH-SES- | Session Ownership: DI session + local session in same module | medium |
 
 **PERF- subcategories:**
 
@@ -72,12 +83,14 @@ Formula: `Code Quality Score = 100 - metric_penalties - issue_penalties`
 |--------|----------|----------|
 | MNT-DC- | Dead code: replaced implementations, unused exports/re-exports, backward-compat wrappers, deprecated aliases | medium (high if public API) |
 | MNT-DRY- | DRY violations: duplicate logic across files | medium |
+| MNT-GOD- | God Classes: class with >15 methods or >500 lines (not just file size) | medium (high if >1000 lines) |
+| MNT-SIG- | Method Signature Quality: boolean flag params, unclear return types, inconsistent naming, >5 optional params | low |
+| MNT-ERR- | Error Contract inconsistency: mixed raise + return None in same service | medium |
 
 ## When to Use
 - **Invoked by ln-510-quality-coordinator** Phase 2
 - All implementation tasks in Story status = Done
 - Before regression testing (ln-513) and test planning (ln-520)
-
 
 ## Workflow (concise)
 1) Load Story (full) and Done implementation tasks (full descriptions) via Linear; skip tasks with label "tests".
@@ -89,7 +102,7 @@ Formula: `Code Quality Score = 100 - metric_penalties - issue_penalties`
    - Nesting depth (target ≤3)
    - Parameter count (target ≤4)
 
-3.5) **MCP Ref Validation (MANDATORY for code changes):**
+4) **MCP Ref Validation (MANDATORY for code changes):**
 
    **Level 1 — OPTIMALITY (OPT-):**
    - Extract goal from task (e.g., "user authentication", "caching", "API rate limiting")
@@ -115,20 +128,29 @@ Formula: `Code Quality Score = 100 - metric_penalties - issue_penalties`
    - Loops/recursion in critical paths
    - ORM queries added
 
-4) **Analyze code for static issues (assign prefixes):**
+5) **Analyze code for static issues (assign prefixes):**
    - SEC-: hardcoded creds, unvalidated input, SQL injection, race conditions
-   - MNT-: DRY violations (MNT-DRY: duplicate logic), dead code (MNT-DC: per `shared/references/clean_code_checklist.md` — 4 categories: unreachable, unused, commented-out, backward-compat), complex conditionals, poor naming
+   - MNT-: DRY violations (MNT-DRY-: duplicate logic), dead code (MNT-DC-: per `shared/references/clean_code_checklist.md` — 4 categories: unreachable, unused, commented-out, backward-compat), complex conditionals, poor naming
    - ARCH-: layer violations, circular dependencies, guide non-compliance
+   - ARCH-LB-: layer boundary violations (HTTP/DB/FS calls outside infrastructure layer)
+   - ARCH-TX-: transaction boundary violations (commit() across multiple layers)
+   - ARCH-DTO-: missing DTOs (4+ repeated params), entity leakage (ORM entities returned from API)
+   - ARCH-DI-: direct instantiation in business logic (no DI container or mixed patterns)
+   - ARCH-CEH-: centralized error handling absent or bypassed
+   - ARCH-SES-: session ownership conflicts (DI + local session in same module)
+   - MNT-GOD-: god classes (>15 methods or >500 lines per class)
+   - MNT-SIG-: method signature quality (boolean flags, unclear returns)
+   - MNT-ERR-: error contract inconsistency (mixed raise/return patterns in same service)
 
-5) **Calculate Code Quality Score:**
+6) **Calculate Code Quality Score:**
    - Start with 100
    - Subtract metric penalties (see Code Metrics table)
    - Subtract issue penalties (see Issue penalties table)
 
-6) Output verdict with score and structured issues. Add Linear comment with findings.
-7) **Agent Review (MANDATORY — Delegated to ln-512):**
+7) Output verdict with score and structured issues. Add Linear comment with findings.
+8) **Agent Review (MANDATORY — Delegated to ln-512):**
 
-   > **MANDATORY STEP:** This step MUST execute after Step 6. DO NOT skip. If agents unavailable, ln-512 returns SKIPPED — acceptable. But invocation MUST happen.
+   > **MANDATORY STEP:** This step MUST execute after Step 7. DO NOT skip. If agents unavailable, ln-512 returns SKIPPED — acceptable. But invocation MUST happen.
 
    Invoke `Skill(skill="ln-512-agent-reviewer", args="{storyId}")`.
    - ln-512 gets Story/Task references from Linear, builds prompt with references, runs agents in parallel, persists prompts and results in `.agent-review/{agent}/`.
@@ -151,6 +173,7 @@ Formula: `Code Quality Score = 100 - metric_penalties - issue_penalties`
   - OPT-: Optimality checked (is chosen approach the best for the goal?)
   - BP-: Best practices verified (correct implementation of chosen approach?)
   - PERF-: Performance analyzed (algorithms, configs, patterns, DB)
+- ARCH- subcategories checked (LB, TX, DTO, DI, CEH, SES); MNT- subcategories checked (DC, DRY, GOD, SIG, ERR).
 - Issues identified with prefixes and severity, sources from MCP Ref/Context7.
 - Code Quality Score calculated.
 - Agent review: ln-512 invoked; suggestions merged into issues (or SKIPPED/Self-Review fallback).
@@ -208,6 +231,30 @@ Formula: `Code Quality Score = 100 - metric_penalties - issue_penalties`
       issue: "users.map(u => u.posts) triggers N queries"
       solution: "Use eager loading: include: { posts: true }"
       source: "context7://prisma#eager-loading"
+
+    # ARCHITECTURE - Entity Leakage
+    - id: "ARCH-DTO-001"
+      severity: high
+      file: "src/api/users.ts:35"
+      finding: "ORM entity returned directly from API endpoint"
+      issue: "User entity with password hash exposed in GET /users response"
+      fix: "Create UserResponseDTO, map entity → DTO before return"
+
+    # ARCHITECTURE - Centralized Error Handling
+    - id: "ARCH-CEH-001"
+      severity: medium
+      file: "src/app.ts"
+      finding: "No global error handler registered"
+      issue: "Unhandled exceptions return stack traces to client in production"
+      fix: "Add app.use(globalErrorHandler) with sanitized error responses"
+
+    # MAINTAINABILITY - God Class
+    - id: "MNT-GOD-001"
+      severity: medium
+      file: "src/services/order-service.ts"
+      finding: "God class with 22 methods and 680 lines"
+      issue: "OrderService handles creation, payment, shipping, notifications"
+      fix: "Extract PaymentService, ShippingService, NotificationService"
 
     # MAINTAINABILITY - Dead Code
     - id: "MNT-DC-001"

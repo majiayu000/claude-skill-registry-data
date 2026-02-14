@@ -2,7 +2,6 @@
 name: github-visibility
 description: "Toggle GitHub repo between private and public with security hardening, contribution lockdown, and pre-flight safety checks."
 argument-hint: "<public|private> [--force] [--skip-security-check]"
-disable-model-invocation: true
 allowed-tools: Bash, Write, Read, Glob, Grep
 ---
 

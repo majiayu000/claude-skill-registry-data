@@ -2,7 +2,6 @@
 name: ios-deps
 description: Manage Swift Package Manager dependencies with security checks and update verification.
 argument-hint: "[--check] [--audit] [--update] [--add <package>]"
-disable-model-invocation: true
 allowed-tools: Bash, Write, Read, Glob, Grep
 ---
 

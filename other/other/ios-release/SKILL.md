@@ -2,7 +2,6 @@
 name: ios-release
 description: App Store release checklist and preparation with archive, validation, and submission guidance.
 argument-hint: "[--check-only] [--archive] [--validate]"
-disable-model-invocation: true
 allowed-tools: Bash, Write, Read, Glob, Grep
 ---
 

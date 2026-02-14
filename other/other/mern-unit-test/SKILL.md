@@ -2,7 +2,6 @@
 name: mern-unit-test
 description: Run MERN unit tests, report results, and optionally fix failures.
 argument-hint: "[--scope apps/web|packages/shared|all] [--no-fix]"
-disable-model-invocation: true
 allowed-tools: Bash, Read, Glob, Grep, Write
 ---
 

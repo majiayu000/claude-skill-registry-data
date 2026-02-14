@@ -2,7 +2,6 @@
 name: nean-deploy
 description: Deployment checklist and setup for NEAN projects targeting Docker, AWS, or Kubernetes.
 argument-hint: "[--target docker|aws|k8s] [--check-only]"
-disable-model-invocation: true
 allowed-tools: Bash, Write, Read, Glob, Grep
 ---
 

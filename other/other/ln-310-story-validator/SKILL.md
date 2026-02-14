@@ -165,8 +165,8 @@ Phase 6: Approve & Notify
 - Execution order (8 groups):
   1. **Structural (#1-#4)** — Story/Tasks template compliance + AC completeness/specificity
   2. **Standards (#5)** — RFC/OWASP compliance FIRST (before YAGNI/KISS!)
-  3. **Solution (#6)** — Library versions
-  4. **Workflow (#7-#13)** — Test strategy, docs integration, size, cleanup, YAGNI, KISS, task order, Database Creation
+  3. **Solution (#6, #21)** — Library versions, alternative solutions
+  4. **Workflow (#7-#13)** — Test strategy, docs integration, size, cleanup, YAGNI, KISS, task order
   5. **Quality (#14-#15)** — Documentation complete, hardcoded values
   6. **Dependencies (#18-#19)** — Story/Task independence (no forward dependencies)
   7. **Risk (#20)** — Implementation risk analysis (after dependencies resolved, before traceability)
@@ -260,7 +260,7 @@ Invoke `Skill(skill="ln-311-agent-reviewer", args="{storyId}")`.
 |---|-----------|----------------|---------|------------------|
 | 20 | Risk Analysis | Unmitigated implementation risks (architecture, errors, scalability, data integrity, integration, SPOF) | HIGH (5) per risk, max 15 | Score via Impact x Probability matrix; add TODO sections for Priority 15-19; FLAG for human review at Priority >= 20; skip at Priority <= 8 |
 
-**Maximum Penalty:** 78 points
+**Maximum Penalty:** 85 points (sum of all 21 criteria; #20 capped at 15)
 
 ## Final Assessment Model
 
@@ -280,13 +280,12 @@ Invoke `Skill(skill="ln-311-agent-reviewer", args="{storyId}")`.
 Readiness Score = 10 - (Penalty Points / 5)
 ```
 
-| Score | Status | Gate |
-|-------|--------|------|
-| 9-10 | Excellent | GO |
-| 7-8 | Good | GO |
-| 5-6 | Acceptable | GO (with notes) |
-| 3-4 | Concerns | NO-GO (requires review) |
-| 1-2 | Critical | NO-GO (major issues) |
+**Before/After diagnostic:** Phase 3 calculates initial Penalty Points and Readiness Score (Before). Phase 4 auto-fixes reduce penalties to 0, yielding Readiness Score = 10 (After). Both values reported in Final Assessment for transparency.
+
+| Gate | Condition |
+|------|-----------|
+| GO | Penalty Points = 0 after Phase 4 (Readiness Score = 10) |
+| NO-GO | Any criterion FLAGGED as unfixable (see Critical Rules) |
 
 ### Anti-Hallucination Verification
 
@@ -322,7 +321,7 @@ Verify all 21 criteria (#1-#21) from Auto-Fix Actions pass with concrete evidenc
 ## Critical Rules
 - All 21 criteria MUST be verified with concrete evidence (doc path, MCP result, Linear update) before Phase 6 (Self-Audit Protocol)
 - Fix execution order is strict: Structural -> Standards -> Solution -> Workflow -> Quality -> Dependencies -> Risk -> Traceability (standards before YAGNI/KISS)
-- Never approve with Penalty Points > 0; all violations must be auto-fixed to zero
+- Never approve with Penalty Points > 0; all violations must be auto-fixed to zero. If auto-fix is impossible for a criterion (e.g., MCP Ref unavailable, external dependency), mark as FLAGGED with reason — penalty stays, Gate = NO-GO, user must resolve manually
 - Test Strategy section must exist but remain empty (testing handled separately by other skills)
 - In Plan Mode, MUST stop after Phase 3 and wait for user approval before applying any fixes
 
@@ -395,6 +394,7 @@ Verify all 21 criteria (#1-#21) from Auto-Fix Actions pass with concrete evidenc
   - `references/traceability_validation.md` (criteria #16-#17)
   - `references/domain_patterns.md` (pattern registry for ln-002 delegation)
   - `references/penalty_points.md` (penalty system details)
+- **Prevention checklist:** `shared/references/creation_quality_checklist.md` (creator-facing mapping of 21 criteria)
 - **Linear integration:** `../shared/templates/linear_integration.md`
 
 ---

@@ -2,7 +2,6 @@
 name: nean-api-docs
 description: Generate and serve OpenAPI documentation from NestJS decorators.
 argument-hint: "[--serve] [--export <path>]"
-disable-model-invocation: true
 allowed-tools: Bash, Write, Read, Glob, Grep
 ---
 

@@ -2,7 +2,6 @@
 name: mern-scaffold
 description: Scaffold a pnpm + Turborepo MERN monorepo with Next.js, tooling, tests, CI, and optional GitHub repo creation.
 argument-hint: "[app-name] [--github] [--public] [--org <org>] [--repo <n>] [--no-push]"
-disable-model-invocation: true
 allowed-tools: Bash, Write, Read, Glob, Grep
 ---
 
@@ -108,8 +107,11 @@ Templates provide:
 ### 3. Run create-next-app
 
 ```bash
-pnpm dlx create-next-app@latest apps/web --ts --tailwind --eslint --app --src-dir --import-alias "@/*" --use-pnpm --yes --disable-git
+mkdir -p apps
+pnpm dlx create-next-app@latest "$(pwd)/apps/web" --ts --tailwind --eslint --app --src-dir --import-alias "@/*" --use-pnpm --yes --disable-git
 ```
+
+**Important:** Use absolute path for the target directory. CNA will not create parent directories and fails with "not writable" if `apps/` doesn't exist.
 
 **Flags explained:**
 - `--yes` skips all interactive prompts (React Compiler, etc.)
@@ -144,7 +146,7 @@ rm -f apps/web/eslint.config.mjs apps/web/pnpm-lock.yaml apps/web/pnpm-workspace
 ### 5. Install root dependencies
 
 ```bash
-pnpm add -D eslint @eslint/js globals typescript-eslint @next/eslint-plugin-next eslint-plugin-react-hooks eslint-plugin-react-refresh eslint-plugin-import-x eslint-plugin-unused-imports vitest @vitest/coverage-v8 turbo prettier -w
+pnpm add -D eslint @eslint/js@^9 globals typescript-eslint @next/eslint-plugin-next eslint-plugin-react-hooks eslint-plugin-react-refresh eslint-plugin-import-x eslint-plugin-unused-imports vitest @vitest/coverage-v8 turbo prettier -w
 ```
 
 ### 6. Copy test configs to apps/web from templates
@@ -161,8 +163,10 @@ pnpm --filter web add -D @testing-library/react @testing-library/jest-dom @testi
 ### 8. Install Playwright browsers
 
 ```bash
-pnpm exec playwright install chromium
+pnpm --filter web exec playwright install chromium
 ```
+
+**Note:** Playwright is installed in the web workspace, not root. Use `--filter web` to run from the correct scope.
 
 ### 9. Copy server utilities from templates to apps/web/src/server/
 - `env.ts`
@@ -231,8 +235,10 @@ pnpm --filter @repo/shared add -D typescript vitest
 
 Add workspace reference in web app:
 ```bash
-pnpm --filter web add @repo/shared@workspace:*
+pnpm --filter web add '@repo/shared@workspace:*'
 ```
+
+**Note:** Single quotes required — zsh expands unquoted `*` as a glob.
 
 ### 12. Create docs/
 Copy `docs/PRD-TEMPLATE.md` from templates.

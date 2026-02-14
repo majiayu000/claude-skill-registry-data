@@ -2,7 +2,6 @@
 name: ios-code-review
 description: Review iOS code for compliance with standards, NFRs, and security policy.
 argument-hint: "[--paths <glob>] [--no-fix]"
-disable-model-invocation: true
 allowed-tools: Bash, Read, Glob, Grep, Write
 ---
 

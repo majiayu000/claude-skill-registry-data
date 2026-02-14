@@ -2,7 +2,6 @@
 name: mern-design-review
 description: Visual design review using Playwright screenshots against mern-styleguide.
 argument-hint: "[--base-url <url>] [--routes /,/settings] [--no-fix]"
-disable-model-invocation: true
 allowed-tools: Bash, Read, Glob, Grep, Write
 ---
 

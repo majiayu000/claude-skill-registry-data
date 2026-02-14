@@ -2,7 +2,6 @@
 name: mern-add-feature
 description: Scaffold a new feature with API route, Zod schema, Mongoose model, and UI components.
 argument-hint: "<feature-name> [--no-ui] [--no-api] [--no-model]"
-disable-model-invocation: true
 allowed-tools: Bash, Write, Read, Glob, Grep
 ---
 

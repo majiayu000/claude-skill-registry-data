@@ -2,7 +2,6 @@
 name: github-merge-stack
 description: Merge stacked feature branches from Ralph into main, preserving full feature history. Handles PR base updates, sequential squash merges, and branch cleanup.
 argument-hint: "[--dry-run] [--no-cleanup]"
-disable-model-invocation: true
 allowed-tools: Bash, Read
 ---
 

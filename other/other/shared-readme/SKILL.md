@@ -2,7 +2,6 @@
 name: shared-readme
 description: Generate comprehensive README.md with project overview, setup instructions, and usage documentation.
 argument-hint: "[--platform mern|ios] [--minimal] [--badges]"
-disable-model-invocation: true
 allowed-tools: Bash, Write, Read, Glob, Grep
 ---
 

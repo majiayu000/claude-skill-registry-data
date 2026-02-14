@@ -2,7 +2,6 @@
 name: ios-add-auth
 description: Add authentication to an iOS app with Sign in with Apple, biometrics, and Keychain storage.
 argument-hint: "[--providers apple,biometric] [--with-backend]"
-disable-model-invocation: true
 allowed-tools: Bash, Write, Read, Glob, Grep
 ---
 

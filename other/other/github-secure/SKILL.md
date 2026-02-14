@@ -2,7 +2,6 @@
 name: github-secure
 description: Configure GitHub repository security with branch protection, Dependabot, security scanning, and CI workflows. Integrates with mern-scaffold, nean-scaffold, and iOS projects.
 argument-hint: "[--branch main] [--reviewers auto] [--ralph-mode] [--skip-workflows]"
-disable-model-invocation: true
 allowed-tools: Bash, Write, Read, Glob, Grep
 ---
 

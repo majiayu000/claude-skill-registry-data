@@ -2,7 +2,6 @@
 name: shared-env
 description: Environment variable management with validation, documentation, and .env.example generation.
 argument-hint: "[--validate] [--generate-example] [--document] [--check-secrets]"
-disable-model-invocation: true
 allowed-tools: Bash, Write, Read, Glob, Grep
 ---
 

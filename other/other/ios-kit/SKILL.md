@@ -1,7 +1,6 @@
 ---
 name: ios-kit
 description: Startup runbook for iOS projects. Establishes stack decisions, scaffolds the project, configures GitHub security, and confirms governing constraints.
-disable-model-invocation: true
 ---
 
 ## Purpose

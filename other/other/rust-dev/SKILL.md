@@ -181,6 +181,53 @@ async fn main() -> Result<()> {
 }
 ```
 
+### Preserving Error Chains in anyhow
+
+**Critical:** Always preserve the original error in the chain. Use `.context()` or `.with_context()`, NEVER `anyhow!()` with string formatting.
+
+**✅ CORRECT - preserves error chain:**
+
+```rust
+// .context() wraps the error, preserving the original as source
+operation().context("failed during init")?;
+
+// .with_context() for dynamic messages, still preserves chain
+operation().with_context(|| format!("failed for user {}", user_id))?;
+
+// Chain multiple contexts - each layer preserved
+fetch_data()
+    .context("network request failed")?
+    .parse()
+    .context("response parsing failed")?;
+```
+
+**❌ WRONG - breaks the error chain:**
+
+```rust
+// BAD: anyhow!() with Display formatting loses the source error
+operation().map_err(|e| anyhow::anyhow!("failed: {}", e))?;
+
+// BAD: bail!() discards the original error entirely
+if let Err(e) = operation() {
+    bail!("operation failed: {}", e);  // e is formatted away, not chained
+}
+
+// BAD: format! then anyhow - same problem
+let msg = format!("failed: {}", original_error);
+return Err(anyhow::anyhow!(msg));
+```
+
+**Why this matters:** When debugging, `{:?}` on an anyhow error shows the full chain:
+```
+Error: failed during init
+
+Caused by:
+    0: network request failed
+    1: connection refused (os error 111)
+```
+
+If you use `anyhow!("{}", e)`, you get only: `Error: failed during init: connection refused` — no chain, no backtrace attachment point.
+
 See `references/common-patterns.md` for more error handling examples.
 
 ## Common Patterns and Solutions

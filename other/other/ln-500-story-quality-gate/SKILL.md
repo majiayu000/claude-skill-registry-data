@@ -45,8 +45,7 @@ Formula: `Quality Score = 100 - (20 x FAIL_count) - (10 x CONCERN_count)`
 |-----|--------|--------------|
 | **Security** | Auth, input validation, secrets exposure | SEC- |
 | **Performance** | N+1 queries, caching, response times | PERF- |
-| **Reliability** | Error handling, retries, timeouts | REL- |
-| **Maintainability** | DRY, SOLID, cyclomatic complexity | MNT- |
+| **Maintainability** | DRY, SOLID, cyclomatic complexity, error handling | MNT- |
 
 Additional prefixes: `TEST-` (coverage gaps), `ARCH-` (architecture), `DOC-` (documentation), `DEP-` (dependencies), `COV-` (AC coverage), `DB-` (database schema), `AC-` (AC validation)
 
@@ -97,7 +96,7 @@ Additional prefixes: `TEST-` (coverage gaps), `ARCH-` (architecture), `DOC-` (do
 
 1) **Calculate Quality Score** (see formula above)
 2) **Run NFR checks** per dimensions table
-3) **Assign issue prefixes:** SEC-, PERF-, REL-, MNT-, TEST-, ARCH-, DOC-
+3) **Assign issue prefixes:** SEC-, PERF-, MNT-, TEST-, ARCH-, DOC-
 4) **Determine Gate verdict** per 4-Level Gate Model
 5) Post Linear comment with gate verdict
 6) Update Story status (Done for PASS/CONCERNS/WAIVED, or create fix tasks for FAIL)

@@ -2,7 +2,6 @@
 name: retro-resolve
 description: Scan retro.md files across all skills, resolve open issues, and update retro entries.
 argument-hint: "[--skill <name>] [--dry-run]"
-disable-model-invocation: true
 allowed-tools: Bash, Write, Read, Glob, Grep, Edit
 ---
 

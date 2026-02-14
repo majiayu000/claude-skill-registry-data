@@ -2,7 +2,6 @@
 name: nean-teardown
 description: Tear down a NEAN project — drop database, delete local files, and optionally delete the GitHub repo.
 argument-hint: "[--delete-repo] [--keep-db]"
-disable-model-invocation: true
 allowed-tools: Bash, Read, Glob, Grep
 ---
 

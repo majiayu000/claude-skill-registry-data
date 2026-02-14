@@ -2,7 +2,6 @@
 name: ios-teardown
 description: Tear down an iOS project created by /ios-kit. Removes local files, git hooks, and optionally deletes the GitHub repo.
 argument-hint: "[--keep-repo] [--keep-local] [--dry-run]"
-disable-model-invocation: true
 allowed-tools: Bash, Read, Glob, Grep
 ---
 

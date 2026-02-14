@@ -42,7 +42,7 @@ Workers (ln-301, ln-302) handle the actual Linear/File operations based on detec
 
 **Context:** Validates plan quality before delegation to workers, preventing rework.
 
-After building IDEAL plan (Phase 2), score 4 criteria:
+After building IDEAL plan (Phase 2), score 5 criteria:
 
 | # | Criterion | Check |
 |---|-----------|-------|
@@ -50,11 +50,12 @@ After building IDEAL plan (Phase 2), score 4 criteria:
 | 2 | **AC clarity** | Each task has specific acceptance criteria with measurable outcomes |
 | 3 | **Tech confidence** | All referenced technologies/patterns are known or researched |
 | 4 | **Scope isolation** | Tasks don't overlap with other Stories' scope |
+| 5 | **Architecture compliance** | Tasks reference correct layers (DB→Repo→Service→API), no planned cross-layer violations (e.g., API task doing direct DB calls) |
 
-**Score = count of PASS criteria (0-4)**
-- 4/4: Delegate to worker
-- 2-3/4: Show warnings to user, fix or proceed
-- <2/4: Rework plan before delegation
+**Score = count of PASS criteria (0-5)**
+- 5/5: Delegate to worker
+- 3-4/5: Show warnings to user, fix or proceed
+- <3/5: Rework plan before delegation
 
 ## Task Independence Validation
 

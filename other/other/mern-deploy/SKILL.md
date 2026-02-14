@@ -2,7 +2,6 @@
 name: mern-deploy
 description: Deployment checklist and setup for MERN projects targeting Vercel, AWS, or Docker.
 argument-hint: "[--target vercel|aws|docker] [--check-only]"
-disable-model-invocation: true
 allowed-tools: Bash, Write, Read, Glob, Grep
 ---
 

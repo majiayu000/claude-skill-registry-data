@@ -2,7 +2,6 @@
 name: shared-adr
 description: Create and manage Architecture Decision Records (ADRs) to document significant technical decisions.
 argument-hint: "[--new <title>] [--list] [--supersede <id>]"
-disable-model-invocation: true
 allowed-tools: Bash, Write, Read, Glob, Grep
 ---
 

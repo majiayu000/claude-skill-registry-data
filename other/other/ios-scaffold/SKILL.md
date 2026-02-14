@@ -2,7 +2,6 @@
 name: ios-scaffold
 description: Scaffold a SwiftUI iOS app (iPhone + iPad) with offline-first persistence, push notifications plumbing, SwiftFormat + SwiftLint, CI, and optional GitHub repo creation.
 argument-hint: "[app-name] [--github] [--public] [--org <org>] [--repo <n>] [--no-push]"
-disable-model-invocation: true
 allowed-tools: Bash, Write, Read, Glob, Grep
 ---
 

@@ -2,7 +2,6 @@
 name: nean-deps
 description: Check and update dependencies safely with security audits and test verification.
 argument-hint: "[--check] [--audit] [--update] [--update-major]"
-disable-model-invocation: true
 allowed-tools: Bash, Write, Read, Glob, Grep
 ---
 

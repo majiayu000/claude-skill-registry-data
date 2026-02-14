@@ -2,7 +2,6 @@
 name: github-hooks
 description: Set up local Git hooks for pre-commit validation (lint, format, tests, secrets). Integrates with mern-scaffold, nean-scaffold, and iOS projects.
 argument-hint: "[--platform mern|nean|ios] [--no-secrets] [--no-tests]"
-disable-model-invocation: true
 allowed-tools: Bash, Write, Read, Glob, Grep
 ---
 

@@ -2,7 +2,6 @@
 name: nean-scaffold
 description: Scaffold an Nx monorepo with NestJS API, Angular frontend, and shared libraries.
 argument-hint: "[app-name] [--github] [--public] [--org <org>] [--repo <n>] [--no-push]"
-disable-model-invocation: true
 allowed-tools: Bash, Write, Read, Glob, Grep
 ---
 

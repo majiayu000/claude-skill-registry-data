@@ -2,7 +2,6 @@
 name: ios-design-review
 description: Visual design review of iOS screens against ios-styleguide.
 argument-hint: "[--focus <feature>] [--no-fix]"
-disable-model-invocation: true
 allowed-tools: Bash, Read, Glob, Grep, Write
 ---
 

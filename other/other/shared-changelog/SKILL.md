@@ -2,7 +2,6 @@
 name: shared-changelog
 description: Generate CHANGELOG.md from conventional commits with semantic versioning.
 argument-hint: "[--version <v>] [--from <tag>] [--dry-run]"
-disable-model-invocation: true
 allowed-tools: Bash, Write, Read, Glob, Grep
 ---
 

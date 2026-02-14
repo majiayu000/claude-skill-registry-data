@@ -2,7 +2,6 @@
 name: mern-teardown
 description: Tear down a MERN project — delete local files and optionally delete the GitHub repo.
 argument-hint: "[--delete-repo]"
-disable-model-invocation: true
 allowed-tools: Bash, Read, Glob, Grep
 ---
 

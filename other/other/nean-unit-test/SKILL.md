@@ -2,7 +2,6 @@
 name: nean-unit-test
 description: Run NEAN unit tests, report results, and optionally fix failures.
 argument-hint: "[--scope api|web|libs|all] [--no-fix]"
-disable-model-invocation: true
 allowed-tools: Bash, Read, Glob, Grep, Write
 ---
 

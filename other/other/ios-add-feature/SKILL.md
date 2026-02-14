@@ -2,7 +2,6 @@
 name: ios-add-feature
 description: Scaffold a new feature with View, ViewModel, and tests following ios-std conventions.
 argument-hint: "<feature-name> [--with-detail] [--with-form] [--no-tests]"
-disable-model-invocation: true
 allowed-tools: Bash, Write, Read, Glob, Grep
 ---
 

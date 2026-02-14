@@ -2,7 +2,7 @@
 name: remembering
 description: Advanced memory operations reference. Basic patterns (profile loading, simple recall/remember) are in project instructions. Consult this skill for background writes, memory versioning, complex queries, edge cases, session scoping, retention management, type-safe results, proactive memory hints, GitHub access detection, and ops priority ordering.
 metadata:
-  version: 4.1.0
+  version: 4.3.0
 ---
 
 # Remembering - Advanced Operations
@@ -84,12 +84,63 @@ urgent = recall(tags=["task", "urgent"], tag_mode="all", n=10)
 # Comprehensive retrieval (v4.1.0)
 all_memories = recall(fetch_all=True, n=1000)  # Get all memories without search filtering
 
+# Time-windowed queries (v4.3.0) - since/until with inclusive bounds
+recent = recall("API", since="2025-02-01")
+jan_memories = recall(since="2025-01-01", until="2025-01-31T23:59:59Z")
+
+# Multi-tag convenience (v4.3.0)
+both = recall(tags_all=["correction", "bsky"])    # AND: must have all tags
+either = recall(tags_any=["therapy", "self-improvement"])  # OR: any tag matches
+
 # Wildcard patterns are NOT supported - use fetch_all instead
 # recall("*", n=1000)  # ❌ Raises ValueError
 # recall(fetch_all=True, n=1000)  # ✅ Correct approach
 ```
 
 Results return as `MemoryResult` objects with attribute and dict access. Common aliases (`m.content` -> `m.summary`, `m.conf` -> `m.confidence`) resolve transparently.
+
+### Decision Alternatives (v4.2.0)
+
+Track rejected alternatives on decision memories to prevent revisiting settled conclusions:
+
+```python
+from remembering import remember, get_alternatives
+
+# Store decision with alternatives considered
+id = remember(
+    "Chose PostgreSQL for the database",
+    "decision",
+    tags=["architecture", "database"],
+    alternatives=[
+        {"option": "MongoDB", "rejected": "Schema-less adds complexity for our relational data"},
+        {"option": "SQLite", "rejected": "Doesn't support concurrent writes at our scale"},
+    ]
+)
+
+# Later: retrieve what was considered
+alts = get_alternatives(id)
+for alt in alts:
+    print(f"Rejected {alt['option']}: {alt.get('rejected', 'no reason')}")
+```
+
+Alternatives are stored in the `refs` field as a typed object alongside memory ID references. The `alternatives` computed field is automatically extracted on `MemoryResult` objects for decision memories.
+
+### Reference Chain Traversal (v4.3.0)
+
+Follow reference chains to build context graphs around a memory:
+
+```python
+from remembering import get_chain
+
+# Follow refs up to 3 levels deep (default)
+chain = get_chain("memory-uuid", depth=3)
+for m in chain:
+    print(f"[depth={m['_chain_depth']}] {m['summary'][:80]}")
+
+# Useful for understanding supersede chains, consolidated memory origins, etc.
+```
+
+Handles cycles via visited set. Max depth capped at 10.
 
 ### Forget and Supersede
 
@@ -191,18 +242,69 @@ Write complete, searchable summaries that standalone without conversation contex
 - Thread-safe for background writes
 - Repo defaults fallback: `scripts/defaults/` used when Turso and cache are both unavailable
 
+## Session Continuity (v4.3.0)
+
+Save and resume session state for cross-session persistence:
+
+```python
+from remembering import session_save, session_resume, sessions
+
+# Save a checkpoint before ending session
+session_save("Implementing FTS5 search", context={"files": ["cache.py"], "status": "in-progress"})
+
+# In a new session: resume from last checkpoint
+checkpoint = session_resume("previous-session-id")
+print(checkpoint['summary'])      # What was happening
+print(checkpoint['context'])      # Custom context data
+print(len(checkpoint['recent_memories']))  # Recent memories from that session
+
+# List available session checkpoints
+for s in sessions():
+    print(f"{s['session_id']}: {s['summary'][:60]}")
+```
+
+## Memory Consolidation (v4.2.0)
+
+Automatically cluster related memories and synthesize summaries, reducing retrieval noise while preserving traceability:
+
+```python
+from remembering import consolidate
+
+# Preview what would be consolidated
+result = consolidate(dry_run=True)
+for c in result['clusters']:
+    print(f"Tag '{c['tag']}': {c['count']} memories")
+
+# Actually consolidate (creates summaries, demotes originals to background)
+result = consolidate(dry_run=False, min_cluster=3)
+print(f"Consolidated {result['consolidated']} clusters, demoted {result['demoted']} memories")
+
+# Scope to specific tags
+result = consolidate(tags=["debugging"], dry_run=False)
+```
+
+How it works:
+1. **Clustering**: Groups memories by shared tags (minimum `min_cluster` memories per group)
+2. **Synthesis**: Creates a `type=world` summary memory tagged `consolidated` containing all originals
+3. **Archival**: Demotes original memories to `priority=-1` (background)
+4. **Traceability**: Summary's `refs` field lists all original memory IDs
+
 ## Advanced Topics
+
+For architecture details, see [_ARCH.md](_ARCH.md).
 
 See [references/advanced-operations.md](references/advanced-operations.md) for:
 
-- Date-filtered queries (`recall_since`, `recall_between`)
+- Date-filtered queries (`recall_since`, `recall_between`, `since`/`until` parameters)
 - Priority system and memory consolidation (`strengthen`, `weaken`)
 - Therapy helpers and analysis helpers
 - Handoff convention (cross-environment coordination)
-- Session scoping
+- Session scoping and continuity (`session_save`, `session_resume`, `sessions`)
 - Retrieval observability and retention management
 - Export/import for portability
 - Type-safe results (MemoryResult) details
 - Proactive memory hints (`recall_hints`)
 - GitHub access detection and unified API
 - Progressive disclosure and priority-based ordering
+- Decision alternatives (`get_alternatives`) and memory consolidation (`consolidate`)
+- Reference chain traversal (`get_chain`)

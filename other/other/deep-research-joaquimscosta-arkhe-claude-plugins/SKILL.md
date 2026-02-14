@@ -36,7 +36,15 @@ When research is needed:
 | Research | `/research <topic>` or natural language | Yes (cache hit) | Check cache → return if valid, else research → cache |
 | Promote | `/research promote <slug>` | Yes | Run `promote.py {slug}` directly |
 | Refresh | `/research refresh <slug>` | No | Spawn agent → fresh research → cache → update promoted |
-| List | `/research list` | Yes | Run `cache_manager.py list` directly |
+| List | `/research list` | Yes | Run `cache_manager.py list` (project-scoped by default, `--all` for everything) |
+
+## Project Scoping
+
+Research entries are automatically associated with the current git repository when cached. The `list` operation filters by current project by default, so each project sees only its relevant research. Use `--all` to see everything.
+
+- **Auto-detection**: Project name derived from `git rev-parse --show-toplevel` basename
+- **Multi-project**: Entries can belong to multiple projects (associations merge, never replace)
+- **Backward compatible**: Existing entries without project associations appear in `--all` but not in project-scoped views
 
 ## Scripts
 

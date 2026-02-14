@@ -1,7 +1,6 @@
 ---
 name: mern-kit
 description: Startup runbook for MERN projects. Establishes stack decisions, scaffolds the project, configures GitHub security, and confirms governing constraints.
-disable-model-invocation: true
 ---
 
 ## Purpose

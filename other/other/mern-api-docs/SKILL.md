@@ -2,7 +2,6 @@
 name: mern-api-docs
 description: Generate OpenAPI documentation from Zod schemas and API routes.
 argument-hint: "[--serve] [--export <path>]"
-disable-model-invocation: true
 allowed-tools: Bash, Write, Read, Glob, Grep
 ---
 

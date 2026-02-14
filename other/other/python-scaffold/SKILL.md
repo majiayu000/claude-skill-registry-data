@@ -2,7 +2,6 @@
 name: python-scaffold
 description: Add Python VS Code workspace config to a project. Composable — works standalone or merges into existing .vscode/ from a prior kit scaffold.
 argument-hint: ""
-disable-model-invocation: true
 allowed-tools: Bash, Write, Read, Glob, Grep
 ---
 

@@ -2,7 +2,6 @@
 name: mern-add-auth
 description: Add authentication to a MERN project using NextAuth.js with OAuth and/or credentials.
 argument-hint: "[--providers google,github,credentials] [--with-user-model]"
-disable-model-invocation: true
 allowed-tools: Bash, Write, Read, Glob, Grep
 ---
 
