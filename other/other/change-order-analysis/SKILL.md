@@ -1,9 +1,9 @@
 ---
-slug: "change-order-analysis"
-display_name: "Change Order Analysis"
+name: "change-order-analysis"
 description: "Analyze and predict construction change orders using ML. Classify change order types, predict costs and schedule impacts, identify patterns, and optimize approval workflows."
+homepage: "https://datadrivenconstruction.io"
+metadata: {"openclaw": {"emoji": "🚀", "os": ["darwin", "linux", "win32"], "homepage": "https://datadrivenconstruction.io", "requires": {"bins": ["python3"]}}}
 ---
-
 # Change Order Analysis
 
 ## Overview

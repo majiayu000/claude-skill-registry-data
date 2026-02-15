@@ -1,9 +1,9 @@
 ---
-slug: "cwicr-bid-analyzer"
-display_name: "CWICR Bid Analyzer"
+name: "cwicr-bid-analyzer"
 description: "Analyze contractor bids against CWICR benchmarks. Identify pricing anomalies, compare bid components, and support bid evaluation decisions."
+homepage: "https://datadrivenconstruction.io"
+metadata: {"openclaw": {"emoji": "🗄️", "os": ["darwin", "linux", "win32"], "homepage": "https://datadrivenconstruction.io", "requires": {"bins": ["python3"]}}}
 ---
-
 # CWICR Bid Analyzer
 
 ## Business Case

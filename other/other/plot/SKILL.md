@@ -3,7 +3,7 @@ name: plot
 description: >-
   Git-native planning dispatcher. Analyzes current git state and suggests the next action.
   Activates on /plot or when managing planned work through git branches and PRs.
-  Spoke commands: /plot-idea, /plot-approve, /plot-deliver, /plot-release.
+  Spoke commands: /plot-idea, /plot-approve, /plot-deliver, /plot-release, /plot-sprint.
 globs: []
 license: MIT
 metadata:
@@ -27,6 +27,7 @@ Add a `## Plot Config` section to the adopting project's `CLAUDE.md`:
     - **Plan directory:** docs/plans/
     - **Active index:** docs/plans/active/
     - **Delivered index:** docs/plans/delivered/
+    - **Sprint directory:** docs/sprints/
 
 ## Model Guidance
 
@@ -36,6 +37,8 @@ Add a `## Plot Config` section to the adopting project's `CLAUDE.md`:
 | 2. Detect Context | Small | Branch name pattern matching |
 | 3. Detect Issues | Small (most), Mid (overlap) | Overlapping plans (3+ shared words) needs mid-tier |
 | 4. Status Summary | Small | Template formatting |
+| Sprint listing | Small | File listing, date arithmetic |
+| Sprint countdown | Small | Date comparison, checkbox counting |
 
 All dispatcher steps are mechanical except the "Overlapping plans" heuristic in step 3, which requires comparing plan titles. A small model should skip title comparison and only flag exact slug duplicates.
 
@@ -81,6 +84,18 @@ flowchart LR
     F["Direct branch<br/>(no plan)"] -->|"code review<br/>& merge"| D
 ```
 
+### Sprint Lifecycle
+
+```mermaid
+flowchart LR
+    A["/plot-sprint<br/><slug>: <goal>"] -->|"⏸ drafting"| B["Planning"]
+    B -->|"⏳ /plot-sprint commit"| C["Committed"]
+    C -->|"⚡ /plot-sprint start"| D["Active"]
+    D -->|"⏳ /plot-sprint close"| E["Closed"]
+```
+
+Sprints are an optional temporal lens over plans. Sprint files live in `docs/sprints/`, committed directly to main. See `/plot-sprint` for full details.
+
 ### Direct Work (no planning step)
 
 Small features, bug fixes, docs, and infra tasks go directly to a PR:
@@ -94,6 +109,8 @@ infra/<slug>    →  PR  →  merge
 
 ## Phases
 
+### Plan Phases
+
 | Phase | Meaning | Trigger | Transition Pacing |
 |-------|---------|---------|-------------------|
 | Draft | Plan being written/refined | `/plot-idea` | ⏸ natural pause (writing) |
@@ -103,6 +120,15 @@ infra/<slug>    →  PR  →  merge
 
 The Release phase includes an RC verification loop. Individual plans don't track a "Testing" phase — the release checklist does. See the Pacing section in the manifesto for details.
 
+### Sprint Phases
+
+| Phase | Meaning | Trigger | Transition Pacing |
+|-------|---------|---------|-------------------|
+| Planning | Sprint being drafted, items selected | `/plot-sprint <slug>: <goal>` | ⏸ natural pause (drafting) |
+| Committed | Team agreed on sprint contents | `/plot-sprint <slug> commit` | ⏳ human-paced (agreement) |
+| Active | Sprint running, work in progress | `/plot-sprint <slug> start` | ⚡ automate ASAP |
+| Closed | Timebox ended, retro captured | `/plot-sprint <slug> close` | ⏳ human-paced (retrospective) |
+
 ## Conventions
 
 - **Branch prefixes:** `idea/` (plans), `feature/`, `bug/`, `docs/`, `infra/` (implementation)
@@ -111,6 +137,8 @@ The Release phase includes an RC verification loop. Individual plans don't track
 - **Delivered index:** `docs/plans/delivered/<slug>.md` — symlinks to Delivered plans
 - **Plan PR:** starts as draft (being refined), marked ready with `gh pr ready`, titled `Plan: <title>`
 - **Impl PRs:** draft, created by `/plot-approve`, reference the plan on main
+- **Sprint files:** `docs/sprints/YYYY-Www-<slug>.md` — ISO week-prefixed, committed directly to main
+- **Sprint active index:** `docs/sprints/active/<slug>.md` — symlinks to active sprints
 
 ## Guardrails
 
@@ -154,6 +182,9 @@ ls docs/plans/active/ 2>/dev/null
 # Delivered plans
 ls docs/plans/delivered/ 2>/dev/null
 
+# Active sprints
+ls docs/sprints/active/ 2>/dev/null
+
 # Open PRs on idea/ branches
 gh pr list --json number,title,headRefName,isDraft,state --jq '.[] | select(.headRefName | startswith("idea/"))'
 
@@ -183,6 +214,7 @@ Also run the bash helpers if a specific slug is in context:
 **If on `main`:**
 - List all active plans with their phases
 - List any delivered plans awaiting release (from `docs/plans/delivered/`)
+- List active sprints with countdown and progress: `week-1 — "Ship auth improvements" | 3 days remaining | Must: 2/4 done`. Past end date: show "ended 2 days ago" factually — no warning tone, no nagging.
 - Show overall status summary
 - Suggest next action based on what's pending
 
@@ -197,6 +229,8 @@ Flag any problems found:
 - **Phase mismatches**: plan says Draft but PR is non-draft, or plan says Approved but PR is still open
 - **Stale drafts**: impl PRs that have been in draft state for more than 7 days
 - **Overlapping plans**: Draft/Approved plans with titles sharing 3+ significant words — flag in the status summary as informational (no blocking)
+- **Sprints past end date**: active sprints where end date has passed — flag as informational
+- **Multiple active sprints**: more than one active sprint — flag as informational
 
 > **Smaller models:** Skip title-similarity detection. Only report exact slug matches (identical filenames). Title overlap detection requires mid-tier reasoning.
 
@@ -209,6 +243,9 @@ Print a clear summary:
 
 ### Active Plans
 - `<slug>` — Phase: <phase> | Plan PR: #<n> (<state>) | Impl PRs: <count> merged / <count> total
+
+### Active Sprints
+- `<slug>` — "<goal>" | <N> days remaining | Must: <n>/<m> | Should: <n>/<m> | Could: <n>/<m>
 
 ### Issues
 - <issue description>

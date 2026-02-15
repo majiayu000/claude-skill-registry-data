@@ -1,9 +1,9 @@
 ---
-slug: "drawing-analyzer"
-display_name: "Drawing Analyzer"
+name: "drawing-analyzer"
 description: "Analyze construction drawings to extract dimensions, annotations, symbols, and metadata. Support quantity takeoff and design review automation."
+homepage: "https://datadrivenconstruction.io"
+metadata: {"openclaw": {"emoji": "📑", "os": ["darwin", "linux", "win32"], "homepage": "https://datadrivenconstruction.io", "requires": {"bins": ["python3"]}}}
 ---
-
 # Drawing Analyzer for Construction
 
 ## Overview

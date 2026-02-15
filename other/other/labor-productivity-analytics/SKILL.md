@@ -1,9 +1,9 @@
 ---
-slug: "labor-productivity-analytics"
-display_name: "Labor Productivity Analytics"
+name: "labor-productivity-analytics"
 description: "Analyze construction labor productivity using data analytics. Track worker performance, identify inefficiencies, predict resource needs, and optimize crew allocation for maximum efficiency."
+homepage: "https://datadrivenconstruction.io"
+metadata: {"openclaw": {"emoji": "🚀", "os": ["darwin", "linux", "win32"], "homepage": "https://datadrivenconstruction.io", "requires": {"bins": ["python3"]}}}
 ---
-
 # Labor Productivity Analytics
 
 ## Overview

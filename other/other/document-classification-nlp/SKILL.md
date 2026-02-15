@@ -1,9 +1,9 @@
 ---
-slug: "document-classification-nlp"
-display_name: "Document Classification Nlp"
+name: "document-classification-nlp"
 description: "Automatically classify and extract information from construction documents using NLP. Categorize RFIs, submittals, change orders, specifications, and contracts."
+homepage: "https://datadrivenconstruction.io"
+metadata: {"openclaw": {"emoji": "🚀", "os": ["darwin", "linux", "win32"], "homepage": "https://datadrivenconstruction.io", "requires": {"bins": ["python3"]}}}
 ---
-
 # Document Classification with NLP
 
 ## Overview

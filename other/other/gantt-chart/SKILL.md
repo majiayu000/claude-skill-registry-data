@@ -1,9 +1,9 @@
 ---
-slug: "gantt-chart"
-display_name: "Gantt Chart"
+name: "gantt-chart"
 description: "Generate Gantt charts for construction scheduling. Create visual project timelines with dependencies and progress tracking."
+homepage: "https://datadrivenconstruction.io"
+metadata: {"openclaw": {"emoji": "🎬", "os": ["darwin", "linux", "win32"], "homepage": "https://datadrivenconstruction.io", "requires": {"bins": ["python3"]}}}
 ---
-
 # Gantt Chart Generator
 
 ## Business Case

@@ -71,28 +71,8 @@ After installing, run this command again.
 ```
 
 **Check Python dependencies:**
-```bash
-python3 -c "import PIL, yaml"
-```
 
-Optional (for smart segment detection):
-```bash
-python3 -c "import librosa, numpy"
-```
-
-If missing:
-```
-Python dependencies missing. Create venv?
-
-  mkdir -p ~/.bitwize-music/venv
-  python3 -m venv ~/.bitwize-music/venv
-  source ~/.bitwize-music/venv/bin/activate
-  pip install pillow pyyaml librosa numpy
-
-Which option:
-  1. I'll install manually (show commands above)
-  2. Create venv automatically
-```
+Call `get_python_command()` to verify the venv exists. If `venv_exists` is false, show the warning and suggest `/bitwize-music:setup`.
 
 ### 2. Album Detection
 
@@ -100,7 +80,7 @@ Which option:
 
 Call `resolve_path("audio", album_slug)` — returns the full audio directory path including artist folder.
 
-Example result: `~/bitwize-music/audio/bitwize/sample-album/`
+Example result: `~/bitwize-music/audio/artists/bitwize/albums/electronic/sample-album/`
 
 **Verify contents:**
 - ✓ Mastered audio files (.wav, .mp3, .flac, .m4a)
@@ -108,7 +88,7 @@ Example result: `~/bitwize-music/audio/bitwize/sample-album/`
 
 If artwork missing:
 ```
-Error: No album artwork found in {audio_root}/{artist}/{album}/
+Error: No album artwork found in {audio_root}/artists/{artist}/albums/{genre}/{album}/
 
 Expected: album.png or album.jpg
 
@@ -190,64 +170,19 @@ Recommendation: Reduce --clip-duration to {140 / tracks}s
 
 **Individual track promos:**
 
-Run from plugin directory:
-```bash
-cd ${CLAUDE_PLUGIN_ROOT}
-python3 tools/promotion/generate_promo_video.py \
-  --batch {audio_root}/{artist}/{album}/ \
-  --style pulse \
-  -o {audio_root}/{artist}/{album}/promo_videos/
+```
+generate_promo_videos(album_slug, style="pulse", duration=15)
 ```
 
-Progress:
+**Single track only:**
 ```
-Found 10 tracks
-  Analyzing audio for most energetic segment...
-  Found energetic segment at 45.2s
-  Extracting colors from artwork...
-  Dominant: (42, 187, 255) -> Complementary: (255, 170, 42) (hex: 0xffaa2a)
-Generating: 01-track_promo.mp4
-  ✓ 01-track_promo.mp4
-Generating: 02-track_promo.mp4
-  ✓ 02-track_promo.mp4
-...
+generate_promo_videos(album_slug, style="pulse", track_filename="01-track-name.wav")
 ```
 
 **Album sampler:**
 
-Run from plugin directory:
-```bash
-cd ${CLAUDE_PLUGIN_ROOT}
-python3 tools/promotion/generate_album_sampler.py \
-  {audio_root}/{artist}/{album}/ \
-  --artwork {audio_root}/{artist}/{album}/album.png \
-  --clip-duration 12 \
-  -o {audio_root}/{artist}/{album}/album_sampler.mp4
 ```
-
-Progress:
-```
-Album Sampler Generator
-=======================
-Tracks: 10
-Clip duration: 12s
-Crossfade: 0.5s
-Expected duration: 114.5s
-Twitter limit: 140s
-
-Found 10 tracks
-Extracting colors from artwork...
-  Using color: 0xffaa2a
-[1/10] Track Name...
-  OK
-[2/10] Another Track...
-  OK
-...
-Concatenating 10 clips with 0.5s crossfades...
-
-Created: {audio_root}/{artist}/{album}/album_sampler.mp4
-  Duration: 114.5s
-  Size: 45.2 MB
+generate_album_sampler(album_slug, clip_duration=12, crossfade=0.5)
 ```
 
 **Handle errors:**
@@ -266,17 +201,17 @@ Common issues:
 ```
 ## Promo Videos Generated
 
-**Location:** {audio_root}/{artist}/{album}/
+**Location:** {audio_root}/artists/{artist}/albums/{genre}/{album}/
 
 **Individual Track Promos:**
-- {audio_root}/{artist}/{album}/promo_videos/
+- {audio_root}/artists/{artist}/albums/{genre}/{album}/promo_videos/
 - 10 videos generated
 - Format: 1080x1920 (9:16), H.264, 15s each
 - Style: pulse
 - File size: ~10-12 MB per video
 
 **Album Sampler:**
-- {audio_root}/{artist}/{album}/album_sampler.mp4
+- {audio_root}/artists/{artist}/albums/{genre}/{album}/album_sampler.mp4
 - Duration: 114.5s (under Twitter 140s limit ✓)
 - Format: 1080x1920 (9:16), H.264
 - File size: 45.2 MB

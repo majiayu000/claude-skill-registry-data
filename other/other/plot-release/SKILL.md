@@ -89,7 +89,7 @@ git push origin v<version>-rc.<n>
 
 **Generate verification checklist:**
 
-Collect all delivered plans since the last release (via `docs/plans/delivered/` — check the Delivered date in each plan's Status section against the last release tag date). For each delivered feature or bug plan, extract the `## Changelog` section and create a checklist item.
+Collect all delivered plans since the last release (via `docs/plans/delivered/` — check the Delivered date in each plan's Status section against the last release tag date). For each delivered feature or bug plan, extract the `## Changelog` section and create a checklist item. If a plan has a `Sprint: <name>` field, include the sprint name alongside the checklist item for context. Sprint completion is informational — it does not block the release.
 
 ```bash
 mkdir -p docs/releases

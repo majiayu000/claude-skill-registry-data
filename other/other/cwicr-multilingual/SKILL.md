@@ -1,9 +1,9 @@
 ---
-slug: "cwicr-multilingual"
-display_name: "CWICR Multilingual"
+name: "cwicr-multilingual"
 description: "Work with CWICR database across 9 languages. Cross-language matching, translation, and regional pricing."
+homepage: "https://datadrivenconstruction.io"
+metadata: {"openclaw": {"emoji": "🗄️", "os": ["darwin", "linux", "win32"], "homepage": "https://datadrivenconstruction.io", "requires": {"bins": ["python3"]}}}
 ---
-
 # CWICR Multilingual Support
 
 ## Overview

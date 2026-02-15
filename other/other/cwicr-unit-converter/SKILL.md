@@ -1,9 +1,9 @@
 ---
-slug: "cwicr-unit-converter"
-display_name: "CWICR Unit Converter"
+name: "cwicr-unit-converter"
 description: "Convert between construction measurement units. Handle metric/imperial conversion, area/volume calculations, and unit normalization for CWICR data."
+homepage: "https://datadrivenconstruction.io"
+metadata: {"openclaw": {"emoji": "🗄️", "os": ["darwin", "linux", "win32"], "homepage": "https://datadrivenconstruction.io", "requires": {"bins": ["python3"]}}}
 ---
-
 # CWICR Unit Converter
 
 ## Business Case

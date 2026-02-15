@@ -1,9 +1,9 @@
 ---
-slug: "capacity-planning"
-display_name: "Capacity Planning"
+name: "capacity-planning"
 description: "Plan organizational capacity for construction projects. Forecast resource needs, identify capacity gaps, and support strategic planning for project pursuit and staffing."
+homepage: "https://datadrivenconstruction.io"
+metadata: {"openclaw": {"emoji": "🚀", "os": ["darwin", "linux", "win32"], "homepage": "https://datadrivenconstruction.io", "requires": {"bins": ["python3"]}}}
 ---
-
 # Capacity Planning
 
 ## Overview

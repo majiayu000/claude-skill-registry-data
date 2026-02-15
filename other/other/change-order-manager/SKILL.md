@@ -1,9 +1,9 @@
 ---
-slug: "change-order-manager"
-display_name: "Change Order Manager"
+name: "change-order-manager"
 description: "Manage construction change orders from request to approval. Track costs, schedule impacts, and maintain audit trail for dispute prevention."
+homepage: "https://datadrivenconstruction.io"
+metadata: {"openclaw": {"emoji": "📝", "os": ["darwin", "linux", "win32"], "homepage": "https://datadrivenconstruction.io", "requires": {"bins": ["python3"]}}}
 ---
-
 # Change Order Manager
 
 ## Overview

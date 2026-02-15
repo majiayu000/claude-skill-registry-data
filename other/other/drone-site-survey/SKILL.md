@@ -1,9 +1,9 @@
 ---
-slug: "drone-site-survey"
-display_name: "Drone Site Survey"
+name: "drone-site-survey"
 description: "Process drone survey data for construction sites. Generate orthomosaics, DEMs, point clouds, calculate volumes, track progress, and integrate with BIM models for comparison."
+homepage: "https://datadrivenconstruction.io"
+metadata: {"openclaw": {"emoji": "🚀", "os": ["darwin", "linux", "win32"], "homepage": "https://datadrivenconstruction.io", "requires": {"bins": ["python3"]}}}
 ---
-
 # Drone Site Survey Processing
 
 ## Overview

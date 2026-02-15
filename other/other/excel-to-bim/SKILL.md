@@ -1,9 +1,9 @@
 ---
-slug: "excel-to-bim"
-display_name: "Excel To BIM"
+name: "excel-to-bim"
 description: "Push Excel data back to BIM models. Update parameters, properties, and attributes from structured spreadsheets."
+homepage: "https://datadrivenconstruction.io"
+metadata: {"openclaw": {"emoji": "📄", "os": ["win32"], "homepage": "https://datadrivenconstruction.io", "requires": {"bins": ["python3"], "anyBins": ["ifcopenshell"]}}}
 ---
-
 # Excel to BIM Update
 
 ## Business Case

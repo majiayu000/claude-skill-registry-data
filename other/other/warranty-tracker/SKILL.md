@@ -1,9 +1,9 @@
 ---
-slug: "warranty-tracker"
-display_name: "Warranty Tracker"
+name: "warranty-tracker"
 description: "Track and manage construction warranties. Monitor expiration dates, claims, and manufacturer documentation."
+homepage: "https://datadrivenconstruction.io"
+metadata: {"openclaw": {"emoji": "✅", "os": ["darwin", "linux", "win32"], "homepage": "https://datadrivenconstruction.io", "requires": {"bins": ["python3"]}}}
 ---
-
 # Warranty Tracker
 
 ## Business Case

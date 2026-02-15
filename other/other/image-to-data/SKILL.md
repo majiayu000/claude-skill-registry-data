@@ -1,7 +1,8 @@
 ---
-slug: "image-to-data"
-display_name: "Image To Data"
-description: "Extract data from construction images using AI Vision. Analyze site photos, scanned documents, drawings"
+name: "image-to-data"
+description: "Extract data from construction images using AI Vision. Analyze site photos, scanned documents, drawings."
+homepage: "https://datadrivenconstruction.io"
+metadata: {"openclaw":{"emoji":"📸","os":["darwin","linux","win32"],"homepage":"https://datadrivenconstruction.io","requires":{"bins":["python3"],"env":["OPENAI_API_KEY"]},"primaryEnv":"OPENAI_API_KEY"}}
 ---
 
 # Image To Data

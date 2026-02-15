@@ -65,6 +65,7 @@ Step 3: Start Work
 Step 4: Implement
   - Follow task plan/AC, apply KISS/YAGNI
   - Update docs and existing tests if impacted
+  - Execute verify: methods from task AC (test/command/inspect)
 
 Step 5: Quality
   - Run typecheck and lint (or project equivalents)
@@ -78,7 +79,7 @@ Step 6: Finish
 1) **Load context:** Fetch full task description (Linear: get_issue; File: Read task file); read linked guides/manuals/ADRs/research; auto-discover team/config if needed.
 2) **Receive task:** Get task ID from orchestrator (ln-400); load full task description.
 3) **Start work:** Update this task to In Progress (Linear: update_issue; File: Edit status line); move it in kanban (keep Epic/Story indent).
-4) **Implement:** Follow checkboxes/plan; keep it simple; avoid hardcoded values; reuse existing components; add Task ID comment (`// See PROJ-123`) to new code blocks; update docs noted in Affected Components; update existing tests if impacted (no new tests here).
+4) **Implement (with verification loop):** Follow checkboxes/plan; keep it simple; avoid hardcoded values; reuse existing components; add Task ID comment (`// See PROJ-123`) to new code blocks; update docs noted in Affected Components; update existing tests if impacted (no new tests here). After implementation, execute `verify:` methods from task AC: test → run specified test; command → execute and check output; inspect → verify file/content exists. If any verify fails → fix before proceeding.
 5) **Quality:** Run typecheck and lint (or project equivalents); ensure instructions in Existing Code Impact are addressed.
 6) **Finish:** Mark task To Review (Linear: update_issue; File: Edit status line); update kanban to To Review; add summary comment (what changed, tests run, docs touched).
 
@@ -90,6 +91,7 @@ Before setting To Review, verify all 5 items:
 
 | # | Check | Verify |
 |---|-------|--------|
+| 0 | **AC verified** | Each AC `verify:` method executed with pass evidence |
 | 1 | **Approach alignment** | Implementation matches Story Technical Approach |
 | 2 | **Clean code** | No dead code, no backward-compat shims, unused imports removed |
 | 3 | **Config hygiene** | No hardcoded creds/URLs/magic numbers |
@@ -110,7 +112,8 @@ Before setting To Review, verify all 5 items:
 ## Definition of Done
 - Task selected and set to In Progress; kanban updated accordingly.
 - Guides/manuals/ADRs/research read; approach aligned with task Technical Approach.
-- Implementation completed per plan/AC; docs and impacted tests updated.
+- Implementation completed per plan/AC; each AC `verify:` method executed with pass evidence.
+- Docs and impacted tests updated.
 - Typecheck and lint passed (or project quality commands) with evidence in comment.
 - Task set to To Review; kanban moved to To Review; summary comment added.
 

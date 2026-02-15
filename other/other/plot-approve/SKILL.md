@@ -88,7 +88,7 @@ git checkout main
 git pull origin main
 ```
 
-Find the plan file: `ls docs/plans/active/<slug>.md` resolves to the date-prefixed file (e.g., `docs/plans/YYYY-MM-DD-<slug>.md`). Read it and parse the `## Branches` section. Expected format:
+Find the plan file: `ls docs/plans/active/<slug>.md` resolves to the date-prefixed file (e.g., `docs/plans/YYYY-MM-DD-<slug>.md`). Read it and parse the `## Branches` section. If the plan has a `Sprint: <name>` field in its Status section, note the sprint membership for the summary. Expected format:
 
 ```markdown
 - `type/name` — description
@@ -197,9 +197,20 @@ If no tooling is found, skip — the plan's `## Changelog` section will be used 
 
 ### 7. Update Plan File on Main
 
-After all branches are created, update the plan file on main (date-prefixed path) to link the implementation PRs.
+After all branches are created, update the plan file on main (date-prefixed path) to reflect the approval and link the implementation PRs.
 
-In the `## Branches` section, append ` → #<number>` to each branch line.
+1. Change `**Phase:** Draft` → `**Phase:** Approved`
+2. Insert an `## Approval` section immediately after the `## Status` block (same content as step 5):
+
+```markdown
+## Approval
+
+- **Approved:** <APPROVED_AT>
+- **Approved by:** <APPROVED_BY>
+- **Assignee:** <APPROVED_BY>
+```
+
+3. In the `## Branches` section, append ` → #<number>` to each branch line.
 
 Before:
 ```markdown
@@ -228,4 +239,5 @@ Print:
   - `type/name` → PR #<number> (URL)
   - `type/name` → PR #<number> (URL)
 - If release note tooling was found in step 6: "Remember to add release note entries on each implementation branch (e.g., `pnpm exec changeset`)."
+- If the plan has a Sprint field: "Part of sprint `<sprint-name>`."
 - Next step: check out a branch and start implementing

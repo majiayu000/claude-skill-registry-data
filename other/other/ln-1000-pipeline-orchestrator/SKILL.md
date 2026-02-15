@@ -254,6 +254,20 @@ depends_on = {}                       # {storyId: [prerequisite IDs]} — from P
 worktree_map = {}                     # {storyId: worktree_dir | null} — tracks which stories use worktrees
 story_results = {}                    # {storyId: {stage0: "...", stage1: "...", ...}} — for pipeline report
 infra_issues = []                     # [{phase, type, message}] — infrastructure problems for report
+heartbeat_count = 0                   # Heartbeat cycle counter (ephemeral, resets on recovery)
+
+# Helper functions for heartbeat formatting
+skill_name_from_stage(stage):
+  """Returns skill name for stage number."""
+  RETURN {0: "ln-300-task-coordinator", 1: "ln-310-story-validator",
+          2: "ln-400-story-executor", 3: "ln-500-story-quality-gate"}[stage]
+
+predict_next_step(current_stage):
+  """Predicts next pipeline step for story."""
+  IF current_stage == 0: RETURN "Validation (ln-310) → Todo"
+  IF current_stage == 1: RETURN "Execution (ln-400) → To Review"
+  IF current_stage == 2: RETURN "Quality gate (ln-500) → PASS/FAIL"
+  IF current_stage == 3: RETURN "Squash merge to develop → Done"
 
 # Initialize counters for all queued stories
 FOR EACH story IN priority_queue:
@@ -269,7 +283,7 @@ FOR EACH story IN priority_queue:
 # 2. pipeline-keepalive.sh reads .pipeline/state.json → complete=false → exit 2
 # 3. stderr "HEARTBEAT: N workers, M stories..." → new agentic loop iteration
 # 4. Any queued worker messages (SendMessage) delivered in this cycle
-# 5. Lead processes messages via ON handlers below
+# 5. Lead processes messages via ON handlers (reactive) + verifies done-flags (proactive)
 # 6. Lead's turn ends → Go to step 1
 #
 # The Stop hook IS the event loop driver. Each heartbeat = one iteration.
@@ -278,6 +292,11 @@ FOR EACH story IN priority_queue:
 #
 # FRESH WORKER PER STAGE: Each stage transition = shutdown old worker + spawn new one.
 # active_workers stays same (net-zero). Only DONE/PAUSED/ERROR decrement active_workers.
+#
+# BIDIRECTIONAL HEALTH MONITORING (Phase 4, Step 2.5):
+# - Reactive: ON handlers process worker completion messages
+# - Proactive: Verify done-flags without messages (lost message recovery)
+# - Defense-in-depth: Handles network issues, context overflow, worker crashes
 
 WHILE ANY story_state[id] NOT IN ("DONE", "PAUSED"):
 
@@ -323,246 +342,48 @@ WHILE ANY story_state[id] NOT IN ("DONE", "PAUSED"):
       FOR EACH s IN priority_queue: story_state[s.id] = "PAUSED"
       ESCALATE: "Deadlocked: remaining stories depend on PAUSED/incomplete stories: {ids}"
 
-  # 2. Process worker messages (delivered by heartbeat cycle)
-  #    Messages from workers arrive as conversation context in each heartbeat iteration.
-  #    Match against ON handlers below. If no match → ON NO NEW MESSAGES at bottom.
+  # 2. Process worker messages (reactive message handling)
   #
-  # SENDER VALIDATION: Before processing ANY completion message, verify sender:
-  #   VERIFY message.sender == worker_map[id]
-  #   IF mismatch: LOG "Ignoring stale message from {sender} for {id}"; SKIP handler
-  #   This prevents old/dead workers from corrupting pipeline state.
+  **MANDATORY READ:** Load `references/phases/phase4_handlers.md` for all ON message handlers:
+  - Stage 0 COMPLETE / ERROR (task planning outcomes)
+  - Stage 1 COMPLETE (GO / NO-GO validation outcomes with retry logic)
+  - Stage 2 COMPLETE / ERROR (execution outcomes)
+  - Stage 3 COMPLETE (PASS/CONCERNS/WAIVED/FAIL quality gate outcomes with rework cycles)
+  - Worker crash detection (3-step protocol: flag → probe → respawn)
+
+  Handlers include sender validation and state guards to prevent duplicate processing.
+
+  # 2.5. Active done-flag verification (proactive health monitoring)
   #
-  # STATE GUARD: Before processing ANY stage completion, verify story is in expected state:
-  #   Stage 0 COMPLETE → story_state[id] must be "STAGE_0"
-  #   Stage 1 COMPLETE → story_state[id] must be "STAGE_1"
-  #   Stage 2 COMPLETE → story_state[id] must be "STAGE_2"
-  #   Stage 3 COMPLETE → story_state[id] must be "STAGE_3"
-  #   IF mismatch: LOG "Duplicate/stale message for {id} (state={story_state[id]})"; SKIP handler
-  #   This prevents double-spawn when same completion message is delivered across heartbeats.
+  **MANDATORY READ:** Load `references/phases/phase4_heartbeat.md` for bidirectional health monitoring:
+  - Lost message detection (done-flag exists but state not advanced)
+  - Synthetic recovery from checkpoint + kanban verification (all 4 stages)
+  - Fallback to probe protocol when checkpoint missing
+  - Structured heartbeat output (table format with worker status)
+  - Helper functions (skill_name_from_stage, predict_next_step)
 
-  ON "Stage 0 COMPLETE for {id}. {N} tasks created. Plan score: {score}/4.":
-    Re-read kanban board
-    ASSERT tasks exist under Story {id}         # Guard: verify ln-300 output
-    IF tasks missing: story_state[id] = "PAUSED"; ESCALATE; CONTINUE
-    story_state[id] = "STAGE_1"
-    # Shutdown old worker, spawn fresh for Stage 1
-    Bash: rm -f .pipeline/worker-{worker_map[id]}-active.flag .pipeline/worker-{worker_map[id]}-done.flag
-    SendMessage(type: "shutdown_request", recipient: worker_map[id])
-    next_worker = "story-{id}-s1"
-    Task(name: next_worker, team_name: "pipeline-{date}",
-         model: "opus", mode: "bypassPermissions", subagent_type: "general-purpose",
-         prompt: worker_prompt(story, 1, business_answers, worktree_map[id]))
-    worker_map[id] = next_worker
-    Write .pipeline/worker-{next_worker}-active.flag
-    story_results[id].stage0 = "{N} tasks, {score}/4"
+  This complements reactive crash detection (ON TeammateIdle) with proactive polling every ~60s.
 
-  ON "Stage 0 ERROR for {id}: {details}":
-    story_state[id] = "PAUSED"
-    active_workers--
-    Bash: rm -f .pipeline/worker-{worker_map[id]}-active.flag .pipeline/worker-{worker_map[id]}-done.flag
-    ESCALATE to user: "Cannot create tasks for Story {id}: {details}"
-    SendMessage(type: "shutdown_request", recipient: worker_map[id])
-    story_results[id].stage0 = "ERROR: {details}"
-    Append story report section to docs/tasks/reports/pipeline-{date}.md (PAUSED)
-
-  ON "Stage 1 COMPLETE for {id}. Verdict: GO. Readiness: {score}.":
-    Re-read kanban board
-    ASSERT Story {id} status = Todo              # Guard: verify ln-310 output
-    story_state[id] = "STAGE_2"
-    # Shutdown old worker, spawn fresh for Stage 2
-    Bash: rm -f .pipeline/worker-{worker_map[id]}-active.flag .pipeline/worker-{worker_map[id]}-done.flag
-    SendMessage(type: "shutdown_request", recipient: worker_map[id])
-    next_worker = "story-{id}-s2"
-    Task(name: next_worker, team_name: "pipeline-{date}",
-         model: "opus", mode: "bypassPermissions", subagent_type: "general-purpose",      # Stage 2 medium effort
-         prompt: worker_prompt(story, 2, business_answers, worktree_map[id]))
-    worker_map[id] = next_worker
-    Write .pipeline/worker-{next_worker}-active.flag
-    story_results[id].stage1 = "GO, {score}"
-
-  ON "Stage 1 COMPLETE for {id}. Verdict: NO-GO. Readiness: {score}. Reason: {reason}":
-    validation_retries[id]++
-    IF validation_retries[id] <= 1:
-      # Shutdown old worker, spawn fresh for Stage 1 retry
-      Bash: rm -f .pipeline/worker-{worker_map[id]}-active.flag .pipeline/worker-{worker_map[id]}-done.flag
-      SendMessage(type: "shutdown_request", recipient: worker_map[id])
-      next_worker = "story-{id}-s1-retry"
-      Task(name: next_worker, team_name: "pipeline-{date}",
-           model: "opus", mode: "bypassPermissions", subagent_type: "general-purpose",    # Stage 1 = review
-           prompt: worker_prompt(story, 1, business_answers, worktree_map[id]))
-      worker_map[id] = next_worker
-      Write .pipeline/worker-{next_worker}-active.flag
-    ELSE:
-      story_state[id] = "PAUSED"
-      active_workers--
-      Bash: rm -f .pipeline/worker-{worker_map[id]}-active.flag .pipeline/worker-{worker_map[id]}-done.flag
-      ESCALATE to user: "Story {id} failed validation twice: {reason}"
-      SendMessage(type: "shutdown_request", recipient: worker_map[id])
-      story_results[id].stage1 = "NO-GO, {score}, {reason} (retries exhausted)"
-      Append story report section to docs/tasks/reports/pipeline-{date}.md (PAUSED)
-
-  ON "Stage 2 ERROR for {id}: {details}":
-    story_state[id] = "PAUSED"
-    active_workers--
-    Bash: rm -f .pipeline/worker-{worker_map[id]}-active.flag .pipeline/worker-{worker_map[id]}-done.flag
-    ESCALATE to user: "Story {id} execution failed: {details}"
-    SendMessage(type: "shutdown_request", recipient: worker_map[id])
-    story_results[id].stage2 = "ERROR: {details}"
-    Append story report section to docs/tasks/reports/pipeline-{date}.md (PAUSED)
-
-  ON "Stage 2 COMPLETE for {id}. All tasks Done. Story set to To Review.":
-    Re-read kanban board
-    ASSERT Story {id} status = To Review         # Guard: verify ln-400 output
-    story_state[id] = "STAGE_3"
-    # Shutdown old worker, spawn fresh for Stage 3
-    Bash: rm -f .pipeline/worker-{worker_map[id]}-active.flag .pipeline/worker-{worker_map[id]}-done.flag
-    SendMessage(type: "shutdown_request", recipient: worker_map[id])
-    next_worker = "story-{id}-s3"
-    Task(name: next_worker, team_name: "pipeline-{date}",
-         model: "opus", mode: "bypassPermissions", subagent_type: "general-purpose",      # Stage 3 = QA
-         prompt: worker_prompt(story, 3, business_answers, worktree_map[id]))
-    worker_map[id] = next_worker
-    Write .pipeline/worker-{next_worker}-active.flag
-    story_results[id].stage2 = "Done"
-
-  ON "Stage 3 COMPLETE for {id}. Verdict: PASS|CONCERNS|WAIVED. Quality Score: {score}/100.":
-    story_state[id] = "DONE"
-    active_workers--
-    Bash: rm -f .pipeline/worker-{worker_map[id]}-active.flag .pipeline/worker-{worker_map[id]}-done.flag
-    Update .pipeline/state.json: active_workers, stories_remaining, last_check
-    Squash merge (see Phase 4a below)
-    Update kanban: Story → Done
-    SendMessage(type: "shutdown_request", recipient: worker_map[id])
-    story_results[id].stage3 = "{verdict} {score}/100"
-
-  ON "Stage 3 COMPLETE for {id}. Verdict: FAIL. Quality Score: {score}/100. Issues: {issues}":
-    quality_cycles[id]++
-    IF quality_cycles[id] < 2:
-      story_state[id] = "STAGE_2"
-      # Shutdown old worker, spawn fresh for Stage 2 re-entry (fix tasks)
-      Bash: rm -f .pipeline/worker-{worker_map[id]}-active.flag .pipeline/worker-{worker_map[id]}-done.flag
-      SendMessage(type: "shutdown_request", recipient: worker_map[id])
-      next_worker = "story-{id}-s2-fix{quality_cycles[id]}"
-      Task(name: next_worker, team_name: "pipeline-{date}",
-           model: "opus", mode: "bypassPermissions", subagent_type: "general-purpose",    # Stage 2 medium effort (fix)
-           prompt: worker_prompt(story, 2, business_answers, worktree_map[id]))
-      worker_map[id] = next_worker
-      Write .pipeline/worker-{next_worker}-active.flag
-    ELSE:
-      story_state[id] = "PAUSED"
-      active_workers--
-      Bash: rm -f .pipeline/worker-{worker_map[id]}-active.flag .pipeline/worker-{worker_map[id]}-done.flag
-      ESCALATE to user: "Story {id} failed quality gate {quality_cycles[id]} times"
-      SendMessage(type: "shutdown_request", recipient: worker_map[id])
-      story_results[id].stage3 = "FAIL {score}/100 (cycles exhausted)"
-      Append story report section to docs/tasks/reports/pipeline-{date}.md (PAUSED)
-
-  ON worker TeammateIdle WITHOUT prior completion message for {id}:
-    # Crash detection: 3-step protocol (see worker_health_contract.md)
-    # Step 1: Flag suspicious
-    suspicious_idle[id] = true
-    # Step 2: Probe
-    SendMessage(recipient: worker_map[id],
-                content: "Status check: are you still working on Stage {N} for {id}?",
-                summary: "{id} health check")
-    # Step 3: Evaluate
-    ON worker responds with parseable status:
-      suspicious_idle[id] = false           # False alarm, continue
-    ON TeammateIdle again WITHOUT response:
-      crash_count[id]++
-      IF crash_count[id] <= 1:
-        active_workers--
-        # Resume protocol (see checkpoint_format.md):
-        checkpoint = read(".pipeline/checkpoint-{id}.json")
-        IF checkpoint.agentId exists:
-          Task(resume: checkpoint.agentId)          # Try 1: full context resume
-        ELSE:
-          new_prompt = worker_prompt(story, checkpoint.stage, business_answers, worktree_map[id]) + CHECKPOINT_RESUME block
-          Task(name: "story-{id}-s{checkpoint.stage}-retry", team_name: "pipeline-{date}",
-               model: "opus", mode: "bypassPermissions", subagent_type: "general-purpose",
-               prompt: new_prompt)                  # Try 2: Opus for crash recovery/troubleshooting
-        worker_map[id] = new_worker_name
-        active_workers++
-      ELSE:
-        story_state[id] = "PAUSED"
-        active_workers--
-        ESCALATE: "Story {id} worker crashed twice at Stage {N}"
-
-  # 3. Heartbeat handler — persist ALL state on every cycle
+  # 3. Heartbeat state persistence
+  #
   ON HEARTBEAT (Stop hook stderr: "HEARTBEAT: N workers, M stories..."):
-    Write .pipeline/state.json with ALL state variables:
-      complete, active_workers, stories_remaining, last_check=now,
-      story_state, worker_map, quality_cycles, validation_retries,
-      crash_count, priority_queue_ids, story_results, infra_issues,
-      worktree_map, depends_on
-    # Full state write enables Phase 0 recovery if lead crashes between heartbeats
-
-  ON NO NEW MESSAGES (heartbeat cycle with no worker updates):
-    # Brief status with checkpoint progress — do NOT say "waiting" and stop.
-    FOR EACH active story in story_state (STAGE_0..STAGE_3):
-      checkpoint = read(".pipeline/checkpoint-{id}.json") if exists
-      progress = "{len(checkpoint.tasksCompleted)}/{len(checkpoint.tasksCompleted)+len(checkpoint.tasksRemaining)}" if checkpoint else "—"
-      # Collect per-story progress
-    Output: "Heartbeat: {active_workers} workers, {stories_remaining} remaining. Progress: {id}={progress}, ..."
-    # Turn ends → Stop hook fires → next heartbeat cycle
+    Write .pipeline/state.json with ALL state variables.
+    # See phase4_heartbeat.md for persistence details
 ```
 
 **`determine_stage(story)` routing:** See `references/pipeline_states.md` Stage-to-Status Mapping table.
 
 #### Phase 4a: Git Flow & Squash Merge
 
-After Stage 3 PASS for each Story. All git commands use `git -C {dir}` where `dir = worktree_map[id] || "."`.
+**MANDATORY READ:** Load `references/phases/phase4a_git_merge.md` for squash-merge procedure:
+- Sync with develop (rebase → fallback to merge on conflict)
+- Squash merge into develop (single commit per Story)
+- Worktree cleanup
+- Context refresh (reload SKILL.md after large merges)
+- Story report appending (stage results + counters + problems)
+- Kanban + Linear verification (sync check)
 
-```
-dir = worktree_map[id] || "."
-
-# 1. Sync with develop (pull latest changes)
-git -C {dir} fetch origin develop
-git -C {dir} rebase origin/develop
-IF rebase conflict:
-  git -C {dir} rebase --abort
-  git -C {dir} merge origin/develop    # Fallback to merge
-  IF merge conflict:
-    ESCALATE to user: "Merge conflict in Story {id}. Manual resolution required."
-    story_state[id] = "PAUSED"
-    CONTINUE                           # Skip merge, move to next story
-
-# 2. Squash merge into develop
-git -C {dir} checkout develop
-git -C {dir} merge --squash feature/{id}-{slug}
-git -C {dir} commit -m "{storyId}: {Story Title}"
-git -C {dir} push origin develop
-
-# 3. Cleanup worktree (if exists)
-IF worktree_map[id]:
-  git worktree remove .worktrees/story-{id} --force
-  worktree_map[id] = null
-ELSE:
-  # Solo mode — already on develop after checkout above
-
-# 4. Re-read SKILL.md (context refresh after merge cycle)
-**MANDATORY READ:** Reload this SKILL.md to refresh pipeline context after develop push.
-
-# 5. Append story report section
-Append to docs/tasks/reports/pipeline-{date}.md:
-  ### {storyId}: {storyTitle} — DONE
-  | Stage | Result | Details |
-  |-------|--------|---------|
-  | 0 | {story_results[id].stage0 or "skip"} | |
-  | 1 | {story_results[id].stage1 or "skip"} | retries: {validation_retries[id]} |
-  | 2 | {story_results[id].stage2 or "skip"} | rework cycles: {quality_cycles[id]} |
-  | 3 | {story_results[id].stage3 or "skip"} | crashes: {crash_count[id]} |
-  **Branch:** feature/{id}-{slug}
-  **Problems:** {list from counters, or "None"}
-
-# 6. Verify kanban + Linear sync
-Re-read kanban board → ASSERT Story {id} is in Done section
-IF storage_mode == "linear":
-  Read Linear issue via MCP → ASSERT status matches kanban (Done/Completed)
-  IF mismatch: Update Linear status to match kanban
-  VERIFY assignee, labels
-IF mismatch found: LOG warning but do NOT block pipeline
-```
+Executed after Stage 3 PASS verdict from ln-500-story-quality-gate.
 
 ### Phase 5: Cleanup & Self-Verification
 
@@ -597,6 +418,11 @@ Prepend summary header to docs/tasks/reports/pipeline-{date}.md:
   | Total validation retries | {sum of validation_retries} |
   | Total crash recoveries | {sum of crash_count} |
   | Infrastructure issues | {len(infra_issues)} |
+  | **Models used** | **{list of unique models from session}** |
+  | **Total tokens consumed** | **{sum of tokens from all tool uses}** |
+
+  **Note:** Model and token data collected from session analysis (all Task spawns + tool uses).
+  Breakdown: Lead (Opus 4.6) + Workers (per-stage model allocation).
 
 # 3a. Collect infrastructure issues
 # Analyze entire pipeline session for non-fatal problems:
@@ -768,6 +594,13 @@ When invoked in Plan Mode, generate execution plan without creating team:
 | 8 | Team cleaned up (workers shutdown, TeamDelete) | `active_workers == 0`, TeamDelete called |
 
 ## Reference Files
+
+### Phase 4 Procedures (Progressive Disclosure)
+- **Message handlers:** `references/phases/phase4_handlers.md` (Stage 0-3 ON handlers, crash detection)
+- **Heartbeat & verification:** `references/phases/phase4_heartbeat.md` (Active done-flag checking, structured heartbeat output)
+- **Git flow:** `references/phases/phase4a_git_merge.md` (Squash merge, worktree cleanup, sync verification)
+
+### Core Infrastructure
 - **Message protocol:** `references/message_protocol.md`
 - **Worker health:** `references/worker_health_contract.md`
 - **Checkpoint format:** `references/checkpoint_format.md`
@@ -779,7 +612,12 @@ When invoked in Plan Mode, generate execution plan without creating team:
 - **Kanban update algorithm:** `shared/references/kanban_update_algorithm.md`
 - **Storage mode detection:** `shared/references/storage_mode_detection.md`
 - **Auto-discovery patterns:** `shared/references/auto_discovery_pattern.md`
-- **Skills invoked:** `../ln-300-task-coordinator/SKILL.md`, `../ln-310-story-validator/SKILL.md`, `../ln-400-story-executor/SKILL.md`, `../ln-500-story-quality-gate/SKILL.md`
+
+### Delegated Skills
+- `../ln-300-task-coordinator/SKILL.md`
+- `../ln-310-story-validator/SKILL.md`
+- `../ln-400-story-executor/SKILL.md`
+- `../ln-500-story-quality-gate/SKILL.md`
 
 ---
 **Version:** 1.0.0

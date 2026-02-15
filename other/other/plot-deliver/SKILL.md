@@ -67,7 +67,7 @@ Resolve the symlink to find the actual plan file path (e.g., `docs/plans/YYYY-MM
 
 ### 3. Read and Parse Plan
 
-Read the plan file (resolved from the `active/` symlink) and parse the `## Branches` section for PR references.
+Read the plan file (resolved from the `active/` symlink) and parse the `## Branches` section for PR references. If the plan has a `Sprint: <name>` field in its Status section, extract it for the summary.
 
 Expected format after `/plot-approve`:
 ```markdown
@@ -169,6 +169,7 @@ Print:
 - Plan file: `docs/plans/YYYY-MM-DD-<slug>.md` (unchanged location)
 - Index: moved from `active/` to `delivered/`
 - All implementation PRs: merged
+- If the plan has a Sprint field: show sprint progress ("N/M sprint items delivered")
 - Type reminder:
   - If feature/bug: "Run `/plot-release` when ready to cut a versioned release."
   - If docs/infra: "Live on main — no release needed."

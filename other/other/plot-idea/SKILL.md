@@ -91,6 +91,7 @@ Write `docs/plans/${CREATE_DATE}-<slug>.md` with this template:
 
 - **Phase:** Draft
 - **Type:** feature | bug | docs | infra
+- **Sprint:** <!-- optional, filled when plan is added to a sprint -->
 
 ## Changelog
 

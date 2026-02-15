@@ -1,9 +1,9 @@
 ---
-slug: "environmental-monitoring"
-display_name: "Environmental Monitoring"
+name: "environmental-monitoring"
 description: "Monitor environmental conditions on construction sites. Track air quality, noise levels, vibration, dust, and weather to ensure compliance and worker safety."
+homepage: "https://datadrivenconstruction.io"
+metadata: {"openclaw": {"emoji": "🚀", "os": ["darwin", "linux", "win32"], "homepage": "https://datadrivenconstruction.io", "requires": {"bins": ["python3"]}}}
 ---
-
 # Environmental Monitoring
 
 ## Overview

@@ -1,7 +1,8 @@
 ---
-slug: "ifc-data-extraction"
-display_name: "IFC Data Extraction"
+name: "ifc-data-extraction"
 description: "Extract structured data from IFC (Industry Foundation Classes) files using IfcOpenShell. Parse BIM models, extract quantities, properties, spatial relationships, and export to various formats."
+homepage: "https://datadrivenconstruction.io"
+metadata: {"openclaw":{"emoji":"🏢","os":["darwin","linux","win32"],"homepage":"https://datadrivenconstruction.io","requires":{"bins":["python3"],"anyBins":["ifcopenshell","IfcConvert"]}}}
 ---
 
 # IFC Data Extraction

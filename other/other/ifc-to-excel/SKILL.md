@@ -1,7 +1,8 @@
 ---
-slug: "ifc-to-excel"
-display_name: "IFC To Excel"
+name: "ifc-to-excel"
 description: "Convert IFC files (2x3, 4x1, 4x3) to Excel databases using IfcExporter CLI. Extract BIM data, properties, and geometry without proprietary software."
+homepage: "https://datadrivenconstruction.io"
+metadata: {"openclaw":{"emoji":"📋","os":["darwin","linux","win32"],"homepage":"https://datadrivenconstruction.io","requires":{"bins":["python3"],"anyBins":["IfcExporter","IfcConvert"]}}}
 ---
 
 # IFC to Excel Conversion

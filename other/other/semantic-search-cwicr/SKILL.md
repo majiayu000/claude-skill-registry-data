@@ -1,9 +1,9 @@
 ---
-slug: "semantic-search-cwicr"
-display_name: "Semantic Search CWICR"
+name: "semantic-search-cwicr"
 description: "Semantic search in DDC CWICR construction database using vector embeddings. Find similar work items and resources for cost estimation."
+homepage: "https://datadrivenconstruction.io"
+metadata: {"openclaw": {"emoji": "🗄️", "os": ["darwin", "linux", "win32"], "homepage": "https://datadrivenconstruction.io", "requires": {"bins": ["python3"], "env": ["QDRANT_URL"]}, "primaryEnv": "QDRANT_URL"}}
 ---
-
 # Semantic Search in DDC CWICR Database
 
 ## Business Case

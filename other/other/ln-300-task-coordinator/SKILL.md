@@ -33,7 +33,7 @@ Workers (ln-301, ln-302) handle the actual Linear/File operations based on detec
 
 ## Workflow (concise)
 - **Phase 1 Discovery:** Auto-discover Team ID (docs/tasks/kanban_board.md); parse Story ID from request.
-- **Phase 2 Decompose (always):** Load Story (AC, Technical Notes, Context), assess complexity, build IDEAL plan (1-8 implementation tasks only), apply Foundation-First execution order, **validate Task Independence**, extract guide links.
+- **Phase 2 Decompose (always):** Load Story (AC, Technical Notes, Context), assess complexity, build IDEAL plan (1-8 implementation tasks only), apply Foundation-First execution order, **validate Task Independence**, **define verification methods for each task AC**, extract guide links.
 - **Phase 3 Check & Detect Mode:** Query Linear for existing tasks (metadata only). Detect mode by count + user keywords (add/replan).
 - **Phase 4 Delegate:** Call the right worker with Story data, IDEAL plan/append request, guide links, existing task IDs if any; autoApprove=true.
 - **Phase 5 Verify:** Ensure worker returns URLs/summary and updated kanban_board.md; report result.
@@ -47,7 +47,7 @@ After building IDEAL plan (Phase 2), score 5 criteria:
 | # | Criterion | Check |
 |---|-----------|-------|
 | 1 | **Independence** | No forward dependencies between tasks (Task N uses only 1..N-1) |
-| 2 | **AC clarity** | Each task has specific acceptance criteria with measurable outcomes |
+| 2 | **AC clarity** | Each task AC has measurable outcome AND verification method (test/command/inspect) |
 | 3 | **Tech confidence** | All referenced technologies/patterns are known or researched |
 | 4 | **Scope isolation** | Tasks don't overlap with other Stories' scope |
 | 5 | **Architecture compliance** | Tasks reference correct layers (DB→Repo→Service→API), no planned cross-layer violations (e.g., API task doing direct DB calls) |
@@ -56,6 +56,22 @@ After building IDEAL plan (Phase 2), score 5 criteria:
 - 5/5: Delegate to worker
 - 3-4/5: Show warnings to user, fix or proceed
 - <3/5: Rework plan before delegation
+
+## Verification Methods for Task AC
+
+**Context:** Goal-Driven Execution pattern — define HOW to verify each AC at planning time so executor (ln-401) can loop through verifications after implementation.
+
+When building IDEAL plan (Phase 2), each task AC must include a `verify:` method:
+
+| Method | When to Use | Example |
+|--------|-------------|---------|
+| **test** | Existing test covers AC | `verify: test (test_auth.py::test_login_success)` |
+| **command** | CLI command validates outcome | `verify: command (curl -X POST /users → 201)` |
+| **inspect** | File/output check | `verify: inspect (migration file has email column)` |
+
+**Rule:** At least 1 AC per task must use `test` or `command` (not all `inspect`).
+
+**See also:** `shared/references/ac_validation_rules.md` §5 for full format and examples.
 
 ## Task Independence Validation
 

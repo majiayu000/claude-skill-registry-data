@@ -1,7 +1,8 @@
 ---
-slug: "cost-prediction"
-display_name: "Cost Prediction"
+name: "cost-prediction"
 description: "Predict construction project costs using Machine Learning. Use Linear Regression, K-Nearest Neighbors, and Random Forest models on historical project data. Train, evaluate, and deploy cost prediction models."
+homepage: "https://datadrivenconstruction.io"
+metadata: {"openclaw":{"emoji":"🤖","os":["darwin","linux","win32"],"homepage":"https://datadrivenconstruction.io","requires":{"bins":["python3"]}}}
 ---
 
 # Construction Cost Prediction with Machine Learning

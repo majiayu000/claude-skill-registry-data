@@ -97,6 +97,11 @@ Research industry standards and create project documentation in one workflow.
 
 ## Critical Rules
 
+**MANDATORY FILE CREATION:**
+- ALL research MUST end with file creation (guide/manual/ADR/research document)
+- Create target directory if missing (docs/guides/, docs/manuals/, docs/adrs/, docs/research/)
+- No exceptions — file creation is required for ALL invocations
+
 **NO_CODE_EXAMPLES (ALL document types):**
 
 | Forbidden | Allowed |
@@ -134,7 +139,7 @@ Research industry standards and create project documentation in one workflow.
 - One pattern per guide; one decision per ADR; one package per manual
 - Preserve language (EN/RU) from story_context
 - Link to stack-appropriate docs (Microsoft for .NET, MDN for JS, etc.)
-- Do not create if target directory missing (warn instead)
+- **MANDATORY:** Create target directory if missing (docs/guides/, docs/manuals/, docs/adrs/, docs/research/); file creation is required
 
 ## Definition of Done
 - Research completed (standards/patterns/versions extracted) - for guide/manual
@@ -152,5 +157,5 @@ Research industry standards and create project documentation in one workflow.
 - Standards: `docs/DOCUMENTATION_STANDARDS.md` (if exists)
 
 ---
-**Version:** 3.0.0
-**Last Updated:** 2025-12-23
+**Version:** 3.0.1
+**Last Updated:** 2026-02-14

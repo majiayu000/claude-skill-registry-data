@@ -1,9 +1,9 @@
 ---
-slug: "cwicr-escalation"
-display_name: "CWICR Escalation"
+name: "cwicr-escalation"
 description: "Apply price escalation to CWICR estimates over time. Calculate inflation adjustments, material price indices, and labor rate increases."
+homepage: "https://datadrivenconstruction.io"
+metadata: {"openclaw": {"emoji": "🗄️", "os": ["darwin", "linux", "win32"], "homepage": "https://datadrivenconstruction.io", "requires": {"bins": ["python3"]}}}
 ---
-
 # CWICR Escalation Calculator
 
 ## Business Case

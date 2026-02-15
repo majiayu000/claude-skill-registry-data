@@ -1,9 +1,9 @@
 ---
-slug: "site-logistics-optimization"
-display_name: "Site Logistics Optimization"
+name: "site-logistics-optimization"
 description: "Optimize construction site logistics including material delivery scheduling, crane positioning, storage area allocation, and traffic flow using operations research and simulation."
+homepage: "https://datadrivenconstruction.io"
+metadata: {"openclaw": {"emoji": "🚀", "os": ["darwin", "linux", "win32"], "homepage": "https://datadrivenconstruction.io", "requires": {"bins": ["python3"]}}}
 ---
-
 # Site Logistics Optimization
 
 ## Overview

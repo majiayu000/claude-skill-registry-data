@@ -28,10 +28,10 @@ This skill should be used when:
 
 ## Workflow
 
-The skill follows a 6-phase workflow focused on standards and architectural patterns.
+The skill follows a 7-phase workflow focused on standards and architectural patterns.
 
 ```
-Stack Detection → Identify → Ref Research → Existing Guides → Standards Research
+Stack Detection → Identify → Ref Research → Existing Guides → Generate Research → Save to File → Return
 ```
 
 ### Phase 0: Stack Detection
@@ -187,15 +187,110 @@ Stack Detection → Identify → Ref Research → Existing Guides → Standards 
 - [guide_path.md](guide_path.md) - Brief description
 ```
 
-**Return Standards Research** to calling skill (ln-220, ln-310)
-
 **Output:** Standards Research (Markdown string) for insertion into Story Technical Notes subsection
 
 **Important notes:**
 - Focus on STANDARDS and PATTERNS only (no library details - libraries researched at Task level)
 - Prefer official docs and RFC standards over blog posts
 - Link to stack-appropriate docs (Microsoft docs for .NET, MDN for JS, etc.)
-- If Standards Research is empty (no standards/patterns) → Return "No standards research needed"
+- If Standards Research is empty (no standards/patterns) → Skip Phase 6, return "No standards research needed"
+
+---
+
+### Phase 6: Save Research to File
+
+**Objective**: Save Standards Research to standalone file for reusability and knowledge base.
+
+**MANDATORY**: All research MUST be saved to file, even if returned as string to caller.
+
+**Process:**
+
+1. **Determine next research number**:
+   - Glob for `docs/research/rsh-*.md` files
+   - Extract numbers, find max
+   - Next number = max + 1 (or 001 if no files exist)
+
+2. **Generate filename**:
+   - Format: `rsh-{number:03d}-{slug}.md`
+   - Slug from `story_domain` (e.g., "rate-limiting", "oauth-authentication")
+   - Example: `rsh-042-rate-limiting.md`
+
+3. **Create research document** using template:
+
+```markdown
+# Standards Research: {Story Domain}
+
+**Created:** {ISO date}
+**Epic:** {Epic ID if available}
+**Research Type:** Standards & Architectural Patterns
+
+## Question
+
+What industry standards and architectural patterns apply to {story_domain}?
+
+## Context
+
+{Brief description from Epic/Story}
+
+## Methodology
+
+- **Standards:** MCP Ref search for RFCs and specifications
+- **Patterns:** MCP Ref search for architectural patterns and best practices
+- **Stack:** {detected_stack.language} {detected_stack.framework}
+
+## Findings
+
+{Insert Standards Research content from Phase 5 here}
+
+## Conclusions
+
+{1-2 sentences summarizing key standards/patterns that must be followed}
+
+## Next Steps
+
+- Reference this research in Story Technical Notes
+- Link from architecture.md if patterns affect system design
+- Create ADR if architectural decision needed
+
+## Sources
+
+{List of all MCP Ref search URLs with dates}
+```
+
+4. **Save file**:
+   - Write to `docs/research/{filename}`
+   - If `docs/research/` doesn't exist: create directory
+   - Validate file saved successfully
+
+5. **Update README** (if exists):
+   - Check for `docs/research/README.md`
+   - If exists and has `<!-- PLACEHOLDER -->`: append research entry
+   - Format: `- [{filename}]({filename}) - {one-line summary}`
+
+**Output**: File path (e.g., `docs/research/rsh-042-rate-limiting.md`)
+
+**Skip conditions**:
+- Standards Research is empty → do not create file
+- Target directory missing and cannot be created → warn user, skip file creation
+
+---
+
+### Phase 7: Return Results
+
+**Return to calling skill** (ln-220, ln-310):
+
+1. **Standards Research string** (Markdown) for insertion into Story Technical Notes
+2. **File path** (string) for linking: `docs/research/rsh-{NNN}-{slug}.md`
+
+**Format:**
+```
+{
+  "standards_research": "<markdown string>",
+  "file_path": "docs/research/rsh-042-rate-limiting.md"
+}
+```
+
+If calling skill expects only string (backward compatibility), return Standards Research string only. File is created regardless.
 
 ---
 
@@ -214,8 +309,10 @@ Stack Detection → Identify → Ref Research → Existing Guides → Standards 
 - `story_domain` (string, optional) - Story domain (e.g., "rate limiting")
 
 **Output format:**
-- Markdown string (Standards Research for Technical Notes subsection)
-- Format: Standards + Patterns (libraries researched at Task level)
+- **Primary:** Markdown string (Standards Research for insertion into Story Technical Notes subsection)
+- **Secondary:** File path (string) for linking: `docs/research/rsh-{NNN}-{slug}.md`
+- **Content:** Standards + Patterns (libraries researched at Task level)
+- **Note:** File is ALWAYS created (Phase 6); backward-compatible callers receive string only
 
 ---
 
@@ -236,6 +333,7 @@ Stack Detection → Identify → Ref Research → Existing Guides → Standards 
 
 ## Critical Rules
 
+- **MANDATORY FILE CREATION:** All research MUST be saved to `docs/research/rsh-{NNN}-{slug}.md` file (Phase 6); no exceptions
 - **NO_CODE:** Output contains tables and links to official docs only; no code snippets
 - **Format Priority:** Tables + ASCII diagrams first, lists second, text last resort
 - **Stack-aware queries:** All MCP Ref calls must include detected `query_prefix` (e.g., "C# ASP.NET Core")
@@ -249,7 +347,9 @@ Stack Detection → Identify → Ref Research → Existing Guides → Standards 
 - MCP Ref research completed for standards/RFCs and architectural patterns
 - Existing guides in `docs/guides/` scanned and matched
 - Standards Research output generated in Markdown (tables + links, no code)
-- Output returned to calling skill (ln-220, ln-300) or displayed to user
+- **Research saved to file:** `docs/research/rsh-{NNN}-{slug}.md` created with all required sections
+- **README updated** (if `docs/research/README.md` exists and has placeholder)
+- Output returned to calling skill (ln-220, ln-300): Standards Research string + file path
 
 ## Reference Files
 
@@ -262,5 +362,5 @@ Stack Detection → Identify → Ref Research → Existing Guides → Standards 
 
 ---
 
-**Version:** 3.0.0
-**Last Updated:** 2025-12-23
+**Version:** 3.1.0
+**Last Updated:** 2026-02-14

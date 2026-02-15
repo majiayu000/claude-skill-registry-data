@@ -1,9 +1,9 @@
 ---
-slug: "portfolio-dashboard"
-display_name: "Portfolio Dashboard"
+name: "portfolio-dashboard"
 description: "Multi-project portfolio analytics dashboard. Aggregate KPIs across projects, track portfolio health, compare performance, and support executive decision-making."
+homepage: "https://datadrivenconstruction.io"
+metadata: {"openclaw": {"emoji": "🚀", "os": ["darwin", "linux", "win32"], "homepage": "https://datadrivenconstruction.io", "requires": {"bins": ["python3"]}}}
 ---
-
 # Portfolio Dashboard
 
 ## Overview

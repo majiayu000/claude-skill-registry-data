@@ -1,7 +1,8 @@
 ---
-slug: "cwicr-cost-calculator"
-display_name: "CWICR Cost Calculator"
+name: "cwicr-cost-calculator"
 description: "Calculate construction costs using DDC CWICR resource-based methodology. Break down costs into labor, materials, equipment with transparent pricing."
+homepage: "https://datadrivenconstruction.io"
+metadata: {"openclaw":{"emoji":"💰","os":["darwin","linux","win32"],"homepage":"https://datadrivenconstruction.io","requires":{"bins":["python3"]}}}
 ---
 
 # CWICR Cost Calculator

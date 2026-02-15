@@ -1,7 +1,8 @@
 ---
-slug: "dgn-to-excel"
-display_name: "DGN To Excel"
+name: "dgn-to-excel"
 description: "Convert DGN files (v7-v8) to Excel databases. Extract elements, levels, and properties from infrastructure CAD files."
+homepage: "https://datadrivenconstruction.io"
+metadata: {"openclaw":{"emoji":"📄","os":["win32"],"homepage":"https://datadrivenconstruction.io","requires":{"bins":["python3","DgnExporter"]}}}
 ---
 
 # DGN to Excel Conversion

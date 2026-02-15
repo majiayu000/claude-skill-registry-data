@@ -1,7 +1,8 @@
 ---
-slug: "estimate-builder"
-display_name: "Estimate Builder"
+name: "estimate-builder"
 description: "Build construction project estimates. Generate detailed cost breakdowns with labor, materials, equipment, and overhead."
+homepage: "https://datadrivenconstruction.io"
+metadata: {"openclaw":{"emoji":"📊","os":["darwin","linux","win32"],"homepage":"https://datadrivenconstruction.io","requires":{"bins":["python3"]}}}
 ---
 
 # Estimate Builder

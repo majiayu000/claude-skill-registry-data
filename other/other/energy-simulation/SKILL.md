@@ -1,9 +1,9 @@
 ---
-slug: "energy-simulation"
-display_name: "Energy Simulation"
+name: "energy-simulation"
 description: "Building energy simulation and analysis for construction. Calculate heating/cooling loads, evaluate envelope performance, optimize HVAC sizing, and ensure energy code compliance."
+homepage: "https://datadrivenconstruction.io"
+metadata: {"openclaw": {"emoji": "🚀", "os": ["darwin", "linux", "win32"], "homepage": "https://datadrivenconstruction.io", "requires": {"bins": ["python3"]}}}
 ---
-
 # Energy Simulation
 
 ## Overview

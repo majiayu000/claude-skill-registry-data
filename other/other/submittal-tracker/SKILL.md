@@ -1,9 +1,9 @@
 ---
-slug: "submittal-tracker"
-display_name: "Submittal Tracker"
+name: "submittal-tracker"
 description: "Track construction submittals through the review process. Manage approvals, revisions, and compliance."
+homepage: "https://datadrivenconstruction.io"
+metadata: {"openclaw": {"emoji": "📋", "os": ["darwin", "linux", "win32"], "homepage": "https://datadrivenconstruction.io", "requires": {"bins": ["python3"]}}}
 ---
-
 # Submittal Tracker
 
 ## Business Case

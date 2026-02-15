@@ -1,7 +1,8 @@
 ---
-slug: "rvt-to-excel"
-display_name: "RVT To Excel"
+name: "rvt-to-excel"
 description: "Convert RVT/RFA files to Excel databases. Extract BIM element data, properties, and quantities."
+homepage: "https://datadrivenconstruction.io"
+metadata: {"openclaw":{"emoji":"🏠","os":["win32"],"homepage":"https://datadrivenconstruction.io","requires":{"bins":["python3","RvtExporter"]}}}
 ---
 
 # RVT to Excel Conversion

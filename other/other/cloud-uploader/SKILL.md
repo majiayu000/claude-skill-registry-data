@@ -71,8 +71,8 @@ See `${CLAUDE_PLUGIN_ROOT}/reference/cloud/setup-guide.md` for detailed setup in
 ### Required Files
 
 - Promo videos generated (run `/bitwize-music:promo-director` first)
-- Located at: `{audio_root}/{artist}/{album}/promo_videos/`
-- Album sampler at: `{audio_root}/{artist}/{album}/album_sampler.mp4`
+- Located at: `{audio_root}/artists/{artist}/albums/{genre}/{album}/promo_videos/`
+- Album sampler at: `{audio_root}/artists/{artist}/albums/{genre}/{album}/album_sampler.mp4`
 
 ### Python Dependencies
 
@@ -102,8 +102,8 @@ Verify:
 
 **Check promo videos exist:**
 ```bash
-ls {audio_root}/{artist}/{album}/promo_videos/
-ls {audio_root}/{artist}/{album}/album_sampler.mp4
+ls {audio_root}/artists/{artist}/albums/{genre}/{album}/promo_videos/
+ls {audio_root}/artists/{artist}/albums/{genre}/{album}/album_sampler.mp4
 ```
 
 If missing:
@@ -113,15 +113,21 @@ Error: Promo videos not found.
 Generate with: /bitwize-music:promo-director {album}
 ```
 
-### 2. Preview Upload (Dry Run)
+### 2. Get Python Command
+
+**Call `get_python_command()` first** to get the venv Python path and plugin root. Use these for all bash invocations below.
+
+```
+PYTHON="{python from get_python_command}"
+PLUGIN_DIR="{plugin_root from get_python_command}"
+```
+
+### 3. Preview Upload (Dry Run)
 
 Preview first:
 ```bash
-cd ${CLAUDE_PLUGIN_ROOT}
-python3 tools/cloud/upload_to_cloud.py {album} --dry-run
+$PYTHON "$PLUGIN_DIR/tools/cloud/upload_to_cloud.py" {album} --dry-run
 ```
-
-The script automatically uses `~/.bitwize-music/venv` if available.
 
 Output shows:
 - Provider and bucket
@@ -129,30 +135,29 @@ Output shows:
 - S3 keys (paths in bucket)
 - File sizes
 
-### 3. Upload Files
+### 4. Upload Files
 
 **Upload all (promos + sampler):**
 ```bash
-cd ${CLAUDE_PLUGIN_ROOT}
-python3 tools/cloud/upload_to_cloud.py {album}
+$PYTHON "$PLUGIN_DIR/tools/cloud/upload_to_cloud.py" {album}
 ```
 
 **Upload only track promos:**
 ```bash
-python3 tools/cloud/upload_to_cloud.py {album} --type promos
+$PYTHON "$PLUGIN_DIR/tools/cloud/upload_to_cloud.py" {album} --type promos
 ```
 
 **Upload only album sampler:**
 ```bash
-python3 tools/cloud/upload_to_cloud.py {album} --type sampler
+$PYTHON "$PLUGIN_DIR/tools/cloud/upload_to_cloud.py" {album} --type sampler
 ```
 
 **Upload with public access:**
 ```bash
-python3 tools/cloud/upload_to_cloud.py {album} --public
+$PYTHON "$PLUGIN_DIR/tools/cloud/upload_to_cloud.py" {album} --public
 ```
 
-### 4. Verify Upload
+### 5. Verify Upload
 
 **For R2:**
 - Check Cloudflare dashboard → R2 → Your bucket
@@ -194,7 +199,7 @@ The cloud path structure is different from the local content structure:
 | Location | Path Structure |
 |----------|----------------|
 | Local content | `{content_root}/artists/{artist}/albums/{genre}/{album}/` |
-| Local audio | `{audio_root}/{artist}/{album}/` |
+| Local audio | `{audio_root}/artists/{artist}/albums/{genre}/{album}/` |
 | **Cloud** | `{artist}/{album}/` (no genre!) |
 
 Files are organized in the bucket as:
@@ -259,7 +264,7 @@ Files are organized in the bucket as:
 - For S3: access_key_id, secret_access_key
 
 **"Album not found"**
-- Check album exists in `{audio_root}/{artist}/{album}/`
+- Check album exists in `{audio_root}/artists/{artist}/albums/{genre}/{album}/`
 - Verify artist name in config matches
 
 **"No files found to upload"**

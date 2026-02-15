@@ -1,7 +1,8 @@
 ---
-slug: "open-construction-estimate"
-display_name: "Open Construction Estimate"
+name: "open-construction-estimate"
 description: "Access and utilize open construction pricing databases. Match BIM elements to standardized work items, calculate costs using public unit price databases with 55,000+ work items."
+homepage: "https://openconstructionestimate.com"
+metadata: {"openclaw":{"emoji":"🌐","os":["darwin","linux","win32"],"homepage":"https://openconstructionestimate.com","requires":{"bins":["python3"]}}}
 ---
 
 # Open Construction Estimate

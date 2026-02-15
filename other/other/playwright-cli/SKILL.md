@@ -6,7 +6,9 @@ description: >-
   commands. Use when user mentions "playwright", "browser automation",
   "take a screenshot", "browser testing", "headless browser", "web testing",
   "fill out a form", "e2e test", or needs to automate browser workflows
-  from the command line.
+  from the command line. This is a pre-installed CLI tool — do NOT install
+  anything via npx or npm. Invoke this skill first, then use playwright-cli
+  bash commands.
 allowed-tools: Bash(playwright-cli:*)
 ---
 

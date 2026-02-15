@@ -36,7 +36,7 @@ Validate Stories/Tasks with explicit GO/NO-GO verdict, Readiness Score, and Anti
 | LOW | 1 | Structural/cosmetic issues |
 
 **Workflow:**
-1. Audit: Calculate penalty points for all 21 criteria
+1. Audit: Calculate penalty points for all 22 criteria
 2. Fix: Auto-fix and zero out points
 3. Report: Total Before -> 0 After
 
@@ -75,7 +75,7 @@ Phase 2: Research & Audit
   - Delegate documentation creation to ln-002
   - Research via MCP Ref (RFC, OWASP, library versions)
   - Verify technical claims (Anti-Hallucination)
-  - Calculate Penalty Points (21 criteria)
+  - Calculate Penalty Points (22 criteria)
 
 Phase 3: Audit Results & Fix Plan
   - Display Penalty Points table and fix plan
@@ -114,38 +114,14 @@ Phase 6: Approve & Notify
 
 ### Phase 2: Research & Audit
 
+**MANDATORY READ:** Load `references/phase2_research_audit.md` for complete research and audit procedure:
+- Domain extraction from Story/Tasks
+- Documentation delegation to ln-002 (guides/manuals/ADRs)
+- MCP research (RFC/OWASP/library versions via Ref + Context7)
+- Anti-Hallucination verification (evidence-based claims)
+- Penalty Points calculation (22 criteria, see Auto-Fix Actions Reference in same file)
+
 **Always execute for every Story - no exceptions.**
-
-**Step 1: Domain Extraction**
-- Extract technical domains from Story title + Technical Notes + Implementation Tasks
-- Load pattern registry from `references/domain_patterns.md`
-- Scan Story content for pattern matches via keyword detection
-- Build list of detected domains requiring documentation
-
-**Step 2: Documentation Delegation**
-- For EACH detected pattern, delegate to ln-002:
-  ```
-  Skill(skill="ln-002-best-practices-researcher",
-        args="doc_type=[guide|manual|adr] topic='[pattern]'")
-  ```
-- Receive file paths to created documentation (`docs/guides/`, `docs/manuals/`, `docs/adrs/`, `docs/research/`)
-
-**Step 3: Research via MCP**
-- Query MCP Ref for industry standards: `ref_search_documentation(query="[topic] RFC OWASP best practices 2025")`
-- Query Context7 for library versions: `resolve-library-id` + `query-docs`
-- Extract: standards (RFC numbers, OWASP rules), library versions, patterns
-
-**Step 4: Anti-Hallucination Verification**
-- Scan Story/Tasks for technical claims (RFC references, library versions, security requirements)
-- Verify each claim has MCP Ref/Context7 evidence
-- Flag unverified claims for correction
-- Status: VERIFIED (all sourced) or FLAGGED (list unverified)
-
-**Step 5: Penalty Points Calculation**
-- Evaluate all 21 criteria against Story/Tasks
-- Assign penalty points per violation (CRITICAL=10, HIGH=5, MEDIUM=3, LOW=1)
-- Calculate total penalty points
-- Build fix plan for each violation
 
 ### Phase 3: Audit Results & Fix Plan
 
@@ -160,7 +136,7 @@ Phase 6: Approve & Notify
 
 ### Phase 4: Auto-Fix
 
-**Execute fixes for ALL 21 criteria on the spot.**
+**Execute fixes for ALL 22 criteria on the spot.**
 
 - Execution order (8 groups):
   1. **Structural (#1-#4)** — Story/Tasks template compliance + AC completeness/specificity
@@ -170,7 +146,8 @@ Phase 6: Approve & Notify
   5. **Quality (#14-#15)** — Documentation complete, hardcoded values
   6. **Dependencies (#18-#19)** — Story/Task independence (no forward dependencies)
   7. **Risk (#20)** — Implementation risk analysis (after dependencies resolved, before traceability)
-  8. **Traceability (#16-#17)** — Story-Task alignment, AC coverage quality (LAST, after all fixes)
+  8. **Verification (#22)** — AC verify methods exist for all task ACs (test/command/inspect)
+  9. **Traceability (#16-#17)** — Story-Task alignment, AC coverage quality (LAST, after all fixes)
 - Use Auto-Fix Actions table below as authoritative checklist
 - Zero out penalty points as fixes applied
 - Test Strategy section must exist but remain empty (testing handled separately)
@@ -199,68 +176,17 @@ Invoke `Skill(skill="ln-311-agent-reviewer", args="{storyId}")`.
 
 ## Auto-Fix Actions Reference
 
-### Structural (#1-#4)
+**MANDATORY READ:** Load `references/phase2_research_audit.md` for complete 21-criteria table with:
+- Structural (#1-#4): Story/Task template compliance
+- Standards (#5): RFC/OWASP compliance
+- Solution (#6, #21): Library versions, alternatives
+- Workflow (#7-#13): Test strategy, docs, size, YAGNI/KISS, task order
+- Quality (#14-#15): Documentation, hardcoded values
+- Traceability (#16-#17): Story-Task alignment, AC coverage
+- Dependencies (#18-#19): No forward dependencies
+- Risk (#20): Implementation risk analysis
 
-| # | Criterion | What it checks | Penalty | Auto-fix actions |
-|---|-----------|----------------|---------|------------------|
-| 1 | Story Structure | 8 sections per template | LOW (1) | Add/reorder sections with TODO placeholders; update Linear |
-| 2 | Tasks Structure | Each Task has 7 sections | LOW (1) | Load each Task; add/reorder sections; update Linear |
-| 3 | Story Statement | As a/I want/So that clarity | LOW (1) | Rewrite using persona/capability/value; update Linear |
-| 4 | Acceptance Criteria | Given/When/Then, 3-5 items | MEDIUM (3) | Normalize to G/W/T; add edge cases; update Linear |
-
-### Standards (#5)
-
-| # | Criterion | What it checks | Penalty | Auto-fix actions |
-|---|-----------|----------------|---------|------------------|
-| 5 | Standards Compliance | Each technical decision references specific RFC/OWASP/REST standard by number | CRITICAL (10) | Query MCP Ref; update Technical Notes with compliant approach |
-
-### Solution (#6, #21)
-
-| # | Criterion | What it checks | Penalty | Auto-fix actions |
-|---|-----------|----------------|---------|------------------|
-| 6 | Library & Version | Libraries are latest stable | HIGH (5) | Query Context7; update to recommended versions |
-| 21 | Alternative Solutions | Story approach is optimal vs modern alternatives | MEDIUM (3) | Search MCP Ref + web for alternatives; if better option found — add "Alternative Considered" note to Technical Notes with trade-off comparison |
-
-### Workflow (#7-#13)
-
-| # | Criterion | What it checks | Penalty | Auto-fix actions |
-|---|-----------|----------------|---------|------------------|
-| 7 | Test Strategy | Section exists but empty | LOW (1) | Ensure section present; leave empty (testing handled separately) |
-| 8 | Documentation Integration | No standalone doc tasks | MEDIUM (3) | Remove doc-only tasks; fold into implementation DoD |
-| 9 | Story Size | 1-8 tasks (3-5 optimal); 3-5h each | MEDIUM (3) | If >8, add TODO; flag task size issues |
-| 10 | Test Task Cleanup | No premature test tasks | MEDIUM (3) | Remove test tasks before final; testing appears later |
-| 11 | YAGNI | Each Task maps to ≥1 Story AC; no tasks without AC justification | MEDIUM (3) | Move speculative items to Out of Scope unless standards require |
-| 12 | KISS | No task requires >3 new abstractions; if >3 → split or simplify | MEDIUM (3) | Simplify unless standards require complexity |
-| 13 | Task Order | DB→Service→API→UI | MEDIUM (3) | Reorder Tasks foundation-first |
-
-### Quality (#14-#15)
-
-| # | Criterion | What it checks | Penalty | Auto-fix actions |
-|---|-----------|----------------|---------|------------------|
-| 14 | Documentation Complete | Pattern docs exist + referenced | HIGH (5) | Delegate to ln-002; add all doc links to Technical Notes |
-| 15 | Code Quality Basics | No hardcoded values | MEDIUM (3) | Add TODOs for constants/config/env |
-
-### Traceability (#16-#17)
-
-| # | Criterion | What it checks | Penalty | Auto-fix actions |
-|---|-----------|----------------|---------|------------------|
-| 16 | Story-Task Alignment | Each Task title contains keyword from Story AC; grep verification | MEDIUM (3) | Add TODO to misaligned Tasks; warn user |
-| 17 | AC-Task Coverage | Coverage matrix: each AC row has ≥1 Task; no empty rows | MEDIUM (3) | Add TODO for uncovered ACs; suggest missing Tasks |
-
-### Dependencies (#18-#19)
-
-| # | Criterion | What it checks | Penalty | Auto-fix actions |
-|---|-----------|----------------|---------|------------------|
-| 18 | Story Dependencies | No forward Story dependencies | CRITICAL (10) | Flag forward dependencies; suggest reorder |
-| 19 | Task Dependencies | No forward Task dependencies | MEDIUM (3) | Flag forward dependencies; reorder Tasks |
-
-### Risk (#20)
-
-| # | Criterion | What it checks | Penalty | Auto-fix actions |
-|---|-----------|----------------|---------|------------------|
-| 20 | Risk Analysis | Unmitigated implementation risks (architecture, errors, scalability, data integrity, integration, SPOF) | HIGH (5) per risk, max 15 | Score via Impact x Probability matrix; add TODO sections for Priority 15-19; FLAG for human review at Priority >= 20; skip at Priority <= 8 |
-
-**Maximum Penalty:** 85 points (sum of all 21 criteria; #20 capped at 15)
+**Maximum Penalty:** 88 points (sum of all 22 criteria; #20 capped at 15)
 
 ## Final Assessment Model
 
@@ -316,10 +242,10 @@ Output explicit mapping:
 
 ## Self-Audit Protocol (Mandatory)
 
-Verify all 21 criteria (#1-#21) from Auto-Fix Actions pass with concrete evidence (doc path, MCP result, Linear update) before proceeding to Phase 6.
+Verify all 22 criteria (#1-#22) from Auto-Fix Actions pass with concrete evidence (doc path, MCP result, Linear update) before proceeding to Phase 6.
 
 ## Critical Rules
-- All 21 criteria MUST be verified with concrete evidence (doc path, MCP result, Linear update) before Phase 6 (Self-Audit Protocol)
+- All 22 criteria MUST be verified with concrete evidence (doc path, MCP result, Linear update) before Phase 6 (Self-Audit Protocol)
 - Fix execution order is strict: Structural -> Standards -> Solution -> Workflow -> Quality -> Dependencies -> Risk -> Traceability (standards before YAGNI/KISS)
 - Never approve with Penalty Points > 0; all violations must be auto-fixed to zero. If auto-fix is impossible for a criterion (e.g., MCP Ref unavailable, external dependency), mark as FLAGGED with reason — penalty stays, Gate = NO-GO, user must resolve manually
 - Test Strategy section must exist but remain empty (testing handled separately by other skills)
@@ -328,7 +254,7 @@ Verify all 21 criteria (#1-#21) from Auto-Fix Actions pass with concrete evidenc
 ## Definition of Done
 
 - Phases 1-6 completed: metadata loaded, research done, penalties calculated, fixes applied, agent review done, Story approved.
-- Penalty Points = 0 (all 21 criteria fixed). Readiness Score ≥ 5.
+- Penalty Points = 0 (all 22 criteria fixed). Readiness Score ≥ 5.
 - Anti-Hallucination: VERIFIED (all claims sourced via MCP).
 - AC Coverage: 100% (each AC mapped to ≥1 Task).
 - Agent Review: ln-311 invoked; suggestions aggregated, validated, accepted applied (or SKIPPED if no agents).
@@ -394,7 +320,7 @@ Verify all 21 criteria (#1-#21) from Auto-Fix Actions pass with concrete evidenc
   - `references/traceability_validation.md` (criteria #16-#17)
   - `references/domain_patterns.md` (pattern registry for ln-002 delegation)
   - `references/penalty_points.md` (penalty system details)
-- **Prevention checklist:** `shared/references/creation_quality_checklist.md` (creator-facing mapping of 21 criteria)
+- **Prevention checklist:** `shared/references/creation_quality_checklist.md` (creator-facing mapping of 22 criteria)
 - **Linear integration:** `../shared/templates/linear_integration.md`
 
 ---

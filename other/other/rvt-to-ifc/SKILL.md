@@ -1,7 +1,8 @@
 ---
-slug: "rvt-to-ifc"
-display_name: "RVT To IFC"
+name: "rvt-to-ifc"
 description: "Convert RVT files to IFC format. Support IFC2x3, IFC4, IFC4.3 with customizable export settings."
+homepage: "https://datadrivenconstruction.io"
+metadata: {"openclaw":{"emoji":"🔄","os":["win32"],"homepage":"https://datadrivenconstruction.io","requires":{"bins":["python3","RvtExporter"]}}}
 ---
 
 # RVT to IFC Conversion

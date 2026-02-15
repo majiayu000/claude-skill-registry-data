@@ -1,9 +1,9 @@
 ---
-slug: "productivity-analyzer"
-display_name: "Productivity Analyzer"
+name: "productivity-analyzer"
 description: "Analyze labor productivity from site data. Compare planned vs actual, identify trends, benchmark against industry standards."
+homepage: "https://datadrivenconstruction.io"
+metadata: {"openclaw": {"emoji": "📊", "os": ["darwin", "linux", "win32"], "homepage": "https://datadrivenconstruction.io", "requires": {"bins": ["python3"]}}}
 ---
-
 # Productivity Analyzer
 
 ## Business Case
