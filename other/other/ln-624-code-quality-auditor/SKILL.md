@@ -22,13 +22,13 @@ Specialized worker auditing code complexity, method signatures, algorithms, and 
 
 **MANDATORY READ:** Load `shared/references/task_delegation_pattern.md#audit-coordinator--worker-contract` for contextStore structure.
 
-Receives `contextStore` with: `tech_stack`, `best_practices`, `principles`, `codebase_root`.
+Receives `contextStore` with: `tech_stack`, `best_practices`, `principles`, `codebase_root`, `output_dir`.
 
 **Domain-aware:** Supports `domain_mode` + `current_domain` (see `audit_output_schema.md#domain-aware-worker-output`).
 
 ## Workflow
 
-1) **Parse context** — extract fields, determine `scan_path` (domain-aware if specified)
+1) **Parse context** — extract fields, determine `scan_path` (domain-aware if specified), extract `output_dir`
 2) **Scan codebase for violations**
    - All Grep/Glob patterns use `scan_path` (not codebase_root)
    - Example: `Grep(pattern="if.*if.*if", path=scan_path)` for nesting detection
@@ -38,8 +38,9 @@ Receives `contextStore` with: `tech_stack`, `best_practices`, `principles`, `cod
 
 4) **Calculate score using penalty algorithm**
 
-5) **Return JSON result to coordinator**
-   - Include `domain` and `scan_path` fields (if domain-aware)
+5) **Write Report:** Build full markdown report in memory per `shared/templates/audit_worker_report_template.md`, write to `{output_dir}/624-quality-{domain}.md` (or `624-quality.md` in global mode) in single Write call
+
+6) **Return Summary:** Return minimal summary to coordinator (see Output Format)
 
 ## Audit Rules (Priority: MEDIUM)
 
@@ -211,67 +212,14 @@ Receives `contextStore` with: `tech_stack`, `best_practices`, `principles`, `cod
 
 ## Output Format
 
-Return JSON to coordinator:
+**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format.
 
-**Global mode output:**
-```json
-{
-  "category": "Code Quality",
-  "score": 6,
-  "total_issues": 12,
-  "critical": 1,
-  "high": 3,
-  "medium": 5,
-  "low": 3,
-  "checks": [
-    {"id": "cyclomatic_complexity", "name": "Cyclomatic Complexity", "status": "failed", "details": "2 functions exceed threshold"},
-    {"id": "deep_nesting", "name": "Deep Nesting", "status": "warning", "details": "1 function with 5 levels"},
-    {"id": "long_methods", "name": "Long Methods", "status": "passed", "details": "No methods exceed 50 lines"},
-    {"id": "magic_numbers", "name": "Magic Numbers", "status": "failed", "details": "5 magic numbers found"}
-  ],
-  "findings": [...]
-}
+Write report to `{output_dir}/624-quality-{domain}.md` (or `624-quality.md` in global mode) with `category: "Code Quality"` and checks: cyclomatic_complexity, deep_nesting, long_methods, god_classes, too_many_params, quadratic_algorithms, n_plus_one, magic_numbers, method_signatures.
+
+Return summary to coordinator:
 ```
-
-**Domain-aware mode output (NEW):**
-```json
-{
-  "category": "Code Quality",
-  "score": 7,
-  "domain": "orders",
-  "scan_path": "src/orders",
-  "total_issues": 8,
-  "critical": 0,
-  "high": 2,
-  "medium": 4,
-  "low": 2,
-  "checks": [
-    {"id": "cyclomatic_complexity", "name": "Cyclomatic Complexity", "status": "failed", "details": "1 function exceeds threshold"},
-    {"id": "deep_nesting", "name": "Deep Nesting", "status": "passed", "details": "No deep nesting detected"},
-    {"id": "long_methods", "name": "Long Methods", "status": "passed", "details": "No methods exceed 50 lines"},
-    {"id": "magic_numbers", "name": "Magic Numbers", "status": "warning", "details": "1 magic number found"}
-  ],
-  "findings": [
-    {
-      "severity": "HIGH",
-      "location": "src/orders/services/OrderService.ts:120",
-      "issue": "Cyclomatic complexity 22 (threshold: 10)",
-      "principle": "Code Complexity / Maintainability",
-      "recommendation": "Split into smaller methods",
-      "effort": "M",
-      "domain": "orders"
-    },
-    {
-      "severity": "MEDIUM",
-      "location": "src/orders/controllers/OrderController.ts:45",
-      "issue": "Magic number '3' used for order status",
-      "principle": "Constants Management",
-      "recommendation": "Extract: const ORDER_STATUS_SHIPPED = 3",
-      "effort": "S",
-      "domain": "orders"
-    }
-  ]
-}
+Report written: docs/project/.audit/624-quality-orders.md
+Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 ```
 
 ## Critical Rules
@@ -285,16 +233,18 @@ Return JSON to coordinator:
 
 ## Definition of Done
 
-- contextStore parsed (including domain_mode and current_domain)
+- contextStore parsed (including domain_mode, current_domain, output_dir)
 - scan_path determined (domain path or codebase root)
 - All 9 checks completed (scoped to scan_path):
   - complexity, nesting, length, god classes, parameters, O(n²), N+1, constants, method signatures
 - Findings collected with severity, location, effort, recommendation, domain
 - Score calculated
-- JSON returned to coordinator with domain metadata
+- Report written to `{output_dir}/624-quality-{domain}.md` (atomic single Write call)
+- Summary returned to coordinator
 
 ## Reference Files
 
+- **Worker report template:** `shared/templates/audit_worker_report_template.md`
 - **Audit scoring formula:** `shared/references/audit_scoring.md`
 - **Audit output schema:** `shared/references/audit_output_schema.md`
 - Code quality rules: [references/code_quality_rules.md](references/code_quality_rules.md)

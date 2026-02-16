@@ -22,15 +22,16 @@ Specialized worker auditing security vulnerabilities in codebase.
 
 **MANDATORY READ:** Load `shared/references/task_delegation_pattern.md#audit-coordinator--worker-contract` for contextStore structure.
 
-Receives `contextStore` with: `tech_stack`, `best_practices`, `principles`, `codebase_root`.
+Receives `contextStore` with: `tech_stack`, `best_practices`, `principles`, `codebase_root`, `output_dir`.
 
 ## Workflow
 
-1) **Parse Context:** Extract tech stack, best practices, codebase root from contextStore
+1) **Parse Context:** Extract tech stack, best practices, codebase root, output_dir from contextStore
 2) **Scan Codebase:** Run security checks using Glob/Grep patterns (see Audit Rules below)
 3) **Collect Findings:** Record each violation with severity, location (file:line), effort estimate (S/M/L), recommendation
 4) **Calculate Score:** Count violations by severity, calculate compliance score (X/10)
-5) **Return Results:** Return JSON with category, score, findings to coordinator
+5) **Write Report:** Build full markdown report in memory per `shared/templates/audit_worker_report_template.md`, write to `{output_dir}/621-security.md` in single Write call
+6) **Return Summary:** Return minimal summary to coordinator (see Output Format)
 
 ## Audit Rules (Priority: CRITICAL)
 
@@ -123,9 +124,15 @@ Receives `contextStore` with: `tech_stack`, `best_practices`, `principles`, `cod
 
 ## Output Format
 
-**MANDATORY READ:** Load `shared/references/audit_output_schema.md` for JSON structure.
+**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format.
 
-Return JSON with `category: "Security"` and checks: hardcoded_secrets, sql_injection, xss_vulnerabilities, insecure_dependencies, missing_input_validation.
+Write report to `{output_dir}/621-security.md` with `category: "Security"` and checks: hardcoded_secrets, sql_injection, xss_vulnerabilities, insecure_dependencies, missing_input_validation.
+
+Return summary to coordinator:
+```
+Report written: docs/project/.audit/621-security.md
+Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
+```
 
 ## Critical Rules
 
@@ -137,14 +144,16 @@ Return JSON with `category: "Security"` and checks: hardcoded_secrets, sql_injec
 
 ## Definition of Done
 
-- contextStore parsed successfully
+- contextStore parsed successfully (including output_dir)
 - All 5 security checks completed (secrets, SQL injection, XSS, deps, validation)
 - Findings collected with severity, location, effort, recommendation
 - Score calculated using penalty algorithm
-- JSON result returned to coordinator
+- Report written to `{output_dir}/621-security.md` (atomic single Write call)
+- Summary returned to coordinator
 
 ## Reference Files
 
+- **Worker report template:** `shared/templates/audit_worker_report_template.md`
 - **Audit scoring formula:** `shared/references/audit_scoring.md`
 - **Audit output schema:** `shared/references/audit_output_schema.md`
 - Security audit rules: [references/security_rules.md](references/security_rules.md)

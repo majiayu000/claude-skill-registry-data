@@ -93,7 +93,8 @@ Skipped workers are NOT delegated. They get score "N/A" in report and are exclud
   "tech_stack": {...},
   "best_practices": {...},
   "principles": {...},
-  "codebase_root": "..."
+  "codebase_root": "...",
+  "output_dir": "docs/project/.audit"
 }
 ```
 
@@ -147,6 +148,15 @@ Skipped workers are NOT delegated. They get score "N/A" in report and are exclud
 
 > **CRITICAL:** All delegations use Task tool with `subagent_type: "general-purpose"` for context isolation.
 
+### Phase 5.0: Prepare Output Directory
+
+Before delegating to workers:
+```
+1. Delete docs/project/.audit/ if exists (clean previous run)
+2. Create docs/project/.audit/ directory
+3. Add output_dir to contextStore (already set in Phase 3)
+```
+
 **Prompt template:**
 ```
 Task(description: "Audit via ln-62X",
@@ -158,30 +168,17 @@ Task(description: "Audit via ln-62X",
 - ❌ Direct Skill tool invocation without Task wrapper
 - ❌ Any execution bypassing subagent context isolation
 
-**Worker Output Contract (Unified):**
+**Worker Output Contract (File-Based):**
 
-All workers MUST return JSON with this structure:
-```json
-{
-  "category": "Category Name",
-  "score": 7,
-  "total_issues": 12,
-  "critical": 0,
-  "high": 3,
-  "medium": 7,
-  "low": 2,
-  "findings": [
-    {
-      "severity": "HIGH",
-      "location": "path/file.ts:123",
-      "issue": "Description of the issue",
-      "principle": "Category / Sub-principle",
-      "recommendation": "How to fix",
-      "effort": "S"
-    }
-  ]
-}
+Workers write full report to `docs/project/.audit/{worker_id}.md` per `shared/templates/audit_worker_report_template.md`.
+
+Workers return **minimal summary** in-context (~50 tokens):
 ```
+Report written: docs/project/.audit/621-security.md
+Score: 7.5/10 | Issues: 5 (C:0 H:2 M:2 L:1)
+```
+
+Coordinator extracts score/counts from return values. Full findings stay in files.
 
 **Unified Scoring Formula (all workers):**
 ```
@@ -189,21 +186,19 @@ penalty = (critical × 2.0) + (high × 1.0) + (medium × 0.5) + (low × 0.2)
 score = max(0, 10 - penalty)
 ```
 
-**Domain-aware workers** add optional fields: `domain`, `scan_path`
-
 ### Phase 5a: Global Workers (PARALLEL)
 
-**Global workers** scan entire codebase (not domain-aware):
+**Global workers** scan entire codebase (not domain-aware). Each writes report to `docs/project/.audit/`.
 
-| # | Worker | Priority | What It Audits |
-|---|--------|----------|----------------|
-| 1 | ln-621-security-auditor | CRITICAL | Hardcoded secrets, SQL injection, XSS, insecure deps |
-| 2 | ln-622-build-auditor | CRITICAL | Compiler/linter errors, deprecations, type errors |
-| 5 | ln-625-dependencies-auditor | MEDIUM | Outdated packages, unused deps, custom implementations |
-| 6 | ln-626-dead-code-auditor | LOW | Dead code, unused imports/variables, commented-out code |
-| 7 | ln-627-observability-auditor | MEDIUM | Structured logging, health checks, metrics, tracing |
-| 8 | ln-628-concurrency-auditor | HIGH | Race conditions, async/await, resource contention |
-| 9 | ln-629-lifecycle-auditor | MEDIUM | Bootstrap, graceful shutdown, resource cleanup |
+| # | Worker | Priority | What It Audits | Output File |
+|---|--------|----------|----------------|-------------|
+| 1 | ln-621-security-auditor | CRITICAL | Hardcoded secrets, SQL injection, XSS, insecure deps | `621-security.md` |
+| 2 | ln-622-build-auditor | CRITICAL | Compiler/linter errors, deprecations, type errors | `622-build.md` |
+| 5 | ln-625-dependencies-auditor | MEDIUM | Outdated packages, unused deps, custom implementations | `625-dependencies.md` |
+| 6 | ln-626-dead-code-auditor | LOW | Dead code, unused imports/variables, commented-out code | `626-dead-code.md` |
+| 7 | ln-627-observability-auditor | MEDIUM | Structured logging, health checks, metrics, tracing | `627-observability.md` |
+| 8 | ln-628-concurrency-auditor | HIGH | Race conditions, async/await, resource contention | `628-concurrency.md` |
+| 9 | ln-629-lifecycle-auditor | MEDIUM | Bootstrap, graceful shutdown, resource cleanup | `629-lifecycle.md` |
 
 **Invocation (applicable workers in PARALLEL):**
 ```javascript
@@ -218,12 +213,12 @@ FOR EACH worker IN applicable_global:
 
 ### Phase 5b: Domain-Aware Workers (PARALLEL per domain)
 
-**Domain-aware workers** run once per domain:
+**Domain-aware workers** run once per domain. Each writes report with domain suffix.
 
-| # | Worker | Priority | What It Audits |
-|---|--------|----------|----------------|
-| 3 | ln-623-code-principles-auditor | HIGH | DRY/KISS/YAGNI violations, TODO/FIXME, error handling, DI |
-| 4 | ln-624-code-quality-auditor | MEDIUM | Cyclomatic complexity, O(n²), N+1 queries, magic numbers |
+| # | Worker | Priority | What It Audits | Output File |
+|---|--------|----------|----------------|-------------|
+| 3 | ln-623-code-principles-auditor | HIGH | DRY/KISS/YAGNI violations, TODO/FIXME, error handling, DI | `623-principles-{domain}.md` |
+| 4 | ln-624-code-quality-auditor | MEDIUM | Cyclomatic complexity, O(n²), N+1 queries, magic numbers | `624-quality-{domain}.md` |
 
 **Invocation (2 workers × N domains):**
 ```javascript
@@ -234,13 +229,20 @@ IF domain_mode == "domain-aware":
       domain_mode: "domain-aware",
       current_domain: { name: domain.name, path: domain.path }
     }
-    // Invoke both workers for this domain
-    Skill(skill="ln-623-code-principles-auditor", args=JSON.stringify(domain_context))
-    Skill(skill="ln-624-code-quality-auditor", args=JSON.stringify(domain_context))
+    Task(description: "Audit principles " + domain.name + " via ln-623",
+         prompt: "Execute ln-623-code-principles-auditor. Read skill. Context: " + JSON.stringify(domain_context),
+         subagent_type: "general-purpose")
+    Task(description: "Audit quality " + domain.name + " via ln-624",
+         prompt: "Execute ln-624-code-quality-auditor. Read skill. Context: " + JSON.stringify(domain_context),
+         subagent_type: "general-purpose")
 ELSE:
   // Fallback: invoke once for entire codebase (global mode)
-  Skill(skill="ln-623-code-principles-auditor", args=JSON.stringify(contextStore))
-  Skill(skill="ln-624-code-quality-auditor", args=JSON.stringify(contextStore))
+  Task(description: "Audit principles via ln-623",
+       prompt: "Execute ln-623-code-principles-auditor. Read skill. Context: " + JSON.stringify(contextStore),
+       subagent_type: "general-purpose")
+  Task(description: "Audit quality via ln-624",
+       prompt: "Execute ln-624-code-quality-auditor. Read skill. Context: " + JSON.stringify(contextStore),
+       subagent_type: "general-purpose")
 ```
 
 **Parallelism strategy:**
@@ -248,85 +250,79 @@ ELSE:
 - Phase 5b: All (2 × N) domain-aware invocations run in PARALLEL
 - Example: 3 domains → 6 invocations (ln-623×3 + ln-624×3) in single message
 
-## Phase 6: Aggregate Results
+## Phase 6: Aggregate Results (File-Based)
 
-**Collect results from workers:**
+Workers wrote reports to `docs/project/.audit/` and returned minimal summaries. Aggregation uses **return values for numbers** and **file reads for findings tables**.
 
-**Global worker output (unchanged):**
-```json
-{
-  "category": "Security",
-  "score": 7,
-  "total_issues": 5,
-  "critical": 1,
-  "high": 2,
-  "medium": 2,
-  "low": 0,
-  "findings": [...]
-}
+### Step 6.1: Parse Return Values
+
+Extract score/counts from worker return strings (already in context, 0 file reads):
+```
+FOR EACH worker_return IN worker_results:
+  Parse: "Score: {score}/10 | Issues: {total} (C:{c} H:{h} M:{m} L:{l})"
+  Store: {worker, category, score, counts, report_file}
 ```
 
-**Domain-aware worker output (NEW):**
-```json
-{
-  "category": "Architecture & Design",
-  "score": 6,
-  "domain": "users",
-  "scan_path": "src/users",
-  "total_issues": 4,
-  "critical": 1,
-  "high": 2,
-  "medium": 1,
-  "low": 0,
-  "findings": [
-    {
-      "severity": "CRITICAL",
-      "location": "src/users/controllers/UserController.ts:45",
-      "issue": "Controller directly uses Repository",
-      "principle": "Layer Separation (Clean Architecture)",
-      "recommendation": "Create UserService",
-      "effort": "L",
-      "domain": "users"
-    }
-  ]
-}
+### Step 6.2: Build Compliance Score Table
+
+From parsed return values:
+```
+FOR EACH category IN 9 categories:
+  IF category is domain-aware (Architecture, Quality):
+    category_score = average(domain_scores for this category)
+  ELSE:
+    category_score = worker_score
+overall_score = average(all applicable category scores)  // exclude N/A
 ```
 
-**Aggregation Algorithm:**
+### Step 6.3: Build Severity Summary
+
+From parsed return values:
 ```
-1. Collect JSON from all 9 workers (7 global + 2×N domain-aware)
-2. Merge findings from all workers into single array
-3. Sum severity counts:
-   total_critical = sum(worker.critical for all workers)
-   total_high = sum(worker.high for all workers)
-   total_medium = sum(worker.medium for all workers)
-   total_low = sum(worker.low for all workers)
-4. Calculate Overall Score:
-   overall_score = average(worker.score for all 9 categories)
-5. Sort findings by severity: CRITICAL → HIGH → MEDIUM → LOW
-6. Group findings by category for report sections
+total_critical = sum(worker.counts.critical for all workers)
+total_high = sum(worker.counts.high for all workers)
+total_medium = sum(worker.counts.medium for all workers)
+total_low = sum(worker.counts.low for all workers)
 ```
 
-**Aggregation steps:**
+### Step 6.4: Build Domain Health Summary (if domain-aware)
 
-1. **Global workers (7)** → merge findings into single list
-2. **Domain-aware workers (2 × N)** → group by domain.name:
-   - Calculate domain-level scores (Architecture + Quality per domain)
-   - Build Domain Health Summary table
-3. **Overall score** → average of 9 category scores (Architecture/Quality averaged across domains)
-4. **Severity summary** → sum critical/high/medium/low across ALL workers
-5. **Findings grouping:**
-   - Global categories (Security, Build, etc.) → single table
-   - Domain-aware categories → subtables per domain
-6. **Cross-Domain DRY Analysis** (post-aggregation):
-   - From ln-623 domain results, collect all findings that have `pattern_signature` field
-   - Group by `pattern_signature` across domains
-   - Same `pattern_signature` in 2+ domains → create Cross-Domain DRY finding:
-     - severity: HIGH
-     - principle: "Cross-Domain DRY Violation"
-     - list all affected domains and locations
-     - recommendation: "Extract to shared/ module accessible by all affected domains"
-   - Add findings to "Cross-Domain Issues" section in report
+From parsed return values of ln-623/ln-624:
+```
+FOR EACH domain:
+  arch_score = ln-623 score for this domain
+  quality_score = ln-624 score for this domain
+  issues = ln-623 issues + ln-624 issues for this domain
+```
+
+### Step 6.5: Cross-Domain DRY Analysis (if domain-aware)
+
+Read **only** ln-623 report files to extract `FINDINGS-EXTENDED` JSON block:
+```
+principle_files = Glob("docs/project/.audit/623-principles-*.md")
+FOR EACH file IN principle_files:
+  Read file → extract <!-- FINDINGS-EXTENDED [...] --> JSON
+  Filter findings with pattern_signature field
+
+Group by pattern_signature across domains:
+  IF same signature in 2+ domains → create Cross-Domain DRY finding:
+    severity: HIGH
+    principle: "Cross-Domain DRY Violation"
+    list all affected domains and locations
+    recommendation: "Extract to shared/ module"
+```
+
+### Step 6.6: Assemble Findings Sections
+
+Read each worker report file and copy Findings table into corresponding report section:
+```
+FOR EACH report_file IN Glob("docs/project/.audit/6*.md"):
+  Read file → extract "## Findings" table rows
+  Insert into matching category section in final report
+```
+
+**Global categories** (Security, Build, etc.) → single Findings table per category.
+**Domain-aware categories** → subtables per domain (one per file).
 
 ## Output Format
 
@@ -364,12 +360,15 @@ Write consolidated report to `docs/project/codebase_audit.md`:
 - Project type detected; worker applicability determined; inapplicable workers documented with reason
 - Best practices researched via MCP tools for major dependencies
 - Domain discovery completed (domain_mode determined)
-- contextStore built with tech stack + best practices + domain info
-- Applicable global workers invoked in PARALLEL
-- Domain-aware workers (2 × N domains) invoked in PARALLEL
-- All workers completed successfully (or reported errors)
-- Results aggregated with domain grouping
+- contextStore built with tech stack + best practices + domain info + output_dir
+- `docs/project/.audit/` directory cleaned and created
+- Applicable global workers invoked in PARALLEL; each wrote report to `.audit/`
+- Domain-aware workers (2 × N domains) invoked in PARALLEL; each wrote report to `.audit/`
+- All workers completed successfully (or reported errors); return values parsed for scores/counts
+- Worker report files verified via Glob (expected count matches actual)
+- Results aggregated from return values (scores) + file reads (findings tables)
 - Domain Health Summary built (if domain_mode="domain-aware")
+- Cross-Domain DRY analysis completed from ln-623 FINDINGS-EXTENDED blocks (if domain-aware)
 - Compliance score (X/10) calculated per category + overall (skipped workers excluded from average)
 - Executive Summary and Strengths sections included
 - Report written to `docs/project/codebase_audit.md`
@@ -394,7 +393,8 @@ See individual worker SKILL.md files for detailed audit rules:
 - **Task delegation pattern:** `shared/references/task_delegation_pattern.md`
 - **Audit scoring formula:** `shared/references/audit_scoring.md`
 - **Audit output schema:** `shared/references/audit_output_schema.md`
-- **Report template:** `shared/templates/codebase_audit_template.md`
+- **Worker report template:** `shared/templates/audit_worker_report_template.md`
+- **Final report template:** `shared/templates/codebase_audit_template.md`
 - Principles: `docs/principles.md`
 - Tech stack: `docs/project/tech_stack.md`
 - Kanban board: `docs/tasks/kanban_board.md`

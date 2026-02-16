@@ -28,6 +28,7 @@ L3 Worker that analyzes a single architectural pattern against best practices an
 - pattern: string          # Pattern name (e.g., "Job Processing")
 - locations: string[]      # Known file paths/directories
 - bestPractices: object    # Best practices from MCP Ref/Context7/WebSearch
+- output_dir: string       # e.g., "docs/project/.audit"
 ```
 
 > **Note:** All patterns arrive pre-verified (passed ln-640 Phase 1d applicability gate with >= 2 structural components confirmed).
@@ -99,40 +100,28 @@ gaps = {
 overall_score = average(compliance, completeness, quality, implementation) / 10
 ```
 
-### Phase 6: Return Result
+### Phase 6: Write Report
 
-```json
-{
-  "pattern": "Job Processing",
-  "overall_score": 7.9,
-  "scores": {
-    "compliance": 72,
-    "completeness": 85,
-    "quality": 68,
-    "implementation": 90
-  },
-  "checks": [
-    {"id": "compliance_check", "name": "Compliance", "status": "passed|warning|failed", "details": "..."},
-    {"id": "completeness_check", "name": "Completeness", "status": "...", "details": "..."},
-    {"id": "quality_check", "name": "Quality", "status": "...", "details": "..."},
-    {"id": "implementation_check", "name": "Implementation", "status": "...", "details": "..."}
-  ],
-  "codeReferences": ["src/jobs/processor.ts", "src/workers/base.ts"],
-  "issues": [
-    {
-      "severity": "HIGH",
-      "category": "completeness",
-      "issue": "No dead letter queue",
-      "suggestion": "Add Bull DLQ configuration",
-      "effort": "M"
-    }
-  ],
-  "gaps": {
-    "missingComponents": ["Dead letter queue"],
-    "inconsistencies": ["Retry config exists but no backoff strategy"]
-  },
-  "recommendations": ["Add DLQ configuration for failed jobs"]
-}
+**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format (ln-640 section: 4-score AUDIT-META + DATA-EXTENDED).
+
+```
+# Build pattern name slug: "Job Processing" → "job-processing"
+slug = pattern.name.lower().replace(" ", "-")
+
+# Build markdown report in memory with:
+# - AUDIT-META (4-score variant: score + score_compliance/completeness/quality/implementation)
+# - Checks table (compliance_check, completeness_check, quality_check, implementation_check)
+# - Findings table (issues sorted by severity)
+# - DATA-EXTENDED: {pattern, codeReferences, gaps, recommendations}
+
+Write to {output_dir}/641-pattern-{slug}.md (atomic single Write call)
+```
+
+### Phase 7: Return Summary
+
+```
+Report written: docs/project/.audit/641-pattern-job-processing.md
+Score: 7.9/10 (C:72 K:85 Q:68 I:90) | Issues: 3 (H:1 M:2 L:0)
 ```
 
 ## Critical Rules
@@ -151,10 +140,12 @@ overall_score = average(compliance, completeness, quality, implementation) / 10
 - Issues identified with severity, category, suggestion, effort
 - Gaps documented (missing components, inconsistencies)
 - Recommendations provided
-- Structured result returned to coordinator
+- Report written to `{output_dir}/641-pattern-{slug}.md` (atomic single Write call)
+- Summary returned to coordinator
 
 ## Reference Files
 
+- **Worker report template:** `shared/templates/audit_worker_report_template.md`
 - Scoring rules: `../ln-640-pattern-evolution-auditor/references/scoring_rules.md`
 - Pattern library: `../ln-640-pattern-evolution-auditor/references/pattern_library.md`
 

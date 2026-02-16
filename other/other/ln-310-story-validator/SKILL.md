@@ -87,7 +87,7 @@ Phase 4: Auto-Fix (8 groups)
   - Fix Solution violations (#6, #21)
   - Fix Workflow violations (#7-#13)
   - Fix Quality violations (#14-#15)
-  - Fix Dependencies violations (#18-#19)
+  - Fix Dependencies violations (#18-#19/#19b)
   - Fix Risk violations (#20)
   - Fix Traceability violations (#16-#17)
 
@@ -144,7 +144,7 @@ Phase 6: Approve & Notify
   3. **Solution (#6, #21)** — Library versions, alternative solutions
   4. **Workflow (#7-#13)** — Test strategy, docs integration, size, cleanup, YAGNI, KISS, task order
   5. **Quality (#14-#15)** — Documentation complete, hardcoded values
-  6. **Dependencies (#18-#19)** — Story/Task independence (no forward dependencies)
+  6. **Dependencies (#18-#19/#19b)** — Story/Task independence (no forward deps), parallel group validity
   7. **Risk (#20)** — Implementation risk analysis (after dependencies resolved, before traceability)
   8. **Verification (#22)** — AC verify methods exist for all task ACs (test/command/inspect)
   9. **Traceability (#16-#17)** — Story-Task alignment, AC coverage quality (LAST, after all fixes)
@@ -183,7 +183,7 @@ Invoke `Skill(skill="ln-311-agent-reviewer", args="{storyId}")`.
 - Workflow (#7-#13): Test strategy, docs, size, YAGNI/KISS, task order
 - Quality (#14-#15): Documentation, hardcoded values
 - Traceability (#16-#17): Story-Task alignment, AC coverage
-- Dependencies (#18-#19): No forward dependencies
+- Dependencies (#18-#19/#19b): No forward dependencies
 - Risk (#20): Implementation risk analysis
 
 **Maximum Penalty:** 88 points (sum of all 22 criteria; #20 capped at 15)
@@ -315,7 +315,7 @@ Verify all 22 criteria (#1-#22) from Auto-Fix Actions pass with concrete evidenc
   - `references/solution_validation.md` (criterion #6)
   - `references/workflow_validation.md` (criteria #7-#13)
   - `references/quality_validation.md` (criteria #14-#15)
-  - `references/dependency_validation.md` (criteria #18-#19)
+  - `references/dependency_validation.md` (criteria #18-#19/#19b)
   - `references/risk_validation.md` (criterion #20)
   - `references/traceability_validation.md` (criteria #16-#17)
   - `references/domain_patterns.md` (pattern registry for ln-002 delegation)

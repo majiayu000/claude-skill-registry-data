@@ -1,6 +1,6 @@
 ---
 name: ln-511-code-quality-checker
-description: "Worker that checks DRY/KISS/YAGNI/architecture compliance with quantitative Code Quality Score. Validates architectural decisions via MCP Ref: (1) Optimality - is chosen approach the best? (2) Compliance - does it follow best practices? (3) Performance - algorithms, configs, bottlenecks. Reports issues with SEC-, PERF-, MNT-, ARCH-, BP-, OPT- prefixes."
+description: "Worker that checks DRY/KISS/YAGNI/architecture compliance with quantitative Code Quality Score. Validates architectural decisions via MCP Ref: (1) Optimality (2) Compliance (3) Performance. Reports issues with SEC-, PERF-, MNT-, ARCH-, BP-, OPT- prefixes."
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
@@ -90,7 +90,7 @@ Formula: `Code Quality Score = 100 - metric_penalties - issue_penalties`
 ## When to Use
 - **Invoked by ln-510-quality-coordinator** Phase 2
 - All implementation tasks in Story status = Done
-- Before regression testing (ln-513) and test planning (ln-520)
+- Before ln-512 tech debt cleanup and ln-513 agent review
 
 ## Workflow (concise)
 1) Load Story (full) and Done implementation tasks (full descriptions) via Linear; skip tasks with label "tests".
@@ -102,7 +102,9 @@ Formula: `Code Quality Score = 100 - metric_penalties - issue_penalties`
    - Nesting depth (target ≤3)
    - Parameter count (target ≤4)
 
-4) **MCP Ref Validation (MANDATORY for code changes):**
+4) **MCP Ref Validation (MANDATORY for code changes — SKIP if `--skip-mcp-ref` flag passed):**
+
+   > **Fast-track mode:** When invoked with `--skip-mcp-ref`, skip this entire step (no OPT-, BP-, PERF- checks). Proceed directly to step 5 (static analysis). This reduces cost from ~5000 to ~800 tokens while preserving metrics + static analysis coverage.
 
    **Level 1 — OPTIMALITY (OPT-):**
    - Extract goal from task (e.g., "user authentication", "caching", "API rate limiting")
@@ -129,8 +131,11 @@ Formula: `Code Quality Score = 100 - metric_penalties - issue_penalties`
    - ORM queries added
 
 5) **Analyze code for static issues (assign prefixes):**
+   **MANDATORY READ:** `shared/references/clean_code_checklist.md`
    - SEC-: hardcoded creds, unvalidated input, SQL injection, race conditions
-   - MNT-: DRY violations (MNT-DRY-: duplicate logic), dead code (MNT-DC-: per `shared/references/clean_code_checklist.md` — 4 categories: unreachable, unused, commented-out, backward-compat), complex conditionals, poor naming
+   - MNT-: DRY violations (MNT-DRY-: duplicate logic), dead code (MNT-DC-: per checklist), complex conditionals, poor naming
+   - **MNT-DRY- cross-story hotspot scan:** Grep for common pattern signatures (error handlers: `catch.*Error|handleError`, validators: `validate|isValid`, config access: `getSettings|getConfig`) across ALL `src/` files (count mode). If any pattern appears in 5+ files, sample 3 files (Read 50 lines each) and check structural similarity. If >80% similar → MNT-DRY-CROSS (medium, -10 points): `Pattern X duplicated in N files — extract to shared module.`
+   - **MNT-DC- cross-story unused export scan:** For each file modified by Story, count `export` declarations. Then Grep across ALL `src/` for import references to those exports. Exports with 0 import references → MNT-DC-CROSS (medium, -10 points): `{export} in {file} exported but never imported — remove or mark internal.`
    - ARCH-: layer violations, circular dependencies, guide non-compliance
    - ARCH-LB-: layer boundary violations (HTTP/DB/FS calls outside infrastructure layer)
    - ARCH-TX-: transaction boundary violations (commit() across multiple layers)
@@ -148,16 +153,6 @@ Formula: `Code Quality Score = 100 - metric_penalties - issue_penalties`
    - Subtract issue penalties (see Issue penalties table)
 
 7) Output verdict with score and structured issues. Add Linear comment with findings.
-8) **Agent Review (MANDATORY — Delegated to ln-512):**
-
-   > **MANDATORY STEP:** This step MUST execute after Step 7. DO NOT skip. If agents unavailable, ln-512 returns SKIPPED — acceptable. But invocation MUST happen.
-
-   Invoke `Skill(skill="ln-512-agent-reviewer", args="{storyId}")`.
-   - ln-512 gets Story/Task references from Linear, builds prompt with references, runs agents in parallel, persists prompts and results in `.agent-review/{agent}/`.
-   - Merge returned suggestions into issues list (same prefixes: SEC-, PERF-, MNT-, ARCH-, BP-, OPT-).
-   - If verdict = `SUGGESTIONS` with `area=security` or `area=correctness` → escalate PASS → CONCERNS.
-   - If verdict = `SKIPPED` → Self-Review fallback (native Claude reviews code).
-   - **Display:** agent stats from ln-512 output.
 
 ## Critical Rules
 - Read guides mentioned in Story/Tasks before judging compliance.
@@ -176,7 +171,6 @@ Formula: `Code Quality Score = 100 - metric_penalties - issue_penalties`
 - ARCH- subcategories checked (LB, TX, DTO, DI, CEH, SES); MNT- subcategories checked (DC, DRY, GOD, SIG, ERR).
 - Issues identified with prefixes and severity, sources from MCP Ref/Context7.
 - Code Quality Score calculated.
-- Agent review: ln-512 invoked; suggestions merged into issues (or SKIPPED/Self-Review fallback).
 - **Output format:**
   ```yaml
   verdict: PASS | CONCERNS | ISSUES_FOUND
@@ -277,10 +271,7 @@ Formula: `Code Quality Score = 100 - metric_penalties - issue_penalties`
 - Code metrics: `references/code_metrics.md` (thresholds and penalties)
 - Guides: `docs/guides/`
 - Templates for context: `shared/templates/task_template_implementation.md`
-- Agent review prompt: `shared/agents/prompt_templates/code_review.md`
-- Agent review schema: `shared/agents/schemas/code_review_schema.json`
 - **Clean code checklist:** `shared/references/clean_code_checklist.md`
-- Agent delegation: `shared/references/agent_delegation_pattern.md`
 
 ---
 **Version:** 5.0.0

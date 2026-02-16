@@ -19,15 +19,16 @@ Specialized worker auditing logging, monitoring, and observability.
 
 ## Inputs (from Coordinator)
 
-Receives `contextStore` with tech stack, framework, codebase root.
+Receives `contextStore` with tech stack, framework, codebase root, output_dir.
 
 ## Workflow
 
-1) Parse context
+1) Parse context + output_dir
 2) Check observability patterns
 3) Collect findings
 4) Calculate score
-5) Return JSON
+5) **Write Report:** Build full markdown report in memory per `shared/templates/audit_worker_report_template.md`, write to `{output_dir}/627-observability.md` in single Write call
+6) **Return Summary:** Return minimal summary to coordinator
 
 ## Audit Rules
 
@@ -98,36 +99,19 @@ Receives `contextStore` with tech stack, framework, codebase root.
 
 ## Output Format
 
-```json
-{
-  "category": "Observability",
-  "score": 6,
-  "total_issues": 5,
-  "critical": 0,
-  "high": 1,
-  "medium": 3,
-  "low": 1,
-  "checks": [
-    {"id": "structured_logging", "name": "Structured Logging", "status": "warning", "details": "3 console.log calls in production code"},
-    {"id": "health_endpoints", "name": "Health Endpoints", "status": "failed", "details": "No /health endpoint found"},
-    {"id": "metrics_collection", "name": "Metrics Collection", "status": "passed", "details": "Prometheus client configured"},
-    {"id": "request_tracing", "name": "Request Tracing", "status": "warning", "details": "Correlation IDs missing in 2 services"}
-  ],
-  "findings": [
-    {
-      "severity": "HIGH",
-      "location": "src/api/server.ts",
-      "issue": "No /health endpoint for monitoring",
-      "principle": "Observability / Health Checks",
-      "recommendation": "Add GET /health route returning { status: 'ok', uptime, ... }",
-      "effort": "S"
-    }
-  ]
-}
+**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format.
+
+Write report to `{output_dir}/627-observability.md` with `category: "Observability"` and checks: structured_logging, health_endpoints, metrics_collection, request_tracing, log_levels.
+
+Return summary to coordinator:
+```
+Report written: docs/project/.audit/627-observability.md
+Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 ```
 
 ## Reference Files
 
+- **Worker report template:** `shared/templates/audit_worker_report_template.md`
 - **Audit scoring formula:** `shared/references/audit_scoring.md`
 - **Audit output schema:** `shared/references/audit_output_schema.md`
 
@@ -141,11 +125,12 @@ Receives `contextStore` with tech stack, framework, codebase root.
 
 ## Definition of Done
 
-- contextStore parsed (tech stack and framework identified)
+- contextStore parsed (tech stack, framework, output_dir)
 - All 5 checks completed (structured logging, health endpoints, metrics, request tracing, log levels)
 - Findings collected with severity, location, effort, recommendation
 - Score calculated per `shared/references/audit_scoring.md`
-- JSON returned to coordinator
+- Report written to `{output_dir}/627-observability.md` (atomic single Write call)
+- Summary returned to coordinator
 
 ---
 **Version:** 3.0.0

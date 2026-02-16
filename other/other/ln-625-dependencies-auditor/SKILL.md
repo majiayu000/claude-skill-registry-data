@@ -26,18 +26,19 @@ Specialized worker auditing dependency management, code reuse, and security vuln
 
 ## Inputs (from Coordinator)
 
-Receives `contextStore` with tech stack, package manifest paths, codebase root.
+Receives `contextStore` with tech stack, package manifest paths, codebase root, output_dir.
 
 **From ln-620 (codebase-auditor):** mode=full (default)
 **From ln-760 (security-setup):** mode=vulnerabilities_only
 
 ## Workflow
 
-1) Parse context + mode parameter
+1) Parse context + mode parameter + output_dir
 2) Run dependency checks (based on mode)
 3) Collect findings
 4) Calculate score
-5) Return JSON
+5) **Write Report:** Build full markdown report in memory per `shared/templates/audit_worker_report_template.md`, write to `{output_dir}/625-dependencies.md` in single Write call
+6) **Return Summary:** Return minimal summary to coordinator
 
 ---
 
@@ -141,49 +142,21 @@ Receives `contextStore` with tech stack, package manifest paths, codebase root.
 
 ## Output Format
 
-```json
-{
-  "category": "Dependencies & Reuse",
-  "mode": "full",
-  "score": 7,
-  "total_issues": 12,
-  "critical": 1,
-  "high": 3,
-  "medium": 5,
-  "low": 3,
-  "checks": [
-    {"id": "outdated_packages", "name": "Outdated Packages", "status": "failed", "details": "2 packages behind major versions"},
-    {"id": "unused_deps", "name": "Unused Dependencies", "status": "warning", "details": "4 unused dev dependencies"},
-    {"id": "available_natives", "name": "Available Natives", "status": "passed", "details": "No unnecessary polyfills"},
-    {"id": "custom_implementations", "name": "Custom Implementations", "status": "warning", "details": "2 custom utilities found"},
-    {"id": "vulnerability_scan", "name": "Vulnerability Scan (CVE)", "status": "failed", "details": "1 critical, 2 high vulnerabilities"}
-  ],
-  "findings": [
-    {
-      "severity": "CRITICAL",
-      "location": "package.json",
-      "issue": "lodash@4.17.15 has CVE-2021-23337 (CVSS 7.2)",
-      "principle": "Security / Vulnerability Management",
-      "recommendation": "Update to lodash@4.17.21",
-      "effort": "S",
-      "fix_type": "patch"
-    },
-    {
-      "severity": "HIGH",
-      "location": "package.json:15",
-      "issue": "express v4.17.0 (current: v4.19.2, 2 major versions behind)",
-      "principle": "Dependency Management / Security Updates",
-      "recommendation": "Update to v4.19.2 for security fixes",
-      "effort": "M"
-    }
-  ]
-}
+**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format.
+
+Write report to `{output_dir}/625-dependencies.md` with `category: "Dependencies & Reuse"` and checks: outdated_packages, unused_deps, available_natives, custom_implementations, vulnerability_scan.
+
+Return summary to coordinator:
+```
+Report written: docs/project/.audit/625-dependencies.md
+Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 ```
 
 ## Reference Files
 
 | File | Purpose |
 |------|---------|
+| `shared/templates/audit_worker_report_template.md` | Worker report file format |
 | `references/vulnerability_commands.md` | Ecosystem-specific audit commands |
 | `references/ci_integration_guide.md` | CI/CD integration guidance |
 | `shared/references/cvss_severity_mapping.md` | CVSS to severity level mapping |
@@ -200,11 +173,12 @@ Receives `contextStore` with tech stack, package manifest paths, codebase root.
 
 ## Definition of Done
 
-- contextStore parsed (including mode parameter)
+- contextStore parsed (including mode parameter and output_dir)
 - All applicable checks completed (5 for full, 1 for vulnerabilities_only)
 - Findings collected with severity, location, effort, fix_type, recommendation
 - Score calculated per `shared/references/audit_scoring.md`
-- JSON returned to coordinator
+- Report written to `{output_dir}/625-dependencies.md` (atomic single Write call)
+- Summary returned to coordinator
 
 ---
 **Version:** 4.0.0

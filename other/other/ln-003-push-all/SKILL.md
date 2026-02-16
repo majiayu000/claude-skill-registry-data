@@ -47,32 +47,18 @@ Check if related documentation needs updating:
 **Skip:** Version bumps (CHANGELOG, version fields) — those are done only on explicit user request.
 
 ### Phase 3: Lint Check
+**MANDATORY READ:** `shared/references/ci_tool_detection.md` (Discovery Hierarchy + Command Registry)
 
-Discover and run project linters before committing. Framework-agnostic — detect from project config.
+Discover and run project linters before committing, per ci_tool_detection.md.
 
-**Step 1: Discover linter setup**
-
-Search project for linter configuration (stop at first match per category):
-
-| Category | Config files to check | Typical commands |
-|----------|-----------------------|------------------|
-| JS/TS | `.eslintrc*`, `eslint.config.*`, `biome.json` | `npx eslint --fix`, `npx biome check --fix` |
-| Python | `pyproject.toml` (`[tool.ruff]`, `[tool.pylint]`), `.flake8`, `setup.cfg` | `ruff check --fix`, `pylint` |
-| .NET | `.editorconfig`, `Directory.Build.props` | `dotnet format` |
-| Go | `golangci-lint` in CI or Makefile | `golangci-lint run --fix` |
-| Styles | `.stylelintrc*` | `npx stylelint --fix` |
-| General | `Makefile` (`lint` target), `package.json` (`scripts.lint`) | `make lint`, `npm run lint` |
-
-Also check: `CLAUDE.md`, `README.md`, `CONTRIBUTING.md` for lint instructions.
+**Step 1: Discover linter setup** per ci_tool_detection.md discovery hierarchy. Also check: `CLAUDE.md`, `README.md`, `CONTRIBUTING.md` for lint instructions.
 
 **Step 2: Run linters with auto-fix**
 
-1. Run discovered lint commands with `--fix` flag (or equivalent)
+1. Run discovered lint commands with `--fix` flag (or equivalent per ci_tool_detection.md Auto-Fix column)
 2. If linter reports errors that auto-fix cannot resolve — fix manually
 3. If no linter config found in project — skip this phase (log: "No linter configuration found, skipping")
-
 **Step 3: Verify**
-
 1. Re-run linters without `--fix` to confirm zero errors
 2. If errors remain after 2 fix attempts — report remaining errors to user and proceed
 

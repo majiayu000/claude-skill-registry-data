@@ -19,15 +19,16 @@ Specialized worker auditing application lifecycle and entry points.
 
 ## Inputs (from Coordinator)
 
-Receives `contextStore` with tech stack, deployment type, codebase root.
+Receives `contextStore` with tech stack, deployment type, codebase root, output_dir.
 
 ## Workflow
 
-1) Parse context
+1) Parse context + output_dir
 2) Check lifecycle patterns
 3) Collect findings
 4) Calculate score
-5) Return JSON
+5) **Write Report:** Build full markdown report in memory per `shared/templates/audit_worker_report_template.md`, write to `{output_dir}/629-lifecycle.md` in single Write call
+6) **Return Summary:** Return minimal summary to coordinator
 
 ## Audit Rules
 
@@ -99,37 +100,19 @@ Receives `contextStore` with tech stack, deployment type, codebase root.
 
 ## Output Format
 
-```json
-{
-  "category": "Lifecycle",
-  "score": 7,
-  "total_issues": 4,
-  "critical": 0,
-  "high": 1,
-  "medium": 3,
-  "low": 0,
-  "checks": [
-    {"id": "bootstrap_order", "name": "Bootstrap Order", "status": "passed", "details": "Initialization sequence correct: config -> DB -> routes -> server"},
-    {"id": "graceful_shutdown", "name": "Graceful Shutdown", "status": "failed", "details": "No SIGTERM handler found"},
-    {"id": "resource_cleanup", "name": "Resource Cleanup", "status": "warning", "details": "DB connection closed, but file handles not released"},
-    {"id": "signal_handling", "name": "Signal Handling", "status": "warning", "details": "SIGINT handled, SIGTERM missing"},
-    {"id": "probes", "name": "Liveness/Readiness Probes", "status": "passed", "details": "/health and /ready endpoints present"}
-  ],
-  "findings": [
-    {
-      "severity": "HIGH",
-      "location": "src/index.ts:1-50",
-      "issue": "No SIGTERM handler for graceful shutdown",
-      "principle": "Graceful Shutdown / Resource Management",
-      "recommendation": "Add SIGTERM handler to close DB connections and server gracefully",
-      "effort": "M"
-    }
-  ]
-}
+**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format.
+
+Write report to `{output_dir}/629-lifecycle.md` with `category: "Lifecycle"` and checks: bootstrap_order, graceful_shutdown, resource_cleanup, signal_handling, probes.
+
+Return summary to coordinator:
+```
+Report written: docs/project/.audit/629-lifecycle.md
+Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 ```
 
 ## Reference Files
 
+- **Worker report template:** `shared/templates/audit_worker_report_template.md`
 - **Audit scoring formula:** `shared/references/audit_scoring.md`
 - **Audit output schema:** `shared/references/audit_output_schema.md`
 
@@ -143,11 +126,12 @@ Receives `contextStore` with tech stack, deployment type, codebase root.
 
 ## Definition of Done
 
-- contextStore parsed (deployment type identified)
+- contextStore parsed (deployment type, output_dir)
 - All 5 checks completed (bootstrap order, graceful shutdown, resource cleanup, signal handling, probes)
 - Findings collected with severity, location, effort, recommendation
 - Score calculated per `shared/references/audit_scoring.md`
-- JSON returned to coordinator
+- Report written to `{output_dir}/629-lifecycle.md` (atomic single Write call)
+- Summary returned to coordinator
 
 ---
 **Version:** 3.0.0

@@ -28,6 +28,7 @@ Specialized worker auditing API contracts, method signatures at service boundari
 - locations: string[]          # Service/API directories
 - adr_reference: string        # Path to related ADR
 - bestPractices: object        # Best practices from MCP Ref/Context7
+- output_dir: string           # e.g., "docs/project/.audit"
 
 # Domain-aware (optional, from coordinator)
 - domain_mode: "global" | "domain-aware"   # Default: "global"
@@ -104,42 +105,28 @@ scan_root = scan_path IF domain_mode == "domain-aware" ELSE codebase_root
 | Validation at boundaries (Pydantic, Zod) | +25 |
 | API response DTOs separate from domain | +20 |
 
-### Phase 4: Return Result
+### Phase 4: Write Report
 
-```json
-{
-  "pattern": "API Contracts",
-  "overall_score": 6.75,
-  "domain": "users",
-  "scan_path": "src/users/",
-  "scores": {
-    "compliance": 65,
-    "completeness": 70,
-    "quality": 55,
-    "implementation": 80
-  },
-  "checks": [
-    {"id": "layer_leakage", "name": "Layer Leakage", "status": "failed", "details": "..."},
-    {"id": "missing_dto", "name": "Missing DTO", "status": "warning", "details": "..."},
-    {"id": "entity_leakage", "name": "Entity Leakage", "status": "passed", "details": "..."},
-    {"id": "error_contracts", "name": "Error Contracts", "status": "warning", "details": "..."},
-    {"id": "redundant_overloads", "name": "Redundant Overloads", "status": "passed", "details": "..."}
-  ],
-  "codeReferences": ["app/services/translation/", "app/api/v1/"],
-  "issues": [
-    {
-      "severity": "HIGH",
-      "location": "app/services/user/service.py:23",
-      "issue": "Service accepts parsed_body: dict (HTTP layer leak)",
-      "principle": "API Contract / Layer Leakage",
-      "recommendation": "Create UserCreateDTO, accept typed params",
-      "effort": "M",
-      "domain": "users"
-    }
-  ],
-  "gaps": {},
-  "recommendations": []
-}
+**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format (ln-640 section: 4-score AUDIT-META + DATA-EXTENDED).
+
+```
+# Build markdown report in memory with:
+# - AUDIT-META (4-score variant: score + score_compliance/completeness/quality/implementation)
+# - Checks table (layer_leakage, missing_dto, entity_leakage, error_contracts, redundant_overloads)
+# - Findings table (issues sorted by severity)
+# - DATA-EXTENDED: issues array with principle + domain fields (for cross-domain aggregation)
+
+IF domain_mode == "domain-aware":
+  Write to {output_dir}/643-api-contract-{current_domain}.md
+ELSE:
+  Write to {output_dir}/643-api-contract.md
+```
+
+### Phase 5: Return Summary
+
+```
+Report written: docs/project/.audit/643-api-contract-users.md
+Score: 6.75/10 (C:65 K:70 Q:55 I:80) | Issues: 4 (H:2 M:1 L:1)
 ```
 
 ## Critical Rules
@@ -159,10 +146,12 @@ scan_root = scan_path IF domain_mode == "domain-aware" ELSE codebase_root
 - 4 scores calculated with justification
 - Issues identified with severity, location, suggestion, effort
 - If domain-aware: findings tagged with domain field
-- Structured result returned to coordinator
+- Report written to `{output_dir}/643-api-contract[-{domain}].md` (atomic single Write call)
+- Summary returned to coordinator
 
 ## Reference Files
 
+- **Worker report template:** `shared/templates/audit_worker_report_template.md`
 - Detection patterns: `references/detection_patterns.md`
 - Scoring rules: `../ln-640-pattern-evolution-auditor/references/scoring_rules.md`
 - Pattern library: `../ln-640-pattern-evolution-auditor/references/pattern_library.md`

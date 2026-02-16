@@ -192,6 +192,15 @@ Each Story creates ONLY the tables it needs (not all tables upfront).
    - Stories ordered by dependency (no forward deps per checklist #18)
    - Each Story: Test Strategy section exists but is **empty** (tests planned later by test planner)
    - Each Story: Technical Notes (architecture, integrations, **Standards Research from Phase 2**, guide links)
+   - Each Story: `orchestratorBrief` for ln-1000 pipeline lead:
+     ```
+     orchestratorBrief: {
+       tech: "<languages, frameworks, key libraries from Epic context>",
+       keyFiles: "<2-5 files/dirs most affected>",
+       approach: "<1-line implementation strategy>",
+       complexity: "Low|Medium|High (<reason>)"
+     }
+     ```
 
 5. **AC Quality Validation:** Rules per `creation_quality_checklist.md` #4. Workers (ln-221, ln-222) must validate.
 

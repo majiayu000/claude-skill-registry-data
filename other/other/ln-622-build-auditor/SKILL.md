@@ -22,36 +22,25 @@ Specialized worker auditing build health and code quality tooling.
 
 **MANDATORY READ:** Load `shared/references/task_delegation_pattern.md#audit-coordinator--worker-contract` for contextStore structure.
 
-Receives `contextStore` with: `tech_stack` (including build_tool, test_framework), `best_practices`, `principles`, `codebase_root`.
+Receives `contextStore` with: `tech_stack` (including build_tool, test_framework), `best_practices`, `principles`, `codebase_root`, `output_dir`.
 
 ## Workflow
 
-1) **Parse Context:** Extract tech stack, build tools, test framework from contextStore
+1) **Parse Context:** Extract tech stack, build tools, test framework, output_dir from contextStore
 2) **Run Build Checks:** Execute compiler, linter, type checker, tests (see Audit Rules below)
 3) **Collect Findings:** Record each violation with severity, location, effort, recommendation
 4) **Calculate Score:** Count violations by severity, calculate compliance score (X/10)
-5) **Return Results:** Return JSON with category, score, findings to coordinator
+5) **Write Report:** Build full markdown report in memory per `shared/templates/audit_worker_report_template.md`, write to `{output_dir}/622-build.md` in single Write call
+6) **Return Summary:** Return minimal summary to coordinator (see Output Format)
 
 ## Audit Rules (Priority: CRITICAL)
 
 ### 1. Compiler/Linter Errors
 **What:** Syntax errors, compilation failures, linter rule violations
 
-**Detection by Stack:**
+**Detection:** Per `shared/references/ci_tool_detection.md` Command Registry (Build + Linters sections). Check exit code, parse stderr for errors. Use JSON output flags where available.
 
-| Stack | Command | Error Detection |
-|-------|---------|-----------------|
-| Node.js/TypeScript | `npm run build` or `tsc --noEmit` | Check exit code, parse stderr for errors |
-| Python | `python -m py_compile *.py` | Check exit code, parse stderr |
-| Go | `go build ./...` | Check exit code, parse stderr |
-| Rust | `cargo build` | Check exit code, parse stderr |
-| Java | `mvn compile` | Check exit code, parse build log |
-
-**Linters:**
-- ESLint (JS/TS): `npx eslint . --format json` → parse JSON for errors
-- Pylint (Python): `pylint **/*.py --output-format=json`
-- RuboCop (Ruby): `rubocop --format json`
-- golangci-lint (Go): `golangci-lint run --out-format json`
+**Linters:** Per ci_tool_detection.md Linters table. Use `--format json` / `--output-format json` for structured output.
 
 **Severity:**
 - **CRITICAL:** Compilation fails, cannot build project
@@ -84,15 +73,7 @@ Receives `contextStore` with: `tech_stack` (including build_tool, test_framework
 ### 3. Type Errors
 **What:** Type mismatches, missing type annotations, type checker failures
 
-**Detection by Stack:**
-
-| Stack | Tool | Command |
-|-------|------|---------|
-| TypeScript | tsc | `tsc --noEmit --strict` |
-| Python | mypy | `mypy . --strict` |
-| Python | pyright | `pyright --warnings` |
-| Go | go vet | `go vet ./...` |
-| Rust | cargo | `cargo check` (type checks only) |
+**Detection:** Per `shared/references/ci_tool_detection.md` Command Registry (Type Checkers section).
 
 **Severity:**
 - **CRITICAL:** Type error prevents compilation (`tsc` fails, `cargo check` fails)
@@ -107,15 +88,7 @@ Receives `contextStore` with: `tech_stack` (including build_tool, test_framework
 ### 4. Failed or Skipped Tests
 **What:** Test suite failures, skipped tests, missing test coverage
 
-**Detection by Stack:**
-
-| Stack | Framework | Command |
-|-------|-----------|---------|
-| Node.js | Jest | `npm test -- --json --outputFile=test-results.json` |
-| Node.js | Mocha | `mocha --reporter json > test-results.json` |
-| Python | Pytest | `pytest --json-report --json-report-file=test-results.json` |
-| Go | go test | `go test ./... -json` |
-| Rust | cargo test | `cargo test --no-fail-fast` |
+**Detection:** Per `shared/references/ci_tool_detection.md` Command Registry (Test Frameworks section). Use JSON output flags for structured parsing.
 
 **Severity:**
 - **CRITICAL:** Test failures in CI/production code
@@ -152,9 +125,15 @@ Receives `contextStore` with: `tech_stack` (including build_tool, test_framework
 
 ## Output Format
 
-**MANDATORY READ:** Load `shared/references/audit_output_schema.md` for JSON structure.
+**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format.
 
-Return JSON with `category: "Build Health"` and checks: compilation_errors, linter_warnings, type_errors, test_failures, build_config.
+Write report to `{output_dir}/622-build.md` with `category: "Build Health"` and checks: compilation_errors, linter_warnings, type_errors, test_failures, build_config.
+
+Return summary to coordinator:
+```
+Report written: docs/project/.audit/622-build.md
+Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
+```
 
 ## Critical Rules
 
@@ -166,14 +145,16 @@ Return JSON with `category: "Build Health"` and checks: compilation_errors, lint
 
 ## Definition of Done
 
-- contextStore parsed successfully
+- contextStore parsed successfully (including output_dir)
 - All 5 build checks completed (compiler, linter, type checker, tests, config)
 - Findings collected with severity, location, effort, recommendation
 - Score calculated using penalty algorithm
-- JSON result returned to coordinator
+- Report written to `{output_dir}/622-build.md` (atomic single Write call)
+- Summary returned to coordinator
 
 ## Reference Files
 
+- **Worker report template:** `shared/templates/audit_worker_report_template.md`
 - **Audit scoring formula:** `shared/references/audit_scoring.md`
 - **Audit output schema:** `shared/references/audit_output_schema.md`
 - Build audit rules: [references/build_rules.md](references/build_rules.md)

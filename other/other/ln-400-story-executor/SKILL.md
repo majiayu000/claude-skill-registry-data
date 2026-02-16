@@ -51,13 +51,26 @@ Before delegating a Todo task, verify its plan against current codebase:
 **Skip Context Review for:** To Review tasks, To Rework tasks, test tasks when impl freshly Done, tasks created <24h ago.
 
 ### Phase 4: Task Loop
-For each task by priority (To Review > To Rework > Todo):
-1. Delegate to worker via Task tool (see Worker Invocation table)
-2. Reload metadata after subagent completes (task count may increase — ln-402 creates [BUG] tasks)
-3. If worker sets status != To Review → STOP and report
-4. **After ln-401/ln-403/ln-404:** Immediately invoke ln-402 on same task
 
-> **Execute → Review → Next.** Never skip review. Never batch reviews.
+**Priority order:** To Review > To Rework > Todo (foundation-first within each status).
+
+**Group-based dispatch for Todo tasks:**
+
+1. **Parse Parallel Groups:** Extract `**Parallel Group:** {N}` from each Todo task. Tasks without this field = each gets its own group (sequential, backward compatible).
+2. **Process To Review / To Rework first** (always sequential, one at a time).
+3. **For each Parallel Group** (ascending order):
+   - **Single task in group:** Sequential execution (same as current behavior):
+     1. Delegate to worker via Task tool
+     2. After executor completes → immediately invoke ln-402 on same task
+     3. Reload metadata (task count may change — ln-402 creates [BUG] tasks)
+   - **Multiple tasks in group:** Parallel execution via Task tool subagents:
+     1. Spawn all tasks in group concurrently (multiple Task tool calls in single message)
+     2. Wait for ALL subagents to complete
+     3. Review each task sequentially via ln-402 (one at a time — review cannot be parallelized)
+     4. Reload metadata after all reviews
+4. If any worker sets status != To Review → STOP and report.
+
+> **Execute → Review → Next.** Never skip review. Reviews are always sequential (ln-402 inline).
 
 ### Phase 5: Completion
 When all tasks Done:
@@ -107,6 +120,7 @@ Before each task, add BOTH steps:
 6. **Story status:** ln-400 handles Todo→In Progress→**To Review**. NEVER set Story to Done — only the quality gate (5XX) can do that after full quality check
 7. **Commit policy:** Only ln-402 commits code. Workers (ln-401/ln-403/ln-404) leave changes uncommitted for ln-402 to review and commit with task ID reference.
 8. **[BUG] tasks:** ln-402 may create new [BUG] tasks mid-review. After metadata reload, reprioritize — new tasks processed in next loop iteration.
+9. **Parallel groups:** Tasks in same group execute concurrently via Task tool subagents. Reviews (ln-402) remain sequential. If `**Parallel Group:**` missing on any task, fall back to fully sequential execution.
 
 ## Anti-Patterns
 - ❌ Running `mypy`/`ruff`/`pytest` directly instead of skill invocation
@@ -129,9 +143,9 @@ When invoked in Plan Mode (agent cannot execute), generate execution plan instea
 ```
 ## Execution Plan for Story {STORY-ID}: {Title}
 
-| # | Task ID | Title | Status | Executor | Reviewer |
-|---|---------|-------|--------|----------|----------|
-| 1 | {ID} | {Title} | {Status} | ln-40X | ln-402 |
+| # | Task ID | Title | Status | Group | Executor | Reviewer |
+|---|---------|-------|--------|-------|----------|----------|
+| 1 | {ID} | {Title} | {Status} | {N} | ln-40X | ln-402 |
 
 ### Sequence
 1. [Execute] {Task-1} via ln-401-task-executor

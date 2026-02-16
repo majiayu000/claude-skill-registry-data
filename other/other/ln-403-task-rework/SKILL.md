@@ -29,7 +29,8 @@ Executes rework for a single task marked To Rework and hands it back for review.
 2) **Plan fixes:** Map each comment to an action; confirm no new scope added.
 3) **Implement:** Follow task plan/checkboxes; address config/hardcoded issues; update docs/tests noted in Affected Components and Existing Code Impact.
 4) **Quality:** Run typecheck/lint (or project equivalents); ensure fixes reflect guides/manuals/ADRs/research.
-5) **Handoff:** Set task to To Review (Linear: update_issue; File: Edit status line); move it in kanban; add summary comment referencing resolved feedback.
+5) **Root Cause Analysis:** Ask "Why did the agent produce incorrect code?" Classify: missing context | wrong pattern | unclear AC | gap in docs/templates. If doc/template gap found → update the relevant file (guide, template, CLAUDE.md) to prevent recurrence.
+6) **Handoff:** Set task to To Review (Linear: update_issue; File: Edit status line); move it in kanban; add summary comment referencing resolved feedback + root cause classification.
 
 ## Critical Rules
 - Single-task only; never bulk update.
@@ -42,7 +43,8 @@ Executes rework for a single task marked To Rework and hands it back for review.
 - Task and review feedback fully read; actions mapped.
 - Fixes applied; docs/tests updated as required.
 - Quality checks passed (typecheck/lint or project standards).
-- Status set to To Review; kanban updated; summary comment added referencing fixed items.
+- Root cause classified (missing context | wrong pattern | unclear AC | doc gap); doc/template updated if gap found.
+- Status set to To Review; kanban updated; summary comment with fixed items + root cause.
 
 ## Reference Files
 - **[MANDATORY] Problem-solving approach:** `shared/references/problem_solving.md`

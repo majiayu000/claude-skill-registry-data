@@ -89,7 +89,7 @@ To create expected files:
    - Summary table with timing
 5) Make script executable (`chmod +x`)
 
-### Phase 2.5: Update Documentation
+### Phase 3: Update Documentation
 1) Update `tests/manual/README.md`:
    - Add new test to "Available Test Suites" table
    - Include Story ID, AC covered, run command
@@ -97,7 +97,7 @@ To create expected files:
    - Add call to new script in SUITES array
    - Maintain execution order (00-setup first, then numbered suites)
 
-### Phase 3: Execute and report
+### Phase 4: Execute and report
 1) Rebuild Docker containers (no cache), ensure healthy
 2) Run generated script, capture output
 3) Parse results (pass/fail counts)

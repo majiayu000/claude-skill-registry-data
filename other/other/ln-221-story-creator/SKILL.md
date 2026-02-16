@@ -43,6 +43,7 @@ Invoked by ln-220-story-coordinator (Phase 5a for CREATE, Phase 5c for ADD).
       statement: {persona, capability, value},
       ac: [GWT scenarios],
       technicalNotes: {architecture, integrations, performance},
+      orchestratorBrief: {tech, keyFiles, approach, complexity},
       estimatedHours: 12,
       testCounts: {e2e: 2, integration: 5, unit: 11}
     }
@@ -96,7 +97,7 @@ For EACH Story in IDEAL plan:
 | **3. Acceptance Criteria** | Copy AC from idealPlan (3-5 GWT scenarios) |
 | **4. Implementation Tasks** | Placeholder: "Tasks created via ln-300-task-coordinator after ln-310-story-validator" |
 | **5. Test Strategy** | Copy test counts from idealPlan, Risk-Based Testing note |
-| **6. Technical Notes** | **INSERT Standards Research** in Library Research subsection |
+| **6. Technical Notes** | **INSERT Orchestrator Brief** from `idealPlan[i].orchestratorBrief` (markers `<!-- ORCHESTRATOR_BRIEF_START/END -->`). **INSERT Standards Research** in Library Research subsection |
 | **7. Definition of Done** | Standard checklist from template |
 | **8. Dependencies** | Empty OR "Depends On: US00X" if ordering implies dependency |
 

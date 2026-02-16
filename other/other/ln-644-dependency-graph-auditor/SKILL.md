@@ -30,6 +30,7 @@ L3 Worker that builds and analyzes the module dependency graph to enforce archit
 ```
 - architecture_path: string    # Path to docs/architecture.md
 - codebase_root: string        # Root directory to scan
+- output_dir: string           # e.g., "docs/project/.audit"
 
 # Domain-aware (optional, from coordinator)
 - domain_mode: "global" | "domain-aware"   # Default: "global"
@@ -330,7 +331,7 @@ ELSE:
   # Suggest: output note "Run with update_baseline=true to freeze current violations"
 ```
 
-### Phase 7: Score + Return
+### Phase 7: Calculate Score
 
 **MANDATORY READ:** Load `shared/references/audit_scoring.md` for unified scoring formula.
 
@@ -341,63 +342,28 @@ score = max(0, 10 - penalty)
 
 **Note:** When baseline is active, penalty is calculated from `active_findings` only (new violations), not frozen ones.
 
-```json
-{
-  "category": "Dependency Graph",
-  "score": 6.5,
-  "total_issues": 8,
-  "critical": 1, "high": 3, "medium": 3, "low": 1,
-  "architecture": {
-    "detected": "hybrid",
-    "confidence": "MEDIUM",
-    "zones": [
-      {"path": "src/core/", "preset": "layered"},
-      {"path": "src/features/", "preset": "vertical"}
-    ]
-  },
-  "graph_stats": {
-    "modules_analyzed": 12,
-    "edges": 34,
-    "cycles_detected": 2,
-    "ccd": 42,
-    "nccd": 1.3
-  },
-  "cycles": [
-    {
-      "type": "transitive",
-      "path": ["auth", "billing", "notify", "auth"],
-      "severity": "CRITICAL",
-      "fix": "Apply DIP: extract interface in auth, implement in notify"
-    }
-  ],
-  "boundary_violations": [
-    {
-      "rule_type": "forbidden",
-      "from": "domain",
-      "to": "infrastructure",
-      "file": "domain/user.py:12",
-      "severity": "CRITICAL",
-      "reason": "Domain must not depend on infrastructure"
-    }
-  ],
-  "sdp_violations": [
-    {
-      "from": "domain",
-      "to": "utils",
-      "I_from": 0.2,
-      "I_to": 0.8,
-      "severity": "HIGH"
-    }
-  ],
-  "metrics": {
-    "users": {"Ca": 3, "Ce": 5, "I": 0.625},
-    "billing": {"Ca": 1, "Ce": 7, "I": 0.875}
-  },
-  "baseline": {"new": 3, "resolved": 1, "frozen": 4},
-  "findings": [],
-  "domain": "users",
-  "scan_path": "src/users/"
-}
+### Phase 8: Write Report
+
+**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format (ln-640 section: standard AUDIT-META + DATA-EXTENDED).
+
+```
+# Build markdown report in memory with:
+# - AUDIT-META (standard penalty-based: score, counts)
+# - Checks table (cycle_detection, boundary_rules, sdp_validation, metrics_thresholds, baseline_comparison)
+# - Findings table (active violations sorted by severity)
+# - DATA-EXTENDED: {graph_stats, cycles, boundary_violations, sdp_violations, metrics, baseline}
+
+IF domain_mode == "domain-aware":
+  Write to {output_dir}/644-dep-graph-{current_domain}.md
+ELSE:
+  Write to {output_dir}/644-dep-graph.md
+```
+
+### Phase 9: Return Summary
+
+```
+Report written: docs/project/.audit/644-dep-graph-users.md
+Score: 6.5/10 | Issues: 8 (C:1 H:3 M:3 L:1)
 ```
 
 ## Critical Rules
@@ -422,10 +388,12 @@ score = max(0, 10 - penalty)
 - Baseline applied if exists (only new violations reported)
 - If domain-aware: all Grep/Glob scoped to scan_path, findings tagged with domain
 - Score calculated per audit_scoring.md
-- Result returned to coordinator
+- Report written to `{output_dir}/644-dep-graph[-{domain}].md` (atomic single Write call)
+- Summary returned to coordinator
 
 ## Reference Files
 
+- **Worker report template:** `shared/templates/audit_worker_report_template.md`
 - Boundary rules & presets: `references/dependency_rules.md`
 - Metrics & thresholds: `references/graph_metrics.md`
 - Import patterns: `references/import_patterns.md`

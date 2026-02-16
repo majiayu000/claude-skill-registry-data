@@ -19,15 +19,16 @@ Specialized worker auditing concurrency and async patterns.
 
 ## Inputs (from Coordinator)
 
-Receives `contextStore` with tech stack, language, codebase root.
+Receives `contextStore` with tech stack, language, codebase root, output_dir.
 
 ## Workflow
 
-1) Parse context
+1) Parse context + output_dir
 2) Check concurrency patterns
 3) Collect findings
 4) Calculate score
-5) Return JSON
+5) **Write Report:** Build full markdown report in memory per `shared/templates/audit_worker_report_template.md`, write to `{output_dir}/628-concurrency.md` in single Write call
+6) **Return Summary:** Return minimal summary to coordinator
 
 ## Audit Rules
 
@@ -156,38 +157,19 @@ Receives `contextStore` with tech stack, language, codebase root.
 
 ## Output Format
 
-```json
-{
-  "category": "Concurrency",
-  "score": 7,
-  "total_issues": 4,
-  "critical": 0,
-  "high": 2,
-  "medium": 2,
-  "low": 0,
-  "checks": [
-    {"id": "race_conditions", "name": "Race Conditions", "status": "passed", "details": "No shared state modified without synchronization"},
-    {"id": "missing_await", "name": "Missing Await", "status": "failed", "details": "2 fire-and-forget async calls found"},
-    {"id": "resource_contention", "name": "Resource Contention", "status": "warning", "details": "DB pool_size=3 may be insufficient"},
-    {"id": "thread_safety", "name": "Thread Safety", "status": "passed", "details": "All shared state properly synchronized"},
-    {"id": "deadlock_potential", "name": "Deadlock Potential", "status": "passed", "details": "No nested locks or inconsistent ordering"},
-    {"id": "blocking_io", "name": "Blocking I/O", "status": "failed", "details": "time.sleep in async context"}
-  ],
-  "findings": [
-    {
-      "severity": "HIGH",
-      "location": "src/services/payment.ts:45",
-      "issue": "Shared state 'balanceCache' modified without synchronization",
-      "principle": "Thread Safety / Concurrency Control",
-      "recommendation": "Use mutex or atomic operations for balanceCache updates",
-      "effort": "M"
-    }
-  ]
-}
+**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format.
+
+Write report to `{output_dir}/628-concurrency.md` with `category: "Concurrency"` and checks: race_conditions, missing_await, resource_contention, thread_safety, deadlock_potential, blocking_io.
+
+Return summary to coordinator:
+```
+Report written: docs/project/.audit/628-concurrency.md
+Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 ```
 
 ## Reference Files
 
+- **Worker report template:** `shared/templates/audit_worker_report_template.md`
 - **Audit scoring formula:** `shared/references/audit_scoring.md`
 - **Audit output schema:** `shared/references/audit_output_schema.md`
 
@@ -201,11 +183,12 @@ Receives `contextStore` with tech stack, language, codebase root.
 
 ## Definition of Done
 
-- contextStore parsed (language and concurrency model identified)
+- contextStore parsed (language, concurrency model, output_dir)
 - All 6 checks completed (race conditions, missing await, resource contention, thread safety, deadlock potential, blocking I/O)
 - Findings collected with severity, location, effort, recommendation
 - Score calculated per `shared/references/audit_scoring.md`
-- JSON returned to coordinator
+- Report written to `{output_dir}/628-concurrency.md` (atomic single Write call)
+- Summary returned to coordinator
 
 ---
 **Version:** 3.0.0

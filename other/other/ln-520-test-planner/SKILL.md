@@ -24,7 +24,7 @@ This skill should be used when:
 
 **Prerequisites:**
 - All implementation Tasks in Story status = Done
-- Regression tests passed (ln-513)
+- Regression tests passed (ln-514)
 - Code quality checked (ln-511)
 
 ## Pipeline Overview

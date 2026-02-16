@@ -62,27 +62,56 @@ Additional prefixes: `TEST-` (coverage gaps), `ARCH-` (architecture), `DOC-` (do
 2) Load Story + task metadata from Linear (no full descriptions)
 3) Detect test task status (exists? Done?)
 
-### Phase 2: Quality Checks (delegate to ln-510)
+### Phase 2: Fast-Track Decision
+
+Stories with high readiness (validated pre-execution) can skip expensive checks.
+
+```
+IF readiness_score available in CONTEXT:
+  IF readiness_score == 10:
+    fast_track = true
+  ELSE:
+    fast_track = false
+ELSE:
+  fast_track = false    # No readiness data — full gate
+```
+
+**Fast-track matrix (readiness == 10):**
+
+| Component | Full Gate | Fast-Track | Why |
+|-----------|-----------|------------|-----|
+| ln-514 regression tests | RUN | RUN | Always critical, cheap |
+| Linters | RUN | RUN | Cheap, catches formatting |
+| Criteria Validation (3 checks) | RUN | RUN | Cheap, validates AC coverage |
+| ln-511 metrics + static analysis | RUN | **RUN** | **Catches complexity/DRY/dead code that per-task review misses** |
+| ln-511 MCP Ref (OPT-, BP-, PERF-) | RUN | **SKIP** | Expensive external calls |
+| ln-513 agent review | RUN | **SKIP** | Expensive external calls |
+| ln-520 test planning | RUN | **SKIP** | Redundant for pre-validated |
+| NFR validation | All dims | **Security only** | Perf/Maintainability less critical |
+
+### Phase 3: Quality Checks (delegate to ln-510)
 
 1) **Invoke ln-510-quality-coordinator** via Skill tool
-   - Pass: Story ID
-   - ln-510 runs: code quality (ln-511) -> criteria validation -> linters -> regression (ln-513)
+   - Pass: Story ID (+ `--fast-track` flag if fast_track == true)
+   - Full: ln-510 runs: code quality (ln-511) -> criteria validation -> linters -> regression (ln-514)
+   - Fast-track: ln-510 runs: code metrics + static (ln-511 `--skip-mcp-ref`) -> criteria -> linters -> regression (ln-514) — skips MCP Ref/ln-513
 2) **If ln-510 returns FAIL:**
    - Create fix/refactor tasks via ln-301
    - Stop — return to ln-400
 
-### Phase 3: Test Planning (delegate to ln-520)
+### Phase 4: Test Planning (delegate to ln-520)
 
-1) Check test task status:
+1) **IF fast_track: SKIP Phase 4 entirely** (proceed to Phase 5)
+2) Check test task status:
    - **No test task** -> invoke ln-520-test-planner to create
    - **Test task exists, not Done** -> report status, stop
-   - **Test task Done** -> proceed to Phase 4
+   - **Test task Done** -> proceed to Phase 5
 
 2) **Invoke ln-520-test-planner** via Skill tool (if needed)
    - Pass: Story ID
    - ln-520 runs: research (ln-521) -> manual testing (ln-522) -> auto test planning (ln-523)
 
-### Phase 4: Test Verification (after test task Done)
+### Phase 5: Test Verification (after test task Done)
 
 1) Load test task from Linear
 2) Verify limits and priority:
@@ -92,14 +121,15 @@ Additional prefixes: `TEST-` (coverage gaps), `ARCH-` (architecture), `DOC-` (do
 3) Verify Story AC coverage by tests
 4) Check infra/docs updates present
 
-### Phase 5: Final Verdict
+### Phase 6: Final Verdict
 
 1) **Calculate Quality Score** (see formula above)
-2) **Run NFR checks** per dimensions table
+2) **Run NFR checks** per dimensions table (fast_track: Security only; full: all dimensions)
 3) **Assign issue prefixes:** SEC-, PERF-, MNT-, TEST-, ARCH-, DOC-
 4) **Determine Gate verdict** per 4-Level Gate Model
 5) Post Linear comment with gate verdict
-6) Update Story status (Done for PASS/CONCERNS/WAIVED, or create fix tasks for FAIL)
+6) **If FAIL:** Record root cause analysis — classify each failure (missing_context | wrong_pattern | unclear_ac | doc_gap | test_gap). Append to `docs/project/architecture_health.md` under `## Root Cause Log` (create section if missing). Format: `| {date} | {story_id} | {issue_id} | {classification} | {action_taken} |`
+7) Update Story status (Done for PASS/CONCERNS/WAIVED, or create fix tasks for FAIL)
 
 **TodoWrite format (mandatory):**
 ```
@@ -154,6 +184,7 @@ Skill(skill: "ln-520-test-planner", args: "{storyId}")
   issues: [{id: "SEC-001", severity: high|medium|low, finding: "...", action: "..."}]
   ```
 - Story set to Done (PASS/CONCERNS/WAIVED) or fix tasks created (FAIL)
+- Root cause analysis recorded in architecture_health.md for every FAIL verdict
 - Comment with gate verdict posted
 
 ## Reference Files

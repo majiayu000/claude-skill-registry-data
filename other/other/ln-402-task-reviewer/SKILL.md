@@ -36,10 +36,10 @@ Detect operating mode at startup:
 - Steps 1-2: Load task context (read-only, OK in plan mode)
 - Generate REVIEW PLAN (files, checks) → write to plan file
 - Call ExitPlanMode → STOP. Do NOT execute review.
-- Steps 3-7: After approval → execute full review
+- Steps 3-8: After approval → execute full review
 
 **Normal Mode:**
-- Steps 1-7: Standard workflow without stopping
+- Steps 1-8: Standard workflow without stopping
 
 ## Plan Mode Support
 
@@ -76,6 +76,7 @@ Files to review:
 | 9 | Tests | Updated/risk-based limits |
 | 10 | AC | 4 criteria validation |
 | 11 | Side-effects | Pre-existing bugs in touched files |
+| 12 | CI Checks | lint/typecheck pass per ci_tool_detection.md |
 
 Expected output: Verdict (Done/To Rework) + Issues + Fix actions
 ```
@@ -101,6 +102,7 @@ Step 2: Read Context
 Step 3: Review Checks
   - Verify approach alignment with Story Technical Approach
   - Check clean code: no dead code, no backward compat shims
+  - Cross-file DRY: Grep src/ for new function/class names (count mode). 3+ similar → CONCERN
   - Check config hygiene, error handling, logging
   - Check comments, naming, docs updates
   - Verify tests updated/run (risk-based limits for test tasks)
@@ -114,7 +116,10 @@ Step 5: Side-Effect Bug Detection
 Step 6: Decision
   - Apply minor fixes or set To Rework with guidance
 
-Step 7: Update & Commit
+Step 7: Mechanical Verification
+  - Run lint/typecheck per ci_tool_detection.md (only if verdict=Done)
+
+Step 8: Update & Commit
   - Set task status, update kanban, post review comment
   - If Done: commit ALL uncommitted changes in branch (git add -A)
 ```
@@ -123,8 +128,10 @@ Step 7: Update & Commit
 1) **Receive task:** Get task ID from orchestrator (ln-400). Load full task and parent Story independently. Detect type (label "tests" -> test task, else implementation/refactor).
 2) **Read context:** Full task + parent Story; load affected components/docs; review diffs if available.
 3) **Review checks:**
+   **MANDATORY READ:** `shared/references/clean_code_checklist.md`
    - Approach: diff aligned with Technical Approach in Story. If different → rationale documented in code comments.
-   - **Clean code:** Per `shared/references/clean_code_checklist.md` — 4 categories: unreachable code, unused exports/variables, commented-out code, backward-compat shims/aliases. Replaced implementations fully removed. If refactoring changed API — callers updated, old signatures removed. <!-- Defense-in-depth: also checked by ln-511 MNT-DC- -->
+   - **Clean code:** Per checklist — verify all 4 categories. Replaced implementations fully removed. If refactoring changed API — callers updated, old signatures removed. <!-- Defense-in-depth: also checked by ln-511 MNT-DC- -->
+   - **Cross-file DRY:** For each NEW function/class/handler created by task, Grep `src/` for similar names/patterns (count mode). If 3+ files contain similar logic → add CONCERN: `MNT-DRY-CROSS: {pattern} appears in {count} files — consider extracting to shared module.` This catches cross-story duplication that per-task review misses. <!-- Defense-in-depth: also checked by ln-511 MNT-DRY- -->
    - No hardcoded creds/URLs/magic numbers; config in env/config.
    - Error handling: all external calls (API, DB, file I/O) wrapped in try/catch or equivalent. No swallowed exceptions. Layering respected; reuse existing components. <!-- Defense-in-depth: layers also checked by ln-511 ARCH-LB- -->
    - Logging: errors at ERROR; auth/payment events at INFO; debug data at DEBUG. No sensitive data in logs.
@@ -162,7 +169,14 @@ Step 7: Update & Commit
    - If issues remain: set To Rework with comment explaining why (best-practice ref) and how to fix.
    - Side-effect bugs do NOT block current task's Done status (they are separate tasks).
    - **If Done:** commit ALL uncommitted changes in the branch (not just task-related files): `git add -A && git commit -m "Implement {task_id}: {task_title}"`. This includes any changes from previous tasks, auto-fixes, or generated files — everything currently unstaged/staged goes into this commit.
-7) **Update:** Set task status in Linear; update kanban: if Done → **remove task from kanban** (Done section tracks Stories only, not individual Tasks); if To Rework → move task to To Rework section; add review comment with findings/actions. If side-effect bugs created, mention them in comment.
+7) **Mechanical Verification (if Done):**
+   **MANDATORY READ:** `shared/references/ci_tool_detection.md`
+   IF verdict == Done:
+   - Detect lint/typecheck commands per discovery hierarchy in ci_tool_detection.md
+   - Run detected checks (timeouts per guide: 2min linters, 5min typecheck)
+   - IF any FAIL → override verdict to To Rework with last 50 lines of output
+   - IF no tooling detected → SKIP with info message
+8) **Update:** Set task status in Linear; update kanban: if Done → **remove task from kanban** (Done section tracks Stories only, not individual Tasks); if To Rework → move task to To Rework section; add review comment with findings/actions. If side-effect bugs created, mention them in comment.
 
 ## Review Quality Score
 
@@ -193,9 +207,10 @@ Step 7: Update & Commit
 - Quality gate: all in-scope issues resolved before Done, OR send back with clear fix guidance.
 - Test-task violations (limits/priority ≤15) → To Rework.
 - Keep task language (EN/RU) in edits/comments.
+- Mechanical checks (lint/typecheck) run ONLY when verdict is Done; skip for To Rework.
 
 ## Definition of Done
-- Steps 1-7 completed: context loaded, review checks passed, AC validated, side-effect bugs created, decision applied.
+- Steps 1-8 completed: context loaded, review checks passed, AC validated, side-effect bugs created, mechanical verification passed, decision applied.
 - If Done: ALL uncommitted changes committed (`git add -A`) with task ID; task removed from kanban. If To Rework: task moved with fix guidance.
 - Review comment posted (findings + [BUG] list if any).
 
@@ -204,6 +219,7 @@ Step 7: Update & Commit
 - **AC validation rules:** `shared/references/ac_validation_rules.md`
 - AC Validation Checklist: `references/ac_validation_checklist.md` (4 criteria: Completeness, Specificity, Dependencies, DB Creation)
 - **Clean code checklist:** `shared/references/clean_code_checklist.md`
+- **CI tool detection:** `shared/references/ci_tool_detection.md`
 - Kanban format: `docs/tasks/kanban_board.md`
 
 ---

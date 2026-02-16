@@ -33,7 +33,7 @@ Workers (ln-301, ln-302) handle the actual Linear/File operations based on detec
 
 ## Workflow (concise)
 - **Phase 1 Discovery:** Auto-discover Team ID (docs/tasks/kanban_board.md); parse Story ID from request.
-- **Phase 2 Decompose (always):** Load Story (AC, Technical Notes, Context), assess complexity, build IDEAL plan (1-8 implementation tasks only), apply Foundation-First execution order, **validate Task Independence**, **define verification methods for each task AC**, extract guide links.
+- **Phase 2 Decompose (always):** Load Story (AC, Technical Notes, Context), assess complexity, build IDEAL plan (1-8 implementation tasks only), **scan for reusable patterns** (Grep `src/` for error handlers, validators, utilities relevant to task categories — count only; if found, append `**Pattern Hint:** {count} existing {category} patterns in src/. Review for reuse before creating new (Step 4a in ln-401).` to relevant task descriptions), apply Foundation-First execution order, **validate Task Independence**, **assign Parallel Groups**, **define verification methods for each task AC**, extract guide links.
 - **Phase 3 Check & Detect Mode:** Query Linear for existing tasks (metadata only). Detect mode by count + user keywords (add/replan).
 - **Phase 4 Delegate:** Call the right worker with Story data, IDEAL plan/append request, guide links, existing task IDs if any; autoApprove=true.
 - **Phase 5 Verify:** Ensure worker returns URLs/summary and updated kanban_board.md; report result.
@@ -51,11 +51,12 @@ After building IDEAL plan (Phase 2), score 5 criteria:
 | 3 | **Tech confidence** | All referenced technologies/patterns are known or researched |
 | 4 | **Scope isolation** | Tasks don't overlap with other Stories' scope |
 | 5 | **Architecture compliance** | Tasks reference correct layers (DB→Repo→Service→API), no planned cross-layer violations (e.g., API task doing direct DB calls) |
+| 6 | **Parallel groups valid** | Tasks in same group have no mutual dependencies; all deps point to earlier groups; numbers sequential |
 
-**Score = count of PASS criteria (0-5)**
-- 5/5: Delegate to worker
-- 3-4/5: Show warnings to user, fix or proceed
-- <3/5: Rework plan before delegation
+**Score = count of PASS criteria (0-6)**
+- 5-6/6: Delegate to worker
+- 3-4/6: Show warnings to user, fix or proceed
+- <3/6: Rework plan before delegation
 
 ## Verification Methods for Task AC
 
@@ -82,6 +83,36 @@ Rules per `creation_quality_checklist.md` #19 (dependencies) and #13 (Foundation
 - ✅ RIGHT: "Task 1: Generate keys" → "Task 2: Validate token (uses Task 1 keys)"
 
 **If forward dependency detected:** Reorder, refactor to remove dependency, or split into sequential parts.
+
+## Parallel Group Assignment
+
+After building IDEAL plan and validating independence, assign **Parallel Group** numbers to enable concurrent execution in ln-400.
+
+**Algorithm:**
+```
+group = 1
+FOR EACH task T IN ordered_plan:
+  deps = tasks that T depends on (from Related/Context)
+  IF any dep is in CURRENT group:
+    group++
+  T.parallel_group = group
+```
+
+**Example:**
+| Task | Dependencies | Group |
+|------|-------------|-------|
+| T1: DB migration | none | 1 |
+| T2: UserRepo | T1 | 2 |
+| T3: ProductRepo | T1 | 2 |
+| T4: UserService | T2 | 3 |
+| T5: API endpoint | T4 | 4 |
+
+**Rules:**
+- Tasks in the same group have NO mutual dependencies (only depend on previous groups)
+- Group numbers are sequential (1, 2, 3...), no gaps
+- Single-task groups are valid (sequential execution, same as current behavior)
+- Write `**Parallel Group:** {N}` in each task document (per `shared/templates/task_template_implementation.md`)
+- **Backward compatibility:** if task lacks `**Parallel Group:**` field, ln-400 treats it as its own group (sequential)
 
 ## Mode Matrix
 | Condition | Mode | Delegate | Payload |

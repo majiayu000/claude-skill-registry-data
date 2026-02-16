@@ -63,7 +63,9 @@ Step 3: Start Work
   - Set task to In Progress, update kanban
 
 Step 4: Implement
-  - Follow task plan/AC, apply KISS/YAGNI
+  - 4a Pattern Reuse: IF creating new file/utility, Grep src/ for existing similar patterns
+    (error handlers, validators, HTTP wrappers, config loaders). Reuse if found.
+  - 4b Follow task plan/AC, apply KISS/YAGNI
   - Update docs and existing tests if impacted
   - Execute verify: methods from task AC (test/command/inspect)
 
@@ -79,7 +81,7 @@ Step 6: Finish
 1) **Load context:** Fetch full task description (Linear: get_issue; File: Read task file); read linked guides/manuals/ADRs/research; auto-discover team/config if needed.
 2) **Receive task:** Get task ID from orchestrator (ln-400); load full task description.
 3) **Start work:** Update this task to In Progress (Linear: update_issue; File: Edit status line); move it in kanban (keep Epic/Story indent).
-4) **Implement (with verification loop):** Follow checkboxes/plan; keep it simple; avoid hardcoded values; reuse existing components; add Task ID comment (`// See PROJ-123`) to new code blocks; update docs noted in Affected Components; update existing tests if impacted (no new tests here). After implementation, execute `verify:` methods from task AC: test → run specified test; command → execute and check output; inspect → verify file/content exists. If any verify fails → fix before proceeding.
+4) **Implement (with verification loop):** **Before writing new utilities/handlers**, Grep `src/` for existing patterns (error handling, validation, config access). Reuse if found; if not reusable, document rationale in code comment. Follow checkboxes/plan; keep it simple; avoid hardcoded values; reuse existing components; add Task ID comment (`// See PROJ-123`) to new code blocks; update docs noted in Affected Components; update existing tests if impacted (no new tests here). After implementation, execute `verify:` methods from task AC: test → run specified test; command → execute and check output; inspect → verify file/content exists. If any verify fails → fix before proceeding.
 5) **Quality:** Run typecheck and lint (or project equivalents); ensure instructions in Existing Code Impact are addressed.
 6) **Finish:** Mark task To Review (Linear: update_issue; File: Edit status line); update kanban to To Review; add summary comment (what changed, tests run, docs touched).
 
@@ -87,7 +89,7 @@ Step 6: Finish
 
 **Context:** Self-assessment before To Review reduces review round-trips and catches obvious issues early.
 
-Before setting To Review, verify all 5 items:
+Before setting To Review, verify all 6 items:
 
 | # | Check | Verify |
 |---|-------|--------|
@@ -97,6 +99,7 @@ Before setting To Review, verify all 5 items:
 | 3 | **Config hygiene** | No hardcoded creds/URLs/magic numbers |
 | 4 | **Docs updated** | Affected Components docs reflect changes |
 | 5 | **Tests pass** | Existing tests still pass after changes |
+| 6 | **Pattern reuse** | New utilities checked against existing codebase; no duplicate patterns introduced |
 
 **If any check fails:** Fix before setting To Review. Do not rely on reviewer to catch preventable issues.
 

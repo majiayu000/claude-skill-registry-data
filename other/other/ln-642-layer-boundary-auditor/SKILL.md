@@ -30,6 +30,7 @@ L3 Worker that audits architectural layer boundaries and detects violations.
 - architecture_path: string    # Path to docs/architecture.md
 - codebase_root: string        # Root directory to scan
 - skip_violations: string[]    # Files to skip (legacy)
+- output_dir: string           # e.g., "docs/project/.audit"
 
 # Domain-aware (optional, from coordinator)
 - domain_mode: "global" | "domain-aware"   # Default: "global"
@@ -43,7 +44,7 @@ L3 Worker that audits architectural layer boundaries and detects violations.
 
 ### Phase 1: Discover Architecture
 
-**MANDATORY READ:** Load `../ln-640-pattern-evolution-auditor/references/layer_rules.md` — use Architecture Presets (fallback), I/O Pattern Boundary Rules (Phase 2), Coverage Checks (Phase 3), Cross-Layer Consistency rules (Phase 2.5).
+**MANDATORY READ:** Load `../ln-640-pattern-evolution-auditor/references/layer_rules.md` — use Architecture Presets (fallback), I/O Pattern Boundary Rules (Phase 2), Coverage Checks (Phase 4), Cross-Layer Consistency rules (Phase 3).
 
 ```
 Read docs/architecture.md
@@ -90,9 +91,9 @@ FOR EACH violation_type IN layer_rules.md I/O Pattern Boundary Rules:
         })
 ```
 
-### Phase 2.5: Cross-Layer Consistency Checks
+### Phase 3: Cross-Layer Consistency Checks
 
-#### 2.5.1 Transaction Boundary Violations
+#### 3.1 Transaction Boundary Violations
 
 **What:** commit()/rollback() called at inconsistent layers (repo + service + API)
 
@@ -123,7 +124,7 @@ layers_with_commits = count([repo_commits, service_commits, api_commits].filter(
 
 **Effort:** L (requires architectural decision + refactoring)
 
-#### 2.5.2 Session Ownership Violations
+#### 3.2 Session Ownership Violations
 
 **What:** Mixed DI-injected and locally-created sessions in same call chain
 
@@ -147,7 +148,7 @@ local_in_repo = Grep("AsyncSessionLocal\(\)", "**/repositories/**/*.py")
 
 ---
 
-### Phase 3: Check Pattern Coverage
+### Phase 4: Check Pattern Coverage
 
 ```
 # HTTP Client Coverage
@@ -179,60 +180,32 @@ IF len(unique_files) > 2:
   })
 ```
 
-### Phase 3.5: Calculate Score
+### Phase 5: Calculate Score
 
 **MANDATORY READ:** Load `shared/references/audit_scoring.md` for unified scoring formula.
 
-### Phase 4: Return Result
+### Phase 6: Write Report
 
-```json
-{
-  "category": "Layer Boundary",
-  "score": 4.5,
-  "domain": "users",
-  "scan_path": "src/users/",
-  "total_issues": 8,
-  "critical": 1,
-  "high": 3,
-  "medium": 4,
-  "low": 0,
-  "architecture": {
-    "type": "Layered",
-    "layers": ["api", "services", "domain", "infrastructure"]
-  },
-  "checks": [
-    {"id": "io_isolation", "name": "I/O Isolation", "status": "failed", "details": "HTTP client found in domain layer"},
-    {"id": "http_abstraction", "name": "HTTP Abstraction", "status": "warning", "details": "75% coverage, 3 direct calls outside infrastructure"},
-    {"id": "error_centralization", "name": "Error Centralization", "status": "failed", "details": "HTTP error handlers in 4 files, should be centralized"},
-    {"id": "transaction_boundary", "name": "Transaction Boundary", "status": "failed", "details": "commit() in repos (3), services (2), api (4) - mixed UoW ownership"},
-    {"id": "session_ownership", "name": "Session Ownership", "status": "passed", "details": "DI-based sessions used consistently"}
-  ],
-  "findings": [
-    {
-      "severity": "CRITICAL",
-      "location": "app/",
-      "issue": "Mixed UoW ownership: commit() found in repositories (3), services (2), api (4)",
-      "principle": "Layer Boundary / Transaction Control",
-      "recommendation": "Choose single UoW owner (service layer recommended), remove commit() from other layers",
-      "effort": "L",
-      "domain": "users"
-    },
-    {
-      "severity": "HIGH",
-      "location": "app/domain/pdf/parser.py:45",
-      "issue": "Layer violation: HTTP client used in domain layer",
-      "principle": "Layer Boundary / I/O Isolation",
-      "recommendation": "Move httpx.AsyncClient to infrastructure/http/clients/",
-      "effort": "M"
-    },
-  ],
-  "coverage": {
-    "http_abstraction": 75,
-    "error_centralization": false,
-    "transaction_boundary_consistent": false,
-    "session_ownership_consistent": true
-  }
-}
+**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format (ln-640 section: standard AUDIT-META + DATA-EXTENDED).
+
+```
+# Build markdown report in memory with:
+# - AUDIT-META (standard penalty-based: score, counts)
+# - Checks table (io_isolation, http_abstraction, error_centralization, transaction_boundary, session_ownership)
+# - Findings table (violations sorted by severity)
+# - DATA-EXTENDED: {architecture, coverage}
+
+IF domain_mode == "domain-aware":
+  Write to {output_dir}/642-layer-boundary-{current_domain}.md
+ELSE:
+  Write to {output_dir}/642-layer-boundary.md
+```
+
+### Phase 7: Return Summary
+
+```
+Report written: docs/project/.audit/642-layer-boundary-users.md
+Score: 4.5/10 | Issues: 8 (C:1 H:3 M:4 L:0)
 ```
 
 ## Critical Rules
@@ -253,10 +226,12 @@ IF len(unique_files) > 2:
 - Coverage calculated for HTTP abstraction + 2 consistency metrics
 - Violations list with severity, location, suggestion
 - If domain-aware: all Grep scoped to scan_path, findings tagged with domain
-- Summary counts returned to coordinator
+- Report written to `{output_dir}/642-layer-boundary[-{domain}].md` (atomic single Write call)
+- Summary returned to coordinator
 
 ## Reference Files
 
+- **Worker report template:** `shared/templates/audit_worker_report_template.md`
 - Layer rules: `../ln-640-pattern-evolution-auditor/references/layer_rules.md`
 - Scoring impact: `../ln-640-pattern-evolution-auditor/references/scoring_rules.md`
 

@@ -19,15 +19,16 @@ Specialized worker auditing unused and unreachable code.
 
 ## Inputs (from Coordinator)
 
-Receives `contextStore` with tech stack, codebase root.
+Receives `contextStore` with tech stack, codebase root, output_dir.
 
 ## Workflow
 
-1) Parse context
+1) Parse context + output_dir
 2) Run dead code detection (linters, grep)
 3) Collect findings
 4) Calculate score
-5) Return JSON
+5) **Write Report:** Build full markdown report in memory per `shared/templates/audit_worker_report_template.md`, write to `{output_dir}/626-dead-code.md` in single Write call
+6) **Return Summary:** Return minimal summary to coordinator
 
 ## Audit Rules
 
@@ -100,44 +101,19 @@ Receives `contextStore` with tech stack, codebase root.
 
 ## Output Format
 
-```json
-{
-  "category": "Dead Code",
-  "score": 6,
-  "total_issues": 12,
-  "critical": 0,
-  "high": 2,
-  "medium": 3,
-  "low": 7,
-  "checks": [
-    {"id": "unreachable_code", "name": "Unreachable Code", "status": "passed", "details": "No unreachable code detected"},
-    {"id": "unused_exports", "name": "Unused Exports", "status": "failed", "details": "3 unused functions found"},
-    {"id": "commented_code", "name": "Commented Code", "status": "warning", "details": "7 blocks of commented code"},
-    {"id": "legacy_shims", "name": "Legacy Shims", "status": "failed", "details": "2 backward compatibility shims"}
-  ],
-  "findings": [
-    {
-      "severity": "MEDIUM",
-      "location": "src/utils/helpers.ts:45",
-      "issue": "Function 'formatDate' is never used",
-      "principle": "Code Maintainability / Clean Code",
-      "recommendation": "Remove unused function or export if needed elsewhere",
-      "effort": "S"
-    },
-    {
-      "severity": "HIGH",
-      "location": "src/api/v1/auth.ts:12-15",
-      "issue": "Backward compatibility shim for old password validation (6+ months old)",
-      "principle": "No Legacy Code / Clean Architecture",
-      "recommendation": "Remove old password validation, keep only new implementation. Update API version if breaking.",
-      "effort": "M"
-    }
-  ]
-}
+**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format.
+
+Write report to `{output_dir}/626-dead-code.md` with `category: "Dead Code"` and checks: unreachable_code, unused_exports, commented_code, legacy_shims.
+
+Return summary to coordinator:
+```
+Report written: docs/project/.audit/626-dead-code.md
+Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 ```
 
 ## Reference Files
 
+- **Worker report template:** `shared/templates/audit_worker_report_template.md`
 - **Clean code checklist:** `shared/references/clean_code_checklist.md`
 - **Audit scoring formula:** `shared/references/audit_scoring.md`
 - **Audit output schema:** `shared/references/audit_output_schema.md`
@@ -152,12 +128,13 @@ Receives `contextStore` with tech stack, codebase root.
 
 ## Definition of Done
 
-- contextStore parsed
+- contextStore parsed (including output_dir)
 - All 4 checks completed (unreachable code, unused imports/vars/functions, commented-out code, legacy shims)
 - Clean code checklist loaded from `shared/references/clean_code_checklist.md`
 - Findings collected with severity, location, effort, recommendation
 - Score calculated per `shared/references/audit_scoring.md`
-- JSON returned to coordinator
+- Report written to `{output_dir}/626-dead-code.md` (atomic single Write call)
+- Summary returned to coordinator
 
 ---
 **Version:** 3.0.0
