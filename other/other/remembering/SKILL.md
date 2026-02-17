@@ -2,7 +2,7 @@
 name: remembering
 description: Advanced memory operations reference. Basic patterns (profile loading, simple recall/remember) are in project instructions. Consult this skill for background writes, memory versioning, complex queries, edge cases, session scoping, retention management, type-safe results, proactive memory hints, GitHub access detection, and ops priority ordering.
 metadata:
-  version: 4.4.1
+  version: 5.0.0
 ---
 
 # Remembering - Advanced Operations
@@ -29,7 +29,7 @@ from scripts import boot
 print(boot())
 ```
 
-**Performance:** ~150ms (single HTTP request), populates local cache for fast subsequent `recall()`.
+**Performance:** ~150ms (single HTTP request). All queries go directly to Turso.
 
 Boot includes a `# CAPABILITIES` section reporting GitHub access and installed utilities. See [references/advanced-operations.md](references/advanced-operations.md) for details.
 
@@ -163,6 +163,28 @@ for m in chain:
 
 Handles cycles via visited set. Max depth capped at 10.
 
+### Batch Operations (v4.5.0)
+
+Execute multiple memory operations in a single HTTP round-trip, reducing tool call overhead:
+
+```python
+from scripts import recall_batch, remember_batch
+
+# Multiple searches in one call (uses server-side FTS5 with BM25 ranking)
+results = recall_batch(["architecture", "turso", "FTS5"], n=5)
+for i, result_set in enumerate(results):
+    print(f"Query {i}: {len(result_set)} results")
+
+# Multiple stores in one call
+ids = remember_batch([
+    {"what": "User prefers dark mode", "type": "decision", "tags": ["ui"]},
+    {"what": "Project uses React", "type": "world", "tags": ["tech"]},
+    {"what": "Found auth bug", "type": "anomaly", "conf": 0.7},
+])
+```
+
+`recall_batch()` uses server-side FTS5 with composite scoring (BM25 × recency × priority). Falls back to sequential `recall()` calls if server FTS5 is unavailable. `remember_batch()` validates each item independently — per-item errors return `{"error": str}` without blocking other items.
+
 ### Forget and Supersede
 
 ```python
@@ -256,12 +278,12 @@ Write complete, searchable summaries that standalone without conversation contex
 
 ## Implementation Notes
 
-- Backend: Turso SQLite HTTP API
+- Backend: Turso SQLite HTTP API (all queries go directly to Turso)
 - Credential auto-detection (v3.8.0): Scans env vars, then `/mnt/project/turso.env`, `/mnt/project/muninn.env`, `~/.muninn/.env`
-- FTS5 search: Porter stemmer tokenizer with BM25 ranking
-- Local SQLite cache for fast recall (< 5ms vs 150ms+ network)
+- FTS5 search: Server-side FTS5 with Porter stemmer tokenizer, BM25 x recency x priority composite scoring
+- Retry with exponential backoff for transient errors (503, 429, SSL)
 - Thread-safe for background writes
-- Repo defaults fallback: `scripts/defaults/` used when Turso and cache are both unavailable
+- Repo defaults fallback: `scripts/defaults/` used when Turso is unavailable
 
 ## Session Continuity (v4.3.0)
 
@@ -356,3 +378,4 @@ See [references/advanced-operations.md](references/advanced-operations.md) for:
 - Progressive disclosure and priority-based ordering
 - Decision alternatives (`get_alternatives`) and memory consolidation (`consolidate`)
 - Reference chain traversal (`get_chain`)
+- Batch APIs (`recall_batch`, `remember_batch`) for reducing HTTP round-trips

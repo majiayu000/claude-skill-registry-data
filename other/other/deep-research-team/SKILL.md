@@ -97,13 +97,21 @@ Present the recommended scope to the user and allow override.
 
 Research artifacts persist to disk for resumability and backup.
 
-**Directory resolution** (resolve `{output_dir}` before creating anything):
+**Directory resolution** -- run this command FIRST, before creating anything. The output is
+your `{output_dir}`. Only the fallback branch creates a directory; the others reuse what exists.
 
-1. If `{project_dir}/deep-research/` already exists, use it as `{output_dir}`.
-2. Otherwise, if `$CLAUDE_DEEP_RESEARCH_DIR` is set and the path is valid, use it as `{output_dir}`.
-3. Otherwise, use `{project_dir}/deep-research/` as `{output_dir}` (this is the only case where you create it).
+```bash
+if [ -d "$(pwd)/deep-research" ]; then
+  echo "$(pwd)/deep-research"
+elif [ -n "$CLAUDE_DEEP_RESEARCH_DIR" ]; then
+  eval echo "$CLAUDE_DEEP_RESEARCH_DIR"
+else
+  mkdir -p "$(pwd)/deep-research"
+  echo "$(pwd)/deep-research"
+fi
+```
 
-Do NOT `mkdir` the output directory until after resolution. Only create `{output_dir}/{topic-slug}/` in Phase 3.
+After resolving `{output_dir}`, create only the topic subdirectory in Phase 3.
 
 Each session creates a subdirectory: `{output_dir}/{topic-slug}/`
 

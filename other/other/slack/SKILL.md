@@ -1,11 +1,14 @@
 ---
 name: slack
-description: "This skill should be used when interacting with a Slack workspace — posting messages, reading channels, searching, reacting, uploading files, managing channels/users, or running the Claudius daemon (pseudo soul engine with cognitive steps, three-tier memory, and cross-thread soul state). Provides 7 on-demand scripts and a persistent Socket Mode daemon."
+description: "Slack workspace integration: 8 on-demand scripts (post, read, delete, search, react, upload, channels, users) + Session Bridge (connect any Claude Code session to Slack via background listener + inbox.jsonl) + Claudius unified launcher (Claude Agent SDK, soul engine, three-tier memory)."
 ---
 
 # Slack Skill
 
-Full Slack workspace integration: 7 Python scripts for on-demand operations + a Socket Mode daemon with a pseudo soul engine for persistent, personality-driven conversations.
+Full Slack workspace integration with three modes:
+1. **Scripts** — 8 Python scripts for on-demand Slack operations
+2. **Session Bridge** — connect THIS Claude Code session to Slack (background listener + inbox file, no extra API costs)
+3. **Unified Launcher** — `claudius.py` with Claude Agent SDK, soul engine, per-channel sessions (requires SDK API key)
 
 ## When to Use This Skill
 
@@ -18,13 +21,21 @@ Full Slack workspace integration: 7 Python scripts for on-demand operations + a 
 - Listing channels, getting channel info, or joining channels
 - Looking up users by name, ID, or email
 
-### Daemon (persistent)
-- Responding to @mentions in real time as "Claudius, Artifex Maximus"
-- Answering DMs sent to the bot
-- Multi-turn conversations in threads (session continuity via SQLite)
+### Session Bridge (recommended)
+- Connecting any running Claude Code session to Slack
+- Responding to @mentions and DMs with full tool access (this session IS the brain)
+- No extra API costs — messages processed in the current session context
+- Auto-notification of new messages via UserPromptSubmit hook
+- Personality as Claudius via soul.md instructions (no XML machinery needed)
+
+### Unified Launcher (persistent, requires SDK API key)
+- Running Claudius as an interactive terminal + Slack bot in one process
+- Responding to @mentions and DMs in real time as "Claudius, Artifex Maximus"
+- Multi-turn conversations in threads (per-channel session continuity via Claude Agent SDK)
 - Per-user personality modeling (learns communication style, interests, expertise)
 - Cross-thread soul state (tracks current project, task, topic, emotional state)
 - Three-tier memory: working memory (per-thread), user models (per-user), soul memory (global)
+- All Slack activity visible in terminal alongside direct terminal interactions
 
 ## Prerequisites
 
@@ -39,17 +50,34 @@ echo $SLACK_BOT_TOKEN
 
 1. Go to [api.slack.com/apps](https://api.slack.com/apps) → Create New App → From Scratch
 2. Name it "Claude Code" → select your workspace
-3. OAuth & Permissions → Bot Token Scopes → add:
-   - `chat:write`
+3. **OAuth & Permissions** → Bot Token Scopes → add all:
+   - `app_mentions:read`
    - `channels:history`, `groups:history`, `im:history`, `mpim:history`
    - `channels:read`, `groups:read`, `im:read`, `im:write`
-   - `search:read`
-   - `reactions:write`, `reactions:read`
+   - `chat:write`
    - `files:write`, `files:read`
+   - `reactions:write`, `reactions:read`
+   - `search:read`
    - `users:read`, `users:read.email`
-4. Install to Workspace → copy Bot User OAuth Token
-5. `export SLACK_BOT_TOKEN=xoxb-...` (add to shell profile)
-6. Invite the bot to channels: `/invite @Claude Code`
+   - `users:write` (optional — enables green presence dot)
+4. **Settings → Socket Mode** → toggle **ON** → generate an App-Level Token:
+   - Name: `socket-mode`
+   - Scope: `connections:write`
+   - Copy the `xapp-` token
+5. **Event Subscriptions** → toggle **ON** (no Request URL needed with Socket Mode) → **Subscribe to Bot Events** → add:
+   - `app_mention` — channel @mentions
+   - `message.im` — direct messages (required for DMs to work)
+   - `app_home_opened` — App Home tab rendering
+6. **App Home** → Show Tabs → enable **"Allow users to send Slash commands and messages from the messages tab"**
+7. **Install to Workspace** → approve permissions → copy Bot User OAuth Token
+8. Set environment variables (add to shell profile):
+   ```bash
+   export SLACK_BOT_TOKEN=xoxb-...   # Bot User OAuth Token
+   export SLACK_APP_TOKEN=xapp-...   # App-Level Token (Socket Mode)
+   ```
+9. Invite the bot to channels: `/invite @Claude Code`
+
+**After any scope or event subscription change**: reinstall the app (Install App → Reinstall to Workspace) and restart the launcher.
 
 ---
 
@@ -65,200 +93,56 @@ python3 ~/.claude/skills/slack/scripts/slack_read.py "#general" -n 10
 # Search the workspace
 python3 ~/.claude/skills/slack/scripts/slack_search.py "deployment status"
 
-# Start the daemon (must run from daemon directory for local imports)
-cd ~/.claude/skills/slack/daemon && python3 bot.py --verbose
+# Connect this session to Slack (recommended)
+cd ~/.claude/skills/slack/daemon && python3 slack_listen.py --bg
+python3 ~/.claude/skills/slack/scripts/slack_check.py
+
+# Start the unified launcher (requires SDK API key)
+cd ~/.claude/skills/slack/daemon && python3 claudius.py
 ```
 
 ---
 
-## Available Scripts
+## Session Bridge (Recommended)
 
-### 1. slack_post.py — Post Messages
-
-**Command**: `python3 ~/.claude/skills/slack/scripts/slack_post.py`
-
-Post messages, reply to threads, schedule, update, and delete messages.
+Connect any running Claude Code session to Slack. A background listener catches @mentions and DMs → `inbox.jsonl`. This session reads the inbox, processes with full tool access, posts responses back. No extra API costs.
 
 ```bash
-# Post to a channel
-python3 ~/.claude/skills/slack/scripts/slack_post.py "#general" "Hello from Claude"
+# Connect
+cd ~/.claude/skills/slack/daemon && python3 slack_listen.py --bg
 
-# Reply to a thread
-python3 ~/.claude/skills/slack/scripts/slack_post.py "#general" "Thread reply" --thread 1234567890.123456
+# Check messages
+python3 ~/.claude/skills/slack/scripts/slack_check.py
 
-# Post with rich blocks
-python3 ~/.claude/skills/slack/scripts/slack_post.py "#general" "Update" \
-  --blocks '[{"type":"section","text":{"type":"mrkdwn","text":"*Bold heading*\nDetails here"}}]'
+# Respond to thread, remove hourglass, mark handled
+python3 ~/.claude/skills/slack/scripts/slack_post.py "C12345" "response" --thread "TS"
+python3 ~/.claude/skills/slack/scripts/slack_react.py "C12345" "TS" "hourglass_flowing_sand" --remove
+python3 ~/.claude/skills/slack/scripts/slack_check.py --ack 1
 
-# Schedule a message
-python3 ~/.claude/skills/slack/scripts/slack_post.py "#general" "Daily reminder" --schedule "2026-02-12T09:00:00"
-
-# Update an existing message
-python3 ~/.claude/skills/slack/scripts/slack_post.py "#general" "Corrected text" --update 1234567890.123456
-
-# Delete a message
-python3 ~/.claude/skills/slack/scripts/slack_post.py "#general" --delete 1234567890.123456
-
-# Post with link unfurling
-python3 ~/.claude/skills/slack/scripts/slack_post.py "#general" "Check: https://example.com" --unfurl
+# Disconnect
+python3 ~/.claude/skills/slack/daemon/slack_listen.py --stop
 ```
 
-**Parameters**: `channel`, `text`, `--thread`, `--blocks`, `--schedule`, `--update`, `--delete`, `--unfurl`, `--json`
-
----
-
-### 2. slack_read.py — Read Messages
-
-**Command**: `python3 ~/.claude/skills/slack/scripts/slack_read.py`
-
-Read channel history and thread replies.
+**Soul Formatter** (optional): `scripts/slack_format.py` adds Open Souls cognitive step formatting — perception framing, dialogue extraction, monologue logging.
 
 ```bash
-# Read recent messages
-python3 ~/.claude/skills/slack/scripts/slack_read.py "#general"
-
-# Read last 20 messages
-python3 ~/.claude/skills/slack/scripts/slack_read.py "#general" -n 20
-
-# Read thread replies
-python3 ~/.claude/skills/slack/scripts/slack_read.py "#general" --thread 1234567890.123456
-
-# Read since a specific date
-python3 ~/.claude/skills/slack/scripts/slack_read.py "#general" --since "2026-02-11"
-
-# Resolve user IDs to names
-python3 ~/.claude/skills/slack/scripts/slack_read.py "#general" --resolve-users
-
-# JSON output
-python3 ~/.claude/skills/slack/scripts/slack_read.py "#general" --json
+python3 slack_format.py perception "Tom" "What's the status?"   # → Tom said, "..."
+echo "$raw" | python3 slack_format.py extract                   # → external dialogue only
+echo "$raw" | python3 slack_format.py extract --narrate --log   # → narrated + logged
+python3 slack_format.py instructions                            # → cognitive step XML format
 ```
 
-**Parameters**: `channel`, `-n/--num`, `--thread`, `--since`, `--resolve-users`, `--json`
+**Automated Respond**: `/slack-respond` processes all pending messages as Claudius with full cognitive steps — perception, monologue, dialogue, post, ack — in a single invocation. See `~/.claude/skills/slack-respond/SKILL.md`.
 
----
+For full installation, architecture, inbox format, auto-notification hook, and troubleshooting, see `references/session-bridge.md`.
 
-### 3. slack_search.py — Search Messages & Files
-
-**Command**: `python3 ~/.claude/skills/slack/scripts/slack_search.py`
-
-Search messages and files across the workspace.
+**App Home**: The Home tab renders automatically when a user opens Claudius's profile (via `app_home_opened` in the listener). Shows live status, toolkit, cognitive architecture, memory system. Refresh manually:
 
 ```bash
-# Search messages
-python3 ~/.claude/skills/slack/scripts/slack_search.py "deployment failed"
-
-# Search in a specific channel
-python3 ~/.claude/skills/slack/scripts/slack_search.py "bug report" --channel "#engineering"
-
-# Search from a specific user
-python3 ~/.claude/skills/slack/scripts/slack_search.py "API update" --from "@tom"
-
-# Date-filtered search
-python3 ~/.claude/skills/slack/scripts/slack_search.py "release" --after 2026-02-01 --before 2026-02-11
-
-# Search files
-python3 ~/.claude/skills/slack/scripts/slack_search.py "architecture diagram" --files
-
-# Sort by relevance
-python3 ~/.claude/skills/slack/scripts/slack_search.py "soul engine" --sort score
+python3 ~/.claude/skills/slack/scripts/slack_app_home.py "USER_ID"
+python3 ~/.claude/skills/slack/scripts/slack_app_home.py --all
+python3 ~/.claude/skills/slack/scripts/slack_app_home.py --debug   # print blocks, no publish
 ```
-
-**Parameters**: `query`, `-n/--num`, `--channel`, `--from`, `--after`, `--before`, `--files`, `--sort`, `--page`, `--json`
-
-**Note**: With a bot token (`xoxb-`), search only covers channels the bot is a member of. For workspace-wide search, use a user token (`xoxp-`) with `search:read` scope.
-
----
-
-### 4. slack_react.py — Manage Reactions
-
-**Command**: `python3 ~/.claude/skills/slack/scripts/slack_react.py`
-
-```bash
-# Add a reaction
-python3 ~/.claude/skills/slack/scripts/slack_react.py "#general" 1234567890.123456 rocket
-
-# Remove a reaction
-python3 ~/.claude/skills/slack/scripts/slack_react.py "#general" 1234567890.123456 rocket --remove
-
-# List reactions on a message
-python3 ~/.claude/skills/slack/scripts/slack_react.py "#general" 1234567890.123456 --list
-```
-
-**Parameters**: `channel`, `timestamp`, `emoji`, `--remove`, `--list`, `--json`
-
----
-
-### 5. slack_upload.py — Upload Files
-
-**Command**: `python3 ~/.claude/skills/slack/scripts/slack_upload.py`
-
-Upload files using the 2-step external upload API.
-
-```bash
-# Upload a file
-python3 ~/.claude/skills/slack/scripts/slack_upload.py "#general" ./report.pdf
-
-# Upload with title and message
-python3 ~/.claude/skills/slack/scripts/slack_upload.py "#general" ./chart.png --title "Q1 Results" --message "Latest chart"
-
-# Upload to a thread
-python3 ~/.claude/skills/slack/scripts/slack_upload.py "#general" ./data.csv --thread 1234567890.123456
-
-# Upload a code snippet
-python3 ~/.claude/skills/slack/scripts/slack_upload.py "#general" --snippet "print('hello')" --filetype python --title "Example"
-```
-
-**Parameters**: `channel`, `file`, `--title`, `--message`, `--thread`, `--snippet`, `--filetype`, `--json`
-
----
-
-### 6. slack_channels.py — Channel Management
-
-**Command**: `python3 ~/.claude/skills/slack/scripts/slack_channels.py`
-
-```bash
-# List all channels
-python3 ~/.claude/skills/slack/scripts/slack_channels.py
-
-# Show member counts
-python3 ~/.claude/skills/slack/scripts/slack_channels.py --members
-
-# Get channel details
-python3 ~/.claude/skills/slack/scripts/slack_channels.py --info "#general"
-
-# Join a channel
-python3 ~/.claude/skills/slack/scripts/slack_channels.py --join "#new-channel"
-
-# Filter by name pattern
-python3 ~/.claude/skills/slack/scripts/slack_channels.py --filter "eng-"
-
-# Include private channels
-python3 ~/.claude/skills/slack/scripts/slack_channels.py --private
-```
-
-**Parameters**: `--info`, `--join`, `--filter`, `--members`, `--private`, `--json`
-
----
-
-### 7. slack_users.py — User Lookup
-
-**Command**: `python3 ~/.claude/skills/slack/scripts/slack_users.py`
-
-```bash
-# List all users
-python3 ~/.claude/skills/slack/scripts/slack_users.py
-
-# Active humans only (no bots/deactivated)
-python3 ~/.claude/skills/slack/scripts/slack_users.py --active
-
-# Get user details by ID
-python3 ~/.claude/skills/slack/scripts/slack_users.py --info U12345678
-
-# Lookup by email
-python3 ~/.claude/skills/slack/scripts/slack_users.py --email tom@aldea.ai
-```
-
-**Parameters**: `--info`, `--email`, `--active`, `--json`
 
 ---
 
@@ -273,6 +157,8 @@ python3 ~/.claude/skills/slack/scripts/slack_users.py --email tom@aldea.ai
 | Read thread | `slack_read.py` | `slack_read.py "#ch" --thread TS` |
 | Search messages | `slack_search.py` | `slack_search.py "query"` |
 | Search files | `slack_search.py` | `slack_search.py "query" --files` |
+| Delete message | `slack_delete.py` | `slack_delete.py "#ch" TS1 TS2` |
+| Clean thread (bot msgs) | `slack_delete.py` | `slack_delete.py "#ch" --thread TS` |
 | Add reaction | `slack_react.py` | `slack_react.py "#ch" TS emoji` |
 | Upload file | `slack_upload.py` | `slack_upload.py "#ch" ./file.pdf` |
 | Share code snippet | `slack_upload.py` | `slack_upload.py "#ch" --snippet CODE` |
@@ -280,95 +166,59 @@ python3 ~/.claude/skills/slack/scripts/slack_users.py --email tom@aldea.ai
 | Join channel | `slack_channels.py` | `slack_channels.py --join "#ch"` |
 | Find user by email | `slack_users.py` | `slack_users.py --email user@co.com` |
 
+For full script documentation (all parameters, examples, test suite, common workflows), see `references/scripts-reference.md`.
+
 ---
 
 ## Rate Limit Awareness
 
 | Tier | Rate | Key Methods |
 |------|------|-------------|
-| **Tier 1** | **1/min** | `conversations.history`, `conversations.replies` (commercial non-Marketplace only) |
-| Tier 2 | 20/min | `conversations.list`, `users.list`, `search.messages`, `search.files` |
-| Tier 3 | 50/min | `reactions.*`, `conversations.info`, `users.info`, `chat.update`, `chat.delete` |
+| **Tier 1** | **1/min** | `conversations.history`, `conversations.replies` |
+| Tier 2 | 20/min | `conversations.list`, `users.list`, `search.messages` |
+| Tier 3 | 50/min | `reactions.*`, `conversations.info`, `chat.update` |
 | Tier 4 | 100+/min | `files.getUploadURLExternal`, `files.completeUploadExternal` |
-| Special | 1/sec/channel | `chat.postMessage` (per-channel, not global) |
+| Special | 1/sec/channel | `chat.postMessage` |
 
-All scripts handle rate limits automatically via `_slack_utils.py`:
-- Local cooldown timer prevents most 429s
-- Automatic retry with `Retry-After` on 429 responses
-- Stderr warnings when waiting >5 seconds
-
-See `references/rate-limits.md` for full details.
+All scripts handle rate limits automatically via `_slack_utils.py` (local cooldown + retry with `Retry-After`). See `references/rate-limits.md` for full details.
 
 ---
 
-## Test Suite
+## Claudius Unified Launcher
+
+Interactive terminal + Slack bot in one process via Claude Agent SDK. Per-channel session continuity, full soul engine with three-tier memory, all Slack activity visible in terminal.
 
 ```bash
-# Run all tests
-python3 ~/.claude/skills/slack/scripts/test_slack.py
-
-# Quick validation (auth + channel list)
-python3 ~/.claude/skills/slack/scripts/test_slack.py --quick
-
-# Test specific endpoint
-python3 ~/.claude/skills/slack/scripts/test_slack.py --test post
-python3 ~/.claude/skills/slack/scripts/test_slack.py --test read
-python3 ~/.claude/skills/slack/scripts/test_slack.py --test search
-
-# Verbose output
-python3 ~/.claude/skills/slack/scripts/test_slack.py --verbose
-
-# Use a specific test channel (default: #general)
-python3 ~/.claude/skills/slack/scripts/test_slack.py --test-channel "#bot-test"
-
-# Verify per-channel read/write access
-python3 ~/.claude/skills/slack/scripts/test_channels.py
-```
-
----
-
-## Daemon Mode — Claudius, Artifex Maximus
-
-The daemon is a persistent Socket Mode bot with a **pseudo soul engine** — cognitive architecture adapted from the Aldea Soul Engine for single-shot `claude -p` subprocess calls. It provides personality, three-tier memory, per-user modeling, and cross-thread soul state.
-
-For full architecture details (cognitive steps, XML format, memory tiers, entry types, user model template, personality, prompt injection defense), see `references/daemon-architecture.md`.
-
-### Prerequisites
-
-1. **Enable Socket Mode**: [api.slack.com/apps](https://api.slack.com/apps) → Your App → Settings → Socket Mode → Enable
-2. **Generate app-level token**: Basic Information → App-Level Tokens → Generate Token
-   - Name: `socket-mode`
-   - Scope: `connections:write`
-   - Copy the `xapp-` token
-3. **Add bot event subscriptions**: Event Subscriptions → Subscribe to Bot Events → Add:
-   - `app_mention` — channel @mentions
-   - `message.im` — direct messages
-4. **Add bot scope**: OAuth & Permissions → Bot Token Scopes → `app_mentions:read`
-5. **Reinstall app** to workspace after scope changes
-
-### Environment Variables
-
-```bash
-export SLACK_BOT_TOKEN=xoxb-...   # Bot User OAuth Token
-export SLACK_APP_TOKEN=xapp-...   # App-Level Token (Socket Mode)
-```
-
-### Running the Daemon
-
-The daemon must be run from its directory due to local module imports.
-
-```bash
-# Install dependencies
+# Install
 cd ~/.claude/skills/slack/daemon
-uv pip install --system slack-bolt
+uv pip install --system slack-bolt claude-agent-sdk
 
-# Dev mode — foreground with debug logging
-python3 bot.py --verbose
+# Launch (terminal + Slack)
+python3 claudius.py
 
-# Without soul engine (raw claude -p passthrough)
-SLACK_DAEMON_SOUL_ENGINE=false python3 bot.py --verbose
+# Verbose / terminal-only
+python3 claudius.py --verbose
+python3 claudius.py --no-slack
+```
 
-# Production — launchd (Mac Mini M4)
+**Requires**: `claude` CLI in PATH, `SLACK_BOT_TOKEN`, `SLACK_APP_TOKEN`, plus `claude-agent-sdk`.
+
+For full installation, architecture, SDK integration, per-channel sessions, configuration, data flows, and threading model, see `references/unified-launcher-architecture.md`.
+
+---
+
+## Legacy Daemon (bot.py)
+
+The standalone `bot.py` daemon is preserved as a fallback. It uses `claude -p` subprocesses instead of the Agent SDK. Use when the unified launcher isn't needed or for launchd deployment.
+
+```bash
+cd ~/.claude/skills/slack/daemon && python3 bot.py --verbose
+```
+
+### Production (launchd)
+
+```bash
+cd ~/.claude/skills/slack/daemon
 ./launchd/install.sh install    # load LaunchAgent
 ./launchd/install.sh status     # check if running
 ./launchd/install.sh logs       # tail logs
@@ -376,155 +226,111 @@ SLACK_DAEMON_SOUL_ENGINE=false python3 bot.py --verbose
 ./launchd/install.sh uninstall  # stop and remove
 ```
 
-### Configuration
+---
 
-All settings can be overridden via environment variables prefixed with `SLACK_DAEMON_`:
+## Soul Monitor TUI
 
-| Setting | Env Var | Default | Description |
-|---------|---------|---------|-------------|
-| Claude timeout | `SLACK_DAEMON_TIMEOUT` | `120` s | Max seconds per `claude -p` call |
-| Working directory | `SLACK_DAEMON_CWD` | `~/Desktop/Programming` | CWD for Claude subprocess |
-| Allowed tools | `SLACK_DAEMON_TOOLS` | `Read,Glob,Grep,Bash,WebFetch` | Tools Claude can use |
-| Session TTL | `SLACK_DAEMON_SESSION_TTL` | `24` hours | Thread session expiry |
-| Soul engine | `SLACK_DAEMON_SOUL_ENGINE` | `true` | Enable/disable soul engine |
-| Memory window | `SLACK_DAEMON_MEMORY_WINDOW` | `20` | Working memory entries per prompt |
-| Memory TTL | `SLACK_DAEMON_MEMORY_TTL` | `72` hours | Working memory expiry |
-| Soul state interval | `SLACK_DAEMON_SOUL_STATE_INTERVAL` | `3` | Interactions between soul state update prompts |
-| Max response length | *(config.py)* | `3000` chars | Slack message truncation (limit ~4000) |
+A standalone Textual terminal app that shows Claudius's inner life in real-time — cognitive stream, soul state, user models, sessions, and raw logs. Run in a separate terminal while the launcher or daemon is active.
+
+```bash
+cd ~/.claude/skills/slack/daemon
+uv run python monitor.py
+```
+
+See `references/daemon-architecture.md` for panels, color coding, key bindings, and data sources.
 
 ### Inspecting Memory
 
 ```bash
 cd ~/.claude/skills/slack/daemon
-
-# View soul state
 sqlite3 memory.db "SELECT key, value FROM soul_memory"
-
-# View user models
 sqlite3 memory.db "SELECT user_id, display_name, interaction_count FROM user_models"
-
-# View recent working memory
 sqlite3 memory.db "SELECT entry_type, verb, content FROM working_memory ORDER BY created_at DESC LIMIT 20"
-
-# View active sessions
 sqlite3 sessions.db "SELECT channel, thread_ts, session_id FROM sessions"
 ```
-
-### Graceful Shutdown
-
-On SIGTERM or SIGINT:
-1. Close Socket Mode handler
-2. Cleanup expired working memory and sessions
-3. Close all SQLite connections (session_store, working_memory, user_models, soul_memory)
-
-The soul state update interval counter resets on daemon restart (in-process memory only).
-
----
-
-## Troubleshooting
-
-| Problem | Cause | Fix |
-|---------|-------|-----|
-| Bot not responding to @mentions | Socket Mode not enabled or `SLACK_APP_TOKEN` missing | Enable Socket Mode in app settings; verify `xapp-` token is exported |
-| "missing_scope" error | Bot lacks required OAuth scope | Add the missing scope in OAuth & Permissions → reinstall app |
-| No search results | Bot token only searches channels bot is a member of | Invite bot to channels with `/invite @Claude Code`, or use a user token (`xoxp-`) |
-| Rate limited (429) | Too many API calls | Scripts auto-retry; reduce batch sizes or add `--test-channel` for testing |
-| Daemon exits immediately | `claude` CLI not in PATH | Verify `which claude` returns a path; check `/opt/homebrew/bin` is in PATH |
-| Soul engine XML parsing fails | Claude response didn't include expected tags | Check `daemon/logs/daemon.log`; fallback raw text is returned to Slack |
-| "No virtual environment found" | `uv pip` without `--system` flag | Use `uv pip install --system slack-bolt` |
 
 ---
 
 ## New User Onboarding
 
-When setting up Claudius for a new user or team, have the bot conduct a structured interview to bootstrap personalized configuration. This creates two foundational files that make every future interaction more effective.
-
-### Step 1: Build a User Model via Slack DM
-
-DM the Claudius bot and ask it to interview you. The soul engine's user model system will automatically build a personality profile over time, but an explicit interview accelerates this dramatically.
-
-Prompt Claudius with:
-> "Interview me so you can build a detailed model of who I am, how I work, and what I care about. Ask me about my role, technical domains, communication style, working patterns, and interests. Keep going until you have a thorough picture."
-
-The bot will ask questions iteratively. After the interview, the user model in `daemon/memory.db` will contain a rich markdown profile. Export it for use as a persistent userModel:
-
-```bash
-# View what Claudius learned
-sqlite3 ~/.claude/skills/slack/daemon/memory.db \
-  "SELECT model_text FROM user_models WHERE user_id = 'U12345678'"
-
-# Save as a userModel file for Claude Code
-sqlite3 ~/.claude/skills/slack/daemon/memory.db \
-  -noheader "SELECT model_text FROM user_models WHERE user_id = 'U12345678'" \
-  > ~/.claude/userModels/yourName.md
-```
-
-### Step 2: Generate a Personalized CLAUDE.md
-
-Use the `/interview` command in Claude Code to build a first `CLAUDE.md` personalized to the user's work. This can also be done via the Slack bot:
-
-> "Help me create a CLAUDE.md file for my project. Interview me about my codebase, conventions, tools, and preferences until you have enough to write comprehensive project instructions."
-
-The resulting `CLAUDE.md` should reference the userModel:
-
-```markdown
-# Project Instructions
-
-## Identity
-@userModels/yourName.md
-
-## Principles
-- [extracted from interview]
-
-## Tools
-- [extracted from interview]
-```
-
-### Why This Matters
-
-- **User models** let Claudius adapt its tone, depth, and domain focus per person from the first message
-- **CLAUDE.md** ensures every Claude Code session (not just Slack) inherits the user's conventions and constraints
-- Both files compound over time — the soul engine updates user models automatically, and CLAUDE.md can be iterated via future interviews
+Bootstrap personalized configuration by having Claudius interview new users to build user models and generate CLAUDE.md files. See `references/onboarding-guide.md` for the full workflow.
 
 ---
 
-## Common Workflows
+## Troubleshooting
 
-### Post a Daily Update
+| Problem | Fix |
+|---------|-----|
+| Bot not responding to @mentions | Enable Socket Mode; verify `SLACK_APP_TOKEN` (xapp-) is exported |
+| "missing_scope" error | Add the missing scope in OAuth & Permissions → reinstall app |
+| No search results | Invite bot to channels with `/invite @Claude Code`, or use user token (`xoxp-`) |
+| Rate limited (429) | Scripts auto-retry; reduce batch sizes |
+| Launcher/daemon exits immediately | Verify `which claude` returns a path |
+| "Credit balance is too low" | Check Anthropic billing; error now surfaces in Slack response |
+| Soul engine XML parsing fails | Check `daemon/logs/claudius.log`; fallback raw text is returned |
+| "Sending messages turned off" | App Home → enable "Allow users to send Slash commands and messages from the messages tab" |
+| No green presence dot | Add `users:write` scope → reinstall app |
+| App Home tab blank | Subscribe to `app_home_opened` event |
+| Monitor TUI won't start | `cd daemon && uv pip install textual psutil` |
+| SDK import error | `uv pip install --system claude-agent-sdk` |
 
-```bash
-python3 ~/.claude/skills/slack/scripts/slack_post.py "#standup" \
-  "*Daily Update — $(date +%Y-%m-%d)*
-• Completed: feature X implementation
-• In progress: testing Y
-• Blocked: waiting on API keys"
+---
+
+## File Structure
+
 ```
+daemon/
+├── slack_listen.py      # Session Bridge: background Socket Mode listener
+├── inbox.jsonl          # Session Bridge: incoming messages (auto-created)
+├── claudius.py          # Unified launcher (terminal + Slack, requires SDK)
+├── slack_adapter.py     # Socket Mode event handling (extracted from bot.py)
+├── terminal_ui.py       # Async terminal input + activity log
+├── claude_handler.py    # Claude invocation (subprocess + SDK async)
+├── soul_engine.py       # Cognitive prompt wrapping + XML parsing
+├── working_memory.py    # Per-thread metadata store
+├── user_models.py       # Per-user personality profiles
+├── soul_memory.py       # Global soul state
+├── session_store.py     # Thread → session ID mapping
+├── config.py            # All settings (env var overrides)
+├── bot.py               # Legacy standalone daemon (fallback)
+├── monitor.py           # Soul Monitor TUI (Textual)
+├── watcher.py           # DB file watcher for monitor
+├── soul.md              # Claudius personality blueprint
+├── skills.md            # Capabilities reference
+├── launchd/             # macOS LaunchAgent scripts
+├── logs/                # Runtime logs
+├── memory.db            # SQLite: soul_memory, user_models, working_memory
+└── sessions.db          # SQLite: session_id mappings
 
-### Monitor a Channel
-
-```bash
-# Read recent messages
-python3 ~/.claude/skills/slack/scripts/slack_read.py "#alerts" -n 5
-
-# Search for specific issues
-python3 ~/.claude/skills/slack/scripts/slack_search.py "error" --channel "#alerts" --after $(date -v-1d +%Y-%m-%d)
-```
-
-### Share a File with Context
-
-```bash
-python3 ~/.claude/skills/slack/scripts/slack_upload.py "#engineering" ./architecture.png \
-  --title "System Architecture v2" \
-  --message "Updated architecture diagram with the new caching layer"
-```
-
-### Find Someone's Email
-
-```bash
-python3 ~/.claude/skills/slack/scripts/slack_users.py --info U12345678
+scripts/
+├── slack_check.py       # Session Bridge: read/ack inbox messages
+├── slack_inbox_hook.py  # Session Bridge: UserPromptSubmit auto-check hook
+├── slack_format.py      # Soul formatter: perception/extract/instructions (Open Souls paradigm)
+├── slack_post.py        # Post messages to channels/threads
+├── slack_read.py        # Read channel history or threads
+├── slack_delete.py      # Delete messages (single, batch, thread cleanup)
+├── slack_search.py      # Search messages or files
+├── slack_react.py       # Add/remove reactions
+├── slack_upload.py      # Upload files or snippets
+├── slack_memory.py      # CLI wrapper for three-tier memory system
+├── slack_app_home.py    # Build + publish App Home tab via Block Kit
+├── slack_channels.py    # List/join channels
+├── slack_users.py       # Look up users
+└── _slack_utils.py      # Shared auth, rate limiting, API calls
 ```
 
 ---
+
+## Reference Index
+
+| Reference | Contents |
+|-----------|----------|
+| `references/session-bridge.md` | Session Bridge: installation, architecture, inbox format, usage workflow, soul formatter, troubleshooting |
+| `references/unified-launcher-architecture.md` | Unified launcher: installation, architecture, per-channel sessions, SDK integration, data flows, threading model |
+| `references/daemon-architecture.md` | Soul engine cognitive steps, memory tiers, XML format, App Home, Soul Monitor TUI |
+| `references/scripts-reference.md` | Full documentation for all 8 scripts, test suite, common workflows |
+| `references/onboarding-guide.md` | User model interview, CLAUDE.md generation, export commands |
+| `references/rate-limits.md` | Slack API rate limit tiers and handling strategy |
 
 ## Assets
 

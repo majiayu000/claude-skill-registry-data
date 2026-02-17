@@ -1,6 +1,6 @@
 ---
 name: ctf-crypto
-description: Cryptography techniques for CTF challenges. Use when attacking encryption, hashing, ZKP, signatures, or mathematical crypto problems.
+description: Cryptography attack techniques for CTF challenges. Use when attacking encryption, hashing, signatures, ZKP, PRNG, or mathematical crypto problems involving RSA, AES, ECC, lattices, number theory, Coppersmith, Pollard, Wiener, padding oracle, or stream/block cipher weaknesses.
 license: MIT
 allowed-tools: Bash Read Write Edit Glob Grep Task WebFetch WebSearch
 metadata:
@@ -14,11 +14,11 @@ Quick reference for crypto CTF challenges. Each technique has a one-liner here; 
 ## Additional Resources
 
 - [classic-ciphers.md](classic-ciphers.md) - Classic ciphers: Vigenere, Atbash, substitution wheels, XOR variants, deterministic OTP, cascade XOR, book cipher
-- [modern-ciphers.md](modern-ciphers.md) - Modern cipher attacks: AES (CFB-8, ECB leakage), CBC-MAC/OFB-MAC, padding oracle, S-box collisions, GF(2) elimination
+- [modern-ciphers.md](modern-ciphers.md) - Modern cipher attacks: AES (CFB-8, ECB leakage), CBC-MAC/OFB-MAC, padding oracle, S-box collisions, GF(2) elimination, LCG partial output recovery
 - [rsa-attacks.md](rsa-attacks.md) - RSA attacks: consecutive primes, multi-prime, restricted-digit, Coppersmith structured primes, Manger oracle, polynomial hash
-- [ecc-attacks.md](ecc-attacks.md) - ECC attacks: small subgroup, invalid curve, fault injection, clock group DLP, Pohlig-Hellman
+- [ecc-attacks.md](ecc-attacks.md) - ECC attacks: small subgroup, invalid curve, Smart's attack (anomalous, with Sage code), fault injection, clock group DLP, Pohlig-Hellman
 - [zkp-and-advanced.md](zkp-and-advanced.md) - ZKP/graph 3-coloring, Z3 solver guide, garbled circuits, Shamir SSS, bigram constraint solving, race conditions
-- [prng.md](prng.md) - PRNG attacks (Mersenne Twister, LCG, time-based seeds, password cracking)
+- [prng.md](prng.md) - PRNG attacks (MT19937, LCG, GF(2) matrix PRNG, middle-square, deterministic RNG hill climbing, random-mode oracle, time-based seeds, password cracking)
 - [historical.md](historical.md) - Historical ciphers (Lorenz SZ40/42, book cipher implementation)
 - [advanced-math.md](advanced-math.md) - Advanced mathematical attacks (isogenies, Pohlig-Hellman, LLL, Coppersmith, quaternion RSA, monotone inversion, GF(2)[x] CRT, S-box collision code)
 
@@ -93,28 +93,18 @@ See [ecc-attacks.md](ecc-attacks.md) and [advanced-math.md](advanced-math.md) fo
 
 See [zkp-and-advanced.md](zkp-and-advanced.md) for full code examples and solver patterns.
 
+## Modern Cipher Attacks (Additional)
+
+- **Affine over composite modulus:** `c = A*x+b (mod M)`, M composite (e.g., 65=5*13). Chosen-plaintext recovery via one-hot vectors, CRT inversion per prime factor. See [modern-ciphers.md](modern-ciphers.md#affine-cipher-over-composite-modulus-nullcon-2026).
+- **Custom linear MAC forgery:** XOR-based signature linear in secret blocks. Recover secrets from ~5 known pairs, forge for target. See [modern-ciphers.md](modern-ciphers.md#custom-linear-mac-forgery-nullcon-2026).
+- **Manger oracle (RSA threshold):** RSA multiplicative + binary search on `m*s < 2^128`. ~128 queries to recover AES key.
+
 ## Common Patterns
 
-```python
-from Crypto.Util.number import *
-
-# RSA basics
-n = p * q
-phi = (p-1) * (q-1)
-d = inverse(e, phi)
-m = pow(c, d, n)
-
-# XOR
-from pwn import xor
-xor(ct, key)
-```
+- **RSA basics:** `phi = (p-1)*(q-1)`, `d = inverse(e, phi)`, `m = pow(c, d, n)`. See [rsa-attacks.md](rsa-attacks.md) for full examples.
+- **XOR:** `from pwn import xor; xor(ct, key)`. See [classic-ciphers.md](classic-ciphers.md) for XOR variants.
 
 ## Useful Tools
 
-```bash
-# Python setup
-pip install pycryptodome z3-solver sympy gmpy2
-
-# SageMath for advanced math (required for ECC)
-sage -python script.py
-```
+- **Python:** `pip install pycryptodome z3-solver sympy gmpy2`
+- **SageMath:** `sage -python script.py` (required for ECC, Coppersmith, lattice attacks)
