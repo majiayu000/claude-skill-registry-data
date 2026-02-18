@@ -13,14 +13,29 @@ Search, browse, monitor, and manage Claude Code session history across all proje
 
 | Tool | Purpose |
 |------|---------|
-| `claude-tracker-search` | Search sessions by topic, ID, project, or time range |
+| `claude-tracker-search` | Search sessions by keyword (standalone script) |
 | `claude-tracker-resume` | Find and resume crashed/inactive sessions |
 | `claude-tracker-alive` | Check which sessions have running processes |
 | `claude-tracker-watch` | Daemon: auto-summarize new sessions, update active-projects.md |
-| `claude-tracker` | List recent sessions (all or VS Code only) |
+| `claude-tracker` | List recent sessions with status badges (standalone script) |
+| `resume-in-vscode.sh` | Open a session in a new VS Code (or Cursor) terminal via AppleScript |
 | `detect-projects.js` | Scan sessions to find all projects, check CLAUDE.md coverage |
 | `bootstrap-claude-setup.js` | Generate complete ~/.claude/ config for new machine |
 | `update-active-projects.py` | Regenerate active-projects.md with enriched session data |
+
+## Standalone Scripts
+
+Commands delegate to standalone Node.js scripts (avoids shell escaping issues with inline `node -e`):
+
+| Script | Called By | Purpose |
+|--------|-----------|---------|
+| `scripts/search-sessions.js` | `/claude-tracker-search` | Keyword search across all sessions (8K lines/file, noise-filtered) |
+| `scripts/list-sessions.js` | `/claude-tracker` | List recent sessions with status badges |
+| `scripts/resume-in-vscode.sh` | Direct invocation | Open session in new VS Code/Cursor terminal (macOS AppleScript) |
+| `scripts/detect-projects.js` | Direct invocation | Project discovery and CLAUDE.md scaffolding |
+| `scripts/bootstrap-claude-setup.js` | Direct invocation | New machine setup generator |
+
+All scripts use `~/.claude/lib/tracker-utils.js` for shared utilities (path decoding, session parsing, git remote detection).
 
 ## Quick Start
 
@@ -135,17 +150,74 @@ node ~/.claude/skills/claude-tracker-suite/scripts/bootstrap-claude-setup.js --u
 
 Creates directory structure, global CLAUDE.md, userModel template, agent_docs stubs, and project CLAUDE.md scaffolds. Follow up with `/claude-md-manager` to enrich generated files.
 
+## Resume in New Terminal
+
+Open a session in a new Ghostty tab, VS Code terminal, or Cursor terminal (macOS AppleScript):
+
+```bash
+# Resume session in Ghostty (default)
+~/.claude/skills/claude-tracker-suite/scripts/resume-in-vscode.sh <session-id>
+
+# Resume in VS Code terminal
+~/.claude/skills/claude-tracker-suite/scripts/resume-in-vscode.sh <session-id> --vscode
+
+# Resume in Cursor terminal
+~/.claude/skills/claude-tracker-suite/scripts/resume-in-vscode.sh <session-id> --cursor
+
+# cd to a project first, then resume
+~/.claude/skills/claude-tracker-suite/scripts/resume-in-vscode.sh <session-id> --project ~/Desktop/Programming
+```
+
+System aliases: `code` → Cursor, `vscode` → VS Code. Ghostty is the default target.
+
 ## Workflow: Find and Resume
 
 1. `claude-tracker-search "topic"` — find matching sessions
-2. `claude --resume <session-id>` — resume the one you want
-3. Or `claude-tracker-resume --tmux` — auto-resume all crashed sessions
+2. `claude --resume <session-id>` — resume in current terminal
+3. `resume-in-vscode.sh <session-id>` — resume in new VS Code terminal
+4. Or `claude-tracker-resume --tmux` — auto-resume all crashed sessions
 
 ## Workflow: Monitor Active Work
 
 1. `claude-tracker-alive` — see what's running vs stale
 2. `claude-tracker-watch --daemon` — keep summaries auto-updated
 3. Read `~/.claude/agent_docs/active-projects.md` — curated project overview
+
+## Related: Git Tracking
+
+Git-aware session tracking via PreToolUse/PostToolUse hooks intercepts all git commands and tags sessions with repos they touch. Enables cross-directory session discovery.
+
+| File | Purpose |
+|------|---------|
+| `~/.claude/hooks/git-track.sh` | PreToolUse hook — logs git commands to JSONL |
+| `~/.claude/hooks/git-track-post.sh` | PostToolUse hook — captures commit hashes |
+| `~/.claude/hooks/git-track-rebuild.py` | Builds bidirectional index at SessionEnd |
+| `~/.claude/git-tracking.jsonl` | Append-only event log (hot path) |
+| `~/.claude/git-tracking-index.json` | Bidirectional session <-> repo index |
+
+Query functions in `tracker-utils.js`:
+- `loadGitTracking()` — load the index
+- `getSessionsForRepo(path)` — find sessions that touched a repo
+- `getReposForSession(sid)` — find repos a session touched
+- `getRecentCommits({hours, repoPath})` — recent commits across sessions
+- `getRecentGitEvents({hours})` — raw event timeline
+
+The `/session-report` command generates a Markdown dashboard combining session status with git activity.
+
+## Related: Soul Registry
+
+The soul registry (`~/.claude/hooks/soul-registry.py`) tracks **live** sessions with heartbeats, topics, and Slack channel bindings. It complements the tracker suite:
+
+| | Tracker Suite | Soul Registry |
+|--|---------------|---------------|
+| **Scope** | All sessions, all time | Active sessions only |
+| **Data source** | JSONL transcripts, sessions-index.json | `~/.claude/soul-sessions/registry.json` |
+| **Updates** | After session ends (summaries) | Real-time (heartbeat every turn) |
+| **Purpose** | Search, resume, project detection | Cross-session awareness, Slack binding |
+
+To view the live registry: `python3 ~/.claude/hooks/soul-registry.py list --md`
+
+To activate Claudius identity in a session: `/ensoul` (opt-in per session). To bind a session to Slack: `/slack-sync #channel`.
 
 ## References
 
