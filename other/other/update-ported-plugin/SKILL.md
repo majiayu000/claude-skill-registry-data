@@ -1,8 +1,6 @@
 ---
 name: update-ported-plugin
-description: |
-  Updates previously-ported plugins when source plugins change or the target platform evolves.
-  Detects source diffs and platform changes, applies incremental updates, and refreshes metadata.
+description: Updates previously-ported plugins when source plugins change or the target platform evolves
 user-invocable: true
 disable-model-invocation: true
 argument-hint: "--target <platform> [--source-only] [--platform-only] [--output-dir <path>]"

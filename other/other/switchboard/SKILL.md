@@ -295,7 +295,7 @@ pub fn consume_randomness(ctx: Context<ConsumeRandomness>) -> Result<()> {
 
 ### Using Feed Builder UI
 
-1. Visit [app.switchboard.xyz](https://app.switchboard.xyz)
+1. Visit [ondemand.switchboard.xyz](https://ondemand.switchboard.xyz)
 2. Click "Create Feed"
 3. Configure data sources and aggregation
 4. Deploy to mainnet/devnet
@@ -395,8 +395,7 @@ const tx = new Transaction()
 
 ### Official Links
 - **Documentation**: https://docs.switchboard.xyz
-- **Feed Builder**: https://app.switchboard.xyz
-- **TypeDocs**: https://switchboard-docs.web.app
+-- **Feed Builder**: https://ondemand.switchboard.xyz
 
 ### GitHub Repositories
 | Repository | Description |
@@ -407,7 +406,7 @@ const tx = new Transaction()
 | [on-demand](https://github.com/switchboard-xyz/on-demand) | TypeScript SDK |
 
 ### Community
-- **Discord**: https://discord.gg/switchboard
+- **Discord**: https://discord.gg/TJAv6ZYvPC
 - **Twitter**: @switchboardxyz
 
 ## Skill Structure
