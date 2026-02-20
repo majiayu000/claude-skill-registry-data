@@ -1,6 +1,6 @@
 ---
 name: soul
-description: Session strategy for task detection and confidence verification. Use when starting tasks, asking "what could go wrong", "how confident", "verify this", "think through".
+description: Use when starting any task, thinking through confidence, verifying work, or asking "what could go wrong". Triggers on every non-trivial request, "how confident", "verify this", "think through".
 model: opus
 ---
 
@@ -46,11 +46,11 @@ pipeline. Prevent mistakes through thinking, not safety nets.
    | Signal                                     | Start pipeline at             |
    | ------------------------------------------ | ----------------------------- |
    | Vague, multiple interpretations            | clarify → shape → execute     |
-   | Clear spec, unclear approach               | consult explore → shape → execute |
+   | Clear spec, unclear approach               | shape → execute               |
    | Clear spec and approach                    | execute                       |
    | Tradeoff, expert guidance needed           | consult (insert at any point) |
    | Factual question, trivial fix              | respond directly              |
-   | Generative — "brainstorm", "what if"       | consult explore → shape       |
+   | Generative — "brainstorm", "what if"       | consult (generative mode)     |
    | Retrospective — "postmortem", "review"     | clarify → consult             |
    | Learning — "explain", "help me understand" | respond directly or consult   |
    | Writing — "draft", "write", "compose"      | clarify → execute             |
@@ -65,8 +65,8 @@ pipeline. Prevent mistakes through thinking, not safety nets.
 
 3. **Emit marker** —
    `[SESSION] Pipeline: [phases] | Engagement: [level] | Horizon: [horizon] | Feasible: [axis] ([bound])`
-   Maintain through conversation. On compaction: preserve marker, active
-   criteria, mustNot constraints, and wave progress.
+   Maintain through conversation. On compaction: pyramid summary preserves
+   L1 (marker + satisfaction), L2 (decisions), L3 (full state).
 
 ### Every Turn
 
@@ -96,6 +96,7 @@ pipeline. Prevent mistakes through thinking, not safety nets.
 | `measurement`      | Metrics, benchmark         | Yes    |
 | `code review`      | Inspection only            | Weak   |
 | `assumption`       | Not verified               | Blocks |
+| `satisfaction`     | holdout score + confidence | ≥85 ships (advisory) |
 
 Verification type IS the confidence. Observable > inspected > assumed.
 
@@ -119,7 +120,7 @@ Derive from sizing + blast radius. Match output to verification burden.
 | --------- | --------------------------------------- | ----------------------------------------- |
 | Trivial   | 1-3 points, no irreversible ops        | Outcome sentence only                     |
 | Standard  | 5-8 points OR touches external APIs    | Outcome + key decisions + grouped changes |
-| Critical  | 13+ points OR irreversible OR auth/data | Full pyramid + pre-mortem (from shape)   |
+| Critical  | 13+ points OR irreversible OR auth/data | Pyramid (L1→L2→L3) + pre-mortem (from shape) |
 
 Default to less. Expand on request. Never push complexity the human didn't pull.
 
@@ -137,10 +138,9 @@ Soul sets the session up and maintains thinking discipline. It does NOT:
 After emitting the [SESSION] marker, invoke the first pipeline phase:
 
 - Clarification needed → Skill(skill="hope:intent")
-- Spec clear, approach unclear → Skill(skill="hope:consult", args="explore: [goal]")
+- Spec clear, approach unclear → Skill(skill="hope:shape")
 - Spec and approach clear → Skill(skill="hope:loop")
 - Expert input needed → Skill(skill="hope:consult")
-- Generative / brainstorm → Skill(skill="hope:consult", args="explore: [topic]")
 
 On every-turn checks (step 4), if a gap is found:
 

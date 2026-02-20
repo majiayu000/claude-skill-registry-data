@@ -16,15 +16,17 @@ Migrate Terraform provider data sources and resources from `terraform-plugin-sdk
 `terraform-plugin-framework`, following patterns established by completed migrations in the
 target codebase.
 
-## Prerequisites
-
-Before starting any migration, read the following to understand context:
-
-1. The existing SDK v2 source file being migrated
-2. Any existing migration notes or lessons-learned docs in the target repo (e.g. a `PLUGIN_FRAMEWORK_LESSONS_LEARNED.md` or similar)
-3. The API client types used by the resource/data source
-
 ## Migration Workflow
+
+### Phase 0: Codebase Discovery
+
+Before writing any code, understand how the target provider is structured. This determines whether you follow existing conventions or fall back to the templates in `references/`.
+
+1. **Find existing framework code** — search for imports of `terraform-plugin-framework` to locate already-migrated data sources and resources. Note their file structure, naming conventions, and patterns.
+2. **Identify the provider registration files** — find where `DataSources()` and `Resources()` are returned from the framework provider, and where `DataSourcesMap`/`ResourcesMap` are defined in the SDK provider.
+3. **Check for codegen or shared tooling** — some providers use code generation (e.g. `tfplugindocs`, custom generators). Look for `go:generate` directives, `Makefile` targets, or `tools/` directories.
+4. **Locate test infrastructure** — find how existing tests set up `protoV5ProviderFactories` or equivalent. Note the test package conventions and any shared test helpers.
+5. **Check for a muxed server** — look for `tf5muxserver` or `tf6muxserver` usage. This determines whether the protocol v5 block constraint applies (see `references/gotchas.md` #1).
 
 ### Phase 1: Analyse the SDK v2 Source
 
@@ -39,7 +41,9 @@ Before starting any migration, read the following to understand context:
 
 ### Phase 2: Create Package Structure
 
-Create the target package directory. Follow the 3-file pattern:
+**If Phase 0 found existing framework code:** match those conventions exactly (directory layout, file naming, import organisation).
+
+**Otherwise**, use the 3-file pattern as a fallback:
 
 **Data sources:**
 ```
@@ -53,111 +57,100 @@ internal/<package>/
 **Resources:**
 ```
 internal/<package>/
-├── resource_<name>.go           # Schema, interfaces, Metadata, Configure, ModifyPlan
+├── resource_<name>.go           # Schema, interfaces, Metadata, Configure
 ├── resource_<name>_model.go     # Model struct(s) with tfsdk tags
 ├── resource_<name>_crud.go      # Create, Read, Update, Delete implementations
 └── helpers.go                   # Shared utilities (if needed)
 ```
 
-> **Note:** Adapt the directory layout to match the target provider's existing conventions. Some providers use `internal/provider/`, others use `internal/<feature>/`, etc.
+### Phase 3: Write the Model
 
-### Phase 3: Write the Model File
+Create the model struct:
 
-Create the model struct. Key rules:
-
-- **`id` is always `types.String`** — even if SDK v2 used `TypeInt`
+- **`id` is always `types.String`** — even if SDK v2 used `TypeInt` (see `references/gotchas.md` #5)
 - Use `types.String`, `types.Bool`, `types.Int64`, `types.Float64` for scalars
 - Use `types.Set`, `types.List`, `types.Map` for collections
 - Every field needs a `tfsdk:"field_name"` tag matching the schema attribute name
 
 Consult `references/schema-mapping.md` for the full type mapping table.
 
-### Phase 4: Write the Schema File
+### Phase 4: Write the Schema
 
-Create the schema definition. Follow this structure:
+Create the schema definition with: interface checks, struct, constructor, Metadata, Configure, and Schema methods.
 
-1. **Interface checks** — compile-time verification of interface compliance
-2. **Struct definition** — holds the provider's API client
-3. **Constructor** — `NewXxxDataSource()` or `NewXxxResource()`
-4. **Metadata** — sets `TypeName` to `req.ProviderTypeName + "_suffix"`
-5. **Configure** — extracts the API client from `req.ProviderData`
-6. **Schema** — defines all attributes and blocks
+Key rules:
+- **Protocol v5 nested blocks** — if the provider uses `tf5muxserver`, SDK v2 `TypeSet`/`TypeList` with `Elem: &schema.Resource{}` MUST become blocks, not attributes. See `references/gotchas.md` #1.
+- **`MaxItems: 1` nested objects** become `SingleNestedBlock`. See `references/gotchas.md` #6.
+- **Explicit `id`** — declare as `schema.StringAttribute{Computed: true}`. See `references/gotchas.md` #5.
+- **`ForceNew`** becomes `planmodifier.RequiresReplace()`.
+- **`DefaultFunc`** becomes `Default` (e.g., `stringdefault.StaticString("value")`).
+- **`DiffSuppressFunc`** becomes a custom `planmodifier`.
+- **`CustomizeDiff`** becomes `ModifyPlan` (implement `ResourceWithModifyPlan`).
 
-Critical rules for schema definition:
-- **Protocol v5 constraint**: SDK v2 `TypeSet`/`TypeList` with `Elem: &schema.Resource{}` MUST become `SetNestedBlock`/`ListNestedBlock` in the `Blocks` map, NOT `SetNestedAttribute`/`ListNestedAttribute` in `Attributes`. See `references/lessons-learned.md` Lesson 1.
-- **Explicit `id`**: Declare `id` as `schema.StringAttribute{Computed: true}` — the framework has no implicit `id`.
-- **SDK v2 `ForceNew`** becomes `planmodifier.RequiresReplace()` in the framework.
-- **SDK v2 `DefaultFunc`** becomes `Default` (e.g., `stringdefault.StaticString("value")`).
-- **SDK v2 `DiffSuppressFunc`** becomes a custom `planmodifier`.
-- **SDK v2 `CustomizeDiff`** becomes `ModifyPlan` (implement `ResourceWithModifyPlan` interface).
+For code templates, see `references/data-source-template.md` or `references/resource-template.md`.
 
-Consult `references/data-source-pattern.md` or `references/resource-pattern.md` for full code templates.
+### Phase 5: Write the Read/CRUD Implementation
 
-### Phase 5: Write the Read/CRUD File
+Implement the operations following these patterns:
 
-Implement the operations. Key patterns:
+1. **Nil safety** — defensive client check at the start of every operation. See `references/gotchas.md` #4.
+2. **Read config/state** via `req.Config.Get(ctx, &state)` (data sources) or `req.Plan.Get(ctx, &plan)` (resources).
+3. **API pointer dereference** — dereference safely. See `references/gotchas.md` #2.
+4. **Filter pattern** for data sources: list all items, apply filters, expect exactly 1 result.
+5. **Flatten pattern** for nested sets: use `types.ObjectValueFrom` with model structs. See `references/gotchas.md` #3.
+6. **Set state** via `resp.State.Set(ctx, &state)`.
+7. **Concurrency control** — replicate any mutex patterns from the SDK v2 implementation.
+8. **State waiting** for resources: wait for stable state after mutations if the API is asynchronous.
 
-1. **Defensive nil check** on `d.client` at the start of every operation
-2. **Read config/state** via `req.Config.Get(ctx, &state)` (data sources) or `req.Plan.Get(ctx, &plan)` (resources)
-3. **API pointer dereference** — if the API client returns pointer types (`*string`, `*int`), dereference safely with nil checks or helper functions
-4. **Filter pattern** for data sources: list all items, apply filters, expect exactly 1 result
-5. **Set state** via `resp.State.Set(ctx, &state)`
-6. **Concurrency control** — if the provider uses mutexes for safe concurrent access, replicate that pattern
-7. **State waiting** for resources: wait for the resource to reach a stable state after mutations
-
-For nested objects, use `types.ObjectValueFrom(ctx, attrTypes, model)` — see `references/lessons-learned.md` Lesson 7.
-
-### Phase 6: Register the New Implementation
+### Phase 6: Register and Remove
 
 Three changes required:
 
-1. **Add to the framework provider**: Import the new package, add to `DataSources()` or `Resources()` return slice
-2. **Remove from the SDK provider**: Delete the entry from `DataSourcesMap` or `ResourcesMap`
-3. **Delete the old SDK v2 file**
+1. **Add to the framework provider**: import the new package, add to `DataSources()` or `Resources()` return slice.
+2. **Remove from the SDK provider**: delete the entry from `DataSourcesMap` or `ResourcesMap`.
+3. **Delete the old SDK v2 file**.
 
-> **Note:** The exact file names depend on the target provider's conventions. Look for how existing framework data sources/resources are registered.
+> Use the registration files identified in Phase 0. Look for how existing framework data sources/resources are registered.
 
-### Phase 7: Update Tests
+### Phase 7: Verify Build Iteratively
 
-- If tests exist in the same package, they may continue to work without changes
-- If migrating tests to the new package, update imports and use `protoV5ProviderFactories`
-- Existing tests validate that the migration is behaviourally equivalent
+Run the build and fix errors in a loop:
 
-### Phase 8: Update Documentation
+1. Run `go build ./...`
+2. If compilation errors occur:
+   - Fix the reported errors
+   - Run `go build ./...` again
+3. Run `go vet ./...` to catch additional issues
+4. Repeat until clean
+
+Common build errors during migration:
+- Missing imports (framework packages have different import paths than SDK v2)
+- Type mismatches between model fields and API types (pointer vs value)
+- Interface compliance failures (missing methods on the struct)
+
+### Phase 8: Tests
+
+Leverage the test infrastructure discovered in Phase 0:
+
+1. **Check if existing tests still pass** — if tests were in a separate package using the muxed provider factories, they may work without changes after registration is updated.
+2. **If tests need migration**, follow the same test patterns found in Phase 0:
+   - Use the same `protoV5ProviderFactories` setup
+   - Match the existing test naming and structure conventions
+   - Use the same `testAccPreCheck` pattern
+3. **Provide the test command** for the user to run (do not run tests yourself):
+   ```
+   go test ./internal/<package>/... -v 2>&1 | tee test-output.log
+   ```
+
+### Phase 9: Documentation
 
 Update the corresponding `docs/data-sources/` or `docs/resources/` markdown file if the schema changed (e.g., `id` type change from int to string).
 
-## Migration Checklist
+## Quick Reference
 
-Use this as a tracking checklist for each migration:
-
-- [ ] Read and understand SDK v2 source
-- [ ] Create package directory
-- [ ] Write model file (`_model.go`)
-- [ ] Write schema file (`.go`)
-- [ ] Write read/CRUD file (`_read.go` or `_crud.go`)
-- [ ] Write helpers if needed (`helpers.go`)
-- [ ] Add to framework provider
-- [ ] Remove from SDK provider
-- [ ] Delete old SDK v2 file
-- [ ] Verify build: `go build ./...`
-- [ ] Update tests if needed
-- [ ] Update docs if needed
-- [ ] Provide test command for user to run
-
-## Common Gotchas
-
-1. **`SetNestedAttribute` causes runtime panic** with muxed providers (protocol v5). Always use `SetNestedBlock`.
-2. **Missing `id` attribute** causes cryptic test failures. Always declare it explicitly.
-3. **API returns pointer types** (`*string`, `*int`). Dereference safely — never pass a nil pointer to `types.StringValue()`.
-4. **Nil slice elements** in API responses. Always check `if item == nil { continue }` in loops.
-5. **`d.SetId()` doesn't exist**. Assign directly to `state.ID = types.StringValue(...)`.
-
-## Reference Files
-
-For detailed patterns, code templates, and examples:
-
-- **`references/lessons-learned.md`** — 9 lessons from completed migrations with full code examples
-- **`references/data-source-pattern.md`** — Complete data source migration template
-- **`references/resource-pattern.md`** — Complete resource migration template
-- **`references/schema-mapping.md`** — SDK v2 to Plugin Framework type mapping table
+| Need | File |
+|------|------|
+| Type mapping (SDK v2 → Framework) | `references/schema-mapping.md` |
+| Common failure modes | `references/gotchas.md` |
+| Data source code template | `references/data-source-template.md` |
+| Resource code template | `references/resource-template.md` |

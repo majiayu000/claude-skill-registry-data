@@ -11,6 +11,8 @@ Future Tokens operations are named, composable instruments that target specific 
 
 Part of the [FUTURE TOKENS](https://jordanmrubin.substack.com/p/future-tokens) project.
 
+This collection is compatible with both Claude and Codex workflows.
+
 ## When to use
 
 If you just produced an output, it has predictable gaps. Match what you built to the operation that catches what it missed.
@@ -74,9 +76,9 @@ These skills embody several principles:
 5. **Clear attribution** — Maintain distinctions between three entities in any assessment context:
    - **The user** — who requests the analysis or reasoning move
    - **The author(s)** — whose content, claims, or work is being assessed
-   - **Claude** — who performs the reasoning operation and generates outputs
+   - **Claude/Codex** — who performs the reasoning operation and generates outputs
 
-   Never misattribute Claude's outputs to the author or user. Never misattribute the author's positions to the user. Keep the three roles distinct throughout all operations.
+   Never misattribute Claude/Codex outputs to the author or user. Never misattribute the author's positions to the user. Keep the three roles distinct throughout all operations.
 
 ## Repository Structure
 

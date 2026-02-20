@@ -1,6 +1,7 @@
 ---
 name: exegetical-notes
 description: Use when producing structured exegetical analysis of a biblical passage. Use when user asks for exegetical notes, verse analysis, passage study, word study with morphology, or detailed interpretive framework for a text. Always English output. Saves to file.
+allowed-tools: Read, Write, Glob, WebSearch, Bash, mcp__claude-of-alexandria-mcp__query_discourse_features, mcp__claude-of-alexandria-mcp__query_paragraph_breaks, mcp__claude-of-alexandria-mcp__query_vocabulary, mcp__claude-of-alexandria-mcp__query_morphology
 ---
 
 # Exegetical Notes
@@ -35,15 +36,15 @@ Recommended passage: [better range]
 Continue with [original range]? (notes will flag this in Section 1)
 ```
 
-### Rule 2: Lexical Analysis Uses morphology_parser.py
+### Rule 2: Lexical Analysis Uses query_morphology MCP Tool
 
 Section 4 (Lexical Analysis) must:
-- Call morphology_parser.py for parsing data
-- Cite actual counts from vocabulary_parser.py
+- Call `query_morphology` MCP tool for parsing data
+- Cite actual counts from `query_vocabulary` MCP tool
 - Never say "appears frequently" — give exact count and verse references
-- Format: `lemma (reference): morph description [morphology_parser.py]`
+- Format: `lemma (reference): morph description [query_morphology]`
 
-**Valid:** `ἐναρξάμενος (1:6): lemma ἐνάρχομαι, aorist middle participle, nom. sg. masc. [morphology_parser.py]`
+**Valid:** `ἐναρξάμενος (1:6): lemma ἐνάρχομαι, aorist middle participle, nom. sg. masc. [query_morphology]`
 **Invalid:** `ἐναρξάμενος is an aorist participle meaning "having begun"`
 
 ### Rule 3: Tier All Interpretive Claims
@@ -102,13 +103,13 @@ After saving, report the saved path to user.
    → If valid or confirmed: proceed
 
 3. Gather data
-   NT: morphology_parser.py for lexical data
-       levinsohn_parser.py for discourse features
-       vocabulary_parser.py for lemma frequencies
+   NT: query_morphology MCP tool for lexical data
+       query_discourse_features MCP tool for discourse features
+       query_vocabulary MCP tool for lemma frequencies
        semantic_groups.yaml for thematic connections
-   OT: morphology_parser.py --testament ot for Hebrew morphology
-       sefaria_paragraphs.py for Masoretic markers
-       vocabulary_parser.py --testament ot for frequencies
+   OT: query_morphology MCP tool (testament: ot) for Hebrew morphology
+       query_paragraph_breaks MCP tool for Masoretic markers
+       query_vocabulary MCP tool (testament: ot) for frequencies
 
 4. Web search (for Tier 3)
    → Search for scholarly commentary on passage
@@ -169,10 +170,10 @@ After saving, report the saved path to user.
 ## 4. Lexical Analysis
 
 [For each key lemma:]
-**[Greek/Hebrew] ([reference])**: lemma [lemma form], [full parsing] [morphology_parser.py]
+**[Greek/Hebrew] ([reference])**: lemma [lemma form], [full parsing] [query_morphology]
 Gloss: "[translation]"
 [Semantic group from semantic_groups.yaml if applicable]
-[Frequency in book from vocabulary_parser.py]
+[Frequency in book from query_vocabulary]
 [Significance for passage interpretation]
 
 [Flag hapax legomena or unusual forms]
@@ -225,11 +226,11 @@ Gloss: "[translation]"
 
 ## 9. Data Sources
 
-- MorphGNT/SBLGNT (CC BY-SA 3.0) — morphological parsing via morphology_parser.py
+- MorphGNT/SBLGNT (CC BY-SA 3.0) — morphological parsing via query_morphology MCP tool
 - [OR] Open Scriptures Hebrew Bible morphhb (CC BY 4.0) — Hebrew morphology
-- Levinsohn GNT Discourse Features (dataset 2016; book: Levinsohn 2000) — discourse analysis via levinsohn_parser.py
+- Levinsohn GNT Discourse Features (dataset 2016; book: Levinsohn 2000) — discourse analysis via query_discourse_features MCP tool
 - [OR] Sefaria / OpenScriptures paragraph markers — Masoretic structure
-- [Vocabulary source: vocabulary_parser.py with per-book JSON]
+- [Vocabulary source: query_vocabulary MCP tool with per-book data]
 - [Semantic groups: semantic_groups.yaml]
 - [Tier 3 sources: full citations as used in Section 6]
 
@@ -266,39 +267,27 @@ Gloss: "[translation]"
 
 ### NT Morphological Data
 
-```
-python3 scripts/morphology_parser.py [Book] --range [range] --output yaml
-```
+Call `mcp__claude-of-alexandria-mcp__query_morphology` with `{"book": "[Book]", "range": "[chapter:verse-chapter:verse]"}`
 
 ### OT Morphological Data
 
-```
-python3 scripts/morphology_parser.py [Book] --testament ot --range [range] --output yaml
-```
+Call `mcp__claude-of-alexandria-mcp__query_morphology` with `{"book": "[Book]", "testament": "ot", "range": "[chapter:verse-chapter:verse]"}`
 
 ### Vocabulary Frequencies
 
-```
-python3 scripts/vocabulary_parser.py [Book] [--testament ot]
-```
+Call `mcp__claude-of-alexandria-mcp__query_vocabulary` with `{"book": "[Book]", "testament": "[nt|ot]"}`
 
 ### Levinsohn Discourse Features (NT)
 
-```
-python3 scripts/levinsohn_parser.py [Book]
-```
+Call `mcp__claude-of-alexandria-mcp__query_discourse_features` with `{"book": "[Book]"}`
 
 ### Masoretic Markers (OT)
 
-```
-python3 scripts/sefaria_paragraphs.py [Book]
-```
+Call `mcp__claude-of-alexandria-mcp__query_paragraph_breaks` with `{"book": "[Book]"}`
 
 ### Claim Verification
 
-```
-python3 scripts/verify_claims.py output.md
-```
+Cross-reference MCP tool output against cited verse and morphological claims.
 
 ### Semantic Groups
 
@@ -325,8 +314,8 @@ Key semantic families from `semantic_groups.yaml` (for Section 4 connections):
 
 | Failure | Prevention |
 |---------|-----------|
-| "χαρά appears frequently" | Use vocabulary_parser.py: χαρά (5x) at 1:4, 1:25, 2:2, 2:29, 4:1 |
-| Wrong voice in morphology | Always verify via morphology_parser.py |
+| "χαρά appears frequently" | Call query_vocabulary: χαρά (5x) at 1:4, 1:25, 2:2, 2:29, 4:1 |
+| Wrong voice in morphology | Always verify via query_morphology MCP tool |
 | "Scholars agree..." without citation | Web search required; cite author/title/year |
 | Mixing Tier 1 and Tier 4 | Label every tier claim explicitly |
 | Skipping verify_claims.py | Section 10 is required |
@@ -341,19 +330,19 @@ Key semantic families from `semantic_groups.yaml` (for Section 4 connections):
 ## 4. Lexical Analysis
 
 **ἐναρξάμενος (1:6)**: lemma ἐνάρχομαι, aorist middle participle,
-nominative singular masculine [morphology_parser.py]
+nominative singular masculine [query_morphology]
 Gloss: "having begun"
 Semantic note: Middle voice is significant — "begun in/among themselves" or
 reflexive causative. Contrast with active voice ἐναρχόμενος (not attested here).
-Frequency in Philippians: 1x (this passage) [vocabulary_parser.py]
+Frequency in Philippians: 1x (this passage) [query_vocabulary]
 
 **ἐπιτελέσει (1:6)**: lemma ἐπιτελέω, future active indicative,
-3rd person singular [morphology_parser.py]
+3rd person singular [query_morphology]
 Gloss: "will complete/finish"
 Temporal referent: ἄχρι ἡμέρας Χριστοῦ Ἰησοῦ — eschatological frame.
-Frequency in Philippians: 1x [vocabulary_parser.py]
+Frequency in Philippians: 1x [query_vocabulary]
 
 **χαρά (1:4)**: lemma χαρά (noun), [not a verb form — check pos in morphology data]
-Frequency in Philippians: 5x (1:4, 1:25, 2:2, 2:29, 4:1) [vocabulary_parser.py]
+Frequency in Philippians: 5x (1:4, 1:25, 2:2, 2:29, 4:1) [query_vocabulary]
 Semantic group: Joy family — see also χαίρω (9x in Philippians) [semantic_groups.yaml]
 ```

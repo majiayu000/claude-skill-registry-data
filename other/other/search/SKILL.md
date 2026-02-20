@@ -1,6 +1,6 @@
 ---
 name: search
-description: Pattern reference for ast-grep (sg) and ripgrep (rg) code search. Use when searching codebases, "find pattern", "search for", "ast-grep", "sg", "rg".
+description: Use when searching codebases with sg (ast-grep) or rg (ripgrep). Triggers on "find pattern", "search for", "ast-grep", "sg", "rg", code search tasks.
 ---
 
 # Code Search Reference

@@ -1,6 +1,7 @@
 ---
 name: biblical-segmentation
 description: Use when helping users divide biblical books into sessions for sermon series, Bible study, or devotional reading. Use when user asks to segment, divide, or outline any biblical book.
+allowed-tools: Read, Write, Glob, WebSearch, Bash, mcp__claude-of-alexandria-mcp__query_discourse_features, mcp__claude-of-alexandria-mcp__query_paragraph_breaks, mcp__claude-of-alexandria-mcp__query_vocabulary, mcp__claude-of-alexandria-mcp__query_morphology
 ---
 
 # Biblical Text Segmentation
@@ -110,7 +111,7 @@ Vocabulary-Based Thematic options require all of these:
 
 | Requirement | What This Means |
 |-------------|-----------------|
-| **Bundled data** | Only generate if vocabulary_parser.py returns data for book |
+| **Bundled data** | Only generate if `query_vocabulary` MCP tool returns data for book |
 | **Scholarly citation** | Web search REQUIRED; no citation = no thematic option |
 | **Verified frequencies** | Every lemma count must match bundled YAML exactly |
 | **Integrity safeguards** | Same as structural options (no mid-sentence, mid-scene) |
@@ -174,7 +175,7 @@ digraph workflow {
 
 **Thematic Trigger Conditions:**
 1. User explicitly requests thematic approach (e.g., "focusing on joy theme")
-2. Vocabulary clustering ≥60% detected (run `vocabulary_parser.py --check-clustering`)
+2. Vocabulary clustering ≥60% detected (call `query_vocabulary` with `check_clustering: true`)
 3. Epistle genre + high-frequency theological terms
 
 ## Genre-Methodology Quick Reference
@@ -202,7 +203,7 @@ digraph workflow {
 
 ### For NT Books (Greek)
 
-**Run:** `python scripts/levinsohn_parser.py {book}`
+**Call:** `mcp__claude-of-alexandria-mcp__query_discourse_features` with `{"book": "{book}"}`
 
 This extracts Levinsohn GNT Discourse Features:
 - **Historical Present** - Scene transitions, participant tracking, narrative peaks
@@ -222,6 +223,8 @@ This extracts Levinsohn GNT Discourse Features:
 ```
 
 ### For OT Books (Hebrew)
+
+**Call:** `mcp__claude-of-alexandria-mcp__query_paragraph_breaks` with `{"book": "{book}"}`
 
 **MANDATORY:** Before generating options, consult Masoretic paragraph markers for:
 - **Petuchot (פ)** - Open paragraph (major division)
@@ -310,7 +313,7 @@ Pastors need ONE question answered: "Does my session boundary have ancient suppo
 
 ### Checking Thematic Triggers
 
-**Run:** `python scripts/vocabulary_parser.py {book} --check-clustering`
+**Call:** `mcp__claude-of-alexandria-mcp__query_vocabulary` with `{"book": "{book}", "testament": "{nt|ot}", "check_clustering": true}`
 
 This checks if notable vocabulary clustering exists:
 - Returns `has_clustering: true` if any lemma has ≥60% concentration
@@ -319,7 +322,7 @@ This checks if notable vocabulary clustering exists:
 
 ### Getting Thematic Vocabulary
 
-**Run:** `python scripts/vocabulary_parser.py {book} --theme {keyword}`
+**Call:** `mcp__claude-of-alexandria-mcp__query_vocabulary` with `{"book": "{book}", "testament": "{nt|ot}", "theme": "{keyword}"}`
 
 Predefined themes: joy, faith, love, righteousness, covenant, blessing, holy
 
@@ -328,9 +331,9 @@ Returns:
 - Chapter-by-chapter distribution
 - Data for verifying claims in output
 
-**For OT books:** Use `--testament ot`:
-```bash
-python scripts/vocabulary_parser.py Genesis --testament ot --theme covenant
+**For OT books:** Pass `"testament": "ot"`:
+```json
+{"book": "Genesis", "testament": "ot", "theme": "covenant"}
 ```
 
 ### Thematic Option Template
@@ -342,7 +345,7 @@ When generating Vocabulary-Based Thematic option:
 
 **Methodology:** Lemma frequency analysis + term clustering + scholarly framework
 **Best for:** Thematic preaching exploring [theme] development; congregations interested in word studies
-**Data Source:** vocabulary_parser.py (MorphGNT/morphhb bundled data)
+**Data Source:** `query_vocabulary` MCP tool (MorphGNT/morphhb bundled data)
 **Scholarly Framework:** [Citation from web search - REQUIRED]
 
 | Session | Passage | Title | Verses | Markers | Synopsis |
@@ -619,7 +622,7 @@ If you think any of these, STOP:
 | "Time pressure means generic markers" | Pressure doesn't bypass boundary-focused pattern. Follow the format. |
 | "I'll list several markers for support" | Lead with boundary status, then add discourse. No marker aggregation. |
 | "Academic user wants comprehensive list" | Comprehensive ≠ boundary-unfocused. Start with boundary status always. |
-| "I know the joy count in Philippians" | Use vocabulary_parser.py. Never cite frequencies from memory. |
+| "I know the joy count in Philippians" | Call `query_vocabulary`. Never cite frequencies from memory. |
 | "Thematic is obvious, skip vocabulary check" | Always verify with bundled data. Obvious ≠ verified. |
 | "Web search failed, but I can cite Fee anyway" | No citation without web search. Training knowledge alone is insufficient. |
 | "User wants thematic, so generate even without data" | Data requirement is non-negotiable. Skip thematic if no vocabulary data. |
@@ -688,12 +691,12 @@ Agent writes "natural break" or "thematic shift" without specifics.
 - Fix: Cite actual textual evidence: "Vocative shift at 3:1 (ἀδελφοί)" not "natural transition."
 
 **Skipping discourse data consultation:**
-Agent segments NT book without calling levinsohn_parser.py or OT book without sefaria_paragraphs.py.
-- Fix: Run appropriate script for book type. Use discourse features to verify boundaries.
+Agent segments NT book without calling `query_discourse_features` or OT book without `query_paragraph_breaks`.
+- Fix: Call appropriate MCP tool for book type. Use discourse features to verify boundaries.
 
 **OT markers missing petuchot/setumah:**
 Agent segments Genesis 37-50 with markers like "Scene change at 37:1" but no פ/ס references.
-- Fix: Run `python scripts/sefaria_paragraphs.py Genesis`, cite "פ at 37:2 (toledot); ס at 37:5,8,9 (dialogue episodes)".
+- Fix: Call `mcp__claude-of-alexandria-mcp__query_paragraph_breaks` with `{"book": "Genesis"}`, cite "פ at 37:2 (toledot); ס at 37:5,8,9 (dialogue episodes)".
 
 **No data source acknowledgment:**
 Agent produces output without "Data Sources" section citing Levinsohn/Sefaria.
@@ -727,8 +730,8 @@ For detailed data, consult:
 - `reference/genre-methodology.yaml` - Markers and methodology per genre
 - `reference/compositional-debates.yaml` - Partition theory notes for 2 Cor, Philippians (standardized text)
 - `reference/levinsohn/` - 34 JSON files with NT discourse features (Historical Present, POD, etc.)
-- `scripts/levinsohn_parser.py` - Extract discourse features for NT books
-- `scripts/sefaria_paragraphs.py` - Extract Masoretic paragraph markers for OT books
+- MCP tool `query_discourse_features` - Extract discourse features for NT books
+- MCP tool `query_paragraph_breaks` - Extract Masoretic paragraph markers for OT books
 
 ## Success Criteria
 
@@ -750,7 +753,7 @@ Every invocation must result in:
 - [ ] **Masoretic/Levinsohn data consulted** (Sefaria for OT, Levinsohn GNT for NT where applicable)
 - [ ] **Transparent about data gaps** - if no marker, state it explicitly
 - [ ] **Data Sources section included** at end with Masoretic/Levinsohn acknowledgment
-- [ ] **Thematic option only with vocabulary data** - vocabulary_parser.py must return data for book
+- [ ] **Thematic option only with vocabulary data** - `query_vocabulary` MCP tool must return data for book
 - [ ] **Lemma counts verified against bundled YAML** - never cite frequencies from training knowledge
 - [ ] **Scholarly citation present for every thematic option** - web search required, no memory-based citations
 - [ ] **Web search performed before citing** - training knowledge alone is insufficient for thematic frameworks

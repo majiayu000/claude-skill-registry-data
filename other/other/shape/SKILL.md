@@ -22,12 +22,15 @@ The right approach, not a generic assessment.
    and conventions before consulting experts. Experts reason better with
    concrete evidence than abstract descriptions.
 4. **Criteria must be boolean, mustNots must be inviolable** — criteria[]
-   items are pass/fail. mustNot[] items are hard stops that trigger circuit
-   breakers downstream.
-5. **Expert insights drive mode selection** — The collaboration mode comes
+   and holdout[] items are pass/fail. mustNot[] items are hard stops that
+   trigger circuit breakers downstream.
+5. **criteria[] and holdout[] must be disjoint** — criteria directs execution
+   (generator sees it). holdout evaluates completion (generator never sees
+   it). Overlap leaks the target and inflates confidence.
+6. **Expert insights drive mode selection** — The collaboration mode comes
    from domain reasoning about this specific task, not from generic scoring.
    Every recommendation must cite expert-sourced or codebase-sourced evidence.
-6. **Default to Tool-Review when uncertain** — Safest middle ground.
+7. **Default to Tool-Review when uncertain** — Safest middle ground.
    Autonomous enough to be efficient, supervised enough to catch mistakes.
 
 ## Process
@@ -56,26 +59,37 @@ The right approach, not a generic assessment.
    obvious change with clear precedent, no ambiguity, low risk, and
    trivially reversible — score directly as Tool with minimal criteria.
 
-3. **Synthesize** — Scale output to intent sizing:
+3. **Synthesize** — From expert findings, produce the shaped output:
 
-   | Sizing   | Shape output                                                 |
-   | -------- | ------------------------------------------------------------ |
-   | Trivial  | `criteria[]` (2-3) + `mustNot[]` (1) + `→ Start:` action    |
-   | Standard | Findings + mode + `criteria[]` + `mustNot[]` (≥2) + `→ Start:` |
-   | Critical | Full: findings + tensions + mode + `criteria[]` + `mustNot[]` (≥2) + disposable + `→ Start:` + `premortem:` |
-
-   All tiers:
-   - `criteria[]` — boolean pass/fail from expert findings + ACCEPTANCE
-   - `mustNot[]` — inviolable constraints from expert-identified boundaries
-   - `→ Start: [first atomic action ≤15w that produces a visible artifact]`
-   - **Safety check:** Tool + high-risk findings → elevate to Tool-Review
+   - **Key findings** — what experts surfaced as most important for this
+     task, organized by concern (not by expert)
+   - **Tensions** — where experts disagreed and what the user should weigh
+   - **Recommended mode** — Colleague / Tool-Review / Tool with cited
+     reasoning from expert findings
+   - **Safety check:** if experts recommended Tool but findings include
+     high-risk or irreversible elements → elevate to Tool-Review minimum
    - **Default when uncertain:** Tool-Review
+   - `criteria[]` — boolean pass/fail items that GUIDE execution (generator
+     sees these). Drawn from expert findings and ACCEPTANCE criteria.
+   - `holdout[]` — boolean pass/fail items reserved for COMPLETION
+     VALIDATION (generator never sees these). Drawn from expert findings.
+     Must be disjoint from criteria[].
+   - `mustNot[]` — ≥2 inviolable constraints from expert-identified
+     hard boundaries (generator sees these as hard stops)
+   - `Disposable: yes/no` — yes when experts flag this as prototype
+     territory (high ambiguity + no precedent)
+   - `→ Start: [first atomic action ≤15w that produces a visible artifact]`
 
-   **Pre-mortem** (Critical only): "Two weeks from now this caused an
-   incident. Most likely cause?" Emit: `premortem: [1-2 sentences]`
+   **Pre-mortem gate** (Critical risk only — 13+ points OR irreversible
+   OR auth/data/infra, derived from BLAST RADIUS + expert findings):
+   "It's two weeks from now and this caused an incident. What's the
+   most likely cause?"
+   - Emit: `premortem: [1-2 sentences]` alongside criteria[] and mustNot[]
+   - Skip for Trivial/Standard tiers
 
-   Feasibility filter (when active): eliminate approaches violating the
-   axis. If ALL eliminated: surface conflict, recommend relaxing axis.
+   Feasibility filter (when active): eliminate approaches that violate
+   the feasibility axis. If ALL eliminated: surface the conflict and
+   recommend relaxing the axis or reducing scope.
 
 ## Boundaries
 
