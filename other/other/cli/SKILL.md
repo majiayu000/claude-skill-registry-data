@@ -12,6 +12,10 @@ description: >
   (7) Work with ANSI strings, hyperlinks, or custom containers.
   Also use when migrating from base R message/warning/stop, debugging cli code,
   or improving existing cli usage.
+metadata:
+  author: Garrick Aden-Buie (@gadenbuie)
+  version: "1.0"
+license: MIT
 ---
 
 # CLI for R Packages

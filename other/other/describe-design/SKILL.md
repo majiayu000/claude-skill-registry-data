@@ -7,6 +7,10 @@ description: >
   knowledge transfer, (4) Research and describe a system's design. Produces markdown
   documents with Mermaid diagrams and stable code references suitable for humans and
   AI agents.
+metadata:
+  author: Garrick Aden-Buie (@gadenbuie)
+  version: "1.0"
+license: MIT
 ---
 
 # Describe Design

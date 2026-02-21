@@ -1,6 +1,11 @@
 ---
 name: pr-create
 description: Creates a pull request from current changes, monitors GitHub CI, and debugs any failures until CI passes. Use this when the user says "create pr", "make a pr", "open pull request", "submit pr", "pr for these changes", or wants to get their current work into a reviewable PR. Assumes the project uses git, is hosted on GitHub, and has GitHub Actions CI with automated checks (lint, build, tests, etc.). Does NOT merge - stops when CI passes and provides the PR link.
+compatibility: Designed for Claude Code; requires TaskCreate, TaskUpdate, and TaskList tools
+metadata:
+  author: Garrick Aden-Buie (@gadenbuie)
+  version: "1.1"
+license: MIT
 ---
 
 # PR Creator Skill
@@ -28,6 +33,8 @@ The user may already have commits ready on a feature branch, or may have uncommi
 ## Process
 
 ### Step 1: Assess Current State
+
+**Check for a `--reviewer` argument** in the user's message. If present, store the value for use in Step 5. It may be a GitHub handle (`@username`) or a name (`Jane Doe`).
 
 **Create the main PR task:**
 ```
@@ -162,24 +169,52 @@ Verification: include an example that demonstrates the changes in the PR as seen
 
 **5c. Preview and get user approval:**
 
-**CRITICAL:** Use `AskUserQuestion` to show the user the proposed PR title and body. Do NOT create the PR until the user approves. Revise and re-preview if needed.
+**CRITICAL:** Use `AskUserQuestion` to show the user the proposed PR title and body. Also include a reviewer question in this same interaction:
 
-**5d. Confirm before proceeding to automated steps:**
+- If a `--reviewer` was provided, resolve and confirm the GitHub handle (see below), then show it as part of the preview.
+- If no reviewer was given, ask in the same `AskUserQuestion` call whether they want to request a review from anyone (free-text, optional).
 
-Once approved, use `AskUserQuestion` to outline what happens next and get confirmation:
+**Resolving a reviewer by name (not handle):**
+If the reviewer value doesn't look like a GitHub handle (no `@`, not clearly a username), look up the correct handle:
+```bash
+# Check recent contributors in the repo first
+gh api repos/{owner}/{repo}/contributors --jq '.[].login' | head -20
+
+# Search GitHub users if not found in contributors
+gh api search/users?q=<name>+in:name --jq '.items[] | "\(.login) \(.name // "")"' | head -10
+```
+Confirm the resolved handle with the user before storing it.
+
+Store the confirmed reviewer handle in task metadata:
+```
+TaskUpdate:
+- taskId: [pr task ID]
+- metadata: {"reviewer": "<github-handle>"}
+```
+
+Include approval options directly in the `AskUserQuestion` call for the PR preview. The options should be:
+
+1. **"Looks good, proceed"** *(default)* — approve and immediately continue to Step 6
+2. **"Looks good, tell me what you'll do next"** — approve but show the plan outline before continuing
+
+Do NOT create the PR until the user has selected one of these options.
+
+**5d. Show plan outline (only if user selected option 2):**
+
+Present the following before continuing:
 
 > Here's what I'll do next:
 >
 > 1. **Run local checks** (if available for this project)
 > 2. **Push** the branch to origin
-> 3. **Create the PR** with the approved title and body
+> 3. **Create the PR** as a draft with the approved title and body
 > 4. **Monitor CI** and fix any failures
+> 5. **Publish the PR** (remove draft status) once CI passes
+> 6. **Request a review** from `@<reviewer>` (if applicable)
 >
 > I'll auto-fix small issues (formatting, lint, type errors, test failures). If anything bigger comes up, I'll check with you first.
->
-> Ready to proceed?
 
-Do NOT continue to Step 6 until the user confirms.
+After showing the outline, ask one more `AskUserQuestion` to confirm before proceeding to Step 6.
 
 ### Step 6: Run Local Pre-flight Checks
 
@@ -218,8 +253,12 @@ git push -u origin <branch-name>
 
 ### Step 8: Create Pull Request
 
+Create the PR as a **draft** so it is not prematurely sent for review while CI is still running.
+
+**GitHub's markdown parser renders every newline literally — do not wrap long lines in the PR body. Write each paragraph as a single unbroken line.**
+
 ```bash
-gh pr create --title "<approved-title>" --body "$(cat <<'EOF'
+gh pr create --draft --title "<approved-title>" --body "$(cat <<'EOF'
 <approved-body>
 EOF
 )"
@@ -281,6 +320,16 @@ TaskUpdate:
 - subject: "CI Run #[N]: passed"
 - status: "completed"
 - metadata: {"status": "passed"}
+```
+
+**Publish the PR** (remove draft status):
+```bash
+gh pr ready <pr-number>
+```
+
+**Request a review** (if a reviewer was stored in task metadata):
+```bash
+gh pr edit <pr-number> --add-reviewer <github-handle>
 ```
 
 - **STOP HERE** - do not merge
@@ -362,6 +411,7 @@ Call `TaskList` to gather all CI run and fix tasks, then generate the summary:
 **Branch:** `<branch-name>` -> `<base-branch>`
 **Commits:** <count>
 **CI Status:** All checks passed
+**Reviewer:** @<handle> (if requested)
 
 ### CI Runs
 - Run #1: Failed (lint) -> Fixed in [hash]
@@ -402,6 +452,9 @@ When resuming, use `gh run view <runId>` from CI task metadata to check if the r
 6. **ALWAYS preview PR title and body** with the user before creating
 7. **ALWAYS stage specific files** - never use `git add -A` or `git add .`
 8. **NEVER amend commits** unless explicitly asked - always create new commits for fixes
+9. **ALWAYS open PRs as drafts** - use `gh pr create --draft`; publish with `gh pr ready` only after CI passes
+10. **NEVER request a review before CI passes**
+11. **Do NOT wrap markdown lines** in PR bodies - GitHub renders every newline literally
 
 ## Error Handling
 

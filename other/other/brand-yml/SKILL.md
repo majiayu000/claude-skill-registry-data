@@ -8,6 +8,10 @@ description: >
   ui.Theme, (4) Using brand.yml in Quarto documents, presentations, dashboards, and PDFs, (5)
   Modifying existing brand.yml files, (6) Troubleshooting brand integration issues. Includes
   complete specifications and framework-specific integration guides.
+metadata:
+  author: Garrick Aden-Buie (@gadenbuie)
+  version: "1.0"
+license: MIT
 ---
 
 # brand.yml Skill

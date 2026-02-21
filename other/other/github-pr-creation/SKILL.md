@@ -35,6 +35,7 @@ Look for task/spec files that describe what this PR should accomplish. Common lo
 
 | Tool/Convention | Path |
 |-----------------|------|
+| Spec2Ship (s2s) | `.s2s/plans/*.md` (look for active plan matching branch name or commits) |
 | AWS Kiro | `.kiro/specs/*/tasks.md` |
 | Cursor | `.cursor/rules/*.md`, `.cursorrules` |
 | Trae | `.trae/rules/*.md` |
@@ -79,11 +80,18 @@ Run the project test suite. Tests **MUST** pass before creating PR.
 | hotfix/* -> main | `hotfix(scope):` |
 | develop -> main | `release:` |
 | refactor/* -> develop | `refactor(scope):` |
+| chore/* -> develop | `chore(scope):` |
+| ci/* -> develop | `ci(scope):` |
+| docs/* -> develop | `docs(scope):` |
 
 **Title format**: `<type>(<scope>): <description>`
-- Type: dominant commit type (feat > fix > refactor)
+- Type: dominant commit type from analysis (feat > fix > refactor > ci > chore)
 - Scope: most common scope from commits (kebab-case)
 - Description: imperative, lowercase, no period, max 50 chars
+
+**Breaking changes**: if any commit contains `BREAKING CHANGE:` or `!` after type:
+- Add `breaking` label if it exists in the project
+- Include a `## Breaking changes` section in the PR body
 
 ### 7. Generate PR body
 
@@ -111,16 +119,38 @@ Match commit types to available project labels. The project may use different na
 
 **If no matching label exists**: suggest creating one. The user may have removed default labels, so offering to add relevant ones is appropriate.
 
-### 9. Create PR
+### 9. Determine milestone
 
-**ALWAYS show title, body, and labels for user approval first.**
+Check for open milestones:
 
 ```bash
-gh pr create --title "[title]" --body "$(cat <<'EOF'
+gh api repos/$(gh repo view --json nameWithOwner -q '.nameWithOwner')/milestones \
+  --jq '.[] | select(.state == "open") | "\(.number): \(.title)"'
+```
+
+- If one active milestone exists: assign the PR to it (all work in progress belongs to the next release)
+- If multiple milestones exist: ask the user which one applies
+- If no milestones exist: skip (do not create one automatically)
+
+### 10. Create PR
+
+**ALWAYS show title, body, labels, and milestone for user approval first.**
+
+```bash
+gh pr create \
+  --title "[title]" \
+  --body "$(cat <<'EOF'
 [body content]
 EOF
-)" --base [base_branch] --label [labels]
+)" \
+  --base [base_branch] \
+  --label "[label1]" --label "[label2]" \
+  --milestone "[milestone-title]" \
+  --reviewer "[username]"          # if teammates are known
 ```
+
+Use `--draft` if the PR is not ready for merge review yet (work in progress,
+awaiting CI, or created only to trigger AI bot review on the branch).
 
 ## Important rules
 
@@ -129,8 +159,13 @@ EOF
 - **ALWAYS** show PR content for approval before creating
 - **ALWAYS** check available labels with `gh label list` before suggesting
 - **ALWAYS** use HEREDOC for body to preserve formatting
+- **ALWAYS** add `--label` for each label separately (not comma-separated in one string)
+- **ALWAYS** check for open milestones and assign if one is active
 - **NEVER** create PR without user confirmation
 - **NEVER** modify repository files (read-only analysis)
+- **NEVER** create a milestone automatically - only assign existing ones
+- Use `--draft` for PRs not ready for merge review
+- Use `--reviewer` when teammates are known from team config or CODEOWNERS
 
 ## References
 

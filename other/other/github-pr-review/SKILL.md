@@ -9,28 +9,44 @@ Resolves Pull Request review comments with severity-based prioritization, fix ap
 
 ## Current PR
 
-!`gh pr view --json number,title,state -q '"PR #\(.number): \(.title) (\(.state))"' 2>/dev/null`
+!`gh pr view --json number,title,state,milestone -q '"PR #\(.number): \(.title) (\(.state)) | Milestone: \(.milestone.title // "none")"' 2>/dev/null`
 
 ## Core workflow
 
 ### 1. Fetch and classify comments
 
+Fetch both inline comments and PR-level reviews (needed for CodeRabbit "outside diff" comments):
+
 ```bash
 REPO=$(gh repo view --json nameWithOwner -q '.nameWithOwner')
 PR=$(gh pr view --json number -q '.number')
-gh api repos/$REPO/pulls/$PR/comments
+
+# Inline review comments - filter out replies (keep only originals)
+gh api repos/$REPO/pulls/$PR/comments --jq '
+  [.[] | select(.in_reply_to_id == null) |
+   {id, path, user: .user.login, body: .body[0:200]}]
+'
+
+# PR-level reviews with non-empty body (CodeRabbit "outside diff" comments)
+gh api repos/$REPO/pulls/$PR/reviews --jq '
+  [.[] | select(.body | length > 0) |
+   {id, user: .user.login, state, body: .body[0:200]}]
+'
 ```
 
-Filter out replies (`in_reply_to_id != null`). Classify originals by severity and process in order: CRITICAL > HIGH > MEDIUM > LOW.
+For PR-level reviews, parse the body for CodeRabbit `<details>` blocks containing
+"outside diff" comments - extract file path, line range, and comment text from each block.
+
+Classify all originals by severity and process in order: CRITICAL > HIGH > MEDIUM > LOW.
 
 | Severity | Indicators | Action |
 |----------|------------|--------|
-| CRITICAL | `critical.svg`, "security", "vulnerability" | Must fix |
-| HIGH | `high-priority.svg`, "High Severity" | Should fix |
-| MEDIUM | `medium-priority.svg`, "Medium Severity" | Recommended |
-| LOW | `low-priority.svg`, "style", "nit" | Optional |
+| CRITICAL | `critical.svg`, `_🔒 Security_`, `_🔴 Critical_`, "security", "vulnerability" | Must fix |
+| HIGH | `high-priority.svg`, `_⚠️ Potential issue_`, `_🐛 Bug_`, `_🟠 Major_`, "High Severity" | Should fix |
+| MEDIUM | `medium-priority.svg`, `_💡 Suggestion_`, "Medium Severity" | Recommended |
+| LOW | `low-priority.svg`, `_🧹 Nitpick_`, `_🔧 Optional_`, `_🟡 Minor_`, "style", "nit" | Optional |
 
-See `references/severity_guide.md` for full detection patterns (Gemini badges, Cursor comments, keyword fallback, related comments heuristics).
+See `references/severity_guide.md` for full detection patterns (Gemini badges, CodeRabbit emoji, Cursor comments, keyword fallback, related comments heuristics).
 
 ### 2. Process each comment
 
@@ -85,6 +101,27 @@ After addressing all comments, formally submit a review:
 - `gh pr review $PR --request-changes --body "..."` - critical issues remain
 - `gh pr review $PR --comment --body "..."` - progress update, no decision yet
 
+### 7. Verify milestone
+
+```bash
+gh pr view $PR --json milestone -q '.milestone.title // "none"'
+```
+
+If the PR has no milestone, check for open milestones:
+
+```bash
+REPO=$(gh repo view --json nameWithOwner -q '.nameWithOwner')
+gh api repos/$REPO/milestones --jq '[.[] | select(.state=="open")] | .[] | "\(.number): \(.title)"'
+```
+
+If open milestones exist, inform the user and suggest assigning:
+
+```bash
+gh pr edit $PR --milestone "[milestone-title]"
+```
+
+Do **not** assign automatically. This is a reminder only.
+
 ## Avoiding review loops
 
 When bots (Gemini, Codex, etc.) review every push:
@@ -100,8 +137,10 @@ When bots (Gemini, Codex, etc.) review every push:
 - **ALWAYS** run tests before pushing
 - **ALWAYS** reply to resolved threads using standard templates
 - **ALWAYS** submit formal review (`gh pr review`) after addressing all comments
+- **ALWAYS** check milestone at the end and remind if missing
 - **NEVER** use emojis in commit messages or thread replies
 - **NEVER** skip HIGH/CRITICAL comments without explicit user approval
+- **NEVER** assign milestone automatically - suggest only
 - **Functional fixes** -> separate commits (one per fix)
 - **Cosmetic fixes** -> batch into single `style:` commit
 

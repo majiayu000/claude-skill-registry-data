@@ -33,7 +33,25 @@ gh api repos/$REPO/pulls/$PR/comments --jq '
 - Inform user: "Found unreplied comments: [IDs]. Run github-pr-review first."
 - **NEVER** reply to comments from this skill
 
-### 2. Run validation
+### 2. Check milestone
+
+```bash
+gh pr view $PR --json milestone -q '.milestone.title // "none"'
+```
+
+- If milestone is assigned: include it in the checklist summary (step 3)
+- If no milestone: check for open milestones and warn the user
+
+```bash
+gh api repos/$REPO/milestones --jq '[.[] | select(.state=="open")] | length'
+```
+
+If open milestones exist but the PR has none, surface a warning in the checklist:
+`- Milestone: ⚠ not assigned (open milestones exist)`
+
+Do NOT block the merge for a missing milestone. It is a warning only.
+
+### 3. Run validation
 
 Run tests, linting, and verify CI checks. All **MUST** pass before proceeding.
 
@@ -41,21 +59,22 @@ Run tests, linting, and verify CI checks. All **MUST** pass before proceeding.
 gh pr checks $PR
 ```
 
-### 3. Confirm with user
+### 4. Confirm with user
 
 **ALWAYS show checklist summary and ask before merging:**
 
 ```
 Pre-merge checklist:
+- Comments: all replied
 - Tests: passing
 - Lint: passing
 - CI: green
-- Comments: all replied
+- Milestone: v0.1.0 (or ⚠ not assigned)
 
 Ready to merge PR #X. Proceed?
 ```
 
-### 4. Execute merge
+### 5. Execute merge
 
 ```bash
 gh pr merge $PR --merge --delete-branch --body "$(cat <<'EOF'
@@ -74,11 +93,32 @@ EOF
 
 `--delete-branch` automatically deletes the remote branch after merge.
 
-### 5. Post-merge cleanup
+### 6. Post-merge cleanup
 
 ```bash
 git checkout develop && git pull origin develop
 ```
+
+### 7. Check milestone completion
+
+If the PR had a milestone, check whether all items are now closed:
+
+```bash
+MILESTONE=$(gh pr view $PR --json milestone -q '.milestone.number // empty')
+if [ -n "$MILESTONE" ]; then
+  gh api repos/$REPO/milestones/$MILESTONE \
+    --jq '"Open: \(.open_issues) | Closed: \(.closed_issues) | \(.title)"'
+fi
+```
+
+- If `open_issues == 0`: inform the user and ask whether to close the milestone
+
+```bash
+gh api repos/$REPO/milestones/$MILESTONE --method PATCH --field state="closed"
+```
+
+- If `open_issues > 0`: report remaining open items count. No action needed.
+- **NEVER** close a milestone automatically without explicit user confirmation.
 
 ## Merge message format
 
@@ -103,10 +143,13 @@ Refs: Task 8, Req 14-15
 
 - **ALWAYS** run tests, lint, and CI checks before merging
 - **ALWAYS** verify all review comments have replies
+- **ALWAYS** check milestone assignment before merging (warn if missing, do not block)
 - **ALWAYS** confirm with user before executing merge
 - **ALWAYS** use merge commit (`--merge`), never squash/rebase
 - **ALWAYS** delete feature branch after successful merge
+- **ALWAYS** check milestone completion after merge and report open items count
 - **NEVER** merge with failing tests, lint, or CI checks
 - **NEVER** skip user confirmation
+- **NEVER** close a milestone without explicit user confirmation
 - **NEVER** reply to PR comments from this skill - use github-pr-review instead
 - **STOP** merge if unreplied comments exist and direct user to review skill

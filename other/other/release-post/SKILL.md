@@ -7,6 +7,10 @@ description: >
   (3) Generate acknowledgments sections with contributor lists, (4) Format posts following specific
   blog platform requirements. Supports both Tidyverse (hugodown) and Shiny (Quarto) blog formats with
   automated contributor fetching and comprehensive style guidance.
+metadata:
+  author: Garrick Aden-Buie (@gadenbuie)
+  version: "1.0"
+license: MIT
 ---
 
 # Package Release Post

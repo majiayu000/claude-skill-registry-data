@@ -4,6 +4,10 @@ description: >
   Create a release checklist and GitHub issue for an R package. Use when the
   user asks to "create a release checklist" or "start a release" for an R package.
 allowed-tools: Read, Bash, AskUserQuestion
+metadata:
+  author: Aaron Jacobs (@atheriel)
+  version: "1.0"
+license: MIT
 ---
 
 # Create an R Package Release Checklist

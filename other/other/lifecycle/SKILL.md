@@ -8,6 +8,10 @@ description: >
   functions as experimental, (6) Understanding lifecycle stages (stable,
   experimental, deprecated, superseded), or (7) Writing deprecation helpers for
   complex scenarios.
+metadata:
+  author: Garrick Aden-Buie (@gadenbuie)
+  version: "1.0"
+license: MIT
 ---
 
 # R Package Lifecycle Management
