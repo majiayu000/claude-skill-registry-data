@@ -174,14 +174,10 @@ Before invoking Codex, protect the working tree:
 ```bash
 # Record current HEAD so we can detect if Codex makes commits
 HEAD_BEFORE=$(git rev-parse HEAD)
-
-# Stash uncommitted changes (if any) to protect working tree
-STASHED=false
-if ! git diff --quiet HEAD 2>/dev/null || ! git diff --cached --quiet 2>/dev/null; then
-  git stash push -m "codex-consult-safety-$(date +%s)" --include-untracked
-  STASHED=true
-fi
 ```
+
+**Note:** Do NOT stash uncommitted changes — stash/pop triggers file-system events
+that confuse IDE watchers, hot-reload, and other processes. The HEAD check alone is sufficient.
 
 ### Invoke Codex
 
@@ -194,14 +190,14 @@ if [ -n "$CODEX_MODEL" ]; then
   MODEL_FLAG="--model $CODEX_MODEL"
 fi
 
-# Execute with timeout
-timeout $((TIMEOUT_MINS * 60)) bash -c "cat {prompt_file} | codex exec \
+# Execute (use Bash tool's timeout parameter for timeout — NOT shell `timeout`)
+cat {prompt_file} | codex exec \
   --sandbox danger-full-access \
-  -c 'approval_policy=\"never\"' \
+  -c 'approval_policy="never"' \
   -c 'features.search=true' \
   $MODEL_FLAG \
   -o $OUTPUT_FILE \
-  -"
+  -
 EXIT_CODE=$?
 ```
 
@@ -213,11 +209,6 @@ HEAD_AFTER=$(git rev-parse HEAD)
 if [ "$HEAD_BEFORE" != "$HEAD_AFTER" ]; then
   echo "WARNING: Codex made commits during consultation. Reverting to pre-consult state."
   git reset --hard "$HEAD_BEFORE"
-fi
-
-# Restore stashed changes
-if [ "$STASHED" = true ]; then
-  git stash pop
 fi
 ```
 

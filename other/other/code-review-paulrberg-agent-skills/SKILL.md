@@ -1,6 +1,5 @@
 ---
-argument-hint: '[--all] [--fix]'
-context: fork
+argument-hint: '[--fix]'
 disable-model-invocation: false
 name: code-review
 user-invocable: true
@@ -15,18 +14,20 @@ Find high-impact defects in changed code with evidence. Prioritize security, cor
 
 ## Arguments
 
-- `--all`: Review all uncommitted tracked changes.
 - `--fix`: After reporting findings, apply all suggested fixes automatically in severity order (`CRITICAL -> HIGH -> MEDIUM -> LOW`), then rerun targeted checks and report exactly what changed.
 - Default: Report findings and wait for confirmation before editing.
 
 ## Scope Resolution
 
 1. Verify repository context: `git rev-parse --git-dir`. If this fails, stop and tell the user to run from a git repository.
-2. If `$ARGUMENTS` includes `--all`, scope is `git diff --name-only --diff-filter=ACMR`.
-3. Otherwise, if user provides file paths/patterns or a commit/range, scope is exactly those targets.
-4. Otherwise, scope is session-modified files.
+2. If user provides file paths/patterns or a commit/range, scope is exactly those targets.
+3. Otherwise, scope is **only** session-modified files. Do not include other uncommitted changes.
+4. If there are no session-modified files, fall back to all uncommitted tracked + untracked files:
+   - tracked: `git diff --name-only --diff-filter=ACMR`
+   - untracked: `git ls-files --others --exclude-standard`
+   - combine both lists and de-duplicate.
 5. Exclude generated/low-signal files unless requested: lockfiles, minified bundles, build outputs, vendored code.
-6. If scope resolves to zero files, report and stop. Do not widen scope silently.
+6. If scope still resolves to zero files, report and stop.
 
 ## Workflow
 

@@ -3,6 +3,7 @@ name: write-skill-readme
 description: 当用户明确要求"生成技能 README"、"编写用户指南"或"更新技能文档"时使用。为 Agent Skills 编写符合最佳实践的 README.md 用户使用指南。自动分析技能结构（SKILL.md、config.yaml、scripts/），按模板生成小白友好的文档。
 
 metadata:
+  author: Bensz Conan
   short-description: 自动生成技能的用户使用指南 README.md
   keywords:
     - write-skill-readme

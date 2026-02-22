@@ -1,187 +1,134 @@
 ---
 name: ams-mcp-server
-description: |
-  AMS (Application Management System) MCP Server - Educational roadmaps, task management with Eisenhower Matrix, and cryptographic audit (5-phase Merkle tree verification). 
-  
-  Use when working with:
-  - Educational roadmaps (73 developer roadmaps from roadmap.sh)
-  - Task management and productivity tracking
-  - GSD (Get Shit Done) methodology projects
-  - Audit trails with cryptographic verification
-  
-  ALWAYS use when user mentions: roadmaps, learning paths, task management, @ams, unified-mcp, or asks to work with E:/AMS projects.
+description: Operate and troubleshoot the AMS unified MCP server for roadmap learning, GSD project orchestration, task management, ACL, autonomous workflows, memory/RAG, and cryptographic audit verification. Use when user asks to run AMS tools, work with E:/AMS projects, bootstrap roadmap-to-project flows, verify orchestration dependencies, or diagnose MCP runtime issues.
 ---
 
 # AMS MCP Server Skill
 
-## Quick Decision Tree
+> Version: `3.3.0`
+> Status: `Active`
+> Updated: `2026-02-16`
+> Module: `unified-mcp-root`
 
-```
-User wants to...
-├── Learn something new? → roadmap_list → roadmap_get → roadmap_nodes
-├── Create project from roadmap? → roadmap_export_to_gsd (REQUIRED first!)
-├── Manage tasks? → task_create, task_eisenhower, task_list
-├── Track progress? → roadmap_progress_update, task_update
-├── Watch file changes? → watcher_start (ONLY after roadmap_export_to_gsd!)
-├── Audit/verify actions? → context_create → audit_session_start → merkle_finalize
-└── Check system? → unified_vitals, unified_help
-```
+Use this skill to execute AMS flows safely and in the correct order.
 
-## Critical Rules
+## Hard Dependency Chains
 
-### ⚠️ Rule 1: watcher_start requires roadmap_export_to_gsd FIRST
-**WRONG:**
-```
-@ams watcher_start { "project_name": "my-app" }  # ❌ Error: Project not found
-```
+Apply these chains strictly. Do not skip prerequisites.
 
-**CORRECT:**
-```
-@ams roadmap_export_to_gsd { "roadmap_id": "frontend", "project_name": "my-app" }
-@ams watcher_start { "project_name": "my-app" }  # ✅ Works!
-```
+1. System bootstrap chain
+   - `unified_init` -> `unified_vitals` -> domain tools
 
-### ⚠️ Rule 2: Always initialize first
-```
-@ams unified_init  # Creates required directories
-@ams unified_vitals # Check system is operational
-```
+2. Roadmap to project chain
+   - `roadmap_export_to_gsd` -> `unified_set_project` -> `watcher_start`
 
-### ⚠️ Rule 3: Use @ams prefix explicitly
-Most clients require `@ams` prefix for MCP tools:
-```
-@ams roadmap_list           # ✅ Correct
-roadmap_list               # ❌ May not work
-```
+3. Audit proof chain
+   - `context_create` or `context_ensure` -> `audit_session_start` -> work tools -> `audit_verify_chain` -> `merkle_finalize` -> `merkle_root`
 
-## Standard Workflow
+4. Workflow execution chain
+   - `workflow_run` dry run first for new sequences
+   - If failure policy is configured: retry/backoff/rollback must be honored
 
-### Phase 1: Discovery (5 minutes)
-```
-1. unified_init                                    # Setup directories
-2. unified_vitals                                  # Check status
-3. roadmap_list                                    # Show 73 roadmaps
-4. roadmap_get { "roadmap_id": "frontend" }       # Details
-5. roadmap_nodes { "roadmap_id": "frontend" }     # All topics
-```
+5. Restoration chain
+   - `unified_backup` before risky operations
+   - Then `unified_import` or `unified_restore`
+   - Then `unified_vitals` and `audit_verify_chain` for post-check
 
-### Phase 2: Planning (10 minutes)
-```
-6. roadmap_export_to_gsd {                         # ⚠️ CRITICAL STEP
-     "roadmap_id": "frontend",
-     "project_name": "my-learning-project",
-     "pace": "normal"
-   }
-7. task_create {                                   # Create specific tasks
-     "title": "Learn React Hooks",
-     "priority": "urgent_important"
-   }
-8. task_link_roadmap {                             # Link to roadmap
-     "task_id": "...",
-     "roadmap_id": "frontend",
-     "node_id": "react-hooks"
-   }
-```
+## Startup Checklist
 
-### Phase 3: Execution (ongoing)
-```
-9. watcher_start { "project_name": "my-learning-project" }
-10. task_eisenhower                               # View matrix
-11. task_update { "id": "...", "status": "in_progress" }
-12. roadmap_progress_update {                     # Track learning
-      "roadmap_id": "frontend",
-      "node_id": "react-hooks",
-      "status": "completed"
-    }
-```
+Run this at the beginning of each operational session.
 
-## Configuration
+1. `unified_init`
+2. `unified_vitals`
+3. `unified_help` (refresh available tools and conventions)
+4. If project scoped work is expected, set project context:
+   - `unified_set_project` or pass canonical `project_id`
 
-### For Claude Code
-```bash
-mkdir -p ~/.claude
-cat > ~/.claude/mcp.json << 'EOF'
-{
-  "mcpServers": {
-    "ams": {
-      "command": "node",
-      "args": ["E:/AMS/projects/unified-mcp/src/server.js"],
-      "env": { "AMS_ROOT": "E:/AMS" }
-    }
-  }
-}
-EOF
-```
+## Intent to Tool Mapping
 
-### For Kimi Code
-Config at: `~/.kimi/mcp.json`
+Use this mapping to pick tools quickly.
 
-### For AntiGravity
-Config at: `~/AppData/Roaming/AntiGravity/User/mcp.json`
+- Explore learning paths:
+  - `roadmap_list`, `roadmap_get`, `roadmap_nodes`, `roadmap_node_get`
 
-## Common Errors & Fixes
+- Validate and repair roadmap content:
+  - `roadmap_validate`, `roadmap_validate_all`, `roadmap_repair`, `roadmap_repair_all`
 
-| Error | Cause | Fix |
-|-------|-------|-----|
-| "Project not found" | watcher_start before export | Run roadmap_export_to_gsd first |
-| "MCP server not found" | Client not configured | Check mcp.json, restart client |
-| "Roadmap not found" | Wrong roadmap_id | Use roadmap_list to see valid IDs |
-| "Connection error" | Server not running | unified_vitals to check |
+- Create project from roadmap:
+  - `roadmap_export_to_gsd`
+  - then `unified_set_project`
+  - then `watcher_start` (optional)
 
-## Key Tools Reference
+- Manage tasks:
+  - `task_create`, `task_create_batch`, `task_list`, `task_update`, `task_delete`
+  - `task_eisenhower`, `task_next_actions`, `task_report`
+  - `task_deps`, `task_link_roadmap`, `task_sync_to_gsd`
 
-### Essential (use frequently)
-- `unified_init` - System setup
-- `roadmap_list` - Browse roadmaps  
-- `roadmap_export_to_gsd` - Create project (⚠️ prerequisite)
-- `task_create` / `task_list` / `task_update`
-- `watcher_start` / `watcher_status`
+- Analyze content:
+  - `analysis_search`, `analysis_similar`, `analysis_recommend`, `analysis_keywords`, `analysis_compare`
+  - RAG: `analysis_rag_index`, `analysis_rag_search`, `analysis_rag_stats`
 
-### Analysis
-- `analysis_search` - TF-IDF search
-- `roadmap_next_topic` - Recommendations
+- Manage memory and retention:
+  - `memory_pack`, `memory_get`, `memory_map`, `memory_verify`, `memory_bundle`, `memory_stats`
+  - `memory_retention`, `memory_gc`, `rag_retention`, `rag_gc`
 
-### Audit (advanced)
-- `context_create` - Snapshot
-- `audit_session_start` - Begin logging
-- `merkle_finalize` - Cryptographic proof
+- Run autonomous pipeline:
+  - `ams_autonomous_run`, `ams_autonomous_apply_changes`, `ams_session_list`, `ams_session_resume`, `ams_session_rollback`
 
-## File Structure
+- Operate orchestration and architecture controls:
+  - `unified_orchestration`, `workflow_run`, `parallel_execute`
+  - `unified_architecture`, `unified_metrics`, `unified_stats`
 
-```
-E:/AMS/
-├── data/
-│   ├── roadmaps/        # 73 roadmap.sh sources
-│   ├── projects/        # GSD projects (created by export)
-│   └── ams.db          # SQLite (tasks, progress, audit)
-└── projects/
-    └── unified-mcp/
-        └── src/server.js
-```
+- Access control:
+  - `acl_add_member`, `acl_remove_member`, `acl_list_members`, `acl_set_owner`
 
-## Advanced Patterns
+- Notifications and git operations:
+  - `notify`, `git_checkpoint`, `git_auto_commit`
 
-### Pattern: Learning with audit trail
-```
-1. context_create { "roadmap_id": "frontend" }
-2. audit_session_start
-3. thought_plan { "plan": "Week 1: HTML/CSS basics" }
-4. [do work...]
-5. thought_decide { "decision": "Focus on Flexbox before Grid" }
-6. merkle_finalize
-7. merkle_attest  # External verification
-```
+## Safety Rules
 
-### Pattern: Project with file sync
-```
-1. roadmap_export_to_gsd { "roadmap_id": "backend", "project_name": "api" }
-2. watcher_start { "project_name": "api" }
-3. [edit TODOS.md in E:/AMS/data/projects/api/]
-4. [watcher auto-syncs to tasks]
-```
+1. Always run `unified_vitals` before and after changes.
+2. Always establish project context before project-scoped tools.
+3. Never call `watcher_start` for a project that was not exported/initialized.
+4. Use dry-run style operations first where available (`repair_all`, `gc`, import/export flows).
+5. For autonomous apply mode, ensure environment policy allows it.
+6. For audit-grade sessions, finalize Merkle proof before closing delivery.
+7. If runtime state and tracked files diverge, stop and verify with `unified_metrics` and `unified_help`.
 
-## References
+## Common Failure Patterns
 
-- [references/workflow.md](references/workflow.md) - Detailed workflows
-- [references/tools.md](references/tools.md) - All 58 tools documentation
-- [references/errors.md](references/errors.md) - Troubleshooting guide
+- "Project not found"
+  - Cause: missing export/init or wrong project context
+  - Fix: run `roadmap_export_to_gsd`, then `unified_set_project`, then retry
+
+- "Roadmap not found"
+  - Cause: invalid roadmap id
+  - Fix: run `roadmap_list` and use exact id
+
+- "MCP connection/runtime issue"
+  - Cause: config mismatch, missing node path, server boot failure
+  - Fix: verify client MCP config and run `unified_vitals`
+
+- "Chain verification failed"
+  - Cause: broken session/action context linkage
+  - Fix: inspect with `audit_get_actions`, re-check `context_*`, then `audit_verify_chain`
+
+## Skill Execution Policy
+
+When this skill is triggered:
+
+1. Prefer deterministic tool sequences over ad-hoc calls.
+2. Explain prerequisite insertion explicitly when user skips a required step.
+3. Keep orchestration transparent: show what was auto-resolved and why.
+4. Report concrete outputs: ids, counts, statuses, and next required step.
+5. If a tool set changed, trust runtime discovery via `unified_help` over static counts.
+
+## Reference Loading
+
+Load references only when needed:
+
+1. Read `references/workflow.md` for end-to-end scenario flow details.
+2. Read `references/tools.md` when the user asks for tool-specific argument examples.
+3. Read `references/errors.md` for troubleshooting paths and recovery commands.
+
+If references conflict with runtime behavior, runtime behavior is the source of truth.

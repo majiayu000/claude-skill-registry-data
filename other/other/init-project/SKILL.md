@@ -2,6 +2,7 @@
 name: init-project
 description: 当用户明确要求"初始化项目"、"创建项目指令文件"或"生成 AGENTS.md"时使用。完全自动化：自动检测操作系统默认语言，分析项目目录结构（支持 Python/Web/Rust/Go/Java/数据科学/文档项目等），推断项目类型和用途，一键生成规范的项目指令文档。生成文件包括：AGENTS.md（跨平台通用项目指令，Single Source of Truth）、CLAUDE.md（Claude Code 特定适配，通过 @./AGENTS.md 引用）、README.md（项目介绍与使用方法）、CHANGELOG.md（项目变更记录）。
 metadata:
+  author: Bensz Conan
   short-description: 完全自动生成 AI 项目指令文档（AGENTS.md + CLAUDE.md + README.md + CHANGELOG.md）
   keywords:
     - init-project
@@ -57,7 +58,7 @@ metadata:
 - **跨平台通用**：生成符合 AGENTS.md 标准的跨平台指令文件
 - **零维护成本**：CLAUDE.md 通过 `@./AGENTS.md` 自动引用，修改 AGENTS.md 即可
 - **自动语言检测**：检测操作系统默认语言并设为对话默认语言
-- **目录结构推断**：分析现有文件和目录，自动生成目录树
+- **目录结构推断**：分析现有文件和目录，自动生成目录树（用于 README.md；CLAUDE.md 仍可包含，AGENTS.md 默认不再包含）
 - **README 解析与生成**：从 README.md 提取信息，或自动生成项目介绍
 - **强制变更记录**：自动创建 CHANGELOG.md，**这是项目管理的强制性要求**
 - **工程原则内置**：基于 SOLID、KISS、DRY、YAGNI、关注点分离等原则
@@ -78,7 +79,6 @@ metadata:
 │   ├── 核心工作流
 │   ├── 工程原则
 │   ├── 默认语言
-│   ├── 目录结构
 │   ├── 变更边界
 │   └── 有机更新原则
 │
@@ -295,7 +295,7 @@ python3 scripts/generate.py \
 
 - **CLAUDE.md / AGENTS.md 已存在**：默认启用智能合并模式
   - **保留**：用户自定义的项目目标、核心工作流、变更边界、自定义章节
-  - **更新**：工程原则、默认语言、目录结构、平台特定说明
+  - **更新**：工程原则、默认语言、平台特定说明（目录结构仅适用于仍包含该章节的文件，如 CLAUDE.md）
   - **强制覆盖**：使用 `--overwrite` 参数完全替换现有内容
 - **README.md 已存在**：默认跳过，使用 `--overwrite` 覆盖
 - **语言检测失败**：回退到简体中文
@@ -314,7 +314,7 @@ python3 scripts/generate.py \
 ### 更新的标准化内容
 - `## 工程原则`：更新为最新的工程原则标准
 - `## 默认语言`：更新为检测到的语言
-- `## 目录结构`：更新为最新的目录树
+- `## 目录结构`：仅对仍包含该章节的文件更新为最新目录树（AGENTS.md 默认不再包含该章节）
 - 平台特定说明：Claude Code / Codex CLI 特定部分
 
 ### 示例
@@ -331,7 +331,7 @@ python3 scripts/generate.py \
 （这是用户自定义的工作流）
 ```
 
-再次运行 `init-project` 时，这些自定义内容会被保留，而目录结构、工程原则等标准化内容会被更新。
+再次运行 `init-project` 时，这些自定义内容会被保留，而工程原则、默认语言、平台特定说明等标准化内容会被更新（AGENTS.md 的旧「目录结构」章节会被移除）。
 
 ## 使用示例
 
@@ -382,7 +382,7 @@ python3 init-project/scripts/generate.py --auto --overwrite
 ## 验证清单（交付前）
 
 - [ ] 语言检测正确或用户已覆盖
-- [ ] 项目信息完整（名称、目标、目录结构）
+- [ ] 项目信息完整（名称、目标、用途）
 - [ ] AGENTS.md 包含所有必需章节（包括变更记录规范）
 - [ ] CLAUDE.md 与 AGENTS.md 引用关系正确
 - [ ] 工程原则章节完整

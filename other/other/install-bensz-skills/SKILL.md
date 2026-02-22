@@ -1,7 +1,11 @@
 ---
 name: install-bensz-skills
 category: normal
-description: 当需要把本仓库 pipelines/skills 下的所有 skills 安装到系统级（默认同时安装到 Codex: ~/.codex/skills 和 Claude Code: ~/.claude/skills），以便在任意项目/对话中可被发现与调用时使用。使用 MD5 哈希进行版本控制，仅安装有更新的 skills；支持强制覆盖安装、指定单一目标安装和远程安装模式（--remote --check/--auto）。
+description: "当需要把本仓库 pipelines/skills 下的所有 skills 安装到系统级（默认同时安装到 Codex: ~/.codex/skills 和 Claude Code: ~/.claude/skills），以便在任意项目/对话中可被发现与调用时使用。使用 MD5 哈希进行版本控制，仅安装有更新的 skills；支持强制覆盖安装、指定单一目标安装和远程安装模式（--remote --check/--auto）。"
+metadata:
+  author: Bensz Conan
+  keywords:
+    - install-bensz-skills
 ---
 
 # Install Bensz Skills（系统级安装器）

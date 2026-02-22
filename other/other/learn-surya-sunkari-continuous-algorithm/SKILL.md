@@ -33,6 +33,7 @@ For each PDF file in `$ARGUMENTS/notes/`:
    - **Corollaries** (with number and full statement)
    - **Propositions** (with number and full statement)
    - **Key remarks** (only if they state a useful result)
+   - **Key intermediate results within proofs** — if a proof contains a numbered equation, a named intermediate claim, or a step that is independently useful, capture it in `proof_notes`.
 5. Write the YAML file following this schema:
 
 ```yaml
@@ -46,7 +47,17 @@ items:
     statement: |
       Full mathematical statement in plain text with LaTeX math notation
     context: "Brief note on when/how this result is typically used"
+    proof_notes:           # optional — omit if the proof has no citable internals
+      - label: "(3)"       # equation/line label as it appears in the notes (e.g. "(3)", "Line 4", "Claim 1")
+        content: |
+          The exact equation or claim in LaTeX math notation
+        description: "What this equation/step establishes and when it is useful to cite directly"
 ```
+
+Populate `proof_notes` whenever:
+- The proof contains a numbered or labeled equation that could be reused independently
+- The proof establishes an intermediate claim or inequality that is stronger or more specific than the theorem statement itself
+- A specific line or step is the crux of the argument and could be invoked directly in another proof
 
 ---
 

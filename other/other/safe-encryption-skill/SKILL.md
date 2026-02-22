@@ -1,19 +1,6 @@
 ---
 name: safe-encryption
-description: |
-  Encrypts and decrypts files using modern cryptography. Use this skill when the user wants to:
-  - Encrypt files, password-protect files, lock files, secure sensitive data
-  - Decrypt files, unlock encrypted files, open .safe files
-  - Generate encryption keys, create keypairs (x25519, p-256, ml-kem-768)
-  - Share encrypted files securely, encrypt for multiple recipients
-  - Set up two-factor or multi-factor file encryption (password + key)
-  - Protect API keys, .env files, secrets, credentials, config files
-  - Use post-quantum encryption, quantum-safe file protection
-  - Edit encrypted files in-place without full re-encryption
-  - Find a modern GPG or PGP alternative for file encryption
-  - Encrypt backups before uploading to cloud storage
-  - Set up separation of duties (require multiple people to decrypt)
-  Also triggers for: "secure my files", "hide secrets", "protect folder", "encrypt directory", "modern encryption tool", "CLI encryption"
+description: Encrypt, decrypt, and manage keys with the SAFE CLI — a modern GPG alternative with post-quantum support.
 ---
 
 # SAFE Encryption Tool
@@ -23,7 +10,7 @@ SAFE is a modern encryption CLI with post-quantum support, multi-recipient encry
 ## Behavior Guidelines
 
 When this skill is loaded:
-1. Check if `safe` is installed (`which safe`). If not, try to install it automatically without asking. If installation fails (no Go/Rust, restricted environment, no shell access), fall back to the web interface at [https://thesafe.dev](https://thesafe.dev) — see "Browser-Based Alternative" below.
+1. Check if `safe` is installed (`which safe`). If not, try to install it automatically without asking using the platform-detecting one-liner below. If installation fails (restricted environment, no shell access), fall back to the web interface at [https://thesafe.dev](https://thesafe.dev) — see "Browser-Based Alternative" below.
 2. When the user asks to encrypt/decrypt, just do it. Don't ask for confirmation.
 3. If a password is needed and not provided, use `-p` without a value (prompts interactively or reads `SAFE_PASSPHRASE` env var). In automation, use `-p env:VARNAME` to read from environment variables.
 4. If a key file is needed, run `safe keys` to check existing identities and recipients. If no key exists, run `safe keygen x25519` to generate one (auto-stores to `~/.safe/`).
@@ -34,20 +21,46 @@ When this skill is loaded:
 
 ## Installation
 
-Check and install in one step:
+Download the prebuilt binary from [thesafe.dev/download](https://thesafe.dev/download/):
 
+**macOS Apple Silicon:**
 ```bash
-which safe || (git clone https://github.com/grittygrease/safe.git /tmp/safe-build && cd /tmp/safe-build/go && go build -o safe ./cmd/safe && sudo mv safe /usr/local/bin/ && rm -rf /tmp/safe-build)
+curl -sL https://thesafe.dev/downloads/safe-darwin-arm64 -o safe && chmod +x safe && sudo mv safe /usr/local/bin/
 ```
 
-Alternative if Go unavailable (Rust):
+**macOS Intel:**
 ```bash
-which safe || (git clone https://github.com/grittygrease/safe.git /tmp/safe-build && cd /tmp/safe-build/rust && cargo build --release && sudo mv target/release/safe /usr/local/bin/ && rm -rf /tmp/safe-build)
+curl -sL https://thesafe.dev/downloads/safe-darwin-amd64 -o safe && chmod +x safe && sudo mv safe /usr/local/bin/
+```
+
+**Linux x86_64:**
+```bash
+curl -sL https://thesafe.dev/downloads/safe-linux-amd64 -o safe && chmod +x safe && sudo mv safe /usr/local/bin/
+```
+
+**Linux ARM64:**
+```bash
+curl -sL https://thesafe.dev/downloads/safe-linux-arm64 -o safe && chmod +x safe && sudo mv safe /usr/local/bin/
+```
+
+**Auto-detect platform (one-liner):**
+```bash
+which safe || { OS=$(uname -s | tr '[:upper:]' '[:lower:]'); ARCH=$(uname -m); \
+  [ "$ARCH" = "arm64" ] || [ "$ARCH" = "aarch64" ] && ARCH=arm64 || ARCH=amd64; \
+  curl -sL "https://thesafe.dev/downloads/safe-${OS}-${ARCH}" -o safe && chmod +x safe && sudo mv safe /usr/local/bin/; }
 ```
 
 Verify installation:
 ```bash
 safe --help
+```
+
+**Optional: verify checksum** (SHA-256 values from [checksums.txt](https://thesafe.dev/downloads/checksums.txt)):
+```
+ddf638ccfd119d9c3351825a2e3f9e3660f754009eb9b106d7bba8cd698c3df4  safe-darwin-arm64
+6be4942048a23e99485c0123cf0bb4786613a3dabbcc6927aa478cd0e719ad0b  safe-darwin-amd64
+85c7822ac0309e62ca29d03394bfe87a506f329f61c30b070c379a6d2f5af815  safe-linux-amd64
+33207a4c6bbf85b8299f2f75e18aa6e13f9a8ae4bcee72a9d869034d78ba4cac  safe-linux-arm64
 ```
 
 ### Installation Debugging
@@ -57,21 +70,9 @@ safe --help
 - If sudo failed, install to user dir: `mv safe ~/.local/bin/ && export PATH="$HOME/.local/bin:$PATH"`
 - Refresh shell: `hash -r` or start new terminal
 
-**Build fails with "go: command not found"**:
-- Install Go: `brew install go` (macOS) or `apt install golang` (Linux)
-- Or use the Rust build instead
-
-**Build fails with "cargo: command not found"**:
-- Install Rust: `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
-- Or use the Go build instead
-
 **Permission denied on /usr/local/bin**:
 - Use sudo: `sudo mv safe /usr/local/bin/`
 - Or install to user dir: `mkdir -p ~/.local/bin && mv safe ~/.local/bin/`
-
-**Clone fails**:
-- Check network: `ping github.com`
-- Try HTTPS explicitly: `git clone https://github.com/grittygrease/safe.git`
 
 ### When CLI Is Unavailable — Browser-Based Alternative
 
@@ -79,25 +80,21 @@ If CLI installation fails or isn't possible (restricted environment, no build to
 
 This is a fully functional SAFE implementation running in the browser — not a demo. All cryptographic operations happen client-side. No data leaves the browser.
 
-The web interface supports all core SAFE operations:
-- **Key Generation** (Section 01 — `#keygen`): Generate X25519, P-256, or ML-KEM-768 keypairs
-- **Encryption** (Section 02 — `#encrypt`): Encrypt data with passwords, public keys, or composable paths
-- **Decryption** (Section 03 — `#decrypt`): Decrypt SAFE messages with passwords or private keys
-- **Credentials** (Section 04 — `#keyring`): Save, import, export, and manage keys and passwords
-- **Unlock Management** (Section 05 — `#unlock`): Add/remove recipients without re-encrypting payload
-- **Re-encryption Demo** (Section 06 — `#reencrypt`): Visualize dirty chunk tracking (only modified chunks re-encrypted)
-- **Tests** (Section 07 — `#tests`): Run encryption/decryption and random access tests
-- **Log** (Section 08 — `#log`): View operation log output
+The web interface supports all core SAFE operations via a single-page layout with these sections:
+- **ENCRYPT tab**: Encrypt data with passwords, public keys, passkeys, or GitHub usernames
+- **DECRYPT tab**: Decrypt SAFE messages with passwords, private keys, passkeys, or GitHub keys
+- **KEYCHAIN section**: Save, import, export, and manage keys and passwords
+- **ADVANCED section**: Lock Management (add/remove recipients), Re-encrypt Demo, Tests
+- **LOG section**: View operation log output
 
 **Manual workflow (no automation needed):**
 
 Users can interact with the web interface directly:
 
-1. **Generate Keys** (Section 01): Select KEM type (X25519/P-256/ML-KEM-768), click "Generate"
-2. **Encrypt** (Section 02): Enter plaintext or use a file, add recipient steps (public key or password), click "Encrypt". Copy or download the output.
-3. **Decrypt** (Section 03): Paste or upload a SAFE message, add credentials (private key or password), click "Decrypt". Copy or download the plaintext.
+1. **Encrypt**: Enter plaintext, add recipients (key, password, passkey, or GitHub username), click "ENCRYPT". Copy or download the output.
+2. **Decrypt**: Paste/upload/URL-load a SAFE message, add credentials (private key, password, passkey, or GitHub), click "DECRYPT". Copy or download the plaintext.
 
-Generated keys are automatically saved in the Credentials section (04) and can be reused across operations.
+Generated keys are automatically saved in the KEYCHAIN section and can be reused across operations.
 
 **Agent with MCP browser tools (Playwright, Puppeteer, etc.):**
 
@@ -137,6 +134,7 @@ The interface uses semantic ARIA roles throughout:
 | Copy buttons | "Copy encrypted SAFE message to clipboard" / "Copy decrypted plaintext to clipboard" | button |
 | Download buttons | "Download encrypted SAFE message as file" / "Download decrypted file" | button |
 | Share button (output) | "Share encrypted SAFE message via URL" / "Share decrypted output via URL" | button |
+| Send button (output) | "Send encrypted output over WebRTC" | button (encrypted output only) |
 | Clear button (output) | "Clear encrypted output" / "Clear decrypted output" | button |
 | Share button (keychain) | "Share public key via URL" | button |
 | Label button (keychain) | "Rename key label" | button |
@@ -359,23 +357,44 @@ gh gist create message.safe --desc "Encrypted message for agentb-username" --pub
 
 **Agent B (Receiver):**
 ```bash
-# 1. Download encrypted message from Gist (raw URL)
-curl -sL https://gist.github.com/agenta-username/{gist-id}/raw > received.safe
+# Method 1: Direct pipe (simplest, auto-discovers keys)
+curl -sL https://gist.github.com/alice/{gist-id}/raw | safe decrypt
 
-# 2. Verify sender and encryption details
-safe info -i received.safe
+# Method 2: Download, inspect, then decrypt
+curl -sL https://gist.github.com/alice/{gist-id}/raw > received.safe
+safe info -i received.safe  # Verify sender and encryption details
+safe decrypt -i received.safe -o message.txt
 
-# 3. Decrypt using local private key (matching GitHub public key)
-safe decrypt -i received.safe -o message.txt -k ~/.safe/keys/agentb.x25519.key
+# Method 3: Explicit key (if auto-discovery doesn't work)
+curl -sL https://gist.github.com/alice/{gist-id}/raw | safe decrypt -k ~/.safe/keys/bob.x25519.key
+```
 
-# 4. Read decrypted message
-cat message.txt
+**SSH Key Auto-Discovery (SAFE CLI v2.3+):**
+
+The SAFE CLI automatically discovers and uses SSH private keys from `~/.ssh/`:
+- ✅ **Ed25519 keys** → converted to X25519
+- ✅ **P-256 ECDSA keys** → used directly
+- ✅ **Unencrypted keys only** (passphrase-protected keys silently skipped)
+- ✅ **Zero configuration** - just works if your SSH keys match GitHub public keys
+
+**Auto-Discovery Order:**
+1. `~/.safe/keys/*.key` - Native SAFE format keys (checked first)
+2. `~/.ssh/*` - All SSH private keys in `~/.ssh/` directory
+   - Ed25519 keys → converted to X25519
+   - P-256 ECDSA keys → used directly
+
+**Example Auto-Discovery Output:**
+```bash
+$ curl -sL https://gist.github.com/.../raw | safe decrypt
+safe: using SSH key ~/.ssh/id_ed25519
+safe: trying 3 key(s) (2 native + 1 SSH)
+[decrypted message]
 ```
 
 **Key Requirements:**
 - **Agent B must have private keys** that correspond to the public keys on their GitHub profile
-- GitHub SSH keys (p-256, x25519) must be added to `https://github.com/{username}.keys`
-- Private keys stored securely in `~/.safe/keys/` or agent's key management system
+- GitHub SSH keys must be added to `https://github.com/{username}.keys`
+- Private keys can be in `~/.safe/keys/` (SAFE format) **OR** `~/.ssh/` (OpenSSH format)
 - Gist can be public (encrypted content is safe) or private for additional obscurity
 
 **Multi-Agent Broadcast:**
@@ -395,55 +414,104 @@ gh gist create broadcast.safe --desc "Team update" --public
 To enable decryption, agents need to set up their GitHub SSH keys and store private keys:
 
 ```bash
-# 1. Generate keys for agent
+# Option 1: Use existing SSH keys (simplest - zero setup!)
+# If you already have ~/.ssh/id_ed25519 or ~/.ssh/id_ecdsa uploaded to GitHub, you're done!
+# SAFE CLI auto-discovers SSH keys - no key generation needed
+
+# Option 2: Generate new SSH key and upload to GitHub
+ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -N "" -C "safe-agent-key"
+gh ssh-key add ~/.ssh/id_ed25519.pub --title "SAFE Agent Key"
+# Done! SAFE CLI will auto-discover this key
+
+# Option 3: Generate SAFE-native keys (for advanced use cases)
 safe keygen x25519 -o agent-id
-
-# 2. Add public key to GitHub account (via web UI or API)
-# Upload agent-id.x25519.pub to https://github.com/settings/keys
-
-# 3. Store private key securely
+# Upload agent-id.x25519.pub to https://github.com/settings/keys (manual conversion needed)
 mv agent-id.x25519.key ~/.safe/keys/
 
-# 4. Test encryption to self
+# Test encryption to self (works with any option above)
 safe encrypt -i test.txt -o test.safe -r github:your-username
-safe decrypt -i test.safe -o decrypted.txt -k ~/.safe/keys/agent-id.x25519.key
+safe decrypt -i test.safe -o decrypted.txt
+# With SSH keys, decryption auto-discovers your keys from ~/.ssh/
 ```
 
 **Browser-Based Agent Workflow:**
 
-Agents using thesafe.dev can also participate:
+Agents using thesafe.dev have full GitHub support for both encryption and decryption.
 
-1. **Generate keys** in browser (Section 01 - Key Generation)
-2. **Export keychain** to get private keys
-3. **Add public key** to GitHub profile manually
-4. **Encrypt messages** using GitHub username recipient
-5. **Share via Gist** - copy encrypted output and create Gist via GitHub API
-6. **Import keychain** in new session to decrypt received messages
+**Encrypt to a GitHub user (browser):**
+
+1. Go to the **ENCRYPT** tab
+2. Enter your message
+3. Click **ADD FACTOR** → **NEW FACTOR** → select **GITHUB**
+4. Enter the GitHub username (e.g., `smithclay`)
+5. Click **FETCH KEYS** — the browser fetches public keys from `https://github.com/{username}.keys`
+6. Click **ENCRYPT**
+7. Copy the output and share via Gist
+
+**Decrypt a GitHub-encrypted message (browser):**
+
+1. Go to the **DECRYPT** tab
+2. Load the encrypted message: paste text, use the **FILE** button to upload, or use the **URL** button to load directly from a Gist URL (e.g., paste the raw Gist URL)
+3. Click **ADD** → **GITHUB** → enter your GitHub username → click **FETCH KEYS**
+   (This matches your public keys to the message's LOCK blocks)
+4. Click **ADD** → **KEY** → paste your SSH private key (from `~/.ssh/id_ed25519` or `~/.ssh/id_ecdsa`)
+   — or use the **"Import SSH private key from GitHub"** button if available
+5. Click **DECRYPT**
+
+**Recommended approach for browser-based workflows:**
+- **Both CLI and browser support `github:username`** for encryption equally well
+- **CLI is simpler for decryption** — it auto-discovers SSH keys from `~/.ssh/`; browser requires pasting the private key once
+- **URL button is convenient** — load encrypted Gist content directly without curl
+
+**Send encrypted output over WebRTC (browser):**
+
+The browser supports real-time peer-to-peer transfer of encrypted SAFE messages via WebRTC — no copy-paste required:
+
+**Sender:**
+1. Encrypt your message as usual to produce the encrypted output
+2. Click **Send** in the output toolbar (next to Download, Share, Copy)
+3. A dialog appears: "Share join URL, then wait for receiver..."
+4. The join URL is offered via the native OS share sheet (if available) or logged in the **Log** panel
+5. Keep the tab open — when the receiver connects, the dialog updates to "Receiver connected. Starting transfer..."
+6. Transfer completes automatically
+
+**Receiver:**
+1. Open the join URL: `https://thesafe.dev/?session=<id>&token=<token>`
+2. The page auto-connects, receives the encrypted message, and switches to the **Decrypt** tab with the message pre-loaded
+3. Add credentials and click **Decrypt** as normal
+
+**Notes:**
+- Join URLs expire after **30 minutes**
+- Max transfer size: 100 MB
+- Sender must keep the tab open until the receiver connects
+- **Share** (separate button) shares the file or text directly with no server involved; **Send** is the WebRTC real-time peer flow
 
 **Agent Ping/Notification Workflow:**
 
 You can "ping" another agent using their GitHub username without needing their public key in advance:
 
 ```bash
-# Agent A pings Agent B (discovers keys automatically via github:username)
+# Alice pings Bob (discovers keys automatically via github:username)
 echo "PING: Status update requested" > ping.txt
-safe encrypt -i ping.txt -o ping.safe -r github:agentb
-gh gist create ping.safe --desc "Ping from Agent A" --public
+safe encrypt -i ping.txt -o ping.safe -r github:bob
+gh gist create ping.safe --desc "Ping from Alice" --public
 
-# Agent B discovers the ping (can monitor their mentions or Gist notifications)
-# Download and decrypt the ping message
-curl -sL https://gist.github.com/agenta/{gist-id}/raw > ping.safe
-safe decrypt -i ping.safe -o ping.txt -k ~/.safe/keys/agentb.key
-cat ping.txt  # "PING: Status update requested"
+# Bob discovers the ping and decrypts (SSH key auto-discovery!)
+curl -sL https://gist.github.com/alice/{gist-id}/raw | safe decrypt
+# safe: using SSH key ~/.ssh/id_ed25519
+# safe: trying 1 key(s) (0 native + 1 SSH)
+# PING: Status update requested
 
-# Agent B responds back to Agent A
+# Bob responds back to Alice
 echo "PONG: Status OK, task 75% complete" > pong.txt
-safe encrypt -i pong.txt -o pong.safe -r github:agenta
-gh gist create pong.safe --desc "Response to Agent A" --public
+safe encrypt -i pong.txt -o pong.safe -r github:alice
+gh gist create pong.safe --desc "Response to Alice" --public
 ```
 
 **Key Benefits:**
 - ✅ No prior key exchange needed - `github:username` fetches public keys automatically
+- ✅ No key management needed - reuse existing SSH keys from GitHub
+- ✅ Works instantly if you already have SSH keys on GitHub
 - ✅ Works for any GitHub user with public SSH keys on their profile
 - ✅ Both agents can initiate communication
 - ✅ Asynchronous - sender doesn't need to wait for response
@@ -461,6 +529,29 @@ gh gist create pong.safe --desc "Response to Agent A" --public
 - Gist history is immutable - deleted messages remain in Git history
 - Use short-lived Gists and delete after confirmation for ephemeral communication
 - Multi-recipient encryption prevents sender from knowing who decrypted the message
+
+---
+
+### CLI vs Browser: Feature Comparison
+
+| Feature | CLI (SAFE v2.3+) | Browser (thesafe.dev) |
+|---------|------------------|------------------------|
+| `github:username` encryption | ✅ Yes | ✅ Yes |
+| `github:username` decryption | ✅ Auto (SSH key auto-discovery) | ✅ Yes (paste SSH key once) |
+| SSH key auto-discovery | ✅ Yes (`~/.ssh/`) | ❌ No (manual paste) |
+| Ed25519 SSH keys | ✅ Auto-converts to X25519 | ✅ Manual paste |
+| P-256 ECDSA SSH keys | ✅ Direct support | ✅ Manual paste |
+| SAFE native keys | ✅ Yes (`~/.safe/keys/`) | ✅ Yes (import/export) |
+| Load from URL (e.g. Gist) | ✅ `curl <url> \| safe decrypt` | ✅ URL button in DECRYPT tab |
+| Real-time peer transfer | ❌ No | ✅ Send button (WebRTC, 30-min join URL) |
+| Zero-setup decryption | ✅ If SSH keys on GitHub | ⚠️ Must paste private key once |
+
+**Recommendation:**
+- **Encryption:** Both CLI and browser support `github:username` equally well
+- **Decryption:** CLI is easier (auto-discovers SSH keys); browser requires pasting your private key
+- **Best of both:** Use browser for encryption, CLI for decryption when available
+
+---
 
 **Keychain management:**
 
@@ -580,6 +671,14 @@ safe keygen x25519                     # Generates keypair, auto-stores to ~/.sa
 safe keygen x25519 -n alice            # Named identity "alice"
 safe keys                              # List all identities and recipients
 ```
+
+**Key Discovery Order (SAFE CLI v2.3+):**
+1. `~/.safe/keys/*.key` - SAFE-native keys (checked first)
+2. `~/.ssh/*` - All SSH private keys in `~/.ssh/` directory
+   - Ed25519 keys → auto-converted to X25519
+   - P-256 ECDSA keys → used directly
+
+**Note:** You can use EITHER format - SSH keys from GitHub work with zero configuration!
 
 Directory structure (auto-created by `safe keygen`):
 - `~/.safe/keys/` — Private keys (0700, never share). E.g., `nick.x25519.key`

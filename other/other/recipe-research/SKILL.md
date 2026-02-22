@@ -137,11 +137,11 @@ Include:
 
 Save to **both** locations:
 1. `findings/recipes/[dish-name-slugified].md` — local archive
-2. `/Users/marcin.skalski@konghq.com/Library/Mobile Documents/iCloud~md~obsidian/Documents/second-brain/0_Inbox/recipe-[dish-name-slugified].md` — Obsidian inbox
+2. Create Notion page with title `Recipe: [dish-name]` in workspace
 
 Create directories if needed.
 
-Use vault conventions:
+Use workspace conventions:
 - Emojis for visual scanning
 - Bullet points over paragraphs
 - Tags: #recipe #[cuisine] #[dietary-tags]

@@ -52,22 +52,30 @@ Unified TDD workflow skill combining TDD planning (Red-Green-Refactor task chain
 Before dispatching to phase execution, collect workflow preferences via AskUserQuestion:
 
 ```javascript
-const prefResponse = AskUserQuestion({
-  questions: [
-    {
-      question: "是否跳过所有确认步骤（自动模式）？",
-      header: "Auto Mode",
-      multiSelect: false,
-      options: [
-        { label: "Interactive (Recommended)", description: "交互模式，包含确认步骤" },
-        { label: "Auto", description: "跳过所有确认，自动执行" }
-      ]
-    }
-  ]
-})
+// ★ 统一 auto mode 检测：-y/--yes 从 $ARGUMENTS 或 ccw 传播
+const autoYes = /\b(-y|--yes)\b/.test($ARGUMENTS)
 
-workflowPreferences = {
-  autoYes: prefResponse.autoMode === 'Auto'
+if (autoYes) {
+  // 自动模式：跳过所有询问，使用默认值
+  workflowPreferences = { autoYes: true }
+} else {
+  const prefResponse = AskUserQuestion({
+    questions: [
+      {
+        question: "是否跳过所有确认步骤（自动模式）？",
+        header: "Auto Mode",
+        multiSelect: false,
+        options: [
+          { label: "Interactive (Recommended)", description: "交互模式，包含确认步骤" },
+          { label: "Auto", description: "跳过所有确认，自动执行" }
+        ]
+      }
+    ]
+  })
+
+  workflowPreferences = {
+    autoYes: prefResponse.autoMode === 'Auto'
+  }
 }
 ```
 
@@ -380,7 +388,7 @@ Phase 7: Session discovery → Chain validation → Coverage analysis → Report
 After heavy phases (Phase 2-3), evaluate context window usage:
 - If memory usage is high (>110K tokens or approaching context limits):
   ```javascript
-  Skill(skill="compact")
+  Skill(skill="memory-capture")
   ```
 - Memory compaction is particularly important after analysis phases
 
@@ -424,7 +432,7 @@ Similar to workflow-plan, a `planning-notes.md` can accumulate context across ph
 **All warnings are advisory** - they do not halt execution:
 1. Warnings logged to `.process/tdd-warnings.log`
 2. Summary displayed in Phase 6 output
-3. User decides whether to address before `/workflow:execute`
+3. User decides whether to address before `workflow-execute` skill
 
 ## Coordinator Checklist
 
@@ -468,14 +476,14 @@ Similar to workflow-plan, a `planning-notes.md` can accumulate context across ph
 - `phases/02-context-gathering.md` - Phase 2: Gather project context and analyze codebase (inline)
 - `phases/03-test-coverage-analysis.md` - Phase 3: Analyze existing test patterns and coverage (inline)
 - `phases/04-conflict-resolution.md` - Phase 4: Detect and resolve conflicts (inline, conditional)
-- `/compact` - Phase 4: Memory optimization (if context approaching limits)
+- `memory-capture` skill - Phase 4: Memory optimization (if context approaching limits)
 - `phases/05-tdd-task-generation.md` - Phase 5: Generate TDD tasks with Red-Green-Refactor cycles (inline)
 
 **Called by Verify Mode**:
 - `phases/07-tdd-verify.md` - Phase 7: Test coverage and cycle analysis (inline)
 
 **Follow-up Skills**:
-- `/workflow:tdd-verify` - Verify TDD compliance (can also invoke via verify mode)
-- `/workflow:plan-verify` - Verify plan quality and dependencies
+- `workflow-tdd` skill (tdd-verify phase) - Verify TDD compliance (can also invoke via verify mode)
+- `workflow-plan` skill (plan-verify phase) - Verify plan quality and dependencies
 - Display session status inline - Review TDD task breakdown
 - `Skill(skill="workflow-execute")` - Begin TDD implementation

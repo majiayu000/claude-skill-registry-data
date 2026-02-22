@@ -227,6 +227,8 @@ Discover trending AI/ML repositories and tools:
 
 **Dedup note:** Same repo may appear across days — use `{repo-owner}-{repo-name}` as story_id.
 
+**IMPORTANT:** Include interesting/valuable GitHub repos even if not brand new (e.g., trending for past week, recent major updates, or popular repos not yet covered). Check against `.covered-stories` - if repo not already covered, include it regardless of age. Value and utility matter more than recency for GitHub content.
+
 ### Phase 7: AI Tools for Professionals
 
 Discover new AI apps/tools for specific professional domains:
@@ -858,7 +860,7 @@ Select most impactful stories from NEW filtered content only.
 2. Fill sections with filtered items from Phase 16
 3. Format:
    - Each item: `- [ ] **[Title]** — [1-line summary] [Source: URL]`
-   - **Checkbox prefix `- [ ]`** on ALL story items with source URLs (renders as clickable task in Obsidian)
+   - **Checkbox prefix `- [ ]`** on ALL story items with source URLs (renders as clickable task in Notion)
    - **NO checkbox** on: Top 5 summary, prose bullets (Workflow Changes, Job Market, Org Transformation), Action Items, Things to Explore, Connections, Sources section
    - Include source URLs
    - Add personal takeaways section
@@ -872,14 +874,45 @@ Select most impactful stories from NEW filtered content only.
 
 ```bash
 mkdir -p ./findings/ai-daily-digest
-mkdir -p "/Users/marcin.skalski@konghq.com/Library/Mobile Documents/iCloud~md~obsidian/Documents/second-brain/0_Inbox/ai-digest"
 ```
 
-**Step 2:** Write digest to Obsidian Inbox
+**Step 2: 🔴 SAVE TO NOTION WORKSPACE (REQUIRED - DO NOT SKIP)**
+
+⚠️ **CRITICAL: This step is MANDATORY. The digest MUST be saved to Notion.**
+
+**Step 2a: Load Notion MCP tool**
+
+Notion tools are deferred and must be loaded first using ToolSearch:
 
 ```text
-/Users/marcin.skalski@konghq.com/Library/Mobile Documents/iCloud~md~obsidian/Documents/second-brain/0_Inbox/ai-digest/{YYYY-MM-DD}.md
+select:mcp__notion__notion-create-pages
 ```
+
+**Step 2b: Read digest content**
+
+Read the digest file just created to get the full content.
+
+**Step 2c: Create Notion page**
+
+Use `mcp__notion__notion-create-pages` to create page under parent "🤖 AI Digests":
+
+- Parent page ID: `3035f40a-a0f4-81ea-8033-fc823dd8eb92`
+- Title property: `🤖 AI Digest {YYYY-MM-DD}`
+- Content: Full digest markdown (excluding the H1 title line, which goes in properties)
+
+Example call:
+
+```json
+{
+  "parent": {"page_id": "3035f40a-a0f4-81ea-8033-fc823dd8eb92"},
+  "pages": [{
+    "properties": {"title": "🤖 AI Digest 2026-02-16"},
+    "content": "**Focus:** All\n**Coverage:** ...\n\n## 🔬 Technical Advances\n..."
+  }]
+}
+```
+
+**Verification:** Confirm Notion page created successfully (returns page URL) before continuing.
 
 **Step 3:** Write archive copy
 
@@ -898,7 +931,7 @@ File contains only the date string, nothing else.
 
 ⚠️ **DO NOT update `.covered-stories` yet. Wait for verification in Phase 19.**
 
-**Verification:** Confirm 3 files written successfully (2 digest files + 1 last-run file) before proceeding to Phase 19.
+**Verification:** Confirm files written successfully (Notion page + 1 archive file + 1 last-run file) before proceeding to Phase 19.
 
 ### Phase 19: Duplicate Verification (Spawn Agent)
 
@@ -962,9 +995,9 @@ If duplicates found, list specific line numbers in today's digest to remove.
 
 ## Output Requirements
 
-- Use emojis for section headers (per Obsidian conventions)
+- Use emojis for section headers (per Notion conventions)
 - Bullet points over paragraphs
-- Include wikilinks to existing vault notes where relevant
+- Include wikilinks to existing workspace pages where relevant
 - All items must have source URLs
 - Top 5 stories section required
 - Personal takeaways with actionable items
@@ -1031,4 +1064,4 @@ Story items use `- [ ]` checkbox format for newsletter curation:
 - **Unchecked `- [ ]`** = not selected
 - **Checked `- [x]`** = selected for weekly newsletter
 
-User checks stories in Obsidian → `/ai-newsletter` extracts checked items into curated weekly newsletter. See `ai-newsletter` skill for details.
+User checks stories in Notion → `/ai-newsletter` extracts checked items into curated weekly newsletter. See `ai-newsletter` skill for details.

@@ -17,3 +17,4 @@ Follow Conventional Commits with these overrides:
 
 - Always sign commits with `git commit -S`
 - Do NOT include AI co-authoring information
+- Do NOT use `git -C <path>` when the current directory is already the repository root

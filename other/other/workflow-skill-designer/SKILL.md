@@ -141,7 +141,7 @@ Read("phases/02-lite-execute.md")
 // Execute with executionContext (Mode 1)
 
 // WRONG: Skill routing (unnecessary round-trip)
-Skill(skill="workflow:lite-execute", args="--in-memory")
+Skill(skill="workflow-lite-plan", args="--in-memory")
 ```
 
 ### Pattern 8: Phase File Hygiene

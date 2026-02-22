@@ -33,6 +33,12 @@ ccw issue task <id> --title "..."   # Add task
 ccw issue bind <id> <solution-id>   # Bind solution
 ccw issue update <id> --status completed  # Complete & auto-archive
 
+# Solution queries
+ccw issue solution <id>             # List solutions for a single issue
+ccw issue solution <id> --brief     # Brief: solution_id, files_touched, task_count
+ccw issue solutions                 # Batch list all bound solutions
+ccw issue solutions --status planned --brief  # Filter by issue status
+
 # Queue management
 ccw issue queue                     # List current queue
 ccw issue queue add <id>            # Add to queue

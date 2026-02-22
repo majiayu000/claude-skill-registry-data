@@ -72,10 +72,10 @@ User: "Research Acme Corp at https://acme.com"
     Shall I continue with new research?"
 
 3. estimate_run("Acme Corp", "https://acme.com", "full")
-   -> Cost: $1.20, Time: ~30 minutes
+   -> Cost: $3.50, Time: ~30 minutes
 
 4. Request approval:
-   "Full research will cost ~$1.20 and take ~30 minutes.
+   "Full research will cost ~$3.50 and take ~30 minutes.
     Reply 'approve' to proceed."
 
 5. research_company("Acme Corp", "https://acme.com", "full")

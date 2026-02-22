@@ -210,6 +210,98 @@ python scripts/extract_metadata.py --input identifiers.txt --output citations.bi
 - **Preprints**: repository (arXiv, bioRxiv), preprint ID
 - **Additional**: abstract, keywords, URL
 
+### Phase 2.5: Metadata Enrichment via Web Search (MANDATORY)
+
+**Goal**: Detect and fill in any missing metadata fields using web search. This phase runs AFTER extraction and BEFORE formatting to ensure every BibTeX entry is complete.
+
+**Why This Is Critical**: Metadata extraction from APIs (CrossRef, PubMed, arXiv) sometimes returns incomplete records — missing volume, pages, issue number, or DOI. These gaps must be filled before the bibliography is considered ready.
+
+#### Step 1: Scan for Incomplete Entries
+
+After extracting metadata, scan the BibTeX file for entries missing key fields:
+
+**Fields to check per entry type:**
+
+| Entry Type | Must Have | Should Have |
+|------------|-----------|-------------|
+| @article | author, title, journal, year | volume, pages, number, doi |
+| @inproceedings | author, title, booktitle, year | pages, doi |
+| @book | author/editor, title, publisher, year | isbn, doi |
+| @misc | author, title, year | doi or url |
+
+Any `@article` entry missing `volume`, `pages`, or `doi` is considered **incomplete** and must be enriched.
+
+#### Step 2: Web Search for Missing Metadata
+
+For each incomplete entry, search for the missing information:
+
+**Option A — Search by title and author** (best for finding DOI):
+```bash
+python scripts/parallel_web.py search \
+  "FIRST_AUTHOR TITLE JOURNAL_NAME volume pages DOI" \
+  -o sources/search_YYYYMMDD_HHMMSS_citation_CITATIONKEY.md
+```
+
+**Option B — Extract from DOI page** (best when DOI is known but volume/pages missing):
+```bash
+python scripts/parallel_web.py extract \
+  "https://doi.org/10.XXXX/YYYY" \
+  --objective "extract complete citation metadata: volume, issue, pages, publication date" \
+  -o sources/extract_YYYYMMDD_HHMMSS_doi_CITATIONKEY.md
+```
+
+**Option C — Search CrossRef API directly** (programmatic, fast):
+```bash
+python scripts/parallel_web.py search \
+  "crossref DOI metadata FIRST_AUTHOR TITLE" \
+  -o sources/search_YYYYMMDD_HHMMSS_crossref_CITATIONKEY.md
+```
+
+**Option D — Search Google Scholar** (fallback for hard-to-find papers):
+```bash
+python scripts/parallel_web.py search \
+  "google scholar FIRST_AUTHOR TITLE YEAR complete citation" \
+  -o sources/search_YYYYMMDD_HHMMSS_scholar_CITATIONKEY.md
+```
+
+#### Step 3: Update BibTeX Entries
+
+After finding the missing metadata:
+
+1. Open `references.bib`
+2. Add the missing fields to the incomplete entry
+3. Verify the found metadata is consistent with existing fields (same author, title, year)
+4. Log each fix:
+   ```
+   [HH:MM:SS] METADATA ENRICHED: [CitationKey] - added volume={X}, pages={Y--Z}, doi={10.XXX/YYY} ✅
+   ```
+
+#### Step 4: Handle Unfindable Metadata
+
+If metadata genuinely cannot be found after web search (very old paper, obscure conference, etc.):
+
+1. Add a `note` field to the BibTeX entry explaining the gap:
+   ```bibtex
+   note = {Volume and pages not available — published online only}
+   ```
+2. Log the exception:
+   ```
+   [HH:MM:SS] METADATA INCOMPLETE: [CitationKey] - pages unavailable (online-only publication) ⚠️
+   ```
+3. These exceptions should be rare — most modern papers have complete metadata findable via web search.
+
+#### Quick Reference: Common Missing Fields and Where to Find Them
+
+| Missing Field | Best Search Strategy |
+|---------------|---------------------|
+| DOI | Search "AUTHOR TITLE DOI" via parallel_web.py |
+| Volume | Extract from DOI page or search "JOURNAL YEAR TITLE volume" |
+| Pages | Extract from DOI page or search publisher website |
+| Issue/Number | Extract from DOI page or CrossRef |
+| Publisher | Search "JOURNAL publisher" or check journal website |
+
+---
+
 ### Phase 3: BibTeX Formatting
 
 **Goal**: Generate clean, properly formatted BibTeX entries.
@@ -853,8 +945,8 @@ python scripts/doi_to_bibtex.py 10.1038/nature12345 --clipboard
 5. **Duplicate entries**: Same paper cited multiple times with different keys
    - **Solution**: Use duplicate detection in validation
 
-6. **Missing required fields**: Incomplete BibTeX entries
-   - **Solution**: Validate and ensure all required fields present
+6. **Missing required fields**: Incomplete BibTeX entries (volume, pages, DOI missing)
+   - **Solution**: Run Phase 2.5 metadata enrichment — web search for every missing field before proceeding. NEVER leave an @article entry without volume, pages, and DOI.
 
 7. **Outdated preprints**: Citing preprint when published version exists
    - **Solution**: Check if preprints have been published, update to journal version

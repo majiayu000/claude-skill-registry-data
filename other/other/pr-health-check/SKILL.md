@@ -80,7 +80,7 @@ The `statusCheckRollup` field contains an array of check results:
 **Actions**:
 
 - **SUCCESS**: Proceed if other criteria met
-- **FAILURE**: Must fix before merge (see `/fix-pr-ci` command)
+- **FAILURE**: Must fix before merge (see `/finalize-pr` command)
 - **PENDING**: Must wait for checks to complete (use `gh pr checks <PR_NUMBER> --watch`)
 
 ## PR Filtering Logic
@@ -133,7 +133,7 @@ gh pr list --state open --json number,title,state,mergeable,statusCheckRollup
 ### Scenario 3: CI Checks Failing
 
 - `statusCheckRollup.state`: FAILURE ✗
-- **Action**: Run `/fix-pr-ci` to diagnose and fix
+- **Action**: Run `/finalize-pr` to diagnose and fix
 
 ### Scenario 4: Checks Still Running
 
@@ -143,13 +143,12 @@ gh pr list --state open --json number,title,state,mergeable,statusCheckRollup
 ### Scenario 5: Missing Approvals
 
 - `reviewDecision`: CHANGES_REQUESTED or REVIEW_REQUIRED ✗
-- **Action**: Address feedback using `/resolve-pr-review-thread`
+- **Action**: Address feedback using `/resolve-pr-threads`
 
 ## Commands Using This Skill
 
-- `/manage-pr` - Phase 2.1 (PR Health Check)
-- `/fix-pr-ci` - To filter which PRs need fixing
-- `/ready-player-one` - To verify PRs are healthy before merge
+- `/finalize-pr` - Phase 2.1 (PR Health Check) and CI diagnosis for a single PR
+- `/finalize-prs` - To filter which PRs need fixing and verify PRs are healthy before merge
 - Any workflow needing PR status validation
 
 ## Related Resources
@@ -159,9 +158,9 @@ gh pr list --state open --json number,title,state,mergeable,statusCheckRollup
 
 ## Integration Points
 
-### With Manage PR
+### With /finalize-pr
 
-In `/manage-pr` Phase 2.1, use this skill to determine next action:
+In `/finalize-pr` Phase 2.1, use this skill to determine next action:
 
 ```bash
 # Get health status
@@ -169,12 +168,12 @@ gh pr view <PR_NUMBER> --json state,mergeable,statusCheckRollup,reviews,reviewDe
 
 # Determine action:
 if mergeable != MERGEABLE: → /sync-main (conflict resolution)
-if statusCheckRollup != SUCCESS: → /fix-pr-ci (CI fixes)
-if reviewDecision != APPROVED: → /resolve-pr-review-thread (review feedback)
+if statusCheckRollup != SUCCESS: → /finalize-pr (CI fixes)
+if reviewDecision != APPROVED: → /resolve-pr-threads (review feedback)
 if all healthy: → Proceed to Phase 3
 ```
 
-### With Fix PR CI
+### With /finalize-prs
 
 Use PR health check to prioritize which PRs to fix:
 
@@ -183,7 +182,7 @@ Use PR health check to prioritize which PRs to fix:
 gh pr list --state open --json number,statusCheckRollup
 
 # Filter where statusCheckRollup.state == FAILURE
-# These PRs are candidates for /fix-pr-ci
+# These PRs are candidates for /finalize-pr
 ```
 
 ## Troubleshooting

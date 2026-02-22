@@ -28,7 +28,7 @@ There are exactly two resolution paths:
 
 ### 2. Verification MUST Pass Before Reporting Completion
 
-Before any command (especially `/manage-pr` and `/resolve-pr-review-thread`) reports work as complete:
+Before any command (especially `/finalize-pr` and `/resolve-pr-threads`) reports work as complete:
 
 1. Run the verification query (see below)
 2. Count unresolved threads
@@ -38,8 +38,8 @@ Before any command (especially `/manage-pr` and `/resolve-pr-review-thread`) rep
 
 This applies to:
 
-- `/manage-pr` before requesting user review
-- `/resolve-pr-review-thread` before reporting completion
+- `/finalize-pr` before requesting user review
+- `/resolve-pr-threads` before reporting completion
 - `/review-pr` when creating new threads (verify they're resolvable)
 - Any custom workflow touching PR reviews
 
@@ -67,7 +67,7 @@ gh api graphql --raw-field 'query=query { repository(owner: "{OWNER}", name: "{R
 **If Verification Fails (>0 unresolved threads)**:
 
 - Command MUST abort with error
-- Clear message format: "❌ Cannot complete - {N} unresolved review threads remain. Use /resolve-pr-review-thread to address them."
+- Clear message format: "❌ Cannot complete - {N} unresolved review threads remain. Use /resolve-pr-threads to address them."
 - Include list of remaining threads (optional but helpful)
 
 ### Step 3: Resolution Workflow
@@ -104,7 +104,7 @@ See GitHub GraphQL Skill for complete patterns.
 
 ## Verification Implementation
 
-### For `/manage-pr` Command
+### For `/finalize-pr` Command
 
 **Location**: Phase 3 (Pre-Handoff Verification), before requesting user review
 
@@ -116,14 +116,14 @@ UNRESOLVED_COUNT=$(gh api graphql --raw-field 'query=query { repository(owner: "
 # Check result
 if [ "$UNRESOLVED_COUNT" -ne 0 ]; then
   echo "❌ Cannot complete - $UNRESOLVED_COUNT unresolved review threads remain."
-  echo "Use /resolve-pr-review-thread to address them."
+  echo "Use /resolve-pr-threads to address them."
   exit 1
 fi
 
 echo "✅ All review threads resolved - proceeding with merge readiness check"
 ```
 
-### For `/resolve-pr-review-thread` Command
+### For `/resolve-pr-threads` Command
 
 **Location**: After pr-thread-resolver agent completes
 
@@ -193,16 +193,16 @@ Next steps: Author needs to respond to blocking feedback on line 89
 
 ## Commands Using This Skill
 
-- `/manage-pr` - MUST verify before Phase 3 (Pre-Handoff Verification)
-- `/resolve-pr-review-thread [all]` - MUST verify before reporting completion
+- `/finalize-pr` - MUST verify before Phase 3 (Pre-Handoff Verification)
+- `/resolve-pr-threads [all]` - MUST verify before reporting completion
 - `/review-pr` - Uses implicitly (doesn't create threads but respects enforcement)
 
 ## Related Resources
 
 - github-graphql skill - Mutation patterns, node ID handling
 - pr-thread-resolver agent - Full implementation patterns
-- /resolve-pr-review-thread command - Orchestrator using this skill
-- /manage-pr command - Uses verification pattern
+- /resolve-pr-threads command - Orchestrator using this skill
+- /finalize-pr command - Uses verification pattern
 
 ## Troubleshooting
 

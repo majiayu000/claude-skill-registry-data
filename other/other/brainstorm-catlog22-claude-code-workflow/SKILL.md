@@ -35,8 +35,8 @@ Artifacts  N×Role  Synthesis  1×Role
 ```
 Auto Mode:
   Phase 2 (artifacts) → guidance-specification.md + selected_roles[]
-    → Phase 3 (N × role-analysis) → {role}/analysis*.md
-      → Phase 4 (synthesis) → feature-specs/ + feature-index.json
+    → Phase 3 (N × role-analysis) → {role}/analysis*.md (immutable)
+      → Phase 4 (synthesis) → feature-specs/ + feature-index.json + synthesis-changelog.md
 
 Single Role Mode:
   Phase 3 (1 × role-analysis) → {role}/analysis*.md
@@ -100,10 +100,10 @@ For ui-designer: append `--style-skill {package}` if provided.
 #### Phase 4: Synthesis Integration
    Ref: phases/04-synthesis.md
 
-Eight-phase cross-role synthesis: Discovery → File discovery → Cross-role analysis → User interaction → Document updates → Feature spec generation → Feature index → Finalization.
+Six-phase synthesis: Discovery → File discovery → Cross-role analysis → User interaction → Spec generation (single agent, sequential) + Conditional review → Finalization. Role analysis files are read-only (never modified). Spec is the final synthesis artifact.
 
-**Input**: session_id from Phase 2, all role analysis files from Phase 3
-**Output**: Updated analyses, feature-specs/, feature-index.json
+**Input**: session_id from Phase 2, all role analysis files from Phase 3 (read-only)
+**Output**: feature-specs/, feature-index.json, synthesis-changelog.md
 
 **TodoWrite**: Attach synthesis sub-tasks, execute sequentially, collapse on completion.
 
@@ -222,13 +222,13 @@ Phase 3:
   Input:  selected_roles[], session_id
           guidance-specification.md
           style_skill (for ui-designer)
-  Output: {role}/analysis*.md (N files)
+  Output: {role}/analysis*.md (N files, immutable after this point)
           ↓
 Phase 4:
-  Input:  session_id, all analysis files
-  Output: Updated analyses
-          feature-specs/F-{id}-{slug}.md
+  Input:  session_id, all analysis files (read-only)
+  Output: feature-specs/F-{id}-{slug}.md
           feature-index.json
+          synthesis-changelog.md
 ```
 
 ## TodoWrite Pattern
@@ -322,16 +322,17 @@ Initial → Phase 1 Mode Routing (completed)
 │   └── context-package.json           # Phase 0 output (auto mode)
 └── .brainstorming/
     ├── guidance-specification.md      # Framework (Phase 2, auto mode)
-    ├── feature-index.json             # Feature index (Phase 4, auto mode)
-    ├── feature-specs/                 # Feature specs (Phase 4, auto mode)
+    ├── feature-index.json             # Feature index (Phase 4, auto mode, feature_mode)
+    ├── synthesis-changelog.md         # Synthesis decisions audit trail (Phase 4, auto mode)
+    ├── feature-specs/                 # Feature specs (Phase 4, auto mode, feature_mode)
     │   ├── F-001-{slug}.md
     │   └── F-00N-{slug}.md
-    ├── {role}/
+    ├── {role}/                        # Role analyses (IMMUTABLE after Phase 3)
     │   ├── {role}-context.md          # Interactive Q&A responses
     │   ├── analysis.md                # Main/index document
     │   ├── analysis-cross-cutting.md  # Cross-feature (feature_mode)
     │   └── analysis-F-{id}-{slug}.md  # Per-feature (feature_mode)
-    └── synthesis-specification.md     # Integration (Phase 4, auto mode)
+    └── synthesis-specification.md     # Integration (Phase 4, non-feature_mode only)
 ```
 
 ## Error Handling

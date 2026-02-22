@@ -110,5 +110,6 @@ See `docs/domain/<area>.md` for <brief description>.
 - **No code snippets** — domain docs describe the business model; component docs show the implementation
 - **One definition per concept** — if a term is already defined in domain docs, other layers must reference it, not redefine it
 - **Defer process details to process docs** — if a concept involves a multi-step flow (loading chain, resolution sequence, initialization steps), define the concept here and link to the process doc for the "how"
+- **No behavioral conditionals** — if you're writing "when X happens", "in Y mode", or "if Z flag is set", that's a process description. Domain docs define static properties of concepts (what they are, what they contain, how they relate). Conditional behavior, modes, flags, and runtime decisions belong in process docs.
 - **Use reference-style links** — when linking to other docs or source files, use reference links (`[text][ref]` with `[ref]: path` at the bottom of the file) rather than inline links. They read better in source and are easier to maintain.
 - **Propose structure first** — if no domain docs exist yet, propose a directory structure and format to the user before creating files

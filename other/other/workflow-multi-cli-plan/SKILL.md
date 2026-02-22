@@ -49,7 +49,13 @@ function detectMode() {
 Before dispatching, collect workflow preferences via AskUserQuestion:
 
 ```javascript
-if (mode === 'plan') {
+// ★ 统一 auto mode 检测：-y/--yes 从 $ARGUMENTS 或 ccw 传播
+const autoYes = /\b(-y|--yes)\b/.test($ARGUMENTS)
+
+if (autoYes) {
+  // 自动模式：跳过所有询问，使用默认值
+  workflowPreferences = { autoYes: true }
+} else if (mode === 'plan') {
   const prefResponse = AskUserQuestion({
     questions: [
       {

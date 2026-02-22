@@ -3,6 +3,7 @@ name: auto-test-project
 category: normal
 description: 当用户明确要求"测试项目"、"运行 auto-test-project"或"进行项目级测试"时使用。对完整项目进行多轮 A 轮批判性测试 + B 轮质量检查，系统化发现、记录、修复问题。⚠️ 不适用：用户只是想优化功能（应直接修改）、只是询问项目问题（应直接回答）、没有明确"测试"意图。
 metadata:
+  author: Bensz Conan
   short-description: 多轮 A 轮测试 + B 轮质量检查 的项目级测试驱动优化流水线
   keywords:
     - auto-test-project

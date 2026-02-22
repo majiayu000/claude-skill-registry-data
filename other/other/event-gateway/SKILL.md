@@ -1,6 +1,6 @@
 ---
 name: event-gateway
-description: "Comprehensive guide to the Hookdeck Event Gateway for receiving, routing, and delivering webhooks and events. Covers setup, connections, authentication, local development, monitoring, and API automation. Use for any Hookdeck Event Gateway task including receiving webhooks, third-party routing, asynchronous APIs, or local webhook development. For provider webhooks (Stripe, Shopify, Chargebee, GitHub, etc.), use together with the matching skill from hookdeck/webhook-skills; do not only parse JSON — use provider SDK verification and event construction (e.g. Stripe constructEvent)."
+description: "Comprehensive guide to the Hookdeck Event Gateway for receiving, routing, and delivering webhooks and events. Covers setup, connections, authentication, local development, monitoring, and API automation. Use when receiving webhooks, setting up webhook endpoints, testing webhooks locally, configuring webhook relay or event queue, event routing, webhook retry, webhook monitoring, third-party routing, asynchronous APIs, or local webhook development. For provider webhooks (Stripe, Shopify, Chargebee, GitHub, etc.), use together with the matching skill from hookdeck/webhook-skills; do not only parse JSON — use provider SDK verification and event construction (e.g. Stripe constructEvent)."
 allowed-tools: WebFetch
 ---
 

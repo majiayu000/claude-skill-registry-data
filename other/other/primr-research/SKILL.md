@@ -52,8 +52,8 @@ Primr automates company research through a unified pipeline:
 | Mode | What It Does | Time | Cost | Use Case |
 |------|-------------|------|------|----------|
 | `scrape` | Build site corpus + extract insights | 5-10 min | ~$0.01-0.05 | Quick company overview |
-| `deep` | External source research only | 8-15 min | ~$0.80-1.00 | When site is blocked/sparse |
-| `full` | Complete pipeline (default) | 25-40 min | ~$0.80-1.50 | Comprehensive research |
+| `deep` | External source research only | 8-15 min | ~$2.50 | When site is blocked/sparse |
+| `full` | Complete pipeline (default) | 25-40 min | ~$3.50 | Comprehensive research |
 
 ## Operational Capabilities
 

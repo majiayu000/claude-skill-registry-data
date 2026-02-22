@@ -41,7 +41,8 @@ When `--with-commit` flag is used:
 
 **Flag Parsing**:
 ```javascript
-const autoYes = $ARGUMENTS.includes('--yes') || $ARGUMENTS.includes('-y')
+// ★ 统一 auto mode 检测：-y/--yes 从 $ARGUMENTS 或 ccw 传播
+const autoYes = /\b(-y|--yes)\b/.test($ARGUMENTS)
 const withCommit = $ARGUMENTS.includes('--with-commit')
 ```
 
@@ -170,7 +171,8 @@ bash(for dir in .workflow/active/WFS-*/; do [ -d "$dir" ] || continue; session=$
 
 **Parse --yes flag**:
 ```javascript
-const autoYes = $ARGUMENTS.includes('--yes') || $ARGUMENTS.includes('-y')
+// ★ 统一 auto mode 检测：-y/--yes 从 $ARGUMENTS 或 ccw 传播
+const autoYes = /\b(-y|--yes)\b/.test($ARGUMENTS)
 ```
 
 **Conditional Selection**:
@@ -324,7 +326,8 @@ while (TODO_LIST.md has pending tasks) {
 
 ```javascript
 // Parse --yes flag
-const autoYes = $ARGUMENTS.includes('--yes') || $ARGUMENTS.includes('-y')
+// ★ 统一 auto mode 检测：-y/--yes 从 $ARGUMENTS 或 ccw 传播
+const autoYes = /\b(-y|--yes)\b/.test($ARGUMENTS)
 
 if (autoYes) {
   // Auto mode: Complete session automatically
@@ -610,11 +613,11 @@ meta.agent missing → Infer from meta.type:
 ## Related Skills
 
 **Prerequisite Skills**:
-- `/workflow:plan` - Generate implementation plan and task JSONs
+- `workflow-plan` skill - Generate implementation plan and task JSONs
 
 **Called During Execution**:
 - `/workflow:session:complete` - Archive session after all tasks complete
-- `/workflow:review` - Post-implementation review
+- `review-cycle` skill - Post-implementation review
 
 **Follow-up Skills**:
 - `/issue:new` - Create follow-up issues (test/enhance/refactor/doc)

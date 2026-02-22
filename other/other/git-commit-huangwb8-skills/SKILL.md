@@ -2,8 +2,10 @@
 name: git-commit
 description: 当用户明确要求"提交 Git 改动"、"生成 commit 信息"或"创建 git commit"时使用。仅用 Git 分析改动并自动生成 conventional commit 信息（可选 emoji）；必要时建议拆分提交，默认运行本地 Git 钩子（可 --no-verify 跳过），提交后默认自动 push（可 --no-push 跳过）。
 metadata:
+  author: Bensz Conan
   short-description: 仅用 Git 分析改动并生成 conventional commit 信息（可选 emoji），默认自动 push
   keywords:
+    - git-commit
     - git commit
     - conventional commit
     - commit message

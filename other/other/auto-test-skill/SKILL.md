@@ -3,6 +3,7 @@ name: auto-test-skill
 category: normal
 description: 当用户明确要求"测试技能"、"运行 auto-test"或"进行批判性测试"时使用。通过多轮 A 轮批判性测试 + B 轮质量原则检查，系统化发现、记录、修复问题，并沉淀可追溯的 `plans/` 与 `tests/` 文档。⚠️ 不适用：用户只是想优化功能（应直接修改）、只是询问技能问题（应直接回答）、没有明确"测试"意图。
 metadata:
+  author: Bensz Conan
   short-description: 批判性思维驱动的测试驱动优化流水线（多轮 A 轮 + B 轮质量原则检查）
   keywords:
     - auto-test-skill
@@ -164,7 +165,7 @@ python3 auto-test-skill/scripts/verify_test_session.py --require-plan tests/vYYY
 - 过度设计检查
 - 通用性检查
 - 一致性检查
-- **配置集中化检查**（新增）：检查精确端（config.yaml）与模糊端（工作文档）是否完全分离，确保所有可配置参数集中在 config.yaml 作为单一真相来源
+- 配置集中化检查：检查精确端（config.yaml）与模糊端（工作文档）是否完全分离，确保所有可配置参数集中在 config.yaml 作为单一真相来源
 - SKILL.md 瘦身检查：检查 SKILL.md 是否过于冗长，应将详细内容模块化到 `references/`
 
 模板：`templates/B_ROUND_CHECK_TEMPLATE.md`

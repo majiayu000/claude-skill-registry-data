@@ -229,10 +229,9 @@ git push origin {BRANCH}
 
 ## Commands Using This Skill
 
-- `/resolve-pr-review-thread [all]` - Primary consumer for thread resolution
-- `/manage-pr` - Thread resolution during PR management
+- `/resolve-pr-threads [all]` - Primary consumer for thread resolution
+- `/finalize-pr` - Thread resolution during PR management
 - `/review-pr` - Creating and reading review threads
-- `/pr-review-feedback` - Reference documentation for GraphQL patterns
 
 ## Best Practices
 

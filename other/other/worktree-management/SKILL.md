@@ -236,9 +236,9 @@ git rev-parse --is-inside-work-tree
 
 - `/init-worktree` - Primary worktree creation command
 - `/create-worktrees:create-worktrees` - Create worktrees for all open PRs (plugin)
-- `/fix-pr-ci` - Creates worktrees for PR branches
+
 - `/sync-main` - Syncs main across worktrees
-- `/git-refresh` - Cleanup and sync workflow
+- `/refresh-repo` - Cleanup and sync workflow
 
 ## Plugin Integration
 

@@ -113,6 +113,31 @@ Guidelines:
 - Mark error terminals distinctly (e.g., red styling or stop symbols)
 - Use subgraphs to separate phases when a process has distinct stages
 
+#### Sub-Process Decomposition
+
+When tracing a process, some steps may be complex enough to warrant their own dedicated process doc. Decompose a step into a sub-process when:
+
+- The step has its own **decision branches, failure modes, or actors** beyond the parent flow
+- The step involves **multiple sequential actions** that would bloat the parent doc
+- The step is **reusable** — referenced by multiple parent processes
+- Documenting it inline would make the parent doc's flow section harder to scan
+
+**When you identify a sub-process:**
+
+1. **In the parent doc**: Replace the inline description with a link to the sub-process doc. Keep only a one-line summary in the flow step — the detail lives in the sub-process doc.
+   ```markdown
+   3. **[Check system compatibility][compat-check]** — Verify the system meets minimum requirements
+   ```
+2. **Add a Sub-Processes table** to the parent doc (if one doesn't exist) listing all sub-processes with links and brief descriptions.
+3. **Create the sub-process doc** using the same template as the parent — Overview, Trigger, Actors, Diagram, Flow, Failure Scenarios, State Changes, Dependencies. The trigger should reference the parent process (e.g., "Called during step 3 of [installation][installation]").
+4. **Match existing patterns** — if the parent doc already has sub-process links, follow the exact same structure (link style, summary length, Sub-Processes table format). Consistency across sub-processes matters.
+
+**When NOT to decompose:**
+
+- The step is a single action with no branching or failure modes
+- The step's behavior is fully captured in one sentence
+- Breaking it out would create a trivially short doc that adds navigation overhead without value
+
 ### Step 4: Update AGENTS.md Pointers
 
 If new documentation files were created, propose adding a pointer in AGENTS.md:
@@ -139,4 +164,6 @@ See `docs/processes/<process>.md` for <brief description>.
 - **Always include failure paths** — happy-path-only docs are incomplete and misleading
 - **Business language first** — describe what happens from the business perspective, then note which components are involved
 - **Use reference-style links** — when linking to other docs or source files, use reference links (`[text][ref]` with `[ref]: path` at the bottom of the file) rather than inline links. They read better in source and are easier to maintain.
+- **Decompose complex steps into sub-processes** — if a step has its own decision branches, failure modes, or multiple sequential actions, it needs its own doc. Don't inline what should be a sub-process.
+- **Match existing sub-process patterns** — if a parent doc already has sub-process links, new sub-processes must follow the exact same structure and link style
 - **Propose structure first** — if no process docs exist yet, propose a directory structure and format before creating files

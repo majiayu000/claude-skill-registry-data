@@ -23,3 +23,4 @@ Except for `main`, all branch names must use one of:
 - Include ticket numbers when applicable (e.g., `feat/issue-123-new-login`)
 - Dots allowed only for version numbers in `release/` branches
 - Check existing branches for naming patterns before creating new ones
+- Do NOT use `git -C <path>` when the current directory is already the repository root

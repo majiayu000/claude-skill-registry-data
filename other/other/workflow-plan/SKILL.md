@@ -52,40 +52,48 @@ Unified planning skill combining 4-phase planning workflow, plan quality verific
 Before dispatching to phase execution, collect workflow preferences via AskUserQuestion:
 
 ```javascript
-const prefResponse = AskUserQuestion({
-  questions: [
-    {
-      question: "是否跳过所有确认步骤（自动模式）？",
-      header: "Auto Mode",
-      multiSelect: false,
-      options: [
-        { label: "Interactive (Recommended)", description: "交互模式，包含确认步骤" },
-        { label: "Auto", description: "跳过所有确认，自动执行" }
-      ]
-    }
-  ]
-})
+// ★ 统一 auto mode 检测：-y/--yes 从 $ARGUMENTS 或 ccw 传播
+const autoYes = /\b(-y|--yes)\b/.test($ARGUMENTS)
 
-workflowPreferences = {
-  autoYes: prefResponse.autoMode === 'Auto'
-}
-
-// For replan mode, also collect interactive preference
-if (mode === 'replan') {
-  const replanPref = AskUserQuestion({
+if (autoYes) {
+  // 自动模式：跳过所有询问，使用默认值
+  workflowPreferences = { autoYes: true, interactive: false }
+} else {
+  const prefResponse = AskUserQuestion({
     questions: [
       {
-        question: "是否使用交互式澄清模式？",
-        header: "Replan Mode",
+        question: "是否跳过所有确认步骤（自动模式）？",
+        header: "Auto Mode",
         multiSelect: false,
         options: [
-          { label: "Standard (Recommended)", description: "使用安全默认值" },
-          { label: "Interactive", description: "通过提问交互式澄清修改范围" }
+          { label: "Interactive (Recommended)", description: "交互模式，包含确认步骤" },
+          { label: "Auto", description: "跳过所有确认，自动执行" }
         ]
       }
     ]
   })
-  workflowPreferences.interactive = replanPref.replanMode === 'Interactive'
+
+  workflowPreferences = {
+    autoYes: prefResponse.autoMode === 'Auto'
+  }
+
+  // For replan mode, also collect interactive preference
+  if (mode === 'replan') {
+    const replanPref = AskUserQuestion({
+      questions: [
+        {
+          question: "是否使用交互式澄清模式？",
+          header: "Replan Mode",
+          multiSelect: false,
+          options: [
+            { label: "Standard (Recommended)", description: "使用安全默认值" },
+            { label: "Interactive", description: "通过提问交互式澄清修改范围" }
+          ]
+        }
+      ]
+    })
+    workflowPreferences.interactive = replanPref.replanMode === 'Interactive'
+  }
 }
 ```
 
@@ -403,18 +411,18 @@ CONSTRAINTS: [Limitations or boundaries]
 ## Related Skills
 
 **Prerequisite Skills**:
-- `/workflow:brainstorm:artifacts` - Optional: Generate role-based analyses before planning
-- `/workflow:brainstorm:synthesis` - Optional: Refine brainstorm analyses with clarifications
+- `brainstorm` skill - Optional: Generate role-based analyses before planning
+- `brainstorm` skill - Optional: Refine brainstorm analyses with clarifications
 
 **Called by Plan Mode** (4 phases):
 - `/workflow:session:start` - Phase 1: Create or discover workflow session
 - `phases/02-context-gathering.md` - Phase 2: Gather project context and analyze codebase (inline)
 - `phases/03-conflict-resolution.md` - Phase 3: Detect and resolve conflicts (inline, conditional)
-- `/compact` - Phase 3: Memory optimization (if context approaching limits)
+- `memory-capture` skill - Phase 3: Memory optimization (if context approaching limits)
 - `phases/04-task-generation.md` - Phase 4: Generate task JSON files (inline)
 
 **Follow-up Skills**:
-- `/workflow:plan-verify` - Verify plan quality (can also invoke via verify mode)
+- `workflow-plan` skill (plan-verify phase) - Verify plan quality (can also invoke via verify mode)
 - Display session status inline - Review task breakdown and current progress
 - `Skill(skill="workflow-execute")` - Begin implementation of generated tasks (skill: workflow-execute)
-- `/workflow:replan` - Modify plan (can also invoke via replan mode)
+- `workflow-plan` skill (replan phase) - Modify plan (can also invoke via replan mode)

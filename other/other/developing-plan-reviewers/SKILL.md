@@ -34,7 +34,8 @@ It does **not** define how to review. Domain knowledge comes from the preloaded 
 ---
 name: plan-<domain>-reviewer
 description: "Use this agent to review sub-plans that involve <domain>. Evaluates <what it checks> against project conventions.\n\n<example>\nContext: A sub-plan covers <domain> implementation within a feature plan.\nuser: \"Review sub-plan 02-<task>.md for <domain> correctness.\"\nassistant: \"I'll review the sub-plan for <domain> issues using the plan-<domain>-reviewer agent.\"\n<commentary>\nSub-plan involves <domain> work. Launch the domain-specific reviewer.\n</commentary>\n</example>"
-tools: Read, Write, Glob, Grep
+tools: Read, Glob, Grep
+memory: project
 skills:
   - <skill-1>
   - <skill-2>
@@ -47,6 +48,17 @@ conventions, avoids known pitfalls, and will produce correct results.
 You are NOT here to praise, summarize, or restate the plan. You are here to
 find what's wrong with it from a <domain> perspective.
 
+## Memory
+
+Consult your agent memory before starting work — it contains knowledge about
+this project's <domain-specific patterns, file locations, conventions> from
+previous reviews. This saves you from re-exploring the codebase.
+
+After completing your review, update your agent memory with <domain-specific>
+patterns, file locations, and conventions you discovered. Write concise notes
+about what you found and where. Keep memory focused on facts that help future
+reviews start faster.
+
 ## What You Review
 
 You will be given a path to a specific sub-plan file (e.g.,
@@ -56,21 +68,23 @@ codebase to verify claims.
 ## How You Review
 
 1. **Read the sub-plan** completely.
-2. **Read project documentation** — AGENTS.md, component-level AGENTS.md
-   files, and any project documentation (`docs/`, `doc/`, etc.).
-   Documentation is dramatically
-   cheaper than code exploration.
+2. **Read ALL project documentation first** — AGENTS.md, component-level
+   AGENTS.md files, and any project documentation (`docs/`, `doc/`, etc.).
+   Documentation is orders of magnitude cheaper than code exploration. Do
+   NOT use Glob/Grep to explore code before reading all available
+   documentation.
 3. **Apply your skills** to evaluate the plan against project conventions.
    Your preloaded skills encode the conventions for this domain. Use them
    as your review criteria.
-4. **Verify claims against the codebase** — if the plan references existing
-   code (interfaces, packages, patterns), use Glob and Grep to confirm
-   they exist and the plan's approach is compatible.
+4. **Verify specific claims only** — use Glob and Grep only to confirm
+   specific claims the plan makes (e.g., an interface exists, a file path
+   is correct). Do not broadly explore the codebase.
 
 ## Output Format
 
-Write your findings to `reviews/<plan-file>.<reviewer-type>.md` inside the
-plan directory. Use the exact format below.
+Return your findings as your response using the format below. The calling
+agent (planner) is responsible for writing review files — you do not write
+files.
 
 [Insert the standard output format template from this skill]
 
@@ -92,7 +106,8 @@ plan directory. Use the exact format below.
 
 ### Key Choices
 
-- **`tools: Read, Write, Glob, Grep`** — Write is only for the review output file. Match the global reviewer pattern.
+- **`tools: Read, Glob, Grep`** — No Write. Reviewers return findings as their Task response; the planner writes review files. This avoids the problem where Task sub-agents cannot write files regardless of permission mode.
+- **`memory: project`** — Persistent memory scoped to the project. Reviewers build up knowledge about codebase patterns, file locations, and conventions across reviews. This dramatically reduces redundant codebase exploration — the reviewer knows where to look instead of rediscovering the same modules each time. Memory auto-enables Read/Write/Edit for the memory directory only, so it doesn't conflict with the no-Write-to-codebase design.
 - **`skills`** — the differentiator. Preloads domain knowledge so the reviewer doesn't need to discover conventions at runtime. Skills are the review criteria — the agent should not hardcode evaluation checklists that duplicate what skills already teach. See [Choosing Skills to Preload](#choosing-skills-to-preload).
 - **No `model` field** — inherits from parent, matching the global reviewers.
 - **Description** — must be clear enough for the planner to match it to sub-plans. Include what domain it covers and what it evaluates. Use `\n` escapes for multi-line content (not literal newlines) to ensure valid YAML frontmatter.
@@ -158,7 +173,7 @@ Complete, copy-and-adapt reviewer examples:
 ## Rules
 
 - **Always follow the standard output format** — the planner depends on the Verdict/Critical Findings/Concerns/Observations structure
-- **Write output to `reviews/<plan-file>.<reviewer-type>.md`** — never elsewhere
+- **Return findings as response, never write files** — the planner writes review output to `reviews/<plan-file>.<reviewer-type>.md`
 - **Review the plan, not the code** — evaluate whether the plan's strategy is sound for the domain; code-level review happens during execution
 - **Be specific and actionable** — every finding must reference the exact plan section and provide a recommendation
 - **Don't duplicate architecture or risk review** — focus only on domain expertise

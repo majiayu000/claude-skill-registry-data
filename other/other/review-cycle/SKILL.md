@@ -27,6 +27,15 @@ Unified code review orchestrator with mode-based routing. Detects input type and
    review-session.md review-module.md  review-fix.md
 ```
 
+## Auto Mode Detection
+
+```javascript
+// ★ 统一 auto mode 检测：-y/--yes 从 $ARGUMENTS 或 ccw 传播
+const autoYes = /\b(-y|--yes)\b/.test($ARGUMENTS)
+```
+
+When `autoYes` is true, skip all interactive confirmations and use defaults throughout the review cycle phases.
+
 ## Mode Detection
 
 ```javascript
@@ -56,6 +65,7 @@ Skill(skill="review-cycle", args="WFS-payment-integration")                     
 Skill(skill="review-cycle", args="")                                               # Session: auto-detect
 Skill(skill="review-cycle", args="--fix .workflow/active/WFS-123/.review/")        # Fix mode
 Skill(skill="review-cycle", args="--fix --resume")                                 # Fix: resume
+Skill(skill="review-cycle", args="-y src/auth/**")                                 # Auto mode (skip confirmations)
 
 # Common flags (all modes):
 --dimensions=dim1,dim2,...    Custom dimensions (default: all 7)

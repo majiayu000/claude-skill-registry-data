@@ -189,7 +189,7 @@ Follow `output-template.md` format.
 **Save to both locations:**
 
 1. **Local archive:** `findings/plants/[flower-slug].md`
-2. **Obsidian inbox:** `/Users/marcin.skalski@konghq.com/Library/Mobile Documents/iCloud~md~obsidian/Documents/second-brain/0_Inbox/plant-[flower-slug].md`
+2. **Notion workspace:** Create page with title `Plant: [flower-name]`
 
 **Update state:**
 - Append to `findings/plants/.plant-history`: `[date] [flower-name] [image-path]`

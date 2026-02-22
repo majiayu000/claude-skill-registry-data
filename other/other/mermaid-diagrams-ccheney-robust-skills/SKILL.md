@@ -1,13 +1,6 @@
 ---
 name: mermaid-diagrams
-description: |
-  Generate Mermaid diagrams in markdown. Triggers on: diagrams, charts, visualizations, flowcharts,
-  sequence diagrams, architecture diagrams, ER diagrams, state machines, Gantt charts, mindmaps,
-  C4, class diagrams, git graphs.
-
-  Use when: user asks for visual representations of code, systems, processes, data structures,
-  database schemas, workflows, or API flows. Proactively suggest diagrams when explaining
-  complex systems.
+description: Proactively suggest diagrams when explaining complex systems. Triggers on diagrams, charts, visualizations, flowcharts, sequence diagrams, architecture diagrams, ER diagrams, state machines, Gantt charts, mindmaps, C4, class diagrams, git graphs. Use when user asks for visual representations of code, systems, processes, data structures, database schemas, workflows, or API flows. Generate Mermaid diagrams in markdown.
 ---
 
 # Mermaid Diagrams

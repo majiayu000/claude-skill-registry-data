@@ -15,7 +15,7 @@ task test -- -run TestName      # Run specific test(s)
 task test -- -short             # Skip integration tests
 ```
 
-For test conventions (naming, assertions, table-driven patterns, mock usage), see the `writing-go-code` skill.
+For test conventions (naming, assertions, table-driven patterns, mock usage), see the `writing-go-tests` skill.
 
 ## Coverage
 

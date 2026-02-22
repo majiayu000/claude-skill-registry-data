@@ -137,15 +137,74 @@ smellcheck src/ --min-severity warning --fail-on warning
 
 Run the detector first for a quick scan, then use the reference files to understand and apply the suggested refactorings.
 
-## Workflow
+## Guided Refactoring Workflow
 
-1. Optionally run `detect_smells.py` on the target code for automated findings
-2. Receive code -> scan for smells using table (manual or from script output)
-3. Map smells to pattern numbers
-4. Read **only** the relevant reference file(s)
-5. Present: "Found N smells -> applying SCxxx, SCyyy, SCzzz"
-6. Show refactored code with explanations
-7. Note trade-offs and breaking changes
+smellcheck groups its 56 rules into 9 ordered phases with dependency chains. The `--plan` command generates a customized refactoring plan based on actual findings.
+
+### Initialization
+
+```bash
+# Bundled (no pip install required)
+python3 scripts/detect_smells.py <path> --plan
+python3 scripts/detect_smells.py <path> --plan --format json
+
+# Or via pip-installed CLI
+smellcheck <path> --plan
+smellcheck <path> --plan --format json
+```
+
+The plan auto-selects a strategy: **local_first** (default, phases 0-8) or **architecture_first** (reorders to [0,1,7,8,2,3,4,5,6]) when >30% of findings are cross-file or metric scoped.
+
+### Phase Execution Loop
+
+Each phase has three passes:
+
+**Pass 1 — Automated scan**: Run the `--select` command printed in the plan output for the current phase. Fix each finding using the reference file for that rule's family.
+
+**Pass 2 — Agent semantic review**: For candidate files (files with automated findings + changed files in branch + import neighbors for cross-file phases), check for manual patterns assigned to the current phase. Evidence requirements for every semantic finding:
+- File path and line range
+- Actual code snippet
+- Pattern number and name
+- Why it matches the heuristic
+- Confidence score (>=0.8 auto-fix, 0.5-0.79 suggest+confirm, <0.5 don't emit)
+
+**Pass 3 — Gate check**: If gate is `tests_pass`, run the test suite and do not proceed until green. If `rescan_after` is true, re-run `--plan` and re-bucket.
+
+### Manual Pattern Assignments per Phase
+
+For each manual pattern below, load the corresponding reference file from the Reference Files section to see full before/after examples.
+
+| Phase | Patterns | Agent detection heuristics |
+|-------|----------|---------------------------|
+| 0 correctness | (none) | Fully automated |
+| 1 dead_code | 005 | Comments that restate the next line — delete them |
+| 2 clarity | 011, 031 | 011: comments explaining "what" not "why". 031: error messages missing context |
+| 3 idioms | 059, 060 | 059: `list(gen)` where result is only iterated once. 060: single `isinstance()` dispatch |
+| 4 control_flow | 043, 046, 047, 049, 053, 056 | 043: expression >80 chars with no named subparts. 046: loop body with 2+ concerns. 047: function that parses+computes+formats. 049: manual impl of stdlib op. 053: related lines separated by unrelated. 056: if/elif 4+ branches |
+| 5 functions | 010, 020, 027, 037, 050, 052 | 020: function-scoped import. 027: `obj.get_x()` + logic → move to obj. 037: test accessing `._private`. 050: two functions >80% body similarity. 052: 3+ related params |
+| 6 state_class | 012, 019, 022, 023, 030, 038, 044, 048 | 012: dict with 3+ consistent keys → dataclass. 019/044: primitive with constraints → value object. 022: siblings with duplicate methods. 023: inheritance for reuse not "is-a". 030: cached attr that drifts. 038: `list[str]` with domain meaning. 048: unclear constructor → factory |
+| 7 architecture | 015, 025, 035, 045 | 015: `if x is not None` in 3+ sites → Null Object. 025: regex >80 chars → `re.VERBOSE`. 035: same exception for biz+infra. 045: broad input without precondition |
+| 8 metrics | (none) | Fully automated; use results to revisit phase 6 |
+
+**Pattern 032** (inconsistent formatting): Tool-enforced — run `black` or `ruff format` before starting workflow.
+
+### Conditional Branching
+
+- No classes detected → phases 6 and 8 skip automatically
+- No async code (SC703 has 0 findings) → skip in phase 3
+- Architecture-dominant (>30% cross-file) → plan reorders to architecture-first
+- Single-file scan → cross-file phases will naturally have 0 findings
+- Large backlog → generate baseline, gate only new findings
+
+### Feedback Loops
+
+- Phase 8 → Phase 6: under `local_first`, if metrics still high, loop back (max 2 iterations). Under `architecture_first`, phase 8 runs before phase 6, so this becomes forward flow — metrics inform the class design pass.
+- Phase 5 → Phase 8: extraction changes cohesion, re-check metrics
+- Any phase → tests: if tests break, pause and fix first
+
+### Completion Criteria
+
+All phases either skip (0 findings) or pass. Tests green. Feedback loops converged. `smellcheck --plan` shows all phases as skip.
 
 ## Guidelines
 

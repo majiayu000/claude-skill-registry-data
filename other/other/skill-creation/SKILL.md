@@ -7,7 +7,7 @@ description: |
 license: MIT
 metadata:
   author: KemingHe
-  version: "1.1.0"
+  version: "1.2.0"
 ---
 
 # Skill Creation
@@ -77,62 +77,23 @@ skill-name/
 - No consecutive hyphens (`--`)
 - Directory name must match `name` field in frontmatter
 
-### Step 3: Write SKILL.md Frontmatter
+### Step 3: Write SKILL.md
 
-Required and recommended fields:
+Read the skill template from Asset Resolution. Fill in all bracket placeholders with project-specific values.
 
-```yaml
----
-name: skill-name
-description: |
-  One-line summary of what this skill does.
-  When to use it and trigger keywords.
-license: MIT
-metadata:
-  author: AuthorName
-  version: "1.0.0"
----
-```
+**Frontmatter guidelines**:
 
-**Description guidelines**:
+- `description`: 1-1024 chars. First sentence: what the skill does. Second sentence: when to use it, including trigger keywords.
+- `license`: Project license name or file reference
+- See Specification Reference below for all available fields
 
-- 1-1024 characters
-- First sentence: what the skill does
-- Second sentence: when to use it
-- Include trigger keywords for agent discovery
+**Body guidelines**:
 
-### Step 4: Write SKILL.md Body
+- Adapt template sections to the skill's domain - remove unused optional sections, add domain-specific ones
+- For skills interacting with external systems, uncomment and fill in the Safety section (the template provides the pattern)
+- Keep under 500 lines; move supplementary detail to `references/`
 
-Follow this structure (adapt sections as needed):
-
-1. **Title**: `# Skill Name` (human-readable)
-2. **Temporary persona**: Brief expertise statement (replaces ROLE for skill context)
-3. **When to Use**: Scenarios that trigger this skill
-4. **Asset Resolution**: How to find templates (local first, then search)
-5. **Safety section**: For skills with side effects - safe vs forbidden operations
-6. **Process**: Step-by-step instructions for the agent
-7. **Output Format**: Expected output structure
-8. **Constraints**: Rules and limitations
-9. **Examples**: Good/bad examples if helpful
-10. **Footer**: Version tag `> Skill Name Skill vX.Y.Z - Repo`
-
-**Safety section pattern** (for skills that interact with external systems):
-
-```markdown
-## [System] Operations (Read-Only)
-
-This skill performs read-only reconnaissance. Never modify [system] state.
-
-**Setup**: [Any required preparation, e.g., pipe to cat for git]
-
-**Safe commands**: [List of allowed operations]
-
-**Forbidden operations**: [List of prohibited actions]
-
-**Prefer remote tools**: [MCP/API alternatives when available]
-```
-
-### Step 5: Create Assets (if needed)
+### Step 4: Create Assets (if needed)
 
 Place templates in `assets/` subdirectory:
 
@@ -140,28 +101,9 @@ Place templates in `assets/` subdirectory:
 - Templates should be self-documenting with placeholders
 - Include version footer in templates
 
-### Step 6: Create README.md
+### Step 5: Create README.md
 
-Human-readable documentation:
-
-```markdown
-# Skill Name
-
-Brief description for humans browsing the repository.
-
-## Quick Start
-
-How to use this skill with your AI agent.
-
-## Files
-
-- `SKILL.md` - AI instructions
-- `assets/` - Templates used by this skill
-
-## Related
-
-Links to related skills or documentation.
-```
+Create human-readable documentation with: description, quick start, file listing, and related links. Follow the pattern of existing skill READMEs in the repository.
 
 ## Output Format
 
@@ -208,4 +150,4 @@ Full specification: [agentskills.io/specification](https://agentskills.io/specif
 
 ---
 
-> Skill Creation Skill v1.1.0 - KemingHe/common-devx
+> Skill Creation Skill v1.2.0 - KemingHe/common-devx

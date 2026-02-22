@@ -3,6 +3,7 @@ name: git-publish-release
 description: 当用户明确要求"发布项目到 GitHub"、"创建 GitHub Release"或"生成 Release Notes"时使用。智能分析 tag 间历史变化，生成专业且吸引人的 Release Notes，自动创建 GitHub Release。支持首次发布、常规版本、预发布版本（alpha/beta/rc），自动识别 prerelease 标记。
 
 metadata:
+  author: Bensz Conan
   short-description: GitHub Release 自动发布与 Release Notes 生成
   keywords:
     - git-publish-release

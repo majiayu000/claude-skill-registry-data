@@ -190,6 +190,17 @@ Apply citation styles correctly across disciplines. For comprehensive style guid
 - Verify all citations against original sources
 - Use reference management software (Zotero, Mendeley, EndNote)
 
+**MANDATORY: Post-Writing Citation Metadata Check**
+
+After completing each section, scan `references.bib` for any entries missing `volume`, `pages`, or `doi` fields. For every incomplete entry, perform a web search to find the missing metadata:
+
+1. Search using `parallel_web.py search "AUTHOR TITLE JOURNAL volume pages DOI"`
+2. If DOI exists, extract metadata from `https://doi.org/DOI` using `parallel_web.py extract`
+3. Update the BibTeX entry with found metadata
+4. Log: `[HH:MM:SS] METADATA ENRICHED: [CitationKey] - added [fields] ✅`
+
+This check must happen BEFORE final PDF compilation. See the citation-management skill (Phase 2.5) for detailed instructions.
+
 ### 4. Figures and Tables
 
 Create effective data visualizations that enhance comprehension. For detailed best practices, refer to `references/figures_tables.md`.

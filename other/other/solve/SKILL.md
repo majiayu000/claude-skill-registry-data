@@ -65,6 +65,8 @@ FORMATTING RULES (from example.tex, if available — follow EXACTLY):
 - Use \textbf{Case N:} for case analysis
 - Use \textbf{Claim:} when stating intermediate claims
 - Cite theorems as "By Theorem X.Y (Lecture Z)"
+- Cite proof-internal results explicitly: "by equation (3) in the proof of Lemma X.Y (Lecture Z)" or "by the bound established at Line 4 of the proof of Theorem X.Y (Lecture Z)"
+- Never silently reuse a result from inside a proof — always cite the specific label or line
 - No problem restatement — start directly with the solution
 - Subparts use \subsection*{(i)}, \subsection*{(ii)}, etc.
 
@@ -106,7 +108,7 @@ Verify the solution by checking EACH of the following:
 
 1. LOGICAL CORRECTNESS: Does each step follow from the previous? Are there any non-sequiturs or gaps?
 2. INEQUALITY DIRECTIONS: Are all inequalities (≤, ≥, <, >) in the correct direction? Check each one.
-3. THEOREM APPLICATION: For each cited theorem, are ALL hypotheses satisfied? List each hypothesis and verify.
+3. THEOREM APPLICATION: For each cited theorem or proof-internal result (equation, line, intermediate claim), are ALL hypotheses satisfied? For proof-internal citations, verify that the cited label/line actually establishes what is claimed.
 4. EDGE CASES: Are boundary cases handled? (zero vectors, empty sets, degenerate inputs, equality cases)
 5. VARIABLE SCOPING: Are all variables properly introduced before use? Are quantifiers correct?
 6. ALGEBRAIC CORRECTNESS: Check key algebraic manipulations, especially signs, exponents, and factoring.

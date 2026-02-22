@@ -10,7 +10,7 @@ user-invocable: true
 
 Generate curated weekly newsletter from stories marked `[x]` in daily AI digests.
 
-**Prerequisite:** User must check `- [x]` on desired stories in daily digest files (Obsidian renders these as clickable checkboxes).
+**Prerequisite:** User must check `- [x]` on desired stories in daily digest files (Notion renders these as clickable checkboxes).
 
 ## Arguments
 
@@ -74,7 +74,7 @@ Match files where date falls within Mon-Sun of target week.
      - **date** — from filename
 
 3. If zero checked stories found:
-   - Error: `"No stories marked [x] found in digests for week {YYYY-WNN} ({date_range}). Check stories in Obsidian first."`
+   - Error: `"No stories marked [x] found in digests for week {YYYY-WNN} ({date_range}). Check stories in Notion first."`
    - Abort
 
 4. Store extracted stories with metadata.
@@ -143,14 +143,11 @@ Group stories into narrative themes based on content similarity:
 
 ```bash
 mkdir -p ./findings/ai-newsletter
-mkdir -p "/Users/marcin.skalski@konghq.com/Library/Mobile Documents/iCloud~md~obsidian/Documents/second-brain/0_Inbox/ai-newsletter"
 ```
 
-**Step 2:** Write newsletter to Obsidian Inbox
+**Step 2:** Write newsletter to Notion workspace
 
-```text
-/Users/marcin.skalski@konghq.com/Library/Mobile Documents/iCloud~md~obsidian/Documents/second-brain/0_Inbox/ai-newsletter/ai-newsletter-{YYYY-WNN}.md
-```
+Use Notion MCP to create page in workspace with title `AI Newsletter {YYYY-WNN}` and content formatted per template.
 
 **Step 3:** Write archive copy
 
@@ -162,7 +159,7 @@ mkdir -p "/Users/marcin.skalski@konghq.com/Library/Mobile Documents/iCloud~md~ob
 
 Append line: `{YYYY-WNN}|{today's date YYYY-MM-DD}`
 
-**Verification:** Confirm 2 newsletter files + 1 state file updated.
+**Verification:** Confirm Notion page created + 1 archive file + 1 state file updated.
 
 ## Output Requirements
 

@@ -1,6 +1,6 @@
 ---
 name: hookdeck
-description: "Routes to the correct Hookdeck product skill. Covers both Event Gateway (inbound webhooks/events) and Outpost (outbound events). Use when working with any Hookdeck product and unsure which skill to use."
+description: "Routes to the correct Hookdeck product skill. Covers Event Gateway (inbound: receive webhooks, webhook endpoints, local dev, event queue) and Outpost (outbound: send webhooks to customers). Use when working with any Hookdeck product and unsure which skill to use."
 ---
 
 # Hookdeck

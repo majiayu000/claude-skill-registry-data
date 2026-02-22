@@ -18,15 +18,24 @@ Merges from origin/main, commits any local changes with professional message gen
 
 ## Process
 
-### Step 1: Merge from Origin/Main
+### Step 1: Fetch and Merge from Origin/Main
 
-#### 1.1: Execute Merge
+#### 1.1: Fetch and Check State
 ```bash
 git fetch origin
+bash $HOME/.claude/scripts/git_branch_state.sh
+```
+
+Parse the JSON output. If `behind_main` is 0 and `diverged` is false, skip directly to Step 2 (no merge needed).
+
+If `behind_main` > 0 or `diverged` is true, proceed with merge:
+
+#### 1.2: Execute Merge
+```bash
 git merge origin/main
 ```
 
-#### 1.2: Solve Conflicts (if any)
+#### 1.3: Solve Conflicts (if any)
 Git merge automatically:
 - **Takes all non-conflicting changes from origin/main** (newer code, new files, etc.)
 - **Only creates conflicts** where both branches modified the same lines
@@ -38,7 +47,7 @@ If conflicts occur:
 - Stage the resolved files
 - Continue with the commit process
 
-#### 1.3: Merge Summary
+#### 1.4: Merge Summary
 After merge completes, provide brief summary:
 - **What was merged**: Source branch and commit range
 - **Files added/modified/deleted**: List key changes with file counts
@@ -104,7 +113,14 @@ git push -u origin HEAD
 
 **Result**: After pushing, the current branch remains ahead of (or equal to) origin/main with all changes safely on remote.
 
-### Step 8: Confirmation
+### Step 8: Verify Final State
+```bash
+bash $HOME/.claude/scripts/git_branch_state.sh
+```
+
+Parse the JSON output. Verify `behind_main` is 0 and `diverged` is false. If either check fails, report the issue to the user.
+
+### Step 9: Confirmation
 Report commit hash, push status, and summary to user.
 
 **Final State**: ✓ Current branch >= origin/main (ahead or equal, never behind or diverged)

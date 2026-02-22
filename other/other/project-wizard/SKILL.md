@@ -20,29 +20,39 @@ Use this skill when:
 
 ## What Gets Created
 
-- Proper folder structure
+The setup wizard now performs **selective copying** based on project type, language, and framework:
+
+- Only relevant skills copied (from groups: core + project-type-specific + framework-specific)
+- Only relevant commands copied (core + selected dev frameworks like PRP, Harness, etc.)
+- Project-specific README.md generated from templates
+- CLAUDE.md with conditional sections (only includes PRP/Harness/SpecKit docs if those frameworks are selected)
+- Language-specific .gitignore
+- `template_profile` section written to `.claude/config.yaml` for sync/update tracking
 - Security configurations (pre-commit hooks, secret detection)
 - GitHub repository with branch protection
 - Archon project for task management
-- Customized documentation
 
 ---
 
 ## Interactive Setup Flow
 
 ```
-PROJECT WIZARD FLOW
+PROJECT WIZARD FLOW (v2.0 - Selective Setup)
 
-  ┌─────────┐   ┌─────────┐   ┌─────────┐   ┌─────────┐
-  │ Basics  │──>│  Tech   │──>│ GitHub  │──>│ Archon  │
-  │ Info    │   │ Stack   │   │ Setup   │   │ Project │
-  └─────────┘   └─────────┘   └─────────┘   └─────────┘
-                                                │
-                                         ┌──────┴──────┐
-                                         │  Generate   │
-                                         │  Summary    │
-                                         └─────────────┘
+  ┌─────────┐   ┌──────────┐   ┌───────────┐   ┌─────────┐   ┌─────────┐
+  │ Basics  │──>│ Language │──>│ Framework │──>│ GitHub  │──>│ Archon  │
+  │ Info    │   │ & Type   │   │ & DevFwks │   │ Setup   │   │ Project │
+  └─────────┘   └──────────┘   └───────────┘   └─────────┘   └─────────┘
+                                                                  │
+                                                           ┌──────┴──────┐
+                                                           │  Selective  │
+                                                           │  Copy &    │
+                                                           │  Summary   │
+                                                           └─────────────┘
 ```
+
+Skills and commands are filtered based on project type + language + framework.
+Only relevant files are copied to the new project.
 
 ---
 

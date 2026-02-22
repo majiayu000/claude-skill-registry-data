@@ -135,6 +135,25 @@ if (myTasks.length === 0) return // idle
 const task = TaskGet({ taskId: myTasks[0].id })
 TaskUpdate({ taskId: task.id, status: 'in_progress' })
 
+// Phase 1.5: Resume Artifact Check (防止重复产出)
+// 当 session 从暂停恢复时，coordinator 已将 in_progress 任务重置为 pending。
+// Worker 在开始工作前，必须检查该任务的输出产物是否已存在。
+// 如果产物已存在且内容完整：
+//   → 直接跳到 Phase 5 报告完成（避免覆盖上次成果）
+// 如果产物存在但不完整（如文件为空或缺少关键 section）：
+//   → 正常执行 Phase 2-4（基于已有产物继续，而非从头开始）
+// 如果产物不存在：
+//   → 正常执行 Phase 2-4
+//
+// 每个 role 检查自己的输出路径:
+//   analyst  → sessionFolder/spec/discovery-context.json
+//   writer   → sessionFolder/spec/{product-brief.md | requirements/ | architecture/ | epics/}
+//   discussant → sessionFolder/discussions/discuss-NNN-*.md
+//   planner  → sessionFolder/plan/plan.json
+//   executor → git diff (已提交的代码变更)
+//   tester   → test pass rate
+//   reviewer → sessionFolder/spec/readiness-report.md (quality) 或 review findings (code)
+
 // Phase 2-4: Role-specific (see roles/{role}.md)
 
 // Phase 5: Report + Loop
@@ -193,10 +212,18 @@ Coordinator supports `--resume` / `--continue` flags to resume interrupted sessi
 
 1. Scans `.workflow/.team/TLS-*/team-session.json` for `status: "active"` or `"paused"`
 2. Multiple matches → `AskUserQuestion` for user selection
-3. Loads session state: `teamName`, `mode`, `sessionFolder`, `completed_tasks`
-4. Rebuilds team (`TeamCreate` + worker spawns)
-5. Creates only uncompleted tasks in the task chain
-6. Jumps to Phase 4 coordination loop
+3. **Audit TaskList** — 获取当前所有任务的真实状态
+4. **Reconcile** — 双向同步 session.completed_tasks ↔ TaskList 状态:
+   - session 已完成但 TaskList 未标记 → 修正 TaskList 为 completed
+   - TaskList 已完成但 session 未记录 → 补录到 session
+   - in_progress 状态（暂停中断）→ 重置为 pending
+5. Determines remaining pipeline from reconciled state
+6. Rebuilds team (`TeamCreate` + worker spawns for needed roles only)
+7. Creates missing tasks with correct `blockedBy` dependency chain (uses `TASK_METADATA` lookup)
+8. Verifies dependency chain integrity for existing tasks
+9. Updates session file with reconciled state + current_phase
+10. **Kick** — 向首个可执行任务的 worker 发送 `task_unblocked` 消息，打破 resume 死锁
+11. Jumps to Phase 4 coordination loop
 
 ## Coordinator Spawn Template
 
