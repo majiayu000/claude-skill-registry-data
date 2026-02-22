@@ -60,7 +60,7 @@ gh pr create \
 ## Verification
 <plan Verification section>
 
-Plan: #<plan id>
+Plan <plan id>
 <if gh_issue is set in plan frontmatter: Closes #<gh_issue>>
 EOF
 )"
@@ -78,7 +78,7 @@ esperkit plan close-issue <filename> --comment "Shipped in <PR URL>"
 Commit and push the `pr:` field update:
 ```bash
 git add .esper/plans/done/<filename>
-git commit -m "chore: record PR link for plan #<id>"
+git commit -m "chore: record PR link for plan <id>"
 git push
 ```
 
@@ -105,7 +105,7 @@ Run `esperkit config get current_phase` to get the current phase. Then run `espe
 
   ```bash
   gh pr create \
-    --title "Phase <N>: <phase title from phases/phase-N.md>" \
+    --title "Phase <N>: <phase title from phase file>" \
     --base main \
     --body "$(cat <<'EOF'
   ## Phase <N> — <phase title>
@@ -113,7 +113,7 @@ Run `esperkit config get current_phase` to get the current phase. Then run `espe
   <phase goal, 1-2 sentences>
 
   ## Shipped plans
-  - #<id> — <title>: <one-line approach summary>
+  - Plan <id> — <title>: <one-line approach summary>
   ...
 
   ## Acceptance criteria

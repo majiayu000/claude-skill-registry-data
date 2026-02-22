@@ -99,7 +99,7 @@ git add <specific files changed for this milestone — never git add -A>
 git commit -m "$(cat <<'EOF'
 <feat|fix|chore>: <what this milestone accomplished>
 
-Plan: #<id> — <title> (milestone <N>/<total>)
+plan <id> — <title> (milestone <N>/<total>)
 EOF
 )"
 ```

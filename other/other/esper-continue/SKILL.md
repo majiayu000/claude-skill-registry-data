@@ -76,7 +76,7 @@ git add <specific files>
 git commit -m "$(cat <<'EOF'
 <feat|fix|chore>: <what was just done>
 
-Plan: #<id> — <title>
+plan <id> — <title>
 EOF
 )"
 ```

@@ -39,7 +39,7 @@ Run `git status --porcelain` to check for uncommitted changes.
 
    <1-3 sentences on what changed and why>
 
-   Plan: #<id> — <title>
+   plan <id> — <title>
    ```
 4. Show the draft to the user and wait for approval (use `AskUserQuestion`)
 5. Once approved:
@@ -62,7 +62,7 @@ Commit the archive:
 ```bash
 git add .esper/plans/done/<filename>
 git add .esper/plans/active/<filename>   # stages the deletion
-git commit -m "chore: archive plan #<id> — <title>"
+git commit -m "chore: archive plan <id> — <title>"
 ```
 
 ## Step 4.5: Update phase file with shipped plan summary
@@ -75,9 +75,9 @@ Append a compact one-liner to the current phase file so future agents can read w
    - **First sentence** of the `## Approach` section (up to the first `.` or newline). If the section is absent, skip this part.
    - **Filenames** from `## Files to change` (comma-separated bare filenames, e.g. `cli.js, plan.js`). If the section is absent, skip this part.
 3. Compose the one-liner:
-   - With approach and files: `- #<id> — <title>: <first sentence>. Files: <filenames>`
-   - With approach only: `- #<id> — <title>: <first sentence>.`
-   - With neither: `- #<id> — <title>`
+   - With approach and files: `- Plan <id> — <title>: <first sentence>. Files: <filenames>`
+   - With approach only: `- Plan <id> — <title>: <first sentence>.`
+   - With neither: `- Plan <id> — <title>`
 4. Read `.esper/phases/<current_phase>.md`:
    - If the file is **missing**: print "Warning: phase file not found — skipping Shipped Plans update." and continue.
    - If a `## Shipped Plans` section **exists**: append the one-liner as a new bullet under it.
@@ -85,7 +85,7 @@ Append a compact one-liner to the current phase file so future agents can read w
      ```
 
      ## Shipped Plans
-     - #<id> — <title>: ...
+     - Plan <id> — <title>: ...
      ```
 
 Commit the phase file update:
@@ -96,7 +96,7 @@ git commit -m "chore: update <current_phase> Shipped Plans index"
 
 ## Step 5: Summary
 
-Print: "Plan #<id> — <title> finished and archived to `done/`."
+Print: "Plan <id> — <title> finished and archived to `done/`."
 
 **If `type: "feature"`:**
 - Run `esperkit plan list --dir pending --phase <phase> --format json` and count the entries

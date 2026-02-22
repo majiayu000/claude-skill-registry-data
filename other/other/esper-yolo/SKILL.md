@@ -92,7 +92,7 @@ git add <specific files changed in this milestone>
 git commit -m "$(cat <<'EOF'
 feat: <what was just implemented>
 
-Plan: #<id> — <title> (milestone)
+plan <id> — <title> (milestone)
 EOF
 )"
 ```
@@ -140,7 +140,7 @@ Commit the archive:
 ```bash
 git add .esper/plans/done/<filename>
 git add .esper/plans/active/<filename>   # stages the deletion
-git commit -m "chore: archive plan #<id> — <title>"
+git commit -m "chore: archive plan <id> — <title>"
 ```
 
 ### 4g.5 Update phase file with shipped plan summary
@@ -152,9 +152,9 @@ Append a compact one-liner to the current phase file so future agents can read w
    - **First sentence** of the `## Approach` section (up to the first `.` or newline). If absent, skip.
    - **Filenames** from `## Files to change` (comma-separated bare filenames). If absent, skip.
 2. Compose the one-liner:
-   - With approach and files: `- #<id> — <title>: <first sentence>. Files: <filenames>`
-   - With approach only: `- #<id> — <title>: <first sentence>.`
-   - With neither: `- #<id> — <title>`
+   - With approach and files: `- Plan <id> — <title>: <first sentence>. Files: <filenames>`
+   - With approach only: `- Plan <id> — <title>: <first sentence>.`
+   - With neither: `- Plan <id> — <title>`
 3. Read `.esper/phases/<current_phase>.md`:
    - If the file is **missing**: print "Warning: phase file not found — skipping Shipped Plans update." and continue.
    - If a `## Shipped Plans` section **exists**: append the one-liner as a new bullet under it.
@@ -162,7 +162,7 @@ Append a compact one-liner to the current phase file so future agents can read w
      ```
 
      ## Shipped Plans
-     - #<id> — <title>: ...
+     - Plan <id> — <title>: ...
      ```
 
 Commit the phase file update:
@@ -209,7 +209,7 @@ gh pr create \
 <phase goal, 1-2 sentences from the phase file>
 
 ## Shipped plans
-- #<id> — <title>: <one-line approach summary>
+- Plan <id> — <title>: <one-line approach summary>
 ...
 
 ## Acceptance criteria

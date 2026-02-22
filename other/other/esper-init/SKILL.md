@@ -70,7 +70,7 @@ Write `.esper/esper.json`:
 ```json
 {
   "backlog_mode": "local",
-  "current_phase": "phase-1",
+  "current_phase": "001-<kebab-slug-from-phase-title>",
   "commands": {
     "test": "<from interview, or empty string>",
     "lint": "<from interview, or empty string>",
@@ -89,16 +89,16 @@ Use `AskUserQuestion` to ask the user about MVP scope:
 - What are the acceptance criteria — how do we know this phase is done?
 - What is explicitly deferred to later phases?
 
-Create `.esper/phases/` if it doesn't exist. Write `.esper/phases/phase-1.md`:
+Create `.esper/phases/` if it doesn't exist. Derive a kebab-case slug from the phase title (e.g. "MVP" → `001-mvp.md`, "Polish and Publish" → `001-polish-and-publish.md`). Write `.esper/phases/001-<slug>.md`:
 
 ```markdown
 ---
-phase: phase-1
-title: MVP
+phase: 001-<slug>
+title: <title from interview>
 status: active
 ---
 
-# Phase 1: MVP
+# Phase 1: <title>
 
 ## Goal
 [What this phase delivers and why it matters]
@@ -125,7 +125,7 @@ For each task, write `.esper/plans/pending/NNN-slug.md` (NNN = zero-padded integ
 
 Each plan has a `type:` field — ask (or infer from context) whether each item is a fix or a feature:
 - `type: "fix"` → standalone patch, its own PR on ship → `branch: fix/[kebab-slug]`
-- `type: "feature"` → part of the phase, batched into a phase PR → `branch: feature/[current_phase]` (e.g. `feature/phase-1`)
+- `type: "feature"` → part of the phase, batched into a phase PR → `branch: feature/[current_phase]` (e.g. `feature/001-mvp`)
 
 ```markdown
 ---
@@ -134,8 +134,8 @@ title: [task title]
 status: pending
 type: feature
 priority: 1
-phase: phase-1
-branch: feature/phase-1
+phase: 001-<slug>
+branch: feature/001-<slug>
 created: [today's date in YYYY-MM-DD format]
 ---
 
@@ -162,7 +162,7 @@ If `backlog_mode` is `"github"`, create ONE GitHub issue for the entire phase (n
 ```bash
 gh issue create --title "Phase 1: [phase title]" --body "[phase goal and scope summary]"
 ```
-Store the returned issue number as `gh_issue: <number>` in the phase file frontmatter (`.esper/phases/phase-1.md`).
+Store the returned issue number as `gh_issue: <number>` in the phase file frontmatter (`.esper/phases/001-<slug>.md`).
 
 ## Step 6: Install hooks
 
@@ -259,7 +259,7 @@ chmod +x .esper/hooks/verify-quick.sh .esper/hooks/session-reminder.sh
 
 Print a summary covering:
 - Constitution written to `.esper/CONSTITUTION.md`
-- Phase 1 defined in `.esper/phases/phase-1.md`
+- Phase 1 defined in `.esper/phases/001-<slug>.md`
 - N backlog items created in `.esper/plans/pending/`
 - Hooks installed in `.esper/hooks/` and `.claude/settings.json`
 - Next step: "Run `/esper:backlog` to see your backlog, then `/esper:apply` to start building."
