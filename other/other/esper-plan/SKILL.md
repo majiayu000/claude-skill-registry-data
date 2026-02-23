@@ -79,7 +79,15 @@ created: [today YYYY-MM-DD]
 - Edge cases: [anything non-obvious to verify]
 ```
 
-## Step 6: Confirm
+## Step 6: GitHub Sub-Issue (if applicable)
+
+Run `esperkit config get backlog_mode`. If the output is `github`:
+```bash
+esperkit plan create-sub-issue <filename>
+```
+This creates a GitHub issue for the plan and links it as a sub-issue of the phase's parent issue. The issue number is stored as `gh_issue` in the plan's frontmatter.
+
+## Step 7: Confirm
 
 Tell the user:
 - Plan file created: `.esper/plans/pending/NNN-slug.md`

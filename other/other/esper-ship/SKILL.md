@@ -70,10 +70,7 @@ Print the PR URL returned by `gh pr create`.
 
 Update the plan's `pr:` field: run `esperkit plan set <filename> pr <PR URL>`.
 
-Close the fix's GitHub issue (no-op if backlog_mode is local or gh_issue is not set):
-```bash
-esperkit plan close-issue <filename> --comment "Shipped in <PR URL>"
-```
+Note: The fix's GitHub issue is already closed by lifecycle sync in `finish()` — no explicit `close-issue` call is needed here.
 
 Commit and push the `pr:` field update:
 ```bash
@@ -113,7 +110,7 @@ Run `esperkit config get current_phase` to get the current phase. Then run `espe
   <phase goal, 1-2 sentences>
 
   ## Shipped plans
-  - Plan <id> — <title>: <one-line approach summary>
+  - Plan <id> <if plan has gh_issue: (#<gh_issue>)> — <title>: <one-line approach summary>
   ...
 
   ## Acceptance criteria

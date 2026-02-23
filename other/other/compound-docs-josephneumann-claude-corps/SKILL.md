@@ -1,6 +1,7 @@
 ---
 name: compound-docs
 description: "This skill is auto-invoked when working with files in docs/solutions/ to ensure proper formatting and schema compliance. It validates solution documents and helps maintain consistency in the learnings database."
+allowed-tools: Read, Bash, Glob, Grep, Edit
 ---
 
 # Compound Docs: Solution Document Management

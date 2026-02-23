@@ -1,6 +1,6 @@
 ---
 name: dispatch
-description: "Dispatch parallel Agent Teams teammates for beads tasks"
+description: "Use when multiple tasks are ready and you want to assign them to parallel workers"
 allowed-tools: Bash, Read, Glob, Grep, AskUserQuestion, TeamCreate, TaskCreate, TaskUpdate, TaskList, SendMessage, Task
 ---
 
@@ -194,6 +194,13 @@ If user selects "No, cancel", abort dispatch.
       (You're already in an isolated worktree with .env files set up)
    2. Create a detailed implementation plan
    3. Call ExitPlanMode to submit your plan for lead approval
+   3a. IMMEDIATELY after ExitPlanMode, send a direct message to the team lead
+       using SendMessage type="message":
+       "PLAN APPROVAL NEEDED for <task-id>. I've submitted my plan via
+       ExitPlanMode. Please review and respond with:
+       SendMessage type='plan_approval_response', request_id='<from the request>',
+       recipient='<my name>', approve=true/false.
+       I am blocked until you respond."
    4. WAIT — the lead will review and approve/reject your plan
    5. After approval, implement the task
    6. Run `/finish-task <task-id>` when tests pass and implementation is complete
@@ -209,6 +216,11 @@ If user selects "No, cancel", abort dispatch.
    (API contracts, data schemas, file formats), message <peer-name> using
    SendMessage to agree before implementing.
    ```
+
+   **After spawning all teammates but before assigning tasks:**
+   If any `[PLAN]` teammates were spawned:
+     Do not consider dispatch complete until you have handled all plan approval
+     requests. Remain attentive to incoming messages from plan-mode teammates.
 
 5. **Assign tasks** using TaskUpdate to set the owner of each task to the corresponding teammate name.
 
@@ -240,10 +252,20 @@ all teammate work back to beads.
 **If plan-mode teammates were spawned, add:**
 
 ```
-Plan-mode teammates will submit plans for your review.
-When you receive a plan_approval_request, review the plan and respond:
-- Approve: SendMessage type="plan_approval_response", approve=true
-- Reject: SendMessage type="plan_approval_response", approve=false, content="<feedback>"
+CRITICAL — Plan-mode teammates are NOW WAITING for your approval.
+Handle plan approvals BEFORE doing anything else.
+
+When you receive a plan approval message from a teammate:
+1. Review the plan in the plan_approval_request message
+2. Call SendMessage with these EXACT parameters:
+   - type: "plan_approval_response"
+   - request_id: "<the request_id from the plan_approval_request JSON>"
+   - recipient: "<teammate name>"
+   - approve: true (or false with content: "<feedback>")
+3. Do NOT respond with a plain text message — you MUST use the SendMessage tool
+
+If multiple PLAN teammates were spawned, you will receive multiple
+plan_approval_requests. Handle EACH one individually with its own request_id.
 ```
 
 ## Error Handling

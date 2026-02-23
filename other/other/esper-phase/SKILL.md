@@ -151,6 +151,12 @@ gh issue create --title "Phase <N>: <phase title>" --body "<phase goal and scope
 ```
 Store the returned issue number as `gh_issue: <number>` in the phase file frontmatter (`.esper/phases/<new_phase>.md`).
 
+Then, create sub-issues for each plan file written above:
+```bash
+esperkit plan create-sub-issue <filename>
+```
+This creates a GitHub issue for each plan and links it as a sub-issue of the phase's parent issue. Run this for every plan file created in Step 8.
+
 ## Step 9: Summary
 
 Print:

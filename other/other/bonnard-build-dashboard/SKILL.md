@@ -53,6 +53,8 @@ Key points:
 - Consecutive `<BigValue>` components auto-group into a row
 - Use `<Grid cols="2">` to place charts side by side
 - Use `<DateRange>` and `<Dropdown>` for interactive filters
+- BigValue supports `comparison` prop for ▲/▼ delta indicators (e.g. actual vs target)
+- Charts support `y2` for secondary y-axis (combo charts: bars + line, dual scales)
 
 Example structure:
 
@@ -76,13 +78,13 @@ measures: [orders.count]
 ## Trend
 
 ` ``query monthly
-measures: [orders.total_revenue]
+measures: [orders.total_revenue, orders.count]
 timeDimension:
   dimension: orders.created_at
   granularity: month
 ` ``
 
-<LineChart data={monthly} x="orders.created_at" y="orders.total_revenue" title="Monthly Revenue" yFmt="eur" />
+<BarChart data={monthly} x="orders.created_at" y="orders.total_revenue" y2="orders.count" yFmt="eur" y2Fmt="num0" y2SeriesType="line" title="Revenue & Orders" />
 ```
 
 Save the file (e.g., `dashboard.md`).

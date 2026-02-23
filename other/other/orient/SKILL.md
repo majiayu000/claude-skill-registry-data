@@ -1,6 +1,6 @@
 ---
 name: orient
-description: "Orient to a project - review structure, docs, and beads tasks to identify parallelizable work"
+description: "Use at the start of an orchestrator session to understand project state and find available work"
 allowed-tools: Read, Bash, Glob, Grep, Task
 ---
 

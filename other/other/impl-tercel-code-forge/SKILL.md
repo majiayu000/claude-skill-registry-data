@@ -99,6 +99,10 @@ Spawn a `Task` tool call with:
 - The project root path
 - Tech stack and testing strategy (from state.json metadata or plan.md)
 - Instruction to follow TDD: write tests → run tests → implement → verify
+- **Coding standards (mandatory):** include the following standards in the sub-agent prompt so it writes quality code from the start:
+
+@../shared/coding-standards.md
+
 - Instruction to return ONLY a concise execution summary
 
 **Sub-agent executes:**

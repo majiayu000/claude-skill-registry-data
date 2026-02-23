@@ -71,13 +71,13 @@ created: [today YYYY-MM-DD]
 - Regression check: [related areas to verify haven't broken]
 ```
 
-## Step 6: GitHub Issues (if applicable)
+## Step 6: GitHub Sub-Issue (if applicable)
 
 Run `esperkit config get backlog_mode`. If the output is `github`:
 ```bash
-esperkit plan create-issue <filename>
+esperkit plan create-sub-issue <filename>
 ```
-This creates a GH issue for the fix and stores the issue number as `gh_issue` in the plan frontmatter. Each fix gets its own issue (1 fix = 1 PR = 1 issue).
+This creates a GitHub issue for the fix and links it as a sub-issue of the phase's parent issue. The issue number is stored as `gh_issue` in the plan's frontmatter.
 
 ## Step 7: Confirm
 

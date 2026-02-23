@@ -1,6 +1,6 @@
 ---
 name: auto-run
-description: "Autonomous orchestrator loop - dispatches, reconciles, repeats until all tasks done"
+description: "Use when you need unattended execution across many tasks without manual dispatch cycles"
 allowed-tools: Bash, Read, Glob, Grep, Write, Edit, Skill, TeamCreate, TeamDelete, TaskCreate, TaskUpdate, TaskList, SendMessage, Task, AskUserQuestion
 ---
 

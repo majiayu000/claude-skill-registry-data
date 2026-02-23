@@ -64,15 +64,16 @@ Check items:
 Does the code introduce any security risk?
 
 Check items:
-- **Injection:** SQL injection (string concatenation), command injection, LDAP injection, template injection
-- **XSS:** Reflected, stored, DOM-based — unescaped user content in HTML/JS
+- **Input validation:** All external input (HTTP params, form data, file uploads, user-provided env vars) must be validated before use — prefer schema-based validation over scattered manual checks for complex input
+- **Injection:** SQL injection (string concatenation), command injection, LDAP injection, template injection — never concatenate strings into SQL, shell commands, or log messages; use parameterized queries and safe APIs
+- **XSS:** Reflected, stored, DOM-based — unescaped user content in HTML/JS; dynamic frontend content must use framework-native safe rendering
 - **Authentication & authorization:** Missing auth checks, privilege escalation, insecure session management
-- **Secrets management:** Hardcoded credentials, API keys in code, secrets in logs, `.env` committed
+- **Secrets management:** Hardcoded credentials, API keys in code, secrets in logs, `.env` committed — use environment variables + secret manager
 - **CSRF / SSRF:** Missing tokens, unvalidated redirect URLs, internal network access
 - **Deserialization:** Unsafe deserialization of untrusted data (pickle, Java serialization, JSON.parse with eval)
 - **Cryptography:** Weak algorithms (MD5/SHA1 for passwords), ECB mode, predictable random, custom crypto
 - **Path traversal:** Unsanitized file paths from user input
-- **Log forging / information disclosure:** Sensitive data in logs, verbose error messages to users
+- **Log forging / information disclosure:** Sensitive data in logs, verbose error messages to users; structured logging with request context recommended for service code
 - **Dependency vulnerabilities:** Known CVEs in direct or transitive dependencies
 
 #### D3: Resource Management & Lifecycle
@@ -96,12 +97,14 @@ Check items:
 Is the code clear, maintainable, and following project conventions?
 
 Check items:
-- **Naming:** Variables, functions, classes use descriptive, intention-revealing names; no `temp`, `data`, `process()`
+- **Naming:** Variables, functions, classes use descriptive, intention-revealing names; no vague standalone names (`data`, `temp`, `obj`, `item`, `info`, `val`, `process()`, `handle()`, `doIt()`, `Manager`, `Util`, `Helper`) — qualified forms like `userData`, `handleClick()`, `ConnectionManager` are fine; follow language ecosystem conventions
 - **Magic values:** No unexplained literals — use named constants
-- **Function length:** Functions > 50 lines should be scrutinized; > 100 lines likely needs splitting
+- **Function length:** Functions > 50 lines should be scrutinized; > 100 lines likely needs splitting (defer to project `CLAUDE.md` for team-specific thresholds)
+- **Side effects:** I/O and state mutations should be isolated to boundaries where practical; keep core logic predictable and testable
+- **Control flow:** Prefer guard clauses (early return) over deeply nested `if/else`
 - **DRY:** No copy-pasted logic blocks; shared behavior extracted appropriately
 - **Dead code:** No unused functions, unreachable branches, commented-out code, unused imports
-- **Comments:** Present only where logic isn't self-evident; no stale/misleading comments
+- **Comments quality:** Present only where logic isn't self-evident (complex algorithms, performance trade-offs, business rules, counter-intuitive code); no obvious/redundant comments; `TODO` / `HACK` / `FIXME` should include enough context to be actionable later
 - **Code structure:** Appropriate abstractions, no unnecessary complexity or premature optimization
 - **Consistent style:** Follows project's existing patterns for formatting, file organization, module structure
 

@@ -31,7 +31,9 @@ pipeline. Prevent mistakes through thinking, not safety nets.
    ship. Code review ships with monitoring. Assumptions block until verified.
 5. **Scale ceremony to stakes** — Trivial decisions need no footer. Irreversible
    decisions need verification type, basis, and the one scenario that would
-   flip the verdict.
+   flip the verdict. When interaction burden exceeds comprehension benefit,
+   compress remaining stages. Guided means understands at every step, not
+   interacts at every step.
 6. **Defer to the specialized phase** — When the conversation clearly needs
    clarification, shaping, expert input, or execution, hand off rather than
    handling inline.
@@ -63,13 +65,27 @@ pipeline. Prevent mistakes through thinking, not safety nets.
    Context slots: if first message contains `PRIOR:`, `REFS:`,
    `HORIZON:`, or `FEASIBLE:`, carry into marker for pipeline continuity.
 
+   **Cognitive zone** — Assess before engagement. Highest dimension wins.
+
+   | Dimension       | Zone 1 (low)         | Zone 2 (moderate)              | Zone 3 (high)                    |
+   | --------------- | -------------------- | ------------------------------ | -------------------------------- |
+   | Novelty         | Established pattern  | Known domain, unfamiliar edges | Novel combination, no precedent  |
+   | Reasoning depth | Direct application   | 2-3 dependent inferences       | 4+ hops or circular dependencies |
+   | Freshness       | Stable domain        | Evolving but documented        | Post-training changes likely     |
+
+   | Zone | Overhead  | Pipeline effect                                                                       |
+   | ---- | --------- | ------------------------------------------------------------------------------------- |
+   | 1    | None      | Standard pipeline                                                                     |
+   | 2    | 1 line    | Shape adds retrieval criteria. Loop retrieval-checks per wave                         |
+   | 3    | Decompose | Decompose regardless of sizing. Retrieval before every claim. Minimum Collaborative   |
+
 2. **Set engagement** (skip for trivial) — Ask once:
    - Autonomous / Collaborative (default) / Guided
    - Horizon: Tactical / Strategic (default) / Existential
    - Infer when clear, ask when ambiguous.
 
 3. **Emit marker** —
-   `[SESSION] Pipeline: [phases] | Engagement: [level] | Horizon: [horizon] | Feasible: [axis] ([bound])`
+   `[SESSION] Pipeline: [phases] | Engagement: [level] | Horizon: [horizon] | Feasible: [axis] ([bound]) | Zone: [1-3] ([dimension])`
    Maintain through conversation. On compaction: pyramid summary preserves
    L1 (marker + satisfaction), L2 (decisions), L3 (full state).
 
@@ -82,7 +98,9 @@ pipeline. Prevent mistakes through thinking, not safety nets.
    | Spec clear?      | No ACCEPTANCE criteria             | → intent          |
    | Approach shaped? | No criteria[]/mustNot[]            | → shape           |
    | Facts retrieved? | Key claims from memory, not source | Search/read first |
+   | Zone 3 active?   | Claim without retrieved source      | Search/read before claim |
    | User confused?   | Output too complex/long for user   | Compress + 1 probe question |
+   | Human overwhelmed? | Pattern of rapid thin responses, "just do it", scope escalation | Pause + reduce scope + offer break |
 
 5. **Classify and verify proportionally:**
 
@@ -116,6 +134,7 @@ Verification type IS the confidence. Observable > inspected > assumed.
 | 13+    | Too big — break down further          |
 
 Never estimate time. Search for existing solutions before building custom.
+Sizing measures scope; zone measures cognitive risk. Both inform ceremony independently.
 
 ### Communication Depth
 

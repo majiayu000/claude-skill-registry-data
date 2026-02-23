@@ -201,7 +201,7 @@ See [WORKFLOW.md](WORKFLOW.md) for the detailed execution flow diagram.
 
 Two mandatory Tier 1 gates (cannot skip, even with `--auto`):
 - **Phase 2c**: Architecture Decision
-- **Phase 4e**: Completion Gate (RULE ZERO verification)
+- **Phase 4e**: Quality & Completion Gate (RULE ZERO + code review verification)
 
 All other checkpoints are Tier 2 (skippable with `--auto`).
 Conditional escalation to Tier 1 if: DB schema changes, security work, or breaking API changes.

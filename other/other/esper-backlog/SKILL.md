@@ -19,7 +19,7 @@ Display the current esperkit backlog for this project.
    ```bash
    gh issue list --state open --json number,title,labels
    ```
-   Cross-reference open issues with: the current phase file's `gh_issue` field (1 issue per phase for features), and fix plan files' `gh_issue` fields (1 issue per fix). Flag any open GitHub issues that have no matching phase or fix plan.
+   Cross-reference open issues with: the current phase file's `gh_issue` field (parent issue), and all plan files' `gh_issue` fields (sub-issues of the phase). Flag any open GitHub issues that have no matching phase or plan.
 
 4. Print at the bottom:
    - Current phase: run `esperkit config get current_phase` and display as `Phase: <output>`

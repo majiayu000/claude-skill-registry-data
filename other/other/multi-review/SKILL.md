@@ -72,6 +72,7 @@ Map changed files to framework reviewers. A framework reviewer is activated when
 | `*.tsx`, `*.jsx`, `next.config.*`, `middleware.ts` | `nextjs` | `nextjs-reviewer` |
 | `*.css`, `tailwind.*`, `components/ui/**` | `tailwind` | `tailwind-reviewer` |
 | `*.py`, `alembic/**` | `python-backend` | `python-backend-reviewer` |
+| `routes/**`, `api/**`, `endpoints/**`, `controllers/**` | `api` | `api-security-reviewer` |
 
 **Reviewer overrides (v2 config):**
 - `reviewers.exclude`: Suppress auto-detected reviewers (e.g., `["tailwind-reviewer"]` to prevent false positives)
@@ -129,6 +130,23 @@ For each selected reviewer, read the agent definition:
 ```bash
 cat ~/.claude/agents/review/<agent-name>.md
 ```
+
+### Step 4.5: SAST Artifact Consumption (Hybrid Verification)
+
+Before launching reviewers, check if CI/CD SAST results are available:
+
+```bash
+# Check for SARIF artifacts from the security-checks workflow
+gh run download --name semgrep-sarif --dir /tmp/sarif 2>/dev/null
+```
+
+If SARIF results are found, parse them and include in the `security-sentinel` prompt:
+
+> "The following SAST findings were reported by Semgrep. For each finding, verify it in context: **confirm** as a real vulnerability, **dismiss** as a false positive with explanation, or **escalate** with additional context that amplifies the severity. Do not simply repeat SAST output — add the reasoning that automated tools cannot."
+
+Append the SARIF finding summaries (file, rule ID, message) to the security-sentinel agent's prompt. This creates the hybrid approach: deterministic tools catch patterns, the AI agent reasons about whether they are real vulnerabilities in this specific codebase.
+
+If no SARIF artifacts exist (CI hasn't run, or the project doesn't use the security-checks workflow), skip this step silently.
 
 ### Step 5: Launch Parallel Reviews
 
@@ -209,9 +227,11 @@ Combine results from all reviewers, sorted by severity:
 
 Only surface findings with **confidence >= 80%**. Lower confidence findings should be mentioned but not emphasized — they may be false positives.
 
-**Exception:** Security findings should always be surfaced even at lower confidence.
+**Security exception:** All `security-sentinel` and `api-security-reviewer` findings appear in the main severity tables regardless of confidence level — never collapse them into "Low-Confidence Findings." Tag each with a `[SEC]` prefix in the Issue column to distinguish them from other reviewer findings. Security issues at any confidence level warrant human review.
 
 ### Step 8: Offer Auto-Fix
+
+> **Verification discipline** (from `/verify`): Before proposing any fix, read the actual code at the file:line the reviewer flagged. Reviewers hallucinate. Confirm the issue exists, then fix. If it doesn't exist, drop it — don't implement phantom fixes.
 
 For Critical and Important issues with clear fixes:
 
@@ -283,8 +303,8 @@ This PR includes frontend changes. Would you like me to test the UI in the brows
 ### Conditionally Included
 
 #### security-sentinel
-**Focus**: OWASP Top 10, input validation, auth, secrets
-**Include when**: Auth code, user input, API endpoints, secrets handling
+**Focus**: CWE-enriched OWASP review, business logic vulnerabilities (IDOR, auth bypass), absence detection, self-verification loop
+**Include when**: Auth code, user input, API endpoints, secrets handling, new routes/handlers
 **Path**: `agents/review/security-sentinel.md`
 
 #### performance-oracle
@@ -328,6 +348,11 @@ This PR includes frontend changes. Would you like me to test the UI in the brows
 **Focus**: FastAPI, SQLAlchemy 2.0, Alembic, async Python, Pydantic v2, pytest
 **Auto-detected when**: Changed files match `*.py`, `alembic/**`
 **Path**: `agents/review/python-backend-reviewer.md`
+
+#### api-security-reviewer
+**Focus**: Rate limiting, pagination bounds, response data filtering, CORS, request size limits, security logging
+**Auto-detected when**: Changed files match `routes/**`, `api/**`, `endpoints/**`, `controllers/**`
+**Path**: `agents/review/api-security-reviewer.md`
 
 ## Important Notes
 

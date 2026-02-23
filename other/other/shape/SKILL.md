@@ -67,7 +67,11 @@ The right approach, not a generic assessment.
    - **Recommended mode** — Colleague / Tool-Review / Tool with cited
      reasoning from expert findings
    - **Safety check:** if experts recommended Tool but findings include
-     high-risk or irreversible elements → elevate to Tool-Review minimum
+     high-risk or irreversible elements → elevate to Tool-Review minimum.
+     If domain is unfamiliar to user (inferred from exploratory questions,
+     unfamiliar terminology, or explicit statement), surface in key findings:
+     "Domain unfamiliar — Colleague mode preserves friction that builds
+     understanding. Delegating here means reviewing what you cannot verify."
    - **Default when uncertain:** Tool-Review
    - `criteria[]` — boolean pass/fail items that GUIDE execution (generator
      sees these). Drawn from expert findings and ACCEPTANCE criteria.
@@ -78,6 +82,9 @@ The right approach, not a generic assessment.
      hard boundaries (generator sees these as hard stops)
    - `Disposable: yes/no` — yes when experts flag this as prototype
      territory (high ambiguity + no precedent)
+   - **Zone cascade** — Zone 2: add to criteria[] "Key claims verified against
+     retrieved sources". Zone 3: recommend `Disposable: yes`, add to mustNot[]
+     "No assertion without retrieved evidence"
    - `→ Start: [first atomic action ≤15w that produces a visible artifact]`
 
    **Pre-mortem gate** (Critical risk only — 13+ points OR irreversible

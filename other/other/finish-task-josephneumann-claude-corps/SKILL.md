@@ -1,6 +1,6 @@
 ---
 name: finish-task
-description: "Complete a beads task - run checks, commit, push, close issue, cleanup worktree, generate session summary"
+description: "Use when implementation and tests are complete and you're ready to close out a beads task"
 allowed-tools: Read, Bash, Glob, Grep, Edit, Write, Skill
 ---
 
@@ -37,6 +37,8 @@ Acceptance Criteria Check:
 If any criterion is NOT met, either:
 1. Complete the missing work before proceeding
 2. Create a follow-up task for deferred items and note the reason
+
+> **Verification discipline** (from `/verify`): NEVER CLAIM SUCCESS WITHOUT FRESH VERIFICATION EVIDENCE IN THIS MESSAGE. For every claim you make below, run the command that proves it, read the full output, and confirm it supports your claim. No "tests passed earlier." No "should work." Run it now.
 
 ## 3. Run Quality Gates
 
@@ -159,10 +161,25 @@ This is informational only — do not block on evidence capture.
 
 ## 11. Create Pull Request
 
+Determine the PR base branch before creating the PR:
+
+```bash
+# Check for milestone branches on remote
+MILESTONE_BRANCH=$(git branch -r --list 'origin/milestone/*' | sort -V | tail -1 | sed 's|origin/||' | xargs)
+
+if [ -n "$MILESTONE_BRANCH" ]; then
+  echo "Using base branch: $MILESTONE_BRANCH"
+  BASE_FLAG="--base $MILESTONE_BRANCH"
+else
+  echo "No milestone branch found, using default (main)"
+  BASE_FLAG=""
+fi
+```
+
 Create a PR for the completed work:
 
 ```bash
-gh pr create --title "feat(<scope>): <description>" --body "$(cat <<'EOF'
+gh pr create $BASE_FLAG --title "feat(<scope>): <description>" --body "$(cat <<'EOF'
 ## Summary
 
 <2-3 sentences describing what this PR accomplishes>
@@ -204,7 +221,7 @@ The multi-review will:
 
 For each Critical or Important issue:
 
-1. **Review the finding** - Note the file, line, and reviewer that flagged it
+1. **Review the finding** - Note the file, line, and reviewer that flagged it. Verify each claim against actual code before implementing — reviewers hallucinate too. Push back on findings that are incorrect for this codebase or violate YAGNI. No performative agreement. Fix silently or explain disagreement.
 2. **Implement fix** - Make the minimal change to address the issue
 3. **Verify** - Ensure the fix doesn't introduce new problems
 
@@ -254,6 +271,16 @@ After code review passes (or user approves despite issues):
 If user approves, proceed to step 12. If user declines, leave the PR open for manual review and skip to step 13.
 
 ## 12. Merge PR and Cleanup
+
+Check the PR's base branch before merging:
+
+```bash
+BASE=$(gh pr view --json baseRefName -q '.baseRefName')
+```
+
+**If base is "main"**: do NOT merge. Report the PR URL and skip to step 13. Milestone-to-main PRs are human-only.
+
+**If base is a milestone branch** (e.g., `milestone/m1`): proceed with merge.
 
 ```bash
 BRANCH_NAME=$(git branch --show-current)

@@ -253,6 +253,8 @@ Before I start, let me confirm the acceptance criteria:
 Is this complete? Anything to add or change?
 ```
 
+> **Verification discipline** (from `/verify`): Each criterion must be independently verifiable. For every acceptance criterion, you should be able to name the command that proves it. If you can't, the criterion is too vague — rewrite it.
+
 **IMPORTANT**: Items 4 and 5 are ALWAYS required and non-negotiable:
 - **Tests pass** — Code must be verified working
 - **`/finish-task` run** — The session is not complete without this. It creates the PR, generates a session summary for the orchestrator, and closes the task. Skipping this breaks the coordination workflow.

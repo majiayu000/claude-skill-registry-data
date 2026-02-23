@@ -1,6 +1,6 @@
 ---
 name: summarize-session
-description: "Generate a detailed session summary for orchestrating agents (standalone, no git/close operations)"
+description: "Use for a read-only progress snapshot without committing, pushing, or closing anything"
 allowed-tools: Read, Bash, Glob, Grep
 ---
 

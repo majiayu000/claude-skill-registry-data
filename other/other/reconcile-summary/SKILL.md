@@ -82,15 +82,34 @@ Once you have the summary content (from file or paste), extract:
 - **DEPENDENCIES UNBLOCKED** section
 - **ARCHITECTURAL NOTES** section
 
-## 2. Review the Original Task
+## 2. Review the Original Task — With Distrust
+
+Do NOT trust session summaries blindly. Workers may have been under context pressure. Their summaries may be incomplete, inaccurate, or optimistic.
 
 ```bash
 bd show <task-id>
 ```
 
-Compare the original task description against what the worker reported in:
-- IMPLEMENTATION SUMMARY
-- SPEC DIVERGENCES
+### 2a. Cross-Reference Claims Against Evidence
+
+Extract `branch-name` from the summary's GIT ACTIVITY → Branch field. Extract `pr-number` from GIT ACTIVITY → PR field (or from the `gh pr list` output below).
+
+For each major claim in the session summary, verify independently:
+
+```bash
+# Does the PR exist?
+gh pr list --head <branch-name> --json number,state
+
+# Do file changes match summary claims?
+gh pr diff <pr-number> --stat 2>/dev/null
+
+# Are CI checks passing?
+gh pr checks <pr-number> 2>/dev/null
+```
+
+**Flag any discrepancy** between summary claims and observable evidence. If the summary says "all tests pass" but CI shows failures, note this in the reconciliation report under REMAINING CONCERNS.
+
+Then compare the original task description against the worker's IMPLEMENTATION SUMMARY and SPEC DIVERGENCES sections.
 
 ## 3. Analyze Divergences
 
@@ -327,3 +346,4 @@ If no team context (TaskList returns empty — new session or no team): Skip cle
 3. **Document reasoning** - Future agents need to understand why specs changed
 4. **Don't over-correct** - Only update tasks that are actually affected
 5. **Ask when uncertain** - If a divergence has unclear implications, ask the user
+6. **Verify, don't trust** — Session summaries are self-reported. Cross-reference claims against git/CI evidence before updating the task board. (Inspired by obra/superpowers subagent distrust model)
