@@ -1,10 +1,9 @@
 ---
 name: project-execution
-description: "Execute implementation plans systematically with checkpoint validation, progress tracking, and continuous quality gates. Use when: implementing tasks, executing plans, tracking progress, validating checkpoints. Do not use when: no implementation plan exists or still in planning phase."
+description: "Execute implementation plans with checkpoint validation, progress tracking, and quality gates. Use for task implementation, plan execution, progress tracking. Skip if no plan exists."
 # Custom metadata (not used by Claude for matching):
 model_preference: claude-sonnet-4
 tools_allowed: all
-version: 1.4.0
 category: workflow
 tags: [execution, implementation, progress-tracking, quality-gates, tdd]
 complexity: intermediate
@@ -142,6 +141,10 @@ Execute implementation plan systematically with checkpoints, validation, and pro
 3. Check code quality metrics
 4. Generate completion report
 5. Prepare for deployment/release
+
+### Terminal Phase Notice
+
+This is the **final phase** of the attune workflow. No auto-continuation occurs after execution completes. The workflow terminates here. Unlike brainstorming, specification, and planning phases, execution does NOT auto-invoke any subsequent phase.
 
 ## Task Execution Pattern
 
@@ -421,6 +424,7 @@ On track? = Estimated completion <= Sprint end date
 - `Skill(superpowers:systematic-debugging)` - Debugging (if available)
 - `Skill(superpowers:test-driven-development)` - TDD (if available)
 - `Skill(superpowers:verification-before-completion)` - Validation (if available)
+- `Skill(attune:mission-orchestrator)` - Full lifecycle orchestration
 
 ## Related Agents
 

@@ -15,7 +15,10 @@ Discover what measures and dimensions are available to query:
 
 ```bash
 # List all views and their fields
-bon docs schema
+bon schema
+
+# Inspect a specific view's measures and dimensions
+bon schema <view_name>
 
 # Query a specific view to see what data looks like
 bon query '{"measures": ["view_name.measure"], "dimensions": ["view_name.dimension"], "limit": 5}'
@@ -55,6 +58,13 @@ Key points:
 - Use `<DateRange>` and `<Dropdown>` for interactive filters
 - BigValue supports `comparison` prop for ▲/▼ delta indicators (e.g. actual vs target)
 - Charts support `y2` for secondary y-axis (combo charts: bars + line, dual scales)
+- For DataTable formatting, use `<Column>` children instead of the `fmt` prop (avoids comma ambiguity with Excel format codes):
+  ```
+  <DataTable data={sales}>
+    <Column field="orders.total_revenue" header="Revenue" fmt="eur2" />
+    <Column field="orders.count" header="Orders" fmt="num0" />
+  </DataTable>
+  ```
 
 Example structure:
 
