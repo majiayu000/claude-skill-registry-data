@@ -224,6 +224,92 @@ If user selects "No, cancel", abort dispatch.
 
 5. **Assign tasks** using TaskUpdate to set the owner of each task to the corresponding teammate name.
 
+## Step 4.5: Verify Worktree Isolation
+
+After spawning and assigning all teammates, verify that worktree isolation actually succeeded. This is critical — `isolation: "worktree"` can fail silently, leaving workers running in the main repo.
+
+### 4.5.1: Wait for initialization
+
+```bash
+sleep 10
+```
+
+Workers need time to register in the team config. If the team was just created, give the system 10 seconds to stabilize.
+
+### 4.5.2: Check team config
+
+```bash
+cat ~/.claude/teams/<team-name>/config.json
+```
+
+For each spawned worker in the `members` array (skip the team-lead entry), check:
+- **`cwd` field**: Must contain `.claude/worktrees/` — NOT the main repo root path
+
+Determine the main repo path for comparison:
+```bash
+git rev-parse --show-toplevel
+```
+
+Build two lists:
+- **Isolated workers**: `cwd` is under `.claude/worktrees/`
+- **Non-isolated workers**: `cwd` matches the main repo root
+
+**If team config is missing or has no worker members after 10s**, wait another 10 seconds and re-check. If still missing, treat as total failure.
+
+### 4.5.3: Corroborate with git worktree list
+
+```bash
+git worktree list
+```
+
+Cross-reference: each isolated worker's `cwd` should appear as a worktree entry. Log any discrepancies but trust the team config `cwd` as the primary signal (a fast-completing worker's worktree may have been cleaned up already).
+
+### 4.5.4: Handle failures
+
+**If ALL workers are properly isolated** → proceed to Step 5.
+
+**If ANY workers failed isolation:**
+
+1. **Shut down non-isolated workers immediately** — they are sharing the main repo:
+   ```
+   For each non-isolated worker:
+     SendMessage type="shutdown_request" recipient="<worker-name>"
+       content="Worktree isolation failed — you are running in the main repo, not an isolated worktree. Shutting down to prevent conflicts."
+   ```
+
+2. **Check main repo state:**
+   ```bash
+   git status
+   git branch --show-current
+   ```
+   If the main repo has modifications or is on the wrong branch, report this to the user. Do NOT auto-clean — the user decides.
+
+3. **Report clearly:**
+   ```
+   WARNING: Worktree isolation failed for N of M workers.
+
+   Isolated (OK):
+   - <name>: <task-id> — running in <cwd path>
+
+   Failed (shut down):
+   - <name>: <task-id> — was running in main repo (no worktree created)
+
+   Main repo status: <clean/dirty> on branch <branch-name>
+   Failed workers have been sent shutdown requests.
+   ```
+
+4. **If `--yes` was specified (auto-run mode):**
+   - Do NOT prompt the user.
+   - Unassign failed workers' tasks: `TaskUpdate` with owner set to empty string for each.
+   - Log the failure. Failed tasks remain open in beads and return to `bd ready` for next dispatch.
+   - Continue to Step 5 with only the isolated workers.
+
+5. **If `--yes` was NOT specified (interactive mode):**
+   - Use `AskUserQuestion`: "N workers failed worktree isolation and were shut down. Their tasks remain open. What should we do?"
+     - Option 1: "Re-dispatch failed tasks" — run `/dispatch <failed-task-ids>` again
+     - Option 2: "Continue with isolated workers only"
+     - Option 3: "Abort entire dispatch" — shutdown ALL workers, exit
+
 ## Step 5: Post-Dispatch Summary
 
 After all teammates are spawned, provide a summary:
@@ -237,7 +323,16 @@ Teammates:
 2. <name>: <task-id> — <title>
 ...
 
-Each teammate runs in an isolated worktree (via isolation: "worktree") and will:
+**If all workers verified isolated (Step 4.5 passed):**
+All teammates verified running in isolated worktrees.
+
+**If any workers failed isolation (from Step 4.5):**
+WARNING: N of M workers failed worktree isolation.
+Failed workers were shut down. Their tasks remain open for re-dispatch.
+Failed tasks: <task-id-1>, <task-id-2>, ...
+Only N workers are active.
+
+Each active teammate will:
 1. Run /start-task to claim the task and verify environment
 2. Implement the task
 3. Run /finish-task when tests pass
@@ -274,6 +369,7 @@ plan_approval_requests. Handle EACH one individually with its own request_id.
 - **Task doesn't exist**: Skip it, warn the user, continue with valid tasks
 - **All tasks invalid**: Abort with clear error message
 - **Teammate spawn fails**: Report the error, continue with remaining tasks
+- **Worktree isolation fails**: Shut down non-isolated workers (SendMessage shutdown_request), report failure, continue with isolated workers only. Tasks for failed workers remain open in beads. In `--yes` mode (auto-run), unassign and let next dispatch cycle retry. In interactive mode, offer re-dispatch, continue, or abort.
 
 ## Examples
 

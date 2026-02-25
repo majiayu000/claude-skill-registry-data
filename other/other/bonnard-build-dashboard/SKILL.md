@@ -99,9 +99,9 @@ timeDimension:
 
 Save the file (e.g., `dashboard.md`).
 
-## Phase 4: Preview Locally
+## Phase 4: Preview Locally (Required)
 
-Preview the dashboard with live reload:
+**Always preview before deploying.** Open a local dev server with live reload:
 
 ```bash
 bon dashboard dev dashboard.md
@@ -113,9 +113,14 @@ semantic layer using the user's credentials.
 
 Requires `bon login` — no API key needed.
 
+Ask the user to review the preview and confirm it looks correct before
+moving to Phase 5. Do not skip this step — deploying without previewing
+often results in layout issues, missing data, or wrong chart types that
+are easy to catch locally.
+
 ## Phase 5: Deploy
 
-Deploy the dashboard to Bonnard:
+Once the user has confirmed the preview looks good, deploy the dashboard:
 
 ```bash
 bon dashboard deploy dashboard.md

@@ -51,8 +51,8 @@ Write checkpoint JSON to `docs/auto-run-checkpoint.json` with:
 - `config`: parsed flags (max_batches, max_hours, max_concurrent)
 - `scope`: resolved scope (see 2.1)
 - `batch_number`: 0
-- `tasks`: { completed: [], failed: [], in_progress: [] }
-- `stats`: { total_dispatched: 0, total_completed: 0, total_failed: 0, total_batches: 0 }
+- `tasks`: { completed: [], failed: [], in_progress: [], worktree_failures: [] }
+- `stats`: { total_dispatched: 0, total_completed: 0, total_failed: 0, total_batches: 0, total_worktree_failures: 0 }
 
 ### 2.1 Resolve Scope
 
@@ -94,6 +94,11 @@ Auto-run scope: N tasks [list IDs]. Target: <task-id or epic-id or "all">
 4. If ready tasks exist:
    - Calculate count = min(ready_count, max_concurrent)
    - Call `/dispatch <specific-task-ids> --count <count> --no-plan --yes` via Skill tool, passing only in-scope task IDs
+4a. After dispatch returns, check its output for worktree isolation failures:
+   - If dispatch reported failures, record them in checkpoint `tasks.worktree_failures` (see schema below)
+   - Only count successfully isolated workers as `in_progress`
+   - Failed tasks return to the ready pool automatically (they were unassigned by dispatch)
+   - **Circuit breaker**: If a task ID already appears in `worktree_failures` from a prior batch with `attempts >= 2`, move it to `failed` with reason `"worktree_isolation_repeated_failure"` and log: "Task <id> failed worktree isolation twice — flagged for human attention."
 5. Update checkpoint: add dispatched tasks to `in_progress`, set `batch_number: 1`
 
 ## Section 3: Main Loop (Event-Driven)
@@ -150,6 +155,9 @@ Update checkpoint: move task from `in_progress` to `completed` (or `failed`).
 - Call `/dispatch <specific-task-ids> --no-plan --yes` via Skill tool (pass only in-scope IDs, limited to available_slots)
 - Increment `batch_number` in checkpoint
 - Add dispatched tasks to `in_progress` in checkpoint
+- Check dispatch output for worktree isolation failures (same logic as Section 2 step 4a):
+  - Record failures in checkpoint, only count isolated workers as in_progress
+  - Apply circuit breaker for repeated failures (attempts >= 2 → mark failed)
 
 **Completion checks:**
 - If `--through` target task is now closed → all done → go to Section 4 (Completion)
@@ -180,6 +188,7 @@ Duration: <elapsed time>
 Batches: <count>
 Completed: <count> tasks
 Failed: <count> tasks
+Worktree Failures: <count> (isolation failures across all batches)
 
 COMPLETED:
 - <task-id>: <title>
@@ -223,13 +232,15 @@ File: `docs/auto-run-checkpoint.json`
   "tasks": {
     "completed": [{ "id": "Proj-abc", "title": "...", "completed_at": "...", "batch": 1 }],
     "failed": [{ "id": "Proj-xyz", "title": "...", "reason": "...", "attempts": 1 }],
-    "in_progress": [{ "id": "Proj-def", "title": "...", "dispatched_at": "...", "batch": 2 }]
+    "in_progress": [{ "id": "Proj-def", "title": "...", "dispatched_at": "...", "batch": 2 }],
+    "worktree_failures": [{ "id": "Proj-abc", "title": "...", "batch": 2, "attempts": 1 }]
   },
   "stats": {
     "total_dispatched": 4,
     "total_completed": 1,
     "total_failed": 0,
-    "total_batches": 2
+    "total_batches": 2,
+    "total_worktree_failures": 0
   }
 }
 ```
@@ -241,3 +252,4 @@ File: `docs/auto-run-checkpoint.json`
 - **Stuck teammates**: Send 1 follow-up message, then mark failed if no response
 - **No beads CLI**: Exit with clear error — `bd` must be available
 - **Checkpoint corruption**: If checkpoint can't be parsed, start fresh (warn user)
+- **Worktree isolation fails**: `/dispatch` shuts down non-isolated workers and unassigns their tasks. Auto-run records failures in checkpoint `worktree_failures`. Same task failing isolation twice triggers circuit breaker — moved to `failed` list and flagged for human attention.
