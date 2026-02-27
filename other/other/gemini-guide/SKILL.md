@@ -10,8 +10,8 @@ Look up Gemini API documentation and SDK patterns when building with Google Gemi
 
 | Skill | Direction | Tool |
 |-------|-----------|------|
-| **gemini-guide** (this) | Gemini docs -> Claude | Local docs, WebFetch |
-| gemini-peer-review | Code -> Gemini | gemini-coach CLI |
+| **gemini-guide** (this) | Gemini docs -> Claude | WebFetch, local docs |
+| gemini-peer-review | Code -> Gemini | Direct Gemini API |
 
 ## Documentation Sources
 
@@ -19,19 +19,18 @@ Check in this priority order:
 
 | Priority | Source | Best For |
 |----------|--------|----------|
-| 1 | Local cached docs (`~/Documents/google-gemini-context/`) | Most topics — 24 JS, 24 Python, 7 common topics |
-| 2 | GitHub codegen_instructions | Always-current SDK patterns — fetch `https://raw.githubusercontent.com/googleapis/js-genai/refs/heads/main/codegen_instructions.md` |
-| 3 | Google AI docs via WebFetch | When local docs don't cover it — `https://ai.google.dev/gemini-api/docs/{topic}` |
+| 1 | GitHub codegen_instructions | Always-current SDK patterns — fetch `https://raw.githubusercontent.com/googleapis/js-genai/refs/heads/main/codegen_instructions.md` |
+| 2 | Google AI docs via WebFetch | Official docs — `https://ai.google.dev/gemini-api/docs/{topic}` (append `.md.txt` for markdown) |
+| 3 | Local cached docs (if available at `~/Documents/google-gemini-context/`) | Pre-fetched topics — 24 JS, 24 Python, 7 common |
 
 ## Lookup Workflow
 
 When the user asks about a Gemini topic:
 
 1. **Check corrections first**: Read [references/deprecated-patterns.md](references/deprecated-patterns.md) — know what NOT to suggest before writing any code
-2. **Map the query to a topic**: Read [references/topic-index.md](references/topic-index.md) to find the right local doc file
-3. **Read the local doc**: The file path will be `~/Documents/google-gemini-context/{path from topic index}`
-4. **If local doc seems stale**: Fetch the GitHub codegen_instructions.md for latest SDK patterns
-5. **Synthesise**: Combine the documentation into a clear answer with working code examples. Always use the CORRECT patterns from step 1.
+2. **Fetch latest SDK patterns**: Get the GitHub codegen_instructions.md for always-current patterns
+3. **Map the query to a topic**: Read [references/topic-index.md](references/topic-index.md) — if local docs exist at `~/Documents/google-gemini-context/`, read the matching file; otherwise use WebFetch on `https://ai.google.dev/gemini-api/docs/{topic}.md.txt`
+4. **Synthesise**: Combine the documentation into a clear answer with working code examples. Always use the CORRECT patterns from step 1.
 
 ## Quick Corrections
 
@@ -75,9 +74,9 @@ response = client.models.generate_content(
 )
 ```
 
-## Local Docs Structure
+## Local Docs (Optional)
 
-All at `~/Documents/google-gemini-context/`:
+If you have a local cache at `~/Documents/google-gemini-context/`, it contains:
 
 | Directory | Contents |
 |-----------|----------|
@@ -86,9 +85,9 @@ All at `~/Documents/google-gemini-context/`:
 | `common/` | 7 cross-language files — safety, pricing, rate-limits, errors, auth, regions, openai-compat |
 | `rest-api/` | REST endpoint docs |
 | `MODELS.md` | Current model IDs, capabilities, token limits, rate limits |
-| `CLAUDE.md` | Full correction reference (source for deprecated-patterns.md) |
 | `googlegenai-gemini-api.md` | Comprehensive SDK guide (608 lines, JS + Python) |
-| `INDEX.md` | Keyword index mapping topics to files |
+
+If not available, fall back to WebFetch on Google AI docs (append `.md.txt` for markdown format).
 
 ## Current Models
 
@@ -100,11 +99,11 @@ All at `~/Documents/google-gemini-context/`:
 | Gemini 2.0 Flash | `gemini-2.0-flash` | Fast inference |
 | Text Embedding | `text-embedding-004` | Semantic search, RAG (768 dims) |
 
-For full model details including token limits and rate limits, read `~/Documents/google-gemini-context/MODELS.md`.
+For full model details, check `~/Documents/google-gemini-context/MODELS.md` (if available) or https://ai.google.dev/gemini-api/docs/models.
 
 ## Maintenance
 
-The local docs at `~/Documents/google-gemini-context/` were curated in January 2025. When information seems wrong or outdated:
+When information seems wrong or outdated:
 
 1. Check the GitHub codegen_instructions.md (always current)
 2. Verify model IDs against `https://ai.google.dev/gemini-api/docs/models`

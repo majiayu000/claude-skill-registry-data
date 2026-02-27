@@ -52,6 +52,7 @@ L2 Coordinator that analyzes implemented architectural patterns against current 
 | ln-642-layer-boundary-auditor | Detect layer violations | Phase 4 |
 | ln-643-api-contract-auditor | Audit API contracts, DTOs, layer leakage | Phase 4 |
 | ln-644-dependency-graph-auditor | Build dependency graph, detect cycles, validate boundaries, calculate metrics | Phase 4 |
+| ln-645-open-source-replacer | Search OSS replacements for custom modules via MCP Research | Phase 4 |
 
 **Prompt template:**
 ```
@@ -222,6 +223,9 @@ IF domain_mode == "domain-aware":
     Task(ln-644-dependency-graph-auditor)
       Input: architecture_path, codebase_root, output_dir,
              domain_mode="domain-aware", current_domain=domain.name, scan_path=domain.path
+    Task(ln-645-open-source-replacer)
+      Input: codebase_root, tech_stack, output_dir,
+             domain_mode="domain-aware", current_domain=domain.name, scan_path=domain.path
 ELSE:
   Task(ln-642-layer-boundary-auditor)
     Input: architecture_path, codebase_root, skip_violations, output_dir
@@ -229,6 +233,8 @@ ELSE:
     Input: pattern="API Contracts", locations=[service_dirs, api_dirs], bestPractices, output_dir
   Task(ln-644-dependency-graph-auditor)
     Input: architecture_path, codebase_root, output_dir
+  Task(ln-645-open-source-replacer)
+    Input: codebase_root, tech_stack, output_dir
 
 # Apply layer deductions from ln-642 return values (score + issue counts)
 # Detailed violations read from files in Phase 6
@@ -256,6 +262,7 @@ All workers write reports to `{output_dir}/` and return minimal summary:
 | ln-642 | `Score: X.X/10 \| Issues: N (C:N H:N M:N L:N)` | `642-layer-boundary[-{domain}].md` |
 | ln-643 | `Score: X.X/10 (C:N K:N Q:N I:N) \| Issues: N` | `643-api-contract[-{domain}].md` |
 | ln-644 | `Score: X.X/10 \| Issues: N (C:N H:N M:N L:N)` | `644-dep-graph[-{domain}].md` |
+| ln-645 | `Score: X.X/10 \| Issues: N (C:N H:N M:N L:N)` | `645-open-source-replacer[-{domain}].md` |
 
 Coordinator parses scores/counts from return values (0 file reads for aggregation tables). Reads files only for cross-domain aggregation (Phase 6) and report assembly (Phase 8).
 
@@ -305,6 +312,20 @@ IF domain_mode == "domain-aware":
         recommendation: "Decouple via domain events or extract shared module"
       })
 
+  # Step 4: Read DATA-EXTENDED from ln-645 files
+  FOR EACH file IN Glob("{output_dir}/645-open-source-replacer-*.md"):
+    Read file → extract <!-- DATA-EXTENDED ... --> JSON (replacements array)
+  # Group findings by goal/alternative across domains
+  FOR EACH goal IN unique(ln645_replacements.goal):
+    domains_with_same = ln645_replacements.filter(r => r.goal == goal).map(r => r.domain)
+    IF len(domains_with_same) >= 2:
+      systemic_findings.append({
+        severity: "HIGH",
+        issue: f"Systemic custom implementation: {goal} duplicated in {len(domains_with_same)} domains",
+        domains: domains_with_same,
+        recommendation: "Single migration across all domains using recommended OSS package"
+      })
+
   # Cross-domain SDP violations
   FOR EACH sdp IN ln644_sdp_violations:
     IF sdp.from.domain != sdp.to.domain:
@@ -341,9 +362,12 @@ layer_score = parse_score(ln642_return)                     # 0-10
 api_score = parse_score(ln643_return)                       # 0-10
 graph_score = parse_score(ln644_return)                     # 0-10
 
-# Step 2: Calculate architecture_health_score
+# Step 2: Calculate architecture_health_score (ln-645 NOT included — separate metric)
 all_scores = pattern_scores + [layer_score, api_score, graph_score]
 architecture_health_score = round(average(all_scores) * 10)  # 0-100 scale
+
+# Step 2b: Separate reuse opportunity score (informational, no SLA enforcement)
+reuse_opportunity_score = parse_score(ln645_return)  # 0-10, NOT in architecture_health_score
 
 # Status mapping:
 # >= 80: "healthy"
@@ -436,6 +460,13 @@ architecture_health_score = round(average(all_scores) * 10)  # 0-100 scale
   "requires_attention": [
     {"pattern": "Event-Driven", "avg_score": 58, "critical_issues": ["No DLQ", "No schema versioning"]}
   ],
+  "reuse_opportunities": {
+    "reuse_opportunity_score": 6.5,
+    "modules_scanned": 15,
+    "high_confidence_replacements": 3,
+    "medium_confidence_replacements": 5,
+    "systemic_custom_implementations": 1
+  },
   "dependency_graph": {
     "architecture_detected": "hybrid",
     "architecture_confidence": "MEDIUM",
@@ -486,6 +517,7 @@ architecture_health_score = round(average(all_scores) * 10)  # 0-100 scale
 - API contracts audited via ln-643 (reports written to `.audit/`)
 - Dependency graph audited via ln-644 (reports written to `.audit/`)
 - All patterns analyzed via ln-641 (reports written to `.audit/`)
+- Open-source replacement opportunities audited via ln-645 (reports written to `.audit/`)
 - If domain-aware: cross-domain aggregation completed via DATA-EXTENDED from files
 - Gaps identified (undocumented, missing components, layer violations, inconsistent, systemic)
 - Catalog updated with scores, dates, Layer Boundary Status
@@ -507,6 +539,7 @@ architecture_health_score = round(average(all_scores) * 10)  # 0-100 scale
 - Layer boundary audit: `../ln-642-layer-boundary-auditor/SKILL.md`
 - API contract audit: `../ln-643-api-contract-auditor/SKILL.md`
 - Dependency graph audit: `../ln-644-dependency-graph-auditor/SKILL.md`
+- Open-source replacement audit: `../ln-645-open-source-replacer/SKILL.md`
 
 ---
 **Version:** 2.0.0

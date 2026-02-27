@@ -78,14 +78,7 @@ SHOPIFY_ACCESS_TOKEN=shpat_xxxxxxxxxxxxxxxxxxxxx
 
 Ensure `.dev.vars` is in `.gitignore`.
 
-**For cross-project use** — store in Vault:
-
-```
-Use mcp__vault__secret_set with:
-  name: "shopify-{store-name}-token"
-  value: the access token
-  tags: ["shopify", "api"]
-```
+**For cross-project use** — store in your preferred secrets manager (environment variable, 1Password CLI, Vault MCP, etc.).
 
 ### Step 5: Verify API Access
 

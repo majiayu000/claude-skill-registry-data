@@ -1,12 +1,12 @@
 ---
 name: idea
 description: >
-  Interactive brainstorming and demand validation skill for early-stage ideas. Guides users through
-  iterative discovery, research, and critical analysis to crystallize vague ideas into validated
-  requirement drafts. Includes anti-pseudo-requirement checks, competitive research, demand evidence
-  gathering, and "What if we don't build this?" analysis. Supports pause/resume across sessions,
-  stores ideas in the project's ideas/ directory, and graduates validated ideas into the spec-forge
-  document chain (/prd → /srs → /tech-design → /test-plan).
+  Use when exploring a new idea before writing formal specifications. Guides users through iterative
+  discovery, research, and critical analysis to crystallize vague ideas into validated requirement
+  drafts. Includes anti-pseudo-requirement checks, competitive research, demand evidence gathering,
+  and "What if we don't build this?" analysis. Supports pause/resume across sessions, stores ideas
+  in the project's ideas/ directory, and graduates validated ideas into the spec-forge document
+  chain (/prd → /srs → /tech-design → /test-plan).
 instructions: >
   Follow the workflow below exactly. This is an interactive, multi-session skill.
   Ideas are stored in the project's ideas/ directory. By default, suggest adding ideas/

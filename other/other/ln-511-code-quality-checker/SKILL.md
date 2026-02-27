@@ -57,6 +57,12 @@ Formula: `Code Quality Score = 100 - metric_penalties - issue_penalties`
 | BP- | Best Practices (implementation differs from recommended) | medium | ✓ Required |
 | OPT- | Optimality (better approach exists for this goal) | medium | ✓ Required |
 
+**OPT- subcategories:**
+
+| Prefix | Category | Severity |
+|--------|----------|----------|
+| OPT-OSS- | Open-source replacement available (cross-ref ln-645 audit) | medium (high if >200 LOC) |
+
 **ARCH- subcategories:**
 
 | Prefix | Category | Severity |
@@ -136,6 +142,7 @@ Formula: `Code Quality Score = 100 - metric_penalties - issue_penalties`
    - MNT-: DRY violations (MNT-DRY-: duplicate logic), dead code (MNT-DC-: per checklist), complex conditionals, poor naming
    - **MNT-DRY- cross-story hotspot scan:** Grep for common pattern signatures (error handlers: `catch.*Error|handleError`, validators: `validate|isValid`, config access: `getSettings|getConfig`) across ALL `src/` files (count mode). If any pattern appears in 5+ files, sample 3 files (Read 50 lines each) and check structural similarity. If >80% similar → MNT-DRY-CROSS (medium, -10 points): `Pattern X duplicated in N files — extract to shared module.`
    - **MNT-DC- cross-story unused export scan:** For each file modified by Story, count `export` declarations. Then Grep across ALL `src/` for import references to those exports. Exports with 0 import references → MNT-DC-CROSS (medium, -10 points): `{export} in {file} exported but never imported — remove or mark internal.`
+   - **OPT-OSS- cross-reference ln-645 (static, fast-track safe):** IF `docs/project/.audit/645-open-source-replacer*.md` exists, check if any HIGH-confidence replacement matches files changed in current Story. IF match found → create OPT-OSS-{N} issue with module path, goal, recommended package, confidence, stars, license from ln-645 report. Severity: high if >200 LOC, medium otherwise. This check reads local files only — no MCP calls — runs even with `--skip-mcp-ref`.
    - ARCH-: layer violations, circular dependencies, guide non-compliance
    - ARCH-LB-: layer boundary violations (HTTP/DB/FS calls outside infrastructure layer)
    - ARCH-TX-: transaction boundary violations (commit() across multiple layers)
@@ -190,6 +197,17 @@ Formula: `Code Quality Score = 100 - metric_penalties - issue_penalties`
       recommended: "httpOnly cookies + refresh token rotation"
       reason: "httpOnly cookies prevent XSS token theft"
       source: "ref://owasp-session-management"
+
+    # OPTIMALITY - OSS Replacement (from ln-645, fast-track safe)
+    - id: "OPT-OSS-001"
+      severity: high
+      file: "src/utils/email-validator.ts"
+      goal: "Email validation with MX checking"
+      finding: "Custom 245-line module has HIGH-confidence OSS replacement"
+      chosen: "Custom email-validator.ts (245 lines)"
+      recommended: "zod + zod-email (28k stars, MIT, 95% coverage)"
+      reason: "Battle-tested, actively maintained, reduces maintenance burden"
+      source: "ln-645-audit"
 
     # BEST PRACTICES
     - id: "BP-001"

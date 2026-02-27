@@ -23,7 +23,7 @@ In Google Chat:
 2. Create webhook (name it, optionally add avatar URL)
 3. Copy the webhook URL
 
-Store the URL as a secret (environment variable or Bitwarden), never hardcode.
+Store the URL as an environment variable or in your secrets manager — never hardcode.
 
 ### Step 2: Choose Message Type
 
@@ -161,7 +161,7 @@ const card = buildCard({
   cardId: 'deploy-notification',
   title: 'Deployment Complete',
   subtitle: 'production - v2.1.0',
-  imageUrl: 'https://www.jezweb.com.au/wp-content/uploads/2020/03/favicon-100x100.png',
+  imageUrl: 'https://example.com/your-icon.png',
   sections: [{
     widgets: [
       { decoratedText: { topLabel: 'Environment', text: 'Production' } },

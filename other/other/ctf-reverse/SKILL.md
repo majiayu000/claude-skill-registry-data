@@ -2,6 +2,7 @@
 name: ctf-reverse
 description: Reverse engineering techniques for CTF challenges. Use when analyzing binaries, game clients, obfuscated code, esoteric languages, custom VMs, anti-debugging, WASM, .NET, APK, Python bytecode, Ghidra, GDB, radare2, or extracting flags from compiled executables.
 license: MIT
+compatibility: Requires filesystem-based agent (Claude Code or similar) with bash, Python 3, and internet access for tool installation.
 allowed-tools: Bash Read Write Edit Glob Grep Task WebFetch WebSearch
 metadata:
   user-invocable: "false"
@@ -146,7 +147,7 @@ wasm2wat main.wasm -o main.wat    # Binary → text
 wat2wasm main.wat -o patched.wasm # Text → binary
 ```
 
-**WASM game patching (Tac Tic Toe, Pragyan 2026):** If proof generation is independent of move quality, patch minimax (flip `i64.lt_s` → `i64.gt_s`, change bestScore sign) to make AI play badly while proofs remain valid. See ctf-misc SKILL.md for full pattern.
+**WASM game patching (Tac Tic Toe, Pragyan 2026):** If proof generation is independent of move quality, patch minimax (flip `i64.lt_s` → `i64.gt_s`, change bestScore sign) to make AI play badly while proofs remain valid. See [ctf-misc games-and-vms.md](../ctf-misc/games-and-vms.md) for full pattern.
 
 ### Android APK
 ```bash
@@ -289,6 +290,10 @@ Binary adds/subtracts position index; reverse by undoing per-index offset. See [
 ## Hex-Encoded String Comparison
 
 Input converted to hex, compared against constant. Decode with `xxd -r -p`. See [patterns.md](patterns.md#hex-encoded-string-comparison).
+
+## Embedded ZIP + XOR License Decryption
+
+Binary with named symbols (`EMBEDDED_ZIP`, `ENCRYPTED_MESSAGE`) in `.rodata` → extract ZIP containing license, XOR encrypted message with license bytes to recover flag. No execution needed. See [patterns.md](patterns.md#embedded-zip--xor-license-decryption-metactf-2026).
 
 ## Stack String Deobfuscation (.rodata XOR Blob)
 

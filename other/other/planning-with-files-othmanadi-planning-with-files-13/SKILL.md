@@ -18,7 +18,8 @@ hooks:
     - hooks:
         - type: command
           command: |
-            SCRIPT_DIR="${MASTRACODE_SKILL_ROOT:-$HOME/.mastracode/skills/planning-with-files}/scripts"
+            SCRIPT_DIR="${HOME}/.mastracode/skills/planning-with-files/scripts"
+            [ -f "$SCRIPT_DIR/check-complete.sh" ] || SCRIPT_DIR=".mastracode/skills/planning-with-files/scripts"
 
             IS_WINDOWS=0
             if [ "${OS-}" = "Windows_NT" ]; then
@@ -43,7 +44,7 @@ hooks:
               sh "$SCRIPT_DIR/check-complete.sh"
             fi
 metadata:
-  version: "2.16.1"
+  version: "2.18.1"
 ---
 
 # Planning with Files

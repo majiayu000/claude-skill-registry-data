@@ -16,7 +16,7 @@ Test how a website's layout responds to viewport width changes. Resizes through 
 
 Before starting, detect available browser tools:
 
-1. **playwright-cli** (preferred) — supports resize, named sessions, and sub-agent parallelism. Run `/playwright-cli` first to load the full command reference.
+1. **playwright-cli** (preferred) — supports resize, named sessions, and sub-agent parallelism. If installed, run `/playwright-cli` first to load the full command reference.
 2. **Playwright MCP** (`mcp__plugin_playwright_playwright__*`) — `browser_resize` for viewport changes.
 3. **Chrome MCP** (`mcp__claude-in-chrome__*`) — `resize_window` for viewport changes. Uses the user's logged-in Chrome session.
 

@@ -2,6 +2,7 @@
 name: solve-challenge
 description: Solve CTF challenges by analyzing files, connecting to services, and applying exploitation techniques. Orchestrates category-specific CTF skills for pwn, crypto, web, reverse engineering, forensics, OSINT, malware analysis, and miscellaneous challenges.
 license: MIT
+compatibility: Requires filesystem-based agent (Claude Code or similar) with bash, Python 3, and internet access. Orchestrates other ctf-* skills.
 allowed-tools: Bash Read Write Edit Glob Grep Task WebFetch WebSearch Skill
 metadata:
   user-invocable: "true"
@@ -64,7 +65,7 @@ Once you identify the category, **invoke the matching skill** to get specialized
 | Malware | `/ctf-malware` | Obfuscated scripts, C2 traffic, PE/.NET analysis |
 | Misc | `/ctf-misc` | Jails, encodings, RF/SDR, esoteric languages, constraint solving |
 
-You can also read skill files directly for detailed techniques: `~/.agents/skills/ctf-<category>/SKILL.md`
+You can also invoke `/ctf-<category>` to load the full skill instructions with detailed techniques.
 
 ### Step 4: Pivot When Stuck
 
@@ -83,6 +84,8 @@ If your first approach doesn't work:
 - Reverse + Pwn: reverse the binary first, then exploit the vulnerability
 - Forensics + OSINT: recover data from dump, then trace it via public sources
 - Misc + Crypto: jail escape requires building crypto primitives under constraints
+- OSINT + Stego: social media posts with unicode homoglyph steganography (Cyrillic lookalikes encode bits)
+- Web + Forensics: paywall bypass (curl reveals content hidden by CSS overlays)
 
 ## Flag Formats
 
@@ -90,6 +93,11 @@ Flags vary by CTF. Common formats:
 - `flag{...}`, `FLAG{...}`, `CTF{...}`, `TEAM{...}`
 - Custom prefixes: check the challenge description or CTF rules for the format (e.g., `ENO{...}`, `HTB{...}`, `picoCTF{...}`)
 - Sometimes just a plaintext string with no wrapper
+
+**Validation rule (important):**
+- If you find multiple flag-like strings, treat them as candidates and validate before finalizing.
+- Prefer the token tied to the intended artifact/workflow (not random metadata noise or obvious decoys).
+- Do a corpus-wide uniqueness check and include the source file/path when reporting.
 
 ```bash
 # Search for common flag patterns in files

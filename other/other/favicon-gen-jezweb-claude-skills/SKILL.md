@@ -43,6 +43,8 @@ SVG templates available in `assets/` directory.
 
 ### Step 3: Generate All Formats
 
+Requires ImageMagick (`convert` command). Install if needed: `brew install imagemagick` (macOS) or `apt install imagemagick` (Linux).
+
 ```bash
 # ICO (16x16 + 32x32)
 convert favicon.svg -define icon:auto-resize=16,32 favicon.ico
@@ -55,7 +57,7 @@ convert favicon.svg -resize 192x192 icon-192.png
 convert favicon.svg -resize 512x512 icon-512.png
 ```
 
-Or use https://favicon.io to convert from the SVG.
+**No ImageMagick?** Use https://favicon.io to convert from the SVG instead.
 
 ### Step 4: Create Web Manifest
 

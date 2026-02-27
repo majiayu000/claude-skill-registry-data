@@ -1,15 +1,21 @@
 ---
 name: review
-description: Review code quality for a completed feature or entire project — comprehensive multi-dimension review covering correctness, security, resource management, performance, architecture, testing, observability, and more.
+description: >
+  Use when reviewing code, handling review feedback, or posting a review to a GitHub PR —
+  14-dimension quality analysis for features or entire projects (generate mode), structured
+  evaluation and response to incoming review comments (feedback mode via --feedback flag),
+  or automated PR review posted as a GitHub comment (--github-pr flag).
 ---
 
 # Code Forge — Review
 
 Comprehensive code review against reference documents and engineering best practices. Covers functional correctness, security, resource management, code quality, architecture, performance, testing, error handling, observability, maintainability, backward compatibility, and dependency safety.
 
-Supports two modes:
+Supports four modes:
 - **Feature mode:** Review a single feature against its `plan.md`
 - **Project mode:** Review the entire project against planning documents or upstream docs
+- **Feedback mode:** Evaluate and respond to incoming code review comments (`--feedback`)
+- **GitHub PR mode:** Post a 14-dimension review as a comment on a GitHub PR (`--github-pr`)
 
 ## When to Use
 
@@ -17,6 +23,8 @@ Supports two modes:
 - Want to verify code quality before creating a PR
 - Need a structured review against the original plan or documentation
 - Want a holistic project-level quality check
+- Received code review feedback and need to evaluate/respond to it (`--feedback`)
+- Want to post a code review directly to a GitHub PR for team visibility (`--github-pr`)
 
 ## Workflow
 
@@ -259,6 +267,18 @@ Check items:
 ### Step 1: Determine Review Mode
 
 Parse the user's arguments to determine which mode to use.
+
+#### 1.0a `--github-pr` Flag Provided
+
+If the user passed `--github-pr` (e.g., `/code-forge:review --github-pr` or `/code-forge:review --github-pr 123`):
+
+→ **GitHub PR Mode** — Read and follow `skills/review/github-pr-workflow.md`. Do NOT continue with the steps below.
+
+#### 1.0b `--feedback` Flag Provided
+
+If the user passed `--feedback` (e.g., `/code-forge:review --feedback` or `/code-forge:review --feedback #123`):
+
+→ **Feedback Mode** — Read and follow `skills/review/feedback-workflow.md`. Do NOT continue with the steps below.
 
 #### 1.1 Feature Name Provided
 

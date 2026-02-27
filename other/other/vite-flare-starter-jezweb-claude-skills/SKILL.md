@@ -6,7 +6,7 @@ compatibility: claude-code-only
 
 # Vite Flare Starter
 
-Clone and configure Jez's batteries-included Cloudflare starter into a standalone project. Produces a fully rebranded, deployable full-stack app.
+Clone and configure the batteries-included Cloudflare starter into a standalone project. Produces a fully rebranded, deployable full-stack app.
 
 ## What You Get
 
@@ -33,7 +33,7 @@ Ask for:
 |----------|----------|
 | Project name (kebab-case) | Admin email |
 | Description (1 sentence) | Google OAuth credentials |
-| Cloudflare account (Jezweb Team or Personal) | Custom domain |
+| Cloudflare account | Custom domain |
 
 ### Step 2: Run Setup Script
 

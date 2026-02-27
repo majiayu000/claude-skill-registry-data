@@ -91,14 +91,7 @@ WP_USERNAME=admin
 WP_APP_PASSWORD=xxxx xxxx xxxx xxxx xxxx xxxx
 ```
 
-Ensure `.dev.vars` is in `.gitignore`. For cross-project use, store in Vault:
-
-```
-Use mcp__vault__secret_set with:
-  name: "wordpress-{sitename}-credentials"
-  value: JSON with url, username, app_password
-  tags: ["wordpress", "api"]
-```
+Ensure `.dev.vars` is in `.gitignore`. For cross-project use, store in your preferred secrets manager (environment variable, 1Password CLI, Vault MCP, etc.).
 
 ### Step 4: Verify Full Access
 

@@ -1,6 +1,6 @@
 ---
 name: ham
-description: Set up Hierarchical Agent Memory (HAM) — scoped CLAUDE.md files per directory that reduce token spend. Trigger on "go ham", "set up HAM", "ham route", "HAM savings", "HAM stats", "HAM dashboard", or "HAM sandwich".
+description: Set up Hierarchical Agent Memory (HAM) — scoped CLAUDE.md files per directory that reduce token spend. Trigger on "go ham", "set up HAM", "HAM savings", "HAM stats", "HAM dashboard", "HAM sandwich", "HAM insights", or "HAM carbon".
 ---
 
 # HAM (Hierarchical Agent Memory)
@@ -57,17 +57,7 @@ project/
 ```
 
 For greenfield: only create root + .memory/
-For brownfield: also create subdirectory CLAUDE.md files, then generate a `## Context Routing` section in root CLAUDE.md listing all created subdirectory CLAUDE.md files:
-
-```markdown
-## Context Routing
-
-→ api: src/api/CLAUDE.md
-→ components: src/components/CLAUDE.md
-→ db: src/db/CLAUDE.md
-```
-
-Each entry maps a work domain label (derived from directory name) to its CLAUDE.md path. This acts as a positional index — the agent reads root and immediately knows which sub-context to load.
+For brownfield: also create subdirectory CLAUDE.md files.
 
 ### Step 3: Capture Baseline
 
@@ -241,8 +231,7 @@ Embed in every root CLAUDE.md:
 ## Agent Memory System
 
 ### Before Working
-- Read this file for global context → follow Context Routing to load the relevant subdirectory CLAUDE.md
-- If no Context Routing section, read target directory's CLAUDE.md before changes
+- Read this file for global context, then read the target directory's CLAUDE.md before changes
 - Check .memory/decisions.md before architectural changes
 - Check .memory/patterns.md before implementing common functionality
 - Check if a memory audit is due: read `.memory/audit-log.md` for the last audit date. If 14+ days have passed OR 10+ session files in `.memory/sessions/` are dated after the last audit, suggest: "It's been [N days/sessions] since the last memory audit. Run one? (say 'HAM audit' or skip)". Do not repeat if already suggested this session. If `audit-log.md` is missing, treat as never audited.
@@ -297,30 +286,6 @@ After presenting results:
 - Append an entry to `.memory/audit-log.md` with the date, number of issues found, and a one-line summary.
 - If the table exceeds 5 entries, remove the oldest row (keeping the header).
 
-## HAM Route Command
-
-**Trigger:** "ham route"
-
-When user runs this command, add or update the Context Routing section in root CLAUDE.md:
-
-1. **Scan tree** — find all existing CLAUDE.md files (excluding root)
-2. **Build routing entries** — for each, create: `→ [label]: [relative/path/to/CLAUDE.md]`
-   - Label is derived from the directory name (e.g., `src/api/CLAUDE.md` → `api`)
-   - For nested paths, use the most specific directory name
-3. **Update root CLAUDE.md:**
-   - If no `## Context Routing` section exists → append it after the last existing section
-   - If section exists → diff and show additions only (new CLAUDE.md files found since last route)
-4. **Safety rules:**
-   - Never remove existing routing entries (directories may have been deleted but could return)
-   - Never modify any content outside the `## Context Routing` section
-   - If root CLAUDE.md doesn't exist, tell the user to run `go ham` first
-
-Output after completion:
-```
-Context Routing updated in CLAUDE.md.
-[N] routes configured → agent will follow these to load subdirectory context.
-```
-
 ## HAM Dashboard Command
 
 **Trigger:** "HAM dashboard" or "HAM sandwich"
@@ -360,6 +325,59 @@ Press Ctrl+C to stop the server.
 - Data is parsed into memory at startup — no database needed
 - Default port is 7777, configurable via `--port`
 - The server must be run from the user's project directory (it uses `process.cwd()` to determine which project's sessions to load)
+
+## HAM Insights Command
+
+**Trigger:** "HAM insights"
+
+When user runs this command, generate structured insights from their dashboard data and write actionable items to `.memory/inbox.md`.
+
+### What to do
+
+1. **Run the CLI** — execute from the user's project directory:
+
+```bash
+node <path-to-ham-repo>/dashboard/insights-cli.js --days 30
+```
+
+This outputs JSON with categorized insight items. No running server needed.
+
+2. **Parse the output** — the JSON contains an `items` array. Each item has:
+   - `category`: `ham_adoption`, `coverage_gap`, `stale_context`, or `activity`
+   - `severity`: `high`, `medium`, or `low`
+   - `type`: `action` (actionable), `observation` (informational), or `positive` (good news)
+   - `title`, `detail`, `action` (null if not actionable), `data` (raw evidence)
+
+3. **Filter to actionable items** — only items where `type === "action"` get written to inbox.
+
+4. **Deduplicate** — read existing `.memory/inbox.md` first. Skip any insight whose `title` already appears in the file.
+
+5. **Write to inbox** — for each new actionable item, append to `.memory/inbox.md`:
+
+```markdown
+### Insight: [title] ([YYYY-MM-DD])
+**Confidence:** [severity — high/medium/low]
+**Evidence:** Dashboard analysis of [totalSessions] sessions over [days] days
+**Observed:** [detail]
+**Proposed Action:** [action]
+```
+
+6. **Log to audit** — append a row to `.memory/audit-log.md`:
+
+```
+| [YYYY-MM-DD] | [issues found] | HAM insights: [N] actionable, [M] informational |
+```
+
+If the table exceeds 5 entries, remove the oldest row (keeping the header).
+
+7. **Report to user** — summarize what was found:
+   - Count of actionable vs informational vs positive items
+   - List titles of items written to inbox
+   - If no actionable insights, tell the user and skip writing
+
+### If no actionable insights
+
+Tell the user everything looks healthy and no items were written to inbox. Still report any positive or observational insights as a summary.
 
 ## Templates
 
@@ -416,6 +434,25 @@ Review periodically. Confirm → move to decisions/patterns. Reject → delete.
 
 ---
 ```
+
+## HAM Carbon Command
+
+**Trigger:** "HAM carbon"
+
+When user runs this command, show energy and carbon efficiency data.
+
+### What to do
+
+1. **Run the CLI** — execute from the user's project directory:
+
+```bash
+node <path-to-ham-repo>/dashboard/carbon-cli.js [--last] [--days 30]
+```
+
+2. **Display results** — show the CLI output to the user.
+
+- Default: quick 3-line summary (total saved, today, last session)
+- `--last`: detailed breakdown of most recent session with per-file stats
 
 ## How We Estimate Savings (Transparency)
 

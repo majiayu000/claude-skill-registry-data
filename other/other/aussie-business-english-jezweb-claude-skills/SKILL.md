@@ -125,7 +125,7 @@ Avoid in written professional comms:
 > Next up is the contact form and booking system, which we'll have ready by end of next week. I'll send through a preview link once it's live on the staging site.
 >
 > Cheers,
-> Jez
+> [Your name]
 
 ### Delivering a quote
 
@@ -142,7 +142,7 @@ Avoid in written professional comms:
 > Happy to jump on a call if you've got any questions.
 >
 > Cheers,
-> Jez
+> [Your name]
 
 ### Saying no to a request
 
@@ -160,7 +160,7 @@ Avoid in written professional comms:
 > If timing works, we'd be happy to look at it in April. Otherwise, I can recommend a couple of people who might be able to help sooner.
 >
 > Cheers,
-> Jez
+> [Your name]
 
 ## Context Rules
 

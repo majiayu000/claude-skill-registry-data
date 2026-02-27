@@ -54,7 +54,7 @@ Either delete them or add to `.gitignore`.
 ls LICENSE LICENSE.md LICENSE.txt 2>/dev/null
 ```
 
-If missing: create one. MIT is the default for Jez's projects. For private repos, use the proprietary license (see `~/.claude/rules/git-workflow.md`).
+If missing: create one. Check the repo visibility (`gh repo view --json visibility -q '.visibility'`). Use MIT for public repos. For private repos, consider a proprietary license instead.
 
 #### 4. Validate README
 

@@ -268,6 +268,20 @@ After initialization, customize or remove the generated SKILL.md and example fil
 
 When editing the (newly-generated or existing) skill, remember that the skill is being created for another instance of Claude to use. Include information that would be beneficial and non-obvious to Claude. Consider what procedural knowledge, domain-specific details, or reusable assets would help another Claude instance execute these tasks more effectively.
 
+#### Skills Must Be Self-Contained
+
+Other users who install your skill will NOT have your `~/.claude/rules/`, your `CLAUDE.md`, your MCP servers, or your Vault. Everything the skill needs must be inside the skill itself:
+
+| Don't rely on... | Instead... |
+|-------------------|-----------|
+| Your `~/.claude/rules/*.md` | Put the guidance in SKILL.md or `references/` |
+| Your project/global CLAUDE.md | Include relevant context directly in the skill |
+| Specific MCP servers (Brain, Vault, etc.) | Make MCP usage optional, or document what's needed |
+| Your `settings.local.json` permissions | Document what permissions the skill needs so users can add them |
+| Environment-specific paths or tools | Use detection logic or document prerequisites |
+
+**Test**: Could someone with a fresh Claude Code install use this skill? If it would break without your personal config, it's not self-contained.
+
 #### Learn Proven Design Patterns
 
 Consult these helpful guides based on your skill's needs:
@@ -276,6 +290,20 @@ Consult these helpful guides based on your skill's needs:
 - **Specific output formats or quality standards**: See references/output-patterns.md for template and example patterns
 
 These files contain established best practices for effective skill design.
+
+#### Prefer Scripts Over Bash Chains
+
+If a skill step involves collecting data from multiple sources, scanning files, or bulk operations, instruct Claude to **write and run a script** rather than listing individual bash commands. Each bash command requires a separate user approval — a step that runs 10 commands creates 10 approval prompts.
+
+| Instead of... | Instruct... |
+|---------------|-------------|
+| "Run `git log`, then `grep`, then `jq`..." | "Write a Python script that collects git history, extracts patterns, and outputs a summary. Run it from /tmp." |
+| "For each file, run `cat` and check..." | "Write a script that scans all matching files and returns a structured report." |
+| "Run these 5 curl commands..." | "Write a script that makes the API calls and aggregates results." |
+
+**Rule of thumb**: If a step needs 3+ bash commands for one logical operation, it should be a script. One Write + one Bash run = 2 approvals instead of many.
+
+**Where to save**: Write scripts to `.claude/scripts/` in the project — not `/tmp`. Project scripts are part of the project's evolution and available to future sessions. Only use `/tmp` for truly disposable one-shot operations.
 
 #### Start with Reusable Skill Contents
 
@@ -325,8 +353,8 @@ Skills work as directories — no packaging needed. Install directly:
 # Install from this repo
 /plugin install ./skills/<skill-name>
 
-# Or add the repo as a marketplace
-/plugin marketplace add jezweb/claude-skills
+# Or add a repo as a marketplace
+/plugin marketplace add owner/repo-name
 /plugin install <bundle-name>
 ```
 
