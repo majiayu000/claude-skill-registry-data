@@ -24,20 +24,59 @@ Use this skill when:
 
 ## Core Principles
 
-### 1. Plan Before Execute
+### 1. Accessibility First
+Accessibility is not a polish step — it's a structural requirement. Every styling decision should pass the accessibility check before considering aesthetics.
+
+**Non-negotiable**:
+- Colour contrast meets WCAG 2.1 AA (4.5:1 normal text, 3:1 large text)
+- Focus indicators visible on all interactive elements
+- No information conveyed by colour alone (use icons, text, patterns too)
+- Reduced motion support via `prefers-reduced-motion`
+- Touch targets at least 44×44px on mobile
+- Text remains readable at 200% zoom
+
+```css
+/* Always include focus styles */
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+/* Respect motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Never rely on colour alone */
+.error-field {
+  border-color: var(--color-error);
+  border-width: 2px; /* Visual indicator beyond colour */
+}
+.error-message {
+  color: var(--color-error);
+}
+.error-message::before {
+  content: "⚠ "; /* Icon reinforces the colour */
+}
+```
+
+### 2. Plan Before Execute
 For non-trivial styling changes:
 1. **Analyse** - Understand the current implementation
 2. **Plan** - Outline proposed changes in logical order
 3. **Confirm** - Get user approval before execution
 4. **Execute** - Apply changes methodically
 
-### 2. Consistency Over Cleverness
+### 3. Consistency Over Cleverness
 - Match the project's established patterns
 - Don't introduce new approaches without discussion
 - Preserve existing styling architecture
 - Keep component styles predictable
 
-### 3. Hierarchy and Order
+### 4. Hierarchy and Order
 When fixing multiple issues:
 1. Fix parent containers before children
 2. Address layout structure before fine-tuning
@@ -321,6 +360,23 @@ Apply changes in logical order:
 
 ---
 
+## Accessibility Checklist
+
+When building or reviewing UI components:
+
+- [ ] Does every interactive element have a visible focus indicator?
+- [ ] Does the colour contrast pass WCAG 2.1 AA? (Use browser DevTools audit)
+- [ ] Is information conveyed by more than just colour?
+- [ ] Are all images/icons either decorative (`aria-hidden`) or labelled (`alt`/`aria-label`)?
+- [ ] Do form inputs have associated `<label>` elements?
+- [ ] Are error messages linked to inputs via `aria-describedby`?
+- [ ] Does the component work with keyboard only (Tab, Enter, Escape)?
+- [ ] Does `prefers-reduced-motion` disable animations?
+- [ ] Are touch targets at least 44×44px?
+- [ ] Is text readable at 200% zoom without horizontal scrolling?
+
+---
+
 ## Debugging Checklist
 
 When encountering styling issues, verify:
@@ -372,3 +428,5 @@ A styling task is complete when:
 - No new bugs or regressions introduced
 - Code is maintainable and follows project patterns
 - User has confirmed the solution meets requirements
+- Accessibility checklist passes (contrast, focus, keyboard, screen reader)
+- Animations respect `prefers-reduced-motion`

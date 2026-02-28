@@ -99,6 +99,9 @@ Step 1: Receive Task
 Step 2: Read Context
   - Load full task + parent Story + affected components
 
+Step 2b: Goal Articulation Gate
+  - State what specific quality question this review must answer (<=25 tokens each)
+
 Step 3: Review Checks
   - Verify approach alignment with Story Technical Approach
   - Check clean code: no dead code, no backward compat shims
@@ -127,8 +130,10 @@ Step 8: Update & Commit
 ## Workflow (concise)
 1) **Receive task:** Get task ID from orchestrator (ln-400). Load full task and parent Story independently. Detect type (label "tests" -> test task, else implementation/refactor).
 2) **Read context:** Full task + parent Story; load affected components/docs; review diffs if available.
+2b) **Goal gate:** **MANDATORY READ:** `shared/references/goal_articulation_gate.md` — Before reviewing, state: (1) REAL GOAL: what specific quality question must this review answer for THIS task? (2) DONE: what evidence proves quality is sufficient? (3) NOT THE GOAL: what would a surface-level rubber-stamp look like? (4) INVARIANTS: what non-obvious constraint exists (side-effects on other modules, implicit AC)?
 3) **Review checks:**
    **MANDATORY READ:** `shared/references/clean_code_checklist.md`
+   - **Goal validation (Recovery Paradox):** If executor articulated a REAL GOAL (visible in task comments or implementation), validate it matches the Story's target deliverable. If executor framed the goal around a secondary subject (e.g., "implement the endpoint" instead of "enable user data export") → CONCERN: `GOAL-MISFRAME: executor goal targets secondary subject, may miss hidden constraints.`
    - Approach: diff aligned with Technical Approach in Story. If different → rationale documented in code comments.
    - **Clean code:** Per checklist — verify all 4 categories. Replaced implementations fully removed. If refactoring changed API — callers updated, old signatures removed. <!-- Defense-in-depth: also checked by ln-511 MNT-DC- -->
    - **Cross-file DRY:** For each NEW function/class/handler created by task, Grep `src/` for similar names/patterns (count mode). If 3+ files contain similar logic → add CONCERN: `MNT-DRY-CROSS: {pattern} appears in {count} files — consider extracting to shared module.` This catches cross-story duplication that per-task review misses. <!-- Defense-in-depth: also checked by ln-511 MNT-DRY- -->

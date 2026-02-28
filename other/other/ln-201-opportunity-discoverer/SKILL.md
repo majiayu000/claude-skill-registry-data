@@ -126,7 +126,7 @@ WebSearch: "[idea] customer acquisition channels"
 
 **Research:**
 ```
-WebSearch: "[idea] search volume 2025"
+WebSearch: "[idea] search volume {current_year}"
 WebSearch: "[idea] Google Trends"
 WebSearch: "[problem] forum discussions reddit"
 ```
@@ -158,7 +158,7 @@ WebSearch: "[problem] forum discussions reddit"
 
 **Research:**
 ```
-WebSearch: "[idea] competitors 2025"
+WebSearch: "[idea] competitors {current_year}"
 WebSearch: "[idea] alternatives comparison"
 ```
 

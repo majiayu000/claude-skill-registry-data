@@ -26,6 +26,7 @@ Executes rework for a single task marked To Rework and hands it back for review.
 
 ## Workflow (concise)
 1) **Receive task:** Get task ID from orchestrator (ln-400); read task (Linear: get_issue; File: Read task file), review notes, parent Story.
+1b) **Goal gate:** **MANDATORY READ:** `shared/references/goal_articulation_gate.md` — State REAL GOAL of this rework (what was actually broken, not "apply feedback"). Combine with 5 Whys (`shared/references/problem_solving.md`) to ensure root cause is articulated alongside the rework goal. NOT THE GOAL: a superficial patch that addresses the symptom, not the cause.
 2) **Plan fixes:** Map each comment to an action; confirm no new scope added.
 3) **Implement:** Follow task plan/checkboxes; address config/hardcoded issues; update docs/tests noted in Affected Components and Existing Code Impact.
 4) **Quality:** Run typecheck/lint (or project equivalents); ensure fixes reflect guides/manuals/ADRs/research.

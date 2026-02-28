@@ -172,6 +172,7 @@ Each Story creates ONLY the tables it needs (not all tables upfront).
 
 **Build IDEAL Plan (Automated):**
 
+0. **Articulate REAL GOAL:** **MANDATORY READ:** `shared/references/goal_articulation_gate.md` — State REAL GOAL of this Epic in one sentence (the user capability being enabled, not "create Stories"). Verify: does the decomposition serve THIS goal?
 1. **Analyze Epic Scope:** Review features in Epic Scope In, identify user capabilities
 2. **Determine Story Count:**
    - Simple Epic (1-3 features): 3-5 Stories

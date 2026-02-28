@@ -59,11 +59,26 @@ Can't fix what you can't reproduce. First priority is finding reliable steps to 
 - Consider state-dependent bugs
 - Try multiple environments
 
-### 2. Isolate
+### 2. Isolate (Root-Cause Depth)
 
-**Narrow down the cause**
+**Narrow down the cause — then go deeper.**
 
-Once reproducible, determine exactly where the problem originates.
+Once reproducible, determine exactly where the problem originates. But don't stop at the first explanation. The first "cause" is often a symptom. Ask **why** repeatedly until you reach the structural root.
+
+**The Five Whys**:
+```
+Bug: Users see stale data after updating their profile.
+
+Why? → The cache isn't invalidated after the update.
+Why? → The update function doesn't call cache.invalidate().
+Why? → The caching layer was added after the update function was written.
+Why? → There's no pattern ensuring new writes invalidate related caches.
+Root: Missing cache invalidation convention. Fix the convention, not just this instance.
+```
+
+**Depth vs speed**: Not every bug warrants five whys. Use your judgment:
+- **Shallow fix appropriate**: Typo, wrong variable name, missing null check
+- **Deep investigation warranted**: Bug that could recur, affects multiple users, or reveals a pattern gap
 
 **Isolation techniques**:
 
@@ -877,12 +892,37 @@ function loadMore() {
 
 ---
 
+## Root-Cause vs Symptom Fixes
+
+**Symptom fix**: Fixes the immediate problem but doesn't prevent recurrence.
+**Root-cause fix**: Addresses the structural issue that allowed the bug to exist.
+
+```typescript
+// Symptom fix: Add null check where the crash happens
+const name = user?.profile?.name ?? 'Unknown';
+
+// Root-cause fix: Ensure profile is always populated at creation
+async function createUser(data: CreateUserRequest): Promise<User> {
+	return await db.users.create({
+		...data,
+		profile: { name: data.name } // Profile guaranteed at creation
+	});
+}
+```
+
+**When to ship a symptom fix**: When the root cause is expensive to fix and the symptom fix is safe. But always log the root cause as a follow-up task.
+
+**When to insist on root-cause fix**: When the bug pattern could recur in other places, when data integrity is at risk, or when the symptom fix introduces its own complexity.
+
+---
+
 ## Success Criteria
 
 Debugging is effective when:
 - Bugs reproduce reliably
-- Root causes identified quickly
+- Root causes identified (not just symptoms)
 - Fixes targeted and minimal
 - No regressions introduced
 - Process documented for learning
 - Prevention strategies considered
+- Structural patterns that enabled the bug are addressed or logged

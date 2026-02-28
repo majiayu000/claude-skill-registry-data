@@ -218,6 +218,9 @@ Verify `.claude/settings.local.json` in target project:
 
 If missing or incomplete → copy from `references/settings_template.json` and install hook scripts via Bash `cp` (NOT Write tool — Write produces CRLF on Windows, breaking `#!/bin/bash` shebang):
 ```
+# Preflight: verify dependencies
+which jq || ABORT "jq is required for pipeline hooks. Install: https://jqlang.github.io/jq/download/"
+
 mkdir -p .claude/hooks
 Bash: cp {skill_repo}/ln-1000-pipeline-orchestrator/references/hooks/pipeline-keepalive.sh .claude/hooks/pipeline-keepalive.sh
 Bash: cp {skill_repo}/ln-1000-pipeline-orchestrator/references/hooks/worker-keepalive.sh  .claude/hooks/worker-keepalive.sh
@@ -269,14 +272,14 @@ IF platform == "win32":
 1. Ensure `develop` branch exists:
    ```
    IF `develop` branch not found locally or on origin:
-     git branch develop master        # Create from master
+     git branch develop $(git symbolic-ref --short HEAD)   # Create from current default branch
      git push -u origin develop
    git checkout develop               # Start pipeline from develop
    ```
 
 2. Create team:
    ```
-   TeamCreate(team_name: "pipeline-{YYYY-MM-DD}")
+   TeamCreate(team_name: "pipeline-{YYYY-MM-DD}-{HHmm}")
    ```
 
 Worker is spawned in Phase 4 after worktree creation.
@@ -308,25 +311,8 @@ git_stats = {}                               # {storyId: {lines_added, lines_del
 pipeline_start_time = now()                  # ISO 8601 — wall-clock start for duration metrics
 readiness_scores = {}                        # {storyId: readiness_score} — from Stage 1 GO
 
-# Helper functions for heartbeat formatting
-skill_name_from_stage(stage):
-  """Returns skill name for stage number."""
-  RETURN {0: "ln-300-task-coordinator", 1: "ln-310-story-validator",
-          2: "ln-400-story-executor", 3: "ln-500-story-quality-gate"}[stage]
-
-predict_next_step(current_stage):
-  """Predicts next pipeline step for story."""
-  IF current_stage == 0: RETURN "Validation (ln-310) -> Todo"
-  IF current_stage == 1: RETURN "Execution (ln-400) -> To Review"
-  IF current_stage == 2: RETURN "Quality gate (ln-500) -> PASS/FAIL"
-  IF current_stage == 3: RETURN "Sync with develop -> User confirmation -> Done"
-
-stage_duration(story_id, stage_num):
-  """Returns formatted duration (Xm Ys) for a stage, or None if timestamps missing."""
-  start = stage_timestamps[story_id].get("stage_{stage_num}_start")
-  end = stage_timestamps[story_id].get("stage_{stage_num}_end")
-  IF start AND end: RETURN format_duration(end - start)
-  RETURN None
+# Helper functions — see phase4_heartbeat.md Helper Functions for full definitions
+# skill_name_from_stage(stage), predict_next_step(stage), stage_duration(id, N)
 
 # --- SPAWN SINGLE WORKER ---
 id = selected_story.id
@@ -548,8 +534,10 @@ ELSE IF merge_status == "declined":
   # Preserve worktree — user needs it for manual merge
   Output: "Worktree preserved at .worktrees/story-{id}/"
 ELSE IF story_state[id] == "PAUSED":
-  # Error case — remove worktree
-  IF worktree_map[id]:
+  IF merge_status == "pending" AND worktree_map[id]:
+    # Merge conflict — preserve worktree for manual resolution
+    Output: "Worktree preserved at {worktree_map[id]}/ for merge conflict resolution"
+  ELSE IF worktree_map[id]:
     git worktree remove {worktree_map[id]} --force
     rm -rf .worktrees/
 

@@ -14,6 +14,18 @@ Cross-model dialogue between Claude and Gemini, with shared visual memory.
 
 > "Claude speaks in words. Gemini dreams in light. Together, we resonate."
 
+## Models
+
+| Role | Model ID | Notes |
+|------|----------|-------|
+| **Image generation** (default) | `gemini-3-pro-image-preview` | Pro quality, used by resonate/faithful_colorize |
+| **Image generation** (fast) | `gemini-3.1-flash-image-preview` | Faster/cheaper, use `--fast` flag |
+| **Text analysis** | `gemini-3-flash-preview` | Used by faithful_colorize for description |
+| **Text reasoning** | `gemini-3.1-pro-preview` | Used by Pro and Director daimones |
+| **Claude** | `claude-3-opus-20240229` | Opus daimon |
+
+Scripts that generate images (`resonate.py`, `faithful_colorize.py`) accept `--fast` to switch to the flash image model, or `--model <id>` for explicit override.
+
 ## Choose Your Tool
 
 | I want to... | Use |
@@ -245,19 +257,34 @@ python scripts/council.py "topic" --output council_session.md
 - Low temperature (0.5) for faithful style matching
 - 3:4 aspect ratio (standard tarot proportions)
 - Session support with visual memory of previous cards
+- Two style presets via `--style` flag
+
+**Style presets**:
+
+| Style | Flag | Origin | Palette | Best for |
+|-------|------|--------|---------|----------|
+| **Forensic** (default) | `--style forensic` | Jan 21 rewrite | Muted archaeological (terracotta, slate blue, periwinkle borders) | Reproducing specific reference cards with per-card forensic prompts |
+| **Classic** | `--style classic` | Jan 5 original | Vivid saturated (sky blue, vivid red, golden yellow, dark blue borders) | Creative/freeform card generation, the look of the original deck |
+
+The forensic style pairs each known card with a structured `[Subject/Action/Location/Composition/Lighting/Style]` prompt analyzed from the reference images. The classic style uses the original personality-driven prompt ("You are creating a tarot card in the exact style of Ellen Lorenzi-Prince's Minoan Tarot deck...") without per-card overrides.
 
 ```bash
-# Generate a specific card
+# Generate a specific card (forensic style, default)
 python scripts/minoan_tarot.py card "The Priestess" --number II
+
+# Generate with the original Jan 5 vivid palette
+python scripts/minoan_tarot.py card "The Priestess" --number II --style classic
 
 # Generate from archetype
 python scripts/minoan_tarot.py archetype strength
+python scripts/minoan_tarot.py archetype strength --style classic
 
 # Continue a session (visual memory of previous cards)
 python scripts/minoan_tarot.py session "new-arcana" --card "The Dreamer"
 
-# Generate card back design
+# Generate card back design (both styles supported)
 python scripts/minoan_tarot.py back
+python scripts/minoan_tarot.py back --style classic
 
 # List all 78 traditional cards
 python scripts/minoan_tarot.py list
@@ -330,7 +357,7 @@ UI displays: `FLASH` *glimpsed*
 | `faithful_colorize.py` | Describe-first transformation | `describe`, `prompt`, `colorize`, `transform` |
 | `resonance_field.py` | MESSAGE TO NEXT FRAME plates | `start`, `continue`, `zoom`, `inject` |
 | `council.py` | Claude reflects on Gemini | `--shared-memory`, `--only`, `--session` |
-| `minoan_tarot.py` | Tarot card generation | `card`, `archetype`, `session`, `back` |
+| `minoan_tarot.py` | Tarot card generation | `card`, `archetype`, `session`, `back`, `--style {forensic,classic}` |
 | `ui/server.py` | Daimon Chamber web UI | `--port` |
 
 ---

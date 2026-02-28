@@ -70,7 +70,7 @@ docs/market/[epic-slug]/
 
 | Tool | Purpose | Example Query |
 |------|---------|---------------|
-| **WebSearch** | Market size, competitors | "[domain] market size 2025" |
+| **WebSearch** | Market size, competitors | "[domain] market size {current_year}" |
 | **mcp__Ref** | Industry reports | "[domain] market analysis report" |
 | **Linear** | Load Stories | list_issues(project=Epic.id) |
 | **Glob** | Check existing | "docs/market/[epic]/*" |
@@ -161,7 +161,7 @@ get_issue(id=storyId, includeRelations=false)
 
 **WebSearch queries (based on depth):**
 ```
-"[customer problem domain] market size TAM 2025"
+"[customer problem domain] market size TAM {current_year}"
 "[feature type] industry market forecast"
 ```
 
@@ -184,7 +184,7 @@ get_issue(id=storyId, includeRelations=false)
 
 **WebSearch queries:**
 ```
-"[feature] competitors alternatives 2025"
+"[feature] competitors alternatives {current_year}"
 "[solution approach] market leaders"
 ```
 
@@ -376,7 +376,7 @@ ln-300 (Story → Tasks)
 ## Critical Rules
 
 1. **Source all data** - Every Market number needs source + date
-2. **Prefer recent data** - 2024-2025, warn if older
+2. **Prefer recent data** - last 2 years, warn if older
 3. **Cross-reference** - 2+ sources for Market size (reduce error)
 4. **Time-box strictly** - Skip depth for speed if needed
 5. **Confidence levels** - Mark High/Medium/Low for estimates

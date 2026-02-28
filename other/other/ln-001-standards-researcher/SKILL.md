@@ -113,9 +113,9 @@ Stack Detection → Identify → Ref Research → Existing Guides → Generate R
 
 **Process**:
 1. **FOR EACH library + Story domain** combination:
-   - Call `mcp__Ref__ref_search_documentation(query="[detected_stack.query_prefix] [library] [domain] best practices 2025")`
+   - Call `mcp__Ref__ref_search_documentation(query="[detected_stack.query_prefix] [library] [domain] best practices {current_year}")`
    - Call `mcp__Ref__ref_search_documentation(query="[detected_stack.query_prefix] [domain] industry standards RFC")`
-   - Example: `"C# ASP.NET Core Polly rate limiting best practices 2025"`
+   - Example: `"C# ASP.NET Core Polly rate limiting best practices {current_year}"`
 
 2. **Extract from results** (NO CODE - text/tables only):
    - **Industry standards** (RFC/spec references: OAuth 2.0, REST API, OpenAPI 3.0)

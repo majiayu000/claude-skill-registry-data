@@ -59,6 +59,9 @@ Step 1: Load Context
 Step 2: Receive Task
   - Get task ID from orchestrator, load full description
 
+Step 2b: Goal Articulation Gate
+  - Complete 4 questions from shared/references/goal_articulation_gate.md (<=25 tokens each)
+
 Step 3: Start Work
   - Set task to In Progress, update kanban
 
@@ -80,6 +83,7 @@ Step 6: Finish
 ## Workflow (concise)
 1) **Load context:** Fetch full task description (Linear: get_issue; File: Read task file); read linked guides/manuals/ADRs/research; auto-discover team/config if needed.
 2) **Receive task:** Get task ID from orchestrator (ln-400); load full task description.
+2b) **Goal gate:** **MANDATORY READ:** `shared/references/goal_articulation_gate.md` — Complete the 4-question gate (<=25 tokens each). State REAL GOAL (deliverable as subject), DONE LOOKS LIKE, NOT THE GOAL, INVARIANTS & HIDDEN CONSTRAINTS.
 3) **Start work:** Update this task to In Progress (Linear: update_issue; File: Edit status line); move it in kanban (keep Epic/Story indent).
 4) **Implement (with verification loop):** **Before writing new utilities/handlers**, Grep `src/` for existing patterns (error handling, validation, config access). Reuse if found; if not reusable, document rationale in code comment. Follow checkboxes/plan; keep it simple; avoid hardcoded values; reuse existing components; add Task ID comment (`// See PROJ-123`) to new code blocks; update docs noted in Affected Components; update existing tests if impacted (no new tests here). After implementation, execute `verify:` methods from task AC: test → run specified test; command → execute and check output; inspect → verify file/content exists. If any verify fails → fix before proceeding.
 5) **Quality:** Run typecheck and lint (or project equivalents); ensure instructions in Existing Code Impact are addressed.

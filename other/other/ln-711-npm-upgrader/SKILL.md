@@ -171,7 +171,7 @@ Read package.json and categorize dependencies for upgrade priority.
 ### WebSearch Fallback
 
 Use when Context7/Ref return no results:
-- `"<package> <version> breaking changes migration 2025"`
+- `"<package> <version> breaking changes migration {current_year}"`
 - `"<package> <error message> fix stackoverflow"`
 
 ---

@@ -25,12 +25,40 @@ Use this skill when:
 
 ## Core Principle
 
+**Start with the graph. Optimise from there.**
+
+Most real-world domains are fundamentally about relationships. The graph is the truest representation of how entities connect. Start by thinking in nodes and edges — then decide where to persist based on access patterns and consistency needs.
+
 **Right database for right data concern**
 
 Don't force all data into one database type. Use:
 - **Relational (PostgreSQL/Supabase)** - Structured data, transactions, strong consistency
 - **Graph (Neo4j)** - Relationships as primary concern, traversal queries
 - **Document (MongoDB)** - Semi-structured data, flexible schemas, nested documents
+
+### Graph-First Modelling Process
+
+Before choosing databases, model the domain as a graph:
+
+1. **Identify nodes** — What are the entities? (Users, Courses, Organisations, Products)
+2. **Identify edges** — How do they connect? (ENROLLED_IN, REPORTS_TO, PURCHASED)
+3. **Annotate edges** — Do relationships carry data? (role, since, quantity)
+4. **Spot patterns** — Trees? DAGs? Social graphs? Bipartite structures?
+5. **Then persist** — Given the graph, which parts need relational guarantees, which need traversal, which need flexible schemas?
+
+```cypher
+// Step 1-3: Model the domain as a graph first
+(:User)-[:MEMBER_OF {role: 'admin', since: date}]->(:Organisation)
+(:User)-[:ENROLLED_IN {status: 'active'}]->(:Course)
+(:Course)-[:REQUIRES]->(:Course)
+(:User)-[:COMPLETED {score: 0.85}]->(:Module)
+(:Module)-[:BELONGS_TO]->(:Course)
+```
+
+Then decide:
+- Users and Organisations → **PostgreSQL** (transactional, auth, billing)
+- MEMBER_OF, ENROLLED_IN, REQUIRES → **Neo4j** (traversal, recommendations, paths)
+- Course content, Module materials → **MongoDB** (flexible nested content)
 
 ---
 

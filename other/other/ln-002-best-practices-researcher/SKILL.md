@@ -54,10 +54,10 @@ Research industry standards and create project documentation in one workflow.
 
 | Tool | Use Case | Query Pattern |
 |------|----------|---------------|
-| `ref_search_documentation` | Standards, patterns, RFCs | `"[topic] RFC standard best practices 2025"` |
+| `ref_search_documentation` | Standards, patterns, RFCs | `"[topic] RFC standard best practices {current_year}"` |
 | `context7__resolve-library-id` | Get library ID for docs | `libraryName="[topic]"` |
 | `context7__query-docs` | Library API, methods | `topic="[stack_prefix] [topic]"` |
-| `WebSearch` | Market, competitors, versions | `"[topic] latest 2025"` or `"[topic] vs alternatives"` |
+| `WebSearch` | Market, competitors, versions | `"[topic] latest {current_year}"` or `"[topic] vs alternatives"` |
 
 **Time-box:** 5-10 minutes for research; skip if topic is trivial
 
@@ -89,7 +89,7 @@ Research industry standards and create project documentation in one workflow.
 - **adr:** Dialog answers → Sections: Context, Decision, Rationale, Alternatives table, Consequences, Related
 - **research:** Findings by methodology → Sections: Question, Context, Methodology, Findings (tables!), Conclusions, Next Steps, Sources
 
-**Validation specifics:** guide: patterns table present; manual: version in filename; adr: ISO date, status field; all: sources ≥2025
+**Validation specifics:** guide: patterns table present; manual: version in filename; adr: ISO date, status field; all: sources ≤ 1 year old
 
 **ADR Dialog (5 questions):** Q1: Title? → Q2: Category (Strategic/Technical)? → Q3: Context? → Q4: Decision + Rationale? → Q5: Alternatives (2 with pros/cons)?
 
@@ -135,7 +135,7 @@ Research industry standards and create project documentation in one workflow.
 
 **Other Rules:**
 - Research ONCE per invocation; reuse results
-- Cite sources with versions/dates (>=2025)
+- Cite sources with versions/dates (≤ 1 year old)
 - One pattern per guide; one decision per ADR; one package per manual
 - Preserve language (EN/RU) from story_context
 - Link to stack-appropriate docs (Microsoft for .NET, MDN for JS, etc.)

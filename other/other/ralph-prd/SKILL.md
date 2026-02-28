@@ -75,14 +75,23 @@ See [EXAMPLES.md](EXAMPLES.md) for PRD examples.
 
 See [TROUBLESHOOTING.md](TROUBLESHOOTING.md) for common issues.
 
-## Templates
+## Templates (MANDATORY)
 
-Use templates from [templates/](templates/) for generating output files:
+You MUST read and use these templates when generating output files. Do NOT write simplified versions from memory — the loop depends on exact field names and signal formats.
+
+- `prompt.md.template` - **CRITICAL:** Contains the `RALPH_COMPLETE:` signal in Step 5. Read this template with the Read tool and fill in `{{placeholders}}`. Never hand-write PROMPT.md.
+- `tasks.json.template` - **CRITICAL:** Tasks use `"passes": false` / `"passes": true` (NOT `"status": "pending"` / `"status": "done"`). The completion signal checks `passes`.
 - `prd.md.template` - PRD document structure
-- `tasks.json.template` - Task list format
-- `prompt.md.template` - Iteration instructions
 - `config.json.template` - Ralph configuration
 - `memories.md.template` - Learnings file
+
+### Why This Matters
+
+The `ralph.sh` loop script checks for `RALPH_COMPLETE:` in the output to stop. The `prompt.md.template` Step 5 tells Ralph to emit this signal when all tasks have `passes: true`. If PROMPT.md is hand-written without Step 5, or tasks.json uses a different field name, the loop runs forever.
+
+### ralph.sh
+
+Always copy `ralph.sh` from this plugin's `scripts/ralph.sh` directory. It contains required flags (`--dangerously-skip-permissions`, `--disallowedTools`) that are essential for non-interactive execution.
 
 ## After Setup
 
