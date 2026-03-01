@@ -303,6 +303,8 @@ IF NCCD > 1.5:
   findings.append({severity: "MEDIUM", issue: f"Graph complexity (NCCD={NCCD:.2f}) exceeds balanced tree threshold (1.5)"})
 ```
 
+**Cascade chain extension:** For service files (`**/services/**`), extend module-level graph to function-level. Find longest side-effect chain per public function (markers per `shared/references/ai_ready_architecture.md`). If chain_length >= 3: add to cascade_findings. Output `"runtime_cascades"` array in Phase 8 DATA-EXTENDED JSON. Severity: HIGH (4+), MEDIUM (3).
+
 ### Phase 6: Baseline Support
 
 Inspired by ArchUnit FreezingArchRule — enables incremental adoption in legacy projects.

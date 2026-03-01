@@ -2,7 +2,7 @@
 name: invoking-gemini
 description: Invokes Google Gemini models for structured outputs, multi-modal tasks, and Google-specific features. Use when users request Gemini, structured JSON output, Google API integration, or cost-effective parallel processing.
 metadata:
-  version: 0.0.3
+  version: 0.2.0
 ---
 
 # Invoking Gemini
@@ -33,47 +33,80 @@ Delegate tasks to Google's Gemini models when they offer advantages over Claude.
 
 ## Available Models
 
-**gemini-2.0-flash-exp** (Recommended):
-- Fast, cost-effective
-- Native JSON Schema support
-- Good for structured outputs
+### Gemini 3.x — Frontier (Preview)
 
-**gemini-1.5-pro**:
-- More capable reasoning
-- Better for complex tasks
-- Higher cost
+**gemini-3-flash-preview** (Default / Recommended):
+- Frontier-class performance at flash-tier cost
+- Upgraded visual and spatial reasoning
+- Agentic coding capabilities
+- Alias: `flash`
 
-**gemini-1.5-flash**:
-- Balanced speed/quality
-- Good for most tasks
+**gemini-3.1-pro-preview**:
+- Most capable model available
+- Deep reasoning and complex problem solving
+- Alias: `pro`
 
-See [references/models.md](references/models.md) for full model details.
+### Gemini 2.5 — Stable Production
+
+**gemini-2.5-flash**:
+- Best price-performance for high-volume tasks
+- 1M token context window
+- Alias: `stable-flash`
+
+**gemini-2.5-flash-lite**:
+- Ultra-budget option ($0.10/$0.40 per 1M tokens)
+- Good for simple, high-throughput tasks
+- Alias: `lite`
+
+**gemini-2.5-pro**:
+- Advanced reasoning for complex tasks
+- Alias: `stable-pro`
+
+### Image Generation Models
+
+**gemini-3-pro-image**: High-fidelity image generation with text rendering and multi-turn editing
+
+**nano-banana-2**: Fast image generation/editing built on Gemini 3.1 Flash Image
+
+See [references/models.md](references/models.md) for full model details and pricing.
 
 ## Setup
 
 **Prerequisites:**
 
-1. Install google-generativeai:
-   ```bash
-   uv pip install google-generativeai pydantic
-   ```
+```bash
+uv pip install requests pydantic
+# google-generativeai only needed for direct API fallback:
+# uv pip install google-generativeai
+```
 
-2. Configure API key via project knowledge file:
+**Credentials — Option A (recommended): Cloudflare AI Gateway**
 
-   **Option 1 (recommended): Individual file**
-   - Create document: `GOOGLE_API_KEY.txt`
-   - Content: Your API key (e.g., `AIzaSy...`)
+Requests are routed through [Cloudflare AI Gateway](https://developers.cloudflare.com/ai-gateway/),
+bypassing IP blocks and gaining caching, analytics, and rate limiting.
 
-   **Option 2: Combined file**
-   - Create document: `API_CREDENTIALS.json`
-   - Content:
-     ```json
-     {
-       "google_api_key": "AIzaSy..."
-     }
-     ```
+Create `/mnt/project/proxy.env`:
+```
+CF_ACCOUNT_ID=<your-cloudflare-account-id>
+CF_GATEWAY_ID=<your-gateway-name>
+CF_API_TOKEN=<your-cf-api-token>
+# GOOGLE_API_KEY only needed if not using Cloudflare BYOK:
+# GOOGLE_API_KEY=AIzaSy...
+```
 
-   Get your API key: https://console.cloud.google.com/apis/credentials
+- Get your Cloudflare Account ID: Cloudflare dashboard → right sidebar
+- Create a gateway: Cloudflare dashboard → AI Gateway → Create gateway
+- Generate an API token: https://dash.cloudflare.com/profile/api-tokens
+- Store your Gemini key in the gateway (BYOK): AI Gateway → your gateway → API Keys
+
+**Credentials — Option B: Direct Google API (fallback)**
+
+If no `proxy.env` is found, the client falls back to direct Google API access:
+
+- Create document: `GOOGLE_API_KEY.txt` (content: `AIzaSy...`)
+- Or create `API_CREDENTIALS.json`: `{"google_api_key": "AIzaSy..."}`
+
+  Get your API key: https://console.cloud.google.com/apis/credentials
 
 ## Basic Usage
 
@@ -87,7 +120,7 @@ from gemini_client import invoke_gemini
 # Simple prompt
 response = invoke_gemini(
     prompt="Explain quantum computing in 3 bullet points",
-    model="gemini-2.0-flash-exp"
+    model="gemini-3-flash-preview"
 )
 print(response)
 ```
@@ -137,7 +170,7 @@ prompts = [
 
 results = invoke_parallel(
     prompts=prompts,
-    model="gemini-2.0-flash-exp"
+    model="gemini-3-flash-preview"
 )
 
 for prompt, result in zip(prompts, results):
@@ -160,7 +193,7 @@ from gemini_client import invoke_gemini
 
 response = invoke_gemini(
     prompt="Your prompt here",
-    model="gemini-2.0-flash-exp"
+    model="gemini-3-flash-preview"
 )
 
 if response is None:
@@ -181,7 +214,7 @@ if response is None:
 ```python
 response = invoke_gemini(
     prompt="Write a haiku",
-    model="gemini-2.0-flash-exp",
+    model="gemini-3-flash-preview",
     temperature=0.9,
     max_output_tokens=100,
     top_p=0.95
@@ -257,8 +290,8 @@ for file in uploaded_files:
 - Subjective creative writing
 
 **Token limits:**
-- gemini-2.0-flash-exp: ~1M input tokens
-- gemini-1.5-pro: ~2M input tokens
+- gemini-3-flash-preview: ~1M input tokens
+- gemini-2.5-pro: ~1M input tokens (2x pricing above 200K)
 
 **Rate limits:**
 - Vary by API tier
@@ -274,14 +307,25 @@ See [references/examples.md](references/examples.md) for:
 
 ## Troubleshooting
 
-**"API key not configured":**
-- Add project knowledge file `GOOGLE_API_KEY.txt` with your API key
-- Or add to `API_CREDENTIALS.json`: `{"google_api_key": "AIzaSy..."}`
+**"No credentials configured":**
+- Create `/mnt/project/proxy.env` with `CF_ACCOUNT_ID`, `CF_GATEWAY_ID`, `CF_API_TOKEN`
+- Or add `GOOGLE_API_KEY.txt` for direct API access
 - See Setup section above for details
+
+**CF Gateway 401/403:**
+- Verify your `CF_API_TOKEN` has AI Gateway permissions
+- Check that gateway authentication is enabled in the Cloudflare dashboard
+- If not using BYOK, add `GOOGLE_API_KEY` to `proxy.env`
+
+**CF Gateway 429 (rate limited):**
+- The client automatically retries with exponential backoff
+- Check your gateway's rate limit settings in Cloudflare dashboard
 
 **Import errors:**
 ```bash
-uv pip install google-generativeai pydantic
+uv pip install requests pydantic
+# For direct API fallback only:
+uv pip install google-generativeai
 ```
 
 **Schema validation failures:**
@@ -291,18 +335,18 @@ uv pip install google-generativeai pydantic
 
 ## Cost Comparison
 
-Approximate pricing (as of 2024):
+Approximate pricing (as of early 2026):
 
-**Gemini 2.0 Flash:**
-- Input: $0.15 / 1M tokens
-- Output: $0.60 / 1M tokens
-
-**Claude Sonnet:**
-- Input: $3.00 / 1M tokens
-- Output: $15.00 / 1M tokens
+| Model | Input / 1M tokens | Output / 1M tokens |
+|---|---|---|
+| Gemini 3 Flash | $0.50 | $3.00 |
+| Gemini 3.1 Pro | $2.00 | $12.00 |
+| Gemini 2.5 Flash | $0.30 | $2.50 |
+| Gemini 2.5 Flash-Lite | $0.10 | $0.40 |
+| Gemini 2.5 Pro | $1.25 | $10.00 |
 
 For 1000 simple extraction tasks (100 tokens each):
-- Gemini Flash: ~$0.10
-- Claude Sonnet: ~$2.00
+- Gemini 2.5 Flash-Lite: ~$0.05
+- Gemini 3 Flash: ~$0.35
 
 **Strategy:** Use Claude for complex reasoning, Gemini for high-volume simple tasks.

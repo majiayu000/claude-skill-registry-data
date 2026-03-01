@@ -64,6 +64,7 @@ scan_root = scan_path IF domain_mode == "domain-aware" ELSE codebase_root
 | 3 | Entity Leakage | HIGH/MEDIUM | ORM entity returned from API without response DTO |
 | 4 | Error Contracts | MEDIUM/LOW | Mixed error patterns (raise + return None) in same service |
 | 5 | Redundant Overloads | LOW/MEDIUM | Method pairs with `_with_`/`_and_` suffix differing by 1-2 params |
+| 6 | Architectural Honesty | HIGH/MEDIUM | Read-named function (get_/find_/check_/validate_/is_/has_) body contains write side-effects. Exclusions per `shared/references/ai_ready_architecture.md` |
 
 **Scope boundary:** SKIP DUPLICATION findings (owned by ln-623), REPORT only ARCHITECTURE BOUNDARY findings.
 
@@ -75,7 +76,8 @@ scan_root = scan_path IF domain_mode == "domain-aware" ELSE codebase_root
 |-----------|--------|
 | No layer leakage (HTTP types in service) | +35 |
 | Consistent error handling pattern | +25 |
-| Follows project naming conventions | +20 |
+| Follows project naming conventions | +10 |
+| No hidden side-effects in read-named functions | +10 |
 | No entity leakage to API | +20 |
 
 **Completeness Score (0-100):**
@@ -91,7 +93,8 @@ scan_root = scan_path IF domain_mode == "domain-aware" ELSE codebase_root
 
 | Criterion | Points |
 |-----------|--------|
-| No boolean flag params in service methods | +25 |
+| No boolean flag params in service methods | +15 |
+| No opaque return types hiding write actions | +10 |
 | No methods with >5 params without DTO | +25 |
 | Consistent naming across module | +25 |
 | No redundant overloads | +25 |

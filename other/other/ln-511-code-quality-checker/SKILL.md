@@ -73,6 +73,9 @@ Formula: `Code Quality Score = 100 - metric_penalties - issue_penalties`
 | ARCH-DI- | Dependency Injection: direct instantiation in business logic, mixed DI+imports | medium |
 | ARCH-CEH- | Centralized Error Handling: no global handler, stack traces in prod, uncaughtException | medium (high if no handler at all) |
 | ARCH-SES- | Session Ownership: DI session + local session in same module | medium |
+| ARCH-AI-SEB | Side-Effect Breadth: 3+ side-effect categories in one function | medium |
+| ARCH-AI-AH | Architectural Honesty: read-named function with write side-effects | medium |
+| ARCH-AI-FO | Flat Orchestration: service imports 3+ other services | medium |
 
 **PERF- subcategories:**
 
@@ -150,6 +153,9 @@ Formula: `Code Quality Score = 100 - metric_penalties - issue_penalties`
    - ARCH-DI-: direct instantiation in business logic (no DI container or mixed patterns)
    - ARCH-CEH-: centralized error handling absent or bypassed
    - ARCH-SES-: session ownership conflicts (DI + local session in same module)
+   - ARCH-AI-SEB: side-effect breadth (3+ categories in one function)
+   - ARCH-AI-AH: architectural honesty (read-named function with hidden writes)
+   - ARCH-AI-FO: flat orchestration (service importing 3+ services)
    - MNT-GOD-: god classes (>15 methods or >500 lines per class)
    - MNT-SIG-: method signature quality (boolean flags, unclear returns)
    - MNT-ERR-: error contract inconsistency (mixed raise/return patterns in same service)

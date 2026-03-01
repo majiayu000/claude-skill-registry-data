@@ -206,6 +206,31 @@ Receives `contextStore` with: `tech_stack`, `best_practices`, `principles`, `cod
 
 **Effort:** S-M (refactor signatures + callers)
 
+### 10. Side-Effect Cascade Depth
+
+**What:** Functions triggering cascading chains of external side-effects (DB writes → notifications → metrics → limits).
+
+**Detection:**
+**MANDATORY READ:** `shared/references/ai_ready_architecture.md` for side-effect markers, false positive exclusions, and opaque sink rules.
+- Glob `**/services/**/*.{py,ts,js,cs,java}` to find service files
+- For each public function: check body for side-effect markers (per reference)
+- Recursively follow called internal functions for additional markers
+- Calculate max chain depth from entry point
+
+**Severity:**
+- **HIGH:** cascade_depth >= 4
+- **MEDIUM:** cascade_depth = 3
+- OK: depth <= 2
+
+**Recommendation:** Refactor to flat orchestration — extract side-effects into independent sink functions. See reference.
+
+**Effort:** M-L
+
+**Output:** Also generate summary Pipe/Sink table per module:
+
+| Module | Sinks (0-1) | Shallow Pipes (2) | Deep Pipes (3+) | Sink Ratio |
+|--------|-------------|-------------------|-----------------|------------|
+
 ## Scoring Algorithm
 
 **MANDATORY READ:** Load `shared/references/audit_scoring.md` for unified scoring formula.
@@ -214,7 +239,7 @@ Receives `contextStore` with: `tech_stack`, `best_practices`, `principles`, `cod
 
 **MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format.
 
-Write report to `{output_dir}/624-quality-{domain}.md` (or `624-quality.md` in global mode) with `category: "Code Quality"` and checks: cyclomatic_complexity, deep_nesting, long_methods, god_classes, too_many_params, quadratic_algorithms, n_plus_one, magic_numbers, method_signatures.
+Write report to `{output_dir}/624-quality-{domain}.md` (or `624-quality.md` in global mode) with `category: "Code Quality"` and checks: cyclomatic_complexity, deep_nesting, long_methods, god_classes, too_many_params, quadratic_algorithms, n_plus_one, magic_numbers, method_signatures, cascade_depth.
 
 Return summary to coordinator:
 ```
@@ -235,8 +260,8 @@ Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 
 - contextStore parsed (including domain_mode, current_domain, output_dir)
 - scan_path determined (domain path or codebase root)
-- All 9 checks completed (scoped to scan_path):
-  - complexity, nesting, length, god classes, parameters, O(n²), N+1, constants, method signatures
+- All 10 checks completed (scoped to scan_path):
+  - complexity, nesting, length, god classes, parameters, O(n²), N+1, constants, method signatures, cascade depth
 - Findings collected with severity, location, effort, recommendation, domain
 - Score calculated
 - Report written to `{output_dir}/624-quality-{domain}.md` (atomic single Write call)

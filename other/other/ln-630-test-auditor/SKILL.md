@@ -240,6 +240,37 @@ score = max(0, 10 - penalty)
 - Categories 1-3, 5-6 (Business Logic, E2E, Value, Isolation, Anti-Patterns) → single tables (global)
 - Category 4 (Coverage Gaps) → subtables per domain (if domain_mode="domain-aware")
 
+**Context Validation (Post-Filter):**
+
+**MANDATORY READ:** Load `shared/references/context_validation.md`
+
+Apply Rules 1, 5 + test-specific filters to merged findings:
+```
+FOR EACH finding WHERE severity IN (HIGH, MEDIUM):
+  # Rule 1: ADR/Planned Override
+  IF finding matches ADR → advisory "[Planned: ADR-XXX]"
+
+  # Rule 5: Locality/Single-Consumer
+  IF "extract shared helper" suggestion AND consumer_count == 1 → advisory
+
+  # Test-specific: Custom wrapper detection
+  IF "framework test" finding (ln-631) AND test imports custom wrapper class:
+    → advisory (tests custom logic, not framework)
+
+  # Test-specific: Setup/fixture code
+  IF "The Liar" finding (ln-635) AND file is conftest/fixture/setup:
+    → advisory (setup code, no assertions expected)
+
+  # Test-specific: Parameterized test
+  IF "The Giant" finding (ln-635) AND test is parameterized/data-driven:
+    → severity -= 1 (size from data, not complexity)
+
+Downgraded findings → "Advisory Findings" section in report.
+Recalculate scores excluding advisory findings from penalty.
+```
+
+**Exempt:** Coverage gap CRITICAL findings (ln-634), risk-value scores (ln-633).
+
 ## Output Format
 
 ```markdown

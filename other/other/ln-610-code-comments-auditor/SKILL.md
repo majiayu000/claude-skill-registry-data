@@ -29,7 +29,8 @@ Audit code comments and docstrings quality. Universal for any tech stack.
 2. **Extract:** Parse inline comments + docstrings/JSDoc
 3. **Audit:** Run 6 category checks (see Audit Categories below)
 4. **Score:** Calculate X/10 per category
-5. **Report:** Output findings and recommended actions
+5. **Context Validation:** Post-filter findings (see below)
+6. **Report:** Output findings and recommended actions
 
 ## Audit Categories
 
@@ -41,6 +42,33 @@ Audit code comments and docstrings quality. Universal for any tech stack.
 | 4 | **Docstrings Quality** | Match function signatures; parameters documented; return types accurate |
 | 5 | **Actuality** | Comments match code behavior; no stale references; examples runnable |
 | 6 | **Legacy Cleanup** | No TODO without context; no commented-out code; no deprecated notes |
+
+### Context Validation (Post-Filter)
+
+**MANDATORY READ:** Load `shared/references/context_validation.md`
+
+Apply Rule 1 + comment-specific inline filters:
+```
+FOR EACH finding WHERE severity IN (HIGH, MEDIUM):
+  # Rule 1: ADR/Planned Override
+  IF finding matches ADR → advisory "[Planned: ADR-XXX]"
+
+  # Comment-specific: Per-category density targets
+  IF Cat 2 (Density) finding:
+    Classify file by path:
+    - test/ or tests/           → target density 2-10%
+    - infra/ or config/ or ci/  → target density 5-15%
+    - business/domain/services  → target density 15-25%
+    Recalculate with per-category target instead of fixed 15-20%.
+    If >50% comments are docstrings → calculate inline density separately.
+
+  # Comment-specific: Complexity context for WHY-not-WHAT
+  IF Cat 1 (WHY not WHAT) finding:
+    - If file McCabe complexity > 15 → WHAT comments acceptable (complex logic)
+    - If file in domain/ or business/ → explanatory comments OK (domain knowledge)
+
+Downgraded findings → separate "Advisory" note in report.
+```
 
 ## Output Format
 

@@ -31,7 +31,8 @@ Audit project documentation quality. Universal for any tech stack.
 3. **Audit Categories 1-7:** Run structural checks (see Audit Categories below)
 4. **Semantic Audit (Category 8):** For each project document, delegate to ln-601-semantic-content-auditor
 5. **Score:** Calculate X/10 per category (including semantic scores from ln-601)
-6. **Report:** Output findings and recommended actions
+6. **Context Validation:** Post-filter findings (see below)
+7. **Report:** Output findings and recommended actions
 
 ### Phase 4: Semantic Audit Delegation
 
@@ -64,6 +65,31 @@ FOR doc IN [CLAUDE.md, docs/README.md, docs/project/*.md]:
 | 6 | **Legacy Cleanup** | No history sections; no "was changed" notes; no deprecated info; current state only |
 | 7 | **Stack Adaptation** | Links/refs match project stack; no Python examples in .NET project; official docs for correct platform |
 | 8 | **Semantic Content** | **Delegated to ln-601:** Content matches SCOPE; serves project goals; descriptions match actual code behavior; architecture/API docs reflect reality |
+
+### Context Validation (Post-Filter)
+
+**MANDATORY READ:** Load `shared/references/context_validation.md`
+
+Apply Rule 1 + doc-specific inline filters:
+```
+FOR EACH finding WHERE severity IN (HIGH, MEDIUM):
+  # Rule 1: ADR/Planned Override
+  IF finding matches ADR → advisory "[Planned: ADR-XXX]"
+
+  # Doc-specific: Compression context
+  IF Cat 3 (Compression) finding:
+    - Skip if path in references/ or templates/ (reference docs = naturally large)
+    - Skip if filename contains architecture/design/api_spec
+    - Skip if tables+lists > 50% of content (already structured, not verbose prose)
+
+  # Doc-specific: Actuality severity calibration
+  IF Cat 5 (Actuality) finding:
+    - Path/function COMPLETELY missing → CRITICAL (broken docs)
+    - Path exists but deprecated/renamed → HIGH (not CRITICAL)
+    - Example code outdated but concept valid → MEDIUM
+
+Downgraded findings → "Advisory Findings" section in report.
+```
 
 ## Output Format
 

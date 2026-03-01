@@ -139,6 +139,8 @@ Step 8: Update & Commit
    - **Cross-file DRY:** For each NEW function/class/handler created by task, Grep `src/` for similar names/patterns (count mode). If 3+ files contain similar logic → add CONCERN: `MNT-DRY-CROSS: {pattern} appears in {count} files — consider extracting to shared module.` This catches cross-story duplication that per-task review misses. <!-- Defense-in-depth: also checked by ln-511 MNT-DRY- -->
    - No hardcoded creds/URLs/magic numbers; config in env/config.
    - Error handling: all external calls (API, DB, file I/O) wrapped in try/catch or equivalent. No swallowed exceptions. Layering respected; reuse existing components. <!-- Defense-in-depth: layers also checked by ln-511 ARCH-LB- -->
+   - Side-effect breadth: service functions with 3+ side-effect categories → CONCERN: `ARCH-AI-SEB` <!-- Defense-in-depth: also ln-511, ln-624 Rule 10 -->
+   - Interface honesty: read-named functions (get_/find_/check_) with write side-effects → CONCERN: `ARCH-AI-AH` <!-- Defense-in-depth: also ln-511, ln-643 Rule 6 -->
    - Logging: errors at ERROR; auth/payment events at INFO; debug data at DEBUG. No sensitive data in logs.
    - Comments: explain WHY not WHAT; no commented-out code; docstrings on public methods; Task ID present in new code blocks (`// See PROJ-123`).
    - Naming: follows project's existing convention (check 3+ similar files). No abbreviations except domain terms. No single-letter variables (except loops).

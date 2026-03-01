@@ -324,6 +324,43 @@ FOR EACH report_file IN Glob("docs/project/.audit/6*.md"):
 **Global categories** (Security, Build, etc.) → single Findings table per category.
 **Domain-aware categories** → subtables per domain (one per file).
 
+### Step 6.7: Context Validation (Post-Filter)
+
+**MANDATORY READ:** Load `shared/references/context_validation.md`
+
+Apply Rules 1-5 to assembled findings. Uses data already in context:
+- ADR list (loaded in Phase 1 from `docs/reference/adrs/` or `docs/decisions/`)
+- tech_stack metadata (Phase 1)
+- Worker report files (already read in Step 6.6)
+
+```
+FOR EACH finding IN assembled_findings WHERE severity IN (HIGH, MEDIUM):
+  # Rule 1: ADR/Planned Override
+  IF finding matches ADR title/description → advisory "[Planned: ADR-XXX]"
+
+  # Rule 2: Trivial DRY
+  IF DRY finding AND duplicated_lines < 5 → remove finding
+
+  # Rule 3: Cohesion (god_classes, long_methods, large_file)
+  IF size-based finding:
+    Read flagged file ONCE, check 4 cohesion indicators
+    IF cohesion >= 3 → advisory "[High cohesion module]"
+
+  # Rule 4: Already-Latest
+  IF dependency finding: cross-check ln-622 audit output
+    IF latest + 0 CVEs → remove finding
+
+  # Rule 5: Locality/Single-Consumer
+  IF DRY/schema finding: Grep import count
+    IF import_count == 1 → advisory "[Single consumer, locality correct]"
+    IF import_count <= 3 with different API contracts → advisory "[API contract isolation]"
+
+Downgraded findings → "Advisory Findings" section in report.
+Recalculate category scores excluding advisory findings from penalty.
+```
+
+**Exempt:** Security (ln-621), N+1 queries, CRITICAL build errors, concurrency (ln-628).
+
 ## Output Format
 
 **MANDATORY READ:** Load `shared/templates/codebase_audit_template.md` for full report structure.
@@ -341,6 +378,7 @@ Report is written to `docs/project/codebase_audit.md` using the template. Key se
 Write consolidated report to `docs/project/codebase_audit.md`:
 - Use template structure from codebase_audit_template.md
 - Fill all sections with aggregated worker data
+- Include "Advisory Findings" section with context-validated downgrades
 - Overwrite previous report (each audit is a full snapshot)
 
 ## Critical Rules
@@ -369,9 +407,11 @@ Write consolidated report to `docs/project/codebase_audit.md`:
 - Results aggregated from return values (scores) + file reads (findings tables)
 - Domain Health Summary built (if domain_mode="domain-aware")
 - Cross-Domain DRY analysis completed from ln-623 FINDINGS-EXTENDED blocks (if domain-aware)
-- Compliance score (X/10) calculated per category + overall (skipped workers excluded from average)
+- Context validation (Step 6.7) applied: ADR matches, cohesion checks, locality, trivial DRY filtered
+- Advisory findings separated from penalty-scored findings
+- Compliance score (X/10) calculated per category + overall (skipped workers + advisory excluded)
 - Executive Summary and Strengths sections included
-- Report written to `docs/project/codebase_audit.md`
+- Report written to `docs/project/codebase_audit.md` with Advisory Findings section
 - Sources consulted listed with URLs
 
 ## Workers

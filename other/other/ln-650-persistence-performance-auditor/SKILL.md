@@ -128,6 +128,33 @@ FOR EACH worker IN [ln-651, ln-652, ln-653]:
 2. Calculate overall score: average of 3 category scores
 3. Sum severity counts across all workers
 4. Sort findings by severity (CRITICAL → HIGH → MEDIUM → LOW)
+5. Context Validation (Post-Filter)
+
+**Context Validation:**
+
+**MANDATORY READ:** Load `shared/references/context_validation.md`
+
+Apply Rules 1, 6 to merged findings:
+```
+FOR EACH finding WHERE severity IN (HIGH, MEDIUM):
+  # Rule 1: ADR/Planned Override
+  IF finding matches ADR → advisory "[Planned: ADR-XXX]"
+
+  # Rule 6: Execution Context
+  IF finding.check IN (blocking_io, redundant_fetch, transaction_wide, cpu_bound):
+    context = 0
+    - Function in __init__/setup/bootstrap/migrate → context += 1
+    - File in tasks/jobs/cron/                      → context += 1
+    - Has timeout/safeguard nearby                  → context += 1
+    - Small data (<100KB file, <100 items dataset)  → context += 1
+    IF context >= 3 → advisory
+    IF context >= 1 → severity -= 1
+
+Downgraded findings → "Advisory Findings" section in report.
+Recalculate overall score excluding advisory findings from penalty.
+```
+
+**Exempt:** Missing rollback CRITICAL, N-UPDATE loops in hot paths.
 
 ## Output Format
 

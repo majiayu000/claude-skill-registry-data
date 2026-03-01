@@ -53,6 +53,7 @@ L2 Coordinator that analyzes implemented architectural patterns against current 
 | ln-643-api-contract-auditor | Audit API contracts, DTOs, layer leakage | Phase 4 |
 | ln-644-dependency-graph-auditor | Build dependency graph, detect cycles, validate boundaries, calculate metrics | Phase 4 |
 | ln-645-open-source-replacer | Search OSS replacements for custom modules via MCP Research | Phase 4 |
+| ln-646-project-structure-auditor | Audit physical structure, hygiene, naming conventions | Phase 4 |
 
 **Prompt template:**
 ```
@@ -226,6 +227,9 @@ IF domain_mode == "domain-aware":
     Task(ln-645-open-source-replacer)
       Input: codebase_root, tech_stack, output_dir,
              domain_mode="domain-aware", current_domain=domain.name, scan_path=domain.path
+    Task(ln-646-project-structure-auditor)
+      Input: codebase_root, output_dir,
+             domain_mode="domain-aware", current_domain=domain.name, scan_path=domain.path
 ELSE:
   Task(ln-642-layer-boundary-auditor)
     Input: architecture_path, codebase_root, skip_violations, output_dir
@@ -235,6 +239,8 @@ ELSE:
     Input: architecture_path, codebase_root, output_dir
   Task(ln-645-open-source-replacer)
     Input: codebase_root, tech_stack, output_dir
+  Task(ln-646-project-structure-auditor)
+    Input: codebase_root, output_dir
 
 # Apply layer deductions from ln-642 return values (score + issue counts)
 # Detailed violations read from files in Phase 6
@@ -263,6 +269,7 @@ All workers write reports to `{output_dir}/` and return minimal summary:
 | ln-643 | `Score: X.X/10 (C:N K:N Q:N I:N) \| Issues: N` | `643-api-contract[-{domain}].md` |
 | ln-644 | `Score: X.X/10 \| Issues: N (C:N H:N M:N L:N)` | `644-dep-graph[-{domain}].md` |
 | ln-645 | `Score: X.X/10 \| Issues: N (C:N H:N M:N L:N)` | `645-open-source-replacer[-{domain}].md` |
+| ln-646 | `Score: X.X/10 \| Issues: N (C:N H:N M:N L:N)` | `646-structure[-{domain}].md` |
 
 Coordinator parses scores/counts from return values (0 file reads for aggregation tables). Reads files only for cross-domain aggregation (Phase 6) and report assembly (Phase 8).
 
@@ -326,6 +333,20 @@ IF domain_mode == "domain-aware":
         recommendation: "Single migration across all domains using recommended OSS package"
       })
 
+  # Step 5: Read DATA-EXTENDED from ln-646 files
+  FOR EACH file IN Glob("{output_dir}/646-structure-*.md"):
+    Read file -> extract <!-- DATA-EXTENDED ... --> JSON
+  # Group findings by dimension across domains
+  FOR EACH dimension IN ["junk_drawers", "naming_violations"]:
+    domains_with_issue = ln646_data.filter(d => d.dimensions[dimension].issues > 0).map(d => d.domain)
+    IF len(domains_with_issue) >= 2:
+      systemic_findings.append({
+        severity: "MEDIUM",
+        issue: f"Systemic structure issue: {dimension} in {len(domains_with_issue)} domains",
+        domains: domains_with_issue,
+        recommendation: "Standardize project structure conventions across domains"
+      })
+
   # Cross-domain SDP violations
   FOR EACH sdp IN ln644_sdp_violations:
     IF sdp.from.domain != sdp.to.domain:
@@ -361,9 +382,10 @@ pattern_scores = [parse_score(r) for r in ln641_returns]  # Each 0-10
 layer_score = parse_score(ln642_return)                     # 0-10
 api_score = parse_score(ln643_return)                       # 0-10
 graph_score = parse_score(ln644_return)                     # 0-10
+structure_score = parse_score(ln646_return)                   # 0-10
 
 # Step 2: Calculate architecture_health_score (ln-645 NOT included — separate metric)
-all_scores = pattern_scores + [layer_score, api_score, graph_score]
+all_scores = pattern_scores + [layer_score, api_score, graph_score, structure_score]
 architecture_health_score = round(average(all_scores) * 10)  # 0-100 scale
 
 # Step 2b: Separate reuse opportunity score (informational, no SLA enforcement)
@@ -373,6 +395,17 @@ reuse_opportunity_score = parse_score(ln645_return)  # 0-10, NOT in architecture
 # >= 80: "healthy"
 # 70-79: "warning"
 # < 70: "critical"
+
+# Step 3: Context Validation (Post-Filter)
+# MANDATORY READ: shared/references/context_validation.md
+# Apply Rules 1, 3 to ln-641 anti-pattern findings:
+#   Rule 1: Match god_class/large_file findings against ADR list
+#   Rule 3: For god_class deductions (-5 compliance):
+#     Read flagged file ONCE, check 4 cohesion indicators
+#     (public_func_count <= 2, subdirs, shared_state > 60%, CC=1)
+#     IF cohesion >= 3: restore deducted -5 points
+#     Note in patterns_catalog.md: "[Advisory: high cohesion module]"
+# Recalculate architecture_health_score with restored points
 ```
 
 ### Phase 8: Report + Trend Analysis
@@ -460,6 +493,19 @@ reuse_opportunity_score = parse_score(ln645_return)  # 0-10, NOT in architecture
   "requires_attention": [
     {"pattern": "Event-Driven", "avg_score": 58, "critical_issues": ["No DLQ", "No schema versioning"]}
   ],
+  "project_structure": {
+    "structure_score": 7.5,
+    "tech_stack_detected": "react",
+    "dimensions": {
+      "file_hygiene": {"checks": 6, "issues": 1},
+      "ignore_files": {"checks": 4, "issues": 0},
+      "framework_conventions": {"checks": 3, "issues": 1},
+      "domain_organization": {"checks": 3, "issues": 1},
+      "naming_conventions": {"checks": 3, "issues": 0}
+    },
+    "junk_drawers": 1,
+    "naming_violations_pct": 3
+  },
   "reuse_opportunities": {
     "reuse_opportunity_score": 6.5,
     "modules_scanned": 15,
@@ -518,6 +564,7 @@ reuse_opportunity_score = parse_score(ln645_return)  # 0-10, NOT in architecture
 - Dependency graph audited via ln-644 (reports written to `.audit/`)
 - All patterns analyzed via ln-641 (reports written to `.audit/`)
 - Open-source replacement opportunities audited via ln-645 (reports written to `.audit/`)
+- Project structure audited via ln-646 (reports written to `.audit/`)
 - If domain-aware: cross-domain aggregation completed via DATA-EXTENDED from files
 - Gaps identified (undocumented, missing components, layer violations, inconsistent, systemic)
 - Catalog updated with scores, dates, Layer Boundary Status
@@ -540,6 +587,7 @@ reuse_opportunity_score = parse_score(ln645_return)  # 0-10, NOT in architecture
 - API contract audit: `../ln-643-api-contract-auditor/SKILL.md`
 - Dependency graph audit: `../ln-644-dependency-graph-auditor/SKILL.md`
 - Open-source replacement audit: `../ln-645-open-source-replacer/SKILL.md`
+- Project structure audit: `../ln-646-project-structure-auditor/SKILL.md`
 
 ---
 **Version:** 2.0.0

@@ -146,6 +146,23 @@ local_in_repo = Grep("AsyncSessionLocal\(\)", "**/repositories/**/*.py")
 
 **Effort:** M
 
+#### 3.3 Flat Orchestration Violations
+
+**What:** Service-layer functions calling other services that call yet other services — deep orchestration chains.
+
+**Detection:** Per `shared/references/ai_ready_architecture.md` — map service imports, find chain depth.
+
+**Violation Rules:**
+
+| Condition | Severity | Issue |
+|-----------|----------|-------|
+| Service chain >= 3 (A→B→C→D) | HIGH | Deep orchestration |
+| Service chain = 2 (A→B→C) | MEDIUM | Consider flattening |
+
+**Recommendation:** Extract orchestrator calling all services at same level. Each service becomes a sink.
+
+**Effort:** L
+
 ---
 
 ### Phase 4: Check Pattern Coverage
