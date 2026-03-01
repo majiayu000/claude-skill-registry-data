@@ -12,8 +12,8 @@ Print this complete reference for the user. Do not add any commentary.
 
 | Command | Description |
 |---------|-------------|
-| `/idea [feature]` | Brainstorm in plan mode, generate PRD for Ralph |
-| `/sign` | Add a learned pattern for Ralph to remember |
+| `/prd [feature]` | Brainstorm feature, generate executable PRD for Ralph |
+| `/lesson`| Add a learned pattern for Ralph to remember |
 | `/my-dna` | Set up your personal style preferences |
 | `/vibe-check` | Audit code quality before shipping |
 | `/review` | Code review with OWASP security checks |
@@ -58,12 +58,12 @@ Print this complete reference for the user. Do not add any commentary.
 | `npx ralph check` | Run all configured checks |
 | `npx ralph verify TASK-001` | Verify a specific task |
 
-### Signs (Learned Patterns)
+### Lessons (Learned Patterns)
 | Command | Description |
 |---------|-------------|
-| `npx ralph signs` | List all learned patterns |
-| `npx ralph sign "pattern" [cat]` | Add pattern with optional category |
-| `npx ralph unsign <id or text>` | Remove a sign by ID or text match |
+| `npx ralph lessons` | List all learned patterns |
+| `npx ralph lesson "pattern" [cat]` | Add pattern with optional category |
+| `npx ralph forget <id or text>` | Remove a lesson by ID or text match |
 
 ---
 
@@ -78,7 +78,7 @@ Print this complete reference for the user. Do not add any commentary.
 ## The Loop
 
 ```
-/idea [feature]          Brainstorm → PRD
+/prd [feature]           Brainstorm → PRD
 npx ralph run            Autonomous coding
 npx ralph status         Check progress
 npx ralph stop           Stop after current story
@@ -88,10 +88,10 @@ npx ralph stop           Stop after current story
 
 ## Slash Command Details
 
-### /idea [feature description]
-Brainstorm in plan mode, explore codebase, ask clarifying questions.
-- Writes idea to `docs/ideas/{feature}.md`
-- On approval, splits into PRD stories
+### /prd [feature description]
+Brainstorm feature, explore codebase, ask clarifying questions.
+- Accepts a description, idea file (`docs/ideas/{name}.md`), or plan file (`docs/plans/{name}.md`)
+- Splits into executable PRD stories
 - Writes to `.ralph/prd.json`
 
 ### /review [file or selection]
@@ -135,20 +135,20 @@ Creates `~/.claude/DNA.md` - applies to all your projects.
 
 ---
 
-## Signs Examples
+## Lessons Examples
 
 ```bash
 # Add patterns Ralph should follow
-npx ralph sign "Always use camelCase in WebSocket responses" frontend
-npx ralph sign "Run migrations before seeding" backend
-npx ralph sign "Check for null before accessing nested props" general
+npx ralph lesson "Always use camelCase in WebSocket responses" frontend
+npx ralph lesson "Run migrations before seeding" backend
+npx ralph lesson "Check for null before accessing nested props" general
 
 # List learned patterns
-npx ralph signs
+npx ralph lessons
 
-# Remove a sign
-npx ralph unsign sign-001
-npx ralph unsign "camelCase"
+# Remove a lesson
+npx ralph forget lesson-001
+npx ralph forget "camelCase"
 ```
 
 ---
@@ -187,14 +187,14 @@ npx ralph unsign "camelCase"
 .ralph/
 ├── config.json      # Verification checks, settings
 ├── prd.json         # Current feature PRD
-├── signs.json       # Learned patterns
+├── lessons.json     # Learned patterns
 ├── progress.txt     # Activity log
 ├── archive/         # Completed PRDs
 └── screenshots/     # Browser verification captures
 
 CLAUDE.md            # Project standards (shared with team)
 PROMPT.md            # Base prompt for Ralph sessions
-docs/ideas/          # Brainstorm outputs from /idea
+docs/ideas/          # Brainstorm outputs from /prd
 
 # Global files (your home directory)
 ~/.claude/

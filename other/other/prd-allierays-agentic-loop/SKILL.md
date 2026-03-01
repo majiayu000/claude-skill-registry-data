@@ -1,5 +1,5 @@
 ---
-description: Generate an executable PRD for Ralph from an idea file or description.
+description: Brainstorm, harden, and generate an executable PRD for Ralph from a description, idea file, or plan file.
 ---
 
 # /prd - Generate PRD for Ralph
@@ -19,21 +19,29 @@ $ARGUMENTS
 ### Step 1: Determine Input Type
 
 **If `$ARGUMENTS` is empty:**
-1. Check for idea files:
+1. Scan for existing source files:
    ```bash
-   ls docs/ideas/*.md 2>/dev/null || echo "No ideas found"
+   ls docs/ideas/*.md 2>/dev/null || echo "No idea files found"
+   ls docs/plans/*.md 2>/dev/null || echo "No plan files found"
    ```
-2. Ask: "Would you like to:
-   - Convert an idea file (e.g., `/prd auth` for `docs/ideas/auth.md`)
-   - Describe a feature directly (e.g., `/prd 'Add user logout button'`)"
+2. If source files exist, use AskUserQuestion to let the user pick:
+   - **Question:** "What should I build the PRD from?"
+   - **Header:** "PRD source"
+   - **Options:** List discovered idea/plan files (up to 3-4 most relevant), plus a "Describe a feature" option that says "Type a description directly (e.g., 'Add user logout button')"
+   - If no source files found, skip AskUserQuestion and just say: "Describe the feature you'd like to build (e.g., `/prd 'Add user logout button'`)"
 
-**If `$ARGUMENTS` looks like a file reference** (no spaces, matches `docs/ideas/*.md`):
+**If `$ARGUMENTS` looks like a plan file** (`plans/` prefix, `docs/plans/` path, or full path to a plan file):
 - If it's a full path, use it directly
-- If it's just a name like `content-engine`, look for `docs/ideas/content-engine.md`
+- If it's `plans/name` or just a prefix, look for `docs/plans/{name}.md`
+- Proceed to "Read and Understand the Plan"
+
+**If `$ARGUMENTS` looks like an idea file reference** (no spaces, matches `docs/ideas/*.md`):
+- If it's a full path, use it directly
+- If it's just a name like `content-engine`, check `docs/ideas/content-engine.md` first, fall back to `docs/plans/content-engine.md`
 - Proceed to "Read and Understand the Idea"
 
 **If `$ARGUMENTS` is a description** (has spaces, is a sentence):
-- This is the **quick PRD flow** - no `docs/ideas/` file created
+- This is the **quick PRD flow** - no source file created
 - Good for small features that don't need documentation
 - Skip to "Confirm Understanding" below
 
@@ -48,9 +56,9 @@ Say: "I've read `{path}`. Here's my understanding:
 **Solution:** {one line}
 **Scope:** {key items}
 
-I'll now split this into {N} stories for Ralph. Continue?"
+I'll now ask a few hardening questions before generating stories."
 
-**STOP and wait for user confirmation.**
+**Proceed to Step 2.5.**
 
 ### Step 2b: Confirm Understanding (from description)
 
@@ -65,14 +73,64 @@ Use the detected tech stack, test runners, and constraints when building each st
 
 Then say: "I'll create a PRD for: **{description}**
 
-Before I generate stories, quick questions:
-1. **Type:** Frontend or backend?
-2. **Scale:** Any specific limits (users, items, rate limits)?
-3. **Anything else** I should know?
+Here's what I found in your codebase: [brief summary of tech stack, existing patterns]
 
-(Or say 'go' to proceed with defaults)"
+I'll now ask a few hardening questions before generating stories."
 
-**STOP and wait for user input** (can be brief or 'go').
+**Proceed to Step 2.5.**
+
+### Step 2c: Read and Understand the Plan (from plan file)
+
+Read the plan file and summarize:
+
+Say: "I've read `{path}`. Here's my understanding:
+
+**Feature/Goal:** {name}
+**Approach:** {summary of approach}
+**Key Files:** {files mentioned}
+**Scope:** {key items}
+
+I'll now ask a few hardening questions before generating stories."
+
+**Proceed to Step 2.5.**
+
+### Step 2.5: Harden the Requirements
+
+**This step runs for ALL input types** (idea file, plan file, or description). Review what you already know from the input and ask ONLY about gaps — skip questions the input already answers.
+
+Say: "Before I generate stories, I want to make sure we've covered the key areas:"
+
+**Scope & UX** (always ask):
+- What's in scope vs out of scope?
+- Is this user-facing? What does the user see/do?
+- What are the edge cases?
+- **Responsive design** (if frontend): Must it work on mobile/tablet? What breakpoints? Any layout changes between screen sizes?
+
+**Security** (ask if feature involves auth, user input, or sensitive data):
+- Authentication: Who can access this? Login required?
+- Passwords: How stored? (must be hashed, never plain text)
+- User input: What validation needed? (SQL injection, XSS)
+- Sensitive data: What should NEVER be in API responses?
+- Rate limiting: Should this be rate limited?
+
+**Scale** (ask if feature involves lists, data, or APIs):
+- How many items expected? (10s, 1000s, millions?)
+- Pagination needed? What's the max per page?
+- Caching needed? How fresh must data be?
+- Database indexes: What will be queried/sorted frequently?
+
+**Migration** (ask if feature involves restructuring or moving code):
+- Source → destination mapping: Where does code currently live? Where should it end up?
+- Phases: What's the logical order?
+- Verification: What commands prove each phase worked?
+
+After presenting the hardening questions, use AskUserQuestion:
+- **Question:** "Answer the questions above, or proceed with sensible defaults?"
+- **Header:** "Hardening"
+- **Options:**
+  - **"Go with defaults"** — "Proceed with sensible defaults for unanswered questions"
+  - **"Let me answer"** — "I'll respond to the questions above"
+- If the user selects "Let me answer" or "Other", **STOP and wait for their response** before continuing.
 
 ### Step 3: Check for Existing PRD
 
@@ -81,19 +139,34 @@ cat .ralph/prd.json 2>/dev/null
 ```
 
 If it exists, read it and say:
-"`.ralph/prd.json` exists with {N} stories ({M} completed, {P} pending).
+"`.ralph/prd.json` exists with {N} stories ({M} completed, {P} pending). I'll append new stories to it."
 
-Options:
-- **'append'** - Add new stories to the existing PRD (recommended)
-- **'overwrite'** - Replace it entirely
-- **'cancel'** - Stop here"
+**Default behavior is append** — just proceed. Do NOT ask for confirmation unless the user explicitly says "overwrite" or "replace".
 
-**STOP and wait for user choice.**
-
-If user chooses **'append'**:
+When appending:
 - Find highest existing story number (ignore prefix - could be US-005 or TASK-005)
 - **Always use TASK- prefix** for new stories (e.g., if highest is US-005 or TASK-005, new stories start at TASK-006)
 - New stories will be added after existing ones
+
+### Step 3.5: Read Existing Test Infrastructure
+
+Before writing stories, discover the project's existing test setup so stories reference real fixtures, helpers, and patterns:
+
+```bash
+# Find test config and fixtures
+ls tests/conftest.py tests/fixtures/ src/__tests__/ e2e/ 2>/dev/null
+cat tests/conftest.py 2>/dev/null | head -50
+cat e2e/*.config.ts 2>/dev/null | head -30
+
+# Find existing test patterns
+grep -r "def test_\|async def test_\|it(\|describe(" tests/ src/__tests__/ e2e/ 2>/dev/null | head -20
+```
+
+Use what you find to:
+- Reference correct fixture names in story `notes` (e.g., "Use `db_session` and `client` fixtures from `conftest.py`")
+- Match existing test file organization (e.g., `tests/domains/auth/` not `tests/test_auth.py`)
+- Include specific test scenarios in `notes` based on patterns you see in existing tests
+- Reference real helpers (e.g., "Use `MockRequest` from `test_auth.py` for request mocking")
 
 ### Step 4: Split into Stories
 
@@ -156,12 +229,54 @@ Does acceptanceCriteria include:
 - Large datasets → "Database query uses index on [column]"
 
 #### 6e. Context (for all stories)
-- Does `contextFiles` include the idea file (has ASCII mockups)?
+- Does `contextFiles` include the source file (idea or plan file, especially if it has ASCII mockups)?
 - Does `contextFiles` include styleguide (if exists)?
 - Does `techStack` include the relevant stack for this story?
 - Does `constraints` include any rules this story must follow?
 - For frontend: Is `testUrl` set?
 - For frontend: Is `mcp` set to `["playwright", "devtools"]`?
+- For frontend: Does `notes` include Playwright MCP visual verification instructions? (See "Playwright MCP for Visual Verification" section below)
+
+#### 6f. E2E Coverage (MANDATORY for user-facing features)
+If the feature has ANY frontend stories that add or modify user-facing UI:
+- There MUST be at least one story with `"e2e"` in its `testing.types`
+- That story MUST have Playwright test files in `testing.files.e2e`
+- That story's `testSteps` MUST include `npx playwright test ...`
+- The E2E story should be the LAST story (depends on all others) to test the full integrated flow
+- If no E2E story exists, CREATE one as the final story
+
+#### 6h. Responsive Design (for frontend stories)
+Every frontend story that creates or modifies user-facing UI MUST include:
+- `acceptanceCriteria` with responsive behavior: "Layout adapts to mobile (< 768px), tablet (768-1024px), and desktop (> 1024px)"
+- `testSteps` with a viewport resize check OR Playwright test that validates mobile layout
+- `notes` with Playwright MCP instructions to screenshot at mobile and desktop widths
+
+**Example acceptanceCriteria:**
+```
+"Component renders in single-column layout on mobile (< 768px)",
+"Navigation collapses to hamburger menu on mobile",
+"Touch targets are at least 44x44px on mobile"
+```
+
+**Example testSteps:**
+```
+"npx playwright test tests/e2e/dashboard.spec.ts --project=mobile"
+```
+
+If a frontend story has no responsive criteria and the feature is user-facing, add them.
+
+#### 6g. Test Scenario Specificity
+Every story's `notes` field MUST include **3+ specific test scenarios** that describe what to test and how. Vague notes like "Test the service methods" are not acceptable.
+
+Good example:
+```
+"notes": "Test scenarios: (1) Exchange valid auth code → returns JWT with correct claims. (2) Exchange expired code → returns 401 with 'code_expired' error. (3) Exchange code with wrong redirect_uri → returns 400. (4) Verify nonce mismatch is rejected. Use existing test fixtures: db_session, client from conftest.py."
+```
+
+Bad example:
+```
+"notes": "Test the authentication service methods with proper mocking."
+```
 
 **Fix any issues you find:**
 
@@ -172,11 +287,16 @@ Does acceptanceCriteria include:
 | Story depends on something not created | Reorder or add missing dependency |
 | Auth story missing security criteria | Add password hashing, rate limiting to acceptanceCriteria |
 | List endpoint missing pagination | Add pagination criteria to acceptanceCriteria |
-| Frontend missing contextFiles | Add idea file + styleguide paths |
+| Frontend missing contextFiles | Add source file (idea or plan) + styleguide paths |
 | Frontend missing testUrl | Add URL from config |
 | Frontend missing mcp | Add `"mcp": ["playwright", "devtools"]` |
+| Frontend notes missing Playwright MCP guidance | Add visual verification instructions to notes (see Playwright MCP section) |
 | Story missing techStack | Add relevant subset of detected tech |
 | Story missing constraints | Add applicable rules for this story |
+| testSteps use import-checks (`python -c "from X import Y"`) | Replace with curl, pytest, or real behavioral tests |
+| No E2E story for user-facing feature | Add a final E2E story with Playwright tests |
+| Story notes lack specific test scenarios | Add 3+ concrete scenarios with inputs, expected outputs, and fixture references |
+| Frontend story missing responsive design | Add mobile/tablet/desktop acceptanceCriteria and viewport test steps |
 
 ### Step 7: Reorder if Needed
 
@@ -213,14 +333,18 @@ Open the PRD for review:
 open -a TextEdit .ralph/prd.json
 ```
 
-Say: "I've {created|updated} the PRD with {N} stories and opened it in TextEdit.
+Say: "I've {created|updated} the PRD with {N} stories and opened it in TextEdit."
 
-Review the PRD and let me know:
-- **'approved'** - Ready to run in your other terminal
-- **'edit [changes]'** - Tell me what to change
-- Or edit the JSON directly and say **'done'**"
+Then use AskUserQuestion with **multiSelect: true**:
+- **Question:** "How does the PRD look?"
+- **Header:** "PRD review"
+- **multiSelect:** true
+- **Options:**
+  - **"Approved"** — "PRD is good — ready to run with Ralph"
+  - **"Edit"** — "I'll tell you what to change"
+  - **"I edited the JSON"** — "I made changes directly in the file, re-validate it"
 
-**STOP and wait for user response.**
+If the user selects "Edit" (with or without other selections), **STOP and wait for their changes**. If "I edited the JSON" is selected, re-read and re-validate the PRD. If only "Approved" is selected, proceed to Step 9.
 
 ### Step 9: Final Instructions
 
@@ -228,7 +352,7 @@ Once approved, say:
 
 "PRD is ready!
 
-**Source:** `{idea-file-path}`
+**Source:** `{source-file-path}`
 **PRD:** `.ralph/prd.json` ({N} stories)
 
 To start autonomous development, open another terminal and run:
@@ -250,7 +374,7 @@ Ralph will work through each story, running tests and committing as it goes."
 {
   "feature": {
     "name": "Feature Name",
-    "ideaFile": "docs/ideas/{feature-name}.md",
+    "ideaFile": "docs/ideas/{feature-name}.md or docs/plans/{feature-name}.md",
     "branch": "feature/{feature-name}",
     "status": "pending"
   },
@@ -358,7 +482,7 @@ Ralph will work through each story, running tests and committing as it goes."
 
 | Field | Required | Description |
 |-------|----------|-------------|
-| `feature` | Yes | Feature name, ideaFile, branch, status |
+| `feature` | Yes | Feature name, ideaFile (idea or plan path), branch, status |
 | `metadata` | Yes | Created date, estimated stories, complexity |
 
 **Note:** URLs come from `.ralph/config.json`, not the PRD. Use `{config.urls.backend}` in testSteps.
@@ -583,8 +707,29 @@ Specify which MCP tools Claude should use for verification:
 | `devtools` | Console errors, network inspection, DOM debugging |
 | `postgres` | Database verification (future) |
 
-**Frontend stories** default to `["playwright", "devtools"]`.
+**Frontend stories** MUST have `"mcp": ["playwright", "devtools"]`.
 **Backend-only stories** can use `[]` or omit.
+
+### Playwright MCP for Visual Verification
+
+Frontend stories should include guidance in `notes` for using Playwright MCP during implementation. This is how Ralph visually verifies that UI changes actually render correctly — screenshots catch layout bugs, missing elements, and broken styles that unit tests miss.
+
+**Every frontend story's `notes` should include Playwright MCP instructions like:**
+
+```
+Use Playwright MCP to verify:
+1. Navigate to {testUrl} and take a screenshot
+2. Verify [specific element] is visible and correctly styled
+3. Click [interactive element] and verify [expected behavior]
+4. Check browser console for errors after interactions
+```
+
+**Example for a login page SSO button story:**
+```json
+"notes": "Use Playwright MCP to verify: navigate to /login, screenshot the page, confirm 'Sign in with Okta' button is visible below the email/password form with a divider. Click the button and verify it redirects to /api/v1/auth/okta/authorize. Check devtools console for errors."
+```
+
+This is NOT a replacement for automated Playwright tests — it's additional visual verification that Ralph performs during the implementation step using the MCP browser tools.
 
 ---
 
@@ -697,10 +842,14 @@ Ralph reads `.ralph/config.json` and expands `{config.urls.backend}` before runn
   "grep -q 'function createUser' app/services/user.py",  // ❌ PASSES if code exists, even if broken
   "grep -q 'export default' src/components/Dashboard.tsx", // ❌ PASSES even if component crashes
   "test -f src/api/users.ts",                            // ❌ PASSES if file exists, even if empty
+  "python -c \"from app.services.auth import AuthService\"", // ❌ PASSES if import works, says nothing about behavior
+  "python -c \"hasattr(AuthService, 'login')\"",          // ❌ PASSES if method exists, even if completely broken
   "Visit http://localhost:3000/dashboard",                // ❌ Not executable
   "User can see the dashboard"                            // ❌ Not executable
 ]
 ```
+
+**NEVER use import-checks (`python -c "from X import Y"` or `hasattr`) as test steps.** These only verify a symbol exists — they don't test behavior, error handling, or integration. A function that raises on every call still passes an import check.
 
 **NEVER use grep/test to verify behavior.** These will mark stories as PASSED when the feature is broken.
 
@@ -715,6 +864,7 @@ Use `contextFiles` to point Claude to important reference material:
 ```json
 "contextFiles": [
   "docs/ideas/dashboard.md",
+  "docs/plans/auth-feature.md",
   "src/styles/styleguide.html",
   "docs/api-spec.md"
 ]
@@ -736,7 +886,9 @@ This is where ASCII mockups, design specs, and detailed requirements live. Claud
 ### UI Stories Must Include
 - `testUrl` - Where to verify
 - `mcp: ["playwright", "devtools"]` - Browser tools
-- Acceptance criteria for: page loads, elements render, mobile works
+- Acceptance criteria for: page loads, elements render correctly
+- **Responsive design criteria**: layout adapts at mobile (< 768px), tablet (768-1024px), desktop (> 1024px) breakpoints
+- Playwright test or MCP verification at multiple viewport widths
 
 ### API Stories Must Include
 - `apiContract` - Expected request/response

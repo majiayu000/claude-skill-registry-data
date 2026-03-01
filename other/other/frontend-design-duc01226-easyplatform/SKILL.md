@@ -1,12 +1,38 @@
 ---
 name: frontend-design
-description: "[Frontend] Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, or applications, OR when they provide screenshots/images/designs to replicate or draw inspiration from. For screenshot inputs, extracts design guidelines first using ai-multimodal analysis, then implements code following those guidelines. Generates creative, polished code that avoids generic AI aesthetics."
+version: 1.0.0
+description: '[Frontend] Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, or applications, OR when they provide screenshots/images/designs to replicate or draw inspiration from. For screenshot inputs, extracts design guidelines first using ai-multimodal analysis, then implements code following those guidelines. Generates creative, polished code that avoids generic AI aesthetics.'
+allowed-tools: NONE
 license: Complete terms in LICENSE.txt
 ---
+
+> **[IMPORTANT]** Use `TaskCreate` to break ALL work into small tasks BEFORE starting — including tasks for each file read. This prevents context loss from long files. For simple tasks, AI may ask user whether to skip.
+
+## Quick Summary
+
+**Goal:** Create distinctive, production-grade frontend interfaces with high design quality, avoiding generic AI aesthetics.
+
+**Workflow:**
+
+1. **Detect Input Type** — Screenshot/image provided vs building from scratch
+2. **Extract Design Guidelines** — For screenshots: analyze colors, typography, spacing, layout via ai-multimodal
+3. **Design Thinking** — Choose bold aesthetic direction (tone, differentiation, constraints)
+4. **Implement Code** — Production-grade, visually striking, cohesive code
+5. **Verify Quality** — Compare implementation to original design/vision
+
+**Key Rules:**
+
+- For screenshot inputs, extract design guidelines FIRST before coding
+- Never use generic fonts (Inter, Roboto, Arial) or cliched color schemes
+- Match implementation complexity to aesthetic vision (maximalist = elaborate, minimalist = precise)
 
 This skill guides creation of distinctive, production-grade frontend interfaces that avoid generic "AI slop" aesthetics. Implement real working code with exceptional attention to aesthetic details and creative choices.
 
 The user provides frontend requirements: a component, page, application, or interface to build. They may include context about the purpose, audience, or technical constraints.
+
+## Prerequisites
+
+**⚠️ MUST READ** `references/design-extraction-overview.md` before executing screenshot-based workflows — contains design guideline extraction protocols, analysis prompts, and visual verification methods required by the screenshot/image input workflow below. For asset generation workflows, also **⚠️ MUST READ** `references/asset-generation.md`.
 
 ## Input Types & Workflows
 
@@ -15,22 +41,22 @@ The user provides frontend requirements: a component, page, application, or inte
 **MANDATORY workflow for screenshot/image/design inputs**:
 
 1. **Extract Design Guidelines** using `./references/design-extraction-overview.md`:
-   - Analyze screenshot/image with ai-multimodal skill
-   - Extract: colors (hex codes), typography (fonts, sizes, weights), spacing scale, layout patterns, visual hierarchy
-   - Document findings in project `docs/design-guidelines/extracted-design.md`
-   - See `./references/extraction-prompts.md` for comprehensive analysis prompts
+    - Analyze screenshot/image with ai-multimodal skill
+    - Extract: colors (hex codes), typography (fonts, sizes, weights), spacing scale, layout patterns, visual hierarchy
+    - Document findings in project `docs/design-guidelines/extracted-design.md`
+    - See `./references/extraction-prompts.md` for comprehensive analysis prompts
 
 2. **Implement Code** following extracted guidelines:
-   - Use exact colors from extraction (hex codes)
-   - Match typography specifications (fonts, sizes, weights, line-heights)
-   - Replicate layout structure and spacing system
-   - Maintain visual hierarchy and component patterns
-   - Preserve aesthetic direction and mood
+    - Use exact colors from extraction (hex codes)
+    - Match typography specifications (fonts, sizes, weights, line-heights)
+    - Replicate layout structure and spacing system
+    - Maintain visual hierarchy and component patterns
+    - Preserve aesthetic direction and mood
 
 3. **Verify Quality** using `./references/visual-analysis-overview.md`:
-   - Compare implementation to original screenshot
-   - Check color accuracy, spacing consistency, typography matching
-   - Ensure all design elements preserved
+    - Compare implementation to original screenshot
+    - Check color accuracy, spacing consistency, typography matching
+    - Ensure all design elements preserved
 
 **Important**: Do NOT skip to implementation. Extract design guidelines FIRST, then code.
 
@@ -41,6 +67,7 @@ Follow "Design Thinking" process below to create original design.
 ## Design Thinking
 
 Before coding, understand the context and commit to a BOLD aesthetic direction:
+
 - **Purpose**: What problem does this interface solve? Who uses it?
 - **Tone**: Pick an extreme: brutally minimal, maximalist chaos, retro-futuristic, organic/natural, luxury/refined, playful/toy-like, editorial/magazine, brutalist/raw, art deco/geometric, soft/pastel, industrial/utilitarian, etc. There are so many flavors to choose from. Use these for inspiration but design one that is true to the aesthetic direction.
 - **Constraints**: Technical requirements (framework, performance, accessibility).
@@ -49,6 +76,7 @@ Before coding, understand the context and commit to a BOLD aesthetic direction:
 **CRITICAL**: Choose a clear conceptual direction and execute it with precision. Bold maximalism and refined minimalism both work - the key is intentionality, not intensity.
 
 Then implement working code (HTML/CSS/JS, React, Vue, etc.) that is:
+
 - Production-grade and functional
 - Visually striking and memorable
 - Cohesive with a clear aesthetic point-of-view
@@ -57,6 +85,7 @@ Then implement working code (HTML/CSS/JS, React, Vue, etc.) that is:
 ## Frontend Aesthetics Guidelines
 
 Focus on:
+
 - **Typography**: Choose fonts that are beautiful, unique, and interesting. Avoid generic fonts like Arial and Inter; opt instead for distinctive choices that elevate the frontend's aesthetics; unexpected, characterful font choices. Pair a distinctive display font with a refined body font.
 - **Color & Theme**: Commit to a cohesive aesthetic. Use CSS variables for consistency. Dominant colors with sharp accents outperform timid, evenly-distributed palettes.
 - **Motion**: Use animations for effects and micro-interactions. Prioritize CSS-only solutions for HTML. Use Motion library for React when available (Use `anime.js` for animations: `./references/animejs.md`). Focus on high-impact moments: one well-orchestrated page load with staggered reveals (animation-delay) creates more delight than scattered micro-interactions. Use scroll-triggering and hover states that surprise.
@@ -69,12 +98,15 @@ Focus on:
 **Quick Start**: `./references/ai-multimodal-overview.md`
 
 ### Generating New Visual Assets
+
 When you need to GENERATE new hero images, backgrounds, textures, or decorative elements that match the design aesthetic, use the `ai-multimodal` skill. This ensures generated assets align with the design thinking and aesthetics guidelines rather than producing generic imagery.
 
 ### Analyzing Provided Screenshots/Images/Designs
+
 When user provides screenshots, photos, or design references to analyze or replicate, use `./references/design-extraction-overview.md` to extract design guidelines BEFORE implementation. This is MANDATORY for screenshot inputs (see "Input Types & Workflows" above).
 
 **Workflows**:
+
 - `./references/asset-generation.md` - Generate design-aligned visual assets
 - `./references/visual-analysis-overview.md` - Analyze and verify asset quality (modular)
 - `./references/design-extraction-overview.md` - Extract guidelines from inspiration (modular)
@@ -90,7 +122,15 @@ Interpret creatively and make unexpected choices that feel genuinely designed fo
 
 Remember: Claude is capable of extraordinary creative work. Don't hold back, show what can truly be created when thinking outside the box and committing fully to a distinctive vision.
 
-## IMPORTANT Task Planning Notes
+## Related
 
-- Always plan and break many small todo tasks
-- Always add a final review todo task to review the works done at the end to find any fix or enhancement needed
+- `frontend-angular`
+- `ui-ux-pro-max`
+- `shadcn-tailwind`
+
+---
+
+**IMPORTANT Task Planning Notes (MUST FOLLOW)**
+
+- Always plan and break work into many small todo tasks
+- Always add a final review todo task to verify work quality and identify fixes/enhancements

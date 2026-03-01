@@ -32,6 +32,8 @@ description: 수업 그룹(시간표/출석부/출결관리/수업관리/강의�
 | `components/Timetable/Math/context/SimulationContext.tsx` | 수학 시뮬레이션 컨텍스트 |
 | `components/Attendance/AttendanceManager.tsx` | 출석부 메인 |
 | `components/Attendance/components/StudentRow.tsx` | 학생 행 컴포넌트 |
+| `components/Attendance/components/SalarySettings.tsx` | 급여 설정 컴포넌트 |
+| `components/Attendance/components/SalarySettingsTab.tsx` | 급여 설정 탭 |
 | `components/DailyAttendance/DailyAttendanceManager.tsx` | 출결 관리 메인 |
 | `components/ClassManagement/ClassManagementTab.tsx` | 수업 관리 메인 |
 | `components/ClassManagement/ClassDetailModal.tsx` | 수업 상세 모달 |
@@ -57,6 +59,9 @@ description: 수업 그룹(시간표/출석부/출결관리/수업관리/강의�
 | `hooks/useTextbooks.ts` | 교재 수납 데이터 + mutation (5 mutations, 자동 매칭 포함) |
 | `hooks/useTextbookRequests.ts` | 교재 요청서 CRUD + 계좌설정 + 카탈로그 (6 mutations) |
 | `data/textbookCatalog.ts` | 157개 교재 카탈로그 정적 데이터 |
+| `hooks/useSubjectClassStudents.ts` | 통합 과목별 수업 학생 데이터 훅 (수학/영어/Generic 공통) |
+| `utils/enrollment.ts` | 수강종료 판정 유틸리티 (getEndedSubjects 단일 소스) |
+| `utils/firestoreConverters.ts` | Firestore Timestamp → 날짜 변환 유틸리티 |
 
 ## Workflow
 

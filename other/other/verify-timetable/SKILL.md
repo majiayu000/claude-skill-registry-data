@@ -10,6 +10,9 @@ description: 시간표 도메인(Math/shared)의 핵심 패턴과 규칙을 검�
 3. **Firebase writeBatch 패턴** - 반 이동 저장 시 writeBatch → commit → invalidateQueries 시퀀스가 올바른지 검증
 4. **createPortal 사용** - 툴팁/오버레이가 createPortal로 렌더링되어 overflow 잘림을 방지하는지 검증
 5. **테스트 커버리지** - 주요 컴포넌트/훅에 대한 테스트 파일이 존재하는지 검증
+6. **고스트 카드 패턴** - 스케줄 변경 예정 클래스의 고스트 블록이 올바르게 생성/렌더링되는지 검증
+7. **퇴원 드롭존 패턴** - ClassCard 하단 퇴원 드롭존이 수정 모드에서만 표시되고 enrollment만 종료하는지 검증
+8. **스케줄 자동 적용** - pendingScheduleDate 도래 시 자동 적용 로직이 올바르게 동작하는지 검증
 
 ## When to Run
 
@@ -27,7 +30,7 @@ description: 시간표 도메인(Math/shared)의 핵심 패턴과 규칙을 검�
 | `components/Timetable/Math/components/ClassCard.tsx` | 수업 카드 컴포넌트 (React.memo + 커스텀 비교함수) |
 | `components/Timetable/Math/components/TimetableGrid.tsx` | 시간표 그리드 (React.memo) |
 | `components/Timetable/Math/components/TimetableHeader.tsx` | 시간표 헤더 (모드 전환, 검색, 보기 설정) |
-| `components/Timetable/Math/components/ScheduledDateModal.tsx` | 반 이동 예정일 모달 |
+| `components/Timetable/Math/components/ScheduledDateModal.tsx` | 예정일 모달 (반이동/퇴원/스케줄변경 공용) |
 | `components/Timetable/Math/hooks/useStudentDragDrop.ts` | 학생 드래그&드롭 + 반 이동 저장 훅 |
 | `components/Timetable/Math/context/SimulationContext.tsx` | 시나리오 모드 Context (writeBatch, sanitizeForFirestore) |
 | `components/Timetable/Math/ScenarioManagementModal.tsx` | 시나리오 관리 모달 (writeBatch) |
@@ -37,6 +40,12 @@ description: 시간표 도메인(Math/shared)의 핵심 패턴과 규칙을 검�
 | `components/Timetable/Math/hooks/useTimetableClasses.ts` | 시간표 수업 데이터 훅 |
 | `components/Timetable/Math/hooks/useClassOperations.ts` | 수업 CRUD 훅 |
 | `components/Timetable/Math/hooks/useMathClassStudents.ts` | 수학 수업 학생 데이터 훅 |
+| `components/Timetable/Math/MathClassTab.tsx` | 수학 시간표 탭 (getWeekReferenceDate 사용) |
+| `components/Timetable/English/EnglishTimetable.tsx` | 영어 시간표 (getWeekReferenceDate 사용) |
+| `types/timetable.ts` | TimetableClass 타입 (pendingSchedule, isPendingSchedule 등) |
+| `hooks/useClassMutations.ts` | 수업 수정 mutation (pendingSchedule 저장/삭제) |
+| `components/ClassManagement/EditClassModal.tsx` | 수업 수정 모달 (스케줄 변경 감지 + 예정일 모달 연동) |
+| `utils/dateUtils.ts` | 날짜 유틸 (getWeekReferenceDate - 주차 기준일 계산) |
 | `tests/components/ClassCard.StudentItem.test.tsx` | ClassCard StudentItem 테스트 |
 | `tests/components/ScheduledDateModal.test.tsx` | ScheduledDateModal 테스트 |
 | `tests/hooks/useStudentDragDrop.test.ts` | useStudentDragDrop 테스트 |
@@ -238,6 +247,124 @@ grep -n "scheduledDate" components/Timetable/Math/hooks/useStudentDragDrop.ts
 
 **수정:** PendingMove에 scheduledDate 추가, 저장 시 `effectiveDate = move.scheduledDate || defaultToday` 분기 추가
 
+### Step 12: getWeekReferenceDate 일관성 검증
+
+**파일:** `utils/dateUtils.ts`, 시간표 컴포넌트 전체
+
+**검사:** 주차 이동 시 과거/현재/미래 주에 따라 기준일을 올바르게 계산하는 `getWeekReferenceDate` 유틸이 모든 시간표 컴포넌트에서 일관되게 사용되는지 확인합니다.
+
+```bash
+grep -rn "getWeekReferenceDate" utils/dateUtils.ts components/Timetable/ --include="*.tsx" --include="*.ts"
+```
+
+**PASS 기준:**
+- `utils/dateUtils.ts`에 `getWeekReferenceDate` export 함수 존재
+- `TimetableManager.tsx`, `MathClassTab.tsx`, `TimetableGrid.tsx`, `IntegrationClassCard.tsx`, `EnglishTimetable.tsx`에서 모두 사용
+- 인라인 referenceDate 계산 대신 유틸 함수를 사용
+
+**FAIL 기준:** 일부 컴포넌트에서 인라인으로 `formatDateKey(new Date())`만 사용 (과거 주 복원 불가)
+
+**수정:** 인라인 계산을 `getWeekReferenceDate(weekStart)` 호출로 교체
+
+### Step 13: ClassCard 퇴원예정 가로줄 패턴 검증
+
+**파일:** `components/Timetable/Math/components/ClassCard.tsx`
+
+**검사:** 퇴원예정 학생이 별도 섹션이 아닌 재원생 섹션에 오렌지 배경 + 가로줄(line-through)로 표시되는지 확인합니다 (통합뷰와 동일 동작).
+
+```bash
+grep -n "isWithdrawalScheduled" components/Timetable/Math/components/ClassCard.tsx | head -5
+grep -n "bg-orange-100.*line-through" components/Timetable/Math/components/ClassCard.tsx
+grep -n "commonWithdrawnFuture.*\[\]" components/Timetable/Math/components/ClassCard.tsx
+```
+
+**PASS 기준:**
+- `isWithdrawalScheduled` prop이 StudentItemProps에 존재
+- `bg-orange-100 text-orange-800 line-through` 스타일이 적용
+- `commonWithdrawnFuture: any[] = []` (별도 섹션 빈 배열)
+- 단일셀 `withdrawnFuture: any[] = []` (별도 섹션 빈 배열)
+
+**FAIL 기준:** 퇴원예정 학생이 `withdrawnFuture` 배열에 분리되어 별도 "퇴원예정" 섹션에 표시
+
+**수정:** 퇴원예정 학생을 active 필터에 포함 + isWithdrawalScheduled prop으로 가로줄 스타일 적용
+
+### Step 14: ClassCard.memo 비교함수 referenceDate 포함 검증
+
+**파일:** `components/Timetable/Math/components/ClassCard.tsx`
+
+**검사:** ClassCard의 React.memo 커스텀 비교함수에 `referenceDate`가 포함되어, 주차 이동 시 카드가 올바르게 리렌더되는지 확인합니다.
+
+```bash
+grep -A30 "React.memo(ClassCard," components/Timetable/Math/components/ClassCard.tsx | grep "referenceDate"
+```
+
+**PASS 기준:** `prevProps.referenceDate === nextProps.referenceDate` 비교가 memo 비교함수에 포함
+**FAIL 기준:** referenceDate 비교 누락 (주차 이동 시 학생 상태가 갱신되지 않음)
+
+**수정:** memo 비교함수에 `prevProps.referenceDate === nextProps.referenceDate &&` 추가
+
+### Step 15: 고스트 카드 렌더링 패턴 검증
+
+**파일:** `components/Timetable/Math/components/ClassCard.tsx`, `components/Timetable/TimetableManager.tsx`
+
+**검사:** 스케줄 변경 예정(`pendingSchedule`)이 있는 클래스에 대해 (1) TimetableManager에서 고스트 클래스 엔트리를 생성하고, (2) ClassCard에서 `isPendingSchedule` 분기로 회색 점선 카드를 렌더링하는지 확인합니다.
+
+```bash
+grep -n "isPendingSchedule" components/Timetable/Math/components/ClassCard.tsx | head -5
+grep -n "_pending" components/Timetable/TimetableManager.tsx | head -3
+grep -n "pendingSchedule.*pendingScheduleDate" components/Timetable/TimetableManager.tsx | head -3
+```
+
+**PASS 기준:**
+- ClassCard에 `if (cls.isPendingSchedule)` 분기 + `bg-gray-200 border border-dashed border-gray-400` 스타일
+- TimetableManager의 `filteredClasses`에서 `id: ${cls.id}_pending` 고스트 엔트리 생성
+- 고스트 엔트리에 `isPendingSchedule: true`, `studentList: []`, `studentIds: []` 설정
+
+**FAIL 기준:** isPendingSchedule 분기 없이 고스트 카드가 일반 카드와 동일하게 렌더링
+
+**수정:** ClassCard에 isPendingSchedule early return 추가 + TimetableManager filteredClasses에 고스트 엔트리 추가
+
+### Step 16: 퇴원 드롭존 패턴 검증
+
+**파일:** `components/Timetable/Math/components/ClassCard.tsx`, `components/Timetable/TimetableManager.tsx`
+
+**검사:** ClassCard에 퇴원 드롭존이 존재하고, 수정 모드에서만 표시되며, TimetableManager에서 enrollment의 withdrawalDate만 설정하는지 확인합니다.
+
+```bash
+grep -n "onWithdrawalDrop" components/Timetable/Math/components/ClassCard.tsx | head -5
+grep -n "withdrawalModalInfo" components/Timetable/TimetableManager.tsx | head -5
+grep -n "canEdit && onWithdrawalDrop" components/Timetable/Math/components/ClassCard.tsx | head -3
+```
+
+**PASS 기준:**
+- ClassCard에 `onWithdrawalDrop` prop + `canEdit && onWithdrawalDrop` 조건부 렌더링
+- TimetableManager에 `withdrawalModalInfo` 상태 + `handleWithdrawalDrop` + `handleWithdrawalConfirm`
+- `handleWithdrawalConfirm`에서 enrollment `withdrawalDate`만 설정 (학생 글로벌 status 미변경)
+
+**FAIL 기준:** 퇴원 드롭존이 조회 모드에서도 표시 또는 학생 글로벌 status를 변경
+
+**수정:** `canEdit && onWithdrawalDrop` 가드 추가, enrollment doc만 업데이트
+
+### Step 17: 스케줄 변경 자동 적용 패턴 검증
+
+**파일:** `components/Timetable/TimetableManager.tsx`, `hooks/useClassMutations.ts`
+
+**검사:** (1) TimetableManager 마운트 시 pendingScheduleDate가 도래한 클래스의 스케줄을 자동 적용하고, (2) useClassMutations에서 pendingSchedule 저장/삭제가 올바른지 확인합니다.
+
+```bash
+grep -n "pendingScheduleDate.*todayStr\|자동적용\|applyPending" components/Timetable/TimetableManager.tsx | head -5
+grep -n "pendingSchedule\|clearPending\|deleteField" hooks/useClassMutations.ts | head -10
+```
+
+**PASS 기준:**
+- TimetableManager에 마운트 시 `pendingScheduleDate <= todayStr` 체크 + class doc/enrollments 업데이트 + pending 필드 삭제
+- useClassMutations에 `pendingSchedule`, `pendingScheduleDate`, `clearPending` 필드 지원
+- `clearPending: true` 시 `deleteField()` 사용
+
+**FAIL 기준:** 자동 적용 useEffect 누락 또는 pending 필드 삭제 없이 무한 적용 반복
+
+**수정:** useEffect 추가 (마운트 시 1회), clearPending에서 deleteField() 호출
+
 ## Output Format
 
 | # | 검사 항목 | 파일 | 결과 | 상세 |
@@ -254,6 +381,12 @@ grep -n "scheduledDate" components/Timetable/Math/hooks/useStudentDragDrop.ts
 | 10 | invalidateMathCaches 일관성 | useClassOperations.ts | PASS/FAIL | |
 | 11 | effectiveClasses 패턴 | useStudentDragDrop.ts | PASS/FAIL | |
 | 12 | scheduledDate 처리 | useStudentDragDrop.ts | PASS/FAIL | |
+| 13 | getWeekReferenceDate 일관성 | 시간표 전체 | PASS/FAIL | |
+| 14 | 퇴원예정 가로줄 패턴 | ClassCard.tsx | PASS/FAIL | |
+| 15 | memo referenceDate 비교 | ClassCard.tsx | PASS/FAIL | |
+| 16 | 고스트 카드 렌더링 | ClassCard.tsx + TimetableManager.tsx | PASS/FAIL | |
+| 17 | 퇴원 드롭존 | ClassCard.tsx + TimetableManager.tsx | PASS/FAIL | |
+| 18 | 스케줄 자동 적용 | TimetableManager.tsx + useClassMutations.ts | PASS/FAIL | |
 
 ## Exceptions
 
@@ -265,3 +398,5 @@ grep -n "scheduledDate" components/Timetable/Math/hooks/useStudentDragDrop.ts
 4. **useClassOperations가 writeBatch를 사용하지 않음** - 단일 문서 CRUD는 setDoc/updateDoc이 적절
 5. **useMathConfig/useMathSettings에 useRef가 없음** - 설정 훅은 stale closure 문제가 발생하지 않는 단순한 구조
 6. **IntegrationMiniGridRow에 createPortal이 없음** - 미니 그리드 행은 툴팁이 없는 간략 표시 컴포넌트로 createPortal 불필요
+7. **고스트 카드에 드래그/드롭이 비활성** - 고스트 카드는 예정 스케줄 미리보기이므로 학생 이동 기능이 없는 것이 정상
+8. **TimetableManager에서 직접 Firestore 쓰기 (자동 적용)** - mutation 훅이 아닌 직접 updateDoc 사용은 마운트 시 1회 실행되는 자동 적용 로직의 특수 케이스로 정상

@@ -44,12 +44,14 @@ Local addresses: `localhost`, `127.0.0.1`, private IP ranges
 
 ### Domain Coverage
 
-Root domains cover their subdomains, but different root domains or TLDs are separate:
+Claude Code's `WebFetch(domain:X)` uses **exact host matching** — subdomains are NOT covered by a root domain entry:
 
-- **`github.com`** covers: `api.github.com`, `docs.github.com`, `status.github.com`
-- **`github.io`** is a separate root domain (different TLD), does NOT cover `github.com` and vice versa
-- **`github.com`** does NOT cover `githubusercontent.com` (separate root domain)
-- **`localhost`** is separate from `localhost:3000` (ports are distinct entities, not subdomains)
+- **`github.com`** does NOT cover `api.github.com` or `docs.github.com` — each needs its own entry
+- **`github.io`** does NOT cover `github.github.io` — separate entry required
+- **`githubusercontent.com`** and `raw.githubusercontent.com` are separate entries (different hostnames)
+- **`localhost`** is separate from `localhost:3000` (ports are distinct)
+
+Each hostname that needs to be fetched must be listed explicitly.
 
 Local/private addresses always DENY:
 
@@ -65,7 +67,7 @@ Rules for detecting when a specific permission is already covered by a broader e
 
 #### WebFetch Domains
 
-Domain coverage follows the same rules as the **Domain Coverage** section above. Ports are distinct:
+Each hostname must be listed exactly — there is no wildcard or subdomain coverage. Ports are also distinct:
 
 - `localhost` does NOT cover `localhost:3000`
 
@@ -76,11 +78,10 @@ Broader wildcards cover more specific patterns:
 - `Read(**)` covers any Read permission
 - `Glob(**/*)` covers `Glob(**/*.js)`, `Glob(**/package.json)`
 
-### Root Domain Recommendations
+### Hostname Recommendations
 
-For well-known vendors (GitHub, Docker, Google, Apple, Microsoft), prefer root domain over individual subdomains.
-
-If multiple subdomains found → suggest adding root domain instead.
+Since `WebFetch` uses exact host matching, list each hostname explicitly. When multiple hostnames share a
+common vendor, add all needed hostnames individually rather than assuming a root domain covers them.
 
 ### Related Permission Suggestions
 

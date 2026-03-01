@@ -1,9 +1,30 @@
 ---
 name: sequential-thinking
-description: "[Planning] Apply structured, reflective problem-solving for complex tasks requiring multi-step analysis, revision capability, and hypothesis verification. Use for complex problem decomposition, adaptive planning, analysis needing course correction, problems with unclear scope, multi-step solutions, and hypothesis-driven work."
 version: 1.0.0
+description: '[AI & Tools] Apply structured, reflective problem-solving for complex tasks requiring multi-step analysis, revision capability, and hypothesis verification. Use for complex problem decomposition, adaptive planning, analysis needing course correction, problems with unclear scope, multi-step solutions, and hypothesis-driven work.'
+allowed-tools: NONE
 license: MIT
 ---
+
+> **[IMPORTANT]** Use `TaskCreate` to break ALL work into small tasks BEFORE starting — including tasks for each file read. This prevents context loss from long files. For simple tasks, AI may ask user whether to skip.
+
+## Quick Summary
+
+**Goal:** Solve complex problems through structured, reflective thought sequences with dynamic adjustment and revision.
+
+**Workflow:**
+
+1. **Estimate** — Start with loose thought count, adjust as understanding evolves
+2. **Structure Thoughts** — One aspect per thought; state assumptions and uncertainties
+3. **Revise/Branch** — Mark revisions of earlier thoughts; branch for alternative approaches
+4. **Hypothesize & Verify** — Generate solution hypothesis, test it, iterate until verified
+5. **Complete** — Mark final only when solution verified and confidence achieved
+
+**Key Rules:**
+
+- Dynamically expand/contract thought count as complexity changes
+- Explicitly mark revisions with original reasoning and why it changed
+- Can apply explicitly (visible markers) or implicitly (internal methodology)
 
 # Sequential Thinking
 
@@ -21,24 +42,29 @@ Structured problem-solving via manageable, reflective thought sequences with dyn
 ## Core Process
 
 ### 1. Start with Loose Estimate
+
 ```
 Thought 1/5: [Initial analysis]
 ```
+
 Adjust dynamically as understanding evolves.
 
 ### 2. Structure Each Thought
+
 - Build on previous context explicitly
 - Address one aspect per thought
 - State assumptions, uncertainties, realizations
 - Signal what next thought should address
 
 ### 3. Apply Dynamic Adjustment
+
 - **Expand**: More complexity discovered → increase total
 - **Contract**: Simpler than expected → decrease total
 - **Revise**: New insight invalidates previous → mark revision
 - **Branch**: Multiple approaches → explore alternatives
 
 ### 4. Use Revision When Needed
+
 ```
 Thought 5/8 [REVISION of Thought 2]: [Corrected understanding]
 - Original: [What was stated]
@@ -47,23 +73,29 @@ Thought 5/8 [REVISION of Thought 2]: [Corrected understanding]
 ```
 
 ### 5. Branch for Alternatives
+
 ```
 Thought 4/7 [BRANCH A from Thought 2]: [Approach A]
 Thought 4/7 [BRANCH B from Thought 2]: [Approach B]
 ```
+
 Compare explicitly, converge with decision rationale.
 
 ### 6. Generate & Verify Hypotheses
+
 ```
 Thought 6/9 [HYPOTHESIS]: [Proposed solution]
 Thought 7/9 [VERIFICATION]: [Test results]
 ```
+
 Iterate until hypothesis verified.
 
 ### 7. Complete Only When Ready
+
 Mark final: `Thought N/N [FINAL]`
 
 Complete when:
+
 - Solution verified
 - All critical aspects addressed
 - Confidence achieved
@@ -78,6 +110,7 @@ Complete when:
 ## Scripts (Optional)
 
 Optional scripts for deterministic validation/tracking:
+
 - `scripts/process-thought.js` - Validate & track thoughts with history
 - `scripts/format-thought.js` - Format for display (box/markdown/simple)
 
@@ -86,6 +119,7 @@ See README.md for usage examples. Use when validation/persistence needed; otherw
 ## References
 
 Load when deeper understanding needed:
+
 - `references/core-patterns.md` - Revision & branching patterns
 - `references/examples-api.md` - API design example
 - `references/examples-debug.md` - Debugging example
@@ -93,7 +127,9 @@ Load when deeper understanding needed:
 - `references/advanced-techniques.md` - Spiral refinement, hypothesis testing, convergence
 - `references/advanced-strategies.md` - Uncertainty, revision cascades, meta-thinking
 
-## IMPORTANT Task Planning Notes
+---
 
-- Always plan and break many small todo tasks
-- Always add a final review todo task to review the works done at the end to find any fix or enhancement needed
+**IMPORTANT Task Planning Notes (MUST FOLLOW)**
+
+- Always plan and break work into many small todo tasks
+- Always add a final review todo task to verify work quality and identify fixes/enhancements

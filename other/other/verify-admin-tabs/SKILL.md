@@ -91,14 +91,14 @@ grep -n "BillingTable\|BillingForm\|BillingStats\|BillingImportModal" components
 
 ### Step 4: 자료실 CRUD 모달 검증
 
-**검사:** ResourceDashboard에서 자료 추가/미리보기 기능이 연결되어 있는지 확인합니다.
+**검사:** ResourceDashboard에서 자료 추가 모달과 카드 컴포넌트가 연결되어 있는지 확인합니다.
 
 ```bash
-grep -n "ResourceAddModal\|ResourcePreviewPanel\|ResourceCard" components/Resources/ResourceDashboard.tsx | head -10
+grep -n "ResourceAddModal\|ResourceCard" components/Resources/ResourceDashboard.tsx | head -10
 ```
 
-**PASS 기준:** 추가 모달과 미리보기 패널이 참조됨
-**FAIL 기준:** CRUD UI 연결 누락
+**PASS 기준:** ResourceAddModal과 ResourceCard가 참조됨
+**FAIL 기준:** 추가 모달 또는 카드 컴포넌트 연결 누락
 
 ### Step 5: 역할별 탭 접근 권한 정합성 검증
 

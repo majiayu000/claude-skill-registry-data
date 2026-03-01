@@ -108,7 +108,7 @@ Creating Integration: {{source}} → {{target}}
 9️⃣ Does this use middleware?
    (Search for integration platforms)
    - [[System - Kong]] (API Gateway)
-   - [[System - SAP BTP Integration Suite]]
+   - [[System - Cloud Platform Integration Suite]]
    - [[System - Apache Kafka]]
    - None (direct connection)
    Default: None

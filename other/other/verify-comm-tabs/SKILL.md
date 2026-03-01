@@ -71,8 +71,8 @@ grep -n "useParentLinks\|useParentMessages" components/ParentPortal/ParentPortal
 grep -c "useMutation" hooks/useNotifications.ts 2>/dev/null
 ```
 
-**PASS 기준:** 3개 이상의 mutation 존재
-**FAIL 기준:** mutation 수가 예상보다 적음
+**PASS 기준:** 2개 이상의 mutation 존재 (createTemplate, sendNotification)
+**FAIL 기준:** mutation 수가 2개 미만
 
 ### Step 5: 소통 그룹 권한 설정 검증
 

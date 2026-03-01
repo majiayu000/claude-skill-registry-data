@@ -26,8 +26,8 @@ Plans.md のタスクを実装する**主力スキル**。スコープに応じ�
 /work 3                  # タスク3だけ即実行
 /work all                # 全タスクを即実行
 /work 3-6                # タスク3〜6を即実行
-/work --codex            # Codex MCP で実装（スコープを聞く）
-/work --codex all        # Codex MCP で全タスク即実行
+/work --codex            # Codex CLI で実装（スコープを聞く）
+/work --codex all        # Codex CLI で全タスク即実行
 /work --parallel 5       # 並列5ワーカーで実行
 /work --no-commit        # 自動コミット抑制
 /work --resume latest    # 前回セッション再開
@@ -39,7 +39,7 @@ Plans.md のタスクを実装する**主力スキル**。スコープに応じ�
 |--------|-------------|---------|
 | `all` | 全未完了タスクを対象 | - |
 | `N` or `N-M` | タスク番号/範囲指定 | - |
-| `--codex` | Codex MCP で実装委託 | false |
+| `--codex` | Codex CLI で実装委託 | false |
 | `--parallel N` | 並列ワーカー数 | auto |
 | `--sequential` | 並列禁止（直列実行） | - |
 | `--no-commit` | 自動コミット抑制 | false |
@@ -108,6 +108,23 @@ Phase 4: Auto-commit (unless --no-commit)
 Tip 表示
 ```
 
+## Unified Memory Gate（必須）
+
+`/work` 実行時は、以下の順序で Unified Harness Memory を必ず通す:
+
+1. 実装前: `harness_mem_resume_pack(project, session_id?, limit=5, include_private=false)`
+2. マイルストーン到達時（設計確定・大きな修正・方針転換）:
+   `harness_mem_record_checkpoint(session_id, title, content, tags?, privacy_tags?)`
+3. 実装完了時（handoff 前）:
+   `harness_mem_finalize_session(session_id, summary_mode="standard")`
+
+補足:
+- `session_id` は `$CLAUDE_SESSION_ID` → `.claude/state/session.json` の `.session_id` の順で取得する
+- `harness_mem_sessions_list(project, limit=1)` の先頭利用は read-only（resume確認）に限定し、`record_checkpoint` / `finalize_session` は明示 `session_id` が無い場合に失敗扱いとする
+- Codex では `notify` hook（after_agent）とこの手順を併用し、記録漏れを抑える
+- `.codex/history.jsonl` は daemon 側で自動インジェストされるため、手動追記不要
+- いずれかが失敗した場合は `harness_mem_health()` と `scripts/harness-memd doctor` で状態確認し、復旧後に同ステップを再実行する
+
 ## Auto-Iteration (4+ tasks or `all`)
 
 大量タスク時は自動反復ロジックが有効化:
@@ -121,11 +138,11 @@ Tip 表示
 
 ## --codex Engine
 
-`--codex` フラグで Codex MCP にすべての実装を委託:
+`--codex` フラグで Codex CLI にすべての実装を委託:
 
 | 項目 | デフォルト | --codex |
 |------|-----------|---------|
-| 実装主体 | Claude (直接コーディング) | Codex MCP |
+| 実装主体 | Claude (直接コーディング) | Codex CLI |
 | Claude の役割 | 調整 + 実装 | PM (調整のみ) |
 | Edit/Write | 許可 | 禁止 (guard 適用) |
 | 品質保証 | セルフレビュー | AGENTS_SUMMARY + Quality Gates |

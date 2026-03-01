@@ -1,189 +1,52 @@
 ---
 name: kanban
-description: "[Tooling & Meta] Plans dashboard server with progress tracking and timeline visualization. Use when viewing plan directories with progress tracking, Gantt charts, and phase status."
-infer: true
+version: 1.0.0
+description: '[Project Management] AI agent orchestration board (Coming Soon)'
+activation: user-invoked
 ---
 
-# kanban
+> **[IMPORTANT]** Use `TaskCreate` to break ALL work into small tasks BEFORE starting — including tasks for each file read. This prevents context loss from long files. For simple tasks, AI may ask user whether to skip.
 
-Plans dashboard server with progress tracking and timeline visualization.
+## Quick Summary
 
-## Summary
+**Goal:** Launch a visual plans dashboard with progress tracking, phase status, and timeline visualization.
 
-**Goal:** Serve a visual plans dashboard with progress tracking, timeline/Gantt visualization, and phase status indicators.
+**Workflow:**
 
-| Step | Action | Key Notes |
-|------|--------|-----------|
-| 1 | Install dependencies | `cd .claude/skills/kanban && npm install` (requires `gray-matter`) |
-| 2 | Start server | `node .claude/skills/kanban/scripts/server.cjs --dir ./plans --open` |
-| 3 | View dashboard | Progress per plan, Gantt timeline, activity heatmap |
-| 4 | Stop server | `node .claude/skills/kanban/scripts/server.cjs --stop` |
+1. **Invoke** — `/kanban` or `/kanban plans/` to view, `/kanban --stop` to stop
+2. **Start Server** — Run `server.cjs` as background task with `run_in_background: true`
+3. **Report URL** — Parse JSON output and display full URL (including query string) to user
 
-**Key Principles:**
-- Requires npm install before use — without it you get Error 500
-- Reads plan markdown files with frontmatter for phase/status metadata
-- Supports background mode and remote access (--host 0.0.0.0)
+**Key Rules:**
 
-## ⚠️ Installation Required
+- Always run server as Claude Code background task (visible in `/tasks`)
+- Never truncate URL to just host:port; display full path + query string
+- Set `timeout: 300000` to prevent premature termination
 
-**This skill requires npm dependencies.** Run one of the following:
+Plans dashboard with progress tracking and timeline visualization.
 
-```bash
-# Option 1: Install via ClaudeKit CLI (recommended)
-ck init  # Runs install.sh which handles all skills
+## Usage
 
-# Option 2: Manual installation
-cd .claude/skills/kanban
-npm install
-```
-
-**Dependencies:** `gray-matter`
-
-Without installation, you'll get **Error 500** when viewing plan details.
-
-## Purpose
-
-Visual dashboard for viewing plan directories with:
-
-- Progress tracking per plan
-- Timeline/Gantt visualization
-- Phase status indicators
-- Activity heatmap
-
-## Quick Start
-
-```bash
-# View plans dashboard
-node .claude/skills/kanban/scripts/server.cjs \
-  --dir ./plans \
-  --open
-
-# Remote access (all interfaces)
-node .claude/skills/kanban/scripts/server.cjs \
-  --dir ./plans \
-  --host 0.0.0.0 \
-  --open
-
-# Background mode
-node .claude/skills/kanban/scripts/server.cjs \
-  --dir ./plans \
-  --background
-
-# Stop all running servers
-node .claude/skills/kanban/scripts/server.cjs --stop
-```
-
-## Slash Command
-
-Use `/kanban` for quick access:
-
-```bash
-/kanban plans/           # View plans dashboard
-/kanban --stop           # Stop kanban server
-```
+- `/kanban` - View dashboard for ./plans directory
+- `/kanban plans/` - View dashboard for specific directory
+- `/kanban --stop` - Stop running server
 
 ## Features
 
-### Dashboard View
-
 - Plan cards with progress bars
 - Phase status breakdown (completed, in-progress, pending)
-- Last modified timestamps
-- Issue and branch links
-- Priority indicators
-
-### Timeline Visualization
-
-- Gantt-style timeline of plans
-- Duration tracking
+- Timeline/Gantt visualization
 - Activity heatmap
+- Issue and branch links
 
-### Design
-
-- Glassmorphism UI with dark mode
-- Responsive grid layout
-- Warm accent colors
-
-## CLI Options
-
-| Option            | Description                         | Default   |
-| ----------------- | ----------------------------------- | --------- |
-| `--dir <path>`    | Plans directory                     | -         |
-| `--port <number>` | Server port                         | 3500      |
-| `--host <addr>`   | Host to bind (`0.0.0.0` for remote) | localhost |
-| `--open`          | Auto-open browser                   | false     |
-| `--background`    | Run in background                   | false     |
-| `--stop`          | Stop all servers                    | -         |
-
-## Architecture
-
-```
-scripts/
-├── server.cjs               # Main entry point
-└── lib/
-    ├── port-finder.cjs      # Port allocation (3500-3550)
-    ├── process-mgr.cjs      # PID management
-    ├── http-server.cjs      # HTTP routing
-    ├── plan-parser.cjs      # Plan.md parsing
-    ├── plan-scanner.cjs     # Directory scanning
-    ├── plan-metadata-extractor.cjs  # Rich metadata
-    └── dashboard-renderer.cjs       # HTML generation
-
-assets/
-├── dashboard-template.html  # Dashboard HTML template
-├── dashboard.css           # Styles
-└── dashboard.js            # Client interactivity
-```
-
-## HTTP Routes
-
-| Route                   | Description                      |
-| ----------------------- | -------------------------------- |
-| `/` or `/kanban`        | Dashboard view                   |
-| `/kanban?dir=<path>`    | Dashboard for specific directory |
-| `/api/plans`            | JSON API for plans data          |
-| `/api/plans?dir=<path>` | JSON API for specific directory  |
-| `/assets/*`             | Static assets                    |
-| `/file/*`               | Local file serving               |
-
-## Remote Access
-
-When using `--host 0.0.0.0`, the server auto-detects your local network IP:
-
-```json
-{
-  "success": true,
-  "url": "http://localhost:3500/kanban?dir=...",
-  "networkUrl": "http://192.168.2.75:3500/kanban?dir=...",
-  "port": 3500
-}
-```
-
-Use `networkUrl` to access from other devices on the same network.
-
-## Plan Structure
-
-The dashboard scans for directories containing `plan.md` files:
-
-```
-plans/
-├── 251215-feature-a/
-│   ├── plan.md              # Required - parsed for phases
-│   ├── phase-01-setup.md
-│   └── phase-02-impl.md
-├── 251214-feature-b/
-│   └── plan.md
-└── templates/               # Excluded by default
-```
-
-## Execution Details
+## Execution
 
 **IMPORTANT:** Run server as Claude Code background task using `run_in_background: true` with the Bash tool. This makes the server visible in `/tasks` and manageable via `KillShell`.
 
-Check if this script is located in the current workspace or in `$HOME/.claude/skills/kanban` directory:
+Check if this script is located in the current workspace or in `$HOME/.claude/skills/plans-kanban` directory:
 
-- If in current workspace: `$SKILL_DIR_PATH` = `./.claude/skills/kanban/`
-- If in home directory: `$SKILL_DIR_PATH` = `$HOME/.claude/skills/kanban/`
+- If in current workspace: `$SKILL_DIR_PATH` = `./.claude/skills/plans-kanban/`
+- If in home directory: `$SKILL_DIR_PATH` = `$HOME/.claude/skills/plans-kanban/`
 
 ### Stop Server
 
@@ -195,12 +58,14 @@ node $SKILL_DIR_PATH/scripts/server.cjs --stop
 
 ### Start Server
 
-Run the kanban server as CC background task with `--foreground` flag (keeps process alive for CC task management):
+Otherwise, run the kanban server as CC background task with `--foreground` flag (keeps process alive for CC task management):
 
 ```bash
+# Determine plans directory
 INPUT_DIR="{{dir}}"
 PLANS_DIR="${INPUT_DIR:-./plans}"
 
+# Start kanban dashboard
 node $SKILL_DIR_PATH/scripts/server.cjs \
   --dir "$PLANS_DIR" \
   --host 0.0.0.0 \
@@ -218,10 +83,10 @@ Example Bash tool call:
 
 ```json
 {
-  "command": "node .claude/skills/kanban/scripts/server.cjs --dir \"./plans\" --host 0.0.0.0 --open --foreground",
-  "run_in_background": true,
-  "timeout": 300000,
-  "description": "Start kanban server in background"
+    "command": "node .claude/skills/plans-kanban/scripts/server.cjs --dir \"./plans\" --host 0.0.0.0 --open --foreground",
+    "run_in_background": true,
+    "timeout": 300000,
+    "description": "Start kanban server in background"
 }
 ```
 
@@ -233,11 +98,19 @@ After starting, parse the JSON output (e.g., `{"success":true,"url":"http://loca
 
 **CRITICAL:** MUST display the FULL URL including path and query string. NEVER truncate to just `host:port`. The full URL is required for direct access.
 
-## Future Roadmap
+## Future Plans
+
+The `/kanban` command will evolve into **VibeKanban-inspired** AI agent orchestration:
+
+### Phase 1 (Current - MVP)
+
+- ✅ Task board with progress tracking
+- ✅ Visual representation of plans/tasks
+- ✅ Click to view plan details
 
 ### Phase 2 (Worktree Integration)
 
-- Create tasks -> spawn git worktrees
+- Create tasks → spawn git worktrees
 - Assign agents to tasks
 - Track agent progress per worktree
 
@@ -249,19 +122,11 @@ After starting, parse the JSON output (e.g., `{"success":true,"url":"http://loca
 - Agent output streaming
 - Conflict detection
 
-Track progress: <https://github.com/claudekit/claudekit-engineer/issues/189>
+Track progress: https://github.com/claudekit/claudekit-engineer/issues/189
 
-## Troubleshooting
+---
 
-**Port in use**: Server auto-increments from 3500-3550
+**IMPORTANT Task Planning Notes (MUST FOLLOW)**
 
-**No plans found**: Ensure directories contain `plan.md` files
-
-**Remote access denied**: Use `--host 0.0.0.0` to bind all interfaces
-
-**PID files**: Located at `/tmp/kanban-*.pid`
-
-## IMPORTANT Task Planning Notes
-
-- Always plan and break many small todo tasks
-- Always add a final review todo task to review the works done at the end to find any fix or enhancement needed
+- Always plan and break work into many small todo tasks
+- Always add a final review todo task to verify work quality and identify fixes/enhancements

@@ -2,6 +2,19 @@
 # VERSION: 2.88.0
 name: edd
 description: "Eval-Driven Development (EDD) Framework v2.87.0 - Define-before-implement pattern with structured evals. Provides workflow: Define specifications → Implement features → Verify against evals. Components: TEMPLATE.md for eval definitions, edd.sh CLI script, /edd skill invocation. Check types: CC- (Capability), BC- (Behavior), NFC- (Non-Functional). Integrates with orchestrator workflow for quality-first development. Keywords: evals, define, implement, verify, capability checks, behavior checks, non-functional checks, template, quality assurance, test-driven, specification. Use when: defining new features with structured evals, implementing with verification requirements, creating quality specifications, TDD-style workflow with evals."
+allowed-tools:
+  - LSP
+  - Task
+  - Read
+  - Edit
+  - Write
+  - Bash
+  - Grep
+  - Glob
+hooks:
+  PreToolUse:
+    - path: .claude/hooks/validate-lsp-servers.sh
+      match_tool: LSP
 ---
 
 # EDD (Eval-Driven Development) Framework v2.64
@@ -256,3 +269,52 @@ tests/edd/test-parallel-evaluation.sh
 
 *No recent activity*
 </claude-mem-context>
+
+
+## Action Reporting (v2.93.0)
+
+**Esta skill genera reportes automáticos completos** para trazabilidad:
+
+### Reporte Automático
+
+Cuando esta skill completa, se genera automáticamente:
+
+1. **En la conversación de Claude**: Resultados visibles
+2. **En el repositorio**: `docs/actions/edd/{timestamp}.md`
+3. **Metadatos JSON**: `.claude/metadata/actions/edd/{timestamp}.json`
+
+### Contenido del Reporte
+
+Cada reporte incluye:
+- ✅ **Summary**: Descripción de la tarea ejecutada
+- ✅ **Execution Details**: Duración, iteraciones, archivos modificados
+- ✅ **Results**: Errores encontrados, recomendaciones
+- ✅ **Next Steps**: Próximas acciones sugeridas
+
+### Ver Reportes Anteriores
+
+```bash
+# Listar todos los reportes de esta skill
+ls -lt docs/actions/edd/
+
+# Ver el reporte más reciente
+cat $(ls -t docs/actions/edd/*.md | head -1)
+
+# Buscar reportes fallidos
+grep -l "Status: FAILED" docs/actions/edd/*.md
+```
+
+### Generación Manual (Opcional)
+
+```bash
+source .claude/lib/action-report-lib.sh
+start_action_report "edd" "Task description"
+# ... ejecución ...
+complete_action_report "success" "Summary" "Recommendations"
+```
+
+### Referencias del Sistema
+
+- [Action Reports System](docs/actions/README.md) - Documentación completa
+- [action-report-lib.sh](.claude/lib/action-report-lib.sh) - Librería helper
+- [action-report-generator.sh](.claude/lib/action-report-generator.sh) - Generador

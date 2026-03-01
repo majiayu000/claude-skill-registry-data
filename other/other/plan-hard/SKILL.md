@@ -1,32 +1,43 @@
 ---
 name: plan-hard
-description: "[Planning] ⚡⚡⚡ Research, analyze, and create an implementation plan. Use --parallel for parallel-executable phases"
-argument-hint: [task]
-infer: true
+version: 1.0.0
+description: '[Planning] Research, analyze, and create an implementation plan'
+activation: user-invoked
 ---
 
-Think harder.
-Activate `plan` skill.
+> **[IMPORTANT]** Use `TaskCreate` to break ALL work into small tasks BEFORE starting — including tasks for each file read. This prevents context loss from long files. For simple tasks, AI may ask user whether to skip.
 
-## Summary
+**Prerequisites:** **MUST READ** `.claude/skills/shared/understand-code-first-protocol.md` before executing.
 
-**Goal:** Research, analyze codebase, and create a detailed phased implementation plan with parallel researcher subagents.
+## Quick Summary
 
-| Step | Action | Key Notes |
-|------|--------|-----------|
-| 1 | Check active plan | Reuse existing or create new using naming convention |
-| 2 | Research | Max 2 parallel researcher agents, 5 tool calls each, reports <=150 lines |
-| 3 | Analyze codebase | Read codebase-summary.md, code-standards.md, system-architecture.md |
-| 4 | Create plan | Planner subagent generates plan.md + phase-XX files |
-| 5 | User review | Ask user to approve; offer optional validation interview |
+**Goal:** Research, analyze the codebase, and create a detailed phased implementation plan with user collaboration.
 
-**Key Principles:**
-- Do NOT use `EnterPlanMode` tool -- it blocks Write/Edit/Task tools
-- Do NOT start implementing -- plan only, wait for user approval
-- Use `--parallel` flag for phases with no file overlap that can run concurrently
+**Workflow:**
 
-> **CRITICAL:** Do NOT use `EnterPlanMode` tool — it blocks Write/Edit/Task tools needed for plan creation. Follow the workflow below.
-> **Planning is collaborative:** Validate plan, ask user to confirm, surface decision questions with recommendations.
+1. **Pre-Check** — Detect active/suggested plan or create new directory
+2. **Research** — Parallel researcher subagents explore different aspects (max 5 tool calls each)
+3. **Codebase Analysis** — Read codebase-summary.md, code-standards.md, system-architecture.md; scout if needed
+4. **Plan Creation** — Planner subagent creates plan.md + phase-XX files with full sections
+5. **Post-Validation** — Optionally interview user to confirm decisions via /plan-validate
+
+**Key Rules:**
+
+- PLANNING ONLY: do NOT implement or execute code changes
+- Always run /plan-review after plan creation
+- Ask user to confirm before any next step
+- Research reports <=150 lines; plan.md <=80 lines
+- **External Memory**: Write all research and analysis to `.ai/workspace/analysis/{task-name}.analysis.md`. Re-read ENTIRE analysis file before generating plan.
+
+Activate `planning` skill.
+
+## PLANNING-ONLY — Collaboration Required
+
+> **DO NOT** use the `EnterPlanMode` tool — you are ALREADY in a planning workflow.
+> **DO NOT** implement or execute any code changes.
+> **COLLABORATE** with the user: ask decision questions, present options with recommendations.
+> After plan creation, ALWAYS run `/plan-review` to validate the plan.
+> ASK user to confirm the plan before any next step.
 
 ## Your mission
 
@@ -38,16 +49,16 @@ $ARGUMENTS
 
 Check the `## Plan Context` section in the injected context:
 
-- If "Plan:" shows a path → Active plan exists. Ask user: "Continue with this? [Y/n]"
-- If "Suggested:" shows a path → Branch-matched hint only. Ask if they want to activate or create new.
-- If "Plan: none" → Create new plan using naming from `## Naming` section.
+- If "Plan:" shows a path -> Active plan exists. Ask user: "Continue with this? [Y/n]"
+- If "Suggested:" shows a path -> Branch-matched hint only. Ask if they want to activate or create new.
+- If "Plan: none" -> Create new plan using naming from `## Naming` section.
 
 ## Workflow
 
 1. If creating new: Create directory using `Plan dir:` from `## Naming` section, then run `node .claude/scripts/set-active-plan.cjs {plan-dir}`
    If reusing: Use the active plan path from Plan Context.
    Make sure you pass the directory path to every subagent during the process.
-2. Follow strictly to the "Plan Creation & Organization" rules of `plan` skill.
+2. Follow strictly to the "Plan Creation & Organization" rules of `planning` skill.
 3. Use multiple `researcher` agents (max 2 agents) in parallel to research for this task:
    Each agent research for a different aspect of the task and are allowed to perform max 5 tool calls.
 4. Analyze the codebase by reading `codebase-summary.md`, `code-standards.md`, `system-architecture.md` and `project-overview-pdr.md` file.
@@ -59,13 +70,13 @@ Check the `## Plan Context` section in the injected context:
 
 After plan creation, offer validation interview to confirm decisions before implementation.
 
-**Check `## Plan Context` → `Validation: mode=X, questions=MIN-MAX`:**
+**Check `## Plan Context` -> `Validation: mode=X, questions=MIN-MAX`:**
 
-| Mode     | Behavior                                                                        |
-| -------- | ------------------------------------------------------------------------------- |
-| `prompt` | Ask user: "Validate this plan with a brief interview?" → Yes (Recommended) / No |
-| `auto`   | Automatically execute `/plan-validate {plan-path}`                              |
-| `off`    | Skip validation step entirely                                                   |
+| Mode     | Behavior                                                                         |
+| -------- | -------------------------------------------------------------------------------- |
+| `prompt` | Ask user: "Validate this plan with a brief interview?" -> Yes (Recommended) / No |
+| `auto`   | Automatically execute `/plan-validate {plan-path}`                               |
+| `off`    | Skip validation step entirely                                                    |
 
 **If mode is `prompt`:** Use `AskUserQuestion` tool with options above.
 **If user chooses validation or mode is `auto`:** Execute `/plan-validate {plan-path}` SlashCommand.
@@ -92,63 +103,47 @@ After plan creation, offer validation interview to confirm decisions before impl
 
 **Research Output Requirements**
 
-- Ensure every research markdown report remains concise (≤150 lines) while covering all requested topics and citations.
+- Ensure every research markdown report remains concise (<=150 lines) while covering all requested topics and citations.
 
 **Plan File Specification**
 
 - Every `plan.md` MUST start with YAML frontmatter:
 
-  ```yaml
-  ---
-  title: "{Brief title}"
-  description: "{One sentence for card preview}"
-  status: pending
-  priority: P2
-  effort: {sum of phases, e.g., 4h}
-  branch: {current git branch}
-  tags: [relevant, tags]
-  created: {YYYY-MM-DD}
-  ---
-  ```
+    ```yaml
+    ---
+    title: '{Brief title}'
+    description: '{One sentence for card preview}'
+    status: pending
+    priority: P2
+    effort: { sum of phases, e.g., 4h }
+    branch: { current git branch }
+    tags: [relevant, tags]
+    created: { YYYY-MM-DD }
+    ---
+    ```
 
-- Save the overview access point at `{plan-dir}/plan.md`. Keep it generic, under 80 lines, and list each implementation phase with status and progress plus links to phase files.
-- For each phase, create `{plan-dir}/phase-XX-phase-name-here.md` containing the following sections in order: Context links (reference parent plan, dependencies, docs), Overview (date, description, priority, implementation status, review status), Key Insights, Requirements, Architecture, **Trade-offs & Alternatives** (What alternative approaches were considered? What are the failure modes? Under what changed requirements would you choose differently?), Related code files, Implementation Steps, Todo list, Success Criteria, Risk Assessment, Security Considerations, Next steps.
+- Save overview at `{plan-dir}/plan.md` (<80 lines): list each phase with status, progress, and links to phase files.
+- For each phase, create `{plan-dir}/phase-XX-phase-name-here.md` with sections: Context links, Overview, Key Insights, Requirements, **Alternatives Considered** (minimum 2 approaches with pros/cons), **Design Rationale** (WHY chosen approach), Architecture, Related code files, Implementation Steps, Todo list, Success Criteria, Risk Assessment, Security Considerations, Next steps.
 
-## Parallel Mode (--parallel flag)
+## **IMPORTANT Task Planning Notes (MUST FOLLOW)**
 
-When `$ARGUMENTS` contains `--parallel`, apply these additional requirements:
+- Always plan and break work into many small todo tasks using `TaskCreate`
+- Always add a final review todo task to verify work quality and identify fixes/enhancements
+- **MANDATORY FINAL TASKS:** After creating all planning todo tasks, ALWAYS add these two final tasks:
+  1. **Task: "Run /plan-validate"** — Trigger `/plan-validate` skill to interview the user with critical questions and validate plan assumptions
+  2. **Task: "Run /plan-review"** — Trigger `/plan-review` skill to auto-review plan for validity, correctness, and best practices
 
-**CRITICAL:** The planner subagent must create phases that:
+## Important Notes
 
-1. **Can be executed independently** - Each phase self-contained with no runtime dependencies
-2. **Have clear boundaries** - No file overlap between phases (each file modified in ONE phase only)
-3. **Separate concerns logically** - Group by architectural layer, feature domain, or technology stack
-4. **Include dependency matrix** - Document which phases run sequentially vs in parallel
+**IMPORTANT:** Analyze the skills catalog and activate the skills that are needed for the task during the process.
+**IMPORTANT:** Ensure token efficiency while maintaining high quality.
+**IMPORTANT:** Sacrifice grammar for the sake of concision when writing reports.
+**IMPORTANT:** In reports, list any unresolved questions at the end, if any.
 
-**Parallelization Strategy:**
-- Group frontend/backend/database into separate phases
-- Separate infrastructure setup from application logic
-- Isolate different feature domains
-- Create independent test phases per module
+## REMINDER — Planning-Only Command
 
-**Additional plan.md requirements when --parallel:**
-- Dependency graph showing which phases can run in parallel
-- Execution strategy (e.g., "Phases 1-3 parallel, then Phase 4")
-- File ownership matrix (which phase owns which files)
-
-**Additional phase file requirements when --parallel:**
-- Parallelization Info section (which phases can run concurrently)
-- File Ownership section (explicit list of files this phase owns/modifies)
-- Conflict Prevention section (how this phase avoids conflicts with parallel phases)
-
-## MANDATORY: Plan Collaboration Protocol (READ THIS)
-
-- **Do NOT use `EnterPlanMode` tool** — it blocks Write/Edit/Task tools needed to create plan files and launch subagents
-- **Do NOT start implementing** — plan only, wait for user approval
-- **ALWAYS validate:** After plan creation, execute `/plan-review` to validate the plan
-- **ALWAYS confirm:** Ask user to review and approve the plan using `AskUserQuestion` with a recommendation
-- **ALWAYS surface decisions:** Use `AskUserQuestion` with recommended options for key architectural/design decisions
-- **Planning = Collaboration:** The plan is shaped by user input — never treat it as a unilateral output
-- Always plan and break many small todo tasks
-- Always add a final review todo task to review the works done at the end
-- Sacrifice grammar for concision. List unresolved questions at the end
+> **DO NOT** use `EnterPlanMode` tool.
+> **DO NOT** start implementing.
+> **ALWAYS** validate with `/plan-review` after plan creation.
+> **ASK** user to confirm the plan before any implementation begins.
+> **ASK** user decision questions with your recommendations when multiple approaches exist.

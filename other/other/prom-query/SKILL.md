@@ -1,6 +1,6 @@
 ---
 name: prom-query
-version: 1.0.1
+version: 1.0.2
 description: "Prometheus Metrics Query & Alert Interpreter — query metrics, interpret timeseries, triage alerts"
 author: Anvil AI
 license: MIT

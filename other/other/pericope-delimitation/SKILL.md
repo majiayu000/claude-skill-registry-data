@@ -1,6 +1,7 @@
 ---
 name: pericope-delimitation
 description: Use when validating whether a biblical passage constitutes a coherent discourse unit. Use when user asks to check passage boundaries, evaluate if a text range is a natural pericope, or needs to know if their selected passage should be extended or contracted.
+allowed-tools: Read, WebSearch, mcp__plugin_claude-of-alexandria_claude-of-alexandria-mcp__query_discourse_features, mcp__plugin_claude-of-alexandria_claude-of-alexandria-mcp__query_paragraph_breaks, mcp__plugin_claude-of-alexandria_claude-of-alexandria-mcp__query_morphology
 ---
 
 # Pericope Delimitation
@@ -25,8 +26,8 @@ for discourse feature evidence.
 ### Rule 1: Data First, Memory Last
 
 Always check discourse data BEFORE forming a verdict:
-- **NT passages:** Check Levinsohn GNT Discourse Features JSON files
-- **OT passages:** Check Masoretic paragraph markers (sefaria_paragraphs.py)
+- **NT passages:** Call `query_discourse_features` MCP tool for Levinsohn GNT data
+- **OT passages:** Call `query_paragraph_breaks` MCP tool for Masoretic markers
 - **Both:** Check genre-specific conventions from book-genres.yaml
 
 Never say "this passage works well" based on training knowledge alone.
@@ -69,8 +70,8 @@ Every assessment must end with a `### Data Sources` subsection citing:
    → Identify: book, start verse, end verse, testament, genre
 
 2. Check boundary data (NT or OT)
-   NT: Check Levinsohn JSON for features at/near start verse and end verse
-   OT: Check Masoretic markers (פ/ס) at/near start verse and end verse
+   NT: Call query_discourse_features MCP tool for features at/near start and end verse
+   OT: Call query_paragraph_breaks MCP tool for markers (פ/ס) at/near start and end verse
 
 3. Check genre-specific markers
    → Epistolary formulas (NT letters), toledot (Genesis), etc.
@@ -87,7 +88,7 @@ Every assessment must end with a `### Data Sources` subsection citing:
 
 6. Draft output in standard format
 
-7. [Optional] Run verify_claims.py on output if verifiable claims present
+7. [Optional] Cross-check data claims against MCP tool output if verifiable claims present
 ```
 
 ---
@@ -213,21 +214,21 @@ These represent the Red Flags this skill prevents:
 
 ### NT: Levinsohn Discourse Features
 
-Data location: `skills/biblical-segmentation/reference/levinsohn/`
+**Call:** `query_discourse_features` MCP tool with `{"book": "{book}", "chapter_range": "{range}"}`
 
-Key files for boundary detection:
-- `Referential_PoD.json` — strong section boundary signal
-- `Situational_PoD.json` — strong section boundary signal
-- `Historical_Present.json` — narrative scene onset
-- `Reported_Speech.json` — embedded discourse boundaries
-- `Over-encoding.json` — new unit onset signal
+Key features for boundary detection:
+- **Referential PoD** — strong section boundary signal
+- **Situational PoD** — strong section boundary signal
+- **Historical Present** — narrative scene onset
+- **Reported Speech** — embedded discourse boundaries
+- **Over-encoding** — new unit onset signal
 
 **How to use:** Check if the start verse or the verse AFTER the claimed end verse
 has features that would confirm a boundary.
 
 ### OT: Masoretic Paragraph Markers
 
-Data location: `skills/biblical-segmentation/reference/masoretic/`
+**Call:** `query_paragraph_breaks` MCP tool with `{"book": "{book}", "chapter_range": "{range}"}`
 
 **How to use:** Check for פ (petucha) or ס (setumah) at or near the claimed boundary verse.
 If present: boundary is Confirmed.

@@ -1,30 +1,57 @@
 ---
 name: my-skills-manager
-description: Add, remove, modify skills to my-skills-collection repository or sync the repository. Install all the skills to AI agent's skills directory after operations.
+description: 管理本地 skills 仓库（添加 / 删除 / 修改 / 同步 skills）；触发条件：需要在 `~/.my-skills-collection` 中管理技能、同步远端或安装到 AI agent 的 skills 目录时使用。
 ---
 
-## Instructions
+## 概要（精简）
 
-This skill allows you to manage your personal skills repository. You can sync the repository to ensure it is up-to-date, or you can add, modify, or remove skills as needed.
+本技能用于在本地 skills 仓库 `~/.my-skills-collection` 中：
+- 添加或移除 skill（支持作为 submodule 或直接复制）
+- 同步仓库并更新 submodule
+- 安装/准备 skills 供 AI agent 使用（提示安装步骤）
 
-After performing any operations, remember to **install all the skills** to your AI agent's skills directory as needed.
+## 何时使用
 
-## Repository Location
+- 需要将第三方或自制 skill 加入到本地 skills 仓库
+- 需要从远端拉取最新的 skills 或更新子模块
+- 需要删除不再使用的 skill
 
-The skills repository is located at: `~/.my-skills-collection`
+## 快速命令（推荐使用 scripts 下的工具）
 
-## Repository Structure
+创建并添加 skill（作为子模块）：
 
-Refer to `<repo-root>/INSTALLATION.md` for the structure of the skills repository and how to install skills for different AI agents.
+```bash
+python skills/my-skills-manager/scripts/add_skill.py --submodule <git-url> --name <skill-name>
+```
 
-## Commands
+复制本地 skill 目录到仓库：
 
-- add-skills: Add new skills to the skills repository. See [add-skills reference](reference/add-skills.md) for detailed steps.
-- remove-skills: Remove existing skills from the skills repository. See [remove-skills reference](reference/remove-skills.md) for detailed steps.
-- sync-repo: Sync the skills repository to ensure it is up-to-date with the remote repository. See [sync-skills reference](reference/sync-skills.md) for detailed steps.
+```bash
+python skills/my-skills-manager/scripts/add_skill.py --copy /path/to/skill --name <skill-name>
+```
 
-## Post-Operation Reminder
+删除 skill：
 
-After performing any operations, remember to **install all the skills** to your AI agent's skills directory as needed.
+```bash
+python skills/my-skills-manager/scripts/remove_skill.py --name <skill-name>
+```
 
-Installation and setup instructions for linking skills can be found in `<repo-root>/INSTALLATION.md`.
+同步仓库并更新所有子模块：
+
+```bash
+python skills/my-skills-manager/scripts/sync_repo.py
+```
+
+## 参考文件
+
+- `reference/add-skills.md` — 添加 skill 的详细步骤
+- `reference/remove-skills.md` — 删除 skill 的详细步骤
+- `reference/sync-skills.md` — 同步仓库的详细步骤
+
+## 脚本（已包含）
+
+- `scripts/add_skill.py` — 添加 skill（支持 submodule 或复制）
+- `scripts/remove_skill.py` — 删除 skill（处理 submodule 与普通目录）
+- `scripts/sync_repo.py` — 安全地同步仓库并更新子模块
+
+在执行脚本前，脚本会提示确认操作以避免误删或未保存的改动。

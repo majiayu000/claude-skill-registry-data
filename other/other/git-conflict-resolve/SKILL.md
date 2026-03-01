@@ -1,14 +1,36 @@
 ---
 name: git-conflict-resolve
 version: 1.0.0
-description: "[Git] Resolve git merge/cherry-pick/rebase conflicts with backup, analysis, and reporting"
+description: '[Git] Resolve git merge/cherry-pick/rebase conflicts with backup, analysis, and reporting'
 activation: user-invoked
-infer: true
 ---
+
+> **[IMPORTANT]** Use `TaskCreate` to break ALL work into small tasks BEFORE starting — including tasks for each file read. This prevents context loss from long files. For simple tasks, AI may ask user whether to skip.
+
+**Prerequisites:** **MUST READ** before executing:
+
+- `.claude/skills/shared/understand-code-first-protocol.md`
+- `.claude/skills/shared/evidence-based-reasoning-protocol.md`
+
+## Quick Summary
+
+**Goal:** Resolve git merge/cherry-pick/rebase conflicts with backup, analysis, and structured reporting.
+
+**Workflow:**
+1. **Backup** — Create safety backup of current state
+2. **Analyze** — Identify conflict types and affected files
+3. **Resolve** — Apply resolution strategy per conflict
+4. **Report** — Generate conflict resolution report
+
+**Key Rules:**
+- Always create backup before resolving conflicts
+- Prefer preserving both sides' intent over arbitrary choice
+- Generate resolution report for audit trail
 
 ## Purpose
 
 Systematically resolve git conflicts (merge, cherry-pick, rebase) with:
+
 1. Backup of all conflicted files before resolution
 2. Per-file conflict analysis with root cause explanation
 3. Resolution with documented rationale
@@ -34,6 +56,7 @@ git status --short | grep "^DU\|^UD\|^UU\|^AA\|^DD"  # All conflict types
 ```
 
 Classify each conflict:
+
 - **DU (Deleted by us):** File exists on source but not on target branch
 - **UD (Deleted by them):** File exists on target but deleted by source
 - **UU (Both modified):** Both branches modified the same file
@@ -84,14 +107,14 @@ git show <source-commit>:<file-path> > {BACKUP_PATH}/<filename>.theirs
 
 #### 3d. Determine resolution strategy
 
-| Conflict Pattern | Resolution Strategy |
-|-----------------|---------------------|
-| DU: File needed by feature | Accept theirs (add the file) |
-| DU: File not needed | Keep ours (skip the file) |
-| UU: Non-overlapping changes | Merge both (keep all changes) |
-| UU: Overlapping, source modifies methods not on target | Keep ours if methods don't exist on target |
-| UU: Overlapping, both modify same method | Manual merge with careful analysis |
-| UU: Schema/snapshot files | Accept theirs for new entities, merge for modified |
+| Conflict Pattern                                       | Resolution Strategy                                |
+| ------------------------------------------------------ | -------------------------------------------------- |
+| DU: File needed by feature                             | Accept theirs (add the file)                       |
+| DU: File not needed                                    | Keep ours (skip the file)                          |
+| UU: Non-overlapping changes                            | Merge both (keep all changes)                      |
+| UU: Overlapping, source modifies methods not on target | Keep ours if methods don't exist on target         |
+| UU: Overlapping, both modify same method               | Manual merge with careful analysis                 |
+| UU: Schema/snapshot files                              | Accept theirs for new entities, merge for modified |
 
 ### Step 4: Resolve each conflict
 
@@ -109,6 +132,7 @@ git add <file>
 ```
 
 For manual merges:
+
 1. Remove `<<<<<<< HEAD`, `=======`, `>>>>>>> <commit>` markers
 2. Keep the correct content from each side
 3. Verify no leftover conflict markers: `git diff --check`
@@ -146,12 +170,12 @@ Create a comprehensive report at `{REPORT_PATH}` with:
 1. **Header:** Date, source commit/branch, target branch, result commit
 2. **Summary:** Total conflicts, categories, overall risk
 3. **Per-file details:**
-   - File path
-   - Conflict type (DU/UU/etc.)
-   - Root cause (why the conflict occurred)
-   - Resolution chosen (accept theirs/keep ours/manual merge)
-   - Rationale (why this resolution was chosen)
-   - Risk level (Low/Medium/High)
+    - File path
+    - Conflict type (DU/UU/etc.)
+    - Root cause (why the conflict occurred)
+    - Resolution chosen (accept theirs/keep ours/manual merge)
+    - Rationale (why this resolution was chosen)
+    - Risk level (Low/Medium/High)
 4. **Summary table:** All files with conflict type, resolution, risk
 5. **Root cause analysis:** Common patterns across conflicts
 6. **Recommendations:** Follow-up actions, build verification, etc.
@@ -185,11 +209,11 @@ Create a comprehensive report at `{REPORT_PATH}` with:
 
 ### Risk Assessment
 
-| Risk | Criteria | Action |
-|------|----------|--------|
-| **Low** | New file, no existing code affected | Proceed |
+| Risk       | Criteria                                       | Action                                       |
+| ---------- | ---------------------------------------------- | -------------------------------------------- |
+| **Low**    | New file, no existing code affected            | Proceed                                      |
 | **Medium** | Method changes, caller compatibility uncertain | Flag in report, recommend build verification |
-| **High** | Breaking changes, cross-service impact | Require user confirmation before proceeding |
+| **High**   | Breaking changes, cross-service impact         | Require user confirmation before proceeding  |
 
 ## Notes
 
@@ -202,5 +226,6 @@ Create a comprehensive report at `{REPORT_PATH}` with:
 ---
 
 **IMPORTANT Task Planning Notes (MUST FOLLOW)**
+
 - Always plan and break work into many small todo tasks
 - Always add a final review todo task to verify work quality and identify fixes/enhancements

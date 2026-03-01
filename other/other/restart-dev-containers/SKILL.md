@@ -45,22 +45,12 @@ This prevents operations on one environment from affecting the other.
 
 ## The Correct Process
 
-### DON'T Do This:
-```bash
-# WRONG - Missing dev overlay
-docker-compose up -d
+**Common mistakes** (DO NOT do these):
+- Running `docker-compose up -d` without the dev overlay
+- Running compose without `-p witchcityrope-dev` (will interfere with test containers)
+- Running `./dev.sh` then immediately running tests without checking compilation
 
-# WRONG - Missing project name (will interfere with test containers)
-docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d
-
-# WRONG - Doesn't check compilation
-./dev.sh
-# ... immediately runs tests
-```
-
-### DO This:
-
-**Use this skill** - it handles everything correctly including project isolation.
+**Instead**: Always use `execute.sh` -- it handles overlay, project isolation, compilation checks, and health verification.
 
 ---
 
@@ -90,9 +80,8 @@ SKIP_CONFIRMATION=true bash .claude/skills/restart-dev-containers/execute.sh
 
 ---
 
-## Quick Reference Commands
+## Quick Reference
 
-### Using the Skill (Recommended)
 ```bash
 # From project root - with confirmation prompt
 bash .claude/skills/restart-dev-containers/execute.sh
@@ -101,22 +90,7 @@ bash .claude/skills/restart-dev-containers/execute.sh
 SKIP_CONFIRMATION=true bash .claude/skills/restart-dev-containers/execute.sh
 ```
 
-### Manual Steps (If execute.sh unavailable)
-```bash
-# CRITICAL: Always use -p witchcityrope-dev to avoid affecting test containers!
-
-# Stop containers
-docker-compose -p witchcityrope-dev -f docker-compose.yml -f docker-compose.dev.yml down
-
-# Start with dev overlay
-docker-compose -p witchcityrope-dev -f docker-compose.yml -f docker-compose.dev.yml up -d --build
-
-# Wait and check health
-sleep 15
-curl http://localhost:5173
-curl http://localhost:5655/health
-curl http://localhost:5655/api/health/detailed
-```
+**No manual steps documented here** -- all logic lives in `execute.sh`. If the script is unavailable, read `execute.sh` directly for the correct procedure.
 
 ---
 
@@ -124,40 +98,19 @@ curl http://localhost:5655/api/health/detailed
 
 ### Issue: Containers start but tests fail
 
-**Cause**: Compilation errors in container
-
-**Solution**: Skill automatically checks compilation logs
-
-**Manual check**:
-```bash
-docker logs witchcity-web --tail 50 | grep -i error
-docker logs witchcity-api --tail 50 | grep -i error
-```
+**Cause**: Compilation errors in container. The skill automatically checks compilation logs and reports errors.
 
 ### Issue: Port already in use
 
-**Cause**: Old containers still running or other process using ports
-
-**Solution**:
-```bash
-# Kill all witchcity containers
-docker ps -a | grep witchcity | awk '{print $1}' | xargs docker rm -f
-
-# Check what's using port 5173
-lsof -i :5173
-```
+**Cause**: Old containers still running or other process using ports. Check running containers and kill orphans, or use `lsof` to find what's occupying the port.
 
 ### Issue: Health checks fail after compilation succeeds
 
-**Cause**: Services need more time to initialize
-
-**Solution**: Wait longer (skill waits 25 seconds total)
+**Cause**: Services need more time to initialize. The skill retries health checks for up to 60 seconds.
 
 ### Issue: Test containers were deleted when restarting dev
 
-**Cause**: Missing `-p witchcityrope-dev` flag
-
-**Solution**: Always use this skill or ensure the project flag is included
+**Cause**: Missing project isolation flag. Always use this skill which includes the correct `-p witchcityrope-dev` flag.
 
 ---
 
@@ -185,8 +138,8 @@ When run via Claude Code, skill returns:
   "status": "success",
   "timestamp": "2025-12-01T15:30:00Z",
   "containers": {
-    "running": 4,
-    "expected": 4,
+    "running": 3,
+    "expected": 3,
     "healthy": true
   },
   "compilation": {
@@ -237,11 +190,13 @@ On failure:
 
 ## Version History
 
+- **2026-02-24**: Removed test-server from dev compose
+  - test-server does not belong in dev environment; test infrastructure is handled by restart-test-containers skill
+  - Reduced expected container count from 4 to 3 (postgres, api, web)
 - **2025-12-02**: Removed seed data check
   - Was failing silently due to wrong database password
   - Unnecessary since API auto-seeds on startup and health checks verify connectivity
 - **2025-12-01**: Added `-p witchcityrope-dev` project isolation
-  - Updated to 4 containers (includes test-server from dev overlay)
   - Added reference to `restart-test-containers` skill
 - **2025-11-04**: Created as single source of truth for container restart
 

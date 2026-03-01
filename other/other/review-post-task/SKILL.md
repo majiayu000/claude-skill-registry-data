@@ -1,185 +1,88 @@
 ---
 name: review-post-task
-description: "[Review & Quality] ⚡⚡⚡ Two-pass code review for task completion"
-argument-hint: [optional-focus-area]
-infer: true
+version: 1.0.0
+description: '[Code Quality] Two-pass code review for task completion'
+activation: user-invoked
 ---
 
-# Post-Task Two-Pass Code Review
+> **[IMPORTANT]** Use `TaskCreate` to break ALL work into small tasks BEFORE starting — including tasks for each file read. This prevents context loss from long files. For simple tasks, AI may ask user whether to skip.
+
+**Prerequisites:** **MUST READ** before executing:
+
+- `.claude/skills/shared/understand-code-first-protocol.md`
+- `.claude/skills/shared/evidence-based-reasoning-protocol.md`
+
+> **Critical Purpose:** Ensure quality — no flaws, no bugs, no missing updates, no stale content. Verify both code AND documentation.
+
+## Quick Summary
+
+**Goal:** Two-pass code review after task completion to catch issues before commit.
+
+**Workflow:**
+1. **Pass 1: File-by-File** — Review each changed file individually
+2. **Pass 2: Holistic** — Assess overall approach, architecture, consistency
+3. **Report** — Summarize critical issues and recommendations
+
+**Key Rules:**
+- Ensure quality: no flaws, no bugs, no missing updates, no stale content
+- Check both code AND documentation for completeness
+- Evidence-based findings with `file:line` references
 
 Execute mandatory two-pass review protocol after completing code changes.
 Focus: $ARGUMENTS
 
-## Summary
+Activate `code-review` skill and follow its workflow with **post-task two-pass** protocol:
 
-**Goal:** Two-pass code review ensuring all changes follow EasyPlatform standards before commit.
+## Review Mindset (NON-NEGOTIABLE)
 
-| Step | Action | Key Notes |
-|------|--------|-----------|
-| 1 | Pass 1: Review | Gather `git diff`, check task correctness + code standards + security |
-| 2 | Pass 1: Corrections | Fix issues found; set `PASS_1_MADE_CHANGES` flag |
-| 3 | Pass 2: Re-review | Only if Pass 1 made changes; verify corrections didn't introduce issues |
-| 4 | Final report | Summary with issues found/fixed, remaining concerns, ready-for-commit status |
+**Be skeptical. Apply critical thinking. Every claim needs traced proof.**
 
-**Key Principles:**
-- Two passes guarantee corrections don't introduce new issues
-- Auto-triggered after `/cook`, `/fix`, `/code` workflows
-- Check logic in lowest layer, BEM classes, `untilDestroyed()`, platform validation patterns
+- Do NOT accept code correctness at face value — verify by reading actual implementations
+- Every finding must include `file:line` evidence (grep results, read confirmations)
+- If you cannot prove a claim with a code trace, do NOT include it in the report
+- Question assumptions: "Does this actually work?" → trace the call path to confirm
+- Challenge completeness: "Is this all?" → grep for related usages across services
+- Verify side effects: "What else does this change break?" → check consumers and dependents
+- No "looks fine" without proof — state what you verified and how
 
----
+## Core Principles (ENFORCE ALL)
 
-## Protocol Overview
+**YAGNI** — Flag code solving hypothetical future problems (unused params, speculative interfaces, premature abstractions)
+**KISS** — Flag unnecessarily complex solutions. Ask: "Is there a simpler way?"
+**DRY** — Grep for similar/duplicate code across the codebase. If 3+ similar patterns exist, flag for extraction.
+**Clean Code** — Readable > clever. Names reveal intent. Functions do one thing. No deep nesting (≤3 levels). Methods <30 lines.
+**Follow Convention** — Before flagging ANY pattern violation, grep for 3+ existing examples. Codebase convention wins.
+**No Flaws/No Bugs** — Trace logic paths. Verify edge cases (null, empty, boundary). Check error handling.
+**Proof Required** — Every claim backed by `file:line` evidence or grep results. Speculation is forbidden.
+**Doc Staleness** — Cross-reference changed files against related docs (feature docs, test specs, READMEs). Flag any doc that is stale or missing updates to reflect current code changes.
 
-This review ensures ALL code changes follow best practices and project conventions.
-Two passes guarantee corrections don't introduce new issues.
+## Protocol
 
----
+**Pass 1:** Gather changes (`git diff`), apply project review checklist:
+- Backend: platform repos, validation, events, DTOs
+- Frontend: base classes, stores, untilDestroyed, BEM
+- Architecture: layer placement, service boundaries
+- **Convention:** grep for 3+ similar patterns to verify code follows codebase conventions
+- **Correctness:** trace logic paths, check edge cases (null, empty, boundary values)
+- **DRY:** grep for duplicate/similar code across codebase
+- **YAGNI/KISS:** flag over-engineering, unnecessary abstractions, speculative features
+- **Doc staleness:** cross-reference changed files against `docs/business-features/`, test specs, READMEs — flag stale docs
+Fix issues found.
 
-## Pass 1: Initial Review
+**Pass 2 (conditional):** Only if Pass 1 made changes. Re-review ALL changes (original + corrections). Verify no new issues introduced.
 
-### Step 1.1: Gather Changes
-```bash
-# Get unstaged changes summary
-git diff --stat
-
-# Get detailed changes
-git diff
-```
-
-### Step 1.2: Review Checklist
-
-**Task Correctness:**
-- [ ] Changes achieve the intended task objective
-- [ ] No unrelated/unnecessary modifications
-- [ ] Edge cases handled appropriately
-- [ ] Error handling is complete
-
-**Code Standards (EasyPlatform):**
-
-*Backend:*
-- [ ] Uses platform repository (IPlatformQueryableRootRepository)
-- [ ] Uses PlatformValidationResult fluent API (.And(), .AndAsync())
-- [ ] Side effects in Entity Event Handlers, not command handlers
-- [ ] DTOs own mapping via MapToEntity()/MapToObject()
-- [ ] Command + Result + Handler in ONE file
-
-*Frontend:*
-- [ ] Extends appropriate base class (AppBaseComponent, AppBaseVmStoreComponent, AppBaseFormComponent)
-- [ ] Uses PlatformVmStore for state management
-- [ ] Uses .pipe(this.untilDestroyed()) for subscriptions
-- [ ] All template elements have BEM classes
-
-**Architecture:**
-- [ ] Logic placed in lowest appropriate layer (Entity > Service > Component)
-- [ ] No cross-service direct database access
-- [ ] Follows existing patterns found in codebase
-
-**Understanding Verification (soft prompts):**
-- Can you explain in 2 sentences why each modified file was changed?
-- What would break if this change were reverted?
-- What assumption does this change rely on?
-
-**Security:**
-- [ ] No hardcoded secrets or credentials
-- [ ] Input validation at boundaries
-- [ ] Proper authorization checks
-
-### Step 1.3: Execute Corrections
-If any issues found:
-1. Fix each issue directly
-2. Mark `PASS_1_MADE_CHANGES = true`
-3. Proceed to Pass 2
-
-If no issues found:
-1. Mark `PASS_1_MADE_CHANGES = false`
-2. Skip to Final Report
-
----
-
-## Pass 2: Re-Review (Conditional)
-
-**ONLY EXECUTE IF PASS 1 MADE CHANGES**
-
-### Step 2.1: Verify All Changes
-```bash
-# Check updated changes
-git diff --stat
-git diff
-```
-
-### Step 2.2: Full Re-Review
-Repeat Pass 1 checklist on ALL current changes (original + corrections).
-
-Focus areas:
-- [ ] Original task still correctly implemented
-- [ ] Corrections are valid and complete
-- [ ] No new issues introduced by corrections
-- [ ] Code is production-ready
-
-### Step 2.3: Final Corrections
-If issues found:
-- Apply minimal, targeted fixes
-- Document any trade-offs made
-
----
-
-## Final Report
-
-### Summary Template
-```markdown
-## Post-Task Review Complete
-
-**Task:** [Brief description]
-**Pass 1 Result:** [Clean / N issues fixed]
-**Pass 2 Required:** [Yes/No]
-**Pass 2 Result:** [N/A / Clean / N issues fixed]
-
-### Changes Summary
-- [List of files modified]
-- [Key changes made]
-
-### Issues Found & Fixed
-1. [Issue]: [Fix applied]
-2. ...
-
-### Remaining Concerns (if any)
-- [Concern]: [Reason not addressed / Recommended follow-up]
-
-### Verification
-- [ ] Task objective achieved
-- [ ] Code follows project conventions
-- [ ] No security vulnerabilities
-- [ ] Ready for commit
-```
-
----
-
-## Quick Commands
-
-```bash
-# View changes for review
-git diff --stat && git diff
-
-# Check specific file
-git diff path/to/file.ts
-
-# Fix a problematic change
-# Use `/fix` workflow to apply fixes instead of manual git checkout
-
-# Stage reviewed changes
-git add -p  # Interactive staging
-```
-
----
+**Final Report:** Task description, Pass 1/2 results, changes summary, issues fixed, remaining concerns.
 
 ## Integration Notes
 
-- This command is auto-triggered by workflow orchestration after `/cook`, `/fix`, `/code`
-- Can be manually invoked anytime with `/review-post-task`
-- For PR reviews, use `/review-codebase` instead
-- Use `code-reviewer` subagent for complex reviews requiring deeper analysis
+- Auto-triggered by workflow orchestration after `/cook`, `/fix`, `/code`
+- Can be manually invoked with `/review-post-task`
+- For PR reviews, use `/code-review` instead
+- Use `code-reviewer` subagent for complex reviews
 
-## IMPORTANT Task Planning Notes
+---
 
-- Always plan and break many small todo tasks
-- Always add a final review todo task to review the works done at the end to find any fix or enhancement needed
+**IMPORTANT Task Planning Notes (MUST FOLLOW)**
+
+- Always plan and break work into many small todo tasks
+- Always add a final review todo task to verify work quality and identify fixes/enhancements

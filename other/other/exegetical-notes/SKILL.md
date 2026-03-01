@@ -1,7 +1,7 @@
 ---
 name: exegetical-notes
-description: Use when producing structured exegetical analysis of a biblical passage. Use when user asks for exegetical notes, verse analysis, passage study, word study with morphology, or detailed interpretive framework for a text. Always English output. Saves to file.
-allowed-tools: Read, Write, Glob, WebSearch, Bash, mcp__claude-of-alexandria-mcp__query_discourse_features, mcp__claude-of-alexandria-mcp__query_paragraph_breaks, mcp__claude-of-alexandria-mcp__query_vocabulary, mcp__claude-of-alexandria-mcp__query_morphology
+description: Use when producing structured exegetical analysis of a biblical passage. Use when user asks for exegetical notes, verse analysis, passage study, word study with morphology, or detailed interpretive framework for a text. Always English output.
+allowed-tools: Read, Write, WebSearch, mcp__plugin_claude-of-alexandria_claude-of-alexandria-mcp__query_discourse_features, mcp__plugin_claude-of-alexandria_claude-of-alexandria-mcp__query_paragraph_breaks, mcp__plugin_claude-of-alexandria_claude-of-alexandria-mcp__query_vocabulary, mcp__plugin_claude-of-alexandria_claude-of-alexandria-mcp__query_morphology, mcp__plugin_claude-of-alexandria_claude-of-alexandria-mcp__query_ot_quotes, mcp__plugin_claude-of-alexandria_claude-of-alexandria-mcp__query_lemmas, mcp__plugin_claude-of-alexandria_claude-of-alexandria-mcp__query_themes_for_lemmas, mcp__plugin_claude-of-alexandria_claude-of-alexandria-mcp__query_theme
 ---
 
 # Exegetical Notes
@@ -9,7 +9,7 @@ allowed-tools: Read, Write, Glob, WebSearch, Bash, mcp__claude-of-alexandria-mcp
 ## Purpose
 
 Produce structured, context-neutral exegetical analysis of a biblical passage.
-Data-grounded. Always English. Saved to file as a reusable reference document.
+Data-grounded. Always English. Output to file (default) or inline (`--output print`).
 
 **Key constraint:** Every data claim must come from bundled data or web-verified scholarly sources.
 Training knowledge supplements but never substitutes for data.
@@ -18,23 +18,29 @@ Training knowledge supplements but never substitutes for data.
 
 ## Iron Rules
 
-### Rule 1: Run Pericope Check First
+### Rule 1: Run Pericope Check First — Warning BEFORE Notes
 
 Before generating notes, run a lightweight boundary check:
 
 1. Identify passage boundaries
 2. Check Levinsohn (NT) or Masoretic (OT) for boundary confirmation
-3. **If boundaries are problematic:** Warn the user and recommend adjustment
-4. **If user confirms problematic passage:** Proceed with note in Section 1
+3. **If boundaries are problematic:** Print the warning BEFORE the notes header. The warning is a standalone block that appears BEFORE `# Exegetical Notes:`. Do not embed it inside Section 1. Do not skip it.
+4. **If user confirms problematic passage:** Proceed with note in Pericope Status
 
-**Warning format:**
+**Warning format (print this BEFORE the notes):**
 ```
 ⚠️ Boundary check: [Book] [Range] may be a partial unit.
 [Specific issue with discourse evidence]
 Recommended passage: [better range]
 
-Continue with [original range]? (notes will flag this in Section 1)
+Proceeding with [original range] — boundary issue noted in Pericope Status.
 ```
+
+**Correct output order for problematic boundaries:**
+1. First: ⚠️ Boundary check warning (standalone)
+2. Then: `# Exegetical Notes: [Book] [Range]` header and all 10 sections
+
+**Wrong:** Embedding the boundary warning inside Section 1 without a standalone warning first.
 
 ### Rule 2: Lexical Analysis Uses query_morphology MCP Tool
 
@@ -70,66 +76,103 @@ For web searches (Tier 3 guardrails):
 If only Tier C sources found, state: "[Tier C source, use with caution]"
 If no verifiable source found, state: "No Tier A/B source located for this claim."
 
-### Rule 5: Run verify_claims.py on Output
+### Rule 5: Cross-Check Data Claims Before Delivering
 
 After generating the full notes:
-1. Run verify_claims.py on the complete output
-2. Report results in Section 10
-3. If any FAIL results for data claims: correct the claim before saving
+1. For each data claim in the output (lemma frequencies, morphological parsings, discourse features), re-query the relevant MCP tool to confirm the cited value matches
+2. Report cross-check results in Section 10
+3. If any mismatches: correct the claim before delivering
 
-### Rule 6: Save to Correct Location
+### Rule 6: Exactly 10 Sections, Exactly These Names
 
-Output always saved to:
+The output format has exactly 10 sections. Use exactly these section titles:
+1. Passage in Literary Context
+2. Internal Structure
+3. Propositional Summary
+4. Lexical Analysis
+5. Exegetical Conclusions
+6. Interpretive Guardrails
+7. Open Questions
+8. Intertextual Links
+9. Data Sources
+10. Verification
+
+**Do not rename sections.** Do not substitute "Homiletical Trajectories" for "Interpretive Guardrails." Do not substitute "Theological Themes" for "Exegetical Conclusions." Do not substitute "Discourse Structure" for "Internal Structure." Do not omit sections. Do not add sections. Do not reorder sections.
+
+**Do not abbreviate the output** even if the user asks for "brief" or "essentials." All 10 sections are required for every invocation. The Verification section (Section 10) is never optional.
+
+### Rule 7: Deliver Output
+
+**File mode** (default, or `--output file`):
+Save to:
 ```
 ~/.claude/exegetical-notes/{book_name}/{YYYY-MM-DD}-{chapter-verse-to-chapter-verse}.md
 ```
-
 Examples:
 - `~/.claude/exegetical-notes/philippians/2026-02-18-1-1-11.md`
 - `~/.claude/exegetical-notes/genesis/2026-02-18-37-2-11.md`
 
 After saving, report the saved path to user.
 
+**Print mode** (`--output print`):
+Output the complete notes inline in your response. Do not save to file. Do not summarize. Print ALL 10 sections in full, directly in the response. The user sees only what you print — if you save to file instead, the user gets nothing useful.
+
+**Never ignore `--output print`.** If the invocation says `--output print`, you MUST print inline. Do not save to a file and return a summary. Do not "display" a summary of what you generated. Print the full document.
+
 ---
 
 ## Workflow
 
 ```
-1. Parse invocation
-   → book, range, optional --context
+Step 1: Parse invocation → book, range, --output, --context
 
-2. Run pericope check (lightweight boundary assessment)
-   → If problematic: warn user, await confirmation
-   → If valid or confirmed: proceed
+Step 2: PERICOPE CHECK (MANDATORY — DO NOT SKIP)
+   │
+   ├─ Call query_discourse_features for the book
+   ├─ Check if range aligns with discourse boundaries
+   │
+   ├─ Boundaries OK? → Proceed to Step 3
+   │
+   └─ Boundaries PROBLEMATIC?
+      │
+      ├─ STOP. Print the ⚠️ warning BEFORE anything else.
+      │  Format: "⚠️ Boundary check: [Book] [Range] may be a partial unit..."
+      │  This warning must appear BEFORE the "# Exegetical Notes" header.
+      │  Do NOT embed it in Section 1. Print it FIRST, separately.
+      │
+      └─ Then proceed to Step 3 (with boundary issue noted in Pericope Status)
 
-3. Gather data
-   NT: query_morphology MCP tool for lexical data
-       query_discourse_features MCP tool for discourse features
-       query_vocabulary MCP tool for lemma frequencies
-       semantic_groups.yaml for thematic connections
-   OT: query_morphology MCP tool (testament: ot) for Hebrew morphology
-       query_paragraph_breaks MCP tool for Masoretic markers
-       query_vocabulary MCP tool (testament: ot) for frequencies
+Step 3: Gather data via MCP tools
+   NT: query_morphology, query_discourse_features, query_vocabulary
+   OT: query_morphology (testament: ot), query_paragraph_breaks, query_vocabulary (testament: ot)
+   Epistles: also query_morphology with pos_filter: "conjunction"
 
-4. Web search (for Tier 3)
-   → Search for scholarly commentary on passage
-   → Evaluate source quality (Tier A/B/C/D)
-   → Note source, author, publication
+   Logical connectives for Section 2 (epistles):
+   γάρ=grounds, οὖν=inference, δέ=contrast/continuation, ἀλλά=strong contrast,
+   ἵνα=purpose, ὥστε=result, εἰ=condition, διότι/ὅτι=causal
 
-5. Generate all 10 sections
+Step 4: Web search for Tier 3 scholarly sources
+   → Prefer Tier A/B (NICNT, NIGTC, ICC, WBC, BECNT, Hermeneia, BDAG)
+   → Note author, title, publisher
 
-6. Run verify_claims.py on output
+Step 5: Generate ALL 10 sections using EXACT template titles (Rule 6)
+   Every section is mandatory. Never skip, rename, or merge sections.
 
-7. Fix any FAIL results
+Step 6: Cross-check data claims against MCP tool output
 
-8. Save to output location
+Step 7: Fix any mismatches found in cross-check
 
-9. Report saved path to user
+Step 8: DELIVER OUTPUT
+   │
+   ├─ --output print? → Print ALL 10 sections inline. Do NOT save to file.
+   │                     Do NOT summarize. The full document goes in the response.
+   │
+   └─ --output file (or default)? → Save to file path. Report path to user.
 ```
 
 ---
 
-## Output Format (All 10 Sections Required)
+## Output Format (All 10 Sections Required — Use Exact Titles)
 
 ```markdown
 # Exegetical Notes: [Book] [Range]
@@ -220,7 +263,7 @@ Gloss: "[translation]"
 
 [Cross-references with verse citations]
 [Format: "Reference → Connection to current passage"]
-[OT quotations or allusions (from OT_quotes.json for NT passages)]
+[OT quotations or allusions (call query_ot_quotes for NT passages)]
 [Semantic group connections across testaments]
 [Parallel passages with significant differences noted]
 
@@ -236,14 +279,14 @@ Gloss: "[translation]"
 
 ## 10. Verification
 
-**verify_claims.py results:**
-- Claims checked: [N]
-- Claims verified (PASS): [N]
-- Claims failed (FAIL): [N — should be 0 for data claims]
-- Claims unverifiable: [N — Tier 3 citations expected here]
-- Overall: [PASS | FAIL]
+**MCP cross-check results:**
+- Data claims checked: [N]
+- Claims confirmed (PASS): [N]
+- Claims corrected: [N — list each correction below if any]
+- Claims not cross-checkable: [N — e.g., Tier 3 citations, semantic notes]
+- Overall: [PASS | CORRECTED]
 
-[If FAIL results: list each failure and correction made]
+[If corrections made: list each original claim, the MCP query result, and the correction]
 ```
 
 ---
@@ -252,11 +295,13 @@ Gloss: "[translation]"
 
 ```
 /exegetical-notes Phil 1:1-11
+/exegetical-notes Phil 1:1-11 --output print
 /exegetical-notes Genesis 37:2-11
 /exegetical-notes Romans 3:21-26
 /exegetical-notes Genesis 37:2-11 --context "segmentation: Joseph narrative, 8 sessions"
 ```
 
+- `--output`: Optional. `file` (default) saves to disk. `print` outputs inline.
 - `--context`: Optional. Provides segmentation context for Section 1.
 - Book names accept abbreviations (Phil, Gen, Rom, etc.) or full names.
 - Testament auto-detected from book name.
@@ -267,23 +312,23 @@ Gloss: "[translation]"
 
 ### NT Morphological Data
 
-Call `mcp__claude-of-alexandria-mcp__query_morphology` with `{"book": "[Book]", "range": "[chapter:verse-chapter:verse]"}`
+Call `mcp__plugin_claude-of-alexandria_claude-of-alexandria-mcp__query_morphology` with `{"book": "[Book]", "range": "[chapter:verse-chapter:verse]"}`
 
 ### OT Morphological Data
 
-Call `mcp__claude-of-alexandria-mcp__query_morphology` with `{"book": "[Book]", "testament": "ot", "range": "[chapter:verse-chapter:verse]"}`
+Call `mcp__plugin_claude-of-alexandria_claude-of-alexandria-mcp__query_morphology` with `{"book": "[Book]", "testament": "ot", "range": "[chapter:verse-chapter:verse]"}`
 
 ### Vocabulary Frequencies
 
-Call `mcp__claude-of-alexandria-mcp__query_vocabulary` with `{"book": "[Book]", "testament": "[nt|ot]"}`
+Call `mcp__plugin_claude-of-alexandria_claude-of-alexandria-mcp__query_vocabulary` with `{"book": "[Book]", "testament": "[nt|ot]"}`
 
 ### Levinsohn Discourse Features (NT)
 
-Call `mcp__claude-of-alexandria-mcp__query_discourse_features` with `{"book": "[Book]"}`
+Call `mcp__plugin_claude-of-alexandria_claude-of-alexandria-mcp__query_discourse_features` with `{"book": "[Book]"}`
 
 ### Masoretic Markers (OT)
 
-Call `mcp__claude-of-alexandria-mcp__query_paragraph_breaks` with `{"book": "[Book]"}`
+Call `mcp__plugin_claude-of-alexandria_claude-of-alexandria-mcp__query_paragraph_breaks` with `{"book": "[Book]"}`
 
 ### Claim Verification
 
@@ -318,9 +363,13 @@ Key semantic families from `semantic_groups.yaml` (for Section 4 connections):
 | Wrong voice in morphology | Always verify via query_morphology MCP tool |
 | "Scholars agree..." without citation | Web search required; cite author/title/year |
 | Mixing Tier 1 and Tier 4 | Label every tier claim explicitly |
-| Skipping verify_claims.py | Section 10 is required |
-| Not saving to output location | Check path, save, report path to user |
+| Skipping Section 10 cross-check | Re-query MCP tools to confirm every data claim before delivering |
+| `--output print` but saved to file | If `--output print` is in the invocation, print ALL 10 sections inline. Never save to file and return a summary. |
+| Renaming sections | Use the exact 10 section titles from the template. "Homiletical Trajectories" is not "Interpretive Guardrails." |
+| Only 6 sections instead of 10 | Every invocation produces exactly 10 sections. No abbreviation, no "brief" mode. |
+| User says "keep it brief" → skip sections | All 10 sections are mandatory. "Brief" may shorten prose within sections but never removes sections. |
 | Proceeding past problematic pericope without warning | Pericope check is mandatory Step 1 |
+| No logical connectives in epistle analysis | For epistles: query_morphology pos_filter "conjunction", map γάρ/οὖν/δέ/ἀλλά/ἵνα flow |
 
 ---
 

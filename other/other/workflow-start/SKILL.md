@@ -1,42 +1,86 @@
 ---
 name: workflow-start
-description: "[Tooling & Meta] Activate a workflow from the injected catalog. Use when the workflow-router hook injects a catalog and a matching workflow is identified, or when the user explicitly requests a workflow activation (e.g., "start feature workflow", "activate bugfix workflow")."
-infer: true
-allowed-tools: Skill, TodoWrite, AskUserQuestion, Read, Glob, Grep
+version: 1.0.0
+description: "[Skill Management] Activate a workflow from the injected catalog. Use when starting a detected workflow, initializing workflow state, or activating a workflow sequence. Triggers on "start workflow", "activate workflow", "workflow-start", "begin workflow"."
+allowed-tools: TaskCreate
 ---
 
-# Workflow Activation
+> **[MANDATORY]** You MUST use `TaskCreate` to break ALL work into small tasks BEFORE starting. NEVER skip task creation.
 
-Start a workflow by ID from the workflow catalog injected by the hook system. This creates workflow state and prepares the step sequence for execution.
+## Quick Summary
+
+**Goal:** Activate a workflow by ID, creating tracking tasks and announcing the workflow sequence.
+
+**Workflow:**
+1. **Match** -- Validate workflow ID against catalog
+2. **Create** -- Set up TaskCreate items for all workflow steps
+3. **Announce** -- Tell user the detected intent and workflow sequence
+
+**Key Rules:**
+- MUST be called as first action after workflow detection (for non-trivial tasks)
+- For simple tasks, AI MUST ask user whether to skip workflow
+- Create workflow-level tasks BEFORE any implementation tasks
+
+# Workflow Start
+
+Activate a workflow from the injected catalog and initialize step tracking via TaskCreate.
+
+---
 
 ## When to Use
 
-- After the workflow-router hook injects a catalog and you identify a matching workflow
-- When the user explicitly asks to follow a specific workflow
-- When switching from one active workflow to another
+- Starting a detected workflow from the injected catalog
+- Initializing workflow state for step-by-step execution
+- Switching from one active workflow to another
 
-## Workflow
+**NOT for**: Manual step execution (follow TaskCreate items), workflow design (use `planning`), or workflow catalog management.
 
-1. **Validate** the workflow ID against the injected catalog
-2. **Confirm if needed** — If the workflow has a **Confirm first** marker, ask the user BEFORE activation
-3. **Activate** — Invoke `/workflow-start <workflowId>` slash command to create workflow state via the workflow-step-tracker hook
-4. **Create TodoWrite items** for ALL sequence steps immediately after activation
-5. **Follow the sequence** in order, marking each step `in_progress` then `completed`
+---
+
+## Quick Reference
+
+### Workflow
+
+1. Read the workflow catalog injected by the hook
+2. Validate the workflow ID against available entries
+3. Create workflow state via the workflow-step-tracker hook
+4. Create TaskCreate items for ALL sequence steps immediately
+5. Begin first step, marking it `in_progress`
+
+### Related
+
+- **Command:** `/workflow-start <workflowId>`
+- **Hook:** `workflow-step-tracker.cjs`
+- **Hook:** `workflow-router.cjs`
+
+---
 
 ## Activation Rules
 
-- Call this ONLY after reading the workflow catalog injected by the hook
+- Call ONLY after reading the workflow catalog injected by the hook
 - Use the exact workflow ID shown in the catalog (e.g., `feature`, `bugfix`, `investigation`)
-- If the workflow has **Confirm first** marker, ask the user BEFORE calling this command
+- If the workflow has **Confirm first** marker, ask the user BEFORE activation
 - If called while another workflow is active, it will auto-switch (end current, start new)
+
+---
 
 ## After Activation
 
-Your FIRST action after activation completes MUST be `TodoWrite` with items like:
+Your FIRST action after activation MUST be calling `TaskCreate` once for EACH workflow step:
 
-    [Workflow] /step-command - Step description (status: in_progress for first, pending for rest)
+    TaskCreate: subject="[Workflow] /step-command - Step description", description="Workflow step", activeForm="Executing step"
 
-Do NOT skip TodoWrite. It is a hard-blocking requirement.
+Create ALL tasks first, then mark the first task `in_progress` via `TaskUpdate`. Do NOT skip this.
+
+---
+
+## See Also
+
+- `planning` skill - Creating implementation plans
+- `feature-implementation` skill - Implementing features after planning
+- `debug` skill - Bug fix workflows
+
+---
 
 ## IMPORTANT Task Planning Notes (MUST FOLLOW)
 

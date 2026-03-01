@@ -1,31 +1,34 @@
 ---
 name: bootstrap
-description: "[Utilities] ⚡⚡⚡⚡⚡ Bootstrap a new project step by step"
-argument-hint: [user-requirements]
-infer: true
+version: 1.0.0
+description: '[Implementation] Bootstrap a new project step by step'
+activation: user-invoked
 ---
 
+> **[IMPORTANT]** Use `TaskCreate` to break ALL work into small tasks BEFORE starting — including tasks for each file read. This prevents context loss from long files. For simple tasks, AI may ask user whether to skip.
+
+## Quick Summary
+
+**Goal:** Plan and bootstrap a new project end-to-end, from requirements through implementation to documentation.
+
+**Workflow:**
+
+1. **Clarify** — Ask probing questions to understand objectives and constraints
+2. **Research** — Parallel research for idea validation and best solutions
+3. **Tech Stack** — Select and get user approval on technology choices
+4. **Plan** — Create phased implementation plan with approval gate
+5. **Wireframe** — Optional design guidelines and wireframes
+6. **Implement** — Execute plan step by step with type checking
+7. **Test & Review** — Run tests, code review, iterate until passing
+8. **Document & Onboard** — Update docs, guide user to get started
+
+**Key Rules:**
+
+- Never implement without user-approved plan
+- Follow YAGNI, KISS, DRY principles
+- Ask 1 question at a time; wait for answer before proceeding
+
 **Ultrathink** to plan & bootstrap a new project follow the Orchestration Protocol, Core Responsibilities, Subagents Team and Development Rules in your `CLAUDE.md` file:
-
-## Summary
-
-**Goal:** Bootstrap a new project end-to-end: from requirements gathering through research, planning, design, implementation, testing, and documentation.
-
-| Step | Action | Key Notes |
-|------|--------|-----------|
-| 1 | Gather requirements | AskUserQuestion one at a time; clarify until 100% certain |
-| 2 | Research | Parallel researcher subagents; reports <=150 lines each |
-| 3 | Tech stack | User choice or researched recommendation; save to `./docs` |
-| 4 | Planning | Planner subagent creates phased plan; user approval required |
-| 5 | Wireframe & design | Optional; UI/UX subagent + ai-multimodal for assets |
-| 6 | Implementation | Follow plan phases; type-check and compile |
-| 7 | Testing & review | All tests must pass; code review with no critical issues |
-| 8 | Documentation & onboarding | Update docs, roadmap; guide user through setup |
-
-**Key Principles:**
-- Question everything -- use AskUserQuestion, never assume
-- Do NOT implement before user approves the plan
-- Supports `--fast` (skip questions) and `--parallel` (concurrent phases) flags
 
 ---
 
@@ -63,18 +66,18 @@ Follow strictly these following steps:
 
 **First thing first:** check if Git has been initialized, if not, ask the user if they want to initialize it, if yes, use `git-manager` subagent to initialize it.
 
-### Fulfill the request
+### Fullfill the request
 
-* If you have any questions, use `AskUserQuestion` tool to ask the user to clarify them.
-* Ask 1 question at a time, wait for the user to answer before moving to the next question.
-* If you don't have any questions, start the next step.
+- If you have any questions, use `AskUserQuestion` tool to ask the user to clarify them.
+- Ask 1 question at a time, wait for the user to answer before moving to the next question.
+- If you don't have any questions, start the next step.
 
 **IMPORTANT:** Analyze the skills catalog and activate the skills that are needed for the task during the process.
 
 ### Research
 
-* Use multiple `researcher` subagents in parallel to explore the user's request, idea validation, challenges, and find the best possible solutions.
-* Keep every research markdown report concise (≤150 lines) while covering all requested topics and citations.
+- Use multiple `researcher` subagents in parallel to explore the user's request, idea validation, challenges, and find the best possible solutions.
+- Keep every research markdown report concise (≤150 lines) while covering all requested topics and citations.
 
 ### Tech Stack
 
@@ -85,91 +88,86 @@ Follow strictly these following steps:
 
 ### Planning
 
-* Use `planner` subagent to create a detailed implementation plan following the progressive disclosure structure:
-  - Create a directory using naming pattern from `## Naming` section.
-  - Save the overview access point at `plan.md`, keep it generic, under 80 lines, and list each phase with status/progress and links.
-  - For each phase, add `phase-XX-phase-name.md` files containing sections (Context links, Overview with date/priority/statuses, Key Insights, Requirements, Architecture, Related code files, Implementation Steps, Todo list, Success Criteria, Risk Assessment, Security Considerations, Next steps).
-* Clearly explain the pros and cons of the plan.
+- Use `planner` subagent to create a detailed implementation plan following the progressive disclosure structure:
+    - Create a directory using naming pattern from `## Naming` section.
+    - Save the overview access point at `plan.md`, keep it generic, under 80 lines, and list each phase with status/progress and links.
+    - For each phase, add `phase-XX-phase-name.md` files containing sections (Context links, Overview with date/priority/statuses, Key Insights, Requirements, Architecture, Related code files, Implementation Steps, Todo list, Success Criteria, Risk Assessment, Security Considerations, Next steps).
+- Clearly explain the pros and cons of the plan.
 
 **IMPORTANT**: **Do not** start implementing immediately!
-* Ask the user to review and approve the plan, if the user requests to change the plan, repeat the previous step until the user approves the plan
+
+- Ask the user to review and approve the plan, if the user requests to change the plan, repeat the previous step until the user approves the plan
 
 ### Wireframe & Design
 
-* Ask the user if they want to create wireframes and design guidelines, if yes, continue to the next step, if no, skip to **"Implementation"** phase.
-* Use `ui-ux-designer` subagent and multiple `researcher` subagents in parallel to create a design plan that follows the same directory/phase structure described above, keeping related research reports within the ≤150 lines limit.
-   - **Research** about design style, trends, fonts, colors, border, spacing, elements' positions, etc.
-   - Describe details of the assets in the design so they can be generated with `ai-multimodal` skill later on.
-   - **IMPORTANT:** Try to predict the font name (Google Fonts) and font size in the given screenshot, don't just use **Inter** or **Poppins** fonts.
-* Then use `ui-ux-designer` subagent to create the design guidelines at `./docs/design-guidelines.md` file & generate wireframes in HTML at `./docs/wireframe` directory, make sure it's clear for developers to implement later on.
-* If there are no logo provided, use `ai-multimodal` skill to generate a logo.
-* Use `test-ui` skill to take a screenshot of the wireframes and save it at `./docs/wireframes/` directory.
-* Ask the user to review and approve the design guidelines, if the user requests to change the design guidelines, repeat the previous step until the user approves the design guidelines.
+- Ask the user if they want to create wireframes and design guidelines, if yes, continue to the next step, if no, skip to **"Implementation"** phase.
+- Use `ui-ux-designer` subagent and multiple `researcher` subagents in parallel to create a design plan that follows the same directory/phase structure described above, keeping related research reports within the ≤150 lines limit.
+    - **Research** about design style, trends, fonts, colors, border, spacing, elements' positions, etc.
+    - Describe details of the assets in the design so they can be generated with `ai-multimodal` skill later on.
+    - **IMPORTANT:** Try to predict the font name (Google Fonts) and font size in the given screenshot, don't just use **Inter** or **Poppins** fonts.
+- Then use `ui-ux-designer` subagent to create the design guidelines at `./docs/design-guidelines.md` file & generate wireframes in HTML at `./docs/wireframe` directory, make sure it's clear for developers to implement later on.
+- If there are no logo provided, use `ai-multimodal` skill to generate a logo.
+- Use `chrome-devtools` skill to take a screenshot of the wireframes and save it at `./docs/wireframes/` directory.
+- Ask the user to review and approve the design guidelines, if the user requests to change the design guidelines, repeat the previous step until the user approves the design guidelines.
 
 **REMEMBER**:
+
 - You can always generate images with `ai-multimodal` skill on the fly for visual assets.
 - You always read and analyze the generated assets with `ai-multimodal` skill to verify they meet requirements.
-- For image editing (removing background, adjusting, cropping), use `ImageMagick` skill or similar tools as needed.
+- For image editing (removing background, adjusting, cropping), use `media-processing` skill as needed.
 
 ### Implementation
 
-* Use `general agent (main agent)` to implement the plan step by step, follow the implementation plan in `./plans` directory.
-* Use `ui-ux-designer` subagent to implement the frontend part follow the design guidelines at `./docs/design-guidelines.md` file.
-  * Use `ai-multimodal` skill to generate the assets.
-  * Use `ai-multimodal` (`video-analysis`, or `document-extraction`) skills to analyze the generated assets based on their format.
-  * Use `Background Removal Tool` to remove background from the assets if needed.
-  * Use `ai-multimodal` (`image-generation`) skill to edit the assets if needed.
-  * Use `imagemagick` skill to crop or resize the assets if needed.
-* Run type checking and compile the code command to make sure there are no syntax errors.
+- Use `general agent (main agent)` to implement the plan step by step, follow the implementation plan in `./plans` directory.
+- Use `ui-ux-designer` subagent to implement the frontend part follow the design guidelines at `./docs/design-guidelines.md` file.
+    - Use `ai-multimodal` skill to generate the assets.
+    - Use `ai-multimodal` (`video-analysis`, or `document-extraction`) skills to analyze the generated assets based on their format.
+    - Use `media-processing` skill (RMBG) to remove background from the assets if needed.
+    - Use `ai-multimodal` (`image-generation`) skill to edit the assets if needed.
+    - Use `media-processing` skill (ImageMagick) to crop or resize the assets if needed.
+- Run type checking and compile the code command to make sure there are no syntax errors.
 
 ### Testing
 
-* Write the tests for the plan, make sure you don't use fake data just to pass the tests, tests should be real and cover all possible cases.
-* Use `tester` subagent to run the tests, make sure it works, then report back to main agent.
-* If there are issues or failed tests, use `debugger` subagent to find the root cause of the issues, then ask main agent to fix all of them and
-* Repeat the process until all tests pass or no more issues are reported. Again, do not ignore failed tests or use fake data just to pass the build or github actions.
+- Write the tests for the plan, make sure you don't use fake data just to pass the tests, tests should be real and cover all possible cases.
+- Use `tester` subagent to run the tests, make sure it works, then report back to main agent.
+- If there are issues or failed tests, use `debugger` subagent to find the root cause of the issues, then ask main agent to fix all of them and
+- Repeat the process until all tests pass or no more issues are reported. Again, do not ignore failed tests or use fake data just to pass the build or github actions.
 
 ### Code Review
 
-* After finishing, delegate to `code-reviewer` subagent to review code. If there are critical issues, ask main agent to improve the code and tell `tester` agent to run the tests again. Repeat the process until all tests pass.
-* When all tests pass, code is reviewed, the tasks are completed, report back to user with a summary of the changes and explain everything briefly, ask user to review the changes and approve them.
-* **IMPORTANT:** Sacrifice grammar for the sake of concision when writing outputs.
+- After finishing, delegate to `code-reviewer` subagent to review code. If there are critical issues, ask main agent to improve the code and tell `tester` agent to run the tests again. Repeat the process until all tests pass.
+- When all tests pass, code is reviewed, the tasks are completed, report back to user with a summary of the changes and explain everything briefly, ask user to review the changes and approve them.
+- **IMPORTANT:** Sacrifice grammar for the sake of concision when writing outputs.
 
 ### Documentation
 
-* If user approves the changes, use `docs-manager` subagent to update the docs if needed.
-  * Create/update `./docs/README.md` file (keep it concise, under 300 lines).
-  * Create/update `./docs/codebase-summary.md` file.
-  * Create/update `./docs/project-overview.-pdr.md` (Product Development Requirements) file.
-  * Create/update `./docs/code-standards.md` file.
-  * Create/update `./docs/system-architecture.md` file.
-* Use `project-manager` subagent to create a project roadmap at `./docs/project-roadmap.md` file & project progress and task status in the given plan file.
-* **IMPORTANT:** Sacrifice grammar for the sake of concision when writing outputs.
+- If user approves the changes, use `docs-manager` subagent to update the docs if needed.
+    - Create/update `./docs/README.md` file (keep it concise, under 300 lines).
+    - Create/update `./docs/codebase-summary.md` file.
+    - Create/update `./docs/project-overview.-pdr.md` (Product Development Requirements) file.
+    - Create/update `./docs/code-standards.md` file.
+    - Create/update `./docs/system-architecture.md` file.
+- Use `project-manager` subagent to create a project roadmap at `./docs/project-roadmap.md` file & project progress and task status in the given plan file.
+- **IMPORTANT:** Sacrifice grammar for the sake of concision when writing outputs.
 
 ### Onboarding
 
-* Instruct the user to get started with the project.
-* Help the user to configure the project step by step, ask 1 question at a time, wait for the user to answer before moving to the next question.
-* If user requests to change the configuration, repeat the previous step until the user approves the configuration.
+- Instruct the user to get started with the project.
+- Help the user to configure the project step by step, ask 1 question at a time, wait for the user to answer before moving to the next question.
+- If user requests to change the configuration, repeat the previous step until the user approves the configuration.
 
 ### Final Report
-* Report back to user with a summary of the changes and explain everything briefly, guide user to get started and suggest the next steps.
-* Ask the user if they want to commit and push to git repository, if yes, use `git-manager` subagent to commit and push to git repository.
-- **IMPORTANT:** Sacrifice grammar for the sake of concision when writing reports.
-- **IMPORTANT:** In reports, list any unresolved questions at the end, if any.
 
-## Mode Flags (detected from $ARGUMENTS)
+- Report back to user with a summary of the changes and explain everything briefly, guide user to get started and suggest the next steps.
+- Ask the user if they want to commit and push to git repository, if yes, use `git-manager` subagent to commit and push to git repository.
 
-### --fast
-Skip user questions, minimal planning. Research in parallel, create plan, implement immediately without step-by-step confirmation. Use `Think hard` instead of `Ultrathink`.
+* **IMPORTANT:** Sacrifice grammar for the sake of concision when writing reports.
+* **IMPORTANT:** In reports, list any unresolved questions at the end, if any.
 
-### --parallel
-Use parallel execution strategy: trigger `/plan-hard --parallel` for parallel-executable plan, launch multiple `fullstack-developer` agents concurrently for independent phases. Use `Ultrathink parallel`.
+---
 
-### --fast --parallel
-Combine: skip questions + parallel execution.
+**IMPORTANT Task Planning Notes (MUST FOLLOW)**
 
-## IMPORTANT Task Planning Notes
-
-- Always plan and break many small todo tasks
-- Always add a final review todo task to review the works done at the end to find any fix or enhancement needed
+- Always plan and break work into many small todo tasks
+- Always add a final review todo task to verify work quality and identify fixes/enhancements

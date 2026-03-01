@@ -4,7 +4,7 @@ description: >
   Unified log search across Loki, Elasticsearch, and CloudWatch.
   Natural language queries translated to LogQL, ES DSL, or CloudWatch filter patterns.
   Read-only. Never modifies or deletes logs.
-version: 0.1.1
+version: 0.1.2
 author: Anvil AI
 tags: [logs, observability, loki, elasticsearch, cloudwatch, incident-response, sre, discord, discord-v2]
 ---

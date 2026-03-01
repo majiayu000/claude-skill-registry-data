@@ -4,7 +4,7 @@ description: >
   Turn meeting transcripts into operational outputs — action items, decisions,
   follow-up email drafts, and ticket drafts. Not a summarizer. An operator.
   Accepts VTT, SRT, or plain text. Multi-pass LLM extraction.
-version: 0.1.1
+version: 0.1.2
 author: Anvil AI
 tags: [meetings, productivity, action-items, email-drafts, transcripts, operations, discord, discord-v2]
 ---

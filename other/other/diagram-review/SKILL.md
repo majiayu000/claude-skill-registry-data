@@ -1,5 +1,8 @@
 ---
+name: diagram-review
 context: fork
+description: Analyse architecture diagrams and flowcharts
+model: opus
 ---
 
 # /diagram-review
@@ -10,9 +13,9 @@ Perform comprehensive analysis of architecture diagrams, flowcharts, and technic
 
 ```
 /diagram-review <image-path>
-/diagram-review +Attachments/architecture-diagram.png
-/diagram-review +Attachments/data-flow.png --type "C4"
-/diagram-review +Attachments/process-flow.png --project "MyDataIntegration"
+/diagram-review Attachments/architecture-diagram.png
+/diagram-review Attachments/data-flow.png --type "C4"
+/diagram-review Attachments/process-flow.png --project "Integration Project"
 ```
 
 ## Instructions
@@ -62,7 +65,13 @@ Task: Analyse architectural patterns and quality
 - Identify potential single points of failure
 - Note security boundaries if visible
 - Evaluate completeness and clarity
-Return: Pattern analysis with architectural assessment
+- **Readability assessment:**
+  - Count edge crossings (target: <5 for complex, 0 for simple)
+  - Check visual hierarchy (is the system boundary the most prominent element?)
+  - Verify consistent flow direction (L→R or T→B, not mixed)
+  - Assess Gestalt proximity compliance (are related elements grouped together?)
+  - Check single abstraction level (no database tables on container diagrams)
+Return: Pattern analysis with architectural assessment and readability score
 ```
 
 **Agent 4: Technology & Integration Analysis** (Sonnet)
@@ -70,10 +79,10 @@ Return: Pattern analysis with architectural assessment
 Task: Identify technologies and integrations
 - Read the image file
 - Recognise technology logos and icons
-- Identify cloud services (AWS, Azure, SAP)
+- Identify cloud services (AWS, Azure, GCP)
 - Note databases, queues, APIs
 - Map external system integrations
-- Identify known YourOrg systems (SAP LegacyEngineeringSystem, MROPlatform, DataPlatform, etc.)
+- Identify known enterprise systems (ERP, MRO, data platforms, etc.)
 Return: Technology inventory with integration points
 ```
 
@@ -134,6 +143,20 @@ Return: Technology inventory with integration points
 ### Recommendations
 {{suggested improvements}}
 
+## Readability Assessment
+
+| Criterion                     | Result            | Target                           |
+|-------------------------------|-------------------|----------------------------------|
+| **Edge crossings**            | {{count}}         | <5 for complex, 0 for simple     |
+| **Visual hierarchy**          | {{pass/fail}}     | System boundary most prominent   |
+| **Flow direction**            | {{L→R / T→B / mixed}} | Consistent single direction  |
+| **Grouping effectiveness**    | {{pass/fail}}     | Related elements close together  |
+| **Relationship traceability** | {{pass/fail}}     | Can follow each line clearly     |
+| **Abstraction level**         | {{pass/fail}}     | One level per diagram            |
+
+### Declaration Order Recommendation
+{{If Mermaid/PlantUML source is available, suggest optimal declaration order based on data flow. Otherwise note "Source not available for declaration order analysis."}}
+
 ## Technology Stack
 
 ### Cloud Services
@@ -165,5 +188,5 @@ Return: Technology inventory with integration points
 ### Notes
 
 - Optimised for C4 diagrams, UML, flowcharts, and network diagrams
-- Can recognise organization-specific systems and technologies
+- Can recognise organisation-specific systems and technologies
 - Useful for architecture reviews and documentation

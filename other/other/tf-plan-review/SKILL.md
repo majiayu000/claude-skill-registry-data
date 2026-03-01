@@ -4,7 +4,7 @@ description: >
   Analyze Terraform plans for risk before you apply. Classifies every change
   as safe, moderate, dangerous, or critical. Detects destroys, IAM changes,
   data-loss risks, and blast radius. Entirely read-only — never runs apply.
-version: 0.1.1
+version: 0.1.2
 author: Anvil AI
 tags: [terraform, opentofu, iac, infrastructure, devops, risk-assessment, plan-review, security, discord, discord-v2]
 ---

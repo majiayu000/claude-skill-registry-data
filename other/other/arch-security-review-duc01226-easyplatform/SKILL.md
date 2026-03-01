@@ -1,22 +1,29 @@
 ---
 name: arch-security-review
 version: 1.1.0
-description: "[Architecture] Use when reviewing code for security vulnerabilities, implementing authorization, or ensuring data protection."
-infer: true
+description: '[Architecture] Use when reviewing code for security vulnerabilities, implementing authorization, or ensuring data protection.'
 allowed-tools: Read, Write, Edit, Grep, Glob, Bash, Task
 ---
+
+> **[IMPORTANT]** Use `TaskCreate` to break ALL work into small tasks BEFORE starting — including tasks for each file read. This prevents context loss from long files. For simple tasks, AI may ask user whether to skip.
+
+**Prerequisites:** **MUST READ** `.claude/skills/shared/evidence-based-reasoning-protocol.md` before executing.
+
+> **Critical Purpose:** Ensure quality — no flaws, no bugs, no missing updates, no stale content. Verify both code AND documentation.
 
 ## Quick Summary
 
 **Goal:** Review code for security vulnerabilities against OWASP Top 10 and enforce authorization, data protection, and secure coding patterns.
 
 **Workflow:**
+
 1. **Pre-Flight** — Identify security-sensitive areas, check OWASP relevance, review existing patterns
 2. **OWASP Audit** — Evaluate code against all 10 categories (access control, injection, auth, etc.)
-3. **Platform Checks** — Verify PlatformAuthorize, entity access expressions, input validation
+3. **Project Checks** — Verify authorization attributes, entity access expressions, input validation
 4. **Report** — Document findings with severity, vulnerable vs secure code examples
 
 **Key Rules:**
+
 - Always check both backend (C#) and frontend (Angular) attack surfaces
 - Use `[PlatformAuthorize]` and entity-level access expressions, never rely on UI-only guards
 - Validate all external data with `PlatformValidationResult`, never trust client input

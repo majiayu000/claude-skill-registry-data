@@ -51,6 +51,8 @@ description: 학생 그룹(학생관리/등록상담/학생상담/성적관리/�
 | `components/Contracts/ContractsTab.tsx` | 계약 관리 메인 |
 | `components/Reports/ReportsTab.tsx` | 성적표 메인 |
 | `hooks/useContracts.ts` | 계약 데이터 + mutation (4 mutations) |
+| `utils/enrollment.ts` | 수강종료 판정 유틸리티 (퇴원/미래배정 필터링) |
+| `utils/firestoreConverters.ts` | Firestore Timestamp → 날짜 변환 유틸리티 |
 
 ## Workflow
 
@@ -115,16 +117,16 @@ grep -n "ExamCreateModal\|ScoreInputView\|ExamListView" components/Grades/Grades
 **PASS 기준:** 3개 뷰/모달이 GradesManager에서 참조됨
 **FAIL 기준:** 성적 관리 흐름 단절
 
-### Step 6: 퇴원 관리 통계/필터 훅 연결 검증
+### Step 6: 퇴원 관리 필터 훅 연결 검증
 
-**검사:** WithdrawalManagementTab에서 통계 및 필터링 훅이 사용되는지 확인합니다.
+**검사:** WithdrawalManagementTab에서 필터링 훅이 사용되는지 확인합니다.
 
 ```bash
-grep -n "useWithdrawalStats\|useWithdrawalFilters" components/WithdrawalManagement/WithdrawalManagementTab.tsx | head -5
+grep -n "useWithdrawalFilters" components/WithdrawalManagement/WithdrawalManagementTab.tsx | head -5
 ```
 
-**PASS 기준:** 통계 및 필터 훅 사용 확인
-**FAIL 기준:** 훅 연결 누락
+**PASS 기준:** useWithdrawalFilters 훅 사용 확인
+**FAIL 기준:** 필터 훅 연결 누락
 
 ### Step 7: 학생 필터링 훅 연결 검증
 

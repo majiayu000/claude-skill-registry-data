@@ -26,7 +26,7 @@ argument-hint: "[yaml|slides]"
 
 ---
 
-## 🔧 PDF ページ範囲読み取り（Claude Code 2.1.38+）
+## 🔧 PDF ページ範囲読み取り（Claude Code 2.1.49+）
 
 大型 PDF を効率的に扱うための機能です。
 

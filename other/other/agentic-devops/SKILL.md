@@ -1,6 +1,6 @@
 ---
 name: agentic-devops
-version: 1.0.0
+version: 1.0.1
 description: Production-grade agent DevOps toolkit — Docker, process management, log analysis, and health monitoring. Built by engineers who run production.
 author: Anvil AI
 license: MIT

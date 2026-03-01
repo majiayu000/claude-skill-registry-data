@@ -1,86 +1,85 @@
 ---
 name: learn
-description: "[Tooling & Meta] Teach Claude a new pattern, preference, or convention explicitly. Use when you want to save a correction, preference, or coding pattern for future sessions. Triggers on keywords like "remember this", "always do", "never do", "learn this pattern", "/learn"."
-allowed-tools: Read, Write, Edit, Bash
-infer: true
+version: 2.0.0
+description: "[Utilities] Teach Claude lessons that persist across sessions. Triggers on 'remember this', 'always do', 'never do', 'learn this', 'from now on'. Saves to docs/lessons.md, auto-injected via hook."
+activation: user-invoked
+allowed-tools: Read, Write, Edit, Glob
 ---
 
-# Pattern Learning Skill
+> **[IMPORTANT]** Use `TaskCreate` to break ALL work into small tasks BEFORE starting — including tasks for each file read. This prevents context loss from long files. For simple tasks, AI may ask user whether to skip.
 
-Explicitly teach Claude patterns, preferences, or conventions to remember across sessions.
+## Quick Summary
 
-## Quick Usage
+**Goal:** Teach Claude lessons that persist across sessions by saving to memory files.
+
+**Workflow:**
+1. **Capture** -- Identify the lesson from user instruction or experience
+2. **Save** -- Write to appropriate memory file in `.claude/projects/` or `docs/lessons.md`
+3. **Confirm** -- Acknowledge what was saved and where
+
+**Key Rules:**
+- Triggers on "remember this", "always do X", "never do Y"
+- Save to persistent memory, not just session context
+- Check for existing memories before creating duplicates
+
+# Lesson Learning Skill
+
+Teach Claude lessons that persist across sessions. Lessons are saved to `docs/lessons.md` and automatically injected into every prompt and before file edits.
+
+## Usage
+
+### Add a lesson
 
 ```
-/learn always use PlatformValidationResult instead of throwing ValidationException
-/learn [wrong] var x = 1 [right] const x = 1 - always prefer const
-/learn backend: DTO mapping should be in the DTO class, not in command handlers
+/learn always use the validation framework fluent API instead of throwing ValidationException
+/learn never call external APIs in command handlers - use Entity Event Handlers
+/learn prefer async/await over .then() chains
 ```
 
-## Teaching Formats
+### List lessons
 
-### Format 1: Natural Language
 ```
-/learn always use IGrowthRootRepository instead of generic IPlatformRootRepository
-```
-Detected patterns: "always use X instead of Y", "prefer X over Y", "never do X"
-
-### Format 2: Explicit Wrong/Right
-```
-/learn [wrong] throw new ValidationException("Invalid") [right] return PlatformValidationResult.Invalid("Invalid")
+/learn list
 ```
 
-### Format 3: Category-Specific
+### Remove a lesson
+
 ```
-/learn backend: always add [ComputedEntityProperty] with empty setter
-/learn frontend: extend AppBaseComponent instead of raw Component
-/learn workflow: always use TodoWrite before multi-step tasks
+/learn remove 3
 ```
 
-## How It Works
+### Clear all lessons
 
-1. **Detection**: `pattern-learner.cjs` hook detects teaching input
-2. **Extraction**: Extracts wrong/right pair, keywords, context
-3. **Storage**: Saves to `.claude/learned-patterns/{category}/{slug}.yaml`
-4. **Injection**: Future sessions auto-inject relevant patterns (max 5, ~400 tokens)
+```
+/learn clear
+```
 
-## Pattern Categories
+## Behavior
 
-| Category   | Use For                                        |
-| ---------- | ---------------------------------------------- |
-| `backend`  | C#, .NET, API, Entity, Repository patterns     |
-| `frontend` | Angular, TypeScript, Component, Store patterns |
-| `workflow` | Development process, git, planning patterns    |
-| `general`  | Cross-cutting concerns                         |
+1. **`/learn <text>`** — Append `- [YYYY-MM-DD] <text>` to `docs/lessons.md`
+2. **`/learn list`** — Read and display all current lessons
+3. **`/learn remove <N>`** — Remove lesson entry N (by line number among lesson entries)
+4. **`/learn clear`** — Clear all lessons (confirm with user first)
+5. **File creation** — If `docs/lessons.md` doesn't exist, create it with header only (`# Learned Lessons`), no HTML comments
 
-## Confidence System
+## Auto-Inferred Activation
 
-- Explicit teaching: starts at **80%**
-- Implicit corrections: starts at **40%**
-- Increases on: user confirmation, pattern followed
-- Decreases on: pattern conflicts, 30 days unused (decay)
-- Below **20%**: auto-archived
-
-Conflicts with `docs/claude/*.md` are blocked to prevent inconsistencies.
+When Claude detects correction phrases in conversation (e.g., "always use X", "remember this", "never do Y", "from now on"), this skill auto-activates via `infer: true`. When auto-inferred (not explicit `/learn`), **confirm with the user before saving**: "Save this as a lesson? [Y/n]"
 
 ## Storage
 
+Lessons are stored in `docs/lessons.md` as a simple markdown list:
+
+```markdown
+# Learned Lessons
+
+- [2026-02-25] Always use validation framework fluent API
+- [2026-02-25] Never throw ValidationException for validation
 ```
-.claude/learned-patterns/
-├── index.yaml       # Pattern lookup index
-├── backend/         # Backend patterns
-├── frontend/        # Frontend patterns
-├── workflow/        # Workflow patterns
-├── general/         # General patterns
-└── archive/         # Archived patterns
-```
 
-## Related
+## Injection
 
-For lifecycle management (list, view, archive, boost, penalize): use `/learned-patterns` skill.
+Lessons are injected by `lessons-injector.cjs` hook on:
 
-
-## IMPORTANT Task Planning Notes
-
-- Always plan and break many small todo tasks
-- Always add a final review todo task to review the works done at the end to find any fix or enhancement needed
+- **UserPromptSubmit** — Every user message (with dedup)
+- **PreToolUse(Edit|Write|MultiEdit)** — Before every file edit (always)

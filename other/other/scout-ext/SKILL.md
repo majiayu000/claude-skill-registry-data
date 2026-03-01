@@ -1,9 +1,27 @@
 ---
 name: scout-ext
-description: "[Utilities] ⚡ Use external agentic tools to scout given directories"
-argument-hint: [user-prompt] [scale]
-infer: true
+version: 1.0.0
+description: '[Investigation] Use external agentic tools to scout given directories'
+activation: user-invoked
 ---
+
+> **[IMPORTANT]** Use `TaskCreate` to break ALL work into small tasks BEFORE starting — including tasks for each file read. This prevents context loss from long files. For simple tasks, AI may ask user whether to skip.
+
+**Prerequisites:** **MUST READ** `.claude/skills/shared/evidence-based-reasoning-protocol.md` before executing.
+
+## Quick Summary
+
+**Goal:** Use external agentic tools (Gemini, OpenCode) to quickly locate relevant files across the codebase.
+
+**Workflow:**
+1. **Scope** — Define search area and file patterns
+2. **Search** — Use external tools for broad file discovery
+3. **Report** — Return list of relevant files with context
+
+**Key Rules:**
+- Use for broad file discovery across large codebases
+- Complements `/scout` with external tool capabilities
+- Report file paths with brief context for each match
 
 ## Purpose
 
@@ -16,18 +34,21 @@ SCALE: $2 (defaults to 3)
 RELEVANT_FILE_OUTPUT_DIR: Use `Report:` from `## Naming` section
 
 ## Workflow:
+
 - Write a prompt for 'SCALE' number of agents to the `Task` tool that will immediately call the `Bash` tool to run these commands to kick off your agents to conduct the search:
-  - `gemini -p "[prompt]" --model gemini-2.5-flash-preview-09-2025` (if count <= 3)
-  - `opencode run "[prompt]" --model opencode/grok-code` (if count > 3 and count < 6)
-  - if count >= 6, spawn `Explore` subagents to search the codebase in parallel
+    - `gemini -p "[prompt]" --model gemini-2.5-flash-preview-09-2025` (if count <= 3)
+    - `opencode run "[prompt]" --model opencode/grok-code` (if count > 3 and count < 6)
+    - if count >= 6, spawn `Explore` subagents to search the codebase in parallel
 
 **Why use external agentic tools?**
+
 - External agentic tools are faster and more efficient when using LLMs with large context windows (1M+ tokens).
 
 **How to prompt the agents:**
+
 - If `gemini` or `opencode` is not available, ask the user if they want to install it:
-  - If **yes**, install it (if there are permission issues, instruct the user to install it manually, including authentication steps)
-  - If **no**, use the default `Explore` subagents.
+    - If **yes**, install it (if there are permission issues, instruct the user to install it manually, including authentication steps)
+    - If **no**, use the default `Explore` subagents.
 - IMPORTANT: Kick these agents off in parallel using the `Task` tool, analyze and divide folders for each agent to scout intelligently and quickly.
 - IMPORTANT: These agents are calling OTHER agentic coding tools to search the codebase. DO NOT call any search tools yourself.
 - IMPORTANT: That means with the `Task` tool, you'll immediately call the Bash tool to run the respective agentic coding tool (gemini, opencode, claude, etc.)
@@ -36,7 +57,9 @@ RELEVANT_FILE_OUTPUT_DIR: Use `Report:` from `## Naming` section
 - **IMPORTANT:** Sacrifice grammar for the sake of concision when writing reports.
 - **IMPORTANT:** In reports, list any unresolved questions at the end, if any.
 
-## IMPORTANT Task Planning Notes
+---
 
-- Always plan and break many small todo tasks
-- Always add a final review todo task to review the works done at the end to find any fix or enhancement needed
+**IMPORTANT Task Planning Notes (MUST FOLLOW)**
+
+- Always plan and break work into many small todo tasks
+- Always add a final review todo task to verify work quality and identify fixes/enhancements

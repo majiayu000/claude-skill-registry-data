@@ -1,26 +1,30 @@
 ---
 name: docs-seeker
-description: "[Docs] Search technical documentation using executable scripts to detect query type, fetch from llms.txt sources (context7.com), and analyze results. Use when user needs: (1) Topic-specific documentation (features/components/concepts), (2) Library/framework documentation, (3) GitHub repository analysis, (4) Documentation discovery with automated agent distribution strategy"
 version: 3.1.0
-allowed-tools: Bash, WebFetch, WebSearch
+description: '[Documentation] Search technical documentation using executable scripts to detect query type, fetch from llms.txt sources (context7.com), and analyze results. Use when user needs topic-specific documentation, library/framework documentation, GitHub repository analysis, or documentation discovery with automated agent distribution strategy.'
+
+allowed-tools: NONE
 ---
 
+> **[IMPORTANT]** Use `TaskCreate` to break ALL work into small tasks BEFORE starting — including tasks for each file read. This prevents context loss from long files. For simple tasks, AI may ask user whether to skip.
+
+## Quick Summary
+
+**Goal:** Search and fetch technical documentation using executable scripts with llms.txt standard (context7.com).
+
+**Workflow:**
+
+1. **Detect** — Run `scripts/detect-topic.js` to classify query type (topic-specific vs general)
+2. **Fetch** — Run `scripts/fetch-docs.js` to retrieve documentation with automatic fallback
+3. **Analyze** — Run `scripts/analyze-llms-txt.js` to categorize URLs and recommend agent distribution
+
+**Key Rules:**
+
+- Always execute scripts in order: detect -> fetch -> analyze
+- Scripts handle URL construction and fallback chains automatically; no manual URL building
+- Zero-token overhead: scripts run without context loading
+
 # Documentation Discovery via Scripts
-
-## Summary
-
-**Goal:** Search and retrieve technical documentation using executable scripts with llms.txt standard and context7.com sources.
-
-| Step | Action | Key Notes |
-|------|--------|-----------|
-| 1 | Detect query type | `node scripts/detect-topic.js "<query>"` -- topic-specific vs general |
-| 2 | Fetch documentation | `node scripts/fetch-docs.js "<query>"` -- auto URL construction + fallback |
-| 3 | Analyze results | `node scripts/analyze-llms-txt.js` -- categorize URLs, recommend agent distribution |
-
-**Key Principles:**
-- Scripts first -- never manually construct URLs; scripts handle fallback chains automatically
-- Zero-token overhead -- scripts run without context loading
-- Progressive disclosure -- load workflow/reference docs only when needed
 
 ## Overview
 
@@ -117,7 +121,9 @@ Scripts load `.env`: `process.env` > `.claude/skills/docs-seeker/.env` > `.claud
 
 See `.env.example` for configuration options.
 
-## IMPORTANT Task Planning Notes
+---
 
-- Always plan and break many small todo tasks
-- Always add a final review todo task to review the works done at the end to find any fix or enhancement needed
+**IMPORTANT Task Planning Notes (MUST FOLLOW)**
+
+- Always plan and break work into many small todo tasks
+- Always add a final review todo task to verify work quality and identify fixes/enhancements

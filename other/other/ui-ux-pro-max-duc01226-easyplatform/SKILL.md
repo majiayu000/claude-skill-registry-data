@@ -1,27 +1,33 @@
 ---
 name: ui-ux-pro-max
-description: "[Utilities] Design intelligence database for UI/UX decisions (tech-agnostic). Use FIRST when planning beautiful interfaces - provides style recommendations, color palettes, font pairings, UX guidelines BEFORE implementation. Searchable: 50 styles (glassmorphism, minimalism, brutalism), 21 color palettes, 50 font pairings, chart recommendations, landing page structures, accessibility patterns. Works with any stack (React, Vue, Angular, Flutter). For React component implementation, use shadcn-tailwind instead. Triggers on: beautiful UI, design system, color palette, font pairing, UX review, style guide."
+version: 1.0.0
+description: '[Frontend] Frontend UI/UX design intelligence - activate FIRST when user requests beautiful, stunning, gorgeous, or aesthetic interfaces. 50 styles, 21 palettes, 50 font pairings, 20 charts, 8 stacks. Triggers on ui design, ux design, design system, color palette, typography, glassmorphism, claymorphism, neumorphism, bento grid, font pairing, ui-ux-pro-max, stunning interface, beautiful ui.'
+allowed-tools: NONE
 ---
+
+> **[IMPORTANT]** Use `TaskCreate` to break ALL work into small tasks BEFORE starting — including tasks for each file read. This prevents context loss from long files. For simple tasks, AI may ask user whether to skip.
+
+## Quick Summary
+
+**Goal:** Provide searchable UI/UX design intelligence -- 50 styles, 21 palettes, 50 font pairings, 20 charts, 8 stacks.
+
+**Workflow:**
+
+1. **Analyze** — Extract product type, style keywords, industry, and stack from user request
+2. **Search** — Query `search.py` across domains: product, style, typography, color, landing, chart, UX
+3. **Stack Guidelines** — Get stack-specific best practices (default: html-tailwind)
+4. **Implement** — Synthesize search results into cohesive design and code
+
+**Key Rules:**
+
+- No emojis as UI icons (use SVG: Heroicons, Lucide, Simple Icons)
+- All clickable elements need `cursor-pointer` and hover feedback
+- Light mode text must have 4.5:1 minimum contrast ratio
+- Test both light/dark modes and responsive breakpoints before delivery
 
 # UI/UX Pro Max - Design Intelligence
 
 Searchable database of UI styles, color palettes, font pairings, chart types, product recommendations, UX guidelines, and stack-specific best practices.
-
-## Summary
-
-**Goal:** Provide design intelligence (styles, color palettes, font pairings, UX guidelines) as a searchable database to inform UI/UX decisions before implementation.
-
-| Step | Action | Key Notes |
-|------|--------|-----------|
-| 1 | Analyze requirements | Extract product type, style keywords, industry, stack |
-| 2 | Search domains | Use `search.py` for product, style, color, font, UX data |
-| 3 | Compile recommendations | Style guide, palette, typography, UX patterns |
-| 4 | Deliver design brief | Tech-agnostic recommendations ready for implementation |
-
-**Key Principles:**
-- Use FIRST before implementation — design decisions before code
-- Tech-agnostic: works with React, Vue, Angular, Flutter, any stack
-- For React component implementation, use shadcn-tailwind after this skill
 
 ## Prerequisites
 
@@ -34,16 +40,19 @@ python3 --version || python --version
 If Python is not installed, install it based on user's OS:
 
 **macOS:**
+
 ```bash
 brew install python3
 ```
 
 **Ubuntu/Debian:**
+
 ```bash
 sudo apt update && sudo apt install python3
 ```
 
 **Windows:**
+
 ```powershell
 winget install Python.Python.3.12
 ```
@@ -57,6 +66,7 @@ When user requests UI/UX work (design, build, create, implement, review, fix, im
 ### Step 1: Analyze User Requirements
 
 Extract key information from user request:
+
 - **Product type**: SaaS, e-commerce, portfolio, dashboard, landing page, etc.
 - **Style keywords**: minimal, playful, professional, elegant, dark mode, etc.
 - **Industry**: healthcare, fintech, gaming, education, etc.
@@ -176,7 +186,7 @@ These are frequently overlooked issues that make UI look unprofessional:
 
 | Rule                       | Do                                              | Don't                                  |
 | -------------------------- | ----------------------------------------------- | -------------------------------------- |
-| **No emoji icons**         | Use SVG icons (Heroicons, Lucide, Simple Icons) | Use emojis like 🎨 🚀 ⚙️ as UI icons      |
+| **No emoji icons**         | Use SVG icons (Heroicons, Lucide, Simple Icons) | Use emojis like 🎨 🚀 ⚙️ as UI icons   |
 | **Stable hover states**    | Use color/opacity transitions on hover          | Use scale transforms that shift layout |
 | **Correct brand logos**    | Research official SVG from Simple Icons         | Guess or use incorrect logo paths      |
 | **Consistent icon sizing** | Use fixed viewBox (24x24) with w-6 h-6          | Mix different icon sizes randomly      |
@@ -213,36 +223,49 @@ These are frequently overlooked issues that make UI look unprofessional:
 Before delivering UI code, verify these items:
 
 ### Visual Quality
+
 - [ ] No emojis used as icons (use SVG instead)
 - [ ] All icons from consistent icon set (Heroicons/Lucide)
 - [ ] Brand logos are correct (verified from Simple Icons)
 - [ ] Hover states don't cause layout shift
 
 ### Interaction
+
 - [ ] All clickable elements have `cursor-pointer`
 - [ ] Hover states provide clear visual feedback
 - [ ] Transitions are smooth (150-300ms)
 - [ ] Focus states visible for keyboard navigation
 
 ### Light/Dark Mode
+
 - [ ] Light mode text has sufficient contrast (4.5:1 minimum)
 - [ ] Glass/transparent elements visible in light mode
 - [ ] Borders visible in both modes
 - [ ] Test both modes before delivery
 
 ### Layout
+
 - [ ] Floating elements have proper spacing from edges
 - [ ] No content hidden behind fixed navbars
 - [ ] Responsive at 320px, 768px, 1024px, 1440px
 - [ ] No horizontal scroll on mobile
 
 ### Accessibility
+
 - [ ] All images have alt text
 - [ ] Form inputs have labels
 - [ ] Color is not the only indicator
 - [ ] `prefers-reduced-motion` respected
 
-## IMPORTANT Task Planning Notes
+## Related
 
-- Always plan and break many small todo tasks
-- Always add a final review todo task to review the works done at the end to find any fix or enhancement needed
+- `frontend-design`
+- `shadcn-tailwind`
+- `ux-designer`
+
+---
+
+**IMPORTANT Task Planning Notes (MUST FOLLOW)**
+
+- Always plan and break work into many small todo tasks
+- Always add a final review todo task to verify work quality and identify fixes/enhancements

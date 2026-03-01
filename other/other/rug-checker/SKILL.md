@@ -3,7 +3,7 @@ name: rug-checker
 description: >
   Solana token rug-pull risk analysis. 10-point on-chain check with visual report.
   Zero API keys. Read-only. Not financial advice.
-version: 0.1.3
+version: 0.1.4
 author: Anvil AI
 tags: [security, crypto, solana, defi, rug-pull, discord, discord-v2]
 permissions:

@@ -1,13 +1,13 @@
 ---
 name: alphaear-stock
-description: Search A-Share finance stock tickers and retrieve finance stock price history. Use when user asks about finance stock codes, recent price changes, or specific company finance stock info.
+description: Search A-Share/HK/US finance stock tickers and retrieve finance stock price history. Use when user asks about finance stock codes, recent price changes, or specific company finance stock info.
 ---
 
 # AlphaEar Stock Skill
 
 ## Overview
 
-Search A-Share/HK stock tickers and retrieve historical price data (OHLCV).
+Search A-Share/HK/US stock tickers and retrieve historical price data (OHLCV).
 
 ## Capabilities
 
@@ -24,5 +24,5 @@ Use `scripts/stock_tools.py` via `StockTools`.
 
 ## Dependencies
 
--   `pandas`, `requests`
+-   `pandas`, `requests`, `akshare`, `yfinance`
 -   `scripts/database_manager.py` (stock tables)

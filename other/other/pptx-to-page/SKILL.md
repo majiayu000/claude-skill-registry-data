@@ -298,7 +298,7 @@ User: Convert the Datasphere presentation and add it to today's meeting note
 
 ### Example 4: With Custom Title
 ```
-User: Convert SAP_BTP_2026.pptx to a page called "SAP BTP Architecture 2026"
+User: Convert SAP_BTP_2026.pptx to a page called "Cloud Platform Architecture 2026"
 ```
 
 ## Integration with Other Skills

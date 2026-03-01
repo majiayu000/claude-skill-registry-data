@@ -1,6 +1,6 @@
 ---
 name: swarm-self-heal
-version: 0.1.0
+version: 0.1.1
 description: Swarm reliability watchdog for OpenClaw — validates gateway/channel and every lane, performs bounded recovery, and emits auditable receipts.
 author: Anvil AI
 license: MIT

@@ -2,7 +2,7 @@
 name: worktree-sync
 description: "Sync all git worktrees and Claude Code settings across machines — use at start or end of day to checkpoint work. Commits uncommitted changes with contextual WIP messages, pulls with rebase, pushes, and reports conflicts for resolution."
 user-invocable: true
-allowed-tools: ["Bash(git add *)", "Bash(git commit *)", "Bash(git -C * add *)", "Bash(git -C * commit *)", "Bash(git -C * pull *)", "Bash(git -C * push *)", "Bash(git -C * rebase *)", "Bash(git pull *)", "Bash(git push *)", "Bash(git rebase *)", "Bash(git worktree *)", "Bash(~/.claude/bin/claude-sync *)", "Bash(uvx cc-search-chats:*)"]
+allowed-tools: ["Bash(git add *)", "Bash(git commit *)", "Bash(git -C * add *)", "Bash(git -C * commit *)", "Bash(git -C * pull *)", "Bash(git -C * push *)", "Bash(git -C * rebase *)", "Bash(git pull *)", "Bash(git push *)", "Bash(git rebase *)", "Bash(git worktree *)", "Bash(~/.claude/bin/claude-sync *)", "Bash(uvx cc-search-chats:*)", "Bash(claude update *)", "Bash(~/.claude/bin/plugin-refresh *)"]
 ---
 
 # Worktree Sync
@@ -38,13 +38,22 @@ git worktree list
 
 Parse each line to extract the worktree path and branch name. Every listed worktree participates in the sync (including the main worktree). If a worktree has a detached HEAD, note it for the summary but do not launch a subagent for it.
 
-### Step 2: Pull Claude Code Settings
+### Step 2: Pull Claude Code Settings and Update CLI
 
 ```bash
 ~/.claude/bin/claude-sync pull
 ```
 
 If `~/.claude/bin/claude-sync` is not found, warn and skip. Continue with git sync.
+
+After settings are pulled, update the Claude CLI and refresh plugins:
+
+```bash
+claude update 2>&1 || echo "warning: claude update failed"
+~/.claude/bin/plugin-refresh 2>&1 || echo "warning: plugin-refresh failed"
+```
+
+`claude update` downloads the latest CLI binary (takes effect on next launch). `plugin-refresh` pulls latest marketplace sources, clears plugin cache, and reinstalls all plugins — see `~/.claude/bin/plugin-refresh` for details. Both are non-fatal; warn and continue if either fails.
 
 ### Step 3: Gather State and Commit WIP (Parallel Subagents)
 

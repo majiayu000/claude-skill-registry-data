@@ -11,7 +11,7 @@ Find all notes related to a topic using parallel sub-agents for comprehensive se
 ```
 /related <topic>
 /related VendorA
-/related SAP BTP
+/related Cloud Platform
 /related Jane Doe
 ```
 

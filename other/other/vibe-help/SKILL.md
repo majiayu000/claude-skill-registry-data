@@ -11,7 +11,7 @@ Print this cheatsheet for the user. Do not add any commentary or explanation.
 ## The Loop
 
 ```
-/idea [feature]          brainstorm & generate PRD
+/prd [feature]           brainstorm & generate PRD
 npx ralph run            autonomous coding loop (live activity feed)
 npx ralph run --quiet    same, but suppress activity feed
 npx ralph status         check progress
@@ -39,8 +39,8 @@ npx ralph check          run verification only
 ```
 /tour                    guided setup
 /my-dna                  set preferences
-/sign                    teach Ralph a pattern
-npx ralph signs          view learned patterns
+/lesson                  teach Ralph a pattern
+npx agentic-loop lessons view learned patterns
 ```
 
 ---

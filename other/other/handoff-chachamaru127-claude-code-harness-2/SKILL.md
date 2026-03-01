@@ -81,6 +81,20 @@ git diff --stat
 gh run list --limit 3
 ```
 
+### Step 4.5: Unified Memory Finalize（必須）
+
+完了報告の前に、共通メモリへ最終状態を確定する:
+
+```text
+harness_mem_record_checkpoint(session_id, title, content, tags?, privacy_tags?)
+harness_mem_finalize_session(session_id, summary_mode="standard")
+```
+
+これにより Claude Code / Codex / OpenCode のどこからでも同一セッションを再開できる。
+`session_id` は `$CLAUDE_SESSION_ID` → `.claude/state/session.json` の `.session_id` の順で取得する。
+`harness_mem_sessions_list(project, limit=1)` の先頭利用は read-only（resume確認）に限定し、handoff時の `record_checkpoint` / `finalize_session` では明示 `session_id` が無い場合に失敗扱いとする。
+`harness_mem_finalize_session` が失敗している場合は handoff を確定しない。
+
 ### Step 5: Generate Report
 
 ## Output Format

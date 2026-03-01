@@ -4,7 +4,7 @@ description: >
   Audit project dependencies for known vulnerabilities (CVEs).
   Supports npm, pip, Cargo, and Go. Zero API keys required.
   Safe-by-default: report-only mode, fix commands require confirmation.
-version: 0.1.3
+version: 0.1.4
 author: Anvil AI
 tags: [security, audit, dependencies, cve, supply-chain, discord, discord-v2]
 ---

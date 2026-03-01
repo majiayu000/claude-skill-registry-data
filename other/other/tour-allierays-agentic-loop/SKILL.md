@@ -337,7 +337,7 @@ Quick Reference
 ───────────────
 
 Workflow:
-  /idea [feature]       Brainstorm → PRD
+  /prd [feature]        Brainstorm → PRD
   npx ralph run         Execute autonomously
   npx ralph status      Check progress
   npx ralph stop        Stop after current story
@@ -354,4 +354,4 @@ Other:
   /vibe-help            Full cheatsheet
 ```
 
-Say: "You're all set! Run `/idea [your next feature]` to get started."
+Say: "You're all set! Run `/prd [your next feature]` to get started."

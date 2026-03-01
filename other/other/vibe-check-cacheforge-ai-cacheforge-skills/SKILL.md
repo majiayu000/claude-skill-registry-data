@@ -1,6 +1,6 @@
 ---
 name: vibe-check
-version: 0.1.1
+version: 0.1.2
 description: Audit code for "vibe coding sins" — patterns that indicate AI-generated code was accepted without proper review. Produces a scored report card with fix suggestions.
 author: Anvil AI
 tags: [code-quality, code-review, ai-audit, vibe-coding, linting, security, python, typescript, javascript, discord, discord-v2]

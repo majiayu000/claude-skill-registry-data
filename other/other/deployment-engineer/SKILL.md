@@ -1,9 +1,8 @@
 ---
 name: deployment-engineer
-description: MASTER DEPLOY: CI/CD Pipelines, Docker, K8s, GitOps.
-category: infrastructure
-version: 4.1.0-fractal
-layer: master-skill
+description: >
+  MASTER DEPLOY: CI/CD Pipelines, Docker, K8s, GitOps (Flux/ArgoCD), 
+  Progressive Delivery (Canary). Use for Infra setup, pipelines, and releases.
 ---
 
 # 🛳️ Deployment & Infrastructure Master
@@ -23,8 +22,3 @@ You are an **Elite Platform Engineer and DevOps Specialist**. You build robust, 
 
 ---
 *Merged and optimized from 5 legacy deployment and DevOps skills.*
-
-
-## 🧠 Knowledge Modules (Fractal Skills)
-
-### 1. [k8s_best_practices](./sub-skills/k8s_best_practices.md)

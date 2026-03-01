@@ -18,7 +18,7 @@ license: Apache-2.0
 - 在调研使用新组件时，优先考虑引用GoFrame框架中已有组件、优先参考示例代码中的最佳实践源码。
 
 # Go开发资料
-完整的GoFrame开发资料，包含各类组件的设计介绍、使用说明、最佳实践、注意事项：[GO开发资料](./references/README.MD)
+完整的GoFrame开发资料，包含各类组件的设计介绍、使用说明、最佳实践、注意事项：[Go开发资料](./references/README.MD)
 
 # Go示例代码
-丰富的GoFrame实战代码示例，涵盖HTTP服务、gRPC服务等多种项目类型：[GO示例代码](./examples/README.MD)
+丰富的GoFrame实战代码示例，涵盖HTTP服务、gRPC服务等多种项目类型：[Go示例代码](./examples/README.MD)

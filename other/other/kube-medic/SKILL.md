@@ -1,6 +1,6 @@
 ---
 name: kube-medic
-version: 1.0.1
+version: 1.0.2
 description: "Kubernetes Cluster Triage & Diagnostics — instant AI-powered incident triage via kubectl"
 author: Anvil AI
 license: MIT

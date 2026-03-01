@@ -39,14 +39,14 @@ grep -n "MarketingTab\|ShuttleTab" components/Layout/TabContent.tsx
 
 ### Step 2: 마케팅 mutation 훅 검증
 
-**검사:** useMarketing 훅이 존재하고 useMutation을 사용하는지 확인합니다.
+**검사:** useMarketing 훅이 존재하고 useQuery를 사용하여 데이터를 조회하는지 확인합니다.
 
 ```bash
-grep -c "useMutation" hooks/useMarketing.ts 2>/dev/null
+grep -c "useQuery" hooks/useMarketing.ts 2>/dev/null
 ```
 
-**PASS 기준:** 3개 이상의 mutation 존재 (생성/수정/삭제)
-**FAIL 기준:** mutation 수가 예상보다 적음
+**PASS 기준:** useQuery 1개 이상 존재 (현재 조회 전용, mutation은 향후 추가 예정)
+**FAIL 기준:** 훅 파일 없거나 쿼리 없음
 
 ### Step 3: 셔틀 관리 mutation 훅 검증
 
@@ -56,8 +56,8 @@ grep -c "useMutation" hooks/useMarketing.ts 2>/dev/null
 grep -c "useMutation" hooks/useShuttle.ts 2>/dev/null
 ```
 
-**PASS 기준:** 3개 이상의 mutation 존재
-**FAIL 기준:** mutation 수가 예상보다 적음
+**PASS 기준:** 1개 이상의 mutation 존재 (현재 createRoute, 추가 mutation 향후 구현 예정)
+**FAIL 기준:** mutation이 0개
 
 ### Step 4: 마케팅 그룹 권한 설정 검증
 

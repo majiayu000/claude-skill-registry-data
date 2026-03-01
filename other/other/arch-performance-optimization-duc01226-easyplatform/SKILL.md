@@ -1,22 +1,27 @@
 ---
 name: arch-performance-optimization
 version: 1.1.0
-description: "[Architecture] Use when analyzing and improving performance for database queries, API endpoints, or frontend rendering."
-infer: true
+description: '[Architecture] Use when analyzing and improving performance for database queries, API endpoints, or frontend rendering.'
 allowed-tools: Read, Write, Edit, Grep, Glob, Bash, Task
 ---
+
+> **[IMPORTANT]** Use `TaskCreate` to break ALL work into small tasks BEFORE starting — including tasks for each file read. This prevents context loss from long files. For simple tasks, AI may ask user whether to skip.
+
+**Prerequisites:** **MUST READ** `.claude/skills/shared/evidence-based-reasoning-protocol.md` before executing.
 
 ## Quick Summary
 
 **Goal:** Analyze and resolve performance bottlenecks across database, API, network, and frontend layers.
 
 **Workflow:**
+
 1. **Identify Bottleneck** — Classify as database, API, network, or frontend issue
 2. **Measure Baseline** — Gather metrics before changes (response time, query time, bundle size)
 3. **Optimize** — Apply layer-specific fixes (indexes, caching, lazy loading, OnPush)
 4. **Verify** — Measure again and confirm improvement without regressions
 
 **Key Rules:**
+
 - Never use `SELECT *` or unbounded result sets in production
 - Always use async I/O; never block threads with `.Result`
 - Avoid N+1 queries — use eager loading or batch fetching
@@ -25,6 +30,7 @@ allowed-tools: Read, Write, Edit, Grep, Glob, Bash, Task
 # Performance Optimization Workflow
 
 ## When to Use This Skill
+
 - Slow API response times
 - Database query optimization
 - Frontend rendering issues
@@ -32,6 +38,7 @@ allowed-tools: Read, Write, Edit, Grep, Glob, Bash, Task
 - Scalability planning
 
 ## Pre-Flight Checklist
+
 - [ ] Identify performance bottleneck
 - [ ] Gather baseline metrics
 - [ ] Determine acceptable thresholds
@@ -69,6 +76,7 @@ npx webpack-bundle-analyzer stats.json
 **⚠️ MUST READ:** CLAUDE.md for N+1 detection, eager loading, projection, paging, and parallel query patterns. See `database-optimization` skill for advanced index and query optimization.
 
 ### Index Recommendations
+
 ```sql
 -- Frequently filtered columns
 CREATE INDEX IX_Employee_CompanyId ON Employees(CompanyId);
@@ -88,6 +96,7 @@ CREATE FULLTEXT INDEX ON Employees(FullName, Email);
 **⚠️ MUST READ:** CLAUDE.md for parallel tuple queries and response DTO patterns.
 
 ### Caching
+
 ```csharp
 // Static data caching
 private static readonly ConcurrentDictionary<string, LookupData> _cache = new();
@@ -106,6 +115,7 @@ public async Task<LookupData> GetLookupAsync(string key)
 ## Frontend Optimization
 
 ### Bundle Size
+
 ```typescript
 // :x: Import entire library
 import _ from 'lodash';
@@ -115,18 +125,19 @@ import { debounce } from 'lodash-es/debounce';
 ```
 
 ### Lazy Loading
+
 ```typescript
 // :white_check_mark: Lazy load routes
 const routes: Routes = [
-  {
-    path: 'feature',
-    loadChildren: () => import('./feature/feature.module')
-      .then(m => m.FeatureModule)
-  }
+    {
+        path: 'feature',
+        loadChildren: () => import('./feature/feature.module').then(m => m.FeatureModule)
+    }
 ];
 ```
 
 ### Change Detection
+
 ```typescript
 // :white_check_mark: OnPush for performance
 @Component({
@@ -141,6 +152,7 @@ trackByItem = this.ngForTrackByItemProp<Item>('id');
 ```
 
 ### Virtual Scrolling
+
 ```typescript
 // For large lists
 import { CdkVirtualScrollViewport } from '@angular/cdk/scrolling';
@@ -159,6 +171,7 @@ import { CdkVirtualScrollViewport } from '@angular/cdk/scrolling';
 ## Performance Monitoring
 
 ### Logging Slow Operations
+
 ```csharp
 var sw = Stopwatch.StartNew();
 var result = await ExecuteOperation();
@@ -169,6 +182,7 @@ if (sw.ElapsedMilliseconds > 1000)
 ```
 
 ### Database Query Logging
+
 ```csharp
 // In DbContext configuration
 optionsBuilder.LogTo(
@@ -180,6 +194,7 @@ optionsBuilder.LogTo(
 ## Performance Checklist
 
 ### Database
+
 - [ ] Indexes on filtered columns
 - [ ] Eager loading for relations
 - [ ] Projection for partial data
@@ -187,12 +202,14 @@ optionsBuilder.LogTo(
 - [ ] No N+1 queries
 
 ### API
+
 - [ ] Parallel operations where possible
 - [ ] Response DTOs (not entities)
 - [ ] Caching for static data
 - [ ] Pagination for lists
 
 ### Frontend
+
 - [ ] Lazy loading for routes
 - [ ] OnPush change detection
 - [ ] Track-by for lists
@@ -200,6 +217,7 @@ optionsBuilder.LogTo(
 - [ ] Tree-shaking imports
 
 ### Background Jobs
+
 - [ ] Bounded parallelism
 - [ ] Batch operations
 - [ ] Paged processing
@@ -207,28 +225,33 @@ optionsBuilder.LogTo(
 
 ## Anti-Patterns to AVOID
 
-:x: **SELECT * in production**
+:x: **SELECT \* in production**
+
 ```csharp
 var all = await context.Table.ToListAsync();
 ```
 
 :x: **Synchronous I/O**
+
 ```csharp
 var result = asyncOperation.Result;  // Blocks thread
 ```
 
 :x: **Unbounded result sets**
+
 ```csharp
 await repo.GetAllAsync();  // Could be millions
 ```
 
 :x: **Repeated database calls in loops**
+
 ```csharp
 foreach (var id in ids)
     await repo.GetByIdAsync(id);  // N queries
 ```
 
 ## Verification Checklist
+
 - [ ] Baseline metrics recorded
 - [ ] Bottleneck identified and addressed
 - [ ] Changes measured against baseline
@@ -243,5 +266,6 @@ foreach (var id in ids)
 ---
 
 **IMPORTANT Task Planning Notes (MUST FOLLOW)**
+
 - Always plan and break work into many small todo tasks
 - Always add a final review todo task to verify work quality and identify fixes/enhancements

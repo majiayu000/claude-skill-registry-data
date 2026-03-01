@@ -5,7 +5,7 @@ allowed-tools: Bash(agent-canvas:*)
 license: MIT
 metadata:
   author: WHQ25
-  version: "0.11.0"
+  version: "0.12.0"
   repository: https://github.com/WHQ25/agent-canvas
 ---
 
@@ -23,14 +23,14 @@ which agent-canvas && agent-canvas --version
 
 - **If not installed**: Ask the user which package manager they prefer (bun or npm), then install:
   ```bash
-  bun add -g @agent-canvas/cli@0.11.0
+  bun add -g @agent-canvas/cli@0.12.0
   # or
-  npm install -g @agent-canvas/cli@0.11.0
+  npm install -g @agent-canvas/cli@0.12.0
   ```
 
 - **If installed but version differs from 0.11.0**: Upgrade using the same package manager:
-  - Path contains `.bun` → `bun add -g @agent-canvas/cli@0.11.0`
-  - Otherwise → `npm install -g @agent-canvas/cli@0.11.0`
+  - Path contains `.bun` → `bun add -g @agent-canvas/cli@0.12.0`
+  - Otherwise → `npm install -g @agent-canvas/cli@0.12.0`
 
 - **After install/upgrade**: Verify with `agent-canvas --version` to confirm version is 0.11.0
 
@@ -60,16 +60,25 @@ agent-canvas load file.excalidraw     # Load .excalidraw file into current canva
 The canvas supports multiple canvases. Each canvas is stored independently and can be switched between.
 
 ```bash
-agent-canvas list                     # List all canvases (* marks active)
+agent-canvas list                     # List all canvases ([U]=User active, [A]=Agent active, [F]=Folder)
 agent-canvas new -n "Name" [--use]    # Create new canvas, optionally switch to it
 agent-canvas use "Name"               # Switch to canvas by name
 agent-canvas rename "New Name"        # Rename current canvas
+```
+
+**Folder Management** — Organize canvases into folders:
+```bash
+agent-canvas create-folder -n "Name"              # Create a new folder
+agent-canvas delete-folder "Name"                  # Delete folder (canvases become ungrouped)
+agent-canvas move-to-folder "Canvas" "Folder"      # Move canvas into a folder
+agent-canvas move-to-folder "Canvas" --ungrouped   # Remove canvas from its folder
 ```
 
 **Notes:**
 - Canvas names are case-insensitive and must be unique
 - Delete canvases via UI (hover over canvas in sidebar, click "..." menu)
 - Each canvas has its own scene data; switching automatically saves current canvas
+- Deleting a folder does NOT delete the canvases inside it — they become ungrouped
 
 
 ### Add Text

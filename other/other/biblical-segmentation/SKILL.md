@@ -1,7 +1,7 @@
 ---
 name: biblical-segmentation
 description: Use when helping users divide biblical books into sessions for sermon series, Bible study, or devotional reading. Use when user asks to segment, divide, or outline any biblical book.
-allowed-tools: Read, Write, Glob, WebSearch, Bash, mcp__claude-of-alexandria-mcp__query_discourse_features, mcp__claude-of-alexandria-mcp__query_paragraph_breaks, mcp__claude-of-alexandria-mcp__query_vocabulary, mcp__claude-of-alexandria-mcp__query_morphology
+allowed-tools: Read, Write, WebSearch, mcp__plugin_claude-of-alexandria_claude-of-alexandria-mcp__query_discourse_features, mcp__plugin_claude-of-alexandria_claude-of-alexandria-mcp__query_paragraph_breaks, mcp__plugin_claude-of-alexandria_claude-of-alexandria-mcp__query_vocabulary, mcp__plugin_claude-of-alexandria_claude-of-alexandria-mcp__query_morphology, mcp__plugin_claude-of-alexandria_claude-of-alexandria-mcp__query_themes_for_lemmas, mcp__plugin_claude-of-alexandria_claude-of-alexandria-mcp__query_theme
 ---
 
 # Biblical Text Segmentation
@@ -203,7 +203,7 @@ digraph workflow {
 
 ### For NT Books (Greek)
 
-**Call:** `mcp__claude-of-alexandria-mcp__query_discourse_features` with `{"book": "{book}"}`
+**Call:** `mcp__plugin_claude-of-alexandria_claude-of-alexandria-mcp__query_discourse_features` with `{"book": "{book}"}`
 
 This extracts Levinsohn GNT Discourse Features:
 - **Historical Present** - Scene transitions, participant tracking, narrative peaks
@@ -224,7 +224,7 @@ This extracts Levinsohn GNT Discourse Features:
 
 ### For OT Books (Hebrew)
 
-**Call:** `mcp__claude-of-alexandria-mcp__query_paragraph_breaks` with `{"book": "{book}"}`
+**Call:** `mcp__plugin_claude-of-alexandria_claude-of-alexandria-mcp__query_paragraph_breaks` with `{"book": "{book}"}`
 
 **MANDATORY:** Before generating options, consult Masoretic paragraph markers for:
 - **Petuchot (פ)** - Open paragraph (major division)
@@ -313,7 +313,7 @@ Pastors need ONE question answered: "Does my session boundary have ancient suppo
 
 ### Checking Thematic Triggers
 
-**Call:** `mcp__claude-of-alexandria-mcp__query_vocabulary` with `{"book": "{book}", "testament": "{nt|ot}", "check_clustering": true}`
+**Call:** `mcp__plugin_claude-of-alexandria_claude-of-alexandria-mcp__query_vocabulary` with `{"book": "{book}", "testament": "{nt|ot}", "check_clustering": true}`
 
 This checks if notable vocabulary clustering exists:
 - Returns `has_clustering: true` if any lemma has ≥60% concentration
@@ -322,7 +322,7 @@ This checks if notable vocabulary clustering exists:
 
 ### Getting Thematic Vocabulary
 
-**Call:** `mcp__claude-of-alexandria-mcp__query_vocabulary` with `{"book": "{book}", "testament": "{nt|ot}", "theme": "{keyword}"}`
+**Call:** `mcp__plugin_claude-of-alexandria_claude-of-alexandria-mcp__query_vocabulary` with `{"book": "{book}", "testament": "{nt|ot}", "theme": "{keyword}"}`
 
 Predefined themes: joy, faith, love, righteousness, covenant, blessing, holy
 
@@ -696,7 +696,7 @@ Agent segments NT book without calling `query_discourse_features` or OT book wit
 
 **OT markers missing petuchot/setumah:**
 Agent segments Genesis 37-50 with markers like "Scene change at 37:1" but no פ/ס references.
-- Fix: Call `mcp__claude-of-alexandria-mcp__query_paragraph_breaks` with `{"book": "Genesis"}`, cite "פ at 37:2 (toledot); ס at 37:5,8,9 (dialogue episodes)".
+- Fix: Call `mcp__plugin_claude-of-alexandria_claude-of-alexandria-mcp__query_paragraph_breaks` with `{"book": "Genesis"}`, cite "פ at 37:2 (toledot); ס at 37:5,8,9 (dialogue episodes)".
 
 **No data source acknowledgment:**
 Agent produces output without "Data Sources" section citing Levinsohn/Sefaria.
@@ -729,7 +729,6 @@ For detailed data, consult:
 - `reference/book-genres.yaml` - Genre mapping for all 66 books
 - `reference/genre-methodology.yaml` - Markers and methodology per genre
 - `reference/compositional-debates.yaml` - Partition theory notes for 2 Cor, Philippians (standardized text)
-- `reference/levinsohn/` - 34 JSON files with NT discourse features (Historical Present, POD, etc.)
 - MCP tool `query_discourse_features` - Extract discourse features for NT books
 - MCP tool `query_paragraph_breaks` - Extract Masoretic paragraph markers for OT books
 

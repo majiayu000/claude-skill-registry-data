@@ -105,6 +105,25 @@ fi
 ```
 
 > **注**: Claude-mem が未設定の場合、このステップはスキップされます。
+> Unified Harness Memory（Step 0.7）を使う場合、このステップは重複回避のため省略してよい。
+
+### Step 0.7: Unified Harness Memory Resume Pack（必須）
+
+Codex / Claude / OpenCode 共通DB（`~/.harness-mem/harness-mem.db`）から再開文脈を取得する。
+
+必須呼び出し:
+
+```text
+harness_mem_resume_pack(project, session_id?, limit=5, include_private=false)
+```
+
+運用ルール:
+- `project` は必ず現在プロジェクト名を指定
+- `session_id` は `$CLAUDE_SESSION_ID` → `.claude/state/session.json` の `.session_id` の順で取得する
+- `harness_mem_sessions_list(project, limit=1)` の先頭利用は read-only（resume確認）に限定し、`record_checkpoint` / `finalize_session` での書き込みには使わない
+- 取得結果はセッション開始時コンテキストに注入
+- 取得失敗時は `harness_mem_health()` で daemon 状態を確認し、失敗を明示して続行
+- 復旧は `scripts/harness-memd doctor` → `scripts/harness-memd cleanup-stale` → `scripts/harness-memd start` の順で行う
 
 ### Step 1: 環境確認
 

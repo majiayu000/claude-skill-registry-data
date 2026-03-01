@@ -95,50 +95,39 @@ Help testers create well-structured GitHub issues for prototype feedback.
 1. **Identify the issue type** - Bug, feature request, or usability issue
 2. **Gather context** - Version, environment, steps to reproduce
 3. **Draft the issue** using the appropriate template above
-4. **Add labels** - Use labels like `bug`, `enhancement`, `usability`, `case-brief-tool`
+4. **Add labels** - Use domain/phase labels (e.g., `domain:case-brief`, `phase:mvp`). Set issue type (Bug/Feature/Task) via GraphQL — see `manage-issues` skill
 5. **Submit via gh CLI**
 
 ## Creating Issues
 
-Use the GitHub CLI to create issues:
+Use the GitHub CLI to create issues, then set the issue type via GraphQL (see `manage-issues` skill for full patterns):
 
 ```bash
 # Bug report
 gh issue create --title "Bug: [Brief description]" \
-  --label "bug,case-brief-tool" \
+  --label "domain:case-brief,phase:mvp" \
   --body "$(cat <<'EOF'
 [Issue body from template]
 EOF
 )"
+# Then set type=Bug via GraphQL (see manage-issues skill)
 
 # Feature request
 gh issue create --title "Feature: [Brief description]" \
-  --label "enhancement,case-brief-tool" \
+  --label "domain:case-brief" \
   --body "$(cat <<'EOF'
 [Issue body from template]
 EOF
 )"
-
-# Usability issue
-gh issue create --title "UX: [Brief description]" \
-  --label "usability,case-brief-tool" \
-  --body "$(cat <<'EOF'
-[Issue body from template]
-EOF
-)"
+# Then set type=Feature via GraphQL (see manage-issues skill)
 ```
 
-## Labels to Use
+## Labels
 
-| Label | When to use |
-|-------|-------------|
-| `bug` | Something is broken |
-| `enhancement` | New feature or improvement |
-| `usability` | Confusing or hard to use |
-| `case-brief-tool` | Specific to Case Brief Tool (vs PromptGrimoire) |
-| `promptgrimoire` | Specific to PromptGrimoire |
-| `mvp-blocker` | Must fix before Feb 2025 release |
-| `documentation` | Docs need updating |
+See `manage-issues` skill for current label conventions. Key points:
+- **No `bug` or `enhancement` labels** — use GitHub Issue Types (Bug/Feature/Task) instead
+- Use domain labels: `domain:workspace-platform`, `domain:case-brief`, `domain:roleplay`, etc.
+- Use phase labels: `phase:mvp`, `phase:post-mvp`
 
 ## Good Issue Titles
 
