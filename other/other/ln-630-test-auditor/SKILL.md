@@ -1,7 +1,7 @@
 ---
 name: ln-630-test-auditor
-description: Test suite audit coordinator (L2). Delegates to 5 workers (Business Logic, E2E, Value, Coverage, Isolation). Aggregates results, creates Linear task in Epic 0.
-allowed-tools: Read, Grep, Glob, Bash, mcp__Ref, mcp__context7, mcp__linear-server, Skill
+description: "Test suite audit coordinator (L2). Delegates to 5 workers (Business Logic, E2E, Value, Coverage, Isolation). Aggregates results into docs/project/test_audit.md."
+allowed-tools: Read, Grep, Glob, Bash, mcp__Ref, mcp__context7, Skill
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
@@ -18,7 +18,7 @@ Coordinates comprehensive test suite audit across 6 quality categories using 5 s
 - Identifies missing tests for critical business logic
 - Detects anti-patterns and isolation issues
 - Aggregates results into unified report
-- Creates single Linear task in Epic 0
+- Write report to `docs/project/test_audit.md` (file-based, no task creation)
 - Manual invocation by user; not part of Story pipeline
 
 ## Core Philosophy
@@ -63,9 +63,22 @@ Coordinates comprehensive test suite audit across 6 quality categories using 5 s
    - Anti-patterns catalog
    - Framework detection patterns
 
+**Add output_dir to contextStore:**
+```json
+{
+  "output_dir": "docs/project/.audit/ln-630/{YYYY-MM-DD}"
+}
+```
+
 **Output:** `contextStore` — shared context for all workers
 
 **Key Benefit:** Context gathered ONCE → passed to all workers → token-efficient
+
+### Phase 2.5: Prepare Output Directory
+
+```bash
+mkdir -p {output_dir}   # No deletion — date folders preserve history
+```
 
 ### Phase 3: Domain Discovery (NEW)
 
@@ -136,7 +149,7 @@ Task(description: "Test audit via ln-63X",
 | 1 | [ln-631-test-business-logic-auditor](../ln-631-test-business-logic-auditor/) | Business Logic Focus | Framework/Library tests (Prisma, Express, bcrypt, JWT, axios, React hooks) → REMOVE |
 | 2 | [ln-632-test-e2e-priority-auditor](../ln-632-test-e2e-priority-auditor/) | E2E Priority | E2E baseline (2/endpoint), Pyramid validation, Missing E2E tests |
 | 3 | [ln-633-test-value-auditor](../ln-633-test-value-auditor/) | Risk-Based Value | Usefulness Score = Impact × Probability<br>Decisions: ≥15 KEEP, 10-14 REVIEW, <10 REMOVE |
-| 5 | [ln-635-test-isolation-auditor](../ln-635-test-isolation-auditor/) | Isolation + Anti-Patterns | Isolation (6 categories), Determinism, Anti-Patterns (6 types) |
+| 5 | [ln-635-test-isolation-auditor](../ln-635-test-isolation-auditor/) | Isolation + Anti-Patterns | Isolation (6 categories), Determinism, Anti-Patterns (7 types) |
 
 **Invocation (4 workers in PARALLEL):**
 ```javascript
@@ -163,10 +176,14 @@ IF domain_mode == "domain-aware":
       domain_mode: "domain-aware",
       current_domain: { name: domain.name, path: domain.path }
     }
-    Skill(skill="ln-634-test-coverage-auditor", args=JSON.stringify(domain_context))
+    Task(description: "Test audit coverage " + domain.name + " via ln-634",
+         prompt: "Execute ln-634-test-coverage-auditor. Read skill. Context: " + JSON.stringify(domain_context),
+         subagent_type: "general-purpose")
 ELSE:
   // Fallback: invoke once for entire codebase (global mode)
-  Skill(skill="ln-634-test-coverage-auditor", args=JSON.stringify(contextStore))
+  Task(description: "Test audit coverage via ln-634",
+       prompt: "Execute ln-634-test-coverage-auditor. Read skill. Context: " + JSON.stringify(contextStore),
+       subagent_type: "general-purpose")
 ```
 
 **Parallelism strategy:**
@@ -174,30 +191,17 @@ ELSE:
 - Phase 4b: All N domain-aware invocations run in PARALLEL
 - Example: 3 domains → 3 ln-634 invocations in single message
 
-**Worker Output Contract (Unified):**
+**Worker Output Contract (File-Based):**
 
-All workers MUST return JSON with this structure:
-```json
-{
-  "category": "Category Name",
-  "score": 7,
-  "total_issues": 12,
-  "critical": 0,
-  "high": 3,
-  "medium": 7,
-  "low": 2,
-  "findings": [
-    {
-      "severity": "HIGH",
-      "location": "path/file.ts:123",
-      "issue": "Description of the issue",
-      "principle": "Category / Sub-principle",
-      "recommendation": "How to fix",
-      "effort": "S"
-    }
-  ]
-}
+Workers write full report to `{output_dir}/{worker_id}.md` per `shared/templates/audit_worker_report_template.md`.
+
+Workers return **minimal summary** in-context (~50 tokens):
 ```
+Report written: docs/project/.audit/ln-630/{YYYY-MM-DD}/631-business-logic.md
+Score: 7.5/10 | Issues: 5 (C:0 H:2 M:2 L:1)
+```
+
+Coordinator extracts score/counts from return values. Full findings stay in files.
 
 **Unified Scoring Formula (all workers):**
 ```
@@ -207,33 +211,30 @@ score = max(0, 10 - penalty)
 
 **Domain-aware workers** add optional fields: `domain`, `scan_path`
 
-### Phase 5: Aggregate Results
+### Phase 5: Aggregate Results (File-Based)
 
 **Goal:** Merge all worker results into unified Test Suite Audit Report
 
+Workers wrote reports to `{output_dir}/` and returned minimal summaries. Aggregation uses **return values for numbers** and **file reads for findings tables**.
+
 **Aggregation Algorithm:**
 ```
-1. Collect JSON from all 5 workers
-2. Merge findings from all workers into single array
-3. Sum severity counts:
-   total_critical = sum(worker.critical for all workers)
-   total_high = sum(worker.high for all workers)
-   total_medium = sum(worker.medium for all workers)
-   total_low = sum(worker.low for all workers)
-4. Calculate Overall Score:
-   overall_score = average(worker.score for all workers)
+1. Parse scores/counts from worker return strings (already in context)
+2. Read worker report files from {output_dir}/ for findings tables
+3. Sum severity counts across all workers
+4. Calculate Overall Score: average of 5 worker scores
 5. Sort findings by severity: CRITICAL → HIGH → MEDIUM → LOW
 6. Group findings by category for report sections
 ```
 
 **Actions:**
-1. **Collect results** from all workers (global + domain-aware)
-2. **Merge findings** into single flat array (all workers use unified format)
+1. **Parse return values** from all workers for scores/counts
+2. **Read worker files** from `{output_dir}/` for detailed findings
 3. **Sum severity counts** across all workers
 4. **Calculate overall score** = average of 5 worker scores
 5. **Domain-aware worker (ln-634)** → group by domain.name if domain_mode="domain-aware"
 6. **Generate Executive Summary** (2-3 sentences)
-7. **Create Linear task** in Epic 0 with full report (see Output Format below)
+7. **Write report** to `docs/project/test_audit.md`
 8. **Return summary** to user
 
 **Findings grouping:**
@@ -381,7 +382,7 @@ Each worker:
 - Keep/Remove/Refactor decisions for each test
 - Missing tests identified with Priority (grouped by domain if applicable)
 - Anti-patterns catalogued
-- Linear task created in Epic 0 with full report
+- Report written to `docs/project/test_audit.md`
 - Summary returned to user
 
 ## Reference Files

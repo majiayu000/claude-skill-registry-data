@@ -131,7 +131,7 @@ Write report to `{output_dir}/622-build.md` with `category: "Build Health"` and 
 
 Return summary to coordinator:
 ```
-Report written: docs/project/.audit/622-build.md
+Report written: docs/project/.audit/ln-620/{YYYY-MM-DD}/622-build.md
 Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 ```
 

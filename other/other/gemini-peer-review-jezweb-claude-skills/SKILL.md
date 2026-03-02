@@ -22,15 +22,15 @@ export GEMINI_API_KEY="your-key-here"
 2. **Read target files** into context
 3. **Build prompt** using the AI-to-AI template from [references/prompt-templates.md](references/prompt-templates.md)
 4. **Write prompt to file** at `.claude/artifacts/gemini-prompt.txt` (avoids shell escaping issues)
-5. **Call the API** via the review script:
+5. **Call the API** — generate a Python script that:
+   - Reads `GEMINI_API_KEY` from environment
+   - Reads the prompt from `.claude/artifacts/gemini-prompt.txt`
+   - POSTs to `https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent`
+   - Payload: `{"contents": [{"parts": [{"text": prompt}]}], "generationConfig": {"temperature": 0.3, "maxOutputTokens": 8192}}`
+   - Extracts text from `candidates[0].content.parts[0].text`
+   - Prints result to stdout
 
-```bash
-mkdir -p .claude/artifacts
-# Write prompt to file first (step 4), then:
-GEMINI_API_KEY="$KEY" python3 plugins/dev-tools/skills/gemini-peer-review/scripts/gemini-review.py \
-  --model gemini-2.5-flash \
-  --prompt-file .claude/artifacts/gemini-prompt.txt
-```
+   Write the script to `.claude/scripts/gemini-review.py` and run it.
 
 6. **Synthesize** — present Gemini's findings, add your own perspective (agree/disagree), let the user decide what to implement
 
@@ -62,13 +62,7 @@ Read the target directory's source files, build a prompt using the Security temp
 
 ### Quick Question
 
-Fast question without file context. Build prompt inline and call with `gemini-2.5-flash`.
-
-```bash
-GEMINI_API_KEY="$KEY" python3 plugins/dev-tools/skills/gemini-peer-review/scripts/gemini-review.py \
-  --model gemini-2.5-flash \
-  --prompt "[Claude Code consulting Gemini] Quick question: What's the best way to handle WebSockets in Workers?"
-```
+Fast question without file context. Build prompt inline, write to file, call with `gemini-2.5-flash`.
 
 ## Model Selection
 
@@ -77,7 +71,7 @@ GEMINI_API_KEY="$KEY" python3 plugins/dev-tools/skills/gemini-peer-review/script
 | review, debug, quick | `gemini-2.5-flash` | Fast, good for straightforward analysis |
 | architect, security-scan | `gemini-2.5-pro` | Better reasoning for complex trade-offs |
 
-Override by changing the `--model` argument. Check current model IDs if errors occur — they change frequently:
+Check current model IDs if errors occur — they change frequently:
 
 ```bash
 curl -s "https://generativelanguage.googleapis.com/v1beta/models?key=$GEMINI_API_KEY" | python3 -c "import sys,json; [print(m['name']) for m in json.load(sys.stdin)['models'] if 'gemini' in m['name']]"
@@ -105,7 +99,7 @@ When building the prompt:
 2. Append the mode-specific template
 3. Append the file contents with clear `--- filename ---` separators
 4. Write to `.claude/artifacts/gemini-prompt.txt`
-5. Call the script with `--prompt-file`
+5. Generate and run the API call script
 
 ## Reference Files
 

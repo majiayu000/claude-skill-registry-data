@@ -39,38 +39,24 @@ Use concrete photography parameters, not abstract adjectives. Read [references/p
 
 ### Step 3: Generate
 
-```bash
-python3 plugins/design-assets/skills/gemini-image-gen/scripts/generate-image.py \
-  --prompt "Soft-focus atmospheric background, warm gold and cream botanical elements, luxury spa aesthetic, wide landscape" \
-  --output public/images/hero.png \
-  --model gemini-2.5-flash-image
-```
+Generate a Python script (no dependencies beyond stdlib) that calls the Gemini API. The script should:
 
-Multiple variants:
+1. Read `GEMINI_API_KEY` from environment
+2. POST to `https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent`
+3. Include `"responseModalities": ["TEXT", "IMAGE"]` in generationConfig
+4. Parse the response: extract `inlineData.data` (base64) from candidate parts
+5. Decode base64 and save as PNG
+6. Support multiple variants (generate N times, save as `name-1.png`, `name-2.png`)
 
-```bash
-python3 .../generate-image.py --prompt "..." --output public/images/hero.png --count 3
-# Produces hero-1.png, hero-2.png, hero-3.png
-```
+For style matching with a reference image, include the reference as an `inlineData` part before the text prompt, and use temperature 0.7 (instead of 1.0).
 
-Style matching from a reference image:
+See [references/api-pattern.md](references/api-pattern.md) for the full implementation pattern including error handling and response parsing.
 
-```bash
-python3 .../generate-image.py \
-  --prompt "Same warm lighting and colour palette, but showing a massage treatment room" \
-  --reference public/images/existing-hero.jpg \
-  --output public/images/services-bg.png \
-  --model gemini-3-pro-image-preview
-```
+**Critical**: Never pass prompts via curl + bash arguments — shell escaping breaks on apostrophes. Always use Python's `json.dumps()` or write the prompt to a file first.
 
 ### Step 4: Post-Process (Optional)
 
-Use the **image-processing** skill for resizing, format conversion, or optimisation:
-
-```bash
-python3 plugins/design-assets/skills/image-processing/scripts/process-image.py \
-  optimise public/images/hero.png --output public/images/hero.webp --width 1920
-```
+Use the **image-processing** skill for resizing, format conversion, or optimisation.
 
 ### Step 5: Present to User
 
@@ -94,7 +80,7 @@ Starting prompts — enhance with project-specific context (colours, mood, subje
 |----------|-------|------|
 | Drafts, quick placeholders | `gemini-2.5-flash-image` | Free (~500/day) |
 | Final client assets | `gemini-3-pro-image-preview` | ~$0.04/image |
-| Style-matched variants | `gemini-3-pro-image-preview` + `--reference` | ~$0.04/image |
+| Style-matched variants | `gemini-3-pro-image-preview` + reference image | ~$0.04/image |
 
 Verify current model IDs if errors occur — they change frequently.
 
@@ -103,3 +89,4 @@ Verify current model IDs if errors occur — they change frequently.
 | When | Read |
 |------|------|
 | Building effective prompts | [references/prompting-guide.md](references/prompting-guide.md) |
+| API implementation details | [references/api-pattern.md](references/api-pattern.md) |

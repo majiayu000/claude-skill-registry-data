@@ -15,21 +15,21 @@ Specialized worker auditing database transaction patterns for correctness, scope
 - **Worker in ln-650 coordinator pipeline** - invoked by ln-650-persistence-performance-auditor
 - Audit **transaction correctness** (Priority: HIGH)
 - Check commit patterns, transaction boundaries, rollback handling, trigger/notify semantics
-- Return structured findings with severity, location, effort, recommendations
+- Write structured findings to file with severity, location, effort, recommendations
 - Calculate compliance score (X/10) for Transaction Correctness category
 
 ## Inputs (from Coordinator)
 
 **MANDATORY READ:** Load `shared/references/task_delegation_pattern.md#audit-coordinator--worker-contract` for contextStore structure.
 
-Receives `contextStore` with: `tech_stack`, `best_practices`, `db_config` (database type, ORM settings, trigger/notify patterns), `codebase_root`.
+Receives `contextStore` with: `tech_stack`, `best_practices`, `db_config` (database type, ORM settings, trigger/notify patterns), `codebase_root`, `output_dir`.
 
 **Domain-aware:** Supports `domain_mode` + `current_domain`.
 
 ## Workflow
 
 1) **Parse context from contextStore**
-   - Extract tech_stack, best_practices, db_config
+   - Extract tech_stack, best_practices, db_config, output_dir
    - Determine scan_path
 
 2) **Discover transaction infrastructure**
@@ -46,7 +46,9 @@ Receives `contextStore` with: `tech_stack`, `best_practices`, `db_config` (datab
 
 5) **Calculate score using penalty algorithm**
 
-6) **Return JSON result to coordinator**
+6) **Write Report:** Build full markdown report in memory per `shared/templates/audit_worker_report_template.md`, write to `{output_dir}/652-transaction-correctness.md` in single Write call
+
+7) **Return Summary:** Return minimal summary to coordinator (see Output Format)
 
 ## Audit Rules (Priority: HIGH)
 
@@ -146,28 +148,14 @@ Receives `contextStore` with: `tech_stack`, `best_practices`, `db_config` (datab
 
 ## Output Format
 
-Return JSON to coordinator:
+**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format.
 
-```json
-{
-  "category": "Transaction Correctness",
-  "score": 5,
-  "total_issues": 6,
-  "critical": 1,
-  "high": 2,
-  "medium": 2,
-  "low": 1,
-  "findings": [
-    {
-      "severity": "CRITICAL",
-      "location": "app/infrastructure/messaging/job_processor.py:412",
-      "issue": "Missing intermediate commits: progress UPDATEs trigger pg_notify but no commit() between updates; real-time SSE events deferred",
-      "principle": "Transaction Correctness / Trigger Semantics",
-      "recommendation": "Add session.commit() at progress milestones (throttled every 5%)",
-      "effort": "S"
-    }
-  ]
-}
+Write report to `{output_dir}/652-transaction-correctness.md` with `category: "Transaction Correctness"` and checks: missing_intermediate_commits, scope_too_wide, scope_too_narrow, missing_rollback, long_held_transaction.
+
+Return summary to coordinator:
+```
+Report written: docs/project/.audit/ln-650/{YYYY-MM-DD}/652-transaction-correctness.md
+Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 ```
 
 ## Critical Rules
@@ -180,17 +168,19 @@ Return JSON to coordinator:
 
 ## Definition of Done
 
-- contextStore parsed (tech_stack, db_config, trigger patterns)
+- contextStore parsed successfully (including output_dir)
 - scan_path determined
 - Trigger/NOTIFY infrastructure discovered from migrations
 - All 5 checks completed:
   - missing intermediate commits, scope too wide, scope too narrow, missing rollback, long-held
 - Findings collected with severity, location, effort, recommendation
-- Score calculated
-- JSON returned to coordinator
+- Score calculated using penalty algorithm
+- Report written to `{output_dir}/652-transaction-correctness.md` (atomic single Write call)
+- Summary returned to coordinator
 
 ## Reference Files
 
+- **Worker report template:** `shared/templates/audit_worker_report_template.md`
 - **Audit scoring formula:** `shared/references/audit_scoring.md`
 - **Audit output schema:** `shared/references/audit_output_schema.md`
 

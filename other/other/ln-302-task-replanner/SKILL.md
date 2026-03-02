@@ -29,7 +29,7 @@ Worker that re-syncs existing tasks to the latest requirements for any task type
 - Common: `taskType`, teamId, Story data (id/title/description with AC, Technical Notes, Context), existingTaskIds.
 - Implementation: idealPlan (1-8 tasks), guideLinks.
 - Refactoring: codeQualityIssues, refactoringPlan, affectedComponents.
-- Test: manualTestResults, testPlan (E2E 2-5, Integration 0-8, Unit 0-15, Priority ≤15), infra/doc/cleanup items.
+- Test: manualTestResults, testPlan (Priority ≥15, Usefulness Criteria), infra/doc/cleanup items.
 
 ## Template Loading
 
@@ -55,7 +55,7 @@ Worker that re-syncs existing tasks to the latest requirements for any task type
 |----------|-----------|-----------------|
 | implementation | No new test creation | Updated/created tasks must not introduce test creation text |
 | refactoring | Regression strategy required | Issues + severity, 3-phase plan, regression strategy, preserve functionality |
-| test | Risk-based limits | Priority ≤15 scenarios; E2E 2-5, Integration 0-8, Unit 0-15, Total 10-28; no framework/library/DB tests |
+| test | Risk-based limits | Priority ≥15 scenarios covered; each test passes Usefulness Criteria; no framework/library/DB tests |
 
 ## Critical Notes
 - **MANDATORY:** Always pass `state: "Backlog"` when creating new tasks (CREATE operation). Linear defaults to team's default status (often "Postponed") if not specified.

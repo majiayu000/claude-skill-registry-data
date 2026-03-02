@@ -1,7 +1,7 @@
 ---
 name: ln-650-persistence-performance-auditor
-description: "Coordinates 3 specialized audit workers (query efficiency, transaction correctness, runtime performance). Researches DB/ORM/async best practices, delegates parallel audits, aggregates results into single Linear task in Epic 0."
-allowed-tools: Read, Grep, Glob, Bash, WebFetch, WebSearch, mcp__Ref, mcp__context7, mcp__linear-server, Skill
+description: "Coordinates 3 specialized audit workers (query efficiency, transaction correctness, runtime performance). Researches DB/ORM/async best practices, delegates parallel audits, aggregates results into docs/project/persistence_audit.md."
+allowed-tools: Read, Grep, Glob, Bash, WebFetch, WebSearch, mcp__Ref, mcp__context7, Skill
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
@@ -16,7 +16,7 @@ Coordinates 3 specialized audit workers to perform database efficiency, transact
 - Research current best practices for detected DB, ORM, async framework via MCP tools ONCE
 - Pass shared context to all workers (token-efficient)
 - Aggregate worker results into single consolidated report
-- Create single task in Linear under Epic 0 with all findings
+- Write report to `docs/project/persistence_audit.md` (file-based, no task creation)
 - Manual invocation by user; not part of Story pipeline
 - **Independent from ln-620** (can be run separately or after ln-620)
 
@@ -25,10 +25,10 @@ Coordinates 3 specialized audit workers to perform database efficiency, transact
 1) **Discovery:** Load tech_stack.md, package manifests, detect DB/ORM/async framework, auto-discover Team ID
 2) **Research:** Query MCP tools for DB/ORM/async best practices ONCE
 3) **Build Context:** Create contextStore with best practices + DB-specific metadata
-4) **Delegate:** 3 workers in PARALLEL
-5) **Aggregate:** Collect worker results, calculate scores
-6) **Generate Report:** Build consolidated report
-7) **Create Task:** Create Linear task in Epic 0 titled "Persistence & Performance Audit: [YYYY-MM-DD]"
+4) **Prepare Output:** Create output directory
+5) **Delegate:** 3 workers in PARALLEL
+6) **Aggregate:** Collect worker results, calculate scores
+7) **Write Report:** Save to `docs/project/persistence_audit.md`
 
 ## Phase 1: Discovery
 
@@ -76,11 +76,18 @@ Grep("pg_notify|NOTIFY|CREATE TRIGGER", path="alembic/versions/")
     "triggers": [{"table": "jobs", "event": "UPDATE", "function": "notify_job_events"}],
     "pool_size": 10
   },
-  "codebase_root": "/project"
+  "codebase_root": "/project",
+  "output_dir": "docs/project/.audit/ln-650/{YYYY-MM-DD}"
 }
 ```
 
-## Phase 3: Delegate to Workers
+## Phase 3: Prepare Output Directory
+
+```bash
+mkdir -p {output_dir}   # No deletion — date folders preserve history
+```
+
+## Phase 4: Delegate to Workers
 
 > **CRITICAL:** All delegations use Task tool with `subagent_type: "general-purpose"` for context isolation.
 
@@ -111,24 +118,27 @@ FOR EACH worker IN [ln-651, ln-652, ln-653]:
        subagent_type: "general-purpose")
 ```
 
-## Phase 4: Aggregate Results
+**Worker Output Contract (File-Based):**
 
-**Collect results from workers:**
-```json
-{
-  "category": "Query Efficiency",
-  "score": 6,
-  "total_issues": 8,
-  "findings": [...]
-}
+Workers write full report to `{output_dir}/{worker_id}.md` per `shared/templates/audit_worker_report_template.md`.
+
+Workers return **minimal summary** in-context (~50 tokens):
+```
+Report written: docs/project/.audit/ln-650/{YYYY-MM-DD}/651-query-efficiency.md
+Score: 6.0/10 | Issues: 8 (C:0 H:3 M:4 L:1)
 ```
 
+## Phase 5: Aggregate Results (File-Based)
+
+Workers wrote reports to `{output_dir}/` and returned minimal summaries. Aggregation uses **return values for numbers** and **file reads for findings tables**.
+
 **Aggregation steps:**
-1. Merge findings from all 3 workers
-2. Calculate overall score: average of 3 category scores
-3. Sum severity counts across all workers
-4. Sort findings by severity (CRITICAL → HIGH → MEDIUM → LOW)
-5. Context Validation (Post-Filter)
+1. Parse scores/counts from worker return strings (already in context)
+2. Read worker report files from `{output_dir}/` for findings tables
+3. Calculate overall score: average of 3 category scores
+4. Sum severity counts across all workers
+5. Sort findings by severity (CRITICAL → HIGH → MEDIUM → LOW)
+6. Context Validation (Post-Filter)
 
 **Context Validation:**
 
@@ -215,15 +225,9 @@ Recalculate overall score excluding advisory findings from penalty.
 - Python asyncio-dev: [URL]
 ```
 
-## Phase 5: Create Linear Task
+## Phase 6: Write Report
 
-Create task in Epic 0:
-- Title: `Persistence & Performance Audit: [YYYY-MM-DD]`
-- Description: Full report from Phase 4 (markdown format)
-- Team: Auto-discovered from kanban_board.md
-- Epic: 0 (technical debt / refactoring epic)
-- Labels: `refactoring`, `performance`, `audit`
-- Priority: Based on highest severity findings
+Write consolidated report to `docs/project/persistence_audit.md` with the Output Format above.
 
 ## Critical Rules
 
@@ -231,7 +235,6 @@ Create task in Epic 0:
 - **Parallel execution:** All 3 workers run in PARALLEL
 - **Trigger discovery:** Scan migrations for triggers/NOTIFY before delegating (pass to ln-652)
 - **Metadata-only loading:** Coordinator loads metadata; workers load full file contents
-- **Single task:** Create ONE task with all findings; do not create multiple tasks
 - **Do not audit:** Coordinator orchestrates only; audit logic lives in workers
 
 ## Definition of Done
@@ -239,12 +242,13 @@ Create task in Epic 0:
 - Tech stack discovered (DB type, ORM, async framework)
 - DB-specific metadata extracted (triggers, session config, pool settings)
 - Best practices researched via MCP tools
-- contextStore built and passed to workers
-- All 3 workers invoked in PARALLEL and completed
-- Results aggregated with severity-sorted findings
+- contextStore built with output_dir = `docs/project/.audit/ln-650/{YYYY-MM-DD}`
+- Output directory created (no deletion of previous runs)
+- All 3 workers invoked in PARALLEL and completed; each wrote report to `{output_dir}/`
+- Results aggregated from return values (scores) + file reads (findings tables)
 - Compliance score calculated per category + overall
 - Executive Summary included
-- Linear task created in Epic 0 with full report
+- Report written to `docs/project/persistence_audit.md`
 - Sources consulted listed with URLs
 
 ## Workers

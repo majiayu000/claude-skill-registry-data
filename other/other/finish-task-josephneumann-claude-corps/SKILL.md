@@ -436,10 +436,6 @@ HANDOFF CONTEXT
 - Dependencies on external systems or APIs
 - Performance considerations if any>
 
-LEARNINGS CAPTURED
-------------------
-<Path to auto-compound doc if written, or "None — clean implementation">
-
 ===============================================
 END SESSION SUMMARY
 ===============================================
@@ -447,68 +443,11 @@ END SESSION SUMMARY
 
 This format ensures orchestrating agents have full context to coordinate parallel work and make informed decisions about task assignment.
 
-## 14.5. Auto-Compound Learnings
+## 14.5. Save Learnings to Auto-Memory
 
-Check the session summary you just wrote for compoundable knowledge. Look for:
-- SPEC DIVERGENCES that reveal gotchas or unexpected behavior
-- ARCHITECTURAL NOTES with patterns future workers should know
-- HANDOFF CONTEXT with gotchas or "things that didn't work as expected"
-- Bug fixes where the root cause was non-obvious
+If the session involved non-obvious debugging insights, unexpected gotchas, or patterns future workers should know, save them to auto-memory. Include prevention strategies when documenting solutions.
 
-**If meaningful learnings are present** (not trivial — skip for clean implementations with no surprises):
-
-1. Determine the category from the learning content:
-   - Runtime surprise or unexpected behavior → `runtime-errors/`
-   - Build/config gotcha → `build-errors/`
-   - Performance discovery → `performance/`
-   - Database/migration insight → `database/`
-   - Integration issue → `integration/`
-   - Workflow/tooling insight → `workflow/`
-
-2. Write a lightweight solution document:
-
-   ```bash
-   PROJECT_ROOT=$(git worktree list | grep '\[main\]' | awk '{print $1}')
-   if [ -z "$PROJECT_ROOT" ]; then
-     PROJECT_ROOT=$(git rev-parse --show-toplevel)
-   fi
-   mkdir -p "$PROJECT_ROOT/docs/solutions/<category>"
-   ```
-
-   Document format:
-   ```markdown
-   ---
-   scope: project
-   module: <affected module>
-   date: <YYYY-MM-DD>
-   problem_type: <from category>
-   severity: <medium|high>
-   tags: [<relevant keywords>]
-   source: auto-compound
-   task_id: $ARGUMENTS
-   ---
-
-   # <Descriptive Title>
-
-   ## Symptom
-   <What went wrong or was unexpected>
-
-   ## Root Cause
-   <Why it happened>
-
-   ## Solution
-   <What fixed it or the pattern to follow>
-
-   ## Prevention
-   <How to avoid this in future>
-   ```
-
-3. Write to `$PROJECT_ROOT/docs/solutions/<category>/<symptom-slug>-<module>-<date>.md`
-
-**If no meaningful learnings** (clean implementation, spec matched, no gotchas):
-Skip silently — not every task produces learnings.
-
-**Important**: This is fire-and-forget. Do NOT ask the user about scope (always project-specific) or present decision menus. The `source: auto-compound` tag in frontmatter distinguishes these from rich `/compound` documents.
+Skip this step for clean implementations with no surprises.
 
 ## 15. Persist Summary to Disk
 

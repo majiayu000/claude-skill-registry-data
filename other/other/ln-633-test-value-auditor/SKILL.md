@@ -20,16 +20,19 @@ Specialized worker calculating Usefulness Score for each test.
 
 ## Inputs (from Coordinator)
 
-Receives `contextStore` with Impact/Probability matrices, test file list.
+**MANDATORY READ:** Load `shared/references/task_delegation_pattern.md#audit-coordinator--worker-contract` for contextStore structure.
+
+Receives `contextStore` with: `tech_stack`, `testFilesMetadata`, `codebase_root`, `output_dir`.
 
 ## Workflow
 
-1) Parse context
-2) For each test: calculate Usefulness Score
-3) Classify: KEEP (≥15), REVIEW (10-14), REMOVE (<10)
-4) Collect findings
-5) Calculate score
-6) Return JSON
+1) **Parse Context:** Extract tech stack, Impact/Probability matrices, test file list, output_dir from contextStore
+2) **Calculate Scores:** For each test: calculate Usefulness Score = Impact x Probability
+3) **Classify Decisions:** KEEP (>=15), REVIEW (10-14), REMOVE (<10)
+4) **Collect Findings:** Record each REVIEW/REMOVE decision with severity, location (file:line), effort estimate (S/M/L), recommendation
+5) **Calculate Score:** Count violations by severity, calculate compliance score (X/10)
+6) **Write Report:** Build full markdown report in memory per `shared/templates/audit_worker_report_template.md`, write to `{output_dir}/633-test-value.md` in single Write call
+7) **Return Summary:** Return minimal summary to coordinator (see Output Format)
 
 ## Usefulness Score Calculation
 
@@ -147,43 +150,17 @@ Decision: REVIEW (if E2E covers, remove; else keep)
 
 ## Output Format
 
-**Return JSON to coordinator:**
-```json
-{
-  "category": "Risk-Based Value",
-  "score": 7,
-  "total_issues": 12,
-  "critical": 2,
-  "high": 5,
-  "medium": 5,
-  "low": 0,
-  "checks": [
-    {"id": "usefulness_score", "name": "Usefulness Score Analysis", "status": "warning", "details": "7 tests scored below threshold 15"},
-    {"id": "remove_candidates", "name": "Remove Candidates", "status": "failed", "details": "2 tests with Score <10 should be removed"},
-    {"id": "review_candidates", "name": "Review Candidates", "status": "warning", "details": "5 tests with Score 10-14 need review"}
-  ],
-  "findings": [
-    {
-      "severity": "CRITICAL",
-      "location": "utils.test.ts:23-27",
-      "issue": "Test 'validateEmail returns true' has Usefulness Score 4 (Impact 2 × Probability 2) — REMOVE",
-      "principle": "Risk-Based Value / Low Priority Test",
-      "recommendation": "Delete test — likely covered by E2E registration test",
-      "effort": "S"
-    },
-    {
-      "severity": "MEDIUM",
-      "location": "auth.test.ts:12-25",
-      "issue": "Test 'login with valid credentials returns JWT' has Usefulness Score 12 (Impact 4 × Probability 3) — REVIEW",
-      "principle": "Risk-Based Value / Borderline Test",
-      "recommendation": "If E2E login test exists → delete; otherwise keep",
-      "effort": "S"
-    }
-  ]
-}
+**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format.
+
+Write report to `{output_dir}/633-test-value.md` with `category: "Risk-Based Value"` and checks: usefulness_score, remove_candidates, review_candidates.
+
+Return summary to coordinator:
+```
+Report written: docs/project/.audit/ln-630/{YYYY-MM-DD}/633-test-value.md
+Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 ```
 
-**Note:** Tests with Usefulness Score ≥15 (KEEP) are NOT included in findings — only issues are reported.
+**Note:** Tests with Usefulness Score >=15 (KEEP) are NOT included in findings -- only issues are reported.
 
 ## Critical Rules
 
@@ -195,15 +172,17 @@ Decision: REVIEW (if E2E covers, remove; else keep)
 
 ## Definition of Done
 
-- contextStore parsed (Impact/Probability matrices, test file list)
+- contextStore parsed successfully (including output_dir)
 - Usefulness Score calculated for each test (Impact x Probability)
 - Decisions classified: KEEP (>=15), REVIEW (10-14), REMOVE (<10)
 - Findings collected with severity, location, effort, recommendation
-- Score calculated per `shared/references/audit_scoring.md`
-- JSON returned to coordinator
+- Score calculated using penalty algorithm
+- Report written to `{output_dir}/633-test-value.md` (atomic single Write call)
+- Summary returned to coordinator
 
 ## Reference Files
 
+- **Worker report template:** `shared/templates/audit_worker_report_template.md`
 - **Audit scoring formula:** `shared/references/audit_scoring.md`
 - **Audit output schema:** `shared/references/audit_output_schema.md`
 

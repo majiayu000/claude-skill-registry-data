@@ -242,13 +242,3 @@ docs/<feature-name>/tech-design.md
 ```
 
 where `<feature-name>` is a lowercase, hyphen-separated slug derived from the feature name (for example, `docs/user-authentication/tech-design.md` or `docs/payment-processing/tech-design.md`). If the `docs/<feature-name>/` directory does not exist, create it. If a file with the same name already exists, confirm with the user before overwriting.
-
-## Automatic Upstream Document Scanning
-
-Before generating any Technical Design Document, the skill automatically searches for upstream PRD and SRS documents to ensure the design is grounded in established requirements.
-
-1. **Search for PRD files** using the pattern `docs/*/prd.md`. Read matching documents to extract product goals, user personas, feature requirements, and success metrics.
-2. **Search for SRS files** using the pattern `docs/*/srs.md`. Read matching documents to extract functional requirements, non-functional requirements, data models, and interface specifications.
-3. **Cross-reference upstream IDs** so that the design document can map components and decisions back to specific PRD and SRS requirement identifiers, maintaining full traceability across the documentation lifecycle.
-
-This scanning phase feeds directly into Steps 2 and 5 of the workflow and ensures every generated design reflects the actual requirements rather than assumptions.

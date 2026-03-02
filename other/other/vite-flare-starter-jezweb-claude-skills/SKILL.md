@@ -35,21 +35,20 @@ Ask for:
 | Description (1 sentence) | Google OAuth credentials |
 | Cloudflare account | Custom domain |
 
-### Step 2: Run Setup Script
+### Step 2: Clone and Configure
 
-```bash
-bash plugins/cloudflare/skills/vite-flare-starter/scripts/setup.sh
-```
+Perform these operations to scaffold the project. See [references/setup-pattern.md](references/setup-pattern.md) for exact replacement targets and the `.dev.vars` template.
 
-The script will:
-1. Clone the repo and remove `.git`
-2. Find-replace `vite-flare-starter` with project name (7 locations)
-3. Generate `BETTER_AUTH_SECRET`
-4. Create `.dev.vars` from template
-5. Optionally create Cloudflare D1 + R2 resources
-6. Run `pnpm install`
-7. Run local database migration
-8. Report remaining manual steps
+1. **Clone** the repo and remove `.git`, init fresh repo
+2. **Find-replace** `vite-flare-starter` with the project name in wrangler.jsonc (worker name, database name, R2 bucket names), package.json (name, database refs), and index.html (title, meta)
+3. **Remove** hardcoded `account_id` and replace `database_id` with placeholder in wrangler.jsonc
+4. **Reset** package.json version to `0.1.0`
+5. **Generate** `BETTER_AUTH_SECRET` using `openssl rand -hex 32` (or Python `secrets.token_hex(32)`)
+6. **Create** `.dev.vars` from template (convert kebab-case name to Title Case for display, underscore for ID)
+7. **Optionally create** Cloudflare D1 database and R2 buckets, update wrangler.jsonc with database_id
+8. **Install** dependencies with `pnpm install`
+9. **Run** local database migration with `pnpm run db:migrate:local`
+10. **Initial commit**
 
 ### Step 3: Manual Configuration
 
@@ -111,7 +110,7 @@ pnpm run build && pnpm run deploy
 
 ## What Gets Rebranded
 
-The setup script handles these automatically:
+The setup process handles these automatically:
 
 | File | What Changes |
 |------|-------------|

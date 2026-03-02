@@ -1,6 +1,6 @@
 ---
 name: ln-644-dependency-graph-auditor
-description: "L3 Worker. Builds module dependency graph, detects transitive cycles (DFS), validates boundary rules (forbidden/allowed/required), calculates coupling metrics (Ca/Ce/I, CCD/NCCD). Adaptive architecture detection: custom rules > docs > auto-detect. Supports hybrid architectures."
+description: "L3 Worker. Builds dependency graph, detects cycles (DFS), validates boundary rules, calculates coupling metrics (Ca/Ce/I, CCD/NCCD). Adaptive architecture detection."
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
@@ -30,7 +30,7 @@ L3 Worker that builds and analyzes the module dependency graph to enforce archit
 ```
 - architecture_path: string    # Path to docs/architecture.md
 - codebase_root: string        # Root directory to scan
-- output_dir: string           # e.g., "docs/project/.audit"
+- output_dir: string           # e.g., "docs/project/.audit/ln-640/{YYYY-MM-DD}"
 
 # Domain-aware (optional, from coordinator)
 - domain_mode: "global" | "domain-aware"   # Default: "global"
@@ -364,7 +364,7 @@ ELSE:
 ### Phase 9: Return Summary
 
 ```
-Report written: docs/project/.audit/644-dep-graph-users.md
+Report written: docs/project/.audit/ln-640/{YYYY-MM-DD}/644-dep-graph-users.md
 Score: 6.5/10 | Issues: 8 (C:1 H:3 M:3 L:1)
 ```
 

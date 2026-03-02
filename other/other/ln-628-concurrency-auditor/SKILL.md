@@ -163,7 +163,7 @@ Write report to `{output_dir}/628-concurrency.md` with `category: "Concurrency"`
 
 Return summary to coordinator:
 ```
-Report written: docs/project/.audit/628-concurrency.md
+Report written: docs/project/.audit/ln-620/{YYYY-MM-DD}/628-concurrency.md
 Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 ```
 

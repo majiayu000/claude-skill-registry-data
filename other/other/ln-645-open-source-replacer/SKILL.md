@@ -31,7 +31,7 @@ L3 Worker that discovers custom modules, analyzes their purpose, and finds battl
 ```
 - codebase_root: string        # Project root
 - tech_stack: object            # Language, framework, package manager, existing dependencies
-- output_dir: string            # e.g., "docs/project/.audit"
+- output_dir: string            # e.g., "docs/project/.audit/ln-640/{YYYY-MM-DD}"
 
 # Domain-aware (optional, from coordinator)
 - domain_mode: "global" | "domain-aware"   # Default: "global"
@@ -271,7 +271,7 @@ status: complete
 ### Phase 6: Return Summary
 
 ```
-Report written: docs/project/.audit/645-open-source-replacer[-{domain}].md
+Report written: docs/project/.audit/ln-640/{YYYY-MM-DD}/645-open-source-replacer[-{domain}].md
 Score: X.X/10 | Issues: N (C:0 H:N M:N L:N)
 ```
 

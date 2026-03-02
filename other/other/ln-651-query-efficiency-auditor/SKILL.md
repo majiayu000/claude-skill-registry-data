@@ -15,21 +15,21 @@ Specialized worker auditing database query patterns for redundancy, inefficiency
 - **Worker in ln-650 coordinator pipeline** - invoked by ln-650-persistence-performance-auditor
 - Audit **query efficiency** (Priority: HIGH)
 - Check redundant fetches, batch operation misuse, caching scope problems
-- Return structured findings with severity, location, effort, recommendations
+- Write structured findings to file with severity, location, effort, recommendations
 - Calculate compliance score (X/10) for Query Efficiency category
 
 ## Inputs (from Coordinator)
 
 **MANDATORY READ:** Load `shared/references/task_delegation_pattern.md#audit-coordinator--worker-contract` for contextStore structure.
 
-Receives `contextStore` with: `tech_stack`, `best_practices`, `db_config` (database type, ORM settings), `codebase_root`.
+Receives `contextStore` with: `tech_stack`, `best_practices`, `db_config` (database type, ORM settings), `codebase_root`, `output_dir`.
 
 **Domain-aware:** Supports `domain_mode` + `current_domain`.
 
 ## Workflow
 
 1) **Parse context from contextStore**
-   - Extract tech_stack, best_practices, db_config
+   - Extract tech_stack, best_practices, db_config, output_dir
    - Determine scan_path (same logic as ln-624)
 
 2) **Scan codebase for violations**
@@ -40,7 +40,9 @@ Receives `contextStore` with: `tech_stack`, `best_practices`, `db_config` (datab
 
 4) **Calculate score using penalty algorithm**
 
-5) **Return JSON result to coordinator**
+5) **Write Report:** Build full markdown report in memory per `shared/templates/audit_worker_report_template.md`, write to `{output_dir}/651-query-efficiency.md` in single Write call
+
+6) **Return Summary:** Return minimal summary to coordinator (see Output Format)
 
 ## Audit Rules (Priority: HIGH)
 
@@ -157,28 +159,14 @@ Receives `contextStore` with: `tech_stack`, `best_practices`, `db_config` (datab
 
 ## Output Format
 
-Return JSON to coordinator:
+**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format.
 
-```json
-{
-  "category": "Query Efficiency",
-  "score": 6,
-  "total_issues": 8,
-  "critical": 0,
-  "high": 3,
-  "medium": 4,
-  "low": 1,
-  "findings": [
-    {
-      "severity": "HIGH",
-      "location": "app/infrastructure/messaging/job_processor.py:434",
-      "issue": "Redundant entity fetch: job re-fetched by ID after acquire_next_pending already returned it",
-      "principle": "Query Efficiency / DRY Data Access",
-      "recommendation": "Pass job object to _process_job instead of job_id",
-      "effort": "S"
-    }
-  ]
-}
+Write report to `{output_dir}/651-query-efficiency.md` with `category: "Query Efficiency"` and checks: redundant_fetch, n_update_delete_loop, unnecessary_resolve, over_fetching, missing_bulk_ops, wrong_caching_scope.
+
+Return summary to coordinator:
+```
+Report written: docs/project/.audit/ln-650/{YYYY-MM-DD}/651-query-efficiency.md
+Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 ```
 
 ## Critical Rules
@@ -191,16 +179,18 @@ Return JSON to coordinator:
 
 ## Definition of Done
 
-- contextStore parsed (tech_stack, db_config, ORM settings)
+- contextStore parsed successfully (including output_dir)
 - scan_path determined (domain path or codebase root)
 - All 6 checks completed:
   - redundant fetch, N-UPDATE loop, unnecessary resolve, over-fetching, bulk ops, caching scope
 - Findings collected with severity, location, effort, recommendation
-- Score calculated
-- JSON returned to coordinator
+- Score calculated using penalty algorithm
+- Report written to `{output_dir}/651-query-efficiency.md` (atomic single Write call)
+- Summary returned to coordinator
 
 ## Reference Files
 
+- **Worker report template:** `shared/templates/audit_worker_report_template.md`
 - **Audit scoring formula:** `shared/references/audit_scoring.md`
 - **Audit output schema:** `shared/references/audit_output_schema.md`
 

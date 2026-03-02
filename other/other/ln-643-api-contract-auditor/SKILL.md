@@ -1,6 +1,6 @@
 ---
 name: ln-643-api-contract-auditor
-description: "API contract audit worker (L3). Checks layer leakage in method signatures, missing DTOs, entity leakage to API, inconsistent error contracts, redundant method overloads. Returns findings with 4-score model (compliance, completeness, quality, implementation)."
+description: "API contract audit worker (L3). Checks layer leakage in method signatures, missing DTOs, entity leakage to API, inconsistent error contracts, redundant method overloads. Returns findings with penalty-based scoring + diagnostic sub-scores."
 allowed-tools: Read, Grep, Glob, Bash
 ---
 
@@ -28,7 +28,7 @@ Specialized worker auditing API contracts, method signatures at service boundari
 - locations: string[]          # Service/API directories
 - adr_reference: string        # Path to related ADR
 - bestPractices: object        # Best practices from MCP Ref/Context7
-- output_dir: string           # e.g., "docs/project/.audit"
+- output_dir: string           # e.g., "docs/project/.audit/ln-640/{YYYY-MM-DD}"
 
 # Domain-aware (optional, from coordinator)
 - domain_mode: "global" | "domain-aware"   # Default: "global"
@@ -108,13 +108,25 @@ scan_root = scan_path IF domain_mode == "domain-aware" ELSE codebase_root
 | Validation at boundaries (Pydantic, Zod) | +25 |
 | API response DTOs separate from domain | +20 |
 
+### Phase 3.5: Calculate Score
+
+**MANDATORY READ:** Load `shared/references/audit_scoring.md` for unified scoring formula.
+
+**Primary score** uses penalty formula (same as all workers):
+```
+penalty = (critical × 2.0) + (high × 1.0) + (medium × 0.5) + (low × 0.2)
+score = max(0, 10 - penalty)
+```
+
+**Diagnostic sub-scores** (0-100 each) are calculated separately and reported in AUDIT-META for diagnostic purposes only.
+
 ### Phase 4: Write Report
 
-**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format (ln-640 section: 4-score AUDIT-META + DATA-EXTENDED).
+**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format (ln-640 section: extended AUDIT-META + DATA-EXTENDED).
 
 ```
 # Build markdown report in memory with:
-# - AUDIT-META (4-score variant: score + score_compliance/completeness/quality/implementation)
+# - AUDIT-META (extended: score [penalty-based] + diagnostic score_compliance/completeness/quality/implementation)
 # - Checks table (layer_leakage, missing_dto, entity_leakage, error_contracts, redundant_overloads)
 # - Findings table (issues sorted by severity)
 # - DATA-EXTENDED: issues array with principle + domain fields (for cross-domain aggregation)
@@ -128,7 +140,7 @@ ELSE:
 ### Phase 5: Return Summary
 
 ```
-Report written: docs/project/.audit/643-api-contract-users.md
+Report written: docs/project/.audit/ln-640/{YYYY-MM-DD}/643-api-contract-users.md
 Score: 6.75/10 (C:65 K:70 Q:55 I:80) | Issues: 4 (H:2 M:1 L:1)
 ```
 

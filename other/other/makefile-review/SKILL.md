@@ -31,6 +31,7 @@ modules:
 - deduplication-patterns
 - portability-checks
 - best-practices
+- plugin-dogfood-checks
 ---
 ## Table of Contents
 
@@ -51,15 +52,6 @@ modules:
 ## Testing
 
 Run `pytest plugins/pensive/tests/skills/test_makefile_review.py` to verify review logic.
-- [Context](#context)
-- [Dependency Analysis](#dependency-analysis)
-- [Duplication Candidates](#duplication-candidates)
-- [[D1] Repeated command](#[d1]-repeated-command)
-- [Portability Issues](#portability-issues)
-- [Missing Targets](#missing-targets)
-- [Recommendation](#recommendation)
-- [Exit Criteria](#exit-criteria)
-
 
 # Makefile Review Workflow
 
@@ -70,7 +62,6 @@ Audit Makefiles for best practices, deduplication, and portability.
 ```bash
 /makefile-review
 ```
-**Verification:** Run the command with `--help` flag to verify availability.
 
 ## When To Use
 
@@ -108,7 +99,6 @@ Find Make-related files:
 rg -n "^include" -g'Makefile*'
 rg --files -g '*.mk'
 ```
-**Verification:** Run the command with `--help` flag to verify availability.
 
 Document changed targets, project goals, and tooling requirements.
 
@@ -140,6 +130,8 @@ Load additional context as needed:
 
 **Best Practices & Examples**: `@include modules/best-practices.md`
 
+**Plugin Dogfood Checks**: `@include modules/plugin-dogfood-checks.md` - Makefile completeness analysis, target generation, and dogfooding validation.
+
 ## Output Format
 
 ```markdown
@@ -169,7 +161,6 @@ Makefile review findings
 ## Recommendation
 Approve / Approve with actions / Block
 ```
-**Verification:** Run the command with `--help` flag to verify availability.
 
 ## Exit Criteria
 
@@ -182,11 +173,8 @@ Approve / Approve with actions / Block
 
 ### Common Issues
 
-**Command not found**
-Ensure all dependencies are installed and in PATH
+**No Makefile found**
+Ensure `Makefile` or `*.mk` files exist in the project root or specify paths explicitly.
 
-**Permission errors**
-Check file permissions and run with appropriate privileges
-
-**Unexpected behavior**
-Enable verbose logging with `--verbose` flag
+**Include directives not resolved**
+Run `rg -n "^include" -g'Makefile*'` to trace include chains manually.

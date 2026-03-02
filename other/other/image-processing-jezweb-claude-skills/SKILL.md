@@ -6,7 +6,7 @@ compatibility: claude-code-only
 
 # Image Processing
 
-Process images for web development using Pillow (Python). Resize, convert, trim, optimise, and composite — no ImageMagick or native dependencies required.
+Process images for web development. Generate a Pillow script adapted to the user's environment and specific needs.
 
 ## Prerequisites
 
@@ -16,122 +16,65 @@ Pillow is usually pre-installed. If not:
 pip install Pillow
 ```
 
-## Commands
+If Pillow is unavailable, adapt using alternatives:
 
-All commands use `scripts/process-image.py`. Each takes `--output` (`-o`) and optional `--quality` (`-q`).
+| Alternative | Platform | Install | Capabilities |
+|-------------|----------|---------|-------------|
+| `sips` | macOS (built-in) | None | Resize, convert (no trim/OG) |
+| `sharp` | Node.js | `npm install sharp` | Full feature set |
+| `ffmpeg` | Cross-platform | `brew install ffmpeg` | Resize, convert |
+
+## Capabilities
+
+Generate a Python script using Pillow for any of these operations. See `references/pillow-patterns.md` for implementation patterns, especially RGBA-to-JPG compositing and cross-platform font discovery.
 
 ### Resize
 
-Scale an image to specific dimensions or by width/height (maintains aspect ratio if only one given).
-
-```bash
-python3 plugins/design-assets/skills/image-processing/scripts/process-image.py \
-  resize input.png -o resized.png --width 1920 --height 1080
-
-# Width only — height calculated from aspect ratio
-python3 .../process-image.py resize input.png -o resized.png -w 800
-```
+Scale to specific dimensions or by width/height (maintain aspect ratio if only one given). Use `Image.LANCZOS` for high-quality downscaling.
 
 ### Convert Format
 
-Convert between PNG, JPG, WebP. RGBA→JPG automatically composites onto white background.
-
-```bash
-python3 .../process-image.py convert logo.png -o logo.webp
-python3 .../process-image.py convert photo.webp -o photo.jpg -q 90
-```
+Convert between PNG, JPG, WebP. Handle RGBA-to-JPG by compositing onto white background. Apply format-specific quality settings (WebP: 85, JPG: 90, PNG: optimize).
 
 ### Trim Whitespace
 
-Auto-crop surrounding whitespace from logos and icons.
-
-```bash
-python3 .../process-image.py trim logo-with-padding.png -o logo-trimmed.png
-```
+Auto-crop surrounding whitespace from logos and icons. Convert to RGBA first, then use `getbbox()` to find content bounds.
 
 ### Thumbnail
 
-Create a thumbnail fitting within a max dimension (maintains aspect ratio).
-
-```bash
-python3 .../process-image.py thumbnail product.jpg -o thumb.jpg --size 300
-```
+Fit within max dimensions while maintaining aspect ratio. Use `img.thumbnail((size, size), Image.LANCZOS)`.
 
 ### Optimise for Web
 
-Resize + compress in one step. Ideal for preparing uploaded images for production.
+Resize + compress in one step. Convert to WebP for best compression. Typical settings: width 1920, quality 85.
 
-```bash
-python3 .../process-image.py optimise hero.jpg -o hero.webp -w 1920 -q 85
-```
+### OG Card (1200x630)
 
-### OG Card
-
-Generate a 1200x630 Open Graph card image with title and subtitle overlay.
-
-```bash
-# With background image
-python3 .../process-image.py og-card \
-  --background hero.jpg \
-  --title "My Page Title" \
-  --subtitle "A brief description" \
-  -o og-image.png
-
-# Solid colour background
-python3 .../process-image.py og-card \
-  --bg-color "#1a1a2e" \
-  --title "My Page Title" \
-  -o og-image.png
-```
+Generate Open Graph card with title/subtitle overlay on a background image or solid colour. Apply semi-transparent overlay for text readability. Centre text horizontally.
 
 ## Common Workflows
 
 ### Logo Cleanup (client-supplied JPG with white background)
 
-```bash
-# 1. Trim whitespace
-python3 .../process-image.py trim client-logo.jpg -o logo-trimmed.png
-
-# 2. Convert to PNG (for transparency on non-white backgrounds)
-python3 .../process-image.py convert logo-trimmed.png -o logo.png
-
-# 3. Create favicon-sized version
-python3 .../process-image.py thumbnail logo.png -o favicon-source.png --size 512
-```
+1. Trim whitespace
+2. Convert to PNG (for transparency)
+3. Create favicon-sized version (thumbnail at 512px)
 
 ### Prepare Hero Image for Production
 
-```bash
-# Resize to max width, convert to WebP, compress
-python3 .../process-image.py optimise uploaded-hero.jpg -o public/images/hero.webp -w 1920 -q 85
-```
+Resize to max width 1920, convert to WebP, compress at quality 85.
 
-### Batch Process (Multiple Images)
+### Batch Process
 
-For batch operations, write a quick script rather than running commands one by one:
-
-```python
-import subprocess, glob
-for img in glob.glob("uploads/*.jpg"):
-    name = img.rsplit("/", 1)[-1].replace(".jpg", ".webp")
-    subprocess.run(["python3", ".../process-image.py", "optimise", img, "-o", f"public/images/{name}", "-w", "1200", "-q", "85"])
-```
+For multiple images, generate a single script that loops over all files rather than processing one at a time.
 
 ## Pipeline with Gemini Image Gen
 
-Generate → Process → Deploy:
+Generate images with the gemini-image-gen skill, then process them:
 
-```bash
-# 1. Generate with Gemini
-python3 plugins/design-assets/skills/gemini-image-gen/scripts/generate-image.py \
-  --prompt "..." --output raw-hero.png --count 3
-
-# 2. User picks favourite (e.g. raw-hero-2.png)
-
-# 3. Optimise for web
-python3 plugins/design-assets/skills/image-processing/scripts/process-image.py \
-  optimise raw-hero-2.png -o public/images/hero.webp -w 1920 -q 85
-```
+1. Generate with Gemini (raw PNG output)
+2. User picks favourite
+3. Optimise: resize to target width, convert to WebP, compress
 
 ## Output Format Guide
 
@@ -142,3 +85,9 @@ python3 plugins/design-assets/skills/image-processing/scripts/process-image.py \
 | Fallback for older browsers | JPG | Universal support |
 | Thumbnails | WebP or JPG | Small file size priority |
 | OG cards | PNG | Social platforms handle PNG best |
+
+## Reference Files
+
+| When | Read |
+|------|------|
+| Implementing any Pillow operation | [references/pillow-patterns.md](references/pillow-patterns.md) |

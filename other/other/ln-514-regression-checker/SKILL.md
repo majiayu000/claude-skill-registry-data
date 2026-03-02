@@ -15,7 +15,7 @@ Runs the existing test suite to ensure no regressions after implementation chang
 - Return PASS/FAIL with counts/log excerpts; never modifies Linear or kanban.
 
 ## When to Use
-- **Invoked by ln-510-quality-coordinator** Pass 1 (after ln-511 and ln-513)
+- **Invoked by ln-510-quality-coordinator** Phase 7
 - Code quality check passed
 
 ## Workflow (concise)

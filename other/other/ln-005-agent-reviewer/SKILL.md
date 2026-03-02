@@ -47,7 +47,7 @@ Runs parallel external agent reviews on arbitrary context, critically verifies s
 
 ## Workflow
 
-**MANDATORY READ:** Load `shared/references/agent_review_workflow.md` for Health Check, Ensure .agent-review/, Run Agents, Critical Verification + Debate, Aggregate + Return, Fallback Rules, Critical Rules, and Definition of Done. Load `shared/references/agent_delegation_pattern.md` for Reference Passing Pattern, Review Persistence Pattern, Agent Timeout Policy, and Debate Protocol.
+**MANDATORY READ:** Load `shared/references/agent_review_workflow.md` for Health Check, Ensure .agent-review/, Load Review Memory, Run Agents, Critical Verification + Debate, Aggregate + Return, Save Review Summary, Fallback Rules, Critical Rules, and Definition of Done. Load `shared/references/agent_delegation_pattern.md` for Reference Passing Pattern, Review Persistence Pattern, Agent Timeout Policy, and Debate Protocol.
 
 ### Unique Steps (before shared workflow)
 
@@ -69,9 +69,11 @@ Runs parallel external agent reviews on arbitrary context, critically verifies s
 
 ### Shared Workflow Steps
 
-6-8) **Run agents, Critical Verification + Debate, Aggregate + Return:** per shared workflow.
-   - `{review_type}` = review_title or "Context Review" (for challenge template `{review_type}` placeholder)
-   - `{story_ref}` placeholder in challenge template = identifier
+6-9) **Load Review Memory, Run agents, Critical Verification + Debate, Aggregate + Return:** per shared workflow.
+   - `{review_type}` in challenge template = review_title or "Context Review"
+   - `{story_ref}` in challenge template = identifier
+
+10) **Save Review Summary:** per shared workflow "Step: Save Review Summary".
 
 ## Output Format
 

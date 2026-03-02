@@ -7,6 +7,21 @@ description: Analyze documentation (or a prompt) and generate an implementation 
 
 Generate an implementation plan from a feature document or a requirement prompt.
 
+## Iron Law
+
+**ALL OUTPUT GOES INTO `{output_dir}/{feature-name}/` AS SEPARATE FILES — `overview.md`, `plan.md`, `tasks/*.md`, `state.json`.**
+
+## Anti-Rationalization Table
+
+| Thought | Reality |
+|---------|---------|
+| "I'll put everything in one plan.md for simplicity" | Multi-file structure is how impl/status/review find individual tasks. One file breaks all downstream skills. |
+| "docs/plan is close enough" | Output dir is `{output_dir}` (default: `planning/`). `docs/plan`, `docs/plans` are ALL wrong. |
+| "I'll create the tasks inline in plan.md" | Tasks go in `tasks/{name}.md` as separate files. Step 7 sub-agent creates them. |
+| "Numeric prefixes help with ordering" | Execution order is in `overview.md` and `state.json`. Files are `setup.md`, not `01-setup.md`. |
+| "I can skip state.json" | `state.json` drives impl, status, fixbug. Without it, no downstream skill works. |
+| "The overview files are optional" | Both project-level and feature-level `overview.md` are mandatory outputs. |
+
 ## When to Use
 
 - Have a feature document that needs to be broken into development tasks
@@ -291,7 +306,7 @@ If not clearly specified in the document, use a **single** `AskUserQuestion` com
 
 Extract feature name from filename or document title (convert to kebab-case).
 
-**Output directory:** `{output_dir}` defaults to `planning/` — **NOT** `docs/plans/`, `docs/planning/`, or any other path. Always use the resolved `output_dir` from Step 0 configuration.
+**Output directory:** `{output_dir}` defaults to `planning/` — **NEVER** `docs/plan/`, `docs/plans/`, `docs/planning/`, or any other invented path. If you are about to write to any path other than `{output_dir}/{feature_name}/`, STOP — you are making a mistake. Always use the resolved `output_dir` from Step 0 configuration.
 
 Create directory structure and **proceed directly** — no confirmation needed:
 ```
@@ -450,6 +465,21 @@ Display: `Project overview updated: {output_dir}/overview.md`
 
 ---
 
+### Step 8.7: Verify Output Structure
+
+**Mandatory — do NOT proceed to Step 9 until all checks pass. Fix failures before continuing.**
+
+1. `{output_dir}/{feature_name}/` exists
+2. `plan.md` exists and non-empty
+3. `tasks/` contains `.md` files with descriptive names (no numeric prefixes)
+4. `overview.md` exists and non-empty
+5. `state.json` is valid JSON with fields: `feature`, `status`, `execution_order`, `progress`, `tasks`
+6. Task count in `state.json` matches files in `tasks/`
+7. `{output_dir}/overview.md` (project-level) exists
+8. No files in `docs/plan/`, `docs/plans/`, `docs/planning/` — move if found
+
+---
+
 ### Step 9: Display Plan and Next Steps
 
 Output plan summary:
@@ -511,5 +541,18 @@ Optionally synchronize tasks to Claude Code's Task system:
         ├── tasks/             # Task breakdown files
         └── state.json         # Status tracking
     ```
+    This structure is mandatory, not a suggestion. Every file listed above must exist after plan generation completes.
 11. **Naming Conventions**: Feature directories use kebab-case (`user-auth`). Task files use descriptive names (`setup.md`). No "claude-" or tool prefixes. Suitable for Git commits.
 12. **Reference Docs**: Configure `reference_docs.sources` in `.code-forge.json` to auto-discover project documentation. Each doc is summarized by a parallel sub-agent and injected as context into Steps 2, 6, and 7. Reference context is baked into generated plan.md and task files — downstream skills do not re-read reference docs.
+
+## Common Mistakes
+
+- Writing a single document instead of the multi-file structure (`overview.md` + `plan.md` + `tasks/*.md` + `state.json`)
+- Using `docs/plan/`, `docs/plans/`, or `docs/planning/` instead of `{output_dir}`
+- Putting task content inside `plan.md` instead of separate `tasks/{name}.md` files
+- Using numeric prefixes on task files (`01-setup.md` instead of `setup.md`)
+- Skipping `state.json` — downstream skills (impl, status, fixbug, finish) cannot operate without it
+- Skipping project-level `overview.md` (Step 8.5)
+- Running Steps 2, 6, 7 inline instead of delegating to sub-agents via `Task` tool
+- Proceeding to Step 9 without running Step 8.7 verification
+

@@ -107,7 +107,7 @@ Write report to `{output_dir}/626-dead-code.md` with `category: "Dead Code"` and
 
 Return summary to coordinator:
 ```
-Report written: docs/project/.audit/626-dead-code.md
+Report written: docs/project/.audit/ln-620/{YYYY-MM-DD}/626-dead-code.md
 Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 ```
 

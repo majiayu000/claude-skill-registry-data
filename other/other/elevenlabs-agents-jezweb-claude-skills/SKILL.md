@@ -104,7 +104,9 @@ elevenlabs-cli simulate my-agent --scenario "Book appointment for tomorrow"
 elevenlabs-cli deploy my-agent
 ```
 
-Use `scripts/test-agent.sh` and `scripts/simulate-conversation.sh` for automated testing.
+Before deploying, run a dry-run first: `elevenlabs-cli deploy my-agent --dry-run` to review changes.
+
+For conversation simulation, create a JSON test scenario based on `assets/simulation-template.json`.
 
 ---
 
@@ -162,13 +164,6 @@ System prompt references them as `{{user_name}}`.
 - `assets/system-prompt-template.md` — System prompt guide
 - `assets/agent-config-schema.json` — Config schema reference
 - `assets/ci-cd-example.yml` — CI/CD pipeline template
-
-## Scripts
-
-- `scripts/create-agent.sh` — Create agent via API
-- `scripts/deploy-agent.sh` — Deploy agent
-- `scripts/test-agent.sh` — Run agent tests
-- `scripts/simulate-conversation.sh` — Simulate conversations
 
 ## Reference Files
 

@@ -30,7 +30,7 @@ L3 Worker that audits architectural layer boundaries and detects violations.
 - architecture_path: string    # Path to docs/architecture.md
 - codebase_root: string        # Root directory to scan
 - skip_violations: string[]    # Files to skip (legacy)
-- output_dir: string           # e.g., "docs/project/.audit"
+- output_dir: string           # e.g., "docs/project/.audit/ln-640/{YYYY-MM-DD}"
 
 # Domain-aware (optional, from coordinator)
 - domain_mode: "global" | "domain-aware"   # Default: "global"
@@ -221,7 +221,7 @@ ELSE:
 ### Phase 7: Return Summary
 
 ```
-Report written: docs/project/.audit/642-layer-boundary-users.md
+Report written: docs/project/.audit/ln-640/{YYYY-MM-DD}/642-layer-boundary-users.md
 Score: 4.5/10 | Issues: 8 (C:1 H:3 M:4 L:0)
 ```
 

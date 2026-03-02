@@ -256,6 +256,16 @@ Check items:
 - **RTL support:** Layout not broken in right-to-left languages (if applicable)
 - **Screen reader:** Dynamic content changes announced; focus management correct
 
+### Dimension Application Rules
+
+These rules apply to both Feature Mode and Project Mode reviews:
+
+- **D1–D3 (Tier 1):** Always apply. These are potential merge blockers.
+- **D4–D7 (Tier 2):** Always apply. These are should-fix items.
+- **D8–D10 (Tier 3):** Always apply. Flag as warnings/suggestions.
+- **D11–D13 (Tier 4):** Always apply but expect mostly suggestions.
+- **D14 (Accessibility/i18n):** Apply ONLY if `project_type` is `"frontend"` or `"fullstack"`.
+
 ---
 
 ## Detailed Steps
@@ -416,14 +426,7 @@ Spawn a `Task` tool call with:
 - The severity level definitions (blocker / critical / warning / suggestion)
 - Instruction: **"For each issue, specify severity, file path, line number/range, what's wrong, and how to fix it. Use the Review Comment Formula: Problem → Why it matters → Suggested fix."**
 
-**Review dimensions to apply:**
-
-Apply all dimensions from the [Review Dimensions Reference](#review-dimensions-reference) above, with these rules:
-- **D1–D3 (Tier 1):** Always apply. These are potential merge blockers.
-- **D4–D7 (Tier 2):** Always apply. These are should-fix items.
-- **D8–D10 (Tier 3):** Always apply. Flag as warnings/suggestions.
-- **D11–D13 (Tier 4):** Always apply but expect mostly suggestions.
-- **D14 (Accessibility/i18n):** Apply ONLY if `project_type` is `"frontend"` or `"fullstack"`.
+**Review dimensions to apply:** Follow [Dimension Application Rules](#dimension-application-rules).
 
 Additionally, always check **Plan Consistency** (feature mode specific):
 - All acceptance criteria from `plan.md` are met
@@ -601,14 +604,7 @@ Spawn a `Task` tool call with:
 - Explicit instruction: **"Read every source file. Review the code itself — its logic, structure, correctness, and quality. Reference documents are only used as criteria for the consistency check, not as the subject of review."**
 - Instruction: **"For each issue, specify severity, file path, line number/range, what's wrong, and how to fix it. Use the Review Comment Formula: Problem → Why it matters → Suggested fix."**
 
-**Review dimensions to apply:**
-
-Apply all dimensions from the [Review Dimensions Reference](#review-dimensions-reference) above, with these rules:
-- **D1–D3 (Tier 1):** Always apply. These are potential merge blockers.
-- **D4–D7 (Tier 2):** Always apply. These are should-fix items.
-- **D8–D10 (Tier 3):** Always apply. Flag as warnings/suggestions.
-- **D11–D13 (Tier 4):** Always apply but expect mostly suggestions.
-- **D14 (Accessibility/i18n):** Apply ONLY if `project_type` is `"frontend"` or `"fullstack"`.
+**Review dimensions to apply:** Follow [Dimension Application Rules](#dimension-application-rules).
 
 Additionally, apply the appropriate **Consistency** check based on reference level:
 
@@ -654,23 +650,11 @@ FUNCTIONAL_CORRECTNESS:                              # D1
 
 SECURITY:                                            # D2
   rating: <pass | warning | critical>
-  issues:
-  - severity: <blocker | critical | warning | suggestion>
-    file: path/to/file.ext
-    line: <number or range>
-    title: <short title>
-    description: <what's wrong and why it matters>
-    suggestion: <how to fix>
+  issues: [same structure as D1]
 
 RESOURCE_MANAGEMENT:                                 # D3
   rating: <pass | warning | critical>
-  issues:
-  - severity: <blocker | critical | warning | suggestion>
-    file: path/to/file.ext
-    line: <number or range>
-    title: <short title>
-    description: <what's wrong and why it matters>
-    suggestion: <how to fix>
+  issues: [same structure as D1]
 
 CODE_QUALITY:                                        # D4
   rating: <good | acceptable | needs_work>
@@ -684,23 +668,11 @@ CODE_QUALITY:                                        # D4
 
 ARCHITECTURE:                                        # D5
   rating: <good | acceptable | needs_work>
-  issues:
-  - severity: <critical | warning | suggestion>
-    file: path/to/file.ext
-    line: <number or range>
-    title: <short title>
-    description: <what's wrong and why it matters>
-    suggestion: <how to fix>
+  issues: [same structure as D4]
 
 PERFORMANCE:                                         # D6
   rating: <good | acceptable | needs_work>
-  issues:
-  - severity: <critical | warning | suggestion>
-    file: path/to/file.ext
-    line: <number or range>
-    title: <short title>
-    description: <what's wrong and why it matters>
-    suggestion: <how to fix>
+  issues: [same structure as D4]
 
 TEST_COVERAGE:                                       # D7
   rating: <good | acceptable | needs_work>
@@ -893,134 +865,13 @@ If the user passed `--save` in the arguments, **also** write the report to `{out
 
 ### Step 4P: Project Mode — Display Report
 
-Display the following report directly in the terminal using markdown:
-
-```markdown
-# Project Review: {project_name}
-
-**Date:** {ISO date}
-**Reviewer:** code-forge
-**Reference:** {planning-backed | docs-backed | bare (no reference documents)}
-**Overall Rating:** {pass | pass_with_notes | needs_changes}
-**Merge Readiness:** {ready | fix_required | rework_required}
-
-## Summary
-
-{1-2 paragraph summary of overall project quality}
-
-**Issue Breakdown:** {blocker_count} blockers · {critical_count} critical · {warning_count} warnings · {suggestion_count} suggestions
-
----
-
-## Tier 1 — Must-Fix Before Merge
-
-### Functional Correctness (D1)
-
-**Rating:** {rating}
-
-{issues or "No issues found"}
-
-### Security (D2)
-
-**Rating:** {rating}
-
-{issues or "No security concerns"}
-
-### Resource Management (D3)
-
-**Rating:** {rating}
-
-{issues or "No resource management issues"}
-
----
-
-## Tier 2 — Should-Fix
-
-### Code Quality (D4)
-
-**Rating:** {rating}
-
-{issues or "No issues found"}
-
-### Architecture & Design (D5)
-
-**Rating:** {rating}
-
-{issues or "No issues found"}
-
-### Performance (D6)
-
-**Rating:** {rating}
-
-{issues or "No issues found"}
-
-### Test Coverage (D7)
-
-**Rating:** {rating}
-
-{coverage gaps or "All scenarios covered"}
-
----
-
-## Tier 3 — Recommended
-
-### Error Handling & Observability (D8/D9)
-
-**Rating:** {rating}
-
-{issues or "No issues found"}
-
----
-
-## Tier 4 — Nice-to-Have
-
-### Maintainability & Compatibility (D10–D13)
-
-**Rating:** {rating}
-
-{issues or "No issues found"}
-
-{If frontend/fullstack:}
-### Accessibility / i18n (D14)
-
-**Rating:** {rating}
-
-{issues or "Skipped (not a frontend project)"}
-
----
-
-## {Plan Consistency | Documentation Consistency}
-
-{If planning-backed or docs-backed:}
-**Criteria Met:** {X/Y}
-
-{unmet criteria or "All criteria met"}
-
-{If bare:}
-*No reference documents found — consistency check skipped.*
-
----
-
-## Recommendations
-
-{Prioritized list of improvements, grouped by blocking status:}
-
-**Must fix before merge:**
-1. {highest priority fix with file:line reference}
-2. ...
-
-**Should fix:**
-1. {recommended fix}
-2. ...
-
-**Consider for later:**
-1. {nice-to-have improvement}
-2. ...
-
-## Verdict
-
-{Final assessment and recommendation}
-```
+Use the same report template as Feature Mode (see [Step 4F](#step-4f-feature-mode--display-report)), with these differences:
+- Title: `# Project Review: {project_name}` (instead of feature name)
+- Header adds: `**Reference:** {planning-backed | docs-backed | bare (no reference documents)}`
+- Consistency section adapts to reference level:
+  - **planning-backed** → `## Plan Consistency` with criteria met/unmet
+  - **docs-backed** → `## Documentation Consistency` with criteria met/unmet
+  - **bare** → `*No reference documents found — consistency check skipped.*`
 
 #### 4P.1 Optional: Save to File (`--save`)
 

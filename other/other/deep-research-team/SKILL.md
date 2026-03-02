@@ -241,6 +241,10 @@ TaskCreate:
   activeForm: "Investigating {angle title}"
 ```
 
+**Task brief clarity:** Make scope boundaries explicit between researchers to avoid overlap
+and gaps. Flag name ambiguities (e.g., multiple products sharing a name). Mark optional
+sub-tasks clearly (e.g., "if time permits" vs required).
+
 **Step 4: Spawn researchers**
 
 Launch ALL researchers in a SINGLE message. Each researcher gets:
@@ -517,7 +521,8 @@ TeamDelete
 - **`references/question-types.md`** -- 7-type taxonomy, signals, decomposition rules,
   type-to-scope defaults. Read in Phase 0.
 - **`references/researcher-prompt.md`** -- Investigation methodology, type-aware source
-  evaluation, output format. Path provided to researchers in spawn prompt.
+  evaluation, output format. Path provided to researchers in spawn prompt. (Tool guidance
+  extracted to the standalone `search-tips` skill, which researchers load as their first step.)
 - **`references/templates/`** -- Type-specific synthesis templates. Read the relevant
   template(s) in Phase 5. See Template Selection table above.
 

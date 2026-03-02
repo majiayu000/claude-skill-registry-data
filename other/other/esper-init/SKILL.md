@@ -1,6 +1,6 @@
 ---
 name: esper:init
-description: Initialize esper in a project. Interviews the user, writes a constitutional document, defines the first phase, and creates a backlog. Run with a vague prompt — esper will ask the rest.
+description: Initialize esper in a project. Interviews the user for workflow preferences, scaffolds the project, and writes the constitution.
 ---
 
 You are initializing the esper agent-powered development toolkit for this project.
@@ -9,264 +9,115 @@ You are initializing the esper agent-powered development toolkit for this projec
 
 Run `esperkit config check`. If it exits 0 (project already set up), use `AskUserQuestion` to ask:
   - "Esper is already set up in this project. What would you like to do?"
-  - Options: "Update the constitution", "Add a new phase", "Reset everything"
+  - Options: "Update the constitution", "Re-run init (non-destructive)", "Reset everything"
 - If it exits non-zero (not set up), proceed to Step 1.
 
-When already set up, the options are:
-  - **Update the constitution**: Re-read the existing `.esper/CONSTITUTION.md`, then run Steps 1–2 only (re-interview and rewrite). Keep `esper.json`, phases, and plans untouched.
-  - **Add a new phase**: Tell the user to run `/esper:phase` instead — it handles phase transitions properly (archives current plans, bumps phase number, interviews for new scope). Stop.
-  - **Reset everything**: Use `AskUserQuestion` to confirm ("This will delete all esper files. Are you sure?"). If confirmed, delete `.esper/` entirely and proceed from Step 1.
+When already set up:
+  - **Update the constitution**: Re-read `.esper/CONSTITUTION.md`, interview the user (Steps 1–2), rewrite it. Keep everything else untouched.
+  - **Re-run init**: Run `esperkit init` — it is non-destructive and only creates missing files.
+  - **Reset everything**: Confirm with `AskUserQuestion`. If confirmed, delete `.esper/` and proceed from Step 1.
+
+Before scaffolding, check for root bootstrap docs:
+- If `AGENTS.md` exists, read it and preserve its non-Esper content.
+- If `CLAUDE.md` exists, read it and preserve its non-Esper content.
+- Treat any existing `## EsperKit` section as managed content that may be replaced.
 
 ## Step 1: Interview the user
 
-Use `AskUserQuestion` to interview the user. Cover these areas in 2–3 rounds — do not ask everything at once.
+Use `AskUserQuestion` to interview the user. Cover these areas in 3–4 rounds.
 
-**Round 1 — Project vision** (use AskUserQuestion with these as questions):
+**Round 1 — Project vision**:
 - What is this project and what problem does it solve?
-- What is it explicitly NOT? (scope boundaries — what will never be built here)
+- What is it explicitly NOT? (scope boundaries)
 - Who are the primary users?
 
-**Round 2 — Technical decisions** (use AskUserQuestion):
+**Round 2 — Technical decisions**:
 - What is the tech stack? (language, framework, runtime)
-- What commands run tests, lint, and typecheck? (can be empty strings if not set up yet)
-- What command starts the dev server? (can be empty)
+- What commands run tests, lint, and typecheck? (can be empty if not set up yet)
+- What command starts the dev server?
 
-**Round 3 — Process** (use AskUserQuestion):
-- Testing strategy: what gets tested, how, with what tooling?
-- Backlog mode: local files (`.esper/plans/`) or GitHub Issues?
-  - If GitHub Issues: confirm `gh` CLI is installed and repo has a remote origin
+**Round 3 — Workflow preferences** (use AskUserQuestion with these as options):
+- Commit behavior: how commits should be scoped and when to create them
+- PR behavior: when to create PRs and how to group them
+- Validation mode: `blocking` (must pass before advancing) or `advisory`?
+- Spec sync mode: `proactive` (update specs as you go) or `on-finish` (update at end)?
+- Review behavior: when to require review passes
+
+**Round 4 — Multi-agent preferences** (use AskUserQuestion):
+- Enable autonomous execution? (yes/no — default: no)
+- If yes, ask about agent roles:
+  - Orchestrator provider: which agent/tool handles planning and coordination? (e.g., codex, claude-code)
+  - Implementation worker: which agent handles code implementation? (e.g., claude-code, codex)
+  - Reviewer: which agent handles review passes? (e.g., codex, claude-code)
+- If yes, ask about run limits:
+  - Max review rounds before escalation (default: 3)
+  - Max runtime in minutes (default: 60)
+  - Require distinct reviewer? (default: yes)
+  - Allow parallel tasks? (default: no)
+
+If the user declines autonomous execution, skip agent role questions and use defaults.
 
 ## Step 2: Write CONSTITUTION.md
 
-Create `.esper/` directory if it doesn't exist. Write `.esper/CONSTITUTION.md`:
+Based on the interview, write `.esper/CONSTITUTION.md` covering:
+1. **Project identity**: name, purpose, what it is and is not
+2. **Users**: who the project serves
+3. **Tech stack**: language, framework, runtime, key dependencies
+4. **Coding standards**: naming, structure, patterns to follow
+5. **Testing strategy**: what gets tested, how, with what tooling
+6. **Scope boundaries**: what will never be built here
 
-```markdown
-# [Project Name] — Constitution
+## Step 3: Run esperkit init
 
-## What This Is
-[1-3 sentences on the project's purpose and users]
+Run `esperkit init` with any options from the interview (e.g., `--spec_root` if the user specified a custom location).
 
-## What This Is NOT
-[Explicit scope boundaries — what we will never build here]
+## Step 4: Configure esper.json
 
-## Technical Decisions
-- **Stack**: [language, framework, runtime]
-- **Architecture**: [key patterns, conventions]
-- **Key dependencies**: [important libs and why]
+Run `esperkit config set commands '<json>'` with the test/lint/typecheck/dev commands from the interview.
 
-## Testing Strategy
-- **What gets tested**: [unit / integration / e2e — and what doesn't]
-- **Tooling**: [test runner, assertion library]
-- **Commands**: [how to run tests]
+Run `esperkit config set workflow_defaults '<json>'` with the workflow preferences from Round 3. Use prompt-style instruction strings:
+- `planning`: when to use atom vs batch
+- `commits`: commit scoping and granularity guidance
+- `pull_requests`: PR creation and grouping guidance
+- `validation`: enforcement behavior
+- `spec_sync`: code-to-spec synchronization timing
+- `review`: review timing and rigor
+- `retention`: increment close-out and archival guidance
 
-## Principles
-[3-5 development principles specific to this project]
-```
+If multi-agent preferences were collected in Round 4:
+- Run `esperkit config set agent_roles '<json>'` with the role mappings
+- Run `esperkit config set autonomous_run_policy '<json>'` with the run limits
+- Optionally set `provider_defaults` for provider-specific guidance
 
-## Step 3: Write esper.json
+## Step 5: Explain what was created
 
-Write `.esper/esper.json`:
+If `AGENTS.md` or `CLAUDE.md` already existed:
+- Re-open the file after `esperkit init`.
+- Ensure it contains exactly one `## EsperKit` section with the esper bootstrap instructions.
+- If the file already has an `## EsperKit` section, replace only that section.
+- If the file has no `## EsperKit` section, append one near the end.
+- Preserve all non-Esper content outside that section.
 
-```json
-{
-  "backlog_mode": "local",
-  "current_phase": "001-<kebab-slug-from-phase-title>",
-  "commands": {
-    "test": "<from interview, or empty string>",
-    "lint": "<from interview, or empty string>",
-    "typecheck": "<from interview, or empty string>",
-    "dev": "<from interview, or empty string>"
-  }
-}
-```
+If `AGENTS.md` or `CLAUDE.md` did not exist:
+- Keep the scaffolded files from `esperkit init`.
 
-Set `backlog_mode` to `"github"` if the user chose GitHub Issues.
+Summarize the scaffolding:
+- `.esper/esper.json` — project config (including agent roles and run policy if configured)
+- `.esper/context.json` — runtime context for agent interop
+- `.esper/CONSTITUTION.md` — project vision and constraints
+- `.esper/WORKFLOW.md` — how to work with esper
+- `AGENTS.md` — tool-neutral bootstrap instructions at the repo root
+- `CLAUDE.md` — Claude-specific bootstrap instructions at the repo root
+- `.esper/increments/` — increment lifecycle directories
+- `.esper/runs/` — autonomous execution records
+- `specs/` — spec tree (system, product, interfaces)
 
-## Step 4: Define Phase 1
+## Step 6: Next steps
 
-Use `AskUserQuestion` to ask the user about MVP scope:
-- What is the minimum version that delivers real value?
-- What are the acceptance criteria — how do we know this phase is done?
-- What is explicitly deferred to later phases?
+If this is an existing codebase with code already written:
+- Suggest running `esper:spec` to bootstrap specs from the existing code
+- Explain that specs document what the system does and serves as the source of truth
 
-Create `.esper/phases/` if it doesn't exist. Derive a kebab-case slug from the phase title (e.g. "MVP" → `001-mvp.md`, "Polish and Publish" → `001-polish-and-publish.md`). Write `.esper/phases/001-<slug>.md`:
-
-```markdown
----
-phase: 001-<slug>
-title: <title from interview>
-status: active
----
-
-# Phase 1: <title>
-
-## Goal
-[What this phase delivers and why it matters]
-
-## In Scope
-- [feature or deliverable]
-- [feature or deliverable]
-
-## Out of Scope (deferred)
-- [explicitly deferred items]
-
-## Acceptance Criteria
-- [ ] [measurable criterion]
-- [ ] [measurable criterion]
-```
-
-## Step 5: Decompose into backlog items
-
-Break phase 1 into atomic tasks — each task is one PR worth of work.
-
-Create `.esper/plans/pending/`, `.esper/plans/active/`, `.esper/plans/done/`, `.esper/plans/archived/` directories if they don't exist.
-
-For each task, write `.esper/plans/pending/NNN-slug.md` (NNN = zero-padded integer starting at 001).
-
-Each plan has a `type:` field — ask (or infer from context) whether each item is a fix or a feature:
-- `type: "fix"` → standalone patch, its own PR on ship → `branch: fix/[kebab-slug]`
-- `type: "feature"` → part of the phase, batched into a phase PR → `branch: feature/[current_phase]` (e.g. `feature/001-mvp`)
-
-```markdown
----
-id: 001
-title: [task title]
-status: pending
-type: feature
-priority: 1
-phase: 001-<slug>
-branch: feature/001-<slug>
-created: [today's date in YYYY-MM-DD format]
----
-
-# [Task title]
-
-## Context
-[What exists in the codebase relevant to this task — explore before writing]
-
-## Approach
-[Step-by-step implementation plan]
-
-## Files to change
-- [file path] ([create/modify] — [why])
-
-## Verification
-- Run: [test command]
-- Expected: [what passing looks like]
-- Edge cases: [anything non-obvious to verify]
-```
-
-Assign priorities: 1 = must ship first (blocking), higher number = can wait.
-
-If `backlog_mode` is `"github"`, create ONE GitHub issue for the entire phase (not per plan — features are batched into one phase PR):
-```bash
-gh issue create --title "Phase 1: [phase title]" --body "[phase goal and scope summary]"
-```
-Store the returned issue number as `gh_issue: <number>` in the phase file frontmatter (`.esper/phases/001-<slug>.md`).
-
-Then, create sub-issues for each plan file written above:
-```bash
-esperkit plan create-sub-issue <filename>
-```
-This creates a GitHub issue for each plan and links it as a sub-issue of the phase's parent issue. Run this for every plan file created in Step 5.
-
-## Step 6: Install hooks
-
-Check if `.claude/settings.json` exists.
-
-- If it does not exist, create it with the hooks below.
-- If it exists, read it first, then merge the hooks into the existing JSON — do not overwrite any existing keys.
-
-Add these hooks:
-
-```json
-{
-  "hooks": {
-    "PostToolUse": [
-      {
-        "matcher": "Edit|Write",
-        "hooks": [{ "type": "command", "command": "bash .esper/hooks/verify-quick.sh" }]
-      }
-    ],
-    "Stop": [
-      {
-        "hooks": [{ "type": "command", "command": "bash .esper/hooks/session-reminder.sh" }]
-      }
-    ]
-  }
-}
-```
-
-Create `.esper/hooks/` directory if it doesn't exist.
-
-Create `.esper/hooks/verify-quick.sh`. Write the actual commands from the interview as literal strings — do NOT use variable interpolation or eval. Omit any block for commands the user left empty:
-
-```bash
-#!/usr/bin/env bash
-# Generated by esper:init. Commands are project-specific and static.
-FAILED=0
-
-echo "--- esper: lint ---"
-npm run lint
-[ $? -ne 0 ] && FAILED=1
-
-echo "--- esper: typecheck ---"
-npm run typecheck
-[ $? -ne 0 ] && FAILED=1
-
-if [ $FAILED -ne 0 ]; then
-  echo ""
-  echo "esper: verification failed — fix the errors above before continuing."
-fi
-
-exit 0
-```
-
-(The example above shows `npm run lint` and `npm run typecheck` — replace with the actual commands from the interview, or omit the block entirely if the user left that command empty.)
-
-Create `.esper/hooks/session-reminder.sh`:
-
-```bash
-#!/usr/bin/env bash
-REMINDERS=()
-
-UNCOMMITTED=$(git status --porcelain 2>/dev/null)
-if [ -n "$UNCOMMITTED" ]; then
-  CHANGED=$(echo "$UNCOMMITTED" | wc -l | tr -d ' ')
-  REMINDERS+=("  ! $CHANGED uncommitted file(s) — run /esper:finish when ready")
-fi
-
-ACTIVE_PLANS=$(ls .esper/plans/active/*.md 2>/dev/null)
-if [ -n "$ACTIVE_PLANS" ]; then
-  PLAN=$(head -5 .esper/plans/active/*.md | grep '^title:' | head -1 | sed 's/title: //')
-  REMINDERS+=("  > active plan: $PLAN")
-fi
-
-PENDING=$(ls .esper/plans/pending/*.md 2>/dev/null | wc -l | tr -d ' ')
-if [ "$PENDING" -gt 0 ]; then
-  REMINDERS+=("  · $PENDING pending item(s) in backlog — run /esper:backlog to review")
-fi
-
-if [ ${#REMINDERS[@]} -gt 0 ]; then
-  echo ""
-  echo "esper:"
-  for r in "${REMINDERS[@]}"; do echo "$r"; done
-fi
-
-exit 0
-```
-
-Make both scripts executable:
-```bash
-chmod +x .esper/hooks/verify-quick.sh .esper/hooks/session-reminder.sh
-```
-
-## Step 7: Summary
-
-Print a summary covering:
-- Constitution written to `.esper/CONSTITUTION.md`
-- Phase 1 defined in `.esper/phases/001-<slug>.md`
-- N backlog items created in `.esper/plans/pending/`
-- Hooks installed in `.esper/hooks/` and `.claude/settings.json`
-- Next step: "Run `/esper:backlog` to see your backlog, then `/esper:apply` to start building."
-- Note: "For future phases, use `/esper:phase` when Phase 1 is complete."
+If this is a new project:
+- Suggest running `esper:spec` to write the initial spec
+- Or `esper:atom` to create the first increment directly

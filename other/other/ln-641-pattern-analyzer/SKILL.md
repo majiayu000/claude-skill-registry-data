@@ -28,7 +28,7 @@ L3 Worker that analyzes a single architectural pattern against best practices an
 - pattern: string          # Pattern name (e.g., "Job Processing")
 - locations: string[]      # Known file paths/directories
 - bestPractices: object    # Best practices from MCP Ref/Context7/WebSearch
-- output_dir: string       # e.g., "docs/project/.audit"
+- output_dir: string       # e.g., "docs/project/.audit/ln-640/{YYYY-MM-DD}"
 ```
 
 > **Note:** All patterns arrive pre-verified (passed ln-640 Phase 1d applicability gate with >= 2 structural components confirmed).
@@ -94,22 +94,29 @@ gaps = {
 }
 ```
 
-### Phase 5: Calculate Overall Score
+### Phase 5: Calculate Score
 
+**MANDATORY READ:** Load `shared/references/audit_scoring.md` for unified scoring formula.
+
+**Primary score** uses penalty formula (same as all workers):
 ```
-overall_score = average(compliance, completeness, quality, implementation) / 10
+penalty = (critical × 2.0) + (high × 1.0) + (medium × 0.5) + (low × 0.2)
+score = max(0, 10 - penalty)
 ```
+
+**Diagnostic sub-scores** (0-100 each) are calculated separately and reported in AUDIT-META for diagnostic purposes only:
+- compliance, completeness, quality, implementation
 
 ### Phase 6: Write Report
 
-**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format (ln-640 section: 4-score AUDIT-META + DATA-EXTENDED).
+**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format (ln-640 section: extended AUDIT-META + DATA-EXTENDED).
 
 ```
 # Build pattern name slug: "Job Processing" → "job-processing"
 slug = pattern.name.lower().replace(" ", "-")
 
 # Build markdown report in memory with:
-# - AUDIT-META (4-score variant: score + score_compliance/completeness/quality/implementation)
+# - AUDIT-META (extended: score [penalty-based] + diagnostic score_compliance/completeness/quality/implementation)
 # - Checks table (compliance_check, completeness_check, quality_check, implementation_check)
 # - Findings table (issues sorted by severity)
 # - DATA-EXTENDED: {pattern, codeReferences, gaps, recommendations}
@@ -120,7 +127,7 @@ Write to {output_dir}/641-pattern-{slug}.md (atomic single Write call)
 ### Phase 7: Return Summary
 
 ```
-Report written: docs/project/.audit/641-pattern-job-processing.md
+Report written: docs/project/.audit/ln-640/{YYYY-MM-DD}/641-pattern-job-processing.md
 Score: 7.9/10 (C:72 K:85 Q:68 I:90) | Issues: 3 (H:1 M:2 L:0)
 ```
 

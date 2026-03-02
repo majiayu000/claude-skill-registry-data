@@ -10,7 +10,7 @@ Runs a single Story final test task (label "tests") through implementation/execu
 ## Purpose & Scope
 - Handle only tasks labeled "tests"; other tasks go to ln-401.
 - Follow the 11-section test task plan (E2E/Integration/Unit, infra/docs/cleanup).
-- Enforce risk-based constraints: Priority ≤15; E2E 2-5, Integration 0-8, Unit 0-15, total 10-28; no framework/DB/library/performance tests.
+- Enforce risk-based constraints: Priority ≥15 scenarios covered; each test passes Usefulness Criteria; no framework/DB/library/performance tests.
 - Update Linear/kanban for this task only: Todo -> In Progress -> To Review.
 
 ## Task Storage Mode
@@ -28,7 +28,7 @@ Runs a single Story final test task (label "tests") through implementation/execu
 1) **Receive task:** Get task ID from orchestrator (ln-400); fetch full test task description (Linear: get_issue; File: Read task file); read linked guides/manuals/ADRs/research; review parent Story and manual test results if provided.
 1b) **Goal gate:** **MANDATORY READ:** `shared/references/goal_articulation_gate.md` — State REAL GOAL of these tests (which business behavior must be verified, not "write tests"). NOT THE GOAL: testing infrastructure or framework behavior instead of business logic. HIDDEN CONSTRAINT: which existing tests might break from implementation changes.
 2) **Read runbook:** **Read `docs/project/runbook.md`** — understand test environment setup, Docker commands, test execution prerequisites. Use exact commands from runbook.
-3) **Validate plan:** Check Priority ≤15 and test count limits; ensure focus on business flows (no infra-only tests).
+3) **Validate plan:** Check Priority ≥15 coverage and Usefulness Criteria; ensure focus on business flows (no infra-only tests).
 4) **Start work:** Set task In Progress (Linear: update_issue; File: Edit status line); move in kanban.
 5) **Implement & run:** Author/update tests per plan; reuse existing fixtures/helpers; run tests; fix failing existing tests; update infra/doc sections as required.
 6) **Complete:** Ensure counts/priority still within limits; set task To Review; move in kanban; add comment summarizing coverage, commands run, and any deviations.

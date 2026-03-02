@@ -149,13 +149,3 @@ docs/<feature-name>/prd.md
 ```
 
 where `<feature-name>` is a lowercase, hyphen-separated slug derived from the feature name (for example, `docs/user-onboarding/prd.md` or `docs/payment-retry-logic/prd.md`). If the `docs/<feature-name>/` directory does not exist, create it. If a file with the same name already exists, confirm with the user before overwriting.
-
-## Automatic Project Scanning
-
-Before generating any PRD, the skill performs automatic project scanning to ground the document in the actual codebase:
-
-1. **Glob the project tree** using broad patterns (`**/*`) to understand the directory layout, module boundaries, and naming conventions.
-2. **Read the project README** (or equivalent) to extract the project description, setup instructions, and architectural overview.
-3. **Scan existing `docs/` content** to find related PRDs, technical designs, architecture decision records, or style guides. Cross-reference these to avoid contradictions and to maintain consistent terminology.
-
-This scanning phase feeds directly into Step 1 of the workflow and ensures every generated PRD reflects the real state of the project rather than generic assumptions.

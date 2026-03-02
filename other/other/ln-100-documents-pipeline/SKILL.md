@@ -27,8 +27,7 @@ ln-100-documents-pipeline (L1 Top Orchestrator - this skill)
 ├── ln-130-tasks-docs-creator (L2 Worker)
 ├── ln-140-test-docs-creator (L2 Worker - optional)
 ├── ln-150-presentation-creator (L2 Worker)
-├── ln-600-docs-auditor (L2 Worker - optional)
-└── ln-610-code-comments-auditor (L2 Worker - optional)
+└── ln-610-docs-auditor (L2 Coordinator - optional, delegates to ln-611/612/613)
 ```
 
 ## When to Use This Skill
@@ -463,22 +462,17 @@ Links:
 
 **5.1 Ask User**:
 ```
-📊 Documentation Audit Options:
-1. AUDIT DOCS: Run ln-600-docs-auditor (6 categories)
-2. AUDIT COMMENTS: Run ln-610-code-comments-auditor (6 categories)
-3. BOTH: Run both auditors
-4. SKIP: Continue to summary
+Documentation Audit Options:
+1. AUDIT DOCS: Run ln-610-docs-auditor (structure + semantic + comments)
+2. SKIP: Continue to summary
 
-Choose option (1/2/3/4): _
+Choose option (1/2): _
 ```
 
-**5.2 Run Selected Auditors**:
+**5.2 Run Selected Auditor**:
 - If AUDIT DOCS selected:
-  - **Invocation**: `Skill(skill: "ln-600-docs-auditor")` → AUTOMATIC
-  - **Output**: Compliance Score X/10 per category + Findings
-- If AUDIT COMMENTS selected:
-  - **Invocation**: `Skill(skill: "ln-610-code-comments-auditor")` → AUTOMATIC
-  - **Output**: Compliance Score X/10 per category + Findings
+  - **Invocation**: `Skill(skill: "ln-610-docs-auditor")` → AUTOMATIC
+  - **Output**: Compliance Score X/10 per category (Structure, Semantic, Comments) + Findings
 
 **5.3 Show Audit Summary**:
 ```
@@ -618,7 +612,7 @@ All documents created by this pipeline MUST follow these rules:
 | **Stack Adaptation** | Links must match project TECH_STACK | .NET → Microsoft docs, JS → MDN |
 | **Format Priority** | Tables/ASCII > Lists (enumerations only) > Text | Tables for params, config, alternatives |
 
-These standards are enforced by L3 workers (ln-111-115) and audited by ln-600-docs-auditor.
+These standards are enforced by L3 workers (ln-111-115) and audited by ln-610-docs-auditor.
 
 ---
 
@@ -670,7 +664,7 @@ If any invoked skill fails:
 
 - Legacy detection patterns: `references/legacy_detection_patterns.md`
 - Worker skills: `ln-110-project-docs-coordinator`, `ln-120-reference-docs-creator`, `ln-130-tasks-docs-creator`, `ln-140-test-docs-creator`, `ln-150-presentation-creator`
-- Audit skills (optional): `ln-600-docs-auditor`, `ln-610-code-comments-auditor`
+- Audit skill (optional): `ln-610-docs-auditor` (coordinates ln-611/612/613)
 
 ## Definition of Done
 
@@ -716,8 +710,7 @@ Before completing work, verify ALL checkpoints:
 
 **✅ Documentation Audit (Phase 5 - if selected):**
 - [ ] User selected audit option (AUDIT DOCS / AUDIT COMMENTS / BOTH / SKIP)
-- [ ] If AUDIT DOCS: ln-600-docs-auditor invoked, compliance score displayed
-- [ ] If AUDIT COMMENTS: ln-610-code-comments-auditor invoked, compliance score displayed
+- [ ] If AUDIT DOCS: ln-610-docs-auditor invoked, compliance score displayed
 - [ ] Audit summary shown with scores per category
 
 **✅ Summary Displayed (Phase 6):**

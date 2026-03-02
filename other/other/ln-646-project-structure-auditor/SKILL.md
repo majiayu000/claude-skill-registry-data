@@ -28,7 +28,7 @@ L3 Worker that audits the physical directory structure of a project against fram
 
 ```
 - codebase_root: string        # Root directory to scan
-- output_dir: string           # e.g., "docs/project/.audit"
+- output_dir: string           # e.g., "docs/project/.audit/ln-640/{YYYY-MM-DD}"
 
 # Domain-aware (optional, from coordinator)
 - domain_mode: "global" | "domain-aware"   # Default: "global"
@@ -332,7 +332,7 @@ ELSE:
   Write to {output_dir}/646-structure.md
 
 # 7d: Return Summary
-Report written: docs/project/.audit/646-structure[-{domain}].md
+Report written: docs/project/.audit/ln-640/{YYYY-MM-DD}/646-structure[-{domain}].md
 Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 ```
 

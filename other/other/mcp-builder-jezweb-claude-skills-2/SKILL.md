@@ -87,9 +87,15 @@ python server.py --transport http --port 8000
 fastmcp dev server.py --with-editable .
 ```
 
+For comprehensive automated testing, generate a test script using the FastMCP Client.
+See [references/testing-pattern.md](references/testing-pattern.md) for the async test pattern.
+
 ### Step 5: Deploy
 
 **FastMCP Cloud** (simplest):
+
+Before deploying, work through the pre-deploy checklist in [references/deploy-checklist.md](references/deploy-checklist.md) to catch common issues (missing module-level server, hardcoded secrets, etc.).
+
 ```bash
 fastmcp deploy server.py --name my-server
 ```
@@ -171,3 +177,5 @@ async def get_data(id: str) -> str:
 - `references/production-patterns.md` — Auth, middleware, storage backends
 - `references/integration-patterns.md` — FastAPI mount, OpenAPI import
 - `references/context-features.md` — Lifespan, dependency injection
+- `references/testing-pattern.md` — FastMCP Client async test pattern
+- `references/deploy-checklist.md` — Pre-deploy validation checklist

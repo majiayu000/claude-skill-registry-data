@@ -30,7 +30,7 @@ Worker that generates task documents and creates Linear issues for implementatio
 - Implementation CREATE: idealPlan (1-8 tasks), guideLinks.
 - Implementation ADD: appendMode=true, newTaskDescription, guideLinks.
 - Refactoring: codeQualityIssues, refactoringPlan, affectedComponents.
-- Test: manualTestResults, testPlan (E2E 2-5, Integration 0-8, Unit 0-15, Priority ≤15), infra/doc/cleanup items.
+- Test: manualTestResults, testPlan (Priority ≥15, Usefulness Criteria), infra/doc/cleanup items.
 
 ## Quality Criteria
 
@@ -68,7 +68,7 @@ Worker that generates task documents and creates Linear issues for implementatio
 |----------|-----------|----------------|
 | implementation | No new test creation | Scan text for "write/create/add tests" etc.; allow only updating existing tests |
 | refactoring | Regression strategy required | Issues listed with severity; plan in 3 phases; regression strategy (Baseline/Verify/Failure); preserve functionality |
-| test | Risk-based plan required | Priority ≤15 scenarios; E2E 2-5, Integration 0-8, Unit 0-15, Total 10-28; no framework/library/DB tests |
+| test | Risk-based plan required | Priority ≥15 scenarios covered; each test passes Usefulness Criteria; no framework/library/DB tests |
 
 ## Critical Notes
 - **MANDATORY:** Always pass `state: "Backlog"` when calling create_issue. Linear defaults to team's default status (often "Postponed") if not specified.

@@ -53,7 +53,6 @@ Adapt questions based on answers. Exit when the idea is clear OR user says "proc
 
 **Local research (always, parallel):**
 - Task repo-research-analyst(feature_description)
-- Task learnings-researcher(feature_description)
 
 **Research decision** based on signals from Phase 0:
 - High-risk topics → always research externally
@@ -66,7 +65,7 @@ Announce the decision briefly, then proceed.
 - Task best-practices-researcher(feature_description)
 - Task framework-docs-researcher(feature_description)
 
-**Consolidate findings:** relevant file paths, institutional learnings from `docs/solutions/`, external docs/URLs, CLAUDE.md conventions.
+**Consolidate findings:** relevant file paths, external docs/URLs, CLAUDE.md conventions.
 
 ### Phase 2: Plan Structure
 
@@ -304,18 +303,14 @@ Read each skill's description. For every skill matching a plan section, spawn a 
 
 Spawn ALL matched skill sub-agents in PARALLEL.
 
-### Step 4: Discover and Apply Learnings
-
-Search `docs/solutions/` and `~/.claude/docs/solutions/` for relevant learnings. Filter by frontmatter tags, category, module against plan content. Spawn parallel sub-agents for each relevant learning.
-
-### Step 5: Per-Section Research
+### Step 4: Per-Section Research
 
 For each major section:
 - Task Explore agents for open-ended research
 - Context7 MCP for framework documentation
 - WebSearch for current (2024-2026) best practices
 
-### Step 6: Run Review Agents
+### Step 5: Run Review Agents
 
 Discover ALL available agents:
 ```bash
@@ -325,17 +320,17 @@ find ~/.claude/agents -name "*.md" 2>/dev/null
 
 Launch ALL agents in parallel against the plan. Maximum coverage, not efficiency.
 
-### Step 7: Synthesize
+### Step 6: Synthesize
 
 Collect outputs from all sources. Extract actionable recommendations, code patterns, anti-patterns, performance/security considerations, edge cases. Deduplicate, prioritize by impact, flag conflicts.
 
-### Step 8: Enhance Plan Sections
+### Step 7: Enhance Plan Sections
 
 Merge research back preserving original structure. Add **Research Insights** subsections with: Best Practices, Performance Considerations, Implementation Details (code examples), Edge Cases, References.
 
 Add Enhancement Summary at top: date, sections enhanced, agents used, key improvements, new considerations.
 
-### Step 9: Update Beads Tasks
+### Step 8: Update Beads Tasks
 
 ```bash
 bd update <id> --description "<enhanced description>"    # Refined tasks
@@ -344,7 +339,7 @@ bd close <id> --reason="Obsoleted during deepening"      # Obsolete tasks
 bd sync
 ```
 
-### Step 10: Post-Enhancement Menu
+### Step 9: Post-Enhancement Menu
 
 Check if beads tasks exist:
 ```bash

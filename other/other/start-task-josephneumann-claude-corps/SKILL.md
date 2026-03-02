@@ -106,22 +106,6 @@ If you are on a team (check if TaskList returns results):
 
 ## 6.5 Research Phase (Conditional)
 
-### Quick Learnings Check (Always Run)
-
-Before starting implementation, search for relevant prior solutions:
-
-```bash
-# Search project-specific solutions
-grep -rli '<keywords from task title/description>' docs/solutions/ 2>/dev/null | head -5
-
-# Search global solutions
-grep -rli '<keywords>' ~/.claude/docs/solutions/ 2>/dev/null | head -5
-```
-
-If matches found, read the top 1-2 most relevant documents and incorporate their insights. This prevents re-discovering known gotchas.
-
-The full `learnings-researcher` agent (below) remains optional for complex tasks — this quick grep handles the common case.
-
 ### High-Risk Indicators (Research First)
 
 Research is recommended when the task involves:
@@ -138,12 +122,7 @@ Research is recommended when the task involves:
    - Use when: Task involves libraries or frameworks
    - Checks: Documentation, deprecation warnings, best practices
 
-2. **learnings-researcher**
-   - Read: `~/.claude/agents/research/learnings-researcher.md`
-   - Use when: `docs/solutions/` exists in the project
-   - Searches: Prior solutions, gotchas, patterns from past work
-
-3. **best-practices-researcher**
+2. **best-practices-researcher**
    - Read: `~/.claude/agents/research/best-practices-researcher.md`
    - Use when: Architectural decisions needed
    - Provides: Industry best practices, pattern recommendations

@@ -130,7 +130,7 @@ Write report to `{output_dir}/621-security.md` with `category: "Security"` and c
 
 Return summary to coordinator:
 ```
-Report written: docs/project/.audit/621-security.md
+Report written: docs/project/.audit/ln-620/{YYYY-MM-DD}/621-security.md
 Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 ```
 

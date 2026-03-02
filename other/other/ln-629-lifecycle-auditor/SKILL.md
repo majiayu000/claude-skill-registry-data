@@ -106,7 +106,7 @@ Write report to `{output_dir}/629-lifecycle.md` with `category: "Lifecycle"` and
 
 Return summary to coordinator:
 ```
-Report written: docs/project/.audit/629-lifecycle.md
+Report written: docs/project/.audit/ln-620/{YYYY-MM-DD}/629-lifecycle.md
 Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 ```
 

@@ -115,8 +115,8 @@ ELSE:
 
 1) Load test task from Linear
 2) Verify limits and priority:
-   - Priority <=15 scenarios covered
-   - E2E 2-5, Integration 0-8, Unit 0-15, total 10-28
+   - Priority ≥15 scenarios covered
+   - Each test passes Usefulness Criteria (no numerical targets)
    - Tests focus on business logic (no framework/DB/library tests)
 3) Verify Story AC coverage by tests
 4) Check infra/docs updates present

@@ -204,9 +204,8 @@ ELSE:
   domain_mode = "global"
 
 # Prepare output directory for worker reports
-output_dir = "docs/project/.audit"
-IF exists(output_dir): delete(output_dir)
-mkdir(output_dir)
+output_dir = "docs/project/.audit/ln-640/{YYYY-MM-DD}"
+mkdir -p {output_dir}   # No deletion — date folders preserve history
 ```
 
 ### Phase 4: Layer Boundary + API Contract + Dependency Graph Audit
@@ -558,13 +557,13 @@ reuse_opportunity_score = parse_score(ln645_return)  # 0-10, NOT in architecture
 - Applicability verified for all detected patterns (Phase 1d); excluded patterns documented
 - Best practices researched for all VERIFIED patterns needing audit
 - Domain discovery completed (global or domain-aware mode selected)
-- Output directory `docs/project/.audit/` prepared (cleaned + created)
-- Layer boundaries audited via ln-642 (reports written to `.audit/`)
-- API contracts audited via ln-643 (reports written to `.audit/`)
-- Dependency graph audited via ln-644 (reports written to `.audit/`)
-- All patterns analyzed via ln-641 (reports written to `.audit/`)
-- Open-source replacement opportunities audited via ln-645 (reports written to `.audit/`)
-- Project structure audited via ln-646 (reports written to `.audit/`)
+- Output directory `docs/project/.audit/ln-640/{YYYY-MM-DD}/` created (no deletion of previous runs)
+- Layer boundaries audited via ln-642 (reports written to `{output_dir}/`)
+- API contracts audited via ln-643 (reports written to `{output_dir}/`)
+- Dependency graph audited via ln-644 (reports written to `{output_dir}/`)
+- All patterns analyzed via ln-641 (reports written to `{output_dir}/`)
+- Open-source replacement opportunities audited via ln-645 (reports written to `{output_dir}/`)
+- Project structure audited via ln-646 (reports written to `{output_dir}/`)
 - If domain-aware: cross-domain aggregation completed via DATA-EXTENDED from files
 - Gaps identified (undocumented, missing components, layer violations, inconsistent, systemic)
 - Catalog updated with scores, dates, Layer Boundary Status

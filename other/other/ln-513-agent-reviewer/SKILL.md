@@ -36,7 +36,7 @@ Runs parallel external agent reviews on code implementation, critically verifies
 
 ## Workflow
 
-**MANDATORY READ:** Load `shared/references/agent_review_workflow.md` for Health Check, Ensure .agent-review/, Run Agents, Critical Verification + Debate, Aggregate + Return, Fallback Rules, Critical Rules, and Definition of Done. Load `shared/references/agent_delegation_pattern.md` for Reference Passing Pattern, Review Persistence Pattern, Agent Timeout Policy, and Debate Protocol.
+**MANDATORY READ:** Load `shared/references/agent_review_workflow.md` for Health Check, Ensure .agent-review/, Load Review Memory, Run Agents, Critical Verification + Debate, Aggregate + Return, Save Review Summary, Fallback Rules, Critical Rules, and Definition of Done. Load `shared/references/agent_delegation_pattern.md` for Reference Passing Pattern, Review Persistence Pattern, Agent Timeout Policy, and Debate Protocol.
 
 ### Unique Steps (before shared workflow)
 
@@ -54,8 +54,10 @@ Runs parallel external agent reviews on code implementation, critically verifies
 
 ### Shared Workflow Steps
 
-5-7) **Run agents, Critical Verification + Debate, Aggregate + Return:** per shared workflow.
+5-8) **Load Review Memory, Run agents, Critical Verification + Debate, Aggregate + Return:** per shared workflow.
    - `{review_type}` = "Code Implementation" (for challenge template)
+
+9) **Save Review Summary:** per shared workflow "Step: Save Review Summary".
 
 ## Output Format
 

@@ -181,10 +181,6 @@ HANDOFF CONTEXT
 - Dependencies on external systems or APIs
 - Performance considerations if any>
 
-LEARNINGS CAPTURED
-------------------
-<Path to auto-compound doc if written, or "None — clean implementation">
-
 ===============================================
 END SESSION SUMMARY
 ===============================================

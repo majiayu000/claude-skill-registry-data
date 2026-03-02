@@ -105,7 +105,7 @@ Write report to `{output_dir}/627-observability.md` with `category: "Observabili
 
 Return summary to coordinator:
 ```
-Report written: docs/project/.audit/627-observability.md
+Report written: docs/project/.audit/ln-620/{YYYY-MM-DD}/627-observability.md
 Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 ```
 

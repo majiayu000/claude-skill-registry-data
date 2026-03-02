@@ -15,21 +15,21 @@ Specialized worker auditing runtime performance anti-patterns in async and gener
 - **Worker in ln-650 coordinator pipeline** - invoked by ln-650-persistence-performance-auditor
 - Audit **runtime performance** (Priority: MEDIUM)
 - Check async anti-patterns, unnecessary allocations, blocking operations
-- Return structured findings with severity, location, effort, recommendations
+- Write structured findings to file with severity, location, effort, recommendations
 - Calculate compliance score (X/10) for Runtime Performance category
 
 ## Inputs (from Coordinator)
 
 **MANDATORY READ:** Load `shared/references/task_delegation_pattern.md#audit-coordinator--worker-contract` for contextStore structure.
 
-Receives `contextStore` with: `tech_stack`, `best_practices`, `codebase_root`.
+Receives `contextStore` with: `tech_stack`, `best_practices`, `codebase_root`, `output_dir`.
 
 **Domain-aware:** Supports `domain_mode` + `current_domain`.
 
 ## Workflow
 
 1) **Parse context from contextStore**
-   - Extract tech_stack, best_practices
+   - Extract tech_stack, best_practices, output_dir
    - Determine scan_path
    - Detect async framework: asyncio (Python), Node.js async, Tokio (Rust)
 
@@ -41,7 +41,9 @@ Receives `contextStore` with: `tech_stack`, `best_practices`, `codebase_root`.
 
 4) **Calculate score using penalty algorithm**
 
-5) **Return JSON result to coordinator**
+5) **Write Report:** Build full markdown report in memory per `shared/templates/audit_worker_report_template.md`, write to `{output_dir}/653-runtime-performance.md` in single Write call
+
+6) **Return Summary:** Return minimal summary to coordinator (see Output Format)
 
 ## Audit Rules (Priority: MEDIUM)
 
@@ -156,28 +158,14 @@ Receives `contextStore` with: `tech_stack`, `best_practices`, `codebase_root`.
 
 ## Output Format
 
-Return JSON to coordinator:
+**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format.
 
-```json
-{
-  "category": "Runtime Performance",
-  "score": 7,
-  "total_issues": 5,
-  "critical": 0,
-  "high": 2,
-  "medium": 2,
-  "low": 1,
-  "findings": [
-    {
-      "severity": "HIGH",
-      "location": "app/infrastructure/messaging/job_processor.py:444",
-      "issue": "Blocking IO: input_path.read_bytes() inside async function blocks event loop",
-      "principle": "Async Best Practices / Non-Blocking IO",
-      "recommendation": "Use aiofiles or await asyncio.to_thread(input_path.read_bytes)",
-      "effort": "S"
-    }
-  ]
-}
+Write report to `{output_dir}/653-runtime-performance.md` with `category: "Runtime Performance"` and checks: blocking_io_in_async, unnecessary_list_allocation, sync_sleep_in_async, string_concat_in_loop, missing_to_thread, redundant_data_copies.
+
+Return summary to coordinator:
+```
+Report written: docs/project/.audit/ln-650/{YYYY-MM-DD}/653-runtime-performance.md
+Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 ```
 
 ## Critical Rules
@@ -190,17 +178,19 @@ Return JSON to coordinator:
 
 ## Definition of Done
 
-- contextStore parsed (tech_stack, async framework)
+- contextStore parsed successfully (including output_dir)
 - scan_path determined
 - Async framework detected (asyncio/Node.js async/Tokio)
 - All 6 checks completed:
   - blocking IO, unnecessary allocations, sync sleep, string concat, CPU-bound, redundant copies
 - Findings collected with severity, location, effort, recommendation
-- Score calculated
-- JSON returned to coordinator
+- Score calculated using penalty algorithm
+- Report written to `{output_dir}/653-runtime-performance.md` (atomic single Write call)
+- Summary returned to coordinator
 
 ## Reference Files
 
+- **Worker report template:** `shared/templates/audit_worker_report_template.md`
 - **Audit scoring formula:** `shared/references/audit_scoring.md`
 - **Audit output schema:** `shared/references/audit_output_schema.md`
 

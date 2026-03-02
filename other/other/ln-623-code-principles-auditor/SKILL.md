@@ -165,7 +165,7 @@ Write report to `{output_dir}/623-principles-{domain}.md` (or `623-principles.md
 
 Return summary to coordinator:
 ```
-Report written: docs/project/.audit/623-principles-users.md
+Report written: docs/project/.audit/ln-620/{YYYY-MM-DD}/623-principles-users.md
 Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 ```
 

@@ -244,14 +244,3 @@ docs/<feature-name>/test-plan.md
 ```
 
 where `<feature-name>` is a lowercase, hyphen-separated slug derived from the feature name (for example, `docs/user-authentication/test-plan.md` or `docs/payment-processing/test-plan.md`). If the `docs/<feature-name>/` directory does not exist, create it. If a file with the same name already exists, confirm with the user before overwriting.
-
-## Automatic Scanning for Upstream Documents
-
-Before generating any Test Plan, the skill performs automatic scanning to locate upstream SRS and Technical Design documents:
-
-1. **Glob the project tree** using broad patterns (`**/*`) to understand the directory layout, module boundaries, and naming conventions.
-2. **Search `docs/` for SRS documents** matching patterns like `*/srs.md` to extract functional and non-functional requirement IDs for the traceability matrix.
-3. **Search `docs/` for Technical Design documents** matching patterns like `*/tech-design.md` to extract component architecture, API contracts, and data models that inform integration and system test design.
-4. **Scan existing test files** in the codebase to understand current test coverage, frameworks in use, and naming conventions so the Test Plan aligns with the team's established practices.
-
-This scanning phase feeds directly into Steps 1 and 2 of the workflow and ensures every generated Test Plan reflects the real state of the project and its requirements rather than generic assumptions.

@@ -243,7 +243,7 @@ Write report to `{output_dir}/624-quality-{domain}.md` (or `624-quality.md` in g
 
 Return summary to coordinator:
 ```
-Report written: docs/project/.audit/624-quality-orders.md
+Report written: docs/project/.audit/ln-620/{YYYY-MM-DD}/624-quality-orders.md
 Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 ```
 

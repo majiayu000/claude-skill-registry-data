@@ -56,8 +56,8 @@ If you catch yourself thinking any of these, STOP:
 | "I know what the problem is" | Then state your hypothesis and predict the test outcome. |
 | "It works now after my change" | Correlation is not causation. Verify your fix addresses the root cause. |
 
-## Compound Hook
+## Post-Debug
 
-After resolution, if the root cause was non-obvious, consider `/compound` to capture the insight for future sessions.
+After resolution, if the root cause was non-obvious, save debugging insights to auto-memory.
 
 *Adapted from obra/superpowers systematic-debugging skill. Source: https://github.com/obra/superpowers*

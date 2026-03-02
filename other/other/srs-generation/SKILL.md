@@ -120,8 +120,4 @@ The SRS generation skill relies on two reference files:
 
 ## Output Convention
 
-The final SRS document is written to `docs/<feature-name>/srs.md` in the project root, where `<feature-name>` is a sanitized, lowercase, hyphen-separated slug derived from the user's input. The `docs/<feature-name>/` directory is created if it does not already exist. This naming convention places all documents for a feature in a single `docs/<feature-name>/` directory (`prd.md`, `srs.md`, `tech-design.md`, `test-plan.md`) and enables automatic upstream document discovery by downstream skills.
-
-## Upstream Document Scanning
-
-The skill automatically scans for upstream PRD documents before generation begins. It searches for files matching the `docs/*/prd.md` pattern, identifies the PRD most closely related to the requested feature, and reads it in full. The PRD content informs functional scope, user stories, priorities, success metrics, and scope boundaries. When the PRD is available, the SRS achieves significantly higher traceability and completeness. When it is not available, the skill relies on project context scanning and user clarification to fill the gap, and it notes in the generated document that PRD traceability is incomplete.
+The final SRS document is written to `docs/<feature-name>/srs.md` in the project root, where `<feature-name>` is a sanitized, lowercase, hyphen-separated slug derived from the user's input. The `docs/<feature-name>/` directory is created if it does not already exist. If a file with the same name already exists, confirm with the user before overwriting. This naming convention places all documents for a feature in a single `docs/<feature-name>/` directory (`prd.md`, `srs.md`, `tech-design.md`, `test-plan.md`) and enables automatic upstream document discovery by downstream skills.

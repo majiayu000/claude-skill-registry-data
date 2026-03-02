@@ -148,7 +148,7 @@ Write report to `{output_dir}/625-dependencies.md` with `category: "Dependencies
 
 Return summary to coordinator:
 ```
-Report written: docs/project/.audit/625-dependencies.md
+Report written: docs/project/.audit/ln-620/{YYYY-MM-DD}/625-dependencies.md
 Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 ```
 
