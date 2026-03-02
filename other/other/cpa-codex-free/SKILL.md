@@ -9,9 +9,9 @@ description: CPA认证文件自动生成及清理
 ## 环境变量
 优先从工作空间下的`.env`获取，其次从系统环境变量获取。未配置时向用户索取并更新`.env`。
 
-`MAIL_API_KEY`: 邮箱服务API密钥，获取地址: https://shop.chatgpt.org.uk/buy/prod_1768420938389
-`CLI_PROXY_API_BASE`: CPA Base URL
-`CLI_PROXY_API_MKEY`: CPA Management Key
+- `MAIL_API_KEY`: 邮箱服务API密钥，默认`gpt-test`为官方测试密钥(每天20万额度)，获取地址: https://shop.chatgpt.org.uk/buy/prod_1768420938389
+- `CLI_PROXY_API_BASE`: CPA Base URL
+- `CLI_PROXY_API_MKEY`: CPA Management Key
 
 
 ## 工作流程

@@ -4,8 +4,9 @@ description: >
   This skill should be used when performing web research beyond a simple single search -- looking
   into topics, comparing options, investigating questions, finding recommendations, or any task
   where effective use of Exa, Firecrawl, and Reddit tools matters. Triggers on "research",
-  "look into", "investigate", "compare", "find out about", or multi-source search tasks. Also
-  invocable explicitly by deep-research team members via the Skill tool.
+  "look into", "investigate", "compare", "find out about", "search for", "find information",
+  "what do people think about", "what are the best", "look up", or multi-source search tasks.
+  Also invocable explicitly by deep-research team members via the Skill tool.
 ---
 
 # Search Tips
