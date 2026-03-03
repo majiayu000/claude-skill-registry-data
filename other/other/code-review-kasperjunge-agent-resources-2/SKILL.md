@@ -14,6 +14,13 @@ Rigorous code review focused on quality, maintainability, and architectural soun
 - When explicitly asked to review code
 - Before creating a PR
 
+## Input
+
+**Default:** Use current staged/committed changes.
+
+**If argument provided:**
+- GitHub issue number/URL: Fetch context with `scripts/gh_issue_phase.sh get-issue $ARG` to understand the original task requirements and decisions from prior phases.
+
 ## Method
 
 Start by inspecting the changes. Use the deterministic script to collect the review context:
@@ -95,6 +102,19 @@ Report findings organized by severity:
 ### Positive Observations
 - [What was done well]
 ```
+
+## GitHub Issue Tracking
+
+**If a GitHub issue was provided or is available from prior phases:**
+
+Post review findings as a phase comment and set the label:
+
+```bash
+echo "$REVIEW_SUMMARY" | scripts/gh_issue_phase.sh post-phase $ISSUE review
+scripts/gh_issue_phase.sh set-label $ISSUE phase:review
+```
+
+Pass the issue number to the next skill (e.g., `/commit #42`).
 
 ## Common Mistakes
 

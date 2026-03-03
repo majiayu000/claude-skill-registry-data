@@ -34,7 +34,9 @@ Always choose simple. Always go deep enough to find it.
 
 **Default:** Use chosen solution from current conversation context.
 
-**If argument provided:** Additional constraint or clarification for the plan.
+**If argument provided:**
+- GitHub issue number/URL: Fetch full context with `scripts/gh_issue_phase.sh get-issue $ARG`
+- Free-form text: Additional constraint or clarification for the plan.
 
 ## Workflow
 
@@ -149,7 +151,20 @@ Write test specifications BEFORE implementation details:
 - `test_session_timeout_behavior`
 ```
 
-### 6. Enter Plan Mode
+### 6. GitHub Issue Tracking
+
+**If a GitHub issue was provided or is available from prior phases:**
+
+Post behavior specification and test design as a phase comment and set the label. This must happen BEFORE entering plan mode.
+
+```bash
+echo "$PLAN_SUMMARY" | scripts/gh_issue_phase.sh post-phase $ISSUE planning
+scripts/gh_issue_phase.sh set-label $ISSUE phase:planning
+```
+
+Pass the issue number forward for code-review and commit phases.
+
+### 7. Enter Plan Mode
 
 After documenting behavior and tests, switch to plan mode:
 

@@ -13,6 +13,13 @@ Release workflow for publishing a new version to PyPI via GitHub Actions.
 - When asked to release, publish, or ship a new version
 - When bumping to a new version number
 
+## Input
+
+**Default:** Release without issue tracking.
+
+**If argument provided:**
+- GitHub issue number/URL: Fetch context with `scripts/gh_issue_phase.sh get-issue $ARG` for the tracked workflow issue to close after release.
+
 ## Prerequisites
 
 Before releasing:
@@ -219,6 +226,17 @@ gh release create "v$VERSION" --title "v$VERSION" --notes-file <(
   echo ""
   echo "**Full changelog**: https://github.com/kasperjunge/agent-resources/blob/main/CHANGELOG.md"
 )
+
+## Step 8: Close GitHub Issue
+
+**If a GitHub issue was provided or is available from prior phases:**
+
+Post release details and close the issue:
+
+```bash
+echo "Released as v$VERSION" | scripts/gh_issue_phase.sh post-phase $ISSUE done
+scripts/gh_issue_phase.sh close-issue $ISSUE
+```
 
 ## Red Flags - STOP
 

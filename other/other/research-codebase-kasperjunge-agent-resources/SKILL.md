@@ -35,7 +35,7 @@ Just observe and report.
 ### 1. Capture the Task
 
 **If argument provided:**
-- GitHub issue URL/number: Fetch with `gh issue view $ARG --comments`
+- GitHub issue URL/number: Fetch with `scripts/gh_issue_phase.sh get-issue $ARG`
 - Free-form text: Use as task description
 
 **If no argument:**
@@ -66,6 +66,29 @@ Present objective observations:
 
 No saving unless explicitly requested.
 
+### 5. GitHub Issue Tracking
+
+**If a GitHub issue was provided as input:**
+
+Post research findings as a phase comment and set the label:
+
+```bash
+echo "$RESEARCH_SUMMARY" | scripts/gh_issue_phase.sh post-phase $ISSUE research
+scripts/gh_issue_phase.sh set-label $ISSUE phase:research
+```
+
+**If free-form text was provided (no issue):**
+
+After completing research, create a GitHub issue to track the workflow:
+
+```bash
+echo "$TASK_DESCRIPTION" | scripts/gh_issue_phase.sh create-issue "$TITLE"
+```
+
+Then post the research findings and set the label as above.
+
+Output the issue number so downstream skills can continue tracking.
+
 ## Output Format
 
 ### Task Understanding
@@ -92,6 +115,8 @@ No saving unless explicitly requested.
 
 ### Next Step
 Ready to explore solutions. Run `/brainstorm-solutions`
+
+**If tracking a GitHub issue:** Pass the issue number to the next skill (e.g., `/brainstorm-solutions #42`).
 
 ## What NOT to Do
 

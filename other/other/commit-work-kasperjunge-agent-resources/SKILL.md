@@ -13,6 +13,13 @@ Commit workflow that ensures quality gates pass and changelog is updated before 
 - When asked to commit, save, or wrap up work
 - Before creating a PR
 
+## Input
+
+**Default:** Commit current staged/unstaged changes.
+
+**If argument provided:**
+- GitHub issue number/URL: Fetch context with `scripts/gh_issue_phase.sh get-issue $ARG` to reference the issue in the commit message.
+
 ## Workflow
 
 ```
@@ -122,6 +129,19 @@ EOF
 scripts/verify_clean_tree.sh
 git log -1  # Verify commit message looks correct
 ```
+
+## Step 5: GitHub Issue Update
+
+**If a GitHub issue was provided or is available from prior phases:**
+
+Post commit details as a phase comment and set the label:
+
+```bash
+echo "Committed: $(git log -1 --format='%H %s')" | scripts/gh_issue_phase.sh post-phase $ISSUE done
+scripts/gh_issue_phase.sh set-label $ISSUE phase:done
+```
+
+Pass the issue number to the release skill if continuing (e.g., `/release #42`).
 
 ## Red Flags - STOP
 

@@ -25,7 +25,7 @@ Step 2 of development workflow:
 
 **If argument provided:**
 - File path: Read the file for research context
-- GitHub issue: Fetch with `gh issue view $ARG --comments`
+- GitHub issue number/URL: Fetch with `scripts/gh_issue_phase.sh get-issue $ARG`
 
 ## Workflow
 
@@ -99,6 +99,19 @@ For each option, challenge assumptions:
 ### Next Step
 Ready to converge on a single solution. Run `/design-solution`.
 ```
+
+## GitHub Issue Tracking
+
+**If a GitHub issue was provided or is available from prior phases:**
+
+Post brainstorm output as a phase comment and set the label:
+
+```bash
+echo "$BRAINSTORM_SUMMARY" | scripts/gh_issue_phase.sh post-phase $ISSUE brainstorm
+scripts/gh_issue_phase.sh set-label $ISSUE phase:brainstorm
+```
+
+Pass the issue number to the next skill (e.g., `/design-solution #42`).
 
 ## Common Mistakes
 
