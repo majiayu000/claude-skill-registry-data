@@ -93,6 +93,12 @@ Check for custom album planning preferences:
 ## Themes to Avoid
 - Political commentary
 - Relationship drama
+
+## Duration Preferences
+| Format | Target Duration |
+|--------|-----------------|
+| Default | 4:00–5:00 |
+| Punk/fast | 2:00–3:00 |
 ```
 
 ### How to Use Override
@@ -222,6 +228,7 @@ See also: `${CLAUDE_PLUGIN_ROOT}/reference/workflows/album-planning-phases.md`
 - Vocal approach? (Narrator, character voices, sung, rapped, mixed)
 - Instrumentation palette?
 - Mood/atmosphere?
+- Target track duration? (Default: 3:30–5:00; shorter for punk, longer for prog/post-rock)
 
 ### Phase 4: Structure Planning
 

@@ -9,6 +9,8 @@ Improve unit test coverage for existing code. Conservative by design — only ad
 
 ## Step 1: Pre-flight
 
+If the current directory is a multi-repo workspace (no `.git/` here, 2+ child directories with `.git/` — same multi-repo workspace detection as `/optimus:init`), process each repo independently: run Steps 1–8 inside each repo that has `.claude/CLAUDE.md`. Report results per repo. If no repos have been initialized, suggest running `/optimus:init` first from the workspace root.
+
 Check that `.claude/CLAUDE.md` exists. If it doesn't, stop and recommend running `/optimus:init` first — the project needs baseline context before test generation can be effective.
 
 Beyond the init check, identify which guideline documents are available — they directly affect the quality of everything this skill does:
@@ -28,7 +30,7 @@ The skill operates differently depending on what exists:
 
 Parse optional path argument (e.g., `/optimus:unit-test src/api`) to limit scope. If no path is specified, default to the full project.
 
-For monorepos, detect subprojects using the same approach as `/optimus:init` — reference `$CLAUDE_PLUGIN_ROOT/skills/init/SKILL.md` Step 1 for detection logic (workspace configs, manifest scanning, supporting signals). Process each subproject independently.
+For monorepos and multi-repo workspaces, detect project structure using the same approach as `/optimus:init` — reference `$CLAUDE_PLUGIN_ROOT/skills/init/SKILL.md` Step 1 for detection logic (multi-repo workspace detection, workspace configs, manifest scanning, supporting signals). Process each project/repo independently.
 
 ## Step 2: Discovery
 
@@ -68,6 +70,10 @@ If installation fails (network issues, version conflicts, incompatible environme
 
 Detect this gap separately and recommend installing coverage tooling. Coverage measurement is essential for the skill to report meaningful results and set achievable targets. Ask for explicit user approval.
 
+### Coverage report tooling
+
+If the installed coverage tool only generates machine-readable output (XML, JSON) without a built-in human-readable report, install a report generator alongside it. Consult the "Report Tool" column in `$CLAUDE_PLUGIN_ROOT/skills/unit-test/references/framework-recommendations.md`. Ask for explicit user approval. Include the report command in `testing.md` and `CLAUDE.md` coverage sections.
+
 ## Step 4: Optimus Infrastructure Provisioning
 
 This phase runs **regardless** of whether Step 3 installed anything — test infrastructure may have been added manually after `/optimus:init` ran. When init ran on a project without test infrastructure, it correctly skipped test-guardian, testing.md, and CLAUDE.md testing references. Now that test infrastructure exists (pre-existing or just installed), this skill provisions what init would have created.
@@ -89,6 +95,16 @@ If `.claude/CLAUDE.md` doesn't reference testing, add test commands and a testin
 ### 4d: Monorepo subprojects
 
 For monorepos, update subproject-level `CLAUDE.md` files too. Each subproject should reference its own `docs/testing.md` and test commands.
+
+### 4e: README testing section
+
+If `README.md` exists at the project root and doesn't already have a testing section (scan for headings containing "test", case-insensitive), append a concise section with: test command, coverage command (if configured), and test project/directory location. Match the README's existing heading level, language, and formatting style. Use `.claude/docs/testing.md` as the source of truth for commands and paths — do not duplicate its full content. Keep the section to 5-10 lines.
+
+For monorepos, update each subproject's `README.md` too if it exists and lacks a testing section.
+
+### 4f: Gitignore test artifacts
+
+If `.gitignore` exists and doesn't already ignore the test output directory (e.g., `TestResults/` for .NET, `htmlcov/` for Python, `coverage/` for Node.js), append the appropriate entry. One line, matching the file's existing style.
 
 ## Step 5: Coverage Analysis and Achievable Threshold Estimation
 
@@ -179,7 +195,7 @@ Report to the user:
 ## Unit Test Summary
 
 ### Infrastructure Provisioned
-- [List of: test-guardian agent, testing.md, CLAUDE.md updates — or "None needed"]
+- [List of: test-guardian agent, testing.md, CLAUDE.md updates, README testing section — or "None needed"]
 
 ### Coverage
 - Coverage tooling: [tool name / not configured]
@@ -200,3 +216,5 @@ Report to the user:
 - [List of code flagged as untestable — with brief explanation of what structural change would be needed]
 - To address these, run `/optimus:simplify` to review and restructure the code first.
 ```
+
+For multi-repo workspaces, present results per repo (one summary block per repo) and include the repo name/path in each section header.

@@ -1,6 +1,6 @@
 ---
 name: ln-650-persistence-performance-auditor
-description: "Coordinates 3 specialized audit workers (query efficiency, transaction correctness, runtime performance). Researches DB/ORM/async best practices, delegates parallel audits, aggregates results into docs/project/persistence_audit.md."
+description: "Coordinates 4 specialized audit workers (query efficiency, transaction correctness, runtime performance, resource lifecycle). Researches DB/ORM/async best practices, delegates parallel audits, aggregates results into docs/project/persistence_audit.md."
 allowed-tools: Read, Grep, Glob, Bash, WebFetch, WebSearch, mcp__Ref, mcp__context7, Skill
 ---
 
@@ -8,11 +8,11 @@ allowed-tools: Read, Grep, Glob, Bash, WebFetch, WebSearch, mcp__Ref, mcp__conte
 
 # Persistence & Performance Auditor (L2 Coordinator)
 
-Coordinates 3 specialized audit workers to perform database efficiency, transaction correctness, and runtime performance analysis.
+Coordinates 4 specialized audit workers to perform database efficiency, transaction correctness, runtime performance, and resource lifecycle analysis.
 
 ## Purpose & Scope
 
-- **Coordinates 3 audit workers** (ln-651, ln-652, ln-653) running in parallel
+- **Coordinates 4 audit workers** (ln-651, ln-652, ln-653, ln-654) running in parallel
 - Research current best practices for detected DB, ORM, async framework via MCP tools ONCE
 - Pass shared context to all workers (token-efficient)
 - Aggregate worker results into single consolidated report
@@ -26,7 +26,7 @@ Coordinates 3 specialized audit workers to perform database efficiency, transact
 2) **Research:** Query MCP tools for DB/ORM/async best practices ONCE
 3) **Build Context:** Create contextStore with best practices + DB-specific metadata
 4) **Prepare Output:** Create output directory
-5) **Delegate:** 3 workers in PARALLEL
+5) **Delegate:** 4 workers in PARALLEL
 6) **Aggregate:** Collect worker results, calculate scores
 7) **Write Report:** Save to `docs/project/persistence_audit.md`
 
@@ -102,17 +102,18 @@ Task(description: "Audit via ln-65X",
 - ❌ Direct Skill tool invocation without Task wrapper
 - ❌ Any execution bypassing subagent context isolation
 
-**Workers (ALL 3 in PARALLEL):**
+**Workers (ALL 4 in PARALLEL):**
 
 | # | Worker | Priority | What It Audits |
 |---|--------|----------|----------------|
 | 1 | ln-651-query-efficiency-auditor | HIGH | Redundant queries, N-UPDATE loops, over-fetching, caching scope |
 | 2 | ln-652-transaction-correctness-auditor | HIGH | Commit patterns, trigger interaction, transaction scope, rollback |
 | 3 | ln-653-runtime-performance-auditor | MEDIUM | Blocking IO in async, allocations, sync sleep, string concat |
+| 4 | ln-654-resource-lifecycle-auditor | HIGH | Session scope mismatch, streaming resource holding, pool config, cleanup |
 
-**Invocation (3 workers in PARALLEL):**
+**Invocation (4 workers in PARALLEL):**
 ```javascript
-FOR EACH worker IN [ln-651, ln-652, ln-653]:
+FOR EACH worker IN [ln-651, ln-652, ln-653, ln-654]:
   Task(description: "Audit via " + worker,
        prompt: "Execute " + worker + ". Read skill. Context: " + JSON.stringify(contextStore),
        subagent_type: "general-purpose")
@@ -135,7 +136,7 @@ Workers wrote reports to `{output_dir}/` and returned minimal summaries. Aggrega
 **Aggregation steps:**
 1. Parse scores/counts from worker return strings (already in context)
 2. Read worker report files from `{output_dir}/` for findings tables
-3. Calculate overall score: average of 3 category scores
+3. Calculate overall score: average of 4 category scores
 4. Sum severity counts across all workers
 5. Sort findings by severity (CRITICAL → HIGH → MEDIUM → LOW)
 6. Context Validation (Post-Filter)
@@ -181,6 +182,7 @@ Recalculate overall score excluding advisory findings from penalty.
 | Query Efficiency | X/10 | ... |
 | Transaction Correctness | X/10 | ... |
 | Runtime Performance | X/10 | ... |
+| Resource Lifecycle | X/10 | ... |
 | **Overall** | **X/10** | |
 
 ### Severity Summary
@@ -212,6 +214,12 @@ Recalculate overall score excluding advisory findings from penalty.
 |----------|----------|-------|----------------|--------|
 | HIGH | job_processor.py:444 | Blocking read_bytes() in async | Use aiofiles/to_thread | S |
 
+#### 4. Resource Lifecycle
+
+| Severity | Location | Issue | Recommendation | Effort |
+|----------|----------|-------|----------------|--------|
+| CRITICAL | sse_stream.py:112 | DbSession held for entire SSE stream | Scope session to auth check only | M |
+
 ### Recommended Actions (Priority-Sorted)
 
 | Priority | Category | Location | Issue | Recommendation | Effort |
@@ -232,7 +240,7 @@ Write consolidated report to `docs/project/persistence_audit.md` with the Output
 ## Critical Rules
 
 - **Single context gathering:** Research best practices ONCE, pass contextStore to all workers
-- **Parallel execution:** All 3 workers run in PARALLEL
+- **Parallel execution:** All 4 workers run in PARALLEL
 - **Trigger discovery:** Scan migrations for triggers/NOTIFY before delegating (pass to ln-652)
 - **Metadata-only loading:** Coordinator loads metadata; workers load full file contents
 - **Do not audit:** Coordinator orchestrates only; audit logic lives in workers
@@ -244,7 +252,7 @@ Write consolidated report to `docs/project/persistence_audit.md` with the Output
 - Best practices researched via MCP tools
 - contextStore built with output_dir = `docs/project/.audit/ln-650/{YYYY-MM-DD}`
 - Output directory created (no deletion of previous runs)
-- All 3 workers invoked in PARALLEL and completed; each wrote report to `{output_dir}/`
+- All 4 workers invoked in PARALLEL and completed; each wrote report to `{output_dir}/`
 - Results aggregated from return values (scores) + file reads (findings tables)
 - Compliance score calculated per category + overall
 - Executive Summary included
@@ -256,6 +264,7 @@ Write consolidated report to `docs/project/persistence_audit.md` with the Output
 - [ln-651-query-efficiency-auditor](../ln-651-query-efficiency-auditor/SKILL.md)
 - [ln-652-transaction-correctness-auditor](../ln-652-transaction-correctness-auditor/SKILL.md)
 - [ln-653-runtime-performance-auditor](../ln-653-runtime-performance-auditor/SKILL.md)
+- [ln-654-resource-lifecycle-auditor](../ln-654-resource-lifecycle-auditor/SKILL.md)
 
 ## Reference Files
 

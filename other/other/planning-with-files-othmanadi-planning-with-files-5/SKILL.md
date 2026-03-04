@@ -201,8 +201,8 @@ Helper scripts for automation:
 
 ## Advanced Topics
 
-- **Manus Principles:** See [reference.md](reference.md)
-- **Real Examples:** See [examples.md](examples.md)
+- **Manus Principles:** See [references/reference.md](references/reference.md)
+- **Real Examples:** See [references/examples.md](references/examples.md)
 
 ## Anti-Patterns
 

@@ -1,11 +1,11 @@
 ---
-description: This skill prepares a project for Claude Code — generates CLAUDE.md with progressive disclosure docs, auto-format hooks, and code-quality agents. Replaces /init. Supports monorepos.
+description: This skill prepares a project for Claude Code — generates CLAUDE.md with progressive disclosure docs, auto-format hooks, and code-quality agents (code-simplifier, test-guardian). Also audits and syncs existing documentation against source code. Replaces /init. Supports single projects, monorepos, and multi-repo workspaces (separate git repos under a shared parent directory).
 disable-model-invocation: true
 ---
 
 # Initialize Project for Claude Code
 
-Analyze the project and set up Claude Code for optimal performance: generate CLAUDE.md with supporting docs (WHAT/WHY/HOW, progressive disclosure), install auto-format hooks per detected stack, deploy code-simplifier and test-guardian agents, and sync existing documentation against source code. Supports single projects and monorepos.
+Analyze the project and set up Claude Code for optimal performance: generate CLAUDE.md with supporting docs (WHAT/WHY/HOW, progressive disclosure), install auto-format hooks per detected stack, deploy code-simplifier and test-guardian agents, and sync existing documentation against source code. Supports single projects, monorepos, and multi-repo workspaces.
 
 ## Before You Start
 
@@ -30,7 +30,7 @@ Read `$CLAUDE_PLUGIN_ROOT/skills/init/references/claude-md-best-practices.md`. K
 | CMakeLists.txt, Makefile | C/C++ | cmake, make |
 | Gemfile | Ruby | bundler |
 
-Note: `.sln` files reference `.csproj` projects — they confirm .NET presence but aren't independent project manifests. Don't count a root `.sln` for root-as-project detection.
+Note: `.sln` files reference `.csproj` projects — they confirm .NET presence but aren't independent project manifests. Don't count a root `.sln` for root-as-project detection. When a single root `.sln` references all `.csproj` files found during detection, treat the entire solution as one project (see .NET solution consolidation in `project-detection.md`). List all solution projects and their roles in the CLAUDE.md Project Structure section.
 
 **Extract**: Project name, tech stack, build system, available scripts.
 
@@ -65,16 +65,23 @@ Factual contradictions in existing docs (wrong commands, outdated tech reference
 
 These insights flow into generated files in Steps 4–6b. The Detection Summary confirms doc reading occurred, but do not narrate insights during analysis.
 
-**Check for monorepo indicators:** Read `$CLAUDE_PLUGIN_ROOT/skills/init/references/monorepo-detection.md` for the full 3-step detection algorithm (workspace configs, manifest scanning with depth-2 checks, supporting signals) and subproject enumeration rules.
+**Check for project structure:** Read `$CLAUDE_PLUGIN_ROOT/skills/init/references/project-detection.md` for the full detection algorithm — multi-repo workspace detection (Step 0), workspace configs (Step A), manifest scanning with depth-2 checks (Step B), supporting signals (Step C), and subproject enumeration rules.
 
 **Decision summary:**
+- No `.git/` in current dir + 2+ child dirs with `.git/` → confirmed multi-repo workspace
 - Workspace config found → confirmed monorepo
-- 2+ projects with manifests → confirmed monorepo
+- 2+ projects with manifests → confirmed monorepo (but see .NET consolidation below)
 - Supporting signals + 1 manifest dir → likely monorepo, ask user to confirm
 - Supporting signals only → insufficient evidence, ask user to identify subproject dirs
 - No signals → single project
 
+**.NET solution consolidation:** When a single root `.sln` references all discovered `.csproj` files, collapse them into 1 project before applying the matrix above. Non-`.csproj` manifests still count separately.
+
 **If monorepo detected:** Inform user of detection signals and identified subprojects with tech stacks. Confirm before proceeding.
+
+**If multi-repo workspace detected:** List each repo with its path and detected tech stack. For each repo, also report whether it is internally a monorepo or single project. Confirm before proceeding.
+
+**Nested project handling:** When a repo has no manifest at its git root, but exactly 1 qualifying project in a subdirectory (via depth-2 check), and the root-as-project check fails for that repo — treat it as a **single project with a nested app root**. This applies both when running init directly in a repo and when processing repos within a multi-repo workspace. Note the subdirectory path; all commands in the generated CLAUDE.md must reference it (e.g., `cd ngapp && npm run build`).
 
 ### Step 1 Checkpoint
 
@@ -84,9 +91,11 @@ Before proceeding, confirm you have all of the following. If any are missing, re
 - **Tech stack(s)** (languages, frameworks, from manifest dependencies)
 - **Package manager** (detected from lock files / config — e.g., npm, pnpm, yarn, uv, poetry, pip)
 - **Build/test/lint commands** (from manifest scripts, prefixed with the detected package manager)
-- **Monorepo status**: single project, confirmed monorepo, or ambiguous (awaiting user input)
+- **Project structure**: single project, confirmed monorepo, multi-repo workspace, or ambiguous (awaiting user input)
 - If monorepo: **subproject list** with each subproject's path, purpose, and tech stack
 - If monorepo: **workspace tool** (if any)
+- If multi-repo workspace: **repo list** with each repo's path, tech stack, and internal structure (single project or monorepo)
+- If nested app root detected: **app root path** (e.g., `ngapp/`)
 - **Existing files inventory** (existence check only — content of docs is read in Step 1b; agents are never audited, always overwritten): which of `.claude/CLAUDE.md`, `.claude/settings.json`, `.claude/docs/*`, `.claude/agents/code-simplifier.md`, `.claude/agents/test-guardian.md`, root `CLAUDE.md`, subproject `CLAUDE.md` files already exist
 - **Test infrastructure detected** (yes/no): test framework in dependencies, test command in scripts, or test directory present. If **no**: do not use `AskUserQuestion` about setting up tests or offer to skip — init never provisions test infrastructure. Note the absence in the summary and continue.
 - **Doc-sourced insights** (if any documentation found): verified conventions, architecture rationale, workflow rules — all cross-checked against source code
@@ -144,6 +153,7 @@ If root `CLAUDE.md` exists (not in `.claude/`), suggest removing it after `.clau
 ```bash
 mkdir -p .claude/docs .claude/hooks .claude/agents
 # Monorepo: also mkdir -p <subproject>/docs for each subproject from Step 1
+# Multi-repo workspace: run this inside each repo (each gets its own .claude/)
 ```
 
 ## Step 4: Create CLAUDE.md
@@ -176,6 +186,14 @@ If root-as-project: also list root-scoped docs from `.claude/docs/` (testing.md,
 In the Agents section, list only agents that were actually installed: code-simplifier is always listed; test-guardian only if test infrastructure was detected (Step 1).
 
 If more than 6 subprojects, group by category (apps, libs, services) in the root CLAUDE.md and move the full subproject table to `.claude/docs/architecture.md`. Keep descriptions concise (abbreviate stacks, e.g., "TS/React" not "TypeScript, React, Vite, Tailwind") to stay under 60 lines.
+
+### Multi-repo workspace
+
+For multi-repo workspaces, **run the full init flow (Steps 3–7) independently inside each repo** — each repo gets its own complete, self-contained `.claude/` as if you had run init inside that repo directly. Use the single-project template (or monorepo template if the repo is internally a monorepo). Each repo's `.claude/` is version-controlled within that repo — a teammate cloning a single repo gets the full Claude Code experience without the plugin or the workspace.
+
+After all repos are initialized, create a lightweight `CLAUDE.md` file at the workspace root (NOT inside a `.claude/` directory) using the template from `$CLAUDE_PLUGIN_ROOT/skills/init/templates/multi-repo-claude.md`. This file provides cross-repo context (repo table, API contracts, shared conventions) but contains no agents, hooks, or guidelines — repos do not depend on it. Note in the Detection Summary that this file is local-only and not version-controlled.
+
+If a nested app root was detected for a repo (Step 1), ensure that repo's CLAUDE.md notes the nested structure and all commands reference the correct subdirectory.
 
 ## Step 4b: Create Subproject CLAUDE.md Files (monorepo only)
 
@@ -287,7 +305,8 @@ Run through this checklist. **Fix any failures before reporting to the user.**
 - Every doc listed in a CLAUDE.md Documentation section actually exists as a file.
 - Every agent listed in a CLAUDE.md Agents section actually exists as a file in `.claude/agents/`.
 - Monorepo: every subproject in root CLAUDE.md's Architecture table has a corresponding `CLAUDE.md` file.
+- Multi-repo workspace (if workspace root `CLAUDE.md` was created): every repo listed in it has its own `.claude/CLAUDE.md` file. Each repo's `.claude/` is self-contained (has its own coding-guidelines, hooks, agents).
 
 **If any check fails:** Fix the issue, then re-verify. Do not proceed to the summary until all checks pass.
 
-**Summary:** Report to the user: files created, detected tech stack, and decisions made (monorepo detection rationale, which optional docs were created and why, which were skipped and why). If test infrastructure was not detected, include the Step 5c fallback message as the final item in the summary.
+**Summary:** Report to the user: files created, detected tech stack, and decisions made (monorepo detection rationale, which optional docs were created and why, which were skipped and why). If test infrastructure was not detected, include the Step 5c fallback message as the final item in the summary. For multi-repo workspaces, report per-repo results and remind the user to commit each repo's `.claude/` directory separately.

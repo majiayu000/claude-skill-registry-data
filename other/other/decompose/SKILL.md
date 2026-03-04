@@ -78,7 +78,7 @@ Based on the interview, determine: **single** or **multi-split**.
 - Cohesive purpose — a clear goal or outcome
 - Bounded complexity — 1-3 major components
 - Clear interfaces — well-defined inputs and outputs
-- Each split is substantial enough for its own PRD → SRS → Tech Design → Test Plan chain
+- Each split is substantial enough for its own PRD → SRS → Tech Design → Test Plan → Feature Spec chain
 
 ### Step 4a: Single Feature Verdict
 
@@ -144,7 +144,7 @@ Display the result:
 ```
 Scope analysis complete: {name}
   Verdict: Single feature
-  Next: Running spec chain (PRD → SRS → Tech Design → Test Plan)
+  Next: Running spec chain (PRD → SRS → Tech Design → Test Plan → Feature Spec)
 ```
 
 **If multi-split:**

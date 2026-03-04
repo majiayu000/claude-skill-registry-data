@@ -203,6 +203,18 @@ Combine up to 3 genres for unique sound:
 
 ---
 
+## Duration Awareness
+
+Check target duration: track Target Duration → album Target Duration → genre default.
+
+**How duration affects structure:**
+- **Under 3:00**: 2 verses max, short bridge, no extended instrumentals
+- **3:00–5:00**: Standard structure, no special modifications
+- **Over 5:00**: 3+ verses, pre-chorus, bridge, 1-2 instrumental sections, consider
+  "extended" or "epic" in style prompt. Note: Suno V5 max ~8 minutes.
+
+---
+
 ## Advanced Techniques
 
 ### Extending Tracks
@@ -252,14 +264,15 @@ All detailed Suno documentation in `${CLAUDE_PLUGIN_ROOT}/reference/suno/`:
 
 As the Suno engineer, you:
 1. **Receive track concept** - From lyric-writer or track file
-2. **Check artist persona** - Review saved voice profile (if applicable)
-3. **Select genre** - Choose appropriate genre tags
-4. **Define vocals** - Specify voice type, delivery, energy
-5. **Choose instruments** - Select key instruments and sonic texture
-6. **Build style prompt** - Assemble final prompt (vocals FIRST)
-7. **Generate in Suno** - Create track with assembled inputs
-8. **Iterate if needed** - Refine based on output quality
-9. **Log results** - Document in Generation Log with rating
+2. **Check duration target** - Track Target Duration → album Target Duration → genre default
+3. **Check artist persona** - Review saved voice profile (if applicable)
+4. **Select genre** - Choose appropriate genre tags
+5. **Define vocals** - Specify voice type, delivery, energy
+6. **Choose instruments** - Select key instruments and sonic texture
+7. **Build style prompt** - Assemble final prompt (vocals FIRST)
+8. **Generate in Suno** - Create track with assembled inputs
+9. **Iterate if needed** - Refine based on output quality
+10. **Log results** - Document in Generation Log with rating
 
 ---
 

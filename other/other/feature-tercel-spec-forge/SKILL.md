@@ -85,9 +85,17 @@ If sourced from a project manifest, reference it.}
 
 Parse the feature name from arguments. Then determine the mode:
 
+**Chain mode detection**: If the invocation prompt contains "Chain mode" or "Auto-confirm extraction", this is being called as part of the spec-forge chain. In chain mode:
+- Skip all `AskUserQuestion` calls — auto-select the recommended option at each step
+- If existing feature spec exists → auto-select "Regenerate from scratch"
+- If upstream tech-design is found → auto-select "Extract from tech-design"
+- In Step 2a.2 → skip confirmation, proceed directly to generation
+- **CRITICAL**: Filename MUST be `{feature-name}.md` — plain kebab-case slug, NO numeric prefixes (`01-`, `F001-`, etc.). This rule applies in ALL modes but is especially important in chain mode where multiple features are generated sequentially.
+- After generating, ALWAYS create or update `docs/features/overview.md` (the overview tracks execution order, not filenames)
+
 1. **Check for existing feature spec**: If `docs/features/{feature-name}.md` already exists:
    - Display: "Feature spec already exists at docs/features/{feature-name}.md"
-   - Use `AskUserQuestion`:
+   - Use `AskUserQuestion` (skip in chain mode — auto-select "Regenerate from scratch"):
      - "Update existing spec" — read current file as context, proceed to Q&A with existing content pre-loaded
      - "Regenerate from scratch" — proceed as if no file exists
      - "Cancel"
@@ -96,7 +104,7 @@ Parse the feature name from arguments. Then determine the mode:
    - **Found** → **Extract mode** (Step 2a)
    - **Not found** → **Standalone mode** (Step 2b)
 
-3. If upstream tech-design is found, ask the user:
+3. If upstream tech-design is found, ask the user (skip in chain mode — auto-select "Extract from tech-design"):
    - "Extract from tech-design (Recommended)" — faster, ensures consistency with formal specs
    - "Create from scratch" — ignore existing tech-design, do fresh Q&A
    - "Cancel"
@@ -118,7 +126,7 @@ Extract these elements from the tech-design:
 
 #### 2a.2 Confirm with User
 
-Present a brief summary of what was extracted. Use `AskUserQuestion` (0-1 questions):
+Present a brief summary of what was extracted. Use `AskUserQuestion` (0-1 questions) — **skip in chain mode, proceed directly to generation**:
 - "Anything to add or change?" with options:
   - "Looks good, generate" — proceed
   - "Add notes" — user provides additional context

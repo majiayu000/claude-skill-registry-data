@@ -100,9 +100,9 @@ lyric-writer (WRITES + SUNO PROMPT) → pronunciation-specialist (RESOLVES) → 
 - **Critical**: Wrong date/name/major fact
 
 ### 9. Length Check
-- Word count vs genre target (see lyric-writer Song Length table)
-- **Warning**: Over genre target range, or more than 3 verses without explicit request
-- **Critical**: Over 500 words (non-hip-hop) or 700 words (hip-hop)
+- Word count vs target duration (track Target Duration → album Target Duration → genre default)
+- **Warning**: Over target range for specified duration, or 3+ verses without explicit request
+- **Critical**: Over 500 words (non-hip-hop) or 700 words (hip-hop), unless target duration is 5:00+
 
 ### 10. Section Length Check
 - Count lines per section, compare against genre limits (see lyric-writer Section Length Limits)
