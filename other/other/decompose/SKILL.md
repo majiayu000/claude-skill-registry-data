@@ -7,7 +7,7 @@ description: >
   sub-features, dependencies, and execution order.
 instructions: >
   Follow the workflow below exactly. This skill is typically invoked inside a sub-agent
-  by the spec-forge chain orchestrator (Step D.0) or via /spec-forge:decompose.
+  by the spec-forge chain orchestrator (Step D.1) or via /spec-forge:decompose.
   Keep the interview lightweight (3-5 rounds). Do NOT perform demand validation (that is
   /idea's job) or deep research (that is /prd's job). Focus only on scope boundaries and
   dependencies.
@@ -78,7 +78,7 @@ Based on the interview, determine: **single** or **multi-split**.
 - Cohesive purpose — a clear goal or outcome
 - Bounded complexity — 1-3 major components
 - Clear interfaces — well-defined inputs and outputs
-- Each split is substantial enough for its own PRD → SRS → Tech Design → Test Plan → Feature Spec chain
+- Each split is substantial enough for its own Tech Design + Feature Specs
 
 ### Step 4a: Single Feature Verdict
 
@@ -133,7 +133,7 @@ END_MANIFEST -->
 **FEATURE_MANIFEST rules:**
 - Must be at the TOP of the file (before any other content)
 - One sub-feature per line, kebab-case (e.g., `user-auth`, `payment-processing`)
-- Names become directory names under `docs/` — each sub-feature gets `docs/{name}/prd.md` etc.
+- Names become directory names under `docs/` — each sub-feature gets `docs/{name}/tech-design.md`
 - This block is machine-parseable; the rest of the file is for humans
 
 ### Step 5: Summary
@@ -144,7 +144,7 @@ Display the result:
 ```
 Scope analysis complete: {name}
   Verdict: Single feature
-  Next: Running spec chain (PRD → SRS → Tech Design → Test Plan → Feature Spec)
+  Next: Running spec chain (Tech Design + Feature Specs)
 ```
 
 **If multi-split:**
@@ -158,5 +158,6 @@ Scope analysis complete: {name}
     2. {sub-feature-2} — {one-line description}
     ...
 
-  Next: Running spec chain for each sub-feature
+  Next: Run the full chain for all sub-features:
+    /spec-forge {name}
 ```

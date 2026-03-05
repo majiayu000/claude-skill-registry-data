@@ -9,6 +9,15 @@ description: "Story-level quality orchestrator with 4-level Gate (PASS/CONCERNS/
 
 Thin orchestrator that coordinates quality checks and test planning, then determines final Story verdict.
 
+## Inputs
+
+| Input | Required | Source | Description |
+|-------|----------|--------|-------------|
+| `storyId` | Yes | args, git branch, kanban, user | Story to process |
+
+**Resolution:** Per `shared/references/input_resolution_pattern.md` — Story Resolution Chain.
+**Status filter:** To Review
+
 ## Purpose & Scope
 - Invoke ln-510-quality-coordinator for code quality checks
 - Invoke ln-520-test-planner for test planning (if needed)
@@ -56,11 +65,25 @@ Additional prefixes: `TEST-` (coverage gaps), `ARCH-` (architecture), `DOC-` (do
 
 ## Workflow
 
+### Phase 0: Tools Config
+
+**MANDATORY READ:** Load `shared/references/tools_config_guide.md`, `shared/references/storage_mode_detection.md`, and `shared/references/input_resolution_pattern.md`
+
+Read `docs/tools_config.md` (bootstrap if missing per tools_config_guide.md).
+Extract: `task_provider` = Task Management → Provider (`linear` | `file`).
+
 ### Phase 1: Discovery
 
-1) Auto-discover team/config from `docs/tasks/kanban_board.md`
-2) Load Story + task metadata from Linear (no full descriptions)
-3) Detect test task status (exists? Done?)
+1) **Resolve storyId** (per input_resolution_pattern.md):
+   - IF args provided → use args
+   - ELSE IF git branch matches `feature/{id}-*` → extract id
+   - ELSE IF kanban has exactly 1 Story in [To Review] → suggest
+   - ELSE → AskUserQuestion: show Stories from kanban filtered by [To Review]
+2) Auto-discover team/config from `docs/tasks/kanban_board.md`
+3) Load Story + task metadata:
+   - IF `task_provider` = `linear`: `get_issue(storyId)` + `list_issues(parentId=storyId)`
+   - IF `task_provider` = `file`: `Read story.md` + `Glob("docs/tasks/epics/*/stories/*/tasks/*.md")`
+4) Detect test task status (exists? Done?)
 
 ### Phase 2: Fast-Track Decision
 
@@ -113,7 +136,9 @@ ELSE:
 
 ### Phase 5: Test Verification (after test task Done)
 
-1) Load test task from Linear
+1) Load test task:
+   - IF `task_provider` = `linear`: `get_issue(testTaskId)`
+   - IF `task_provider` = `file`: `Read` test task file from `docs/tasks/epics/.../tasks/T{NNN}-*.md`
 2) Verify limits and priority:
    - Priority ≥15 scenarios covered
    - Each test passes Usefulness Criteria (no numerical targets)
@@ -127,9 +152,13 @@ ELSE:
 2) **Run NFR checks** per dimensions table (fast_track: Security only; full: all dimensions)
 3) **Assign issue prefixes:** SEC-, PERF-, MNT-, TEST-, ARCH-, DOC-
 4) **Determine Gate verdict** per 4-Level Gate Model
-5) Post Linear comment with gate verdict
+5) Post gate verdict comment:
+   - IF `task_provider` = `linear`: `create_comment({issueId: storyId, body: verdict_summary})`
+   - IF `task_provider` = `file`: `Write` comment to `docs/tasks/epics/.../comments/{ISO-timestamp}.md`
 6) **If FAIL:** Record root cause analysis — classify each failure (missing_context | wrong_pattern | unclear_ac | doc_gap | test_gap). Append to `docs/project/architecture_health.md` under `## Root Cause Log` (create section if missing). Format: `| {date} | {story_id} | {issue_id} | {classification} | {action_taken} |`
-7) Update Story status (Done for PASS/CONCERNS/WAIVED, or create fix tasks for FAIL)
+7) Update Story status:
+   - IF `task_provider` = `linear`: `save_issue({id: storyId, state: "Done"})` for PASS/CONCERNS/WAIVED; create fix tasks for FAIL
+   - IF `task_provider` = `file`: `Edit` `**Status:**` line to `Done` in story.md for PASS/CONCERNS/WAIVED; create fix task files for FAIL
 
 **TodoWrite format (mandatory):**
 ```
@@ -162,7 +191,7 @@ Skill(skill: "ln-520-test-planner", args: "{storyId}")
 
 ## Critical Rules
 - Early-exit: any failure creates a specific task and stops
-- Single source of truth: rely on Linear metadata for tasks
+- Single source of truth: rely on `task_provider` config (Linear or file-based) for tasks
 - Task creation via ln-301 only; this skill never edits tasks directly
 - Test verification only runs when test task is Done
 - Language preservation in comments (EN/RU)
@@ -188,6 +217,8 @@ Skill(skill: "ln-520-test-planner", args: "{storyId}")
 - Comment with gate verdict posted
 
 ## Reference Files
+- **Tools config:** `shared/references/tools_config_guide.md`
+- **Storage mode operations:** `shared/references/storage_mode_detection.md`
 - **Orchestrator lifecycle:** `shared/references/orchestrator_pattern.md`
 - **Quality coordinator:** `../ln-510-quality-coordinator/SKILL.md`
 - **Test planner:** `../ln-520-test-planner/SKILL.md`

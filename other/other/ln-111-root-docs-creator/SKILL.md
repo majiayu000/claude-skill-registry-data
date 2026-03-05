@@ -1,16 +1,16 @@
 ---
 name: ln-111-root-docs-creator
-description: Creates 4 root documentation files (CLAUDE.md, docs/README.md, documentation_standards.md, principles.md). L3 Worker invoked by ln-110-project-docs-coordinator.
+description: "Creates 5 root documentation files (CLAUDE.md, docs/README.md, documentation_standards.md, principles.md, tools_config.md). L3 Worker invoked by ln-110-project-docs-coordinator."
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
 
 # Root Documentation Creator
 
-L3 Worker that creates 4 root documentation files using templates and Context Store from coordinator.
+L3 Worker that creates 5 root documentation files using templates and Context Store from coordinator.
 
 ## Purpose & Scope
-- Creates 4 root documentation files (entry points for AI agents)
+- Creates 5 root documentation files (entry points for AI agents + tool configuration)
 - Receives Context Store from ln-110-project-docs-coordinator
 - Replaces placeholders with project-specific data
 - Self-validates structure and content (22 questions)
@@ -33,7 +33,7 @@ From coordinator:
 
 **LEGACY_CONTENT** is used as base content when creating principles.md. Priority: **Legacy > Template defaults**.
 
-## Documents Created (4)
+## Documents Created (5)
 
 | File | Target Sections | Questions |
 |------|-----------------|-----------|
@@ -41,6 +41,7 @@ From coordinator:
 | docs/README.md | Overview, Standards, Writing Guidelines, Quick Navigation, Maintenance | Q7-Q13 |
 | docs/documentation_standards.md | Quick Reference (60+ requirements), 12 main sections, Maintenance | Q14-Q16 |
 | docs/principles.md | Core Principles (8), Decision Framework, Anti-Patterns, Verification, Maintenance | Q17-Q22 |
+| docs/tools_config.md | Task Management, Research, File Editing, External Agents, Git | Auto-detected |
 
 ## Workflow
 
@@ -66,6 +67,20 @@ For each document (CLAUDE.md, docs/README.md, documentation_standards.md, princi
    - Replace `{{PLACEHOLDER}}` with Context Store values
    - Mark `[TBD: X]` for missing data (never leave empty placeholders)
    - Write file
+
+### Phase 2b: Create Tools Config
+For `docs/tools_config.md`:
+1. Check if file exists (idempotent — respect existing config, may have been auto-bootstrapped)
+2. If exists: skip with log
+3. If not exists:
+   - Copy template from `references/templates/tools_config_template.md`
+   - **Detect available tools** (replace placeholders with actual values):
+     - Task Management: call `list_teams()` via mcp__linear-server → set Provider/Status/Team ID
+     - Research: call `ref_search_documentation(query="test")` → if active, set Provider=ref. Then call `resolve-library-id(libraryName="react")` for Context7 → set Fallback chain
+     - File Editing: check mcp__hashline-edit availability → set Provider
+     - External Agents: run `codex --version`, `gemini --version` → set Status/Comment
+     - Git: run `git worktree list` → set Worktree/Strategy
+   - Write file with detected values
 
 ### Phase 3: Self-Validate
 For each created document:
@@ -111,15 +126,16 @@ Tables/ASCII > Lists (enumerations only) > Text (last resort)
 
 ## Definition of Done
 - Context Store received and validated
-- 4 root documents created (or skipped if exist)
-- All placeholders replaced (or marked TBD)
+- 5 root documents created (or skipped if exist)
+- All placeholders replaced (or marked TBD); tools_config.md uses detected values
 - Self-validation passed (SCOPE, sections, Maintenance, POSIX)
 - **Actuality verified:** all document facts match current code (paths, functions, APIs, configs exist and are accurate)
 - Status returned to coordinator
 
 ## Reference Files
-- Templates: `references/templates/claude_md_template.md`, `docs_root_readme_template.md`, `documentation_standards_template.md`, `principles_template.md`
+- Templates: `references/templates/claude_md_template.md`, `docs_root_readme_template.md`, `documentation_standards_template.md`, `principles_template.md`, `tools_config_template.md`
 - Questions: `references/questions_root.md` (Q1-Q22)
+- **Tools config guide:** `shared/references/tools_config_guide.md` (detection and bootstrap pattern)
 
 ---
 **Version:** 2.1.0

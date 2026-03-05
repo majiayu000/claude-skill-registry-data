@@ -1,10 +1,12 @@
 ---
 name: entity-optimizer
-description: 'Use when the user asks to "optimize entity presence", "build knowledge graph", "improve knowledge panel", "entity audit", "establish brand entity", "Google does not know my brand", "no knowledge panel", or "establish my brand as an entity". Works standalone with public search and AI query testing; supercharged when you connect ~~knowledge graph + ~~SEO tool + ~~AI monitor for automated entity analysis. For structured data implementation, see schema-markup-generator. For content-level AI optimization, see geo-content-optimizer.'
+version: "3.0.0"
+description: 'This skill should be used when the user asks to "optimize entity presence", "build knowledge graph", "improve knowledge panel", "entity audit", "establish brand entity", "Google does not know my brand", "no knowledge panel", or "establish my brand as an entity". Works standalone with public search and AI query testing; supercharged when you connect ~~knowledge graph + ~~SEO tool + ~~AI monitor for automated entity analysis. For structured data implementation, see schema-markup-generator. For content-level AI optimization, see geo-content-optimizer.'
 license: Apache-2.0
+compatibility: "Claude Code ≥1.0, skills.sh marketplace, ClawHub marketplace, Vercel Labs skills ecosystem. No system packages required. Optional: MCP network access for SEO tool integrations."
 metadata:
   author: aaron-he-zhu
-  version: "2.0.0"
+  version: "3.0.0"
   geo-relevance: "high"
   tags:
     - seo
@@ -16,6 +18,14 @@ metadata:
     - entity disambiguation
     - wikidata
     - structured entities
+    - knowledge-graph
+    - google-knowledge-panel
+    - entity-seo
+    - brand-entity
+    - entity-recognition
+    - knowledge-base
+    - dbpedia
+    - brand-presence
   triggers:
     - "optimize entity presence"
     - "build knowledge graph"
@@ -49,12 +59,12 @@ metadata:
 
 </details>
 
-This skill audits, builds, and maintains entity identity across search engines and AI systems. Entities — the people, organizations, products, and concepts that search engines and AI systems recognize as distinct things — are the foundation of how both Google and LLMs decide *what you are* and *whether to cite you*.
+Audits, builds, and maintains entity identity across search engines and AI systems. Entities — the people, organizations, products, and concepts that search engines and AI systems recognize as distinct things — are the foundation of how both Google and LLMs decide *what a brand is* and *whether to cite it*.
 
 **Why entities matter for SEO + GEO:**
 
 - **SEO**: Google's Knowledge Graph powers Knowledge Panels, rich results, and entity-based ranking signals. A well-defined entity earns SERP real estate.
-- **GEO**: AI systems resolve queries to entities before generating answers. If an AI can't identify your entity, it can't cite you — no matter how good your content is.
+- **GEO**: AI systems resolve queries to entities before generating answers. If an AI cannot identify an entity, it cannot cite it — no matter how good the content is.
 
 ## When to Use This Skill
 
@@ -177,70 +187,16 @@ Test how AI systems identify this entity by querying:
 
 Evaluate entity signals across 6 categories. For the detailed 47-signal checklist with verification methods, see [references/entity-signal-checklist.md](./references/entity-signal-checklist.md).
 
-```markdown
-### Entity Signal Audit
+Evaluate each signal as Pass / Fail / Partial with a specific action for each gap. The 6 categories are:
 
-#### 1. Structured Data Signals
+1. **Structured Data Signals** -- Organization/Person schema, sameAs links, @id consistency, author schema
+2. **Knowledge Base Signals** -- Wikidata, Wikipedia, CrunchBase, industry directories
+3. **Consistent NAP+E Signals** -- Name/description/logo/social consistency across platforms
+4. **Content-Based Entity Signals** -- About page, author pages, topical authority, branded backlinks
+5. **Third-Party Entity Signals** -- Authoritative mentions, co-citation, reviews, press coverage
+6. **AI-Specific Entity Signals** -- Clear definitions, disambiguation, verifiable claims, crawlability
 
-| Signal | Status | Action Needed |
-|--------|--------|--------------|
-| Organization/Person schema on homepage | ✅ / ❌ | [action] |
-| sameAs links to authoritative profiles | ✅ / ❌ | [action] |
-| logo, foundingDate, founder properties | ✅ / ❌ | [action] |
-| Consistent @id across pages | ✅ / ❌ | [action] |
-| Product/Service schema on relevant pages | ✅ / ❌ | [action] |
-| Author schema with sameAs on articles | ✅ / ❌ | [action] |
-
-#### 2. Knowledge Base Signals
-
-| Signal | Status | Action Needed |
-|--------|--------|--------------|
-| Wikidata entry with complete properties | ✅ / ❌ | [action] |
-| Wikipedia article (or notability path) | ✅ / ❌ | [action] |
-| CrunchBase profile (organizations) | ✅ / ❌ | [action] |
-| Industry directory listings | ✅ / ❌ | [action] |
-| Government/official registries | ✅ / ❌ | [action] |
-
-#### 3. Consistent NAP+E Signals (Name, Address, Phone + Entity)
-
-| Signal | Status | Action Needed |
-|--------|--------|--------------|
-| Consistent entity name across all platforms | ✅ / ❌ | [action] |
-| Same description/tagline everywhere | ✅ / ❌ | [action] |
-| Matching logos and visual identity | ✅ / ❌ | [action] |
-| Social profiles all linked bidirectionally | ✅ / ❌ | [action] |
-| Contact info consistent across directories | ✅ / ❌ | [action] |
-
-#### 4. Content-Based Entity Signals
-
-| Signal | Status | Action Needed |
-|--------|--------|--------------|
-| About page with entity-rich structured content | ✅ / ❌ | [action] |
-| Author pages with credentials and sameAs | ✅ / ❌ | [action] |
-| Topical authority (content depth in target topics) | ✅ / ❌ | [action] |
-| Entity mentions in content (natural co-occurrence) | ✅ / ❌ | [action] |
-| Branded anchor text in backlinks | ✅ / ❌ | [action] |
-
-#### 5. Third-Party Entity Signals
-
-| Signal | Status | Action Needed |
-|--------|--------|--------------|
-| Mentions on authoritative sites (news, industry) | ✅ / ❌ | [action] |
-| Co-citation with established entities | ✅ / ❌ | [action] |
-| Reviews and ratings on third-party platforms | ✅ / ❌ | [action] |
-| Speaking engagements, awards, publications | ✅ / ❌ | [action] |
-| Press coverage with entity name | ✅ / ❌ | [action] |
-
-#### 6. AI-Specific Entity Signals
-
-| Signal | Status | Action Needed |
-|--------|--------|--------------|
-| Clear entity definition in opening paragraphs | ✅ / ❌ | [action] |
-| Unambiguous entity name (or disambiguation strategy) | ✅ / ❌ | [action] |
-| Factual claims about entity are verifiable | ✅ / ❌ | [action] |
-| Entity appears in AI training data sources | ✅ / ❌ | [action] |
-| Entity's content is crawlable by AI systems | ✅ / ❌ | [action] |
-```
+> **Reference**: Use the audit template in [references/entity-signal-checklist.md](./references/entity-signal-checklist.md) for the full 47-signal checklist with verification methods for each category.
 
 ### Step 3: Report & Action Plan
 
@@ -336,61 +292,7 @@ Sorted by: impact on entity recognition × effort required
 
 ## Example
 
-**User**: "Audit entity presence for CloudMetrics, our B2B SaaS analytics platform at cloudmetrics.io"
-
-**Output**:
-
-```markdown
-## Entity Optimization Report
-
-### Entity Profile
-
-**Entity Name**: CloudMetrics
-**Entity Type**: Organization (B2B SaaS)
-**Primary Domain**: cloudmetrics.io
-**Target Topics**: analytics platform, business intelligence, enterprise analytics
-
-### AI Entity Resolution Test
-
-Queries tested with results reported by user:
-
-| Query | Result | Assessment |
-|-------|--------|------------|
-| "What is CloudMetrics?" | Described as "an analytics tool" with no further detail | Partial recognition -- generic description, no mention of B2B focus or key features |
-| "Best analytics platforms for enterprises" | CloudMetrics not mentioned in any AI response | Not recognized as a player in the enterprise analytics space |
-| "CloudMetrics vs Datadog" | Correctly identified as a competitor to Datadog, but feature comparison was incomplete and partially inaccurate | Partial -- entity is associated with the right category but attributes are thin |
-| "Who founded CloudMetrics?" | No answer found by any AI system tested | Entity leadership not present in AI knowledge bases |
-
-### Entity Health Summary
-
-| Signal Category | Status | Key Findings |
-|-----------------|--------|--------------|
-| Knowledge Graph | ❌ Missing | No Wikidata entry exists; no Google Knowledge Panel triggers for branded queries |
-| Structured Data | ⚠️ Partial | Organization schema present on homepage with name, url, and logo; missing Person schema for CEO and leadership team; no sameAs links to external profiles |
-| Web Presence | ✅ Strong | Consistent NAP across LinkedIn, Twitter/X, G2, and Crunchbase; social profiles link back to cloudmetrics.io; branded search returns owned properties in top 5 |
-| Content-Based | ⚠️ Partial | About page exists but opens with marketing copy rather than an entity-defining statement; no dedicated author pages for leadership |
-| Third-Party | ⚠️ Partial | Listed on G2 and Crunchbase; 2 industry publication mentions found; no awards or analyst coverage |
-| AI-Specific | ❌ Weak | AI systems have only surface-level awareness; entity definition is not quotable from any authoritative source |
-
-### Top 3 Priority Actions
-
-1. **Create Wikidata entry** with key properties: instance of (P31: business intelligence software company), official website (P856: cloudmetrics.io), inception (P571), country (P17)
-   - Impact: High | Effort: Low
-   - Why: Wikidata is the foundational knowledge base that feeds Google Knowledge Graph, Bing, and AI training pipelines; without it, the entity cannot be formally resolved
-
-2. **Add Person schema for leadership team** on the About/Team page, including name, jobTitle, sameAs links to LinkedIn profiles, and worksFor pointing to the Organization entity
-   - Impact: High | Effort: Low
-   - Why: Addresses the "Who founded CloudMetrics?" gap directly; Person schema for key people creates bidirectional entity associations that strengthen organizational identity
-
-3. **Build Wikipedia notability through independent press coverage** -- target 3-5 articles in industry publications (TechCrunch, VentureBeat, Analytics India Magazine) that mention CloudMetrics by name with verifiable claims
-   - Impact: High | Effort: High
-   - Why: Wikipedia notability requires coverage in independent reliable sources; press mentions simultaneously feed AI training data, build third-party entity signals, and create the citation foundation for a future Wikipedia article
-
-### Cross-Reference
-
-- **CORE-EEAT**: A07 (Knowledge Graph Presence) scored Fail, A08 (Entity Consistency) scored Pass -- entity optimization should focus on knowledge base gaps rather than consistency
-- **CITE**: I-dimension weakest area is I01 (Knowledge Graph Presence) -- completing Wikidata entry and earning Knowledge Panel directly improves domain identity score
-```
+> **Reference**: See [references/example-audit-report.md](./references/example-audit-report.md) for a complete example entity audit report for a B2B SaaS company (CloudMetrics), including AI entity resolution test results, entity health summary, top 3 priority actions, and CORE-EEAT/CITE cross-references.
 
 ## Tips for Success
 
@@ -404,104 +306,11 @@ Queries tested with results reported by user:
 
 ## Entity Type Reference
 
-### Entity Types and Key Signals
+> **Reference**: See [references/entity-type-reference.md](./references/entity-type-reference.md) for entity types with key signals, schemas, and disambiguation strategies by situation.
 
-| Entity Type | Primary Signals | Secondary Signals | Key Schema |
-|-------------|----------------|-------------------|------------|
-| **Person** | Author pages, social profiles, publication history | Speaking, awards, media mentions | Person, ProfilePage |
-| **Organization** | Registration records, Wikidata, industry listings | Press coverage, partnerships, awards | Organization, Corporation |
-| **Brand** | Trademark, branded search volume, social presence | Reviews, brand mentions, visual identity | Brand, Organization |
-| **Product** | Product pages, reviews, comparison mentions | Awards, expert endorsements, market share | Product, SoftwareApplication |
-| **Creative Work** | Publication record, citations, reviews | Awards, adaptations, cultural impact | CreativeWork, Book, Movie |
-| **Event** | Event listings, press coverage, social buzz | Sponsorships, speaker profiles, attendance | Event |
+## Knowledge Panel & Wikidata Optimization
 
-### Disambiguation Strategy by Situation
-
-| Situation | Strategy |
-|-----------|----------|
-| **Common name, unique entity** | Strengthen all signals; let signal volume resolve ambiguity |
-| **Name collision with larger entity** | Add qualifier consistently (e.g., "Acme Software" not just "Acme"); use sameAs extensively; build topic-specific authority that differentiates |
-| **Name collision with similar entity** | Geographic, industry, or product qualifiers; ensure Schema @id is unique and consistent; prioritize Wikidata disambiguation |
-| **Abbreviation/acronym conflict** | Prefer full name in structured data; use abbreviation only in contexts where entity is already established |
-| **Merged or renamed entity** | Redirect old entity signals; update all structured data; create explicit "formerly known as" content; update Wikidata |
-
-## Knowledge Panel Optimization
-
-### Claiming and Editing
-
-1. **Google Knowledge Panel**: Claim via Google's verification process (search for entity → click "Claim this knowledge panel")
-2. **Bing Knowledge Panel**: Driven by Wikidata and LinkedIn — update those sources
-3. **AI Knowledge**: Driven by training data — ensure authoritative sources describe entity correctly
-
-### Common Knowledge Panel Issues
-
-| Issue | Root Cause | Fix |
-|-------|-----------|-----|
-| No panel appears | Entity not in Knowledge Graph | Build Wikidata entry + structured data + authoritative mentions |
-| Wrong image | Image sourced from incorrect page | Update Wikidata image; ensure preferred image on About page and social profiles |
-| Wrong description | Description pulled from wrong source | Edit Wikidata description; ensure About page has clear entity description in first paragraph |
-| Missing attributes | Incomplete structured data | Add properties to Schema.org markup and Wikidata entry |
-| Wrong entity shown | Disambiguation failure | Strengthen unique signals; add qualifiers; resolve Wikidata disambiguation |
-| Outdated info | Source data not updated | Update Wikidata, About page, and all profile pages |
-
-## Wikidata Best Practices
-
-### Creating a Wikidata Entry
-
-1. **Check notability**: Entity must have at least one authoritative reference
-2. **Create item**: Add label, description, and aliases in relevant languages
-3. **Add statements**: instance of, official website, social media links, founding date, founders, industry
-4. **Add identifiers**: official website (P856), social media IDs, CrunchBase ID, ISNI, VIAF
-5. **Add references**: Every statement should have a reference to an authoritative source
-
-**Important**: Wikipedia's Conflict of Interest (COI) policy prohibits individuals and organizations from creating or editing articles about themselves. Instead of directly editing Wikipedia: (1) Focus on building notability through independent reliable sources (press coverage, industry publications, academic citations); (2) If you believe a Wikipedia article is warranted, consider engaging an independent Wikipedia editor through the Requested Articles process; (3) Ensure all claims about the entity are verifiable through third-party sources before any Wikipedia involvement.
-
-### Key Wikidata Properties by Entity Type
-
-| Property | Code | Person | Org | Brand | Product |
-|----------|------|:------:|:---:|:-----:|:-------:|
-| instance of | P31 | human | organization type | brand | product type |
-| official website | P856 | yes | yes | yes | yes |
-| occupation / industry | P106/P452 | yes | yes | — | — |
-| founded by | P112 | — | yes | yes | — |
-| inception | P571 | — | yes | yes | yes |
-| country | P17 | yes | yes | — | — |
-| social media | various | yes | yes | yes | yes |
-| employer | P108 | yes | — | — | — |
-| developer | P178 | — | — | — | yes |
-
-## AI Entity Optimization
-
-### How AI Systems Resolve Entities
-
-```
-User query → Entity extraction → Entity resolution → Knowledge retrieval → Answer generation
-```
-
-AI systems follow this pipeline:
-1. **Extract** entity mentions from the query
-2. **Resolve** each mention to a known entity (or fail → "I'm not sure")
-3. **Retrieve** associated knowledge about the entity
-4. **Generate** response citing sources that confirmed the entity's attributes
-
-### Signals AI Systems Use for Entity Resolution
-
-| Signal Type | What AI Checks | How to Optimize |
-|-------------|---------------|-----------------|
-| **Training data presence** | Was entity in pre-training corpus? | Get mentioned in high-quality, widely-crawled sources |
-| **Retrieval augmentation** | Does entity appear in live search results? | Strong SEO presence for branded queries |
-| **Structured data** | Can entity be matched to Knowledge Graph? | Complete Wikidata + Schema.org |
-| **Contextual co-occurrence** | What topics/entities appear alongside? | Build consistent topic associations across content |
-| **Source authority** | Are sources about entity trustworthy? | Get mentioned by authoritative, well-known sources |
-| **Recency** | Is information current? | Keep all entity profiles and content updated |
-
-### Entity-Specific GEO Tactics
-
-1. **Define clearly**: First paragraph of About page and key pages should define the entity in a way AI can quote directly
-2. **Be consistent**: Use identical entity description across all platforms
-3. **Build associations**: Create content that explicitly connects entity to target topics
-4. **Earn mentions**: Third-party authoritative mentions are stronger entity signals than self-description
-5. **Stay current**: Outdated entity information causes AI to lose confidence and stop citing
+> **Reference**: See [references/knowledge-panel-wikidata-guide.md](./references/knowledge-panel-wikidata-guide.md) for Knowledge Panel claiming/editing, common issues and fixes, Wikidata entry creation, key properties by entity type, and AI entity resolution optimization.
 
 ## Reference Materials
 

@@ -1,6 +1,6 @@
 ---
 name: ln-622-build-auditor
-description: Build health audit worker (L3). Checks compiler/linter errors, deprecation warnings, type errors, failed tests, build configuration issues. Returns findings with severity (Critical/High/Medium/Low), location, effort, and recommendations.
+description: Build health audit worker (L3). Checks compiler/linter errors, deprecation warnings, type errors, failed tests, build config issues. Returns findings with severity, location, effort, recommendations.
 allowed-tools: Read, Grep, Glob, Bash
 ---
 
@@ -26,21 +26,26 @@ Receives `contextStore` with: `tech_stack` (including build_tool, test_framework
 
 ## Workflow
 
+**MANDATORY READ:** Load `shared/references/two_layer_detection.md` for detection methodology.
+
 1) **Parse Context:** Extract tech stack, build tools, test framework, output_dir from contextStore
-2) **Run Build Checks:** Execute compiler, linter, type checker, tests (see Audit Rules below)
-3) **Collect Findings:** Record each violation with severity, location, effort, recommendation
-4) **Calculate Score:** Count violations by severity, calculate compliance score (X/10)
-5) **Write Report:** Build full markdown report in memory per `shared/templates/audit_worker_report_template.md`, write to `{output_dir}/622-build.md` in single Write call
-6) **Return Summary:** Return minimal summary to coordinator (see Output Format)
+2) **Run Build Checks (Layer 1):** Execute compiler, linter, type checker, tests (see Audit Rules below)
+3) **Analyze Output Context (Layer 2):** For deprecation warnings — read notice to determine if removal is imminent or distant. For config issues — check if dev-only or production config.
+4) **Collect Findings:** Record each violation with severity, location, effort, recommendation
+5) **Calculate Score:** Count violations by severity, calculate compliance score (X/10)
+6) **Write Report:** Build full markdown report in memory per `shared/templates/audit_worker_report_template.md`, write to `{output_dir}/622-build.md` in single Write call
+7) **Return Summary:** Return minimal summary to coordinator (see Output Format)
 
 ## Audit Rules (Priority: CRITICAL)
+
+**MANDATORY READ:** Load `shared/references/ci_tool_detection.md` for build commands, linter commands, type checker commands, and test framework commands per ecosystem.
 
 ### 1. Compiler/Linter Errors
 **What:** Syntax errors, compilation failures, linter rule violations
 
-**Detection:** Per `shared/references/ci_tool_detection.md` Command Registry (Build + Linters sections). Check exit code, parse stderr for errors. Use JSON output flags where available.
+**Detection:** Use ci_tool_detection.md Command Registry (Build + Linters sections). Check exit code, parse stderr for errors. Use JSON output flags where available.
 
-**Linters:** Per ci_tool_detection.md Linters table. Use `--format json` / `--output-format json` for structured output.
+**Linters:** Use ci_tool_detection.md Linters table. Use `--format json` / `--output-format json` for structured output.
 
 **Severity:**
 - **CRITICAL:** Compilation fails, cannot build project
@@ -73,7 +78,7 @@ Receives `contextStore` with: `tech_stack` (including build_tool, test_framework
 ### 3. Type Errors
 **What:** Type mismatches, missing type annotations, type checker failures
 
-**Detection:** Per `shared/references/ci_tool_detection.md` Command Registry (Type Checkers section).
+**Detection:** Use ci_tool_detection.md Command Registry (Type Checkers section).
 
 **Severity:**
 - **CRITICAL:** Type error prevents compilation (`tsc` fails, `cargo check` fails)
@@ -88,7 +93,7 @@ Receives `contextStore` with: `tech_stack` (including build_tool, test_framework
 ### 4. Failed or Skipped Tests
 **What:** Test suite failures, skipped tests, missing test coverage
 
-**Detection:** Per `shared/references/ci_tool_detection.md` Command Registry (Test Frameworks section). Use JSON output flags for structured parsing.
+**Detection:** Use ci_tool_detection.md Command Registry (Test Frameworks section). Use JSON output flags for structured parsing.
 
 **Severity:**
 - **CRITICAL:** Test failures in CI/production code
@@ -157,6 +162,7 @@ Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 - **Worker report template:** `shared/templates/audit_worker_report_template.md`
 - **Audit scoring formula:** `shared/references/audit_scoring.md`
 - **Audit output schema:** `shared/references/audit_output_schema.md`
+- **CI tool detection:** `shared/references/ci_tool_detection.md`
 - Build audit rules: [references/build_rules.md](references/build_rules.md)
 
 ---

@@ -19,16 +19,25 @@ Specialized worker auditing logging, monitoring, and observability.
 
 ## Inputs (from Coordinator)
 
+**MANDATORY READ:** Load `shared/references/task_delegation_pattern.md#audit-coordinator--worker-contract` for contextStore structure.
+
 Receives `contextStore` with tech stack, framework, codebase root, output_dir.
 
 ## Workflow
 
+**MANDATORY READ:** Load `shared/references/two_layer_detection.md` for detection methodology.
+
 1) Parse context + output_dir
-2) Check observability patterns
-3) Collect findings
-4) Calculate score
-5) **Write Report:** Build full markdown report in memory per `shared/templates/audit_worker_report_template.md`, write to `{output_dir}/627-observability.md` in single Write call
-6) **Return Summary:** Return minimal summary to coordinator
+2) **Determine project type (Layer 2 pre-check):** Is this a web service (all checks apply), CLI tool (health/probes not applicable), or library (most checks optional)? Adjust applicable checks accordingly.
+3) Check observability patterns (Layer 1: grep)
+4) Analyze context per candidate (Layer 2):
+   - Structured logging: is this a library (no logging OK) or a service (logging required)?
+   - Health endpoints: web service → required. CLI/library → skip
+   - Request tracing: monolith → less needed. Microservice → critical
+5) Collect confirmed findings
+6) Calculate score
+7) **Write Report:** Build full markdown report in memory per `shared/templates/audit_worker_report_template.md`, write to `{output_dir}/627-observability.md` in single Write call
+8) **Return Summary:** Return minimal summary to coordinator
 
 ## Audit Rules
 

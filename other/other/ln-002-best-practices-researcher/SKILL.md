@@ -155,6 +155,7 @@ Research industry standards and create project documentation in one workflow.
 - ADR template: `shared/templates/adr_template.md`
 - Research template: `shared/templates/research_template.md`
 - Standards: `docs/DOCUMENTATION_STANDARDS.md` (if exists)
+- **MANDATORY READ:** `shared/references/research_tool_fallback.md`
 
 ---
 **Version:** 3.0.1

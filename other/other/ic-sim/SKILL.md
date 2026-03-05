@@ -1,7 +1,7 @@
 ---
 name: ic-sim
 disable-model-invocation: true
-description: "Simulates a realistic VC Investment Committee discussion with three partner archetypes debating a startup's merits, concerns, and deal terms, scored across 28 dimensions. Use when user asks to \"simulate an IC\", \"how would VCs discuss this\", \"IC meeting simulation\", \"investment committee practice\", \"prepare for IC\", \"VC partner discussion\", \"what will investors debate\", \"how would a fund evaluate this\", \"IC prep\", or provides startup materials for investment committee simulation. Do NOT use for pitch deck feedback (use deck-review), market sizing, or financial model analysis."
+description: "Simulates a realistic VC Investment Committee discussion with three partner archetypes debating a startup's merits, concerns, and deal terms, scored across 28 dimensions. Use when user asks to 'simulate an IC', 'how would VCs discuss this', 'IC meeting simulation', 'investment committee practice', 'prepare for IC', 'VC partner discussion', 'what will investors debate', 'how would a fund evaluate this', 'IC prep', or provides startup materials for investment committee simulation. Do NOT use for pitch deck feedback (use deck-review), market sizing, or financial model analysis."
 compatibility: Requires Python 3.10+ and uv for script execution.
 metadata:
   author: lool-ventures
@@ -74,12 +74,16 @@ SCRIPTS="$CLAUDE_PLUGIN_ROOT/skills/ic-sim/scripts"
 REFS="$CLAUDE_PLUGIN_ROOT/skills/ic-sim/references"
 if ls "$(pwd)"/mnt/*/ >/dev/null 2>&1; then
   ARTIFACTS_ROOT="$(ls -d "$(pwd)"/mnt/*/ | head -1)artifacts"
+elif ls "$(pwd)"/sessions/*/mnt/*/ >/dev/null 2>&1; then
+  ARTIFACTS_ROOT="$(ls -d "$(pwd)"/sessions/*/mnt/*/ | head -1)artifacts"
 else
   ARTIFACTS_ROOT="$(pwd)/artifacts"
 fi
 ```
 
 If `CLAUDE_PLUGIN_ROOT` is empty, fall back: `Glob` for `**/founder-skills/skills/ic-sim/scripts/score_dimensions.py`, strip to get `SCRIPTS`, derive `REFS`.
+
+**If `ARTIFACTS_ROOT` resolves to `$(pwd)/artifacts` but no `artifacts/` directory exists at `$(pwd)`:** The workspace may not be mounted yet. Use `Glob` with pattern `**/artifacts/founder_context.json` to locate existing artifacts, and derive `ARTIFACTS_ROOT` from the result. If nothing is found, `mkdir -p "$ARTIFACTS_ROOT"` and proceed.
 
 ```bash
 SIM_DIR="$ARTIFACTS_ROOT/ic-sim-{company-slug}"
@@ -136,7 +140,7 @@ CONFLICT_EOF
 
 **REQUIRED — read `$REFS/evaluation-criteria.md` now.**
 
-Spawn 3 `general-purpose` Task sub-agents **in a single message** (parallel, no `isolation: "worktree"`). Each receives: archetype persona, startup_profile, fund_profile, conflict_check, prior_artifacts, and relevant evaluation criteria. Each independently produces `partner_assessment_{role}.json`.
+Spawn 3 `general-purpose` Task sub-agents **in a single message** (parallel, no `isolation: "worktree"`). Each receives: archetype persona, startup_profile, fund_profile, conflict_check, prior_artifacts, and relevant evaluation criteria. Each independently produces `partner_assessment_{role}.json`. Instruct each sub-agent to return ONLY: (1) the file path written, (2) the verdict, and (3) a one-sentence rationale — do not echo the full assessment back.
 
 **Graceful degradation:** If Task tool unavailable, generate sequentially with strict persona separation. Set `assessment_mode: "sequential"` and `"assessment_mode_intentional": true` in discussion.json.
 
@@ -171,13 +175,15 @@ python3 "$SCRIPTS/compose_report.py" --dir "$SIM_DIR" --pretty -o "$SIM_DIR/repo
 
 Fix high-severity warnings and re-run. Use `--strict` to enforce a clean report.
 
-**Primary deliverable:** Read `report_markdown` from the output JSON and display it to the user in full. Then add coaching commentary.
+**Primary deliverable:** Read `report_markdown` from the output JSON, write it to `$SIM_DIR/report.md`, and display it to the user in full. **Present the file path** so the user can access it directly. Then add coaching commentary.
 
 ### Step 8 (Optional): Generate Visual Report
 
 ```bash
 python3 "$SCRIPTS/visualize.py" --dir "$SIM_DIR" -o "$SIM_DIR/report.html"
 ```
+
+**Present the HTML file path** to the user so they can open the visual report.
 
 ### Step 9: Deliver Artifacts
 

@@ -1,21 +1,34 @@
 ---
 name: keyword-research
-description: 'Use when the user asks to "find keywords", "keyword research", "what should I write about", "identify ranking opportunities", "topic ideas", "what are people searching for", "which keywords should I target", or "give me keyword ideas". Discovers high-value keywords with search intent analysis, difficulty assessment, and content opportunity mapping. Essential for starting any SEO or GEO content strategy. For analyzing competitor keywords specifically, see competitor-analysis. For content topic gaps, see content-gap-analysis.'
+version: "3.0.0"
+description: 'This skill should be used when the user asks to "find keywords", "keyword research", "what should I write about", "keyword difficulty score", "search volume data", "identify ranking opportunities", "topic ideas", "what are people searching for", "which keywords to target", "content ideas for [topic]", or "long-tail keyword suggestions". Discovers high-value keywords with search intent classification (informational/commercial/transactional/navigational), keyword difficulty (KD) scoring, monthly search volume (MSV), CPC estimates, and AI citation potential. Produces ranked keyword lists, topic clusters with pillar + cluster page assignments, and priority-scored content calendars. Works with Ahrefs, SEMrush, Google Keyword Planner, Google Search Console, or manual data input. For competitor keyword gaps, see competitor-analysis. For topic coverage gaps, see content-gap-analysis.'
 license: Apache-2.0
+compatibility: "Claude Code ≥1.0, skills.sh marketplace, ClawHub marketplace, Vercel Labs skills ecosystem. No system packages required. Optional: MCP network access for SEO tool integrations."
 metadata:
+  openclaw:
+    requires:
+      env: []
+      bins: []
+    primaryEnv: AHREFS_API_KEY
   author: aaron-he-zhu
-  version: "2.0.0"
+  version: "3.0.0"
   geo-relevance: "medium"
   tags:
     - seo
     - geo
     - keywords
-    - search intent
-    - content strategy
-    - topic research
-    - content planning
-    - search volume
-    - long-tail keywords
+    - ahrefs
+    - semrush
+    - google-keyword-planner
+    - kd-score
+    - search-volume
+    - cpc
+    - topic-clusters
+    - pillar-pages
+    - long-tail-keywords
+    - content-calendar
+    - keyword-gap
+    - search-intent-classification
   triggers:
     - "find keywords"
     - "keyword research"
@@ -49,7 +62,7 @@ metadata:
 
 </details>
 
-This skill helps you discover, analyze, and prioritize keywords for SEO and GEO content strategies. It identifies high-value opportunities based on search volume, competition, intent, and business relevance.
+Discovers, analyzes, and prioritizes keywords for SEO and GEO content strategies. Identifies high-value opportunities based on search volume, competition, intent, and business relevance.
 
 ## When to Use This Skill
 
@@ -276,58 +289,9 @@ When a user requests keyword research:
 
 9. **Generate Output Report**
 
-   ```markdown
-   # Keyword Research Report: [Topic]
-   
-   **Generated**: [Date]
-   **Target Audience**: [Audience]
-   **Business Goal**: [Goal]
-   
-   ## Executive Summary
-   
-   - Total keywords analyzed: [X]
-   - High-priority opportunities: [X]
-   - Estimated traffic potential: [X]/month
-   - Recommended focus areas: [List]
-   
-   ## Top Keyword Opportunities
-   
-   ### Quick Wins (Low difficulty, High value)
-   
-   | Keyword | Volume | Difficulty | Intent | Score |
-   |---------|--------|------------|--------|-------|
-   | [keyword 1] | [X] | [X] | [type] | [X] |
-   | [keyword 2] | [X] | [X] | [type] | [X] |
-   
-   ### Growth Keywords (Medium difficulty, High volume)
-   
-   | Keyword | Volume | Difficulty | Intent | Score |
-   |---------|--------|------------|--------|-------|
-   | [keyword 1] | [X] | [X] | [type] | [X] |
-   
-   ### GEO Opportunities (AI-citation potential)
-   
-   | Keyword | Type | AI Potential | Recommended Format |
-   |---------|------|--------------|-------------------|
-   | [keyword 1] | Question | High | Q&A section |
-   | [keyword 2] | Definition | High | Clear definition |
-   
-   ## Topic Clusters
-   
-   [Include cluster maps]
-   
-   ## Content Calendar Recommendations
-   
-   | Month | Content | Target Keyword | Type |
-   |-------|---------|----------------|------|
-   | [Month] | [Title] | [Keyword] | [Type] |
-   
-   ## Next Steps
+   Produce a report containing: Executive Summary, Top Keyword Opportunities (Quick Wins, Growth, GEO), Topic Clusters, Content Calendar, and Next Steps.
 
-   1. [Action item 1]
-   2. [Action item 2]
-   3. [Action item 3]
-   ```
+   > **Reference**: See [references/example-report.md](./references/example-report.md) for the full report template and example.
 
 ## Validation Checkpoints
 
@@ -346,123 +310,14 @@ When a user requests keyword research:
 
 ## Example
 
-**User**: "Research keywords for a project management software company targeting small businesses"
+> **Reference**: See [references/example-report.md](./references/example-report.md) for a complete example report for "project management software for small businesses".
 
-**Output**:
+### Advanced Usage
 
-```markdown
-# Keyword Research Report: Project Management Software
-
-**Generated**: [current month and year]
-**Target Audience**: Small business owners and teams
-**Business Goal**: Software signups and trials
-
-## Executive Summary
-
-- Total keywords analyzed: 150+
-- High-priority opportunities: 23
-- Estimated traffic potential: 45,000/month
-- Recommended focus areas: 
-  - Task management workflows
-  - Team collaboration
-  - Small business productivity
-
-## Top Keyword Opportunities
-
-### Quick Wins (Priority: Immediate)
-
-| Keyword | Volume | Difficulty | Intent | Score |
-|---------|--------|------------|--------|-------|
-| project management for small teams | 1,200 | 28 | Commercial | 92 |
-| simple task management software | 890 | 25 | Commercial | 89 |
-| best free project management tool | 2,400 | 35 | Commercial | 85 |
-| how to manage remote team projects | 720 | 22 | Informational | 82 |
-| project tracking spreadsheet alternative | 480 | 18 | Commercial | 80 |
-
-### Growth Keywords (Priority: 3-6 months)
-
-| Keyword | Volume | Difficulty | Intent | Score |
-|---------|--------|------------|--------|-------|
-| project management software | 18,000 | 72 | Commercial | 65 |
-| best project management tools [current year] | 8,500 | 65 | Commercial | 62 |
-| project management app | 12,000 | 68 | Commercial | 58 |
-
-### GEO Opportunities (AI-citation potential)
-
-| Keyword | Type | AI Potential | Recommended Format |
-|---------|------|--------------|-------------------|
-| what is project management | Definition | ⭐⭐⭐⭐⭐ | Clear definition + methodology |
-| agile vs waterfall | Comparison | ⭐⭐⭐⭐⭐ | Side-by-side comparison table |
-| project management methodologies | List | ⭐⭐⭐⭐ | Comprehensive list with pros/cons |
-| how to create a project plan | How-to | ⭐⭐⭐⭐ | Step-by-step guide |
-| project management best practices | List | ⭐⭐⭐⭐ | Numbered best practices |
-
-## Topic Clusters
-
-### Cluster 1: Project Management Fundamentals
-
-**Pillar**: "Complete Guide to Project Management" (8,500 volume)
-
-Cluster articles:
-1. What is project management? (2,200 volume)
-2. Project management methodologies explained (1,800 volume)
-3. How to create a project plan (1,400 volume)
-4. Project management best practices (1,200 volume)
-5. Project management roles and responsibilities (890 volume)
-
-### Cluster 2: Team Collaboration
-
-**Pillar**: "Team Collaboration Tools Guide" (4,200 volume)
-
-Cluster articles:
-1. How to improve team communication (1,600 volume)
-2. Remote team management tips (1,400 volume)
-3. Best practices for distributed teams (920 volume)
-4. Team productivity tools comparison (780 volume)
-
-## Content Calendar Recommendations
-
-| Month | Content | Target Keyword | Type |
-|-------|---------|----------------|------|
-| Week 1 | Simple Task Management Guide | simple task management software | Blog + Demo |
-| Week 2 | Project Management for Small Teams | project management for small teams | Pillar Page |
-| Week 3 | Agile vs Waterfall: Complete Comparison | agile vs waterfall | Comparison |
-| Week 4 | Free PM Tools Roundup | best free project management tool | Listicle |
-
-## Next Steps
-
-1. **Immediate**: Create landing pages for top 5 quick-win keywords
-2. **Week 1-2**: Write pillar content for "Project Management Fundamentals"
-3. **Week 3-4**: Build out cluster content with internal linking
-4. **Ongoing**: Track rankings and adjust strategy based on performance
-```
-
-## Advanced Features
-
-### Intent Mapping
-
-```
-Map all keywords for [topic] by search intent and funnel stage
-```
-
-### Seasonal Analysis
-
-```
-Identify seasonal keyword trends for [industry]
-```
-
-### Competitor Gap
-
-```
-What keywords do [competitor 1], [competitor 2], [competitor 3] rank for 
-that I'm missing?
-```
-
-### Local Keywords
-
-```
-Research local keywords for [business type] in [city/region]
-```
+- **Intent Mapping**: `Map all keywords for [topic] by search intent and funnel stage`
+- **Seasonal Analysis**: `Identify seasonal keyword trends for [industry]`
+- **Competitor Gap**: `What keywords do [competitor 1], [competitor 2] rank for that I'm missing?`
+- **Local Keywords**: `Research local keywords for [business type] in [city/region]`
 
 ## Tips for Success
 
@@ -474,99 +329,13 @@ Research local keywords for [business type] in [city/region]
 6. **Include GEO keywords** in your strategy for AI visibility
 7. **Review quarterly** - keyword dynamics change over time
 
-## Keyword Intent Taxonomy
-
-Understanding search intent is critical for keyword selection and content planning.
-
-### Intent Classification Matrix
-
-| Intent Type | User Goal | SERP Signals | Content Strategy | Conversion Potential |
-|------------|-----------|--------------|-----------------|---------------------|
-| Informational | Learn something | Featured snippets, PAA, knowledge panels | Guides, tutorials, explainers | Low (nurture) |
-| Navigational | Find specific site/page | Brand results, sitelinks | Brand pages, login pages | Medium (brand) |
-| Commercial Investigation | Research before buying | Comparison results, reviews, "best" lists | Comparisons, reviews, buying guides | High (mid-funnel) |
-| Transactional | Complete an action | Shopping results, ads, product pages | Product pages, pricing, signup | Highest (bottom-funnel) |
-
-### Intent Signal Words
-
-| Intent | Signal Words | Example Keywords |
-|--------|-------------|-----------------|
-| Informational | how, what, why, when, guide, tutorial, learn, examples | "how to improve SEO", "what is schema markup" |
-| Navigational | [brand name], login, sign in, official, website | "Ahrefs login", "Google Search Console" |
-| Commercial | best, top, review, comparison, vs, alternative, pricing | "best SEO tools 2026", "Ahrefs vs SEMrush" |
-| Transactional | buy, purchase, discount, coupon, free trial, download, hire | "buy Ahrefs subscription", "SEO audit tool free" |
-
-## Topic Cluster Architecture
-
-### Hub-and-Spoke Model
-
-```
-                    ┌──────────────┐
-              ┌─────│  Sub-topic A  │
-              │     └──────────────┘
-              │     ┌──────────────┐
-┌─────────┐   ├─────│  Sub-topic B  │
-│  PILLAR  │───┤     └──────────────┘
-│  PAGE    │   ├─────┌──────────────┐
-└─────────┘   │     │  Sub-topic C  │
-              │     └──────────────┘
-              └─────┌──────────────┐
-                    │  Sub-topic D  │
-                    └──────────────┘
-```
-
-**Pillar Page**: Comprehensive overview (3,000-5,000 words) targeting broad keyword
-**Cluster Pages**: Focused articles (1,500-2,500 words) targeting specific long-tail keywords
-**Internal Links**: Every cluster page links to pillar; pillar links to all cluster pages
-
-### Topic Cluster Planning Template
-
-| Pillar Topic | Pillar Keyword | Cluster Topic | Cluster Keyword | Volume | Difficulty | Status |
-|-------------|---------------|--------------|----------------|--------|-----------|--------|
-| [Broad topic] | [Head keyword] | [Subtopic 1] | [Long-tail 1] | [X] | [X] | [Draft/Published] |
-
-## Keyword Prioritization Framework
-
-**Which score to use**: Use the Priority Score (below) for initial keyword triage and shortlisting. Use the Opportunity Score (Step 6 above) for final content calendar prioritization, where the additional GEO and competitive factors provide more nuanced ranking.
-
-### Priority Scoring Matrix
-
-Score each keyword 1-5 on these factors, then calculate weighted total:
-
-| Factor | Weight | Score 1 (Low) | Score 5 (High) |
-|--------|--------|---------------|----------------|
-| Search Volume | 20% | <100/mo | >10,000/mo |
-| Keyword Difficulty | 25% | KD >80 (hard) | KD <20 (easy) |
-| Business Relevance | 30% | Tangential to offering | Core to offering |
-| Search Intent Match | 15% | Informational only | Transactional/commercial |
-| Trend Direction | 10% | Declining | Growing |
-
-**Priority Score** = Σ(Factor Weight × Score) / 5
-
-### Priority Categories
-
-| Priority | Score Range | Action |
-|----------|------------|--------|
-| P0 — Must Target | 4.0-5.0 | Create content immediately |
-| P1 — High Value | 3.0-3.9 | Queue for next content sprint |
-| P2 — Opportunity | 2.0-2.9 | Plan for future content calendar |
-| P3 — Monitor | 1.0-1.9 | Track but don't prioritize |
-
-## Seasonal Keyword Patterns
-
-### Seasonal Analysis Framework
-
-| Season Trigger | Example Keywords | Planning Lead Time | Content Strategy |
-|---------------|-----------------|-------------------|-----------------|
-| Calendar events | "Black Friday SEO", "New Year marketing plan" | 3-4 months ahead | Publish 6-8 weeks before peak |
-| Industry events | "[Conference] takeaways", "Google algorithm update" | 1-2 months / reactive | Pre-plan templates, react quickly |
-| Budget cycles | "marketing budget template Q1", "SEO ROI report" | 2-3 months ahead | Target planning season (Oct-Dec) |
-| Seasonal demand | "summer marketing ideas", "holiday email campaigns" | 2-3 months ahead | Refresh annually with new data |
 
 ## Reference Materials
 
 - [Keyword Intent Taxonomy](./references/keyword-intent-taxonomy.md) — Complete intent classification with signal words and content strategies
 - [Topic Cluster Templates](./references/topic-cluster-templates.md) — Hub-and-spoke architecture templates for pillar and cluster content
+- [Keyword Prioritization Framework](./references/keyword-prioritization-framework.md) — Priority scoring matrix, categories, and seasonal keyword patterns
+- [Example Report](./references/example-report.md) — Complete example keyword research report for project management software
 
 ## Related Skills
 
@@ -575,6 +344,4 @@ Score each keyword 1-5 on these factors, then calculate weighted total:
 - [seo-content-writer](../../build/seo-content-writer/) — Create content for target keywords
 - [geo-content-optimizer](../../build/geo-content-optimizer/) — Optimize for AI citations
 - [rank-tracker](../../monitor/rank-tracker/) — Monitor keyword position changes over time
-- [memory-management](../../cross-cutting/memory-management/) — Store keyword data in project memory
-- [serp-analysis](../serp-analysis/) — SERP patterns inform keyword strategy
 

@@ -1,6 +1,6 @@
 ---
 name: ln-624-code-quality-auditor
-description: "Code quality audit worker (L3). Checks cyclomatic complexity, deep nesting, long methods, god classes, method signature quality, O(n²) algorithms, N+1 queries, magic numbers/constants. Returns findings with severity, location, effort, recommendations."
+description: "Code quality audit worker (L3). Checks cyclomatic complexity, nesting, long methods, god classes, method signatures, O(n²), N+1 queries, constants management. Returns findings."
 allowed-tools: Read, Grep, Glob, Bash
 ---
 
@@ -28,19 +28,22 @@ Receives `contextStore` with: `tech_stack`, `best_practices`, `principles`, `cod
 
 ## Workflow
 
+**MANDATORY READ:** Load `shared/references/two_layer_detection.md` for detection methodology.
+
 1) **Parse context** — extract fields, determine `scan_path` (domain-aware if specified), extract `output_dir`
-2) **Scan codebase for violations**
+2) **Scan codebase for violations (Layer 1)**
    - All Grep/Glob patterns use `scan_path` (not codebase_root)
    - Example: `Grep(pattern="if.*if.*if", path=scan_path)` for nesting detection
-
-3) **Collect findings with severity, location, effort, recommendation**
+3) **Analyze context per candidate (Layer 2)**
+   - Cyclomatic complexity: is complexity from switch/case on enum (valid) or deeply nested conditions (bad)?
+   - O(n²): read context — what's n? If bounded (n < 100), downgrade severity
+   - N+1: read ORM config — does it have eager loading configured elsewhere?
+   - Cascade depth: already traces calls (implicit Layer 2)
+4) **Collect findings with severity, location, effort, recommendation**
    - Tag each finding with `domain: domain_name` (if domain-aware)
-
-4) **Calculate score using penalty algorithm**
-
-5) **Write Report:** Build full markdown report in memory per `shared/templates/audit_worker_report_template.md`, write to `{output_dir}/624-quality-{domain}.md` (or `624-quality.md` in global mode) in single Write call
-
-6) **Return Summary:** Return minimal summary to coordinator (see Output Format)
+5) **Calculate score using penalty algorithm**
+6) **Write Report:** Build full markdown report in memory per `shared/templates/audit_worker_report_template.md`, write to `{output_dir}/624-quality-{domain}.md` (or `624-quality.md` in global mode) in single Write call
+7) **Return Summary:** Return minimal summary to coordinator (see Output Format)
 
 ## Audit Rules (Priority: MEDIUM)
 
@@ -272,7 +275,6 @@ Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 - **Worker report template:** `shared/templates/audit_worker_report_template.md`
 - **Audit scoring formula:** `shared/references/audit_scoring.md`
 - **Audit output schema:** `shared/references/audit_output_schema.md`
-- Code quality rules: [references/code_quality_rules.md](references/code_quality_rules.md)
 
 ---
 **Version:** 3.0.0

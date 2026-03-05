@@ -9,6 +9,15 @@ description: "Worker that checks DRY/KISS/YAGNI/architecture compliance with qua
 
 Analyzes Done implementation tasks with quantitative Code Quality Score based on metrics, MCP Ref validation, and issue penalties.
 
+## Inputs
+
+| Input | Required | Source | Description |
+|-------|----------|--------|-------------|
+| `storyId` | Yes | args, git branch, kanban, user | Story to process |
+
+**Resolution:** Per `shared/references/input_resolution_pattern.md` — Story Resolution Chain.
+**Status filter:** In Progress, To Review
+
 ## Purpose & Scope
 - Load Story and Done implementation tasks (exclude test tasks)
 - Calculate Code Quality Score using metrics and issue penalties
@@ -102,18 +111,26 @@ Formula: `Code Quality Score = 100 - metric_penalties - issue_penalties`
 - Before ln-512 tech debt cleanup and ln-513 agent review
 
 ## Workflow (concise)
-1) Load Story (full) and Done implementation tasks (full descriptions) via Linear; skip tasks with label "tests".
-2) Collect affected files from tasks (Affected Components/Existing Code Impact) and recent commits/diffs if noted.
-3) **Calculate code metrics:**
+
+**MANDATORY READ:** Load `shared/references/input_resolution_pattern.md`
+
+1) **Resolve storyId** (per input_resolution_pattern.md):
+   - IF args provided → use args
+   - ELSE IF git branch matches `feature/{id}-*` → extract id
+   - ELSE IF kanban has exactly 1 Story in [In Progress, To Review] → suggest
+   - ELSE → AskUserQuestion: show Stories from kanban filtered by [In Progress, To Review]
+2) Load Story (full) and Done implementation tasks (full descriptions) via Linear; skip tasks with label "tests".
+3) Collect affected files from tasks (Affected Components/Existing Code Impact) and recent commits/diffs if noted.
+4) **Calculate code metrics:**
    - Cyclomatic Complexity per function (target ≤10)
    - Function size (target ≤50 lines)
    - File size (target ≤500 lines)
    - Nesting depth (target ≤3)
    - Parameter count (target ≤4)
 
-4) **MCP Ref Validation (MANDATORY for code changes — SKIP if `--skip-mcp-ref` flag passed):**
+5) **MCP Ref Validation (MANDATORY for code changes — SKIP if `--skip-mcp-ref` flag passed):**
 
-   > **Fast-track mode:** When invoked with `--skip-mcp-ref`, skip this entire step (no OPT-, BP-, PERF- checks). Proceed directly to step 5 (static analysis). This reduces cost from ~5000 to ~800 tokens while preserving metrics + static analysis coverage.
+   > **Fast-track mode:** When invoked with `--skip-mcp-ref`, skip this entire step (no OPT-, BP-, PERF- checks). Proceed directly to step 6 (static analysis). This reduces cost from ~5000 to ~800 tokens while preserving metrics + static analysis coverage.
 
    **Level 1 — OPTIMALITY (OPT-):**
    - Extract goal from task (e.g., "user authentication", "caching", "API rate limiting")
@@ -139,7 +156,7 @@ Formula: `Code Quality Score = 100 - metric_penalties - issue_penalties`
    - Loops/recursion in critical paths
    - ORM queries added
 
-5) **Analyze code for static issues (assign prefixes):**
+6) **Analyze code for static issues (assign prefixes):**
    **MANDATORY READ:** `shared/references/clean_code_checklist.md`
    - SEC-: hardcoded creds, unvalidated input, SQL injection, race conditions
    - MNT-: DRY violations (MNT-DRY-: duplicate logic), dead code (MNT-DC-: per checklist), complex conditionals, poor naming
@@ -160,12 +177,12 @@ Formula: `Code Quality Score = 100 - metric_penalties - issue_penalties`
    - MNT-SIG-: method signature quality (boolean flags, unclear returns)
    - MNT-ERR-: error contract inconsistency (mixed raise/return patterns in same service)
 
-6) **Calculate Code Quality Score:**
+7) **Calculate Code Quality Score:**
    - Start with 100
    - Subtract metric penalties (see Code Metrics table)
    - Subtract issue penalties (see Issue penalties table)
 
-7) Output verdict with score and structured issues. Add Linear comment with findings.
+8) Output verdict with score and structured issues. Add Linear comment with findings.
 
 ## Critical Rules
 - Read guides mentioned in Story/Tasks before judging compliance.
@@ -296,6 +313,7 @@ Formula: `Code Quality Score = 100 - metric_penalties - issue_penalties`
 - Guides: `docs/guides/`
 - Templates for context: `shared/templates/task_template_implementation.md`
 - **Clean code checklist:** `shared/references/clean_code_checklist.md`
+- **MANDATORY READ:** `shared/references/research_tool_fallback.md`
 
 ---
 **Version:** 5.0.0

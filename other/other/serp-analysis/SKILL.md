@@ -1,10 +1,18 @@
 ---
 name: serp-analysis
-description: 'Use when the user asks to "analyze search results", "SERP analysis", "what ranks for", "SERP features", "why does this page rank", "what is on page one for this query", "who ranks for this keyword", or "what does Google show for". Analyzes search engine results pages (SERPs) to understand ranking factors, SERP features, user intent patterns, and AI overview triggers. Essential for understanding what it takes to rank. For tracking rankings over time, see rank-tracker. For keyword discovery, see keyword-research.'
+version: "3.0.0"
+description: 'This skill should be used when the user asks to "analyze search results", "SERP analysis", "what ranks for", "SERP features", "why does this page rank", "what is on page one for this query", "who ranks for this keyword", or "what does Google show for". Analyzes search engine results pages (SERPs) to understand ranking factors, SERP features, user intent patterns, and AI overview triggers. Essential for understanding what it takes to rank. For tracking rankings over time, see rank-tracker. For keyword discovery, see keyword-research.'
 license: Apache-2.0
+compatibility: "Claude Code ≥1.0, skills.sh marketplace, ClawHub marketplace, Vercel Labs skills ecosystem. No system packages required. Optional: MCP network access for SEO tool integrations."
+allowed-tools: WebFetch
 metadata:
+  openclaw:
+    requires:
+      env: []
+      bins: []
+    primaryEnv: AHREFS_API_KEY
   author: aaron-he-zhu
-  version: "2.0.0"
+  version: "3.0.0"
   geo-relevance: "high"
   tags:
     - seo
@@ -16,6 +24,15 @@ metadata:
     - ai overviews
     - featured snippets
     - search intent
+    - serp-features
+    - featured-snippet
+    - google-ai-overview
+    - ai-overview
+    - people-also-ask
+    - knowledge-panel
+    - serp-composition
+    - position-zero
+    - serp-intent
   triggers:
     - "analyze search results"
     - "SERP analysis"
@@ -130,301 +147,33 @@ When a user requests SERP analysis:
 
 2. **Map SERP Composition**
 
-   Document all elements appearing:
-
-   ```markdown
-   ## SERP Analysis: "[keyword]"
-   
-   **Search Details**
-   - Keyword: [keyword]
-   - Location: [location]
-   - Device: [mobile/desktop]
-   - Date: [date]
-   
-   ### SERP Layout Overview
-   
-   ```
-   ┌─────────────────────────────────────────┐
-   │ [AI Overview / SGE] (if present)        │
-   ├─────────────────────────────────────────┤
-   │ [Ads] - [X] ads above fold              │
-   ├─────────────────────────────────────────┤
-   │ [Featured Snippet] (if present)         │
-   ├─────────────────────────────────────────┤
-   │ [Organic Result #1]                     │
-   │ [Organic Result #2]                     │
-   │ [People Also Ask] (if present)          │
-   │ [Organic Result #3]                     │
-   │ ...                                     │
-   ├─────────────────────────────────────────┤
-   │ [Related Searches]                      │
-   └─────────────────────────────────────────┘
-   ```
-   
-   ### SERP Features Present
-   
-   | Feature | Present | Position | Opportunity |
-   |---------|---------|----------|-------------|
-   | AI Overview | Yes/No | Top | [analysis] |
-   | Featured Snippet | Yes/No | [pos] | [analysis] |
-   | People Also Ask | Yes/No | [pos] | [analysis] |
-   | Knowledge Panel | Yes/No | Right | [analysis] |
-   | Image Pack | Yes/No | [pos] | [analysis] |
-   | Video Results | Yes/No | [pos] | [analysis] |
-   | Local Pack | Yes/No | [pos] | [analysis] |
-   | Shopping Results | Yes/No | [pos] | [analysis] |
-   | News Results | Yes/No | [pos] | [analysis] |
-   | Sitelinks | Yes/No | [pos] | [analysis] |
-   ```
+   Document all elements appearing on the results page: AI Overview, ads, featured snippet, organic results, PAA, knowledge panel, image pack, video results, local pack, shopping results, news results, sitelinks, and related searches.
 
 3. **Analyze Top Ranking Pages**
 
-   For top 10 results:
-
-   ```markdown
-   ### Top 10 Organic Results Analysis
-   
-   #### Position #1: [Title]
-   
-   **URL**: [url]
-   **Domain**: [domain]
-   **Domain Authority**: [DA]
-   
-   **Content Analysis**:
-   - Type: [Blog/Product/Guide/etc.]
-   - Word Count: [X] words
-   - Publish Date: [date]
-   - Last Updated: [date]
-   
-   **On-Page Factors**:
-   - Title: [exact title]
-   - Title contains keyword: Yes/No
-   - Meta description: [description]
-   - H1: [heading]
-   - URL structure: [clean/keyword-rich/etc.]
-   
-   **Content Structure**:
-   - Headings (H2s): [list key sections]
-   - Media: [X] images, [X] videos
-   - Tables/Lists: Yes/No
-   - FAQ section: Yes/No
-   
-   **Estimated Metrics**:
-   - Page backlinks: [X]
-   - Referring domains: [X]
-   - Social shares: [X]
-   
-   **Why It Ranks #1**:
-   1. [Factor 1]
-   2. [Factor 2]
-   3. [Factor 3]
-   
-   [Repeat for positions #2-10]
-   ```
+   For each of the top 10 results, document: URL, domain, domain authority, content type, word count, publish/update dates, on-page factors (title, meta description, H1, URL structure), content structure (headings, media, tables, FAQ), estimated metrics (backlinks, referring domains), and why it ranks.
 
 4. **Identify Ranking Patterns**
 
-   ```markdown
-   ### Ranking Patterns Analysis
-   
-   **Common Characteristics of Top 5 Results**:
-   
-   | Factor | Avg/Common Value | Importance |
-   |--------|-----------------|------------|
-   | Word Count | [X] words | High/Med/Low |
-   | Domain Authority | [X] | High/Med/Low |
-   | Page Backlinks | [X] | High/Med/Low |
-   | Content Freshness | [timeframe] | High/Med/Low |
-   | HTTPS | [X]% | High/Med/Low |
-   | Mobile Optimized | [X]% | High/Med/Low |
-   
-   **Content Format Distribution**:
-   - How-to guides: [X]/10
-   - Listicles: [X]/10
-   - In-depth articles: [X]/10
-   - Product pages: [X]/10
-   - Other: [X]/10
-   
-   **Domain Type Distribution**:
-   - Brand/Company sites: [X]/10
-   - Media/News sites: [X]/10
-   - Niche blogs: [X]/10
-   - Aggregators: [X]/10
-   
-   **Key Success Factors Identified**:
-   
-   1. **[Factor 1]**: [Explanation + evidence]
-   2. **[Factor 2]**: [Explanation + evidence]
-   3. **[Factor 3]**: [Explanation + evidence]
-   ```
+   Analyze common characteristics across top 5 results: word count, domain authority, backlinks, content freshness, HTTPS, mobile optimization. Document content format distribution, domain type distribution, and key success factors.
 
 5. **Analyze SERP Features**
 
-   ```markdown
-   ### Featured Snippet Analysis
-   
-   **Current Snippet Holder**: [URL]
-   **Snippet Type**: [Paragraph/List/Table/Video]
-   **Snippet Content**: 
-   > [Exact text/description of snippet]
-   
-   **How to Win This Snippet**:
-   1. [Strategy based on current snippet]
-   2. [Content format recommendation]
-   3. [Structure recommendation]
-   
-   ---
-   
-   ### People Also Ask (PAA) Analysis
-   
-   **Questions Appearing**:
-   1. [Question 1] → Currently answered by: [URL]
-   2. [Question 2] → Currently answered by: [URL]
-   3. [Question 3] → Currently answered by: [URL]
-   4. [Question 4] → Currently answered by: [URL]
-   
-   **PAA Optimization Strategy**:
-   - Include these questions as H2/H3 headings
-   - Provide direct, concise answers (40-60 words)
-   - Use FAQ schema markup
-   
-   ---
-   
-   ### AI Overview Analysis
-   
-   **AI Overview Present**: Yes/No
-   **AI Overview Type**: [Summary/List/Comparison/etc.]
-   
-   **Sources Cited in AI Overview**:
-   1. [Source 1] - [Why cited]
-   2. [Source 2] - [Why cited]
-   3. [Source 3] - [Why cited]
-   
-   **AI Overview Content Patterns**:
-   - Pulls definitions from: [source type]
-   - Lists information as: [format]
-   - Cites statistics from: [source type]
-   
-   **How to Get Cited in AI Overview**:
-   1. [Specific recommendation]
-   2. [Specific recommendation]
-   3. [Specific recommendation]
-   ```
+   For each present SERP feature: analyze the current holder, content format, and strategy to win. Cover Featured Snippet (type, content, winning strategy), PAA (questions, current answers, optimization approach), and AI Overview (sources cited, content patterns, citation strategy).
 
 6. **Determine Search Intent**
 
-   ```markdown
-   ### Search Intent Analysis
-   
-   **Primary Intent**: [Informational/Commercial/Transactional/Navigational]
-   
-   **Evidence**:
-   - SERP features suggest: [analysis]
-   - Top results are: [content types]
-   - User likely wants: [description]
-   
-   **Intent Breakdown**:
-   - Informational signals: [X]%
-   - Commercial signals: [X]%
-   - Transactional signals: [X]%
-   
-   **Content Format Implication**:
-   Based on intent, your content should:
-   - Format: [recommendation]
-   - Tone: [recommendation]
-   - CTA: [recommendation]
-   ```
+   Confirm primary intent from SERP composition. Document evidence, intent breakdown percentages, and content format implications (format, tone, CTA).
 
 7. **Calculate True Difficulty**
 
-   ```markdown
-   ### Difficulty Assessment
-   
-   **Overall Difficulty Score**: [X]/100
-   
-   **Difficulty Factors**:
-   
-   | Factor | Score | Weight | Impact |
-   |--------|-------|--------|--------|
-   | Top 10 Domain Authority | [avg] | 25% | [High/Med/Low] |
-   | Top 10 Page Authority | [avg] | 20% | [High/Med/Low] |
-   | Backlinks Required | [est.] | 20% | [High/Med/Low] |
-   | Content Quality Bar | [rating] | 20% | [High/Med/Low] |
-   | SERP Stability | [rating] | 15% | [High/Med/Low] |
-   
-   **Realistic Assessment**:
-   
-   - **New site (DA <20)**: [Can rank?] [Timeframe]
-   - **Growing site (DA 20-40)**: [Can rank?] [Timeframe]
-   - **Established site (DA 40+)**: [Can rank?] [Timeframe]
-   
-   **Easier Alternatives**:
-   If too difficult, consider:
-   - [Alternative keyword 1] - Difficulty: [X]
-   - [Alternative keyword 2] - Difficulty: [X]
-   ```
+   Score overall difficulty (1-100) based on: top 10 domain authority, page authority, backlinks required, content quality bar, and SERP stability. Provide realistic assessments for new, growing, and established sites, plus easier alternatives.
 
 8. **Generate Recommendations**
 
-   ```markdown
-   ## SERP Analysis Summary & Recommendations
-   
-   ### Key Findings
-   
-   1. [Most important finding]
-   2. [Second important finding]
-   3. [Third important finding]
-   
-   ### Content Requirements to Rank
-   
-   To compete for "[keyword]", you need:
-   
-   **Minimum Requirements**:
-   - [ ] Word count: [X]+ words
-   - [ ] Backlinks: [X]+ referring domains
-   - [ ] Domain Authority: [X]+
-   - [ ] Content format: [type]
-   - [ ] Include: [specific elements]
-   
-   **Differentiators to Win**:
-   - [ ] [Unique angle from analysis]
-   - [ ] [Missing element in current results]
-   - [ ] [SERP feature opportunity]
-   
-   ### SERP Feature Strategy
-   
-   | Feature | Winnable? | Strategy |
-   |---------|-----------|----------|
-   | Featured Snippet | Yes/No | [strategy] |
-   | PAA | Yes/No | [strategy] |
-   | AI Overview | Yes/No | [strategy] |
-   
-   ### Recommended Content Outline
-   
-   Based on SERP analysis:
-   
-   ```
-   Title: [Optimized title]
-   
-   H1: [Main heading]
-   
-   [Introduction - address intent immediately]
-   
-   H2: [Section based on PAA/top results]
-   H2: [Section based on PAA/top results]
-   H2: [Section based on PAA/top results]
-   
-   [FAQ section for PAA optimization]
-   
-   [Conclusion with CTA]
-   ```
-   
-   ### Next Steps
+   Produce a summary with: Key Findings, Content Requirements to Rank (minimum requirements + differentiators), SERP Feature Strategy, Recommended Content Outline, and Next Steps.
 
-   1. [Immediate action]
-   2. [Content creation action]
-   3. [Optimization action]
-   ```
+   > **Reference**: See [references/analysis-templates.md](./references/analysis-templates.md) for detailed templates for each step.
 
 ## Validation Checkpoints
 
@@ -443,85 +192,7 @@ When a user requests SERP analysis:
 
 ## Example
 
-**User**: "Analyze the SERP for 'how to start a podcast'"
-
-**Output**:
-
-```markdown
-# SERP Analysis: "how to start a podcast"
-
-## SERP Overview
-
-**Intent**: Informational (100%)
-**Difficulty**: 72/100 (High)
-**AI Overview**: Yes - comprehensive guide format
-
-### SERP Features Present
-
-| Feature | Present | Analysis |
-|---------|---------|----------|
-| AI Overview | ✅ | Lists steps, cites 3 sources |
-| Featured Snippet | ✅ | Step-by-step list from Buzzsprout |
-| People Also Ask | ✅ | 4 questions visible, expandable |
-| Video Results | ✅ | 3 YouTube videos mid-page |
-| Image Pack | ❌ | |
-
-### Top 5 Results Analysis
-
-| Pos | Domain | DA | Word Count | Format | Backlinks |
-|-----|--------|-----|------------|--------|-----------|
-| 1 | Buzzsprout | 71 | 8,500 | Ultimate Guide | 2,400 |
-| 2 | Spotify | 93 | 3,200 | How-to Guide | 890 |
-| 3 | Podcastinsights | 58 | 12,000 | Mega Guide | 1,800 |
-| 4 | Transistor | 62 | 5,500 | Tutorial | 720 |
-| 5 | HubSpot | 91 | 6,200 | Complete Guide | 1,100 |
-
-### Why #1 Ranks First
-
-Buzzsprout's guide succeeds because:
-1. **Comprehensive** - Covers every step in detail
-2. **Updated** - Current year in title, recent updates
-3. **Structured** - Clear numbered steps (owns featured snippet)
-4. **Authoritative** - Podcast hosting company (topical authority)
-5. **Supporting content** - Links to detailed sub-guides
-
-### Featured Snippet Opportunity
-
-**Current format**: Ordered list (steps)
-**Current holder**: Buzzsprout
-
-**To win snippet**:
-- Create cleaner, more scannable list format
-- Keep steps to 8-10 items max
-- Start each step with action verb
-- Include "how to start a podcast" in H2
-
-### AI Overview Analysis
-
-**Sources cited**:
-1. Buzzsprout - "Choose your podcast topic"
-2. Spotify for Podcasters - "Record and edit"
-3. Wikipedia - Definition of podcasting
-
-**Pattern**: AI pulls step-by-step instructions from guides with clear structure
-
-### Content Requirements
-
-To rank on page 1:
-- **Word count**: 5,000+ words minimum
-- **Format**: Step-by-step ultimate guide
-- **Backlinks**: 500+ from relevant domains
-- **Updates**: Must show current year
-- **Unique angle**: Equipment comparisons, cost breakdowns, or specific niche focus
-
-### Recommended Strategy
-
-Given high difficulty, consider:
-1. Target long-tail: "how to start a podcast for free" (Difficulty: 45)
-2. Target niche: "how to start a podcast about [topic]" (Difficulty: 30)
-3. Create supporting video content for video carousel
-4. Focus on PAA optimization for quick wins
-```
+> **Reference**: See [references/example-report.md](./references/example-report.md) for a complete example analyzing the SERP for "how to start a podcast".
 
 ## Advanced Analysis
 
@@ -558,71 +229,12 @@ Analyze mobile vs desktop SERP differences for [keyword]
 5. **Study the outliers** - Why does a weaker site rank? Opportunity!
 6. **Consider AI Overview optimization** - Growing importance
 
-## SERP Feature Taxonomy
-
-### Feature Types and Trigger Conditions
-
-| SERP Feature | Trigger Conditions | Content Requirements | Optimization Approach |
-|-------------|-------------------|---------------------|---------------------|
-| Featured Snippet (paragraph) | Question/definition queries | 40-60 word direct answer under H2 | Answer immediately, then elaborate |
-| Featured Snippet (list) | "How to", "best", "top" queries | Numbered/bulleted list with clear items | Use numbered steps or ranked lists |
-| Featured Snippet (table) | Comparison/data queries | Well-structured HTML table | Create comparison tables |
-| People Also Ask | Most informational queries | Concise answer paragraphs | Target PAA questions as H2/H3s |
-| Knowledge Panel | Entity queries | Schema markup, Wikipedia presence | Structured data + authoritative citations |
-| Image Pack | Visual/product queries | Optimized images with alt text | Descriptive filenames, proper alt text |
-| Video Carousel | How-to/tutorial queries | Video content with transcripts | YouTube optimization, video schema |
-| Local Pack | Location-based queries | Google Business Profile | Local SEO optimization |
-| Shopping Results | Product/purchase queries | Product schema, Google Merchant | Product feed optimization |
-| Sitelinks | Navigational/brand queries | Clear site structure | Logical hierarchy, breadcrumbs |
-
-### AI Overview Analysis Framework
-
-| Analysis Dimension | What to Look For | Why It Matters |
-|-------------------|-----------------|----------------|
-| **Trigger Rate** | Does this query generate an AI Overview? | Not all queries have AI responses |
-| **Source Selection** | Which domains are cited? How many? | Reveals authority signals AI uses |
-| **Citation Format** | Direct quotes vs. synthesized content | Shows what content format AI prefers |
-| **Answer Structure** | Bullet points, paragraphs, tables | Indicates optimal content formatting |
-| **Fact Patterns** | Statistics, definitions, lists cited | Shows what content elements get cited |
-| **Update Sensitivity** | How fresh are cited sources? | Reveals recency bias strength |
-
-### Search Intent Signals from SERP Composition
-
-| SERP Composition | Implied Intent | Content Strategy |
-|-----------------|---------------|-----------------|
-| All blog posts / articles | Informational | Create comprehensive guide |
-| Product pages + shopping | Transactional | Optimize product/category page |
-| Mix of reviews + products | Commercial investigation | Create comparison/review content |
-| Videos dominate | Visual/instructional | Create video content + transcript |
-| Local pack present | Local intent | Local SEO optimization |
-| News results present | Trending/current | Timely, newsworthy content |
-| Forum/Reddit results | Community/opinion | Create opinionated, discussion-worthy content |
-
-## SERP Volatility Assessment
-
-### Volatility Indicators
-
-| Indicator | Stability Signal | Volatility Signal |
-|-----------|-----------------|-------------------|
-| Top 3 age | Same pages for 6+ months | New pages in top 3 within 3 months |
-| Domain diversity | 2-3 domains dominate top 10 | 8+ different domains in top 10 |
-| SERP feature changes | Same features consistently | Features appearing/disappearing |
-| Algorithm sensitivity | Positions stable through updates | Major position shifts during updates |
-
-### Opportunity Assessment Based on SERP
-
-| SERP Signal | Opportunity Level | Recommended Action |
-|------------|------------------|-------------------|
-| Low-authority sites in top 5 | High | Create superior content to outrank |
-| Outdated content ranking | High | Publish fresh, updated content |
-| Thin content ranking | High | Create comprehensive coverage |
-| Forums/UGC ranking | High | Create authoritative alternative |
-| All DR 90+ sites | Low | Target related long-tail instead |
-| AI Overview with few sources | Medium | Optimize for AI citation |
 
 ## Reference Materials
 
-- [SERP Feature Taxonomy](./references/serp-feature-taxonomy.md) — Complete taxonomy of SERP features with trigger conditions and optimization approaches
+- [Analysis Templates](./references/analysis-templates.md) — Detailed templates for each analysis step (SERP composition, top results, ranking patterns, features, intent, difficulty, recommendations)
+- [SERP Feature Taxonomy](./references/serp-feature-taxonomy.md) — Complete taxonomy of SERP features with trigger conditions, AI overview framework, intent signals, and volatility assessment
+- [Example Report](./references/example-report.md) — Complete example analyzing the SERP for "how to start a podcast"
 
 ## Related Skills
 

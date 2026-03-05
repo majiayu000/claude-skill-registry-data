@@ -1,10 +1,17 @@
 ---
 name: competitor-analysis
-description: 'Use when the user asks to "analyze competitors", "competitor SEO", "who ranks for", "competitive analysis", "what are my competitors doing", "what are they doing differently", "why do they rank higher", or "spy on competitor SEO". Analyzes competitor SEO and GEO strategies including their ranking keywords, content approaches, backlink profiles, and AI citation patterns. Reveals opportunities to outperform competition. For content-focused gap analysis, see content-gap-analysis. For link profile specifics, see backlink-analyzer.'
+version: "3.0.0"
+description: 'This skill should be used when the user asks to "analyze competitors", "competitor SEO", "who ranks for", "competitive analysis", "what are my competitors doing", "what are they doing differently", "why do they rank higher", or "spy on competitor SEO". Analyzes competitor SEO and GEO strategies including their ranking keywords, content approaches, backlink profiles, and AI citation patterns. Reveals opportunities to outperform competition. For content-focused gap analysis, see content-gap-analysis. For link profile specifics, see backlink-analyzer.'
 license: Apache-2.0
+compatibility: "Claude Code ≥1.0, skills.sh marketplace, ClawHub marketplace, Vercel Labs skills ecosystem. No system packages required. Optional: MCP network access for SEO tool integrations."
 metadata:
+  openclaw:
+    requires:
+      env: []
+      bins: []
+    primaryEnv: AHREFS_API_KEY
   author: aaron-he-zhu
-  version: "2.0.0"
+  version: "3.0.0"
   geo-relevance: "medium"
   tags:
     - seo
@@ -14,6 +21,15 @@ metadata:
     - benchmarking
     - market analysis
     - ranking analysis
+    - competitive-seo
+    - competitor-keywords
+    - competitor-backlinks
+    - market-analysis
+    - battlecard
+    - serp-competition
+    - domain-comparison
+    - content-benchmarking
+    - gap-analysis
   triggers:
     - "analyze competitors"
     - "competitor SEO"
@@ -142,287 +158,33 @@ When a user requests competitor analysis:
 
 2. **Gather Competitor Data**
 
-   For each competitor, collect:
-   
-   ```markdown
-   ## Competitor Profile: [Name]
-   
-   **Basic Info**
-   - URL: [website]
-   - Domain Age: [years]
-   - Estimated Traffic: [monthly visits]
-   - Domain Authority/Rating: [score]
-   
-   **Business Model**
-   - Type: [SaaS/E-commerce/Content/etc.]
-   - Target Audience: [description]
-   - Key Offerings: [products/services]
-   ```
+   Collect for each competitor: URL, domain age, estimated traffic, domain authority, business model, target audience, and key offerings.
 
 3. **Analyze Keyword Rankings**
 
-   ```markdown
-   ### Keyword Analysis: [Competitor]
-   
-   **Total Keywords Ranking**: [X]
-   **Keywords in Top 10**: [X]
-   **Keywords in Top 3**: [X]
-   
-   #### Top Performing Keywords
-   
-   | Keyword | Position | Volume | Traffic Est. | Page |
-   |---------|----------|--------|--------------|------|
-   | [kw 1] | [pos] | [vol] | [traffic] | [url] |
-   | [kw 2] | [pos] | [vol] | [traffic] | [url] |
-   
-   #### Keyword Distribution by Intent
-   
-   - Informational: [X]% ([keywords])
-   - Commercial: [X]% ([keywords])  
-   - Transactional: [X]% ([keywords])
-   - Navigational: [X]% ([keywords])
-   
-   #### Keyword Gaps (They rank, you don't)
-   
-   | Keyword | Their Position | Volume | Opportunity |
-   |---------|----------------|--------|-------------|
-   | [kw 1] | [pos] | [vol] | [analysis] |
-   ```
+   Document total keywords ranking, top 10/top 3 counts, top performing keywords (with position, volume, traffic, page URL), keyword distribution by intent, and keyword gaps.
 
 4. **Audit Content Strategy**
 
-   ```markdown
-   ### Content Analysis: [Competitor]
-   
-   **Content Volume**
-   - Total Pages: [X]
-   - Blog Posts: [X]
-   - Landing Pages: [X]
-   - Resource Pages: [X]
-   
-   **Content Performance**
-   
-   #### Top Performing Content
-   
-   | Title | URL | Est. Traffic | Keywords | Backlinks |
-   |-------|-----|--------------|----------|-----------|
-   | [title 1] | [url] | [traffic] | [X] | [X] |
-   
-   **Content Patterns**
-   
-   - Average word count: [X] words
-   - Publishing frequency: [X] posts/month
-   - Content formats used:
-     - Blog posts: [X]%
-     - Guides/tutorials: [X]%
-     - Case studies: [X]%
-     - Tools/calculators: [X]%
-     - Videos: [X]%
-   
-   **Content Themes**
-   
-   | Theme | # Articles | Combined Traffic |
-   |-------|------------|------------------|
-   | [theme 1] | [X] | [traffic] |
-   | [theme 2] | [X] | [traffic] |
-   
-   **What Makes Their Content Successful**
-   
-   1. [Success factor 1 with example]
-   2. [Success factor 2 with example]
-   3. [Success factor 3 with example]
-   ```
+   Analyze content volume by type, top performing content, content patterns (word count, frequency, formats), content themes, and success factors.
 
 5. **Analyze Backlink Profile**
 
-   ```markdown
-   ### Backlink Analysis: [Competitor]
-   
-   **Overview**
-   - Total Backlinks: [X]
-   - Referring Domains: [X]
-   - Domain Rating: [X]
-   
-   **Link Quality Distribution**
-   - High Authority (DR 70+): [X]%
-   - Medium Authority (DR 30-69): [X]%
-   - Low Authority (DR <30): [X]%
-   
-   **Top Linking Domains**
-   
-   | Domain | DR | Link Type | Target Page |
-   |--------|-----|-----------|-------------|
-   | [domain 1] | [DR] | [type] | [page] |
-   
-   **Link Acquisition Patterns**
-   
-   - Guest posts: [X]%
-   - Editorial/organic: [X]%
-   - Resource pages: [X]%
-   - Directories: [X]%
-   - Other: [X]%
-   
-   **Linkable Assets (Content attracting links)**
-   
-   | Asset | Type | Backlinks | Why It Works |
-   |-------|------|-----------|--------------|
-   | [asset 1] | [type] | [X] | [reason] |
-   ```
+   Review total backlinks, referring domains, link quality distribution, top linking domains, link acquisition patterns, and linkable assets.
 
 6. **Technical SEO Assessment**
 
-   ```markdown
-   ### Technical Analysis: [Competitor]
-   
-   **Site Performance**
-   - Core Web Vitals: [Pass/Fail]
-   - LCP: [X]s
-   - FID: [X]ms
-   - CLS: [X]
-   - Mobile-friendly: [Yes/No]
-   
-   **Site Structure**
-   - Site architecture depth: [X] levels
-   - Internal linking quality: [Rating]
-   - URL structure: [Clean/Messy]
-   - Sitemap present: [Yes/No]
-   
-   **Technical Strengths**
-   1. [Strength 1]
-   2. [Strength 2]
-   
-   **Technical Weaknesses**
-   1. [Weakness 1]
-   2. [Weakness 2]
-   ```
+   Evaluate Core Web Vitals, mobile-friendliness, site architecture, internal linking quality, URL structure, and technical strengths/weaknesses.
 
 7. **GEO/AI Citation Analysis**
 
-   ```markdown
-   ### GEO Analysis: [Competitor]
-   
-   **AI Visibility Assessment**
-   
-   Test competitor content in AI systems for relevant queries:
-   
-   | Query | AI Mentions Competitor? | What's Cited | Why |
-   |-------|------------------------|--------------|-----|
-   | [query 1] | Yes/No | [content] | [reason] |
-   | [query 2] | Yes/No | [content] | [reason] |
-   
-   **GEO Strategies Observed**
-   
-   1. **Clear Definitions**
-      - Example: [quote from their content]
-      - Effectiveness: [rating]
-   
-   2. **Quotable Statistics**
-      - Example: [quote from their content]
-      - Effectiveness: [rating]
-   
-   3. **Q&A Format Content**
-      - Examples found: [X] pages
-      - Topics covered: [list]
-   
-   4. **Authority Signals**
-      - Expert authorship: [Yes/No]
-      - Citations to sources: [Yes/No]
-      - Original research: [Yes/No]
-   
-   **GEO Opportunities They're Missing**
-   
-   | Topic | Why Missing | Your Opportunity |
-   |-------|-------------|------------------|
-   | [topic 1] | [reason] | [action] |
-   ```
+   Test competitor content in AI systems: document which queries cite them, GEO strategies observed (definitions, statistics, Q&A, authority signals), and GEO opportunities they are missing.
 
 8. **Synthesize Competitive Intelligence**
 
-   ```markdown
-   # Competitive Analysis Report
-   
-   **Analysis Date**: [Date]
-   **Competitors Analyzed**: [List]
-   **Your Site**: [URL]
-   
-   ## Executive Summary
-   
-   [2-3 paragraph overview of key findings and recommendations]
-   
-   ## Competitive Landscape
-   
-   | Metric | You | Competitor 1 | Competitor 2 | Competitor 3 |
-   |--------|-----|--------------|--------------|--------------|
-   | Domain Authority | [X] | [X] | [X] | [X] |
-   | Organic Traffic | [X] | [X] | [X] | [X] |
-   | Keywords Top 10 | [X] | [X] | [X] | [X] |
-   | Backlinks | [X] | [X] | [X] | [X] |
-   | Content Pages | [X] | [X] | [X] | [X] |
+   Produce a final report with: Executive Summary, Competitive Landscape comparison table, CITE domain authority comparison, Strengths to Learn From, Weaknesses to Exploit, Keyword Opportunities, Content Strategy Recommendations, and Action Plan (Immediate / Short-term / Long-term).
 
-   **Domain Authority Comparison (Recommended)**
-
-   When domain-level comparison is needed, run the [domain-authority-auditor](../../cross-cutting/domain-authority-auditor/) for each competitor to get CITE scores:
-
-   | Domain | CITE Score | C (Citation) | I (Identity) | T (Trust) | E (Eminence) | Veto |
-   |--------|-----------|-------------|-------------|----------|-------------|------|
-   | Your domain | [score] | [score] | [score] | [score] | [score] | [pass/fail] |
-   | Competitor 1 | [score] | [score] | [score] | [score] | [score] | [pass/fail] |
-   | Competitor 2 | [score] | [score] | [score] | [score] | [score] | [pass/fail] |
-
-   This reveals domain authority gaps that inform link building and brand strategy beyond keyword-level competition.
-
-   ## Competitor Strengths to Learn From
-   
-   ### [Competitor 1]
-   - **Strength**: [description]
-   - **Why It Works**: [analysis]
-   - **How to Apply**: [action item]
-   
-   [Repeat for each competitor]
-   
-   ## Competitor Weaknesses to Exploit
-   
-   ### Gap 1: [Description]
-   - Who's weak: [competitors]
-   - Opportunity size: [estimate]
-   - Recommended action: [specific steps]
-   
-   [Repeat for each gap]
-   
-   ## Keyword Opportunities
-   
-   ### Keywords to Target (Competitor overlap)
-   | Keyword | Volume | Avg Position | Best Strategy |
-   |---------|--------|--------------|---------------|
-   | [kw] | [vol] | [pos] | [strategy] |
-   
-   ### Untapped Keywords (No competitor coverage)
-   | Keyword | Volume | Difficulty | Opportunity |
-   |---------|--------|------------|-------------|
-   | [kw] | [vol] | [diff] | [description] |
-   
-   ## Content Strategy Recommendations
-   
-   Based on competitor analysis:
-   
-   1. **Create**: [Content type] about [topic] because [reason]
-   2. **Improve**: [Existing content] to match/exceed [competitor content]
-   3. **Promote**: [Content] to sites like [competitor's link sources]
-   
-   ## Action Plan
-   
-   ### Immediate (This Week)
-   1. [Action item]
-   2. [Action item]
-   
-   ### Short-term (This Month)
-   1. [Action item]
-   2. [Action item]
-   
-   ### Long-term (This Quarter)
-   1. [Action item]
-   2. [Action item]
-   ```
+   > **Reference**: See [references/analysis-templates.md](./references/analysis-templates.md) for detailed templates for each step.
 
 ## Validation Checkpoints
 
@@ -441,75 +203,7 @@ When a user requests competitor analysis:
 
 ## Example
 
-**User**: "Analyze why HubSpot ranks so well for marketing-related keywords"
-
-**Output**:
-
-```markdown
-# Competitive Analysis: HubSpot
-
-## SEO Strategy Overview
-
-HubSpot dominates marketing keywords through a combination of:
-1. **Massive content moat** - 10,000+ blog posts
-2. **Free tools as linkbait** - Website grader, email signature generator
-3. **Educational brand** - Academy, certifications, courses
-4. **Topic cluster model** - Pioneered the pillar/cluster approach
-
-## What Makes Them Successful
-
-### Content Strategy
-
-**Publishing Volume**: 50-100 posts/month
-**Average Word Count**: 2,500+ words
-**Content Types**:
-- In-depth guides (35%)
-- How-to tutorials (25%)
-- Templates & examples (20%)
-- Data/research (10%)
-- Tools & calculators (10%)
-
-**Top Performing Content Pattern**:
-1. Ultimate guides on broad topics
-2. Free templates with email gate
-3. Statistics roundup posts
-4. Definition posts ("What is [term]")
-
-### GEO Success Factors
-
-HubSpot appears in AI responses frequently because:
-
-1. **Clear definitions** at the start of every post
-   > "Inbound marketing is a business methodology that attracts customers by creating valuable content and experiences tailored to them."
-
-2. **Quotable statistics**
-   > "Companies that blog get 55% more website visitors"
-
-3. **Comprehensive coverage** - AI trusts their authority
-
-### Linkable Assets
-
-| Asset | Backlinks | Why It Works |
-|-------|-----------|--------------|
-| Website Grader | 45,000+ | Free, instant value |
-| Marketing Statistics | 12,000+ | Quotable reference |
-| Blog Ideas Generator | 8,500+ | Solves real problem |
-
-## Weaknesses to Exploit
-
-1. **Content becoming dated** - Many posts 3+ years old
-2. **Generic advice** - Lacks industry-specific depth
-3. **Enterprise focus** - Underserves solopreneurs
-4. **Slow innovation** - Same formats for years
-
-## Your Opportunities
-
-1. Create more specific, niche content they can't cover
-2. Target long-tail keywords they ignore
-3. Build interactive tools in emerging areas
-4. Add original research they don't have
-5. Focus on GEO-optimized definitions in your niche
-```
+> **Reference**: See [references/example-report.md](./references/example-report.md) for a complete example analyzing HubSpot's marketing keyword dominance.
 
 ## Advanced Analysis Types
 
@@ -546,85 +240,13 @@ How has [competitor]'s SEO strategy evolved over the past year?
 5. **Monitor regularly** - competitor strategies evolve
 6. **Focus on actionable insights** - what can you actually implement?
 
-## Messaging Comparison Framework
-
-### Messaging Matrix
-
-Compare competitor messaging across key dimensions:
-
-| Dimension | Your Site | Competitor A | Competitor B | Competitor C |
-|-----------|-----------|-------------|-------------|-------------|
-| Core value proposition | | | | |
-| Primary CTA | | | | |
-| Hero headline | | | | |
-| Tone/Voice | | | | |
-| Key differentiator claim | | | | |
-| Social proof type | | | | |
-| Category framing | | | | |
-| Target audience signal | | | | |
-
-### Narrative Analysis Framework
-
-For each competitor, identify their story arc:
-
-| Element | Description | How to Identify |
-|---------|------------|----------------|
-| **Villain** | Problem or enemy they position against | Homepage hero, "why us" page — what status quo do they attack? |
-| **Hero** | Who is the hero in their story | Customer stories, case studies — is the hero the customer or the product? |
-| **Transformation** | What before/after do they promise | Results pages, testimonials — what measurable change? |
-| **Stakes** | What happens if you don't act | Risk messaging, urgency signals — FOMO or loss framing? |
-
-### Value Proposition Comparison
-
-For each competitor, extract:
-
-```
-**[Competitor Name]**
-- Promise: what they promise the customer will achieve
-- Evidence: how they prove it (data, testimonials, demos)
-- Mechanism: how their product delivers (the "how it works")
-- Uniqueness: what they claim only they can do
-```
-
-## Positioning Strategy Frameworks
-
-### Positioning Map (2x2 Matrix)
-
-Plot competitors on key dimension pairs:
-
-| Axis Pair | Best For |
-|-----------|---------|
-| Price vs. Capability | Understanding market tiers |
-| Ease of Use vs. Power | Evaluating UX tradeoffs |
-| SMB vs. Enterprise Focus | Identifying segment gaps |
-| Point Solution vs. Platform | Finding positioning space |
-| Established vs. Innovative | Timing market entry |
-
-### Positioning Statement Reverse-Engineering
-
-For each competitor, reconstruct their implicit positioning:
-
-> For **[target audience]**, **[product]** is the **[category]** that **[key benefit]** because **[reason to believe]**.
-
-## Competitive Battlecard Template
-
-### Quick Reference Card Structure
-
-| Section | Content |
-|---------|---------|
-| **Overview** | One-sentence description + target customer + pricing model |
-| **Their Pitch** | Tagline + top 3 claimed differentiators |
-| **Strengths** | Where they genuinely compete well (be honest) |
-| **Weaknesses** | Consistent complaints from reviews, technical limitations |
-| **Your Differentiators** | 3-5 specific ways you're different, with proof |
-| **Objection Handling** | "If they say X → respond with Y" table |
-| **Landmines to Set** | Questions that highlight your advantages |
-| **Win/Loss Themes** | Common reasons deals are won/lost against them |
 
 ## Reference Materials
 
+- [Analysis Templates](./references/analysis-templates.md) — Detailed templates for each analysis step (profile, keywords, content, backlinks, technical, GEO, synthesis)
 - [Battlecard Template](./references/battlecard-template.md) — Quick-reference competitive battlecard for sales and marketing teams
-- [Positioning Frameworks](./references/positioning-frameworks.md) — Positioning maps, strategy matrices, and differentiation frameworks
+- [Positioning Frameworks](./references/positioning-frameworks.md) — Positioning maps, messaging matrices, narrative analysis, and differentiation frameworks
+- [Example Report](./references/example-report.md) — Complete example analyzing HubSpot's marketing keyword dominance
 
 ## Related Skills
 

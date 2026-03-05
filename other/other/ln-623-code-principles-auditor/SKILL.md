@@ -27,23 +27,29 @@ Receives `contextStore` with: `tech_stack`, `best_practices`, `principles`, `cod
 
 ## Workflow
 
+**MANDATORY READ:** Load `shared/references/two_layer_detection.md` for detection methodology.
+
 1) **Parse context** — extract fields, determine `scan_path` (domain-aware if specified), extract `output_dir`
 2) **Load detection patterns**
    - **MANDATORY READ:** Load `references/detection_patterns.md` for language-specific Grep/Glob patterns
    - Select patterns matching project's `tech_stack`
-3) **Scan codebase for violations**
+3) **Scan codebase for violations (Layer 1)**
    - All Grep/Glob patterns use `scan_path` (not codebase_root)
    - Follow step-by-step detection from `detection_patterns.md`
    - Apply exclusions from `detection_patterns.md#exclusions`
-4) **Generate recommendations**
+4) **Analyze context per candidate (Layer 2)**
+   - DRY: read both code blocks to confirm true duplication (not just similar naming or shared interface)
+   - KISS: check if abstraction serves DI pattern (valid single-impl interface) or is premature
+   - YAGNI: check if feature flag was recently added (intentional) or dormant for months
+5) **Generate recommendations**
    - **MANDATORY READ:** Load `references/refactoring_decision_tree.md` for pattern selection
    - Match each finding to appropriate refactoring pattern via decision tree
-5) **Collect findings with severity, location, effort, pattern_id, pattern_signature, recommendation**
+6) **Collect findings with severity, location, effort, pattern_id, pattern_signature, recommendation**
    - Tag each finding with `domain: domain_name` (if domain-aware)
    - Assign `pattern_signature` for cross-domain matching by ln-620
-6) **Calculate score using penalty algorithm**
-7) **Write Report:** Build full markdown report in memory per `shared/templates/audit_worker_report_template.md`, write to `{output_dir}/623-principles-{domain}.md` (or `623-principles.md` in global mode) in single Write call. **Include `<!-- FINDINGS-EXTENDED -->` JSON block** with pattern_signature fields for cross-domain DRY analysis
-8) **Return Summary:** Return minimal summary to coordinator (see Output Format)
+7) **Calculate score using penalty algorithm**
+8) **Write Report:** Build full markdown report in memory per `shared/templates/audit_worker_report_template.md`, write to `{output_dir}/623-principles-{domain}.md` (or `623-principles.md` in global mode) in single Write call. **Include `<!-- FINDINGS-EXTENDED -->` JSON block** with pattern_signature fields for cross-domain DRY analysis
+9) **Return Summary:** Return minimal summary to coordinator (see Output Format)
 
 ## Audit Rules
 

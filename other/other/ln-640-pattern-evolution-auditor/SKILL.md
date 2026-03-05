@@ -40,7 +40,9 @@ L2 Coordinator that analyzes implemented architectural patterns against current 
 | **Layer violations (critical)** | 0 | Any new critical violation | Create [BUG] Story |
 | **Cross-domain cycles** | 0 | Any new cycle | Create [REFACTOR] Story |
 
-**SLA breach = automatic Story creation in Linear** (requires Linear MCP). If Linear unavailable, write to `docs/project/architecture_health.md` with `ACTION_REQUIRED` marker.
+**SLA breach = config-driven auto-remediation:**
+- IF `task_provider == "linear"` (Linear MCP available): create_issue() in Linear
+- ELSE: Write task file to `docs/tasks/` with `ACTION_REQUIRED` marker
 
 ## Worker Invocation
 
@@ -444,14 +446,23 @@ reuse_opportunity_score = parse_score(ln645_return)  # 0-10, NOT in architecture
    FOR EACH new_cycle NOT in previous:
      breaches.append({type: "new_cycle", cycle: path})
 
-4. Auto-remediation (if breaches found AND Linear MCP available):
+4. Auto-remediation (if breaches found):
+   task_provider = Read docs/tools_config.md -> Task Management -> Provider  # See storage_mode_detection.md
    FOR EACH breach:
      IF type IN ["health_below_sla", "health_drift", "new_cycle"]:
-       create_issue(title: "[REFACTOR] Architecture health degraded: {breach.type}",
-                    description: "SLA breach detected by ln-640...")
+       title = "[REFACTOR] Architecture health degraded: {breach.type}"
+       description = "SLA breach detected by ln-640..."
+       IF task_provider == "linear":
+         create_issue(title: title, description: description)
+       ELSE:
+         Write task file to docs/tasks/ with ACTION_REQUIRED marker
      IF type == "new_critical":
-       create_issue(title: "[BUG] Critical layer violation: {breach.violation}",
-                    description: "New critical violation detected...")
+       title = "[BUG] Critical layer violation: {breach.violation}"
+       description = "New critical violation detected..."
+       IF task_provider == "linear":
+         create_issue(title: title, description: description)
+       ELSE:
+         Write task file to docs/tasks/ with ACTION_REQUIRED marker
 
 5. Append to docs/project/architecture_health.md:
    ## YYYY-MM-DD
@@ -587,6 +598,9 @@ reuse_opportunity_score = parse_score(ln645_return)  # 0-10, NOT in architecture
 - Dependency graph audit: `../ln-644-dependency-graph-auditor/SKILL.md`
 - Open-source replacement audit: `../ln-645-open-source-replacer/SKILL.md`
 - Project structure audit: `../ln-646-project-structure-auditor/SKILL.md`
+- **MANDATORY READ:** `shared/references/research_tool_fallback.md`
+- **MANDATORY READ:** `shared/references/tools_config_guide.md`
+- **MANDATORY READ:** `shared/references/storage_mode_detection.md`
 
 ---
 **Version:** 2.0.0

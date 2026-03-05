@@ -418,6 +418,8 @@ docs/
   - Q4-Q7: Smart document validation (ADR context, alternatives, patterns)
   - Auto-discovery hints
 
+- **MANDATORY READ:** `shared/references/research_tool_fallback.md`
+
 ---
 
 ## Best Practices

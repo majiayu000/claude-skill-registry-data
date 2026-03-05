@@ -1,6 +1,6 @@
 ---
 name: ln-635-test-isolation-auditor
-description: Test Isolation + Anti-Patterns audit worker (L3). Checks isolation (APIs/DB/FS/Time/Random/Network), determinism (flaky, order-dependent), and 6 anti-patterns.
+description: "Test Isolation + Anti-Patterns audit worker (L3). Checks isolation (APIs/DB/FS/Time/Random/Network), determinism (flaky, order-dependent), and 7 anti-patterns."
 allowed-tools: Read, Grep, Glob, Bash
 ---
 
@@ -20,17 +20,20 @@ Specialized worker auditing test isolation and detecting anti-patterns.
 
 ## Inputs (from Coordinator)
 
-Receives `contextStore` with isolation checklist, anti-patterns catalog, test file list.
+**MANDATORY READ:** Load `shared/references/task_delegation_pattern.md#audit-coordinator--worker-contract` for contextStore structure.
+
+Receives `contextStore` with: `tech_stack`, `testFilesMetadata`, `codebase_root`, `output_dir`.
 
 ## Workflow
 
-1) Parse context
-2) Check isolation for 6 categories
-3) Check determinism
-4) Detect 6 anti-patterns
-5) Collect findings
-6) Calculate score
-7) Return JSON
+1) **Parse Context:** Extract tech stack, isolation checklist, anti-patterns catalog, test file list, output_dir from contextStore
+2) **Check Isolation:** Check isolation for 6 categories (APIs, DB, FS, Time, Random, Network)
+3) **Check Determinism:** Check for flaky tests, time-dependent assertions, order-dependent tests, shared mutable state
+4) **Detect Anti-Patterns:** Detect 6 anti-patterns (Liar, Giant, Slow Poke, Conjoined Twins, Happy Path, Framework Tester)
+5) **Collect Findings:** Record each violation with severity, location (file:line), effort estimate (S/M/L), recommendation
+6) **Calculate Score:** Count violations by severity, calculate compliance score (X/10)
+7) **Write Report:** Build full markdown report in memory per `shared/templates/audit_worker_report_template.md`, write to `{output_dir}/635-isolation.md` in single Write call
+8) **Return Summary:** Return minimal summary to coordinator (see Output Format)
 
 ## Audit Rules: Test Isolation
 
@@ -275,86 +278,38 @@ Receives `contextStore` with isolation checklist, anti-patterns catalog, test fi
 
 **Effort:** S
 
+### 7. Default Value Blindness (Tests with default config)
+
+**What:** See `shared/references/risk_based_testing_guide.md` → Anti-Pattern 9.
+
+**Detection:**
+- Grep for common defaults in test setup: `:8080`, `:3000`, `30000`, `limit: 20`, `offset: 0`
+- Check if test config values match framework/library defaults
+- Look for `|| DEFAULT` patterns in source code with matching test values
+
+**Severity:** **HIGH**
+
+**Effort:** S
+
 ## Scoring Algorithm
 
 **MANDATORY READ:** Load `shared/references/audit_scoring.md` for unified scoring formula.
 
 **Severity mapping:**
-- Flaky tests, External API not mocked, The Liar → HIGH
+- Flaky tests, External API not mocked, The Liar, Default Value Blindness → HIGH
 - Real database, File system, Time/Date, Network, The Giant, Happy Path Only → MEDIUM
 - Random without seed, Order-dependent, Conjoined Twins → LOW
 
 ## Output Format
 
-**Return JSON to coordinator (flat findings array):**
-```json
-{
-  "category": "Isolation & Anti-Patterns",
-  "score": 6,
-  "total_issues": 18,
-  "critical": 0,
-  "high": 5,
-  "medium": 10,
-  "low": 3,
-  "checks": [
-    {"id": "api_isolation", "name": "API Isolation", "status": "failed", "details": "2 tests make real HTTP calls"},
-    {"id": "db_isolation", "name": "Database Isolation", "status": "warning", "details": "1 test uses real PostgreSQL"},
-    {"id": "fs_isolation", "name": "File System Isolation", "status": "passed", "details": "All FS calls mocked"},
-    {"id": "time_isolation", "name": "Time Isolation", "status": "passed", "details": "All Date/Time mocked"},
-    {"id": "flaky_tests", "name": "Flaky Tests", "status": "failed", "details": "3 race conditions detected"},
-    {"id": "anti_patterns", "name": "Anti-Patterns", "status": "warning", "details": "2 Liars, 1 Giant found"}
-  ],
-  "findings": [
-    {
-      "severity": "HIGH",
-      "location": "user.test.ts:45-52",
-      "issue": "External API not mocked — test makes real HTTP call to https://api.github.com",
-      "principle": "Test Isolation / External APIs",
-      "recommendation": "Mock external API with nock or jest.mock",
-      "effort": "M"
-    },
-    {
-      "severity": "HIGH",
-      "location": "async.test.ts:28-35",
-      "issue": "Flaky test (race condition) — setTimeout without proper await",
-      "principle": "Determinism / Race Condition",
-      "recommendation": "Fix race condition with proper async/await",
-      "effort": "M"
-    },
-    {
-      "severity": "HIGH",
-      "location": "user.test.ts:45",
-      "issue": "Anti-pattern 'The Liar' — test 'createUser works' has no assertions",
-      "principle": "Anti-Patterns / The Liar",
-      "recommendation": "Add specific assertions or delete test",
-      "effort": "S"
-    },
-    {
-      "severity": "MEDIUM",
-      "location": "db.test.ts:12",
-      "issue": "Real database used — test connects to localhost:5432 PostgreSQL",
-      "principle": "Test Isolation / Database",
-      "recommendation": "Use in-memory SQLite (:memory:) or mock DB",
-      "effort": "L"
-    },
-    {
-      "severity": "MEDIUM",
-      "location": "order.test.ts:200-350",
-      "issue": "Anti-pattern 'The Giant' — test 'order flow' is 150 lines (>100)",
-      "principle": "Anti-Patterns / The Giant",
-      "recommendation": "Split into focused tests (one scenario per test)",
-      "effort": "M"
-    },
-    {
-      "severity": "MEDIUM",
-      "location": "payment.test.ts",
-      "issue": "Anti-pattern 'Happy Path Only' — only success scenarios, no error tests",
-      "principle": "Anti-Patterns / Happy Path Only",
-      "recommendation": "Add negative tests for error handling",
-      "effort": "M"
-    }
-  ]
-}
+**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format.
+
+Write report to `{output_dir}/635-isolation.md` with `category: "Isolation & Anti-Patterns"` and checks: api_isolation, db_isolation, fs_isolation, time_isolation, random_isolation, network_isolation, flaky_tests, anti_patterns, default_value_blindness.
+
+Return summary to coordinator:
+```
+Report written: docs/project/.audit/ln-630/{YYYY-MM-DD}/635-isolation.md
+Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 ```
 
 **Note:** Findings are flattened into single array. Use `principle` field prefix (Test Isolation / Determinism / Anti-Patterns) to identify issue category.
@@ -369,17 +324,19 @@ Receives `contextStore` with isolation checklist, anti-patterns catalog, test fi
 
 ## Definition of Done
 
-- contextStore parsed (isolation checklist, anti-patterns catalog, test file list)
+- contextStore parsed successfully (including output_dir)
 - All 3 audit groups completed:
   - Isolation (6 categories: APIs, DB, FS, Time, Random, Network)
   - Determinism (4 checks: flaky, time-dependent, order-dependent, shared state)
-  - Anti-patterns (6 checks: Liar, Giant, Slow Poke, Conjoined Twins, Happy Path, Framework Tester)
+  - Anti-patterns (7 checks: Liar, Giant, Slow Poke, Conjoined Twins, Happy Path, Framework Tester, Default Value Blindness)
 - Findings collected with severity, location, effort, recommendation
-- Score calculated per `shared/references/audit_scoring.md`
-- JSON returned to coordinator
+- Score calculated using penalty algorithm
+- Report written to `{output_dir}/635-isolation.md` (atomic single Write call)
+- Summary returned to coordinator
 
 ## Reference Files
 
+- **Worker report template:** `shared/templates/audit_worker_report_template.md`
 - **Audit scoring formula:** `shared/references/audit_scoring.md`
 - **Audit output schema:** `shared/references/audit_output_schema.md`
 

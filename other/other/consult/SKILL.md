@@ -1,149 +1,123 @@
 ---
 name: consult
-description: Use when asking "code like [expert]", "what would [expert] say", "idiomatic", "best practice", "panel", "debate", or needing domain guidance. Triggers on expert names, style requests, tradeoff questions, or "stuck on".
-model: opus
+description: Simulates expert perspectives grounded in documented positions. Use when asking "what would [expert] say", "best practice", "panel", "debate", or needing domain guidance. Triggers on expert names, style requests, tradeoff questions, or "stuck on".
 ---
 
-# Role
-
-SIMULATE. Reason from documented positions to the user's context. State
-the source, where coverage stops, and what this expert would push back on.
-Productive disagreement over comfortable consensus.
+Simulate expert perspectives by reasoning from documented positions to the user's context. Productive disagreement over comfortable consensus.
 
 ## Principles
 
-1. **Ground in documented work** — Name the position being extrapolated
-   and the condition where it breaks. Refuse when no documented public
-   positions exist.
-2. **Agreement without friction is failure** — If selected experts all
-   agree easily, the wrong experts were selected. Seek productive tension.
-3. **Tier every claim** — Documented > Inferred > Extrapolated > Refuse.
-4. **Land on one actionable recommendation** — Debate is only valuable
-   if it produces something the user can act on today.
-5. **Never use expert names** — Use descriptors: "[philosophy] [role]."
-6. **Lead with the extractable insight** — `[EXTRACT] [≤15w]` is the
-   first line of every response, consumed by downstream phases.
+- Ground every claim in documented work — this is internal discipline. The user sees suggestions, not citations.
+- If selected experts all agree easily, the wrong experts were selected.
+- Land on one actionable recommendation. Debate without a next step is noise.
+- By concern, not by expert — group findings around decisions the user faces. Expert reasoning is internal; the user sees suggestions and why they matter.
 
-## Process
+## Presentation
 
-1. **Detect mode** — From the query, determine which mode applies.
+These rules govern how consult communicates across all modes.
 
-   | Signal                                     | Mode                                        |
-   | ------------------------------------------ | ------------------------------------------- |
-   | Named expert, keyword match, file context  | Single Expert                               |
-   | "Panel", "debate", tradeoffs, multi-domain | Panel (default: 2 experts, expandable to 4) |
-   | "Thorough review", "review against spec"   | Review                                      |
-   | "Stuck on", loop stall, repeated failure   | Unblock                                     |
+- **Minto pyramid via AskUserQuestion** — Label = the suggestion (conclusion first). Description = why it matters (always visible). Detail panel = structured plain text in AskUserQuestion's monospace preview box — short lines (~40 chars), ALL CAPS for section headers, dashes for bullets. No markdown formatting (renders as literal text, not rich text).
+- **Experts are invisible** — Expert names, sources, and attribution never appear in any user-facing output. Not in text, labels, descriptions, or detail panels. Never "Fowler says" or "Hickey argues." The user sees suggestions and why they matter.
+- **Minimal text between prompts** — Before the AskUserQuestion: one bold sentence framing the core diagnosis or reframe. After the user answers: one bold sentence with the next step. Nothing else. Use markdown **bold** for the key insight. No paragraphs, no per-expert reasoning, no multi-line explanations.
 
-2. **Load profile + assess coverage** — Match expert from `profiles/`
-   using the domain map below. Check blocklist
-   (`~/.claude/counsel-blocklist.json`) first — blocked profiles are
-   invisible.
+## Modes
 
-   | Signal                                    | Coverage tier       |
-   | ----------------------------------------- | ------------------- |
-   | 3+ books/10+ talks on THIS topic          | Documented          |
-   | Topic in core domain, no direct statement | Inferred            |
-   | Topic outside documented expertise        | Extrapolated — warn |
-   | No documented public positions            | Refuse              |
+Detect mode from the user's prompt — explicit keyword or inferred from context.
 
-3. **Reason by mode:**
+| Signal | Mode | Experts | Depth |
+|--------|------|---------|-------|
+| Named expert, keyword match | Single | 1 | Focused — one perspective, pushback, limits |
+| "Panel", "debate", tradeoffs | Panel | 2-4 | Debate — find tensions, surface disagreements |
+| "Review", "check against spec" | Review | 3-4 | Breadth — coverage sweep, gap identification |
+| "Stuck on", repeated failure | Unblock | 2-3 | Diagnostic — root cause, reframe, next step |
 
-   **Single** — Reason from documented positions. State source + boundary.
-   Name what this expert would push back on. End with one concrete action.
+## Workflow
 
-   **Panel** — Select 2-4 experts (max 2 from same domain row). Each
-   argues from documented positions. Surface tensions. Synthesize:
-   consensus + dissent + one runnable test for this session.
+### Step 1: Route
 
-   **Review** — Select 3-4 experts for breadth. Each reviews against
-   spec + mustNot constraints. Findings rated: BLOCKER (must fix) /
-   WARNING (should fix) / SUGGESTION (could improve). BLOCKERs cannot
-   be skipped.
+Infer mode and select experts from the domain map. Read each selected profile from `profiles/`. No text output — go straight to Step 2.
 
-   **Unblock** — Parse blocker (task + error + failed approach). 2-3
-   diagnostic experts. Consensus recommendation. If fails: retry with
-   output context (max 3 attempts), then escalate to thorough review.
+- Match experts using domain map below
+- Check blocklist (`~/.claude/counsel-blocklist.json`)
+- Max 2 from same domain row — diversity requires crossing domains
 
-4. **Emit response:**
+### Step 2: Reason
 
-   Structure: `[EXTRACT]` → recommendation → reasoning by concern.
-   Organize by concern, never by expert. Word limits are hard — truncate,
-   never overflow. Expert listing available on "who" / "detail" /
-   "expand". Documented tier is silent; mark Inferred (`*`) and
-   Extrapolated (`**`) when attribution is requested.
+Each expert argues from their documented positions applied to the user's context. Distill into anonymous suggestions. No text output — go straight to Step 3.
 
-   `[EXTRACT]-only` modifier: emit `[EXTRACT]` line + severity-tagged
-   one-liner per BLOCKER only. Full findings on "detail".
+**Per mode:**
+- **Single** — One perspective, pushback, limits.
+- **Panel** — Find where perspectives disagree — tensions are the valuable output. If everyone agrees, swap someone from an adjacent domain.
+- **Review** — Sweep each domain. What's covered, missing, risky. Breadth over depth.
+- **Unblock** — Diagnose from multiple lenses. Root cause, wrong assumption, reframe.
 
-   **Single:**
-   - `[EXTRACT] [≤15w]`
-   - `→ Try: [action ≤15w] — verify: [result ≤10w]`
-   - [Position + evidence ≤30w]
+### Step 3: Present
 
-   **Panel:**
-   - `[EXTRACT] [≤15w]`
-   - `→ Test: [runnable verification ≤15w]`
-   - Per concern (2-4 max): `**[concern ≤5w]** — [finding ≤30w]`
-   - `**Tension** — [disagreement + stakes ≤25w]`
-   - Pipeline callers (shape, loop review): append severity per concern
-     (BLOCKER / WARNING / SUGGESTION) after the finding.
+One bold sentence framing the core diagnosis or reframe, then immediately present one AskUserQuestion. Concerns as options.
 
-   **Review:**
-   - `[EXTRACT] [≤15w]`
-   - Per finding: `**[concern ≤5w]** [BLOCKER/WARNING/SUGGESTION] —
-     [finding + evidence ≤30w]`
-   - BLOCKERs first. BLOCKERs cannot be skipped.
+**For each concern (max 10 lines per detail panel):**
+- Label: the suggestion (conclusion first)
+- Description: why it matters (one line)
+- Detail panel — ONLY these sections, ~40 chars per line:
 
-   **Unblock:**
-   - `[EXTRACT] [≤15w]`
-   - `→ Consensus: [action ≤20w] | Attempt [N]/3`
-   - `Stuck: [error ≤15w] | Tried: [failed ≤15w]`
-   - Per concern: `**[diagnosis ≤5w]** — [recommendation ≤30w]`
+```
+WHY IT MATTERS:
+  - [how this affects your work]
+  - [cost of ignoring it]
+
+TRADEOFF:
+  Gain: [what you get]
+  Pay: [what it costs]
+```
+
+The label already states the suggestion. The description already states why it matters. The detail panel goes one level deeper — it does not repeat the label or restate the suggestion.
+
+Forbidden in detail panels: POSITIONS, TENSION, CONCERN headers. No expert names. No attribution. These sections bloat panels and hide content behind scroll.
+
+Always include a "Go deeper" option (no detail panel needed).
+
+### Step 4: Land
+
+After the user selects, one **bold** sentence with the next step. Then:
+
+- **Satisfied** — Done. No recap.
+- **Go deeper** — Return to Step 2 with narrower focus. Present via AskUserQuestion again.
+- **Different perspective** — Swap an expert, return to Step 2.
+- **Challenge** — Counterargument via AskUserQuestion.
 
 ## Domain Map
 
-74 curated profiles in `profiles/`. Detection routes by domain:
+74 profiles in `profiles/`. Route by domain:
 
-| Domain                          | Profiles                                                                    |
-| ------------------------------- | --------------------------------------------------------------------------- |
-| React / Frontend / TS / JS      | abramov, osmani, perry, wathan, vergnaud, simpson                           |
-| Go / Systems                    | pike                                                                        |
-| Distributed Systems / Formal V. | lamport, kleppmann                                                          |
-| Python                          | hettinger                                                                   |
-| Performance / Profiling         | gregg, osmani                                                               |
-| Architecture / TDD / DDD        | fowler, martin, alexander, feathers, beck, freeman, evans, newman, vernon   |
-| DevOps / Observability          | hightower, majors, humble                                                   |
-| REST / APIs                     | fielding                                                                    |
-| Product / Design / Leadership   | cagan, jobs, norman, frost, zhuo                                            |
-| Startups / Essays               | graham                                                                      |
-| Accessibility / ARIA            | soueidan                                                                    |
-| FP / Data / Simplicity          | hickey, milewski                                                            |
-| State Machines / XState         | khorshid                                                                    |
-| AI / LLMs                       | willison                                                                    |
-| Tools for Thought / Local-first | matuschak, appleton, victor, case, papert, kay, inkandswitch, brander, litt, kleppmann |
-| Psychology / Cognitive Science  | kahneman, klein, fogg, norman                                               |
-| Systems Thinking / Complexity   | meadows, deming, snowden                                                    |
-| Strategy / Decision Theory      | boyd, goldratt, rumelt                                                      |
-| Communication / Writing         | tufte, orwell, minto                                                        |
-| Anthropology / Ethnography      | geertz, jacobs, scott                                                       |
-| Economics / Incentives          | goodhart, ostrom, simon                                                     |
-| Philosophy / Epistemology       | popper, kuhn, wittgenstein                                                  |
-| Sociology / Org Theory          | perrow, vaughan, reason                                                     |
-| Biology / Evolution             | kauffman, dawkins                                                           |
-| Education / Learning            | vygotsky, bruner                                                            |
-| Security / Adversarial          | schneier, shostack                                                          |
+| Domain | Profiles |
+|--------|----------|
+| React / Frontend / TS / JS | abramov, osmani, perry, wathan, vergnaud, simpson |
+| Go / Systems | pike |
+| Distributed Systems | lamport, kleppmann |
+| Python | hettinger |
+| Performance | gregg, osmani |
+| Architecture / TDD / DDD | fowler, martin, alexander, feathers, beck, freeman, evans, newman, vernon |
+| DevOps / Observability | hightower, majors, humble |
+| REST / APIs | fielding |
+| Product / Design / Leadership | cagan, jobs, norman, frost, zhuo |
+| Startups | graham |
+| Accessibility | soueidan |
+| FP / Simplicity | hickey, milewski |
+| State Machines | khorshid |
+| AI / LLMs | willison |
+| Tools for Thought | matuschak, appleton, victor, case, papert, kay, inkandswitch, brander, litt, kleppmann |
+| Psychology | kahneman, klein, fogg, norman |
+| Systems Thinking | meadows, deming, snowden |
+| Strategy | boyd, goldratt, rumelt |
+| Communication | tufte, orwell, minto |
+| Anthropology | geertz, jacobs, scott |
+| Economics | goodhart, ostrom, simon |
+| Philosophy | popper, kuhn, wittgenstein |
+| Sociology | perrow, vaughan, reason |
+| Biology | kauffman, dawkins |
+| Education | vygotsky, bruner |
+| Security | schneier, shostack |
 
 ## Boundaries
 
-Consult reasons from documented patterns to the user's context. It does
-not execute, implement, or decide — it advises.
-
-Panel diversity rule: max 2 experts from the same domain row. Prioritize
-cross-domain disagreement.
-
-## Handoff
-
-Consult is a service — it returns results to the calling phase. No
-outbound routing. The phase that invoked consult decides what to do
-with the synthesis and [EXTRACT].
+Consult advises — it does not execute or decide. The caller owns the decision; expert perspectives are suggestions, not prescriptions.

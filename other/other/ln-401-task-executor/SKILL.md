@@ -3,6 +3,8 @@ name: ln-401-task-executor
 description: Executes implementation tasks (Todo -> In Progress -> To Review). Follows KISS/YAGNI, guides, quality checks. Not for test tasks.
 ---
 
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
 # Implementation Task Executor
 
 Executes a single implementation (or refactor) task from Todo to To Review using the task description and linked guides.
@@ -14,12 +16,26 @@ Executes a single implementation (or refactor) task from Todo to To Review using
 - Run typecheck/lint; update docs/tests/config per task instructions.
 - Not for test tasks (label "tests" goes to ln-404-test-executor).
 
+## Inputs
+
+| Input | Required | Source | Description |
+|-------|----------|--------|-------------|
+| `taskId` | Yes | args, parent Story, kanban, user | Task to execute |
+
+**Resolution:** Per `shared/references/input_resolution_pattern.md` — Task Resolution Chain.
+**Status filter:** Todo
+
 ## Task Storage Mode
+
+**MANDATORY READ:** Load `shared/references/tools_config_guide.md`, `shared/references/storage_mode_detection.md`, and `shared/references/input_resolution_pattern.md`
+
+Read `docs/tools_config.md` (bootstrap if missing per tools_config_guide.md).
+Extract: `task_provider` = Task Management → Provider (`linear` | `file`).
 
 | Aspect | Linear Mode | File Mode |
 |--------|-------------|-----------|
 | **Load task** | `get_issue(task_id)` | `Read("docs/tasks/epics/.../tasks/T{NNN}-*.md")` |
-| **Update status** | `update_issue(id, state)` | `Edit` the `**Status:**` line in file |
+| **Update status** | `save_issue(id, state)` | `Edit` the `**Status:**` line in file |
 | **Kanban** | Updated by Linear sync | Must update `kanban_board.md` manually |
 
 **File Mode status format:**
@@ -53,11 +69,11 @@ When operating in any mode, skill MUST create detailed todo checklist tracking A
 **Todo Template (10 items):**
 
 ```
-Step 1: Load Context
-  - Fetch full task description + linked guides/manuals/ADRs
+Step 1: Resolve taskId
+  - Resolve via args / Story context / kanban / AskUserQuestion (Todo filter)
 
-Step 2: Receive Task
-  - Get task ID from orchestrator, load full description
+Step 2: Load Context
+  - Fetch full task description + linked guides/manuals/ADRs
 
 Step 2b: Goal Articulation Gate
   - Complete 4 questions from shared/references/goal_articulation_gate.md (<=25 tokens each)
@@ -83,8 +99,12 @@ Step 6: Finish
 ```
 
 ## Workflow (concise)
-1) **Load context:** Fetch full task description (Linear: get_issue; File: Read task file); read linked guides/manuals/ADRs/research; auto-discover team/config if needed.
-2) **Receive task:** Get task ID from orchestrator (ln-400); load full task description.
+1) **Resolve taskId** (per input_resolution_pattern.md):
+   - IF args provided → use args
+   - ELSE IF Story context available → list Todo tasks under Story, suggest if 1
+   - ELSE IF kanban has exactly 1 Task in [Todo] → suggest
+   - ELSE → AskUserQuestion: show Todo Tasks from kanban
+2) **Load context:** Fetch full task description (Linear: get_issue; File: Read task file); read linked guides/manuals/ADRs/research; auto-discover team/config if needed.
 2b) **Goal gate:** **MANDATORY READ:** `shared/references/goal_articulation_gate.md` — Complete the 4-question gate (<=25 tokens each). State REAL GOAL (deliverable as subject), DONE LOOKS LIKE, NOT THE GOAL, INVARIANTS & HIDDEN CONSTRAINTS.
 3) **Start work:** Update this task to In Progress (Linear: update_issue; File: Edit status line); move it in kanban (keep Epic/Story indent).
 4) **Implement (with verification loop):** **Before writing new utilities/handlers**, Grep `src/` for existing patterns (error handling, validation, config access). Reuse if found; if not reusable, document rationale in code comment. Follow checkboxes/plan; keep it simple; avoid hardcoded values; reuse existing components; add Task ID comment (`// See PROJ-123`) to new code blocks; update docs noted in Affected Components; update existing tests if impacted (no new tests here). Before creating service functions, apply Architecture Guard (cascade depth, interface honesty, flat orchestration). After implementation, execute `verify:` methods from task AC: test → run specified test; command → execute and check output; inspect → verify file/content exists. If any verify fails → fix before proceeding.
@@ -128,6 +148,8 @@ Before setting To Review, verify all 6 items:
 - Task set to To Review; kanban moved to To Review; summary comment added.
 
 ## Reference Files
+- **Tools config:** `shared/references/tools_config_guide.md`
+- **Storage mode operations:** `shared/references/storage_mode_detection.md`
 - Guides/manuals/ADRs/research: `docs/guides/`, `docs/manuals/`, `docs/adrs/`, `docs/research/`
 - Kanban format: `docs/tasks/kanban_board.md`
 

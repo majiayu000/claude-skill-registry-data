@@ -320,6 +320,7 @@ Severity mapping:
 
 - **Worker report template:** `shared/templates/audit_worker_report_template.md`
 - **Scoring algorithm:** `shared/references/audit_scoring.md`
+- **MANDATORY READ:** `shared/references/research_tool_fallback.md`
 
 ---
 **Version:** 1.0.0

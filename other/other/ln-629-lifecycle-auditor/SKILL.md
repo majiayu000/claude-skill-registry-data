@@ -1,6 +1,6 @@
 ---
 name: ln-629-lifecycle-auditor
-description: Application lifecycle audit worker (L3). Checks bootstrap initialization order, graceful shutdown, resource cleanup, signal handling, liveness/readiness probes. Returns findings with severity, location, effort, recommendations.
+description: Application lifecycle audit worker (L3). Checks bootstrap initialization order, graceful shutdown, resource cleanup, signal handling, liveness/readiness probes. Returns findings.
 allowed-tools: Read, Grep, Glob, Bash
 ---
 
@@ -19,16 +19,25 @@ Specialized worker auditing application lifecycle and entry points.
 
 ## Inputs (from Coordinator)
 
+**MANDATORY READ:** Load `shared/references/task_delegation_pattern.md#audit-coordinator--worker-contract` for contextStore structure.
+
 Receives `contextStore` with tech stack, deployment type, codebase root, output_dir.
 
 ## Workflow
 
+**MANDATORY READ:** Load `shared/references/two_layer_detection.md` for detection methodology.
+
 1) Parse context + output_dir
-2) Check lifecycle patterns
-3) Collect findings
-4) Calculate score
-5) **Write Report:** Build full markdown report in memory per `shared/templates/audit_worker_report_template.md`, write to `{output_dir}/629-lifecycle.md` in single Write call
-6) **Return Summary:** Return minimal summary to coordinator
+2) Check lifecycle patterns (Layer 1: grep for SIGTERM, shutdown handlers, probes)
+3) Analyze context per candidate (Layer 2):
+   - Bootstrap order: read main file — trace actual init sequence, verify dependencies satisfied before use
+   - Graceful shutdown: read signal handlers — do they actually close all resources? Or just log and exit?
+   - Resource cleanup: read shutdown handler — are ALL opened resources (DB, Redis, queues) closed?
+   - Probes: check deployment config (Dockerfile, k8s manifests) — is this containerized?
+4) Collect confirmed findings
+5) Calculate score
+6) **Write Report:** Build full markdown report in memory per `shared/templates/audit_worker_report_template.md`, write to `{output_dir}/629-lifecycle.md` in single Write call
+7) **Return Summary:** Return minimal summary to coordinator
 
 ## Audit Rules
 

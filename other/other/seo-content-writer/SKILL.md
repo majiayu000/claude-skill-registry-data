@@ -1,19 +1,21 @@
 ---
 name: seo-content-writer
-description: 'Use when the user asks to "write SEO content", "create a blog post", "write an article", "content writing", "draft optimized content", "write me an article", "create a blog post about", "help me write SEO content", or "draft content for". Creates high-quality, SEO-optimized content that ranks in search engines. Applies on-page SEO best practices, keyword optimization, and content structure for maximum visibility and engagement. For AI citation optimization, see geo-content-optimizer. For updating existing content, see content-refresher.'
+version: "3.0.0"
+description: 'This skill should be used when the user asks to "write SEO content", "create a blog post", "write an article", "content writing for SEO", "draft optimized content", "write a how-to guide", "create a product description", "write a landing page", "SEO copywriting", "draft content targeting [keyword]", or "write 2000-word article about [topic]". Creates keyword-optimized content using a 12-step workflow: CORE-EEAT pre-write checklist, keyword integration, title optimization (5 formula options), meta description, H1/H2/H3 hierarchy, featured snippet targeting, internal/external linking, and readability enhancement. Produces full drafts with embedded SEO elements, title variants, meta description, FAQ section with schema, and a self-scored CORE-EEAT checklist. For AI-citation optimization, see geo-content-optimizer. For updating existing content, see content-refresher.'
 license: Apache-2.0
+compatibility: "Claude Code ≥1.0, skills.sh marketplace, ClawHub marketplace, Vercel Labs skills ecosystem. No system packages required. Optional: MCP network access for SEO tool integrations."
 metadata:
   author: aaron-he-zhu
-  version: "2.0.0"
+  version: "3.0.0"
   geo-relevance: "medium"
   tags:
     - seo
-    - content writing
-    - blog post
-    - article
-    - copywriting
-    - content creation
-    - on-page seo
+    - content-writing
+    - blog-writing
+    - seo-copywriting
+    - content-creation
+    - featured-snippet-optimization
+    - how-to-guide
   triggers:
     - "write SEO content"
     - "create blog post"
@@ -29,7 +31,6 @@ metadata:
 ---
 
 # SEO Content Writer
-
 
 > **[SEO & GEO Skills Library](https://skills.sh/aaron-he-zhu/seo-geo-claude-skills)** · 20 skills for SEO + GEO · Install all: `npx skills add aaron-he-zhu/seo-geo-claude-skills`
 
@@ -236,167 +237,24 @@ When a user requests SEO content:
    - ✅ CTA or curiosity hook
    ```
 
-6. **Structure Content with SEO Headers**
+6. **Structure Content and Write**
 
-   ```markdown
-   ### Content Structure
-   
-   **H1**: [Primary keyword in H1 - only one per page]
-   
-   **Introduction** (100-150 words)
-   - Hook reader in first sentence
-   - State what they'll learn
-   - Include primary keyword in first 100 words
-   
-   **H2**: [Secondary keyword or question]
-   [Content section]
-   
-   **H2**: [Secondary keyword or question]
-   
-   **H3**: [Sub-topic]
-   [Content]
-   
-   **H3**: [Sub-topic]
-   [Content]
-   
-   **H2**: [Secondary keyword or question]
-   [Content]
-   
-   **H2**: Frequently Asked Questions
-   [FAQ section for PAA optimization]
-   
-   **Conclusion**
-   - Summarize key points
-   - Include primary keyword
-   - Clear call-to-action
-   ```
+   Structure: H1 (primary keyword, one per page) > Introduction (100-150 words, hook + promise + keyword in first 100 words) > H2 sections (secondary keywords/questions) > H3 sub-topics > FAQ section > Conclusion (summary + keyword + CTA).
 
 7. **Apply On-Page SEO Best Practices**
 
-   ```markdown
-   ### On-Page SEO Checklist
-   
-   **Keyword Placement**:
-   - [ ] Primary keyword in title
-   - [ ] Primary keyword in H1
-   - [ ] Primary keyword in first 100 words
-   - [ ] Primary keyword in at least one H2
-   - [ ] Primary keyword in conclusion
-   - [ ] Primary keyword in meta description
-   - [ ] Secondary keywords in H2s/H3s
-   - [ ] Related terms throughout body
-   
-   **Content Quality**:
-   - [ ] Comprehensive coverage of topic
-   - [ ] Original insights or data
-   - [ ] Actionable takeaways
-   - [ ] Examples and illustrations
-   - [ ] Expert quotes or citations (for E-E-A-T)
-   
-   **Readability**:
-   - [ ] Paragraphs of 3-5 sentences (per CORE-EEAT O06 Section Chunking standard)
-   - [ ] Varied sentence length
-   - [ ] Bullet points and lists
-   - [ ] Bold key phrases
-   - [ ] Table of contents for long content
-   
-   **Technical**:
-   - [ ] Internal links to relevant pages (2-5)
-   - [ ] External links to authoritative sources (2-3)
-   - [ ] Image alt text with keywords
-   - [ ] URL slug includes keyword
-   ```
+   Follow the on-page SEO checklist (keyword placement, content quality, readability, technical elements) and the content writing template (H1 with keyword, hook, sections with H2/H3, FAQ, conclusion with CTA).
 
-8. **Write the Content**
+   > **Reference**: See [references/seo-writing-checklist.md](./references/seo-writing-checklist.md) for the full on-page SEO checklist, content writing template, and featured snippet optimization patterns.
 
-   Follow this structure:
+   Key requirements while writing:
+   - Primary keyword in title, H1, first 100 words, at least one H2, and conclusion
+   - Paragraphs of 3-5 sentences; varied sentence length; bullet points and bold key phrases
+   - Internal links (2-5) and external authoritative links (2-3)
+   - FAQ section with 40-60 word answers for featured snippet opportunity
+   - Optimize for definition, list, table, and how-to snippets where applicable
 
-   ```markdown
-   # [H1 with Primary Keyword]
-   
-   [Hook sentence that grabs attention]
-   
-   [Problem statement or context - why this matters]
-   
-   [Promise - what the reader will learn/gain] [Include primary keyword naturally]
-   
-   [Brief overview of what's covered - can be bullet points for scanability]
-   
-   ## [H2 - First Main Section with Secondary Keyword]
-   
-   [Introduction to section - 1-2 sentences]
-   
-   [Main content with valuable information]
-   
-   [Examples, data, or evidence to support points]
-   
-   [Transition to next section]
-   
-   ### [H3 - Sub-section if needed]
-   
-   [Detailed content]
-   
-   [Key points in bullet format]:
-   - Point 1
-   - Point 2
-   - Point 3
-   
-   ## [H2 - Second Main Section]
-   
-   [Continue with valuable content...]
-   
-   > **Pro Tip**: [Highlighted tip or key insight]
-   
-   | Column 1 | Column 2 | Column 3 |
-   |----------|----------|----------|
-   | Data | Data | Data |
-   
-   ## [H2 - Additional Sections as Needed]
-   
-   [Content...]
-   
-   ## Frequently Asked Questions
-   
-   ### [Question from PAA or common query]?
-   
-   [Direct, concise answer in 40-60 words for featured snippet opportunity]
-   
-   ### [Question 2]?
-   
-   [Answer]
-   
-   ### [Question 3]?
-   
-   [Answer]
-   
-   ## Conclusion
-   
-   [Summary of key points - include primary keyword]
-   
-   [Final thought or insight]
-   
-   [Clear call-to-action: what should reader do next?]
-   ```
-
-9. **Optimize for Featured Snippets**
-
-   ```markdown
-   ### Featured Snippet Optimization
-   
-   **For Definition Snippets**:
-   "[Term] is [clear, concise definition in 40-60 words]"
-   
-   **For List Snippets**:
-   Create clear, numbered or bulleted lists under H2s
-   
-   **For Table Snippets**:
-   Use comparison tables with clear headers
-   
-   **For How-To Snippets**:
-   Number each step clearly: "Step 1:", "Step 2:", etc.
-   ```
-
-10. **Add Internal/External Links**
+8. **Add Internal/External Links**
 
    ```markdown
    ### Link Recommendations
@@ -410,61 +268,13 @@ When a user requests SEO content:
    2. "[anchor text]" → [authoritative-source.com] (supports: [claim])
    ```
 
-11. **Final SEO Review**
+9. **Final SEO Review and CORE-EEAT Self-Check**
 
-    ```markdown
-    ### Content SEO Score
+    Score content across 10 SEO factors (title, meta description, H1, keyword placement, H2s, internal links, external links, FAQ, readability, word count) and produce an Overall SEO Score out of 10.
 
-    | Factor | Status | Notes |
-    |--------|--------|-------|
-    | Title optimized | ✅/⚠️/❌ | [notes] |
-    | Meta description | ✅/⚠️/❌ | [notes] |
-    | H1 with keyword | ✅/⚠️/❌ | [notes] |
-    | Keyword in first 100 words | ✅/⚠️/❌ | [notes] |
-    | H2s optimized | ✅/⚠️/❌ | [notes] |
-    | Internal links | ✅/⚠️/❌ | [notes] |
-    | External links | ✅/⚠️/❌ | [notes] |
-    | FAQ section | ✅/⚠️/❌ | [notes] |
-    | Readability | ✅/⚠️/❌ | [notes] |
-    | Word count | ✅/⚠️/❌ | [X] words |
-
-    **Overall SEO Score**: [X]/10
-
-    **Improvements to Consider**:
-    1. [Suggestion]
-    2. [Suggestion]
-    ```
-
-12. **CORE-EEAT Self-Check**
-
-    After writing, verify content against loaded CORE-EEAT constraints:
-
-    ```markdown
-    ### CORE-EEAT Post-Write Check
-
-    | ID | Standard | Status | Notes |
-    |----|----------|--------|-------|
-    | C01 | Intent Alignment: title = content | ✅/⚠️/❌ | [notes] |
-    | C02 | Direct Answer in first 150 words | ✅/⚠️/❌ | [notes] |
-    | C06 | Audience explicitly stated | ✅/⚠️/❌ | [notes] |
-    | C10 | Conclusion answers opening question | ✅/⚠️/❌ | [notes] |
-    | O01 | Heading hierarchy correct | ✅/⚠️/❌ | [notes] |
-    | O02 | Summary/Key Takeaways present | ✅/⚠️/❌ | [notes] |
-    | O06 | Paragraphs 3–5 sentences | ✅/⚠️/❌ | [notes] |
-    | O09 | No filler; consistent terms | ✅/⚠️/❌ | [notes] |
-    | R01 | ≥5 precise data points with units | ✅/⚠️/❌ | [notes] |
-    | R02 | ≥1 citation per 500 words | ✅/⚠️/❌ | [notes] |
-    | R04 | Claims backed by evidence | ✅/⚠️/❌ | [notes] |
-    | R07 | Full entity names used | ✅/⚠️/❌ | [notes] |
-    | C03 | ≥3 query variants covered | ✅/⚠️/❌ | [notes] |
-    | O08 | Table of contents with jump links | ✅/⚠️/❌ | [notes] |
-    | O10 | Images/videos captioned and informative | ✅/⚠️/❌ | [notes] |
-    | E07 | Downloadable template/checklist included | ✅/⚠️/❌ | [notes] |
-
-    **Items Needing Attention**: [list any ⚠️/❌ items]
+    Then verify the 16 CORE-EEAT pre-write constraints (C01, C02, C06, C10, O01, O02, O06, O09, R01, R02, R04, R07, C03, O08, O10, E07) with pass/warning/fail status. List items needing attention.
 
     _For full 80-item audit, use [content-quality-auditor](../../cross-cutting/content-quality-auditor/)_
-    ```
 
 ## Validation Checkpoints
 
@@ -486,125 +296,9 @@ When a user requests SEO content:
 
 **User**: "Write an SEO-optimized article about 'email marketing best practices' targeting small businesses"
 
-**Output**:
+> **Reference**: See [references/seo-writing-checklist.md](./references/seo-writing-checklist.md) for the full example output demonstrating a complete SEO article with meta description, H1/H2/H3 hierarchy, statistics with citations, comparison tables, FAQ section, and conclusion with CTA.
 
-```markdown
-# Email Marketing Best Practices: A Complete Guide for Small Businesses
-
-**Meta Description**: Discover proven email marketing best practices that help small businesses increase open rates, boost engagement, and drive sales. Start improving your campaigns today. (158 chars)
-
----
-
-Want to know the secret behind small businesses that consistently turn subscribers into loyal customers? It's not luck—it's strategic email marketing.
-
-Email marketing remains one of the most effective channels for small businesses, delivering an average ROI of $42 for every $1 spent. But with inboxes more crowded than ever, following email marketing best practices isn't optional—it's essential for survival.
-
-In this guide, you'll learn:
-- How to build a quality email list that converts
-- Proven strategies to increase open and click rates
-- Advanced personalization techniques that drive results
-- Common mistakes that kill email performance
-
-Let's dive into the strategies that will transform your email marketing.
-
-## Why Email Marketing Matters for Small Businesses
-
-Before we explore the best practices, let's understand why email deserves your attention.
-
-Unlike social media where algorithms control who sees your content, email gives you direct access to your audience. You own your email list—no platform can take it away.
-
-**Key email marketing statistics for small businesses**:
-- 81% of SMBs rely on email as their primary customer acquisition channel
-- Email subscribers are 3x more likely to share content on social media
-- Personalized emails generate 6x higher transaction rates
-
-## Building a High-Quality Email List
-
-### Use Strategic Opt-in Incentives
-
-The foundation of effective email marketing is a quality list. Here's how to grow yours:
-
-**Lead magnets that convert**:
-- Industry-specific templates
-- Exclusive discounts or early access
-- Free tools or calculators
-- Educational email courses
-
-> **Pro Tip**: The best lead magnets solve a specific, immediate problem for your target audience.
-
-### Implement Double Opt-in
-
-Double opt-in confirms subscriber intent and improves deliverability. Yes, you'll have fewer subscribers, but they'll be more engaged.
-
-| Single Opt-in | Double Opt-in |
-|---------------|---------------|
-| More subscribers | Fewer subscribers |
-| Higher bounce rates | Lower bounce rates |
-| Lower engagement | Higher engagement |
-| Spam risk | Better deliverability |
-
-## Crafting Emails That Get Opened
-
-### Write Compelling Subject Lines
-
-Your subject line determines whether emails get opened or ignored.
-
-**Subject line best practices**:
-1. Keep it under 50 characters
-2. Create urgency without being spammy
-3. Use numbers and specifics
-4. Personalize when possible
-5. A/B test consistently
-
-### Optimize Preview Text
-
-The preview text (preheader) is your second chance to convince someone to open. Use it to expand on your subject line, not repeat it.
-
-## Personalization Strategies That Work
-
-Generic emails perform poorly. Here's how to personalize effectively:
-
-### Segment Your Email List
-
-Divide your list based on:
-- Purchase history
-- Engagement level
-- Demographics
-- Interests or preferences
-- Customer lifecycle stage
-
-### Use Dynamic Content
-
-Send the same email but show different content blocks based on subscriber data.
-
-## Frequently Asked Questions
-
-### How often should small businesses send marketing emails?
-
-For most small businesses, sending 1-2 emails per week strikes the right balance. This keeps you top-of-mind without overwhelming subscribers. Monitor your unsubscribe rates—if they spike after increasing frequency, scale back.
-
-### What is a good email open rate for small businesses?
-
-A good email open rate for small businesses is 20-25%. However, this varies by industry. E-commerce averages 15-20%, while B2B services often see 25-30%. Focus on improving your own benchmarks rather than industry averages.
-
-### Should I buy email lists to grow faster?
-
-Never buy email lists. Purchased lists violate GDPR and CAN-SPAM regulations, damage your sender reputation, and result in poor engagement. Organic list growth, while slower, produces much better results.
-
-## Conclusion
-
-Implementing these email marketing best practices will help your small business build stronger customer relationships and drive consistent revenue. Remember: quality always beats quantity in email marketing.
-
-Start with one improvement today. Whether it's segmenting your list, testing subject lines, or cleaning inactive subscribers, small changes compound into significant results.
-
-**Ready to level up your email marketing?** Download our free Email Marketing Checklist to ensure every campaign you send follows these best practices.
-
----
-
-*Further reading: [Internal link: "How to Write Email Copy That Converts"]*
-
-*Sources: [Litmus Email Marketing Statistics](https://litmus.com), [Campaign Monitor Email Benchmarks](https://campaignmonitor.com)*
-```
+The example output demonstrates: keyword in H1 and first 100 words, statistics with sources (DMA, Emarsys), comparison tables, bullet-point lists, pro tips, FAQ section with 40-60 word answers, and a clear CTA in the conclusion.
 
 ## Content Type Templates
 
@@ -652,10 +346,5 @@ Write an ultimate guide about [topic] (3,000+ words) targeting [keyword]
 - [geo-content-optimizer](../geo-content-optimizer/) — Optimize for AI citations
 - [meta-tags-optimizer](../meta-tags-optimizer/) — Create compelling meta tags
 - [on-page-seo-auditor](../../optimize/on-page-seo-auditor/) — Audit SEO elements
-- [internal-linking-optimizer](../../optimize/internal-linking-optimizer/) — Place internal links during content writing
-- [content-refresher](../../optimize/content-refresher/) — Refresh and update existing content
 - [content-quality-auditor](../../cross-cutting/content-quality-auditor/) — Full 80-item CORE-EEAT audit
-- [memory-management](../../cross-cutting/memory-management/) — Track content performance over time
-- [content-gap-analysis](../../research/content-gap-analysis/) — Identify content opportunities to write about
-- [schema-markup-generator](../schema-markup-generator/) — Add structured data to published content
 

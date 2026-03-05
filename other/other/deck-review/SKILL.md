@@ -1,7 +1,7 @@
 ---
 name: deck-review
 disable-model-invocation: true
-description: "Scores and strengthens startup pitch decks against 35 investor-grade criteria before founders send them to VCs. Use when user asks to \"review my deck\", \"pitch deck feedback\", \"check my slides\", \"is my deck ready\", \"review this pitch deck\", \"deck critique\", \"improve my pitch deck\", \"what's wrong with my deck\", \"pitch deck review\", \"fundraising deck feedback\", or provides a pitch deck (PDF, PPTX, markdown, or text) for evaluation. Covers pre-seed, seed, and Series A against 2026 best practices from Sequoia, DocSend, YC, a16z, and Carta data. Do NOT use for financial model review, market sizing, or general document editing."
+description: "Scores and strengthens startup pitch decks against 35 investor-grade criteria before founders send them to VCs. Use when user asks to 'review my deck', 'pitch deck feedback', 'check my slides', 'is my deck ready', 'review this pitch deck', 'deck critique', 'improve my pitch deck', 'what's wrong with my deck', 'pitch deck review', 'fundraising deck feedback', or provides a pitch deck (PDF, PPTX, markdown, or text) for evaluation. Covers pre-seed, seed, and Series A against 2026 best practices from Sequoia, DocSend, YC, a16z, and Carta data. Do NOT use for financial model review, market sizing, or general document editing."
 compatibility: Requires Python 3.10+ and uv for script execution.
 metadata:
   author: lool-ventures
@@ -64,12 +64,16 @@ SCRIPTS="$CLAUDE_PLUGIN_ROOT/skills/deck-review/scripts"
 REFS="$CLAUDE_PLUGIN_ROOT/skills/deck-review/references"
 if ls "$(pwd)"/mnt/*/ >/dev/null 2>&1; then
   ARTIFACTS_ROOT="$(ls -d "$(pwd)"/mnt/*/ | head -1)artifacts"
+elif ls "$(pwd)"/sessions/*/mnt/*/ >/dev/null 2>&1; then
+  ARTIFACTS_ROOT="$(ls -d "$(pwd)"/sessions/*/mnt/*/ | head -1)artifacts"
 else
   ARTIFACTS_ROOT="$(pwd)/artifacts"
 fi
 ```
 
 If `CLAUDE_PLUGIN_ROOT` is empty, fall back: `Glob` for `**/founder-skills/skills/deck-review/scripts/checklist.py`, strip to get `SCRIPTS`, derive `REFS`.
+
+**If `ARTIFACTS_ROOT` resolves to `$(pwd)/artifacts` but no `artifacts/` directory exists at `$(pwd)`:** The workspace may not be mounted yet. Use `Glob` with pattern `**/artifacts/founder_context.json` to locate existing artifacts, and derive `ARTIFACTS_ROOT` from the result. If nothing is found, `mkdir -p "$ARTIFACTS_ROOT"` and proceed.
 
 ```bash
 REVIEW_DIR="$ARTIFACTS_ROOT/deck-review-{company-slug}"
@@ -117,13 +121,15 @@ python3 "$SCRIPTS/compose_report.py" --dir "$REVIEW_DIR" --pretty -o "$REVIEW_DI
 
 Fix high-severity warnings and re-run. Use `--strict` to enforce a clean report.
 
-**Primary deliverable:** Read `report_markdown` from the output JSON and display it to the user in full. Then add coaching commentary.
+**Primary deliverable:** Read `report_markdown` from the output JSON, write it to `$REVIEW_DIR/report.md`, and display it to the user in full. **Present the file path** so the user can access it directly. Then add coaching commentary.
 
 ### Step 6 (Optional): Generate Visual Report
 
 ```bash
 python3 "$SCRIPTS/visualize.py" --dir "$REVIEW_DIR" -o "$REVIEW_DIR/report.html"
 ```
+
+**Present the HTML file path** to the user so they can open the visual report.
 
 ### Step 7: Deliver Artifacts
 

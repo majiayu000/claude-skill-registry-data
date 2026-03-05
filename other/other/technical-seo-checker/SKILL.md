@@ -1,10 +1,13 @@
 ---
 name: technical-seo-checker
-description: 'Use when the user asks to "technical SEO audit", "check page speed", "crawl issues", "Core Web Vitals", "site indexing problems", "my site is slow", "Google cannot crawl my site", "mobile issues", or "indexing problems". Performs technical SEO audits covering site speed, crawlability, indexability, mobile-friendliness, security, and structured data. Identifies technical issues preventing optimal search performance. For content and heading element issues, see on-page-seo-auditor. For link architecture, see internal-linking-optimizer.'
+version: "3.0.0"
+description: 'This skill should be used when the user asks to "technical SEO audit", "check page speed", "Core Web Vitals", "LCP is slow", "CLS problem", "INP issues", "crawl errors", "indexing problems", "robots.txt check", "XML sitemap errors", "hreflang issues", "canonical tag problems", "HTTPS not working", "mobile SEO", "JavaScript rendering", or "site health check". Performs comprehensive technical SEO audits: Core Web Vitals (LCP/CLS/INP/TTFB), crawlability, indexability, mobile-friendliness, HTTPS/HSTS security, URL structure, redirect chains, robots.txt, XML sitemaps, hreflang, canonical tags, and structured data validation. Produces a scored technical health report (0–100) with critical/high/medium issue triage and a prioritized implementation roadmap. Works with Google PageSpeed Insights, Google Search Console, crawl tools, or manual audit. For content element issues, see on-page-seo-auditor. For link architecture, see internal-linking-optimizer.'
 license: Apache-2.0
+compatibility: "Claude Code ≥1.0, skills.sh marketplace, ClawHub marketplace, Vercel Labs skills ecosystem. No system packages required. Optional: MCP network access for SEO tool integrations."
+allowed-tools: WebFetch
 metadata:
   author: aaron-he-zhu
-  version: "2.0.0"
+  version: "3.0.0"
   geo-relevance: "low"
   tags:
     - seo
@@ -16,6 +19,22 @@ metadata:
     - mobile-friendly
     - site speed
     - security audit
+    - core-web-vitals
+    - page-speed
+    - lcp
+    - cls
+    - inp
+    - ttfb
+    - crawl-errors
+    - robots-txt
+    - xml-sitemap
+    - hreflang
+    - canonicalization
+    - https
+    - mobile-seo
+    - redirect-chains
+    - javascript-rendering
+    - site-health
   triggers:
     - "technical SEO audit"
     - "check page speed"
@@ -238,299 +257,33 @@ When a user requests a technical SEO audit:
    **Indexability Score**: [X]/10
    ```
 
-3. **Audit Site Speed & Core Web Vitals**
+3. **Audit Site Speed & Core Web Vitals** — CWV metrics (LCP/FID/CLS/INP), additional performance metrics (TTFB/FCP/Speed Index/TBT), resource loading breakdown, optimization recommendations
 
-   ```markdown
-   ## Performance Analysis
-   
-   ### Core Web Vitals
-   
-   | Metric | Mobile | Desktop | Target | Status |
-   |--------|--------|---------|--------|--------|
-   | LCP (Largest Contentful Paint) | [X]s | [X]s | <2.5s | ✅/⚠️/❌ |
-   | FID (First Input Delay) | [X]ms | [X]ms | <100ms | ✅/⚠️/❌ |
-   | CLS (Cumulative Layout Shift) | [X] | [X] | <0.1 | ✅/⚠️/❌ |
-   | INP (Interaction to Next Paint) | [X]ms | [X]ms | <200ms | ✅/⚠️/❌ |
-   
-   ### Additional Performance Metrics
-   
-   | Metric | Value | Status |
-   |--------|-------|--------|
-   | Time to First Byte (TTFB) | [X]ms | ✅/⚠️/❌ |
-   | First Contentful Paint (FCP) | [X]s | ✅/⚠️/❌ |
-   | Speed Index | [X] | ✅/⚠️/❌ |
-   | Total Blocking Time | [X]ms | ✅/⚠️/❌ |
-   | Page Size | [X]MB | ✅/⚠️/❌ |
-   | Requests | [X] | ✅/⚠️/❌ |
-   
-   ### Performance Issues
-   
-   **LCP Issues**:
-   - [Issue]: [Impact] - [Solution]
-   - [Issue]: [Impact] - [Solution]
-   
-   **CLS Issues**:
-   - [Issue]: [Impact] - [Solution]
-   
-   **Resource Loading**:
-   | Resource Type | Count | Size | Issues |
-   |---------------|-------|------|--------|
-   | Images | [X] | [X]MB | [notes] |
-   | JavaScript | [X] | [X]MB | [notes] |
-   | CSS | [X] | [X]KB | [notes] |
-   | Fonts | [X] | [X]KB | [notes] |
-   
-   ### Optimization Recommendations
-   
-   **High Impact**:
-   1. [Recommendation] - Est. improvement: [X]s
-   2. [Recommendation] - Est. improvement: [X]s
-   
-   **Medium Impact**:
-   1. [Recommendation]
-   2. [Recommendation]
-   
-   **Performance Score**: [X]/10
-   ```
+   > **Reference**: See [references/technical-audit-templates.md](./references/technical-audit-templates.md) for the performance analysis template (Step 3).
 
-4. **Audit Mobile-Friendliness**
+4. **Audit Mobile-Friendliness** — Mobile-friendly test, responsive design check, mobile-first indexing verification
 
-   ```markdown
-   ## Mobile Optimization Analysis
-   
-   ### Mobile-Friendly Test
-   
-   | Check | Status | Notes |
-   |-------|--------|-------|
-   | Mobile-friendly overall | ✅/❌ | [notes] |
-   | Viewport configured | ✅/❌ | [viewport tag] |
-   | Text readable | ✅/⚠️/❌ | Font size: [X]px |
-   | Tap targets sized | ✅/⚠️/❌ | [notes] |
-   | Content fits viewport | ✅/❌ | [notes] |
-   | No horizontal scroll | ✅/❌ | [notes] |
-   
-   ### Responsive Design Check
-   
-   | Element | Desktop | Mobile | Issues |
-   |---------|---------|--------|--------|
-   | Navigation | [status] | [status] | [notes] |
-   | Images | [status] | [status] | [notes] |
-   | Forms | [status] | [status] | [notes] |
-   | Tables | [status] | [status] | [notes] |
-   | Videos | [status] | [status] | [notes] |
-   
-   ### Mobile-First Indexing
-   
-   | Check | Status | Notes |
-   |-------|--------|-------|
-   | Mobile version has all content | ✅/⚠️/❌ | [notes] |
-   | Mobile has same structured data | ✅/⚠️/❌ | [notes] |
-   | Mobile has same meta tags | ✅/⚠️/❌ | [notes] |
-   | Mobile images have alt text | ✅/⚠️/❌ | [notes] |
-   
-   **Mobile Score**: [X]/10
-   ```
+   > **Reference**: See [references/technical-audit-templates.md](./references/technical-audit-templates.md) for the mobile optimization template (Step 4).
 
-5. **Audit Security & HTTPS**
+5. **Audit Security & HTTPS** — SSL certificate, HTTPS enforcement, mixed content, HSTS, security headers (CSP, X-Frame-Options, etc.)
 
-   ```markdown
-   ## Security Analysis
-   
-   ### HTTPS Status
-   
-   | Check | Status | Notes |
-   |-------|--------|-------|
-   | SSL certificate valid | ✅/❌ | Expires: [date] |
-   | HTTPS enforced | ✅/❌ | [redirects properly?] |
-   | Mixed content | ✅/⚠️/❌ | [X] issues |
-   | HSTS enabled | ✅/⚠️ | [notes] |
-   | Certificate chain | ✅/⚠️/❌ | [notes] |
-   
-   ### Security Headers
-   
-   | Header | Present | Value | Recommended |
-   |--------|---------|-------|-------------|
-   | Content-Security-Policy | ✅/❌ | [value] | [recommendation] |
-   | X-Frame-Options | ✅/❌ | [value] | DENY or SAMEORIGIN |
-   | X-Content-Type-Options | ✅/❌ | [value] | nosniff |
-   | X-XSS-Protection | ✅/❌ | [value] | 1; mode=block |
-   | Referrer-Policy | ✅/❌ | [value] | [recommendation] |
-   
-   **Security Score**: [X]/10
-   ```
+   > **Reference**: See [references/technical-audit-templates.md](./references/technical-audit-templates.md) for the security analysis template (Step 5).
 
-6. **Audit URL Structure**
+6. **Audit URL Structure** — URL patterns, issues (dynamic params, session IDs, uppercase), redirect analysis (chains, loops, 302s)
 
-   ```markdown
-   ## URL Structure Analysis
-   
-   ### URL Pattern Review
-   
-   | Check | Status | Notes |
-   |-------|--------|-------|
-   | HTTPS URLs | ✅/⚠️/❌ | [X]% HTTPS |
-   | Lowercase URLs | ✅/⚠️/❌ | [notes] |
-   | No special characters | ✅/⚠️/❌ | [notes] |
-   | Readable/descriptive | ✅/⚠️/❌ | [notes] |
-   | Appropriate length | ✅/⚠️/❌ | Avg: [X] chars |
-   | Keywords in URLs | ✅/⚠️/❌ | [notes] |
-   | Consistent structure | ✅/⚠️/❌ | [notes] |
-   
-   ### URL Issues Found
-   
-   | Issue Type | Count | Examples |
-   |------------|-------|----------|
-   | Dynamic parameters | [X] | [URLs] |
-   | Session IDs in URLs | [X] | [URLs] |
-   | Uppercase characters | [X] | [URLs] |
-   | Special characters | [X] | [URLs] |
-   | Very long URLs (>100) | [X] | [URLs] |
-   
-   ### Redirect Analysis
-   
-   | Check | Status | Notes |
-   |-------|--------|-------|
-   | Redirect chains | [X] found | [max chain length] |
-   | Redirect loops | [X] found | [URLs] |
-   | 302 → 301 needed | [X] found | [URLs] |
-   | Broken redirects | [X] found | [URLs] |
-   
-   **URL Score**: [X]/10
-   ```
+   > **Reference**: See [references/technical-audit-templates.md](./references/technical-audit-templates.md) for the URL structure template (Step 6).
 
-7. **Audit Structured Data**
+7. **Audit Structured Data** — Schema markup validation, missing schema opportunities. CORE-EEAT alignment: maps to O05.
 
-   > **CORE-EEAT alignment**: Schema markup quality maps to O05 (Schema Markup) in the CORE-EEAT benchmark. See [content-quality-auditor](../../cross-cutting/content-quality-auditor/) for full content quality audit.
+   > **Reference**: See [references/technical-audit-templates.md](./references/technical-audit-templates.md) for the structured data template (Step 7).
 
-   ```markdown
-   ## Structured Data Analysis
-   
-   ### Schema Markup Found
-   
-   | Schema Type | Pages | Valid | Errors |
-   |-------------|-------|-------|--------|
-   | [Type 1] | [X] | ✅/❌ | [errors] |
-   | [Type 2] | [X] | ✅/❌ | [errors] |
-   
-   ### Validation Results
-   
-   **Errors**:
-   - [Error 1]: [affected pages] - [solution]
-   - [Error 2]: [affected pages] - [solution]
-   
-   **Warnings**:
-   - [Warning 1]: [notes]
-   
-   ### Missing Schema Opportunities
-   
-   | Page Type | Current Schema | Recommended |
-   |-----------|----------------|-------------|
-   | Blog posts | [current] | Article + FAQ |
-   | Products | [current] | Product + Review |
-   | Homepage | [current] | Organization |
-   
-   **Structured Data Score**: [X]/10
-   ```
+8. **Audit International SEO (if applicable)** — Hreflang implementation, language/region targeting
 
-8. **Audit International SEO (if applicable)**
+   > **Reference**: See [references/technical-audit-templates.md](./references/technical-audit-templates.md) for the international SEO template (Step 8).
 
-   ```markdown
-   ## International SEO Analysis
-   
-   ### Hreflang Implementation
-   
-   | Check | Status | Notes |
-   |-------|--------|-------|
-   | Hreflang tags present | ✅/❌ | [notes] |
-   | Self-referencing | ✅/⚠️/❌ | [notes] |
-   | Return tags present | ✅/⚠️/❌ | [notes] |
-   | Valid language codes | ✅/⚠️/❌ | [notes] |
-   | x-default tag | ✅/⚠️ | [notes] |
-   
-   ### Language/Region Targeting
-   
-   | Language | URL | Hreflang | Status |
-   |----------|-----|----------|--------|
-   | [en-US] | [URL] | [tag] | ✅/⚠️/❌ |
-   | [es-ES] | [URL] | [tag] | ✅/⚠️/❌ |
-   
-   **International Score**: [X]/10
-   ```
+9. **Generate Technical Audit Summary** — Overall health score with visual breakdown, critical/high/medium issues, quick wins, implementation roadmap (weeks 1-4+), monitoring recommendations
 
-9. **Generate Technical Audit Summary**
-
-   ```markdown
-   # Technical SEO Audit Report
-   
-   **Domain**: [domain]
-   **Audit Date**: [date]
-   **Pages Analyzed**: [X]
-   
-   ## Overall Technical Health: [X]/100
-   
-   ```
-   Score Breakdown:
-   ████████░░ Crawlability: 8/10
-   ███████░░░ Indexability: 7/10
-   █████░░░░░ Performance: 5/10
-   ████████░░ Mobile: 8/10
-   █████████░ Security: 9/10
-   ██████░░░░ URL Structure: 6/10
-   █████░░░░░ Structured Data: 5/10
-   ```
-   
-   ## Critical Issues (Fix Immediately)
-   
-   1. **[Issue]**: [Impact] 
-      - Affected: [pages/scope]
-      - Solution: [specific fix]
-      - Priority: 🔴 Critical
-   
-   2. **[Issue]**: [Impact]
-      - Affected: [pages/scope]
-      - Solution: [specific fix]
-      - Priority: 🔴 Critical
-   
-   ## High Priority Issues
-   
-   1. **[Issue]**: [Solution]
-   2. **[Issue]**: [Solution]
-   
-   ## Medium Priority Issues
-   
-   1. **[Issue]**: [Solution]
-   2. **[Issue]**: [Solution]
-   
-   ## Quick Wins
-   
-   These can be fixed quickly for immediate improvement:
-   
-   1. [Quick fix 1]
-   2. [Quick fix 2]
-   3. [Quick fix 3]
-   
-   ## Implementation Roadmap
-   
-   ### Week 1: Critical Fixes
-   - [ ] [Task 1]
-   - [ ] [Task 2]
-   
-   ### Week 2-3: High Priority
-   - [ ] [Task 1]
-   - [ ] [Task 2]
-   
-   ### Week 4+: Optimization
-   - [ ] [Task 1]
-   - [ ] [Task 2]
-   
-   ## Monitoring Recommendations
-
-   Set up alerts for:
-   - Core Web Vitals drops
-   - Crawl error spikes
-   - Index coverage changes
-   - Security issues
-   ```
+   > **Reference**: See [references/technical-audit-templates.md](./references/technical-audit-templates.md) for the audit summary template (Step 9).
 
 ## Validation Checkpoints
 
@@ -547,165 +300,7 @@ When a user requests a technical SEO audit:
 
 ## Example
 
-**User**: "Check the technical SEO of cloudhosting.com"
-
-**Output**:
-
-```markdown
-# Technical SEO Audit Report
-
-**Domain**: cloudhosting.com
-**Audit Date**: 2024-09-15
-**Pages Analyzed**: 312
-
-## Crawlability Analysis
-
-### Robots.txt Review
-
-**URL**: cloudhosting.com/robots.txt
-**Status**: Found
-
-| Check | Status | Notes |
-|-------|--------|-------|
-| File exists | ✅ | 200 response |
-| Valid syntax | ⚠️ | Wildcard pattern `Disallow: /*?` too aggressive — blocks faceted pages |
-| Sitemap declared | ❌ | No Sitemap directive in robots.txt |
-| Important pages blocked | ⚠️ | /pricing/ blocked by `Disallow: /pricing` rule |
-| Assets blocked | ✅ | CSS/JS accessible |
-
-**Issues Found**:
-- Sitemap URL not declared in robots.txt
-- `/pricing/` inadvertently blocked — high-value commercial page
-
-### XML Sitemap Review
-
-**Sitemap URL**: cloudhosting.com/sitemap.xml
-**Status**: Found (not referenced in robots.txt)
-
-| Check | Status | Notes |
-|-------|--------|-------|
-| Sitemap exists | ✅ | Valid XML, 287 URLs |
-| Only indexable URLs | ❌ | 23 noindex URLs included |
-| Includes lastmod | ⚠️ | All dates set to 2023-01-01 — not accurate |
-
-**Crawlability Score**: 5/10
-
-## Performance Analysis
-
-### Core Web Vitals
-
-| Metric | Mobile | Desktop | Target | Status |
-|--------|--------|---------|--------|--------|
-| LCP (Largest Contentful Paint) | 4.8s | 2.1s | <2.5s | ❌ Mobile / ✅ Desktop |
-| FID (First Input Delay) | 45ms | 12ms | <100ms | ✅ / ✅ |
-| CLS (Cumulative Layout Shift) | 0.24 | 0.08 | <0.1 | ❌ Mobile / ✅ Desktop |
-| INP (Interaction to Next Paint) | 380ms | 140ms | <200ms | ❌ Mobile / ✅ Desktop |
-
-### Additional Performance Metrics
-
-| Metric | Value | Status |
-|--------|-------|--------|
-| Time to First Byte (TTFB) | 1,240ms | ❌ |
-| Page Size | 3.8MB | ❌ |
-| Requests | 94 | ⚠️ |
-
-**LCP Issues**:
-- Uncompressed hero image (2.4MB PNG): Convert to WebP, est. save 1.9MB
-- No CDN detected: TTFB 1,240ms from origin server
-
-**CLS Issues**:
-- Ad banner at top of page injects without reserved height (0.18 shift contribution)
-
-**Performance Score**: 3/10
-
-## Security Analysis
-
-### HTTPS Status
-
-| Check | Status | Notes |
-|-------|--------|-------|
-| SSL certificate valid | ✅ | Expires: 2025-03-22 |
-| HTTPS enforced | ⚠️ | http://cloudhosting.com returns 200 instead of 301 redirect |
-| Mixed content | ❌ | 7 images loaded over HTTP on /features/ page |
-| HSTS enabled | ❌ | Header not present |
-
-**Security Score**: 5/10
-
-## Structured Data Analysis
-
-### Schema Markup Found
-
-| Schema Type | Pages | Valid | Errors |
-|-------------|-------|-------|--------|
-| Organization | 1 (homepage) | ✅ | None |
-| Article | 0 | — | Missing on 48 blog posts |
-| Product | 0 | — | Missing on 5 plan pages |
-| FAQ | 0 | — | Missing on 12 pages with FAQ content |
-
-**Structured Data Score**: 3/10
-
-## Overall Technical Health: 42/100
-
-```
-Score Breakdown:
-█████░░░░░ Crawlability: 5/10
-██████░░░░ Indexability: 6/10
-███░░░░░░░ Performance: 3/10
-██████░░░░ Mobile: 6/10
-█████░░░░░ Security: 5/10
-██████░░░░ URL Structure: 6/10
-███░░░░░░░ Structured Data: 3/10
-```
-
-## Priority Issues
-
-### 🔴 Critical (Fix Immediately)
-1. **Mobile LCP 4.8s (target <2.5s)** — Compress hero image to WebP (est. save 1.9MB) and implement a CDN to reduce TTFB from 1,240ms to <400ms.
-
-### 🟡 Important (Fix Soon)
-2. **HTTP not redirecting to HTTPS** — Add 301 redirect from http:// to https:// and enable HSTS header. 7 mixed-content images on /features/ need URL updates.
-
-### 🟢 Minor (Optimize)
-3. **No Article/FAQ schema on blog posts** — Add Article schema to 48 blog posts and FAQ schema to 12 FAQ pages for rich result eligibility.
-```
-
-## Technical SEO Checklist
-
-```markdown
-### Crawlability
-- [ ] robots.txt is valid and not blocking important content
-- [ ] XML sitemap exists and is submitted to ~~search console
-- [ ] No crawl errors in ~~search console
-- [ ] No redirect chains or loops
-
-### Indexability  
-- [ ] Important pages are indexable
-- [ ] Canonical tags are correct
-- [ ] No duplicate content issues
-- [ ] Pagination is handled correctly
-
-### Performance
-- [ ] Core Web Vitals pass
-- [ ] Page speed under 3 seconds
-- [ ] Images are optimized
-- [ ] JS/CSS are minified
-
-### Mobile
-- [ ] Mobile-friendly test passes
-- [ ] Viewport is configured
-- [ ] Touch elements are properly sized
-
-### Security
-- [ ] HTTPS is enforced
-- [ ] SSL certificate is valid
-- [ ] No mixed content
-- [ ] Security headers present
-
-### Structure
-- [ ] URLs are clean and descriptive
-- [ ] Site architecture is logical
-- [ ] Internal linking is strong
-```
+> **Reference**: See [references/technical-audit-example.md](./references/technical-audit-example.md) for a full worked example (cloudhosting.com technical audit) and the comprehensive technical SEO checklist.
 
 ## Tips for Success
 
@@ -715,59 +310,14 @@ Score Breakdown:
 4. **Document everything** - Track changes for troubleshooting
 5. **Regular audits** - Schedule quarterly technical reviews
 
-## Technical SEO Severity Framework
-
-### Issue Classification
-
-| Severity | Impact Description | Examples | Response Time |
-|----------|-------------------|---------|---------------|
-| **Critical** | Prevents indexation or causes site-wide issues | Robots.txt blocking site, noindex on key pages, site-wide 500 errors | Same day |
-| **High** | Significantly impacts rankings or user experience | Slow page speed, missing hreflang, duplicate content, redirect chains | Within 1 week |
-| **Medium** | Affects specific pages or has moderate impact | Missing schema, suboptimal canonicals, thin content pages | Within 1 month |
-| **Low** | Minor optimization opportunities | Image compression, minor CLS issues, non-essential schema missing | Next quarter |
-
-### Technical Debt Prioritization Matrix
-
-| Factor | Weight | Assessment |
-|--------|--------|-----------|
-| Pages affected | 30% | Site-wide > Section > Single page |
-| Revenue impact | 25% | Revenue pages > Blog > Utility pages |
-| Fix difficulty | 20% | Config change < Template change < Code rewrite |
-| Competitive impact | 15% | Competitors passing you > parity > you ahead |
-| Crawl budget waste | 10% | High waste > Moderate > Minimal |
-
-## Core Web Vitals Optimization Quick Reference
-
-### LCP (Largest Contentful Paint) Optimization
-
-| Root Cause | Detection | Fix |
-|-----------|-----------|-----|
-| Large hero image | PageSpeed Insights | Serve WebP, resize to container, add loading="lazy" |
-| Render-blocking CSS/JS | DevTools Coverage | Defer non-critical, inline critical CSS |
-| Slow server response | TTFB >800ms | CDN, server-side caching, upgrade hosting |
-| Third-party scripts | DevTools Network | Defer/async, use facade pattern |
-
-### CLS (Cumulative Layout Shift) Optimization
-
-| Root Cause | Detection | Fix |
-|-----------|-----------|-----|
-| Images without dimensions | DevTools | Add explicit width/height attributes |
-| Ads/embeds without reserved space | Visual inspection | Set min-height on containers |
-| Web fonts causing FOUT | DevTools | font-display: swap + preload fonts |
-| Dynamic content injection | Visual inspection | Reserve space with CSS |
-
-### INP (Interaction to Next Paint) Optimization
-
-| Root Cause | Detection | Fix |
-|-----------|-----------|-----|
-| Long JavaScript tasks | DevTools Performance | Break into smaller tasks, use requestIdleCallback |
-| Heavy event handlers | DevTools | Debounce/throttle, use passive listeners |
-| Main thread blocking | DevTools | Web workers for heavy computation |
+> **Technical reference**: For issue severity framework, prioritization matrix, and Core Web Vitals optimization quick reference, see [references/http-status-codes.md](./references/http-status-codes.md).
 
 ## Reference Materials
 
-- [robots.txt Reference](./references/robots-txt-reference.md) - Syntax guide, templates, common configurations
-- [HTTP Status Codes](./references/http-status-codes.md) - SEO impact of each status code, redirect best practices
+- [robots.txt Reference](./references/robots-txt-reference.md) — Syntax guide, templates, common configurations
+- [HTTP Status Codes](./references/http-status-codes.md) — SEO impact of each status code, redirect best practices
+- [Technical Audit Templates](./references/technical-audit-templates.md) — Detailed output templates for steps 3-9 (CWV, mobile, security, URL structure, structured data, international, audit summary)
+- [Technical Audit Example & Checklist](./references/technical-audit-example.md) — Full worked example and comprehensive technical SEO checklist
 
 ## Related Skills
 

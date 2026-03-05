@@ -44,7 +44,10 @@ When `mcp__hashline-edit__*` tools are available, workers MUST prefer them over 
 
 ## Task Storage Mode
 
-**MANDATORY READ:** Load `shared/references/storage_mode_detection.md` for Linear vs File mode detection and operations.
+**MANDATORY READ:** Load `shared/references/tools_config_guide.md` and `shared/references/storage_mode_detection.md`
+
+Read `docs/tools_config.md` (bootstrap if missing per tools_config_guide.md).
+Extract: `task_provider` = Task Management → Provider (`linear` | `file`).
 
 ## When to Use
 - One Story ready for processing — user picks which one
@@ -133,7 +136,7 @@ IF .pipeline/state.json NOT exists OR complete == true:
 
 **MANDATORY READ:** Load `references/kanban_parser.md` for parsing patterns.
 
-1. Auto-discover `docs/tasks/kanban_board.md` (or Linear API via storage mode detection)
+1. Auto-discover `docs/tasks/kanban_board.md` (or Linear API via storage mode operations)
 2. Extract project brief from target project's CLAUDE.md (NOT skills repo):
    ```
    project_brief = {
@@ -660,8 +663,11 @@ When invoked in Plan Mode, show available Stories and ask user which one to plan
 - **Pipeline states:** `references/pipeline_states.md`
 - **Worker prompts:** `references/worker_prompts.md`
 - **Kanban update algorithm:** `shared/references/kanban_update_algorithm.md`
-- **Storage mode detection:** `shared/references/storage_mode_detection.md`
+- **Tools config:** `shared/references/tools_config_guide.md`
+- **Storage mode operations:** `shared/references/storage_mode_detection.md`
 - **Auto-discovery patterns:** `shared/references/auto_discovery_pattern.md`
+- **MANDATORY READ:** `shared/references/research_tool_fallback.md`
+- **MANDATORY READ:** `shared/references/git_worktree_fallback.md`
 
 ### Delegated Skills
 - `../ln-300-task-coordinator/SKILL.md`

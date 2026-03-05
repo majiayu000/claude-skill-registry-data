@@ -37,7 +37,23 @@ Use when:
 
 **MANDATORY READ:** Load `shared/references/creation_quality_checklist.md` §Story Creation Checklist for validation criteria that ln-310 will enforce.
 
+## Inputs
+
+| Input | Required | Source | Description |
+|-------|----------|--------|-------------|
+| `epicId` | Yes | args, kanban, user | Epic to process |
+
+**Resolution:** Per `shared/references/input_resolution_pattern.md` — Epic Resolution Chain.
+**Status filter:** Active (planned/started)
+
 ## Workflow
+
+### Phase 0: Tools Config
+
+**MANDATORY READ:** Load `shared/references/tools_config_guide.md`, `shared/references/storage_mode_detection.md`, `shared/references/input_resolution_pattern.md`
+
+Read `docs/tools_config.md` (bootstrap if missing per tools_config_guide.md).
+Extract: `task_provider` = Task Management → Provider
 
 ### Phase 1: Context Assembly
 
@@ -47,13 +63,18 @@ Use when:
 
 Auto-discovers from `docs/tasks/kanban_board.md`:
 
-1. **Team ID:** Reads Linear Configuration table
-2. **Epic:** Parses Epic number from request → Validates in Linear → Loads Epic description
-   - **User format:** "Epic N" (Linear Project number, e.g., "Epic 7: OAuth Authentication")
-   - **Query:** `get_project(query="Epic N")` → Fetch full Epic document
+1. **Resolve epicId** (per input_resolution_pattern.md):
+   - IF args provided → use args
+   - ELSE IF git branch matches `feature/epic-{N}-*` → extract Epic N
+   - ELSE IF kanban has exactly 1 active Epic → suggest
+   - ELSE → AskUserQuestion: show active Epics from kanban
+2. **Team ID:** Reads Linear Configuration table
+3. **Load Epic description:**
+   - **IF task_provider == "linear":** `get_project(query="Epic N")` → Fetch full Epic document
+   - **ELSE:** `Read("docs/tasks/epics/epic-{N}-*/epic.md")` → Load file-based Epic
    - **Extract:** Goal, Scope In/Out, Success Criteria, Technical Notes (Standards Research if Epic created by ln-210 v7.0.0+)
    - **Note:** Epic N = Linear Project number (global), NOT initiative-internal index (Epic 0-N)
-3. **Next Story Number:** Reads Epic Story Counters table → Gets next sequential number
+4. **Next Story Number:** Reads Epic Story Counters table → Gets next sequential number
 
 **Step 2: Extract Planning Information (Automated)**
 
@@ -238,10 +259,16 @@ Each Story creates ONLY the tables it needs (not all tables upfront).
 
 **Process:**
 
-Query Linear for existing Stories in Epic:
+Query task provider for existing Stories in Epic:
 
+**IF task_provider == "linear":**
 ```
 list_issues(project=Epic.id, label="user-story")
+```
+
+**ELSE (file mode):**
+```
+Glob("docs/tasks/epics/epic-{N}-*/stories/*/story.md")
 ```
 
 **Mode Detection:**
@@ -447,7 +474,7 @@ Mark each as in_progress when starting, completed when done.
 - [ ] INVEST checklist validated for all Stories
 
 **✅ Phase 4: Check Existing Complete:**
-- [ ] Queried Linear for existing Stories (count only)
+- [ ] Queried task provider for existing Stories (count only)
 - [ ] Execution mode determined (CREATE or REPLAN)
 
 **✅ Phase 5: Delegation Complete:**
@@ -490,6 +517,8 @@ Mark each as in_progress when starting, completed when done.
 
 ## Reference Files
 
+- **MANDATORY READ:** `shared/references/tools_config_guide.md`
+- **MANDATORY READ:** `shared/references/storage_mode_detection.md`
 - **[MANDATORY] Problem-solving approach:** `shared/references/problem_solving.md`
 - **Orchestrator lifecycle:** `shared/references/orchestrator_pattern.md`
 - **Auto-discovery patterns:** `shared/references/auto_discovery_pattern.md`

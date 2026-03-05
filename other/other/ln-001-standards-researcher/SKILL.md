@@ -360,6 +360,8 @@ If calling skill expects only string (backward compatibility), return Standards 
 **Templates:**
 - [research_guidelines.md](references/research_guidelines.md) - Research quality guidelines (official docs > blog posts, prefer LTS versions)
 
+- **MANDATORY READ:** `shared/references/research_tool_fallback.md`
+
 ---
 
 **Version:** 3.1.0

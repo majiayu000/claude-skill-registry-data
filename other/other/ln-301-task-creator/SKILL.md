@@ -18,7 +18,10 @@ Worker that generates task documents and creates Linear issues for implementatio
 
 ## Task Storage Mode
 
-**MANDATORY READ:** Load `shared/references/storage_mode_detection.md` for Linear vs File mode operations.
+**MANDATORY READ:** Load `shared/references/tools_config_guide.md` and `shared/references/storage_mode_detection.md`
+
+Read `docs/tools_config.md` (bootstrap if missing per tools_config_guide.md).
+Extract: `task_provider` = Task Management → Provider (`linear` | `file`).
 
 ## Invocation (who/when)
 - **ln-300-task-coordinator:** CREATE (no tasks) or ADD (appendMode) for implementation tasks.
@@ -120,10 +123,11 @@ Example 3: No duplication (skip warning)
 **Local copies:** `docs/templates/*.md` (in target project)
 
 ## Reference Files
+- **Tools config:** `shared/references/tools_config_guide.md`
+- **Storage mode operations:** `shared/references/storage_mode_detection.md`
 - **Kanban update algorithm:** `shared/references/kanban_update_algorithm.md`
 - **Template loading:** `shared/references/template_loading_pattern.md`
 - **Linear creation workflow:** `shared/references/linear_creation_workflow.md`
-- **Storage mode detection:** `shared/references/storage_mode_detection.md`
 - Templates (centralized): `shared/templates/task_template_implementation.md`, `shared/templates/refactoring_task_template.md`, `shared/templates/test_task_template.md`
 - Local copies: `docs/templates/*.md` (in target project)
 - Kanban format: `docs/tasks/kanban_board.md`

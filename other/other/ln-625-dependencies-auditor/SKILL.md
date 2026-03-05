@@ -26,6 +26,8 @@ Specialized worker auditing dependency management, code reuse, and security vuln
 
 ## Inputs (from Coordinator)
 
+**MANDATORY READ:** Load `shared/references/task_delegation_pattern.md#audit-coordinator--worker-contract` for contextStore structure.
+
 Receives `contextStore` with tech stack, package manifest paths, codebase root, output_dir.
 
 **From ln-620 (codebase-auditor):** mode=full (default)
@@ -33,12 +35,18 @@ Receives `contextStore` with tech stack, package manifest paths, codebase root, 
 
 ## Workflow
 
+**MANDATORY READ:** Load `shared/references/two_layer_detection.md` for detection methodology.
+
 1) Parse context + mode parameter + output_dir
-2) Run dependency checks (based on mode)
-3) Collect findings
-4) Calculate score
-5) **Write Report:** Build full markdown report in memory per `shared/templates/audit_worker_report_template.md`, write to `{output_dir}/625-dependencies.md` in single Write call
-6) **Return Summary:** Return minimal summary to coordinator
+2) Run dependency checks (Layer 1: audit tools, based on mode)
+3) Analyze context per candidate (Layer 2):
+   - Available Features: read usage — is lodash used for 1 function (easy replace) or deeply integrated (hard)?
+   - Custom Implementations: read code — truly reimplementing a library, or domain-specific logic?
+   - Vulnerability: read code — is the vulnerable API actually called in this project?
+4) Collect findings
+5) Calculate score
+6) **Write Report:** Build full markdown report in memory per `shared/templates/audit_worker_report_template.md`, write to `{output_dir}/625-dependencies.md` in single Write call
+7) **Return Summary:** Return minimal summary to coordinator
 
 ---
 

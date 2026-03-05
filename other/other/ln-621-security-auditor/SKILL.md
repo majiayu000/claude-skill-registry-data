@@ -1,6 +1,6 @@
 ---
 name: ln-621-security-auditor
-description: Security audit worker (L3). Scans codebase for hardcoded secrets, SQL injection, XSS, insecure dependencies, missing input validation. Returns findings with severity (Critical/High/Medium/Low), location, effort, and recommendations.
+description: Security audit worker (L3). Checks hardcoded secrets, SQL injection, XSS, insecure dependencies, missing input validation. Returns findings with severity, location, effort, recommendations.
 allowed-tools: Read, Grep, Glob, Bash
 ---
 
@@ -26,12 +26,20 @@ Receives `contextStore` with: `tech_stack`, `best_practices`, `principles`, `cod
 
 ## Workflow
 
+**MANDATORY READ:** Load `shared/references/two_layer_detection.md` for detection methodology.
+
 1) **Parse Context:** Extract tech stack, best practices, codebase root, output_dir from contextStore
-2) **Scan Codebase:** Run security checks using Glob/Grep patterns (see Audit Rules below)
-3) **Collect Findings:** Record each violation with severity, location (file:line), effort estimate (S/M/L), recommendation
-4) **Calculate Score:** Count violations by severity, calculate compliance score (X/10)
-5) **Write Report:** Build full markdown report in memory per `shared/templates/audit_worker_report_template.md`, write to `{output_dir}/621-security.md` in single Write call
-6) **Return Summary:** Return minimal summary to coordinator (see Output Format)
+2) **Scan Codebase (Layer 1):** Run security checks using Glob/Grep patterns (see Audit Rules below)
+3) **Analyze Context (Layer 2):** For each candidate, read surrounding code to classify:
+   - Secrets: test fixture / example / template → FP. Production code → confirmed
+   - SQL injection: ORM parameterization nearby → FP. Raw string concat with user input → confirmed
+   - XSS: framework auto-escapes (React JSX, Go templates) → FP. Unsafe context (`innerHTML`, `| safe`) → confirmed
+   - Deps: vulnerable API not called in project → downgrade. Exploitable path → confirmed
+   - Validation: internal service-to-service endpoint → downgrade. Public API → confirmed
+4) **Collect Findings:** Record confirmed violations with severity, location (file:line), effort estimate (S/M/L), recommendation
+5) **Calculate Score:** Count violations by severity, calculate compliance score (X/10)
+6) **Write Report:** Build full markdown report in memory per `shared/templates/audit_worker_report_template.md`, write to `{output_dir}/621-security.md` in single Write call
+7) **Return Summary:** Return minimal summary to coordinator (see Output Format)
 
 ## Audit Rules (Priority: CRITICAL)
 

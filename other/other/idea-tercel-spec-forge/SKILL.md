@@ -5,8 +5,8 @@ description: >
   discovery, research, and critical analysis to crystallize vague ideas into validated requirement
   drafts. Includes anti-pseudo-requirement checks, competitive research, demand evidence gathering,
   and "What if we don't build this?" analysis. Supports pause/resume across sessions, stores ideas
-  in the project's ideas/ directory, and graduates validated ideas into the spec-forge document
-  chain (/prd → /srs → /tech-design → /test-plan).
+  in the project's ideas/ directory, and graduates validated ideas into the spec-forge auto
+  chain (idea → decompose → tech-design + feature specs).
 instructions: >
   Follow the workflow below exactly. This is an interactive, multi-session skill.
   Ideas are stored in the project's ideas/ directory. By default, suggest adding ideas/
@@ -508,7 +508,7 @@ Available only after validation passes. Shift to convergent thinking:
 - Finalize MVP scope — ruthlessly cut anything non-essential
 - Define preliminary success criteria (measurable)
 - Identify technical constraints or risks
-- Prepare the draft for handoff to `/spec-forge:prd`
+- Prepare the draft for handoff to `/spec-forge:tech-design` (or the full chain via `/spec-forge`)
 
 Update `draft.md` to a polished version. Change status to `refining`.
 
@@ -546,15 +546,19 @@ Idea '{idea-name}' is ready for formal specification!
   Draft: ideas/{idea-name}/draft.md
 
 To start the spec chain:
-  /spec-forge {idea-name}         Full chain (PRD -> SRS -> Tech Design -> Test Plan)
-  /spec-forge:prd {idea-name}     PRD only
+  /spec-forge {idea-name}         Full chain (Idea → Decompose → Tech Design + Feature Specs)
+
+Optional (on-demand):
+  /spec-forge:prd {idea-name}     PRD (for stakeholders)
+  /spec-forge:srs {idea-name}     SRS (for compliance/audit)
+  /spec-forge:test-plan {idea-name} Test Plan (for formal QA)
 ```
 
-Note: The actual `graduated` status is set by the `/spec-forge` chain command after it successfully generates the PRD.
+Note: The actual `graduated` status is set by the `/spec-forge` chain command after it successfully generates the tech-design.
 
 #### 3.3f: Park
 
-Update `state.json` timestamp only. Display:
+Update `state.json`: set `status: 'parked'`, update `updated` timestamp. Display:
 
 ```
 Idea '{idea-name}' parked.
@@ -578,7 +582,7 @@ Idea '{idea-name}' parked.
 | `researching` | Investigating market, competitors, user needs |
 | `refining` | Direction clear and validated, converging on specifics |
 | `ready` | Validated and ready for formal specification |
-| `graduated` | PRD has been generated from this idea |
+| `graduated` | Tech Design has been generated from this idea |
 | `parked` | Intentionally set aside, can resume anytime |
 
 ## Draft Validation Checklist

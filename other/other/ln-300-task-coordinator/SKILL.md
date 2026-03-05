@@ -9,6 +9,15 @@ description: Orchestrates task operations. Analyzes Story, builds optimal plan (
 
 Coordinates creation or replanning of implementation tasks for a Story. Builds the ideal plan first, then routes to workers.
 
+## Inputs
+
+| Input | Required | Source | Description |
+|-------|----------|--------|-------------|
+| `storyId` | Yes | args, git branch, kanban, user | Story to process |
+
+**Resolution:** Per `shared/references/input_resolution_pattern.md` — Story Resolution Chain.
+**Status filter:** Backlog, Todo
+
 ## Purpose & Scope
 - Auto-discover Team ID, load Story context (AC, Technical Notes, Context)
 - Build optimal implementation task plan (1-8 implementation tasks; NO test/refactoring tasks) in Foundation-First order
@@ -18,9 +27,12 @@ Coordinates creation or replanning of implementation tasks for a Story. Builds t
 
 ## Task Storage Mode
 
-**MANDATORY READ:** Load `shared/references/storage_mode_detection.md` for Linear vs File mode detection and operations.
+**MANDATORY READ:** Load `shared/references/tools_config_guide.md`, `shared/references/storage_mode_detection.md`, and `shared/references/input_resolution_pattern.md`
 
-Workers (ln-301, ln-302) handle the actual Linear/File operations based on detected mode.
+Read `docs/tools_config.md` (bootstrap if missing per tools_config_guide.md).
+Extract: `task_provider` = Task Management → Provider (`linear` | `file`).
+
+Workers (ln-301, ln-302) handle the actual Linear/File operations based on `task_provider`.
 
 ## When to Use
 - Need tasks for a Story with clear AC/Technical Notes
@@ -32,7 +44,7 @@ Workers (ln-301, ln-302) handle the actual Linear/File operations based on detec
 **MANDATORY READ:** Load `shared/references/creation_quality_checklist.md` §Task Creation Checklist for validation criteria that ln-310 will enforce.
 
 ## Workflow (concise)
-- **Phase 1 Discovery:** Auto-discover Team ID (docs/tasks/kanban_board.md); parse Story ID from request.
+- **Phase 1 Discovery:** Auto-discover Team ID (docs/tasks/kanban_board.md). Resolve storyId (per input_resolution_pattern.md): IF args provided → use args; ELSE IF git branch matches `feature/{id}-*` → extract id; ELSE IF kanban has exactly 1 Story in [Backlog, Todo] → suggest; ELSE → AskUserQuestion: show Stories from kanban filtered by [Backlog, Todo].
 - **Phase 2 Decompose (always):** **MANDATORY READ:** `shared/references/goal_articulation_gate.md` — Before building IDEAL plan, state REAL GOAL of this Story in one sentence (the deliverable, not the process). Verify: does the decomposition serve THIS goal? Then: Load Story (AC, Technical Notes, Context), assess complexity, build IDEAL plan (1-8 implementation tasks only), **scan for reusable patterns** (Grep `src/` for error handlers, validators, utilities relevant to task categories — count only; if found, append `**Pattern Hint:** {count} existing {category} patterns in src/. Review for reuse before creating new (Step 4a in ln-401).` to relevant task descriptions), apply Foundation-First execution order, **validate Task Independence**, **assign Parallel Groups**, **define verification methods for each task AC**, extract guide links.
 - **Phase 3 Check & Detect Mode:** Query Linear for existing tasks (metadata only). Detect mode by count + user keywords (add/replan).
 - **Phase 4 Delegate:** Call the right worker with Story data, IDEAL plan/append request, guide links, existing task IDs if any; autoApprove=true.
@@ -153,7 +165,7 @@ Mark each as in_progress when starting, completed when done.
 - Language preservation: keep Story language (EN/RU) in any generated content by workers.
 
 ## Definition of Done (orchestrator)
-- Team ID discovered; Story ID parsed.
+- Team ID discovered; storyId resolved (per input_resolution_pattern.md).
 - Story loaded; IDEAL plan built (1-8 implementation tasks only) with Foundation-First order and guide links.
 - **NO test or refactoring tasks** in IDEAL plan (only taskType=implementation).
 - Existing tasks counted; mode selected (CREATE/ADD/REPLAN or ask).
@@ -162,13 +174,14 @@ Mark each as in_progress when starting, completed when done.
 - Next steps returned (ln-310-story-validator, then orchestrator continues).
 
 ## Reference Files
+- **Tools config:** `shared/references/tools_config_guide.md`
+- **Storage mode operations:** `shared/references/storage_mode_detection.md`
 - **[MANDATORY] Problem-solving approach:** `shared/references/problem_solving.md`
 - **Orchestrator lifecycle:** `shared/references/orchestrator_pattern.md`
 - **Auto-discovery patterns:** `shared/references/auto_discovery_pattern.md`
 - **Decompose-first pattern:** `shared/references/decompose_first_pattern.md`
 - **Plan mode behavior:** `shared/references/plan_mode_pattern.md`
 - **Numbering conventions:** `shared/references/numbering_conventions.md` (Task per-Story numbering)
-- **Storage mode detection:** `shared/references/storage_mode_detection.md`
 - Templates (centralized): `shared/templates/task_template_implementation.md`
 - Local copies: `docs/templates/task_template_implementation.md` (in target project, created by workers)
 - Replan algorithm details: `ln-302-task-replanner/references/replan_algorithm.md`

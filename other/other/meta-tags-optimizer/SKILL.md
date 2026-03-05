@@ -1,20 +1,22 @@
 ---
 name: meta-tags-optimizer
-description: 'Use when the user asks to "optimize title tag", "write meta description", "improve CTR", "Open Graph tags", "social media preview", "my title tag needs work", "low click-through rate", "fix my meta tags", or "OG tags not showing". Creates and optimizes meta tags including title tags, meta descriptions, Open Graph tags, and Twitter cards for maximum click-through rates and social sharing engagement. For a broader on-page audit, see on-page-seo-auditor. For structured data markup, see schema-markup-generator.'
+version: "3.0.0"
+description: 'This skill should be used when the user asks to "optimize title tag", "write meta description", "improve CTR", "Open Graph tags", "social media preview", "my title tag needs work", "low click-through rate", "fix my meta tags", or "OG tags not showing". Creates and optimizes meta tags including title tags, meta descriptions, Open Graph tags, and Twitter cards for maximum click-through rates and social sharing engagement. For a broader on-page audit, see on-page-seo-auditor. For structured data markup, see schema-markup-generator.'
 license: Apache-2.0
+compatibility: "Claude Code ≥1.0, skills.sh marketplace, ClawHub marketplace, Vercel Labs skills ecosystem. No system packages required. Optional: MCP network access for SEO tool integrations."
 metadata:
   author: aaron-he-zhu
-  version: "2.0.0"
+  version: "3.0.0"
   geo-relevance: "low"
   tags:
     - seo
-    - meta tags
-    - title tag
-    - meta description
-    - open graph
-    - twitter cards
-    - ctr optimization
-    - social sharing
+    - meta-tags
+    - title-tag
+    - meta-description
+    - open-graph
+    - twitter-card
+    - ctr
+    - social-sharing
   triggers:
     - "optimize title tag"
     - "write meta description"
@@ -30,7 +32,6 @@ metadata:
 ---
 
 # Meta Tags Optimizer
-
 
 > **[SEO & GEO Skills Library](https://skills.sh/aaron-he-zhu/seo-geo-claude-skills)** · 20 skills for SEO + GEO · Install all: `npx skills add aaron-he-zhu/seo-geo-claude-skills`
 
@@ -216,165 +217,13 @@ When a user requests meta tag optimization:
    ```
    ```
 
-4. **Create Open Graph Tags**
+4. **Create Open Graph, Twitter Card, and Additional Meta Tags**
 
-   ```markdown
-   ### Open Graph Tags (Facebook, LinkedIn, etc.)
-   
-   **Required OG Tags**:
-   
-   ```html
-   <!-- Primary Open Graph Tags -->
-   <meta property="og:type" content="[article/website/product]">
-   <meta property="og:url" content="[Full canonical URL]">
-   <meta property="og:title" content="[OG-optimized title - up to 60 chars]">
-   <meta property="og:description" content="[OG description - up to 200 chars]">
-   <meta property="og:image" content="[Image URL - 1200x630px recommended]">
-   
-   <!-- Optional but Recommended -->
-   <meta property="og:site_name" content="[Website Name]">
-   <meta property="og:locale" content="en_US">
-   ```
-   
-   **OG Type Selection Guide**:
-   
-   | Page Type | og:type |
-   |-----------|---------|
-   | Blog post | article |
-   | Homepage | website |
-   | Product | product |
-   | Video | video.other |
-   | Profile | profile |
-   
-   **OG Title Considerations**:
-   - Can be different from title tag
-   - Optimize for social sharing context
-   - More conversational tone acceptable
-   - Up to 60 characters ideal
-   
-   **OG Description Considerations**:
-   - Can be longer than meta description (up to 200 chars)
-   - Focus on shareability
-   - What would make someone click when shared?
-   
-   **OG Image Requirements**:
-   - Recommended size: 1200x630 pixels
-   - Minimum size: 600x315 pixels
-   - Format: JPG or PNG
-   - Keep text to less than 20% of image
-   - Include branding subtly
-   ```
+   Generate OG tags (og:type, og:url, og:title, og:description, og:image), Twitter Card tags, canonical URL, robots, viewport, author, and article-specific tags. Then combine into a complete meta tag block.
 
-5. **Create Twitter Card Tags**
+   > **Reference**: See [references/meta-tag-code-templates.md](./references/meta-tag-code-templates.md) for OG type selection guide, Twitter card type selection, all HTML code templates, and the complete meta tag block template.
 
-   ```markdown
-   ### Twitter Card Tags
-   
-   **Card Type Selection**:
-   
-   | Card Type | Best For | Image Size |
-   |-----------|----------|------------|
-   | summary | Articles, blogs | 144x144 min |
-   | summary_large_image | Visual content | 300x157 min |
-   | player | Video/audio | 640x360 min |
-   | app | Mobile apps | 800x418 |
-   
-   **Twitter Card Code**:
-   
-   ```html
-   <!-- Twitter Card Tags -->
-   <meta name="twitter:card" content="[summary_large_image/summary]">
-   <meta name="twitter:site" content="@[YourTwitterHandle]">
-   <meta name="twitter:creator" content="@[AuthorTwitterHandle]">
-   <meta name="twitter:title" content="[Title - 70 chars max]">
-   <meta name="twitter:description" content="[Description - 200 chars max]">
-   <meta name="twitter:image" content="[Image URL]">
-   <meta name="twitter:image:alt" content="[Image description for accessibility]">
-   ```
-   
-   **Twitter-Specific Considerations**:
-   - Shorter titles work better (under 70 chars)
-   - Include @mentions if relevant
-   - Hashtag-relevant terms can help discovery
-   - Test with Twitter Card Validator
-   ```
-
-6. **Additional Meta Tags**
-
-   ```markdown
-   ### Additional Recommended Meta Tags
-   
-   **Canonical URL** (Prevent duplicates):
-   ```html
-   <link rel="canonical" href="[Preferred URL]">
-   ```
-   
-   **Robots Tag** (Indexing control):
-   ```html
-   <meta name="robots" content="index, follow">
-   ```
-   
-   **Viewport** (Mobile optimization):
-   ```html
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   ```
-   
-   **Author** (For articles):
-   ```html
-   <meta name="author" content="[Author Name]">
-   ```
-   
-   **Language**:
-   ```html
-   <html lang="en">
-   ```
-   
-   **Article-Specific** (For blog posts):
-   ```html
-   <meta property="article:published_time" content="[ISO 8601 date]">
-   <meta property="article:modified_time" content="[ISO 8601 date]">
-   <meta property="article:author" content="[Author URL]">
-   <meta property="article:section" content="[Category]">
-   <meta property="article:tag" content="[Tag 1]">
-   ```
-   ```
-
-7. **Generate Complete Meta Tag Block**
-
-   ```markdown
-   ## Complete Meta Tags
-   
-   Copy and paste this complete meta tag block:
-   
-   ```html
-   <!-- Primary Meta Tags -->
-   <title>[Optimized Title]</title>
-   <meta name="title" content="[Optimized Title]">
-   <meta name="description" content="[Optimized Description]">
-   <link rel="canonical" href="[Canonical URL]">
-   
-   <!-- Open Graph / Facebook -->
-   <meta property="og:type" content="[type]">
-   <meta property="og:url" content="[URL]">
-   <meta property="og:title" content="[OG Title]">
-   <meta property="og:description" content="[OG Description]">
-   <meta property="og:image" content="[Image URL]">
-   <meta property="og:site_name" content="[Site Name]">
-   
-   <!-- Twitter -->
-   <meta name="twitter:card" content="summary_large_image">
-   <meta name="twitter:url" content="[URL]">
-   <meta name="twitter:title" content="[Twitter Title]">
-   <meta name="twitter:description" content="[Twitter Description]">
-   <meta name="twitter:image" content="[Image URL]">
-   
-   <!-- Additional -->
-   <meta name="robots" content="index, follow">
-   <meta name="author" content="[Author]">
-   ```
-   ```
-
-8. **CORE-EEAT Alignment Check**
+5. **CORE-EEAT Alignment Check**
 
    Verify meta tags align with content quality standards. Reference: [CORE-EEAT Benchmark](../../references/core-eeat-benchmark.md)
 
@@ -464,36 +313,7 @@ When a user requests meta tag optimization:
 **Keyword**: Included naturally ✅
 **CTA**: "Start podcasting today!" ✅
 
-### Complete Meta Tag Block
-
-```html
-<!-- Primary Meta Tags -->
-<title>How to Start a Podcast in [current year]: Complete Beginner's Guide</title>
-<meta name="description" content="Learn how to start a podcast in [current year] with our step-by-step guide. Covers equipment, hosting, recording, and launching your first episode. Start podcasting today!">
-<link rel="canonical" href="https://yoursite.com/how-to-start-a-podcast/">
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://yoursite.com/how-to-start-a-podcast/">
-<meta property="og:title" content="How to Start a Podcast in [current year] (Complete Guide)">
-<meta property="og:description" content="Everything you need to launch your podcast: equipment recommendations, hosting platforms, recording tips, and step-by-step launch checklist. No experience required.">
-<meta property="og:image" content="https://yoursite.com/images/podcast-guide.jpg">
-<meta property="og:site_name" content="Your Site Name">
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="How to Start a Podcast in [current year]">
-<meta name="twitter:description" content="Complete beginner's guide to launching your podcast. Equipment, hosting, recording, and more.">
-<meta name="twitter:image" content="https://yoursite.com/images/podcast-guide.jpg">
-<meta name="twitter:site" content="@YourHandle">
-
-<!-- Article Tags -->
-<meta property="article:published_time" content="[YYYY-MM-DD]T08:00:00+00:00">
-<meta property="article:author" content="https://yoursite.com/author/name">
-<meta property="article:section" content="Podcasting">
-<meta property="article:tag" content="podcasting">
-<meta property="article:tag" content="content creation">
-```
+_Complete meta tag block (with OG, Twitter, Article tags) generated using template from [references/meta-tag-code-templates.md](./references/meta-tag-code-templates.md)._
 
 ### A/B Test Variations
 
@@ -507,36 +327,6 @@ When a user requests meta tag optimization:
 "Want to start a podcast in [current year]? This guide covers everything: equipment ($100 budget option), best hosting platforms, recording tips, and how to get your first 1,000 listeners."
 ```
 
-## Page-Type Templates
-
-### Homepage
-
-```html
-<title>[Brand Name] - [Primary Value Proposition]</title>
-<meta name="description" content="[Brand] helps [audience] [achieve goal]. [Key feature/benefit]. [CTA]">
-```
-
-### Product Page
-
-```html
-<title>[Product Name] - [Key Benefit] | [Brand]</title>
-<meta name="description" content="[Product] [key features]. [Price/offer if applicable]. [Social proof]. [CTA]">
-```
-
-### Blog Post
-
-```html
-<title>[How to/What is/Number] [Keyword] [Benefit/Year]</title>
-<meta name="description" content="[What they'll learn]. [Key points covered]. [CTA]">
-```
-
-### Service Page
-
-```html
-<title>[Service] in [Location] - [Brand] | [Differentiator]</title>
-<meta name="description" content="[Service description]. [Experience/credentials]. [Key benefit]. [CTA]">
-```
-
 ## Tips for Success
 
 1. **Front-load keywords** - Put important terms at the beginning
@@ -546,115 +336,10 @@ When a user requests meta tag optimization:
 5. **Update regularly** - Add current year, refresh messaging
 6. **Check competitors** - See what's working in your SERP
 
-## Title Tag Formula Patterns
-
-### Proven Title Formulas
-
-| Formula | Template | Example | Best For |
-|---------|----------|---------|---------|
-| How-To | How to [Achieve Result] ([Year]) | How to Improve SEO Rankings (2026) | Informational guides |
-| Number List | [Number] [Adjective] [Topic] for [Audience] | 15 Proven SEO Strategies for E-commerce | Listicles |
-| Question | [Question]? Here's [Answer Preview] | What Is Technical SEO? Complete Guide | Definition content |
-| Comparison | [Option A] vs [Option B]: [Differentiator] | Ahrefs vs SEMrush: Which SEO Tool Wins? | Comparison pages |
-| Year-Based | Best [Topic] in [Year] ([Tested/Ranked]) | Best SEO Tools in 2026 (Expert Tested) | Evergreen + fresh |
-| Benefit-Driven | [Benefit]: [How to Achieve It] | Rank #1 on Google: 10-Step SEO Checklist | High-CTR pages |
-| Parenthetical | [Topic] ([Modifier]) | Link Building Guide (With Templates) | Adding value signal |
-| Negative | [Number] [Topic] Mistakes [Consequence] | 7 SEO Mistakes That Kill Your Rankings | Problem-awareness content |
-
-### Title Tag Power Words
-
-| Category | Power Words | Use Sparingly |
-|----------|-----------|---------------|
-| Urgency | Now, Today, Quick, Fast, Instant, 2026 | Don't overuse; pair with substance |
-| Value | Free, Proven, Complete, Essential, Ultimate | Avoid hyperbole without backing |
-| Specificity | [Exact number], Step-by-Step, Checklist, Template | More specific = more clicks |
-| Curiosity | Secret, Little-Known, Surprising, Actually | Must deliver on the promise |
-| Authority | Expert, Research-Backed, Data-Driven, Tested | Only use when genuinely expert content |
-| Emotional | Best, Worst, Mistakes, Warning, Powerful | Balance emotion with credibility |
-
-### Title Tag Length Optimization
-
-| Length Range | SERP Behavior | Recommendation |
-|-------------|--------------|----------------|
-| <30 characters | May appear thin | Expand with modifier or brand |
-| 30-50 characters | Fully displayed on all devices | Ideal for mobile-first |
-| 50-60 characters | Full display on desktop, may truncate mobile | Sweet spot for desktop |
-| 60-65 characters | Truncated on some devices | Front-load keywords |
-| >65 characters | Truncated everywhere | Avoid — key info gets cut |
-
-## Meta Description Copywriting Frameworks
-
-### AIDA Framework
-
-| Element | What It Does | Example |
-|---------|-------------|---------|
-| **A**ttention | Hook with a bold claim or question | "Want to double your organic traffic?" |
-| **I**nterest | Build relevance | "This guide covers 15 proven strategies..." |
-| **D**esire | Show benefit | "...used by top-ranking sites to increase traffic by 200%." |
-| **A**ction | CTA | "Read the full guide now." |
-
-**Full Example**: "Want to double your organic traffic? This guide covers 15 proven SEO strategies used by top-ranking sites to increase traffic by 200%. Read the full guide now." (158 chars)
-
-### PAS Framework
-
-| Element | What It Does | Example |
-|---------|-------------|---------|
-| **P**roblem | Identify pain point | "Struggling to rank on Google?" |
-| **A**gitate | Amplify the problem | "Most SEO guides are outdated and miss key ranking factors." |
-| **S**olution | Offer the solution | "Our 2026 guide covers what actually works. Read now." |
-
-### Benefit-Proof-CTA Framework
-
-| Element | Example |
-|---------|---------|
-| Benefit | "Learn the exact SEO process that grew our traffic 5x" |
-| Proof | "— with real data from 200+ audits." |
-| CTA | "Get the free checklist." |
-
-## CTR Optimization Data
-
-### Factors That Increase Organic CTR
-
-| Factor | CTR Impact | Implementation |
-|--------|-----------|----------------|
-| Number in title | +20-30% | "7 Ways", "15 Tips", "2026" |
-| Question in title | +14% | Start with How, What, Why |
-| Emotional words | +7% | "Proven", "Essential", "Mistake" |
-| Brackets/parentheses | +38% | "[Guide]", "(With Examples)" |
-| Current year | +10-15% | "Best SEO Tools 2026" |
-| Power words | +12% | See Power Words table above |
-| Match search intent | +15-25% | Align title with SERP expectations |
-| Rich results (schema) | +30% | FAQ, HowTo, Review stars |
-
-## Open Graph Best Practices by Platform
-
-### Platform-Specific OG Optimization
-
-| Platform | Image Size | Title Length | Description Length | Special Tags |
-|----------|-----------|-------------|-------------------|-------------|
-| Facebook | 1200x630px | 40-60 chars | 125-155 chars | og:type, og:locale |
-| Twitter/X | 1200x600px | 70 chars max | 200 chars | twitter:card, twitter:site |
-| LinkedIn | 1200x627px | 70 chars | 150 chars | Standard OG tags |
-| Pinterest | 1000x1500px (2:3) | 100 chars | 500 chars | og:type=article preferred |
-| Slack | 500x500px min | Full title | First ~300 chars | Standard OG tags |
-
-### OG Tag Checklist
-
-| Tag | Required? | Notes |
-|-----|----------|-------|
-| og:title | Yes | Can differ from HTML title; optimize for social sharing |
-| og:description | Yes | Social-optimized; can differ from meta description |
-| og:image | Yes | Must be absolute URL; minimum 200x200px, ideal 1200x630px |
-| og:url | Yes | Canonical URL |
-| og:type | Yes | "website" for homepage, "article" for blog posts |
-| og:site_name | Recommended | Your brand name |
-| og:locale | Recommended | e.g., "en_US" |
-| twitter:card | Recommended | "summary_large_image" for articles |
-| twitter:site | Recommended | @yourbrand |
-
 ## Reference Materials
 
-- [Meta Tag Formulas](./references/meta-tag-formulas.md) — Proven title and description formulas with templates, power words, and CTR data
+- [Meta Tag Formulas](./references/meta-tag-formulas.md) — Proven title and description formulas
+- [CTR and Social Reference](./references/ctr-and-social-reference.md) — Page-type templates, CTR data, OG best practices
 
 ## Related Skills
 
@@ -662,6 +347,4 @@ When a user requests meta tag optimization:
 - [schema-markup-generator](../schema-markup-generator/) — Add structured data
 - [on-page-seo-auditor](../../optimize/on-page-seo-auditor/) — Audit all meta tags
 - [serp-analysis](../../research/serp-analysis/) — Analyze competitor meta tags
-- [geo-content-optimizer](../geo-content-optimizer/) — GEO optimization complements meta tag improvements
-- [content-quality-auditor](../../cross-cutting/content-quality-auditor/) — Full CORE-EEAT audit includes C01/C02 items that meta tags address
 

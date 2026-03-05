@@ -467,6 +467,8 @@ $50/user pricing proven, can MVP in 3 weeks with existing skills.
 | [channel_analysis.md](references/channel_analysis.md) | Traffic channel identification |
 | [discovery_template.md](references/discovery_template.md) | Output markdown template |
 
+- **MANDATORY READ:** `shared/references/research_tool_fallback.md`
+
 ---
 
 **Version:** 2.0.0

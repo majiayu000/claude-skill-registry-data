@@ -5,6 +5,15 @@ description: "Coordinates code quality checks: ln-511 code quality, ln-512 tech 
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
 
+## Inputs
+
+| Input | Required | Source | Description |
+|-------|----------|--------|-------------|
+| `storyId` | Yes | args, git branch, kanban, user | Story to process |
+
+**Resolution:** Per `shared/references/input_resolution_pattern.md` — Story Resolution Chain.
+**Status filter:** To Review
+
 # Quality Coordinator
 
 Sequential coordinator for code quality pipeline. Invokes 4 workers in index order (511 -> 512 -> 513 -> 514) and returns aggregated results to ln-500.
@@ -25,14 +34,22 @@ Sequential coordinator for code quality pipeline. Invokes 4 workers in index ord
 
 ## Workflow
 
+### Phase 0: Resolve Inputs
+
+**MANDATORY READ:** Load `shared/references/input_resolution_pattern.md`
+
+1. **Resolve storyId** (per input_resolution_pattern.md):
+   - IF args provided → use args
+   - ELSE IF git branch matches `feature/{id}-*` → extract id
+   - ELSE IF kanban has exactly 1 Story in [To Review] → suggest
+   - ELSE → AskUserQuestion: show Stories from kanban filtered by [To Review]
+
 ### Phase 1: Discovery
 
 1) Auto-discover team/config from `docs/tasks/kanban_board.md`
 2) Load Story + task metadata from Linear (no full descriptions)
 
 **Fast-track mode:** When invoked with `--fast-track` flag (readiness 10/10), run Phase 2 with `--skip-mcp-ref` (metrics + static only, no MCP Ref), skip Phase 3 (ln-512), Phase 4 (ln-513). Run Phase 5 (criteria), Phase 6 (linters), Phase 7 (ln-514).
-
-**Input:** Story ID from ln-500-story-quality-gate
 
 ### Phase 2: Code Quality (delegate to ln-511 — ALWAYS runs)
 

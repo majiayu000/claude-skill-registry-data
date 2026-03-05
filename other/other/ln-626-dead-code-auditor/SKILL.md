@@ -19,16 +19,24 @@ Specialized worker auditing unused and unreachable code.
 
 ## Inputs (from Coordinator)
 
+**MANDATORY READ:** Load `shared/references/task_delegation_pattern.md#audit-coordinator--worker-contract` for contextStore structure.
+
 Receives `contextStore` with tech stack, codebase root, output_dir.
 
 ## Workflow
 
+**MANDATORY READ:** Load `shared/references/two_layer_detection.md` for detection methodology.
+
 1) Parse context + output_dir
-2) Run dead code detection (linters, grep)
-3) Collect findings
-4) Calculate score
-5) **Write Report:** Build full markdown report in memory per `shared/templates/audit_worker_report_template.md`, write to `{output_dir}/626-dead-code.md` in single Write call
-6) **Return Summary:** Return minimal summary to coordinator
+2) Run dead code detection (Layer 1: linters, grep)
+3) Analyze context per candidate (Layer 2):
+   - Unused functions: used via dynamic import/reflection? Exported in public API? Used in other packages (monorepo)?
+   - Commented code: TODO with context or algorithm explanation → FP. Truly dead code block → confirmed
+   - Legacy shims: read git blame — age? Is there an issue/PR tracking removal?
+4) Collect confirmed findings
+5) Calculate score
+6) **Write Report:** Build full markdown report in memory per `shared/templates/audit_worker_report_template.md`, write to `{output_dir}/626-dead-code.md` in single Write call
+7) **Return Summary:** Return minimal summary to coordinator
 
 ## Audit Rules
 

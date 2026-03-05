@@ -5,6 +5,15 @@ description: "Performs manual testing of Story AC via executable bash scripts sa
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
 
+## Inputs
+
+| Input | Required | Source | Description |
+|-------|----------|--------|-------------|
+| `storyId` | Yes | args, git branch, kanban, user | Story to process |
+
+**Resolution:** Per `shared/references/input_resolution_pattern.md` — Story Resolution Chain.
+**Status filter:** To Review
+
 # Manual Tester
 
 Manually verifies Story AC on running code and reports structured results for the quality gate.
@@ -61,6 +70,16 @@ To create expected files:
 **IMPORTANT:** Never blindly copy results to expected. Always validate correctness first.
 
 ## Workflow
+
+### Phase 0: Resolve Inputs
+
+**MANDATORY READ:** Load `shared/references/input_resolution_pattern.md`
+
+1. **Resolve storyId** (per input_resolution_pattern.md):
+   - IF args provided → use args
+   - ELSE IF git branch matches `feature/{id}-*` → extract id
+   - ELSE IF kanban has exactly 1 Story in [To Review] → suggest
+   - ELSE → AskUserQuestion: show Stories from kanban filtered by [To Review]
 
 ### Phase 1: Setup tests/manual structure
 1) **Read `docs/project/runbook.md`** — get Docker commands, API base URL, test prerequisites, environment setup

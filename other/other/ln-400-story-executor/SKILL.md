@@ -9,6 +9,15 @@ description: "Orchestrates Story tasks. Prioritizes To Review -> To Rework -> To
 
 Executes a Story end-to-end by looping through its tasks in priority order. Sets Story to **To Review** when all tasks Done (quality gate decides Done).
 
+## Inputs
+
+| Input | Required | Source | Description |
+|-------|----------|--------|-------------|
+| `storyId` | Yes | args, git branch, kanban, user | Story to process |
+
+**Resolution:** Per `shared/references/input_resolution_pattern.md` — Story Resolution Chain.
+**Status filter:** Todo, In Progress
+
 ## Purpose & Scope
 - Load Story + task metadata (no descriptions) and drive execution
 - Process tasks in order: To Review → To Rework → Todo (foundation-first within each status)
@@ -17,7 +26,10 @@ Executes a Story end-to-end by looping through its tasks in priority order. Sets
 
 ## Task Storage Mode
 
-**MANDATORY READ:** Load `shared/references/storage_mode_detection.md` for Linear vs File mode detection and operations.
+**MANDATORY READ:** Load `shared/references/tools_config_guide.md`, `shared/references/storage_mode_detection.md`, and `shared/references/input_resolution_pattern.md`
+
+Read `docs/tools_config.md` (bootstrap if missing per tools_config_guide.md).
+Extract: `task_provider` = Task Management → Provider (`linear` | `file`).
 
 ## When to Use
 - Story is Todo or In Progress and has implementation/refactor/test tasks to finish
@@ -26,11 +38,16 @@ Executes a Story end-to-end by looping through its tasks in priority order. Sets
 ## Workflow
 
 ### Phase 1: Discovery & Branch Setup
-1. Auto-discover Team ID/config from kanban_board.md + CLAUDE.md
-2. Get Story identifier (e.g., PROJ-42) and title
-3. Generate branch name: `feature/{identifier}-{story-title-slug}` (lowercase, spaces→dashes, no special chars)
-4. Check current branch: `git branch --show-current`
-5. If not matching:
+1. **Resolve storyId** (per input_resolution_pattern.md):
+   - IF args provided → use args
+   - ELSE IF git branch matches `feature/{id}-*` → extract id
+   - ELSE IF kanban has exactly 1 Story in [Todo, In Progress] → suggest
+   - ELSE → AskUserQuestion: show Stories from kanban filtered by [Todo, In Progress]
+2. Auto-discover Team ID/config from kanban_board.md + CLAUDE.md
+3. Get Story title from resolved storyId
+4. Generate branch name: `feature/{identifier}-{story-title-slug}` (lowercase, spaces→dashes, no special chars)
+5. Check current branch: `git branch --show-current`
+6. If not matching:
    - If branch exists: `git checkout feature/{identifier}-{slug}`
    - If not: `git checkout -b feature/{identifier}-{slug}`
 
@@ -162,11 +179,13 @@ When invoked in Plan Mode (agent cannot execute), generate execution plan instea
 - Final report with task counts and recommended next step: quality gate
 
 ## Reference Files
+- **Tools config:** `shared/references/tools_config_guide.md`
+- **Storage mode operations:** `shared/references/storage_mode_detection.md`
 - **Orchestrator lifecycle:** `shared/references/orchestrator_pattern.md`
 - **Task delegation pattern:** `shared/references/task_delegation_pattern.md`
 - **Auto-discovery patterns:** `shared/references/auto_discovery_pattern.md`
 - **Plan mode behavior:** `shared/references/plan_mode_pattern.md`
-- **Storage mode detection:** `shared/references/storage_mode_detection.md`
+- **MANDATORY READ:** `shared/references/git_worktree_fallback.md`
 - Executors: `../ln-401-task-executor/SKILL.md`, `../ln-403-task-rework/SKILL.md`, `../ln-404-test-executor/SKILL.md`
 - Reviewer: `../ln-402-task-reviewer/SKILL.md`
 - Auto-discovery: `CLAUDE.md`, `docs/tasks/kanban_board.md`

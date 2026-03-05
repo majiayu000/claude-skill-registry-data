@@ -392,6 +392,7 @@ Each worker:
 - **Task delegation pattern:** `shared/references/task_delegation_pattern.md`
 - **Audit scoring formula:** `shared/references/audit_scoring.md`
 - **Audit output schema:** `shared/references/audit_output_schema.md`
+- **MANDATORY READ:** `shared/references/research_tool_fallback.md`
 
 ## Related Skills
 

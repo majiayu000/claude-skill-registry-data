@@ -270,6 +270,7 @@ Write consolidated report to `docs/project/persistence_audit.md` with the Output
 
 - Tech stack: `docs/project/tech_stack.md`
 - Kanban board: `docs/tasks/kanban_board.md`
+- **MANDATORY READ:** `shared/references/research_tool_fallback.md`
 
 ---
 **Version:** 1.0.0

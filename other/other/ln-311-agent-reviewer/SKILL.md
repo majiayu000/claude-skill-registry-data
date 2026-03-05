@@ -31,19 +31,37 @@ Runs parallel external agent reviews on validated Story and Tasks, critically ve
 | `prompt_template` | `shared/agents/prompt_templates/story_review.md` |
 | `verdict_acceptable` | `STORY_ACCEPTABLE` |
 
-## Inputs (from parent skill)
-- `storyId`: Linear Story identifier (e.g., "PROJ-123")
+## Inputs
+
+| Input | Required | Source | Description |
+|-------|----------|--------|-------------|
+| `storyId` | Yes | args, git branch, kanban, user | Story to process |
+
+**Resolution:** Per `shared/references/input_resolution_pattern.md` — Story Resolution Chain.
+**Status filter:** Backlog
 
 ## Workflow
 
-**MANDATORY READ:** Load `shared/references/agent_review_workflow.md` for Health Check, Ensure .agent-review/, Load Review Memory, Run Agents, Critical Verification + Debate, Aggregate + Return, Save Review Summary, Fallback Rules, Critical Rules, and Definition of Done. Load `shared/references/agent_delegation_pattern.md` for Reference Passing Pattern, Review Persistence Pattern, Agent Timeout Policy, and Debate Protocol.
+**MANDATORY READ:** Load `shared/references/input_resolution_pattern.md`, `shared/references/tools_config_guide.md`, `shared/references/storage_mode_detection.md`, `shared/references/agent_review_workflow.md`, and `shared/references/agent_delegation_pattern.md`.
+
+### Phase 0: Resolve Inputs & Tools Config
+
+1. **Resolve storyId** (per input_resolution_pattern.md):
+   - IF args provided → use args
+   - ELSE IF git branch matches `feature/{id}-*` → extract id
+   - ELSE IF kanban has exactly 1 Story in [Backlog] → suggest
+   - ELSE → AskUserQuestion: show Stories from kanban filtered by [Backlog]
+
+2. Read `docs/tools_config.md` (bootstrap if missing per tools_config_guide.md).
+   Extract: `task_provider` = Task Management → Provider (`linear` | `file`).
 
 ### Unique Steps (before shared workflow)
 
 1) **Health check:** per shared workflow, filter by `skill_group` = `311`.
 
-2) **Get references:** Call Linear MCP `get_issue(storyId)` -> extract URL + identifier. Call `list_issues(filter: {parent: {id: storyId}})` -> extract child Task URLs/identifiers.
-   - If project stores tasks locally (e.g., `docs/tasks/`) -> use local file paths instead of Linear URLs.
+2) **Get references:**
+   - IF `task_provider` = `linear`: `get_issue(storyId)` → extract URL + identifier. `list_issues(filter: {parent: {id: storyId}})` → extract child Task URLs/identifiers.
+   - IF `task_provider` = `file`: `Read story.md` → extract path. `Glob("docs/tasks/epics/*/stories/*/tasks/*.md")` → extract child Task file paths.
 
 3) **Ensure .agent-review/:** per shared workflow.
 
@@ -91,6 +109,8 @@ Per shared workflow, plus:
 - **MANDATORY INVOCATION:** Parent skills MUST invoke this skill. Returns SKIPPED gracefully if agents unavailable. Parent must NOT pre-check and skip.
 
 ## Reference Files
+- **Tools config:** `shared/references/tools_config_guide.md`
+- **Storage mode operations:** `shared/references/storage_mode_detection.md`
 - **Shared workflow:** `shared/references/agent_review_workflow.md`
 - **Agent delegation pattern:** `shared/references/agent_delegation_pattern.md`
 - **Prompt template (review):** `shared/agents/prompt_templates/story_review.md`

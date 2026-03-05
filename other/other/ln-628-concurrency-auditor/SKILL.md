@@ -1,6 +1,6 @@
 ---
 name: ln-628-concurrency-auditor
-description: Concurrency audit worker (L3). Checks race conditions, missing async/await, resource contention, thread safety, deadlock potential. Returns findings with severity, location, effort, recommendations.
+description: "Concurrency audit worker (L3). Checks async races, thread safety, TOCTOU, deadlocks, blocking I/O, resource contention, cross-process races. Two-layer detection: grep + agent reasoning."
 allowed-tools: Read, Grep, Glob, Bash
 ---
 
@@ -8,148 +8,232 @@ allowed-tools: Read, Grep, Glob, Bash
 
 # Concurrency Auditor (L3 Worker)
 
-Specialized worker auditing concurrency and async patterns.
+Specialized worker auditing concurrency, async patterns, and cross-process resource access.
 
 ## Purpose & Scope
 
 - **Worker in ln-620 coordinator pipeline**
 - Audit **concurrency** (Category 11: High Priority)
-- Check race conditions, async/await, thread safety
+- 7 checks: async races, thread safety, TOCTOU, deadlocks, blocking I/O, resource contention, cross-process races
+- Two-layer detection: grep finds candidates, agent reasons about context
 - Calculate compliance score (X/10)
 
 ## Inputs (from Coordinator)
 
-Receives `contextStore` with tech stack, language, codebase root, output_dir.
+**MANDATORY READ:** Load `shared/references/task_delegation_pattern.md#audit-coordinator--worker-contract` for contextStore structure.
+
+Receives `contextStore` with: `tech_stack`, `best_practices`, `codebase_root`, `output_dir`.
 
 ## Workflow
 
-1) Parse context + output_dir
-2) Check concurrency patterns
-3) Collect findings
-4) Calculate score
-5) **Write Report:** Build full markdown report in memory per `shared/templates/audit_worker_report_template.md`, write to `{output_dir}/628-concurrency.md` in single Write call
-6) **Return Summary:** Return minimal summary to coordinator
+**MANDATORY READ:** Load `shared/references/two_layer_detection.md` for detection methodology.
+
+1) **Parse context** — extract tech_stack, language, output_dir from contextStore
+2) **Per check (1-7):**
+   - **Layer 1:** Grep/Glob scan to find candidates
+   - **Layer 2:** Read 20-50 lines around each candidate. Apply check-specific critical questions. Classify: confirmed / false positive / needs-context
+3) **Collect** confirmed findings with severity, location, effort, recommendation
+4) **Calculate score** per `shared/references/audit_scoring.md`
+5) **Write Report** — build in memory, write to `{output_dir}/628-concurrency.md` (atomic single Write)
+6) **Return Summary** to coordinator
 
 ## Audit Rules
 
-### 1. Race Conditions
-**What:** Shared state modified without synchronization
+**Unified severity escalation:** For ALL checks — if finding affects payment/auth/financial code → escalate to **CRITICAL** regardless of other factors.
 
-**Detection Patterns:**
+### 1. Async/Event-Loop Races (CWE-362)
+
+**What:** Shared state corrupted across await/yield boundaries in single-threaded async code.
+
+**Layer 1 — Grep patterns:**
 
 | Language | Pattern | Grep |
 |----------|---------|------|
-| Python | Global modified in async | `global\s+\w+` inside `async def` |
-| TypeScript | Module-level let in async | `^let\s+\w+` at file scope + async function modifies it |
-| Go | Map access without mutex | `map\[.*\].*=` without `sync.Mutex` in same file |
-| All | Shared cache | `cache\[.*\]\s*=` or `cache\.set` without lock |
+| JS/TS | Read-modify-write across await | `\w+\s*[+\-*/]?=\s*.*await` (e.g., `result += await something`) |
+| JS/TS | Check-then-initialize race | `if\s*\(!?\w+\)` followed by `\w+\s*=\s*await` in same block |
+| Python | Read-modify-write across await | `\w+\s*[+\-*/]?=\s*await` inside `async def` |
+| Python | Shared module-level state in async | Module-level `\w+\s*=` + modified inside `async def` |
+| All | Shared cache without lock | `\.set\(|\.put\(|\[\w+\]\s*=` in async function without lock/mutex nearby |
 
-**Severity:**
-- **CRITICAL:** Race in payment/auth (`payment`, `balance`, `auth`, `token` in variable name)
-- **HIGH:** Race in user-facing feature
-- **MEDIUM:** Race in background job
+**Layer 2 — Critical questions:**
+- Is the variable shared (module/global scope) or local?
+- Can two async tasks interleave at this await point?
+- Is there a lock/mutex/semaphore guarding the access?
 
-**Recommendation:** Use locks, atomic operations, message queues
+**Severity:** CRITICAL (payment/auth) | HIGH (user-facing) | MEDIUM (background)
 
-**Effort:** M-L
-
-### 2. Missing Async/Await
-**What:** Callback hell or unhandled promises
-
-**Detection Patterns:**
-
-| Issue | Grep | Example |
-|-------|------|---------|
-| Callback hell | `\.then\(.*\.then\(.*\.then\(` | `.then().then().then()` |
-| Fire-and-forget | `async.*\(\)` not preceded by `await` | `saveToDb()` without await |
-| Missing await | `return\s+new\s+Promise` in async function | Should just `return await` or `return` value |
-| Dangling promise | `\.catch\(\s*\)` | Empty catch swallows errors |
-
-**Severity:**
-- **HIGH:** Fire-and-forget async (can cause data loss)
-- **MEDIUM:** Callback hell (hard to maintain)
-- **LOW:** Mixed Promise styles
-
-**Recommendation:** Convert to async/await, always await or handle promises
+**Safe pattern exclusions:** Local variables, `const` declarations, single-use await (no interleaving possible).
 
 **Effort:** M
 
-### 3. Resource Contention
-**What:** Multiple processes competing for same resource
+### 2. Thread/Goroutine Safety (CWE-366)
 
-**Detection Patterns:**
+**What:** Shared mutable state accessed from multiple threads/goroutines without synchronization.
 
-| Issue | Grep | Example |
-|-------|------|---------|
-| File lock missing | `open\(.*["']w["']\)` without `flock` or `lockfile` | Concurrent file writes |
-| Connection exhaustion | `create_engine\(.*pool_size` check if pool_size < 5 | DB pool too small |
-| Concurrent writes | `writeFile` or `fs\.write` without lock check | File corruption risk |
+**Layer 1 — Grep patterns:**
 
-**Severity:**
-- **HIGH:** File corruption risk, DB exhaustion
-- **MEDIUM:** Performance degradation
+| Language | Pattern | Grep |
+|----------|---------|------|
+| Go | Map access without mutex | `map\[.*\].*=` in struct without `sync.Mutex` or `sync.RWMutex` |
+| Go | Variable captured by goroutine | `go func` + variable from outer scope modified |
+| Python | Global modified in threads | `global\s+\w+` in function + `threading.Thread` in same file |
+| Java | HashMap shared between threads | `HashMap` + `Thread\|Executor\|Runnable` in same class without `synchronized\|ConcurrentHashMap` |
+| Rust | Rc in multi-thread context | `Rc<RefCell` + `thread::spawn\|tokio::spawn` in same file |
+| Node.js | Worker Threads shared state | `workerData\|SharedArrayBuffer\|parentPort` + mutable access without `Atomics` |
 
-**Recommendation:** Use connection pooling, file locking, `asyncio.Lock`
+**Layer 2 — Critical questions:**
+- Is this struct/object actually shared between threads? (single-threaded code → FP)
+- Is mutex/lock in embedded struct or imported module? (grep may miss it)
+- Is `go func` capturing by value (safe) or by reference (unsafe)?
 
-**Effort:** M
+**Severity:** CRITICAL (payment/auth) | HIGH (data corruption possible) | MEDIUM (internal)
 
-### 4. Thread Safety Violations
-**What:** Shared mutable state without synchronization
-
-**Detection Patterns:**
-
-| Language | Safe Pattern | Unsafe Pattern |
-|----------|--------------|----------------|
-| Go | `sync.Mutex` with map | `map[...]` without Mutex in same struct |
-| Rust | `Arc<Mutex<T>>` | `Rc<RefCell<T>>` in multi-threaded context |
-| Java | `synchronized` or `ConcurrentHashMap` | `HashMap` shared between threads |
-| Python | `threading.Lock` | Global dict modified in threads |
-
-**Grep patterns:**
-- Go unsafe: `type.*struct\s*{[^}]*map\[` without `sync.Mutex` in same struct
-- Python unsafe: `global\s+\w+` in function + `threading.Thread` in same file
-
-**Severity:** **HIGH** (data corruption possible)
-
-**Recommendation:** Use thread-safe primitives
+**Safe pattern exclusions:** Go map in `init()` or `main()` before goroutines start. Rust `Arc<Mutex<T>>` (already safe). Java `Collections.synchronizedMap()`.
 
 **Effort:** M
 
-### 5. Deadlock Potential
-**What:** Lock acquisition in inconsistent order
+### 3. TOCTOU — Time-of-Check Time-of-Use (CWE-367)
 
-**Detection Patterns:**
+**What:** Resource state checked, then used, but state can change between check and use.
 
-| Issue | Grep | Example |
-|-------|------|---------|
-| Nested locks | `with\s+\w+_lock:.*with\s+\w+_lock:` (multiline) | Lock A then Lock B |
-| Lock in loop | `for.*:.*\.acquire\(\)` | Lock acquired repeatedly without release |
-| Lock + external call | `.acquire\(\)` followed by `await` or `requests.` | Holding lock during I/O |
+**Layer 1 — Grep patterns:**
 
-**Severity:** **HIGH** (deadlock freezes application)
+| Language | Check | Use | Grep |
+|----------|-------|-----|------|
+| Python | `os.path.exists()` | `open()` | `os\.path\.exists\(` near `open\(` on same variable |
+| Python | `os.access()` | `os.open()` | `os\.access\(` near `os\.open\(\|open\(` |
+| Node.js | `fs.existsSync()` | `fs.readFileSync()` | `existsSync\(` near `readFileSync\(\|readFile\(` |
+| Node.js | `fs.accessSync()` | `fs.openSync()` | `accessSync\(` near `openSync\(` |
+| Go | `os.Stat()` | `os.Open()` | `os\.Stat\(` near `os\.Open\(\|os\.Create\(` |
+| Java | `.exists()` | `new FileInputStream` | `\.exists\(\)` near `new File\|FileInputStream\|FileOutputStream` |
 
-**Recommendation:** Consistent lock ordering, timeout locks (`asyncio.wait_for`)
+**Layer 2 — Critical questions:**
+- Is the check used for control flow (vulnerable) or just logging (safe)?
+- Is there a lock/retry around the check-then-use sequence?
+- Is the file in a temp directory controlled by the application (lower risk)?
+- Could an attacker substitute the file (symlink attack)?
 
-**Effort:** L
+**Severity:** CRITICAL (security-sensitive: permissions, auth tokens, configs) | HIGH (user-facing file ops) | MEDIUM (internal/background)
 
-### 6. Blocking I/O in Event Loop (Python asyncio)
-**What:** Synchronous blocking calls inside async functions
+**Safe pattern exclusions:** Check inside try/catch with retry. Check for logging/metrics only. Check + use wrapped in file lock.
 
-**Detection Patterns:**
+**Effort:** S-M (replace check-then-use with direct use + error handling)
 
-| Blocking Call | Grep in `async def` | Replacement |
-|---------------|---------------------|-------------|
-| `time.sleep` | `time\.sleep` inside async def | `await asyncio.sleep` |
-| `requests.` | `requests\.(get\|post)` inside async def | `httpx` or `aiohttp` |
-| `open()` file | `open\(` inside async def | `aiofiles.open` |
+### 4. Deadlock Potential (CWE-833)
 
-**Severity:**
-- **HIGH:** Blocks entire event loop
-- **MEDIUM:** Minor blocking (<100ms)
+**What:** Lock acquisition in inconsistent order, or lock held during blocking operation.
 
-**Recommendation:** Use async alternatives
+**Layer 1 — Grep patterns:**
 
-**Effort:** S-M
+| Language | Pattern | Grep |
+|----------|---------|------|
+| Python | Nested locks | `with\s+\w+_lock:` (multiline: two different locks nested) |
+| Python | Lock in loop | `for.*:` with `\.acquire\(\)` inside loop body |
+| Python | Lock + external call | `\.acquire\(\)` followed by `await\|requests\.\|urllib` before release |
+| Go | Missing defer unlock | `\.Lock\(\)` without `defer.*\.Unlock\(\)` on next line |
+| Go | Nested locks | Two `\.Lock\(\)` calls in same function without intervening `\.Unlock\(\)` |
+| Java | Nested synchronized | `synchronized\s*\(` (multiline: nested blocks with different monitors) |
+| JS | Async mutex nesting | `await\s+\w+\.acquire\(\)` (two different mutexes in same function) |
+
+**Layer 2 — Critical questions:**
+- Are these the same lock (reentrant = OK) or different locks (deadlock risk)?
+- Is the lock ordering consistent across all call sites?
+- Does the external call inside lock have a timeout?
+
+**Severity:** CRITICAL (payment/auth) | HIGH (app freeze risk)
+
+**Safe pattern exclusions:** Reentrant locks (same lock acquired twice). Locks with explicit timeout (`asyncio.wait_for`, `tryLock`).
+
+**Effort:** L (lock ordering redesign)
+
+### 5. Blocking I/O in Async Context (CWE-400)
+
+**What:** Synchronous blocking calls inside async functions or event loop handlers.
+
+**Layer 1 — Grep patterns:**
+
+| Language | Blocking Call | Grep | Replacement |
+|----------|--------------|------|-------------|
+| Python | `time.sleep` in async def | `time\.sleep` inside `async def` | `await asyncio.sleep` |
+| Python | `requests.*` in async def | `requests\.(get\|post\|put\|delete)` inside `async def` | `httpx` or `aiohttp` |
+| Python | `open()` in async def | `open\(` inside `async def` | `aiofiles.open` |
+| Node.js | `fs.readFileSync` in async | `fs\.readFileSync\|fs\.writeFileSync\|fs\.mkdirSync` | `fs.promises.*` |
+| Node.js | `execSync` in async | `execSync\|spawnSync` in async handler | `exec` with promises |
+| Node.js | Sync crypto in async | `crypto\.pbkdf2Sync\|crypto\.scryptSync` | `crypto.pbkdf2` (callback) |
+
+**Layer 2 — Critical questions:**
+- Is this in a hot path (API handler) or cold path (startup script)?
+- Is the blocking duration significant (>100ms)?
+- Is there a legitimate reason (e.g., sync read of small config at startup)?
+
+**Severity:** HIGH (blocks event loop/async context) | MEDIUM (minor blocking <100ms)
+
+**Safe pattern exclusions:** Blocking call in `if __name__ == "__main__"` (startup). `readFileSync` in config loading at init time. Sync crypto for small inputs.
+
+**Effort:** S-M (replace with async alternative)
+
+### 6. Resource Contention (CWE-362)
+
+**What:** Multiple concurrent accessors compete for same resource without coordination.
+
+**Layer 1 — Grep patterns:**
+
+| Pattern | Risk | Grep |
+|---------|------|------|
+| Shared memory without sync | Data corruption | `SharedArrayBuffer\|SharedMemory\|shm_open\|mmap` without `Atomics\|Mutex\|Lock` nearby |
+| IPC without coordination | Message ordering | `process\.send\|parentPort\.postMessage` in concurrent loops |
+| Concurrent file append | Interleaved writes | Multiple `appendFile\|fs\.write` to same path from parallel tasks |
+
+**Layer 2 — Critical questions:**
+- Are multiple writers actually concurrent? (Sequential = safe)
+- Is there OS-level atomicity guarantee? (e.g., `O_APPEND` for small writes)
+- Is ordering important for correctness?
+
+**Severity:** HIGH (data corruption) | MEDIUM (ordering issues)
+
+**Safe pattern exclusions:** Single writer pattern. OS-guaranteed atomic operations (small pipe writes, `O_APPEND`). Message queues with ordering guarantees.
+
+**Effort:** M
+
+### 7. Cross-Process & Invisible Side Effects (CWE-362, CWE-421)
+
+**What:** Multiple processes or process+OS accessing same exclusive resource, including operations with non-obvious side effects on shared OS resources.
+
+**Layer 1 — Grep entry points:**
+
+| Pattern | Risk | Grep |
+|---------|------|------|
+| Clipboard dual access | OSC 52 + native clipboard in same flow | `osc52\|\\x1b\\]52` AND `clipboard\|SetClipboardData\|pbcopy\|xclip` in same file |
+| Subprocess + shared file | Parent and child write same file | `spawn\|exec\|Popen` + `writeFile\|open.*"w"` on same path |
+| OS exclusive resource | Win32 clipboard, serial port, named pipe | `OpenClipboard\|serial\.Serial\|CreateNamedPipe\|mkfifo` |
+| Terminal escape sequences | stdout triggers terminal OS access | `\\x1b\\]\|\\033\\]\|writeOsc\|xterm` |
+| External clipboard tools | Clipboard via spawned process | `pbcopy\|xclip\|xsel\|clip\.exe` |
+
+**Layer 2 — This check relies on reasoning more than any other:**
+
+1. **Build Resource Inventory:**
+
+   | Resource | Exclusive? | Accessor 1 | Accessor 2 | Sync present? |
+   |----------|-----------|------------|------------|---------------|
+
+2. **Trace Timeline:**
+   ```
+   t=0ms  operation_A() -> resource_X accessed
+   t=?ms  side_effect   -> resource_X accessed by external process
+   t=?ms  operation_B() -> resource_X accessed again -> CONFLICT?
+   ```
+
+3. **Critical Questions:**
+   - Can another process (terminal, OS, child) access this resource simultaneously?
+   - Does this operation have invisible side effects on shared OS resources?
+   - What happens if the external process is slower/faster than expected?
+   - What happens if user triggers this action twice rapidly?
+
+**Severity:** CRITICAL (two accessors to exclusive OS resource without sync) | HIGH (subprocess + shared file without lock) | HIGH (invisible side effect detected via reasoning)
+
+**Safe pattern exclusions:** Single accessor. Retry/backoff pattern present. Operations sequenced with explicit delay/await.
+
+**Effort:** M-L (may require removing redundant access path)
 
 ## Scoring Algorithm
 
@@ -159,7 +243,7 @@ Receives `contextStore` with tech stack, language, codebase root, output_dir.
 
 **MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format.
 
-Write report to `{output_dir}/628-concurrency.md` with `category: "Concurrency"` and checks: race_conditions, missing_await, resource_contention, thread_safety, deadlock_potential, blocking_io.
+Write report to `{output_dir}/628-concurrency.md` with `category: "Concurrency"` and checks: async_races, thread_safety, toctou, deadlock_potential, blocking_io, resource_contention, cross_process_races.
 
 Return summary to coordinator:
 ```
@@ -167,29 +251,33 @@ Report written: docs/project/.audit/ln-620/{YYYY-MM-DD}/628-concurrency.md
 Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 ```
 
-## Reference Files
-
-- **Worker report template:** `shared/templates/audit_worker_report_template.md`
-- **Audit scoring formula:** `shared/references/audit_scoring.md`
-- **Audit output schema:** `shared/references/audit_output_schema.md`
-
 ## Critical Rules
 
-- **Do not auto-fix:** Report only, concurrency fixes require careful human review
-- **Language-aware detection:** Use language-specific patterns (Go sync.Mutex, Python asyncio.Lock, Java synchronized)
+- **Do not auto-fix:** Report only — concurrency fixes require careful human review
+- **Two-layer detection:** Always apply Layer 2 reasoning after Layer 1 grep. Never report raw grep matches without context analysis
+- **Language-aware detection:** Use language-specific patterns per check
+- **Unified CRITICAL escalation:** Any finding in payment/auth/financial code = CRITICAL
 - **Effort realism:** S = <1h, M = 1-4h, L = >4h
-- **Critical path escalation:** Race conditions in payment/auth = CRITICAL, regardless of other factors
 - **Exclusions:** Skip test files, skip single-threaded CLI tools, skip generated code
 
 ## Definition of Done
 
 - contextStore parsed (language, concurrency model, output_dir)
-- All 6 checks completed (race conditions, missing await, resource contention, thread safety, deadlock potential, blocking I/O)
+- All 7 checks completed with two-layer detection:
+  - async races, thread safety, TOCTOU, deadlock potential, blocking I/O, resource contention, cross-process races
+- Layer 2 reasoning applied to each candidate (confirmed / FP / needs-context)
 - Findings collected with severity, location, effort, recommendation
 - Score calculated per `shared/references/audit_scoring.md`
 - Report written to `{output_dir}/628-concurrency.md` (atomic single Write call)
 - Summary returned to coordinator
 
+## Reference Files
+
+- **Worker report template:** `shared/templates/audit_worker_report_template.md`
+- **Two-layer detection methodology:** `shared/references/two_layer_detection.md`
+- **Audit scoring formula:** `shared/references/audit_scoring.md`
+- **Audit output schema:** `shared/references/audit_output_schema.md`
+
 ---
-**Version:** 3.0.0
-**Last Updated:** 2025-12-23
+**Version:** 4.0.0
+**Last Updated:** 2026-03-04

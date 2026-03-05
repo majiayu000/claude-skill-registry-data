@@ -9,6 +9,15 @@ description: Validates Stories/Tasks with GO/NO-GO verdict, Readiness Score (1-1
 
 Validate Stories/Tasks with explicit GO/NO-GO verdict, Readiness Score, and Anti-Hallucination verification.
 
+## Inputs
+
+| Input | Required | Source | Description |
+|-------|----------|--------|-------------|
+| `storyId` | Yes | args, git branch, kanban, user | Story to process |
+
+**Resolution:** Per `shared/references/input_resolution_pattern.md` — Story Resolution Chain.
+**Status filter:** Backlog
+
 ## Purpose & Scope
 
 - Validate Story plus child Tasks against industry standards and project patterns
@@ -104,11 +113,28 @@ Phase 6: Approve & Notify
 
 ## Workflow
 
+### Phase 0: Tools Config
+
+**MANDATORY READ:** Load `shared/references/tools_config_guide.md`, `shared/references/storage_mode_detection.md`, and `shared/references/input_resolution_pattern.md`
+
+Read `docs/tools_config.md` (bootstrap if missing per tools_config_guide.md).
+Extract: `task_provider` = Task Management → Provider (`linear` | `file`).
+
+All subsequent phases use `task_provider` to select operations per storage_mode_detection.md.
+
 ### Phase 1: Discovery & Loading
 
-**Step 1: Configuration & Metadata Loading**
+**Step 1: Resolve storyId** (per input_resolution_pattern.md):
+- IF args provided → use args
+- ELSE IF git branch matches `feature/{id}-*` → extract id
+- ELSE IF kanban has exactly 1 Story in [Backlog] → suggest
+- ELSE → AskUserQuestion: show Stories from kanban filtered by [Backlog]
+
+**Step 2: Configuration & Metadata Loading**
 - Auto-discover configuration: Team ID (`docs/tasks/kanban_board.md`), project docs (`CLAUDE.md`), epic from Story.project
 - Load metadata only: Story ID/title/status/labels, child Task IDs/titles/status/labels
+  - IF `task_provider` = `linear`: `get_issue(storyId)` + `list_issues(parentId=storyId)`
+  - IF `task_provider` = `file`: `Read story.md` + `Glob("docs/tasks/epics/*/stories/*/tasks/*.md")`
 - Expect 1-8 implementation tasks; record parentId for filtering
 - Rationale: keep loading light; full descriptions arrive in Phase 2
 
@@ -164,12 +190,13 @@ Invoke `Skill(skill="ln-311-agent-reviewer", args="{storyId}")`.
 
 ### Phase 6: Approve & Notify
 
-- Set Story + all Tasks to Todo (Linear); update `kanban_board.md` with APPROVED marker
-- **Add Linear comment** with full validation summary:
-  - Penalty Points table (Before -> After = 0)
-  - Auto-Fixes Applied table
-  - Documentation Created table (docs created via ln-002)
-  - Standards Compliance Evidence table
+- Set Story + all Tasks to Todo; update `kanban_board.md` with APPROVED marker
+  - IF `task_provider` = `linear`: `save_issue({id, state: "Todo"})` for Story + each Task
+  - IF `task_provider` = `file`: `Edit` `**Status:**` line to `Todo` in story.md + each task file
+- **Add validation summary comment:**
+  - IF `task_provider` = `linear`: `create_comment({issueId, body})` on Story
+  - IF `task_provider` = `file`: `Write` comment to `docs/tasks/epics/.../comments/{ISO-timestamp}.md`
+  - Content: Penalty Points table (Before -> After = 0), Auto-Fixes Applied, Documentation Created (via ln-002), Standards Compliance Evidence
 - **Display tabular output** (Unicode box-drawing) to terminal
 - Final: Total Penalty Points = 0
 - **Recommended next step:** `ln-400-story-executor` to start Story execution
@@ -304,6 +331,8 @@ Verify all 22 criteria (#1-#22) from Auto-Fix Actions pass with concrete evidenc
 
 ## Reference Files
 
+- **Tools config:** `shared/references/tools_config_guide.md`
+- **Storage mode operations:** `shared/references/storage_mode_detection.md`
 - **AC validation rules:** `shared/references/ac_validation_rules.md`
 - **Plan mode behavior:** `shared/references/plan_mode_pattern.md`
 - **Final Assessment:** `references/readiness_scoring.md` (GO/NO-GO rules, Readiness Score calculation)
@@ -322,6 +351,7 @@ Verify all 22 criteria (#1-#22) from Auto-Fix Actions pass with concrete evidenc
   - `references/penalty_points.md` (penalty system details)
 - **Prevention checklist:** `shared/references/creation_quality_checklist.md` (creator-facing mapping of 22 criteria)
 - **Linear integration:** `../shared/templates/linear_integration.md`
+- **MANDATORY READ:** `shared/references/research_tool_fallback.md`
 
 ---
 **Version:** 7.0.0

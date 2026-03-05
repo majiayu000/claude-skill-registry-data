@@ -1,103 +1,61 @@
 ---
 name: intent
-description: Turn rough ideas into iron-clad work orders. Use when request is vague like "add a button", "make it better", "fix the thing". Triggers on ambiguous or underspecified requests.
-model: opus
+description: Turn rough ideas into clear work orders. Use when request is vague like "add a button", "make it better", "fix the thing". Triggers on ambiguous or underspecified requests.
 ---
 
-# Role
+Clarify WHAT before building anything. Every criterion must be testable by a stranger. Clarity over completeness — a partial spec with boolean criteria beats a thorough spec with vague ones.
 
-CLARIFY. Turn rough ideas into iron-clad work orders. Ask the fewest
-questions to make every criterion testable by a stranger. Clarity over
-completeness — a partial spec with boolean criteria beats a thorough spec
-with vague ones.
+A brief with invented details is worse than a shorter brief grounded in what the user said — assumptions compound silently downstream.
 
-## Principles
+## Workflow
 
-1. **User owns intent** — If the user says "I know what I want," proceed
-   without clarification. Never override stated intent.
-2. **At least one question must be adversarial** — Always ask what this
-   should NOT do, or what would make it wrong. Non-goals prevent scope creep
-   better than goals prevent gaps.
-3. **A spec is ready when a stranger could verify each criterion without
-   asking what you meant** — If it requires interpretation, it's not ready.
-4. **Max 3 rounds of clarification** — After 3, proceed with [ASSUMPTION]
-   labels on unresolved items. Endless clarification is worse than marked
-   assumptions.
-5. **Adapt focus to what the session needs** — Clarifying a bug is different
-   from clarifying a feature is different from clarifying a retrospective.
-   Lead with the questions that matter most for this context.
-6. **When interpretations diverge, ask the user which they mean** — Don't
-   pick for them. Present the options and let them choose.
+### Step 1: Understand
 
-## Process
+State what you heard in 1-2 sentences. If the task arrives with structured input (proposal, design, specs, task list), extract and validate — don't re-clarify.
 
-1. **Understand** — State what you understood. Scan for labeled blocks
-   (`TASK:`, `CONTEXT:`, `DONE:`, `STAKES:`, `CONSTRAINTS:`, `FEASIBLE:`).
-   Pre-populate matching fields and mark `[USER-PROVIDED]`. Focus questions
-   on gaps, not fields already answered.
+### Step 2: Close gaps
 
-   **Structured input present?** When task arrives with existing proposal,
-   design, specs, task lists, or OBJECTIVE/ACCEPTANCE blocks: extract and
-   validate — do not re-clarify. Score (step 2). If ≥ 8, emit brief
-   directly from existing materials.
+Loop using AskUserQuestion — up to 3 questions per round, max 8 rounds. At least one question across all rounds should be "what should this NOT do?"
 
-   | Context                 | Lead with                                             |
-   | ----------------------- | ----------------------------------------------------- |
-   | Building something      | What artifact, for whom, with what constraints?       |
-   | Fixing something        | What's the symptom, what changed, what's expected?    |
-   | Making a decision       | What decision, what options, what criteria?           |
-   | Reviewing what happened | What was the outcome, what surprised, what to change? |
-   | Writing                 | What audience, what tone, what must it cover?         |
-   | Learning                | What do you already know, what's the gap?             |
+After each round, list remaining unknowns — things you'd have to invent if you wrote the brief right now. If the list is non-empty, ask another round targeting those unknowns. If empty, move to step 3.
 
-2. **Close gaps** — Ask the 3 highest-uncertainty questions per round.
-   Each question ≤15 words. At least one adversarial ("what should this
-   NOT do?"). Use MCQ format for speed: "1A, 2B." Max 3 rounds — after
-   that, proceed with `[ASSUMPTION]` labels.
+### Step 3: Echo
 
-3. **Compress** — Echo back in one sentence (≤20 words): deliverable +
-   #1 must-include + hardest constraint. User responds YES to lock,
-   or EDITS to revise.
+Compress to one sentence (≤35 words): deliverable + top constraint.
 
-4. **Emit brief** — Produce the locked work order:
-   - OBJECTIVE (1 sentence)
-   - NON-GOALS (3-5 things a reasonable person WOULD attempt)
-   - CONSTRAINTS (what must not change)
-   - ACCEPTANCE (7-12 bullets, each ≤20 words, each testable by a
-     stranger, ≥2 "must NOT" bullets)
-   - STOP CONDITIONS (3-5 observable failure states, not process labels)
-   - BLAST RADIUS (1 sentence: what breaks if this is wrong)
+Use AskUserQuestion to confirm:
+- **Lock it in** — proceed to assumptions review
+- **Edit something** — revise, then re-echo
+- **Explore risks** — surface failure scenarios, then return to this choice
 
-   Self-audit (revise before presenting if any FAIL):
-   - OBJECTIVE present → [pass/fail]
-   - NON-GOALS has 3-5 bullets → [pass/fail]
-   - ACCEPTANCE has 7-12 bullets → [pass/fail]
-   - ≥2 bullets say "must NOT" → [pass/fail]
-   - STOP CONDITIONS has 3-5 → [pass/fail]
-   - All bullets ≤20 words → [pass/fail]
-   - BLAST RADIUS present → [pass/fail]
+### Step 4: Review assumptions
+
+Before generating the brief, list every detail you would need to invent — things the user never stated (numbers, thresholds, scope boundaries, tech choices).
+
+Present each assumption via AskUserQuestion with "Accept" and 2-3 concrete alternatives. Batch unrelated assumptions together, separate dependent ones.
+
+If there are zero assumptions, skip to step 5.
+
+### Step 5: Recommended practices
+
+If the task is straightforward with clear precedent, skip to step 6.
+
+Present best practices, thresholds, and standards the agent would add beyond what the user stated. Each with a one-line rationale explaining why it matters.
+
+Use AskUserQuestion (multiSelect) so the user can cherry-pick which to promote into acceptance criteria. Selected items become acceptance criteria in the brief. Unselected items stay in a "Recommended Practices" section as suggestions.
+
+### Step 6: Emit brief
+
+Only after steps 4 and 5 are complete. The core brief contains only what came from the user or was approved in steps 4-5. Scale sections to task stakes — a small fix doesn't need 5 non-goals.
+
+Structure:
+- OBJECTIVE (1 line)
+- NON-GOALS (3-5)
+- CONSTRAINTS
+- ACCEPTANCE — only criteria from user answers (step 2), approved assumptions (step 4), or promoted practices (step 5). A shorter honest list beats a padded one.
+- STOP CONDITIONS (3-5 observable failures)
+- RECOMMENDED PRACTICES — unselected items from step 5, kept as suggestions for reference.
 
 ## Boundaries
 
-User owns intent. If user says "I know what I want," proceed without
-clarification. Intent translates — it never decides for the user.
-
-When user asks "what do you need from me" or "give me the template":
-
-```
-Fill what you know, delete what you don't:
-
-TASK: [verb + object + outcome] (≤15 words)
-CONTEXT: [where it lives, who uses it, what connects to it]
-DONE: [artifact you can point to when finished]
-STAKES: [low/medium/high — why]
-CONSTRAINTS: [what must NOT change]
-```
-
-## Handoff
-
-Brief is locked. Invoke the next pipeline phase:
-
-- Needs shaping → Skill(skill="hope:shape") with this brief
-- Needs expert validation → Skill(skill="hope:consult") with this brief
-- Ready to execute → Skill(skill="hope:loop") with this brief
+User owns intent. If they say "I know what I want," proceed without clarification. When interpretations diverge, present options — never pick for them.

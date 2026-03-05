@@ -1,21 +1,29 @@
 ---
 name: domain-authority-auditor
-description: 'Use when the user asks to "audit domain authority", "domain trust score", "CITE audit", "how authoritative is my site", "domain credibility check", "is my domain trustworthy", or "domain credibility score". Runs a full CITE 40-item domain authority audit, scoring domains across 4 dimensions with weighted scoring by domain type. Produces a detailed report with per-item scores, dimension analysis, veto checks, and a prioritized action plan. For content-level assessment, see content-quality-auditor. For link profile details, see backlink-analyzer.'
+version: "3.0.0"
+description: 'This skill should be used when the user asks to "audit domain authority", "domain trust score", "CITE audit", "how authoritative is my site", "domain credibility check", "is my domain trustworthy", or "domain credibility score". Runs a full CITE 40-item domain authority audit, scoring domains across 4 dimensions with weighted scoring by domain type. Produces a detailed report with per-item scores, dimension analysis, veto checks, and a prioritized action plan. For content-level assessment, see content-quality-auditor. For link profile details, see backlink-analyzer.'
 license: Apache-2.0
+compatibility: "Claude Code ≥1.0, skills.sh marketplace, ClawHub marketplace, Vercel Labs skills ecosystem. No system packages required. Optional: MCP network access for SEO tool integrations."
 metadata:
   author: aaron-he-zhu
-  version: "2.0.0"
+  version: "3.0.0"
   geo-relevance: "medium"
   tags:
     - seo
     - geo
-    - domain authority
     - domain audit
-    - site trust
     - credibility
-    - cite framework
-    - domain rating
     - domain scoring
+    - domain-authority
+    - domain-rating
+    - domain-trust
+    - trust-signals
+    - site-authority
+    - da-checker
+    - ahrefs-dr
+    - moz-da
+    - cite-framework
+    - domain-strength
   triggers:
     - "audit domain authority"
     - "domain trust score"
@@ -31,7 +39,6 @@ metadata:
 # Domain Authority Auditor
 
 > Based on [CITE Domain Rating](https://github.com/aaron-he-zhu/cite-domain-rating). Full benchmark reference: [references/cite-domain-rating.md](../../references/cite-domain-rating.md)
-
 
 > **[SEO & GEO Skills Library](https://skills.sh/aaron-he-zhu/seo-geo-claude-skills)** · 20 skills for SEO + GEO · Install all: `npx skills add aaron-he-zhu/seo-geo-claude-skills`
 
@@ -61,10 +68,8 @@ This skill evaluates domain authority across 40 standardized criteria organized 
 - Evaluating domain authority before a GEO campaign
 - Benchmarking your domain against competitors
 - Assessing whether a domain is trustworthy as a citation source
-- Running periodic domain health checks
-- After link building campaigns to measure progress
+- Running periodic domain health checks or after link building campaigns
 - Identifying manipulation red flags (PBNs, link farms, penalty history)
-- Planning domain authority improvement strategy
 - Cross-referencing with content-quality-auditor for full 120-item assessment
 
 ## What This Skill Does
@@ -83,9 +88,6 @@ This skill evaluates domain authority across 40 standardized criteria organized 
 
 ```
 Audit domain authority for [domain]
-```
-
-```
 Run a CITE domain audit on [domain] as a [domain type]
 ```
 
@@ -93,9 +95,6 @@ Run a CITE domain audit on [domain] as a [domain type]
 
 ```
 CITE audit for example.com as an e-commerce site
-```
-
-```
 Score this SaaS domain against the 40-item benchmark: [domain]
 ```
 
@@ -245,8 +244,7 @@ Calculate scores and generate the final report:
 | E — Eminence | [X]/100 | [rating] | [X]% | [X] |
 | **CITE Score** | | | | **[X]/100** |
 
-**Score Calculation**:
-- CITE Score = C × [w_C] + I × [w_I] + T × [w_T] + E × [w_E]
+**Score Calculation**: CITE Score = C × [w_C] + I × [w_I] + T × [w_T] + E × [w_E]
 
 **Rating Scale**: 90-100 Excellent | 75-89 Good | 60-74 Medium | 40-59 Low | 0-39 Poor
 
@@ -266,11 +264,9 @@ Sorted by: weight × points lost (highest impact first)
 1. **[ID] [Name]** — [specific modification suggestion]
    - Current: [Fail/Partial] | Potential gain: [X] weighted points
    - Action: [concrete step]
-
 2. **[ID] [Name]** — [specific modification suggestion]
    - Current: [Fail/Partial] | Potential gain: [X] weighted points
    - Action: [concrete step]
-
 3–5. [Same format]
 
 ### Action Plan
@@ -278,11 +274,9 @@ Sorted by: weight × points lost (highest impact first)
 #### Quick Wins (< 1 week)
 - [ ] [Action 1]
 - [ ] [Action 2]
-
 #### Medium Effort (1-4 weeks)
 - [ ] [Action 3]
 - [ ] [Action 4]
-
 #### Strategic (1-3 months)
 - [ ] [Action 5]
 - [ ] [Action 6]
@@ -330,99 +324,7 @@ For a complete assessment, pair this CITE audit with a CORE-EEAT content audit:
 
 ## Example
 
-**User**: "Audit domain authority for cloudhosting.com as a content publisher"
-
-**Output**:
-
-```markdown
-## CITE Domain Authority Report
-
-### Overview
-
-- **Domain**: cloudhosting.com
-- **Domain Type**: Content Publisher
-- **Audit Date**: 2025-02-03
-- **CITE Score**: 69.9/100 (Medium)
-- **Veto Status**: ✅ No triggers
-
-#### Veto Check (Emergency Brake)
-
-| Veto Item | Status | Action |
-|-----------|--------|--------|
-| T03: Link-Traffic Coherence | ✅ Pass | Link growth correlates with traffic growth |
-| T05: Backlink Profile Uniqueness | ✅ Pass | No PBN patterns detected; diverse link sources |
-| T09: Penalty & Deindex History | ✅ Pass | No manual actions; clean penalty history |
-
-### Dimension Scores
-
-| Dimension | Score | Rating | Weight | Weighted |
-|-----------|-------|--------|--------|----------|
-| C — Citation | 72/100 | Medium | 40% | 28.8 |
-| I — Identity | 58/100 | Low | 15% | 8.7 |
-| T — Trust | 81/100 | Good | 20% | 16.2 |
-| E — Eminence | 65/100 | Medium | 25% | 16.25 |
-| **CITE Score** | | | | **69.9/100** |
-
-**Score Calculation**:
-- CITE Score = 72 × 0.40 + 58 × 0.15 + 81 × 0.20 + 65 × 0.25 = 69.9
-
-**Rating Scale**: 90-100 Excellent | 75-89 Good | 60-74 Medium | 40-59 Low | 0-39 Poor
-
-### Top 5 Priority Improvements
-
-Sorted by: weight × points lost (highest impact first)
-
-1. **I01 Knowledge Graph Presence** — Create entity entry in Google Knowledge Graph
-   - Current: Fail | Potential gain: 1.5 weighted points
-   - Action: Create Wikidata entry for CloudHost Inc. with P856 (website), P452 (industry), P571 (inception)
-
-2. **C05 AI Citation Volume** — Increase citations in AI-generated answers
-   - Current: Partial | Potential gain: 2.0 weighted points
-   - Action: Optimize top 10 pages for GEO; add definitive statements AI can quote directly
-
-3. **I03 Brand SERP Control** — Branded SERP shows only 4 of 10 results from owned properties
-   - Current: Partial | Potential gain: 0.75 weighted points
-   - Action: Claim Google Business Profile; build out social profiles; create CrunchBase entry
-
-4. **E04 Content Freshness Cadence** — 40% of content is >12 months without update
-   - Current: Partial | Potential gain: 1.25 weighted points
-   - Action: Establish monthly content refresh schedule; prioritize top 20 traffic pages
-
-5. **I05 Schema.org Completeness** — Organization schema missing sameAs, founder, foundingDate
-   - Current: Partial | Potential gain: 0.75 weighted points
-   - Action: Add complete Organization schema with sameAs links to Wikidata, LinkedIn, CrunchBase
-
-### Action Plan
-
-#### Quick Wins (< 1 week)
-- [ ] Add sameAs, founder, and foundingDate to Organization schema
-- [ ] Claim Google Business Profile for branded SERP control
-
-#### Medium Effort (1-4 weeks)
-- [ ] Create Wikidata entry with complete properties and references
-- [ ] Optimize top 10 pages with GEO-friendly definitive statements
-- [ ] Create or complete CrunchBase, LinkedIn company page profiles
-
-#### Strategic (1-3 months)
-- [ ] Launch monthly content refresh program targeting stale pages
-- [ ] Build topical authority through 3-4 pillar content clusters
-- [ ] Pursue digital PR to earn mentions on industry publications (TechCrunch, G2)
-
-### Cross-Reference with CORE-EEAT
-
-| Assessment | Score | Rating |
-|-----------|-------|--------|
-| CITE (Domain) | 69.9/100 | Medium |
-| CORE-EEAT (Content) | Run content-quality-auditor on sample pages | — |
-
-**Diagnosis**: Low CITE + unknown CORE-EEAT → Run `/seo:audit-page` on top 5 landing pages to determine whether to prioritize content quality or domain authority first.
-
-### Recommended Next Steps
-
-- For entity building: run [entity-optimizer](../entity-optimizer/) to strengthen I-dimension signals
-- For content audit: use [content-quality-auditor](../content-quality-auditor/) on key pages
-- For tracking progress: run `/seo:report` with CITE score trends quarterly
-```
+See [references/example-report.md](./references/example-report.md) for a complete CITE audit of cloudhosting.com showing veto check, dimension scores, top 5 improvements, action plan, and cross-reference with CORE-EEAT.
 
 ## Tips for Success
 
@@ -431,12 +333,11 @@ Sorted by: weight × points lost (highest impact first)
 3. **AI citation items (C05-C08) matter most for GEO** — Test by querying AI engines with niche-relevant questions
 4. **Some items need specialized tools** — Knowledge graph queries, AI citation monitoring, and IP diversity analysis may require manual research if tools aren't connected
 5. **Pair with CORE-EEAT for full picture** — Domain authority without content quality (or vice versa) tells only half the story
-6. **Re-audit quarterly** — Domain authority changes slowly; quarterly cadence is sufficient for most domain types
-7. **Compare against competitors** — Absolute scores matter less than relative position in your niche
 
 ## Reference Materials
 
 - [CITE Domain Rating](../../references/cite-domain-rating.md) — Full 40-item benchmark with dimension definitions, scoring criteria, domain-type weight tables, and veto items
+- [references/example-report.md](./references/example-report.md) — Complete CITE audit example with scored dimensions, top 5 improvements, action plan, and CORE-EEAT cross-reference
 
 ## Related Skills
 
@@ -444,6 +345,4 @@ Sorted by: weight × points lost (highest impact first)
 - [backlink-analyzer](../../monitor/backlink-analyzer/) — Deep-dive into backlink profile (feeds C dimension data)
 - [competitor-analysis](../../research/competitor-analysis/) — Compare CITE scores across competitors
 - [performance-reporter](../../monitor/performance-reporter/) — Track CITE score trends over time
-- [geo-content-optimizer](../../build/geo-content-optimizer/) — Page-level GEO optimization; CITE C05-C08 provide domain-level context
-- [memory-management](../memory-management/) — Store domain audit results for tracking
 - [entity-optimizer](../entity-optimizer/) — Entity presence audit; complements CITE I dimension

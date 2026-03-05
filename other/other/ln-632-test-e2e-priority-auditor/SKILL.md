@@ -21,19 +21,22 @@ Specialized worker auditing E2E test coverage for critical paths (risk-based).
 
 ## Inputs (from Coordinator)
 
-Receives `contextStore` with risk-based testing philosophy, tech stack, codebase structure, test file list.
+**MANDATORY READ:** Load `shared/references/task_delegation_pattern.md#audit-coordinator--worker-contract` for contextStore structure.
+
+Receives `contextStore` with: `tech_stack`, `testFilesMetadata`, `codebase_root`, `output_dir`.
 
 ## Workflow
 
-1) Parse context (critical paths, user journeys)
-2) Identify critical paths in codebase (Money, Security, Data)
-3) Identify core user journeys (multi-step flows)
-4) Check E2E coverage for critical paths (Priority ≥20)
-5) Check E2E coverage for user journeys (Priority 15-19)
-6) Validate existing E2E tests (Usefulness Score ≥15)
-7) Collect findings
-8) Calculate score
-9) Return JSON
+1) **Parse Context:** Extract tech stack, critical paths, user journeys, test file list, output_dir from contextStore
+2) **Identify Critical Paths:** Scan codebase for critical paths (Money, Security, Data)
+3) **Identify Core Journeys:** Identify core user journeys (multi-step flows)
+4) **Check Critical Path Coverage:** Check E2E coverage for critical paths (Priority >=20)
+5) **Check Journey Coverage:** Check E2E coverage for user journeys (Priority 15-19)
+6) **Validate E2E Tests:** Validate existing E2E tests (Usefulness Score >=15)
+7) **Collect Findings:** Record each violation with severity, location (file:line), effort estimate (S/M/L), recommendation
+8) **Calculate Score:** Count violations by severity, calculate compliance score (X/10)
+9) **Write Report:** Build full markdown report in memory per `shared/templates/audit_worker_report_template.md`, write to `{output_dir}/632-e2e-priority.md` in single Write call
+10) **Return Summary:** Return minimal summary to coordinator (see Output Format)
 
 ## Audit Rules
 
@@ -116,48 +119,14 @@ For each E2E test, calculate Usefulness Score = Impact × Probability
 
 ## Output Format
 
-**Return JSON to coordinator:**
-```json
-{
-  "category": "E2E Critical Coverage",
-  "score": 6,
-  "total_issues": 8,
-  "critical": 2,
-  "high": 3,
-  "medium": 2,
-  "low": 1,
-  "checks": [
-    {"id": "critical_path_coverage", "name": "Critical Path Coverage", "status": "failed", "details": "Missing E2E for 2 Priority 25 paths (payment, auth)"},
-    {"id": "user_journey_coverage", "name": "User Journey Coverage", "status": "warning", "details": "1 of 3 core journeys missing E2E"},
-    {"id": "edge_case_coverage", "name": "Edge Case Coverage", "status": "passed", "details": "Error scenarios covered in existing E2E"}
-  ],
-  "findings": [
-    {
-      "severity": "CRITICAL",
-      "location": "routes/payment.ts:45",
-      "issue": "No E2E test for payment processing (POST /payment, Priority 25)",
-      "principle": "E2E Critical Coverage / Money Flow",
-      "recommendation": "Add E2E: successful payment + failed payment scenarios",
-      "effort": "M"
-    },
-    {
-      "severity": "HIGH",
-      "location": "routes/auth.ts + routes/users.ts",
-      "issue": "Missing E2E for user journey: Registration → Email verification → First login (Priority 16)",
-      "principle": "E2E Critical Coverage / Core Journey",
-      "recommendation": "Add E2E test covering full registration flow",
-      "effort": "L"
-    },
-    {
-      "severity": "MEDIUM",
-      "location": "users.test.ts:23",
-      "issue": "Low-value E2E test 'GET /users returns 200' (Usefulness Score 4 < 15)",
-      "principle": "E2E Critical Coverage / Wasteful Test",
-      "recommendation": "Convert to Integration test or remove",
-      "effort": "S"
-    }
-  ]
-}
+**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format.
+
+Write report to `{output_dir}/632-e2e-priority.md` with `category: "E2E Critical Coverage"` and checks: critical_path_coverage, user_journey_coverage, e2e_usefulness_validation.
+
+Return summary to coordinator:
+```
+Report written: docs/project/.audit/ln-630/{YYYY-MM-DD}/632-e2e-priority.md
+Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 ```
 
 ## Critical Rules
@@ -170,15 +139,17 @@ For each E2E test, calculate Usefulness Score = Impact × Probability
 
 ## Definition of Done
 
-- contextStore parsed (critical paths, user journeys, test file list)
+- contextStore parsed successfully (including output_dir)
 - Critical paths identified (Money, Security, Data) with Priority scores
 - All 3 checks completed (critical path coverage, user journey coverage, E2E usefulness validation)
 - Findings collected with severity, location, effort, recommendation
-- Score calculated per `shared/references/audit_scoring.md`
-- JSON returned to coordinator
+- Score calculated using penalty algorithm
+- Report written to `{output_dir}/632-e2e-priority.md` (atomic single Write call)
+- Summary returned to coordinator
 
 ## Reference Files
 
+- **Worker report template:** `shared/templates/audit_worker_report_template.md`
 - **Audit scoring formula:** `shared/references/audit_scoring.md`
 - **Audit output schema:** `shared/references/audit_output_schema.md`
 

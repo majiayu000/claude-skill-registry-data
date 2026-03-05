@@ -18,15 +18,6 @@ Specialized worker auditing resource acquisition/release patterns, scope mismatc
 - Write structured findings to file with severity, location, effort, recommendations
 - Calculate compliance score (X/10) for Resource Lifecycle category
 
-## Boundary Disambiguation
-
-| This Auditor (ln-654) | NOT This Auditor | Boundary |
-|------------------------|------------------|----------|
-| Session **lifetime** vs usage duration | ln-652 **transaction** begin/commit boundaries | ln-652 = transaction scope; ln-654 = session scope |
-| Pool **setup** (pre-ping, recycle, size) | ln-628 runtime **contention** (locks, races) | ln-628 = runtime sync; ln-654 = pool configuration |
-| **Per-request** resource cleanup | ln-629 **shutdown** cleanup (SIGTERM, bootstrap) | ln-629 = app lifecycle; ln-654 = request lifecycle |
-| Resources **held idle** during streaming | ln-653 **blocking IO** in async | ln-653 = sync calls blocking loop; ln-654 = idle resources in async stream |
-
 ## Inputs (from Coordinator)
 
 **MANDATORY READ:** Load `shared/references/task_delegation_pattern.md#audit-coordinator--worker-contract` for contextStore structure.
