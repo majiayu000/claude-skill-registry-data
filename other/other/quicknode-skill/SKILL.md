@@ -33,7 +33,7 @@ description: Quicknode blockchain infrastructure including RPC endpoints (80+ ch
 | **DAS API** | Solana Digital Asset Standard (add-on) | NFT/token queries, compressed NFTs, asset search |
 | **Yellowstone gRPC** | Solana Geyser streaming (add-on) | Real-time account, transaction, slot data |
 | **Hypercore** | Hyperliquid gRPC/JSON-RPC/WS (beta) | Trades, orders, book updates, blocks, TWAP, events, writer actions |
-| **Console API** | REST API for account management | Endpoint CRUD, usage monitoring, billing |
+| **Admin API** | REST API for account management | Endpoint CRUD, usage monitoring, billing |
 | **Key-Value Store** | Serverless key-value and list storage (beta) | Persistent state for Streams, dynamic address lists |
 | **x402** | Pay-per-request RPC via USDC micropayments | Keyless RPC access, AI agents, pay-as-you-go |
 
@@ -384,7 +384,7 @@ const nfts = await core.client.qn_fetchNFTs({
 
 See [references/sdk-reference.md](references/sdk-reference.md) for complete SDK documentation.
 
-## Console API
+## Admin API
 
 REST API for programmatic management of Quicknode endpoints, usage, rate limits, security, billing, and teams. Enables infrastructure-as-code workflows.
 
@@ -414,7 +414,7 @@ const res = await fetch('https://api.quicknode.com/v0/endpoints', {
 const endpoints = await res.json();
 ```
 
-See [references/console-api-reference.md](references/console-api-reference.md) for full Console API documentation including endpoint CRUD, usage monitoring, rate limit configuration, security options, billing, and teams.
+See [references/admin-api-reference.md](references/admin-api-reference.md) for full Admin API documentation including endpoint CRUD, usage monitoring, rate limit configuration, security options, billing, and teams.
 
 ## Key-Value Store (Beta)
 
@@ -560,7 +560,7 @@ const ethBalance = await chains.ethereum.client.getBalance({ address: '0x...' })
 - **Webhooks**: https://www.quicknode.com/docs/webhooks
 - **IPFS**: https://www.quicknode.com/docs/ipfs
 - **SDK**: https://www.quicknode.com/docs/quicknode-sdk
-- **Console API**: https://www.quicknode.com/docs/console-api
+- **Admin API**: https://www.quicknode.com/docs/admin-api
 - **DAS API (Solana)**: https://www.quicknode.com/docs/solana/solana-das-api
 - **Yellowstone gRPC**: https://www.quicknode.com/docs/solana/yellowstone-grpc/overview
 - **Hyperliquid**: https://www.quicknode.com/docs/hyperliquid
