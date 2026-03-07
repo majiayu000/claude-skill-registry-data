@@ -1,6 +1,7 @@
 ---
 name: ln-775-api-docs-generator
 description: Configures Swagger/OpenAPI documentation
+license: MIT
 ---
 
 # ln-775-api-docs-generator

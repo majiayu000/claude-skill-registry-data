@@ -1,6 +1,7 @@
 ---
 name: ln-220-story-coordinator
 description: CREATE/REPLAN Stories for Epic (5-10 Stories). Delegates ln-001-standards-researcher for standards research. Decompose-First Pattern. Auto-discovers team/Epic.
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

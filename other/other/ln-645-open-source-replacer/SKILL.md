@@ -1,6 +1,7 @@
 ---
 name: ln-645-open-source-replacer
-description: "L3 Worker. Goal-based open-source replacement auditor: discovers custom modules (>100 LOC), analyzes PURPOSE via code reading, searches OSS alternatives via MCP Research (WebSearch, Context7, Ref), evaluates quality (stars, maintenance, license, CVE, API compatibility), generates migration plan."
+description: "Goal-based open-source replacement auditor: discovers custom modules (>100 LOC), analyzes PURPOSE via code reading, searches OSS alternatives via MCP Research (WebSearch, Context7, Ref), evaluates quality (stars, maintenance, license, CVE, API compatibility), generates migration plan."
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

@@ -1,6 +1,7 @@
 ---
 name: ln-310-story-validator
 description: Validates Stories/Tasks with GO/NO-GO verdict, Readiness Score (1-10), Penalty Points, and Anti-Hallucination verification. Auto-fixes to reach 0 points, delegates to ln-002 for docs. Use when reviewing Stories before execution or when user requests validation.
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

@@ -1,7 +1,8 @@
 ---
 name: ln-627-observability-auditor
-description: Observability audit worker (L3). Checks structured logging, health check endpoints, metrics collection, request tracing, log levels. Returns findings with severity, location, effort, recommendations.
+description: Checks structured logging, health check endpoints, metrics collection, request tracing, log levels. Returns findings with severity, location, effort, recommendations.
 allowed-tools: Read, Grep, Glob, Bash
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

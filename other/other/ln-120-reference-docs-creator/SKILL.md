@@ -1,6 +1,7 @@
 ---
 name: ln-120-reference-docs-creator
-description: Creates reference documentation structure + smart documents (ADRs/Guides/Manuals) based on TECH_STACK. Only creates justified documents (nontrivial technology choices). L2 Worker in ln-100-documents-pipeline.
+description: Creates reference documentation structure + smart documents (ADRs/Guides/Manuals) based on TECH_STACK. Only creates justified documents (nontrivial technology choices).
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

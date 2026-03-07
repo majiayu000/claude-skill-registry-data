@@ -1,7 +1,8 @@
 ---
 name: ln-628-concurrency-auditor
-description: "Concurrency audit worker (L3). Checks async races, thread safety, TOCTOU, deadlocks, blocking I/O, resource contention, cross-process races. Two-layer detection: grep + agent reasoning."
+description: "Checks async races, thread safety, TOCTOU, deadlocks, blocking I/O, resource contention, cross-process races. Two-layer detection: grep + agent reasoning."
 allowed-tools: Read, Grep, Glob, Bash
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

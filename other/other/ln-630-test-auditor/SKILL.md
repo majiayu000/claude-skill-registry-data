@@ -1,7 +1,8 @@
 ---
 name: ln-630-test-auditor
-description: "Test suite audit coordinator (L2). Delegates to 5 workers (Business Logic, E2E, Value, Coverage, Isolation). Aggregates results into docs/project/test_audit.md."
+description: "Test suite audit coordinator. Delegates to 5 workers (Business Logic, E2E, Value, Coverage, Isolation). Aggregates results into docs/project/test_audit.md."
 allowed-tools: Read, Grep, Glob, Bash, mcp__Ref, mcp__context7, Skill
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

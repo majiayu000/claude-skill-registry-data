@@ -1,7 +1,8 @@
 ---
 name: ln-625-dependencies-auditor
-description: "Dependencies audit worker (L3). Checks outdated packages, unused deps, reinvented wheels, vulnerability scan (CVE/CVSS). Supports mode: full | vulnerabilities_only."
+description: "Checks outdated packages, unused deps, reinvented wheels, vulnerability scan (CVE/CVSS). Supports mode: full | vulnerabilities_only."
 allowed-tools: Read, Grep, Glob, Bash
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

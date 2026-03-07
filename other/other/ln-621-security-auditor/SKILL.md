@@ -1,7 +1,8 @@
 ---
 name: ln-621-security-auditor
-description: Security audit worker (L3). Checks hardcoded secrets, SQL injection, XSS, insecure dependencies, missing input validation. Returns findings with severity, location, effort, recommendations.
+description: Checks hardcoded secrets, SQL injection, XSS, insecure dependencies, missing input validation. Returns findings with severity, location, effort, recommendations.
 allowed-tools: Read, Grep, Glob, Bash
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

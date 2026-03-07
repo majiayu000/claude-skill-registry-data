@@ -1,7 +1,8 @@
 ---
 name: ln-613-code-comments-auditor
-description: Code comments audit worker (L3). Checks WHY-not-WHAT, density (15-20%), forbidden content, docstrings quality, actuality, legacy cleanup. Returns findings with severity, location, and recommendations.
+description: Checks WHY-not-WHAT, density (15-20%), forbidden content, docstrings quality, actuality, legacy cleanup. Returns findings with severity, location, and recommendations.
 allowed-tools: Read, Grep, Glob, Bash
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

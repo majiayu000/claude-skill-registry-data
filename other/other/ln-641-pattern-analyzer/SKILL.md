@@ -1,6 +1,7 @@
 ---
 name: ln-641-pattern-analyzer
-description: L3 Worker. Analyzes single pattern implementation, calculates 4 scores (compliance, completeness, quality, implementation), identifies gaps and issues. Usually invoked by ln-640, can also analyze a specific pattern on user request.
+description: Analyzes single pattern implementation, calculates 4 scores (compliance, completeness, quality, implementation), identifies gaps and issues. Usually invoked by ln-640, can also analyze a specific pattern on user request.
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

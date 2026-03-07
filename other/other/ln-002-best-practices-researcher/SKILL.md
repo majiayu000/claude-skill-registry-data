@@ -1,6 +1,7 @@
 ---
 name: ln-002-best-practices-researcher
 description: Research best practices via MCP Ref/Context7/WebSearch and create documentation (guide/manual/ADR/research). Single research, multiple output types.
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

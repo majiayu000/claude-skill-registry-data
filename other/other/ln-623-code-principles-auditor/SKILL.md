@@ -1,7 +1,8 @@
 ---
 name: ln-623-code-principles-auditor
-description: "Code principles audit worker (L3). Checks DRY (10 types), KISS/YAGNI, error handling, DI patterns. Returns findings with severity, location, effort, pattern_signature."
+description: "Checks DRY (10 types), KISS/YAGNI, error handling, DI patterns. Returns findings with severity, location, effort, pattern_signature."
 allowed-tools: Read, Grep, Glob, Bash
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

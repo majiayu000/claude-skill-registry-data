@@ -1,21 +1,23 @@
 ---
 name: ln-610-docs-auditor
-description: "Coordinates 3 specialized documentation audit workers (structure, semantic, code comments). Detects project type, delegates parallel audits, aggregates results into docs/project/docs_audit.md."
+description: "Coordinates 4 documentation audit workers (structure, semantic, fact-check, code comments). Delegates parallel audits, aggregates into docs/project/docs_audit.md."
 allowed-tools: Read, Grep, Glob, Bash, Skill
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
 
 # Documentation Auditor (L2 Coordinator)
 
-Coordinates 3 specialized audit workers to perform comprehensive documentation quality analysis.
+Coordinates 4 specialized audit workers to perform comprehensive documentation quality analysis.
 
 ## Purpose & Scope
 
-- **Coordinates 3 audit workers** running in parallel:
+- **Coordinates 4 audit workers** running in parallel:
   - ln-611 (documentation structure) — 1 invocation
   - ln-612 (semantic content) — N invocations (per target document)
   - ln-613 (code comments) — 1 invocation
+  - ln-614 (fact verification) — 1 invocation
 - Detect project type + tech stack ONCE
 - Pass shared context to all workers (token-efficient)
 - Aggregate worker results into single consolidated report
@@ -27,7 +29,7 @@ Coordinates 3 specialized audit workers to perform comprehensive documentation q
 1) **Discovery:** Detect project type, tech stack, scan .md files
 2) **Context Build:** Build contextStore with output_dir, project_root, tech_stack
 3) **Prepare Output:** Create output directory
-4) **Delegate:** Invoke 3 workers in parallel
+4) **Delegate:** Invoke 4 workers in parallel
 5) **Aggregate:** Collect worker results, calculate overall score
 6) **Context Validation:** Post-filter findings
 7) **Write Report:** Save to `docs/project/docs_audit.md`
@@ -83,8 +85,9 @@ Invoke all workers **in parallel** via Skill tool:
 | ln-611-docs-structure-auditor | 1 | `{output_dir}/611-structure.md` |
 | ln-612-semantic-content-auditor | N (per target document) | `{output_dir}/612-semantic-{doc-slug}.md` |
 | ln-613-code-comments-auditor | 1 | `{output_dir}/613-code-comments.md` |
+| ln-614-docs-fact-checker | 1 | `{output_dir}/614-fact-checker.md` |
 
-Pass contextStore to each worker. For ln-612, additionally pass `doc_path` per invocation.
+Pass contextStore to each worker. For ln-612, additionally pass `doc_path` per invocation. ln-614 receives contextStore only — it discovers and scans all .md files internally.
 
 **Worker return format:** `Report written: ... | Score: X.X/10 | Issues: N (C:N H:N M:N L:N)`
 
@@ -96,11 +99,12 @@ Pass contextStore to each worker. For ln-612, additionally pass `doc_path` per i
 
 | Category | Source | Weight |
 |----------|--------|--------|
-| Documentation Structure | ln-611 | 35% |
-| Semantic Content | ln-612 (avg across docs) | 40% |
-| Code Comments | ln-613 | 25% |
+| Documentation Structure | ln-611 | 25% |
+| Semantic Content | ln-612 (avg across docs) | 30% |
+| Code Comments | ln-613 | 20% |
+| Fact Accuracy | ln-614 | 25% |
 
-4. Calculate overall score: weighted average of 3 categories
+4. Calculate overall score: weighted average of 4 categories
 
 ## Phase 6: Context Validation (Post-Filter)
 
@@ -118,11 +122,18 @@ FOR EACH finding WHERE severity IN (HIGH, MEDIUM):
     - Skip if filename contains architecture/design/api_spec
     - Skip if tables+lists > 50% of content (already structured)
 
-  # Doc-specific: Actuality severity calibration (from ln-611)
-  IF Structure finding Cat 5 (Actuality):
-    - Path/function COMPLETELY missing → CRITICAL
-    - Path exists but deprecated/renamed → HIGH
-    - Example code outdated but concept valid → MEDIUM
+  # Fact-checker: Example/template path exclusion (from ln-614)
+  IF Fact finding (PATH_NOT_FOUND):
+    - Path in examples/ or templates/ directory reference → advisory
+    - Path has placeholder pattern (YOUR_*, <project>, {name}) → remove
+
+  # Fact-checker: Planned feature claims (from ln-614)
+  IF Fact finding (ENTITY_NOT_FOUND, ENDPOINT_NOT_FOUND):
+    - Entity mentioned in ADR/roadmap as planned → advisory "[Planned: ADR-XXX]"
+
+  # Fact-checker: Cross-doc contradiction authority (from ln-614)
+  IF Fact finding (CROSS_DOC_*_CONFLICT):
+    - docs/project/ is authority over docs/reference/ → report reference doc
 
   # Comment-specific: Per-category density targets (from ln-613)
   IF Comment finding Cat 2 (Density):
@@ -153,6 +164,7 @@ Write consolidated report to `docs/project/docs_audit.md`:
 | Documentation Structure | X/10 | ln-611 | N issues |
 | Semantic Content | X/10 | ln-612 | N issues (across M docs) |
 | Code Comments | X/10 | ln-613 | N issues |
+| Fact Accuracy | X/10 | ln-614 | N issues |
 
 ### Critical Findings
 
@@ -177,7 +189,7 @@ Write consolidated report to `docs/project/docs_audit.md`:
 
 - **Pure coordinator:** Does NOT perform any audit checks directly. ALL auditing delegated to workers.
 - **Fix content, not rules:** NEVER modify standards/rules files to make violations pass
-- **Verify facts against code:** Workers actively check every path, function name, API, config
+- **Fact verification via ln-614:** Dedicated worker extracts and verifies all claims across ALL docs
 - **Compress always:** Size limits are upper bounds, not targets
 - **No code in docs:** Documents describe algorithms in tables or ASCII diagrams
 - **Code is truth:** When docs contradict code, always update docs
@@ -188,8 +200,8 @@ Write consolidated report to `docs/project/docs_audit.md`:
 - Project metadata discovered (tech stack, doc list)
 - contextStore built with output_dir = `docs/project/.audit/ln-610/{YYYY-MM-DD}`
 - Output directory created (no deletion of previous runs)
-- All 3 workers invoked and completed
-- Worker reports aggregated: 3 category scores + overall
+- All 4 workers invoked and completed
+- Worker reports aggregated: 4 category scores + overall
 - Context Validation applied to all findings
 - Consolidated report written to `docs/project/docs_audit.md`
 

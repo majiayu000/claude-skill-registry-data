@@ -1,6 +1,7 @@
 ---
 name: ln-512-tech-debt-cleaner
-description: "Automated tech debt cleanup worker (L3). Reads codebase audit findings, applies safe auto-fixes for low-risk issues (unused imports, dead code, commented-out code, deprecated aliases). Confidence >=90% only. Creates single commit with summary."
+description: "Reads codebase audit findings, applies safe auto-fixes for low-risk issues (unused imports, dead code, commented-out code, deprecated aliases). Confidence >=90% only. Creates single commit with summary."
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

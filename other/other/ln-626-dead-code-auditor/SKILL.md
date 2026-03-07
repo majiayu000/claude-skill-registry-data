@@ -1,7 +1,8 @@
 ---
 name: ln-626-dead-code-auditor
-description: Dead code & legacy audit worker (L3). Checks unreachable code, unused imports/variables/functions, commented-out code, backward compatibility shims, deprecated patterns. Returns findings.
+description: Checks unreachable code, unused imports/variables/functions, commented-out code, backward compatibility shims, deprecated patterns. Returns findings.
 allowed-tools: Read, Grep, Glob, Bash
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

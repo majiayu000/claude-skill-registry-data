@@ -1,6 +1,7 @@
 ---
 name: ln-760-security-setup
 description: "Coordinates security scanning (secrets + deps). Delegates to ln-761 + ln-625(mode=vulnerabilities_only). Generates SECURITY.md, pre-commit hooks, CI workflow."
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

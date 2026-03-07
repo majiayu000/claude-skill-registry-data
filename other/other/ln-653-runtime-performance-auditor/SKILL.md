@@ -1,7 +1,8 @@
 ---
 name: ln-653-runtime-performance-auditor
-description: "Runtime performance audit worker (L3). Checks blocking IO in async, unnecessary allocations, sync sleep in async, string concat in loops, missing to_thread for CPU-bound, redundant data copies. Returns findings with severity, location, effort, recommendations."
+description: "Checks blocking IO in async, unnecessary allocations, sync sleep in async, string concat in loops, missing to_thread for CPU-bound, redundant data copies. Returns findings with severity, location, effort, recommendations."
 allowed-tools: Read, Grep, Glob, Bash
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

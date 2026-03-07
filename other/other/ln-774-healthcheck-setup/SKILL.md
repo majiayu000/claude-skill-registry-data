@@ -1,6 +1,7 @@
 ---
 name: ln-774-healthcheck-setup
 description: Configures health check endpoints for Kubernetes readiness/liveness/startup
+license: MIT
 ---
 
 # ln-774-healthcheck-setup

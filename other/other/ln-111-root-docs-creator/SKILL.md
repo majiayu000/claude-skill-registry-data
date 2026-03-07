@@ -1,6 +1,7 @@
 ---
 name: ln-111-root-docs-creator
-description: "Creates 5 root documentation files (CLAUDE.md, docs/README.md, documentation_standards.md, principles.md, tools_config.md). L3 Worker invoked by ln-110-project-docs-coordinator."
+description: "Creates 5 root documentation files (CLAUDE.md, docs/README.md, documentation_standards.md, principles.md, tools_config.md)."
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

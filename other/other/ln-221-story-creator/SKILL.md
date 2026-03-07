@@ -1,6 +1,7 @@
 ---
 name: ln-221-story-creator
-description: Creates Stories from IDEAL plan (CREATE) or appends user-requested Stories (ADD). Generates 8-section documents, validates INVEST, creates in Linear. Invoked by ln-220.
+description: Creates Stories from IDEAL plan (CREATE) or appends user-requested Stories (ADD). Generates 8-section documents, validates INVEST, creates in Linear.
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

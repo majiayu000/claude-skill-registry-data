@@ -1,6 +1,7 @@
 ---
 name: ln-311-agent-reviewer
 description: "Worker that runs parallel external agent reviews (Codex + Gemini) on Story/Tasks. Background tasks, process-as-arrive, critical verification with debate. Returns filtered suggestions for Story validation."
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

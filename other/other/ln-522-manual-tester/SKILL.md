@@ -1,6 +1,7 @@
 ---
 name: ln-522-manual-tester
-description: "Performs manual testing of Story AC via executable bash scripts saved to tests/manual/. Creates reusable test suites per Story. Worker for ln-520."
+description: "Performs manual testing of Story AC via executable bash scripts saved to tests/manual/. Creates reusable test suites per Story."
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

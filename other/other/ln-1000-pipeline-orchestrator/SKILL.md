@@ -1,6 +1,7 @@
 ---
 name: ln-1000-pipeline-orchestrator
-description: "Meta-orchestrator (L0): reads kanban board, lets user pick ONE Story, drives it through pipeline 300->310->400->500 via TeamCreate. User-confirmed merge to develop after quality gate PASS."
+description: "Meta-orchestrator: reads kanban board, lets user pick ONE Story, drives it through pipeline 300->310->400->500 via TeamCreate. User-confirmed merge to develop after quality gate PASS."
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
@@ -272,12 +273,24 @@ IF platform == "win32":
 
 **Model routing:** All stages use `model: "opus"`. Effort routing via prompt: `effort_for_stage(0) = "low"`, `effort_for_stage(1) = "medium"`, `effort_for_stage(2) = "medium"`, `effort_for_stage(3) = "medium"`. Crash recovery = same as target stage. Thinking mode: always enabled (adaptive).
 
-1. Ensure `develop` branch exists:
+1. Ensure `develop` branch exists and is up-to-date with main:
    ```
+   main_branch = git symbolic-ref --short HEAD   # or "master"/"main" per project
    IF `develop` branch not found locally or on origin:
-     git branch develop $(git symbolic-ref --short HEAD)   # Create from current default branch
+     git branch develop $main_branch
      git push -u origin develop
-   git checkout develop               # Start pipeline from develop
+   git checkout develop
+   git pull --ff-only origin develop              # Get latest remote changes
+
+   # Ensure develop has all commits from main (prevents stale feature branches)
+   missing = git log develop..origin/$main_branch --oneline
+   IF missing is NOT empty:
+     git merge origin/$main_branch --no-edit      # Fast-forward or merge main into develop
+     IF merge conflict:
+       # Resolve conflicts (prefer develop for project files, prefer main for config/CI)
+       # After resolving: git add . && git commit --no-edit
+       # If unresolvable: ABORT merge, escalate to user with conflict file list
+     git push origin develop
    ```
 
 2. Create team:
@@ -612,25 +625,40 @@ When invoked in Plan Mode, show available Stories and ask user which one to plan
 1. Parse kanban board (Phase 1 steps 1-7)
 2. Show available Stories table
 3. AskUserQuestion: "Which story to plan for? Enter # or Story ID."
-4. Show execution plan for selected Story
-5. Write plan to plan file, call ExitPlanMode
+4. Execute Phase 2 (pre-flight questions) if business ambiguities found
+5. Resolve `skill_repo_path` — absolute path to skills repo root (locate this SKILL.md, go up one level)
+6. Show execution plan for selected Story
+7. Write plan to plan file (using format below), call ExitPlanMode
 
 **Plan Output Format:**
 ```
 ## Pipeline Plan for {date}
 
+> **BEFORE EXECUTING — MANDATORY READ:** Load `{skill_repo_path}/ln-1000-pipeline-orchestrator/SKILL.md` (full file).
+> This plan requires Agent Teams (TeamCreate), worktree isolation, delegate mode, and heartbeat event loop.
+> The executing agent MUST NOT write code or invoke skills directly — only coordinate workers.
+> After reading SKILL.md, start from Phase 3 (Team Setup) using the context below.
+
 **Story:** {ID}: {Title}
 **Current Status:** {status}
 **Target Stage:** {N} ({skill_name})
+**Storage Mode:** {file|linear}
+**Project Brief:** {name} ({tech})
+**Business Answers:** {answers from Phase 2, or "none"}
+**Skill Repo Path:** {skill_repo_path}
 
 ### Execution Sequence
-1. TeamCreate("pipeline-{date}")
-2. Create worktree + feature branch: feature/{id}-{slug}
-3. Spawn worker -> Stage {N} ({skill_name})
-4. Drive through remaining stages until quality gate
-5. Sync with develop, generate report
-6. Ask for merge confirmation
-7. Cleanup
+1. Read full SKILL.md + references (Phase 3 prerequisites)
+2. TeamCreate("pipeline-{date}")
+3. Create worktree + feature branch: feature/{id}-{slug}
+4. Spawn worker -> Stage {N} ({skill_name})
+5. Drive through remaining stages via heartbeat event loop
+6. Sync with develop, generate report
+7. Ask for merge confirmation
+8. Cleanup (Phase 5)
+
+### Task Decomposition (from planning phase)
+{task breakdown if available from Plan agent research}
 ```
 
 ## Definition of Done (self-verified in Phase 5)

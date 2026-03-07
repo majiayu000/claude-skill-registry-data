@@ -87,11 +87,14 @@ If args provided (e.g., `/review-loop path=/some/repo target=main`), use them. O
 
 ## Step 2.5: Code Simplification
 
-Run the simplify skill to clean up code changes between current branch and TARGET_BRANCH:
+Run Claude Code's **built-in** `simplify` skill. Use EXACTLY this Skill tool call:
 ```
 Skill(skill: "simplify")
 TaskUpdate(taskId: SIMPLIFY, status: "completed")
 ```
+**The skill name is literally `simplify` — NOT `code-simplifier`, NOT `code-simplicity-reviewer`,
+NOT any `compound-engineering:*` skill. Just `simplify`. If you use any other skill name, you are
+violating the instructions.**
 
 ## Step 3: Each Iteration
 
@@ -218,6 +221,7 @@ After 2 iterations with no critical/major:
 | "I'll dispatch fix coordinator" | NO. YOU triage and dispatch fix subagents directly. |
 | "Would you like me to..." | NO. Never ask. Execute. |
 | "Skip simplify, it's optional" | NO. Always run it before review iterations. |
+| "I'll use code-simplicity-reviewer" | NO. Use built-in `simplify` skill. Exactly `Skill(skill: "simplify")`. |
 | "No issues found, stopping early" | NO. Reviewers find different issues each pass. Run all 2. |
 | "All were false-positives, done" | NO. Next iteration may find real issues. Continue. |
 | "Code is clean after iteration 1" | NO. Run all 2 iterations. First pass misses subtle issues. |
@@ -234,6 +238,7 @@ If you catch yourself:
 - Batching multiple fixes into one subagent → STOP
 - Asking permission → STOP
 - Skipping simplify skill → STOP
+- Using any skill other than `simplify` for simplification (e.g. `code-simplicity-reviewer`) → STOP
 - Stopping before iteration 2 because "no issues" → STOP
 - Skipping iterations because "all false-positives" → STOP
 - **Ending response after fixes complete** → STOP (go to CHECKPOINT)

@@ -1,6 +1,7 @@
 ---
 name: ln-403-task-rework
 description: Fixes tasks in To Rework and returns them to To Review. Applies reviewer feedback only for the selected task.
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

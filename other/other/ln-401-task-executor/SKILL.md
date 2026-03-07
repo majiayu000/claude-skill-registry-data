@@ -1,6 +1,7 @@
 ---
 name: ln-401-task-executor
 description: Executes implementation tasks (Todo -> In Progress -> To Review). Follows KISS/YAGNI, guides, quality checks. Not for test tasks.
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

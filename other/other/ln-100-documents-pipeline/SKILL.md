@@ -1,6 +1,7 @@
 ---
 name: ln-100-documents-pipeline
-description: "Top orchestrator for complete doc system. Delegates to ln-110 coordinator (project docs via 5 L3 workers) + ln-120-150 workers. Phase 4: global cleanup. Idempotent."
+description: "Top orchestrator for complete doc system. Delegates to ln-110 coordinator (project docs) + ln-120-150 workers. Phase 4: global cleanup. Idempotent."
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

@@ -1,6 +1,7 @@
 ---
 name: ln-772-error-handler-setup
 description: Configures global exception handling middleware
+license: MIT
 ---
 
 # ln-772-error-handler-setup

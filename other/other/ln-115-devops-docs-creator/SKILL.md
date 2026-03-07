@@ -1,6 +1,7 @@
 ---
 name: ln-115-devops-docs-creator
 description: Creates runbook.md for DevOps setup. L3 Worker invoked CONDITIONALLY when hasDocker detected.
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

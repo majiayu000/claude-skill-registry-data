@@ -1,6 +1,7 @@
 ---
 name: ln-222-story-replanner
 description: Replans Stories when Epic requirements change. Compares IDEAL vs existing, categorizes operations (KEEP/UPDATE/OBSOLETE/CREATE), executes in Linear.
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

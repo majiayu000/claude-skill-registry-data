@@ -1,7 +1,8 @@
 ---
 name: ln-633-test-value-auditor
-description: Risk-Based Value audit worker (L3). Calculates Usefulness Score = Impact (1-5) × Probability (1-5) for each test. Returns KEEP/REVIEW/REMOVE decisions based on thresholds (≥15 KEEP, 10-14 REVIEW, <10 REMOVE).
+description: Calculates Usefulness Score = Impact (1-5) × Probability (1-5) for each test. Returns KEEP/REVIEW/REMOVE decisions based on thresholds (≥15 KEEP, 10-14 REVIEW, <10 REMOVE).
 allowed-tools: Read, Grep, Glob, Bash
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

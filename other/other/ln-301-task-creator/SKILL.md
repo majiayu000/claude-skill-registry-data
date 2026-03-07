@@ -1,6 +1,7 @@
 ---
 name: ln-301-task-creator
-description: Creates ALL task types (implementation, refactoring, test). Generates task documents from templates, validates type rules, creates in Linear, updates kanban. Invoked by orchestrators.
+description: Creates ALL task types (implementation, refactoring, test). Generates task documents from templates, validates type rules, creates in Linear, updates kanban.
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

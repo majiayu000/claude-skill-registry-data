@@ -1,6 +1,7 @@
 ---
 name: ln-300-task-coordinator
 description: Orchestrates task operations. Analyzes Story, builds optimal plan (1-8 implementation tasks), delegates to ln-301-task-creator (CREATE/ADD) or ln-302-task-replanner (REPLAN). Auto-discovers team ID.
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

@@ -1,6 +1,7 @@
 ---
 name: ln-523-auto-test-planner
-description: "Plans automated tests (E2E/Integration/Unit) using Risk-Based Testing after manual testing. Calculates priorities, delegates to ln-301-task-creator. Worker for ln-520."
+description: "Plans automated tests (E2E/Integration/Unit) using Risk-Based Testing after manual testing. Calculates priorities, delegates to ln-301-task-creator."
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
@@ -8,6 +9,15 @@ description: "Plans automated tests (E2E/Integration/Unit) using Risk-Based Test
 # Automated Test Planner
 
 Creates Story test task with comprehensive automated test coverage (E2E/Integration/Unit) based on Risk-Based Testing methodology and REAL manual testing results.
+
+## Inputs
+
+| Input | Required | Source | Description |
+|-------|----------|--------|-------------|
+| `storyId` | Yes | args, git branch, kanban, user | Story to process |
+
+**Resolution:** Per `shared/references/input_resolution_pattern.md` — Story Resolution Chain.
+**Status filter:** To Review
 
 ## Purpose & Scope
 - **Create** comprehensive test task for Story automation
@@ -40,11 +50,21 @@ Do NOT use if:
 
 ## Workflow
 
+### Phase 0: Tools Config
+
+**MANDATORY READ:** Load `shared/references/tools_config_guide.md`, `shared/references/storage_mode_detection.md`, and `shared/references/input_resolution_pattern.md`
+
+Read `docs/tools_config.md` (bootstrap if missing per tools_config_guide.md).
+Extract: `task_provider` = Task Management → Provider (`linear` | `file`).
+
 ### Phase 1: Discovery (Automated)
 
-Auto-discovers Team ID from `docs/tasks/kanban_board.md` (see CLAUDE.md "Configuration Auto-Discovery").
-
-**Input:** Story ID from orchestrator (ln-520)
+1. **Resolve storyId** (per input_resolution_pattern.md):
+   - IF args provided → use args
+   - ELSE IF git branch matches `feature/{id}-*` → extract id
+   - ELSE IF kanban has exactly 1 Story in [To Review] → suggest
+   - ELSE → AskUserQuestion: show Stories from kanban filtered by [To Review]
+2. Auto-discover Team ID from `docs/tasks/kanban_board.md` (see CLAUDE.md "Configuration Auto-Discovery")
 
 ### Phase 2: Story + Tasks Analysis (NO Dialog)
 
@@ -58,17 +78,23 @@ Auto-discovers Team ID from `docs/tasks/kanban_board.md` (see CLAUDE.md "Configu
 3. Ensures test planning aligns with project practices
 
 **Step 1: Load Research and Manual Test Results**
-1. Fetch Story from Linear (must have label "user-story")
-2. Extract Story.id (UUID) - Use UUID, NOT short ID (required for Linear API)
-3. Load research comment (from ln-521): "## Test Research: {Feature}"
-4. Load manual test results comment (from ln-522): "## Manual Testing Results"
+1. Fetch Story (must have label "user-story"):
+   - IF `task_provider` = `linear`: `get_issue(storyId)` — extract Story.id (UUID, NOT short ID)
+   - IF `task_provider` = `file`: `Read story.md` — extract Story metadata
+2. Load research comment (from ln-521): "## Test Research: {Feature}"
+   - IF `task_provider` = `linear`: `list_comments(issueId=storyId)` → find matching comment
+   - IF `task_provider` = `file`: `Glob("docs/tasks/epics/*/stories/*/comments/*.md")` → find matching comment
+3. Load manual test results comment (from ln-522): "## Manual Testing Results"
+   - Same approach as research comment above
    - If not found -> ERROR: Run ln-520-test-planner pipeline first
-5. Parse sections: AC results (PASS/FAIL), Edge Cases, Error Handling, Integration flows
-6. Map to test design: PASSED AC -> E2E, Edge cases -> Unit, Errors -> Error handling, Flows -> Integration
+4. Parse sections: AC results (PASS/FAIL), Edge Cases, Error Handling, Integration flows
+5. Map to test design: PASSED AC -> E2E, Edge cases -> Unit, Errors -> Error handling, Flows -> Integration
 
 **Step 2: Analyze Story + Tasks**
 1. Parse Story: Goal, Test Strategy, Technical Notes
-2. Fetch **all child Tasks** (parentId = Story.id, status = Done) from Linear
+2. Fetch all child Tasks (status = Done):
+   - IF `task_provider` = `linear`: `list_issues(parentId=Story.id, state="Done")`
+   - IF `task_provider` = `file`: `Glob("docs/tasks/epics/*/stories/*/tasks/*.md")` → filter by `**Status:** Done`
 3. Analyze each Task:
    - Components implemented
    - Business logic added
@@ -84,7 +110,7 @@ Auto-discovers Team ID from `docs/tasks/kanban_board.md` (see CLAUDE.md "Configu
 
 ### Phase 4: Risk-Based Test Planning (Automated)
 
-**MANDATORY READ:** Load `references/risk_based_testing_guide.md` for complete methodology.
+**MANDATORY READ:** Load `shared/references/risk_based_testing_guide.md` for complete methodology.
 
 **E2E-First Approach:** Prioritize by business risk (Priority = Impact x Probability), not coverage metrics.
 
@@ -99,17 +125,17 @@ Priority = Business Impact (1-5) x Probability (1-5)
 ```
 
 **Decision Criteria:**
-- Priority >=15 -> **MUST test**
+- Priority ≥15 -> **MUST test**
 - Priority 9-14 -> **SHOULD test** if not covered
 - Priority <=8 -> **SKIP** (manual testing sufficient)
 
-**Step 2: E2E Test Selection (2-5):** Baseline 2 (positive + negative) ALWAYS + 0-3 additional (Priority >=15 only)
+**Step 2: E2E Test Selection (2-5):** Baseline 2 (positive + negative) ALWAYS + 0-3 additional (Priority ≥15 only)
 
-**Step 3: Unit Test Selection (0-15):** DEFAULT 0. Add ONLY for complex business logic (Priority >=15): financial, security, algorithms
+**Step 3: Unit Test Selection (0-15):** DEFAULT 0. Add ONLY for complex business logic (Priority ≥15): financial, security, algorithms
 
-**Step 4: Integration Test Selection (0-8):** DEFAULT 0. Add ONLY if E2E gaps AND Priority >=15: rollback, concurrency, external API errors
+**Step 4: Integration Test Selection:** DEFAULT 0. Add ONLY if E2E gaps AND Priority ≥15: rollback, concurrency, external API errors
 
-**Step 5: Validation:** Limits 2-28 total (realistic goal: 2-7). Auto-trim if >7 (keep 2 baseline + top 5 by Priority)
+**Step 5: Validation:** Each test passes Usefulness Criteria (Priority ≥15, Confidence ROI, Behavioral, Predictive, Specific, Non-Duplicative)
 
 ### Phase 5: Test Task Generation (Automated)
 
@@ -137,7 +163,8 @@ Shows preview for review.
 
 **Step 3:** Check for existing test task
 
-Query Linear: `list_issues(parentId=Story.id, labels=["tests"])`
+- IF `task_provider` = `linear`: `list_issues(parentId=Story.id, label="tests")`
+- IF `task_provider` = `file`: `Glob("docs/tasks/epics/*/stories/*/tasks/*.md")` → filter by `**Labels:**` containing `tests`
 
 **Decision:**
 - **Count = 0** -> **CREATE MODE** (Step 4a)
@@ -178,10 +205,10 @@ Invoke ln-302-task-replanner worker with taskType: "test"
 
 **Risk-Based Test Plan Generated:**
 - [ ] Risk Priority Matrix calculated for all scenarios
-- [ ] E2E tests (2-5): Baseline 2 + additional 0-3 with Priority >=15
-- [ ] Integration tests (0-8): ONLY if E2E doesn't cover AND Priority >=15
-- [ ] Unit tests (0-15): ONLY complex business logic with Priority >=15
-- [ ] **Total tests: 2-7 realistic goal** (hard limit: 2-28)
+- [ ] E2E tests: Baseline positive + negative, additional only if Priority ≥15
+- [ ] Integration tests: ONLY if E2E doesn't cover AND Priority ≥15
+- [ ] Unit tests: ONLY complex business logic with Priority ≥15
+- [ ] Each test passes all 6 Usefulness Criteria
 - [ ] No framework/library testing: Each test validates OUR business logic only
 
 **Test Task Description Complete (11 sections):**
@@ -200,14 +227,17 @@ Invoke ln-302-task-replanner worker with taskType: "test"
 
 ## Reference Files
 
+- **Tools config:** `shared/references/tools_config_guide.md`
+- **Storage mode operations:** `shared/references/storage_mode_detection.md`
 - **Risk-based testing methodology:** `shared/references/risk_based_testing_guide.md`
 - **Auto-discovery patterns:** `shared/references/auto_discovery_pattern.md`
+- **MANDATORY READ:** `shared/references/research_tool_fallback.md`
 
 ### risk_based_testing_guide.md
 
 **Purpose**: Risk-Based Testing methodology (detailed guide)
 
-**Location**: [references/risk_based_testing_guide.md](references/risk_based_testing_guide.md)
+**Location**: [shared/references/risk_based_testing_guide.md](shared/references/risk_based_testing_guide.md)
 
 ### test_task_template.md (CENTRALIZED)
 
@@ -220,14 +250,14 @@ Invoke ln-302-task-replanner worker with taskType: "test"
 - **Manual results required:** Never plan tests without ln-522 manual testing results — guessing coverage is worse than no tests
 - **E2E-first, not unit-first:** Baseline is always 2 E2E (positive + negative); unit/integration added only for Priority >= 15
 - **No framework testing:** Every test must validate OUR business logic; never test library/framework behavior
-- **Auto-trim enforcement:** If total tests exceed 7, auto-trim to baseline 2 + top 5 by Priority score
+- **Usefulness enforcement:** Every test beyond baseline must pass all 6 Usefulness Criteria (see risk_based_testing_guide.md)
 - **Delegate, don't create:** Task creation goes through ln-301/ln-302 workers; this skill generates the plan only
 
 ## Best Practices
 
-**Minimum Viable Testing:** Start with 2 E2E tests (positive + negative). Add more ONLY with critical justification. Realistic goal: 2-7 tests per Story.
+**Minimum Viable Testing:** Start with baseline E2E (positive + negative). Each additional test must pass all 6 Usefulness Criteria.
 
-**Risk-Based Testing:** Prioritize by Business Impact x Probability. E2E-first from ACTUAL manual testing results. Priority >=15 scenarios covered by tests.
+**Risk-Based Testing:** Prioritize by Business Impact x Probability. E2E-first from ACTUAL manual testing results. Priority ≥15 scenarios covered by tests.
 
 **Expected-Based Testing:** For deterministic tests, compare actual vs expected using `diff`. **MANDATORY READ:** Load `../ln-522-manual-tester/SKILL.md` — section "Test Design Principles".
 

@@ -1,6 +1,7 @@
 ---
 name: ln-510-quality-coordinator
-description: "Coordinates code quality checks: ln-511 code quality, ln-512 tech debt cleanup, ln-513 agent review, ln-514 regression. Sequential pipeline, returns results to ln-500."
+description: "Coordinates code quality checks: ln-511 code quality, ln-512 tech debt cleanup, ln-513 agent review, ln-514 regression. Sequential pipeline, returns quality_verdict + aggregated results."
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
@@ -16,7 +17,7 @@ description: "Coordinates code quality checks: ln-511 code quality, ln-512 tech 
 
 # Quality Coordinator
 
-Sequential coordinator for code quality pipeline. Invokes 4 workers in index order (511 -> 512 -> 513 -> 514) and returns aggregated results to ln-500.
+Sequential coordinator for code quality pipeline. Invokes 4 workers in index order (511 -> 512 -> 513 -> 514), calculates quality_verdict, and returns verdict + aggregated results.
 
 ## Purpose & Scope
 - Invoke ln-511-code-quality-checker (metrics, MCP Ref, static analysis)
@@ -25,8 +26,8 @@ Sequential coordinator for code quality pipeline. Invokes 4 workers in index ord
 - Run Criteria Validation (Story dependencies, AC-Task Coverage, DB Creation Principle)
 - Run linters from tech_stack.md
 - Invoke ln-514-regression-checker (test suite after all changes)
-- Return aggregated quality results to ln-500-story-quality-gate
-- **No verdict determination** — ln-500 decides final Gate verdict
+- Return quality_verdict + aggregated results
+- Calculate quality_verdict per normalization matrix + `references/gate_levels.md`
 
 ## When to Use
 - **Invoked by ln-500-story-quality-gate** Phase 2
@@ -133,15 +134,64 @@ Skill(skill: "ln-513-agent-reviewer", args: "{storyId}")
 Skill(skill: "ln-514-regression-checker", args: "{storyId}")
 ```
 
-### Phase 8: Return Results
+### Phase 8: Calculate Verdict + Return Results
 
-Return aggregated results to ln-500:
+**MANDATORY READ:** Load `references/gate_levels.md`
+
+#### Step 8.1: Normalize Component Results
+
+Map each component status to FAIL/CONCERN/ignored using this matrix:
+
+| Component | Status | Maps To | Penalty |
+|-----------|--------|---------|---------|
+| quality_check | PASS | -- | 0 |
+| quality_check | CONCERNS | CONCERN | -10 |
+| quality_check | ISSUES_FOUND | FAIL | -20 |
+| criteria_validation | PASS | -- | 0 |
+| criteria_validation | CONCERNS | CONCERN | -10 |
+| criteria_validation | FAIL | FAIL | -20 |
+| linters | PASS | -- | 0 |
+| linters | FAIL | FAIL | -20 |
+| regression | PASS | -- | 0 |
+| regression | FAIL | FAIL | -20 |
+| tech_debt_cleanup | CLEANED | -- | 0 |
+| tech_debt_cleanup | NOTHING_TO_CLEAN | -- | 0 |
+| tech_debt_cleanup | BUILD_FAILED | FAIL | -20 |
+| tech_debt_cleanup | SKIPPED | ignored | 0 |
+| agent_review | CODE_ACCEPTABLE | -- | 0 |
+| agent_review | SUGGESTIONS (security/correctness) | CONCERN | -10 |
+| agent_review | SKIPPED | ignored | 0 |
+
+#### Step 8.2: Calculate Quality Verdict
+
+```
+fail_count = count of components mapped to FAIL
+concern_count = count of components mapped to CONCERN
+quality_score = 100 - (20 * fail_count) - (10 * concern_count)
+
+# Fast-fail override: any FAIL -> verdict is FAIL regardless of score
+IF fail_count > 0:
+  quality_verdict = FAIL
+ELSE IF quality_score >= 90:
+  quality_verdict = PASS
+ELSE IF quality_score >= 70:
+  quality_verdict = CONCERNS
+ELSE:
+  quality_verdict = FAIL
+```
+
+#### Step 8.3: Return Results
 
 ```yaml
+quality_verdict: PASS | CONCERNS | FAIL
+quality_score: {0-100}
+fail_count: {N}
+concern_count: {N}
+ignored_components: [tech_debt_cleanup, agent_review]  # only if SKIPPED
 quality_check: PASS | CONCERNS | ISSUES_FOUND
 code_quality_score: {0-100}
 agent_review: CODE_ACCEPTABLE | SUGGESTIONS | SKIPPED
-criteria_validation: PASS | FAIL
+criteria_validation: PASS | CONCERNS | FAIL
 linters: PASS | FAIL
 tech_debt_cleanup: CLEANED | NOTHING_TO_CLEAN | BUILD_FAILED | SKIPPED
 regression: PASS | FAIL
@@ -160,7 +210,7 @@ issues:
 - Criteria Validation (Story deps, AC coverage, DB schema) (pending)
 - Run linters from tech_stack.md (pending)
 - Invoke ln-514-regression-checker (pending)
-- Return results to ln-500 (pending)
+- Calculate quality_verdict + return results (pending)
 ```
 
 ## Worker Invocation (MANDATORY)
@@ -179,10 +229,10 @@ issues:
 - Running agent reviews directly instead of invoking ln-513
 - Auto-fixing code directly instead of invoking ln-512
 - Marking steps as completed without invoking the actual skill
-- Determining final verdict (that's ln-500's responsibility)
+- Skipping verdict calculation or returning raw results without quality_verdict
 
 ## Critical Rules
-- Return all results to ln-500; do NOT determine verdict
+- Always calculate quality_verdict per normalization matrix + gate_levels.md. Final gate_verdict is ln-500's responsibility (includes tests, NFR, waivers)
 - Single source of truth: rely on Linear metadata for tasks
 - Language preservation in comments (EN/RU)
 - Do not create tasks or change statuses; ln-500 decides next actions
@@ -194,7 +244,7 @@ issues:
 - Criteria Validation completed (3 checks)
 - Linters executed
 - ln-514 invoked, regression results returned
-- Aggregated results returned to ln-500
+- quality_verdict calculated + aggregated results returned
 
 ## Reference Files
 - Criteria Validation: `references/criteria_validation.md`

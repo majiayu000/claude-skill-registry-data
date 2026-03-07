@@ -1,7 +1,8 @@
 ---
 name: ln-622-build-auditor
-description: Build health audit worker (L3). Checks compiler/linter errors, deprecation warnings, type errors, failed tests, build config issues. Returns findings with severity, location, effort, recommendations.
+description: Checks compiler/linter errors, deprecation warnings, type errors, failed tests, build config issues. Returns findings with severity, location, effort, recommendations.
 allowed-tools: Read, Grep, Glob, Bash
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

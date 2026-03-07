@@ -1,6 +1,7 @@
 ---
 name: ln-500-story-quality-gate
 description: "Story-level quality orchestrator with 4-level Gate (PASS/CONCERNS/FAIL/WAIVED) and Quality Score. Delegates to ln-510 (quality) and ln-520 (tests), calculates final verdict."
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

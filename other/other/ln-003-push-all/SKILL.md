@@ -1,6 +1,7 @@
 ---
 name: ln-003-push-all
 description: "Commit and push ALL changes (staged + unstaged + untracked) to the remote repository"
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

@@ -1,7 +1,8 @@
 ---
 name: ln-652-transaction-correctness-auditor
-description: "Transaction correctness audit worker (L3). Checks missing intermediate commits, transaction scope (too wide/narrow), missing rollback handling, long-held transactions, trigger/notify interaction. Returns findings with severity, location, effort, recommendations."
+description: "Checks missing intermediate commits, transaction scope (too wide/narrow), missing rollback handling, long-held transactions, trigger/notify interaction. Returns findings with severity, location, effort, recommendations."
 allowed-tools: Read, Grep, Glob, Bash
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

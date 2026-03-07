@@ -1,6 +1,7 @@
 ---
 name: ln-733-env-configurator
 description: Configures environment variables and secrets protection
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

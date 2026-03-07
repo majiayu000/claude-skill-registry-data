@@ -1,6 +1,7 @@
 ---
 name: ln-004-agent-sync
 description: "Sync skills (symlinks) and MCP settings from Claude to Gemini CLI and Codex CLI"
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

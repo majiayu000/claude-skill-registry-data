@@ -1,7 +1,8 @@
 ---
 name: ln-654-resource-lifecycle-auditor
-description: "Resource lifecycle audit worker (L3). Checks session scope mismatch, streaming resource holding, missing cleanup, pool config, error path leaks, factory vs injection anti-patterns."
+description: "Checks session scope mismatch, streaming resource holding, missing cleanup, pool config, error path leaks, factory vs injection anti-patterns."
 allowed-tools: Read, Grep, Glob, Bash
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

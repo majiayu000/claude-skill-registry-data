@@ -1,6 +1,7 @@
 ---
 name: ln-731-docker-generator
 description: Generates Docker and docker-compose configuration for multi-container development
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

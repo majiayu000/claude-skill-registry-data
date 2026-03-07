@@ -1,6 +1,7 @@
 ---
 name: ln-722-backend-generator
 description: Generates .NET Clean Architecture backend structure from entity definitions
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

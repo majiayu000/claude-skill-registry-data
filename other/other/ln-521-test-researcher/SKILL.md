@@ -1,7 +1,19 @@
 ---
 name: ln-521-test-researcher
 description: "Researches real-world problems, competitor solutions, and customer complaints before test planning. Posts findings as Linear comment for ln-522 and ln-523."
+license: MIT
 ---
+
+> **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
+
+## Inputs
+
+| Input | Required | Source | Description |
+|-------|----------|--------|-------------|
+| `storyId` | Yes | args, git branch, kanban, user | Story to process |
+
+**Resolution:** Per `shared/references/input_resolution_pattern.md` — Story Resolution Chain.
+**Status filter:** To Review
 
 # Test Researcher
 
@@ -30,9 +42,15 @@ This skill should be used when:
 
 ### Phase 1: Discovery
 
-Auto-discover Team ID from `docs/tasks/kanban_board.md`.
+**MANDATORY READ:** Load `shared/references/input_resolution_pattern.md`
 
-**Input:** Story ID from orchestrator (ln-520)
+1. **Resolve storyId** (per input_resolution_pattern.md):
+   - IF args provided → use args
+   - ELSE IF git branch matches `feature/{id}-*` → extract id
+   - ELSE IF kanban has exactly 1 Story in [To Review] → suggest
+   - ELSE → AskUserQuestion: show Stories from kanban filtered by [To Review]
+
+2. Auto-discover Team ID from `docs/tasks/kanban_board.md`
 
 ### Phase 2: Extract Feature Domain
 
@@ -150,6 +168,7 @@ _This research informs both manual tests (ln-522) and automated tests (ln-523)._
 - Research methodology: Web Search, MCP Ref, Context7 tools
 - Comment format: Structured markdown with sources
 - Downstream consumers: ln-522-manual-tester, ln-523-auto-test-planner
+- **MANDATORY READ:** `shared/references/research_tool_fallback.md`
 
 ---
 

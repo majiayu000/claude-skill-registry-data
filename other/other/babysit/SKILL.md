@@ -1,6 +1,7 @@
 ---
 name: babysit
 description: Orchestrate via @babysitter. Use this skill when asked to babysit a run, orchestrate a process or whenever it is called explicitly. (babysit, babysitter, orchestrate, orchestrate a run, workflow, etc.)
+allowed-tools: Read, Grep, Write, Task, Bash, Edit, Grep, Glob, WebFetch, WebSearch, Search, AskUserQuestion, TodoWrite, TodoRead, Skill, BashOutput, KillShell, MultiEdit, LS
 version: 0.1.1
 ---
 
@@ -11,10 +12,10 @@ Orchestrate `.a5c/runs/<runId>/` through iterative execution. Use the SDK CLI to
 
 ### Babysitter SDK and CLI
 
-Read the SDK version from versions.json to ensure version compatibility:
+Read the SDK version from the plugin manifest to ensure version compatibility:
 
 ```bash
-SDK_VERSION=$(node -e "try{console.log(JSON.parse(require('fs').readFileSync('${CLAUDE_PLUGIN_ROOT}/versions.json','utf8')).sdkVersion||'latest')}catch{console.log('latest')}")
+SDK_VERSION=$(node -e "try{console.log(JSON.parse(require('fs').readFileSync('${CLAUDE_PLUGIN_ROOT}/plugin.json','utf8')).sdkVersion||'latest')}catch{console.log('latest')}")
 sudo npm i -g @a5c-ai/babysitter-sdk@$SDK_VERSION
 # sudo is depending on the env and system
 ```
@@ -212,12 +213,6 @@ IMPORTANT:
 
 #### 5.1 Breakpoint Handling
 
-you are running in interactive mode by default, no matter what the user profile says about the breakpoint tolerance or what the user answered in previos breakpoints. 
-
-CRITICAL RULE: ONLY if the AskUserQuestion tool is not in the list of available tools (like when running with -p flag or if the tool is not available for some reason), you will be running in non-interactive mode. 
-
-You should never resolve a breakpoint by yourself without passing through the AskUserQuestion tool when it is in the list.
-
 ##### 5.1.1 Interactive mode
 
 If running in interactive mode, use AskUserQuestion tool to ask the user the breakpoint question.
@@ -290,9 +285,16 @@ $CLI task:post <runId> <effectId> --status ok --value tasks/<effectId>/output.js
 ```
 ---
 
-### 7. STOP after every phase — the hook drives the loop, not you.
+### 7. STOP after every phase after run-session association — the hook drives the loop, not you.
 
 you will be called by the stop-hook and you will be asked to repeat the orchestration loop or exit the loop by posting the completion proof. Repeat orchestration loop by calling run:iterate or doing the next right thing.
+
+common mistake to avoid:
+- ❌ WRONG: Stopping the session before run-session association
+- ✅ CORRECT: Stopping the session after run-session association, then after every iteration, letting the hook call you back to continue the loop until completion.
+
+- ❌ WRONG: Calling run:iterate multiple times in the same session without stopping and letting the hook call you back.
+- ✅ CORRECT: Calling run:iterate once, then stopping and letting the hook call you back for the next iteration until completion.
 
 ### 8. Completion Proof
 
@@ -504,7 +506,7 @@ CRITICAL RULE: Never build a wrapper, python or helper scripts to orchestrate th
 
 CRITICAL RULE: Never fallback to simpler execution if the user activated this skill. persist in executing the orchestration itself rather than simplifying the execution by bypassing the process above - you must create a valid process js file, create a run (with --harness claude-code --session-id to bind the session), then iterate the run until it is completed.
 
-CRITICAL RULE: After run:create and after each effect is posted, you MUST stop the session and return control. Do NOT proceed to the next run:iterate in the same session turn. The stop-hook will call you back to continue. Running multiple iterations in a single session turn bypasses the hook loop and breaks the orchestration model. non-interactive mode only skips AskUserQuestion — it does not skip the stop-hook loop.
+CRITICAL RULE: After run:create or run-session association and after each effect is posted, you MUST stop the session and return control. Do NOT proceed to the next run:iterate in the same session turn. The stop-hook will call you back to continue. Running multiple iterations in a single session turn bypasses the hook loop and breaks the orchestration model.
 
 ## See Also
 - `process/tdd-quality-convergence.js` - TDD quality convergence example - read and look for relevant processes and methodolies before creating the code process for a new run (create the run using the CLI, then use these process as a reference)

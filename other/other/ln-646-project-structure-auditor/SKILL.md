@@ -1,6 +1,7 @@
 ---
 name: ln-646-project-structure-auditor
-description: "L3 Worker. Audits project physical structure: file hygiene, ignore file quality, framework convention compliance, domain/layer organization, naming conventions. Stack-adaptive via auto-detection."
+description: "Audits project physical structure: file hygiene, ignore file quality, framework convention compliance, domain/layer organization, naming conventions. Stack-adaptive via auto-detection."
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

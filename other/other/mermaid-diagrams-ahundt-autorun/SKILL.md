@@ -1,11 +1,11 @@
 ---
 name: mermaid-diagrams
-description: Render Mermaid diagrams to SVG using beautiful-mermaid and bun. Use when the user asks to "render mermaid", "generate diagram", "create flowchart", "update diagrams", "render SVG from mermaid", "beautiful-mermaid", "regenerate diagrams", or needs to convert Mermaid diagram syntax into styled SVG files. Supports all Mermaid diagram types with 14 themes including tokyo-night.
+description: Render Mermaid diagrams to SVG using beautiful-mermaid and bun. Use when the user asks to "render mermaid", "generate diagram", "create flowchart", "update diagrams", "render SVG from mermaid", "beautiful-mermaid", "regenerate diagrams", or needs to convert Mermaid diagram syntax into styled SVG files. Supports all Mermaid diagram types with 15 themes including tokyo-night.
 ---
 
 # Mermaid Diagram Rendering with beautiful-mermaid
 
-Render Mermaid `.mmd` files into styled SVG using [beautiful-mermaid](https://github.com/lukilabs/beautiful-mermaid) and [bun](https://bun.sh).
+Render Mermaid `.mmd` files into styled SVG using [beautiful-mermaid](https://github.com/lukilabs/beautiful-mermaid) v1.0.2 and [bun](https://bun.sh).
 
 ## Skill Contents
 

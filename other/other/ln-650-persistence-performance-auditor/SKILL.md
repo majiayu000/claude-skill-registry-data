@@ -2,6 +2,7 @@
 name: ln-650-persistence-performance-auditor
 description: "Coordinates 4 specialized audit workers (query efficiency, transaction correctness, runtime performance, resource lifecycle). Researches DB/ORM/async best practices, delegates parallel audits, aggregates results into docs/project/persistence_audit.md."
 allowed-tools: Read, Grep, Glob, Bash, WebFetch, WebSearch, mcp__Ref, mcp__context7, Skill
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

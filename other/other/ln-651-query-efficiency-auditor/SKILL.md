@@ -1,7 +1,8 @@
 ---
 name: ln-651-query-efficiency-auditor
-description: "Query efficiency audit worker (L3). Checks redundant entity fetches, N-UPDATE/DELETE loops, unnecessary resolves, over-fetching, missing bulk operations, wrong caching scope. Returns findings with severity, location, effort, recommendations."
+description: "Checks redundant entity fetches, N-UPDATE/DELETE loops, unnecessary resolves, over-fetching, missing bulk operations, wrong caching scope. Returns findings with severity, location, effort, recommendations."
 allowed-tools: Read, Grep, Glob, Bash
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

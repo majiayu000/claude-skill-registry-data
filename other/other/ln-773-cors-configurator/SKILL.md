@@ -1,6 +1,7 @@
 ---
 name: ln-773-cors-configurator
 description: Configures CORS policy for development and production
+license: MIT
 ---
 
 # ln-773-cors-configurator

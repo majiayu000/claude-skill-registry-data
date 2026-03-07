@@ -1,6 +1,7 @@
 ---
 name: ln-511-code-quality-checker
 description: "Worker that checks DRY/KISS/YAGNI/architecture compliance with quantitative Code Quality Score. Validates architectural decisions via MCP Ref: (1) Optimality (2) Compliance (3) Performance. Reports issues with SEC-, PERF-, MNT-, ARCH-, BP-, OPT- prefixes."
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.

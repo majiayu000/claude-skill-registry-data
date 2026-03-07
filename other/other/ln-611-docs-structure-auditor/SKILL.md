@@ -1,7 +1,8 @@
 ---
 name: ln-611-docs-structure-auditor
-description: Documentation structure audit worker (L3). Checks hierarchy & links, SSOT, proactive compression, requirements compliance, actuality (code vs docs), legacy cleanup, stack adaptation. Returns findings with severity, location, and recommendations.
+description: "Checks hierarchy & links, SSOT, proactive compression, requirements compliance, freshness indicators, legacy cleanup, stack adaptation. Returns findings with severity, location, and recommendations."
 allowed-tools: Read, Grep, Glob, Bash
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
@@ -43,7 +44,7 @@ Receives `contextStore` with: `tech_stack`, `project_root`, `output_dir`.
 | 2 | **Single Source of Truth** | No content duplication; duplicates replaced with links to source; clear ownership |
 | 3 | **Proactive Compression** | Eliminate verbose/redundant content; prose to tables; remove meaningless info; compress even under-limit files; see [size_limits.md](references/size_limits.md) |
 | 4 | **Requirements Compliance** | Correct sections; within size limits; **no code blocks** (tables/ASCII diagrams/text only); stack-appropriate doc links |
-| 5 | **Actuality (CRITICAL)** | **Verify facts against code:** paths exist, functions match, APIs work, configs valid; outdated docs are worse than none |
+| 5 | **Freshness Indicators** | Detect staleness signals: dates >6 months in content, deprecated API/tool references, TODO/FIXME markers, placeholder text left in place; deep fact-checking handled by dedicated worker |
 | 6 | **Legacy Cleanup** | No history sections; no "was changed" notes; no deprecated info; current state only |
 | 7 | **Stack Adaptation** | Links/refs match project stack; no Python examples in .NET project; official docs for correct platform |
 
@@ -51,7 +52,7 @@ Receives `contextStore` with: `tech_stack`, `project_root`, `output_dir`.
 
 | Issue Type | Severity |
 |------------|----------|
-| Outdated content (code mismatch) | CRITICAL |
+| Staleness indicators (old dates, deprecated refs, TODO markers) | MEDIUM |
 | Broken links, orphaned docs | HIGH |
 | Content duplication | MEDIUM |
 | Missing compression opportunity | LOW |
@@ -66,7 +67,7 @@ Receives `contextStore` with: `tech_stack`, `project_root`, `output_dir`.
 
 **MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format.
 
-Write report to `{output_dir}/611-structure.md` with `category: "Documentation Structure"` and checks: hierarchy_links, ssot, compression, requirements_compliance, actuality, legacy_cleanup, stack_adaptation.
+Write report to `{output_dir}/611-structure.md` with `category: "Documentation Structure"` and checks: hierarchy_links, ssot, compression, requirements_compliance, freshness_indicators, legacy_cleanup, stack_adaptation.
 
 Return summary to coordinator:
 ```
@@ -78,7 +79,7 @@ Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 
 - **Do not auto-fix:** Report violations only; coordinator aggregates for user
 - **Tech stack aware:** Use contextStore `tech_stack` to apply stack-specific checks (e.g., .NET vs Node.js doc standards)
-- **Verify facts against code:** Actively check every path, function name, API, config mentioned in docs
+- **No deep fact-checking:** Detect staleness signals only (dates, deprecated refs, TODO markers)
 - **Compress always:** Size limits are upper bounds, not targets. A 100-line file instead of 300 is a win
 - **No code in docs:** Documents describe algorithms in tables or ASCII diagrams. Code belongs in codebase
 - **Code is truth:** When docs contradict code, report docs as needing update (not code)

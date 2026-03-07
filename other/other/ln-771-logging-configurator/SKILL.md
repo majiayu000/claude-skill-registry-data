@@ -1,6 +1,7 @@
 ---
 name: ln-771-logging-configurator
 description: Configures structured logging (Serilog/.NET, structlog/Python)
+license: MIT
 ---
 
 # ln-771-logging-configurator

@@ -1,7 +1,8 @@
 ---
 name: ln-612-semantic-content-auditor
-description: Semantic content auditor (L3 Worker). Verifies document content matches stated SCOPE, aligns with project goals, and reflects actual codebase state. Called by ln-610 for each project document. Writes file-based report with scope_alignment and fact_accuracy scores.
+description: "Audits document semantic content against stated SCOPE and project goals. Checks coverage, off-topic content, SSOT. File-based report with scope_alignment score."
 allowed-tools: Read, Grep, Glob, Bash
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
@@ -15,8 +16,8 @@ Specialized worker auditing semantic accuracy of project documentation.
 - **Worker in ln-610 coordinator pipeline** - invoked by ln-610-docs-auditor for each project document
 - Verify document content **matches stated SCOPE** (document purpose)
 - Check content **aligns with project goals** (value contribution)
-- Validate **facts against codebase** (accuracy and freshness)
 - Return structured findings to coordinator with severity, location, fix suggestions
+- Does NOT verify facts against codebase
 
 ## Target Documents
 
@@ -24,17 +25,17 @@ Called ONLY for project documents (not reference/tasks):
 
 | Document | Verification Focus |
 |----------|-------------------|
-| `CLAUDE.md` | Instructions match project structure, paths valid |
-| `docs/README.md` | Navigation accurate, descriptions match reality |
-| `docs/documentation_standards.md` | Standards applicable to this project |
-| `docs/principles.md` | Principles reflected in actual code patterns |
-| `docs/project/requirements.md` | Requirements implemented or still valid |
-| `docs/project/architecture.md` | Architecture matches actual code structure |
-| `docs/project/tech_stack.md` | Versions/technologies match package files |
-| `docs/project/api_spec.md` | Endpoints/contracts match controllers |
-| `docs/project/database_schema.md` | Schema matches actual DB/migrations |
-| `docs/project/design_guidelines.md` | Components/styles exist in codebase |
-| `docs/project/runbook.md` | Commands work, paths valid |
+| `CLAUDE.md` | Instructions serve stated purpose, no off-topic content |
+| `docs/README.md` | Navigation scope correct, descriptions relevant |
+| `docs/documentation_standards.md` | Standards applicable to this project type |
+| `docs/principles.md` | Principles relevant to project architecture |
+| `docs/project/requirements.md` | Requirements scope complete, no stale items |
+| `docs/project/architecture.md` | Architecture scope covers all layers |
+| `docs/project/tech_stack.md` | Stack scope matches project reality |
+| `docs/project/api_spec.md` | API scope covers all endpoint groups |
+| `docs/project/database_schema.md` | Schema scope covers all entities |
+| `docs/project/design_guidelines.md` | Design scope covers active components |
+| `docs/project/runbook.md` | Runbook scope covers setup + operations |
 
 **Excluded:** `docs/tasks/`, `docs/reference/`, `docs/presentation/`, `tests/`
 
@@ -78,47 +79,15 @@ Analyze document sections against stated scope:
 - 4-5/10: Significant misalignment, major gaps
 - 1-3/10: Document does not serve its stated purpose
 
-### Phase 3: FACT VERIFICATION
+### Phase 3: SCORING & REPORT
 
-Per document type, verify claims against codebase:
-
-| Document | Verification Method |
-|----------|---------------------|
-| architecture.md | Check layers exist (Glob for folders), verify imports follow described pattern (Grep) |
-| tech_stack.md | Compare versions with package.json, go.mod, requirements.txt |
-| api_spec.md | Match endpoints with controller/route files (Grep for routes) |
-| requirements.md | Search for feature implementations (Grep for keywords) |
-| database_schema.md | Compare with migration files or Prisma/TypeORM schemas |
-| runbook.md | Validate file paths exist (Glob), test command syntax |
-| principles.md | Sample code files for principle adherence patterns |
-| CLAUDE.md | Verify referenced paths/files exist |
-
-**Finding Types:**
-- OUTDATED_PATH: File/folder path no longer exists
-- WRONG_VERSION: Documented version differs from package file
-- MISSING_ENDPOINT: Documented API endpoint not found in code
-- BEHAVIOR_MISMATCH: Described behavior differs from implementation
-- STALE_REFERENCE: Reference to removed/renamed entity
-
-**Scoring:**
-- 10/10: All facts verified against code
-- 8-9/10: Minor inaccuracies (typos, formatting)
-- 6-7/10: Some paths/names outdated, core info correct
-- 4-5/10: Functional mismatches (wrong behavior described)
-- 1-3/10: Critical mismatches (architecture wrong, APIs broken)
-
-### Phase 4: SCORING & REPORT
-
-Calculate final scores and compile findings:
+Calculate final score based on scope alignment:
 
 ```
-scope_alignment_score = weighted_average(coverage, relevance, focus)
-fact_accuracy_score = (verified_facts / total_facts) * 10
-
-overall_score = (scope_alignment * 0.4) + (fact_accuracy * 0.6)
+overall_score = weighted_average(coverage, relevance, focus)
 ```
 
-Fact accuracy weighted higher because incorrect information is worse than scope drift.
+Coverage: how completely the scope is addressed. Relevance: how much content serves the scope. Focus: absence of off-topic content.
 
 ## Scoring Algorithm
 
@@ -130,7 +99,7 @@ Fact accuracy weighted higher because incorrect information is worse than scope 
 
 Write report to `{output_dir}/612-semantic-{doc-slug}.md` where `doc-slug` is derived from document filename (e.g., `architecture`, `tech_stack`, `claude_md`).
 
-With `category: "Semantic Content"` and checks: scope_alignment, fact_accuracy.
+With `category: "Semantic Content"` and checks: scope_alignment.
 
 Return summary to coordinator:
 ```
@@ -138,26 +107,20 @@ Report written: docs/project/.audit/ln-610/{YYYY-MM-DD}/612-semantic-architectur
 Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 ```
 
-## Verification Rules by Document Type
-
-**MANDATORY READ:** Load [references/verification_rules.md](references/verification_rules.md) for per-document verification patterns.
-
 ## Critical Rules
 
-- **Read before judge:** Always read full document and relevant code before reporting issues
-- **Evidence required:** Every finding must include `evidence` field with verification command/result
-- **Code is truth:** When docs contradict code, document is wrong (unless code is a bug)
+- **Read before judge:** Always read full document before reporting issues
 - **Scope inference:** If no SCOPE tag, use document filename to infer expected scope
 - **No false positives:** Better to miss an issue than report incorrectly
 - **Location precision:** Always include line number for findings
 - **Actionable fixes:** Every finding must have concrete fix suggestion
+- **No fact-checking:** Do NOT verify paths, versions, endpoints against code
 
 ## Definition of Done
 
 - Document read completely
 - SCOPE extracted or inferred
-- Content-scope alignment analyzed
-- Facts verified against codebase (with evidence)
+- Content-scope alignment analyzed (OFF_TOPIC, MISSING_COVERAGE, SCOPE_CREEP, SSOT_VIOLATION)
 - Score calculated using penalty algorithm
 - Report written to `{output_dir}/612-semantic-{doc-slug}.md` (atomic single Write call)
 - Summary returned to coordinator
@@ -167,7 +130,6 @@ Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 - **Worker report template:** `shared/templates/audit_worker_report_template.md`
 - **Audit scoring formula:** `shared/references/audit_scoring.md`
 - **Audit output schema:** `shared/references/audit_output_schema.md`
-- Verification rules: [references/verification_rules.md](references/verification_rules.md)
 
 ---
 **Version:** 2.0.0

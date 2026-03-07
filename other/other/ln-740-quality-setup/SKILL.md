@@ -1,6 +1,7 @@
 ---
 name: ln-740-quality-setup
 description: Coordinates linters, pre-commit hooks, and test infrastructure setup
+license: MIT
 ---
 
 > **Paths:** File paths (`shared/`, `references/`, `../ln-*`) are relative to skills repo root. If not found at CWD, locate this SKILL.md directory and go up one level for repo root.
