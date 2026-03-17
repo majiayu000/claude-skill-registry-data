@@ -21,7 +21,7 @@ Specialized worker auditing code comments and docstrings quality.
 
 ## Inputs (from Coordinator)
 
-**MANDATORY READ:** Load `shared/references/task_delegation_pattern.md#audit-coordinator--worker-contract` for contextStore structure.
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
 
 Receives `contextStore` with: `tech_stack`, `project_root`, `output_dir`.
 
@@ -49,11 +49,11 @@ Receives `contextStore` with: `tech_stack`, `project_root`, `output_dir`.
 
 ## Scoring Algorithm
 
-**MANDATORY READ:** Load `shared/references/audit_scoring.md` for unified scoring formula.
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md` and `shared/references/audit_scoring.md`.
 
 ## Output Format
 
-**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format.
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md` and `shared/templates/audit_worker_report_template.md`.
 
 Write report to `{output_dir}/613-code-comments.md` with `category: "Code Comments"` and checks: why_not_what, density, forbidden_content, docstrings_quality, actuality, legacy_cleanup.
 
@@ -74,11 +74,9 @@ Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 | Density deviation >5% | MEDIUM |
 | Minor density deviation | LOW |
 
-## Reference Files
-
-- Comment rules and patterns: [references/comments_rules.md](references/comments_rules.md)
-
 ## Critical Rules
+
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
 
 - **Do not auto-fix:** Report violations only; coordinator aggregates for user
 - **Fix code, not rules:** NEVER modify rules files (*_rules.md, *_standards.md) to make violations pass
@@ -88,6 +86,8 @@ Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 - **Location precision:** Always include `file:line` for programmatic navigation
 
 ## Definition of Done
+
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
 
 - contextStore parsed successfully (including output_dir)
 - All source files scanned (tech stack from contextStore)
@@ -99,9 +99,6 @@ Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 
 ## Reference Files
 
-- **Worker report template:** `shared/templates/audit_worker_report_template.md`
-- **Audit scoring formula:** `shared/references/audit_scoring.md`
-- **Audit output schema:** `shared/references/audit_output_schema.md`
 - Comment rules and patterns: [references/comments_rules.md](references/comments_rules.md)
 
 ---

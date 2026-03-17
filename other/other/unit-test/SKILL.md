@@ -9,7 +9,7 @@ Improve unit test coverage for existing code. Conservative by design — only ad
 
 ## Step 1: Pre-flight
 
-If the current directory is a multi-repo workspace (no `.git/` at root, 2+ child directories containing a `.git` *directory* — not `.git` files, which indicate submodules), process each repo independently: run Steps 1–8 inside each repo that has `.claude/CLAUDE.md`. Report results per repo. If no repos have been initialized, suggest running `/optimus:init` first from the workspace root.
+Read `$CLAUDE_PLUGIN_ROOT/skills/init/references/multi-repo-detection.md` for workspace detection. If a multi-repo workspace is detected, process each repo independently: run Steps 1–8 inside each repo that has `.claude/CLAUDE.md`. Report results per repo. If no repos have been initialized, suggest running `/optimus:init` first from the workspace root.
 
 Check that `.claude/CLAUDE.md` exists. If it doesn't, stop and recommend running `/optimus:init` first — the project needs baseline context before test generation can be effective.
 
@@ -21,7 +21,7 @@ Beyond the init check, identify which guideline documents are available — they
 | `testing.md` | Testing conventions | Framework, runner commands, mocking patterns, file organization |
 | `.claude/CLAUDE.md` | Project overview | Tech stack signals, test runner commands |
 
-**Monorepo path note:** `coding-guidelines.md` is shared at root (`.claude/docs/coding-guidelines.md`). `testing.md` is scoped per subproject (`<subproject>/docs/testing.md`). For root-as-project, scoped docs are in `.claude/docs/` alongside the shared guidelines. When generating tests for a subproject, load that subproject's `testing.md`, not another subproject's.
+**Monorepo path note:** Read the "Monorepo Scoping Rule" section of `$CLAUDE_PLUGIN_ROOT/skills/init/references/constraint-doc-loading.md` for doc layout and scoping rules. When generating tests for a subproject, load that subproject's `testing.md`, not another subproject's.
 
 The skill operates differently depending on what exists:
 - **All three docs** — matches existing conventions precisely
@@ -66,7 +66,7 @@ Present a summary table to the user:
 
 ### Subprojects without a test framework
 
-Analyze the tech stack and recommend the most popular framework with appropriate coverage tooling. Consult `$CLAUDE_PLUGIN_ROOT/skills/unit-test/references/framework-recommendations.md` for stack-specific recommendations. These are starting points — analyze the actual project to decide. Ask for **explicit user approval** before installing anything.
+Analyze the tech stack and recommend the most popular framework with appropriate coverage tooling. Consult `$CLAUDE_PLUGIN_ROOT/skills/unit-test/references/framework-recommendations.md` for stack-specific recommendations. For unsupported stacks, read `$CLAUDE_PLUGIN_ROOT/skills/init/references/unsupported-stack-fallback.md` and apply its command validation and approval rules. These are starting points — analyze the actual project to decide. Ask for **explicit user approval** before installing anything.
 
 If installation fails (network issues, version conflicts, incompatible environments), report the error to the user and stop — do not proceed to test generation without a working framework.
 
@@ -173,7 +173,16 @@ Tests must follow:
 - `coding-guidelines.md` for quality standards (naming, structure, clarity)
 - `testing.md` for testing conventions (framework idioms, file naming, directory structure)
 - `$CLAUDE_PLUGIN_ROOT/skills/tdd/references/testing-anti-patterns.md` for mocking discipline — prefer real code over mocks, never assert on mock behavior, mock only external services or non-deterministic dependencies
-- Existing test files for patterns (imports, assertion style, describe/it structure, fixture handling)
+- Existing test files for concrete patterns to replicate: import style, assertion library, file naming convention, directory placement, shared fixtures (conftest/setup files, factories, beforeAll/setUp blocks), and describe/it or class/method test organization. Extract these patterns **before writing the first test** and apply them consistently to all generated tests.
+
+### Before writing each test
+
+Answer these gate questions — fix any "no" before proceeding:
+
+1. **File placement** — Does a test file for this module already exist? If yes, add tests there instead of creating a new file. New files must follow the naming convention from `testing.md` (typically `test_<module_name>` or `<module_name>.test`).
+2. **Fixtures and helpers** — Do existing test files or shared setup files (conftest.py, test helpers, factories) already provide fixtures for the data this test needs? Use them instead of creating private helpers that duplicate existing setup.
+3. **Mocking and assertion discipline** — apply the gate questions from `$CLAUDE_PLUGIN_ROOT/skills/tdd/references/testing-anti-patterns.md` (already referenced in Quality standards above).
+4. **Setup duplication** — apply the DRY principle from `coding-guidelines.md` to test setup: repeated setup should be extracted to shared fixtures (setUp/beforeEach, conftest, factories).
 
 ### Conservative constraint
 
@@ -183,16 +192,17 @@ Tests must follow:
 
 For each approved item:
 1. Write the test file
-2. Run it immediately
-3. If the test fails:
+2. Self-review against the "Before writing each test" checklist above — fix any violations before running
+3. Run it immediately
+4. If the test fails:
    - Fix the **test** (not the source code) — max 3 fix attempts
    - If still failing after 3 attempts, flag as untestable and move on
    - If the failure reveals an actual **bug in existing code**, report the bug but do not fix it
-4. Move to the next item
+5. Move to the next item
 
 ### Final verification
 
-After all tests are written, run the **full test suite** to ensure no regressions.
+After all tests are written, run the **full test suite** to ensure no regressions. Follow the verification protocol from `$CLAUDE_PLUGIN_ROOT/skills/init/references/verification-protocol.md` — run tests fresh, read complete output, and report actual results with evidence before claiming success.
 
 ## Step 8: Summary
 
@@ -225,3 +235,7 @@ Report to the user:
 ```
 
 For multi-repo workspaces, present results per repo (one summary block per repo) and include the repo name/path in each section header.
+
+Recommend running `/optimus:simplify` to review code quality, or `/optimus:tdd` to continue development with test-driven workflow.
+
+Tell the user: **Tip:** for best results, start a fresh conversation for the next skill — each skill gathers its own context from scratch.

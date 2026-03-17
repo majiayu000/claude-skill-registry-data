@@ -1,7 +1,7 @@
 ---
 name: multi-review
 description: "This skill should be used when the user wants a comprehensive code review using multiple specialized reviewers in parallel. Invoked with /multi-review or when user asks for 'thorough review', 'full code review', or 'review from multiple perspectives'."
-allowed-tools: Read, Bash, Glob, Grep, Write, AskUserQuestion, Task
+allowed-tools: Read, Bash, Glob, Grep, Write, AskUserQuestion, Task, mcp__playwright__browser_navigate, mcp__playwright__browser_snapshot, mcp__playwright__browser_click, mcp__playwright__browser_fill_form, mcp__playwright__browser_type, mcp__playwright__browser_press_key, mcp__playwright__browser_take_screenshot, mcp__playwright__browser_resize, mcp__playwright__browser_console_messages, mcp__playwright__browser_close, mcp__playwright__browser_run_code, mcp__playwright__browser_navigate_back, mcp__playwright__browser_evaluate
 ---
 
 # Multi-Review: Parallel Specialized Code Review
@@ -59,8 +59,10 @@ Categorize the changes to select appropriate reviewers:
 | Architecture | new files, interface, refactor, module | architecture-strategist |
 | Patterns | any code change | pattern-recognition-specialist |
 | Complexity | any code change | code-simplicity-reviewer |
-| Agent/Tool systems | agent definitions, skills, prompts, tool configs | agent-native-reviewer |
+| Agent/Tool systems | agent definitions, skills, prompts, tool configs, UI actions, API endpoints, forms, routes | agent-native-reviewer |
 | Database migrations | db/migrate/*, schema changes, data backfills | data-integrity-guardian, data-migration-expert |
+| UX/Interaction | components, forms, modals, flows, navigation | ux-reviewer |
+| Frontend Perf  | images, imports, dependencies, animations     | frontend-performance-reviewer |
 | Frontend/UI | .tsx, .jsx, .vue, .svelte, .html, .css, templates | (browser testing — see Step 9) |
 
 ### Step 2.5: Framework Auto-Detection
@@ -73,6 +75,8 @@ Map changed files to framework reviewers. A framework reviewer is activated when
 | `*.css`, `tailwind.*`, `components/ui/**` | `tailwind` | `tailwind-reviewer` |
 | `*.py`, `alembic/**` | `python-backend` | `python-backend-reviewer` |
 | `routes/**`, `api/**`, `endpoints/**`, `controllers/**` | `api` | `api-security-reviewer` |
+| `*.tsx`, `*.jsx`, `*.vue`, `*.svelte`, `components/**`, `pages/**` | `ux` | `ux-reviewer` |
+| `*.tsx`, `*.jsx`, `*.css`, `next.config.*`, `package.json` | `frontend-perf` | `frontend-performance-reviewer` |
 
 **Reviewer overrides (v2 config):**
 - `reviewers.exclude`: Suppress auto-detected reviewers (e.g., `["tailwind-reviewer"]` to prevent false positives)
@@ -90,7 +94,7 @@ Map changed files to framework reviewers. A framework reviewer is activated when
 - `security-sentinel` — if auth, input handling, secrets, or user data
 - `performance-oracle` — if database queries, loops, caching, or data operations
 - `architecture-strategist` — if structural changes, new modules, or interface changes
-- `agent-native-reviewer` — if agent definitions, skill files, system prompts, or tool configurations
+- `agent-native-reviewer` — if agent definitions, skill files, system prompts, tool configurations, new UI actions/views, API endpoints, forms, or routes (any user-facing capability that should have agent parity)
 - `data-integrity-guardian` — if database migrations, schema changes, or data model modifications
 - `data-migration-expert` — if data backfills, ID mappings, enum conversions, or column renames
 
@@ -190,6 +194,30 @@ Each agent should return findings in this format:
 - [Issue with file:line] - Confidence: X%
 ```
 
+### Step 5.5: Checklist Augmentation
+
+When constructing prompts for review agents in Step 5, append the following checklist categories as additional review guidance. These supplement each agent's core focus area.
+
+**For all agents — check these universal categories:**
+
+*LLM-specific (high priority if PR touches prompts, tools, or AI integrations):*
+- 0-indexed lists in prompts (LLMs reliably return 1-indexed)
+- Prompt text listing available tools/capabilities that don't match what's actually wired up
+- LLM trust boundary: hallucinated values (emails, URLs, names) persisted without format validation
+- Structured tool output accepted without type/shape checks before DB writes
+- Word/token limits stated in multiple places that could drift
+
+*Race conditions (include for security-sentinel and performance-oracle):*
+- TOCTOU: check-then-set without atomic operation
+- find-or-create without unique constraint (concurrent duplicates)
+- Non-atomic status transitions (concurrent updates skip/double-apply)
+
+*Niche categories (include for pattern-recognition-specialist):*
+- Conditional side effects: branch that forgets a side effect on one path
+- Type coercion at language boundaries (cross-language type changes, hash input normalization)
+- Time window safety: mismatched windows between related features
+- Crypto entropy: truncation vs hashing, rand() for security values, non-constant-time comparisons
+
 ### Step 6: Aggregate Findings
 
 Combine results from all reviewers, sorted by severity:
@@ -198,95 +226,218 @@ Combine results from all reviewers, sorted by severity:
 ## Multi-Review Summary
 
 ### Reviewers
-- [x] code-simplicity-reviewer
-- [x] pattern-recognition-specialist
-- [x] security-sentinel
-- [ ] performance-oracle (not applicable)
-- [ ] architecture-strategist (not applicable)
+- [x] reviewer-name
+...
 
-### Critical Issues (Confidence >= 80%)
-| File:Line | Issue | Reviewer | Confidence |
-|-----------|-------|----------|------------|
-| ... | ... | ... | ...% |
+### CRITICAL Findings (blocking — require action)
+Security, data safety, race conditions, correctness bugs.
+| File:Line | Issue | Reviewer | Confidence | Gate |
+|-----------|-------|----------|------------|------|
+| ... | ... | ... | ...% | CRITICAL |
 
-### Important Issues (Confidence >= 80%)
-| File:Line | Issue | Reviewer | Confidence |
-|-----------|-------|----------|------------|
-| ... | ... | ... | ...% |
+### IMPORTANT Findings (should fix — non-blocking but significant)
+Performance issues, error handling gaps, non-trivial anti-patterns, meaningful code quality issues.
+| File:Line | Issue | Reviewer | Confidence | Gate |
+|-----------|-------|----------|------------|------|
+| ... | ... | ... | ...% | IMPORTANT |
 
-### Suggestions (Confidence >= 80%)
-| File:Line | Issue | Reviewer | Confidence |
-|-----------|-------|----------|------------|
-| ... | ... | ... | ...% |
-
-### Low-Confidence Findings (< 80%)
-[Collapsed/summarized - these may be false positives]
+### INFORMATIONAL Findings (surface, don't block)
+Style, suggestions, minor improvements, nice-to-haves.
+| File:Line | Issue | Reviewer | Confidence | Gate |
+|-----------|-------|----------|------------|------|
+| ... | ... | ... | ...% | INFO |
 ```
+
+**Gate classification rules:**
+- **CRITICAL**: Security vulnerabilities, data loss risks, race conditions, correctness bugs, missing error handling on critical paths, broken functionality
+- **IMPORTANT**: Performance issues, error handling gaps on non-critical paths, non-trivial anti-patterns, meaningful code quality issues
+- **INFORMATIONAL**: Code style, naming, minor refactoring opportunities, test coverage suggestions, documentation gaps, performance micro-optimizations
+
+Note: Reviewer agents already output in `Critical Issues / Important Issues / Suggestions` format (Step 5 output template). Map these directly: Critical → CRITICAL, Important → IMPORTANT, Suggestions → INFORMATIONAL.
+
+**Resolution Ledger**: Every finding that enters aggregation (post-suppression) must end the review in one of: `fixed[]`, `dropped[]` (with reason), or `deferred[]` (with reason meeting strict criteria). No finding may remain unresolved when the review concludes.
+
+### Step 6.5: Suppressions
+
+When aggregating findings in Step 6, suppress (do not surface) these categories of findings:
+
+- **"X is redundant with Y"** when the redundancy is harmless and aids readability
+- **"Add a comment explaining why this threshold/constant was chosen"** — thresholds change during tuning, comments rot
+- **"This assertion could be tighter"** when the assertion already covers the behavior
+- **Consistency-only changes** (wrapping a value to match how another is guarded)
+- **"Regex doesn't handle edge case X"** when the input is constrained and X never occurs in practice
+- **Anything already addressed in the diff being reviewed** — agents must read the FULL diff before commenting
+
+These suppressions reduce noise from low-value suggestions that waste review cycles.
 
 ### Step 7: Filter Results
 
-Only surface findings with **confidence >= 80%**. Lower confidence findings should be mentioned but not emphasized — they may be false positives.
+Only surface findings with **confidence >= 80%**. Findings below 80% confidence are entered into the resolution ledger as `dropped[reason: "below confidence threshold (N%)"]` — they do not silently vanish.
 
 **Security exception:** All `security-sentinel` and `api-security-reviewer` findings appear in the main severity tables regardless of confidence level — never collapse them into "Low-Confidence Findings." Tag each with a `[SEC]` prefix in the Issue column to distinguish them from other reviewer findings. Security issues at any confidence level warrant human review.
 
-### Step 8: Offer Auto-Fix
+### Step 8: Resolve Findings
 
 > **Verification discipline** (from `/verify`): Before proposing any fix, read the actual code at the file:line the reviewer flagged. Reviewers hallucinate. Confirm the issue exists, then fix. If it doesn't exist, drop it — don't implement phantom fixes.
 
-For Critical and Important issues with clear fixes:
+This step resolves ALL findings through a 5-phase process. No finding may remain unresolved.
+
+#### Phase 1: Verify and Classify (agent acts alone)
+
+For each CRITICAL and IMPORTANT finding, before presenting anything:
+
+1. Read actual code at file:line (verification discipline — keeps this)
+2. False positive or speculative → `dropped[]` with reason
+3. Clear fix exists → `auto-fixable` (agent will apply)
+4. Genuinely requires human decision → `deferred`
+
+**Strict defer criteria:**
+
+> The bar for `deferred` is HIGH. These are NOT valid reasons to defer:
+> - "This is complex" — complexity isn't a reason to punt
+> - "This might have side effects" — verify whether it does, then fix or drop
+> - "This could be done multiple ways" — pick the approach matching existing codebase patterns
+> - "I'm not sure about the intent" — read surrounding code and git blame
+> - "This is a style/taste issue" — match existing patterns, or drop
+>
+> These ARE valid reasons to defer:
+> - Fix requires choosing between two valid architectural approaches with real tradeoffs
+> - Fix involves a product/business decision (e.g., "should this error be user-visible or silent?")
+> - Fix requires production knowledge the agent cannot verify (e.g., "is this table too large for this migration?")
+
+#### Phase 2: Auto-fix with preview (agent acts, does NOT ask permission)
+
+Present the resolution plan, then apply fixes:
 
 ```
-Would you like me to auto-fix the high-confidence issues?
+## Resolution Plan
 
-Auto-fixable:
-1. [file:line] - [issue] - [proposed fix summary]
-2. [file:line] - [issue] - [proposed fix summary]
+### Auto-fixing (N findings):
+1. [file:line] - [issue] - [fix description]
+2. ...
 
-Manual review recommended:
-3. [file:line] - [issue] - [reason it needs human judgment]
+### Dropped (M findings):
+3. [file:line] - [issue] - DROPPED: [reason]
+4. ...
+
+### Deferred — requires your decision (P findings):
+5. [file:line] - [issue] - DEFERRED: [specific decision needed]
+6. ...
+
+Applying auto-fixes...
+```
+
+The agent applies all auto-fixable changes to the working tree without asking. It does NOT commit — that's the caller's job (finish-task commits, or the user commits manually). The user can review the diff afterward.
+
+#### Phase 3: Mandatory adjudication of deferred items
+
+After auto-fixes are applied, present ALL deferred findings in a SINGLE `AskUserQuestion` (not one question per finding):
+
+```
+## N Deferred Findings Require Your Decision
+
+1. **[file:line]** - [issue] — [reviewer]
+   Decision needed: [specific question, e.g., "extract to service vs inline guard?"]
+   Options: (a) approach A, (b) approach B, (c) dismiss, (d) create task
+
+2. **[file:line]** - [issue] — [reviewer]
+   Decision needed: [specific question]
+   Options: (a) approach A, (b) approach B, (c) dismiss, (d) create task
+
+Reply with your choices (e.g., "1a, 2c"):
+```
+
+Each response moves the finding to `fixed[]` (agent implements chosen approach), `dropped[]` (dismissed), or `deferred[task: <id>]` (beads task created). The review does NOT proceed to re-review until all deferred items are resolved.
+
+**Autonomous context** (when multi-review runs inside `/finish-task` as an Agent Teams worker with no human available): skip `AskUserQuestion`. Instead, auto-create beads tasks for all deferred items and log them as `deferred[task: <id>]`. Report the deferred count in the session summary for the orchestrator to see. Detection: if the session is a dispatched teammate, treat as autonomous.
+
+#### Phase 4: INFORMATIONAL batch resolution
+
+Present INFORMATIONAL findings as a batch:
+
+```
+## Informational Findings (N items)
+
+1. [file:line] - [issue]
+2. [file:line] - [issue]
+...
 
 Options:
-1. Fix all auto-fixable issues
-2. Fix specific issues (provide numbers)
-3. Skip auto-fix, I'll handle manually
+1. Fix all informational items
+2. Fix specific items (provide numbers)
+3. Acknowledge all (mark as reviewed, no action)
 ```
 
-**Maximum 3 review cycles** — if auto-fix is applied, re-run only the affected reviewers (not all). Stop after 3 rounds regardless.
+User must pick one. "Acknowledge all" is fine — the point is explicit accounting, not forced action. All items move to `fixed[]` or `dropped[acknowledged]`.
 
-### Step 9: Frontend Browser Testing (Optional)
+**Autonomous context**: auto-fix INFORMATIONAL items that have clear fixes, drop the rest as `dropped[informational — auto-acknowledged]`.
 
-**When the PR includes frontend/UI changes**, offer browser-based testing using the Claude in Chrome MCP tools.
+#### Phase 5: Re-review cycles (refined)
+
+After fixes are applied, re-review modified files with escalating thresholds:
+
+- Previous-cycle ledger entries are DONE — never re-evaluated
+- Escalating thresholds apply only to NET-NEW findings from re-review of modified files:
+  - **Cycle 2**: Re-run only affected reviewers on fix-modified files. Net-new findings >= 85% confidence only.
+  - **Cycle 3**: Only Critical findings >= 90% confidence on fix-modified files.
+- New findings from Cycle 2/3 enter the ledger and go through the same Verify → Classify → Fix → Adjudicate flow
+- The ledger accumulates across cycles
+
+**Exit conditions** (stop the loop when ANY is met):
+- **Clean**: Zero findings this iteration → EXIT
+- **Diminishing returns**: <3 net-new findings AND zero Critical → EXIT
+- **Plateau**: Net-new count >= previous iteration (not converging) → EXIT
+- **Limit**: 3 iterations → EXIT
+
+Log exit reason so the final report explains why the loop stopped.
+
+#### Final Report
+
+After all phases complete, output the resolution ledger summary:
+
+```
+═══════════════════════════════════════════
+MULTI-REVIEW COMPLETE
+═══════════════════════════════════════════
+Reviewers: [list]
+Cycles: N (exit reason: [reason])
+Findings: X | Fixed: Y | Dropped: Z | Deferred: W
+
+FIXED:
+- [file:line] issue — fix applied
+
+DROPPED:
+- [file:line] issue — [reason]
+
+DEFERRED (tasks created):
+- [file:line] issue — task <id>
+
+INFORMATIONAL (acknowledged):
+- [file:line] issue
+═══════════════════════════════════════════
+```
+
+### Step 9: Browser Workflow Testing
+
+**When the PR includes frontend/UI changes**, run workflow-based browser testing.
 
 Detect frontend changes by checking for files matching:
 - `*.tsx`, `*.jsx`, `*.vue`, `*.svelte`, `*.html`
-- `*.css`, `*.scss`, `*.less`, `*.tailwind`
+- `*.css`, `*.scss`, `*.less`
 - `templates/**`, `views/**`, `components/**`, `pages/**`
 
-If frontend changes are detected, use `AskUserQuestion`:
+If no frontend changes detected, skip this step.
 
-```
-This PR includes frontend changes. Would you like me to test the UI in the browser?
+**Read `docs/browser-testing-protocol.md` and follow Phases 1-6:**
 
-1. **Yes — test affected pages** (I'll navigate to the changed routes and verify the UI)
-2. **No — skip browser testing**
-```
+1. Pre-flight checks — verify Playwright MCP available, dev server running (Phase 1)
+2. Infer workflows from diff — classify changed files, propose to user via `AskUserQuestion` for confirmation (Phase 2)
+3. Navigate → clear cache/storage → reload — ensures fresh state, not stale cache (Phase 3)
+4. Handle auth if page redirects to login (Phase 4)
+5. Execute workflow-type checklists — interact, verify outcomes, verify persistence via reload (Phase 5)
+6. Responsive check at desktop (1280x800) + mobile (375x812) and report findings (Phase 6)
 
-**If the user accepts:**
-
-1. Use `mcp__claude-in-chrome__tabs_context_mcp` to get browser context
-2. Create a new tab with `mcp__claude-in-chrome__tabs_create_mcp`
-3. Navigate to the dev server URL for each affected route
-4. Use `mcp__claude-in-chrome__read_page` to inspect the DOM and verify elements
-5. Use `mcp__claude-in-chrome__computer` with `action: screenshot` to capture visual state
-6. Check for console errors with `mcp__claude-in-chrome__read_console_messages`
-7. Test interactive elements (forms, buttons, navigation) if applicable
-8. Report findings:
-   - Visual issues (layout breaks, missing elements, styling problems)
-   - Console errors or warnings
-   - Broken interactions
-   - Accessibility concerns from the DOM structure
-
-**Note:** Ask the user for the dev server URL if not obvious from the project config. Common defaults: `localhost:3000`, `localhost:5173`, `localhost:8000`.
+**Multi-review specific:** Browser findings enter the same aggregation pipeline as code review findings (Step 6). Classify as Critical/Important/Minor per the protocol's Phase 6 severity table.
 
 ## Agent Reference
 
@@ -319,7 +470,7 @@ This PR includes frontend changes. Would you like me to test the UI in the brows
 
 #### agent-native-reviewer
 **Focus**: Action/context parity, tool design, agent capability gaps
-**Include when**: Agent definitions, skill files, system prompts, MCP configs
+**Include when**: Agent definitions, skill files, system prompts, MCP configs, new UI actions/views, API endpoints, forms, routes — any change that adds user-facing capabilities
 **Path**: `agents/review/agent-native-reviewer.md`
 
 #### data-integrity-guardian
@@ -354,6 +505,16 @@ This PR includes frontend changes. Would you like me to test the UI in the brows
 **Auto-detected when**: Changed files match `routes/**`, `api/**`, `endpoints/**`, `controllers/**`
 **Path**: `agents/review/api-security-reviewer.md`
 
+#### ux-reviewer
+**Focus**: Interaction flows, state completeness, form UX patterns, component API consistency, screen reader narrative, cognitive load
+**Auto-detected when**: Changed files match `*.tsx`, `*.jsx`, `*.vue`, `*.svelte`, `components/**`, `pages/**`
+**Path**: `agents/review/ux-reviewer.md`
+
+#### frontend-performance-reviewer
+**Focus**: Core Web Vitals (LCP, CLS, INP), bundle size, request waterfalls, rendering efficiency, image optimization
+**Auto-detected when**: Changed files match `*.tsx`, `*.jsx`, `*.css`, `next.config.*`, `package.json`
+**Path**: `agents/review/frontend-performance-reviewer.md`
+
 ## Important Notes
 
 - Parallel execution is key — don't run reviewers sequentially
@@ -361,5 +522,5 @@ This PR includes frontend changes. Would you like me to test the UI in the brows
 - Security findings should always be surfaced even at lower confidence
 - Maximum 3 review cycles for auto-fix iterations
 - Migration reviewers should always run together (integrity + migration expert)
-- Browser testing is optional and requires user consent
+- Browser testing uses workflow-based verification (not just screenshots) and requires user consent
 - Framework reviewers auto-detect from changed files. Use `reviewers.exclude` in `review.json` to suppress false positives.

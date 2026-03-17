@@ -16,7 +16,7 @@ Thin orchestrator that coordinates quality checks and test planning, then determ
 |-------|----------|--------|-------------|
 | `storyId` | Yes | args, git branch, kanban, user | Story to process |
 
-**Resolution:** Per `shared/references/input_resolution_pattern.md` — Story Resolution Chain.
+**Resolution:** Story Resolution Chain.
 **Status filter:** To Review
 
 ## Purpose & Scope
@@ -70,16 +70,11 @@ Additional prefixes: `TEST-` (coverage gaps), `ARCH-` (architecture), `DOC-` (do
 
 **MANDATORY READ:** Load `shared/references/tools_config_guide.md`, `shared/references/storage_mode_detection.md`, and `shared/references/input_resolution_pattern.md`
 
-Read `docs/tools_config.md` (bootstrap if missing per tools_config_guide.md).
 Extract: `task_provider` = Task Management → Provider (`linear` | `file`).
 
 ### Phase 1: Discovery
 
-1) **Resolve storyId** (per input_resolution_pattern.md):
-   - IF args provided → use args
-   - ELSE IF git branch matches `feature/{id}-*` → extract id
-   - ELSE IF kanban has exactly 1 Story in [To Review] → suggest
-   - ELSE → AskUserQuestion: show Stories from kanban filtered by [To Review]
+1) **Resolve storyId:** Run Story Resolution Chain per guide (status filter: [To Review]).
 2) Auto-discover team/config from `docs/tasks/kanban_board.md`
 3) Load Story + task metadata:
    - IF `task_provider` = `linear`: `get_issue(storyId)` + `list_issues(parentId=storyId)`
@@ -104,12 +99,12 @@ ELSE:
 
 | Component | Full Gate | Fast-Track | Why |
 |-----------|-----------|------------|-----|
-| ln-514 regression tests | RUN | RUN | Always critical, cheap |
+| ln-513 regression tests | RUN | RUN | Always critical, cheap |
 | Linters | RUN | RUN | Cheap, catches formatting |
 | Criteria Validation (3 checks) | RUN | RUN | Cheap, validates AC coverage |
 | ln-511 metrics + static analysis | RUN | **RUN** | **Catches complexity/DRY/dead code that per-task review misses** |
 | ln-511 MCP Ref (OPT-, BP-, PERF-) | RUN | **SKIP** | Expensive external calls |
-| ln-513 agent review | RUN | **SKIP** | Expensive external calls |
+| Inline agent review | RUN | **RUN (1 agent minimum)** | Catches logic/algorithm bugs that static analysis misses |
 | ln-520 test planning | RUN | **SKIP** | Redundant for pre-validated |
 | NFR validation | All dims | **Security only** | Perf/Maintainability less critical |
 
@@ -117,8 +112,8 @@ ELSE:
 
 1) **Invoke ln-510-quality-coordinator** via Skill tool
    - Pass: Story ID (+ `--fast-track` flag if fast_track == true)
-   - Full: ln-510 runs: code quality (ln-511) -> criteria validation -> linters -> regression (ln-514)
-   - Fast-track: ln-510 runs: code metrics + static (ln-511 `--skip-mcp-ref`) -> criteria -> linters -> regression (ln-514) — skips MCP Ref/ln-513
+   - Full: ln-510 runs: code quality (ln-511) -> criteria validation -> linters -> regression (ln-513)
+   - Fast-track: ln-510 runs: code metrics + static (ln-511 `--skip-mcp-ref`) -> criteria -> linters -> regression (ln-513) — skips MCP Ref/agent review
 2) **If ln-510 returns FAIL:**
    - Create fix/refactor tasks via ln-301
    - Stop — return to ln-400
@@ -131,7 +126,7 @@ ELSE:
    - **Test task exists, not Done** -> report status, stop
    - **Test task Done** -> proceed to Phase 5
 
-2) **Invoke ln-520-test-planner** via Skill tool (if needed)
+3) **Invoke ln-520-test-planner** via Skill tool (if needed)
    - Pass: Story ID
    - ln-520 runs: research (ln-521) -> manual testing (ln-522) -> auto test planning (ln-523)
 
@@ -157,9 +152,24 @@ ELSE:
    - IF `task_provider` = `linear`: `create_comment({issueId: storyId, body: verdict_summary})`
    - IF `task_provider` = `file`: `Write` comment to `docs/tasks/epics/.../comments/{ISO-timestamp}.md`
 6) **If FAIL:** Record root cause analysis — classify each failure (missing_context | wrong_pattern | unclear_ac | doc_gap | test_gap). Append to `docs/project/architecture_health.md` under `## Root Cause Log` (create section if missing). Format: `| {date} | {story_id} | {issue_id} | {classification} | {action_taken} |`
-7) Update Story status:
+7) **Escaped defects (post-gate):** When bugs are discovered AFTER gate verdict (manual review, production, ln-310 mode=code_review), run Detection Efficacy Audit per `shared/references/detection_efficacy_audit.md`. Log results to `docs/project/architecture_health.md` under `## Escaped Defect Log`. Classifications: `algorithm_logic | performance_pattern | domain_specific | resource_bounds | encapsulation | data_structure | concurrency`.
+8) Update Story status:
    - IF `task_provider` = `linear`: `save_issue({id: storyId, state: "Done"})` for PASS/CONCERNS/WAIVED; create fix tasks for FAIL
    - IF `task_provider` = `file`: `Edit` `**Status:**` line to `Done` in story.md for PASS/CONCERNS/WAIVED; create fix task files for FAIL
+
+### Phase 7: Branch Finalization
+
+**MANDATORY READ:** Load `shared/references/git_worktree_fallback.md`
+
+Runs only when verdict is PASS, CONCERNS, or WAIVED. Consumes verified results from ln-510/ln-513 — does NOT rerun checks.
+
+1. IF uncommitted changes exist → `git add -A && git commit -m "{storyId}: {Story Title}"`
+2. Push branch: `git push -u origin {branch}`
+3. Move Story + Tasks → Done (Linear or kanban)
+4. Report to chat + file: branch name, git stats (files changed, insertions, deletions), quality verdict
+5. Cleanup: `git worktree remove {worktree_dir}` (branch preserved on remote)
+
+**On FAIL verdict:** Skip Phase 7. Create fix tasks, return to ln-400.
 
 **TodoWrite format (mandatory):**
 ```
@@ -169,14 +179,15 @@ ELSE:
 - Verify test coverage (pending)
 - Calculate Quality Score + NFR (pending)
 - Determine verdict + update Story (pending)
+- Branch finalization (pending)
 ```
 
 ## Worker Invocation (MANDATORY)
 
 | Phase | Worker | Purpose |
 |-------|--------|---------|
-| 2 | ln-510-quality-coordinator | Code quality + criteria + linters + regression |
-| 3 | ln-520-test-planner | Research + manual testing + auto test planning |
+| 3 | ln-510-quality-coordinator | Code quality + criteria + linters + regression |
+| 4 | ln-520-test-planner | Research + manual testing + auto test planning |
 
 **Invocation:**
 ```
@@ -196,6 +207,7 @@ Skill(skill: "ln-520-test-planner", args: "{storyId}")
 - Task creation via ln-301 only; this skill never edits tasks directly
 - Test verification only runs when test task is Done
 - Language preservation in comments (EN/RU)
+- **Agent code review is MANDATORY regardless of execution mode.** If ln-510 is invoked — it handles agent review (Phase 4/8). If ln-510 is skipped or replaced with inline implementation — agent review MUST still be performed directly using `shared/agents/prompt_templates/modes/code.md` with at least 1 external agent and critical verification protocol. **MANDATORY READ:** Load `references/minimum_quality_checks.md` for non-negotiable checks.
 
 ## Definition of Done
 - ln-510 quality checks: pass OR fix tasks created
@@ -214,8 +226,15 @@ Skill(skill: "ln-520-test-planner", args: "{storyId}")
   issues: [{id: "SEC-001", severity: high|medium|low, finding: "...", action: "..."}]
   ```
 - Story set to Done (PASS/CONCERNS/WAIVED) or fix tasks created (FAIL)
+- Branch finalized: committed, pushed to remote, worktree cleaned up (PASS/CONCERNS/WAIVED)
 - Root cause analysis recorded in architecture_health.md for every FAIL verdict
 - Comment with gate verdict posted
+
+## Phase 8: Meta-Analysis
+
+**MANDATORY READ:** Load `shared/references/meta_analysis_protocol.md`
+
+Skill type: `execution-orchestrator`. Run after all phases complete. Output to chat using the `execution-orchestrator` format.
 
 ## Reference Files
 - **Tools config:** `shared/references/tools_config_guide.md`
@@ -224,6 +243,8 @@ Skill(skill: "ln-520-test-planner", args: "{storyId}")
 - **Quality coordinator:** `../ln-510-quality-coordinator/SKILL.md`
 - **Test planner:** `../ln-520-test-planner/SKILL.md`
 - **Risk-based testing:** `shared/references/risk_based_testing_guide.md`
+- **Minimum quality checks:** `references/minimum_quality_checks.md`
+- **MANDATORY READ:** `shared/references/git_worktree_fallback.md`
 
 ---
 **Version:** 7.0.0

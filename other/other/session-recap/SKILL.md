@@ -20,25 +20,28 @@ Systematically document Claude Code sessions into the knowledge bank.
 
 **Important**: Session recap should run in a **new session** after the work session ends. This ensures the full transcript is captured.
 
-1. **During your work session**: Note down the session path displayed at startup
-   - Claude Code shows: `Session: /path/to/.claude/projects/.../session-id.jsonl`
-   - Save this path for later
+1. **Exit the work session**: The SessionEnd hook automatically saves transcript segments and builds `session.md` as a hub note with links to all artifacts.
 
-2. **Exit the work session**: The final transcript is automatically saved
-
-3. **Start a new session**: Begin fresh to run the recap
+2. **Start a new session**: Begin fresh to run the recap
    ```
    claude
    ```
 
-4. **Invoke session-recap with the path**:
+3. **Invoke session-recap with the session folder**:
    ```
-   Recap the session at /path/to/session-id.jsonl
+   Recap the session at {KB_PATH}/_sessions/YYYY-MM-DD/{session_id}/
    ```
    Or:
    ```
-   /second-brain:session-recap /path/to/session-id.jsonl
+   /second-brain:session-recap {KB_PATH}/_sessions/YYYY-MM-DD/{session_id}/
    ```
+
+### Legacy: Raw Transcript Path
+
+If no session folder exists (e.g., hooks were not configured), you can still provide a raw `.jsonl` transcript path:
+```
+Recap the session at /path/to/session-id.jsonl
+```
 
 ### Why a New Session?
 
@@ -88,6 +91,26 @@ This skill uses RFC 2119 keywords:
 #### 1.1 Load Session Data
 
 **If session folder provided**:
+
+First, read `session.md` as the hub note for both metadata and content navigation:
+```bash
+obsidian vault="knowledge-bank" read path="_sessions/{date}/{session_id}/session.md"
+```
+
+**Frontmatter metadata** (supplements later phases):
+- `project`, `session_name`, `task_tag`, `tags`, `summary`, `duration_seconds`, `started_at`, `ended_at`
+
+**Body navigation** — follow session.md body sections:
+
+| Section | Content | How to use |
+|---------|---------|------------|
+| `## Generated Artifacts` | WikiLinks to docs in `docs/` | Read for additional context |
+| `## Transcripts` | `segment-N/transcript.jsonl` paths | Navigate to transcripts for parsing |
+| `## Agents` | `segment-N/agents/*.jsonl` paths | Optional: read subagent work |
+| `## Plans` | WikiLinks to plan files | Read plans for design context |
+| `## Memory Snapshot` | WikiLinks to memory/*.md | Read auto-memory for project context |
+
+Then locate the latest transcript segment:
 ```bash
 # Find latest segment
 LATEST_SEGMENT=$(ls -d "$SESSION_FOLDER"/segment-* 2>/dev/null | grep -v 'segment-final' | sort -t- -k2 -n | tail -1)
@@ -97,10 +120,13 @@ LATEST_SEGMENT=$(ls -d "$SESSION_FOLDER"/segment-* 2>/dev/null | grep -v 'segmen
 TRANSCRIPT="$LATEST_SEGMENT/transcript.jsonl"
 ```
 
-**If no folder**: Analyze current conversation context.
+**If no folder (current conversation mode)**: Skip session.md reading. Analyze current conversation context.
 
 #### 1.2 Detect Project
 
+If session.md `project` property is set (non-empty) → use it directly.
+
+Otherwise → fall back to transcript parsing:
 ```bash
 ./scripts/parse_transcript.sh "$TRANSCRIPT" project
 ```
@@ -242,8 +268,11 @@ type: concept|component|best-practice|daily-log|reflection
 created: YYYY-MM-DD
 modified: YYYY-MM-DD
 project: Claude Code
+session-folder: _sessions/YYYY-MM-DD/{session_id}
 ---
 ```
+
+The `session-folder` field applies to ALL recap-created docs (daily log, concepts, components, best practices, reflections). It creates a reverse reference — Obsidian's backlinks panel on `session.md` will show all KB docs extracted from that session. Omit if no session folder was provided (current conversation mode).
 
 #### Obsidian Syntax (MUST invoke when obsidian skills installed)
 

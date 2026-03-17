@@ -1,6 +1,6 @@
 ---
 name: ln-643-api-contract-auditor
-description: "Checks layer leakage in method signatures, missing DTOs, entity leakage to API, inconsistent error contracts, redundant method overloads. Returns findings with penalty-based scoring + diagnostic sub-scores."
+description: "Checks layer leakage in method signatures, missing DTOs, entity leakage to API, inconsistent error contracts. Returns findings with penalty-based scoring."
 allowed-tools: Read, Grep, Glob, Bash
 license: MIT
 ---
@@ -41,7 +41,7 @@ Specialized worker auditing API contracts, method signatures at service boundari
 
 ### Phase 0: Load References
 
-**MANDATORY READ:** Load `references/detection_patterns.md` — language-specific Grep patterns for all 5 rules.
+**MANDATORY READ:** Load `shared/references/two_layer_detection.md` for detection methodology. Load `references/detection_patterns.md` — language-specific Grep patterns for all 5 rules.
 
 ### Phase 1: Discover Service Boundaries
 
@@ -62,7 +62,7 @@ scan_root = scan_path IF domain_mode == "domain-aware" ELSE codebase_root
 |---|------|----------|---------------|
 | 1 | Layer Leakage | HIGH/MEDIUM | Service/domain accepts HTTP types (Request, parsed_body, headers) |
 | 2 | Missing DTO | MEDIUM/LOW | 4+ params repeated in 2+ methods without grouping DTO |
-| 3 | Entity Leakage | HIGH/MEDIUM | ORM entity returned from API without response DTO |
+| 3 | Entity Leakage | HIGH/MEDIUM | ORM entity returned from API without response DTO. Downgrade when: internal API with no external consumers → LOW |
 | 4 | Error Contracts | MEDIUM/LOW | Mixed error patterns (raise + return None) in same service |
 | 5 | Redundant Overloads | LOW/MEDIUM | Method pairs with `_with_`/`_and_` suffix differing by 1-2 params |
 | 6 | Architectural Honesty | HIGH/MEDIUM | Read-named function (get_/find_/check_/validate_/is_/has_) body contains write side-effects. Exclusions per `shared/references/ai_ready_architecture.md` |
@@ -111,7 +111,7 @@ scan_root = scan_path IF domain_mode == "domain-aware" ELSE codebase_root
 
 ### Phase 3.5: Calculate Score
 
-**MANDATORY READ:** Load `shared/references/audit_scoring.md` for unified scoring formula.
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md` and `shared/references/audit_scoring.md`.
 
 **Primary score** uses penalty formula (same as all workers):
 ```
@@ -123,7 +123,7 @@ score = max(0, 10 - penalty)
 
 ### Phase 4: Write Report
 
-**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format (ln-640 section: extended AUDIT-META + DATA-EXTENDED).
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md` and `shared/templates/audit_worker_report_template.md`.
 
 ```
 # Build markdown report in memory with:
@@ -147,6 +147,8 @@ Score: 6.75/10 (C:65 K:70 Q:55 I:80) | Issues: 4 (H:2 M:1 L:1)
 
 ## Critical Rules
 
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
+
 - **Architecture-level only:** Focus on service boundaries, not internal implementation
 - **Read before score:** Never score without reading actual service code
 - **Scope boundary:** SKIP duplication findings (owned by ln-623)
@@ -154,6 +156,8 @@ Score: 6.75/10 (C:65 K:70 Q:55 I:80) | Issues: 4 (H:2 M:1 L:1)
 - **Domain-aware:** When domain_mode="domain-aware", scan only scan_path, tag findings with domain
 
 ## Definition of Done
+
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
 
 - Service boundaries discovered (API, service, domain layers)
 - Method signatures extracted and analyzed
@@ -167,7 +171,6 @@ Score: 6.75/10 (C:65 K:70 Q:55 I:80) | Issues: 4 (H:2 M:1 L:1)
 
 ## Reference Files
 
-- **Worker report template:** `shared/templates/audit_worker_report_template.md`
 - Detection patterns: `references/detection_patterns.md`
 - Scoring rules: `../ln-640-pattern-evolution-auditor/references/scoring_rules.md`
 - Pattern library: `../ln-640-pattern-evolution-auditor/references/pattern_library.md`

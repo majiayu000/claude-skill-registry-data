@@ -1,6 +1,14 @@
 ---
 name: baoyu-post-to-x
 description: Posts content and articles to X (Twitter). Supports regular posts with images/videos and X Articles (long-form Markdown). Uses real Chrome with CDP to bypass anti-automation. Use when user asks to "post to X", "tweet", "publish to Twitter", or "share on X".
+version: 1.56.1
+metadata:
+  openclaw:
+    homepage: https://github.com/JimLiu/baoyu-skills#baoyu-post-to-x
+    requires:
+      anyBins:
+        - bun
+        - npx
 ---
 
 # Post to X (Twitter)
@@ -12,9 +20,10 @@ Posts text, images, videos, and long-form articles to X via real Chrome browser 
 **Important**: All scripts are located in the `scripts/` subdirectory of this skill.
 
 **Agent Execution Instructions**:
-1. Determine this SKILL.md file's directory path as `SKILL_DIR`
-2. Script path = `${SKILL_DIR}/scripts/<script-name>.ts`
-3. Replace all `${SKILL_DIR}` in this document with the actual path
+1. Determine this SKILL.md file's directory path as `{baseDir}`
+2. Script path = `{baseDir}/scripts/<script-name>.ts`
+3. Replace all `{baseDir}` in this document with the actual path
+4. Resolve `${BUN_X}` runtime: if `bun` installed → `bun`; if `npx` available → `npx -y bun`; else suggest installing bun
 
 **Script Reference**:
 | Script | Purpose |
@@ -30,14 +39,21 @@ Posts text, images, videos, and long-form articles to X via real Chrome browser 
 
 ## Preferences (EXTEND.md)
 
-Use Bash to check EXTEND.md existence (priority order):
+Check EXTEND.md existence (priority order):
 
 ```bash
-# Check project-level first
+# macOS, Linux, WSL, Git Bash
 test -f .baoyu-skills/baoyu-post-to-x/EXTEND.md && echo "project"
-
-# Then user-level (cross-platform: $HOME works on macOS/Linux/WSL)
+test -f "${XDG_CONFIG_HOME:-$HOME/.config}/baoyu-skills/baoyu-post-to-x/EXTEND.md" && echo "xdg"
 test -f "$HOME/.baoyu-skills/baoyu-post-to-x/EXTEND.md" && echo "user"
+```
+
+```powershell
+# PowerShell (Windows)
+if (Test-Path .baoyu-skills/baoyu-post-to-x/EXTEND.md) { "project" }
+$xdg = if ($env:XDG_CONFIG_HOME) { $env:XDG_CONFIG_HOME } else { "$HOME/.config" }
+if (Test-Path "$xdg/baoyu-skills/baoyu-post-to-x/EXTEND.md") { "xdg" }
+if (Test-Path "$HOME/.baoyu-skills/baoyu-post-to-x/EXTEND.md") { "user" }
 ```
 
 ┌──────────────────────────────────────────────────┬───────────────────┐
@@ -69,7 +85,7 @@ test -f "$HOME/.baoyu-skills/baoyu-post-to-x/EXTEND.md" && echo "user"
 Before first use, suggest running the environment check. User can skip if they prefer.
 
 ```bash
-npx -y bun ${SKILL_DIR}/scripts/check-paste-permissions.ts
+${BUN_X} {baseDir}/scripts/check-paste-permissions.ts
 ```
 
 Checks: Chrome, profile isolation, Bun, Accessibility, clipboard, paste keystroke, Chrome conflicts.
@@ -79,8 +95,8 @@ Checks: Chrome, profile isolation, Bun, Accessibility, clipboard, paste keystrok
 | Check | Fix |
 |-------|-----|
 | Chrome | Install Chrome or set `X_BROWSER_CHROME_PATH` env var |
-| Profile dir | Ensure `~/.local/share/x-browser-profile` is writable |
-| Bun runtime | `curl -fsSL https://bun.sh/install \| bash` |
+| Profile dir | Shared profile at `baoyu-skills/chrome-profile` (see CLAUDE.md Chrome Profile section) |
+| Bun runtime | `brew install oven-sh/bun/bun` (macOS) or `npm install -g bun` |
 | Accessibility (macOS) | System Settings → Privacy & Security → Accessibility → enable terminal app |
 | Clipboard copy | Ensure Swift/AppKit available (macOS Xcode CLI tools: `xcode-select --install`) |
 | Paste keystroke (macOS) | Same as Accessibility fix above |
@@ -93,12 +109,16 @@ Checks: Chrome, profile isolation, Bun, Accessibility, clipboard, paste keystrok
 
 ---
 
+## Post Type Selection
+
+Unless the user explicitly specifies the post type:
+- **Plain text** + within 10,000 characters → **Regular Post** (Premium members support up to 10,000 characters, non-Premium: 280)
+- **Markdown file** (.md) → **X Article**
+
 ## Regular Posts
 
-Text + up to 4 images.
-
 ```bash
-npx -y bun ${SKILL_DIR}/scripts/x-browser.ts "Hello!" --image ./photo.png
+${BUN_X} {baseDir}/scripts/x-browser.ts "Hello!" --image ./photo.png
 ```
 
 **Parameters**:
@@ -117,7 +137,7 @@ npx -y bun ${SKILL_DIR}/scripts/x-browser.ts "Hello!" --image ./photo.png
 Text + video file.
 
 ```bash
-npx -y bun ${SKILL_DIR}/scripts/x-video.ts "Check this out!" --video ./clip.mp4
+${BUN_X} {baseDir}/scripts/x-video.ts "Check this out!" --video ./clip.mp4
 ```
 
 **Parameters**:
@@ -138,7 +158,7 @@ npx -y bun ${SKILL_DIR}/scripts/x-video.ts "Check this out!" --video ./clip.mp4
 Quote an existing tweet with comment.
 
 ```bash
-npx -y bun ${SKILL_DIR}/scripts/x-quote.ts https://x.com/user/status/123 "Great insight!"
+${BUN_X} {baseDir}/scripts/x-quote.ts https://x.com/user/status/123 "Great insight!"
 ```
 
 **Parameters**:
@@ -157,8 +177,8 @@ npx -y bun ${SKILL_DIR}/scripts/x-quote.ts https://x.com/user/status/123 "Great 
 Long-form Markdown articles (requires X Premium).
 
 ```bash
-npx -y bun ${SKILL_DIR}/scripts/x-article.ts article.md
-npx -y bun ${SKILL_DIR}/scripts/x-article.ts article.md --cover ./cover.jpg
+${BUN_X} {baseDir}/scripts/x-article.ts article.md
+${BUN_X} {baseDir}/scripts/x-article.ts article.md --cover ./cover.jpg
 ```
 
 **Parameters**:
@@ -171,6 +191,12 @@ npx -y bun ${SKILL_DIR}/scripts/x-article.ts article.md --cover ./cover.jpg
 **Frontmatter**: `title`, `cover_image` supported in YAML front matter.
 
 **Note**: Script opens browser with article filled in. User reviews and publishes manually.
+
+**Post-Composition Check**: The script automatically verifies after all images are inserted:
+- Remaining `XIMGPH_` placeholders in editor content
+- Expected vs actual image count
+
+If the check fails (warnings in output), alert the user with the specific issues before they publish.
 
 ---
 

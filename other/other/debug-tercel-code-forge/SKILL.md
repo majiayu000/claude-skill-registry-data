@@ -71,22 +71,47 @@ Count your fix attempts:
 - **< 3 attempts:** Return to Phase 1, gather more evidence
 - **>= 3 attempts:** **STOP.** This is NOT a hypothesis failure — it's likely a **wrong architecture** or **wrong mental model.** Discuss with the user before proceeding.
 
-## Anti-Rationalization Table
+## Example
 
-| Thought | Reality |
-|---------|---------|
-| "I know what's wrong" | Then Phase 1 will be fast. Do it anyway. |
-| "Let me just try this quick fix" | Quick fixes mask root causes and create tech debt. |
-| "It worked before, just revert" | Understanding WHY it broke prevents recurrence. |
-| "The error message is clear" | Error messages often point to symptoms, not causes. |
-| "It must be a library bug" | It's almost never a library bug. Check your code first. |
-| "Let me add more logging" | Targeted logging at boundaries, not shotgun logging. |
+```
+Bug: "UserService.getProfile() returns null for valid user IDs"
 
-## Red Flags
+Phase 1 — Investigate:
+  $ grep -r "getProfile" src/  →  found in UserService.ts:42, UserController.ts:15
+  $ git log --oneline -5 src/services/UserService.ts  →  recent refactor changed query
 
-Stop immediately if you notice:
-- You're trying the same approach a third time
-- You're adding workarounds instead of fixing the actual issue
-- You're suppressing error messages or catching/ignoring exceptions
-- You're changing things "to see what happens" without a hypothesis
-- The fix is larger than the feature it supports
+Phase 2 — Compare:
+  Working: getById() uses parameterized query with $1
+  Broken:  getProfile() concatenates id into string (bug introduced in refactor)
+
+Phase 3 — Hypothesis:
+  "getProfile builds wrong SQL — id is treated as string, not integer"
+  Test: hardcode known id=1 → returns null. Confirmed.
+
+Phase 4 — Fix:
+  Write test: expect(getProfile(1)).resolves.toMatchObject({id: 1})
+  Fix: use parameterized query ($1) instead of string interpolation
+  Verify: test passes, full suite 42/42 green
+```
+
+## Decision Rules
+
+Apply these checks before acting:
+
+| If you're about to... | Instead... | Why |
+|----------------------|-----------|-----|
+| Skip Phase 1 because the cause seems obvious | Run Phase 1 anyway — it will be fast if you're right | Obvious causes are often symptoms of deeper issues |
+| Apply a fix without reproducing first | Reproduce the bug with a reliable trigger | A fix you can't verify is not a fix |
+| Revert to a working state without understanding | Investigate WHY it broke, then fix | Blind reverts leave the root cause active |
+| Trust the error message at face value | Trace backward from the error through the call chain | Error messages point to symptoms, not causes |
+| Add logging everywhere | Add targeted logging at component boundaries only | Shotgun logging creates noise and obscures signal |
+| Try the same approach again | STOP after 3 failed attempts — reassess your mental model | Repeated failure means wrong diagnosis, not wrong execution |
+
+## Hard Stops
+
+Halt and reassess if:
+- You've attempted the same fix approach 3+ times
+- You're adding workarounds instead of addressing the root issue
+- You're suppressing or swallowing errors to make tests pass
+- You're making changes without a specific hypothesis to test
+- The fix is growing larger than the feature it supports

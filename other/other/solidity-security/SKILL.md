@@ -494,32 +494,3 @@ contract WellDocumentedContract {
     }
 }
 ```
-
-## Resources
-
-- **references/reentrancy.md**: Comprehensive reentrancy prevention
-- **references/access-control.md**: Role-based access patterns
-- **references/overflow-underflow.md**: SafeMath and integer safety
-- **references/gas-optimization.md**: Gas saving techniques
-- **references/vulnerability-patterns.md**: Common vulnerability catalog
-- **assets/solidity-contracts-templates.sol**: Secure contract templates
-- **assets/security-checklist.md**: Pre-audit checklist
-- **scripts/analyze-contract.sh**: Static analysis tools
-
-## Tools for Security Analysis
-
-- **Slither**: Static analysis tool
-- **Mythril**: Security analysis tool
-- **Echidna**: Fuzzing tool
-- **Manticore**: Symbolic execution
-- **Securify**: Automated security scanner
-
-## Common Pitfalls
-
-1. **Using `tx.origin` for Authentication**: Use `msg.sender` instead
-2. **Unchecked External Calls**: Always check return values
-3. **Delegatecall to Untrusted Contracts**: Can hijack your contract
-4. **Floating Pragma**: Pin to specific Solidity version
-5. **Missing Events**: Emit events for state changes
-6. **Excessive Gas in Loops**: Can hit block gas limit
-7. **No Upgrade Path**: Consider proxy patterns if upgrades needed

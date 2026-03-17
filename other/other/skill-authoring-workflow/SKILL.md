@@ -1,7 +1,17 @@
 ---
 name: skill-authoring-workflow
-description: Turn raw PM content into a compliant, publish-ready skill by choosing build/add paths, running conformance checks, and updating docs before commit.
+description: Turn raw PM content into a compliant, publish-ready skill. Use when creating or updating a repo skill without breaking standards.
+intent: >-
+  Create or update PM skills without chaos. This workflow turns rough notes, workshop content, or half-baked prompt dumps into compliant `skills/<skill-name>/SKILL.md` assets that actually pass validation and belong in this repo.
 type: workflow
+best_for:
+  - "Creating a new repo skill from notes or source material"
+  - "Updating an existing skill while keeping standards intact"
+  - "Running the full authoring and validation workflow before commit"
+scenarios:
+  - "Help me turn these workshop notes into a new PM skill"
+  - "I need to update an existing skill without breaking the repo standards"
+  - "What workflow should I use to author a new skill in this repo?"
 ---
 
 ## Purpose
@@ -30,11 +40,13 @@ Use repo-native tools and standards before inventing a custom process:
 ### Definition of Done (No Exceptions)
 
 A skill is done only when:
-1. Frontmatter is valid (`name`, `description`, `type`)
+1. Frontmatter is valid (`name`, `description`, `intent`, `type`)
 2. Section order is compliant
 3. Metadata limits are respected (`name` <= 64 chars, `description` <= 200 chars)
-4. Cross-references resolve
-5. README catalog counts and tables are updated (if adding/removing skills)
+4. Description says both what the skill does and when to use it
+5. Intent carries the fuller repo-facing summary without replacing the trigger-oriented description
+6. Cross-references resolve
+7. README catalog counts and tables are updated (if adding/removing skills)
 
 ### Facilitation Source of Truth
 
@@ -94,6 +106,7 @@ Run strict checks before thinking about commit:
 ```bash
 ./scripts/test-a-skill.sh --skill <skill-name> --smoke
 python3 scripts/check-skill-metadata.py skills/<skill-name>/SKILL.md
+python3 scripts/check-skill-triggers.py skills/<skill-name>/SKILL.md --show-cases
 ```
 
 ### Phase 5: Integrate with Repo Docs
@@ -147,6 +160,9 @@ Result:
 - Shipping vibes, not standards.
 - Choosing `workflow` when the task is really a component template.
 - Bloated descriptions that exceed upload limits.
+- Descriptions that say what the skill is but not when Claude should trigger it.
+- Descriptions that silently hit the 200-char limit and get cut off mid-thought.
+- Letting `intent` become a substitute for a weak trigger description.
 - Forgetting to update README counts after adding a skill.
 - Treating generated output as final without review.
 
@@ -157,9 +173,11 @@ Result:
 - `CLAUDE.md`
 - `docs/Building PM Skills.md`
 - `docs/Add-a-Skill Utility Guide.md`
+- Anthropic's [Complete Guide to Building Skills for Claude](https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf)
 - `scripts/add-a-skill.sh`
 - `scripts/build-a-skill.sh`
 - `scripts/find-a-skill.sh`
 - `scripts/test-a-skill.sh`
 - `scripts/check-skill-metadata.py`
+- `scripts/check-skill-triggers.py`
 - `scripts/zip-a-skill.sh`

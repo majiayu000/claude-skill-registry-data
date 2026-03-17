@@ -401,33 +401,3 @@ module.exports = {
   },
 };
 ```
-
-## Resources
-
-- **references/orm-switching.md**: ORM migration guides
-- **references/schema-migration.md**: Schema transformation patterns
-- **references/data-transformation.md**: Data migration scripts
-- **references/rollback-strategies.md**: Rollback procedures
-- **assets/schema-migration-template.sql**: SQL migration templates
-- **assets/data-migration-script.py**: Data migration utilities
-- **scripts/test-migration.sh**: Migration testing script
-
-## Best Practices
-
-1. **Always Provide Rollback**: Every up() needs a down()
-2. **Test Migrations**: Test on staging first
-3. **Use Transactions**: Atomic migrations when possible
-4. **Backup First**: Always backup before migration
-5. **Small Changes**: Break into small, incremental steps
-6. **Monitor**: Watch for errors during deployment
-7. **Document**: Explain why and how
-8. **Idempotent**: Migrations should be rerunnable
-
-## Common Pitfalls
-
-- Not testing rollback procedures
-- Making breaking changes without downtime strategy
-- Forgetting to handle NULL values
-- Not considering index performance
-- Ignoring foreign key constraints
-- Migrating too much data at once

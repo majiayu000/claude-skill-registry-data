@@ -11,7 +11,7 @@ Generate or edit images using Google Gemini API through the nanobanana tool.
 ## Requirements
 
 1. **GEMINI_API_KEY**: Must be configured in `~/.nanobanana.env` or `export GEMINI_API_KEY=<your-api-key>`
-2. **Python3 with depedent packages installed**: google-genai, Pillow, python-dotenv. They could be installed via `python3 -m pip install -r ${CLAUDE_PLUGIN_ROOT}/skills/nanobanana-skill/requirements.txt` if not installed yet.
+2. **Python3 with dependent packages installed**: google-genai, Pillow, python-dotenv. They could be installed via `python3 -m pip install -r ${CLAUDE_PLUGIN_ROOT}/skills/nanobanana-skill/requirements.txt` if not installed yet.
 3. **Executable**: `${CLAUDE_PLUGIN_ROOT}/skills/nanobanana-skill/nanobanana.py`
 
 ## Instructions
@@ -22,7 +22,7 @@ Generate or edit images using Google Gemini API through the nanobanana tool.
    - What they want to create (the prompt)
    - Desired aspect ratio/size (optional, defaults to 9:16 portrait)
    - Output filename (optional, auto-generates UUID if not specified)
-   - Model preference (optional, defaults to gemini-3-pro-image-preview)
+   - Model preference (optional, defaults to gemini-3.1-flash-image-preview)
    - Resolution (optional, defaults to 1K)
 
 2. Run the nanobanana script with appropriate parameters:
@@ -63,14 +63,19 @@ Generate or edit images using Google Gemini API through the nanobanana tool.
 
 ### Models (--model)
 
-- `gemini-3-pro-image-preview` (default) - Higher quality
-- `gemini-2.5-flash-image` - Faster generation
+- `gemini-3.1-flash-image-preview` (default) - Latest, fast generation
+- `gemini-3-pro-image-preview` - Higher quality, supports thinking/reasoning
 
 ### Resolution (--resolution)
 
 - `1K` (default)
 - `2K`
 - `4K`
+
+### Other Options
+
+- `--no-search` - Disable Google Search grounding (enabled by default)
+- `--no-think` - Disable thinking/reasoning mode
 
 ## Examples
 
@@ -108,13 +113,13 @@ python3 ${CLAUDE_PLUGIN_ROOT}/skills/nanobanana-skill/nanobanana.py \
   --output "photo-with-rainbow.png"
 ```
 
-### Use faster model
+### Use pro model for higher quality
 
 ```bash
 python3 ${CLAUDE_PLUGIN_ROOT}/skills/nanobanana-skill/nanobanana.py \
-  --prompt "Quick sketch of a cat" \
-  --model gemini-2.5-flash-image \
-  --output "cat-sketch.png"
+  --prompt "Detailed portrait of a cat in watercolor style" \
+  --model gemini-3-pro-image-preview \
+  --output "cat-portrait.png"
 ```
 
 ## Error Handling
@@ -133,4 +138,4 @@ If the script fails:
 3. For social media posts, use 9:16 for stories or 1:1 for posts
 4. For wallpapers, use 16:9 or 21:9
 5. Start with 1K resolution for testing, upgrade to 2K/4K for final output
-6. Use gemini-3-pro-image-preview for best quality, gemini-2.5-flash-image for speed
+6. Use gemini-3-pro-image-preview for best quality, gemini-3.1-flash-image-preview (default) for speed

@@ -7,7 +7,7 @@ description: >
   Triggers: "roadmap", "project status", "blockers", "risks", "progress", "next milestone",
   "gaps", "what's done".
 argument-hint: status | gaps | next | delta | blockers | risks | update | specs
-allowed-tools: Read, Glob, Grep, Write
+allowed-tools: Read, Glob, Grep, Write, Bash
 ---
 
 # Roadmap Analyst
@@ -28,6 +28,18 @@ roadmap:
   context_dir: .arkhe/roadmap
   status_file: docs/PROJECT-STATUS.md
 ```
+
+### Priority 1b: Johnny Decimal Detection
+
+Check if the project uses Johnny Decimal documentation structure:
+1. Read `.jd-config.json` at project root — if present, use its `root` (default: `docs`) and `areas` map
+2. If no config, glob for `docs/[0-9][0-9]-*/` — if 2+ matches exist, J.D structure is present
+
+If J.D detected, supplement Priority 4 (Documentation Scan) globs:
+- Glob `{jd_root}/[0-9][0-9]-*/**/*.md` to capture all area docs
+- Read ALL areas — roadmap analysis requires comprehensive coverage
+- Deprioritize `90-*` (archive) — read last, note content may be outdated
+- Keep existing non-J.D paths as fallback
 
 ### Priority 2: Rich Context
 
@@ -61,7 +73,7 @@ Parse from `$ARGUMENTS`:
 | `delta` | What changed since last assessment |
 | `blockers` | Blocking chain analysis |
 | `risks` | Risk register with likelihood/impact |
-| `update` | Write updated status document |
+| `update` | Git-history-aware status document update (Phase A: what shipped + Phase B: full scan) |
 | `specs` | Spec pipeline status verification |
 | _(none)_ | Full dashboard (combines status + gaps + next) |
 
@@ -89,6 +101,17 @@ Produce a status dashboard:
 
 Then detail: What's working, What's planned, What's missing.
 
+After producing the dashboard, check for documentation drift:
+
+1. Find last modification of `{status_file}` via git: `git log -1 --format="%H %ai" -- {status_file}`
+2. Count feature/fix commits since: `git log {hash}..HEAD --oneline --no-merges | grep -cE "^[a-f0-9]+ (feat|fix):"`
+3. If 3 or more feat/fix commits exist since last update, append a notice at the end of the output:
+
+```
+⚠️  Documentation may be stale: {N} feature/fix commits since last status update ({date}).
+Run `/roadmap update` to sync.
+```
+
 ### `gaps`
 
 Cross-reference all gap analysis documents. For each gap: original report, current status (Open/In Progress/Closed), evidence of closure.
@@ -114,7 +137,52 @@ Risk register:
 
 ### `update`
 
-Generate an updated status document. Show the user a diff preview and ask for confirmation before writing to `{status_file}` (default: `docs/PROJECT-STATUS.md`). Preserve existing format but update all data points.
+Generate an updated status document with git-history awareness. Two phases:
+
+#### Phase A: Git History Scan
+
+Before the codebase scan, analyze what changed since the last doc update:
+
+1. Find last modification of `{status_file}`: `git log -1 --format="%H %ai" -- {status_file}`
+2. If no previous commit found, skip Phase A (first-time setup — Phase B handles it)
+3. List commits since: `git log {hash}..HEAD --oneline --no-merges`
+4. Group by PR number (parse `(#NN)` from commit messages) and commit type (`feat:`, `fix:`, `docs:`, etc.)
+5. For each feature/fix group, summarize:
+   - Scope (new components, routes, hooks, test files — inferred from file paths in the diff)
+   - Related specs (cross-reference `arkhe/specs/` changes in the commit range)
+   - Related ADRs (new files in `docs/adr/` in the commit range)
+6. Present a **"What Shipped"** summary to the user before proceeding to the full scan:
+
+```
+## What Shipped Since Last Update (2026-03-09, 10 commits ago)
+
+1. Glossary Management + Dictionary Browser (PR #32, specs 022-025)
+   - 6 components, 2 hooks, 5 test files, /dictionary route
+2. App Header Unification (PR #33)
+   - Refactored navigation components
+3. skrebe.app Redirect (1aff903, ADR-0010)
+   - New middleware + DNS config
+```
+
+This context feeds into Phase B so the codebase scan knows what to look for and can produce more accurate updates.
+
+#### Phase B: Full Codebase Scan + Write (existing behavior, enhanced)
+
+1. Run full context discovery + codebase scan (same as before)
+2. Read existing status document
+3. Preserve format and structure
+4. Update all data points — now informed by the git history from Phase A:
+   - Module maturity ratings
+   - Phase completion entries (Phase A identifies which phases completed)
+   - Spec pipeline entries (Phase A identifies which specs shipped)
+   - ADR table entries (Phase A identifies new ADRs)
+   - Test coverage section
+   - Commit count and date
+   - Risk register (close risks for shipped features)
+5. Show diff preview and ask for confirmation
+6. Write updated file to `{status_file}`
+7. Also check CHANGELOG.md — if `[Unreleased]` is missing entries for shipped features from Phase A, suggest adding them after the status update is applied (don't auto-write CHANGELOG without explicit confirmation)
+8. Report changes made
 
 ### `specs`
 

@@ -1026,25 +1026,3 @@ exclude_lines = [
     "raise NotImplementedError",
 ]
 ```
-
-## Resources
-
-- **pytest documentation**: https://docs.pytest.org/
-- **unittest.mock**: https://docs.python.org/3/library/unittest.mock.html
-- **hypothesis**: Property-based testing
-- **pytest-asyncio**: Testing async code
-- **pytest-cov**: Coverage reporting
-- **pytest-mock**: pytest wrapper for mock
-
-## Best Practices Summary
-
-1. **Write tests first** (TDD) or alongside code
-2. **One assertion per test** when possible
-3. **Use descriptive test names** that explain behavior
-4. **Keep tests independent** and isolated
-5. **Use fixtures** for setup and teardown
-6. **Mock external dependencies** appropriately
-7. **Parametrize tests** to reduce duplication
-8. **Test edge cases** and error conditions
-9. **Measure coverage** but focus on quality
-10. **Run tests in CI/CD** on every commit

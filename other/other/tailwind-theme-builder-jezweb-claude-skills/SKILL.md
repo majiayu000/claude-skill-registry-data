@@ -6,6 +6,7 @@ description: >
   Use when initialising React projects with Tailwind v4, setting up shadcn/ui theming,
   or fixing colors not working, tw-animate-css errors, @theme inline dark mode conflicts,
   @apply breaking, v3 migration issues.
+compatibility: claude-code-only
 ---
 
 # Tailwind Theme Builder

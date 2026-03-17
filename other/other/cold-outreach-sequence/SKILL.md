@@ -11,6 +11,20 @@ Spray-and-pray templates don't work. 10 minutes of research + a specific referen
 
 ---
 
+## Mode
+
+Detect from context or ask: *"One message, full sequence, or full outreach system?"*
+
+| Mode | What you get | Best for |
+|------|-------------|----------|
+| `quick` | 1 connection request + 1 follow-up for a single prospect | Testing an angle, one-off outreach |
+| `standard` | Full 4-touch sequence for a single prospect | Active pipeline, individual targets |
+| `deep` | Multi-prospect sequence system + A/B variants + tracking framework | Launching an outreach campaign |
+
+**Default: `standard`** — use `quick` if they give you one name and say "draft something." Use `deep` if they're building a repeatable outreach engine.
+
+---
+
 ## Context Loading Gates
 
 **Before writing any message, collect:**

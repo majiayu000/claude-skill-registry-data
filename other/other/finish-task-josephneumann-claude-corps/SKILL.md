@@ -1,7 +1,7 @@
 ---
 name: finish-task
 description: "Use when implementation and tests are complete and you're ready to close out a beads task"
-allowed-tools: Read, Bash, Glob, Grep, Edit, Write, Skill
+allowed-tools: Read, Bash, Glob, Grep, Edit, Write, Skill, AskUserQuestion, mcp__playwright__browser_navigate, mcp__playwright__browser_snapshot, mcp__playwright__browser_click, mcp__playwright__browser_fill_form, mcp__playwright__browser_type, mcp__playwright__browser_press_key, mcp__playwright__browser_take_screenshot, mcp__playwright__browser_resize, mcp__playwright__browser_console_messages, mcp__playwright__browser_close, mcp__playwright__browser_run_code, mcp__playwright__browser_navigate_back, mcp__playwright__browser_evaluate
 ---
 
 # Finish Beads Task: $ARGUMENTS
@@ -19,7 +19,7 @@ pwd
 
 Confirm:
 - Task is `in_progress`
-- You're in the correct worktree
+- You're on the correct task branch
 - All changes are visible
 
 ## 2. Verify Acceptance Criteria
@@ -56,6 +56,27 @@ make run-checks
 ```
 
 **If tests fail, STOP.** Fix the issues before proceeding. Do NOT close a task with failing tests.
+
+## 3.5. Browser Workflow Testing
+
+Check if the task involves UI-visible changes:
+
+```bash
+git diff main...HEAD --name-only | grep -E '\.(tsx|jsx|vue|svelte|html|css|scss)$' | head -20
+```
+
+If no UI-relevant files changed, skip this step.
+
+**Read `docs/browser-testing-protocol.md` and follow Phases 1-6:**
+
+1. Pre-flight checks — verify Playwright MCP available, dev server running (Phase 1)
+2. Infer workflows from diff — classify changed files, propose to user via `AskUserQuestion` for confirmation (Phase 2)
+3. Navigate → clear cache/storage → reload — ensures fresh state, not stale cache (Phase 3)
+4. Handle auth if page redirects to login (Phase 4)
+5. Execute workflow-type checklists — interact, verify outcomes, verify persistence via reload (Phase 5)
+6. Responsive check at desktop (1280x800) + mobile (375x812) and report findings (Phase 6)
+
+**Finish-task specific:** Treat browser findings as blockers. UI bugs are like test failures — fix them before proceeding. The task isn't done until the UI works.
 
 ## 4. Review and Update Documentation
 
@@ -140,25 +161,6 @@ Confirm:
 - Task status is `closed`
 - `bd sync` shows "no changes" or "already up to date"
 
-## 10.5. Frontend Evidence Prompt
-
-Check if the PR includes frontend changes:
-
-```bash
-git diff main...HEAD --name-only | grep -E '\.(tsx|jsx|css|scss)$'
-```
-
-If frontend files are present, inform the user:
-
-```
-This PR includes frontend changes. Consider capturing screenshots for the PR:
-  - Run the dev server and take desktop + mobile screenshots
-  - Add them to the PR description or as GitHub comments
-  - If spec/design images exist, compare visually
-```
-
-This is informational only — do not block on evidence capture.
-
 ## 11. Create Pull Request
 
 Determine the PR base branch before creating the PR:
@@ -204,35 +206,28 @@ EOF
 
 ## 11a. Code Review and Auto-Fix
 
-Run automated code review on the PR using parallel specialized reviewers:
+Run automated code review:
 
 ```
 /multi-review
 ```
 
-The multi-review will:
-- Launch 3-5 specialized review agents in parallel (simplicity, patterns, security, performance, architecture)
-- Select relevant reviewers based on change types
-- Aggregate findings by severity (Critical > Important > Suggestion)
-- Filter to high-confidence (≥80%) issues
-- Offer auto-fix for fixable issues
+Multi-review will:
+- Launch parallel specialized reviewers
+- Auto-fix findings (Critical + Important) without prompting
+- Require adjudication of deferred findings (or auto-escalate as tasks in autonomous context)
+- Track all findings in a resolution ledger
 
-### If Issues Found
+After multi-review completes:
 
-For each Critical or Important issue:
-
-1. **Review the finding** - Note the file, line, and reviewer that flagged it. Verify each claim against actual code before implementing — reviewers hallucinate too. Push back on findings that are incorrect for this codebase or violate YAGNI. No performative agreement. Fix silently or explain disagreement.
-2. **Implement fix** - Make the minimal change to address the issue
-3. **Verify** - Ensure the fix doesn't introduce new problems
-
-After fixing all issues:
-
+1. Run tests to verify fixes:
 ```bash
-# Run tests to verify fixes
 uv run pytest  # or pnpm test / make run-checks
+```
 
-# Commit the fixes
-git add -A
+2. If tests pass, commit any changes multi-review applied:
+```bash
+git add <specific files modified by review fixes>
 git commit -m "$(cat <<'EOF'
 fix: address code review findings
 
@@ -243,30 +238,20 @@ fix: address code review findings
 Co-Authored-By: Claude <noreply@anthropic.com>
 EOF
 )"
+```
 
-# Push updates
+3. Push updates:
+```bash
 git push
 ```
 
-Re-run review if significant changes were made:
-
-```
-/multi-review
-```
-
-**Iteration limit:** Maximum 3 review cycles. If issues persist after 3 attempts:
-- List remaining unresolved issues
-- Ask user: "Code review found issues I couldn't automatically resolve: <list>. Proceed with merge anyway, or address manually?"
-
-### If No Issues Found
-
-Proceed directly to merge decision.
+If multi-review deferred items as tasks, note them in the session summary.
 
 ### Merge Decision
 
-After code review passes (or user approves despite issues):
+After code review completes:
 
-"PR created: <URL>. Code review [passed / fixed N issues / has N unresolved issues]. Would you like me to merge it and clean up the worktree?"
+"PR created: <URL>. Code review [passed / fixed N issues / deferred W items as tasks]. Would you like me to merge it?"
 
 If user approves, proceed to step 12. If user declines, leave the PR open for manual review and skip to step 13.
 
@@ -300,8 +285,6 @@ If `gh pr merge` fails with "already merged", just delete the branch manually:
 git branch -d "$BRANCH_NAME" 2>/dev/null || true
 git push origin --delete "$BRANCH_NAME" 2>/dev/null || true
 ```
-
-Worktree cleanup is handled automatically by Claude Code when the session exits (native worktrees auto-remove when clean).
 
 ## 13. Re-Read Original Task Spec
 

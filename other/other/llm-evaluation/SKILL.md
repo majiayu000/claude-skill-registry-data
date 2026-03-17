@@ -664,32 +664,3 @@ class BenchmarkRunner:
             for metric, scores in results.items()
         }
 ```
-
-## Resources
-
-- [LangSmith Evaluation Guide](https://docs.smith.langchain.com/evaluation)
-- [RAGAS Framework](https://docs.ragas.io/)
-- [DeepEval Library](https://docs.deepeval.com/)
-- [Arize Phoenix](https://docs.arize.com/phoenix/)
-- [HELM Benchmark](https://crfm.stanford.edu/helm/)
-
-## Best Practices
-
-1. **Multiple Metrics**: Use diverse metrics for comprehensive view
-2. **Representative Data**: Test on real-world, diverse examples
-3. **Baselines**: Always compare against baseline performance
-4. **Statistical Rigor**: Use proper statistical tests for comparisons
-5. **Continuous Evaluation**: Integrate into CI/CD pipeline
-6. **Human Validation**: Combine automated metrics with human judgment
-7. **Error Analysis**: Investigate failures to understand weaknesses
-8. **Version Control**: Track evaluation results over time
-
-## Common Pitfalls
-
-- **Single Metric Obsession**: Optimizing for one metric at the expense of others
-- **Small Sample Size**: Drawing conclusions from too few examples
-- **Data Contamination**: Testing on training data
-- **Ignoring Variance**: Not accounting for statistical uncertainty
-- **Metric Mismatch**: Using metrics not aligned with business goals
-- **Position Bias**: In pairwise evals, randomize order
-- **Overfitting Prompts**: Optimizing for test set instead of real use

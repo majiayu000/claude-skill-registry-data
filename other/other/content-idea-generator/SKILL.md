@@ -9,6 +9,20 @@ Content without positioning is noise. Before generating ideas, confirm positioni
 
 ---
 
+## Mode
+
+Detect from context or ask: *"Quick ideas, full strategy, or complete content system?"*
+
+| Mode | What you get | Best for |
+|------|-------------|----------|
+| `quick` | 5 ideas, immediate output, no deep research | Breaking a block, starter brainstorm |
+| `standard` | 10–15 positioned ideas with formats and rationale | Regular content planning |
+| `deep` | Full content calendar system: pillars, formats, cadence, 30-day plan | Launching or overhauling content strategy |
+
+**Default: `standard`** — use `quick` if they just need to start. Use `deep` if they want a repeatable system, not just today's ideas.
+
+---
+
 ## Context Loading Gates
 
 **Before generating any ideas, collect:**

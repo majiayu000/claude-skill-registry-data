@@ -1,6 +1,8 @@
 ---
 name: ai-shaped-readiness-advisor
-description: Assess whether your product work is AI-first or AI-shaped. Score 5 competencies and recommend the next capability to build.
+description: Assess whether your product work is AI-first or AI-shaped. Use when evaluating AI maturity and choosing the next team capability to build.
+intent: >-
+  Assess whether your product work is **"AI-first"** (using AI to automate existing tasks faster) or **"AI-shaped"** (fundamentally redesigning how product teams operate around AI capabilities). Use this to evaluate your readiness across **5 essential PM competencies for 2026**, identify gaps, and get concrete recommendations on which capability to build first.
 type: interactive
 theme: ai-agents
 best_for:

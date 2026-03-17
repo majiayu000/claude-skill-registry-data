@@ -127,3 +127,4 @@ Include this header:
 
 - [WORKFLOW.md](WORKFLOW.md) - Detailed phase-by-phase checklists, false positive filtering, confidence scoring guide, and report template
 - [EXAMPLES.md](EXAMPLES.md) - Sample design review reports
+- [TROUBLESHOOTING.md](TROUBLESHOOTING.md) - Common issues with environment, viewports, accessibility, and output

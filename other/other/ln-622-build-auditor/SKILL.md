@@ -13,7 +13,7 @@ Specialized worker auditing build health and code quality tooling.
 
 ## Purpose & Scope
 
-- **Worker in ln-620 coordinator pipeline** - invoked by ln-620-codebase-auditor
+- **Worker in codebase audit pipeline**
 - Audit codebase for **build health issues** (Category 2: Critical Priority)
 - Check compiler/linter errors, deprecation warnings, type errors, failed tests, build config
 - Return structured findings to coordinator with severity, location, effort, recommendations
@@ -21,7 +21,7 @@ Specialized worker auditing build health and code quality tooling.
 
 ## Inputs (from Coordinator)
 
-**MANDATORY READ:** Load `shared/references/task_delegation_pattern.md#audit-coordinator--worker-contract` for contextStore structure.
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
 
 Receives `contextStore` with: `tech_stack` (including build_tool, test_framework), `best_practices`, `principles`, `codebase_root`, `output_dir`.
 
@@ -35,7 +35,8 @@ Receives `contextStore` with: `tech_stack` (including build_tool, test_framework
 4) **Collect Findings:** Record each violation with severity, location, effort, recommendation
 5) **Calculate Score:** Count violations by severity, calculate compliance score (X/10)
 6) **Write Report:** Build full markdown report in memory per `shared/templates/audit_worker_report_template.md`, write to `{output_dir}/622-build.md` in single Write call
-7) **Return Summary:** Return minimal summary to coordinator (see Output Format)
+7) **Trend Tracking:** Append build_health metric to results_log per `shared/references/results_log_pattern.md`. Metric: `build_health | 0-10 | penalty formula`. Calculate delta and status (improving/stable/declining) vs previous run.
+8) **Return Summary:** Return minimal summary to coordinator (see Output Format)
 
 ## Audit Rules (Priority: CRITICAL)
 
@@ -127,11 +128,11 @@ Receives `contextStore` with: `tech_stack` (including build_tool, test_framework
 
 ## Scoring Algorithm
 
-**MANDATORY READ:** Load `shared/references/audit_scoring.md` for unified scoring formula.
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md` and `shared/references/audit_scoring.md`.
 
 ## Output Format
 
-**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format.
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md` and `shared/templates/audit_worker_report_template.md`.
 
 Write report to `{output_dir}/622-build.md` with `category: "Build Health"` and checks: compilation_errors, linter_warnings, type_errors, test_failures, build_config.
 
@@ -143,6 +144,8 @@ Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 
 ## Critical Rules
 
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
+
 - **Do not auto-fix:** Report violations only; coordinator creates task for user to fix
 - **Tech stack aware:** Use contextStore to run appropriate build commands (npm vs cargo vs gradle)
 - **Exit code checking:** Always check exit code (0 = success, non-zero = failure)
@@ -151,19 +154,21 @@ Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 
 ## Definition of Done
 
-- contextStore parsed successfully (including output_dir)
-- All 5 build checks completed (compiler, linter, type checker, tests, config)
-- Findings collected with severity, location, effort, recommendation
-- Score calculated using penalty algorithm
-- Report written to `{output_dir}/622-build.md` (atomic single Write call)
-- Summary returned to coordinator
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
+
+- [ ] contextStore parsed successfully (including output_dir)
+- [ ] All 5 build checks completed (compiler, linter, type checker, tests, config)
+- [ ] Findings collected with severity, location, effort, recommendation
+- [ ] Score calculated using penalty algorithm
+- [ ] Report written to `{output_dir}/622-build.md` (atomic single Write call)
+- [ ] build_health metric appended to results_log with trend status
+- [ ] Summary returned to coordinator
 
 ## Reference Files
 
-- **Worker report template:** `shared/templates/audit_worker_report_template.md`
-- **Audit scoring formula:** `shared/references/audit_scoring.md`
 - **Audit output schema:** `shared/references/audit_output_schema.md`
 - **CI tool detection:** `shared/references/ci_tool_detection.md`
+- **Results log pattern:** `shared/references/results_log_pattern.md`
 - Build audit rules: [references/build_rules.md](references/build_rules.md)
 
 ---

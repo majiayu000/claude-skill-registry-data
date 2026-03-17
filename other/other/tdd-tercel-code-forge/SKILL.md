@@ -77,16 +77,43 @@ If other tests **fail**: fix them now, before proceeding.
 
 Go back to Step 1 for the next behavior.
 
-## Anti-Rationalization Table
+## Decision Rules
 
-| Thought | Reality |
-|---------|---------|
-| "This is too simple to test" | Simple code has the sneakiest bugs. Test it. |
-| "I'll write tests after" | Tests written after implementation pass immediately — they prove nothing. |
-| "I already tested manually" | Manual testing is ad-hoc and not reproducible. Write the test. |
-| "Just this one quick fix" | Quick fixes without tests become permanent regressions. |
-| "TDD is too slow" | TDD is faster than debugging untested code later. |
-| "Deleting my code and starting over is wasteful" | Sunk cost fallacy. If code isn't test-driven, rewrite. |
+| If you're about to... | Instead... | Why |
+|----------------------|-----------|-----|
+| Write production code without a test | STOP — write the failing test first | Tests written after implementation pass immediately and prove nothing |
+| Skip testing because the change is "simple" | Write the test — it will be quick if it's truly simple | Simple code has the sneakiest bugs (off-by-one, null edge cases) |
+| Apply a quick fix without a regression test | Write the test, then fix | Untested fixes become permanent regressions |
+| Continue with code that wasn't test-driven | Consider rewriting test-first | Sunk cost — untested code is a liability regardless of time spent |
+
+## Example
+
+```
+Task: Add isPalindrome(str) function
+
+1. RED — Write test:
+   test("isPalindrome returns true for 'racecar'", () => {
+     expect(isPalindrome("racecar")).toBe(true);
+   });
+
+2. VERIFY RED — Run: npm test
+   ✗ ReferenceError: isPalindrome is not defined    ← fails correctly
+
+3. GREEN — Minimal code:
+   function isPalindrome(str) {
+     return str === str.split("").reverse().join("");
+   }
+
+4. VERIFY GREEN — Run: npm test
+   ✓ isPalindrome returns true for 'racecar'        ← passes
+   42 passed, 0 failed
+
+5. REFACTOR — (no changes needed)
+
+6. REPEAT — next test: edge case with empty string
+```
+
+**Test runner detection:** Check `package.json` scripts, `pytest.ini`, `Cargo.toml`, `go.mod`, or `Makefile` for the project's test command before starting the cycle. Use the same runner consistently.
 
 ## Verification Checklist
 

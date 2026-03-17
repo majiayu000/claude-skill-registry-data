@@ -46,11 +46,11 @@ L2 Domain Coordinator that orchestrates security scanning and configuration for 
 ### Phase 2: Delegate Scans
 
 **Step 1: Invoke ln-761 Secret Scanner**
-- Delegate via Task tool
+- Delegate via Agent tool
 - Receive: findings list, severity summary, remediation guidance
 
 **Step 2: Invoke ln-625 Dependencies Auditor (mode=vulnerabilities_only)**
-- Delegate via Task tool (can run parallel with Step 1)
+- Delegate via Agent tool (can run parallel with Step 1)
 - Pass parameter: `mode=vulnerabilities_only`
 - Receive: vulnerability list, CVSS scores, fix recommendations
 
@@ -99,7 +99,7 @@ L2 Domain Coordinator that orchestrates security scanning and configuration for 
 
 ## Delegation Pattern
 
-> **CRITICAL:** All delegations use Task tool with `subagent_type: "general-purpose"` for context isolation.
+> **CRITICAL:** All delegations use Agent tool with `subagent_type: "general-purpose"` for context isolation.
 
 | Worker | Parallel | Purpose |
 |--------|----------|---------|
@@ -108,19 +108,32 @@ L2 Domain Coordinator that orchestrates security scanning and configuration for 
 
 **Prompt template:**
 ```
-Task(description: "Secret scanning via ln-761",
-     prompt: "Execute ln-761-secret-scanner. Read skill from ln-761-secret-scanner/SKILL.md. Project: {projectPath}",
+Agent(description: "Secret scanning via ln-761",
+     prompt: "Execute security scanner.
+
+Step 1: Invoke worker:
+  Skill(skill: \"ln-761-secret-scanner\")
+
+CONTEXT:
+Project: {projectPath}",
      subagent_type: "general-purpose")
 
-Task(description: "Dependency vulnerability scan via ln-625",
-     prompt: "Execute ln-625-dependencies-auditor with mode=vulnerabilities_only. Read skill from ln-625-dependencies-auditor/SKILL.md. Project: {projectPath}. Mode: vulnerabilities_only (only CVE scan, skip outdated/unused checks).",
+Agent(description: "Dependency vulnerability scan via ln-625",
+     prompt: "Execute vulnerability scanner.
+
+Step 1: Invoke worker:
+  Skill(skill: \"ln-625-dependencies-auditor\")
+
+CONTEXT:
+Project: {projectPath}
+Mode: vulnerabilities_only (only CVE scan, skip outdated/unused checks)",
      subagent_type: "general-purpose")
 ```
 
-**Pattern:** Both workers can execute in parallel via Task tool, then aggregate results.
+**Pattern:** Both workers can execute in parallel via Agent tool, then aggregate results.
 
 **Anti-Patterns:**
-- ❌ Direct Skill tool invocation without Task wrapper
+- ❌ Direct Skill tool invocation without Agent wrapper
 - ❌ Any execution bypassing subagent context isolation
 - ❌ Calling ln-625 without mode parameter (would run full audit)
 
@@ -152,7 +165,7 @@ Task(description: "Dependency vulnerability scan via ln-625",
 
 - **Always pass `mode=vulnerabilities_only` to ln-625** — full audit mode is not appropriate for bootstrap context
 - **Preserve existing configs** — if `.gitleaks.toml`, `SECURITY.md`, or `.pre-commit-config.yaml` exist, update rather than overwrite
-- **Use Task tool with `subagent_type: "general-purpose"`** for all worker delegations (context isolation)
+- **Use Agent tool with `subagent_type: "general-purpose"`** for all worker delegations (context isolation)
 - **Never fail on missing tools** — log warnings for unavailable scanners, continue with available ones
 - **Critical findings block completion** — flag for immediate attention before returning to parent
 

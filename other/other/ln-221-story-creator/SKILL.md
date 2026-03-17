@@ -1,6 +1,6 @@
 ---
 name: ln-221-story-creator
-description: Creates Stories from IDEAL plan (CREATE) or appends user-requested Stories (ADD). Generates 8-section documents, validates INVEST, creates in Linear.
+description: Creates Stories from IDEAL plan (CREATE) or appends user-requested Stories (ADD). Generates 9-section documents, validates INVEST, creates in Linear.
 license: MIT
 ---
 
@@ -78,14 +78,13 @@ Invoked by ln-220-story-coordinator (Phase 5a for CREATE, Phase 5c for ADD).
 |-------|----------|--------|-------------|
 | `epicId` | Yes | args, kanban, user | Epic to process |
 
-**Resolution:** Per `shared/references/input_resolution_pattern.md` — Epic Resolution Chain.
+**Resolution:** Epic Resolution Chain.
 **Status filter:** Active (planned/started)
 
 ## Tools Config
 
 **MANDATORY READ:** Load `shared/references/tools_config_guide.md`, `shared/references/storage_mode_detection.md`, `shared/references/input_resolution_pattern.md`
 
-Read `docs/tools_config.md` (bootstrap if missing per tools_config_guide.md).
 Extract: `task_provider` = Task Management → Provider
 
 ## Quality Criteria
@@ -103,16 +102,14 @@ Extract: `task_provider` = Task Management → Provider
 
 ### Phase 1: Generate Story Documents
 
-**Step 0: Resolve epicId** (per input_resolution_pattern.md, standalone invocation only):
-- IF epicData provided by ln-220 orchestrator → use it (skip resolution)
-- IF args provided → use args
-- ELSE IF git branch matches `feature/epic-{N}-*` → extract Epic N
-- ELSE IF kanban has exactly 1 active Epic → suggest
-- ELSE → AskUserQuestion: show active Epics from kanban
+**Step 0: Resolve epicId** (standalone only — skip if epicData provided by ln-220 orchestrator):
+Run Epic Resolution Chain per guide.
 
 **Step 1: Generate Documents**
 
-Load story template (see "Template Loading" section) and use 8 sections.
+Load story template (see "Template Loading" section) and use 9 sections.
+
+**Template Discipline (MANDATORY):** Story documents contain EXACTLY 9 sections from the template: Story, Context, Acceptance Criteria, Implementation Tasks, Test Strategy, Technical Notes, Definition of Done, Dependencies, Assumptions. Do NOT add extra sections (e.g., "User Scenarios", "Industry Benchmark", "API Design"). Content that does not fit the 9 sections is either Technical Notes material or out of scope.
 
 For EACH Story in IDEAL plan:
 
@@ -121,11 +118,12 @@ For EACH Story in IDEAL plan:
 | **1. Story** | As a [persona] / I want [capability] / So that [value] |
 | **2. Context** | Current Situation (from Epic Scope Out) / Desired Outcome (from Epic Success Criteria) |
 | **3. Acceptance Criteria** | Copy AC from idealPlan (3-5 GWT scenarios) |
-| **4. Implementation Tasks** | Placeholder: "Tasks created via ln-300-task-coordinator after ln-310-story-validator" |
+| **4. Implementation Tasks** | Placeholder: "Tasks created via ln-300-task-coordinator after ln-310-multi-agent-validator" |
 | **5. Test Strategy** | Copy test counts from idealPlan, Risk-Based Testing note |
 | **6. Technical Notes** | **INSERT Orchestrator Brief** from `idealPlan[i].orchestratorBrief` (markers `<!-- ORCHESTRATOR_BRIEF_START/END -->`). **INSERT Standards Research** in Library Research subsection |
 | **7. Definition of Done** | Standard checklist from template |
 | **8. Dependencies** | Empty OR "Depends On: US00X" if ordering implies dependency |
+| **9. Assumptions** | Extract from Technical Notes + AC: FEASIBILITY (infra), DEPENDENCY (APIs), DATA (format), SCOPE (exclusions). Default confidence: MEDIUM |
 
 **Output:** Array of N complete Story documents (5-10) with Standards Research inserted.
 
@@ -136,13 +134,15 @@ For EACH Story, check:
 | Criterion | Check | Pass | Fail |
 |-----------|-------|------|------|
 | **Independent** | No circular dependencies | ✅ | ❌ STOP |
-| **Negotiable** | AC focus on WHAT not HOW | ✅ | ❌ STOP |
+| **Negotiable** | AC focus on WHAT user observes, not HOW system works. ACs with system internals (lookup priority, cache layers, endpoint URLs, architecture) → move to Technical Notes | ✅ | ❌ STOP |
 | **Valuable** | Clear "So that" value | ✅ | ❌ STOP |
 | **Estimable** | Size within checklist #9 range | ✅ | ❌ STOP |
 | **Small** | AC/hours/tests per checklist #9 | ✅ | ❌ STOP |
 | **Testable** | Measurable AC (GWT format) | ✅ | ❌ STOP |
 
 **Error if ANY Story fails** → Report to orchestrator, stop execution.
+
+**AC Count Gate:** If any Story has >5 ACs → STOP. Report to orchestrator: "Story USXXX has N ACs (limit: 5). Split required." Do not proceed with creation.
 
 ### Phase 3: Show Preview
 
@@ -240,7 +240,7 @@ STORIES CREATED for Epic 7: OAuth Authentication
 Total: 5 Stories, 62h, 90 tests
 
 NEXT STEPS:
-1. Run ln-310-story-validator to validate Stories (Backlog → Todo)
+1. Run ln-310-multi-agent-validator to validate Stories (Backlog → Todo)
 2. Use ln-300-task-coordinator to create tasks
 ```
 
@@ -254,11 +254,13 @@ NEXT STEPS:
 | **Epic Grouping** | Reuse Epic header if exists (search by Epic number), don't duplicate |
 | **Story Numbering** | Sequential across ALL Epics (read Next Story from kanban_board.md) |
 | **No Code** | Descriptions contain approach ONLY, not code |
+| **Template Discipline** | Story documents contain EXACTLY 9 template sections. No extra sections (User Scenarios, Industry Benchmark, etc.). Non-template content → Technical Notes or discard |
+| **AC Purity** | ACs describe observable user behavior only. System internals (architecture, endpoint design, cache layers) → Technical Notes |
 
 ## Definition of Done
 
 **✅ Phase 1:**
-- [ ] All N Stories have 8 sections
+- [ ] All N Stories have 9 sections
 - [ ] Standards Research inserted in Technical Notes → Library Research
 
 **✅ Phase 2:**
@@ -294,7 +296,7 @@ NEXT STEPS:
 
 **Location:** `shared/templates/story_template.md` (centralized)
 **Local Copy:** `docs/templates/story_template.md` (in target project)
-**Purpose:** Universal Story template (8 sections)
+**Purpose:** Universal Story template (9 sections)
 **Template Version:** 9.0.0
 
 ## Integration

@@ -1,6 +1,6 @@
 ---
 name: ln-645-open-source-replacer
-description: "Goal-based open-source replacement auditor: discovers custom modules (>100 LOC), analyzes PURPOSE via code reading, searches OSS alternatives via MCP Research (WebSearch, Context7, Ref), evaluates quality (stars, maintenance, license, CVE, API compatibility), generates migration plan."
+description: "Discovers custom modules (>100 LOC), analyzes purpose, searches OSS alternatives via MCP Research, evaluates quality (stars, license, CVE), generates migration plan."
 license: MIT
 ---
 
@@ -20,14 +20,12 @@ L3 Worker that discovers custom modules, analyzes their purpose, and finds battl
 - Generate migration plan for viable replacements
 - Output: file-based report to `docs/project/.audit/`
 
-**Out of Scope** (owned by ln-625-dependencies-auditor):
+**Out of Scope:**
 - Pattern-based detection of known reinvented wheels (custom sorting, hand-rolled validation)
 - Package vulnerability scanning (CVE/CVSS for existing dependencies)
+- Story-level optimality checks via OPT- prefix
 
-**Out of Scope** (owned by ln-511-code-quality-checker):
-- Story-level optimality checks via OPT- prefix (ln-511 cross-references ln-645 reports)
-
-## Input (from ln-640)
+## Input
 
 ```
 - codebase_root: string        # Project root
@@ -41,6 +39,8 @@ L3 Worker that discovers custom modules, analyzes their purpose, and finds battl
 ```
 
 ## Workflow
+
+**MANDATORY READ:** Load `shared/references/two_layer_detection.md` for detection methodology.
 
 ### Phase 1: Discovery + Classification
 
@@ -193,7 +193,7 @@ FOR EACH module, FOR EACH alternative:
 
 ### Phase 5: Write Report + Migration Plan
 
-**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format.
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md` and `shared/templates/audit_worker_report_template.md`.
 
 Build report in memory, write to `{output_dir}/645-open-source-replacer[-{domain}].md`.
 
@@ -289,8 +289,11 @@ Severity mapping:
 - **HIGH:** HIGH confidence replacement for module >200 LOC
 - **MEDIUM:** MEDIUM confidence, or HIGH confidence for 100-200 LOC
 - **LOW:** LOW confidence (partial coverage only)
+- **Exception:** Custom module with domain-specific logic not covered by OSS package → skip. Feature parity <80% → skip recommendation. **Layer 2:** Verify replacement has full feature parity before recommending
 
 ## Critical Rules
+
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
 
 - **Goal-based, not pattern-based:** Read code to understand PURPOSE before searching alternatives
 - **MCP Research mandatory:** Always search via WebSearch/Context7/Ref, never assume packages exist
@@ -305,21 +308,22 @@ Severity mapping:
 
 ## Definition of Done
 
-- Custom modules discovered (>= 100 LOC, utility/integration type)
-- Pre-classification gate applied: domain-specific modules excluded with documented reason
-- Goals extracted for each module (domain, inputs, outputs, operations)
-- Open-source alternatives searched via MCP Research (WebSearch, Context7, Ref)
-- Security gate passed: all candidates checked for CVEs via WebSearch
-- License classified: Permissive/Copyleft/Unknown for each candidate
-- Ecosystem alignment checked: existing project dependencies considered
-- Confidence scored for each replacement (HIGH/MEDIUM/LOW)
-- Migration plan generated for HIGH/MEDIUM confidence replacements
-- Report written to `{output_dir}/645-open-source-replacer[-{domain}].md`
-- Summary returned to coordinator
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
+
+- [ ] Custom modules discovered (>= 100 LOC, utility/integration type)
+- [ ] Pre-classification gate applied: domain-specific modules excluded with documented reason
+- [ ] Goals extracted for each module (domain, inputs, outputs, operations)
+- [ ] Open-source alternatives searched via MCP Research (WebSearch, Context7, Ref)
+- [ ] Security gate passed: all candidates checked for CVEs via WebSearch
+- [ ] License classified: Permissive/Copyleft/Unknown for each candidate
+- [ ] Ecosystem alignment checked: existing project dependencies considered
+- [ ] Confidence scored for each replacement (HIGH/MEDIUM/LOW)
+- [ ] Migration plan generated for HIGH/MEDIUM confidence replacements
+- [ ] Report written to `{output_dir}/645-open-source-replacer[-{domain}].md`
+- [ ] Summary returned to coordinator
 
 ## Reference Files
 
-- **Worker report template:** `shared/templates/audit_worker_report_template.md`
 - **Scoring algorithm:** `shared/references/audit_scoring.md`
 - **MANDATORY READ:** `shared/references/research_tool_fallback.md`
 

@@ -26,6 +26,17 @@ Supports four modes:
 - Received code review feedback and need to evaluate/respond to it (`--feedback`)
 - Want to post a code review directly to a GitHub PR for team visibility (`--github-pr`)
 
+## Examples
+
+```bash
+/code-forge:review user-auth             # Review a specific feature
+/code-forge:review --project             # Full project review
+/code-forge:review                       # Auto-detect features to review
+/code-forge:review --feedback            # Evaluate incoming review comments
+/code-forge:review --github-pr 123       # Post review to GitHub PR #123
+/code-forge:review user-auth --save      # Review and save report to disk
+```
+
 ## Workflow
 
 ```
@@ -49,222 +60,22 @@ All issues use a 4-tier severity system, ordered by merge-blocking priority:
 
 ## Review Dimensions Reference
 
-The following dimensions are used in both Feature Mode and Project Mode reviews. They are ordered by priority tier.
+For the full list of 14 review dimensions with check items, read `references/dimensions.md`.
 
-### Tier 1 — Must-Fix Before Merge (★★★★★)
+**Quick summary by tier:**
+- **Tier 1 (Must-Fix):** D1 Functional Correctness, D2 Security, D3 Resource Management
+- **Tier 2 (Should-Fix):** D4 Code Quality, D5 Architecture, D6 Performance, D7 Test Coverage
+- **Tier 3 (Recommended):** D8 Error Handling, D9 Observability, D10 Standards
+- **Tier 4 (Nice-to-Have):** D11 Backward Compat, D12 Maintainability, D13 Dependencies, D14 Accessibility (frontend only)
 
-#### D1: Functional Correctness & Business Logic
+**Dimension Application Rules:**
+- **D1–D3:** Always apply. Potential merge blockers.
+- **D4–D7:** Always apply. Should-fix items.
+- **D8–D10:** Always apply. Flag as warnings/suggestions.
+- **D11–D13:** Always apply but expect mostly suggestions.
+- **D14:** Apply ONLY if `project_type` is `"frontend"` or `"fullstack"`.
 
-Does the code actually implement what it should? This is the highest-priority dimension.
-
-Check items:
-- **Requirements fulfillment:** Does the code implement the specified behavior correctly?
-- **Boundary conditions:** Off-by-one errors, empty collections, zero/negative values, max values, null/undefined
-- **Concurrency & race conditions:** Shared mutable state, missing locks/synchronization, TOCTOU bugs
-- **Idempotency:** Are operations safe to retry? Are duplicate requests handled?
-- **State transitions:** Are all states reachable? Are invalid transitions prevented?
-- **Data consistency:** Transactions boundaries, partial failure handling, eventual consistency gaps
-- **Type correctness:** Type coercion surprises, implicit conversions, generic type safety
-- **Edge cases in business rules:** Negative amounts, timezone handling, leap years, Unicode, locale-specific logic
-
-#### D2: Security Vulnerabilities
-
-Does the code introduce any security risk?
-
-Check items:
-- **Input validation:** All external input (HTTP params, form data, file uploads, user-provided env vars) must be validated before use — prefer schema-based validation over scattered manual checks for complex input
-- **Injection:** SQL injection (string concatenation), command injection, LDAP injection, template injection — never concatenate strings into SQL, shell commands, or log messages; use parameterized queries and safe APIs
-- **XSS:** Reflected, stored, DOM-based — unescaped user content in HTML/JS; dynamic frontend content must use framework-native safe rendering
-- **Authentication & authorization:** Missing auth checks, privilege escalation, insecure session management
-- **Secrets management:** Hardcoded credentials, API keys in code, secrets in logs, `.env` committed — use environment variables + secret manager
-- **CSRF / SSRF:** Missing tokens, unvalidated redirect URLs, internal network access
-- **Deserialization:** Unsafe deserialization of untrusted data (pickle, Java serialization, JSON.parse with eval)
-- **Cryptography:** Weak algorithms (MD5/SHA1 for passwords), ECB mode, predictable random, custom crypto
-- **Path traversal:** Unsanitized file paths from user input
-- **Log forging / information disclosure:** Sensitive data in logs, verbose error messages to users; structured logging with request context recommended for service code
-- **Dependency vulnerabilities:** Known CVEs in direct or transitive dependencies
-
-#### D3: Resource Management & Lifecycle
-
-Are all acquired resources properly released? This is especially critical for long-running services.
-
-Check items:
-- **Event listeners:** `addEventListener` without `removeEventListener` on cleanup
-- **Timers:** `setInterval`/`setTimeout` without `clearInterval`/`clearTimeout`
-- **Subscriptions:** Observables, pub/sub, WebSocket connections not unsubscribed on teardown
-- **File handles / DB connections:** Opened but not closed, missing `finally`/`defer`/`using`/`with`
-- **Goroutine / thread / fiber leaks:** Spawned without termination condition or cancellation
-- **Memory:** Unbounded caches/maps, closures capturing large scopes, circular references preventing GC
-- **Stream / iterator:** Not consumed or not closed, backpressure not handled
-- **Framework lifecycle:** React `useEffect` cleanup, Angular `OnDestroy`, Vue `onUnmounted`, iOS `deinit`
-
-### Tier 2 — Should-Fix (★★★★☆)
-
-#### D4: Code Quality & Readability
-
-Is the code clear, maintainable, and following project conventions?
-
-Check items:
-- **Naming:** Variables, functions, classes use descriptive, intention-revealing names; no vague standalone names (`data`, `temp`, `obj`, `item`, `info`, `val`, `process()`, `handle()`, `doIt()`, `Manager`, `Util`, `Helper`) — qualified forms like `userData`, `handleClick()`, `ConnectionManager` are fine; follow language ecosystem conventions
-- **Magic values:** No unexplained literals — use named constants
-- **Function length:** Functions > 50 lines should be scrutinized; > 100 lines likely needs splitting (defer to project `CLAUDE.md` for team-specific thresholds)
-- **Side effects:** I/O and state mutations should be isolated to boundaries where practical; keep core logic predictable and testable
-- **Control flow:** Prefer guard clauses (early return) over deeply nested `if/else`
-- **DRY:** No copy-pasted logic blocks; shared behavior extracted appropriately
-- **Dead code:** No unused functions, unreachable branches, commented-out code, unused imports
-- **Comments quality:** Present only where logic isn't self-evident (complex algorithms, performance trade-offs, business rules, counter-intuitive code); no obvious/redundant comments; `TODO` / `HACK` / `FIXME` should include enough context to be actionable later
-- **Code structure:** Appropriate abstractions, no unnecessary complexity or premature optimization
-- **Consistent style:** Follows project's existing patterns for formatting, file organization, module structure
-
-#### D5: Architecture & Design
-
-Does the change fit the project's architectural conventions?
-
-Check items:
-- **Layer boundaries:** Respects existing architectural layers (controller/service/repo, MVC, hexagonal, etc.)
-- **Dependency direction:** No circular dependencies, lower layers don't depend on higher layers
-- **SOLID principles:** Single responsibility, open-closed, interface segregation violations
-- **Coupling:** New code not tightly coupled to implementation details of other modules
-- **Abstraction level:** Not introducing a parallel system alongside an existing one
-- **API surface:** Public interfaces are clean, minimal, consistent, and well-defined
-- **Module cohesion:** Related functionality grouped together; no God Class / God Function
-- **New abstractions justified:** If new patterns/frameworks/base classes are introduced, are they warranted?
-
-#### D6: Performance & Efficiency
-
-Are there obvious performance problems on hot paths?
-
-Check items:
-- **N+1 queries:** Database queries inside loops
-- **Missing indexes:** Frequent queries on unindexed columns
-- **Unnecessary allocations:** Creating objects inside tight loops, large object copies on hot paths
-- **Blocking in async context:** Synchronous I/O in async code, `await` in loops when `Promise.all` is appropriate
-- **Lock granularity:** Oversized critical sections, lock contention on hot paths
-- **Cache misuse:** Cache stampede / thundering herd, unbounded cache growth, no TTL
-- **Algorithmic complexity:** O(n²) or worse where O(n log n) or O(n) is feasible
-- **Payload size:** Fetching all columns when only a few needed, unbounded result sets, no pagination
-- **Frontend:** Unnecessary re-renders, missing memoization, layout thrashing, large bundle imports
-
-#### D7: Test Coverage & Verifiability
-
-Are critical paths tested? Are tests meaningful?
-
-Check items:
-- **Coverage of critical paths:** Core business logic, state transitions, and data transformations have tests
-- **Happy path:** Normal/expected flow is tested
-- **Sad path:** Error conditions, invalid inputs, failure scenarios are tested
-- **Edge cases:** Boundary values, empty inputs, concurrent access, large inputs
-- **Test independence:** Tests don't depend on execution order or shared mutable state
-- **Determinism:** No flaky tests relying on timing, network, or random data without seeding
-- **Meaningful assertions:** Tests assert behavior, not implementation; not just "no error thrown"
-- **Test naming:** Test names describe the scenario and expected behavior
-- **Mock appropriateness:** External dependencies mocked; internal logic not over-mocked
-- **Missing test files:** Source modules without any corresponding test coverage
-
-### Tier 3 — Recommended Fix (★★★☆☆)
-
-#### D8: Error Handling & Robustness
-
-Are errors properly caught, classified, reported, and recovered from?
-
-Check items:
-- **Swallowed exceptions:** Catch blocks that silently ignore errors (empty catch, catch-and-log-only for critical ops)
-- **Over-broad catch:** Catching `Exception` / `Error` / `object` instead of specific types
-- **Error propagation:** Errors from downstream services/APIs properly surfaced or wrapped
-- **User-facing errors:** Error messages are user-friendly, no stack traces or internal details leaked
-- **Timeout handling:** Network calls, DB queries, external APIs have timeouts configured
-- **Retry logic:** Retries have backoff, jitter, and max-retry limits; not infinite retry loops
-- **Fallback / degradation:** Critical paths have fallback behavior when dependencies fail
-- **Promise / async errors:** Unhandled promise rejections, missing `.catch()`, missing error boundaries (React)
-
-#### D9: Observability (Logging / Metrics / Tracing)
-
-Can you debug and monitor this code in production?
-
-Check items:
-- **Structured logging:** Key business operations emit structured logs with context (user ID, request ID, operation)
-- **Log levels:** Appropriate use of debug/info/warn/error levels
-- **Error logging:** Exceptions logged with stack traces and context; not swallowed silently
-- **Sensitive data in logs:** No passwords, tokens, PII, or credit card numbers in log output
-- **Request tracing:** Trace ID / correlation ID propagated across service boundaries
-- **Business metrics:** Key business events have counters/gauges (orders placed, payments processed, errors)
-- **Health/readiness signals:** Service exposes health checks if applicable
-- **Alertability:** Can an on-call engineer understand and act on the logs/metrics this code produces?
-
-#### D10: Standards & Conventions
-
-Does the code follow team and project conventions?
-
-Check items:
-- **Lint compliance:** Code passes project linter configuration
-- **File/directory structure:** Follows project's established organization patterns
-- **Import ordering:** Follows project convention for import grouping/ordering
-- **Dependency management:** New dependencies declared properly, version pinned, justified
-- **Naming conventions:** Files, classes, functions follow project naming patterns (camelCase, snake_case, etc.)
-- **Configuration:** New config via environment variables or config files, not hardcoded
-- **No surprise technology:** New frameworks, libraries, or patterns introduced without team discussion
-
-### Tier 4 — Nice-to-Have / Track as Tech Debt (★★☆☆☆ / ★☆☆☆☆)
-
-#### D11: Backward Compatibility & Ops-Friendliness
-
-Will this change break existing consumers or complicate deployment?
-
-Check items:
-- **API contract:** Existing API fields/endpoints not removed or semantically changed without versioning
-- **Database schema:** Column renames, type changes, or drops have migration + backward-compat strategy
-- **Configuration changes:** New required config keys have defaults or migration docs
-- **Cache/queue keys:** Key format changes won't corrupt existing cached data
-- **Enum/constant changes:** Value semantics preserved; new values don't break existing consumers
-- **Rollback safety:** Can this change be rolled back without data loss or corruption?
-- **Feature flags / gradual rollout:** High-risk changes gated behind feature flags
-
-#### D12: Maintainability & Tech Debt
-
-Does this change leave the codebase better or worse?
-
-Check items:
-- **Copy-paste debt:** Large duplicated blocks that should be extracted
-- **Deep inheritance:** Inheritance depth > 3 levels; prefer composition
-- **Magic configuration:** Behavior controlled by non-obvious environment variables or config
-- **Over-engineering:** Abstractions, extension points, or patterns for hypothetical future needs
-- **Under-engineering:** Quick hacks that will clearly need rework soon (TODO/FIXME/HACK comments)
-- **Coupling to internals:** Depending on internal implementation details of libraries or other modules
-
-#### D13: Dependencies & Supply Chain Security
-
-Are new or updated dependencies safe and justified?
-
-Check items:
-- **Known CVEs:** Dependencies scanned for known vulnerabilities
-- **Version pinning:** Versions locked (lockfile present and updated); not using `latest` or `*`
-- **Minimal footprint:** Not pulling in a large library for a small utility
-- **Maintenance status:** Dependency actively maintained, not abandoned/archived
-- **License compatibility:** License compatible with project requirements
-- **Transitive risk:** Major transitive dependencies checked for known issues
-
-#### D14: Accessibility / i18n (Frontend & Mobile Only)
-
-Is the UI usable by all users? _(Skip this dimension for backend-only projects.)_
-
-Check items:
-- **Semantic HTML:** Proper use of heading levels, landmarks, form labels
-- **ARIA attributes:** Interactive elements have appropriate `aria-label`, `role`, states
-- **Keyboard navigation:** All interactive elements reachable and operable via keyboard
-- **Color contrast:** Text meets WCAG AA contrast ratio (4.5:1 for normal text)
-- **Hardcoded strings:** User-visible text uses i18n/l10n framework, not hardcoded
-- **RTL support:** Layout not broken in right-to-left languages (if applicable)
-- **Screen reader:** Dynamic content changes announced; focus management correct
-
-### Dimension Application Rules
-
-These rules apply to both Feature Mode and Project Mode reviews:
-
-- **D1–D3 (Tier 1):** Always apply. These are potential merge blockers.
-- **D4–D7 (Tier 2):** Always apply. These are should-fix items.
-- **D8–D10 (Tier 3):** Always apply. Flag as warnings/suggestions.
-- **D11–D13 (Tier 4):** Always apply but expect mostly suggestions.
-- **D14 (Accessibility/i18n):** Apply ONLY if `project_type` is `"frontend"` or `"fullstack"`.
+When spawning review sub-agents, instruct them to read `references/dimensions.md` for the full check items.
 
 ---
 
@@ -300,19 +111,20 @@ If the user provided a feature name (e.g., `/code-forge:review user-auth`):
 
 If the user passed `--project` (e.g., `/code-forge:review --project`):
 
-→ **Project Mode** — go to Step 2P
+→ **Project Mode** with `scope = "full"` — go to Step 2P
 
 #### 1.3 No Arguments
 
 If no arguments provided:
 
-1. Scan `{output_dir}/*/state.json` for all features
+1. Scan **both** `{output_dir}/*/state.json` and `.code-forge/tmp/*/state.json` for all features
 2. Filter to features with at least one `"completed"` task
 3. Build choice list:
    - If completed features exist: include each as an option, **plus** "Review entire project" as the last option
-   - If no completed features: go to **Project Mode** automatically
-4. If only one option (project review): go to **Project Mode** automatically
+   - If no completed features: go to **Project Mode** with `scope = "changes"` automatically
+4. If only one option (project review): go to **Project Mode** with `scope = "changes"` automatically
 5. If multiple options: use `AskUserQuestion` to let user select
+   - If user selects "Review entire project": go to **Project Mode** with `scope = "changes"`
 
 ---
 
@@ -321,7 +133,8 @@ If no arguments provided:
 #### 2F.1 Find Feature
 
 1. Look for `{output_dir}/{feature_name}/state.json`
-2. If not found: show error, list available features
+2. If not found, also check `.code-forge/tmp/{feature_name}/state.json`
+3. If still not found: show error, list available features
 
 #### 2F.2 Load Feature Context
 
@@ -413,7 +226,7 @@ Record: `project_type` = `"frontend"` | `"backend"` | `"fullstack"` | `"library"
 
 **Offload to sub-agent** to handle the full diff analysis.
 
-Spawn a `Task` tool call with:
+Spawn an `Agent` tool call with:
 - `subagent_type`: `"general-purpose"`
 - `description`: `"Review feature: {feature_name}"`
 
@@ -434,125 +247,7 @@ Additionally, always check **Plan Consistency** (feature mode specific):
 - No unplanned features added (scope creep)
 - All planned tasks are implemented
 
-**Sub-agent must return the following structured format:**
-
-```
-REVIEW_SUMMARY:
-  overall_rating: <pass | pass_with_notes | needs_changes>
-  total_issues: <number>
-  blocker_count: <number>
-  critical_count: <number>
-  warning_count: <number>
-  suggestion_count: <number>
-  merge_readiness: <ready | fix_required | rework_required>
-  dimensions_reviewed: <list of dimension IDs reviewed>
-
-FUNCTIONAL_CORRECTNESS:                              # D1
-  rating: <pass | warning | critical>
-  issues:
-  - severity: <blocker | critical | warning | suggestion>
-    file: path/to/file.ext
-    line: <number or range>
-    title: <short title>
-    description: <what's wrong and why it matters>
-    suggestion: <how to fix>
-
-SECURITY:                                            # D2
-  rating: <pass | warning | critical>
-  issues:
-  - severity: <blocker | critical | warning | suggestion>
-    file: path/to/file.ext
-    line: <number or range>
-    title: <short title>
-    description: <what's wrong and why it matters>
-    suggestion: <how to fix>
-
-RESOURCE_MANAGEMENT:                                 # D3
-  rating: <pass | warning | critical>
-  issues:
-  - severity: <blocker | critical | warning | suggestion>
-    file: path/to/file.ext
-    line: <number or range>
-    title: <short title>
-    description: <what's wrong and why it matters>
-    suggestion: <how to fix>
-
-CODE_QUALITY:                                        # D4
-  rating: <good | acceptable | needs_work>
-  issues:
-  - severity: <critical | warning | suggestion>
-    file: path/to/file.ext
-    line: <number or range>
-    title: <short title>
-    description: <what's wrong and why it matters>
-    suggestion: <how to fix>
-
-ARCHITECTURE:                                        # D5
-  rating: <good | acceptable | needs_work>
-  issues:
-  - severity: <critical | warning | suggestion>
-    file: path/to/file.ext
-    line: <number or range>
-    title: <short title>
-    description: <what's wrong and why it matters>
-    suggestion: <how to fix>
-
-PERFORMANCE:                                         # D6
-  rating: <good | acceptable | needs_work>
-  issues:
-  - severity: <critical | warning | suggestion>
-    file: path/to/file.ext
-    line: <number or range>
-    title: <short title>
-    description: <what's wrong and why it matters>
-    suggestion: <how to fix>
-
-TEST_COVERAGE:                                       # D7
-  rating: <good | acceptable | needs_work>
-  coverage_gaps:
-  - severity: <critical | warning | suggestion>
-    file: path/to/source.ext
-    description: <what scenario is untested>
-
-ERROR_HANDLING_AND_OBSERVABILITY:                     # D8 + D9
-  rating: <good | acceptable | needs_work>
-  issues:
-  - severity: <warning | suggestion>
-    file: path/to/file.ext
-    line: <number or range>
-    category: <error_handling | logging | metrics | tracing>
-    title: <short title>
-    description: <what's wrong and why it matters>
-    suggestion: <how to fix>
-
-MAINTAINABILITY_AND_COMPATIBILITY:                    # D10 + D11 + D12 + D13
-  rating: <good | acceptable | needs_work>
-  issues:
-  - severity: <warning | suggestion>
-    file: path/to/file.ext
-    line: <number or range>
-    category: <standards | backward_compat | tech_debt | dependencies>
-    title: <short title>
-    description: <what's wrong and why it matters>
-    suggestion: <how to fix>
-
-ACCESSIBILITY:                                       # D14 (frontend/fullstack only)
-  rating: <good | acceptable | needs_work | skipped>
-  issues:
-  - severity: <warning | suggestion>
-    file: path/to/file.ext
-    line: <number or range>
-    title: <short title>
-    description: <what's wrong and why it matters>
-    suggestion: <how to fix>
-
-PLAN_CONSISTENCY:
-  criteria_met: <X/Y>
-  unmet_criteria:
-  - <criterion not met>
-  scope_issues:
-  - <unplanned additions or missing planned features>
-```
+**Sub-agent must return the structured format defined in `references/sub-agent-format.md`** (use the Feature Mode `PLAN_CONSISTENCY` consistency section).
 
 → Go to Step 4F
 
@@ -564,20 +259,34 @@ PLAN_CONSISTENCY:
 
 #### 3P.1 Collect Source Code
 
-Identify and collect project source files for deep code review:
+Identify and collect project source files for deep code review. The collection strategy depends on `scope` (set in Step 1):
+
+**If `scope = "changes"` (default — no arguments or auto-selected):**
+
+1. **Identify changed files (primary scope):**
+   - If on a non-main branch: `git diff main...HEAD --name-only`
+   - If on main branch with uncommitted changes: `git diff HEAD --name-only` + `git diff --cached --name-only` (staged + unstaged)
+   - If on main branch with no uncommitted changes: `git diff HEAD~1 --name-only` (last commit)
+   - Exclude non-source directories: `node_modules/`, `dist/`, `build/`, `.git/`, `vendor/`, `__pycache__/`, the output directory itself
+
+2. **Expand to impact zone (1 level):** For each changed file, also include:
+   - Files that **import or depend on** the changed file (direct dependents — use `Grep` to find import/require/use statements referencing the changed file)
+   - Files that the changed file **imports from** (direct dependencies — read the changed file's import statements)
+   - **Test files** corresponding to the changed files (e.g., `foo.test.ts` for `foo.ts`)
+
+3. **Fallback to full scan:** Only if no changed files are found (clean repo, no recent commits), fall through to the `scope = "full"` strategy below.
+
+**If `scope = "full"` (`--project` flag):**
 
 1. Use project root markers to find source directories (e.g., `src/`, `lib/`, `app/`, `pkg/`, or language-specific patterns)
 2. Exclude non-source directories: `node_modules/`, `dist/`, `build/`, `.git/`, `vendor/`, `__pycache__/`, the output directory itself
-3. If on a non-main branch, prefer `git diff main...HEAD` to scope changed files
-4. If on main branch, scan all source files
+3. Scan all source files
+4. If the project is large (>50 source files), prioritize:
+   - Core modules (entry points, main logic, business logic)
+   - Test files
+   - Configuration and infrastructure files
 
-Build file list for the sub-agent. If the project is large (>50 source files), focus on:
-- Files changed recently (git log)
-- Core modules (entry points, main logic, business logic)
-- Test files
-- Configuration and infrastructure files
-
-Also collect:
+**Both modes also collect:**
 - Package manifests (`package.json`, `Cargo.toml`, `pyproject.toml`, etc.) for dependency review
 - Build/CI configuration if present
 
@@ -589,7 +298,7 @@ Same as Step 3F.2 — detect `project_type` to guide dimension selection.
 
 **Offload to sub-agent** to handle deep source code analysis.
 
-Spawn a `Task` tool call with:
+Spawn an `Agent` tool call with:
 - `subagent_type`: `"general-purpose"`
 - `description`: `"Project code review: {project_name}"`
 
@@ -622,106 +331,7 @@ Additionally, apply the appropriate **Consistency** check based on reference lev
 
 - **bare** → **Skip this dimension.** Note in the report: "No reference documents found — consistency check skipped."
 
-**Sub-agent must return the following structured format:**
-
-All issues MUST reference specific source files and line numbers/ranges.
-
-```
-REVIEW_SUMMARY:
-  overall_rating: <pass | pass_with_notes | needs_changes>
-  total_issues: <number>
-  blocker_count: <number>
-  critical_count: <number>
-  warning_count: <number>
-  suggestion_count: <number>
-  merge_readiness: <ready | fix_required | rework_required>
-  reference_level: <planning | docs | bare>
-  dimensions_reviewed: <list of dimension IDs reviewed>
-
-FUNCTIONAL_CORRECTNESS:                              # D1
-  rating: <pass | warning | critical>
-  issues:
-  - severity: <blocker | critical | warning | suggestion>
-    file: path/to/file.ext
-    line: <number or range>
-    title: <short title>
-    description: <what's wrong and why it matters>
-    suggestion: <how to fix>
-
-SECURITY:                                            # D2
-  rating: <pass | warning | critical>
-  issues: [same structure as D1]
-
-RESOURCE_MANAGEMENT:                                 # D3
-  rating: <pass | warning | critical>
-  issues: [same structure as D1]
-
-CODE_QUALITY:                                        # D4
-  rating: <good | acceptable | needs_work>
-  issues:
-  - severity: <critical | warning | suggestion>
-    file: path/to/file.ext
-    line: <number or range>
-    title: <short title>
-    description: <what's wrong and why it matters>
-    suggestion: <how to fix>
-
-ARCHITECTURE:                                        # D5
-  rating: <good | acceptable | needs_work>
-  issues: [same structure as D4]
-
-PERFORMANCE:                                         # D6
-  rating: <good | acceptable | needs_work>
-  issues: [same structure as D4]
-
-TEST_COVERAGE:                                       # D7
-  rating: <good | acceptable | needs_work>
-  coverage_gaps:
-  - severity: <critical | warning | suggestion>
-    file: path/to/source.ext
-    description: <what scenario is untested>
-
-ERROR_HANDLING_AND_OBSERVABILITY:                     # D8 + D9
-  rating: <good | acceptable | needs_work>
-  issues:
-  - severity: <warning | suggestion>
-    file: path/to/file.ext
-    line: <number or range>
-    category: <error_handling | logging | metrics | tracing>
-    title: <short title>
-    description: <what's wrong and why it matters>
-    suggestion: <how to fix>
-
-MAINTAINABILITY_AND_COMPATIBILITY:                    # D10 + D11 + D12 + D13
-  rating: <good | acceptable | needs_work>
-  issues:
-  - severity: <warning | suggestion>
-    file: path/to/file.ext
-    line: <number or range>
-    category: <standards | backward_compat | tech_debt | dependencies>
-    title: <short title>
-    description: <what's wrong and why it matters>
-    suggestion: <how to fix>
-
-ACCESSIBILITY:                                       # D14 (frontend/fullstack only)
-  rating: <good | acceptable | needs_work | skipped>
-  issues:
-  - severity: <warning | suggestion>
-    file: path/to/file.ext
-    line: <number or range>
-    title: <short title>
-    description: <what's wrong and why it matters>
-    suggestion: <how to fix>
-
-CONSISTENCY:
-  type: <plan_consistency | doc_consistency | skipped>
-  rating: <good | acceptable | needs_work | N/A>
-  criteria_met: <X/Y> (if applicable)
-  unmet_criteria:
-  - <criterion not met>
-  scope_issues:
-  - <unplanned additions or missing documented features>
-```
+**Sub-agent must return the structured format defined in `references/sub-agent-format.md`** (use the Project Mode `CONSISTENCY` consistency section). All issues MUST reference specific source files and line numbers/ranges.
 
 → Go to Step 4P
 
@@ -731,129 +341,7 @@ CONSISTENCY:
 
 Review results are **displayed in the terminal** by default — no file is written. This reflects that reviews are iterative, intermediate checks rather than permanent artifacts.
 
-Display the following report directly in the terminal using markdown:
-
-```markdown
-# Code Review: {feature_name}
-
-**Date:** {ISO date}
-**Reviewer:** code-forge
-**Overall Rating:** {pass | pass_with_notes | needs_changes}
-**Merge Readiness:** {ready | fix_required | rework_required}
-
-## Summary
-
-{1-2 paragraph summary of the review findings}
-
-**Issue Breakdown:** {blocker_count} blockers · {critical_count} critical · {warning_count} warnings · {suggestion_count} suggestions
-
----
-
-## Tier 1 — Must-Fix Before Merge
-
-### Functional Correctness (D1)
-
-**Rating:** {rating}
-
-{issues table with severity/file/line/title/description/suggestion, or "No issues found"}
-
-### Security (D2)
-
-**Rating:** {rating}
-
-{issues or "No security concerns"}
-
-### Resource Management (D3)
-
-**Rating:** {rating}
-
-{issues or "No resource management issues"}
-
----
-
-## Tier 2 — Should-Fix
-
-### Code Quality (D4)
-
-**Rating:** {rating}
-
-{issues or "No issues found"}
-
-### Architecture & Design (D5)
-
-**Rating:** {rating}
-
-{issues or "No issues found"}
-
-### Performance (D6)
-
-**Rating:** {rating}
-
-{issues or "No issues found"}
-
-### Test Coverage (D7)
-
-**Rating:** {rating}
-
-{coverage gaps or "All scenarios covered"}
-
----
-
-## Tier 3 — Recommended
-
-### Error Handling & Observability (D8/D9)
-
-**Rating:** {rating}
-
-{issues or "No issues found"}
-
----
-
-## Tier 4 — Nice-to-Have
-
-### Maintainability & Compatibility (D10–D13)
-
-**Rating:** {rating}
-
-{issues or "No issues found"}
-
-{If frontend/fullstack:}
-### Accessibility / i18n (D14)
-
-**Rating:** {rating}
-
-{issues or "Skipped (not a frontend project)"}
-
----
-
-## Plan Consistency
-
-**Criteria Met:** {X/Y}
-
-{unmet criteria or "All criteria met"}
-
----
-
-## Recommendations
-
-{Prioritized list of changes, grouped by blocking status:}
-
-**Must fix before merge:**
-1. {highest priority fix with file:line reference}
-2. ...
-
-**Should fix:**
-1. {recommended fix}
-2. ...
-
-**Consider for later:**
-1. {nice-to-have improvement}
-2. ...
-
-## Verdict
-
-{Final assessment: merge as-is, fix blockers/criticals then merge, or needs rework}
-```
+Follow the report template in `references/report-template.md` (Feature mode variant).
 
 #### 4F.1 Optional: Save to File (`--save`)
 
@@ -865,13 +353,7 @@ If the user passed `--save` in the arguments, **also** write the report to `{out
 
 ### Step 4P: Project Mode — Display Report
 
-Use the same report template as Feature Mode (see [Step 4F](#step-4f-feature-mode--display-report)), with these differences:
-- Title: `# Project Review: {project_name}` (instead of feature name)
-- Header adds: `**Reference:** {planning-backed | docs-backed | bare (no reference documents)}`
-- Consistency section adapts to reference level:
-  - **planning-backed** → `## Plan Consistency` with criteria met/unmet
-  - **docs-backed** → `## Documentation Consistency` with criteria met/unmet
-  - **bare** → `*No reference documents found — consistency check skipped.*`
+Follow the report template in `references/report-template.md` (Project mode variant).
 
 #### 4P.1 Optional: Save to File (`--save`)
 
@@ -934,12 +416,14 @@ Report saved: {output_dir}/{feature_name}/review.md
   1. {highest priority blocker/critical with file:line}
   2. {next priority fix}
   ...
-  After fixing: /code-forge:review {feature_name}   Re-run review
+  Fix all:    /code-forge:fixbug --review
+  Re-review:  /code-forge:review {feature_name}
 
 {If pass_with_notes (warnings > 0, no blockers/criticals):}
 ⚠ Merge OK with notes — consider fixing:
   1. {top warning}
   2. ...
+  Fix all:    /code-forge:fixbug --review
 
 {If pass:}
 ✅ Ready for next steps:
@@ -968,12 +452,14 @@ Report saved: {output_dir}/project-review.md
   1. {highest priority blocker/critical with file:line}
   2. {next priority fix}
   ...
-  After fixing: /code-forge:review --project   Re-run review
+  Fix all:    /code-forge:fixbug --review
+  Re-review:  /code-forge:review --project
 
 {If pass_with_notes (warnings > 0, no blockers/criticals):}
 ⚠ Project quality acceptable with notes — consider fixing:
   1. {top warning}
   2. ...
+  Fix all:    /code-forge:fixbug --review
 
 {If pass:}
 ✅ Project quality looks good.

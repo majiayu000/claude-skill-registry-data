@@ -57,7 +57,7 @@ Use AskUserQuestion to understand project boundaries. Ask 3-5 rounds of question
 
 Do NOT force answers. If the user says "I'm not sure", use your judgment based on what you know.
 
-### Step 3: Split Decision
+### Step 3: Split Decision & Rationale
 
 Based on the interview, determine: **single** or **multi-split**.
 
@@ -80,21 +80,66 @@ Based on the interview, determine: **single** or **multi-split**.
 - Clear interfaces — well-defined inputs and outputs
 - Each split is substantial enough for its own Tech Design + Feature Specs
 
+**Rationale requirement:** After reaching a verdict, you MUST produce a formal Split Rationale block (see Step 4a / 4b). Do not present the verdict without justification. The rationale must name which heuristics fired with project-specific evidence, and explicitly state why the alternative verdict was rejected.
+
 ### Step 4a: Single Feature Verdict
 
 If the project is a single feature:
 
-1. Inform the user: "This project is well-scoped as a single feature. Proceeding directly to the spec chain."
-2. Return the verdict. Do NOT generate a manifest file.
+1. Produce the Split Rationale block (required before informing the user):
+
+```
+Split Rationale:
+  Verdict: Single feature
+
+  Signals that fired (Single):
+    ✓ [Signal text from heuristics table] — [one sentence of project-specific evidence]
+    ✓ [Signal text] — [evidence]
+
+  Signals evaluated but not triggered (Multi-split):
+    ✗ [Signal text] — [why it does not apply to this project]
+    ✗ [Signal text] — [why it does not apply]
+
+  Why not Multi-split: [1-2 sentences explaining why splitting would be premature,
+  over-engineered, or harmful for this specific project — reference scope, coupling,
+  team size, or other concrete factors from the interview.]
+```
+
+2. Inform the user: "This project is well-scoped as a single feature. Proceeding directly to the spec chain."
+3. Return the verdict. Do NOT generate a manifest file.
 
 ### Step 4b: Multi-Split — Generate Manifest
 
 If the project should be split:
 
-1. Present the proposed split structure to the user for confirmation
-2. Use AskUserQuestion: "Here's my proposed breakdown. Does this look right, or would you change anything?"
-3. If the user wants changes, adjust and re-confirm
-4. Once confirmed, write the manifest to `docs/project-{name}.md`
+1. Produce the Split Rationale block (required before presenting the breakdown):
+
+```
+Split Rationale:
+  Verdict: Multi-split ({N} sub-features)
+
+  Signals that fired (Multi-split):
+    ✓ [Signal text from heuristics table] — [one sentence of project-specific evidence]
+    ✓ [Signal text] — [evidence]
+
+  Signals evaluated but not triggered (Single):
+    ✗ [Signal text] — [why it does not apply to this project]
+    ✗ [Signal text] — [why it does not apply]
+
+  Why not Single: [1-2 sentences explaining what makes this project structurally
+  too broad or heterogeneous to treat as one feature — e.g., "The auth subsystem
+  and payment pipeline share no code paths and require independent deployment cycles."]
+
+  Boundary rationale:
+    {sub-feature-1} | {sub-feature-2}: [Why this is a clean cut point — what the
+    interface between them is and why each side is independently specifiable]
+    [Add one line per boundary if N > 2]
+```
+
+2. Present the proposed split structure **together with the rationale** to the user for confirmation
+3. Use AskUserQuestion: "Here's my proposed breakdown and the reasoning behind it. Does this look right, or would you change anything?"
+4. If the user wants changes, adjust rationale accordingly and re-confirm
+5. Once confirmed, write the manifest to `docs/project-{name}.md`
 
 **Manifest format:**
 

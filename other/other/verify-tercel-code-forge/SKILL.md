@@ -25,15 +25,9 @@ Evidence-based completion verification. Run before claiming any work is done.
 
 No exceptions. Not "it should work." Not "I just ran it." Not "the agent said it passed."
 
-## Workflow
-
-```
-IDENTIFY verification command → RUN fresh → READ full output → VERIFY against claim → CLAIM
-```
-
 ## The Gate
 
-Every claim must pass through this gate:
+Every completion claim must pass through this gate — because false claims waste reviewer time and erode trust in automated workflows. A single unverified "tests pass" can mask a regression that reaches production.
 
 ```
 IDENTIFY → RUN → READ → VERIFY → CLAIM
@@ -44,6 +38,11 @@ IDENTIFY → RUN → READ → VERIFY → CLAIM
 3. **READ** the complete output (not skimmed, not truncated)
 4. **VERIFY** the output matches the claim (zero failures, exit code 0)
 5. **ONLY THEN** make the claim
+
+**Example:**
+- Before: "I fixed the off-by-one error, tests should pass now."
+- Run: `npm test` → Output: `42 passed, 0 failed`
+- After: "Off-by-one fix verified — 42 tests pass (0 failures, exit 0)."
 
 ## Forbidden Words
 
@@ -57,6 +56,8 @@ These words in a completion claim are red flags — they mean you haven't verifi
 - "it worked before"
 
 Replace with evidence: "All 34 tests pass (output: 34 passed, 0 failed, exit code 0)."
+
+If no automated verification exists, state that explicitly: "No automated test covers this — manual verification required: [steps]." This is honest, not hedging.
 
 ## Verification Patterns
 

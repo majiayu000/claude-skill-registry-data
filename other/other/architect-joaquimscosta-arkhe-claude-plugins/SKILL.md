@@ -22,6 +22,18 @@ Analyze system architecture, module boundaries, API contracts, data models, and 
 
 Read `.arkhe.yaml` from project root. Extract `roadmap:` section for `context_dir`.
 
+### Priority 1b: Johnny Decimal Detection
+
+Check if the project uses Johnny Decimal documentation structure:
+1. Read `.jd-config.json` at project root — if present, use its `root` (default: `docs`) and `areas` map
+2. If no config, glob for `docs/[0-9][0-9]-*/` — if 2+ matches exist, J.D structure is present
+
+If J.D detected, adjust Priority 5 (Architecture Documents) globs:
+- Prefer `{jd_root}/20-*/**/*.md` over `docs/adr/**/*.md`, `docs/architecture/**/*.md`, `docs/design/**/*.md` (those subdirectories are consolidated under the architecture area in J.D)
+- Also scan `{jd_root}/30-*/**/*.md` for technical research and spikes
+- Skip `90-*` (archive) unless tracing historical decisions
+- Keep `plan/decisions/**/*.md` as fallback
+
 ### Priority 2: Architecture Context
 
 If `{context_dir}` exists, read `architecture.md` for:

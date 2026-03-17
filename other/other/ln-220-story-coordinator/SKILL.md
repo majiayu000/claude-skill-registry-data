@@ -1,6 +1,6 @@
 ---
 name: ln-220-story-coordinator
-description: CREATE/REPLAN Stories for Epic (5-10 Stories). Delegates ln-001-standards-researcher for standards research. Decompose-First Pattern. Auto-discovers team/Epic.
+description: "CREATE/REPLAN Stories for Epic (5-10 Stories). Multi-epic routing: auto-groups Stories by correct Epic. Delegates ln-001 for standards research. Self-Check phase."
 license: MIT
 ---
 
@@ -8,11 +8,9 @@ license: MIT
 
 # Story Coordinator
 
-Universal Story management coordinator that delegates CREATE/REPLAN operations to specialized workers after building IDEAL Story plan.
-
 ## Purpose
 
-Coordinates Story creation (CREATE), replanning (REPLAN), and appending (ADD) for a given Epic, producing 5-10 User Stories with standards research, Decompose-First Pattern, and delegation to ln-221/ln-222 workers.
+Coordinates Story creation (CREATE), replanning (REPLAN), and appending (ADD) for one or more Epics, producing 5-10 User Stories per Epic with standards research, Decompose-First Pattern, multi-epic routing, and delegation to ln-221/ln-222 workers.
 
 ## When to Use This Skill
 
@@ -21,6 +19,8 @@ Use when:
 - Update existing Stories when Epic requirements change
 - Rebalance Story scopes within Epic
 - Add new Stories to existing Epic structure
+- Request spans multiple Epics (routing auto-groups Stories by correct Epic)
+- Story doesn't fit any existing Epic (creates stub Epic inline)
 
 ## Core Pattern: Decompose-First
 
@@ -42,10 +42,11 @@ Use when:
 
 | Input | Required | Source | Description |
 |-------|----------|--------|-------------|
-| `epicId` | Yes | args, kanban, user | Epic to process |
+| `epicId` | Yes | args, kanban, user | Primary Epic to process |
 
-**Resolution:** Per `shared/references/input_resolution_pattern.md` — Epic Resolution Chain.
+**Resolution:** Epic Resolution Chain.
 **Status filter:** Active (planned/started)
+**Multi-epic:** If IDEAL plan (Phase 3) produces Stories that don't fit resolved Epic, Phase 3 Step 8 auto-routes them to correct Epics (or creates stub Epics inline).
 
 ## Workflow
 
@@ -53,7 +54,6 @@ Use when:
 
 **MANDATORY READ:** Load `shared/references/tools_config_guide.md`, `shared/references/storage_mode_detection.md`, `shared/references/input_resolution_pattern.md`
 
-Read `docs/tools_config.md` (bootstrap if missing per tools_config_guide.md).
 Extract: `task_provider` = Task Management → Provider
 
 ### Phase 1: Context Assembly
@@ -64,20 +64,23 @@ Extract: `task_provider` = Task Management → Provider
 
 Auto-discovers from `docs/tasks/kanban_board.md`:
 
-1. **Resolve epicId** (per input_resolution_pattern.md):
-   - IF args provided → use args
-   - ELSE IF git branch matches `feature/epic-{N}-*` → extract Epic N
-   - ELSE IF kanban has exactly 1 active Epic → suggest
-   - ELSE → AskUserQuestion: show active Epics from kanban
+1. **Resolve epicId:** Run Epic Resolution Chain per guide.
 2. **Team ID:** Reads Linear Configuration table
 3. **Load Epic description:**
    - **IF task_provider == "linear":** `get_project(query="Epic N")` → Fetch full Epic document
    - **ELSE:** `Read("docs/tasks/epics/epic-{N}-*/epic.md")` → Load file-based Epic
-   - **Extract:** Goal, Scope In/Out, Success Criteria, Technical Notes (Standards Research if Epic created by ln-210 v7.0.0+)
+   - **Extract:** Goal, Scope In/Out, Success Criteria, Technical Notes
    - **Note:** Epic N = Linear Project number (global), NOT initiative-internal index (Epic 0-N)
 4. **Next Story Number:** Reads Epic Story Counters table → Gets next sequential number
 
-**Step 2: Extract Planning Information (Automated)**
+**Step 2: Load Active Epics Metadata**
+
+Load ALL active Epics from `docs/tasks/kanban_board.md` → Epics Overview section:
+- Extract: Epic number, title for each active Epic
+- Store as `allEpics[]` for Phase 3 Epic Routing (Step 8)
+- Lightweight: titles from kanban only, NOT full Epic documents
+
+**Step 3: Extract Planning Information (Automated)**
 
 Parses Epic structure for Story planning questions:
 
@@ -90,25 +93,22 @@ Parses Epic structure for Story planning questions:
 | **Q5 - Main AC** | Derive from Epic Scope In features → testable scenarios |
 | **Q6 - Application type** | Epic Technical Notes (UI/API mentioned) → Default: API |
 
-**Step 3: Frontend Research (Optional)**
+**Step 4: Frontend Research (Optional)**
 
-**Trigger:** If Q2 (capabilities) OR Q5 (AC) missing after Step 2
+**Trigger:** If Q2 (capabilities) OR Q5 (AC) missing after Step 3
 
 **Process:**
 1. Scan HTML files: `Glob` `**/*.html`, `src/**/*.html`
-2. Extract:
-   - Forms → AC scenarios (e.g., `<form id="login">` → "Given valid credentials, When submit, Then login success")
-   - Buttons/Actions → capabilities (e.g., `<button id="register">` → "User registration")
-   - Validation rules → edge case AC (e.g., `minlength="8"` → "Given password <8 chars, Then error")
+2. Extract: forms → AC scenarios, buttons → capabilities, validation rules → edge case AC
 3. Combine with Epic context, deduplicate, prioritize Epic AC if conflict
 
-**Fallback:** If no HTML → Skip to Step 4
+**Fallback:** If no HTML → Skip to Step 5
 
-**Step 4: Fallback Search Chain**
+**Step 5: Fallback Search Chain**
 
 **Objective:** Fill missing Q1-Q6 BEFORE asking user.
 
-For each question with no answer from Step 2-3:
+For each question with no answer from Step 3-4:
 
 | Question | Fallback Search |
 |----------|-----------------|
@@ -118,9 +118,9 @@ For each question with no answer from Step 2-3:
 
 **Skip:** Q2, Q5 (Epic + HTML are sources of truth), Q4 (already known)
 
-**Step 5: User Input (Only if Missing)**
+**Step 6: User Input (Only if Missing)**
 
-**If still missing after Step 2 + 3 + 4:**
+**If still missing after Step 3 + 4 + 5:**
 - Show extracted: "From Epic: [Epic info]. From HTML: [HTML info]. From fallback: [fallback info]"
 - Ask user to confirm or provide remaining missing details
 
@@ -142,9 +142,9 @@ For each question with no answer from Step 2-3:
 2. **Delegate to ln-001-standards-researcher:**
    - Call `Skill(skill: "ln-001-standards-researcher", epic_description="[Epic full description]", story_domain="[domain]")`
    - Wait for Standards Research (Markdown string)
-3. **Store:** Cache for Phase 5a/5b (workers insert in Story Technical Notes)
+3. **Store:** Cache for Phase 5a/5b (workers insert in Story Technical Notes → Library Research subsection). Research is INFORMATIONAL — it constrains HOW to implement, not WHAT to implement. ACs must derive from Epic Scope In, not from research.
 
-**Output:** Standards Research stored for ALL Stories in Epic
+**Output:** Standards Research stored for ALL Stories in Epic (Technical Notes only, never ACs)
 
 **Skip conditions:**
 - Epic has NO standards in Technical Notes
@@ -163,58 +163,54 @@ For each question with no answer from Step 2-3:
 
 **Story Grouping Guidelines:**
 
-Each Story = ONE vertical slice of user capability (end-to-end: UI → API → Service → DB).
+Each Story = ONE vertical slice of user capability (end-to-end: UI → API → Service → DB). Size limits per `creation_quality_checklist.md` #9.
 
-**✅ GOOD Story Grouping (1 Story = 1 user journey):**
-- ✅ "User registration" (form → validation → API → database → email)
-- ✅ "Password reset" (request link → verify token → set password → update DB)
-- ✅ "Product search" (input → filter/sort → API → DB query → display)
-
-**❌ BAD Story Grouping (horizontal slices):**
-- ❌ "Create user table" (database only, no user value → Task, not Story)
-- ❌ "User registration API endpoint" (API layer only, not vertical)
-- ❌ "Registration UI form" (frontend only, not vertical)
-
-**Rule:** 1 Story = 1 user capability (size limits per `creation_quality_checklist.md` #9)
-
-**Database Creation Principle (Incremental Schema Evolution):**
-
-Each Story creates ONLY the tables it needs (not all tables upfront).
-
-**✅ GOOD (Incremental):**
-- ✅ "User registration" → Creates Users table
-- ✅ "Product search" → Creates Products table
-- ✅ "Order checkout" → Creates Orders, Payments tables
-
-**❌ BAD (Big-Bang):**
-- ❌ "Setup database" → Creates all 50 tables (no user value, violates vertical slicing)
-- ❌ "Database schema" → Creates Users, Products, Orders, Payments upfront
-
-**Rationale:** Big-bang database setup violates incremental delivery. Each Story should deliver user value, not technical infrastructure.
+| Pattern | Example | Verdict |
+|---------|---------|---------|
+| Vertical slice (1 user journey) | "User registration" (form→API→DB→email) | GOOD Story |
+| Horizontal slice (1 layer) | "Create user table", "Registration API endpoint" | BAD → Task, not Story |
+| Incremental DB (per Story) | "Product search" → creates Products table | GOOD |
+| Big-bang DB (all upfront) | "Setup database" → creates 50 tables | BAD → no user value |
 
 **Build IDEAL Plan (Automated):**
 
-0. **Articulate REAL GOAL:** **MANDATORY READ:** `shared/references/goal_articulation_gate.md` — State REAL GOAL of this Epic in one sentence (the user capability being enabled, not "create Stories"). Verify: does the decomposition serve THIS goal?
-1. **Analyze Epic Scope:** Review features in Epic Scope In, identify user capabilities
-2. **Determine Story Count:**
+1. **Articulate REAL GOAL:** **MANDATORY READ:** `shared/references/goal_articulation_gate.md` — State REAL GOAL of this Epic in one sentence (the user capability being enabled, not "create Stories"). Verify: does the decomposition serve THIS goal?
+2. **Analyze Epic Scope:** Review features in Epic Scope In, identify user capabilities
+3. **Scope Minimalism Gate (MANDATORY):**
+
+   After analyzing Epic Scope, challenge the AGGREGATE design BEFORE generating Stories. Each test is pass/fail.
+
+   | Test | Rule | FAIL action |
+   |------|------|-------------|
+   | **Cart Test** | State the simplest design that delivers the Epic Goal in one sentence. If you cannot — scope too wide, split Epic. | STOP. Return to Epic coordinator for split. |
+   | **AC Count Test** | Projected ACs across all Stories: divide total by Story count. If average > 5 per Story — over-scoped. | Reduce: cut speculative ACs until average <= 5. |
+   | **AC Purity Test** | Every AC must describe OBSERVABLE USER BEHAVIOR (Given user does X, Then user sees Y). ACs that describe system internals (lookup priority, cache layers, endpoint URLs) are Technical Notes, not ACs. | Move to Technical Notes. |
+   | **Feature Bundling Test** | Epic Goal contains "and", "&", "+" joining DISTINCT capabilities? Each distinct capability = separate Story. Title "X and Y" = 2 Stories minimum. | Split into separate Stories. |
+   | **Research Firewall** | Standards Research (Phase 2) informs Technical Notes ONLY. Research MUST NOT add ACs, endpoints, or features. ACs come from Epic Scope In alone. | Remove research-driven ACs. |
+
+   **Anti-pattern (real example):**
+   - Story "Translation Memory AND Response Cache" → FAIL Feature Bundling (2 distinct capabilities bundled)
+   - 10 ACs with "5-level lookup priority" → FAIL AC Purity (system architecture, not user behavior)
+   - Research found "industry does segment matching at 75%" → added AC for it → FAIL Research Firewall (not in Epic Scope In)
+
+   **Pass:** All 5 tests pass → proceed to Step 4.
+   **Fail ANY:** Fix before proceeding. Do NOT generate Stories from an over-scoped plan.
+
+4. **Determine Story Count:**
    - Simple Epic (1-3 features): 3-5 Stories
    - Medium Epic (4-7 features): 6-8 Stories
    - Complex Epic (8+ features): 8-10 Stories
    - **Max 10 Stories per Epic**
 
-3. **Story Size:** Limits per `creation_quality_checklist.md` #9. Outside range → split or merge.
+5. **Story Size:** Limits per `creation_quality_checklist.md` #9. Outside range → split or merge.
 
-**Each Story must pass these checks:**
-- ✅ Delivers user value (not purely technical)
-- ✅ Title describes user capability, not implementation action
-- ✅ Crosses 3+ layers (vertical slice: UI → API → Service → DB)
-
-4. **Build IDEAL Plan "in mind":**
+6. **Build IDEAL Plan "in mind":**
    - Each Story: persona + capability + business value
-   - Each Story: testable AC per checklist #4
+   - Each Story: testable AC per checklist #4 (3-5 ACs, user behavior only)
    - Stories ordered by dependency (no forward deps per checklist #18)
    - Each Story: Test Strategy section exists but is **empty** (tests planned later by test planner)
    - Each Story: Technical Notes (architecture, integrations, **Standards Research from Phase 2**, guide links)
+   - **Research Firewall (per Step 3):** research → Technical Notes only, never ACs
    - Each Story: `orchestratorBrief` for ln-1000 pipeline lead:
      ```
      orchestratorBrief: {
@@ -225,46 +221,73 @@ Each Story creates ONLY the tables it needs (not all tables upfront).
      }
      ```
 
-5. **AC Quality Validation:** Rules per `creation_quality_checklist.md` #4. Workers (ln-221, ln-222) must validate.
+7. **AC Quality Validation:** Rules per `creation_quality_checklist.md` #4. Workers (ln-221, ln-222) must validate.
 
-**Examples:**
-- ❌ BAD: "User can login" (only happy path, no error/edge cases)
-- ✅ GOOD: AC1: login success + AC2: 401 invalid password + AC3: 403 locked
-- ❌ BAD: "Login should be fast" (vague, not measurable)
-- ✅ GOOD: "Then receive token <200ms" (specific, measurable)
+**INVEST Score (0-6 per Story):** Validate per `creation_quality_checklist.md` INVEST criteria (loaded above). Gate: Score ≥ 4 → proceed, < 4 → rework.
 
-**INVEST Score (0-6 per Story):**
+8. **Epic Routing**
 
-| # | Criterion | Check | +1 if PASS |
-|---|-----------|-------|------------|
-| 1 | **Independent** | No forward dependencies (Story N uses only 1..N-1) | ✅ |
-| 2 | **Negotiable** | AC focus on WHAT, not HOW (no library versions, no implementation details) | ✅ |
-| 3 | **Valuable** | Clear "So that [business value]" — not purely technical | ✅ |
-| 4 | **Estimable** | Size within checklist #9 range, known patterns | ✅ |
-| 5 | **Small** | 3-5 AC, 6-20 hours, vertical slice | ✅ |
-| 6 | **Testable** | AC measurable with Given/When/Then and specific values | ✅ |
+**Objective:** Ensure each Story in IDEAL plan is assigned to the correct Epic. Handles multi-epic requests and missing Epics.
 
-**Gate:** Score ≥ 4 → proceed. Score < 4 → rework Story before creation.
+**Process:** Routing always runs (keyword matching is cheap). After tagging, if ALL Stories match `resolvedEpicId` → SINGLE-EPIC fast path (common case).
 
-**Examples:**
-- ❌ Score 2/6: "Create user table" (fails Independent, Valuable, Small, Testable)
-- ✅ Score 6/6: "User registration" with 4 GWT AC, 12h, full vertical slice
+**Routing (multiple active Epics):**
 
-**Output:** IDEAL Story plan (5-10 Stories) with titles, statements, core AC, ordering
+```
+FOR EACH Story in IDEAL plan:
+  1. Compare Story domain/capability keywords vs resolved Epic Scope In
+     - IF match → tag Story with resolvedEpicId
+  2. ELSE compare vs allEpics[] scopes (load Epic descriptions on-demand for ambiguous matches)
+     - IF matches another Epic → tag with that epicId
+     - IF matches NO Epic → tag as NEEDS_NEW_EPIC
+
+ANALYZE tags:
+  - ALL resolvedEpicId → SINGLE-EPIC (proceed as before)
+  - Mixed tags → MULTI-EPIC:
+    a. Group: epicGroups = {epicId: Story[]}
+    b. Show ROUTING PREVIEW (see format below)
+    c. User confirms or reassigns Stories
+    d. NEEDS_NEW_EPIC Stories → create stub Epic inline:
+       1. Read kanban_board.md → Next Epic Number, teamId
+       2. Create Epic (Linear: save_project, File: mkdir + Write minimal epic.md)
+       3. Update kanban_board.md: increment Next Epic Number, add Epic Story Counters row, add to Epics Overview → Active
+       4. Assign returned epicId to tagged Stories
+```
+
+**Routing Preview Format:**
+```
+EPIC ROUTING PREVIEW
+
+Epic 7 (OAuth Authentication): 4 Stories
+  - US004: Register OAuth client
+  - US005: Request access token
+  - US006: Validate token
+  - US007: Refresh token
+
+Epic 12 (User Management): 2 Stories
+  - US008: User profile settings
+  - US009: Account deletion
+
+NEW EPIC NEEDED: 1 Story
+  - US010: Payment webhook handler
+    Suggested domain: Payment Processing
+
+Confirm routing? (or reassign Stories between Epics)
+```
+
+**Output:** `epicGroups` — map of epicId to Story[] (for single-epic: one group with all Stories)
 
 ---
 
 ### Phase 4: Check Existing & Detect Mode
 
-**Objective:** Determine execution mode based on existing Stories AND user intent
+**Objective:** Determine execution mode based on existing Stories AND user intent, per each Epic group from Phase 3 routing.
 
-**Process:**
-
-Query task provider for existing Stories in Epic:
+**Process:** FOR EACH epicGroup in `epicGroups`, query task provider for existing Stories:
 
 **IF task_provider == "linear":**
 ```
-list_issues(project=Epic.id, label="user-story")
+list_issues(project=epicGroup.epicId, label="user-story")
 ```
 
 **ELSE (file mode):**
@@ -272,7 +295,7 @@ list_issues(project=Epic.id, label="user-story")
 Glob("docs/tasks/epics/epic-{N}-*/stories/*/story.md")
 ```
 
-**Mode Detection:**
+**Mode Detection (per epicGroup):**
 
 1. **Analyze user request** for keywords:
    - ADD keywords: "add story", "one more story", "additional story", "append"
@@ -289,11 +312,24 @@ Glob("docs/tasks/epics/epic-{N}-*/stories/*/story.md")
 
 **Important:** Orchestrator loads metadata ONLY (ID, title, status). Workers load FULL descriptions (token efficiency).
 
-**Output:** Execution mode determined + existingCount for workers
+**Output:** `epicGroupModes` — map of epicId to {mode, existingCount, epicData} for each group
 
 ---
 
-### Phase 5a: Delegate CREATE (No Existing Stories)
+### Phase 5: Delegate to Workers
+
+**Iteration:** Process each epicGroup sequentially (workers include user interaction, cannot parallelize).
+
+```
+FOR EACH epicGroup in epicGroupModes:
+  IF mode == CREATE  → Phase 5a (ln-221-story-creator)
+  IF mode == REPLAN  → Phase 5b (ln-222-story-replanner)
+  IF mode == ADD     → Phase 5c (ln-221-story-creator, appendMode)
+```
+
+Workers receive the same interface: `epicData + idealPlan` for ONE Epic.
+
+#### Phase 5a: Delegate CREATE (No Existing Stories)
 
 **Trigger:** Epic has no Stories yet (first decomposition)
 
@@ -313,7 +349,7 @@ Skill(
 ```
 
 **Worker handles:**
-- Generate Story documents (8 sections, insert Standards Research)
+- Generate Story documents (9 sections, insert Standards Research)
 - Validate INVEST criteria
 - Show preview
 - User confirmation (if autoApprove=false)
@@ -324,7 +360,9 @@ Skill(
 
 ---
 
-### Phase 5b: Delegate REPLAN (Existing Stories Found)
+#### Phase 5b: Delegate REPLAN (Existing Stories Found)
+
+**MANDATORY READ:** Load `references/replan_algorithm.md`
 
 **Trigger:** Epic already has Stories (requirements changed)
 
@@ -356,7 +394,7 @@ Skill(
 
 ---
 
-### Phase 5c: Delegate ADD (Append to Existing Stories)
+#### Phase 5c: Delegate ADD (Append to Existing Stories)
 
 **Trigger:** Epic has Stories, user wants to ADD more (not replan existing)
 
@@ -376,15 +414,11 @@ Skill(
 )
 ```
 
-**Key differences from CREATE MODE:**
-- `appendMode: true` → Skip full IDEAL plan, create only requested Story
-- `newStoryDescription` → User's specific request (e.g., "add authorization Story")
-- Does NOT require Phase 3 IDEAL plan for all Stories
-- Preserves existing Stories without comparison
+`appendMode: true` — creates only user-requested Story(s), skips IDEAL plan comparison.
 
 **Worker handles:**
 - Research standards for NEW Story only
-- Generate Story document (8 sections)
+- Generate Story document (9 sections)
 - Validate INVEST criteria
 - Create in Linear (append to existing)
 - Update kanban_board.md
@@ -395,28 +429,62 @@ Skill(
 
 ### Phase 6: Commit
 
-After worker completes (any mode: CREATE/REPLAN/ADD):
+After ALL workers complete (any mode: CREATE/REPLAN/ADD):
 
 1. `git add docs/tasks/kanban_board.md` (updated by worker)
-2. `git commit -m "ln-220: {MODE} Stories for Epic {N}"`
-   - CREATE: `"ln-220: create Stories US{first}-US{last} for Epic {N}"`
+2. `git commit` with message:
+   - **Single-epic:** `"ln-220: create Stories US{first}-US{last} for Epic {N}"`
+   - **Multi-epic:** `"ln-220: create Stories for Epics {N1}, {N2}, {N3}"`
    - REPLAN: `"ln-220: replan Stories for Epic {N}"`
    - ADD: `"ln-220: add Story US{num} to Epic {N}"`
+
+---
+
+### Phase 7: Self-Check
+
+**Objective:** Verify all skill phases completed and all planned Stories accounted for.
+
+**Process:**
+
+1. **Phase Completion:** Verify Phases 0-6 completed (or skipped with documented reason). Report any missed phase.
+
+2. **Story Accounting:**
+   - Planned Stories (from IDEAL plan): N
+   - Created/updated Stories (from worker results): M
+   - IF N ≠ M → WARNING: list missing Stories by title
+
+3. **Epic Routing Verification (multi-epic only):**
+   - Verify all epicGroups processed by workers
+   - Verify all NEEDS_NEW_EPIC Stories resolved (assigned to created Epics)
+
+4. **Output:**
+```
+SELF-CHECK RESULTS
+
+Phases: 7/7 completed (or K/7 + skipped reasons)
+Stories: M/N created
+Epics: K epic(s) processed
+
+Status: PASS / FAIL (with details)
+```
+
+IF FAIL → list which Stories were lost, recommend re-running for missed epicGroups.
+
+---
 
 **TodoWrite format (mandatory):**
 Add phases to todos before starting:
 ```
 - Phase 1: Context Assembly (in_progress)
-- Phase 2: Standards Research via ln-221 (pending)
-- Phase 3: Build IDEAL Story Plan (pending)
+- Phase 2: Standards Research via ln-001 (pending)
+- Phase 3: Build IDEAL Story Plan + Epic Routing (pending)
 - Phase 4: Check Existing Stories (pending)
 - Phase 5: Delegate to ln-221/ln-222 (pending)
 - Wait for worker result (pending)
 - Phase 6: Commit kanban changes (pending)
+- Phase 7: Self-Check (pending)
 ```
 Mark each as in_progress when starting, completed when done.
-
----
 
 ---
 
@@ -424,9 +492,12 @@ Mark each as in_progress when starting, completed when done.
 
 - **Decompose-First:** Build IDEAL Story plan before checking existing Stories (prevents anchoring to suboptimal structure)
 - **Vertical slicing only:** Each Story = one user journey end-to-end (UI -> API -> Service -> DB); no horizontal/technical-only Stories
-- **Standards research before generation:** Phase 2 (ln-001) must complete before Story documents are created; results go into all Story Technical Notes
+- **Scope Minimalism Gate:** Phase 3 Step 3 must pass before Story generation. >5 ACs per Story = mandatory split. ACs describe user behavior only, not system internals
+- **Standards research before generation:** Phase 2 (ln-001) must complete before Story documents are created; results go into all Story Technical Notes (never into ACs)
 - **Orchestrator loads metadata only:** ID, title, status (~50 tokens per Story); workers load full descriptions (~5,000 tokens) when needed
 - **Test Strategy section left empty:** Tests are planned later by test planner, not at Story creation time
+- **Epic Routing fast path:** Routing always runs. If all Stories match resolved Epic (common case), no user confirmation needed and zero branching overhead (Phase 3 Step 8)
+- **Self-Check mandatory:** Phase 7 always runs. Verifies N planned == M created, all phases completed. Never skipped
 
 ---
 
@@ -446,7 +517,7 @@ Mark each as in_progress when starting, completed when done.
 
 **Downstream:**
 - **ln-300-task-coordinator** - creates implementation tasks for each Story
-- **ln-310-story-validator** - validates Story structure/content
+- **ln-310-multi-agent-validator** - validates Story structure/content
 - **ln-400-story-executor** - orchestrates task execution for Story
 
 ---
@@ -455,10 +526,10 @@ Mark each as in_progress when starting, completed when done.
 
 **✅ Phase 1: Context Assembly Complete:**
 - [ ] Team ID, Epic number, Next Story Number loaded from kanban_board.md
-- [ ] Q1-Q6 extracted from Epic (Step 2)
-- [ ] Frontend Research attempted if Q2/Q5 missing (Step 3)
-- [ ] Fallback Search attempted for missing info (Step 4)
-- [ ] User input requested if still missing (Step 5)
+- [ ] Q1-Q6 extracted from Epic (Step 3)
+- [ ] Frontend Research attempted if Q2/Q5 missing (Step 4)
+- [ ] Fallback Search attempted for missing info (Step 5)
+- [ ] User input requested if still missing (Step 6)
 - [ ] Complete Story planning context assembled
 
 **✅ Phase 2: Standards Research Complete:**
@@ -467,24 +538,32 @@ Mark each as in_progress when starting, completed when done.
 - [ ] Standards Research cached for workers
 - [ ] OR Phase 2 skipped (trivial CRUD, no standards, explicit skip)
 
-**✅ Phase 3: Planning Complete:**
+**✅ Phase 3: Planning + Routing Complete:**
 - [ ] Epic Scope analyzed
 - [ ] Optimal Story count determined (5-10 Stories)
 - [ ] IDEAL Story plan created (titles, statements, core AC, ordering)
 - [ ] Story Grouping Guidelines validated (vertical slicing)
 - [ ] INVEST checklist validated for all Stories
+- [ ] Epic Routing executed (Step 8): fast path OR multi-epic grouping confirmed by user
+- [ ] NEEDS_NEW_EPIC resolved (if any): stub Epic(s) created inline
 
 **✅ Phase 4: Check Existing Complete:**
-- [ ] Queried task provider for existing Stories (count only)
-- [ ] Execution mode determined (CREATE or REPLAN)
+- [ ] Queried task provider for existing Stories per epicGroup
+- [ ] Execution mode determined per epicGroup (CREATE/REPLAN/ADD)
 
 **✅ Phase 5: Delegation Complete:**
-- [ ] Called ln-221-story-creator (Phase 5a) OR ln-222-story-replanner (Phase 5b) via Skill tool
+- [ ] Called ln-221/ln-222 per epicGroup via Skill tool
 - [ ] Passed epicData, idealPlan, standardsResearch, teamId, autoApprove
-- [ ] Received output from worker (Story URLs + summary + next steps)
+- [ ] Received output from each worker (Story URLs + summary + next steps)
 
 **✅ Phase 6: Commit Complete:**
 - [ ] Kanban board changes committed with descriptive message
+
+**✅ Phase 7: Self-Check Complete:**
+- [ ] All phases verified (completed or explicitly skipped with reason)
+- [ ] Story count matches: planned == created/updated
+- [ ] No Stories lost in routing (multi-epic scenarios)
+- [ ] Summary displayed with PASS/FAIL status
 
 ---
 
@@ -514,7 +593,27 @@ Mark each as in_progress when starting, completed when done.
 4. Phase 4: Check Existing → Count = 5 → REPLAN MODE
 5. Phase 5b: Delegate REPLAN → Call ln-222-story-replanner → KEEP 4, UPDATE Technical Notes (scope research), OBSOLETE US008, CREATE US009
 
+**MULTI-EPIC MODE (Stories span multiple Epics):**
+```
+"Create stories for user authentication and payment processing"
+```
+
+**Process:**
+1. Phase 1: Context Assembly → Discovery (resolve to Epic 7: Auth), Step 2 loads allEpics [Epic 7, Epic 12, Epic 14]
+2. Phase 2: Standards Research → Research auth + payment standards via ln-001
+3. Phase 3: Planning → 8 Stories planned. Step 8 Routing → 5 Stories match Epic 7 (Auth), 3 Stories match Epic 12 (Payments). Routing preview shown, user confirms
+4. Phase 4: Check Existing per epicGroup → Epic 7: count=0 (CREATE), Epic 12: count=3 (REPLAN)
+5. Phase 5: Delegate CREATE to ln-221 for Epic 7 (5 Stories), then REPLAN to ln-222 for Epic 12 (3 Stories)
+6. Phase 6: Commit → `"ln-220: create Stories for Epics 7, 12"`
+7. Phase 7: Self-Check → 8/8 Stories created, 2 Epics processed, PASS
+
 ---
+
+## Phase 8: Meta-Analysis
+
+**MANDATORY READ:** Load `shared/references/meta_analysis_protocol.md`
+
+Skill type: `planning-coordinator`. Run after all phases complete. Output to chat using the `planning-coordinator` format.
 
 ## Reference Files
 
@@ -525,40 +624,6 @@ Mark each as in_progress when starting, completed when done.
 - **Auto-discovery patterns:** `shared/references/auto_discovery_pattern.md`
 - **Decompose-first pattern:** `shared/references/decompose_first_pattern.md`
 - **Numbering conventions:** `shared/references/numbering_conventions.md` (Story sequential across Epics)
-
----
-
-## Best Practices
-
-**Story Content:**
-- **Research-First:** Always perform Phase 2 research (standards/patterns) before Story generation
-  - **Story level:** STANDARDS/PATTERNS (OAuth RFC 6749, middleware pattern)
-  - **Task level:** LIBRARIES (authlib vs oauthlib) - delegated by ln-300
-- **Business-oriented Stories:** Each Story = USER JOURNEY (what user does, what they get), NOT technical tasks
-  - ✅ GOOD: "As API client, I want to refresh expired token, so that I maintain session without re-authentication"
-  - ❌ BAD: "Create token refresh endpoint in API" (Task, not Story)
-- **Vertical Slicing:** Each Story delivers end-to-end functionality (UI → API → Service → DB)
-- **One capability per Story:** Clear, focused persona + capability + value
-- **Testable AC:** Given-When-Then, 3-5 AC, specific criteria ("<200ms" not "fast")
-- **Test Strategy:** Section exists but is **empty** at Story creation (tests planned later by test planner)
-- **Standards Research:** Include Phase 2 research in ALL Story Technical Notes
-
-**Story Decomposition:**
-- **Decompose-First:** Build IDEAL plan before checking existing - prevents anchoring to suboptimal structure
-- **INVEST validation:** Validate every Story against INVEST criteria
-- **Size enforcement:** 3-5 AC, 6-20 hours
-- **Avoid over-decomposition:** <3 AC, <6 hours → Merge Stories
-
-**User Interaction:**
-- **Epic extraction:** Try to extract all planning info from Epic in Phase 1 Step 2 before asking user
-- **Frontend Research:** HTML forms/validation → AC scenarios (Phase 1 Step 3)
-- **Fallback search:** requirements.md, tech_stack.md if Epic incomplete (Phase 1 Step 4)
-- **Only ask user for missing info** after Epic extraction AND frontend AND fallback search fail
-
-**Delegation:**
-- **Orchestrator loads metadata only:** ID, title, status (~50 tokens per Story)
-- **Workers load full descriptions:** 8 sections (~5,000 tokens per Story)
-- **Token efficiency:** 10 Stories × 50 tokens = 500 tokens (orchestrator) vs 10 Stories × 5,000 tokens = 50,000 tokens (workers load when needed)
 
 ---
 

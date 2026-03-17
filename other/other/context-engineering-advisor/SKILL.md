@@ -1,6 +1,8 @@
 ---
 name: context-engineering-advisor
-description: Diagnose context stuffing vs. context engineering. Assess practices, define boundaries, and advise on memory architecture, retrieval, and the Research→Plan→Reset→Implement cycle.
+description: Diagnose context stuffing vs. context engineering. Use when an AI workflow feels bloated, brittle, or hard to steer reliably.
+intent: >-
+  Guide product managers through diagnosing whether they're doing **context stuffing** (jamming volume without intent) or **context engineering** (shaping structure for attention). Use this to identify context boundaries, fix "Context Hoarding Disorder," and implement tactical practices like bounded domains, episodic retrieval, and the Research→Plan→Reset→Implement cycle.
 type: interactive
 theme: ai-agents
 best_for:

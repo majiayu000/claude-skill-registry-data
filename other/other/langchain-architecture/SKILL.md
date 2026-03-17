@@ -632,35 +632,3 @@ index = pc.Index("my-index")
 # Create vector store with existing index
 vectorstore = PineconeVectorStore(index=index, embedding=embeddings)
 ```
-
-## Resources
-
-- [LangChain Documentation](https://python.langchain.com/docs/)
-- [LangGraph Documentation](https://langchain-ai.github.io/langgraph/)
-- [LangSmith Platform](https://smith.langchain.com/)
-- [LangChain GitHub](https://github.com/langchain-ai/langchain)
-- [LangGraph GitHub](https://github.com/langchain-ai/langgraph)
-
-## Common Pitfalls
-
-1. **Using Deprecated APIs**: Use LangGraph for agents, not `initialize_agent`
-2. **Memory Overflow**: Use checkpointers with TTL for long-running agents
-3. **Poor Tool Descriptions**: Clear descriptions help LLM select correct tools
-4. **Context Window Exceeded**: Use summarization or sliding window memory
-5. **No Error Handling**: Wrap tool functions with try/except
-6. **Blocking Operations**: Use async methods (`ainvoke`, `astream`)
-7. **Missing Observability**: Always enable LangSmith tracing in production
-
-## Production Checklist
-
-- [ ] Use LangGraph StateGraph for agent orchestration
-- [ ] Implement async patterns throughout (`ainvoke`, `astream`)
-- [ ] Add production checkpointer (PostgreSQL, Redis)
-- [ ] Enable LangSmith tracing
-- [ ] Implement structured tools with Pydantic schemas
-- [ ] Add timeout limits for agent execution
-- [ ] Implement rate limiting
-- [ ] Add comprehensive error handling
-- [ ] Set up health checks
-- [ ] Version control prompts and configurations
-- [ ] Write integration tests for agent workflows

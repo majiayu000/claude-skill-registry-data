@@ -103,7 +103,7 @@ Generate verification reports with this structure:
 ## Detailed References
 
 - **Workflow**: See [WORKFLOW.md](WORKFLOW.md) for step-by-step verification process
-- **Migration Guide**: See [MIGRATION_GUIDE.md](MIGRATION_GUIDE.md) for step-by-step migration from Boot 3.x to 4.0
+- **Migration Guide**: See [MIGRATION_GUIDE.md](MIGRATION_GUIDE.md) for step-by-step migration from Boot 3.x to 4.0 (also referenced from WORKFLOW.md)
 - **Examples**: See [EXAMPLES.md](EXAMPLES.md) for sample verification outputs
 - **Troubleshooting**: See [TROUBLESHOOTING.md](TROUBLESHOOTING.md) for detection issues
 - **Dependencies**: See [references/DEPENDENCIES.md](references/DEPENDENCIES.md) for complete version matrix

@@ -85,7 +85,7 @@ The PRD template contains twenty sections. The following guidelines apply when w
 
 **User Stories and Acceptance Criteria.** Every user story follows the canonical format: "As a [user type], I want [action] so that [benefit]." Each story must have at least two acceptance criteria written as testable conditions.
 
-**Functional Requirements Overview.** List requirements in a table. Each row gets a unique ID following the naming convention described below, a short feature name, a description, a priority, and a status.
+**Functional Requirements Overview.** List requirements in a table. Each row gets a unique ID following the naming convention described below, a short feature name, a description, a priority, a **Priority Rationale**, and a status. The Priority Rationale must answer "why this tier and not the one above or below" — referencing user impact, business consequence, or the presence/absence of an acceptable workaround. Never assign a priority without this justification; undefended priorities are flagged during the quality check.
 
 **Success Metrics.** Every metric must have a target value and a measurement method. Include the current baseline when known. Tie metrics back to the goals defined earlier.
 

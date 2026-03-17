@@ -483,8 +483,3 @@ class CustomerActivityProjection(Projection):
 - **Don't skip error handling** - Log and alert on failures
 - **Don't ignore ordering** - Events must be processed in order
 - **Don't over-normalize** - Denormalize for query patterns
-
-## Resources
-
-- [CQRS Pattern](https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs)
-- [Projection Building Blocks](https://zimarev.com/blog/event-sourcing/projections/)

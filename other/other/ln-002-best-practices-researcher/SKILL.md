@@ -39,7 +39,7 @@ Research industry standards and create project documentation in one workflow.
 - Link to stack-appropriate official docs
 
 ## When to Use
-- ln-310-story-validator detects missing documentation
+- ln-310-multi-agent-validator detects missing documentation
 - Need to document a pattern, library, or decision
 - Replaces: ln-321-guide-creator, ln-322-adr-creator, ln-323-manual-creator
 
@@ -143,19 +143,19 @@ Research industry standards and create project documentation in one workflow.
 - **MANDATORY:** Create target directory if missing (docs/guides/, docs/manuals/, docs/adrs/, docs/research/); file creation is required
 
 ## Definition of Done
-- Research completed (standards/patterns/versions extracted) - for guide/manual
-- Dialog completed (5 questions answered) - for ADR
-- Document generated with all required sections; no placeholders
-- Standards validated (SCOPE, maintenance, POSIX)
-- File saved to correct directory with proper naming
-- Path returned; README updated if placeholder present
+- [ ] Research completed (standards/patterns/versions extracted) - for guide/manual
+- [ ] Dialog completed (5 questions answered) - for ADR
+- [ ] Document generated with all required sections; no placeholders
+- [ ] Standards validated (SCOPE, maintenance, POSIX)
+- [ ] File saved to correct directory with proper naming
+- [ ] Path returned; README updated if placeholder present
 
 ## Reference Files
 - Guide template: `shared/templates/guide_template.md`
 - Manual template: `shared/templates/manual_template.md`
 - ADR template: `shared/templates/adr_template.md`
 - Research template: `shared/templates/research_template.md`
-- Standards: `docs/DOCUMENTATION_STANDARDS.md` (if exists)
+- Standards: `docs/standards/DOCUMENTATION_STANDARDS.md` (if exists)
 - **MANDATORY READ:** `shared/references/research_tool_fallback.md`
 
 ---

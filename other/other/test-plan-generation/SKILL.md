@@ -103,7 +103,7 @@ Mocking the database hides real bugs:
 
 Tools like TestContainers make real database testing as easy as mocking — they spin up a real database in Docker, run tests, and auto-cleanup. There is no longer a valid excuse to mock the database.
 
-The plan must specify the approximate distribution of tests across these levels (e.g., 60% unit, 25% integration, 10% system/E2E, 5% acceptance) and justify any deviation.
+The plan must specify the approximate distribution of tests across these levels (e.g., 60% unit, 25% integration, 10% system/E2E, 5% acceptance) and include a **Pyramid Distribution Rationale** explaining why this specific split was chosen for this project. A generic distribution is not acceptable — the rationale must reference project-specific factors: "Unit tests are weighted at 70% because the domain logic is heavily algorithmic with minimal external I/O" or "Integration tests are elevated to 40% because this service is primarily a data aggregation layer with little pure logic to unit test." Any distribution that deviates significantly from the standard pyramid must explain what makes this project structurally different.
 
 ## Test Case Writing Standards
 
@@ -161,8 +161,8 @@ Three primary test methods are applied depending on the test level and objective
 Not all features carry equal risk. The Test Plan applies risk-based prioritization to focus testing effort where it matters most.
 
 1. **Identify risk areas** by analyzing business impact (revenue, user trust, regulatory compliance) and technical complexity (new technology, third-party integrations, high cyclomatic complexity).
-2. **Assign risk scores** by combining likelihood of failure with severity of impact. Use a simple matrix: High/Medium/Low for each dimension.
-3. **Allocate test depth proportionally** -- high-risk areas receive deeper coverage with more test cases, more negative scenarios, and more boundary value analysis. Low-risk areas receive baseline coverage.
+2. **Assign risk scores** by combining likelihood of failure with severity of impact. Use a simple matrix: High/Medium/Low for each dimension. Each risk score must include a **Risk Reasoning** note — a one-sentence justification for both the likelihood and impact ratings. "High likelihood" must name a concrete reason (e.g., "first integration with this third-party API, no prior experience") and "High impact" must quantify the consequence (e.g., "payment flow failure directly blocks revenue"). Risk scores without reasoning are not acceptable.
+3. **Allocate test depth proportionally** -- high-risk areas receive deeper coverage with more test cases, more negative scenarios, and more boundary value analysis. Low-risk areas receive baseline coverage. Document the depth decision for each risk area so reviewers can verify the allocation is proportional.
 4. **Map risks to test cases** so the traceability matrix shows not just requirement coverage but also risk mitigation coverage.
 
 ## Entry and Exit Criteria

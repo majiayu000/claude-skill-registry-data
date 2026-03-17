@@ -23,7 +23,7 @@ Specialized worker that extracts verifiable claims from documentation and valida
 
 ## Inputs (from Coordinator)
 
-**MANDATORY READ:** Load `shared/references/task_delegation_pattern.md#audit-coordinator--worker-contract` for contextStore structure.
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
 
 Receives `contextStore` with: `tech_stack`, `project_root`, `output_dir`.
 
@@ -117,7 +117,7 @@ FOR key, entries IN claim_index:
 
 ### Phase 6: Score & Report
 
-**MANDATORY READ:** Load `shared/references/audit_scoring.md` for unified scoring formula.
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md` and `shared/references/audit_scoring.md`.
 
 Calculate score using penalty formula. Write report.
 
@@ -154,7 +154,7 @@ Calculate score using penalty formula. Write report.
 
 ## Output Format
 
-**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format.
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md` and `shared/templates/audit_worker_report_template.md`.
 
 Write report to `{output_dir}/614-fact-checker.md` with `category: "Fact Accuracy"` and checks: path_claims, version_claims, count_claims, endpoint_claims, config_claims, command_claims, entity_claims, line_ref_claims, cross_doc.
 
@@ -166,6 +166,8 @@ Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 
 ## Critical Rules
 
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
+
 - **Do not auto-fix:** Report violations only; coordinator aggregates for user
 - **Code is truth:** When docs contradict code, document is wrong (unless code is a bug)
 - **Evidence required:** Every finding includes verification command used and result
@@ -176,6 +178,8 @@ Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 - **Batch efficiently:** Extract all claims first, then verify in batches by type (all paths together, all versions together)
 
 ## Definition of Done
+
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
 
 - contextStore parsed successfully (including output_dir)
 - All `.md` files discovered (broad scope)
@@ -189,8 +193,6 @@ Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 
 ## Reference Files
 
-- **Worker report template:** `shared/templates/audit_worker_report_template.md`
-- **Audit scoring formula:** `shared/references/audit_scoring.md`
 - **Audit output schema:** `shared/references/audit_output_schema.md`
 - **Detection methodology:** `shared/references/two_layer_detection.md`
 - Claim extraction rules: [references/claim_extraction_rules.md](references/claim_extraction_rules.md)

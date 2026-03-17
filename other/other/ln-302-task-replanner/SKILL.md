@@ -21,7 +21,6 @@ Worker that re-syncs existing tasks to the latest requirements for any task type
 
 **MANDATORY READ:** Load `shared/references/tools_config_guide.md`, `shared/references/storage_mode_detection.md`, and `shared/references/input_resolution_pattern.md`
 
-Read `docs/tools_config.md` (bootstrap if missing per tools_config_guide.md).
 Extract: `task_provider` = Task Management → Provider (`linear` | `file`).
 
 ## Invocation (who/when)
@@ -35,7 +34,7 @@ Extract: `task_provider` = Task Management → Provider (`linear` | `file`).
 |-------|----------|--------|-------------|
 | `storyId` | Yes | args, git branch, kanban, user | Story whose tasks to replan |
 
-**Resolution:** Per `shared/references/input_resolution_pattern.md` — Story Resolution Chain.
+**Resolution:** Story Resolution Chain.
 **Status filter:** In Progress, To Review
 
 **Additional inputs (from orchestrator or Story context):**
@@ -46,7 +45,7 @@ Extract: `task_provider` = Task Management → Provider (`linear` | `file`).
 
 ## Template Loading
 
-**MANDATORY READ:** Load `shared/references/template_loading_pattern.md` for template copy workflow.
+**MANDATORY READ:** Load `shared/references/template_loading_pattern.md` for template copy workflow. Load `shared/references/destructive_operation_safety.md` for destructive operation keywords and severity classification.
 
 **Template Selection by taskType:**
 - `implementation` → `task_template_implementation.md`
@@ -56,13 +55,13 @@ Extract: `task_provider` = Task Management → Provider (`linear` | `file`).
 **Local copies:** `docs/templates/*.md` (in target project)
 
 ## Workflow (concise)
-1) **Resolve storyId** (per input_resolution_pattern.md):
-   - IF args provided → use args
-   - ELSE IF git branch matches Story pattern → use detected Story
-   - ELSE IF kanban has exactly 1 Story in [In Progress, To Review] → suggest
-   - ELSE → AskUserQuestion: show In Progress/To Review Stories from kanban
+1) **Resolve storyId:** Run Story Resolution Chain per guide (status filter: [In Progress, To Review]).
 2) Load templates per taskType (see Template Loading) and fetch full existing task descriptions.
 3) Normalize both sides (IDEAL vs existing sections) and run replan algorithm to classify KEEP/UPDATE/OBSOLETE/CREATE.
+   - **Inherited Assumptions (UPDATE):** Preserve Inherited Assumptions from parent Story. If parent Story Assumptions changed, update Inherited Assumptions in affected tasks to match current Story registry (ID + text sync).
+   - **Inherited Assumptions (CREATE):** For new tasks, extract relevant assumptions from parent Story Assumptions table, add to Context > Inherited Assumptions using `A{N} ({CATEGORY})` format.
+   - **Destructive Op Detection (UPDATE):** After updating Implementation Plan, re-scan for keywords from destructive_operation_safety.md (loaded above). IF detected AND "Destructive Operation Safety" section missing → add section from shared reference template. IF section already present → preserve it.
+   - **Destructive Op Detection (CREATE):** For new tasks, scan Implementation Plan for keywords from destructive_operation_safety.md (loaded above). IF detected → include "Destructive Operation Safety" section from shared reference template (MANDATORY). Fill all 5 fields + severity.
 4) Present summary (counts, titles, key diffs). Confirmation required if running interactively.
 5) Execute operations in Linear: update descriptions, cancel obsolete, **create missing with state="Backlog"**, preserve parentId for updates.
 6) Update kanban_board.md: remove canceled, add new tasks under Story in Backlog.
@@ -77,18 +76,19 @@ Extract: `task_provider` = Task Management → Provider (`linear` | `file`).
 
 ## Critical Notes
 - **MANDATORY:** Always pass `state: "Backlog"` when creating new tasks (CREATE operation). Linear defaults to team's default status (often "Postponed") if not specified.
+- **Destructive Op Detection:** Use keyword list from destructive_operation_safety.md (loaded above). If found after update/create → include Destructive Operation Safety section as MANDATORY.
 - Foundation-First ordering from IDEAL plan is preserved; do not reorder.
 - Language preservation: keep existing task language (EN/RU).
 - No code snippets; keep to approach/steps/AC/components.
 - If Story reality differs (component exists, column exists), propose Story correction to orchestrator.
 
 ## Definition of Done
-- Existing tasks loaded and parsed with correct template.
-- IDEAL plan vs existing compared; operations classified.
-- Type validation passed for all updated/created tasks.
-- Operations executed in Linear (updates, cancels, creations) with parentId intact.
-- kanban_board.md updated (Backlog) with correct Epic/Story/indentation.
-- Summary returned (KEEP/UPDATE/OBSOLETE/CREATE counts, URLs, warnings).
+- [ ] Existing tasks loaded and parsed with correct template.
+- [ ] IDEAL plan vs existing compared; operations classified.
+- [ ] Type validation passed for all updated/created tasks.
+- [ ] Operations executed in Linear (updates, cancels, creations) with parentId intact.
+- [ ] kanban_board.md updated (Backlog) with correct Epic/Story/indentation.
+- [ ] Summary returned (KEEP/UPDATE/OBSOLETE/CREATE counts, URLs, warnings).
 
 ## Reference Files
 - **Tools config:** `shared/references/tools_config_guide.md`

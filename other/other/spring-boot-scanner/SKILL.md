@@ -168,7 +168,7 @@ If scanner guidance isn't helpful for the current context:
 | Need comprehensive review | Use `/spring-review` command instead |
 | Disable temporarily | Remove `spring-boot-scanner` from active skills |
 
-The scanner is advisory—it suggests skills but never blocks your workflow.
+The scanner is advisory—it suggests skills but never blocks the workflow.
 
 ## Detailed References
 

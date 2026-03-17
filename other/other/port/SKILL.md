@@ -1,6 +1,10 @@
 ---
 name: port
-description: Port a documentation-driven project to a new target language — initializes project skeleton, analyzes reference implementation, and batch-generates plans for selected features.
+description: >
+  Port a documentation-driven project to a new target language — initializes project skeleton,
+  analyzes reference implementation, and batch-generates plans for selected features. Use when
+  converting a project to another language, rewriting in a different language, or creating a
+  multi-language SDK from existing feature specs.
 ---
 
 # Code Forge — Port
@@ -61,6 +65,17 @@ Step 2 and Step 6 are offloaded to sub-agents. Step 2 uses a single sub-agent to
 
 #### 1.1 Resolve Docs Project Path
 
+**1.1.0 Path-Like Input Guard:** If the docs project argument does NOT start with `@` but looks like a path (contains `/`, starts with `.`, or matches an existing directory on disk), use `AskUserQuestion`:
+
+```
+Your input looks like a directory path: "{input}"
+Did you mean to use @{input}? (directory paths require an @ prefix)
+```
+
+- Options:
+  - "Yes, use as directory path" → prepend `@` and continue
+  - "No, this is not a path" → display usage instructions and stop
+
 Parse the `@<path>` argument:
 1. Resolve to absolute path
 2. Validate directory exists
@@ -110,7 +125,7 @@ Proceed directly — no confirmation needed.
 
 **Skip if `ref_project_path` is null.**
 
-Spawn a `Task` tool call with:
+Spawn an `Agent` tool call with:
 - `subagent_type`: `"general-purpose"`
 - `description`: `"Analyze reference implementation"`
 
@@ -178,10 +193,10 @@ Feature specs discovered: 7 (from ../apcore/docs/features/)
   ...
 ```
 
-Use `AskUserQuestion` with `multiSelect: true`:
+Use `AskUserQuestion`:
 - Question: "Which features do you want to port to {lang}?"
-- First option: "All features (Recommended)"
-- Remaining options: one per feature
+- First option: "All features (Recommended)" — if selected, set `selected_features` to the full list
+- Remaining options: one per feature — if the user wants multiple (but not all), run additional `AskUserQuestion` rounds until they say "done"
 
 Store `selected_features[]`.
 
@@ -241,8 +256,7 @@ Write to `<target-path>/.code-forge.json`:
   "_tool": {
     "name": "code-forge",
     "description": "Transform documentation into actionable development plans with task breakdown and status tracking",
-    "url": "https://github.com/tercel/code-forge",
-    "skills_collection": "https://github.com/tercel/claude-code-skills"
+    "url": "https://github.com/tercel/code-forge"
   },
   "directories": {
     "base": "./",
@@ -271,7 +285,7 @@ If no reference: omit `reference_docs.sources` and `port.reference_impl`.
 
 #### 5.3 Generate Project Skeleton (Sub-agent)
 
-Spawn a `Task` sub-agent (`subagent_type: "general-purpose"`):
+Spawn an `Agent` sub-agent (`subagent_type: "general-purpose"`):
 
 **Sub-agent prompt:**
 
@@ -340,7 +354,7 @@ mkdir -p <target>/planning/<feature>/tasks/
 
 **6.1.3 Dispatch Plan Sub-agent**
 
-Spawn a `Task` sub-agent (`subagent_type: "general-purpose"`):
+Spawn an `Agent` sub-agent (`subagent_type: "general-purpose"`):
 
 **Sub-agent prompt:**
 
@@ -468,6 +482,7 @@ If a sub-agent fails for a feature:
 - Display: `[{i}/{total}] {feature} — FAILED: {error summary}`
 - Use `AskUserQuestion`: "Feature planning failed."
   - "Skip and continue" — mark as skipped, continue to next feature
+  - "Skip all future failures" — auto-skip any remaining failures without prompting
   - "Retry" — re-dispatch sub-agent
   - "Stop" — exit the batch loop
 

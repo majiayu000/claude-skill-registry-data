@@ -547,8 +547,3 @@ class ConsistentQueryHandler:
 - **Don't couple read/write schemas** - Independent evolution
 - **Don't over-engineer** - Start simple
 - **Don't ignore consistency SLAs** - Define acceptable lag
-
-## Resources
-
-- [CQRS Pattern](https://martinfowler.com/bliki/CQRS.html)
-- [Microsoft CQRS Guidance](https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs)

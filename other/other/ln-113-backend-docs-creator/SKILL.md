@@ -1,6 +1,6 @@
 ---
 name: ln-113-backend-docs-creator
-description: Creates 2 backend docs (api_spec.md, database_schema.md). L3 Worker invoked CONDITIONALLY when hasBackend or hasDatabase detected.
+description: Creates 2 backend docs (api_spec.md, database_schema.md). Invoked when hasBackend or hasDatabase detected.
 license: MIT
 ---
 

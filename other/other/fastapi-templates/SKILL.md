@@ -538,30 +538,3 @@ async def test_create_user(client):
     assert data["email"] == "test@example.com"
     assert "id" in data
 ```
-
-## Resources
-
-- **references/fastapi-architecture.md**: Detailed architecture guide
-- **references/async-best-practices.md**: Async/await patterns
-- **references/testing-strategies.md**: Comprehensive testing guide
-- **assets/project-template/**: Complete FastAPI project
-- **assets/docker-compose.yml**: Development environment setup
-
-## Best Practices
-
-1. **Async All The Way**: Use async for database, external APIs
-2. **Dependency Injection**: Leverage FastAPI's DI system
-3. **Repository Pattern**: Separate data access from business logic
-4. **Service Layer**: Keep business logic out of routes
-5. **Pydantic Schemas**: Strong typing for request/response
-6. **Error Handling**: Consistent error responses
-7. **Testing**: Test all layers independently
-
-## Common Pitfalls
-
-- **Blocking Code in Async**: Using synchronous database drivers
-- **No Service Layer**: Business logic in route handlers
-- **Missing Type Hints**: Loses FastAPI's benefits
-- **Ignoring Sessions**: Not properly managing database sessions
-- **No Testing**: Skipping integration tests
-- **Tight Coupling**: Direct database access in routes

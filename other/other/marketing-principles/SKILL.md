@@ -25,6 +25,20 @@ If any answer is vague, ask a follow-up before proceeding. Vague context = vague
 
 ---
 
+## Mode
+
+Detect from context or ask: *"Quick answer, full analysis, or strategic roadmap?"*
+
+| Mode | What you get | Best for |
+|------|-------------|----------|
+| `quick` | 1–2 most relevant principles applied directly to the question | Fast strategic gut-check |
+| `standard` | Multi-principle analysis with strategic recommendation | Evaluating a decision or campaign |
+| `deep` | Full strategic analysis + risk assessment + implementation roadmap | Major strategic pivots, new market entry |
+
+**Default: `standard`** — use `quick` if they just need a directional answer. Use `deep` if they're making a high-stakes business decision.
+
+---
+
 ## The Core Principles
 
 ### Strategy

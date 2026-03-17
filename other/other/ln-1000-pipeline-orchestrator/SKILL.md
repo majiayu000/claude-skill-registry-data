@@ -1,6 +1,6 @@
 ---
 name: ln-1000-pipeline-orchestrator
-description: "Meta-orchestrator: reads kanban board, lets user pick ONE Story, drives it through pipeline 300->310->400->500 via TeamCreate. User-confirmed merge to develop after quality gate PASS."
+description: "Meta-orchestrator: reads kanban board, lets user pick ONE Story, drives it through pipeline 300->310->400->500 via TeamCreate. Creates worktree isolation; coordinates workers + reports."
 license: MIT
 ---
 
@@ -15,7 +15,7 @@ Meta-orchestrator that reads the kanban board, shows available Stories, lets the
 - Ask business questions in ONE batch before execution; make technical decisions autonomously
 - Spawn worker via TeamCreate for selected Story (single worker)
 - Drive selected Story through 4 stages: ln-300 -> ln-310 -> ln-400 -> ln-500
-- Sync with develop + generate report after quality gate PASS; merge only on user confirmation
+- Collect branch name + stats from worker reports, generate pipeline report
 - Handle failures, retries, and escalation to user
 
 ## Hierarchy
@@ -24,6 +24,7 @@ Meta-orchestrator that reads the kanban board, shows available Stories, lets the
 L0: ln-1000-pipeline-orchestrator (TeamCreate lead, delegate mode, single story)
   +-- Worker (fresh per stage, shutdown after completion, one at a time)
        |   All stages: Opus 4.6  |  Effort: Stage 0 = low | Stage 1,2 = medium | Stage 3 = medium
+       |   Names: story-{id}-decompose | story-{id}-validate | story-{id}-implement | story-{id}-qa
        +-- L1: ln-300 / ln-310 / ln-400 / ln-500 (invoked via Skill tool, as-is)
             +-- L2/L3: existing hierarchy unchanged
 ```
@@ -47,13 +48,24 @@ When `mcp__hashline-edit__*` tools are available, workers MUST prefer them over 
 
 **MANDATORY READ:** Load `shared/references/tools_config_guide.md` and `shared/references/storage_mode_detection.md`
 
-Read `docs/tools_config.md` (bootstrap if missing per tools_config_guide.md).
 Extract: `task_provider` = Task Management → Provider (`linear` | `file`).
+
+## Agent Teams Mode
+
+Extract from `docs/tools_config.md` → Agent Teams → Mode:
+- `teams`: Full Agent Teams (TeamCreate + heartbeat + SendMessage). Requires `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1`.
+- `subagents`: Fallback. Sequential Agent() spawns, results return directly. No heartbeat needed. ~2x cheaper.
+
+IF tools_config.md has no Agent Teams section:
+  1. Check env var: `echo $CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS`
+  2. IF "1" → ask user: "Agent Teams available. Use teams mode (richer coordination, ~2x cost) or subagents mode (simpler, cheaper)?"
+  3. IF absent → set mode=subagents, WARN: "Agent Teams env var not set. Using subagent mode."
+  4. Update docs/tools_config.md with detected mode
 
 ## When to Use
 - One Story ready for processing — user picks which one
-- Need end-to-end automation: task planning -> validation -> execution -> quality gate -> merge confirmation
-- Want controlled Story processing with user confirmation before merge
+- Need end-to-end automation: task planning -> validation -> execution -> quality gate
+- Want controlled Story processing with pipeline report
 
 ## Pipeline: 4-Stage State Machine
 
@@ -74,20 +86,14 @@ Backlog       --> Stage 0 (ln-300) --> Backlog      --> Stage 1 (ln-310) --> Tod
                                                                        |          |
                                                                       PASS       FAIL
                                                                        |          v
-                                                                PENDING_MERGE  To Rework -> Stage 2
-                                                                  (sync+report)  (max 2 cycles)
-                                                                       |
-                                                                  [user confirms?]
-                                                                   yes  |  no
-                                                                   v       v
-                                                                Done    Done
-                                                              (merged) (branch kept)
+                                                                      Done    To Rework -> Stage 2
+                                                               (branch pushed)  (max 2 cycles)
 ```
 
 | Stage | Skill | Input Status | Output Status |
 |-------|-------|-------------|--------------|
 | 0 | ln-300-task-coordinator | Backlog (no tasks) | Backlog (tasks created) |
-| 1 | ln-310-story-validator | Backlog (tasks exist) | Todo |
+| 1 | ln-310-multi-agent-validator | Backlog (tasks exist) | Todo |
 | 2 | ln-400-story-executor | Todo / To Rework | To Review |
 | 3 | ln-500-story-quality-gate | To Review | Done / To Rework |
 
@@ -100,7 +106,7 @@ This skill runs as a **team lead** in delegate mode. The agent executing ln-1000
 | **Coordinate** | Assign stages to worker, process completion reports, advance pipeline |
 | **Verify board** | Re-read kanban/Linear after each stage. Workers update via skills; lead ASSERTs expected state transitions |
 | **Escalate** | Route failures to user when retry limits exceeded |
-| **Sync & confirm** | Sync with develop after quality gate PASS, ask user for merge confirmation |
+| **Report** | Collect branch name + stats from worker, generate pipeline report |
 | **Shutdown** | Graceful worker shutdown, team cleanup |
 
 **NEVER do as lead:** Invoke ln-300/ln-310/ln-400/ln-500 directly. Edit source code. Skip quality gate. Force-kill workers.
@@ -114,20 +120,18 @@ IF .pipeline/state.json exists AND complete == false:
   # Previous run interrupted — resume from saved state
   1. Read .pipeline/state.json → restore: selected_story_id, story_state, worker_map,
      quality_cycles, validation_retries, crash_count,
-     story_results, infra_issues, worktree_map,
-     stage_timestamps, git_stats, pipeline_start_time, readiness_scores, merge_status
+     story_results, infra_issues,
+     stage_timestamps, git_stats, pipeline_start_time, readiness_scores
   2. Read .pipeline/checkpoint-{selected_story_id}.json → validate story_state consistency
      (checkpoint.stage should match story_state[id])
   3. Re-read kanban board → verify selected story still exists
   4. Read team config → verify worker_map members still exist
   5. Set suspicious_idle = false (ephemeral, reset on recovery)
-  6. IF story_state[id] == "PENDING_MERGE":
-     # Re-ask user for merge confirmation (Phase 4 post-loop)
-     Jump to Phase 4 POST-LOOP
-  7. IF story_state[id] IN ("STAGE_0".."STAGE_3"):
-     IF checkpoint.agentId exists → Task(resume: checkpoint.agentId)
+  5a. IF worktree_dir exists (.worktrees/story-{selected_story_id}): cd {worktree_dir}
+  6. IF story_state[id] IN ("STAGE_0".."STAGE_3"):
+     IF checkpoint.agentId exists → Agent(resume: checkpoint.agentId)
      ELSE → respawn worker with checkpoint context (see checkpoint_format.md)
-  8. Jump to Phase 4 event loop
+  7. Jump to Phase 4 event loop
 
 IF .pipeline/state.json NOT exists OR complete == true:
   # Fresh start — proceed to Phase 1
@@ -215,7 +219,10 @@ IF storage_mode == "linear":
 
 #### 3.1 Pre-flight: Settings Verification
 
+**IF agent_teams_mode == "teams":**
+
 Verify `.claude/settings.local.json` in target project:
+- `env.CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS` = `"1"` (required for TeamCreate/SendMessage)
 - `defaultMode` = `"bypassPermissions"` (required for workers)
 - `hooks.Stop` registered → `pipeline-keepalive.sh`
 - `hooks.TeammateIdle` registered → `worker-keepalive.sh`
@@ -235,24 +242,22 @@ Bash: cp {skill_repo}/ln-1000-pipeline-orchestrator/references/hooks/worker-keep
 2. Verify `.claude/hooks/*.sh` files exist and have `#!/bin/bash` shebang
 3. On Windows: ensure LF line endings in .sh files (see hook installation above — use Bash `cp`, not Write tool)
 
+**IF agent_teams_mode == "subagents":**
+
+Verify `.claude/settings.local.json` in target project:
+- `defaultMode` = `"bypassPermissions"` (required for subagent workers)
+
+No hooks, no env var, no TeamCreate needed — subagents return results directly to lead.
+
 #### 3.2 Initialize Pipeline State
 
 ```
-Write .pipeline/state.json (full schema — see checkpoint_format.md):
-  { "complete": false, "selected_story_id": "<selected story ID>",
-    "stories_remaining": 1, "last_check": <now>,
-    "story_state": {}, "worker_map": {}, "quality_cycles": {}, "validation_retries": {},
-    "crash_count": {},
-    "worktree_map": {}, "story_results": {}, "infra_issues": [],
-    "status_cache": {<status_name: status_uuid>},    # Empty object if file mode
-    "stage_timestamps": {}, "git_stats": {}, "pipeline_start_time": <now>, "readiness_scores": {},
-    "skill_repo_path": <absolute path to skills repository root>,
-    "team_name": "pipeline-{YYYY-MM-DD}",
-    "business_answers": {<question: answer pairs from Phase 2, or {} if skipped>},
-    "merge_status": "pending",
-    "storage_mode": "file"|"linear",
-    "project_brief": {<name, tech, type, key_rules from Phase 1 step 2>},
-    "story_briefs": {<storyId: {tech, keyFiles, approach, complexity} from Phase 1 step 9>} }   # Recovery-critical
+pipeline_dir = "$(pwd)/.pipeline"                    # Absolute path — workers in worktree use this
+Write .pipeline/state.json (schema: checkpoint_format.md → Pipeline State Schema):
+  Initialize: complete=false, selected_story_id, stories_remaining=1,
+  all counters=0, empty collections, team_name="pipeline-{YYYY-MM-DD}",
+  business_answers from Phase 2, storage_mode, project_brief, story_briefs,
+  status_cache (Linear) or {} (file), pipeline_dir
 Write .pipeline/lead-session.id with current session_id   # Stop hook uses this to only keep lead alive
 ```
 
@@ -267,38 +272,56 @@ IF platform == "win32":
   # Fallback: Windows auto-releases execution state on process exit
 ```
 
-#### 3.3 Create Team & Prepare Branch
+#### 3.3 Create Team
 
-**Worktree:** Worker gets its own worktree with a named feature branch (`feature/{id}-{slug}`). Created in Phase 4 before spawning.
+**Model routing:** All stages use `model: "opus"`. Thinking mode: always enabled (adaptive). Crash recovery = same effort as target stage.
 
-**Model routing:** All stages use `model: "opus"`. Effort routing via prompt: `effort_for_stage(0) = "low"`, `effort_for_stage(1) = "medium"`, `effort_for_stage(2) = "medium"`, `effort_for_stage(3) = "medium"`. Crash recovery = same as target stage. Thinking mode: always enabled (adaptive).
+| Worker | Stage 0 | Stage 1 | Stage 2 | Stage 3 |
+|--------|---------|---------|---------|---------|
+| Effort | low | medium | medium | medium |
 
-1. Ensure `develop` branch exists and is up-to-date with main:
-   ```
-   main_branch = git symbolic-ref --short HEAD   # or "master"/"main" per project
-   IF `develop` branch not found locally or on origin:
-     git branch develop $main_branch
-     git push -u origin develop
-   git checkout develop
-   git pull --ff-only origin develop              # Get latest remote changes
+**IF agent_teams_mode == "teams":**
+```
+TeamCreate(team_name: "pipeline-{YYYY-MM-DD}-{HHmm}")
+# TeamCreate assigns lead name "team-lead" (lead_agent_id: "team-lead@{team_name}")
+# Workers use recipient: "team-lead" — hardcoded in references/worker_prompts.md
+```
 
-   # Ensure develop has all commits from main (prevents stale feature branches)
-   missing = git log develop..origin/$main_branch --oneline
-   IF missing is NOT empty:
-     git merge origin/$main_branch --no-edit      # Fast-forward or merge main into develop
-     IF merge conflict:
-       # Resolve conflicts (prefer develop for project files, prefer main for config/CI)
-       # After resolving: git add . && git commit --no-edit
-       # If unresolvable: ABORT merge, escalate to user with conflict file list
-     git push origin develop
-   ```
+**IF agent_teams_mode == "subagents":**
+Skip TeamCreate. Lead spawns Agent() calls directly in Phase 4.
+Workers are sequential subagents — no team_name, no SendMessage, no heartbeat.
 
-2. Create team:
-   ```
-   TeamCreate(team_name: "pipeline-{YYYY-MM-DD}-{HHmm}")
-   ```
+#### 3.4 Worktree Isolation
 
-Worker is spawned in Phase 4 after worktree creation.
+**MANDATORY READ:** Load `shared/references/git_worktree_fallback.md`
+
+```
+branch_check = git branch --show-current
+IF branch_check matches feature/* / optimize/* / upgrade/* / modernize/*:
+  # Already isolated — skip (standalone ln-400 created it earlier)
+  worktree_dir = CWD
+ELSE:
+  # Create worktree so ALL workers (Stage 0-3) operate in feature branch
+  story_slug = slugify(selected_story.title)    # lowercase, spaces→dashes
+  branch = "feature/{selected_story_id}-{story_slug}"
+  worktree_dir = ".worktrees/story-{selected_story_id}"
+
+  # Carry uncommitted changes (per git_worktree_fallback.md steps 2-3a)
+  changes = git diff HEAD
+  IF changes not empty:
+    git diff HEAD > .pipeline/carry-changes.patch
+
+  git fetch origin
+  git worktree add -b {branch} {worktree_dir} origin/master    # Branch from origin/master directly, don't touch current branch
+
+  IF .pipeline/carry-changes.patch exists:
+    git -C {worktree_dir} apply .pipeline/carry-changes.patch && rm .pipeline/carry-changes.patch
+    IF apply fails: WARN user "Patch conflicts — continuing without uncommitted changes"
+
+  cd {worktree_dir}    # All subsequent workers inherit this CWD
+```
+
+Workers self-detect `feature/*` on startup → skip their own worktree creation (ln-400 Phase 1 step 5).
 
 ### Phase 4: Execution Loop
 
@@ -318,132 +341,114 @@ crash_count[selected_story.id] = 0          # crash respawn counter, limit 1
 suspicious_idle = false                      # crash detection flag
 story_state[selected_story.id] = "QUEUED"
 worker_map = {}                              # {storyId: worker_name}
-worktree_map = {}                            # {storyId: worktree_dir | null}
-story_results = {}                           # {storyId: {stage0: "...", ...}} — for pipeline report
+story_results = {}                           # {storyId: {stage0: "...", stage1_agents: "...", stage3_agents: "...", ...}} — for pipeline report
 infra_issues = []                            # [{phase, type, message}] — infrastructure problems
 heartbeat_count = 0                          # Heartbeat cycle counter (ephemeral, resets on recovery)
 stage_timestamps = {}                        # {storyId: {stage_N_start: ISO, stage_N_end: ISO}}
 git_stats = {}                               # {storyId: {lines_added, lines_deleted, files_changed}}
 pipeline_start_time = now()                  # ISO 8601 — wall-clock start for duration metrics
 readiness_scores = {}                        # {storyId: readiness_score} — from Stage 1 GO
+previous_quality_score = {}                  # {storyId: score} — saved on FAIL for rework degradation detection
 
-# Helper functions — see phase4_heartbeat.md Helper Functions for full definitions
+# Helper functions — defined in phase4_heartbeat.md (loaded above)
 # skill_name_from_stage(stage), predict_next_step(stage), stage_duration(id, N)
 
-# --- SPAWN SINGLE WORKER ---
+# --- SPAWN FIRST WORKER ---
 id = selected_story.id
-target_stage = determine_stage(selected_story)    # See pipeline_states.md guards
-worker_name = "story-{id}-s{target_stage}"
+target_stage = determine_stage(selected_story)    # pipeline_states.md guards
+# Stage names: 0=decompose, 1=validate, 2=implement, 3=qa
+stage_names = {0: "decompose", 1: "validate", 2: "implement", 3: "qa"}
+worker_name = "story-{id}-{stage_names[target_stage]}"
 
-worktree_dir = ".worktrees/story-{id}"
-git worktree add -b feature/{id}-{slug} {worktree_dir} develop
+IF agent_teams_mode == "teams":
+  Agent(name: worker_name, team_name: "pipeline-{date}",
+       model: "opus", mode: "bypassPermissions",
+       subagent_type: "general-purpose",
+       prompt: worker_prompt(selected_story, target_stage, business_answers))
+  worker_map[id] = worker_name
+  Write .pipeline/worker-{worker_name}-active.flag     # For TeammateIdle hook
 
-worktree_map[id] = worktree_dir
-project_root = Bash("pwd")           # Absolute path for PIPELINE_DIR in worktree mode
-Task(name: worker_name, team_name: "pipeline-{date}",
-     model: "opus", mode: "bypassPermissions",
-     subagent_type: "general-purpose",
-     prompt: worker_prompt(selected_story, target_stage, business_answers, worktree_dir, project_root))
-worker_map[id] = worker_name
+IF agent_teams_mode == "subagents":
+  result = Agent(name: worker_name,
+       model: "opus", mode: "bypassPermissions",
+       subagent_type: "general-purpose",
+       prompt: worker_prompt_subagent(selected_story, target_stage, business_answers))
+  # Result returns directly — parse for COMPLETE/ERROR, no SendMessage needed
+  # worker_prompt_subagent = same as worker_prompt but WITHOUT Step 5 (ACK/shutdown)
+  # Worker just does the work and returns result as final output
+
 story_state[id] = "STAGE_{target_stage}"
 stage_timestamps[id] = {}
 stage_timestamps[id]["stage_{target_stage}_start"] = now()
-Write .pipeline/worker-{worker_name}-active.flag     # For TeammateIdle hook
 Update .pipeline/state.json
-SendMessage(recipient: worker_name,
-            content: "Execute Stage {target_stage} for {id}",
-            summary: "Stage {target_stage} assignment")
 
-# --- EVENT LOOP (driven by Stop hook heartbeat, single story) ---
-# HOW THIS WORKS:
-# 1. Lead's turn ends → Stop event fires
-# 2. pipeline-keepalive.sh reads .pipeline/state.json → complete=false → exit 2
-# 3. stderr "HEARTBEAT: ..." → new agentic loop iteration
-# 4. Any queued worker messages (SendMessage) delivered in this cycle
-# 5. Lead processes messages via ON handlers (reactive) + verifies done-flags (proactive)
-# 6. Lead's turn ends → Go to step 1
-#
-# The Stop hook IS the event loop driver. Each heartbeat = one iteration.
-# Lead MUST NOT say "waiting for messages" and stop — the heartbeat keeps it alive.
-# If no worker messages arrived: output brief status, let turn end → next heartbeat.
-#
-# --- CONTEXT RECOVERY PROTOCOL ---
-# Claude Code may compress conversation history during long pipelines.
-# When this happens, you lose SKILL.md instructions and state variables.
-# The Stop hook includes "---PIPELINE RECOVERY CONTEXT---" in EVERY heartbeat stderr.
-#
-# IF you see this block and don't recall the pipeline protocol:
-#   Follow CONTEXT RECOVERY PROTOCOL in references/phases/phase4_heartbeat.md (7 steps).
-#   Quick summary: state.json → SKILL.md(FULL) → handlers → heartbeat → known_issues → ToolSearch → resume
-#
-# FRESH WORKER PER STAGE: Each stage transition = shutdown old worker + spawn new one.
-#
-# BIDIRECTIONAL HEALTH MONITORING:
-# - Reactive: ON handlers process worker completion messages
-# - Proactive: Verify done-flags without messages (lost message recovery)
-# - Defense-in-depth: Handles network issues, context overflow, worker crashes
+# --- EVENT LOOP ---
 
-WHILE story_state[id] NOT IN ("DONE", "PAUSED", "PENDING_MERGE"):
+IF agent_teams_mode == "teams":
+  # Heartbeat-driven: Stop hook → exit 2 → new agentic loop → worker messages delivered → ON handlers → repeat
+  # See: phase4_handlers.md (message processing), phase4_heartbeat.md (health monitoring + recovery)
+  # Anti-pattern: NEVER say "waiting for messages" — heartbeat keeps lead alive automatically.
+  # Context loss after compression? Follow recovery protocol in phase4_heartbeat.md.
 
-  # 1. Process worker messages (reactive message handling)
-  #
-  **MANDATORY READ:** Load `references/phases/phase4_handlers.md` for all ON message handlers:
-  - Stage 0 COMPLETE / ERROR (task planning outcomes)
-  - Stage 1 COMPLETE (GO / NO-GO validation outcomes with retry logic)
-  - Stage 2 COMPLETE / ERROR (execution outcomes)
-  - Stage 3 COMPLETE (PASS/CONCERNS/WAIVED/FAIL quality gate outcomes with rework cycles)
-  - Worker crash detection (3-step protocol: flag → probe → respawn)
+IF agent_teams_mode == "subagents":
+  # Sequential: Agent() returns result → parse → update state → spawn next Agent() → repeat
+  # No heartbeat, no SendMessage, no crash detection needed — subagents are managed by Claude Code.
+  # Crash recovery: use Agent(resume: agentId) to resume failed subagent.
 
-  Handlers include sender validation and state guards to prevent duplicate processing.
+WHILE story_state[id] NOT IN ("DONE", "PAUSED"):
 
-  # 2. Active done-flag verification (proactive health monitoring)
-  #
-  **MANDATORY READ:** Load `references/phases/phase4_heartbeat.md` for bidirectional health monitoring:
-  - Lost message detection (done-flag exists but state not advanced)
-  - Synthetic recovery from checkpoint + kanban verification (all 4 stages)
-  - Fallback to probe protocol when checkpoint missing
-  - Structured heartbeat output (single story status line)
-  - Helper functions (skill_name_from_stage, predict_next_step)
+  IF agent_teams_mode == "teams":
+    # 1. Process worker messages (reactive message handling)
+    #
+    **MANDATORY READ:** Load `references/phases/phase4_handlers.md` for all ON message handlers:
+    - Stage 0 COMPLETE / ERROR (task planning outcomes)
+    - Stage 1 COMPLETE (GO / NO-GO validation outcomes with retry logic)
+    - Stage 2 COMPLETE / ERROR (execution outcomes)
+    - Stage 3 COMPLETE (PASS/CONCERNS/WAIVED/FAIL quality gate outcomes with rework cycles)
+    - Worker crash detection (3-step protocol: flag → probe → respawn)
 
-  # 3. Heartbeat state persistence
-  #
-  ON HEARTBEAT (Stop hook stderr: "HEARTBEAT: ..."):
-    Write .pipeline/state.json with ALL state variables.
-    # See phase4_heartbeat.md for persistence details
+    Handlers include sender validation and state guards to prevent duplicate processing.
 
-# --- POST-LOOP: Handle PENDING_MERGE ---
-IF story_state[id] == "PENDING_MERGE":
-  # Phase 4a Section B: Ask user for merge confirmation
-  # (Section A: sync+report already executed by Stage 3 PASS handler)
-  AskUserQuestion:
-    "Story {id} completed. Quality Score: {score}/100. Verdict: {verdict}.
-     Branch: feature/{id}-{slug}
-     Files changed: {git_stats[id].files_changed}, +{git_stats[id].lines_added}/-{git_stats[id].lines_deleted}
-     Report: docs/tasks/reports/pipeline-{date}.md
+    # 2. Active done-flag verification (proactive health monitoring)
+    #
+    **MANDATORY READ:** Load `references/phases/phase4_heartbeat.md` for bidirectional health monitoring:
+    - Lost message detection (done-flag exists but state not advanced)
+    - Synthetic recovery from checkpoint + kanban verification (all 4 stages)
+    - Fallback to probe protocol when checkpoint missing
+    - Structured heartbeat output (single story status line)
+    - Helper functions (skill_name_from_stage, predict_next_step)
 
-     Merge feature/{id}-{slug} to develop?"
+    # 3. Heartbeat state persistence
+    #
+    ON HEARTBEAT (Stop hook stderr: "HEARTBEAT: ..."):
+      Write .pipeline/state.json with ALL state variables.
+      # phase4_heartbeat.md persistence details (loaded above)
 
-  IF user confirms:
-    Execute phase4a_git_merge.md Section C: merge_to_develop(id)
-    # Sets story_state = "DONE", merge_status = "merged"
-  ELSE:
-    Execute phase4a_git_merge.md Section D: decline_merge(id)
-    # Sets story_state = "DONE", merge_status = "declined"
+  IF agent_teams_mode == "subagents":
+    # Result already returned from Agent() call above (or from loop iteration below).
+    # Parse result text for stage outcome:
+    #   - Match "Stage {N} COMPLETE" → extract details, advance to next stage
+    #   - Match "Stage {N} ERROR" → handle error per phase4_handlers.md logic
+    #   - Apply same business logic as ON handlers (retry limits, quality cycles, etc.)
+    #
+    # Spawn next stage worker:
+    next_stage = current_stage + 1    # or rework cycle per handler logic
+    worker_name = "story-{id}-{stage_names[next_stage]}"
+    result = Agent(name: worker_name,
+         model: "opus", mode: "bypassPermissions",
+         subagent_type: "general-purpose",
+         prompt: worker_prompt_subagent(selected_story, next_stage, business_answers))
+    # Parse result, update state, continue loop
+
+    Update .pipeline/state.json
+
 ```
 
-**`determine_stage(story)` routing:** See `references/pipeline_states.md` Stage-to-Status Mapping table.
+**`determine_stage(story)` routing:** Stage-to-Status Mapping table in `references/pipeline_states.md` (loaded above).
 
-#### Phase 4a: Git Sync, Report & Merge Confirmation
+> **Worktree** created by ln-1000 in Phase 3.4 — all workers operate in `feature/*`. **Branch finalization** (commit, push, worktree cleanup) is handled by ln-500 after quality gate verdict. ln-1000 collects the branch name + stats from the worker's completion report.
 
-**MANDATORY READ:** Load `references/phases/phase4a_git_merge.md` for full procedure:
-- **Section A:** Sync with develop (rebase → fallback to merge), collect metrics, append story report, verify kanban/Linear — executed automatically after Stage 3 PASS
-- **Section B:** Ask user for merge confirmation (AskUserQuestion) — post-loop
-- **Section C:** Squash merge into develop, worktree cleanup, context refresh — only if user confirms
-- **Section D:** Preserve branch, output manual merge instructions — if user declines
-
-Triggered after Stage 3 PASS/CONCERNS/WAIVED verdict from ln-500-story-quality-gate.
-
-### Phase 5: Cleanup & Self-Verification
+### Phase 5: Cleanup & Report
 
 ```
 # 0. Signal pipeline complete (allows Stop hook to pass)
@@ -453,122 +458,109 @@ Write .pipeline/state.json: { "complete": true, ... }
 verification = {
   story_selected:   selected_story_id is set              # Phase 1 ✓
   questions_asked:  business_answers stored OR none        # Phase 2 ✓
-  team_created:     team exists                            # Phase 3 ✓
+  team_created:     team exists OR agent_teams_mode == "subagents"  # Phase 3 ✓
   story_processed:  story_state[id] IN ("DONE", "PAUSED") # Phase 4 ✓
-  sync_completed:   feature branch synced with develop     # Phase 4a Section A ✓
-  merge_status:     "merged" | "declined" | "paused"       # Phase 4a Section C/D ✓
 }
 IF ANY verification == false: WARN user with details
 
-# 2. Finalize pipeline report
-Prepend summary header to docs/tasks/reports/pipeline-{date}.md:
-  # Pipeline Report — {date}
-  | Metric | Value |
-  |--------|-------|
-  | Story | {selected_story_id}: {title} |
-  | Final State | {story_state[id]} |
-  | Merge Status | {merge_status} |
-  | Quality rework cycles | {quality_cycles[id]} |
-  | Validation retries | {validation_retries[id]} |
-  | Crash recoveries | {crash_count[id]} |
-  | Infrastructure issues | {len(infra_issues)} |
-
-# 2b. Stage Duration Breakdown
-Append Stage Duration section:
-  ## Stage Duration Breakdown
-  | Stage 0 | Stage 1 | Stage 2 | Stage 3 | Total | Bottleneck |
-  |---------|---------|---------|---------|-------|------------|
-  durations = {N: stage_timestamps[id]["stage_{N}_end"] - stage_timestamps[id]["stage_{N}_start"]
-               FOR N IN 0..3 IF both timestamps exist}
-  total = sum(durations.values())
-  bottleneck = key with max(durations)
-  | {durations[0] or "—"} | {durations[1] or "—"} | {durations[2] or "—"} | {durations[3] or "—"} | {total} | Stage {bottleneck} |
-
-# 2c. Code Output Metrics
-Append Code Output section (if git_stats available):
-  ## Code Output Metrics
-  | Files Changed | Lines Added | Lines Deleted | Net Lines |
-  |--------------|-------------|---------------|-----------|
-  | {git_stats[id].files_changed} | +{git_stats[id].lines_added} | -{git_stats[id].lines_deleted} | {net} |
-
-# 2d. Cost Estimate
-Append Cost Estimate section:
-  ## Cost Estimate
-  | Metric | Value |
-  |--------|-------|
-  | Wall-clock time | {now() - pipeline_start_time} |
-  | Total worker spawns | {count of Task() calls in session} |
-  | Hashline-edit usage | {count mcp__hashline-edit__* calls in Stage 2 workers} / {total file edits} |
-
-# 2e. Collect infrastructure issues
-# Analyze pipeline session for non-fatal problems:
-# hook/settings failures, git conflicts, worktree errors, merge issues,
-# Linear sync mismatches, worker crashes, permission errors.
-# Populate infra_issues = [{phase, type, message}] from session context.
-
-Append Infrastructure Issues section:
-  ## Infrastructure Issues
-  IF infra_issues NOT EMPTY:
-    | # | Phase | Type | Details |
-    |---|-------|------|---------|
-    FOR EACH issue IN infra_issues:
-      | {N} | {issue.phase} | {issue.type} | {issue.message} |
+# 2. Read stage notes (written by workers in .pipeline/)
+stage_notes = {}
+FOR N IN 0..3:
+  IF .pipeline/stage_{N}_notes_{id}.md exists:
+    stage_notes[N] = read file content
   ELSE:
-    _No infrastructure issues._
+    stage_notes[N] = "(no notes captured)"
 
-Append Operational Recommendations section (auto-generated from counters):
-  ## Operational Recommendations
-  - IF quality_cycles[id] > 0: "Needed {N} quality cycles. Improve task specs or acceptance criteria."
-  - IF validation_retries[id] > 0: "Failed validation. Review Story/Task structure."
-  - IF crash_count[id] > 0: "Worker crashed {N} times. Check for context-heavy operations."
-  - IF story_state[id] == "PAUSED": "Story requires manual intervention."
-  - IF infra_issues with type "hook": "Hook configuration errors. Verify settings.local.json and .claude/hooks/."
-  - IF infra_issues with type "git": "Git conflicts encountered. Rebase feature branches more frequently."
-  - IF all DONE with 0 retries AND no infra_issues: "Clean run — no issues detected."
+# 3. Finalize pipeline report
+durations = {N: stage_timestamps[id]["stage_{N}_end"] - stage_timestamps[id]["stage_{N}_start"]
+             FOR N IN 0..3 IF both timestamps exist}
 
-# 3. Show pipeline summary to user
+Write docs/tasks/reports/pipeline-{date}.md:
+
+  # Pipeline Report — {date}
+
+  **Story:** {selected_story_id} — {title}
+  **Branch:** {branch_name from worker report}
+  **Final State:** {story_state[id]}
+  **Duration:** {now() - pipeline_start_time}
+
+  ## Task Planning (ln-300)
+  | Tasks | Plan Score | Duration |
+  |-------|-----------|----------|
+  | {N} created | {score}/4 | {durations[0]} |
+
+  {stage_notes[0] — Key Decisions + Artifacts sections}
+
+  ## Validation (ln-310)
+  | Verdict | Readiness | Agent Review | Duration |
+  |---------|-----------|-------------|----------|
+  | {verdict} | {score}/10 | {story_results[id].stage1_agents} | {durations[1]} |
+
+  {stage_notes[1] — Key Decisions + Artifacts sections}
+
+  ## Implementation (ln-400)
+  | Status | Files | Lines | Duration |
+  |--------|-------|-------|----------|
+  | {result} | {git_stats[id].files_changed} | +{git_stats[id].lines_added}/-{git_stats[id].lines_deleted} | {durations[2]} |
+
+  {stage_notes[2] — Key Decisions + Artifacts sections}
+
+  ## Quality Gate (ln-500)
+  | Verdict | Score | Agent Review | Rework | Duration |
+  |---------|-------|-------------|--------|----------|
+  | {verdict} | {score}/100 | {story_results[id].stage3_agents} | {quality_cycles[id]} | {durations[3]} |
+
+  {stage_notes[3] — Key Decisions + Artifacts sections}
+
+  ## Pipeline Metrics
+  | Wall-clock | Workers | Crashes | Validation retries | Infra issues |
+  |------------|---------|---------|-------------------|--------------|
+  | {total_duration} | {worker_spawn_count} | {crash_count[id]} | {validation_retries[id]} | {len(infra_issues)} |
+
+  {IF infra_issues: list each issue with phase, type, message}
+
+# 4. Show pipeline summary to user
 ```
 Pipeline Complete:
-| Story | Stage 0 | Stage 1 | Stage 2 | Stage 3 | Merged | Final State |
-|-------|---------|---------|---------|---------|--------|------------|
-| {id} | {stage0} | {stage1} | {stage2} | {stage3} | {merge_status} | {story_state[id]} |
+| Story | Branch | Planning | Validation | Implementation | Quality Gate | State |
+|-------|--------|----------|------------|----------------|-------------|-------|
+| {id} | {branch} | {stage0} | {stage1} | {stage2} | {stage3} | {story_state[id]} |
 
 Report saved: docs/tasks/reports/pipeline-{date}.md
 ```
-# 4. Shutdown worker (if still active)
+
+# 5. Shutdown worker (if still active)
 IF worker_map[id]:
   SendMessage(type: "shutdown_request", recipient: worker_map[id])
 
-# 5. Cleanup team
-TeamDelete
+# 6. Cleanup team (with hung agent escalation)
+SendMessage(type: "shutdown_request") to all remaining workers
+TeamDelete(team_name)
+IF TeamDelete fails (timeout 60s or error):
+  # Force cleanup: platform doesn't support force-kill (#31788)
+  Bash: rm -rf ~/.claude/teams/{team_name} ~/.claude/tasks/{team_name}
+  Display: "TeamDelete blocked by hung agent. Force-cleaned team resources."
 
-# 6. Worktree cleanup
-IF merge_status == "merged":
-  # Worktree already removed in Phase 4a Section C
-  pass
-ELSE IF merge_status == "declined":
-  # Preserve worktree — user needs it for manual merge
-  Output: "Worktree preserved at .worktrees/story-{id}/"
-ELSE IF story_state[id] == "PAUSED":
-  IF merge_status == "pending" AND worktree_map[id]:
-    # Merge conflict — preserve worktree for manual resolution
-    Output: "Worktree preserved at {worktree_map[id]}/ for merge conflict resolution"
-  ELSE IF worktree_map[id]:
-    git worktree remove {worktree_map[id]} --force
-    rm -rf .worktrees/
+# 7. Worktree cleanup
+IF story_state[id] == "PAUSED" AND worktree_dir exists AND worktree_dir != CWD:
+  # Save partial work to branch before cleanup
+  git -C {worktree_dir} add -A
+  git -C {worktree_dir} commit -m "WIP: {storyId} pipeline paused at stage {current_stage}" --allow-empty
+  git -C {worktree_dir} push -u origin {branch}
+  # Clean worktree (branch preserved on remote)
+  cd {project_root}
+  git worktree remove {worktree_dir} --force
+  Display: "Partial work saved to branch {branch} (remote). Worktree cleaned."
+# IF story_state[id] == "DONE": worktree already cleaned by ln-500
 
-# 7. Switch to develop (only if merged)
-IF merge_status == "merged":
-  git checkout develop
-
-# 8. Remove pipeline state files
-
-# 8a. Stop sleep prevention (Windows safety net — script should have self-terminated)
+# 8. Stop sleep prevention (Windows safety net)
 IF sleep_prevention_pid:
   kill $sleep_prevention_pid 2>/dev/null || true
+
+# 9. Remove pipeline state files
 Delete .pipeline/ directory
 
-# 9. Report results and report location to user
+# 10. Report results and report location to user
 ```
 
 ## Kanban as Single Source of Truth
@@ -587,30 +579,34 @@ Delete .pipeline/ directory
 | ln-500 FAIL | Worker reports FAIL verdict | Fix tasks auto-created by ln-500. Stage 2 re-entry. Max 2 quality cycles |
 | Worker crash | TeammateIdle without completion msg | Re-spawn worker, resume from last stage |
 | Business question mid-execution | Worker encounters ambiguity | Worker -> lead -> user -> lead -> worker (message chain) |
-| Merge conflict (sync) | git rebase/merge fails | Escalate to user, Story PAUSED, worktree preserved for resolution |
 
 ## Critical Rules
 
 1. **Single Story processing.** One worker at a time. User selects which Story to process
 2. **Delegate mode.** Lead coordinates only — never invoke ln-300/ln-310/ln-400/ln-500 directly. Workers do all execution
-3. **Skills as-is.** Never modify or bypass existing skill logic. Workers call `Skill("ln-310-story-validator", args)` exactly as documented
+3. **Skills as-is.** Never modify or bypass existing skill logic. Workers call `Skill("ln-310-multi-agent-validator", args)` exactly as documented
 4. **Kanban verification.** Workers update Linear/kanban via skills. Lead re-reads and ASSERTs expected state after each stage. In file mode, lead resolves merge conflicts
 5. **Quality cycle limit.** Max 2 quality FAILs per Story (original + 1 rework cycle). After 2nd FAIL, escalate to user
-6. **Merge only on confirmation.** After quality gate PASS, sync with develop and ask user. Merge only if confirmed. Feature branch preserved if declined
+6. **Worktree lifecycle.** ln-1000 creates worktree in Phase 3.4 (Pipeline-Managed model). Branch finalization (commit, push, worktree cleanup) owned by ln-500 on DONE. On PAUSED, lead saves partial work + cleans worktree in Phase 5
 7. **Re-read kanban.** After every stage completion, re-read board for fresh state. Never cache
-8. **Graceful shutdown.** Always shutdown workers via shutdown_request. Never force-kill
+8. **Graceful shutdown.** Always attempt shutdown via shutdown_request first. If TeamDelete blocked by hung agent, force-clean team resources (Phase 5 step 6)
 
 ## Known Issues
 
-**MANDATORY READ:** Load `references/known_issues.md` for production-discovered problems and self-recovery patterns.
+| Symptom | Likely Cause | Self-Recovery |
+|---------|-------------|---------------|
+| Lead outputs generic text after long run | Context compression destroyed SKILL.md + state | Follow CONTEXT RECOVERY PROTOCOL in phase4_heartbeat.md |
+| Worker checkpoint/done.flag not found | Worker in worktree wrote to `.worktrees/` not project root | `pipeline_dir` set as absolute path in Phase 3.2, passed to workers via `{pipeline_dir}` template var |
+| hashline-edit tools unavailable | MCP tool references lost after compression | `ToolSearch("+hashline-edit")` to reload |
+| Lead can't spawn workers after compression | team_name/business_answers lost | Read from `.pipeline/state.json` (persisted since Phase 3.2) |
+| Workers DM wrong lead name | `recipient: "pipeline-lead"` — TeamCreate assigns `"team-lead"` | Use `recipient: "team-lead"` hardcoded in `references/worker_prompts.md` |
 
 ## Anti-Patterns
 - Running ln-300/ln-310/ln-400/ln-500 directly from lead instead of delegating to workers
 - Processing multiple stories without user selection
-- Auto-merging to develop without user confirmation
+- Creating worktrees outside Phase 3.4 or managing branches post-creation (finalization owned by ln-500)
 - Lead skipping kanban verification after worker updates (workers write via skills, lead MUST re-read + ASSERT)
 - Skipping quality gate after execution
-- Merging to develop before quality gate PASS
 - Caching kanban state instead of re-reading
 - Reading `~/.claude/teams/*/inboxes/*.json` directly (messages arrive automatically)
 - Using `sleep` + filesystem polling for message checking
@@ -650,12 +646,11 @@ When invoked in Plan Mode, show available Stories and ask user which one to plan
 ### Execution Sequence
 1. Read full SKILL.md + references (Phase 3 prerequisites)
 2. TeamCreate("pipeline-{date}")
-3. Create worktree + feature branch: feature/{id}-{slug}
-4. Spawn worker -> Stage {N} ({skill_name})
-5. Drive through remaining stages via heartbeat event loop
-6. Sync with develop, generate report
-7. Ask for merge confirmation
-8. Cleanup (Phase 5)
+3. Spawn worker -> Stage {N} ({skill_name})
+4. Drive through remaining stages via heartbeat event loop
+5. Collect branch name + stats from worker reports
+6. Generate pipeline report
+7. Cleanup (Phase 5)
 
 ### Task Decomposition (from planning phase)
 {task breakdown if available from Plan agent research}
@@ -663,43 +658,53 @@ When invoked in Plan Mode, show available Stories and ask user which one to plan
 
 ## Definition of Done (self-verified in Phase 5)
 
-| # | Criterion | Verified By |
-|---|-----------|-------------|
-| 1 | User selected Story from kanban board | `selected_story_id` is set |
-| 2 | Business questions asked in single batch (or none found) | `business_answers` stored OR skip |
-| 3 | Team created, single worker spawned | Worker spawned for selected Story |
-| 4 | Selected Story processed: state = DONE or PAUSED | `story_state[id] IN ("DONE", "PAUSED")` |
-| 5 | Feature branch synced with develop. Merged if user confirmed | `merge_status` = "merged" or "declined" |
-| 6 | Pipeline summary shown to user | Phase 5 table output |
-| 7 | Team cleaned up (worker shutdown, TeamDelete) | TeamDelete called |
+Pipeline-level verification. Per-stage verifications are in `phase4_handlers.md` VERIFY blocks.
+
+| # | Criterion | Verified By | Scope |
+|---|-----------|-------------|-------|
+| 1 | User selected Story | `selected_story_id` is set | Always |
+| 2 | Business questions resolved | `business_answers` stored OR skip | Always |
+| 3 | Team created + operated | team exists in state | Always |
+| 4 | Story processed to terminal state | `story_state[id] IN ("DONE", "PAUSED")` | Always |
+| 5 | Per-stage verifications passed | All VERIFY blocks passed (phase4_handlers.md) | DONE only |
+| 6 | Pipeline report generated | Report file exists at `docs/tasks/reports/` | Always |
+| 7 | Pipeline summary shown to user | Phase 5 table output | Always |
+| 8 | Team cleaned up | TeamDelete called | Always |
+| 9 | Worktree status communicated | DONE: cleaned by ln-500. PAUSED: saved + cleaned by lead | Always |
+| 10 | Meta-Analysis run | Phase 6 completed, appended to pipeline report | Always |
+
+## Phase 6: Meta-Analysis
+
+**MANDATORY READ:** Load `shared/references/meta_analysis_protocol.md` and `references/phases/phase6_meta_analysis.md`
+
+Skill type: `execution-orchestrator`. Runs after Phase 5. Pipeline-specific implementation (worker audit, recovery map, trend tracking, assumption audit, report format) in `phase6_meta_analysis.md`.
 
 ## Reference Files
 
-### Phase 4 Procedures (Progressive Disclosure)
-- **Message handlers:** `references/phases/phase4_handlers.md` (Stage 0-3 ON handlers, crash detection)
+### Phase 4-6 Procedures (Progressive Disclosure)
+- **Message handlers:** `references/phases/phase4_handlers.md` (Plan Gate, Stage 0-3 ON handlers, crash detection)
 - **Heartbeat & verification:** `references/phases/phase4_heartbeat.md` (Active done-flag checking, structured heartbeat output)
-- **Git flow:** `references/phases/phase4a_git_merge.md` (Sync, report, merge confirmation, worktree cleanup)
+- **Meta-analysis:** `references/phases/phase6_meta_analysis.md` (Worker audit, recovery map, trend tracking, report format)
 
 ### Core Infrastructure
-- **Known issues:** `references/known_issues.md` (production-discovered problems and self-recovery)
-- **Message protocol:** `references/message_protocol.md`
-- **Worker health:** `references/worker_health_contract.md`
-- **Checkpoint format:** `references/checkpoint_format.md`
-- **Settings template:** `references/settings_template.json`
-- **Hooks:** `references/hooks/pipeline-keepalive.sh`, `references/hooks/worker-keepalive.sh`
-- **Kanban parsing:** `references/kanban_parser.md`
+- **MANDATORY READ:** `shared/references/git_worktree_fallback.md`
+- **MANDATORY READ:** `shared/references/research_tool_fallback.md`
 - **Pipeline states:** `references/pipeline_states.md`
 - **Worker prompts:** `references/worker_prompts.md`
+- **Worker health:** `references/worker_health_contract.md`
+- **Checkpoint format:** `references/checkpoint_format.md`
+- **Message protocol:** `references/message_protocol.md`
+- **Kanban parsing:** `references/kanban_parser.md`
 - **Kanban update algorithm:** `shared/references/kanban_update_algorithm.md`
+- **Settings template:** `references/settings_template.json`
+- **Hooks:** `references/hooks/pipeline-keepalive.sh`, `references/hooks/worker-keepalive.sh`
 - **Tools config:** `shared/references/tools_config_guide.md`
 - **Storage mode operations:** `shared/references/storage_mode_detection.md`
 - **Auto-discovery patterns:** `shared/references/auto_discovery_pattern.md`
-- **MANDATORY READ:** `shared/references/research_tool_fallback.md`
-- **MANDATORY READ:** `shared/references/git_worktree_fallback.md`
 
 ### Delegated Skills
 - `../ln-300-task-coordinator/SKILL.md`
-- `../ln-310-story-validator/SKILL.md`
+- `../ln-310-multi-agent-validator/SKILL.md`
 - `../ln-400-story-executor/SKILL.md`
 - `../ln-500-story-quality-gate/SKILL.md`
 

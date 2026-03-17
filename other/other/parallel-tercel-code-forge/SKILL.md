@@ -53,7 +53,7 @@ Group dependent problems together. Each independent group gets its own agent.
 
 ### Step 3: Dispatch Agents
 
-For each independent problem group, launch a `Task(subagent_type="general-purpose")`:
+For each independent problem group, launch a `Agent(subagent_type="general-purpose")`:
 
 **Agent prompt structure:**
 ```
@@ -76,7 +76,7 @@ You are investigating and fixing: {problem description}
 - Summary of fix (1-2 sentences)
 ```
 
-**CRITICAL:** Launch all agents in a single message using multiple `Task` tool calls. This enables true parallel execution.
+**CRITICAL:** Launch all agents in a single message using multiple `Agent` tool calls. This enables true parallel execution.
 
 ### Step 4: Review and Integrate
 
@@ -96,6 +96,24 @@ Agent 2: {problem} → {root cause} → {status}
 Agent 3: {problem} → {root cause} → {status}
 
 Full test suite: {pass}/{total} passing
+```
+
+## Example
+
+```
+3 test files failing: auth.test.ts, payment.test.ts, email.test.ts
+
+Independence check:
+  auth ←→ payment: independent (different modules, no shared state)
+  auth ←→ email:   independent (different modules)
+  payment ←→ email: independent
+
+Dispatch 3 agents in a single message:
+  Agent 1: "Fix auth.test.ts — files: src/auth/, error: missing token validation"
+  Agent 2: "Fix payment.test.ts — files: src/payment/, error: decimal precision"
+  Agent 3: "Fix email.test.ts — files: src/email/, error: template not found"
+
+Results: 3/3 resolved, full suite 128/128 passing
 ```
 
 ## Common Mistakes

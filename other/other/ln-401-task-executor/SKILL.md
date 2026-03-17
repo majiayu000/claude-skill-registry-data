@@ -23,14 +23,13 @@ Executes a single implementation (or refactor) task from Todo to To Review using
 |-------|----------|--------|-------------|
 | `taskId` | Yes | args, parent Story, kanban, user | Task to execute |
 
-**Resolution:** Per `shared/references/input_resolution_pattern.md` — Task Resolution Chain.
+**Resolution:** Task Resolution Chain.
 **Status filter:** Todo
 
 ## Task Storage Mode
 
 **MANDATORY READ:** Load `shared/references/tools_config_guide.md`, `shared/references/storage_mode_detection.md`, and `shared/references/input_resolution_pattern.md`
 
-Read `docs/tools_config.md` (bootstrap if missing per tools_config_guide.md).
 Extract: `task_provider` = Task Management → Provider (`linear` | `file`).
 
 | Aspect | Linear Mode | File Mode |
@@ -79,6 +78,19 @@ Step 2: Load Context
 Step 2b: Goal Articulation Gate
   - Complete 4 questions from shared/references/goal_articulation_gate.md (<=25 tokens each)
 
+Step 2c: Implementation Blueprint
+  - From task "Affected Components": extract file paths (Glob/Grep to find actual paths)
+  - Read each file (or key sections) to understand current structure
+  - Output:
+    ## Implementation Blueprint: {taskId}
+    **Files to create:** [list with brief purpose]
+    **Files to modify:** [list with what changes]
+    **Change order (dependencies first):**
+    1. {file} — {what and why first}
+    2. {file} — {depends on step 1}
+    **Risks:** {shared files with parallel tasks, if any}
+  - Scope: ONLY files of this task. Do not analyze other tasks.
+
 Step 3: Start Work
   - Set task to In Progress, update kanban
 
@@ -86,8 +98,8 @@ Step 4: Implement
   - 4a Pattern Reuse: IF creating new file/utility, Grep src/ for existing similar patterns
     (error handlers, validators, HTTP wrappers, config loaders). Reuse if found.
   - 4b Follow task plan/AC, apply KISS/YAGNI
-  - 4c Architecture Guard: IF creating service function: (1) 3+ side-effect categories → split;
-    (2) get_*/find_*/check_* naming → verify no hidden writes; (3) 3+ service imports → flatten
+  - 4c Architecture Guard: IF creating service function: (1) 3+ side-effect categories in **leaf** function → split (EXCEPT orchestrator functions that delegate sequentially — these are expected to have 3+ categories);
+    (2) get_*/find_*/check_* naming → verify no hidden writes; (3) 3+ service imports in **leaf** function → flatten (orchestrator imports are expected)
   - Update docs and existing tests if impacted
   - Execute verify: methods from task AC (test/command/inspect)
 
@@ -100,15 +112,12 @@ Step 6: Finish
 ```
 
 ## Workflow (concise)
-1) **Resolve taskId** (per input_resolution_pattern.md):
-   - IF args provided → use args
-   - ELSE IF Story context available → list Todo tasks under Story, suggest if 1
-   - ELSE IF kanban has exactly 1 Task in [Todo] → suggest
-   - ELSE → AskUserQuestion: show Todo Tasks from kanban
+1) **Resolve taskId:** Run Task Resolution Chain per guide (status filter: [Todo]).
 2) **Load context:** Fetch full task description (Linear: get_issue; File: Read task file); read linked guides/manuals/ADRs/research; auto-discover team/config if needed.
 2b) **Goal gate:** **MANDATORY READ:** `shared/references/goal_articulation_gate.md` — Complete the 4-question gate (<=25 tokens each). State REAL GOAL (deliverable as subject), DONE LOOKS LIKE, NOT THE GOAL, INVARIANTS & HIDDEN CONSTRAINTS.
+2c) **Implementation Blueprint:** From task "Affected Components", find actual file paths via Glob/Grep. Read key sections of each file. Output structured plan: files to create/modify, change order (dependencies first), risks (shared files with parallel tasks). Scope: this task only.
 3) **Start work:** Update this task to In Progress (Linear: update_issue; File: Edit status line); move it in kanban (keep Epic/Story indent).
-4) **Implement (with verification loop):** **Before writing new utilities/handlers**, Grep `src/` for existing patterns (error handling, validation, config access). Reuse if found; if not reusable, document rationale in code comment. Follow checkboxes/plan; keep it simple; avoid hardcoded values; reuse existing components; add Task ID comment (`// See PROJ-123`) to new code blocks; update docs noted in Affected Components; update existing tests if impacted (no new tests here). Before creating service functions, apply Architecture Guard (cascade depth, interface honesty, flat orchestration). After implementation, execute `verify:` methods from task AC: test → run specified test; command → execute and check output; inspect → verify file/content exists. If any verify fails → fix before proceeding.
+4) **Implement (with verification loop):** **Before writing new utilities/handlers**, Grep `src/` for existing patterns (error handling, validation, config access). Reuse if found; if not reusable, document rationale in code comment. Follow checkboxes/plan; keep it simple; avoid hardcoded values; reuse existing components; update docs noted in Affected Components; update existing tests if impacted (no new tests here). Before creating service functions, apply Architecture Guard (cascade depth, interface honesty, flat orchestration). After implementation, execute `verify:` methods from task AC: test → run specified test; command → execute and check output; inspect → verify file/content exists. If any verify fails → fix before proceeding.
 5) **Quality:** Run typecheck and lint (or project equivalents); ensure instructions in Existing Code Impact are addressed.
 6) **Finish:** Mark task To Review (Linear: update_issue; File: Edit status line); update kanban to To Review; add summary comment (what changed, tests run, docs touched).
 
@@ -116,7 +125,9 @@ Step 6: Finish
 
 **Context:** Self-assessment before To Review reduces review round-trips and catches obvious issues early.
 
-Before setting To Review, verify all 6 items:
+**MANDATORY READ:** Load `shared/references/code_efficiency_criterion.md` — self-check before submission.
+
+Before setting To Review, verify all items:
 
 | # | Check | Verify |
 |---|-------|--------|
@@ -127,7 +138,13 @@ Before setting To Review, verify all 6 items:
 | 4 | **Docs updated** | Affected Components docs reflect changes |
 | 5 | **Tests pass** | Existing tests still pass after changes |
 | 6 | **Pattern reuse** | New utilities checked against existing codebase; no duplicate patterns introduced |
-| 7 | **Architecture guard** | Cascade depth <= 2; no hidden writes in read-named functions; no service chains >= 3 |
+| 7 | **Architecture guard** | Cascade depth <= 2 (leaf functions); no hidden writes in read-named functions; no service chains >= 3 in leaf functions (orchestrator imports exempt) |
+| 8 | **Destructive op safety** | If task has "Destructive Operation Safety" section: (1) backup step executed/planned before destructive code, (2) rollback mechanism exists in code, (3) environment guard present, (4) preview/dry-run evidence attached or referenced |
+| 9 | **Code efficiency** | No unnecessary intermediates, verbose patterns replaced by language idioms, no boilerplate framework handles (per `shared/references/code_efficiency_criterion.md`) |
+
+**MANDATORY READ:** Load `shared/references/destructive_operation_safety.md` for severity classification and safety requirements.
+
+**HITL Gate:** IF task severity = CRITICAL (per destructive_operation_safety.md loaded above): Use `AskUserQuestion` to confirm before marking To Review: "Task contains CRITICAL destructive operation: {operation}. Backup plan: {plan}. Proceed?" Do NOT mark To Review until user confirms.
 
 **If any check fails:** Fix before setting To Review. Do not rely on reviewer to catch preventable issues.
 
@@ -137,16 +154,15 @@ Before setting To Review, verify all 6 items:
 - No code snippets in the description; code lives in repo, not in Linear.
 - No new test creation; only update existing tests if required.
 - Preserve Foundation-First ordering from orchestrator; do not reorder tasks.
-- Add Task ID comments to new code blocks for traceability (`// See PROJ-123` or `# See PROJ-123`).
-- **Do NOT commit.** Leave all changes uncommitted — ln-402 reviews and commits with task ID reference.
+- **Do NOT commit.** Leave all changes uncommitted — the reviewer reviews and commits.
 
 ## Definition of Done
-- Task selected and set to In Progress; kanban updated accordingly.
-- Guides/manuals/ADRs/research read; approach aligned with task Technical Approach.
-- Implementation completed per plan/AC; each AC `verify:` method executed with pass evidence.
-- Docs and impacted tests updated.
-- Typecheck and lint passed (or project quality commands) with evidence in comment.
-- Task set to To Review; kanban moved to To Review; summary comment added.
+- [ ] Task selected and set to In Progress; kanban updated accordingly.
+- [ ] Guides/manuals/ADRs/research read; approach aligned with task Technical Approach.
+- [ ] Implementation completed per plan/AC; each AC `verify:` method executed with pass evidence.
+- [ ] Docs and impacted tests updated.
+- [ ] Typecheck and lint passed (or project quality commands) with evidence in comment.
+- [ ] Task set to To Review; kanban moved to To Review; summary comment added.
 
 ## Reference Files
 - **Tools config:** `shared/references/tools_config_guide.md`

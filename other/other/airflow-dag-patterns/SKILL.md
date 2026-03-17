@@ -517,9 +517,3 @@ airflow/
 - **Don't use global state** - Tasks should be stateless
 - **Don't skip catchup blindly** - Understand implications
 - **Don't put heavy logic in DAG file** - Import from modules
-
-## Resources
-
-- [Airflow Documentation](https://airflow.apache.org/docs/)
-- [Astronomer Guides](https://docs.astronomer.io/learn)
-- [TaskFlow API](https://airflow.apache.org/docs/apache-airflow/stable/tutorial/taskflow.html)

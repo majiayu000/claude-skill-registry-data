@@ -649,9 +649,3 @@ go run -race main.go
 - **Don't use shared memory** - Unless necessary
 - **Don't ignore context cancellation** - Check ctx.Done()
 - **Don't use time.Sleep for sync** - Use proper primitives
-
-## Resources
-
-- [Go Concurrency Patterns](https://go.dev/blog/pipelines)
-- [Effective Go - Concurrency](https://go.dev/doc/effective_go#concurrency)
-- [Go by Example - Goroutines](https://gobyexample.com/goroutines)

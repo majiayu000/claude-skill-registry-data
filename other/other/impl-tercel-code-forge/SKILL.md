@@ -1,6 +1,9 @@
 ---
 name: impl
-description: Execute pending tasks for a feature — TDD-driven implementation with sub-agent isolation and progress tracking.
+description: >
+  Execute pending tasks for a feature — TDD-driven implementation with sub-agent isolation
+  and progress tracking. Use when starting to build, implement, or code a planned feature,
+  resuming partially completed work, or running the next task in a code-forge plan.
 ---
 
 # Code Forge — Impl
@@ -13,6 +16,13 @@ Execute pending implementation tasks for a feature, following the plan generated
 - Need to resume a partially completed feature
 - Need task-by-task execution with TDD and progress tracking
 
+## Examples
+
+```bash
+/code-forge:impl user-auth          # Execute tasks for user-auth feature
+/code-forge:impl                    # Auto-detect pending feature
+```
+
 ## Workflow
 
 ```
@@ -21,7 +31,7 @@ Locate Feature → Confirm Execution → Task Loop (sub-agents) → Verify → C
 
 ## Context Management
 
-Step 11 dispatches a dedicated sub-agent for each task, so code changes from one task don't pollute the context of the next. The main context only handles coordination: reading state, dispatching sub-agents, and updating status.
+Step 3 dispatches a dedicated sub-agent for each task, so code changes from one task don't pollute the context of the next. The main context only handles coordination: reading state, dispatching sub-agents, and updating status.
 
 ## Detailed Steps
 
@@ -37,17 +47,20 @@ If the user provided a feature name (e.g., `/code-forge:impl user-auth`):
 
 1. Look for `{output_dir}/{feature_name}/state.json`
 2. If not found, search `{output_dir}/*/state.json` for a feature whose `feature` field matches
-3. If still not found, show error: "Feature '{feature_name}' not found. Run `/code-forge:status` to see available features."
+3. If not found in `output_dir`, **also search `.code-forge/tmp/{feature_name}/state.json`** and `.code-forge/tmp/*/state.json` (plan may have been created with `--tmp`)
+4. If still not found, show error: "Feature '{feature_name}' not found. Run `/code-forge:status` to see available features."
+
+If found in `.code-forge/tmp/`, set `output_dir` to `.code-forge/tmp/` and `tmp_mode` to `true` for the rest of the session.
 
 #### 1.2 Without Argument
 
 If no feature name is provided:
 
-1. Scan `{output_dir}/*/state.json` for all features
+1. Scan **both** `{output_dir}/*/state.json` and `.code-forge/tmp/*/state.json` for all features
 2. Filter to features with `status` = `"pending"` or `"in_progress"` (exclude `"completed"`)
 3. If none found: "No features ready for execution. Run `/code-forge:plan` to create one."
 4. If one found: use it automatically
-5. If multiple found: display table and use `AskUserQuestion` to let user select
+5. If multiple found: display table (mark tmp features with `[tmp]` suffix) and use `AskUserQuestion` to let user select
 
 #### 1.3 Validate Feature State
 
@@ -60,27 +73,27 @@ After locating the feature:
 
 ---
 
-### Step 10: Ask for Execution Method
+### Step 2: Ask for Execution Method
 
 Use `AskUserQuestion`:
 
-- **"Start Execution Now (Recommended)"** — execute tasks one by one, auto-track progress → enter Step 11
+- **"Start Execution Now (Recommended)"** — execute tasks one by one, auto-track progress → enter Step 3
 - **"Manual Execution Later"** — save plan, show resume instructions (`/code-forge:impl {feature}`)
 - **"Team Collaboration Mode"** — show guidelines: commit plan to Git, claim tasks via `assignee`, sync `state.json`
-- **"Generate Plan Only"** — only generate plan files, stop here
+- **"View Plan Details"** — display plan.md contents for review before executing
 
-### Step 11: Task Execution Loop (via Sub-agents)
+### Step 3: Task Execution Loop (via Sub-agents)
 
 **Each task is executed by a dedicated sub-agent** to prevent cross-task context accumulation. The main context only handles coordination: reading state, dispatching sub-agents, and updating status.
 
-#### 11.1 Coordination Loop (Main Context)
+#### 3.1 Coordination Loop (Main Context)
 
 1. Read `state.json`
 2. Find the next task in `execution_order` that is `"pending"` with no unmet dependencies
 3. If no such task exists: display "All tasks completed!" and exit loop
 4. Display: "Starting task: {id} - {title}"
 5. Update task status to `"in_progress"` in `state.json`
-6. **Dispatch sub-agent** for this task (see 11.2)
+6. **Dispatch sub-agent** for this task (see 3.2)
 7. Review the sub-agent's execution summary
 8. Ask user via `AskUserQuestion`: "Is the task completed?"
    - **"Completed, continue to next"** → update status to `"completed"`, continue loop
@@ -88,9 +101,9 @@ Use `AskUserQuestion`:
    - **"Skip this task"** → update status to `"skipped"`, continue loop
 9. Repeat from step 1
 
-#### 11.2 Task Execution Sub-agent
+#### 3.2 Task Execution Sub-agent
 
-Spawn a `Task` tool call with:
+Spawn an `Agent` tool call with:
 - `subagent_type`: `"general-purpose"`
 - `description`: `"Execute task: {task_id}"`
 
@@ -122,9 +135,9 @@ Spawn a `Task` tool call with:
 
 **Main context retains:** Only the execution summary (~0.5-1KB per task). All code changes, test outputs, and file reads stay in the sub-agent's context and are discarded.
 
-#### 11.3 Parallel Execution (Optional)
+#### 3.3 Parallel Execution (Optional)
 
-When multiple pending tasks have **no mutual dependencies** (none depends on another), they may be dispatched as parallel sub-agents using multiple `Task` tool calls in a single message. Each sub-agent works in isolation on its own task.
+When multiple pending tasks have **no mutual dependencies** (none depends on another), they may be dispatched as parallel sub-agents using multiple `Agent` tool calls in a single message. Each sub-agent works in isolation on its own task.
 
 **Use parallel execution only when:**
 - Tasks modify different files (no overlap in "Files Involved")
@@ -133,7 +146,7 @@ When multiple pending tasks have **no mutual dependencies** (none depends on ano
 
 After all parallel sub-agents complete, review each summary and update `state.json` for all completed tasks before continuing the loop.
 
-### Step 11.5: Verify Generated Files
+### Step 4: Verify Generated Files
 
 Before completion summary, verify all generated files:
 
@@ -156,7 +169,7 @@ Then re-verify.
 
 ---
 
-### Step 12: Completion Summary
+### Step 5: Completion Summary
 
 After all tasks are completed:
 

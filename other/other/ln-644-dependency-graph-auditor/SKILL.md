@@ -46,6 +46,8 @@ L3 Worker that builds and analyzes the module dependency graph to enforce archit
 
 ## Workflow
 
+**MANDATORY READ:** Load `shared/references/two_layer_detection.md` for detection methodology.
+
 ### Phase 1: Discover Architecture (Adaptive)
 
 **MANDATORY READ:** Load `references/dependency_rules.md` — use 3-Tier Priority Chain, Architecture Presets, Auto-Detection Heuristics.
@@ -162,6 +164,8 @@ FOR EACH (A, B) WHERE B IN graph[A] AND A IN graph[B]:
     severity: "HIGH",
     fix: suggest_cycle_fix(A, B)
   })
+  # Layer 2: Test-only dependencies (devDependencies, test imports) → skip cycle
+  # Plugin/extension architecture with documented bidirectional design → downgrade to LOW
 
 # Transitive cycles via DFS (A -> B -> C -> A)
 visited = {}
@@ -336,7 +340,7 @@ ELSE:
 
 ### Phase 7: Calculate Score
 
-**MANDATORY READ:** Load `shared/references/audit_scoring.md` for unified scoring formula.
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md` and `shared/references/audit_scoring.md`.
 
 ```
 penalty = (critical * 2.0) + (high * 1.0) + (medium * 0.5) + (low * 0.2)
@@ -347,7 +351,7 @@ score = max(0, 10 - penalty)
 
 ### Phase 8: Write Report
 
-**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format (ln-640 section: standard AUDIT-META + DATA-EXTENDED).
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md` and `shared/templates/audit_worker_report_template.md`.
 
 ```
 # Build markdown report in memory with:
@@ -371,6 +375,8 @@ Score: 6.5/10 | Issues: 8 (C:1 H:3 M:3 L:1)
 
 ## Critical Rules
 
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
+
 - **Adaptive architecture** — never assume one style; detect from project structure or docs
 - **3-tier priority** — custom rules > architecture.md > auto-detection
 - **Hybrid support** — projects mix styles; apply different presets per zone
@@ -381,6 +387,8 @@ Score: 6.5/10 | Issues: 8 (C:1 H:3 M:3 L:1)
 - **File + line** — always provide exact import location for violations
 
 ## Definition of Done
+
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
 
 - Architecture discovered (adaptive 3-tier detection applied)
 - Dependency graph built from import statements (internal modules only)
@@ -396,7 +404,6 @@ Score: 6.5/10 | Issues: 8 (C:1 H:3 M:3 L:1)
 
 ## Reference Files
 
-- **Worker report template:** `shared/templates/audit_worker_report_template.md`
 - Boundary rules & presets: `references/dependency_rules.md`
 - Metrics & thresholds: `references/graph_metrics.md`
 - Import patterns: `references/import_patterns.md`

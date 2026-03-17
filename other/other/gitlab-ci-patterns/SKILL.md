@@ -246,10 +246,6 @@ trigger-child:
     strategy: depend
 ```
 
-## Reference Files
-
-- `assets/gitlab-ci.yml.template` - Complete pipeline template
-- `references/pipeline-stages.md` - Stage organization patterns
 
 ## Best Practices
 

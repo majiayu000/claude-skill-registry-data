@@ -157,7 +157,7 @@ If user selects "No, cancel", abort dispatch.
 
 3. **Set up dependencies** between tasks using TaskUpdate if the beads tasks have dependencies.
 
-4. **Spawn teammates** using the Task tool with `team_name` parameter and `isolation: "worktree"` — one per task. Each teammate should be a `general-purpose` subagent type. Give each teammate a descriptive name based on the task (e.g., the task short ID).
+4. **Spawn teammates** using the Task tool with `team_name` parameter — one per task. Each teammate should be a `general-purpose` subagent type. Give each teammate a descriptive name based on the task (e.g., the task short ID).
 
    **Mode selection:**
    - `[AUTO]` tasks: spawn with `mode: "bypassPermissions"` (default behavior)
@@ -174,11 +174,11 @@ If user selects "No, cancel", abort dispatch.
    Context: <generated context>
 
    Instructions:
-   1. Run `/start-task <task-id>` to claim the task and verify your environment
-      (You're already in an isolated worktree with .env files set up)
-   2. Implement the task according to the acceptance criteria
-   3. Run `/finish-task <task-id>` when tests pass and implementation is complete
-   4. Report back to the team lead when done
+   1. IMMEDIATELY create a task-specific branch: `git checkout -b <task-id>`
+   2. Run `/start-task <task-id>` to claim the task and verify your environment
+   3. Implement the task according to the acceptance criteria
+   4. Run `/finish-task <task-id>` when tests pass and implementation is complete
+   5. Report back to the team lead when done
    ```
 
    **Spawn prompt for `[PLAN]` tasks:**
@@ -190,21 +190,21 @@ If user selects "No, cancel", abort dispatch.
    Context: <generated context>
 
    Instructions:
-   1. Run `/start-task <task-id>` to claim the task and gather context
-      (You're already in an isolated worktree with .env files set up)
-   2. Create a detailed implementation plan
-   3. Call ExitPlanMode to submit your plan for lead approval
-   3a. IMMEDIATELY after ExitPlanMode, send a direct message to the team lead
+   1. IMMEDIATELY create a task-specific branch: `git checkout -b <task-id>`
+   2. Run `/start-task <task-id>` to claim the task and gather context
+   3. Create a detailed implementation plan
+   4. Call ExitPlanMode to submit your plan for lead approval
+   4a. IMMEDIATELY after ExitPlanMode, send a direct message to the team lead
        using SendMessage type="message":
        "PLAN APPROVAL NEEDED for <task-id>. I've submitted my plan via
        ExitPlanMode. Please review and respond with:
        SendMessage type='plan_approval_response', request_id='<from the request>',
        recipient='<my name>', approve=true/false.
        I am blocked until you respond."
-   4. WAIT — the lead will review and approve/reject your plan
-   5. After approval, implement the task
-   6. Run `/finish-task <task-id>` when tests pass and implementation is complete
-   7. Report back to the team lead when done
+   5. WAIT — the lead will review and approve/reject your plan
+   6. After approval, implement the task
+   7. Run `/finish-task <task-id>` when tests pass and implementation is complete
+   8. Report back to the team lead when done
    ```
 
    **Peer coordination (if peer pairs detected in Step 2.6):**
@@ -224,88 +224,84 @@ If user selects "No, cancel", abort dispatch.
 
 5. **Assign tasks** using TaskUpdate to set the owner of each task to the corresponding teammate name.
 
-## Step 4.5: Verify Worktree Isolation
+## Step 4.5: Verify Branch Isolation
 
-After spawning and assigning all teammates, verify that worktree isolation actually succeeded. This is critical — `isolation: "worktree"` can fail silently, leaving workers running in the main repo.
+After spawning and assigning all teammates, verify that each worker created a task-specific branch. Workers share the same repo directory (Agent Teams limitation), so branch isolation is critical to prevent conflicts.
 
 ### 4.5.1: Wait for initialization
 
 ```bash
-sleep 10
+sleep 15
 ```
 
-Workers need time to register in the team config. If the team was just created, give the system 10 seconds to stabilize.
+Workers need time to create their branches. Give the system 15 seconds to stabilize.
 
-### 4.5.2: Check team config
+### 4.5.2: Query worker branches
 
-```bash
-cat ~/.claude/teams/<team-name>/config.json
+Send a status query to each worker to check their branch:
+
+```
+For each spawned worker:
+  SendMessage type="message" recipient="<worker-name>"
+    content="Status check: What branch are you on? Reply with your current branch name."
 ```
 
-For each spawned worker in the `members` array (skip the team-lead entry), check:
-- **`cwd` field**: Must contain `.claude/worktrees/` — NOT the main repo root path
-
-Determine the main repo path for comparison:
+Also check git state directly:
 ```bash
-git rev-parse --show-toplevel
+git branch --show-current
+git branch -a | grep -E 'origin/' | head -20
 ```
 
 Build two lists:
-- **Isolated workers**: `cwd` is under `.claude/worktrees/`
-- **Non-isolated workers**: `cwd` matches the main repo root
+- **Isolated workers**: on a task-specific branch (not `main`, `master`, or the milestone branch)
+- **Non-isolated workers**: still on `main`, `master`, or the milestone branch
 
-**If team config is missing or has no worker members after 10s**, wait another 10 seconds and re-check. If still missing, treat as total failure.
+### 4.5.3: Handle failures
 
-### 4.5.3: Corroborate with git worktree list
+**If ALL workers are on task-specific branches** → proceed to Step 5.
 
-```bash
-git worktree list
-```
+**If ANY workers are still on main/milestone branch:**
 
-Cross-reference: each isolated worker's `cwd` should appear as a worktree entry. Log any discrepancies but trust the team config `cwd` as the primary signal (a fast-completing worker's worktree may have been cleaned up already).
-
-### 4.5.4: Handle failures
-
-**If ALL workers are properly isolated** → proceed to Step 5.
-
-**If ANY workers failed isolation:**
-
-1. **Shut down non-isolated workers immediately** — they are sharing the main repo:
+1. **Send warning to non-isolated workers:**
    ```
    For each non-isolated worker:
-     SendMessage type="shutdown_request" recipient="<worker-name>"
-       content="Worktree isolation failed — you are running in the main repo, not an isolated worktree. Shutting down to prevent conflicts."
+     SendMessage type="message" recipient="<worker-name>"
+       content="WARNING: You must create a task-specific branch before modifying any files. Run: git checkout -b <task-id>"
    ```
 
-2. **Check main repo state:**
+2. **Wait and re-check:**
    ```bash
-   git status
-   git branch --show-current
+   sleep 10
    ```
-   If the main repo has modifications or is on the wrong branch, report this to the user. Do NOT auto-clean — the user decides.
 
-3. **Report clearly:**
+3. **If workers still haven't branched after the second check**, shut them down:
    ```
-   WARNING: Worktree isolation failed for N of M workers.
+   For each still-non-isolated worker:
+     SendMessage type="shutdown_request" recipient="<worker-name>"
+       content="Branch isolation failed — you are still on the main/milestone branch. Shutting down to prevent conflicts."
+   ```
+
+4. **Report clearly:**
+   ```
+   WARNING: Branch isolation failed for N of M workers.
 
    Isolated (OK):
-   - <name>: <task-id> — running in <cwd path>
+   - <name>: <task-id> — on branch <branch-name>
 
    Failed (shut down):
-   - <name>: <task-id> — was running in main repo (no worktree created)
+   - <name>: <task-id> — never created a task branch
 
-   Main repo status: <clean/dirty> on branch <branch-name>
    Failed workers have been sent shutdown requests.
    ```
 
-4. **If `--yes` was specified (auto-run mode):**
+5. **If `--yes` was specified (auto-run mode):**
    - Do NOT prompt the user.
    - Unassign failed workers' tasks: `TaskUpdate` with owner set to empty string for each.
    - Log the failure. Failed tasks remain open in beads and return to `bd ready` for next dispatch.
    - Continue to Step 5 with only the isolated workers.
 
-5. **If `--yes` was NOT specified (interactive mode):**
-   - Use `AskUserQuestion`: "N workers failed worktree isolation and were shut down. Their tasks remain open. What should we do?"
+6. **If `--yes` was NOT specified (interactive mode):**
+   - Use `AskUserQuestion`: "N workers failed branch isolation and were shut down. Their tasks remain open. What should we do?"
      - Option 1: "Re-dispatch failed tasks" — run `/dispatch <failed-task-ids>` again
      - Option 2: "Continue with isolated workers only"
      - Option 3: "Abort entire dispatch" — shutdown ALL workers, exit
@@ -324,10 +320,10 @@ Teammates:
 ...
 
 **If all workers verified isolated (Step 4.5 passed):**
-All teammates verified running in isolated worktrees.
+All teammates verified on task-specific branches.
 
 **If any workers failed isolation (from Step 4.5):**
-WARNING: N of M workers failed worktree isolation.
+WARNING: N of M workers failed branch isolation.
 Failed workers were shut down. Their tasks remain open for re-dispatch.
 Failed tasks: <task-id-1>, <task-id-2>, ...
 Only N workers are active.
@@ -369,7 +365,7 @@ plan_approval_requests. Handle EACH one individually with its own request_id.
 - **Task doesn't exist**: Skip it, warn the user, continue with valid tasks
 - **All tasks invalid**: Abort with clear error message
 - **Teammate spawn fails**: Report the error, continue with remaining tasks
-- **Worktree isolation fails**: Shut down non-isolated workers (SendMessage shutdown_request), report failure, continue with isolated workers only. Tasks for failed workers remain open in beads. In `--yes` mode (auto-run), unassign and let next dispatch cycle retry. In interactive mode, offer re-dispatch, continue, or abort.
+- **Branch isolation fails**: Shut down workers that didn't create task branches (SendMessage shutdown_request), report failure, continue with isolated workers only. Tasks for failed workers remain open in beads. In `--yes` mode (auto-run), unassign and let next dispatch cycle retry. In interactive mode, offer re-dispatch, continue, or abort.
 
 ## Examples
 

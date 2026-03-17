@@ -20,7 +20,7 @@ Specialized worker auditing unused and unreachable code.
 
 ## Inputs (from Coordinator)
 
-**MANDATORY READ:** Load `shared/references/task_delegation_pattern.md#audit-coordinator--worker-contract` for contextStore structure.
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
 
 Receives `contextStore` with tech stack, codebase root, output_dir.
 
@@ -106,11 +106,11 @@ Receives `contextStore` with tech stack, codebase root, output_dir.
 
 ## Scoring Algorithm
 
-**MANDATORY READ:** Load `shared/references/audit_scoring.md` for unified scoring formula.
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md` and `shared/references/audit_scoring.md`.
 
 ## Output Format
 
-**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format.
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md` and `shared/templates/audit_worker_report_template.md`.
 
 Write report to `{output_dir}/626-dead-code.md` with `category: "Dead Code"` and checks: unreachable_code, unused_exports, commented_code, legacy_shims.
 
@@ -122,12 +122,12 @@ Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 
 ## Reference Files
 
-- **Worker report template:** `shared/templates/audit_worker_report_template.md`
 - **Clean code checklist:** `shared/references/clean_code_checklist.md`
-- **Audit scoring formula:** `shared/references/audit_scoring.md`
 - **Audit output schema:** `shared/references/audit_output_schema.md`
 
 ## Critical Rules
+
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
 
 - **Do not auto-fix:** Report only, never delete code
 - **Age-aware severity:** Legacy shims >6 months = MEDIUM, <3 months = LOW
@@ -136,6 +136,8 @@ Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 - **Git-aware:** Recommend deletion confidently -- git history preserves old code
 
 ## Definition of Done
+
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
 
 - contextStore parsed (including output_dir)
 - All 4 checks completed (unreachable code, unused imports/vars/functions, commented-out code, legacy shims)

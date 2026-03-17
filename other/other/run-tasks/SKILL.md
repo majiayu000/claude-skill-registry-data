@@ -1,14 +1,12 @@
 ---
 name: run-tasks
 description: Execute pending tasks in dependency order with wave-based concurrent execution via Agent Teams
-argument-hint: "[--task-group <name>] [--phase <N,M>] [--dry-run]"
+argument-hint: "[<task-id>] [--task-group <name>] [--phase <N,M>] [--max-parallel <N>] [--retries <N>] [--dry-run]"
 allowed-tools:
   - TaskList
   - TaskGet
   - TaskUpdate
   - TaskCreate
-  - TeamCreate
-  - TeamDelete
   - SendMessage
   - TaskOutput
   - TaskStop
@@ -26,7 +24,7 @@ allowed-tools:
 
 This skill orchestrates autonomous task execution using Claude Code's native Agent Team system. It takes tasks produced by `/create-tasks`, builds a dependency-aware execution plan, and executes them in waves via a 3-tier agent hierarchy: Orchestrator (this skill) plans and coordinates waves, Wave Leads manage parallel executors within each wave, and Context Managers handle knowledge flow between tasks.
 
-All inter-agent coordination uses message-based primitives (`TeamCreate`, `SendMessage`, `TaskOutput`) rather than file-based signaling.
+The wave-lead creates its own team and coordinates teammates via `SendMessage`. The orchestrator communicates with the wave-lead via file-based summaries (`wave-{N}-summary.md`).
 
 ## Load Reference Skills
 
@@ -44,6 +42,11 @@ Read ${CLAUDE_PLUGIN_ROOT}/../claude-tools/skills/claude-code-teams/SKILL.md
 
 These references provide tool parameters, lifecycle rules, messaging protocols, and orchestration patterns. The SDD-specific execution procedures are in the orchestration reference below.
 
+### Orchestration Patterns Reference (optional, for context)
+```
+Read ${CLAUDE_PLUGIN_ROOT}/../claude-tools/skills/claude-code-teams/references/orchestration-patterns.md
+```
+
 ### Orchestration Reference
 ```
 Read ${CLAUDE_PLUGIN_ROOT}/skills/run-tasks/references/orchestration.md
@@ -57,14 +60,20 @@ Parse the following arguments from the user's invocation:
 
 | Argument | Format | Default | Description |
 |----------|--------|---------|-------------|
+| `<task-id>` | positional integer | _(none — all tasks)_ | Execute a single specific task by ID. Mutually exclusive with `--task-group` and `--phase`. |
 | `--task-group` | `<name>` | _(none — all tasks)_ | Filter tasks to those with matching `metadata.task_group` |
 | `--phase` | `<N>` or `<N,M,...>` | _(none — all phases)_ | Comma-separated integers. Filter tasks by `metadata.spec_phase`. Tasks without `spec_phase` are excluded when active. |
+| `--max-parallel` | `<N>` | _(from settings)_ | Override `run-tasks.max_parallel` setting for this run. Must be a positive integer. |
+| `--retries` | `<N>` | _(from settings)_ | Override `run-tasks.max_retries` setting for this run. Must be a non-negative integer (0 = no retries). |
 | `--dry-run` | _(flag)_ | `false` | Complete Steps 1-3 only: load, plan, display. No agents spawned, no session directory created. |
 
-When both `--task-group` and `--phase` are provided, both filters apply (intersection).
+When both `--task-group` and `--phase` are provided, both filters apply (intersection). CLI args `--max-parallel` and `--retries` take precedence over settings file values.
 
 **Validation:**
 - `--phase` values must be positive integers. If a non-integer value is provided (e.g., `--phase abc`), report: "Invalid --phase value: must be comma-separated positive integers (e.g., --phase 1,2)." and stop.
+- `--max-parallel` must be a positive integer. If invalid, report: "Invalid --max-parallel value: must be a positive integer." and stop.
+- `--retries` must be a non-negative integer. If invalid, report: "Invalid --retries value: must be a non-negative integer." and stop.
+- If `<task-id>` is provided alongside `--task-group` or `--phase`, report: "Cannot combine task ID with --task-group or --phase filters." and stop.
 - If no tasks match the applied filters, report the available values. For `--phase`: "No tasks found for phase(s) {N}. Available phases: {sorted distinct spec_phase values}." For `--task-group`: "No tasks found for group '{name}'. Available groups: {sorted distinct task_group values}."
 
 ## 7-Step Orchestration Loop
@@ -94,8 +103,8 @@ See `references/orchestration.md` Step 2 for settings and the full planning proc
 
 Present the execution plan to the user via `AskUserQuestion`:
 
-- Total task count, wave count, and estimated team composition per wave (1 wave-lead + 1 context-manager + N executors).
-- Per-wave breakdown with task subjects, priorities, and model tiers.
+- Total task count, wave count, and estimated team composition per wave. For waves with task count >= `context_manager_threshold`: 1 wave-lead + 1 context-manager + N executors. For smaller waves: 1 wave-lead + N executors (no CM).
+- Per-wave breakdown with task subjects, priorities, and model tiers. Waves that skip CM are annotated with "(no context manager)".
 - Any circular dependency warnings or broken links.
 
 **If `--dry-run`**: Display the full plan details (wave breakdown, task assignments, model tiers, timeout estimates) and exit. No `TaskUpdate` calls, no session directory created, no agents spawned.
@@ -123,12 +132,11 @@ See `references/orchestration.md` Step 4 for the full initialization procedure a
 For each wave in the execution plan:
 
 1. **Refresh unblocked tasks** via `TaskList` (dynamic unblocking after prior wave completions).
-2. **Create wave team** via `TeamCreate` with a wave-lead agent (foreground `Task`) and team members (context-manager + executors).
-3. **Launch wave-lead** with the wave assignment (task list, max_parallel, max_retries, wave number) and cross-wave context from `execution_context.md`.
-4. **Wait for wave-lead summary** — the wave-lead manages all executor coordination, retries (Tier 1 immediate, Tier 2 context-enriched), and reports results via `SendMessage`.
-5. **Process wave summary**: Update `task_log.md`, write `wave_complete` event to `progress.jsonl`, handle Tier 3 escalations (present failures to user via `AskUserQuestion` with options: Fix manually, Skip, Provide guidance, Abort).
-6. **Cleanup and delete wave team**: Verify all agents are terminated (defense in depth — orchestrator independently verifies beyond wave-lead cleanup), force-stop any survivors via `TaskStop`, then delete the team via `TeamDelete`. Includes inter-wave verification and cooldown before starting the next wave.
-7. **Repeat** until no more unblocked tasks remain.
+2. **Launch wave-lead** as a foreground subagent via `Task` (no `team_name` — the wave-lead creates its own team internally).
+3. **Read wave summary file** from `{session_dir}/wave-{N}-summary.md` after the foreground Task completes.
+4. **Process wave summary**: Update `task_log.md`, write `wave_complete` event to `progress.jsonl`, handle Tier 3 escalations (present failures to user via `AskUserQuestion` with options: Fix manually, Skip, Provide guidance, Abort).
+5. **Verify cleanup**: Check that the wave-lead deleted its team. If the team directory still exists, force-stop any survivors via `TaskStop`. Includes inter-wave verification and cooldown before starting the next wave.
+6. **Repeat** until no more unblocked tasks remain.
 
 See `references/orchestration.md` Step 5 for the full wave execution procedure, retry escalation flow, and wave-lead crash recovery.
 
@@ -136,7 +144,7 @@ See `references/orchestration.md` Step 5 for the full wave execution procedure, 
 
 Generate a session summary and archive the session:
 
-- Write `session_summary.md` with pass/fail/partial/skipped counts, total execution time, per-wave breakdown, failed task list with reasons, and key decisions made during execution.
+- Write `session_summary.md` with pass/partial/fail/skipped counts, total execution time, per-wave breakdown, failed task list with reasons, and key decisions made during execution. PARTIAL tasks (core functionality works, non-critical criteria have issues) are tracked separately from PASS and FAIL — they are counted as completed but distinguished in metrics.
 - Write `session_complete` event to `progress.jsonl`.
 - Archive: Move `__live_session__/` contents to `.claude/sessions/{session-id}/`.
 
@@ -157,16 +165,18 @@ See `references/orchestration.md` Step 7 for the CLAUDE.md update criteria.
 
 ## Key Behaviors
 
-- **Orchestration pattern**: Based on the Swarm pattern from claude-code-teams (wave-based parallel execution with dependency ordering), extended with a 3-tier agent hierarchy for context management and retry intelligence. See `claude-code-teams/references/orchestration-patterns.md` for the base pattern.
+- **Orchestration pattern**: Extends the **Swarm / Self-Organizing Pool** pattern (Pattern 3 from `claude-code-teams/references/orchestration-patterns.md`) with a 3-tier agent hierarchy that adds Context Managers for cross-task knowledge flow and structured retry intelligence.
 - **3-tier agent hierarchy**: Orchestrator (this skill) handles planning and user interaction. Wave Leads coordinate executors within a wave. Context Managers distribute and collect execution context.
-- **Agent Team coordination**: All inter-agent communication uses `TeamCreate`, `SendMessage`, and `TaskOutput` following the claude-code-teams lifecycle. No file-based signaling.
+- **Agent Team coordination**: The wave-lead creates its own team (via `TeamCreate`) and becomes the team lead. It spawns context managers and executors as teammates using `SendMessage` for coordination. The orchestrator spawns the wave-lead as a plain foreground subagent and reads results from a summary file.
+- **Team member spawning**: The wave-lead spawns context managers and executors as team members using the `Task` tool with `team_name` parameter. This ensures they appear in the team's `config.json`, enabling defense-in-depth cleanup and proper SendMessage routing. The orchestrator does NOT use `team_name` when spawning the wave-lead — the wave-lead is the team creator, not a member.
 - **Wave-based parallelism**: Tasks at the same dependency level run simultaneously via the wave-lead's executor team. Tasks in later waves wait until their dependencies complete.
 - **3-tier retry model**: Tier 1 (Immediate) — wave-lead retries failed executor with failure context. Tier 2 (Context-Enriched) — wave-lead requests additional context from Context Manager and retries. Tier 3 (User Escalation) — persistent failures reported to orchestrator for user decision.
-- **Wave-lead crash recovery**: If a wave-lead crashes or times out, the orchestrator force-stops all team members, resets in-progress tasks to pending, and spawns a new wave team. If the retry also fails, the user is escalated.
-- **Defense-in-depth cleanup**: Agent shutdown is enforced at two levels. The wave-lead shuts down its sub-agents (Step 6b) and reports cleanup results in the wave summary CLEANUP section. The orchestrator independently verifies all agents are stopped by reading the team config, force-stopping any survivors via `TaskStop`, and confirming `TeamDelete` succeeds before starting the next wave. This prevents zombie agents across wave boundaries.
+- **Wave-lead crash recovery**: If a wave-lead crashes or times out, the orchestrator force-stops all team members, resets in-progress tasks to pending, and spawns a new wave-lead (which creates its own fresh team). If the retry also fails, the user is escalated.
+- **Defense-in-depth cleanup**: Agent shutdown is enforced at two levels. (1) The wave-lead shuts down its sub-agents (Step 6b), calls `TeamDelete`, and reports cleanup results in the wave summary file. (2) The orchestrator verifies cleanup by checking if the team directory still exists and force-stops any survivors via `TaskStop`. The orchestrator cannot call `TeamDelete` (not the team lead), so orphaned team directories are cleaned up during session initialization.
 - **Per-task timeouts**: Complexity-based (XS/S: 5 min, M: 10 min, L/XL: 20 min). Override via `metadata.timeout_minutes`.
 - **Dry-run mode**: `--dry-run` completes Steps 1-3 only. Displays the full execution plan without spawning agents or creating a session.
 - **Autonomous after confirmation**: After the user confirms at Step 3, no further prompts occur unless a Tier 3 escalation is triggered by persistent failures.
+- **Graceful abort**: Users can stop execution between waves by creating `.claude/sessions/__live_session__/.abort` from another terminal. The current wave completes, remaining tasks are marked failed, and the session is archived. Optionally include an abort reason as file content (e.g., `echo "requirements changed" > .claude/sessions/__live_session__/.abort`).
 - **Single-session invariant**: Only one execution session at a time per project. Existing sessions must be resolved before starting a new one.
 - **Phase and group filtering**: `--phase` and `--task-group` can be combined (AND logic). Filters narrow the task set before planning.
 
@@ -175,7 +185,7 @@ See `references/orchestration.md` Step 7 for the CLAUDE.md update criteria.
 This skill uses Claude Code hooks for automated quality gates during execution:
 
 - **TaskCompleted**: When a task executor marks a task completed, the `verify-task-completion.sh` hook runs the project's test suite. If tests fail, the completion is blocked and the task reverts to in_progress with feedback to the executor.
-- **TeammateIdle**: When a task executor goes idle, a prompt-based hook verifies it has sent both required messages (TASK RESULT to wave-lead, CONTEXT CONTRIBUTION to context manager) before resting.
+- **TeammateIdle**: When a teammate goes idle, a role-aware prompt-based hook checks if the agent is a task executor and, if so, verifies it has sent both required messages (TASK RESULT to wave-lead, CONTEXT CONTRIBUTION to context manager) before resting. Non-executor roles (context manager, wave-lead) are not affected.
 
 Hook definitions are in `${CLAUDE_PLUGIN_ROOT}/hooks/hooks.json`. For hook event documentation, see `claude-code-teams/references/hooks-integration.md`.
 
@@ -206,6 +216,28 @@ Hook definitions are in `${CLAUDE_PLUGIN_ROOT}/hooks/hooks.json`. For hook event
 /run-tasks --dry-run
 ```
 
+### Execute a single task
+```
+/run-tasks 5
+```
+
+### Override parallelism for this run
+```
+/run-tasks --max-parallel 2
+```
+
+### Disable retries for this run
+```
+/run-tasks --retries 0
+```
+
+### Abort a running session (from another terminal)
+```
+touch .claude/sessions/__live_session__/.abort
+# Or with a reason:
+echo "requirements changed" > .claude/sessions/__live_session__/.abort
+```
+
 ### Dry-run with filters
 ```
 /run-tasks --task-group payments --phase 2 --dry-run
@@ -218,4 +250,6 @@ Hook definitions are in `${CLAUDE_PLUGIN_ROOT}/hooks/hooks.json`. For hook event
 - `references/verification-patterns.md` — Verification logic for spec-generated vs general tasks
 - `${CLAUDE_PLUGIN_ROOT}/../claude-tools/skills/claude-code-tasks/SKILL.md` — Task tool parameters and conventions (loaded at init)
 - `${CLAUDE_PLUGIN_ROOT}/../claude-tools/skills/claude-code-teams/SKILL.md` — Team lifecycle, messaging, and orchestration patterns (loaded at init)
-- `${CLAUDE_PLUGIN_ROOT}/../claude-tools/skills/claude-code-teams/references/orchestration-patterns.md` — 6 orchestration patterns (optional, for reference)
+- `${CLAUDE_PLUGIN_ROOT}/../claude-tools/skills/claude-code-teams/references/orchestration-patterns.md` — 6 orchestration patterns (loaded at init, for context)
+- `${CLAUDE_PLUGIN_ROOT}/../claude-tools/skills/claude-code-teams/references/messaging-protocol.md` — SendMessage types, delivery mechanics, shutdown handshake (loaded by agents)
+- `${CLAUDE_PLUGIN_ROOT}/../claude-tools/skills/claude-code-teams/references/hooks-integration.md` — TeammateIdle/TaskCompleted hook events

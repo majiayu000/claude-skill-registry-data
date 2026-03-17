@@ -20,7 +20,7 @@ Specialized worker auditing logging, monitoring, and observability.
 
 ## Inputs (from Coordinator)
 
-**MANDATORY READ:** Load `shared/references/task_delegation_pattern.md#audit-coordinator--worker-contract` for contextStore structure.
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
 
 Receives `contextStore` with tech stack, framework, codebase root, output_dir.
 
@@ -105,11 +105,11 @@ Receives `contextStore` with tech stack, framework, codebase root, output_dir.
 
 ## Scoring Algorithm
 
-**MANDATORY READ:** Load `shared/references/audit_scoring.md` for unified scoring formula.
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md` and `shared/references/audit_scoring.md`.
 
 ## Output Format
 
-**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format.
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md` and `shared/templates/audit_worker_report_template.md`.
 
 Write report to `{output_dir}/627-observability.md` with `category: "Observability"` and checks: structured_logging, health_endpoints, metrics_collection, request_tracing, log_levels.
 
@@ -121,11 +121,11 @@ Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 
 ## Reference Files
 
-- **Worker report template:** `shared/templates/audit_worker_report_template.md`
-- **Audit scoring formula:** `shared/references/audit_scoring.md`
 - **Audit output schema:** `shared/references/audit_output_schema.md`
 
 ## Critical Rules
+
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
 
 - **Do not auto-fix:** Report only, never inject logging or endpoints
 - **Framework-aware detection:** Adapt patterns to project's tech stack (winston/pino for Node, logrus/zap for Go, etc.)
@@ -134,6 +134,8 @@ Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 - **Context-sensitive severity:** console.log in production code = MEDIUM, in dev utilities = LOW
 
 ## Definition of Done
+
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
 
 - contextStore parsed (tech stack, framework, output_dir)
 - All 5 checks completed (structured logging, health endpoints, metrics, request tracing, log levels)

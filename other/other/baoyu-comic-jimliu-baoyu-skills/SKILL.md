@@ -1,6 +1,14 @@
 ---
 name: baoyu-comic
 description: Knowledge comic creator supporting multiple art styles and tones. Creates original educational comics with detailed panel layouts and sequential image generation. Use when user asks to create "知识漫画", "教育漫画", "biography comic", "tutorial comic", or "Logicomix-style comic".
+version: 1.56.1
+metadata:
+  openclaw:
+    homepage: https://github.com/JimLiu/baoyu-skills#baoyu-comic
+    requires:
+      anyBins:
+        - bun
+        - npx
 ---
 
 # Knowledge Comic Creator
@@ -104,9 +112,10 @@ Details: [references/auto-selection.md](references/auto-selection.md)
 **Important**: All scripts are located in the `scripts/` subdirectory of this skill.
 
 **Agent Execution Instructions**:
-1. Determine this SKILL.md file's directory path as `SKILL_DIR`
-2. Script path = `${SKILL_DIR}/scripts/<script-name>.ts`
-3. Replace all `${SKILL_DIR}` in this document with the actual path
+1. Determine this SKILL.md file's directory path as `{baseDir}`
+2. Script path = `{baseDir}/scripts/<script-name>.ts`
+3. Replace all `{baseDir}` in this document with the actual path
+4. Resolve `${BUN_X}` runtime: if `bun` installed → `bun`; if `npx` available → `npx -y bun`; else suggest installing bun
 
 **Script Reference**:
 | Script | Purpose |
@@ -207,12 +216,11 @@ Analyze → [Check Existing?] → [Confirm: Style + Reviews] → Storyboard → 
 
 **7.1 Generate character sheet first**:
 - **Backup rule**: If `characters/characters.png` exists, rename to `characters/characters-backup-YYYYMMDD-HHMMSS.png`
-```bash
-# Use Reference Sheet Prompt from characters/characters.md
-npx -y bun ${SKILL_DIR}/../baoyu-image-gen/scripts/main.ts \
-  --promptfiles characters/characters.md \
-  --image characters/characters.png --ar 4:3
-```
+- Invoke an installed image generation skill such as `baoyu-image-gen`
+- Read that skill's `SKILL.md` and follow its documented interface rather than calling its scripts directly
+- Use `characters/characters.md` as the prompt-file input
+- Save output to `characters/characters.png`
+- Use aspect ratio `4:3`
 
 **Compress character sheet** (recommended):
 Compress to reduce token usage when used as reference image:
@@ -230,14 +238,11 @@ Compress to reduce token usage when used as reference image:
 **Backup rules for page generation**:
 - If prompt file exists: rename to `prompts/NN-{cover|page}-[slug]-backup-YYYYMMDD-HHMMSS.md`
 - If image file exists: rename to `NN-{cover|page}-[slug]-backup-YYYYMMDD-HHMMSS.png`
-
-```bash
-# Example: ALWAYS include --ref for consistency
-npx -y bun ${SKILL_DIR}/../baoyu-image-gen/scripts/main.ts \
-  --promptfiles prompts/01-page-xxx.md \
-  --image 01-page-xxx.png --ar 3:4 \
-  --ref characters/characters.png
-```
+- Invoke the installed image generation skill for each page
+- Use `prompts/01-page-xxx.md` as the prompt-file input
+- Save output to `01-page-xxx.png`
+- Use aspect ratio `3:4`
+- If the chosen skill supports reference images, pass `characters/characters.png` as `--ref`
 
 **Full workflow details**: [references/workflow.md](references/workflow.md)
 

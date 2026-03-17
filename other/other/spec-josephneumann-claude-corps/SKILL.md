@@ -28,8 +28,15 @@ Do not proceed until you have a feature description.
 
 Evaluate whether the feature description needs refinement.
 
+**Greenfield check**: If the feature is greenfield (new system, new major capability, or significant architectural change), suggest: "This looks like a greenfield feature. Consider running `/product-review` first to challenge scope and validate the approach before planning." If the feature is primarily UI/frontend, add: "This looks like a UI-heavy feature. Consider running `/product-review DESIGN` first to map user journeys and interaction patterns before planning." Proceed if user declines.
+
 **If already detailed** (specific acceptance criteria, exact behavior, constrained scope):
 Offer to skip: "Your requirements seem detailed enough. Should I proceed with research, or refine further?"
+
+**Scope challenge** (run for all non-trivial features):
+- What's the minimum set of changes that achieves the stated goal?
+- **Complexity smell check**: If the plan will touch >8 files or introduce >2 new classes/services, challenge whether the same goal can be achieved with fewer moving parts
+- **Existing code mandate**: Map every sub-problem to existing code/flows. Prefer reusing or extending over rebuilding.
 
 **Otherwise, run interactive Q&A** using **AskUserQuestion** (one question at a time):
 
@@ -91,6 +98,8 @@ date: YYYY-MM-DD
 [Brief description]
 ## Acceptance Criteria
 - [ ] Core requirement 1
+## NOT in Scope
+[Work considered and explicitly deferred, with one-line rationale each]
 ## Context
 [Critical information]
 ## References
@@ -122,6 +131,17 @@ date: YYYY-MM-DD
 [How we measure success]
 ## Dependencies & Risks
 [What could block or complicate this]
+## NOT in Scope
+[Work considered and explicitly deferred, with one-line rationale each]
+## What Already Exists
+[Map each sub-problem to existing code/flows. Note whether plan reuses or rebuilds.]
+## Failure Modes
+[For each new codepath: one realistic failure, whether a test covers it, whether error handling exists, whether user sees it or it's silent]
+| Codepath | Failure Mode | Test? | Handled? | User Sees? |
+|----------|-------------|-------|----------|------------|
+| ... | ... | Y/N | Y/N | Error msg / Silent |
+
+> Silent + no test + no handling = **CRITICAL GAP** — must be addressed before implementation.
 ## References & Research
 - Similar implementations: [file_path:line_number]
 - Best practices: [documentation_url]
@@ -183,6 +203,17 @@ date: YYYY-MM-DD
 [Extensibility and long-term vision]
 ## Documentation Plan
 [What docs need updating]
+## NOT in Scope
+[Work considered and explicitly deferred, with one-line rationale each]
+## What Already Exists
+[Map each sub-problem to existing code/flows. Note whether plan reuses or rebuilds.]
+## Failure Modes
+[For each new codepath: one realistic failure, whether a test covers it, whether error handling exists, whether user sees it or it's silent]
+| Codepath | Failure Mode | Test? | Handled? | User Sees? |
+|----------|-------------|-------|----------|------------|
+| ... | ... | Y/N | Y/N | Error msg / Silent |
+
+> Silent + no test + no handling = **CRITICAL GAP** — must be addressed before implementation.
 ## References & Research
 ### Internal References
 - Architecture decisions: [file_path:line_number]
@@ -201,6 +232,27 @@ mkdir -p docs/plans
 ```
 
 **Cross-reference:** Link related issues/PRs, reference specific file paths, add external resource links.
+
+**Unresolved decisions:** If any question asked during Phase 0 goes unanswered or the user defers a decision, log it explicitly at the end of the plan as:
+
+```markdown
+## Unresolved Decisions
+[Decisions deferred during planning that may affect implementation]
+- [Question] — [Why it matters] — [Default assumption if not resolved]
+```
+
+Never silently default. Surface these so implementers know where ambiguity lives.
+
+**Completion summary** — append to every STANDARD and COMPREHENSIVE plan:
+
+```markdown
+## Plan Review Summary
+- Scope challenge: [passed / flagged N concerns]
+- NOT in scope: [N items deferred]
+- What already exists: [N items mapped]
+- Failure modes: [N mapped, N CRITICAL GAPS]
+- Unresolved decisions: [N open]
+```
 
 ### Phase 3: Decompose into Beads
 

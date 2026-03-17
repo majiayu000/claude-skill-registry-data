@@ -1,6 +1,14 @@
 ---
 name: baoyu-markdown-to-html
-description: Converts Markdown to styled HTML with WeChat-compatible themes. Supports code highlighting, math, PlantUML, footnotes, alerts, and infographics. Use when user asks for "markdown to html", "convert md to html", "md转html", or needs styled HTML output from markdown.
+description: Converts Markdown to styled HTML with WeChat-compatible themes. Supports code highlighting, math, PlantUML, footnotes, alerts, infographics, and optional bottom citations for external links. Use when user asks for "markdown to html", "convert md to html", "md转html", "微信外链转底部引用", or needs styled HTML output from markdown.
+version: 1.56.1
+metadata:
+  openclaw:
+    homepage: https://github.com/JimLiu/baoyu-skills#baoyu-markdown-to-html
+    requires:
+      anyBins:
+        - bun
+        - npx
 ---
 
 # Markdown to HTML Converter
@@ -9,7 +17,7 @@ Converts Markdown files to beautifully styled HTML with inline CSS, optimized fo
 
 ## Script Directory
 
-**Agent Execution**: Determine this SKILL.md directory as `SKILL_DIR`, then use `${SKILL_DIR}/scripts/<name>.ts`.
+**Agent Execution**: Determine this SKILL.md directory as `{baseDir}`. Resolve `${BUN_X}` runtime: if `bun` installed → `bun`; if `npx` available → `npx -y bun`; else suggest installing bun. Replace `{baseDir}` and `${BUN_X}` with actual values.
 
 | Script | Purpose |
 |--------|---------|
@@ -17,14 +25,21 @@ Converts Markdown files to beautifully styled HTML with inline CSS, optimized fo
 
 ## Preferences (EXTEND.md)
 
-Use Bash to check EXTEND.md existence (priority order):
+Check EXTEND.md existence (priority order):
 
 ```bash
-# Check project-level first
+# macOS, Linux, WSL, Git Bash
 test -f .baoyu-skills/baoyu-markdown-to-html/EXTEND.md && echo "project"
-
-# Then user-level (cross-platform: $HOME works on macOS/Linux/WSL)
+test -f "${XDG_CONFIG_HOME:-$HOME/.config}/baoyu-skills/baoyu-markdown-to-html/EXTEND.md" && echo "xdg"
 test -f "$HOME/.baoyu-skills/baoyu-markdown-to-html/EXTEND.md" && echo "user"
+```
+
+```powershell
+# PowerShell (Windows)
+if (Test-Path .baoyu-skills/baoyu-markdown-to-html/EXTEND.md) { "project" }
+$xdg = if ($env:XDG_CONFIG_HOME) { $env:XDG_CONFIG_HOME } else { "$HOME/.config" }
+if (Test-Path "$xdg/baoyu-skills/baoyu-markdown-to-html/EXTEND.md") { "xdg" }
+if (Test-Path "$HOME/.baoyu-skills/baoyu-markdown-to-html/EXTEND.md") { "user" }
 ```
 
 ┌──────────────────────────────────────────────────────────────┬───────────────────┐
@@ -68,20 +83,52 @@ Use `AskUserQuestion` to ask whether to format first. Formatting can fix:
 
 **If user declines**: Continue with original file.
 
-### Step 1: Confirm Theme
+### Step 1: Determine Theme
 
-Before converting, use AskUserQuestion to confirm the theme (unless user already specified):
+**Theme resolution order** (first match wins):
+1. User explicitly specified theme (CLI `--theme` or conversation)
+2. EXTEND.md `default_theme` (this skill's own EXTEND.md, checked in Step 0)
+3. `baoyu-post-to-wechat` EXTEND.md `default_theme` (cross-skill fallback)
+4. If none found → use AskUserQuestion to confirm
+
+**Cross-skill EXTEND.md check** (only if this skill's EXTEND.md has no `default_theme`):
+
+```bash
+# Check baoyu-post-to-wechat EXTEND.md for default_theme
+test -f "$HOME/.baoyu-skills/baoyu-post-to-wechat/EXTEND.md" && grep -o 'default_theme:.*' "$HOME/.baoyu-skills/baoyu-post-to-wechat/EXTEND.md"
+```
+
+```powershell
+# PowerShell (Windows)
+if (Test-Path "$HOME/.baoyu-skills/baoyu-post-to-wechat/EXTEND.md") { Select-String -Pattern 'default_theme:.*' -Path "$HOME/.baoyu-skills/baoyu-post-to-wechat/EXTEND.md" | ForEach-Object { $_.Matches.Value } }
+```
+
+**If theme is resolved from EXTEND.md**: Use it directly, do NOT ask the user.
+
+**If no default found**: Use AskUserQuestion to confirm:
 
 | Theme | Description |
 |-------|-------------|
-| `default` (Recommended) | 经典主题 - 传统排版，标题居中带底边，二级标题白字彩底 |
-| `grace` | 优雅主题 - 文字阴影，圆角卡片，精致引用块 |
-| `simple` | 简洁主题 - 现代极简风，不对称圆角，清爽留白 |
+| `default` (Recommended) | Classic - traditional layout, centered title with bottom border, H2 with white text on colored background |
+| `grace` | Elegant - text shadow, rounded cards, refined blockquotes |
+| `simple` | Minimal - modern minimalist, asymmetric rounded corners, clean whitespace |
+| `modern` | Modern - large radius, pill-shaped titles, relaxed line height (pair with `--color red` for traditional red-gold style) |
+
+### Step 1.5: Determine Citation Mode
+
+**Default**: Off. Do not ask by default.
+
+**Enable only if the user explicitly asks** for "微信外链转底部引用", "底部引用", "文末引用", or passes `--cite`.
+
+**Behavior when enabled**:
+- Ordinary external links are rendered with numbered superscripts and collected under a final `引用链接` section.
+- `https://mp.weixin.qq.com/...` links stay as direct links and are not moved to the bottom.
+- Bare links where link text equals URL stay inline.
 
 ### Step 2: Convert
 
 ```bash
-npx -y bun ${SKILL_DIR}/scripts/main.ts <markdown_file> --theme <theme>
+${BUN_X} {baseDir}/scripts/main.ts <markdown_file> --theme <theme> [--cite]
 ```
 
 ### Step 3: Report Result
@@ -91,32 +138,60 @@ Display the output path from JSON result. If backup was created, mention it.
 ## Usage
 
 ```bash
-npx -y bun ${SKILL_DIR}/scripts/main.ts <markdown_file> [options]
+${BUN_X} {baseDir}/scripts/main.ts <markdown_file> [options]
 ```
 
 **Options:**
 
 | Option | Description | Default |
 |--------|-------------|---------|
-| `--theme <name>` | Theme name (default, grace, simple) | default |
+| `--theme <name>` | Theme name (default, grace, simple, modern) | default |
+| `--color <name\|hex>` | Primary color: preset name or hex value | theme default |
+| `--font-family <name>` | Font: sans, serif, serif-cjk, mono, or CSS value | theme default |
+| `--font-size <N>` | Font size: 14px, 15px, 16px, 17px, 18px | 16px |
 | `--title <title>` | Override title from frontmatter | |
+| `--cite` | Convert external links to bottom citations, append `引用链接` section | false (off) |
 | `--keep-title` | Keep the first heading in content | false (removed) |
 | `--help` | Show help | |
+
+**Color Presets:**
+
+| Name | Hex | Label |
+|------|-----|-------|
+| blue | #0F4C81 | Classic Blue |
+| green | #009874 | Emerald Green |
+| vermilion | #FA5151 | Vibrant Vermilion |
+| yellow | #FECE00 | Lemon Yellow |
+| purple | #92617E | Lavender Purple |
+| sky | #55C9EA | Sky Blue |
+| rose | #B76E79 | Rose Gold |
+| olive | #556B2F | Olive Green |
+| black | #333333 | Graphite Black |
+| gray | #A9A9A9 | Smoke Gray |
+| pink | #FFB7C5 | Sakura Pink |
+| red | #A93226 | China Red |
+| orange | #D97757 | Warm Orange (modern default) |
 
 **Examples:**
 
 ```bash
 # Basic conversion (uses default theme, removes first heading)
-npx -y bun ${SKILL_DIR}/scripts/main.ts article.md
+${BUN_X} {baseDir}/scripts/main.ts article.md
 
 # With specific theme
-npx -y bun ${SKILL_DIR}/scripts/main.ts article.md --theme grace
+${BUN_X} {baseDir}/scripts/main.ts article.md --theme grace
+
+# Theme with custom color
+${BUN_X} {baseDir}/scripts/main.ts article.md --theme modern --color red
+
+# Enable bottom citations for ordinary external links
+${BUN_X} {baseDir}/scripts/main.ts article.md --cite
 
 # Keep the first heading in content
-npx -y bun ${SKILL_DIR}/scripts/main.ts article.md --keep-title
+${BUN_X} {baseDir}/scripts/main.ts article.md --keep-title
 
 # Override title
-npx -y bun ${SKILL_DIR}/scripts/main.ts article.md --title "My Article"
+${BUN_X} {baseDir}/scripts/main.ts article.md --title "My Article"
 ```
 
 ## Output
@@ -151,9 +226,10 @@ npx -y bun ${SKILL_DIR}/scripts/main.ts article.md --title "My Article"
 
 | Theme | Description |
 |-------|-------------|
-| `default` | 经典主题 - 传统排版，标题居中带底边，二级标题白字彩底 |
-| `grace` | 优雅主题 - 文字阴影，圆角卡片，精致引用块 (by @brzhang) |
-| `simple` | 简洁主题 - 现代极简风，不对称圆角，清爽留白 (by @okooo5km) |
+| `default` | Classic - traditional layout, centered title with bottom border, H2 with white text on colored background |
+| `grace` | Elegant - text shadow, rounded cards, refined blockquotes (by @brzhang) |
+| `simple` | Minimal - modern minimalist, asymmetric rounded corners, clean whitespace (by @okooo5km) |
+| `modern` | Modern - large radius, pill-shaped titles, relaxed line height (pair with `--color red` for traditional red-gold style) |
 
 ## Supported Markdown Features
 
@@ -165,7 +241,7 @@ npx -y bun ${SKILL_DIR}/scripts/main.ts article.md --title "My Article"
 | Inline code | `` `code` `` |
 | Tables | GitHub-flavored markdown tables |
 | Images | `![alt](src)` |
-| Links | `[text](url)` with footnote references |
+| Links | `[text](url)`; add `--cite` to move ordinary external links into bottom references |
 | Blockquotes | `> quote` |
 | Lists | `-` unordered, `1.` ordered |
 | Alerts | `> [!NOTE]`, `> [!WARNING]`, etc. |

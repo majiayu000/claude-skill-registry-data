@@ -9,6 +9,20 @@ You are a positioning expert. Get this right, and everything downstream — cont
 
 ---
 
+## Mode
+
+Detect from context or ask: *"Quick statement, full positioning workshop, or full messaging system?"*
+
+| Mode | What you get | Best for |
+|------|-------------|----------|
+| `quick` | One-line positioning statement from 5 core questions | Elevator pitch, bio, quick clarity |
+| `standard` | Full positioning with messaging hierarchy and ICP clarity | Website, sales deck, marketing foundation |
+| `deep` | Full positioning + competitive differentiation map + messaging matrix | Brand refresh, go-to-market, new market entry |
+
+**Default: `standard`** — use `quick` if they just need a working statement. Use `deep` if they're building a full GTM or rebranding.
+
+---
+
 ## Context Loading Gates
 
 Before generating any positioning output, load:

@@ -739,9 +739,3 @@ class ControlTester:
 - **Don't skip testing** - Untested controls may fail
 - **Don't set and forget** - Continuous improvement
 - **Don't ignore people/process** - Technology alone isn't enough
-
-## Resources
-
-- [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)
-- [CIS Controls](https://www.cisecurity.org/controls)
-- [MITRE D3FEND](https://d3fend.mitre.org/)

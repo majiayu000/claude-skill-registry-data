@@ -1,6 +1,14 @@
 ---
 name: baoyu-compress-image
 description: Compresses images to WebP (default) or PNG with automatic tool selection. Use when user asks to "compress image", "optimize image", "convert to webp", or reduce image file size.
+version: 1.56.1
+metadata:
+  openclaw:
+    homepage: https://github.com/JimLiu/baoyu-skills#baoyu-compress-image
+    requires:
+      anyBins:
+        - bun
+        - npx
 ---
 
 # Image Compressor
@@ -9,7 +17,7 @@ Compresses images using best available tool (sips → cwebp → ImageMagick → 
 
 ## Script Directory
 
-Scripts in `scripts/` subdirectory. Replace `${SKILL_DIR}` with this SKILL.md's directory path.
+Scripts in `scripts/` subdirectory. `{baseDir}` = this SKILL.md's directory path. Resolve `${BUN_X}` runtime: if `bun` installed → `bun`; if `npx` available → `npx -y bun`; else suggest installing bun. Replace `{baseDir}` and `${BUN_X}` with actual values.
 
 | Script | Purpose |
 |--------|---------|
@@ -17,14 +25,21 @@ Scripts in `scripts/` subdirectory. Replace `${SKILL_DIR}` with this SKILL.md's 
 
 ## Preferences (EXTEND.md)
 
-Use Bash to check EXTEND.md existence (priority order):
+Check EXTEND.md existence (priority order):
 
 ```bash
-# Check project-level first
+# macOS, Linux, WSL, Git Bash
 test -f .baoyu-skills/baoyu-compress-image/EXTEND.md && echo "project"
-
-# Then user-level (cross-platform: $HOME works on macOS/Linux/WSL)
+test -f "${XDG_CONFIG_HOME:-$HOME/.config}/baoyu-skills/baoyu-compress-image/EXTEND.md" && echo "xdg"
 test -f "$HOME/.baoyu-skills/baoyu-compress-image/EXTEND.md" && echo "user"
+```
+
+```powershell
+# PowerShell (Windows)
+if (Test-Path .baoyu-skills/baoyu-compress-image/EXTEND.md) { "project" }
+$xdg = if ($env:XDG_CONFIG_HOME) { $env:XDG_CONFIG_HOME } else { "$HOME/.config" }
+if (Test-Path "$xdg/baoyu-skills/baoyu-compress-image/EXTEND.md") { "xdg" }
+if (Test-Path "$HOME/.baoyu-skills/baoyu-compress-image/EXTEND.md") { "user" }
 ```
 
 ┌────────────────────────────────────────────────────────┬───────────────────┐
@@ -48,7 +63,7 @@ test -f "$HOME/.baoyu-skills/baoyu-compress-image/EXTEND.md" && echo "user"
 ## Usage
 
 ```bash
-npx -y bun ${SKILL_DIR}/scripts/main.ts <input> [options]
+${BUN_X} {baseDir}/scripts/main.ts <input> [options]
 ```
 
 ## Options
@@ -67,16 +82,16 @@ npx -y bun ${SKILL_DIR}/scripts/main.ts <input> [options]
 
 ```bash
 # Single file → WebP (replaces original)
-npx -y bun ${SKILL_DIR}/scripts/main.ts image.png
+${BUN_X} {baseDir}/scripts/main.ts image.png
 
 # Keep PNG format
-npx -y bun ${SKILL_DIR}/scripts/main.ts image.png -f png --keep
+${BUN_X} {baseDir}/scripts/main.ts image.png -f png --keep
 
 # Directory recursive
-npx -y bun ${SKILL_DIR}/scripts/main.ts ./images/ -r -q 75
+${BUN_X} {baseDir}/scripts/main.ts ./images/ -r -q 75
 
 # JSON output
-npx -y bun ${SKILL_DIR}/scripts/main.ts image.png --json
+${BUN_X} {baseDir}/scripts/main.ts image.png --json
 ```
 
 **Output**:

@@ -22,7 +22,6 @@ dependencies:
 - leyline:evaluation-framework
 - leyline:storage-templates
 - scribe:slop-detector
-- scribe:doc-verify
 scripts: []
 usage_patterns:
 - resource-intake
@@ -132,7 +131,7 @@ Run `Skill(scribe:slop-detector)` on the new entry:
 - No Tier 1 markers (delve, tapestry, comprehensive, leveraging, etc.)
 - Hedge word density < 15 per 1000 words
 
-Run `Skill(scribe:doc-verify)` to validate:
+Use `Agent(scribe:doc-verifier)` to validate:
 - All file paths and URLs exist
 - All cross-references valid
 - Source attributions accurate
@@ -140,7 +139,8 @@ Run `Skill(scribe:doc-verify)` to validate:
 ```bash
 # Quick validation for knowledge corpus entry
 /slop-scan docs/knowledge-corpus/[entry-name].md
-/doc-verify docs/knowledge-corpus/[entry-name].md
+# Doc verification is now agent-only:
+Agent(scribe:doc-verifier) "Verify docs/knowledge-corpus/[entry-name].md"
 ```
 
 **DO NOT finalize entries with slop score > 2.5** - rewrite with concrete specifics.
@@ -149,16 +149,17 @@ Run `Skill(scribe:doc-verify)` to validate:
 ### Step 7: Discussion Promotion (Score 80+ Only)
 
 When the evaluation score is 80-100 (evergreen), follow
-`modules/discussion-promotion.md` to offer promoting the
-entry to the "Knowledge" Discussion category.
+`modules/discussion-promotion.md` to publish the entry
+to the "Knowledge" Discussion category.
 
-- If the entry already has a `discussion_url` field, offer
-  "Update Discussion" instead
-- If the user declines or promotion fails, continue to
-  Step 8 (APPLY)
+- If the entry already has a `discussion_url` field,
+  update the existing Discussion instead
+- If the user explicitly declines or promotion fails,
+  continue to Step 8 (APPLY)
 - If the score is below 80, skip this step entirely
 
-This step is optional. It never blocks the intake workflow.
+Publishing is the default for qualifying entries. It
+never blocks the intake workflow.
 
 ## Evaluation Framework
 
@@ -583,7 +584,8 @@ processed → [Archive] → queue/archive/
 - **KonMari Tidying Philosophy**: See `modules/konmari-tidying.md`
 - **Tidying Workflows**: See `modules/pruning-workflows.md`
 - **Discussion Promotion**: Invoked in Step 7 (PROMOTE)
-  for evergreen entries (score 80+).
+  for evergreen entries (score 80+). Publishing is the
+  default action.
   See `modules/discussion-promotion.md` for full workflow.
 
 ## Hook Integration

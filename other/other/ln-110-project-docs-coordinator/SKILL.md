@@ -33,7 +33,8 @@ L2 Coordinator that gathers project context once and delegates document creation
     "legacy_tech_stack": { "frontend": "...", "backend": "...", "versions": {} },
     "legacy_api": { "endpoints": [...], "authentication": "..." },
     "legacy_database": { "tables": [...], "relationships": [...] },
-    "legacy_runbook": { "prerequisites": [...], "install_steps": [...], "env_vars": [...] }
+    "legacy_runbook": { "prerequisites": [...], "install_steps": [...], "env_vars": [...] },
+    "legacy_infrastructure": { "servers": [...], "domains": [...], "ports": {} }
   }
 }
 ```
@@ -50,7 +51,7 @@ ln-110-project-docs-coordinator (this skill)
 │   ├── ln-112-project-core-creator → 3 core docs (ALWAYS)
 │   ├── ln-113-backend-docs-creator → 2 docs (if hasBackend/hasDatabase)
 │   ├── ln-114-frontend-docs-creator → 1 doc (if hasFrontend)
-│   └── ln-115-devops-docs-creator → 1 doc (if hasDocker)
+│   └── ln-115-devops-docs-creator → 2 docs (1 always + 1 if hasDocker)
 └── Phase 3: Aggregate Results
 ```
 
@@ -72,6 +73,10 @@ ln-110-project-docs-coordinator (this skill)
 | README.md | project description, scaling mentions | PROJECT_DESCRIPTION (fallback), DEPLOYMENT_SCALE (fallback) |
 | CODEOWNERS | maintainers | DEVOPS_CONTACTS |
 | git log | frequent committers | DEVOPS_CONTACTS (fallback) |
+| ~/.ssh/config, deploy targets | SSH aliases, hostnames, IPs | SERVER_INVENTORY |
+| docker-compose VIRTUAL_HOST vars | domain routing | DOMAIN_DNS |
+| .env.example registry URLs, .npmrc | artifact repos | ARTIFACT_REPOSITORY |
+| docker-compose deploy.resources | resource limits | HOST_REQUIREMENTS |
 
 **1.2 Detect Project Type:**
 
@@ -104,6 +109,10 @@ ln-110-project-docs-coordinator (this skill)
   "DEPLOYMENT_SCALE": "single",
   "DEVOPS_CONTACTS": [],
   "HAS_GPU": false,
+  "SERVER_INVENTORY": [],
+  "DOMAIN_DNS": [],
+  "ARTIFACT_REPOSITORY": {},
+  "HOST_REQUIREMENTS": {},
   "flags": { "hasBackend": true, "hasDatabase": true, "hasFrontend": true, "hasDocker": true }
 }
 ```
@@ -134,6 +143,7 @@ ln-110-project-docs-coordinator (this skill)
   - `LEGACY_CONTENT.legacy_api` → used by ln-113 for api_spec.md
   - `LEGACY_CONTENT.legacy_database` → used by ln-113 for database_schema.md
   - `LEGACY_CONTENT.legacy_runbook` → used by ln-115 for runbook.md
+  - `LEGACY_CONTENT.legacy_infrastructure` → used by ln-115 for infrastructure.md
 - If no LEGACY_CONTENT: workers use auto-discovery + template defaults
 
 ### Phase 2: Delegate to Workers
@@ -141,11 +151,11 @@ ln-110-project-docs-coordinator (this skill)
 **2.1 Always invoke (parallel):**
 - `ln-111-root-docs-creator` with Context Store
 - `ln-112-project-core-creator` with full Context Store
+- `ln-115-devops-docs-creator` with Context Store (infrastructure.md always; runbook.md internally conditional on hasDocker)
 
 **2.2 Conditionally invoke:**
 - `ln-113-backend-docs-creator` if hasBackend OR hasDatabase
 - `ln-114-frontend-docs-creator` if hasFrontend
-- `ln-115-devops-docs-creator` if hasDocker
 
 **Delegation Pattern:**
 - Pass Context Store and flags to workers via direct Skill tool invocation
@@ -179,6 +189,7 @@ ln-110-project-docs-coordinator (this skill)
     "docs/project/api_spec.md",
     "docs/project/database_schema.md",
     "docs/project/design_guidelines.md",
+    "docs/project/infrastructure.md",
     "docs/project/runbook.md"
   ],
   "context_store": {
@@ -209,6 +220,12 @@ ln-110-project-docs-coordinator (this skill)
 - Results aggregated
 - **Actuality verified:** all document facts match current code (paths, functions, APIs, configs exist and are accurate)
 - Summary returned to ln-100
+
+## Phase 4: Meta-Analysis
+
+**MANDATORY READ:** Load `shared/references/meta_analysis_protocol.md`
+
+Skill type: `planning-coordinator`. Run after all phases complete. Output to chat using the `planning-coordinator` format.
 
 ## Reference Files
 - Guides: `references/guides/automatic_analysis_guide.md`, `critical_questions.md`, `troubleshooting.md`

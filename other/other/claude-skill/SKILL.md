@@ -1,346 +1,224 @@
 ---
 name: claude-skill
-description: 'Use when user asks to leverage claude or claude code to do something (e.g. implement a feature design or review codes, etc). Provides non-interactive automation mode for hands-off task execution without approval prompts.'
+description: Use when work should be delegated to Claude Code CLI, especially headless `claude -p` runs, automation scripts, CI jobs, resumable sessions, or requests to use Claude/Claude Code for a task.
+compatibility: Requires Claude Code CLI (`claude`) installed and authenticated on the target machine.
 ---
 
 # Claude Code Headless Mode
 
-You are operating in **Claude Code headless mode** - a non-interactive automation mode for hands-off task execution.
+Use this skill when the job should be executed through Claude Code itself, not solved inline. Focus on commands and workflows that match current stable Claude Code behavior.
 
-## Prerequisites
+## Core Rules
 
-Before using this skill, ensure Claude Code CLI is installed and configured:
+- Treat `claude --help` on the target machine as the compatibility floor. CLI flags move faster than blog posts and copied examples.
+- Permission rule syntax varies by build. Anthropic docs often show forms like `Bash(git diff *)`, while the installed `claude 2.1.71` help on this machine still shows `Bash(git:*)`. Mirror the syntax shown by the target machine's `claude --help`.
+- Default to the model the user already configured through `/model`, settings, or `ANTHROPIC_MODEL`.
+- Do **not** add `--model` unless the user explicitly asked for a model override or the workflow must pin a model for reproducibility.
+- Prefer `--append-system-prompt` over `--system-prompt` unless replacing the default Claude Code behavior is intentional.
+- Default to safe automation. If the user wants a truly unattended run, use explicit permission rules or `dontAsk`; reserve `bypassPermissions` for isolated environments.
 
-1. **Installation verification**:
+## Quick Verification
 
-   ```bash
-   claude --version
-   ```
+Run these checks before giving advanced advice:
 
-2. **First-time setup**: If not installed, guide the user to install Claude Code CLI with command `npm install -g @anthropic-ai/claude-code`.
+```bash
+claude --version
+claude auth status --text
+claude --help
+```
 
-## References
+If installation or updates look odd, use:
 
-- For extended usage scenarios, see `references/examples.md`.
+```bash
+claude doctor
+```
 
-## Core Principles
+## Installation Guidance
 
-### Autonomous Execution
+- Anthropic's getting-started docs still show `npm install -g @anthropic-ai/claude-code` as the standard install path.
+- Newer builds may also support native installer flows and `claude install`.
+- If the user needs installation help, point them to the official Claude Code setup docs and verify the result with `claude doctor` rather than assuming one installer path is universal.
 
-- Execute tasks from start to finish without seeking approval for each action
-- Make confident decisions based on best practices and task requirements
-- Only ask questions if critical information is genuinely missing
-- Prioritize completing the workflow over explaining every step
+## Headless Command Patterns
 
-### Output Behavior
+### Basic Non-Interactive Run
 
-- Stream progress updates as you work
-- Provide a clear, structured final summary upon completion
-- Focus on actionable results and metrics over lengthy explanations
-- Report what was done, not what could have been done
+Use `-p` / `--print` for non-interactive execution:
+
+```bash
+claude -p "summarize the repository architecture"
+```
+
+Add `--output-format json` when the caller needs machine-readable output:
+
+```bash
+claude -p "review the auth layer for risks" --output-format json
+```
+
+### Model Selection
+
+- Omit `--model` by default.
+- If the user explicitly wants a model override, use `claude --model <alias-or-name> ...`.
+- For persistent defaults, prefer settings (`model`) or `ANTHROPIC_MODEL`.
+- For third-party deployments, pin models via settings or environment variables instead of bolting `--model` onto every command example.
 
 ### Permission Modes
 
-Claude Code uses permission modes to control what operations are permitted. Set via `--permission-mode` flag:
+Claude Code supports these permission modes:
 
-| Mode | Description |
-|------|-------------|
-| `default` | Standard behavior - prompts for permission on first use of each tool |
-| `acceptEdits` | Automatically accepts file edit permissions for the session **(Default for this skill)** |
-| `plan` | Plan Mode - Claude can analyze but not modify files or execute commands |
-| `bypassPermissions` | Skips all permission prompts (requires safe environment - see warning below) |
+| Mode | Use |
+| --- | --- |
+| `default` | Interactive exploration. Prompts on first use of write/bash-style tools. |
+| `acceptEdits` | Recommended starting point for coding automation. Auto-accepts edits, but command execution can still prompt. |
+| `plan` | Analysis only. No file changes or command execution. |
+| `dontAsk` | Auto-denies anything not already approved by permission rules. Good for unattended-but-constrained runs. |
+| `bypassPermissions` | Skips prompts entirely. Only for strong sandbox / container / VM isolation. |
 
-**Accept Edits Mode (`--permission-mode acceptEdits`)** - Default
+Important clarifications:
 
-- Automatically accepts file edits without prompts
-- Still requires approval for shell commands
-- **Recommended for most programming tasks**
-- **This is the default mode for this skill**
+- `acceptEdits` is the skill's recommended default, not the CLI default.
+- If the user says "no prompts at all," prefer permission rules or `dontAsk` with explicit allow rules.
+- Only recommend `bypassPermissions` when the environment is already isolated and the user accepts the risk.
+- For read-only analysis, prefer `--tools` plus `default` or `plan`; do not reach for `bypassPermissions` just to suppress prompts.
 
-**Default Mode (`--permission-mode default`)**
+### Tool Availability vs Permission Approval
 
-- Requires approval for file edits and command execution
-- Safe for exploration and analysis tasks
+Do not mix these up:
 
-**Plan Mode (`--permission-mode plan`)**
+- `--tools` restricts which built-in tools are available at all.
+- `--allowedTools` pre-approves specific tools or tool rules so Claude does not prompt for them.
+- `--disallowedTools` removes tools or rules from context.
 
-- Read-only analysis mode
-- Claude can explore and analyze but cannot modify files
-- Cannot execute commands
-- Useful for code review and architecture analysis
+Permission rules follow `Tool` or `Tool(specifier)` syntax.
 
-**Bypass Permissions Mode (`--permission-mode bypassPermissions`)**
+Use wildcard rules when the command will include arguments:
 
-- Skips ALL permission prompts
-- **⚠️ WARNING: Only use in externally sandboxed environments (containers, VMs)**
-- **NEVER use on your development machine without proper isolation**
-- Use with `--allowedTools` to restrict specific tools for safety
+- Good: `Bash(git diff *)`
+- Good: `Bash(npm run test *)`
+- Risky for real use: `Bash(find)` because it matches only the exact literal command `find`
 
-## Claude Code CLI Commands
+If the local CLI help shows colon syntax such as `Bash(find:*)`, use that form on that machine. The important part is to allow an argument-aware rule rather than an exact literal command.
 
-**Note**: The following commands are based on the official Claude Code headless mode documentation.
-
-### Basic Headless Execution
-
-Use the `--print` (or `-p`) flag to run in non-interactive mode:
-
-```bash
-claude -p "analyze the codebase structure and explain the architecture"
-```
-
-### Tool Permissions
-
-Control which tools Claude can use with `--allowedTools` and `--disallowedTools`:
-
-```bash
-# Allow specific tools
-claude -p "stage my changes and write commits" \
-  --allowedTools "Bash,Read" \
-  --permission-mode acceptEdits
-
-# Allow multiple tools (space-separated)
-claude -p "implement the feature" \
-  --permission-mode acceptEdits \
-  --allowedTools Bash Read Write Edit
-
-# Allow tools with restrictions (comma-separated string)
-claude -p "run tests" \
-  --permission-mode acceptEdits \
-  --allowedTools "Bash(npm test),Read"
-
-# Disallow specific tools
-claude -p "analyze the code" \
-  --disallowedTools "Bash,Write"
-```
-
-### Using Permission Modes
-
-Control how permissions are handled:
-
-```bash
-# Accept file edits automatically (recommended for programming)
-claude -p "implement the user authentication feature" \
-  --permission-mode acceptEdits \
-  --allowedTools "Bash,Read,Write,Edit"
-
-# Combine with allowed tools for safe automation
-claude -p "fix the bug in login flow" \
-  --permission-mode acceptEdits \
-  --allowedTools "Read,Write,Edit,Bash(npm test)"
-```
+If the user wants Claude limited to a narrow tool family, you should usually use both `--tools` and `--allowedTools`: `--tools` defines the hard boundary, `--allowedTools` removes prompts inside that boundary.
 
 ### Output Formats
 
-#### Text Output (Default)
+- `text`: default human-readable output
+- `json`: one final structured result
+- `stream-json`: event stream for long-running automation
+
+Do not promise a fixed JSON schema unless you have validated it on the target version. Prefer wording like "returns a final result object with response text, timing, and session metadata."
+
+### Commonly Safe Flags
+
+These are appropriate starting points on current stable builds:
+
+- `--append-system-prompt`
+- `--allowedTools`
+- `--disallowedTools`
+- `--tools`
+- `--permission-mode`
+- `--output-format`
+- `--mcp-config`
+- `--continue` / `--resume`
+- `--settings` / `--setting-sources`
+- `--session-id`
+- `--add-dir`
+- `--max-budget-usd`
+- `--fallback-model` for print mode
+
+### Version-Sensitive Flags
+
+Published docs sometimes mention flags that are absent from the installed binary on a given machine. Before emitting less-common flags, verify them with `claude --help`.
+
+## Recommended Command Templates
+
+### Read-Only Analysis
 
 ```bash
-claude -p "explain file src/components/Header.tsx"
-# Output: Plain text response
+claude -p "count the total lines of code in this repo, grouped by language" \
+  --permission-mode default \
+  --tools "Bash,Read" \
+  --allowedTools "Read" "Bash(find:*)" "Bash(wc:*)"
 ```
 
-#### JSON Output
-
-Returns structured data including metadata:
+### Safe Edit Run
 
 ```bash
-claude -p "how does the data layer work?" --output-format json
-```
-
-Response format:
-
-```json
-{
-  "type": "result",
-  "subtype": "success",
-  "total_cost_usd": 0.003,
-  "is_error": false,
-  "duration_ms": 1234,
-  "duration_api_ms": 800,
-  "num_turns": 6,
-  "result": "The response text here...",
-  "session_id": "abc123"
-}
-```
-
-#### Streaming JSON Output
-
-Streams each message as it is received:
-
-```bash
-claude -p "build an application" \
+claude -p "fix the failing login test and rerun the relevant test command" \
   --permission-mode acceptEdits \
-  --output-format stream-json
+  --tools "Bash,Read,Edit,Write" \
+  --allowedTools "Read" "Edit" "Write" "Bash(npm test *)"
 ```
 
-Each conversation begins with an initial `init` system message, followed by user and assistant messages, followed by a final `result` system message with stats.
-
-### Multi-Turn Conversations
-
-For multi-turn conversations, you can resume or continue sessions:
+### JSON Report
 
 ```bash
-# Continue the most recent conversation
-claude --continue --permission-mode acceptEdits "now refactor this for better performance"
-
-# Resume a specific conversation by session ID
-claude --resume 550e8400-e29b-41d4-a716-446655440000 \
-  --permission-mode acceptEdits "update the tests"
-
-# Resume in non-interactive mode
-claude --resume 550e8400-e29b-41d4-a716-446655440000 -p \
-  --permission-mode acceptEdits "fix all linting issues"
-
-# Short flags
-claude -c --permission-mode acceptEdits "continue with next step"
-claude -r abc123 -p --permission-mode acceptEdits "implement the next feature"
+claude -p "review the repository for security issues and produce a concise report" \
+  --output-format json \
+  --append-system-prompt "Focus on concrete findings, exploitability, and mitigations."
 ```
 
-### System Prompt Customization
-
-Append custom instructions to the system prompt:
+### Resume a Session
 
 ```bash
-claude -p "review this code" \
-  --append-system-prompt "Focus on security vulnerabilities and performance issues"
+claude -r "$session_id" -p "continue by updating the tests and summarizing what changed"
 ```
 
-### MCP Server Configuration
-
-Load MCP servers from a JSON configuration file:
+### Continue the Most Recent Session
 
 ```bash
-claude -p "analyze the metrics" \
+claude -c -p "continue with the next step"
+```
+
+### Use MCP Tools
+
+```bash
+claude -p "investigate the API latency spike" \
+  --permission-mode acceptEdits \
   --mcp-config monitoring-tools.json \
-  --allowedTools "mcp__datadog,mcp__prometheus"
+  --allowedTools "Read" "mcp__datadog__*" "mcp__prometheus__*"
 ```
 
-### Verbose Logging
+### Fully Unattended Execution in an Isolated Environment
 
-Enable verbose output for debugging:
-
-```bash
-claude -p "debug this issue" --verbose
-```
-
-### Combined Examples
-
-Combine multiple flags for complex scenarios:
+Use only when the environment is already sandboxed:
 
 ```bash
-# Full automation with JSON output
-claude -p "implement authentication and output results" \
-  --permission-mode acceptEdits \
-  --allowedTools "Bash,Read,Write,Edit" \
-  --output-format json
-
-# Multi-turn with custom instructions
-session_id=$(claude -p "start code review" --output-format json | jq -r '.session_id')
-claude -r "$session_id" -p "now check for security issues" \
-  --permission-mode acceptEdits \
-  --append-system-prompt "Be thorough with OWASP top 10"
-
-# Streaming with MCP tools
-claude -p "deploy the application" \
-  --permission-mode acceptEdits \
-  --output-format stream-json \
-  --mcp-config deploy-tools.json \
-  --allowedTools "mcp__kubernetes,mcp__docker"
+claude -p "run the migration and fix the resulting type errors" \
+  --permission-mode bypassPermissions \
+  --tools "Bash,Read,Edit,Write"
 ```
 
 ## Execution Workflow
 
-1. **Parse the Request**: Understand the complete objective and scope
-2. **Plan Efficiently**: Create a minimal, focused execution plan
-3. **Execute Autonomously**: Implement the solution with confidence
-4. **Verify Results**: Run tests, checks, or validations as appropriate
-5. **Report Clearly**: Provide a structured summary of accomplishments
+1. Confirm the user wants Claude Code CLI rather than an inline answer.
+2. Verify the installed CLI shape with `claude --help` if you plan to use uncommon flags.
+3. Choose the least-permissive mode that still fits the task.
+4. Build the command without `--model` unless the user explicitly asked for an override.
+5. Restrict tools with `--tools` when safety or predictability matters.
+6. Use `--allowedTools` for prompt-free approval of known-safe actions.
+7. Return exact commands plus short caveats about assumptions and safety.
 
-## Best Practices
+## When To Pause
 
-### Speed and Efficiency
+Pause only when one of these is materially unclear:
 
-- Make reasonable assumptions when minor details are ambiguous
-- Use parallel operations whenever possible (read multiple files, run multiple commands)
-- Avoid verbose explanations during execution - focus on doing
-- Don't seek confirmation for standard operations
+- The user wants a specific model or provider behavior that requires pinning.
+- They asked for a fully unattended run in an environment that is not clearly sandboxed.
+- The workflow depends on a Claude Code feature that is not visible in `claude --help`.
 
-### Scope Management
+Otherwise, proceed and give the best current command.
 
-- Focus strictly on the requested task
-- Don't add unrequested features or improvements
-- Avoid refactoring code that isn't part of the task
-- Keep solutions minimal and direct
+## Final Response Expectations
 
-### Quality Standards
+When using this skill, the output should usually include:
 
-- Follow existing code patterns and conventions
-- Run relevant tests after making changes
-- Verify the solution actually works
-- Report any errors or limitations encountered
+- the exact command or command sequence
+- a one-line note that the configured Claude model is being used by default
+- any permission or isolation caveat
+- the resume command if the workflow is meant to continue later
 
-### Error Handling
+## References
 
-- Check exit codes and stderr for errors
-- Use timeouts for long-running operations:
-
-  ```bash
-  timeout 300 claude -p "$complex_prompt" --permission-mode acceptEdits || echo "Timed out after 5 minutes"
-  ```
-
-- Respect rate limits when making multiple requests by adding delays between calls
-
-## When to Interrupt Execution
-
-Only pause for user input when encountering:
-
-- **Destructive operations**: Deleting databases, force pushing to main, dropping tables
-- **Security decisions**: Exposing credentials, changing authentication, opening ports
-- **Ambiguous requirements**: Multiple valid approaches with significant trade-offs
-- **Missing critical information**: Cannot proceed without user-specific data
-
-For all other decisions, proceed autonomously using best judgment.
-
-## Final Output Format
-
-Always conclude with a structured summary:
-
-```text
-✓ Task completed successfully
-
-Changes made:
-- [List of files modified/created]
-- [Key code changes]
-
-Results:
-- [Metrics: lines changed, files affected, tests run]
-- [What now works that didn't before]
-
-Verification:
-- [Tests run, checks performed]
-
-Next steps (if applicable):
-- [Suggestions for follow-up tasks]
-```
-
-## Examples
-
-See `references/examples.md` for extended usage scenarios.
-
-## Handling Errors
-
-When errors occur:
-
-1. Attempt automatic recovery if possible
-2. Log the error clearly in the output
-3. Continue with remaining tasks if error is non-blocking
-4. Report all errors in the final summary
-5. Only stop if the error makes continuation impossible
-
-## Resumable Execution
-
-If execution is interrupted:
-
-- Clearly state what was completed
-- Provide the session ID for resuming: `claude --resume <session_id> -p "continue" --permission-mode acceptEdits`
-- List any state that needs to be preserved
-- Explain what remains to be done
+- `references/examples.md` for extended patterns

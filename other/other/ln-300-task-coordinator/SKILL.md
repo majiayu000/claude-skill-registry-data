@@ -16,7 +16,7 @@ Coordinates creation or replanning of implementation tasks for a Story. Builds t
 |-------|----------|--------|-------------|
 | `storyId` | Yes | args, git branch, kanban, user | Story to process |
 
-**Resolution:** Per `shared/references/input_resolution_pattern.md` — Story Resolution Chain.
+**Resolution:** Story Resolution Chain.
 **Status filter:** Backlog, Todo
 
 ## Purpose & Scope
@@ -30,7 +30,6 @@ Coordinates creation or replanning of implementation tasks for a Story. Builds t
 
 **MANDATORY READ:** Load `shared/references/tools_config_guide.md`, `shared/references/storage_mode_detection.md`, and `shared/references/input_resolution_pattern.md`
 
-Read `docs/tools_config.md` (bootstrap if missing per tools_config_guide.md).
 Extract: `task_provider` = Task Management → Provider (`linear` | `file`).
 
 Workers (ln-301, ln-302) handle the actual Linear/File operations based on `task_provider`.
@@ -45,7 +44,7 @@ Workers (ln-301, ln-302) handle the actual Linear/File operations based on `task
 **MANDATORY READ:** Load `shared/references/creation_quality_checklist.md` §Task Creation Checklist for validation criteria that ln-310 will enforce.
 
 ## Workflow (concise)
-- **Phase 1 Discovery:** Auto-discover Team ID (docs/tasks/kanban_board.md). Resolve storyId (per input_resolution_pattern.md): IF args provided → use args; ELSE IF git branch matches `feature/{id}-*` → extract id; ELSE IF kanban has exactly 1 Story in [Backlog, Todo] → suggest; ELSE → AskUserQuestion: show Stories from kanban filtered by [Backlog, Todo].
+- **Phase 1 Discovery:** Auto-discover Team ID (docs/tasks/kanban_board.md). Resolve storyId: Run Story Resolution Chain per guide (status filter: [Backlog, Todo]).
 - **Phase 2 Decompose (always):** **MANDATORY READ:** `shared/references/goal_articulation_gate.md` — Before building IDEAL plan, state REAL GOAL of this Story in one sentence (the deliverable, not the process). Verify: does the decomposition serve THIS goal? Then: Load Story (AC, Technical Notes, Context), assess complexity, build IDEAL plan (1-8 implementation tasks only), **scan for reusable patterns** (Grep `src/` for error handlers, validators, utilities relevant to task categories — count only; if found, append `**Pattern Hint:** {count} existing {category} patterns in src/. Review for reuse before creating new (Step 4a in ln-401).` to relevant task descriptions), apply Foundation-First execution order, **validate Task Independence**, **assign Parallel Groups**, **define verification methods for each task AC**, extract guide links.
 - **Phase 3 Check & Detect Mode:** Query Linear for existing tasks (metadata only). Detect mode by count + user keywords (add/replan).
 - **Phase 4 Delegate:** Call the right worker with Story data, IDEAL plan/append request, guide links, existing task IDs if any; autoApprove=true.
@@ -55,21 +54,22 @@ Workers (ln-301, ln-302) handle the actual Linear/File operations based on `task
 
 **Context:** Validates plan quality before delegation to workers, preventing rework.
 
-After building IDEAL plan (Phase 2), score 5 criteria:
+After building IDEAL plan (Phase 2), score 7 criteria:
 
 | # | Criterion | Check |
 |---|-----------|-------|
 | 1 | **Independence** | No forward dependencies between tasks (Task N uses only 1..N-1) |
 | 2 | **AC clarity** | Each task AC has measurable outcome AND verification method (test/command/inspect) |
 | 3 | **Tech confidence** | All referenced technologies/patterns are known or researched |
-| 4 | **Scope isolation** | Tasks don't overlap with other Stories' scope |
+| 4 | **Scope isolation** | Tasks don't overlap with sibling Stories' tasks. Load siblings (`list_issues project=Epic.id`), compare Affected Components and file paths for structural overlap |
 | 5 | **Architecture compliance** | Tasks reference correct layers (DB→Repo→Service→API), no planned cross-layer violations (e.g., API task doing direct DB calls) |
 | 6 | **Parallel groups valid** | Tasks in same group have no mutual dependencies; all deps point to earlier groups; numbers sequential |
+| 7 | **Destructive op safety** | Tasks with data deletion/migration/schema changes include safety plan (backup, rollback, blast radius) |
 
-**Score = count of PASS criteria (0-6)**
-- 5-6/6: Delegate to worker
-- 3-4/6: Show warnings to user, fix or proceed
-- <3/6: Rework plan before delegation
+**Score = count of PASS criteria (0-7)**
+- 6-7/7: Delegate to worker
+- 4-5/7: Show warnings to user, fix or proceed
+- <4/7: Rework plan before delegation
 
 ## Verification Methods for Task AC
 
@@ -85,7 +85,7 @@ When building IDEAL plan (Phase 2), each task AC must include a `verify:` method
 
 **Rule:** At least 1 AC per task must use `test` or `command` (not all `inspect`).
 
-**See also:** `shared/references/ac_validation_rules.md` §5 for full format and examples.
+**MANDATORY READ:** Load `shared/references/ac_validation_rules.md` §5 for full format and examples.
 
 ## Task Independence Validation
 
@@ -172,7 +172,13 @@ Mark each as in_progress when starting, completed when done.
 - Existing tasks counted; mode selected (CREATE/ADD/REPLAN or ask).
 - Worker invoked with correct payload and autoApprove=true.
 - Worker summary received (Linear URLs/operations) and kanban update confirmed.
-- Next steps returned (ln-310-story-validator, then orchestrator continues).
+- Next steps returned (ln-310-multi-agent-validator, then orchestrator continues).
+
+## Meta-Analysis
+
+**MANDATORY READ:** Load `shared/references/meta_analysis_protocol.md`
+
+Skill type: `planning-coordinator`. Run after all phases complete. Output to chat using the `planning-coordinator` format.
 
 ## Reference Files
 - **Tools config:** `shared/references/tools_config_guide.md`

@@ -655,9 +655,3 @@ def calculate_metrics(returns: pd.Series, rf_rate: float = 0.02) -> Dict[str, fl
 - **Don't use adjusted data carelessly** - Understand adjustments
 - **Don't optimize on full history** - Reserve test set
 - **Don't ignore capacity** - Market impact matters
-
-## Resources
-
-- [Advances in Financial Machine Learning (Marcos López de Prado)](https://www.amazon.com/Advances-Financial-Machine-Learning-Marcos/dp/1119482089)
-- [Quantitative Trading (Ernest Chan)](https://www.amazon.com/Quantitative-Trading-Build-Algorithmic-Business/dp/1119800064)
-- [Backtrader Documentation](https://www.backtrader.com/docu/)

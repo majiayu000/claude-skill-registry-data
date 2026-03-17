@@ -21,7 +21,7 @@ Universal project bootstrapper with two modes: CREATE (generate production-ready
 |--------|--------|-----------|
 | **Input** | Empty directory or target stack config | Existing project (Replit, StackBlitz, CodeSandbox, Glitch, custom) |
 | **Detection** | No source files found | Source files + optional platform config detected |
-| **ln-710** | SKIP (no deps to upgrade) | RUN (upgrade existing deps) |
+| **ln-820** | SKIP (no deps to upgrade) | RUN (upgrade existing deps) |
 | **ln-720** | SCAFFOLD + GENERATE | RESTRUCTURE + MIGRATE |
 | **ln-724** | SKIP (no artifacts) | CONDITIONAL (if platform detected) |
 | **ln-730–780** | RUN (same for both modes) | RUN (same for both modes) |
@@ -34,7 +34,7 @@ Universal project bootstrapper with two modes: CREATE (generate production-ready
 |--------|---------|
 | **Input** | Empty directory (CREATE) or source project (TRANSFORM) |
 | **Output** | Production-ready project with all infrastructure |
-| **Delegations** | ln-710 (conditional) -> ln-720 -> ln-730 -> ln-740 -> ln-750 -> ln-760 -> ln-770 -> ln-780 |
+| **Delegations** | ln-820 (conditional) -> ln-720 -> ln-730 -> ln-740 -> ln-760 -> ln-770 -> ln-780 |
 
 ---
 
@@ -52,11 +52,10 @@ Phase 2: Confirm (User Approval)
     v
 Phase 3: Execute (Delegate to L2 Coordinators)
     |
-    +---> ln-710: Dependency Upgrader
+    +---> ln-820: Dependency Upgrader
     +---> ln-720: Structure Migrator
     +---> ln-730: DevOps Setup
     +---> ln-740: Quality Setup
-    +---> ln-750: Commands Generator
     +---> ln-760: Security Setup
     +---> ln-770: Crosscutting Setup
     +---> ln-780: Bootstrap Verifier
@@ -187,7 +186,7 @@ Based on detected stack, create detailed plan:
 
 ## Transformations
 
-### 1. Dependencies (ln-710)
+### 1. Dependencies (ln-820)
 - Upgrade React 18 -> 19
 - Upgrade Vite 5 -> 6
 - Add missing peer dependencies
@@ -209,24 +208,19 @@ Based on detected stack, create detailed plan:
 - Setup Husky + lint-staged
 - Create test infrastructure (Vitest, xUnit)
 
-### 5. Commands (ln-750)
-- Generate refresh_context.md
-- Generate refresh_infrastructure.md
-- Generate build-and-test.md
-
-### 6. Security (ln-760)
+### 5. Security (ln-760)
 - Scan for hardcoded secrets
 - Run npm audit
 - Create SECURITY.md
 
-### 7. Crosscutting (ln-770)
+### 6. Crosscutting (ln-770)
 - Configure Serilog logging
 - Add GlobalExceptionMiddleware
 - Configure CORS policy
 - Add /health endpoints
 - Enable Swagger
 
-### 8. Verification (ln-780)
+### 7. Verification (ln-780)
 - Build all projects
 - Run tests
 - Start Docker containers
@@ -267,14 +261,13 @@ Sequential delegation to L2 coordinators:
 
 | Order | Skill | Purpose | CREATE mode | TRANSFORM mode | Depends On |
 |-------|-------|---------|-------------|----------------|------------|
-| 1 | ln-710 | Upgrade dependencies | **SKIP** | RUN | — |
-| 2 | ln-720 | Structure (SCAFFOLD/RESTRUCTURE) | RUN (SCAFFOLD) | RUN (RESTRUCTURE) | ln-710 |
+| 1 | ln-820 | Upgrade dependencies | **SKIP** | RUN | — |
+| 2 | ln-720 | Structure (SCAFFOLD/RESTRUCTURE) | RUN (SCAFFOLD) | RUN (RESTRUCTURE) | ln-820 |
 | 3 | ln-730 | Setup Docker/CI | RUN | RUN | ln-720 |
 | 4 | ln-740 | Configure quality tools | RUN | RUN | ln-720 |
-| 5 | ln-750 | Generate .claude/commands | RUN | RUN | ln-720 |
-| 6 | ln-760 | Security scanning | RUN | RUN | ln-710 |
-| 7 | ln-770 | Crosscutting concerns | RUN | RUN | ln-720 |
-| 8 | ln-780 | Build and verify | RUN | RUN | All above |
+| 5 | ln-760 | Security scanning | RUN | RUN | ln-820 |
+| 6 | ln-770 | Crosscutting concerns | RUN | RUN | ln-720 |
+| 7 | ln-780 | Build and verify | RUN | RUN | All above |
 
 ### Delegation Protocol
 
@@ -324,7 +317,7 @@ For each L2 coordinator:
 | # | Category | Check | Source |
 |---|----------|-------|--------|
 | 1 | **Structure** | Clean Architecture layers present | ln-720 result |
-| 2 | **Dependencies** | All packages installed, no version conflicts | ln-710 result |
+| 2 | **Dependencies** | All packages installed, no version conflicts | ln-820 result |
 | 3 | **DevOps** | Docker builds, CI pipeline valid | ln-730 result |
 | 4 | **Quality** | Linters/formatters configured and pass | ln-740 result |
 | 5 | **Security** | No hardcoded secrets, scanning configured | ln-760 result |
@@ -370,9 +363,6 @@ By Category:
     - Installed Husky hooks
     - Created 3 test files
 
-  Commands:
-    - Generated 3 .claude/commands
-
   Security:
     - Scanned 156 files
     - Found 0 secrets
@@ -394,8 +384,7 @@ Verification:
 Next Steps:
   1. Open http://localhost:3000 (frontend)
   2. Open http://localhost:5000/swagger (API docs)
-  3. Review generated .claude/commands
-  4. Run 'git add . && git commit -m "Bootstrap complete"'
+  3. Run 'git add . && git commit -m "Bootstrap complete"'
 ```
 
 ---
@@ -446,9 +435,6 @@ Options:
   linterConfig: "recommended" | "strict"
   precommitHooks: true
 
-  # Commands to generate
-  commands: ["refresh_context", "refresh_infrastructure", "build-and-test"]
-
   # Verification
   runTests: true
   startContainers: true
@@ -478,15 +464,16 @@ SKIP_TESTS=false
 | ln-001-standards-researcher | Query for best practices during ln-720 |
 | ln-002-best-practices-researcher | Generate guides during ln-720 |
 | ln-100-documents-pipeline | Call after bootstrap for docs |
-| ln-310-story-validator | Validate generated tasks |
+| ln-310-multi-agent-validator | Validate generated tasks |
 
 ---
 
 ## References
 
-- [stack_detection.md](references/stack_detection.md) - Detection rules and patterns
-- [transformation_plan_template.md](references/transformation_plan_template.md) - Plan template
-- [verification_checklist.md](references/verification_checklist.md) - Verification steps
+**MANDATORY READ:** Load these files at the phases indicated:
+- `references/stack_detection.md` — Phase 0 detection rules and patterns
+- `references/transformation_plan_template.md` — Phase 1 plan template
+- `references/verification_checklist.md` — Phase 3 verification steps
 
 ---
 

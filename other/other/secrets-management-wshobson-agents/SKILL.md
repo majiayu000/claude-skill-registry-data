@@ -339,10 +339,6 @@ secret-scan:
   allow_failure: false
 ```
 
-## Reference Files
-
-- `references/vault-setup.md` - HashiCorp Vault configuration
-- `references/github-secrets.md` - GitHub Secrets best practices
 
 ## Related Skills
 

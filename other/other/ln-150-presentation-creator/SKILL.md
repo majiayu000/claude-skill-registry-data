@@ -32,7 +32,7 @@ Use this skill when:
 - `docs/project/tech_stack.md` (REQUIRED)
 
 **Optional files** (enhance presentation but not blocking):
-- `docs/project/api_spec.md`, `database_schema.md`, `design_guidelines.md`, `runbook.md`
+- `docs/project/api_spec.md`, `database_schema.md`, `design_guidelines.md`, `infrastructure.md`, `runbook.md`
 - `docs/reference/adrs/*.md` (ADRs with Category: Strategic|Technical)
 - `docs/reference/guides/*.md` (How-to guides)
 - `docs/tasks/kanban_board.md` (Epic Story Counters for Roadmap)
@@ -72,6 +72,7 @@ The skill follows a **7-phase workflow**: READ DOCS â†’ VALIDATE SOURCE EXISTS â
    - `project/api_spec.md` - API endpoints, authentication (if exists)
    - `project/database_schema.md` - Database schema, ER diagrams (if exists)
    - `project/design_guidelines.md` - UI/UX design system (if exists)
+   - `project/infrastructure.md` - Infrastructure inventory (if exists)
    - `project/runbook.md` - Operational procedures (if exists)
 
 3. **Read ADRs** (if exist):

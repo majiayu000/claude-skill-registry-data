@@ -1,6 +1,10 @@
 ---
 name: baoyu-cover-image
-description: Generates article cover images with 5 dimensions (type, palette, rendering, text, mood) combining 9 color palettes and 6 rendering styles. Supports cinematic (2.35:1), widescreen (16:9), and square (1:1) aspects. Use when user asks to "generate cover image", "create article cover", or "make cover".
+description: Generates article cover images with 5 dimensions (type, palette, rendering, text, mood) combining 10 color palettes and 7 rendering styles. Supports cinematic (2.35:1), widescreen (16:9), and square (1:1) aspects. Use when user asks to "generate cover image", "create article cover", or "make cover".
+version: 1.56.1
+metadata:
+  openclaw:
+    homepage: https://github.com/JimLiu/baoyu-skills#baoyu-cover-image
 ---
 
 # Cover Image Generator
@@ -35,8 +39,8 @@ Generate elegant cover images for articles with 5-dimensional customization.
 | Option | Description |
 |--------|-------------|
 | `--type <name>` | hero, conceptual, typography, metaphor, scene, minimal |
-| `--palette <name>` | warm, elegant, cool, dark, earth, vivid, pastel, mono, retro |
-| `--rendering <name>` | flat-vector, hand-drawn, painterly, digital, pixel, chalk |
+| `--palette <name>` | warm, elegant, cool, dark, earth, vivid, pastel, mono, retro, duotone |
+| `--rendering <name>` | flat-vector, hand-drawn, painterly, digital, pixel, chalk, screen-print |
 | `--style <name>` | Preset shorthand (see [Style Presets](references/style-presets.md)) |
 | `--text <level>` | none, title-only, title-subtitle, text-rich |
 | `--mood <level>` | subtle, balanced, bold |
@@ -52,8 +56,8 @@ Generate elegant cover images for articles with 5-dimensional customization.
 | Dimension | Values | Default |
 |-----------|--------|---------|
 | **Type** | hero, conceptual, typography, metaphor, scene, minimal | auto |
-| **Palette** | warm, elegant, cool, dark, earth, vivid, pastel, mono, retro | auto |
-| **Rendering** | flat-vector, hand-drawn, painterly, digital, pixel, chalk | auto |
+| **Palette** | warm, elegant, cool, dark, earth, vivid, pastel, mono, retro, duotone | auto |
+| **Rendering** | flat-vector, hand-drawn, painterly, digital, pixel, chalk, screen-print | auto |
 | **Text** | none, title-only, title-subtitle, text-rich | title-only |
 | **Mood** | subtle, balanced, bold | balanced |
 | **Font** | clean, handwritten, serif, display | clean |
@@ -65,10 +69,10 @@ Auto-selection rules: [references/auto-selection.md](references/auto-selection.m
 **Types**: hero, conceptual, typography, metaphor, scene, minimal
 → Details: [references/types.md](references/types.md)
 
-**Palettes**: warm, elegant, cool, dark, earth, vivid, pastel, mono, retro
+**Palettes**: warm, elegant, cool, dark, earth, vivid, pastel, mono, retro, duotone
 → Details: [references/palettes/](references/palettes/)
 
-**Renderings**: flat-vector, hand-drawn, painterly, digital, pixel, chalk
+**Renderings**: flat-vector, hand-drawn, painterly, digital, pixel, chalk, screen-print
 → Details: [references/renderings/](references/renderings/)
 
 **Text Levels**: none (pure visual) | title-only (default) | title-subtitle | text-rich (with tags)
@@ -128,8 +132,18 @@ Analyze + Save Refs → [Output Dir] → [Confirm: 6 Dimensions] → Prompt → 
 
 Check EXTEND.md existence (priority: project → user):
 ```bash
+# macOS, Linux, WSL, Git Bash
 test -f .baoyu-skills/baoyu-cover-image/EXTEND.md && echo "project"
+test -f "${XDG_CONFIG_HOME:-$HOME/.config}/baoyu-skills/baoyu-cover-image/EXTEND.md" && echo "xdg"
 test -f "$HOME/.baoyu-skills/baoyu-cover-image/EXTEND.md" && echo "user"
+```
+
+```powershell
+# PowerShell (Windows)
+if (Test-Path .baoyu-skills/baoyu-cover-image/EXTEND.md) { "project" }
+$xdg = if ($env:XDG_CONFIG_HOME) { $env:XDG_CONFIG_HOME } else { "$HOME/.config" }
+if (Test-Path "$xdg/baoyu-skills/baoyu-cover-image/EXTEND.md") { "xdg" }
+if (Test-Path "$HOME/.baoyu-skills/baoyu-cover-image/EXTEND.md") { "user" }
 ```
 
 | Result | Action |
@@ -148,9 +162,21 @@ test -f "$HOME/.baoyu-skills/baoyu-cover-image/EXTEND.md" && echo "user"
 5. **Detect language**: Compare source, user input, EXTEND.md preference
 6. **Determine output directory**: Per File Structure rules
 
+**⚠️ People in Reference Images — MUST follow all 3 rules:**
+
+If reference images contain **people** who should appear in the cover:
+
+1. **`usage: direct`** — MUST set in refs description file. NEVER use `style` or `palette` when people need to appear
+2. **Per-character description** — MUST describe each person's distinctive features (hair, glasses, skin tone, clothing) in `refs/ref-NN-{slug}.md`. Vague descriptions like "a man" will fail
+3. **`--ref` flag** — MUST pass reference image via `--ref` in Step 4 so the model sees actual faces
+
+See [reference-images.md § Character Analysis](references/workflow/reference-images.md) for description format.
+
 ### Step 2: Confirm Options ⚠️
 
-Full confirmation flow: [references/workflow/confirm-options.md](references/workflow/confirm-options.md)
+**MUST use `AskUserQuestion` tool** to present options as interactive selection — NOT plain text tables. Present up to 4 questions in a single `AskUserQuestion` call (Type, Palette, Rendering, Font + Settings). Each question shows the recommended option first with reason, followed by alternatives.
+
+Full confirmation flow and question format: [references/workflow/confirm-options.md](references/workflow/confirm-options.md)
 
 | Condition | Skipped | Still Asked |
 |-----------|---------|-------------|

@@ -326,11 +326,6 @@ rules:
 9. **Automate SLO reporting**
 10. **Use SLOs for prioritization**
 
-## Reference Files
-
-- `assets/slo-template.md` - SLO definition template
-- `references/slo-definitions.md` - SLO definition patterns
-- `references/error-budget.md` - Error budget calculations
 
 ## Related Skills
 

@@ -34,6 +34,10 @@ All scripts are at `${CLAUDE_PLUGIN_ROOT}/skills/financial-model-review/scripts/
 - **`runway.py`** — Multi-scenario runway stress-test with decision points
 - **`compose_report.py`** — Assembles report with cross-artifact validation; `--strict` exits 1 on high-severity warnings (corrupt/missing artifacts)
 - **`visualize.py`** — Generates self-contained HTML with SVG charts (not JSON)
+- **`explore.py`** — Generates self-contained interactive HTML explorer from review artifacts; outputs HTML (not JSON)
+- **`review_inputs.py`** — Dual-mode review viewer: HTTP server with live validation (Claude Code) or self-contained static HTML with JS sanity metrics (Cowork); both modes produce corrections.json for apply_corrections.py
+- **`apply_corrections.py`** — Processes founder's downloaded corrections file: coerces types, normalizes ILS→USD, merges overrides, writes `corrected_inputs.json` and `extraction_corrections.json`
+- **`verify_review.py`** — Review completeness gate: checks artifact existence, content quality, and cross-artifact consistency; `--gate 1` for after-compose, `--gate 2` (default) for final; exit 0 = publishable, exit 1 = gaps remain
 
 Also available from `${CLAUDE_PLUGIN_ROOT}/scripts/` (shared):
 
@@ -65,11 +69,13 @@ Every review deposits structured JSON artifacts into a working directory. The fi
 | 5 | `unit_economics.json` | Sub-agent (Task) + `unit_economics.py` |
 | 6 | `runway.json` | Sub-agent (Task) + `runway.py` |
 | 7 | Report | `compose_report.py` reads all |
-| 8 | HTML | `visualize.py` |
+| 8a | HTML report | `visualize.py` |
+| 8b | Commentary | agent-written `commentary.json` |
+| 8c | Explorer | `explore.py` |
 
 **Rules:**
 - Deposit each artifact before proceeding to the next step
-- For agent-written artifacts (Step 3), consult `references/schema-inputs.md` for the JSON schema
+- For agent-written artifacts (Step 2), consult `references/schema-inputs.md` for the JSON schema
 - If a step is not applicable, deposit a stub: `{"skipped": true, "reason": "..."}`
 - **Do NOT use `isolation: "worktree"`** for sub-agents — files written in a worktree won't appear in the main `$REVIEW_DIR`
 
@@ -123,14 +129,14 @@ python3 "$SHARED_SCRIPTS/founder_context.py" read --artifacts-root "$ARTIFACTS_R
 
 Three cases based on exit code:
 
-**Exit 0 (found, single context):** Use the company slug and pre-filled fields. Before proceeding to extraction, ask the founder for current cash balance and date if not already stated in the conversation — this is the #1 cause of incomplete runway analysis. If files are attached, also ask about monthly burn rate unless the conversation already contains it. Batch these into a single message or `AskUserQuestion` call.
+**Exit 0 (found, single context):** Use the company slug and pre-filled fields. Before proceeding to extraction, use `AskUserQuestion` to ask the founder for current cash balance and date if not already stated in the conversation — this is the #1 cause of incomplete runway analysis. If files are attached, also ask about monthly burn rate unless the conversation already contains it. Batch all questions into a **single `AskUserQuestion` call**.
 
-**Exit 1 (not found):** Ask the founder for company details AND key financial context in a **single `AskUserQuestion` call** (one interaction = one chance for the UI to render correctly). Gather:
+**Exit 1 (not found):** Use `AskUserQuestion` (NOT plain chat) to ask the founder for company details AND key financial context. **You MUST use the `AskUserQuestion` tool** — do not just list questions in the chat. Gather everything in a **single call** (one interaction = one chance for the UI to render correctly):
 - Company name, stage, sector, geography (required for context creation)
 - Current cash balance and date (critical for runway — the #1 cause of incomplete reports)
 - Monthly burn rate if not obvious from the provided files
 
-When using `AskUserQuestion`, always provide at least 2 options (the tool requires a minimum of 2). Valid `--stage` values: `pre-seed`, `seed`, `series-a`, `series-b`, `later` (hyphenated, not underscored).
+**IMPORTANT:** Always use the `AskUserQuestion` tool for founder questions — never ask as plain chat text. The tool provides a structured UI that renders correctly in Cowork. Always provide at least 2 options (the tool requires a minimum of 2). Valid `--stage` values: `pre-seed`, `seed`, `series-a`, `series-b`, `later` (hyphenated, not underscored).
 
 **Why everything upfront:** Extraction sub-agents run in parallel and cannot pause to ask questions. Asking early prevents pipeline stalls.
 
@@ -148,7 +154,7 @@ If the script prints a `sector_type` warning but exits 0, that's non-fatal — p
 
 **Exit 2 (multiple context files):** Present the list to the founder, ask which company, then re-read with `--slug`.
 
-### Steps 2-3: Extract Model Data and Build `inputs.json`
+### Step 2: Extract Model Data and Build `inputs.json`
 
 **When Excel (.xlsx) or CSV files are provided,** spawn a `general-purpose` Task sub-agent to handle extraction and input construction. The sub-agent receives: file path, `SCRIPTS`, `REFS`, `SHARED_REFS`, and `REVIEW_DIR` paths. **Do NOT use `isolation: "worktree"`** — files written in a worktree won't appear in the main `$REVIEW_DIR`.
 
@@ -158,18 +164,36 @@ The sub-agent:
 3. Reads `$REFS/schema-inputs.md` for the JSON schema
 4. Reads `$REFS/data-sufficiency.md` to assess data sufficiency
 5. Constructs `inputs.json` from extracted data, writing it to `$REVIEW_DIR/inputs.json`
+6. **FX rate for Israeli companies:** If `geography` is "Israel", populate `israel_specific.fx_rate_ils_usd` with the current ILS/USD exchange rate (use web search if available, otherwise use 3.6 as a reasonable default). Also set `ils_expense_fraction` (typically 0.5 for Israeli startups — salaries in ILS, revenue in USD). This enables the ILS/USD toggle in the review page and FX sensitivity in the explorer.
 
-Instruct the sub-agent: **Do not run any scripts other than `extract_model.py`. Do not create any files other than `model_data.json` and `inputs.json`.** Before writing `inputs.json`, verify that no numeric field is null when the source data contains a value — null fields cascade into bad downstream outputs (unit economics scores wrong metrics, runway reports infinite runway). **ARPU sanity check:** If `drivers.arpu` or `unit_economics.ltv.inputs.arpu` exceeds total MRR, it's probably the aggregate revenue, not per-customer ARPU. Divide by customer count to get the correct value. This is the most common extraction error. Return ONLY: (1) file paths written, (2) company name/stage/sector, (3) `model_format`, (4) data sufficiency verdict (sufficient/insufficient + count of missing critical fields), and (5) any `company.traits` detected — do not echo the full JSON back.
+Instruct the sub-agent: **Do not run any scripts other than `extract_model.py`. Do not create any files other than `model_data.json` and `inputs.json`.** Before writing `inputs.json`, verify that no numeric field is null when the source data contains a value — null fields cascade into bad downstream outputs (unit economics scores wrong metrics, runway reports infinite runway). **ARPU sanity check:** If `drivers.arpu_monthly` or `unit_economics.ltv.inputs.arpu_monthly` exceeds total MRR, it's probably the aggregate revenue, not per-customer ARPU. Divide by customer count to get the correct value. This is the most common extraction error. Return ONLY: (1) file paths written, (2) company name/stage/sector, (3) `model_format`, (4) data sufficiency verdict (sufficient/insufficient + count of missing critical fields), (5) any `company.traits` detected, and (6) **confidence per key field** — for each extracted metric, report `high` (directly stated in source), `low` (inferred, converted, or single data point), or `missing`. Do not echo the full JSON back.
 
-After the sub-agent returns, use the summary to decide the qualitative vs. quantitative path and share a brief update with the founder.
+**Extraction constraints:**
+- Use `arpu_monthly` and `churn_monthly` as field names in `ltv.inputs` (not `arpu`/`churn`).
+- Populate `revenue.customers` with the current customer count.
+- ARPU is **per-customer** average revenue: `ARPU = MRR / customer_count`. Never use total revenue as ARPU.
+- Place `arr` at the top level of each `monthly[]` entry (per schema), not inside `drivers`.
+- Do NOT compute derived metrics (burn multiple, LTV/CAC, Rule of 40, etc.). Only scripts produce metric values.
+- If `growth_rate_monthly` cannot be reliably determined (pre-revenue, lumpy enterprise billing, forecast-only), set it to `null` — never use `0.0` as a stand-in for "unknown." Validation will flag the gap.
+- Create ONLY `model_data.json` and `inputs.json`. No summaries, notes, or extra artifacts.
+
+**Extraction pitfalls — common errors that produce wildly wrong downstream results:**
+
+1. **Department payroll vs COGS payroll.** Many financial models have a COGS section with `Payroll: $0` (correct — no COGS headcount), then separate R&D, S&M, and G&A sections each with their own payroll line items. **Always sum payroll across all department sections** (R&D + S&M + G&A + COGS), not just the first `Payroll` row you encounter. Populate `expenses.headcount[]` entries with per-role or per-department salary data, and `expenses.opex_monthly[]` for non-payroll operating expenses (rent, software, travel, professional services, etc.). If per-role detail is unavailable, use department totals (e.g., one headcount entry for "R&D" with aggregate salary). **NEVER estimate or guess salary values.** Use the actual dollar amounts from the P&L. If the P&L shows "R&D: $725K/quarter," that's $2.9M/year — use that as `salary_annual` for the R&D headcount entry. Generic estimates (e.g., "$82K per engineer") produce expense coverage errors that cascade through the entire review.
+
+2. **Collections vs recognized revenue.** For companies with `annual-contracts` trait or enterprise sales-led models, the spreadsheet often has both a "Collections" row (cash received — lumpy, timing-dependent) and a "Revenue" or "RevRec" row (recognized revenue — smoother, accrual-based). **Use recognized revenue for `revenue.monthly[]` totals, MRR, and growth rate.** Use collections only for cash flow analysis. Mixing collections into revenue produces fake growth rates — a $115K annual contract collected in one month is not $115K MRR. If only collections are available and no RevRec row exists, divide annual contract values by 12 to approximate monthly recognized revenue, note `data_confidence: "estimated"`, and set `growth_rate_monthly` to `null`.
+
+3. **Expense cross-check.** After extracting headcount and opex, verify that the sum roughly matches the model's total expense row or the implied burn (burn = expenses − revenue). If extracted expenses cover less than 50% of the stated `monthly_net_burn + revenue`, critical cost categories were likely missed — re-examine the source data for department-level line items. Validation will flag this as `EXPENSE_COVERAGE_SUSPECT`.
+
+After the sub-agent returns, **proceed to Step 3: Review Extracted Values** for founder confirmation before continuing.
 
 **When documents (PDFs, data room dumps, Google Sheets exports) are provided,** use a two-pass sub-agent flow:
 
 1. **Probe pass:** Spawn a `general-purpose` Task sub-agent with the file path(s), `SCRIPTS`, `REFS`, `SHARED_REFS`, and `REVIEW_DIR` paths. The sub-agent reads the document(s), reads `$REFS/schema-inputs.md` for the schema, extracts what it can, and returns ONLY: (1) partial data extracted (company name, stage, sector, any metrics found), (2) `model_format`, (3) a list of fields that could not be extracted, and (4) any `company.traits` detected. Save the sub-agent's ID for resumption.
 
-2. **Build pass:** Resume the same sub-agent (using `resume` with the saved agent ID — preserves full document context). Pass the founder's answers from Step 1 to fill any gaps. The sub-agent reads `$REFS/data-sufficiency.md`, constructs `inputs.json`, and writes it to `$REVIEW_DIR/inputs.json`. Returns ONLY: (1) file paths written, (2) data sufficiency verdict (sufficient/insufficient + count of missing critical fields), and (3) final `model_format`.
+2. **Build pass:** Resume the same sub-agent (using `resume` with the saved agent ID — preserves full document context). Pass the founder's answers from Step 1 to fill any gaps. The sub-agent reads `$REFS/data-sufficiency.md`, constructs `inputs.json`, and writes it to `$REVIEW_DIR/inputs.json`. Returns ONLY: (1) file paths written, (2) data sufficiency verdict (sufficient/insufficient + count of missing critical fields), (3) final `model_format`, and (4) **confidence per key field** — for each extracted metric, report `high`, `low`, or `missing`.
 
-After the sub-agent returns, use the summary to decide the qualitative vs. quantitative path and share a brief update with the founder.
+After the sub-agent returns, **proceed to Step 3: Review Extracted Values** for founder confirmation before continuing.
 
 **When conversational input is provided (no files):** Handle directly in the main agent — the data is already in the conversation. Gather all needed fields within Step 1 through normal conversation (not via `AskUserQuestion` after extraction starts). Ask for: revenue figures, cost structure, headcount, funding history, growth rates, key assumptions. Consult `references/schema-inputs.md` for the full schema. Since there are no files to extract, there is no extraction pipeline to block — but all data gathering must complete before dispatching sub-agents in Steps 4-6.
 
@@ -179,7 +203,83 @@ cat <<'INPUTS_EOF' > "$REVIEW_DIR/inputs.json"
 INPUTS_EOF
 ```
 
-**Data sufficiency:** After extracting data (whether via sub-agent or directly), consult `references/data-sufficiency.md` to determine if enough quantitative data is available. If 3+ critical fields are missing, follow the data sufficiency gate procedure.
+### Step 3: Review Extracted Values
+
+**Path A — File extraction** (`model_format` is `spreadsheet` or `partial`):
+
+**MANDATORY — READ THIS FIRST:**
+1. Do NOT show a summary table, preview, or confirmation dialog in chat. Do NOT ask the founder to confirm values in chat. Do NOT present extracted values as a message.
+2. Generate the HTML review page IMMEDIATELY using the commands below.
+3. Present the file path or URL to the founder so they can open it. In Cowork, present the full `file://` path.
+4. The HTML page IS the review interface — all review happens there, not in chat.
+
+**Environment detection:** If you are in Cowork (VM, no display, `/sessions/` path), use **static mode**. Otherwise (Claude Code, local terminal), use **server mode**.
+
+#### Server mode (Claude Code)
+
+```bash
+python3 "$SCRIPTS/review_inputs.py" "$REVIEW_DIR/inputs.json" --workspace "$REVIEW_DIR" &
+VIEWER_PID=$!
+```
+
+Tell the founder:
+
+> I've opened a review page in your browser. The extracted values are shown in 6 tabs — edit anything that looks wrong. Warnings will appear if the validation detects issues. When done, click Submit and tell me you're done.
+
+Wait for the founder to say they're done.
+
+```bash
+kill $VIEWER_PID 2>/dev/null
+python3 "$SCRIPTS/apply_corrections.py" "$REVIEW_DIR/corrections.json" --original "$REVIEW_DIR/inputs.json" --output-dir "$REVIEW_DIR"
+```
+
+#### Static mode (Cowork)
+
+```bash
+python3 "$SCRIPTS/review_inputs.py" "$REVIEW_DIR/inputs.json" --static "$REVIEW_DIR/review.html"
+```
+
+Tell the founder:
+
+> I've generated a review page. Open the file and review the extracted values — the sanity metrics update live as you edit. When done, click Submit to download a corrections file, then upload it back here.
+
+Wait for the founder to upload `corrections.json`.
+
+```bash
+python3 "$SCRIPTS/apply_corrections.py" <uploaded-file> --original "$REVIEW_DIR/inputs.json" --output-dir "$REVIEW_DIR"
+```
+
+#### After apply_corrections (both modes)
+
+Read the stdout JSON:
+- If `status == "completed"`: replace `inputs.json` with `corrected_inputs.json`:
+  ```bash
+  mv "$REVIEW_DIR/corrected_inputs.json" "$REVIEW_DIR/inputs.json"
+  ```
+- If `status == "error"`: show the errors to the founder, explain what needs fixing, and ask them to re-edit and re-submit.
+
+The review page includes live sanity checks (runway, burn multiple, ARPU consistency, expense coverage). In server mode, full Python validation runs live via `/api/check`. In static mode, JS-computed sanity metrics provide immediate feedback. Full Python validation runs in Step 3.5 after corrections are applied.
+
+**Path B — Conversational / deck extraction** (`model_format` is `conversational` or `deck`):
+
+Present the confirmation table to the founder as a normal conversation message (8-field table with confidence flags). Use AskUserQuestion to enforce the stop. Apply any corrections to `inputs.json` before continuing.
+
+| # | Field | Value | Confidence |
+|---|-------|-------|------------|
+| 1 | Stage | seed / series-a / etc. | — |
+| 2 | MRR | $X | high/low/missing |
+| 3 | Growth rate (MoM) | X% | high/low/missing |
+| 4 | Monthly burn | $X | high/low/missing |
+| 5 | Cash balance | $X | high/low/missing |
+| 6 | Customers | X | high/low/missing |
+| 7 | CAC | $X | high/low/missing |
+| 8 | Target raise | $X | high/low/missing |
+
+**Both paths:** Do NOT proceed to Step 3.5 until the founder has confirmed. Step 3.5 (validate_inputs.py) still runs — the validation gate is NOT bypassed.
+
+**Step 3.5 addition — founder override promotion:** When `has_critical_warnings == true` and the inputs contain founder overrides (`reviewed_by: "founder"`), the agent reads the founder's rationale for each. If the agent agrees the data is correct, it promotes the override by adding a new entry with `reviewed_by: "agent"` (keeping the founder's entry for audit) and re-runs validation. If the agent disagrees, it corrects `inputs.json` and removes the founder override. Only agent overrides clear `has_critical_warnings`.
+
+**Data sufficiency:** After confirming extracted values with the founder, consult `references/data-sufficiency.md` to determine if enough quantitative data is available. If 3+ critical fields are missing, follow the data sufficiency gate procedure.
 
 **Setting `model_format`:** `spreadsheet` (Excel/CSV/Google Sheets), `deck` (pitch deck), `conversational` (gathered through conversation), `partial` (incomplete spreadsheet). When `model_format` is `deck` or `conversational`, structural items auto-gate to `not_applicable`.
 
@@ -233,9 +333,9 @@ cat <<'CHECK_EOF' | python3 "$SCRIPTS/checklist.py" --pretty -o "$REVIEW_DIR/che
 CHECK_EOF
 ```
 
-**Evidence required:** Always provide `evidence` for `fail` or `warn` items.
+**Evidence is MANDATORY for every item:** Every `fail` and `warn` item MUST have a non-empty `evidence` string explaining WHY it failed/warned, citing specific values from the model. Every `pass` item MUST have `evidence` noting what was checked. Empty evidence produces blank lines in the final report — this is a quality gate failure.
 
-Instruct Sub-agent A: **Return ONLY a short JSON object** with keys: `path`, `score_pct`, `overall_rating`, `top_issues` (array of max 3 strings). Do not return tables, recommendations, category breakdowns, or any other text. Keep total output under 500 characters.
+Instruct Sub-agent A: **Return ONLY a short JSON object** with keys: `path`, `score_pct`, `overall_status`, `top_issues` (array of max 3 strings). Do not return tables, recommendations, category breakdowns, or any other text. Keep total output under 500 characters.
 
 **Sub-agent B — Metrics & Runway:**
 
@@ -270,15 +370,67 @@ python3 "$SCRIPTS/compose_report.py" --dir "$REVIEW_DIR" --pretty -o "$REVIEW_DI
 
 Check `validation.warnings`: fix high-severity (corrupt/missing artifacts), present medium-severity (checklist failures, runway inconsistencies, metrics gaps) in the report, note low/info. `--strict` only blocks on high-severity warnings — medium-severity warnings like `CHECKLIST_FAILURES` are review findings to present, not data errors to fix. This is a refinement loop — fix high-severity warnings, re-deposit, re-compose. If a warning flags a computed value that looks implausible (e.g., burn multiple > 20x), investigate the source artifact's inputs before re-composing — the fix may be in `inputs.json` or `unit_economics.json`, not in the compose step. If a `RUNWAY_INCONSISTENCY` warning mentions cash direction (cash increasing despite positive burn), check `inputs.json` for null or zero fields that should have values — null fields are the most common cause of phantom 'infinite runway' results.
 
-**Primary deliverable:** Read `report_markdown` from the output JSON, write it to `$REVIEW_DIR/report.md`, and display it to the user in full. **Present the file path** so the user can access it directly. Then add coaching commentary covering: (1) what metrics look strong and why investors will notice, (2) the single highest-leverage fix to improve investor readiness, (3) any data gaps that weaken the story (e.g., missing runway, incomplete unit economics), and (4) what to prioritize before the next fundraise conversation.
+**Primary deliverable:** Read `report_markdown` from the output JSON and write it to `$REVIEW_DIR/report.md`. **Do not display the report to the founder yet** — it will be presented after the final verification gate passes (Gate 2 below).
 
-### Step 8: Visualize (Optional)
+### Verification Gate 1 (after compose)
+
+```bash
+python3 "$SCRIPTS/verify_review.py" --dir "$REVIEW_DIR" --gate 1 --pretty
+```
+
+**If exit code is non-zero:** read `summary.errors`. Each error names the artifact and what's wrong. Fix the issue by re-running the failing step, then re-run `verify_review.py --gate 1`. **Do not proceed to Step 8 until it exits 0.**
+
+### Step 8a: Visualize (Optional)
 
 ```bash
 python3 "$SCRIPTS/visualize.py" --dir "$REVIEW_DIR" -o "$REVIEW_DIR/report.html"
 ```
 
-**Present the HTML file path** to the user so they can open the visual report.
+Generate the file silently — it will be presented after Gate 2 passes.
+
+### Step 8b: Write Commentary (Quantitative Path Only — MANDATORY)
+
+**Do NOT skip this step.** The explorer (Step 8c) depends on `commentary.json` — without the `headline` field, the explorer renders without any narrative context. This step is mandatory for all quantitative reviews.
+
+Write `commentary.json` to `$REVIEW_DIR`. Use the review findings to write specific, actionable narrative for each lens. Reference actual numbers from the review (runway months, metric values, scenario outcomes). Do not use generic advice.
+
+**Required structure** (see `references/artifact-schemas.md` for full schema):
+
+```json
+{
+  "headline": "One-sentence financial health summary",
+  "lenses": { ... per-lens commentary ... }
+}
+```
+
+The `headline` field is required — `explore.py` skips commentary entirely if it's missing.
+
+Only write commentary for lenses whose required artifacts exist. Omit keys for disabled lenses (e.g., if runway.json is missing, omit "runway" and "raise_planner" keys from lenses). Do not reference grant details (iia_pending, royalty_rate, iia_royalties_modeled) that the explorer cannot model.
+
+The investor_talking_points should be sentences the founder can literally say out loud during a fundraise conversation. Frame strengths confidently, frame gaps as "here's our plan to address X."
+
+Every sentence must contain at least one number from this company's review.
+
+### Step 8c: Generate Interactive Explorer (Quantitative Path Only)
+
+```bash
+python3 "$SCRIPTS/explore.py" --dir "$REVIEW_DIR" -o "$REVIEW_DIR/explore.html"
+```
+
+Generate the file silently — it will be presented after Gate 2 passes.
+
+### Verification Gate 2 (final)
+
+```bash
+python3 "$SCRIPTS/verify_review.py" --dir "$REVIEW_DIR" --pretty
+```
+
+**This is the final quality gate.** If it exits non-zero, fix the issues before presenting anything to the founder. Once it passes, present everything to the founder:
+
+1. Display the full report markdown from `$REVIEW_DIR/report.md`
+2. Present the `report.html` file path
+3. Present the `explore.html` file path
+4. Add coaching commentary: (1) what metrics look strong and why investors will notice, (2) the single highest-leverage fix to improve investor readiness, (3) any data gaps that weaken the story, (4) what to prioritize before the next fundraise conversation
 
 ## Scoring
 

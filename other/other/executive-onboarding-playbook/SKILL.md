@@ -1,6 +1,8 @@
 ---
 name: executive-onboarding-playbook
-description: "A 30-60-90 day playbook for VP and CPO leaders entering a new role: diagnose before acting, surface unwritten strategy, assess people, and build the body of evidence that informs all decisions."
+description: Plan a VP or CPO 30-60-90 day diagnostic onboarding path. Use when entering a new executive product role and avoiding premature change.
+intent: >-
+  Structure the first 90 days of a VP or CPO transition as a diagnostic process, not an execution sprint. The single most common failure in senior product leadership transitions is acting before understanding — changing structures, replacing people, or announcing strategy before building the evidence base that makes those decisions defensible.
 type: workflow
 theme: career-leadership
 best_for:

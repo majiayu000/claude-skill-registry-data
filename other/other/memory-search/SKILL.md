@@ -2,6 +2,7 @@
 name: memory-search
 description: Searches conversation history and semantic memory to find previous discussions, decisions, and context. Use when the user asks to "search memory", "what did we discuss", "remember when", "find previous conversation", "check history", or before starting new work to recall prior decisions and avoid repeating past discussions.
 allowed-tools: Bash
+compatibility: Requires AI Maestro (aimaestro.dev) with Bash shell access
 metadata:
   author: 23blocks
   version: 1.0.0

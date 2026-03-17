@@ -515,9 +515,3 @@ def profile_index_build(
 - **Don't ignore build time** - Index updates have cost
 - **Don't forget reindexing** - Plan for maintenance
 - **Don't skip warming** - Cold indexes are slow
-
-## Resources
-
-- [HNSW Paper](https://arxiv.org/abs/1603.09320)
-- [Faiss Wiki](https://github.com/facebookresearch/faiss/wiki)
-- [ANN Benchmarks](https://ann-benchmarks.com/)

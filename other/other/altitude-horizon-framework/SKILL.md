@@ -1,6 +1,8 @@
 ---
 name: altitude-horizon-framework
-description: "The core mental model for the PM-to-Director transition: altitude (scope) and horizon (time), the waiter-to-operator shift, four transition zones, named failure modes, and the Cascading Context Map."
+description: Understand the PM-to-Director transition through altitude and horizon thinking. Use when diagnosing scope, time-horizon, or leadership-level gaps.
+intent: >-
+  Defines the two-axis mental model that distinguishes Director-level thinking from PM thinking: **Altitude** (how wide you zoom out) and **Horizon** (how far ahead you look). Use this to understand what actually changes in the transition, diagnose which transition zone is creating friction, and apply the Cascading Context Map when organizational direction is vague or absent.
 type: component
 theme: career-leadership
 best_for:

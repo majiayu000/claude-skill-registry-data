@@ -1,6 +1,8 @@
 ---
 name: workshop-facilitation
-description: Facilitate workshop sessions in a multi-turn, one-step flow with numbered recommendations at decision points and quick-select options for regular questions.
+description: Facilitate workshop sessions in a one-step, multi-turn flow. Use when an interactive skill needs consistent pacing, options, and progress tracking.
+intent: >-
+  Provide the canonical facilitation pattern for interactive skills: one step at a time, with clear progress, adaptive recommendations at decision points, and predictable interruption handling.
 type: interactive
 theme: workshops-facilitation
 best_for:

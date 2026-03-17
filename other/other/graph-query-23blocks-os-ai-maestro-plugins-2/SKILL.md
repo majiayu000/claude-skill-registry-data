@@ -1,7 +1,8 @@
 ---
 name: graph-query
-description: Queries the code graph database to understand component relationships, dependencies, and the impact of changes. Use when the user asks to "find callers", "check dependencies", "what uses this", "show relationships", "find serializers", or when reading code files and needing to understand what depends on a component before making modifications.
+description: Queries the code graph database to understand component relationships, dependencies, and the impact of changes. Use when the user asks to "find callers", "check dependencies", "what uses this", or when exploring codebase structure to avoid breaking changes.
 allowed-tools: Bash
+compatibility: Requires AI Maestro (aimaestro.dev) with Bash shell access
 metadata:
   author: 23blocks
   version: 1.0.0

@@ -35,13 +35,14 @@ Called ONLY for project documents (not reference/tasks):
 | `docs/project/api_spec.md` | API scope covers all endpoint groups |
 | `docs/project/database_schema.md` | Schema scope covers all entities |
 | `docs/project/design_guidelines.md` | Design scope covers active components |
+| `docs/project/infrastructure.md` | Infrastructure scope covers all deployment targets |
 | `docs/project/runbook.md` | Runbook scope covers setup + operations |
 
 **Excluded:** `docs/tasks/`, `docs/reference/`, `docs/presentation/`, `tests/`
 
 ## Inputs (from Coordinator)
 
-**MANDATORY READ:** Load `shared/references/task_delegation_pattern.md#audit-coordinator--worker-contract` for contextStore structure.
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
 
 Receives from coordinator per invocation:
 
@@ -91,11 +92,11 @@ Coverage: how completely the scope is addressed. Relevance: how much content ser
 
 ## Scoring Algorithm
 
-**MANDATORY READ:** Load `shared/references/audit_scoring.md` for unified scoring formula.
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md` and `shared/references/audit_scoring.md`.
 
 ## Output Format
 
-**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format.
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md` and `shared/templates/audit_worker_report_template.md`.
 
 Write report to `{output_dir}/612-semantic-{doc-slug}.md` where `doc-slug` is derived from document filename (e.g., `architecture`, `tech_stack`, `claude_md`).
 
@@ -109,6 +110,8 @@ Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 
 ## Critical Rules
 
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
+
 - **Read before judge:** Always read full document before reporting issues
 - **Scope inference:** If no SCOPE tag, use document filename to infer expected scope
 - **No false positives:** Better to miss an issue than report incorrectly
@@ -117,6 +120,8 @@ Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 - **No fact-checking:** Do NOT verify paths, versions, endpoints against code
 
 ## Definition of Done
+
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
 
 - Document read completely
 - SCOPE extracted or inferred
@@ -127,8 +132,6 @@ Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 
 ## Reference Files
 
-- **Worker report template:** `shared/templates/audit_worker_report_template.md`
-- **Audit scoring formula:** `shared/references/audit_scoring.md`
 - **Audit output schema:** `shared/references/audit_output_schema.md`
 
 ---

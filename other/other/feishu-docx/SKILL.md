@@ -1,6 +1,6 @@
 ---
 name: feishu-docx
-description: Export Feishu/Lark cloud documents to Markdown. Supports docx, sheets, bitable, wiki, and batch wiki space export. Use this skill when you need to read, analyze, write, or reference content from Feishu knowledge base.
+description: Export and manage Feishu/Lark cloud documents. Supports docx, sheets, bitable, wiki, WeChat article import/export, document writing, and drive file management. Use this skill when you need to read, analyze, write, or manage content in Feishu knowledge base.
 ---
 
 # Feishu Docx Exporter
@@ -36,9 +36,15 @@ The exported Markdown file will be saved with the document's title as filename.
 | Command | Description |
 |---------|-------------|
 | `feishu-docx export <URL>` | Export document to Markdown |
+| `feishu-docx export-wechat <URL>` | Export WeChat article to Markdown |
 | `feishu-docx create <TITLE>` | Create new document |
+| `feishu-docx create --url <URL>` | Create document from WeChat article |
 | `feishu-docx write <URL>` | Append content to document |
 | `feishu-docx update <URL>` | Update specific block |
+| `feishu-docx drive ls` | List app or personal cloud-space files |
+| `feishu-docx drive perm-show <TOKEN>` | Show public permission |
+| `feishu-docx drive perm-members <TOKEN>` | List permission members |
+| `feishu-docx drive clear` | Clear files with double confirmation |
 | `feishu-docx export-wiki-space <URL>` | Batch export entire wiki space |
 | `feishu-docx export-workspace-schema <ID>` | Export bitable database schema |
 | `feishu-docx auth` | OAuth authorization |
@@ -118,6 +124,9 @@ feishu-docx create "周报" -f ./weekly_report.md
 
 # Create in specific folder
 feishu-docx create "笔记" --folder fldcnXXXXXX
+
+# Create from a WeChat article URL
+feishu-docx create --url "https://mp.weixin.qq.com/s/xxxxx"
 ```
 
 **如何获取 folder token**:
@@ -133,6 +142,25 @@ feishu-docx write "https://xxx.feishu.cn/docx/xxx" -c "## 新章节\n\n内容"
 
 # Append from file
 feishu-docx write "https://xxx.feishu.cn/docx/xxx" -f ./content.md
+```
+
+## Manage Drive Files
+
+```bash
+# List app cloud-space documents
+feishu-docx drive ls --auth-mode tenant --type docx
+
+# List personal cloud-space documents
+feishu-docx drive ls --auth-mode oauth --type docx
+
+# Show public permission
+feishu-docx drive perm-show "https://xxx.feishu.cn/docx/ABC123"
+
+# List permission members
+feishu-docx drive perm-members "https://xxx.feishu.cn/docx/ABC123"
+
+# Clear files with double confirmation
+feishu-docx drive clear --type docx
 ```
 
 ### Update Specific Block
@@ -162,3 +190,4 @@ feishu-docx update "https://xxx.feishu.cn/docx/xxx" -b blk123abc -c "新内容"
 - Use `-b` to export with block IDs for later updates
 - Token auto-refreshes, no re-auth needed
 - For Lark (overseas): add `--lark` flag
+- `tenant_access_token` manages app cloud space, `user_access_token` manages personal cloud space

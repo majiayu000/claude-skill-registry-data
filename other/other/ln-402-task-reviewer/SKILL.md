@@ -1,6 +1,6 @@
 ---
 name: ln-402-task-reviewer
-description: "Reviews task implementation for quality, code standards, test coverage. Creates [BUG] tasks for side-effect issues found outside task scope. Sets task Done or To Rework. Runs inline (Skill tool) from ln-400 main flow."
+description: "Reviews task implementation for quality, code standards, test coverage. Creates [BUG] tasks for side-effect issues. Sets task Done or To Rework. Runs inline from coordinator."
 license: MIT
 ---
 
@@ -10,7 +10,7 @@ license: MIT
 
 **MANDATORY after every task execution.** Reviews a single task in To Review and decides Done vs To Rework with immediate fixes or clear rework notes.
 
-> **This skill is NOT optional.** Every task executed by ln-401/ln-403/ln-404 MUST be reviewed by ln-402 immediately. No exceptions, no batching, no skipping.
+> **This skill is NOT optional.** Every executed task MUST be reviewed immediately. No exceptions, no batching, no skipping.
 
 ## Purpose & Scope
 - Resolve task ID (per Input Resolution Chain); load full task and parent Story independently (Linear: get_issue; File: Read task file).
@@ -24,14 +24,13 @@ license: MIT
 |-------|----------|--------|-------------|
 | `taskId` | Yes | args, parent Story, kanban, user | Task to review |
 
-**Resolution:** Per `shared/references/input_resolution_pattern.md` — Task Resolution Chain.
+**Resolution:** Task Resolution Chain.
 **Status filter:** To Review
 
 ## Phase 0: Tools Config
 
 **MANDATORY READ:** Load `shared/references/tools_config_guide.md`, `shared/references/storage_mode_detection.md`, and `shared/references/input_resolution_pattern.md`
 
-Read `docs/tools_config.md` (bootstrap if missing per tools_config_guide.md).
 Extract: `task_provider` = Task Management → Provider (`linear` | `file`).
 
 ## Task Storage Mode
@@ -94,7 +93,10 @@ Files to review:
 | 9 | Tests | Updated/risk-based limits |
 | 10 | AC | 4 criteria validation |
 | 11 | Side-effects | Pre-existing bugs in touched files |
-| 12 | CI Checks | lint/typecheck pass per ci_tool_detection.md |
+| 12 | Destructive ops | Safety guards from destructive_operation_safety.md (loaded in step 4) |
+| 13 | Algorithm correctness | Loop invariants, collection keys, unbounded ops, shared state leaks |
+| 14 | Event channels | Channel name consistency in diff |
+| 15 | CI Checks | lint/typecheck pass per ci_tool_detection.md |
 
 Expected output: Verdict (Done/To Rework) + Issues + Fix actions
 ```
@@ -149,29 +151,30 @@ Step 9: Update & Commit
 ```
 
 ## Workflow (concise)
-1) **Resolve taskId** (per input_resolution_pattern.md):
-   - IF args provided → use args
-   - ELSE IF Story context available → list To Review tasks under Story, suggest if 1
-   - ELSE IF kanban has exactly 1 Task in [To Review] → suggest
-   - ELSE → AskUserQuestion: show To Review Tasks from kanban
+1) **Resolve taskId:** Run Task Resolution Chain per guide (status filter: [To Review]).
 2) **Load task:** Load full task and parent Story independently. Detect type (label "tests" -> test task, else implementation/refactor).
 3) **Read context:** Full task + parent Story; load affected components/docs; review diffs if available.
 3b) **Goal gate:** **MANDATORY READ:** `shared/references/goal_articulation_gate.md` — Before reviewing, state: (1) REAL GOAL: what specific quality question must this review answer for THIS task? (2) DONE: what evidence proves quality is sufficient? (3) NOT THE GOAL: what would a surface-level rubber-stamp look like? (4) INVARIANTS: what non-obvious constraint exists (side-effects on other modules, implicit AC)?
 4) **Review checks:**
-   **MANDATORY READ:** `shared/references/clean_code_checklist.md`
+   **MANDATORY READ:** `shared/references/clean_code_checklist.md`, `shared/references/destructive_operation_safety.md`
    - **Goal validation (Recovery Paradox):** If executor articulated a REAL GOAL (visible in task comments or implementation), validate it matches the Story's target deliverable. If executor framed the goal around a secondary subject (e.g., "implement the endpoint" instead of "enable user data export") → CONCERN: `GOAL-MISFRAME: executor goal targets secondary subject, may miss hidden constraints.`
    - Approach: diff aligned with Technical Approach in Story. If different → rationale documented in code comments.
    - **Clean code:** Per checklist — verify all 4 categories. Replaced implementations fully removed. If refactoring changed API — callers updated, old signatures removed. <!-- Defense-in-depth: also checked by ln-511 MNT-DC- -->
    - **Cross-file DRY:** For each NEW function/class/handler created by task, Grep `src/` for similar names/patterns (count mode). If 3+ files contain similar logic → add CONCERN: `MNT-DRY-CROSS: {pattern} appears in {count} files — consider extracting to shared module.` This catches cross-story duplication that per-task review misses. <!-- Defense-in-depth: also checked by ln-511 MNT-DRY- -->
    - No hardcoded creds/URLs/magic numbers; config in env/config.
+   - Destructive operation guards: use code-level guards table from destructive_operation_safety.md (loaded above). CRITICAL/HIGH severity → BLOCKER: SEC-DESTR-{ID}. MEDIUM severity → CONCERN: SEC-DESTR-{ID}.
    - Error handling: all external calls (API, DB, file I/O) wrapped in try/catch or equivalent. No swallowed exceptions. Layering respected; reuse existing components. <!-- Defense-in-depth: layers also checked by ln-511 ARCH-LB- -->
-   - Side-effect breadth: service functions with 3+ side-effect categories → CONCERN: `ARCH-AI-SEB` <!-- Defense-in-depth: also ln-511, ln-624 Rule 10 -->
+   - Side-effect breadth: **leaf** service functions with 3+ side-effect categories → CONCERN: `ARCH-AI-SEB`. Exception: orchestrator/coordinator functions (imports 3+ services AND delegates sequentially) are EXPECTED to have multiple side-effect categories — do NOT flag. <!-- Defense-in-depth: also ln-511, ln-624 Rule 10 -->
    - Interface honesty: read-named functions (get_/find_/check_) with write side-effects → CONCERN: `ARCH-AI-AH` <!-- Defense-in-depth: also ln-511, ln-643 Rule 6 -->
    - Logging: errors at ERROR; auth/payment events at INFO; debug data at DEBUG. No sensitive data in logs.
-   - Comments: explain WHY not WHAT; no commented-out code; docstrings on public methods; Task ID present in new code blocks (`// See PROJ-123`).
+   - Comments: explain WHY not WHAT; no commented-out code; docstrings on public methods.
    - Naming: follows project's existing convention (check 3+ similar files). No abbreviations except domain terms. No single-letter variables (except loops).
    - Entity Leakage: ORM entities must NOT be returned directly from API endpoints. Use DTOs/response models. (BLOCKER for auth/payment, CONCERN for others) <!-- Defense-in-depth: also checked by ln-511 ARCH-DTO- -->
    - Method Signature: no boolean flag parameters in public methods (use enum/options object); no more than 5 parameters without DTO. (NIT) <!-- Defense-in-depth: also checked by ln-511 MNT-SIG- -->
+   - **Algorithm correctness (loops, collections, boundaries):** Does `break`/`continue`/`return` inside loops handle ALL matching items, not just the first? Do dict/set comprehensions handle duplicate keys correctly (last-wins may lose data)? Any `list(query.all())` or unbounded loop on user-controlled data without LIMIT? Any mutable shared state (connection pool GUCs, session globals) that leaks across requests? (BLOCKER if data loss/corruption, CONCERN otherwise) <!-- Prefix: ALGO- -->
+   - **Event channel consistency (task-scoped):** When task diff touches event-related code (NOTIFY/LISTEN/emit/subscribe/publish/on), verify: (1) channel name string in publisher matches channel name string in subscriber; (2) if channel name is a new string literal, Grep `src/` for matching listener/publisher counterpart. Mismatch → CONCERN: `ARCH-EVENT-MISMATCH: publisher '{pub_name}' has no matching subscriber`. Orphan → CONCERN: `ARCH-EVENT-ORPHAN: subscriber '{sub_name}' has no matching publisher`. <!-- Defense-in-depth: also checked by ln-652 Rule 6, ln-511 ARCH-EVENT- -->
+   - **Simplicity criterion (task-scoped):** **MANDATORY READ:** `references/simplicity_criterion.md` — Check MNT-KISS-SCOPE (effort-S task with 3+ new abstractions) and MNT-YAGNI-SCOPE (refactoring added new dependencies or created 2x more files than modified). Advisory CONCERNs only. <!-- Defense-in-depth: also checked by ln-511 KISS/YAGNI -->
+   - **Code efficiency (task-scoped):** Spot-check 2-3 key functions from diff for unnecessary intermediates, verbose patterns where idioms exist, or boilerplate framework handles. If found → CONCERN: `MNT-EFF-SCOPE: {pattern} in {file}`. Advisory only. (`shared/references/code_efficiency_criterion.md`) <!-- Defense-in-depth: executor self-checks via same reference -->
    - Docs: if public API changed → API docs updated. If new env var → .env.example updated. If new concept → README/architecture doc updated.
    - Tests updated/run: for impl/refactor ensure affected tests adjusted; for test tasks verify risk-based limits and priority (≤15) per planner template.
 5) **AC Validation (MANDATORY for implementation tasks):**
@@ -209,7 +212,8 @@ Step 9: Update & Commit
    IF verdict == Done:
    - Detect lint/typecheck commands per discovery hierarchy in ci_tool_detection.md
    - Run detected checks (timeouts per guide: 2min linters, 5min typecheck)
-   - IF any FAIL → override verdict to To Rework with last 50 lines of output
+   **MANDATORY READ:** Load `shared/references/output_normalization.md`
+   - IF any FAIL → apply output normalization per §1 normalize → §2 deduplicate → §4 truncate to 50 lines → override verdict to To Rework with normalized output
    - IF no tooling detected → SKIP with info message
 9) **Update:** Set task status in Linear; update kanban: if Done → **remove task from kanban** (Done section tracks Stories only, not individual Tasks); if To Rework → move task to To Rework section; add review comment with findings/actions. If side-effect bugs created, mention them in comment.
 
@@ -245,9 +249,9 @@ Step 9: Update & Commit
 - Mechanical checks (lint/typecheck) run ONLY when verdict is Done; skip for To Rework.
 
 ## Definition of Done
-- Steps 1-9 completed: task resolved, context loaded, review checks passed, AC validated, side-effect bugs created, mechanical verification passed, decision applied.
-- If Done: ALL uncommitted changes committed (`git add -A`) with task ID; task removed from kanban. If To Rework: task moved with fix guidance.
-- Review comment posted (findings + [BUG] list if any).
+- [ ] Steps 1-9 completed: task resolved, context loaded, review checks passed, AC validated, side-effect bugs created, mechanical verification passed, decision applied.
+- [ ] If Done: ALL uncommitted changes committed (`git add -A`) with task ID; task removed from kanban. If To Rework: task moved with fix guidance.
+- [ ] Review comment posted (findings + [BUG] list if any).
 
 ## Reference Files
 - **Tools config:** `shared/references/tools_config_guide.md`
@@ -257,8 +261,9 @@ Step 9: Update & Commit
 - AC Validation Checklist: `references/ac_validation_checklist.md` (4 criteria: Completeness, Specificity, Dependencies, DB Creation)
 - **Clean code checklist:** `shared/references/clean_code_checklist.md`
 - **CI tool detection:** `shared/references/ci_tool_detection.md`
+- **Output normalization:** `shared/references/output_normalization.md`
 - Kanban format: `docs/tasks/kanban_board.md`
 
 ---
-**Version:** 5.0.0
-**Last Updated:** 2026-02-07
+**Version:** 5.1.0
+**Last Updated:** 2026-03-15

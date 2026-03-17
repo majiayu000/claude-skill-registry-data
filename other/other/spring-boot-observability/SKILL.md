@@ -58,6 +58,11 @@ See [EXAMPLES.md](EXAMPLES.md) for complete working examples including:
 | Missing graceful shutdown | Add `server.shutdown=graceful` |
 | No health probe groups | Separate liveness and readiness |
 
+## Related Skills
+
+- `spring-boot-verify` — For dependency and configuration validation
+- `spring-boot-security` — For securing Actuator endpoints with Spring Security
+
 ## Critical Reminders
 
 1. **Separate liveness from readiness** — Liveness: "is process alive?", Readiness: "can handle traffic?"

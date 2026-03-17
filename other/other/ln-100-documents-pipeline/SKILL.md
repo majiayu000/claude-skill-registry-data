@@ -1,6 +1,6 @@
 ---
 name: ln-100-documents-pipeline
-description: "Top orchestrator for complete doc system. Delegates to ln-110 coordinator (project docs) + ln-120-150 workers. Phase 4: global cleanup. Idempotent."
+description: "Top orchestrator for complete doc system. Delegates to ln-110 coordinator (project docs) + ln-120-150 workers. Phase 3: global cleanup. Idempotent."
 license: MIT
 ---
 
@@ -12,7 +12,7 @@ This skill orchestrates the creation of a complete documentation system by invok
 
 ## Purpose
 
-Top-level orchestrator that creates a complete project documentation system in one invocation. Chains ln-110 coordinator + ln-120/130/140/150 workers sequentially, then runs global cleanup (deduplication, orphan archival, cross-link validation).
+Top-level orchestrator that creates a complete project documentation system in one invocation. Chains ln-110 coordinator + ln-120/130/140/150 workers sequentially, then runs global cleanup (deduplication, orphan reporting, cross-link validation).
 
 ## Architecture
 
@@ -28,7 +28,7 @@ ln-100-documents-pipeline (L1 Top Orchestrator - this skill)
 ├── ln-130-tasks-docs-creator (L2 Worker)
 ├── ln-140-test-docs-creator (L2 Worker - optional)
 ├── ln-150-presentation-creator (L2 Worker)
-└── ln-610-docs-auditor (L2 Coordinator - optional, delegates to ln-611/612/613)
+└── ln-610-docs-auditor (L2 Coordinator - optional, delegates to ln-611/612/613/614)
 ```
 
 ## When to Use This Skill
@@ -51,7 +51,7 @@ This skill should be used when:
 
 ## Workflow
 
-The skill follows a 7-phase orchestration workflow: **Legacy Migration (optional)** → User confirmation → Invoke coordinator + 4 workers sequentially → Global cleanup → **Documentation Audit (optional)** → Summary. Phase 3 (validation) is intentionally skipped - each component validates its own output.
+The skill follows a 6-phase orchestration workflow: **Legacy Migration (optional)** → User confirmation → Invoke coordinator + 4 workers sequentially → Global cleanup → **Documentation Audit (optional)** → Summary.
 
 ---
 
@@ -75,7 +75,7 @@ The skill follows a 7-phase orchestration workflow: **Legacy Migration (optional
 **0.2 Content Extraction**:
 - For each detected legacy file:
   - Parse markdown structure (headers, lists, code blocks)
-  - Apply type-specific extractor (**MANDATORY READ:** Load `legacy_detection_patterns.md`):
+  - Apply type-specific extractor (**MANDATORY READ:** Load `references/legacy_detection_patterns.md`):
     - `architecture_extractor` → { layers[], components[], diagrams[] }
     - `requirements_extractor` → { functional[], non_functional[] }
     - `tech_stack_extractor` → { frontend, backend, database, versions }
@@ -83,6 +83,7 @@ The skill follows a 7-phase orchestration workflow: **Legacy Migration (optional
     - `api_spec_extractor` → { endpoints[], authentication }
     - `database_schema_extractor` → { tables[], relationships[] }
     - `runbook_extractor` → { prerequisites[], install_steps[], env_vars[] }
+    - `infrastructure_extractor` → { servers[], domains[], ports[], services[], artifacts{}, cicd{} }
   - Score content quality (0.0-1.0)
 - Store in `extracted_content` object
 
@@ -143,7 +144,8 @@ The skill follows a 7-phase orchestration workflow: **Legacy Migration (optional
       "legacy_tech_stack": { "frontend": "...", "backend": "..." },
       "legacy_api": { "endpoints": [...] },
       "legacy_database": { "tables": [...] },
-      "legacy_runbook": { "install_steps": [...] }
+      "legacy_runbook": { "install_steps": [...] },
+      "legacy_infrastructure": { "servers": [...], "domains": [...], "ports": {} }
     }
   }
   ```
@@ -182,7 +184,7 @@ The skill follows a 7-phase orchestration workflow: **Legacy Migration (optional
      - **Root docs** (4 files): `CLAUDE.md`, `docs/README.md`, `docs/documentation_standards.md`, `docs/principles.md`
      - **Reference structure** (5 items): `docs/reference/README.md`, `docs/reference/adrs/`, `docs/reference/guides/`, `docs/reference/manuals/`, `docs/reference/research/`
      - **Tasks docs** (2 files): `docs/tasks/README.md`, `docs/tasks/kanban_board.md`
-     - **Project docs** (up to 7 files): `docs/project/requirements.md`, `architecture.md`, `tech_stack.md`, `api_spec.md`, `database_schema.md`, `design_guidelines.md`, `runbook.md`
+     - **Project docs** (up to 8 files): `docs/project/requirements.md`, `architecture.md`, `tech_stack.md`, `api_spec.md`, `database_schema.md`, `design_guidelines.md`, `infrastructure.md`, `runbook.md`
      - **Presentation** (3 items): `docs/presentation/README.md`, `presentation_final.html`, `assets/` directory
      - **Test docs** (2 files): `docs/reference/guides/testing-strategy.md`, `tests/README.md`
    - Count existing vs missing files
@@ -226,8 +228,8 @@ The skill follows a 7-phase orchestration workflow: **Legacy Migration (optional
   - ln-112-project-core-creator → 3 core docs (uses LEGACY_CONTENT.legacy_architecture, legacy_requirements, legacy_tech_stack)
   - ln-113-backend-docs-creator → 2 conditional (uses LEGACY_CONTENT.legacy_api, legacy_database)
   - ln-114-frontend-docs-creator → 1 conditional (if hasFrontend)
-  - ln-115-devops-docs-creator → 1 conditional (uses LEGACY_CONTENT.legacy_runbook)
-- **Output**: Root docs (`CLAUDE.md` + `docs/README.md` + `docs/documentation_standards.md` + `docs/principles.md`) + Project docs (`docs/project/requirements.md`, `architecture.md`, `tech_stack.md` + conditional: `api_spec.md`, `database_schema.md`, `design_guidelines.md`, `runbook.md`)
+  - ln-115-devops-docs-creator → 2 docs: 1 always + 1 conditional (uses LEGACY_CONTENT.legacy_runbook, legacy_infrastructure)
+- **Output**: Root docs (`CLAUDE.md` + `docs/README.md` + `docs/documentation_standards.md` + `docs/principles.md`) + Project docs (`docs/project/requirements.md`, `architecture.md`, `tech_stack.md`, `infrastructure.md` + conditional: `api_spec.md`, `database_schema.md`, `design_guidelines.md`, `runbook.md`)
 - **Store**: Save `context_store` from ln-110 result (contains TECH_STACK for ln-120)
 - **Validation**: Each L3 worker validates output (SCOPE tags, Maintenance sections)
 - **Verify**: All documents exist before continuing
@@ -259,6 +261,13 @@ The skill follows a 7-phase orchestration workflow: **Legacy Migration (optional
 - **Validation**: ln-150 validates output in Phase 2/3
 - **Verify**: Presentation files exist before continuing
 
+**2.6 Extract Skills from Documentation (Optional)**:
+- **Condition**: User approved skill extraction in Phase 1, or invoked manually later
+- **Invocation**: `Skill(skill: "ln-160-docs-skill-extractor")` → AUTOMATIC
+- **Input**: All docs created by ln-110—ln-150
+- **Output**: `.claude/commands/*.md` files extracted from procedural documentation sections
+- **Skip**: If not approved → can run ln-160-docs-skill-extractor later manually
+
 **Output**: Complete documentation system with coordinator + 4 workers completed and validated
 
 **TodoWrite format (mandatory):**
@@ -269,14 +278,14 @@ Add ALL invocations to todos before starting:
 - Invoke ln-130-tasks-docs-creator (pending)
 - Invoke ln-140-test-docs-creator (pending)
 - Invoke ln-150-presentation-creator (pending)
-- Run Global Cleanup (Phase 4) (pending)
-- Run Documentation Audit (Phase 5 - optional) (pending)
+- Run Global Cleanup (Phase 3) (pending)
+- Run Documentation Audit (Phase 4 - optional) (pending)
 ```
 Mark each as in_progress when starting, completed when worker returns success.
 
 ---
 
-### Phase 4: Global Cleanup and Consolidation
+### Phase 3: Global Cleanup and Consolidation
 
 **Objective**: Remove duplicates, orphaned files, consolidate knowledge across ALL documentation.
 
@@ -294,7 +303,7 @@ Quick quality check per created document:
 | 2 | **Accuracy** | Tech stack matches actual project files | References non-existent frameworks |
 | 3 | **Actuality** | Dates and versions match current state | Outdated references |
 
-**Gate:** All FAIL items → fix inline before continuing cleanup. Report quality summary in Phase 5.
+**Gate:** All FAIL items → fix inline before continuing cleanup. Report quality summary in Phase 4.
 
 **4.1 Scan for duplicate content**
 
@@ -333,44 +342,17 @@ Quick quality check per created document:
    - "✓ Removed {count} duplicate sections"
    - List: "{section_name} removed from {file} (canonical: {canonical_file})"
 
-**4.2 Scan for orphaned files**
+**4.2 Report unexpected files (advisory)**
 
 1. **List all .md files in docs/**
    - Use Glob tool: `pattern: "docs/**/*.md"`
 
-2. **Check against expected structure:**
-   - Expected files (created by workers):
-     - docs/CLAUDE.md
-     - docs/README.md
-     - docs/documentation_standards.md
-     - docs/principles.md
-     - docs/project/requirements.md
-     - docs/project/architecture.md
-     - docs/project/tech_stack.md
-     - docs/project/api_spec.md (conditional)
-     - docs/project/database_schema.md (conditional)
-     - docs/project/design_guidelines.md (conditional)
-     - docs/project/runbook.md (conditional)
-     - docs/reference/README.md
-     - docs/reference/adrs/*.md (user-created)
-     - docs/reference/guides/*.md (user-created)
-     - docs/reference/manuals/*.md (user-created)
-     - docs/tasks/README.md
-     - docs/tasks/kanban_board.md
-     - docs/testing-strategy.md
-     - tests/README.md
-   - Any file NOT in this list = orphaned
+2. **Check against expected structure** (files created by workers + user-created reference docs)
 
-3. **Move orphaned files to archive:**
-   - Create `.archive/YYYY-MM-DD/` directory (current date)
-   - For each orphaned file:
-     - Use Bash tool: `mv {file_path} .archive/YYYY-MM-DD/`
-     - Log: "Archived {file_name} (not in expected structure)"
-   - Track count
-
-4. **Log results:**
-   - "✓ Archived {count} orphaned files to .archive/{date}/"
-   - List archived files
+3. **Report findings (DO NOT move/delete/archive):**
+   - List unexpected files with advisory message
+   - User decides what to do with them
+   - Log: "{count} unexpected files found (not in expected structure) — listed for user review"
 
 **4.3 Consolidate knowledge**
 
@@ -439,8 +421,7 @@ Quick quality check per created document:
 
 Structure:
 - Removed {N} duplicate sections (canonical: principles.md)
-- Archived {N} orphaned files to .archive/YYYY-MM-DD/
-  - list of archived files
+- Found {N} unexpected files (listed for user review)
 - Consolidated {N} scattered concepts
 
 Links:
@@ -449,11 +430,11 @@ Links:
   - list of added links
 ```
 
-**Output**: All documentation cleaned up, duplicates removed, orphaned files archived, knowledge consolidated, cross-links validated
+**Output**: All documentation cleaned up, duplicates removed, unexpected files reported, knowledge consolidated, cross-links validated
 
 ---
 
-### Phase 5: Documentation Audit (OPTIONAL)
+### Phase 4: Documentation Audit (OPTIONAL)
 
 **Objective**: Audit documentation and code comments quality.
 
@@ -494,7 +475,7 @@ See full reports above for detailed findings.
 
 ---
 
-### Phase 6: Summary and Next Steps
+### Phase 5: Summary and Next Steps
 
 **Objective**: Provide complete overview of created system.
 
@@ -545,6 +526,7 @@ project_root/
 │   │   ├── api_spec.md               # ← API endpoints (conditional)
 │   │   ├── database_schema.md        # ← Database schema (conditional)
 │   │   ├── design_guidelines.md      # ← UI/UX system (conditional)
+│   │   ├── infrastructure.md          # ← Infrastructure inventory (always)
 │   │   └── runbook.md                # ← Operations guide (conditional)
 │   ├── reference/
 │   │   ├── README.md                 # ← Reference documentation hub (registries)
@@ -573,24 +555,13 @@ project_root/
 2. **ln-210-epic-coordinator** - Decompose scope into Epics (Linear Projects)
 3. **ln-220-story-coordinator** - Create User Stories for each Epic (automatic decomposition + replan)
 4. **ln-300-task-coordinator** - Break down Stories into implementation tasks (automatic decomposition + replan)
-5. **ln-310-story-validator** - Verify Stories before development
+5. **ln-310-multi-agent-validator** - Verify Stories before development
 6. **ln-400-story-executor** - Orchestrate Story implementation
 7. **Story quality gate** - Review completed Stories
 
 ---
 
-## Advantages of Orchestrator Approach
-
-**Benefits:**
-- ✅ Single command creates complete system
-- ✅ No need to remember skill sequence
-- ✅ Automated skill chaining
-- ✅ Consistent output every time
-- ✅ Time-saving (one invocation vs 2-3 manual invocations)
-- ✅ **Idempotent**: Safe to run multiple times - preserves existing files, creates only missing ones
-- ✅ **Pre-flight check**: Shows file scan summary before execution
-- ✅ **Global cleanup**: Automatic deduplication, orphaned files archival, knowledge consolidation
-- ✅ **Validated cross-links**: No broken links in documentation
+## Trade-offs
 
 **Trade-offs:**
 - ⚠️ Less granular control (can't skip coordinator phases)
@@ -643,7 +614,7 @@ If any invoked skill fails:
 - Uses **Glob** tool to find all .md files
 - Uses **Read** tool to analyze content
 - Uses **Edit** tool to remove duplicates and add links
-- Uses **Bash** tool to archive orphaned files
+- Reports unexpected files (advisory, no auto-archive)
 
 **Standards Compliance:**
 - All output follows same standards as underlying skills
@@ -657,15 +628,21 @@ If any invoked skill fails:
 
 - **Idempotent:** Creates only missing files; existing files are preserved without overwrite
 - **Sequential invocation:** Workers must be invoked in order (ln-110 -> ln-120 -> ln-130 -> ln-140 -> ln-150); each verified before next
-- **Global cleanup mandatory:** Phase 4 (deduplication, orphan archival, SSoT consolidation, cross-link validation) runs after all workers complete
+- **Global cleanup mandatory:** Phase 3 (deduplication, orphan reporting, SSoT consolidation, cross-link validation) runs after all workers complete
 - **User confirmation required:** Pre-flight check and explicit approval before any file creation
 - **NO_CODE Rule:** All generated documents use tables/ASCII/links; no code blocks >5 lines
+
+## Phase 6: Meta-Analysis
+
+**MANDATORY READ:** Load `shared/references/meta_analysis_protocol.md`
+
+Skill type: `planning-coordinator`. Run after all phases complete. Output to chat using the `planning-coordinator` format.
 
 ## Reference Files
 
 - Legacy detection patterns: `references/legacy_detection_patterns.md`
 - Worker skills: `ln-110-project-docs-coordinator`, `ln-120-reference-docs-creator`, `ln-130-tasks-docs-creator`, `ln-140-test-docs-creator`, `ln-150-presentation-creator`
-- Audit skill (optional): `ln-610-docs-auditor` (coordinates ln-611/612/613)
+- Audit skill (optional): `ln-610-docs-auditor` (coordinates ln-611/612/613/614)
 
 ## Definition of Done
 
@@ -701,20 +678,20 @@ Before completing work, verify ALL checkpoints:
 - [ ] File sizes listed for user confirmation
 - [ ] Warning displayed if expected files missing
 
-**✅ Global Cleanup Complete (Phase 4):**
+**✅ Global Cleanup Complete (Phase 3):**
 - [ ] 4.1: Duplicate sections identified and removed (>80% similarity)
 - [ ] 4.1: Links added to canonical locations (principles.md, testing-strategy.md, kanban_board.md)
-- [ ] 4.2: Orphaned files archived to `.archive/YYYY-MM-DD/`
+- [ ] 4.2: Unexpected files reported (advisory, no auto-archive)
 - [ ] 4.3: Scattered concepts consolidated to Single Source of Truth (SSoT)
 - [ ] 4.4: Internal links validated (broken links fixed, critical links added)
 - [ ] 4.5: Final report generated (counts, lists, actions)
 
-**✅ Documentation Audit (Phase 5 - if selected):**
+**✅ Documentation Audit (Phase 4 - if selected):**
 - [ ] User selected audit option (AUDIT DOCS / AUDIT COMMENTS / BOTH / SKIP)
 - [ ] If AUDIT DOCS: ln-610-docs-auditor invoked, compliance score displayed
 - [ ] Audit summary shown with scores per category
 
-**✅ Summary Displayed (Phase 6):**
+**✅ Summary Displayed (Phase 5):**
 - [ ] All created files listed with sizes
 - [ ] Documentation system features highlighted (SCOPE tags, Maintenance sections, README hubs, DAG structure, deduplicated content, validated links)
 - [ ] Next steps recommended (ln-210-epic-coordinator)
@@ -722,7 +699,7 @@ Before completing work, verify ALL checkpoints:
 **✅ Error Handling (if applicable):**
 - [ ] If any worker failed: User notified which worker failed, error message shown, manual invocation recommended, partial progress listed
 
-**Output:** Complete documentation system (CLAUDE.md + docs/ with README.md, documentation_standards.md, principles.md + presentation/ + optionally tests/) with global cleanup (no duplicates, no orphaned files, consolidated knowledge, validated cross-links)
+**Output:** Complete documentation system (CLAUDE.md + docs/ with README.md, documentation_standards.md, principles.md + presentation/ + optionally tests/) with global cleanup (no duplicates, orphaned files reported, consolidated knowledge, validated cross-links)
 
 ---
 

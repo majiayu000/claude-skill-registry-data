@@ -12,7 +12,7 @@ license: MIT
 |-------|----------|--------|-------------|
 | `storyId` | Yes | args, git branch, kanban, user | Story to process |
 
-**Resolution:** Per `shared/references/input_resolution_pattern.md` — Story Resolution Chain.
+**Resolution:** Story Resolution Chain.
 **Status filter:** To Review
 
 # Manual Tester
@@ -76,14 +76,10 @@ To create expected files:
 
 **MANDATORY READ:** Load `shared/references/input_resolution_pattern.md`
 
-1. **Resolve storyId** (per input_resolution_pattern.md):
-   - IF args provided → use args
-   - ELSE IF git branch matches `feature/{id}-*` → extract id
-   - ELSE IF kanban has exactly 1 Story in [To Review] → suggest
-   - ELSE → AskUserQuestion: show Stories from kanban filtered by [To Review]
+1. **Resolve storyId:** Run Story Resolution Chain per guide (status filter: [To Review]).
 
 ### Phase 1: Setup tests/manual structure
-1) **Read `docs/project/runbook.md`** — get Docker commands, API base URL, test prerequisites, environment setup
+1) **Read `docs/project/infrastructure.md`** — get port allocation, service endpoints, base URLs. **Read `docs/project/runbook.md`** — get Docker commands, test prerequisites, environment setup
 2) Check if `tests/manual/` folder exists in project root
 3) If missing, create structure:
    - `tests/manual/config.sh` — shared configuration (BASE_URL, helpers, colors)
@@ -96,7 +92,7 @@ To create expected files:
 ### Phase 2: Create Story test script
 1) Fetch Story, parse AC into Given/When/Then list (3-5 expected)
    - **Check for research comment** (from ln-521-test-researcher) — incorporate findings into test cases
-2) Detect API vs UI (API → curl, UI → puppeteer)
+2) Detect API vs UI (API → curl, UI → puppeteer). **IF UI:** **MANDATORY READ:** Load `references/puppeteer_patterns.md`
 3) Create test folder structure:
    - `tests/manual/{NN}-{story-slug}/samples/` — input files (if needed)
    - `tests/manual/{NN}-{story-slug}/expected/` — expected output files (REQUIRED for deterministic tests)
@@ -118,10 +114,13 @@ To create expected files:
    - Maintain execution order (00-setup first, then numbered suites)
 
 ### Phase 4: Execute and report
+
+**MANDATORY READ:** Load `references/test_result_format_v1.md`
+
 1) Rebuild Docker containers (no cache), ensure healthy
 2) Run generated script, capture output
 3) Parse results (pass/fail counts)
-4) Post Linear comment with:
+4) Post Linear comment (per test_result_format_v1.md) with:
    - AC matrix (pass/fail per AC)
    - Script path: `tests/manual/{NN}-{story-slug}/test-{story-slug}.sh`
    - Rerun command: `cd tests/manual && ./{NN}-{story-slug}/test-{story-slug}.sh`
@@ -305,6 +304,8 @@ cp references/templates/template-document-format.sh {NN}-feature/test-{format}.s
 - AC format: `shared/templates/test_task_template.md` (or local `docs/templates/` in target project)
 - Risk-based context: `shared/references/risk_based_testing_guide.md`
 - Research findings: ln-521-test-researcher creates "## Test Research" comment on Story
+- Puppeteer patterns: `references/puppeteer_patterns.md`
+- Test result format: `references/test_result_format_v1.md`
 
 ---
 **Version:** 1.0.0

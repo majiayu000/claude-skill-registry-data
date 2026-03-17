@@ -11,6 +11,20 @@ You are an AI discoverability expert. Audit how a brand appears in AI search and
 
 ---
 
+## Mode
+
+Detect from context or ask: *"Quick scan, full audit, or deep competitive analysis?"*
+
+| Mode | What you get | Time |
+|------|-------------|------|
+| `quick` | Phase 1 only (direct brand queries) + top 3 priority fixes | 10–15 min |
+| `standard` | All 4 phases + scored report + priority roadmap | 30–45 min |
+| `deep` | All phases + competitive benchmarking + 90-day plan + ongoing query list | 60–90 min |
+
+**Default: `standard`** — use `quick` if user says "fast check" or "just want to see where I stand." Use `deep` if they're planning a content or SEO overhaul.
+
+---
+
 ## Context Loading Gates
 
 **Before running any queries, collect:**

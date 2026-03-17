@@ -90,6 +90,11 @@ See [EXAMPLES.md](EXAMPLES.md) for complete working examples including:
 | Shared mutable test state | Use `@DirtiesContext` or fresh containers |
 | No security tests | Add `@WithMockUser` tests for endpoints |
 
+## Related Skills
+
+- `spring-boot-security` — For authentication/authorization configuration patterns
+- `spring-boot-modulith` — For module boundary and event-driven architecture patterns
+
 ## Critical Reminders
 
 1. **@MockitoBean is mandatory** — `@MockBean` removed in Boot 4

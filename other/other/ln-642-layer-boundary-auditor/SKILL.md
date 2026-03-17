@@ -43,6 +43,8 @@ L3 Worker that audits architectural layer boundaries and detects violations.
 
 ## Workflow
 
+**MANDATORY READ:** Load `shared/references/two_layer_detection.md` for detection methodology.
+
 ### Phase 1: Discover Architecture
 
 **MANDATORY READ:** Load `../ln-640-pattern-evolution-auditor/references/layer_rules.md` — use Architecture Presets (fallback), I/O Pattern Boundary Rules (Phase 2), Coverage Checks (Phase 4), Cross-Layer Consistency rules (Phase 3).
@@ -121,6 +123,8 @@ layers_with_commits = count([repo_commits, service_commits, api_commits].filter(
 | repo + service commits | HIGH | Ambiguous UoW owner (repo vs service) |
 | service + api commits | MEDIUM | Transaction control spans service + API |
 
+**Exception:** Saga pattern / distributed transactions with explicit compensating actions → downgrade CRITICAL to MEDIUM. UoW boundary documented with `// architecture decision` or ADR → skip.
+
 **Recommendation:** Choose single UoW owner (service layer recommended), remove commit() from other layers
 
 **Effort:** L (requires architectural decision + refactoring)
@@ -151,7 +155,7 @@ local_in_repo = Grep("AsyncSessionLocal\(\)", "**/repositories/**/*.py")
 
 **What:** Service-layer functions calling other services that call yet other services — deep orchestration chains.
 
-**Detection:** Per `shared/references/ai_ready_architecture.md` — map service imports, find chain depth.
+**Detection:** **MANDATORY READ:** Load `shared/references/ai_ready_architecture.md` — map service imports, find chain depth.
 
 **Violation Rules:**
 
@@ -200,11 +204,11 @@ IF len(unique_files) > 2:
 
 ### Phase 5: Calculate Score
 
-**MANDATORY READ:** Load `shared/references/audit_scoring.md` for unified scoring formula.
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md` and `shared/references/audit_scoring.md`.
 
 ### Phase 6: Write Report
 
-**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format (ln-640 section: standard AUDIT-META + DATA-EXTENDED).
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md` and `shared/templates/audit_worker_report_template.md`.
 
 ```
 # Build markdown report in memory with:
@@ -228,6 +232,8 @@ Score: 4.5/10 | Issues: 8 (C:1 H:3 M:4 L:0)
 
 ## Critical Rules
 
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
+
 - **Read architecture.md first** - never assume architecture type
 - **Skip violations list** - respect legacy files marked for gradual fix
 - **File + line + code** - always provide exact location with context
@@ -235,6 +241,8 @@ Score: 4.5/10 | Issues: 8 (C:1 H:3 M:4 L:0)
 - **No false positives** - verify path contains forbidden dir, not just substring
 
 ## Definition of Done
+
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
 
 - Architecture discovered from docs/architecture.md (or fallback used)
 - All violation types from layer_rules.md checked
@@ -249,7 +257,6 @@ Score: 4.5/10 | Issues: 8 (C:1 H:3 M:4 L:0)
 
 ## Reference Files
 
-- **Worker report template:** `shared/templates/audit_worker_report_template.md`
 - Layer rules: `../ln-640-pattern-evolution-auditor/references/layer_rules.md`
 - Scoring impact: `../ln-640-pattern-evolution-auditor/references/scoring_rules.md`
 

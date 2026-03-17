@@ -284,10 +284,6 @@ resource "aws_cloudwatch_metric_alarm" "cpu_high" {
 - **GCP:** Cost Management, Recommender
 - **Multi-cloud:** CloudHealth, Cloudability, Kubecost
 
-## Reference Files
-
-- `references/tagging-standards.md` - Tagging conventions
-- `assets/cost-analysis-template.xlsx` - Cost analysis spreadsheet
 
 ## Related Skills
 

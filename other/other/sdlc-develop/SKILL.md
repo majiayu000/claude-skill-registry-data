@@ -43,7 +43,7 @@ Lightweight orchestrator for 6-phase software development lifecycle with progres
 /core:develop add user authentication         # Full 6-phase pipeline
 /core:develop add logout button --auto        # Autonomous mode
 /core:develop create plan for dashboard --plan-only  # Plan only
-/core:develop @arkhe/specs/01-user-auth/      # Resume existing plan
+/core:develop @arkhe/specs/001-user-auth/     # Resume existing plan
 /core:develop add dashboard page with charts  # UI work → triggers Stitch workflow
 ```
 
@@ -129,14 +129,14 @@ Plans are persisted to `{specs_dir}/` with auto-incrementing prefixes:
 
 ```
 {specs_dir}/
-├── 01-user-auth/
+├── 001-user-auth/
 │   ├── spec.md              # Requirements
 │   ├── plan.md              # Architecture
 │   ├── tasks.md             # Task breakdown (with Status field)
 │   ├── wave-1-context.md    # Wave 1 handoff (generated at checkpoint)
 │   ├── wave-2-context.md    # Wave 2 handoff (generated at checkpoint)
 │   └── ...
-├── 02-dashboard/
+├── 002-dashboard/
 └── ...
 ```
 

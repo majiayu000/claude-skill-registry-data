@@ -21,7 +21,7 @@ Specialized worker auditing concurrency, async patterns, and cross-process resou
 
 ## Inputs (from Coordinator)
 
-**MANDATORY READ:** Load `shared/references/task_delegation_pattern.md#audit-coordinator--worker-contract` for contextStore structure.
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
 
 Receives `contextStore` with: `tech_stack`, `best_practices`, `codebase_root`, `output_dir`.
 
@@ -238,11 +238,11 @@ Receives `contextStore` with: `tech_stack`, `best_practices`, `codebase_root`, `
 
 ## Scoring Algorithm
 
-**MANDATORY READ:** Load `shared/references/audit_scoring.md` for unified scoring formula.
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md` and `shared/references/audit_scoring.md`.
 
 ## Output Format
 
-**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format.
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md` and `shared/templates/audit_worker_report_template.md`.
 
 Write report to `{output_dir}/628-concurrency.md` with `category: "Concurrency"` and checks: async_races, thread_safety, toctou, deadlock_potential, blocking_io, resource_contention, cross_process_races.
 
@@ -254,6 +254,8 @@ Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 
 ## Critical Rules
 
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
+
 - **Do not auto-fix:** Report only — concurrency fixes require careful human review
 - **Two-layer detection:** Always apply Layer 2 reasoning after Layer 1 grep. Never report raw grep matches without context analysis
 - **Language-aware detection:** Use language-specific patterns per check
@@ -262,6 +264,8 @@ Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 - **Exclusions:** Skip test files, skip single-threaded CLI tools, skip generated code
 
 ## Definition of Done
+
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
 
 - contextStore parsed (language, concurrency model, output_dir)
 - All 7 checks completed with two-layer detection:
@@ -274,9 +278,7 @@ Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 
 ## Reference Files
 
-- **Worker report template:** `shared/templates/audit_worker_report_template.md`
 - **Two-layer detection methodology:** `shared/references/two_layer_detection.md`
-- **Audit scoring formula:** `shared/references/audit_scoring.md`
 - **Audit output schema:** `shared/references/audit_output_schema.md`
 
 ---

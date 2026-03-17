@@ -13,7 +13,7 @@ Parse arguments and detect what to review.
 
 ### Multi-repo workspace detection
 
-If the current directory is a multi-repo workspace (no `.git/` at root, 2+ child directories containing a `.git` *directory* — not `.git` files, which indicate submodules):
+Read `$CLAUDE_PLUGIN_ROOT/skills/init/references/multi-repo-detection.md` for workspace detection. If a multi-repo workspace is detected:
 - Run the git commands below inside each child repo (the workspace root has no `.git/`, so git commands must target individual repos)
 - For PR/MR mode, the user must specify which repo — PRs/MRs belong to individual repos
 - If changed files cannot be mapped to any child repo (e.g., files at the workspace root), ask the user which repo's context to apply
@@ -51,11 +51,7 @@ git status --short
 
 When the user says "review PR #42", passes `--pr`, `#123`, or a PR URL:
 
-**Platform detection** — determine the hosting platform before proceeding:
-1. Check the `origin` remote URL first: contains `gitlab` → **GitLab**, use `glab`; contains `github` → **GitHub**, use `gh`
-2. If `origin` matches neither, check other remotes. If multiple remotes point to different platforms, ask the user which platform to use for PR/MR operations
-3. If no remote matches → fall back to CI file detection: `.gitlab-ci.yml` at repo root → GitLab; `.github/` directory → GitHub; otherwise → inform the user that the hosting platform could not be determined and ask them to specify
-4. If signals conflict (e.g., GitHub remote but `.gitlab-ci.yml` exists), use the remote URL as authoritative and note the discrepancy to the user
+**Platform detection** — read `$CLAUDE_PLUGIN_ROOT/skills/pr/references/platform-detection.md` and use the **Platform Detection Algorithm** section (including the **Signal Conflict Resolution** rule). If platform is unknown → inform the user and ask them to specify.
 
 **GitHub projects:**
 - Verify `gh` is available by running `gh --version`. If not available, inform the user that PR review requires the GitHub CLI (`gh`) and offer to review the branch diff instead
@@ -106,14 +102,7 @@ If a multi-repo workspace was detected in Step 1, resolve prerequisites per-repo
 
 ### Documentation prerequisites
 
-Check that these files exist:
-- `.claude/CLAUDE.md` (or the target repo's `.claude/CLAUDE.md` in a multi-repo workspace)
-- `.claude/docs/coding-guidelines.md` (or the target repo's)
-
-**If either is missing**, warn the user and recommend running `/optimus:init` first. Use these fallbacks so the skill can still run:
-- `CLAUDE.md` missing → detect tech stack from manifest files (`package.json`, `Cargo.toml`, `pyproject.toml`, etc.) for basic context
-- `coding-guidelines.md` missing → read `$CLAUDE_PLUGIN_ROOT/skills/init/templates/docs/coding-guidelines.md` as a generic baseline; inform the user that findings are based on generic guidelines, not project-specific ones
-- Both missing → apply both fallbacks, strongly recommend `/optimus:init`
+Read `$CLAUDE_PLUGIN_ROOT/skills/init/references/prerequisite-check.md` and apply the prerequisite check (CLAUDE.md + coding-guidelines.md existence, fallback logic).
 
 ### Agent prerequisites
 
@@ -128,34 +117,13 @@ Check that these files exist:
 
 ### Load constraint docs
 
-#### Single project
-
-1. `.claude/CLAUDE.md` — project overview, conventions, tech stack, test commands
-2. `.claude/docs/coding-guidelines.md` — coding standards (primary evaluation criteria)
-3. `.claude/docs/testing.md` (if exists) — testing conventions
-4. `.claude/docs/architecture.md` (if exists) — architectural boundaries
-5. `.claude/docs/styling.md` (if exists) — UI/CSS conventions
-
-#### Monorepo
-
-`/optimus:init` places docs differently in monorepos — `coding-guidelines.md` is shared at root, but `testing.md`, `styling.md`, and `architecture.md` are scoped per subproject:
-
-1. `.claude/CLAUDE.md` — root overview, subproject table, workspace-level commands
-2. `.claude/docs/coding-guidelines.md` — shared coding standards (applies to ALL subprojects)
-3. For each subproject with changed files:
-   - `<subproject>/CLAUDE.md` — subproject-specific overview, commands, tech stack
-   - `<subproject>/docs/testing.md` (if exists) — subproject-specific testing conventions
-   - `<subproject>/docs/architecture.md` (if exists) — subproject-specific architecture
-   - `<subproject>/docs/styling.md` (if exists) — subproject-specific UI/CSS conventions
-4. For root-as-project: its scoped docs are in `.claude/docs/` alongside the shared `coding-guidelines.md`
-
-When reviewing a subproject's code, apply its own constraint docs — not another subproject's. The shared `coding-guidelines.md` applies everywhere.
+Read `$CLAUDE_PLUGIN_ROOT/skills/init/references/constraint-doc-loading.md` for the full document loading procedure (single project and monorepo layouts, scoping rules).
 
 These files define the review criteria. Every guideline-related finding must be justified by what these docs establish — never impose external preferences.
 
 ### Exclude git submodules
 
-If any changed files reside inside a git submodule directory (a directory containing a `.git` *file*, not directory), exclude them from the review. These files belong to an external repository and should be reviewed in that repository's context, not the parent project's.
+Apply the "Submodule Exclusion" rule from `$CLAUDE_PLUGIN_ROOT/skills/init/references/constraint-doc-loading.md` — exclude submodule directories from the review.
 
 ### Context summary
 
@@ -198,7 +166,7 @@ Launch all available agents simultaneously (parallel, not sequential). Wait for 
 
 ## Step 4: Validate Findings
 
-Independently verify each finding to filter false positives.
+Independently verify each finding to filter false positives. Apply the verification protocol from `$CLAUDE_PLUGIN_ROOT/skills/init/references/verification-protocol.md` — treat agent-reported findings as claims that require independent evidence, not as ground truth.
 
 For each finding from Step 3:
 1. **Context check** — read ±30 lines around the flagged location to verify the issue exists in context
@@ -216,6 +184,10 @@ Only findings with High or Medium confidence proceed to Step 5.
 ## Step 5: Consolidate and Present Findings
 
 Merge validated findings from Steps 3–4. Deduplicate: if two agents flagged the same file and line range for the same category, keep the more detailed version. For guideline findings flagged by both Agents 3 and 4, merge into one finding and note "confirmed by independent review".
+
+### Contradiction resolution
+
+After deduplication, check for **cross-agent contradictions** — findings that target the same code region but recommend opposite directions (e.g., "add more validation" vs. "simplify this validation"). Keep the higher-severity finding and drop the other. When severities are equal, keep the security/correctness finding — security requirements justify proportionate complexity.
 
 ### Change Summary
 
@@ -276,17 +248,24 @@ For PR mode, include full-SHA code links:
 
 ## Step 6: Offer Actions
 
-Use `AskUserQuestion` to present options based on review mode:
+If the verdict is **CHANGES LOOK GOOD** (no findings), skip this step — do not present any action prompt. Go directly to the recommendation in the "Important" section below.
 
-**Local changes / branch diff** — header "Action", question "How would you like to proceed with the review findings?":
+If the verdict is **ISSUES FOUND**, use `AskUserQuestion` to present actions. The options depend on the review mode determined in Step 1:
+
+### Local changes / branch diff mode
+
+Use `AskUserQuestion` — header "Action", question "How would you like to proceed with the review findings?":
 - **Fix issues** — "Apply suggested fixes directly, then run tests to verify"
 - **Skip** — "Keep the report as reference only"
 
-**PR/MR review** — header "Action", question "How would you like to proceed with the review findings?":
+### PR/MR review mode
+
+Use `AskUserQuestion` — header "Action", question "How would you like to proceed with the review findings?":
+- **Fix issues** — "Apply suggested fixes directly, then run tests to verify"
 - **Post comment** — "Post the review summary as a PR/MR comment"
 - **Skip** — "Keep the report as reference only"
 
-Write the review summary to a secure temp file: `TMPFILE=$(mktemp /tmp/review-summary-XXXXXX.md)`. Always clean up after the posting attempt (whether it succeeds or fails): `rm -f "$TMPFILE"`.
+Write the review summary to a secure temp file: `TMPFILE=$(mktemp "${TMPDIR:-/tmp}/review-summary-XXXXXX.md")`. Always clean up after the posting attempt (whether it succeeds or fails): `rm -f "$TMPFILE"`.
 
 For GitHub PRs: `gh pr comment <N> --body-file "$TMPFILE"`
 For GitLab MRs: `glab api -X POST "projects/:id/merge_requests/<N>/notes" -F body=@"$TMPFILE"` — this avoids shell metacharacter issues that `glab mr note --message "$(cat ...)"` would have with code snippets in the summary
@@ -296,3 +275,9 @@ For GitLab MRs: `glab api -X POST "projects/:id/merge_requests/<N>/notes" -F bod
 - Never modify files, commit, push, or post comments without explicit user approval
 - This skill is read-only by default — it only analyzes and reports
 - When changes are too broad for effective review, recommend narrowing scope
+
+After the review is complete, recommend the next step based on the outcome:
+- If issues were found and fixed → `/optimus:commit` to commit the fixes
+- If no issues or user skipped fixes → `/optimus:pr` to create a pull request (skip this if already reviewing a PR/MR)
+
+Tell the user: **Tip:** for best results, start a fresh conversation for the next skill — each skill gathers its own context from scratch.

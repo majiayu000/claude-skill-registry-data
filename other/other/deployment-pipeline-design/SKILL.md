@@ -351,10 +351,6 @@ kubectl rollout undo deployment/my-app --to-revision=3
     fi
 ```
 
-## Reference Files
-
-- `references/pipeline-orchestration.md` - Complex pipeline patterns
-- `assets/approval-gate-template.yml` - Approval workflow templates
 
 ## Related Skills
 

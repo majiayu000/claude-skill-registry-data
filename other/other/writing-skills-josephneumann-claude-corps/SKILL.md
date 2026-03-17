@@ -1,6 +1,6 @@
 ---
 name: writing-skills
-description: "Use when creating or substantially revising a skill definition"
+description: "Use when writing a new SKILL.md, revising an existing skill's instructions, or converting a repeated workflow into a reusable skill."
 allowed-tools: Read, Bash, Glob, Grep, Edit, Write
 ---
 

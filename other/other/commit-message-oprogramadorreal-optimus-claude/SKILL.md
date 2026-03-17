@@ -13,7 +13,7 @@ Generate a conventional commit message by analyzing all local git changes (stage
 
 #### Multi-repo workspace detection
 
-If the current directory is a multi-repo workspace (no `.git/` at root, 2+ child directories containing a `.git` *directory* — not `.git` files, which indicate submodules):
+Read `$CLAUDE_PLUGIN_ROOT/skills/init/references/multi-repo-detection.md` for workspace detection. If a multi-repo workspace is detected:
 - Run the git commands below inside each child repo (the workspace root has no `.git/`, so git commands must target individual repos)
 - Track which repos have changes and which are clean
 - Skip repos with no local changes (no staged, unstaged, or untracked files)
@@ -36,44 +36,11 @@ git diff
 git status --short
 ```
 
-### 2. Analyze Changes
+### 2. Analyze Changes and Generate Conventional Commit Message
 
-In a multi-repo workspace, analyze each repo's changes independently — each repo may have different types, scopes, and purposes.
+Read `$CLAUDE_PLUGIN_ROOT/skills/commit-message/references/conventional-commit-format.md` and follow its instructions to analyze the gathered changes and generate a conventional commit message.
 
-Review the gathered information to understand:
-
-- **What changed**: Files added, modified, or deleted
-- **Why it changed**: Infer purpose from code context (new feature, bug fix, refactor, etc.)
-- **Scope**: Identify the affected component or area of the codebase
-
-### 3. Generate Conventional Commit Message
-
-Always produce a message following the Conventional Commits specification, regardless of the commit style used in the repository:
-
-```
-<type>(<optional scope>): <description>
-
-<optional body>
-```
-
-**Types:**
-- `feat` — New feature or capability
-- `fix` — Bug fix
-- `refactor` — Code restructuring without behavior change
-- `docs` — Documentation only
-- `style` — Formatting, whitespace, semicolons (no logic change)
-- `test` — Adding or updating tests
-- `chore` — Build, CI, dependencies, tooling
-- `perf` — Performance improvement
-
-**Rules:**
-- Keep the subject line under 72 characters
-- Use imperative mood ("Add feature" not "Added feature")
-- Add a body only when the subject line alone is insufficient to explain the change
-- If changes span multiple concerns, suggest separate commits with guidance on how to stage them
-- Never include `Co-Authored-By` or other attribution trailers in the commit message
-
-### 4. Present the Message
+### 3. Present the Message
 
 Output the suggested commit message in a copyable code block. Do NOT run `git commit`. If the changes naturally split into multiple commits, present each message separately with instructions on which files to stage for each.
 
@@ -84,3 +51,10 @@ In a multi-repo workspace, present each repo's commit message under a heading wi
 - Never commit, stage, or modify any files
 - This skill is read-only — it only analyzes and suggests
 - When changes are too broad for a single commit, recommend splitting
+
+Recommend the next step based on readiness:
+- If the user wants to commit now → `/optimus:commit` to commit (and optionally push)
+- If the feature is ready → `/optimus:pr` to create a pull request
+- If validation is needed first → `/optimus:verify` to validate end-to-end
+
+Tell the user: **Tip:** for best results, start a fresh conversation for the next skill — each skill gathers its own context from scratch.

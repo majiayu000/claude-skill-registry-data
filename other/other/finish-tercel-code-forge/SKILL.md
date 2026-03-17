@@ -65,6 +65,11 @@ Present these options to the user using `AskUserQuestion`. Do NOT modify, add, o
 
 **Option 1 — Merge:**
 ```bash
+# If inside a worktree, cd to the main repo first
+MAIN_REPO=$(git -C "$(git rev-parse --git-common-dir)/.." rev-parse --show-toplevel 2>/dev/null)
+if [ -n "$MAIN_REPO" ] && [ "$MAIN_REPO" != "$(git rev-parse --show-toplevel)" ]; then
+  cd "$MAIN_REPO"
+fi
 git checkout {base-branch}
 git merge {feature-branch} --no-ff
 ```
@@ -79,7 +84,7 @@ gh pr create --title "{feature-name}: <summary>" --body "$(cat <<'EOF'
 ## Test plan
 - [ ] All tests pass
 
-Generated with [code-forge](https://github.com/tercel/code-forge)
+Generated with [code-forge](https://github.com/anthropics/claude-code)
 EOF
 )"
 ```
@@ -111,6 +116,16 @@ fi
 
 **Option 3:** Do NOT clean up. The worktree stays.
 
+### Step 6: Cleanup Temporary Plan Files
+
+If the feature's plan was stored in `.code-forge/tmp/` (created with `--tmp`):
+
+1. After successful merge (Option 1) or PR creation (Option 2) or discard (Option 4): delete `.code-forge/tmp/{feature_name}/`
+2. If `.code-forge/tmp/` is now empty, remove `.code-forge/tmp/`. If `.code-forge/` is also now empty, remove it too.
+3. Display: `Cleaned up temporary plan files: .code-forge/tmp/{feature_name}/`
+
+**Option 3 (Keep):** Do NOT clean up — the tmp plan files stay for future `/impl` sessions.
+
 ### Completion Report
 
 ```
@@ -119,6 +134,29 @@ Branch finished:
   Action:    {Merged / PR created / Kept / Discarded}
   PR URL:    {url} (Option 2 only)
   Worktree:  {removed / preserved}
+  Tmp plan:  {cleaned up / preserved} (only shown for --tmp plans)
+```
+
+## Example
+
+```
+$ /code-forge:finish
+
+Tests: 42/42 passing ✓
+
+How would you like to integrate this branch?
+  1. Merge back to main locally
+  2. Push and create Pull Request
+  3. Keep branch as-is
+  4. Discard this work
+
+> 2
+
+Branch finished:
+  Feature:   user-auth
+  Action:    PR created
+  PR URL:    https://github.com/org/repo/pull/47
+  Worktree:  removed
 ```
 
 ## Common Mistakes

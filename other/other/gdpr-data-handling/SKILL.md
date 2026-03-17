@@ -622,9 +622,3 @@ class BreachNotificationHandler:
 - **Don't retain indefinitely** - Define and enforce retention
 - **Don't ignore DSARs** - 30-day response required
 - **Don't transfer without safeguards** - SCCs or adequacy decisions
-
-## Resources
-
-- [GDPR Full Text](https://gdpr-info.eu/)
-- [ICO Guidance](https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/)
-- [EDPB Guidelines](https://edpb.europa.eu/our-work-tools/general-guidance/gdpr-guidelines-recommendations-best-practices_en)

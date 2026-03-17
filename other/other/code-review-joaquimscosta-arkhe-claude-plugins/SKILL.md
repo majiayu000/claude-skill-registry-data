@@ -164,3 +164,4 @@ If the Skill tool is not available (e.g., running inside a subagent), inform the
 
 - [WORKFLOW.md](WORKFLOW.md) - Detailed review checklists, false positive filtering, diff-context probes, confidence scoring guide
 - [EXAMPLES.md](EXAMPLES.md) - Sample code review reports demonstrating the full format
+- [TROUBLESHOOTING.md](TROUBLESHOOTING.md) - Common issues with git diff, finding quality, and output

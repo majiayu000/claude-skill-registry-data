@@ -36,7 +36,7 @@ Coordinates project restructuring to Clean Architecture. Mode-aware: delegates t
 **Scope boundaries:**
 - Analyzes current project structure (TRANSFORM) or accepts target config (CREATE)
 - Generates migration plan or scaffold plan
-- Delegates to specialized workers via Task tool
+- Delegates to specialized workers via Agent tool
 - Verifies final result
 
 ---
@@ -184,7 +184,7 @@ Context:
 
 ## Critical Rules
 
-- **Orchestrator Pattern:** Analyze and delegate via Task tool, do not execute transformations directly
+- **Orchestrator Pattern:** Analyze and delegate via Agent tool, do not execute transformations directly
 - **Mode Awareness:** Pass correct mode to all workers — CREATE vs TRANSFORM determines worker behavior
 - **Conditional Workers:** ln-724 runs ONLY in TRANSFORM mode when platform artifacts detected; SKIP otherwise
 - **Sequential Workers:** Execute in order (ln-724 conditional → ln-721 → ln-722 → ln-723)

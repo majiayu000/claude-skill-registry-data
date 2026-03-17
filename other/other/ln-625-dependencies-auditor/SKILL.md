@@ -27,7 +27,7 @@ Specialized worker auditing dependency management, code reuse, and security vuln
 
 ## Inputs (from Coordinator)
 
-**MANDATORY READ:** Load `shared/references/task_delegation_pattern.md#audit-coordinator--worker-contract` for contextStore structure.
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
 
 Receives `contextStore` with tech stack, package manifest paths, codebase root, output_dir.
 
@@ -145,13 +145,13 @@ Receives `contextStore` with tech stack, package manifest paths, codebase root, 
 
 ## Scoring Algorithm
 
-**MANDATORY READ:** Load `shared/references/audit_scoring.md` for unified scoring formula.
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md` and `shared/references/audit_scoring.md`.
 
 **Note:** When mode=vulnerabilities_only, score based only on vulnerability findings.
 
 ## Output Format
 
-**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format.
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md` and `shared/templates/audit_worker_report_template.md`.
 
 Write report to `{output_dir}/625-dependencies.md` with `category: "Dependencies & Reuse"` and checks: outdated_packages, unused_deps, available_natives, custom_implementations, vulnerability_scan.
 
@@ -165,14 +165,14 @@ Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 
 | File | Purpose |
 |------|---------|
-| `shared/templates/audit_worker_report_template.md` | Worker report file format |
 | `references/vulnerability_commands.md` | Ecosystem-specific audit commands |
 | `references/ci_integration_guide.md` | CI/CD integration guidance |
 | `shared/references/cvss_severity_mapping.md` | CVSS to severity level mapping |
-| `shared/references/audit_scoring.md` | Audit scoring formula |
 | `shared/references/audit_output_schema.md` | Audit output schema |
 
 ## Critical Rules
+
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
 
 - **Do not auto-fix:** Report only, never modify package manifests or lock files
 - **Mode-aware execution:** In `vulnerabilities_only` mode, skip checks 1-4 entirely
@@ -181,6 +181,8 @@ Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 - **Exclusions:** Skip devDependencies for vulnerability severity escalation, skip vendored/bundled deps
 
 ## Definition of Done
+
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
 
 - contextStore parsed (including mode parameter and output_dir)
 - All applicable checks completed (5 for full, 1 for vulnerabilities_only)

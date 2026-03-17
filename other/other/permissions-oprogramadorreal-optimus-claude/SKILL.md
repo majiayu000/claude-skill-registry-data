@@ -90,7 +90,13 @@ Run through this checklist. Fix any issues before reporting.
 
 4. Scan for precious unversioned files in the project:
    ```bash
-   find . -maxdepth 4 \( -name ".env" -o -name ".env.*" -o -name "local.settings.json" -o -name "credentials.*" -o -name "secrets.*" -o -name "docker-compose.override.yml" -o -name "appsettings.*.json" -o -name "*.key" -o -name "*.pem" -o -name "*.pfx" -o -name "*.p12" -o -name "*.cert" -o -name "*.crt" -o -name "*.jks" -o -name "*.sqlite" -o -name "*.sqlite3" -o -name "*.db" -o -name "*.db-shm" -o -name "*.db-wal" -o -name "*.db-journal" -o -name "*.mdf" -o -name "*.ldf" -o -name "*.ndf" -o -name "*.bak" -o -name "*.dump" -o -name "*.sql.gz" -o -name "*.suo" -o -name "*.user" \) -not -path "./.git/*" -not -path "*/node_modules/*" -not -path "*/obj/*" -not -path "*/bin/*" 2>/dev/null
+   find . -maxdepth 4 \( -name ".env" -o -name ".env.*" -o -name "local.settings.json" -o -name "credentials.*" -o -name "secrets.*" -o -name "docker-compose.override.yml" -o -name "appsettings.*.json" -o -name "*keyfile*.json" -o -name "newrelic.config" -o -name "*.key" -o -name "*.pem" -o -name "*.pfx" -o -name "*.p12" -o -name "*.cert" -o -name "*.crt" -o -name "*.jks" -o -name "*.sqlite" -o -name "*.sqlite3" -o -name "*.db" -o -name "*.db-shm" -o -name "*.db-wal" -o -name "*.db-journal" -o -name "*.mdf" -o -name "*.ldf" -o -name "*.ndf" -o -name "*.bak" -o -name "*.dump" -o -name "*.sql.gz" -o -name "*.suo" -o -name "*.user" \) -not -path "./.git/*" -not -path "*/node_modules/*" -not -path "*/obj/*" -not -path "*/bin/*" 2>/dev/null
    ```
    - If any are found and not git-tracked, report them as protected files
    - If the scan discovers unversioned files that look sensitive but do not match built-in patterns (e.g., custom config files like `config.local.yaml`), ask the user if they want to add custom patterns to the `is_precious()` function in `.claude/hooks/restrict-paths.sh`. **Note:** custom edits to this file will be replaced if the user re-runs `/optimus:permissions`. For persistent customizations, edit the template in the plugin source instead.
+
+Recommend the next step based on project state:
+- If `.claude/CLAUDE.md` does not exist → `/optimus:init` to set up coding guidelines and project structure
+- If already initialized → `/optimus:unit-test` to establish test coverage, or `/optimus:tdd` to start developing with test-driven workflow
+
+Tell the user: **Tip:** for best results, start a fresh conversation for the next skill — each skill gathers its own context from scratch.

@@ -656,9 +656,3 @@ class StridePerInteraction:
 - **Don't work in isolation** - Collaborative modeling is better
 - **Don't ignore low-probability** - High-impact threats matter
 - **Don't stop at identification** - Follow through with mitigations
-
-## Resources
-
-- [Microsoft STRIDE Documentation](https://docs.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-threats)
-- [OWASP Threat Modeling](https://owasp.org/www-community/Threat_Modeling)
-- [Threat Modeling: Designing for Security](https://www.wiley.com/en-us/Threat+Modeling%3A+Designing+for+Security-p-9781118809990)

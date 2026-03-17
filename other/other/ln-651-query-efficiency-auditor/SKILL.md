@@ -1,6 +1,6 @@
 ---
 name: ln-651-query-efficiency-auditor
-description: "Checks redundant entity fetches, N-UPDATE/DELETE loops, unnecessary resolves, over-fetching, missing bulk operations, wrong caching scope. Returns findings with severity, location, effort, recommendations."
+description: "Checks redundant fetches, N-UPDATE/DELETE loops, unnecessary resolves, over-fetching, missing bulk operations, wrong caching scope. Returns findings with severity."
 allowed-tools: Read, Grep, Glob, Bash
 license: MIT
 ---
@@ -21,13 +21,15 @@ Specialized worker auditing database query patterns for redundancy, inefficiency
 
 ## Inputs (from Coordinator)
 
-**MANDATORY READ:** Load `shared/references/task_delegation_pattern.md#audit-coordinator--worker-contract` for contextStore structure.
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
 
 Receives `contextStore` with: `tech_stack`, `best_practices`, `db_config` (database type, ORM settings), `codebase_root`, `output_dir`.
 
 **Domain-aware:** Supports `domain_mode` + `current_domain`.
 
 ## Workflow
+
+**MANDATORY READ:** Load `shared/references/two_layer_detection.md` for detection methodology.
 
 1) **Parse context from contextStore**
    - Extract tech_stack, best_practices, db_config, output_dir
@@ -63,6 +65,7 @@ Receives `contextStore` with: `tech_stack`, `best_practices`, `db_config` (datab
 **Severity:**
 - **HIGH:** Redundant fetch in API request handler (adds latency per request)
 - **MEDIUM:** Redundant fetch in background job (less critical)
+- **Downgrade when:** Fetch in initialization/migration code (runs once) → LOW. Admin-only endpoint with low traffic → downgrade one level
 
 **Recommendation:** Pass entity object instead of ID, or remove second fetch when `expire_on_commit=False`
 
@@ -82,6 +85,7 @@ Receives `contextStore` with: `tech_stack`, `best_practices`, `db_config` (datab
 **Severity:**
 - **HIGH:** Loop over >10 items (N separate round-trips to DB)
 - **MEDIUM:** Loop over <=10 items
+- **Downgrade when:** Loop in bootstrap/migration code (runs once) → LOW. Admin-only endpoint → downgrade one level
 
 **Recommendation:** Replace with single `UPDATE ... WHERE id IN (...)` or `session.execute(update(Model).where(Model.id.in_(ids)))`
 
@@ -156,11 +160,11 @@ Receives `contextStore` with: `tech_stack`, `best_practices`, `db_config` (datab
 
 ## Scoring Algorithm
 
-**MANDATORY READ:** Load `shared/references/audit_scoring.md` for unified scoring formula.
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md` and `shared/references/audit_scoring.md`.
 
 ## Output Format
 
-**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format.
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md` and `shared/templates/audit_worker_report_template.md`.
 
 Write report to `{output_dir}/651-query-efficiency.md` with `category: "Query Efficiency"` and checks: redundant_fetch, n_update_delete_loop, unnecessary_resolve, over_fetching, missing_bulk_ops, wrong_caching_scope.
 
@@ -172,6 +176,8 @@ Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 
 ## Critical Rules
 
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
+
 - **Do not auto-fix:** Report only
 - **Trace call chains:** Rules 1 and 3 require reading both caller and callee
 - **ORM-aware:** Check `expire_on_commit`, `autoflush`, session scope before flagging redundant fetches
@@ -179,6 +185,8 @@ Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 - **Exclude tests:** Do not flag test fixtures or setup code
 
 ## Definition of Done
+
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
 
 - contextStore parsed successfully (including output_dir)
 - scan_path determined (domain path or codebase root)
@@ -191,8 +199,6 @@ Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 
 ## Reference Files
 
-- **Worker report template:** `shared/templates/audit_worker_report_template.md`
-- **Audit scoring formula:** `shared/references/audit_scoring.md`
 - **Audit output schema:** `shared/references/audit_output_schema.md`
 
 ---

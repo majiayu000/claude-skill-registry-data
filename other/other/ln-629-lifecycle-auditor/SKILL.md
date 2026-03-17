@@ -20,7 +20,7 @@ Specialized worker auditing application lifecycle and entry points.
 
 ## Inputs (from Coordinator)
 
-**MANDATORY READ:** Load `shared/references/task_delegation_pattern.md#audit-coordinator--worker-contract` for contextStore structure.
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
 
 Receives `contextStore` with tech stack, deployment type, codebase root, output_dir.
 
@@ -106,11 +106,11 @@ Receives `contextStore` with tech stack, deployment type, codebase root, output_
 
 ## Scoring Algorithm
 
-**MANDATORY READ:** Load `shared/references/audit_scoring.md` for unified scoring formula.
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md` and `shared/references/audit_scoring.md`.
 
 ## Output Format
 
-**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format.
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md` and `shared/templates/audit_worker_report_template.md`.
 
 Write report to `{output_dir}/629-lifecycle.md` with `category: "Lifecycle"` and checks: bootstrap_order, graceful_shutdown, resource_cleanup, signal_handling, probes.
 
@@ -122,11 +122,11 @@ Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 
 ## Reference Files
 
-- **Worker report template:** `shared/templates/audit_worker_report_template.md`
-- **Audit scoring formula:** `shared/references/audit_scoring.md`
 - **Audit output schema:** `shared/references/audit_output_schema.md`
 
 ## Critical Rules
+
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
 
 - **Do not auto-fix:** Report only, lifecycle changes risk downtime
 - **Deployment-aware:** Adapt probe checks to deployment type (Kubernetes = probes required, bare metal = optional)
@@ -135,6 +135,8 @@ Score: X.X/10 | Issues: N (C:N H:N M:N L:N)
 - **Initialization order matters:** Flag DB usage before DB init as HIGH regardless of context
 
 ## Definition of Done
+
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md`.
 
 - contextStore parsed (deployment type, output_dir)
 - All 5 checks completed (bootstrap order, graceful shutdown, resource cleanup, signal handling, probes)

@@ -1,6 +1,6 @@
 ---
 name: autonomous-skill
-description: 'Use when user wants to execute long-running tasks that require multiple sessions to complete. This skill manages task decomposition, progress tracking, and autonomous execution using Codex non-interactive mode with auto-continuation. Trigger phrases include autonomous, long-running task, multi-session, 自主执行, 长时任务, autonomous skill.'
+description: 'Use when work must continue across multiple Codex sessions with `.autonomous/` tracking, resumable execution, or autonomous handoff. Use for long-running, multi-session, or resume-later tasks.'
 ---
 
 # Autonomous Skill - Long-Running Task Execution
@@ -25,6 +25,8 @@ Use the `run-session.sh` script to manage autonomous tasks:
 ~/.codex/skills/autonomous-skill/scripts/run-session.sh --help
 ```
 
+The runner intentionally leaves `--model` unset so Codex uses the active `config.toml` or selected profile model by default.
+
 ## Directory Structure
 
 All task data is stored in `.autonomous/<task-name>/` under the project root:
@@ -36,7 +38,7 @@ project-root/
     │   ├── task_list.md        # Master task checklist
     │   ├── progress.md         # Session-by-session notes
     │   ├── session.id          # Last Codex session ID for resumption
-    │   └── session.log         # JSON Lines output from sessions
+    │   └── session.log         # Codex stdout/stderr transcript with JSON events
     ├── refactor-auth/
     │   ├── task_list.md
     │   ├── progress.md
@@ -62,7 +64,7 @@ Options:
   --max-sessions N         Limit to N sessions
   --list                   List all existing tasks
   --resume-last            Resume the most recent Codex session
-  --network                Enable network access (uses danger-full-access sandbox)
+  --network                Enable danger-full-access sandbox for tasks that need broader shell access
 ```
 
 ## Workflow Overview
@@ -185,23 +187,40 @@ For each task in `.autonomous/<task-name>/`:
 4. **One Task at a Time per Session**: Focus on completing tasks thoroughly
 5. **Auto-Continue**: Sessions auto-continue with 3s delay; Ctrl+C to pause
 6. **Session Resumption**: Use `--resume-last` to preserve Codex conversation context
-7. **Network Mode**: `--network` uses `--dangerously-bypass-approvals-and-sandbox`; only use in an isolated environment
-8. **Git Hygiene**: Consider adding `.autonomous/` to `.gitignore` to avoid committing logs
+7. **Configured Model**: The runner does not pass `--model`; it uses the active Codex config/profile model
+8. **Network Mode**: `--network` switches the sandbox override to `danger-full-access` while keeping approval policy non-interactive
+9. **Git Hygiene**: Consider adding `.autonomous/` to `.gitignore` to avoid committing logs
 
 ## Codex CLI Reference
 
-The script uses these Codex commands internally:
+The script uses these Codex commands internally. It intentionally uses config overrides instead of `--full-auto` so unattended runs do not inherit `on-request` approvals from the current CLI:
 
 ```bash
 # Non-interactive execution with file edits (fully autonomous)
-# --full-auto: autonomous execution with workspace-write sandbox
-codex exec --full-auto --json "prompt"
+# Uses the configured model from the active Codex config/profile
+codex exec \
+  -c 'approval_policy="never"' \
+  -c 'sandbox_mode="workspace-write"' \
+  --skip-git-repo-check \
+  --json \
+  "prompt"
 
 # Resume previous session
-codex exec --full-auto --json resume <SESSION_ID> "prompt"
+codex exec resume \
+  -c 'approval_policy="never"' \
+  -c 'sandbox_mode="workspace-write"' \
+  --skip-git-repo-check \
+  --json \
+  <SESSION_ID> \
+  "prompt"
 
-# Full access (file edits + network) - use with caution!
-codex exec --dangerously-bypass-approvals-and-sandbox --json "prompt"
+# Full access (file edits + shell network / unrestricted filesystem) - use with caution!
+codex exec \
+  -c 'approval_policy="never"' \
+  -c 'sandbox_mode="danger-full-access"' \
+  --skip-git-repo-check \
+  --json \
+  "prompt"
 ```
 
 ## Troubleshooting
@@ -213,4 +232,5 @@ codex exec --dangerously-bypass-approvals-and-sandbox --json "prompt"
 | Session stuck | Check `session.log` in task directory |
 | Need to restart | Delete task directory and start fresh |
 | Resume failed | Remove `session.id` to start fresh session |
+| Run paused for approval | Ensure the updated runner is using `-c approval_policy="never"` overrides |
 | Codex not found | Install Codex CLI: `npm install -g @openai/codex` |

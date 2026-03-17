@@ -1,6 +1,6 @@
 ---
 name: ln-114-frontend-docs-creator
-description: Creates design_guidelines.md for frontend projects. L3 Worker invoked CONDITIONALLY when hasFrontend detected.
+description: Creates design_guidelines.md for frontend projects. Invoked when hasFrontend detected.
 license: MIT
 ---
 

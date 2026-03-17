@@ -340,11 +340,6 @@ kubectl auth can-i list pods --as system:serviceaccount:default:my-sa
 kubectl auth can-i '*' '*' --as system:serviceaccount:default:my-sa
 ```
 
-## Reference Files
-
-- `assets/network-policy-template.yaml` - Network policy examples
-- `assets/pod-security-template.yaml` - Pod security policies
-- `references/rbac-patterns.md` - RBAC configuration patterns
 
 ## Related Skills
 

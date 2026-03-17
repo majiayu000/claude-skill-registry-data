@@ -76,10 +76,10 @@ Auto-detect and run setup in the worktree directory:
 | `pnpm-lock.yaml` | `pnpm install` |
 | `requirements.txt` | `pip install -r requirements.txt` |
 | `pyproject.toml` | `pip install -e .` or `poetry install` |
-| `Cargo.toml` | `cargo build` |
+| `Cargo.toml` | `cargo fetch` |
 | `go.mod` | `go mod download` |
-| `build.gradle` | `./gradlew build` |
-| `pom.xml` | `mvn install -DskipTests` |
+| `build.gradle` | `./gradlew dependencies` |
+| `pom.xml` | `mvn dependency:resolve` |
 
 If multiple markers exist, run the most specific one. If none match, skip setup.
 
@@ -113,6 +113,26 @@ Next steps (ad-hoc development):
   /code-forge:tdd                    Enforce TDD discipline
   /code-forge:finish                  When done, merge/PR/cleanup
 ```
+
+## Example
+
+```
+$ /code-forge:worktree user-auth
+
+Worktree created:
+  Branch:    feat/user-auth
+  Location:  .worktrees/user-auth
+  Setup:     npm ci (completed)
+  Baseline:  42/42 tests passing
+
+Next steps:
+  /code-forge:impl user-auth    Execute implementation tasks
+  /code-forge:finish             When done, merge/PR/cleanup
+```
+
+## Cleanup
+
+To remove a stale worktree manually: `git worktree remove <path>`. List all worktrees with `git worktree list`. The `/code-forge:finish` skill handles cleanup automatically.
 
 ## Common Mistakes
 

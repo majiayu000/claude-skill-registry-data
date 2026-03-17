@@ -1,6 +1,6 @@
 ---
 name: ln-650-persistence-performance-auditor
-description: "Coordinates 4 specialized audit workers (query efficiency, transaction correctness, runtime performance, resource lifecycle). Researches DB/ORM/async best practices, delegates parallel audits, aggregates results into docs/project/persistence_audit.md."
+description: "Coordinates 4 audit workers (query efficiency, transaction, runtime performance, resource lifecycle). Delegates parallel audits, aggregates into persistence_audit.md."
 allowed-tools: Read, Grep, Glob, Bash, WebFetch, WebSearch, mcp__Ref, mcp__context7, Skill
 license: MIT
 ---
@@ -23,6 +23,8 @@ Coordinates 4 specialized audit workers to perform database efficiency, transact
 
 ## Workflow
 
+**MANDATORY READ:** Load `shared/references/two_layer_detection.md` for detection methodology.
+
 1) **Discovery:** Load tech_stack.md, package manifests, detect DB/ORM/async framework, auto-discover Team ID
 2) **Research:** Query MCP tools for DB/ORM/async best practices ONCE
 3) **Build Context:** Create contextStore with best practices + DB-specific metadata
@@ -30,6 +32,8 @@ Coordinates 4 specialized audit workers to perform database efficiency, transact
 5) **Delegate:** 4 workers in PARALLEL
 6) **Aggregate:** Collect worker results, calculate scores
 7) **Write Report:** Save to `docs/project/persistence_audit.md`
+8) **Results Log:** Append trend row
+9) **Cleanup:** Delete worker files
 
 ## Phase 1: Discovery
 
@@ -49,11 +53,15 @@ Coordinates 4 specialized audit workers to perform database efficiency, transact
 | Triggers/NOTIFY | migration files | `pg_notify('job_events', ...)` |
 | Connection pooling | engine config | `pool_size=10, max_overflow=20` |
 
-**Scan for triggers:**
+**Scan for triggers and event channels:**
 ```
 Grep("pg_notify|NOTIFY|CREATE TRIGGER", path="alembic/versions/")
   OR path="migrations/"
-→ Store: db_config.triggers = [{table, event, function}]
+→ Store: db_config.triggers = [{table, event, function, channel_name}]
+
+Grep("LISTEN\s+\w+|\.subscribe\(|\.on\(.*channel|redis.*subscribe", path="src/")
+  OR path="app/"
+→ Store: db_config.event_subscribers = [{channel_name, file, line, technology}]
 ```
 
 ## Phase 2: Research Best Practices (ONCE)
@@ -74,7 +82,8 @@ Grep("pg_notify|NOTIFY|CREATE TRIGGER", path="alembic/versions/")
   "best_practices": {"sqlalchemy": {...}, "postgresql": {...}, "asyncio": {...}},
   "db_config": {
     "expire_on_commit": false,
-    "triggers": [{"table": "jobs", "event": "UPDATE", "function": "notify_job_events"}],
+    "triggers": [{"table": "jobs", "event": "UPDATE", "function": "notify_job_events", "channel_name": "job_events"}],
+    "event_subscribers": [{"channel_name": "job_events", "file": "src/listeners/job_listener.py", "line": 12, "technology": "postgresql"}],
     "pool_size": 10
   },
   "codebase_root": "/project",
@@ -85,23 +94,12 @@ Grep("pg_notify|NOTIFY|CREATE TRIGGER", path="alembic/versions/")
 ## Phase 3: Prepare Output Directory
 
 ```bash
-mkdir -p {output_dir}   # No deletion — date folders preserve history
+mkdir -p {output_dir}   # Worker files cleaned up after consolidation (Phase 8)
 ```
 
 ## Phase 4: Delegate to Workers
 
-> **CRITICAL:** All delegations use Task tool with `subagent_type: "general-purpose"` for context isolation.
-
-**Prompt template:**
-```
-Task(description: "Audit via ln-65X",
-     prompt: "Execute ln-65X-{worker}-auditor. Read skill from ln-65X-{worker}-auditor/SKILL.md. Context: {contextStore}",
-     subagent_type: "general-purpose")
-```
-
-**Anti-Patterns:**
-- ❌ Direct Skill tool invocation without Task wrapper
-- ❌ Any execution bypassing subagent context isolation
+**MANDATORY READ:** Load `shared/references/task_delegation_pattern.md` and `shared/references/audit_worker_core_contract.md`.
 
 **Workers (ALL 4 in PARALLEL):**
 
@@ -115,36 +113,39 @@ Task(description: "Audit via ln-65X",
 **Invocation (4 workers in PARALLEL):**
 ```javascript
 FOR EACH worker IN [ln-651, ln-652, ln-653, ln-654]:
-  Task(description: "Audit via " + worker,
-       prompt: "Execute " + worker + ". Read skill. Context: " + JSON.stringify(contextStore),
+  Agent(description: "Audit via " + worker,
+       prompt: "Execute audit worker.
+
+Step 1: Invoke worker:
+  Skill(skill: \"" + worker + "\")
+
+CONTEXT:
+" + JSON.stringify(contextStore),
        subagent_type: "general-purpose")
 ```
 
 **Worker Output Contract (File-Based):**
 
-Workers write full report to `{output_dir}/{worker_id}.md` per `shared/templates/audit_worker_report_template.md`.
+Workers follow the shared file-based audit contract, write reports to `{output_dir}/`, and return compact score/severity summaries for aggregation.
 
-Workers return **minimal summary** in-context (~50 tokens):
-```
+Expected summary format:
+```text
 Report written: docs/project/.audit/ln-650/{YYYY-MM-DD}/651-query-efficiency.md
 Score: 6.0/10 | Issues: 8 (C:0 H:3 M:4 L:1)
 ```
 
 ## Phase 5: Aggregate Results (File-Based)
 
-Workers wrote reports to `{output_dir}/` and returned minimal summaries. Aggregation uses **return values for numbers** and **file reads for findings tables**.
+**MANDATORY READ:** Load `shared/references/audit_coordinator_aggregation.md` and `shared/references/context_validation.md`.
 
-**Aggregation steps:**
-1. Parse scores/counts from worker return strings (already in context)
-2. Read worker report files from `{output_dir}/` for findings tables
-3. Calculate overall score: average of 4 category scores
-4. Sum severity counts across all workers
-5. Sort findings by severity (CRITICAL → HIGH → MEDIUM → LOW)
-6. Context Validation (Post-Filter)
+Use the shared aggregation pattern for parsing worker summaries, rolling up severity totals, reading worker files, and assembling the final report.
+
+Local rules for this coordinator:
+- Overall score = average of 4 category scores.
+- Keep findings grouped by the 4 worker categories in the final report.
+- Append one results-log row with `Skill=ln-650`, `Metric=overall_score`, `Scale=0-10`.
 
 **Context Validation:**
-
-**MANDATORY READ:** Load `shared/references/context_validation.md`
 
 Apply Rules 1, 6 to merged findings:
 ```
@@ -238,6 +239,12 @@ Recalculate overall score excluding advisory findings from penalty.
 
 Write consolidated report to `docs/project/persistence_audit.md` with the Output Format above.
 
+## Phase 7: Append Results Log
+
+**MANDATORY READ:** Load `shared/references/results_log_pattern.md`
+
+Append one row to `docs/project/.audit/results_log.md` with: Skill=`ln-650`, Metric=`overall_score`, Scale=`0-10`, Score from Phase 6 report. Calculate Delta vs previous `ln-650` row. Create file with header if missing. Rolling window: max 50 entries.
+
 ## Critical Rules
 
 - **Single context gathering:** Research best practices ONCE, pass contextStore to all workers
@@ -246,19 +253,28 @@ Write consolidated report to `docs/project/persistence_audit.md` with the Output
 - **Metadata-only loading:** Coordinator loads metadata; workers load full file contents
 - **Do not audit:** Coordinator orchestrates only; audit logic lives in workers
 
+## Phase 8: Cleanup Worker Files
+
+```bash
+rm -rf {output_dir}
+```
+
+Delete the dated output directory (`docs/project/.audit/ln-650/{YYYY-MM-DD}/`). The consolidated report and results log already preserve all audit data.
+
 ## Definition of Done
 
-- Tech stack discovered (DB type, ORM, async framework)
-- DB-specific metadata extracted (triggers, session config, pool settings)
-- Best practices researched via MCP tools
-- contextStore built with output_dir = `docs/project/.audit/ln-650/{YYYY-MM-DD}`
-- Output directory created (no deletion of previous runs)
-- All 4 workers invoked in PARALLEL and completed; each wrote report to `{output_dir}/`
-- Results aggregated from return values (scores) + file reads (findings tables)
-- Compliance score calculated per category + overall
-- Executive Summary included
-- Report written to `docs/project/persistence_audit.md`
-- Sources consulted listed with URLs
+- [ ] Tech stack discovered (DB type, ORM, async framework)
+- [ ] DB-specific metadata extracted (triggers, session config, pool settings)
+- [ ] Best practices researched via MCP tools
+- [ ] contextStore built with output_dir = `docs/project/.audit/ln-650/{YYYY-MM-DD}`
+- [ ] Output directory created for worker reports
+- [ ] All 4 workers invoked in PARALLEL and completed; each wrote report to `{output_dir}/`
+- [ ] Results aggregated from return values (scores) + file reads (findings tables)
+- [ ] Compliance score calculated per category + overall
+- [ ] Executive Summary included
+- [ ] Report written to `docs/project/persistence_audit.md`
+- [ ] Sources consulted listed with URLs
+- [ ] Worker output directory cleaned up after consolidation
 
 ## Workers
 
@@ -267,12 +283,20 @@ Write consolidated report to `docs/project/persistence_audit.md` with the Output
 - [ln-653-runtime-performance-auditor](../ln-653-runtime-performance-auditor/SKILL.md)
 - [ln-654-resource-lifecycle-auditor](../ln-654-resource-lifecycle-auditor/SKILL.md)
 
+## Phase 9: Meta-Analysis
+
+**MANDATORY READ:** Load `shared/references/meta_analysis_protocol.md`
+
+Skill type: `review-coordinator` (workers only). Run after all phases complete. Output to chat using the `review-coordinator — workers only` format.
+
 ## Reference Files
 
 - Tech stack: `docs/project/tech_stack.md`
 - Kanban board: `docs/tasks/kanban_board.md`
+- **Task delegation pattern:** `shared/references/task_delegation_pattern.md`
+- **Aggregation pattern:** `shared/references/audit_coordinator_aggregation.md`
 - **MANDATORY READ:** `shared/references/research_tool_fallback.md`
 
 ---
-**Version:** 1.0.0
-**Last Updated:** 2026-02-04
+**Version:** 1.1.0
+**Last Updated:** 2026-03-15

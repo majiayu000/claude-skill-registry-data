@@ -540,31 +540,3 @@ async def evaluate_rag_system(
 
     return {k: sum(v) / len(v) for k, v in metrics.items()}
 ```
-
-## Resources
-
-- [LangChain RAG Tutorial](https://python.langchain.com/docs/tutorials/rag/)
-- [LangGraph RAG Examples](https://langchain-ai.github.io/langgraph/tutorials/rag/)
-- [Pinecone Best Practices](https://docs.pinecone.io/guides/get-started/overview)
-- [Voyage AI Embeddings](https://docs.voyageai.com/)
-- [RAG Evaluation Guide](https://docs.ragas.io/)
-
-## Best Practices
-
-1. **Chunk Size**: Balance between context (larger) and specificity (smaller) - typically 500-1000 tokens
-2. **Overlap**: Use 10-20% overlap to preserve context at boundaries
-3. **Metadata**: Include source, page, timestamp for filtering and debugging
-4. **Hybrid Search**: Combine semantic and keyword search for best recall
-5. **Reranking**: Use cross-encoder reranking for precision-critical applications
-6. **Citations**: Always return source documents for transparency
-7. **Evaluation**: Continuously test retrieval quality and answer accuracy
-8. **Monitoring**: Track retrieval metrics and latency in production
-
-## Common Issues
-
-- **Poor Retrieval**: Check embedding quality, chunk size, query formulation
-- **Irrelevant Results**: Add metadata filtering, use hybrid search, rerank
-- **Missing Information**: Ensure documents are properly indexed, check chunking
-- **Slow Queries**: Optimize vector store, use caching, reduce k
-- **Hallucinations**: Improve grounding prompt, add verification step
-- **Context Too Long**: Use compression or parent document retriever

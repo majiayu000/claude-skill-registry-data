@@ -622,10 +622,3 @@ coverage: test
 8. **Test across shell dialects** - Ensure portability
 9. **Keep tests fast** - Run in parallel when possible
 10. **Document complex test setup** - Explain unusual patterns
-
-## Resources
-
-- **Bats GitHub**: https://github.com/bats-core/bats-core
-- **Bats Documentation**: https://bats-core.readthedocs.io/
-- **TAP Protocol**: https://testanything.org/
-- **Test-Driven Development**: https://en.wikipedia.org/wiki/Test-driven_development

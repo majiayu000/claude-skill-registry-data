@@ -1,6 +1,8 @@
 ---
 name: director-readiness-advisor
-description: "Coaches PMs and new Directors through the transition from individual contributor to organizational leader across four situations: preparing, interviewing, newly landed, or recalibrating."
+description: Guide the PM-to-Director transition across preparing, interviewing, landing, and recalibrating. Use when leadership scope is changing and you need practical coaching.
+intent: >-
+  Guide PMs and Directors through the specific challenges of the PM-to-Director transition using adaptive questions and targeted coaching. Diagnoses where you are in the journey and delivers practical, war-story-backed guidance calibrated to your situation — not generic leadership advice.
 type: interactive
 theme: career-leadership
 best_for:

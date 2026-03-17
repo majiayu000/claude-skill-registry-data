@@ -26,7 +26,7 @@ Commits and pushes ALL current changes (staged, unstaged, untracked) to the remo
 ## Workflow
 
 ```
-Analyze → Doc Check → Lint Check → Stage → Commit → Push → Report
+Analyze → Doc Check → CHANGELOG → Lint Check → Stage → Commit → Push → Report
 ```
 
 ### Phase 1: Analyze Changes
@@ -45,14 +45,34 @@ Check if related documentation needs updating:
 | Config files changed | Check README or setup docs |
 | No doc impact | Skip |
 
-**Skip:** Version bumps (CHANGELOG, version fields) — those are done only on explicit user request.
+**Skip:** Version bumps (version fields in SKILL.md, README badge) — those are done only on explicit user request.
 
-### Phase 3: Lint Check
+### Phase 3: CHANGELOG Update
+
+If `CHANGELOG.md` exists and changes are significant (not just lint/formatting fixes):
+
+1. Check if today's date already has an entry (`## YYYY-MM-DD`)
+2. If yes — append new bullets to existing entry
+3. If no — add new `## YYYY-MM-DD` entry (newest first)
+4. Write **max 5 bullets**, each starting with `- **Bold label** — description`
+5. Only user-visible or architecturally significant changes. Skip: renumbering, internal refactoring, structural fixes, deduplication
+
+| Include | Skip |
+|---------|------|
+| New capabilities / skills | Renumbering, renaming |
+| Workflow changes | Internal refactoring (D1-D9 fixes) |
+| Breaking changes | Deduplication passes |
+| New integrations | Reference file moves |
+| Performance improvements users notice | Token efficiency numbers |
+
+**Skip if:** no `CHANGELOG.md` in project, or changes are trivial (whitespace, lint auto-fixes only).
+
+### Phase 4: Lint Check
 **MANDATORY READ:** `shared/references/ci_tool_detection.md` (Discovery Hierarchy + Command Registry)
 
 Discover and run project linters before committing, per ci_tool_detection.md.
 
-**Step 1: Discover linter setup** per ci_tool_detection.md discovery hierarchy. Also check: `CLAUDE.md`, `README.md`, `CONTRIBUTING.md` for lint instructions.
+**Step 1: Discover linter setup** — first check `docs/project/runbook.md` for explicit lint/format commands (they take priority over auto-detection), then follow ci_tool_detection.md discovery hierarchy. Also check: `CLAUDE.md`, `README.md`, `CONTRIBUTING.md` for lint instructions.
 
 **Step 2: Run linters with auto-fix**
 
@@ -63,7 +83,7 @@ Discover and run project linters before committing, per ci_tool_detection.md.
 1. Re-run linters without `--fix` to confirm zero errors
 2. If errors remain after 2 fix attempts — report remaining errors to user and proceed
 
-### Phase 4: Stage and Commit
+### Phase 5: Stage and Commit
 
 1. Run `git add -A` to stage everything
 2. Run `git diff --cached --stat` to show what will be committed
@@ -71,7 +91,7 @@ Discover and run project linters before committing, per ci_tool_detection.md.
 4. Compose a concise commit message summarizing ALL changes
 5. Commit with `Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>`
 
-### Phase 5: Push and Report
+### Phase 6: Push and Report
 
 1. Push to the current branch's remote tracking branch
 2. Report: **branch name**, **commit hash**, **files changed count**

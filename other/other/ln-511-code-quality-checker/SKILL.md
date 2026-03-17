@@ -1,6 +1,6 @@
 ---
 name: ln-511-code-quality-checker
-description: "Worker that checks DRY/KISS/YAGNI/architecture compliance with quantitative Code Quality Score. Validates architectural decisions via MCP Ref: (1) Optimality (2) Compliance (3) Performance. Reports issues with SEC-, PERF-, MNT-, ARCH-, BP-, OPT- prefixes."
+description: "Checks DRY/KISS/YAGNI/architecture compliance with quantitative Code Quality Score. Validates decisions via MCP Ref. Reports with SEC-/PERF-/MNT-/ARCH-/BP-/OPT- prefixes."
 license: MIT
 ---
 
@@ -16,7 +16,7 @@ Analyzes Done implementation tasks with quantitative Code Quality Score based on
 |-------|----------|--------|-------------|
 | `storyId` | Yes | args, git branch, kanban, user | Story to process |
 
-**Resolution:** Per `shared/references/input_resolution_pattern.md` — Story Resolution Chain.
+**Resolution:** Story Resolution Chain.
 **Status filter:** In Progress, To Review
 
 ## Purpose & Scope
@@ -61,6 +61,7 @@ Formula: `Code Quality Score = 100 - metric_penalties - issue_penalties`
 | Prefix | Category | Default Severity | MCP Ref |
 |--------|----------|------------------|---------|
 | SEC- | Security (auth, validation, secrets) | high | — |
+| SEC-DESTR- | Destructive ops (guards: DB, FS, MIG, ENV, FORCE) | high/medium | — |
 | PERF- | Performance (algorithms, configs, bottlenecks) | medium/high | ✓ Required |
 | MNT- | Maintainability (DRY, SOLID, complexity, dead code) | medium | — |
 | ARCH- | Architecture (layers, boundaries, patterns, contracts) | medium | — |
@@ -71,7 +72,7 @@ Formula: `Code Quality Score = 100 - metric_penalties - issue_penalties`
 
 | Prefix | Category | Severity |
 |--------|----------|----------|
-| OPT-OSS- | Open-source replacement available (cross-ref ln-645 audit) | medium (high if >200 LOC) |
+| OPT-OSS- | Open-source replacement available | medium (high if >200 LOC) |
 
 **ARCH- subcategories:**
 
@@ -80,12 +81,13 @@ Formula: `Code Quality Score = 100 - metric_penalties - issue_penalties`
 | ARCH-LB- | Layer Boundary: I/O outside infra, HTTP in domain | high |
 | ARCH-TX- | Transaction Boundaries: commit() in 3+ layers, mixed UoW ownership | high (CRITICAL if auth/payment) |
 | ARCH-DTO- | Missing DTO (4+ params without DTO), Entity Leakage (ORM entity in API response) | medium (high if auth/payment) |
-| ARCH-DI- | Dependency Injection: direct instantiation in business logic, mixed DI+imports | medium |
-| ARCH-CEH- | Centralized Error Handling: no global handler, stack traces in prod, uncaughtException | medium (high if no handler at all) |
+| ARCH-DI- | Dependency Injection: dependencies not replaceable for testing (direct instantiation, no injection mechanism). Exception: small scripts/CLIs where params/closures suffice → skip | medium |
+| ARCH-CEH- | Centralized Error Handling: errors silently swallowed, stack traces leak to prod, no consistent error logging. Exception: 50-line scripts → downgrade to LOW | medium (high if no handler at all) |
 | ARCH-SES- | Session Ownership: DI session + local session in same module | medium |
-| ARCH-AI-SEB | Side-Effect Breadth: 3+ side-effect categories in one function | medium |
+| ARCH-AI-SEB | Side-Effect Breadth: 3+ side-effect categories in one **leaf** function. **Conflict Resolution:** orchestrator/coordinator functions (imports 3+ services AND delegates sequentially) are EXPECTED to have multiple categories — do NOT flag SEB | medium |
 | ARCH-AI-AH | Architectural Honesty: read-named function with write side-effects | medium |
-| ARCH-AI-FO | Flat Orchestration: service imports 3+ other services | medium |
+| ARCH-AI-FO | Flat Orchestration: **leaf** service imports 3+ other services. Orchestrator imports are expected — do NOT flag | medium |
+| ARCH-EVENT- | Event Channel Consistency: publisher/subscriber name mismatch (MISMATCH), orphaned channel with no counterpart (ORPHAN) | high (mismatch), medium (orphan) |
 
 **PERF- subcategories:**
 
@@ -107,29 +109,32 @@ Formula: `Code Quality Score = 100 - metric_penalties - issue_penalties`
 | MNT-ERR- | Error Contract inconsistency: mixed raise + return None in same service | medium |
 
 ## When to Use
-- **Invoked by ln-510-quality-coordinator** Phase 2
 - All implementation tasks in Story status = Done
-- Before ln-512 tech debt cleanup and ln-513 agent review
+- Before tech debt cleanup and inline agent review
 
 ## Workflow (concise)
 
 **MANDATORY READ:** Load `shared/references/input_resolution_pattern.md`
 
-1) **Resolve storyId** (per input_resolution_pattern.md):
-   - IF args provided → use args
-   - ELSE IF git branch matches `feature/{id}-*` → extract id
-   - ELSE IF kanban has exactly 1 Story in [In Progress, To Review] → suggest
-   - ELSE → AskUserQuestion: show Stories from kanban filtered by [In Progress, To Review]
+1) **Resolve storyId:** Run Story Resolution Chain per guide (status filter: [In Progress, To Review]).
 2) Load Story (full) and Done implementation tasks (full descriptions) via Linear; skip tasks with label "tests".
-3) Collect affected files from tasks (Affected Components/Existing Code Impact) and recent commits/diffs if noted.
-4) **Calculate code metrics:**
-   - Cyclomatic Complexity per function (target ≤10)
-   - Function size (target ≤50 lines)
-   - File size (target ≤500 lines)
-   - Nesting depth (target ≤3)
-   - Parameter count (target ≤4)
+3) **Collect changed files** (`changed_files[]`):
+   **MANDATORY READ:** `shared/references/git_scope_detection.md`
+   - IF invoked by ln-510: use `changed_files[]` from coordinator context → proceed to Enrich step in guide
+   - IF invoked standalone: run full algorithm from guide
+4) **Two-Layer Detection (MANDATORY):**
+   **MANDATORY READ:** `shared/references/two_layer_detection.md`
+   All threshold-based findings require Layer 2 context analysis. Layer 1 finding without Layer 2 = NOT a valid finding. Before reporting any metric violation, ask: "Is this violation intentional or justified by design?" See Exception column in metrics below.
 
-5) **MCP Ref Validation (MANDATORY for code changes — SKIP if `--skip-mcp-ref` flag passed):**
+5) **Calculate code metrics:**
+   - Cyclomatic Complexity per function (target ≤10; Exception: enum/switch dispatch, state machines, parser grammars → downgrade to LOW)
+   - Function size (target ≤50 lines; Exception: orchestrator functions with sequential delegation)
+   - File size (target ≤500 lines; Exception: config/schema/migration files, generated code)
+   - Nesting depth (target ≤3)
+   - Parameter count (target ≤4; Exception: builder/options patterns)
+
+6) **MCP Ref Validation (MANDATORY for code changes — SKIP if `--skip-mcp-ref` flag passed):**
+   **MANDATORY READ:** Load `shared/references/research_tool_fallback.md`
 
    > **Fast-track mode:** When invoked with `--skip-mcp-ref`, skip this entire step (no OPT-, BP-, PERF- checks). Proceed directly to step 6 (static analysis). This reduces cost from ~5000 to ~800 tokens while preserving metrics + static analysis coverage.
 
@@ -157,9 +162,10 @@ Formula: `Code Quality Score = 100 - metric_penalties - issue_penalties`
    - Loops/recursion in critical paths
    - ORM queries added
 
-6) **Analyze code for static issues (assign prefixes):**
-   **MANDATORY READ:** `shared/references/clean_code_checklist.md`
+7) **Analyze code for static issues (assign prefixes):**
+   **MANDATORY READ:** `shared/references/clean_code_checklist.md`, `shared/references/destructive_operation_safety.md`
    - SEC-: hardcoded creds, unvalidated input, SQL injection, race conditions
+   - SEC-DESTR-: unguarded destructive operations — use code-level guards table from destructive_operation_safety.md (loaded above). Check all 5 guard categories (DB, FS, MIG, ENV, FORCE).
    - MNT-: DRY violations (MNT-DRY-: duplicate logic), dead code (MNT-DC-: per checklist), complex conditionals, poor naming
    - **MNT-DRY- cross-story hotspot scan:** Grep for common pattern signatures (error handlers: `catch.*Error|handleError`, validators: `validate|isValid`, config access: `getSettings|getConfig`) across ALL `src/` files (count mode). If any pattern appears in 5+ files, sample 3 files (Read 50 lines each) and check structural similarity. If >80% similar → MNT-DRY-CROSS (medium, -10 points): `Pattern X duplicated in N files — extract to shared module.`
    - **MNT-DC- cross-story unused export scan:** For each file modified by Story, count `export` declarations. Then Grep across ALL `src/` for import references to those exports. Exports with 0 import references → MNT-DC-CROSS (medium, -10 points): `{export} in {file} exported but never imported — remove or mark internal.`
@@ -171,19 +177,22 @@ Formula: `Code Quality Score = 100 - metric_penalties - issue_penalties`
    - ARCH-DI-: direct instantiation in business logic (no DI container or mixed patterns)
    - ARCH-CEH-: centralized error handling absent or bypassed
    - ARCH-SES-: session ownership conflicts (DI + local session in same module)
-   - ARCH-AI-SEB: side-effect breadth (3+ categories in one function)
+   - ARCH-AI-SEB: side-effect breadth (3+ categories in one **leaf** function; orchestrator functions exempt — see Conflict Resolution in table above)
    - ARCH-AI-AH: architectural honesty (read-named function with hidden writes)
-   - ARCH-AI-FO: flat orchestration (service importing 3+ services)
+   - ARCH-AI-FO: flat orchestration (**leaf** service importing 3+ services; orchestrator imports exempt)
+   - ARCH-EVENT-: event channel mismatch — Grep for `NOTIFY|pg_notify|\.publish\(|\.emit\(` (publishers) and `LISTEN|\.subscribe\(|\.on\(` (subscribers) in changed_files[]. Cross-reference channel name strings. <!-- Defense-in-depth: also checked by ln-652 Rule 6 -->
    - MNT-GOD-: god classes (>15 methods or >500 lines per class)
    - MNT-SIG-: method signature quality (boolean flags, unclear returns)
    - MNT-ERR-: error contract inconsistency (mixed raise/return patterns in same service)
 
-7) **Calculate Code Quality Score:**
+8) **Calculate Code Quality Score:**
    - Start with 100
    - Subtract metric penalties (see Code Metrics table)
    - Subtract issue penalties (see Issue penalties table)
 
-8) Output verdict with score and structured issues. Add Linear comment with findings.
+9) **Output verdict with score and structured issues.**
+   **MANDATORY READ:** Load `references/output_schema.md`
+   Format output per schema. Add Linear comment with findings.
 
 ## Critical Rules
 - Read guides mentioned in Story/Tasks before judging compliance.
@@ -193,129 +202,24 @@ Formula: `Code Quality Score = 100 - metric_penalties - issue_penalties`
 - Do not create tasks or change statuses; caller decides next actions.
 
 ## Definition of Done
-- Story and Done implementation tasks loaded (test tasks excluded).
-- Code metrics calculated (Cyclomatic Complexity, function/file sizes).
-- **MCP Ref validation completed:**
-  - OPT-: Optimality checked (is chosen approach the best for the goal?)
-  - BP-: Best practices verified (correct implementation of chosen approach?)
-  - PERF-: Performance analyzed (algorithms, configs, patterns, DB)
-- ARCH- subcategories checked (LB, TX, DTO, DI, CEH, SES); MNT- subcategories checked (DC, DRY, GOD, SIG, ERR).
-- Issues identified with prefixes and severity, sources from MCP Ref/Context7.
-- Code Quality Score calculated.
-- **Output format:**
-  ```yaml
-  verdict: PASS | CONCERNS | ISSUES_FOUND
-  code_quality_score: {0-100}
-  metrics:
-    avg_cyclomatic_complexity: {value}
-    functions_over_50_lines: {count}
-    files_over_500_lines: {count}
-  issues:
-    # OPTIMALITY
-    - id: "OPT-001"
-      severity: medium
-      file: "src/auth/index.ts"
-      goal: "User session management"
-      finding: "Suboptimal approach for session management"
-      chosen: "Custom JWT with localStorage"
-      recommended: "httpOnly cookies + refresh token rotation"
-      reason: "httpOnly cookies prevent XSS token theft"
-      source: "ref://owasp-session-management"
 
-    # OPTIMALITY - OSS Replacement (from ln-645, fast-track safe)
-    - id: "OPT-OSS-001"
-      severity: high
-      file: "src/utils/email-validator.ts"
-      goal: "Email validation with MX checking"
-      finding: "Custom 245-line module has HIGH-confidence OSS replacement"
-      chosen: "Custom email-validator.ts (245 lines)"
-      recommended: "zod + zod-email (28k stars, MIT, 95% coverage)"
-      reason: "Battle-tested, actively maintained, reduces maintenance burden"
-      source: "ln-645-audit"
-
-    # BEST PRACTICES
-    - id: "BP-001"
-      severity: medium
-      file: "src/api/routes.ts"
-      finding: "POST for idempotent operation"
-      best_practice: "Use PUT for idempotent updates (RFC 7231)"
-      source: "ref://api-design-guide#idempotency"
-
-    # PERFORMANCE - Algorithm
-    - id: "PERF-ALG-001"
-      severity: high
-      file: "src/utils/search.ts:42"
-      finding: "Nested loops cause O(n²) complexity"
-      current: "O(n²) - nested filter().find()"
-      optimal: "O(n) - use Map/Set for lookup"
-      source: "ref://javascript-performance#data-structures"
-
-    # PERFORMANCE - Config
-    - id: "PERF-CFG-001"
-      severity: medium
-      file: "src/db/connection.ts"
-      finding: "Missing connection pool config"
-      current_config: "default (pool: undefined)"
-      recommended: "pool: { min: 2, max: 10 }"
-      source: "context7://pg#connection-pooling"
-
-    # PERFORMANCE - Database
-    - id: "PERF-DB-001"
-      severity: high
-      file: "src/repositories/user.ts:89"
-      finding: "N+1 query pattern detected"
-      issue: "users.map(u => u.posts) triggers N queries"
-      solution: "Use eager loading: include: { posts: true }"
-      source: "context7://prisma#eager-loading"
-
-    # ARCHITECTURE - Entity Leakage
-    - id: "ARCH-DTO-001"
-      severity: high
-      file: "src/api/users.ts:35"
-      finding: "ORM entity returned directly from API endpoint"
-      issue: "User entity with password hash exposed in GET /users response"
-      fix: "Create UserResponseDTO, map entity → DTO before return"
-
-    # ARCHITECTURE - Centralized Error Handling
-    - id: "ARCH-CEH-001"
-      severity: medium
-      file: "src/app.ts"
-      finding: "No global error handler registered"
-      issue: "Unhandled exceptions return stack traces to client in production"
-      fix: "Add app.use(globalErrorHandler) with sanitized error responses"
-
-    # MAINTAINABILITY - God Class
-    - id: "MNT-GOD-001"
-      severity: medium
-      file: "src/services/order-service.ts"
-      finding: "God class with 22 methods and 680 lines"
-      issue: "OrderService handles creation, payment, shipping, notifications"
-      fix: "Extract PaymentService, ShippingService, NotificationService"
-
-    # MAINTAINABILITY - Dead Code
-    - id: "MNT-DC-001"
-      severity: medium
-      file: "src/auth/legacy-adapter.ts"
-      finding: "Backward-compatibility wrapper kept after migration"
-      dead_code: "legacyLogin() wraps newLogin() — callers already migrated"
-      action: "Delete legacy-adapter.ts, remove re-export from index.ts"
-
-    # MAINTAINABILITY - DRY
-    - id: "MNT-DRY-001"
-      severity: medium
-      file: "src/service.ts:42"
-      finding: "DRY violation: duplicate validation logic"
-      suggested_action: "Extract to shared validator"
-  ```
-- Linear comment posted with findings.
+- [ ] Story and Done implementation tasks loaded (test tasks excluded)
+- [ ] Code metrics calculated (Cyclomatic Complexity, function/file sizes)
+- [ ] MCP Ref validation completed (OPT-, BP-, PERF- categories)
+- [ ] ARCH- subcategories checked (LB, TX, DTO, DI, CEH, SES, EVENT); MNT- subcategories checked (DC, DRY, GOD, SIG, ERR)
+- [ ] Issues identified with prefixes and severity, sources from MCP Ref/Context7
+- [ ] Code Quality Score calculated
+- [ ] Output formatted per `references/output_schema.md`
+- [ ] Linear comment posted with findings
 
 ## Reference Files
+- Git scope detection: `shared/references/git_scope_detection.md`
 - Code metrics: `references/code_metrics.md` (thresholds and penalties)
 - Guides: `docs/guides/`
 - Templates for context: `shared/templates/task_template_implementation.md`
 - **Clean code checklist:** `shared/references/clean_code_checklist.md`
-- **MANDATORY READ:** `shared/references/research_tool_fallback.md`
+- Research tool fallback: `shared/references/research_tool_fallback.md`
 
 ---
-**Version:** 5.0.0
-**Last Updated:** 2026-01-29
+**Version:** 5.1.0
+**Last Updated:** 2026-03-15

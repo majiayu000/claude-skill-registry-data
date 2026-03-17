@@ -511,9 +511,3 @@ tokio::spawn(async move {
 - **Don't spawn unboundedly** - Use semaphores for limits
 - **Don't ignore errors** - Propagate with `?` or log
 - **Don't forget Send bounds** - For spawned futures
-
-## Resources
-
-- [Tokio Tutorial](https://tokio.rs/tokio/tutorial)
-- [Async Book](https://rust-lang.github.io/async-book/)
-- [Tokio Console](https://github.com/tokio-rs/console)

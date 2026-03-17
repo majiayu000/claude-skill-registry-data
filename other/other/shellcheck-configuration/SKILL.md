@@ -448,9 +448,3 @@ shellcheck --format=quiet script.sh
 6. **Update regularly** - Keep ShellCheck current for new checks
 7. **Use pre-commit hooks** - Catch issues locally before pushing
 8. **Integrate with editors** - Get real-time feedback during development
-
-## Resources
-
-- **ShellCheck GitHub**: https://github.com/koalaman/shellcheck
-- **ShellCheck Wiki**: https://www.shellcheck.net/wiki/
-- **Error Code Reference**: https://www.shellcheck.net/

@@ -1,29 +1,39 @@
 ---
 name: agent-messaging
-description: Sends and receives messages between AI agents using the Agent Messaging Protocol (AMP). Use when the user asks to "send a message", "check inbox", "read messages", "reply to a message", "notify an agent", "tell agent X", "check for messages", "register with a provider", or any inter-agent communication task.
-allowed-tools: Bash
+description: Send and receive cryptographically signed messages between AI agents using the Agent Messaging Protocol (AMP). Supports local messaging, federation across providers, file attachments, and Ed25519 signatures. Works with any AI agent that can execute shell commands.
+license: Apache-2.0
+compatibility: Requires curl, jq, openssl, and base64 CLI tools. macOS and Linux supported. Scripts are POSIX-compatible bash.
 metadata:
-  author: 23blocks
-  version: 1.0.0
+  version: "0.1.2"
+  homepage: "https://agentmessaging.org"
+  repository: "https://github.com/agentmessaging/claude-plugin"
 ---
 
 # Agent Messaging Protocol (AMP)
 
 Send and receive messages with other AI agents using the Agent Messaging Protocol.
 
----
+## When to use this skill
 
-## ⚠️ IMPORTANT: Identity Check (Run First)
+Use this skill when the user or task requires:
+- Sending messages to other AI agents (local or remote)
+- Checking an inbox for incoming messages
+- Replying to messages from other agents
+- Registering with external messaging providers
+- Downloading file attachments from messages
+- Checking agent identity or messaging status
+
+## Identity Check (Run First)
 
 **Before using any messaging commands, ALWAYS verify your identity:**
 
 ```bash
-amp-identity
+amp-identity.sh
 ```
 
 If you see "Not initialized", run:
 ```bash
-amp-init --auto
+amp-init.sh --auto
 ```
 
 This identity check is essential because:
@@ -31,215 +41,159 @@ This identity check is essential because:
 - After context reset, you need to rediscover who you are
 - Each agent has its own isolated AMP directory with identity, keys, and messages
 
-**Your identity file location:** `${AMP_DIR}/IDENTITY.md` (per-agent, auto-resolved)
-
----
-
-## Overview
-
-AMP is a secure messaging protocol for AI agents. It works **locally by default** - you can send cryptographically signed messages to other agents on the same machine without any external dependencies. Optionally, you can register with external providers to message agents anywhere in the world.
+**Identity file location:** `${AMP_DIR}/IDENTITY.md` (per-agent, auto-resolved)
 
 ## Quick Start
 
-### 1. Initialize (first time only)
-
 ```bash
-amp-init --auto
+# 1. Initialize (first time only)
+amp-init.sh --auto
+
+# 2. Send a message
+amp-send.sh alice "Hello" "How are you?"
+
+# 3. Check inbox
+amp-inbox.sh
 ```
 
-### 2. Send a message
+## Installation
+
+### For Claude Code (plugin)
 
 ```bash
-amp-send alice "Hello" "How are you?"
+git clone https://github.com/agentmessaging/claude-plugin.git ~/.claude/plugins/agent-messaging
 ```
 
-### 3. Check inbox
+### For any AI agent (skills.sh)
 
 ```bash
-amp-inbox
+npx skills add agentmessaging/claude-plugin
+```
+
+### Manual (any agent)
+
+Clone the repo and add `scripts/` to your PATH, or invoke scripts directly:
+
+```bash
+git clone https://github.com/agentmessaging/claude-plugin.git ~/agent-messaging
+export PATH="$HOME/agent-messaging/scripts:$PATH"
 ```
 
 ## Address Formats
 
 **Local addresses** (work within your AI Maestro mesh):
-- `alice` → `alice@<your-org>.aimaestro.local`
-- `bob@acme.aimaestro.local` → Local delivery within acme organization
-
-The organization name is automatically fetched from AI Maestro during initialization.
+- `alice` expands to `alice@<your-org>.aimaestro.local`
+- `bob@acme.aimaestro.local` for explicit local delivery
 
 **External addresses** (require registration):
-- `alice@acme.crabmail.ai` → Via Crabmail provider
-- `backend-api@23blocks.otherprovider.com` → Via other provider
+- `alice@acme.crabmail.ai` via Crabmail provider
+- `backend-api@23blocks.otherprovider.com` via other providers
 
-## Commands
+## Commands Reference
 
-### Initialize Agent
+All commands are bash scripts in the `scripts/` directory. If `scripts/` is on your PATH, omit the path prefix.
 
-First-time setup to create your identity:
-
-```bash
-# Auto-detect name from tmux/git (organization fetched from AI Maestro)
-amp-init --auto
-
-# Specify name (organization auto-fetched from AI Maestro)
-amp-init --name my-agent
-
-# Manually specify tenant/organization (overrides AI Maestro)
-amp-init --name my-agent --tenant myteam
-```
-
-**Note:** Organization is automatically fetched from AI Maestro. Make sure AI Maestro organization is configured before initializing.
-
-### Check Status
+### amp-init.sh — Initialize Agent
 
 ```bash
-amp-status
+amp-init.sh --auto                          # Auto-detect name from environment
+amp-init.sh --name my-agent                 # Specify name
+amp-init.sh --name my-agent --tenant myteam # Override tenant
 ```
 
-### Check Inbox
+### amp-identity.sh — Check Identity
 
 ```bash
-# Check unread messages
-amp-inbox
-
-# Check all messages
-amp-inbox --all
-
-# Get count only
-amp-inbox --count
+amp-identity.sh          # Human-readable output
+amp-identity.sh --json   # JSON output for parsing
+amp-identity.sh --brief  # One-line summary
 ```
 
-### Read a Message
+### amp-status.sh — Show Status
 
 ```bash
-amp-read <message-id>
-
-# Read without marking as read
-amp-read <message-id> --no-mark-read
+amp-status.sh            # Full status with registrations
+amp-status.sh --json     # JSON output
 ```
 
-### Send a Message
+### amp-inbox.sh — Check Inbox
 
 ```bash
-# Basic message
-amp-send <recipient> "<subject>" "<message>"
-
-# With priority
-amp-send <recipient> "<subject>" "<message>" --priority urgent
-
-# With type
-amp-send <recipient> "<subject>" "<message>" --type request
-
-# With context
-amp-send <recipient> "<subject>" "<message>" --context '{"pr": 42}'
-
-# With file attachments
-amp-send <recipient> "<subject>" "<message>" --attach /path/to/file.pdf
-
-# Multiple attachments (max 10 files, 25 MB each)
-amp-send <recipient> "<subject>" "<message>" --attach report.pdf --attach data.csv
+amp-inbox.sh             # Show unread messages
+amp-inbox.sh --all       # Show all messages
+amp-inbox.sh --count     # Count only
 ```
 
-### Reply to a Message
+### amp-read.sh — Read a Message
 
 ```bash
-amp-reply <message-id> "<reply-message>"
+amp-read.sh <message-id>                # Read and mark as read
+amp-read.sh <message-id> --no-mark-read # Read without marking
 ```
 
-### Download Attachments
+### amp-send.sh — Send a Message
 
 ```bash
-# Download all attachments from a message
-amp-download <message-id> --all
-
-# Download a specific attachment
-amp-download <message-id> <attachment-id>
-
-# Download to a specific directory
-amp-download <message-id> --all --dest ~/Downloads
+amp-send.sh <recipient> "<subject>" "<message>"
+amp-send.sh <recipient> "<subject>" "<message>" --priority urgent
+amp-send.sh <recipient> "<subject>" "<message>" --type request
+amp-send.sh <recipient> "<subject>" "<message>" --context '{"pr": 42}'
+amp-send.sh <recipient> "<subject>" "<message>" --attach /path/to/file.pdf
 ```
 
-### Delete a Message
+### amp-reply.sh — Reply to a Message
 
 ```bash
-amp-delete <message-id>
-
-# Without confirmation
-amp-delete <message-id> --force
+amp-reply.sh <message-id> "<reply-message>"
 ```
 
-### Register with External Provider
+### amp-download.sh — Download Attachments
 
-To message agents on other providers (like Crabmail), you need the user's authorization.
+```bash
+amp-download.sh <message-id> --all              # Download all attachments
+amp-download.sh <message-id> <attachment-id>     # Download specific attachment
+amp-download.sh <message-id> --all --dest ~/tmp  # Custom destination
+```
 
-#### ⚠️ IMPORTANT: User Authorization Required
+### amp-delete.sh — Delete a Message
+
+```bash
+amp-delete.sh <message-id>          # With confirmation
+amp-delete.sh <message-id> --force  # Without confirmation
+```
+
+### amp-register.sh — Register with External Provider
+
+```bash
+amp-register.sh --provider crabmail.ai --user-key uk_your_key_here
+amp-register.sh -p crabmail.ai -k uk_xxx -n my-agent
+```
+
+### amp-fetch.sh — Fetch from External Providers
+
+```bash
+amp-fetch.sh                          # Fetch from all registered providers
+amp-fetch.sh --provider crabmail.ai   # Fetch from specific provider
+```
+
+## User Authorization for External Providers
 
 **You MUST ask the user for their User Key before registering with external providers.**
 
-External providers require authentication via User Keys. These are sensitive credentials that:
-- Are tied to the user's account and billing
+User Keys are sensitive credentials tied to the user's account and billing. They:
 - Should NEVER be stored, cached, or logged by the agent
 - Must be provided explicitly by the user for each registration
+- Start with `uk_` prefix
 
-#### How to Ask for Authorization
+**Flow:**
+1. Explain what's needed: "To register with [provider], I'll need your User Key."
+2. Wait for the user to provide the key.
+3. Use it immediately via `amp-register.sh` and don't store it.
 
-When a user wants to register with an external provider, follow this flow:
-
-1. **Explain what's needed:**
-   > "To register with [provider], I'll need a User Key from your account. You can get this from the [provider] dashboard."
-
-2. **Wait for the user to provide the key:**
-   > "Please paste your User Key (starts with `uk_`) when you're ready."
-
-3. **Use it immediately and don't store it:**
-   ```bash
-   amp-register --provider crabmail.ai --user-key <user-provided-key>
-   ```
-
-#### Example Conversation
-
-```
-User: Register me with Crabmail so I can message external agents
-
-Agent: To register with Crabmail, I'll need your User Key for authentication.
-
-Here's how to get it:
-1. Go to https://crabmail.ai/dashboard
-2. Navigate to Settings > API Keys
-3. Generate or copy your User Key (starts with `uk_`)
-
-Please paste your User Key when you have it. I'll use it only for this registration and won't store it.
-
-User: Here it is: uk_dXNyXzEyMzQ1Njc4OQ
-
-Agent: [runs amp-register --provider crabmail.ai --user-key uk_dXNyXzEyMzQ1Njc4OQ]
-```
-
-#### Registration Command
-
-```bash
-# Register with Crabmail using the user-provided User Key
-amp-register --provider crabmail.ai --user-key uk_your_key_here
-
-# With custom agent name
-amp-register -p crabmail.ai -k uk_xxx -n my-agent
-```
-
-#### Security Notes
-
-- **Never ask for passwords** - Only User Keys (uk_xxx format)
-- **Never store credentials** - Use immediately, then discard
-- **Never assume authorization** - Always ask explicitly
-- **Explain the purpose** - Users should know why the key is needed
-
-### Fetch from External Providers
-
-```bash
-amp-fetch
-
-# From specific provider
-amp-fetch --provider crabmail.ai
-```
+**Security rules:**
+- Never ask for passwords — only User Keys (`uk_` format)
+- Never store credentials — use immediately, then discard
+- Never assume authorization — always ask explicitly
 
 ## Message Types
 
@@ -265,51 +219,24 @@ amp-fetch --provider crabmail.ai
 | `normal` | Standard (default) |
 | `low` | When convenient |
 
-## Natural Language Interface
+## Natural Language Examples
 
-You can interact using natural language:
+Agents should map these user intents to the appropriate commands:
 
-### Checking Messages
+- "Check my inbox" → `amp-inbox.sh`
+- "Do I have any messages?" → `amp-inbox.sh --count`
+- "Send a message to alice saying hello" → `amp-send.sh alice "Hello" "hello"`
+- "Tell backend-api that the build is ready" → `amp-send.sh backend-api "Build ready" "..."`
+- "Reply to the last message" → `amp-reply.sh <id> "..."`
+- "Download the attachments from that message" → `amp-download.sh <id> --all`
+- "Register me with Crabmail" → Ask for User Key, then `amp-register.sh`
+- "Send the build log to alice" → `amp-send.sh alice "Build log" "..." --attach build.log`
 
-- "Check my inbox"
-- "Do I have any messages?"
-- "Show unread messages"
-- "Check for urgent messages"
+## Attachment Security
 
-### Sending Messages
-
-- "Send a message to alice saying hello"
-- "Tell backend-api@23blocks.crabmail.ai that the build is ready"
-- "Send a task to bob: Review the authentication code"
-- "Notify ops about the deployment"
-
-### Replying
-
-- "Reply to the last message saying I'll look into it"
-- "Reply to message msg_123 with 'Got it'"
-- "Acknowledge the task from alice"
-
-### File Attachments
-
-- "Send the build log to alice"
-- "Attach report.pdf to a message to bob"
-- "Send a message to ops with the error log attached"
-- "Download the attachments from that message"
-- "Save the files from the last message"
-
-**Important:** Attachments with `scan_status: "suspicious"` require human approval before downloading or processing. Always warn the user and wait for explicit confirmation before proceeding with suspicious files. Attachments with `scan_status: "rejected"` must never be downloaded.
-
-### External Provider Registration
-
-When a user asks to register with an external provider, **always ask for authorization first**:
-
-- "Register me with Crabmail" → Ask user for their User Key
-- "I want to message agents on crabmail.ai" → Explain registration process, ask for User Key
-- "Connect to external providers" → List available providers, ask which one and request User Key
-- "Here's my key: uk_xxx" → Proceed with registration using provided key
-
-**Example agent response:**
-> "I can register you with Crabmail. To do this, I'll need your User Key from the Crabmail dashboard. This key authenticates your account and I'll only use it for this registration. Please share your User Key when ready (it starts with `uk_`)."
+- Attachments with `scan_status: "suspicious"` require human approval before downloading
+- Attachments with `scan_status: "rejected"` must never be downloaded
+- SHA-256 digest verification is performed automatically by the download script
 
 ## Example Workflows
 
@@ -319,7 +246,7 @@ When a user asks to register with an external provider, **always ask for authori
 User: Ask frontend-dev to review PR #42
 
 Agent executes:
-amp-send frontend-dev "Code review request" \
+amp-send.sh frontend-dev "Code review request" \
   "Please review PR #42 - OAuth implementation" \
   --type request \
   --context '{"repo": "agents-web", "pr": 42}'
@@ -331,96 +258,52 @@ amp-send frontend-dev "Code review request" \
 User: Hand off the database work to backend-db
 
 Agent executes:
-amp-send backend-db "Task handoff: Database migration" \
+amp-send.sh backend-db "Task handoff: Database migration" \
   "I've completed the schema design. Please implement the migrations." \
   --type handoff \
   --priority high
 ```
 
-### Status Update
-
-```
-User: Send a status update to the team lead
-
-Agent executes:
-amp-send team-lead "Sprint progress" \
-  "Completed 3 of 5 tasks. Working on API integration." \
-  --type status
-```
-
 ## Local Storage
 
-Each agent has its own **isolated** AMP directory. Nothing is shared between agents.
+Each agent has its own isolated AMP directory:
 
 ```
 ~/.agent-messaging/agents/<agent-name>/
-├── IDENTITY.md          # Human-readable identity (addresses, commands)
-├── config.json          # Agent configuration (name, tenant, address)
+├── IDENTITY.md          # Human-readable identity
+├── config.json          # Agent configuration
 ├── keys/
 │   ├── private.pem      # Private key (never shared)
 │   └── public.pem       # Public key
 ├── messages/
-│   ├── inbox/           # Received messages (organized by sender)
-│   │   └── <sender>/    # Sender subdirectory
-│   │       └── msg_*.json
-│   └── sent/            # Sent messages (organized by recipient)
-│       └── <recipient>/
-│           └── msg_*.json
-├── attachments/         # Downloaded/local attachment files
-│   └── <msg-id>/        # Per-message attachment directory
-└── registrations/       # External provider registrations
+│   ├── inbox/<sender>/msg_*.json
+│   └── sent/<recipient>/msg_*.json
+├── attachments/<msg-id>/
+└── registrations/
 ```
 
-The `AMP_DIR` environment variable points to the agent's directory and is auto-resolved
-from the agent name (via `CLAUDE_AGENT_NAME` or tmux session name). You do not need
-to set it manually.
+The `AMP_DIR` environment variable points to the agent's directory and is auto-resolved.
 
 ## Security
 
-- **Ed25519 signatures** - Messages are cryptographically signed
-- **Private keys stay local** - Never sent to providers
-- **Per-agent identity** - Each agent has unique keypair
-- **Local-first** - No external dependencies for basic use
+- **Ed25519 signatures** — messages are cryptographically signed
+- **Key revocation** — compromised keys are revoked and propagated across federation
+- **Communication ACLs** — allowlist-based policies control who agents can message
+- **Quarantine** — suspicious messages held for human review with risk scoring
+- **Private keys stay local** — never sent to providers
+- **Per-agent identity** — each agent has a unique keypair
 
 ## Troubleshooting
 
-### "AMP not initialized"
-
-Run `amp-init` first to create your identity.
-
-### "Not registered with provider"
-
-Register first with your User Key:
-```bash
-amp-register --provider crabmail.ai --user-key uk_xxx
-```
-
-### "Authentication failed" / "Invalid User Key"
-
-Your User Key may be invalid or expired. Get a new one from the provider's dashboard.
-
-### "Agent not found"
-
-The recipient address may be incorrect. Verify the format: `name@tenant.provider`
-
-### Messages not arriving from external
-
-Run `amp-fetch` to pull messages from external providers.
-
-## Persisting Identity (Optional)
-
-If you want your AMP identity to be automatically visible in your project context,
-you can **offer the user** the option to add a line to the project's CLAUDE.md:
-
-```markdown
-## Agent Messaging
-This agent uses AMP (Agent Messaging Protocol).
-Identity: `<your-address>` (e.g., `backend-api@myorg.aimaestro.local`)
-Run `amp-identity` to see full identity details.
-```
-
-**Important:** Always ask the user before modifying CLAUDE.md. This is their decision.
+| Problem | Solution |
+|---------|----------|
+| "AMP not initialized" | Run `amp-init.sh --auto` |
+| "Not registered with provider" | Run `amp-register.sh --provider <p> --user-key <k>` |
+| "Authentication failed" | Get a new User Key from the provider dashboard |
+| "Agent not found" | Verify address format: `name@tenant.provider` |
+| Messages not arriving | Run `amp-fetch.sh` to pull from external providers |
 
 ## Protocol Reference
 
-For the full AMP specification: https://agentmessaging.org
+Full specification: https://agentmessaging.org
+GitHub: https://github.com/agentmessaging/protocol

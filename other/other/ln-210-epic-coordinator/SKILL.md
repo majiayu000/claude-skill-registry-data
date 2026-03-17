@@ -1,6 +1,6 @@
 ---
 name: ln-210-epic-coordinator
-description: CREATE/REPLAN Epics from scope (3-7 Epics). Batch Preview + Auto-extraction. Decompose-First Pattern. Auto-discovers team ID.
+description: "CREATE/REPLAN Epics from scope (3-7 Epics). Batch Preview + Auto-extraction. Decompose-First Pattern. Auto-discovers team ID."
 license: MIT
 ---
 
@@ -49,7 +49,7 @@ This skill should be used when:
 |-------|----------|--------|-------------|
 | `scopeDoc` | Yes | args, project docs, user | Scope document for Epic decomposition |
 
-**Resolution:** Per `shared/references/input_resolution_pattern.md` — Epic Resolution Chain (adapted: scope doc discovery).
+**Resolution:** Epic Resolution Chain (adapted: scope doc discovery).
 **Fallback:** IF no scope doc found → AskUserQuestion: "What should be decomposed into Epics?"
 
 ## Workflow
@@ -58,7 +58,6 @@ This skill should be used when:
 
 **MANDATORY READ:** Load `shared/references/tools_config_guide.md`, `shared/references/storage_mode_detection.md`, `shared/references/input_resolution_pattern.md`
 
-Read `docs/tools_config.md` (bootstrap if missing per tools_config_guide.md).
 Extract: `task_provider` = Task Management → Provider
 
 ### Phase 1: Discovery & Research
@@ -507,6 +506,12 @@ Before completing work, verify ALL checkpoints:
 **Result:** 6 Epics created (Epic 0-5 internal indexes, Epic 11-16 Linear titles)
 
 ---
+
+## Phase 6: Meta-Analysis
+
+**MANDATORY READ:** Load `shared/references/meta_analysis_protocol.md`
+
+Skill type: `planning-coordinator`. Run after all phases complete. Output to chat using the `planning-coordinator` format.
 
 ## Reference Files
 

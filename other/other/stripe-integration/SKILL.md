@@ -490,33 +490,3 @@ def test_payment_flow():
 
     assert confirmed.status == 'succeeded'
 ```
-
-## Resources
-
-- **references/checkout-flows.md**: Detailed checkout implementation
-- **references/webhook-handling.md**: Webhook security and processing
-- **references/subscription-management.md**: Subscription lifecycle
-- **references/customer-management.md**: Customer and payment method handling
-- **references/invoice-generation.md**: Invoicing and billing
-- **assets/stripe-client.py**: Production-ready Stripe client wrapper
-- **assets/webhook-handler.py**: Complete webhook processor
-- **assets/checkout-config.json**: Checkout configuration templates
-
-## Best Practices
-
-1. **Always Use Webhooks**: Don't rely solely on client-side confirmation
-2. **Idempotency**: Handle webhook events idempotently
-3. **Error Handling**: Gracefully handle all Stripe errors
-4. **Test Mode**: Thoroughly test with test keys before production
-5. **Metadata**: Use metadata to link Stripe objects to your database
-6. **Monitoring**: Track payment success rates and errors
-7. **PCI Compliance**: Never handle raw card data on your server
-8. **SCA Ready**: Implement 3D Secure for European payments
-
-## Common Pitfalls
-
-- **Not Verifying Webhooks**: Always verify webhook signatures
-- **Missing Webhook Events**: Handle all relevant webhook events
-- **Hardcoded Amounts**: Use cents/smallest currency unit
-- **No Retry Logic**: Implement retries for API calls
-- **Ignoring Test Mode**: Test all edge cases with test cards

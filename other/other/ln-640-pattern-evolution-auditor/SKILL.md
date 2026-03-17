@@ -1,6 +1,6 @@
 ---
 name: ln-640-pattern-evolution-auditor
-description: "Audits architectural patterns against best practices (MCP Ref, Context7, WebSearch). Maintains patterns catalog, calculates 4 scores. Output: docs/project/patterns_catalog.md. Use when user asks to: (1) Check architecture health, (2) Audit patterns before refactoring, (3) Find undocumented patterns in codebase."
+description: "Audits architectural patterns against best practices. Maintains patterns catalog, calculates 4 scores per pattern. Output: patterns_catalog.md."
 license: MIT
 ---
 
@@ -18,9 +18,6 @@ L2 Coordinator that analyzes implemented architectural patterns against current 
 - Calculate 4 scores per pattern via ln-641
 - Track quality trends over time (improving/stable/declining)
 - Output: `docs/project/patterns_catalog.md` (file-based)
-- **Drift Detection:** Track score changes over time, enforce SLA thresholds
-- **Auto-remediation:** Create [REFACTOR] Story in Linear when architecture degrades below SLA
-- **Health Timeline:** Append-only log in `docs/project/architecture_health.md`
 
 ## 4-Score Model
 
@@ -31,23 +28,9 @@ L2 Coordinator that analyzes implemented architectural patterns against current 
 | **Quality** | Readability, maintainability, no smells, SOLID, no duplication | 70% |
 | **Implementation** | Code exists, production use, integrated, monitored | 70% |
 
-## SLA Thresholds & Drift Detection
-
-| Metric | SLA Threshold | Drift Alert | Auto-Action |
-|--------|---------------|-------------|-------------|
-| **architecture_health_score** | >= 70 | Drop > 10 points between audits | Create [REFACTOR] Story |
-| **Per-pattern compliance** | >= 60% | Drop > 15% between audits | Flag in "Requires Attention" |
-| **Per-pattern quality** | >= 60% | Drop > 15% between audits | Flag in "Requires Attention" |
-| **Layer violations (critical)** | 0 | Any new critical violation | Create [BUG] Story |
-| **Cross-domain cycles** | 0 | Any new cycle | Create [REFACTOR] Story |
-
-**SLA breach = config-driven auto-remediation:**
-- IF `task_provider == "linear"` (Linear MCP available): create_issue() in Linear
-- ELSE: Write task file to `docs/tasks/` with `ACTION_REQUIRED` marker
-
 ## Worker Invocation
 
-> **CRITICAL:** All delegations use Task tool with `subagent_type: "general-purpose"` for context isolation.
+**MANDATORY READ:** Load `shared/references/task_delegation_pattern.md`.
 
 | Worker | Purpose | Phase |
 |--------|---------|-------|
@@ -57,19 +40,13 @@ L2 Coordinator that analyzes implemented architectural patterns against current 
 | ln-644-dependency-graph-auditor | Build dependency graph, detect cycles, validate boundaries, calculate metrics | Phase 4 |
 | ln-645-open-source-replacer | Search OSS replacements for custom modules via MCP Research | Phase 4 |
 | ln-646-project-structure-auditor | Audit physical structure, hygiene, naming conventions | Phase 4 |
+| ln-647-env-config-auditor | Audit env var config, sync, naming, startup validation | Phase 4 |
 
-**Prompt template:**
-```
-Task(description: "[Audit/Create] via ln-6XX",
-     prompt: "Execute {skill-name}. Read skill from {skill-name}/SKILL.md. Pattern: {pattern}",
-     subagent_type: "general-purpose")
-```
-
-**Anti-Patterns:**
-- ❌ Direct Skill tool invocation without Task wrapper
-- ❌ Any execution bypassing subagent context isolation
+All delegations use Agent with `subagent_type: "general-purpose"`. Keep Phase 4 workers parallel where inputs are independent; keep ln-641 in Phase 5 because pattern scoring depends on earlier boundary and graph evidence.
 
 ## Workflow
+
+**MANDATORY READ:** Load `shared/references/two_layer_detection.md` for detection methodology.
 
 ### Phase 1a: Baseline Detection
 
@@ -196,53 +173,41 @@ FOR EACH pattern WHERE last_audit > 30 days OR never:
 
 ### Phase 3: Domain Discovery + Output Setup
 
-```
-# Detect project structure for domain-aware scanning
-domains = detect_domains(src_root)
-# e.g., [{name: "users", path: "src/users/"}, {name: "billing", path: "src/billing/"}]
+**MANDATORY READ:** Load `shared/references/audit_coordinator_domain_mode.md`.
 
-IF len(domains) > 1:
-  domain_mode = "domain-aware"
-ELSE:
-  domain_mode = "global"
-
-# Prepare output directory for worker reports
-output_dir = "docs/project/.audit/ln-640/{YYYY-MM-DD}"
-mkdir -p {output_dir}   # No deletion — date folders preserve history
-```
+Use the shared domain discovery pattern to set `domain_mode` and `all_domains`. Then create `docs/project/.audit/ln-640/{YYYY-MM-DD}/`. Worker files are cleaned up after consolidation (see Phase 11).
 
 ### Phase 4: Layer Boundary + API Contract + Dependency Graph Audit
 
-```
+```javascript
 IF domain_mode == "domain-aware":
-  # Per-domain invocation of ln-642, ln-643, ln-644
-  FOR EACH domain IN domains (parallel):
-    Task(ln-642-layer-boundary-auditor)
-      Input: architecture_path, codebase_root, skip_violations, output_dir,
-             domain_mode="domain-aware", current_domain=domain.name, scan_path=domain.path
-    Task(ln-643-api-contract-auditor)
-      Input: pattern="API Contracts", locations=[domain.path], bestPractices, output_dir,
-             domain_mode="domain-aware", current_domain=domain.name, scan_path=domain.path
-    Task(ln-644-dependency-graph-auditor)
-      Input: architecture_path, codebase_root, output_dir,
-             domain_mode="domain-aware", current_domain=domain.name, scan_path=domain.path
-    Task(ln-645-open-source-replacer)
-      Input: codebase_root, tech_stack, output_dir,
-             domain_mode="domain-aware", current_domain=domain.name, scan_path=domain.path
-    Task(ln-646-project-structure-auditor)
-      Input: codebase_root, output_dir,
-             domain_mode="domain-aware", current_domain=domain.name, scan_path=domain.path
+  FOR EACH domain IN all_domains:
+    domain_context = {
+      ...contextStore,
+      domain_mode: "domain-aware",
+      current_domain: { name: domain.name, path: domain.path }
+    }
+    FOR EACH worker IN [ln-642, ln-643, ln-644, ln-645, ln-646, ln-647]:
+      Agent(description: "Audit " + domain.name + " via " + worker,
+           prompt: "Execute audit worker.
+
+Step 1: Invoke worker:
+  Skill(skill: \"" + worker + "\")
+
+CONTEXT:
+" + JSON.stringify(domain_context),
+           subagent_type: "general-purpose")
 ELSE:
-  Task(ln-642-layer-boundary-auditor)
-    Input: architecture_path, codebase_root, skip_violations, output_dir
-  Task(ln-643-api-contract-auditor)
-    Input: pattern="API Contracts", locations=[service_dirs, api_dirs], bestPractices, output_dir
-  Task(ln-644-dependency-graph-auditor)
-    Input: architecture_path, codebase_root, output_dir
-  Task(ln-645-open-source-replacer)
-    Input: codebase_root, tech_stack, output_dir
-  Task(ln-646-project-structure-auditor)
-    Input: codebase_root, output_dir
+  FOR EACH worker IN [ln-642, ln-643, ln-644, ln-645, ln-646, ln-647]:
+    Agent(description: "Pattern evolution audit via " + worker,
+         prompt: "Execute audit worker.
+
+Step 1: Invoke worker:
+  Skill(skill: \"" + worker + "\")
+
+CONTEXT:
+" + JSON.stringify(contextStore),
+         subagent_type: "general-purpose")
 
 # Apply layer deductions from ln-642 return values (score + issue counts)
 # Detailed violations read from files in Phase 6
@@ -250,17 +215,24 @@ ELSE:
 
 ### Phase 5: Pattern Analysis Loop
 
-```
+```javascript
 # ln-641 stays GLOBAL (patterns are cross-cutting, not per-domain)
 # Only VERIFIED patterns from Phase 1d (skip EXCLUDED)
 FOR EACH pattern IN catalog WHERE pattern.status == "VERIFIED":
-  Task(ln-641-pattern-analyzer)
-    Input: pattern, locations, bestPractices, output_dir
+  Agent(description: "Analyze " + pattern.name + " via ln-641",
+       prompt: "Execute audit worker.
+
+Step 1: Invoke worker:
+  Skill(skill: \"ln-641-pattern-analyzer\")
+
+CONTEXT:
+" + JSON.stringify({...contextStore, pattern: pattern}),
+       subagent_type: "general-purpose")
 ```
 
 **Worker Output Contract (file-based):**
 
-**MANDATORY READ:** Load `shared/templates/audit_worker_report_template.md` for file format, naming, AUDIT-META, and DATA-EXTENDED specs.
+**MANDATORY READ:** Load `shared/references/audit_worker_core_contract.md` and `shared/templates/audit_worker_report_template.md`.
 
 All workers write reports to `{output_dir}/` and return minimal summary:
 
@@ -272,6 +244,7 @@ All workers write reports to `{output_dir}/` and return minimal summary:
 | ln-644 | `Score: X.X/10 \| Issues: N (C:N H:N M:N L:N)` | `644-dep-graph[-{domain}].md` |
 | ln-645 | `Score: X.X/10 \| Issues: N (C:N H:N M:N L:N)` | `645-open-source-replacer[-{domain}].md` |
 | ln-646 | `Score: X.X/10 \| Issues: N (C:N H:N M:N L:N)` | `646-structure[-{domain}].md` |
+| ln-647 | `Score: X.X/10 \| Issues: N (C:N H:N M:N L:N)` | `647-env-config[-{domain}].md` |
 
 Coordinator parses scores/counts from return values (0 file reads for aggregation tables). Reads files only for cross-domain aggregation (Phase 6) and report assembly (Phase 8).
 
@@ -349,6 +322,20 @@ IF domain_mode == "domain-aware":
         recommendation: "Standardize project structure conventions across domains"
       })
 
+  # Step 6: Read DATA-EXTENDED from ln-647 files
+  FOR EACH file IN Glob("{output_dir}/647-env-config-*.md"):
+    Read file → extract <!-- DATA-EXTENDED ... --> JSON
+  # Group env sync issues across domains
+  FOR EACH issue_type IN ["missing_from_example", "dead_in_example", "default_desync"]:
+    domains_with_issue = ln647_data.filter(d => d.sync_stats[issue_type] > 0).map(d => d.domain)
+    IF len(domains_with_issue) >= 2:
+      systemic_findings.append({
+        severity: "HIGH",
+        issue: f"Systemic env config issue: {issue_type} in {len(domains_with_issue)} domains",
+        domains: domains_with_issue,
+        recommendation: "Centralize env configuration management"
+      })
+
   # Cross-domain SDP violations
   FOR EACH sdp IN ln644_sdp_violations:
     IF sdp.from.domain != sdp.to.domain:
@@ -374,6 +361,8 @@ gaps = {
 
 ### Aggregation Algorithm
 
+**MANDATORY READ:** Load `shared/references/audit_coordinator_aggregation.md` and `shared/references/context_validation.md`.
+
 ```
 # Step 1: Parse scores from worker return values (already in-context)
 # ln-641: "Score: 7.9/10 (C:72 K:85 Q:68 I:90) | Issues: 3 (H:1 M:2 L:0)"
@@ -385,9 +374,10 @@ layer_score = parse_score(ln642_return)                     # 0-10
 api_score = parse_score(ln643_return)                       # 0-10
 graph_score = parse_score(ln644_return)                     # 0-10
 structure_score = parse_score(ln646_return)                   # 0-10
+env_config_score = parse_score(ln647_return)                  # 0-10
 
 # Step 2: Calculate architecture_health_score (ln-645 NOT included — separate metric)
-all_scores = pattern_scores + [layer_score, api_score, graph_score, structure_score]
+all_scores = pattern_scores + [layer_score, api_score, graph_score, structure_score, env_config_score]
 architecture_health_score = round(average(all_scores) * 10)  # 0-100 scale
 
 # Step 2b: Separate reuse opportunity score (informational, no SLA enforcement)
@@ -399,7 +389,6 @@ reuse_opportunity_score = parse_score(ln645_return)  # 0-10, NOT in architecture
 # < 70: "critical"
 
 # Step 3: Context Validation (Post-Filter)
-# MANDATORY READ: shared/references/context_validation.md
 # Apply Rules 1, 3 to ln-641 anti-pattern findings:
 #   Rule 1: Match god_class/large_file findings against ADR list
 #   Rule 3: For god_class deductions (-5 compliance):
@@ -421,61 +410,7 @@ reuse_opportunity_score = parse_score(ln645_return)  # 0-10, NOT in architecture
 3. Output summary (see Return Result below)
 ```
 
-### Phase 9: Drift Detection & SLA Enforcement
-
-```
-1. Load previous scores from docs/project/architecture_health.md
-   IF file missing → create with current scores as baseline, skip drift check
-   IF exists → parse last entry
-
-2. Calculate drift:
-   health_drift = current.architecture_health_score - previous.architecture_health_score
-   FOR EACH pattern:
-     compliance_drift = current.compliance - previous.compliance
-     quality_drift = current.quality - previous.quality
-
-3. Check SLA thresholds (see SLA Thresholds table):
-   breaches = []
-   IF architecture_health_score < 70:
-     breaches.append({type: "health_below_sla", score: architecture_health_score})
-   IF health_drift < -10:
-     breaches.append({type: "health_drift", delta: health_drift})
-   FOR EACH pattern WHERE compliance_drift < -15 OR quality_drift < -15:
-     breaches.append({type: "pattern_drift", pattern: name, delta: min(compliance_drift, quality_drift)})
-   FOR EACH new_critical_violation NOT in previous:
-     breaches.append({type: "new_critical", violation: description})
-   FOR EACH new_cycle NOT in previous:
-     breaches.append({type: "new_cycle", cycle: path})
-
-4. Auto-remediation (if breaches found):
-   task_provider = Read docs/tools_config.md -> Task Management -> Provider  # See storage_mode_detection.md
-   FOR EACH breach:
-     IF type IN ["health_below_sla", "health_drift", "new_cycle"]:
-       title = "[REFACTOR] Architecture health degraded: {breach.type}"
-       description = "SLA breach detected by ln-640..."
-       IF task_provider == "linear":
-         create_issue(title: title, description: description)
-       ELSE:
-         Write task file to docs/tasks/ with ACTION_REQUIRED marker
-     IF type == "new_critical":
-       title = "[BUG] Critical layer violation: {breach.violation}"
-       description = "New critical violation detected..."
-       IF task_provider == "linear":
-         create_issue(title: title, description: description)
-       ELSE:
-         Write task file to docs/tasks/ with ACTION_REQUIRED marker
-
-5. Append to docs/project/architecture_health.md:
-   ## YYYY-MM-DD
-   | Metric | Score | Prev | Delta | Status |
-   |--------|-------|------|-------|--------|
-   | Health Score | 78 | 82 | -4 | OK |
-   | Pattern: Caching | 72/85/68/90 | 75/85/70/90 | -3/0/-2/0 | WARNING |
-   ...
-   SLA Breaches: {count} | Stories Created: {count}
-```
-
-### Phase 10: Return Result
+### Phase 9: Return Result
 
 ```json
 {
@@ -517,6 +452,13 @@ reuse_opportunity_score = parse_score(ln645_return)  # 0-10, NOT in architecture
     "junk_drawers": 1,
     "naming_violations_pct": 3
   },
+  "env_config": {
+    "env_config_score": 8.0,
+    "code_vars_count": 25,
+    "example_vars_count": 22,
+    "sync_stats": {"missing_from_example": 3, "dead_in_example": 1, "default_desync": 0},
+    "validation_framework": "pydantic-settings"
+  },
   "reuse_opportunities": {
     "reuse_opportunity_score": 6.5,
     "modules_scanned": 15,
@@ -541,17 +483,15 @@ reuse_opportunity_score = parse_score(ln645_return)  # 0-10, NOT in architecture
       "domains": ["users", "billing", "orders"],
       "recommendation": "Address at architecture level"
     }
-  ],
-  "drift": {
-    "health_drift": -4,
-    "pattern_drifts": [
-      {"pattern": "Caching", "compliance_drift": -3, "quality_drift": -2}
-    ],
-    "sla_breaches": 0,
-    "stories_created": 0
-  }
+  ]
 }
 ```
+
+## Phase 10: Append Results Log
+
+**MANDATORY READ:** Load `shared/references/results_log_pattern.md`
+
+Append one row to `docs/project/.audit/results_log.md` with: Skill=`ln-640`, Metric=`architecture_health_score`, Scale=`0-100`, Score from Phase 9 output. Calculate Delta vs previous `ln-640` row. Create file with header if missing. Rolling window: max 50 entries.
 
 ## Critical Rules
 
@@ -559,36 +499,42 @@ reuse_opportunity_score = parse_score(ln645_return)  # 0-10, NOT in architecture
 - **Layer audit first:** Run ln-642 before ln-641 pattern analysis
 - **4 scores mandatory:** Never skip any score calculation
 - **Layer deductions:** Apply scoring_rules.md deductions for violations
-- **File output only:** Write results to patterns_catalog.md; exception: SLA breach creates Linear Stories
-- **SLA enforcement:** Always run Phase 9 drift detection; skip only on first audit (no baseline)
-- **Append-only timeline:** Never overwrite `architecture_health.md`, only append new entries
+- **File output only:** Write results to patterns_catalog.md; no side-effect task/issue creation
+
+## Phase 11: Cleanup Worker Files
+
+```bash
+rm -rf {output_dir}
+```
+
+Delete the dated output directory (`docs/project/.audit/ln-640/{YYYY-MM-DD}/`). The consolidated report and results log already preserve all audit data.
 
 ## Definition of Done
 
-- Pattern catalog loaded or created
-- Applicability verified for all detected patterns (Phase 1d); excluded patterns documented
-- Best practices researched for all VERIFIED patterns needing audit
-- Domain discovery completed (global or domain-aware mode selected)
-- Output directory `docs/project/.audit/ln-640/{YYYY-MM-DD}/` created (no deletion of previous runs)
-- Layer boundaries audited via ln-642 (reports written to `{output_dir}/`)
-- API contracts audited via ln-643 (reports written to `{output_dir}/`)
-- Dependency graph audited via ln-644 (reports written to `{output_dir}/`)
-- All patterns analyzed via ln-641 (reports written to `{output_dir}/`)
-- Open-source replacement opportunities audited via ln-645 (reports written to `{output_dir}/`)
-- Project structure audited via ln-646 (reports written to `{output_dir}/`)
-- If domain-aware: cross-domain aggregation completed via DATA-EXTENDED from files
-- Gaps identified (undocumented, missing components, layer violations, inconsistent, systemic)
-- Catalog updated with scores, dates, Layer Boundary Status
-- Trend analysis completed
-- Summary report output
-- Drift detection completed (Phase 9): scores compared to previous, SLA thresholds checked
-- SLA breaches handled: [REFACTOR]/[BUG] Stories created in Linear (or ACTION_REQUIRED in health file)
-- Architecture health timeline appended to `docs/project/architecture_health.md`
+- [ ] Pattern catalog loaded or created
+- [ ] Applicability verified for all detected patterns (Phase 1d); excluded patterns documented
+- [ ] Best practices researched for all VERIFIED patterns needing audit
+- [ ] Domain discovery completed (global or domain-aware mode selected)
+- [ ] Output directory created for worker reports
+- [ ] Worker output directory cleaned up after consolidation
+- [ ] All workers invoked (ln-641..647) with reports written to `{output_dir}/`
+- [ ] If domain-aware: cross-domain aggregation completed via DATA-EXTENDED from files
+- [ ] Gaps identified (undocumented, missing components, layer violations, inconsistent, systemic)
+- [ ] Catalog updated with scores, dates, Layer Boundary Status
+- [ ] Trend analysis completed (current vs previous scores compared)
+- [ ] Summary report output
+
+## Phase 12: Meta-Analysis
+
+**MANDATORY READ:** Load `shared/references/meta_analysis_protocol.md`
+
+Skill type: `review-coordinator` (workers only). Run after all phases complete. Output to chat using the `review-coordinator — workers only` format.
 
 ## Reference Files
 
-- **Worker report template:** `shared/templates/audit_worker_report_template.md`
 - **Task delegation pattern:** `shared/references/task_delegation_pattern.md`
+- **Domain mode pattern:** `shared/references/audit_coordinator_domain_mode.md`
+- **Aggregation pattern:** `shared/references/audit_coordinator_aggregation.md`
 - Pattern catalog template: `shared/templates/patterns_template.md`
 - Pattern library (detection + best practices + discovery): `references/pattern_library.md`
 - Layer boundary rules (for ln-642): `references/layer_rules.md`
@@ -599,6 +545,7 @@ reuse_opportunity_score = parse_score(ln645_return)  # 0-10, NOT in architecture
 - Dependency graph audit: `../ln-644-dependency-graph-auditor/SKILL.md`
 - Open-source replacement audit: `../ln-645-open-source-replacer/SKILL.md`
 - Project structure audit: `../ln-646-project-structure-auditor/SKILL.md`
+- Env config audit: `../ln-647-env-config-auditor/SKILL.md`
 - **MANDATORY READ:** `shared/references/research_tool_fallback.md`
 - **MANDATORY READ:** `shared/references/tools_config_guide.md`
 - **MANDATORY READ:** `shared/references/storage_mode_detection.md`

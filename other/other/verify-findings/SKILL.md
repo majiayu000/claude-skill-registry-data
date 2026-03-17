@@ -123,3 +123,4 @@ See [EXAMPLES.md](EXAMPLES.md) for sample verified reports.
 
 - [WORKFLOW.md](WORKFLOW.md) — Detailed verification procedures, verdict decision matrix, web research protocol, report template
 - [EXAMPLES.md](EXAMPLES.md) — Sample verified reports for code and security reviews
+- [TROUBLESHOOTING.md](TROUBLESHOOTING.md) — Common issues with input parsing, verification quality, and output

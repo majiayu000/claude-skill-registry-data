@@ -598,9 +598,3 @@ cargo +nightly miri run
 # ThreadSanitizer
 clang++ -fsanitize=thread -g source.cpp
 ```
-
-## Resources
-
-- [C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/)
-- [Rust Ownership](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html)
-- [AddressSanitizer](https://clang.llvm.org/docs/AddressSanitizer.html)

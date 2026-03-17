@@ -353,31 +353,3 @@ contract OptimizedNFT is ERC721A {
     }
 }
 ```
-
-## Resources
-
-- **references/erc721.md**: ERC-721 specification details
-- **references/erc1155.md**: ERC-1155 multi-token standard
-- **references/metadata-standards.md**: Metadata best practices
-- **references/enumeration.md**: Token enumeration patterns
-- **assets/erc721-contract.sol**: Production ERC-721 template
-- **assets/erc1155-contract.sol**: Production ERC-1155 template
-- **assets/metadata-schema.json**: Standard metadata format
-- **assets/metadata-uploader.py**: IPFS upload utility
-
-## Best Practices
-
-1. **Use OpenZeppelin**: Battle-tested implementations
-2. **Pin Metadata**: Use IPFS with pinning service
-3. **Implement Royalties**: EIP-2981 for marketplace compatibility
-4. **Gas Optimization**: Use ERC721A for batch minting
-5. **Reveal Mechanism**: Placeholder → reveal pattern
-6. **Enumeration**: Support walletOfOwner for marketplaces
-7. **Whitelist**: Merkle trees for efficient whitelisting
-
-## Marketplace Integration
-
-- OpenSea: ERC-721/1155, metadata standards
-- LooksRare: Royalty enforcement
-- Rarible: Protocol fees, lazy minting
-- Blur: Gas-optimized trading

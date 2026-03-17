@@ -42,7 +42,7 @@ bd update <task_id> --status in_progress
 bd sync
 ```
 
-This must happen BEFORE any other setup (worktree creation, context gathering, etc.) to minimize the window where two workers might claim the same task.
+This must happen BEFORE any other setup (branch creation, context gathering, etc.) to minimize the window where two workers might claim the same task.
 
 ## 2. Display Handoff Context (if provided)
 
@@ -154,21 +154,17 @@ bd update <task_id> --notes "Research: <brief summary of findings>"
 
 ---
 
-## 7. Verify Worktree Isolation
+## 7. Verify Branch Isolation
 
-This skill expects to be run inside an isolated worktree. Environment setup (`.env` symlinks, `BEADS_NO_DAEMON=1`) is handled automatically by hooks.
+Ensure you are on a task-specific branch, not `main` or `master`. Workers must isolate their changes on dedicated branches.
 
 ```bash
-TOPLEVEL=$(git rev-parse --show-toplevel)
-MAIN_REPO=$(git worktree list | head -1 | awk '{print $1}')
-
-if [ "$TOPLEVEL" = "$MAIN_REPO" ]; then
-  echo "WARNING: Not in a worktree. Start with: claude --worktree <task-id>"
-  echo "Or dispatch with /dispatch which creates worktrees automatically."
-  exit 1
+CURRENT_BRANCH=$(git branch --show-current)
+if [ "$CURRENT_BRANCH" = "main" ] || [ "$CURRENT_BRANCH" = "master" ]; then
+  echo "WARNING: On main branch. Creating task branch..."
+  git checkout -b <task_id>
 fi
-
-echo "Running in worktree at $TOPLEVEL — environment setup handled by WorktreeCreate hook."
+echo "Running on branch $(git branch --show-current)"
 ```
 
 ## 8. Assess Task Size
@@ -210,7 +206,7 @@ bd update <parent-task-id> --status open
 
 Then ask: "Which subtask should we work on? I'll switch to that task."
 
-If they pick a subtask, **start over from step 1** with the subtask ID. The current worktree can be reused or removed.
+If they pick a subtask, **start over from step 1** with the subtask ID.
 
 **If appropriately sized**, continue to step 9.
 
@@ -292,7 +288,6 @@ This command handles everything required to properly close out:
 - Runs automated code review
 - Generates session summary for orchestrator
 - Closes the task in beads
-- Cleans up the worktree
 
 **DO NOT**:
 - Stop the session without running `/finish-task`

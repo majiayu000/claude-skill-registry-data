@@ -1,7 +1,17 @@
 ---
 name: pol-probe
-description: Define a Proof of Life (PoL) probe—a lightweight validation artifact that surfaces harsh truths before expensive development. Use it to test hypotheses with minimal investment.
+description: Define a Proof of Life probe to test a risky hypothesis cheaply. Use when you need harsh truth before building real product.
+intent: >-
+  Define and document a **Proof of Life (PoL) probe**—a lightweight, disposable validation artifact designed to surface harsh truths before expensive development. Use this when you need to eliminate a specific risk or test a narrow hypothesis **without building production-quality software**. PoL probes are reconnaissance missions, not MVPs—they're meant to be deleted, not scaled.
 type: component
+best_for:
+  - "Documenting a lightweight validation artifact before build"
+  - "Testing a narrow hypothesis without shipping production software"
+  - "Reducing risk before spending engineering time"
+scenarios:
+  - "Define a Proof of Life probe for a new workflow automation idea"
+  - "Help me write a PoL probe for this pricing hypothesis"
+  - "Create a low-cost validation probe before we build this feature"
 ---
 
 ## Purpose

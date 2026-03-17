@@ -1,7 +1,17 @@
 ---
 name: customer-journey-mapping-workshop
-description: Guide product managers through creating a customer journey map by asking adaptive questions about the actor (persona), scenario/goal, journey phases, actions/emotions, and opportunities for improvemen
+description: Run a customer journey mapping workshop with adaptive questions and outputs. Use when you need to map stages, actions, emotions, pain points, and opportunities for a persona and scenario.
+intent: >-
+  Guide product managers through creating a customer journey map by asking adaptive questions about the actor (persona), scenario/goal, journey phases, actions/emotions, and opportunities for improvement. Use this to visualize the end-to-end customer experience, identify pain points, and create a shared mental model across teams—avoiding surface-level feature lists and ensuring discovery work focuses on real customer problems, not assumed solutions.
 type: interactive
+best_for:
+  - "Running a workshop to map an end-to-end customer experience"
+  - "Finding pain points across a user's journey"
+  - "Aligning teams on the stages, emotions, and breakdowns in an experience"
+scenarios:
+  - "Help me run a journey mapping workshop for new customer onboarding"
+  - "Map the experience of a buyer from trial signup to first value"
+  - "Facilitate a workshop on the support journey for churn-risk customers"
 ---
 
 

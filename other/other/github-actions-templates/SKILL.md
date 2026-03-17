@@ -320,12 +320,6 @@ jobs:
             }
 ```
 
-## Reference Files
-
-- `assets/test-workflow.yml` - Testing workflow template
-- `assets/deploy-workflow.yml` - Deployment workflow template
-- `assets/matrix-build.yml` - Matrix build template
-- `references/common-workflows.md` - Common workflow patterns
 
 ## Related Skills
 

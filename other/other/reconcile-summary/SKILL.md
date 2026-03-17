@@ -1,6 +1,6 @@
 ---
 name: reconcile-summary
-description: "Review a worker session summary and reconcile beads tasks with implementation reality"
+description: "Review a worker session summary and reconcile beads tasks with implementation reality. Use after a worker completes /finish-task to sync the task board with what was actually implemented. Invoked by orchestrator sessions, or with /reconcile-summary <task-id>."
 allowed-tools: Read, Bash, Glob, Grep, Edit, Write, SendMessage, TeamDelete, TaskList, AskUserQuestion
 ---
 

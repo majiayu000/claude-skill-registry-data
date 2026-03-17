@@ -31,6 +31,19 @@ roadmap:
 
 If `context_dir` exists, read all `.md` files in it — especially `project.md` for personas, domain, and constraints.
 
+### Priority 1b: Johnny Decimal Detection
+
+Check if the project uses Johnny Decimal documentation structure:
+1. Read `.jd-config.json` at project root — if present, use its `root` (default: `docs`) and `areas` map
+2. If no config, glob for `docs/[0-9][0-9]-*/` — if 2+ matches exist, J.D structure is present
+
+If J.D detected, supplement Priority 3 (Dynamic Discovery) globs:
+- Add `{jd_root}/10-*/**/*.md` (product specs, features, roadmap)
+- Add `{jd_root}/00-*/**/*.md` (planning, requirements, setup)
+- Add `{jd_root}/30-*/**/*.md` (research relevant to product)
+- Skip `90-*` (archive) unless searching historical context
+- Keep existing non-J.D paths as fallback
+
 ### Priority 2: Project Identity
 
 Read `CLAUDE.md` and `README.md` from the project root to understand:

@@ -733,25 +733,3 @@ async def test_with_timeout():
     with pytest.raises(asyncio.TimeoutError):
         await asyncio.wait_for(slow_operation(5), timeout=1.0)
 ```
-
-## Resources
-
-- **Python asyncio documentation**: https://docs.python.org/3/library/asyncio.html
-- **aiohttp**: Async HTTP client/server
-- **FastAPI**: Modern async web framework
-- **asyncpg**: Async PostgreSQL driver
-- **motor**: Async MongoDB driver
-
-## Best Practices Summary
-
-1. **Use asyncio.run()** for entry point (Python 3.7+)
-2. **Always await coroutines** to execute them
-3. **Limit concurrency with semaphores** - unbounded `gather()` can exhaust resources
-4. **Implement proper error handling** with try/except
-5. **Use timeouts** to prevent hanging operations
-6. **Pool connections** for better performance
-7. **Never block the event loop** - use `asyncio.to_thread()` for sync code
-8. **Use semaphores** for rate limiting external API calls
-9. **Handle task cancellation** properly - always re-raise `CancelledError`
-10. **Test async code** with pytest-asyncio
-11. **Stay consistent** - fully sync or fully async, avoid mixing

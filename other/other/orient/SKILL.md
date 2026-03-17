@@ -114,7 +114,7 @@ When the project state suggests ambiguity — multiple possible root causes, unc
 - Tests failing with unclear cause
 - Recent reverts or fix-on-fix commits in git log
 - Task descriptions reference "investigate", "debug", "figure out"
-- Stale worktrees from abandoned parallel work
+- Stale branches from abandoned parallel work
 
 **If investigation is warranted**, create investigation tasks in beads:
 
@@ -139,7 +139,6 @@ who will plan their approach before diving in."
 
 ```bash
 bd status 2>/dev/null || echo "Beads not configured"
-bd version 2>/dev/null
 ```
 
 ### 2.2 Recently Completed Work
@@ -149,7 +148,7 @@ bd version 2>/dev/null
 git log --oneline -15
 
 # Recently closed tasks
-bd list --all 2>/dev/null | grep -i closed | head -10
+bd list --status closed --sort closed --reverse --limit 10 2>/dev/null
 ```
 
 Understand:
@@ -157,28 +156,68 @@ Understand:
 - Patterns in recent work
 - Momentum and direction
 
-### 2.3 Current Task State
+### 2.3 Epic Landscape
+
+Gather epic-level data. This is the primary strategic view.
 
 ```bash
-# All open tasks by priority
-bd list 2>/dev/null
+# Epic completion status (shows % done, child counts)
+bd epic status 2>/dev/null
 
-# Ready work (no blockers)
-bd ready 2>/dev/null
+# All open epics with priority
+bd list --type=epic 2>/dev/null
+
+# Full dependency graph across all open issues
+bd graph --all --compact 2>/dev/null
 ```
 
-### 2.4 Dependency Analysis
+Classify epics into two tiers based on priority:
+- **FOCUS** (P0-P1): Epics to actively progress this session
+- **DEFERRED** (P2+): Epics acknowledged but not for now
 
-For each ready task, check what it blocks:
+**If no epics exist**, skip sections 2.4-2.5. Instead run `bd ready` and `bd list` directly, then proceed to Phase 3. The report will use the flat-task fallback template (see Phase 4 edge cases).
+
+### 2.4 Primary Epic Drill-Down
+
+Pick the single highest-priority FOCUS epic that has ready tasks. If multiple FOCUS epics share the same priority, pick the one with the most ready tasks. Drill into it:
 
 ```bash
-bd show <task-id>
+# Task dependency graph within the epic
+bd graph <epic-id> 2>/dev/null
+
+# Ready tasks within this epic
+bd ready --parent <epic-id> 2>/dev/null
+
+# All children for full picture
+bd list --parent <epic-id> 2>/dev/null
 ```
 
-Identify:
+Gather details for ready and blocked tasks in a single batch:
+
+```bash
+# Show details for all children (ready, blocked, in-progress) at once
+bd show <task-id-1> <task-id-2> <task-id-3> ...
+```
+
+From the output, identify:
 - Critical path tasks (block the most downstream work)
 - Independent tasks (can run in parallel)
 - Research vs implementation tasks
+- What each blocked task is waiting on
+- What is already in-progress and who is working on it
+
+**If no epic has ready tasks**, note that all focus epics are blocked and show what they're waiting on.
+
+### 2.5 Orphan Tasks
+
+Identify ready tasks not belonging to any epic:
+
+```bash
+# All ready tasks globally
+bd ready 2>/dev/null
+```
+
+Cross-reference this output against the tasks already seen under epics (from `bd list --parent` in 2.4 and `bd epic status` in 2.3). Any task that appears in `bd ready` but was not listed under any epic is an orphan. These should still appear in dispatch recommendations.
 
 ## Phase 3: Codebase Health Check
 
@@ -201,12 +240,12 @@ git stash list
 
 Check for:
 - Uncommitted changes
-- Active worktrees (parallel work in progress)
+- Active worktrees/branches (parallel work in progress)
 - Stashed work that needs attention
 
 ## Phase 4: Synthesis & Recommendations
 
-After gathering all information, provide a structured orientation report:
+After gathering all information, provide a structured orientation report. The report is organized as a **layered drill-down**: strategic overview → focused epic → actionable tasks.
 
 ```
 ===============================================
@@ -220,52 +259,121 @@ Purpose: <1-2 sentence description>
 Stack: <key technologies>
 Repo: <git remote URL>
 
-DOCUMENTATION STATUS
---------------------
-<List docs found and key takeaways from each>
-
-CURRENT STATE
--------------
+HEALTH CHECK
+------------
 Git branch: <current branch>
 Working tree: <clean/dirty>
-Active worktrees: <count and purpose>
+Active branches: <count and purpose>
 Test health: <passing/failing count>
+Recently completed: <list last 3-5 items>
 
-TASK OVERVIEW
--------------
-Total open: <count>
-Ready (no blockers): <count>
-In progress: <count>
-Recently completed: <list last 3-5>
+═══════════════════════════════════════════════
+EPIC LANDSCAPE
+═══════════════════════════════════════════════
 
-CRITICAL PATH ANALYSIS
-----------------------
-<Identify which tasks block the most downstream work>
+▸ FOCUS EPICS (P0–P1) — progress these now
+──────────────────────────────────────────────
+<For each P0-P1 epic, show:>
 
-RECOMMENDED PARALLEL WORK STREAMS
----------------------------------
-The following tasks can be executed simultaneously in separate Claude sessions:
+  <epic-id>  <title>                          <status-icon> <completion%>
+             <total> children: <done>✓ <ready>○ <blocked>● <in-progress>◐
+
+<Example:>
+  bd-10  Implement auth system               ◐ 40%
+         10 children: 4✓ 3○ 2● 1◐
+
+  bd-25  API rate limiting                    ○ 0%
+         5 children: 0✓ 2○ 3●
+
+▸ DEFERRED EPICS (P2+) — acknowledged, not now
+──────────────────────────────────────────────
+<For each P2+ epic, single line:>
+
+  <epic-id>  <title>                          <completion%>
+
+<Example:>
+  bd-40  Admin dashboard redesign            0%
+  bd-55  Migrate to new ORM                  15%
+
+▸ DEPENDENCY MAP — how epics relate
+──────────────────────────────────────────────
+<Include the output of `bd graph --all --compact` here.>
+<If no inter-epic dependencies, write: "No cross-epic dependencies defined.">
+
+═══════════════════════════════════════════════
+PRIMARY EPIC: <epic-id> — <epic title>
+═══════════════════════════════════════════════
+
+<This section drills into the single highest-priority FOCUS epic
+that has ready tasks. Show its full task structure.>
+
+▸ TASK DEPENDENCY GRAPH
+──────────────────────────────────────────────
+<Include the output of `bd graph <epic-id>` here.>
+<This shows execution layers — layer 0 can start immediately,
+higher layers depend on lower layers.>
+
+▸ READY TASKS — can start immediately
+──────────────────────────────────────────────
+<For each ready task in this epic:>
+
+  <task-id>  <title>
+             Type: <feature/task/research>  Priority: <P0-P4>
+             Blocks: <what this unblocks when done, or "nothing">
+
+▸ IN PROGRESS — already claimed
+──────────────────────────────────────────────
+<For each in-progress task in this epic. Omit section if none.>
+
+  <task-id>  <title>
+             Assignee: <assignee or "unassigned">
+
+▸ BLOCKED TASKS — waiting on dependencies
+──────────────────────────────────────────────
+<For each blocked task in this epic:>
+
+  <task-id>  <title>
+             Waiting on: <list of blocking task-ids and titles>
+
+═══════════════════════════════════════════════
+DISPATCH RECOMMENDATION
+═══════════════════════════════════════════════
+
+▸ ORPHAN TASKS — ready work outside any epic
+──────────────────────────────────────────────
+<Any ready tasks not belonging to an epic. Omit if none.>
+
+  <task-id>  <title>
+             Type: <type>  Priority: <P0-P4>
+
+▸ RECOMMENDED STREAMS
+──────────────────────────────────────────────
+The following tasks can be executed simultaneously:
 
 Stream 1: <task-id> - <title>
-  Priority: <P1/P2/P3>
-  Type: <feature/task/research>
+  Epic: <epic-id> - <epic title> (or "orphan" if no parent epic)
+  Priority: <P0-P4>  Type: <feature/task/research>
   Rationale: <why this should be worked on>
   Blocks: <what this unblocks when done>
   Start command: /start-task <task-id>
 
 Stream 2: <task-id> - <title>
-  Priority: <P1/P2/P3>
-  Type: <feature/task/research>
+  Epic: <epic-id> - <epic title> (or "orphan" if no parent epic)
+  Priority: <P0-P4>  Type: <feature/task/research>
   Rationale: <why this should be worked on>
   Blocks: <what this unblocks when done>
   Start command: /start-task <task-id>
 
 Stream 3: <task-id> - <title>
-  Priority: <P1/P2/P3>
-  Type: <feature/task/research>
+  Epic: <epic-id> - <epic title> (or "orphan" if no parent epic)
+  Priority: <P0-P4>  Type: <feature/task/research>
   Rationale: <why this should be worked on>
   Blocks: <what this unblocks when done>
   Start command: /start-task <task-id>
+
+<Streams may draw from the primary epic, other focus epics, or orphan tasks.
+Prioritize tasks from the primary epic but include tasks from other focus epics
+if they are independent and parallelizable.>
 
 BLOCKERS & RISKS
 ----------------
@@ -285,6 +393,26 @@ END ORIENTATION REPORT
 ===============================================
 ```
 
+### Report Edge Cases
+
+Handle these gracefully:
+
+- **No epics exist**: Skip the EPIC LANDSCAPE and PRIMARY EPIC sections entirely. Replace them with a flat task section:
+  ```
+  ═══════════════════════════════════════════════
+  TASK OVERVIEW (no epics defined)
+  ═══════════════════════════════════════════════
+  Total open: <count>
+  Ready (no blockers): <count>
+  In progress: <count>
+  ```
+  Then proceed directly to DISPATCH RECOMMENDATION, omitting the "Epic:" line from each stream.
+
+- **No dependencies defined**: Show the DEPENDENCY MAP section but write "No cross-epic dependencies defined. Consider adding dependencies with `bd dep add`."
+- **No ready tasks in primary epic**: Show the PRIMARY EPIC section with only IN PROGRESS and BLOCKED TASKS. Note what needs to complete before work can proceed.
+- **All epics same priority**: Show all as FOCUS. Add a note: "All epics are the same priority — consider differentiating with `bd update <id> --priority <N>`."
+- **Primary epic has no children**: Show it in FOCUS EPICS but note "No tasks decomposed yet — consider breaking down with `bd create --parent <epic-id>`."
+
 ## Phase 5: Ready for Action
 
 After presenting the orientation report, **ALWAYS offer `/dispatch` as the primary action when there are 2+ ready tasks.**
@@ -301,7 +429,7 @@ Present the following call-to-action:
 
 This will spawn parallel Claude Code workers for the ready tasks. Each worker will:
 1. Auto-receive their task assignment via the handoff queue
-2. Create a git worktree for isolation
+2. Create a task-specific branch for isolation
 3. Run `/start-task <task-id>` automatically
 4. Work autonomously until completion
 

@@ -1,6 +1,6 @@
 ---
 name: ln-512-tech-debt-cleaner
-description: "Reads codebase audit findings, applies safe auto-fixes for low-risk issues (unused imports, dead code, commented-out code, deprecated aliases). Confidence >=90% only. Creates single commit with summary."
+description: "Applies safe auto-fixes for low-risk audit findings (unused imports, dead code, commented-out code). Confidence >=90% only. Creates single commit with summary."
 license: MIT
 ---
 
@@ -75,18 +75,22 @@ Automated cleanup of safe, low-risk tech debt findings from codebase audits.
       - For deprecated aliases: verify no consumers remain
    d) Assign confidence score (0-100). Only proceed if confidence >=90
 
-4) **Apply fixes (bottom-up within each file):**
-   - Sort fixes by line number descending (bottom-up prevents line shift issues)
-   - Apply each fix using Edit tool
-   - Track: file, lines removed, category, original finding ID
+4) **Apply fixes with per-fix keep/discard (autoresearch pattern):**
+   **MANDATORY READ:** Load `shared/references/ci_tool_detection.md` for discovery hierarchy. Detect lint + typecheck commands once (reuse for all fixes).
 
-5) **Verify build integrity:**
-   Per `shared/references/ci_tool_detection.md` discovery hierarchy: detect and run lint + typecheck commands.
-   - If ANY check fails: revert ALL changes (`git checkout .`), report failure
-   - If no lint/type commands detected: skip verification with warning
+   Group verified fixes by file. For each file (process files independently):
+   - Sort fixes within file by line number descending (bottom-up prevents line shift)
+   - Apply ALL fixes for this file using Edit tool
+   - Run lint/typecheck on the modified file
+   - **IF passes** → `git add {file}` (status: **keep**)
+   - **IF fails** → `git checkout -- {file}` (status: **discard**), log discarded fixes
+   - Track per fix: file, lines removed, category, finding ID, status (keep/discard)
 
-6) **Create commit:**
-   - Stage only modified files (explicit `git add` per file, not `git add .`)
+   If no lint/type commands detected: apply all fixes, skip per-file verification with warning, `git add` all modified files.
+
+5) **Create commit (kept fixes only):**
+   - All kept files already staged via `git add` in step 4
+   - If zero files kept (all discarded): skip commit, report all failures
    - Commit message format:
      ```
      chore: automated tech debt cleanup
@@ -114,25 +118,27 @@ Automated cleanup of safe, low-risk tech debt findings from codebase audits.
 ## Output Format
 
 ```yaml
-verdict: CLEANED | NOTHING_TO_CLEAN | BUILD_FAILED
+verdict: CLEANED | NOTHING_TO_CLEAN | ALL_DISCARDED
 stats:
   total_findings: {from audit}
   auto_fixable: {filtered count}
-  applied: {actually fixed}
+  kept: {files that passed lint/typecheck}
+  discarded: {files that failed lint/typecheck}
   skipped: {confidence <90 or stale}
-  reverted: {if build failed, all}
 fixes:
   - file: "src/utils/helpers.ts"
     line: 45
     category: "unused_function"
     removed: "formatDate()"
     finding_id: "MNT-DC-003"
+    status: "keep"
   - file: "src/api/v1/auth.ts"
     line: 12
     category: "deprecated_alias"
     removed: "export { newAuth as oldAuth }"
     finding_id: "MNT-DC-007"
-build_check: PASSED | SKIPPED | FAILED
+    status: "discard"
+    discard_reason: "typecheck failed: Type error in auth.ts:15"
 commit_sha: "abc1234" | null
 ```
 
@@ -140,7 +146,7 @@ commit_sha: "abc1234" | null
 
 - **Safety first:** Never fix if confidence <90%. When in doubt, skip.
 - **Bottom-up editing:** Always apply fixes from bottom to top of file to avoid line number shifts.
-- **Build verification:** If linter/type-checker fails after fixes, revert ALL changes immediately.
+- **Per-file keep/discard:** If linter/type-checker fails for a file, revert only that file (`git checkout -- {file}`), keep other successful files.
 - **No business logic:** Never modify function bodies, conditionals, or control flow.
 - **Explicit staging:** Stage files by name, never `git add .` or `git add -A`.
 - **Idempotent:** Running twice produces no changes if audit report unchanged.

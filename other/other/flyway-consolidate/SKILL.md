@@ -83,7 +83,7 @@ Present ambiguous cases to the user for decision.
 
 ## Examples
 
-See [EXAMPLES.md](EXAMPLES.md) for complete before/after consolidation scenarios:
+See [EXAMPLES.md](EXAMPLES.md) for complete before/after consolidation scenarios and [TROUBLESHOOTING.md](TROUBLESHOOTING.md) for common issues:
 - Column evolution chains collapsed into single CREATE TABLE
 - Multi-domain consolidation (40 migrations to 6)
 - FK dependency resolution across domains
