@@ -8,7 +8,7 @@ This repo contains the **archived skill contents** (the heavy, browsable skill f
 - Case conflicts are resolved with `{name}-{owner}-{repo}` suffixes (fallback: `-{short-hash}`).
 
 **Archive size**
-- **226,007** `SKILL.md` files (as of 2026-04-08)
+- **226,042** `SKILL.md` files (as of 2026-04-08)
 
 **Where the index + site live**
 - Core repo: https://github.com/majiayu000/claude-skill-registry-core
