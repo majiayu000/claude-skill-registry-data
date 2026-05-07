@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/majiayu000/claude-skill-registry-data/schemas/skill-metadata.schema.json",
+  "title": "Claude Skill Registry — metadata.json",
+  "description": "Schema for the per-skill metadata.json sidecar that lives alongside each SKILL.md in the registry archive.",
+  "type": "object",
+  "required": ["name", "category", "dir_name"],
+  "additionalProperties": true,
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200,
+      "description": "Canonical skill name. Should match the SKILL.md frontmatter `name` field."
+    },
+    "category": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[a-z][a-z0-9-]*$",
+      "description": "Top-level category folder. Must match the parent category directory."
+    },
+    "dir_name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "On-disk directory name. Must match the basename of the directory holding metadata.json."
+    },
+    "description": {
+      "type": "string",
+      "description": "Short description from SKILL.md frontmatter. Strongly recommended. May be the empty string only when the upstream SKILL.md frontmatter has no description."
+    },
+    "repo": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9._-]+/[A-Za-z0-9._-]+$",
+      "description": "Upstream `owner/repo` GitHub identifier."
+    },
+    "source": {
+      "type": "string",
+      "description": "Free-form provenance label (e.g. `github.com/owner/repo`)."
+    },
+    "source_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Canonical URL of the upstream skill, when known."
+    },
+    "github_branch": {
+      "type": "string",
+      "description": "Upstream branch name the snapshot was taken from."
+    },
+    "github_path": {
+      "type": "string",
+      "description": "Path inside the upstream repo where the SKILL.md lives."
+    },
+    "path": {
+      "type": "string",
+      "description": "Legacy field: same shape as github_path. Newer entries should prefer github_path."
+    },
+    "branch": {
+      "type": "string",
+      "description": "Legacy field: same shape as github_branch."
+    },
+    "source_path": {
+      "type": "string",
+      "description": "Legacy field: same shape as github_path."
+    },
+    "downloaded_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 timestamp of the archive snapshot."
+    },
+    "imported_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "fetched_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "stars": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Upstream star count at snapshot time."
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "description": "Free-form tag list."
+    },
+    "author": {
+      "type": "string"
+    },
+    "license": {
+      "type": "string",
+      "description": "SPDX or free-form license string."
+    },
+    "license_class": {
+      "type": "string",
+      "enum": ["compatible", "restricted", "unknown"],
+      "description": "Coarse license classification used by the registry. `compatible` = redistribution OK; `restricted` = limited redistribution; `unknown` = not yet classified."
+    },
+    "distribution": {
+      "type": "string",
+      "enum": ["compatible", "restricted", "unknown"],
+      "description": "Mirrors license_class for now; kept as a separate field so distribution policy can diverge from upstream license."
+    },
+    "copyright": {
+      "type": "string"
+    },
+    "permission_note": {
+      "type": "string"
+    }
+  }
+}
