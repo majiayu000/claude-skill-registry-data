@@ -1,0 +1,107 @@
+name: Validate skill metadata
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**/metadata.json"
+      - "**/SKILL.md"
+      - "schemas/**"
+      - "tools/**"
+      - ".github/workflows/validate.yml"
+  pull_request:
+    paths:
+      - "**/metadata.json"
+      - "**/SKILL.md"
+      - "schemas/**"
+      - "tools/**"
+      - ".github/workflows/validate.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  unit-tests:
+    name: Tooling unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Tests use synthetic fixtures, no need to clone the full archive.
+          sparse-checkout: |
+            schemas
+            tools
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install jsonschema (optional, exercises the rich validator path)
+        run: python -m pip install --upgrade pip jsonschema
+      - name: Run unit tests
+        run: python -m unittest discover tools/ -v
+
+  validate-changed-metadata:
+    name: Validate metadata changed in this PR
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install jsonschema
+        run: python -m pip install --upgrade pip jsonschema
+      - name: Collect changed metadata.json paths
+        id: changed
+        run: |
+          base="${{ github.event.pull_request.base.sha }}"
+          head="${{ github.event.pull_request.head.sha }}"
+          mapfile -t paths < <(git diff --name-only --diff-filter=AM "$base" "$head" -- '**/metadata.json')
+          {
+            echo "count=${#paths[@]}"
+            echo 'paths<<EOF'
+            for p in "${paths[@]}"; do echo "$p"; done
+            echo 'EOF'
+          } >>"$GITHUB_OUTPUT"
+      - name: Validate
+        if: steps.changed.outputs.count != '0'
+        run: |
+          # shellcheck disable=SC2046
+          python tools/validate_metadata.py \
+            --paths $(printf '%s\n' "${{ steps.changed.outputs.paths }}" | tr '\n' ' ') \
+            --max-issues 200 \
+            --json validation-report.json
+      - name: Upload report
+        if: always() && hashFiles('validation-report.json') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: validation-report
+          path: validation-report.json
+
+  validate-sample:
+    name: Validate random 2000-skill sample (smoke)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install jsonschema
+        run: python -m pip install --upgrade pip jsonschema
+      - name: Validate
+        run: |
+          python tools/validate_metadata.py \
+            --sample 2000 \
+            --max-issues 50 \
+            --json validation-sample-report.json
+      - name: Upload sample report
+        if: always() && hashFiles('validation-sample-report.json') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: validation-sample-report
+          path: validation-sample-report.json
