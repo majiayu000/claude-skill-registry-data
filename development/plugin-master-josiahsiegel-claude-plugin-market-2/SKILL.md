@@ -1,15 +1,9 @@
 ---
 name: plugin-master
 description: |
-  Complete Claude Code plugin development system. PROACTIVELY activate when users want to:
-  (1) Create/build/make plugins with 2025 features
-  (2) Add skills/commands/agents to plugins
-  (3) Package existing code as plugins
-  (4) Publish plugins to marketplace
-  (5) Validate plugin structure
-  (6) Get plugin development guidance
-  Autonomously creates production-ready plugins with proper structure and best practices.
-license: MIT
+  Complete guide to Claude Code plugin development, architecture, directory layout, components, and marketplace publishing.
+  PROACTIVELY activate for: (1) creating a plugin from scratch, (2) building or scaffolding a plugin, (3) writing plugin.json, (4) adding commands/agents/skills/hooks/MCP servers, (5) packaging code as a plugin, (6) publishing to a marketplace, (7) validating plugin structure, (8) marketplace.json registration, (9) cross-platform compatibility, (10) version and metadata sync.
+  Provides: plugin schema, layouts, workflows, and publishing steps.
 ---
 
 # Plugin Development Guide
@@ -35,7 +29,7 @@ license: MIT
 
 ### Directory Structure
 
-```
+```text
 plugin-name/
 ├── .claude-plugin/
 │   └── plugin.json          # MUST be inside .claude-plugin/
@@ -140,7 +134,13 @@ mkdir -p $PLUGIN_DIR/skills/domain-knowledge
 3. **skills/domain-knowledge/SKILL.md** - Core knowledge
 4. **README.md** - Documentation
 
-### Step 4: Register in Marketplace
+### Step 4 (conditional): Attribution manifest
+
+If the plugin ships any vendored, derived, or licensed third-party content, create `NOTICES.md` at the plugin root **before** registering in the marketplace. Treat it as a first-class shipping artifact alongside `plugin.json` and `README.md`, not as doc polish. See `references/publishing-guide.md` ("Licensed / Vendored / Derived Content" checklist) for the structural integrity, license-text-preservation, and cross-reference requirements.
+
+If the plugin contains no third-party content, skip this step.
+
+### Step 5: Register in Marketplace
 
 **CRITICAL**: If `.claude-plugin/marketplace.json` exists at repo root, you MUST add the plugin:
 
@@ -183,13 +183,11 @@ Autonomous subagents in `agents/*.md`:
 ---
 name: agent-name
 description: |
-  Use this agent when... Examples:
-  <example>
-  Context: ...
-  user: "..."
-  assistant: "..."
-  <commentary>Why trigger</commentary>
-  </example>
+  Brief role summary. PROACTIVELY activate for: (1) trigger, (2) trigger, ..., (N) trigger. Provides: capability list.
+
+  # Optional. Include 3-5 <example> blocks ONLY when the agent body
+  # exceeds 2,500 words. Lean orchestrators omit them by design.
+  # See agent-development "Example-block requirement by agent body size".
 model: inherit
 color: blue
 ---
@@ -259,7 +257,7 @@ Never use hardcoded absolute paths.
 |-------|----------|
 | Plugin not loading | Check plugin.json is in `.claude-plugin/` |
 | Commands missing | Verify frontmatter has `description` field |
-| Agent not triggering | Add `<example>` blocks to description |
+| Agent not triggering | Check description has `PROACTIVELY activate for:` enumeration. Add 3-5 `<example>` blocks only if agent body > 2,500 words — see `agent-development` SKILL.md "Example-block requirement by agent body size". Lean orchestrators are exempt. |
 | Marketplace not found | Ensure repo is public, check path in marketplace.json |
 
 ## Additional Resources
