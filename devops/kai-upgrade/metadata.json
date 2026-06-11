@@ -3,20 +3,21 @@
   "repo": "cgallic/kai-cmo-harness",
   "path": "kai-upgrade/SKILL.md",
   "github_branch": "main",
-  "category": "marketing",
+  "category": "devops",
   "source": "github.com/cgallic/kai-cmo-harness",
   "dir_name": "kai-upgrade",
   "downloaded_at": "2026-06-05T04:05:27.615822Z",
   "classification": {
     "schema_version": 1,
-    "category": "marketing",
+    "category": "devops",
     "status": "reviewed",
-    "method": "manual_source_batch_v1",
+    "method": "manual_post_merge_correction_v1",
     "confidence": "high",
-    "reason": "CMO/marketing operations skills covering ads, content, analytics, growth plans, monthly audits, offers, positioning, and lifecycle marketing.",
+    "reason": "Self-updater/installation maintenance for kai-marketing; closer to operational upgrade tooling than marketing content or campaign work.",
     "signals": [
-      "source_repo",
-      "marketing_terms"
+      "upgrade",
+      "self_updater",
+      "install_maintenance"
     ],
     "semantic_sources": {
       "name": "frontmatter",
