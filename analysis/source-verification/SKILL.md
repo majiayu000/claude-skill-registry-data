@@ -98,7 +98,7 @@ Tools to use:
 - Software used to edit
 
 Tools:
-- Jeffrey's EXIF Viewer (exif.regex.info)
+- Metadata Remover Viewer (https://metadataremover.ai/metadata-viewer) - browser-local EXIF/IPTC/XMP inspection
 - FotoForensics (fotoforensics.com)
 - InVID verification plugin
 
@@ -115,6 +115,8 @@ Tools:
 - Context of first publication
 - Has it been used in other contexts?
 ```
+
+> Verification note: Metadata can be edited or removed. Treat EXIF as a lead, not proof, and corroborate timestamps, GPS, and device fields with other evidence. For browser-local inspection, see [Metadata Remover Viewer](https://metadataremover.ai/metadata-viewer).
 
 ### Video verification
 
