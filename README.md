@@ -23,3 +23,27 @@ This repo contains the **archived skill contents** (the heavy, browsable skill f
 - Main repo (merged publish artifact): https://github.com/majiayu000/claude-skill-registry
 
 Browse the [public skill search and installation guides](https://majiayu000.github.io/claude-skill-registry/) for discovery. This archive is consumed by the core pipeline; it is not a standalone installer.
+
+## Trace an archived skill
+
+Open `<category>/<skill>/metadata.json` next to its `SKILL.md`. Use `repo` and
+`path` to locate the original file, then follow `source_url` to check the current
+upstream version. `downloaded_at` describes the archived copy's timestamp, not a
+promise that it matches today's upstream content.
+
+Read `author`, `license`, `permission_note` and `distribution` before reuse.
+The registry maintainer is not necessarily the skill author. `NOASSERTION` means
+no license assertion was established; `restricted` is not permission to reuse
+or redistribute. The pipeline's MIT license does not relicense archived skills.
+
+For example, the metadata beside
+[`development/0-claude/SKILL.md`](development/0-claude/SKILL.md) points to
+`brixtonpham/claude-config`, records `NOASSERTION`, and marks distribution as
+`restricted`. Inspect that entry's [metadata](development/0-claude/metadata.json)
+and its upstream permission terms rather than treating it as a first-party
+majiayu000 skill.
+
+Use the [public catalog](https://majiayu000.github.io/claude-skill-registry/) to
+find installation guidance instead of installing this archive as one skill.
+Report skill behavior problems upstream; send attribution or removal requests
+through the [core procedure](https://github.com/majiayu000/claude-skill-registry-core/blob/main/REMOVAL.md).
