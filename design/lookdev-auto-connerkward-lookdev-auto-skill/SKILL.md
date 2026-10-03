@@ -4,6 +4,7 @@ description: 'Automated visual tuning: render labeled variants into one artifact
   a vision/video model rates them and suggests better values, loop until good.'
 author: Conner K Ward
 ---
+
 # Visual eval loop — let a vision/video model tune what only an eye can judge
 
 When the target is "does this LOOK/FEEL right" (not a number you can minimize), a
