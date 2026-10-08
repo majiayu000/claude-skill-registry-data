@@ -1,0 +1,37 @@
+{
+  "name": "timescaledb-hyperfunctions",
+  "repo": "timescale/pg-aiguide",
+  "path": "skills/timescaledb-hyperfunctions/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/timescale/pg-aiguide",
+  "dir_name": "timescaledb-hyperfunctions",
+  "downloaded_at": "2026-10-08T05:22:45.023934Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql",
+    "score": 2,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "sql"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "timescale",
+  "source_url": "https://github.com/timescale/pg-aiguide/blob/main/skills/timescaledb-hyperfunctions/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/timescale/pg-aiguide/blob/main/skills/timescaledb-hyperfunctions/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this skill when writing analytical SQL over time-series data with the TimescaleDB Toolkit (timescaledb_toolkit extension) hyperfunctions: approximate percentiles, statistical summaries, time-weighted averages, counter/gauge rates, uptime/heartbeat tracking, state durations, OHLC candlesticks, approximate distinct counts, top-N, and downsampling.\n\n**Trigger when user asks to:**\n- Compute percentiles/medians/p95/p99 over large or rolled-up time-series data\n- Compute rates or deltas from monotonic counters (Prometheus-style) or gauges\n- Compute time-weighted averages or integrals over irregularly sampled data\n- Track uptime/downtime from heartbeats, or time spent in each state\n- Build OHLC/candlestick or VWAP data for financial ticks\n- Store re-aggregatable summaries in continuous aggregates (two-step aggregation, rollup)\n- Approximate COUNT DISTINCT, find top-N / most frequent values, or downsample for charts\n\n**Keywords:** timescaledb_toolkit, hyperfunctions, percentile_agg, uddsketch, tdigest, approx_percentile, stats_agg, time_weight, counter_agg, gauge_agg, heartbeat_agg, state_agg, candlestick_agg, hyperloglog, approx_count_distinct, min_n, max_n, mcv_agg, lttb, asap_smooth, rollup, two-step aggregation"
+}

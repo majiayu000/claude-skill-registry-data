@@ -1,0 +1,39 @@
+{
+  "name": "replica-test",
+  "repo": "Jakeschincariol/replica-skill",
+  "path": "replica-test/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/Jakeschincariol/replica-skill",
+  "dir_name": "replica-test",
+  "downloaded_at": "2026-10-08T04:57:11.243737Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for testing: test, qa, e2e, playwright",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "qa",
+      "e2e",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/replica-skill/blob/main/replica-test/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/replica-skill/blob/main/replica-test/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Clicks through every flow of an app clone and tests it for bugs: a test plan generated from the recon flows with happy paths and edge cases, Playwright end-to-end tests where possible, a browser click-through where not, and bug reports in a fixed format with severity, steps and evidence. Use when the user says \"test my clone\", \"find bugs\", \"QA this\", \"click through everything\", \"write e2e tests\", \"does it work\", or after /replica-build or /replica-backend."
+}
