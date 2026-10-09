@@ -1,0 +1,38 @@
+{
+  "name": "model-council-voting",
+  "repo": "scdenney/open-science-skills",
+  "path": "archive/claude/model-council-voting/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/scdenney/open-science-skills",
+  "dir_name": "model-council-voting-scdenney-open-science-skills-3",
+  "downloaded_at": "2026-10-09T05:20:52.721629Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=3, ai-ml=3",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "scdenney",
+  "source_url": "https://github.com/scdenney/open-science-skills/blob/main/archive/claude/model-council-voting/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/scdenney/open-science-skills/blob/main/archive/claude/model-council-voting/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Runs several language models as independent coders on one labeling or discovery task and treats disagreement as data. Covers diverse panel assembly, independent voting, consensus rules, Cohen\u2019s and Fleiss kappa, Krippendorff\u2019s alpha, correlated-error limits on validity claims, human validation, and reporting. Use when the user asks about a council, panel, ensemble, or jury of models, how to combine model labels, or what kappa or alpha to report for model coders. Single-model codebook and validation work goes to text-classification, per-item confidence to llm-calibration-logprobs."
+}

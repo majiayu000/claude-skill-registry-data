@@ -1,0 +1,37 @@
+{
+  "name": "visualize",
+  "repo": "code-yeongyu/oh-my-openagent",
+  "path": "packages/omo-senpi/skills/visualize/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/code-yeongyu/oh-my-openagent",
+  "dir_name": "visualize-code-yeongyu-oh-my-openagent",
+  "downloaded_at": "2026-10-09T05:07:24.409685Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "code-yeongyu",
+  "source_url": "https://github.com/code-yeongyu/oh-my-openagent/blob/master/packages/omo-senpi/skills/visualize/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/code-yeongyu/oh-my-openagent/blob/master/packages/omo-senpi/skills/visualize/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Builds a self-contained HTML page (chart, table, diagram, dashboard) to show inline in a thread. Use before calling show_html_page, html_preview or html_render, or whenever an answer reads better as a page than as prose."
+}
