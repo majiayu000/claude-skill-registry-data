@@ -1,0 +1,37 @@
+{
+  "name": "firecrawl-agent",
+  "repo": "firecrawl/firecrawl-claude-plugin",
+  "path": "skills/firecrawl-agent/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/firecrawl/firecrawl-claude-plugin",
+  "dir_name": "firecrawl-agent-firecrawl-firecrawl-claude-plu",
+  "downloaded_at": "2026-10-10T04:55:59.023730Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "firecrawl",
+  "source_url": "https://github.com/firecrawl/firecrawl-claude-plugin/blob/main/skills/firecrawl-agent/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/firecrawl/firecrawl-claude-plugin/blob/main/skills/firecrawl-agent/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Autonomously navigate websites and extract structured data across pages. Use when the task requires navigation or no suitable ready-made workflow or data provider covers it."
+}

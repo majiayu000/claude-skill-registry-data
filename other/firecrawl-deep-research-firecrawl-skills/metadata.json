@@ -1,0 +1,37 @@
+{
+  "name": "firecrawl-deep-research",
+  "repo": "firecrawl/skills",
+  "path": "skills/workflows/firecrawl-deep-research/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/firecrawl/skills",
+  "dir_name": "firecrawl-deep-research-firecrawl-skills",
+  "downloaded_at": "2026-10-10T04:56:13.292575Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "firecrawl",
+  "source_url": "https://github.com/firecrawl/skills/blob/main/skills/workflows/firecrawl-deep-research/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/firecrawl/skills/blob/main/skills/workflows/firecrawl-deep-research/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Produce an intensive, cited analytical report: executive summary, multi-angle\nfindings, contrarian views, open questions, and full sources. Use only when the\nuser needs rigorous synthesis of a complex topic (scientific, technical, policy,\nor market-analytical) that cannot be answered with a short search, and wants\na formal written report, not a recommendation list.\n\nDo not use for product picks, top-N lists, quick lookups, or routine \"find out\nabout X\" tasks. If the request does not clearly need this kind of report, do\nnot use this skill.\n\nDo not use for a literature review over published papers. This skill collects\nevidence from the open web. A request for the literature on a biomedical,\nclinical, life-science, or other scientific topic \u2014 papers, studies, trials,\npreprints \u2014 belongs to firecrawl-research-papers, which queries Firecrawl's\npaper index (PubMed, bioRxiv, medRxiv, arXiv) instead of searching websites."
+}
