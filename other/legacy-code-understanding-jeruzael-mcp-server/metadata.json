@@ -1,0 +1,39 @@
+{
+  "name": "legacy-code-understanding",
+  "repo": "Jeruzael/mcp-server",
+  "path": ".claude/skills/legacy-code-understanding/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/Jeruzael/mcp-server",
+  "dir_name": "legacy-code-understanding-jeruzael-mcp-server",
+  "downloaded_at": "2026-10-11T10:42:13.106684Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=4, development=4",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 4,
+    "signals": [
+      "data",
+      "analytics",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jeruzael",
+  "source_url": "https://github.com/Jeruzael/mcp-server/blob/master/.claude/skills/legacy-code-understanding/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jeruzael/mcp-server/blob/master/.claude/skills/legacy-code-understanding/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Analyze old, messy, undocumented, inherited, fragile, or difficult-to-maintain codebases before changing them. Use when Codex needs to take over a client project, understand legacy web/mobile/backend systems, prepare modernization, rescue a broken project, quote maintenance work, evaluate refactor-vs-rewrite decisions, inspect hidden business rules, map risky user flows, find outdated dependencies, assess security/testing/deployment risks, and recommend a safe staged improvement plan without prematurely rewriting code."
+}

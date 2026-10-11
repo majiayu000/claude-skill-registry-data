@@ -1,0 +1,38 @@
+{
+  "name": "loop-ops",
+  "repo": "0xDarkMatter/claude-mods",
+  "path": "skills/loop-ops/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/0xDarkMatter/claude-mods",
+  "dir_name": "loop-ops",
+  "downloaded_at": "2026-10-11T09:18:33.779590Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: ci, cd, deploy",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "ci",
+      "cd",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "0xDarkMatter",
+  "source_url": "https://github.com/0xDarkMatter/claude-mods/blob/main/skills/loop-ops/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/0xDarkMatter/claude-mods/blob/main/skills/loop-ops/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Design and safely run OUTER loops - scheduled discover-triage-implement-verify-escalate agent loops. Native primitives schedule; loop-ops governs. Risk-tier ladder (L1 report -> L3 unattended), STATE/run-log/budget spine, kill switch, pattern catalog. Triggers: outer loop, scheduled/autonomous agent loop, PR watch, CI watch, dep-bump loop, run on a schedule, kill switch, risk tier, CronCreate, scheduled task, cloud routine, /loop."
+}

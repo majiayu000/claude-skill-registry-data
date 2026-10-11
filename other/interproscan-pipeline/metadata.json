@@ -1,0 +1,37 @@
+{
+  "name": "interproscan_pipeline",
+  "repo": "InternScience/scp",
+  "path": "skills/interproscan_pipeline/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/InternScience/scp",
+  "dir_name": "interproscan-pipeline",
+  "downloaded_at": "2026-10-11T10:35:56.496211Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "InternScience",
+  "source_url": "https://github.com/InternScience/scp/blob/main/skills/interproscan_pipeline/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/InternScience/scp/blob/main/skills/interproscan_pipeline/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "InterProScan Analysis Pipeline - Run InterProScan for domain analysis, then enrich with UniProt data and STRING interactions. Use this skill for functional proteomics tasks involving interproscan analyze get uniprotkb entry by accession get functional enrichment query interpro. Combines 4 tools from 4 SCP server(s)."
+}

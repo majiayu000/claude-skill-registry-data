@@ -1,0 +1,38 @@
+{
+  "name": "diagram",
+  "repo": "Agents-Store/codex-plugins",
+  "path": "codemap-dev/skills/diagram/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Agents-Store/codex-plugins",
+  "dir_name": "diagram-agents-store-codex-plugins",
+  "downloaded_at": "2026-10-11T09:33:09.866381Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Agents-Store",
+  "source_url": "https://github.com/Agents-Store/codex-plugins/blob/main/codemap-dev/skills/diagram/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Agents-Store/codex-plugins/blob/main/codemap-dev/skills/diagram/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generate a specific diagram \u2014 architecture, flow, db, sequence, deps Arguments: <type> [scope] \u2014 types: architecture, flow <feature>, db, sequence <endpoint>, deps <module>."
+}

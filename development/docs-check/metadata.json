@@ -1,0 +1,39 @@
+{
+  "name": "docs-check",
+  "repo": "Jgocunha/dynamic-neural-field-composer",
+  "path": ".claude/skills/docs-check/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Jgocunha/dynamic-neural-field-composer",
+  "dir_name": "docs-check",
+  "downloaded_at": "2026-10-11T10:42:43.623430Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile, refactor",
+    "score": 4,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "compile",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jgocunha",
+  "source_url": "https://github.com/Jgocunha/dynamic-neural-field-composer/blob/main/.claude/skills/docs-check/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jgocunha/dynamic-neural-field-composer/blob/main/.claude/skills/docs-check/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Verify documentation keeps up with a code change in dynamic-neural-field-composer - Doxygen on public API, the matching wiki page, and stale references elsewhere. Use before opening a PR, or when asked whether docs need updating."
+}

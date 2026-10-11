@@ -1,0 +1,39 @@
+{
+  "name": "bug-investigation",
+  "repo": "Jeruzael/mcp-server",
+  "path": "skills/bug-investigation/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/Jeruzael/mcp-server",
+  "dir_name": "bug-investigation-jeruzael-mcp-server",
+  "downloaded_at": "2026-10-11T10:42:03.720942Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, build, software, refactor",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "software",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jeruzael",
+  "source_url": "https://github.com/Jeruzael/mcp-server/blob/master/skills/bug-investigation/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jeruzael/mcp-server/blob/master/skills/bug-investigation/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Diagnose and fix software bugs through evidence-based investigation. Use when Codex needs to handle runtime errors, failed API calls, broken UI behavior, incorrect database results, failed tests, deployment issues, build failures, auth/authorization bugs, form submission problems, missing or duplicate data, performance regressions, crashes, client-reported defects, intermittent behavior, or any software defect that requires root-cause analysis before applying a fix."
+}

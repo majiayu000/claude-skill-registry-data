@@ -1,0 +1,38 @@
+{
+  "name": "bindings",
+  "repo": "Goldziher/ai-rulez",
+  "path": "internal/builtins/universal/polyglot-bindings/skills/bindings/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/Goldziher/ai-rulez",
+  "dir_name": "bindings",
+  "downloaded_at": "2026-10-11T10:25:20.241379Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, integration, e2e",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "integration",
+      "e2e"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Goldziher",
+  "source_url": "https://github.com/Goldziher/ai-rulez/blob/main/internal/builtins/universal/polyglot-bindings/skills/bindings/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Goldziher/ai-rulez/blob/main/internal/builtins/universal/polyglot-bindings/skills/bindings/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Cross-language binding architecture rules: bindings as minimal glue, canonical API surface ordering (core, ABI, language), per-language test suites in CI, generated-code discipline, and error/async boundary preservation. Load when designing or reviewing polyglot language bindings for a shared core."
+}

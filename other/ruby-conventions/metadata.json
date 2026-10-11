@@ -1,0 +1,37 @@
+{
+  "name": "ruby-conventions",
+  "repo": "Goldziher/ai-rulez",
+  "path": "internal/builtins/languages/ruby/skills/ruby-conventions/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Goldziher/ai-rulez",
+  "dir_name": "ruby-conventions",
+  "downloaded_at": "2026-10-11T10:25:19.159900Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: quality=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "lint",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Goldziher",
+  "source_url": "https://github.com/Goldziher/ai-rulez/blob/main/internal/builtins/languages/ruby/skills/ruby-conventions/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Goldziher/ai-rulez/blob/main/internal/builtins/languages/ruby/skills/ruby-conventions/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Ruby code conventions covering Ruby 3.2+, RuboCop, RBS type checking, RSpec/Minitest, security scanning, exception handling, composition, Bundler, and gem packaging. Load when writing or reviewing Ruby code."
+}

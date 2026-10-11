@@ -1,0 +1,36 @@
+{
+  "name": "adaptive-quality",
+  "repo": "Iker1211/uroboros",
+  "path": "skills/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Iker1211/uroboros",
+  "dir_name": "skills-iker1211-uroboros",
+  "downloaded_at": "2026-10-11T10:34:14.517486Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category development scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "performance",
+    "runner_up_score": 1,
+    "signals": [
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Iker1211",
+  "source_url": "https://github.com/Iker1211/uroboros/blob/main/skills/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Iker1211/uroboros/blob/main/skills/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Implementa un sistema de calidad adaptativa para escenas Three.js que deban funcionar bien en desktop de gama alta y mobile de gama baja. Usa @pmndrs/detect-gpu para clasificar la GPU real del usuario en un tier 0-3 basado en benchmark, y aplica un objeto de configuraci\u00f3n diferenciado antes de crear el renderer. Activa este skill antes de escribir cualquier THREE.WebGLRenderer o THREE.WebGPURenderer."
+}

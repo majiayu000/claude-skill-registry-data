@@ -1,0 +1,37 @@
+{
+  "name": "harness-adapters",
+  "repo": "EvanBatten/firstmate-for-windows",
+  "path": ".agents/skills/harness-adapters/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/EvanBatten/firstmate-for-windows",
+  "dir_name": "harness-adapters",
+  "downloaded_at": "2026-10-11T10:14:47.808122Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, documentation",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "EvanBatten",
+  "source_url": "https://github.com/EvanBatten/firstmate-for-windows/blob/main/.agents/skills/harness-adapters/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/EvanBatten/firstmate-for-windows/blob/main/.agents/skills/harness-adapters/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Agent-only reference for firstmate harness operations. Use before spawning or recovering a crewmate or secondmate, handling a trust dialog, sending a harness-specific skill invocation, interrupting or exiting an agent, resuming an exited agent, or verifying a new harness adapter. Contains verified facts for claude, codex, opencode, pi, pi-signed, grok, kimi, cursor, gemini, muse, rovo, omp, agy, and devin."
+}

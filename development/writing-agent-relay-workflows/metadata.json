@@ -1,0 +1,38 @@
+{
+  "name": "writing-agent-relay-workflows",
+  "repo": "AgentWorkforce/skills",
+  "path": "skills/writing-agent-relay-workflows/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/AgentWorkforce/skills",
+  "dir_name": "writing-agent-relay-workflows",
+  "downloaded_at": "2026-10-11T09:32:51.730777Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AgentWorkforce",
+  "source_url": "https://github.com/AgentWorkforce/skills/blob/main/skills/writing-agent-relay-workflows/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AgentWorkforce/skills/blob/main/skills/writing-agent-relay-workflows/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "DEPRECATED - documents the superseded v1 `@relayflows/core` WorkflowBuilder engine (`workflow().pattern().agent().step().run()`, `failOnError`, `captureOutput`, `{{steps.X.output}}`, `.onError()`). Use `writing-relayflows` for the current v2 engine (`@relayflows/surface`/`@relayflows/sdk`, CLI `flows`) on all new work. Keep this open only to read or maintain an existing v1 workflow: conversation vs pipeline coordination, DAG steps, idle detection, Relayfile-backed human assistance, waitFor gates, review-depth review/fix loops, channels, chat-native recipes, and parallel waves."
+}

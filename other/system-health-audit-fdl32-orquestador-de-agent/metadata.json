@@ -1,0 +1,36 @@
+{
+  "name": "system-health-audit",
+  "repo": "FDL32/orquestador-de-agentes",
+  "path": ".claude/skills/system-health-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/FDL32/orquestador-de-agentes",
+  "dir_name": "system-health-audit-fdl32-orquestador-de-agent",
+  "downloaded_at": "2026-10-11T10:16:40.014004Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "FDL32",
+  "source_url": "https://github.com/FDL32/orquestador-de-agentes/blob/main/.claude/skills/system-health-audit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/FDL32/orquestador-de-agentes/blob/main/.claude/skills/system-health-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Auditoria periodica de salud de las tres capas (repo_motor, repo_destino e integracion) tras cambios, con un recolector determinista que junta la evidencia y el agente que la audita en solo lectura. Usar cuando hubo cambios en el motor o en un repo_destino y hay que saber si el sistema sigue sano de extremo a extremo. No usar para meta-auditar un pipeline cerrado (ver audit-pipeline), para el listo-para-publicar de un repo (ver audit-git-publication) ni como snapshot rapido (ver local-audit); el reporte del recolector no es el veredicto."
+}

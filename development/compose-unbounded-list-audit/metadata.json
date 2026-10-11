@@ -1,0 +1,37 @@
+{
+  "name": "compose-unbounded-list-audit",
+  "repo": "AlexMollard/Harness",
+  "path": "skills/managed/compose-unbounded-list-audit/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/AlexMollard/Harness",
+  "dir_name": "compose-unbounded-list-audit",
+  "downloaded_at": "2026-10-11T09:35:41.894263Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: compile, refactor",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "compile",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AlexMollard",
+  "source_url": "https://github.com/AlexMollard/Harness/blob/master/skills/managed/compose-unbounded-list-audit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AlexMollard/Harness/blob/master/skills/managed/compose-unbounded-list-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Find and fix Jetpack Compose screens that render an unbounded, growing list eagerly (forEach inside a scrolling Column instead of LazyColumn), and prove the LazyColumn conversion by content rather than by compiling. Use after measuring a data layer at scale, or when a history/journal/feed screen will grow for years."
+}

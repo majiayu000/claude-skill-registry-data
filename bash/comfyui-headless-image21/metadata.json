@@ -1,0 +1,38 @@
+{
+  "name": "comfyui-headless-image21",
+  "repo": "HunLuanZhiZhu/Game-Studios-Plugin",
+  "path": "skills/comfyui-headless-image21/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/HunLuanZhiZhu/Game-Studios-Plugin",
+  "dir_name": "comfyui-headless-image21",
+  "downloaded_at": "2026-10-11T10:32:17.096213Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HunLuanZhiZhu",
+  "source_url": "https://github.com/HunLuanZhiZhu/Game-Studios-Plugin/blob/main/skills/comfyui-headless-image21/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HunLuanZhiZhu/Game-Studios-Plugin/blob/main/skills/comfyui-headless-image21/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generates game art assets headlessly via the local ComfyUI server (Qwen-Image 2.1): text-to-image, reference-guided edits, and true transparent-background RGBA PNGs. Invoke when the user asks for \u7d20\u6750\u56fe/\u7acb\u7ed8/\u56fe\u6807/\u8d34\u56fe/\u6982\u5ff5\u56fe, wants \u51fa\u56fe via ComfyUI without the UI, mentions Qwen-Image 2.1, or asks for transparent-background (\u80cc\u666f\u900f\u660e) assets."
+}

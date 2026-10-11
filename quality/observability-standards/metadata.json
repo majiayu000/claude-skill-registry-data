@@ -1,0 +1,37 @@
+{
+  "name": "observability-standards",
+  "repo": "Goldziher/ai-rulez",
+  "path": "tests/review/golden/skill-quality/fixtures/shared/skills/observability-standards/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/Goldziher/ai-rulez",
+  "dir_name": "observability-standards",
+  "downloaded_at": "2026-10-11T10:25:25.829470Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review",
+    "score": 2,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "quality",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Goldziher",
+  "source_url": "https://github.com/Goldziher/ai-rulez/blob/main/tests/review/golden/skill-quality/fixtures/shared/skills/observability-standards/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Goldziher/ai-rulez/blob/main/tests/review/golden/skill-quality/fixtures/shared/skills/observability-standards/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Observability standards: JSON structured logging with key=value fields and never string interpolation, the ERROR/WARN/INFO/DEBUG/TRACE level taxonomy, a /health endpoint with per-component status wired to orchestrator probes, counter/gauge/histogram metric choice with no high-cardinality labels, and correlation-ID propagation across service boundaries. Load when adding logging, metrics, tracing or a health endpoint to a service, or reviewing what a service emits."
+}

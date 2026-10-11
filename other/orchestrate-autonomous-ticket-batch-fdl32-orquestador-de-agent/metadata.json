@@ -1,0 +1,36 @@
+{
+  "name": "orchestrate-autonomous-ticket-batch",
+  "repo": "FDL32/orquestador-de-agentes",
+  "path": ".claude/skills/orchestrate-autonomous-ticket-batch/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/FDL32/orquestador-de-agentes",
+  "dir_name": "orchestrate-autonomous-ticket-batch-fdl32-orquestador-de-agent",
+  "downloaded_at": "2026-10-11T10:16:42.912390Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category data scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "FDL32",
+  "source_url": "https://github.com/FDL32/orquestador-de-agentes/blob/main/.claude/skills/orchestrate-autonomous-ticket-batch/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/FDL32/orquestador-de-agentes/blob/main/.claude/skills/orchestrate-autonomous-ticket-batch/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Ejecutor autonomo que consume el DAG de backlog-triage y cierra el maximo de tickets con barreras duras por ticket, delegando cada uno en el pipeline canonico del modo detectado; crea commits, mueve filas al archivo, escribe bus, ledger y memoria, puede publicar con push y nunca se audita a si mismo. Usar cuando hay un triage con DAG validado y fresco y un tercero ha resuelto el recibo de aislamiento de arranque. No usar para un pipeline por ticket (ver orchestrate-pipeline, orchestrate-pipeline-codeonly), para producir el DAG (ver backlog-triage) ni para auditar el batch (ver audit-autonomous-ticket-batch); nunca ejecuta tickets REQUIERE_HUMANO ni DISENO_PRIMERO."
+}

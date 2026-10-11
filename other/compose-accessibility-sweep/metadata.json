@@ -1,0 +1,36 @@
+{
+  "name": "compose-accessibility-sweep",
+  "repo": "AlexMollard/Harness",
+  "path": "skills/managed/compose-accessibility-sweep/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/AlexMollard/Harness",
+  "dir_name": "compose-accessibility-sweep",
+  "downloaded_at": "2026-10-11T09:35:39.730597Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "design",
+    "runner_up_score": 1,
+    "signals": [
+      "bash"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AlexMollard",
+  "source_url": "https://github.com/AlexMollard/Harness/blob/master/skills/managed/compose-accessibility-sweep/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AlexMollard/Harness/blob/master/skills/managed/compose-accessibility-sweep/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when adding TalkBack/accessibility coverage to a Compose UI, or a screen reader cannot tell which tab, segmented control or filter chip is selected, lands on nothing, or reads a bare symbol. Also after adding tabs or chips, when a tap target may be under 24dp or 48dp, or when an accessibility sweep passes suspiciously: a surface never reached, or a half-scrolled control measuring too small."
+}

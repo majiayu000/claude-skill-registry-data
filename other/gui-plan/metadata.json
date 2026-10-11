@@ -1,0 +1,37 @@
+{
+  "name": "gui-plan",
+  "repo": "AvatarGanymede/dev-gui-plugin",
+  "path": "skills/gui-plan/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/AvatarGanymede/dev-gui-plugin",
+  "dir_name": "gui-plan",
+  "downloaded_at": "2026-10-11T09:43:55.177513Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AvatarGanymede",
+  "source_url": "https://github.com/AvatarGanymede/dev-gui-plugin/blob/main/skills/gui-plan/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AvatarGanymede/dev-gui-plugin/blob/main/skills/gui-plan/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Atom Game GUI \u5f00\u53d1 pipeline \u7684\u7b2c 1 \u9636\u6bb5\uff08\u5165\u53e3\uff09\u3002\u5f53\u7528\u6237\u8981\u300c\u5f00\u53d1/\u65b0\u589e/\u4fee\u6539\u4e00\u4e2a GUI \u754c\u9762\u3001 panel\u3001\u9762\u677f\u300d\u6216\u8bf4\u300c\u8dd1 gui pipeline / \u505a GUI \u9700\u6c42\u300d\u65f6\u4f7f\u7528\u3002\u5148\u786e\u8ba4\u7528\u6237\u5df2\u63d0\u4f9b\u672c\u6b21 run \u7684 panelId \u548c\u9700\u6c42\u63cf\u8ff0\uff0c\u7f3a\u5c11\u4efb\u4e00\u9879\u65f6\u5148\u5411\u7528\u6237\u8be2\u95ee\uff1b\u968f\u540e\u8fdb\u5165 Claude Code \u539f\u751f plan mode\uff1a \u53ea\u8bfb\u63a2\u7d22\u8d44\u6e90 + \u7528\u5df2\u6ce8\u5165\u7684\u77e5\u8bc6\u5e93\u5751\u70b9 + \u5411\u7528\u6237\u63d0\u95ee\u6f84\u6e05\u9700\u6c42\uff0c\u5199\u8ba1\u5212\u5e76 ExitPlanMode \u7b49\u4eba\u7c7b\u5ba1\u6279\uff1b \u5ba1\u6279\u901a\u8fc7\u540e\u628a\u8ba1\u5212\u9ad8\u5ea6\u7cbe\u70bc\u6210\u9700\u6c42\u5951\u7ea6 GUI_PLAN.md \u843d\u76d8\uff0c\u5e76\u521d\u59cb\u5316 pipeline \u8fd0\u884c\u72b6\u6001\u3002 \u968f\u540e\uff08\u7531 /dev-gui-plugin:run \u7f16\u6392\uff09\u987a\u5e8f\u89e6\u53d1 gui-draft \u2192 gui-prefab \u2192 gui-config \u2192 gui-review \u2192 gui-improve \u2192 gui-learn\u3002"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "sqlite",
+  "repo": "Dev-Toolbelt/dev-team-agents",
+  "path": "skills/database/sqlite/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/Dev-Toolbelt/dev-team-agents",
+  "dir_name": "sqlite-dev-toolbelt-dev-team-agents",
+  "downloaded_at": "2026-10-11T10:06:06.594268Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Dev-Toolbelt",
+  "source_url": "https://github.com/Dev-Toolbelt/dev-team-agents/blob/main/skills/database/sqlite/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Dev-Toolbelt/dev-team-agents/blob/main/skills/database/sqlite/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "SQLite \u2014 WAL mode, JSON1, FTS5, indexes, CLI."
+}

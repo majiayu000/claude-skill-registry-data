@@ -1,0 +1,38 @@
+{
+  "name": "technical-debt-cleanup",
+  "repo": "Jeruzael/mcp-server",
+  "path": "skills/technical-debt-cleanup/SKILL.md",
+  "github_branch": "master",
+  "category": "data",
+  "source": "github.com/Jeruzael/mcp-server",
+  "dir_name": "technical-debt-cleanup",
+  "downloaded_at": "2026-10-11T10:42:07.394659Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jeruzael",
+  "source_url": "https://github.com/Jeruzael/mcp-server/blob/master/skills/technical-debt-cleanup/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jeruzael/mcp-server/blob/master/skills/technical-debt-cleanup/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Identify, prioritize, and safely clean unnecessary complexity in a project while preserving behavior. Use when Codex needs to review or clean duplicate files, unused components, dead code, commented-out code, confusing naming, outdated utilities, unused dependencies, stale comments, broken documentation, inconsistent folder structure, repeated helpers, old feature flags, unused assets, leftover abandoned-feature code, large mixed-responsibility files, or multiple patterns for the same task before feature work, deployment, handover, or maintenance."
+}

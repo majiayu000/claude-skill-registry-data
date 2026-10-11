@@ -1,0 +1,37 @@
+{
+  "name": "update",
+  "repo": "Agents-Store/codex-plugins",
+  "path": "openclaw-ops/skills/update/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Agents-Store/codex-plugins",
+  "dir_name": "update-agents-store-codex-plugins",
+  "downloaded_at": "2026-10-11T09:33:08.770289Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Agents-Store",
+  "source_url": "https://github.com/Agents-Store/codex-plugins/blob/main/openclaw-ops/skills/update/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Agents-Store/codex-plugins/blob/main/openclaw-ops/skills/update/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Upgrade instances on a pinned, soaked target \u2014 baseline, verified backup, plan, apply, post-checks, schedule dedup Arguments: <selector> [--to <version>] [--channel stable|extended-stable|beta|dev] [--yes]."
+}

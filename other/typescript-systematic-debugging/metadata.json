@@ -1,0 +1,37 @@
+{
+  "name": "typescript-systematic-debugging",
+  "repo": "GonkaGate/hermes-agent-setup",
+  "path": ".claude/skills/typescript-systematic-debugging/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/GonkaGate/hermes-agent-setup",
+  "dir_name": "typescript-systematic-debugging",
+  "downloaded_at": "2026-10-11T10:26:03.274059Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "GonkaGate",
+  "source_url": "https://github.com/GonkaGate/hermes-agent-setup/blob/main/.claude/skills/typescript-systematic-debugging/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/GonkaGate/hermes-agent-setup/blob/main/.claude/skills/typescript-systematic-debugging/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Systematic root-cause investigation for TypeScript backends. Use whenever the task is to debug an incident, regression, flaky behavior, timeout, unexpected 4xx/5xx, stuck stream, worker failure, Redis or Prisma weirdness, or external-integration issue and the right move is to narrow the failure surface and choose the next diagnostic step instead of guessing a fix, even if the user asks 'why is this happening?', 'what should I check next?', or proposes a patch too early."
+}

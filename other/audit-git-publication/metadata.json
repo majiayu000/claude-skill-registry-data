@@ -1,0 +1,38 @@
+{
+  "name": "audit-git-publication",
+  "repo": "FDL32/orquestador-de-agentes",
+  "path": "skills/audit-git-publication/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/FDL32/orquestador-de-agentes",
+  "dir_name": "audit-git-publication",
+  "downloaded_at": "2026-10-11T10:16:36.692940Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agent-role"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "FDL32",
+  "source_url": "https://github.com/FDL32/orquestador-de-agentes/blob/main/skills/audit-git-publication/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/FDL32/orquestador-de-agentes/blob/main/skills/audit-git-publication/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Auditoria dry-run de si un repo_destino puede publicarse en Git sin secretos, PII, artefactos privados ni deuda sin decision, con classify_publication.py y doble pasada de verificacion y refutacion. Usar cuando se prepara la primera publicacion de un repo_destino o una revision de su exposicion. No usar para instalar el destino (ver setup-agent-system) ni como gate pre-push de estado vivo (ver check_destino_publish_ready.py); no publica, no commitea ni borra nada."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "control-firstmate",
+  "repo": "EvanBatten/firstmate-for-windows",
+  "path": ".agents/skills/control-firstmate/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/EvanBatten/firstmate-for-windows",
+  "dir_name": "control-firstmate",
+  "downloaded_at": "2026-10-11T10:14:47.920838Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, script",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "EvanBatten",
+  "source_url": "https://github.com/EvanBatten/firstmate-for-windows/blob/main/.agents/skills/control-firstmate/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/EvanBatten/firstmate-for-windows/blob/main/.agents/skills/control-firstmate/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Drive one real firstmate session through a captain trace and measure how long each firstmate claim took to become true, with `node tools/fm-drive/drive.mjs run <trace.json>`. Use when a verify-firstmate session needs to be driven or timed from an agent, when a firstmate behavior must be proven against a live primary in a throwaway home, or when a new session-tier feature needs a trace instead of a shell script. Traces are JSON in the captain's own words, claims come from a closed catalog of home-record predicates, the primary's own words are never a claim, and the driver refuses a trace that only proves startup or steers the primary with internals before it touches Herdr."
+}

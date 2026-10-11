@@ -1,0 +1,37 @@
+{
+  "name": "aspire-lan-exposure",
+  "repo": "AlexMollard/Harness",
+  "path": "skills/managed/aspire-lan-exposure/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/AlexMollard/Harness",
+  "dir_name": "aspire-lan-exposure",
+  "downloaded_at": "2026-10-11T09:35:35.658026Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script",
+    "score": 2,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AlexMollard",
+  "source_url": "https://github.com/AlexMollard/Harness/blob/master/skills/managed/aspire-lan-exposure/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AlexMollard/Harness/blob/master/skills/managed/aspire-lan-exposure/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when setting up or repairing LAN access to an Aspire stack's containerized endpoints (Caddy/proxy, Valkey/Redis): other machines cannot reach them, or the LAN hostname refuses while localhost works \u2014 including right after a Docker Desktop or WSL restart."
+}

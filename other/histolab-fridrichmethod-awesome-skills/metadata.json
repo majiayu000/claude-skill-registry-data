@@ -1,0 +1,38 @@
+{
+  "name": "histolab",
+  "repo": "FridrichMethod/awesome-skills",
+  "path": "skills/histolab/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/FridrichMethod/awesome-skills",
+  "dir_name": "histolab-fridrichmethod-awesome-skills",
+  "downloaded_at": "2026-10-11T10:20:04.410250Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: quality=3, workflow=3",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 3,
+    "signals": [
+      "quality",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "FridrichMethod",
+  "source_url": "https://github.com/FridrichMethod/awesome-skills/blob/main/skills/histolab/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/FridrichMethod/awesome-skills/blob/main/skills/histolab/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Extracts and preprocesses whole-slide histology image tiles with Histolab. Use for WSI inspection, tissue masks, random/grid/score-based tile extraction, H&E stain normalization, and tile dataset preparation. For multiplexed imaging or deep learning inference pipelines, use pathml."
+}

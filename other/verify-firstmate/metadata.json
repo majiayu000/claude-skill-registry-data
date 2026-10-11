@@ -1,0 +1,37 @@
+{
+  "name": "verify-firstmate",
+  "repo": "EvanBatten/firstmate-for-windows",
+  "path": ".agents/skills/verify-firstmate/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/EvanBatten/firstmate-for-windows",
+  "dir_name": "verify-firstmate",
+  "downloaded_at": "2026-10-11T10:14:47.555286Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "EvanBatten",
+  "source_url": "https://github.com/EvanBatten/firstmate-for-windows/blob/main/.agents/skills/verify-firstmate/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/EvanBatten/firstmate-for-windows/blob/main/.agents/skills/verify-firstmate/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Measure which firstmate behaviors are proven, and say which are not, by running real firstmate sessions and driving the real bin/ scripts against throwaway homes, weighing the result against a tracked inventory of every claim the product makes, and keeping the evidence. Use before reporting a change to firstmate's own scripts as done, when checking that an installation or a platform works, and when something feels wrong and you need to know which feature is at fault. Firstmate's surface is its command-line scripts and the durable records they keep, so this skill runs sessions, drives scripts and reads records; it does not drive a browser."
+}

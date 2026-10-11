@@ -1,0 +1,38 @@
+{
+  "name": "manager-orchestrator-loop",
+  "repo": "FDL32/orquestador-de-agentes",
+  "path": "skills/manager-orchestrator-loop/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/FDL32/orquestador-de-agentes",
+  "dir_name": "manager-orchestrator-loop",
+  "downloaded_at": "2026-10-11T10:16:38.677829Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agent-role"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "FDL32",
+  "source_url": "https://github.com/FDL32/orquestador-de-agentes/blob/main/skills/manager-orchestrator-loop/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/FDL32/orquestador-de-agentes/blob/main/skills/manager-orchestrator-loop/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Skill minima que apunta al nucleo del proceso Manager-Builder por contract_id y sha256, SIN herramienta. Usar cuando un Manager necesita orquestar un objetivo con bucles de revision adversarial sobre una estrategia, sobre cada plan y sobre el prompt del ejecutor, en CUALQUIER sistema. No usar para despachar lentes contra un proveedor concreto ni para encargar una tarea a un backend (eso vive en prompts/ensemble_loop.md y prompts/builder_invocation_contract.md)."
+}

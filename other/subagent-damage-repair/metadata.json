@@ -1,0 +1,38 @@
+{
+  "name": "subagent-damage-repair",
+  "repo": "AlexMollard/Harness",
+  "path": "skills/managed/subagent-damage-repair/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/AlexMollard/Harness",
+  "dir_name": "subagent-damage-repair",
+  "downloaded_at": "2026-10-11T09:35:36.099027Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AlexMollard",
+  "source_url": "https://github.com/AlexMollard/Harness/blob/master/skills/managed/subagent-damage-repair/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AlexMollard/Harness/blob/master/skills/managed/subagent-damage-repair/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use before running a subagent edit wave on D:/Monarch, or after parallel-agent edits to a Kotlin/Android repo: KSP fails with the opaque [ksp] [MissingType]: Element '...Database' references a type that is not present, imports, parameters or helpers vanish, declarations get clobbered, or a wave reports green but the build fails."
+}

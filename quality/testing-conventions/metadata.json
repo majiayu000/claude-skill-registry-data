@@ -1,0 +1,37 @@
+{
+  "name": "testing-conventions",
+  "repo": "Goldziher/ai-rulez",
+  "path": "tests/review/golden/skill-quality/fixtures/shared/skills/testing-conventions/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/Goldziher/ai-rulez",
+  "dir_name": "testing-conventions",
+  "downloaded_at": "2026-10-11T10:25:24.566789Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review",
+    "score": 2,
+    "runner_up": "creative",
+    "runner_up_score": 1,
+    "signals": [
+      "quality",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Goldziher",
+  "source_url": "https://github.com/Goldziher/ai-rulez/blob/main/tests/review/golden/skill-quality/fixtures/shared/skills/testing-conventions/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Goldziher/ai-rulez/blob/main/tests/review/golden/skill-quality/fixtures/shared/skills/testing-conventions/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "How to write a good test: behaviour-describing names (`should_return_error_when_input_is_empty`, `given_when_then`), exact-value assertions over truthiness, snapshot and property-based testing, order-independent and idempotent tests with no shared mutable state, and the anti-patterns (testing mocks, test-only production methods, mocking what you don't own, asserting implementation details). Load when writing or reviewing a test file, naming test cases, choosing assertions, or diagnosing a flaky or always-passing test."
+}

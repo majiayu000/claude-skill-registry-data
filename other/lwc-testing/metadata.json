@@ -1,0 +1,38 @@
+{
+  "name": "lwc-testing",
+  "repo": "BanibrataChatterjee/AwesomeSalesforceSkills",
+  "path": "skills/lwc/lwc-testing/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/BanibrataChatterjee/AwesomeSalesforceSkills",
+  "dir_name": "lwc-testing",
+  "downloaded_at": "2026-10-11T09:46:14.446865Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "ui",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "BanibrataChatterjee",
+  "source_url": "https://github.com/BanibrataChatterjee/AwesomeSalesforceSkills/blob/main/skills/lwc/lwc-testing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BanibrataChatterjee/AwesomeSalesforceSkills/blob/main/skills/lwc/lwc-testing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when setting up or reviewing Lightning Web Component unit tests with Jest, including `@salesforce/sfdx-lwc-jest`, wire adapter mocks, imperative Apex mocks, async rerender handling, and accessibility smoke checks. Triggers: 'how do I test @wire in LWC', 'Jest test is flaky', 'mock Apex in LWC test', 'flushPromises pattern'. NOT for Apex unit tests, browser end-to-end automation, or performance testing."
+}

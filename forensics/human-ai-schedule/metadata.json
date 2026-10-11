@@ -1,0 +1,37 @@
+{
+  "name": "human-ai-schedule",
+  "repo": "Huangleyang125207/ctrl-c-v-code-skills",
+  "path": "skills/human-ai-schedule/SKILL.md",
+  "github_branch": "main",
+  "category": "forensics",
+  "source": "github.com/Huangleyang125207/ctrl-c-v-code-skills",
+  "dir_name": "human-ai-schedule",
+  "downloaded_at": "2026-10-11T10:31:53.950429Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "forensics",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for forensics: forensic, forensics",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "forensic",
+      "forensics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Huangleyang125207",
+  "source_url": "https://github.com/Huangleyang125207/ctrl-c-v-code-skills/blob/main/skills/human-ai-schedule/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Huangleyang125207/ctrl-c-v-code-skills/blob/main/skills/human-ai-schedule/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Co-author doctrine for shared, half-hour-block daily schedules.\nMake sure to consult this skill whenever working in a dated\ndaily log, journal, retro, or coordination file shared with a\ncoworker \u2014 even if the user only says \"log this at 11:00\" or\n\"what did we say last Tuesday.\" Default behavior of dumping\nprocedural details, paraphrasing voice into corporate prose, or\nfragmenting one task across multiple cells must defer to this\nskill \u2014 entries distill to result + significance, and a cell is\nremoved only when its time falls inside a verified-active task's\nspan (never pre-merged on guess).\n\nTRIGGER when: user is in a file matching `daily/`, `journal/`,\n`schedule/`, `\u534a\u5c0f\u65f6\u590d\u76d8/`, or any file with H1 time-block headers\nlike `# 7\uff1a30` or `# 09:00`; user says \"create today's\", \"\u521b\u5efa\n\u4eca\u5929\u7684\", \"log at N o'clock\", \"\u8865\u5230 N \u70b9\u90a3\u683c\", \"morning brief\",\n\"\u6668\u4f1a\u590d\u76d8\", \"what did we decide on X day\"; user dictates an event\nwith time anchor (\"just now\", \"\u521a\u624d\", \"yesterday\", \"\u4e0a\u5468\u4e09\",\nexplicit clock); user asks to reconstruct a past session; user\nreferences a tag aggregation page; agent receives a `#\u534f\u4f5c` /\n`#collab` segment and needs to leave a commit.\n\nSKIP when: pure code editing without log context; one-off chat\nwith no persistent dated file; user explicitly says \"just answer,\ndon't log\"; reading code or technical docs only.\n\nExamples that trigger: \"\u521b\u5efa\u4eca\u5929\u7684 schedule\", \"log this at 11:00\",\n\"\u628a\u521a\u624d\u90a3\u6bb5\u8865\u5230 11 \u70b9\u90a3\u683c\", \"what did we say last Tuesday\",\n\"\u7ffb 5.7 \u90a3\u6b21 session\", \"\u8bb0\u4e00\u4e0b\u4eca\u5929\u53bb\u4e86\u5f6d\u9547\u559d\u8336\".\nExamples that skip: \"implement a stripe webhook\", \"explain async\",\n\"\u6539\u4e00\u4e0b settings.json \u7684 permission\", \"rename this private function\"."
+}

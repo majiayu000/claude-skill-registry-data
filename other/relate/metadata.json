@@ -1,0 +1,36 @@
+{
+  "name": "relate",
+  "repo": "Agents-Store/codex-plugins",
+  "path": "plane-ops/skills/relate/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Agents-Store/codex-plugins",
+  "dir_name": "relate",
+  "downloaded_at": "2026-10-11T09:32:59.742417Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category api scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "documents",
+    "runner_up_score": 1,
+    "signals": [
+      "api"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Agents-Store",
+  "source_url": "https://github.com/Agents-Store/codex-plugins/blob/main/plane-ops/skills/relate/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Agents-Store/codex-plugins/blob/main/plane-ops/skills/relate/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Create a relation between two Plane work items (block, duplicate, relates-to) Arguments: <relation> <project> <from-item> <to-item>."
+}

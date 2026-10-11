@@ -1,0 +1,38 @@
+{
+  "name": "marty-needs-an-idea",
+  "repo": "DDTully/dotfiles",
+  "path": "skills/.agent_skills/marty-needs-an-idea/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/DDTully/dotfiles",
+  "dir_name": "marty-needs-an-idea",
+  "downloaded_at": "2026-10-11T10:02:03.652057Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: content, social, brand",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "content",
+      "social",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DDTully",
+  "source_url": "https://github.com/DDTully/dotfiles/blob/main/skills/.agent_skills/marty-needs-an-idea/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DDTully/dotfiles/blob/main/skills/.agent_skills/marty-needs-an-idea/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "find mundane products with oddly specific review comments on live amazon, walmart, target, chewy, home depot, lowe's, etsy, and other retail product pages. use when the user wants funny reviews, bizarre reviews, oddly specific customer comments, direct product urls, or fresh retail review examples. prioritize live product detail pages with visible review text or review snippets. reject listicles, roundup articles, screenshot galleries, and retailer search urls in final output. ask for review tone when missing. write findings to a timestamped markdown file."
+}

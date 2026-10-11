@@ -1,0 +1,39 @@
+{
+  "name": "compose-layout-device-traps",
+  "repo": "AlexMollard/Harness",
+  "path": "skills/managed/compose-layout-device-traps/SKILL.md",
+  "github_branch": "master",
+  "category": "platform",
+  "source": "github.com/AlexMollard/Harness",
+  "dir_name": "compose-layout-device-traps",
+  "downloaded_at": "2026-10-11T09:35:40.132714Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: platform, device, adb, android",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "platform",
+      "device",
+      "adb",
+      "android"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AlexMollard",
+  "source_url": "https://github.com/AlexMollard/Harness/blob/master/skills/managed/compose-layout-device-traps/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AlexMollard/Harness/blob/master/skills/managed/compose-layout-device-traps/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when Compose renders wrong on device but builds green: Row labels one letter per line, zero-width steppers, stacking in PullToRefreshBox, keyboard over inputs, LazyColumn in verticalScroll. Also on 'measured with an infinity maximum height constraints', Scaffold content drawn over itself, adb taps landing on the IME, uiautomator bounds that disagree with the screenshot, Text printing a data class toString, or before trusting an agent's 'my file compiles' claim about UI."
+}

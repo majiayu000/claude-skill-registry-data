@@ -1,0 +1,38 @@
+{
+  "name": "start",
+  "repo": "Agents-Store/codex-plugins",
+  "path": "macstack-dev/skills/start/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Agents-Store/codex-plugins",
+  "dir_name": "start-agents-store-codex-plugins",
+  "downloaded_at": "2026-10-11T09:33:06.247929Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, software",
+    "score": 3,
+    "runner_up": "generation",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Agents-Store",
+  "source_url": "https://github.com/Agents-Store/codex-plugins/blob/main/macstack-dev/skills/start/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Agents-Store/codex-plugins/blob/main/macstack-dev/skills/start/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Create or repair a project's macstack/ folder and macstack.json \u2014 from nothing (a six-question interview), from an existing macstack.json, from an existing codebase, or by migrating an older layout Arguments: project path | business request | (empty = design from scratch) | --migrate."
+}

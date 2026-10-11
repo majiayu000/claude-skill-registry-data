@@ -1,0 +1,39 @@
+{
+  "name": "compose-feature-wiring-audit",
+  "repo": "AlexMollard/Harness",
+  "path": "skills/managed/compose-feature-wiring-audit/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/AlexMollard/Harness",
+  "dir_name": "compose-feature-wiring-audit",
+  "downloaded_at": "2026-10-11T09:35:41.678650Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile, debug",
+    "score": 4,
+    "runner_up": "platform",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AlexMollard",
+  "source_url": "https://github.com/AlexMollard/Harness/blob/master/skills/managed/compose-feature-wiring-audit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AlexMollard/Harness/blob/master/skills/managed/compose-feature-wiring-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when parallel agents added Compose screens, entities or DB columns: a new screen never appears, a feature silently does nothing, or launch crashes with No enum constant or a missing migration. Also after new enum values reach a UI filter row."
+}

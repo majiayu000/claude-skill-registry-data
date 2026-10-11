@@ -1,0 +1,37 @@
+{
+  "name": "reversible-bulk-file-consolidation",
+  "repo": "AlexMollard/Harness",
+  "path": "skills/managed/reversible-bulk-file-consolidation/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/AlexMollard/Harness",
+  "dir_name": "reversible-bulk-file-consolidation",
+  "downloaded_at": "2026-10-11T09:35:48.698515Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: planning=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "planning",
+      "plan"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AlexMollard",
+  "source_url": "https://github.com/AlexMollard/Harness/blob/master/skills/managed/reversible-bulk-file-consolidation/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AlexMollard/Harness/blob/master/skills/managed/reversible-bulk-file-consolidation/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Design and prove a bulk move/merge/delete over shared or production storage (network share, asset repo, dump archive) so it is dry-run-first and byte-exactly reversible \u2014 use when asked to \"tidy up\", \"merge duplicate folders\", or \"clean up\" a directory tree that other people or tools depend on."
+}

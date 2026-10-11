@@ -1,0 +1,38 @@
+{
+  "name": "mitre-defend-review",
+  "repo": "Jayarr03/Codex_ThreatModel_Skills",
+  "path": "skills/mitre-defend-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Jayarr03/Codex_ThreatModel_Skills",
+  "dir_name": "mitre-defend-review",
+  "downloaded_at": "2026-10-11T10:41:36.872571Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: quality=3, workflow=3",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 3,
+    "signals": [
+      "quality",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jayarr03",
+  "source_url": "https://github.com/Jayarr03/Codex_ThreatModel_Skills/blob/main/skills/mitre-defend-review/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jayarr03/Codex_ThreatModel_Skills/blob/main/skills/mitre-defend-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Review a repository, architecture, workflow, or local folder with a focus on MITRE D3FEND and defensive coverage concepts. Use when Codex needs to assess how well a system detects, prevents, contains, hardens against, or responds to attacker behavior, and where defensive coverage appears weak or missing."
+}

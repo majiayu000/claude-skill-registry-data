@@ -1,0 +1,37 @@
+{
+  "name": "setting-up-agent-relay-desktop",
+  "repo": "AgentWorkforce/skills",
+  "path": "skills/setting-up-agent-relay-desktop/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/AgentWorkforce/skills",
+  "dir_name": "setting-up-agent-relay-desktop",
+  "downloaded_at": "2026-10-11T09:32:52.144460Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AgentWorkforce",
+  "source_url": "https://github.com/AgentWorkforce/skills/blob/main/skills/setting-up-agent-relay-desktop/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AgentWorkforce/skills/blob/main/skills/setting-up-agent-relay-desktop/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Set up or repair Agent Relay Desktop end-to-end from a running Codex or Claude session on macOS or Linux, including verified installation, headless systemd service, device sign-in, new-session uploads, self-registration, direct delivery, webhooks, GitHub subscriptions, and delivery verification. Use when a human asks an agent to install, configure, or finish desktop relay setup without walking through the app UI."
+}

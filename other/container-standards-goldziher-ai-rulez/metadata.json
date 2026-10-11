@@ -1,0 +1,37 @@
+{
+  "name": "container-standards",
+  "repo": "Goldziher/ai-rulez",
+  "path": "tests/review/golden/skill-quality/fixtures/shared/skills/container-standards/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Goldziher/ai-rulez",
+  "dir_name": "container-standards-goldziher-ai-rulez",
+  "downloaded_at": "2026-10-11T10:25:23.959880Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: quality=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Goldziher",
+  "source_url": "https://github.com/Goldziher/ai-rulez/blob/main/tests/review/golden/skill-quality/fixtures/shared/skills/container-standards/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Goldziher/ai-rulez/blob/main/tests/review/golden/skill-quality/fixtures/shared/skills/container-standards/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Container build and runtime standards: multi-stage builds into a minimal runtime (Alpine/Distroless/Scratch), manifest-before-source layer ordering for cache hits, non-root user, vulnerability scan failing on HIGH/CRITICAL, no secrets in the image, tini/dumb-init as PID 1, HEALTHCHECK, and semver+SHA tags that are never reused. Load when writing or reviewing a Dockerfile, docker-compose file, container build pipeline, or image tagging scheme."
+}

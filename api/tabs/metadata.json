@@ -1,0 +1,38 @@
+{
+  "name": "tabs",
+  "repo": "Agents-Store/codex-plugins",
+  "path": "teams-dev/skills/tabs/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/Agents-Store/codex-plugins",
+  "dir_name": "tabs",
+  "downloaded_at": "2026-10-11T09:32:58.191015Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, sdk, endpoint",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Agents-Store",
+  "source_url": "https://github.com/Agents-Store/codex-plugins/blob/main/teams-dev/skills/tabs/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Agents-Store/codex-plugins/blob/main/teams-dev/skills/tabs/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this skill when the user is building a tab inside a Microsoft Teams app on Teams SDK 2.1 \u2014 serving a static page with `app.tab()`, calling the agent from the page with `@microsoft/teams.client` and `app.function()`, using TeamsJS (`@microsoft/teams-js`) for context and dialogs, acquiring tokens with Nested App Authentication (NAA) and MSAL. Triggers on \"Teams tab\", \"static tab\", \"configurable tab\", \"app.function\", \"teams.client\", \"Nested App Authentication\", \"TeamsJS\"."
+}

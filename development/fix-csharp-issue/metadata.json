@@ -1,0 +1,40 @@
+{
+  "name": "fix-csharp-issue",
+  "repo": "JamesThanni/agent-skills",
+  "path": "skills/fix-csharp-issue/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/JamesThanni/agent-skills",
+  "dir_name": "fix-csharp-issue",
+  "downloaded_at": "2026-10-11T10:39:50.556294Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, framework, build, compile, debug",
+    "score": 5,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "JamesThanni",
+  "source_url": "https://github.com/JamesThanni/agent-skills/blob/main/skills/fix-csharp-issue/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/JamesThanni/agent-skills/blob/main/skills/fix-csharp-issue/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Debug and explain how to fix C# and .NET errors step by step in a way that teaches as it fixes. Use this skill whenever a user shares a C# compiler error, .NET runtime exception, or build failure \u2014 regardless of how they phrase it (e.g. \"CS0103\", \"why is this broken\", \"getting a red squiggle\", \"this doesn't compile\", \"NullReferenceException\", \"dotnet build fails\", \"help with my C#\"). Also trigger when the user pastes a C# snippet with a visible issue, even if they haven't mentioned an error explicitly. Covers all C# error categories: compiler diagnostics (CS codes), runtime exceptions, nullable reference type warnings, async/await misuse, LINQ errors, EF Core failures, interface violations, and MSBuild/project issues."
+}

@@ -1,0 +1,36 @@
+{
+  "name": "session-close-full-audit",
+  "repo": "FDL32/orquestador-de-agentes",
+  "path": ".claude/skills/session-close-full-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/FDL32/orquestador-de-agentes",
+  "dir_name": "session-close-full-audit-fdl32-orquestador-de-agent",
+  "downloaded_at": "2026-10-11T10:16:41.674065Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "communication",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "FDL32",
+  "source_url": "https://github.com/FDL32/orquestador-de-agentes/blob/main/.claude/skills/session-close-full-audit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/FDL32/orquestador-de-agentes/blob/main/.claude/skills/session-close-full-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Auditoria adversarial previa al cierre canonico de una sesion, que encadena tres auditorias de salud y una pasada adversarial sobre el codigo generado; el cierre lo ejecuta agent_controller.py --session-close y en modo FINAL tambien registra follow-ups y propone memoria. Usar cuando se cierra una sesion que toco codigo del motor o del destino, antes de --session-close; a mitad de vuelo solo los Bloques 1, 2 y 2.5 sin 2.5.f ni 2.5.g, y nunca los Bloques 3 a 5. No usar para el cierre operativo (ver orchestrator_session_close_chat), para arrancar una sesion (ver orchestrator_session_bootstrap) ni para dejar continuidad medida a la sesion siguiente (ver session-hop); nunca corre el Bloque 3 con un ticket IN_PROGRESS."
+}

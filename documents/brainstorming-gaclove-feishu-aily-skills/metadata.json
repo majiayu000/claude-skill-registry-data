@@ -1,0 +1,39 @@
+{
+  "name": "brainstorming",
+  "repo": "GACLove/feishu-aily-skills",
+  "path": "skills/brainstorming/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/GACLove/feishu-aily-skills",
+  "dir_name": "brainstorming-gaclove-feishu-aily-skills",
+  "downloaded_at": "2026-10-11T10:21:09.788100Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word, documentation",
+    "score": 4,
+    "runner_up": "design",
+    "runner_up_score": 3,
+    "signals": [
+      "doc",
+      "docs",
+      "word",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "GACLove",
+  "source_url": "https://github.com/GACLove/feishu-aily-skills/blob/main/skills/brainstorming/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/GACLove/feishu-aily-skills/blob/main/skills/brainstorming/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this skill when the user wants to discuss, plan, or design something BEFORE implementation. Triggers for: exploring ideas, gathering requirements, creating design specs, comparing architectural approaches, or reviewing design decisions. Does NOT trigger for direct implementation requests like 'write code', 'generate a component', 'create a document', 'fix a bug', or 'deploy this' - those skip straight to implementation. The key signal is the user wants to THINK THROUGH and DESIGN something together, not receive immediate output."
+}

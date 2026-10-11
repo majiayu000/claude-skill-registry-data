@@ -1,0 +1,38 @@
+{
+  "name": "manager-session-closeout",
+  "repo": "FDL32/orquestador-de-agentes",
+  "path": "skills/manager-session-closeout/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/FDL32/orquestador-de-agentes",
+  "dir_name": "manager-session-closeout",
+  "downloaded_at": "2026-10-11T10:16:38.450895Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agent-role"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "FDL32",
+  "source_url": "https://github.com/FDL32/orquestador-de-agentes/blob/main/skills/manager-session-closeout/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/FDL32/orquestador-de-agentes/blob/main/skills/manager-session-closeout/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Cierre de sesion del Manager que propone learnings, los clasifica como local, generalizable o dudoso y prepara el puente de mejora continua hacia el motor. Usar cuando termina un WP o una sesion relevante y hay que capturar lo aprendido con validacion humana. No usar para cerrar un proyecto entero (ver project-finalize) ni para volcar observaciones a memoria (ver session-close-observations)."
+}

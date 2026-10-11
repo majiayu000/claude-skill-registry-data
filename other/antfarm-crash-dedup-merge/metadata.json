@@ -1,0 +1,37 @@
+{
+  "name": "antfarm-crash-dedup-merge",
+  "repo": "AlexMollard/Harness",
+  "path": "skills/managed/antfarm-crash-dedup-merge/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/AlexMollard/Harness",
+  "dir_name": "antfarm-crash-dedup-merge",
+  "downloaded_at": "2026-10-11T09:35:38.514578Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, writing=2",
+    "score": 2,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AlexMollard",
+  "source_url": "https://github.com/AlexMollard/Harness/blob/master/skills/managed/antfarm-crash-dedup-merge/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AlexMollard/Harness/blob/master/skills/managed/antfarm-crash-dedup-merge/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when asked to dedupe AntFarm (D:/NightSmith) crash tickets or tidy the //psrecap crash share, when ticket counts grow or a ticket named archive appears after a merge, or when changing how duplicate crashes are matched or auto-linked at ingest."
+}

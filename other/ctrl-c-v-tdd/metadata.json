@@ -1,0 +1,38 @@
+{
+  "name": "ctrl-c-v-tdd",
+  "repo": "Huangleyang125207/ctrl-c-v-code-skills",
+  "path": "skills/ctrl-c-v-tdd/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Huangleyang125207/ctrl-c-v-code-skills",
+  "dir_name": "ctrl-c-v-tdd",
+  "downloaded_at": "2026-10-11T10:31:53.649682Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Huangleyang125207",
+  "source_url": "https://github.com/Huangleyang125207/ctrl-c-v-code-skills/blob/main/skills/ctrl-c-v-tdd/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Huangleyang125207/ctrl-c-v-code-skills/blob/main/skills/ctrl-c-v-tdd/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Test-pattern doctrine. Tests are copyable from\n~/.claude/patterns/tests/, three categories: input boundary,\ncontract, effect. Make sure to consult this skill whenever code\nchanges touch a boundary where someone else's code meets yours,\neven if the user doesn't say \"test\" or \"TDD\" \u2014 Claude tends to\nship untested boundary code, and this skill prevents the Saturday\nphone call.\nTRIGGER when: code under change has external callers (other\nmodules, cron, CLI, HTTP/RPC clients, \"\u5916\u90e8\u8c03\u7528\", \"\u88ab\u5916\u90e8\u8c03\u7528\");\npersists state (DB write, file write, redis/cache, session\nstorage, anything that survives the request); calls third-party\nAPI/SDK; task is classified as LARGE per ctrl-c-v sizing (4+\nfiles, new capability, new architecture, new external contract)\n\u2014 LARGE always triggers TDD regardless of caller scope; user\nmentions tests, TDD, \u6d4b\u8bd5, boundary, contract, mock, fixture,\nred/green, characterization test, pinning test, golden master,\nrefactor; business domain involves payments, queues, webhooks,\nauth, external integration; refactor of working code (no current\ntests) \u2192 \u00a7 T7 characterization mode applies.\nSKIP when: code change is purely internal helpers used only by\ncaller in same file; pure UI rendering with no validation/state;\naccessor < 10 lines with no if/loop/exception; one-file fix that\nctrl-c-v classifies as SMALL.\nExamples that trigger: \"implement Stripe webhook handler\",\n\"add retry to the upload pipeline\", \"this database migration\",\n\"build a multi-step checkout form with validation across steps\".\nExamples that skip: \"rename this private function\", \"fix\nformatting in style.css\"."
+}

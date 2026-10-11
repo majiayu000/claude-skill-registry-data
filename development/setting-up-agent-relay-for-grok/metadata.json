@@ -1,0 +1,37 @@
+{
+  "name": "setting-up-agent-relay-for-grok",
+  "repo": "AgentWorkforce/skills",
+  "path": "plugins/grok/agent-relay/skills/setting-up-agent-relay-for-grok/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/AgentWorkforce/skills",
+  "dir_name": "setting-up-agent-relay-for-grok",
+  "downloaded_at": "2026-10-11T09:32:54.124149Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AgentWorkforce",
+  "source_url": "https://github.com/AgentWorkforce/skills/blob/main/plugins/grok/agent-relay/skills/setting-up-agent-relay-for-grok/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AgentWorkforce/skills/blob/main/plugins/grok/agent-relay/skills/setting-up-agent-relay-for-grok/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when a person wants this Grok Build session on Agent Relay so other agents can message it in real time - checks the Agent Relay desktop is running and signed in, checks Grok leader mode and turns it on only with the person's consent, registers this Grok session through the desktop, and verifies it appears on the relay roster. Run before messaging-agents-on-the-relay."
+}

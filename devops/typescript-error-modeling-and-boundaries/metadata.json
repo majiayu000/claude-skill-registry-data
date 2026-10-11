@@ -1,0 +1,37 @@
+{
+  "name": "typescript-error-modeling-and-boundaries",
+  "repo": "GonkaGate/hermes-agent-setup",
+  "path": ".claude/skills/typescript-error-modeling-and-boundaries/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/GonkaGate/hermes-agent-setup",
+  "dir_name": "typescript-error-modeling-and-boundaries",
+  "downloaded_at": "2026-10-11T10:26:04.104049Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: infra, infrastructure",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "GonkaGate",
+  "source_url": "https://github.com/GonkaGate/hermes-agent-setup/blob/main/.claude/skills/typescript-error-modeling-and-boundaries/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/GonkaGate/hermes-agent-setup/blob/main/.claude/skills/typescript-error-modeling-and-boundaries/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Own internal error architecture and boundary design in strict-mode TypeScript backends. Use whenever the task is about choosing between exceptions, explicit error values, or nullable returns; stabilizing error identity with `code` or `kind`; preserving context with `cause`; or deciding where infrastructure failures should be enriched, translated, and shaped for callers, even if the user frames it as \"clean up error handling\", \"should this throw?\", \"why are we matching messages?\", or \"where should this become AppError?\""
+}

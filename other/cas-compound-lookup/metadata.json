@@ -1,0 +1,37 @@
+{
+  "name": "cas_compound_lookup",
+  "repo": "InternScience/scp",
+  "path": "skills/cas_compound_lookup/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/InternScience/scp",
+  "dir_name": "cas-compound-lookup",
+  "downloaded_at": "2026-10-11T10:35:53.364377Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "InternScience",
+  "source_url": "https://github.com/InternScience/scp/blob/main/skills/cas_compound_lookup/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/InternScience/scp/blob/main/skills/cas_compound_lookup/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "CAS Number Compound Lookup - Look up compounds by CAS: convert CAS to price/availability, get PubChem data, get ChEMBL info, and structure analysis. Use this skill for chemical information tasks involving CASToPrice get compound by name get molecule by name ChemicalStructureAnalyzer. Combines 4 tools from 4 SCP server(s)."
+}

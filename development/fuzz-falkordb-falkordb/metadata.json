@@ -1,0 +1,38 @@
+{
+  "name": "fuzz",
+  "repo": "FalkorDB/FalkorDB",
+  "path": ".claude/skills/fuzz/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/FalkorDB/FalkorDB",
+  "dir_name": "fuzz-falkordb-falkordb",
+  "downloaded_at": "2026-10-11T10:17:07.399185Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, build, debug",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "FalkorDB",
+  "source_url": "https://github.com/FalkorDB/FalkorDB/blob/main/.claude/skills/fuzz/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/FalkorDB/FalkorDB/blob/main/.claude/skills/fuzz/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run and manage FalkorDB's cargo-fuzz pipeline for the query runtime (fuzz_target_runtime) - build the fuzz target, run/minimize the corpus, generate coverage, and reproduce a crash artifact. Use when asked to fuzz test the runtime, investigate a fuzzing crash/artifact, or update the fuzz corpus."
+}

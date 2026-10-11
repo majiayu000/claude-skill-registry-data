@@ -1,0 +1,37 @@
+{
+  "name": "bootstrap-diagnostics",
+  "repo": "EvanBatten/firstmate-for-windows",
+  "path": ".agents/skills/bootstrap-diagnostics/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/EvanBatten/firstmate-for-windows",
+  "dir_name": "bootstrap-diagnostics",
+  "downloaded_at": "2026-10-11T10:14:48.873864Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: product=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "feature",
+      "backlog"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "EvanBatten",
+  "source_url": "https://github.com/EvanBatten/firstmate-for-windows/blob/main/.agents/skills/bootstrap-diagnostics/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/EvanBatten/firstmate-for-windows/blob/main/.agents/skills/bootstrap-diagnostics/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Agent-only handling playbook for session-start bootstrap diagnostics. Use whenever the session-start digest's bootstrap or network-checks section prints an actionable diagnostic line - MISSING, MISSING_MANUAL, PRESENTATION_UNAVAILABLE, BACKEND_INVALID, NEEDS_GH_AUTH, TANGLE, STARTUP_MEMORY_BUDGET, CREW_DISPATCH invalid, FLEET_SYNC, NETWORK_CHECKS, HOME_SUMMARY, BACKLOG_RECONCILE, SECONDMATE_SYNC, SECONDMATE_LIVENESS, SECONDMATE_HANDOFF, NUDGE_SECONDMATES, or FMX - or reports that an interrupted backlog cleanup may have left an endpoint or local copy, or when a standalone bin/fm-bootstrap.sh or bin/fm-startup-network.sh run prints one of those lines. A silent bootstrap section, or any other BOOTSTRAP_INFO fact, means no skill load."
+}

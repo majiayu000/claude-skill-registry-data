@@ -1,0 +1,39 @@
+{
+  "name": "flow-for-slack",
+  "repo": "BanibrataChatterjee/AwesomeSalesforceSkills",
+  "path": "skills/flow/flow-for-slack/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/BanibrataChatterjee/AwesomeSalesforceSkills",
+  "dir_name": "flow-for-slack",
+  "downloaded_at": "2026-10-11T09:46:15.577452Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process, automation",
+    "score": 3,
+    "runner_up": "integration",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "process",
+      "automation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "BanibrataChatterjee",
+  "source_url": "https://github.com/BanibrataChatterjee/AwesomeSalesforceSkills/blob/main/skills/flow/flow-for-slack/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BanibrataChatterjee/AwesomeSalesforceSkills/blob/main/skills/flow/flow-for-slack/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this skill when using Salesforce Flow Core Actions for Slack to send messages, create/archive channels, add users, check user connectivity, or launch flows from Slack \u2014 including prerequisite setup of the Salesforce for Slack managed package and required permission sets. Triggers on: Send Slack Message from Flow, Create Slack Channel action in Flow, Flow Core Actions for Slack not visible, Slack actions missing in Flow Builder, add users to Slack channel from Flow. NOT for Slack Workflow Builder (Slack-native tool that calls autolaunched Flows FROM Slack \u2014 use slack-workflow-builder skill), not for Agentforce Slack agent deployment (use agentforce-in-slack skill), not for initial Salesforce-Slack org connection (use slack-salesforce-integration-setup skill)."
+}

@@ -1,0 +1,42 @@
+{
+  "name": "ctrl-c-v",
+  "repo": "Huangleyang125207/ctrl-c-v-code-skills",
+  "path": "skills/ctrl-c-v/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Huangleyang125207/ctrl-c-v-code-skills",
+  "dir_name": "ctrl-c-v",
+  "downloaded_at": "2026-10-11T10:31:53.806315Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, programming, framework, build, software, debug, refactor",
+    "score": 7,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "programming",
+      "framework",
+      "build",
+      "software",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Huangleyang125207",
+  "source_url": "https://github.com/Huangleyang125207/ctrl-c-v-code-skills/blob/main/skills/ctrl-c-v/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Huangleyang125207/ctrl-c-v-code-skills/blob/main/skills/ctrl-c-v/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Coding doctrine for any task that creates, modifies, or refactors\ncode in a programming language. Make sure to consult this skill\nwhenever the user is about to write, edit, debug, or ship code,\neven if they don't explicitly ask for \"best practices\" \u2014 Claude's\ndefault of generating new code from scratch produces code no one\ncan grep, copy, or ship next Friday, and this skill enforces a\ncopy-paste-first workflow that compounds into tomorrow's\nshortcuts.\nTRIGGER when: user asks to write/add/fix/implement code; request\nmentions a function/class/module/component/endpoint/script; user\nshares an error and asks to fix; user wants code review of a diff\nor PR; file changes touch *.py *.ts *.tsx *.js *.jsx *.go *.rb\n*.rs *.java *.kt *.swift *.cpp *.c *.h *.cs *.php *.lua *.sh;\nuser opens or enters a new project for the first time (no\nCLAUDE.md present yet); refactoring or extracting from a\nmonolith \u2192 \u00a7 9 mode applies.\nSKIP when: pure markdown/config edit (yaml, json, toml, env);\nconceptual question without code-change intent (\"how does X\nwork\"); diary / journal / retro / supplement notes; pure\nprompt/spec/doc authoring; reading code only (no edit intended);\ndeleting files as a side-effect of a non-code task (removing a\nstale screenshot, clearing logs).\nExamples that trigger: \"implement login endpoint\", \"fix this\nbug\", \"refactor the parser\", \"extract module\", \"split monolith\",\n\"add a hook for X\", first session in an empty project.\nExamples that skip: \"explain what async means\", \"\u4eca\u5929\u7684\u590d\u76d8\",\n\"write a README\", \"delete those old screenshots\"."
+}

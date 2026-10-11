@@ -1,0 +1,38 @@
+{
+  "name": "supabase-erasure-promise-assertion",
+  "repo": "AlexMollard/Harness",
+  "path": "skills/managed/supabase-erasure-promise-assertion/SKILL.md",
+  "github_branch": "master",
+  "category": "data",
+  "source": "github.com/AlexMollard/Harness",
+  "dir_name": "supabase-erasure-promise-assertion",
+  "downloaded_at": "2026-10-11T09:35:49.311717Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AlexMollard",
+  "source_url": "https://github.com/AlexMollard/Harness/blob/master/skills/managed/supabase-erasure-promise-assertion/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AlexMollard/Harness/blob/master/skills/managed/supabase-erasure-promise-assertion/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Prove an app's \"delete my cloud data\" promise actually erases everything, by asserting the cascade in SQL against a real Postgres \u2014 covers the silent orphan case a schema review misses, the two different failure shapes, and keeping the assertion re-runnable. Use when a privacy policy or Play Data Safety sheet claims in-app deletion, or after adding any table to a Supabase schema."
+}

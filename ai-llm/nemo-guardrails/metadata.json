@@ -1,0 +1,39 @@
+{
+  "name": "nemo-guardrails",
+  "repo": "12505011/agent-workspace",
+  "path": "AI-Research-SKILLs-main/07-safety-alignment/nemo-guardrails/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/12505011/agent-workspace",
+  "dir_name": "nemo-guardrails",
+  "downloaded_at": "2026-10-11T09:20:14.258079Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: ai, llm, prompt",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "12505011",
+  "source_url": "https://github.com/12505011/agent-workspace/blob/main/AI-Research-SKILLs-main/07-safety-alignment/nemo-guardrails/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/12505011/agent-workspace/blob/main/AI-Research-SKILLs-main/07-safety-alignment/nemo-guardrails/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "NVIDIA's runtime safety framework for LLM applications. Features jailbreak detection, input/output validation, fact-checking, hallucination detection, PII filtering, toxicity detection. Uses Colang 2.0 DSL for programmable rails. Production-ready, runs on T4 GPU."
+}

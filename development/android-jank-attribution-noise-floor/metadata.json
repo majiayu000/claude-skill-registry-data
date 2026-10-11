@@ -1,0 +1,39 @@
+{
+  "name": "android-jank-attribution-noise-floor",
+  "repo": "AlexMollard/Harness",
+  "path": "skills/managed/android-jank-attribution-noise-floor/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/AlexMollard/Harness",
+  "dir_name": "android-jank-attribution-noise-floor",
+  "downloaded_at": "2026-10-11T09:35:50.069728Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, software, debug",
+    "score": 4,
+    "runner_up": "platform",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "software",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AlexMollard",
+  "source_url": "https://github.com/AlexMollard/Harness/blob/master/skills/managed/android-jank-attribution-noise-floor/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AlexMollard/Harness/blob/master/skills/managed/android-jank-attribution-noise-floor/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Measure Android scroll jank at realistic data volume and decide whether a frame-time difference is real \u2014 seeding the app's LIVE database via am instrument (the Gradle task uninstalls the app and takes the data with it), using a data-independent screen as a control, and establishing the emulator's noise floor before attributing anything. Use when a screen \"feels slow at scale\", before accepting a Compose remember/memoisation optimisation, or when dumpsys gfxinfo numbers are about to be quoted."
+}

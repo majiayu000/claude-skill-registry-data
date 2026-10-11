@@ -1,0 +1,37 @@
+{
+  "name": "extendr-bindings",
+  "repo": "Goldziher/ai-rulez",
+  "path": "internal/builtins/bindings/extendr/skills/extendr-bindings/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Goldziher/ai-rulez",
+  "dir_name": "extendr-bindings",
+  "downloaded_at": "2026-10-11T10:25:19.468475Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Goldziher",
+  "source_url": "https://github.com/Goldziher/ai-rulez/blob/main/internal/builtins/bindings/extendr/skills/extendr-bindings/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Goldziher/ai-rulez/blob/main/internal/builtins/bindings/extendr/skills/extendr-bindings/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "extendr conventions for exposing a Rust core to R: extendr macros and module registration, Robj type mapping, NA handling, rextendr builds, R package scaffolding, and CRAN compliance. Load when generating or reviewing extendr R bindings for a Rust library."
+}

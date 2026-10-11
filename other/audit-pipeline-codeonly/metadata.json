@@ -1,0 +1,38 @@
+{
+  "name": "audit-pipeline-codeonly",
+  "repo": "FDL32/orquestador-de-agentes",
+  "path": "skills/audit-pipeline-codeonly/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/FDL32/orquestador-de-agentes",
+  "dir_name": "audit-pipeline-codeonly",
+  "downloaded_at": "2026-10-11T10:16:37.573421Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agent-role"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "FDL32",
+  "source_url": "https://github.com/FDL32/orquestador-de-agentes/blob/main/skills/audit-pipeline-codeonly/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/FDL32/orquestador-de-agentes/blob/main/skills/audit-pipeline-codeonly/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Meta-auditoria de una cadena de tickets del motor cerrada en CODE-ONLY MODE (worktree _dev, cierre commit-directo sin bus), con evidencia por commits y bloques de cierre del workspace, aterrizaje en origin/main y costuras entre tickets. Usar cuando termina una cadena ejecutada con orchestrate-pipeline-codeonly, sin destino externo ni bus vivo. No usar para un repo_destino con bus vivo (ver audit-pipeline); no reabre tickets ni toca backlog ni codigo."
+}

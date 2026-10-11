@@ -1,0 +1,39 @@
+{
+  "name": "stride-tampering",
+  "repo": "Jayarr03/Codex_ThreatModel_Skills",
+  "path": "skills/stride-tampering/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/Jayarr03/Codex_ThreatModel_Skills",
+  "dir_name": "stride-tampering",
+  "downloaded_at": "2026-10-11T10:41:36.129226Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: ci, deploy, infra, infrastructure",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "ci",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jayarr03",
+  "source_url": "https://github.com/Jayarr03/Codex_ThreatModel_Skills/blob/main/skills/stride-tampering/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jayarr03/Codex_ThreatModel_Skills/blob/main/skills/stride-tampering/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generate Tampering threats for a system, repo, architecture, or data flow. Use when Codex needs to identify how data, messages, state, code, configuration, or control flow could be modified without authorization while stored, processed, or transmitted."
+}

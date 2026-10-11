@@ -1,0 +1,37 @@
+{
+  "name": "orchestrate-pipeline-codeonly",
+  "repo": "FDL32/orquestador-de-agentes",
+  "path": ".claude/skills/orchestrate-pipeline-codeonly/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/FDL32/orquestador-de-agentes",
+  "dir_name": "orchestrate-pipeline-codeonly-fdl32-orquestador-de-agent",
+  "downloaded_at": "2026-10-11T10:16:42.707709Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "FDL32",
+  "source_url": "https://github.com/FDL32/orquestador-de-agentes/blob/main/.claude/skills/orchestrate-pipeline-codeonly/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/FDL32/orquestador-de-agentes/blob/main/.claude/skills/orchestrate-pipeline-codeonly/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Pipeline multi-ticket del motor en CODE-ONLY MODE que muta codigo en la worktree _dev, con work_plan, STRATEGY y AUDIT por ticket, dos revisiones (la segunda en contexto fresco) y cierre por commit directo sin bus. Usar cuando el ticket tiene delivery_authority repo_motor, se trabaja en la worktree _dev y el motor esta en CODE-ONLY MODE; el push va agrupado al final y con autorizacion explicita. No usar para el pipeline canonico con bus vivo (ver orchestrate-pipeline), para decidir que pipeline lanzar (ver backlog-triage) ni para auditar la cadena cerrada (ver audit-pipeline-codeonly)."
+}

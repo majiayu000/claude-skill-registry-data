@@ -1,0 +1,38 @@
+{
+  "name": "ab-socks-workflow",
+  "repo": "Abeh995/AB-Shop",
+  "path": ".claude/skills/ab-socks-workflow/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Abeh995/AB-Shop",
+  "dir_name": "ab-socks-workflow",
+  "downloaded_at": "2026-10-11T09:30:15.080689Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Abeh995",
+  "source_url": "https://github.com/Abeh995/AB-Shop/blob/main/.claude/skills/ab-socks-workflow/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Abeh995/AB-Shop/blob/main/.claude/skills/ab-socks-workflow/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Comprehensive engineering workflow for the AB-Socks project: the release & versioning SOP, the layered architecture guide (controller / service / core / view), and the shared-hosting debugging playbook. Load this skill whenever the user asks to ship a release, bump the version, add a new controller/service/migration, refactor a bloated file, or debug a production issue on the shared host (500 errors, PDO errors, cache, uploads, WebP, sessions). This skill is procedural \u2014 it complements AGENTS.md and CONTRIBUTING.md, it does not replace their rules."
+}

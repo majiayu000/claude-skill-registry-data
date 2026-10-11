@@ -1,0 +1,38 @@
+{
+  "name": "backlog-admit",
+  "repo": "FDL32/orquestador-de-agentes",
+  "path": "skills/backlog-admit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/FDL32/orquestador-de-agentes",
+  "dir_name": "backlog-admit",
+  "downloaded_at": "2026-10-11T10:16:33.386387Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agent-role"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "FDL32",
+  "source_url": "https://github.com/FDL32/orquestador-de-agentes/blob/main/skills/backlog-admit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/FDL32/orquestador-de-agentes/blob/main/skills/backlog-admit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Alta de un ticket nuevo como fila de backlog.md con el recibo mecanico BACKLOG-ADMISSION-RECIBO que emite backlog_db_compare.py y contrasta check_backlog_admission.py. Usar cuando el PASO 0 del protocolo de hallazgos decide que la senal merece una fila nueva, antes de commitear el alta. No usar para el triaje pre-pipeline (ver backlog-triage) ni para escalar un hallazgo del motor al buzon (ver escalate-to-motor)."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "typescript-type-safety-review",
+  "repo": "GonkaGate/opencode-setup",
+  "path": ".agents/skills/typescript-type-safety-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/GonkaGate/opencode-setup",
+  "dir_name": "typescript-type-safety-review-gonkagate-opencode-setup-2",
+  "downloaded_at": "2026-10-11T10:26:10.280235Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "GonkaGate",
+  "source_url": "https://github.com/GonkaGate/opencode-setup/blob/main/.agents/skills/typescript-type-safety-review/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/GonkaGate/opencode-setup/blob/main/.agents/skills/typescript-type-safety-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Findings-first review specialist for TypeScript soundness, safety, and boundary clarity. Use whenever a TypeScript PR, diff, audit, or incident review touches unsafe assertions, `any` leakage, partial validation, unsound unions or generics, utility-type misuse that hides real shape, optionality or indexed-access hazards, or exported types that overpromise guarantees, even if the user only says 'is this type-safe?' or 'can this cast blow up?'"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "coding-prompt-normalizer",
+  "repo": "GonkaGate/hermes-agent-setup",
+  "path": ".claude/skills/coding-prompt-normalizer/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/GonkaGate/hermes-agent-setup",
+  "dir_name": "coding-prompt-normalizer-gonkagate-hermes-agent-setup",
+  "downloaded_at": "2026-10-11T10:26:01.485249Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, planning",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "planning"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "GonkaGate",
+  "source_url": "https://github.com/GonkaGate/hermes-agent-setup/blob/main/.claude/skills/coding-prompt-normalizer/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/GonkaGate/hermes-agent-setup/blob/main/.claude/skills/coding-prompt-normalizer/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Turn rough, mixed-language, speech-to-text-like, repetitive, or partially specified coding requests into a high-signal task-context brief and handoff prompt for agents working inside hermes-agent-setup. Use when the hard part is reconstructing the user's real task, preserving exact literals such as `~/.hermes/config.yaml`, `~/.hermes/.env`, `gonkagate`, or `npx @gonkagate/hermes-agent-setup`, grounding the ask in the current shipped-runtime repo truth, and packaging it for downstream execution. Prompt polish is secondary to accurate repo-aware task reconstruction."
+}

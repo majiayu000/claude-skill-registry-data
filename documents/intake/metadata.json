@@ -1,0 +1,41 @@
+{
+  "name": "intake",
+  "repo": "Agents-Store/codex-plugins",
+  "path": "macstack-dev/skills/intake/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/Agents-Store/codex-plugins",
+  "dir_name": "intake",
+  "downloaded_at": "2026-10-11T09:33:09.134833Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, pdf, word, xlsx, docx",
+    "score": 6,
+    "runner_up": "communication",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "pdf",
+      "word",
+      "xlsx",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Agents-Store",
+  "source_url": "https://github.com/Agents-Store/codex-plugins/blob/main/macstack-dev/skills/intake/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Agents-Store/codex-plugins/blob/main/macstack-dev/skills/intake/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "This skill should be used when the user says \"client sent edits\", \"merge client feedback\", \"\u043a\u043b\u0438\u0435\u043d\u0442 \u043f\u0440\u0438\u0441\u043b\u0430\u043b \u043f\u0440\u0430\u0432\u043a\u0438\", \"\u0440\u0430\u0437\u043e\u0431\u0440\u0430\u0442\u044c \u043f\u0440\u0430\u0432\u043a\u0438\", \"improve the user cases\", \"new spec from the client\", \"process the inbox\", \"what changed in the client's document\", \"apply the delta\", pastes new client material into chat, or drops a file into macstack/inbox/. Runs the full intake \u2192 delta \u2192 gate \u2192 ruling \u2192 apply \u2192 log loop against the macstack/ folder standard \u2014 never edits the client documents or macstack.json directly from raw client material."
+}

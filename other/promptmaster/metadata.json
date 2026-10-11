@@ -1,0 +1,36 @@
+{
+  "name": "promptmaster",
+  "repo": "Jakeschincariol/promptmaster-skill",
+  "path": ".claude/skills/promptmaster/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Jakeschincariol/promptmaster-skill",
+  "dir_name": "promptmaster",
+  "downloaded_at": "2026-10-11T10:39:36.705720Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-llm scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/promptmaster-skill/blob/main/.claude/skills/promptmaster/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/promptmaster-skill/blob/main/.claude/skills/promptmaster/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Rewrite the user's raw request into an optimized prompt before answering it, audit it against the 35 credit-waste patterns in waste-patterns.json, and enforce every locked decision in decisions.md so nothing gets re-explained and nothing contradicts itself. Use whenever the user types /promptmaster, prefixes a request with it, or asks to optimize / tighten / fix a prompt."
+}

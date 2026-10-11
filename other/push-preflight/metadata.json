@@ -1,0 +1,37 @@
+{
+  "name": "push-preflight",
+  "repo": "0xDarkMatter/claude-mods",
+  "path": "skills/push-preflight/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/0xDarkMatter/claude-mods",
+  "dir_name": "push-preflight",
+  "downloaded_at": "2026-10-11T09:18:35.191339Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "0xDarkMatter",
+  "source_url": "https://github.com/0xDarkMatter/claude-mods/blob/main/skills/push-preflight/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/0xDarkMatter/claude-mods/blob/main/skills/push-preflight/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Secret-scans the commits a git push would send (gitleaks + regex layer; never history), then checks clean tree, forbidden files and fast-forward, with size and open-issue advisories. Refuses on any secret hit, no bypass. Triggers on: push to origin, push to github, push to remote, git push, can we push, safe to push, ready to push, pre-push check, /push-preflight (formerly push-gate)."
+}

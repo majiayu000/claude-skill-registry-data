@@ -1,0 +1,39 @@
+{
+  "name": "code-review",
+  "repo": "Jeruzael/mcp-server",
+  "path": "skills/code-review/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/Jeruzael/mcp-server",
+  "dir_name": "code-review-jeruzael-mcp-server",
+  "downloaded_at": "2026-10-11T10:42:01.707079Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=4, development=4",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 4,
+    "signals": [
+      "design",
+      "ui",
+      "frontend",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jeruzael",
+  "source_url": "https://github.com/Jeruzael/mcp-server/blob/master/skills/code-review/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jeruzael/mcp-server/blob/master/skills/code-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Review code changes like a careful software engineer before merge, deployment, client demo, pull request, or handover. Use when Codex needs to inspect diffs or changed files after features, bug fixes, refactors, database migrations, authentication changes, authorization changes, API contract changes, frontend UI changes, backend changes, DevOps changes, tests, documentation updates, or business-critical workflows such as bookings, orders, payments, permissions, reports, staff management, customer data, and production data handling."
+}

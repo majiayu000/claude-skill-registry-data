@@ -1,0 +1,37 @@
+{
+  "name": "refactor-manager",
+  "repo": "FDL32/orquestador-de-agentes",
+  "path": ".claude/skills/refactor-manager/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/FDL32/orquestador-de-agentes",
+  "dir_name": "refactor-manager-fdl32-orquestador-de-agent",
+  "downloaded_at": "2026-10-11T10:16:38.567293Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: debug, refactor",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 1,
+    "signals": [
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "FDL32",
+  "source_url": "https://github.com/FDL32/orquestador-de-agentes/blob/main/.claude/skills/refactor-manager/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/FDL32/orquestador-de-agentes/blob/main/.claude/skills/refactor-manager/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Dirige una refactorizacion segura de codigo Python en 5 fases (analisis, plan, refactor, validacion, iteracion) con los cambios aprobados antes de ejecutarse. Usar cuando hay que reestructurar codigo sin cambiar su comportamiento. No usar para un fix puntual (ver systematic-debugging) ni para una funcionalidad nueva (ver manager-create-work-plan)."
+}

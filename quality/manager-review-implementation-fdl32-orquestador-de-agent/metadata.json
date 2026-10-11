@@ -1,0 +1,37 @@
+{
+  "name": "manager-review-implementation",
+  "repo": "FDL32/orquestador-de-agentes",
+  "path": ".claude/skills/manager-review-implementation/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/FDL32/orquestador-de-agentes",
+  "dir_name": "manager-review-implementation-fdl32-orquestador-de-agent",
+  "downloaded_at": "2026-10-11T10:16:42.821078Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: review, validate",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "FDL32",
+  "source_url": "https://github.com/FDL32/orquestador-de-agentes/blob/main/.claude/skills/manager-review-implementation/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/FDL32/orquestador-de-agentes/blob/main/.claude/skills/manager-review-implementation/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Revisar cambios de codigo contra arquitectura del proyecto. Usar cuando el Builder entrega una implementacion (fase MANAGER_REVIEW de un ticket). No usar para cerrar tickets de Contract Formation en status frozen (ver validate_contract_formation.py) ni para auditar el contrato antes del Builder (ver audit_ticket_contract.md)."
+}

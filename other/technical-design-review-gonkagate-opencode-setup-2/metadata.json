@@ -1,0 +1,37 @@
+{
+  "name": "technical-design-review",
+  "repo": "GonkaGate/opencode-setup",
+  "path": ".agents/skills/technical-design-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/GonkaGate/opencode-setup",
+  "dir_name": "technical-design-review-gonkagate-opencode-setup-2",
+  "downloaded_at": "2026-10-11T10:26:08.230430Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "GonkaGate",
+  "source_url": "https://github.com/GonkaGate/opencode-setup/blob/main/.agents/skills/technical-design-review/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/GonkaGate/opencode-setup/blob/main/.agents/skills/technical-design-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Read-only technical design review for TypeScript/Node backends. Use whenever the task is to review an RFC, spec, design doc, ADR, refactor plan, or architecture proposal for ownership seams, trade-offs, and missing proof; start from architecture and only pull in contract, runtime, data, reliability, security, performance, or test-proof topics when the design actually crosses them, even if the user only asks for a quick design sanity check."
+}

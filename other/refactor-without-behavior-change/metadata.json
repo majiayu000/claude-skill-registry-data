@@ -1,0 +1,38 @@
+{
+  "name": "refactor-without-behavior-change",
+  "repo": "Jeruzael/mcp-server",
+  "path": "skills/refactor-without-behavior-change/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/Jeruzael/mcp-server",
+  "dir_name": "refactor-without-behavior-change",
+  "downloaded_at": "2026-10-11T10:42:12.252030Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "ui",
+      "frontend",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jeruzael",
+  "source_url": "https://github.com/Jeruzael/mcp-server/blob/master/skills/refactor-without-behavior-change/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jeruzael/mcp-server/blob/master/skills/refactor-without-behavior-change/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Improve code structure while preserving current application behavior. Use when Codex needs to clean messy, duplicated, long, hard-to-read, hard-to-maintain, unclear, deeply nested, or overly coupled code across frontend, backend, API, database access, utilities, tests, configuration, or documentation-adjacent code without changing user-facing behavior, API contracts, database schema, business rules, validation, permissions, UI layout, text, navigation, state, side effects, error handling, calculations, status transitions, or external integration behavior."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "external-id-strategy",
+  "repo": "BanibrataChatterjee/AwesomeSalesforceSkills",
+  "path": "skills/data/external-id-strategy/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/BanibrataChatterjee/AwesomeSalesforceSkills",
+  "dir_name": "external-id-strategy",
+  "downloaded_at": "2026-10-11T09:46:24.787755Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, business=2",
+    "score": 2,
+    "runner_up": "business",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "BanibrataChatterjee",
+  "source_url": "https://github.com/BanibrataChatterjee/AwesomeSalesforceSkills/blob/main/skills/data/external-id-strategy/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BanibrataChatterjee/AwesomeSalesforceSkills/blob/main/skills/data/external-id-strategy/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this skill when designing, selecting, or troubleshooting external ID fields on Salesforce objects for upsert operations, cross-system record correlation, or idempotent data loads. Trigger keywords: external ID field design, upsert key strategy, cross-system record matching, source system ID mapping, composite key for uniqueness, duplicate insert on upsert, relationship resolution by external ID. NOT for data migration steps (use data-migration-planning), NOT for REST API upsert endpoint wiring (use rest-api-patterns), NOT for general data model field decisions (use data-model-design-patterns)."
+}

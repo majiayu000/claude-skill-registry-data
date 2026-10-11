@@ -1,0 +1,37 @@
+{
+  "name": "rebuild-package-diagrams",
+  "repo": "BlackBeltTechnology/pi-agent-dashboard",
+  "path": "packages/eng-disciplines/.pi/skills/rebuild-package-diagrams/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/BlackBeltTechnology/pi-agent-dashboard",
+  "dir_name": "rebuild-package-diagrams",
+  "downloaded_at": "2026-10-11T09:49:31.403628Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "BlackBeltTechnology",
+  "source_url": "https://github.com/BlackBeltTechnology/pi-agent-dashboard/blob/master/packages/eng-disciplines/.pi/skills/rebuild-package-diagrams/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BlackBeltTechnology/pi-agent-dashboard/blob/master/packages/eng-disciplines/.pi/skills/rebuild-package-diagrams/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Render a reverse-spec rebuild package as traced, script-checked visuals \u2014 a Mermaid ER diagram of model.md entities, capability use cases as BPMN processes, and one browsable HTML catalog. Use on \"ER diagram from the entities\", \"draw the data model\", \"use cases as BPMN\", \"browsable HTML of the rebuild package\", \"ER diagram az entit\u00e1sokb\u00f3l\", \"\u00fczleti folyamat BPMN-ben\"."
+}

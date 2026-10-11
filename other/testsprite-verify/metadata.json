@@ -1,0 +1,38 @@
+{
+  "name": "testsprite-verify",
+  "repo": "HKDevLoops/buddysaradhi",
+  "path": ".agent/skills/testsprite-verify/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/HKDevLoops/buddysaradhi",
+  "dir_name": "testsprite-verify",
+  "downloaded_at": "2026-10-11T10:27:34.135770Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, devops=3",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HKDevLoops",
+  "source_url": "https://github.com/HKDevLoops/buddysaradhi/blob/main/.agent/skills/testsprite-verify/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HKDevLoops/buddysaradhi/blob/main/.agent/skills/testsprite-verify/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "TestSprite verification loop \u2014 after finishing a feature or fix in a TestSprite-tested repo, use the `testsprite` CLI to run the relevant TestSprite tests against the change and inspect any failure artifacts before reporting the work as done. Use whenever code has changed outside docs/config and is about to be reported complete \u2014 by running an existing test that covers the change, or by creating a new TestSprite test (a frontend plan, or a backend Python assertion) and running it to a terminal verdict."
+}

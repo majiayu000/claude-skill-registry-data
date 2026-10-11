@@ -1,0 +1,38 @@
+{
+  "name": "pr-preparation",
+  "repo": "Jeruzael/mcp-server",
+  "path": ".claude/skills/pr-preparation/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/Jeruzael/mcp-server",
+  "dir_name": "pr-preparation-jeruzael-mcp-server",
+  "downloaded_at": "2026-10-11T10:42:06.700763Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "ui",
+      "ux",
+      "frontend"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jeruzael",
+  "source_url": "https://github.com/Jeruzael/mcp-server/blob/master/.claude/skills/pr-preparation/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jeruzael/mcp-server/blob/master/.claude/skills/pr-preparation/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Prepare clear, accurate pull request summaries after completed work. Use when Codex needs to inspect changed files or diffs and write a reviewable PR description for a feature, bug fix, refactor, documentation update, API change, frontend screen, backend endpoint, database migration, authentication or authorization update, test addition, deployment fix, CI/CD repair, technical debt cleanup, or client deliverable, including what changed, why it changed, user-facing behavior, technical notes, API/database/auth impact, files changed, tests run, manual QA, risks, follow-ups, reviewer notes, and deployment notes without inventing files or test results."
+}

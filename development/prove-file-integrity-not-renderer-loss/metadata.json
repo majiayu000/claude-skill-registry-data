@@ -1,0 +1,38 @@
+{
+  "name": "prove-file-integrity-not-renderer-loss",
+  "repo": "AlexMollard/Harness",
+  "path": "skills/managed/prove-file-integrity-not-renderer-loss/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/AlexMollard/Harness",
+  "dir_name": "prove-file-integrity-not-renderer-loss",
+  "downloaded_at": "2026-10-11T09:35:51.056493Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AlexMollard",
+  "source_url": "https://github.com/AlexMollard/Harness/blob/master/skills/managed/prove-file-integrity-not-renderer-loss/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AlexMollard/Harness/blob/master/skills/managed/prove-file-integrity-not-renderer-loss/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Settle a suspected file-corruption or \"the edit dropped lines\" scare in this environment before editing anything \u2014 distinguish renderer/tool-proxy artifacts (compressed reads, rtk-reshaped git stdout, CRLF-vs-LF hashes, text-scan guard tests) from real on-disk damage. Use whenever a read looks garbled, a hash mismatches, or a repo guard test flags code you just wrote."
+}

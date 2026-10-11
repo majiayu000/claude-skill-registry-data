@@ -1,0 +1,39 @@
+{
+  "name": "authentication-review",
+  "repo": "Jayarr03/Codex_ThreatModel_Skills",
+  "path": "skills/authentication-review/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Jayarr03/Codex_ThreatModel_Skills",
+  "dir_name": "authentication-review",
+  "downloaded_at": "2026-10-11T10:41:37.283338Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, framework, build, debug",
+    "score": 4,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jayarr03",
+  "source_url": "https://github.com/Jayarr03/Codex_ThreatModel_Skills/blob/main/skills/authentication-review/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jayarr03/Codex_ThreatModel_Skills/blob/main/skills/authentication-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Review a repository or local codebase with a focus on how authentication and identities are established, verified, propagated, refreshed, and revoked. Use when Codex needs to inspect login flows, session or token handling, identity providers, service-to-service authentication, account provisioning, secret-backed auth, or authentication-related trust boundaries and risks."
+}

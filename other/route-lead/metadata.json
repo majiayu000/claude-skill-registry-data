@@ -1,0 +1,37 @@
+{
+  "name": "route-lead",
+  "repo": "Bevel-Software/Hexis",
+  "path": "packages/core-backend/starter-packs/sales/Plugins/sales-starter/skills/route-lead/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Bevel-Software/Hexis",
+  "dir_name": "route-lead",
+  "downloaded_at": "2026-10-11T09:48:16.827143Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: communication=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "email",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Bevel-Software",
+  "source_url": "https://github.com/Bevel-Software/Hexis/blob/main/packages/core-backend/starter-packs/sales/Plugins/sales-starter/skills/route-lead/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Bevel-Software/Hexis/blob/main/packages/core-backend/starter-packs/sales/Plugins/sales-starter/skills/route-lead/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Decide who owns an unrouted lead or opportunity and manage the handoff - deterministic routing by the org's own rules, a routing card the human router accepts or overrides, and drafted handoff notes. Use when the user says \"route this lead\", \"who should own [lead/opp]\", \"work the routing queue\", \"assign [company] to a rep\", or on a scheduled intake sweep."
+}

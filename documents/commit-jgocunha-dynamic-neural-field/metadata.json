@@ -1,0 +1,38 @@
+{
+  "name": "commit",
+  "repo": "Jgocunha/dynamic-neural-field-composer",
+  "path": ".claude/skills/commit/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/Jgocunha/dynamic-neural-field-composer",
+  "dir_name": "commit-jgocunha-dynamic-neural-field",
+  "downloaded_at": "2026-10-11T10:42:43.330498Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, markdown",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jgocunha",
+  "source_url": "https://github.com/Jgocunha/dynamic-neural-field-composer/blob/main/.claude/skills/commit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jgocunha/dynamic-neural-field-composer/blob/main/.claude/skills/commit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Read the uncommitted diff in dynamic-neural-field-composer and print conventional commit message(s) for it, grouped by logical change. Use when asked to write, suggest or draft a commit message, or \"what should I commit this as\"."
+}

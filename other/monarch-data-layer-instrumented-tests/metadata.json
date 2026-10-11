@@ -1,0 +1,37 @@
+{
+  "name": "monarch-data-layer-instrumented-tests",
+  "repo": "AlexMollard/Harness",
+  "path": "skills/managed/monarch-data-layer-instrumented-tests/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/AlexMollard/Harness",
+  "dir_name": "monarch-data-layer-instrumented-tests",
+  "downloaded_at": "2026-10-11T09:35:52.942005Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, platform=2",
+    "score": 2,
+    "runner_up": "platform",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AlexMollard",
+  "source_url": "https://github.com/AlexMollard/Harness/blob/master/skills/managed/monarch-data-layer-instrumented-tests/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AlexMollard/Harness/blob/master/skills/managed/monarch-data-layer-instrumented-tests/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write and mutation-prove instrumented Room tests for Monarch's (D:\\Monarch) data layer \u2014 export/import archives, exercise-name resolution, and destructive operations \u2014 avoiding the two-seed-source trap, the live-database trap, and misreading equivalent mutations as weak tests. Use when testing Repository/DAO behaviour on device or emulator, or when an instrumented data test fails for a reason you can't explain."
+}

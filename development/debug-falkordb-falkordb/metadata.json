@@ -1,0 +1,39 @@
+{
+  "name": "debug",
+  "repo": "FalkorDB/FalkorDB",
+  "path": ".claude/skills/debug/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/FalkorDB/FalkorDB",
+  "dir_name": "debug-falkordb-falkordb",
+  "downloaded_at": "2026-10-11T10:17:07.510182Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, build, compile, debug",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "build",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "FalkorDB",
+  "source_url": "https://github.com/FalkorDB/FalkorDB/blob/main/.claude/skills/debug/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/FalkorDB/FalkorDB/blob/main/.claude/skills/debug/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Debug FalkorDB crashes, hangs, panics, and incorrect query results - attach lldb/gdb to redis-server with the module loaded, understand panic/crash behavior, step through query execution, and triage failing CI runs. Use when investigating a crash, hang, wrong query result, or a red CI job."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "trigger-autocomplete-catalog",
+  "repo": "AgentWorkforce/skills",
+  "path": "skills/trigger-autocomplete-catalog/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/AgentWorkforce/skills",
+  "dir_name": "trigger-autocomplete-catalog",
+  "downloaded_at": "2026-10-11T09:32:51.589744Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AgentWorkforce",
+  "source_url": "https://github.com/AgentWorkforce/skills/blob/main/skills/trigger-autocomplete-catalog/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AgentWorkforce/skills/blob/main/skills/trigger-autocomplete-catalog/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when adding webhook events to make sure integrations properly register the webhook events they carry"
+}

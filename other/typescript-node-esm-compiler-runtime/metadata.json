@@ -1,0 +1,37 @@
+{
+  "name": "typescript-node-esm-compiler-runtime",
+  "repo": "GonkaGate/hermes-agent-setup",
+  "path": ".claude/skills/typescript-node-esm-compiler-runtime/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/GonkaGate/hermes-agent-setup",
+  "dir_name": "typescript-node-esm-compiler-runtime",
+  "downloaded_at": "2026-10-11T10:26:03.548165Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "GonkaGate",
+  "source_url": "https://github.com/GonkaGate/hermes-agent-setup/blob/main/.claude/skills/typescript-node-esm-compiler-runtime/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/GonkaGate/hermes-agent-setup/blob/main/.claude/skills/typescript-node-esm-compiler-runtime/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Own TypeScript plus Node.js ESM compiler/runtime correctness. Use whenever the real question is why TypeScript compiles but Node fails, how `tsconfig`/`package.json`/entrypoint/runtime mode must align, whether relative imports should use `.js` or `.ts`, how `nodenext`/`node20`/`verbatimModuleSyntax`/`rewriteRelativeImportExtensions` affect emitted artifacts, or how dev/test runners drift from production, even if the user frames it as an ESM migration, `ERR_MODULE_NOT_FOUND`, tsx or ts-node trouble, import alias breakage, or \"works locally but fails in CI/prod.\""
+}

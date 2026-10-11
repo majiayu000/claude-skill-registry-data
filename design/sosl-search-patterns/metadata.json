@@ -1,0 +1,39 @@
+{
+  "name": "sosl-search-patterns",
+  "repo": "BanibrataChatterjee/AwesomeSalesforceSkills",
+  "path": "skills/data/sosl-search-patterns/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/BanibrataChatterjee/AwesomeSalesforceSkills",
+  "dir_name": "sosl-search-patterns",
+  "downloaded_at": "2026-10-11T09:46:26.367860Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, ux",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "ux"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "BanibrataChatterjee",
+  "source_url": "https://github.com/BanibrataChatterjee/AwesomeSalesforceSkills/blob/main/skills/data/sosl-search-patterns/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BanibrataChatterjee/AwesomeSalesforceSkills/blob/main/skills/data/sosl-search-patterns/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when choosing or implementing SOSL for cross-object or full-text search, especially around SOSL vs SOQL, search groups, result shaping, and injection-safe dynamic search. Triggers: 'SOSL', 'FIND clause', 'cross object search', 'Search.query', 'SOSL injection'. NOT for structured record retrieval where ordinary SOQL filters are the right tool."
+}

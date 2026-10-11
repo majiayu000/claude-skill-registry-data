@@ -1,0 +1,37 @@
+{
+  "name": "variant_pathogenicity",
+  "repo": "InternScience/scp",
+  "path": "skills/variant_pathogenicity/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/InternScience/scp",
+  "dir_name": "variant-pathogenicity",
+  "downloaded_at": "2026-10-11T10:35:56.280062Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "InternScience",
+  "source_url": "https://github.com/InternScience/scp/blob/main/skills/variant_pathogenicity/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/InternScience/scp/blob/main/skills/variant_pathogenicity/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Variant Pathogenicity Assessment - Assess variant pathogenicity: Ensembl VEP prediction, ClinVar lookup, variation details, and gene phenotype associations. Use this skill for clinical genetics tasks involving get vep hgvs clinvar search get variation get phenotype gene. Combines 4 tools from 2 SCP server(s)."
+}

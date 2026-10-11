@@ -1,0 +1,38 @@
+{
+  "name": "stride-denial-of-service",
+  "repo": "Jayarr03/Codex_ThreatModel_Skills",
+  "path": "skills/stride-denial-of-service/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Jayarr03/Codex_ThreatModel_Skills",
+  "dir_name": "stride-denial-of-service",
+  "downloaded_at": "2026-10-11T10:41:37.675585Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jayarr03",
+  "source_url": "https://github.com/Jayarr03/Codex_ThreatModel_Skills/blob/main/skills/stride-denial-of-service/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jayarr03/Codex_ThreatModel_Skills/blob/main/skills/stride-denial-of-service/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generate Denial of Service threats for a system, repo, architecture, or data flow. Use when Codex needs to identify how attackers could exhaust resources, block workflows, amplify load, starve dependencies, or otherwise reduce availability or degrade service quality."
+}

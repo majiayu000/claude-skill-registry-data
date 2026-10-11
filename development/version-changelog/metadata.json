@@ -1,0 +1,39 @@
+{
+  "name": "version-changelog",
+  "repo": "FDL32/orquestador-de-agentes",
+  "path": "skills/version-changelog/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/FDL32/orquestador-de-agentes",
+  "dir_name": "version-changelog",
+  "downloaded_at": "2026-10-11T10:16:34.692550Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "FDL32",
+  "source_url": "https://github.com/FDL32/orquestador-de-agentes/blob/main/skills/version-changelog/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/FDL32/orquestador-de-agentes/blob/main/skills/version-changelog/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Gestiona versiones semanticas y CHANGELOG.md siguiendo Keep a Changelog y SemVer 2.0 (bump, entrada y etiqueta git). Usar cuando se cierra una fase del work_plan o antes de publicar o entregar. No usar para el cierre completo del proyecto (ver project-finalize)."
+}
