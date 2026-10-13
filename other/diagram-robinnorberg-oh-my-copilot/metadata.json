@@ -1,0 +1,37 @@
+{
+  "name": "diagram",
+  "repo": "RobinNorberg/oh-my-copilot",
+  "path": "skills/diagram/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/RobinNorberg/oh-my-copilot",
+  "dir_name": "diagram-robinnorberg-oh-my-copilot",
+  "downloaded_at": "2026-10-13T06:34:18.717200Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "ui",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "RobinNorberg",
+  "source_url": "https://github.com/RobinNorberg/oh-my-copilot/blob/main/skills/diagram/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/RobinNorberg/oh-my-copilot/blob/main/skills/diagram/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use the smallest visual when prose must carry structure\u2014control flow, call depth, module ownership, or change shape: pseudocode, call tree, component/file tree, Mermaid diagram, or diff. Skip it when prose already answers the question."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "codex-sweep",
+  "repo": "Takazudo/claude-resources",
+  "path": "skills/codex-sweep/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Takazudo/claude-resources",
+  "dir_name": "codex-sweep",
+  "downloaded_at": "2026-10-13T06:52:13.627680Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Takazudo",
+  "source_url": "https://github.com/Takazudo/claude-resources/blob/main/skills/codex-sweep/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Takazudo/claude-resources/blob/main/skills/codex-sweep/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Kill stale OpenAI Codex plugin processes (orphaned app-server brokers, codex app-server/exec orphans) and clean their cxc-* temp dirs. Use when: (1) User says 'codex sweep', 'stale codex', 'codex processes', 'too many codex processes', or 'kill codex orphans', (2) A build fails with EMFILE, 'too many open files', or fs.inotify.max_user_instances exhaustion (e.g. Vite dev server on WSL2), (3) ps shows many app-server-broker.mjs or codex app-server processes, (4) After force-killing terminals or removing worktrees that had codex review sessions."
+}

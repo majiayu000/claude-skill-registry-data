@@ -1,0 +1,37 @@
+{
+  "name": "evidence-ladder",
+  "repo": "The-Utopia-Studio/skills",
+  "path": "skills/product/evidence-ladder/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/The-Utopia-Studio/skills",
+  "dir_name": "evidence-ladder",
+  "downloaded_at": "2026-10-13T06:55:12.030518Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, validate",
+    "score": 2,
+    "runner_up": "creative",
+    "runner_up_score": 1,
+    "signals": [
+      "quality",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "The-Utopia-Studio",
+  "source_url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/evidence-ladder/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/evidence-ladder/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Weights a pile of \"validation\" by what people DID, not what they said. Takes interview quotes, sign-ups, LOIs, pilots, payments and places each on one ladder \u2014 money moved 1.0, behaviour observed 0.7, artefact shown 0.5, verbal commitment 0.3, opinion 0.1 \u2014 then returns a weighted evidence table, the weight of the load-bearing claim, and for every low signal the cheapest probe that raises it a rung. Fires on \"how strong is this signal\", \"score the interview\", \"did they actually validate\", \"weight this evidence\", \"is this real validation\". NOT a build gate on a problem (use problem-quality-scorecard), NOT a picker for which test to run next (use probe-matrix), NOT a transcript summary (use summarize-interview). This is the reference skill the rest of the module cites for the ladder."
+}

@@ -1,0 +1,462 @@
+---
+name: preflight
+description: "Pre-commit quality gate that catches 'almost right' code. Use when about to commit — auto-fires before commit to validate logic correctness, error handling, regressions, and completeness. Goes beyond linting."
+metadata:
+  author: runedev
+  version: "1.2.1"
+  layer: L2
+  model: sonnet
+  group: quality
+  tools: "Read, Bash, Glob, Grep"
+  emit: preflight.passed, preflight.blocked
+  listen: code.changed
+---
+
+# preflight
+
+## Purpose
+
+<HARD-GATE>
+Preflight verdict of BLOCK stops the pipeline. The calling skill (cook, deploy, launch) MUST halt until all BLOCK findings are resolved and preflight re-runs clean.
+</HARD-GATE>
+
+Pre-commit quality gate that catches "almost right" code — the kind that compiles and passes linting but has logic errors, missing error handling, or incomplete implementations. Goes beyond static analysis to check data flow, edge cases, async correctness, and regression impact. The last defense before code enters the repository.
+
+## Triggers
+
+- Called automatically by `cook` before commit phase
+- Called by `fix` after applying fixes (verify fix quality)
+- `/rune preflight` — manual quality check
+- Auto-trigger: when staged changes exceed 100 LOC
+
+## Calls (outbound)
+
+- `scout` (L2): find code affected by changes (dependency tracing)
+- `sentinel` (L2): security sub-check on changed files
+- `hallucination-guard` (L3): verify imports and API references exist
+- `test` (L2): run test suite as pre-commit check
+
+## Called By (inbound)
+
+- `cook` (L1): before commit phase — mandatory gate
+
+## Check Categories
+
+```
+LOGIC       — data flow errors, edge case misses, async bugs
+ERROR       — missing try/catch, bare catches, unhelpful error messages
+REGRESSION  — untested impact zones, breaking changes to public API
+COMPLETE    — missing validation, missing loading states, missing tests
+SECURITY    — delegated to sentinel
+IMPORTS     — delegated to hallucination-guard
+```
+
+## Executable Steps
+
+### Stage A — Spec Compliance (Plan vs Diff)
+
+Before checking code quality, verify the code matches what was planned.
+
+Use `Bash` to get the diff: `git diff --cached` (staged) or `git diff HEAD` (all changes).
+Use `Read` to load the approved plan from the calling skill (cook passes plan context).
+
+**Check each plan phase against the diff:**
+
+| Plan says... | Diff shows... | Verdict |
+|---|---|---|
+| "Add function X to file Y" | Function X exists in file Y | PASS |
+| "Add function X to file Y" | Function X missing | BLOCK — incomplete implementation |
+| "Modify function Z" | Function Z untouched | BLOCK — planned change not applied |
+| Nothing about file W | File W modified | WARN — out-of-scope change (scope creep) |
+
+**Output**: List of plan-vs-diff mismatches. Any missing planned change = BLOCK. Any unplanned change = WARN.
+
+If no plan is available (manual preflight invocation), skip Stage A and proceed to Step 1.
+
+### Step 1 — Logic Review
+Use `Read` to load each changed file. For every modified function or method:
+- Trace the data flow from input to output. Identify where a `null`, `undefined`, empty array, or 0 value would cause a runtime error or wrong result.
+- Check async/await: every `async` function that calls an async operation must `await` it. Identify missing `await` that would cause race conditions or unhandled promise rejections.
+- Check boundary conditions: off-by-one in loops, array index out of bounds, division by zero.
+- Check type coercions: implicit `==` comparisons that could produce wrong results, string-to-number conversions without validation.
+
+**Common patterns to flag:**
+
+```typescript
+// BAD — missing await (race condition)
+async function processOrder(orderId: string) {
+  const order = db.orders.findById(orderId); // order is a Promise, not a value
+  return calculateTotal(order.items); // crashes: order.items is undefined
+}
+// GOOD
+async function processOrder(orderId: string) {
+  const order = await db.orders.findById(orderId);
+  return calculateTotal(order.items);
+}
+```
+
+```typescript
+// BAD — sequential independent I/O
+const user = await fetchUser(id);
+const permissions = await fetchPermissions(id); // waits unnecessarily
+// GOOD — parallel
+const [user, permissions] = await Promise.all([fetchUser(id), fetchPermissions(id)]);
+```
+
+Flag each issue with: file path, a **verbatim evidence snippet** copied from the file, category (null-deref | missing-await | off-by-one | type-coerce), and a one-line description. Record the snippet, not a line number — Step 6's Anchor Pass resolves the line with `Grep`.
+
+### Step 2 — Error Handling
+For every changed file, verify:
+- Every `async` function has a `try/catch` block OR the caller explicitly handles the rejected promise.
+- No bare `catch(e) {}` or `except: pass` — every catch must log or rethrow with context.
+- Every `fetch` / HTTP client call checks the response status before consuming the body.
+- Error messages are user-friendly: no raw stack traces, no internal variable names exposed to the client.
+- API route handlers return appropriate HTTP status codes (4xx for client errors, 5xx for server errors).
+
+**Common patterns to flag:**
+
+```typescript
+// BAD — swallowed exception
+try {
+  await saveUser(data);
+} catch (e) {} // silent failure, caller never knows
+
+// BAD — leaks internals to client
+app.use((err, req, res, next) => {
+  res.status(500).json({ error: err.stack }); // exposes stack trace
+});
+// GOOD — log internally, generic message to client
+app.use((err, req, res, next) => {
+  logger.error(err);
+  res.status(500).json({ error: 'Internal server error' });
+});
+```
+
+Flag each violation with: file path, a **verbatim evidence snippet**, category (bare-catch | missing-status-check | raw-error-exposure), and description. Same rule as Step 1 — the snippet is what you produce; the line number comes from Step 6's Anchor Pass.
+
+### Step 3 — Regression Check
+Use `rune:scout` to identify all files that import or depend on the changed files/functions.
+For each dependent file:
+- Check if the changed function signature is still compatible (parameter count, types, return type).
+- Check if the dependent file has tests that cover the interaction with the changed code.
+- Flag untested impact zones: dependents with zero test coverage of the affected code path.
+
+Flag each regression risk with: dependent file path, what changed, whether tests exist, severity (breaking | degraded | untested).
+
+### Step 4 — Completeness Check
+Verify that new code ships complete:
+- New API endpoint → has input validation schema (Zod, Pydantic, Joi, etc.)
+- New React/Svelte component → has loading state AND error state
+- New feature → has at least one test file
+- New configuration option → has documentation (inline comment or docs file)
+- New database query → has corresponding migration file if schema changed
+- **Cross-layer pairing**: new interactive component (button/form/action) → its handler chain reaches a REAL endpoint/service that exists in the codebase — OR the plan explicitly scopes it UI-only with a mock (stated, not assumed). Unexcused missing pair = **BLOCK**, not WARN: a dead interactive element is incomplete work presented as complete. (Mirror check: new endpoint this diff → ≥1 consumer or a NAMED future task consuming it)
+
+**Framework-specific completeness (apply only if detected):**
+- React component with async data → must have `loading` state AND `error` state
+- Next.js Server Action → must have `try/catch` and return typed result
+- FastAPI endpoint → must have Pydantic request/response models
+- Django ViewSet → must have explicit `permission_classes`
+- Express route → must have input validation middleware before handler
+
+If any completeness item is missing, flag as **WARN** with: what is missing, which file needs it.
+
+### Step 4.2 — Coherence Check
+
+Verify that new code is **consistent with existing project patterns** — not just correct, but coherent with the codebase it lives in.
+
+| Check | What To Look For | Severity |
+|-------|------------------|----------|
+| Naming conventions | New functions/variables follow project's existing naming style (camelCase, snake_case, etc.) | WARN |
+| File organization | New files placed in correct directory per project structure (e.g., utils/ not lib/, components/ not ui/) | WARN |
+| Import patterns | Uses project's established import style (absolute vs relative, barrel exports vs direct) | WARN |
+| Error handling style | Matches project's existing pattern (Result type, try/catch, error codes) | WARN |
+| State management | Uses same state approach as rest of project (Zustand, context, stores) | BLOCK if different paradigm |
+| API patterns | Follows existing response format, middleware chain, auth pattern | BLOCK if diverges |
+| Design system usage | Uses existing design tokens/components, not inline overrides | WARN |
+
+**Detection**: Read 2-3 existing files in the same directory as the change. Compare patterns. Flag divergences.
+
+**Skip if**: Project has no established patterns (greenfield, <5 files), or CLAUDE.md/conventions.md explicitly says "no conventions yet."
+
+### Step 4.3 — Eval Verification
+
+If `.rune/evals/` directory exists with eval definition files, verify eval results as part of the quality gate.
+
+| Check | Action | Severity |
+|-------|--------|----------|
+| Capability eval defined but not run | Feature has `.rune/evals/<feature>.md` with CAP-* entries but no results | WARN: "Capability evals defined but not executed" |
+| Regression eval failing | Any REG-* eval with status=fail | BLOCK: "Regression detected — existing behavior broken" |
+| Capability eval below threshold | CAP-* eval pass@k below defined threshold | WARN: "Capability eval below threshold (X% vs Y% required)" |
+| No eval file for new feature | New feature added (detected by new test files + new source files) but no `.rune/evals/` entry | INFO: "Consider defining capability evals for new feature" |
+
+**Skip if**: No `.rune/evals/` directory exists (project hasn't adopted eval-driven development).
+
+### Step 4.5 — Domain Quality Hooks
+
+Apply domain-specific quality checks based on detected file types in the diff. These extend the generic completeness checks in Step 4 with deeper domain validation.
+
+<HARD-GATE>
+Domain hooks are additive — they add checks, never remove generic ones from Steps 1-4.
+If a domain hook flags BLOCK, the overall preflight verdict is BLOCK regardless of other steps.
+</HARD-GATE>
+
+#### Hook Selection (auto-detect from diff)
+
+| Detected Pattern | Domain Hook | Key Checks |
+|-----------------|-------------|------------|
+| `migrations/*.sql`, `*.migration.*` | Database | Rollback script present, no bare DROP/DELETE, migration tested |
+| `openapi.*`, `*.graphql`, `*.proto` | API Contract | Breaking changes flagged, version bumped, deprecated fields documented |
+| `docs/policies/*`, `PRIVACY*`, `TERMS*` | Legal/Compliance | No placeholder text, review date current, practice matches policy |
+| `**/billing*`, `**/payment*`, `**/invoice*` | Financial | Decimal precision correct, currency locale-aware, no hardcoded rates |
+| `*.tsx`, `*.jsx`, `*.svelte`, `*.vue`, `*.html` (with script/template content), `components/*` | UI/Frontend | Design token compliance, animation a11y, touch targets, visual hierarchy |
+| `skills/*/SKILL.md`, `extensions/*/PACK.md` | Rune Skill | Frontmatter valid, all required sections present, word count within layer budget |
+| `*.test.*`, `*.spec.*`, `__tests__/*` | Test Quality | No `.skip`/`.only` left in, assertions present (not empty tests), no hardcoded timeouts |
+
+#### Domain Hook Execution
+
+For each detected domain, run its checks on the relevant files in the diff:
+
+1. **Identify** which domain hooks apply based on changed file patterns
+2. **Load** domain-specific check rules (inline above, or from pack reference files if a pack is installed)
+3. **Scan** each relevant file for domain violations
+4. **Classify** findings: BLOCK (data loss risk, breaking contract) or WARN (best practice, incomplete)
+5. **Append** to preflight report under `### Domain Quality` section
+
+#### UI/Frontend Domain Checks
+
+When UI/Frontend hook is triggered, run these checks on all `.tsx`/`.jsx`/`.svelte`/`.vue`/`.html` files in the diff (plain `.html` counts when it carries interactive markup or inline scripts — a vanilla-JS page is still a UI).
+
+**Preamble — load design contract**: If `.rune/design-system.md` exists, read it once. Apply the project's **Scale Minimums** block over the defaults below (e.g., a project declaring `body ≥18px` should flag 16px body text). If the file is absent, use defaults and emit a LOW advisory: "No `.rune/design-system.md` — run `rune design` to lock visual decisions."
+
+| Check | What to Scan | Severity |
+|-------|-------------|----------|
+| **Design token compliance** | Hardcoded colors (`#fff`, `rgb(`, `hsl(`) instead of CSS variables or Tailwind tokens | WARN: "Hardcoded color at {file}:{line} — use design token" |
+| **UI-SPEC drift** | If `.rune/ui-spec.md` exists, compare component decisions (card style, form layout, nav type) against spec | BLOCK: "Component at {file} uses bordered cards but UI-SPEC locks elevated cards" |
+| **Animation accessibility** | Animations/transitions without `prefers-reduced-motion` guard | WARN: "Animation at {file}:{line} missing reduced-motion check" |
+| **Reduced-motion branch is dead** | A file that *does* mention `prefers-reduced-motion` / `prefersReducedMotion` / `useReducedMotion`, where an outer `if (reduced) return` (or `if (!shouldAnimate) return`) precedes the call that applies the end state — the guard exists and never runs. A grep hit is not a pass: **touches ≠ reachable ≠ correct** | WARN: "Reduced-motion branch at {file}:{line} is unreachable — reduced users get the default DOM" |
+| **Stale motion preference** | `matchMedia("(prefers-reduced-motion...")` read once with no `addEventListener("change")` nearby, and no library equivalent (`useReducedMotion`, `MotionConfig`, `gsap.matchMedia`) | WARN: "One-shot motion preference at {file}:{line} — goes stale when toggled mid-session" |
+| **Zero-duration vs completion listener** | `duration: 0` / `0s` on a reduced path in a file that also awaits `transitionend`, `animationend`, or `onComplete` | WARN: "Zero-length transition at {file}:{line} may drop its completion event — use ~0.01ms" |
+| **JS motion ungated** | GSAP / Motion / Framer / Lenis / canvas rAF timeline in the diff, with reduced-motion handling present only in CSS | WARN: "JS timeline at {file}:{line} unaffected by the CSS reduced-motion query" |
+| **SVGO strips animation** | An SVGO config (`svgo.config.*`, `vite-plugin-svgr`, `svgo` block in build config) in the diff or repo root while the project ships animated SVG, without `cleanupIds` / `mergePaths` / `removeHiddenElems` / `removeViewBox` / `inlineStyles` disabled | WARN: "SVGO at {file} will strip animated-SVG structure — source correct, build output broken" |
+| **Touch target size** | Interactive elements with explicit small sizing (`w-5 h-5`, `p-0.5` on buttons/links) < 44×44px (or project override from design-system.md) | WARN: "Touch target too small at {file}:{line}" |
+| **Scale Minimum — body text** | `text-sm` / `text-xs` / explicit `font-size: 14px` on `<p>` or primary body regions (not meta/secondary) | WARN: "Body text below 16px at {file}:{line} — reads as AI boilerplate" |
+| **Scale Minimum — hero display** | `<h1>` with `text-3xl` or smaller (30px) when the heading is in a hero/landing section | WARN: "Hero heading below 48px at {file}:{line} — insufficient visual hierarchy" |
+| **Hand-rolled SVG for standard icons** | Inline `<svg viewBox=` in JSX when the surrounding comment/class names indicate standard iconography (dashboard, menu, close, chevron, arrow, search, home, user, settings, bell, trash) | WARN: "Hand-rolled SVG at {file}:{line} — use @phosphor-icons/react or huge-icons, or ship boxed placeholder" |
+| **Manual hex accent shading** | CSS/Tailwind config defining 2+ sibling `--accent-hover` / `--accent-pressed` / `--accent-active` with hex literals (no `oklch(from ...)` or design-token chain) | WARN: "Manual hex shade at {file}:{line} — derive via oklch(from var(--accent) calc(l - 0.08) c h)" |
+| **Dead interactive element** | `<button>`/`<form>`/action element with no bound handler (any framework syntax: `onClick=`, `on:click=`, `@click`, `v-on:`), `onClick={() => {}}`, `href="#"` on an action link (not navigation/scroll anchors), or `preventDefault()`-only submit — in files of THIS diff (skip elements listed in `.rune/ui-spec.md` `## Unwired Elements`; prop-origin handlers like `onClick={props.onSave}` count as bound) | BLOCK: "Dead interactive at {file}:{line} — element renders but does nothing" |
+| **Missing states** | Components fetching data without loading/error/empty states | WARN: "Async component at {file} missing [loading|error|empty] state" |
+| **Icon accessibility** | Decorative icons without `aria-hidden="true"`, functional icons without `aria-label` | WARN: "Icon at {file}:{line} missing aria attribute" |
+| **Inline styles** | `style={{` or `style=` attribute usage instead of classes/tokens | WARN: "Inline style at {file}:{line} — use CSS class or Tailwind" |
+| **Font loading** | Custom font imports without `font-display: swap` or Next.js font optimization | WARN: "Font at {file} may cause layout shift — add font-display: swap" |
+| **Placeholder content** | Strings like "Lorem ipsum", "TODO", "placeholder", "test text" in JSX/template | BLOCK: "Placeholder content at {file}:{line} — replace before shipping" |
+
+**Skip if**: Diff contains only test files, config files, or non-UI code (detected by absence of JSX/template syntax).
+
+**Exception for Scale Minimums**: Secondary/meta text (`<time>`, `<small>`, form hints, table captions) is allowed at 14px. The check only fires on primary body regions — paragraphs inside `<main>`, `<article>`, card body, marketing hero/features. Use common sense or an explicit `data-scale="meta"` attribute to opt out.
+
+**Exception for hand-rolled SVG**: Project logos, data visualizations (charts/graphs via d3/recharts/visx), and human-designed illustrations are never flagged. The check fires only when class/comment context names a standard icon.
+
+#### Pack Integration
+
+When a domain pack is installed (e.g., `@rune-pro/finance`, `@rune-pro/legal`), preflight checks the pack's **Hard-Stop Thresholds** table and applies matching rules to staged files. This means:
+- Installing `@rune-pro/finance` automatically adds financial quality gates to preflight
+- Installing `@rune-pro/legal` automatically adds compliance checks to preflight
+- No manual configuration needed — pack presence = hooks active
+
+#### Output Section
+
+```
+### Domain Quality
+- **Domains detected**: [Database, Financial]
+- `migrations/003-add-billing.sql` — BLOCK: DROP TABLE without rollback script
+- `src/billing/invoice.ts:42` — WARN: price calculation uses `toFixed(2)` instead of `Intl.NumberFormat`
+```
+
+### Step 4.6 — Organization Approval Requirements (Business)
+
+If `.rune/org/org.md` exists, load organization approval workflows and enforce them as additional quality gates.
+
+1. `Read` `.rune/org/org.md` and extract `## Policies`, `## Approval Flows`, and `## Governance Level`
+2. Apply organization-level quality requirements:
+
+| Org Policy | Preflight Check | Severity |
+|------------|----------------|----------|
+| `minimum_reviewers` | Verify PR has required reviewer count before merge | WARN: "Org requires {N} reviewers" |
+| `self-merge_allowed` | If "Never" or "No", flag self-merge attempts | BLOCK if org prohibits |
+| `required_checks` | Verify all org-required checks (tests, security scan, type check, lint) are passing | BLOCK if missing |
+| `staging_required` | If "Yes", verify staging deployment exists before production | WARN if no staging step |
+| `feature_flags` | If "Required for user-facing changes", flag new UI without feature flag | WARN |
+| `cross-domain_changes` | If changes span multiple team domains, require reviewer from each | WARN |
+
+3. Load `## Approval Flows > ### Feature Launch` and display the required approval chain:
+   - Output: "Org approval chain: {flow}" so developer knows the full pipeline
+   - If governance level is "Maximum", flag any attempt to skip gates
+
+4. Append org findings under `### Organization Requirements` section:
+
+```
+### Organization Requirements
+- **Org template**: [startup|mid-size|enterprise]
+- **Governance level**: [Minimal|Moderate|Maximum]
+- **Minimum reviewers**: 2 (1 must be director+)
+- **Required checks**: tests (≥80% coverage), security scan, type check, lint
+- **Approval chain**: contributor proposes → lead reviews → vp approves → deploy
+- WARN: Self-merge not allowed per org policy
+```
+
+If `.rune/org/org.md` does not exist, skip and log INFO: "no org config, organization requirements check skipped".
+
+### Step 4.8 — Preflight Composite Score
+
+After all domain hooks (Step 4.5) and completeness checks (Step 4) complete, compute a **Preflight Health Score** to make the verdict numeric and comparable across runs.
+
+### Formula
+
+```
+Preflight Score = (Logic × 0.30) + (Error Handling × 0.20) + (Completeness × 0.20) + (Coherence × 0.15) + (Regression Risk × 0.15)
+```
+
+**5 verification axes** (Completeness + Correctness via Logic + Coherence — 3D verification model):
+
+Each dimension is scored per staged files:
+- 0 BLOCK findings in dimension → 100
+- 1 BLOCK → dimension capped at 30
+- 1 WARN → dimension capped at 75
+- Each additional WARN → subtract 10 (floor: 40)
+
+### Grade Thresholds
+
+| Score | Grade | Verdict |
+|-------|-------|---------|
+| 90–100 | Excellent | PASS |
+| 75–89 | Good | PASS with notes |
+| 60–74 | Fair | WARN |
+| 40–59 | Poor | WARN (escalate to developer) |
+| 0–39 | Critical | BLOCK |
+
+Score is appended to the Preflight Report footer. Useful for tracking quality trend across sprints when cook logs preflight scores to `.rune/metrics/`.
+
+
+### Step 5 — Security Sub-Check
+Invoke `rune:sentinel` on the changed files. Attach sentinel's output verbatim under the "Security" section of the preflight report. If sentinel returns BLOCK, preflight verdict is also BLOCK.
+
+### Step 6 — Generate Verdict
+
+**Falsification Pass first.** Before aggregating, filter findings by disproof, not by confidence — the same rule `review` applies (`../review/SKILL.md` → Step 6):
+
+- **DROP** a finding only when the code you read contains **direct counter-evidence** against its key claim (the null check exists, the `await` is present, the caller validates the input).
+- **KEEP** a finding that depends on context outside the diff which you did read via tools — that context is evidence.
+- **KEEP** a finding you can neither verify nor disprove. "Unsure" is not grounds to drop; only counter-evidence is.
+- Dropped findings are discarded silently, never listed as considered-and-dismissed.
+
+Type each surviving finding `OBSERVED | DERIVED | ASSUMED` per `../completion-gate/references/claim-discipline.md`. An `ASSUMED` finding — one resting on a premise you could not check — names that premise and **never escalates the verdict to BLOCK on its own**. It reports as WARN with the premise stated.
+
+**Anchor Pass second.** Every finding you collected in Steps 1-4 carries an evidence snippet, not a line number. Resolve each one now via the Anchor Ladder defined in `../review/SKILL.md` → Step 6: `Grep` the exact snippet, retry once whitespace-normalised with the outer lines dropped, and on a second miss mark the finding `UNANCHORED`.
+
+`UNANCHORED` behaves here exactly as it does in `review` — downgrade one level (BLOCK → WARN → INFO), report as `path (unanchored)` with the snippet inline, never drop. A finding that will not anchor **cannot carry the BLOCK verdict on its own**, for the same reason an `ASSUMED` one cannot: halting a pipeline on a claim nobody can locate spends the developer's trust faster than the bug would have.
+
+Then aggregate all surviving findings:
+- Any BLOCK from sentinel OR a logic issue that would cause data corruption or security bypass OR a dead interactive element (Step 4 cross-layer pairing / Step 4.5 dead-interactive check) OR a BLOCK from any domain hook → overall **BLOCK**
+- Any missing error handling, regression risk with no tests, or incomplete feature (other than the BLOCK cases above) → **WARN**
+- Only style or best-practice suggestions → **PASS**
+
+Report PASS, WARN, or BLOCK. For WARN, list each item the developer must acknowledge. For BLOCK, list each item that must be fixed before proceeding.
+
+## Output Format
+
+````
+## Preflight Report
+- **Status**: PASS | WARN | BLOCK
+- **Files Checked**: [count]
+- **Changes**: +[added] -[removed] lines across [files] files
+- **Unanchored**: [count — findings whose evidence did not resolve to a line]
+
+### Logic Issues
+- `path/to/file.ts:42` — [OBSERVED] null-deref: `user.name` accessed without null check
+  ```ts
+  return user.name.trim();
+  ```
+- `path/to/api.ts (unanchored)` — [ASSUMED: caller in job.ts not read] missing-await: async database call not awaited
+  ```ts
+  db.orders.insert(row);
+  ```
+
+### Error Handling
+- `path/to/handler.ts:20` — bare-catch: error swallowed silently
+  ```ts
+  } catch (e) {}
+  ```
+
+### Regression Risk
+- `utils/format.ts` — changed function used by 5 modules, 2 have tests, 3 untested (WARN)
+
+### Completeness
+- `api/users.ts` — new POST endpoint missing input validation schema
+- `components/Form.tsx` — no loading state during submission
+
+### Coherence
+- `api/users.ts` — uses `res.json()` but project convention is `sendResponse()` wrapper
+- `utils/newHelper.ts` — placed in utils/ but project uses helpers/ directory
+
+### Security (from sentinel)
+- [sentinel findings if any]
+
+### Composite Score
+- Logic: [score] | Error: [score] | Completeness: [score] | Coherence: [score] | Regression: [score]
+- **Preflight Score**: [weighted value] → Grade: [Excellent/Good/Fair/Poor/Critical]
+
+### Verdict
+WARN — 3 issues found (0 blocking, 3 must-acknowledge). Resolve before commit or explicitly acknowledge each WARN.
+````
+
+Findings under Logic Issues and Error Handling show their evidence block; the Regression, Completeness, and Coherence sections describe file-level or structural gaps that have no single line to anchor, so they carry a path only.
+
+## Constraints
+
+1. MUST check: logic errors, error handling, edge cases, type safety, naming conventions
+2. MUST anchor every line-level finding to a verbatim evidence snippet, resolving the line via the Anchor Pass rather than recall — unresolved findings report `(unanchored)`, downgraded one level, and cannot carry BLOCK alone
+3. MUST NOT skip edge case analysis — "happy path works" is insufficient
+4. MUST verify error messages are user-friendly and don't leak internal details
+5. MUST check that async operations have proper error handling and cleanup
+
+## Returns
+
+| Artifact | Format | Location |
+|----------|--------|----------|
+| Preflight report | Markdown | inline (chat output) |
+| Issue list (BLOCK/WARN by category) | Markdown list | inline |
+| Preflight health score | Markdown table | inline (footer of report) |
+| Spec compliance verdict | Markdown table | inline |
+| Domain quality findings | Markdown section | inline |
+
+## Sharp Edges
+
+| Failure Mode | Severity | Mitigation |
+|---|---|---|
+| Stopping at first BLOCK finding without checking remaining files | HIGH | Aggregate all findings first — developer needs the complete list, not just the first blocker |
+| "Happy path works" accepted as sufficient | HIGH | CONSTRAINT blocks this — edge case analysis is mandatory on every function |
+| Calling verification directly instead of the test skill | MEDIUM | Preflight calls rune:test for test suite execution; rune:verification for lint/type/build checks |
+| Skipping sentinel sub-check because "this file doesn't look security-relevant" | HIGH | MUST invoke sentinel — security relevance is sentinel's job to determine, not preflight's |
+| Skipping Stage A (spec compliance) when plan is available | HIGH | If cook provides an approved plan, Stage A is mandatory — catches incomplete implementations |
+| Agent modified files not in plan without flagging | MEDIUM | Stage A flags unplanned file changes as WARN — scope creep detection |
+| Domain hooks not triggered when pack is installed | HIGH | Step 4.5 auto-detects file patterns — if pack is installed but hooks don't fire, check file pattern matching |
+| Domain hooks overriding generic checks | HIGH | HARD-GATE: domain hooks are ADDITIVE — they never replace Steps 1-4 |
+| Pack Hard-Stop Thresholds ignored in preflight | MEDIUM | Step 4.5 Pack Integration must read installed pack thresholds — test with each new pack |
+| Dead interactive element downgraded to WARN ("just a loading-state issue") | CRITICAL | Step 4 cross-layer pairing + Step 4.5 dead-interactive check are BLOCK — a button wired to nothing is incomplete work, not a style nit |
+| Flagging design's declared placeholders as dead interactives | MEDIUM | Elements listed in `.rune/ui-spec.md` `## Unwired Elements` are design debt tracked by converge — skip, don't BLOCK |
+
+## Done When
+
+- Every changed function traced for null-deref, missing-await, and off-by-one
+- Error handling verified on all async functions and HTTP calls
+- Regression impact assessed — dependent files identified via scout
+- Completeness checklist passed (validation schema, loading/error states, test file)
+- Cross-layer pairing checked (Step 4): every new interactive component's handler chain reaches a real endpoint/service or has an explicit UI-only scope
+- Dead-interactive scan done (Step 4.5 UI hook) on all UI files in the diff
+- Sentinel invoked and its output attached in Security section
+- Structured report emitted with PASS / WARN / BLOCK verdict, and every line-level finding anchored to a verbatim snippet (or reported `(unanchored)` and downgraded)
+
+## Cost Profile
+
+~2000-4000 tokens input, ~500-1500 tokens output. Sonnet for logic analysis quality.

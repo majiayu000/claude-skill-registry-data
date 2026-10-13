@@ -1,0 +1,38 @@
+{
+  "name": "web-cors",
+  "repo": "NoorQureshi/SploitAgent",
+  "path": "skills/web/web-cors/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/NoorQureshi/SploitAgent",
+  "dir_name": "web-cors",
+  "downloaded_at": "2026-10-13T06:18:17.267917Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, owasp",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "owasp"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NoorQureshi",
+  "source_url": "https://github.com/NoorQureshi/SploitAgent/blob/main/skills/web/web-cors/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NoorQureshi/SploitAgent/blob/main/skills/web/web-cors/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Exploit CORS misconfiguration to read cross-origin responses (data theft). Load when an API reflects Origin into Access-Control-Allow-Origin, allows credentials cross-origin, or trusts null/subdomains. Signals: ACAO reflects your Origin, ACAC: true, `Origin`-dependent responses."
+}

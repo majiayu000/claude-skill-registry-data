@@ -1,0 +1,37 @@
+{
+  "name": "ss",
+  "repo": "Takazudo/claude-resources",
+  "path": "skills/ss/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Takazudo/claude-resources",
+  "dir_name": "ss",
+  "downloaded_at": "2026-10-13T06:52:08.859126Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Takazudo",
+  "source_url": "https://github.com/Takazudo/claude-resources/blob/main/skills/ss/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Takazudo/claude-resources/blob/main/skills/ss/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Load screenshots, shared files, or directories from the Dropbox screenshots directory \u2014 the shorthand for '/db screenshots/'. Use when the user invokes /ss, including inline forms like '/ss webdaw/ use its docs'. NEVER manually list/read files from the screenshots dir \u2014 this skill handles Dropbox sync delays, freshness checks and retry logic that manual reads miss. Supports: /ss (latest 1), /ss 2 or /ss latest3 (latest N), /ss filename.png (exact or substring), /ss dirname/, /ss full-path, /ss a.png b.png (multiple), and non-image files (/ss report.html)."
+}

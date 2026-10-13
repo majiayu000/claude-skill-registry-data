@@ -1,0 +1,38 @@
+{
+  "name": "reverse-eng-ghidra",
+  "repo": "NoorQureshi/SploitAgent",
+  "path": "skills/reverse-engineering/reverse-eng-ghidra/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/NoorQureshi/SploitAgent",
+  "dir_name": "reverse-eng-ghidra",
+  "downloaded_at": "2026-10-13T06:18:10.652914Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, workflow=3",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NoorQureshi",
+  "source_url": "https://github.com/NoorQureshi/SploitAgent/blob/main/skills/reverse-engineering/reverse-eng-ghidra/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NoorQureshi/SploitAgent/blob/main/skills/reverse-engineering/reverse-eng-ghidra/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Reverse engineer with Ghidra (GUI, headless, or ghidra-mcp) \u2014 decompile, cross-references, scripting \u2014 when there's no IDA license, for batch/CI decompilation, or as a free second opinion. Load for \"decompile without IDA\", bulk analysis of many samples, analyzeHeadless, Ghidra scripts (Jython/PyGhidra), or patch diffing with ghidriff. Signals: an ELF/PE needing a decompiler, \"use Ghidra\", headless automation, no commercial RE license."
+}

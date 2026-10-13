@@ -1,0 +1,38 @@
+{
+  "name": "managing-design-briefs",
+  "repo": "Krosebrook/loxihart-skills",
+  "path": "plugins/loxihart-design/skills/managing-design-briefs/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/Krosebrook/loxihart-skills",
+  "dir_name": "managing-design-briefs",
+  "downloaded_at": "2026-10-13T05:49:18.079587Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, component",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Krosebrook",
+  "source_url": "https://github.com/Krosebrook/loxihart-skills/blob/main/plugins/loxihart-design/skills/managing-design-briefs/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Krosebrook/loxihart-skills/blob/main/plugins/loxihart-design/skills/managing-design-briefs/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Brief-before-generation system with locked design tokens and anti-slop enforcement for Loxihart and FlashFusion brand profiles. Use this skill whenever someone asks to build, spec, audit, or generate any UI \u2014 component, dashboard, panel, landing page, browser extension, artifact, or design system. Also activates on: design brief, design tokens, anti-slop, v0, AI Studio, generator prompt, token drift, visual direction, color system, typography system, FlashFusion UI, Loxihart tool, Stitch pipeline, \"does this pass the gates\", \"brief before generation\", or any request that touches how something looks or is styled. If a UI is involved, use this skill first \u2014 even for small components. Do NOT use for pure backend work, data analysis, or non-visual deliverables (route those to doc/pptx/ROI skills)."
+}

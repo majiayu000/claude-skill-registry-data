@@ -1,0 +1,37 @@
+{
+  "name": "manim-ce",
+  "repo": "Littlpinguin/marketing-cockpit-template",
+  "path": ".claude/skills/manim-ce/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/Littlpinguin/marketing-cockpit-template",
+  "dir_name": "manim-ce",
+  "downloaded_at": "2026-10-13T05:55:27.677233Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, animation",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "design",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Littlpinguin",
+  "source_url": "https://github.com/Littlpinguin/marketing-cockpit-template/blob/main/.claude/skills/manim-ce/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Littlpinguin/marketing-cockpit-template/blob/main/.claude/skills/manim-ce/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Trigger when: (1) User mentions \"manim\" or \"Manim Community\" or \"ManimCE\", (2) Code contains `from manim import *`, (3) User runs `manim` CLI commands, (4) Working with Scene, MathTex, Create(), or ManimCE-specific classes.\n\nBest practices for Manim Community Edition - the community-maintained Python animation engine. Covers Scene structure, animations, LaTeX/MathTex, 3D with ThreeDScene, camera control, styling, and CLI usage.\n\nNOT for ManimGL/3b1b version (which uses `manimlib` imports and `manimgl` CLI).\n\nModule vid\u00e9o du cockpit : l'entr\u00e9e est la skill video-production."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "pyspark-etl",
+  "repo": "Mindrally/skills",
+  "path": "pyspark-etl/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/Mindrally/skills",
+  "dir_name": "pyspark-etl",
+  "downloaded_at": "2026-10-13T06:07:28.016235Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for data: data, sql, etl, pipeline",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql",
+      "etl",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Mindrally",
+  "source_url": "https://github.com/Mindrally/skills/blob/main/pyspark-etl/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Mindrally/skills/blob/main/pyspark-etl/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Best practices for building performant, testable PySpark ETL pipelines with Spark SQL and Apache Iceberg. Use when writing or reviewing PySpark jobs, designing joins and window functions, working with map/array higher-order functions, or building idempotent cumulative/snapshot table merges."
+}

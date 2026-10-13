@@ -1,0 +1,39 @@
+{
+  "name": "dev-clean-wsl",
+  "repo": "Takazudo/claude-resources",
+  "path": "skills/dev-clean-wsl/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Takazudo/claude-resources",
+  "dir_name": "dev-clean-wsl",
+  "downloaded_at": "2026-10-13T06:52:15.307341Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, debug",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Takazudo",
+  "source_url": "https://github.com/Takazudo/claude-resources/blob/main/skills/dev-clean-wsl/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Takazudo/claude-resources/blob/main/skills/dev-clean-wsl/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Reclaim disk space on WSL2 by purging dev caches and orphaned build artifacts, then guide the user through compacting the ext4.vhdx from Windows. Use when: (1) the user says 'dev-clean-wsl', 'clean wsl', 'wsl disk full', 'free disk space', 'reclaim space', 'purge caches', or 'disk almost full' on a WSL machine; (2) a build or tool fails with ENOSPC / no space left; (3) the user wants to shrink the WSL virtual disk. Covers cargo target/registry, pnpm/npm caches, node_modules, and the vhdx-compaction step that actually returns space to the Windows drive holding it (C: or wherever it was moved)."
+}

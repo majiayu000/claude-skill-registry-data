@@ -1,0 +1,37 @@
+{
+  "name": "python-credential-provider-pattern",
+  "repo": "PremModhaOfficial/NFR-pipeline",
+  "path": "skills/python-credential-provider-pattern/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/PremModhaOfficial/NFR-pipeline",
+  "dir_name": "python-credential-provider-pattern",
+  "downloaded_at": "2026-10-13T06:27:47.196861Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "PremModhaOfficial",
+  "source_url": "https://github.com/PremModhaOfficial/NFR-pipeline/blob/main/skills/python-credential-provider-pattern/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/PremModhaOfficial/NFR-pipeline/blob/main/skills/python-credential-provider-pattern/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this when designing a client that authenticates to an external service, reviewing an api_key: str field on a Config, spotting a credential in a log message or span attribute, or asking whether tokens can rotate without restarting the consumer. Covers the async CredentialProvider Protocol, a redacting SecretStr wrapper with hmac.compare_digest equality, Static / Env / File / CachedFile (mtime-based) / OAuth (refresh-coalesced) provider implementations, keyword-only Provider injection on the Client, per-request fetch (no instance cache), credential_provider_from_spec helpers, never-log rules for span attributes / HTTP debug logs / exception messages, and Provider aclose() ownership. Triggers: credential, secret, token, api_key, password, SecretStr, mounted-secret, AWS_ACCESS_KEY, refresh, x-api-key, Authorization."
+}

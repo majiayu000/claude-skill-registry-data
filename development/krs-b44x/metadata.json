@@ -1,0 +1,38 @@
+{
+  "name": "krs-b44x",
+  "repo": "ThomasMoreAI/legal-skills-open",
+  "path": "pl/corporate/skills/krs-b44x/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/ThomasMoreAI/legal-skills-open",
+  "dir_name": "krs-b44x",
+  "downloaded_at": "2026-10-13T06:57:16.378866Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "ThomasMoreAI",
+  "source_url": "https://github.com/ThomasMoreAI/legal-skills-open/blob/main/pl/corporate/skills/krs-b44x/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ThomasMoreAI/legal-skills-open/blob/main/pl/corporate/skills/krs-b44x/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Fetch official company and foundation records from Krajowy Rejestr S\u0105dowy (KRS) via the Ministry of Justice API. Retrieve company legal status, board members (zarz\u0105d), supervisory council (rada nadzorcza), commercial proxies (prokurenci), share capital, registered address, NIP, REGON, and exact legal representation rules (spos\u00f3b reprezentacji: kto mo\u017ce podpisywa\u0107 umowy). Checks both commercial companies (Rejestr Przedsi\u0119biorc\u00f3w P: Sp. z o.o., S.A., P.S.A.) and non-profits (Rejestr Stowarzysze\u0144/Fundacji S). Automatically pads KRS numbers to 10 digits. Use whenever the user asks about KRS, \"kto mo\u017ce podpisa\u0107 umow\u0119\", \"sprawd\u017a sp\u00f3\u0142k\u0119 w KRS\", \"odpis KRS\", \"zarz\u0105d sp\u00f3\u0142ki\", \"kapita\u0142 zak\u0142adowy\", or \"reprezentacja sp\u00f3\u0142ki\"."
+}

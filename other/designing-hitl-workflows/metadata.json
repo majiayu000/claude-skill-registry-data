@@ -1,0 +1,38 @@
+{
+  "name": "designing-hitl-workflows",
+  "repo": "Krosebrook/loxihart-skills",
+  "path": "plugins/loxihart-ai/skills/designing-hitl-workflows/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Krosebrook/loxihart-skills",
+  "dir_name": "designing-hitl-workflows",
+  "downloaded_at": "2026-10-13T05:49:16.338393Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, workflow=3",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Krosebrook",
+  "source_url": "https://github.com/Krosebrook/loxihart-skills/blob/main/plugins/loxihart-ai/skills/designing-hitl-workflows/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Krosebrook/loxihart-skills/blob/main/plugins/loxihart-ai/skills/designing-hitl-workflows/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Designs human-in-the-loop (HITL) checkpoints for AI agent workflows \u2014 deciding where to pause for human approval, structuring the approval interface, handling timeouts and non-responses, and building escalation paths from automated to human. Covers implementation patterns for n8n wait nodes, Claude API stop sequences, and Base44 approval queue panels. Activates when designing agents that need human oversight, building approval workflows, adding checkpoints to autonomous processes, deciding what actions require human sign-off, structuring escalation from AI to human, or building trustworthy agents for client delivery. Also triggers on: pause before action, approval queue, human approval, agent oversight, require confirmation, HITL, human review, escalation workflow, client agent trust, consequential action, irreversible action."
+}

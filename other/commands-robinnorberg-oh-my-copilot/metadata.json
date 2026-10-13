@@ -1,0 +1,36 @@
+{
+  "name": "commands",
+  "repo": "RobinNorberg/oh-my-copilot",
+  "path": "commands/skill.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/RobinNorberg/oh-my-copilot",
+  "dir_name": "commands-robinnorberg-oh-my-copilot",
+  "downloaded_at": "2026-10-13T06:34:14.577344Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category development scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "",
+    "runner_up_score": 0,
+    "signals": [
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "metadata",
+      "description": "body"
+    }
+  },
+  "author": "RobinNorberg",
+  "source_url": "https://github.com/RobinNorberg/oh-my-copilot/blob/main/commands/skill.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/RobinNorberg/oh-my-copilot/blob/main/commands/skill.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "This compatibility command keeps /oh-my-copilot:skill available without loading the full skill skill description in every Claude Code session."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "format-md",
+  "repo": "Takazudo/claude-resources",
+  "path": "skills/format-md/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/Takazudo/claude-resources",
+  "dir_name": "format-md",
+  "downloaded_at": "2026-10-13T06:52:12.419826Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, markdown",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Takazudo",
+  "source_url": "https://github.com/Takazudo/claude-resources/blob/main/skills/format-md/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Takazudo/claude-resources/blob/main/skills/format-md/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Format markdown (.md) and MDX (.mdx) files using @takazudo/mdx-formatter. Use when: (1) User wants to format markdown files, (2) User mentions 'format md', 'prettify markdown', or 'fix markdown formatting', (3) Markdown/MDX files need consistent formatting. Features: remark-based AST formatting, MDX (JSX, imports/exports), Japanese text, HTML\u2192md conversion, Docusaurus admonitions, GFM (tables, strikethrough, task lists)."
+}

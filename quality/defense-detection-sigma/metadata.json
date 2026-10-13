@@ -1,0 +1,37 @@
+{
+  "name": "defense-detection-sigma",
+  "repo": "NoorQureshi/SploitAgent",
+  "path": "skills/defense/defense-detection-sigma/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/NoorQureshi/SploitAgent",
+  "dir_name": "defense-detection-sigma",
+  "downloaded_at": "2026-10-13T06:18:01.760233Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: review, validate",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NoorQureshi",
+  "source_url": "https://github.com/NoorQureshi/SploitAgent/blob/main/skills/defense/defense-detection-sigma/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NoorQureshi/SploitAgent/blob/main/skills/defense/defense-detection-sigma/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write portable detections as Sigma rules and map them to MITRE ATT&CK, then convert to your SIEM. Load for blue-team/detection-engineering tasks: \"write a detection\", \"sigma rule\", \"alert on\", turning an offensive technique or an incident into a repeatable detection."
+}

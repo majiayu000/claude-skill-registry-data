@@ -1,0 +1,38 @@
+{
+  "name": "lians-memory",
+  "repo": "Lians-ai/Lians",
+  "path": "integrations/lians-plugin/skills/lians-memory/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/Lians-ai/Lians",
+  "dir_name": "lians-memory",
+  "downloaded_at": "2026-10-13T05:53:36.778337Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "api",
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Lians-ai",
+  "source_url": "https://github.com/Lians-ai/Lians/blob/master/integrations/lians-plugin/skills/lians-memory/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Lians-ai/Lians/blob/master/integrations/lians-plugin/skills/lians-memory/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use Lians memory from Claude Code for durable recall, resuming unfinished work across agents or sessions, repository verification, point-in-time reconstruction, lineage inspection, lookahead checks, and explicitly confirmed erasure."
+}

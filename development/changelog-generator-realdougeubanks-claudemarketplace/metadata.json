@@ -1,0 +1,38 @@
+{
+  "name": "changelog-generator",
+  "repo": "RealDougEubanks/ClaudeMarketplace",
+  "path": "skills/changelog-generator/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/RealDougEubanks/ClaudeMarketplace",
+  "dir_name": "changelog-generator-realdougeubanks-claudemarketplace",
+  "downloaded_at": "2026-10-13T06:32:48.678382Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, build, refactor",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "RealDougEubanks",
+  "source_url": "https://github.com/RealDougEubanks/ClaudeMarketplace/blob/main/skills/changelog-generator/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/RealDougEubanks/ClaudeMarketplace/blob/main/skills/changelog-generator/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generates a structured CHANGELOG.md following Keep a Changelog format from git history and ABD handoff artifacts. Prepends new version sections to existing changelogs."
+}

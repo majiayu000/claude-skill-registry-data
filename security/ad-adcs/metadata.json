@@ -1,0 +1,37 @@
+{
+  "name": "ad-adcs",
+  "repo": "NoorQureshi/SploitAgent",
+  "path": "skills/ad/ad-adcs/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/NoorQureshi/SploitAgent",
+  "dir_name": "ad-adcs",
+  "downloaded_at": "2026-10-13T06:17:51.577606Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: auth, pentest",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "auth",
+      "pentest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NoorQureshi",
+  "source_url": "https://github.com/NoorQureshi/SploitAgent/blob/main/skills/ad/ad-adcs/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NoorQureshi/SploitAgent/blob/main/skills/ad/ad-adcs/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Attack Active Directory Certificate Services (ADCS) \u2014 ESC1\u2013ESC8 template/CA misconfigurations to escalate to Domain Admin. Load with a domain foothold/creds where ADCS is present, on \"certipy\", \"ESC1\", \"certificate template\", or a CA server. Signals: Cert Publishers, pKIEnrollmentService, ports 443/135 on a CA, certipy find output."
+}

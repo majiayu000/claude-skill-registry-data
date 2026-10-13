@@ -1,0 +1,38 @@
+{
+  "name": "session-bridge",
+  "repo": "Rune-kit/rune",
+  "path": "skills/session-bridge/SKILL.md",
+  "github_branch": "master",
+  "category": "context-management",
+  "source": "github.com/Rune-kit/rune",
+  "dir_name": "session-bridge",
+  "downloaded_at": "2026-10-13T06:36:19.413130Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, compaction, memory",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "compaction",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Rune-kit",
+  "source_url": "https://github.com/Rune-kit/rune/blob/master/skills/session-bridge/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Rune-kit/rune/blob/master/skills/session-bridge/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Universal context persistence across sessions. Auto-saves decisions, conventions, and progress to .rune/ files. Loads state at session start. Use when any skill makes architectural decisions or establishes patterns that must survive session boundaries."
+}

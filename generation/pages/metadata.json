@@ -1,0 +1,38 @@
+{
+  "name": "pages",
+  "repo": "MythiStone/mythistone.github.io",
+  "path": ".claude/skills/pages/SKILL.md",
+  "github_branch": "main",
+  "category": "generation",
+  "source": "github.com/MythiStone/mythistone.github.io",
+  "dir_name": "pages",
+  "downloaded_at": "2026-10-13T06:10:23.240007Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "generation",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for generation: generation, generator, scaffold",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "generation",
+      "generator",
+      "scaffold"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MythiStone",
+  "source_url": "https://github.com/MythiStone/mythistone.github.io/blob/main/.claude/skills/pages/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MythiStone/mythistone.github.io/blob/main/.claude/skills/pages/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "MythiStone page generation: generate*.py, Jinja templates and macros, shared generator modules (pageGeneration, commonUtils, aggregateData, compArchetypes) and page-specific data rules for spec, item, dungeon, comps, analyzer, tierlist, routes, trends. Use when changing what a page renders."
+}

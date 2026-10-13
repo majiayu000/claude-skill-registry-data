@@ -1,0 +1,38 @@
+{
+  "name": "instrumenting-production-stack",
+  "repo": "Krosebrook/loxihart-skills",
+  "path": "plugins/loxihart-engineering/skills/instrumenting-production-stack/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/Krosebrook/loxihart-skills",
+  "dir_name": "instrumenting-production-stack",
+  "downloaded_at": "2026-10-13T05:49:25.627901Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, database, pipeline",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Krosebrook",
+  "source_url": "https://github.com/Krosebrook/loxihart-skills/blob/main/plugins/loxihart-engineering/skills/instrumenting-production-stack/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Krosebrook/loxihart-skills/blob/main/plugins/loxihart-engineering/skills/instrumenting-production-stack/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Sets up observability for the Vercel + Supabase + n8n + Anthropic stack. Live operational path runs through PostHog (MCP connected). Datadog is NOT connected \u2014 all Datadog steps are static setup references only, clearly labeled, and not executable via MCP. Activates on PostHog instrumentation, production monitoring, health dashboard, alert setup, stack observability, what to monitor, are things working in production. Not for cost tracking or budget alerts (use governing-stack-costs) and not for agent behavioral telemetry (use instrumenting-agent-telemetry)."
+}

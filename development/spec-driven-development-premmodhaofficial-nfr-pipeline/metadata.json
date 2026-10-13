@@ -1,0 +1,39 @@
+{
+  "name": "spec-driven-development",
+  "repo": "PremModhaOfficial/NFR-pipeline",
+  "path": "skills/spec-driven-development/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/PremModhaOfficial/NFR-pipeline",
+  "dir_name": "spec-driven-development-premmodhaofficial-nfr-pipeline",
+  "downloaded_at": "2026-10-13T06:27:40.900303Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, refactor",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "PremModhaOfficial",
+  "source_url": "https://github.com/PremModhaOfficial/NFR-pipeline/blob/main/skills/spec-driven-development/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/PremModhaOfficial/NFR-pipeline/blob/main/skills/spec-driven-development/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this when intake extracts FRs from a TPRD, when design maps FRs to symbols in the API stub, when impl verifies every TPRD \u00a77 symbol has TDD red-green-refactor evidence, or when feedback computes symbol-coverage. Covers TPRD-to-symbol traceability \u2014 every \u00a77 symbol gains impl + doc-comment + structured test + runnable example (where applicable) + benchmark (hot path) + [traces-to: TPRD-<section>-<id>] marker \u2014 plus feature-level validation, cross-service NATS contract definition, and intra-package dependency ordering. Triggers: TPRD, FR, symbol coverage, traces-to, story, acceptance criteria, TDD, red-green-refactor, Example_, benchmark, godoc, traceability."
+}

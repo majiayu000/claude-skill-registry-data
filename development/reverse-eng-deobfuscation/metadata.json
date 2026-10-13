@@ -1,0 +1,38 @@
+{
+  "name": "reverse-eng-deobfuscation",
+  "repo": "NoorQureshi/SploitAgent",
+  "path": "skills/reverse-engineering/reverse-eng-deobfuscation/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/NoorQureshi/SploitAgent",
+  "dir_name": "reverse-eng-deobfuscation",
+  "downloaded_at": "2026-10-13T06:18:10.082082Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NoorQureshi",
+  "source_url": "https://github.com/NoorQureshi/SploitAgent/blob/main/skills/reverse-engineering/reverse-eng-deobfuscation/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NoorQureshi/SploitAgent/blob/main/skills/reverse-engineering/reverse-eng-deobfuscation/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Peel obfuscation off code until it's readable or callable \u2014 packed native binaries, minified/ obfuscated JavaScript, WebAssembly, and JS-VM-protected (JSVMP) bundles. Load when analysis is blocked by protection layers. Signals: high-entropy sections, a tiny import table, UPX headers, string-array/control-flow-flattened JS, `_0x` variable names, a .wasm module, an interpreter loop over a bytecode array, anti-debugger `debugger;` traps."
+}

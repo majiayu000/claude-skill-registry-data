@@ -1,0 +1,37 @@
+{
+  "name": "swap-embeddings",
+  "repo": "ManasMadan/boilerplate",
+  "path": ".claude/skills/swap-embeddings/SKILL.md",
+  "github_branch": "master",
+  "category": "ai-ml",
+  "source": "github.com/ManasMadan/boilerplate",
+  "dir_name": "swap-embeddings",
+  "downloaded_at": "2026-10-13T06:01:34.795286Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, model",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ManasMadan",
+  "source_url": "https://github.com/ManasMadan/boilerplate/blob/master/.claude/skills/swap-embeddings/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ManasMadan/boilerplate/blob/master/.claude/skills/swap-embeddings/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Change the embedding model used to index and search documents (OpenAI, Cohere, Voyage, a local server). Use when the user decides on a different or cheaper embedding model, or asks about vector dimensions. Not for debugging; when something fails, use the debug skill."
+}

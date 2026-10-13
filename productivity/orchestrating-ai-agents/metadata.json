@@ -1,0 +1,39 @@
+{
+  "name": "orchestrating-ai-agents",
+  "repo": "Krosebrook/loxihart-skills",
+  "path": "plugins/loxihart-ai/skills/orchestrating-ai-agents/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/Krosebrook/loxihart-skills",
+  "dir_name": "orchestrating-ai-agents",
+  "downloaded_at": "2026-10-13T05:49:14.650902Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: automation, workflow, task, memory",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "automation",
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Krosebrook",
+  "source_url": "https://github.com/Krosebrook/loxihart-skills/blob/main/plugins/loxihart-ai/skills/orchestrating-ai-agents/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Krosebrook/loxihart-skills/blob/main/plugins/loxihart-ai/skills/orchestrating-ai-agents/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Architecture and design guidance for AI agents, automation workflows, and tool orchestrations \u2014 topology selection, trust and permission boundaries, failure-mode and rollback design across the AI/automation ecosystem. Activates on agent architecture, how should I structure this agent system, multi-agent design, tool access design, agent security architecture, design an automation. Not for hands-on implementation or writing the code (use ai-agents-workflow) and not for no-code platform wiring (use workflow-automation)."
+}

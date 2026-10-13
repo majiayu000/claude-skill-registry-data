@@ -1,0 +1,38 @@
+{
+  "name": "dev-ci-blacksmith",
+  "repo": "Takazudo/claude-resources",
+  "path": "skills/dev-ci-blacksmith/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Takazudo/claude-resources",
+  "dir_name": "dev-ci-blacksmith",
+  "downloaded_at": "2026-10-13T06:52:17.390161Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, testing=3",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Takazudo",
+  "source_url": "https://github.com/Takazudo/claude-resources/blob/main/skills/dev-ci-blacksmith/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Takazudo/claude-resources/blob/main/skills/dev-ci-blacksmith/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run GitHub Actions on Blacksmith runners: setup, migrating from GitHub-hosted / self-hosted (detect-runner) runners, runner label choice, caching, concurrency, cost/perf habits, gotchas, debugging. Use when the user says 'blacksmith', 'CI runner', 'faster CI', 'slow CI', 'migrate runners', 'switch to blacksmith', 'drop detect-runner', or when a workflow has (or should get) a `blacksmith-*` `runs-on` label, a job sits queued forever, or a `useblacksmith/*` action shows up."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "orphex-measurement-consistency-check",
+  "repo": "OrphexTech/agent-skills",
+  "path": "skills/orphex-measurement-consistency-check/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/OrphexTech/agent-skills",
+  "dir_name": "orphex-measurement-consistency-check",
+  "downloaded_at": "2026-10-13T06:22:04.101656Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, analytics",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "analytics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "OrphexTech",
+  "source_url": "https://github.com/OrphexTech/agent-skills/blob/main/skills/orphex-measurement-consistency-check/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/OrphexTech/agent-skills/blob/main/skills/orphex-measurement-consistency-check/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Reconcile event, attribution, date, identity, and revenue definitions across reports before treating differing totals as tracking failure."
+}

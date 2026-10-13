@@ -1,0 +1,38 @@
+{
+  "name": "dev-setup-temp-resource",
+  "repo": "Takazudo/claude-resources",
+  "path": "skills/dev-setup-temp-resource/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Takazudo/claude-resources",
+  "dir_name": "dev-setup-temp-resource",
+  "downloaded_at": "2026-10-13T06:52:19.676949Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, testing=3",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Takazudo",
+  "source_url": "https://github.com/Takazudo/claude-resources/blob/main/skills/dev-setup-temp-resource/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Takazudo/claude-resources/blob/main/skills/dev-setup-temp-resource/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Set up and use the committed `_temp-resource/<issue>-<topic>/` convention for handing scratch resources (prototypes, design references, fixtures, sample data) from one Claude Code session to a LATER session through git \u2014 not Dropbox/cclogs. Use when: (1) setting up `_temp-resource/` in a repo, (2) a planning or dev session must delegate files a later session will need \u2014 especially `/big-plan` \u2192 `/x-wt-teams`, or any handoff to Claude Code web where Dropbox/cclogs is unavailable, (3) deciding where to put prototype output (e.g. from `/protodev`) that you've decided a downstream session should reuse, (4) reading resources a prior session left under `_temp-resource/`. Keywords: _temp-resource, temp resource, delegate resources, share prototype across sessions, web Claude Code handoff, \"use this PR as base\"."
+}

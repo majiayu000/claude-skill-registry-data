@@ -1,0 +1,41 @@
+{
+  "name": "docs",
+  "repo": "Takazudo/claude-resources",
+  "path": "skills/synced/c053badd-7e4c-447f-b0c0-1b524c65ef84_8dec207c-4dc2-4246-8a3b-cf9c0c7eb90d/docs/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/Takazudo/claude-resources",
+  "dir_name": "docs-takazudo-claude-resources-2",
+  "downloaded_at": "2026-10-13T06:52:21.499920Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, pdf, pptx, xlsx, docx",
+    "score": 6,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "docs",
+      "pdf",
+      "pptx",
+      "xlsx",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Takazudo",
+  "source_url": "https://github.com/Takazudo/claude-resources/blob/main/skills/synced/c053badd-7e4c-447f-b0c0-1b524c65ef84_8dec207c-4dc2-4246-8a3b-cf9c0c7eb90d/docs/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Takazudo/claude-resources/blob/main/skills/synced/c053badd-7e4c-447f-b0c0-1b524c65ef84_8dec207c-4dc2-4246-8a3b-cf9c0c7eb90d/docs/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "docs (living docs people share, comment on and edit; use only when the user asks for one: names a doc, document, page, memo, spec, PRD, runbook or write-up, asks for somewhere to share or keep editing something, or says yes to your doc offer; a plan, comparison, summary or notes asked in chat stays in chat (at most a one-line doc offer); a report, status update, recap or \"something I can send them\" with no form named \u2192 ask first: reply, doc or file?; tabs hold tables and live charts too; a pasted claude.ai/code/artifact/\u2026 link may be a doc: check with docs tools first; not HTML pages, apps or plain chat answers; a .docx/.pptx/.xlsx/PDF asked for by name \u2192 that format's skill): asked for one \u2192 no docs-connector instructions in context? call the docs connector's `guide` with topic.instructions first, then create the doc (headings only, no body) before any search, file read or plan, even with files attached. Documenting code means docstrings or repo docs, not a doc."
+}

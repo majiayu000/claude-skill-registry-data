@@ -1,0 +1,37 @@
+{
+  "name": "ui-to-issues",
+  "repo": "ThorStarlord/interface-skills",
+  "path": "skills/ui-to-issues/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ThorStarlord/interface-skills",
+  "dir_name": "ui-to-issues",
+  "downloaded_at": "2026-10-13T06:57:23.217899Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "ui",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ThorStarlord",
+  "source_url": "https://github.com/ThorStarlord/interface-skills/blob/main/skills/ui-to-issues/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ThorStarlord/interface-skills/blob/main/skills/ui-to-issues/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Slice a UI spec package, redline audit, or acceptance checklist into independently implementable GitHub issues or markdown drafts. This skill ensures that UI work is broken down into vertical slices that deliver observable user outcomes."
+}

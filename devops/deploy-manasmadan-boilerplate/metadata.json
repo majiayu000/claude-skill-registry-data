@@ -1,0 +1,39 @@
+{
+  "name": "deploy",
+  "repo": "ManasMadan/boilerplate",
+  "path": ".claude/skills/deploy/SKILL.md",
+  "github_branch": "master",
+  "category": "devops",
+  "source": "github.com/ManasMadan/boilerplate",
+  "dir_name": "deploy-manasmadan-boilerplate",
+  "downloaded_at": "2026-10-13T06:01:27.896306Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: ci, cd, deploy, infra",
+    "score": 4,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "ci",
+      "cd",
+      "deploy",
+      "infra"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ManasMadan",
+  "source_url": "https://github.com/ManasMadan/boilerplate/blob/master/.claude/skills/deploy/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ManasMadan/boilerplate/blob/master/.claude/skills/deploy/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Ship master to staging and check the rollout. Use when the user asks to deploy, whether a change is live on staging, why staging didn't update, or how a merge reaches an environment."
+}

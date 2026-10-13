@@ -1,0 +1,39 @@
+{
+  "name": "code-review-dotnet",
+  "repo": "NoorQureshi/SploitAgent",
+  "path": "skills/code-review/code-review-dotnet/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/NoorQureshi/SploitAgent",
+  "dir_name": "code-review-dotnet",
+  "downloaded_at": "2026-10-13T06:17:58.138174Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, owasp, pentest",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "security",
+      "auth",
+      "owasp",
+      "pentest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NoorQureshi",
+  "source_url": "https://github.com/NoorQureshi/SploitAgent/blob/main/skills/code-review/code-review-dotnet/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NoorQureshi/SploitAgent/blob/main/skills/code-review/code-review-dotnet/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Security review of .NET / C# code \u2014 dangerous sinks and ASP.NET pitfalls. Load when reviewing a C#/.NET codebase/PR, on .cs source in scope, or \"review this .NET app\". Signals: .csproj/.sln, ASP.NET (Core/MVC/WebForms), BinaryFormatter, SqlCommand, Razor Html.Raw, XmlDocument."
+}

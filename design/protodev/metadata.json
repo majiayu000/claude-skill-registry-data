@@ -1,0 +1,39 @@
+{
+  "name": "protodev",
+  "repo": "Takazudo/claude-resources",
+  "path": "skills/protodev/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/Takazudo/claude-resources",
+  "dir_name": "protodev",
+  "downloaded_at": "2026-10-13T06:52:11.936779Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, css, component",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "css",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Takazudo",
+  "source_url": "https://github.com/Takazudo/claude-resources/blob/main/skills/protodev/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Takazudo/claude-resources/blob/main/skills/protodev/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Solve a complex bug or design problem by building a tiny isolated prototype first, instead of patching the production system in place. Trigger PROACTIVELY when (1) the same bug has resisted 2+ in-place fix attempts (fail-retry loop), (2) the user mentions \"minimal prototype\", \"from zero\", \"from scratch\", \"simple script\", \"sandbox\", \"standalone\", \"isolate\", \"play around\", or \"try a sandbox version\", (3) you find yourself ranking a list of suspects and ruling them out via source-grep on a runtime/visual bug, (4) the user is brainstorming many design options for a UI surface and wants speed (e.g., \"make 20 patterns of the top page\") **and the exploration ends there** \u2014 if the chosen design is then going to be built, route to `/big-plan -pr` instead, which runs this same loop with a feedback checkpoint and turns the accepted direction into an epic, (5) the next reasonable step would be \"instrument the existing complex code\" \u2014 pause and consider this skill instead. Build the prototype in the repo-scoped Dropbox-synced cclogs dir (`$DROPBOX_CCLOGS_DIR/<repo>/<descriptive-name>/`) so it survives switching between Mac and WSL; the exception is a prototype that must import the repo's production code or use its workspace/Vite tooling \u2014 keep that one in `__inbox/<descriptive-name>/` in the project root (in-repo, gitignored) so relative imports resolve. Match the project's tech stack (HTML+CSS+vanilla JS for static sites, Vite+React for React apps, Node script for CLI/utility logic). Don't commit it \u2014 its value is the learning, not the artifact. **Variant for repeated regression cycles (8+ in-place fixes on the same bug class):** keep the prototype as a committed sub-package named `packages/prototype-<topic>/` \u2014 see the \"Variant: project-level reference prototype\" section below."
+}

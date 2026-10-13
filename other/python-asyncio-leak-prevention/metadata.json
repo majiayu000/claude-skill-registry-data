@@ -1,0 +1,37 @@
+{
+  "name": "python-asyncio-leak-prevention",
+  "repo": "PremModhaOfficial/NFR-pipeline",
+  "path": "skills/python-asyncio-leak-prevention/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/PremModhaOfficial/NFR-pipeline",
+  "dir_name": "python-asyncio-leak-prevention",
+  "downloaded_at": "2026-10-13T06:27:45.771447Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "PremModhaOfficial",
+  "source_url": "https://github.com/PremModhaOfficial/NFR-pipeline/blob/main/skills/python-asyncio-leak-prevention/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/PremModhaOfficial/NFR-pipeline/blob/main/skills/python-asyncio-leak-prevention/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this when adding a Python SDK client class that holds long-lived async resources, reviewing code that discards an asyncio.create_task return value, designing pytest gates for shutdown, or chasing a ResourceWarning about an unclosed session/socket. Covers the leak categories L-A through L-E (tasks, aiohttp/asyncpg/aiokafka sessions, file/socket handles, custom executors, subprocess pipes), autouse asyncio_task_tracker + unclosed_session_tracker fixtures, fd_tracker via psutil, pytest-repeat --count=5 amplification, tracemalloc snapshot diffs, and threading.enumerate gates. Triggers: leak, asyncio, create_task, ClientSession, Connection, Pool, Producer, tracemalloc, gc, open file, file descriptor, asyncio_task_tracker, unclosed_session_tracker."
+}

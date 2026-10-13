@@ -1,0 +1,38 @@
+{
+  "name": "applying-adversarial-review",
+  "repo": "Krosebrook/loxihart-skills",
+  "path": "plugins/loxihart-ai/skills/applying-adversarial-review/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/Krosebrook/loxihart-skills",
+  "dir_name": "applying-adversarial-review",
+  "downloaded_at": "2026-10-13T05:49:18.517170Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Krosebrook",
+  "source_url": "https://github.com/Krosebrook/loxihart-skills/blob/main/plugins/loxihart-ai/skills/applying-adversarial-review/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Krosebrook/loxihart-skills/blob/main/plugins/loxihart-ai/skills/applying-adversarial-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Applies Kyle's adversarial review methodology to consequential outputs. Forces every recommendation, audit, plan, or claim through three checks before shipping: a CLAIMS / COUNTEREXAMPLE / CONTRADICTIONS footer, [SOURCED] vs [GENERATED] provenance labeling, and an agreement-streak flag at three consecutive consequential agreements. Activates when finishing an audit, writing a recommendation, delivering a plan, drafting a decision memo, or producing any high-stakes deliverable. Also triggers when explicitly asked to pressure-test, stress-test, steelman, play devil's advocate, fight an idea, or check for blind spots. Triggers on: adversarial review, anti-sycophancy, claims footer, stress test this, steelman this, pressure test, devil's advocate, am I missing anything, what could go wrong, sourced vs generated, agreement streak, push back on this, where am I wrong, review this PR, pull request review, code review, PR feedback."
+}

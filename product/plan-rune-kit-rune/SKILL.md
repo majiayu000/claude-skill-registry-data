@@ -1,0 +1,514 @@
+---
+name: plan
+description: "Create structured implementation plans from requirements. Produces master plan + phase files for enterprise-scale project management. Master plan = overview (<80 lines). Phase files = execution detail (<200 lines each). Each session handles 1 phase. Uses opus for deep reasoning."
+metadata:
+  author: runedev
+  version: "1.7.1"
+  layer: L2
+  model: opus
+  group: creation
+  tools: "Read, Write, Edit, Glob, Grep"
+  emit: plan.ready
+  listen: codebase.scanned, project.onboarded, security.blocked
+---
+
+# plan
+
+## Purpose
+
+Strategic planning engine for the Rune ecosystem. Produces a **master plan + phase files** architecture — NOT a single monolithic plan. The master plan is a concise overview (<80 lines) that references separate phase files, each containing enough detail (<200 lines) that ANY model can execute with high accuracy.
+
+**Design principle: Plan for the weakest coder.** Phase files are designed so that even an Amateur-level model (Haiku) can execute them with minimal errors. When the plan satisfies the Amateur's needs, every model benefits — Junior (Sonnet) executes near-perfectly, Senior (Opus) executes flawlessly.
+
+This is enterprise-grade project management: BA produces WHAT → Plan produces HOW (structured into phases) → ANY coder executes each phase with full context.
+
+> **Goal-first — leverage native goal/outcome commands (advisory, 2026).** Current
+> agent models (Opus 4.8, Sonnet 5, Fable 5) perform best when handed
+> the full goal + constraints up front, then left to execute at high effort. Some
+> platforms now expose this natively: Claude Code `/goal` sets a run's north-star;
+> Managed Agents **Outcomes** (`user.define_outcome` + rubric) grade-and-iterate to a
+> target. The master plan IS that goal contract in durable form — when a native
+> goal/outcome command is present, seed it from the master plan's Overview +
+> acceptance criteria instead of re-stating the goal loosely. Advisory only: the
+> master plan + phase files stay the source of truth on every platform (goal/Outcome
+> are single-session; the plan survives across sessions and platforms).
+
+<HARD-GATE>
+NEVER produce a single monolithic plan file for non-trivial tasks.
+Non-trivial = 3+ phases OR 5+ files OR estimated > 100 LOC total change.
+For non-trivial tasks: MUST produce master plan + separate phase files.
+For trivial tasks (1-2 phases, < 5 files): inline plan is acceptable.
+</HARD-GATE>
+
+## Architecture: Master Plan + Phase Files
+
+```
+.rune/
+  plan-<feature>.md          ← Master plan: phases overview, goals, status tracker (<80 lines)
+  plan-<feature>-phase1.md   ← Phase 1 detail: tasks, acceptance criteria, files to touch (<200 lines)
+  plan-<feature>-phase2.md   ← Phase 2 detail
+  ...
+```
+
+### Why This Architecture
+
+- **Big context = even Opus misses details and makes mistakes**
+- **Small context = Sonnet handles correctly, Opus has zero mistakes**
+- Phase isolation prevents cross-contamination of concerns
+- Each session starts clean with only the relevant phase loaded
+- Coder (Sonnet/Haiku) can execute a phase file without needing the full plan
+
+### Size Constraints
+
+| File | Max Lines | Content |
+|------|-----------|---------|
+| Master plan | 80 lines | Overview, phase table, key decisions, status |
+| Phase file | 200 lines | Amateur-proof template: data flow, contracts, tasks, failures, NFRs, rejections, cross-phase |
+| Total phases | Max 8 | If > 8 phases, split into sub-projects |
+
+## Modes
+
+### Implementation Mode (default)
+Standard implementation planning — decompose task into phased steps with code details.
+
+### Feature Spec Mode
+Product-oriented planning — write a feature specification before implementation.
+**Triggers:** user says "spec", "feature spec", "write spec", "PRD" — or `/rune plan spec <feature>`
+
+### Roadmap Mode
+High-level multi-feature planning — organize features into milestones.
+**Triggers:** user says "roadmap", "milestone", "release plan", "what to build next" — or `/rune plan roadmap`
+
+## Triggers
+
+- Called by `cook` when task scope > 1 file (Implementation Mode)
+- Called by `team` for high-level task decomposition
+- `/rune plan <task>` — manual planning
+- `/rune plan spec <feature>` — feature specification
+- `/rune plan roadmap` — roadmap planning
+- Auto-trigger: when user says "implement", "build", "create" with complex scope
+
+## Calls (outbound)
+
+- `scout` (L2): scan codebase for existing patterns, conventions, and structure
+- `brainstorm` (L2): when multiple valid approaches exist
+- `adversary` (L2): optional red-team gate on critical plan output (features touching auth, payments, or data integrity)
+- `research` (L3): external knowledge lookup
+- `sequential-thinking` (L3): complex architecture with many trade-offs
+- L4 extension packs: domain-specific architecture patterns
+- `neural-memory` | Before architecture decisions | Recall past decisions on similar problems
+
+## Called By (inbound)
+
+- `cook` (L1): Phase 2 PLAN
+- `team` (L1): task decomposition into parallel workstreams
+- `brainstorm` (L2): when idea needs structuring
+- `rescue` (L1): plan refactoring strategy
+- `ba` (L2): hand-off after requirements complete
+- `scaffold` (L1): Phase 3 architecture planning
+- `skill-forge` (L2): plan structure for new skill
+- User: `/rune plan` direct invocation
+- `debug` (L2): when root cause requires architectural changes
+- `retro` (L2): reference past plans during retrospective analysis
+
+## Data Flow
+
+### Feeds Into →
+
+- `cook` (L1): master plan + phase files → cook's Phase 2-4 execution roadmap
+- `team` (L1): task decomposition + wave grouping → team's parallel workstream dispatch
+- `fix` (L2): phase file tasks → fix's implementation targets
+- `test` (L2): phase file test tasks → test's RED phase targets
+
+### Fed By ←
+
+- `ba` (L2): Requirements Document → plan's primary input (locked decisions, user stories)
+- `scout` (L2): codebase analysis → plan's convention/pattern awareness
+- `neural-memory` (external): past architectural decisions → plan's precedent context
+- `sentinel` (L2): repeated security blocks → plan's constraint awareness for future features
+
+### Feedback Loops ↻
+
+- `plan` ↔ `brainstorm`: plan requests options when multiple approaches exist → brainstorm generates options → plan selects and structures the chosen approach
+- `plan` ↔ `cook`: cook discovers plan gaps during implementation → plan updates phase files → cook resumes with corrected tasks
+
+## Executable Steps (Implementation Mode)
+
+### Step 1 — Gather Context
+
+Check for `.rune/features/*/requirements.md` via `Glob`. If a Requirements Document exists (from `rune:ba`), read it — it contains user stories, acceptance criteria, scope, constraints. Do NOT re-gather what BA already elicited.
+
+If `project.onboarded` signal was received, scout output is already available in session context — skip re-invoking scout.
+
+Invoke `rune:scout` if not already done — plans without context produce wrong file paths. Call `neural-memory` (Recall Mode) to surface past architecture decisions before making new ones.
+
+**Feature Map**: Check for `.rune/features.md` via `Glob`. If it exists, read it — understand the existing feature landscape, dependencies, and known gaps BEFORE planning. Cross-reference: does the new feature overlap, conflict with, or depend on existing features? If `.rune/features.md` does not exist, note this — Step 6.5 will create it.
+
+### Step 2 — Classify Complexity
+
+Determine inline plan vs master + phase files:
+
+| Criteria | Inline Plan | Master + Phase Files |
+|----------|-------------|---------------------|
+| Phases | 1-2 | 3+ |
+| Files touched | < 5 | 5+ |
+| Estimated LOC | < 100 | 100+ |
+| Cross-module | No | Yes |
+| Session span | Single session | Multi-session |
+
+If ANY "Master + Phase Files" criterion is true → produce master plan + phase files.
+
+### Step 3 — Decompose into Phases
+<MUST-READ path="references/wave-planning.md" trigger="when writing wave-structured task lists inside any phase"/>
+<MUST-READ path="references/vertical-slice.md" trigger="when decomposing a feature into tasks/issues — ALWAYS prefer vertical (end-to-end) slices over horizontal (single-layer) ones"/>
+
+Group work into phases. Each phase: completable in one session, clear "done when", produces testable output, independent enough to run without other phases loaded.
+
+**Vertical slices over horizontal layers**: each task within a phase MUST be a tracer-bullet slice (schema + API + UI + test, end-to-end), NOT a single-layer chunk. Horizontal slicing ("all models → all APIs → all UI") looks organized but blocks on the slowest layer. See `references/vertical-slice.md` for slice rules, AFK vs HITL classification, and the per-task slice template.
+
+<HARD-GATE>
+Each phase MUST be completable by ANY coder model (including Haiku) with ONLY the phase file loaded.
+If the coder would need to read the master plan or other phase files to execute → the phase file is missing detail.
+Phase files are SELF-CONTAINED execution instructions — designed for the weakest model to succeed.
+</HARD-GATE>
+
+Phase decomposition rules:
+- **Foundation first**: types, schemas, core engine. A Foundational phase holds ONLY what 2+ stories share — it BLOCKS story phases but stays minimal
+- **Dependencies before consumers**: create what's imported before the importer
+- **Ordering law WITHIN each slice**: Data → Logic → Endpoints/Services → UI → Integration. UI is structurally LAST — a UI task whose slice has no upstream data/logic/endpoint task (and doesn't consume Foundational or a prior slice's contract) is an INVALID plan, not a style choice. The button and the endpoint it calls are one slice's tasks, never split across slices
+- **Test alongside**: each phase includes its own test tasks
+- **Max 5-7 tasks per phase**: if more, split the phase
+- **Vertical slices over horizontal layers**: prefer "auth end-to-end" over "all models → all APIs → all UI" (see `references/vertical-slice.md` for tracer-bullet template, AFK/HITL labels, granularity rules)
+- **Story-grouped backbone from BA**: if `.rune/features/<name>/tasks.md` exists, its `## US-n` sections map to slices — refine them, do NOT flatten back into layer groups
+
+Tasks within each phase MUST be organized into waves (parallel-safe groupings). See `references/wave-planning.md`.
+
+### Step 3.7 — Boundary Artifacts (Contracts-First)
+<MUST-READ path="references/boundary-artifacts.md" trigger="when the feature crosses a UI↔data boundary — templates for data-model.md, contracts/, quickstart.md"/>
+
+**Detect the boundary**: requirements.md has a `## Key Entities` section AND any user story renders a UI surface (page/screen/form/component) — OR the task description implies user interaction with persisted data (submit, save, login, search, checkout).
+
+**If the boundary exists, plan MUST emit — BEFORE writing phase files:**
+
+| Artifact | Location | Content |
+|----------|----------|---------|
+| `data-model.md` | `.rune/features/<name>/` | Key Entities expanded: fields, types, validation rules, state transitions |
+| `contracts/` | `.rune/features/<name>/contracts/` | One file per interface: endpoint/function, request/response shape, error cases — each mapped to the `US-n` it serves |
+| `quickstart.md` | `.rune/features/<name>/` | Runnable end-to-end validation: prerequisites, setup commands, per-story Independent Test steps, expected outcomes |
+
+Rules:
+- Tasks are then DERIVED from contracts: every contract file → ≥1 implementation task + ≥1 test task inside the story it serves. A UI task referencing no contract (and no prior slice's contract) is orphaned — fix the plan
+- A story that touches data but maps to no entity in data-model.md = spec gap → bounce to `ba` (Upstream Inconsistency)
+- quickstart.md is the feature's executable end-to-end validation — write commands that actually run, not prose. Task derivation adds a "run quickstart validation" task to the final phase, so the plan itself guarantees it gets executed
+- **Skip** when no boundary: pure-UI features (styling, layout), pure-backend (cron, migration), libraries. Announce the skip: "No UI↔data boundary — skipping boundary artifacts"
+
+### Step 4 — Write Master Plan File
+<MUST-READ path="references/plan-templates.md" trigger="when writing the master plan file"/>
+
+Save to `.rune/plan-<feature>.md`. Use the Master Plan Template in `references/plan-templates.md`. Max 80 lines — no implementation details.
+
+### Step 4.5 — Workflow Registry (Complex Features Only)
+<MUST-READ path="references/workflow-registry.md" trigger="when feature has 4+ phases OR 3+ user-facing workflows"/>
+
+For complex features (4+ phases OR 3+ user-facing workflows): build a 4-view Workflow Registry before writing phase files. Catches orphaned components, unphased workflows, and missing state transitions at plan time.
+
+**Skip** for: trivial tasks, inline plans, single-workflow features.
+
+### Step 5 — Write Phase Files
+<MUST-READ path="references/plan-templates.md" trigger="when writing any phase file"/>
+
+For each phase, save to `.rune/plan-<feature>-phase<N>.md`. Use the Amateur-Proof Template in `references/plan-templates.md`.
+
+<HARD-GATE>
+Every phase file MUST include ALL of these sections (Amateur-Proof Checklist):
+1. ✅ Data Flow — ASCII diagram of how data moves
+2. ✅ Code Contracts — function signatures, interfaces, types
+3. ✅ Tasks — with file paths, logic description, edge cases
+4. ✅ Failure Scenarios — table of when/then/error for each error case
+5. ✅ Rejection Criteria — explicit "DO NOT" anti-patterns
+6. ✅ Cross-Phase Context — what's assumed from prior phases, what's exported for future phases
+7. ✅ Acceptance Criteria — testable, includes performance if applicable
+8. ✅ Test tasks — every code task has corresponding tests
+9. ✅ Traceability Matrix — every BA requirement mapped to tasks and tests (skip if no BA requirements exist)
+
+A phase missing ANY of sections 1-7 is INCOMPLETE — the weakest coder will guess wrong.
+Performance Constraints section is optional (only when NFRs apply).
+</HARD-GATE>
+
+### Step 5.5 — Completeness Scoring (Alternatives)
+<MUST-READ path="references/completeness-scoring.md" trigger="when presenting alternative approaches"/>
+
+When presenting alternatives (from brainstorm or Step 3), rate each **Completeness X/10**. Always recommend the higher-completeness option — with AI, the marginal cost of completeness is near-zero.
+
+### Step 5.7 — Coverage Gate (after phase files, before presenting)
+
+**Task ID scheme**: every task in a phase file carries the ID `P<phase>-T<seq>` — phase number + sequential position within that phase (`P2-T3` = phase 2, task 3). Phase file task labels use this ID (see `references/plan-templates.md`). Coverage Summary, Traceability Matrix, and Change Stacking `depends_on` all reference tasks by this ID.
+
+When BA requirements exist, build the **Coverage Summary** — every `FR-n` and `US-n` mapped to the task IDs that implement it:
+
+```markdown
+## Coverage Summary
+| Key | Priority | Tasks | Covered |
+|-----|----------|-------|---------|
+| US-1 | P1 | P1-T2, P1-T3, P2-T1 | ✅ |
+| FR-3 | — | P2-T4 | ✅ |
+| US-3 | P2 | — | ❌ deferred to v2 (explicit) |
+```
+
+<HARD-GATE>
+A P1 story or its FRs with ZERO tasks = the plan is INCOMPLETE — do NOT present it for approval. Fix the plan first.
+P2/P3 zero-coverage is allowed ONLY with an explicit deferral line in the master plan ("US-3 deferred to v2 — user-visible in Coverage Summary"), never silently.
+</HARD-GATE>
+
+**Sequencing note**: task IDs exist only AFTER Step 5 writes the phase files — so this step runs after Step 5, and you MUST go back and `Edit` the already-written master plan file (`.rune/plan-<feature>.md`) to insert the `## Coverage Summary` section (before `## Architecture`). Present the UPDATED master plan at Step 6. A master plan presented without its Coverage Summary is a Step 5.7 violation, not an oversight.
+
+**Size spillover**: if the table exceeds ~15 rows, write the full table to `.rune/plan-<feature>-coverage.md` instead, and put a one-line pointer + the ❌/deferred rows only in the master plan (the 80-line cap stays intact; zero-coverage rows are never hidden in the spillover file).
+
+Skip when no requirements.md exists (ad-hoc tasks).
+
+### Step 6 — Present and Get Approval
+
+Present the **master plan** to user (NOT all phase files). User reviews: phase breakdown, key decisions, risks, completeness scores, **coverage summary**. Wait for explicit approval ("go", "proceed", "yes") before writing phase files.
+
+### Step 6.5 — Update Feature Map (Always)
+<MUST-READ path="references/feature-map.md" trigger="every plan invocation"/>
+
+After plan approval, update `.rune/features.md`:
+
+**If `.rune/features.md` does NOT exist** (first run):
+1. Reverse-engineer features from scout output — each top-level module = 1 feature
+2. Map inter-feature dependencies from imports and shared types
+3. Assess status per feature (complete, partial, planned)
+4. Generate `.rune/features.md` with Features table, Dependency Graph, Detected Gaps
+
+**If `.rune/features.md` exists** (subsequent runs):
+1. Add or update the current feature's row (status, deps, key files)
+2. Cross-reference: new feature resolves existing gaps? Creates new ones?
+3. Validate dependency graph — flag missing features, orphans, circular deps, dead signals
+4. Write updated `.rune/features.md`
+
+**Skip if**: Inline plan for trivial task (no feature-level impact).
+
+### Step 7 — Execution Handoff
+
+```
+1. Cook loads master plan → identifies current phase (first ⬚ Pending)
+2. Cook loads ONLY that phase's file
+3. Coder executes tasks in the phase file
+4. Mark tasks done in phase file as completed
+5. When phase complete → update master plan status: ⬚ → ✅
+6. Next session: load master plan → find next ⬚ phase → load phase file → execute
+```
+
+Model selection: Opus plans phases (this skill). Sonnet/Haiku executes them (cook → fix).
+
+## Inline Plan (Trivial Tasks)
+
+For trivial tasks (1-2 phases, < 5 files, < 100 LOC) — skip master + phase files. See inline plan template in `references/plan-templates.md`.
+
+## Re-Planning (Dynamic Adaptation)
+
+When cook encounters unexpected conditions during execution:
+
+**Trigger Conditions:** Phase hits max debug-fix loops (3) | new files outside plan scope | dependency change | user requests scope change.
+
+**Re-Plan Protocol:**
+1. Read master plan + current phase file + delta context (what changed, what failed)
+2. Assess impact: which remaining phases are affected?
+3. Revise: mark ✅ completed phases, modify affected phase files, add new phases if scope expanded. Do NOT rewrite completed phases.
+4. Present revised master plan with diff summary — get approval before resuming.
+
+## Feature Spec Mode
+
+**Step 1** — Problem Statement: what problem, who has it, current workaround?
+**Step 2** — User Stories: primary + 2-3 secondary + edge cases. Format: `As a [persona], I want to [action] so that [benefit]`
+**Step 3** — Acceptance Criteria: `GIVEN [context] WHEN [action] THEN [result]` — happy path + errors + performance
+**Step 4** — Scope Definition: In scope / Out of scope / Dependencies / Open questions
+**Step 5** — Write Spec File: save to `.rune/features/<feature-name>/spec.md`
+
+After spec approved → transition to Implementation Mode.
+
+## Roadmap Mode
+
+**Step 1** — Inventory: scan for open issues, TODO/FIXME, planned features.
+**Step 2** — Prioritize (ICE Scoring): Impact × Confidence × Ease (each 1-10), sort descending.
+**Step 3** — Group into Milestones: M1 = top 3-5 by ICE, M2 = next 3-5, Backlog = remaining.
+**Step 4** — Write to `.rune/roadmap.md`.
+
+## Output Format
+
+**Master Plan** (`.rune/plan-<feature>.md`): Overview, Phases table, Key Decisions, Decision Compliance, Architecture, Dependencies/Risks. Max 80 lines. See `references/plan-templates.md`.
+
+**Phase File** (`.rune/plan-<feature>-phase<N>.md`): 7 mandatory sections (Amateur-Proof Template). Max 200 lines. Self-contained. See `references/plan-templates.md`.
+
+**Inline Plan** (trivial tasks): Changes, Tests, Risks. See `references/plan-templates.md`.
+
+## Outcome Block (Mandatory)
+<MUST-READ path="references/outcome-block.md" trigger="when writing the final section of any plan output"/>
+
+Every plan output — master plan, phase file, or inline plan — MUST end with an **Outcome Block** containing: What Was Planned + Immediate Next Action (single action, imperative) + How to Measure table (at least one shell command).
+
+## Change Stacking (Overlap Detection)
+
+When producing phase files with wave-based task grouping, every task MUST declare dependency metadata:
+
+```markdown
+### Task: Implement auth middleware
+- **File**: `src/middleware/auth.ts` — new
+- **touches**: [src/middleware/auth.ts, src/types/auth.d.ts]
+- **provides**: [AuthMiddleware, verifyToken()]
+- **requires**: [UserModel from Wave 1]
+- **depends_on**: [task-1a]
+```
+
+**Pre-dispatch validation** (run after all tasks written, before presenting plan):
+
+| Check | Detection | Action |
+|-------|-----------|--------|
+| **File overlap** | Same file in `touches[]` of 2+ tasks in same wave | BLOCK — move to sequential waves or merge tasks |
+| **Missing dependency** | Task A's `requires[]` not in any prior task's `provides[]` | BLOCK — add missing task or fix dependency chain |
+| **Cycle detection** | Task A `depends_on` B, B `depends_on` A | BLOCK — decompose into smaller tasks to break cycle |
+| **Orphaned provides** | Task declares `provides[]` but no future task `requires[]` it | WARN — may indicate dead code or missing consumer task |
+
+**Skip if**: Inline plan (trivial task), single-phase plan, or all tasks are strictly sequential.
+
+## Constraints
+
+1. MUST produce master plan + phase files for non-trivial tasks (3+ phases OR 5+ files OR 100+ LOC)
+2. MUST keep master plan under 80 lines — overview only, no implementation details
+3. MUST keep each phase file under 200 lines — self-contained, Amateur-proof
+4. MUST include exact file paths for every task — no vague "set up the database"
+5. MUST include test tasks for every phase that produces code
+6. MUST include ALL Amateur-Proof sections: data flow, code contracts, tasks, failure scenarios, rejection criteria, cross-phase context, acceptance criteria
+7. MUST order phases by dependency — don't plan phase 3 before phase 1's output exists
+8. MUST get user approval before writing phase files
+9. Phase files MUST be self-contained — coder should NOT need master plan to execute
+10. Max 8 phases per master plan — if more, split into sub-projects
+11. MUST include failure scenarios table — what happens when things go wrong
+12. MUST include rejection criteria — explicit "DO NOT" anti-patterns to prevent common mistakes
+13. MUST include cross-phase context — what's assumed from prior phases, what's exported for future
+14. MUST update `.rune/features.md` after every non-trivial plan — feature map is a living artifact
+15. MUST emit boundary artifacts (data-model.md, contracts/, quickstart.md) when the feature crosses a UI↔data boundary — tasks derive from contracts, not the reverse
+16. MUST order layers within each slice Data → Logic → Endpoint → UI — a UI task with no upstream chain in its slice is an invalid plan
+17. MUST NOT present a plan where a P1 story has zero task coverage — Coverage Summary is part of the master plan
+
+## Returns
+
+| Artifact | Format | Location |
+|----------|--------|----------|
+| Master plan | Markdown | `.rune/plan-<feature>.md` |
+| Phase files | Markdown | `.rune/plan-<feature>-phase<N>.md` (one per phase) |
+| Feature spec | Markdown | `.rune/features/<name>/spec.md` (Feature Spec Mode only) |
+| Data model | Markdown | `.rune/features/<name>/data-model.md` (Step 3.7 — UI↔data boundary only) |
+| Interface contracts | Markdown (one per interface) | `.rune/features/<name>/contracts/` (Step 3.7) |
+| Quickstart validation | Markdown (executable steps) | `.rune/features/<name>/quickstart.md` (Step 3.7) |
+| Roadmap | Markdown | `.rune/roadmap.md` (Roadmap Mode only) |
+| Feature map | Markdown | `.rune/features.md` (auto-maintained) |
+| Inline plan | Markdown (inline) | Emitted directly for trivial tasks |
+
+## Chain Metadata
+
+Append to plan output when invoked standalone. Suppress when called as sub-skill inside an L1 orchestrator (cook, team, etc.) — the orchestrator emits a consolidated block. See `docs/references/chain-metadata.md`.
+
+```yaml
+chain_metadata:
+  skill: "rune:plan"
+  version: "1.7.1"
+  status: "[DONE | DONE_WITH_CONCERNS | NEEDS_CONTEXT | BLOCKED]"
+  domain: "[area planned]"
+  files_changed:
+    - "[.rune/plan-*.md files created]"
+  exports:
+    plan_file: "[.rune/plan-<feature>.md path]"
+    phase_count: [N]
+    estimated_complexity: "[low | medium | high]"
+    risk_areas: ["[domains with identified risks]"]
+  suggested_next:
+    - skill: "rune:adversary"
+      reason: "[grounded in plan — e.g., 'Plan touches auth + payments — stress-test assumptions']"
+      consumes: ["plan_file", "risk_areas"]
+    - skill: "rune:autopilot"
+      reason: "Plan approved — autonomous execution available (Pro tier, multi-session)"
+      consumes: ["plan_file", "phase_count"]
+      condition: "Pro tier installed AND phase_count >= 3 AND user signals autonomous intent"
+    - skill: "rune:cook"
+      reason: "Plan ready for execution"
+      consumes: ["plan_file", "phase_count"]
+```
+
+## Sharp Edges
+
+| Failure Mode | Severity | Mitigation |
+|---|---|---|
+| Monolithic plan file that overflows context | CRITICAL | HARD-GATE: non-trivial tasks MUST use master + phase files |
+| Phase file too vague for Amateur to execute | CRITICAL | Amateur-Proof template: ALL 7 mandatory sections required |
+| Coder uses wrong approach (toFixed for money, mutation) | CRITICAL | Rejection Criteria section: explicit "DO NOT" list prevents common traps |
+| Coder doesn't handle errors properly | HIGH | Failure Scenarios table: when/then/error for EVERY error case |
+| Coder doesn't know what other phases expect | HIGH | Cross-Phase Context: explicit imports/exports between phases |
+| Coder over-engineers or under-engineers perf | HIGH | Performance Constraints: specific metrics with thresholds |
+| Master plan contains implementation detail | HIGH | Max 80 lines, overview only — detail goes in phase files |
+| Phase file references other phase files | HIGH | Phase files are self-contained — cross-phase section handles this |
+| Plan without scout context — invented file paths | CRITICAL | Step 1: scout first, always |
+| Phase with zero test tasks | CRITICAL | HARD-GATE rejects it |
+| 10+ phases overwhelming the master plan | MEDIUM | Max 8 phases — split into sub-projects if more |
+| Task without File path or Verify command | HIGH | Every task MUST have File + Test + Verify + Commit fields — no vague "implement the feature" tasks |
+| Horizontal layer planning (all models → all APIs → all UI) | HIGH | Vertical slices parallelize better. Use wave-based grouping AND vertical-slice template (`references/vertical-slice.md`): each task = end-to-end path through schema/API/UI/test, demoable on its own |
+| Slice not demoable on its own ("just the migration", "just the UI shell") | HIGH | Per `references/vertical-slice.md` — every slice produces a verifiable outcome. Layer-only fragments block downstream slices and hide partial completion |
+| HITL slices marked liberally to enable "review" friction | MEDIUM | HITL is for hard blockers (OAuth setup, design decision, paid third-party access), not soft preferences. Default to AFK; use post-merge review for soft signals |
+| Tasks without `depends_on` in Wave 2+ | MEDIUM | Implicit dependencies break parallel dispatch. Every Wave 2+ task MUST declare `depends_on` |
+| Plan ignores locked Decisions from BA | CRITICAL | Decision Compliance section cross-checks requirements.md — locked decisions are non-negotiable |
+| Complex feature missing Workflow Registry — components planned but never wired | HIGH | Step 4.5: 4-view registry catches orphaned components, unphased workflows, and missing state transitions before phase files are written |
+| Recommending shortcut approach without Completeness Score | MEDIUM | Step 5.5: every alternative needs X/10 Completeness score + dual effort estimate (human vs AI). "Saves 70 LOC" is not a reason when AI makes the delta cost minutes |
+| Plan output missing Outcome Block | MEDIUM | Every plan output MUST end with Outcome Block (What Was Planned + Immediate Next Action + How to Measure) — executor drift when omitted |
+| Outcome Block "Next Action" is a list, not one action | LOW | One action only — ambiguity about where to start causes re-analysis and lost context |
+| Overlapping file ownership across parallel phases/streams | HIGH | Change Stacking: every task declares `touches[]` — overlap detection flags same file in 2+ tasks before execution |
+| Missing dependency between tasks that share artifacts | HIGH | Every task declares `provides[]` and `requires[]` — cycle detection + missing dep check before dispatch |
+| New feature planned without checking existing feature map | HIGH | Step 1 reads `.rune/features.md` — catches overlaps, conflicts, and missing dependencies before planning begins |
+| Feature map never created — gaps accumulate silently | MEDIUM | Step 6.5 always runs (create or update) — feature map grows organically with each plan invocation |
+| UI task planned with no endpoint/contract behind it (dead button at plan time) | CRITICAL | Step 3.7: contracts/ emitted before phase files; every UI task cites its contract; ordering law makes UI structurally last in its slice |
+| P1 story silently missing from tasks (frontend-only plan) | CRITICAL | Step 5.7 Coverage Gate: P1 zero-coverage = plan not presentable; Coverage Summary visible in master plan at approval |
+| Boundary artifacts skipped because "the feature is simple" | HIGH | Detection is mechanical (Key Entities + UI surface), not judgment. Skips are announced, never silent |
+| quickstart.md written as prose instead of runnable commands | MEDIUM | Every step needs an **Expect** with observable outcome — cook executes this file at VERIFY |
+| BA's story-grouped tasks.md flattened back into layer groups | HIGH | Step 3 rule: `## US-n` sections map to slices — refine, don't flatten |
+
+## Self-Validation
+
+```
+SELF-VALIDATION (run before presenting plan to user):
+- [ ] Every task has a clear file path — no "update relevant files" vagueness
+- [ ] Wave dependencies are acyclic — no task depends on a task in the same or later wave
+- [ ] Every code-producing phase has at least one test task
+- [ ] Phase files have ALL Amateur-Proof sections (data flow, code contracts, failure scenarios, rejection criteria)
+- [ ] Locked decisions from BA are reflected in plan — none contradicted or ignored
+- [ ] Every BA requirement has a corresponding Req ID in at least one phase's Traceability Matrix
+- [ ] Coverage Summary built (Step 5.7) — no P1 story/FR with zero tasks; P2/P3 gaps have explicit deferral lines
+- [ ] Boundary artifacts emitted if UI↔data boundary detected — every contract has a consumer, every UI task cites its contract (or justifies Contract: none)
+- [ ] Layer order within every slice: no UI task precedes its slice's data/logic/endpoint tasks
+- [ ] `.rune/features.md` updated with current feature (or created if first run)
+- [ ] No cross-feature conflicts detected (or flagged to user if found)
+```
+
+## Done When
+
+- Complexity classified (inline vs master + phase files)
+- Scout output read and conventions/patterns identified
+- BA requirements consumed (if available)
+- Master plan written (< 80 lines) with phase table and key decisions
+- Phase files written (< 200 lines each) with ALL Amateur-Proof sections:
+  - Data flow diagram, code contracts, tasks with edge cases
+  - Failure scenarios table, rejection criteria (DO NOTs)
+  - Cross-phase context (assumes/exports), acceptance criteria
+- Every code-producing phase has test tasks
+- Boundary artifacts emitted (data-model.md + contracts/ + quickstart.md) when UI↔data boundary detected — or skip announced
+- Coverage Summary in master plan — every P1 story/FR covered, P2/P3 gaps explicitly deferred
+- Master plan presented to user with "Awaiting Approval"
+- User has explicitly approved
+- Self-Validation: all checks passed
+- Outcome Block present in every plan output (master plan, phase files, inline plan)
+- Outcome Block contains: What Was Planned + Immediate Next Action (single action) + How to Measure table
+- `.rune/features.md` created (first run) or updated (subsequent) with current feature
+- Cross-feature dependencies validated — no conflicts or orphans left unaddressed
+
+## Cost Profile
+
+~3000-8000 tokens input, ~2000-5000 tokens output (master + all phase files). Opus for architectural reasoning. Most expensive L2 skill but runs infrequently. Phase files are written once, executed by cheaper models (Sonnet/Haiku).

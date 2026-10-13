@@ -1,0 +1,38 @@
+{
+  "name": "context-summary-writing",
+  "repo": "PremModhaOfficial/NFR-pipeline",
+  "path": "skills/context-summary-writing/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/PremModhaOfficial/NFR-pipeline",
+  "dir_name": "context-summary-writing",
+  "downloaded_at": "2026-10-13T06:27:39.613327Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, sdk, openapi",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "PremModhaOfficial",
+  "source_url": "https://github.com/PremModhaOfficial/NFR-pipeline/blob/main/skills/context-summary-writing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/PremModhaOfficial/NFR-pipeline/blob/main/skills/context-summary-writing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this when an agent finishes work and must publish its context summary for downstream consumers, when publishing an early DRAFT for same-wave peers, preserving revision history across re-runs, or marking assumptions tied to another agent's unfinished output. Covers the 200-line cap, Generated/Run header, revision history, and ASSUMPTION / DRAFT markers. Triggers: context summary, summary, header, revision history, ASSUMPTION, DRAFT, downstream handoff, 200-line."
+}

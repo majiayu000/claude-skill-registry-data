@@ -1,0 +1,37 @@
+{
+  "name": "golang-safety",
+  "repo": "Solizardking/clawd-bot",
+  "path": ".agents/skills/golang-safety/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Solizardking/clawd-bot",
+  "dir_name": "golang-safety-solizardking-clawd-bot-2",
+  "downloaded_at": "2026-10-13T06:46:36.481316Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Solizardking",
+  "source_url": "https://github.com/Solizardking/clawd-bot/blob/main/.agents/skills/golang-safety/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Solizardking/clawd-bot/blob/main/.agents/skills/golang-safety/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Defensive Golang coding to prevent panics, silent data corruption, and subtle runtime bugs. Use when encountering nil panics, append aliasing, map concurrent access, float comparison pitfalls, or zero-value design questions. Also use when reviewing code for nil-safety, numeric conversion overflow, resource lifecycle issues (defer in loops), or defensive copying of slices and maps."
+}

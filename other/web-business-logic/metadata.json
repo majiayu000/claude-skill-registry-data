@@ -1,0 +1,36 @@
+{
+  "name": "web-business-logic",
+  "repo": "NoorQureshi/SploitAgent",
+  "path": "skills/web/web-business-logic/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/NoorQureshi/SploitAgent",
+  "dir_name": "web-business-logic",
+  "downloaded_at": "2026-10-13T06:18:16.030551Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "business",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NoorQureshi",
+  "source_url": "https://github.com/NoorQureshi/SploitAgent/blob/main/skills/web/web-business-logic/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NoorQureshi/SploitAgent/blob/main/skills/web/web-business-logic/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Find business-logic flaws \u2014 abusing intended functionality in unintended ways. Load on workflows with money/quantity/state/limits: checkout, coupons, refunds, transfers, quotas, multi-step flows, role/tenant boundaries. Signals: price/qty params, discount codes, step skipping, negative/overflow values."
+}

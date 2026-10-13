@@ -1,0 +1,292 @@
+---
+name: review-intake
+description: "Use when receiving external input that needs structured intake before action — PR review feedback, code review comments, OR issue tracker items (bug reports, feature requests). PR Review Mode (default) verifies suggestions before implementing. Issue Triage Mode classifies issues into a state machine (ready-for-agent / ready-for-human / needs-info / wontfix) and emits AGENT-BRIEFs for AFK execution. Prevents blind implementation, enforces verification-first discipline."
+metadata:
+  author: runedev
+  version: "1.3.0"
+  layer: L2
+  model: sonnet
+  group: quality
+  tools: "Read, Write, Edit, Bash, Glob, Grep"
+  emit: triage.classified, agent.brief.ready
+  listen: outofscope.match
+---
+
+# review-intake
+
+## Purpose
+
+The counterpart to `review`. While `review` finds issues in code, `review-intake` handles the response when someone finds issues in YOUR code. Enforces a verification-first discipline: understand fully, verify against codebase reality, then act. Prevents the common failure mode of blindly implementing suggestions that break things or don't apply.
+
+## Modes
+
+| Mode | When | Workflow |
+|------|------|----------|
+| **PR Review Mode** (default) | Input is PR comments / code review feedback / external suggestions | Phases 1-6 below — absorb, comprehend, verify, evaluate, respond, implement |
+| **Issue Triage Mode** | Input is issue tracker item (`gh-42`, URL, pasted issue body), or user says "triage" / "process the inbox" | See `references/issue-triage.md` — state machine (needs-triage → ready-for-agent / ready-for-human / needs-info / wontfix) + repro-first for bugs + AGENT-BRIEF emission |
+
+Both modes share Phase 4.5 (Rejection KB Write) — `wontfix-enhancement` from Issue Triage and OUT OF SCOPE from PR Review both write `.out-of-scope/<slug>.md`.
+
+## Triggers
+
+- `/rune review-intake` — manual invocation, PR Review Mode by default
+- `/rune review-intake <issue-ref>` — Issue Triage Mode (issue number, URL, or path)
+- `/rune review-intake --inbox` — Issue Triage Mode batch sweep (unlabeled + needs-triage + needs-info-with-activity)
+- Auto-trigger: when `cook` or `fix` receives PR review comments → PR Review Mode
+- Auto-trigger: when user pastes review feedback into session → PR Review Mode
+- Auto-trigger: when user pastes an issue body or references a ticket → Issue Triage Mode
+
+## Calls (outbound)
+
+- `scout` (L3): verify reviewer claims against actual codebase
+- `fix` (L2): apply verified changes
+- `test` (L2): add tests for edge cases reviewers found
+- `hallucination-guard` (L3): verify suggested APIs/packages exist
+- `sentinel` (L2): re-check security if reviewer flagged concerns
+
+## Called By (inbound)
+
+- `cook` (L1): Phase 5 quality gate when external review arrives
+- `review` (L2): when self-review surfaces issues to address
+
+## Workflow (PR Review Mode)
+
+For Issue Triage Mode, see [references/issue-triage.md](references/issue-triage.md). Both modes converge at Phase 4.5 for rejection KB writes.
+<MUST-READ path="references/issue-triage.md" trigger="when input is an issue tracker item, batch inbox sweep, or user explicitly says 'triage' / 'process the inbox'"/>
+
+### Phase 1 — ABSORB
+
+Read ALL feedback items before reacting. Do not implement anything yet.
+
+Classify each item:
+
+| Type | Example | Priority |
+|---|---|---|
+| BLOCKING | Security vuln, data loss, broken build | P0 — fix now |
+| BUG | Logic error, off-by-one, race condition | P1 — fix soon |
+| IMPROVEMENT | Better pattern, cleaner API, perf gain | P2 — evaluate |
+| STYLE | Naming, formatting, conventions | P3 — quick fix |
+| OPINION | "I would do it differently" | P4 — evaluate |
+
+### Phase 2 — COMPREHEND
+
+For each item, restate the technical requirement in your own words.
+
+<HARD-GATE>
+If ANY item is unclear → STOP entirely.
+Do not implement clear items while unclear ones remain.
+Items may be interconnected — partial understanding = wrong implementation.
+
+Ask: "I understand items [X]. Need clarification on [Y] before proceeding."
+</HARD-GATE>
+
+### Phase 3 — VERIFY
+
+Before implementing ANY suggestion, verify it against the codebase:
+
+```
+For each item:
+  1. Does the file/function reviewer references actually exist?
+  2. Is the reviewer's understanding of current behavior correct?
+  3. Will this change break existing tests?
+  4. Does it conflict with architectural decisions already made?
+  5. If suggesting a package/API — does it actually exist? (hallucination-guard)
+```
+
+Use `scout` to check claims. Use `grep` to find actual usage patterns.
+
+### Phase 4 — EVALUATE
+
+For each verified item, decide:
+
+| Verdict | Action |
+|---|---|
+| **CORRECT + APPLICABLE** | Queue for implementation |
+| **CORRECT + ALREADY DONE** | Reply with evidence |
+| **CORRECT + OUT OF SCOPE** | Acknowledge, defer to backlog |
+| **INCORRECT** | Push back with technical reasoning |
+| **YAGNI** | Check if feature is actually used — if unused, propose removal |
+
+**YAGNI check:**
+```bash
+# Reviewer says "implement this properly"
+# First: is anyone actually using it?
+grep -r "functionName" --include="*.{ts,tsx,js,jsx}" src/
+# Zero results? → "This isn't called anywhere. Remove it (YAGNI)?"
+```
+
+### Phase 5 — RESPOND
+
+**What to say:**
+```
+CORRECT:  "Fixed. [Brief description]." or "Good catch — [issue]. Fixed in [file]."
+PUSHBACK: "[Technical reason]. Current impl handles [X] because [Y]."
+UNCLEAR:  "Need clarification on [specific aspect]."
+```
+
+**What NEVER to say:**
+```
+BANNED: "You're absolutely right!"
+BANNED: "Great point!" / "Great catch!"
+BANNED: "Thanks for catching that!"
+BANNED: "I agree with your suggestion"
+BANNED: "That's a good idea"
+BANNED: "I see what you mean"
+BANNED: Any sentence that adds no technical information
+BANNED: Any performative gratitude — actions speak, not words.
+```
+
+<HARD-GATE>
+Every response to a review item MUST start with an ACTION VERB:
+- "Fixed — [description]"
+- "Reverted — [reason]"
+- "Deferred — [reason + ticket]"
+- "Pushed back — [technical evidence]"
+- "Clarifying — [question]"
+
+Responses starting with praise, agreement, or social pleasantries are BLOCKED.
+This is a professional code review, not a conversation — signal with actions, not words.
+</HARD-GATE>
+
+When replying to GitHub PR comments, reply in the thread:
+```bash
+gh api repos/{owner}/{repo}/pulls/{pr}/comments/{id}/replies \
+  -f body="Fixed — [description]"
+```
+
+### Phase 4.5 — Rejection KB Write (when verdict = OUT OF SCOPE)
+
+For every item with verdict `OUT OF SCOPE`, write a durable record to `.out-of-scope/`. Oral-only rejections leave no trace and force re-litigation in future sessions.
+
+<HARD-GATE>
+Every OUT OF SCOPE verdict MUST produce a `.out-of-scope/<slug>.md` file (or append to an existing one).
+A rejection without a written record is a rejection that didn't happen.
+</HARD-GATE>
+
+**Procedure**:
+
+1. Generate `slug` from the rejected concept (kebab-case, lowercase, max 40 chars, recognizable without opening the file).
+2. Lexical-similarity check: `Glob` `.out-of-scope/*.md`, parse each frontmatter's `concept` + `aliases`, compute overlap with the new slug's tokens. If any existing concept has ≥0.7 overlap → APPEND to that file's `prior_requests` list instead of creating a new one.
+3. If new file: write the format from [`ba/references/out-of-scope-format.md`](../ba/references/out-of-scope-format.md) — YAML frontmatter (concept / aliases / decision: rejected / rejected_at / rejected_by: review-intake / prior_requests / revisit_if) + Markdown body (concept name, "Why out of scope" reasoning, "What would change our mind" signals).
+4. The reasoning MUST be substantive — not "we don't want this" but *why*. Reference project scope, technical constraints, or strategic decisions. Reject deferrals ("we're busy") — those don't belong here.
+
+Only **enhancement** rejections produce `.out-of-scope/` entries. Bug rejections (won't fix because already fixed / not reproducible / not a bug) get a comment on the issue, not a KB file.
+
+### Phase 6 — IMPLEMENT
+
+Execute in priority order: P0 → P1 → P2 → P3 → P4.
+
+For each fix:
+1. Apply change via `fix`
+2. Run tests — verify no regression
+3. If fix touches security → run `sentinel`
+4. Move to next item only after current passes
+
+## Source Trust Levels
+
+| Source | Trust | Approach |
+|---|---|---|
+| **Project owner / user** | High | Implement after understanding. Still verify scope. |
+| **Team member** | Medium | Verify against codebase. Implement if correct. |
+| **External reviewer** | Low | Skeptical by default. Verify everything. Push back if wrong. |
+| **AI-generated review** | Lowest | Double-check every suggestion. High hallucination risk. |
+
+When external feedback conflicts with owner's prior architectural decisions → **STOP. Discuss with owner first.**
+
+## Pushback Framework
+
+Push back when:
+- Suggestion breaks existing functionality (show failing test)
+- Reviewer lacks context on WHY current impl exists
+- YAGNI — feature isn't used
+- Technically incorrect for this stack/version
+- Conflicts with owner's documented decisions
+
+How to push back:
+- Lead with technical evidence, not defensiveness
+- Reference working tests, actual behavior, or docs
+- Ask specific questions that reveal the gap
+- If wrong after pushback → "Verified, you were right. [Reason]. Fixing."
+
+## Output Format
+
+```
+## Review Intake Report
+
+### Summary
+- **Items received**: [count]
+- **Blocking**: [count] | Bugs: [count] | Improvements: [count] | Style: [count]
+
+### Verdicts
+| # | Item | Type | Verdict | Action |
+|---|------|------|---------|--------|
+| 1 | [description] | BUG | CORRECT | Fixed in [file] |
+| 2 | [description] | IMPROVEMENT | YAGNI | Proposed removal |
+| 3 | [description] | OPINION | PUSHBACK | [reason] |
+
+### Changes Applied
+- `path/to/file.ts` — [description]
+
+### Verification
+- Tests: PASS ([n] passed)
+- Regressions: none
+```
+
+## Constraints
+
+1. MUST read ALL items before implementing ANY — partial processing causes rework
+2. MUST verify reviewer claims against actual codebase — never trust blindly
+3. MUST NOT use performative language ("Great point!", "You're right!") — just fix it
+4. MUST push back with technical reasoning when suggestion is wrong — correctness > comfort
+5. MUST run tests after each individual fix — not batch-and-pray
+6. MUST STOP and ask if any item is unclear — do not implement clear items while unclear ones remain
+
+## Mesh Gates
+
+| Gate | Requires | If Missing |
+|------|----------|------------|
+| Comprehension | All items understood | Ask clarifying questions, block implementation |
+| Verification | Claims checked against codebase | Run scout + grep before implementing |
+| Test pass | Each fix passes tests individually | Revert fix, re-diagnose |
+
+## Sharp Edges
+
+| Failure Mode | Severity | Mitigation |
+|---|---|---|
+| Implementing suggestion that breaks existing feature | CRITICAL | Phase 3 verify: check existing tests before changing |
+| Blindly trusting external reviewer | HIGH | Source Trust Levels: external = skeptical by default |
+| Implementing 4/6 items, leaving 2 unclear | HIGH | HARD-GATE: all-or-nothing comprehension |
+| Performative agreement masking misunderstanding | MEDIUM | Banned phrases list + restate-in-own-words requirement |
+| Fixing tests instead of code to make review pass | HIGH | Defer to `fix` constraints: fix CODE, not TESTS |
+| OUT OF SCOPE verdict with no `.out-of-scope/` file written | HIGH | Phase 4.5 HARD-GATE — oral-only rejections force re-litigation in future sessions |
+| Writing a deferral ("busy this quarter") to `.out-of-scope/` | MEDIUM | Deferrals belong in backlog, not the rejection KB. KB entries must cite durable reasons (scope, tech constraint, strategy) |
+| Creating duplicate `.out-of-scope/` files for the same concept | MEDIUM | Lexical-similarity gate (≥0.7 overlap) — append to existing file's `prior_requests` instead of duplicating |
+| Marking issue `ready-for-agent` without confirmed repro (bugs) | CRITICAL | Issue Triage Mode Step T4 HARD-GATE: bugs MUST attempt reproduction before `ready-for-agent` label. Confirmed repro = strong agent-brief; failed repro = `needs-info` |
+| Auto-applying `wontfix` to an issue without maintainer confirmation | HIGH | Triage recommends, maintainer decides. State changes (label + comment + close) confirmed via Step T3 before Step T6 acts |
+| Posting triage comments without the AI-disclaimer line | MEDIUM | Issue Triage Mode requires `> *This was generated by AI during triage.*` disclaimer prefix on every comment — trust degrades when reporter discovers AI authorship after the fact |
+| Writing `.out-of-scope/` for a `wontfix-bug` (not enhancement) | MEDIUM | Format spec: only enhancement rejections produce KB files. Bug rejections (already fixed, not reproducible, not a bug) get a comment, not a file |
+
+## Done When
+
+- All feedback items classified by type and priority
+- Each item verified against codebase reality
+- Verdicts assigned (correct/pushback/yagni/defer)
+- Approved items implemented in priority order
+- Tests pass after each individual fix
+- Every OUT OF SCOPE verdict has produced a `.out-of-scope/<slug>.md` file (new or appended)
+- Review Intake Report emitted
+
+## Returns
+
+| Artifact | Format | Location |
+|----------|--------|----------|
+| Review Intake Report | Markdown table | inline |
+| Categorized feedback (P0–P4) | Classified list | inline |
+| Verdict per item (CORRECT/PUSHBACK/YAGNI/DEFER) | Table | inline |
+| Action plan (changes applied) | File list with descriptions | inline |
+
+## Cost Profile
+
+~2000-5000 tokens depending on feedback volume. Sonnet for evaluation logic, haiku for scout/grep verification.
+
+**Scope guardrail:** review-intake processes the feedback items provided — it does not pull new reviews, open PRs, or change architectural decisions without owner confirmation.

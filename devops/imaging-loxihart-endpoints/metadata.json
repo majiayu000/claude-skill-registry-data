@@ -1,0 +1,38 @@
+{
+  "name": "imaging-loxihart-endpoints",
+  "repo": "Krosebrook/loxihart-skills",
+  "path": "plugins/loxihart-ops/skills/imaging-loxihart-endpoints/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/Krosebrook/loxihart-skills",
+  "dir_name": "imaging-loxihart-endpoints",
+  "downloaded_at": "2026-10-13T05:49:19.274636Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: deploy, infra, infrastructure",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Krosebrook",
+  "source_url": "https://github.com/Krosebrook/loxihart-skills/blob/main/plugins/loxihart-ops/skills/imaging-loxihart-endpoints/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Krosebrook/loxihart-skills/blob/main/plugins/loxihart-ops/skills/imaging-loxihart-endpoints/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Runs Loxihart/[CLIENT] endpoint imaging and deployment as a ten-gate, evidence-producing, resumable workflow: BIOS storage-mode configuration, WinPE network prep, PXE/MDT task sequence selection, computer rename, domain join, RDP authorization, BitLocker enablement with AD key escrow, VLAN migration, CMDB update, and ticket closure. Activates on: image a computer, imaging a laptop, new computer deployment, reimage this device, PXE boot, MDT task sequence, LiteTouch, WinPE, storage controller AHCI, NVMe, VMD, Intel RST, join [CLIENT] domain, rename computer abs-nb-lox, enable RDP for a user, BitLocker recovery key escrow, VLAN migration ports 1-24 to 25-48, imaging completion summary, deployment checklist, endpoint build, asset tag CMDB. Also fires on \"the drive isn't showing in WinPE\", \"PXE timeout\", \"domain not found\", \"access denied joining domain\", or any request to validate or document a finished endpoint build. Do NOT use for server imaging, MDM/mobile devices, or VM provisioning."
+}

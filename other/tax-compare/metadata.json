@@ -1,0 +1,36 @@
+{
+  "name": "tax-compare",
+  "repo": "Nomadic-Labs/claude-code-plugin",
+  "path": "skills/tax-compare/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Nomadic-Labs/claude-code-plugin",
+  "dir_name": "tax-compare",
+  "downloaded_at": "2026-10-13T06:17:43.949362Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category api scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "api"
+    ],
+    "semantic_sources": {
+      "name": "metadata",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Nomadic-Labs",
+  "source_url": "https://github.com/Nomadic-Labs/claude-code-plugin/blob/main/skills/tax-compare/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Nomadic-Labs/claude-code-plugin/blob/main/skills/tax-compare/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Compare crypto-tax treatment between one or two countries. Shows tax tier (Heaven/Paradise/Purgatory/Limbo/Hell), capital gains rate, income tax on crypto, corporate tax, VAT, staking/mining tax, and holding period benefits. Use when the user asks about crypto taxes, tax optimization, tax-friendly countries, or wants to compare tax regimes. Arguments: [country1] [country2 optional]."
+}

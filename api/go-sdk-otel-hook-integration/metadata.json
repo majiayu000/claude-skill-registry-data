@@ -1,0 +1,37 @@
+{
+  "name": "go-sdk-otel-hook-integration",
+  "repo": "PremModhaOfficial/NFR-pipeline",
+  "path": "skills/go-sdk-otel-hook-integration/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/PremModhaOfficial/NFR-pipeline",
+  "dir_name": "go-sdk-otel-hook-integration",
+  "downloaded_at": "2026-10-13T06:27:44.917494Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, sdk",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "sdk"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "PremModhaOfficial",
+  "source_url": "https://github.com/PremModhaOfficial/NFR-pipeline/blob/main/skills/go-sdk-otel-hook-integration/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/PremModhaOfficial/NFR-pipeline/blob/main/skills/go-sdk-otel-hook-integration/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this when wiring a new motadatagosdk client into the motadatagosdk/otel facade (tracer, metrics, logger) \u2014 NEVER raw go.opentelemetry.io/otel. Covers the instrumented-call wrapper pattern, bounded-cardinality label rules, lazy sync.Once metric handles, and span.End discipline. Triggers: tracer.Start, metrics.NewCounter, metrics.Histogram, logger.L, instrumentedCall, span.SetAttributes, otel.Init, OTLP."
+}

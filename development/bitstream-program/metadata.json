@@ -1,0 +1,40 @@
+{
+  "name": "bitstream-program",
+  "repo": "LNC0831/oh-my-fpga",
+  "path": "skills/bitstream-program/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/LNC0831/oh-my-fpga",
+  "dir_name": "bitstream-program",
+  "downloaded_at": "2026-10-13T05:50:23.292584Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, programming, build, software, debug",
+    "score": 5,
+    "runner_up": "business",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "programming",
+      "build",
+      "software",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LNC0831",
+  "source_url": "https://github.com/LNC0831/oh-my-fpga/blob/main/skills/bitstream-program/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LNC0831/oh-my-fpga/blob/main/skills/bitstream-program/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generate a bitstream and program a Xilinx FPGA over JTAG, or build an MCS image and burn it into SPI/BPI configuration flash for power-on boot. Invoke when the user says \"program the board\", \"generate bitstream\", \"flash the device\", \"download to FPGA\", \"burn the flash\", \"load my design onto the board\", \"make a .mcs / .bit\", or \"why won't my board come up after power cycle\". Covers the full hand-off from a routed implementation to live silicon: DRC + route + timing sign-off gating, .bit generation, hardware-server / JTAG connect, volatile JTAG download, and non-volatile flash programming (generate_mcs + add_flash_configuration + program_flash). Requires the SynthPilot MCP server with Vivado running and the Tcl server connected; flash / JTAG steps additionally require a physical board cabled to the host (or reachable through a remote hw_server)."
+}

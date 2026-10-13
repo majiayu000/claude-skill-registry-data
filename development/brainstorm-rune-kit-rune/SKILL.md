@@ -1,0 +1,525 @@
+---
+name: brainstorm
+description: "Creative ideation and solution exploration. Generates multiple approaches with trade-offs, uses structured frameworks (SCAMPER, First Principles), and hands off to plan for structuring."
+metadata:
+  author: runedev
+  version: "0.8.0"
+  layer: L2
+  model: opus
+  group: creation
+  tools: "Read, Glob, Grep"
+  emit: ideas.ready
+  listen: codebase.scanned
+---
+
+# brainstorm
+
+## Purpose
+
+Creative ideation and solution exploration. Brainstorm is the creative engine of the Creation group — it generates multiple approaches with trade-offs, explores alternatives using structured frameworks, and hands the selected approach to plan for structuring. Uses opus for deep creative reasoning.
+
+<HARD-GATE>
+Do NOT invoke any implementation skill or write any code until the user has approved the design.
+This applies to EVERY task regardless of perceived simplicity.
+"This is too simple to need a design" is a rationalization. Simple tasks get simple designs (a few sentences), but they still get designs.
+</HARD-GATE>
+
+## Modes
+
+### Discovery Mode (default)
+Normal brainstorming at the start of a task — generate approaches before any code is written.
+
+### Vision Mode
+Activated for product-level rethinks — not "how to implement X" but "should we even build X?" Forces 10x thinking instead of incremental improvement.
+
+**Vision Mode triggers:**
+- Manual: `/rune brainstorm vision <product area>`
+- Called by `@rune-pro/product.feature-spec` when requirements feel incremental
+- When the user says "rethink", "reimagine", "what if we", "step back"
+
+**Vision Mode constraints:**
+1. MUST restate the user's REAL problem (not their proposed solution) — "you asked for a settings page, but your real problem is users can't find the right config"
+2. MUST generate 2-3 approaches where at least 1 eliminates the need for the feature entirely
+3. MUST apply the "10-star experience" lens: what would a 1-star, 5-star, and 10-star version look like?
+4. MUST challenge assumptions: "why does this need to be a page?" "why does the user need to do this at all?"
+
+### Design-It-Twice Mode
+Activated when exploring alternative *interface shapes* for a deepening candidate. Spawns N=3-4 parallel subagents, each pinned to a radically different design constraint (minimize / maximize-flexibility / optimize-common-case / ports-and-adapters), computes a diversity score over feature vectors, and presents sequentially with an opinionated recommendation. Used by `improve-architecture` when a deepened module's interface is non-obvious.
+
+**Design-It-Twice triggers:**
+- `improve-architecture` (Step 7 hand-off) when the picked candidate has multiple credible interface shapes
+- User says "design it twice", "explore interfaces", "what are the API options"
+- Manual: `/rune brainstorm design-it-twice <module>`
+
+**Design-It-Twice constraints:**
+1. MUST spawn N=3 (minimum) or N=4 (when dependency category is remote-owned or true-external) parallel subagents
+2. Each subagent pinned to exactly ONE of the 4 standard constraints — enforced via prompt template
+3. Diversity score MUST be >= 0.4 before presenting (re-spawn once if below)
+4. Recommendation MUST be opinionated with a concrete hedge condition — "it depends" is BLOCKED
+5. Hybrid synthesis (Step 4.5) is opt-in when 2 designs have complementary strengths
+6. council (Step 3.75) is opt-in per the narrow trigger — MUST NOT fire on every design-it-twice run, and its output MUST NOT replace the diversity-score mechanism, only supplement it
+
+Full doctrine: [references/design-it-twice.md](references/design-it-twice.md).
+
+### Rescue Mode
+Activated when an approach has been tried and **fundamentally failed** — not a bug, but a wrong approach. Rescue mode forces **category-diverse** alternatives instead of variants of the failed approach.
+
+**Rescue Mode triggers:**
+- `cook` Phase 4: Approach Pivot Gate fires (3 debug-fix loops exhausted + re-plan still fails)
+- `debug`: 3-Fix Escalation Rule fires AND root cause is "approach doesn't work" (not a bug in implementation)
+- `fix`: 3 fix attempts fail AND each attempt reveals a different blocker (systemic, not localized)
+- Manual: `/rune brainstorm rescue <what failed and why>`
+
+**Rescue Mode input:**
+```
+mode: "rescue"
+failed_approach: string     — what was tried
+failure_evidence: string[]  — concrete reasons it failed (error messages, blockers, dead ends)
+original_goal: string       — what we're still trying to achieve
+```
+
+**Rescue Mode constraints:**
+1. MUST generate 3-5 approaches (more than Discovery's 2-3 — wider net)
+2. Each approach MUST be a **different category**, not a variant of the failed one
+3. At least 1 approach must be "unconventional" (hacky, wrapper, reverse-engineer, proxy, etc.)
+4. MUST use Collision-Zone Thinking or Inversion Exercise — conventional thinking already failed
+5. MUST explicitly state why each approach is a **different category** from the failed one
+6. Failed approach MUST be listed as "Option X (FAILED)" — visible reminder not to loop back
+
+**Category examples** (approaches in different categories):
+```
+Direct API call ≠ Wrapper/middleware layer ≠ Reverse engineering ≠ Browser automation
+  ≠ Extension/plugin ≠ Proxy/bridge service ≠ Alternative tool entirely
+```
+
+## Triggers
+
+- Called by `cook` when multiple valid approaches exist for a feature (Discovery Mode)
+- Called by `cook` Approach Pivot Gate when current approach fundamentally fails (Rescue Mode)
+- Called by `debug` 3-Fix Escalation when root cause is architectural, not a bug (Rescue Mode)
+- Called by `plan` when architecture decision needs creative exploration (Discovery Mode)
+- `/rune brainstorm <topic>` — manual brainstorming (Discovery Mode)
+- `/rune brainstorm rescue <context>` — manual rescue (Rescue Mode)
+- Auto-trigger: when task description is vague or open-ended (Discovery Mode)
+
+## Calls (outbound)
+
+- `ba` (L2): when no requirements spec exists yet AND brainstorm is a standalone entry point — hand off for requirement elicitation BEFORE plan (never when `ba` is the caller — would loop)
+- `plan` (L2): when idea is selected and needs structuring into actionable steps (spec already exists, or task is a refactor/config change with no new behavior)
+- `design` (L2): when selected approach has UI/UX implications — hand off visual decisions
+- `research` (L3): gather data for informed brainstorming (existing solutions, benchmarks)
+- `trend-scout` (L3): market context and trends for product-oriented brainstorming
+- `problem-solver` (L3): structured reasoning frameworks (SCAMPER, First Principles, 6 Hats)
+- `sequential-thinking` (L3): evaluating approaches with many variables
+- `council` (L3): Step 3.75 — decorrelated judgment on which Design-It-Twice candidate is strongest, narrow trigger only (Design-It-Twice Mode)
+
+## Called By (inbound)
+
+- `cook` (L1): when multiple valid approaches exist for a feature (Discovery Mode)
+- `cook` (L1): Approach Pivot Gate — current approach failed, need category-diverse alternatives (Rescue Mode)
+- `debug` (L2): 3-Fix Escalation when root cause is "wrong approach" not "wrong code" (Rescue Mode)
+- `plan` (L2): when architecture decision needs creative exploration (Discovery Mode)
+- User: `/rune brainstorm <topic>` direct invocation (Discovery Mode)
+- User: `/rune brainstorm rescue <context>` manual rescue (Rescue Mode)
+- `ba` (L2): when multiple requirement approaches exist
+- `improve-architecture` (L2): when a deepened module's interface needs Design-It-Twice exploration
+
+## Cross-Hub Connections
+
+- `brainstorm` ↔ `plan` — bidirectional: brainstorm generates options → plan structures the chosen one, plan needs exploration → brainstorm ideates
+- `brainstorm` → `ba` — a standalone brainstorm that picks an approach for a NEW feature with no requirements spec routes to `ba` first (WHAT before HOW). Suppressed when `ba` is the caller — that direction is `ba` → `brainstorm` and re-invoking would loop.
+- `brainstorm` → `council` — Design-It-Twice candidates ready + high-stakes trigger fires (Step 3.75) → decorrelated judgment on the strongest candidate before Step 4 Recommend
+
+## Reasoning Frameworks
+
+### Analytical Frameworks
+```
+SCAMPER          — Substitute, Combine, Adapt, Modify, Put to use, Eliminate, Reverse
+FIRST PRINCIPLES — Break down to fundamentals, rebuild from ground up
+6 THINKING HATS  — Facts, Emotions, Caution, Benefits, Creativity, Process
+CRAZY 8s         — 8 ideas in 8 minutes (rapid ideation)
+```
+
+### Breakthrough Frameworks (when conventional thinking fails)
+
+**Collision-Zone Thinking** — Force unrelated concepts together: "What if we treated X like Y?"
+- Pick two unrelated domains (e.g., services + electrical circuits → circuit breakers)
+- Explore emergent properties from the collision
+- Test where the metaphor breaks → those boundaries reveal design constraints
+- Best source domains: physics, biology, economics, psychology
+- Use when: conventional approaches feel inadequate, need innovation not optimization
+
+**Inversion Exercise** — Flip every assumption: "What if the opposite were true?"
+- List core assumptions ("cache reduces latency", "handle errors when they occur")
+- Invert each: "add latency" → debouncing; "make errors impossible" → type systems
+- Valid inversions expose context-dependence in "obvious" truths
+- Use when: feeling forced into "the only way", stuck on unquestioned assumptions
+
+**Scale Game** — Test at extremes (1000x bigger/smaller) to expose fundamentals
+- Pick a dimension: volume, speed, users, duration, failure rate
+- Test minimum (1000x smaller) AND maximum (1000x bigger)
+- What breaks reveals algorithmic limits; what survives is fundamentally sound
+- Use when: unsure about production scale, edge cases unclear, "it works in dev"
+
+## Executable Steps
+
+### Step 0 — Detect Mode
+
+Check the invocation context:
+- If `mode="design-it-twice"` is set, or caller is `improve-architecture` Step 7, or user says "design it twice / explore interfaces" → **Design-It-Twice Mode** (jump to Step 2.5 directly)
+- If `mode="vision"` is set, or user says "rethink/reimagine/step back" → **Vision Mode**
+- If `mode="rescue"` is set, or caller is Approach Pivot Gate / 3-Fix Escalation → **Rescue Mode**
+- Otherwise → **Discovery Mode**
+
+If Rescue Mode: read `failed_approach` and `failure_evidence` before proceeding. These become anti-constraints — approaches that MUST NOT repeat the failed category.
+
+### Step 1 — Frame the Problem
+State the decision to be made in one clear sentence: "We need to decide HOW TO [achieve X] given [constraints Y]." Identify:
+- Hard constraints (cannot change): budget, existing tech stack, deadlines
+- Soft constraints (prefer to avoid): complexity, breaking changes, unfamiliar tech
+- Success criteria: what does a good solution look like?
+- **[Rescue Mode only]** Anti-constraints: "Approach X was tried and failed because Y — do NOT generate variants of X"
+
+If the problem is unclear, ask the user ONE clarifying question before proceeding.
+
+### Step 1.5 — Problem Restatement (MANDATORY)
+
+After framing the problem, restate it back to the user for confirmation:
+
+```
+"Let me confirm: you want to [X] because [Y],
+and the main constraint is [Z]. Correct?"
+```
+
+DO NOT generate approaches until user confirms the restatement. This prevents wasted ideation on a misunderstood problem — the most expensive brainstorm failure mode.
+
+**Skip conditions** (Rescue Mode only):
+- Rescue Mode: problem is already well-defined by `failure_evidence` — restatement is implicit in the failed approach summary.
+
+### Step 1.75 — Dynamic Questioning (When Clarification Needed)
+
+When Step 1 or Step 1.5 reveals gaps, ask structured clarifying questions using this format:
+
+```
+### [P0|P1|P2] **[DECISION POINT]**
+
+**Question:** [Clear, specific question]
+
+**Why This Matters:**
+- [Architectural consequence — what changes based on the answer]
+- [Affects: cost | complexity | timeline | scale | security]
+
+**Options:**
+| Option | Pros | Cons | Best For |
+|--------|------|------|----------|
+| A      | [+]  | [-]  | [scenario] |
+| B      | [+]  | [-]  | [scenario] |
+
+**If Not Specified:** [Default choice + rationale]
+```
+
+**Priority levels:**
+- **P0**: Blocking — cannot generate approaches without this answer
+- **P1**: High-leverage — significantly changes the recommended approach
+- **P2**: Nice-to-have — refines the recommendation but doesn't change direction
+
+**Rules:**
+1. Ask maximum 3 questions per round (avoid overwhelming the user)
+2. Each question MUST connect to a specific decision point (no generic "what do you want?")
+3. MUST provide a default answer — if user says "you decide", the default is used
+4. Questions generate data, not assumptions — each eliminates implementation paths
+
+### Step 2 — Generate Approaches
+
+**Discovery Mode**: Produce exactly 2–3 distinct approaches.
+**Rescue Mode**: Produce exactly 3–5 approaches, each a **different category** from the failed approach.
+**Design-It-Twice Mode**: skip to Step 2.5.
+
+Each approach must be meaningfully different — not just variations of the same idea. For each approach provide:
+- **Name**: short memorable label
+- **Description**: 2–4 sentences on how it works
+- **Pros**: concrete advantages (not generic "simple" — be specific)
+- **Cons**: concrete disadvantages and failure modes
+- **Effort**: low (< 1 day) | medium (1–3 days) | high (> 3 days)
+- **Risk**: low | medium | high + one-line explanation of the main risk
+
+If the domain is unfamiliar or data is needed, invoke `rune:research` before generating options. For product/market context, invoke `rune:trend-scout`.
+
+### Step 2.5 — Constraint Matrix Spawn (Design-It-Twice Mode only)
+
+Spawn N=3 parallel subagents (or N=4 if dependency category is `remote-owned` / `true-external`). Each is pinned to exactly one constraint via Task tool spawn:
+
+| Constraint ID | Pinning |
+|---------------|---------|
+| C1 | "Minimize the interface — aim for 1–3 entry points. Maximize leverage per entry point." |
+| C2 | "Maximize flexibility — support many use cases, extension surface." |
+| C3 | "Optimize for the most common caller — make the default case trivial. Rare cases pay cost." |
+| C4 | "Design around ports and adapters for cross-seam dependencies." (only when applicable) |
+
+Use the spawn prompt template from [references/design-it-twice.md](references/design-it-twice.md). Include CONTEXT.md domain terms in the prompt so each design names things consistently with project domain language.
+
+Each subagent returns a YAML block: interface, usage example, what's hidden, dependency strategy/adapters, tradeoffs.
+
+### Step 3 — Evaluate
+
+**Discovery Mode** — Apply the most relevant framework:
+- Use **SCAMPER** when exploring variations of an existing solution
+- Use **First Principles** when the problem looks unsolvable with conventional approaches
+- Use **6 Thinking Hats** when stakeholder perspectives matter (product vs. engineering vs. user)
+- Use **Crazy 8s** (rapid listing) when time-boxed exploration is needed
+- Use **Collision-Zone** when innovation is needed, not just optimization — force cross-domain metaphors
+- Use **Inversion** when all options feel forced or there's an unquestioned "must be this way"
+- Use **Scale Game** when validating which approach survives production reality
+
+**Rescue Mode** — MUST use at least one of these (conventional thinking already failed):
+- **Collision-Zone Thinking** (mandatory first pick) — force cross-domain metaphors to break out of the failed category
+- **Inversion Exercise** — flip assumptions that led to the failed approach
+- **First Principles** — strip to fundamentals, rebuild without the assumption that caused failure
+
+Additionally in Rescue Mode:
+- Invoke `rune:research` to search for how others solved similar problems (repos, articles, workarounds)
+- At least 1 approach must be "hacky/unconventional" — wrappers, reverse engineering, browser automation, proxy layers, debug mode abuse, etc.
+- Label each approach with its **category tag** to prove diversity: `[Direct API]`, `[Wrapper]`, `[Reverse-Engineer]`, `[Proxy]`, `[Extension]`, `[Alternative Tool]`, etc.
+
+For approaches with many interacting variables, invoke `rune:sequential-thinking` to reason through trade-offs systematically.
+
+### Step 3.5 — Diversity Gate (Design-It-Twice Mode only)
+
+After subagents return, compute the diversity score:
+
+```
+feature_vector(design) = [
+  count(methods), count(return_types), count(adapter_kinds),
+  count(dependencies), paradigm_tag, has_async, has_streaming
+]
+diversity = 1 - mean(pairwise_jaccard(feature_vectors))
+```
+
+| Diversity | Action |
+|-----------|--------|
+| ≥ 0.6 | Proceed to Step 4 |
+| 0.4 – 0.59 | Surface to user: "designs are similar in [shared trait] — re-spawn with different constraints?" |
+| < 0.4 | Re-spawn once with rotated constraints; if still <0.4, give up and present what's there with a diversity-low warning |
+
+Emit `diversity_score` in chain_metadata.
+
+### Step 3.75 — Decorrelated Judgment (council, Design-It-Twice Mode only)
+
+The diversity score (Step 3.5) measures how DIFFERENT the candidate designs are — it says nothing about which one is BEST. For high-stakes interface decisions, that judgment call benefits from a second architecture's opinion, the same discipline `adversary` Step 0.6 and `review` Step 1.6 already apply.
+
+**Trigger — call council (mode=judge) when ANY of:**
+- N=4 was spawned (dependency category `remote-owned` or `true-external`, per Step 2.5 — the same tier that already signals higher stakes)
+- Diversity landed in the 0.4–0.59 marginal band (Step 3.5) and a re-spawn still didn't clearly separate the candidates
+- User explicitly asks for a second opinion on which design to pick
+
+**Do NOT call council for**: routine Design-It-Twice runs where diversity ≥ 0.6 on an in-process/local-substitutable dependency (N=3) — this is opt-in overhead on top of the existing subagent fan-out, not a default tax on every design-it-twice run.
+
+**Request**: `{ question: <the candidate designs' interface/usage/tradeoffs YAML + "which design is strongest given constraints X">, mode: "judge", n: 3, diversity: { prefer_model_families: true }, evidence_required: [reasoning] }`. Self-contained — council's voices never saw the subagent spawns.
+
+**Consume**: fold `agreement.consensus_claims` into Step 4's recommendation as a `[council-verified]` signal alongside (never instead of) the diversity score. Fold `agreement.dissent` into the hedge condition, tagged `[council-dissent]`. If `decorrelation: NO_DECORRELATION`, say so plainly — do NOT describe the judgment as independent confirmation from same-family subagents; the diversity-score mechanism remains the primary signal in that case.
+
+### Step 4 — Recommend
+
+Select ONE approach as the recommendation. State:
+- Which option is recommended
+- Primary reason (1 sentence)
+- Conditions under which a different option would be better (hedge case)
+
+Do not recommend "it depends" without a concrete decision rule.
+
+### Step 4.5 — Tiered Recommendations (Product/Strategy Mode)
+
+For product-level brainstorming (Vision Mode or when approaches have strategic implications), structure the recommendation into **time-horizon tiers**:
+
+| Tier | Timeframe | Focus |
+|------|-----------|-------|
+| **Quick Win** | 0-30 days | Immediate value, validates direction, low risk |
+| **Differentiation** | 1-3 months | Competitive advantage, harder to copy |
+| **Long-term Moat** | 6-12 months | Defensible position, compounds over time |
+
+**For each tier, specify:**
+
+```markdown
+### Quick Win (0-30 days)
+- **Action**: [specific deliverable from the chosen approach]
+- **Resources**: [team/tools needed]
+- **Expected Impact**: [measurable outcome]
+- **Validates**: [what assumption this proves/disproves]
+
+### Differentiation (1-3 months)
+- **Action**: [...]
+- **Resources**: [...]
+- **Expected Impact**: [...]
+
+### Long-term Moat (6-12 months)
+- **Action**: [...]
+- **Resources**: [...]
+- **Expected Impact**: [...]
+```
+
+**Rules:**
+- Quick Win MUST be achievable with chosen approach in first sprint
+- Each tier builds on the previous — not 3 independent tracks
+- Skip this step for pure technical brainstorming (no product/strategy dimension)
+- If all tiers look equally expensive → approach may be too complex for Quick Win
+
+### Step 4.5 — Hybrid Synthesis (Design-It-Twice Mode, optional)
+
+If two designs have complementary strengths (e.g., C1's leverage + C4's seam discipline), propose a 4th option that combines them. Skip this step when no two designs have clear complementary strengths.
+
+```
+Option D (Hybrid C1 + C4):
+  - Interface: 3 methods (from C1's minimization)
+  - Adapters: HttpAdapter + InMemoryAdapter (from C4's port discipline)
+  - Pros: small surface AND testable across the seam
+  - Cons: more upfront design work; locks the port early
+```
+
+The hybrid is the recommended default in many cases. Be opinionated.
+
+### Step 4.75 — Not Doing List (MANDATORY)
+
+After selecting a recommendation, explicitly document what was **rejected** and why. This prevents scope creep later when someone asks "why didn't we do X?"
+
+For each rejected option, state:
+- **Option name**: the rejected approach
+- **Why not**: 1-sentence trade-off rationale (not "it's worse" — the specific cost that made it lose)
+- **Revisit if**: the condition under which this option becomes viable again
+
+```
+### Not Doing
+- **[Option B name]** — [specific trade-off, e.g., "adds 2 weeks for a 10% perf gain we don't need at current scale"]. Revisit if [condition, e.g., "user count exceeds 100k"].
+- **[Option C name]** — [specific trade-off]. Revisit if [condition].
+```
+
+The "Revisit if" clause is critical — it turns a rejection into a future trigger, not a permanent dismissal.
+
+### Step 5 — Hand Off (Spec Gate → BA if missing, then Plan)
+
+Before structuring the chosen approach, check whether a requirements spec exists. Choosing an approach answers **HOW** — it does NOT answer **WHAT** (requirements, acceptance criteria, scope boundaries, hidden requirements). Handing a bare approach straight to `plan` produces a plan with no spec behind it — the "plan without spec" gap that turns into vibe-coding.
+
+**Spec-presence gate:**
+
+1. `Glob` `.rune/features/*/requirements.md`.
+2. **Route to `rune:plan` directly** if ANY of:
+   - A requirements doc already exists (BA ran earlier this session, or a continuation).
+   - Brainstorm was invoked BY `ba` or `cook` (mode/caller from Step 0) — the spec step is already in the chain; re-invoking `ba` would loop.
+   - The chosen approach implies NO new user-facing behavior (pure refactor, config change, infra swap, dependency choice).
+3. **Route to `rune:ba` FIRST** (then `ba` hands to `plan`) if ALL of:
+   - No requirements doc exists, AND
+   - Brainstorm is a standalone entry point (user ran `/rune brainstorm …` directly), AND
+   - The chosen approach implies new feature behavior (a new capability, workflow, or product surface).
+
+<HARD-GATE>
+Do NOT skip `ba` on the way to `plan` for a NEW feature just because an approach was already chosen.
+Approach ≠ requirements. A plan built on a chosen approach but no acceptance criteria is a plan without a spec.
+Loop guard: if `ba` was the caller, hand back to `plan` normally — NEVER re-invoke `ba`.
+</HARD-GATE>
+
+Pass to the next skill (`ba` or `plan`):
+- The chosen option name
+- Key constraints to honor
+- Any risks identified that must be mitigated
+- The Not Doing list (so the next skill knows what's explicitly out of scope)
+
+If the user rejects the recommendation, return to Step 2 with adjusted constraints and regenerate.
+
+## Constraints
+
+1. MUST propose 2-3 approaches (Discovery) or 3-5 approaches (Rescue) — never present only one option
+2. MUST include your recommendation and reasoning for why
+3. MUST ask one question at a time — don't overwhelm with multiple questions
+4. MUST save approved design to docs/plans/ before transitioning to plan
+5. MUST NOT jump to implementation — brainstorm → plan → implement is the order
+6. [Rescue Mode] MUST NOT generate variants of the failed approach — each approach must be a different CATEGORY
+7. [Rescue Mode] MUST use Collision-Zone or Inversion framework — conventional thinking already failed
+8. [Rescue Mode] MUST include at least 1 unconventional/hacky approach — sometimes the "dirty" solution is the only one that works
+9. [Design-It-Twice Mode] MUST spawn parallel subagents with one constraint pinned per agent — fake diversity (one agent producing N options) is BLOCKED
+10. [Design-It-Twice Mode] MUST emit `diversity_score` and re-spawn (once) if below 0.4 floor
+11. [Design-It-Twice Mode] MUST NOT produce "it depends" recommendations — pick one design with a concrete hedge condition
+12. [Design-It-Twice Mode] MUST NOT call council on every run — narrow trigger only (N=4 remote/external dependency, marginal diversity band, or explicit user request); when invoked, council output supplements (never replaces) the diversity-score mechanism
+
+## Output Format
+
+```
+## Brainstorm: [Topic]
+
+### Context
+[Problem statement and constraints]
+
+### Option A: [Name] (Recommended)
+- **Approach**: [description]
+- **Pros**: [advantages]
+- **Cons**: [disadvantages]
+- **Effort**: low | medium | high
+- **Risk**: low | medium | high — [main risk]
+
+### Option B: [Name]
+- **Approach**: [description]
+- **Pros**: [advantages]
+- **Cons**: [disadvantages]
+- **Effort**: low | medium | high
+- **Risk**: low | medium | high — [main risk]
+
+### Option C: [Name] (if needed)
+...
+
+### Recommendation
+Option A — [one-line primary reason].
+Choose Option B if [specific hedge condition].
+
+### Not Doing
+- **[Option B name]** — [trade-off rationale]. Revisit if [condition].
+- **[Option C name]** — [trade-off rationale]. Revisit if [condition].
+
+### Next Step
+Proceeding to rune:plan with Option A. Constraints to honor: [list].
+```
+
+## Returns
+
+| Artifact | Format | Location |
+|----------|--------|----------|
+| Option matrix (2-3 Discovery / 3-5 Rescue) | Markdown sections | inline (chat output) |
+| Trade-off analysis per option | Markdown (pros/cons/effort/risk) | inline |
+| Single recommendation with hedge condition | Markdown | inline |
+| Approved design document | Markdown | `docs/plans/<feature>.md` |
+
+## Sharp Edges
+
+Known failure modes for this skill. Check these before declaring done.
+
+| Failure Mode | Severity | Mitigation |
+|---|---|---|
+| Generating only one option instead of 2-3 | HIGH | Always present multiple approaches — the value is in the comparison, not the recommendation |
+| Proceeding to plan without user approval on the approach | CRITICAL | Brainstorm MUST get explicit sign-off before calling plan — no silent "going with Option A" |
+| Options are variations of the same approach (fake diversity) | HIGH | Options must differ in architecture, not just naming — different trade-offs, not just different words |
+| [Rescue] Generating variants of the failed approach | CRITICAL | Each approach MUST have a different category tag — if two share a tag, one must be replaced |
+| [Rescue] Skipping Collision-Zone/Inversion frameworks | HIGH | Conventional thinking already failed — MUST use at least one breakthrough framework |
+| [Rescue] All approaches are "clean/proper" — no hacky option | MEDIUM | At least 1 must be unconventional — wrappers, reverse-engineering, debug mode abuse, proxy layers |
+| Calling plan directly instead of presenting options first | CRITICAL | Steps 2-3 are mandatory — present options, get approval, THEN call plan |
+| Handing a chosen approach straight to `plan` for a new feature with no requirements spec | CRITICAL | Step 5 spec-presence gate: standalone brainstorm + no `requirements.md` + new behavior → route to `ba` FIRST. Approach (HOW) is not a spec (WHAT). Skipping `ba` here is the "plan without spec" vibe-coding gap |
+| "Creative" options that ignore stated constraints | MEDIUM | Every option must satisfy the constraints declared in Step 1 |
+| Missing "Not Doing" list — rejected options not documented | MEDIUM | Step 4.75 is MANDATORY — every rejected option needs trade-off rationale + "Revisit if" condition |
+| [Design-It-Twice] Single agent producing N options instead of N parallel subagents | HIGH | Step 2.5 — constraint pinning happens at spawn, not in a loop. Each constraint = one Task call |
+| [Design-It-Twice] Diversity score below 0.4 ignored | HIGH | Step 3.5 gate — re-spawn once; if still low, present with explicit "low-diversity" warning |
+| [Design-It-Twice] "It depends" recommendation | HIGH | Step 4 — must pick one with a hedge; if genuinely tied, propose hybrid (Step 4.5) and recommend that |
+| [Design-It-Twice] Forgetting to include CONTEXT.md domain terms in subagent prompt | MEDIUM | Step 2.5 spawn template requires domain glossary be passed through |
+| [Design-It-Twice] Reporting council output as consensus when decorrelation is NO_DECORRELATION | CRITICAL | Step 3.75 consume rule: report the decorrelation stamp plainly, never imply independent confirmation from same-family subagents |
+
+## Done When
+
+- Context scan complete (project files read, existing patterns identified)
+- 2-3 genuinely different approaches presented with trade-offs
+- User has explicitly approved an approach (not implied or assumed)
+- Selected option documented with rationale
+- Constraints for plan phase listed explicitly
+- Step 5 spec-presence gate evaluated — routed to `ba` (new feature, no spec, standalone) or `plan` (spec exists, or ba/cook was the caller, or no new behavior)
+- Next skill (`ba` or `plan`) called with the approved approach and constraints
+- (Design-It-Twice) If council's high-stakes trigger matched (Step 3.75): council invoked before Step 4, decorrelation stamp reported plainly, consensus/dissent folded into the recommendation alongside the diversity score
+
+## Cost Profile
+
+~2000-5000 tokens input, ~1000-2500 tokens output. Opus for creative reasoning depth. Runs infrequently — only when creative exploration is needed.
+
+**Scope guardrail:** Brainstorm produces options and a recommendation — never implementation code or an execution plan. All code and planning begins only after user approves an approach and `rune:plan` is invoked.

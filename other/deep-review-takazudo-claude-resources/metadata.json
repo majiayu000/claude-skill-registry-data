@@ -1,0 +1,37 @@
+{
+  "name": "deep-review",
+  "repo": "Takazudo/claude-resources",
+  "path": "skills/deep-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Takazudo/claude-resources",
+  "dir_name": "deep-review-takazudo-claude-resources",
+  "downloaded_at": "2026-10-13T06:52:14.170194Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "context-window"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Takazudo",
+  "source_url": "https://github.com/Takazudo/claude-resources/blob/main/skills/deep-review/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Takazudo/claude-resources/blob/main/skills/deep-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Deep code review \u2014 runs the built-in /code-review together with /codex-review, which carries the depth. Use when: (1) User says 'deep review', (2) A substantial change needs a pre-merge quality gate, (3) A general review already ran and more coverage is wanted. For an ordinary review, invoke /code-review directly instead \u2014 this skill exists only for the two-reviewer pass. Fixes are applied inline by default; -t delegates them to /x-wt-teams when the work is genuinely large. Unfixed findings become agent-found GitHub issues by default (-nori to suppress)."
+}

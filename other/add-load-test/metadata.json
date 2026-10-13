@@ -1,0 +1,37 @@
+{
+  "name": "add-load-test",
+  "repo": "ManasMadan/boilerplate",
+  "path": ".claude/skills/add-load-test/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/ManasMadan/boilerplate",
+  "dir_name": "add-load-test",
+  "downloaded_at": "2026-10-13T06:01:39.532290Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ManasMadan",
+  "source_url": "https://github.com/ManasMadan/boilerplate/blob/master/.claude/skills/add-load-test/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ManasMadan/boilerplate/blob/master/.claude/skills/add-load-test/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Add a load-test scenario for an API path (k6, in load/), or change the load budget. Use when the user wants to know how a new endpoint holds up under traffic, or before a launch."
+}

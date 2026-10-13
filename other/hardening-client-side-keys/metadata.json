@@ -1,0 +1,37 @@
+{
+  "name": "hardening-client-side-keys",
+  "repo": "Krosebrook/loxihart-skills",
+  "path": "plugins/loxihart-engineering/skills/hardening-client-side-keys/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Krosebrook/loxihart-skills",
+  "dir_name": "hardening-client-side-keys",
+  "downloaded_at": "2026-10-13T05:49:24.409287Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "frontend"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Krosebrook",
+  "source_url": "https://github.com/Krosebrook/loxihart-skills/blob/main/plugins/loxihart-engineering/skills/hardening-client-side-keys/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Krosebrook/loxihart-skills/blob/main/plugins/loxihart-engineering/skills/hardening-client-side-keys/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Removes provider API keys from browser / client-side tools by putting a fail-closed edge proxy (Cloudflare Worker) in front of the LLM or API call, then rewiring the tool to call the proxy instead of the provider. Activates on: API key in the browser, client-side key, key in the frontend bundle, secret in client code, de-key a tool, harden the client-side-key tools, browser calls the Anthropic / OpenAI / Google API directly, anthropic-dangerous-direct-browser-access, BYOK hardening, move keys server-side, server-side proxy for an LLM call, Cloudflare Worker proxy, Turnstile gate on an API, harden a single-file HTML tool, stop shipping secrets to the client, keys pasted in a browser modal. NOT for rotating a leaked credential (use managing-credential-lifecycle) or building a full app from scratch (use kyle-vibe-coding)."
+}

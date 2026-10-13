@@ -1,0 +1,38 @@
+{
+  "name": "swap-llm",
+  "repo": "ManasMadan/boilerplate",
+  "path": ".claude/skills/swap-llm/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/ManasMadan/boilerplate",
+  "dir_name": "swap-llm",
+  "downloaded_at": "2026-10-13T06:01:30.016789Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "llm",
+      "language-model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ManasMadan",
+  "source_url": "https://github.com/ManasMadan/boilerplate/blob/master/.claude/skills/swap-llm/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ManasMadan/boilerplate/blob/master/.claude/skills/swap-llm/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Change which language model the AI service uses (Anthropic, OpenAI, another provider, a local model, or an LLM gateway such as LiteLLM), or add a fallback. Use when the user decides on a different or cheaper model, or a gateway. Not for debugging; when something fails, use the debug skill."
+}

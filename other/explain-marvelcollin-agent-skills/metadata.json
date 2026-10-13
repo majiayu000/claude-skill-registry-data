@@ -1,0 +1,37 @@
+{
+  "name": "explain",
+  "repo": "MarvelCollin/agent-skills",
+  "path": "skills/explain/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MarvelCollin/agent-skills",
+  "dir_name": "explain-marvelcollin-agent-skills",
+  "downloaded_at": "2026-10-13T06:03:04.980849Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, writing=2",
+    "score": 2,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "retrieval",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MarvelCollin",
+  "source_url": "https://github.com/MarvelCollin/agent-skills/blob/main/skills/explain/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MarvelCollin/agent-skills/blob/main/skills/explain/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Explain anything the user does not understand in the simplest true way, so it is easy to understand and easy to remember. Gives the core idea in one plain sentence, one everyday picture with its limit stated, a concrete example before any definition, at most three new ideas, the common wrong idea named, and one small question that makes the idea stick. Plain words, short sentences, every needed term defined in plain words, no filler. Built on learning science (cognitive load, worked examples, concrete before abstract, analogy research, fixing misconceptions, retrieval practice, self-explanation) and the methods of great explainers. Also teaches a topic step by step, quizzes the user, checks the user's own explanation for gaps, or helps the user memorize something (a template, formula, list or steps) with a logic map, fading cues, recall drills and a spacing schedule."
+}

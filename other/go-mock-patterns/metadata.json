@@ -1,0 +1,37 @@
+{
+  "name": "go-mock-patterns",
+  "repo": "PremModhaOfficial/NFR-pipeline",
+  "path": "skills/go-mock-patterns/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/PremModhaOfficial/NFR-pipeline",
+  "dir_name": "go-mock-patterns",
+  "downloaded_at": "2026-10-13T06:27:36.864188Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: communication=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "messaging",
+      "email"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "PremModhaOfficial",
+  "source_url": "https://github.com/PremModhaOfficial/NFR-pipeline/blob/main/skills/go-mock-patterns/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/PremModhaOfficial/NFR-pipeline/blob/main/skills/go-mock-patterns/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this when generating mocks for port interfaces, deciding between mock vs fake vs stub for a test, writing custom matchers for complex assertions, or ordering expectations across multiple dependencies. Covers mockgen commands, controller lifecycle, EXPECT chaining, custom matchers, and ordered expectations. Triggers: gomock, mockgen, EXPECT, controller, matcher, mock vs fake vs stub."
+}

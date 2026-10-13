@@ -1,0 +1,38 @@
+{
+  "name": "simple-english",
+  "repo": "Tekkiiiii/the-agency",
+  "path": "skills/simple-english/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/Tekkiiiii/the-agency",
+  "dir_name": "simple-english-tekkiiiii-the-agency",
+  "downloaded_at": "2026-10-13T06:54:00.098270Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word, documentation",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "word",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Tekkiiiii",
+  "source_url": "https://github.com/Tekkiiiii/the-agency/blob/main/skills/simple-english/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Tekkiiiii/the-agency/blob/main/skills/simple-english/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write or rewrite text in plain, layman-readable English in the spirit of\nASD-STE100 Simplified Technical English: short sentences, active voice,\nsimple tenses, one word one meaning, condition before command, every\ntechnical term defined at first use, no AI slop. Default mode is Plain.\nStrict mode applies full STE vocabulary compliance when the user names\nSTE, ASD-STE100, or compliance. Use for documentation, READMEs, runbooks,\nprocedures, error messages, release notes, incident reports, API guides,\nand explanations for readers outside the field. Also use when the user\nsays \"STE\", \"Simplified Technical English\", \"ASD-STE100\", \"plain English\",\n\"layman's terms\", \"explain it simply\", \"no jargon\", \"de-slop\", \"make this\nreadable\", \"write for non-native readers\", or asks for docs that translate\nwell. The same rules govern the reply: answer first, five sentences or\nfewer."
+}

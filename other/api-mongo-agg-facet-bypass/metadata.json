@@ -1,0 +1,38 @@
+{
+  "name": "api-mongo-agg-facet-bypass",
+  "repo": "NoorQureshi/SploitAgent",
+  "path": "skills/api/api-mongo-agg-facet-bypass/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/NoorQureshi/SploitAgent",
+  "dir_name": "api-mongo-agg-facet-bypass",
+  "downloaded_at": "2026-10-13T06:17:55.231816Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NoorQureshi",
+  "source_url": "https://github.com/NoorQureshi/SploitAgent/blob/main/skills/api/api-mongo-agg-facet-bypass/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NoorQureshi/SploitAgent/blob/main/skills/api/api-mongo-agg-facet-bypass/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Bypass a MongoDB aggregation-pipeline stage allowlist by nesting disallowed read stages inside $facet, then $unionWith/$lookup sibling collections to exfiltrate secrets (invite tokens, creds, hashes). Load when: an endpoint accepts a user-supplied `pipeline` (or errors like \"operator-form queries not accepted, use the pipeline parameter\"), a Node/Express + MongoDB backend, 24-hex `_id`s, or an \"advanced query\" API. Authorized targets only."
+}

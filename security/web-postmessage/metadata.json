@@ -1,0 +1,38 @@
+{
+  "name": "web-postmessage",
+  "repo": "NoorQureshi/SploitAgent",
+  "path": "skills/web/web-postmessage/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/NoorQureshi/SploitAgent",
+  "dir_name": "web-postmessage",
+  "downloaded_at": "2026-10-13T06:18:19.810166Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, owasp, pentest",
+    "score": 3,
+    "runner_up": "communication",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "owasp",
+      "pentest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NoorQureshi",
+  "source_url": "https://github.com/NoorQureshi/SploitAgent/blob/main/skills/web/web-postmessage/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NoorQureshi/SploitAgent/blob/main/skills/web/web-postmessage/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Exploit insecure cross-window messaging (`window.postMessage`) \u2014 handlers that trust `event.data` without checking `event.origin`, leading to XSS, token theft, or state change. Load when the app uses iframes/popups/SSO widgets, on \"postMessage\", or when JS registers a `message` listener. Signals: `addEventListener(\"message\", ...)`, embedded third-party frames, SSO/login popups."
+}

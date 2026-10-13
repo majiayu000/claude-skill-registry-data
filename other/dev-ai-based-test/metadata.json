@@ -1,0 +1,38 @@
+{
+  "name": "dev-ai-based-test",
+  "repo": "Takazudo/claude-resources",
+  "path": "skills/dev-ai-based-test/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Takazudo/claude-resources",
+  "dir_name": "dev-ai-based-test",
+  "downloaded_at": "2026-10-13T06:52:22.728108Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=3, testing=3",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Takazudo",
+  "source_url": "https://github.com/Takazudo/claude-resources/blob/main/skills/dev-ai-based-test/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Takazudo/claude-resources/blob/main/skills/dev-ai-based-test/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "AI-based testing via subagent + a per-task test-flow skill. Use when the user wants to verify something that mechanical assertions can't fully capture \u2014 image recognition, visual size/position comparison, animation smoothness, multi-step manual flows that need AI judgment. Triggers: 'AI-based test', 'AI test', 'visual verify', 'image recognition test', 'manual operation test', 'human-eye check', 'verify visually', 'compare screenshots', 'looks the same', 'looks correct'. The skill's job is to (1) author a focused test-flow skill that captures the exact procedure + verdict criteria, then (2) dispatch a verification subagent via the Agent tool that loads BOTH the test-flow skill AND a browser-driving skill (/verify-ui primary, /headless-browser fallback) so the subagent has clear context and consistent verdicts. NEVER uses `claude -p` \u2014 subagent dispatch goes through the Agent tool exclusively."
+}

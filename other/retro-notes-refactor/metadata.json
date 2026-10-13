@@ -1,0 +1,37 @@
+{
+  "name": "retro-notes-refactor",
+  "repo": "Takazudo/claude-resources",
+  "path": "skills/retro-notes-refactor/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Takazudo/claude-resources",
+  "dir_name": "retro-notes-refactor",
+  "downloaded_at": "2026-10-13T06:52:18.654802Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Takazudo",
+  "source_url": "https://github.com/Takazudo/claude-resources/blob/main/skills/retro-notes-refactor/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Takazudo/claude-resources/blob/main/skills/retro-notes-refactor/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Refactor an accumulated `l-lessons-*` skill (created by /retro-notes) when later entries partially supersede or extend earlier ones, so future planning agents see the cross-cutting wisdom first instead of having to read every dated entry. Use when (1) the user says \"lessons refactor\", \"retro refactor\", \"retro-notes refactor\", \"refactor lessons\", or \"synthesize lessons\", (2) a `/retro-notes` session just added a new dated entry that broadens / narrows / contradicts a claim in an earlier entry on the same area, (3) an `l-lessons-*/SKILL.md` has 5+ dated entries on the same problem area OR exceeds ~500 lines, (4) the next `/big-plan` run in that area would have to scan many entries to find the relevant pattern. Produces a top-of-file \"Recurring patterns (synthesized)\" section in Trigger/Action/See format, adds Caveat notes to entries whose claims were later widened, updates the frontmatter description with pattern keywords, and formats with mdx-formatter. Does NOT delete historical entries \u2014 they remain as terse drill-down postmortems. Pair with /retro-notes (which writes new entries) and /big-plan (which reads the synthesized section first)."
+}

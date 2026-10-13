@@ -1,0 +1,37 @@
+{
+  "name": "add-job",
+  "repo": "ManasMadan/boilerplate",
+  "path": ".claude/skills/add-job/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/ManasMadan/boilerplate",
+  "dir_name": "add-job",
+  "downloaded_at": "2026-10-13T06:01:28.417977Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, integration=2",
+    "score": 2,
+    "runner_up": "integration",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ManasMadan",
+  "source_url": "https://github.com/ManasMadan/boilerplate/blob/master/.claude/skills/add-job/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ManasMadan/boilerplate/blob/master/.claude/skills/add-job/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Add a background job, queue, scheduled task or domain-event consumer, in TypeScript or in the Python service. Use when work should run outside the request (sending, processing, syncing, cleanup) or when a service must react to an event another service emits."
+}

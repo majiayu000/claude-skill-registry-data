@@ -1,0 +1,39 @@
+{
+  "name": "reverse-eng-dotnet",
+  "repo": "NoorQureshi/SploitAgent",
+  "path": "skills/reverse-engineering/reverse-eng-dotnet/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/NoorQureshi/SploitAgent",
+  "dir_name": "reverse-eng-dotnet",
+  "downloaded_at": "2026-10-13T06:18:10.239498Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, build, compile, debug",
+    "score": 4,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NoorQureshi",
+  "source_url": "https://github.com/NoorQureshi/SploitAgent/blob/main/skills/reverse-engineering/reverse-eng-dotnet/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NoorQureshi/SploitAgent/blob/main/skills/reverse-engineering/reverse-eng-dotnet/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Reverse a .NET / C# assembly \u2014 decompile, deobfuscate, debug, and IL-patch managed binaries. Load when the target is a managed PE (.exe/.dll with a CLR header), a Sharp* red-team tool (Rubeus, SharpHound, Seatbelt), a ConfuserEx/SmartAssembly/Babel/.NET-Reactor-obfuscated sample, or a .NET loader/stealer. Signals: \"mscoree\" / \"_CorExeMain\" / \"mscorlib\" strings, garbled Unicode class names in a decompiler, \"deobfuscate this .NET\", \"patch/keygen a C# binary\"."
+}

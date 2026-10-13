@@ -1,0 +1,37 @@
+{
+  "name": "recipe-lighting",
+  "repo": "STE-FalconSoftware/apeiron-agent",
+  "path": "plugins/apeiron/skills/recipe-lighting/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/STE-FalconSoftware/apeiron-agent",
+  "dir_name": "recipe-lighting",
+  "downloaded_at": "2026-10-13T06:38:08.704317Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: build, debug",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "STE-FalconSoftware",
+  "source_url": "https://github.com/STE-FalconSoftware/apeiron-agent/blob/main/plugins/apeiron/skills/recipe-lighting/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/STE-FalconSoftware/apeiron-agent/blob/main/plugins/apeiron/skills/recipe-lighting/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Light a scene \u2014 pin the clock, aim the sun through the clock and not its transform, fix the AMBIENT before the lamp's intensity, budget the local shadow atlas, and place and bake reflection probes."
+}

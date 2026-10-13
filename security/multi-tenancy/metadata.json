@@ -1,0 +1,37 @@
+{
+  "name": "multi-tenancy",
+  "repo": "MartinOlivero/saas-builder",
+  "path": "skills/multi-tenancy/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/MartinOlivero/saas-builder",
+  "dir_name": "multi-tenancy",
+  "downloaded_at": "2026-10-13T06:03:01.930925Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, audit",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MartinOlivero",
+  "source_url": "https://github.com/MartinOlivero/saas-builder/blob/main/skills/multi-tenancy/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MartinOlivero/saas-builder/blob/main/skills/multi-tenancy/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "This skill should be used when several customers, organizations, teams or workspaces share one application and their data must stay apart \u2014 and especially when a person can belong to more than one of them. Trigger phrases (English) include \"multi-tenant\", \"organizations and members\", \"workspaces\", \"teams\", \"invite users to an org\", \"a user in two companies\", \"switch workspace\", \"agency with several clients\", \"tenant isolation\", \"demo account\", \"white label\". Trigger phrases (Spanish) include \"multi-tenant\", \"varias empresas en la misma app\", \"organizaciones y miembros\", \"invitar usuarios\", \"un usuario en dos empresas\", \"cambiar de espacio\", \"cuenta demo\", \"que un cliente no vea los datos de otro\". It decides the membership model before the schema hardens, puts the tenant rule in one place, and covers the edges that leak \u2014 server functions, deletion, invitations and the shared demo. Use `data-modeling` for the schema itself and `rls-audit` to verify the policies."
+}

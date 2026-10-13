@@ -1,0 +1,37 @@
+{
+  "name": "ship-fix",
+  "repo": "adrienm7/ergopti",
+  "path": ".agents/skills/ship-fix/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/adrienm7/ergopti",
+  "dir_name": "ship-fix",
+  "downloaded_at": "2026-10-13T07:26:32.824859Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "adrienm7",
+  "source_url": "https://github.com/adrienm7/ergopti/blob/main/.agents/skills/ship-fix/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/adrienm7/ergopti/blob/main/.agents/skills/ship-fix/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Fix a bug from root cause through regression proof and local commit. Use for error reports and requested corrections."
+}

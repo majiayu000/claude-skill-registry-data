@@ -1,0 +1,37 @@
+{
+  "name": "neat-freak",
+  "repo": "Nzettodess/Awesome-Agent-Skills",
+  "path": "Skills/Engineering Skills/skills/neat-freak/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Nzettodess/Awesome-Agent-Skills",
+  "dir_name": "neat-freak",
+  "downloaded_at": "2026-10-13T06:18:38.821989Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Nzettodess",
+  "source_url": "https://github.com/Nzettodess/Awesome-Agent-Skills/blob/main/Skills/Engineering Skills/skills/neat-freak/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Nzettodess/Awesome-Agent-Skills/blob/main/Skills/Engineering Skills/skills/neat-freak/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "End-of-session knowledge cleanup with OCD-level rigor \u2014 reconciles project docs (CLAUDE.md, README.md, docs/) and agent memory against the code so nothing rots. \u4f1a\u8bdd\u7ed3\u675f\u540e\u5bf9\u9879\u76ee\u6587\u6863\u548c\u8bb0\u5fc6\u8fdb\u884c\u6d01\u7656\u7ea7\u5ba1\u67e5\u4e0e\u540c\u6b65\u3002MUST trigger when the user says: \"sync up\", \"tidy up docs\", \"update memory\", \"clean up docs\", \"/sync\", \"/neat\", \"\u540c\u6b65\u4e00\u4e0b\", \"\u6574\u7406\u6587\u6863\", \"\u6574\u7406\u4e00\u4e0b\", \"\u66f4\u65b0\u8bb0\u5fc6\", \"\u68b3\u7406\u4e00\u4e0b\", \"\u6536\u5c3e\", \"\u8fd9\u4e2a\u9636\u6bb5\u505a\u5b8c\u4e86\", \"\u65b0\u4eba\u80fd\u76f4\u63a5\u4e0a\u624b\", or any phrase suggesting a dev milestone where knowledge needs reconciliation. Also trigger when the user reports stale docs, conflicting memories, or wants a clean handoff to teammates or other agents. Bare \"\u6574\u7406\" / \"tidy\" with prior dev context counts \u2014 do not under-trigger. Cross-platform: works on Claude Code, OpenAI Codex, OpenCode, and OpenClaw."
+}

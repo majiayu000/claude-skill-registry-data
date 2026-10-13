@@ -1,0 +1,38 @@
+{
+  "name": "security-auditor",
+  "repo": "The-Utopia-Studio/skills",
+  "path": "skills/product/security-auditor/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/The-Utopia-Studio/skills",
+  "dir_name": "security-auditor-the-utopia-studio-skills",
+  "downloaded_at": "2026-10-13T06:55:15.788220Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "The-Utopia-Studio",
+  "source_url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/security-auditor/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/security-auditor/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audits repository security \u2014 hardcoded secrets, dependency vulnerabilities, environment variable management, and authentication patterns. Use when the user asks to \"check security\", \"find secrets\", \"audit dependencies\", or \"secure my repo\". Don't use for code review, deployment, or monitoring."
+}

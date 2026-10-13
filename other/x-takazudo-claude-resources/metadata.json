@@ -1,0 +1,38 @@
+{
+  "name": "x",
+  "repo": "Takazudo/claude-resources",
+  "path": "skills/x/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Takazudo/claude-resources",
+  "dir_name": "x-takazudo-claude-resources",
+  "downloaded_at": "2026-10-13T06:52:08.476261Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Takazudo",
+  "source_url": "https://github.com/Takazudo/claude-resources/blob/main/skills/x/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Takazudo/claude-resources/blob/main/skills/x/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Facade for development workflows. Routes on two axes: plan-first vs implement-now (escalates to /big-plan -a when the request needs research / decomposition / has unclear scope \u2014 the appended -a makes the plan chain into implementation in-session), then single vs multi on the ready-to-build fast paths (/x-as-pr single-topic, /x-wt-teams multi-topic parallel). Use when: (1) User says '/x' followed by dev instructions, (2) User wants to start development without choosing the workflow skill, (3) User says 'dev', 'implement', or 'build' with a task. Default option: -v (verify-ui). The downstream skill runs /code-review by default; -co/--codex upgrades it to /deep-review. Forwards -a (autonomy/auto-chain) and -m (merge at the end + cleanup + CI watch) through every route; auto-fix of raised findings (-f) and issue-raising (-ri) are downstream defaults, with -nf/--no-fix and -nori/--no-raise-issues as the forwarded opt-outs. -a and -m are orthogonal \u2014 full hands-off end-to-end is -a -m. Pass -lo/--local to keep the run's bookkeeping (plan / tracking / spec) in a cclogs dir instead of creating GitHub issues \u2014 for public / team repos where those issues read as spam; agent-found problem issues are still raised (add -nori to suppress those too). Pass -toco/--to-codex to implement on Codex CLI instead of in-session, or -tocl/--to-claude to implement in a FRESH Claude Code session (a clean context window -- the agent-side stand-in for /clear, which cannot be invoked from inside a session). Both work on every route -- the escalation plans here and hands the epic off at the end of /big-plan, while the fast paths hand off immediately -- by opening a new tmux window running that CLI with the matching invocation (terminal-only, mutually exclusive). Pass -pr/--prototype for UI work that should be prototyped before it is planned (UI polish, new-feature UI brainstorming): it forces the /big-plan escalation, where a rough-UI build/feedback loop runs before decomposition -- the fast paths have no planning step to prototype in front of."
+}

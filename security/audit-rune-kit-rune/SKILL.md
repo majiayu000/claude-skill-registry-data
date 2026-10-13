@@ -1,0 +1,692 @@
+---
+name: audit
+description: "Comprehensive project audit — security, dependencies, code quality, architecture, performance, infra, docs, and mesh analytics. Use when needing a full 8-dimension health-score snapshot before a major release, M&A diligence, or quarterly review. Delegates to specialist skills (sentinel, dependency-doctor, perf, autopsy, etc.)."
+metadata:
+  author: runedev
+  version: "0.5.0"
+  layer: L2
+  model: opus
+  group: quality
+  tools: "Read, Bash, Glob, Grep"
+  emit: audit.complete
+  listen: context.preview
+---
+
+# audit
+
+## Purpose
+
+Comprehensive project health audit across 8 dimensions (7 project + 1 mesh analytics). Delegates security scanning to `sentinel`, dependency analysis to `dependency-doctor`, and code complexity to `autopsy`, then directly audits architecture, performance, infrastructure, and documentation. Applies framework-specific checks (React/Next.js, Node.js, Python, Go, Rust, React Native/Flutter) based on detected stack. Produces a consolidated health score and prioritized action plan saved to `AUDIT-REPORT.md`.
+
+## Triggers
+
+- `/rune audit` — full 8-dimension project health audit
+- `/rune audit dx` — DX Review Mode (Addy Osmani 8 principles, see below)
+- User says "audit", "review project", "health check", "project assessment"
+- User says "developer experience", "DX audit", "onboarding experience", "time to hello world"
+
+## Calls (outbound)
+
+- `scout` (L2): Phase 0 — project structure and stack discovery
+- `dependency-doctor` (L3): Phase 1 — vulnerability scan and outdated dependency check
+- `sentinel` (L2): Phase 2 — security audit (OWASP Top 10, secrets, config)
+- `autopsy` (L2): Phase 3 — code quality and complexity assessment
+- `improve-architecture` (L2): Phase 3.5 — architecture sub-score (depth / leverage / locality across top modules)
+- `perf` (L2): Phase 4 — performance regression check
+- `db` (L2): Phase 5 — database health dimension (schema, migrations, indexes)
+- `journal` (L3): record audit date, overall score, and verdict
+- `constraint-check` (L3): audit HARD-GATE compliance across project skills
+- `sast` (L3): Phase 2 — deep static analysis (Semgrep, Bandit, ESLint security rules)
+- `retro` (L2): Phase 6 — engineering velocity and health dimension (rune:retro)
+- `browser-pilot` (L3): DX Review Mode — real browser testing of docs, setup guides, error pages
+
+## Called By (inbound)
+
+- `cook` (L1): pre-implementation audit gate
+- `launch` (L1): pre-launch health check
+- User: `/rune audit` direct invocation
+
+## Executable Instructions
+
+### Phase 0: Project Discovery
+
+Call `rune:scout` for a full project map. Then use `Read` on:
+- `README.md`, `CLAUDE.md`, `CONTRIBUTING.md`, `.editorconfig` (if they exist)
+
+Determine:
+- Language(s) and version(s)
+- Framework(s) — determines which Framework-Specific Checks below apply
+- Package manager, build tool(s), test framework(s), linter/formatter config
+- Project type: `API/backend` | `frontend/SPA` | `fullstack` | `CLI tool` | `library` | `mobile` | `infra/IaC`
+- Monorepo setup (workspaces, turborepo, nx, etc.)
+
+**Output before proceeding:** Brief project profile, stack summary, and which Framework-Specific Checks will be applied.
+
+### Phase 0.5: Context-Building (Pure Understanding)
+
+<HARD-GATE>
+This phase is FORBIDDEN from producing findings. No BLOCKs, no WARNs, no issues. Context-building only.
+Rushed context = hallucinated vulnerabilities. Slow is fast.
+</HARD-GATE>
+
+For each critical module (entry points, auth, data layer, core business logic):
+1. Read line-by-line. Note at minimum:
+   - **3 invariants**: What MUST always be true for this code to work? (e.g., "user is authenticated before reaching this handler")
+   - **5 assumptions**: What does this code assume about its inputs, environment, and callers?
+   - **3 risks**: What could break if assumptions are violated?
+2. Record findings as context notes — these feed into Phases 1-7, NOT into the final report directly
+
+**Why**: Without this phase, the auditor pattern-matches against known vulnerability lists and hallucinates findings that don't exist in THIS specific codebase. The invariants + assumptions ground all later analysis in reality.
+
+---
+
+### Phase 1: Dependency Audit
+
+Delegate to `dependency-doctor`. The dependency-doctor report covers:
+- Vulnerability scan (CVEs by severity)
+- Outdated packages (patch / minor / major)
+- Unused dependencies
+- Dependency health score
+
+Pass the full dependency-doctor report through to the final audit.
+
+---
+
+### Phase 2: Security Audit
+
+Delegate to `sentinel`. Request a full security scan covering:
+- Hardcoded secrets, API keys, tokens, passwords in source code
+- OWASP Top 10: injection, broken auth, sensitive data exposure, XSS, CSRF, insecure deserialization, broken access control
+- Configuration security (debug mode in prod, CORS `*`, missing HTTP security headers)
+- Input validation at API boundaries
+- `.gitignore` coverage of sensitive files
+
+Pass the full sentinel report through to the final audit.
+
+---
+
+### Phase 3: Code Quality Audit
+
+Delegate to `autopsy` for codebase health (complexity, coupling, hotspots, dead code, health score per module).
+
+In addition, use `Grep` to find supplementary issues autopsy may not cover:
+
+```bash
+# console.log in production code
+grep -r "console\.log" src/ --include="*.ts" --include="*.js" -l
+
+# TypeScript any types
+grep -r ": any" src/ --include="*.ts" -n
+
+# Empty catch blocks
+grep -rn "catch.*{" src/ --include="*.ts" --include="*.js" -A 1 | grep -E "^\s*}"
+
+# Python print() in production
+grep -r "^print(" . --include="*.py" -l
+
+# Rust .unwrap() outside tests
+grep -rn "\.unwrap()" src/ --include="*.rs"
+```
+
+Merge autopsy report + supplementary findings.
+
+**3.5 Zombie Code Detection**
+
+Identify code that is effectively dead but hasn't been formally removed. Zombie code increases surface area, confuses contributors, and accumulates security debt.
+
+| Signal | Detection Method | Severity |
+|--------|-----------------|----------|
+| No commits in 6+ months | `git log --since="6 months ago" -- <file>` returns empty | MEDIUM |
+| No test coverage | File not imported by any test file (Grep for filename in `**/*.test.*` / `**/*.spec.*`) | MEDIUM |
+| No owner | File not in CODEOWNERS, no author active in last 6 months | LOW |
+| Failing tests referencing the module | Test suite has skipped/failing tests for this module | HIGH |
+| Unpatched CVEs in dependencies only this module uses | Cross-reference dependency-doctor CVE list with per-file imports | HIGH |
+| Orphaned docs | README/docs reference files or APIs that no longer exist | LOW |
+
+**Zombie Code Verdict:**
+- 3+ signals on same file/module → flag as **ZOMBIE** in audit report
+- Recommend: archive (move to `_deprecated/`), delete, or assign owner
+- Do NOT auto-delete — present zombie list to user for decision
+
+---
+
+### Phase 4: Architecture Audit
+
+Use `Read` and `Grep` to evaluate structural health directly.
+
+**4.1 Project Structure**
+- Logical folder organization (business logic vs infrastructure vs presentation separated?)
+- Circular dependencies between modules (A imports B, B imports A)
+- Barrel file analysis (excessive re-exports causing bundle bloat)
+
+**4.2 Design Patterns & Principles**
+- Single Responsibility violations (route handlers with direct DB calls, fat controllers)
+- Tight coupling between layers
+
+```typescript
+// BAD — route handler directly coupled to database
+app.get('/users/:id', async (req, res) => {
+  const user = await db.query('SELECT * FROM users WHERE id = $1', [req.params.id]);
+  res.json(user);
+});
+// GOOD — layered architecture
+app.get('/users/:id', async (req, res) => {
+  const user = await userService.getUser(req.params.id);
+  res.json(user);
+});
+```
+
+**4.3 API Design** (if applicable)
+- Consistent naming conventions (camelCase vs snake_case in JSON responses)
+- Correct HTTP method usage (GET reads, POST creates, PUT/PATCH updates, DELETE removes)
+- Consistent error response format across endpoints
+- Pagination on collection endpoints
+- API versioning strategy
+
+**4.4 Database Patterns** (if applicable)
+- N+1 query patterns
+
+```typescript
+// BAD — N+1
+const users = await db.query('SELECT * FROM users');
+for (const user of users) {
+  user.posts = await db.query('SELECT * FROM posts WHERE user_id = $1', [user.id]);
+}
+// GOOD — single JOIN
+const usersWithPosts = await db.query(`
+  SELECT u.*, json_agg(p.*) as posts
+  FROM users u LEFT JOIN posts p ON p.user_id = u.id
+  GROUP BY u.id
+`);
+```
+
+- Missing indexes (check schema/migrations for columns used in WHERE/JOIN)
+- Missing `LIMIT` on user-facing queries
+
+**4.5 State Management** (frontend only)
+- Global state pollution (local state handled globally)
+- Prop drilling (>3 levels deep — use Context or composition)
+- Data fetching patterns (caching, deduplication, stale-while-revalidate)
+
+---
+
+### Phase 5: Performance Audit
+
+**5.1 Build & Bundle** (frontend)
+- Tree-shaking effectiveness (importing entire libraries vs specific modules)
+
+```typescript
+// BAD — imports entire library
+import _ from 'lodash';
+// GOOD — tree-shakeable import
+import get from 'lodash/get';
+```
+
+- Code splitting / lazy loading for routes
+- Large unoptimized assets
+
+**5.2 Runtime Performance**
+- Synchronous operations that should be async (file I/O, network calls)
+- Memory leak patterns (event listeners not cleaned up, growing caches, unclosed streams)
+- Expensive operations in hot paths
+
+```typescript
+// BAD — regex compiled on every call
+function validate(input: string) {
+  return /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(input);
+}
+// GOOD — compile once at module level
+const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+function validate(input: string) { return EMAIL_REGEX.test(input); }
+```
+
+**5.3 Database & I/O**
+- Missing connection pooling
+- Unbounded queries (no `LIMIT` on user-facing endpoints)
+- Sequential I/O that could be parallel
+
+```typescript
+// BAD — sequential when independent
+const users = await fetchUsers();
+const products = await fetchProducts();
+// GOOD — parallel
+const [users, products] = await Promise.all([fetchUsers(), fetchProducts()]);
+```
+
+---
+
+### Phase 6: Infrastructure & DevOps Audit
+
+Use `Glob` and `Read` to check:
+
+**6.1 CI/CD Pipeline**
+- CI config exists (`.github/workflows/`, `.gitlab-ci.yml`, `.circleci/`, `Jenkinsfile`)
+- Tests running in CI
+- Linting enforced in CI
+- Security scanning in pipeline (Dependabot, Snyk, CodeQL)
+
+**6.2 Environment Configuration**
+- `.env.example` exists with placeholder values (not real secrets)
+- Environment variables validated at startup
+
+```typescript
+// BAD — silently undefined
+const port = process.env.PORT;
+// GOOD — validate at startup
+const port = process.env.PORT;
+if (!port) throw new Error('PORT environment variable is required');
+```
+
+**6.3 Containerization** (if applicable)
+- Dockerfile: multi-stage build, non-root user, minimal base image
+- `.dockerignore` covers `node_modules`, `.git`, `.env`
+
+**6.4 Logging & Monitoring**
+- Structured logging (JSON format, not raw `console.log`)
+- Error tracking integration (Sentry, Datadog, etc.)
+- Health check endpoints (`/health`, `/ready`)
+- No sensitive data in logs (passwords, tokens, PII)
+
+---
+
+### Phase 7: Documentation Audit
+
+Use `Glob` and `Read` to check:
+
+**7.1 Project Documentation**
+- README completeness: description, prerequisites, setup, usage, deployment, contributing
+- API documentation (OpenAPI/Swagger spec, or documented endpoints)
+- Can a new developer get running from README alone?
+- Architecture Decision Records (ADRs) for non-obvious choices
+
+**7.2 Code Documentation**
+- Public API / exported functions documented
+- Complex business logic with explanatory comments
+- `CHANGELOG.md` maintained
+- `LICENSE` file present
+
+---
+
+### Framework-Specific Checks
+
+Apply **only** if the framework was detected in Phase 0. Skip entirely if not relevant.
+
+**React / Next.js** (detect: `react` or `next` in `package.json`)
+- `useEffect` with missing dependencies (stale closures)
+- State updates during render (infinite loop pattern)
+- List items using index as key on reorderable lists
+- Props drilled through 3+ levels
+- Client-side hooks in Server Components (Next.js App Router)
+- Components exceeding 200 JSX lines
+
+**Node.js / Express / Fastify** (detect: `express`, `fastify`, `koa`, `@nestjs/core`)
+- Missing rate limiting on public endpoints
+- Missing request timeout configuration
+- Error messages leaking internal details to clients
+- Unbounded `SELECT *` without pagination
+- Missing authentication middleware on protected routes
+- Synchronous operations blocking the event loop
+
+**Python (Django / Flask / FastAPI)** (detect: `django`, `flask`, `fastapi` in requirements)
+- Django: missing `permission_classes`, `DEBUG=True` in production, missing CSRF middleware
+- Flask: `app.run(debug=True)` without environment check
+- FastAPI: missing Pydantic models for request/response
+- Mutable default arguments (`def func(items=[])`)
+- Missing type hints on public functions (if project uses mypy/pyright)
+
+**Go** (detect: `go.mod`)
+- Ignored errors (`file, _ := os.Open(filename)`)
+- Goroutine leaks (goroutines without cancellation context)
+- Missing `defer` for resource cleanup (files, locks, connections)
+- Race conditions (shared state without mutex or channels)
+
+**Rust** (detect: `Cargo.toml`)
+- `.unwrap()` / `.expect()` in non-test production code (use `?` operator)
+- `unsafe` blocks without safety comments
+
+**Mobile (React Native / Flutter)** (detect: `react-native` in `package.json` or `pubspec.yaml`)
+- FlatList without `keyExtractor` or `getItemLayout`
+- Missing `React.memo` on list item components
+- Flutter: missing `const` constructors, missing `dispose()` for controllers and streams
+
+---
+
+### Phase 8: Mesh Analytics (H3 Intelligence)
+
+**Goal**: Surface insights about skill usage, chain patterns, and mesh health from accumulated metrics.
+
+**Data source**: `.rune/metrics/` directory (populated by hooks automatically).
+
+1. Check if `.rune/metrics/` exists. If not, emit INFO: "No metrics data yet — run a few cook sessions first."
+2. Read `.rune/metrics/skills.json` — extract per-skill invocation counts, last used dates
+3. Read `.rune/metrics/sessions.jsonl` — extract session count, avg duration, avg tool calls
+4. Read `.rune/metrics/chains.jsonl` — extract most common skill chains
+5. Read `.rune/metrics/routing-overrides.json` (if exists) — list active routing overrides
+
+Compute and report:
+- **Top 10 most-used skills** (by total invocations)
+- **Unused skills** (0 invocations across all tracked sessions) — potential dead nodes
+- **Most common skill chains** (top 5 patterns from chains.jsonl)
+- **Average session stats** (duration, tool calls, skill invocations)
+- **Active routing overrides** and their application count
+- **Mesh density check**: cross-reference invocation data with declared connections — skills that are declared as "Called By" but never actually invoked may indicate broken mesh paths
+
+**Propose routing overrides**: If patterns suggest inefficiency (e.g., debug consistently called 3+ times in a chain for the same session), propose a new routing override for user approval.
+
+Output as a section in the final audit report:
+
+```
+### Mesh Analytics
+| Skill | Invocations | Last Used | Chains Containing |
+|-------|-------------|-----------|-------------------|
+| cook  | 47          | 2026-02-28| 34                |
+| scout | 89          | 2026-02-28| 42                |
+| ...   | ...         | ...       | ...               |
+
+**Common Chains**:
+1. cook → scout → plan → test → fix → quality → verify (34x)
+2. debug → scout → fix → verification (12x)
+
+**Session Stats**: 23 sessions, avg 35min, avg 52 tool calls
+**Unused Skills**: [list or "none"]
+**Routing Overrides**: [count] active
+```
+
+**Shortcut**: `/rune metrics` invokes ONLY this phase, not the full 7-phase audit.
+
+---
+
+---
+
+## DX Review Mode (Addy Osmani 8 Principles)
+
+Triggered by `/rune audit dx`. Evaluates **developer experience** — how easy it is for a new contributor to understand, set up, use, and recover from mistakes in this project. Inspired by Addy Osmani's DX framework.
+
+<HARD-GATE>
+DX Review is a SEPARATE mode — it does NOT run the 8-phase health audit above.
+If the user wants both, run `/rune audit` then `/rune audit dx` separately.
+</HARD-GATE>
+
+### DX Principle 1: Time to Hello World
+
+Measure: How many steps from `git clone` to running the project?
+
+```
+1. Read README.md — extract setup instructions
+2. Count discrete steps (clone, install, config, build, run)
+3. Check: are ALL commands copy-pasteable? (no placeholders without explanation)
+4. Check: does `npm start` / `python main.py` / equivalent work immediately after install?
+5. If browser-pilot available: attempt to follow the README steps literally
+```
+
+| Steps to Run | Score | Verdict |
+|--------------|-------|---------|
+| 1-2 commands | 10/10 | Excellent — "clone and go" |
+| 3-4 commands | 7/10 | Good — reasonable setup |
+| 5-7 commands | 4/10 | Fair — friction will lose contributors |
+| 8+ commands | 2/10 | Poor — significant onboarding barrier |
+| Cannot run from README | 0/10 | Broken — README is lying or incomplete |
+
+### DX Principle 2: First-Time Setup Friction
+
+Check for common setup traps:
+
+- Missing `.env.example` → new dev has no idea what env vars are needed
+- Missing system dependency docs (e.g., needs Redis/Postgres but README doesn't say)
+- Node version mismatch (no `.nvmrc` or `engines` field)
+- Python version mismatch (no `python-version` in `pyproject.toml`)
+- Failing install on clean machine (native deps, missing build tools)
+- No `--help` or usage message when running CLI with no args
+
+Score: count friction points. 0 = 10/10, 1-2 = 7/10, 3-4 = 4/10, 5+ = 2/10.
+
+### DX Principle 3: Error Message Quality
+
+Sample 5 error paths in the codebase (auth failure, invalid input, missing config, network error, permission denied). For each:
+
+- Does the error message say WHAT went wrong? (not just "Error" or "Something went wrong")
+- Does it say WHY? (context: which input, which config key)
+- Does it suggest HOW to fix? (actionable: "set X in .env" not "check configuration")
+
+| Quality | Score |
+|---------|-------|
+| All 3 (what + why + how) | 10/10 |
+| What + why, no how | 6/10 |
+| What only | 3/10 |
+| Generic errors | 1/10 |
+
+### DX Principle 4: CLI Help Quality
+
+If project has a CLI entry point:
+
+```
+1. Run `<cli> --help` — capture output
+2. Check: does it list all commands with descriptions?
+3. Check: does each subcommand have `--help` with examples?
+4. Check: is there a quickstart example in help output?
+5. Check: are flags named predictably (--verbose not --v, --output not --o)?
+```
+
+Score: 2 points each for: command listing, subcommand help, examples, consistent naming, error on unknown flag.
+
+If no CLI: score as N/A (does not count toward total).
+
+### DX Principle 5: Documentation Navigation
+
+Can a developer find answers in under 60 seconds?
+
+- README has a table of contents or clear section headers
+- API endpoints / functions have a reference page or inline docs
+- Search works (if docs site): try 3 common queries
+- Cross-references between related concepts exist
+- No dead links (use `Grep` for `](` patterns and spot-check 5 links)
+
+If `browser-pilot` available: navigate the docs site, time how long to find "how to authenticate" and "how to deploy".
+
+### DX Principle 6: API Consistency
+
+For the top 10 exported functions / API endpoints:
+
+- Naming convention consistent? (all camelCase, or all snake_case — not mixed)
+- Return type pattern consistent? (all return `{ data, error }` or all throw — not mixed)
+- Parameter ordering consistent? (required first, optional last — across all functions)
+- HTTP methods correct? (GET for reads, POST for creates — no GET with side effects)
+
+Score: consistency percentage across the 10 sampled APIs.
+
+### DX Principle 7: Progressive Disclosure
+
+- Simple use case achievable with 1-3 lines of code? (check README examples)
+- Advanced config available but not required? (sensible defaults exist)
+- Configuration is layered? (env vars → config file → CLI flags → defaults)
+- Type hints / IDE completion available? (`d.ts` files, JSDoc, type stubs)
+
+### DX Principle 8: Recovery from Mistakes
+
+- Can the user undo/rollback? (migrations have `down`, deploys have rollback, git-based workflows)
+- Do destructive operations have confirmation prompts? (`--force` required for dangerous ops)
+- Are error states recoverable? (retry guidance, not just "failed")
+- Does `--dry-run` exist for risky operations?
+
+### DX Review Output
+
+```markdown
+## DX Review: [Project Name]
+
+| # | Principle | Score | Key Finding |
+|---|-----------|-------|-------------|
+| 1 | Time to Hello World | ?/10 | [steps count + blocker if any] |
+| 2 | Setup Friction | ?/10 | [friction points found] |
+| 3 | Error Messages | ?/10 | [quality level + worst example] |
+| 4 | CLI Help | ?/10 | [coverage + gaps] |
+| 5 | Doc Navigation | ?/10 | [findability + dead links] |
+| 6 | API Consistency | ?/10 | [consistency % + violations] |
+| 7 | Progressive Disclosure | ?/10 | [simple path exists? defaults?] |
+| 8 | Recovery | ?/10 | [undo/rollback/dry-run support] |
+| **Overall DX** | | **?/10** | **[verdict]** |
+
+### Quick Wins (fix in <1 hour)
+1. [specific, actionable improvement]
+2. [specific, actionable improvement]
+3. [specific, actionable improvement]
+
+### Structural Improvements (plan needed)
+1. [deeper change needed]
+```
+
+Grade thresholds: 9-10 Excellent DX, 7-8 Good DX, 5-6 Fair DX (losing contributors), 3-4 Poor DX (significant barrier), 1-2 Hostile DX.
+
+---
+
+### Final Report
+
+After all phases complete:
+
+Use `Write` to save `AUDIT-REPORT.md` to the project root with the full findings from all phases.
+
+Call `rune:journal` to record: audit date, overall health score, verdict, and CRITICAL count.
+
+## Weighted Composite Scoring
+
+Each dimension score feeds into a weighted composite formula that produces a single comparable health score. Use this formula to compute **Overall Health** — not a simple average.
+
+### Scoring Formula
+
+```
+Overall = (Security × 0.25) + (Code Quality × 0.20) + (Architecture × 0.15)
+        + (Dependencies × 0.15) + (Performance × 0.10) + (Infrastructure × 0.08)
+        + (Documentation × 0.07)
+```
+
+Mesh Analytics (Phase 8) is advisory — it contributes 0 to the weighted score but informs the verdict narrative.
+
+### Grade Thresholds
+
+| Score Range | Grade | Verdict | Action |
+|-------------|-------|---------|--------|
+| 90–100 | Excellent | PASS | Routine audit in 3 months |
+| 75–89 | Good | PASS | Address MEDIUM items next sprint |
+| 60–74 | Fair | WARNING | Fix HIGH items within 2 weeks |
+| 40–59 | Poor | FAIL | Fix CRITICAL + HIGH within 1 week |
+| 0–39 | Critical | FAIL | Emergency response — CRITICAL items block all new work |
+
+### Why Weighted (not average)
+
+Security issues cause exponential blast — a 3/10 security score with all other dimensions at 9/10 = overall 72 (Fair), not 8.1 (Good). The formula ensures security and code quality dominate the verdict. Comparable across runs: if Overall moves from 68 → 74 after fixes, the project measurably improved.
+
+
+## Severity Levels
+
+```
+CRITICAL — Must fix immediately. Security vulnerabilities, data loss, broken builds.
+HIGH     — Should fix soon. Performance bottlenecks, CVEs, major code smells.
+MEDIUM   — Plan to fix. Code duplication, missing tests, outdated deps.
+LOW      — Nice to have. Style inconsistencies, minor refactors, doc gaps.
+INFO     — Observation only. Architecture notes, tech debt acknowledgment.
+```
+
+Apply the Falsification Pass (`../review/SKILL.md` → Step 6): drop a finding only when what you read contains direct counter-evidence against its key claim — never merely because you are unsure. A finding you cannot disprove is reported and typed `ASSUMED` with the unchecked premise named. Consolidate similar issues (e.g., "12 functions missing error handling in src/services/" — not 12 separate findings). Adapt judgment to project type (a `console.log` in a CLI tool is fine; in a production API handler, it's not).
+
+## Output Format
+
+```
+## Audit Report: [Project Name]
+
+- **Verdict**: PASS | WARNING | FAIL
+- **Overall Health**: [score]/10
+- **Total Findings**: [n] (CRITICAL: [n], HIGH: [n], MEDIUM: [n], LOW: [n])
+- **Framework Checks Applied**: [list]
+
+### Health Score
+| Dimension      | Score    | Notes              |
+|----------------|:--------:|--------------------|
+| Security       |   ?/10   | [brief note]       |
+| Code Quality   |   ?/10   | [brief note]       |
+| Architecture   |   ?/10   | [brief note]       |
+| Performance    |   ?/10   | [brief note]       |
+| Dependencies   |   ?/10   | [brief note]       |
+| Infrastructure |   ?/10   | [brief note]       |
+| Documentation  |   ?/10   | [brief note]       |
+| Mesh Analytics |   ?/10   | [brief note]       |
+| **Overall**    | **?/10** | **[verdict]**      |
+
+### Phase Breakdown
+| Phase          | Issues |
+|----------------|--------|
+| Dependencies   | [n]    |
+| Security       | [n]    |
+| Code Quality   | [n]    |
+| Architecture   | [n]    |
+| Performance    | [n]    |
+| Infrastructure | [n]    |
+| Documentation  | [n]    |
+| Mesh Analytics | [n]    |
+
+### Composite Score
+- **Formula**: (Security×0.25) + (Code Quality×0.20) + (Architecture×0.15) + (Dependencies×0.15) + (Performance×0.10) + (Infrastructure×0.08) + (Documentation×0.07)
+- **Weighted Score**: [computed value] → Grade: [Excellent/Good/Fair/Poor/Critical]
+
+### Top Priority Actions
+1. [action] — [file:line] — [why it matters]
+
+### Positive Findings
+- [at least 3 things the project does well]
+
+### Follow-up Timeline
+- FAIL → re-audit in 1-2 weeks after CRITICAL fixes
+- WARNING → re-audit in 1 month
+- PASS → routine audit in 3 months
+
+Report saved to: AUDIT-REPORT.md
+```
+
+## Constraints
+
+1. MUST complete all 8 phases (Phase 8 may report "no data" if .rune/metrics/ doesn't exist yet) — if any phase is skipped, state explicitly which phase and why
+2. MUST delegate Phase 1 to dependency-doctor and Phase 2 to sentinel — no manual replacements
+3. MUST apply the Falsification Pass — drop findings only on direct counter-evidence, never on uncertainty; consolidate similar issues
+4. MUST include at least 3 positive findings — an audit with no positives is incomplete
+5. MUST produce quantified health scores (1-10 per dimension) — not vague "needs work"
+6. MUST NOT fabricate findings — every finding requires a specific file:line citation
+7. MUST save AUDIT-REPORT.md before declaring completion
+
+## Mesh Gates
+
+| Gate | Requires | If Missing |
+|------|----------|------------|
+| Discovery Gate | Phase 0 project profile completed before Phase 1 | Run scout and read config files first |
+| Security Gate | sentinel report received before assembling final report | Invoke rune:sentinel — do not skip |
+| Deps Gate | dependency-doctor report received before assembling final report | Invoke rune:dependency-doctor — do not skip |
+| Report Gate | All 8 phases completed before writing AUDIT-REPORT.md | Complete all phases, note skipped ones |
+
+## Returns
+
+| Artifact | Format | Location |
+|----------|--------|----------|
+| Audit report | Markdown | `AUDIT-REPORT.md` (project root) |
+| 8-dimension health score | Markdown table | `AUDIT-REPORT.md` + inline |
+| Weighted composite score + grade | Markdown | inline + `AUDIT-REPORT.md` |
+| Mesh analytics section | Markdown table | inline + `AUDIT-REPORT.md` |
+| Journal entry | Text | `.rune/adr/` (via `rune:journal`) |
+
+## Sharp Edges
+
+| Failure Mode | Severity | Mitigation |
+|---|---|---|
+| Generating health scores from file name patterns instead of actual reads | CRITICAL | Phase 0 scout run is mandatory — never score without reading actual code |
+| Skipping a phase because "there are no changes in that area" | HIGH | All 7 phases run for every audit — partial audits produce misleading scores |
+| Health score inflation — no negative findings in any dimension | MEDIUM | CONSTRAINT: minimum 3 positive AND 3 improvement areas required |
+| Dependency-doctor or sentinel sub-call times out → skipped silently | MEDIUM | Mark phase as "incomplete — tool timeout" with N/A score, do not fabricate |
+
+## Done When
+
+- All 8 phases completed (or explicitly marked N/A with reason)
+- Health score calculated from actual file reads per dimension (not estimated)
+- At least 3 positive findings and 3 improvement areas documented
+- AUDIT-REPORT.md written to project root
+- Journal entry recorded with audit date, score, and CRITICAL count
+- Structured report emitted with overall health score and verdict
+
+## Cost Profile
+
+~8000-20000 tokens input, ~3000-6000 tokens output. Sonnet orchestrating; sentinel (sonnet/opus) and autopsy (opus) are the expensive sub-calls. Full audit runs 4 sub-skills. Most thorough L2 skill — run on demand, not on every cycle.

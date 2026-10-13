@@ -1,0 +1,37 @@
+{
+  "name": "lians",
+  "repo": "Lians-ai/Lians",
+  "path": "skills/lians/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/Lians-ai/Lians",
+  "dir_name": "lians",
+  "downloaded_at": "2026-10-13T05:53:35.770444Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Lians-ai",
+  "source_url": "https://github.com/Lians-ai/Lians/blob/master/skills/lians/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Lians-ai/Lians/blob/master/skills/lians/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use Lians financial-grade agent memory - store and recall facts with a bitemporal model so stale revisions never contaminate context. Use whenever an agent needs persistent memory in finance, healthcare, or legal work, or when a task asks \"what did we know on/before <date>\", needs an audit trail, or must erase a data subject."
+}

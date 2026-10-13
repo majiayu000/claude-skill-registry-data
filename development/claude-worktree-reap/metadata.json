@@ -1,0 +1,37 @@
+{
+  "name": "claude-worktree-reap",
+  "repo": "NIMBUS-MX/nimbus-skills",
+  "path": "skills/claude-worktree-reap/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/NIMBUS-MX/nimbus-skills",
+  "dir_name": "claude-worktree-reap",
+  "downloaded_at": "2026-10-13T06:10:34.938035Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NIMBUS-MX",
+  "source_url": "https://github.com/NIMBUS-MX/nimbus-skills/blob/master/skills/claude-worktree-reap/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NIMBUS-MX/nimbus-skills/blob/master/skills/claude-worktree-reap/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Find Claude-created git worktrees in the current repo, write a human-readable PLAN file (path, size, danger notes) for the user to approve, delete the approved worktrees, write a RESULTS file (space saved, what was removed), then clean up both files once the user confirms. Two explicit confirmation gates, no auto-delete.\nTrigger this skill when: - User says \"reap claude worktrees\", \"clean up claude worktrees\", \"delete\n  claude worktrees\", \"purge worktrees\", or invokes `/claude-worktree-reap`.\n- A repo has accumulated stray worktrees from Claude Code isolated runs."
+}

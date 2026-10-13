@@ -1,0 +1,37 @@
+{
+  "name": "cclogs",
+  "repo": "Takazudo/claude-resources",
+  "path": "skills/cclogs/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Takazudo/claude-resources",
+  "dir_name": "cclogs",
+  "downloaded_at": "2026-10-13T06:52:10.020185Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Takazudo",
+  "source_url": "https://github.com/Takazudo/claude-resources/blob/main/skills/cclogs/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Takazudo/claude-resources/blob/main/skills/cclogs/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Load recent prototypes, logs, plans, and artifacts from the repo-scoped Dropbox-synced cclogs dir so work started in an earlier session can be continued. Use whenever the user invokes /cclogs, including inline forms like '/cclogs refer the recent prototype and continue \u2014 we need an STL enclosure' or 'the top page prototype is in /cclogs, do the next step'. Also use, without being asked, whenever the user refers to a prototype, plan, log, agent report, or generated artifact from a previous session as if it already exists \u2014 cclogs is where /big-plan, /x-wt-teams, /x-as-pr, and /protodev put those, and the user should never have to explain what cclogs is."
+}

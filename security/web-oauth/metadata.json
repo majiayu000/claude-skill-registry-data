@@ -1,0 +1,38 @@
+{
+  "name": "web-oauth",
+  "repo": "NoorQureshi/SploitAgent",
+  "path": "skills/web/web-oauth/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/NoorQureshi/SploitAgent",
+  "dir_name": "web-oauth",
+  "downloaded_at": "2026-10-13T06:18:19.396572Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, owasp",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "auth",
+      "owasp"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NoorQureshi",
+  "source_url": "https://github.com/NoorQureshi/SploitAgent/blob/main/skills/web/web-oauth/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NoorQureshi/SploitAgent/blob/main/skills/web/web-oauth/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Attack OAuth 2.0 / OIDC / SSO flows for account takeover. Load on \"Login with Google/GitHub\", /authorize, /callback, redirect_uri, state, code/token params, SAML/OIDC SSO. Signals: OAuth endpoints, redirect_uri handling, missing state, implicit flow, pre-account-linking."
+}

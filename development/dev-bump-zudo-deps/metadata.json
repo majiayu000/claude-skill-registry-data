@@ -1,0 +1,38 @@
+{
+  "name": "dev-bump-zudo-deps",
+  "repo": "Takazudo/claude-resources",
+  "path": "skills/dev-bump-zudo-deps/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Takazudo/claude-resources",
+  "dir_name": "dev-bump-zudo-deps",
+  "downloaded_at": "2026-10-13T06:52:17.527060Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Takazudo",
+  "source_url": "https://github.com/Takazudo/claude-resources/blob/main/skills/dev-bump-zudo-deps/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Takazudo/claude-resources/blob/main/skills/dev-bump-zudo-deps/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Bump every `@takazudo/*` registry dependency in the current project to its newest version, resolving each by the channel it currently tracks. Use when: (1) User says '/dev-bump-zudo-deps', 'bump zudo deps', 'bump the @takazudo packages', 'update zfb', 'update zudo-doc', or 'update the takazudo toolchain to latest', (2) A new `@takazudo/*` prerelease or release has shipped and this project should adopt it, (3) Routine first-party dependency-update rounds. Resolution rule: a dep currently on the `next` prerelease line (`0.1.0-next.N`) \u2192 newest `next` release; a dep on the literal `latest` tag \u2192 `dist-tags.latest`; a plain stable semver \u2192 newest stable. Skips `workspace:`/`file:`/`link:` specs and leaves operator style (exact / `^` / `~`) and prerelease channel intact. Beyond the version math, the skill assesses upstream impact per bump (changelog slice + code diff between the pinned and target versions) and also syncs vendored/generated artifacts tracked in a ZUDO_DEPS_PINS.md file (e.g. a zudo-doc scaffold or copied template HTML/CSS with no package.json pin). A bundled script does the discovery + semver resolution; this skill drives impact assessment + install + verify + report."
+}

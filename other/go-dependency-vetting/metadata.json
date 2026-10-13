@@ -1,0 +1,37 @@
+{
+  "name": "go-dependency-vetting",
+  "repo": "PremModhaOfficial/NFR-pipeline",
+  "path": "skills/go-dependency-vetting/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/PremModhaOfficial/NFR-pipeline",
+  "dir_name": "go-dependency-vetting",
+  "downloaded_at": "2026-10-13T06:27:39.197292Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "PremModhaOfficial",
+  "source_url": "https://github.com/PremModhaOfficial/NFR-pipeline/blob/main/skills/go-dependency-vetting/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/PremModhaOfficial/NFR-pipeline/blob/main/skills/go-dependency-vetting/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this when a PR diff adds a require line in go.mod, when justifying a new external dep, or when responding to an sdk-dep-vet-devil verdict. Covers the license/CVE/maintenance/size gate: govulncheck, osv-scanner, license allowlist, transitive count, last-commit-age, and the dependencies.md provenance contract that backs guardrails G31\u2013G34. Triggers: go get, dependency, govulncheck, osv-scanner, license, supply chain, new dep, go.mod, DD-, CVE."
+}

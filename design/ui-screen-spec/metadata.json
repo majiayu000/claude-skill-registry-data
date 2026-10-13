@@ -1,0 +1,38 @@
+{
+  "name": "ui-screen-spec",
+  "repo": "ThorStarlord/interface-skills",
+  "path": "skills/ui-screen-spec/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/ThorStarlord/interface-skills",
+  "dir_name": "ui-screen-spec",
+  "downloaded_at": "2026-10-13T06:57:24.537093Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, component",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ThorStarlord",
+  "source_url": "https://github.com/ThorStarlord/interface-skills/blob/main/skills/ui-screen-spec/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ThorStarlord/interface-skills/blob/main/skills/ui-screen-spec/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Turn an approved blueprint and system spec into a screen-level implementation contract \u2014 mapping components to regions, defining data dependencies, and specifying state ownership \u2014 before any component or code work begins. Use this skill after ui-blueprint and ui-system are approved, and before ui-component-spec. It is the missing bridge between layout decisions and implementation."
+}

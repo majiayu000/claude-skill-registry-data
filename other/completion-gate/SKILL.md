@@ -1,0 +1,352 @@
+---
+name: completion-gate
+description: "Validates agent claims against evidence trail. Use when verifying an agent has actually done what it claims — auto-fires at workflow end. Catches 'done' without proof, 'tests pass' without output, 'fixed' without verification. Called by cook and team."
+user-invocable: false
+metadata:
+  author: runedev
+  version: "1.10.0"
+  layer: L3
+  model: sonnet
+  group: validation
+  tools: "Read, Bash, Glob, Grep"
+---
+
+# completion-gate
+
+## Purpose
+
+The lie detector for agent claims. Validates that what an agent says it did actually happened — with evidence. Catches the #1 failure mode in AI coding: claiming completion without proof.
+
+<HARD-GATE>
+Every claim requires evidence. No evidence = UNCONFIRMED = BLOCK.
+"I ran the tests and they pass" without stdout = UNCONFIRMED.
+"I fixed the bug" without before/after diff = UNCONFIRMED.
+"Build succeeds" without build output = UNCONFIRMED.
+</HARD-GATE>
+
+## Triggers
+
+- Called by `cook` in Phase 5d (quality gate)
+- Called by `team` before merging stream results
+- Called by any skill that reports "done" to an orchestrator
+- Auto-trigger: when agent says "done", "complete", "fixed", "passing"
+
+## Calls (outbound)
+
+None — pure validator. Reads evidence, produces verdict.
+
+## Called By (inbound)
+
+- `cook` (L1): Phase 5d — validate completion claims before commit
+- `team` (L1): validate cook reports from parallel streams
+
+## Execution
+
+### Step 1 — Collect Claims
+
+Parse the agent's output for completion claims. Common claim patterns:
+
+```
+CLAIM PATTERNS:
+  "tests pass" / "all tests passing" / "test suite green"
+  "build succeeds" / "build complete" / "compiles clean"
+  "no lint errors" / "lint clean"
+  "fixed" / "resolved" / "bug is gone"
+  "implemented" / "feature complete" / "done"
+  "no security issues" / "sentinel passed"
+```
+
+Extract each claim as: `{ claim: string, source_skill: string }`
+
+### Step 1a — Type Each Claim (Claim Discipline)
+<MUST-READ path="references/claim-discipline.md" trigger="always — before matching evidence"/>
+
+Before hunting for evidence, type the claim by the grammar it was written in. **Hallucination is an unverified claim wearing the grammar of an observation** — the grammar is the tell, and it is readable in the sentence itself.
+
+| Type | Meaning | Grammar it may wear |
+|------|---------|---------------------|
+| **OBSERVED** | Seen this session: ran it, read it, measured it | "X is / does / returns …" |
+| **DERIVED** | Follows from OBSERVED facts via a statable mechanism | "X should / will / implies …" + the why |
+| **PRIOR** | Training knowledge, may be stale | "X is typically … / was, as of …" |
+| **ASSUMED** | Unverified and required by the conclusion | "I am assuming X — if wrong, then …" |
+
+This changes what the gate is looking for in Step 2:
+
+- **OBSERVED** → demands an evidence artifact. No artifact = FAIL. This is the existing gate.
+- **DERIVED** → demands the mechanism be stated, and its OBSERVED inputs to be present.
+- **PRIOR / ASSUMED** → **not a failure.** A claim honestly delivered as assumed is the correct output when the check was not run. Record it as an open item; never score it as a lie.
+
+<HARD-GATE>
+A hedge is not a defect. Do NOT fail a claim for being marked ASSUMED or PRIOR — fail it for
+wearing OBSERVED grammar with nothing behind it. Treating honest uncertainty as a failure
+teaches the next agent to delete its hedges, which is the exact behavior this gate exists to
+catch.
+</HARD-GATE>
+
+Claims are promoted only by tools — checking a PRIOR makes it OBSERVED. Restating it more confidently does not. Confidence that grew from effort, repetition or fluent prose resets to the last evidence-backed level.
+
+### Step 1b — Stub Detection (Existence Theater Check)
+
+Before checking claims, scan all files created/modified in this workflow for stubs:
+
+```
+Grep for stub patterns in new/modified files:
+- "Placeholder" | "TODO" | "Not implemented" | "NotImplementedError"
+- Functions with body: only `return null` / `return {}` / `pass` / `throw`
+- Components returning only a single div with no logic
+```
+
+If ANY stub detected:
+- Add synthetic claim: "implemented [filename]" → CONTRADICTED (file is a stub)
+- This catches agents that create files but don't implement them
+
+### Step 1c — Self-Validation Check
+
+If the skill that just ran has a `## Self-Validation` section, extract its checklist and treat each item as an implicit claim:
+
+```
+For each Self-Validation check in the skill's SKILL.md:
+  1. Read the check (e.g., "at least one assertion per test")
+  2. Look for evidence in tool output that this check was satisfied
+  3. If evidence found → add as CONFIRMED claim
+  4. If no evidence → add as UNCONFIRMED claim ("Self-Validation: [check] — no evidence")
+```
+
+Why: Self-Validation catches domain-specific quality issues that generic claim matching (Step 2) cannot detect. A test skill knows "no assertions = useless test" but completion-gate doesn't — unless the skill's Self-Validation tells it to check.
+
+<HARD-GATE>
+If a skill has Self-Validation and ANY check is UNCONFIRMED or CONTRADICTED → overall verdict cannot be CONFIRMED, even if all explicit claims pass.
+</HARD-GATE>
+
+### Step 1d — Execution Loop Audit
+
+Before validating claims, audit the agent's tool call pattern for execution loops that indicate the agent was stuck but didn't report it:
+
+**Classify the agent's tool calls** from this workflow into two categories:
+
+| Category | Tools | Expected in Phase 4 |
+|----------|-------|---------------------|
+| **Observation** | Read, Grep, Glob, Bash(grep/ls/cat) | <40% of calls |
+| **Effect** | Write, Edit, Bash(build/test/npm) | >60% of calls |
+
+**Loop patterns to detect**:
+
+| Pattern | Detection | Verdict Impact |
+|---------|-----------|----------------|
+| **Observation chain**: 6+ consecutive observation tools in Phase 4 | Count longest observation-only streak | Add WARN: "Agent had {N}-call observation streak during implementation — possible analysis paralysis" |
+| **Low effect ratio**: <20% effect calls during Phase 4 | `effect_calls / total_calls` | Add WARN: "Only {X}% of Phase 4 calls were writes — agent may have been stuck" |
+| **Repeating tool pattern**: Same tool+args called 3+ times | Hash tool+args, count duplicates | Add WARN: "Agent called {tool}({args}) {N} times — possible loop" |
+| **Budget overrun**: Phase 4 exceeded 50 tool calls for a single-file task | Count Phase 4 calls vs files changed | Add WARN: "50+ tool calls for {N} files changed — disproportionate effort" |
+
+**Scoring impact**: Loop warnings don't change individual claim verdicts but ARE included in the Completion Gate Report under a new `### Execution Efficiency` section. This gives the calling orchestrator signal about whether the agent's process was healthy, not just whether the output was correct.
+
+**Skip if**: Nano/Fast rigor — not enough tool calls to meaningfully analyze.
+
+### Step 2 — Match Evidence
+
+For each claim, look for corresponding evidence in the conversation context:
+
+| Claim Type | Required Evidence | Where to Find |
+|---|---|---|
+| "tests pass" | Test runner stdout with pass count | Shell output from test command |
+| "build succeeds" | Build command stdout showing success | Shell output from build command |
+| "lint clean" | Linter stdout (even if empty = 0 errors) | Shell output from lint command |
+| "fixed" | Git diff showing the change + test proving fix | File-edit evidence + test output |
+| "implemented" | Files created/modified matching the plan | File changes compared with the plan |
+| "no security issues" | Sentinel report with PASS verdict | Sentinel skill output |
+| "coverage ≥ X%" | Coverage tool output with actual percentage | Test runner with coverage flag |
+
+### Step 3 — Validate Each Claim (Default-FAIL Mindset)
+
+<HARD-GATE>
+Default posture is FAIL, not PASS. Actively seek 3-5 issues per review.
+Zero issues found = red flag — look harder, not a sign of quality.
+This prevents rubber-stamping where the gate confirms everything without scrutiny.
+</HARD-GATE>
+
+
+For each claim + evidence pair:
+
+```
+IF evidence exists AND evidence supports claim:
+  → CONFIRMED
+IF evidence exists BUT contradicts claim:
+  → CONTRADICTED (most serious — agent is wrong)
+IF no evidence found AND claim was typed PRIOR/ASSUMED (Step 1a):
+  → DECLARED (honest gap — record as an open item, not a failure)
+IF no evidence found AND claim wore OBSERVED grammar:
+  → UNCONFIRMED (the claim asserted more than the agent checked)
+```
+
+**3-Axis verification** — categorize each claim into one of three axes, then ensure all axes are covered:
+
+| Axis | Question | Example Claims |
+|------|----------|----------------|
+| **Completeness** | Were all planned tasks done? All specs implemented? | "implemented feature X", "all TODO items done", "migration created" |
+| **Correctness** | Does output match spec intent? Do tests verify real behavior? | "tests pass", "build succeeds", "lint clean", "fixed the bug" |
+| **Coherence** | Does it follow project patterns? Consistent with existing code? | "follows conventions", "uses existing patterns", "no new deps needed" |
+
+If an axis has ZERO claims → flag as gap: "No [Completeness/Correctness/Coherence] evidence found — agent may have skipped this dimension."
+
+**Adversarial validation checklist** (run AFTER initial verdicts):
+1. Re-read each CONFIRMED claim — is the evidence actually proving THIS claim, or a different one?
+2. Check for **partial completion** — did the agent do 80% but claim 100%? (e.g., "implemented feature" but only the happy path)
+3. Check for **scope mismatch** — does the evidence prove the SPECIFIC claim or a broader/narrower version?
+4. If all claims are CONFIRMED on first pass, apply **skeptic sweep**: re-examine the weakest 2 claims with heightened scrutiny
+5. Check **axis coverage** — are all 3 axes (Completeness/Correctness/Coherence) represented? Missing axis = investigation gap
+
+### Step 4 — Report
+
+```
+## Completion Gate Report
+- **Status**: CONFIRMED | UNCONFIRMED | CONTRADICTED
+- **Claims Checked**: [count]
+- **Confirmed**: [count] | **Unconfirmed**: [count] | **Contradicted**: [count] | **Declared**: [count]
+
+### Claim Validation
+| # | Claim | Type | Evidence | Verdict |
+|---|---|---|---|---|
+| 1 | "All tests pass" | OBSERVED | Bash: `npm test` → "42 passed, 0 failed" | CONFIRMED |
+| 2 | "Build succeeds" | OBSERVED | No build command output found | UNCONFIRMED |
+| 3 | "No lint errors" | OBSERVED | Bash: `npm run lint` → "3 errors" | CONTRADICTED |
+| 4 | "Assuming the migration already ran in staging" | ASSUMED | — (declared, not claimed) | DECLARED |
+
+### Gaps (if any)
+- Claim 2: Re-run `npm run build` and capture output
+- Claim 3: Agent claimed clean but lint shows 3 errors — fix required
+
+### Open (declared, not failures)
+- Claim 4: Verify the staging migration before this reaches prod
+
+### Verdict
+UNCONFIRMED — 1 claim lacks evidence, 1 contradicted. Cannot proceed to commit. (1 declared assumption carried forward — not blocking.)
+```
+
+### Step 4.5 — Integration Check (Cross-Phase + Cross-Layer)
+
+Check for integration gaps — between phases AND between layers:
+
+1. **Orphaned exports** — files/functions created in this phase that claim to be used by future phases (see `## Cross-Phase Context → Exports`) but are not yet importable:
+   ```
+   Grep for the export name in the current codebase:
+   - If export exists AND is importable → CONFIRMED
+   - If export exists but has wrong signature vs phase file contract → CONTRADICTED
+   - Expected export missing entirely → UNCONFIRMED ("Phase N claims to export X but X not found")
+   ```
+
+2. **Uncalled routes** — API endpoints added in this task but not wired to any frontend/consumer:
+   - **BLOCK** if the route was created in THIS task AND a user story/AC references the interaction it serves — an uncalled route behind a story's UI is a dead path, not future work
+   - WARN (deferral allowed) ONLY if a NAMED future-phase task explicitly references consuming this route (verifiable in the master plan/phase files — "a future phase will handle it" without a task ID is not an excuse)
+
+3. **Auth gaps** — new endpoints or pages without authentication/authorization:
+   - `Grep` for route handlers without auth middleware
+   - Flag as WARN (may be intentional for public endpoints, but worth checking)
+
+4. **E2E flow trace** — for the primary user flow this task enables:
+   - Trace: entry point → handler → business logic → data layer → response
+   - If any step in the chain is missing or stubbed → CONTRADICTED
+
+**When this step is MANDATORY** (any one triggers it — single-phase tasks included):
+- The diff touches BOTH a UI file (`.tsx/.jsx/.vue/.svelte/.html`) AND an api/service/data file — where "api/service/data file" = any file whose path contains a segment from: `api`, `routes`, `handlers`, `services`, `service`, `stores`, `store`, `db`, `database`, `models`, `repositories`, `repo`, `queries` — OR any file exporting functions matching `create*`/`update*`/`delete*`/`fetch*`/`save*`/`post*` verb patterns
+- The feature spec has a `## Key Entities` section
+- The task description contains any of these exact words: `click`, `submit`, `save`, `login`, `signup`, `search`, `checkout`, `upload`, `delete`, `order`, `pay` — EXCEPT when the phrase is explicitly local-only ("save to clipboard", "save locally", "client-side only")
+- Multi-phase master plan (always, as before)
+
+Skip ONLY when none of the above hold (pure-UI styling, pure-backend plumbing, docs/config).
+"Single-phase" is NOT a skip reason — most dead-button escapes are single-phase tasks.
+
+**De-dup**: if preflight (Step 4/4.5) or verification (Level 3.5) already flagged the same element/route in this session, cite the cross-reference instead of emitting a duplicate finding — one dead button = one finding + cross-refs, not three findings.
+
+### Step 5 — Evidence Quality Gate
+
+Before emitting verdict, verify evidence quality:
+
+1. **IDENTIFY** — list every claim the agent made (Step 1 output)
+2. **RUN** — confirm verification commands were actually executed (not just planned)
+3. **READ** — read every line of command output (not just exit code)
+4. **VERIFY** — match each claim to a specific evidence quote (file:line or output snippet)
+5. **CLAIM** — only mark CONFIRMED if evidence quote directly supports the claim
+
+| Evidence Quality | Verdict |
+|-----------------|---------|
+| Exit code 0 only, no output read | INSUFFICIENT — re-run and read output |
+| Output read but no quote matched to claim | UNCONFIRMED — cite specific evidence |
+| Quote matches claim exactly | CONFIRMED |
+| Quote contradicts claim | CONTRADICTED |
+
+### Step 5.5 — Plan Diff Check
+
+When validating a phase within a master plan, diff actual changes against the phase plan file:
+
+1. **Read the active phase plan** — `Glob` for `.rune/plan-*-phase*.md` matching the current phase
+2. **Extract `## Files Touched`** — build a list of expected files (new/modify/delete)
+3. **Extract `## Tasks`** — build a list of all `- [ ]` and `- [x]` items
+4. **Compare against actual changes** — `git diff --name-only` (or file system scan)
+5. **Report**:
+
+| Check | Status |
+|-------|--------|
+| Unchecked task in phase plan (`- [ ]` still exists) | **INCOMPLETE** — task was not done |
+| File in plan's "Files Touched" but not in actual diff | **MISSING** — planned file was never touched |
+| File in actual diff but NOT in plan's "Files Touched" | **UNPLANNED** — scope creep (warn, not block) |
+| All tasks `[x]` AND all planned files touched | **PLAN-ALIGNED** |
+
+```
+Plan Diff: PLAN-ALIGNED | INCOMPLETE (2 unchecked tasks) | MISSING (1 file never touched)
+```
+
+**Skip if**: No active phase plan found (single-task, no master plan). **MANDATORY** for multi-phase master plans.
+
+## Verdict Rules
+
+```
+ALL claims CONFIRMED         → overall CONFIRMED (proceed)
+ANY claim CONTRADICTED       → overall CONTRADICTED (BLOCK — fix the contradiction)
+ANY claim UNCONFIRMED        → overall UNCONFIRMED (BLOCK — provide evidence)
+  (no CONTRADICTED)
+```
+
+## Output Format
+
+Completion Gate Report with status (CONFIRMED/UNCONFIRMED/CONTRADICTED), claim validation table, gaps, and verdict. See Step 4 Report above for full template.
+
+## Constraints
+
+1. MUST check every completion claim against actual tool output — not agent narrative
+2. MUST flag missing evidence as UNCONFIRMED — absence of proof is not proof of absence
+3. MUST flag contradictions as CONTRADICTED — this is more serious than missing evidence
+4. MUST NOT accept "I verified it" as evidence — show the command output
+5. MUST be fast (haiku) — this runs on every cook completion
+
+## Sharp Edges
+
+| Failure Mode | Severity | Mitigation |
+|---|---|---|
+| Agent rephrases claim to avoid detection | MEDIUM | Pattern matching covers common phrasings — extend as new patterns emerge |
+| Evidence from a DIFFERENT test run (stale) | HIGH | Check that evidence timestamp/context matches current changes |
+| Agent pre-generates evidence by running commands proactively | LOW | This is actually GOOD behavior — we want agents to provide evidence |
+| Completion-gate itself claims "all confirmed" without evidence | CRITICAL | Gate report MUST include the evidence table — no table = report is invalid |
+| Existence Theater — agent creates files but they're stubs | HIGH | Step 1b stub detection: grep for Placeholder/TODO/NotImplementedError in new files |
+| Cross-phase integration gaps — exports exist but wrong signature | HIGH | Step 4.5: verify exports match Code Contracts from phase file |
+| Phase complete but E2E flow broken — missing link in the chain | HIGH | Step 4.5 E2E flow trace: entry → handler → logic → data → response must all be connected |
+| Skipping Step 4.5 because the task is single-phase | CRITICAL | Mandatory triggers: UI+data diff, Key Entities in spec, or interaction-implying task — single-phase is where most dead buttons escape |
+| Excusing an uncalled route with "a future phase will wire it" (no task named) | HIGH | Step 4.5 #2: deferral requires a NAMED future-phase task referencing the route — vibes-deferral = BLOCK |
+| Rubber-stamping — all CONFIRMED without scrutiny | HIGH | Default-FAIL mindset: actively seek 3-5 issues. Zero issues = red flag, apply skeptic sweep on weakest 2 claims |
+| Partial completion claimed as full — 80% done but "implemented" | HIGH | Adversarial checklist: check for partial completion, scope mismatch, evidence-claim alignment |
+| Self-Validation skipped — skill has checks but gate ignores them | HIGH | Step 1c: extract Self-Validation from skill's SKILL.md, treat each as implicit claim. Missing = UNCONFIRMED |
+| Plan says done but phase file has unchecked tasks | HIGH | Step 5.5: diff changed files vs phase plan's Files Touched + Tasks sections |
+| Agent stuck in observation loop but claims "implemented" | HIGH | Step 1d: Execution Loop Audit detects low effect ratio and observation chains — flags in report even if claims pass |
+
+## Done When
+
+- All completion claims extracted from agent output
+- Each claim matched against tool output evidence
+- Verdict table emitted with claim/evidence/verdict for each item
+- All 3 verification axes (Completeness/Correctness/Coherence) have at least one claim checked
+- Plan diff check passed (if multi-phase): all tasks checked, all planned files touched
+- Overall verdict: CONFIRMED / UNCONFIRMED / CONTRADICTED
+- If not CONFIRMED: specific gaps listed with remediation steps
+
+## Cost Profile
+
+~500-1000 tokens input, ~200-500 tokens output. Haiku for speed. Runs frequently as part of cook's quality phase.

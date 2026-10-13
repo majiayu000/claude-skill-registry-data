@@ -1,0 +1,37 @@
+{
+  "name": "ui-path-radar",
+  "repo": "Terryc21/radar-suite",
+  "path": "skills/ui-path-radar/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Terryc21/radar-suite",
+  "dir_name": "ui-path-radar",
+  "downloaded_at": "2026-10-13T06:54:29.901733Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ui",
+      "ux"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Terryc21",
+  "source_url": "https://github.com/Terryc21/radar-suite/blob/main/skills/ui-path-radar/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Terryc21/radar-suite/blob/main/skills/ui-path-radar/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "UI path tracer for SwiftUI/UIKit apps. 5-layer audit with 34 issue categories and 19 automated checks: discover entry points, trace flows, detect dead ends and broken promises, evaluate UX impact, verify data wiring. Supports targeted trace, diff against previous audits, and handoff to planning skills. Triggers: \"trace UI paths\", \"find dead ends\", \"/ui-path-radar\"."
+}

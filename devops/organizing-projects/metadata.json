@@ -1,0 +1,40 @@
+{
+  "name": "organizing-projects",
+  "repo": "Krosebrook/loxihart-skills",
+  "path": "plugins/loxihart-engineering/skills/organizing-projects/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/Krosebrook/loxihart-skills",
+  "dir_name": "organizing-projects",
+  "downloaded_at": "2026-10-13T05:49:20.305377Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: ci, docker, deploy, infra, infrastructure",
+    "score": 5,
+    "runner_up": "development",
+    "runner_up_score": 4,
+    "signals": [
+      "ci",
+      "docker",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Krosebrook",
+  "source_url": "https://github.com/Krosebrook/loxihart-skills/blob/main/plugins/loxihart-engineering/skills/organizing-projects/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Krosebrook/loxihart-skills/blob/main/plugins/loxihart-engineering/skills/organizing-projects/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Analyze, reorganize, and scaffold project repositories \u2014 structure audits, convention enforcement, migration planning, and new project scaffolding. Use this skill whenever someone asks about repo or codebase organization, project folder layout, naming conventions, monorepo decisions, file placement hygiene, structural debt, dead code, or how to start a new project with good structure. Triggers on: organize this project, clean up the repo, audit my structure, is this well organized, should this be a monorepo, fix my naming, restructure without breaking things, best layout for a new X project, scaffold a framework project, what folder structure should I use, or any question about where files should live. Even if the user mentions their codebase feels messy or asks about project conventions, use this skill."
+}

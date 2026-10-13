@@ -1,0 +1,37 @@
+{
+  "name": "big-plan",
+  "repo": "Takazudo/claude-resources",
+  "path": "skills/big-plan/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Takazudo/claude-resources",
+  "dir_name": "big-plan",
+  "downloaded_at": "2026-10-13T06:52:11.374823Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Takazudo",
+  "source_url": "https://github.com/Takazudo/claude-resources/blob/main/skills/big-plan/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Takazudo/claude-resources/blob/main/skills/big-plan/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Plan implementation as one epic plus concrete child issues, with review, verification, local mode, resource handoff, UI prototyping (-pr runs a rough-UI build/feedback loop BEFORE planning, merging the by-hand /protodev \u2192 feedback \u2192 /big-plan sequence into one invocation), and explicit issue-sweep support (including the -isask interview sweep that revisits previously-postponed issues). Use for /big-plan, implementation planning/decomposition, UI polish or new-feature UI brainstorming that should end in a plan, or existing issues that need a durable parallel-work handoff. Under -a/--auto, ordinary design, scoping, architecture, and branch choices are delegated to the agent; only a concrete unmitigated operational hazard or genuinely non-executable plan may pause the chain \u2014 the -pr feedback checkpoint is the one gate -a, -nor, and -po never suppress."
+}

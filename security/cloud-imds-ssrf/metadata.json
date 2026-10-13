@@ -1,0 +1,38 @@
+{
+  "name": "cloud-imds-ssrf",
+  "repo": "NoorQureshi/SploitAgent",
+  "path": "skills/cloud/cloud-imds-ssrf/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/NoorQureshi/SploitAgent",
+  "dir_name": "cloud-imds-ssrf",
+  "downloaded_at": "2026-10-13T06:17:57.240599Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, owasp, pentest",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "owasp",
+      "pentest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NoorQureshi",
+  "source_url": "https://github.com/NoorQureshi/SploitAgent/blob/main/skills/cloud/cloud-imds-ssrf/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NoorQureshi/SploitAgent/blob/main/skills/cloud/cloud-imds-ssrf/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Escalate SSRF to cloud credential theft via the instance metadata service (IMDS). Load when SSRF is confirmed AND the target runs on AWS/GCP/Azure. Signals: 169.254.169.254 reachable, cloud-hosted app, SSRF that can set arbitrary Host/headers, \"metadata\"."
+}

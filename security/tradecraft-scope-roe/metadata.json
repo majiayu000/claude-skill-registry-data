@@ -1,0 +1,38 @@
+{
+  "name": "tradecraft-scope-roe",
+  "repo": "NoorQureshi/SploitAgent",
+  "path": "skills/tradecraft/tradecraft-scope-roe/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/NoorQureshi/SploitAgent",
+  "dir_name": "tradecraft-scope-roe",
+  "downloaded_at": "2026-10-13T06:18:15.248810Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, pentest",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "auth",
+      "pentest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NoorQureshi",
+  "source_url": "https://github.com/NoorQureshi/SploitAgent/blob/main/skills/tradecraft/tradecraft-scope-roe/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NoorQureshi/SploitAgent/blob/main/skills/tradecraft/tradecraft-scope-roe/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Establish and enforce the authorization envelope before any testing \u2014 the scope rule that governs everything. Load FIRST on every engagement, on \"start\", a new target, a program handle, or any ambiguity about what is allowed. Signals: a domain/IP to test, a bug-bounty program handle, a pentest statement of work, a scope list."
+}

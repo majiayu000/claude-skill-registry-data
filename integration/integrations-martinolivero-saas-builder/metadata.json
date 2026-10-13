@@ -1,0 +1,38 @@
+{
+  "name": "integrations",
+  "repo": "MartinOlivero/saas-builder",
+  "path": "skills/integrations/SKILL.md",
+  "github_branch": "main",
+  "category": "integration",
+  "source": "github.com/MartinOlivero/saas-builder",
+  "dir_name": "integrations-martinolivero-saas-builder",
+  "downloaded_at": "2026-10-13T06:03:01.767325Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "integration",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for integration: integration, webhook, oauth",
+    "score": 3,
+    "runner_up": "communication",
+    "runner_up_score": 2,
+    "signals": [
+      "integration",
+      "webhook",
+      "oauth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MartinOlivero",
+  "source_url": "https://github.com/MartinOlivero/saas-builder/blob/main/skills/integrations/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MartinOlivero/saas-builder/blob/main/skills/integrations/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "This skill should be used when the product talks to a platform you do not control \u2014 receiving webhooks, syncing with a CRM, ERP, e-commerce or calendar API, connecting a user's Google or Meta account over OAuth, sending through WhatsApp or another messaging API, or sending transactional email. Trigger phrases (English) include \"integrate with\", \"connect to the X API\", \"receive a webhook\", \"the webhook isn't firing\", \"sync with\", \"import from their API\", \"OAuth with Google\", \"refresh token\", \"send transactional email\", \"their API returns\", \"pagination\". Trigger phrases (Spanish) include \"integrar con\", \"conectar con la API de\", \"recibir un webhook\", \"el webhook no llega\", \"sincronizar con\", \"importar desde su API\", \"conectar la cuenta de Google\", \"mandar mails transaccionales\". It designs the integration so that a third party being late, wrong, duplicated or down does not corrupt your data or fail silently. For Stripe and payment webhooks specifically, use `payments`."
+}

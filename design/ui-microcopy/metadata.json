@@ -1,0 +1,38 @@
+{
+  "name": "ui-microcopy",
+  "repo": "ThorStarlord/interface-skills",
+  "path": "skills/ui-microcopy/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/ThorStarlord/interface-skills",
+  "dir_name": "ui-microcopy",
+  "downloaded_at": "2026-10-13T06:57:23.355439Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: ui, ux, component",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "ui",
+      "ux",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ThorStarlord",
+  "source_url": "https://github.com/ThorStarlord/interface-skills/blob/main/skills/ui-microcopy/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ThorStarlord/interface-skills/blob/main/skills/ui-microcopy/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write or refine UX copy \u2014 button labels, error messages, empty-state text, tooltips, helper text, loading messages, confirmation dialogs \u2014 to be specific, action-oriented, and consistent in voice. Use this skill whenever the user wants to review or improve the wording in a UI, when generated copy sounds robotic or generic (e.g. plain \"Submit\" buttons, \"Invalid input\" errors, \"No data\" empty states), when a brief has been written but the implementation language hasn't been decided, or as a step before ui-generate-code so the copy in the generated UI is intentional rather than default. Always use it on any UI where the user describes the audience as non-technical, because default AI copy is heavily skewed toward developer voice."
+}

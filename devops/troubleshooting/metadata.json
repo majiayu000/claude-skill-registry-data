@@ -1,0 +1,40 @@
+{
+  "name": "troubleshooting",
+  "repo": "Shannuu2409/agentops-kit",
+  "path": "skills/extras/troubleshooting/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/Shannuu2409/agentops-kit",
+  "dir_name": "troubleshooting",
+  "downloaded_at": "2026-10-13T06:43:18.118188Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: devops, ci, docker, kubernetes, deploy",
+    "score": 5,
+    "runner_up": "forensics",
+    "runner_up_score": 3,
+    "signals": [
+      "devops",
+      "ci",
+      "docker",
+      "kubernetes",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Shannuu2409",
+  "source_url": "https://github.com/Shannuu2409/agentops-kit/blob/main/skills/extras/troubleshooting/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Shannuu2409/agentops-kit/blob/main/skills/extras/troubleshooting/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "DevOps troubleshooting runbooks for Docker, Kubernetes CrashLoopBackOff/OOMKilled/ImagePullBackOff, GitHub Actions, DNS, SSL, Kong, Nginx, 502/503/504, databases, and performance bottlenecks. Use when diagnosing production or CI failures."
+}

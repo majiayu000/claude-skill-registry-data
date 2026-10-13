@@ -1,0 +1,39 @@
+{
+  "name": "shipping-cowork-live-artifacts",
+  "repo": "Krosebrook/loxihart-skills",
+  "path": "plugins/loxihart-design/skills/shipping-cowork-live-artifacts/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/Krosebrook/loxihart-skills",
+  "dir_name": "shipping-cowork-live-artifacts",
+  "downloaded_at": "2026-10-13T05:49:24.078704Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: pdf, xlsx, docx, markdown",
+    "score": 4,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "pdf",
+      "xlsx",
+      "docx",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Krosebrook",
+  "source_url": "https://github.com/Krosebrook/loxihart-skills/blob/main/plugins/loxihart-design/skills/shipping-cowork-live-artifacts/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Krosebrook/loxihart-skills/blob/main/plugins/loxihart-design/skills/shipping-cowork-live-artifacts/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use whenever the user says \"make this a live artifact\", \"make my [thing] a live artifact\", \"add file upload to my artifact\", \"add a zip import suite\", \"let me upload PDFs/docx/spreadsheets to this\" \u2014 even if \"live artifact\" isn't said and an HTML file is just attached with a ship/persist instruction. Also triggers on: add PDF/DOCX/XLSX parsing to an artifact, batch zip import, keep the artifact self-contained (no CDN), smoke-test an artifact before shipping, headless Playwright check on an HTML artifact. Not for scaffolding a new React/shadcn artifact from scratch (use web-artifacts-builder) or FlashFusion dashboards (use building-flashfusion-live-artifacts)."
+}

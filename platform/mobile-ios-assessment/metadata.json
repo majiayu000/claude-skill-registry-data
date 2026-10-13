@@ -1,0 +1,38 @@
+{
+  "name": "mobile-ios-assessment",
+  "repo": "NoorQureshi/SploitAgent",
+  "path": "skills/mobile/mobile-ios-assessment/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/NoorQureshi/SploitAgent",
+  "dir_name": "mobile-ios-assessment",
+  "downloaded_at": "2026-10-13T06:18:05.260918Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: device, android, ios",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "device",
+      "android",
+      "ios"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NoorQureshi",
+  "source_url": "https://github.com/NoorQureshi/SploitAgent/blob/main/skills/mobile/mobile-ios-assessment/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NoorQureshi/SploitAgent/blob/main/skills/mobile/mobile-ios-assessment/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Assess an iOS app (static + dynamic). Load when the target is an IPA / iOS app, an iOS bug-bounty scope, or \"test the iOS app\". Signals: .ipa, Info.plist, Swift/Obj-C, Keychain, URL schemes, ATS exceptions, Frida/objection on a jailbroken device."
+}

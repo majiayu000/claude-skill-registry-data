@@ -1,0 +1,37 @@
+{
+  "name": "full-flow-demo",
+  "repo": "LNC0831/oh-my-fpga",
+  "path": "skills/full-flow-demo/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/LNC0831/oh-my-fpga",
+  "dir_name": "full-flow-demo",
+  "downloaded_at": "2026-10-13T05:50:22.820430Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LNC0831",
+  "source_url": "https://github.com/LNC0831/oh-my-fpga/blob/main/skills/full-flow-demo/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LNC0831/oh-my-fpga/blob/main/skills/full-flow-demo/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Drive a Xilinx FPGA design end-to-end through the complete build flow: RTL -> simulation -> synthesis -> implementation -> bitstream, with a verification gate after every stage so a downstream stage never runs on an upstream stage that silently regressed. Invoke this skill when the user says \"rtl to bitstream\", \"end to end\", \"full flow\", \"run everything\", \"build the whole thing\", \"take this design all the way to a .bit\", \"complete build\", or asks to drive a project from source files to a programmed/exportable bitstream in one orchestrated pass. Requires the SynthPilot MCP server connected to an open Vivado session with the Tcl server (tcl_server.tcl on TCP:9999) running. This is the ORCHESTRATION playbook: it sequences the real flow tools, gates each stage on fresh tool evidence, stops on the first real failure, and hands off to the specialist skills (timing-closure, cdc-analysis, lint, simulation-debug) instead of trying to fix violations itself."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "sdk-semver-governance",
+  "repo": "PremModhaOfficial/NFR-pipeline",
+  "path": "skills/sdk-semver-governance/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/PremModhaOfficial/NFR-pipeline",
+  "dir_name": "sdk-semver-governance",
+  "downloaded_at": "2026-10-13T06:27:39.041501Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "PremModhaOfficial",
+  "source_url": "https://github.com/PremModhaOfficial/NFR-pipeline/blob/main/skills/sdk-semver-governance/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/PremModhaOfficial/NFR-pipeline/blob/main/skills/sdk-semver-governance/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this when classifying a public-API diff into patch / minor / major \u2014 reading the current API manifest against the proposed API stub, applying language-adapter-specific compatibility rules (added symbols, struct/class field changes, interface/Protocol expansion, sentinel add/remove, exception hierarchy changes), and verifying TPRD \u00a712 declares the matching bump. Triggers: semver, major, minor, patch, breaking, api-surface, stable-since, gorelease, griffe, TPRD-\u00a712."
+}

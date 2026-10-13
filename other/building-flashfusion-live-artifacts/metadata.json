@@ -1,0 +1,38 @@
+{
+  "name": "building-flashfusion-live-artifacts",
+  "repo": "Krosebrook/loxihart-skills",
+  "path": "plugins/loxihart-design/skills/building-flashfusion-live-artifacts/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Krosebrook/loxihart-skills",
+  "dir_name": "building-flashfusion-live-artifacts",
+  "downloaded_at": "2026-10-13T05:49:25.797947Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ux",
+      "css"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Krosebrook",
+  "source_url": "https://github.com/Krosebrook/loxihart-skills/blob/main/plugins/loxihart-design/skills/building-flashfusion-live-artifacts/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Krosebrook/loxihart-skills/blob/main/plugins/loxihart-design/skills/building-flashfusion-live-artifacts/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Builds, patches, and registers the FlashFusion Agent Control Center as a Cowork live artifact \u2014 void-dark dashboard with semi-transparent blur panels, live Supabase data, and per-panel Demo fallback. Activates on build the FlashFusion artifact, rebuild the control center, add a panel to the dashboard, the artifact is broken, update FlashFusion dashboard, patch the agent dashboard, fix the live connection, update brand tokens, ff artifact, ff dashboard, agent control panel, agent control center, demo mode artifact, approval queue panel, HITL queue dashboard, live agent view, ChaosClubCo dashboard. Fires on dashboard or control-center requests in the FlashFusion context even when FlashFusion or artifact is not named. PERSONAL lane only \u2014 never run on LOXIHART tasks."
+}

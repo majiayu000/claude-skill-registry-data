@@ -1,0 +1,37 @@
+{
+  "name": "swap-event-transport",
+  "repo": "ManasMadan/boilerplate",
+  "path": ".claude/skills/swap-event-transport/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/ManasMadan/boilerplate",
+  "dir_name": "swap-event-transport",
+  "downloaded_at": "2026-10-13T06:01:38.599777Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=2, integration=2",
+    "score": 2,
+    "runner_up": "integration",
+    "runner_up_score": 2,
+    "signals": [
+      "docker",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ManasMadan",
+  "source_url": "https://github.com/ManasMadan/boilerplate/blob/master/.claude/skills/swap-event-transport/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ManasMadan/boilerplate/blob/master/.claude/skills/swap-event-transport/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Move domain events from BullMQ queues to a log-based broker (Kafka, Redpanda, NATS JetStream). Use when the user decides event volume, ordering, replay or fan-out has outgrown Redis queues, or asks about changing the event bus. Not for debugging; when something fails, use the debug skill."
+}

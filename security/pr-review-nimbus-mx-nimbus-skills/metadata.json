@@ -1,0 +1,38 @@
+{
+  "name": "pr-review",
+  "repo": "NIMBUS-MX/nimbus-skills",
+  "path": "skills/pr-review/SKILL.md",
+  "github_branch": "master",
+  "category": "security",
+  "source": "github.com/NIMBUS-MX/nimbus-skills",
+  "dir_name": "pr-review-nimbus-mx-nimbus-skills",
+  "downloaded_at": "2026-10-13T06:10:30.581391Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NIMBUS-MX",
+  "source_url": "https://github.com/NIMBUS-MX/nimbus-skills/blob/master/skills/pr-review/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NIMBUS-MX/nimbus-skills/blob/master/skills/pr-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Fast, one-line-per-finding PR review. Severity-tagged, no praise, no scope creep. Written in the Nimbus caveman format so the output stays scannable.\nTrigger this skill when: - User says \"review this PR\", \"review the diff\", \"audit this file\", or invokes\n  `/pr-review`.\n- After a `gh pr diff` or a `git diff` the user pastes. - Before merging a PR the user wants a second opinion on."
+}

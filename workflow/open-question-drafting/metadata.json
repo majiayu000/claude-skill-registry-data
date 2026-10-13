@@ -1,0 +1,37 @@
+{
+  "name": "open-question-drafting",
+  "repo": "Quang-Dobe/POC",
+  "path": ".claude/skills/open-question-drafting/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/Quang-Dobe/POC",
+  "dir_name": "open-question-drafting",
+  "downloaded_at": "2026-10-13T06:29:57.769608Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, pipeline",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Quang-Dobe",
+  "source_url": "https://github.com/Quang-Dobe/POC/blob/main/.claude/skills/open-question-drafting/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Quang-Dobe/POC/blob/main/.claude/skills/open-question-drafting/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Draft the open-question punch list + rule-implication checklist for an upcoming requirement step, before any implementation begins. Surfaces questions; never answers or codes. Used by the workflow-step-planner agent at /workflow:step-start."
+}

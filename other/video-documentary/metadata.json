@@ -1,0 +1,36 @@
+{
+  "name": "video-documentary",
+  "repo": "Littlpinguin/marketing-cockpit-template",
+  "path": ".claude/skills/video-documentary/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Littlpinguin/marketing-cockpit-template",
+  "dir_name": "video-documentary",
+  "downloaded_at": "2026-10-13T05:55:34.358506Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category api scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "api"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Littlpinguin",
+  "source_url": "https://github.com/Littlpinguin/marketing-cockpit-template/blob/main/.claude/skills/video-documentary/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Littlpinguin/marketing-cockpit-template/blob/main/.claude/skills/video-documentary/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Montage documentaire sur archives libres pour {{COMPANY_NAME}}, un essai film\u00e9 au service d'une th\u00e8se, \u00e0 partir d'images d'Internet Archive, Wikimedia Commons, NASA, Pexels ou Pixabay. Brief th\u00e9matique et th\u00e8se, d\u00e9coupage en emplacements valid\u00e9, corpus constitu\u00e9 et filtr\u00e9 par licence (corpus.py build), index et recherche CLIP (corpus.py index et search), s\u00e9lection valid\u00e9e sur les images cl\u00e9s (selections.json), narration, montage dans hyperframes:general-video avec un \u00e9talonnage commun, cr\u00e9dits g\u00e9n\u00e9r\u00e9s (corpus.py credits) et QA. Appel\u00e9e par video-production ; ne comble pas un trou par un clip g\u00e9n\u00e9r\u00e9, n'\u00e9largit jamais une licence sans d\u00e9cision humaine, ne publie pas."
+}

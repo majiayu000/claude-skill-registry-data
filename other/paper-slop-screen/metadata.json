@@ -1,0 +1,38 @@
+{
+  "name": "paper-slop-screen",
+  "repo": "THUROI0787/absent-author",
+  "path": "skills/paper-slop-screen/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/THUROI0787/absent-author",
+  "dir_name": "paper-slop-screen",
+  "downloaded_at": "2026-10-13T06:51:52.625769Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=3, ai-ml=3",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "THUROI0787",
+  "source_url": "https://github.com/THUROI0787/absent-author/blob/main/skills/paper-slop-screen/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/THUROI0787/absent-author/blob/main/skills/paper-slop-screen/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Screen an ML research paper (as reviewer, AC, or co-author) for evidence that it was produced by AI without a responsible human author \u2014 unsteered research (failed method pivoted into an \"audit\" paper, theoryslop, toy scale with grand claims, phantom experiments, text\u2013table mismatches), unchecked artifacts (hallucinated references, chatbot residue, watermarks), and unpolished AI-led writing (em-dash floods, defensive writing, coined terms, performative honesty). Produces an evidence-cited grade on three axes \u2014 writing W0\u2013W3, research steering R0\u2013R3, ordinary quality Q \u2014 plus integrity flags and an auditability rating; never an \"AI probability\". Use when asked whether a paper is AI slop, to triage a review pile, or to check for an absent author before reviewing."
+}

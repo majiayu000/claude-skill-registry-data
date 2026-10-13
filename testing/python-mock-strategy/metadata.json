@@ -1,0 +1,39 @@
+{
+  "name": "python-mock-strategy",
+  "repo": "PremModhaOfficial/NFR-pipeline",
+  "path": "skills/python-mock-strategy/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/PremModhaOfficial/NFR-pipeline",
+  "dir_name": "python-mock-strategy",
+  "downloaded_at": "2026-10-13T06:27:38.862890Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for testing: test, pytest, unittest, integration",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "pytest",
+      "unittest",
+      "integration"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "PremModhaOfficial",
+  "source_url": "https://github.com/PremModhaOfficial/NFR-pipeline/blob/main/skills/python-mock-strategy/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/PremModhaOfficial/NFR-pipeline/blob/main/skills/python-mock-strategy/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this when designing tests for a class with external dependencies, deciding whether to fake or mock a collaborator, reviewing a test that uses bare Mock() without spec=, replacing monkeypatch hacks with a Protocol-typed seam, or picking a test-double for HTTP / time / random / filesystem. Covers the Fake-first decision tree, Protocol-based dependency-injection seams, unittest.mock.AsyncMock(spec=...) and create_autospec for call-pattern assertions, respx and aioresponses for HTTP, freezegun for time, seeded random.Random and uuid patching, tmp_path vs pyfakefs, the pytest-mock mocker fixture, and patch-where-used import-path rules. Triggers: Mock, MagicMock, AsyncMock, spec=, patch, fake, Protocol, respx, freezegun, monkeypatch.setattr, create_autospec, pytest-mock."
+}

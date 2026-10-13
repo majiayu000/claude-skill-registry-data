@@ -1,0 +1,37 @@
+{
+  "name": "visa-check",
+  "repo": "Nomadic-Labs/claude-code-plugin",
+  "path": "skills/visa-check/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Nomadic-Labs/claude-code-plugin",
+  "dir_name": "visa-check",
+  "downloaded_at": "2026-10-13T06:17:43.799215Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "metadata",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Nomadic-Labs",
+  "source_url": "https://github.com/Nomadic-Labs/claude-code-plugin/blob/main/skills/visa-check/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Nomadic-Labs/claude-code-plugin/blob/main/skills/visa-check/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Look up visa requirements, application fees, processing time, and official application links for any country. Use when the user asks about visas, entry requirements, how to get a visa, or what documents are needed to enter a country. Arguments: [passport_country] [destination_country]."
+}

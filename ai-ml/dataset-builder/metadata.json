@@ -1,0 +1,37 @@
+{
+  "name": "dataset-builder",
+  "repo": "The-Utopia-Studio/skills",
+  "path": "skills/product/dataset-builder/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/The-Utopia-Studio/skills",
+  "dir_name": "dataset-builder",
+  "downloaded_at": "2026-10-13T06:55:12.203232Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: model, training",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "The-Utopia-Studio",
+  "source_url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/dataset-builder/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/dataset-builder/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Turn field artefacts into a labelled dataset and 20+ golden cases \u2014 the seed of the eval suite that gates the build. Attaches a ground-truth label to every real artefact, scores each label on the evidence ladder, and clears each case through four gates (provenance, ground-truth, unreachable, held-out) so a foundation model cannot pre-pass its own memorised test. Fires on \"make our own dataset\", \"create golden cases\", \"label this\", \"turn our field logs into a test set the model hasn't seen\", \"seed the eval suite\". Not for finding which sources are proprietary in the first place (use yoda-data-sourcing, section 03), not for composing the labelled cases into the four-band spread / autonomy level / cost budget of a scoreable spec (use eval-first-spec, section 07), not for splitting an expert's teachable procedure from show-only judgment (use explicit-vs-tacit-capture, section 03)."
+}

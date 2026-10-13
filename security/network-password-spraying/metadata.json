@@ -1,0 +1,38 @@
+{
+  "name": "network-password-spraying",
+  "repo": "NoorQureshi/SploitAgent",
+  "path": "skills/network/network-password-spraying/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/NoorQureshi/SploitAgent",
+  "dir_name": "network-password-spraying",
+  "downloaded_at": "2026-10-13T06:18:06.189482Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: auth, owasp, pentest",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "auth",
+      "owasp",
+      "pentest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NoorQureshi",
+  "source_url": "https://github.com/NoorQureshi/SploitAgent/blob/main/skills/network/network-password-spraying/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NoorQureshi/SploitAgent/blob/main/skills/network/network-password-spraying/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Low-and-slow credential attacks against exposed auth surfaces \u2014 spray one password across many users, and stuff known breach creds \u2014 without locking accounts. Load on a login portal or service auth with valid usernames: OWA/O365/Entra, VPN, Citrix, SSH, RDP, SMB, LDAP, or a web login. Signals: a harvested user list, \"AzureAD\"/\"outlook\", 401/403 on auth, lockout policy known."
+}

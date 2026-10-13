@@ -1,0 +1,37 @@
+{
+  "name": "radar-suite-axis-classification",
+  "repo": "Terryc21/radar-suite",
+  "path": "skills/radar-suite-axis-classification/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Terryc21/radar-suite",
+  "dir_name": "radar-suite-axis-classification",
+  "downloaded_at": "2026-10-13T06:54:31.567223Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, platform=2",
+    "score": 2,
+    "runner_up": "platform",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Terryc21",
+  "source_url": "https://github.com/Terryc21/radar-suite/blob/main/skills/radar-suite-axis-classification/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Terryc21/radar-suite/blob/main/skills/radar-suite-axis-classification/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Shared axis classification framework for all radar-suite skills. Every finding must be classified as axis_1 (bug), axis_2 (scatter), or axis_3 (dead/smelly) before emission, with mandatory coaching fields and file:line citations to existing patterns in the audited codebase. Triggers: invoked by every radar before emitting findings."
+}

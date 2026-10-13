@@ -1,0 +1,38 @@
+{
+  "name": "lint-triage",
+  "repo": "LNC0831/oh-my-fpga",
+  "path": "skills/lint-triage/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/LNC0831/oh-my-fpga",
+  "dir_name": "lint-triage",
+  "downloaded_at": "2026-10-13T05:50:22.288116Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, lint, review",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "quality",
+      "lint",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LNC0831",
+  "source_url": "https://github.com/LNC0831/oh-my-fpga/blob/main/skills/lint-triage/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LNC0831/oh-my-fpga/blob/main/skills/lint-triage/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run RTL lint / methodology checks and triage each violation into a real fix vs a justified, documented waiver. Use when the user says \"lint my RTL\", \"code quality\", \"review my RTL\", \"check my Verilog/VHDL\", \"any latches / unintended latches\", \"clean up warnings before synthesis\", \"is my design lint-clean\", or asks for a code-quality / methodology report on an FPGA design. Requires the SynthPilot MCP server (Xilinx Vivado running with the Tcl server connected on TCP:9999). Methodology-stage checks additionally require an open synthesized design (open_synthesized_design / open_implemented_design)."
+}

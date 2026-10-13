@@ -1,0 +1,38 @@
+{
+  "name": "eureka",
+  "repo": "NIMBUS-MX/nimbus-skills",
+  "path": "skills/eureka/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/NIMBUS-MX/nimbus-skills",
+  "dir_name": "eureka",
+  "downloaded_at": "2026-10-13T06:10:29.950008Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, refactor",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NIMBUS-MX",
+  "source_url": "https://github.com/NIMBUS-MX/nimbus-skills/blob/master/skills/eureka/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NIMBUS-MX/nimbus-skills/blob/master/skills/eureka/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Trigger word \u2014 when the user types \"eureka\" after finishing a piece of work, review the just-completed changes and surface concrete refactor opportunities. Nimbus post-implementation retrospective in one shot.\nTrigger this skill when: - User says the word \"eureka\" in a message that follows a completed task. - User invokes `/eureka`."
+}

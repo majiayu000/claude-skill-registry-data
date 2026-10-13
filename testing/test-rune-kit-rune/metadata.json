@@ -1,0 +1,41 @@
+{
+  "name": "test",
+  "repo": "Rune-kit/rune",
+  "path": "skills/test/SKILL.md",
+  "github_branch": "master",
+  "category": "testing",
+  "source": "github.com/Rune-kit/rune",
+  "dir_name": "test-rune-kit-rune",
+  "downloaded_at": "2026-10-13T06:36:22.515925Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for testing: test, tdd, jest, pytest, integration, e2e",
+    "score": 6,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "test",
+      "tdd",
+      "jest",
+      "pytest",
+      "integration",
+      "e2e"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Rune-kit",
+  "source_url": "https://github.com/Rune-kit/rune/blob/master/skills/test/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Rune-kit/rune/blob/master/skills/test/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "TDD test writer. Writes failing tests FIRST (red), then verifies they pass after implementation (green). Covers unit, integration, and e2e tests."
+}

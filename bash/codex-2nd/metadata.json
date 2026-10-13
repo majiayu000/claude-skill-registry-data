@@ -1,0 +1,39 @@
+{
+  "name": "codex-2nd",
+  "repo": "Takazudo/claude-resources",
+  "path": "skills/codex-2nd/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/Takazudo/claude-resources",
+  "dir_name": "codex-2nd",
+  "downloaded_at": "2026-10-13T06:52:12.101797Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Takazudo",
+  "source_url": "https://github.com/Takazudo/claude-resources/blob/main/skills/codex-2nd/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Takazudo/claude-resources/blob/main/skills/codex-2nd/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Get a second opinion from OpenAI Codex CLI on a plan or approach. Use when: (1) During planning phase of /x-as-pr or /x-wt-teams to validate the approach, (2) User says 'codex 2nd', 'second opinion', or 'codex opinion', (3) Wanting an alternative perspective before committing to a plan. Sends context and plan to codex, returns feedback. Called automatically by /x-as-pr and /x-wt-teams during planning."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "toclaude",
+  "repo": "Takazudo/claude-resources",
+  "path": "skills/toclaude/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Takazudo/claude-resources",
+  "dir_name": "toclaude",
+  "downloaded_at": "2026-10-13T06:52:11.159191Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "context",
+      "context-window",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Takazudo",
+  "source_url": "https://github.com/Takazudo/claude-resources/blob/main/skills/toclaude/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Takazudo/claude-resources/blob/main/skills/toclaude/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Hand work over to a FRESH Claude Code session instead of doing it here: opens a NEW tmux window running `CLAUDE_CODE_NO_FLICKER=1 claude --dangerously-skip-permissions --model opus` at the repo root, starts it on a prompt passed as argv, and focuses the window. This session implements nothing. Use when: (1) User says '/toclaude', (2) User says 'hand this to a fresh session', 'do this in a new session', 'start a clean session for this', 'clear and implement', or 'continue with a fresh context', (3) A planning session (typically /big-plan -po) has finished and the implementation should start on a clean context window rather than inherit the planner's, (4) /big-plan Step 11 delegates its -tocl hand-off here. This is the agent-side substitute for /clear, which only the user can invoke. Default behaviour is to pass the user's instruction through verbatim; a plan / epic issue is routed to the matching workflow skill (/x-wt-teams or /x-as-pr) instead. Long or multi-line prompts are written to a cclogs file and the path is sent. Submits by default; -ns/--no-submit stages the command in the composer for the user to send. Terminal-only (needs tmux plus claude on PATH). NOT for spawning a subagent, and NOT for /tocodex, which hands the job to Codex CLI rather than to Claude Code."
+}

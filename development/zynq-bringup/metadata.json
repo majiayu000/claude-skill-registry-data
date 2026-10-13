@@ -1,0 +1,39 @@
+{
+  "name": "zynq-bringup",
+  "repo": "LNC0831/oh-my-fpga",
+  "path": "skills/zynq-bringup/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/LNC0831/oh-my-fpga",
+  "dir_name": "zynq-bringup",
+  "downloaded_at": "2026-10-13T05:50:22.631139Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, build, software, debug",
+    "score": 4,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "software",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LNC0831",
+  "source_url": "https://github.com/LNC0831/oh-my-fpga/blob/main/skills/zynq-bringup/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LNC0831/oh-my-fpga/blob/main/skills/zynq-bringup/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Stand up a Zynq-7000 PS7-based SoC block design (Processing System bring-up). Invoke when the user says \"build a zynq soc\", \"ps7\", \"zynq bring up\", \"add a processing system\", \"PS-PL design\", \"bring up the ARM cores\", \"wire AXI GP/HP to the PL\", \"generate the bd wrapper for a Zynq\", or asks to create / configure / validate a Zynq-7000 block design (FCLK, DDR, MIO/UART/GPIO, AXI interconnect, address map, wrapper). Requires the SynthPilot MCP server (AI-driven Vivado control) with Vivado open and the tcl_server.tcl TCP bridge running, and a PRO/MAX license (Block Design tools are gated). Zynq-7000 (PS7) only \u2014 NOT Zynq UltraScale+ MPSoC (use the mpsoc skill). Stop conditions: stop and ASK on unknown hardware-critical config (DDR part / board / target FCLK on a bare part); stop and HAND OFF on timing/DRC that fails after correct constraints; declare DONE only when bd_validate_design is clean AND post-implementation report_timing_summary (setup WNS/TNS >= 0 AND hold/min-delay >= 0), check_timing (no unconstrained endpoints), report_cdc, report_drc, and report_methodology are all clean on fresh runs."
+}

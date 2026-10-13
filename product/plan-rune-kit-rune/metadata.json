@@ -1,0 +1,39 @@
+{
+  "name": "plan",
+  "repo": "Rune-kit/rune",
+  "path": "skills/plan/SKILL.md",
+  "github_branch": "master",
+  "category": "product",
+  "source": "github.com/Rune-kit/rune",
+  "dir_name": "plan-rune-kit-rune",
+  "downloaded_at": "2026-10-13T06:36:05.128113Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, prd, roadmap, feature",
+    "score": 4,
+    "runner_up": "planning",
+    "runner_up_score": 3,
+    "signals": [
+      "product",
+      "prd",
+      "roadmap",
+      "feature"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Rune-kit",
+  "source_url": "https://github.com/Rune-kit/rune/blob/master/skills/plan/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Rune-kit/rune/blob/master/skills/plan/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Create structured implementation plans from requirements. Produces master plan + phase files for enterprise-scale project management. Master plan = overview (<80 lines). Phase files = execution detail (<200 lines each). Each session handles 1 phase. Uses opus for deep reasoning."
+}

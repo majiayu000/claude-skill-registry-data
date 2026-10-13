@@ -1,0 +1,38 @@
+{
+  "name": "auditing-cross-lane-routine-artifacts",
+  "repo": "Krosebrook/loxihart-skills",
+  "path": "plugins/loxihart-ai/skills/auditing-cross-lane-routine-artifacts/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Krosebrook/loxihart-skills",
+  "dir_name": "auditing-cross-lane-routine-artifacts",
+  "downloaded_at": "2026-10-13T05:49:25.169378Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "automation",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Krosebrook",
+  "source_url": "https://github.com/Krosebrook/loxihart-skills/blob/main/plugins/loxihart-ai/skills/auditing-cross-lane-routine-artifacts/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Krosebrook/loxihart-skills/blob/main/plugins/loxihart-ai/skills/auditing-cross-lane-routine-artifacts/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Adversarially audits multi-routine automation artifacts (cron/API routine libraries, scheduled-task decks, \"routine cards\") for cross-lane contamination, scheduled-task governance violations, and the structurally-empty-at-runtime defect \u2014 then splits them into lane-clean artifacts and rebuilds them from a single-source generator. Use whenever Kyle hands over a routine/automation artifact and says \"audit this\", \"fresh adversarial pass\", \"keep them lane-specific\", \"make these lane-clean\", \"split by lane\", \"apply all fixes\", or \"rebuild the artifact\" \u2014 even if he doesn't say \"lane\" or \"governance\". Also triggers on: routine cards audit, cron library review, automation deck audit, scheduled-task governance check, Loxihart vs FlashFusion bleed, lane contamination, n8n tenant collision, pipeline-vs-recognized-revenue, data-source guard, count-bug, generator rebuild, lane separation. PERSONAL/Loxihart context. NOT for app/codebase security audits (use code-auditor) and NOT for building a single new routine."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "python-backpressure-flow-control",
+  "repo": "PremModhaOfficial/NFR-pipeline",
+  "path": "skills/python-backpressure-flow-control/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/PremModhaOfficial/NFR-pipeline",
+  "dir_name": "python-backpressure-flow-control",
+  "downloaded_at": "2026-10-13T06:27:46.841175Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: business=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "operations",
+      "strategy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "PremModhaOfficial",
+  "source_url": "https://github.com/PremModhaOfficial/NFR-pipeline/blob/main/skills/python-backpressure-flow-control/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/PremModhaOfficial/NFR-pipeline/blob/main/skills/python-backpressure-flow-control/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this when designing fan-out methods that publish downstream, reviewing unbounded list/queue buffers, sizing producer/consumer pipelines for a throughput target, or debugging OOM under production load. Covers asyncio.BoundedSemaphore inflight caps, bounded asyncio.Queue(maxsize=N) with block-vs-drop submit shapes, drop-newest / drop-oldest / block strategy selection, worker pools with task_done pairing, BackpressureError surfacing, and queue-depth + drop-count OTel signals. Triggers: asyncio.Semaphore, asyncio.BoundedSemaphore, asyncio.Queue, maxsize, drop, block, put_nowait, QueueFull, inflight, backpressure."
+}

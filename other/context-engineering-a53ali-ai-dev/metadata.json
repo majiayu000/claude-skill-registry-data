@@ -1,0 +1,38 @@
+{
+  "name": "context-engineering",
+  "repo": "a53ali/ai-dev",
+  "path": "skills/cross-cutting/context-engineering/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/a53ali/ai-dev",
+  "dir_name": "context-engineering-a53ali-ai-dev",
+  "downloaded_at": "2026-10-13T07:21:09.915723Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "prompt",
+      "prompting"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "a53ali",
+  "source_url": "https://github.com/a53ali/ai-dev/blob/main/skills/cross-cutting/context-engineering/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/a53ali/ai-dev/blob/main/skills/cross-cutting/context-engineering/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Design, structure, and optimize the context you give AI coding agents. Covers system prompts, repo-level context files (CLAUDE.md, AGENTS.md, COPILOT-INSTRUCTIONS.md), what to include vs. exclude, MCP as just-in-time context, sub-agent context scoping, and treating context like code \u2014 versioned, tested, and reusable. Improves agent trust, speed, and code quality. Grounded in LeadDev and industry practice."
+}

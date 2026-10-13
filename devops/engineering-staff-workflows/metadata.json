@@ -1,0 +1,40 @@
+{
+  "name": "engineering-staff-workflows",
+  "repo": "Krosebrook/loxihart-skills",
+  "path": "plugins/loxihart-engineering/skills/engineering-staff-workflows/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/Krosebrook/loxihart-skills",
+  "dir_name": "engineering-staff-workflows",
+  "downloaded_at": "2026-10-13T05:49:24.866303Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: ci, cd, deploy, infra, infrastructure",
+    "score": 5,
+    "runner_up": "ai-llm",
+    "runner_up_score": 3,
+    "signals": [
+      "ci",
+      "cd",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Krosebrook",
+  "source_url": "https://github.com/Krosebrook/loxihart-skills/blob/main/plugins/loxihart-engineering/skills/engineering-staff-workflows/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Krosebrook/loxihart-skills/blob/main/plugins/loxihart-engineering/skills/engineering-staff-workflows/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Operates as a security-first, scope-gated Staff Engineer workflow for production system builds across a 50\u2013200 engineer organization. Routes every task through mandatory SCOPE_MODE gating, applies WSJF backlog prioritization, enforces AppSec-grade threat modeling, and covers the full stack from frontend to edge to AI pipeline to agent orchestration. Activates on multi-file builds, agent or MCP systems, infrastructure work, security audits, full-stack features, or any architecture requiring agentic-aware design with observability-first patterns. Also triggers on: help me architect this, build this properly, review my system design, multi-file build, how should I structure this, is this production ready, or any request involving 3 or more files or system-level thinking."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "python-hypothesis-patterns",
+  "repo": "PremModhaOfficial/NFR-pipeline",
+  "path": "skills/python-hypothesis-patterns/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/PremModhaOfficial/NFR-pipeline",
+  "dir_name": "python-hypothesis-patterns",
+  "downloaded_at": "2026-10-13T06:27:42.800727Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, quality=3",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "PremModhaOfficial",
+  "source_url": "https://github.com/PremModhaOfficial/NFR-pipeline/blob/main/skills/python-hypothesis-patterns/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/PremModhaOfficial/NFR-pipeline/blob/main/skills/python-hypothesis-patterns/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this when testing a parser, serializer, validator, or state machine where an invariant is articulable, when a fixed parametrize table feels insufficient for an unbounded input space, when seeding regression cases for a property test, or when a bug shipped that example tests missed. Covers @given strategy selection (st.text/integers/binary/composite/from_type), @settings budgets and named profiles, @example seeding, @reproduce_failure replay, @assume vs strategy.filter, common property templates (round-trip, idempotence, monotonicity, bound), RuleBasedStateMachine for stateful testing, target() for guided search, and .hypothesis/ database persistence. Triggers: hypothesis, @given, @settings, @example, @assume, @reproduce_failure, st.text, st.integers, st.composite, st.from_type, RuleBasedStateMachine, target."
+}

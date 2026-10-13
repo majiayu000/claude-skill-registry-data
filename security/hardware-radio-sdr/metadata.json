@@ -1,0 +1,38 @@
+{
+  "name": "hardware-radio-sdr",
+  "repo": "NoorQureshi/SploitAgent",
+  "path": "skills/hardware/hardware-radio-sdr/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/NoorQureshi/SploitAgent",
+  "dir_name": "hardware-radio-sdr",
+  "downloaded_at": "2026-10-13T06:18:04.425896Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, pentest",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "pentest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NoorQureshi",
+  "source_url": "https://github.com/NoorQureshi/SploitAgent/blob/main/skills/hardware/hardware-radio-sdr/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NoorQureshi/SploitAgent/blob/main/skills/hardware/hardware-radio-sdr/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Authorized RF/SDR security research on non-Wi-Fi radio signals \u2014 identify a signal's frequency and modulation receive-only, demodulate and reverse the protocol, and assess replay feasibility in a shielded lab. Load for wireless remotes, key fobs, sensors, telemetry, ISM-band devices, ADS-B, or any sub-GHz/RF protocol outside classic Wi-Fi. Signals: unknown RF device in scope, 315/433/868/915 MHz, OOK/ASK/FSK captures, RTL-SDR/HackRF work."
+}

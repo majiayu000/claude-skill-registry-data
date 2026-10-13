@@ -1,0 +1,39 @@
+{
+  "name": "dependency-doctor",
+  "repo": "Rune-kit/rune",
+  "path": "skills/dependency-doctor/SKILL.md",
+  "github_branch": "master",
+  "category": "security",
+  "source": "github.com/Rune-kit/rune",
+  "dir_name": "dependency-doctor",
+  "downloaded_at": "2026-10-13T06:36:21.322205Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for security: security, auth, vulnerability, audit",
+    "score": 4,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "vulnerability",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Rune-kit",
+  "source_url": "https://github.com/Rune-kit/rune/blob/master/skills/dependency-doctor/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Rune-kit/rune/blob/master/skills/dependency-doctor/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Dependency health management. Detects package manager, checks outdated packages and vulnerabilities, and produces a prioritized update plan."
+}

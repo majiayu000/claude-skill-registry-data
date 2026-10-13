@@ -1,0 +1,38 @@
+{
+  "name": "om-parser",
+  "repo": "Syntari-International-Inc/syntari-nexus-plugin",
+  "path": "skills/om-parser/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/Syntari-International-Inc/syntari-nexus-plugin",
+  "dir_name": "om-parser",
+  "downloaded_at": "2026-10-13T06:50:41.977478Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, database, pipeline",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Syntari-International-Inc",
+  "source_url": "https://github.com/Syntari-International-Inc/syntari-nexus-plugin/blob/main/skills/om-parser/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Syntari-International-Inc/syntari-nexus-plugin/blob/main/skills/om-parser/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Parse CRE Offering Memorandums. Extract NOI, cap rate, occupancy, rent roll, property details, financial projections from OMs. Maps extracted data to structured schemas and flags extraction gaps."
+}

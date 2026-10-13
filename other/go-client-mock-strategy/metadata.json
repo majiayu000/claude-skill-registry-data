@@ -1,0 +1,37 @@
+{
+  "name": "go-client-mock-strategy",
+  "repo": "PremModhaOfficial/NFR-pipeline",
+  "path": "skills/go-client-mock-strategy/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/PremModhaOfficial/NFR-pipeline",
+  "dir_name": "go-client-mock-strategy",
+  "downloaded_at": "2026-10-13T06:27:39.761247Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "PremModhaOfficial",
+  "source_url": "https://github.com/PremModhaOfficial/NFR-pipeline/blob/main/skills/go-client-mock-strategy/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/PremModhaOfficial/NFR-pipeline/blob/main/skills/go-client-mock-strategy/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this when picking test doubles for a new SDK client \u2014 choosing between in-memory wire-protocol fakes (miniredis, embedded NATS), gomock against a caller-owned narrow interface, or testcontainers for integration. Covers compile-time interface assertions and the interface-size ceiling rule. Triggers: miniredis, interface assertion, var _ Interface, newTestCache, fake vs mock, gomock.Controller, testcontainers."
+}

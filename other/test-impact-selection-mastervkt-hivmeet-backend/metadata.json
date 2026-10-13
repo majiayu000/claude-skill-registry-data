@@ -1,0 +1,37 @@
+{
+  "name": "test-impact-selection",
+  "repo": "MasterVKT/HIVMeet_Backend",
+  "path": ".agents/skills/test-impact-selection/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/MasterVKT/HIVMeet_Backend",
+  "dir_name": "test-impact-selection-mastervkt-hivmeet-backend",
+  "downloaded_at": "2026-10-13T06:03:23.859977Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "ui",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MasterVKT",
+  "source_url": "https://github.com/MasterVKT/HIVMeet_Backend/blob/master/.agents/skills/test-impact-selection/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MasterVKT/HIVMeet_Backend/blob/master/.agents/skills/test-impact-selection/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Select the smallest high-value test set for HIVMeet changes to accelerate feedback loops. Use after code edits to map changed files to critical tests, prioritize by risk, and decide quick/standard/deep test scope."
+}

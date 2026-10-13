@@ -1,0 +1,38 @@
+{
+  "name": "ui-component-spec",
+  "repo": "ThorStarlord/interface-skills",
+  "path": "skills/ui-component-spec/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/ThorStarlord/interface-skills",
+  "dir_name": "ui-component-spec",
+  "downloaded_at": "2026-10-13T06:57:26.569360Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, component",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ThorStarlord",
+  "source_url": "https://github.com/ThorStarlord/interface-skills/blob/main/skills/ui-component-spec/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ThorStarlord/interface-skills/blob/main/skills/ui-component-spec/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Specify a single interactive UI component (button, input, datepicker, dropdown, modal, table, form, card, etc.) in exhaustive detail \u2014 anatomy, props, content slots, every state, every behavior, validation rules, and accessibility requirements \u2014 so it can be implemented without the model inventing edge cases. Use this skill whenever the user asks to \"design\", \"build\", \"spec\", or \"make\" a specific interactive component, or when a screen blueprint is approved and individual components need to be nailed down before code. Always use it before ui-generate-code for any non-trivial interactive widget, because component code generated without an explicit state matrix is the single most common source of edge-case bugs."
+}

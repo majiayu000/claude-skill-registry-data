@@ -1,0 +1,38 @@
+{
+  "name": "code-review-secrets-detection",
+  "repo": "NoorQureshi/SploitAgent",
+  "path": "skills/code-review/code-review-secrets-detection/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/NoorQureshi/SploitAgent",
+  "dir_name": "code-review-secrets-detection",
+  "downloaded_at": "2026-10-13T06:17:59.620511Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: ci, cd, docker",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "ci",
+      "cd",
+      "docker"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NoorQureshi",
+  "source_url": "https://github.com/NoorQureshi/SploitAgent/blob/main/skills/code-review/code-review-secrets-detection/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NoorQureshi/SploitAgent/blob/main/skills/code-review/code-review-secrets-detection/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Find leaked secrets in code, git history, and CI. Load on \"secrets\", \"leaked key\", a repo/ git history in scope, exposed .git, CI config review, or public-repo OSINT. Signals: API keys, tokens, .env files, private keys, cloud creds, hardcoded passwords."
+}

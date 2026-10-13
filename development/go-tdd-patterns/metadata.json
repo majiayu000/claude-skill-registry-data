@@ -1,0 +1,39 @@
+{
+  "name": "go-tdd-patterns",
+  "repo": "PremModhaOfficial/NFR-pipeline",
+  "path": "skills/go-tdd-patterns/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/PremModhaOfficial/NFR-pipeline",
+  "dir_name": "go-tdd-patterns",
+  "downloaded_at": "2026-10-13T06:27:36.351326Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: build, compile, refactor",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "build",
+      "compile",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "PremModhaOfficial",
+  "source_url": "https://github.com/PremModhaOfficial/NFR-pipeline/blob/main/skills/go-tdd-patterns/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/PremModhaOfficial/NFR-pipeline/blob/main/skills/go-tdd-patterns/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this for the Go-specific realization of the SKELETON\u2192RED\u2192GREEN\u2192REFACTOR TDD cycle \u2014 interface skeletons returning `errNotImplemented` stubs, table-driven failing tests with `*testing.T` + `t.Run` + `t.Parallel`, gomock controller setup, assertion-first test shape, `errors.Is`/`require.NoError` conventions, and compile-time interface assertions via `var _ I = (*T)(nil)`. Pairs with the language-neutral `tdd-patterns` skill (cycle + agent coordination); this skill is the Go syntax layer. Triggers: testing.T, t.Run, t.Parallel, t.Cleanup, gomock.NewController, errNotImplemented, table-driven, *_test.go, errors.Is, require.NoError, var _ Interface."
+}

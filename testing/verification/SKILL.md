@@ -1,0 +1,412 @@
+---
+name: verification
+description: "Universal verification runner. Runs lint, type-check, tests, and build. Use after any code change to verify nothing is broken."
+metadata:
+  author: runedev
+  version: "0.8.0"
+  layer: L3
+  model: sonnet
+  group: validation
+  tools: "Read, Bash, Glob, Grep"
+  listen: code.changed
+  emit: verification.complete, integration.verified
+---
+
+# verification
+
+Runs all automated checks to verify code health. Stateless — runs checks and reports results.
+
+## Instructions
+
+### Phase 1: Detect Project Type
+
+Use `Glob` to find project config files:
+
+1. Check for `package.json` → Node.js/TypeScript project
+2. Check for `pyproject.toml` or `setup.py` → Python project
+3. Check for `Cargo.toml` → Rust project
+4. Check for `go.mod` → Go project
+5. Check for `pom.xml` or `build.gradle` → Java project
+
+Use `Read` on the detected config file to find scripts or tool config (e.g., `package.json` scripts block for custom lint/test commands).
+
+```
+TodoWrite: [
+  { content: "Detect project type", status: "in_progress" },
+  { content: "Run lint check", status: "pending" },
+  { content: "Run type check", status: "pending" },
+  { content: "Run test suite", status: "pending" },
+  { content: "Run build", status: "pending" },
+  { content: "Generate verification report", status: "pending" }
+]
+```
+
+### Phase 2: Run Lint
+
+Use `Bash` to run the appropriate linter. If `package.json` has a `lint` script, prefer that:
+
+- **Node.js (npm lint script)**: `npm run lint`
+- **Node.js (no script)**: `npx eslint . --max-warnings 0`
+- **Python**: `ruff check .` (fallback: `flake8 .`)
+- **Rust**: `cargo clippy -- -D warnings`
+- **Go**: `golangci-lint run` (fallback: `go vet ./...`)
+
+If lint fails: record the failure output, mark lint as FAIL, continue to next step. Do NOT stop.
+
+**Verification gate**: Command exits without crashing (even if it reports lint errors — those are FAIL, not errors).
+
+### Phase 3: Run Type Check
+
+Use `Bash`:
+
+- **TypeScript**: `npx tsc --noEmit`
+- **Python**: `mypy .` (fallback: `pyright .`)
+- **Rust**: `cargo check`
+- **Go**: `go vet ./...`
+
+If type check fails: record error count and first 10 error lines, mark as FAIL, continue.
+
+### Phase 4: Run Tests
+
+Use `Bash` to run the test suite. Prefer the project script if available:
+
+- **Node.js (npm test script)**: `npm test`
+- **Vitest**: `npx vitest run`
+- **Jest**: `npx jest --passWithNoTests`
+- **Python**: `pytest -v` (fallback: `python -m unittest discover`)
+- **Rust**: `cargo test`
+- **Go**: `go test ./...`
+
+Record: total tests, passed count, failed count, coverage percentage if output includes it.
+
+If tests fail: record which tests failed (first 20), mark as FAIL, continue to build.
+
+### Phase 5: Run Build
+
+Use `Bash`:
+
+- **Node.js**: check `package.json` for `build` script → `npm run build` (fallback: `npx tsc`)
+- **Python**: check `pyproject.toml` for `[build-system]` section:
+  - If build backend found (setuptools, poetry-core, hatchling, flit-core): `python -m build --no-isolation 2>&1 | head -20` to verify packaging
+  - If `setup.py` exists (legacy): `python setup.py check --strict`
+  - Then always: `pip install -e . --dry-run` to catch broken entry points, missing `__init__.py`, or import path issues
+  - If no `pyproject.toml` and no `setup.py` (scripts-only project): SKIP
+- **Rust**: `cargo build`
+- **Go**: `go build ./...`
+
+If build fails: record first 20 lines of build output, mark as FAIL.
+
+### Phase 6: Generate Report
+
+Compile all results into the structured report. Update all TodoWrite items to completed.
+
+### 3-Level Artifact Verification
+
+Every file created or modified during implementation must pass ALL 3 levels:
+
+**Level 1 — EXISTS**: File is on disk, non-empty.
+```
+Glob("path/to/expected/file") → found
+```
+
+**Level 2 — SUBSTANTIVE**: Contains real logic, NOT a stub. Scan for these stub patterns:
+
+| Pattern | Language | Meaning |
+|---|---|---|
+| Component returns only `<div>Placeholder</div>` or `<div>TODO</div>` | React/Vue | Stub component |
+| Route returns `{ message: "Not implemented" }` or `res.status(501)` | API | Stub endpoint |
+| Function body is only `return null` / `return {}` / `return []` / `pass` | Any | Stub function |
+| Class with all methods throwing `NotImplementedError` | Python/Java | Stub class |
+| `useEffect` with empty body / `async function` with no `await` | React/JS | Hollow implementation |
+| File has only type/interface exports but no implementation | TypeScript | Stub types-only file |
+| `// TODO` or `# TODO` as the only content in a function | Any | Placeholder |
+| `onClick={() => {}}` / handler bound to an empty or `console.log`-only function | React/Vue/Svelte | Dead handler — wired to nothing |
+| `href="#"` on an action link (not navigation) | HTML/JSX | Dead action link |
+| Submit handler whose body is only `event.preventDefault()` | Any UI | Form that swallows input |
+
+If ANY stub pattern detected → mark file as STUB, Level 2 FAIL.
+
+**Level 3 — WIRED**: Actually imported/called/used by the rest of the system.
+
+| File Type | Wiring Check |
+|---|---|
+| Component | `Grep("<ComponentName")` in parent files → ≥1 consumer |
+| API route | `Grep("fetch\\|axios\\|api.*endpoint")` for this path → ≥1 caller |
+| Hook | `Grep("useHookName(")` → ≥1 consumer |
+| Utility function | `Grep("import.*from.*this-file")` → ≥1 importer |
+| DB model/schema | `Grep("ModelName\\|table_name")` in query files → ≥1 reference |
+| CSS/style module | `Grep("import.*from.*this-style")` → ≥1 importer |
+
+If file has 0 consumers → mark as UNWIRED, Level 3 FAIL.
+
+**Exception**: Entry-point files are exempt from Level 3 — they ARE the top-level consumers. Entry points include: main.ts/index.ts/App.tsx/routes config, server entrypoints referenced by package.json `main`/`start`/`bin`, and root pages served statically (e.g. `public/index.html` behind `express.static`).
+
+**Config/manifest files** (package.json, tsconfig, *.yml, dotfiles): Level 2 = valid, non-empty, matches its schema's basic shape; Level 3 = exempt (consumed by tooling, not imports).
+
+**Level 3.5 — INTERACTION WIRED** (UI files in this task's diff only — `.tsx/.jsx/.vue/.svelte/.html`):
+
+Level 3 proves the component is *rendered*; Level 3.5 proves its interactive elements *do something*. For each UI file created or modified in this task:
+
+1. `Grep` interactive elements in the file — framework-aware patterns: `<button`, `<form`, `type="submit"`, `action=`, `<a ` with an action-style href (`href="#"`, `href=""`, `javascript:`) — pure-navigation anchors (`href="#section-id"` with a matching id, route paths) are exempt — plus binding syntax per framework: React `onClick=`/`onSubmit=`, Svelte `on:click=`/`on:submit=`, Vue `@click`/`@submit`/`v-on:`, plain HTML `addEventListener`
+2. For each element, trace INWARD:
+   - **Handler bound?** Interactive element with NO binding in any framework syntax above and no enclosing form handler → `UNWIRED-INTERACTIVE`. **Prop-origin handlers PASS**: `onClick={props.onSave}`, `on:click={dispatch('save')}`, or a callback-library pattern (`onSubmit={handleSubmit(onSubmit)}` — react-hook-form et al.) count as bound; wiring the prop is the parent's/caller's responsibility, checked at the parent's own 3.5 pass
+   - **Handler resolves?** The bound symbol is locally defined OR imported (imported = resolves; do not demand the import's body) and its body is non-trivial (not caught by the Level 2 dead-handler patterns)
+   - **Target exists?** If the handler calls `fetch`/`axios`/a service function → the route path or service symbol EXISTS somewhere in the codebase (`Grep` the path/symbol). Handler → nonexistent target = `UNWIRED-INTERACTIVE`. Pure-navigation handlers (`router.push`, `navigate(...)`, framework `<Link>`) PASS — navigation is their target
+3. **Reverse check**: every API route HANDLER created in this task (per-route, not per-file — a file with 3 routes gets 3 checks) has ≥1 caller (`Grep` each route's path across UI/service files). Route with 0 callers → `UNCALLED-ROUTE`
+4. Pure-display elements (no user expectation of action: decorative buttons in mockups explicitly listed in `.rune/ui-spec.md` `## Unwired Elements`) are reported as INFO, not failures — they are design's declared debt, tracked by `converge`
+5. **De-dup**: if preflight already flagged the same element as dead-interactive in this session, cite the cross-reference ("preflight Step 4.5 already flagged") instead of emitting a duplicate finding
+
+**Scope guard**: Level 3.5 runs ONLY on files in this task's diff. Pre-existing files with dead interactive elements → WARN (legacy debt, don't punish), never FAIL.
+
+**Signal**: when the diff touches both UI and api/service/data files AND every Level 3.5 check passes, emit `integration.verified` with `{files_checked, interactions_traced}`. Downstream `deploy` uses this as its cross-layer wiring evidence.
+
+<HARD-GATE name="3-level-verification">
+ALL new files must pass Level 1 + Level 2 + Level 3.
+UI files in this task's diff must ALSO pass Level 3.5.
+EXISTS but STUB = "Existence Theater" — agent created files but didn't implement them.
+EXISTS and SUBSTANTIVE but UNWIRED = dead code — created but never connected.
+SUBSTANTIVE and WIRED but UNWIRED-INTERACTIVE = dead button — renders, does nothing. Same failure tier as UNWIRED.
+Report which level failed for each file in the Verification Report.
+</HARD-GATE>
+
+### Artifact Output Verification
+
+**Never trust exit 0.** Many tools exit 0 even when they fail silently. Always verify ACTUAL output.
+
+After each phase command, verify that the expected artifact or indicator is present:
+
+**Test output** — scan stdout for the pass/fail summary line:
+- Vitest/Jest: look for `X passed`, `X failed` — if neither appears, output is incomplete
+- Pytest: look for `X passed` or `X failed` — exit 0 with no summary = runner crashed silently
+- If only exit code available and no summary line found → mark as INCOMPLETE, not PASS
+
+**Build output** — after `npm run build` / `cargo build` / `go build`:
+- Verify the output file exists: `Glob("dist/**/*.js")` or equivalent
+- Verify file size > 0 bytes: a zero-byte output = silent truncation failure
+- If output directory is missing → FAIL even if command exited 0
+
+**Lint output** — parse stdout for counts, not just exit code:
+- ESLint: look for `X problems (Y errors, Z warnings)` — `0 problems` = PASS
+- Ruff/Flake8: zero output lines = PASS; any file:line output = FAIL
+- If linter exits 0 but output contains `error` keyword → log as suspicious, mark WARN
+
+**Generated files** — check magic bytes for binary outputs:
+- PDF: first bytes must be `%PDF` — use `Bash("head -c 4 file.pdf")`
+- ZIP/XLSX/DOCX: first bytes must be `PK` (ZIP magic) — use `Bash("head -c 2 file.zip")`
+- File size must exceed minimum threshold (PDF > 1KB, ZIP > 100 bytes)
+
+**Type check** — do not trust exit code alone:
+- TypeScript `tsc --noEmit`: look for `Found X errors` or absence of error lines
+- `Found 0 errors` = PASS; any other count = FAIL
+- Empty output from `tsc` = PASS (no errors emitted) — note explicitly
+
+<HARD-GATE name="artifact-verification">
+Verification MUST check actual command output for success indicators, not just exit codes.
+Exit 0 without a confirming output artifact or success string = UNVERIFIED.
+Report the specific line that confirmed success (e.g., "3 passed, 0 failed").
+</HARD-GATE>
+
+### Surface-Constraint Verification (the Constraint Loop)
+
+Everything above verifies *behaviour* with a tool. Some deliverables instead carry a
+constraint on their own **surface form**: a banned or required character, an exact word or
+line count, a positional pattern, a strict format, a naming scheme every entry must follow,
+a diff that must not touch a listed path. These look trivial and are the opposite — a model
+generates meaning-first and reads its own output as tokens, not characters, so the
+constraint sits exactly where its perception is weakest. The most natural wording for the
+topic is usually the likeliest violator.
+
+**Re-reading the output and judging that it complies is not verification.** A re-read always
+passes. That is the whole failure mode.
+
+Run this loop whenever a deliverable carries a mechanically checkable surface constraint:
+
+1. **Expand the constraint before producing anything.** Restate it as a test every governed
+   unit must pass, and decide *how you will count* before there is anything to count. List
+   the on-topic vocabulary most likely to violate it — starting with the subject's own name,
+   which the constraint may rule out — and pick compliant substitutes up front.
+2. **Draft away from the final answer** — a scratch file or reasoning space, never straight
+   into the deliverable.
+3. **Verify mechanically, strongest tool available.** A script, `grep`, `wc`, a formatter's
+   `--check`, a schema validator — seconds of work and the strongest possible evidence. With
+   no tool available, decompose the text into the units the constraint governs and test each
+   one explicitly (spell the word out; count with a running index). Manual decomposition is
+   the fallback for tool-poor runtimes, not a substitute where a tool exists.
+4. **Repair and re-verify the whole artifact.** A fix can introduce a new violation
+   elsewhere, so re-scan everything — one green check on the edited line says nothing about
+   its neighbours. Loop until one complete pass over the final text is clean.
+5. **Ship the verified text byte-for-byte.** Any post-verification rewording, however small,
+   invalidates the check — touch one unit and step 3 runs again.
+
+<HARD-GATE name="surface-constraint">
+"The output satisfies the constraint" is a verified claim only after step 3 has run against
+the EXACT delivered text. Asserted from a re-read, it is an assumption wearing the grammar of
+an observation — see `completion-gate` → `references/claim-discipline.md`. Report the check
+that was run, not the conclusion.
+</HARD-GATE>
+
+Report it like any other phase: `Constraint: <the rule> | Check: <command or method> | Units tested: N | Violations: 0`.
+
+## Error Recovery
+
+- If project type cannot be detected: report "Unknown project type" and skip all checks
+- If a command is not found (e.g., `ruff` not installed): note "tool not installed", mark check as SKIP
+- If a command hangs for more than 60 seconds: kill it, mark check as TIMEOUT, continue
+
+## Calls (outbound)
+
+None — pure runner using Bash for all checks. Does not invoke other skills.
+
+## Called By (inbound)
+
+- `cook` (L1): Phase 6 VERIFY — final check before commit
+- `fix` (L2): validate fix doesn't break existing functionality
+- `test` (L2): validate test coverage meets threshold
+- `deploy` (L2): post-deploy health checks
+- `sentinel` (L2): run security audit tools (npm audit, etc.)
+- `safeguard` (L2): verify safety net is solid before refactoring
+- `db` (L2): run migration in test environment
+- `perf` (L2): run benchmark scripts if configured
+- `skill-forge` (L2): verify newly created skill passes lint/type/build checks
+- `team` (L1): verify each parallel workstream before merge
+- `scaffold` (L1): verify scaffolded project builds and passes initial tests
+- `launch` (L1): pre-deploy verification gate
+- `mcp-builder` (L2): verify generated MCP server compiles and starts
+- `preflight` (L2): run verification as part of pre-commit quality gate
+- `logic-guardian` (L2): verify logic invariants hold after changes
+- `dependency-doctor` (L3): verify builds pass after dependency updates
+- `sast` (L3): run verification alongside static analysis
+
+## Output Format
+
+```
+VERIFICATION REPORT
+===================
+Lint:      [PASS/FAIL/SKIP] ([details])
+Types:     [PASS/FAIL/SKIP] ([X errors])
+Tests:     [PASS/FAIL/SKIP] ([passed]/[total], [coverage]%)
+Build:     [PASS/FAIL/SKIP]
+
+### 3-Level File Verification
+| File | L1 Exists | L2 Substantive | L3 Wired | L3.5 Interaction | Verdict |
+|------|-----------|----------------|----------|------------------|---------|
+| src/auth/login.ts | ✓ | ✓ | ✓ (imported by routes.ts) | ✓ (submit → POST /api/login, route exists) | PASS |
+| src/auth/reset.ts | ✓ | STUB (returns null) | — | — | FAIL L2 |
+| src/utils/format.ts | ✓ | ✓ | UNWIRED (0 importers) | n/a (not UI) | FAIL L3 |
+| src/ui/OrderForm.tsx | ✓ | ✓ | ✓ (rendered by OrdersPage) | UNWIRED-INTERACTIVE (Save → fetch '/api/orders', route absent) | FAIL L3.5 |
+
+Overall:   [PASS/FAIL]
+
+### Failures (if any)
+- Lint: [error details with file:line]
+- Types: [first 5 type errors]
+- Tests: [first 5 failing test names]
+- Build: [first 5 build errors]
+- Stubs: [files that failed Level 2 with stub pattern detected]
+- Unwired: [files that failed Level 3 with 0 consumers]
+- Dead interactions: [elements that failed Level 3.5 with the broken link named (no handler / dead handler / missing target)] 
+- Uncalled routes: [route files created this task with 0 callers]
+```
+
+## Output Completion Enforcement
+
+Truncated code is worse than no code — it passes reviews but breaks at runtime.
+
+When verifying code files (Level 2 SUBSTANTIVE check), also scan for **truncation patterns** — signs that the agent generated partial output and stopped:
+
+| Banned Pattern | Language | What It Means |
+|---|---|---|
+| `// ...` or `/* ... */` as a statement | JS/TS | Agent truncated remaining code |
+| `# ...` as a statement (not comment) | Python | Agent truncated |
+| `// rest of code` / `// remaining implementation` | Any | Explicit truncation admission |
+| `// TODO: implement` as sole function body | Any | Placeholder, not implementation |
+| `{ /* same as above */ }` | JS/TS | Copy-paste truncation |
+| `...` (bare ellipsis, not spread operator) | JS/TS/Python | Truncation marker |
+| `[PAUSED]` / `[CONTINUED]` in source | Any | Agent session marker leaked into code |
+
+**Action on detection:**
+- Mark file as TRUNCATED (distinct from STUB) in Verification Report
+- TRUNCATED files are Level 2 FAIL — they CANNOT pass verification
+- Report the specific line number and pattern detected
+- If agent claims "done" with truncated files → REJECTED by Evidence-Before-Claims gate
+
+**Continuation protocol** — if the agent hit output limits mid-file:
+- Agent MUST log: `[PAUSED — X of Y functions complete]` in its response (NOT in the code file)
+- Agent MUST resume and complete the file in the next turn
+- Verification re-runs after completion to clear the TRUNCATED flag
+
+## Evidence-Before-Claims Gate
+
+<HARD-GATE>
+An agent MUST NOT claim "done", "fixed", "passing", or "verified" without showing the actual command output that proves it.
+"I ran the tests and they pass" WITHOUT stdout/stderr = UNVERIFIED CLAIM = REJECTED.
+The verification report IS the evidence. No report = no verification happened.
+</HARD-GATE>
+
+### Claim Validation Protocol
+
+When any skill calls verification and then reports results upstream:
+
+1. **Output capture is mandatory** — every Bash command's stdout/stderr must appear in the report
+2. **Pass requires proof** — PASS means "tool ran AND output shows zero errors" (not "tool ran without crashing")
+3. **Silence is not success** — if a command produces no output, note it explicitly ("0 errors, 0 warnings")
+4. **Partial runs are labeled** — if only 2 of 4 checks ran, Overall = INCOMPLETE (not PASS)
+5. **A zero is only evidence once the instrument is shown live** — "nothing failed" and "nothing was measured" produce identical output, and the silent instrument always wins. Every clean result must carry the size of what it examined: tests **collected**, files **matched**, rules **applied**, rows **returned**. `0 failed` out of `0 collected` is not a pass; a linter that matched no files is not a clean lint; a scanner whose target path was renamed reports the same green as one that found nothing. Where a population count is not available, prove the check can fail — run it against a known-bad input once — before letting it promote a claim.
+
+### Red Flags — Agent is Lying
+
+| Claim | Without | Verdict |
+|---|---|---|
+| "All tests pass" | Test runner stdout showing pass count | REJECTED — re-run and show output |
+| "No lint errors" | Linter stdout | REJECTED — re-run and show output |
+| "Build succeeds" | Build command stdout | REJECTED — re-run and show output |
+| "I verified it" | Verification Report | REJECTED — run verification skill properly |
+| "Fixed and working" | Before/after test output | REJECTED — show the diff in results |
+| "0 tests failed" | A non-zero collected/ran count in the same output | REJECTED — a run that collected 0 tests also reports 0 failures |
+| "Clean scan / no findings" | The count of files, rules, or rows actually examined | REJECTED — an empty target set is indistinguishable from a clean one |
+| "No diff / no change detected" | Evidence the probe can report a difference at all | REJECTED — show it non-zero on a case known to differ |
+
+## Constraints
+
+1. MUST run ALL four checks: lint, type-check, tests, build — not just tests
+2. MUST show actual command output — never claim "all passed" without evidence
+3. MUST report specific failures with file:line references
+4. MUST NOT skip checks because "changes are small"
+5. MUST include stdout/stderr capture in every check result — empty output noted explicitly
+6. MUST mark Overall as INCOMPLETE if any check was skipped without valid reason (tool not installed = valid, "changes are small" = invalid). **Precedence**: a 3-Level or Level 3.5 FAIL dominates — Overall = FAIL even when command checks were validly skipped; INCOMPLETE applies only when nothing failed
+7. MUST run the 3-Level Artifact Verification on every file created/modified this task, AND Level 3.5 INTERACTION WIRED on every UI file (`.tsx/.jsx/.vue/.svelte/.html`) in the diff — skip 3.5 only when the diff contains no UI files (note "L3.5: n/a — no UI files")
+
+## Sharp Edges
+
+Known failure modes for this skill. Check these before declaring done.
+
+| Failure Mode | Severity | Mitigation |
+|---|---|---|
+| Claiming "all passed" without showing actual command output | CRITICAL | Evidence-Before-Claims HARD-GATE blocks this — stdout/stderr is mandatory |
+| Agent says "verified" without producing Verification Report | CRITICAL | No report = no verification. Re-run the skill properly. |
+| Skipping build because "changes are small" | HIGH | Constraint 4: all four checks mandatory — size of changes doesn't matter |
+| Marking check as PASS when the tool isn't installed | MEDIUM | Mark as SKIP (not PASS) — PASS means the tool ran and reported clean |
+| Stopping after first failure instead of running remaining checks | MEDIUM | Run all checks; aggregate all failures so developer can fix everything at once |
+| Reporting PASS when output has warnings but zero errors | LOW | PASS is correct but note warning count — caller decides if warnings matter |
+| Trusting exit code 0 without output verification | CRITICAL | Artifact Verification HARD-GATE: always confirm success indicator in stdout (pass count, "0 errors", output file exists) |
+| Existence Theater — file exists but is a stub | HIGH | 3-Level check: Level 2 scans for stub patterns (`<div>Placeholder</div>`, `return null`, `NotImplementedError`) |
+| Dead code — file created but never imported/used | MEDIUM | 3-Level check: Level 3 greps for consumers. 0 importers = UNWIRED |
+| Dead button — component rendered, interactive element wired to nothing | CRITICAL | Level 3.5: trace element → handler → target for every UI file in the diff. Rendering ≠ working |
+| Punishing legacy files for pre-existing dead interactions | MEDIUM | Level 3.5 scope guard: FAIL only for this task's diff; pre-existing = WARN |
+| Route created this task with zero callers passes silently | HIGH | Level 3.5 reverse check: new route files need ≥1 caller or FAIL |
+| `integration.verified` read as "quickstart validated" | LOW | Standalone verification runs do NOT execute quickstart.md (that's cook Phase 6's job) — the signal proves static wiring, not a live end-to-end run |
+| Truncated code — agent hit output limit mid-file | HIGH | Output Completion Enforcement: scan for `// ...`, `// rest of code`, bare ellipsis patterns. TRUNCATED = Level 2 FAIL |
+
+## Done When
+
+- Project type detected from config files
+- lint, type-check, tests, and build all executed (or SKIP with reason if tool missing)
+- Each check shows actual command output
+- Failures include specific file:line references (not just counts)
+- 3-Level check run on all created/modified files; Level 3.5 INTERACTION WIRED run on all UI files in the diff (or "n/a — no UI files" noted)
+- `integration.verified` emitted when the diff spans UI+data and all 3.5 checks pass
+- Verification Report emitted with Overall PASS/FAIL verdict
+
+## Cost Profile
+
+~$0.01-0.03 per run. Haiku + Bash commands. Fast and cheap.

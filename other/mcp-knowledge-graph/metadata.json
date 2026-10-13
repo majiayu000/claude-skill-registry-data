@@ -1,0 +1,37 @@
+{
+  "name": "mcp-knowledge-graph",
+  "repo": "PremModhaOfficial/NFR-pipeline",
+  "path": "skills/mcp-knowledge-graph/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/PremModhaOfficial/NFR-pipeline",
+  "dir_name": "mcp-knowledge-graph",
+  "downloaded_at": "2026-10-13T06:27:38.050935Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, writing=2",
+    "score": 2,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "PremModhaOfficial",
+  "source_url": "https://github.com/PremModhaOfficial/NFR-pipeline/blob/main/skills/mcp-knowledge-graph/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/PremModhaOfficial/NFR-pipeline/blob/main/skills/mcp-knowledge-graph/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this when reading or writing cross-run pipeline state via the neo4j-memory MCP \u2014 at end of any phase that produces cross-run signal (especially Phase 4 feedback), when learning-engine reads recurring-pattern signals, when baseline-manager / metrics-collector / drift-detector / improvement-planner persist observations, or when correlating defects / baselines / skills across runs. Covers entity / relation / observation patterns for Run, Phase, Agent, Skill, Pattern, Defect, Baseline, Patch plus the JSONL fallback when G04 mcp-health is RED. Triggers: neo4j, neo4j-memory, MCP, knowledge graph, cross-run, entity, relation, observation, fallback, JSONL."
+}
