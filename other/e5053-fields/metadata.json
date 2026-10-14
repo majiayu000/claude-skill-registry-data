@@ -1,0 +1,37 @@
+{
+  "name": "e5053-fields",
+  "repo": "ashfordeOU/aero-agent-skills",
+  "path": "skills/space-systems/ecss/e5053-fields/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ashfordeOU/aero-agent-skills",
+  "dir_name": "e5053-fields",
+  "downloaded_at": "2026-10-14T04:17:03.193159Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ashfordeOU",
+  "source_url": "https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/ecss/e5053-fields/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/ecss/e5053-fields/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Define the ordered field set a packet transfer protocol data unit is built from. Use when an ECSS-E-ST-50-53C clause 5.4.1.1 sender and receiver have to agree on where every boundary falls: lay out the target logical address, protocol identifier, reserved and user application octets in order after any path-address bytes, close with the self-delimiting packet, compute each field offset and the shortest unit that can carry them, split a received unit back into named fields, and audit a declared field sequence for a missing field, an invented one or a swapped pair. Refuses a repeated field name and a unit too short to hold the set. Trigger: ecss, e-st-50-53c, packet-transfer-unit-field-order, protocol-data-unit-field-offsets, positional-field-layout, minimum-unit-length, field-sequence-audit."
+}

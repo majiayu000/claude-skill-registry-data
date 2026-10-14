@@ -1,0 +1,37 @@
+{
+  "name": "oRPC Signing Helpers",
+  "repo": "ali-master/skills",
+  "path": "skills/orpc-signing/SKILL.md",
+  "github_branch": "master",
+  "category": "security",
+  "source": "github.com/ali-master/skills",
+  "dir_name": "orpc-signing",
+  "downloaded_at": "2026-10-14T04:02:19.997585Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: auth, crypto",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "auth",
+      "crypto"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ali-master",
+  "source_url": "https://github.com/ali-master/skills/blob/master/skills/orpc-signing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ali-master/skills/blob/master/skills/orpc-signing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Cryptographically sign and verify data using HMAC-SHA256."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "dk-wikibot",
+  "repo": "dushyantkhosla/agent-skills",
+  "path": "skills/dk-wikibot/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/dushyantkhosla/agent-skills",
+  "dir_name": "dk-wikibot",
+  "downloaded_at": "2026-10-14T05:18:52.291526Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, writing=2",
+    "score": 2,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dushyantkhosla",
+  "source_url": "https://github.com/dushyantkhosla/agent-skills/blob/main/skills/dk-wikibot/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dushyantkhosla/agent-skills/blob/main/skills/dk-wikibot/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Fetch, search, and extract information from Wikipedia, Wikidata, or any MediaWiki-based wiki using pywikibot. Use when the user asks to scrape Wikipedia articles or infoboxes, iterate over Wikipedia categories, query Wikidata entities and claims (structured facts), look up award winners, historical lists, or biographical data from Wikimedia projects. Also triggers on phrases like \"use the wikibot skill\", \"look up on Wikipedia\", or \"query Wikidata\". Does not handle live web searches, non-Wikimedia sites, or tasks requiring a logged-in Wikipedia account."
+}

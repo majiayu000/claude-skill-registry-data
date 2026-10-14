@@ -1,0 +1,38 @@
+{
+  "name": "rem-review-plan",
+  "repo": "darbin/claudecraft",
+  "path": "plugins/rem-dev-core/skills/rem-review-plan/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/darbin/claudecraft",
+  "dir_name": "rem-review-plan",
+  "downloaded_at": "2026-10-14T05:03:19.221611Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "darbin",
+  "source_url": "https://github.com/darbin/claudecraft/blob/main/plugins/rem-dev-core/skills/rem-review-plan/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/darbin/claudecraft/blob/main/plugins/rem-dev-core/skills/rem-review-plan/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Validate an implementation plan BEFORE code is written. Checks Prior Art claims, plan-contract conformance, breakage and bug-introduction risk, convention compliance, premise-wrong exit. Dispatches domain specialists in parallel, iterates up to 3 rounds, and writes Status back to the plan file so rem-execute knows the state. Distinct from rem-plan (writes the plan) and rem-review-code (reviews the implementation). Use for \"review this plan\", \"check my plan\", \"validate the plan\", \"is this plan ready\", \"pre-execute review\", \"plan review\", or after /rem-plan produces a draft."
+}

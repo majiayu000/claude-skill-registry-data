@@ -1,0 +1,37 @@
+{
+  "name": "plate-buckling",
+  "repo": "ashfordeOU/aero-agent-skills",
+  "path": "skills/structures/fem/plate-buckling/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/ashfordeOU/aero-agent-skills",
+  "dir_name": "plate-buckling",
+  "downloaded_at": "2026-10-14T04:16:57.625031Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, software",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ashfordeOU",
+  "source_url": "https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/structures/fem/plate-buckling/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/structures/fem/plate-buckling/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when a wing or fuselage skin panel, spar web or flat panel must be margin-checked against elastic instability in a stdlib-only environment without FEA software. Calculate the elastic buckling of flat plates and skin panels under compression and shear: resolve the plate buckling coefficient k from the edge conditions and the panel aspect ratio (k = 4.0 for a simply supported long plate, 6.97 for a clamped long plate), compute the critical compression buckling stress sigma_cr = k*pi^2*E/(12*(1-nu^2))*(t/b)^2 and the shear buckling stress tau_cr with the shear buckling coefficient k_s, run the combined compression-shear interaction check, and size the effective width of stiffened skin. Units are SI. Trigger: plate buckling, panel buckling, buckling coefficient, shear buckling, skin panel, spar web, critical buckling stress, effective width."
+}

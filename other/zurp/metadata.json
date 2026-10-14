@@ -1,0 +1,37 @@
+{
+  "name": "zurp",
+  "repo": "akillness/jeo-skills",
+  "path": ".agent-skills/zurp/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/akillness/jeo-skills",
+  "dir_name": "zurp",
+  "downloaded_at": "2026-10-14T03:58:22.667813Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "akillness",
+  "source_url": "https://github.com/akillness/jeo-skills/blob/main/.agent-skills/zurp/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/akillness/jeo-skills/blob/main/.agent-skills/zurp/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Operate facebookincubator/Zurp, the MIT-licensed Meta bug-bounty research toolkit combining a Burp Suite Java extension with three standalone stdio MCP servers: meta-context, fbdl, and sparta. Use when fitting or preflighting a checkout, building the Jar or MCP package, registering servers, configuring researcher-token/proxy/TLS settings, running controlled FBDL/Meta-context/SPARTA workflows, or troubleshooting 403, token, rate-limit, startup, or SSL failures. Triggers on Zurp, bug-bounty-research, FBDL MCP, Meta Context, SPARTA, zurp.jar, or BB_RESEARCH_TOKEN."
+}

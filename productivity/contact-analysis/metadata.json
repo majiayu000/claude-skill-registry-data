@@ -1,0 +1,37 @@
+{
+  "name": "contact-analysis",
+  "repo": "ashfordeOU/aero-agent-skills",
+  "path": "skills/structures/fem/contact-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/ashfordeOU/aero-agent-skills",
+  "dir_name": "contact-analysis",
+  "downloaded_at": "2026-10-14T04:17:01.540657Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ashfordeOU",
+  "source_url": "https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/structures/fem/contact-analysis/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/structures/fem/contact-analysis/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when the task is FEA contact, penalty or Lagrange methods, contact stiffness, penetration, friction, stick-slip, master-slave contact, node-to-surface, or tied interfaces in bolted joints and bearing contacts. Compute finite element contact analysis quantities for aircraft structure: determine normal contact forces with the penalty method from contact stiffness and penetration, estimate penalty stiffness from the contacting element properties, check Lagrange multiplier enforcement of zero penetration, apply Coulomb friction to categorize stick or slip, and run penetration control until penetration is under tolerance. The skill covers master-slave and node-to-surface gaps, tie constraints, and bolted joint and bearing contacts. Trigger: contact analysis, fea contact, penalty method, lagrange multiplier, contact stiffness, penetration, coulomb friction, stick-slip, master-slave, node-to-surface, tie constraint, bolted joint, bearing contact."
+}

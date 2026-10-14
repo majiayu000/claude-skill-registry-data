@@ -1,0 +1,39 @@
+{
+  "name": "performing-red-team-with-covenant",
+  "repo": "dimavenv/seeds",
+  "path": ".claude/skills/performing-red-team-with-covenant/SKILL.md",
+  "github_branch": "master",
+  "category": "security",
+  "source": "github.com/dimavenv/seeds",
+  "dir_name": "performing-red-team-with-covenant-dimavenv-seeds",
+  "downloaded_at": "2026-10-14T05:11:49.496015Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "dimavenv",
+  "source_url": "https://github.com/dimavenv/seeds/blob/master/.claude/skills/performing-red-team-with-covenant/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dimavenv/seeds/blob/master/.claude/skills/performing-red-team-with-covenant/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Conduct red team operations using the Covenant C2 framework for authorized adversary simulation, including listener setup, grunt deployment, task execution, and lateral movement tracking."
+}

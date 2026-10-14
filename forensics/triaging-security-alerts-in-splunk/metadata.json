@@ -1,0 +1,40 @@
+{
+  "name": "triaging-security-alerts-in-splunk",
+  "repo": "dimavenv/seeds",
+  "path": ".claude/skills/triaging-security-alerts-in-splunk/SKILL.md",
+  "github_branch": "master",
+  "category": "forensics",
+  "source": "github.com/dimavenv/seeds",
+  "dir_name": "triaging-security-alerts-in-splunk",
+  "downloaded_at": "2026-10-14T05:11:54.259729Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "forensics",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for forensics: forensic, incident, evidence, triage",
+    "score": 4,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "forensic",
+      "incident",
+      "evidence",
+      "triage"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "dimavenv",
+  "source_url": "https://github.com/dimavenv/seeds/blob/master/.claude/skills/triaging-security-alerts-in-splunk/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dimavenv/seeds/blob/master/.claude/skills/triaging-security-alerts-in-splunk/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Triages security alerts in Splunk Enterprise Security by classifying severity, investigating notable events, correlating related telemetry, and making escalation or closure decisions using SPL queries and the Incident Review dashboard. Use when SOC analysts face queued alerts from correlation searches, need to prioritize investigation order, or must document triage decisions for handoff to Tier 2/3 analysts."
+}

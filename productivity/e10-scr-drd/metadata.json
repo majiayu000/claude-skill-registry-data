@@ -1,0 +1,37 @@
+{
+  "name": "e10-scr-drd",
+  "repo": "ashfordeOU/aero-agent-skills",
+  "path": "skills/space-systems/ecss/e10-scr-drd/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/ashfordeOU/aero-agent-skills",
+  "dir_name": "e10-scr-drd",
+  "downloaded_at": "2026-10-14T04:17:01.175822Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ashfordeOU",
+  "source_url": "https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/ecss/e10-scr-drd/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/ecss/e10-scr-drd/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when preparing a System Concept Report (SCR) for a European space project per ECSS-E-ST-10C Annex C: validate that the required sections (candidate concepts, trade summary, feasibility assessment, recommended concept) are present, that every candidate concept carries a description, that the trade summary scores every candidate against all trade criteria (technical, programmatic, cost, risk), that every candidate carries a valid feasibility verdict, and that the recommended concept is a known candidate that is not itself flagged not_feasible before the SCR is handed off at the end of phase 0/A. Trigger: scr, system concept report, annex c, e-st-10c annex c, candidate concepts, trade summary, trade-off analysis, feasibility assessment, drd, concept selection, down-select."
+}

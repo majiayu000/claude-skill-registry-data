@@ -1,0 +1,36 @@
+{
+  "name": "bmad-review",
+  "repo": "alvin-reyes/better-agentic-ide",
+  "path": ".claude/skills/bmad-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/alvin-reyes/better-agentic-ide",
+  "dir_name": "bmad-review",
+  "downloaded_at": "2026-10-14T04:05:13.375392Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category analysis scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "analysis"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "alvin-reyes",
+  "source_url": "https://github.com/alvin-reyes/better-agentic-ide/blob/main/.claude/skills/bmad-review/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/alvin-reyes/better-agentic-ide/blob/main/.claude/skills/bmad-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Runs one or more installed review lenses \u2014 adversarial critique, edge cases, verification gaps, structure, prose \u2014 and reports triaged findings. Use when, and only when, the user asks you to review a diff, a pull request, or an artifact \u2014 code or documents, one or many \u2014 and actually says \"review\"; an explicit skill:bmad-review directive from another skill counts as that ask. A request to act on feedback from an earlier review is a change, not a review. Never invoke this uninvited, including on edits you just made."
+}

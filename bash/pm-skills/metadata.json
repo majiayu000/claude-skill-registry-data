@@ -1,0 +1,39 @@
+{
+  "name": "pm-skills",
+  "repo": "bestagentkits/agency-skills",
+  "path": "skills/claude-skills/pm-skills/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/bestagentkits/agency-skills",
+  "dir_name": "pm-skills",
+  "downloaded_at": "2026-10-14T04:27:38.553960Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "bestagentkits",
+  "source_url": "https://github.com/bestagentkits/agency-skills/blob/main/skills/claude-skills/pm-skills/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bestagentkits/agency-skills/blob/main/skills/claude-skills/pm-skills/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Router/index for the 8 project-management skills bundled in this plugin (senior PM quant toolkit, scrum master, Jira/JQL, Confluence, Atlassian admin, Atlassian templates, meeting analyzer, team communications). Use when a PM request doesn't obviously match one skill and you need to pick the right one (e.g., 'our sprints feel off', 'audit our Jira permissions'). Bundles an Atlassian Remote MCP config (.mcp.json) for live Jira/Confluence access."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "claude-code-bible",
+  "repo": "baekenough/second-brain",
+  "path": ".claude/skills/claude-code-bible/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/baekenough/second-brain",
+  "dir_name": "claude-code-bible",
+  "downloaded_at": "2026-10-14T04:23:19.720890Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, markdown, documentation",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "baekenough",
+  "source_url": "https://github.com/baekenough/second-brain/blob/main/.claude/skills/claude-code-bible/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/baekenough/second-brain/blob/main/.claude/skills/claude-code-bible/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Fetch Claude Code official documentation. Use when updating local reference docs or checking official spec."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "q20-gse-eidp",
+  "repo": "ashfordeOU/aero-agent-skills",
+  "path": "skills/space-systems/ecss/q20-gse-eidp/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ashfordeOU/aero-agent-skills",
+  "dir_name": "q20-gse-eidp",
+  "downloaded_at": "2026-10-14T04:17:03.555318Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, quality=3",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ashfordeOU",
+  "source_url": "https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/ecss/q20-gse-eidp/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/ecss/q20-gse-eidp/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Produce the end item data package a delivered piece of ground support equipment owes under ECSS-Q-ST-20C clause 5.8.4.1: derive the package sections from the item's own states instead of a standing table, refuse a section still in draft or marked approved with nobody behind it, force every open nonconformance into the package the receiving side accepts the item with, compute the approved fraction of the required set and decide whether the package may be released. Use when GSE is about to change hands and its data package has to be assembled or audited. Trigger: ecss, q-st-20c-clause-5-8-4-1, gse-end-item-data-package, gse-eidp-section-derivation, gse-eidp-approval-state, gse-open-nonconformance-carry-over, gse-data-package-release."
+}

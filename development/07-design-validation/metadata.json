@@ -1,0 +1,38 @@
+{
+  "name": "07-design-validation",
+  "repo": "databricks-solutions/vibe-coding-workshop-template",
+  "path": "data_product_accelerator/skills/gold/design-workers/07-design-validation/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/databricks-solutions/vibe-coding-workshop-template",
+  "dir_name": "07-design-validation",
+  "downloaded_at": "2026-10-14T05:04:33.501011Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, compile",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "databricks-solutions",
+  "source_url": "https://github.com/databricks-solutions/vibe-coding-workshop-template/blob/main/data_product_accelerator/skills/gold/design-workers/07-design-validation/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/databricks-solutions/vibe-coding-workshop-template/blob/main/data_product_accelerator/skills/gold/design-workers/07-design-validation/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Cross-validation of Gold layer design artifacts during the design phase. Use when validating that YAML schemas, ERDs, lineage CSVs, and PK/FK references are internally consistent before handing off to implementation. Catches design-time inconsistencies (e.g., column in ERD but not in YAML, FK referencing non-existent table) that would otherwise surface as runtime bugs."
+}

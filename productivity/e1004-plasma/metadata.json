@@ -1,0 +1,37 @@
+{
+  "name": "e1004-plasma",
+  "repo": "ashfordeOU/aero-agent-skills",
+  "path": "skills/space-systems/ecss/e1004-plasma/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/ashfordeOU/aero-agent-skills",
+  "dir_name": "e1004-plasma",
+  "downloaded_at": "2026-10-14T04:17:02.930027Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ashfordeOU",
+  "source_url": "https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/ecss/e1004-plasma/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/ecss/e1004-plasma/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when defining the plasma environment required by ECSS-E-ST-10-04C clause 8.2 for spacecraft charging analysis: determine which plasma regions (ionosphere, plasmasphere, auroral, outer magnetosphere, solar wind, magnetosheath, magnetotail/L2, planetary, induced) apply to each orbit segment, verify that a model and the electron density, electron temperature, ion density, and ion temperature are recorded for every applicable region, and identify missing regions or incomplete entries before the charging environment definition is closed out. Trigger: plasma environment, spacecraft charging, e-st-10-04, ecss, electron density, ion temperature, surface charging, auroral charging, outer magnetosphere plasma, plasmasphere, induced plasma."
+}

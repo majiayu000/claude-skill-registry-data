@@ -1,0 +1,38 @@
+{
+  "name": "open3d-skill",
+  "repo": "darellchua2/civiltekk-skills",
+  "path": "skills/open3d-skill/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/darellchua2/civiltekk-skills",
+  "dir_name": "open3d-skill",
+  "downloaded_at": "2026-10-14T05:03:24.797380Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, pipeline, visualization",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "darellchua2",
+  "source_url": "https://github.com/darellchua2/civiltekk-skills/blob/main/skills/open3d-skill/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/darellchua2/civiltekk-skills/blob/main/skills/open3d-skill/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Open3D 3D data processing \u2014 point clouds (filtering, registration, FPFH, RANSAC, ICP), mesh operations, TSDF reconstruction, visualization, Open3D-ML, RGBD/Kinect/RealSense. Version detection first."
+}

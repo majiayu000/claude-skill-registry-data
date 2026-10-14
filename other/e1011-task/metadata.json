@@ -1,0 +1,38 @@
+{
+  "name": "e1011-task",
+  "repo": "ashfordeOU/aero-agent-skills",
+  "path": "skills/space-systems/ecss/e1011-task/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ashfordeOU/aero-agent-skills",
+  "dir_name": "e1011-task",
+  "downloaded_at": "2026-10-14T04:16:56.096551Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=3, workflow=3",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 3,
+    "signals": [
+      "automation",
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ashfordeOU",
+  "source_url": "https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/ecss/e1011-task/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/ecss/e1011-task/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when define task characteristics to feed human-centred design (HCD) analysis per ECSS-E-ST-10-11C \u00a74.2.1.4: identify each operator task by name and mission phase, assign a frequency category (rare, occasional, routine), determine the criticality level (safety-critical, mission-critical, non-critical), score four workload dimensions (physical demand, cognitive demand, time pressure, consequence of error) on a three-point scale, and flag high-risk pairings where elevated criticality coincides with high workload for priority HCD attention. The resulting task inventory and characteristics drive display design, automation boundary decisions, training scope, and workload mitigation strategies. Trigger: ecss, e-st-10-system-scope, hcd, human-factors, task-analysis, workload, criticality, operator-task."
+}

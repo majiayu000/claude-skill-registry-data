@@ -1,0 +1,37 @@
+{
+  "name": "e1009-frame",
+  "repo": "ashfordeOU/aero-agent-skills",
+  "path": "skills/space-systems/ecss/e1009-frame/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/ashfordeOU/aero-agent-skills",
+  "dir_name": "e1009-frame",
+  "downloaded_at": "2026-10-14T04:17:00.705514Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ashfordeOU",
+  "source_url": "https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/ecss/e1009-frame/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/ecss/e1009-frame/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when define and validate a spacecraft reference frame under ECSS-E-ST-10C \u00a75.4.1: establish the frame origin and three orthogonal right-handed axes, label each axis with a physical direction reference, determine whether the frame is inertial or time-varying (body-fixed, orbit-referenced, or planet-fixed), supply an epoch for inertial frames, confirm the name follows the ECSS uppercase-alphanumeric convention, and verify that any child frame traces an unbroken chain back to a root inertial frame. Trigger: ecss, e-st-10-system-scope, reference-frame, coordinate-frame, axes, right-handed, inertial, body-fixed, orbit-referenced, frame-naming."
+}

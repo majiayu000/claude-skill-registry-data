@@ -1,0 +1,38 @@
+{
+  "name": "create-agent-skill",
+  "repo": "databricks-solutions/vibe-coding-workshop-template",
+  "path": "data_product_accelerator/skills/admin/create-agent-skill/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/databricks-solutions/vibe-coding-workshop-template",
+  "dir_name": "create-agent-skill",
+  "downloaded_at": "2026-10-14T05:04:27.326918Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "databricks-solutions",
+  "source_url": "https://github.com/databricks-solutions/vibe-coding-workshop-template/blob/main/data_product_accelerator/skills/admin/create-agent-skill/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/databricks-solutions/vibe-coding-workshop-template/blob/main/data_product_accelerator/skills/admin/create-agent-skill/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Guides the creation of new Agent Skills following the AgentSkills.io specification. Covers required frontmatter (name, description), optional metadata, directory structure (SKILL.md, references/, scripts/, assets/), progressive disclosure principles, and naming conventions. Use when creating a new skill from scratch, adding project-specific agent knowledge, defining reusable patterns for AI coding assistants, or structuring domain expertise as a skill. Triggers on \"create skill\", \"new skill\", \"add skill\", \"write a skill\", \"skill template\", \"SKILL.md\", \"agent skill\"."
+}

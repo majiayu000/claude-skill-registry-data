@@ -1,0 +1,38 @@
+{
+  "name": "usm",
+  "repo": "andresnator/agents-orchestrator",
+  "path": "domains/docs/skills/usm/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/andresnator/agents-orchestrator",
+  "dir_name": "usm",
+  "downloaded_at": "2026-10-14T04:07:20.112077Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, prd, feature",
+    "score": 3,
+    "runner_up": "creative",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "prd",
+      "feature"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "andresnator",
+  "source_url": "https://github.com/andresnator/agents-orchestrator/blob/main/domains/docs/skills/usm/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/andresnator/agents-orchestrator/blob/main/domains/docs/skills/usm/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Trigger: USM, user story map, story map, mapa de historias, MVP slice. Create journey-first story maps with MVP slicing and Mermaid output."
+}

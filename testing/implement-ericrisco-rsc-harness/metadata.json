@@ -1,0 +1,40 @@
+{
+  "name": "implement",
+  "repo": "ericrisco/rsc-harness",
+  "path": "skills/implement/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/ericrisco/rsc-harness",
+  "dir_name": "implement-ericrisco-rsc-harness",
+  "downloaded_at": "2026-10-14T05:27:18.545118Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, tdd, pytest, playwright",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "test",
+      "tdd",
+      "pytest",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "ericrisco",
+  "source_url": "https://github.com/ericrisco/rsc-harness/blob/main/skills/implement/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ericrisco/rsc-harness/blob/main/skills/implement/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when an approved plan and task list exist and it is time to turn them into working, tested code \u2014 the SDD phase after `analyze` and before `verify`. Enforces TDD: a failing test comes before the code that makes it pass, one task at a time, appended to a progress ledger that survives compaction. Delegates test tooling to the stack skill and fans disjoint tasks out via `parallel`. NOT spec writing (that is `specify`), NOT planning (that is `plan`), NOT the final lint/test/audit gate (that is `verify`)."
+}

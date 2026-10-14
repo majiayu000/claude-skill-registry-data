@@ -1,0 +1,38 @@
+{
+  "name": "anyjev",
+  "repo": "akillness/jeo-skills",
+  "path": ".agent-skills/anyjev/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/akillness/jeo-skills",
+  "dir_name": "anyjev",
+  "downloaded_at": "2026-10-14T03:58:23.223322Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=3, local-ai-infrastructure=3",
+    "score": 3,
+    "runner_up": "local-ai-infrastructure",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "akillness",
+  "source_url": "https://github.com/akillness/jeo-skills/blob/main/.agent-skills/anyjev/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/akillness/jeo-skills/blob/main/.agent-skills/anyjev/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Operate nokia-applied-research/AnyJev, the Apache-2.0 Python library for training-free typed choice, yes/no, and score decisions from next-token probabilities. Use when pinning or inspecting a checkout, selecting raw/L0 Decider readouts, running approved Tacit checkpoints, configuring HF/vLLM/ SGLang/llama.cpp backends, checking tokenizer or calibration limits, or using the local gateway. Triggers on AnyJev, Tacit, L0, permutation debiasing, llama.cpp logprob, SGLang /generate, or comparisons with hosted TypeSafe AI/Jev. Do not use for TypeSafe hosted services or a generic Jev harness."
+}

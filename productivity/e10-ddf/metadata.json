@@ -1,0 +1,37 @@
+{
+  "name": "e10-ddf",
+  "repo": "ashfordeOU/aero-agent-skills",
+  "path": "skills/space-systems/ecss/e10-ddf/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/ashfordeOU/aero-agent-skills",
+  "dir_name": "e10-ddf",
+  "downloaded_at": "2026-10-14T04:16:54.036657Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ashfordeOU",
+  "source_url": "https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/ecss/e10-ddf/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/ecss/e10-ddf/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when produce or maintain the Design Definition File (DDF) for a space system product under ECSS-E-ST-10C clause 5.4.1.4 and Annex G: classify each DDF content item into its section (design description, budget, or interface data), compute a budget item's margin against the minimum margin required at the current review milestone, verify each interface data item declares a valid mating product, confirm every mandatory DDF section is populated for the product, and determine whether the product's DDF is ready to baseline at that milestone. Trigger: ecss, e-st-10-system-scope, design-definition-file, ddf, design-budgets, interface-data, review-milestone, baseline-readiness."
+}

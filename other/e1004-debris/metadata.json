@@ -1,0 +1,37 @@
+{
+  "name": "e1004-debris",
+  "repo": "ashfordeOU/aero-agent-skills",
+  "path": "skills/space-systems/ecss/e1004-debris/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ashfordeOU/aero-agent-skills",
+  "dir_name": "e1004-debris",
+  "downloaded_at": "2026-10-14T04:17:02.041844Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ashfordeOU",
+  "source_url": "https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/ecss/e1004-debris/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/ecss/e1004-debris/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when a space project must define which space debris flux model (MASTER-class or ORDEM-class) to select and apply, under ECSS-E-ST-10-04C clause 10.2.2.1, for a mission's orbit and analysis epoch: validating that a candidate model's declared altitude/inclination/epoch/diameter envelope actually covers the mission envelope, building a complete model run request, and determining when a prior result needs re-assessment. Trigger: space debris flux, debris environment model, MASTER model, ORDEM model, orbital debris, debris flux envelope, debris risk input, E-ST-10-04, ecss, e-st-10c."
+}

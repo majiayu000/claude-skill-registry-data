@@ -1,0 +1,38 @@
+{
+  "name": "Aident Loadout",
+  "repo": "agentskillexchange/skills",
+  "path": "skills/aident-loadout/SKILL.md",
+  "github_branch": "main",
+  "category": "integration",
+  "source": "github.com/agentskillexchange/skills",
+  "dir_name": "aident-loadout",
+  "downloaded_at": "2026-10-14T03:53:40.833695Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "integration",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for integration: integration, connector, oauth",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "integration",
+      "connector",
+      "oauth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "agentskillexchange",
+  "source_url": "https://github.com/agentskillexchange/skills/blob/main/skills/aident-loadout/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/agentskillexchange/skills/blob/main/skills/aident-loadout/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Give Claude Code, Codex, Cursor, ChatGPT and other MCP clients 1,000+ apps and 400+ expert-built Skills through one reusable Aident Loadout setup, with credentials kept in Aident Vault and every action recorded in Audit."
+}

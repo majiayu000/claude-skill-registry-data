@@ -1,0 +1,37 @@
+{
+  "name": "nozzle-design",
+  "repo": "ashfordeOU/aero-agent-skills",
+  "path": "skills/propulsion/rocket/nozzle-design/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ashfordeOU/aero-agent-skills",
+  "dir_name": "nozzle-design",
+  "downloaded_at": "2026-10-14T04:17:03.673274Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ashfordeOU",
+  "source_url": "https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/propulsion/rocket/nozzle-design/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/propulsion/rocket/nozzle-design/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when you must design a rocket engine nozzle from the chamber conditions: compute the exit Mach number for a target area ratio, the choked mass flow through the throat, the exit velocity and the exit static pressure, and the ideal thrust with the pressure term. Produces the nozzle area ratio, exit Mach number, mass flow, exit velocity, and thrust, plus the expansion verdict against the ambient pressure, all in consistent SI units (Pa, K, kg/s, m/s, N). Trigger: nozzle design, area ratio, exit mach, mass flow, ideal thrust, expansion ratio, choked throat."
+}

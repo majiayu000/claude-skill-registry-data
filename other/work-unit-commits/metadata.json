@@ -1,0 +1,37 @@
+{
+  "name": "work-unit-commits",
+  "repo": "andresnator/agents-orchestrator",
+  "path": "skills/work-unit-commits/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/andresnator/agents-orchestrator",
+  "dir_name": "work-unit-commits",
+  "downloaded_at": "2026-10-14T04:07:20.373987Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "programming"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "andresnator",
+  "source_url": "https://github.com/andresnator/agents-orchestrator/blob/main/skills/work-unit-commits/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/andresnator/agents-orchestrator/blob/main/skills/work-unit-commits/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Deliver verified implementation as cohesive commits. Trigger: explicit commit request, commit-per-unit, commit splitting, or keeping tests and docs with code."
+}

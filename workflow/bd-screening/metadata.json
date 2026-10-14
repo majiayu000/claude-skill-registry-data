@@ -1,0 +1,40 @@
+{
+  "name": "bd-screening",
+  "repo": "buzzbysolcex/buzz-bd-agent",
+  "path": ".claude/skills/bd-screening/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/buzzbysolcex/buzz-bd-agent",
+  "dir_name": "bd-screening",
+  "downloaded_at": "2026-10-14T04:37:50.000095Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process, automation, pipeline",
+    "score": 4,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "workflow",
+      "process",
+      "automation",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "buzzbysolcex",
+  "source_url": "https://github.com/buzzbysolcex/buzz-bd-agent/blob/main/.claude/skills/bd-screening/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/buzzbysolcex/buzz-bd-agent/blob/main/.claude/skills/bd-screening/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "7-phase BD screening pipeline for crypto exchange listing. From HOT token detection through verified lead to outreach execution. Dual-source verification (DexScreener + DexTools), security deep dive, contact discovery, email-first outreach with trust-gated automation. Permanent process for every token scoring 85+."
+}

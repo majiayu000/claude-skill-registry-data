@@ -1,0 +1,37 @@
+{
+  "name": "beam-vibration",
+  "repo": "ashfordeOU/aero-agent-skills",
+  "path": "skills/structures/fem/beam-vibration/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/ashfordeOU/aero-agent-skills",
+  "dir_name": "beam-vibration",
+  "downloaded_at": "2026-10-14T04:16:56.658499Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ashfordeOU",
+  "source_url": "https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/structures/fem/beam-vibration/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/structures/fem/beam-vibration/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when you must compute the natural frequencies of a continuous beam member: exact Euler-Bernoulli bending frequencies in hertz for pinned-pinned, cantilever, clamped-clamped and free-free end conditions from the characteristic-equation roots cos x cosh x = -1 and cos x cosh x = 1, the closed-form pinned-pinned law n^2 pi^2 sqrt(EI/(m L^4))/2pi, the shared rule f_n = (beta_n L)^2 sqrt(EI/(m L^4))/2pi, and a Rayleigh-quotient fundamental estimate omega^2 = 20 EI/(m L^4) for non-uniform cantilever shapes. Produces member natural frequencies for vibration clearance and excitation checks; complements the discrete 2-DOF modal-analysis leaf. Trigger: euler bernoulli beam, characteristic equation roots, cantilever beam, pinned-pinned beam, clamped beam frequency, free-free beam, rayleigh quotient, vibration clearance."
+}

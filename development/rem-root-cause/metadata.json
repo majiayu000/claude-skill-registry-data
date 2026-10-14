@@ -1,0 +1,39 @@
+{
+  "name": "rem-root-cause",
+  "repo": "darbin/claudecraft",
+  "path": "plugins/rem-dev-core/skills/rem-root-cause/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/darbin/claudecraft",
+  "dir_name": "rem-root-cause",
+  "downloaded_at": "2026-10-14T05:03:19.390000Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, framework, debug",
+    "score": 4,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "darbin",
+  "source_url": "https://github.com/darbin/claudecraft/blob/main/plugins/rem-dev-core/skills/rem-root-cause/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/darbin/claudecraft/blob/main/plugins/rem-dev-core/skills/rem-root-cause/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Deep root cause analysis for bugs and errors. Traces execution paths, eliminates wrong hypotheses, finds the underlying architectural problem \u2014 not just symptoms. Convention-aware \u2014 checks learnings for known issues before investigating. Use when the user has a bug, error, or unexpected behavior and needs to understand why."
+}

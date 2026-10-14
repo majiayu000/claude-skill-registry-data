@@ -1,0 +1,38 @@
+{
+  "name": "llmfit",
+  "repo": "akillness/jeo-skills",
+  "path": ".agent-skills/llmfit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/akillness/jeo-skills",
+  "dir_name": "llmfit",
+  "downloaded_at": "2026-10-14T03:58:23.343482Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, performance=3",
+    "score": 3,
+    "runner_up": "performance",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "akillness",
+  "source_url": "https://github.com/akillness/jeo-skills/blob/main/.agent-skills/llmfit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/akillness/jeo-skills/blob/main/.agent-skills/llmfit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Operate AlexsJones/llmfit to inspect detected hardware, rank model fit, estimate plans and storage, run the local REST API, and separate formula-based estimates from measured inference. Use when a user asks what LLMs fit a machine, how much RAM/VRAM a model needs, which runtime is plausible, or whether a result is measured versus estimated. Do not use this skill to install binaries, pull models, benchmark a provider, or submit community results without explicit approval."
+}

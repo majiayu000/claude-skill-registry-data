@@ -1,0 +1,38 @@
+{
+  "name": "python-testing",
+  "repo": "bilacchi/agents-skills",
+  "path": "skills/python-testing/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/bilacchi/agents-skills",
+  "dir_name": "python-testing-bilacchi-agents-skills",
+  "downloaded_at": "2026-10-14T04:29:22.643768Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, pytest, integration",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "pytest",
+      "integration"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bilacchi",
+  "source_url": "https://github.com/bilacchi/agents-skills/blob/main/skills/python-testing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bilacchi/agents-skills/blob/main/skills/python-testing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Python testing best practices using pytest including fixtures, parametrization, mocking, coverage analysis, async testing, and test organization. Use when writing or improving Python tests."
+}

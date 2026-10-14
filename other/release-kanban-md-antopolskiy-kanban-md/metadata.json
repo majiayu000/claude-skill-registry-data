@@ -1,0 +1,37 @@
+{
+  "name": "release-kanban-md",
+  "repo": "antopolskiy/kanban-md",
+  "path": ".claude/skills/release-kanban-md/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/antopolskiy/kanban-md",
+  "dir_name": "release-kanban-md-antopolskiy-kanban-md",
+  "downloaded_at": "2026-10-14T04:10:34.684112Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "antopolskiy",
+  "source_url": "https://github.com/antopolskiy/kanban-md/blob/main/.claude/skills/release-kanban-md/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/antopolskiy/kanban-md/blob/main/.claude/skills/release-kanban-md/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Release kanban-md through its tag-triggered GoReleaser workflow, monitor CI, recover safely from failures, and publish user-facing GitHub release notes. Use when the user asks to release, tag, publish, or prepare release notes for kanban-md. Do not use for ordinary commits or unreleased changelog edits."
+}

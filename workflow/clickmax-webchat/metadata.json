@@ -1,0 +1,38 @@
+{
+  "name": "clickmax-webchat",
+  "repo": "bilhon-technologies/clickmax-skills",
+  "path": "skills/clickmax-webchat/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/bilhon-technologies/clickmax-skills",
+  "dir_name": "clickmax-webchat",
+  "downloaded_at": "2026-10-14T04:29:35.536543Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: process, automation, pipeline",
+    "score": 3,
+    "runner_up": "communication",
+    "runner_up_score": 2,
+    "signals": [
+      "process",
+      "automation",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bilhon-technologies",
+  "source_url": "https://github.com/bilhon-technologies/clickmax-skills/blob/main/skills/clickmax-webchat/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bilhon-technologies/clickmax-skills/blob/main/skills/clickmax-webchat/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when the user wants to create, inspect, edit, enable, or disable a Clickmax webchat bot (the embeddable chat widget channel) and its pre-chat bot flow \u2014 greetings, lead capture, clickable questions, AI classification, and handoff to a human attendant."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "openbrewerydb-pull-request",
+  "repo": "alexjustesen/obdb-skills",
+  "path": "skills/openbrewerydb-pull-request/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/alexjustesen/obdb-skills",
+  "dir_name": "openbrewerydb-pull-request",
+  "downloaded_at": "2026-10-14T04:01:31.273326Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "alexjustesen",
+  "source_url": "https://github.com/alexjustesen/obdb-skills/blob/main/skills/openbrewerydb-pull-request/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/alexjustesen/obdb-skills/blob/main/skills/openbrewerydb-pull-request/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Open a GitHub pull request for committed brewery record changes in the openbrewerydb/openbrewerydb dataset, with a \"data:\" title and a body containing a full description plus one section and attribute table per changed record. Use whenever a branch of dataset commits is ready to submit, when the openbrewerydb-contributor workflow reaches its PR step, or when the user asks to open, write, or fix an Open Brewery DB data PR. Do not use to research or edit records, for audits or discovery reports, or for pull requests to other repositories."
+}

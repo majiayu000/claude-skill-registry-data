@@ -1,0 +1,38 @@
+{
+  "name": "content-performance-review",
+  "repo": "clever-cc-plugins/cc-content",
+  "path": "plugins/cc-content/skills/content-performance-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/clever-cc-plugins/cc-content",
+  "dir_name": "content-performance-review",
+  "downloaded_at": "2026-10-14T04:50:21.493124Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: marketing=3, quality=3",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "content",
+      "campaign",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "clever-cc-plugins",
+  "source_url": "https://github.com/clever-cc-plugins/cc-content/blob/main/plugins/cc-content/skills/content-performance-review/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/clever-cc-plugins/cc-content/blob/main/plugins/cc-content/skills/content-performance-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this skill to analyze how one or more published content pieces performed and generate concrete iteration variants for the next piece. Invoke when the user says \"review how this post performed\", \"analyze content performance\", \"what worked in these posts\", \"help me iterate on this based on the numbers\", or pastes performance data (impressions, engagement rate, CTR, conversions) alongside a piece and asks what to do next. Works from whatever data the owner supplies \u2014 there is no analytics API integration. Do NOT use it to evaluate whether a positioning claim, channel allocation, or campaign goal was validated \u2014 that is a strategic-level question for strategy-performance-review, not this skill."
+}

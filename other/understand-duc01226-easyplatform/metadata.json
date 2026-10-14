@@ -1,0 +1,37 @@
+{
+  "name": "understand",
+  "repo": "duc01226/EasyPlatform",
+  "path": ".claude/skills/understand/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/duc01226/EasyPlatform",
+  "dir_name": "understand-duc01226-easyplatform",
+  "downloaded_at": "2026-10-14T05:18:23.580508Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "duc01226",
+  "source_url": "https://github.com/duc01226/EasyPlatform/blob/main/.claude/skills/understand/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/duc01226/EasyPlatform/blob/main/.claude/skills/understand/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "[Process] Use when the developer wants something explained or taught, or wants to know HOW TO REVIEW a change \u2014 by default the current working tasks + changes in context, or whatever the prompt names (a plan, a subsystem, a decision, a concept, a bug). AI derives WHAT to explain from the prompt and ALWAYS delivers a teacher-and-coach review guide, high level first then detail: what was done, a VISUAL MAP (system flowchart, domain ERD, sequence diagrams), the user stories and business rules with their REAL test-case IDs, a REVIEW PATH naming which files to open first and in what order with an exit criterion per stage, the technical concepts needed to follow it, how it works, why THIS solution, every alternative option with pros/cons, the trade-offs accepted, the blast radius, HOW TO TEST AND DEMO the change, the developer's decision levers, and written challenge prompts that provoke the reader to pressure-test the work. Works at ANY scope \u2014 from one line of code to the whole project: it SIZES the target into a scope tier, DECOMPOSES a large one into understanding groups, BREAKS the work into tasks before the first deep read, and ACCUMULATES the report group by group on disk so a huge explanation stays complete instead of thinning out. Writes the full report to a single combined markdown file (plans/reports/understand-*.md) that opens with a detailed summary section \u2014 or delivers it in full in chat when Step 3 finds no git-ignored directory for it \u2014 and always summarizes it in chat. Regardless of coding level. Never interrogates, never quizzes, never blocks."
+}

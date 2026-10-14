@@ -1,0 +1,39 @@
+{
+  "name": "excavate",
+  "repo": "chrislacey89/skills",
+  "path": "excavate/SKILL.md",
+  "github_branch": "prod",
+  "category": "development",
+  "source": "github.com/chrislacey89/skills",
+  "dir_name": "excavate",
+  "downloaded_at": "2026-10-14T04:46:51.133335Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, software, debug, refactor",
+    "score": 4,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "software",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "chrislacey89",
+  "source_url": "https://github.com/chrislacey89/skills/blob/prod/excavate/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/chrislacey89/skills/blob/prod/excavate/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "User-invoked side-route for onboarding to a legacy repo with no docs/solutions/, research archive, or written decisions. Mines the last 12 months of git history and, when gh is available, PR bodies and review threads, into ranked hotspots, cited recovered decisions, and a who-to-ask map, then offers a PR of docs/solutions/ entries. Not for repos that already compound, not for judging people, not model-invoked."
+}

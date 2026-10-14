@@ -1,0 +1,37 @@
+{
+  "name": "monoscript",
+  "repo": "cheat-engine/AITools",
+  "path": "skills/monoscript/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/cheat-engine/AITools",
+  "dir_name": "monoscript",
+  "downloaded_at": "2026-10-14T04:44:05.705634Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, gaming=2",
+    "score": 2,
+    "runner_up": "gaming",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cheat-engine",
+  "source_url": "https://github.com/cheat-engine/AITools/blob/main/skills/monoscript/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cheat-engine/AITools/blob/main/skills/monoscript/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Cheat Engine Mono and Unity IL2CPP runtime scripting, reverse engineering, and Auto Assembler integration. Use this skill when inspecting, hooking, scanning, or calling Mono/.NET/IL2CPP code, classes, methods, fields, and objects in target processes via monoscript.lua and MonoDataCollector."
+}

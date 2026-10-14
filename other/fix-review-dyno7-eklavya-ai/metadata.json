@@ -1,0 +1,37 @@
+{
+  "name": "fix-review",
+  "repo": "dyno7/Eklavya.AI",
+  "path": "skills/fix-review/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/dyno7/Eklavya.AI",
+  "dir_name": "fix-review-dyno7-eklavya-ai",
+  "downloaded_at": "2026-10-14T05:20:15.752032Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: quality=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dyno7",
+  "source_url": "https://github.com/dyno7/Eklavya.AI/blob/master/skills/fix-review/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dyno7/Eklavya.AI/blob/master/skills/fix-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Verify fix commits address audit findings without new bugs"
+}

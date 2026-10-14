@@ -1,0 +1,36 @@
+{
+  "name": "orchestrate",
+  "repo": "evanharmon1/harmon-devkit",
+  "path": "ai/skills/universal/orchestrate/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/evanharmon1/harmon-devkit",
+  "dir_name": "orchestrate-evanharmon1-harmon-devkit",
+  "downloaded_at": "2026-10-14T05:29:29.654675Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "evanharmon1",
+  "source_url": "https://github.com/evanharmon1/harmon-devkit/blob/main/ai/skills/universal/orchestrate/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/evanharmon1/harmon-devkit/blob/main/ai/skills/universal/orchestrate/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Standing mode for policy-resolved, worktree-isolated Dev flow runs. It dispatches scoped roles, owns run records and adjudication, monitors durable events, and schedules a merge queue without making product or safety choices. Use when coordinating one or more Dev Loop lanes. Invoke as /orchestrate."
+}

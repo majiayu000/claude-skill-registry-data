@@ -1,0 +1,37 @@
+{
+  "name": "e1002-vcb",
+  "repo": "ashfordeOU/aero-agent-skills",
+  "path": "skills/space-systems/ecss/e1002-vcb/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ashfordeOU/aero-agent-skills",
+  "dir_name": "e1002-vcb",
+  "downloaded_at": "2026-10-14T04:16:55.540504Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ashfordeOU",
+  "source_url": "https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/ecss/e1002-vcb/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/ecss/e1002-vcb/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when establish or operate a Verification Control Board (VCB) under ECSS-E-ST-10-02C \u00a75.4.2: validate the board composition carries at least one customer representative and one supplier representative, confirm quorum is met before deliberation, categorize each agenda item by the decision authority it requires, evaluate whether attending members hold sufficient authority for each item, record each decision with rationale, and assess overall meeting compliance. Trigger: ecss, e-st-10-02c, verification-control-board, vcb, verification-governance, quorum, decision-authority, closeout-approval."
+}

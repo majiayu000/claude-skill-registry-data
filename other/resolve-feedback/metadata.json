@@ -1,0 +1,37 @@
+{
+  "name": "resolve-feedback",
+  "repo": "alexander-danilenko/cortex-ai-skills",
+  "path": "plugins/engineering/cortex-coderabbit/skills/resolve-feedback/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/alexander-danilenko/cortex-ai-skills",
+  "dir_name": "resolve-feedback",
+  "downloaded_at": "2026-10-14T04:00:28.221253Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "alexander-danilenko",
+  "source_url": "https://github.com/alexander-danilenko/cortex-ai-skills/blob/main/plugins/engineering/cortex-coderabbit/skills/resolve-feedback/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/alexander-danilenko/cortex-ai-skills/blob/main/plugins/engineering/cortex-coderabbit/skills/resolve-feedback/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Resolve CodeRabbit review feedback on a GitHub pull request. Collects every open CodeRabbit finding (inline threads, plus the nitpick and outside-diff findings packed into review bodies), judges and fixes each one against the real code with subagents, unifies fixes that share a pattern, commits locally, asks before pushing, then shows every reply draft linked to its finding and posts only on approval. Runs only on top-tier models. Use on \"resolve the CodeRabbit feedback\", \"address coderabbit comments\", \"answer the rabbit\", \"fix what CodeRabbit flagged on"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "panel-method",
+  "repo": "ashfordeOU/aero-agent-skills",
+  "path": "skills/aerodynamics/cfd/panel-method/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ashfordeOU/aero-agent-skills",
+  "dir_name": "panel-method",
+  "downloaded_at": "2026-10-14T04:16:57.102262Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ashfordeOU",
+  "source_url": "https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/aerodynamics/cfd/panel-method/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/aerodynamics/cfd/panel-method/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when the task is panel method setup, source or doublet panels, Neumann or Dirichlet boundary conditions, Kutta condition enforcement, pressure distribution on an airfoil or fuselage, or potential flow over 3D bodies. Compute the surface pressure distribution and force coefficients for an airfoil or body in incompressible potential flow with a panel method: build panel geometry from a closed point list, assemble the source panel influence matrix for the Neumann boundary condition, assemble the doublet panel influence matrix for the Dirichlet boundary condition, solve the linear system, evaluate the surface velocity and pressure coefficient, integrate pressure for lift and drag, and apply the Kutta condition to fix trailing-edge circulation. Trigger: panel method, source panel, doublet panel, kutta condition, neumann boundary condition, dirichlet boundary condition, pressure coefficient, potential flow, 3d body."
+}

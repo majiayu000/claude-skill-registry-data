@@ -1,0 +1,37 @@
+{
+  "name": "space-systems",
+  "repo": "ashfordeOU/aero-agent-skills",
+  "path": "skills/space-systems/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/ashfordeOU/aero-agent-skills",
+  "dir_name": "space-systems",
+  "downloaded_at": "2026-10-14T04:16:53.005931Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, component",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "design",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ashfordeOU",
+  "source_url": "https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when a task concerns space systems engineering for European space projects: guide the router to the space-systems pack. ECSS software-engineering criticality, software-verification verification depth, systems-engineering lifecycle gates, power-thermal-budget EPS and battery sizing, communication-link-budget link margin, thermal-design radiator sizing, command-data-handling telemetry, sun-pointing sun vector geometry, star-tracker star identification, attitude-control-sizing reaction wheels, attitude-determination-triad TRIAD, magnetorquer-control B-dot detumbling, sun-synchronous-inclination J2 nodal regression, keplerian-elements orbital elements, ground-track-repeat repeat ground track, eclipse-time duration and shadow fraction. Trigger: space systems, ECSS, power budget, battery, link budget, thermal, telemetry, sun pointing, star tracker, attitude control, TRIAD, attitude determination, magnetorquer, sun synchronous, inclination, orbital elements, ground track, eclipse time, beta angle."
+}

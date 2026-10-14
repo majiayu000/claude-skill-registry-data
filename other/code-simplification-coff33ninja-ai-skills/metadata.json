@@ -1,0 +1,38 @@
+{
+  "name": "code-simplification",
+  "repo": "coff33ninja/ai-skills",
+  "path": "skills/code-simplification/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/coff33ninja/ai-skills",
+  "dir_name": "code-simplification-coff33ninja-ai-skills",
+  "downloaded_at": "2026-10-14T04:52:49.615958Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "coff33ninja",
+  "source_url": "https://github.com/coff33ninja/ai-skills/blob/main/skills/code-simplification/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/coff33ninja/ai-skills/blob/main/skills/code-simplification/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Enforces simplicity \u2014 Chesterton's Fence (understand why before removing), Rule of 500 (keep functions/files under 500 lines), Occam's Razor for code. Counteracts the natural tendency to add unnecessary abstraction layers."
+}

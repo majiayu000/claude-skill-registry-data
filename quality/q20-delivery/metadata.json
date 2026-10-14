@@ -1,0 +1,38 @@
+{
+  "name": "q20-delivery",
+  "repo": "ashfordeOU/aero-agent-skills",
+  "path": "skills/space-systems/ecss/q20-delivery/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/ashfordeOU/aero-agent-skills",
+  "dir_name": "q20-delivery",
+  "downloaded_at": "2026-10-14T04:17:03.907169Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review, validate",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ashfordeOU",
+  "source_url": "https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/ecss/q20-delivery/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/ecss/q20-delivery/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Manage the delivery of a consignment under ECSS-Q-ST-20C clause 5.7.5: derive the shipping control documents the consignment owes from its own states rather than from a standing list, read the transport monitoring record for excursions outside each declared environmental limit, treat the unmonitored part of a journey as unknown instead of compliant, reconcile the identification on the certificate of conformity with the consignment it covers, and decide whether that certificate may be issued at all. Use when goods are about to move and the paperwork has to travel with them. Trigger: ecss, q-st-20c-clause-5-7-5, shipping-control-documentation, transport-environment-excursion, transport-monitor-coverage-gap, certificate-of-conformity-issue, consignment-identification-match."
+}

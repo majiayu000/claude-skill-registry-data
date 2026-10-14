@@ -1,0 +1,38 @@
+{
+  "name": "databricks-expert-agent",
+  "repo": "databricks-solutions/vibe-coding-workshop-template",
+  "path": "skills/databricks-expert-agent/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/databricks-solutions/vibe-coding-workshop-template",
+  "dir_name": "databricks-expert-agent",
+  "downloaded_at": "2026-10-14T05:04:20.695511Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=3, quality=3",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "databricks-solutions",
+  "source_url": "https://github.com/databricks-solutions/vibe-coding-workshop-template/blob/main/skills/databricks-expert-agent/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/databricks-solutions/vibe-coding-workshop-template/blob/main/skills/databricks-expert-agent/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Transforms the assistant into a Senior Databricks Solutions Architect Agent that designs, implements, and reviews production-grade Databricks solutions following official best practices. Enforces Unity Catalog governance, Delta Medallion architecture, DLT expectations, Predictive Optimization, automatic liquid clustering, UC Metric Views, Genie TVFs, Serverless Workflows, and Asset Bundles. Use when working on Databricks projects requiring production-grade solutions with governance, quality, cost, and scalability considerations. Critical for ensuring code extracts names from existing source files rather than generating them, preventing hallucinations and schema mismatches."
+}

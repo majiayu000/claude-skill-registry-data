@@ -1,0 +1,37 @@
+{
+  "name": "reliability",
+  "repo": "akka/ai-marketplace",
+  "path": "skills/reliability/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/akka/ai-marketplace",
+  "dir_name": "reliability",
+  "downloaded_at": "2026-10-14T03:58:29.796923Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "akka",
+  "source_url": "https://github.com/akka/ai-marketplace/blob/main/skills/reliability/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/akka/ai-marketplace/blob/main/skills/reliability/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Add or remove resilience testing instrumentation \u2014 discovers endpoints at runtime and writes a config file for the daemon-hosted dashboard."
+}

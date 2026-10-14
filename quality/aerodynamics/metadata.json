@@ -1,0 +1,37 @@
+{
+  "name": "aerodynamics",
+  "repo": "ashfordeOU/aero-agent-skills",
+  "path": "skills/aerodynamics/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/ashfordeOU/aero-agent-skills",
+  "dir_name": "aerodynamics",
+  "downloaded_at": "2026-10-14T04:16:52.683739Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, validate",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "quality",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ashfordeOU",
+  "source_url": "https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/aerodynamics/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/aerodynamics/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when a task concerns aerodynamics: guide the router to the aerodynamics pack: airfoil-selection family choice, xfoil-analysis polars, airfoil-geometry NACA geometry, airfoil-optimization shape trade, cfd-convergence residuals, cfd-turbulence-modeling model selection, cfd-mesh-generation grids and y-plus, vortex-lattice-method VLM, panel-method potential flow, normal-shock shock relations, oblique-shock theta-beta-M, prandtl-meyer expansions, swept-wing-aerodynamics sweep, transonic-similarity Karman-Tsien, supercritical-airfoil aft loading, wave-drag-area-rule area rule, drag-polar polar, parasite-drag zero-lift drag, lift-curve-slope lift slope, boundary-layer-theory flat-plate layers, ground-effect in-ground lift, high-lift-systems flap and slat clmax. Trigger: aerodynamics, airfoil, polar, drag polar, sweep, Mach, boundary layer, ground effect, high lift, vortex lattice, panel method, transonic."
+}

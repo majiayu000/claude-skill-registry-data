@@ -1,0 +1,38 @@
+{
+  "name": "codexpiator-testing-qa",
+  "repo": "emanuelegreco29/codexpiator",
+  "path": "skills/codexpiator-testing-qa/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/emanuelegreco29/codexpiator",
+  "dir_name": "codexpiator-testing-qa",
+  "downloaded_at": "2026-10-14T05:25:05.783512Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, devops=3",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "emanuelegreco29",
+  "source_url": "https://github.com/emanuelegreco29/codexpiator/blob/main/skills/codexpiator-testing-qa/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/emanuelegreco29/codexpiator/blob/main/skills/codexpiator-testing-qa/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "General testing strategy and quality gates - testing pyramid, TDD workflow, mocking and test data, and CI quality gates. Use whenever following TDD, deciding what test level to use, or deciding what should block a merge (for frontend-specific test scope, see codexpiator-frontend/frontend-testing.md)."
+}

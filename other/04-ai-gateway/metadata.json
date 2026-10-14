@@ -1,0 +1,38 @@
+{
+  "name": "04-ai-gateway",
+  "repo": "databricks-solutions/vibe-coding-workshop-template",
+  "path": "genai-agents/foundation/04-ai-gateway/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/databricks-solutions/vibe-coding-workshop-template",
+  "dir_name": "04-ai-gateway",
+  "downloaded_at": "2026-10-14T05:04:21.833862Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "sql",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "databricks-solutions",
+  "source_url": "https://github.com/databricks-solutions/vibe-coding-workshop-template/blob/main/genai-agents/foundation/04-ai-gateway/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/databricks-solutions/vibe-coding-workshop-template/blob/main/genai-agents/foundation/04-ai-gateway/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when you need central governance, observability, guardrails, or rate limits across LLM endpoints and MCP servers used by agents. Covers creating and configuring Databricks AI Gateway endpoints, enabling usage tracking, inference tables (UC Delta audit), rate limits, and guardrails, plus how deployed agent serving endpoints and Apps consume a gateway URL. Foundation Step 4 \u2014 ideal as a governance layer BEFORE Module 7 production deployment. Complements in-code guardrails and MLflow tracing; does NOT replace MLflow trace tables but adds a provider-level audit trail."
+}

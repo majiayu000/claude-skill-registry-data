@@ -1,0 +1,37 @@
+{
+  "name": "e1011-req-id",
+  "repo": "ashfordeOU/aero-agent-skills",
+  "path": "skills/space-systems/ecss/e1011-req-id/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ashfordeOU/aero-agent-skills",
+  "dir_name": "e1011-req-id",
+  "downloaded_at": "2026-10-14T04:17:02.675232Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ashfordeOU",
+  "source_url": "https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/ecss/e1011-req-id/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/ecss/e1011-req-id/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when identify HFE requirements from mission-phase and operator-role analysis and capture them into the Technical Specification (TS) under ECSS-E-ST-10-11C \u00a74.3.7: enumerate every applicable mission phase, assign the operator roles active in each phase, map each phase-role pair to the relevant HFE driver categories (workload, habitability, anthropometry, visibility, reachability, cognitive, communication, safety), generate a structured requirement ID for each identified driver, verify that every phase carries at least the mandatory safety and workload requirements, and confirm that all generated IDs are unique and correctly formatted before the TS baseline is closed. Trigger: ecss, e-st-10-system-scope, hfe-requirements, mission-phase, operator-role, human-factors, requirement-identification, technical-specification."
+}

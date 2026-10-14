@@ -1,0 +1,38 @@
+{
+  "name": "05-appkit-lakebase-wiring",
+  "repo": "databricks-solutions/vibe-coding-workshop-template",
+  "path": "apps_lakebase/skills/05-appkit-lakebase-wiring/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/databricks-solutions/vibe-coding-workshop-template",
+  "dir_name": "05-appkit-lakebase-wiring",
+  "downloaded_at": "2026-10-14T05:04:24.612978Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, sdk, endpoint",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "databricks-solutions",
+  "source_url": "https://github.com/databricks-solutions/vibe-coding-workshop-template/blob/main/apps_lakebase/skills/05-appkit-lakebase-wiring/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/databricks-solutions/vibe-coding-workshop-template/blob/main/apps_lakebase/skills/05-appkit-lakebase-wiring/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Wire a Lakebase PostgreSQL backend into an existing AppKit project. Covers database schema design from a PRD, idempotent DDL, Express API routes with mock fallback, React data hooks, and local testing. PRD-independent patterns that apply to any AppKit + Lakebase app. Use after registering the Lakebase plugin via 04-appkit-plugin-add. Triggers on \"wire lakebase\", \"lakebase backend\", \"CRUD API\", \"lakebase tables\", \"DDL\", \"database schema design\", \"useLakebaseData\", \"mock fallback\", \"ConnectionStatus\", \"replace mock data\", \"connect frontend to backend\", \"API-backed data\", \"replace static data with database\"."
+}

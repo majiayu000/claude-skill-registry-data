@@ -1,0 +1,37 @@
+{
+  "name": "e1011-safety",
+  "repo": "ashfordeOU/aero-agent-skills",
+  "path": "skills/space-systems/ecss/e1011-safety/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ashfordeOU/aero-agent-skills",
+  "dir_name": "e1011-safety",
+  "downloaded_at": "2026-10-14T04:17:04.977056Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ashfordeOU",
+  "source_url": "https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/ecss/e1011-safety/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/ecss/e1011-safety/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when assess HFE safety requirements for a spacecraft operations catalogue under ECSS-E-ST-10-11C \u00a74.6.3: categorize each operation by hazard criticality (critical, high, medium, low), verify that human-error prevention measures \u2014 confirmation steps, interlocks, reversibility checks, crew notification, dual verification \u2014 are present at the level each criticality demands, check that irreversible high-consequence operations carry maximum protection, confirm safety-critical operator interfaces provide clear state cues and go/no-go criteria, and flag every operation whose protection set falls below the minimum for its level. Trigger: ecss, e-st-10-system-scope, hfe, human-factors, safety-critical-operations, human-error-prevention, interlock, crew-notification."
+}

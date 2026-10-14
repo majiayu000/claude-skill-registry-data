@@ -1,0 +1,39 @@
+{
+  "name": "atomize",
+  "repo": "clever-cc-plugins/cc-content",
+  "path": "plugins/cc-content/skills/atomize/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/clever-cc-plugins/cc-content",
+  "dir_name": "atomize",
+  "downloaded_at": "2026-10-14T04:50:18.808172Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, copy, blog, article",
+    "score": 4,
+    "runner_up": "marketing",
+    "runner_up_score": 3,
+    "signals": [
+      "writing",
+      "copy",
+      "blog",
+      "article"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "clever-cc-plugins",
+  "source_url": "https://github.com/clever-cc-plugins/cc-content/blob/main/plugins/cc-content/skills/atomize/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/clever-cc-plugins/cc-content/blob/main/plugins/cc-content/skills/atomize/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this skill to repurpose one core message across multiple content formats in a single run \u2014 e.g. turning a campaign brief or a single piece into a LinkedIn post, newsletter, and blog post at once, each properly adapted to its own conventions while keeping the core claim and proof points identical. Invoke when the user names 2+ target formats, says \"repurpose this,\" \"atomize this,\" \"turn this into multiple formats,\" or when a brief.md is present and the user wants it distributed across channels. For a single format, use the dedicated format skill (e.g. blog-article) or long-tail-copy instead \u2014 this skill is for the fan-out case specifically."
+}

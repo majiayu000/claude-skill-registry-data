@@ -1,0 +1,37 @@
+{
+  "name": "e1012-sel",
+  "repo": "ashfordeOU/aero-agent-skills",
+  "path": "skills/space-systems/ecss/e1012-sel/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/ashfordeOU/aero-agent-skills",
+  "dir_name": "e1012-sel",
+  "downloaded_at": "2026-10-14T04:16:55.020833Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ashfordeOU",
+  "source_url": "https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/ecss/e1012-sel/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/ecss/e1012-sel/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when compute heavy-ion and proton/neutron single-event latch-up (SEL) and single-event snapback (SESB) rates for a spacecraft electronic device under ECSS-E-ST-10-12C \u00a79.4.1.4\u20139.4.1.5: fit a Weibull cross-section curve to heavy-ion test data, integrate it against the mission LET spectrum, apply the Bendel two-parameter model to proton cross-section data and integrate over the proton energy spectrum, sum both contributions into a combined rate, and categorize the result as acceptable, monitor, or critical against per-device thresholds. Trigger: ecss, e-st-10-system-scope, sel, sesb, single-event-latch-up, single-event-snapback, heavy-ion, proton, let-spectrum, weibull, bendel."
+}

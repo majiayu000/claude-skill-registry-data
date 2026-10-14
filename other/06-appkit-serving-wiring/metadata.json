@@ -1,0 +1,37 @@
+{
+  "name": "06-appkit-serving-wiring",
+  "repo": "databricks-solutions/vibe-coding-workshop-template",
+  "path": "apps_lakebase/skills/06-appkit-serving-wiring/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/databricks-solutions/vibe-coding-workshop-template",
+  "dir_name": "06-appkit-serving-wiring",
+  "downloaded_at": "2026-10-14T05:04:24.260648Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "databricks-solutions",
+  "source_url": "https://github.com/databricks-solutions/vibe-coding-workshop-template/blob/main/apps_lakebase/skills/06-appkit-serving-wiring/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/databricks-solutions/vibe-coding-workshop-template/blob/main/apps_lakebase/skills/06-appkit-serving-wiring/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Wire a Databricks Model Serving or Agent endpoint into an existing AppKit project using the Serving plugin. Covers endpoint registration, app.yaml resource binding, streaming and invoke React hooks, conversation state management, agent response mapping, and server-side proxy patterns. PRD-independent patterns that apply to any AppKit + Serving app. Use after registering the Serving plugin via 04-appkit-plugin-add. Triggers on \"wire agent\", \"agent endpoint\", \"serving plugin\", \"agent UI\", \"chat interface\", \"connect agent\", \"model serving\", \"useServingStream\", \"useServingInvoke\", \"agent chat\", \"wire serving\", \"serving wiring\"."
+}

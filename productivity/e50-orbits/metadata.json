@@ -1,0 +1,37 @@
+{
+  "name": "e50-orbits",
+  "repo": "ashfordeOU/aero-agent-skills",
+  "path": "skills/space-systems/ecss/e50-orbits/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/ashfordeOU/aero-agent-skills",
+  "dir_name": "e50-orbits",
+  "downloaded_at": "2026-10-14T04:16:57.780203Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ashfordeOU",
+  "source_url": "https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/ecss/e50-orbits/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/ecss/e50-orbits/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Derive what a mission's orbits do to its communication links, and check every phase actually declared one, per ECSS-E-ST-50C Rev.2 clause 5.6.5. Use when slant range, propagation delay, Doppler shift and pass duration have to come out of the orbit rather than out of a heritage table: the two normative items are graded apart, so a phase that reaches the link budget with no orbit behind it is reported as a declaration gap and not folded into a margin. Doppler is compared against receiver pull-in, delay and pass length against the phase allowance. Trigger: ecss, e-st-50c-clause-5-6-5, mission-orbit-declaration, space-link-slant-range, orbit-doppler-shift, ground-station-pass-duration, propagation-delay-allowance."
+}

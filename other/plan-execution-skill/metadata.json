@@ -1,0 +1,38 @@
+{
+  "name": "plan-execution-skill",
+  "repo": "darellchua2/civiltekk-skills",
+  "path": "skills/plan-execution-skill/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/darellchua2/civiltekk-skills",
+  "dir_name": "plan-execution-skill",
+  "downloaded_at": "2026-10-14T05:03:29.846405Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "darellchua2",
+  "source_url": "https://github.com/darellchua2/civiltekk-skills/blob/main/skills/plan-execution-skill/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/darellchua2/civiltekk-skills/blob/main/skills/plan-execution-skill/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Execute PLAN.md phase-by-phase \u2014 parse phases and N.M steps, delegate, tick progress. Modes: --soft interactive; --gate (default for /run-plan) verification gate, fix-on-fail, per-phase commit+push; --update branch-detected checkbox sync. Triggers: run-plan, execute plan, automation loop, implement PLAN-*.md, update plan progress."
+}

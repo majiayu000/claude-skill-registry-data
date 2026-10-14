@@ -1,0 +1,40 @@
+{
+  "name": "subagent-orchestrator",
+  "repo": "bilacchi/agents-skills",
+  "path": "skills/subagent-orchestrator/SKILL.md",
+  "github_branch": "main",
+  "category": "orchestration",
+  "source": "github.com/bilacchi/agents-skills",
+  "dir_name": "subagent-orchestrator-bilacchi-agents-skills",
+  "downloaded_at": "2026-10-14T04:29:27.918899Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "orchestration",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for orchestration: orchestration, orchestrator, coordination, multi-agent",
+    "score": 4,
+    "runner_up": "design",
+    "runner_up_score": 3,
+    "signals": [
+      "orchestration",
+      "orchestrator",
+      "coordination",
+      "multi-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "bilacchi",
+  "source_url": "https://github.com/bilacchi/agents-skills/blob/main/skills/subagent-orchestrator/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bilacchi/agents-skills/blob/main/skills/subagent-orchestrator/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when a task spans 3+ files or components; You want multiple agents working at the same time"
+}

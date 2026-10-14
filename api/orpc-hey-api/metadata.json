@@ -1,0 +1,38 @@
+{
+  "name": "oRPC Hey API Integration",
+  "repo": "ali-master/skills",
+  "path": "skills/orpc-hey-api/SKILL.md",
+  "github_branch": "master",
+  "category": "api",
+  "source": "github.com/ali-master/skills",
+  "dir_name": "orpc-hey-api",
+  "downloaded_at": "2026-10-14T04:02:20.870884Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, sdk, openapi",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "sdk",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ali-master",
+  "source_url": "https://github.com/ali-master/skills/blob/master/skills/orpc-hey-api/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ali-master/skills/blob/master/skills/orpc-hey-api/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generate oRPC contracts from OpenAPI with Hey API or adapt a Hey API client."
+}

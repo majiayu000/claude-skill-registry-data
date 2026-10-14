@@ -1,0 +1,38 @@
+{
+  "name": "lakehouse-monitoring-comprehensive",
+  "repo": "databricks-solutions/vibe-coding-workshop-template",
+  "path": "data_product_accelerator/skills/monitoring/01-lakehouse-monitoring-comprehensive/SKILL.md",
+  "github_branch": "main",
+  "category": "business",
+  "source": "github.com/databricks-solutions/vibe-coding-workshop-template",
+  "dir_name": "01-lakehouse-monitoring-comprehensive",
+  "downloaded_at": "2026-10-14T05:04:35.567016Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "business",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for business: business, operations, strategy",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "business",
+      "operations",
+      "strategy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "databricks-solutions",
+  "source_url": "https://github.com/databricks-solutions/vibe-coding-workshop-template/blob/main/data_product_accelerator/skills/monitoring/01-lakehouse-monitoring-comprehensive/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/databricks-solutions/vibe-coding-workshop-template/blob/main/data_product_accelerator/skills/monitoring/01-lakehouse-monitoring-comprehensive/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Comprehensive guide for Databricks Lakehouse Monitoring (Data Profiling) with quick-start workflow (2 hours), fill-in-the-blank requirements template, concrete fact/dimension monitor examples, and complete deployment patterns. Uses the new Data Quality API (`databricks.sdk.service.dataquality`). Use when setting up Lakehouse Monitoring for Gold layer tables, creating custom business metrics, designing monitoring strategy, querying monitoring tables for dashboards, or troubleshooting monitor initialization failures. Includes setup patterns with graceful degradation, custom metric syntax (AGGREGATE, DERIVED, DRIFT), table-level business KPIs with `input_columns=[\":table\"]`, query patterns for dashboards, async operations handling, monitor cleanup, Genie documentation integration, and production deployment workflow."
+}

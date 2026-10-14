@@ -1,0 +1,38 @@
+{
+  "name": "daftai-cloudflare-billing-audit",
+  "repo": "daftAI2026/daftAI-skills",
+  "path": "skills/daftai-cloudflare-billing-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/daftAI2026/daftAI-skills",
+  "dir_name": "daftai-cloudflare-billing-audit",
+  "downloaded_at": "2026-10-14T05:00:14.976181Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "daftAI2026",
+  "source_url": "https://github.com/daftAI2026/daftAI-skills/blob/main/skills/daftai-cloudflare-billing-audit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/daftAI2026/daftAI-skills/blob/main/skills/daftai-cloudflare-billing-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audits a Cloudflare application repository offline for code paths and configuration that may create usage-based billing exposure. Use when asked to inspect Cloudflare Worker, D1, Durable Objects, storage, queue, or compute usage for unexpected bills, billing risks, or cost drivers. Reports evidence and uncertainty; it does not access an account or guarantee a spending cap."
+}

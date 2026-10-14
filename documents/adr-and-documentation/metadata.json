@@ -1,0 +1,38 @@
+{
+  "name": "adr-and-documentation",
+  "repo": "coff33ninja/ai-skills",
+  "path": "skills/adr-and-documentation/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/coff33ninja/ai-skills",
+  "dir_name": "adr-and-documentation",
+  "downloaded_at": "2026-10-14T04:52:50.771205Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, markdown, documentation",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "coff33ninja",
+  "source_url": "https://github.com/coff33ninja/ai-skills/blob/main/skills/adr-and-documentation/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/coff33ninja/ai-skills/blob/main/skills/adr-and-documentation/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Enforces Architecture Decision Records (ADRs) and keeps docs in sync with code. Prevents \"why did we do it this way?\" questions six months later and stale documentation."
+}

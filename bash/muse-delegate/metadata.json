@@ -1,0 +1,38 @@
+{
+  "name": "muse-delegate",
+  "repo": "amElnagdy/delegate-skills",
+  "path": "skills/muse-delegate/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/amElnagdy/delegate-skills",
+  "dir_name": "muse-delegate",
+  "downloaded_at": "2026-10-14T04:05:33.040954Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, cli",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "amElnagdy",
+  "source_url": "https://github.com/amElnagdy/delegate-skills/blob/master/skills/muse-delegate/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/amElnagdy/delegate-skills/blob/master/skills/muse-delegate/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Delegate a coding task to Muse Code (`muse`) as a background implementer, then review its diff and land it yourself. Use this whenever the user wants to hand implementation work to Muse \u2014 phrasings like \"have Muse do X\", \"delegate this to Muse\", \"run it through Muse\", or \"use Muse to implement/fix/refactor\" \u2014 or wants to run a queue of coding tasks through Muse while staying the reviewer. Prefer it when the user will review the diff and commit it themselves. It applies only when the user wants that separate `muse exec` implementer run: if you are Muse yourself and the user simply asks you to write the code, do it directly. DO NOT USE for tasks small enough to do inline."
+}

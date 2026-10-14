@@ -1,0 +1,37 @@
+{
+  "name": "e10-mdd-drd",
+  "repo": "ashfordeOU/aero-agent-skills",
+  "path": "skills/space-systems/ecss/e10-mdd-drd/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ashfordeOU/aero-agent-skills",
+  "dir_name": "e10-mdd-drd",
+  "downloaded_at": "2026-10-14T04:16:59.260637Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ashfordeOU",
+  "source_url": "https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/ecss/e10-mdd-drd/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/ecss/e10-mdd-drd/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when generating or validating a Mission Description Document (MDD) for a European space project per ECSS-E-ST-10C Annex B: check that the required sections (objectives, mission statement, mission scenario, constraints) are present, that the mission statement carries an objective/target/timeframe, that the mission scenario phases follow the launch-to-disposal order, and that every constraint is categorised (programmatic, technical, operational, environmental) before the MDD is handed off at MDR. Trigger: mdd, mission description document, annex b, e-st-10c annex b, mission statement, mission scenario, mission constraints, drd, mission definition review, mdr package."
+}

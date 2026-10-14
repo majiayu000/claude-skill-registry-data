@@ -1,0 +1,37 @@
+{
+  "name": "skill-review",
+  "repo": "coupler-io/skills",
+  "path": ".agents/skills/skill-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/coupler-io/skills",
+  "dir_name": "skill-review",
+  "downloaded_at": "2026-10-14T04:55:45.544279Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, integration=2",
+    "score": 2,
+    "runner_up": "integration",
+    "runner_up_score": 2,
+    "signals": [
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "coupler-io",
+  "source_url": "https://github.com/coupler-io/skills/blob/main/.agents/skills/skill-review/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/coupler-io/skills/blob/main/.agents/skills/skill-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this skill when reviewing a Coupler.io skill before merge, auditing an existing one, or checking a pack of skills for accuracy. Triggers include: 'review this skill', 'check this SKILL.md', 'is this skill accurate', 'review PR #N in the skills repo', 'audit the <platform> pack', or any request to check what a skill claims about a Coupler.io connector or an ad platform. Checks factual accuracy against live tools and repo conventions; it does not judge domain expertise."
+}

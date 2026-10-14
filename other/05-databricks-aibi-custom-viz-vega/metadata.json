@@ -1,0 +1,38 @@
+{
+  "name": "databricks-aibi-custom-viz-vega",
+  "repo": "databricks-solutions/vibe-coding-workshop-template",
+  "path": "data_product_accelerator/skills/monitoring/05-databricks-aibi-custom-viz-vega/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/databricks-solutions/vibe-coding-workshop-template",
+  "dir_name": "05-databricks-aibi-custom-viz-vega",
+  "downloaded_at": "2026-10-14T05:04:35.089129Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "pipeline",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "databricks-solutions",
+  "source_url": "https://github.com/databricks-solutions/vibe-coding-workshop-template/blob/main/data_product_accelerator/skills/monitoring/05-databricks-aibi-custom-viz-vega/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/databricks-solutions/vibe-coding-workshop-template/blob/main/data_product_accelerator/skills/monitoring/05-databricks-aibi-custom-viz-vega/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Build high-fidelity custom charts inside Databricks AI/BI (Lakeview) dashboards using Vega-Lite custom visualizations (Public Preview). Covers the documented contract \u2014 the `databricks_query` data source, Fields-section Name references, theme-aware signals (`colors`, `mode`, `dashboardTheme`), and cross-filtering via the reserved `databricks_mark_selection` parameter. Use when the built-in widget types in 02-databricks-aibi-dashboards cannot express the chart you need, but you still want a documented, per-widget, cross-filter-capable visualization. For full-page bespoke React layouts (composite cards, KPI tiles, in-cell sparklines), see 06-databricks-aibi-custom-pages-react."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "python-patterns",
+  "repo": "bilacchi/agents-skills",
+  "path": "skills/python-patterns/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/bilacchi/agents-skills",
+  "dir_name": "python-patterns-bilacchi-agents-skills",
+  "downloaded_at": "2026-10-14T04:29:22.884973Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, database, pipeline",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bilacchi",
+  "source_url": "https://github.com/bilacchi/agents-skills/blob/main/skills/python-patterns/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bilacchi/agents-skills/blob/main/skills/python-patterns/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Python-specific design patterns and best practices including protocols, dataclasses, context managers, decorators, async/await, type hints, and package organization. Use when working with Python code to apply Pythonic patterns."
+}

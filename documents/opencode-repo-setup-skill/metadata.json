@@ -1,0 +1,39 @@
+{
+  "name": "opencode-repo-setup-skill",
+  "repo": "darellchua2/civiltekk-skills",
+  "path": "skills/opencode-repo-setup-skill/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/darellchua2/civiltekk-skills",
+  "dir_name": "opencode-repo-setup-skill",
+  "downloaded_at": "2026-10-14T05:03:34.460788Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: docs, pdf, pptx, docx",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "pdf",
+      "pptx",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "darellchua2",
+  "source_url": "https://github.com/darellchua2/civiltekk-skills/blob/main/skills/opencode-repo-setup-skill/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/darellchua2/civiltekk-skills/blob/main/skills/opencode-repo-setup-skill/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Interactive per-repo setup \u2014 opt-in MCP servers (project opencode.json wins), optional CodeGraph init, AGENTS.md rule blocks, built-in agent model pins (project or global scope), token-cost report. Triggers: set up mcp for this repo, repo setup, per-project enable, pin agent models, configure project opencode."
+}

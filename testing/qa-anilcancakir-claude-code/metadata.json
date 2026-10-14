@@ -1,0 +1,38 @@
+{
+  "name": "qa",
+  "repo": "anilcancakir/claude-code",
+  "path": "plugins/ac/skills/qa/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/anilcancakir/claude-code",
+  "dir_name": "qa-anilcancakir-claude-code",
+  "downloaded_at": "2026-10-14T04:08:43.402446Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, qa, playwright",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "qa",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "anilcancakir",
+  "source_url": "https://github.com/anilcancakir/claude-code/blob/main/plugins/ac/skills/qa/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/anilcancakir/claude-code/blob/main/plugins/ac/skills/qa/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Test a session's or a plan's work the way a QA engineer would: derive cases from the requirement and the diff, run them against the live app with the project's own test tool (playwright-cli as the fallback), fix critical and high findings, retest once, and record learnings in .ac/qa/learnings.md."
+}

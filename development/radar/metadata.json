@@ -1,0 +1,37 @@
+{
+  "name": "radar",
+  "repo": "coreyhaines31/makerskills",
+  "path": "skills/radar/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/coreyhaines31/makerskills",
+  "dir_name": "radar",
+  "downloaded_at": "2026-10-14T04:54:58.840725Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: compile, debug",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "coreyhaines31",
+  "source_url": "https://github.com/coreyhaines31/makerskills/blob/main/skills/radar/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/coreyhaines31/makerskills/blob/main/skills/radar/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "When you want to monitor known sources on a schedule and feed the good stuff into your second brain. Configure sources once (YouTube, RSS/newsletters, subreddits, Hacker News, Bluesky, Mastodon, X, LinkedIn, keyword searches); each run fetches only what's new, scores it against your stated focus, writes one digest to the vault, and auto-captures high-signal items into raw/. Everything else waits in the digest until you promote it. Modes \u2014 run, digest, promote, add / sources / pause, doctor, schedule (daily launchd or systemd job). Triggers on \"/radar,\" \"run my radar,\" \"check my sources,\" \"what's new from my sources,\" \"add a source,\" \"monitor this channel,\" \"watch this subreddit,\" \"track this account,\" \"daily digest,\" \"promote item 4,\" \"radar doctor.\" Complements second-brain (radar fills raw/, second-brain compiles it) and deep-research (standing surveillance vs a one-off dive)."
+}

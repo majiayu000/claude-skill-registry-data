@@ -1,0 +1,37 @@
+{
+  "name": "civiltekk-zai-media-skill",
+  "repo": "darellchua2/civiltekk-skills",
+  "path": "skills/civiltekk-zai-media-skill/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/darellchua2/civiltekk-skills",
+  "dir_name": "civiltekk-zai-media-skill",
+  "downloaded_at": "2026-10-14T05:03:34.007862Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "darellchua2",
+  "source_url": "https://github.com/darellchua2/civiltekk-skills/blob/main/skills/civiltekk-zai-media-skill/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/darellchua2/civiltekk-skills/blob/main/skills/civiltekk-zai-media-skill/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Z.AI media production, four routes. image: generate images from text prompts via the GLM-Image API (/images/generations), saved as local PNGs. video: generate video from a text or first-frame-image prompt via CogVideoX-3 \u2014 submit then poll the async result, saved as local MP4. transcribe: transcribe audio files to text via GLM-ASR (wav/mp3, \u226425MB, \u226430s). ocr: extract text and layout from images or PDFs via GLM-OCR layout_parsing. Triggers: image generation, generate image, text to image, draw a picture, video generation, generate video, text to video, image to video, transcribe, speech to text, ASR, audio transcription, OCR, extract text from image, layout parsing, document text extraction."
+}

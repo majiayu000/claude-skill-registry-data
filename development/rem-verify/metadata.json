@@ -1,0 +1,40 @@
+{
+  "name": "rem-verify",
+  "repo": "darbin/claudecraft",
+  "path": "plugins/rem-dev-core/skills/rem-verify/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/darbin/claudecraft",
+  "dir_name": "rem-verify",
+  "downloaded_at": "2026-10-14T05:03:19.700069Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, compile, refactor",
+    "score": 5,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "compile",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "darbin",
+  "source_url": "https://github.com/darbin/claudecraft/blob/main/plugins/rem-dev-core/skills/rem-verify/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/darbin/claudecraft/blob/main/plugins/rem-dev-core/skills/rem-verify/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Prove work is complete by running fresh build + typecheck + test + lint commands and showing the output. Never claims done from reasoning alone. Auto-detects stack (Node/Next.js/Go/Rust/Python/Astro/Fastify, monorepos) and runs the matching suite + pre-build scans. Plan-aware mode cross-checks phantom completions and per-Kind Verify evidence. Distinct from rem-review-code (reviews code quality; verify proves it compiles + tests pass) and rem-audit (finds systemic issues; verify proves done-ness). Use for \"verify\", \"is this done?\", \"check if it works\", \"run tests\", \"prove it\", \"did I break anything\". Also invoked by rem-execute and rem-branch."
+}

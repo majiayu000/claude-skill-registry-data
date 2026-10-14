@@ -1,0 +1,37 @@
+{
+  "name": "convex-authz",
+  "repo": "evanharmon1/harmon-devkit",
+  "path": "ai/skills/backend/convex-authz/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/evanharmon1/harmon-devkit",
+  "dir_name": "convex-authz-evanharmon1-harmon-devkit",
+  "downloaded_at": "2026-10-14T05:29:29.081105Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "evanharmon1",
+  "source_url": "https://github.com/evanharmon1/harmon-devkit/blob/main/ai/skills/backend/convex-authz/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/evanharmon1/harmon-devkit/blob/main/ai/skills/backend/convex-authz/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audit and harden a Convex app's authorization: identity-from-arg impersonation, missing per-document ownership checks, public queries leaking data by a client-supplied id, and writes into a parent/container the caller doesn't own. Scans for the 4 shapes, applies requireIdentity/requireOwner, verifies with tsc. TRIGGER on 'secure my app', 'audit auth/authz', 'who can access this data'. SKIP when there is no convex/ directory."
+}

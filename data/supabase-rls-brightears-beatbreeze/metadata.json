@@ -1,0 +1,38 @@
+{
+  "name": "supabase-rls",
+  "repo": "brightears/beatbreeze",
+  "path": ".claude/skills/supabase-rls/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/brightears/beatbreeze",
+  "dir_name": "supabase-rls-brightears-beatbreeze",
+  "downloaded_at": "2026-10-14T04:35:02.883954Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "brightears",
+  "source_url": "https://github.com/brightears/beatbreeze/blob/main/.claude/skills/supabase-rls/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/brightears/beatbreeze/blob/main/.claude/skills/supabase-rls/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Supabase Row-Level Security for multi-tenancy. Use when implementing database security, tenant isolation, or access control. Triggers on mentions of RLS, row-level security, multi-tenant, tenant isolation, or database policies."
+}

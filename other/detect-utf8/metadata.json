@@ -1,0 +1,37 @@
+{
+  "name": "detect-utf8",
+  "repo": "coff33ninja/ai-skills",
+  "path": "skills/detect-utf8/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/coff33ninja/ai-skills",
+  "dir_name": "detect-utf8",
+  "downloaded_at": "2026-10-14T04:52:47.471645Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, platform=2",
+    "score": 2,
+    "runner_up": "platform",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "coff33ninja",
+  "source_url": "https://github.com/coff33ninja/ai-skills/blob/main/skills/detect-utf8/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/coff33ninja/ai-skills/blob/main/skills/detect-utf8/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Detects whether the terminal, console, or device supports UTF-8 encoding. Checks code page, .NET encoding defaults, environment locale, and verifies with a round-trip test of Unicode characters."
+}

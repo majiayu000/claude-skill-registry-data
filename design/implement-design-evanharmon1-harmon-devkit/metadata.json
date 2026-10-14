@@ -1,0 +1,41 @@
+{
+  "name": "implement-design",
+  "repo": "evanharmon1/harmon-devkit",
+  "path": "ai/skills/frontend/implement-design/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/evanharmon1/harmon-devkit",
+  "dir_name": "implement-design-evanharmon1-harmon-devkit",
+  "downloaded_at": "2026-10-14T05:29:32.658316Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, ui, ux, css, frontend, tailwind",
+    "score": 6,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "ux",
+      "css",
+      "frontend",
+      "tailwind"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "evanharmon1",
+  "source_url": "https://github.com/evanharmon1/harmon-devkit/blob/main/ai/skills/frontend/implement-design/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/evanharmon1/harmon-devkit/blob/main/ai/skills/frontend/implement-design/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Implement a finished Claude Design in this code repo \u2014 the Claude Design \u2192 code handoff. Use whenever the user has a design from Claude Design (Anthropic's design canvas) to turn into real code: phrases like \"I finished designing in Claude Design\", \"implement this design\", \"do the design handoff\", \"Handoff to Claude Code\", \"I exported the handoff bundle / tokens.css / a .tar.gz design\", \"turn this design into code\", or \"set up a design system from this design\". Handles both a single feature AND establishing a new design system in a repo that has none. Targets React + Vite + Tailwind v4 + shadcn/ui (Astro 6 and TanStack Router fully supported). This is NOT session/context handoff between agent sessions \u2014 it is about implementing a visual/UX design in code. Trigger it even if the user doesn't say the word \"skill\"."
+}

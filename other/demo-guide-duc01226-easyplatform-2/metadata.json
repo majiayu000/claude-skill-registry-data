@@ -1,0 +1,38 @@
+{
+  "name": "demo-guide",
+  "repo": "duc01226/EasyPlatform",
+  "path": ".agents/skills/demo-guide/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/duc01226/EasyPlatform",
+  "dir_name": "demo-guide-duc01226-easyplatform-2",
+  "downloaded_at": "2026-10-14T05:18:25.588188Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "frontend"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "duc01226",
+  "source_url": "https://github.com/duc01226/EasyPlatform/blob/main/.agents/skills/demo-guide/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/duc01226/EasyPlatform/blob/main/.agents/skills/demo-guide/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "[Documentation] Use when you need to generate a step-by-step demo guide (demo script / walkthrough) covering all main user stories and their test cases \u2014 scope from a named feature, else the current working context, else confirm with the user \u2014 explaining for each case how the domain data is stored/changed and how the domain solves the feature. Triggers: demo guide, generate demo guide, demo script, demo walkthrough, how to demo, prepare demo, sprint demo, user story demo."
+}

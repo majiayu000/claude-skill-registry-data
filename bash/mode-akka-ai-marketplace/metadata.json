@@ -1,0 +1,37 @@
+{
+  "name": "mode",
+  "repo": "akka/ai-marketplace",
+  "path": "skills/mode/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/akka/ai-marketplace",
+  "dir_name": "mode-akka-ai-marketplace",
+  "downloaded_at": "2026-10-14T03:58:26.975367Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, cli",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 1,
+    "signals": [
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "akka",
+  "source_url": "https://github.com/akka/ai-marketplace/blob/main/skills/mode/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/akka/ai-marketplace/blob/main/skills/mode/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Show or switch the project's conformance mode between Enforced and \u00c0 la carte, within the set the organization allows."
+}

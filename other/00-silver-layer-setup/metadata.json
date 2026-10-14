@@ -1,0 +1,38 @@
+{
+  "name": "silver-layer-setup",
+  "repo": "databricks-solutions/vibe-coding-workshop-template",
+  "path": "data_product_accelerator/skills/silver/00-silver-layer-setup/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/databricks-solutions/vibe-coding-workshop-template",
+  "dir_name": "00-silver-layer-setup",
+  "downloaded_at": "2026-10-14T05:04:29.095266Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "sql",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "databricks-solutions",
+  "source_url": "https://github.com/databricks-solutions/vibe-coding-workshop-template/blob/main/data_product_accelerator/skills/silver/00-silver-layer-setup/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/databricks-solutions/vibe-coding-workshop-template/blob/main/data_product_accelerator/skills/silver/00-silver-layer-setup/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "End-to-end orchestrator for creating Silver layer pipelines using Spark Declarative Pipelines (SDP, formerly DLT) with Delta table-based data quality rules, quarantine patterns, and monitoring views. Orchestrates mandatory dependencies on common skills (databricks-table-properties, databricks-python-imports, databricks-asset-bundles, schema-management-patterns, unity-catalog-constraints, databricks-expert-agent) and Silver-domain skills (dlt-expectations-patterns, dqx-patterns). Use when creating a Silver layer from scratch, setting up Bronze-to-Silver pipelines, or implementing Silver SDP/DLT with streaming ingestion and runtime-updateable DQ rules."
+}

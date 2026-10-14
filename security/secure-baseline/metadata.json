@@ -1,0 +1,41 @@
+{
+  "name": "secure-baseline",
+  "repo": "chnetajibc/skill-repo",
+  "path": "skills/security/secure-baseline/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/chnetajibc/skill-repo",
+  "dir_name": "secure-baseline",
+  "downloaded_at": "2026-10-14T04:46:19.725441Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for security: security, auth, crypto, audit, owasp, pentest",
+    "score": 6,
+    "runner_up": "forensics",
+    "runner_up_score": 4,
+    "signals": [
+      "security",
+      "auth",
+      "crypto",
+      "audit",
+      "owasp",
+      "pentest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "chnetajibc",
+  "source_url": "https://github.com/chnetajibc/skill-repo/blob/main/skills/security/secure-baseline/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/chnetajibc/skill-repo/blob/main/skills/security/secure-baseline/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Baseline security review for web apps and APIs using OWASP Top 10 and ASVS. Use when reviewing code, adding auth/handling input, or before release. Produces severity-ranked findings with evidence, never silent patches."
+}

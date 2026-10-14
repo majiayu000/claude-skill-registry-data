@@ -1,0 +1,37 @@
+{
+  "name": "breakdown",
+  "repo": "evanharmon1/harmon-devkit",
+  "path": "ai/skills/universal/breakdown/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/evanharmon1/harmon-devkit",
+  "dir_name": "breakdown",
+  "downloaded_at": "2026-10-14T05:29:27.835564Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "evanharmon1",
+  "source_url": "https://github.com/evanharmon1/harmon-devkit/blob/main/ai/skills/universal/breakdown/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/evanharmon1/harmon-devkit/blob/main/ai/skills/universal/breakdown/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Decompose a lump of work \u2014 a feature, an epic, a strategy doc, a big issue \u2014 into GitHub issues sized so each is one session, one PR, one human review, organized into milestones and sub-issues where warranted, ordered with explicit blocked-by dependency edges, and labelled from the target repo's own vocabulary. Proposes the full decomposition for one human approval before executing its issue-graph writes; unattended runs file the proposal only. Use when a body of work needs to become an executable issue graph. Invoke as /breakdown [topic, doc path, or issue reference]."
+}

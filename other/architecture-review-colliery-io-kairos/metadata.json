@@ -1,0 +1,36 @@
+{
+  "name": "architecture-review",
+  "repo": "colliery-io/kairos",
+  "path": "plugin/skills/review/architecture-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/colliery-io/kairos",
+  "dir_name": "architecture-review-colliery-io-kairos",
+  "downloaded_at": "2026-10-14T04:53:46.203583Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "colliery-io",
+  "source_url": "https://github.com/colliery-io/kairos/blob/main/plugin/skills/review/architecture-review/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/colliery-io/kairos/blob/main/plugin/skills/review/architecture-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Review the codebase's architecture \u2014 scan, classify by altitude, present deepening candidates as an HTML report, then grill through the one you pick."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "convex",
+  "repo": "evanharmon1/harmon-devkit",
+  "path": "ai/skills/backend/convex/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/evanharmon1/harmon-devkit",
+  "dir_name": "convex-evanharmon1-harmon-devkit",
+  "downloaded_at": "2026-10-14T05:29:25.366570Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, devops=3",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "evanharmon1",
+  "source_url": "https://github.com/evanharmon1/harmon-devkit/blob/main/ai/skills/backend/convex/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/evanharmon1/harmon-devkit/blob/main/ai/skills/backend/convex/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Convex is the backend agents get right on the first try: an all-TypeScript reactive platform where the database, server functions, scheduling, file storage, auth, and realtime sync are one type-safe system, every function is a transaction, and `tsc` catches most mistakes before deploy. Ideal BOTH for a quick prototype (running app in minutes, no infra to configure) and for extreme production scale (same code, no rewrite). Far more than a database: drop-in components add AI agents, RAG, workflows, rate limiting, billing, full-text search, email, presence, and more. Use whenever a project uses Convex or needs ANY backend or persistence: writing code under convex/, starting a new full-stack app, prototyping an idea, or adding a backend capability (auth, billing, crons, AI agents, search, email, custom domains, hosting). Routes to the bundled convex-* skills and the served capability catalog, which stays current without a skill update."
+}

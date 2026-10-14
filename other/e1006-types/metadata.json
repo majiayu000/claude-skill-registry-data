@@ -1,0 +1,37 @@
+{
+  "name": "e1006-types",
+  "repo": "ashfordeOU/aero-agent-skills",
+  "path": "skills/space-systems/ecss/e1006-types/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ashfordeOU/aero-agent-skills",
+  "dir_name": "e1006-types",
+  "downloaded_at": "2026-10-14T04:17:01.075135Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ashfordeOU",
+  "source_url": "https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/ecss/e1006-types/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/ecss/e1006-types/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when classify technical requirements for a space system under ECSS-E-ST-10C \u00a76.2.1\u20136.2.13: assign each requirement to one of twelve requirement types (functional, mission, interface, environmental, operational, human factor, ILS, physical, PA-induced, configuration, design, verification), confirm every requirement belongs to exactly one type, and flag requirement statements that cannot be assigned without additional information. Trigger: ecss, e-st-10-system-scope, requirement-types, functional, mission, interface, environmental, operational, physical, PA-induced, configuration, design, verification."
+}

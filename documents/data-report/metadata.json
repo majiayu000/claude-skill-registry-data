@@ -1,0 +1,40 @@
+{
+  "name": "data-report",
+  "repo": "ahang1598/doubao-workbuddy-qwenwork-skills",
+  "path": "qwenwork/skills/data-report/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/ahang1598/doubao-workbuddy-qwenwork-skills",
+  "dir_name": "data-report",
+  "downloaded_at": "2026-10-14T03:54:49.725948Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: pdf, excel, pptx, xlsx, docx",
+    "score": 5,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "pdf",
+      "excel",
+      "pptx",
+      "xlsx",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ahang1598",
+  "source_url": "https://github.com/ahang1598/doubao-workbuddy-qwenwork-skills/blob/main/qwenwork/skills/data-report/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ahang1598/doubao-workbuddy-qwenwork-skills/blob/main/qwenwork/skills/data-report/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "\u4ece\u8868\u683c\u6587\u4ef6 (.xlsx / .xlsm / .csv / .tsv) \u751f\u6210\u81ea\u5305\u542b HTML \u6570\u636e\u5206\u6790\u62a5\u544a\u3002 \u542b KPI \u5361\u7247\u3001ECharts \u56fe\u8868\u3001\u6587\u5b57\u6d1e\u5bdf\u3002\u6570\u636e inline \u5d4c\u5165\u3002\nTRIGGER: \u7528\u6237\u4e0a\u4f20\u8868\u683c\u6587\u4ef6 + \u63d0\u51fa\u5206\u6790/\u51fa\u62a5\u544a/\u770b\u8d8b\u52bf/\u505a\u53ef\u89c6\u5316/\u51fa KPI/\u540c\u73af\u6bd4/ \u6392\u540d/\u6784\u6210/\u5f02\u5e38/\u5e15\u7d2f\u6258/\u6f0f\u6597/\u7559\u5b58/\u5f52\u56e0/\u5206\u7fa4\u7b49\u8bc9\u6c42\u65f6\u7acb\u5373\u89e6\u53d1, \u5305\u62ec\"\u51fa\u4efd\u62a5\u544a\"/ \"\u505a\u4e2a\u5206\u6790\"/\"\u770b\u770b\u6570\u636e\"\u8fd9\u7c7b\u6a21\u7cca\u8868\u8fbe\u3002\nPARTIAL: .xls \u63d0\u793a\u7528\u6237\u53e6\u5b58 xlsx; \u52a0\u5bc6/\u635f\u574f xlsx \u660e\u786e\u544a\u77e5; \u7eaf\u6587\u672c\u65e0\u6570\u503c\u5217\u964d\u7ea7 categorical\u3002\nDO NOT TRIGGER: \u6269\u5c55\u540d\u4e0d\u5728\u767d\u540d\u5355 (pdf/docx/pptx/txt/\u56fe\u7247/xlsb/parquet/ods/numbers); \u6570\u636e\u5e93 SQL \u573a\u666f (.db/.sqlite/jdbc/mysql://); \u4fee\u6539/\u7f16\u8f91 Excel \u672c\u4f53 (\u6539\u7528 xlsx skill); \u6570\u636e\u6e05\u6d17/\u53bb\u91cd/\u5408\u5e76 (\u5148\u7528 xlsx skill TRANSFORM \u540e\u518d\u8c03\u672c\u6280\u80fd); \u56fe\u7247 PDF \u4e2d\u7684\u8868\u683c (\u5148 OCR/pdf-extract); API/HTTP \u8fd4\u56de\u6570\u636e (\u5148\u843d\u76d8 csv/xlsx); \u65e0\u6570\u636e\u8f93\u5165\u4ec5\u6709\u5206\u6790\u8bc9\u6c42 (\u5148\u5f15\u5bfc\u4e0a\u4f20\u6587\u4ef6)\u3002"
+}

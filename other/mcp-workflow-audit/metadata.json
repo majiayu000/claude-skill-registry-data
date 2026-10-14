@@ -1,0 +1,37 @@
+{
+  "name": "MCP Workflow Audit",
+  "repo": "agentskillexchange/skills",
+  "path": "skills/mcp-workflow-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/agentskillexchange/skills",
+  "dir_name": "mcp-workflow-audit",
+  "downloaded_at": "2026-10-14T03:53:44.088849Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "agentskillexchange",
+  "source_url": "https://github.com/agentskillexchange/skills/blob/main/skills/mcp-workflow-audit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/agentskillexchange/skills/blob/main/skills/mcp-workflow-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audit Claude Code, MCP, and AI-agent workflows for permissions, consequential actions, idempotency, failure recovery, verification, and operator handoff."
+}

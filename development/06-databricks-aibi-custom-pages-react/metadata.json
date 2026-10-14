@@ -1,0 +1,38 @@
+{
+  "name": "databricks-aibi-custom-pages-react",
+  "repo": "databricks-solutions/vibe-coding-workshop-template",
+  "path": "data_product_accelerator/skills/monitoring/06-databricks-aibi-custom-pages-react/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/databricks-solutions/vibe-coding-workshop-template",
+  "dir_name": "06-databricks-aibi-custom-pages-react",
+  "downloaded_at": "2026-10-14T05:04:35.423044Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "databricks-solutions",
+  "source_url": "https://github.com/databricks-solutions/vibe-coding-workshop-template/blob/main/data_product_accelerator/skills/monitoring/06-databricks-aibi-custom-pages-react/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/databricks-solutions/vibe-coding-workshop-template/blob/main/data_product_accelerator/skills/monitoring/06-databricks-aibi-custom-pages-react/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Build full-page, high-fidelity React \"custom pages\" inside a Databricks AI/BI (Lakeview) dashboard \u2014 the mechanism behind pixel-perfect, custom-app-like dashboards (composite KPI cards, in-cell sparklines, custom filter chips, status pills, email-preview surfaces). A custom page is a single widget whose `multilineTextboxSpec.lines` carry a `<!-- @custom-page -->` marker followed by a JSON envelope `{code, manifest, datasetMap}`, where `code` is CommonJS React that reads dashboard datasets through the injected `viz.useCustomPageQuery` hook. Use ONLY when neither the built-in widgets (02-databricks-aibi-dashboards) nor Vega-Lite custom viz (05-databricks-aibi-custom-viz-vega) can express the layout. WARNING \u2014 this mechanism is NOT in official Databricks docs; treat as high-volatility and verify in your workspace before relying on it."
+}

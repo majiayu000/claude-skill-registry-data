@@ -1,0 +1,37 @@
+{
+  "name": "systems-engineering-safety",
+  "repo": "ashfordeOU/aero-agent-skills",
+  "path": "skills/systems-engineering-safety/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ashfordeOU/aero-agent-skills",
+  "dir_name": "systems-engineering-safety",
+  "downloaded_at": "2026-10-14T04:16:54.174530Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ashfordeOU",
+  "source_url": "https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/systems-engineering-safety/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/systems-engineering-safety/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when a task concerns aircraft or system-level engineering and safety assurance: guide the router to the systems-engineering-safety pack, covering ARP4754A systems-planning, requirements-traceability, requirements-allocation, verification-planning, and validation, ARP4761A safety-assessment, fta-fmea, common-cause-analysis, particular-risk-analysis, operating-support-hazard-analysis, and markov-analysis, and MBSE systems-engineering, sysml-modeling, state-machine, n2-diagram, and trade-study-analysis. This pack is the systems-level spine above item-level software and hardware assurance. Trigger: systems engineering, systems safety, ARP4754A, ARP4761A, safety assessment, fault tree, FMEA, common cause, particular risk, rotor burst, traceability, validation, allocation, verification planning, O&SHA, state machine, reachability, MBSE, SysML, N2 diagram, interface matrix, FDAL, IDAL, FHA, PSSA, SSA, trade study, Pugh matrix, Markov analysis, availability, MTTF."
+}

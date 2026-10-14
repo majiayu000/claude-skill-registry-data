@@ -1,0 +1,38 @@
+{
+  "name": "self-improvement",
+  "repo": "databricks-solutions/vibe-coding-workshop-template",
+  "path": "data_product_accelerator/skills/admin/self-improvement/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/databricks-solutions/vibe-coding-workshop-template",
+  "dir_name": "self-improvement",
+  "downloaded_at": "2026-10-14T05:04:26.692548Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, debug",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "databricks-solutions",
+  "source_url": "https://github.com/databricks-solutions/vibe-coding-workshop-template/blob/main/data_product_accelerator/skills/admin/self-improvement/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/databricks-solutions/vibe-coding-workshop-template/blob/main/data_product_accelerator/skills/admin/self-improvement/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Enables agent self-reflection and learning from mistakes through systematic skill updates. Prioritizes updating existing skills over creating new ones - always searches existing skills first, creates new skills only when justified. Includes upstream source sync workflow for tracking and updating skills from databricks/databricks-agent-skills. Use after encountering errors, completing complex tasks, or when asked to reflect, learn, or document a mistake. Triggers on \"learn from this\", \"don't repeat\", \"remember this pattern\", \"what went wrong\", \"update skills\", \"capture this learning\", \"document mistake\", \"prevent this error\", \"databricks-agent-skills updated\", \"upstream changed\", \"sync with databricks-agent-skills\"."
+}

@@ -1,0 +1,36 @@
+{
+  "name": "receiving-pr-feedback",
+  "repo": "ckallum/locus",
+  "path": ".claude/skills/receiving-pr-feedback/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ckallum/locus",
+  "dir_name": "receiving-pr-feedback",
+  "downloaded_at": "2026-10-14T04:48:31.645588Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ckallum",
+  "source_url": "https://github.com/ckallum/locus/blob/main/.claude/skills/receiving-pr-feedback/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ckallum/locus/blob/main/.claude/skills/receiving-pr-feedback/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "PR feedback, review comments, code review response, address review, respond to feedback,\nhandle reviewer suggestions, fix review comments, CR feedback.\nRigorous handling of PR review feedback \u2014 verify before implementing, push back when wrong."
+}

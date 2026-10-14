@@ -1,0 +1,37 @@
+{
+  "name": "e1009-units",
+  "repo": "ashfordeOU/aero-agent-skills",
+  "path": "skills/space-systems/ecss/e1009-units/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ashfordeOU/aero-agent-skills",
+  "dir_name": "e1009-units",
+  "downloaded_at": "2026-10-14T04:16:59.741278Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ashfordeOU",
+  "source_url": "https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/ecss/e1009-units/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/ecss/e1009-units/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when verify that every coordinate and derived quantity in a space-system interface document or software parameter list states its unit as the SI standard or an explicitly listed stated exception, per ECSS-E-ST-10-09C \u00a75.4.3. For each parameter: determine the quantity type (distance, angle, time, angular rate, velocity, mass, force, pressure, temperature, frequency, acceleration), identify the prescribed SI unit, check whether the actual stated unit is SI or appears on the stated-exception list, and flag any parameter whose unit is neither. Output a per-parameter verdict (si, stated_exception, or non_compliant) and a summary of all findings. Trigger: ecss, e-st-10-system-scope, units, SI-units, coordinates, reference-frames, stated-exceptions, quantity-types, parameter-verification."
+}

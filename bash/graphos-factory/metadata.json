@@ -1,0 +1,39 @@
+{
+  "name": "graphos-factory",
+  "repo": "apollographql/skills",
+  "path": "skills/graphos-factory/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/apollographql/skills",
+  "dir_name": "graphos-factory",
+  "downloaded_at": "2026-10-14T04:11:54.135956Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "apollographql",
+  "source_url": "https://github.com/apollographql/skills/blob/main/skills/graphos-factory/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/apollographql/skills/blob/main/skills/graphos-factory/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Build and iterate on an Apollo Connectors subgraph for a GraphOS supergraph from a REST API, with or without an OpenAPI or Swagger spec, in a dedicated git workspace that records what the API offers, the user's operation and field selection, every design decision, and the evidence each verification layer produced. Use whenever the user wants to wrap a REST API as a GraphQL subgraph for their supergraph, add or remove operations or fields from an existing connector subgraph, refresh one against a new spec, or record live API traffic as test fixtures, even if they do not say \"connector\", \"subgraph\" or \"Apollo\"."
+}

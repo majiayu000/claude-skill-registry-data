@@ -1,0 +1,38 @@
+{
+  "name": "vdjdb-publish",
+  "repo": "antigenomics/vdjdb-db",
+  "path": "skills/vdjdb-publish/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/antigenomics/vdjdb-db",
+  "dir_name": "vdjdb-publish",
+  "downloaded_at": "2026-10-14T04:09:50.468932Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "antigenomics",
+  "source_url": "https://github.com/antigenomics/vdjdb-db/blob/master/skills/vdjdb-publish/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/antigenomics/vdjdb-db/blob/master/skills/vdjdb-publish/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Publish proofread VDJdb chunks through dev, reconcile publication issues, preserve record identity, keep validation changes separate, and close completed imports while tracking unresolved observations and optional metadata follow-ups. Use when a chunk is ready to publish or an imported paper needs closeout."
+}

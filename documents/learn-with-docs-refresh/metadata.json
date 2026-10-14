@@ -1,0 +1,38 @@
+{
+  "name": "learn-with-docs-refresh",
+  "repo": "alexander-danilenko/cortex-ai-skills",
+  "path": "plugins/engineering/cortex-knowledge/skills/learn-with-docs-refresh/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/alexander-danilenko/cortex-ai-skills",
+  "dir_name": "learn-with-docs-refresh",
+  "downloaded_at": "2026-10-14T04:00:29.056403Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "alexander-danilenko",
+  "source_url": "https://github.com/alexander-danilenko/cortex-ai-skills/blob/main/plugins/engineering/cortex-knowledge/skills/learn-with-docs-refresh/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/alexander-danilenko/cortex-ai-skills/blob/main/plugins/engineering/cortex-knowledge/skills/learn-with-docs-refresh/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audit and maintain the learnings in `docs/solutions/` against the current codebase \u2014 fix drifted paths and links, merge overlapping docs, replace guidance the code no longer supports, delete obsolete docs, reconcile the `CONCEPTS.md` glossary, then report and commit. Also bootstraps `CONCEPTS.md` on request and, when asked, culls docs whose reasoning the code already explains. Use for \"refresh the learnings\", \"audit docs/solutions\", \"are our solution docs still accurate\", \"clean up / prune the learnings\", \"create a CONCEPTS.md\", or after a refactor, rename, migration, or dependency upgrade that likely invalidated documented solutions. Not for capturing a new learning \u2014 use `learn-with-docs`."
+}

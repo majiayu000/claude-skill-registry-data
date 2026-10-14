@@ -1,0 +1,37 @@
+{
+  "name": "03-appkit-deploy",
+  "repo": "databricks-solutions/vibe-coding-workshop-template",
+  "path": "apps_lakebase/skills/03-appkit-deploy/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/databricks-solutions/vibe-coding-workshop-template",
+  "dir_name": "03-appkit-deploy",
+  "downloaded_at": "2026-10-14T05:04:22.009467Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "databricks-solutions",
+  "source_url": "https://github.com/databricks-solutions/vibe-coding-workshop-template/blob/main/apps_lakebase/skills/03-appkit-deploy/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/databricks-solutions/vibe-coding-workshop-template/blob/main/apps_lakebase/skills/03-appkit-deploy/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Deploy a Databricks AppKit application to Databricks Apps. Covers config validation, build verification, deployment, UI verification, error diagnosis with fix loop, and workspace app limit handling. Use when asked to deploy an AppKit app, push to production, ship the app, or troubleshoot a failed deploy. Triggers on \"deploy app\", \"push to databricks\", \"ship app\", \"deploy appkit\", \"databricks apps deploy\", \"fix deploy error\", \"app won't start\"."
+}

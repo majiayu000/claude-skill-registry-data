@@ -1,0 +1,38 @@
+{
+  "name": "do297",
+  "repo": "ashfordeOU/aero-agent-skills",
+  "path": "skills/avionics/ima/do297/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/ashfordeOU/aero-agent-skills",
+  "dir_name": "do297",
+  "downloaded_at": "2026-10-14T04:16:53.489809Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: task, planning, memory",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "task",
+      "planning",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ashfordeOU",
+  "source_url": "https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/avionics/ima/do297/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/avionics/ima/do297/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when scoping an IMA platform, planning module acceptance, or laying out development assurance steps for an integrated modular avionics system. Plan the integrated modular avionics (IMA) platform architecture in the spirit of DO-297: identify the IMA modules, application partitions, and shared resources, allocate applications to partitions with CPU, memory, and I/O budgets, and check the allocation for resource contention against integrity and availability requirements. Produce the module and application allocation plan, the resource budget table, and the module acceptance criteria that support incremental certification of the platform. Trigger: integrated modular avionics, IMA architecture, module acceptance, incremental certification, partition allocation, resource budget."
+}

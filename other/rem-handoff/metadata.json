@@ -1,0 +1,38 @@
+{
+  "name": "rem-handoff",
+  "repo": "darbin/claudecraft",
+  "path": "plugins/rem-meta/skills/rem-handoff/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/darbin/claudecraft",
+  "dir_name": "rem-handoff",
+  "downloaded_at": "2026-10-14T05:03:20.145951Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "darbin",
+  "source_url": "https://github.com/darbin/claudecraft/blob/main/plugins/rem-meta/skills/rem-handoff/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/darbin/claudecraft/blob/main/plugins/rem-meta/skills/rem-handoff/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Session continuity and handoff. Saves current session state for future resumption, or resumes from a previous handoff. Use for handoff, session handoff, context transfer, resume, continue, pick up where I left off, save progress, session state, or context preservation."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "complexity-management-skill",
+  "repo": "darellchua2/civiltekk-skills",
+  "path": "skills/complexity-management-skill/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/darellchua2/civiltekk-skills",
+  "dir_name": "complexity-management-skill",
+  "downloaded_at": "2026-10-14T05:03:35.248562Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "quality",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "darellchua2",
+  "source_url": "https://github.com/darellchua2/civiltekk-skills/blob/main/skills/complexity-management-skill/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/darellchua2/civiltekk-skills/blob/main/skills/complexity-management-skill/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "KISS/YAGNI/DRY tradeoff heuristics for minimizing accidental complexity. Triggers: complexity, accidental complexity. Not for smell detection (code-smells-skill), over-engineering audit (civiltekk-ponytail-audit-skill), or SOLID reference (solid-principles-skill)."
+}

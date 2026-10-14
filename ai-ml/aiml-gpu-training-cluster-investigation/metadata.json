@@ -1,0 +1,39 @@
+{
+  "name": "aiml-gpu-training-cluster-investigation",
+  "repo": "aws/tools-for-devops-agent",
+  "path": "skills/aiml-gpu-training-cluster-investigation/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/aws/tools-for-devops-agent",
+  "dir_name": "aiml-gpu-training-cluster-investigation",
+  "downloaded_at": "2026-10-14T04:21:02.497304Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for ai-ml: ml, machine-learning, model, training",
+    "score": 4,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "ml",
+      "machine-learning",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws",
+  "source_url": "https://github.com/aws/tools-for-devops-agent/blob/main/skills/aiml-gpu-training-cluster-investigation/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws/tools-for-devops-agent/blob/main/skills/aiml-gpu-training-cluster-investigation/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this skill for GPU training or inference clusters on SageMaker HyperPod (Slurm or EKS), ParallelCluster, or self-managed EC2/EKS GPU instances. It adds three things. First, a GPU evidence coverage audit that proves per node whether kernel Xid logs and HyperPod health-agent detections were actually arriving, hour by hour, so \"no errors found\" is never reported from a silent log. Second, a node verdict (replace, reboot, or leave alone) against an explicit evidence bar, so an application Xid is never headlined as hardware. Third, a pre-flight readiness check before a long run, covering Capacity Block or training plan end time versus run length, spare capacity to replace a failed node, NodeRecovery, deep health checks, EFA, log coverage, idle reserved GPUs. Activate on Xid or ECC errors, slow training or FSx for Lustre slowness on a GPU cluster, NCCL hangs or TCP fallback, NVLink or Fabric Manager errors, nodes in Failure or Pending, nodes terminating at once, or \"is my cluster ready for a multi-day run\"."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "samples-curation",
+  "repo": "clever-cc-plugins/cc-content",
+  "path": "plugins/cc-content/skills/samples-curation/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/clever-cc-plugins/cc-content",
+  "dir_name": "samples-curation",
+  "downloaded_at": "2026-10-14T04:50:20.635390Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, blog, article",
+    "score": 3,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "writing",
+      "blog",
+      "article"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "clever-cc-plugins",
+  "source_url": "https://github.com/clever-cc-plugins/cc-content/blob/main/plugins/cc-content/skills/samples-curation/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/clever-cc-plugins/cc-content/blob/main/plugins/cc-content/skills/samples-curation/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this skill when the owner wants to save a gold-standard content example, curate approved samples, add a reference post to the samples library, or annotate a piece of content for future reference. Invoke when the user says \"save this as a sample\", \"add to samples\", \"curate an example\", \"record this good post\", or \"update samples.md\"."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "anti-global-install",
+  "repo": "coff33ninja/ai-skills",
+  "path": "skills/anti-global-install/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/coff33ninja/ai-skills",
+  "dir_name": "anti-global-install",
+  "downloaded_at": "2026-10-14T04:52:49.507361Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "coff33ninja",
+  "source_url": "https://github.com/coff33ninja/ai-skills/blob/main/skills/anti-global-install/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/coff33ninja/ai-skills/blob/main/skills/anti-global-install/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Never install tools/packages into global system locations. Always detect and use the project's existing environment (venv, node_modules, target, vendor, etc.) or create a project-local one. Applies to all languages."
+}

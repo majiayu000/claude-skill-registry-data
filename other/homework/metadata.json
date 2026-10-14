@@ -1,0 +1,37 @@
+{
+  "name": "homework",
+  "repo": "baekenough/second-brain",
+  "path": ".claude/skills/homework/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/baekenough/second-brain",
+  "dir_name": "homework",
+  "downloaded_at": "2026-10-14T04:23:12.732229Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "baekenough",
+  "source_url": "https://github.com/baekenough/second-brain/blob/main/.claude/skills/homework/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/baekenough/second-brain/blob/main/.claude/skills/homework/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "On explicit /homework invocation, analyze the current and linked previous sessions, extract mistakes (\ucc10\ube60), and report them via omcustom-feedback with a confirmation gate. Auto-activation on session cleanup/session-end signals is OPT-IN (default OFF) \u2014 requires an explicit project/user directive. Use when explicitly auditing recent work for harness gaps."
+}

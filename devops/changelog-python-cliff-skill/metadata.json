@@ -1,0 +1,37 @@
+{
+  "name": "changelog-python-cliff-skill",
+  "repo": "darellchua2/civiltekk-skills",
+  "path": "skills/changelog-python-cliff-skill/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/darellchua2/civiltekk-skills",
+  "dir_name": "changelog-python-cliff-skill",
+  "downloaded_at": "2026-10-14T05:03:35.926975Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: ci, cd",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "ci",
+      "cd"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "darellchua2",
+  "source_url": "https://github.com/darellchua2/civiltekk-skills/blob/main/skills/changelog-python-cliff-skill/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/darellchua2/civiltekk-skills/blob/main/skills/changelog-python-cliff-skill/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generate automated changelogs for Python projects using git-cliff with PEP 440 versioning support"
+}

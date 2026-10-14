@@ -1,0 +1,38 @@
+{
+  "name": "rem-qa",
+  "repo": "darbin/claudecraft",
+  "path": "plugins/rem-review/skills/rem-qa/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/darbin/claudecraft",
+  "dir_name": "rem-qa",
+  "downloaded_at": "2026-10-14T05:03:21.071802Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, qa, playwright",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "qa",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "darbin",
+  "source_url": "https://github.com/darbin/claudecraft/blob/main/plugins/rem-review/skills/rem-qa/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/darbin/claudecraft/blob/main/plugins/rem-review/skills/rem-qa/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Visual QA testing across real browser \u2014 Playwright (primary) or Chrome DevTools MCP (fallback). QA this, QA the site, test the site, check for visual bugs, run QA, browser test, visual test, smoke test, screenshot test, cross-page testing, mobile testing, desktop testing, diff-aware QA, Playwright testing, Lighthouse audit, health score, visual regression, find broken layouts, find dead clicks, find console errors. Crawls multiple pages, tests interactions at mobile + desktop viewports, captures screenshots to `tmp-screenshots/`, monitors console errors + network failures, detects layout shift (CLS) + touch-target violations + horizontal overflow, runs Lighthouse, produces 8-dimension health score (Visual / Interactivity / Mobile UX / Performance / Error-Free / Accessibility / Consistency / Content). Diff-aware mode (`/rem-qa diff`) tests only pages affected by recent git changes. Convention-aware \u2014 reads CLAUDE.md so it doesn't flag intentional z-index / overlay / mobile-nav patterns. Distinct from rem-review-ux (deep heuristic evaluation of a single page with Nielsen + WCAG + dark patterns; rem-qa is broader cross-page functional sweep with real clicks), rem-seo (markup + discoverability audit; rem-qa is visual + interactive), rem-verify (build + test + typecheck; rem-qa is browser-based user perspective), rem-audit (repo-wide code health; rem-qa is live-browser bugs). Pairs with rem-review-ux for deep UX follow-up on pages rem-qa flags, rem-test to generate regression tests from bugs found, rem-seo to handoff metadata issues."
+}

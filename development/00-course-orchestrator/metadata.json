@@ -1,0 +1,38 @@
+{
+  "name": "00-course-orchestrator",
+  "repo": "databricks-solutions/vibe-coding-workshop-template",
+  "path": "genai-agents/00-course-orchestrator/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/databricks-solutions/vibe-coding-workshop-template",
+  "dir_name": "00-course-orchestrator",
+  "downloaded_at": "2026-10-14T05:04:21.064977Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "databricks-solutions",
+  "source_url": "https://github.com/databricks-solutions/vibe-coding-workshop-template/blob/main/genai-agents/00-course-orchestrator/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/databricks-solutions/vibe-coding-workshop-template/blob/main/genai-agents/00-course-orchestrator/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "GenAI agent skill navigator for the `genai-agents/` folder. Start here to route agent-building, MLflow GenAI, tracing, Databricks Apps Track A, SDLC, evaluation, deployment, monitoring, prompt iteration, and vibecoding runtime tasks to the correct specialized skill. Uses tiered loading and keyword routing so agents read only the skills needed for the current task."
+}

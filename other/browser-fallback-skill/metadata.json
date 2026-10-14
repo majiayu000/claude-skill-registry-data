@@ -1,0 +1,37 @@
+{
+  "name": "browser-fallback-skill",
+  "repo": "darellchua2/civiltekk-skills",
+  "path": "skills/browser-fallback-skill/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/darellchua2/civiltekk-skills",
+  "dir_name": "browser-fallback-skill",
+  "downloaded_at": "2026-10-14T05:03:31.752847Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "automation",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "darellchua2",
+  "source_url": "https://github.com/darellchua2/civiltekk-skills/blob/main/skills/browser-fallback-skill/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/darellchua2/civiltekk-skills/blob/main/skills/browser-fallback-skill/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Route browser work across agent toolsets \u2014 probe a managed desktop-browser toolset read-only before any mutating call, fall back to independent automation stacks on disconnect, verify-then-handoff for show-the-user intents. Harness values in references/. Triggers: browser.disconnected, no desktop browser connected, browser toolset, probe before tabs.open, desktop browser attach, browser fallback."
+}

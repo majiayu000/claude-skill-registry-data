@@ -1,0 +1,37 @@
+{
+  "name": "star-tracker",
+  "repo": "ashfordeOU/aero-agent-skills",
+  "path": "skills/space-systems/adcs/star-tracker/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/ashfordeOU/aero-agent-skills",
+  "dir_name": "star-tracker",
+  "downloaded_at": "2026-10-14T04:17:01.306554Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ashfordeOU",
+  "source_url": "https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/adcs/star-tracker/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/adcs/star-tracker/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when the task is star identification, boresight and field of view selection, lost in space versus tracking mode, cross-boresight versus roll pointing accuracy, or star tracker update rate. Determine star tracker attitude determination for spacecraft ADCS: identify measured star centroids against an onboard star catalog, compute the angular separation between each measured centroid and its catalog star, and return the best match inside the field of view. The logic normalizes unit vectors, finds the nearest catalog star within the field of view radius, returns the matched star id plus boresight error in arcseconds, and selects lost in space or tracking mode from a prior attitude. Trigger: star identification, star catalog, boresight, field of view, lost in space, tracking mode, angular separation, pointing accuracy, attitude determination."
+}

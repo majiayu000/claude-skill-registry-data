@@ -1,0 +1,39 @@
+{
+  "name": "run-ledger",
+  "description": "Requires Bash 3.2+ and standard POSIX tools; START/END ledger for unattended cron, launchd, systemd or CI jobs to detect hung runs, missed slots, stopped schedules and failed statuses.",
+  "repo": "elfovo/agent-chain-doctor",
+  "path": "skills/run-ledger",
+  "github_branch": "main",
+  "github_commit_sha": "56873239a8705d6e2b474efc6a83c2ab7cadf6b3",
+  "assets_verified_at": "2026-10-14T05:32:30.121225Z",
+  "category": "devops",
+  "tags": [
+    "claude-code",
+    "cron",
+    "launchd",
+    "systemd",
+    "github-actions",
+    "monitoring",
+    "heartbeat"
+  ],
+  "stars": 0,
+  "source": "Community Skills",
+  "dir_name": "run-ledger",
+  "archive_mode": "directory",
+  "bundled_files": [
+    "scripts/ledger.sh"
+  ],
+  "bundled_file_blobs": {
+    "scripts/ledger.sh": "23e72e44973e75680a362dbe9825d32e9ab94a83"
+  },
+  "author": "elfovo",
+  "source_url": "https://github.com/elfovo/agent-chain-doctor/blob/main/skills/run-ledger/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright (c) 2026 Eliott Foveau",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "asset_liveness": "live",
+  "assets_liveness_checked_at": "2026-10-14T08:06:34.951315Z",
+  "assets_liveness_sha": "56873239a8705d6e2b474efc6a83c2ab7cadf6b3"
+}

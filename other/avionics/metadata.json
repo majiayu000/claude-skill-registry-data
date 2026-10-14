@@ -1,0 +1,37 @@
+{
+  "name": "avionics",
+  "repo": "ashfordeOU/aero-agent-skills",
+  "path": "skills/avionics/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ashfordeOU/aero-agent-skills",
+  "dir_name": "avionics",
+  "downloaded_at": "2026-10-14T04:16:52.041882Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, generation=2",
+    "score": 2,
+    "runner_up": "generation",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ashfordeOU",
+  "source_url": "https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/avionics/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/avionics/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when a task concerns avionics and flight software assurance for civil aircraft: guide the router to the avionics pack, whose DO-178C software lifecycle sub-skills cover planning, development, verification, and configuration management, whose DO-254 sub-skills cover airborne electronic hardware planning and verification, whose DO-330 tool-qualification sub-skill covers software tool credit, whose DO-160 environmental-qualification sub-skill covers equipment test conditions, and whose far-cs25 airworthiness sub-skill covers the transport-category certification basis. This pack is the airborne software and hardware certification spine. Trigger: avionics, airborne software, flight software, DO-178C, DO-254, DO-330, DO-160, airborne electronic hardware, airworthiness certification, software levels, tool qualification, environmental qualification."
+}

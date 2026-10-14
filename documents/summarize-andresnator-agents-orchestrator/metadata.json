@@ -1,0 +1,39 @@
+{
+  "name": "summarize",
+  "repo": "andresnator/agents-orchestrator",
+  "path": "domains/docs/skills/summarize/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/andresnator/agents-orchestrator",
+  "dir_name": "summarize-andresnator-agents-orchestrator",
+  "downloaded_at": "2026-10-14T04:07:22.143057Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: docs, pdf, word, markdown",
+    "score": 4,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "pdf",
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "andresnator",
+  "source_url": "https://github.com/andresnator/agents-orchestrator/blob/main/domains/docs/skills/summarize/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/andresnator/agents-orchestrator/blob/main/domains/docs/skills/summarize/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Expert in pedagogical book chapter synthesis. Use this skill WHENEVER the user wants to summarize a book chapter, analyze text or document content, study a chapter, extract key ideas from a reading, or when they mention words like \"summary\", \"chapter\", \"book\", \"analyze this text\", \"summarize this\", \"cornell\", \"TL;DR\" of long-form content. Also trigger when the user uploads a PDF, EPUB, or document and asks to understand or study it in parts.\nTambi\u00e9n se activa en castellano: \"resumen\", \"resumen del cap\u00edtulo\", \"resumir esto\",\n\"resumir el cap\u00edtulo\", \"analizar este texto\", \"cap\u00edtulo\", \"libro\", \"ideas clave\",\n\"resumen del libro\", \"estudiar el cap\u00edtulo\", \"s\u00edntesis\", \"notas cornell\",\n\"extraer ideas principales\", \"dame un resumen\", \"qu\u00e9 dice este cap\u00edtulo\",\n\"resumir documento\", \"analizar lectura\"."
+}

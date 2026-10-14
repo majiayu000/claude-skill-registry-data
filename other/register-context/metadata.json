@@ -1,0 +1,37 @@
+{
+  "name": "register-context",
+  "repo": "clever-cc-plugins/cc-content",
+  "path": "plugins/cc-content/skills/register-context/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/clever-cc-plugins/cc-content",
+  "dir_name": "register-context",
+  "downloaded_at": "2026-10-14T04:50:20.917333Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, marketing=2",
+    "score": 2,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "clever-cc-plugins",
+  "source_url": "https://github.com/clever-cc-plugins/cc-content/blob/main/plugins/cc-content/skills/register-context/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/clever-cc-plugins/cc-content/blob/main/plugins/cc-content/skills/register-context/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this skill to register an existing file as context in CLAUDE.md so content skills can discover and load it for future work. Invoke when the user says \"register this as context\", \"promote to context\", \"add this to context\", \"add this file to the context table\", \"reference this in CLAUDE.md\", or \"make this a context file\"."
+}

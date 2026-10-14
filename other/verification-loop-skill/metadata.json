@@ -1,0 +1,38 @@
+{
+  "name": "verification-loop-skill",
+  "repo": "darellchua2/civiltekk-skills",
+  "path": "skills/verification-loop-skill/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/darellchua2/civiltekk-skills",
+  "dir_name": "verification-loop-skill",
+  "downloaded_at": "2026-10-14T05:03:32.568317Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: security=3, testing=3",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "darellchua2",
+  "source_url": "https://github.com/darellchua2/civiltekk-skills/blob/main/skills/verification-loop-skill/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/darellchua2/civiltekk-skills/blob/main/skills/verification-loop-skill/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Canonical verification-gate contract \u2014 command discovery, gate order (lint, typecheck, build, unit, e2e), scoped-lint rule, INCONCLUSIVE handling, gate memo. Triggers: verification gate, gate memo, verify implementation. Pipeline skills defer here instead of restating gates. Scoring rubrics: eval-harness-skill."
+}

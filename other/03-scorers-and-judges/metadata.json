@@ -1,0 +1,38 @@
+{
+  "name": "03-scorers-and-judges",
+  "repo": "databricks-solutions/vibe-coding-workshop-template",
+  "path": "genai-agents/sdlc/03-scorers-and-judges/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/databricks-solutions/vibe-coding-workshop-template",
+  "dir_name": "03-scorers-and-judges",
+  "downloaded_at": "2026-10-14T05:04:22.357271Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=3, data=3",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "api",
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "databricks-solutions",
+  "source_url": "https://github.com/databricks-solutions/vibe-coding-workshop-template/blob/main/genai-agents/sdlc/03-scorers-and-judges/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/databricks-solutions/vibe-coding-workshop-template/blob/main/genai-agents/sdlc/03-scorers-and-judges/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when you need to measure agent quality or create scoring criteria for evaluation gates. Covers how to pick and configure scorers \u2014 even if you just want \"is my agent safe and accurate?\" without knowing which MLflow classes to use. Also use when building custom LLM judges, evaluating multi-turn conversations, or setting pass/fail thresholds. SDLC Step 3."
+}

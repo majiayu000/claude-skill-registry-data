@@ -1,0 +1,37 @@
+{
+  "name": "ecosim-data-readiness",
+  "repo": "bioepic-data/ecosim-agent",
+  "path": ".agents/skills/ecosim-data-readiness/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/bioepic-data/ecosim-agent",
+  "dir_name": "ecosim-data-readiness",
+  "downloaded_at": "2026-10-14T04:29:52.978927Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bioepic-data",
+  "source_url": "https://github.com/bioepic-data/ecosim-agent/blob/main/.agents/skills/ecosim-data-readiness/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bioepic-data/ecosim-agent/blob/main/.agents/skills/ecosim-data-readiness/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Inventory staged local EcoSIM data at project startup and validate input readiness for a selected site, simulation period, and preprocessing or analysis workflow. Use before data-dependent work or when relevant inputs change."
+}

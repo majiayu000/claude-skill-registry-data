@@ -1,0 +1,37 @@
+{
+  "name": "e1012-bg-gwd",
+  "repo": "ashfordeOU/aero-agent-skills",
+  "path": "skills/space-systems/ecss/e1012-bg-gwd/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ashfordeOU/aero-agent-skills",
+  "dir_name": "e1012-bg-gwd",
+  "downloaded_at": "2026-10-14T04:17:04.642337Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ashfordeOU",
+  "source_url": "https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/ecss/e1012-bg-gwd/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ashfordeOU/aero-agent-skills/blob/main/skills/space-systems/ecss/e1012-bg-gwd/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when estimate radiation-induced noise contributions for a space-based gravity-wave detector test mass under ECSS-E-ST-10-12C \u00a710.4.7: determine the particle-flux-driven charge deposition rate on the test mass, compute the stochastic force noise power spectral density from charge shot-noise coupling and from cosmic-ray momentum-transfer recoil, convert total force noise to displacement noise using the free test-mass transfer function, verify that accumulated charge stays within the charge-management design limit, and compare resulting displacement noise against the instrument radiation noise budget allocation. Trigger: ecss, e-st-10-system-scope, gravity-wave-detector, radiation-noise, charge-deposition, force-noise-psd, displacement-noise, cosmic-ray, test-mass, noise-budget."
+}

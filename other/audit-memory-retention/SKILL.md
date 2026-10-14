@@ -1,0 +1,50 @@
+---
+name: audit-memory-retention
+description: Analyze reference retention paths that prevent GC of removed entries
+context: fork
+agent: auditor
+disable-model-invocation: true
+---
+
+Analyze the cache for memory retention defects — cases where logically removed
+entries remain reachable through internal data structures.
+
+This is NOT about liveness. Assume the entry IS removed from the CHM. The question
+is whether internal references still pin the key, value, or node in memory.
+
+Assume at least one retention path exists where removed entries remain
+reachable longer than necessary. If your analysis yields zero findings,
+re-examine the write buffer and removal listener queue — explain specifically
+why retention is bounded.
+
+Trace what happens to references after removal in each data structure:
+
+1. **Eviction deques**: Can dead nodes remain linked? Are key/value/prev/next nulled?
+2. **Timer wheel**: Are removed nodes always unlinked? Can sentinels retain references?
+3. **Write buffer**: Do enqueued tasks hold strong references until drained? Upper bound?
+4. **Read buffer**: Are slots nulled after consumption? Can removed nodes be pinned?
+5. **Removal listener queue**: Can slow executors cause unbounded retention?
+6. **Weak/soft references**: After WeakKeyReference is enqueued, is the value still reachable?
+   After WeakValueReference is enqueued, is the key still reachable?
+7. **Async values**: Can removed-but-incomplete futures be pinned via whenComplete?
+8. **Cache views/iterators**: Can long-lived iterators pin removed entries?
+9. **jcache EventDispatcher**: per-thread pending synchronous-listener futures —
+   is every publish on a thread paired with awaitSynchronous()/ignoreSynchronous()
+   (or a Quietly variant), including loads running on executor/refresh threads?
+   Does the drain release the list's capacity as well as its elements, given that
+   a bulk operation pends one future per key before it awaits?
+10. **jcache in-flight futures**: does every async path remove its future from
+    the in-flight set on all completion paths, including exceptional ones?
+
+For each retention path:
+- State the reference chain from GC root to retained object
+- State retention duration (bounded by maintenance? unbounded?)
+- Assess severity: transient vs persistent
+
+Retention also includes capacity a drain leaves behind. `ArrayList.clear()` keeps its backing
+array, so a list that one operation grows to its key count stays that size. A thread-local value
+outlives the object that created it: the stale entry holds the value until the thread ends or
+happens to expunge that slot.
+
+Do not report intentional strong references or retention bounded by a single
+maintenance cycle (unless maintenance can be delayed indefinitely).

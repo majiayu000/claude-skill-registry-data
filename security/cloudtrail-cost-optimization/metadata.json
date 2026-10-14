@@ -1,0 +1,38 @@
+{
+  "name": "cloudtrail-cost-optimization",
+  "repo": "aws/tools-for-devops-agent",
+  "path": "skills/cloudtrail-cost-optimization/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/aws/tools-for-devops-agent",
+  "dir_name": "cloudtrail-cost-optimization",
+  "downloaded_at": "2026-10-14T04:21:02.348169Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws",
+  "source_url": "https://github.com/aws/tools-for-devops-agent/blob/main/skills/cloudtrail-cost-optimization/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws/tools-for-devops-agent/blob/main/skills/cloudtrail-cost-optimization/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Identify and quantify AWS CloudTrail cost optimization opportunities. Use this skill when a user asks to reduce, review, audit, or optimize CloudTrail spend, or reports an unexpected CloudTrail cost or usage increase. Activate on requests like \"why is my CloudTrail bill so high\", \"reduce CloudTrail costs\", \"find duplicate CloudTrail trails\", \"CloudTrail cost review\", \"optimize CloudTrail Lake\", or \"CloudTrail data events are expensive\". This skill analyzes trails, event selectors, and CloudTrail Lake event data stores through read-only AWS APIs to surface duplicate management-event trails, unnecessary read events, high-volume noise events (KMS, RDS Data API), overly broad data event logging, and Lake ingestion/retention waste, producing a severity-ranked report of savings."
+}

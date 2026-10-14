@@ -1,0 +1,39 @@
+{
+  "name": "svelte-code-writer",
+  "repo": "dushyantkhosla/agent-skills",
+  "path": "skills/svelte-code-writer/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/dushyantkhosla/agent-skills",
+  "dir_name": "svelte-code-writer-dushyantkhosla-agent-skills",
+  "downloaded_at": "2026-10-14T05:18:53.772351Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dushyantkhosla",
+  "source_url": "https://github.com/dushyantkhosla/agent-skills/blob/main/skills/svelte-code-writer/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dushyantkhosla/agent-skills/blob/main/skills/svelte-code-writer/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "CLI tools for Svelte 5 documentation lookup and code analysis. MUST be used whenever creating, editing or analyzing any Svelte component (.svelte) or Svelte module (.svelte.ts/.svelte.js). If possible, this skill should be executed within the svelte-file-editor agent for optimal results."
+}

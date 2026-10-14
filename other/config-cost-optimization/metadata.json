@@ -1,0 +1,37 @@
+{
+  "name": "config-cost-optimization",
+  "repo": "aws/tools-for-devops-agent",
+  "path": "skills/config-cost-optimization/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aws/tools-for-devops-agent",
+  "dir_name": "config-cost-optimization",
+  "downloaded_at": "2026-10-14T04:21:01.821777Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aws",
+  "source_url": "https://github.com/aws/tools-for-devops-agent/blob/main/skills/config-cost-optimization/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aws/tools-for-devops-agent/blob/main/skills/config-cost-optimization/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Identify and quantify AWS Config cost optimization opportunities. Use this skill when a user asks to reduce, review, audit, or optimize AWS Config spend, or reports an unexpected AWS Config cost or configuration-item increase. Activate on requests like \"why is my AWS Config bill so high\", \"reduce Config costs\", \"AWS Config cost review\", \"my configuration item count spiked\", \"should I use daily or continuous Config recording\", or \"which resources are driving Config cost\". This skill analyzes configuration recorders, recording frequency, recorded resource types, Config rules, conformance packs, and the delivery S3 bucket through read-only AWS APIs to surface high-churn configuration-item drivers, continuous-vs- daily recording mismatches, over-broad resource recording, duplicate global-resource recording, and redundant rules/conformance packs, producing a severity-ranked report of savings."
+}

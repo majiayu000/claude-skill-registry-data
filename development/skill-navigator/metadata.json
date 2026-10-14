@@ -1,0 +1,38 @@
+{
+  "name": "skill-navigator",
+  "repo": "databricks-solutions/vibe-coding-workshop-template",
+  "path": "data_product_accelerator/skills/skill-navigator/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/databricks-solutions/vibe-coding-workshop-template",
+  "dir_name": "skill-navigator",
+  "downloaded_at": "2026-10-14T05:04:25.304020Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "databricks-solutions",
+  "source_url": "https://github.com/databricks-solutions/vibe-coding-workshop-template/blob/main/data_product_accelerator/skills/skill-navigator/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/databricks-solutions/vibe-coding-workshop-template/blob/main/data_product_accelerator/skills/skill-navigator/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Intelligent skill navigation system with tiered loading and orchestrator-first routing for context-efficient agent operation. Routes tasks to the correct domain skill based on keyword detection with orchestrator priority. Each skill uses progressive disclosure with references/, scripts/, and assets/ directories. Use this skill as the entry point for any Databricks-related task to determine which specialized skills to load."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "typescript",
+  "repo": "alexander-danilenko/cortex-ai-skills",
+  "path": "plugins/engineering/cortex-web/skills/typescript/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/alexander-danilenko/cortex-ai-skills",
+  "dir_name": "typescript-alexander-danilenko-cortex-ai-skills",
+  "downloaded_at": "2026-10-14T04:00:30.962128Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, build, compile, refactor",
+    "score": 4,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "alexander-danilenko",
+  "source_url": "https://github.com/alexander-danilenko/cortex-ai-skills/blob/main/plugins/engineering/cortex-web/skills/typescript/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/alexander-danilenko/cortex-ai-skills/blob/main/plugins/engineering/cortex-web/skills/typescript/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Apply these opinionated TypeScript conventions whenever writing or reviewing TypeScript: branded types for domain modeling, discriminated unions for state, `satisfies` over `as`, const objects instead of enums, type-only imports, and the strict tsconfig baseline beyond `strict: true`. Also use for monorepo project references and incremental build setup."
+}
