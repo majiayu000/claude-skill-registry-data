@@ -1,0 +1,39 @@
+{
+  "name": "speckit-harden",
+  "repo": "george-hutanu/motor-fix",
+  "path": ".claude/skills/speckit-harden/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/george-hutanu/motor-fix",
+  "dir_name": "speckit-harden",
+  "downloaded_at": "2026-10-15T03:50:03.871897Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, crypto, audit",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "security",
+      "auth",
+      "crypto",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "george-hutanu",
+  "source_url": "https://github.com/george-hutanu/motor-fix/blob/main/.claude/skills/speckit-harden/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/george-hutanu/motor-fix/blob/main/.claude/skills/speckit-harden/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Quality gate for the code a feature produced: runs the mechanical audits, judges durability and bloat against a fixed rubric, fixes what it finds, and re-verifies. Runs between /speckit-implement and the spec review."
+}

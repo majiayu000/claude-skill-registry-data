@@ -1,0 +1,39 @@
+{
+  "name": "motion-director",
+  "repo": "ham7a311/Vitrine",
+  "path": "src/workshop/skills/motion-director/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/ham7a311/Vitrine",
+  "dir_name": "motion-director-ham7a311-vitrine",
+  "downloaded_at": "2026-10-15T04:01:11.397749Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, ui, css, animation",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "design",
+      "ui",
+      "css",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ham7a311",
+  "source_url": "https://github.com/ham7a311/Vitrine/blob/main/src/workshop/skills/motion-director/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ham7a311/Vitrine/blob/main/src/workshop/skills/motion-director/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Design and audit interface motion so every animation explains something - direction, amount, cause, state - with a shared vocabulary of durations and easings, interruptible transitions, cheap properties and a real reduced-motion version. Includes a Playwright script that records every animation a page runs and flags layout-costly, overlong, inconsistent or reduced-motion-violating motion. Use when adding animation, when motion feels random or sluggish, or before shipping animated UI."
+}

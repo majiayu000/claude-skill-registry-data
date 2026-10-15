@@ -1,0 +1,37 @@
+{
+  "name": "draft-in-voice",
+  "repo": "garrytan/gbrain",
+  "path": "skills/draft-in-voice/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/garrytan/gbrain",
+  "dir_name": "draft-in-voice",
+  "downloaded_at": "2026-10-15T03:46:15.403464Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "garrytan",
+  "source_url": "https://github.com/garrytan/gbrain/blob/master/skills/draft-in-voice/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/garrytan/gbrain/blob/master/skills/draft-in-voice/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Ghostwrite content in a specific person's voice from a VALIDATED voice profile \u2014 tweets, replies, short posts, launch copy, recruiting blurbs, emails. Loads the subject's voice profile (people/<slug>-voice) plus first-party context from the brain, drafts 2-3 options in-register, then runs a hard voice-fidelity self-check before showing anything. Includes the profile BUILDER: if no validated profile exists, drafting hard-stops and this skill walks the corpus-to-fingerprint build instead. Never auto-posts."
+}

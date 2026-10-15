@@ -1,0 +1,37 @@
+{
+  "name": "aidlc-environment-provisioning",
+  "repo": "kdnakt/local-sights",
+  "path": ".claude/skills/aidlc-environment-provisioning/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/kdnakt/local-sights",
+  "dir_name": "aidlc-environment-provisioning-kdnakt-local-sights",
+  "downloaded_at": "2026-10-15T04:48:02.180537Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kdnakt",
+  "source_url": "https://github.com/kdnakt/local-sights/blob/main/.claude/skills/aidlc-environment-provisioning/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kdnakt/local-sights/blob/main/.claude/skills/aidlc-environment-provisioning/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run the AI-DLC `environment-provisioning` stage (operation phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage environment-provisioning --single`: the engine emits one run-stage directive for environment-provisioning and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched."
+}

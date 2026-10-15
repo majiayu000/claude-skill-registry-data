@@ -1,0 +1,39 @@
+{
+  "name": "mandu-guard",
+  "repo": "konamgil/mandu",
+  "path": "docs/archive/skills/mcp-v0/mandu-guard/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/konamgil/mandu",
+  "dir_name": "mandu-guard",
+  "downloaded_at": "2026-10-15T04:54:16.177534Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, frontend, component",
+    "score": 4,
+    "runner_up": "devops",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "frontend",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "konamgil",
+  "source_url": "https://github.com/konamgil/mandu/blob/main/docs/archive/skills/mcp-v0/mandu-guard/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/konamgil/mandu/blob/main/docs/archive/skills/mcp-v0/mandu-guard/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Architecture guard system for Mandu. Use when checking layer dependencies,\nenforcing architecture rules, or validating file locations. Triggers on\ntasks involving architecture, layers, dependencies, or guard commands."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "check-domain-availability",
+  "repo": "lennondotw/skills",
+  "path": "skills/check-domain-availability/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/lennondotw/skills",
+  "dir_name": "check-domain-availability",
+  "downloaded_at": "2026-10-15T05:03:43.461938Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lennondotw",
+  "source_url": "https://github.com/lennondotw/skills/blob/main/skills/check-domain-availability/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lennondotw/skills/blob/main/skills/check-domain-availability/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Check domain availability authoritatively via registry RDAP endpoints, bypassing registrars and third-party aggregators to avoid front-running. Use when screening domain candidates, verifying a name before purchase, or batch-checking many domains across TLDs."
+}

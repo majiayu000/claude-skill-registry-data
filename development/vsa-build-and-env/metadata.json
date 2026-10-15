@@ -1,0 +1,40 @@
+{
+  "name": "vsa-build-and-env",
+  "repo": "hhavynn/vsa-website",
+  "path": ".claude/skills/vsa-build-and-env/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/hhavynn/vsa-website",
+  "dir_name": "vsa-build-and-env",
+  "downloaded_at": "2026-10-15T04:08:58.725495Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, framework, build, compile, debug",
+    "score": 5,
+    "runner_up": "devops",
+    "runner_up_score": 4,
+    "signals": [
+      "dev",
+      "framework",
+      "build",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hhavynn",
+  "source_url": "https://github.com/hhavynn/vsa-website/blob/main/.claude/skills/vsa-build-and-env/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hhavynn/vsa-website/blob/main/.claude/skills/vsa-build-and-env/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Load when setting up the VSA website dev environment from scratch, or when setup-shaped things break \u2014 npm install/ci problems, \"Missing Supabase environment variables\" on boot, Jest failing with \"Unexpected token 'export'\" from zod, TypeScript syntax that won't compile, node version confusion, .env.local questions, Docker local run, or Supabase CLI/migrations/Edge Function first-time provisioning. Provides the from-zero runbook, every known setup trap, and a verify-your-setup checklist."
+}

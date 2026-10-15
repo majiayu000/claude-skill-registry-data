@@ -1,0 +1,38 @@
+{
+  "name": "Session Logs",
+  "repo": "lordmacu/nexo-rs",
+  "path": "skills/session-logs/SKILL.md",
+  "github_branch": "main",
+  "category": "context-management",
+  "source": "github.com/lordmacu/nexo-rs",
+  "dir_name": "session-logs-lordmacu-nexo-rs",
+  "downloaded_at": "2026-10-15T05:12:03.841571Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, context-window, memory",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "context",
+      "context-window",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lordmacu",
+  "source_url": "https://github.com/lordmacu/nexo-rs/blob/main/skills/session-logs/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lordmacu/nexo-rs/blob/main/skills/session-logs/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Inspect this agent's stored JSONL session transcripts \u2014 list, read, search, or recall recent turns."
+}

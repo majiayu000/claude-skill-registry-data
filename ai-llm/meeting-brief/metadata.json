@@ -1,0 +1,37 @@
+{
+  "name": "meeting-brief",
+  "repo": "fivetaku/workmate",
+  "path": ".claude/skills/meeting-brief/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/fivetaku/workmate",
+  "dir_name": "meeting-brief",
+  "downloaded_at": "2026-10-15T03:38:33.038392Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: ai, prompt",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fivetaku",
+  "source_url": "https://github.com/fivetaku/workmate/blob/main/.claude/skills/meeting-brief/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fivetaku/workmate/blob/main/.claude/skills/meeting-brief/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "This skill should be used when the user asks to \"\ud68c\uc758 \uc900\ube44\ud574\uc918\", \"\ud68c\uc758 \ube0c\ub9ac\ud551\", \"\ubbf8\ud305 \uc804 \uc815\ub9ac\ud574\uc918\", \"\uc624\ub298 \ud68c\uc758 \ubb50 \ucc59\uaca8\uc57c \ud574\", \"\ud68c\uc758 \uc548\uac74 \uc815\ub9ac\", \"\uba54\uc77c\uc774\ub791 \uc77c\uc815 \uc815\ub9ac\ud574\uc918\", \"\ud68c\uc758 \uc804 \ud655\uc778\ud560 \uac70\", \"meeting brief\", \"pre-meeting summary\", \"prepare for meeting\". Make sure to use this skill whenever the user wants to prepare for an upcoming meeting by cross-analyzing Gmail and Calendar. Even if the user just says \"\ud68c\uc758 \uc900\ube44\" or mentions a specific meeting name, this skill should trigger. This is different from daily-briefing \u2014 this skill focuses on a SPECIFIC meeting and produces actionable agenda items, not a general day overview."
+}

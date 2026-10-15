@@ -1,0 +1,39 @@
+{
+  "name": "web-app-penetration-testing",
+  "repo": "ha4kerspidersks/AI-Dev-Team",
+  "path": "skills/strix/skills/web-app-penetration-testing/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/ha4kerspidersks/AI-Dev-Team",
+  "dir_name": "web-app-penetration-testing",
+  "downloaded_at": "2026-10-15T03:59:58.132945Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for security: security, auth, audit, pentest",
+    "score": 4,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit",
+      "pentest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ha4kerspidersks",
+  "source_url": "https://github.com/ha4kerspidersks/AI-Dev-Team/blob/main/skills/strix/skills/web-app-penetration-testing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ha4kerspidersks/AI-Dev-Team/blob/main/skills/strix/skills/web-app-penetration-testing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Pentest a web app or website end to end \u2014 black-box testing of a live URL, staging environment, or local dev server that finds and exploits real vulnerabilities (auth bypass, broken access control, IDOR, injection, XSS, SSRF, business logic) and proves each one with a working proof-of-concept instead of a signature match. Runs with Strix, either the self-hosted open-source CLI or the managed app.strix.ai cloud. Use when the user asks to pentest, hack, security-test, or audit their web app, website, web application, or staging site."
+}

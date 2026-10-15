@@ -1,0 +1,38 @@
+{
+  "name": "launch-campaigns",
+  "repo": "gomarble-ai/marketing-agent",
+  "path": "skills/launch-campaigns/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/gomarble-ai/marketing-agent",
+  "dir_name": "launch-campaigns",
+  "downloaded_at": "2026-10-15T03:54:36.655649Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: content, campaign, brand",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "content",
+      "campaign",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gomarble-ai",
+  "source_url": "https://github.com/gomarble-ai/marketing-agent/blob/main/skills/launch-campaigns/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gomarble-ai/marketing-agent/blob/main/skills/launch-campaigns/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when the user wants to build or launch campaigns: a new Meta sales campaign, ad set or ads; a Google Search campaign, ad group or RSAs; a Performance Max campaign or asset group; a TikTok launch; or duplicating a winning campaign, ad set or ad. Turns an approved brief and creative into a full campaign setup (structure, names, budgets, targeting, ads, links, tracking) that the user reviews and approves before anything goes live."
+}

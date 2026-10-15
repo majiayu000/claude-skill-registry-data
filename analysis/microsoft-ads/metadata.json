@@ -1,0 +1,37 @@
+{
+  "name": "microsoft-ads",
+  "repo": "gomarble-ai/marketing-agent",
+  "path": "skills/microsoft-ads/SKILL.md",
+  "github_branch": "main",
+  "category": "analysis",
+  "source": "github.com/gomarble-ai/marketing-agent",
+  "dir_name": "microsoft-ads",
+  "downloaded_at": "2026-10-15T03:54:34.703310Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "analysis",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for analysis: analysis, analyze",
+    "score": 2,
+    "runner_up": "business",
+    "runner_up_score": 1,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gomarble-ai",
+  "source_url": "https://github.com/gomarble-ai/marketing-agent/blob/main/skills/microsoft-ads/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gomarble-ai/marketing-agent/blob/main/skills/microsoft-ads/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use for Microsoft Advertising (Bing Ads) questions: campaign, ad group, keyword and ad performance, shared budgets, quality score, change history, search term and keyword waste, and keyword ideas with volume and bid estimates. Read-only through GoMarble; changes are given as instructions for Microsoft Advertising."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "reverse-workflow",
+  "repo": "kotaroyamame/formal-agent-contracts",
+  "path": "skills/reverse-workflow/SKILL.md",
+  "github_branch": "master",
+  "category": "workflow",
+  "source": "github.com/kotaroyamame/formal-agent-contracts",
+  "dir_name": "reverse-workflow",
+  "downloaded_at": "2026-10-15T04:55:29.198155Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, pipeline",
+    "score": 2,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kotaroyamame",
+  "source_url": "https://github.com/kotaroyamame/formal-agent-contracts/blob/master/skills/reverse-workflow/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kotaroyamame/formal-agent-contracts/blob/master/skills/reverse-workflow/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Orchestrate the full reverse engineering pipeline: Extract provisional spec from existing code, refine through dialogue to uncover the true spec, then reconcile code with the confirmed spec. Optionally connects to the forward pipeline (verify \u2192 prove \u2192 generate \u2192 test). Triggered by: \"reverse workflow\", \"extract and refine spec from code\", \"formalize existing code\", \"reverse engineer the specification\", \u300c\u30ea\u30d0\u30fc\u30b9\u30ef\u30fc\u30af\u30d5\u30ed\u30fc\u3067\u300d\u300c\u65e2\u5b58\u30b3\u30fc\u30c9\u304b\u3089\u4ed5\u69d8\u3092\u8d77\u3053\u3057\u3066\u300d\u300c\u30b3\u30fc\u30c9\u306e\u4ed5\u69d8\u3092\u660e\u78ba\u306b\u3057\u305f\u3044\u300d \u300c\u3053\u306e\u30d7\u30ed\u30b8\u30a7\u30af\u30c8\u3092\u5f62\u5f0f\u4ed5\u69d8\u3067\u6574\u7406\u3057\u305f\u3044\u300d\u300c\u65e2\u5b58\u30b3\u30fc\u30c9\u3092\u30ea\u30d0\u30fc\u30b9\u30a8\u30f3\u30b8\u30cb\u30a2\u30ea\u30f3\u30b0\u3057\u3066\u300d"
+}

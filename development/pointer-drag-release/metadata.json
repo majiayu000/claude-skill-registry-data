@@ -1,0 +1,37 @@
+{
+  "name": "pointer-drag-release",
+  "repo": "lennondotw/skills",
+  "path": "skills/pointer-drag-release/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/lennondotw/skills",
+  "dir_name": "pointer-drag-release",
+  "downloaded_at": "2026-10-15T05:03:40.884567Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: framework, build",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 1,
+    "signals": [
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lennondotw",
+  "source_url": "https://github.com/lennondotw/skills/blob/main/skills/pointer-drag-release/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lennondotw/skills/blob/main/skills/pointer-drag-release/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Guarantee a pointer drag ends even when the release event never arrives. Use when a dragged element sticks to the cursor after the mouse button is let go, when a drag keeps following an unpressed pointer after the cursor re-enters the page, when the user releases outside the window or over another application, or when building any drag interaction on a canvas, slider, divider, resizer, knob, or map. `setPointerCapture` alone does not fix this."
+}

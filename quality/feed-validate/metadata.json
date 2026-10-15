@@ -1,0 +1,37 @@
+{
+  "name": "feed-validate",
+  "repo": "flywifi/educator-tools-k12-public",
+  "path": "skills/atoms/feed-validate/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/flywifi/educator-tools-k12-public",
+  "dir_name": "feed-validate",
+  "downloaded_at": "2026-10-15T03:39:41.511226Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: review, validate",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "flywifi",
+  "source_url": "https://github.com/flywifi/educator-tools-k12-public/blob/main/skills/atoms/feed-validate/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/flywifi/educator-tools-k12-public/blob/main/skills/atoms/feed-validate/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Check one RSS/Atom feed URL for liveness, staleness, redirects, and labels. Do NOT use to find new feeds (use feed-discover)."
+}

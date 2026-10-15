@@ -1,0 +1,37 @@
+{
+  "name": "integrated-workflow",
+  "repo": "kotaroyamame/formal-agent-contracts",
+  "path": "skills/integrated-workflow/SKILL.md",
+  "github_branch": "master",
+  "category": "workflow",
+  "source": "github.com/kotaroyamame/formal-agent-contracts",
+  "dir_name": "integrated-workflow",
+  "downloaded_at": "2026-10-15T04:55:30.097103Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, pipeline",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kotaroyamame",
+  "source_url": "https://github.com/kotaroyamame/formal-agent-contracts/blob/master/skills/integrated-workflow/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kotaroyamame/formal-agent-contracts/blob/master/skills/integrated-workflow/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Orchestrate the full formal development pipeline end-to-end: Define (VDM-SL contract) \u2192 Verify (VDMJ) \u2192 Prove (Z3, optional) \u2192 Generate (TS/Python code) \u2192 Test (contract tests), with automated handoff between phases, error recovery, and a final session report. Each phase invokes an existing skill (define-contract, verify-spec, smt-verify, generate-code, generate-tests). Triggered by: \"run the full workflow\", \"end-to-end development\", \"define and generate code for an agent\", or when the user requests multiple phases in sequence. Japanese triggers: \u300c\u7d71\u5408\u30ef\u30fc\u30af\u30d5\u30ed\u30fc\u3067\u958b\u767a\u3057\u305f\u3044\u300d\u300c\u4e00\u6c17\u901a\u8cab\u3067\u300d\u300c\u30a8\u30f3\u30c9\u30c4\u30fc\u30a8\u30f3\u30c9\u3067\u300d \u300c\u5b9a\u7fa9\u304b\u3089\u751f\u6210\u307e\u3067\u300d\u300c\u5168\u30d5\u30a7\u30fc\u30ba\u5b9f\u884c\u3057\u3066\u300d"
+}

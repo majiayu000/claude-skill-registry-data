@@ -1,0 +1,37 @@
+{
+  "name": "tokenlab-keyframe-transition",
+  "repo": "hedging8563/tokenlab-skills",
+  "path": "skills/tokenlab-keyframe-transition/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/hedging8563/tokenlab-skills",
+  "dir_name": "tokenlab-keyframe-transition",
+  "downloaded_at": "2026-10-15T04:05:07.797811Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hedging8563",
+  "source_url": "https://github.com/hedging8563/tokenlab-skills/blob/main/skills/tokenlab-keyframe-transition/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hedging8563/tokenlab-skills/blob/main/skills/tokenlab-keyframe-transition/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Make a video that starts on one image and ends on another with TokenLab start-end-to-video models. Use when the user says \"go from this frame to that frame\", \"first frame and last frame\", \"morph A into B\", \"transition between these two images\", \"before and after video\", \"start and end keyframes\", or \"make these two shots connect\". The model fills in the motion between the two frames. For one image with free motion, use tokenlab-animate-image. To continue an existing clip, use tokenlab-extend-video. To make the end frame by editing the start frame, use tokenlab-edit-image first."
+}

@@ -1,0 +1,36 @@
+{
+  "name": "meta-creative-fatigue-detection",
+  "repo": "gomarble-ai/marketing-agent",
+  "path": "skills/meta-creative-fatigue-detection/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/gomarble-ai/marketing-agent",
+  "dir_name": "meta-creative-fatigue-detection",
+  "downloaded_at": "2026-10-15T03:54:45.212459Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category creative scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "testing",
+    "runner_up_score": 1,
+    "signals": [
+      "creative"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gomarble-ai",
+  "source_url": "https://github.com/gomarble-ai/marketing-agent/blob/main/skills/meta-creative-fatigue-detection/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gomarble-ai/marketing-agent/blob/main/skills/meta-creative-fatigue-detection/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Per-ad creative fatigue diagnosis on Meta Ads. Scores every active ad as Healthy / Early Warning / Fatigued / Dead using CTR decline, frequency creep, CPA spike, CVR decline, and spend-shift signals. Surfaces specific refresh recommendations: which variants to retire, which winners to remix, which themes to test next. Read-only \u2014 no pauses applied. Use weekly or before any creative refresh cycle."
+}

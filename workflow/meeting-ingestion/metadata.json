@@ -1,0 +1,37 @@
+{
+  "name": "meeting-ingestion",
+  "repo": "garrytan/gbrain",
+  "path": "skills/meeting-ingestion/SKILL.md",
+  "github_branch": "master",
+  "category": "workflow",
+  "source": "github.com/garrytan/gbrain",
+  "dir_name": "meeting-ingestion",
+  "downloaded_at": "2026-10-15T03:46:26.771781Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: process, pipeline",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "process",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "garrytan",
+  "source_url": "https://github.com/garrytan/gbrain/blob/master/skills/meeting-ingestion/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/garrytan/gbrain/blob/master/skills/meeting-ingestion/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Ingest meeting transcripts from ANY meeting recorder into brain pages with\nattendee enrichment, entity propagation, and timeline merge. One unified\npipeline: normalize the source into a standard transcript record, split\nmulti-meeting recordings, resolve speakers by evidence, create the page,\npass every surprising claim through the consistency check (transcript +\nbrain + plausibility), enrich every entity, then run the verification\nchecklist \u2014 substance AND sequence. A meeting is NOT fully ingested until\nthe enrich skill has processed every entity AND the verification checklist\npasses, including the sequence verify (PASS or explicit user waive)."
+}

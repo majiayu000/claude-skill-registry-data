@@ -1,0 +1,39 @@
+{
+  "name": "agy",
+  "repo": "laurentvv/agents-kit",
+  "path": ".agents/skills/agy/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/laurentvv/agents-kit",
+  "dir_name": "agy-laurentvv-agents-kit",
+  "downloaded_at": "2026-10-15T05:00:46.536447Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "laurentvv",
+  "source_url": "https://github.com/laurentvv/agents-kit/blob/main/.agents/skills/agy/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/laurentvv/agents-kit/blob/main/.agents/skills/agy/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generate and iterate images with Google Antigravity's agy CLI in headless mode, and script non-interactive agent runs with machine-readable output. Use whenever the user asks for a generated or edited image (illustration, texture, icon, concept art, variation), mentions agy or Antigravity, or wants an agent run from a script, a batch or CI."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "analyse-creative",
+  "repo": "gomarble-ai/marketing-agent",
+  "path": "skills/analyse-creative/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/gomarble-ai/marketing-agent",
+  "dir_name": "analyse-creative",
+  "downloaded_at": "2026-10-15T03:54:36.119473Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=3, communication=3",
+    "score": 3,
+    "runner_up": "communication",
+    "runner_up_score": 3,
+    "signals": [
+      "analysis",
+      "analyze",
+      "insights"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gomarble-ai",
+  "source_url": "https://github.com/gomarble-ai/marketing-agent/blob/main/skills/analyse-creative/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gomarble-ai/marketing-agent/blob/main/skills/analyse-creative/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when the user asks which ads or creatives are winning and why, whether creatives are fatiguing, what hooks, formats or angles work, or wants a single ad broken down. Ranks creative by hook rate, hold rate, CTR, CPA and ROAS on Meta, TikTok and Google, reads the actual creative (visual, copy, hook, psychology), and finds the patterns worth carrying into the next brief."
+}

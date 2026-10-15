@@ -1,0 +1,37 @@
+{
+  "name": "skill-autobench",
+  "repo": "garrytan/gbrain",
+  "path": "skills/skill-autobench/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/garrytan/gbrain",
+  "dir_name": "skill-autobench",
+  "downloaded_at": "2026-10-15T03:46:18.373878Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "garrytan",
+  "source_url": "https://github.com/garrytan/gbrain/blob/master/skills/skill-autobench/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/garrytan/gbrain/blob/master/skills/skill-autobench/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Author an eval for an existing skill from its REAL usage history, not its\nspec. Mine invocations from the brain's conversation archive\n(conversations/) and per-harness session transcripts \u2014 a user correction\nafter an invocation is the gold signal \u2014 then synthesize an eval_contract\nplus 4-8 replayable cases with honesty labels (SPEC-DERIVED vs\nHISTORY-IMPLIED) and stage the result at skills/<name>/eval/autobench-<date>.md\nas PENDING-HUMAN-APPROVAL. Never rewrites SKILL.md. Ships two guard\ncompanions: panel integrity (multi-model judging must prove each provider\nactually responded) and the fail-improve taxonomy (logged LLM-fallback\ncases convert to deterministic code over time)."
+}

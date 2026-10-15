@@ -1,0 +1,38 @@
+{
+  "name": "tokenlab-run",
+  "repo": "hedging8563/tokenlab-skills",
+  "path": "skills/tokenlab-run/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/hedging8563/tokenlab-skills",
+  "dir_name": "tokenlab-run",
+  "downloaded_at": "2026-10-15T04:05:03.804010Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, sdk, endpoint",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hedging8563",
+  "source_url": "https://github.com/hedging8563/tokenlab-skills/blob/main/skills/tokenlab-run/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hedging8563/tokenlab-skills/blob/main/skills/tokenlab-run/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "The execution contract for every TokenLab media and decision call: read the model contract, pick the operation, estimate cost, upload or link inputs, call the endpoint, wait for async tasks, and read the result URLs. Use when an agent must actually run a TokenLab image, video, music, 3D, world, speech, transcription, or System One request, when a call fails with unsupported_parameter or a contract error, or when a task never seems to finish. Other tokenlab-* outcome skills call this one for the mechanics. To choose which model to use, use tokenlab-model-picker. To write production integration code in an app, use tokenlab-api-integration."
+}

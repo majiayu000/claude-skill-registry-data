@@ -1,0 +1,37 @@
+{
+  "name": "speckit-doctor",
+  "repo": "george-hutanu/motor-fix",
+  "path": ".claude/skills/speckit-doctor/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/george-hutanu/motor-fix",
+  "dir_name": "speckit-doctor",
+  "downloaded_at": "2026-10-15T03:50:03.368115Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "george-hutanu",
+  "source_url": "https://github.com/george-hutanu/motor-fix/blob/main/.claude/skills/speckit-doctor/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/george-hutanu/motor-fix/blob/main/.claude/skills/speckit-doctor/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Check that the harness itself still works: hook registry and fingerprints, settings wiring, feature pointer, stale traceability exemptions, skill and agent frontmatter, npm scripts, permissions, Python helpers and templates. Reports what drifted and fixes only what you name. Use when a gate seems not to fire, after editing hooks or settings, or before trusting an unattended run."
+}

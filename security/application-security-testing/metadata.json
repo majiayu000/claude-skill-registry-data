@@ -1,0 +1,41 @@
+{
+  "name": "application-security-testing",
+  "repo": "ha4kerspidersks/AI-Dev-Team",
+  "path": "skills/strix/skills/application-security-testing/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/ha4kerspidersks/AI-Dev-Team",
+  "dir_name": "application-security-testing",
+  "downloaded_at": "2026-10-15T03:59:58.864472Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for security: security, auth, vulnerability, audit, owasp, pentest",
+    "score": 6,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "security",
+      "auth",
+      "vulnerability",
+      "audit",
+      "owasp",
+      "pentest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ha4kerspidersks",
+  "source_url": "https://github.com/ha4kerspidersks/AI-Dev-Team/blob/main/skills/strix/skills/application-security-testing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ha4kerspidersks/AI-Dev-Team/blob/main/skills/strix/skills/application-security-testing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Application security testing (AppSec) across a whole product with Strix \u2014 decide which asset needs which test (source code, running web app, API, CI pipeline), run it, and turn the results into a ranked remediation plan. Autonomous agents exploit and prove each issue instead of emitting static-analysis alerts, so the plan is ordered by what is actually reachable. Use when the user asks for an application security review or audit, an appsec assessment, vulnerability scanning across their stack, a security review before a launch or a customer security questionnaire, or does not yet know which kind of security test they need."
+}

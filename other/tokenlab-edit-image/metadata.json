@@ -1,0 +1,36 @@
+{
+  "name": "tokenlab-edit-image",
+  "repo": "hedging8563/tokenlab-skills",
+  "path": "skills/tokenlab-edit-image/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/hedging8563/tokenlab-skills",
+  "dir_name": "tokenlab-edit-image",
+  "downloaded_at": "2026-10-15T04:05:04.846366Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-llm scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hedging8563",
+  "source_url": "https://github.com/hedging8563/tokenlab-skills/blob/main/skills/tokenlab-edit-image/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hedging8563/tokenlab-skills/blob/main/skills/tokenlab-edit-image/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Make one targeted change to an existing image with TokenLab image models: add or remove an object, replace or recolor something, change the background, cut out the subject, or extend the frame. Use when the user says \"remove the person in the back\", \"make the car red\", \"change the background to a beach\", \"remove the background\", \"transparent PNG\", \"erase this\", \"fill this area\", or \"make it wider\". The rest of the image must stay the same. For a full product shoot from a packshot, use tokenlab-product-photography. For upscaling or fixing an old or blurry photo, use tokenlab-restore-and-upscale. For wrong or new text inside the image, use tokenlab-text-in-image. To keep a person the same across new scenes, use tokenlab-character-consistency."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "tilemap-get-tile",
+  "repo": "infotechsrealm/PanicAtThePond",
+  "path": ".agents/skills/tilemap-get-tile/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/infotechsrealm/PanicAtThePond",
+  "dir_name": "tilemap-get-tile",
+  "downloaded_at": "2026-10-15T04:21:47.531849Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, gaming=2",
+    "score": 2,
+    "runner_up": "gaming",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "infotechsrealm",
+  "source_url": "https://github.com/infotechsrealm/PanicAtThePond/blob/main/.agents/skills/tilemap-get-tile/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/infotechsrealm/PanicAtThePond/blob/main/.agents/skills/tilemap-get-tile/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Read the tile occupying a single cell of a Tilemap: returns whether the cell has a tile, the tile asset name + path, the tile color, and the collider type at that cell. Read-only."
+}

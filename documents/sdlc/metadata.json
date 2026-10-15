@@ -1,0 +1,38 @@
+{
+  "name": "sdlc",
+  "repo": "grandheman/claude-sdlc",
+  "path": "skills/sdlc/SKILL.md",
+  "github_branch": "master",
+  "category": "documents",
+  "source": "github.com/grandheman/claude-sdlc",
+  "dir_name": "sdlc",
+  "downloaded_at": "2026-10-15T03:56:24.267910Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word, markdown",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "grandheman",
+  "source_url": "https://github.com/grandheman/claude-sdlc/blob/master/skills/sdlc/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/grandheman/claude-sdlc/blob/master/skills/sdlc/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "The single entry point for turning an idea into shipped, verified code. Triggers on: \"/sdlc\", \"let's build\", \"new feature idea\", \"start a new project\", \"add this idea\", \"/sdlc list\". Runs a right-sized process \u2014 a small ask stays one conversational pass; a substantial ask walks intent -> spec/plan -> build -> ship, with a git commit as the approval gate at each transition. Delegates all build-phase dispatch and verification to the separately-installed `unlazy` skill rather than reimplementing it."
+}

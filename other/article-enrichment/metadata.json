@@ -1,0 +1,37 @@
+{
+  "name": "article-enrichment",
+  "repo": "garrytan/gbrain",
+  "path": "skills/article-enrichment/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/garrytan/gbrain",
+  "dir_name": "article-enrichment",
+  "downloaded_at": "2026-10-15T03:46:28.628449Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "garrytan",
+  "source_url": "https://github.com/garrytan/gbrain/blob/master/skills/article-enrichment/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/garrytan/gbrain/blob/master/skills/article-enrichment/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Transform raw article text dumps in the brain into structured pages with executive summary, verbatim quotes, key insights, why-it-matters, and cross-references. Replaces walls-of-text with quotable, actionable brain pages."
+}

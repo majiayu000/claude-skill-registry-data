@@ -1,0 +1,37 @@
+{
+  "name": "schema-author",
+  "repo": "garrytan/gbrain",
+  "path": "skills/schema-author/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/garrytan/gbrain",
+  "dir_name": "schema-author",
+  "downloaded_at": "2026-10-15T03:46:13.221422Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "garrytan",
+  "source_url": "https://github.com/garrytan/gbrain/blob/master/skills/schema-author/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/garrytan/gbrain/blob/master/skills/schema-author/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Evolve your brain's schema pack. Add page types, propose new ones from corpus scans, backfill page.type on existing pages, audit pack health. Triggers when an agent notices untyped pages, custom domains needing typed entities (researcher, contract, deposition), or wants to see what types the pack declares."
+}

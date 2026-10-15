@@ -1,0 +1,37 @@
+{
+  "name": "speckit-size",
+  "repo": "george-hutanu/motor-fix",
+  "path": ".claude/skills/speckit-size/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/george-hutanu/motor-fix",
+  "dir_name": "speckit-size",
+  "downloaded_at": "2026-10-15T03:50:01.681687Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "george-hutanu",
+  "source_url": "https://github.com/george-hutanu/motor-fix/blob/main/.claude/skills/speckit-size/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/george-hutanu/motor-fix/blob/main/.claude/skills/speckit-size/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Route a piece of work to the amount of process it actually needs \u2014 trivial, one-session, feature, or project \u2014 and record the choice so the gates and /speckit-auto read it instead of assuming. Run it before /speckit-specify, or when a full spec cycle feels like paperwork for a small change."
+}

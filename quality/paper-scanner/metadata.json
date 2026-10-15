@@ -1,0 +1,39 @@
+{
+  "name": "paper-scanner",
+  "repo": "kmshihab7878/claude-code-setup",
+  "path": "skills/paper-scanner/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/kmshihab7878/claude-code-setup",
+  "dir_name": "paper-scanner",
+  "downloaded_at": "2026-10-15T04:53:30.232025Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review, validate",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "kmshihab7878",
+  "source_url": "https://github.com/kmshihab7878/claude-code-setup/blob/main/skills/paper-scanner/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kmshihab7878/claude-code-setup/blob/main/skills/paper-scanner/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Automated academic paper and technical content scanning for the Research department. Discovers relevant papers from arXiv, conference proceedings, and tech blogs. Extracts key findings, scores applicability to CoreMind, and feeds the research self-improvement loop. Use when scanning for new research, evaluating papers, building literature reviews, or running the research UAOP pipeline."
+}

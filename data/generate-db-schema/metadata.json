@@ -1,0 +1,38 @@
+{
+  "name": "generate-db-schema",
+  "repo": "kotaroyamame/formal-agent-contracts",
+  "path": "skills/generate-db-schema/SKILL.md",
+  "github_branch": "master",
+  "category": "data",
+  "source": "github.com/kotaroyamame/formal-agent-contracts",
+  "dir_name": "generate-db-schema",
+  "downloaded_at": "2026-10-15T04:55:29.788322Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kotaroyamame",
+  "source_url": "https://github.com/kotaroyamame/formal-agent-contracts/blob/master/skills/generate-db-schema/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kotaroyamame/formal-agent-contracts/blob/master/skills/generate-db-schema/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "VDM-SL\u4ed5\u69d8\u306e\u578b\u30fb\u4e0d\u5909\u6761\u4ef6\u30fb\u72b6\u614b\u5b9a\u7fa9\u304b\u3089\u30c7\u30fc\u30bf\u30d9\u30fc\u30b9\u30b9\u30ad\u30fc\u30de\uff08DDL\uff09\u3092\u5c0e\u51fa\u3059\u308b\u3002 \u300c\u4ed5\u69d8\u304b\u3089DB\u30b9\u30ad\u30fc\u30de\u3092\u751f\u6210\u3057\u3066\u300d\u300c\u30c6\u30fc\u30d6\u30eb\u8a2d\u8a08\u3092\u3057\u3066\u300d\u300cDDL\u3092\u4f5c\u3063\u3066\u300d \u300c\u4e0d\u5909\u6761\u4ef6\u3092DB\u5236\u7d04\u306b\u5909\u63db\u3057\u3066\u300d\u300c\u30c7\u30fc\u30bf\u30e2\u30c7\u30eb\u3092\u8a2d\u8a08\u3057\u3066\u300d\u300cER\u56f3\u306e\u3082\u3068\u306b\u306a\u308b \u30b9\u30ad\u30fc\u30de\u3092\u4f5c\u3063\u3066\u300d\u3068\u3044\u3063\u305f\u30ea\u30af\u30a8\u30b9\u30c8\u306b\u4f7f\u7528\u3059\u308b\u3002 English triggers: \"generate a database schema from the spec\", \"derive tables from the VDM spec\", \"turn invariants into DB constraints\", \"design the data model\". record\u578b\u2192\u30c6\u30fc\u30d6\u30eb\u3001map\u2192\u30ad\u30fc\u4ed8\u304d\u30c6\u30fc\u30d6\u30eb\u3001\u4e0d\u5909\u6761\u4ef6\u2192CHECK/UNIQUE/FK/\u30c8\u30ea\u30ac\u30fc\u306e \u898f\u5247\u7684\u306a\u5199\u50cf\u3092\u9069\u7528\u3057\u3001DDL\u3067\u8868\u73fe\u3057\u304d\u308c\u306a\u3044\u4e56\u96e2\u306f DEVIATIONS.md\uff08retrenchment\u8868\uff09\u306b\u3001 \u5404\u4e0d\u5909\u6761\u4ef6\u306e\u62c5\u4fdd\u7b87\u6240\u306f TRACEABILITY.md \u306b\u8a18\u9332\u3059\u308b\u3002"
+}

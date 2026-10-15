@@ -1,0 +1,38 @@
+{
+  "name": "technical-design-doc-creator",
+  "repo": "gabrielauzier/financials",
+  "path": ".github/skills/technical-design-doc-creator/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/gabrielauzier/financials",
+  "dir_name": "technical-design-doc-creator",
+  "downloaded_at": "2026-10-15T03:44:03.260030Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=3, testing=3",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "doc",
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gabrielauzier",
+  "source_url": "https://github.com/gabrielauzier/financials/blob/main/.github/skills/technical-design-doc-creator/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gabrielauzier/financials/blob/main/.github/skills/technical-design-doc-creator/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Creates comprehensive Technical Design Documents (TDD) with mandatory and optional sections through interactive discovery. Use when user asks to \"write a design doc\", \"create a TDD\", \"technical spec\", \"architecture document\", \"RFC\", \"design proposal\", or needs to document a technical decision before implementation. Do NOT use for README files, API docs, or general documentation (use docs-writer instead)."
+}

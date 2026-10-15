@@ -1,0 +1,38 @@
+{
+  "name": "che-act",
+  "repo": "laionazeredo/che-ai",
+  "path": "skills/che-act/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/laionazeredo/che-ai",
+  "dir_name": "che-act",
+  "downloaded_at": "2026-10-15T04:59:23.205122Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: task, planning, memory",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "task",
+      "planning",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "laionazeredo",
+  "source_url": "https://github.com/laionazeredo/che-ai/blob/main/skills/che-act/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/laionazeredo/che-ai/blob/main/skills/che-act/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Orchestrates the full Agile simulated team: scope capture, TASK GRAPH with deps, TASK ENVELOPE handoff, per-task scope validation, and final delivery summary. Invoke ONLY when user asks to start a feature/bug implementation through the che or when /che-act is called."
+}

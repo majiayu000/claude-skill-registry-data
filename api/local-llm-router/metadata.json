@@ -1,0 +1,38 @@
+{
+  "name": "local-llm-router",
+  "repo": "geeks-accelerator/ollama-herd",
+  "path": "skills/local-llm-router/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/geeks-accelerator/ollama-herd",
+  "dir_name": "local-llm-router",
+  "downloaded_at": "2026-10-15T03:48:32.039139Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, sdk, endpoint",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "geeks-accelerator",
+  "source_url": "https://github.com/geeks-accelerator/ollama-herd/blob/main/skills/local-llm-router/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/geeks-accelerator/ollama-herd/blob/main/skills/local-llm-router/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Local LLM model router for Llama, Qwen, DeepSeek, Phi, Mistral, and Gemma across multiple devices. Self-hosted local LLM inference routing on macOS, Linux, and Windows. Local LLM 7-signal scoring engine picks the optimal machine for every local LLM request. OpenAI-compatible local LLM API with context protection, VRAM-aware fallback, and auto-retry. \u672c\u5730LLM\u8def\u7531 inference router | LLM local enrutador de inferencia. Use when the user wants to optimize local LLM routing, reduce local LLM latency, or load balance local LLM across machines."
+}

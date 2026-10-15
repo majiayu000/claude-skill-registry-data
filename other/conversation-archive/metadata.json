@@ -1,0 +1,37 @@
+{
+  "name": "conversation-archive",
+  "repo": "garrytan/gbrain",
+  "path": "skills/conversation-archive/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/garrytan/gbrain",
+  "dir_name": "conversation-archive",
+  "downloaded_at": "2026-10-15T03:46:32.476629Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "retrieval",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "garrytan",
+  "source_url": "https://github.com/garrytan/gbrain/blob/master/skills/conversation-archive/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/garrytan/gbrain/blob/master/skills/conversation-archive/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Import AI-assistant chat exports (ChatGPT, Claude, Perplexity) and agent session transcripts into the brain as one dated page per conversation under conversations/, validate each page against the native conversation parser, extract facts via the native conversation-facts flow, and keep the archive gap-free with a detect-and-backfill loop. Then answer archive questions: \"when did I first discuss X\", trace how an idea evolved across past conversations, pull a specific thread."
+}

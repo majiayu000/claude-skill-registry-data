@@ -1,0 +1,38 @@
+{
+  "name": "renommer-fichiers-rencontre",
+  "repo": "franckdjiongo/claude-skills",
+  "path": "renommer-fichiers-rencontre/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/franckdjiongo/claude-skills",
+  "dir_name": "renommer-fichiers-rencontre",
+  "downloaded_at": "2026-10-15T03:41:15.197742Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: word, excel, docx",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "word",
+      "excel",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "franckdjiongo",
+  "source_url": "https://github.com/franckdjiongo/claude-skills/blob/main/renommer-fichiers-rencontre/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/franckdjiongo/claude-skills/blob/main/renommer-fichiers-rencontre/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Rename meeting transcript (.docx) and summary (.md) files to the user's naming conventions. Use when given a file path with \"renomme ce fichier\", \"renomme la transcription\", \"renomme le r\u00e9sum\u00e9\", \"rename this summary\", \"renomme-le\", \"donne-lui le bon nom\", or a name like \"Temps Chantier_.docx\"."
+}

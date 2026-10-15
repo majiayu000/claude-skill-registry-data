@@ -1,0 +1,37 @@
+{
+  "name": "reports",
+  "repo": "garrytan/gbrain",
+  "path": "skills/reports/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/garrytan/gbrain",
+  "dir_name": "reports",
+  "downloaded_at": "2026-10-15T03:46:04.183459Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: marketing=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "content",
+      "social"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "garrytan",
+  "source_url": "https://github.com/garrytan/gbrain/blob/master/skills/reports/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/garrytan/gbrain/blob/master/skills/reports/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Save and load timestamped reports. Keyword routing for fast lookup. Cron jobs\nsave output as reports; the agent or user queries them by keyword. Includes\nthe Actionability Gate: delivery-time link checks (Broken/Dead/Indirect/\nMissing) for briefings, meeting digests, and research reports."
+}

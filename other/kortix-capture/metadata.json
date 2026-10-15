@@ -1,0 +1,37 @@
+{
+  "name": "kortix-capture",
+  "repo": "kortix-ai/suna",
+  "path": "apps/capture/skill/kortix-capture/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/kortix-ai/suna",
+  "dir_name": "kortix-capture",
+  "downloaded_at": "2026-10-15T04:55:09.119422Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kortix-ai",
+  "source_url": "https://github.com/kortix-ai/suna/blob/main/apps/capture/skill/kortix-capture/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kortix-ai/suna/blob/main/apps/capture/skill/kortix-capture/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Search and reconstruct the user's past on-screen activity (screenshots, OCR text, app and domain usage) with the kortix-capture CLI. Use whenever the user references something they personally did, saw, or read \u2014 \"what did I do\", \"find that thing I saw\", \"how much time did I spend on X\", \"summarize my research on Y\" \u2014 or asks to be shown / taken back to a moment."
+}

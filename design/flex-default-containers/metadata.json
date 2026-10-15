@@ -1,0 +1,37 @@
+{
+  "name": "flex-default-containers",
+  "repo": "lennondotw/skills",
+  "path": "skills/flex-default-containers/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/lennondotw/skills",
+  "dir_name": "flex-default-containers",
+  "downloaded_at": "2026-10-15T05:03:42.408615Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, css",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "design",
+      "css"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lennondotw",
+  "source_url": "https://github.com/lennondotw/skills/blob/main/skills/flex-default-containers/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lennondotw/skills/blob/main/skills/flex-default-containers/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Fix wrapper elements whose default block layout puts inline children in an inline formatting context and leaks line-height leading into the box. Use when a card header, label strip, status row, or other wrapper around spans, badges, icons, or SVGs renders taller than padding plus font size; when an icon or label looks vertically off-center; or when someone changes a child to display block to compensate. Make the wrapper's flex or grid layout explicit even when the user does not mention baselines, leading, or inline formatting contexts."
+}

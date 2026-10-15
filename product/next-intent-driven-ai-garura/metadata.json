@@ -1,0 +1,39 @@
+{
+  "name": "next",
+  "repo": "intent-driven-ai/garura",
+  "path": "core/components/plays/next/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/intent-driven-ai/garura",
+  "dir_name": "next-intent-driven-ai-garura",
+  "downloaded_at": "2026-10-15T04:22:45.419064Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for product: product, roadmap, feature, backlog",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "roadmap",
+      "feature",
+      "backlog"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "intent-driven-ai",
+  "source_url": "https://github.com/intent-driven-ai/garura/blob/main/core/components/plays/next/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/intent-driven-ai/garura/blob/main/core/components/plays/next/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Recommend what to do next on the product \u2014 read the product model (the spine `_spine.yaml` plus each slice's lens docs), build the list of every runnable or blocked action with a deterministic decision tree, order it to finish one slice before the others advance, and show ONE next-best-action plus the ordered list (\u226411 entries). Reading and ordering are scripts; the play only presents. Order: repair first, then every step of the focus slice (the lowest roadmap-order slice with work left \u2014 feature track, technical track, /measure, /grill, its epics), then strategy, then other slices' steps as parallel lanes (shown, never hidden), then learning and refresh. The model is the single source: no backlog, sprint plan, or work queue exists or is consulted. Recommend ONLY: the play never modifies the model, never creates work items, never launches a play. Read-only and position none: runnable anytime, on any branch, even mid-pipeline. Use when the user asks \"what next\", \"what should I work on\", \"where are we\", or wants the model's work ordered."
+}

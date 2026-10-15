@@ -1,0 +1,40 @@
+{
+  "name": "build-reports",
+  "repo": "gomarble-ai/marketing-agent",
+  "path": "skills/build-reports/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/gomarble-ai/marketing-agent",
+  "dir_name": "build-reports",
+  "downloaded_at": "2026-10-15T03:54:34.510042Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for marketing: marketing, content, social, campaign, brand",
+    "score": 5,
+    "runner_up": "communication",
+    "runner_up_score": 2,
+    "signals": [
+      "marketing",
+      "content",
+      "social",
+      "campaign",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gomarble-ai",
+  "source_url": "https://github.com/gomarble-ai/marketing-agent/blob/main/skills/build-reports/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gomarble-ai/marketing-agent/blob/main/skills/build-reports/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when the user wants a performance report, client report, weekly or monthly review, MTD/QTD update against the media plan, CMO summary, or a deck or doc for stakeholders. Pulls from every connected source (ad platforms, GA4, Shopify, Klaviyo, Search Console, organic social, Impact, Snowflake, Google Drive), explains what changed and why, and ends with decisions and a 7-day action plan. Can save to Google Drive or schedule the report as an agent."
+}

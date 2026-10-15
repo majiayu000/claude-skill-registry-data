@@ -1,0 +1,37 @@
+{
+  "name": "export-human-spec",
+  "repo": "kotaroyamame/formal-agent-contracts",
+  "path": "skills/export-human-spec/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/kotaroyamame/formal-agent-contracts",
+  "dir_name": "export-human-spec",
+  "downloaded_at": "2026-10-15T04:55:29.494691Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: business=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "business",
+      "operations"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kotaroyamame",
+  "source_url": "https://github.com/kotaroyamame/formal-agent-contracts/blob/master/skills/export-human-spec/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kotaroyamame/formal-agent-contracts/blob/master/skills/export-human-spec/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generate a human-readable natural language specification document (Markdown) from a VDM-SL formal specification. Translates types, invariants, pre/post-conditions, and operations into clear prose that domain experts, project managers, and non-technical stakeholders can understand and review \u2014 without needing to learn VDM-SL. Use this skill whenever the user wants to: generate documentation from a VDM-SL spec, create a readable specification, export a spec for human review, convert VDM-SL to natural language, create a requirements document from formal specs, or produce a specification that non-engineers can read. Japanese triggers: \u300cVDM\u4ed5\u69d8\u304b\u3089\u81ea\u7136\u8a00\u8a9e\u4ed5\u69d8\u3092\u4f5c\u308a\u305f\u3044\u300d\u300c\u4eba\u9593\u304c\u8aad\u3081\u308b\u4ed5\u69d8\u66f8\u3092\u751f\u6210\u3057\u3066\u300d \u300cVDM-SL\u3092\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\u306b\u3057\u3066\u300d\u300c\u4ed5\u69d8\u66f8\u3092\u30a8\u30af\u30b9\u30dd\u30fc\u30c8\u3057\u3066\u300d\u300c\u5f62\u5f0f\u4ed5\u69d8\u3092\u8aad\u307f\u3084\u3059\u304f\u3057\u3066\u300d \u300c\u975e\u30a8\u30f3\u30b8\u30cb\u30a2\u5411\u3051\u306e\u4ed5\u69d8\u66f8\u3092\u4f5c\u3063\u3066\u300d\u300c\u4ed5\u69d8\u306e\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\u3092\u751f\u6210\u3057\u3066\u300d"
+}

@@ -1,0 +1,39 @@
+{
+  "name": "ralph-prompt-generator",
+  "repo": "franckdjiongo/claude-skills",
+  "path": "ralph-prompt-generator/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/franckdjiongo/claude-skills",
+  "dir_name": "ralph-prompt-generator",
+  "downloaded_at": "2026-10-15T03:41:11.774963Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=4, development=4",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 4,
+    "signals": [
+      "context",
+      "compaction",
+      "context-window",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "franckdjiongo",
+  "source_url": "https://github.com/franckdjiongo/claude-skills/blob/main/ralph-prompt-generator/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/franckdjiongo/claude-skills/blob/main/ralph-prompt-generator/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generate auto-compact-resilient Ralph Wiggum loop prompts for Claude Code, with a PRD and progress file for large features. Triggers: ralph, ralph wiggum, ralph loop, loop until done, autonomous loop, keep going until complete."
+}

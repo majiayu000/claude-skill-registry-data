@@ -1,0 +1,37 @@
+{
+  "name": "accounts-and-connections",
+  "repo": "gomarble-ai/marketing-agent",
+  "path": "skills/accounts-and-connections/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/gomarble-ai/marketing-agent",
+  "dir_name": "accounts-and-connections",
+  "downloaded_at": "2026-10-15T03:54:41.451130Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gomarble-ai",
+  "source_url": "https://github.com/gomarble-ai/marketing-agent/blob/main/skills/accounts-and-connections/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gomarble-ai/marketing-agent/blob/main/skills/accounts-and-connections/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when the user wants to see, add, enable, remove or switch ad accounts and data sources in GoMarble: which accounts are connected, adding a new ad account, connecting a platform (Meta, Google, TikTok, LinkedIn, Microsoft Ads, GA4, Search Console, Shopify, Klaviyo, Snowflake, impact.com, Pages, Instagram), connecting other tools like HubSpot, Notion or BigQuery, connecting Slack for agents, switching a connection between read-only and read & write, fixing expired connections, or removing an account."
+}

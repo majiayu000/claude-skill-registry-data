@@ -1,0 +1,37 @@
+{
+  "name": "manage-experiments",
+  "repo": "harness/harness-skills",
+  "path": "skills/fme/manage-experiments/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/harness/harness-skills",
+  "dir_name": "manage-experiments",
+  "downloaded_at": "2026-10-15T04:03:27.930882Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: feature, metrics",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "feature",
+      "metrics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "harness",
+  "source_url": "https://github.com/harness/harness-skills/blob/main/skills/fme/manage-experiments/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/harness/harness-skills/blob/main/skills/fme/manage-experiments/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Create, update (metrics, dates, description, hypothesis, baseline/comparison treatments, status), or delete Harness FME feature-flag experiments. Delegates metric selection to choose-metric, metric creation to create-metric, event wiring to instrument-metric, results to review-experiment-results, flag/definition prep to create-feature-flag and update-flag-targeting. Use when asked to create, modify, pause, resume, complete, or delete an experiment. Do not use for explaining results (review-experiment-results). Trigger phrases: create experiment, set up A/B test, design experiment, launch test, update experiment, pause/resume/complete experiment, delete experiment."
+}

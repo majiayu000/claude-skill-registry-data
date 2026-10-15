@@ -1,0 +1,38 @@
+{
+  "name": "feed-curator",
+  "repo": "flywifi/educator-tools-k12-public",
+  "path": "skills/operations/feed-curator/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/flywifi/educator-tools-k12-public",
+  "dir_name": "feed-curator",
+  "downloaded_at": "2026-10-15T03:39:46.171815Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: quality=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "quality",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "flywifi",
+  "source_url": "https://github.com/flywifi/educator-tools-k12-public/blob/main/skills/operations/feed-curator/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/flywifi/educator-tools-k12-public/blob/main/skills/operations/feed-curator/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Keep the education-feeds catalog (shared/feeds/feeds.json) accurate so the feed self-updater never works off broken links. Use whenever someone wants to add, check, fix, clean up, or find more RSS/Atom feeds \u2014 e.g. 'validate our feeds', 'this OCPS link is dead', 'find Orange County Public Schools news feed', or 'add Monarch Learning Academy'. It runs tools/seed_curator.py to validate every feed (dead links, redirects, staleness, mislabels), discover candidates by polite RSS autodiscovery, AUTO-APPLY only mechanically-safe repairs (remove a confirmed 404/410, follow a verified 301/302), log every change to ledger/feeds-change-log.json for audit/revert, and propose everything riskier for human approval. Authoritative-first: only tier 'canonical' / authority 'primary' confirms a change. Do NOT use it to generate lessons or to harvest feed items (that is tools/feeds_update.py); it is NOT an evasive scraper \u2014 it crawls only public pages, respects robots.txt, and reports blocked hosts."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "output-validator",
+  "repo": "flywifi/educator-tools-k12-public",
+  "path": "skills/core/output-validator/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/flywifi/educator-tools-k12-public",
+  "dir_name": "output-validator-flywifi-educator-tools-k12-p",
+  "downloaded_at": "2026-10-15T03:39:44.828186Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=4, quality=4",
+    "score": 4,
+    "runner_up": "quality",
+    "runner_up_score": 4,
+    "signals": [
+      "pdf",
+      "pptx",
+      "xlsx",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "flywifi",
+  "source_url": "https://github.com/flywifi/educator-tools-k12-public/blob/main/skills/core/output-validator/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/flywifi/educator-tools-k12-public/blob/main/skills/core/output-validator/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Validate a governed artifact or a produced document BEFORE it ships. Use to check a JSON artifact (records package, handoff envelope, classifier record, decision record) against its schema plus a governance / no-fabrication / no-real-PII rule catalog, and to structurally validate produced Office/PDF files (.docx/.pptx/.xlsx/.pdf/.odt/.ods/.odp) for the corruption classes that make them fail to open. Trigger phrases: 'validate this output', 'is this artifact valid', 'check this file before sending', 'will this docx open', 'lint the output'. Runs tools/validate_outputs.py (JSON) + tools/validate_document.py (documents), stdlib-first so it always runs even with nothing installed. Do NOT use it to score teaching quality (that is quality-review) or to diagnose the whole ecosystem (that is skill-health) \u2014 it validates one output's correctness."
+}

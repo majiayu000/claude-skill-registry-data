@@ -1,0 +1,40 @@
+{
+  "name": "anomaly-detector",
+  "repo": "kmshihab7878/claude-code-setup",
+  "path": "skills/anomaly-detector/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/kmshihab7878/claude-code-setup",
+  "dir_name": "anomaly-detector",
+  "downloaded_at": "2026-10-15T04:53:39.659176Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: devops, deploy, infra, infrastructure",
+    "score": 4,
+    "runner_up": "business",
+    "runner_up_score": 3,
+    "signals": [
+      "devops",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "kmshihab7878",
+  "source_url": "https://github.com/kmshihab7878/claude-code-setup/blob/main/skills/anomaly-detector/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kmshihab7878/claude-code-setup/blob/main/skills/anomaly-detector/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Automated metric anomaly detection and root cause correlation for the Operations department. Monitors system metrics for deviations, correlates anomalies across services, generates alert recommendations, and feeds the ops self-improvement loop. Use when investigating metric spikes, tuning alert thresholds, reducing false positives, or running the operations UAOP pipeline."
+}

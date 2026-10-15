@@ -1,0 +1,36 @@
+{
+  "name": "investigate-merkle-root-mismatch",
+  "repo": "hyperlane-xyz/hyperlane-monorepo",
+  "path": ".agents/skills/investigate-merkle-root-mismatch/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/hyperlane-xyz/hyperlane-monorepo",
+  "dir_name": "investigate-merkle-root-mismatch",
+  "downloaded_at": "2026-10-15T04:15:45.009825Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hyperlane-xyz",
+  "source_url": "https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/.agents/skills/investigate-merkle-root-mismatch/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/.agents/skills/investigate-merkle-root-mismatch/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Investigate merkle root mismatch alerts between relayer and validators. Use when alerts mention \"merkle root mismatch\", \"checkpoint root does not match canonical root\", or when asked to debug relayer merkle tree issues for a chain. This skill only investigates - use /fix-merkle-root-mismatch to apply fixes."
+}

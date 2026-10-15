@@ -1,0 +1,37 @@
+{
+  "name": "create-experiment",
+  "repo": "harness/harness-skills",
+  "path": "skills/fme/create-experiment/SKILL.md",
+  "github_branch": "main",
+  "category": "performance",
+  "source": "github.com/harness/harness-skills",
+  "dir_name": "create-experiment",
+  "downloaded_at": "2026-10-15T04:03:26.906553Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "performance",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for performance: performance, optimize",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "performance",
+      "optimize"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "harness",
+  "source_url": "https://github.com/harness/harness-skills/blob/main/skills/fme/create-experiment/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/harness/harness-skills/blob/main/skills/fme/create-experiment/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Thin compatibility entrypoint for creating a new Harness FME experiment. Invokes manage-experiments' Create experiment flow directly - same scope, parent/environment resolution, hypothesis, metrics, treatments, window, and rule - and returns the created experiment id plus verification. Use when asked to create an experiment, set up an A/B test, or design a new experiment. Do NOT use for updating, pausing, resuming, completing, archiving, or deleting an experiment (manage-experiments), or for explaining results (review-experiment-results). Trigger phrases: create experiment, set up an A/B test, design an experiment, launch a test, new experiment for X."
+}

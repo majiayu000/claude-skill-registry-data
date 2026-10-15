@@ -1,0 +1,38 @@
+{
+  "name": "presentation-builder",
+  "repo": "flywifi/educator-tools-k12-public",
+  "path": "skills/educator/presentation-builder/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/flywifi/educator-tools-k12-public",
+  "dir_name": "presentation-builder",
+  "downloaded_at": "2026-10-15T03:39:48.890438Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=3, quality=3",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "pdf",
+      "word",
+      "pptx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "flywifi",
+  "source_url": "https://github.com/flywifi/educator-tools-k12-public/blob/main/skills/educator/presentation-builder/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/flywifi/educator-tools-k12-public/blob/main/skills/educator/presentation-builder/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Design standards-aligned K-12 instructional slide decks / presentations. Use this whenever a teacher or coach wants slides, a slideshow, a deck, a 'PowerPoint', or a Google-Slides-style presentation for teaching \u2014 including 'turn this lesson into slides', 'make a presentation on\u2026', 'slides for tomorrow's class', or 'a deck to introduce\u2026'. It structures a pedagogically sound deck (one idea per slide, gradual release, visuals, checks for understanding), keeps it aligned to a real cited standard and readable for the grade band, and renders the actual .pptx using the pptx skill. Make sure to use this whenever the user wants teaching content in slide form. Do NOT use it to write the lesson plan itself (use lesson-planner) or to build a test/rubric (use assessment-designer) \u2014 it presents instruction, it doesn't replace it."
+}

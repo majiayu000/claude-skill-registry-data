@@ -1,0 +1,39 @@
+{
+  "name": "debugging",
+  "repo": "islee23520/lfg",
+  "path": "skills/debugging/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/islee23520/lfg",
+  "dir_name": "debugging-islee23520-lfg",
+  "downloaded_at": "2026-10-15T04:24:39.843323Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, qa, pytest, playwright",
+    "score": 4,
+    "runner_up": "context-management",
+    "runner_up_score": 3,
+    "signals": [
+      "test",
+      "qa",
+      "pytest",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "islee23520",
+  "source_url": "https://github.com/islee23520/lfg/blob/main/skills/debugging/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/islee23520/lfg/blob/main/skills/debugging/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "MUST USE for any real runtime debugging across ANY language or binary \u2014 crashes, silent failures, wrong responses, stuck processes, memory leaks, async misbehavior, unexplained timing, reverse engineering. Runs a hypothesis-driven loop: form \u22653 hypotheses, investigate in parallel, after 2 failed rounds spawn Oracles from orthogonal angles, confirm root cause, lock with a failing test, fix minimally, QA by actually USING the system, scrub artifacts. The actual HOW lives in `references/` \u2014 READ THEM. Triggers: 'debug this', 'why is X not working', 'hanging', 'attach a debugger', 'reverse engineer', 'pwndbg', 'gdb', 'lldb', 'node inspect', 'tsx debug', 'pdb', 'dlv', 'delve', 'rust-gdb', 'set a breakpoint', 'context window exploded', 'why is the response empty', 'attach the debugger', 'debug it', 'why is this happening', 'trace this bug', 'reproduce and fix', 'silent failure', 'HTTP 200 but empty', 'why did it stop', 'inspect the binary', 'reverse engineering', 'playwright'."
+}

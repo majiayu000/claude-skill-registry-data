@@ -1,0 +1,38 @@
+{
+  "name": "books-and-records",
+  "repo": "feliksness/Quartzite-Prompt-Library",
+  "path": "skills/03_banking/books-and-records/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/feliksness/Quartzite-Prompt-Library",
+  "dir_name": "books-and-records",
+  "downloaded_at": "2026-10-15T03:36:19.091213Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "communication",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "feliksness",
+  "source_url": "https://github.com/feliksness/Quartzite-Prompt-Library/blob/main/skills/03_banking/books-and-records/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/feliksness/Quartzite-Prompt-Library/blob/main/skills/03_banking/books-and-records/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Guide the design and maintenance of recordkeeping programs under SEC Rules 17a-3, 17a-4, and 204-2. Use when the user asks about document retention schedules, how long to keep trade records or customer complaints, WORM storage requirements, email or text message archiving, social media capture, BYOD compliance policies, or electronic storage audit trails. Also trigger when users mention 'we got an exam request for records', 'migrating to a new archiving vendor', 'blotter retention', 'order ticket requirements', 'off-channel communications', 'WhatsApp archiving', or ask how long specific records must be kept."
+}

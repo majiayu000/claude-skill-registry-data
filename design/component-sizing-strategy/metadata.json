@@ -1,0 +1,37 @@
+{
+  "name": "component-sizing-strategy",
+  "repo": "lennondotw/skills",
+  "path": "skills/component-sizing-strategy/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/lennondotw/skills",
+  "dir_name": "component-sizing-strategy",
+  "downloaded_at": "2026-10-15T05:03:43.642641Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: ui, component",
+    "score": 2,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "ui",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lennondotw",
+  "source_url": "https://github.com/lennondotw/skills/blob/main/skills/component-sizing-strategy/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lennondotw/skills/blob/main/skills/component-sizing-strategy/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Component sizing contract guidelines \u2014 intrinsic size vs layout contract, block-size owned by component, inline-size owned by container. Use when building reusable UI components, deciding width/height strategy, reviewing component sizing, or when a component's size behaves unexpectedly in different layout contexts."
+}

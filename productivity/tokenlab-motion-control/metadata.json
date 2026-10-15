@@ -1,0 +1,37 @@
+{
+  "name": "tokenlab-motion-control",
+  "repo": "hedging8563/tokenlab-skills",
+  "path": "skills/tokenlab-motion-control/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/hedging8563/tokenlab-skills",
+  "dir_name": "tokenlab-motion-control",
+  "downloaded_at": "2026-10-15T04:05:05.854450Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hedging8563",
+  "source_url": "https://github.com/hedging8563/tokenlab-skills/blob/main/skills/tokenlab-motion-control/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hedging8563/tokenlab-skills/blob/main/skills/tokenlab-motion-control/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Make a character from one image perform the motion of a reference video with TokenLab motion-control models. Use when the user says \"make my character do this dance\", \"copy the moves from this video\", \"motion transfer\", \"apply this motion to my photo\", \"make this person move like the person in the clip\", or \"drive this image with a video\". The image sets who appears; the reference video sets the motion and the length. For free motion from one still, use tokenlab-animate-image. To restyle the reference clip itself, use tokenlab-edit-video. For a talking head from audio, use tokenlab-talking-avatar."
+}

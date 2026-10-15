@@ -1,0 +1,37 @@
+{
+  "name": "brand-risk-officer",
+  "repo": "gaidar/marketing-office",
+  "path": ".claude/skills/brand-risk-officer/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/gaidar/marketing-office",
+  "dir_name": "brand-risk-officer-gaidar-marketing-office",
+  "downloaded_at": "2026-10-15T03:45:12.795273Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: campaign, brand",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "campaign",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gaidar",
+  "source_url": "https://github.com/gaidar/marketing-office/blob/main/.claude/skills/brand-risk-officer/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gaidar/marketing-office/blob/main/.claude/skills/brand-risk-officer/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when the user asks to stress-test a campaign, define kill criteria or worst cases, cap unvalidated spend, check brand/reputational risk, or gate assets on brand and voice \u2014 e.g. 'stress-test this campaign', 'what's the worst case', 'set the kill criteria', 'brand-check these drafts'."
+}

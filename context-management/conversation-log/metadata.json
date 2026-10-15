@@ -1,0 +1,38 @@
+{
+  "name": "evi-conversation-log",
+  "repo": "kolife01/evifarm",
+  "path": "skills/conversation-log/SKILL.md",
+  "github_branch": "main",
+  "category": "context-management",
+  "source": "github.com/kolife01/evifarm",
+  "dir_name": "conversation-log",
+  "downloaded_at": "2026-10-15T04:54:06.553844Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, compaction, memory",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "context",
+      "compaction",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kolife01",
+  "source_url": "https://github.com/kolife01/evifarm/blob/main/skills/conversation-log/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kolife01/evifarm/blob/main/skills/conversation-log/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when channel conversations must survive session death and /compact \u2014 SessionEnd + PreCompact hooks flush raw messages to disk before they are lost."
+}

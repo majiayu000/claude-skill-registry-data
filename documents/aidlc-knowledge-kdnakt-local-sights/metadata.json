@@ -1,0 +1,38 @@
+{
+  "name": "aidlc-knowledge",
+  "repo": "kdnakt/local-sights",
+  "path": ".claude/skills/aidlc-knowledge/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/kdnakt/local-sights",
+  "dir_name": "aidlc-knowledge-kdnakt-local-sights",
+  "downloaded_at": "2026-10-15T04:47:56.779251Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: pdf, word, markdown",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "pdf",
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kdnakt",
+  "source_url": "https://github.com/kdnakt/local-sights/blob/main/.claude/skills/aidlc-knowledge/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kdnakt/local-sights/blob/main/.claude/skills/aidlc-knowledge/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Index the team's own documents \u2014 PDFs, Word files, Markdown, plain text \u2014 into a per-space catalog the AI-DLC agents can cite. Wraps `aidlc-knowledge.ts`: onboard, sync, list, show, associate, dissociate, rebind, summarize. Every catalog row is written by the tool under a workspace lock; this skill never edits the catalog by hand and never advances workflow state."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "kortix-drives",
+  "repo": "kortix-ai/suna",
+  "path": "packages/starter/templates/managed/skills/kortix-drives/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/kortix-ai/suna",
+  "dir_name": "kortix-drives",
+  "downloaded_at": "2026-10-15T04:55:09.517905Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kortix-ai",
+  "source_url": "https://github.com/kortix-ai/suna/blob/main/packages/starter/templates/managed/skills/kortix-drives/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kortix-ai/suna/blob/main/packages/starter/templates/managed/skills/kortix-drives/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "The project's Files under `/drives`: the user's own folder (their desktop, also at `~/Desktop`) and the folders shared with you, synced with the Kortix web app and every other session. Load before you read or save a file the user should keep, look for the user's notes, preferences or context, keep memory across sessions, or when you see a file named `... (conflict <date> <time>)...`."
+}

@@ -1,0 +1,36 @@
+{
+  "name": "azure-devops-pr",
+  "repo": "hoesler/agent-stuff",
+  "path": "skills/azure-devops-pr/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/hoesler/agent-stuff",
+  "dir_name": "azure-devops-pr",
+  "downloaded_at": "2026-10-15T04:11:10.382354Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category api scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "api"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hoesler",
+  "source_url": "https://github.com/hoesler/agent-stuff/blob/main/skills/azure-devops-pr/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hoesler/agent-stuff/blob/main/skills/azure-devops-pr/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when working with an Azure DevOps pull request - creating or opening one, fetching PR details, reading review threads, implementing requested changes, or replying to comments. Auto-discovers the PR from the current Git branch. Also use when reaching the Azure DevOps API is itself the problem - an HTML sign-in page or HTTP 203 where JSON was expected, a jq parse error against dev.azure.com, 401/403, VS403403, TF400813/TF401019, an anonymous authenticatedUser, a PAT rejected as a bearer token, or a missing credential in a sandbox."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "docs-fishing",
+  "repo": "laurentvv/agents-kit",
+  "path": "skills/docs-fishing/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/laurentvv/agents-kit",
+  "dir_name": "docs-fishing",
+  "downloaded_at": "2026-10-15T05:00:47.520962Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, documentation",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "laurentvv",
+  "source_url": "https://github.com/laurentvv/agents-kit/blob/main/skills/docs-fishing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/laurentvv/agents-kit/blob/main/skills/docs-fishing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Fetch and read the upstream official documentation of any engine, model or third-party tool BEFORE testing, debugging, upgrading or adopting it - upstream repo docs/ directories, model and dataset cards, llms.txt endpoints - pinned to the installed version, cross-checked against the local binaries, findings recorded in the project state files. Use when adopting, testing, debugging or upgrading a component, when a capability seems missing or a flag misbehaves, before a GPU or benchmark session, or on request (\"go fishing for the docs on X\"). Implements the \"read the upstream docs before acting\" rule of the common block."
+}

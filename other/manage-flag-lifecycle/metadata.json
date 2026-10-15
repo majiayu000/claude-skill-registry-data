@@ -1,0 +1,36 @@
+{
+  "name": "manage-flag-lifecycle",
+  "repo": "harness/harness-skills",
+  "path": "skills/fme/manage-flag-lifecycle/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/harness/harness-skills",
+  "dir_name": "manage-flag-lifecycle",
+  "downloaded_at": "2026-10-15T04:03:29.654302Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "harness",
+  "source_url": "https://github.com/harness/harness-skills/blob/main/skills/fme/manage-flag-lifecycle/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/harness/harness-skills/blob/main/skills/fme/manage-flag-lifecycle/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Manage metadata and lifecycle for a Harness FME feature flag: update description, tags, owners, rollout status; assess archive readiness (usage, experiments, dependents); archive/unarchive; delete definitions in one environment; delete the flag. Supports single flags or explicit small lists (\u2264 20). Use when asked to change flag metadata, archive a flag, check if a flag is safe to archive, unarchive a flag, or delete a flag/definition. Do not use for targeting changes (update-flag-targeting), creating flags (create-feature-flag), discovering stale flags across a project (discover-feature-flags), removing flag code (cleanup-feature-flags), or rollout pipelines (fme-pipeline). Trigger phrases: update flag description, flag metadata, archive flag, unarchive flag, delete flag, archive readiness, is flag safe to archive, flag lifecycle."
+}

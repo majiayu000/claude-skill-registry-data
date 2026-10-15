@@ -1,0 +1,36 @@
+{
+  "name": "update-flag-targeting",
+  "repo": "harness/harness-skills",
+  "path": "skills/fme/update-flag-targeting/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/harness/harness-skills",
+  "dir_name": "update-flag-targeting",
+  "downloaded_at": "2026-10-15T04:03:30.242694Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category analysis scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "analysis"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "harness",
+  "source_url": "https://github.com/harness/harness-skills/blob/main/skills/fme/update-flag-targeting/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/harness/harness-skills/blob/main/skills/fme/update-flag-targeting/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Change how a Harness FME feature flag serves traffic in environments. Covers percentage rollout, individual targets, targeting rules (attribute/segment/flag-dependency), defaultTreatment, trafficAllocation, treatments, kill/restore, and copying or initializing a definition in an environment. Use when asked to ramp a flag, add rules/users, change allocation, kill/restore, or promote config. Not for creating flags (create-feature-flag), metadata like tags/owners/archive (manage-flag-lifecycle), segment keys (manage-segments), pipeline rollouts (fme-pipeline), or flag analysis (explain-flag). Trigger phrases: update targeting, ramp flag, percentage rollout, add rule, add users, kill flag, restore, copy config."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "pb-deploy-saas",
+  "repo": "hybridlabor-api/aos",
+  "path": "skills/playbooks/pb-deploy-saas/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/hybridlabor-api/aos",
+  "dir_name": "pb-deploy-saas",
+  "downloaded_at": "2026-10-15T04:15:20.142308Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: ci, deploy",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "ci",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hybridlabor-api",
+  "source_url": "https://github.com/hybridlabor-api/aos/blob/main/skills/playbooks/pb-deploy-saas/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hybridlabor-api/aos/blob/main/skills/playbooks/pb-deploy-saas/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Deploy a SaaS app to the BDB fleet: preflight of the fleet skills, a guardrail plan, green CI, the deploy after GO (Incus via Forgejo CI, or direct rsync), and a health URL check. Use for \"deploy this to the fleet\", \"deploy the SaaS app\", \"ship to the Incus instance\"."
+}

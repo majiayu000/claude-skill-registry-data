@@ -1,0 +1,37 @@
+{
+  "name": "agent-judge",
+  "repo": "heath-gtm/Skill-Builder",
+  "path": "skills/agent-judge/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/heath-gtm/Skill-Builder",
+  "dir_name": "agent-judge",
+  "downloaded_at": "2026-10-15T04:04:58.635694Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, api=2",
+    "score": 2,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "heath-gtm",
+  "source_url": "https://github.com/heath-gtm/Skill-Builder/blob/main/skills/agent-judge/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/heath-gtm/Skill-Builder/blob/main/skills/agent-judge/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Build Claude judges that grade what your prompt, skill, or agent produces against its own rules, then test the judges before you trust them. One narrow pass or fail judge per rule, checked against outputs you already trust plus copies with a mistake planted on purpose, so you know each judge's catch rate and false alarm rate before its verdicts count. Runs on Ragas and the Anthropic SDK, with a starter kit and a sample you can run in a minute. Trigger on \"build a judge\", \"LLM as judge\", \"grade these outputs\", \"score my agent's output\", \"automate the judgment part of my eval\", \"how do I know my eval is right\", \"is this judge any good\", \"check my prompt's output against its rules\", \"use Ragas\", \"my eval passes everything\", or any moment an eval needs a judgment call a regex cannot make."
+}

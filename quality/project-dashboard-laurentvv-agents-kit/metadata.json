@@ -1,0 +1,39 @@
+{
+  "name": "project-dashboard",
+  "repo": "laurentvv/agents-kit",
+  "path": ".agents/skills/project-dashboard/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/laurentvv/agents-kit",
+  "dir_name": "project-dashboard-laurentvv-agents-kit",
+  "downloaded_at": "2026-10-15T05:00:58.776297Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for quality: quality, lint, review, validate",
+    "score": 4,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "quality",
+      "lint",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "laurentvv",
+  "source_url": "https://github.com/laurentvv/agents-kit/blob/main/.agents/skills/project-dashboard/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/laurentvv/agents-kit/blob/main/.agents/skills/project-dashboard/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Build a visual dashboard of a project's real state - features by status, contract and validation evidence, tests and CI, git position, debts and lessons - as a single-file interactive HTML page in the reader's chat language, every number measured from the repository itself (ledger files, git, command outputs), screenshot-inspected before delivery. Use when the user asks for a dashboard, a visual status of the project, a sprint or weekly review, the state of the repo, or at sprint closure. Not for explaining a single result (that is the explainer skill)."
+}

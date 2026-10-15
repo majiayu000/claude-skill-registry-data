@@ -1,0 +1,37 @@
+{
+  "name": "extract-spec",
+  "repo": "kotaroyamame/formal-agent-contracts",
+  "path": "skills/extract-spec/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/kotaroyamame/formal-agent-contracts",
+  "dir_name": "extract-spec",
+  "downloaded_at": "2026-10-15T04:55:27.623390Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, api=2",
+    "score": 2,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kotaroyamame",
+  "source_url": "https://github.com/kotaroyamame/formal-agent-contracts/blob/master/skills/extract-spec/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kotaroyamame/formal-agent-contracts/blob/master/skills/extract-spec/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Extract a provisional VDM-SL specification from existing source code. This is NOT the true spec \u2014 it is a scaffold for dialogue to uncover the user's real intent. Triggered by: \"extract spec from code\", \"reverse engineer the specification\", \"extract-spec\", \"code to spec\", \"formalize the existing code\". Japanese: \u300c\u65e2\u5b58\u306e\u30b3\u30fc\u30c9\u304b\u3089\u4ed5\u69d8\u3092\u62bd\u51fa\u3057\u3066\u300d\u300c\u30b3\u30fc\u30c9\u306e\u4ed5\u69d8\u3092\u5f62\u5f0f\u5316\u3057\u3066\u300d \u300c\u30b3\u30fc\u30c9\u30d9\u30fc\u30b9\u3092\u5206\u6790\u3057\u3066\u300d\u300c\u30b3\u30fc\u30c9\u3092\u30ea\u30d0\u30fc\u30b9\u30a8\u30f3\u30b8\u30cb\u30a2\u30ea\u30f3\u30b0\u3057\u3066\u300d"
+}

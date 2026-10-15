@@ -1,0 +1,38 @@
+{
+  "name": "agentfem-performance",
+  "repo": "haoming-luo/agentfem",
+  "path": "skills/agentfem-performance/SKILL.md",
+  "github_branch": "main",
+  "category": "performance",
+  "source": "github.com/haoming-luo/agentfem",
+  "dir_name": "agentfem-performance",
+  "downloaded_at": "2026-10-15T04:02:02.682124Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "performance",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for performance: performance, optimize, speed",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "performance",
+      "optimize",
+      "speed"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "haoming-luo",
+  "source_url": "https://github.com/haoming-luo/agentfem/blob/main/skills/agentfem-performance/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/haoming-luo/agentfem/blob/main/skills/agentfem-performance/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Optimize and package reproducible AgentFEM simulations using phase timing, accepted-state replay, rollback checks and full-run evidence. Use for AgentFEM runtime bottlenecks and reproducible case delivery, not general website performance or claims based solely on short microbenchmarks."
+}

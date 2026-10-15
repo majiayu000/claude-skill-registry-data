@@ -1,0 +1,37 @@
+{
+  "name": "counterparty-risk",
+  "repo": "feliksness/Quartzite-Prompt-Library",
+  "path": "skills/03_banking/counterparty-risk/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/feliksness/Quartzite-Prompt-Library",
+  "dir_name": "counterparty-risk",
+  "downloaded_at": "2026-10-15T03:36:19.290878Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review",
+    "score": 2,
+    "runner_up": "business",
+    "runner_up_score": 1,
+    "signals": [
+      "quality",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "feliksness",
+  "source_url": "https://github.com/feliksness/Quartzite-Prompt-Library/blob/main/skills/03_banking/counterparty-risk/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/feliksness/Quartzite-Prompt-Library/blob/main/skills/03_banking/counterparty-risk/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Guide counterparty credit risk measurement and management for OTC and securities trading, organized around three workflows: assessing a new counterparty, responding to a credit-deterioration event, and executing a default close-out. Use when measuring current or potential future exposure to a counterparty, setting or reviewing counterparty credit limits, evaluating ISDA Master Agreement netting and close-out mechanics, designing CSA collateral terms or uncleared margin compliance (VM/IM, SIMM), assessing central clearing mandates under Dodd-Frank or EMIR and CCP default waterfalls, monitoring creditworthiness via CDS spreads or ratings, quantifying wrong-way risk, or computing EAD, SA-CCR, and CVA. For Reg T and FINRA Rule 4210 brokerage margin see margin-operations; for settlement risk, DVP, and CLS see settlement-clearing."
+}

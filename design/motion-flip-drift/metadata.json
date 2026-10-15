@@ -1,0 +1,38 @@
+{
+  "name": "motion-flip-drift",
+  "repo": "lennondotw/skills",
+  "path": "skills/motion-flip-drift/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/lennondotw/skills",
+  "dir_name": "motion-flip-drift",
+  "downloaded_at": "2026-10-15T05:03:39.685248Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: css, component, animation",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "css",
+      "component",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lennondotw",
+  "source_url": "https://github.com/lennondotw/skills/blob/main/skills/motion-flip-drift/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lennondotw/skills/blob/main/skills/motion-flip-drift/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Diagnose and fix Motion/Framer Motion FLIP layout drift, especially layoutId indicators, selected tabs, shared elements, pane resize, parent resize, sticky/scroll containers, LayoutGroup/layoutRoot/layoutAnchor/layoutDependency issues. Use this whenever a Motion layout animation drifts, floats away, lags behind, jitters, or animates during resize when it should stay visually attached."
+}

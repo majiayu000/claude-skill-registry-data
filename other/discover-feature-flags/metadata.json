@@ -1,0 +1,37 @@
+{
+  "name": "discover-feature-flags",
+  "repo": "harness/harness-skills",
+  "path": "skills/fme/discover-feature-flags/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/harness/harness-skills",
+  "dir_name": "discover-feature-flags",
+  "downloaded_at": "2026-10-15T04:03:31.210225Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: product=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "feature"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "harness",
+  "source_url": "https://github.com/harness/harness-skills/blob/main/skills/fme/discover-feature-flags/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/harness/harness-skills/blob/main/skills/fme/discover-feature-flags/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audit Harness FME feature flags across a project. Read-only; never writes. Four modes: inventory (list flags with metadata), rollout-report (per-env rollout state with stalled-promotion detection across a confirmed env sequence), stale-audit (find flags with no impressions via lastImpressionAt), pattern-search (find flags whose rule conditions structurally match an attribute name, matcher type, literal value, segment reference, or flag dependency \u2014 not a text grep). Use when asked to \"show me all flags\", \"which flags are stale\", \"what flags are rolled out\", \"flag inventory\", \"flag health\", \"cleanup candidates\", \"find flags targeting segment X\", \"which flags depend on flag Y\", or \"find flags with rule matching attribute Z\". Do not use for single-flag deep dive (explain-flag), creating flags (create-feature-flag), updating targeting (update-flag-targeting), archiving/deleting (manage-flag-lifecycle), pipeline rollouts (fme-pipeline), or code removal (cleanup-feature-flags)."
+}

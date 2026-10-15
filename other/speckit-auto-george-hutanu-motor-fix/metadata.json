@@ -1,0 +1,37 @@
+{
+  "name": "speckit-auto",
+  "repo": "george-hutanu/motor-fix",
+  "path": ".claude/skills/speckit-auto/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/george-hutanu/motor-fix",
+  "dir_name": "speckit-auto-george-hutanu-motor-fix",
+  "downloaded_at": "2026-10-15T03:50:02.069902Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "george-hutanu",
+  "source_url": "https://github.com/george-hutanu/motor-fix/blob/main/.claude/skills/speckit-auto/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/george-hutanu/motor-fix/blob/main/.claude/skills/speckit-auto/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run the entire spec-driven cycle end-to-end and autonomously: constitution check, specify, org context, clarify, plan, checklist, tasks, analyze, tests, implement, converge, harden, review, archive and the hand-off of a ready PR to a tail agent \u2014 resolving every interactive gate itself and committing each implementation slice."
+}

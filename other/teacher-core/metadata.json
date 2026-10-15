@@ -1,0 +1,37 @@
+{
+  "name": "teacher-core",
+  "repo": "flywifi/educator-tools-k12-public",
+  "path": "skills/core/teacher-core/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/flywifi/educator-tools-k12-public",
+  "dir_name": "teacher-core",
+  "downloaded_at": "2026-10-15T03:39:40.297481Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "flywifi",
+  "source_url": "https://github.com/flywifi/educator-tools-k12-public/blob/main/skills/core/teacher-core/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/flywifi/educator-tools-k12-public/blob/main/skills/core/teacher-core/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "The Teacher Operating System hub for K-12 educators. Use this whenever a teacher, special-education teacher, interventionist, instructional coach, curriculum specialist, administrator, or district leader needs a standards-aligned, differentiated educational artifact \u2014 lesson and unit plans, assessments and rubrics, instructional slide decks, curriculum maps and pacing guides, IEP/504 supports and accommodations, MTSS/intervention plans, family communication, coaching/PD tools, or walkthrough/implementation resources. It classifies the request and routes it to the right TOS capability skill, runs the shared production pipeline, and applies the Quality Gates before anything is called final. Make sure to use this skill whenever the user mentions lessons, units, assessments, rubrics, standards alignment (CCSS/NGSS/state), differentiation/UDL, accommodations, IEPs, MTSS/RTI, pacing, or teaching materials, even if they don't name a specific document type. Do NOT use it for non-education tasks or general coding."
+}

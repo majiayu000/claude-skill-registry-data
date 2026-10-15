@@ -1,0 +1,38 @@
+{
+  "name": "che-explain",
+  "repo": "laionazeredo/che-ai",
+  "path": "paperclip/package/skills/che-explain/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/laionazeredo/che-ai",
+  "dir_name": "che-explain-laionazeredo-che-ai",
+  "downloaded_at": "2026-10-15T04:59:33.540547Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "laionazeredo",
+  "source_url": "https://github.com/laionazeredo/che-ai/blob/main/paperclip/package/skills/che-explain/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/laionazeredo/che-ai/blob/main/paperclip/package/skills/che-explain/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Didactic explainer for a PR, a ticket or a branch: answers 'what is this about?' in plain language, with Mermaid diagrams (flow / sequence / architecture) and the attention points that matter. INPUT (pick exactly one): (A) GitHub PR URL \u2014 explains what WAS implemented; (B) ticket URL (Linear / ClickUp / GitHub issue) \u2014 explains what IS TO BE implemented; (C) local branch or worktree \u2014 explains what was implemented versus the base branch. DEPTH: default = short and beginner-friendly; --deep = full technical depth (3 diagrams, module-by-module walkthrough, design decisions and discarded alternatives, contracts touched, edge cases, how to test). PURPOSE: comprehension and onboarding. NEVER a verdict (that is che-code-review) and NEVER a formal plan (that is che-spec)."
+}

@@ -1,0 +1,69 @@
+---
+name: tauri-app-splashscreen
+description: Guidance for Tauri v2 splashscreen setup and lifecycle control to avoid white screens.
+license: Apache-2.0
+---
+
+
+## When to use this skill
+
+**ALWAYS use this skill when the user mentions:**
+- Splashscreen at app startup / 启动时的启动页
+- Hiding splashscreen timing / 启动页隐藏时机
+- White screens during initial load / 初始加载白屏
+
+**Trigger phrases include:**
+- "splashscreen", "startup screen", "white screen", "loading"
+- "启动页", "白屏", "加载"
+
+## How to use this skill
+
+1. Configure splashscreen assets and window settings
+2. Decide when to hide splashscreen and show main window
+3. Handle slow frontend load and error fallback
+4. Validate cross-platform startup behavior
+
+## Outputs
+
+- Splashscreen lifecycle plan / 启动页生命周期方案
+- Startup timing checklist / 启动时机清单
+
+## Scope
+
+- Boundary: Splashscreen configuration and lifecycle only
+- Key points: Avoiding white screen and startup timing
+
+## References
+
+- https://v2.tauri.app/llms.txt
+- https://v2.tauri.app/learn/splashscreen/
+- https://v2.tauri.app/zh-cn/learn/splashscreen/
+
+## Keywords
+
+tauri splashscreen, startup, window, white screen
+
+## 常见陷阱 (Gotchas)
+
+1. **版本兼容性**：注意框架版本与依赖库的兼容性，不同版本 API 可能有差异
+2. **配置文件格式**：配置文件格式错误是最常见的问题，建议使用编辑器的语法检查
+3. **环境变量**：确保所有必要的环境变量已正确设置，敏感信息不要硬编码
+4. **依赖冲突**：多版本共存时注意依赖冲突，使用 lock 文件锁定版本
+5. **性能陷阱**：大数据量场景下注意性能优化，避免 N+1 查询等常见问题
+
+## 使用流程
+
+### Step 1: 环境准备
+确保开发环境已安装必要的依赖和工具。
+
+### Step 2: 配置初始化
+根据项目需求进行基础配置。
+
+### Step 3: 核心功能使用
+按照示例代码实现核心功能。
+
+### Step 4: 测试验证
+运行测试确保功能正常。
+
+### Step 5: 部署上线
+完成开发后进行部署和监控。

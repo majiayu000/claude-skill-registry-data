@@ -1,0 +1,37 @@
+{
+  "name": "standards-updater",
+  "repo": "flywifi/educator-tools-k12-public",
+  "path": "skills/operations/standards-updater/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/flywifi/educator-tools-k12-public",
+  "dir_name": "standards-updater",
+  "downloaded_at": "2026-10-15T03:39:47.916800Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "flywifi",
+  "source_url": "https://github.com/flywifi/educator-tools-k12-public/blob/main/skills/operations/standards-updater/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/flywifi/educator-tools-k12-public/blob/main/skills/operations/standards-updater/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Keep the stored Florida education corpus current by politely crawling the official sources for ANY change we cover \u2014 standards, courses/curriculum (incl. CTE), pacing, guidance (TAPs/memos), instructional materials, assessment, graduation, legislation (FL Statutes Title XLVIII), and State Board rules (FAC 6A). Use whenever someone wants to update, refresh, re-check, or 'pull the latest' \u2014 e.g. 'check CPALMS/FLDOE for new Florida standards' or 'did the legislature or State Board change anything?'. It runs the polite robots-respecting crawler (tools/standards_refresh.py) against the canonical sources in sources.json, reports NEW/CHANGED documents and watched-page content changes vs. stored sha256 hashes, and walks a human through verifying on CPALMS and applying updates. Do NOT use it to generate lessons/assessments (use the capability skills); it is NOT an evasive scraper \u2014 it only crawls public official sources, respects robots.txt, and backs off rather than bypassing protections."
+}

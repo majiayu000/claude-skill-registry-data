@@ -1,0 +1,41 @@
+{
+  "name": "document-intelligence",
+  "repo": "flywifi/educator-tools-k12-public",
+  "path": "skills/operations/document-intelligence/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/flywifi/educator-tools-k12-public",
+  "dir_name": "document-intelligence",
+  "downloaded_at": "2026-10-15T03:39:49.402714Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, pdf, pptx, xlsx, docx",
+    "score": 6,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "doc",
+      "docs",
+      "pdf",
+      "pptx",
+      "xlsx",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "flywifi",
+  "source_url": "https://github.com/flywifi/educator-tools-k12-public/blob/main/skills/operations/document-intelligence/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/flywifi/educator-tools-k12-public/blob/main/skills/operations/document-intelligence/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Transform documents \u2014 PDF, DOCX, HTML, TXT, images/scans, and Google Workspace (Docs API JSON + .odt/.csv/.xlsx/.pptx exports) \u2014 into GOVERNED, reusable knowledge assets via a parser-independent, artifact-centric pipeline (ingest \u2192 recover/OCR \u2192 structure/tables \u2192 govern \u2192 knowledge \u2192 artifact). Use whenever someone needs to read, parse, extract, OCR, or structure a document WITH provenance/lineage/confidence \u2014 e.g. 'read this PDF properly', 'extract the tables', 'OCR this scan', or 'read this Google Doc/Sheet/Slides'. Produces governed knowledge/consumer artifacts; emits the metadata block (protocol-layer/metadata-schema.md) with human_review_required: true; gated by quality-review. Do NOT use it to author NEW instructional content (use lesson-planner/assessment-designer/etc.), to crawl/fetch from the web or Google Drive (that is standards-updater / a connector), or as a search engine / vector database. Never fabricates: unrecovered regions are reported with low confidence, never invented."
+}

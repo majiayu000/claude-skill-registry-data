@@ -1,0 +1,37 @@
+{
+  "name": "che-qa",
+  "repo": "laionazeredo/che-ai",
+  "path": "paperclip/package/skills/che-qa/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/laionazeredo/che-ai",
+  "dir_name": "che-qa-laionazeredo-che-ai",
+  "downloaded_at": "2026-10-15T04:59:31.177720Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "laionazeredo",
+  "source_url": "https://github.com/laionazeredo/che-ai/blob/main/paperclip/package/skills/che-qa/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/laionazeredo/che-ai/blob/main/paperclip/package/skills/che-qa/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Auto-detects project tech stack, runs build \u2192 lint \u2192 typecheck \u2192 tests in the correct order. Invoke ONLY by che-act after Developer completes a task and scope validation passes. QA reports stay OUTSIDE worktree in $CHE_SESSION_DIR/qa/<related_id>/ with sortable timestamp prefix."
+}

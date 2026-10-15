@@ -1,0 +1,37 @@
+{
+  "name": "pb-project-new",
+  "repo": "hybridlabor-api/aos",
+  "path": "skills/playbooks/pb-project-new/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/hybridlabor-api/aos",
+  "dir_name": "pb-project-new",
+  "downloaded_at": "2026-10-15T04:15:19.622533Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: ci, cd",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "ci",
+      "cd"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hybridlabor-api",
+  "source_url": "https://github.com/hybridlabor-api/aos/blob/main/skills/playbooks/pb-project-new/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hybridlabor-api/aos/blob/main/skills/playbooks/pb-project-new/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Start a new private GitHub project the AOS way: create the private repo, bootstrap AOS (project card, AGENTS.md, wiki, memory, CI choice), push after GO, and confirm the first CI run is green and the repo is still private. Use for \"new project\", \"start a repo\", \"bootstrap a project\"."
+}

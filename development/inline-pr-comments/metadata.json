@@ -1,0 +1,37 @@
+{
+  "name": "inline-pr-comments",
+  "repo": "hyperlane-xyz/hyperlane-monorepo",
+  "path": ".agents/skills/inline-pr-comments/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/hyperlane-xyz/hyperlane-monorepo",
+  "dir_name": "inline-pr-comments",
+  "downloaded_at": "2026-10-15T04:15:39.390723Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hyperlane-xyz",
+  "source_url": "https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/.agents/skills/inline-pr-comments/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/.agents/skills/inline-pr-comments/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Post a single consolidated PR review with summary and inline comments. Use this skill to deliver code review feedback as one unified review per run."
+}

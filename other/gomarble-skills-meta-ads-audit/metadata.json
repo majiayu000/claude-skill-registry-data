@@ -1,0 +1,37 @@
+{
+  "name": "gomarble-skills-meta-ads-audit",
+  "repo": "gomarble-ai/marketing-agent",
+  "path": "skills/gomarble-skills-meta-ads-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/gomarble-ai/marketing-agent",
+  "dir_name": "gomarble-skills-meta-ads-audit",
+  "downloaded_at": "2026-10-15T03:54:44.956346Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: performance=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "performance",
+      "optimize"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gomarble-ai",
+  "source_url": "https://github.com/gomarble-ai/marketing-agent/blob/main/skills/gomarble-skills-meta-ads-audit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gomarble-ai/marketing-agent/blob/main/skills/gomarble-skills-meta-ads-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audits and optimizes Meta Ads (Facebook + Instagram) accounts at senior-media-buyer depth. Use when the user asks about Meta Ads performance, campaign optimization, creative fatigue, ad set analysis, video creative diagnosis, pixel tracking issues, or wants a Meta Ads audit. Covers EMQ Score health check, conversion metric mapping (ROAS vs CPL vs custom), campaign structure detection (Primary/Testing, Bid Split, Audience Split), ad set bid-limit and audience-split decision rules, Pareto-based ad-level performance analysis, and Hook Rate / Hold Rate video diagnostic scenarios. Includes safety checks for top performer protection and the COMPLETE_REGISTRATION-on-Purchase tracker trap (Profitmetrics, Triple Whale, Northbeam). Read-and-recommend only \u2014 produces analysis the user applies manually in Meta Ads Manager."
+}

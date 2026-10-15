@@ -1,0 +1,39 @@
+{
+  "name": "gaia-react-perf",
+  "repo": "gaia-react/gaia",
+  "path": "frontend/.claude/skills/gaia-react-perf/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/gaia-react/gaia",
+  "dir_name": "gaia-react-perf",
+  "downloaded_at": "2026-10-15T03:45:00.447020Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, compile",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gaia-react",
+  "source_url": "https://github.com/gaia-react/gaia/blob/main/frontend/.claude/skills/gaia-react-perf/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gaia-react/gaia/blob/main/frontend/.claude/skills/gaia-react-perf/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Diagnoses React render performance by driving a micro-interaction, capturing real renders, and surfacing memo-defeating reference instability with a recommended structural fix. Measure-only, it emits a diagnosis and does not auto-fix. Trigger on `/gaia-react-perf` or natural-language asks like \"profile renders\", \"measure renders\", \"why is X re-rendering\", or \"diagnose render performance\". Do NOT trigger on vague \"feels slow\", \"janky\", or \"optimize my app\"."
+}

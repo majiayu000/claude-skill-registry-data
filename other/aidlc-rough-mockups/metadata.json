@@ -1,0 +1,37 @@
+{
+  "name": "aidlc-rough-mockups",
+  "repo": "katohirosato/aws-dev",
+  "path": ".kiro/skills/aidlc-rough-mockups/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/katohirosato/aws-dev",
+  "dir_name": "aidlc-rough-mockups",
+  "downloaded_at": "2026-10-15T04:46:55.223831Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "katohirosato",
+  "source_url": "https://github.com/katohirosato/aws-dev/blob/main/.kiro/skills/aidlc-rough-mockups/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/katohirosato/aws-dev/blob/main/.kiro/skills/aidlc-rough-mockups/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run the AI-DLC `rough-mockups` stage (ideation phase) in isolation, without advancing the main workflow. Packages `/aidlc --stage rough-mockups --single`: the engine emits one run-stage directive for rough-mockups and its gate, the conductor runs it, then the single-stage run commits a synthetic-id pair and stops. The main workflow's Current Stage is never touched."
+}

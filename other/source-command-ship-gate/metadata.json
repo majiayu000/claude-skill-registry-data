@@ -1,0 +1,36 @@
+{
+  "name": "source-command-ship-gate",
+  "repo": "legioncodeinc/vibe-coding-tools",
+  "path": "plugins/wasp-nest-core/skills/source-command-ship-gate/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/legioncodeinc/vibe-coding-tools",
+  "dir_name": "source-command-ship-gate",
+  "downloaded_at": "2026-10-15T05:03:04.781394Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "legioncodeinc",
+  "source_url": "https://github.com/legioncodeinc/vibe-coding-tools/blob/main/plugins/wasp-nest-core/skills/source-command-ship-gate/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/legioncodeinc/vibe-coding-tools/blob/main/plugins/wasp-nest-core/skills/source-command-ship-gate/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run the Ship Gate on demand against the current diff, security-stinger first, then quality-stinger, then a hard reminder to load github-repo-health-stinger. Trigger with \"run the ship gate\", \"gate this before I commit\", \"security and quality pass on this branch\", \"is this safe to push\", \"check my diff before I ship it\"."
+}

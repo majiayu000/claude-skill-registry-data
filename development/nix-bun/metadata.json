@@ -1,0 +1,39 @@
+{
+  "name": "nix-bun",
+  "repo": "juspay/skills",
+  "path": "skills/nix-bun/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/juspay/skills",
+  "dir_name": "nix-bun",
+  "downloaded_at": "2026-10-15T04:41:44.025485Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, compile",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "juspay",
+  "source_url": "https://github.com/juspay/skills/blob/main/skills/nix-bun/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/juspay/skills/blob/main/skills/nix-bun/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this when building a Bun (bun.lock) project with Nix. Covers bun2nix, the bun.nix dependency workflow, the bun --compile top-level-await pitfall, and a CI drift check."
+}

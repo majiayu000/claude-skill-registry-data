@@ -1,0 +1,37 @@
+{
+  "name": "gomarble-skills-saas-companies",
+  "repo": "gomarble-ai/marketing-agent",
+  "path": "skills/gomarble-skills-saas-companies/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/gomarble-ai/marketing-agent",
+  "dir_name": "gomarble-skills-saas-companies",
+  "downloaded_at": "2026-10-15T03:54:44.553996Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, marketing=2",
+    "score": 2,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gomarble-ai",
+  "source_url": "https://github.com/gomarble-ai/marketing-agent/blob/main/skills/gomarble-skills-saas-companies/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gomarble-ai/marketing-agent/blob/main/skills/gomarble-skills-saas-companies/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use for SaaS growth questions: ARR growth, churn risk, CAC payback, cohort performance, expansion revenue, sales funnel conversion, onboarding success, revenue by segment, and a weekly SaaS health report. Needs subscription and CRM data from exports, a warehouse (Snowflake through GoMarble), or a connector added in the GoMarble web app; ad spend comes from GoMarble's ad platform tools."
+}

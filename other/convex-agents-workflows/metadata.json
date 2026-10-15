@@ -1,0 +1,37 @@
+{
+  "name": "Convex Agents Workflows",
+  "repo": "franckdjiongo/claude-skills",
+  "path": "convex-agents-workflows/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/franckdjiongo/claude-skills",
+  "dir_name": "convex-agents-workflows",
+  "downloaded_at": "2026-10-15T03:41:12.798112Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "franckdjiongo",
+  "source_url": "https://github.com/franckdjiongo/claude-skills/blob/main/convex-agents-workflows/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/franckdjiongo/claude-skills/blob/main/convex-agents-workflows/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Orchestrates multi-step agent operations with durable execution, automatic retries, and recovery from failures. Use this for complex workflows that need to survive server restarts or coordinate multiple agents."
+}

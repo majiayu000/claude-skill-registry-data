@@ -1,0 +1,38 @@
+{
+  "name": "cuda-ollama",
+  "repo": "geeks-accelerator/ollama-herd",
+  "path": "skills/cuda-ollama/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/geeks-accelerator/ollama-herd",
+  "dir_name": "cuda-ollama",
+  "downloaded_at": "2026-10-15T03:48:28.825213Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=3, performance=3",
+    "score": 3,
+    "runner_up": "performance",
+    "runner_up_score": 3,
+    "signals": [
+      "api",
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "geeks-accelerator",
+  "source_url": "https://github.com/geeks-accelerator/ollama-herd/blob/main/skills/cuda-ollama/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/geeks-accelerator/ollama-herd/blob/main/skills/cuda-ollama/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "CUDA Ollama \u2014 route Ollama LLM inference across NVIDIA GPUs with automatic CUDA load balancing. CUDA Ollama cluster for RTX 4090, RTX 4080, A100, L40S, H100. NVIDIA CUDA Ollama fleet routing with 7-signal scoring, vRAM-aware fallback, and auto-retry. Run Llama, Qwen, DeepSeek, Phi, Mistral on NVIDIA CUDA GPUs. CUDA Ollama\u672c\u5730\u63a8\u7406\u8def\u7531\u3002CUDA Ollama enrutador IA NVIDIA."
+}

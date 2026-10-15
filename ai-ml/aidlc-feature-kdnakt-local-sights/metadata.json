@@ -1,0 +1,37 @@
+{
+  "name": "aidlc-feature",
+  "repo": "kdnakt/local-sights",
+  "path": ".claude/skills/aidlc-feature/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/kdnakt/local-sights",
+  "dir_name": "aidlc-feature-kdnakt-local-sights",
+  "downloaded_at": "2026-10-15T04:47:56.276342Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, model",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kdnakt",
+  "source_url": "https://github.com/kdnakt/local-sights/blob/main/.claude/skills/aidlc-feature/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kdnakt/local-sights/blob/main/.claude/skills/aidlc-feature/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run the AI-DLC workflow with the feature scope baked in \u2014 no scope detection. Full lifecycle for new features, practical depth. Packaging over `/aidlc --scope feature`, which works without this skill."
+}

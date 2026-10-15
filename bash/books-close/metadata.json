@@ -1,0 +1,38 @@
+{
+  "name": "books-close",
+  "repo": "giltotherescue/slashbooks",
+  "path": "skills/books-close/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/giltotherescue/slashbooks",
+  "dir_name": "books-close",
+  "downloaded_at": "2026-10-15T03:51:13.965227Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "giltotherescue",
+  "source_url": "https://github.com/giltotherescue/slashbooks/blob/main/skills/books-close/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/giltotherescue/slashbooks/blob/main/skills/books-close/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run a monthly or periodic books close: pull new transactions, categorize unknowns, reconcile balances, and produce a session summary. Trigger phrases: \"close the books\", \"run the close\", \"close this month\", \"close June\", \"pull in new transactions\", \"do the bookkeeping\", \"monthly close\", \"import transactions\", \"categorize transactions\"."
+}

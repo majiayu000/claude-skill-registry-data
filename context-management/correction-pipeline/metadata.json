@@ -1,0 +1,38 @@
+{
+  "name": "correction-pipeline",
+  "repo": "garrytan/gbrain",
+  "path": "skills/correction-pipeline/SKILL.md",
+  "github_branch": "master",
+  "category": "context-management",
+  "source": "github.com/garrytan/gbrain",
+  "dir_name": "correction-pipeline",
+  "downloaded_at": "2026-10-15T03:46:31.263416Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, context-window, memory",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "context-window",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "garrytan",
+  "source_url": "https://github.com/garrytan/gbrain/blob/master/skills/correction-pipeline/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/garrytan/gbrain/blob/master/skills/correction-pipeline/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "When the user corrects a factual error, root-cause it immediately.\nDon't just note the correction \u2014 trace the error to its source,\nfix the source, and prevent recurrence. Every factual error is\neither a data error (bad brain page, bad memory file, bad rendered\nSOUL/USER identity, bad facts row) or a hallucination (LLM\nconfabulated from partial signals)."
+}

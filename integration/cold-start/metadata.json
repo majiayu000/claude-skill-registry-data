@@ -1,0 +1,38 @@
+{
+  "name": "cold-start",
+  "repo": "garrytan/gbrain",
+  "path": "skills/cold-start/SKILL.md",
+  "github_branch": "master",
+  "category": "integration",
+  "source": "github.com/garrytan/gbrain",
+  "dir_name": "cold-start",
+  "downloaded_at": "2026-10-15T03:46:06.943836Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "integration",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for integration: integration, connector, oauth",
+    "score": 3,
+    "runner_up": "communication",
+    "runner_up_score": 2,
+    "signals": [
+      "integration",
+      "connector",
+      "oauth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "garrytan",
+  "source_url": "https://github.com/garrytan/gbrain/blob/master/skills/cold-start/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/garrytan/gbrain/blob/master/skills/cold-start/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Day-one data bootstrapping for a new brain. Sequences the highest-leverage\ndata sources to go from empty brain to useful brain in one session. Uses\nClawVisor for safe credential handling \u2014 the agent never holds raw API keys.\nCovers Gmail import, calendar sync, contacts seeding, X/Twitter archive,\nconversation imports, and file archives.\nUse when a user has just finished gbrain setup and asks \"now what?\""
+}

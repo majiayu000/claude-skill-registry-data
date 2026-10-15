@@ -1,0 +1,36 @@
+{
+  "name": "create-feature-flag",
+  "repo": "harness/harness-skills",
+  "path": "skills/fme/create-feature-flag/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/harness/harness-skills",
+  "dir_name": "create-feature-flag",
+  "downloaded_at": "2026-10-15T04:03:28.695994Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category analysis scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "analysis"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "harness",
+  "source_url": "https://github.com/harness/harness-skills/blob/main/skills/fme/create-feature-flag/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/harness/harness-skills/blob/main/skills/fme/create-feature-flag/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Create a new Harness FME feature flag and its per-environment definitions with a safe default, following the project's naming and tagging conventions. Use when asked to create a feature flag, add a flag, set up a new FME flag, or initialize flag targeting. Flag/definition writes only: does not gate application code (instrument-feature-flag) and is not a first-time onboarding entry point (feature-flag-onboarding). Do not use for updating existing flag targeting (update-flag-targeting), deep analysis of a single flag (explain-flag), listing/discovering flags (discover-feature-flags), flag lifecycle like archive/delete (manage-flag-lifecycle), segments (manage-segments), experiments (manage-experiments), pipeline rollouts (fme-pipeline), or removing flags from code (cleanup-feature-flags). Trigger phrases: create feature flag, add flag, new flag, set up flag, FME flag create, initialize flag."
+}

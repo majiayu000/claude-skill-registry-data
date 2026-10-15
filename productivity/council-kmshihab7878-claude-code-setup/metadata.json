@@ -1,0 +1,40 @@
+{
+  "name": "council",
+  "repo": "kmshihab7878/claude-code-setup",
+  "path": "skills/council/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/kmshihab7878/claude-code-setup",
+  "dir_name": "council-kmshihab7878-claude-code-setup",
+  "downloaded_at": "2026-10-15T04:53:23.234354Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, planning, memory",
+    "score": 4,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "planning",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "kmshihab7878",
+  "source_url": "https://github.com/kmshihab7878/claude-code-setup/blob/main/skills/council/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kmshihab7878/claude-code-setup/blob/main/skills/council/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "High-stakes decision-making system with 5 advisors, anonymous peer review, and chairman synthesis. Activates on \"council this\", \"war room this\", or \"pressure-test this\". Outputs HTML report + markdown transcript. Saves to disk and optionally to Obsidian. Uses full ecosystem: MCP data gathering, semantic memory, sequential thinking, domain-aware advisors."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "explainer",
+  "repo": "laurentvv/agents-kit",
+  "path": ".agents/skills/explainer/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/laurentvv/agents-kit",
+  "dir_name": "explainer-laurentvv-agents-kit",
+  "downloaded_at": "2026-10-15T05:00:51.851174Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "css",
+      "frontend"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "laurentvv",
+  "source_url": "https://github.com/laurentvv/agents-kit/blob/main/.agents/skills/explainer/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/laurentvv/agents-kit/blob/main/.agents/skills/explainer/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Turn a dense result, system, error or architecture into a custom artifact the user can actually process. The default artifact is a high-quality interactive single-file HTML page (self-contained, no CDN, no build step); diagrams (Mermaid, ASCII) only where HTML cannot render; controlled plain English (ASD-STE100 spirit) for chat answers; an explainer video on explicit request. Use when the user asks to explain, summarize, visualize or show something, says they do not understand, re-asks, or asks for a page, a diagram, a demo or an explainer. A markdown file is never the deliverable when a page is possible."
+}

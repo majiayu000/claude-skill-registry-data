@@ -1,0 +1,38 @@
+{
+  "name": "pp-solution-sync",
+  "repo": "franckdjiongo/claude-skills",
+  "path": "pp-solution-sync/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/franckdjiongo/claude-skills",
+  "dir_name": "pp-solution-sync",
+  "downloaded_at": "2026-10-15T03:41:06.443719Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, script, cli",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "franckdjiongo",
+  "source_url": "https://github.com/franckdjiongo/claude-skills/blob/main/pp-solution-sync/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/franckdjiongo/claude-skills/blob/main/pp-solution-sync/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Exporte une solution Power Platform unmanaged avec PAC CLI (ou utilise un artefact local), synchronise sa repr\u00e9sentation dans le projet, ex\u00e9cute les g\u00e9n\u00e9rateurs d\u00e9clar\u00e9s par le projet et pr\u00e9pare la validation Git. Utiliser pour actualiser une solution depuis un environnement ou Downloads."
+}

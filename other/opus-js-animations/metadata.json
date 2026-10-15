@@ -1,0 +1,37 @@
+{
+  "name": "opus-js-animations",
+  "repo": "klsoen/opus-js-animations",
+  "path": "skills/opus-js-animations/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/klsoen/opus-js-animations",
+  "dir_name": "opus-js-animations",
+  "downloaded_at": "2026-10-15T04:53:18.681174Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "klsoen",
+  "source_url": "https://github.com/klsoen/opus-js-animations/blob/main/skills/opus-js-animations/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/klsoen/opus-js-animations/blob/main/skills/opus-js-animations/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Direct and render films made entirely in JavaScript, from an idea to a frame-exact MP4, working like a film director. Take the brief, then ask where the sound comes from (the person's audio file, a YouTube or other link fetched with yt-dlp, a score generated in JavaScript, or a voiceover from their ElevenLabs or OpenAI key). Study that audio, ask about look, pacing, 2D or 3D (three.js or not) and the points to land, and present a director's treatment scene by scene. Build only after the go-ahead, as one HTML page (Canvas 2D with WebGL shaders by default, three.js when 3D is wanted) where every frame is a pure function of time, checked frame by frame and rendered with audio for Reels, TikTok, Shorts, X or YouTube. Use it whenever someone wants an animation, motion graphic, explainer, lyric or poem video, visualizer, reel, generative art, or a painting or poster made in code, says \"make a video like this clip\", or asks to revise such a film."
+}

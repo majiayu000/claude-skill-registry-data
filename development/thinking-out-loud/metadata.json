@@ -1,0 +1,38 @@
+{
+  "name": "thinking-out-loud",
+  "repo": "ha4kerspidersks/AI-Dev-Team",
+  "path": "skills/awesome-llm-apps/thinking-out-loud/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/ha4kerspidersks/AI-Dev-Team",
+  "dir_name": "thinking-out-loud",
+  "downloaded_at": "2026-10-15T03:59:54.005795Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ha4kerspidersks",
+  "source_url": "https://github.com/ha4kerspidersks/AI-Dev-Team/blob/main/skills/awesome-llm-apps/thinking-out-loud/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ha4kerspidersks/AI-Dev-Team/blob/main/skills/awesome-llm-apps/thinking-out-loud/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "A contract for what the agent does when a long, messy, stream-of-consciousness ramble arrives (usually voice dictation): act on nothing until the echo brief is approved. The echo audits the entire transfer, mission, locked decisions and constraints, open questions, flips and parked tangents, with the model's inferences and guesses quarantined away from the user's own phrasing, so the user verifies what the model believes, not just what it doubts. Use when the user says \"let me think out loud\" or wants to ramble a bit before building anything, when a message opens with a speech-to-text preamble like \"switching to voice, sorry for typos\", when input is a long weakly punctuated stream with restarts and mid-message reversals (\"actually no, wait, scrap that idea entirely\"), or when the user asks to be interviewed about a fuzzy half-formed idea. Includes an optional capture mode for rambles spread across several messages and an optional targeted interview."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "auto-qa",
+  "repo": "hillstreet-ph/open-connect",
+  "path": "public/downloads/skills/open-openclaw-auto-qa/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/hillstreet-ph/open-connect",
+  "dir_name": "open-openclaw-auto-qa",
+  "downloaded_at": "2026-10-15T04:09:20.141008Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, qa, e2e",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "qa",
+      "e2e"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hillstreet-ph",
+  "source_url": "https://github.com/hillstreet-ph/open-connect/blob/main/public/downloads/skills/open-openclaw-auto-qa/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hillstreet-ph/open-connect/blob/main/public/downloads/skills/open-openclaw-auto-qa/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run OpenClaw-wide autonomous QA and live/stress campaigns across independent subsystem lanes, with verified fixes and a resumable evidence report."
+}

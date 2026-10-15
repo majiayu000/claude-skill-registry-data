@@ -1,0 +1,38 @@
+{
+  "name": "license-impl",
+  "repo": "lakshamanr/noteflow_pro",
+  "path": ".claude/skills/license-impl/SKILL.md",
+  "github_branch": "master",
+  "category": "security",
+  "source": "github.com/lakshamanr/noteflow_pro",
+  "dir_name": "license-impl",
+  "downloaded_at": "2026-10-15T04:59:45.542860Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lakshamanr",
+  "source_url": "https://github.com/lakshamanr/noteflow_pro/blob/master/.claude/skills/license-impl/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lakshamanr/noteflow_pro/blob/master/.claude/skills/license-impl/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when implementing any part of the Cortex Notes license/KeyGen system. Loads full plan context, phase checklist, and implementation rules specific to the license feature."
+}

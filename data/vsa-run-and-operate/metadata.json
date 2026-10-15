@@ -1,0 +1,39 @@
+{
+  "name": "vsa-run-and-operate",
+  "repo": "hhavynn/vsa-website",
+  "path": ".claude/skills/vsa-run-and-operate/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/hhavynn/vsa-website",
+  "dir_name": "vsa-run-and-operate",
+  "downloaded_at": "2026-10-15T04:08:59.207041Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database, pipeline",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "sql",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hhavynn",
+  "source_url": "https://github.com/hhavynn/vsa-website/blob/main/.claude/skills/vsa-run-and-operate/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hhavynn/vsa-website/blob/main/.claude/skills/vsa-run-and-operate/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Load when running or deploying the VSA website, or operating its production machinery \u2014 \"how do I deploy this?\", \"what actually ships to production?\", applying supabase/migrations/ to prod, deploying Edge Functions (supabase functions deploy), running the image-migration pipeline (npm run migrate:images:*, migrate-images.yml, migrate-event-images.yml), operating scripts/ helpers, or figuring out where an artifact (build/, public/images/, ghcr image, Vercel deployment) lands. Provides the real deploy path (Vercel, not Docker), the migrations\u2192frontend\u2192edge-function ordering rule, and the never-delete-Storage-originals rule."
+}

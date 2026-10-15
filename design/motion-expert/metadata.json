@@ -1,0 +1,38 @@
+{
+  "name": "motion-expert",
+  "repo": "lennondotw/skills",
+  "path": "skills/motion-expert/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/lennondotw/skills",
+  "dir_name": "motion-expert",
+  "downloaded_at": "2026-10-15T05:03:39.316609Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: css, component, animation",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "css",
+      "component",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lennondotw",
+  "source_url": "https://github.com/lennondotw/skills/blob/main/skills/motion-expert/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lennondotw/skills/blob/main/skills/motion-expert/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Motion (motion.dev / framer-motion v12+) animation expert. Covers the full engine \u2014 projection/FLIP, WAAPI vs main-thread selection, spring physics, MotionValue pipeline, gestures, performance, bundle-size. Use whenever code involves motion/react, framer-motion, motion vanilla API, layoutId, layout, AnimatePresence, LayoutGroup, LazyMotion, useTransform, useScroll, useSpring, useMotionValue, useAnimate, animate(), Reorder, spring/tween/inertia transitions, shared-element transitions, scroll-linked animation, drag with momentum, or when reviewing animation performance, accessibility (prefers-reduced-motion), or bundle size."
+}

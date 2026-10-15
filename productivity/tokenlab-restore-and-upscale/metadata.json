@@ -1,0 +1,37 @@
+{
+  "name": "tokenlab-restore-and-upscale",
+  "repo": "hedging8563/tokenlab-skills",
+  "path": "skills/tokenlab-restore-and-upscale/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/hedging8563/tokenlab-skills",
+  "dir_name": "tokenlab-restore-and-upscale",
+  "downloaded_at": "2026-10-15T04:05:07.977380Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hedging8563",
+  "source_url": "https://github.com/hedging8563/tokenlab-skills/blob/main/skills/tokenlab-restore-and-upscale/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hedging8563/tokenlab-skills/blob/main/skills/tokenlab-restore-and-upscale/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Make an image larger and sharper, or repair an old, scratched, faded, or blurry photo, with TokenLab image models. Use when the user says \"upscale this\", \"make it 4K\", \"increase the resolution\", \"this is too small to print\", \"sharpen this photo\", \"fix my old family photo\", \"remove the scratches\", or \"restore this picture\". Upscale models keep the content and add pixels; a repair step uses an edit model first. To change, add, or remove content, use tokenlab-edit-image. To make a new realistic photo, use tokenlab-photoreal-stills. For a product shot on a new background, use tokenlab-product-photography."
+}

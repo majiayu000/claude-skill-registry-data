@@ -1,0 +1,37 @@
+{
+  "name": "url-flow",
+  "repo": "gehtalexey/sourcingX",
+  "path": ".claude/skills/url-flow/SKILL.md",
+  "github_branch": "master",
+  "category": "data",
+  "source": "github.com/gehtalexey/sourcingX",
+  "dir_name": "url-flow",
+  "downloaded_at": "2026-10-15T03:48:59.307207Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, database",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gehtalexey",
+  "source_url": "https://github.com/gehtalexey/sourcingX/blob/master/.claude/skills/url-flow/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gehtalexey/sourcingX/blob/master/.claude/skills/url-flow/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Reference guide for LinkedIn URL handling in SourcingX. Consult this when debugging URL matching issues, enrichment deduplication problems, or \"already enriched\" count mismatches. NOT user-invocable - this is internal documentation for Claude."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "motion-craft",
+  "repo": "fusengine/agents",
+  "path": "plugins/motion-expert/skills/motion-craft/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/fusengine/agents",
+  "dir_name": "motion-craft-fusengine-agents",
+  "downloaded_at": "2026-10-15T03:43:13.778595Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, animation",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fusengine",
+  "source_url": "https://github.com/fusengine/agents/blob/main/plugins/motion-expert/skills/motion-craft/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fusengine/agents/blob/main/plugins/motion-expert/skills/motion-craft/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when deciding how a film beat looks and moves \u2014 motion density (a gesture in progress at every moment: 0.75 s gesture-free max, CTA still \u2264 1.2 s, beats every 0.5-1 s, \u2265 1 onset/s) with read time \u2265 0.25 s/word, one primary gesture with subordinate details, the two film types (cut-based edit, one continuous object), scene transitions without opacity blends, easing and springs (\u03b6 \u2265 0.85, \u2264 3 % overshoot, springSum, dual-edge), ink/paper/one-accent color with area-weighted contrast and type as a large object, and the single-source ban list (every decorative effect banned); also the rubric source motion-critic scores against."
+}

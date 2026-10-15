@@ -1,0 +1,37 @@
+{
+  "name": "tokenlab-transcribe-and-subtitle",
+  "repo": "hedging8563/tokenlab-skills",
+  "path": "skills/tokenlab-transcribe-and-subtitle/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/hedging8563/tokenlab-skills",
+  "dir_name": "tokenlab-transcribe-and-subtitle",
+  "downloaded_at": "2026-10-15T04:05:08.330039Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hedging8563",
+  "source_url": "https://github.com/hedging8563/tokenlab-skills/blob/main/skills/tokenlab-transcribe-and-subtitle/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hedging8563/tokenlab-skills/blob/main/skills/tokenlab-transcribe-and-subtitle/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Turn audio or video into a transcript, SRT or VTT subtitles, and translated subtitles with TokenLab speech-to-text and text translation models. Use when the user says \"transcribe this recording\", \"make subtitles for my video\", \"I need an SRT file\", \"caption this podcast\", \"what does this audio say\", or \"translate these subtitles into Spanish\". Gets timed segments, builds SRT/VTT, and translates cue by cue so timings stay. To turn a script into speech, use tokenlab-voiceover. For a talking video from a script, use tokenlab-talking-avatar."
+}

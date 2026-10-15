@@ -1,0 +1,38 @@
+{
+  "name": "roadmap",
+  "repo": "intent-driven-ai/garura",
+  "path": "core/components/plays/roadmap/SKILL.md",
+  "github_branch": "main",
+  "category": "planning",
+  "source": "github.com/intent-driven-ai/garura",
+  "dir_name": "roadmap-intent-driven-ai-garura",
+  "downloaded_at": "2026-10-15T04:22:48.331781Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "planning",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for planning: planning, plan, roadmap",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "planning",
+      "plan",
+      "roadmap"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "intent-driven-ai",
+  "source_url": "https://github.com/intent-driven-ai/garura/blob/main/core/components/plays/roadmap/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/intent-driven-ai/garura/blob/main/core/components/plays/roadmap/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Plan the product's vertical slices into a build sequence \u2014 order the slices /shape produced across all domains, resolve their dependencies, and estimate each one's effort, writing only the plan onto each slice, directly in place on the live model. The planning play in the ProductOS command model, after /shape. Reads the slices to judge order and effort but writes only the plan (order, effort, dependencies). Closes the strategy pipeline through the end PR. Opens no delivery issue."
+}

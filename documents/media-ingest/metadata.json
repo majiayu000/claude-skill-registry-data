@@ -1,0 +1,37 @@
+{
+  "name": "media-ingest",
+  "repo": "garrytan/gbrain",
+  "path": "skills/media-ingest/SKILL.md",
+  "github_branch": "master",
+  "category": "documents",
+  "source": "github.com/garrytan/gbrain",
+  "dir_name": "media-ingest",
+  "downloaded_at": "2026-10-15T03:46:11.308903Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: pdf, markdown",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "pdf",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "garrytan",
+  "source_url": "https://github.com/garrytan/gbrain/blob/master/skills/media-ingest/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/garrytan/gbrain/blob/master/skills/media-ingest/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Ingest video, audio, PDF, book, screenshot, and GitHub repo content into the brain.\nMulti-format handling with entity extraction and backlink propagation. Covers\nvideo-ingest, youtube-ingest, and book-ingest subtypes."
+}

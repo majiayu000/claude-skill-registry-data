@@ -1,0 +1,37 @@
+{
+  "name": "meta-ads-audit",
+  "repo": "gomarble-ai/marketing-agent",
+  "path": "skills/meta-ads-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/gomarble-ai/marketing-agent",
+  "dir_name": "meta-ads-audit",
+  "downloaded_at": "2026-10-15T03:54:34.898508Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review",
+    "score": 2,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "quality",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gomarble-ai",
+  "source_url": "https://github.com/gomarble-ai/marketing-agent/blob/main/skills/meta-ads-audit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gomarble-ai/marketing-agent/blob/main/skills/meta-ads-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "30-day comprehensive Meta Ads health audit. Checks pixel/CAPI integrity, scans creative fatigue across the account, profiles audience-segment spend split, surfaces ROAS/CPA outliers (top + bottom decile), evaluates budget allocation efficiency, and produces a professional written report. Read-only \u2014 no changes applied. Use for quarterly reviews, new-account onboarding, or any \"what's actually happening in this account\" deep dive."
+}

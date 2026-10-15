@@ -1,0 +1,38 @@
+{
+  "name": "access-and-permissions",
+  "repo": "gomarble-ai/marketing-agent",
+  "path": "skills/access-and-permissions/SKILL.md",
+  "github_branch": "main",
+  "category": "integration",
+  "source": "github.com/gomarble-ai/marketing-agent",
+  "dir_name": "access-and-permissions",
+  "downloaded_at": "2026-10-15T03:54:39.559017Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "integration",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for integration: integration, connector, oauth",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "integration",
+      "connector",
+      "oauth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gomarble-ai",
+  "source_url": "https://github.com/gomarble-ai/marketing-agent/blob/main/skills/access-and-permissions/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gomarble-ai/marketing-agent/blob/main/skills/access-and-permissions/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when a GoMarble tool is denied or the user asks about access: 'I don't have access to this account', account_access_denied, a scope or permission upgrade (606), read-only connections, plan limits (403 / 600), the TikTok beta, agent permissions, or team roles. Explains GoMarble's role-based access control (owner, admin, member; View vs Act per account; OAuth scopes), tells the user exactly who can fix it and where, and never tries to work around a denial."
+}

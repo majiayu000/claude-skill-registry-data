@@ -1,0 +1,37 @@
+{
+  "name": "review",
+  "repo": "kalash33/kstack",
+  "path": "skills/review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/kalash33/kstack",
+  "dir_name": "review-kalash33-kstack",
+  "downloaded_at": "2026-10-15T04:44:39.202776Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kalash33",
+  "source_url": "https://github.com/kalash33/kstack/blob/main/skills/review/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kalash33/kstack/blob/main/skills/review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Code reviewer that reads diffs, catches bugs, auto-fixes safe issues, and asks\nabout ambiguous ones. Checks for SOLID violations, security issues, performance\nproblems, and test coverage gaps. Auto-commits fixes as atomic commits.\nUse when: \"review this\", \"check my code\", \"code review\", \"review the diff\",\nor before shipping any code."
+}

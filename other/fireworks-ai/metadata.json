@@ -1,0 +1,38 @@
+{
+  "name": "fireworks-ai",
+  "repo": "lev-os/agents",
+  "path": "skills-db/sdk/fireworks-ai/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/lev-os/agents",
+  "dir_name": "fireworks-ai",
+  "downloaded_at": "2026-10-15T05:04:41.028489Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=3, ai-ml=3",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lev-os",
+  "source_url": "https://github.com/lev-os/agents/blob/main/skills-db/sdk/fireworks-ai/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lev-os/agents/blob/main/skills-db/sdk/fireworks-ai/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "[WHAT] Fast, cost-effective inference and fine-tuning for open-source LLMs via OpenAI-compatible APIs\n[HOW] Serverless inference, on-demand GPU deployments, LoRA fine-tuning (SFT, RFT, DPO), firectl CLI\n[WHEN] Use when deploying open-source models, fine-tuning for custom use cases, or migrating from OpenAI\n[WHY] 100+ models, prompt caching, batch inference, multi-LoRA deployments, reinforcement fine-tuning\n\nTriggers: \"fireworks\", \"fireworks ai\", \"fireworks.ai\", \"firectl\", \"fireworks api\",\n          \"fine-tune llama\", \"fine-tune qwen\", \"fine-tune deepseek\", \"LoRA fine-tuning\",\n          \"reinforcement fine-tuning\", \"RFT\", \"SFT\", \"DPO\", \"serverless inference\",\n          \"on-demand deployment\", \"multi-lora\", \"prompt caching\", \"batch inference\",\n          \"openai compatible\", \"migrate from openai\""
+}

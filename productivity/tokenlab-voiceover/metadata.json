@@ -1,0 +1,37 @@
+{
+  "name": "tokenlab-voiceover",
+  "repo": "hedging8563/tokenlab-skills",
+  "path": "skills/tokenlab-voiceover/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/hedging8563/tokenlab-skills",
+  "dir_name": "tokenlab-voiceover",
+  "downloaded_at": "2026-10-15T04:05:04.343248Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hedging8563",
+  "source_url": "https://github.com/hedging8563/tokenlab-skills/blob/main/skills/tokenlab-voiceover/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hedging8563/tokenlab-skills/blob/main/skills/tokenlab-voiceover/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Turn a script into natural speech audio with a chosen voice, using TokenLab text-to-speech models. Use when the user says \"read this script aloud\", \"make a voiceover for my video\", \"narrate this\", \"text to speech\", \"give this a male / female / calm voice\", \"podcast intro audio\", or \"voice for my app\". Picks a model and voice from the live contract, splits long scripts, and returns audio files. For a face that speaks the audio, use tokenlab-talking-avatar. For subtitles or a transcript of existing audio, use tokenlab-transcribe-and-subtitle. For songs or sung vocals, use tokenlab-music."
+}

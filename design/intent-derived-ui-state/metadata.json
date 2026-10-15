@@ -1,0 +1,37 @@
+{
+  "name": "intent-derived-ui-state",
+  "repo": "lennondotw/skills",
+  "path": "skills/intent-derived-ui-state/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/lennondotw/skills",
+  "dir_name": "intent-derived-ui-state",
+  "downloaded_at": "2026-10-15T05:03:42.234059Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "design",
+      "ui"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lennondotw",
+  "source_url": "https://github.com/lennondotw/skills/blob/main/skills/intent-derived-ui-state/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lennondotw/skills/blob/main/skills/intent-derived-ui-state/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Model responsive or context-dependent UI by storing only durable user intent and deriving the rendered selection from that intent plus route, viewport, capability, and open-state inputs. Use when resize, media-query, orientation, device capability, or route synchronization is mutating selected tabs, panes, modes, or other redundant React state."
+}

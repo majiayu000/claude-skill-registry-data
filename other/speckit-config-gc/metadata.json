@@ -1,0 +1,37 @@
+{
+  "name": "speckit-config-gc",
+  "repo": "george-hutanu/motor-fix",
+  "path": ".claude/skills/speckit-config-gc/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/george-hutanu/motor-fix",
+  "dir_name": "speckit-config-gc",
+  "downloaded_at": "2026-10-15T03:50:05.381446Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "george-hutanu",
+  "source_url": "https://github.com/george-hutanu/motor-fix/blob/main/.claude/skills/speckit-config-gc/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/george-hutanu/motor-fix/blob/main/.claude/skills/speckit-config-gc/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Garbage-collect the harness: skills and subagents nothing invokes, unregistered hook scripts, duplicate permissions, retired instincts, stale telemetry ledgers, dead worktrees and expired trash. Proposes candidates one at a time, moves only what you approve to .specify/_gc_trash/, and logs every move with its undo. Use when the setup feels bloated, after installing a batch of skills, or as a periodic review."
+}

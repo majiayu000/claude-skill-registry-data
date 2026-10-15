@@ -1,0 +1,38 @@
+{
+  "name": "Convex Agents Streaming",
+  "repo": "franckdjiongo/claude-skills",
+  "path": "convex-agents-streaming/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/franckdjiongo/claude-skills",
+  "dir_name": "convex-agents-streaming-franckdjiongo-claude-skills",
+  "downloaded_at": "2026-10-15T03:41:12.649994Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: ux, component, animation",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "ux",
+      "component",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "franckdjiongo",
+  "source_url": "https://github.com/franckdjiongo/claude-skills/blob/main/convex-agents-streaming/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/franckdjiongo/claude-skills/blob/main/convex-agents-streaming/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Streams agent responses in real-time to clients without blocking. Use this for responsive UIs, long-running generations, and asynchronous streaming to multiple clients."
+}

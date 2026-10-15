@@ -1,0 +1,37 @@
+{
+  "name": "ponytail-audit",
+  "repo": "ha4kerspidersks/AI-Dev-Team",
+  "path": "skills/ponytail/skills/ponytail-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ha4kerspidersks/AI-Dev-Team",
+  "dir_name": "ponytail-audit-ha4kerspidersks-ai-dev-team",
+  "downloaded_at": "2026-10-15T03:59:50.870855Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: product=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "feature"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ha4kerspidersks",
+  "source_url": "https://github.com/ha4kerspidersks/AI-Dev-Team/blob/main/skills/ponytail/skills/ponytail-audit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ha4kerspidersks/AI-Dev-Team/blob/main/skills/ponytail/skills/ponytail-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Whole-repo audit for over-engineering. Like ponytail-review, but scans the entire codebase instead of a diff: a ranked list of what to delete, simplify, or replace with stdlib/native equivalents. Use when the user says \"audit this codebase\", \"audit for over-engineering\", \"what can I delete from this repo\", \"find bloat\", \"ponytail-audit\", or \"/ponytail-audit\". One-shot report, does not apply fixes."
+}

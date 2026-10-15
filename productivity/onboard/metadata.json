@@ -1,0 +1,38 @@
+{
+  "name": "onboard",
+  "repo": "kmshihab7878/claude-code-setup",
+  "path": "skills/onboard/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/kmshihab7878/claude-code-setup",
+  "dir_name": "onboard",
+  "downloaded_at": "2026-10-15T04:53:23.047017Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: automation, task, memory",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "automation",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kmshihab7878",
+  "source_url": "https://github.com/kmshihab7878/claude-code-setup/blob/main/skills/onboard/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kmshihab7878/claude-code-setup/blob/main/skills/onboard/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Onboard or refresh the AI OS context by interviewing the user with the 7-question intake. Populates context/, seeds connections.md, and logs the run in decisions/log.md. NEVER auto-fills identity from session environment \u2014 all PII fields require explicit user input. Triggered by /onboard or when the user explicitly asks to onboard / re-onboard / refresh context."
+}

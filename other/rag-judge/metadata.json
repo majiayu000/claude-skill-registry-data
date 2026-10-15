@@ -1,0 +1,37 @@
+{
+  "name": "rag-judge",
+  "repo": "heath-gtm/Skill-Builder",
+  "path": "skills/rag-judge/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/heath-gtm/Skill-Builder",
+  "dir_name": "rag-judge",
+  "downloaded_at": "2026-10-15T04:04:58.263594Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "heath-gtm",
+  "source_url": "https://github.com/heath-gtm/Skill-Builder/blob/main/skills/rag-judge/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/heath-gtm/Skill-Builder/blob/main/skills/rag-judge/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Grade a RAG system (an AI that answers from your documents) on the two ways it fails. A script checks whether retrieval found the passage that holds the answer. Two Claude judges, tested with planted mistakes before they count, check whether every claim in the answer is supported by the passages it was shown, and whether it declined exactly when the passages had no answer. Works on any answer saved with its question and sources, including an agent's output next to the pages it read. Trigger on \"grade my RAG\", \"evaluate my knowledge base bot\", \"is my chatbot making things up\", \"check answers against sources\", \"faithfulness\", \"hallucination check\", \"did it cite the right source\", \"RAG eval\", \"groundedness\", \"is the AI sticking to our docs\", or after building anything with rag-explained."
+}

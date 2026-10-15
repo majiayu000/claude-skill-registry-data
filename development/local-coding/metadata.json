@@ -1,0 +1,39 @@
+{
+  "name": "local-coding",
+  "repo": "geeks-accelerator/ollama-herd",
+  "path": "skills/local-coding/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/geeks-accelerator/ollama-herd",
+  "dir_name": "local-coding",
+  "downloaded_at": "2026-10-15T03:48:29.876843Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, debug, refactor",
+    "score": 4,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "geeks-accelerator",
+  "source_url": "https://github.com/geeks-accelerator/ollama-herd/blob/main/skills/local-coding/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/geeks-accelerator/ollama-herd/blob/main/skills/local-coding/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Local coding assistant \u2014 run DeepSeek-Coder, Codestral, StarCoder, and Qwen-Coder across your device fleet. Code generation, review, refactoring, and debugging routed to the best available machine. Works with Aider, Continue.dev, Cline, and any OpenAI-compatible coding tool. No cloud API costs, all code stays local."
+}

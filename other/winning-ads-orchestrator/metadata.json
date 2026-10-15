@@ -1,0 +1,37 @@
+{
+  "name": "winning-ads-orchestrator",
+  "repo": "gomarble-ai/marketing-agent",
+  "path": "skills/winning-ads-orchestrator/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/gomarble-ai/marketing-agent",
+  "dir_name": "winning-ads-orchestrator",
+  "downloaded_at": "2026-10-15T03:54:41.821575Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: creative=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "creative",
+      "ideation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gomarble-ai",
+  "source_url": "https://github.com/gomarble-ai/marketing-agent/blob/main/skills/winning-ads-orchestrator/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gomarble-ai/marketing-agent/blob/main/skills/winning-ads-orchestrator/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "The master workflow for going from \"find winning ad ideas for X\" to a shoot-ready creative brief. Routes through competitor-ad-intelligence, own-creative-diagnosis, creative-psychology-hooks, winning-pattern-synthesis, and ad-brief-generator in order, adapting to what data sources are actually available. Use this whenever the user asks broadly for winning ad ideas, a competitive+creative teardown, \"what should we make next,\" or any request that spans research and production rather than a single narrow step \u2014 that's the signal to run the full pipeline instead of just one component skill."
+}

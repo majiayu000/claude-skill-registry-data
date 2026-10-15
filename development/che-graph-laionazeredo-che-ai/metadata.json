@@ -1,0 +1,38 @@
+{
+  "name": "che-graph",
+  "repo": "laionazeredo/che-ai",
+  "path": "paperclip/package/skills/che-graph/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/laionazeredo/che-ai",
+  "dir_name": "che-graph-laionazeredo-che-ai",
+  "downloaded_at": "2026-10-15T04:59:33.231564Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, compile",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "laionazeredo",
+  "source_url": "https://github.com/laionazeredo/che-ai/blob/main/paperclip/package/skills/che-graph/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/laionazeredo/che-ai/blob/main/paperclip/package/skills/che-graph/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Canonical and generic wrapper for Graphify CLI (pipx package graphifyy = 100% local tree-sitter AST knowledge graph, 33 languages). Subcommands: refresh, query 'question', path A B, stats. Output cache stays OUTSIDE WORKTREE in $CHE_WORKSPACE_SHARED/graphify/<related_id>/. Supports fallback chain of alternative Node.js engines (CodeGraph npm, @sentropic/graphify, codebase-vis, @lubab/madar) and a final lightweight grep-based fallback if none installed. Integration with che-xray (auto refresh during onboarding). DOES NOT create artifacts NOR edit .gitignore in the user's worktree."
+}

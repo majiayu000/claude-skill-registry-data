@@ -1,0 +1,42 @@
+{
+  "name": "che-ci-fixer",
+  "repo": "laionazeredo/che-ai",
+  "path": "skills/che-ci-fixer/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/laionazeredo/che-ai",
+  "dir_name": "che-ci-fixer",
+  "downloaded_at": "2026-10-15T04:59:25.203495Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for testing: test, tdd, jest, pytest, integration, e2e, playwright",
+    "score": 7,
+    "runner_up": "development",
+    "runner_up_score": 4,
+    "signals": [
+      "test",
+      "tdd",
+      "jest",
+      "pytest",
+      "integration",
+      "e2e",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "laionazeredo",
+  "source_url": "https://github.com/laionazeredo/che-ai/blob/main/skills/che-ci-fixer/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/laionazeredo/che-ai/blob/main/skills/che-ci-fixer/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Diagnoses and fixes failing CI runs on GitHub Actions (or a PR). Takes a PR URL or Actions run URL, identifies failing jobs/steps with logs, classifies root cause (build/lint/typecheck/infra/flaky/dependency), implements fixes, re-runs locally to confirm. Invoke when user reports CI failure or pastes a PR/Run URL and asks to fix it, or when /che-ci-fix is called."
+}

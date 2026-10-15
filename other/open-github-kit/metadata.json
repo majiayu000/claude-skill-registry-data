@@ -1,0 +1,37 @@
+{
+  "name": "open-github-kit",
+  "repo": "hillstreet-ph/open-connect",
+  "path": ".agents/plugins/open-github-kit/skills/open-github-kit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/hillstreet-ph/open-connect",
+  "dir_name": "open-github-kit",
+  "downloaded_at": "2026-10-15T04:09:32.932092Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "ci",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hillstreet-ph",
+  "source_url": "https://github.com/hillstreet-ph/open-connect/blob/main/.agents/plugins/open-github-kit/skills/open-github-kit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hillstreet-ph/open-connect/blob/main/.agents/plugins/open-github-kit/skills/open-github-kit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Operate authorized GitHub repositories end to end, including branches, pull requests, Actions, releases, packages, deployments, issues, and settings. Use when building, repairing, publishing, or auditing GitHub-backed applications while preserving branch protection and least privilege."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "skill-architect",
+  "repo": "gabrielauzier/financials",
+  "path": ".github/skills/skill-architect/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/gabrielauzier/financials",
+  "dir_name": "skill-architect",
+  "downloaded_at": "2026-10-15T03:44:00.996803Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=3, workflow=3",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 3,
+    "signals": [
+      "automation",
+      "workflow",
+      "planning"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gabrielauzier",
+  "source_url": "https://github.com/gabrielauzier/financials/blob/main/.github/skills/skill-architect/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gabrielauzier/financials/blob/main/.github/skills/skill-architect/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Expert guide for designing and building high-quality skills from scratch through structured conversation. Use when someone wants to create a new skill, build a skill, design a skill, or asks for help making Agents do something consistently. Also use when someone says \"turn this into a skill\", \"I want to automate this workflow\", \"how do I teach my Agent to do X\", or mentions creating SKILL.md files. Covers standalone skills and MCP-enhanced workflows. Do NOT use for creating subagents (use subagent-creator) or technical design documents (use create-technical-design-doc)."
+}

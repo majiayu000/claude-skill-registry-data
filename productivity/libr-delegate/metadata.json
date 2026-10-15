@@ -1,0 +1,38 @@
+{
+  "name": "libr-delegate",
+  "repo": "fritzprix/libr-agent",
+  "path": ".agents/skills/libr-delegate/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/fritzprix/libr-agent",
+  "dir_name": "libr-delegate",
+  "downloaded_at": "2026-10-15T03:42:05.095785Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: automation, workflow, task",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "automation",
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fritzprix",
+  "source_url": "https://github.com/fritzprix/libr-agent/blob/main/.agents/skills/libr-delegate/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fritzprix/libr-agent/blob/main/.agents/skills/libr-delegate/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Delegate work to a running LibrAgent desktop/headless instance via the local HTTP Session API (`POST /api/sessions`, messages, status, children, resume, terminate, delete). Use from Cursor (or other external harnesses) when LibrAgent is up and you need a LibrAgent session to run a task \u2014 optionally with `parentSessionId` lineage. After work: extract message history (session transcript / API-side \"trace\"), then terminate+delete one-shot sessions. Triggers: Session API, /api/sessions, parentSessionId, curl session, HTTP delegate to LibrAgent, \"LibrAgent\uc5d0 \uc704\uc784\", \"\uc138\uc158 API\ub85c \uc790\uc2dd \ub744\uc6cc\", Harbor/bench spawn, session cleanup, delete session, extract transcript. NEVER for LibrAgent-internal `agent__spawnSession` flows (that is the in-app `delegate` skill). NEVER invent MCP tool names here."
+}

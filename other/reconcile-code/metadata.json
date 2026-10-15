@@ -1,0 +1,36 @@
+{
+  "name": "reconcile-code",
+  "repo": "kotaroyamame/formal-agent-contracts",
+  "path": "skills/reconcile-code/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/kotaroyamame/formal-agent-contracts",
+  "dir_name": "reconcile-code",
+  "downloaded_at": "2026-10-15T04:55:28.556975Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category data scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "data"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kotaroyamame",
+  "source_url": "https://github.com/kotaroyamame/formal-agent-contracts/blob/master/skills/reconcile-code/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kotaroyamame/formal-agent-contracts/blob/master/skills/reconcile-code/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Reconcile existing code with the confirmed VDM-SL specification. Compare spec vs code item-by-item, generate a diff report, produce code fixes prioritized by Finding category, and auto-generate tests. Triggered by: \"reconcile code with spec\", \"fix code to match spec\", \u300c\u4ed5\u69d8\u3068\u30b3\u30fc\u30c9\u3092\u7167\u5408\u3057\u3066\u300d\u300c\u30b3\u30fc\u30c9\u3092\u4ed5\u69d8\u306b\u5408\u308f\u305b\u3066\u300d\u300c\u5dee\u5206\u3092\u51fa\u3057\u3066\u300d\u300c\u30b3\u30fc\u30c9\u3092\u76f4\u3057\u3066\u300d"
+}

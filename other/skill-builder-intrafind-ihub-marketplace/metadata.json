@@ -1,0 +1,37 @@
+{
+  "name": "skill-builder",
+  "repo": "intrafind/ihub-marketplace",
+  "path": "skills/skill-builder/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/intrafind/ihub-marketplace",
+  "dir_name": "skill-builder-intrafind-ihub-marketplace",
+  "downloaded_at": "2026-10-15T04:23:10.452647Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: communication=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "email",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "intrafind",
+  "source_url": "https://github.com/intrafind/ihub-marketplace/blob/main/skills/skill-builder/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/intrafind/ihub-marketplace/blob/main/skills/skill-builder/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Interviews the user about a repeatable task and turns the answers into a ready-to-import iHub skill: a SKILL.md with valid name and trigger-ready description, step-by-step instructions, output templates, guardrails, optional reference files, test prompts, and import instructions. Also converts existing prompts, Gems, custom GPT instructions, checklists, or playbooks into skills, and reviews or improves existing SKILL.md files. Use when the user wants to create, write, convert, migrate, review, or improve a skill, or says they keep repeating the same instructions and want to save them."
+}

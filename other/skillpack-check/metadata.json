@@ -1,0 +1,37 @@
+{
+  "name": "skillpack-check",
+  "repo": "garrytan/gbrain",
+  "path": "skills/skillpack-check/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/garrytan/gbrain",
+  "dir_name": "skillpack-check",
+  "downloaded_at": "2026-10-15T03:46:18.657016Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "garrytan",
+  "source_url": "https://github.com/garrytan/gbrain/blob/master/skills/skillpack-check/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/garrytan/gbrain/blob/master/skills/skillpack-check/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run `gbrain skillpack-check` to produce an agent-readable JSON health report\nfor the gbrain install. Wraps `gbrain doctor` + `gbrain apply-migrations\n--list` so a host agent (your OpenClaw's morning-briefing, any OpenClaw cron)\ncan see at a glance whether the skillpack needs attention.\n\nUse when the user asks \"is gbrain healthy?\", when a cron fires a morning\ncheck, or proactively when something seems off (jobs not running, brain\nnot updating, autopilot silent)."
+}

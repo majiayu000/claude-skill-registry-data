@@ -1,0 +1,37 @@
+{
+  "name": "know-your-customer",
+  "repo": "feliksness/Quartzite-Prompt-Library",
+  "path": "skills/03_banking/know-your-customer/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/feliksness/Quartzite-Prompt-Library",
+  "dir_name": "know-your-customer",
+  "downloaded_at": "2026-10-15T03:36:21.506467Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, database",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "feliksness",
+  "source_url": "https://github.com/feliksness/Quartzite-Prompt-Library/blob/main/skills/03_banking/know-your-customer/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/feliksness/Quartzite-Prompt-Library/blob/main/skills/03_banking/know-your-customer/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Guide customer onboarding identification, due diligence, and profile maintenance under FINRA Rule 2090, the CIP rules, and the FinCEN CDD Rule. Use when the user asks about onboarding identity verification, beneficial ownership collection for entity accounts, enhanced due diligence for PEPs or high-risk customers at account opening, assigning the initial customer risk rating, KYC refresh triggers, or documentary vs non-documentary verification. Also trigger when users mention 'account opening requirements', 'who is the beneficial owner', 'new client identity check', 'how often to update KYC', 'essential facts for the account', 'foreign customer onboarding', or ask what information must be gathered before opening an account. (For ongoing transaction monitoring, SAR filing, and surveillance-driven risk re-rating, use anti-money-laundering.)"
+}
