@@ -1,0 +1,48 @@
+{
+  "name": "takeout-coupon",
+  "description": "Requires Python 3 with requests for the helper and a public coupon API (no account or API key); claim links are affiliate (CPS) URLs and requests carry anonymous channel and install-id parameters. Returns Meituan, Ele.me/Taobao Shangou and JD food-delivery coupon codes verbatim for copying into each app.",
+  "repo": "moooai/takeout-coupon",
+  "path": "SKILL.md",
+  "github_branch": "main",
+  "github_commit_sha": "a4f393b891c8d7d0d81c53580651c570cd3d4e6c",
+  "assets_verified_at": "2026-10-16T16:13:28.025641Z",
+  "category": "productivity",
+  "tags": [
+    "coupons",
+    "food-delivery",
+    "meituan",
+    "eleme",
+    "shopping",
+    "deals",
+    "chinese",
+    "cps-affiliate",
+    "claude-code"
+  ],
+  "stars": 1,
+  "source": "Community Skills",
+  "dir_name": "takeout-coupon",
+  "archive_mode": "directory",
+  "bundled_files": [
+    "LICENSE",
+    "README.md",
+    "assets/eleme-sample1.png",
+    "assets/meituan-sample1.png",
+    "references/api_documentation.md",
+    "scripts/fetch_coupons.py"
+  ],
+  "bundled_file_blobs": {
+    "LICENSE": "b285ea25fefe201c29fb551f0b314896c186a63a",
+    "README.md": "21673e3a514048bda3cfe991cca9fb42b00d9983",
+    "assets/eleme-sample1.png": "a0e9df98f386aab9af7e27590b34b08e6017650c",
+    "assets/meituan-sample1.png": "59df2b4c4a81d101c303362defe10489a4f4e97c",
+    "references/api_documentation.md": "dabc0b13b837b56a4751d5ceb8ebe5a369eb04a6",
+    "scripts/fetch_coupons.py": "73d372e2d9d03fa4bc603bc3287684e271c2012a"
+  },
+  "author": "moooai",
+  "source_url": "https://github.com/moooai/takeout-coupon/blob/main/SKILL.md",
+  "license": "MIT-0",
+  "copyright": "Copyright (c) 2026 moooai",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible"
+}
