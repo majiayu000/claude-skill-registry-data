@@ -1,0 +1,39 @@
+{
+  "name": "operating-vitest-agent",
+  "repo": "spencerbeggs/vitest-agent",
+  "path": "plugin/builds/copilot/skills/operating-vitest-agent/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/spencerbeggs/vitest-agent",
+  "dir_name": "operating-vitest-agent-spencerbeggs-vitest-agent-2",
+  "downloaded_at": "2026-10-17T18:28:42.862586Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "spencerbeggs",
+  "source_url": "https://github.com/spencerbeggs/vitest-agent/blob/main/plugin/builds/copilot/skills/operating-vitest-agent/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/spencerbeggs/vitest-agent/blob/main/plugin/builds/copilot/skills/operating-vitest-agent/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "How to drive the vitest-agent MCP tools correctly \u2014 the non-obvious operational facts (run_tests scoping, why subset runs \"fail\" coverage, the consoleLeaks signal, the VITEST_AGENT_CONSOLE escape hatch, auto-recovered attribution) that otherwise cost trial-and-error. Also use when: Load when operating a project through the vitest-agent MCP tools. Trigger phrases: \"run the tests via run_tests\", \"run_tests filter\", \"how do I scope a run\", \"why does my single-file run fail coverage\", \"coverage threshold on a subset run\", \"consoleLeaks\", \"stray console output in tests\", \"VITEST_AGENT_CONSOLE\", \"how do I run one test file with vitest-agent\", \"run_tests return shape\", \"no-match result\", \"which tests classified as flaky\". Also load at the start of an agent session driving a vitest-agent project, before the first run_tests call."
+}

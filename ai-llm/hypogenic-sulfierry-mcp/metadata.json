@@ -1,0 +1,38 @@
+{
+  "name": "hypogenic",
+  "repo": "sulfierry/mcp",
+  "path": "skills/hypogenic/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/sulfierry/mcp",
+  "dir_name": "hypogenic-sulfierry-mcp",
+  "downloaded_at": "2026-10-17T18:34:36.985053Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: ai, llm, prompt",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sulfierry",
+  "source_url": "https://github.com/sulfierry/mcp/blob/main/skills/hypogenic/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sulfierry/mcp/blob/main/skills/hypogenic/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Automated LLM-driven hypothesis generation and testing on tabular datasets. Use when you want to systematically explore hypotheses about patterns in empirical data (e.g., deception detection, content analysis). Combines literature insights with data-driven hypothesis testing. For manual hypothesis formulation use hypothesis-generation; for creative ideation use scientific-brainstorming."
+}

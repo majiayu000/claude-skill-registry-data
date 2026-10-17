@@ -1,0 +1,37 @@
+{
+  "name": "defend-colony",
+  "repo": "pjt222/agent-almanac",
+  "path": "skills/defend-colony/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/pjt222/agent-almanac",
+  "dir_name": "defend-colony",
+  "downloaded_at": "2026-10-17T17:31:26.459936Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pjt222",
+  "source_url": "https://github.com/pjt222/agent-almanac/blob/main/skills/defend-colony/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pjt222/agent-almanac/blob/main/skills/defend-colony/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Implement layered collective defense using alarm signaling, role mobilization, and proportional response. Covers threat detection, alert propagation, immune response patterns, escalation tiers, and post-incident recovery for distributed systems and organizations. Use when designing defense-in-depth where no single guardian covers all threats, building incident response that scales with severity, or when current defense is over-reactive to every alert or under-reactive to genuine threats."
+}

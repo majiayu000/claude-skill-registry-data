@@ -1,0 +1,37 @@
+{
+  "name": "find-root-cause",
+  "repo": "slowernet/dietpowers",
+  "path": "skills/find-root-cause/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/slowernet/dietpowers",
+  "dir_name": "find-root-cause",
+  "downloaded_at": "2026-10-17T18:23:34.357264Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "slowernet",
+  "source_url": "https://github.com/slowernet/dietpowers/blob/main/skills/find-root-cause/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/slowernet/dietpowers/blob/main/skills/find-root-cause/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Finds a bug's root cause and fixes it once, at the source, with a regression test. Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes."
+}

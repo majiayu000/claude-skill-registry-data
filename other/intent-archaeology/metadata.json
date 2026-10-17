@@ -1,0 +1,37 @@
+{
+  "name": "intent-archaeology",
+  "repo": "skillshop-ostyles/skillshop-agents",
+  "path": "skills/quality/intent-archaeology/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/skillshop-ostyles/skillshop-agents",
+  "dir_name": "intent-archaeology",
+  "downloaded_at": "2026-10-17T18:21:51.667494Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "skillshop-ostyles",
+  "source_url": "https://github.com/skillshop-ostyles/skillshop-agents/blob/main/skills/quality/intent-archaeology/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/skillshop-ostyles/skillshop-agents/blob/main/skills/quality/intent-archaeology/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Reconstructs WHY code exists the way it does: mines git history (log -follow, blame, ticket references) for a file or symbol, then has the LLM rebuild the intent story with commit-level evidence and confidence ratings. Read-only. Trigger: /intent"
+}

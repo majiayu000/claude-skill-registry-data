@@ -1,0 +1,37 @@
+{
+  "name": "enhance-glyph",
+  "repo": "pjt222/agent-almanac",
+  "path": "skills/enhance-glyph/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/pjt222/agent-almanac",
+  "dir_name": "enhance-glyph",
+  "downloaded_at": "2026-10-17T17:31:32.094954Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "pipeline",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pjt222",
+  "source_url": "https://github.com/pjt222/agent-almanac/blob/main/skills/enhance-glyph/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pjt222/agent-almanac/blob/main/skills/enhance-glyph/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Improve an existing R-based pictogram glyph for the visualization layer. Covers visual audit of the current glyph, diagnosis of specific issues (proportions, readability, glow balance), targeted modifications to the glyph function, re-rendering, and before/after comparison. Works for skill, agent, and team glyphs. Use when a glyph renders poorly at small sizes, its visual metaphor is unclear, it has proportion issues, the neon glow effect is unbalanced, or after adding new palettes or changing the rendering pipeline."
+}

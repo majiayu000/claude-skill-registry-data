@@ -1,0 +1,37 @@
+{
+  "name": "uat-plan",
+  "repo": "qa-aman/claude-skills",
+  "path": "skills/by-role/business-analyst/uat-plan/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/qa-aman/claude-skills",
+  "dir_name": "uat-plan",
+  "downloaded_at": "2026-10-17T17:38:57.254669Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: product=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "feature"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "qa-aman",
+  "source_url": "https://github.com/qa-aman/claude-skills/blob/main/skills/by-role/business-analyst/uat-plan/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/qa-aman/claude-skills/blob/main/skills/by-role/business-analyst/uat-plan/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generate a User Acceptance Testing plan with scenarios and sign-off criteria. Use when the user says \"UAT plan\", \"acceptance testing\", \"user testing plan\", \"how do we test this with users\", \"test scenarios for business validation\", \"sign-off criteria\", \"go/no-go for release\", \"acceptance test cases\", \"validate with stakeholders\" - even if they don't explicitly say \"UAT\"."
+}

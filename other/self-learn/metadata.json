@@ -1,0 +1,37 @@
+{
+  "name": "self-learn",
+  "repo": "valpere/session-indexer",
+  "path": ".claude/skills/self-learn/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/valpere/session-indexer",
+  "dir_name": "self-learn",
+  "downloaded_at": "2026-10-17T19:02:42.500515Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "valpere",
+  "source_url": "https://github.com/valpere/session-indexer/blob/main/.claude/skills/self-learn/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/valpere/session-indexer/blob/main/.claude/skills/self-learn/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Self-learning system \u2014 log mistakes/wins, run retrospectives, promote patterns to hard rules, and coach on workflow quality. Usage: /self-learn [log|retro|status|init|tips]"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "exec-summary",
+  "repo": "qa-aman/claude-skills",
+  "path": "skills/by-role/consultant/exec-summary/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/qa-aman/claude-skills",
+  "dir_name": "exec-summary-qa-aman-claude-skills",
+  "downloaded_at": "2026-10-17T17:38:52.321474Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: business=2, creative=2",
+    "score": 2,
+    "runner_up": "creative",
+    "runner_up_score": 2,
+    "signals": [
+      "business",
+      "operations"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "qa-aman",
+  "source_url": "https://github.com/qa-aman/claude-skills/blob/main/skills/by-role/consultant/exec-summary/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/qa-aman/claude-skills/blob/main/skills/by-role/consultant/exec-summary/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write an executive summary using the Pyramid Principle SCQA structure. Use when a consultant says \"write an executive summary\", \"I need a one-pager for the exec\", \"how do I open this report\", \"write me the intro for this deck\", \"draft the cover memo\", \"I need to frame the findings\", \"executive doesn't have time to read the full report\", \"help me write the storyline\", or \"write the situation-complication-answer\". Also trigger when someone has findings or recommendations and needs to communicate them top-down to a time-constrained audience."
+}

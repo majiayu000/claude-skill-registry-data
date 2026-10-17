@@ -1,0 +1,37 @@
+{
+  "name": "pii-schema-classifier",
+  "repo": "skillshop-ostyles/skillshop-agents",
+  "path": "skills/data/pii-schema-classifier/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/skillshop-ostyles/skillshop-agents",
+  "dir_name": "pii-schema-classifier",
+  "downloaded_at": "2026-10-17T18:21:52.022199Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "skillshop-ostyles",
+  "source_url": "https://github.com/skillshop-ostyles/skillshop-agents/blob/main/skills/data/pii-schema-classifier/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/skillshop-ostyles/skillshop-agents/blob/main/skills/data/pii-schema-classifier/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "PII schema classifier: scans DDL/ORM models for columns that may contain sensitive data, classifies by sensitivity level using naming patterns, and flags ambiguous columns for LLM domain review. Read-only. Audience: Senior. Trigger: /pii-scan"
+}

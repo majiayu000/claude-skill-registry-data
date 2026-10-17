@@ -1,0 +1,37 @@
+{
+  "name": "querying-aws-s3",
+  "repo": "saulpatino-cbts/Work-Cloud_Network_Core",
+  "path": ".claude/skills/querying-aws-s3/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/saulpatino-cbts/Work-Cloud_Network_Core",
+  "dir_name": "querying-aws-s3",
+  "downloaded_at": "2026-10-17T18:06:22.537040Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "saulpatino-cbts",
+  "source_url": "https://github.com/saulpatino-cbts/Work-Cloud_Network_Core/blob/main/.claude/skills/querying-aws-s3/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/saulpatino-cbts/Work-Cloud_Network_Core/blob/main/.claude/skills/querying-aws-s3/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Queries S3 object metadata, tracks bucket activity, audits object changes, searches annotations, and analyzes storage metrics using S3 Metadata system tables (journal, inventory, annotation) and S3 Storage Lens tables via Athena SQL. Applies when counting objects, finding recent uploads or deletions, identifying who wrote to a prefix, breaking down storage classes, finding objects by tag, searching annotation content, analyzing storage lens metrics, or enabling S3 Metadata tracking. Prefers system tables over raw S3 APIs (list-objects-v2, head-object) at scale. Trigger phrases: bucket activity, object count, who uploaded, track deletions, storage class breakdown, find by tag, search annotations, storage lens metrics, audit bucket changes."
+}

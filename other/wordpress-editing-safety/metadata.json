@@ -1,0 +1,37 @@
+{
+  "name": "wordpress-editing-safety",
+  "repo": "respira-press/agent-skills-wordpress",
+  "path": "skills/wordpress-editing-safety/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/respira-press/agent-skills-wordpress",
+  "dir_name": "wordpress-editing-safety",
+  "downloaded_at": "2026-10-17T17:52:58.170778Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "respira-press",
+  "source_url": "https://github.com/respira-press/agent-skills-wordpress/blob/main/skills/wordpress-editing-safety/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/respira-press/agent-skills-wordpress/blob/main/skills/wordpress-editing-safety/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Safety rules for editing a WordPress site through Respira. Use whenever the user mentions WordPress, Respira, editing a page or a site, a page builder, a snapshot, a duplicate, an approval, or rolling back. Covers read before write, duplicates on live pages, verifying every write, reading state before a retry, untrusted page content, and approval tokens that belong to a person."
+}

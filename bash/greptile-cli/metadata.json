@@ -1,0 +1,39 @@
+{
+  "name": "greptile-cli",
+  "repo": "skogai2/skogai",
+  "path": ".agents/skills/greptile-cli/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/skogai2/skogai",
+  "dir_name": "greptile-cli",
+  "downloaded_at": "2026-10-17T18:22:15.154851Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "skogai2",
+  "source_url": "https://github.com/skogai2/skogai/blob/master/.agents/skills/greptile-cli/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/skogai2/skogai/blob/master/.agents/skills/greptile-cli/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Reference for the Greptile CLI (`greptile`): reviewing a local branch before pushing, reading structured `--json` findings, interpreting exit codes, authenticating, and saving settings. Use when running any `greptile` command, when the user asks for a Greptile review of local changes, when wiring `greptile` into a hook, script, or CI job, or when interpreting Greptile review output. Covers `review`, `review status`, `review show`, `config`, `settings`, `login`, `whoami`, `skills`, and `fix`."
+}

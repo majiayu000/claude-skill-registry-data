@@ -1,0 +1,39 @@
+{
+  "name": "full-repo-review",
+  "repo": "seanyofthedead/omaha-oracle",
+  "path": ".claude/skills/full-repo-review/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/seanyofthedead/omaha-oracle",
+  "dir_name": "full-repo-review-seanyofthedead-omaha-oracle",
+  "downloaded_at": "2026-10-17T18:08:56.613180Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, refactor",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "seanyofthedead",
+  "source_url": "https://github.com/seanyofthedead/omaha-oracle/blob/main/.claude/skills/full-repo-review/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/seanyofthedead/omaha-oracle/blob/main/.claude/skills/full-repo-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run comprehensive 3-wave review against all source files in the repo, producing a prioritized issue backlog. Use for \"full repo review\", \"review entire repo\", \"codebase health check\", \"review all files\", \"full codebase review\". Do NOT use for PR-scoped reviews (use comprehensive-review) or single-concern reviews (use individual agents)."
+}

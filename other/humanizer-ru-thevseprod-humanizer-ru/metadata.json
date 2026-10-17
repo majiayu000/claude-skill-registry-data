@@ -1,0 +1,36 @@
+{
+  "name": "humanizer-ru",
+  "repo": "thevseprod/humanizer-ru",
+  "path": "SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/thevseprod/humanizer-ru",
+  "dir_name": "humanizer-ru-thevseprod-humanizer-ru",
+  "downloaded_at": "2026-10-17T18:46:33.159893Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "thevseprod",
+  "source_url": "https://github.com/thevseprod/humanizer-ru/blob/main/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/thevseprod/humanizer-ru/blob/main/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Rewrite text so it reads like a real person wrote it, not an AI. Auto-detects Russian vs English and applies the matching rule set. Use when the user asks to humanize text, remove the \"AI smell\", de-AI, or make AI output sound natural - especially for Russian. Russian requests count too - \u043e\u0447\u0435\u043b\u043e\u0432\u0435\u0447\u044c, \u043f\u0435\u0440\u0435\u043f\u0438\u0448\u0438 \u043a\u0430\u043a \u0447\u0435\u043b\u043e\u0432\u0435\u043a, \u043e\u0436\u0438\u0432\u0438 \u0442\u0435\u043a\u0441\u0442, \u0443\u0431\u0435\u0440\u0438 \u0437\u0430\u043f\u0430\u0445 \u0418\u0418, \u0441\u0434\u0435\u043b\u0430\u0439 \u0436\u0438\u0432\u0435\u0435, \u0437\u0432\u0443\u0447\u0438\u0442 \u043a\u0430\u043a \u0440\u043e\u0431\u043e\u0442, \u0443\u0431\u0435\u0440\u0438 \u043a\u0430\u043d\u0446\u0435\u043b\u044f\u0440\u0438\u0442. Also use when asked whether a text was written by AI - \u043d\u0435\u0439\u0440\u043e\u0441\u0435\u0442\u044c \u043f\u0438\u0441\u0430\u043b\u0430?, \u043f\u043e\u0445\u043e\u0436\u0435 \u043d\u0430 ChatGPT?, \u0432\u0438\u0434\u043d\u043e \u043b\u0438, \u0447\u0442\u043e \u044d\u0442\u043e \u0418\u0418, \u0447\u0435\u043b\u043e\u0432\u0435\u043a \u0438\u043b\u0438 \u0431\u043e\u0442 \u043f\u0438\u0441\u0430\u043b, did AI write this? - then check and report findings without rewriting. While installed, also keep your own Russian and English writing free of the quick-list stock phrases, silently; never edit the user's text unless asked."
+}

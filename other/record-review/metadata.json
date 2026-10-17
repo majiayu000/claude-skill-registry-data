@@ -1,0 +1,36 @@
+{
+  "name": "record-review",
+  "repo": "victorrentea/human-review",
+  "path": "skills/record-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/victorrentea/human-review",
+  "dir_name": "record-review",
+  "downloaded_at": "2026-10-17T19:05:13.004951Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "victorrentea",
+  "source_url": "https://github.com/victorrentea/human-review/blob/main/skills/record-review/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/victorrentea/human-review/blob/main/skills/record-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "After you implemented a change in this conversation, review it adversarially and record what you fixed, declined and assumed in a committed review-points.md, for /human-review to render. Explicit invocation only \u2014 user types /record-review [base]."
+}

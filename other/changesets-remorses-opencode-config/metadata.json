@@ -1,0 +1,37 @@
+{
+  "name": "changesets",
+  "repo": "remorses/opencode-config",
+  "path": "skills/changesets/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/remorses/opencode-config",
+  "dir_name": "changesets-remorses-opencode-config",
+  "downloaded_at": "2026-10-17T17:51:56.002686Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "remorses",
+  "source_url": "https://github.com/remorses/opencode-config/blob/main/skills/changesets/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/remorses/opencode-config/blob/main/skills/changesets/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Changeset-based versioning workflow. Manually add .changeset/*.md files to describe changes instead of editing CHANGELOG.md directly. Changesets are consumed at publish time to bump versions and generate changelogs. ALWAYS load this skill when a repo has a .changeset/ folder. Before writing a changeset, read pending ones and update or remove overlapping entries so the next changelog describes the final user-facing behavior."
+}

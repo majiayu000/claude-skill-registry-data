@@ -1,0 +1,38 @@
+{
+  "name": "protenix",
+  "repo": "sulfierry/mcp",
+  "path": "skills/protenix/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sulfierry/mcp",
+  "dir_name": "protenix",
+  "downloaded_at": "2026-10-17T18:34:32.389644Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "sulfierry",
+  "source_url": "https://github.com/sulfierry/mcp/blob/main/skills/protenix/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sulfierry/mcp/blob/main/skills/protenix/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Structure prediction using Protenix v1 (AF3-class, 368M params). Use this skill when: (1) Predicting protein or complex structure from sequence, (2) Validating designed binders by refolding, (3) Generating confidence metrics (ipTM, pTM, pLDDT), (4) Multi-seed ensemble validation, (5) Predicting protein-ligand complexes.\nFor design generation, use proteus-prot or boltzgen instead. For scoring existing predictions, use by-scoring. For full pipeline orchestration, use by-design-workflow."
+}

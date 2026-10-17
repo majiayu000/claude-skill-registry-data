@@ -1,0 +1,37 @@
+{
+  "name": "route53",
+  "repo": "saulpatino-cbts/Work-Cloud_Network_Core",
+  "path": ".claude/skills/route53/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/saulpatino-cbts/Work-Cloud_Network_Core",
+  "dir_name": "route53-saulpatino-cbts-work-cloud-network-c",
+  "downloaded_at": "2026-10-17T18:06:08.551412Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "saulpatino-cbts",
+  "source_url": "https://github.com/saulpatino-cbts/Work-Cloud_Network_Core/blob/main/.claude/skills/route53/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/saulpatino-cbts/Work-Cloud_Network_Core/blob/main/.claude/skills/route53/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Configures Amazon Route 53 DNS: public and private records, traffic-steering routing policies, health checks, DNS Firewall, Route 53 Profiles, VPC Resolver (also known as Route 53 Resolver) for hybrid and Outposts networks, and Global Resolver. Applicable when the customer wants to point a hostname at a target, split or fail over traffic across endpoints, monitor an endpoint, block malicious domains, centralize DNS across accounts, or resolve private DNS across a hybrid network. Routes to the right per-task procedure in references. Does not cover CloudFront-specific setup (see the route53-cloudfront skill) or non-DNS networking."
+}

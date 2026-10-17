@@ -1,0 +1,38 @@
+{
+  "name": "codex-app-link",
+  "repo": "transcendr/slopware-skills",
+  "path": "plugins/codex-app-link/skills/codex-app-link/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/transcendr/slopware-skills",
+  "dir_name": "codex-app-link",
+  "downloaded_at": "2026-10-17T18:55:59.638859Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "transcendr",
+  "source_url": "https://github.com/transcendr/slopware-skills/blob/main/plugins/codex-app-link/skills/codex-app-link/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/transcendr/slopware-skills/blob/main/plugins/codex-app-link/skills/codex-app-link/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Create Codex threads and send messages into Codex desktop-app (GUI) threads, then wait for and read their replies, so Claude can orchestrate Codex agents. Use when the user asks to message, direct, steer, start, check on, or hand work to a Codex thread or agent (often given as a thread ID like 01a10323-9edd-...), or to run Codex as a sub-agent."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "codex-cloud-start",
+  "repo": "stevessr/agent-ebpf-filter",
+  "path": ".agents/skills/codex-cloud-start/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/stevessr/agent-ebpf-filter",
+  "dir_name": "codex-cloud-start",
+  "downloaded_at": "2026-10-17T18:32:12.858355Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "stevessr",
+  "source_url": "https://github.com/stevessr/agent-ebpf-filter/blob/master/.agents/skills/codex-cloud-start/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/stevessr/agent-ebpf-filter/blob/master/.agents/skills/codex-cloud-start/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Start and health-check the agent-ebpf-filter Codex Cloud frontend or docs development services without elevated kernel privileges."
+}

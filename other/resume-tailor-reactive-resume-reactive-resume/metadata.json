@@ -1,0 +1,37 @@
+{
+  "name": "resume-tailor",
+  "repo": "reactive-resume/reactive-resume",
+  "path": "plugins/reactive-resume/skills/resume-tailor/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/reactive-resume/reactive-resume",
+  "dir_name": "resume-tailor-reactive-resume-reactive-resume",
+  "downloaded_at": "2026-10-17T17:49:20.620724Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=2, writing=2",
+    "score": 2,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "docker",
+      "kubernetes"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "reactive-resume",
+  "source_url": "https://github.com/reactive-resume/reactive-resume/blob/main/plugins/reactive-resume/skills/resume-tailor/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/reactive-resume/reactive-resume/blob/main/plugins/reactive-resume/skills/resume-tailor/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Tailors one resume to one specific job posting. Builds a must-have/nice-to-have requirement table, an evidence map, gap questions instead of invention, a tailored copy (headline, summary, bullet order, skills), honest ATS guidance, and an optional cover letter for that posting. Use when the user says \"tailor my resume to this job\", \"customize my CV for this posting\", \"match my resume to this job description\", \"what keywords am I missing\", \"make my resume ATS-friendly for this role\", \"will this get past the ATS\", \"the job asks for X and I don't have it\", or pastes a job ad with a resume. Works from pasted text; uses Reactive Resume MCP tools when connected. Not for bullets with no target job (resume-bullet-writer), what belongs on a resume or a general audit (resume-content-guide), tracking or follow-ups (job-application-manager), or interview prep and practice (interview-prep, mock-interview)."
+}

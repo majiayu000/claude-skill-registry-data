@@ -1,0 +1,37 @@
+{
+  "name": "cloudflare-workers",
+  "repo": "remorses/opencode-config",
+  "path": "skills/cloudflare-workers/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/remorses/opencode-config",
+  "dir_name": "cloudflare-workers-remorses-opencode-config",
+  "downloaded_at": "2026-10-17T17:52:01.684588Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "remorses",
+  "source_url": "https://github.com/remorses/opencode-config/blob/main/skills/cloudflare-workers/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/remorses/opencode-config/blob/main/skills/cloudflare-workers/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Cloudflare Workers and Durable Objects conventions for TypeScript projects. Covers wrangler.jsonc configuration, type-safe env via `wrangler types` and `import { env } from 'cloudflare:workers'`, secrets.required for typed secrets, custom_domain for routing, preview/production environments, deploy scripts, Durable Objects with SQLite, Spiceflow as the web framework with Vite, WebSocket close codes on Durable Objects (1006 isolate kill, always reconnect), and Durable Object OOM detection (exceededMemory vs scriptThrewException, clientDisconnected, responseStreamDisconnected) plus heap profiling. ALWAYS load this skill when a project uses wrangler, Cloudflare Workers, Durable Objects, or deploys to Cloudflare. Load it before writing any wrangler config, worker code, deploy scripts, or Durable Object WebSocket clients. Load durable-object-memory.md when counting OOMs, splitting DO invocation errors, taking heap snapshots, or reducing isolate RSS."
+}

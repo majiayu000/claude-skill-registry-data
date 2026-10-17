@@ -1,0 +1,37 @@
+{
+  "name": "test-assets",
+  "repo": "robium-ai/robium",
+  "path": "skills/test-assets/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/robium-ai/robium",
+  "dir_name": "test-assets",
+  "downloaded_at": "2026-10-17T17:56:26.605713Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: model, training",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "robium-ai",
+  "source_url": "https://github.com/robium-ai/robium/blob/main/skills/test-assets/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/robium-ai/robium/blob/main/skills/test-assets/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Choose and manage reproducible worlds, models, datasets, and recordings for robotics tests."
+}

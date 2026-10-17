@@ -1,0 +1,37 @@
+{
+  "name": "domain-narrator",
+  "repo": "skillshop-ostyles/skillshop-agents",
+  "path": "skills/understanding/domain-narrator/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/skillshop-ostyles/skillshop-agents",
+  "dir_name": "domain-narrator",
+  "downloaded_at": "2026-10-17T18:21:57.373859Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "skillshop-ostyles",
+  "source_url": "https://github.com/skillshop-ostyles/skillshop-agents/blob/main/skills/understanding/domain-narrator/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/skillshop-ostyles/skillshop-agents/blob/main/skills/understanding/domain-narrator/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Domain narrator: reads all public symbols in a codebase, clusters them by call-graph density into business domains, and writes plain-English descriptions of what each domain does. Collector extracts public symbols and call graphs; LLM per cluster produces domain name, business responsibility (1-2 sentences), and business rules extracted from code. Read-only. Audience: Both. Trigger: /explain"
+}

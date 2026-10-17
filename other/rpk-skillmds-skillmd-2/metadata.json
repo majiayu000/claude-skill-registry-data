@@ -1,0 +1,37 @@
+{
+  "name": "rpk",
+  "repo": "skillmds/skillmd",
+  "path": "plugins/planning-product/skills/rpk/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/skillmds/skillmd",
+  "dir_name": "rpk-skillmds-skillmd-2",
+  "downloaded_at": "2026-10-17T18:21:37.999920Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "skillmds",
+  "source_url": "https://github.com/skillmds/skillmd/blob/main/plugins/planning-product/skills/rpk/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/skillmds/skillmd/blob/main/plugins/planning-product/skills/rpk/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Install and configure the rpk CLI, the single binary for all Redpanda operations, including installing it on macOS, Linux, and Docker, and setting up profiles (rpk.yaml) and connection settings. Use when installing rpk, creating or switching rpk profiles, configuring broker/admin/registry endpoints or SASL/TLS credentials, using -X flags or RPK_ environment variables, connecting to self-hosted or Redpanda Cloud clusters, or checking/applying an Enterprise license. This is the hub skill for command-group discovery; for topic/cluster/security/cloud/registry/transform/debug work, see the matching /redpanda:rpk-* skill."
+}

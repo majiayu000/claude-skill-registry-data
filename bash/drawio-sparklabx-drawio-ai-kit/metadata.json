@@ -1,0 +1,39 @@
+{
+  "name": "drawio",
+  "repo": "sparklabx/drawio-ai-kit",
+  "path": "skills/drawio/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/sparklabx/drawio-ai-kit",
+  "dir_name": "drawio-sparklabx-drawio-ai-kit",
+  "downloaded_at": "2026-10-17T18:28:27.931927Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sparklabx",
+  "source_url": "https://github.com/sparklabx/drawio-ai-kit/blob/main/skills/drawio/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sparklabx/drawio-ai-kit/blob/main/skills/drawio/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when the user asks for any draw.io diagram \u2014 cloud architecture (AWS, Azure, GCP, Databricks, multi-cloud, hybrid/DR, landing zone, VPC/network, serverless, data pipeline) or a business process (BPMN, swimlane, workflow with roles). Builds with the drawio-ai layout engine using real stencils, validates, and runs a render self-check. Default output is a .drawio file; PNG/SVG only on request."
+}

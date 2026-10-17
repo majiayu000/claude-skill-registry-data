@@ -1,0 +1,38 @@
+{
+  "name": "pr-pitch-writer",
+  "repo": "qa-aman/claude-skills",
+  "path": "skills/by-role/marketing/pr-pitch-writer/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/qa-aman/claude-skills",
+  "dir_name": "pr-pitch-writer",
+  "downloaded_at": "2026-10-17T17:39:00.495535Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: marketing, content, brand",
+    "score": 3,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "marketing",
+      "content",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "qa-aman",
+  "source_url": "https://github.com/qa-aman/claude-skills/blob/main/skills/by-role/marketing/pr-pitch-writer/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/qa-aman/claude-skills/blob/main/skills/by-role/marketing/pr-pitch-writer/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write personalized pitch emails to journalists, podcasters, newsletter writers, and analysts using AIDA adapted for media pitching and Ryan Holiday's journalist psychology from \"Trust Me I'm Lying.\" Different from press releases (use /press-release-writer for those). Use when the user asks to pitch a journalist, pitch a reporter, \"get coverage in X\", media outreach, podcast pitch, analyst briefing request, or wants to land a story. Reads brand voice and positioning from knowledge/. For the press release itself, see press-release-writer. For the underlying customer story, see case-study-writer."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "plan-capacity",
+  "repo": "pjt222/agent-almanac",
+  "path": "skills/plan-capacity/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/pjt222/agent-almanac",
+  "dir_name": "plan-capacity",
+  "downloaded_at": "2026-10-17T17:31:27.195852Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, feature, metrics",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "feature",
+      "metrics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pjt222",
+  "source_url": "https://github.com/pjt222/agent-almanac/blob/main/skills/plan-capacity/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pjt222/agent-almanac/blob/main/skills/plan-capacity/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Perform capacity planning using historical metrics and growth models. Use predict_linear for forecasting, identify resource constraints, calculate headroom, and recommend scaling actions before saturation. Use before seasonal traffic spikes or product launches, during quarterly capacity reviews, when resource utilization trends upward, or before budget planning cycles."
+}

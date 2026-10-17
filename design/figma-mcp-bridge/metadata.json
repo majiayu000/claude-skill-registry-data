@@ -1,0 +1,39 @@
+{
+  "name": "figma-mcp-bridge",
+  "repo": "reason-machines/design-skills",
+  "path": "skills/figma-mcp-bridge/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/reason-machines/design-skills",
+  "dir_name": "figma-mcp-bridge",
+  "downloaded_at": "2026-10-17T17:49:49.458719Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, component, figma",
+    "score": 4,
+    "runner_up": "ai-llm",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "component",
+      "figma"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "reason-machines",
+  "source_url": "https://github.com/reason-machines/design-skills/blob/main/skills/figma-mcp-bridge/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/reason-machines/design-skills/blob/main/skills/figma-mcp-bridge/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Stream live Figma document data to AI tools via MCP server, bypassing API rate limits for free users"
+}

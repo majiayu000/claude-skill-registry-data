@@ -1,0 +1,39 @@
+{
+  "name": "pi-qemu-release",
+  "repo": "usr-ein/TriMixxx",
+  "path": ".claude/skills/pi-qemu-release/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/usr-ein/TriMixxx",
+  "dir_name": "pi-qemu-release",
+  "downloaded_at": "2026-10-17T19:01:42.857640Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, software",
+    "score": 4,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "usr-ein",
+  "source_url": "https://github.com/usr-ein/TriMixxx/blob/main/.claude/skills/pi-qemu-release/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/usr-ein/TriMixxx/blob/main/.claude/skills/pi-qemu-release/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Build TriMixxx's SD card images and releases with pi-qemu - a deck's dev card from stock Raspberry Pi OS (`pi-qemu image build`), the A/B release card and its RAUC update bundle from HEAD's pi/vX.Y.Z tag (`release build`), each deck's own card with its identity (`release card`), broken updates for the fault tests (`release faults`), an update shipped onto a deck (`deck ship`), and a real deck readied for its first release card (`deck prepare`, bootloader and boot watchdog included). Use when asked to make an image, a release (its version, notes, tag and GitHub release), a deck's card, to ship or rehearse an update, or to prepare a deck; and to try a release on emulated decks before any real deck gets it."
+}

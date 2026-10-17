@@ -1,0 +1,38 @@
+{
+  "name": "medic",
+  "repo": "sno-ai/sno-station-skills",
+  "path": "skills/M-build-and-rollout/medic/skill/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/sno-ai/sno-station-skills",
+  "dir_name": "skill-sno-ai-sno-station-skills-4",
+  "downloaded_at": "2026-10-17T18:25:18.264729Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, cli",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sno-ai",
+  "source_url": "https://github.com/sno-ai/sno-station-skills/blob/main/skills/M-build-and-rollout/medic/skill/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sno-ai/sno-station-skills/blob/main/skills/M-build-and-rollout/medic/skill/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Check that this machine's agent team can work and say what is wrong in plain lines: tools installed, core skills installed, skill commands runnable, hooks configured, Reach seat live, a heartbeat running, both vendors' quota readable, temp space free. Checks only, never repairs. Use on a new machine, when agents stop reaching each other or a long run fails to start, or when the owner asks whether everything is healthy."
+}

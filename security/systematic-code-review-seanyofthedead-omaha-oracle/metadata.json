@@ -1,0 +1,38 @@
+{
+  "name": "systematic-code-review",
+  "repo": "seanyofthedead/omaha-oracle",
+  "path": ".claude/skills/systematic-code-review/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/seanyofthedead/omaha-oracle",
+  "dir_name": "systematic-code-review-seanyofthedead-omaha-oracle",
+  "downloaded_at": "2026-10-17T18:08:57.693153Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "seanyofthedead",
+  "source_url": "https://github.com/seanyofthedead/omaha-oracle/blob/main/.claude/skills/systematic-code-review/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/seanyofthedead/omaha-oracle/blob/main/.claude/skills/systematic-code-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "4-phase code review methodology: UNDERSTAND changes, VERIFY claims against\ncode, ASSESS security/performance/architecture risks, DOCUMENT findings with\nseverity classification. Use when reviewing pull requests, auditing code\nbefore release, evaluating external contributions, or pre-merge verification.\nUse for \"review PR\", \"code review\", \"audit code\", \"check this PR\", or\n\"review my changes\". Do NOT use for writing new code or implementing features."
+}

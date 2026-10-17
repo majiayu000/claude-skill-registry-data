@@ -1,0 +1,37 @@
+{
+  "name": "update",
+  "repo": "t0ddharris/compound-marketing",
+  "path": ".claude/skills/update/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/t0ddharris/compound-marketing",
+  "dir_name": "update",
+  "downloaded_at": "2026-10-17T18:38:03.931126Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: marketing, content",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "marketing",
+      "content"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "t0ddharris",
+  "source_url": "https://github.com/t0ddharris/compound-marketing/blob/main/.claude/skills/update/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/t0ddharris/compound-marketing/blob/main/.claude/skills/update/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Bring this marketing folder up to date with the latest skills and templates from the Compound Marketing starter kit, keeping your own changes. Trigger with /update or when the user mentions 'update compound marketing,' 'get the latest skills,' 'pull updates,' 'upgrade,' or 'is there a new version.'"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "resume-bullet-writer",
+  "repo": "reactive-resume/reactive-resume",
+  "path": "plugins/reactive-resume/skills/resume-bullet-writer/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/reactive-resume/reactive-resume",
+  "dir_name": "resume-bullet-writer",
+  "downloaded_at": "2026-10-17T17:49:23.549110Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: creative=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "creative",
+      "writing"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "reactive-resume",
+  "source_url": "https://github.com/reactive-resume/reactive-resume/blob/main/plugins/reactive-resume/skills/resume-bullet-writer/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/reactive-resume/reactive-resume/blob/main/plugins/reactive-resume/skills/resume-bullet-writer/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Turns resume duties into truthful impact bullets. Questions the user role by role to dig out achievements, asks for real numbers or honest ranges (never invents them), and writes concise bullets in XYZ, CAR, scope or qualitative form. Use when the user says \"rewrite my bullets\", \"make this bullet stronger\", \"quantify my resume\", \"turn my duties into achievements\", \"improve my experience section\", \"my resume sounds boring\", \"I don't have any numbers\", pastes resume lines for feedback, or works in a low-number job (nursing, teaching, care, trades, admin, creative). With the Reactive Resume MCP server connected, it edits experience, project, volunteer and education descriptions with apply_resume_patch after the user approves. Use resume-content-guide instead for which sections or details belong and for summaries or headlines, resume-tailor to fit one job posting, interview-prep or mock-interview for interview stories and practice, and resume-builder to build a resume from scratch."
+}

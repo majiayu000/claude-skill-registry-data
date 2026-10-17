@@ -1,0 +1,39 @@
+{
+  "name": "runbook-automator",
+  "repo": "skillshop-ostyles/skillshop-agents",
+  "path": "skills/understanding/runbook-automator/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/skillshop-ostyles/skillshop-agents",
+  "dir_name": "runbook-automator",
+  "downloaded_at": "2026-10-17T18:21:59.349693Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: ci, cd, docker, deploy",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "ci",
+      "cd",
+      "docker",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "skillshop-ostyles",
+  "source_url": "https://github.com/skillshop-ostyles/skillshop-agents/blob/main/skills/understanding/runbook-automator/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/skillshop-ostyles/skillshop-agents/blob/main/skills/understanding/runbook-automator/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Runbook automator: generates a deployment runbook from docker-compose.yml, package.json scripts, CI/CD config, healthcheck endpoints, Dockerfile, and README shell commands. Collector scans all five surfaces; LLM assembles a structured runbook with setup, dev workflow, deployment, healthcheck, crash recovery, CI/CD description, and troubleshooting. Read-only. Audience: Both. Trigger: /runbook"
+}

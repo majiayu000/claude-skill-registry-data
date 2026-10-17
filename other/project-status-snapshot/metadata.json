@@ -1,0 +1,38 @@
+{
+  "name": "project-status-snapshot",
+  "repo": "vmitsaras/Agent-Skills",
+  "path": "skills/project-planning/project-status-snapshot/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/vmitsaras/Agent-Skills",
+  "dir_name": "project-status-snapshot",
+  "downloaded_at": "2026-10-17T19:08:19.358643Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: planning=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "planning",
+      "plan",
+      "roadmap"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vmitsaras",
+  "source_url": "https://github.com/vmitsaras/Agent-Skills/blob/main/skills/project-planning/project-status-snapshot/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vmitsaras/Agent-Skills/blob/main/skills/project-planning/project-status-snapshot/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Summarizes a project's current state into an evidence-backed status snapshot covering completed work, in-progress work, blockers, decisions, next tasks, and deviations from the original plan. Use when the user asks for a project status update, handoff summary, session recap, progress snapshot, blocker list, decision log, plan drift summary, or next-step briefing before continuing work."
+}

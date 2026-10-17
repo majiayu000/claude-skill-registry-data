@@ -1,0 +1,40 @@
+{
+  "name": "elevate",
+  "repo": "skillshop-ostyles/skillshop-agents",
+  "path": "skills/_meta/elevate/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/skillshop-ostyles/skillshop-agents",
+  "dir_name": "elevate",
+  "downloaded_at": "2026-10-17T18:21:45.792736Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, framework, build, software, refactor",
+    "score": 5,
+    "runner_up": "devops",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "software",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "skillshop-ostyles",
+  "source_url": "https://github.com/skillshop-ostyles/skillshop-agents/blob/main/skills/_meta/elevate/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/skillshop-ostyles/skillshop-agents/blob/main/skills/_meta/elevate/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audits any project for software quality, refactoring readiness, testing, and CI/CD, then automatically elevates it to enterprise level across 7 dimensions (tests+coverage, lint/format, CI/CD, secrets, docs, type-safety/strict, dependency-audit). Generic across stacks and CI systems, runs locally too. Trigger: /elevate"
+}

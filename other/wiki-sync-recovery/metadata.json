@@ -1,0 +1,37 @@
+{
+  "name": "wiki-sync-recovery",
+  "repo": "sorensencc-dotcom/toolforge",
+  "path": "skills/wiki-sync-recovery/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sorensencc-dotcom/toolforge",
+  "dir_name": "wiki-sync-recovery",
+  "downloaded_at": "2026-10-17T18:28:05.700058Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sorensencc-dotcom",
+  "source_url": "https://github.com/sorensencc-dotcom/toolforge/blob/main/skills/wiki-sync-recovery/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sorensencc-dotcom/toolforge/blob/main/skills/wiki-sync-recovery/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Diagnose a failed GitHub wiki sync (sync-github-wiki.mjs) by matching its log against the four known failure modes and printing the runbook entry for each."
+}

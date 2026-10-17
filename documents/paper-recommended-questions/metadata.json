@@ -1,0 +1,39 @@
+{
+  "name": "paper-recommended-questions",
+  "repo": "scholarclaw/skills",
+  "path": "skills/paper-recommended-questions/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/scholarclaw/skills",
+  "dir_name": "paper-recommended-questions",
+  "downloaded_at": "2026-10-17T18:07:46.600613Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: pdf, word, excel, markdown",
+    "score": 4,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "pdf",
+      "word",
+      "excel",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "scholarclaw",
+  "source_url": "https://github.com/scholarclaw/skills/blob/main/skills/paper-recommended-questions/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/scholarclaw/skills/blob/main/skills/paper-recommended-questions/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Extracts text from PDF files and generates 3 thought-provoking questions that explore the study in depth. Supports direct PDF file processing and integration with OpenClaw."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "small-refactor-planner",
+  "repo": "vmitsaras/Agent-Skills",
+  "path": "skills/code-review/small-refactor-planner/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/vmitsaras/Agent-Skills",
+  "dir_name": "small-refactor-planner",
+  "downloaded_at": "2026-10-17T19:08:09.035474Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, planning=3",
+    "score": 3,
+    "runner_up": "planning",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "software",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vmitsaras",
+  "source_url": "https://github.com/vmitsaras/Agent-Skills/blob/main/skills/code-review/small-refactor-planner/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vmitsaras/Agent-Skills/blob/main/skills/code-review/small-refactor-planner/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Creates a minimal, behavior-preserving refactoring plan for one function, class, component, or module. Use when the user asks to simplify, extract, rename, reorganize, or improve one bounded code unit without expanding scope, changing public behavior, or planning a broader rewrite."
+}

@@ -1,0 +1,40 @@
+{
+  "name": "outcome-vs-output",
+  "repo": "qa-aman/claude-skills",
+  "path": "skills/by-role/pm/outcome-vs-output/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/qa-aman/claude-skills",
+  "dir_name": "outcome-vs-output",
+  "downloaded_at": "2026-10-17T17:38:44.328094Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for product: roadmap, feature, backlog, user-research, metrics",
+    "score": 5,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "roadmap",
+      "feature",
+      "backlog",
+      "user-research",
+      "metrics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "qa-aman",
+  "source_url": "https://github.com/qa-aman/claude-skills/blob/main/skills/by-role/pm/outcome-vs-output/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/qa-aman/claude-skills/blob/main/skills/by-role/pm/outcome-vs-output/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audit a roadmap or backlog to distinguish outcomes from outputs. Use when the user says \"outcome vs output\", \"escaping the build trap\", \"are we building the right things\", \"roadmap review\", \"feature factory\", \"output-driven team\", \"we keep shipping but nothing changes\", or wants to shift focus from shipping features to delivering value - even if they don't explicitly say \"outcome vs output\"."
+}

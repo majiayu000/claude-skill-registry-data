@@ -1,0 +1,39 @@
+{
+  "name": "refactor-roadmap-builder",
+  "repo": "vmitsaras/Agent-Skills",
+  "path": "skills/project-planning/refactor-roadmap-builder/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/vmitsaras/Agent-Skills",
+  "dir_name": "refactor-roadmap-builder",
+  "downloaded_at": "2026-10-17T19:08:20.738140Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, software, refactor",
+    "score": 4,
+    "runner_up": "design",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "software",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vmitsaras",
+  "source_url": "https://github.com/vmitsaras/Agent-Skills/blob/main/skills/project-planning/refactor-roadmap-builder/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vmitsaras/Agent-Skills/blob/main/skills/project-planning/refactor-roadmap-builder/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Breaks a large software refactor into behavior-preserving stages with tests, compatibility checkpoints, rollback boundaries, sequencing rationale, and safe migration slices. Use when the user asks to plan a major refactor, decompose a risky rewrite, modernize internals without changing behavior, preserve compatibility during migration, identify refactor phases, define test gates, or create a rollback-aware refactoring roadmap."
+}

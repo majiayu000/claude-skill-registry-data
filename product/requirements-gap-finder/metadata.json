@@ -1,0 +1,39 @@
+{
+  "name": "requirements-gap-finder",
+  "repo": "vmitsaras/Agent-Skills",
+  "path": "skills/project-planning/requirements-gap-finder/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/vmitsaras/Agent-Skills",
+  "dir_name": "requirements-gap-finder",
+  "downloaded_at": "2026-10-17T19:08:20.042357Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, prd, roadmap, feature",
+    "score": 4,
+    "runner_up": "planning",
+    "runner_up_score": 3,
+    "signals": [
+      "product",
+      "prd",
+      "roadmap",
+      "feature"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vmitsaras",
+  "source_url": "https://github.com/vmitsaras/Agent-Skills/blob/main/skills/project-planning/requirements-gap-finder/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vmitsaras/Agent-Skills/blob/main/skills/project-planning/requirements-gap-finder/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Reviews a project brief, product brief, feature request, PRD, or requirements document for missing requirements, unresolved decisions, contradictions, hidden assumptions, and vague or untestable acceptance criteria. Use when the user asks to find gaps, challenge a brief, assess whether requirements are planning-ready, or identify questions that must be answered before implementation."
+}

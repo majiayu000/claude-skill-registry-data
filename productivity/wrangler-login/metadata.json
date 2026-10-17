@@ -1,0 +1,37 @@
+{
+  "name": "wrangler-login",
+  "repo": "remorses/opencode-config",
+  "path": "skills/wrangler-login/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/remorses/opencode-config",
+  "dir_name": "wrangler-login",
+  "downloaded_at": "2026-10-17T17:52:00.136361Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: automation, task",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "automation",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "remorses",
+  "source_url": "https://github.com/remorses/opencode-config/blob/main/skills/wrangler-login/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/remorses/opencode-config/blob/main/skills/wrangler-login/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Non-interactive wrangler OAuth login using playwriter to automate the Cloudflare consent flow in the user's browser. Use when wrangler auth is expired (\"Failed to fetch auth token: 400 Bad Request\") or when `wrangler whoami` fails. Delegate to a subagent Task to save context."
+}

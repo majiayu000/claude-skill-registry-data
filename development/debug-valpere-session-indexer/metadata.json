@@ -1,0 +1,38 @@
+{
+  "name": "debug",
+  "repo": "valpere/session-indexer",
+  "path": ".claude/skills/debug/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/valpere/session-indexer",
+  "dir_name": "debug-valpere-session-indexer",
+  "downloaded_at": "2026-10-17T19:02:40.810935Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, debug",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "valpere",
+  "source_url": "https://github.com/valpere/session-indexer/blob/main/.claude/skills/debug/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/valpere/session-indexer/blob/main/.claude/skills/debug/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Systematic bug diagnosis \u2014 reproduce, isolate, hypothesize, verify, fix. Usage: /debug [what's broken]"
+}

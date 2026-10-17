@@ -1,0 +1,37 @@
+{
+  "name": "shutdown-gracefulness",
+  "repo": "skillshop-ostyles/skillshop-agents",
+  "path": "skills/runtime/shutdown-gracefulness/SKILL.md",
+  "github_branch": "main",
+  "category": "analysis",
+  "source": "github.com/skillshop-ostyles/skillshop-agents",
+  "dir_name": "shutdown-gracefulness",
+  "downloaded_at": "2026-10-17T18:21:57.967798Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "analysis",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for analysis: analysis, analyze",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "skillshop-ostyles",
+  "source_url": "https://github.com/skillshop-ostyles/skillshop-agents/blob/main/skills/runtime/shutdown-gracefulness/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/skillshop-ostyles/skillshop-agents/blob/main/skills/runtime/shutdown-gracefulness/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Shutdown gracefulness analyzer: check if shutdown hooks actually drain, flush, and complete in-flight work. Read-only. Trigger: /shutdown"
+}

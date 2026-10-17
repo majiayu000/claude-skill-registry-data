@@ -1,0 +1,37 @@
+{
+  "name": "record-hypothesis-before-fix",
+  "repo": "spencerbeggs/vitest-agent",
+  "path": "plugin/skills/record-hypothesis-before-fix/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/spencerbeggs/vitest-agent",
+  "dir_name": "record-hypothesis-before-fix",
+  "downloaded_at": "2026-10-17T18:28:40.001054Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "spencerbeggs",
+  "source_url": "https://github.com/spencerbeggs/vitest-agent/blob/main/plugin/skills/record-hypothesis-before-fix/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/spencerbeggs/vitest-agent/blob/main/plugin/skills/record-hypothesis-before-fix/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Required before any production-code edit during the red phase. Forces externalization of \"why I think this fix will work\" with cited test_error_id and stack_frame_id evidence."
+}

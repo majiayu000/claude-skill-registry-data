@@ -1,0 +1,39 @@
+{
+  "name": "authentication-session-accessibility-audit",
+  "repo": "vmitsaras/Agent-Skills",
+  "path": "skills/frontend-a11y/authentication-session-accessibility-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/vmitsaras/Agent-Skills",
+  "dir_name": "authentication-session-accessibility-audit",
+  "downloaded_at": "2026-10-17T19:08:29.222301Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, crypto, audit",
+    "score": 4,
+    "runner_up": "design",
+    "runner_up_score": 3,
+    "signals": [
+      "security",
+      "auth",
+      "crypto",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vmitsaras",
+  "source_url": "https://github.com/vmitsaras/Agent-Skills/blob/main/skills/frontend-a11y/authentication-session-accessibility-audit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vmitsaras/Agent-Skills/blob/main/skills/frontend-a11y/authentication-session-accessibility-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audits login, registration, password, MFA, CAPTCHA, account recovery, reauthentication, session-expiry, and security-interruption flows for accessible authentication, recovery, and privacy-safe feedback. Use when the user asks to review sign-in accessibility, password-manager or paste support, OTP handling, session timeouts, CAPTCHA alternatives, lockout messaging, or WCAG 2.2 Accessible Authentication without requesting implementation changes."
+}

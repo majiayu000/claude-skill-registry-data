@@ -1,0 +1,38 @@
+{
+  "name": "x-bookmarks",
+  "repo": "remorses/opencode-config",
+  "path": "skills/x-bookmarks/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/remorses/opencode-config",
+  "dir_name": "x-bookmarks",
+  "downloaded_at": "2026-10-17T17:51:57.062589Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, sdk, endpoint",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "remorses",
+  "source_url": "https://github.com/remorses/opencode-config/blob/main/skills/x-bookmarks/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/remorses/opencode-config/blob/main/skills/x-bookmarks/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Read the user's latest X (Twitter) bookmarks as typed data (text, author, metrics, media, links, quoted posts, articles) with a TypeScript SDK that calls X's Bookmarks GraphQL API via fetch inside the signed-in x.com tab through playwriter. Use when the user asks for their bookmarks, saved tweets, or wants to export, summarize, or process X bookmarks."
+}

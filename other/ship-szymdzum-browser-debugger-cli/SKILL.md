@@ -1,0 +1,129 @@
+---
+name: ship
+description: "bdg's shipping workflow: take verified issues from the queue to merged PRs with coding subagents (implementer, fresh reviewer, fresh-agent test before merge), with bdg's commands, gates, conventions and fresh-agent test scenarios. Use when the user asks to work through issues, run a session or wave, ship a feature end to end, run a fresh-agent test round or exploratory sweep, or says 'jedziemy w cyklu'."
+---
+
+# Ship (bdg)
+
+You are the **orchestrator**: you choose the issues, write the briefs, judge the reports, route the findings, and merge. You don't write feature code. Everything mechanical goes through the script, so your attention stays on judgment:
+
+```bash
+ship() { node "$(git rev-parse --show-toplevel)/.claude/skills/ship/scripts/ship.mjs" "$@"; }   # ship help
+```
+
+Call it only through this function: a command kept in a variable (`S="node …"; $S brief …`) is not split into words in zsh, and in S14 that wrote two empty briefs.
+
+Each PR gets three independent looks before it lands, none of which sees the author's reasoning: **tests written first** that fail before the fix (the red commit), a **fresh reviewer** with the diff and the issue only, and a **fresh-agent test** in which a new agent uses the change as bdg's real users (coding agents) would. Skip none of them for behaviour changes.
+
+Files:
+- [briefs.md](briefs.md): the four briefs and their shared blocks; render them with `ship brief`. Read before spawning any subagent.
+- [scenarios.md](scenarios.md): fresh-agent test rounds, the report format, scenarios S01–S15, the exploratory sweep. Read before any fresh-agent test.
+- [log.md](log.md): one row per merged PR (`ship log`); the retro's data.
+- [scripts/ship.mjs](scripts/ship.mjs): the commands below; its tests run in `npm test`.
+
+## Session start
+
+- `ship snapshot` (gate 8 compares against it). It also warns when the main checkout's `node_modules` don't match `package-lock.json`, as after dependabot merges (S16 #803: an implementer wrote a dead type extension against stale types); run `npm ci` there, not `npm install`, which rewrites the lockfile's libc fields. `ship worktree` warns the same way.
+- **Only verified issues go in.** Verified means **one command you have already run** that shows the symptom on `main`: a bdg invocation on a fixture page or a real site, a test, or a script; deterministic, or for timing bugs reproducing at a rate you can debug against. Record the command and output on the issue; it becomes the red commit's first test. Behaviour that can't be run (dead code, a wrong doc) may be confirmed with file:line. Neither: verify first or ask.
+- **Themed sweep first.** A session has a theme (one root cause or one area). One verifier (verifier brief, **Sweep** block filled in) re-runs every open issue of the theme on `main` and sweeps the theme's surfaces for symptoms the issues don't name. Issues it can't reproduce get a `needs repro` comment and drop out; new symptoms join an existing issue or an umbrella issue.
+- **A pick by the user** (named issues, or a mix such as "one hard, two medium, two easy") replaces the theme: the verifier re-runs the picked issues' commands instead of a sweep, and the polish sweep PR is optional.
+- **Propose 4–6 issues**, one line each on why; recommend one set, no menu. The proposal carries the plan per issue: tier, the acceptance criteria as the tests the red commit will hold, the 5–8 files to read first, open questions. The user's pick of the set is the go for the implementers; it is neither merge authority (its own yes/no below) nor an answer to a product decision. Show the **balance**: issues opened vs closed since the last session (from `log.md` and the tracker), and the target of at least two closed for each one filed. At least half of a wave's PRs close issues that predate the session; a feature-only session is the user's explicit choice.
+- **Polish sweep PR** (themed sessions): one tier-1 PR, last in the session, one commit per wording nit of the queue: human-output text that no test asserts and no agent parses. A `--json` field, an asserted hint or `--help --json` text is tier 2, not a sweep item.
+- **Waves of at most 2 parallel implementers.** Issues touching the same functions or output run in sequence. Two PRs that change different functions of one file may run in parallel; the one that merges second rebases before its gates (S14 #785 next to #782, S15 #799 next to #798: clean rebases, 1–2 h saved each). Light, conflict-free changes first; docs last.
+- **Ask for merge authority** as a yes/no question: "May I merge on my own once the gates hold, or do you want to OK each PR?" A bare "OK" is not an answer. It doesn't carry over to the next session.
+- **Product decisions belong to the user:** changed defaults, contracts, exit codes, removed `--json` fields. Options with a recommendation, then wait. A standing "pick the recommended option" never covers a contract change or a third fix round.
+
+## Per PR
+
+```
+#<N> <slug>  tier <1|2|3>
+- [ ] Implementer: ship brief implementer N=<N> BRANCH=<type>/<slug> → fill scope → spawn (background)
+- [ ] Product diff over 150 lines (after the draft PR, before the reviewer; again if fix rounds take it over): you run `/simplify` on the PR's worktree (`ship simplify <pr>` writes the diff to a file and prints the args, since `/simplify` works on the current directory) and leave its edits uncommitted; SendMessage the implementer to run the affected tests and commit them as `refactor:`, or you add "nothing to simplify" to the PR body (`ship gates` checks it)
+- [ ] Report ends with `PR <url> HEAD <sha>`; ship ci-wait <pr> (background, 60-minute timeout)
+- [ ] Reviewer: ship brief reviewer … → findings to the same implementer
+- [ ] Tester (tier 2–3): ship brief tester … → findings routed
+- [ ] Fix rounds ≤ 2; the reviewer re-checks each fix commit (SendMessage to the same reviewer)
+- [ ] Tier 3: fresh second review only of a fix that changes the approach or adds more than ~15 product lines
+- [ ] Timing-sensitive change: ship repeat on the first draft, again on the final head (one repeat run per branch at a time: `ship repeat` refuses while one is queued or running; a second dispatch in the same concurrency group lost #773's Node 22 result)
+- [ ] ship gates <pr> --tier=N [--macos] [--timing --repeat=<id>] (timing PRs: always --timing); ship merge-check when it says the base changed the PR's files; ship merge <pr> (same flags)
+- [ ] ship ci-wait <merge sha> --push; ship log <pr> …; issue closed or commented
+```
+
+### Implement
+
+Render the implementer brief, fill in scope, decisions and the other agents' files, and spawn it in the **background** (models and caps: the table in `briefs.md`). Every subagent starts from a fresh context (`general-purpose` with its brief), never a fork of this conversation. Name 5–8 files to read first yourself, from the issue and memory; no Explore agent for a file map. A CLAUDE.md change the user approved is made by you on the PR's branch: implementers refuse CLAUDE.md edits relayed by an orchestrator, even approved ones. Render each brief with `ship brief <role> N=<issue> … --out=/tmp/brief-<N>.md` (`TIER=1` drops the red-commit rules, `PART=1` makes the PR say `Part of #N`, `NAME=529a` suffixes every worktree, `/tmp` and PID path for a second PR of one issue, while `#N` stays the issue; reviewers `/tmp/rev-<N>.md` with `PR=<pr>`, which fills BASE, HEAD, RED and BRANCH from GitHub; testers `/tmp/test-<N>.md`): it quotes the issue with its comments, since `gh issue view --comments` prints nothing for an issue without comments (S14: three implementers never saw the issue). Fill the rest by hand, then `ship brief --check=<file>`, which refuses an empty brief or an open placeholder; spawn only after it passes. The agent prompt is then only "Your complete brief is in <file>: read it in full first and follow it exactly", which keeps your context small and avoids truncated pastes. Keep the user informed with one line per step change (started, red commit, draft PR, report in).
+
+An implementer's report ends with `PR <url> HEAD <sha>`. Without that line the work isn't done: read the PR (`gh pr view`) and resume the agent with what's missing. Then `ship ci-wait <pr>` in the background with a 60-minute timeout (the harness default of 30 minutes killed waiters twice; same for `run-wait`, which also takes `--timeout=<minutes>` (default 60, exit 4); every `ship` gh/git call has a 60-second timeout, a timed-out gh read is retried, gh writes (merge, ready, workflow run) get 180 s and a timed-out merge re-reads the PR state, and `ci-wait` ends at its own `--timeout` plus at most one call; one waiter per PR; it exits `superseded` when the head moves, so an old waiter never answers for a new push). A push with no `pull_request` run after 3 minutes gets a close/reopen of the PR, not a dispatch: the required `CI OK` must come from a `pull_request` run.
+
+### Review
+
+Render the reviewer brief with the claims of the change and its risks (races, failure and cleanup paths, leaks, security, contracts, recently merged features it could break); never the implementer's reasoning. Reviewers and testers run in the **foreground**.
+
+- Findings come back as **blocking / should-fix / nit** with file:line and a scenario.
+- Send every finding to the **same implementer** (SendMessage, so it keeps its context): test and fix in one commit, or an argued rejection; you decide disputes. Nits about the change go into the same commit, never pushed alone (every push is a full CI run). Before you relay a finding that asks for new code, check its claim in the code yourself: S15 #800 (a false nit about `peek` gave dead code and a third round) and S16 #804 (an `isProcessAlive` nit the implementer rightly rejected).
+- **Each fix commit is re-checked by the same reviewer** (SendMessage with the new SHA and the findings it addressed): cheaper than a new review and still not the author. Tier 3 adds a fresh second reviewer only on a fix commit that changes the approach or adds more than ~15 product lines (S6 #606: a large fix, 2 should-fixes found; S5: nothing on a small one); a small targeted fix stays with the same reviewer. A fix commit that touches only tests never gets a fresh reviewer: the same reviewer's re-check and a repeat run cover it (S11 #761: the repeat run found the race). A one-line wording fix of exactly the line the reviewer named is checked by you with `git show`, not sent back to the reviewer (S12 #767, #768).
+- **At most two fix rounds.** Findings left after the second go to the user: a third round needs an explicit yes; the alternative is to file them. A third round that only touches tests needs no yes (S15 #795, S17 #815: the yes came at once both times). A tier 3 implementer past ~1M subagent tokens (the usage line of its last report) also goes to the user before another round: every resume replays its whole context (S13 #750 ~1.5M, S14 #782 ~1.6M).
+- Findings about **older code** follow the findings block in `briefs.md`: adjacent ones are fixed in the PR as their own commit; the rest go to the verifier.
+
+### Fresh-agent test
+
+The highest-yield step: bdg's users are agents, so the tester doesn't play the user, it is one. Run it for every tier 2–3 change with the scenarios of `scenarios.md` that touch the change's area (a fix with no new output or flag, or a new `--json` field with no new flag or human output: the two closest scenarios, cap 20; S11 #761 and #763 found nothing beyond that). A tier 2 change of only the value of an existing `--json` field gets no fresh-agent test (tier 3, e.g. redaction, keeps it); the reviewer checks the docs define the field (S10 #753 found nothing about the change). Before it, the branch must contain the `main` changes to its files (`ship gates` names them), or the tester reports bugs `main` already fixed. Its findings are routed like the reviewer's.
+
+### Tiers
+
+| Tier | What | Review | Fresh-agent test | Red commit |
+|---|---|---|---|---|
+| 1 | docs, CI, tooling, test tooling (including product code that only adds a test-only override, S13 #771), refactors under existing tests, a message typo, the polish sweep (nothing parsed, no user-visible flag, exit code, default or timing changes) | reviewer | no | no (the PR says why) |
+| 2 | behaviour change: new or changed output, flag, hint, default | reviewer | yes, except a changed value of an existing `--json` field alone | yes |
+| 3 | session lifecycle, Chrome launch, files on disk, concurrency, security, contracts, redaction or parsing | reviewer, plus a fresh second reviewer on a fix commit that changes the approach or adds more than ~15 product lines | yes, plus the interrupt scenario (S08) when relevant | yes; timing: `ship repeat` on the final head; redaction or parsing: the brief's case matrix is the red commit's table test |
+
+After a round, **one verifier** reproduces all older-code findings on current `main` in one pass. **Only you file issues**, one umbrella per root cause (cause in the title, symptoms as a checklist with the verifier's command and output, milestone and `priority:` label set); a symptom of an open issue becomes a comment on it. What gets an issue at all: **Fix, file or record** below.
+
+## Gates
+
+Merge only when all hold on the head SHA you merge. `ship gates <pr> --tier=N` checks the mechanical ones (M); you judge the rest (J). `ship merge <pr>` with the same flags runs the gates, merges with `--match-head-commit`, and removes the worktree if nothing is uncommitted and the branch once `main` contains it. For a PR built on another PR's branch, everything is checked against that base branch.
+
+1. **M+J Review resolved:** every blocking and should-fix finding fixed or rejected with a reason you accept, re-checked on its fix commit (J); a product diff over 150 lines (`src/`, tests excluded) has a `refactor:` commit after an earlier non-test commit, or "nothing to simplify" in the PR body (M; S11: #760 and #762 had neither; S16: a refactoring PR's own `refactor:` commit no longer counts, #805). `/simplify` starts background agents, which implementers may not, so you run it on the finished branch (S12: every implementer fell back to a manual pass); smaller diffs get only the implementer's manual pass.
+2. **J Fresh-agent test done** (tier 2–3), its findings about the change fixed.
+3. **M+J Red commit:** the first commit is `test: …` and type-checks (M; S10 #754's did not build); the reviewer ran it and it failed on an assertion about the issue (J). Exempt: tier 1.
+4. **M Repeat run** passed on the final head (`--repeat=<id>`; `--timing` makes a missing one fail). For a timing-sensitive heuristic the first repeat run goes on the first draft, before review: in S10 #756 three review rounds passed before the repeats showed the failure; in S11 #761 a first-draft repeat found a race four local runs missed. When repeats fail after two approaches, stop and ask the user; no third attempt. Tier 3 timing: Linux and macOS, repeat ≥ 10; concurrency or timing changes also `ship repeat … --node=26` (PR CI smoke runs Node 22 only: #720 broke on Node 24/26 alone); the full Node matrix only for a change of the Node runtime or `engines`. A change to `release.yml` is verified with its `dry_run` input dispatched on the branch: a registry refusal of the already-published version is the expected end (S12 #765, run 38613772253).
+5. **M CI on the head, and `main` green:** the latest decided CI run on `main` succeeded (an in-progress run is named: wait for it only when its merge touched this PR's files, then re-run gate 6); on the head, `CI OK` (it aggregates build, quality, contract tests and Linux smoke); macOS smoke when the PR touches timing-sensitive paths (`--macos`); Security for PRs into `main`. A failing job counts as an accepted exception only with the known flake's issue number and a passing re-run; name both in the merge summary.
+6. **M Mergeable and tested against current `main`:** when `main` changed the PR's files since its base, `ship merge-check <pr> <affected tests>` passed on that `main` and head, or the implementer rebased and re-ran. A merge-check of the same head stays valid while later commits on `main` leave the PR's files alone (S16 #804: two needless re-runs); a commit that changes code the PR only imports doesn't void it, so re-run it yourself when one touches a module the PR depends on.
+7. **J Docs match** (`docs/CLI_REFERENCE.md`, help, `.claude/skills/bdg/SKILL.md`, option behaviors), **M** `CHANGELOG.md` untouched and the PR body has `Closes #<N>` or, for one part of an issue, `Part of #<N>` (`Fixes`/`Resolves` too; `--no-issue` for a PR with no issue, e.g. a retro: #705 once stayed open after its merge); the PR description marks changed defaults, contracts and breaking changes.
+8. **M No leftovers:** nothing new or written to in `~/.bdg` or `~/Downloads` since `ship snapshot` (names, mtime and size: in S11 an implementer ran bdg on `~/.bdg` and only `daemon.log` grew; a user's own file in either directory, e.g. their live session's `daemon.sock` or `daemon.log`, a directory whose mtime moved because a file in it changed: `ship snapshot --accept <name>` after checking it isn't from bdg; the user's live session in `~/.bdg`: `ship snapshot --accept-live`, which accepts its files only while its `daemon.sock` accepts a connection, after checking nothing in the list came from bdg, and keeps accepting the session files it writes later (`last-session.json`, `query-cache.json`, `chrome.pid`; S13 and S14: eight names by hand, then three re-accepts) until the next `ship snapshot`. With a live user session in `~/.bdg`, writes to its files are not visible to gate 8, but a live daemon in `~/.bdg` started from an agent worktree always is, and it blocks every PR's merge until that session ends); the orchestrator's own fixture servers from `ship fixtures <N>` are stopped by `ship merge`, not counted, no live process from this PR's PID files, no temporary worktree of it; `ship leftovers` checks the whole session at the end.
+
+A red `main` is fixed before any new work; the PR that fixes it merges with `--fixes-main` (skips only gate 5, refused when main is green). **Rerun first:** when a push run on `main` fails in a test file the merged PR did not touch, `gh run rerun <id> --failed` before anything else; `run-wait` and `gates` name jobs that failed without a failed step: a lost or shut-down runner (its log says so) gets the same re-run, a timeout does not. Start a verifier only if the re-run fails too, the failing test exercises code the PR changed, or that test failed before (check #529). Comment every one-off failure on #529: run id, test, error line (two one-offs in S6 cost ~30 minutes of verification; both re-runs passed). After a merge, `ship ci-wait <merge sha> --push`; when a later push cancels its run (another thread's merges, dependabot), the waiter follows the newest push run on `main` that contains your commit and lists the commits that came after it (S15).
+
+## Keep the books
+
+- **`ship log <pr>`** after each merge (`ship merge` fast-forwards the main checkout first, which `git pull --rebase` refuses with the uncommitted rows; rows accumulate in the main checkout's `log.md`, with a copy in `~/.cache/ship/log-rows.md`; the session's retro PR commits them, after `ship log --pending` shows none lost: S15's rows vanished before the commit): tier, review findings as `blocking/should-fix/nit`, tester bugs, fix rounds, implementer model, subagent tokens, a note. When a bug is later found in a merged change, add it under **Escaped** in `log.md`.
+- **Roadmap #466:** one update at the session end (done / new / moved); re-read the body right before editing.
+- **Fix, file or record:** every finding from any step is fixed now, filed as a verified issue, or recorded as a known limit; never only "out of scope". File only what earns a priority:
+  - `priority: high`: bdg changes the page under test, or tells the agent something false about what an action or command did.
+  - `priority: medium`: wrong data in output, a contract or exit-code problem, a gap agents hit on common pages.
+  - A narrow edge case (rare syntax, contrived markup, one site's quirk, a raw `bdg cdp` call undoing bdg state) is low: record it as a known limit in the PR description or `docs/CLI_REFERENCE.md`, or as a comment on the issue it follows. It gets its own `priority: low` issue only when the user asks. In S1–S9 every edge case became an issue, the queue stayed near 50, and the 2026-10-14 triage closed 16 as not worth fixing.
+- **Reporting:** one line per step change, a summary at merges, real problems and decisions; don't relay interim notifications.
+- **Releases** only when the user decides (`docs/RELEASE_PROCESS.md`).
+- **One conversation per session:** start the next in a fresh conversation with the roadmap, `log.md` and the memory notes.
+- **Retro at the end**, from `log.md`: what merged and was filed, what slowed the session, and for each rule or step that cost time, whether removing it would have changed an outcome (the log shows which steps found what). Two kinds of proposal:
+  - **A tool bug** (`ship.mjs` or a brief did something wrong: an empty brief, a missing issue text, a gate blocking on the orchestrator's own process) is fixed in the next skill PR, with a test.
+  - **A process change** (a new rule, a looser or a removed one) goes to **Candidates** in `log.md` with the session that saw it. It becomes a rule when a second session sees the same failure; a rule is removed when the log shows it caught nothing in three sessions in a row. One case is not a pattern: the #764 rule written from one S11 case blocked `/simplify` entirely and was undone in #769.
+  A mechanical rule becomes a check (`ship.mjs`, a test, a lint), not prose. Agreed changes go into this skill as a PR.
+
+## Recurring traps
+
+- **Shared registries** conflict between parallel PRs: fixture pages go in a new module in `src/__testutils__/fixturePages/`, option behaviors in their area table.
+- **A timing test is only as good as its guard.** For any change to a timing-dependent test or its budget (a flake fix, a shortened suite), the reviewer breaks the code the test guards and shows the test then fails (S16 #806: a 2 ms floor hid a quadratic regression; S17 #815, #816: two missing guards, both in test-speed PRs).
+- **Heuristics pass their own fixtures.** For any detection heuristic (action effects, press or cover checks), reviewers build false-positive matrices on scratch pages; fixture-only tests passed every broken version so far. The design note is checked on real Chrome by a fresh agent with `ship brief design N=<issue> DESIGN=<file>` before any code (S14 #774, S15 #786: one approach each, 0 blocking), including the user's own result arriving in several chunks (every rule in S10 and S13, #750, failed on it) and the user's result in the same box or app root as a self-updating region (all of S14 #782's should-fixes). A heuristic that already failed in an earlier session gets one approach per session.
+- **"Flaky" can be a real bug.** Root-cause a flake before calling it one; a one-off failure on `main` in an untouched test is rerun first (Gates).
+- **Secret and marker regexes in tests need boundaries**, e.g. `(?<![\d:])4111`: a bare `/4111/` matched the fixture port `127.0.0.1:44111` and turned `main` red (#682). Ports, ids and timestamps must not match.
+- **Wall-clock limits in tests flake.** A linearity check compares the time for n and 4n (a ratio), never a fixed millisecond limit (S12: `startUrlRedaction` "URL display is linear" failed once locally, #529). A smoke test's wall-clock limit takes its value from the macOS repeat log (the slowest of the 10 runs, plus margin), never from local runs (S17 #815: 12 s set from 5–7 s locally failed at 12.3–12.6 s on macOS, 3 of 10).
+- **CodeQL or linters on test fixtures** (a variable named `SECRET`): rename, don't suppress. An open CodeQL alert on `main` gets an issue the day it appears.
+
+## Project settings
+
+- Repo `szymdzum/browser-debugger-cli`, default branch `main`, merge commits with subject `<PR title> (#N)`, required check `CI OK`. Push over SSH (`git@github.com:szymdzum/browser-debugger-cli.git`); after a push to the URL, `gh pr create` needs `--head <branch>`. Implementers open draft PRs; `ship merge` marks them ready.
+- Milestones: "Next: hardening", "Next: agent gaps", "1.0".
+- Node: v22.15.0, pinned in every shell call (the default Node may be too new); the briefs carry the line, `ship` pins it for its own runs.
+- Commands: `npm run check`, `npm test`, `npm run build`; one smoke file `npx tsx --test --test-concurrency=1 src/__tests__/smoke/<file>.smoke.test.ts`; integration `./tests/run-all-tests.sh --integration`. Only affected smoke files locally; the full suite is CI's job. Long suites you run yourself go in the background with a one-line status.
+- Forbidden for you as for every agent (the forbidden block in `briefs.md`): `git stash`, hook bypasses, broad `pkill`/`killall`, killing a PID not read from a file its process wrote, touching `~/.bdg`, committing in the main checkout unless asked, AI attribution, relaying an npm OTP, releasing unless the user decides.

@@ -1,0 +1,39 @@
+{
+  "name": "matlab-dark-port",
+  "repo": "vamseeachanta/workspace-hub",
+  "path": ".agents/skills/data/matlab-dark-port/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/vamseeachanta/workspace-hub",
+  "dir_name": "matlab-dark-port",
+  "downloaded_at": "2026-10-17T19:02:52.440623Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process, pipeline",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "process",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "vamseeachanta",
+  "source_url": "https://github.com/vamseeachanta/workspace-hub/blob/main/.agents/skills/data/matlab-dark-port/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vamseeachanta/workspace-hub/blob/main/.agents/skills/data/matlab-dark-port/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Port legacy MATLAB engineering code to Python through the legal deny-list gate \u2014 extract example data, audit branded names, build regression tests, and commit to nested repo correctly."
+}

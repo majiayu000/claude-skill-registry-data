@@ -1,0 +1,38 @@
+{
+  "name": "missing-docs-spotter",
+  "repo": "vmitsaras/Agent-Skills",
+  "path": "skills/docs-seo/missing-docs-spotter/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/vmitsaras/Agent-Skills",
+  "dir_name": "missing-docs-spotter",
+  "downloaded_at": "2026-10-17T19:08:06.786341Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, markdown, documentation",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vmitsaras",
+  "source_url": "https://github.com/vmitsaras/Agent-Skills/blob/main/skills/docs-seo/missing-docs-spotter/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vmitsaras/Agent-Skills/blob/main/skills/docs-seo/missing-docs-spotter/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Identifies public APIs, configuration options, events, behaviors, and useful examples that exist in code but are absent from Markdown or HTML documentation. Use when the user asks for documentation coverage gaps, undocumented exports or options, code-to-docs comparison, or a list of missing README, guide, reference, or example content."
+}

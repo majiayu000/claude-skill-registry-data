@@ -1,0 +1,40 @@
+{
+  "name": "etl-runbook",
+  "repo": "qa-aman/claude-skills",
+  "path": "skills/by-role/data-engineer/etl-runbook/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/qa-aman/claude-skills",
+  "dir_name": "etl-runbook",
+  "downloaded_at": "2026-10-17T17:38:58.244172Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for data: data, sql, database, etl, pipeline",
+    "score": 5,
+    "runner_up": "orchestration",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql",
+      "database",
+      "etl",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "qa-aman",
+  "source_url": "https://github.com/qa-aman/claude-skills/blob/main/skills/by-role/data-engineer/etl-runbook/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/qa-aman/claude-skills/blob/main/skills/by-role/data-engineer/etl-runbook/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write an ETL operational runbook. Use when the user says \"ETL runbook\", \"pipeline runbook\", \"data job runbook\", \"how to operate this ETL\", \"on-call guide for data pipelines\", \"what to do when the data job fails\", \"pipeline troubleshooting guide\", \"data ops runbook\", or needs to document how to operate, monitor, and recover a data pipeline or ETL job - even if they don't explicitly say \"runbook\"."
+}

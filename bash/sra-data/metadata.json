@@ -1,0 +1,37 @@
+{
+  "name": "bio-sra-data",
+  "repo": "sulfierry/mcp",
+  "path": "skills/sra-data/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/sulfierry/mcp",
+  "dir_name": "sra-data",
+  "downloaded_at": "2026-10-17T18:34:25.542017Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, cli",
+    "score": 2,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sulfierry",
+  "source_url": "https://github.com/sulfierry/mcp/blob/main/skills/sra-data/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sulfierry/mcp/blob/main/skills/sra-data/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Download sequencing data from NCBI SRA using the SRA toolkit. Use when downloading FASTQ files from SRA accessions, prefetching large datasets, or validating SRA downloads."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "skill-security",
+  "repo": "superagent-ai/skills",
+  "path": "skills/skill-security/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/superagent-ai/skills",
+  "dir_name": "skill-security",
+  "downloaded_at": "2026-10-17T18:35:05.075161Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=3, bash=3",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "superagent-ai",
+  "source_url": "https://github.com/superagent-ai/skills/blob/main/skills/skill-security/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/superagent-ai/skills/blob/main/skills/skill-security/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audit an AI agent skill for security risks before installing or trusting it. Runs a deterministic scanner (regex patterns, Python AST analysis, source-to-sink taint tracking, and YARA signatures) and then reasons about intent \u2014 catching prompt injection, credential exfiltration, persistence, memory poisoning, malicious code, supply-chain risks, and description-vs-behavior mismatch. Make sure to use this skill whenever the user wants to scan, audit, vet, review, or check the safety of a skill, plugin, SKILL.md, or agent tool \u2014 whether it is a local folder, a zip/.skill file, or a cloned repo \u2014 and whenever someone asks \"is this skill safe to install?\"."
+}

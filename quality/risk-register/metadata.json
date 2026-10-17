@@ -1,0 +1,37 @@
+{
+  "name": "risk-register",
+  "repo": "qa-aman/claude-skills",
+  "path": "skills/by-role/pm/risk-register/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/qa-aman/claude-skills",
+  "dir_name": "risk-register",
+  "downloaded_at": "2026-10-17T17:38:34.374546Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "quality",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "qa-aman",
+  "source_url": "https://github.com/qa-aman/claude-skills/blob/main/skills/by-role/pm/risk-register/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/qa-aman/claude-skills/blob/main/skills/by-role/pm/risk-register/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Maintain a centralized living risk register across projects. Use this skill when:\n- You need to create or update a risk register for a project or feature\n- You want to consolidate risks from individual specs into one register\n- You need to review and update risk status, mitigations, and owners\n- You want a cross-project risk view"
+}

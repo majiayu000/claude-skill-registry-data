@@ -1,0 +1,38 @@
+{
+  "name": "rknpu",
+  "repo": "villadalmine/infra",
+  "path": "skills/rknpu/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/villadalmine/infra",
+  "dir_name": "rknpu",
+  "downloaded_at": "2026-10-17T19:05:53.987879Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "villadalmine",
+  "source_url": "https://github.com/villadalmine/infra/blob/main/skills/rknpu/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/villadalmine/infra/blob/main/skills/rknpu/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "RK1 NPU pool \u2014 rkllama server con RKLLM models en RK3588 NPU de los nodos TuringPi 2. Gotchas de device exclusivo, tokenizador HF, modelos compatibles, l\u00edmites de memoria, test CPU vs NPU con Gemma 3."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "parse-youtube",
+  "repo": "scrollinondubs/behalfbot-plugins",
+  "path": "parse-youtube/skills/parse-youtube/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/scrollinondubs/behalfbot-plugins",
+  "dir_name": "parse-youtube",
+  "downloaded_at": "2026-10-17T18:08:07.532035Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "scrollinondubs",
+  "source_url": "https://github.com/scrollinondubs/behalfbot-plugins/blob/main/parse-youtube/skills/parse-youtube/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/scrollinondubs/behalfbot-plugins/blob/main/parse-youtube/skills/parse-youtube/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Extract a transcript, timestamps, metadata and chapters from a public YouTube URL. Use when someone drops a YouTube link and wants the gist, a quotable moment, or the text to feed into something else."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "metal",
+  "repo": "pjt222/agent-almanac",
+  "path": "skills/metal/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/pjt222/agent-almanac",
+  "dir_name": "metal",
+  "downloaded_at": "2026-10-17T17:31:01.578790Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: ci, cd, docker, deploy",
+    "score": 4,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "ci",
+      "cd",
+      "docker",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pjt222",
+  "source_url": "https://github.com/pjt222/agent-almanac/blob/main/skills/metal/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pjt222/agent-almanac/blob/main/skills/metal/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Extract the conceptual essence of a repository as skills, agents, and teams \u2014 the project's roles, procedures, and coordination patterns expressed as agentskills.io-standard definitions. Reads an arbitrary codebase and produces generalized definitions that capture WHAT the project does and WHO operates it, without replicating HOW it does it. Use when onboarding to a new codebase and wanting to understand its conceptual architecture, when bootstrapping an agentic system from an existing project, when studying a project's organizational DNA for cross-pollination, or when creating a skill/agent/team library inspired by a reference implementation."
+}

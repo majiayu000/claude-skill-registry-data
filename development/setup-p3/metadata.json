@@ -1,0 +1,38 @@
+{
+  "name": "setup-p3",
+  "repo": "uzairansaruzi/p3-stack",
+  "path": "skills/setup-p3/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/uzairansaruzi/p3-stack",
+  "dir_name": "setup-p3",
+  "downloaded_at": "2026-10-17T19:01:57.724101Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, refactor",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "uzairansaruzi",
+  "source_url": "https://github.com/uzairansaruzi/p3-stack/blob/main/skills/setup-p3/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/uzairansaruzi/p3-stack/blob/main/skills/setup-p3/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Configure which models p3-stack uses per role and at what reasoning budget. Detects your available models and writes p3-models.md, which overrides the skill defaults. Use for /setup-p3, \"configure p3 models\", \"p3 budget\", or changing p3-stack's model choices."
+}

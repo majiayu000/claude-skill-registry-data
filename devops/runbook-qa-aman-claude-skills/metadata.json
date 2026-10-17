@@ -1,0 +1,38 @@
+{
+  "name": "runbook",
+  "repo": "qa-aman/claude-skills",
+  "path": "skills/by-role/devops/runbook/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/qa-aman/claude-skills",
+  "dir_name": "runbook-qa-aman-claude-skills",
+  "downloaded_at": "2026-10-17T17:38:31.739370Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: devops, deploy, infra",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "devops",
+      "deploy",
+      "infra"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "qa-aman",
+  "source_url": "https://github.com/qa-aman/claude-skills/blob/main/skills/by-role/devops/runbook/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/qa-aman/claude-skills/blob/main/skills/by-role/devops/runbook/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write an operational runbook. Use when the user says \"write a runbook\", \"on-call documentation\", \"how to operate this service\", \"alert runbook\", \"troubleshooting guide for ops\", \"what to do when this alert fires\", \"operational procedures\", or needs to document how to run, troubleshoot, or respond to a service - even if they don't explicitly say \"runbook\"."
+}

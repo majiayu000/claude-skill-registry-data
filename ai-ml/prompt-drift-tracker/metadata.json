@@ -1,0 +1,38 @@
+{
+  "name": "prompt-drift-tracker",
+  "repo": "skillshop-ostyles/skillshop-agents",
+  "path": "skills/ai-ml/prompt-drift-tracker/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/skillshop-ostyles/skillshop-agents",
+  "dir_name": "prompt-drift-tracker",
+  "downloaded_at": "2026-10-17T18:21:52.239417Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, ml, model",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "ml",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "skillshop-ostyles",
+  "source_url": "https://github.com/skillshop-ostyles/skillshop-agents/blob/main/skills/ai-ml/prompt-drift-tracker/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/skillshop-ostyles/skillshop-agents/blob/main/skills/ai-ml/prompt-drift-tracker/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Track prompt changes across git history and flag drift that affects output quality or safety. Trigger: /prompt-drift"
+}

@@ -1,0 +1,39 @@
+{
+  "name": "content-writer",
+  "repo": "qa-aman/claude-skills",
+  "path": "skills/by-role/marketing/content-writer/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/qa-aman/claude-skills",
+  "dir_name": "content-writer",
+  "downloaded_at": "2026-10-17T17:38:53.289303Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: marketing=4, writing=4",
+    "score": 4,
+    "runner_up": "writing",
+    "runner_up_score": 4,
+    "signals": [
+      "marketing",
+      "content",
+      "social",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "qa-aman",
+  "source_url": "https://github.com/qa-aman/claude-skills/blob/main/skills/by-role/marketing/content-writer/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/qa-aman/claude-skills/blob/main/skills/by-role/marketing/content-writer/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write marketing content in the user's brand voice using PAS (Problem-Agitate-Solution) and AIDA (Attention-Interest-Desire-Action) copywriting frameworks. Use when the user asks to write a LinkedIn post, blog article, email, ad copy, landing page section, social post, newsletter, or any short-to-medium form marketing content. Reads brand voice and ICP from knowledge/ so the output sounds like the company, not like generic AI. For improving copy that already exists, see copy-review. For a landing page specifically, see landing-page-writer. For a LinkedIn post, see linkedin-post. For long-form POV, see thought-leadership-writer."
+}

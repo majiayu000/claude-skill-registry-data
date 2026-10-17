@@ -1,0 +1,38 @@
+{
+  "name": "spec-reviewer",
+  "repo": "qa-aman/claude-skills",
+  "path": "skills/by-role/pm/spec-reviewer/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/qa-aman/claude-skills",
+  "dir_name": "spec-reviewer-qa-aman-claude-skills",
+  "downloaded_at": "2026-10-17T17:38:35.022274Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review, validate",
+    "score": 3,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "qa-aman",
+  "source_url": "https://github.com/qa-aman/claude-skills/blob/main/skills/by-role/pm/spec-reviewer/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/qa-aman/claude-skills/blob/main/skills/by-role/pm/spec-reviewer/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Quality gate for product specifications before stakeholder review. Use this skill when:\n- A spec draft is ready and you want to validate it before sending to Engineering, Design, and QA\n- You want to check a spec against your template's completeness rules\n- You need to catch vague language, missing sections, or gaps before review\n- You want a pass/fail scorecard with specific fix suggestions"
+}

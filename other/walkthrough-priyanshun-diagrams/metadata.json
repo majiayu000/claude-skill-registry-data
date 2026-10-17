@@ -1,0 +1,37 @@
+{
+  "name": "walkthrough",
+  "repo": "priyanshuN/diagrams",
+  "path": "skills/walkthrough/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/priyanshuN/diagrams",
+  "dir_name": "walkthrough-priyanshun-diagrams",
+  "downloaded_at": "2026-10-17T17:34:54.896795Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "priyanshuN",
+  "source_url": "https://github.com/priyanshuN/diagrams/blob/main/skills/walkthrough/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/priyanshuN/diagrams/blob/main/skills/walkthrough/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Build a narrated, step-synced diagram walkthrough (local Kokoro voice + animated SVG, one self-contained HTML page with a recall quiz, predict pauses and source links) for a long mechanism the user wants to learn once \u2014 onboarding, a pipeline, a request path. Use when the user asks for a walkthrough, a narrated explainer or a \"video\", or accepts an offer of one. Never build one unasked; for short flows a text diagram in the reply is enough."
+}

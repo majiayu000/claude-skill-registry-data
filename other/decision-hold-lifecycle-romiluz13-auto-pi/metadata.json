@@ -1,0 +1,37 @@
+{
+  "name": "decision-hold-lifecycle",
+  "repo": "romiluz13/auto-pi",
+  "path": "skills/decision-hold-lifecycle/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/romiluz13/auto-pi",
+  "dir_name": "decision-hold-lifecycle-romiluz13-auto-pi",
+  "downloaded_at": "2026-10-17T17:58:06.521782Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "romiluz13",
+  "source_url": "https://github.com/romiluz13/auto-pi/blob/main/skills/decision-hold-lifecycle/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/romiluz13/auto-pi/blob/main/skills/decision-hold-lifecycle/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Never lose an unresolved decision. Use when work discovers an open question that needs the user's input, before declaring that work complete. Persists decisions to ~/.pi/agent/decisions.json so they survive compaction and session restarts. Inspired by FirstMate's decision-hold-lifecycle."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "audit-workpaper",
+  "repo": "qa-aman/claude-skills",
+  "path": "skills/by-role/accountant/audit-workpaper/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/qa-aman/claude-skills",
+  "dir_name": "audit-workpaper",
+  "downloaded_at": "2026-10-17T17:39:01.896300Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: word, documentation",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "word",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "qa-aman",
+  "source_url": "https://github.com/qa-aman/claude-skills/blob/main/skills/by-role/accountant/audit-workpaper/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/qa-aman/claude-skills/blob/main/skills/by-role/accountant/audit-workpaper/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write a clear, reviewable audit workpaper documenting procedures, evidence, and conclusions. Use when an auditor says \"write a workpaper\", \"document this audit procedure\", \"tick and tie this\", \"I need to document my testing\", \"substantive testing workpaper\", \"controls testing documentation\", \"audit evidence memo\", \"prepare the workpaper for this balance\", \"document the audit steps I performed\", or needs to capture any audit work in a format that supports review and sign-off. Also trigger when someone has completed audit testing and needs to write it up even if they don't use the word \"workpaper\"."
+}

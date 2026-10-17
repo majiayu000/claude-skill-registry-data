@@ -1,0 +1,36 @@
+{
+  "name": "automati-autoresearch",
+  "repo": "rogertqq-code/automati1-111-portable",
+  "path": "skills/automati-autoresearch/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/rogertqq-code/automati1-111-portable",
+  "dir_name": "automati-autoresearch",
+  "downloaded_at": "2026-10-17T17:57:09.481258Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rogertqq-code",
+  "source_url": "https://github.com/rogertqq-code/automati1-111-portable/blob/main/skills/automati-autoresearch/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rogertqq-code/automati1-111-portable/blob/main/skills/automati-autoresearch/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Autonomous AutoResearchClaw skill. Actively crawls known WAF vendor documentation (e.g., Cloudflare, Datadome, Akamai) and security blogs. When a new detection vector is found, it automatically synthesizes a counter-measure JavaScript payload, injects it into stealth-scripts.ts, and queues a localized A/B test."
+}

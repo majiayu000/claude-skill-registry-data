@@ -1,0 +1,39 @@
+{
+  "name": "obs",
+  "repo": "remorses/opencode-config",
+  "path": "skills/obs/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/remorses/opencode-config",
+  "dir_name": "obs",
+  "downloaded_at": "2026-10-17T17:51:49.605412Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "remorses",
+  "source_url": "https://github.com/remorses/opencode-config/blob/main/skills/obs/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/remorses/opencode-config/blob/main/skills/obs/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Control OBS Studio via CLI using obs-cmd and obs-websocket v5. Covers streaming, recording, window/screen capture, audio control, scene management, and RTMP configuration on macOS. Load this skill when automating OBS, setting up live streams, or controlling OBS from scripts or agents."
+}

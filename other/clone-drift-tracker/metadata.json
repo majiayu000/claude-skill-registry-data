@@ -1,0 +1,36 @@
+{
+  "name": "clone-drift-tracker",
+  "repo": "skillshop-ostyles/skillshop-agents",
+  "path": "skills/quality/clone-drift-tracker/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/skillshop-ostyles/skillshop-agents",
+  "dir_name": "clone-drift-tracker",
+  "downloaded_at": "2026-10-17T18:21:53.891179Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-llm scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "llm"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "skillshop-ostyles",
+  "source_url": "https://github.com/skillshop-ostyles/skillshop-agents/blob/main/skills/quality/clone-drift-tracker/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/skillshop-ostyles/skillshop-agents/blob/main/skills/quality/clone-drift-tracker/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Clone drift tracker: detects code blocks that USED to be clones (identical at past git ref) and have since drifted apart. Mines git history to compare function-body hashes between HEAD and HEAD~N (default 100), and reports pairs whose semantics diverged on one side but not the other. Read-only. Audience: Senior. Trigger: /clone-drift"
+}

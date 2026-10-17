@@ -1,0 +1,37 @@
+{
+  "name": "publish-release",
+  "repo": "toRolex/rolex-skills",
+  "path": "skills/misc/publish-release/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/toRolex/rolex-skills",
+  "dir_name": "publish-release",
+  "downloaded_at": "2026-10-17T18:51:13.939462Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, cli",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "toRolex",
+  "source_url": "https://github.com/toRolex/rolex-skills/blob/main/skills/misc/publish-release/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/toRolex/rolex-skills/blob/main/skills/misc/publish-release/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "\u5f53\u7528\u6237\u8bf4\u53d1\u7248/\u53d1\u5e03/release/publish/bump version/tag\uff0c\u6216\u51c6\u5907\u53d1\u5e03\u65b0\u7248\u672c\u65f6\u4f7f\u7528\u3002\u81ea\u52a8\u68c0\u6d4b Git Flow\uff08\u5b58\u5728 develop\uff09\u4e0e Trunk-based\uff08\u65e0 develop\uff09\u4e24\u79cd\u5206\u652f\u6a21\u578b\uff0c\u8d70\u5bf9\u5e94\u53d1\u7248\u6d41\u7a0b\u3002"
+}

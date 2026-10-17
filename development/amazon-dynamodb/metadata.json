@@ -1,0 +1,39 @@
+{
+  "name": "amazon-dynamodb",
+  "repo": "saulpatino-cbts/Work-Cloud_Network_Core",
+  "path": ".claude/skills/amazon-dynamodb/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/saulpatino-cbts/Work-Cloud_Network_Core",
+  "dir_name": "amazon-dynamodb",
+  "downloaded_at": "2026-10-17T18:06:23.371673Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, debug, refactor",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "saulpatino-cbts",
+  "source_url": "https://github.com/saulpatino-cbts/Work-Cloud_Network_Core/blob/main/.claude/skills/amazon-dynamodb/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/saulpatino-cbts/Work-Cloud_Network_Core/blob/main/.claude/skills/amazon-dynamodb/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Designs, reviews, and debugs DynamoDB data layers from design axioms \u2014 enumerates access patterns, chooses partition/sort keys and GSIs, decides single-table vs. multi-table, configures Streams, Global Tables, TTL, and zero-ETL integrations to OpenSearch/Redshift/SageMaker Lakehouse, and produces a defensible data-layer design with a monthly cost estimate and optional live validation. Applies whenever a user is designing, reviewing, or refactoring anything backed by DynamoDB \u2014 schemas, access patterns, GSIs, single- vs. multi-table choices, Streams consumers, transactional outboxes, Global Tables, zero-ETL pipelines \u2014 even when they don't say \"axioms\" or \"design review.\" Also applies when debugging hot partitions, throttling, unbounded Scans, LWW conflicts, or surprise bills on DynamoDB workloads."
+}

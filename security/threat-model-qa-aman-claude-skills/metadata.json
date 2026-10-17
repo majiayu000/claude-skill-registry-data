@@ -1,0 +1,38 @@
+{
+  "name": "threat-model",
+  "repo": "qa-aman/claude-skills",
+  "path": "skills/by-role/security/threat-model/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/qa-aman/claude-skills",
+  "dir_name": "threat-model-qa-aman-claude-skills",
+  "downloaded_at": "2026-10-17T17:38:47.918931Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "qa-aman",
+  "source_url": "https://github.com/qa-aman/claude-skills/blob/main/skills/by-role/security/threat-model/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/qa-aman/claude-skills/blob/main/skills/by-role/security/threat-model/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write a threat model document. Use when the user says \"threat model\", \"threat modeling\", \"STRIDE analysis\", \"attack surface analysis\", \"security design review\", \"what are the threats to this system\", \"adversarial analysis\", \"identify threats\", \"security threat assessment\", or needs to systematically identify and document threats to a system or feature - even if they don't explicitly say \"threat model\"."
+}

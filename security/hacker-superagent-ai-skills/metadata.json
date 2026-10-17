@@ -1,0 +1,39 @@
+{
+  "name": "hacker",
+  "repo": "superagent-ai/skills",
+  "path": "skills/hacker/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/superagent-ai/skills",
+  "dir_name": "hacker-superagent-ai-skills",
+  "downloaded_at": "2026-10-17T18:35:03.557524Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit, pentest",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "security",
+      "auth",
+      "audit",
+      "pentest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "superagent-ai",
+  "source_url": "https://github.com/superagent-ai/skills/blob/main/skills/hacker/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/superagent-ai/skills/blob/main/skills/hacker/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Cursor-native offensive security engagement and exploitability autoresearch orchestrator inspired by offensive-claude. Use for an authorized offensive engagement, red-team or pentest workflow, Kill Chain style assessment, scoped web/network/cloud/mobile/AD/bug-bounty offensive plan, or exploitability validation of defensive findings. In validate-findings mode it runs a bounded, user-controlled autoresearch loop over deduplicated findings: several hypothesis passes / cycles of hypothesize, experiment, observe, refine. Use it whenever the user asks to run an autoresearch loop, an iterative or multi-pass hypothesis loop, or to loop or iterate over findings for a set number of cycles. Supports engagement mode and validate-findings mode. Instruction-only: ships no scanners, exploit runners, payload builders, or local scripts."
+}

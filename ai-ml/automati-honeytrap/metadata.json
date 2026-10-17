@@ -1,0 +1,37 @@
+{
+  "name": "automati-honeytrap",
+  "repo": "rogertqq-code/automati1-111-portable",
+  "path": "skills/automati-honeytrap/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/rogertqq-code/automati1-111-portable",
+  "dir_name": "automati-honeytrap",
+  "downloaded_at": "2026-10-17T17:57:07.443189Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, model",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rogertqq-code",
+  "source_url": "https://github.com/rogertqq-code/automati1-111-portable/blob/main/skills/automati-honeytrap/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rogertqq-code/automati1-111-portable/blob/main/skills/automati-honeytrap/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Autonomous HoneyTrapClaw skill. A specialized vision-and-DOM agent that triggers *intentional* honeypots on dummy credentials. It records exactly how the honeypot mutates the DOM tree and feeds this semantic structure into the video-verifier AI model, instantly updating the classification matrix for all future runs."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "create-glyph",
+  "repo": "pjt222/agent-almanac",
+  "path": "skills/create-glyph/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/pjt222/agent-almanac",
+  "dir_name": "create-glyph",
+  "downloaded_at": "2026-10-17T17:31:24.641426Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, pipeline, visualization",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pjt222",
+  "source_url": "https://github.com/pjt222/agent-almanac/blob/main/skills/create-glyph/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pjt222/agent-almanac/blob/main/skills/create-glyph/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Create R-based pictogram glyphs for skill, agent, or team icons in the visualization layer. Covers concept sketching, ggplot2 layer composition using the primitives library, color strategy, registration in the appropriate glyph mapping file and manifest, rendering via the build pipeline, and visual verification of the neon-glow output. Use when a new entity has been added and needs a visual icon for the force-graph visualization, an existing glyph needs replacement, or when batch-creating glyphs for a new domain."
+}

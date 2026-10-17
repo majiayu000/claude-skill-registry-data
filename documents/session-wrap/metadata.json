@@ -1,0 +1,38 @@
+{
+  "name": "session-wrap",
+  "repo": "sorensencc-dotcom/toolforge",
+  "path": "skills/session-wrap/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/sorensencc-dotcom/toolforge",
+  "dir_name": "session-wrap",
+  "downloaded_at": "2026-10-17T18:27:57.586881Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, documentation",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sorensencc-dotcom",
+  "source_url": "https://github.com/sorensencc-dotcom/toolforge/blob/main/skills/session-wrap/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sorensencc-dotcom/toolforge/blob/main/skills/session-wrap/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Atomic session wrap-up engine. Writes doc updates, stages scoped files, creates prefixed commits, generates summary reports."
+}

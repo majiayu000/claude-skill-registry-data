@@ -1,0 +1,38 @@
+{
+  "name": "implementation-checkpoint-planner",
+  "repo": "vmitsaras/Agent-Skills",
+  "path": "skills/project-planning/implementation-checkpoint-planner/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/vmitsaras/Agent-Skills",
+  "dir_name": "implementation-checkpoint-planner",
+  "downloaded_at": "2026-10-17T19:08:27.381191Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, planning=3",
+    "score": 3,
+    "runner_up": "planning",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vmitsaras",
+  "source_url": "https://github.com/vmitsaras/Agent-Skills/blob/main/skills/project-planning/implementation-checkpoint-planner/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vmitsaras/Agent-Skills/blob/main/skills/project-planning/implementation-checkpoint-planner/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Adds evidence-based review checkpoints after risky, foundational, irreversible, or cross-cutting implementation work so defects and invalid assumptions are caught before dependent tasks proceed. Use when the user asks to add review gates to an implementation plan, identify where work should pause for validation, define go/no-go criteria, protect downstream tasks from unstable foundations, or strengthen a plan that postpones review until the end."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "dead-code-spotter",
+  "repo": "vmitsaras/Agent-Skills",
+  "path": "skills/maintenance/dead-code-spotter/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/vmitsaras/Agent-Skills",
+  "dir_name": "dead-code-spotter",
+  "downloaded_at": "2026-10-17T19:08:07.923787Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build, refactor",
+    "score": 4,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vmitsaras",
+  "source_url": "https://github.com/vmitsaras/Agent-Skills/blob/main/skills/maintenance/dead-code-spotter/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vmitsaras/Agent-Skills/blob/main/skills/maintenance/dead-code-spotter/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Finds likely unused exports, functions, CSS selectors, assets, dependencies, and obsolete files in a repository. Use when the user asks to identify dead code, unused code, stale files, unreferenced assets, cleanup candidates, or safe removal opportunities before refactoring or maintenance."
+}

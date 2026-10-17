@@ -1,0 +1,37 @@
+{
+  "name": "cic-repair-pipeline",
+  "repo": "sorensencc-dotcom/toolforge",
+  "path": "skills/cic-repair-pipeline/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/sorensencc-dotcom/toolforge",
+  "dir_name": "cic-repair-pipeline",
+  "downloaded_at": "2026-10-17T18:28:07.084851Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: process, pipeline",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "process",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sorensencc-dotcom",
+  "source_url": "https://github.com/sorensencc-dotcom/toolforge/blob/main/skills/cic-repair-pipeline/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sorensencc-dotcom/toolforge/blob/main/skills/cic-repair-pipeline/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Detect and repair broken stages in the CIC processing pipeline by diagnosing failures and applying automatic or manual remediation."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "ci-debt-analyzer",
+  "repo": "skillshop-ostyles/skillshop-agents",
+  "path": "skills/operations/ci-debt-analyzer/SKILL.md",
+  "github_branch": "main",
+  "category": "analysis",
+  "source": "github.com/skillshop-ostyles/skillshop-agents",
+  "dir_name": "ci-debt-analyzer",
+  "downloaded_at": "2026-10-17T18:21:54.061514Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "analysis",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for analysis: analysis, analyze",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "skillshop-ostyles",
+  "source_url": "https://github.com/skillshop-ostyles/skillshop-agents/blob/main/skills/operations/ci-debt-analyzer/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/skillshop-ostyles/skillshop-agents/blob/main/skills/operations/ci-debt-analyzer/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "CI debt analyzer: read CI configuration (GitHub Actions, GitLab CI, Jenkins, CircleCI), measure pipeline health, then LLM judges what is costing the team most. Read-only. Trigger: /ci-debt"
+}

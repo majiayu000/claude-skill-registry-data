@@ -1,0 +1,38 @@
+{
+  "name": "my-ios-app-swift-concurrency",
+  "repo": "qteqpid/ios-app-development",
+  "path": "skills/my-ios-app-swift-concurrency/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/qteqpid/ios-app-development",
+  "dir_name": "my-ios-app-swift-concurrency",
+  "downloaded_at": "2026-10-17T17:41:17.947909Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "qteqpid",
+  "source_url": "https://github.com/qteqpid/ios-app-development/blob/main/skills/my-ios-app-swift-concurrency/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/qteqpid/ios-app-development/blob/main/skills/my-ios-app-swift-concurrency/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Resolve Swift concurrency compiler errors, adopt approachable concurrency (SE-0466), and write data-race-safe async code. Use when fixing Sendable conformance errors, actor isolation warnings, or strict concurrency diagnostics; when adopting default MainActor isolation, @concurrent, nonisolated(nonsending), or Task.immediate; when designing actor-based architectures, structured concurrency with TaskGroup, or background work offloading; or when migrating from @preconcurrency to full Swift 6 strict concurrency."
+}

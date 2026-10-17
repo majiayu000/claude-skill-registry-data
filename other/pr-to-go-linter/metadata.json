@@ -1,0 +1,38 @@
+{
+  "name": "pr-to-go-linter",
+  "repo": "saulpatino-cbts/Work-Cloud_Network_Core",
+  "path": ".claude/skills/pr-to-go-linter/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/saulpatino-cbts/Work-Cloud_Network_Core",
+  "dir_name": "pr-to-go-linter",
+  "downloaded_at": "2026-10-17T18:06:20.965733Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, quality=3",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "saulpatino-cbts",
+  "source_url": "https://github.com/saulpatino-cbts/Work-Cloud_Network_Core/blob/main/.claude/skills/pr-to-go-linter/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/saulpatino-cbts/Work-Cloud_Network_Core/blob/main/.claude/skills/pr-to-go-linter/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generate a new pkg/linters analyzer from a merged or open PR pattern."
+}

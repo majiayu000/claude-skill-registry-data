@@ -1,0 +1,36 @@
+{
+  "name": "skill-name-here",
+  "repo": "pjt222/agent-almanac",
+  "path": "skills/_template/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/pjt222/agent-almanac",
+  "dir_name": "template-pjt222-agent-almanac",
+  "downloaded_at": "2026-10-17T17:31:07.564470Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pjt222",
+  "source_url": "https://github.com/pjt222/agent-almanac/blob/main/skills/_template/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pjt222/agent-almanac/blob/main/skills/_template/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "One to three sentences describing what this skill accomplishes, followed by key activation triggers. This field is the primary mechanism agents use to decide whether to activate the skill \u2014 it is read during discovery before the full body is loaded. Start with a verb. Include the most important \"when to use\" conditions inline. Max 1024 characters."
+}

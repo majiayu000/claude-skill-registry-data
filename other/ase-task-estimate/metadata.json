@@ -1,0 +1,36 @@
+{
+  "name": "ase-task-estimate",
+  "repo": "rse/ase",
+  "path": "plugin/skills/ase-task-estimate/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/rse/ase",
+  "dir_name": "ase-task-estimate",
+  "downloaded_at": "2026-10-17T17:59:23.086875Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rse",
+  "source_url": "https://github.com/rse/ase/blob/master/plugin/skills/ase-task-estimate/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rse/ase/blob/master/plugin/skills/ase-task-estimate/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Estimate the effort of the current, given, or all unestimated task plans as T-shirt sizes (XS, S, M, L, XL) of expected human time, and store it in the \"Effort:\" frontmatter key, or calibrate the estimation against the actual human time of the finished tasks. Use when the user wants to \"estimate\", \"size\", or \"gauge the effort\" of a \"task\" or \"plan\", or to \"calibrate\" the effort estimation."
+}

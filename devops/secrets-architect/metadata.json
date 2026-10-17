@@ -1,0 +1,39 @@
+{
+  "name": "secrets-architect",
+  "repo": "ralvarezdev/ralvaskills",
+  "path": "skills/infra/secrets-architect/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/ralvarezdev/ralvaskills",
+  "dir_name": "secrets-architect",
+  "downloaded_at": "2026-10-17T17:45:42.347152Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: ci, docker, deploy, infra",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ci",
+      "docker",
+      "deploy",
+      "infra"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ralvarezdev",
+  "source_url": "https://github.com/ralvarezdev/ralvaskills/blob/main/skills/infra/secrets-architect/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ralvarezdev/ralvaskills/blob/main/skills/infra/secrets-architect/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Secret-handling standards for one external store consumed by reference \u2014 consumer decision matrix (Compose secrets, *_FILE, systemd LoadCredential, plain bind mount, CI), permission/uid rules, naming, migration workflow, live verification, pitfalls. Use when wiring a credential into a repo, container, systemd unit or CI job, migrating secrets out of .env or git, or auditing a secrets store."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "openclaw",
+  "repo": "villadalmine/infra",
+  "path": "skills/openclaw/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/villadalmine/infra",
+  "dir_name": "openclaw",
+  "downloaded_at": "2026-10-17T19:05:55.966872Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: ai, llm, prompt",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "villadalmine",
+  "source_url": "https://github.com/villadalmine/infra/blob/main/skills/openclaw/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/villadalmine/infra/blob/main/skills/openclaw/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "OpenClaw personal AI gateway \u2014 orquestador principal que habla con Holmes, Kagent y Hermes como subagentes. Todo el tr\u00e1fico LLM pasa por LiteLLM (nunca directo a OpenRouter). RBAC readonly sin acceso a Secrets. kubernetes-mcp sidecar para visibilidad del cluster."
+}

@@ -1,0 +1,36 @@
+{
+  "name": "safe-pull",
+  "repo": "toRolex/rolex-skills",
+  "path": "skills/misc/safe-pull/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/toRolex/rolex-skills",
+  "dir_name": "safe-pull",
+  "downloaded_at": "2026-10-17T18:51:11.777507Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "bash"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "toRolex",
+  "source_url": "https://github.com/toRolex/rolex-skills/blob/main/skills/misc/safe-pull/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/toRolex/rolex-skills/blob/main/skills/misc/safe-pull/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Safe Git pull with rebase workflow \u2014 check remote changes, stash, rebase, restore, handle conflicts, and push. Covers main/develop sync and feature branch rebase. Use when the user says \"sync\", \"pull latest\", \"\u62c9\u53d6\u6700\u65b0\", \"rebase main\", \"\u540c\u6b65\u4ee3\u7801\", \"update branch\", or wants to safely pull remote changes preserving linear history."
+}

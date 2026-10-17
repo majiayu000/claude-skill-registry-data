@@ -1,0 +1,37 @@
+{
+  "name": "test-value",
+  "repo": "tt-a1i/archify",
+  "path": ".agents/skills/test-value/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/tt-a1i/archify",
+  "dir_name": "test-value",
+  "downloaded_at": "2026-10-17T18:56:44.407602Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tt-a1i",
+  "source_url": "https://github.com/tt-a1i/archify/blob/main/.agents/skills/test-value/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tt-a1i/archify/blob/main/.agents/skills/test-value/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Improve test value and feedback cost when auditing slow, flaky, redundant or brittle tests; choosing tests during implementation; or reviewing test changes before a commit or PR. Keep ordinary implementation and pre-commit use scoped to the affected behavior, not a repository-wide audit."
+}

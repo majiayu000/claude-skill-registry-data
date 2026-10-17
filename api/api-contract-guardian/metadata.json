@@ -1,0 +1,37 @@
+{
+  "name": "api-contract-guardian",
+  "repo": "skillshop-ostyles/skillshop-agents",
+  "path": "skills/security/api-contract-guardian/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/skillshop-ostyles/skillshop-agents",
+  "dir_name": "api-contract-guardian",
+  "downloaded_at": "2026-10-17T18:21:58.111865Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, openapi",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "skillshop-ostyles",
+  "source_url": "https://github.com/skillshop-ostyles/skillshop-agents/blob/main/skills/security/api-contract-guardian/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/skillshop-ostyles/skillshop-agents/blob/main/skills/security/api-contract-guardian/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "API contract guard: extracts the API surface (HTTP routes with params, DTO fields, exported signatures - preferring OpenAPI files when present) from two git states of a repo, diffs them, classifies every change as breaking / non-breaking / additive, and writes a ready-to-ship consumer migration note per breaking change. Read-only. Trigger: /api-diff"
+}

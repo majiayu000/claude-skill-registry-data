@@ -1,0 +1,37 @@
+{
+  "name": "trm-feedback-report",
+  "repo": "sorensencc-dotcom/toolforge",
+  "path": "skills/trm-feedback-report/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/sorensencc-dotcom/toolforge",
+  "dir_name": "trm-feedback-report",
+  "downloaded_at": "2026-10-17T18:28:06.927069Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, validate",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "quality",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sorensencc-dotcom",
+  "source_url": "https://github.com/sorensencc-dotcom/toolforge/blob/main/skills/trm-feedback-report/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sorensencc-dotcom/toolforge/blob/main/skills/trm-feedback-report/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Post-ingest-batch feedback pass for TRM \u2014 classifier/extraction quality, OCR latency vs. budget, candidate new-topic surfacing, and a web-search cross-check on low-confidence facts."
+}

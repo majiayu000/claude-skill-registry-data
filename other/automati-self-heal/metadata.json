@@ -1,0 +1,37 @@
+{
+  "name": "automati-self-heal",
+  "repo": "rogertqq-code/automati1-111-portable",
+  "path": "skills/automati-self-heal/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/rogertqq-code/automati1-111-portable",
+  "dir_name": "automati-self-heal",
+  "downloaded_at": "2026-10-17T17:57:08.112082Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rogertqq-code",
+  "source_url": "https://github.com/rogertqq-code/automati1-111-portable/blob/main/skills/automati-self-heal/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rogertqq-code/automati1-111-portable/blob/main/skills/automati-self-heal/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Autonomous self-healing skill that analyzes failure patterns, generates targeted code patches, validates them with tests, and applies live fixes when the automation engine encounters persistent failures."
+}

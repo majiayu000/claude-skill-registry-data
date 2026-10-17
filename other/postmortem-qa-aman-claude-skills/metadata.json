@@ -1,0 +1,37 @@
+{
+  "name": "postmortem",
+  "repo": "qa-aman/claude-skills",
+  "path": "skills/by-role/devops/postmortem/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/qa-aman/claude-skills",
+  "dir_name": "postmortem-qa-aman-claude-skills",
+  "downloaded_at": "2026-10-17T17:38:36.822982Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "insights"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "qa-aman",
+  "source_url": "https://github.com/qa-aman/claude-skills/blob/main/skills/by-role/devops/postmortem/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/qa-aman/claude-skills/blob/main/skills/by-role/devops/postmortem/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write a blameless postmortem after an incident. Use when the user says \"postmortem\", \"post-incident review\", \"PIR\", \"what happened in that incident\", \"incident review\", \"blameless postmortem\", \"5 whys\", \"how do we prevent this again\", or needs to document learnings from a production incident - even if they don't explicitly say \"postmortem\"."
+}

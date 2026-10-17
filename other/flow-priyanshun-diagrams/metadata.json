@@ -1,0 +1,36 @@
+{
+  "name": "flow",
+  "repo": "priyanshuN/diagrams",
+  "path": "skills/flow/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/priyanshuN/diagrams",
+  "dir_name": "flow-priyanshun-diagrams",
+  "downloaded_at": "2026-10-17T17:34:53.951015Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "communication",
+    "runner_up_score": 1,
+    "signals": [
+      "bash"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "priyanshuN",
+  "source_url": "https://github.com/priyanshuN/diagrams/blob/main/skills/flow/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/priyanshuN/diagrams/blob/main/skills/flow/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Draw a flow diagram (what talks to what) or a sequence diagram (who calls whom, in what order, who waits). A chat diagram of about 12 boxes or fewer is drawn by hand and checked with fd --lint; a larger one, or one that also needs a picture page or walkthrough, is written in Mermaid and rendered as Unicode box art (fd) or a clean/sketch-style picture page (pic). Use when a reply needs a diagram bigger than a few boxes, when the user asks for a flow or sequence diagram, or before building a narrated walkthrough (diagrams:walkthrough reads the same Mermaid)."
+}

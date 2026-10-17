@@ -1,0 +1,39 @@
+{
+  "name": "stripe",
+  "repo": "remorses/opencode-config",
+  "path": "skills/stripe/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/remorses/opencode-config",
+  "dir_name": "stripe-remorses-opencode-config",
+  "downloaded_at": "2026-10-17T17:51:51.799902Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build, debug",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "remorses",
+  "source_url": "https://github.com/remorses/opencode-config/blob/main/skills/stripe/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/remorses/opencode-config/blob/main/skills/stripe/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Stripe billing patterns for spiceflow + Drizzle apps. Covers creating products and prices via the Stripe CLI with stable lookup keys, multi-currency USD+EUR pricing, monthly/yearly subscriptions, type-safe Checkout and Billing Portal integration in spiceflow routes, webhook handling, and the rules for preventing double customers and double subscriptions in the database. Load this skill whenever adding, modifying, or debugging any Stripe code (prices, checkout sessions, portal sessions, webhooks, subscription logic)."
+}

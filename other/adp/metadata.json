@@ -1,0 +1,38 @@
+{
+  "name": "adp",
+  "repo": "skillmds/skillmd",
+  "path": "plugins/data-ml/skills/adp/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/skillmds/skillmd",
+  "dir_name": "adp",
+  "downloaded_at": "2026-10-17T18:21:25.705682Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=3, ai-ml=3",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "skillmds",
+  "source_url": "https://github.com/skillmds/skillmd/blob/main/plugins/data-ml/skills/adp/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/skillmds/skillmd/blob/main/plugins/data-ml/skills/adp/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Redpanda's Agentic Data Plane: governance infrastructure for building, running, and governing AI agents and MCP servers, plus a proxying AI Gateway for LLM providers, operated via `rpk ai` and the ADP API. Use when creating or managing AI agents (managed or self-managed) via `rpk ai agent` or `AgentRegistryService`; configuring MCP servers (remote or managed catalog, code mode, auth); setting up LLM providers or querying models via `rpk ai llm`/`rpk ai model` or the AI Gateway proxy; or configuring budgets, guardrails, or Cedar access-control policies through the governance APIs. Also covers reading agent transcripts and spending insights, and wiring OAuth clients or providers to the aigw Authorization Server. For the separate rpk cloud mcp control-plane MCP server, see `/redpanda:rpk-cloud`."
+}

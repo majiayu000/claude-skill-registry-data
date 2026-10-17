@@ -1,0 +1,36 @@
+{
+  "name": "research-questions",
+  "repo": "sorensencc-dotcom/toolforge",
+  "path": "skills/research-questions/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sorensencc-dotcom/toolforge",
+  "dir_name": "research-questions",
+  "downloaded_at": "2026-10-17T18:28:06.184475Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category analysis scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sorensencc-dotcom",
+  "source_url": "https://github.com/sorensencc-dotcom/toolforge/blob/main/skills/research-questions/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sorensencc-dotcom/toolforge/blob/main/skills/research-questions/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generate and resolve TRM research questions from a curator-approved batch. Runs scan-gaps, does web search + confidence judgment per question, then recomputes focus areas. Trigger: /research-questions <topic>, or after curator-decision-processor finishes a batch."
+}

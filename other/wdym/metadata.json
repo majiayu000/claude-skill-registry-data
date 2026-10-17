@@ -1,0 +1,36 @@
+{
+  "name": "wdym",
+  "repo": "sxhmilyoyo/sundayhao-plugins",
+  "path": "second-brain/skills/wdym/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sxhmilyoyo/sundayhao-plugins",
+  "dir_name": "wdym",
+  "downloaded_at": "2026-10-17T18:36:29.518609Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sxhmilyoyo",
+  "source_url": "https://github.com/sxhmilyoyo/sundayhao-plugins/blob/main/second-brain/skills/wdym/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sxhmilyoyo/sundayhao-plugins/blob/main/second-brain/skills/wdym/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Decode this session's agent output for the supervising user \u2014 prose conclusions, raw tool output (logs, diffs, stack traces, query results), or subagent reports \u2014 grounded in the session's own evidence. Trigger on self-directed comprehension or verification asks with no named audience: 'wdym', 'what do you mean', 'I don't follow', 'I don't understand', 'what just happened', 'what does this output mean', 'walk me through what you did', mid-task 'what is X', 'why this way', 'how did you verify', 'prove it'. Also 'wdym debrief' for an end-of-task comprehension pass. Do NOT trigger when an audience is named ('explain to my manager', 'ELI5 for my wife' \u2014 that is the eli5 skill) or for pure visual requests (show-me)."
+}

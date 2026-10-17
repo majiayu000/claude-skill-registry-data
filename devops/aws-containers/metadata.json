@@ -1,0 +1,40 @@
+{
+  "name": "aws-containers",
+  "repo": "saulpatino-cbts/Work-Cloud_Network_Core",
+  "path": ".claude/skills/aws-containers/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/saulpatino-cbts/Work-Cloud_Network_Core",
+  "dir_name": "aws-containers",
+  "downloaded_at": "2026-10-17T18:06:20.030437Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: ci, cd, docker, kubernetes, deploy",
+    "score": 5,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "ci",
+      "cd",
+      "docker",
+      "kubernetes",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "saulpatino-cbts",
+  "source_url": "https://github.com/saulpatino-cbts/Work-Cloud_Network_Core/blob/main/.claude/skills/aws-containers/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/saulpatino-cbts/Work-Cloud_Network_Core/blob/main/.claude/skills/aws-containers/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Deploys and operates containerized workloads on ECS, Fargate, and ECR. Covers task definitions, Fargate services, ECR repository setup and lifecycle policies, ECS Exec debugging, service scaling, deployment strategies, load balancer integration, and logging configuration. Use when deploying, debugging, or optimizing containers on AWS. ALSO USE for container deployment options (ECS vs ECS Express Mode), networking modes, health check troubleshooting, OOM errors, secrets injection, blue/green deployments, ECR image management, and App Runner sunset guidance and migration. NOT for Kubernetes, EKS, or CI/CD pipelines."
+}

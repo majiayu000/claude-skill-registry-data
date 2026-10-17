@@ -1,0 +1,38 @@
+{
+  "name": "copyfail-go-lpe",
+  "repo": "reason-machines/trending-skills",
+  "path": "skills/copyfail-go-lpe/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/reason-machines/trending-skills",
+  "dir_name": "copyfail-go-lpe",
+  "downloaded_at": "2026-10-17T17:50:38.162685Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "reason-machines",
+  "source_url": "https://github.com/reason-machines/trending-skills/blob/main/skills/copyfail-go-lpe/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/reason-machines/trending-skills/blob/main/skills/copyfail-go-lpe/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Go implementation of CVE-2026-31431 (CopyFail), a Linux local privilege escalation exploit targeting the AF_ALG iov_iter kernel vulnerability affecting kernels v4.14\u2013April 2026."
+}

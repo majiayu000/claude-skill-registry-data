@@ -1,0 +1,38 @@
+{
+  "name": "data-model-planner",
+  "repo": "vmitsaras/Agent-Skills",
+  "path": "skills/project-planning/data-model-planner/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/vmitsaras/Agent-Skills",
+  "dir_name": "data-model-planner",
+  "downloaded_at": "2026-10-17T19:08:12.641399Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vmitsaras",
+  "source_url": "https://github.com/vmitsaras/Agent-Skills/blob/main/skills/project-planning/data-model-planner/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vmitsaras/Agent-Skills/blob/main/skills/project-planning/data-model-planner/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Plans a conceptual or logical data model covering entities, attributes, relationships, invariants, validation, ownership, lifecycle, retention, and migration concerns without generating implementation code. Use when the user asks to design, review, or evolve a domain model, database schema plan, content model, persistence model, or data migration approach before implementation."
+}

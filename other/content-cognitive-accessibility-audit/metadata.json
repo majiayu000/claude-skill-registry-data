@@ -1,0 +1,37 @@
+{
+  "name": "content-cognitive-accessibility-audit",
+  "repo": "vmitsaras/Agent-Skills",
+  "path": "skills/frontend-a11y/content-cognitive-accessibility-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/vmitsaras/Agent-Skills",
+  "dir_name": "content-cognitive-accessibility-audit",
+  "downloaded_at": "2026-10-17T19:08:28.113418Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vmitsaras",
+  "source_url": "https://github.com/vmitsaras/Agent-Skills/blob/main/skills/frontend-a11y/content-cognitive-accessibility-audit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vmitsaras/Agent-Skills/blob/main/skills/frontend-a11y/content-cognitive-accessibility-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audits web interface content and task flows for cognitive accessibility, including clarity, terminology, predictable controls, memory burden, errors, sequencing, timeouts, distractions, repeated entry, authentication, help, and progress preservation. Use when the user asks for a content-clarity, plain-language, cognitive-load, cognitive-accessibility, COGA-informed, error-comprehension, or recognition-versus-recall review of pages, forms, flows, prototypes, screenshots, or source."
+}

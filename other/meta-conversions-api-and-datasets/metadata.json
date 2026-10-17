@@ -1,0 +1,37 @@
+{
+  "name": "meta-conversions-api-and-datasets",
+  "repo": "scumunna/programmatic-skills",
+  "path": "skills/meta-conversions-api-and-datasets/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/scumunna/programmatic-skills",
+  "dir_name": "meta-conversions-api-and-datasets",
+  "downloaded_at": "2026-10-17T18:08:43.044388Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "scumunna",
+  "source_url": "https://github.com/scumunna/programmatic-skills/blob/main/skills/meta-conversions-api-and-datasets/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/scumunna/programmatic-skills/blob/main/skills/meta-conversions-api-and-datasets/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Implement and QA server-side Meta Conversions API (CAPI) events into a dataset with correct SHA-256 hashing, deduplication against the browser Pixel via a shared event_id, and Event Match Quality monitoring. Use when the user asks about Meta CAPI, Facebook Conversions API, dataset events, the Pixel plus server setup, hashing user_data, em/ph/fn normalization, event_id deduplication, duplicate conversions, Event Match Quality, EMQ, the Dataset Quality API, test_event_code, or why server events are not matching or are double-counting."
+}

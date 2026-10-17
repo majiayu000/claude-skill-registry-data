@@ -1,0 +1,36 @@
+{
+  "name": "ship",
+  "repo": "valpere/session-indexer",
+  "path": ".claude/skills/ship/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/valpere/session-indexer",
+  "dir_name": "ship-valpere-session-indexer",
+  "downloaded_at": "2026-10-17T19:02:40.474190Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "valpere",
+  "source_url": "https://github.com/valpere/session-indexer/blob/main/.claude/skills/ship/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/valpere/session-indexer/blob/main/.claude/skills/ship/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "session-indexer ship pipeline: issue \u2192 implement \u2192 review \u2192 merge \u2192 close. Usage: /ship [--yes|-y] [issue-number | title]"
+}

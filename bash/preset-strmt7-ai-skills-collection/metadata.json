@@ -1,0 +1,38 @@
+{
+  "name": "preset",
+  "repo": "strmt7/ai_skills_collection_benchmarked",
+  "path": "included/skills/by-category/cloud-azure-microsoft-sdks/official-vendor-reference/preset/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/strmt7/ai_skills_collection_benchmarked",
+  "dir_name": "preset-strmt7-ai-skills-collection",
+  "downloaded_at": "2026-10-17T18:33:03.017521Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "strmt7",
+  "source_url": "https://github.com/strmt7/ai_skills_collection_benchmarked/blob/main/included/skills/by-category/cloud-azure-microsoft-sdks/official-vendor-reference/preset/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/strmt7/ai_skills_collection_benchmarked/blob/main/included/skills/by-category/cloud-azure-microsoft-sdks/official-vendor-reference/preset/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Intelligently deploys Azure OpenAI models to optimal regions by analyzing capacity across all available regions. Automatically checks current region first and shows alternatives if needed. USE FOR: quick deployment, optimal region, best region, automatic region selection, fast setup, multi-region capacity check, high availability deployment, deploy to best location. DO NOT USE FOR: custom SKU selection (use customize), specific version selection (use customize), custom capacity configuration (use customize), PTU deployments (use customize)."
+}

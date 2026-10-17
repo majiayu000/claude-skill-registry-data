@@ -1,0 +1,40 @@
+{
+  "name": "migrate-to-msk",
+  "repo": "saulpatino-cbts/Work-Cloud_Network_Core",
+  "path": ".claude/skills/migrate-to-msk/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/saulpatino-cbts/Work-Cloud_Network_Core",
+  "dir_name": "migrate-to-msk",
+  "downloaded_at": "2026-10-17T18:06:17.522180Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: docker, kubernetes, deploy, infra, infrastructure",
+    "score": 5,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "docker",
+      "kubernetes",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "saulpatino-cbts",
+  "source_url": "https://github.com/saulpatino-cbts/Work-Cloud_Network_Core/blob/main/.claude/skills/migrate-to-msk/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/saulpatino-cbts/Work-Cloud_Network_Core/blob/main/.claude/skills/migrate-to-msk/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Helps migrate self-managed Apache Kafka workloads to Amazon MSK Express. Inventories the source cluster (from IaC files, Kafka CLI output, or manual input), assesses MSK Express compatibility across topology, Kafka version, configs, auth, and quotas, produces a target Express specification (instance type, broker count, monthly cost) by filling the AWS-published MSK Sizing/Pricing workbook, and guides migration execution using MSK Replicator. Applicable when the user mentions migrating Kafka, MSK, MSK Express, Kafka migration, analyzing Kafka infrastructure, moving to MSK, moving streaming platform to MSK, streaming migration, moving streaming workloads to AWS, MSK workload compatibility, MSK cluster sizing, choosing an MSK cluster type, or MSK Replicator."
+}
