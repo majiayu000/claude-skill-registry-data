@@ -1,0 +1,37 @@
+{
+  "name": "bio-tcr-bcr-analysis-scirpy-analysis",
+  "repo": "peacezha/HPClaw",
+  "path": "skills/bioSkills/tcr-bcr-analysis/scirpy-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/peacezha/HPClaw",
+  "dir_name": "scirpy-analysis",
+  "downloaded_at": "2026-10-17T04:54:50.783379Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "peacezha",
+  "source_url": "https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/tcr-bcr-analysis/scirpy-analysis/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/tcr-bcr-analysis/scirpy-analysis/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Analyze single-cell TCR and BCR data integrated with gene expression using scirpy. Use when working with 10x Genomics VDJ data alongside scRNA-seq or when integrating immune receptor information with cell state analysis."
+}

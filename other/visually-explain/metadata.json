@@ -1,0 +1,37 @@
+{
+  "name": "visually-explain",
+  "repo": "nvie/skills",
+  "path": "skills/visually-explain/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/nvie/skills",
+  "dir_name": "visually-explain",
+  "downloaded_at": "2026-10-17T04:06:46.464390Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nvie",
+  "source_url": "https://github.com/nvie/skills/blob/main/skills/visually-explain/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nvie/skills/blob/main/skills/visually-explain/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Produce a single self-contained interactive HTML document that visually explains how a *specific* system, mechanism, or design in the codebase works -- built for visual learners who find static markdown insufficient. Walks a concrete worked example through its states with toggles, steppers, diffs, and side-by-side comparisons. Invoked explicitly as /visually-explain; it is for explaining a particular thing you can point at in code or a spec, not for general-concept tutorials."
+}

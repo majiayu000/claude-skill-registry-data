@@ -1,0 +1,38 @@
+{
+  "name": "aks-troubleshooting",
+  "repo": "microsoft/azure-skills",
+  "path": ".github/plugins/aks-skills/skills/aks-troubleshooting/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/microsoft/azure-skills",
+  "dir_name": "aks-troubleshooting-microsoft-azure-skills",
+  "downloaded_at": "2026-10-17T03:40:20.312115Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, script, cli",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "microsoft",
+  "source_url": "https://github.com/microsoft/azure-skills/blob/main/.github/plugins/aks-skills/skills/aks-troubleshooting/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/microsoft/azure-skills/blob/main/.github/plugins/aks-skills/skills/aks-troubleshooting/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Debug live Azure Kubernetes Service (AKS) incidents with a read-only, evidence-first investigation. WHEN: pod crashes or Pending, CrashLoopBackOff, OOMKilled, ImagePullBackOff, node NotReady, DNS or ingress failure, connectivity timeout, network policy, SNAT exhaustion, node-pool scaling blocked by QuotaExceeded or InsufficientVCPUQuota, upgrade stuck, spot or zone disruption, a bare VMExtensionProvisioningError or AllocationFailed wrapper, an uncataloged capacity symptom, or 'investigate my AKS cluster'. DO NOT USE FOR: packet capture (use aks-network-capture); GPU or model-serving issues (use aks-gpu-inference); cluster creation or provisioning (use azure-kubernetes); cost (use cost-analysis from the optional azure-cost plugin); pod rightsizing (use azure-kubernetes); a fully qualified documented AKS signature with every required nested qualifier (use aks-known-issues); standalone failures on non-AKS Azure resources (use azure-diagnostics). Unqualified errors and open-ended incidents stay here only for AKS."
+}

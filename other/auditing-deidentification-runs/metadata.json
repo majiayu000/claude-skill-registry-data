@@ -1,0 +1,36 @@
+{
+  "name": "auditing-deidentification-runs",
+  "repo": "maziyarpanahi/openmed",
+  "path": "skills/auditing-deidentification-runs/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/maziyarpanahi/openmed",
+  "dir_name": "auditing-deidentification-runs",
+  "downloaded_at": "2026-10-17T03:34:56.354976Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maziyarpanahi",
+  "source_url": "https://github.com/maziyarpanahi/openmed/blob/master/skills/auditing-deidentification-runs/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maziyarpanahi/openmed/blob/master/skills/auditing-deidentification-runs/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Produce a signed, reproducible, no-PHI audit trail for an OpenMed de-identification run via deidentify(audit=True). Use when the user needs compliance evidence, a tamper-evident record of what was redacted and why, to verify nothing was changed, to retain proof for HIPAA/GDPR audits, or to review de-id decisions without exposing plaintext PHI. Covers the AuditReport / AuditSignature / AuditSpan / DetectorInfo fields, why audits store offsets+hashes+provenance+residual-risk and never plaintext, signing with .sign(key), and verifying with .verify(key). Pairs with OpenMed deidentifying-clinical-text and auditing-safe-harbor-checklist."
+}

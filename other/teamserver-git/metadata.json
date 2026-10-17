@@ -1,0 +1,37 @@
+{
+  "name": "teamserver-git",
+  "repo": "mendixlabs/mxcli",
+  "path": ".claude/skills/mendix/teamserver-git/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mendixlabs/mxcli",
+  "dir_name": "teamserver-git",
+  "downloaded_at": "2026-10-17T03:37:03.986996Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mendixlabs",
+  "source_url": "https://github.com/mendixlabs/mxcli/blob/main/.claude/skills/mendix/teamserver-git/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mendixlabs/mxcli/blob/main/.claude/skills/mendix/teamserver-git/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Commit, branch and push a Mendix project in git the way Studio Pro and Mendix Team Server expect \u2014 branches created on the server (not with git checkout -b), the mx_metadata commit note written with `mxcli git note`, and the notes ref pushed with the branch. Use before any git commit, branch, merge, rebase or push in a Mendix app repository, and when Studio Pro shows conflicts or changes that git does not, fails to open the project, or cannot deploy a revision."
+}

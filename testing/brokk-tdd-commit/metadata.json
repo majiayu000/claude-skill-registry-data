@@ -1,0 +1,38 @@
+{
+  "name": "brokk-tdd-commit",
+  "repo": "nstucki/yggdrasil",
+  "path": "skills/tdd/brokk-tdd-commit/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/nstucki/yggdrasil",
+  "dir_name": "brokk-tdd-commit",
+  "downloaded_at": "2026-10-17T04:06:02.535782Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, tdd, integration",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "tdd",
+      "integration"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nstucki",
+  "source_url": "https://github.com/nstucki/yggdrasil/blob/main/skills/tdd/brokk-tdd-commit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nstucki/yggdrasil/blob/main/skills/tdd/brokk-tdd-commit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Record one reviewed batch of a test-driven plan as one commit \u2014 verify the gating reviews passed, verify or create the plan's branch, stage exactly the reviewed paths by name, re-run the full suite on the combined tree, and commit with the plan's type and subject; never deciding, never fixing, never rewriting."
+}

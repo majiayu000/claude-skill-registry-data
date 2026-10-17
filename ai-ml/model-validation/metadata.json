@@ -1,0 +1,39 @@
+{
+  "name": "bio-machine-learning-model-validation",
+  "repo": "peacezha/HPClaw",
+  "path": "skills/bioSkills/machine-learning/model-validation/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/peacezha/HPClaw",
+  "dir_name": "model-validation",
+  "downloaded_at": "2026-10-17T04:54:31.638843Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for ai-ml: ai, ml, machine-learning, model",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "ml",
+      "machine-learning",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "peacezha",
+  "source_url": "https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/machine-learning/model-validation/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/machine-learning/model-validation/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Validates predictive models on omics and biomedical data with nested cross-validation, group/batch/temporal-aware splits, the full data-leakage taxonomy, probability calibration, decision-curve net benefit, optimism correction, sample-size planning, and TRIPOD+AI reporting. Use when estimating model performance honestly, choosing a CV scheme, detecting leakage, or judging whether reported discrimination means the model is actually useful. For feature selection itself see machine-learning/biomarker-discovery; for confirmatory-trial inference see clinical-biostatistics/trial-reporting."
+}

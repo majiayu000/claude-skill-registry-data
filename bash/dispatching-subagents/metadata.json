@@ -1,0 +1,38 @@
+{
+  "name": "dispatching-subagents",
+  "repo": "oaustegard/claude-skills",
+  "path": "dispatching-subagents/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/oaustegard/claude-skills",
+  "dir_name": "dispatching-subagents",
+  "downloaded_at": "2026-10-17T04:07:04.341330Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "oaustegard",
+  "source_url": "https://github.com/oaustegard/claude-skills/blob/main/dispatching-subagents/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/oaustegard/claude-skills/blob/main/dispatching-subagents/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Chooses how to launch subagents from Claude Code (the Agent tool, a Workflow script, or headless claude -p children) and runs a headless fan-out from one background command. Use for \"fan this out to 50 agents\", \"run these tasks in parallel\", \"launch subagents for each file\", \"should I spawn agents or write a workflow\", \"batch this through Haiku\", \"run claude -p in parallel\", \"dispatch a task list without the launches eating my context\", or before any launch of more than a handful of subagents, where the launching itself is the cost. Covers the parent-turn cost of each mechanism, concurrency ceilings, what context and tools each child gets, effort control, output contracts, a cost ledger, and resume after interruption."
+}

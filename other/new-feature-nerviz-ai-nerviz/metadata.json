@@ -1,0 +1,37 @@
+{
+  "name": "new-feature",
+  "repo": "nerviz-ai/nerviz",
+  "path": ".claude/skills/new-feature/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/nerviz-ai/nerviz",
+  "dir_name": "new-feature-nerviz-ai-nerviz",
+  "downloaded_at": "2026-10-17T03:57:24.450107Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nerviz-ai",
+  "source_url": "https://github.com/nerviz-ai/nerviz/blob/main/.claude/skills/new-feature/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nerviz-ai/nerviz/blob/main/.claude/skills/new-feature/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Orchestrates the feature design pipeline \u2014 one use case per run, the design skills \u2192 an approved UC-NNN-spec.md for the executor; `/new-feature-implement` implements it"
+}

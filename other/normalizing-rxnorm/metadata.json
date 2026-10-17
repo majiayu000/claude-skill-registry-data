@@ -1,0 +1,37 @@
+{
+  "name": "normalizing-rxnorm",
+  "repo": "maziyarpanahi/openmed",
+  "path": "skills/normalizing-rxnorm/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/maziyarpanahi/openmed",
+  "dir_name": "normalizing-rxnorm",
+  "downloaded_at": "2026-10-17T03:34:39.086293Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maziyarpanahi",
+  "source_url": "https://github.com/maziyarpanahi/openmed/blob/master/skills/normalizing-rxnorm/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maziyarpanahi/openmed/blob/master/skills/normalizing-rxnorm/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Normalizes drug mentions extracted by OpenMed to RxNorm RxCUIs using the free public RxNav/RxNorm REST API. Use when the user wants to code, standardize, or de-duplicate medication names, resolve a brand/generic/ingredient to a stable RxCUI, link strength+dose-form to an SCD/SBD, attach NDCs, or build a US Core Medication resource. Trigger keywords: RxNorm, RxCUI, RxNav, drug normalization, medication coding, NDC, ingredient, SCD, SBD, brand vs generic, getApproximateMatch. Pairs after OpenMed NER: consume Pharmaceutical/Chemical entities from openmed.analyze_text and map each drug span to an RxCUI. RxNorm and RxNav are fully public and free \u2014 no API key, no license barrier, the lowest-friction terminology in this set."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "model-benchmarker",
+  "repo": "openamer/openamer",
+  "path": "skills/system/model-benchmarker/SKILL.md",
+  "github_branch": "main",
+  "category": "performance",
+  "source": "github.com/openamer/openamer",
+  "dir_name": "model-benchmarker",
+  "downloaded_at": "2026-10-17T04:13:11.363231Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "performance",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for performance: performance, latency, benchmark",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "performance",
+      "latency",
+      "benchmark"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openamer",
+  "source_url": "https://github.com/openamer/openamer/blob/main/skills/system/model-benchmarker/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openamer/openamer/blob/main/skills/system/model-benchmarker/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when: benchmark model latency, throughput, or quality."
+}

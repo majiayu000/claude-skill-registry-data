@@ -1,0 +1,37 @@
+{
+  "name": "bio-proteomics-peptide-identification",
+  "repo": "peacezha/HPClaw",
+  "path": "skills/bioSkills/proteomics/peptide-identification/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/peacezha/HPClaw",
+  "dir_name": "peptide-identification-peacezha-hpclaw",
+  "downloaded_at": "2026-10-17T04:54:40.062301Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, database",
+    "score": 2,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "peacezha",
+  "source_url": "https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/proteomics/peptide-identification/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/proteomics/peptide-identification/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Peptide-spectrum matching and protein identification from MS/MS data. Use when identifying peptides from tandem mass spectra. Covers database searching, spectral library matching, and FDR estimation using target-decoy approaches."
+}

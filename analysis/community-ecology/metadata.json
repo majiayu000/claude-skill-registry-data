@@ -1,0 +1,37 @@
+{
+  "name": "bio-ecological-genomics-community-ecology",
+  "repo": "peacezha/HPClaw",
+  "path": "skills/bioSkills/ecological-genomics/community-ecology/SKILL.md",
+  "github_branch": "main",
+  "category": "analysis",
+  "source": "github.com/peacezha/HPClaw",
+  "dir_name": "community-ecology",
+  "downloaded_at": "2026-10-17T04:54:11.967713Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "analysis",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for analysis: analysis, analyze",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "peacezha",
+  "source_url": "https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/ecological-genomics/community-ecology/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/ecological-genomics/community-ecology/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Analyzes species-environment relationships with constrained ordination (CCA, RDA, db-RDA), variance partitioning, indicator species (indicspecies IndVal.g group-equalized), PERMANOVA paired MANDATORILY with PERMDISP (Anderson & Walsh 2013; dispersion confounds centroid tests), Joint Species Distribution Models (HMSC, sjSDM, gjam) with explicit rejection of \"residual covariance equals biotic interaction\", phylogenetic community ecology (SES_MPD/MNTD), trait-environment via RLQ + fourth-corner with corrected modeltype=6 (Dray 2014), bipartite network metrics (NODF, modularity) with curveball null (Strona 2014), and Mantel-test replacements (dbRDA, GDM) for spatial data. Use when testing how environmental gradients structure communities, identifying habitat indicator taxa, partitioning variance among predictors, deciding whether PERMANOVA significance is location vs dispersion, picking among HMSC/sjSDM/gjam, or replacing Mantel tests for landscape data."
+}

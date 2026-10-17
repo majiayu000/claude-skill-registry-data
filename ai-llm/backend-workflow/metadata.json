@@ -1,0 +1,38 @@
+{
+  "name": "backend-workflow",
+  "repo": "murasan2000/stocks-advisor",
+  "path": ".claude/skills/backend-workflow/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/murasan2000/stocks-advisor",
+  "dir_name": "backend-workflow",
+  "downloaded_at": "2026-10-17T03:52:29.841572Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: ai, llm, prompt",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "murasan2000",
+  "source_url": "https://github.com/murasan2000/stocks-advisor/blob/main/.claude/skills/backend-workflow/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/murasan2000/stocks-advisor/blob/main/.claude/skills/backend-workflow/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "api/\uff08FastAPI / Python 3.13\uff09\u5b9f\u88c5\u6642\u306b\u5b88\u308b\u898f\u7d04\u3068\u691c\u8a3c\u624b\u9806\u3002\u30b9\u30af\u30ea\u30fc\u30ca\u30fc\u30fb\u30c1\u30e3\u30c3\u30c8\u30fbJobs\u30fbLLM\u30d7\u30ed\u30d0\u30a4\u30c0\u7b49\u306e\u30b5\u30fc\u30d3\u30b9\u5c64\u5b9f\u88c5\u6642\u306b\u5fc5\u305a\u4f7f\u3046\u3002LangGraph\u30a8\u30fc\u30b8\u30a7\u30f3\u30c8\uff08api/app/services/agents/\uff09\u306e\u30b0\u30e9\u30d5\u30fb\u30ce\u30fc\u30c9\u8a2d\u8a08\u306f langgraph-agent-design \u30b9\u30ad\u30eb\u3092\u4f7f\u3046\u3002"
+}

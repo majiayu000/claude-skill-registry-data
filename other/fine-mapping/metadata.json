@@ -1,0 +1,36 @@
+{
+  "name": "bio-causal-genomics-fine-mapping",
+  "repo": "peacezha/HPClaw",
+  "path": "skills/bioSkills/causal-genomics/fine-mapping/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/peacezha/HPClaw",
+  "dir_name": "fine-mapping",
+  "downloaded_at": "2026-10-17T04:53:44.251691Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "peacezha",
+  "source_url": "https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/causal-genomics/fine-mapping/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/causal-genomics/fine-mapping/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Resolves GWAS associations to candidate causal variants and credible sets via SuSiE, susie_rss, FINEMAP, CAVIAR, DAP-G, PAINTOR, PolyFun, SuSiEx, MultiSuSiE, and FOCUS. Use when narrowing a GWAS lead SNP to a 95 percent credible set, choosing between in-sample and reference LD, calibrating non-sparse loci with SuSiE-inf or FINEMAP-inf, integrating functional priors via PolyFun, fine-mapping across ancestries with SuSiEx, diagnosing LD mismatch via estimate_s_rss and kriging_rss, handling HLA or long-range LD, or feeding credible sets into coloc.susie for colocalization."
+}

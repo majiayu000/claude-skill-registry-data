@@ -1,0 +1,38 @@
+{
+  "name": "auv-wayland-rendering",
+  "repo": "moeru-ai/auv",
+  "path": ".agents/skills/auv-wayland-rendering/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/moeru-ai/auv",
+  "dir_name": "auv-wayland-rendering",
+  "downloaded_at": "2026-10-17T03:46:33.772247Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "moeru-ai",
+  "source_url": "https://github.com/moeru-ai/auv/blob/main/.agents/skills/auv-wayland-rendering/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/moeru-ai/auv/blob/main/.agents/skills/auv-wayland-rendering/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Prepare, diagnose, and validate Linux GPU and Wayland environments for AUV rendering and capture through XDG Desktop Portal and PipeWire. Use when installing AUV desktop runtime dependencies, connecting from another machine over SSH, using an existing compositor or a headless wlroots/Sway session, checking hardware versus software rendering, running display.capture or Linux driver probes, exposing optional WayVNC safely, or troubleshooting blank frames and Wayland, portal, D-Bus, PipeWire, or session-environment failures."
+}

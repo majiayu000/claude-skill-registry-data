@@ -1,0 +1,39 @@
+{
+  "name": "mini-openamer",
+  "repo": "openamer/openamer",
+  "path": "skills/mini-openamer/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/openamer/openamer",
+  "dir_name": "mini-openamer",
+  "downloaded_at": "2026-10-17T04:12:57.205580Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, integration, e2e",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "integration",
+      "e2e"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "openamer",
+  "source_url": "https://github.com/openamer/openamer/blob/main/skills/mini-openamer/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openamer/openamer/blob/main/skills/mini-openamer/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when the agent needs recursive reasoning, episodic memory retrieval, internet learning, or world-model prediction. Mini-OpenAmer: the 2B hybrid Mamba core with 9 tools, running 24/7 on Damir's laptop."
+}

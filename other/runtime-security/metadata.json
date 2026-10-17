@@ -1,0 +1,37 @@
+{
+  "name": "runtime-security",
+  "repo": "nitinjain999/platform-skills",
+  "path": "skills/runtime-security/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/nitinjain999/platform-skills",
+  "dir_name": "runtime-security",
+  "downloaded_at": "2026-10-17T04:03:04.347079Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nitinjain999",
+  "source_url": "https://github.com/nitinjain999/platform-skills/blob/main/skills/runtime-security/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nitinjain999/platform-skills/blob/main/skills/runtime-security/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Detect and respond to in-container threats at the syscall level using Falco (eBPF-based, CNCF, open-source, no license cost). Covers Falco installation on EKS/GKE with eBPF driver, custom rule authoring, alert routing via Falcosidekick, rule debugging, and bridging Falco runtime signals to Kyverno admission enforcement. Use when asked to \"detect privilege escalation in containers\", \"set up runtime threat detection\", \"write a Falco rule\", \"route Falco alerts to Slack\", or \"debug why my Falco rule is not firing\"."
+}

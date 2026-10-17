@@ -1,0 +1,37 @@
+{
+  "name": "umbraco-version-guard",
+  "repo": "nicklas-bryntesson/tsugite-umbraco",
+  "path": ".claude/skills/umbraco-version-guard/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/nicklas-bryntesson/tsugite-umbraco",
+  "dir_name": "umbraco-version-guard",
+  "downloaded_at": "2026-10-17T04:00:57.641722Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nicklas-bryntesson",
+  "source_url": "https://github.com/nicklas-bryntesson/tsugite-umbraco/blob/main/.claude/skills/umbraco-version-guard/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nicklas-bryntesson/tsugite-umbraco/blob/main/.claude/skills/umbraco-version-guard/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Deterministically verify that the Umbraco major of the site you are working on matches the major these skills target. Run this FIRST, before any Umbraco backoffice work, to avoid mixing guidance across Umbraco majors (e.g. 17 vs 18 vs 19). Trigger on the first Umbraco task in a session, or whenever the site's version is uncertain."
+}

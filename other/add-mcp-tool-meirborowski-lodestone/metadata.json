@@ -1,0 +1,37 @@
+{
+  "name": "add-mcp-tool",
+  "repo": "meirborowski/Lodestone",
+  "path": ".claude/skills/add-mcp-tool/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/meirborowski/Lodestone",
+  "dir_name": "add-mcp-tool-meirborowski-lodestone",
+  "downloaded_at": "2026-10-17T03:36:12.590431Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "ui",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "meirborowski",
+  "source_url": "https://github.com/meirborowski/Lodestone/blob/main/.claude/skills/add-mcp-tool/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/meirborowski/Lodestone/blob/main/.claude/skills/add-mcp-tool/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Add an MCP tool to the Lodestone editor, so AI agents can use a new editor feature - the tool's schema and handler, the command it runs, and its in-process tests. Use whenever an editor-facing feature lands (every editor action needs an MCP tool), or when an agent needs something the tools can't do."
+}

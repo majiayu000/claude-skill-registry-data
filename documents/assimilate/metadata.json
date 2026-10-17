@@ -1,0 +1,39 @@
+{
+  "name": "assimilate",
+  "repo": "oimiragieo/agent-studio",
+  "path": ".claude/skills/assimilate/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/oimiragieo/agent-studio",
+  "dir_name": "assimilate",
+  "downloaded_at": "2026-10-17T04:08:54.294196Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: docs, pdf, docx, documentation",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "pdf",
+      "docx",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "oimiragieo",
+  "source_url": "https://github.com/oimiragieo/agent-studio/blob/main/.claude/skills/assimilate/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/oimiragieo/agent-studio/blob/main/.claude/skills/assimilate/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Benchmark external agent frameworks, auto-detect source type, scan for prompt injection, and convert findings into a concrete TDD upgrade backlog for agent-studio evolution."
+}

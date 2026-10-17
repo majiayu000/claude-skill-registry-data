@@ -1,0 +1,38 @@
+{
+  "name": "pir",
+  "repo": "mvdmakesthings/skills",
+  "path": "plugins/delivery/skills/pir/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mvdmakesthings/skills",
+  "dir_name": "pir",
+  "downloaded_at": "2026-10-17T03:52:38.116882Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, devops=3",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mvdmakesthings",
+  "source_url": "https://github.com/mvdmakesthings/skills/blob/main/plugins/delivery/skills/pir/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mvdmakesthings/skills/blob/main/plugins/delivery/skills/pir/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generate a post-incident report (PIR) from the current session and write it to docs/pir/. Use this skill whenever the user types \"/pir\", \"write a PIR\", \"write up what happened\", \"document this incident\", \"post-incident report\", \"post-mortem\", or \"incident retrospective\". Use it proactively whenever a debugging session, production outage, failed deployment, data migration incident, or any problem-solving session is winding down \u2014 even if the user doesn't explicitly say \"PIR\". The output is a structured markdown document capturing the timeline, root cause, impact, resolution, and lessons learned."
+}

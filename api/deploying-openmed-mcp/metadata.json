@@ -1,0 +1,38 @@
+{
+  "name": "deploying-openmed-mcp",
+  "repo": "maziyarpanahi/openmed",
+  "path": "skills/deploying-openmed-mcp/SKILL.md",
+  "github_branch": "master",
+  "category": "api",
+  "source": "github.com/maziyarpanahi/openmed",
+  "dir_name": "deploying-openmed-mcp",
+  "downloaded_at": "2026-10-17T03:34:43.419343Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, sdk, endpoint",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maziyarpanahi",
+  "source_url": "https://github.com/maziyarpanahi/openmed/blob/master/skills/deploying-openmed-mcp/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maziyarpanahi/openmed/blob/master/skills/deploying-openmed-mcp/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run OpenMed's Model Context Protocol (MCP) server so coding agents (Claude Code, Codex) and chat clients can call clinical NER, PII extraction, and de-identification as tools, on-device. Use when the user wants to add OpenMed to an agent's MCP config, expose de-id/NER as MCP tools, run an MCP server over stdio or Streamable HTTP, give Claude/Codex access to OpenMed, or containerize the MCP server. Covers the mcp extra, create_mcp_server, the 7 tools (openmed_analyze_text, openmed_extract_pii, openmed_deidentify, openmed_list_models, openmed_list_pii_languages, openmed_loaded_models, openmed_unload_model), the resources and prompts, stdio vs streamable-http transports, ServiceRuntime env config, and MCP client config snippets."
+}

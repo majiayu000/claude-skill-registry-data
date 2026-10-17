@@ -1,0 +1,40 @@
+{
+  "name": "deploy-ops",
+  "repo": "petersonsenadevs/senzu",
+  "path": "plugins/senzu-front/skills/deploy-ops/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/petersonsenadevs/senzu",
+  "dir_name": "deploy-ops-petersonsenadevs-senzu-5",
+  "downloaded_at": "2026-10-17T04:57:13.600806Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: ci, cd, docker, deploy, infra",
+    "score": 5,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "ci",
+      "cd",
+      "docker",
+      "deploy",
+      "infra"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "petersonsenadevs",
+  "source_url": "https://github.com/petersonsenadevs/senzu/blob/main/plugins/senzu-front/skills/deploy-ops/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/petersonsenadevs/senzu/blob/main/plugins/senzu-front/skills/deploy-ops/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Despliegue y operaciones para TODOS los stacks: deploy por plataforma (Netlify/Vercel/Forge/VPS), Docker, CI/CD con GitHub Actions, secretos por entorno, colas y cron en prod, backups con restore probado y monitorizaci\u00f3n. Deploy NUNCA sin aprobaci\u00f3n."
+}

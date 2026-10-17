@@ -1,0 +1,36 @@
+{
+  "name": "bio-temporal-genomics-temporal-grn",
+  "repo": "peacezha/HPClaw",
+  "path": "skills/bioSkills/temporal-genomics/temporal-grn/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/peacezha/HPClaw",
+  "dir_name": "temporal-grn",
+  "downloaded_at": "2026-10-17T04:54:51.568653Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category api scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "api"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "peacezha",
+  "source_url": "https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/temporal-genomics/temporal-grn/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/temporal-genomics/temporal-grn/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Infers dynamic gene regulatory networks from bulk time-series expression data using Granger causality (statsmodels), dynGENIE3 (Extra-Trees on ODE-derived expression derivatives), and dynamic Bayesian networks (bnlearn). Identifies time-delayed regulatory relationships and tracks network rewiring across conditions. Use when inferring causal regulatory relationships from bulk temporal expression data or detecting TF influence propagation over time. Not for static co-expression networks (see gene-regulatory-networks/coexpression-networks)."
+}

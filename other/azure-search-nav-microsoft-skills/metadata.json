@@ -1,0 +1,37 @@
+{
+  "name": "azure-search-nav",
+  "repo": "microsoft/skills",
+  "path": ".github/plugins/aks-skills/skills/azure-search-nav/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/microsoft/skills",
+  "dir_name": "azure-search-nav-microsoft-skills",
+  "downloaded_at": "2026-10-17T03:41:05.580032Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "microsoft",
+  "source_url": "https://github.com/microsoft/skills/blob/main/.github/plugins/aks-skills/skills/azure-search-nav/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/microsoft/skills/blob/main/.github/plugins/aks-skills/skills/azure-search-nav/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Builds an Azure portal deep link to a specific blade/menu item for supported Microsoft.ContainerService, Microsoft.Kubernetes, and Microsoft.Compute resources using the aks-search-direct-mid semantic search API. WHEN: 'find where in the Azure portal to do something', 'search the portal for an operation', 'construct a portal link from a search query and a resource'."
+}

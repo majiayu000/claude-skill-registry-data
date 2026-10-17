@@ -1,0 +1,38 @@
+{
+  "name": "validating-us-core",
+  "repo": "maziyarpanahi/openmed",
+  "path": "skills/validating-us-core/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/maziyarpanahi/openmed",
+  "dir_name": "validating-us-core",
+  "downloaded_at": "2026-10-17T03:34:39.418275Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, cli",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maziyarpanahi",
+  "source_url": "https://github.com/maziyarpanahi/openmed/blob/master/skills/validating-us-core/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maziyarpanahi/openmed/blob/master/skills/validating-us-core/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Validate FHIR R4 resources and Bundles against US Core / USCDI profiles with the official HL7 FHIR validator before submitting to an EHR. Covers running validator_cli.jar (or the public validator.fhir.org), declaring meta.profile, must-support elements, common conformance gaps (missing code/category/status), and turning validator output into a FHIR OperationOutcome. Use after exporting-to-fhir / assembling-fhir-bundles to check OpenMed-produced FHIR for US Core conformance, when the user mentions US Core, USCDI, must-support, profile validation, or Epic/Cerner ingestion requirements. Pairs after."
+}

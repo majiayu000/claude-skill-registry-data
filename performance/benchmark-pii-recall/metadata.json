@@ -1,0 +1,37 @@
+{
+  "name": "benchmark-pii-recall",
+  "repo": "maziyarpanahi/openmed",
+  "path": "skills/benchmark-pii-recall/SKILL.md",
+  "github_branch": "master",
+  "category": "performance",
+  "source": "github.com/maziyarpanahi/openmed",
+  "dir_name": "benchmark-pii-recall",
+  "downloaded_at": "2026-10-17T03:34:42.268635Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "performance",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for performance: latency, benchmark",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "latency",
+      "benchmark"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maziyarpanahi",
+  "source_url": "https://github.com/maziyarpanahi/openmed/blob/master/skills/benchmark-pii-recall/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maziyarpanahi/openmed/blob/master/skills/benchmark-pii-recall/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Benchmark an OpenMed PII model with synthetic gold spans and report label-aware exact-span and grapheme recall without emitting identifier surfaces. Use when an agent must compare a model, threshold, backend, or quantized artifact and enforce a recall floor before release."
+}

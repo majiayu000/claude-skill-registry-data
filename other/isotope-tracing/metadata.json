@@ -1,0 +1,37 @@
+{
+  "name": "bio-metabolomics-isotope-tracing",
+  "repo": "peacezha/HPClaw",
+  "path": "skills/bioSkills/metabolomics/isotope-tracing/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/peacezha/HPClaw",
+  "dir_name": "isotope-tracing",
+  "downloaded_at": "2026-10-17T04:54:32.278033Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "peacezha",
+  "source_url": "https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/metabolomics/isotope-tracing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/metabolomics/isotope-tracing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Designs and analyzes stable-isotope-resolved metabolomics (SIRM / isotope tracing / fluxomics) experiments that measure metabolic ACTIVITY via 13C/15N/2H tracers, distinct from steady-state pool profiling. Covers tracer choice, isotopologue vs isotopomer, mass-isotopomer distributions (MID), fractional enrichment, the mandatory natural-abundance + tracer-purity correction (IsoCor, AccuCor), and the metabolic/isotopic steady-state vs non-stationary (INST-MFA) distinction. Use when feeding a labeled tracer and interpreting labeling patterns, correcting raw isotopologue intensities, computing or plotting an MID, or deciding tracing vs abundance profiling. For absolute pool concentration and MRM mechanics see metabolomics/targeted-analysis; for constraint-based genome-scale flux (FBA, not empirical tracing) see systems-biology/flux-balance-analysis; for feature detection see metabolomics/xcms-preprocessing; for pathway enrichment that ignores the pool-vs-flux caveat see metabolomics/pathway-mapping."
+}

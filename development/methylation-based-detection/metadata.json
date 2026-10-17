@@ -1,0 +1,38 @@
+{
+  "name": "bio-methylation-based-detection",
+  "repo": "peacezha/HPClaw",
+  "path": "skills/bioSkills/liquid-biopsy/methylation-based-detection/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/peacezha/HPClaw",
+  "dir_name": "methylation-based-detection",
+  "downloaded_at": "2026-10-17T04:54:29.477430Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, programming, build",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "programming",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "peacezha",
+  "source_url": "https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/liquid-biopsy/methylation-based-detection/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/liquid-biopsy/methylation-based-detection/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Detects cancer and infers tissue-of-origin from cfDNA methylation by choosing conversion chemistry (bisulfite vs EM-seq vs TAPS vs cfMeDIP), calling read-level methylation haplotypes rather than averaged beta values, and deconvolving a hematopoietic-dominated cfDNA mixture against a methylation atlas via NNLS/quadratic programming. Encodes the GRAIL/CCGA thesis that thousands of tissue-specific markers make methylation outperform sparse mutations for multi-cancer early detection (MCED) and localization, and that single concordantly-methylated fragments give ppm-level sensitivity. Uses MethylDackel for extraction (mbias-then-extract), MEDIPS/QSEA for enrichment data, scipy.optimize.nnls for deconvolution. Use when building an MCED or methylation-MRD assay, picking a conversion chemistry for low-input plasma, or deconvolving tissue-of-origin from cfDNA."
+}

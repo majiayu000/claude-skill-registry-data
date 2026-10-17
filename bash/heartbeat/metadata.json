@@ -1,0 +1,39 @@
+{
+  "name": "heartbeat",
+  "repo": "oimiragieo/agent-studio",
+  "path": ".claude/skills/heartbeat/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/oimiragieo/agent-studio",
+  "dir_name": "heartbeat",
+  "downloaded_at": "2026-10-17T04:08:53.570575Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "oimiragieo",
+  "source_url": "https://github.com/oimiragieo/agent-studio/blob/main/.claude/skills/heartbeat/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/oimiragieo/agent-studio/blob/main/.claude/skills/heartbeat/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Start and manage the full heartbeat ecosystem for agent-studio. Registers all 7 heartbeat loops plus auto-reschedule task via CronCreate to keep the agent ecosystem healthy, indexed, informed, and connected."
+}

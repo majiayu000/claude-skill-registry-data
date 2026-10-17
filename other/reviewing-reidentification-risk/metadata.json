@@ -1,0 +1,36 @@
+{
+  "name": "reviewing-reidentification-risk",
+  "repo": "maziyarpanahi/openmed",
+  "path": "skills/reviewing-reidentification-risk/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/maziyarpanahi/openmed",
+  "dir_name": "reviewing-reidentification-risk",
+  "downloaded_at": "2026-10-17T03:34:57.241091Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "creative",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maziyarpanahi",
+  "source_url": "https://github.com/maziyarpanahi/openmed/blob/master/skills/reviewing-reidentification-risk/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maziyarpanahi/openmed/blob/master/skills/reviewing-reidentification-risk/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run expert-determination-style quasi-identifier risk scoring (k-anonymity, l-diversity) plus OpenMed's empirical re-identification attack on a de-identified dataset, then document residual risk in a defensible memo. Use when the user needs HIPAA Expert Determination (45 CFR 164.514(b)(1)) support, asks whether a dataset is safe to release, worries about singling-out via age/ZIP/dates, or wants a statistical \"very small risk\" determination. Covers identifying quasi-identifiers, computing k-anonymity / l-diversity, running openmed.eval.attacks.reid (run_reid_attack / run_reid_benchmark) as the adversarial attack, and writing the risk memo. Pairs after deidentifying-clinical-text and auditing-deid-leakage."
+}

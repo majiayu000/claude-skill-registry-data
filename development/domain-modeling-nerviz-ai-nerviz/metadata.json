@@ -1,0 +1,38 @@
+{
+  "name": "domain-modeling",
+  "repo": "nerviz-ai/nerviz",
+  "path": ".claude/skills/domain-modeling/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/nerviz-ai/nerviz",
+  "dir_name": "domain-modeling-nerviz-ai-nerviz",
+  "downloaded_at": "2026-10-17T03:57:26.551753Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, refactor",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nerviz-ai",
+  "source_url": "https://github.com/nerviz-ai/nerviz/blob/main/.claude/skills/domain-modeling/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nerviz-ai/nerviz/blob/main/.claude/skills/domain-modeling/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Details the domain and application layer of an already-designed use case \u2014 aggregate, value objects, invariants, ports, and events \u2014 into the `10-domain.md` partial. Use when the request involves modeling the domain, defining an aggregate or value object, designing a use case's ports, or detailing a spec already created by `use-case-design`. Piece of the `/new-feature` pipeline: requires `00-use-case.md` in the given folder and stops without it."
+}

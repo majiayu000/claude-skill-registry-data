@@ -1,0 +1,36 @@
+{
+  "name": "bio-epidemiological-genomics-transmission-inference",
+  "repo": "peacezha/HPClaw",
+  "path": "skills/bioSkills/epidemiological-genomics/transmission-inference/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/peacezha/HPClaw",
+  "dir_name": "transmission-inference",
+  "downloaded_at": "2026-10-17T04:54:13.594314Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "peacezha",
+  "source_url": "https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/epidemiological-genomics/transmission-inference/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/epidemiological-genomics/transmission-inference/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Infers person-to-person transmission from pathogen genomes using outbreaker2 (Campbell 2018), TransPhylo (Didelot 2017), phybreak (Klinkenberg 2017), BadTrIP (De Maio 2018), SCOTTI (De Maio 2016), BEASTLIER (Hall 2015), and SNP-distance / cluster-picker approaches (HIV-TRACE for HIV; transcluster). Defines outbreak clusters using pathogen-specific SNP thresholds (NOT a universal cutoff -- TB <=12 SNPs / Walker 2013; MRSA <=15 / Coll 2017; C. difficile <=2 / Eyre 2013; Klebsiella <=21 / Snitkin 2012), models within-host diversity and transmission bottlenecks (Worby-Lipsitch-Hanage 2014; McCrone 2018; Sobel Leonard 2017; Lythgoe 2021 SARS-CoV-2), integrates contact-tracing data, distinguishes generation interval from serial interval (Britton & Scalia Tomba 2019; Ali 2020), attributes source via Bayesian source attribution (Mather 2013 DT104; islandR), and reconciles transmission-network reconstruction with epi metadata. Use when investigating outbreaks for who-infected-whom, defining SNP-cluster outbreak definitions, accounting for unsampled intermediates, choosing between outbreaker2 (rich epi data) and TransPhylo (genomic-only after dated phylogeny), running source attribution between host populations, calling HIV-TRACE thresholds appropriate to the local subtype, or distinguishing recent transmission from reactivation in TB / chronic HIV."
+}

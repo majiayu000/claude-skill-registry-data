@@ -1,0 +1,38 @@
+{
+  "name": "debugging",
+  "repo": "oimiragieo/agent-studio",
+  "path": ".claude/skills/debugging/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/oimiragieo/agent-studio",
+  "dir_name": "debugging-oimiragieo-agent-studio",
+  "downloaded_at": "2026-10-17T04:08:53.160293Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "oimiragieo",
+  "source_url": "https://github.com/oimiragieo/agent-studio/blob/main/.claude/skills/debugging/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/oimiragieo/agent-studio/blob/main/.claude/skills/debugging/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Systematic 4-phase debugging with root cause investigation. Use when fixing bugs to prevent random fixes."
+}

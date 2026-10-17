@@ -1,0 +1,37 @@
+{
+  "name": "bio-longitudinal-monitoring",
+  "repo": "peacezha/HPClaw",
+  "path": "skills/bioSkills/liquid-biopsy/longitudinal-monitoring/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/peacezha/HPClaw",
+  "dir_name": "longitudinal-monitoring",
+  "downloaded_at": "2026-10-17T04:54:29.181817Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "ml",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "peacezha",
+  "source_url": "https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/liquid-biopsy/longitudinal-monitoring/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/liquid-biopsy/longitudinal-monitoring/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Tracks ctDNA across serial liquid-biopsy timepoints for molecular residual disease (MRD) and treatment-response monitoring, treating MRD as a binary integrated detection call across the patient's full variant set (with a defined LoD95 and per-sample specificity) rather than a per-timepoint VAF threshold, and handling undetectable samples as left-censored at the per-sample limit of detection rather than true zeros. Covers tumor-informed bespoke vs tumor-naive design, landmark vs surveillance sampling, molecular-response definitions and their non-standardization, censoring-aware clearance kinetics, and the multiple-testing structure of repeated surveillance. Use when monitoring ctDNA during therapy, calling molecular relapse before imaging, or estimating clearance half-life from serial samples."
+}

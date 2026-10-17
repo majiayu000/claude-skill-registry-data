@@ -1,0 +1,38 @@
+{
+  "name": "tabpfn",
+  "repo": "magnus919/agent-skills",
+  "path": "tabpfn/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/magnus919/agent-skills",
+  "dir_name": "tabpfn",
+  "downloaded_at": "2026-10-17T03:25:34.673941Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "ml",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "magnus919",
+  "source_url": "https://github.com/magnus919/agent-skills/blob/main/tabpfn/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/magnus919/agent-skills/blob/main/tabpfn/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Operate and evaluate TabPFN for local tabular classification, regression and dataset-specific fine-tuning: checkpoint selection, weight licensing, environment setup, training-context leakage, calibration, resource budgeting and reproducible inference artifacts. Use for TabPFN package or checkpoint workflows. Do not use for generic model selection, operating TabICL, or language-model fine-tuning; use ml-engineering, the selected tool, or unsloth respectively."
+}

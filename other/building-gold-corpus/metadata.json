@@ -1,0 +1,37 @@
+{
+  "name": "building-gold-corpus",
+  "repo": "maziyarpanahi/openmed",
+  "path": "skills/building-gold-corpus/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/maziyarpanahi/openmed",
+  "dir_name": "building-gold-corpus",
+  "downloaded_at": "2026-10-17T03:34:42.554151Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maziyarpanahi",
+  "source_url": "https://github.com/maziyarpanahi/openmed/blob/master/skills/building-gold-corpus/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maziyarpanahi/openmed/blob/master/skills/building-gold-corpus/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Scaffold a synthetic gold-standard annotation project for evaluating OpenMed NER and de-identification models \u2014 label schema, annotation guidelines, BRAT or Label Studio config, and disjoint train/dev/test splits. Use when the user wants to create eval fixtures, set up annotation, define a label set, write guidelines, configure an annotation tool, or build a held-out gold set for the OpenMed eval harness. Trigger on \"gold corpus\", \"annotation project\", \"label schema\", \"annotation guidelines\", \"BRAT\", \"Label Studio\", \"train dev test split\", or \"build eval fixtures\" for OpenMed. Committed gold must be synthetic; licensed (i2b2/n2c2/MIMIC) data is eval-only and never committed."
+}

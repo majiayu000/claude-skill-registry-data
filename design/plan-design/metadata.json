@@ -1,0 +1,39 @@
+{
+  "name": "plan-design",
+  "repo": "mvdmakesthings/skills",
+  "path": "plugins/delivery/skills/plan-design/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/mvdmakesthings/skills",
+  "dir_name": "plan-design",
+  "downloaded_at": "2026-10-17T03:52:39.413849Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, ui, css, component",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "css",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mvdmakesthings",
+  "source_url": "https://github.com/mvdmakesthings/skills/blob/main/plugins/delivery/skills/plan-design/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mvdmakesthings/skills/blob/main/plugins/delivery/skills/plan-design/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Design planning entry point \u2014 reads DESIGN.md, CONTEXT.md, and ADRs plus a Linear issue, identifies all UI surfaces that need design, lets you choose which to work through, then for each surface conducts an alignment interview, generates three layout-archetype mockups via OpenAI image generation, lets you pick one, produces an HTML/CSS implementation, and attaches it to the Linear issue. Use when starting design work on any feature, when you need visual options before committing to layout, or any time you want a Linear ticket to carry its own design artifacts."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "golang-lint",
+  "repo": "lza6/Claude-code-cli-config",
+  "path": "skills/golang-lint/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/lza6/Claude-code-cli-config",
+  "dir_name": "golang-lint-lza6-claude-code-cli-conf",
+  "downloaded_at": "2026-10-17T03:23:17.850869Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: product=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "feature"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lza6",
+  "source_url": "https://github.com/lza6/Claude-code-cli-config/blob/main/skills/golang-lint/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lza6/Claude-code-cli-config/blob/main/skills/golang-lint/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Provides linting best practices and golangci-lint configuration for Go projects. Covers running linters, configuring .golangci.yml, suppressing warnings with nolint directives, interpreting lint output, and managing linter settings. Use this skill whenever the user runs linters, configures golangci-lint, asks about lint warnings or suppressions, sets up code quality tooling, or asks which linters to enable for a Go project. Also use when the user mentions golangci-lint, go vet, staticcheck, revive, or any Go linting tool."
+}

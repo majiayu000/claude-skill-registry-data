@@ -1,0 +1,37 @@
+{
+  "name": "win-loss",
+  "repo": "matteotitta/claude-code-marketing-quickstart",
+  "path": ".claude/skills/win-loss/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/matteotitta/claude-code-marketing-quickstart",
+  "dir_name": "win-loss-matteotitta-claude-code-marketin",
+  "downloaded_at": "2026-10-17T03:32:42.921841Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, communication=2",
+    "score": 2,
+    "runner_up": "communication",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "insights"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "matteotitta",
+  "source_url": "https://github.com/matteotitta/claude-code-marketing-quickstart/blob/main/.claude/skills/win-loss/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/matteotitta/claude-code-marketing-quickstart/blob/main/.claude/skills/win-loss/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Analyses sales call transcripts (and churn or renewal calls) to find why deals are won, lost, kept or churned. Reads each call across six dimensions (product, messaging, sales process, pricing, competition, customer context), pulls verbatim quotes with the speaker named, counts how often each pattern appears, and writes findings with recommendations. Works with any recorder export or pasted text. Triggers: \"win/loss analysis\", \"why do we lose\", \"why do we win\", \"analyse these sales calls\", \"lost deals\", \"churn analysis\", \"objection patterns\". Feeds /positioning and /messaging. Not for general meeting summaries or competitor research (use /competitor-research)."
+}

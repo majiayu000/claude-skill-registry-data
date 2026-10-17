@@ -1,0 +1,36 @@
+{
+  "name": "querying-terminology-service",
+  "repo": "maziyarpanahi/openmed",
+  "path": "skills/querying-terminology-service/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/maziyarpanahi/openmed",
+  "dir_name": "querying-terminology-service",
+  "downloaded_at": "2026-10-17T03:34:55.530545Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "business",
+    "runner_up_score": 1,
+    "signals": [
+      "bash"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maziyarpanahi",
+  "source_url": "https://github.com/maziyarpanahi/openmed/blob/master/skills/querying-terminology-service/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maziyarpanahi/openmed/blob/master/skills/querying-terminology-service/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Call a user-supplied FHIR terminology server ($validate-code, $expand, $lookup, $translate) to validate and expand clinical codes without bundling restricted vocabulary (SNOMED CT, RxNorm, LOINC, ICD-10) into OpenMed. Covers a thin local client, ValueSet $expand with filters/ECL, CodeSystem $lookup, ConceptMap $translate, and pointing at Ontoserver / HAPI / tx.fhir.org. Use as the grounding step for OpenMed coding skills \u2014 turn an OpenMed entity span into a validated coded CodeableConcept \u2014 when the user mentions terminology server, $validate-code, $expand, ValueSet, ECL, SNOMED/RxNorm/LOINC lookups, or code validation. Pairs adjacent."
+}

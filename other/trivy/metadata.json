@@ -1,0 +1,37 @@
+{
+  "name": "trivy",
+  "repo": "nitinjain999/platform-skills",
+  "path": "skills/trivy/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/nitinjain999/platform-skills",
+  "dir_name": "trivy",
+  "downloaded_at": "2026-10-17T04:02:57.204374Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nitinjain999",
+  "source_url": "https://github.com/nitinjain999/platform-skills/blob/main/skills/trivy/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nitinjain999/platform-skills/blob/main/skills/trivy/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Scan container images, filesystems, git repos, and existing SBOMs for CVEs, secrets, and license violations using Trivy. Covers local CLI, CI severity gates with SARIF upload, and continuous monitoring via Trivy Operator (Flux HelmRelease). Use when asked to \"scan my image\", \"check for CVEs\", \"scan this repo for secrets\", \"scan an SBOM\", or \"set up continuous cluster vulnerability monitoring\". IaC misconfig \u2192 /platform-skills:checkov. Admission posture \u2192 /platform-skills:kyverno. Image signing/SBOM generation \u2192 /platform-skills:supply-chain."
+}

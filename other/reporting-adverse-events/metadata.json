@@ -1,0 +1,37 @@
+{
+  "name": "reporting-adverse-events",
+  "repo": "maziyarpanahi/openmed",
+  "path": "skills/reporting-adverse-events/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/maziyarpanahi/openmed",
+  "dir_name": "reporting-adverse-events",
+  "downloaded_at": "2026-10-17T03:34:49.432134Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maziyarpanahi",
+  "source_url": "https://github.com/maziyarpanahi/openmed/blob/master/skills/reporting-adverse-events/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maziyarpanahi/openmed/blob/master/skills/reporting-adverse-events/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Structures adverse-event mentions that OpenMed extracts into FAERS / ICH E2B(R3) reportable fields \u2014 suspect drug, reaction (MedDRA PT), seriousness criteria, and outcome. Use when the user needs to build an individual case safety report (ICSR), populate a FAERS submission, map a narrative to E2B(R3) data elements, classify seriousness (death, life-threatening, hospitalization, disability, congenital anomaly), or assign reaction outcomes. Trigger keywords: adverse event, ADR, ICSR, FAERS, E2B, E2B(R3), suspect drug, seriousness, MedDRA, reaction outcome, pharmacovigilance case. Pairs after OpenMed NER: consume Pharmaceutical/Chemical and Disease entities from openmed.analyze_text. MedDRA is licensed and user-supplied \u2014 never bundled. De-identify the narrative with openmed.deidentify before any external submission."
+}

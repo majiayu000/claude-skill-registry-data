@@ -1,0 +1,37 @@
+{
+  "name": "openscript",
+  "repo": "marketcalls/openalgo-desktop",
+  "path": ".claude/skills/openscript/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/marketcalls/openalgo-desktop",
+  "dir_name": "openscript",
+  "downloaded_at": "2026-10-17T03:29:17.102813Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "marketcalls",
+  "source_url": "https://github.com/marketcalls/openalgo-desktop/blob/master/.claude/skills/openscript/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/marketcalls/openalgo-desktop/blob/master/.claude/skills/openscript/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write an OpenScript study or strategy for OpenAlgo, and install it into the desktop app's openscript/ folder (app data directory) only after it compiles. Use when asked to create, port or debug an OpenScript indicator, study, strategy, backtest script or .oscript file, including porting a study or strategy written for another charting platform, or a JavaScript chart indicator (an openalgo-charts descriptor) into a study that computes the same values. This is the OpenScript path, not the JavaScript chart-indicator path and not the Python openalgo.ta path."
+}

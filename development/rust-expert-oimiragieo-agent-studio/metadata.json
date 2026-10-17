@@ -1,0 +1,39 @@
+{
+  "name": "rust-expert",
+  "repo": "oimiragieo/agent-studio",
+  "path": ".claude/skills/rust-expert/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/oimiragieo/agent-studio",
+  "dir_name": "rust-expert-oimiragieo-agent-studio",
+  "downloaded_at": "2026-10-17T04:08:57.915489Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, programming, compile, debug",
+    "score": 4,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "programming",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "oimiragieo",
+  "source_url": "https://github.com/oimiragieo/agent-studio/blob/main/.claude/skills/rust-expert/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/oimiragieo/agent-studio/blob/main/.claude/skills/rust-expert/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Rust programming expert including ownership, borrowing, lifetimes, async Tokio patterns, error handling, trait system, performance optimization, testing, and production systems development"
+}

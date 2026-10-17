@@ -1,0 +1,37 @@
+{
+  "name": "bio-flow-cytometry-bead-normalization",
+  "repo": "peacezha/HPClaw",
+  "path": "skills/bioSkills/flow-cytometry/bead-normalization/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/peacezha/HPClaw",
+  "dir_name": "bead-normalization",
+  "downloaded_at": "2026-10-17T04:54:17.132109Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, visualization",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "peacezha",
+  "source_url": "https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/flow-cytometry/bead-normalization/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/flow-cytometry/bead-normalization/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Bead-based signal normalization and cross-batch harmonization for CyTOF and high-parameter cytometry - EQ four-element bead normalization of instrument sensitivity drift (CATALYST normCytof, premessa), and reference-anchor cross-batch normalization (CytoNorm, per-cluster quantile splines). Covers the distinction between within-run drift correction and between-batch correction, the mandatory anchor/reference sample, why normalization is per-cluster with many quantiles, and the over-correction risk. Use when correcting CyTOF signal drift, harmonizing multi-batch or multi-site studies, or deciding whether to normalize data versus model batch in the design."
+}

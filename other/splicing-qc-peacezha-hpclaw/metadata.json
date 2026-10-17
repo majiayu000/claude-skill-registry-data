@@ -1,0 +1,37 @@
+{
+  "name": "bio-splicing-qc",
+  "repo": "peacezha/HPClaw",
+  "path": "skills/bioSkills/alternative-splicing/splicing-qc/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/peacezha/HPClaw",
+  "dir_name": "splicing-qc-peacezha-hpclaw",
+  "downloaded_at": "2026-10-17T04:53:42.794707Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "peacezha",
+  "source_url": "https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/alternative-splicing/splicing-qc/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/alternative-splicing/splicing-qc/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Assesses RNA-seq data quality specifically for alternative splicing analysis. QC layers include experimental design audit (library prep, read length, depth, replicates), STAR 2-pass cohort-style alignment, junction saturation curves and discovery plateau detection, novel-vs-known junction ratio diagnostics, junction-overhang distribution, splice-site strength scoring (MaxEntScan intrinsic + SpliceAI context-aware), strandedness verification, GENCODE basic vs comprehensive choice, and rRNA contamination screening. Splicing analysis is more demanding than DGE on read length, depth, library prep, alignment strategy, and annotation choice \u2014 failures silently bias PSI estimates and inflate novel-junction false positives. Use when evaluating data suitability for splicing analysis, troubleshooting low event detection, or designing sequencing experiments where AS is a primary endpoint."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "dba",
+  "repo": "mvdmakesthings/skills",
+  "path": "plugins/specialist/skills/dba/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mvdmakesthings/skills",
+  "dir_name": "dba",
+  "downloaded_at": "2026-10-17T03:52:38.319421Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mvdmakesthings",
+  "source_url": "https://github.com/mvdmakesthings/skills/blob/main/plugins/specialist/skills/dba/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mvdmakesthings/skills/blob/main/plugins/specialist/skills/dba/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Postgres-first DBA workflows \u2014 run a full database health audit, design and implement schema (tables, constraints, RLS, indexes, migrations + tests), clean up unused indexes / bloat / dead tuples, diagnose and fix slow queries, and investigate live database incidents (high CPU, lock storms, error spikes, connection exhaustion). Use whenever the user says \"audit the database\", \"DB health check\", \"design a schema\", \"model this table\", \"add a table for X\", \"clean up indexes\", \"database bloat\", \"why is this query slow\", \"optimize this query\", \"explain analyze this\", \"investigate the database\", \"the DB is on fire\", \"high CPU on Postgres\", \"connection pool exhausted\", or types \"/dba\" \u2014 even when they don't say the word \"DBA\" or name a specific workflow. Discovers each project's migration, test, and deploy conventions at runtime rather than assuming them."
+}

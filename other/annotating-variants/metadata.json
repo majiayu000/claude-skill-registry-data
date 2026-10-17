@@ -1,0 +1,37 @@
+{
+  "name": "annotating-variants",
+  "repo": "maziyarpanahi/openmed",
+  "path": "skills/annotating-variants/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/maziyarpanahi/openmed",
+  "dir_name": "annotating-variants",
+  "downloaded_at": "2026-10-17T03:34:40.657427Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maziyarpanahi",
+  "source_url": "https://github.com/maziyarpanahi/openmed/blob/master/skills/annotating-variants/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maziyarpanahi/openmed/blob/master/skills/annotating-variants/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Annotates VCF variants and normalizes HGVS nomenclature with public, license-free annotators (Ensembl VEP REST, VEP/SnpEff/ANNOVAR offline) and links variants to gnomAD population frequencies and the clinical context OpenMed extracts. Use when the user wants to predict variant consequences, map HGVS to genomic coordinates, annotate a VCF, attach allele frequencies, or pair variants with phenotype/oncology context. Trigger keywords: VCF, HGVS, variant annotation, VEP, SnpEff, ANNOVAR, consequence, missense, gnomAD, allele frequency, GRCh38, rsID, transcript. Pairs adjacent to OpenMed: combine annotated variants with Genomics/Oncology entities and phenotype from openmed.analyze_text. Tools used are free; restricted clinical databases are user-supplied."
+}

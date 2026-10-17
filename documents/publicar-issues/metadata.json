@@ -1,0 +1,37 @@
+{
+  "name": "publicar-issues",
+  "repo": "luciano-stefano-meloclaps/platform-argentum",
+  "path": ".claude/skills/publicar-issues/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/luciano-stefano-meloclaps/platform-argentum",
+  "dir_name": "publicar-issues",
+  "downloaded_at": "2026-10-17T03:20:32.854171Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, markdown",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "luciano-stefano-meloclaps",
+  "source_url": "https://github.com/luciano-stefano-meloclaps/platform-argentum/blob/main/.claude/skills/publicar-issues/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/luciano-stefano-meloclaps/platform-argentum/blob/main/.claude/skills/publicar-issues/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Crea, comenta y edita issues del tracker con gh de forma barata \u2014 t\u00edtulo, cuerpo, etiquetas y dependencias como texto. Usala al publicar un corte aprobado o al comentar un issue."
+}

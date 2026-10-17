@@ -1,0 +1,38 @@
+{
+  "name": "attack-xss-stored",
+  "repo": "node011/Bounty-Reaper",
+  "path": ".bountyreaper/skill/attack-xss/stored/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/node011/Bounty-Reaper",
+  "dir_name": "stored",
+  "downloaded_at": "2026-10-17T04:04:05.534245Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: pdf, markdown",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "pdf",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "node011",
+  "source_url": "https://github.com/node011/Bounty-Reaper/blob/main/.bountyreaper/skill/attack-xss/stored/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/node011/Bounty-Reaper/blob/main/.bountyreaper/skill/attack-xss/stored/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Stored XSS \u2014 injection point mining (profile fields, filenames, headers, uploads), render-path verification, second-order XSS, admin-page chaining"
+}

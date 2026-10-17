@@ -1,0 +1,39 @@
+{
+  "name": "verify",
+  "repo": "marketcalls/openalgo-desktop",
+  "path": ".claude/skills/verify/SKILL.md",
+  "github_branch": "master",
+  "category": "security",
+  "source": "github.com/marketcalls/openalgo-desktop",
+  "dir_name": "verify",
+  "downloaded_at": "2026-10-17T03:29:16.055138Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, vulnerability, audit",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "security",
+      "auth",
+      "vulnerability",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "marketcalls",
+  "source_url": "https://github.com/marketcalls/openalgo-desktop/blob/master/.claude/skills/verify/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/marketcalls/openalgo-desktop/blob/master/.claude/skills/verify/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Verify a claim before stating it, and verify a test before trusting it, in OpenAlgo Desktop. Use before asserting that a security control holds (redaction, CSRF, broker state check, API key, webhook secret), that a pattern is safe, that a bug is fixed, that a leak is gone, or that a test guards a fix; when reporting audit or scanner findings (cargo deny, cargo audit, npm audit, gitleaks, trivy, CodeQL, leak_grep); when a grep \"found nothing\"; when a clippy, test or scanner count looks clean; and before telling anyone something is or is not a vulnerability."
+}

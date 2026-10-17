@@ -1,0 +1,37 @@
+{
+  "name": "windbg-user-mutex-held-across-co-await",
+  "repo": "microsoft/win-dev-skills",
+  "path": "plugins/windbg/skills/windbg-user-mutex-held-across-co-await/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/microsoft/win-dev-skills",
+  "dir_name": "windbg-user-mutex-held-across-co-await",
+  "downloaded_at": "2026-10-17T03:41:10.977695Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "microsoft",
+  "source_url": "https://github.com/microsoft/win-dev-skills/blob/main/plugins/windbg/skills/windbg-user-mutex-held-across-co-await/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/microsoft/win-dev-skills/blob/main/plugins/windbg/skills/windbg-user-mutex-held-across-co-await/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when app, service, or user-mode driver C++ coroutine code holds a thread-affine lock across suspension and later hangs or fails. Not for all coroutine crashes or choosing lock performance."
+}

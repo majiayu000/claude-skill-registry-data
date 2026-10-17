@@ -1,0 +1,38 @@
+{
+  "name": "bio-comparative-genomics-positive-selection",
+  "repo": "peacezha/HPClaw",
+  "path": "skills/bioSkills/comparative-genomics/positive-selection/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/peacezha/HPClaw",
+  "dir_name": "positive-selection",
+  "downloaded_at": "2026-10-17T04:54:00.285775Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, framework",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "framework"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "peacezha",
+  "source_url": "https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/comparative-genomics/positive-selection/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/comparative-genomics/positive-selection/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Detect positive (diversifying / episodic / pervasive) selection using codon dN/dS frameworks. Implements PAML codeml site models (M0/M1a/M2a/M7/M8/M8a), branch models, branch-site model A (Zhang 2005), and HyPhy methods (BUSTED, BUSTED-S, BUSTED-MH, BUSTED-PH, MEME, FEL, FUBAR, aBSREL, SLAC, RELAX, GARD, FUBAR-MH). Includes McDonald-Kreitman framework (asymptotic alpha, impMKT, polyDFE, DFE-alpha, GRAPES) for within-species + divergence inference, RERconverge for trait-correlated rate shifts, CSUBST for convergent substitution, and PhyloAcc for accelerated noncoding evolution. Use when testing adaptive evolution at codons, branches, or full gene; running GARD recombination pre-screen; controlling alignment-error and gBGC false positives; reconciling PAML vs HyPhy results; or performing genome-scale selection scans."
+}

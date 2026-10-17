@@ -1,0 +1,37 @@
+{
+  "name": "end-refactor",
+  "repo": "marcoemrich/agentic_coding_lab",
+  "path": "site/.pi/skills/end-refactor/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/marcoemrich/agentic_coding_lab",
+  "dir_name": "end-refactor",
+  "downloaded_at": "2026-10-17T03:28:21.671224Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "marcoemrich",
+  "source_url": "https://github.com/marcoemrich/agentic_coding_lab/blob/main/site/.pi/skills/end-refactor/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/marcoemrich/agentic_coding_lab/blob/main/site/.pi/skills/end-refactor/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Final metric-driven refactoring pass over the whole production tree, using the active stack profile's smell and cognitive-complexity tools plus McCabe and APP mass to drive one measured change at a time. Invoke when the user explicitly asks for a final cleanup, a quality pass over the finished code, or an end-refactor. Do NOT invoke automatically after a TDD cycle \u2014 the per-cycle refactor already covers that."
+}

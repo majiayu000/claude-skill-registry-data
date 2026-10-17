@@ -1,0 +1,36 @@
+{
+  "name": "svc-ftp",
+  "repo": "lza6/Armor-piercing-system-prompts",
+  "path": "04-\u5b89\u5168\u6e17\u900f/ftp/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/lza6/Armor-piercing-system-prompts",
+  "dir_name": "ftp-lza6-armor-piercing-syste",
+  "downloaded_at": "2026-10-17T03:22:53.199108Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "devops",
+    "runner_up_score": 1,
+    "signals": [
+      "shell"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lza6",
+  "source_url": "https://github.com/lza6/Armor-piercing-system-prompts/blob/main/04-\u5b89\u5168\u6e17\u900f/ftp/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lza6/Armor-piercing-system-prompts/blob/main/04-\u5b89\u5168\u6e17\u900f/ftp/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "FTP version exploits \u2014 vsftpd backdoor, ProFTPD mod_copy, writable upload\u2192shell chain. Use when FTP is open. Triggers - port 21, vsftpd 2.3.4, ProFTPD mod_copy."
+}

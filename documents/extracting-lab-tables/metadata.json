@@ -1,0 +1,39 @@
+{
+  "name": "extracting-lab-tables",
+  "repo": "maziyarpanahi/openmed",
+  "path": "skills/extracting-lab-tables/SKILL.md",
+  "github_branch": "master",
+  "category": "documents",
+  "source": "github.com/maziyarpanahi/openmed",
+  "dir_name": "extracting-lab-tables",
+  "downloaded_at": "2026-10-17T03:34:43.106914Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, pdf, word, docx",
+    "score": 4,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "pdf",
+      "word",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maziyarpanahi",
+  "source_url": "https://github.com/maziyarpanahi/openmed/blob/master/skills/extracting-lab-tables/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maziyarpanahi/openmed/blob/master/skills/extracting-lab-tables/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Detects and extracts tabular laboratory panels from PDFs, scans, and images into structured rows ready for OpenMed and FHIR. Use when the user has a CBC, CMP, lipid panel, or other lab report as a scanned image / PDF / spreadsheet and needs the test name, value, unit, reference range, and abnormal flag as clean rows. Trigger keywords: lab table extraction, lab panel, OCR labs, table detection, layout analysis, header detection, reference range column, abnormal flag column, LOINC, UCUM, CBC, CMP, structured labs. Pairs before OpenMed: OCR/parse the table on-device (openmed.multimodal.ocr.ocr, read_table), de-identify embedded PHI with openmed.deidentify, then hand structured rows to LOINC/UCUM mapping and openmed.clinical lab flagging. Image/CSV/TSV intake is supported; PDF/DOCX raise UnsupportedDocumentError \u2014 render those to images or text first."
+}

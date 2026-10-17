@@ -1,0 +1,36 @@
+{
+  "name": "parsing-hl7v2-messages",
+  "repo": "maziyarpanahi/openmed",
+  "path": "skills/parsing-hl7v2-messages/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/maziyarpanahi/openmed",
+  "dir_name": "parsing-hl7v2-messages",
+  "downloaded_at": "2026-10-17T03:34:45.276594Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category analysis scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maziyarpanahi",
+  "source_url": "https://github.com/maziyarpanahi/openmed/blob/master/skills/parsing-hl7v2-messages/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maziyarpanahi/openmed/blob/master/skills/parsing-hl7v2-messages/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Decodes pipe-delimited HL7 v2.x messages (ADT, ORU, MDM, ORM) into structured segments/fields/components and surfaces OBX-5 and NTE-3 free-text narrative for OpenMed. Use before OpenMed processing when ingesting HL7 v2 feeds from an interface engine, lab/results system, or ADT stream and you need the embedded clinical note text de-identified and analyzed. Flatten OBX/NTE text then call openmed.deidentify and openmed.analyze_text; segment-aware redaction is available via openmed.interop.hl7v2. Trigger keywords: HL7, HL7 v2, ADT, ORU, OBX, MSH, PID, pipe-delimited, interface engine, Mirth, lab results."
+}

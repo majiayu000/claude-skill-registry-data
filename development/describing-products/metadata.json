@@ -1,0 +1,38 @@
+{
+  "name": "describing-products",
+  "repo": "oaustegard/claude-skills",
+  "path": "describing-products/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/oaustegard/claude-skills",
+  "dir_name": "describing-products",
+  "downloaded_at": "2026-10-17T04:07:03.976374Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, software",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "oaustegard",
+  "source_url": "https://github.com/oaustegard/claude-skills/blob/main/describing-products/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/oaustegard/claude-skills/blob/main/describing-products/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Builds a product description repo for a software product - prose documents that say, feature by feature and event by event, what the user sees, what they can do, and exactly what happens when they do it, including when they stop halfway. Drafted from the code and tests, verified against the running product with hand checklists, and triaged into a bug list. Works for canvas editors, web apps, CLIs, chat products, mobile apps, and libraries or SDKs. Use when asked to \"write a product description for X\", \"describe the user experience of X\", \"document how X behaves for the user\", \"make a behavior-spec repo\", or for an event-by-event account of an app's behavior rather than API docs. Also resumes or extends an existing product description repo."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "changelog",
+  "repo": "lttr/claude-marketplace",
+  "path": "plugins/cc/skills/changelog/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/lttr/claude-marketplace",
+  "dir_name": "changelog-lttr-claude-marketplace",
+  "downloaded_at": "2026-10-17T03:20:03.024053Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lttr",
+  "source_url": "https://github.com/lttr/claude-marketplace/blob/master/plugins/cc/skills/changelog/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lttr/claude-marketplace/blob/master/plugins/cc/skills/changelog/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Show recent Claude Code changes personalized to user's setup. Trigger when user asks about changelog, \"what's new\", \"cc changelog\", \"claude code updates\", \"recent changes\", or wants to know what changed in Claude Code."
+}

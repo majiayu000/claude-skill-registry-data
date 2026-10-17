@@ -1,0 +1,38 @@
+{
+  "name": "aiwf-local-ai-training",
+  "repo": "nawnie/aiwf_llm-skill-pack",
+  "path": "skills/aiwf-local-ai-training/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/nawnie/aiwf_llm-skill-pack",
+  "dir_name": "aiwf-local-ai-training",
+  "downloaded_at": "2026-10-17T03:56:32.147602Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, model, training",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nawnie",
+  "source_url": "https://github.com/nawnie/aiwf_llm-skill-pack/blob/main/skills/aiwf-local-ai-training/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nawnie/aiwf_llm-skill-pack/blob/main/skills/aiwf-local-ai-training/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "AIWF local AI training planning and implementation skill. Use for QLoRA, LoRA, fine-tune, adapter training, dataset readiness, VRAM budget, trainer choice, config review, checkpoint and resume plans, export packaging, and post-training validation for LLM, image, video, and multimodal local models."
+}

@@ -1,0 +1,36 @@
+{
+  "name": "backup-dr",
+  "repo": "nitinjain999/platform-skills",
+  "path": "skills/backup-dr/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/nitinjain999/platform-skills",
+  "dir_name": "backup-dr-nitinjain999-platform-skills",
+  "downloaded_at": "2026-10-17T04:03:01.251122Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category development scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "devops",
+    "runner_up_score": 1,
+    "signals": [
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nitinjain999",
+  "source_url": "https://github.com/nitinjain999/platform-skills/blob/main/skills/backup-dr/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nitinjain999/platform-skills/blob/main/skills/backup-dr/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Back up and restore Kubernetes workloads with Velero, and prove recovery works. Covers Velero on EKS via Flux (IRSA, S3 backup location, EBS snapshots), schedules and retention, what a backup does not contain, restore drills that restore a namespace into an isolated copy and measure recovery time, cross-cluster disaster recovery with a read-only backup location, and GameDay pairing with chaos experiments. Use when asked to \"set up cluster backups\", \"test our restore\", \"what's our recovery time\", \"restore a deleted namespace\", or \"plan DR to another cluster\". Breaking things on purpose \u2192 /platform-skills:chaos. Upgrade rollback by blue/green \u2192 /platform-skills:cluster-upgrade."
+}

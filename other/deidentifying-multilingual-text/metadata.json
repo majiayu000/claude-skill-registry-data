@@ -1,0 +1,36 @@
+{
+  "name": "deidentifying-multilingual-text",
+  "repo": "maziyarpanahi/openmed",
+  "path": "skills/deidentifying-multilingual-text/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/maziyarpanahi/openmed",
+  "dir_name": "deidentifying-multilingual-text",
+  "downloaded_at": "2026-10-17T03:34:57.519134Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maziyarpanahi",
+  "source_url": "https://github.com/maziyarpanahi/openmed/blob/master/skills/deidentifying-multilingual-text/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maziyarpanahi/openmed/blob/master/skills/deidentifying-multilingual-text/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "De-identify non-English clinical text on-device with OpenMed by passing lang= and locale= to deidentify(). Use when the user has Spanish, German, French, Italian, Portuguese, Dutch, Hindi, Telugu, Arabic, Japanese, or Turkish medical notes, needs locale-aware fake surrogates, must handle language-specific national IDs (DNI, NIR, Steuer-ID, codice fiscale, BSN, CPF, TCKN, Aadhaar), or asks which languages OpenMed PII supports. Covers SUPPORTED_LANGUAGES, get_pii_models_by_language, get_patterns_for_language, LANG_TO_LOCALE, and accent normalization. Pairs with OpenMed deidentifying-clinical-text and generating-synthetic-surrogates."
+}

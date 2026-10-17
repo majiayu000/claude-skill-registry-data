@@ -1,0 +1,37 @@
+{
+  "name": "showme",
+  "repo": "lttr/claude-marketplace",
+  "path": "plugins/browser/skills/showme/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/lttr/claude-marketplace",
+  "dir_name": "showme",
+  "downloaded_at": "2026-10-17T03:20:04.192899Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lttr",
+  "source_url": "https://github.com/lttr/claude-marketplace/blob/master/plugins/browser/skills/showme/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lttr/claude-marketplace/blob/master/plugins/browser/skills/showme/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Drive a headed browser to a specific state in a web app (a feature, flow, screen, or bug repro) and leave the window open for the user to explore. Use when the user says \"show me X\", \"take me to that screen\", \"set up the repro\", or wants to try an app state firsthand."
+}

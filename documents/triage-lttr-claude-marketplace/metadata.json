@@ -1,0 +1,39 @@
+{
+  "name": "triage",
+  "repo": "lttr/claude-marketplace",
+  "path": "plugins/aiwork/skills/triage/SKILL.md",
+  "github_branch": "master",
+  "category": "documents",
+  "source": "github.com/lttr/claude-marketplace",
+  "dir_name": "triage-lttr-claude-marketplace",
+  "downloaded_at": "2026-10-17T03:20:03.627265Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, markdown, documentation",
+    "score": 4,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lttr",
+  "source_url": "https://github.com/lttr/claude-marketplace/blob/master/plugins/aiwork/skills/triage/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lttr/claude-marketplace/blob/master/plugins/aiwork/skills/triage/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Triage requirements, specs, or tickets. Detect input (pasted text, markdown path, tracker ticket id/URL, or empty prompt). Explore codebase + docs, score completeness, ask clarifying questions, write a markdown report. Trigger when user says \"triage\", \"review this spec\", \"is this requirement complete\", or provides a ticket/spec to assess."
+}

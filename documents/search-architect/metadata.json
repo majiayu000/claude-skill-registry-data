@@ -1,0 +1,38 @@
+{
+  "name": "search-architect",
+  "repo": "nerviz-ai/nerviz",
+  "path": ".claude/skills/search-architect/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/nerviz-ai/nerviz",
+  "dir_name": "search-architect",
+  "downloaded_at": "2026-10-17T03:57:27.127876Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word, documentation",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "word",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nerviz-ai",
+  "source_url": "https://github.com/nerviz-ai/nerviz/blob/main/.claude/skills/search-architect/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nerviz-ai/nerviz/blob/main/.claude/skills/search-architect/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Designs a search engine index of an already-scoped use case \u2014 Elasticsearch or OpenSearch kept as a rebuildable projection of a source of truth: the search document and its strict mapping, the versioned index behind an alias, the query and its cursor, the indexer that writes each change with the source's version, the rebuild with the alias swap, and the lag the projection consumes of the case's freshness \u2014 into the `23-search.md` partial. Use when the request involves full-text or faceted search, Elasticsearch, OpenSearch, a search index, a mapping, an alias, a reindex, an indexer consuming change events, or a read that searches by words, filters and facets. Piece of the `/new-feature` pipeline: requires `00-use-case.md` in the given folder with a `Search index` row that names an engine, plus `10-domain.md` \u2014 and stops without them."
+}

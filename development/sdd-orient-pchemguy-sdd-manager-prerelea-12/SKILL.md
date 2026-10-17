@@ -1,0 +1,24 @@
+---
+name: sdd-orient
+description: Use when locating and inspecting a software project's repository before SDD work, checking Git worktree and interrupted-task state, discovering governing instructions and development documents, or handing a scoped project orientation to an orchestrating agent. Read-only; report whether a proposed mutation has the required Git and authority baseline.
+---
+
+# Orient in a project
+
+For Markdown output or document work within this skill's scope, apply the shared [Markdown style](../sdd-conventions/references/markdown-style.md): blank lines after headings and around top-level lists and code blocks, plus four-space structural indentation, including nested lists, with exactly one space after each list marker. This applies to direct calls as well as coordinated work; it does not expand editing or review authority.
+
+Establish a factual, scoped starting point before another SDD skill changes repository files. This skill is a shared, **read-only** capability. It neither authorizes a mutation nor decides which later workflow to run. Read [inspection and handoff](references/inspection-and-handoff.md) for the evidence checks and report contract.
+
+1. Establish the user's intended project path and proposed scope, if supplied. Distinguish the project root from its enclosing Git root; do not assume the current directory is the project.
+2. Read root/applicable nested AGENTS.md; assess concise orientation, command/link currency and execution-owner discoverability under **sdd-manage**'s [agent orientation](../sdd-manage/references/agent-orientation.md). Report missing/stale guidance without creating or editing it. Inspect root `SDD-MANAGER.md`, `AI_DISCLOSURE.md` and README links as adoption/disclosure evidence and report missing or conflicting records in the handoff; do not create them during orientation. Identify applicable repository instructions, including root and path-scoped `AGENTS.md`, referenced policies, and project-designated sources. Inspect `docs/dev/PROJECT.md` for the project brief; if it contains operating instructions, preserve their applicability and report their scope and any conflict.
+3. Inspect Git, current branch or detached/unborn state, HEAD, worktree status, and changes affecting the intended paths. Suppress optional Git writes with command-scoped `git --no-optional-locks` or an equivalent scoped `GIT_OPTIONAL_LOCKS=0`. Git commands must not change the index, branch, working tree, or configuration.
+4. Inspect adjacent SPEC/PLAN/TASKS (and selected feature) review reports, finding/gate state and reviewed/governing identities; report absent or apparently stale readiness without performing QC or writing reports. Discover present development documents and their focused children, the active feature or change context, relevant code and tests, and declared project commands. When a task list exists, identify the last committed task and compare it with the owning checklist, pending changes, and existing verification evidence. Distinguish completed work awaiting commit from incomplete work; pass the identified state to **sdd-implement** for continuation.
+5. Produce the scoped orientation report. Separate observed facts from inferences and unknowns, identify concrete blockers, and state whether the Git prerequisite for a contemplated mutation is met. Re-orient when the project path, target scope, HEAD, instructions, or material worktree state changes.
+
+Use current governing documents and the active campaign for routine orientation. Do not load prior campaign documents unless the current task specifically needs their historical context; then read only the relevant records/sections. Identity/path discovery does not require reading historical contents. Apply the [closed-record boundary](../sdd-conventions/references/review-campaigns.md#closed-campaign-records).
+
+If the target is outside a usable Git worktree, mark **repository mutation blocked**. Do not initialize Git, create files, clean worktrees, restore files, run tests with side effects, commit, or invoke a mutating workflow. A conversational or read-only inspection may continue.
+
+For a subagent, the orchestrator supplies the applicable path scope, instructions, relevant document authorities, Git baseline, known dirty paths, and prohibited mutations. A subagent can inspect additional evidence within its scope; the orchestrator rechecks the overall state before coordinating any mutation or commit.
+
+For main/feature preparation, observe actual document progress and pending human instructions under [human document review](../sdd-manage/references/human-document-review.md). Pass the next unfinished stage and any selected review to the coordinator; absent retrospective acceptance evidence alone does not require interactive replay. Keep readiness observation separate from authoring and substantive owner QC.

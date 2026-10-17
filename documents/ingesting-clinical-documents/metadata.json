@@ -1,0 +1,39 @@
+{
+  "name": "ingesting-clinical-documents",
+  "repo": "maziyarpanahi/openmed",
+  "path": "skills/ingesting-clinical-documents/SKILL.md",
+  "github_branch": "master",
+  "category": "documents",
+  "source": "github.com/maziyarpanahi/openmed",
+  "dir_name": "ingesting-clinical-documents",
+  "downloaded_at": "2026-10-17T03:34:54.362926Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, pdf, word, docx",
+    "score": 4,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "pdf",
+      "word",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maziyarpanahi",
+  "source_url": "https://github.com/maziyarpanahi/openmed/blob/master/skills/ingesting-clinical-documents/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maziyarpanahi/openmed/blob/master/skills/ingesting-clinical-documents/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Turn scanned faxes, images, and CSV/CDA exports into clean text ready for OpenMed de-identification and NER, fully on-device. Use when the user has clinical documents (image scans, photographed/faxed notes, tabular CSV/TSV exports, C-CDA XML) and needs OCR or structured intake before openmed.deidentify and openmed.analyze_text, asks about openmed.multimodal, OCR engines (Tesseract / PaddleOCR), tabular redaction, or layout and reading order. Covers the verified ocr() and redact_document() entry points and the ExtractedDocument contract. Pairs before deidentifying-clinical-text and extracting-clinical-entities."
+}

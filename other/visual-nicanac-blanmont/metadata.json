@@ -1,0 +1,37 @@
+{
+  "name": "visual",
+  "repo": "nicanac/blanmont",
+  "path": ".claude/skills/visual/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/nicanac/blanmont",
+  "dir_name": "visual-nicanac-blanmont",
+  "downloaded_at": "2026-10-17T04:00:27.136189Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "sub-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nicanac",
+  "source_url": "https://github.com/nicanac/blanmont/blob/master/.claude/skills/visual/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nicanac/blanmont/blob/master/.claude/skills/visual/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Turn the current work into one polished, self-contained HTML visual page \u2014 a recap of a branch's changes, a plan, a map of a folder, endpoint set, or architecture, or an interactive drill-down map of a skill pack or system (zoom, pan, click a node for details, double-click to open its inner view). Use when the user runs /visual or asks to visualise, picture, or visually recap a branch, PR, diff, plan, or part of a codebase, or to map a skill pack, its lanes, scripts, and hooks."
+}

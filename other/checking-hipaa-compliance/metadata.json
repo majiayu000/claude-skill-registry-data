@@ -1,0 +1,37 @@
+{
+  "name": "checking-hipaa-compliance",
+  "repo": "maziyarpanahi/openmed",
+  "path": "skills/checking-hipaa-compliance/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/maziyarpanahi/openmed",
+  "dir_name": "checking-hipaa-compliance",
+  "downloaded_at": "2026-10-17T03:34:51.466207Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maziyarpanahi",
+  "source_url": "https://github.com/maziyarpanahi/openmed/blob/master/skills/checking-hipaa-compliance/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maziyarpanahi/openmed/blob/master/skills/checking-hipaa-compliance/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Runs a HIPAA Privacy and Security Rule checklist over a data pipeline and produces a gap report before deploying OpenMed on PHI. Use when the user is about to process protected health information, needs a pre-deployment compliance review, wants to know which administrative, physical, and technical safeguards apply, is scoping a Business Associate Agreement, or must document minimum-necessary and de-identification controls. Trigger keywords: HIPAA, Privacy Rule, Security Rule, 45 CFR 164, PHI, BAA, business associate, minimum necessary, safeguards, Safe Harbor, Expert Determination, gap analysis, compliance review. Pairs adjacent to OpenMed: the checklist shows where openmed.deidentify and signed audit reports satisfy the de-identification and audit-control requirements. The control list lives in references/hipaa-checklist.md. This is a structured self-assessment aid, not legal advice."
+}

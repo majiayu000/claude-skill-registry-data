@@ -1,0 +1,37 @@
+{
+  "name": "bio-metabolomics-metabolite-annotation",
+  "repo": "peacezha/HPClaw",
+  "path": "skills/bioSkills/metabolomics/metabolite-annotation/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/peacezha/HPClaw",
+  "dir_name": "metabolite-annotation",
+  "downloaded_at": "2026-10-17T04:54:32.474524Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "peacezha",
+  "source_url": "https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/metabolomics/metabolite-annotation/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/metabolomics/metabolite-annotation/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Turns untargeted LC-MS/MS features (m/z, RT, MS/MS) into confidence-stratified metabolite annotations using spectral-library matching (matchms), in-silico tools (SIRIUS/CSI:FingerID, MetFrag) and molecular networking, and assigns a defensible MSI/Schymanski confidence level to each. Use when naming detected features, scoring MS/MS against a reference library, running SIRIUS, or deciding what confidence level an evidence set actually supports. For upstream feature extraction see metabolomics/xcms-preprocessing and metabolomics/msdial-preprocessing; for downstream enrichment that must respect these levels see metabolomics/pathway-mapping; for lipid-specific structural annotation see metabolomics/lipidomics."
+}

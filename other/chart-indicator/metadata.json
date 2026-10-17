@@ -1,0 +1,37 @@
+{
+  "name": "chart-indicator",
+  "repo": "marketcalls/openalgo-desktop",
+  "path": ".claude/skills/chart-indicator/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/marketcalls/openalgo-desktop",
+  "dir_name": "chart-indicator",
+  "downloaded_at": "2026-10-17T03:29:18.391936Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "marketcalls",
+  "source_url": "https://github.com/marketcalls/openalgo-desktop/blob/master/.claude/skills/chart-indicator/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/marketcalls/openalgo-desktop/blob/master/.claude/skills/chart-indicator/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Build a custom indicator for the OpenAlgo /trading charting terminal (openalgo-charts). Use when asked to create, port, or debug a chart indicator, overlay, oscillator, band, or on-chart signal, including porting a study written for another charting platform. Writes a plain-JS descriptor into the desktop app's indicators/ folder (app data directory), but only after it validates against the real library. This is the chart path, not the Python openalgo.ta path used from strategies and scanners."
+}

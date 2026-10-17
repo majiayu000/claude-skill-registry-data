@@ -1,0 +1,39 @@
+{
+  "name": "huggingface",
+  "repo": "oimiragieo/agent-studio",
+  "path": ".claude/skills/huggingface/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/oimiragieo/agent-studio",
+  "dir_name": "huggingface",
+  "downloaded_at": "2026-10-17T04:08:55.946395Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "ml",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "oimiragieo",
+  "source_url": "https://github.com/oimiragieo/agent-studio/blob/main/.claude/skills/huggingface/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/oimiragieo/agent-studio/blob/main/.claude/skills/huggingface/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Hugging Face Hub operations, model inference, dataset management, PEFT/LoRA fine-tuning, and Spaces deployment via MCP tools and Python APIs"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "running-openmed-ondevice",
+  "repo": "maziyarpanahi/openmed",
+  "path": "skills/running-openmed-ondevice/SKILL.md",
+  "github_branch": "master",
+  "category": "platform",
+  "source": "github.com/maziyarpanahi/openmed",
+  "dir_name": "running-openmed-ondevice",
+  "downloaded_at": "2026-10-17T03:34:48.831959Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: platform, device, ios",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "platform",
+      "device",
+      "ios"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maziyarpanahi",
+  "source_url": "https://github.com/maziyarpanahi/openmed/blob/master/skills/running-openmed-ondevice/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maziyarpanahi/openmed/blob/master/skills/running-openmed-ondevice/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run OpenMed models fully on-device with the MLX (Apple Silicon), CoreML (iOS/macOS), or ONNX/WebGPU (cross-platform/browser) backends, including convert-quantize-run workflows. Use when the user wants to deploy OpenMed at the edge, run NER/de-id on Apple Silicon, target iPhone/iPad/Mac, export to ONNX or WebGPU, quantize a clinical model to int8/4-bit, run with no network, or pick between MLX/CoreML/ONNX. Covers the mlx/coreml/onnx extras, the convert() functions and python -m convert CLIs, quantization, loading a local MLX artifact through analyze_text, OpenMedMLXLanguageModel/generate_text, and the on-device-only PHI guarantee (nothing leaves the host)."
+}

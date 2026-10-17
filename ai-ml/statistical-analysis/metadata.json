@@ -1,0 +1,38 @@
+{
+  "name": "bio-metabolomics-statistical-analysis",
+  "repo": "peacezha/HPClaw",
+  "path": "skills/bioSkills/metabolomics/statistical-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/peacezha/HPClaw",
+  "dir_name": "statistical-analysis",
+  "downloaded_at": "2026-10-17T04:54:33.110400Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ml, machine-learning, model",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "ml",
+      "machine-learning",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "peacezha",
+  "source_url": "https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/metabolomics/statistical-analysis/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/metabolomics/statistical-analysis/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Decision-grade statistical analysis for metabolomics intensity tables. Covers transformation and scaling (Pareto vs unit-variance as a hidden hypothesis), unsupervised structure (PCA/HCA for QC), permutation-validated PLS-DA/OPLS-DA (R2 vs Q2, double CV, VIP as heuristic), univariate testing (Welch/Mann-Whitney/ANOVA/LMM with covariate adjustment), and dependence-aware multiple testing. Use when testing which metabolites differ, building or validating a discriminant model, choosing a scaling, or correcting many correlated tests. For sample-wise normalization/drift correction see metabolomics/normalization-qc; for ML classifiers and selection-inside-CV leakage see machine-learning/biomarker-discovery and machine-learning/model-validation; for pathway interpretation see metabolomics/pathway-mapping; for design/power/multiplicity regime see experimental-design/multiple-testing."
+}

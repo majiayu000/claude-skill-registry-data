@@ -1,0 +1,37 @@
+{
+  "name": "detecting-pv-signals",
+  "repo": "maziyarpanahi/openmed",
+  "path": "skills/detecting-pv-signals/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/maziyarpanahi/openmed",
+  "dir_name": "detecting-pv-signals",
+  "downloaded_at": "2026-10-17T03:34:41.253792Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maziyarpanahi",
+  "source_url": "https://github.com/maziyarpanahi/openmed/blob/master/skills/detecting-pv-signals/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maziyarpanahi/openmed/blob/master/skills/detecting-pv-signals/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Computes disproportionality signals \u2014 PRR, ROR, EBGM, and IC (BCPNN) \u2014 over FAERS / OpenFDA drug-event data to flag potential safety signals. Use when the user wants to mine spontaneous-report data for drug-reaction associations, build a 2x2 contingency table, compute a Proportional Reporting Ratio or Reporting Odds Ratio, run Empirical Bayes (EBGM/EB05) or Information Component shrinkage, or screen a drug for over-reported reactions. Trigger keywords: disproportionality, signal detection, PRR, ROR, EBGM, EB05, IC, BCPNN, MGPS, 2x2 table, signal of disproportionate reporting, SDR, OpenFDA, FAERS. Pairs adjacent to OpenMed: aggregate de-identified, coded cases (from reporting-adverse-events) then query the public OpenFDA /drug/event count API to build the contingency table. Reaction terms are MedDRA PTs (licensed, user-supplied)."
+}

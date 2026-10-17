@@ -1,0 +1,37 @@
+{
+  "name": "eerc-key-management",
+  "repo": "nickthelegend/avalanche-privacy-skills",
+  "path": "skills/eerc-key-management/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/nickthelegend/avalanche-privacy-skills",
+  "dir_name": "eerc-key-management",
+  "downloaded_at": "2026-10-17T04:01:10.709243Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nickthelegend",
+  "source_url": "https://github.com/nickthelegend/avalanche-privacy-skills/blob/master/skills/eerc-key-management/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nickthelegend/avalanche-privacy-skills/blob/master/skills/eerc-key-management/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when the agent must handle eERC keys safely \u2014 the user decryption key (derived from a wallet signature, client-side only) and the privileged auditor key \u2014 covering derivation, storage, recovery, and rotation."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "posit-r-cli",
+  "repo": "luokehan/superclaw",
+  "path": "skills/posit-r-cli/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/luokehan/superclaw",
+  "dir_name": "posit-r-cli",
+  "downloaded_at": "2026-10-17T03:21:50.202745Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, communication=2",
+    "score": 2,
+    "runner_up": "communication",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "luokehan",
+  "source_url": "https://github.com/luokehan/superclaw/blob/main/skills/posit-r-cli/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/luokehan/superclaw/blob/main/skills/posit-r-cli/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Comprehensive R package for command-line interface styling, semantic messaging, and user communication. Use this skill when working with R code that needs to: (1) Format console output with inline markup and colors, (2) Display errors, warnings, or messages with cli_abort/cli_warn/cli_inform, (3) Show progress indicators for long-running operations, (4) Create semantic CLI elements (headers, lists, alerts, code blocks), (5) Apply themes and customize output styling, (6) Handle pluralization in user-facing text, (7) Work with ANSI strings, hyperlinks, or custom containers. Also use when migrating from base R message/warning/stop, debugging cli code, or improving existing cli usage."
+}

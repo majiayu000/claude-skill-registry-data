@@ -1,0 +1,38 @@
+{
+  "name": "maintain-llm-wiki",
+  "repo": "otrebu/skills",
+  "path": "skills/maintain-llm-wiki/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/otrebu/skills",
+  "dir_name": "maintain-llm-wiki",
+  "downloaded_at": "2026-10-17T04:14:28.070302Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: lint, review, validate",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "lint",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "otrebu",
+  "source_url": "https://github.com/otrebu/skills/blob/main/skills/maintain-llm-wiki/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/otrebu/skills/blob/main/skills/maintain-llm-wiki/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Maintain a compounding LLM wiki that integrates immutable sources into an interlinked, agent-owned knowledge base. Use when setting up a persistent markdown wiki, ingesting sources into it, answering or filing cited wiki queries, or linting the wiki for contradictions, staleness, gaps, and broken links."
+}

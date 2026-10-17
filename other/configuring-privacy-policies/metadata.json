@@ -1,0 +1,36 @@
+{
+  "name": "configuring-privacy-policies",
+  "repo": "maziyarpanahi/openmed",
+  "path": "skills/configuring-privacy-policies/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/maziyarpanahi/openmed",
+  "dir_name": "configuring-privacy-policies",
+  "downloaded_at": "2026-10-17T03:34:55.211890Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category context-management scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "context"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maziyarpanahi",
+  "source_url": "https://github.com/maziyarpanahi/openmed/blob/master/skills/configuring-privacy-policies/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maziyarpanahi/openmed/blob/master/skills/configuring-privacy-policies/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Select and customize OpenMed's seven bundled privacy policy profiles for de-identification, and build custom surrogate generators. Use when the user asks which policy fits HIPAA Safe Harbor vs Expert Determination vs GDPR vs PIPEDA vs a research limited dataset vs strict no-leak, wants to pass policy= to deidentify(), needs to keep quasi-identifiers for research, or must register a custom MRN/name/address surrogate provider. Covers the profile-to-use-case map, AnonymizerConfig/Anonymizer for fine control, and register_clinical_provider / register_label_generator. Pairs with OpenMed deidentifying-clinical-text and generating-synthetic-surrogates."
+}

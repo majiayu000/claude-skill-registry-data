@@ -1,0 +1,37 @@
+{
+  "name": "bio-metabolomics-normalization-qc",
+  "repo": "peacezha/HPClaw",
+  "path": "skills/bioSkills/metabolomics/normalization-qc/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/peacezha/HPClaw",
+  "dir_name": "normalization-qc",
+  "downloaded_at": "2026-10-17T04:54:32.794546Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, validate",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "quality",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "peacezha",
+  "source_url": "https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/metabolomics/normalization-qc/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/metabolomics/normalization-qc/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Designs QC, corrects signal drift, removes batch effects, filters features, normalizes samples, and imputes missing values for untargeted LC-MS/GC-MS metabolomics, framing each step as a measurement model that can create or erase biological signal. Use when processing a peak/feature table before statistical analysis, choosing a drift-correction or sample-normalization method, deciding QC RSD vs D-ratio filtering, or handling left-censored missing values. The feature table is produced by metabolomics/xcms-preprocessing or metabolomics/msdial-preprocessing; transformation/scaling for modeling defers to metabolomics/statistical-analysis; cross-study design issues link to experimental-design/batch-design."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "pr-review",
+  "repo": "nvie/skills",
+  "path": "skills/pr-review/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/nvie/skills",
+  "dir_name": "pr-review-nvie-skills",
+  "downloaded_at": "2026-10-17T04:06:45.424608Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nvie",
+  "source_url": "https://github.com/nvie/skills/blob/main/skills/pr-review/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nvie/skills/blob/main/skills/pr-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Review one or more GitHub pull requests as a progressive, understanding-first code review -- start at the highest altitude (what does it do, how, what to grasp before the details) and descend one abstraction layer at a time only when asked. Built for a senior engineer who wants to understand a PR before spending review time on it. Use when the user runs /pr-review with one or more PR links (often a frontend + backend pair), or asks to \"review this PR\" / \"review these PRs\". Treats the code diff as the source of truth and the PR description as context, reads the PR's existing discussion so it doesn't repeat points already raised, and keeps every finding at the current altitude of the review. Surfaces only interesting findings and good questions to ask the author -- never a checklist dump."
+}

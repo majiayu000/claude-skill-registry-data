@@ -1,0 +1,37 @@
+{
+  "name": "serving-openmed-rest-api",
+  "repo": "maziyarpanahi/openmed",
+  "path": "skills/serving-openmed-rest-api/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/maziyarpanahi/openmed",
+  "dir_name": "serving-openmed-rest-api",
+  "downloaded_at": "2026-10-17T03:34:49.723357Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maziyarpanahi",
+  "source_url": "https://github.com/maziyarpanahi/openmed/blob/master/skills/serving-openmed-rest-api/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maziyarpanahi/openmed/blob/master/skills/serving-openmed-rest-api/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Stand up OpenMed's FastAPI REST service for clinical NER, PII extraction, and de-identification, with health checks, model keep-alive/unload, optional dynamic batching, and no-PHI logging. Use when the user wants to serve OpenMed over HTTP, deploy a de-id/NER REST API, run an inference endpoint for clinical text, add a /analyze or /pii/deidentify route, or containerize OpenMed as a service. Covers the service extra, launching create_app with uvicorn, the real endpoints (/health, /analyze, /pii/extract, /pii/deidentify, /models/loaded, /models/unload), request/response shapes, ServiceRuntime env-var configuration, and self-hosted auth/CORS/TLS notes."
+}

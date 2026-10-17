@@ -1,0 +1,37 @@
+{
+  "name": "slci-compatibility-analysis",
+  "repo": "matlab/simulink-agentic-toolkit",
+  "path": "skills-catalog/code-generation/slci-compatibility-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/matlab/simulink-agentic-toolkit",
+  "dir_name": "slci-compatibility-analysis",
+  "downloaded_at": "2026-10-17T03:31:51.859161Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "matlab",
+  "source_url": "https://github.com/matlab/simulink-agentic-toolkit/blob/main/skills-catalog/code-generation/slci-compatibility-analysis/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/matlab/simulink-agentic-toolkit/blob/main/skills-catalog/code-generation/slci-compatibility-analysis/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when you need to verify a Simulink model is compatible with SLCI code inspection, or to apply fixes for identified incompatibilities. Checks model configuration, identifies incompatibilities, and explains why each constraint is required for verification. Also invoked by slci-inspection-incompatibility-analysis to fix constraints and obtain compatibility results. Trigger keywords: checkCompatibility, SLCI compatibility, code inspection readiness, Model Advisor compatibility report."
+}

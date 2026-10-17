@@ -1,0 +1,37 @@
+{
+  "name": "brokk-test-driven-development",
+  "repo": "nstucki/yggdrasil",
+  "path": "skills/tdd/brokk-test-driven-development/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/nstucki/yggdrasil",
+  "dir_name": "brokk-test-driven-development",
+  "downloaded_at": "2026-10-17T04:06:10.246386Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nstucki",
+  "source_url": "https://github.com/nstucki/yggdrasil/blob/main/skills/tdd/brokk-test-driven-development/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nstucki/yggdrasil/blob/main/skills/tdd/brokk-test-driven-development/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Implement a bounded work package by the red-green-refactor cycle \u2014 failing tests traced to acceptance criteria first, minimal implementation second, behavior-preserving refactor third \u2014 returning run evidence for each phase, stopping at a reviewed-ready, uncommitted tree; committing belongs to a separate step."
+}

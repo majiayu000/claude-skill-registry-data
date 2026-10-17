@@ -1,0 +1,37 @@
+{
+  "name": "bio-immunoinformatics-epitope-prediction",
+  "repo": "peacezha/HPClaw",
+  "path": "skills/bioSkills/immunoinformatics/epitope-prediction/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/peacezha/HPClaw",
+  "dir_name": "epitope-prediction",
+  "downloaded_at": "2026-10-17T04:54:27.463871Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: model, training",
+    "score": 2,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "peacezha",
+  "source_url": "https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/immunoinformatics/epitope-prediction/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/immunoinformatics/epitope-prediction/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Predict B-cell and T-cell epitopes for vaccine antigen design and epitope mapping with BepiPred-3.0, DiscoTope-3.0, the IEDB tools, and EL-mode MHC presentation. Encodes the load-bearing asymmetry that T-cell epitope prediction is mature (it reduces to MHC presentation, AUC>0.9) while B-cell prediction is unreliable (linear predictors ~AUC 0.6 because ~90% of real epitopes are conformational) \u2014 so structure-based DiscoTope-3.0 on AlphaFold models is the only defensible B-cell path, propensity scales are obsolete, and NetChop is largely redundant on EL-trained models. Use when mapping epitopes or selecting vaccine antigens. MHC binding lives in mhc-binding-prediction."
+}

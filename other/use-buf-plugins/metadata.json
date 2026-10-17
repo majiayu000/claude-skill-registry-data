@@ -1,0 +1,38 @@
+{
+  "name": "use-buf-plugins",
+  "repo": "moeru-ai/auv",
+  "path": ".agents/skills/use-buf-plugins/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/moeru-ai/auv",
+  "dir_name": "use-buf-plugins",
+  "downloaded_at": "2026-10-17T03:46:31.914613Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, generation=3",
+    "score": 3,
+    "runner_up": "generation",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "moeru-ai",
+  "source_url": "https://github.com/moeru-ai/auv/blob/main/.agents/skills/use-buf-plugins/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/moeru-ai/auv/blob/main/.agents/skills/use-buf-plugins/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Select, pin, configure, install, build, and troubleshoot Buf code-generation plugins across remote BSR and local execution. Use for buf.gen.yaml plugin entries, protoc-gen-* tools, generated Go/Python/TypeScript/OpenAPI outputs, offline generation, BSR connectivity or rate-limit failures, OCI-packaged plugin wrappers, or reproducing plugins from bufbuild/plugins."
+}

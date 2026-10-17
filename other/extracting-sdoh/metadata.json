@@ -1,0 +1,38 @@
+{
+  "name": "extracting-sdoh",
+  "repo": "maziyarpanahi/openmed",
+  "path": "skills/extracting-sdoh/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/maziyarpanahi/openmed",
+  "dir_name": "extracting-sdoh",
+  "downloaded_at": "2026-10-17T03:34:37.796237Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, workflow=3",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "analytics",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maziyarpanahi",
+  "source_url": "https://github.com/maziyarpanahi/openmed/blob/master/skills/extracting-sdoh/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maziyarpanahi/openmed/blob/master/skills/extracting-sdoh/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Extracts social determinants of health (SDOH) \u2014 housing instability, food insecurity, unemployment, transportation barriers, social isolation, financial strain \u2014 from clinical narrative and maps the spans to ICD-10-CM Z-codes (Z55\u2013Z65). Use after running OpenMed NER when the user wants SDOH surfacing, Z-code suggestion, health-equity analytics, or to recover SDOH that is documented in free text but not coded. Pairs with OpenMed analyze_text output. Standards: ICD-10-CM Z55\u2013Z65, Gravity Project value sets, n2c2 2022 SDOH track. Trigger keywords: SDOH, social determinants, Z-codes, housing, food insecurity, health equity, Gravity Project."
+}

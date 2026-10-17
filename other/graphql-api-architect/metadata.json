@@ -1,0 +1,37 @@
+{
+  "name": "graphql-api-architect",
+  "repo": "nerviz-ai/nerviz",
+  "path": ".claude/skills/graphql-api-architect/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/nerviz-ai/nerviz",
+  "dir_name": "graphql-api-architect",
+  "downloaded_at": "2026-10-17T03:57:28.760846Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nerviz-ai",
+  "source_url": "https://github.com/nerviz-ai/nerviz/blob/main/.claude/skills/graphql-api-architect/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nerviz-ai/nerviz/blob/main/.claude/skills/graphql-api-architect/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Designs the inbound GraphQL adapter of an already-modeled use case \u2014 schema-first, Spring for GraphQL on the servlet stack \u2014 into the `31-graphql.md` partial: the root fields and the input port each calls (the same port a REST adapter calls), types and nullability, mutation inputs and payloads with `userErrors`, Relay connections with a page ceiling, `@BatchMapping` child fields and the batch ports they ask for, the error map, field-level access, personal data per output field, and \u2014 on the project's first GraphQL case \u2014 the depth, complexity, timeout, batch-size, introspection, GraphiQL and CORS setup, plus a quota per caller or a concurrency cap when the use case states one. Use when the request involves GraphQL, a schema or `.graphqls` file, a query or mutation, a resolver, `@QueryMapping`, `@BatchMapping`, DataLoader, N+1 in GraphQL, a connection or cursor, GraphQL errors, or a rate limit on the GraphQL endpoint. Piece of the `/new-feature` pipeline: requires `10-domain.md` and a `00-use-case.md` whose `Trigger` names a GraphQL adapter in the given folder \u2014 and stops without them."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "batch-processing-clinical-text",
+  "repo": "maziyarpanahi/openmed",
+  "path": "skills/batch-processing-clinical-text/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/maziyarpanahi/openmed",
+  "dir_name": "batch-processing-clinical-text",
+  "downloaded_at": "2026-10-17T03:34:56.653118Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maziyarpanahi",
+  "source_url": "https://github.com/maziyarpanahi/openmed/blob/master/skills/batch-processing-clinical-text/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maziyarpanahi/openmed/blob/master/skills/batch-processing-clinical-text/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run large-scale batch NER, PII extraction, or de-identification over many clinical notes on-device with OpenMed, with sharding, checkpointing, resumability, and append-only JSONL output. Use when the user needs to process a corpus or folder of notes, de-identify a dataset, run NER over thousands of documents, build a resumable batch pipeline, or stream results to JSONL without holding everything in memory. Covers process_batch / BatchProcessor / BatchItem / BatchResult, the operation= selector (analyze_text | extract_pii | deidentify), iter_process streaming, the PHI-safe on_progress callback, chunking long documents, and no-PHI logging. Produces a resumable batch runner over an OpenMed model."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "authoring-model-cards",
+  "repo": "maziyarpanahi/openmed",
+  "path": "skills/authoring-model-cards/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/maziyarpanahi/openmed",
+  "dir_name": "authoring-model-cards",
+  "downloaded_at": "2026-10-17T03:34:42.818030Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maziyarpanahi",
+  "source_url": "https://github.com/maziyarpanahi/openmed/blob/master/skills/authoring-model-cards/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maziyarpanahi/openmed/blob/master/skills/authoring-model-cards/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generate a model card for an OpenMed clinical NER or de-identification model documenting intended use, quantitative metrics, subgroup performance, limitations, and a medical-device disclaimer for clinical AI governance. Use when the user wants to write or update a model card, a README model section, or governance documentation, or to turn OpenMed eval outputs (release gate report, fairness_report, error_report) into the card's metrics and limitations sections. Trigger on \"model card\", \"intended use\", \"model documentation\", \"governance\", \"limitations section\", \"datasheet\", or \"FDA/ONC transparency\" for an OpenMed model."
+}

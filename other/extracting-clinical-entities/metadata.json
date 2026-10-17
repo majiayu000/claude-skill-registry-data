@@ -1,0 +1,37 @@
+{
+  "name": "extracting-clinical-entities",
+  "repo": "maziyarpanahi/openmed",
+  "path": "skills/extracting-clinical-entities/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/maziyarpanahi/openmed",
+  "dir_name": "extracting-clinical-entities",
+  "downloaded_at": "2026-10-17T03:34:54.934136Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maziyarpanahi",
+  "source_url": "https://github.com/maziyarpanahi/openmed/blob/master/skills/extracting-clinical-entities/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maziyarpanahi/openmed/blob/master/skills/extracting-clinical-entities/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run clinical and biomedical named-entity recognition on medical text with OpenMed's analyze_text. Use when the user wants to extract diseases, drugs, anatomy, genes, or other biomedical entities from notes; needs NER output as dict/json/html/csv; wants to filter by confidence, group entities, toggle sentence detection, or save spans to JSONL; or wants the openmed analyze CLI. Pairs with loading-openmed-models and choosing-openmed-models, and runs after deidentifying-clinical-text in a privacy-first pipeline."
+}

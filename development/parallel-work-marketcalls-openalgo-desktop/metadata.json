@@ -1,0 +1,40 @@
+{
+  "name": "parallel-work",
+  "repo": "marketcalls/openalgo-desktop",
+  "path": ".claude/skills/parallel-work/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/marketcalls/openalgo-desktop",
+  "dir_name": "parallel-work-marketcalls-openalgo-desktop",
+  "downloaded_at": "2026-10-17T03:29:17.739390Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, compile, debug",
+    "score": 5,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "marketcalls",
+  "source_url": "https://github.com/marketcalls/openalgo-desktop/blob/master/.claude/skills/parallel-work/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/marketcalls/openalgo-desktop/blob/master/.claude/skills/parallel-work/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run several Claude agents or branches on OpenAlgo Desktop at the same time without breaking each other. Use when starting work in a worktree, spawning agents in parallel, building or testing while other agents build, writing a test that spawns the app binary, merging a branch into master, resolving conflicts in the registration files (state.rs, lib.rs, routes/mod.rs, middleware.rs, server/tests.rs, migrations.rs), renumbering a migration, freeing disk space in the shared target directory, or pausing unfinished work."
+}

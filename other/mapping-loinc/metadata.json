@@ -1,0 +1,37 @@
+{
+  "name": "mapping-loinc",
+  "repo": "maziyarpanahi/openmed",
+  "path": "skills/mapping-loinc/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/maziyarpanahi/openmed",
+  "dir_name": "mapping-loinc",
+  "downloaded_at": "2026-10-17T03:34:36.893840Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maziyarpanahi",
+  "source_url": "https://github.com/maziyarpanahi/openmed/blob/master/skills/mapping-loinc/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maziyarpanahi/openmed/blob/master/skills/mapping-loinc/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Maps laboratory and clinical observation names extracted by OpenMed to LOINC codes using the public Regenstrief LOINC and FHIR terminology APIs. Use when the user wants to code lab tests, vital signs, or observations to LOINC, resolve a test name plus specimen and method to the correct LOINC part-model code, attach UCUM units, or build a US Core Laboratory Result Observation. Trigger keywords: LOINC, lab coding, observation code, UCUM units, specimen, method, US Core lab, FHIR Observation, lab result mapping, panel vs analyte. Pairs after OpenMed NER: consume Disease/Chemical/lab-name entities from openmed.analyze_text and map each measurement to a LOINC code. LOINC is free to use under the Regenstrief license (registration/terms-of-use, no fee); UMLS/SNOMED stay user-supplied and out-of-process."
+}

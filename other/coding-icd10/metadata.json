@@ -1,0 +1,37 @@
+{
+  "name": "coding-icd10",
+  "repo": "maziyarpanahi/openmed",
+  "path": "skills/coding-icd10/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/maziyarpanahi/openmed",
+  "dir_name": "coding-icd10",
+  "downloaded_at": "2026-10-17T03:34:36.267389Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maziyarpanahi",
+  "source_url": "https://github.com/maziyarpanahi/openmed/blob/master/skills/coding-icd10/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maziyarpanahi/openmed/blob/master/skills/coding-icd10/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Suggests candidate ICD-10-CM diagnosis codes (and ICD-10-PCS procedure codes) for diagnoses and procedures extracted by OpenMed, with rationale and a human-coder caveat. Use when the user wants to code a problem list, map a diagnosis span to a billable ICD-10-CM code, route a finding to the right chapter, cross-walk ICD-9 via GEMs, or pre-fill an encounter for coder review. Trigger keywords: ICD-10-CM, ICD-10-PCS, diagnosis coding, billable code, GEMs, problem list coding, encounter diagnosis, chapter range, CMS code lookup. references/icd10-chapters.md holds the chapter/section ranges. Pairs after OpenMed NER: consume Disease/Pathology entities from openmed.analyze_text and propose codes a certified coder validates. ICD-10-CM/PCS files are public domain from CMS \u2014 no license barrier (unlike CPT, which is restricted and out of scope)."
+}

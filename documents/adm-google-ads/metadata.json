@@ -1,0 +1,39 @@
+{
+  "name": "adm-google-ads",
+  "repo": "ownway18/adm-google-ads-skill",
+  "path": "skills/adm-google-ads/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/ownway18/adm-google-ads-skill",
+  "dir_name": "adm-google-ads",
+  "downloaded_at": "2026-10-17T04:15:16.594997Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: docs, word, markdown, documentation",
+    "score": 4,
+    "runner_up": "performance",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "word",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ownway18",
+  "source_url": "https://github.com/ownway18/adm-google-ads-skill/blob/main/skills/adm-google-ads/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ownway18/adm-google-ads-skill/blob/main/skills/adm-google-ads/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Read and change the user's Google Ads accounts through the ADM MCP server (tools named mcp__adm__* or adm.*). Use when the user asks about Google Ads performance, campaigns, keywords, search terms, ads, negative keywords or assets, asks for a report, asks to optimize an account or campaign or cut wasted spend, or asks to create, build, import or resume campaigns, ad groups, ads, keywords, negative keyword lists, assets or image assets from a plan, spreadsheet or markdown file, to draft a new Search campaign or ad groups with ADM AI from a landing page, to pause, enable or remove ads, keywords or ad groups, to add or remove negative keywords, to change a campaign name, budget, bidding or locations, to see performance by device or location, to adjust or exclude device and location bids, to create or change a shared portfolio bidding strategy, to pause or unlink assets, to set URL options for click tracking, to check a finished build against its plan, or to switch the Google Ads account ADM works on."
+}

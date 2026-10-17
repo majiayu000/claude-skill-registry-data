@@ -1,0 +1,38 @@
+{
+  "name": "persistence-architect",
+  "repo": "nerviz-ai/nerviz",
+  "path": ".claude/skills/persistence-architect/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/nerviz-ai/nerviz",
+  "dir_name": "persistence-architect-nerviz-ai-nerviz",
+  "downloaded_at": "2026-10-17T03:57:28.333928Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, database, pipeline",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nerviz-ai",
+  "source_url": "https://github.com/nerviz-ai/nerviz/blob/main/.claude/skills/persistence-architect/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nerviz-ai/nerviz/blob/main/.claude/skills/persistence-architect/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Designs the persistence layer of an already-modeled use case, in the storage family its use case records \u2014 relational (tables, JPA mapping, Flyway migrations, datasource) or document (MongoDB collections, embedded and referenced data, indexes and validators ensured at startup, `@Version`, transactions on a replica set) \u2014 plus the audit level its use case records (created/modified stamps, or an Envers history with actor and revision) \u2014 into the `20-persistence.md` partial. Use when the request involves modeling the database, mapping an aggregate to JPA or to a MongoDB document, writing or reviewing migrations, deciding indexes and keys, auditing who changed a record and its earlier values, diagnosing N+1 or slow queries, or tuning the pool, datasource or MongoDB client properties. Piece of the `/new-feature` pipeline: requires `00-use-case.md` with a `Storage` row and `10-domain.md` in the given folder, and stops without them."
+}

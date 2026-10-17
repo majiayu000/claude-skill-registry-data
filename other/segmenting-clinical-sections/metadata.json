@@ -1,0 +1,37 @@
+{
+  "name": "segmenting-clinical-sections",
+  "repo": "maziyarpanahi/openmed",
+  "path": "skills/segmenting-clinical-sections/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/maziyarpanahi/openmed",
+  "dir_name": "segmenting-clinical-sections",
+  "downloaded_at": "2026-10-17T03:34:54.659326Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maziyarpanahi",
+  "source_url": "https://github.com/maziyarpanahi/openmed/blob/master/skills/segmenting-clinical-sections/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maziyarpanahi/openmed/blob/master/skills/segmenting-clinical-sections/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Split a clinical note into canonical sections (Chief Complaint, HPI, PMH, Medications, Allergies, Assessment & Plan, etc.) before running OpenMed NER or de-identification, so section context sharpens downstream precision. Use when the user has a free-text note or discharge summary and wants section-aware processing, header detection, mapping headers to LOINC document-section codes, or per-section NER/de-id. Covers heuristic header detection, normalization to canonical section labels, LOINC/SecTag framing, and why a finding in PMH is historical while the same finding in A&P is active. Hand-off: feed each sectioned chunk into openmed.analyze_text / openmed.deidentify. Pairs before extracting-clinical-entities."
+}

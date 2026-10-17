@@ -1,0 +1,37 @@
+{
+  "name": "eerc-auditor-compliance",
+  "repo": "nickthelegend/avalanche-privacy-skills",
+  "path": "skills/eerc-auditor-compliance/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/nickthelegend/avalanche-privacy-skills",
+  "dir_name": "eerc-auditor-compliance",
+  "downloaded_at": "2026-10-17T04:01:15.931882Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nickthelegend",
+  "source_url": "https://github.com/nickthelegend/avalanche-privacy-skills/blob/master/skills/eerc-auditor-compliance/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nickthelegend/avalanche-privacy-skills/blob/master/skills/eerc-auditor-compliance/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when the agent needs eERC compliance/auditing \u2014 setting and rotating the auditor public key, and using auditorDecrypt() so an authorized auditor can read transaction history. Key to making confidential tokens regulation-ready."
+}

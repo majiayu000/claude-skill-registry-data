@@ -1,0 +1,38 @@
+{
+  "name": "mirrord-temporal",
+  "repo": "metalbear-co/mirrord",
+  "path": "mirrord/mcp/corpus/skills/mirrord-temporal/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/metalbear-co/mirrord",
+  "dir_name": "mirrord-temporal",
+  "downloaded_at": "2026-10-17T03:38:12.723168Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "devops",
+      "kubernetes",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "metalbear-co",
+  "source_url": "https://github.com/metalbear-co/mirrord/blob/main/mirrord/mcp/corpus/skills/mirrord-temporal/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/metalbear-co/mirrord/blob/main/mirrord/mcp/corpus/skills/mirrord-temporal/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Helps DevOps engineers configure mirrord Operator's Temporal task queue splitting feature end-to-end. Generates the MirrordSplitConfig and MirrordPropertyList Kubernetes CRD YAMLs, the matching mirrord.json split_queues section with message_filter and jq_filter, and Helm value guidance. Use this skill whenever the user mentions Temporal splitting with mirrord, Temporal task queue splitting, splitting a Temporal worker, configuring mirrord with Temporal or Temporal Cloud, routing Temporal workflow or activity tasks to a local worker, or troubleshooting Temporal splitting sessions. Also trigger on split_queues with queue_type Temporal, or connecting mirrord to a Temporal frontend. This is an alpha Team/Enterprise feature of mirrord."
+}

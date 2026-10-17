@@ -1,0 +1,37 @@
+{
+  "name": "summarizing-clinical-notes",
+  "repo": "maziyarpanahi/openmed",
+  "path": "skills/summarizing-clinical-notes/SKILL.md",
+  "github_branch": "master",
+  "category": "forensics",
+  "source": "github.com/maziyarpanahi/openmed",
+  "dir_name": "summarizing-clinical-notes",
+  "downloaded_at": "2026-10-17T03:34:52.957964Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "forensics",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for forensics: evidence, triage",
+    "score": 2,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "evidence",
+      "triage"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maziyarpanahi",
+  "source_url": "https://github.com/maziyarpanahi/openmed/blob/master/skills/summarizing-clinical-notes/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maziyarpanahi/openmed/blob/master/skills/summarizing-clinical-notes/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Produces structured, citation-anchored summaries of clinical notes \u2014 one-liner, hospital course, and problem-oriented views \u2014 where every claim cites a source span so nothing is hallucinated. Use after de-identifying notes when the user wants a discharge summary draft, handoff/SBAR, problem list, or chart-abstraction summary. De-identify FIRST with openmed.deidentify, then anchor summary claims to entity spans from openmed.analyze_text. Trigger keywords: summarize note, discharge summary, hospital course, problem-oriented, one-liner, SOAP, SBAR, handoff, chart abstraction."
+}

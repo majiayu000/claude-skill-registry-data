@@ -1,0 +1,37 @@
+{
+  "name": "bio-ecological-genomics-landscape-genomics",
+  "repo": "peacezha/HPClaw",
+  "path": "skills/bioSkills/ecological-genomics/landscape-genomics/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/peacezha/HPClaw",
+  "dir_name": "landscape-genomics",
+  "downloaded_at": "2026-10-17T04:54:12.536877Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "peacezha",
+  "source_url": "https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/ecological-genomics/landscape-genomics/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/ecological-genomics/landscape-genomics/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Tests genotype-environment associations and identifies adaptive loci while correcting for the four-confound landscape (structure, demography, background selection, sampling design) using LFMM2 with mandatory K via sNMF cross-entropy elbow (LEA 3), BayPass Core/AUX/C2/IS with Omega covariance matrix, RDA / pRDA for polygenic adaptation (Forester 2018; requires imputed genotypes), OutFLANK with trimmed FST null, pcadapt, gradient forests (Ellis-Smith-Pitcher 2012, NOT mis-cited Ellis-Manel), Capblancq & Forester 2021 RDA Swiss-army-knife, genomic-offset prediction with Lind & Lotterhos 2025 three-regime caveat, Lotterhos-Whitlock sampling optima, Wang & Bradburd 2014 IBD vs IBE, and Circuitscape + ResistanceGA. Use when identifying adaptive loci across gradients, choosing K for LFMM2, deciding among GEA methods, predicting maladaptation with the novel-environment caveat, distinguishing IBD vs IBE, or optimizing sampling design."
+}

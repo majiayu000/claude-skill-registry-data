@@ -1,0 +1,37 @@
+{
+  "name": "setup-openmed",
+  "repo": "maziyarpanahi/openmed",
+  "path": "skills/setup-openmed/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/maziyarpanahi/openmed",
+  "dir_name": "setup-openmed",
+  "downloaded_at": "2026-10-17T03:34:36.572484Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maziyarpanahi",
+  "source_url": "https://github.com/maziyarpanahi/openmed/blob/master/skills/setup-openmed/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maziyarpanahi/openmed/blob/master/skills/setup-openmed/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Collect a bounded set of de-identification policy decisions and write a deterministic, reviewable DEID-POLICY.md from the versioned local template. Use when a project needs explicit jurisdiction, recall floor, surrogate strategy, model policy, audit location, and human approval before privacy work begins."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "etl-to-omop-cdm",
+  "repo": "maziyarpanahi/openmed",
+  "path": "skills/etl-to-omop-cdm/SKILL.md",
+  "github_branch": "master",
+  "category": "data",
+  "source": "github.com/maziyarpanahi/openmed",
+  "dir_name": "etl-to-omop-cdm",
+  "downloaded_at": "2026-10-17T03:34:37.223036Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for data: data, analytics, database, etl",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "analytics",
+      "database",
+      "etl"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "maziyarpanahi",
+  "source_url": "https://github.com/maziyarpanahi/openmed/blob/master/skills/etl-to-omop-cdm/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/maziyarpanahi/openmed/blob/master/skills/etl-to-omop-cdm/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Map OpenMed-extracted, terminology-coded conditions, drugs, and measurements into OMOP CDM v5.4 clinical tables (condition_occurrence, drug_exposure, measurement) for OHDSI/ATLAS analytics. Use when the user wants to load NLP-derived facts into an OMOP database, build an OHDSI ETL from clinical notes, populate condition_occurrence or drug_exposure from text, or standardize note-derived findings to OMOP standard concepts. Covers the source-to-standard concept mapping pattern, required vs optional CDM fields, type concepts for NLP-derived rows, and the user-supplied OHDSI vocabulary (CONCEPT/CONCEPT_RELATIONSHIP). Consumes coded OpenMed analyze_text output (after SNOMED/RxNorm/LOINC linking) and produces OMOP-conformant rows."
+}

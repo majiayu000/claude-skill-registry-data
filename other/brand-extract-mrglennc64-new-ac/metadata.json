@@ -1,0 +1,37 @@
+{
+  "name": "brand-extract",
+  "repo": "mrglennc64/new-ac",
+  "path": "skills/brand-extract/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mrglennc64/new-ac",
+  "dir_name": "brand-extract-mrglennc64-new-ac",
+  "downloaded_at": "2026-10-17T03:50:33.127640Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mrglennc64",
+  "source_url": "https://github.com/mrglennc64/new-ac/blob/main/skills/brand-extract/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mrglennc64/new-ac/blob/main/skills/brand-extract/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Extract a complete Brand Kit from a live website by driving the in-app\nbrowser. Use when a brand-extraction project opens with a site in the Browser\ntab, or when the user asks to \"extract a brand\", \"pull the brand from <url>\",\n\"get the colors/fonts/logo from this site\", or build a brand/design system\nfrom a reference website. Pairs with the agent-browser tool for measurement\nand pauses for the user when an anti-bot wall blocks the page."
+}

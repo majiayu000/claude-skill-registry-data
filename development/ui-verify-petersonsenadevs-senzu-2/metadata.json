@@ -1,0 +1,38 @@
+{
+  "name": "ui-verify",
+  "repo": "petersonsenadevs/senzu",
+  "path": "plugins/senzu-front/skills/ui-verify/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/petersonsenadevs/senzu",
+  "dir_name": "ui-verify-petersonsenadevs-senzu-2",
+  "downloaded_at": "2026-10-17T04:57:15.394346Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "petersonsenadevs",
+  "source_url": "https://github.com/petersonsenadevs/senzu/blob/main/plugins/senzu-front/skills/ui-verify/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/petersonsenadevs/senzu/blob/main/plugins/senzu-front/skills/ui-verify/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Verificaci\u00f3n OBLIGATORIA de UI antes de dar una vista por hecha: script Playwright (scripts/verify-ui.mjs) o navegador Chrome MCP en 375/768/1440, M\u00d3VIL PRIMERO, dark mode, consola y accesibilidad. Tambi\u00e9n al pedir verificar el responsive."
+}

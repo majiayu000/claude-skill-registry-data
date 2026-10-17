@@ -1,0 +1,38 @@
+{
+  "name": "bad",
+  "repo": "lza6/Armor-piercing-system-prompts",
+  "path": "04-\u5b89\u5168\u6e17\u900f/bad/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/lza6/Armor-piercing-system-prompts",
+  "dir_name": "bad",
+  "downloaded_at": "2026-10-17T03:22:50.931324Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "context",
+      "compaction",
+      "context-window"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lza6",
+  "source_url": "https://github.com/lza6/Armor-piercing-system-prompts/blob/main/04-\u5b89\u5168\u6e17\u900f/bad/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lza6/Armor-piercing-system-prompts/blob/main/04-\u5b89\u5168\u6e17\u900f/bad/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "BMad Autonomous Development \u2014 orchestrates parallel story implementation pipelines. Builds a dependency graph, updates PR status from GitHub, picks stories from the backlog, and runs each through create \u2192 dev \u2192 review \u2192 PR in parallel \u2014 each story isolated in its own git worktree \u2014 using dedicated subagents with fresh context windows. Loops through the entire sprint plan in batches, with optional epic retrospective. Use when the user says \"run BAD\", \"start autonomous development\", \"automate the sprint\", \"run the pipeline\", \"kick off the sprint\", or \"start the dev pipeline\". Run /bad setup or /bad configure to install and configure the module."
+}

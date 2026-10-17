@@ -1,0 +1,37 @@
+{
+  "name": "bio-imaging-mass-cytometry-quality-metrics",
+  "repo": "peacezha/HPClaw",
+  "path": "skills/bioSkills/imaging-mass-cytometry/quality-metrics/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/peacezha/HPClaw",
+  "dir_name": "quality-metrics",
+  "downloaded_at": "2026-10-17T04:54:27.055201Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework",
+    "score": 2,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "framework"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "peacezha",
+  "source_url": "https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/imaging-mass-cytometry/quality-metrics/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/imaging-mass-cytometry/quality-metrics/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Quality control for IMC/MIBI data across pixel, channel, image, slide, and batch levels, covering Poisson-count SNR (cell-level Gaussian-mixture and empty-channel comparison), spillover-matrix QC (the three physical sources), drift and the missing EQ-bead analog, acquisition artifacts, and sample-of-origin batch effects. Use when deciding whether to keep or drop a channel, ROI, or slide, distinguishing a dim antibody from a failed one, reading a spillover matrix, or diagnosing batch-driven clustering before analysis."
+}

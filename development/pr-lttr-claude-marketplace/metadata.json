@@ -1,0 +1,37 @@
+{
+  "name": "pr",
+  "repo": "lttr/claude-marketplace",
+  "path": "plugins/dev-azdo/skills/pr/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/lttr/claude-marketplace",
+  "dir_name": "pr-lttr-claude-marketplace",
+  "downloaded_at": "2026-10-17T03:20:01.836259Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code",
+    "score": 2,
+    "runner_up": "creative",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lttr",
+  "source_url": "https://github.com/lttr/claude-marketplace/blob/master/plugins/dev-azdo/skills/pr/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lttr/claude-marketplace/blob/master/plugins/dev-azdo/skills/pr/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Azure DevOps pull requests, for repos whose git remote is on dev.azure.com or *.visualstudio.com. Covers comment threads, which `az repos pr` cannot read or post. Use to create a PR for the current branch, check out, list or complete PRs, post code comments on a PR, reply to threads, and assess whether review feedback was addressed. Trigger on \"create PR\", \"checkout PR 123\", \"list PRs\", \"complete PR\", \"comment on the PR\", \"post these review findings\", \"check PR feedback\", \"/dev-azdo:pr\"."
+}

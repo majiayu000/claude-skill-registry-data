@@ -1,0 +1,37 @@
+{
+  "name": "bio-imaging-mass-cytometry-interactive-annotation",
+  "repo": "peacezha/HPClaw",
+  "path": "skills/bioSkills/imaging-mass-cytometry/interactive-annotation/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/peacezha/HPClaw",
+  "dir_name": "interactive-annotation",
+  "downloaded_at": "2026-10-17T04:54:26.725207Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "peacezha",
+  "source_url": "https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/imaging-mass-cytometry/interactive-annotation/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/peacezha/HPClaw/blob/main/skills/bioSkills/imaging-mass-cytometry/interactive-annotation/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Interactive cell annotation and image QC for IMC/MIBI using napari, napari-imc, Mantis Viewer, and cytomapper, covering the pixels-to-cell-table bridge, overlaying masks to catch segmentation/spillover artifacts, inter-annotator variability as the accuracy ceiling, contrast-as-threshold, and building class-balanced ground-truth label sets. Use when manually labeling cells, generating training data for a classifier, QC-ing segmentation on the image, confirming clusters are spatially real, or choosing an annotation viewer."
+}

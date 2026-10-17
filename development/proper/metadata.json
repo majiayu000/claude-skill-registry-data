@@ -1,0 +1,37 @@
+{
+  "name": "proper",
+  "repo": "nvie/skills",
+  "path": "skills/proper/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/nvie/skills",
+  "dir_name": "proper",
+  "downloaded_at": "2026-10-17T04:06:45.086273Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, refactor",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nvie",
+  "source_url": "https://github.com/nvie/skills/blob/main/skills/proper/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nvie/skills/blob/main/skills/proper/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Solve a request strategically and architecturally rather than tactically. Use when the user invokes /proper, asks for \"the Proper\u2122 way\", wants the long-term design rather than the quickest fix, or wants to refactor / rearchitect first so the requested feature fits naturally. This skill diagnoses why the request feels awkward today, proposes a design change that makes the feature easy, and -- if the strategic path is non-trivial -- hands off to /mikado to execute it in safe incremental steps."
+}
