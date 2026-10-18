@@ -1,0 +1,37 @@
+{
+  "name": "roblox-creator-store-security-audit",
+  "repo": "AshExplained/roblox-skills",
+  "path": "roblox-creator-store-security-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/AshExplained/roblox-skills",
+  "dir_name": "roblox-creator-store-security-audit",
+  "downloaded_at": "2026-10-18T07:54:08.564858Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AshExplained",
+  "source_url": "https://github.com/AshExplained/roblox-skills/blob/main/roblox-creator-store-security-audit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AshExplained/roblox-skills/blob/main/roblox-creator-store-security-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audit Roblox Creator Store, Toolbox, inventory, group, universe, package, model, UI, gameplay, plugin-like, and other third-party imported assets for malicious or risky scripts. Use whenever Claude imports, inserts, reviews, or trusts Creator Store assets, especially assets with Scripts, LocalScripts, ModuleScripts, hidden descendants, require calls, HTTP, DataStore, remote creation, obfuscated code, or suspicious names."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "aid-detail",
+  "repo": "AndreVianna/aid-methodology",
+  "path": ".agents/skills/aid-detail/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/AndreVianna/aid-methodology",
+  "dir_name": "aid-detail-andrevianna-aid-methodology",
+  "downloaded_at": "2026-10-18T07:49:20.067282Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AndreVianna",
+  "source_url": "https://github.com/AndreVianna/aid-methodology/blob/master/.agents/skills/aid-detail/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AndreVianna/aid-methodology/blob/master/.agents/skills/aid-detail/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Break deliverables into small, dependency-driven, typed tasks -- each one a reviewable unit. The ultimate breakdown. Use this skill when a delivery has been planned and the actual work items are needed before execution starts. It detects each task's type from the SPEC's own signals -- RESEARCH, DESIGN, IMPLEMENT, TEST, DOCUMENT, MIGRATE, REFACTOR, CONFIGURE -- gives every task exactly one type, and builds the delivery's execution graph with explicit dependencies and the parallelism they allow."
+}

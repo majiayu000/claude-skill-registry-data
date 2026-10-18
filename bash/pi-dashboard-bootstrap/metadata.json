@@ -1,0 +1,38 @@
+{
+  "name": "pi-dashboard-bootstrap",
+  "repo": "BlackBeltTechnology/pi-agent-dashboard",
+  "path": "packages/claude-plugin/skills/pi-dashboard-bootstrap/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/BlackBeltTechnology/pi-agent-dashboard",
+  "dir_name": "pi-dashboard-bootstrap",
+  "downloaded_at": "2026-10-18T08:01:16.311240Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "BlackBeltTechnology",
+  "source_url": "https://github.com/BlackBeltTechnology/pi-agent-dashboard/blob/master/packages/claude-plugin/skills/pi-dashboard-bootstrap/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BlackBeltTechnology/pi-agent-dashboard/blob/master/packages/claude-plugin/skills/pi-dashboard-bootstrap/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Make sure the local pi-dashboard server is running before any pi-dashboard action. Use FIRST whenever the user mentions the pi dashboard, pi sessions or pi agents, or asks to start or open the dashboard; also when a dashboard call fails with \"connection refused\"."
+}

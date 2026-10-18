@@ -1,0 +1,38 @@
+{
+  "name": "aid-prototype",
+  "repo": "AndreVianna/aid-methodology",
+  "path": ".claude/skills/aid-prototype/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/AndreVianna/aid-methodology",
+  "dir_name": "aid-prototype-andrevianna-aid-methodology",
+  "downloaded_at": "2026-10-18T07:49:35.436596Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AndreVianna",
+  "source_url": "https://github.com/AndreVianna/aid-methodology/blob/master/.claude/skills/aid-prototype/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AndreVianna/aid-methodology/blob/master/.claude/skills/aid-prototype/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Build a throwaway, low-fidelity model to test whether a direction actually works, before anyone commits to building it properly. Use this skill when a decision hinges on something you can only learn by trying it. The model is isolated and disposable -- it lives in the work folder or an opt-in worktree and never touches production -- and it is deliberately rough, so it gets a light verification rather than a polish grade. It resolves nothing: it reports whether the direction holds and what was learned, and you decide. For a kept design meant to inform the build rather than a throwaway, use `/aid-design` instead; the real build is a separate `/aid-create` step."
+}

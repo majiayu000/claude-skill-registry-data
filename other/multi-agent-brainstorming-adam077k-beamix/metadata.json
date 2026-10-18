@@ -1,0 +1,37 @@
+{
+  "name": "multi-agent-brainstorming",
+  "repo": "Adam077K/Beamix",
+  "path": ".claude/skills/multi-agent-brainstorming/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Adam077K/Beamix",
+  "dir_name": "multi-agent-brainstorming-adam077k-beamix",
+  "downloaded_at": "2026-10-18T07:43:00.838317Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, ai-llm=2",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agent-role"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Adam077K",
+  "source_url": "https://github.com/Adam077K/Beamix/blob/main/.claude/skills/multi-agent-brainstorming/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Adam077K/Beamix/blob/main/.claude/skills/multi-agent-brainstorming/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this skill when a design or idea requires higher confidence, risk reduction, or formal review. This skill orchestrates a structured, sequential multi-agent design review where each agent has a strict, non-overlapping role. It prevents blind spots, false confidence, and premature convergence."
+}

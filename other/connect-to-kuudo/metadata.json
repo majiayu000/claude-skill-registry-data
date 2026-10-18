@@ -1,0 +1,37 @@
+{
+  "name": "connect-to-kuudo",
+  "repo": "KuudoAI/skills",
+  "path": "skills/connect-to-kuudo/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/KuudoAI/skills",
+  "dir_name": "connect-to-kuudo",
+  "downloaded_at": "2026-10-18T09:01:43.582886Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, communication=2",
+    "score": 2,
+    "runner_up": "communication",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KuudoAI",
+  "source_url": "https://github.com/KuudoAI/skills/blob/main/skills/connect-to-kuudo/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KuudoAI/skills/blob/main/skills/connect-to-kuudo/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when an AI agent needs to connect to a human's Kuudo account before calling any Kuudo capability \u2014 checking whether the session already exposes the Agent Auth MCP tools, registering a delegated connection with them, presenting the human's approval link, and reading account/organization data once approved. Covers the connect/approve/execute flow, approval timeouts and expiry, and the one-installation-per-human rule. Do not use to configure an MCP server, edit client configuration, or install packages \u2014 point the human to Kuudo's own connection guide instead. Do not use to design or modify the Agent Auth protocol itself, to request capabilities beyond read_account and read_organization, or to approve, deny, or sign in on the human's behalf."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "carrel-search",
+  "repo": "FengZhenfei/carrel",
+  "path": "skills/carrel-search/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/FengZhenfei/carrel",
+  "dir_name": "carrel-search",
+  "downloaded_at": "2026-10-18T08:28:04.701017Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "FengZhenfei",
+  "source_url": "https://github.com/FengZhenfei/carrel/blob/main/skills/carrel-search/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/FengZhenfei/carrel/blob/main/skills/carrel-search/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Query the user's local knowledge bases through the Carrel search API, fetch original text or images as needed, compose the answer, list the reference files and offer follow-up directions drawn from the knowledge graph. Use when the user asks to search the knowledge base, find evidence in the stored material, compare records, or answer from several documents together."
+}

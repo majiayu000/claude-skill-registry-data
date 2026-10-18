@@ -1,0 +1,159 @@
+---
+name: pracht-test-api
+version: 1.2.1
+description: |
+  Generate Vitest request/response tests for every handler in `src/api/`: build a
+  `Request`, call the exported method handler directly, assert on the returned
+  `Response` — no server boot.
+  Use for "test my API routes", "scaffold API tests", "generate tests for
+  src/api", "add tests for this endpoint".
+allowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Edit
+  - Grep
+  - Glob
+  - AskUserQuestion
+---
+
+# Pracht Test API
+
+Pracht API handlers are plain functions: `(args: ApiRouteArgs) => Response |
+Promise<Response>` (`ApiRouteArgs` is `BaseRouteArgs` with `route` narrowed
+to `ResolvedApiRoute`). They test cleanly in Vitest without booting the
+framework.
+
+## Step 1: Confirm Vitest is installed
+
+If the project has no `vitest` dependency, run `scaffold-tests` first (or
+prompt the user to). This skill does not handle Vitest setup.
+
+## Step 2: Enumerate API handlers
+
+MCP: when the pracht MCP server is registered (docs/MCP.md), prefer its
+`inspect_routes`/`inspect_api`/`inspect_build`/`doctor`/`verify`/`generate_*`
+tools over shelling out. `pracht inspect` needs the pracht plugin in the vite
+config.
+
+```bash
+pracht inspect api --json
+```
+
+For each entry, capture: `path` (URL), `file` (source path), and the exported
+`methods` (e.g., `["GET", "POST"]`). Note: `methods` only lists named HTTP
+method exports — a default-export dispatcher yields `methods: []`, never
+`["default"]`. Current `@pracht/cli` versions also report a
+`hasDefaultHandler` boolean; use it when present. If the field is absent
+(older CLI) and `methods` is empty, fall back to the grep in Step 7 to detect
+a default dispatcher.
+
+Ask the user which subset to scaffold or accept paths via `$ARGUMENTS`.
+
+## Step 3: Generate one test per handler file
+
+Place tests next to the handler with `.test.ts` suffix
+(`src/api/users/[id].test.ts`). Use `createApiArgs()` from `@pracht/test`
+(add it as a dev dependency if missing) to construct `ApiRouteArgs`:
+
+```ts
+import { describe, it, expect } from "vitest";
+import { createApiArgs, readJson } from "@pracht/test";
+import { GET, POST /* import only what the handler exports */ } from "./<file>";
+
+describe("<METHOD> <api-path>", () => {
+  it("returns 200 on a valid request", async () => {
+    const res = await GET(createApiArgs({ url: "<api-path>" }));
+    expect(res).toBeInstanceOf(Response);
+    expect(res.status).toBe(200);
+  });
+});
+```
+
+Pass `params` for dynamic segments, `body` for JSON payloads (plain objects
+are JSON-encoded with the right `Content-Type`), and use `submitForm()` for
+form-encoded/multipart POSTs — it drives the same `FormData` parsing path
+`defineApi()` uses.
+
+## Step 4: Generate method-specific cases
+
+For each exported method, emit the smallest realistic case:
+
+| Method  | Default case                                                    |
+| ------- | --------------------------------------------------------------- |
+| `GET`   | Plain GET → `expect(res.status).toBeLessThan(400)`              |
+| `POST`  | POST with empty `FormData` → assert validation behavior         |
+| `PUT`   | PUT with JSON body → assert 200 or auth-required (401/403)      |
+| `PATCH` | PATCH with partial body → assert 200 or 422                     |
+| `DELETE`| DELETE on a real-shaped path → assert 200/204 or 401            |
+
+For dynamic segments (`[id].ts` → `/api/users/:id`), pick a placeholder param
+(e.g., `id: "test-1"`) and pass it via `params`. Surface in the report that
+the user may need to provide a real fixture.
+
+## Step 5: Detect auth-gated APIs
+
+API routes do NOT appear in `pracht inspect routes --json` (that report
+covers page routes only) and `pracht inspect api --json` has no middleware
+field. API middleware is the single global list configured as
+`defineApp({ api: { middleware: [...] } })` — read the manifest source
+(`src/routes.ts` or wherever `defineApp` lives) to see whether an auth
+middleware is in that list. If it is, scaffold an extra test:
+
+```ts
+it("rejects unauthenticated requests", async () => {
+  const res = await POST(createApiArgs({ url: "<api-path>", method: "POST" }));
+  expect([401, 403, 302]).toContain(res.status);
+});
+```
+
+Note: middleware does NOT run when calling the handler directly — this test
+verifies the handler's own defense if it has one. If the only defense is
+middleware, mention that in the report and recommend an integration test that
+goes through the framework's request pipeline (out of scope for this skill).
+The same applies to the framework's built-in CSRF check: `requireSameOrigin`
+(on by default) rejects cross-origin state-changing API requests in the real
+pipeline but never runs in direct-invocation tests.
+
+## Step 6: Validate JSON shape
+
+For handlers that return `Response.json(...)`, generate:
+
+```ts
+it("returns JSON with the expected keys", async () => {
+  const res = await GET(createApiArgs({ url: "<api-path>" }));
+  expect(res.headers.get("content-type")).toMatch(/application\/json/);
+  const body = await readJson(res);
+  expect(body).toEqual(expect.objectContaining({ /* fill in */ }));
+});
+```
+
+## Step 7: Default-handler dispatchers
+
+If the handler exports `default` (one function dispatching on
+`request.method`), generate a test per HTTP method the handler appears to
+support (grep for `request.method ===` patterns inside the file).
+
+## Step 8: Run
+
+```bash
+pnpm test
+pracht verify --json
+```
+
+Report passes/failures. Mark generated assertions as TODO so the user knows
+to tighten them.
+
+## Rules
+
+1. Use `pracht inspect api --json` as the inventory — do not glob.
+2. Only import methods the handler actually exports; otherwise the test fails
+   to load.
+3. Direct-handler invocation skips middleware AND the default-on
+   `requireSameOrigin` CSRF check. Be explicit in the report.
+4. Test files live next to handlers with `.test.ts` suffix unless the
+   project already uses a `__tests__/` convention (detect and match).
+5. Never overwrite existing test files; emit a `.next.test.ts` and tell the
+   user to merge.
+
+$ARGUMENTS

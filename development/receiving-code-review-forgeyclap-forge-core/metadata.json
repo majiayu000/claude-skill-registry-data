@@ -1,0 +1,38 @@
+{
+  "name": "receiving-code-review",
+  "repo": "ForgeyClap/Forge-Core",
+  "path": ".claude/skills/receiving-code-review/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/ForgeyClap/Forge-Core",
+  "dir_name": "receiving-code-review-forgeyclap-forge-core",
+  "downloaded_at": "2026-10-18T08:29:20.212341Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, refactor",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ForgeyClap",
+  "source_url": "https://github.com/ForgeyClap/Forge-Core/blob/main/.claude/skills/receiving-code-review/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ForgeyClap/Forge-Core/blob/main/.claude/skills/receiving-code-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when receiving code review feedback, before implementing it: verify technically, no blind agreement."
+}

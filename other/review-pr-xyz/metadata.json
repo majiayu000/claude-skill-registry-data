@@ -1,0 +1,37 @@
+{
+  "name": "review-pr-xyz",
+  "repo": "HiQS-Labs/XYZ-forge",
+  "path": "skills/2-daily/review-pr-xyz/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/HiQS-Labs/XYZ-forge",
+  "dir_name": "review-pr-xyz",
+  "downloaded_at": "2026-10-18T08:40:29.542452Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HiQS-Labs",
+  "source_url": "https://github.com/HiQS-Labs/XYZ-forge/blob/master/skills/2-daily/review-pr-xyz/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HiQS-Labs/XYZ-forge/blob/master/skills/2-daily/review-pr-xyz/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Ground-truth GitHub pull request review that first confirms the PR's claims and the request behind it are valid (the bug is real, the issue asks for this, it has not already landed), then maps blast radius with /recon and tests every fix and feature with /debug-mantra. Report-only: posts graded findings to the PR and renders them on-screen; never pushes, approves or merges. Trigger on /review-pr-xyz <PR#>, \"review PR #N\", or \"review this pull request\". Local diff or branch? Use review-code-xyz. Multi-model panel review? Use review-xyz."
+}

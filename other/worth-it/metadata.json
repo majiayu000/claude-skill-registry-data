@@ -1,0 +1,38 @@
+{
+  "name": "worth-it",
+  "repo": "HiQS-Labs/XYZ-forge",
+  "path": "skills/3-weekly/worth-it/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/HiQS-Labs/XYZ-forge",
+  "dir_name": "worth-it",
+  "downloaded_at": "2026-10-18T08:40:29.225890Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, product=3",
+    "score": 3,
+    "runner_up": "product",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HiQS-Labs",
+  "source_url": "https://github.com/HiQS-Labs/XYZ-forge/blob/master/skills/3-weekly/worth-it/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HiQS-Labs/XYZ-forge/blob/master/skills/3-weekly/worth-it/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Judge whether a planned feature or refactor is worth building \u2014 whether the payoff justifies the cost and actually moves a needle that matters. Judges benefit against cost across the constituencies a change can serve (end-user UX, human operator experience, codebase maintainability/durability, contributor velocity, business/strategic obligation), discounts benefit that is asserted but unmeasured, nets a gain on one front against the cost it adds on another, and weighs the whole thing against the do-nothing baseline, the timing window, and the next-best use of the same effort. Also reassess in-flight work on `/worth-it continue`, \"should we keep going,\" or \"is this still worth pursuing\": ignore sunk effort and recommend Continue, Pivot, Park or Stop against the next-best experiment. Trigger when the user asks \"is this worth doing/building,\" \"is it worth it,\" \"is this worthwhile,\" \"does this move the needle,\" \"what's the payoff/ROI,\" \"should we even bother,\" is weighing whether a feature or refactor earns its place, or hands over a plan doc whose open question is its *value* rather than its engineering or its risk. Assumes the frame is already right (that is take-a-step-back); it leans on blast-radius and iron-triangle to price the cost and reversibility of a candidate path, then weighs that cost against the benefit it scores \u2014 the term those skills leave unscored. Skip routine analysis when the change is obviously worth it and cheap (an explicit continuation request still gets the five-line checkpoint), or when the open question is HOW to build it well (swe) rather than WHETHER to build it at all."
+}

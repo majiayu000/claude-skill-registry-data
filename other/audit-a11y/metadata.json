@@ -1,0 +1,38 @@
+{
+  "name": "audit-a11y",
+  "repo": "JoviDeCroock/pracht",
+  "path": "skills/audit-a11y/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/JoviDeCroock/pracht",
+  "dir_name": "audit-a11y",
+  "downloaded_at": "2026-10-18T08:54:54.674237Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, testing=3",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "JoviDeCroock",
+  "source_url": "https://github.com/JoviDeCroock/pracht/blob/main/skills/audit-a11y/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/JoviDeCroock/pracht/blob/main/skills/audit-a11y/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Per-route axe-core audit of a pracht app in a headless browser: alt text,\ncontrast, landmarks, focus order, and form labels, grouped by severity and\nroute.\nUse for \"audit a11y\", \"check accessibility\", \"axe my app\", \"WCAG compliance\",\n\"screen reader test\"."
+}

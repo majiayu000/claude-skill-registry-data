@@ -1,0 +1,37 @@
+{
+  "name": "blender-addon-development",
+  "repo": "EL4CTEO/blender-skills",
+  "path": "skills/blender-addon-development/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/EL4CTEO/blender-skills",
+  "dir_name": "blender-addon-development",
+  "downloaded_at": "2026-10-18T08:21:04.926476Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, language=2",
+    "score": 2,
+    "runner_up": "language",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "EL4CTEO",
+  "source_url": "https://github.com/EL4CTEO/blender-skills/blob/main/skills/blender-addon-development/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/EL4CTEO/blender-skills/blob/main/skills/blender-addon-development/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write Blender 5.2 add-ons as extensions - blender_manifest.toml, operators/panels/menus/property groups/preferences, bpy.props rules after 5.0, undo/redo, modal and timer patterns, gpu drawing (no bgl), bundling Python wheels, CLI validate/build/install, testing headless, extensions platform publishing. Use when creating or fixing a Blender add-on, tool, or UI."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "amazon-ads-sp-search-term-explorer",
+  "repo": "KuudoAI/skills",
+  "path": "skills/amazon-ads-sp-search-term-explorer/SKILL.md",
+  "github_branch": "main",
+  "category": "generation",
+  "source": "github.com/KuudoAI/skills",
+  "dir_name": "amazon-ads-sp-search-term-explorer",
+  "downloaded_at": "2026-10-18T09:01:41.748395Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "generation",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for generation: generation, codegen",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "generation",
+      "codegen"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KuudoAI",
+  "source_url": "https://github.com/KuudoAI/skills/blob/main/skills/amazon-ads-sp-search-term-explorer/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KuudoAI/skills/blob/main/skills/amazon-ads-sp-search-term-explorer/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Mine Sponsored Products search terms end-to-end via the Amazon Ads MCP: generate the SP Search Term report via allv1_AdsApiv1CreateReport using v1 dotted field IDs (searchTerm.value, metric.totalCost, metric.sales, budgetCurrency.value \u2014 not legacy Console headers), pre-flight validate with report_fields before CreateReport, filter adProduct.value SPONSORED_PRODUCTS, download CSV and parse with the v1 DictReader pattern, partition PAT ASINs in searchTerm.value, elicit brand markers and thresholds, segment into generic and branded gold tables, surface negatives, sufficiency-gated rising stars, and PAT stream. Never use metric.cost / metric.spend or legacy CSV column names. Trigger on: SP search term mining, search term gold, search term negatives, search term report, PAT vs keyword, brand vs generic split, rising stars, exact-match harvest, attribution window questions, or any variant of \"find me wasted spend / scale-worthy keywords / branded defenders\" via the Amazon Ads MCP."
+}

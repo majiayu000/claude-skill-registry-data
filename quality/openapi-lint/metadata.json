@@ -1,0 +1,37 @@
+{
+  "name": "openapi-lint",
+  "repo": "Goldziher/ai-rulez",
+  "path": "bench/judge/corpus/units/clean-04/.claude/skills/openapi-lint/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/Goldziher/ai-rulez",
+  "dir_name": "openapi-lint",
+  "downloaded_at": "2026-10-18T08:35:08.578091Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: lint, validate",
+    "score": 2,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "lint",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Goldziher",
+  "source_url": "https://github.com/Goldziher/ai-rulez/blob/main/bench/judge/corpus/units/clean-04/.claude/skills/openapi-lint/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Goldziher/ai-rulez/blob/main/bench/judge/corpus/units/clean-04/.claude/skills/openapi-lint/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Lints an OpenAPI file with the bundled Spectral wrapper. Use when the user edits an OpenAPI spec and wants it validated."
+}

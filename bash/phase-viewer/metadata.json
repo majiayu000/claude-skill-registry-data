@@ -1,0 +1,38 @@
+{
+  "name": "phase-viewer",
+  "repo": "AyeJK/phase-runner",
+  "path": "plugin/skills/phase-viewer/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/AyeJK/phase-runner",
+  "dir_name": "phase-viewer",
+  "downloaded_at": "2026-10-18T07:56:56.182582Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, cli",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AyeJK",
+  "source_url": "https://github.com/AyeJK/phase-runner/blob/main/plugin/skills/phase-viewer/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AyeJK/phase-runner/blob/main/plugin/skills/phase-viewer/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Starts the phase-viewer live dashboard for this project (npx phase-viewer) in the background and reports its localhost URL, reusing the viewer that's already running for the project instead of starting a second one. Shows phases, sprints, tasks and gate results from docs/phases/ and its run logs, updating live during a phase-builder run. In a remote or cloud session it starts nothing and gives the command to run locally. Trigger phrases: open the viewer, start the viewer, launch the phase viewer, show the dashboard, open the dashboard, viewer URL, where's the viewer, watch the build, phase-viewer."
+}

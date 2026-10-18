@@ -1,0 +1,38 @@
+{
+  "name": "scaffold-e2e",
+  "repo": "JoviDeCroock/pracht",
+  "path": "skills/scaffold-e2e/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/JoviDeCroock/pracht",
+  "dir_name": "scaffold-e2e",
+  "downloaded_at": "2026-10-18T08:54:55.303807Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, e2e, playwright",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "e2e",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "JoviDeCroock",
+  "source_url": "https://github.com/JoviDeCroock/pracht/blob/main/skills/scaffold-e2e/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/JoviDeCroock/pracht/blob/main/skills/scaffold-e2e/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Set up Playwright for a pracht app: install it, generate a\n`playwright.config.ts` that boots `pracht dev` (or the build via `pracht\npreview`), and emit a smoke test per manifest route asserting 200, head/title,\nno console errors, and navigation.\nUse for \"scaffold E2E\", \"set up Playwright\", \"add browser tests\", \"create smoke\ntests for my routes\"."
+}

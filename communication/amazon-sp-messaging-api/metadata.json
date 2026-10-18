@@ -1,0 +1,38 @@
+{
+  "name": "amazon-sp-messaging-api",
+  "repo": "KuudoAI/skills",
+  "path": "skills/amazon-sp-messaging-api/SKILL.md",
+  "github_branch": "main",
+  "category": "communication",
+  "source": "github.com/KuudoAI/skills",
+  "dir_name": "amazon-sp-messaging-api",
+  "downloaded_at": "2026-10-18T09:01:42.669332Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "communication",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for communication: communication, messaging, email",
+    "score": 3,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "communication",
+      "messaging",
+      "email"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KuudoAI",
+  "source_url": "https://github.com/KuudoAI/skills/blob/main/skills/amazon-sp-messaging-api/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KuudoAI/skills/blob/main/skills/amazon-sp-messaging-api/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Send order-scoped messages from an Amazon seller to a buyer with the SP-API Messaging API: check which message types an order allows, pick the right one, draft the text in the buyer's language within Amazon's content rules, attach invoices, warranties, or legally required documents, and send only after the seller approves an exact preview. Handles one order or a batch. Use whenever a seller wants to contact, notify, or message a buyer about an order: a delay or unexpected problem, confirming customization, delivery scheduling, an order question before shipping, a Home Services visit, a digital access key, or sending an invoice, warranty, or legal disclosure, even if they only say \"let the customer know\" or \"email the buyer\". Do not use for requesting reviews or seller feedback (Solicitations API), reading or replying to the buyer-seller inbox, marketing or promotional messages, A-to-z claims, returns, refunds, or Vendor (1P) orders."
+}

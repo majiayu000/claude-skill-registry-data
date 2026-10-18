@@ -1,0 +1,170 @@
+---
+name: audit-secrets
+version: 1.2.0
+description: |
+  Detect environment variables and secrets reaching the client bundle via loader
+  return values, hydration state, or server-only modules imported from client code
+  paths.
+  Use for "audit secrets", "find leaked env vars", "is my API key exposed", "scan
+  for credential leaks".
+allowed-tools:
+  - Bash
+  - Read
+  - Grep
+  - Glob
+---
+
+# Pracht Audit Secrets
+
+Pracht serializes loader return values into the `pracht-state` JSON script and
+hydrates the client from them. Anything a loader returns ends up readable in the
+browser. The Vite plugin also strips server-only exports from route files, but
+it cannot save you from a value that flows into the return.
+
+Prerequisites: `pracht inspect` requires a vite config that registers the
+pracht plugin; the env-safety report under `dist/client/_pracht/` requires a
+prior `pracht build`. If the pracht MCP server is registered (see
+`docs/MCP.md`), prefer its tools (`inspect_routes`, `inspect_api`,
+`inspect_build`, `doctor`, `verify`) over shelling out.
+
+## Step 0: Run the native env safety check
+
+Pracht has built-in env leak detection (see `docs/ENV.md`):
+
+- `pracht build` fails when a client chunk references a non-public env var
+  (anything not `PRACHT_PUBLIC_`-prefixed and not a Vite built-in),
+  naming the variable, chunk, and likely source module.
+- `pracht verify` (and `pracht doctor`) check the build-time env-safety report
+  and re-run the literal chunk scan against an existing `dist/client` output.
+- Client-side imports of `@pracht/core/env/server` (`serverEnv`) fail the build.
+
+Run `pracht verify` or `pracht doctor` (or a build) first and fold the
+findings into the report.
+Check `vite.config.*` for `envSafety: { allow: [...] }` / `envSafety: false` —
+every allowlisted name and a disabled check are findings to review, since they
+bypass the native gate. The native check detects _references_, not values, so
+the dataflow steps below are still required.
+
+## Step 1: Identify "secret-shaped" identifiers
+
+Build a regex of variable names treated as sensitive:
+
+```
+SECRET|TOKEN|API[_-]?KEY|PRIVATE[_-]?KEY|PASSWORD|PASSPHRASE|SESSION[_-]?SECRET|JWT[_-]?SECRET|WEBHOOK[_-]?SECRET|DATABASE[_-]?URL|DB[_-]?URL|CONNECTION[_-]?STRING|CLIENT[_-]?SECRET|REFRESH[_-]?TOKEN
+```
+
+Also flag any direct `process.env.X` or `context.env.X` reference where `X`
+matches the above.
+
+## Step 2: Server → client flow analysis
+
+For every route file, trace whether a sensitive value reaches the loader's
+return value. Steps:
+
+1. Run `pracht inspect routes --json` to enumerate routes.
+2. For each route, read the loader.
+3. Build a small dataflow trace from sensitive identifiers (and `process.env.*`
+   / `context.env.*` reads) to the `return` statement(s).
+4. Flag any spread (`...row`, `...user`, `...env`) that originates from a
+   source containing secrets.
+5. Flag direct returns of objects that name sensitive keys.
+
+This is heuristic — favor over-flagging over silent leaks. Note false-positive
+risk in the report.
+
+## Step 3: Module import boundaries
+
+Grep client-rendered files (route components, shells, the app root registered
+as `defineApp({ root })` or `pages/_root.tsx`, anything imported from them) for
+imports of:
+
+- `node:*` builtins
+- `@pracht/adapter-*`
+- Local `src/server/**` modules
+- Modules whose top level reads `process.env.*`
+
+The Vite plugin strips the server-only exports `loader`, `head`, `headers`,
+`getStaticPaths`, and `markdown` from route files when serving the client
+query (`middleware` is not a route-file export — middleware lives in the
+manifest); see the client module transform notes in `docs/ARCHITECTURE.md`
+and `docs/ENV.md`. But a component that imports `../server/db` will still
+pull `db` into the client bundle. Flag those imports. The app root's browser
+copy loses only `dehydrate` and the imports nothing else uses; `setup()`,
+`Root`, `hydrate()`, and everything they import ship. A `dehydrate` bound in
+the same destructuring as those (`export const { setup, Root, dehydrate,
+hydrate } = createRoot(…)`) or reached through `export *` ships with them, so
+flag a server-only value passed into that call. A root whose other code calls
+or re-exports `dehydrate` ships whole; flag its server-only imports too.
+
+## Step 4: Hidden surfaces
+
+Check for accidental exposure outside loaders:
+
+- The app root's `dehydrate()` snapshot: it lands in `pracht-state` as `root`
+  and in every route-state response, like loader data. For `@pracht/query`
+  that is every successful query cached during the request, so flag a
+  `queryFn` or `setQueryData` in a loader that caches a secret-bearing value.
+- `head()` returns: rare, but a `meta` value containing a token leaks into HTML.
+- `headers()` returns: flag values that look like secrets. For SSG/ISG pages,
+  document headers enter `dist/server/headers-manifest.json`; every serverful
+  build currently also copies that manifest to public
+  `dist/client/_pracht/headers.json` (only Cloudflare reads it there). A pure
+  static export omits the client copy but may mirror the server manifest into
+  host configuration. This skill owns secret VALUES in headers; header policy
+  (CSP, HSTS, weakened defaults) is owned by `audit-headers` — cross-reference
+  it.
+- `<Form>` `action` URLs containing tokens in the query string.
+- `prefetchRouteState(url)` calls with sensitive query params.
+- Inline `<script>` content emitted from custom shells.
+
+## Step 5: `.env` discipline
+
+- Confirm `.env*` is in `.gitignore`.
+- Confirm generated starters preserve `!.env.example` if they ignore `.env*`.
+- Grep tracked files for likely committed secrets (long random strings near
+  identifier names from step 1).
+- Confirm client-side env access goes through `publicEnv` (from
+  `@pracht/core`) or `import.meta.env.PRACHT_PUBLIC_*`; `VITE_*` values are
+  still exposed by Vite compatibility wiring, but Pracht does not treat them as
+  intentionally public, so flag client-side `VITE_*` references unless they are
+  explicitly allowlisted and reviewed. Warn loudly if a public env name has a
+  secret-shaped name.
+- Flag any client-side read of `import.meta.env` that is not a single-key
+  access — a bare reference, destructuring, a spread, or bracket access such as
+  `const env = import.meta.env` or `import.meta.env["MODE"]`. Vite replaces
+  those with an object literal holding **every** exposed variable, so the
+  `VITE_*` values land in the bundle with no accessor text left for a
+  name-based grep to find. Use `publicEnv` to enumerate public values.
+- Confirm server-side env access uses `serverEnv` (from
+  `@pracht/core/env/server`) or `context.env` rather than ad-hoc globals.
+
+## Step 6: Report
+
+| File:Line | Identifier / source | Sink (loader return / client import / etc.) | Severity |
+| --------- | ------------------- | ------------------------------------------- | -------- |
+
+Severities:
+
+- `error` — direct flow from `process.env.SECRET_*` / `serverEnv.SECRET_*` to
+  loader return.
+- `error` — `PRACHT_PUBLIC_*_SECRET` style client-public or allowlisted `VITE_*_SECRET`
+  secret-shaped name.
+- `error` — `envSafety: false` or an allowlisted name that looks secret-shaped.
+- `warn` — spread of a row that may contain secret columns.
+- `warn` — client component imports a module that reads `process.env`.
+- `info` — header value that looks like a token.
+
+## Rules
+
+1. Heuristic-first; document false-positive risk per finding.
+2. Recommend an explicit allowlist projection (`{ id, name, email }`) over
+   blocklist filtering.
+3. For Cloudflare apps, secrets live in `context.env` — same risk profile as
+   `process.env`. Treat them identically.
+4. Never print suspected secret values into the report — refer by name only.
+5. If you find a likely committed secret, recommend immediate rotation in
+   addition to removal from history.
+6. Report only — do not auto-fix. Propose the projection/rotation/config
+   change; never apply it.
+
+$ARGUMENTS

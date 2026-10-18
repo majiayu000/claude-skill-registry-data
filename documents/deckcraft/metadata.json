@@ -1,0 +1,38 @@
+{
+  "name": "deckcraft",
+  "repo": "BlackBeltTechnology/pi-agent-dashboard",
+  "path": "packages/craft-apps/.pi/skills/deckcraft/SKILL.md",
+  "github_branch": "master",
+  "category": "documents",
+  "source": "github.com/BlackBeltTechnology/pi-agent-dashboard",
+  "dir_name": "deckcraft",
+  "downloaded_at": "2026-10-18T08:01:09.693038Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: pdf, word, pptx",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "pdf",
+      "word",
+      "pptx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "BlackBeltTechnology",
+  "source_url": "https://github.com/BlackBeltTechnology/pi-agent-dashboard/blob/master/packages/craft-apps/.pi/skills/deckcraft/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BlackBeltTechnology/pi-agent-dashboard/blob/master/packages/craft-apps/.pi/skills/deckcraft/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Headless presentations with DeckCraft (PPTX slides, layouts, shapes, text, tables), provisioned on demand by pi-craft - build a deck from commands, export to PDF, render slides to png. Use for \"make a 3-slide presentation\", \"add a title slide to this pptx\", \"export this deck to pdf\", \"render slide 2 as an image\"."
+}

@@ -1,0 +1,36 @@
+{
+  "name": "trader-copycat",
+  "repo": "Jakeschincariol/trader-skill",
+  "path": "trader-copycat/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Jakeschincariol/trader-skill",
+  "dir_name": "trader-copycat",
+  "downloaded_at": "2026-10-18T08:48:35.298974Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/trader-skill/blob/main/trader-copycat/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/trader-skill/blob/main/trader-copycat/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "The Reverse Engineer. Reads a famous investor's public SEC filings (the quarterly 13F-HR, plus Form 4 if you want the insider trades) and rebuilds their portfolio as weights you can copy: every position, its share of the fund, what they bought, added, trimmed and sold since the last quarter, with tickers matched to every CUSIP. Then it writes trader/targets.json so the budget skill can size it to your money. Use when the user says \"copy Buffett\", \"copy Berkshire\", \"what does Ackman own\", \"reverse engineer this investor\", \"show me their 13F\", \"what did they buy last quarter\", \"copy the top 5\", or names any fund or famous investor."
+}

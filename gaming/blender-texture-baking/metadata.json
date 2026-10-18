@@ -1,0 +1,37 @@
+{
+  "name": "blender-texture-baking",
+  "repo": "EL4CTEO/blender-skills",
+  "path": "skills/blender-texture-baking/SKILL.md",
+  "github_branch": "main",
+  "category": "gaming",
+  "source": "github.com/EL4CTEO/blender-skills",
+  "dir_name": "blender-texture-baking",
+  "downloaded_at": "2026-10-18T08:21:04.165987Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "gaming",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for gaming: game, unity",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "game",
+      "unity"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "EL4CTEO",
+  "source_url": "https://github.com/EL4CTEO/blender-skills/blob/main/skills/blender-texture-baking/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/EL4CTEO/blender-skills/blob/main/skills/blender-texture-baking/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Bake texture maps in Blender 5.2 Cycles - high-to-low normal maps with cage/extrusion, AO, curvature, ID, thickness, base color/roughness/metallic from procedurals, ORM packing, OpenGL vs DirectX, margins, GPU baking, fixing skewing/waviness/seams. Use when transferring sculpt or high-poly detail to game meshes or converting procedural materials to textures."
+}

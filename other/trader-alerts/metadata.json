@@ -1,0 +1,36 @@
+{
+  "name": "trader-alerts",
+  "repo": "Jakeschincariol/trader-skill",
+  "path": "trader-alerts/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Jakeschincariol/trader-skill",
+  "dir_name": "trader-alerts",
+  "downloaded_at": "2026-10-18T08:48:34.642446Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category api scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/trader-skill/blob/main/trader-alerts/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/trader-skill/blob/main/trader-alerts/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Price Alerts. Rings when a price target, a stop or the opening bell hits: above / below / stop rules, percent moves from the previous close, and the NYSE opening bell, each ringing once so you are not spammed. Knows NYSE hours with the 2026 and 2027 holidays and 1:00 p.m. early closes, fetches free delayed quotes (Yahoo chart JSON, Stooq CSV) one ticker at a time, and writes trader/prices.json for the other skills. Use when the user says \"alert me when\", \"tell me if AAPL hits\", \"set a stop\", \"price target\", \"watch my stocks\", \"is the market open\", \"when does the market open\", \"get me prices\", or to refresh prices before sizing, risk or tax."
+}

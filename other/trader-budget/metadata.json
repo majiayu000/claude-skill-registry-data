@@ -1,0 +1,36 @@
+{
+  "name": "trader-budget",
+  "repo": "Jakeschincariol/trader-skill",
+  "path": "trader-budget/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Jakeschincariol/trader-skill",
+  "dir_name": "trader-budget",
+  "downloaded_at": "2026-10-18T08:48:35.129670Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "documents",
+    "runner_up_score": 1,
+    "signals": [
+      "bash"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/trader-skill/blob/main/trader-budget/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/trader-skill/blob/main/trader-budget/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Budget Manager. Sizes every position to your budget before anything is bought: keeps a cash buffer, caps any one stock (the excess is shared out to the others), drops slices under your minimum order, rounds so every dollar is used, supports fractional or whole shares, and writes the proposed buy orders to trader/orders.json in the exact shape of Alpaca's place_stock_order (notional as a string). Nothing is placed. Use when the user says \"I have $5,000\", \"size my trades\", \"how much of each should I buy\", \"manage my budget\", \"split my money\", \"keep 10% in cash\", \"no stock over 25%\", \"set my rules\", or after /trader-copycat writes targets."
+}

@@ -1,0 +1,40 @@
+{
+  "name": "craft-studio",
+  "repo": "BlackBeltTechnology/pi-agent-dashboard",
+  "path": "packages/craft-apps/.pi/skills/craft-studio/SKILL.md",
+  "github_branch": "master",
+  "category": "documents",
+  "source": "github.com/BlackBeltTechnology/pi-agent-dashboard",
+  "dir_name": "craft-studio",
+  "downloaded_at": "2026-10-18T08:01:12.556918Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: pdf, word, pptx, xlsx, docx",
+    "score": 5,
+    "runner_up": "design",
+    "runner_up_score": 3,
+    "signals": [
+      "pdf",
+      "word",
+      "pptx",
+      "xlsx",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "BlackBeltTechnology",
+  "source_url": "https://github.com/BlackBeltTechnology/pi-agent-dashboard/blob/master/packages/craft-apps/.pi/skills/craft-studio/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BlackBeltTechnology/pi-agent-dashboard/blob/master/packages/craft-apps/.pi/skills/craft-studio/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Router for the ArtCraft craft apps (PhotoCraft, VectorCraft, FilmCraft, LightCraft, PdfCraft, EffectCraft, DesignCraft, FigCraft, WordCraft, SoundCraft, DeckCraft, CADCraft, GridCraft) driven headless via pi-craft. Use to choose which app fits a job and run the discover-execute-save-verify loop - \"which craft app should I use\", \"edit a video/audio/image/PDF headless\", \"make a title card\"."
+}

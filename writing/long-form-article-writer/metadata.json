@@ -1,0 +1,38 @@
+{
+  "name": "long-form-article-writer",
+  "repo": "Ekos-Labs/skills",
+  "path": "skills/long-form-article-writer/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/Ekos-Labs/skills",
+  "dir_name": "long-form-article-writer",
+  "downloaded_at": "2026-10-18T08:22:27.955135Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, writer, article",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "writing",
+      "writer",
+      "article"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Ekos-Labs",
+  "source_url": "https://github.com/Ekos-Labs/skills/blob/main/skills/long-form-article-writer/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Ekos-Labs/skills/blob/main/skills/long-form-article-writer/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Plan, outline and write a long-form X or LinkedIn article in the author's voice from their notes and real examples, then cut anything that reads as AI-written and produce a short post version. Use for deep-dive articles, essays and launch write-ups."
+}

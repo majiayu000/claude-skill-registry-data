@@ -1,0 +1,36 @@
+{
+  "name": "trader-tax",
+  "repo": "Jakeschincariol/trader-skill",
+  "path": "trader-tax/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Jakeschincariol/trader-skill",
+  "dir_name": "trader-tax",
+  "downloaded_at": "2026-10-18T08:48:36.242068Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "performance",
+    "runner_up_score": 1,
+    "signals": [
+      "bash"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/trader-skill/blob/main/trader-tax/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/trader-skill/blob/main/trader-tax/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Tax Optimizer. Tracks cost-basis lots for every position (FIFO, highest cost first, or specific lots), shows unrealized gains and losses by lot with short or long term, works out what a sale would realize before you sell, finds tax-loss harvesting candidates over a loss threshold, checks the wash sale rule (30 days before and after, GOOG and GOOGL as one family), and writes harvest sells only as proposals. Not tax advice. Use when the user says \"what are my gains\", \"cost basis\", \"tax lots\", \"tax-loss harvest\", \"what would selling cost me in tax\", \"short or long term\", \"wash sale\", or before selling anything."
+}

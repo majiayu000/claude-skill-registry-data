@@ -1,0 +1,38 @@
+{
+  "name": "eval-rubric",
+  "repo": "Calibre-Labs/reforge-ai-evals",
+  "path": "skills/eval-rubric/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/Calibre-Labs/reforge-ai-evals",
+  "dir_name": "eval-rubric",
+  "downloaded_at": "2026-10-18T08:03:41.945663Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, prd, feature",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "prd",
+      "feature"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Calibre-Labs",
+  "source_url": "https://github.com/Calibre-Labs/reforge-ai-evals/blob/main/skills/eval-rubric/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Calibre-Labs/reforge-ai-evals/blob/main/skills/eval-rubric/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write or update the eval rubric for an AI agent or AI feature: the pass/fail criteria that define good behavior, in four groups (outcome, trajectory, governance, experience), plus the release thresholds that belong in the PRD. Use this skill whenever someone asks to \"write an eval rubric\", \"define what good looks like\", \"add evals to my PRD\", \"what should we evaluate\", \"turn this PRD into a rubric\", \"update the rubric from these traces\", or shares a PRD, agent spec, system prompt or trace codes and wants evaluation criteria. Also use to audit an existing rubric. Output is an HTML page and a markdown file saved next to the PRD."
+}

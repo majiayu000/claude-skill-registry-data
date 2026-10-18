@@ -1,0 +1,259 @@
+---
+name: typed-routes
+version: 1.3.0
+description: |
+  Add or maintain pracht typed routes: run typegen, adopt route-id based links and
+  navigation, and replace hard-coded hrefs with generated helpers.
+  Use for "add typed routes", "fix typed links", "replace hard-coded hrefs", "run
+  typegen".
+allowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Edit
+  - Grep
+  - Glob
+  - AskUserQuestion
+---
+
+# Pracht Typed Routes
+
+Use this workflow to keep route ids, params, links, and navigation type-safe.
+
+## Step 1: Inspect the resolved graph
+
+The resolved app graph is the source of truth — not a manual glob of `src/`.
+
+MCP: when the pracht MCP server is registered (docs/MCP.md), prefer its
+`inspect_routes`/`inspect_api`/`inspect_build`/`doctor`/`verify`/`generate_*`
+tools over shelling out. `pracht inspect` needs the pracht plugin in the vite
+config.
+
+```bash
+pracht inspect routes --json
+```
+
+Check every route has a stable id. Explicit `id` fields are preferred for routes
+that app code links to, because fallback ids change when paths change.
+
+```ts
+route("/products/:id", () => import("./routes/products/[id].tsx"), {
+  id: "product",
+  render: "ssr",
+});
+```
+
+Any route without an explicit `id` — manifest apps included, not just
+pages-router apps — gets a fallback id derived from the route path (`/` →
+`index`, `/blog/:slug` → `blog-slug`, `/*` → `splat`).
+
+## Step 2: Generate route types and helpers
+
+Run:
+
+```bash
+pracht typegen
+```
+
+This writes:
+
+- `src/pracht.d.ts` — module augmentation for route ids, params, loader data
+  types, and API route request/response types (consumed by `apiFetch()`).
+- `src/pracht-routes.ts` — runtime `href()` helper backed by the same route map.
+- `src/pracht-capabilities.d.ts` — only when the app registers capabilities:
+  input/output types from the capability schemas, so `invokeCapability()`,
+  `callCapability()`, and `<Form capability>`'s `onCapabilityResult` infer
+  types from the capability name.
+
+Earlier versions wrote the declaration to `src/pracht-routes.d.ts`; typegen
+removes that stale file automatically (TypeScript silently ignored it next to
+the same-named `.ts` helper).
+
+Do not hand-edit generated files. If they are stale, update the route graph and
+run typegen again — or rely on `pracht dev`, which refreshes them when route
+files are added, removed, or renamed and when the route manifest or an imported
+definition module changes. The dev banner prompts for the initial typegen run
+when `src/pracht.d.ts` does not exist. In CI, prefer:
+
+```bash
+pracht typegen --check
+```
+
+The check compares declarations, not bytes, so generated files reformatted by
+the project's formatter still read as up to date and regenerating leaves them
+formatted. Do not add them to a formatter ignore list on that account.
+
+## Step 3: Replace string navigation where it matters
+
+### Components
+
+```tsx
+import { Link, useNavigate } from "@pracht/core";
+
+export function ProductLink({ id }: { id: string }) {
+  const navigate = useNavigate();
+
+  return (
+    <>
+      <Link route="product" params={{ id }} search={{ ref: "home" }}>
+        View product
+      </Link>
+      <button onClick={() => void navigate({ route: "product", params: { id } })}>
+        Open product
+      </button>
+    </>
+  );
+}
+```
+
+`<Link>` renders a normal `<a>` and the client router intercepts it like any
+same-origin anchor. It also accepts navigation-behavior props:
+`prefetch="none" | "hover" | "intent" | "viewport" | "render"` (per-link
+prefetch strategy, default `"intent"`), `preserveScroll` (keep the scroll
+position), and `viewTransition` (animate the navigation with the View Transitions API
+where supported). Set `speculate={false}` on links that browser speculation
+rules must not prefetch or prerender. Because it is independent of the JS
+`prefetch` strategy, use both `speculate={false}` and `prefetch="none"` for GET
+links with side effects. There is also an imperative
+`prefetch()` export and a `useNavigation()` hook for pending
+navigation/submission state.
+
+### Outside components
+
+```ts
+import { href } from "./pracht-routes";
+
+const productUrl = href("product", {
+  params: { id: "123" },
+  search: { tab: "details" },
+});
+```
+
+Use `href()` in loaders that return URLs, sitemap helpers, menu config, test
+fixtures, and other non-component code.
+
+### Loader data
+
+After typegen, `useRouteData(routeId)` returns that route's loader data with
+no generic — route ids autocomplete and the type follows the route's loader
+(or its separate loader file from the manifest):
+
+```tsx
+import { useRouteData } from "@pracht/core";
+
+export function Component() {
+  const data = useRouteData("product");
+  return <h1>{data.product.name}</h1>;
+}
+```
+
+Prefer this over `useRouteData<typeof loader>()` when typegen runs; keep the
+generic form for projects that do not generate route types. Routes without a
+loader type their data as `undefined`. The id must be the active route: a
+mismatch throws (with a descriptive message in dev), so a shell or island that
+needs another route's data must receive it as props instead.
+
+Shell loaders register the same way: `useShellData("app")` types the result
+from the `app` shell's `loader` for every shell a route renders under. It is
+typed `| undefined` because the shell can render without its data (the SPA
+loading state), and naming a shell the active route does not use throws.
+
+### Search params
+
+A route that reads its query string should export a `search` schema (any
+Standard Schema validator) instead of parsing `url.searchParams` by hand.
+Typegen then types `search` on `<Link>`, `navigate()`, and `href()` from the
+schema's input, and `useSearch(routeId)` returns its output:
+
+```tsx
+import { Link, useSearch, type LoaderArgs, type SearchArgs } from "@pracht/core";
+import * as z from "zod";
+
+export const search = z.object({
+  page: z.coerce.number().int().min(1).default(1),
+  q: z.string().optional(),
+});
+
+export async function loader(args: LoaderArgs & SearchArgs<typeof search>) {
+  return listProducts(args.search); // { page: number; q?: string }
+}
+
+export function Component() {
+  const { page, q } = useSearch("products");
+  return <Link route="products" search={{ page: page + 1, q }}>Next</Link>;
+}
+```
+
+- Values arrive as strings (arrays for repeated keys): coerce with
+  `z.coerce.*`, and give optional params defaults so the bare URL is valid. A
+  key that may repeat is a plain string when it appears once — accept both.
+- A rejected query answers 400 and renders the route's `ErrorBoundary` with
+  `error.issues`; client navigation does the same.
+- SSG/ISG routes are prerendered with an empty query, so the schema must
+  accept one; loaders there only ever see the defaults.
+- Keep `useSearchParams()` for raw access; it is unchanged.
+
+### API routes
+
+After typegen, `apiFetch()` type-checks API calls end to end — paths,
+methods, params, bodies and queries (for `defineApi()` routes), and response
+types:
+
+```ts
+import { apiFetch } from "@pracht/core";
+
+const item = await apiFetch("/api/items/:id", { params: { id: "42" } });
+```
+
+See docs/API_VALIDATION.md for `defineApi()` and validation error handling.
+Typegen discovers API route files without importing them, so it is safe for
+route modules that initialize runtime-only services at module scope.
+
+Query and params values cross the wire as strings — write schemas that accept
+string input (`z.coerce.number()`, not `z.number()`); `apiFetch()` rejects
+query and params keys without a string representation at compile time when the
+schema exposes a concrete input type. Handlers that need a custom status keep
+typed payloads with `json(value, { status })`.
+
+## Step 4: Param and search rules
+
+Generated param types accept `RouteParamInput = string | number | boolean`
+(values are stringified into the path), so:
+
+- `:id` requires `params: { id: RouteParamInput }` — a `string` is typical,
+  but `number`/`boolean` also typecheck.
+- `*` requires `params: { "*": RouteParamInput }`.
+- `:path*` requires `params: { path: RouteParamInput }`.
+- Routes with no dynamic segments should omit `params`.
+- Missing and extra params should fail at typecheck time.
+- `search` is typed by the route module's `search` schema input when it
+  exports one: unknown keys and wrong value types fail, keys whose input
+  cannot come from a string (`z.number()`) fail, and a required key makes
+  `search` itself required. Routes without a schema accept `string`,
+  `URLSearchParams`, or an object of primitive values/arrays.
+
+## Step 5: Verify
+
+Run at least:
+
+```bash
+pracht typegen --check
+pnpm typecheck
+pracht verify --json
+```
+
+If navigation changed, add or update Playwright coverage for both the rendered
+anchor `href` and client-side navigation without a full page reload.
+
+## Rules
+
+1. Always start from `pracht inspect routes --json` or `pracht typegen`; do not
+   infer the full route map from files by hand.
+2. Prefer adding explicit ids before converting links for important routes.
+3. Never edit `src/pracht.d.ts` or `src/pracht-routes.ts` manually.
+4. Keep plain `<a href="...">` where a URL is genuinely external, opaque, or
+   user-provided.
+5. After adding/removing/renaming routes, run `pracht typegen` and include the
+   generated file changes in the same commit.
+
+$ARGUMENTS

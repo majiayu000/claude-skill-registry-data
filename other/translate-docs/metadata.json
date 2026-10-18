@@ -1,0 +1,37 @@
+{
+  "name": "translate-docs",
+  "repo": "CherryHQ/cherry-studio",
+  "path": ".agents/skills/translate-docs/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/CherryHQ/cherry-studio",
+  "dir_name": "translate-docs",
+  "downloaded_at": "2026-10-18T08:06:22.810361Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, language=2",
+    "score": 2,
+    "runner_up": "language",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "CherryHQ",
+  "source_url": "https://github.com/CherryHQ/cherry-studio/blob/main/.agents/skills/translate-docs/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/CherryHQ/cherry-studio/blob/main/.agents/skills/translate-docs/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when explicitly asked to translate, backfill, reconcile, rename, or delete paired Cherry Studio repository documentation in English and Simplified Chinese, including Phase 3 domain-by-domain translation work."
+}

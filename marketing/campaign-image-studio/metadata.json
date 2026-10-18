@@ -1,0 +1,38 @@
+{
+  "name": "campaign-image-studio",
+  "repo": "Ekos-Labs/skills",
+  "path": "skills/campaign-image-studio/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/Ekos-Labs/skills",
+  "dir_name": "campaign-image-studio",
+  "downloaded_at": "2026-10-18T08:22:25.350952Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: social, campaign, brand",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "social",
+      "campaign",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Ekos-Labs",
+  "source_url": "https://github.com/Ekos-Labs/skills/blob/main/skills/campaign-image-studio/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Ekos-Labs/skills/blob/main/skills/campaign-image-studio/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Turn a campaign brief and brand kit into an art direction and a consistent, channel-sized image set using the user's own image model API (FLUX, Higgsfield, OpenAI gpt-image, Nano Banana or fal.ai), keeping every prompt so any image can be regenerated. Use for launch visuals, social campaigns and website imagery."
+}

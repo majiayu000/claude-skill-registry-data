@@ -1,0 +1,37 @@
+{
+  "name": "amazon-sp-refund-return-monitor",
+  "repo": "KuudoAI/skills",
+  "path": "skills/amazon-sp-refund-return-monitor/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/KuudoAI/skills",
+  "dir_name": "amazon-sp-refund-return-monitor",
+  "downloaded_at": "2026-10-18T09:01:42.868316Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KuudoAI",
+  "source_url": "https://github.com/KuudoAI/skills/blob/main/skills/amazon-sp-refund-return-monitor/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KuudoAI/skills/blob/main/skills/amazon-sp-refund-return-monitor/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Analyze Amazon FBA customer returns and seller-fulfilled return requests from Seller Central or SP-API exports. Use for return volume, high-return ASINs or SKUs, return-rate calculations, reason and disposition analysis, customer-comment themes, prior-period comparisons, damaged-versus-reimbursed review candidates, or client-ready Amazon returns reporting. Do not use for general Amazon Ads reporting, listing optimization without returns evidence, or financial refund totals without transaction data."
+}

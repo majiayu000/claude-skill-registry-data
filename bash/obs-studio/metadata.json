@@ -1,0 +1,37 @@
+{
+  "name": "obs-studio",
+  "repo": "BlackBeltTechnology/pi-agent-dashboard",
+  "path": "packages/obs-studio-plugin/.pi/skills/obs-studio/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/BlackBeltTechnology/pi-agent-dashboard",
+  "dir_name": "obs-studio",
+  "downloaded_at": "2026-10-18T08:01:14.756772Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, cli",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "BlackBeltTechnology",
+  "source_url": "https://github.com/BlackBeltTechnology/pi-agent-dashboard/blob/master/packages/obs-studio-plugin/.pi/skills/obs-studio/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BlackBeltTechnology/pi-agent-dashboard/blob/master/packages/obs-studio-plugin/.pi/skills/obs-studio/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Set up and drive OBS Studio from a pi session with the pi-obs CLI - detect/install, provision obs-websocket as a managed service, switch scenes, bind cameras and displays, virtual camera, recording, stream target, screenshots, diagnose blank sources and crashes. Use on \"set up OBS\", \"switch OBS scene\", \"turn on the virtual camera\", \"my OBS source is blank\", \"OBS safe mode\"."
+}

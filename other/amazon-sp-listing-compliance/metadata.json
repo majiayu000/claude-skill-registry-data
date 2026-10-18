@@ -1,0 +1,36 @@
+{
+  "name": "amazon-sp-listing-compliance",
+  "repo": "KuudoAI/skills",
+  "path": "skills/amazon-sp-listing-compliance/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/KuudoAI/skills",
+  "dir_name": "amazon-sp-listing-compliance",
+  "downloaded_at": "2026-10-18T09:01:42.366136Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KuudoAI",
+  "source_url": "https://github.com/KuudoAI/skills/blob/main/skills/amazon-sp-listing-compliance/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KuudoAI/skills/blob/main/skills/amazon-sp-listing-compliance/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Pre-flight compliance gate for Amazon Seller Central listings. Works out which Amazon listing requirements and regulatory rules (FDA, EPA, CPSC, FCC, FTC, required disclosures, GTIN, category gating) apply to a product, checks whether the seller is gated or ineligible on the ASIN, asks the seller once for the facts only they know, and returns a met/unmet checklist with a go or hold. Never writes a listing itself. Use whenever a seller asks \"can I list this\", \"what do I need to sell X\", \"is this compliant\", or about restricted or gated categories, certificates, or required labels, and before any listing edit that adds or changes a product claim (antimicrobial, FDA approved, organic, bamboo), ingredients, category, condition, or identifiers. Do not use for fixing listing errors, copy optimization, or buyability (amazon-sp-listing-optimizer), account-health or policy questions unrelated to a specific product, or legal advice."
+}

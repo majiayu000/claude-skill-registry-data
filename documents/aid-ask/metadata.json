@@ -1,0 +1,37 @@
+{
+  "name": "aid-ask",
+  "repo": "AndreVianna/aid-methodology",
+  "path": ".claude/skills/aid-ask/SKILL.md",
+  "github_branch": "master",
+  "category": "documents",
+  "source": "github.com/AndreVianna/aid-methodology",
+  "dir_name": "aid-ask",
+  "downloaded_at": "2026-10-18T07:49:13.831517Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "docs"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AndreVianna",
+  "source_url": "https://github.com/AndreVianna/aid-methodology/blob/master/.claude/skills/aid-ask/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AndreVianna/aid-methodology/blob/master/.claude/skills/aid-ask/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Answer a question about this project, with citations. Use this skill when you want to know something -- how a part of the system works, what a document says, where a piece of work stands -- and you want a grounded answer rather than a guess. It reads three sources: the Knowledge Base, the live codebase, and any AID work currently in flight, and cites whichever it used, by document name, file path, or work reference. When those sources genuinely cannot answer, it says so instead of inventing an answer, and records the gap so it feeds back into improving the Knowledge Base. Trivial questions are answered inline; broad investigations are dispatched read-only. The only thing it ever writes is that recorded gap."
+}

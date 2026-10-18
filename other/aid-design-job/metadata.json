@@ -1,0 +1,37 @@
+{
+  "name": "aid-design-job",
+  "repo": "AndreVianna/aid-methodology",
+  "path": ".claude/skills/aid-design-job/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/AndreVianna/aid-methodology",
+  "dir_name": "aid-design-job",
+  "downloaded_at": "2026-10-18T07:49:35.895633Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AndreVianna",
+  "source_url": "https://github.com/AndreVianna/aid-methodology/blob/master/.claude/skills/aid-design-job/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AndreVianna/aid-methodology/blob/master/.claude/skills/aid-design-job/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Develop a scheduled or background job design as a DESIGN SEED in `.aid/design/job.md` -- the trigger, the work it performs, and its idempotency and failure handling. Use this skill when a job's schedule, its work, and its retry behaviour are still being decided. Grounded in the Knowledge Base (`.aid/knowledge/`) and the project source. It WRITES NO production code and NO KB document -- realize the seed into the built job with `/aid-create-job` once it is ready. Produced by the aid-architect agent and independently verified by aid-reviewer (full verify). Allocates a work-NNN folder."
+}

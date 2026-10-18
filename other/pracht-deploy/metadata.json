@@ -1,0 +1,37 @@
+{
+  "name": "pracht-deploy",
+  "repo": "JoviDeCroock/pracht",
+  "path": "skills/pracht-deploy/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/JoviDeCroock/pracht",
+  "dir_name": "pracht-deploy",
+  "downloaded_at": "2026-10-18T08:54:56.656308Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "JoviDeCroock",
+  "source_url": "https://github.com/JoviDeCroock/pracht/blob/main/skills/pracht-deploy/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/JoviDeCroock/pracht/blob/main/skills/pracht-deploy/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Configure a pracht adapter and deploy to Node, Cloudflare Workers, Netlify,\nVercel, or a pure static host: platform config, build, Docker, production\nchecklist.\nUse for \"deploy\", \"set up deployment\", \"configure adapter\", \"deploy to\ncloudflare/netlify/vercel\", \"static export\", \"production build\"."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "soundcraft",
+  "repo": "BlackBeltTechnology/pi-agent-dashboard",
+  "path": "packages/craft-apps/.pi/skills/soundcraft/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/BlackBeltTechnology/pi-agent-dashboard",
+  "dir_name": "soundcraft",
+  "downloaded_at": "2026-10-18T08:01:10.918564Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "writing",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "BlackBeltTechnology",
+  "source_url": "https://github.com/BlackBeltTechnology/pi-agent-dashboard/blob/master/packages/craft-apps/.pi/skills/soundcraft/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BlackBeltTechnology/pi-agent-dashboard/blob/master/packages/craft-apps/.pi/skills/soundcraft/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Headless audio editing and mixing with SoundCraft (DAW-style commands), provisioned on demand by pi-craft - import audio, clip gain, fades, normalise, multi-track mixes, bounce with a loudness/peak report, save .scraft sessions. Use for \"make this audio 6 dB quieter\", \"fade in and out this clip\", \"mix these two tracks\", \"bounce the session to a wav\"."
+}

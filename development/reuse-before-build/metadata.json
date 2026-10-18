@@ -1,0 +1,38 @@
+{
+  "name": "reuse-before-build",
+  "repo": "Ai-Eastern/reuse-before-build",
+  "path": "skills/reuse-before-build/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Ai-Eastern/reuse-before-build",
+  "dir_name": "reuse-before-build",
+  "downloaded_at": "2026-10-18T07:46:04.076614Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Ai-Eastern",
+  "source_url": "https://github.com/Ai-Eastern/reuse-before-build/blob/main/skills/reuse-before-build/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Ai-Eastern/reuse-before-build/blob/main/skills/reuse-before-build/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Reuse-first decision gate for coding work. Before building, check whether the project, its platform, its installed dependencies, or a well-evidenced open-source project already provides what is needed, then decide Take, Borrow, or Build from evidence actually read. Use it whenever a task involves choosing an architecture, library, framework, or component; implementing a non-trivial feature, helper, or integration that may already exist; adding, extending, or checking tests; or resuming engineering work from a handoff, checkpoint, or compacted context, even if the user never mentions reuse. Skip it for typos, renames, and other small local edits."
+}

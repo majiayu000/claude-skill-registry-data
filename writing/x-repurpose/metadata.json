@@ -1,0 +1,38 @@
+{
+  "name": "x-repurpose",
+  "repo": "Jakeschincariol/x-agent-skill",
+  "path": "skills/x-repurpose/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/Jakeschincariol/x-agent-skill",
+  "dir_name": "x-repurpose",
+  "downloaded_at": "2026-10-18T08:48:44.457741Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, blog, article",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "writing",
+      "blog",
+      "article"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/x-agent-skill/blob/main/skills/x-repurpose/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/x-agent-skill/blob/main/skills/x-repurpose/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Turn one long asset - a YouTube video, podcast, newsletter, blog post, transcript, LinkedIn post or client call - into a week of X posts and one thread. Use when the user says \"repurpose this\", \"turn this into tweets\", \"I have a video/newsletter/transcript\", or pastes a long piece of content and wants it on X."
+}

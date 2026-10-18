@@ -1,0 +1,39 @@
+{
+  "name": "business-proposal-builder",
+  "repo": "Fanch-hui/multi-ai-work",
+  "path": "resources/agent-presets/skills/business-proposal-builder/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/Fanch-hui/multi-ai-work",
+  "dir_name": "business-proposal-builder",
+  "downloaded_at": "2026-10-18T08:27:44.429223Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: pdf, word, docx, markdown",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "pdf",
+      "word",
+      "docx",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Fanch-hui",
+  "source_url": "https://github.com/Fanch-hui/multi-ai-work/blob/main/resources/agent-presets/skills/business-proposal-builder/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Fanch-hui/multi-ai-work/blob/main/resources/agent-presets/skills/business-proposal-builder/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Turns whatever came out of a discovery conversation \u2014 a call transcript, a voice memo, jobsite photos, an RFP document, a set of drawings, or scrappy notes \u2014 into a branded, costed proposal, estimate, or statement of work built on the owner's own templates and historical pricing. Routes it for signature and triggers the deposit invoice once it's accepted. Works entirely from uploaded files when no connector is available, producing DOCX and PDF the owner can send themselves. Use this whenever a quote, bid, estimate, proposal, or SOW is the deliverable \u2014 including phrasings like \"write this up for them,\" \"put together a quote,\" \"I need to bid this job,\" \"turn my notes into a proposal,\" \"respond to this RFP,\" or \"price this out.\" Reach for it when the owner describes a job they just looked at, even without saying the word quote."
+}

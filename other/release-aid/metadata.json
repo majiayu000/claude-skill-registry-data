@@ -1,0 +1,37 @@
+{
+  "name": "release-aid",
+  "repo": "AndreVianna/aid-methodology",
+  "path": ".claude/skills/release-aid/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/AndreVianna/aid-methodology",
+  "dir_name": "release-aid",
+  "downloaded_at": "2026-10-18T07:49:23.400986Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AndreVianna",
+  "source_url": "https://github.com/AndreVianna/aid-methodology/blob/master/.claude/skills/release-aid/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AndreVianna/aid-methodology/blob/master/.claude/skills/release-aid/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Cut a release of THIS repo (the AID methodology repo) end-to-end: bump the version, update the release notes, gate, tag, publish to every channel, and verify all checks green. One level argument decides the bump: major | minor | patch | beta. Maintainer-only ops tooling \u2014 NOT an AID methodology skill, never rendered to profiles/, never shipped to adopters. Sequence: RESOLVE -> PRECHECK -> BUMP -> DOCS+NOTES -> PR(merge=human) -> DRY-RUN -> TAG -> VERIFY -> CONFIRM -> close-out."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "forge-agent",
+  "repo": "ForgeyClap/Forge-Core",
+  "path": ".claude/skills/forge-agent/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ForgeyClap/Forge-Core",
+  "dir_name": "forge-agent",
+  "downloaded_at": "2026-10-18T08:29:11.258302Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=3, ai-ml=3",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ForgeyClap",
+  "source_url": "https://github.com/ForgeyClap/Forge-Core/blob/main/.claude/skills/forge-agent/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ForgeyClap/Forge-Core/blob/main/.claude/skills/forge-agent/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Forge: AI agents, LLM apps, and eval harnesses: agent, LLM app, tool-calling, function calling, MCP tool, prompt injection, eval, benchmark, guardrail, fallback."
+}

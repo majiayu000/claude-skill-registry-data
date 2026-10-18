@@ -1,0 +1,37 @@
+{
+  "name": "eval-code",
+  "repo": "Calibre-Labs/reforge-ai-evals",
+  "path": "skills/eval-code/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Calibre-Labs/reforge-ai-evals",
+  "dir_name": "eval-code",
+  "downloaded_at": "2026-10-18T08:03:41.455831Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Calibre-Labs",
+  "source_url": "https://github.com/Calibre-Labs/reforge-ai-evals/blob/main/skills/eval-code/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Calibre-Labs/reforge-ai-evals/blob/main/skills/eval-code/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write deterministic, code-based evaluator functions for an AI product. Use this skill whenever you need to write evaluators that check structural properties of AI outputs (format, count, presence, schema compliance) without calling another LLM. Also use when auditing existing code-based evaluators for brittleness, coverage gaps, or false positives."
+}

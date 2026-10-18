@@ -1,0 +1,37 @@
+{
+  "name": "aid-describe",
+  "repo": "AndreVianna/aid-methodology",
+  "path": ".agents/skills/aid-describe/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/AndreVianna/aid-methodology",
+  "dir_name": "aid-describe-andrevianna-aid-methodology",
+  "downloaded_at": "2026-10-18T07:49:27.253447Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AndreVianna",
+  "source_url": "https://github.com/AndreVianna/aid-methodology/blob/master/.agents/skills/aid-describe/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AndreVianna/aid-methodology/blob/master/.agents/skills/aid-describe/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Gather requirements through an adaptive interview and write them to REQUIREMENTS.md. Use this skill when you know roughly what you want built but the scope, the users, and the acceptance criteria are not yet pinned down. It asks one question at a time, each chosen by a seasoned-analyst elicitation engine that picks its next move from the gaps in what you have said so far. The first run builds the document incrementally; a later run resumes wherever it is still incomplete. It ends by presenting the finished requirements for your approval and handing off to `/aid-define`."
+}

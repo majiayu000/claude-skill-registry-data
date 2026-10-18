@@ -1,0 +1,36 @@
+{
+  "name": "trader-rebalance",
+  "repo": "Jakeschincariol/trader-skill",
+  "path": "trader-rebalance/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Jakeschincariol/trader-skill",
+  "dir_name": "trader-rebalance",
+  "downloaded_at": "2026-10-18T08:48:35.792705Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "documents",
+    "runner_up_score": 1,
+    "signals": [
+      "bash"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/trader-skill/blob/main/trader-rebalance/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/trader-skill/blob/main/trader-rebalance/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Rebalancer. Brings the portfolio back to its target weights when it drifts: values every holding at current prices, works out each stock's drift from its target in percentage points, trades only the stocks outside a band (default 5 points), keeps the cash buffer and the per-stock cap, skips tiny trades, lists sells before buys, and writes the trades to trader/orders.json as proposals. Use when the user says \"rebalance\", \"my portfolio drifted\", \"bring it back to the targets\", \"I added money\", \"the new 13F changed the weights\", \"am I overweight\", or on a schedule (monthly or quarterly) after /trader-copycat updates the targets."
+}

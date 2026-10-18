@@ -1,0 +1,37 @@
+{
+  "name": "forge-skill-testing",
+  "repo": "ForgeyClap/Forge-Core",
+  "path": ".claude/skills/forge-skill-testing/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/ForgeyClap/Forge-Core",
+  "dir_name": "forge-skill-testing",
+  "downloaded_at": "2026-10-18T08:29:19.013090Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: lint, review",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "lint",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ForgeyClap",
+  "source_url": "https://github.com/ForgeyClap/Forge-Core/blob/main/.claude/skills/forge-skill-testing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ForgeyClap/Forge-Core/blob/main/.claude/skills/forge-skill-testing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Standard test protocol for a new/changed Forge skill: activation-test (trigger vs near-miss phrases, target >=95%) + opt-in fresh-session A/B benchmark. Use when creating or editing any skill."
+}

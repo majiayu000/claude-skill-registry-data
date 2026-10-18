@@ -1,0 +1,38 @@
+{
+  "name": "aid-plan",
+  "repo": "AndreVianna/aid-methodology",
+  "path": ".agents/skills/aid-plan/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/AndreVianna/aid-methodology",
+  "dir_name": "aid-plan-andrevianna-aid-methodology",
+  "downloaded_at": "2026-10-18T07:49:15.412540Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AndreVianna",
+  "source_url": "https://github.com/AndreVianna/aid-methodology/blob/master/.agents/skills/aid-plan/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AndreVianna/aid-methodology/blob/master/.agents/skills/aid-plan/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Sequence feature SPECs into deliverables -- each one a functional MVP that builds on the previous. Strategy, not tactics. Use when feature SPECs are complete and you need a delivery roadmap."
+}

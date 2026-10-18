@@ -1,0 +1,39 @@
+{
+  "name": "aid-design",
+  "repo": "AndreVianna/aid-methodology",
+  "path": "canonical/skills/aid-design/SKILL.md",
+  "github_branch": "master",
+  "category": "design",
+  "source": "github.com/AndreVianna/aid-methodology",
+  "dir_name": "aid-design-andrevianna-aid-methodology-2",
+  "downloaded_at": "2026-10-18T07:49:29.240242Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, ux, component",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "ux",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AndreVianna",
+  "source_url": "https://github.com/AndreVianna/aid-methodology/blob/master/canonical/skills/aid-design/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AndreVianna/aid-methodology/blob/master/canonical/skills/aid-design/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Produce a design artifact you intend to keep -- a UX or interaction flow, a component or interface design, with accessibility notes -- meant to inform the real build. Use this skill when the subject has no dedicated design row of its own; when a dedicated `/aid-design-`<artifact> row exists, use that row instead. It is grounded in the Knowledge Base (`.aid/knowledge/`) and the project source, produced by aid-architect and independently verified by aid-reviewer, because a kept design drives a build and its correctness matters. It resolves nothing: it presents the design, you decide, and building it is a separate `/aid-create` step. For a throwaway model that only validates a direction, use `/aid-prototype` instead."
+}
