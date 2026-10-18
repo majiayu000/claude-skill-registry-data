@@ -1,0 +1,37 @@
+{
+  "name": "Self-Review",
+  "repo": "wrg32786/aigent-os",
+  "path": "skills/self-review/SKILL.md",
+  "github_branch": "master",
+  "category": "quality",
+  "source": "github.com/wrg32786/aigent-os",
+  "dir_name": "self-review",
+  "downloaded_at": "2026-10-18T03:34:16.770497Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "quality",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wrg32786",
+  "source_url": "https://github.com/wrg32786/aigent-os/blob/master/skills/self-review/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wrg32786/aigent-os/blob/master/skills/self-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Spawn a reviewer subagent with 4-6 specific verification questions before declaring non-trivial code work done. Triggers when changes are >30 LOC, multi-file, hot-path, prompt-affecting, or genuinely uncertain. Bad asks produce bad answers \u2014 this skill forces structured verification questions, not \"is this good?\""
+}

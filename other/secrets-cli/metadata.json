@@ -1,0 +1,37 @@
+{
+  "name": "secrets-cli",
+  "repo": "wearedevpunks/skills",
+  "path": "skills/misc/secrets-cli/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wearedevpunks/skills",
+  "dir_name": "secrets-cli",
+  "downloaded_at": "2026-10-18T03:26:53.509133Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wearedevpunks",
+  "source_url": "https://github.com/wearedevpunks/skills/blob/main/skills/misc/secrets-cli/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wearedevpunks/skills/blob/main/skills/misc/secrets-cli/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Operates the DP Secrets CLI (`secrets`) for installation, authentication, project membership, environments, dotenv files, pulls, and secret values. Use before any agent runs a `secrets` command or when the user mentions the Secrets CLI, `secrets login`, `secrets projects`, `secrets envs`, `secrets files`, `secrets values`, or the compatibility `secrets secrets` tree."
+}

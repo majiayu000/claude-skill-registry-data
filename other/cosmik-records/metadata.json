@@ -1,0 +1,37 @@
+{
+  "name": "cosmik-records",
+  "repo": "zzstoatzz/bot",
+  "path": "skills/cosmik-records/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/zzstoatzz/bot",
+  "dir_name": "cosmik-records",
+  "downloaded_at": "2026-10-18T03:58:20.770351Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zzstoatzz",
+  "source_url": "https://github.com/zzstoatzz/bot/blob/main/skills/cosmik-records/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zzstoatzz/bot/blob/main/skills/cosmik-records/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Conventions for writing to cosmik (your public knowledge graph on atproto, indexed by semble). The capability lives in the semble tools for URLs, collections, and connections, and in pdsx for standalone NOTE cards. Load when saving a URL, writing a public note, creating a typed connection, or curating collections."
+}

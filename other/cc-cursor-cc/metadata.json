@@ -1,0 +1,37 @@
+{
+  "name": "cc-cursor-cc",
+  "repo": "whyzsm/tiny-agents",
+  "path": "skills/cc-cursor-cc/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/whyzsm/tiny-agents",
+  "dir_name": "cc-cursor-cc",
+  "downloaded_at": "2026-10-18T03:32:18.081004Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "whyzsm",
+  "source_url": "https://github.com/whyzsm/tiny-agents/blob/main/skills/cc-cursor-cc/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/whyzsm/tiny-agents/blob/main/skills/cc-cursor-cc/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Validate brainstorm with Cursor PM, update Plans.md, handoff back. Cursor\u2194CC 2-agent workflow. Triggers: Cursor PM handoff, 2-agent plan validation, brainstorm review. Skip for: implementation, single-agent."
+}

@@ -1,0 +1,36 @@
+{
+  "name": "find-weakness",
+  "repo": "wrg32786/aigent-os",
+  "path": "skills/find-weakness/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/wrg32786/aigent-os",
+  "dir_name": "find-weakness",
+  "downloaded_at": "2026-10-18T03:34:19.024558Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wrg32786",
+  "source_url": "https://github.com/wrg32786/aigent-os/blob/master/skills/find-weakness/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wrg32786/aigent-os/blob/master/skills/find-weakness/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Hypatia's targeted weakness-finding skill. Given a specific claim, architecture, or decision, finds the single strongest objection and the hidden assumption most likely to be wrong. Sharper and faster than critique-plan."
+}

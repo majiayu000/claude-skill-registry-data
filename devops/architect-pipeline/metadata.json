@@ -1,0 +1,40 @@
+{
+  "name": "architect-pipeline",
+  "repo": "wearedevpunks/skills",
+  "path": "skills/agnostic/security/architect-pipeline/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/wearedevpunks/skills",
+  "dir_name": "architect-pipeline",
+  "downloaded_at": "2026-10-18T03:27:07.386537Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: ci, cd, deploy, infra, infrastructure",
+    "score": 5,
+    "runner_up": "security",
+    "runner_up_score": 4,
+    "signals": [
+      "ci",
+      "cd",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wearedevpunks",
+  "source_url": "https://github.com/wearedevpunks/skills/blob/main/skills/agnostic/security/architect-pipeline/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wearedevpunks/skills/blob/main/skills/agnostic/security/architect-pipeline/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Architect repository-aware, provider-neutral CI/CD pipelines for validation, builds, packaging, releases, publication, infrastructure deployment, and promotion; implement the smallest coherent configuration and documentation change when requested. Use when a repository needs pipeline stages, triggers, artifacts, release identity, retry or recovery semantics, deployment gates, or secure-by-default pipeline orchestration. Route explicit CI/CD security audits, reviews, or threat models to $audit-cicd-security, and do not use for data, ML, or general automation pipelines."
+}

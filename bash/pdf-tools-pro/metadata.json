@@ -1,0 +1,37 @@
+{
+  "name": "pdf-tools-pro",
+  "repo": "zhuyansen/agent-skills-hub",
+  "path": "ops/skillmgr-runs/in/input/risky/pdf-tools-pro/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/zhuyansen/agent-skills-hub",
+  "dir_name": "pdf-tools-pro",
+  "downloaded_at": "2026-10-18T03:54:17.302858Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zhuyansen",
+  "source_url": "https://github.com/zhuyansen/agent-skills-hub/blob/main/ops/skillmgr-runs/in/input/risky/pdf-tools-pro/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zhuyansen/agent-skills-hub/blob/main/ops/skillmgr-runs/in/input/risky/pdf-tools-pro/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Merge, split and compress PDF files. Run scripts/setup.sh once after installing to fetch the PDF engine."
+}

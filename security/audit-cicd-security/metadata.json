@@ -1,0 +1,39 @@
+{
+  "name": "audit-cicd-security",
+  "repo": "wearedevpunks/skills",
+  "path": "skills/agnostic/security/audit-cicd-security/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/wearedevpunks/skills",
+  "dir_name": "audit-cicd-security",
+  "downloaded_at": "2026-10-18T03:27:08.124561Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, vulnerability, audit",
+    "score": 4,
+    "runner_up": "devops",
+    "runner_up_score": 3,
+    "signals": [
+      "security",
+      "auth",
+      "vulnerability",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wearedevpunks",
+  "source_url": "https://github.com/wearedevpunks/skills/blob/main/skills/agnostic/security/audit-cicd-security/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wearedevpunks/skills/blob/main/skills/agnostic/security/audit-cicd-security/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audit repository CI/CD pipelines for security risks when explicitly asked for pipeline review, fork/MR privilege flows, deploy/publish gates, cache or artifact poisoning, runner isolation, credential exposure, or supply-chain components; apply confirmed Critical/High fixes only after explicit user approval."
+}

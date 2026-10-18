@@ -1,0 +1,38 @@
+{
+  "name": "using-security-audit",
+  "repo": "xenodeve/xeno-skills",
+  "path": "skills/security-audit/using-security-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/xenodeve/xeno-skills",
+  "dir_name": "using-security-audit",
+  "downloaded_at": "2026-10-18T03:36:47.598630Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, vulnerability, audit",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "vulnerability",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "xenodeve",
+  "source_url": "https://github.com/xenodeve/xeno-skills/blob/main/skills/security-audit/using-security-audit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/xenodeve/xeno-skills/blob/main/skills/security-audit/using-security-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Pointer to Cloudflare's security-audit skill (cloudflare/security-audit-skill, MIT), which this library does not copy because upstream changes continuously. Use when asked for a security audit, a pen-test style review, \"find vulnerabilities in this codebase\", or a multi-phase vulnerability hunt with independently verified findings; it says whether the skill is already installed, how to install it safely, what it needs to run, and what to use instead when those needs are not met. Triggers include \"security audit\", \"pen test\", \"find vulnerabilities\", \"vulnerability harness\", \"audit this repo for security\"."
+}

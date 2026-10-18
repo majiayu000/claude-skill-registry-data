@@ -1,0 +1,38 @@
+{
+  "name": "nurse",
+  "repo": "whyzsm/tiny-agents",
+  "path": "skills/nurse/skill.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/whyzsm/tiny-agents",
+  "dir_name": "nurse",
+  "downloaded_at": "2026-10-18T03:32:07.150918Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, planning",
+    "score": 3,
+    "runner_up": "performance",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "planning"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "whyzsm",
+  "source_url": "https://github.com/whyzsm/tiny-agents/blob/main/skills/nurse/skill.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/whyzsm/tiny-agents/blob/main/skills/nurse/skill.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Clinical support system for nurses and frontline healthcare workers. Trigger whenever a nurse needs help with documentation, patient communication, care planning, handover notes, medication queries, incident reports, or navigating the professional and administrative burden of modern healthcare. Also triggers on phrases like \"write my handover\", \"help me document this\", \"explain this to the patient\", \"draft a care plan\", or any clinical scenario description."
+}

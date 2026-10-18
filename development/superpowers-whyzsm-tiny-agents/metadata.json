@@ -1,0 +1,39 @@
+{
+  "name": "superpowers",
+  "repo": "whyzsm/tiny-agents",
+  "path": "skills/superpowers/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/whyzsm/tiny-agents",
+  "dir_name": "superpowers-whyzsm-tiny-agents",
+  "downloaded_at": "2026-10-18T03:32:14.958779Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, software, debug",
+    "score": 4,
+    "runner_up": "workflow",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "software",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "whyzsm",
+  "source_url": "https://github.com/whyzsm/tiny-agents/blob/main/skills/superpowers/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/whyzsm/tiny-agents/blob/main/skills/superpowers/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Spec-first, TDD, subagent-driven software development workflow. Use when: (1) building any new feature or app \u2014 triggers brainstorm \u2192 plan \u2192 subagent execution loop, (2) debugging a bug or test failure \u2014 triggers systematic root-cause process, (3) user says \"let's build\", \"help me plan\", \"I want to add X\", or \"this is broken\", (4) completing a feature branch \u2014 triggers test verification + merge/PR options. NOT for: one-liner fixes (just edit), reading code, or non-code tasks. Requires exec tool and sessions_spawn."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "ai-model-web",
+  "repo": "whyzsm/tiny-agents",
+  "path": "skills/ai-model-web/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/whyzsm/tiny-agents",
+  "dir_name": "ai-model-web-whyzsm-tiny-agents",
+  "downloaded_at": "2026-10-18T03:32:18.294419Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=3, design=3",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 3,
+    "signals": [
+      "api",
+      "sdk",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "whyzsm",
+  "source_url": "https://github.com/whyzsm/tiny-agents/blob/main/skills/ai-model-web/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/whyzsm/tiny-agents/blob/main/skills/ai-model-web/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this skill when a browser/Web app (React, Vue, Angular, Next, Nuxt, static sites, SPAs, dashboards, AI chat UI) needs AI models via @cloudbase/js-sdk. Default routing for page/\u9875\u9762/Web/\u524d\u7aef/frontend/\u7f51\u9875/H5 AI \u2014 call directly from browser, do NOT propose a Node.js proxy. Covers generateText and streamText. Models via ai.createModel with groups cloudbase, hunyuan-exp, or custom-*. Model IDs (deepseek-v4-flash, deepseek-v3.2, hunyuan-2.0-instruct-20251111, glm-5, kimi-k2.6) go in the model field. MUST run two-step preflight before code \u2014 see body. Keywords: \u9875\u9762, Web, \u524d\u7aef, React, Vue, Next, Nuxt, SPA, AI chat UI, generateText, streamText, createModel, hunyuan-exp, Token Credits, TokenHub, Hunyuan, DeepSeek, GLM, Kimi, MiniMax. NOT for Node.js backend (use ai-model-nodejs), Mini Program (use ai-model-wechat), or image generation (Node SDK only)."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "codex-adapter",
+  "repo": "wrg32786/aigent-os",
+  "path": "skills/codex-adapter/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/wrg32786/aigent-os",
+  "dir_name": "codex-adapter",
+  "downloaded_at": "2026-10-18T03:34:19.922056Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wrg32786",
+  "source_url": "https://github.com/wrg32786/aigent-os/blob/master/skills/codex-adapter/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wrg32786/aigent-os/blob/master/skills/codex-adapter/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Route ONE bounded, mechanical task to the Codex CLI as a non-Claude executor, under the same review-before-merge gate as any other agent-produced diff. Use when the user explicitly asks to hand a task to Codex, or names OpenAI Codex / a non-Claude executor for a mechanical change (rename a symbol across files, add a config entry, apply a scripted find/replace). Not for open-ended or strategic work -- that stays with the operating Claude session."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "qwen38-skill-style",
+  "repo": "xenodeve/xeno-skills",
+  "path": "skills/qwen38/qwen38-skill-style/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/xenodeve/xeno-skills",
+  "dir_name": "qwen38-skill-style",
+  "downloaded_at": "2026-10-18T03:36:46.525366Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "xenodeve",
+  "source_url": "https://github.com/xenodeve/xeno-skills/blob/main/skills/qwen38/qwen38-skill-style/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/xenodeve/xeno-skills/blob/main/skills/qwen38/qwen38-skill-style/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "How to write a skill that Qwen3.8 (27B or Flash-Next) will actually follow. For the author, not the model. Nine rules with the run that produced each: enumerate the unnamed deliverables, a command and a pass condition per rule, a fixed done-report, scripts as files, no sentence that harms when followed literally, measured anchors, a stated boundary, one with/without pair before merge, and one shared report shape across the family."
+}

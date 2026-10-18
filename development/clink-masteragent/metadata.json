@@ -1,0 +1,38 @@
+{
+  "name": "clink-masteragent",
+  "repo": "xenodeve/xeno-skills",
+  "path": "skills/multi-agent/clink-masteragent/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/xenodeve/xeno-skills",
+  "dir_name": "clink-masteragent",
+  "downloaded_at": "2026-10-18T03:36:47.440890Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "xenodeve",
+  "source_url": "https://github.com/xenodeve/xeno-skills/blob/main/skills/multi-agent/clink-masteragent/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/xenodeve/xeno-skills/blob/main/skills/multi-agent/clink-masteragent/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "What a master agent owns and can never delegate, and how to pick the model for a delegation from measured scores instead of memory. Use before any clink delegation, and whenever choosing between models, efforts, or clients \u2014 including \"which model should review this\", \"is the cheap one good enough\", \"should I escalate the effort\". Carries the full per-axis score table for every reachable model+effort inline, generated from the structured source, so the choice is made against data rather than recollection. Pairs with clink-subagents (handing out work), clink-brainstorm (convening judgment), and clink-debug (hunting a bug)."
+}

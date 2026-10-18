@@ -1,0 +1,36 @@
+{
+  "name": "self-presentation",
+  "repo": "zzstoatzz/bot",
+  "path": "skills/self-presentation/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/zzstoatzz/bot",
+  "dir_name": "self-presentation",
+  "downloaded_at": "2026-10-18T03:58:21.316606Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-llm scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "",
+    "runner_up_score": 0,
+    "signals": [
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zzstoatzz",
+  "source_url": "https://github.com/zzstoatzz/bot/blob/main/skills/self-presentation/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zzstoatzz/bot/blob/main/skills/self-presentation/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Change how you look on bsky \u2014 avatar (profile picture) and banner (header image) on app.bsky.actor.profile/self, using a blob from generate_image. Load when you want to change your profile picture or header. Bio TEXT goes through write_bio, not this path."
+}

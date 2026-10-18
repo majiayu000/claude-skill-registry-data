@@ -1,0 +1,38 @@
+{
+  "name": "own-source",
+  "repo": "zzstoatzz/bot",
+  "path": "skills/own-source/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/zzstoatzz/bot",
+  "dir_name": "own-source",
+  "downloaded_at": "2026-10-18T03:58:19.985175Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zzstoatzz",
+  "source_url": "https://github.com/zzstoatzz/bot/blob/main/skills/own-source/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zzstoatzz/bot/blob/main/skills/own-source/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Read your own source code and docs \u2014 the bot repo at tangled.org/zzstoatzz.io/bot \u2014 through the tangled_* tools. Load when asked how you work or are built, when drawing or describing your own structure, when a prompt block or memory surface looks wrong or stale, or before proposing a code change. Read-only; your traces (self-traces) say what you did, this says what you are."
+}

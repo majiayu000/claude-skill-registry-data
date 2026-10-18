@@ -1,0 +1,36 @@
+{
+  "name": "flow-lenses",
+  "repo": "wearedevpunks/skills",
+  "path": "skills/agnostic/requirements/flow-lenses/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wearedevpunks/skills",
+  "dir_name": "flow-lenses",
+  "downloaded_at": "2026-10-18T03:27:05.546226Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category development scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "forensics",
+    "runner_up_score": 1,
+    "signals": [
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wearedevpunks",
+  "source_url": "https://github.com/wearedevpunks/skills/blob/main/skills/agnostic/requirements/flow-lenses/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wearedevpunks/skills/blob/main/skills/agnostic/requirements/flow-lenses/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Examine a bounded flow through the ten Flow Lenses and return candidate gaps. Use when the `requirements-grill` checkpoint records a response set, `create-architecture` step 3 scans closed decisions, or `brainstorm` checks its own shapes."
+}

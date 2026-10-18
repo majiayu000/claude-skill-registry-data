@@ -1,0 +1,38 @@
+{
+  "name": "agent-browser",
+  "repo": "wearedevpunks/skills",
+  "path": "skills/agnostic/frontend/agent-browser/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/wearedevpunks/skills",
+  "dir_name": "agent-browser",
+  "downloaded_at": "2026-10-18T03:27:02.711768Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, pdf, markdown",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "pdf",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wearedevpunks",
+  "source_url": "https://github.com/wearedevpunks/skills/blob/main/skills/agnostic/frontend/agent-browser/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wearedevpunks/skills/blob/main/skills/agnostic/frontend/agent-browser/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Automate web interactions with agent-browser using Lightpanda by default. Use for navigation, data extraction, form filling, and browser behavior checks; use an explicit Chrome session when rendering or Chrome-only capabilities are required."
+}

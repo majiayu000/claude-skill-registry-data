@@ -1,0 +1,38 @@
+{
+  "name": "mcp-catalog",
+  "repo": "wellwelwel/lagune",
+  "path": ".claude/skills/mcp-catalog/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/wellwelwel/lagune",
+  "dir_name": "mcp-catalog",
+  "downloaded_at": "2026-10-18T03:28:12.807763Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, integration, playwright",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "integration",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wellwelwel",
+  "source_url": "https://github.com/wellwelwel/lagune/blob/main/.claude/skills/mcp-catalog/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wellwelwel/lagune/blob/main/.claude/skills/mcp-catalog/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Find, review, and add MCP servers to the reviewed catalog that lagune.ai serves to Lagune Code. Use when asked to look for servers worth adding, to add a specific server, or to update or drop an entry."
+}

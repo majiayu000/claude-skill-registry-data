@@ -1,0 +1,37 @@
+{
+  "name": "cursor-do",
+  "repo": "whyzsm/tiny-agents",
+  "path": "skills/cursor-do/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/whyzsm/tiny-agents",
+  "dir_name": "cursor-do",
+  "downloaded_at": "2026-10-18T03:32:10.483336Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "whyzsm",
+  "source_url": "https://github.com/whyzsm/tiny-agents/blob/main/skills/cursor-do/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/whyzsm/tiny-agents/blob/main/skills/cursor-do/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Delegate write task to Cursor Composer in isolated worktree, Lead-review + cherry-pick. Triggers: cursor:do, delegate to cursor, composer write, refactor with cursor. Skip for: planning, review-only, multi-task."
+}

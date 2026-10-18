@@ -1,0 +1,36 @@
+{
+  "name": "comms-summarize",
+  "repo": "wrg32786/aigent-os",
+  "path": "skills/comms-summarize/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/wrg32786/aigent-os",
+  "dir_name": "comms-summarize",
+  "downloaded_at": "2026-10-18T03:34:22.209467Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wrg32786",
+  "source_url": "https://github.com/wrg32786/aigent-os/blob/master/skills/comms-summarize/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wrg32786/aigent-os/blob/master/skills/comms-summarize/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Echo's comms polling skill. Read an inbox, channel, or message thread and return a structured unread summary \u2014 sender, topic, action required, and urgency. Read-only."
+}

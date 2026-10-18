@@ -1,0 +1,37 @@
+{
+  "name": "Envelope",
+  "repo": "wrg32786/aigent-os",
+  "path": "skills/envelope/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/wrg32786/aigent-os",
+  "dir_name": "envelope",
+  "downloaded_at": "2026-10-18T03:34:13.684912Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, refactor",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wrg32786",
+  "source_url": "https://github.com/wrg32786/aigent-os/blob/master/skills/envelope/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wrg32786/aigent-os/blob/master/skills/envelope/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Classify any incoming directive as Ship / Ask one focused question / Propose first. Forces a sharp decision instead of a multi-option survey to the principal. The default failure mode for agents is treating ship-work as ask-work (over-surveying) or treating propose-work as ship-work (rushing irreversible changes). This skill prevents both."
+}
