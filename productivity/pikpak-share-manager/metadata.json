@@ -1,0 +1,34 @@
+{
+  "name": "pikpak-share-manager",
+  "description": "Requires Python 3, PikPak CLI, network and an authorized PikPak account. Reads share metadata and writes a local expiry/access audit; does not create, revoke or delete shares. Optional signup referral disclosed upstream. Experimental; live share-list behavior unverified.",
+  "repo": "pipiguai87-alt/pikpak-skills",
+  "path": "skills/pikpak-share-manager/SKILL.md",
+  "github_branch": "main",
+  "github_commit_sha": "168aebf61d65b25c44029525e891f56b84d8982d",
+  "assets_verified_at": "2026-10-19T17:36:31.963274Z",
+  "category": "productivity",
+  "tags": [
+    "pikpak",
+    "cloud-storage",
+    "experimental"
+  ],
+  "stars": 0,
+  "source": "Community Skills",
+  "dir_name": "pikpak-share-manager",
+  "archive_mode": "directory",
+  "bundled_files": [
+    "references/upstream-design.md",
+    "scripts/share_audit.py"
+  ],
+  "bundled_file_blobs": {
+    "references/upstream-design.md": "3413dc7d23b628259a4718ef4a82c4f7e08bf24b",
+    "scripts/share_audit.py": "9868d4a60fdde7aeb78a05bddf48f312e4832d82"
+  },
+  "author": "pipiguai87-alt",
+  "source_url": "https://github.com/pipiguai87-alt/pikpak-skills/blob/main/skills/pikpak-share-manager/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright (c) 2026 pipiguai87-alt",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible"
+}

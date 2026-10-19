@@ -1,0 +1,34 @@
+{
+  "name": "pikpak-batch-backup",
+  "description": "Requires Python 3, PikPak CLI, network and an authorized PikPak account. Downloads an authorized folder to local disk and writes a SHA-256 manifest; does not delete cloud content or resume interrupted downloads. Optional signup referral disclosed upstream. Experimental; live backup unverified.",
+  "repo": "pipiguai87-alt/pikpak-skills",
+  "path": "skills/pikpak-batch-backup/SKILL.md",
+  "github_branch": "main",
+  "github_commit_sha": "168aebf61d65b25c44029525e891f56b84d8982d",
+  "assets_verified_at": "2026-10-19T17:36:31.808656Z",
+  "category": "productivity",
+  "tags": [
+    "pikpak",
+    "cloud-storage",
+    "experimental"
+  ],
+  "stars": 0,
+  "source": "Community Skills",
+  "dir_name": "pikpak-batch-backup",
+  "archive_mode": "directory",
+  "bundled_files": [
+    "references/upstream-design.md",
+    "scripts/batch_backup.py"
+  ],
+  "bundled_file_blobs": {
+    "references/upstream-design.md": "d3bee094947596aed2270d9529222b5259c4399c",
+    "scripts/batch_backup.py": "884763723156934bbb0acd5d36a78f23e33a05d1"
+  },
+  "author": "pipiguai87-alt",
+  "source_url": "https://github.com/pipiguai87-alt/pikpak-skills/blob/main/skills/pikpak-batch-backup/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright (c) 2026 pipiguai87-alt",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible"
+}

@@ -1,0 +1,34 @@
+{
+  "name": "pikpak-task-guardian",
+  "description": "Requires Python 3 with POSIX flock (macOS/Linux), PikPak CLI, network and an authorized account. Reads task status and persists local state; notifications and cloud task resubmission require separate opt-in. Optional signup referral disclosed upstream. Experimental; live operation unverified.",
+  "repo": "pipiguai87-alt/pikpak-skills",
+  "path": "skills/pikpak-task-guardian/SKILL.md",
+  "github_branch": "main",
+  "github_commit_sha": "168aebf61d65b25c44029525e891f56b84d8982d",
+  "assets_verified_at": "2026-10-19T17:36:31.824268Z",
+  "category": "productivity",
+  "tags": [
+    "pikpak",
+    "cloud-storage",
+    "experimental"
+  ],
+  "stars": 0,
+  "source": "Community Skills",
+  "dir_name": "pikpak-task-guardian",
+  "archive_mode": "directory",
+  "bundled_files": [
+    "references/upstream-design.md",
+    "scripts/task_guardian.py"
+  ],
+  "bundled_file_blobs": {
+    "references/upstream-design.md": "99ba5368d353ab4f7fef04b7d82cd6a666c4fa56",
+    "scripts/task_guardian.py": "11590cfda1c6fcad108396fba3fda6e4a8fdb88b"
+  },
+  "author": "pipiguai87-alt",
+  "source_url": "https://github.com/pipiguai87-alt/pikpak-skills/blob/main/skills/pikpak-task-guardian/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright (c) 2026 pipiguai87-alt",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible"
+}

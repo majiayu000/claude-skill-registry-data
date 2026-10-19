@@ -1,0 +1,34 @@
+{
+  "name": "pikpak-telegram-bot",
+  "description": "Requires Python 3 with POSIX flock (macOS/Linux), PikPak CLI/account, a Telegram bot token and network. Sends authorized chat requests to Telegram/PikPak, creates cloud tasks and persists local receipts. Deployment/sends need consent; optional signup referral disclosed upstream. Experimental; live bot unverified.",
+  "repo": "pipiguai87-alt/pikpak-skills",
+  "path": "skills/pikpak-telegram-bot/SKILL.md",
+  "github_branch": "main",
+  "github_commit_sha": "168aebf61d65b25c44029525e891f56b84d8982d",
+  "assets_verified_at": "2026-10-19T17:36:31.872835Z",
+  "category": "productivity",
+  "tags": [
+    "pikpak",
+    "cloud-storage",
+    "experimental"
+  ],
+  "stars": 0,
+  "source": "Community Skills",
+  "dir_name": "pikpak-telegram-bot",
+  "archive_mode": "directory",
+  "bundled_files": [
+    "references/upstream-design.md",
+    "scripts/tg_bot.py"
+  ],
+  "bundled_file_blobs": {
+    "references/upstream-design.md": "822ab215d696318fab33643e1ae27f08a30d1323",
+    "scripts/tg_bot.py": "f17ac4f6275f0e743a85c382a5e5e639ddb74c5e"
+  },
+  "author": "pipiguai87-alt",
+  "source_url": "https://github.com/pipiguai87-alt/pikpak-skills/blob/main/skills/pikpak-telegram-bot/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright (c) 2026 pipiguai87-alt",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible"
+}
