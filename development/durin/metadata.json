@@ -1,0 +1,37 @@
+{
+  "name": "durin",
+  "repo": "LarryHsiao/Skadi",
+  "path": "skills/durin/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/LarryHsiao/Skadi",
+  "dir_name": "durin",
+  "downloaded_at": "2026-10-19T03:36:17.591667Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LarryHsiao",
+  "source_url": "https://github.com/LarryHsiao/Skadi/blob/master/skills/durin/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LarryHsiao/Skadi/blob/master/skills/durin/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when the user runs /durin [--repo <path>] [--scope mine|all] [--dry-run] [--auto] [--confirm]. Sweeps every open PR/MR in a repo's forge that bears unaddressed comments, dispatches /narvi per URL with --no-confirm, and aggregates one report. --auto skips the outer confirm gate and forges the manifest unattended. The forge is auto-detected from the repo's origin remote (github | gitlab). One repo per invocation \u2014 cd into the project tree first, or name it with --repo <path>."
+}

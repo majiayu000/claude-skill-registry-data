@@ -1,0 +1,37 @@
+{
+  "name": "add-translation",
+  "repo": "ManasMadan/director-editor",
+  "path": ".claude/skills/add-translation/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/ManasMadan/director-editor",
+  "dir_name": "add-translation-manasmadan-director-editor",
+  "downloaded_at": "2026-10-19T03:46:22.084489Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, language=2",
+    "score": 2,
+    "runner_up": "language",
+    "runner_up_score": 2,
+    "signals": [
+      "ui",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ManasMadan",
+  "source_url": "https://github.com/ManasMadan/director-editor/blob/master/.claude/skills/add-translation/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ManasMadan/director-editor/blob/master/.claude/skills/add-translation/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Add or change user-facing text (a UI string, email or error message), or add a new language. Use whenever a change shows new words to a user, or the user asks for another locale."
+}

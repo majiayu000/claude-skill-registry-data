@@ -1,0 +1,40 @@
+{
+  "name": "unity-tests-without-asmdef",
+  "repo": "Rigaro/Agent-Skills",
+  "path": "skills/unity-tests-without-asmdef/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Rigaro/Agent-Skills",
+  "dir_name": "unity-tests-without-asmdef",
+  "downloaded_at": "2026-10-19T04:16:45.404932Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, framework, compile, debug, refactor",
+    "score": 5,
+    "runner_up": "gaming",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "compile",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Rigaro",
+  "source_url": "https://github.com/Rigaro/Agent-Skills/blob/main/skills/unity-tests-without-asmdef/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Rigaro/Agent-Skills/blob/main/skills/unity-tests-without-asmdef/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Add NUnit EditMode tests to a Unity project whose first-party code has no assembly definitions (everything compiles into Assembly-CSharp) - where the tests live, what compiles, how to test pure logic, static guards and MonoBehaviours outside Play Mode, how to run them headless with a JUnit report, and the PlayMode fallback. Use when a legacy Unity project needs automated tests without an asmdef refactor."
+}

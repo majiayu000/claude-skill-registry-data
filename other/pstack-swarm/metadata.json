@@ -1,0 +1,37 @@
+{
+  "name": "pstack-swarm",
+  "repo": "MatiasFrangolini/pstack-portable",
+  "path": "skills/pstack-swarm/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MatiasFrangolini/pstack-portable",
+  "dir_name": "pstack-swarm",
+  "downloaded_at": "2026-10-19T03:48:14.678844Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, integration=2",
+    "score": 2,
+    "runner_up": "integration",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MatiasFrangolini",
+  "source_url": "https://github.com/MatiasFrangolini/pstack-portable/blob/main/skills/pstack-swarm/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MatiasFrangolini/pstack-portable/blob/main/skills/pstack-swarm/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Coordinate bounded parallel coverage over independent slices using the active chat model. Use only when the user explicitly requests swarm or pstack-swarm."
+}

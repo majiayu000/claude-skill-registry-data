@@ -1,0 +1,39 @@
+{
+  "name": "deep-research-method",
+  "repo": "Ottili-ONE/skills",
+  "path": "skills/agentic-data/deep-research-method/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/Ottili-ONE/skills",
+  "dir_name": "deep-research-method",
+  "downloaded_at": "2026-10-19T04:06:09.849077Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, copy, blog, article",
+    "score": 4,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "writing",
+      "copy",
+      "blog",
+      "article"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Ottili-ONE",
+  "source_url": "https://github.com/Ottili-ONE/skills/blob/main/skills/agentic-data/deep-research-method/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Ottili-ONE/skills/blob/main/skills/agentic-data/deep-research-method/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run evidence-backed research for Ottili agents: score sources 0-10 (authority/recency/corroboration, keep >=6), cite every claim with URL + retrieval date + pinned version, resolve contradictions by quality weight, and state confidence high/medium/low. Use when an agent must answer a question from the web, write a research brief, audit a source, or decide which of two conflicting facts to trust. Not for reading a single known-good document."
+}

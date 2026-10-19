@@ -1,0 +1,40 @@
+{
+  "name": "security-audit",
+  "repo": "WST2002/claude-code-skills",
+  "path": "skills/security-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/WST2002/claude-code-skills",
+  "dir_name": "security-audit-wst2002-claude-code-skills",
+  "downloaded_at": "2026-10-19T04:50:29.888428Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for security: security, auth, crypto, audit, owasp",
+    "score": 5,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "security",
+      "auth",
+      "crypto",
+      "audit",
+      "owasp"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "WST2002",
+  "source_url": "https://github.com/WST2002/claude-code-skills/blob/main/skills/security-audit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/WST2002/claude-code-skills/blob/main/skills/security-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when asked to review code for security, find vulnerabilities, run an OWASP check, audit before a release, or answer \"is this secure?\" \u2014 any language or framework, whole repo or a single feature."
+}

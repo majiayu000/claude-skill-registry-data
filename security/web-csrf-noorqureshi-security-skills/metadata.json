@@ -1,0 +1,38 @@
+{
+  "name": "web-csrf",
+  "repo": "NoorQureshi/security-skills",
+  "path": "skills/web/web-csrf/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/NoorQureshi/security-skills",
+  "dir_name": "web-csrf-noorqureshi-security-skills",
+  "downloaded_at": "2026-10-19T04:02:09.559396Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: auth, owasp, pentest",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "auth",
+      "owasp",
+      "pentest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NoorQureshi",
+  "source_url": "https://github.com/NoorQureshi/security-skills/blob/main/skills/web/web-csrf/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NoorQureshi/security-skills/blob/main/skills/web/web-csrf/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Cross-Site Request Forgery \u2014 force a victim's browser to perform state-changing actions. Load on state-changing requests (POST/PUT/DELETE) that rely only on cookies, missing/weak CSRF tokens, `SameSite=None`, or forms/JSON without anti-CSRF. Signals: cookie-only auth, no token, token not validated."
+}

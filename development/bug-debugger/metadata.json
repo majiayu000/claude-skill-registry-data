@@ -1,0 +1,38 @@
+{
+  "name": "bug-debugger",
+  "repo": "WST2002/claude-code-skills",
+  "path": "skills/bug-debugger/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/WST2002/claude-code-skills",
+  "dir_name": "bug-debugger",
+  "downloaded_at": "2026-10-19T04:50:27.105254Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, debug",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "framework",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "WST2002",
+  "source_url": "https://github.com/WST2002/claude-code-skills/blob/main/skills/bug-debugger/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/WST2002/claude-code-skills/blob/main/skills/bug-debugger/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when something is broken, a test fails, an error or stack trace appears, behavior is wrong or intermittent, a regression appeared after a change, or a fix attempt did not work \u2014 any language or framework."
+}

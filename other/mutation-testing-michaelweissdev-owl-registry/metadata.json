@@ -1,0 +1,37 @@
+{
+  "name": "mutation-testing",
+  "repo": "MichaelWeissDEV/owl-registry",
+  "path": "skills/mutation-testing/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MichaelWeissDEV/owl-registry",
+  "dir_name": "mutation-testing-michaelweissdev-owl-registry",
+  "downloaded_at": "2026-10-19T03:51:56.498298Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MichaelWeissDEV",
+  "source_url": "https://github.com/MichaelWeissDEV/owl-registry/blob/main/skills/mutation-testing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MichaelWeissDEV/owl-registry/blob/main/skills/mutation-testing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Measure and improve test-suite strength with mutation testing: pick a tool (mutmut or cosmic-ray for Python, cargo-mutants for Rust, Stryker for JS/TS, PIT for Java), scope runs to changed code, interpret killed/survived/timeout/no-coverage mutants, recognize equivalent mutants, write the missing assertions, and set sensible score gates in CI. Use when line coverage is high but you doubt the assertions, when reviewing a test suite's quality for critical logic, or when adding a quality gate for new code. Do NOT use for writing first tests (unit-testing, test-driven-development), exploring input space (property-based-testing, fuzz-testing), or whole-repo runs on slow suites without scoping."
+}

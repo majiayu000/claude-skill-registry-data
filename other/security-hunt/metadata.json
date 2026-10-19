@@ -1,0 +1,38 @@
+{
+  "name": "security-hunt",
+  "repo": "M0st8fa/master-bughunter",
+  "path": "skills/security-hunt/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/M0st8fa/master-bughunter",
+  "dir_name": "security-hunt",
+  "downloaded_at": "2026-10-19T03:43:58.710341Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: orchestration=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "orchestration",
+      "orchestrator",
+      "coordination"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "M0st8fa",
+  "source_url": "https://github.com/M0st8fa/master-bughunter/blob/main/skills/security-hunt/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/M0st8fa/master-bughunter/blob/main/skills/security-hunt/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Orchestration entry point for the cybersecurity hunting ecosystem. Understands a security objective, verifies authorization and scope, routes to the right specialist skill(s), coordinates multi-stage workflows, tracks findings and evidence, and produces consistent deliverables. Use whenever the user starts any security task without naming a specific skill \u2014 \"hunt this target\", \"assess this app\", \"where do I start\", \"help me test X\", \"investigate this alert\" \u2014 or when a task spans several specialist skills and needs coordination."
+}

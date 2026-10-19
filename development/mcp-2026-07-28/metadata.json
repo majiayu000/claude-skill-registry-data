@@ -1,0 +1,38 @@
+{
+  "name": "mcp-2026-07-28",
+  "repo": "Ottili-ONE/skills",
+  "path": "skills/agentic-data/mcp-2026-07-28/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Ottili-ONE/skills",
+  "dir_name": "mcp-2026-07-28",
+  "downloaded_at": "2026-10-19T04:06:10.332000Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Ottili-ONE",
+  "source_url": "https://github.com/Ottili-ONE/skills/blob/main/skills/agentic-data/mcp-2026-07-28/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Ottili-ONE/skills/blob/main/skills/agentic-data/mcp-2026-07-28/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Build and consume stateless MCP servers and clients on the 2026-07-28 revision: server/discover, per-request metadata via _meta, tasks extension, OAuth 2.1 with PKCE, backward-compat negotiation down to 2025-11-25 and 2025-06-18. Use when an agent must scaffold an MCP server or client, debug a protocol handshake, map error codes to actions, or verify that a deployment is stateless and version-pinned. Not for general API design or non-MCP integrations."
+}

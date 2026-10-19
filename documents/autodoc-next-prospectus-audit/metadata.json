@@ -1,0 +1,38 @@
+{
+  "name": "autodoc-next-prospectus-audit",
+  "repo": "PaodingAI/skills",
+  "path": "autodoc-next-prospectus-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/PaodingAI/skills",
+  "dir_name": "autodoc-next-prospectus-audit",
+  "downloaded_at": "2026-10-19T04:08:06.209219Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, pdf, docx",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "pdf",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "PaodingAI",
+  "source_url": "https://github.com/PaodingAI/skills/blob/main/autodoc-next-prospectus-audit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/PaodingAI/skills/blob/main/autodoc-next-prospectus-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audit one local prospectus PDF, DOC, or DOCX through PDRouter and download the annotated document with AutoDoc NEXT2.0."
+}

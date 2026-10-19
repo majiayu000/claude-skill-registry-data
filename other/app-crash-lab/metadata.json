@@ -1,0 +1,37 @@
+{
+  "name": "app-crash-lab",
+  "repo": "aichance/business-ai-recipes",
+  "path": ".agents/skills/app-crash-lab/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aichance/business-ai-recipes",
+  "dir_name": "app-crash-lab",
+  "downloaded_at": "2026-10-19T05:14:33.701853Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: security=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aichance",
+  "source_url": "https://github.com/aichance/business-ai-recipes/blob/main/.agents/skills/app-crash-lab/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aichance/business-ai-recipes/blob/main/.agents/skills/app-crash-lab/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Test a local web app's saved state and save feedback using its existing Playwright suite or App Crash Lab contracts. Inspect the app and prepare a focused regression for the requested boundary; not a general UI audit."
+}

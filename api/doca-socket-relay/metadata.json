@@ -1,0 +1,38 @@
+{
+  "name": "doca-socket-relay",
+  "repo": "NVIDIA/skills",
+  "path": "skills/doca-socket-relay/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/NVIDIA/skills",
+  "dir_name": "doca-socket-relay",
+  "downloaded_at": "2026-10-19T03:56:32.206221Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, sdk, endpoint",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NVIDIA",
+  "source_url": "https://github.com/NVIDIA/skills/blob/main/skills/doca-socket-relay/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NVIDIA/skills/blob/main/skills/doca-socket-relay/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this skill when the operator is driving the DOCA Socket Relay to bridge a socket-oriented host application onto a BlueField DPU peer without rewriting it \u2014 picking the deployment shape (in-process, sidecar, or BlueField service container), configuring the host-side socket and the DPU-side forwarding endpoint, walking the bind \u2192 connect \u2192 round-trip \u2192 admit-fleet smoke, or diagnosing a stuck/silent relay. Trigger even when the user does not explicitly mention \"DOCA Socket Relay\" \u2014 typical implicit phrasings include \"move my socket app onto the BlueField without rewriting it\", \"host app gets ECONNREFUSED on the relay\", \"relay accepts the connection but bytes never arrive on the DPU side\", \"first round-trip works, the rest hang\", \"bridge an AF_UNIX (UDS) socket to a DPU peer over Comch\", or \"I want a sidecar that forwards my socket to the BlueField\". Refuse and route elsewhere for the comch programming API, line-rate raw packet I/O via doca-eth, and DOCA install/bring-up \u2014 those belong to other skills."
+}

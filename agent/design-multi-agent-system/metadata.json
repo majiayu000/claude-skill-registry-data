@@ -1,0 +1,37 @@
+{
+  "name": "design-multi-agent-system",
+  "repo": "X-McKay/playbooks",
+  "path": "skills/design-multi-agent-system/SKILL.md",
+  "github_branch": "main",
+  "category": "agent",
+  "source": "github.com/X-McKay/playbooks",
+  "dir_name": "design-multi-agent-system",
+  "downloaded_at": "2026-10-19T04:54:12.115071Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "agent",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for agent: agent, agent-role",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "agent",
+      "agent-role"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "X-McKay",
+  "source_url": "https://github.com/X-McKay/playbooks/blob/main/skills/design-multi-agent-system/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/X-McKay/playbooks/blob/main/skills/design-multi-agent-system/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Design, justify, scaffold, or refactor a governed multi-agent system. Use when choosing an architecture, defining a System Spec, composing existing Agent Specs, comparing a multi-agent design with a simpler baseline, or deciding whether static or dynamic membership is appropriate."
+}

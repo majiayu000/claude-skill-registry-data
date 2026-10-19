@@ -1,0 +1,36 @@
+{
+  "name": "rotate",
+  "repo": "Vinix24/vnx-orchestration",
+  "path": "packages/claude-code-toolkit/context-rotation/skills/rotate/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Vinix24/vnx-orchestration",
+  "dir_name": "rotate",
+  "downloaded_at": "2026-10-19T04:48:56.792550Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-llm scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Vinix24",
+  "source_url": "https://github.com/Vinix24/vnx-orchestration/blob/main/packages/claude-code-toolkit/context-rotation/skills/rotate/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Vinix24/vnx-orchestration/blob/main/packages/claude-code-toolkit/context-rotation/skills/rotate/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Saves this session's state as a handover so a fresh session can continue after /clear, or picks up an earlier handover. Use when the context-rotation guard asks for a handover, when the user types /context-rotation:rotate, or when the user wants to continue from the work of an earlier session."
+}

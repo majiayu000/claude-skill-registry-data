@@ -1,0 +1,37 @@
+{
+  "name": "aws-iam-input-output-contract",
+  "repo": "Manoj-11-Dahal/try-Skills",
+  "path": "skills/cybersecurity/security-privacy/aws-iam-input-output-contract/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Manoj-11-Dahal/try-Skills",
+  "dir_name": "aws-iam-input-output-contract",
+  "downloaded_at": "2026-10-19T03:46:32.150611Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Manoj-11-Dahal",
+  "source_url": "https://github.com/Manoj-11-Dahal/try-Skills/blob/main/skills/cybersecurity/security-privacy/aws-iam-input-output-contract/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Manoj-11-Dahal/try-Skills/blob/main/skills/cybersecurity/security-privacy/aws-iam-input-output-contract/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when the accepted inputs or produced outputs for AWS IAM access review need a checkable boundary. Produce an input/output contract for AWS IAM access review with types, required fields, exclusions, and representative approved fixtures. Success means the contract names its source and version, boundary cases are visible, and no private or unapproved payload is needed to explain the result. The review is bounded to principal identity, action/resource scope, trust relationship, session boundary, and policy provenance. Use only authorized local evidence, version-matched authoritative references, and synthetic or approved fixtures. Do not install tools, expose credentials, change live systems, publish, contact people, or make irreversible decisions without explicit approval; stop when authority or recovery is unclear."
+}

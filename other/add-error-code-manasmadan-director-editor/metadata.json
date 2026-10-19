@@ -1,0 +1,37 @@
+{
+  "name": "add-error-code",
+  "repo": "ManasMadan/director-editor",
+  "path": ".claude/skills/add-error-code/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/ManasMadan/director-editor",
+  "dir_name": "add-error-code-manasmadan-director-editor",
+  "downloaded_at": "2026-10-19T03:46:21.802028Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ManasMadan",
+  "source_url": "https://github.com/ManasMadan/director-editor/blob/master/.claude/skills/add-error-code/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ManasMadan/director-editor/blob/master/.claude/skills/add-error-code/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Add an error code the API (or the AI service) can return, with its HTTP status and its message in every language. Use when a new expected failure needs its own code, rather than a generic one."
+}

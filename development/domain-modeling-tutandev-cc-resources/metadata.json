@@ -1,0 +1,38 @@
+{
+  "name": "domain-modeling",
+  "repo": "TutanDev/cc-resources",
+  "path": "plugins/dmf/skills/domain-modeling/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/TutanDev/cc-resources",
+  "dir_name": "domain-modeling-tutandev-cc-resources",
+  "downloaded_at": "2026-10-19T04:42:56.062835Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, refactor",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "TutanDev",
+  "source_url": "https://github.com/TutanDev/cc-resources/blob/main/plugins/dmf/skills/domain-modeling/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/TutanDev/cc-resources/blob/main/plugins/dmf/skills/domain-modeling/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Model domains with algebraic types (C# by default, F# on request) following \"Domain Modeling Made Functional\" methodology. Use this skill whenever the task involves defining domain types, modeling entities, value objects, aggregates, or workflows as types. Trigger on: \"model this domain\", \"define types for\", \"make illegal states unrepresentable\", \"domain model\", \"bounded context types\", \"constrained type\", \"smart constructor\", \"algebraic data type\", \"discriminated union for domain\", \"value object\", \"entity\", \"aggregate\". Also trigger when reviewing or refactoring domain types for correctness, or when the user provides domain requirements that need to be captured as types."
+}

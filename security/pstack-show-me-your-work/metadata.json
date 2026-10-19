@@ -1,0 +1,37 @@
+{
+  "name": "pstack-show-me-your-work",
+  "repo": "MatiasFrangolini/pstack-portable",
+  "path": "skills/pstack-show-me-your-work/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/MatiasFrangolini/pstack-portable",
+  "dir_name": "pstack-show-me-your-work",
+  "downloaded_at": "2026-10-19T03:48:16.536464Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: auth, audit",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MatiasFrangolini",
+  "source_url": "https://github.com/MatiasFrangolini/pstack-portable/blob/main/skills/pstack-show-me-your-work/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MatiasFrangolini/pstack-portable/blob/main/skills/pstack-show-me-your-work/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Keep a concise, append-only decision and evidence trail for long or multi-phase work. Use when the user needs to audit choices, pivots, verification, or a handoff later."
+}

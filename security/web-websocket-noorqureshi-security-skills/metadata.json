@@ -1,0 +1,38 @@
+{
+  "name": "web-websocket",
+  "repo": "NoorQureshi/security-skills",
+  "path": "skills/web/web-websocket/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/NoorQureshi/security-skills",
+  "dir_name": "web-websocket-noorqureshi-security-skills",
+  "downloaded_at": "2026-10-19T04:02:12.733017Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: auth, owasp, pentest",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "auth",
+      "owasp",
+      "pentest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NoorQureshi",
+  "source_url": "https://github.com/NoorQureshi/security-skills/blob/main/skills/web/web-websocket/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NoorQureshi/security-skills/blob/main/skills/web/web-websocket/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Attack WebSocket endpoints \u2014 CSWSH (cross-site hijacking), message tampering, and auth gaps. Load on ws:// or wss:// connections, Socket.IO, real-time chat/notifications/trading, or \"websocket\". Signals: Upgrade: websocket, ws handshake, JSON messages over a socket, token in the handshake."
+}

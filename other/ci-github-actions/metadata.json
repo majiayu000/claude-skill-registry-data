@@ -1,0 +1,38 @@
+{
+  "name": "ci-github-actions",
+  "repo": "MichaelWeissDEV/owl-registry",
+  "path": "skills/ci-github-actions/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MichaelWeissDEV/owl-registry",
+  "dir_name": "ci-github-actions",
+  "downloaded_at": "2026-10-19T03:51:59.343063Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "devops",
+      "ci",
+      "cd"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MichaelWeissDEV",
+  "source_url": "https://github.com/MichaelWeissDEV/owl-registry/blob/main/skills/ci-github-actions/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MichaelWeissDEV/owl-registry/blob/main/skills/ci-github-actions/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Design, harden, and optimize automated CI/CD workflows using GitHub Actions. Use when writing workflow YAML files, configuring matrix builds, implementing dependency caching, locking workflow permissions to least privilege, authenticating cloud providers via OIDC, or preventing pull_request_target security vulnerabilities."
+}

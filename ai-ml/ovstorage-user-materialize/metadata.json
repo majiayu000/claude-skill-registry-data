@@ -1,0 +1,38 @@
+{
+  "name": "ovstorage-user-materialize",
+  "repo": "NVIDIA-Omniverse/ovstorage",
+  "path": "ovstorage/skills/ovstorage-user-materialize/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/NVIDIA-Omniverse/ovstorage",
+  "dir_name": "ovstorage-user-materialize",
+  "downloaded_at": "2026-10-19T03:55:42.573656Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ml, training",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "ml",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "NVIDIA-Omniverse",
+  "source_url": "https://github.com/NVIDIA-Omniverse/ovstorage/blob/main/ovstorage/skills/ovstorage-user-materialize/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NVIDIA-Omniverse/ovstorage/blob/main/ovstorage/skills/ovstorage-user-materialize/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when an object is large, needs random access, or must be handed to a tool as a stable local path."
+}

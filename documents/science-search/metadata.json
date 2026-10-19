@@ -1,0 +1,38 @@
+{
+  "name": "science-search",
+  "repo": "MaximeRivest/sciencemadereadable",
+  "path": "app/web/agents/science-search/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/MaximeRivest/sciencemadereadable",
+  "dir_name": "science-search",
+  "downloaded_at": "2026-10-19T03:49:29.487731Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word, markdown",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MaximeRivest",
+  "source_url": "https://github.com/MaximeRivest/sciencemadereadable/blob/main/app/web/agents/science-search/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MaximeRivest/sciencemadereadable/blob/main/app/web/agents/science-search/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Search ~200 million scientific papers (OpenAlex titles and abstracts) by meaning or by exact words, look papers up by DOI / OpenAlex id / PMCID, find similar papers and walk citations, through the free ScienceMadeReadable search API (no key). Use when a task needs scientific literature - finding studies or evidence on a question, checking what research says about a claim, a literature review, citing papers, resolving a DOI to its title, authors and abstract, building a reading list, or writing code that calls this API."
+}

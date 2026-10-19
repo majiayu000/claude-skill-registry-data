@@ -1,0 +1,38 @@
+{
+  "name": "linux-seccomp-profile-review",
+  "repo": "Manoj-11-Dahal/try-Skills",
+  "path": "skills/cybersecurity/security-privacy/linux-seccomp-profile-review/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/Manoj-11-Dahal/try-Skills",
+  "dir_name": "linux-seccomp-profile-review",
+  "downloaded_at": "2026-10-19T03:46:31.503004Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Manoj-11-Dahal",
+  "source_url": "https://github.com/Manoj-11-Dahal/try-Skills/blob/main/skills/cybersecurity/security-privacy/linux-seccomp-profile-review/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Manoj-11-Dahal/try-Skills/blob/main/skills/cybersecurity/security-privacy/linux-seccomp-profile-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when a task involves reviewing a seccomp policy against an application's required system calls to define the target, lifecycle stage, controlling artifact, authoritative evidence, version or operating conditions, sensitivity, and approval boundary before applying the method. Separate observed facts from assumptions and model output. Verify the result with appropriate independent checks, preserve provenance, and report uncertainty and limitations. Do not perform production, financial, device-control, deployment, or external-write actions unless explicitly authorized."
+}

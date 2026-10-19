@@ -1,0 +1,39 @@
+{
+  "name": "web-security-testing",
+  "repo": "MichaelWeissDEV/owl-registry",
+  "path": "skills/web-security-testing/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/MichaelWeissDEV/owl-registry",
+  "dir_name": "web-security-testing-michaelweissdev-owl-registry",
+  "downloaded_at": "2026-10-19T03:52:03.952265Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, vulnerability, owasp",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "security",
+      "auth",
+      "vulnerability",
+      "owasp"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MichaelWeissDEV",
+  "source_url": "https://github.com/MichaelWeissDEV/owl-registry/blob/main/skills/web-security-testing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MichaelWeissDEV/owl-registry/blob/main/skills/web-security-testing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Plan and run authorized, defensive security testing of web applications you own or have written permission to test (localhost, a dev/staging environment, or an explicitly scoped target), organized by the OWASP Web Security Testing Guide: scoping and rules of engagement, passive reconnaissance, security headers and cookies, authentication, session, authorization (IDOR), input handling, client-side, and API checks, with evidence-based reporting and remediation. Use when asked to security-test your own web app, verify fixes, review a scan result, or write a test plan. Refuses unauthorized targets and does not provide exploit payload collections. Do not use for source-code review (security-code-review), writing secure code (secure-coding), threat modeling (threat-modeling), or browser bug hunting (browser-debugging)."
+}

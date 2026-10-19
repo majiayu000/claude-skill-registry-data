@@ -1,0 +1,38 @@
+{
+  "name": "tools-burp-suite",
+  "repo": "NoorQureshi/security-skills",
+  "path": "skills/tools/tools-burp-suite/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/NoorQureshi/security-skills",
+  "dir_name": "tools-burp-suite-noorqureshi-security-skills",
+  "downloaded_at": "2026-10-19T04:02:18.174732Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: auth, pentest, fuzzing",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "auth",
+      "pentest",
+      "fuzzing"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NoorQureshi",
+  "source_url": "https://github.com/NoorQureshi/security-skills/blob/main/skills/tools/tools-burp-suite/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NoorQureshi/security-skills/blob/main/skills/tools/tools-burp-suite/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Drive Burp Suite for web/API testing \u2014 proxy history triage, Repeater, Intruder enumeration, Collaborator OOB, active scanning \u2014 manually or agent-driven through a Burp MCP extension on 127.0.0.1:9876. Load for any HTTP-target deep testing: \"burp\", proxy history analysis, repeater replay, intruder brute/enum, collaborator payloads, DAST scan, CSRF PoC generation, token randomness analysis. Signals: port 8080 proxy, port 9876 MCP, burpsuite, BApp MCP Server."
+}

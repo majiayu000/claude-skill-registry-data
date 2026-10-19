@@ -1,0 +1,37 @@
+{
+  "name": "bmad-testarch-evaluate",
+  "repo": "RECodeVault/Sheep-Civilization",
+  "path": ".claude/skills/bmad-testarch-evaluate/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/RECodeVault/Sheep-Civilization",
+  "dir_name": "bmad-testarch-evaluate",
+  "downloaded_at": "2026-10-19T04:13:53.401967Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: script, cli",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "RECodeVault",
+  "source_url": "https://github.com/RECodeVault/Sheep-Civilization/blob/main/.claude/skills/bmad-testarch-evaluate/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/RECodeVault/Sheep-Civilization/blob/main/.claude/skills/bmad-testarch-evaluate/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run scored behavioral evaluations and repair gaps. Use when the user says \"evaluate this agent\" or \"I want proof this behaves correctly\""
+}

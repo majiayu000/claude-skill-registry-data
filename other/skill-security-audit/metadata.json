@@ -1,0 +1,38 @@
+{
+  "name": "skill-security-audit",
+  "repo": "MichaelWeissDEV/owl-registry",
+  "path": "skills/skill-security-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MichaelWeissDEV/owl-registry",
+  "dir_name": "skill-security-audit",
+  "downloaded_at": "2026-10-19T03:52:03.308835Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MichaelWeissDEV",
+  "source_url": "https://github.com/MichaelWeissDEV/owl-registry/blob/main/skills/skill-security-audit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MichaelWeissDEV/owl-registry/blob/main/skills/skill-security-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audit third-party Agent Skills, plugins, and MCP tool definitions for security risk before installation: prompt injection, hidden or invisible instructions, credential access, exfiltration, dangerous shell, over-broad triggers, and supply-chain drift. Use when reviewing an external skill repository or package, deciding whether to install or update a skill, or writing an audit report with evidence and severity. Do not use to review your own application's source code (use security-code-review), to harden CI workflows (use github-actions-security), or to build an MCP server (use mcp-server-development). A clean scan is never proof of safety."
+}

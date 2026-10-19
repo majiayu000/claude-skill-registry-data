@@ -1,0 +1,38 @@
+{
+  "name": "api-auth-attacks",
+  "repo": "NoorQureshi/security-skills",
+  "path": "skills/api/api-auth-attacks/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/NoorQureshi/security-skills",
+  "dir_name": "api-auth-attacks-noorqureshi-security-skills",
+  "downloaded_at": "2026-10-19T04:02:16.470979Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "api",
+      "endpoint",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NoorQureshi",
+  "source_url": "https://github.com/NoorQureshi/security-skills/blob/main/skills/api/api-auth-attacks/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NoorQureshi/security-skills/blob/main/skills/api/api-auth-attacks/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Break API authentication: token handling, key leakage, weak session/JWT, and no-auth endpoints. Load on REST/GraphQL APIs using API keys, Bearer tokens, HMAC signing, or basic auth. Signals: `Authorization` headers, api_key params, tokens in URLs, /v1 vs /v2 auth drift."
+}

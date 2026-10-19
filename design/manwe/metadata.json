@@ -1,0 +1,37 @@
+{
+  "name": "manwe",
+  "repo": "LarryHsiao/Skadi",
+  "path": "skills/manwe/SKILL.md",
+  "github_branch": "master",
+  "category": "design",
+  "source": "github.com/LarryHsiao/Skadi",
+  "dir_name": "manwe",
+  "downloaded_at": "2026-10-19T03:36:16.551153Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: ui, component",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "ui",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LarryHsiao",
+  "source_url": "https://github.com/LarryHsiao/Skadi/blob/master/skills/manwe/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LarryHsiao/Skadi/blob/master/skills/manwe/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when a built UI component or screen needs weighing against what it should be \u2014 whether phrased as /manwe <target> [<spec>], or in plain words such as \"does this look right\", \"check this against the mockup\", \"review the render\". <target> is the built page or app view to weigh (a served http(s):// URL, or a Flutter app already running on a booted emulator/simulator \u2014 captured via feanor-flutter-shot, never auto-launched). <spec> is optional \u2014 a PNG, or an HTML page/URL rendered to one, or a Henneth-approved wireframe from the same working session. With a spec, shoots the target once and names the perceptual deltas against it, the same oracle F\u00ebanor uses. Without one, reads the target's source beside at least one sibling component (same screen or widget family) and flags divergence in layout properties \u2014 padding, spacing, sizing, typography. A single pass, never a loop, and it never edits source \u2014 findings only. Reuses F\u00ebanor's shot hooks; never launches a browser tab or a device itself."
+}

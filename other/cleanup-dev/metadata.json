@@ -1,0 +1,37 @@
+{
+  "name": "cleanup-dev",
+  "repo": "LarryHsiao/Skadi",
+  "path": "skills/cleanup-dev/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/LarryHsiao/Skadi",
+  "dir_name": "cleanup-dev",
+  "downloaded_at": "2026-10-19T03:36:28.941853Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LarryHsiao",
+  "source_url": "https://github.com/LarryHsiao/Skadi/blob/master/skills/cleanup-dev/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LarryHsiao/Skadi/blob/master/skills/cleanup-dev/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Free disk space by clearing dev caches and build artifacts. Reports sizes per bucket, asks per-bucket confirmation, then deletes only what the user approves. For fvm SDKs and per-project artifacts, user picks interactively. Use /cleanup-dev [--no-analyze]."
+}

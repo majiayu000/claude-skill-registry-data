@@ -1,0 +1,37 @@
+{
+  "name": "handbook",
+  "repo": "Spice-Z/yugo-stack",
+  "path": "skills/handbook/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Spice-Z/yugo-stack",
+  "dir_name": "handbook",
+  "downloaded_at": "2026-10-19T04:29:22.441670Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Spice-Z",
+  "source_url": "https://github.com/Spice-Z/yugo-stack/blob/main/skills/handbook/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Spice-Z/yugo-stack/blob/main/skills/handbook/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Research the user's question and write a Notion handbook: one index page (TOC + Sources only) plus a subpage per chapter, including Chapter 1 Abstract. Use only when the user invokes /handbook."
+}

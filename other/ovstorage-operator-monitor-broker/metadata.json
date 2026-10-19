@@ -1,0 +1,38 @@
+{
+  "name": "ovstorage-operator-monitor-broker",
+  "repo": "NVIDIA-Omniverse/ovstorage",
+  "path": "ovstorage/skills/ovstorage-operator-monitor-broker/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/NVIDIA-Omniverse/ovstorage",
+  "dir_name": "ovstorage-operator-monitor-broker",
+  "downloaded_at": "2026-10-19T03:55:44.606148Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "NVIDIA-Omniverse",
+  "source_url": "https://github.com/NVIDIA-Omniverse/ovstorage/blob/main/ovstorage/skills/ovstorage-operator-monitor-broker/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NVIDIA-Omniverse/ovstorage/blob/main/ovstorage/skills/ovstorage-operator-monitor-broker/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when wiring observability for a running ovstorage-broker - covers the Prometheus /metrics surface, the 11 metric families, the tracing span fields, and the audit-safe diagnostic shape."
+}

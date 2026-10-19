@@ -1,0 +1,37 @@
+{
+  "name": "work-board",
+  "repo": "Lee-W/maigo",
+  "path": "skills/work-board/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Lee-W/maigo",
+  "dir_name": "work-board",
+  "downloaded_at": "2026-10-19T03:36:53.707110Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Lee-W",
+  "source_url": "https://github.com/Lee-W/maigo/blob/main/skills/work-board/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Lee-W/maigo/blob/main/skills/work-board/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "This skill should be used when reading, writing, or migrating `.maigo/board.md` \u2014 the single cross-session Work Board that tracks issues to triage, your own PRs, and PRs you're reviewing, ranked into a single priority ladder (\ud83c\udfaf \u4e0b\u4e00\u4ef6 / \u23f3 \u7b49\u5225\u4eba / \u2705 \u6700\u8fd1\u7d50\u6848). Covers the line grammar, possession-\u5224\u5b9a tables per item type, the upsert contract each writing command follows, the review-board.md migration path, and the checkbox \u2192 `--learn` memory gate."
+}

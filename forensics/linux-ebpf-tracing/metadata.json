@@ -1,0 +1,38 @@
+{
+  "name": "linux-ebpf-tracing",
+  "repo": "MichaelWeissDEV/owl-registry",
+  "path": "skills/linux-ebpf-tracing/SKILL.md",
+  "github_branch": "main",
+  "category": "forensics",
+  "source": "github.com/MichaelWeissDEV/owl-registry",
+  "dir_name": "linux-ebpf-tracing",
+  "downloaded_at": "2026-10-19T03:52:00.825753Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "forensics",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for forensics: incident, evidence, triage",
+    "score": 3,
+    "runner_up": "performance",
+    "runner_up_score": 2,
+    "signals": [
+      "incident",
+      "evidence",
+      "triage"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MichaelWeissDEV",
+  "source_url": "https://github.com/MichaelWeissDEV/owl-registry/blob/main/skills/linux-ebpf-tracing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MichaelWeissDEV/owl-registry/blob/main/skills/linux-ebpf-tracing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Diagnose Linux latency, CPU, I/O, syscall and scheduling problems by writing small, bounded bpftrace programs after forming a hypothesis, with explicit checks for kernel support (BTF, kernel version), privileges (root or CAP_BPF/CAP_PERFMON), probe stability and tracing overhead. Use when top/strace/perf are not enough and you need per-event or per-latency evidence from a live Linux host, for example \"what is opening these files\", \"why is read latency spiky\", \"which process causes block I/O\". Not for first-line triage (use linux-troubleshooting), for CPU flame-graph profiling workflows (use performance-profiling), nor for macOS/Windows, nor for writing production eBPF programs in C/Rust (libbpf, Aya) or security enforcement."
+}

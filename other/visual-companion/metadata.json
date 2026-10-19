@@ -1,0 +1,37 @@
+{
+  "name": "visual-companion",
+  "repo": "Rigaro/Agent-Skills",
+  "path": "skills/visual-companion/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Rigaro/Agent-Skills",
+  "dir_name": "visual-companion",
+  "downloaded_at": "2026-10-19T04:16:44.727096Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Rigaro",
+  "source_url": "https://github.com/Rigaro/Agent-Skills/blob/main/skills/visual-companion/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Rigaro/Agent-Skills/blob/main/skills/visual-companion/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Choose, build and check the visual for a reply or page meant for a person: a table, a collapsed evidence block, a callout, a Mermaid diagram, or a companion artifact page, picked by what the surface renders (GitHub, chat, Notion, artifact pages). Use when the content has the shape of a board of tracked items, a flow (a sequence, a race between writers, a state machine), a before/after, or a set of options; structured-depth's Visuals section sends readers here. Holds the surface table, the companion-page rules, the Mermaid guardrails and the render-and-look check, with scripts that pre-render Mermaid to light and dark SVG, inline it into an HTML page, and screenshot the page at desktop and phone widths."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "mithrandir",
+  "repo": "LarryHsiao/Skadi",
+  "path": "skills/mithrandir/SKILL.md",
+  "github_branch": "master",
+  "category": "security",
+  "source": "github.com/LarryHsiao/Skadi",
+  "dir_name": "mithrandir",
+  "downloaded_at": "2026-10-19T03:36:27.809302Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth",
+    "score": 2,
+    "runner_up": "communication",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "auth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LarryHsiao",
+  "source_url": "https://github.com/LarryHsiao/Skadi/blob/master/skills/mithrandir/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LarryHsiao/Skadi/blob/master/skills/mithrandir/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when the user runs /mithrandir, /mithrandir branch, /mithrandir <url>, /mithrandir comment <url>, or /mithrandir bless <url> (alias /mithrandir recheck <url>). With no argument or the `branch` verb, weighs the current local branch against its base; with a URL, weighs a pull request or merge request. Renders a multi-axis verdict \u2014 six always-on (stability, performance, coding style, maintainability, correctness, regression risk) plus seven conditional (test coverage, security, documentation, backward compatibility, observability, dependency hygiene, accessibility & i18n) that fire only when the diff touches their domain \u2014 followed by an optional `Worth keeping` section (concrete bright spots) and an optional `To pass` action list grouped by severity (Blocker / Nice to have / Nit), closing with a tier (sound | wavering | off) and a short reasoning paragraph. A blockquote header at the top distils the bottom line \u2014 Merge / Hold / Refuse. The default and `branch` paths render to chat; the `comment` verb posts a URL-path verdict to the forge after a confirm-once gate. The `bless` verb (alias `recheck`) re-weighs an amended PR/MR, finds its prior `comment`-verb post, and threads a follow-up reply \u2014 All resolve / Partial okay if the work has earned it; counsel withheld (chat-only) if not. Branch-path bears no `comment` or `bless` \u2014 local diffs have no PR to write on. Tone defaults differ by audience \u2014 read leans Tolkien (private counsel); comment and bless lean plain (public note). The `--plain` and `--lore` flags override either default. The `--deep` flag weighs each changed file on its own via a per-file subagent fan-out \u2014 depth that catches subtle per-file flaws a holistic pass dilutes; it composes with branch and read paths and with either tone. The `--verify` flag adds an adversarial second pass before any non-sound axis tier or `To pass` row is admitted to the render \u2014 a three-lens panel per candidate finding, two lenses asking whether the flaw exists (both must refute to drop it) and one whether it is graded right (refuting lowers it a step, never drops it); it composes with all four paths, with either tone, and with `--deep`. Its default follows the audience \u2014 off on the chat-bound branch and read paths, on for the forge-writing `comment` and `bless` verbs, where `--no-verify` opts out. The `--fix` flag mends the branch's `Nit` rows in the working tree after the render \u2014 branch-path only, implies `--verify`, never commits; Blocker and Nice-to-have rows are left for the author. Host-agnostic; routes to GitHub or GitLab from the URL."
+}

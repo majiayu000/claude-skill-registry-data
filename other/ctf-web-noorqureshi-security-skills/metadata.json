@@ -1,0 +1,39 @@
+{
+  "name": "ctf-web",
+  "repo": "NoorQureshi/security-skills",
+  "path": "skills/ctf/ctf-web/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/NoorQureshi/security-skills",
+  "dir_name": "ctf-web-noorqureshi-security-skills",
+  "downloaded_at": "2026-10-19T04:02:08.908378Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=4, security=4",
+    "score": 4,
+    "runner_up": "security",
+    "runner_up_score": 4,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NoorQureshi",
+  "source_url": "https://github.com/NoorQureshi/security-skills/blob/main/skills/ctf/ctf-web/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NoorQureshi/security-skills/blob/main/skills/ctf/ctf-web/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "CTF web challenge playbook \u2014 the recurring shapes jeopardy web challenges take: source disclosure (.git, backups, flask debug), SSTI/SSRF in their CTF forms, PHP quirks (type juggling, wrappers, filters), cookie/JWT games, and chained primitives to read /flag. Load on any CTF challenge whose handout is a URL. Signals: \"web\" category, flask/werkzeug or PHP banner, /flag or flag.txt on the box, robots.txt, provided app.py/index.php source, JWT or flask session cookie."
+}

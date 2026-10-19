@@ -1,0 +1,37 @@
+{
+  "name": "install",
+  "repo": "LarryHsiao/Skadi",
+  "path": ".claude/skills/install/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/LarryHsiao/Skadi",
+  "dir_name": "install-larryhsiao-skadi",
+  "downloaded_at": "2026-10-19T03:36:29.759140Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LarryHsiao",
+  "source_url": "https://github.com/LarryHsiao/Skadi/blob/master/.claude/skills/install/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LarryHsiao/Skadi/blob/master/.claude/skills/install/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run Skadi's dual installer to sync Claude Code and Codex configuration into each registered paired profile."
+}

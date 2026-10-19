@@ -1,0 +1,38 @@
+{
+  "name": "architecture-advisor",
+  "repo": "TutanDev/cc-resources",
+  "path": "plugins/lowy/skills/architecture-advisor/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/TutanDev/cc-resources",
+  "dir_name": "architecture-advisor",
+  "downloaded_at": "2026-10-19T04:42:57.440856Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process, pipeline",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "process",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "TutanDev",
+  "source_url": "https://github.com/TutanDev/cc-resources/blob/main/plugins/lowy/skills/architecture-advisor/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/TutanDev/cc-resources/blob/main/plugins/lowy/skills/architecture-advisor/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Meta-orchestrator combining L\u00f6wy's Method (macro: volatility-based decomposition, layered services) with Domain Modeling Made Functional (micro: type-driven modeling, pipeline workflows). Routes to the right methodology and phase for the user's current design stage. Use when architecting a system end-to-end from requirements, combining service decomposition with domain modeling, or choosing a methodology. Trigger on: \"architect this system\", \"design this application\", \"how should I structure this\", \"system design\", \"decompose and model\", \"macro and micro architecture\", \"service boundaries and domain types\", \"where do I start with design\", or a system description with no methodology named. Entry point for architecture conversations not owned by one methodology; if the user names L\u00f6wy or DMF, route to `lowy:lowys-method` or `dmf:orchestrator` instead."
+}

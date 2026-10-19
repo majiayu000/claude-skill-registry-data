@@ -1,0 +1,40 @@
+{
+  "name": "memory-sanitizers",
+  "repo": "MichaelWeissDEV/owl-registry",
+  "path": "skills/memory-sanitizers/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/MichaelWeissDEV/owl-registry",
+  "dir_name": "memory-sanitizers",
+  "downloaded_at": "2026-10-19T03:51:58.566713Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, build, software, compile, debug",
+    "score": 5,
+    "runner_up": "devops",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "software",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MichaelWeissDEV",
+  "source_url": "https://github.com/MichaelWeissDEV/owl-registry/blob/main/skills/memory-sanitizers/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MichaelWeissDEV/owl-registry/blob/main/skills/memory-sanitizers/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Find and interpret memory, undefined-behavior and data-race bugs in C and C++ programs with Clang/GCC sanitizers (AddressSanitizer, LeakSanitizer, UndefinedBehaviorSanitizer, ThreadSanitizer, MemorySanitizer): choose the right sanitizer, build correctly, read the report, and avoid invalid combinations. Use when a native program crashes with heap corruption, use-after-free, uninitialized reads, intermittent segfaults, leaks, signed overflow or data races, or when adding sanitizer jobs to CI. Not for general C/C++ style (use c-development or cpp-development), CPU/time profiling (use performance-profiling), Rust or managed languages, or kernel sanitizers (KASAN) and exploit development."
+}

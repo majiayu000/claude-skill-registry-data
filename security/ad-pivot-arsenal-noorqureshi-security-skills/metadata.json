@@ -1,0 +1,37 @@
+{
+  "name": "ad-pivot-arsenal",
+  "repo": "NoorQureshi/security-skills",
+  "path": "skills/ad/ad-pivot-arsenal/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/NoorQureshi/security-skills",
+  "dir_name": "ad-pivot-arsenal-noorqureshi-security-skills",
+  "downloaded_at": "2026-10-19T04:02:14.749164Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: auth, pentest",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 1,
+    "signals": [
+      "auth",
+      "pentest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NoorQureshi",
+  "source_url": "https://github.com/NoorQureshi/security-skills/blob/main/skills/ad/ad-pivot-arsenal/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NoorQureshi/security-skills/blob/main/skills/ad/ad-pivot-arsenal/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "One line: Active Directory, pivoting/tunneling, and password-cracking arsenal for authorized engagements. Trigger signals: \"Active Directory\", \"domain\", \"kerberos\", \"kerberoast\", \"AS-REP\", \"BloodHound\", \"DCSync\", \"AD/.local domain\", holding domain creds or a foothold. Authorized, in-scope targets only."
+}

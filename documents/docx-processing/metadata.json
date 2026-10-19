@@ -1,0 +1,40 @@
+{
+  "name": "docx-processing",
+  "repo": "MichaelWeissDEV/owl-registry",
+  "path": "skills/docx-processing/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/MichaelWeissDEV/owl-registry",
+  "dir_name": "docx-processing",
+  "downloaded_at": "2026-10-19T03:51:55.204996Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word, docx, documentation",
+    "score": 5,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "word",
+      "docx",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MichaelWeissDEV",
+  "source_url": "https://github.com/MichaelWeissDEV/owl-registry/blob/main/skills/docx-processing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MichaelWeissDEV/owl-registry/blob/main/skills/docx-processing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generate, parse, modify, and format Microsoft Word (.docx) documents programmatically. Use when creating styled corporate reports, extracting text and tables from Word documents with python-docx, manipulating document sections, headers, footers, and page breaks, replacing placeholders without losing formatting, or inspecting OpenXML structures and untrusted Word files. Do not use for legacy binary .doc files, PDFs, Google Docs, or for tracked-changes editing workflows that need Word's revision model (python-docx does not write tracked changes)."
+}

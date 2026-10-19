@@ -1,0 +1,37 @@
+{
+  "name": "readme-refresh",
+  "repo": "Skillkeel/skillkeel-starter",
+  "path": "skills/readme-refresh/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Skillkeel/skillkeel-starter",
+  "dir_name": "readme-refresh",
+  "downloaded_at": "2026-10-19T04:27:17.925628Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Skillkeel",
+  "source_url": "https://github.com/Skillkeel/skillkeel-starter/blob/main/skills/readme-refresh/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Skillkeel/skillkeel-starter/blob/main/skills/readme-refresh/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when the user asks to update, fix, or audit README.md, or when README commands look stale. Checks every command, path, and claim in the README against the actual repo and proposes a minimal diff; never rewrites the whole file unasked."
+}

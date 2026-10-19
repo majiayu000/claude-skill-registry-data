@@ -1,0 +1,37 @@
+{
+  "name": "computer-use-drivers",
+  "repo": "Ottili-ONE/skills",
+  "path": "skills/agentic-data/computer-use-drivers/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Ottili-ONE/skills",
+  "dir_name": "computer-use-drivers",
+  "downloaded_at": "2026-10-19T04:06:09.183595Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, api=2",
+    "score": 2,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Ottili-ONE",
+  "source_url": "https://github.com/Ottili-ONE/skills/blob/main/skills/agentic-data/computer-use-drivers/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Ottili-ONE/skills/blob/main/skills/agentic-data/computer-use-drivers/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Drive desktop and remote apps through accessibility trees and background input with safety layers: coordinate scaling, confirm() gates on destructive actions, screen-as-untrusted-data handling, platform quirks (macOS AX, Windows UIA, X11/Wayland). Use when an agent must click, type into or scroll an app it cannot reach through its API; never use raw screen scraping as the primary path. Verified 2026-10-13."
+}

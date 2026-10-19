@@ -1,0 +1,38 @@
+{
+  "name": "test-driven-development",
+  "repo": "Yesterday-AI/ytstack",
+  "path": "skills/test-driven-development/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Yesterday-AI/ytstack",
+  "dir_name": "test-driven-development-yesterday-ai-ytstack",
+  "downloaded_at": "2026-10-19T04:56:57.996060Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, refactor",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Yesterday-AI",
+  "source_url": "https://github.com/Yesterday-AI/ytstack/blob/main/skills/test-driven-development/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Yesterday-AI/ytstack/blob/main/skills/test-driven-development/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "RED-GREEN-REFACTOR: write a failing test, watch it fail, write minimal code, watch it pass, commit. Thin ytstack wrapper around the vendored superpowers test-driven-development procedure, injecting the current task's plan as context. Use during task execution."
+}

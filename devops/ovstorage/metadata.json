@@ -1,0 +1,37 @@
+{
+  "name": "ovstorage",
+  "repo": "NVIDIA-Omniverse/ovstorage",
+  "path": "ovstorage/ovstorage-services/skills/deploy/ovstorage-skills/ovstorage/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/NVIDIA-Omniverse/ovstorage",
+  "dir_name": "ovstorage",
+  "downloaded_at": "2026-10-19T03:55:46.446196Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: kubernetes, deploy",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "kubernetes",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NVIDIA-Omniverse",
+  "source_url": "https://github.com/NVIDIA-Omniverse/ovstorage/blob/main/ovstorage/ovstorage-services/skills/deploy/ovstorage-skills/ovstorage/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NVIDIA-Omniverse/ovstorage/blob/main/ovstorage/ovstorage-services/skills/deploy/ovstorage-skills/ovstorage/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Deploy and develop against NVIDIA Omniverse Storage APIs on any Kubernetes cluster (MicroK8s, EKS, AKS, GKE, bare metal). Two storage adapters: (1) Example Storage Adapter \u2014 Python filesystem reference implementation + Discovery for learning and custom adapter development; (2) S3/Azure Production Storage Adapter \u2014 NVIDIA pre-built S3/Azure adapter + Discovery as minimum, expandable with Event Aggregation, Event Consumer, RabbitMQ, Envoy Auth Extension, Storage Navigator, and Contour ingress. Can deploy on the developer's behalf (generating scripts + .env) or guide manual deployment. Custom adapter development covers three APIs: Storage, Notifications, and Permissions. Use when a developer asks about deploying, configuring, validating, troubleshooting, or building any component of the Omniverse Storage APIs stack."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "research-meme-context",
+  "repo": "MemeMeow-Studio/MemeMeow",
+  "path": "skills/research-meme-context/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/MemeMeow-Studio/MemeMeow",
+  "dir_name": "research-meme-context",
+  "downloaded_at": "2026-10-19T03:50:22.009534Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MemeMeow-Studio",
+  "source_url": "https://github.com/MemeMeow-Studio/MemeMeow/blob/main/skills/research-meme-context/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MemeMeow-Studio/MemeMeow/blob/main/skills/research-meme-context/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Research evidence-backed structured representations of image memes, including visible subjects, caption text, templates, references, origins, current meaning, and uncertainty. Use when Codex must investigate a meme image with web or reverse-image search, trace a quoted caption or visual reference, assess candidates from online results, or produce cited meme metadata whose meaning may be time-sensitive."
+}

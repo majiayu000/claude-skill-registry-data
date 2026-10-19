@@ -1,0 +1,36 @@
+{
+  "name": "resume-session",
+  "repo": "Yesterday-AI/ytstack",
+  "path": "skills/resume-session/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Yesterday-AI/ytstack",
+  "dir_name": "resume-session-yesterday-ai-ytstack",
+  "downloaded_at": "2026-10-19T04:56:55.302124Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "bash"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Yesterday-AI",
+  "source_url": "https://github.com/Yesterday-AI/ytstack/blob/main/skills/resume-session/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Yesterday-AI/ytstack/blob/main/skills/resume-session/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Reconstruct working context at the start of a new session. Reads STATE.md + HANDOFF.md (if present) + latest 3 T##-SUMMARY.md files and synthesizes a 'where we are' briefing. Run at session start before doing anything else."
+}

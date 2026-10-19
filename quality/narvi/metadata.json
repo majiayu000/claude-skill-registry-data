@@ -1,0 +1,37 @@
+{
+  "name": "narvi",
+  "repo": "LarryHsiao/Skadi",
+  "path": "skills/narvi/SKILL.md",
+  "github_branch": "master",
+  "category": "quality",
+  "source": "github.com/LarryHsiao/Skadi",
+  "dir_name": "narvi",
+  "downloaded_at": "2026-10-19T03:36:13.296758Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: lint, review",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "lint",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LarryHsiao",
+  "source_url": "https://github.com/LarryHsiao/Skadi/blob/master/skills/narvi/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LarryHsiao/Skadi/blob/master/skills/narvi/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when the user runs /narvi <pr-or-mr-url> [--dry-run]. Picks up every unresolved comment on a GitHub PR or GitLab MR \u2014 both inline review-thread comments anchored to a diff line and overview comments at the PR's top level (Mithrandir's verdicts, free-form review-body notes) \u2014 asks once before touching the branch, dispatches the smith subagent comment-by-comment (one commit per comment, each referencing the comment URL in its footer), verifies the branch once every comment is addressed (the project's detected test and lint commands), weighs its own amendments by Mithrandir's axes before pushing \u2014 a standing Blocker halts the run rather than handing the reviewer fresh grounds for comment \u2014 then pushes the branch so the forge updates. De-duplicates across re-runs by grepping the branch's commit log for the trail marker. Host-agnostic; routes to GitHub or GitLab from the URL. Does not resolve review threads \u2014 the human eyeballs the work and resolves."
+}

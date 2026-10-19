@@ -1,0 +1,38 @@
+{
+  "name": "lowys-method",
+  "repo": "TutanDev/cc-resources",
+  "path": "plugins/lowy/skills/lowys-method/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/TutanDev/cc-resources",
+  "dir_name": "lowys-method",
+  "downloaded_at": "2026-10-19T04:42:55.306736Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, software",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "TutanDev",
+  "source_url": "https://github.com/TutanDev/cc-resources/blob/main/plugins/lowy/skills/lowys-method/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/TutanDev/cc-resources/blob/main/plugins/lowy/skills/lowys-method/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Expert orchestrator for Juval L\u00f6wy's system design methodology from *Righting Software*. Use this skill whenever the user mentions L\u00f6wy, \"The Method\", volatility-based decomposition, layered architecture with Managers/Engines/ResourceAccess, use case validation, call chains, composable design, the Message Bus pattern, or asks to architect or decompose a system. Also trigger when the user mentions \"functional decomposition\" (to warn against it), \"domain decomposition\", \"core use cases\", \"axes of volatility\", or \"Design Don'ts\". This skill routes to specialized sub-skills for each phase of The Method. Always trigger this skill for architecture-level design conversations, even if the user does not name L\u00f6wy explicitly - the vocabulary is the signal."
+}

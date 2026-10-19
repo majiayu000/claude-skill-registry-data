@@ -1,0 +1,39 @@
+{
+  "name": "bb-disclosures",
+  "repo": "M0st8fa/master-bughunter",
+  "path": "skills/bb-disclosures/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/M0st8fa/master-bughunter",
+  "dir_name": "bb-disclosures",
+  "downloaded_at": "2026-10-19T03:43:59.006836Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for security: security, auth, vulnerability, audit",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "vulnerability",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "M0st8fa",
+  "source_url": "https://github.com/M0st8fa/master-bughunter/blob/main/skills/bb-disclosures/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/M0st8fa/master-bughunter/blob/main/skills/bb-disclosures/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Query a local corpus of 11,338 real paid bug bounty disclosures (HackerOne, Bugcrowd, Immunefi, Intigriti, audits) to generate test ideas, calibrate severity/bounty against real precedent, and find escalation patterns that actually got paid. Use whenever the user asks \"what gets paid\", \"real examples of X bug\", \"is my finding strong enough\", \"similar bugs on other programs\", wants bounty calibration before submitting, is stuck for ideas on a target type, or during any escalation/validation decision in a hunt."
+}

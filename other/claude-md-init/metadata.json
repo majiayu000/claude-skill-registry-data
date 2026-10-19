@@ -1,0 +1,38 @@
+{
+  "name": "claude-md-init",
+  "repo": "Skillkeel/skillkeel-starter",
+  "path": "skills/claude-md-init/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Skillkeel/skillkeel-starter",
+  "dir_name": "claude-md-init",
+  "downloaded_at": "2026-10-19T04:27:17.234383Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, devops=3",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Skillkeel",
+  "source_url": "https://github.com/Skillkeel/skillkeel-starter/blob/main/skills/claude-md-init/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Skillkeel/skillkeel-starter/blob/main/skills/claude-md-init/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when a repo has no CLAUDE.md, or the user asks to create/refresh CLAUDE.md or project instructions for Claude Code. Generates a short, verified CLAUDE.md from the repo's real build/test/lint commands and layout, and never invents commands."
+}

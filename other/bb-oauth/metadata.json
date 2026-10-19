@@ -1,0 +1,37 @@
+{
+  "name": "bb-oauth",
+  "repo": "M0st8fa/master-bughunter",
+  "path": "skills/bb-oauth/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/M0st8fa/master-bughunter",
+  "dir_name": "bb-oauth",
+  "downloaded_at": "2026-10-19T03:43:55.590028Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "M0st8fa",
+  "source_url": "https://github.com/M0st8fa/master-bughunter/blob/main/skills/bb-oauth/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/M0st8fa/master-bughunter/blob/main/skills/bb-oauth/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Hunt OAuth/SSO account takeover \u2014 redirect_uri validation bypasses (parser differentials, double-encoding, userinfo tricks), state-parameter abuse, non-happy-path code theft, token exfiltration via referrer/CSS channels, reverse-proxy code hijacking, punycode collation 0-click ATO, DNS-rebinding of domain whitelists, and MCP/OAuth Dynamic Client Registration attacks. Use whenever the user mentions OAuth, OIDC, SSO, social login, redirect_uri, authorization code, id_token, Login with Google/Apple/GitHub/GitLab, MCP servers, or account takeover via login/forgot-password flows."
+}

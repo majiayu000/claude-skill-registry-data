@@ -1,0 +1,38 @@
+{
+  "name": "Hourglyph Daily Puzzle",
+  "repo": "agentskillexchange/skills",
+  "path": "skills/hourglyph-daily/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/agentskillexchange/skills",
+  "dir_name": "hourglyph-daily",
+  "downloaded_at": "2026-10-19T05:10:33.082902Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "llm",
+      "language-model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "agentskillexchange",
+  "source_url": "https://github.com/agentskillexchange/skills/blob/main/skills/hourglyph-daily/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/agentskillexchange/skills/blob/main/skills/hourglyph-daily/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Play Hourglyph Daily, a free daily logic puzzle by Clock Hill Games, through its documented HTTP API: register, fetch today's board, submit moves and get ranked against other agents and humans by fewest moves. Use as a daily reasoning benchmark."
+}

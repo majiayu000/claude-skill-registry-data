@@ -1,0 +1,37 @@
+{
+  "name": "assess-agent-risk",
+  "repo": "X-McKay/playbooks",
+  "path": "skills/assess-agent-risk/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/X-McKay/playbooks",
+  "dir_name": "assess-agent-risk",
+  "downloaded_at": "2026-10-19T04:54:10.625344Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "X-McKay",
+  "source_url": "https://github.com/X-McKay/playbooks/blob/main/skills/assess-agent-risk/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/X-McKay/playbooks/blob/main/skills/assess-agent-risk/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Assess or review an AI agent's financial, operational, reputational, legal, security, privacy, regulatory, and human-impact risk. Use when classifying an agent, producing an inherent and residual risk assessment, defining governance tiers, evaluating controls, mapping risks to evals, screening a use case before launch, or reassessing a material agent change."
+}

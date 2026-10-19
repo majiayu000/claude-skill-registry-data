@@ -1,0 +1,38 @@
+{
+  "name": "csv-data-processing",
+  "repo": "MichaelWeissDEV/owl-registry",
+  "path": "skills/csv-data-processing/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/MichaelWeissDEV/owl-registry",
+  "dir_name": "csv-data-processing",
+  "downloaded_at": "2026-10-19T03:52:01.835451Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MichaelWeissDEV",
+  "source_url": "https://github.com/MichaelWeissDEV/owl-registry/blob/main/skills/csv-data-processing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MichaelWeissDEV/owl-registry/blob/main/skills/csv-data-processing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Parse, validate, clean, transform, and export CSV and TSV tabular data following RFC 4180. Use when handling delimiter ambiguity (comma, semicolon, tab), resolving text encodings (UTF-8, UTF-8-BOM, Latin-1), escaping multi-line quoted fields, processing multi-gigabyte files via streaming, or preventing CSV injection."
+}

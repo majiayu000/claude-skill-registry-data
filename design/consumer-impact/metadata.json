@@ -1,0 +1,39 @@
+{
+  "name": "consumer-impact",
+  "repo": "LedgerHQ/lumen",
+  "path": ".claude/skills/consumer-impact/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/LedgerHQ/lumen",
+  "dir_name": "consumer-impact",
+  "downloaded_at": "2026-10-19T03:36:48.303498Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, component, tailwind",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "component",
+      "tailwind"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LedgerHQ",
+  "source_url": "https://github.com/LedgerHQ/lumen/blob/main/.claude/skills/consumer-impact/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LedgerHQ/lumen/blob/main/.claude/skills/consumer-impact/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when asked to test a Lumen change against consumer repos before releasing it: a breaking or architectural change, a lint-plugin upgrade, peer/prod dependency moves, build or packaging changes, or to check how consumers use a component, prop or variant. Runs the change (or a usage scan) across the production consumers in the adoption registry and outputs a shareable HTML report."
+}

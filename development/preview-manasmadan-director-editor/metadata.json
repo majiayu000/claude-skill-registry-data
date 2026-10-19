@@ -1,0 +1,38 @@
+{
+  "name": "preview",
+  "repo": "ManasMadan/director-editor",
+  "path": ".claude/skills/preview/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/ManasMadan/director-editor",
+  "dir_name": "preview-manasmadan-director-editor",
+  "downloaded_at": "2026-10-19T03:46:15.318300Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, build, debug",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ManasMadan",
+  "source_url": "https://github.com/ManasMadan/director-editor/blob/master/.claude/skills/preview/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ManasMadan/director-editor/blob/master/.claude/skills/preview/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Give a pull request its own running environment, or find out why a preview isn't up. Use when the user wants to try, demo or share a branch before merging, or mentions the preview label or a pr-<number> URL."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "moria",
+  "repo": "LarryHsiao/Skadi",
+  "path": "skills/moria/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/LarryHsiao/Skadi",
+  "dir_name": "moria",
+  "downloaded_at": "2026-10-19T03:36:14.097828Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LarryHsiao",
+  "source_url": "https://github.com/LarryHsiao/Skadi/blob/master/skills/moria/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LarryHsiao/Skadi/blob/master/skills/moria/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when the user runs /moria [--scope mine|all] [--dry-run] [--auto] [--confirm]. Sweeps every repo in your global mend list (mend_repos.md) for open PRs/MRs bearing unaddressed comments \u2014 loops /durin --repo over each root in turn, then prints one combined report ending in a plain STIRRED/QUIET verdict. Mend follows comments across all your repos, on no project's schedule. The forge of each repo is auto-detected from its origin (github | gitlab). Per-repo behavior matches /durin exactly; one global list, set once."
+}

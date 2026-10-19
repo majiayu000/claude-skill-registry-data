@@ -1,0 +1,37 @@
+{
+  "name": "nazgul",
+  "repo": "LarryHsiao/Skadi",
+  "path": "skills/nazgul/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/LarryHsiao/Skadi",
+  "dir_name": "nazgul",
+  "downloaded_at": "2026-10-19T03:36:20.648392Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LarryHsiao",
+  "source_url": "https://github.com/LarryHsiao/Skadi/blob/master/skills/nazgul/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LarryHsiao/Skadi/blob/master/skills/nazgul/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when the user runs /nazgul [target], /nazgul project, or /nazgul reviewed. The first two dispatch the Nine \u2014 one agent per check file \u2014 to inspect either a diff (default \u2014 uncommitted changes) or the standing project tree, aggregating pass/fail/n/a verdicts into a single table. The `reviewed` verb stamps the rubric-review state file consumed by /preflight; no agents dispatched. Checks live as markdown files under `checks/`, scoped via frontmatter \u2014 `scope` may be `diff` (default), `project`, or a list `[diff, project]`. Project-local overrides take precedence. Audit only \u2014 never fixes, commits, or files issues on its own."
+}

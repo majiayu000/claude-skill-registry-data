@@ -1,0 +1,39 @@
+{
+  "name": "elasticsearch-search",
+  "repo": "MichaelWeissDEV/owl-registry",
+  "path": "skills/elasticsearch-search/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/MichaelWeissDEV/owl-registry",
+  "dir_name": "elasticsearch-search",
+  "downloaded_at": "2026-10-19T03:52:03.459930Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for data: data, analytics, database, pipeline",
+    "score": 4,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "analytics",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MichaelWeissDEV",
+  "source_url": "https://github.com/MichaelWeissDEV/owl-registry/blob/main/skills/elasticsearch-search/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MichaelWeissDEV/owl-registry/blob/main/skills/elasticsearch-search/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Architect, index, query, and optimize Elasticsearch and OpenSearch distributed search clusters. Use when defining explicit schema mappings, configuring custom text analyzers (tokenizers and filters), authoring complex Query DSL searches (bool, multi_match, aggregations), tuning shard routing and bulk indexing throughput, managing Index Lifecycle Management (ILM) data tiers, or diagnosing cluster health."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "ovstorage-contributor-run-integration-tests",
+  "repo": "NVIDIA-Omniverse/ovstorage",
+  "path": "ovstorage/skills/ovstorage-contributor-run-integration-tests/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/NVIDIA-Omniverse/ovstorage",
+  "dir_name": "ovstorage-contributor-run-integration-tests",
+  "downloaded_at": "2026-10-19T03:55:46.608220Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "NVIDIA-Omniverse",
+  "source_url": "https://github.com/NVIDIA-Omniverse/ovstorage/blob/main/ovstorage/skills/ovstorage-contributor-run-integration-tests/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NVIDIA-Omniverse/ovstorage/blob/main/ovstorage/skills/ovstorage-contributor-run-integration-tests/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run, troubleshoot, or explain ovstorage's app-level integration suite locally. Use when choosing between hermetic and live-cloud targets, exercising the Rust/C++ or Python legs, configuring a credential mapper or pre-exported credentials, or checking that backend skips cannot produce a false-green result."
+}

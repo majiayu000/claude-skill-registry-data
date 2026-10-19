@@ -1,0 +1,37 @@
+{
+  "name": "gcp-gateway-uploadsize",
+  "repo": "aibangjuxin/knowledge",
+  "path": "skills/gcp/gcp-gateway-uploadsize/SKILL.md",
+  "github_branch": "main",
+  "category": "business",
+  "source": "github.com/aibangjuxin/knowledge",
+  "dir_name": "gcp-gateway-uploadsize",
+  "downloaded_at": "2026-10-19T05:14:22.786691Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "business",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for business: business, strategy",
+    "score": 2,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "business",
+      "strategy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aibangjuxin",
+  "source_url": "https://github.com/aibangjuxin/knowledge/blob/main/skills/gcp/gcp-gateway-uploadsize/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aibangjuxin/knowledge/blob/main/skills/gcp/gcp-gateway-uploadsize/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "GCP GKE Gateway upload size limit \u2014 Gateway API has no native client_max_body_size, enforcement at IIP/Kong/application layer. Use when designing file-upload paths in GKE Gateway 2.0 or answering upload-size questions."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "bb-bizlogic",
+  "repo": "M0st8fa/master-bughunter",
+  "path": "skills/bb-bizlogic/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/M0st8fa/master-bughunter",
+  "dir_name": "bb-bizlogic",
+  "downloaded_at": "2026-10-19T03:43:57.739186Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "M0st8fa",
+  "source_url": "https://github.com/M0st8fa/master-bughunter/blob/main/skills/bb-bizlogic/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/M0st8fa/master-bughunter/blob/main/skills/bb-bizlogic/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Hunt business logic flaws in e-commerce and SaaS apps \u2014 price/quantity tampering, coupon and referral abuse, checkout workflow bypass, currency tricks, mass assignment on money fields, TOCTOU on confirmation/payout state, and money-out endpoint races. Use whenever the user says \"business logic\", mentions testing a shop/checkout/cart/coupon/refund/payout flow, wants \"bugs most hackers miss\", or asks to understand an app's money flows for bug hunting."
+}

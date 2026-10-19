@@ -1,0 +1,39 @@
+{
+  "name": "linux-hardening",
+  "repo": "MichaelWeissDEV/owl-registry",
+  "path": "skills/linux-hardening/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/MichaelWeissDEV/owl-registry",
+  "dir_name": "linux-hardening-michaelweissdev-owl-registry",
+  "downloaded_at": "2026-10-19T03:51:54.638299Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for security: security, auth, crypto, audit",
+    "score": 4,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "auth",
+      "crypto",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MichaelWeissDEV",
+  "source_url": "https://github.com/MichaelWeissDEV/owl-registry/blob/main/skills/linux-hardening/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MichaelWeissDEV/owl-registry/blob/main/skills/linux-hardening/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Apply defense-in-depth system hardening measures across Linux servers and services. Use when securing OpenSSH configurations (/etc/ssh/sshd_config), sandboxing systemd services with ProtectSystem/NoNewPrivileges, configuring host firewalls with ufw/nftables, enforcing auditd logging, or checking system compliance with Lynis."
+}

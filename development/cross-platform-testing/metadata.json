@@ -1,0 +1,39 @@
+{
+  "name": "cross-platform-testing",
+  "repo": "MichaelWeissDEV/owl-registry",
+  "path": "skills/cross-platform-testing/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/MichaelWeissDEV/owl-registry",
+  "dir_name": "cross-platform-testing",
+  "downloaded_at": "2026-10-19T03:52:05.594778Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, software, debug",
+    "score": 4,
+    "runner_up": "workflow",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "software",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MichaelWeissDEV",
+  "source_url": "https://github.com/MichaelWeissDEV/owl-registry/blob/main/skills/cross-platform-testing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MichaelWeissDEV/owl-registry/blob/main/skills/cross-platform-testing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Design and debug test matrices across operating systems, CPU architectures, and language/runtime versions: what actually differs (paths, line endings, case sensitivity, file locking, permissions, encodings, locale, time zones, endianness, floating point, shell), how to write portable tests, and how to build a GitHub Actions matrix (include/exclude, fail-fast, experimental legs, pinned runner labels, arm64) that is informative without exploding in cost. Use when software must run on Linux, macOS, Windows or multiple Python/Node/Rust/Java versions, when CI passes on one OS but fails on another, or when adding a support matrix. Do NOT use for general CI authoring (ci-github-actions), CI security hardening (github-actions-security), browser/device test automation (playwright-testing), or benchmarking (performance-regression-testing)."
+}

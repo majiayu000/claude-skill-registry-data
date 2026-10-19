@@ -1,0 +1,37 @@
+{
+  "name": "handoff-session",
+  "repo": "Yesterday-AI/ytstack",
+  "path": "skills/handoff-session/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/Yesterday-AI/ytstack",
+  "dir_name": "handoff-session",
+  "downloaded_at": "2026-10-19T04:56:55.991378Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, integration",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "test",
+      "integration"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Yesterday-AI",
+  "source_url": "https://github.com/Yesterday-AI/ytstack/blob/main/skills/handoff-session/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Yesterday-AI/ytstack/blob/main/skills/handoff-session/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "User-triggered session handoff. Writes a detailed HANDOFF.md with current state, open items, pending decisions, and recommended resume prompt. Use before switching machines, before long breaks, or when you need to clear context intentionally. Parallel to the automatic pre-compact hook."
+}

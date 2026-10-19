@@ -1,0 +1,37 @@
+{
+  "name": "plan-eng-review",
+  "repo": "Yesterday-AI/ytstack",
+  "path": "skills/plan-eng-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Yesterday-AI/ytstack",
+  "dir_name": "plan-eng-review-yesterday-ai-ytstack",
+  "downloaded_at": "2026-10-19T04:56:56.154731Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "cd",
+      "infra"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Yesterday-AI",
+  "source_url": "https://github.com/Yesterday-AI/ytstack/blob/main/skills/plan-eng-review/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Yesterday-AI/ytstack/blob/main/skills/plan-eng-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Review execution approach for feasibility, architecture, data flow, edge cases, test coverage, performance, and security risks. Auto-detects mode: concept-mode reviews a pitch (OFFICE-HOURS.md) for technical feasibility before any scaffolding; milestone-mode reviews slice-plans (M###-S##-PLAN.md) before plan-task. Use concept-mode optionally after plan-ceo-review to sanity-check the pitched approach; use milestone-mode after slice-milestone to lock architecture before implementation. Thin ytstack wrapper around the vendored gstack plan-eng-review procedure."
+}

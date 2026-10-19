@@ -1,0 +1,37 @@
+{
+  "name": "plan-task",
+  "repo": "Yesterday-AI/ytstack",
+  "path": "skills/plan-task/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Yesterday-AI/ytstack",
+  "dir_name": "plan-task-yesterday-ai-ytstack",
+  "downloaded_at": "2026-10-19T04:56:54.149966Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "context-window"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Yesterday-AI",
+  "source_url": "https://github.com/Yesterday-AI/ytstack/blob/main/skills/plan-task/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Yesterday-AI/ytstack/blob/main/skills/plan-task/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Flesh out a single task within the current slice. Reads M###-S##-PLAN.md, picks the next unplanned task, writes M###-S##-T##-PLAN.md with exact file paths + verification steps. Enforces fits-one-context-window rule. Run after slice-milestone, before executing the task."
+}

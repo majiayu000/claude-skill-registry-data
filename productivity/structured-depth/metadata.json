@@ -1,0 +1,37 @@
+{
+  "name": "structured-depth",
+  "repo": "Rigaro/Agent-Skills",
+  "path": "skills/structured-depth/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/Rigaro/Agent-Skills",
+  "dir_name": "structured-depth",
+  "downloaded_at": "2026-10-19T04:16:44.550133Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: productivity, memory",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "productivity",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Rigaro",
+  "source_url": "https://github.com/Rigaro/Agent-Skills/blob/main/skills/structured-depth/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Rigaro/Agent-Skills/blob/main/skills/structured-depth/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Shape every substantive reply and every agent-facing artifact (PR bodies, review verdicts, closure reports) for a reader with ADHD who still wants the full reasoning: lead with the point, structure the why (evidence, implications, trade-offs) into scannable blocks, restate state and next steps in a table, and make the reader think as well as consume \u2014 the principle behind each decision, the rejected alternative, and one question where the decision is theirs; when the reader asks for options or alternatives, the options are laid out first and the recommendation comes last. Use this for reviews, rulings, plan discussions, status updates, architecture and design discussions, and agent closure reports. Every artifact is written for two audiences: the human section first, complete on its own, then a \"For agents\" block holding identifiers, paths, commands and verbatim lines. Stays on for the whole session; the reader turns it off with \"stop structured mode\"."
+}

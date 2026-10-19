@@ -1,0 +1,38 @@
+{
+  "name": "connectwise-rmm",
+  "repo": "Servosity/msp-skills",
+  "path": "skills/connectwise-rmm/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Servosity/msp-skills",
+  "dir_name": "connectwise-rmm",
+  "downloaded_at": "2026-10-19T04:24:16.212105Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Servosity",
+  "source_url": "https://github.com/Servosity/msp-skills/blob/main/skills/connectwise-rmm/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Servosity/msp-skills/blob/main/skills/connectwise-rmm/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when the user asks to find offline or silent ConnectWise RMM (Asio) agents across clients, rank clients by patch compliance, build the patch-week reboot queue, find which machine a user is logged on to, prepare one client's health card, run a script on endpoints with a preview first, or see why a script run failed. Syncs companies, sites, endpoints and tickets into a local SQLite mirror so cross-client questions answer in one command. Trigger phrases: `which endpoints are offline in ConnectWise RMM`, `patch compliance for a client in Asio`, `run a script on an endpoint with ConnectWise RMM`, `which machine is a user logged on to in ConnectWise RMM`, `list ConnectWise RMM companies`, `use connectwise-rmm`, `run connectwise-rmm`."
+}

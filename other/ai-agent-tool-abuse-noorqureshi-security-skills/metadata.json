@@ -1,0 +1,38 @@
+{
+  "name": "ai-agent-tool-abuse",
+  "repo": "NoorQureshi/security-skills",
+  "path": "skills/ai-ml/ai-agent-tool-abuse/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/NoorQureshi/security-skills",
+  "dir_name": "ai-agent-tool-abuse-noorqureshi-security-skills",
+  "downloaded_at": "2026-10-19T04:02:22.108429Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=3, ai-ml=3",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NoorQureshi",
+  "source_url": "https://github.com/NoorQureshi/security-skills/blob/main/skills/ai-ml/ai-agent-tool-abuse/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NoorQureshi/security-skills/blob/main/skills/ai-ml/ai-agent-tool-abuse/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Abuse an LLM agent's tools/functions \u2014 coerce it to call tools with attacker-chosen args for SSRF, RCE, data exfil, or privilege abuse. Load when the target is an agent with tools/ function-calling/plugins, MCP servers, code interpreters, or \"the assistant can do X\". Signals: function-calling, tool schemas, browse/email/query/exec tools, autonomous agents."
+}

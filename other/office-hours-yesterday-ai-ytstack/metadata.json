@@ -1,0 +1,37 @@
+{
+  "name": "office-hours",
+  "repo": "Yesterday-AI/ytstack",
+  "path": "skills/office-hours/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Yesterday-AI/ytstack",
+  "dir_name": "office-hours-yesterday-ai-ytstack",
+  "downloaded_at": "2026-10-19T04:56:54.532551Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Yesterday-AI",
+  "source_url": "https://github.com/Yesterday-AI/ytstack/blob/main/skills/office-hours/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Yesterday-AI/ytstack/blob/main/skills/office-hours/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use as the first step when a new project, feature, or initiative has not yet been validated, or whenever the premise needs a forcing-question test. Six forcing questions expose demand reality, status quo, desperate specificity, narrowest wedge, observation, and future-fit. Produces OFFICE-HOURS.md pitch artifact with name + one-liner frontmatter that downstream skills (plan-ceo-review concept-mode, init-project, plan-milestone) consume. Thin ytstack wrapper around the vendored gstack office-hours procedure."
+}

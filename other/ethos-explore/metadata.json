@@ -1,0 +1,37 @@
+{
+  "name": "ethos-explore",
+  "repo": "NVIDIA/skills",
+  "path": "skills/ethos-explore/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/NVIDIA/skills",
+  "dir_name": "ethos-explore",
+  "downloaded_at": "2026-10-19T03:56:31.140093Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NVIDIA",
+  "source_url": "https://github.com/NVIDIA/skills/blob/main/skills/ethos-explore/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NVIDIA/skills/blob/main/skills/ethos-explore/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Captures what an AI agent is supposed to do \u2014 its purpose, boundaries, and success criteria \u2014 as a durable snapshot for anyone building, evaluating, reviewing, or changing it. Explores the user's codebase and docs first, then asks one intent question at a time for what source cannot supply. Hands its answers to ethos-write, which writes ethos.md. Use over generic brainstorming when the goal is an agent's ethos.md."
+}

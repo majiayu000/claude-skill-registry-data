@@ -1,0 +1,38 @@
+{
+  "name": "cisco-meraki",
+  "repo": "Servosity/msp-skills",
+  "path": "skills/cisco-meraki/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/Servosity/msp-skills",
+  "dir_name": "cisco-meraki",
+  "downloaded_at": "2026-10-19T04:24:15.587222Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Servosity",
+  "source_url": "https://github.com/Servosity/msp-skills/blob/main/skills/cisco-meraki/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Servosity/msp-skills/blob/main/skills/cisco-meraki/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when the user asks about Cisco Meraki across one or many client organizations: what is offline or alerting right now, failed MX WAN uplinks, license, subscription and end-of-support renewals, who changed the Dashboard config, which org owns a MAC, IP or serial, admins without two-factor or a departed tech's access, or any Meraki Dashboard API operation. Trigger phrases: `which meraki devices are offline`, `meraki license expirations across clients`, `find this mac in meraki`, `who changed the meraki config`, `did a change take this site down`, `meraki admins without 2fa`, `use cisco-meraki`, `run cisco-meraki`."
+}

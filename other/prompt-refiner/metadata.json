@@ -1,0 +1,37 @@
+{
+  "name": "prompt-refiner",
+  "repo": "aibangjuxin/knowledge",
+  "path": "skills/prompt-refiner/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aibangjuxin/knowledge",
+  "dir_name": "prompt-refiner",
+  "downloaded_at": "2026-10-19T05:14:11.831999Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aibangjuxin",
+  "source_url": "https://github.com/aibangjuxin/knowledge/blob/main/skills/prompt-refiner/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aibangjuxin/knowledge/blob/main/skills/prompt-refiner/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Refine a short or incomplete user request into a safe, structured, directly reusable prompt. Use when the user asks to create, improve, standardize, or review a prompt; do not use when they ask to perform the underlying task directly."
+}

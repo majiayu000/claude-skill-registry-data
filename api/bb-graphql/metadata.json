@@ -1,0 +1,37 @@
+{
+  "name": "bb-graphql",
+  "repo": "M0st8fa/master-bughunter",
+  "path": "skills/bb-graphql/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/M0st8fa/master-bughunter",
+  "dir_name": "bb-graphql",
+  "downloaded_at": "2026-10-19T03:43:56.904138Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "M0st8fa",
+  "source_url": "https://github.com/M0st8fa/master-bughunter/blob/main/skills/bb-graphql/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/M0st8fa/master-bughunter/blob/main/skills/bb-graphql/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Hunt GraphQL-specific vulnerabilities \u2014 introspection, field-level authorization (BOLA via node IDs), mutation abuse, batching/aliasing bypasses, GraphQL CSRF, and collaborator/invite mutations leaking user data. Use whenever the user mentions GraphQL, introspection, queries/mutations, graphql BOLA, node IDs, or a target whose API is GraphQL."
+}

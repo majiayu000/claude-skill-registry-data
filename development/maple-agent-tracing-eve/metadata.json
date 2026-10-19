@@ -1,0 +1,38 @@
+{
+  "name": "maple-agent-tracing-eve",
+  "repo": "MapleTechLabs/maple",
+  "path": "skills/maple-agent-tracing-eve/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/MapleTechLabs/maple",
+  "dir_name": "maple-agent-tracing-eve",
+  "downloaded_at": "2026-10-19T03:46:44.474501Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, framework, build",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MapleTechLabs",
+  "source_url": "https://github.com/MapleTechLabs/maple/blob/main/skills/maple-agent-tracing-eve/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MapleTechLabs/maple/blob/main/skills/maple-agent-tracing-eve/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Trace eve agents (Vercel's eve framework, npm `eve`) with Maple: add one OpenTelemetry destination file under agent/instrumentation/ so each eve session is one Maple Agent Session with transcript, tool calls, subagent lanes, approvals and tokens. Covers eve dev, eve start, the channel audience that gates message content, and dropping the workflow engine's spans. Triggers on 'trace my eve agent', 'add Maple to eve', 'agent sessions for eve', 'OpenTelemetry for eve'."
+}

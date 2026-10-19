@@ -1,0 +1,39 @@
+{
+  "name": "ovstorage-contributor-services-client-conformance",
+  "repo": "NVIDIA-Omniverse/ovstorage",
+  "path": "ovstorage/skills/ovstorage-contributor-services-client-conformance/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/NVIDIA-Omniverse/ovstorage",
+  "dir_name": "ovstorage-contributor-services-client-conformance",
+  "downloaded_at": "2026-10-19T03:55:46.263671Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=3, devops=3",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 3,
+    "signals": [
+      "api",
+      "endpoint",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "NVIDIA-Omniverse",
+  "source_url": "https://github.com/NVIDIA-Omniverse/ovstorage/blob/main/ovstorage/skills/ovstorage-contributor-services-client-conformance/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NVIDIA-Omniverse/ovstorage/blob/main/ovstorage/skills/ovstorage-contributor-services-client-conformance/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when checking the Storage API wire contract that ovstorage-plugin-services-client depends on."
+}
