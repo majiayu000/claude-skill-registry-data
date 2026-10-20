@@ -1,0 +1,38 @@
+{
+  "name": "clean-architecture",
+  "repo": "alexander-danilenko/cortex-claude-code-plugins",
+  "path": "plugins/engineering/cortex-dotnet/skills/clean-architecture/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/alexander-danilenko/cortex-claude-code-plugins",
+  "dir_name": "clean-architecture-alexander-danilenko-cortex-claude-code-p",
+  "downloaded_at": "2026-10-20T03:48:38.904408Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=3, data=3",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "api",
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "alexander-danilenko",
+  "source_url": "https://github.com/alexander-danilenko/cortex-claude-code-plugins/blob/main/plugins/engineering/cortex-dotnet/skills/clean-architecture/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/alexander-danilenko/cortex-claude-code-plugins/blob/main/plugins/engineering/cortex-dotnet/skills/clean-architecture/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Apply these opinionated .NET 8 architecture conventions whenever structuring or reviewing a backend service: clean architecture layering and which direction dependencies point, when CQRS with MediatR is worth it, cross-cutting concerns as pipeline behaviours, minimal APIs grouped by feature, keeping DbContext in Infrastructure, health checks and structured logging, WebApplicationFactory integration tests, and when AOT pays off."
+}

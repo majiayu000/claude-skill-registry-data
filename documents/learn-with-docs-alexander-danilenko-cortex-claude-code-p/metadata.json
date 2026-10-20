@@ -1,0 +1,38 @@
+{
+  "name": "learn-with-docs",
+  "repo": "alexander-danilenko/cortex-claude-code-plugins",
+  "path": "plugins/engineering/cortex-knowledge/skills/learn-with-docs/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/alexander-danilenko/cortex-claude-code-plugins",
+  "dir_name": "learn-with-docs-alexander-danilenko-cortex-claude-code-p",
+  "downloaded_at": "2026-10-20T03:48:38.745646Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, documentation",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "alexander-danilenko",
+  "source_url": "https://github.com/alexander-danilenko/cortex-claude-code-plugins/blob/main/plugins/engineering/cortex-knowledge/skills/learn-with-docs/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/alexander-danilenko/cortex-claude-code-plugins/blob/main/plugins/engineering/cortex-knowledge/skills/learn-with-docs/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Capture a solved, verified problem as a durable learning in `docs/solutions/` so the next agent or engineer does not repeat the mistake or redo the investigation, and keep the `CONCEPTS.md` glossary in step. Use after a fix, debugging session, or design decision whose reasoning is not readable from the final code, tests, or existing docs \u2014 \"document this\", \"write up what we learned\", \"capture this learning\", \"add it to solutions\", \"that worked, save it for next time\". Writes nothing for routine fixes the code already explains. For auditing or cleaning up existing learnings, use `learn-with-docs-refresh`."
+}

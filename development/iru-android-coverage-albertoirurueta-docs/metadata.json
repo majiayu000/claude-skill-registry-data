@@ -1,0 +1,38 @@
+{
+  "name": "iru-android-coverage",
+  "repo": "albertoirurueta/docs",
+  "path": ".claude/skills/iru-android-coverage/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/albertoirurueta/docs",
+  "dir_name": "iru-android-coverage-albertoirurueta-docs",
+  "downloaded_at": "2026-10-20T03:47:12.347728Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "platform",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-android-coverage/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-android-coverage/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generate an Android/Kotlin module's unit-test line/branch coverage report \u2014 preferring the Kover Gradle plugin's `koverXmlReportDebug` task when it's applied, falling back to the Android Gradle Plugin's own `createDebugUnitTestCoverageReport` (enabled by `buildTypes { debug { enableUnitTestCoverage = true } }`) when Kover isn't wired, and falling back further to running `testDebugUnitTest` and converting the raw `.exec` (globbed under `build/outputs/unit_test_code_coverage/` first, then `build/jacoco/`) with a vendored `jacoco-*/lib/jacococli.jar` when neither Gradle-native path emits XML \u2014 then parses the resulting JaCoCo-format XML report to report exact line/branch coverage percentages and uncovered line numbers for the requested scope. Invoke as `/iru-android-coverage [scope]`, where `[scope]` is one or more class simple names or `src/main/...` source paths (comma-separated), or with no argument to report the whole module's (`lib` by default) coverage. Detects which of the three coverage paths is actually wired before running anything and reports \"coverage not wired\" (naming exactly what's missing) rather than a false 0%/100% when none is configured. Never runs instrumented (`connectedAndroidTest`) coverage unless the prompt explicitly asks for it with a device attached; an existing `build/reports/coverage/androidTest/debug/connected/report.xml` is only read and reported for information when it's already on disk. Use whenever the user wants to check, or verify a bar (e.g. \"at least 80% line coverage\") for, an Android/Kotlin class, source path, or whole module, instead of eyeballing Gradle console output."
+}

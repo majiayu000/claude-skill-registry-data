@@ -1,0 +1,36 @@
+{
+  "name": "draft-post",
+  "repo": "cheneeheng/ceh-claude-code-library",
+  "path": "plugins/standalone/ceh-blog/skills/draft-post/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/cheneeheng/ceh-claude-code-library",
+  "dir_name": "draft-post",
+  "downloaded_at": "2026-10-20T04:31:01.605189Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cheneeheng",
+  "source_url": "https://github.com/cheneeheng/ceh-claude-code-library/blob/main/plugins/standalone/ceh-blog/skills/draft-post/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cheneeheng/ceh-claude-code-library/blob/main/plugins/standalone/ceh-blog/skills/draft-post/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Load this skill when drafting a new blog post from a topic, repo, or idea (interview first) or from notes or an outline (draft straight away). Trigger on \"write a blog post about this repo\", \"turn these notes into a post\", \"interview me for a blog post\". Not for an existing draft."
+}

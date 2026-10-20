@@ -1,0 +1,39 @@
+{
+  "name": "iru-php-code-quality",
+  "repo": "albertoirurueta/docs",
+  "path": ".claude/skills/iru-php-code-quality/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/albertoirurueta/docs",
+  "dir_name": "iru-php-code-quality-albertoirurueta-docs",
+  "downloaded_at": "2026-10-20T03:47:12.711554Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, framework, build",
+    "score": 4,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-php-code-quality/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-php-code-quality/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run this project's wired PHP static-analysis and coding-style tools \u2014 PHPStan (including Larastan, `szepeviktor/phpstan-wordpress`, and PrestaShop's `prestashop/php-dev-tools` config, honoring the project's baseline) with `--error-format=json`, Psalm (`--output-format=json`), Laravel Pint (`--test` with a JSON report file), PHP-CS-Fixer (`check`/`fix --dry-run --diff --format=json`), PHP_CodeSniffer (`phpcs --report=json` with whatever standards `phpcs.xml(.dist)` references \u2014 WordPress/WordPress-Extra/WordPress-Docs, PHPCompatibilityWP, PSR12, PER), and Rector (`process --dry-run --output-format=json`) when configured \u2014 then report every issue found (file, line, rule id/identifier, message), grouped by tool and classified by rule id. Detects the project's flavor (Laravel application, WordPress plugin or theme, PrestaShop module, or plain Composer library) from `composer.json` and file markers (`artisan`, a `Plugin Name:` header, `style.css` `Theme Name:`/`theme.json`, a class that `extends Module`/`config.xml`) to know which tools to expect and which rule-id prefixes matter, and verifies each tool is actually installed and configured before trusting a \"zero issues\" result from it. Runs through whichever environment the project uses for PHP (host `php`, Laravel Sail, ddev, or wp-env). Invoke as `/iru-php-code-quality` to check the whole project, or `/iru-php-code-quality <path-or-glob>` to scope the run and the report \u2014 every one of these tools accepts paths, so a scoped invocation narrows what actually runs. When the prompt supplies a baseline (a prior per-rule-id issue count from an earlier run of this skill, e.g. captured by `iru-php-code-one-task-group` before a task group's changes), reports only the new-vs-baseline diff per rule id. Report-only: never fixes issues or edits tool configuration. Use whenever the user wants a static-analysis/style pass called out separately from `iru-php-test`/`iru-php-coverage`, instead of eyeballing `composer lint` output."
+}

@@ -1,0 +1,36 @@
+{
+  "name": "fespalier-offline",
+  "repo": "fespalier/fespalier",
+  "path": "skills/fespalier-offline/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/fespalier/fespalier",
+  "dir_name": "fespalier-offline",
+  "downloaded_at": "2026-10-20T05:19:56.558344Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category data scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "data"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fespalier",
+  "source_url": "https://github.com/fespalier/fespalier/blob/main/skills/fespalier-offline/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fespalier/fespalier/blob/main/skills/fespalier-offline/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Offline-first fespalier apps (since 0.10.0, the pure-Dart core of fespalier_cratestack) \u2014 deciding what a write is (a row the user owns, merged field by field; a decision only the server makes, queued as an intent; or online-only), reads through ref.serve with Served (network or local, fetchedAt, stale, neverFetched) and the networkFirst, cacheFirst, localOnly and serverOnly policies, the IntentQueue (submit, Accepted or Queued, idempotency keys, per-subject order, pendingIntents for a waiting banner), OwnedRows with a hybrid logical clock and RowSync, SyncEngine and autoSync with the start, resume, reconnect and tick triggers, LocalStore and ReadCache, the sign-out wipe, and testing offline. Load before making a screen or a write work without a network, adding sync, an offline banner or a pending-changes indicator, or when a queued change never sends, sends twice or shows success too early."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "idea-level",
+  "repo": "codezeroexe/levels",
+  "path": "skills/idea-level/SKILL.md",
+  "github_branch": "main",
+  "category": "agent",
+  "source": "github.com/codezeroexe/levels",
+  "dir_name": "idea-level",
+  "downloaded_at": "2026-10-20T04:39:18.489066Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "agent",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for agent: agent, sub-agent",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "agent",
+      "sub-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "codezeroexe",
+  "source_url": "https://github.com/codezeroexe/levels/blob/main/skills/idea-level/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/codezeroexe/levels/blob/main/skills/idea-level/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Brainstorm project ideas to a chosen depth on a 5-level scale, from a raw list to a build-ready blueprint. Asks for constraints first, generates and challenges ideas on Opus, then delegates research and write-ups to Haiku or Sonnet. Use when the user runs /idea-level or asks to brainstorm, find or develop project ideas."
+}

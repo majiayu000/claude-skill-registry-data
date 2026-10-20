@@ -1,0 +1,37 @@
+{
+  "name": "incidents",
+  "repo": "cheneeheng/ceh-claude-code-library",
+  "path": "archive/ceh-ops/skills/incidents/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/cheneeheng/ceh-claude-code-library",
+  "dir_name": "incidents-cheneeheng-ceh-claude-code-libr",
+  "downloaded_at": "2026-10-20T04:31:00.134239Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "ci",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cheneeheng",
+  "source_url": "https://github.com/cheneeheng/ceh-claude-code-library/blob/main/archive/ceh-ops/skills/incidents/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cheneeheng/ceh-claude-code-library/blob/main/archive/ceh-ops/skills/incidents/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Load this skill when responding to a production incident, writing a post-mortem, executing a hotfix, or classifying incident severity. Auto-load whenever a production issue is reported, a P1/P2/P3 classification is needed, a hotfix branch is being created, or a post-mortem document is being written. Not for routine deploys (see deploy) or git tagging (see ceh-git-workflow)."
+}

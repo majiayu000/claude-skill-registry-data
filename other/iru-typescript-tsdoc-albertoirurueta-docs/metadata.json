@@ -1,0 +1,38 @@
+{
+  "name": "iru-typescript-tsdoc",
+  "repo": "albertoirurueta/docs",
+  "path": ".claude/skills/iru-typescript-tsdoc/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/albertoirurueta/docs",
+  "dir_name": "iru-typescript-tsdoc-albertoirurueta-docs",
+  "downloaded_at": "2026-10-20T03:47:12.880853Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-typescript-tsdoc/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-typescript-tsdoc/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audit given TypeScript file(s)/scope for complete TSDoc coverage on every exported function, class, interface, type alias, and enum (React components' props interfaces and hooks, Angular components/services/inputs/outputs, NestJS controllers/route handlers/services/DTOs/modules/guards/pipes, and Next.js exported components/pages/layouts/server actions/route handlers/hooks included) \u2014 `/** ... */` with `@param`/`@returns`/`@throws` where applicable and `@example` on public entry points \u2014 generate any missing or incomplete TSDoc grounded in the actual code and current changes, then run the project's own doc-build tooling (TypeDoc or Compodoc, whichever the project uses \u2014 Compodoc is common on NestJS) to confirm the result builds without warnings/errors; for NestJS, Next.js, and React Native apps, where neither tool is guaranteed to be installed, it verifies with whichever one the project actually configured and reports the run as audit-only when neither is. Invoke as `/iru-typescript-tsdoc <path-or-glob>` (comma-separated paths/globs accepted), or `/iru-typescript-tsdoc` with no argument to scope to files touched by uncommitted changes plus commits on the current branch not yet on the base branch. Works against any TypeScript project (npm/TypeScript library, React, Angular, Ionic, a Vaadin Hilla frontend, NestJS, Next.js, or a React Native app on either toolchain \u2014 `expo` or a bare React Native CLI/`metro` app, with TypeDoc entry points limited to the in-scope TypeScript files so the native `android/`/`ios/` projects, `.expo/`, config files and the root `index.js`/`index.ts` registration entry never enter the run, and audit-only when the app has no TypeDoc configured) \u2014 it detects the project's flavor and doc toolchain at runtime rather than assuming one. Use whenever the user wants TSDoc completeness checked and filled in for specific files, instead of relying on a full docs-site build to surface gaps."
+}

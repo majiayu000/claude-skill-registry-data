@@ -1,0 +1,38 @@
+{
+  "name": "iru-setup-php-gitignore",
+  "repo": "albertoirurueta/docs",
+  "path": ".claude/skills/iru-setup-php-gitignore/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/albertoirurueta/docs",
+  "dir_name": "iru-setup-php-gitignore-albertoirurueta-docs",
+  "downloaded_at": "2026-10-20T03:47:19.402647Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, integration, playwright",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "integration",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-setup-php-gitignore/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-setup-php-gitignore/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Create or update the root `.gitignore` file for a PHP/Composer project \u2014 `vendor/`, Composer credentials (`auth.json`), PHPUnit/Pest caches (`.phpunit.cache/`, `.phpunit.result.cache`), report output (`build/` holding `build/logs/clover.xml`/`junit.xml` and coverage HTML), quality-tool caches (PHP-CS-Fixer, PHPCS, a PHPStan `tmpDir` inside the project), env files (keeping `.env.example`), OS and editor noise, the repository-wide `.integration-test.lock/` directory, the UI tests' screenshot directory `.ui-screenshots/` (every flavor renders UI) \u2014 and, when detected, flavor-specific paths for a Laravel application (following the Laravel skeleton's own `.gitignore`: `public/build`, `public/hot`, `public/storage`, `storage/*.key`, IDE-helper files), a WordPress plugin or block theme (`node_modules/`, `@wordpress/scripts` `build/` output, release `*.zip`, `.wp-env.override.json`), Playwright browser UI test output (`test-results/`, `playwright-report/`, `blob-report/`, `/playwright/.cache/`, plus `@wordpress/scripts`' `artifacts/` for WordPress), a PrestaShop module (`config_*.xml` caches, release `*.zip`, while `config.xml` stays tracked), and an Antora docs build. Never ignores `composer.lock` (committed for apps, plugins, themes, and modules alike). Invoke as `/iru-setup-php-gitignore`, optionally with an `args` line setting `on-existing` to `ask`/`keep`/`update`/`replace` (default `ask`) for scripted runs. Announces whether it is creating `.gitignore` from scratch or updating an existing one; if one already exists it never overwrites it silently \u2014 it warns, shows the proposed merge as a diff, and asks Update (merge, keeping hand-added entries) / Keep as is / Replace (template only, hand-added entries lost). Mirrors `iru-setup-typescript-gitignore` and `iru-setup-java-gitignore` for the PHP ecosystem. Use whenever a Laravel, WordPress, PrestaShop, or plain Composer project needs a `.gitignore` bootstrapped from scratch, or an existing one checked against this house template without touching it unless the user approves."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "iru-python-coverage",
+  "repo": "albertoirurueta/ai-catalog",
+  "path": ".claude/skills/iru-python-coverage/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/albertoirurueta/ai-catalog",
+  "dir_name": "iru-python-coverage",
+  "downloaded_at": "2026-10-20T03:46:48.430140Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, pytest, integration",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "pytest",
+      "integration"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/ai-catalog/blob/main/.claude/skills/iru-python-coverage/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/ai-catalog/blob/main/.claude/skills/iru-python-coverage/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run a Python project's container-free pytest suite (FastAPI, Django with pytest-django, or a plain library) with coverage.py via pytest-cov \u2014 falling back to `coverage run -m pytest` + `coverage xml` when pytest-cov isn't installed \u2014 through whichever environment runner the project uses (`uv run --frozen`, `poetry run`, `pdm run`, `pipenv run`, `.venv/bin/python -m`, plain `python -m`), write a Cobertura report to `build/coverage/coverage.xml`, and read it with a small stdlib Python parser to report the exact line % and branch % (plus coverage.py's combined figure, the one `fail_under` compares) for the total and per file, with uncovered line ranges and partial branches for files under the bar. Only container-free tests count toward the gate \u2014 the `integration` marker (or `tests/integration/` directory) is always deselected, so the number is reproducible without Docker; integration coverage is measured only on explicit request and labeled as not the gate value. Honors the project's `[tool.coverage.run] source`/`omit`/`branch`, adds `--cov-branch`, neutralizes `fail_under` during the run (`--cov-fail-under=0`) so the skill compares against the requested bar itself, and reports \"coverage not wired\" instead of a false 0%. Invoke as `/iru-python-coverage [selector] [targets]` \u2014 `[selector]` uses `iru-python-test`'s syntax (paths, node ids, `-k \"<expr>\"`), `[targets]` is a comma-separated list of source files, directories, or dotted modules to report on (e.g. `app/services/books.py,apps.catalog`) \u2014 or `/iru-python-coverage` with no argument for whole-project coverage; a `bar: <N>` line sets the threshold (default 80). Use whenever the user (or a `iru-fastapi-*`/`iru-django-*` group skill via `iru-gate-runner`) wants to check, or verify a bar for, a Python file, package, or the whole project, instead of eyeballing `--cov-report=term-missing` output."
+}

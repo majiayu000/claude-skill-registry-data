@@ -1,0 +1,38 @@
+{
+  "name": "fespalier-migration",
+  "repo": "fespalier/fespalier",
+  "path": "skills/fespalier-migration/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/fespalier/fespalier",
+  "dir_name": "fespalier-migration",
+  "downloaded_at": "2026-10-20T05:19:56.758599Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fespalier",
+  "source_url": "https://github.com/fespalier/fespalier/blob/main/skills/fespalier-migration/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fespalier/fespalier/blob/main/skills/fespalier-migration/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Moving to fespalier and between its versions \u2014 upgrading an app from 0.19 to 0.20 (nothing breaks: an app with a data.dart, an action.dart or a deferred page regenerates app.g.dart, whose private names and DevTools sites now follow the folders, so a hot reload swaps in a route inserted anywhere, and a deferred route added or removed beside another, its page imported under a prefix named after its folder), 0.18 to 0.19 (nothing breaks for an app whose telemetry sinks extend FespalierTelemetry; native crash records can name their screen with otel_zone v0.7.0 and onScreen, optional; FespalierTelemetry gains commit, told before the new page is built, so a sink that implements it instead of extending adds the method; fespalier_sentry names its scope at the commit, not after the page's first frame, which changes the names on a few events from that frame; `otel: true` writes the OpenTelemetry wiring into the generated main() instead of your startup.dart, optional; every app regenerates app.g.dart, and a hot reload swaps in a regenerated route table), 0.17 to 0.18 (nothing breaks; four new telemetry attributes need one restart of the local telemetry stack for their tiles, fespalier_launch is new and opt-in: nothing changes for an app that does not list it, and so is fespalier_frb's ChangeCodec), 0.16 to 0.17 (a freezed extra needs ExtraCodec.of, and fsp warns when build_runner would delete lib/app.g.dart: output: lib/routes.g.dart is the way out), 0.15 to 0.16 (Flutter 3.35 and Dart 3.9 are the floor: upgrade Flutter, go_router's lower bound is 17.2.3; FespalierAdapter.onEnter is a getter, FespalierEnter? get onEnter, so an adapter with an onEnter method no longer compiles and changes it to the getter; AppRoutes.router passes go_router an onEnter only when an adapter has one, so go() then push() keeps both for every other app; an app with a router of its own passes onEnter: AppAdapters.handlesEnter ? AppRoutes.onEnter : null; an upload ends Failed(other), an unknown outcome, after a 5xx, 408 or 499 and Failed(storage) when its registry entry cannot be saved; a CrateStack 5xx without an envelope keeps the intent's key and reads as offline; a request with a body is sent again after a 401 through DioHttpClient; a download that cannot reach its credentials offline is Failed(network), not Failed(unauthorized); a paused download resumes from the freshly granted URL and gets one renewal per resume; an app with a links: section regenerates app.g.dart with AppRoutes.urlOf; test: a11y and the DevTools Adapters tab are opt-in and add nothing to an app that ignores them, a plugin that throws is an AsyncError that nothing retries, a notification tap while the app starts is opened once instead of lost, and fsp check refuses a step folder that is no Dart enum constant), 0.14 to 0.15 (fespalier_dio/http.dart and problem.dart are removed: import package:fespalier_http and add it at the same url and ref), 0.13 to 0.14 (fespalier_push tokens are PushToken, a revocation its own event), 0.12 to 0.13 (nothing to change: app.g.dart is unchanged, and the new packages are opt-in), 0.11 to 0.12 (opt-in ready(container) and attach(router, container) in startup.dart: the gate makes the app's ProviderContainer, runs ready before the router and attach after the adapters'; no change for an app that exports neither), 0.10 to 0.11 (an app with an observe.dart regenerates: RouteHooks.onEnter takes a RouteScope, the generated main passes the container to AppRoutes.attach, and a replace of a tree page keeps its page instance; a third-party telemetry sink with an exhaustive switch on TelemetryOp needs a TelemetryOp.custom case; AppAdapters, main: manual with adapters, FespalierAdapter.attach, extends not implements; forms moved out of fespalier into the fespalier_forms package: an app with a form() adds the dependency at the same url and ref and regenerates, fsp errors until then, and code that names ActionForm, FieldCodec, ActionFormMessages and the rest imports package:fespalier_forms; FieldErrors, validate() and optimistic() stay; form drafts, opt-in, regenerate every app with a form and reserve the key name draft; multi-page forms, opt-in: a const steps map in a section's action.dart, and only a map literal called steps beside a form() is read as one), 0.9 to 0.10 (no generator or runtime change: app.g.dart is unchanged; the docs moved from the README to docs/ pages and some fsp messages now cite them; the opt-in fespalier_tolgee and fespalier_cratestack packages), 0.8 to 0.9 (a third-party telemetry sink needs a TelemetryOp.auth case; every app regenerates app.g.dart with page names, each pageBuilder wrapped in namedPage so a NavigatorObserver sees the route pattern; an app with telemetry: true also has data providers that call data() through traceDataCall, and the data span starts first and is current; the opt-in fespalier_auth and fespalier_dio packages and fespalier: adapters:), 0.7 to 0.8 (the generated main(): app.dart, startup.dart and splash.dart at the app root, main: manual; hooks_riverpod ^3.2.1, the reserved freshness and dataCache names), 0.6 to 0.7 (the unknown_path warnings), 0.5 to 0.6 (remount, replace in the address bar), 0.4 to 0.5 (pumpRouter disposes the router, new reserved names), 0.3 to 0.4 (publish_to none, currentLocation follows push) or 0.2 to 0.3 (regenerate app.g.dart with the matching fsp, PrefetchHandle replacing the timed prefetch, shell transitions, Riverpod retry now inherited, NotFoundScope, the hidden RouteMatch) and adopting fespalier in an existing go_router app by mounting its tree inside your GoRouter with AppRoutes.mount(at:), one folder at a time, siblings with a compound path (nest = false) included. Load before bumping the fespalier package or fsp, when an upgrade changes behaviour or fails to compile, or when planning a go_router-to-fespalier migration."
+}

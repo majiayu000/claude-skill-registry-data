@@ -1,0 +1,38 @@
+{
+  "name": "token-mapping",
+  "repo": "arla6ka/design.how",
+  "path": "skills/token-mapping/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/arla6ka/design.how",
+  "dir_name": "token-mapping",
+  "downloaded_at": "2026-10-20T04:02:32.974825Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "arla6ka",
+  "source_url": "https://github.com/arla6ka/design.how/blob/main/skills/token-mapping/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/arla6ka/design.how/blob/main/skills/token-mapping/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use to report how hardcoded style values on a page, file or diff map onto a project's existing design tokens, such as \"are we using our tokens here\", \"which hardcoded colors map to which tokens\", a token audit or planning a token migration. It never edits. Replacing the values is build-design-system."
+}

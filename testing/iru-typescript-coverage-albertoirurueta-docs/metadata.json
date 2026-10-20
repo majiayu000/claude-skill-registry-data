@@ -1,0 +1,39 @@
+{
+  "name": "iru-typescript-coverage",
+  "repo": "albertoirurueta/docs",
+  "path": ".claude/skills/iru-typescript-coverage/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/albertoirurueta/docs",
+  "dir_name": "iru-typescript-coverage-albertoirurueta-docs",
+  "downloaded_at": "2026-10-20T03:47:20.000318Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, jest, e2e, playwright",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "test",
+      "jest",
+      "e2e",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-typescript-coverage/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-typescript-coverage/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run the project's TypeScript/JavaScript test runner (Vitest, Jest, or Angular's `ng test`) with coverage enabled, then read the exact coverage percentages from the generated `coverage/coverage-summary.json` (falling back to `coverage/lcov.info`'s `LF`/`LH`/`BRF`/`BRH` records via `awk` when the summary is missing or a specific file's row isn't in it) \u2014 reporting line/branch percentage totals, per-file percentages scoped to the given selector, and the uncovered line ranges (collapsed from consecutive `DA:<line>,0` records) for files under the bar. Also recognizes NestJS (`@nestjs/core` \u2014 the `test:cov` setup, i.e. Vitest + `@vitest/coverage-v8` on ESM, Jest `--coverage` on CommonJS \u2014 measured from the `*.spec.ts` unit suite only, with `*.module.ts`/`main.ts` wiring files excluded so they don't drag the number down) and Next.js (`next` \u2014 Vitest v8 coverage or Jest via `next/jest`; Playwright end-to-end tests are never run for coverage and never counted) and React Native for both toolchains (`expo` with the `jest-expo` preset, `metro` with `@react-native/jest-preset` or the legacy `react-native` preset \u2014 Jest's built-in coverage, with the native `android/`/`ios/` projects, `.expo/`, the `index.js`/`index.ts` registration entry, Metro/Babel/Jest/ESLint/Prettier config files, and test files excluded, and Maestro/Detox device e2e never run or counted). Invoke as `/iru-typescript-coverage [scope]`, where `[scope]` is a file path, a directory, or a name pattern \u2014 the same selector syntax as the `iru-typescript-test` skill's \u2014 or with no argument to run the whole suite and report whole-project coverage. Detects the test runner (Vitest, Jest, or Angular's `@angular/build:unit-test` builder) and package manager the same way `iru-typescript-test` does, and reports \"coverage not wired\" (naming the missing package/config) instead of a false 0%/100% when the coverage provider isn't installed. Use whenever the user wants to check, or verify a bar (e.g. \"at least 80% line coverage\") for, a TypeScript/JavaScript file, directory, or the whole project, instead of eyeballing a runner's console output."
+}

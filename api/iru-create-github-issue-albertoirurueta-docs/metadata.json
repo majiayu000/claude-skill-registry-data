@@ -1,0 +1,37 @@
+{
+  "name": "iru-create-github-issue",
+  "repo": "albertoirurueta/docs",
+  "path": ".claude/skills/iru-create-github-issue/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/albertoirurueta/docs",
+  "dir_name": "iru-create-github-issue-albertoirurueta-docs",
+  "downloaded_at": "2026-10-20T03:47:18.212820Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-create-github-issue/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-create-github-issue/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Draft and file a new GitHub issue that is ready to be picked up by the `/iru-issue`, `/iru-plan`, `/iru-code` flow. Runs the `iru-explore` skill first to ground the issue in the actual codebase, then asks the user for the purpose of the task to be implemented, then asks for additional context (linked URLs, attached files/documents, related issues), then asks for the task's due date (optional) and importance (trivial/minor/important/blocking), and folds whatever is provided into the issue body. Any provided file/document is not just read for context but actually attached to the created issue \u2014 small text files are embedded inline, larger or binary files (images, PDFs, etc.) are uploaded as release assets and linked, since GitHub's API has no direct issue-attachment endpoint. Classifies the issue as bug/feature/enhancement from the stated purpose and matches it against this repository's actual label set, drafts a title and body (Summary, Context, Acceptance criteria, Task details \u2014 due date, importance, and an estimated task difficulty from very easy to impossible based on everything gathered \u2014 References), and shows the draft for confirmation before filing it with `gh issue create` (or GitHub MCP tools if `gh` is unavailable). Invoke as `/iru-create-github-issue` or `/iru-create-github-issue <short description>`. Stops early if this repository isn't hosted on GitHub. Use when the user has an idea, bug report, or request that needs to become a well-formed, actionable GitHub issue before `/iru-issue` or `/iru-plan` can pick it up \u2014 not for issues that already exist (nothing to file) or repositories on Bitbucket/Azure DevOps/TFS/Jira (no issue-filing target this skill supports)."
+}

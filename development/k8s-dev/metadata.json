@@ -1,0 +1,38 @@
+{
+  "name": "k8s-dev",
+  "repo": "andreibesleaga/GABBE",
+  "path": "plugins/gabbe-ops/skills/k8s-dev/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/andreibesleaga/GABBE",
+  "dir_name": "k8s-dev",
+  "downloaded_at": "2026-10-20T03:55:09.854592Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, debug",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "andreibesleaga",
+  "source_url": "https://github.com/andreibesleaga/GABBE/blob/main/plugins/gabbe-ops/skills/k8s-dev/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/andreibesleaga/GABBE/blob/main/plugins/gabbe-ops/skills/k8s-dev/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Assistance with Remote Kubernetes Development (Telepresence, Okteto, DevSpace). Use when: k8s dev, remote dev, telepresence, okteto, devspace, tilt, scaffold, remote cluster."
+}

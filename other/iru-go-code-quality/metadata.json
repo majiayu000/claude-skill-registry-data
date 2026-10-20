@@ -1,0 +1,37 @@
+{
+  "name": "iru-go-code-quality",
+  "repo": "albertoirurueta/ai-catalog",
+  "path": ".claude/skills/iru-go-code-quality/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/albertoirurueta/ai-catalog",
+  "dir_name": "iru-go-code-quality",
+  "downloaded_at": "2026-10-20T03:46:47.186585Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/ai-catalog/blob/main/.claude/skills/iru-go-code-quality/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/ai-catalog/blob/main/.claude/skills/iru-go-code-quality/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run a Go module's wired static-analysis and style checks \u2014 golangci-lint v2 (`golangci-lint run --output.json.path \u2026`, a `version: \"2\"` config with `linters` and `formatters` sections; issues bucketed as `<linter>` or `<linter>:<rule>` \u2014 `revive:exported`, `gosec:G204`, `staticcheck:SA1019`, `govet:printf`, `errcheck`, `unused` \u2014 and the `gofmt`/`goimports`/`gofumpt`/`gci` formatters as their own rule ids), `go vet -json` (analyzer names, `govet:<analyzer>`), `gofmt -l` when golangci-lint isn't wired, and govulncheck (`-format json`, `govulncheck:<GO-ID>`, split into called / imported-only / required-only) when installed \u2014 in any Go project (command-line tool, library, service), modules and `go.work` workspaces alike. Verifies each tool is installed and configured before trusting a \"zero issues\" result, reports an unwired tool as \"not configured, skipped\" rather than a clean pass, rejects a v1 golangci-lint config as a tooling failure (with the `golangci-lint migrate` fix) instead of silently linting with defaults, and parses every report with one embedded stdlib Python parser into per-tool totals and per-rule-id counts with a `file:line \u2014 message` list. Invoke as `/iru-go-code-quality` to check the whole module, or `/iru-go-code-quality <file-or-dir>[,<file-or-dir>...]` to scope the report (golangci-lint runs on the containing packages, since Go type-checks whole packages, and findings outside the scope are filtered out; govulncheck is always module-wide). When the prompt supplies a `baseline:` (a prior per-tool/per-rule-id count or itemized list from an earlier run of this skill, e.g. captured by `iru-go-code-one-task-group` before a task group's changes), reports only the new-vs-baseline diff per rule id. Report-only: never runs `golangci-lint run --fix`, `golangci-lint fmt` without `--diff`, `gofmt -w`, `goimports -w`, or `go mod tidy`, and never edits `.golangci.yml`. Use whenever the user wants a Go lint/vet/vulnerability pass called out separately from `iru-go-test`/`iru-go-coverage`, instead of eyeballing golangci-lint console output."
+}

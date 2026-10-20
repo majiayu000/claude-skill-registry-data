@@ -1,0 +1,37 @@
+{
+  "name": "ar-board",
+  "repo": "dvwinck/capybara-toolbox",
+  "path": "plugins/ar-board/skills/ar-board/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/dvwinck/capybara-toolbox",
+  "dir_name": "ar-board",
+  "downloaded_at": "2026-10-20T05:05:22.496718Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dvwinck",
+  "source_url": "https://github.com/dvwinck/capybara-toolbox/blob/master/plugins/ar-board/skills/ar-board/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dvwinck/capybara-toolbox/blob/master/plugins/ar-board/skills/ar-board/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Starts a local approve/reject web panel (AR board) where the user judges many agent proposals one by one, then reads the decisions from disk. Use when the user wants to judge several options one at a time (ideas, templates, features, agent-architecture improvements, video themes, visual variations) with A/R keys and a comment per item, or wants to train an agent on their preferences. Triggers - /ar-board, /ar-board:ar-board, \"ar board\", \"AR board\", \"approve/reject board\", \"let me approve or reject options one by one\", \"review N proposals\", \"painel de aprova\u00e7\u00e3o\", \"me d\u00e1 10 op\u00e7\u00f5es pra eu aprovar/rejeitar\", \"quero escolher entre v\u00e1rias\", \"treina o agente com meu gosto\"."
+}

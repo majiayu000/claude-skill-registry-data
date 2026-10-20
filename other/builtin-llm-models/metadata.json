@@ -1,0 +1,38 @@
+{
+  "name": "builtin-llm-models",
+  "repo": "darrrkkk-crypto/Opencode-V2-Skills-Agents",
+  "path": "skills/builtin-llm-models/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/darrrkkk-crypto/Opencode-V2-Skills-Agents",
+  "dir_name": "builtin-llm-models",
+  "downloaded_at": "2026-10-20T04:50:34.389916Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=3, bash=3",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "api",
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "darrrkkk-crypto",
+  "source_url": "https://github.com/darrrkkk-crypto/Opencode-V2-Skills-Agents/blob/main/skills/builtin-llm-models/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/darrrkkk-crypto/Opencode-V2-Skills-Agents/blob/main/skills/builtin-llm-models/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Reference for Manus's built-in LLM catalog and how to call it correctly. Read this BEFORE writing any script that calls LLMs in bulk (summarization, translation, classification, extraction, deep analysis, judging/evaluation, map/parallel fan-out) on a Manus computer \u2014 the Sandbox, the user's local computer, or a Cloud Computer \u2014 AND before using the built-in LLM in a webdev project (invokeLLM / listLLMModels). Use it to discover which models exist, each model's price/capabilities, how to pick one, the exact request shapes (thinking/reasoning, JSON-schema structured output, vision, tools), and the per-model gotchas (max-token handling, reasoning syntax) verified against the live proxy."
+}

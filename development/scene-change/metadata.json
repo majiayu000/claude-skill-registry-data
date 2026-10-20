@@ -1,0 +1,38 @@
+{
+  "name": "scene-change",
+  "repo": "arxdsilva/agent-office",
+  "path": ".claude/skills/scene-change/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/arxdsilva/agent-office",
+  "dir_name": "scene-change",
+  "downloaded_at": "2026-10-20T04:04:14.275662Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "arxdsilva",
+  "source_url": "https://github.com/arxdsilva/agent-office/blob/main/.claude/skills/scene-change/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/arxdsilva/agent-office/blob/main/.claude/skills/scene-change/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Change the agent-office 3D scene at runtime \u2014 which wing, desk or room an agent uses, agent behavior and choreography, characters and animation playback, labels, lighting/render pipeline and quality presets, camera or walk controls. Use for any edit to packages/web/src/app/{building,seating,reservations,behavior,navigation,choreography,layout}.ts, packages/web/src/adapters/three/*, or shared/src/grouping.ts. For the Blender assets themselves use asset-change."
+}

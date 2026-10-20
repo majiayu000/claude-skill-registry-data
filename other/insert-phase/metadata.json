@@ -1,0 +1,37 @@
+{
+  "name": "insert-phase",
+  "repo": "buildomator/buildomator",
+  "path": "skills/insert-phase/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/buildomator/buildomator",
+  "dir_name": "insert-phase",
+  "downloaded_at": "2026-10-20T04:24:36.936494Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: planning=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "plan",
+      "roadmap"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "buildomator",
+  "source_url": "https://github.com/buildomator/buildomator/blob/master/skills/insert-phase/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/buildomator/buildomator/blob/master/skills/insert-phase/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Insert urgent work as decimal phase (e.g., 72.1) between existing phases"
+}

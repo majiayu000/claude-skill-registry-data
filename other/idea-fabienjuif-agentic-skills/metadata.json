@@ -1,0 +1,38 @@
+{
+  "name": "idea",
+  "repo": "fabienjuif/agentic-skills",
+  "path": "plugins/fabien-skills/skills/idea/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/fabienjuif/agentic-skills",
+  "dir_name": "idea-fabienjuif-agentic-skills",
+  "downloaded_at": "2026-10-20T05:16:04.643553Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=3, product=3",
+    "score": 3,
+    "runner_up": "product",
+    "runner_up_score": 3,
+    "signals": [
+      "docs",
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fabienjuif",
+  "source_url": "https://github.com/fabienjuif/agentic-skills/blob/main/plugins/fabien-skills/skills/idea/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fabienjuif/agentic-skills/blob/main/plugins/fabien-skills/skills/idea/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Quickly capture an idea about the current project into docs/IDEA.md \u2014 a \"what's next\" backlog. Ideas can be anything project-related, technical or not, horizontal (tooling, process, docs) or vertical (a feature). One dated entry with just enough context that a future session or human can pick it up cold. Also handles pruning (\"/idea unbloat\" \u2014 interactive curation where surviving ideas earn a survived \u00d7N marker) and prioritizing (\"/idea sort\" \u2014 an interactive triage session where the USER decides priority buckets, seeded by the survival counter, and the file is rewritten in that order). Use when the user says \"/idea\", \"capture this idea\", \"note this idea\", \"remember this for later\", \"add to the idea backlog\", \"/idea unbloat\", \"prune the ideas\", \"/idea sort\", \"help me prioritize the ideas\", or drops a \"what if / we could / someday / next we should\" thought they don't want to act on right now. For work to start now, use make-plan instead."
+}

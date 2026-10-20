@@ -1,0 +1,37 @@
+{
+  "name": "find-root-cause",
+  "repo": "cheneeheng/ceh-claude-code-library",
+  "path": "plugins/standalone/ceh-coding-conduct/skills/find-root-cause/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/cheneeheng/ceh-claude-code-library",
+  "dir_name": "find-root-cause-cheneeheng-ceh-claude-code-libr",
+  "downloaded_at": "2026-10-20T04:31:06.540468Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cheneeheng",
+  "source_url": "https://github.com/cheneeheng/ceh-claude-code-library/blob/main/plugins/standalone/ceh-coding-conduct/skills/find-root-cause/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cheneeheng/ceh-claude-code-library/blob/main/plugins/standalone/ceh-coding-conduct/skills/find-root-cause/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Load this skill when something is broken and no command has yet shown why, before any fix: reproduce it, kill hypotheses with evidence, name the cause. Trigger on \"debug this\", \"find and fix these bugs\", \"why is this failing\", an unexplained stack trace, or a second fix that did not hold."
+}

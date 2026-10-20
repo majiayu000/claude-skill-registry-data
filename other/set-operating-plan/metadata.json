@@ -1,0 +1,37 @@
+{
+  "name": "set-operating-plan",
+  "repo": "cheneeheng/ceh-claude-code-library",
+  "path": "plugins/standalone/ceh-business-plan/skills/set-operating-plan/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/cheneeheng/ceh-claude-code-library",
+  "dir_name": "set-operating-plan",
+  "downloaded_at": "2026-10-20T04:31:08.130700Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: planning=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "plan",
+      "roadmap"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cheneeheng",
+  "source_url": "https://github.com/cheneeheng/ceh-claude-code-library/blob/main/plugins/standalone/ceh-business-plan/skills/set-operating-plan/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cheneeheng/ceh-claude-code-library/blob/main/plugins/standalone/ceh-business-plan/skills/set-operating-plan/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Turns an agreed business plan into a 90-day operating plan of at most three objectives with owned key results and weekly inputs, called by ceh-business-plan:develop-business-plan."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "iru-rust-code-one-task",
+  "repo": "albertoirurueta/ai-catalog",
+  "path": ".claude/skills/iru-rust-code-one-task/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/albertoirurueta/ai-catalog",
+  "dir_name": "iru-rust-code-one-task",
+  "downloaded_at": "2026-10-20T03:46:53.775964Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/ai-catalog/blob/main/.claude/skills/iru-rust-code-one-task/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/ai-catalog/blob/main/.claude/skills/iru-rust-code-one-task/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Implement a single task from a Rust `implementation_plan.md`-style task list \u2014 just the implementation and its tests \u2014 in any Cargo package or workspace: an agent-friendly command-line tool scaffolded by `iru-setup-rust-cli` (logic in `src/lib.rs`, thin `src/main.rs`, clap 4, optional Ratatui UI, `tests/cli.rs`, `xtask/`) or any other Rust library, service or CLI. Detects at runtime, from `cargo metadata` and the manifests, the workspace vs. single-crate layout, lib/bin targets, edition and `rust-version` (MSRV), `rust-toolchain.toml`, clap derive vs. builder, ratatui/crossterm, tokio, the test crates (assert_cmd, predicates, snapbox/trycmd, insta, tempfile, testcontainers), the `[lints]`/`clippy.toml`/`rustfmt.toml`/`deny.toml` configuration, an `xtask` member, and whether the project follows the catalog's CLI contract (an exit-code enum mapped to `ExitCode`, `--format`/`--json`, a JSON error envelope) \u2014 then loads only the matching guidance from this skill's own `reference/` directory (always: Rust code style \u2014 edition 2024 rules, logic in the lib, naming, ownership, the lint set, no new dependencies \u2014 and testing \u2014 unit tests with injected writers, `assert_cmd` end-to-end tests with a cleared environment that still forwards `LLVM_PROFILE_FILE`, golden JSON, exit-code tables, no-TTY and `NO_COLOR` tests; as needed: error handling with `thiserror` and one failure\u2192exit-code mapping, rustdoc, the shared CLI contract, clap, output/colour/prompts/signals/broken pipe, Ratatui with `TestBackend`, the catalog's UI contract on Ratatui when a task touches the terminal UI \u2014 `Widget` components, `Action` events, lists rendering only the visible window, state \u00d7 direction \u00d7 theme UI tests captured as `.txt` into `.ui-screenshots/`, asserted accessibility checks at the `.ui-quality.yml` level \u2014, security \u2014 argv-only processes, path canonicalization, redacted secrets, `unsafe_code = \"forbid\"` \u2014 and async/tokio only when the project already uses it). Re-checks the current code state, implements exactly what the task specifies, writes/updates its tests, formats only its own files with rustfmt, compile-checks with `cargo check --all-targets --locked` (plus `--all-features` when the package has features), then \u2014 if the task didn't stop on a blocker \u2014 immediately checks off this task's own checkbox (and its sub-tasks') in `implementation_plan.md` with a \"group validation pending\" note, before handing back a short summary. Does not run tests, clippy, coverage, `cargo deny`, `cargo doc`, or license-header checks \u2014 those happen once per task group in `iru-rust-code-one-task-group`, which invokes this skill once per task (in parallel when the group allows it, through `iru-isolated-skill-executor`). Invoke as `/iru-rust-code-one-task <task description>`, passing the task's own text \u2014 including its exact `implementation_plan.md` checkbox line(s) \u2014 as the argument. The coding skill for plan tasks tagged `rust`."
+}

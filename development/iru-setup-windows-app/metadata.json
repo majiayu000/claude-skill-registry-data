@@ -1,0 +1,39 @@
+{
+  "name": "iru-setup-windows-app",
+  "repo": "albertoirurueta/ai-catalog",
+  "path": ".claude/skills/iru-setup-windows-app/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/albertoirurueta/ai-catalog",
+  "dir_name": "iru-setup-windows-app",
+  "downloaded_at": "2026-10-20T03:46:52.583319Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, framework, build",
+    "score": 4,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/ai-catalog/blob/main/.claude/skills/iru-setup-windows-app/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/ai-catalog/blob/main/.claude/skills/iru-setup-windows-app/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Scaffold a new Windows desktop app on .NET 10 / C# 14 at the repository root \u2014 `global.json` (SDK pinned, `rollForward: latestFeature`), `Directory.Build.props` (the app `<Version>` `x.y.z[-dev]`, nullable, implicit usings, warnings as errors, `AnalysisLevel latest-recommended`, code style enforced in the build, XML docs, `EnableWindowsTargeting` so WPF/WinForms build on Linux/macOS, one SARIF analyzer log per project), central package management in `Directory.Packages.props` (StyleCop.Analyzers as a `GlobalPackageReference`), `.editorconfig`, `stylecop.json`, an `<AppName>.slnx` solution, a UI-framework-free `src/<AppName>.Core` (`net10.0`: `Services/`, plus `ViewModels/` with CommunityToolkit.Mvvm 8.4 partial-property `[ObservableProperty]`/`[RelayCommand]` for `architecture: mvvm`, or `Models/` + `Controllers/` + a passive-view `Views/IMainView.cs` for `architecture: mvc`), the `src/<AppName>` UI project per `ui` \u2014 `wpf` (`{Binding}` + `DataContext`, Fluent `ThemeMode`), `winui` (WinUI 3 / Windows App SDK 2.x, `x:Bind`, Mica, single-project MSIX `Package.appxmanifest`, publish profiles) or `winforms` (designer-compatible `MainForm.Designer.cs`, PerMonitorV2, system color mode; `mvc` passive view or `mvvm` `BindingSource` + `Button.Command`) \u2014 all composed with the Generic Host, an `app.manifest` (`asInvoker`, Windows 10/11, PerMonitorV2 for WPF/WinUI), an MSTest 4 + coverlet `tests/<AppName>.Core.Tests` project at 100% Core line coverage, `tests/coverlet.runsettings` (cobertura + opencover, UI assembly excluded = \"not measured\"), an optional FlaUI `tests/<AppName>.UITests` project (`[TestCategory(\"UI\")]`, Windows only) that \u2014 per the catalog's UI contract \u2014 renders the main screen in every left-to-right/right-to-left \u00d7 light/dark combination (launch arguments `--ui-direction`/`--ui-theme` applied by the app's `UiTestOptions`), captures it into `.ui-screenshots/` through the shared `UiScreenshots` helper and runs an Axe.Windows accessibility scan at the level of a root `.ui-quality.yml` (written for every `ui`), a DocFX `docfx.json` for the Core API, generated placeholder icon/tile PNGs, and for WPF/WinForms with `msix: yes` a `packaging/` folder (`AppxManifest.xml` with an `x.y.z.0` identity version + `build-msix.ps1`: publish per RID \u2192 makeappx \u2192 signtool). Invoke as `/iru-setup-windows-app`. Accepts pre-resolved inputs via `args` (`key: value` lines) \u2014 `ui` (`wpf`/`winui`/`winforms`), `architecture` (`mvvm`/`mvc`; WPF and WinUI are `mvvm` only), `app-name` (PascalCase, also solution/project/assembly name), `display-name`, `root-namespace`, `publisher` (`CN=\u2026`), `publisher-display-name`, `package-name`, `version`, `rids` (default `win-x64;win-arm64`), `msix` (`yes`/`no`), `ui-tests` (`flaui`/`none`), `branching` (`gitflow`/`main-only`), `accessibility` (`enforce`/`report`/`off`/`none`, default `enforce`), `license`, `developer-name`, `developer-email`, `organization-url`, `open-source`, `visibility`, `ci`, `sonar` (+ `sonar-organization`/`sonar-project-key`/`sonar-host-url`), `distribution` (`none`/`internal`/`store`), `mode` (`new`/`existing`) and `on-existing` (`ask`/`keep`/`update`/ `replace`) \u2014 so `iru-setup-windows-repository` can supply them without re-prompting. Announces whether it is scaffolding from scratch or updating; for every file group it owns that already exists it warns and asks Update / Keep as is / Replace / Stop (unless `on-existing` decides), never overwrites hand-written source, and treats a foreign layout (a single-project `dotnet new wpf` app, a `.sln` with other projects, a `.wapproj` packaging project) as foreign \u2014 add alongside or stop, never convert. Every version is looked up at run time (NuGet flat-container API, .NET release metadata) with a verified 2026-10-16 fallback table. Use whenever a new WPF, WinUI 3 or Windows Forms app repository needs its solution, quality tooling, tests, docs and packaging bootstrapped from this house template."
+}

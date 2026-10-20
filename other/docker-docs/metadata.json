@@ -1,0 +1,38 @@
+{
+  "name": "docker-docs",
+  "repo": "docker/skills",
+  "path": "skills/docker-docs/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/docker/skills",
+  "dir_name": "docker-docs",
+  "downloaded_at": "2026-10-20T05:00:08.134664Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "docker",
+  "source_url": "https://github.com/docker/skills/blob/main/skills/docker-docs/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/docker/skills/blob/main/skills/docker-docs/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this skill to answer questions about any Docker product from current official Docker documentation instead of memory, even if the user just asks \"how do I\u2026\", \"does Docker support\u2026\", \"what's the flag for\u2026\", or \"is this still the right way\" about Docker. Covers Docker Desktop, Engine, Build/Buildx/Build Cloud, Compose, Hub, Scout, Docker Hardened Images (DHI), Offload, Testcontainers, Docker Sandboxes (`sbx`, local and cloud sandboxes, Sandboxes API/SDK), Docker Agentic Platform, Docker Agent, MCP Catalog/Toolkit/Gateway, Model Runner, Gordon, and account, admin, security, and billing docs. Searches with the `search_docker_docs` MCP tool when available and otherwise falls back to `docs.docker.com/llms.txt` and per-page Markdown."
+}

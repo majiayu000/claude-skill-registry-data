@@ -1,0 +1,37 @@
+{
+  "name": "fespalier-routing",
+  "repo": "fespalier/fespalier",
+  "path": "skills/fespalier-routing/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/fespalier/fespalier",
+  "dir_name": "fespalier-routing",
+  "downloaded_at": "2026-10-20T05:19:56.226503Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fespalier",
+  "source_url": "https://github.com/fespalier/fespalier/blob/main/skills/fespalier-routing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fespalier/fespalier/blob/main/skills/fespalier-routing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "How a fespalier folder tree becomes URLs and typed routes \u2014 static, dynamic ($id), catch-all ($$rest, $$$rest) and (group) folders, _private folders, typed and enum segments, query parameters, sibling order and unreachable routes, not_found.dart, route.dart (caseSensitive, localized paths, nest = false for a sibling with a compound path, linkable = false to keep a folder out of fsp links, remount to start a page again when its URL changes, and deferred to load a page's code on demand on the web), navigator.dart and present.dart for the root navigator, the generated typed routes (.go, .push, .location, locationFor), RouteLink (a typed link that is a real anchor on the web and can preload its page's data), typed extra with extra_codec.dart, and the route manifest with meta.dart. The texts in the route's language, with a $lang folder and a language menu, are fespalier-i18n (since 0.10.0). Notification taps that open routes are fespalier_push (since 0.13.0). Home-screen shortcut and widget taps that open routes are fespalier_launch (since 0.18.0). Load before adding or renaming a route folder, changing a segment's type, writing a link between pages (RouteLink), or when a URL shows not_found.dart instead of its page."
+}

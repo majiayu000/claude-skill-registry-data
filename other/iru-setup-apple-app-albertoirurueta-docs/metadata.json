@@ -1,0 +1,39 @@
+{
+  "name": "iru-setup-apple-app",
+  "repo": "albertoirurueta/docs",
+  "path": ".claude/skills/iru-setup-apple-app/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/albertoirurueta/docs",
+  "dir_name": "iru-setup-apple-app-albertoirurueta-docs",
+  "downloaded_at": "2026-10-20T03:47:10.556923Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=4, platform=4",
+    "score": 4,
+    "runner_up": "platform",
+    "runner_up_score": 4,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-setup-apple-app/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-setup-apple-app/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Scaffold a new native Apple app (iOS/iPadOS/macOS/watchOS/visionOS, Swift 6) at the repository root \u2014 a generator manifest (XcodeGen's `project.yml`, or Tuist's `Project.swift` + `Tuist.swift`) declaring one application target `<AppName>-<Platform>` (scheme of the same name) per selected platform with `MARKETING_VERSION`/ `CURRENT_PROJECT_VERSION`, `SWIFT_STRICT_CONCURRENCY = complete`, Info.plist keys and a pinned test host; a shared UI-framework-free `Packages/Core` local SwiftPM package (Foundation + Observation only: `Models/`, `Services/`, plus `ViewModels/` for `architecture: mvvm` or `Controllers/` + a passive-view protocol for `architecture: mvc`) whose Swift Testing suite covers 100% of its lines; per-platform `Targets/<Platform>/{Sources,Tests,UITests}` \u2014 SwiftUI `App` + MVVM screen, or for the iOS/iPadOS target with `ui: uikit` a programmatic UIKit app (`AppDelegate` + `UIWindowSceneDelegate` with a scene manifest, `UINavigationController` root, `UIViewController` laid out in code, `mvc` controller core or `mvvm` with UIKit Observation tracking, `UIObservationTrackingEnabled` below iOS 26); a `--uitesting` launch argument and accessibility identifiers on every control; a Swift Testing unit-test target and an XCUITest UI-test target per platform \u2014 per the catalog's UI contract, a `.ui-quality.yml` at the root, the shared `Tests/Support/UIScreenshots.swift` capture helper compiled into both test targets, and a UI test that captures the sample screen in every left-to-right/right-to-left \u00d7 light/dark cell into `.ui-screenshots/` and runs `performAccessibilityAudit()` at the configured level \u2014 watchOS companion-app wiring when `ios` and `watchos` are both selected, `.swiftlint.yml`, `.swift-format`, an optional `fastlane/Fastfile` with lanes gated by `signing`/ `distribution`, and `sonar-project.properties` (omitted when `sonar: none`). The generated `.xcodeproj`/ `.xcworkspace` is never committed. Invoke as `/iru-setup-apple-app`. Accepts pre-resolved inputs via `args` (`key: value` lines) \u2014 `app-name`, `bundle-id-prefix`, `platforms` (multi-select: `ios`, `ipados`, `macos`, `watchos`, `visionos` \u2014 `ipados` widens the iOS target's `TARGETED_DEVICE_FAMILY` rather than adding a target; tvOS is not supported), `ui` (`swiftui`/`uikit`, iOS/iPadOS target only, default `swiftui`), `architecture` (`mvvm`/`mvc`; `mvc` only with `uikit`), `generator` (`xcodegen`/`tuist`), `min-deployment-target`, `distribution` (`none`/`internal`/`store`), `signing` (`fastlane-match`/`api-key`/`none`), `license`, `developer-name`, `developer-email`, `organization-url`, `open-source`, `sonar` (+ `sonar-organization`/ `sonar-project-key`/`sonar-host-url`), `visibility`, `ci`, `accessibility` (`enforce`/`report`/`off`, default `enforce`), `on-existing` (`ask`/`keep`/`update`/`replace`) and `mode` (`new`/`existing`) \u2014 so an orchestrating skill can supply them without re-prompting; stand-alone it asks `open-source` first and derives the `sonar` default from it. Announces whether it is scaffolding from scratch or updating; for each owned file that already exists it warns and asks Update / Keep as is / Replace / Stop (unless `on-existing` decides) and never overwrites hand-written source. Versions are looked up at run time with a dated October 2026 fallback table. Equivalent to `iru-setup-android-app`/`iru-setup-react-native-app` for the native Apple stack; use `iru-setup-macos-app` for a macOS-only (SwiftUI or AppKit) desktop app and `iru-setup-swift-library` for a pure SwiftPM library. Use whenever a new native iOS/iPadOS/macOS/watchOS/visionOS application needs its project manifest, testable core, tests, lint/format config and Fastlane/Sonar tooling bootstrapped from this house template."
+}

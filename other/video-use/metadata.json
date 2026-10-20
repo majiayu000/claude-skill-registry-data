@@ -1,0 +1,37 @@
+{
+  "name": "video-use",
+  "repo": "akillness/jeo-skills",
+  "path": ".agent-skills/video-use/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/akillness/jeo-skills",
+  "dir_name": "video-use",
+  "downloaded_at": "2026-10-20T03:46:17.715865Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "akillness",
+  "source_url": "https://github.com/akillness/jeo-skills/blob/main/.agent-skills/video-use/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/akillness/jeo-skills/blob/main/.agent-skills/video-use/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Drive browser-use/video-use, the open-source conversational video editor for Claude Code, Codex, and coding agents. Drop raw footage into a directory and edit by natural language chat: transcribe and build packed phrase-level transcripts (takes_packed.md), cut filler words and dead space, auto color grade segments, apply 30ms audio fades at cuts, burn custom styled subtitles last in the filter chain, spawn animation overlays (HyperFrames, Remotion, Manim, PIL) via parallel sub-agents, self-evaluate cut boundaries with timeline_view before presentation, and persist session memory in project.md. Use when the user asks to edit raw video footage with Claude Code, cut filler words, color grade, burn subtitles, generate video overlays, or run conversational video editing. Triggers on: video-use, video use, edit video with Claude, conversational video editor, cut filler words, auto color grade, timeline_view, takes_packed.md, edit/final.mp4."
+}

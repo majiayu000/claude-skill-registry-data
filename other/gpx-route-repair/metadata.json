@@ -1,0 +1,37 @@
+{
+  "name": "gpx-route-repair",
+  "repo": "equationzhao/gpx-route-repair",
+  "path": "skills/gpx-route-repair/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/equationzhao/gpx-route-repair",
+  "dir_name": "gpx-route-repair",
+  "downloaded_at": "2026-10-20T05:11:42.452619Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "equationzhao",
+  "source_url": "https://github.com/equationzhao/gpx-route-repair/blob/main/skills/gpx-route-repair/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/equationzhao/gpx-route-repair/blob/main/skills/gpx-route-repair/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Repair off-road shortcuts, straight lines through hills, missed bends, and incorrect turnarounds in GPX or Strava routes using OpenStreetMap, public rides or segments, and imagery. Deliver an importable planning GPX, or estimate ascent with tunnel elevation artifacts corrected. Use for route planning, not activity synchronization or uploading rides."
+}

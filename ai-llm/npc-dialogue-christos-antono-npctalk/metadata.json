@@ -1,0 +1,38 @@
+{
+  "name": "npc-dialogue",
+  "repo": "christos-antono/NPCTalk",
+  "path": ".agents/skills/npc-dialogue/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/christos-antono/NPCTalk",
+  "dir_name": "npc-dialogue-christos-antono-npctalk",
+  "downloaded_at": "2026-10-20T04:33:58.642026Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: ai, llm, prompt",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "christos-antono",
+  "source_url": "https://github.com/christos-antono/NPCTalk/blob/main/.agents/skills/npc-dialogue/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/christos-antono/NPCTalk/blob/main/.agents/skills/npc-dialogue/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write what NPCs say with an LLM so they sound like themselves and like the game. Covers persona files, a fresh random sample of the character's own lines in every prompt, scene facts (place, time, weather, what the player holds or drives, danger), per-NPC conversation history, short spoken output with one delivery tag for the voice model, doing what the player tells them, fast models with reasoning off, and cleaning the output (refusals, name prefixes, length, slur rules). Use when NPC replies sound generic, robotic, too long, preachy or out of character, refuse, break the game's tone, or come back too slowly, or when adding a new character's persona."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "todoIdealPrompt",
+  "repo": "blackorange0506/prompt-todo",
+  "path": "template/.claude/skills/todoIdealPrompt/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/blackorange0506/prompt-todo",
+  "dir_name": "todoidealprompt",
+  "downloaded_at": "2026-10-20T04:18:12.321475Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, copy",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "writing",
+      "copy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "blackorange0506",
+  "source_url": "https://github.com/blackorange0506/prompt-todo/blob/main/template/.claude/skills/todoIdealPrompt/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/blackorange0506/prompt-todo/blob/main/template/.claude/skills/todoIdealPrompt/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Distill a finished TODO-item dialog into the IDEAL PROMPT \u2014 the single SHORT message (a few typeable lines, never a spec) that would have produced the confirmed result on the first try \u2014 plus feedback on what the original prompt lacked. Prompt-writing training for the user: Claude reconstructs the whole back-and-forth (original prompt, every correction, the final accepted fix) and writes the prompt it wishes it had received. With --replace, the item's text in the user's todo file (TODO.<git user.name>.md, resolved as in the todo rules) is replaced by the ideal prompt; without a flag, only the ` (N/5)` score of the original prompt is written to the item line and the text stays \u2014 the default while the project's prompt scores are on; --score asks for it explicitly and writes it even when they are off; with --no-score this skill must not touch that file. Use when the user wants the ideal prompt for a task just finished \u2014 phrases like '/todoIdealPrompt', '/todoIdealPrompt #16', 'what should I have prompted', 'print the correct prompt for this task', 'how should I have asked for this', 'make the ideal prompt'. Trigger eagerly once a task is confirmed fixed."
+}

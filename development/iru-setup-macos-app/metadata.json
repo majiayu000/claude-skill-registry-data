@@ -1,0 +1,39 @@
+{
+  "name": "iru-setup-macos-app",
+  "repo": "albertoirurueta/ai-catalog",
+  "path": ".claude/skills/iru-setup-macos-app/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/albertoirurueta/ai-catalog",
+  "dir_name": "iru-setup-macos-app",
+  "downloaded_at": "2026-10-20T03:46:47.825650Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, framework, build, compile",
+    "score": 4,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/ai-catalog/blob/main/.claude/skills/iru-setup-macos-app/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/ai-catalog/blob/main/.claude/skills/iru-setup-macos-app/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Scaffold a new native macOS desktop app (Swift 6, Xcode 27, Apple silicon + Intel universal) at the repository root \u2014 an XcodeGen `project.yml` with one macOS app target `<AppName>` (scheme `<AppName>`), a hosted Swift Testing unit-test target `<AppName>Tests`, an XCUITest target `<AppName>UITests` and the local package's `CoreTests` in the same scheme; `MARKETING_VERSION`/`CURRENT_PROJECT_VERSION` in `settings.base` (where `iru-swift-bump-version` rewrites them), `SWIFT_STRICT_CONCURRENCY = complete`, hardened runtime, an entitlements file with the App Sandbox (`sandbox: yes`, default), a generated Info.plist (`INFOPLIST_KEY_*`); a UI-framework-free local package `Packages/Core` (Foundation + Observation only: `Models/`, `Services/`, plus `ViewModels/` for `architecture: mvvm` or `Controllers/` + a passive-view protocol for `architecture: mvc`) whose Swift Testing suite covers 100% of its lines; the `App/` UI layer per `ui` \u2014 `swiftui` (`WindowGroup` + `Settings` + a `Commands` menu driven by a focused value, MVVM with a per-window `@Observable` view model) or `appkit` (programmatic: `main.swift` + `AppDelegate`, the main menu built in code, `NSWindowController` + `NSViewController` with Auto Layout in `loadView()`; `mvc` Cocoa controller core or `mvvm` with AppKit Observation tracking in `viewWillLayout()`); a `--uitesting` launch argument and accessibility identifiers on every control; per the catalog's UI contract, a `.ui-quality.yml` at the root, the shared `App/Tests/Support/UIScreenshots.swift` capture helper compiled into both test targets, and UI tests capturing the main window in every left-to-right/right-to-left \u00d7 light/dark cell into `.ui-screenshots/` plus a `performAccessibilityAudit()` test at the configured level; an empty AppIcon/AccentColor asset catalog; `ExportOptions-*.plist` per `distribution` (`none` = copy-app export, `internal` = Developer ID, `store` = App Store Connect upload); `scripts/make-dmg.sh` (hdiutil UDZO + optional codesign); `.swiftlint.yml` (with `missing_docs`), `.swift-format`, and `sonar-project.properties` (omitted when `sonar: none`). The generated `.xcodeproj` is never committed. Invoke as `/iru-setup-macos-app`. Accepts pre-resolved inputs via `args` (`key: value` lines) \u2014 `ui` (`swiftui`/`appkit`), `architecture` (`mvvm`/`mvc`; `mvc` only with `appkit`), `app-name`, `bundle-id`, `team-id`, `min-macos`, `generator` (`xcodegen` only), `sandbox` (`yes`/`no`), `version`, `build-number`, `category`, `license`, `developer-name`, `developer-email`, `organization-url`, `open-source`, `visibility`, `ci`, `sonar` (+ `sonar-organization`/`sonar-project-key`/`sonar-host-url`), `distribution` (`none`/`internal`/`store`), `branching`, `accessibility` (`enforce`/`report`/`off`/`none`, default `enforce`), `mode` (`new`/`existing`) and `on-existing` (`ask`/`keep`/`update`/`replace`) \u2014 so `iru-setup-macos-repository` can supply them without re-prompting; stand-alone it asks `open-source` first and derives the `sonar` default from it. Announces whether it is scaffolding from scratch or updating; for every file group it owns that already exists it warns and asks Update / Keep as is / Replace / Stop (unless `on-existing` decides) and never overwrites hand-written source. Versions are looked up at run time with a dated October 2026 fallback table. Use whenever a new macOS desktop app repository needs its Xcode project, testable core, quality tooling, tests and packaging bootstrapped from this house template; use `iru-setup-apple-app` for a multi-platform (iOS/watchOS + macOS) app instead."
+}

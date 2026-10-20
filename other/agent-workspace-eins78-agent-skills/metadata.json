@@ -1,0 +1,37 @@
+{
+  "name": "agent-workspace",
+  "repo": "eins78/agent-skills",
+  "path": "skills/agent-workspace/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/eins78/agent-skills",
+  "dir_name": "agent-workspace-eins78-agent-skills",
+  "downloaded_at": "2026-10-20T05:08:27.856220Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: creative=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "story",
+      "writing"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "eins78",
+  "source_url": "https://github.com/eins78/agent-skills/blob/main/skills/agent-workspace/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/eins78/agent-skills/blob/main/skills/agent-workspace/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when entering, bootstrapping, migrating, or working inside a shared repo organized as an \"agent-workspace\" \u2014 a workspace designed for humans and AI agents to collaborate, with conventions for story or project tracking, session logs, skills, and CLAUDE.md routing. Triggers: agent workspace, bootstrap workspace, set up CLAUDE.md for a shared workspace, workspace audit, \"where does this go in the workspace\", where does this sessionlog go, copy notes from another repo."
+}

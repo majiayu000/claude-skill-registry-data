@@ -1,0 +1,38 @@
+{
+  "name": "levels-help",
+  "repo": "codezeroexe/levels",
+  "path": "skills/levels-help/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/codezeroexe/levels",
+  "dir_name": "levels-help",
+  "downloaded_at": "2026-10-20T04:39:18.635459Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word, documentation",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "word",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "codezeroexe",
+  "source_url": "https://github.com/codezeroexe/levels/blob/main/skills/levels-help/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/codezeroexe/levels/blob/main/skills/levels-help/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Explain the level skill set to a new user: what it is, which skill to start with, how a run goes, what the arguments mean and what it costs. Read-only and cheap. Use when the user runs /levels-help or asks how the level skills work, what they do or how to start."
+}

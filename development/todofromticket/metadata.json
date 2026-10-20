@@ -1,0 +1,37 @@
+{
+  "name": "todoFromTicket",
+  "repo": "blackorange0506/prompt-todo",
+  "path": "template/.claude/skills/todoFromTicket/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/blackorange0506/prompt-todo",
+  "dir_name": "todofromticket",
+  "downloaded_at": "2026-10-20T04:18:11.846693Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "blackorange0506",
+  "source_url": "https://github.com/blackorange0506/prompt-todo/blob/main/template/.claude/skills/todoFromTicket/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/blackorange0506/prompt-todo/blob/main/template/.claude/skills/todoFromTicket/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Turn one ticket into draft prompt items in the user's todo file (TODO.<git user.name>.md, resolved as in the todo rules): fetch the ticket from the configured tracker (Jira via the Atlassian MCP server, GitHub Issues via gh, or the ticket text pasted after the key), download its attachments to <attachmentsDir>/<KEY>/, then append a `## KEY \u2014 summary` ticket block with 1\u20135 numbered dev items, each carrying the ticket key right after its id (`- [ ] #32 PROJ-123 prompt`), then 1\u20135 `QA:` items (`- [ ] #36 PROJ-123 QA: check \u2026`) \u2014 the manual checks for the ticket, the user's own rows that Claude never works or ticks; their number does not follow the dev count. When the ticket ends in a context block (Server / App version / where-in-the-app lines) and an app-navigation skill is connected, that block becomes the ticket block's own first item. Starts no work. With --deep, the ticket is first handed to a read-only subagent that studies the codebase \u2014 where the ticket's surface lives, the likely cause or touch points, constraints the code imposes, the natural split of the work \u2014 and the prompts are drafted from that analysis; the file gets the same block, only sharper prompts, never the analysis itself. Also answers to the old name /todoFromJira. Use whenever the user wants a ticket turned into todo prompts \u2014 phrases like '/todoFromTicket PROJ-123', '/todoFromTicket <ticket-url>', '/todoFromTicket 42' (a GitHub issue), '/todoFromJira PROJ-123', 'make prompts from PROJ-123', 'add PROJ-123 to my todo', 'todo from ticket', 'draft prompts for this ticket'. This skill IS allowed to edit the user's todo file; that is its purpose."
+}

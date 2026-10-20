@@ -1,0 +1,38 @@
+{
+  "name": "iru-java-coverage",
+  "repo": "albertoirurueta/ai-catalog",
+  "path": ".claude/skills/iru-java-coverage/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/albertoirurueta/ai-catalog",
+  "dir_name": "iru-java-coverage",
+  "downloaded_at": "2026-10-20T03:46:44.815529Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/ai-catalog/blob/main/.claude/skills/iru-java-coverage/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/ai-catalog/blob/main/.claude/skills/iru-java-coverage/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generate a code coverage report for a JVM (Java or Kotlin) project, scoped to the test selector given (same selector syntax as the `iru-java-test` skill), and report the exact line-coverage percentage for the specific class(es) touched. Maven \u2014 `mvn clean jacoco:prepare-agent test jacoco:report`, read from `target/site/jacoco/jacoco.csv`. Gradle (wrapper preferred, Kotlin DSL or Groovy) \u2014 JaCoCo via `./gradlew clean test --tests '<pattern>' jacocoTestReport` (CSV/XML under `build/reports/jacoco/test/`, both forced on through a throwaway init script when the build doesn't enable them), or Kover via `koverXmlReport` (`build/reports/kover/report.xml`) when the `org.jetbrains.kotlinx.kover` plugin is applied. Quarkus \u2014 also reads the `quarkus-jacoco` extension's report (`target/jacoco-report/` or `build/jacoco-report/`) for `@QuarkusTest` coverage. Falls back to the per-class HTML source report to show which lines/branches are still uncovered, and accounts for Kotlin's compiler-generated classes (`FooKt`, `Foo.Companion`, lambdas). Measures unit tests only \u2014 never runs Failsafe/`integrationTest`/`quarkusIntTest`. Invoke as `/iru-java-coverage <selector> [TargetClass1,TargetClass2,...]`, or `/iru-java-coverage` with no argument to run the full unit suite and report whole-project coverage. Use whenever the user wants to check, or verify a coverage bar (e.g. \"at least 80% line coverage\") for a class or set of classes, instead of eyeballing test output."
+}

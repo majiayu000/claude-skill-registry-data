@@ -1,0 +1,37 @@
+{
+  "name": "spec-render",
+  "repo": "friedbotstudio/baseline",
+  "path": ".claude/skills/spec-render/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/friedbotstudio/baseline",
+  "dir_name": "spec-render",
+  "downloaded_at": "2026-10-20T05:25:15.740155Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "friedbotstudio",
+  "source_url": "https://github.com/friedbotstudio/baseline/blob/main/.claude/skills/spec-render/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/friedbotstudio/baseline/blob/main/.claude/skills/spec-render/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Extract every PlantUML block from docs/specs/<slug>.md and render each to SVG under docs/specs/_rendered/<slug>/, with an index.md listing them in order. Run this before /approve-direction so the reviewer sees pictures instead of raw PlantUML."
+}

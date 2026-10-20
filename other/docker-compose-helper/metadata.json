@@ -1,0 +1,37 @@
+{
+  "name": "docker-compose-helper",
+  "repo": "antongulin/opencode-skill-creator",
+  "path": "examples/docker-compose-helper/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/antongulin/opencode-skill-creator",
+  "dir_name": "docker-compose-helper",
+  "downloaded_at": "2026-10-20T03:58:13.135724Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "antongulin",
+  "source_url": "https://github.com/antongulin/opencode-skill-creator/blob/main/examples/docker-compose-helper/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/antongulin/opencode-skill-creator/blob/main/examples/docker-compose-helper/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when the user asks to create, debug, or modify Docker Compose files, compose.yaml, docker-compose.yml, service dependencies, healthchecks, ports, volumes, networks, environment variables, or local multi-container development stacks. Use this skill even if the user says \"compose file\" or \"local stack\" instead of \"Docker Compose\"."
+}

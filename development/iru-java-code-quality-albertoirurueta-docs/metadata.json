@@ -1,0 +1,38 @@
+{
+  "name": "iru-java-code-quality",
+  "repo": "albertoirurueta/docs",
+  "path": ".claude/skills/iru-java-code-quality/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/albertoirurueta/docs",
+  "dir_name": "iru-java-code-quality-albertoirurueta-docs",
+  "downloaded_at": "2026-10-20T03:47:13.220426Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-java-code-quality/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-java-code-quality/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run this project's Java static-analysis tools \u2014 Checkstyle, PMD, and SpotBugs \u2014 and summarize every issue found (file, line, rule/check, message), grouped by tool. Maven: `mvn clean compile checkstyle:checkstyle pmd:pmd spotbugs:spotbugs`, reading `target/checkstyle-result.xml`, `target/pmd.xml`, and `target/spotbugsXml.xml`. Gradle (wrapper preferred, Kotlin DSL or Groovy): whichever of `checkstyleMain`, `pmdMain`, and `spotbugsMain` (the `com.github.spotbugs` plugin) the build actually defines, run with `--continue`, reading their XML reports under `build/reports/checkstyle/`, `build/reports/pmd/`, and `build/reports/spotbugs/`. Kotlin sources are not analyzed by Checkstyle or PMD (and SpotBugs only sees their bytecode) \u2014 for Kotlin code use `iru-kotlin-code-quality` (detekt + ktlint); a mixed Java/Kotlin project runs both. Invoke as `/iru-java-code-quality` to check the whole project, or `/iru-java-code-quality <path-or-class-name>` to scope the summary to a specific file/class \u2014 the underlying build always analyzes the whole project (none of these tools support a per-class selector), only the reported summary is filtered. Use whenever the user wants a lint/static-analysis pass called out separately from `iru-java-test`/`iru-java-coverage`, instead of running the full `mvn site`/`./gradlew check` build."
+}

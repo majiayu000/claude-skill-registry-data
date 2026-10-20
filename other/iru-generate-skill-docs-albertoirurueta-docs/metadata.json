@@ -1,0 +1,37 @@
+{
+  "name": "iru-generate-skill-docs",
+  "repo": "albertoirurueta/docs",
+  "path": ".claude/skills/iru-generate-skill-docs/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/albertoirurueta/docs",
+  "dir_name": "iru-generate-skill-docs-albertoirurueta-docs",
+  "downloaded_at": "2026-10-20T03:47:19.540646Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "sub-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-generate-skill-docs/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-generate-skill-docs/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Analyze every Claude Code skill (`.claude/skills/*/SKILL.md`) and agent (custom definitions under `.claude/agents/*.md`, plus built-in agent types referenced from skills via the `Agent` tool) defined in this repository, and generate/update the Antora documentation describing them \u2014 a reference table and dependency graph in `index.adoc`, purpose-grouped sections for the catalog's recurring end-to-end workflows, and one detail page per skill/agent under `docs/modules/ROOT/pages/skills/` and `.../agents/` covering its purpose, inputs, outputs, execution flow, and dependencies. Invoke as `/iru-generate-skill-docs`. Idempotent \u2014 safe to re-run whenever skills/agents are added, removed, or changed; it regenerates content from the current `SKILL.md`/agent definitions rather than hand-maintaining pages that drift from them. Use whenever this catalog's own documentation needs to reflect its actual current set of skills and agents, instead of manually writing or updating each page by hand."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "court",
+  "repo": "alexyc9381/court-skill",
+  "path": "skills/court/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/alexyc9381/court-skill",
+  "dir_name": "court-alexyc9381-court-skill",
+  "downloaded_at": "2026-10-20T03:49:44.667542Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "sub-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "alexyc9381",
+  "source_url": "https://github.com/alexyc9381/court-skill/blob/main/skills/court/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/alexyc9381/court-skill/blob/main/skills/court/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Put an idea on trial in front of a jury of 12 Claudes. A prosecutor Claude argues it fails, a defense Claude argues it works, they rebut each other, 12 juror Claudes with different backgrounds vote on their own, and a judge Claude reads the verdict and the conditions that would flip it. Use when the user wants honest pushback instead of agreement, says Claude just agrees with everything, asks \"is this a good idea\", wants an idea, plan, pitch or claim stress-tested, or says \"court\" or \"put it on trial\"."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "fespalier-downloads",
+  "repo": "fespalier/fespalier",
+  "path": "skills/fespalier-downloads/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/fespalier/fespalier",
+  "dir_name": "fespalier-downloads",
+  "downloaded_at": "2026-10-20T05:19:57.008101Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for platform: platform, device, android, ios",
+    "score": 4,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "platform",
+      "device",
+      "android",
+      "ios"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fespalier",
+  "source_url": "https://github.com/fespalier/fespalier/blob/main/skills/fespalier-downloads/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fespalier/fespalier/blob/main/skills/fespalier-downloads/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Files downloaded in a fespalier app with fespalier_download (since 0.15.0) \u2014 the model, ports, the Downloads engine and the foreground HttpDownloadBackend: Downloads (open, start, pause, resume, retry, cancel, remove, pathOf, statusOf, observe, clearAccount, reconciliation after a restart), DownloadRequest (id, URL, a DownloadLocation of a DownloadBase and a relative path, headers, size, sha256, DownloadNetwork, DownloadPriority) and its isValid, DownloadLocation.isValid refusing an absolute path, .., a backslash and NUL, the sealed DownloadStatus family (Absent, Queued, Waiting, Running, Paused, Verifying, Complete, Failed, Cancelled) with WaitReason and DownloadFailure, the DownloadBackend, DownloadStore and DownloadFiles ports, the fespalier.download telemetry that never carries a URL, an id or a path, HttpDownloadBackend (Range and If-Range resume from a .part file, size and sha256 checks, pause only, the web ends unsupported), TransferDownloadFiles, the FileDownloadStore registry (one JSON file written by atomic rename, never evicted, wiped at sign-out), the downloadsEngine, downloads and downloadStatus providers for a widget, the background backend of fespalier_download_background (BackgroundDownloaderBackend over background_downloader on Flutter 3.47: the operating system keeps the transfer going, only its own plugin group, notifications off unless configured, userInitiated refused without them, headers in plaintext in the OS queue, the Android and iOS setup, what no device has checked), the notification-tap adapter (`fespalier: adapters: [fespalier_download]`, `FespalierDownload.configure(backend:, store:, notifications:, route:)` in `main()`, `DownloadTap`, `DownloadTarget`, `DownloadRoute`, `Downloads.observeTaps`, the `fespalier.download.open` telemetry), background uploads (Uploads, a sibling engine of Downloads with no file port, UploadRequest of a DownloadLocation as multipart or binary POST or PUT, BackgroundUploaderBackend in its own plugin group, FileUploadStore, and the replay rule: only an upload with an Idempotency-Key is retried, renewed after a 401 or sent again, any other is sent once and ends Failed with outcomeUnknown), and FakeDownloadBackend, MemoryDownloadStore, FakeDownloadFiles, FakeTransferFiles, FakeBackgroundTransport and downloadTestOverrides in tests. Load before adding a file download, an offline file, a progress screen or a resumable transfer, or when a request is not valid, a path is refused, or a test needs a download with no network."
+}

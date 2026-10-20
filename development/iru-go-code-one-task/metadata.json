@@ -1,0 +1,39 @@
+{
+  "name": "iru-go-code-one-task",
+  "repo": "albertoirurueta/ai-catalog",
+  "path": ".claude/skills/iru-go-code-one-task/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/albertoirurueta/ai-catalog",
+  "dir_name": "iru-go-code-one-task",
+  "downloaded_at": "2026-10-20T03:46:49.181401Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build, compile",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/ai-catalog/blob/main/.claude/skills/iru-go-code-one-task/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/ai-catalog/blob/main/.claude/skills/iru-go-code-one-task/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Implement a single task from a Go `implementation_plan.md`-style task list \u2014 just the implementation and its tests \u2014 in any Go module: an agent-friendly command-line tool (Cobra, optional Bubble Tea v2 terminal UI) scaffolded by `iru-setup-go-cli`, or any other Go library, service or CLI. Detects at runtime the module path and `go` version from `go.mod` (and a `go.work` workspace), the `cmd/<bin>/` vs root-`main.go` layout and the `internal/` packages, the CLI framework (Cobra, urfave/cli, kong, or none), Bubble Tea/Lip Gloss and their import paths, the test harness (standard `testing`, testscript `testdata/script/*.txtar` driven by `TestMain`, teatest, testify/go-cmp if already used, container tests behind the `integration` build tag), the golangci-lint config, and `//go:generate` directives, then loads only the matching guidance from this skill's own `reference/` directory (always: Go code style \u2014 Effective Go/Code Review Comments, package naming, `internal/`, small consumer-side interfaces, `context.Context` first \u2014 and errors \u2014 `%w` wrapping, `errors.Is`/`As`/`AsType`, sentinel vs typed errors, exit-code mapping in one place; as needed: testing \u2014 table tests, `t.Parallel` caveats, golden files with `-update`, testscript, Cobra in-process tests, teatest \u2014, the shared CLI contract, Cobra, output/TTY/colour/signals/EPIPE, Bubble Tea v2, the catalog's UI contract on Bubble Tea when a task touches the terminal UI \u2014 composed sub-models, typed intent messages, Bubbles lists/tables rendering only what fits, state \u00d7 direction \u00d7 theme UI tests captured as `.txt` into `.ui-screenshots/`, asserted accessibility checks at the `.ui-quality.yml` level \u2014, doc comments, security \u2014 argv-only `exec.CommandContext`, `--` before operands, `os.Root` \u2014, and concurrency \u2014 errgroup, cancellation, no leaks). Re-checks the current code state, implements exactly what the task specifies, writes/updates the tests next to the code, formats the touched files (`gofmt`/`goimports`) and compile-checks with `go build ./...` plus `go vet` on the touched packages (test files included), then \u2014 if the task didn't stop on a blocker \u2014 immediately checks off this task's own checkbox (and its sub-tasks') in `implementation_plan.md` with a \"group validation pending\" note, before handing back a short summary. Does not capture a quality baseline, add license headers, audit doc comments beyond the code it writes, or run tests, coverage, golangci-lint or govulncheck \u2014 those happen once per task group in `iru-go-code-one-task-group`, which invokes this skill once per task (in parallel when the group allows it, through `iru-isolated-skill-executor`). Invoke as `/iru-go-code-one-task <task description>`, passing the task's own text \u2014 including its exact `implementation_plan.md` checkbox line(s) \u2014 as the argument. For plan tasks tagged `go`."
+}

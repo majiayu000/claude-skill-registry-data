@@ -1,0 +1,39 @@
+{
+  "name": "motion-lab",
+  "repo": "broomva/skills",
+  "path": "skills/video/motion-lab/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/broomva/skills",
+  "dir_name": "motion-lab-broomva-skills",
+  "downloaded_at": "2026-10-20T04:22:17.690202Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, css, animation",
+    "score": 4,
+    "runner_up": "ai-llm",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "css",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "broomva",
+  "source_url": "https://github.com/broomva/skills/blob/main/skills/video/motion-lab/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/broomva/skills/blob/main/skills/video/motion-lab/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Make code-first motion (an animation that is a program, rendered frame by frame in a headless browser) look directed instead of generic, and check that sampled frames re-render identically. Ships the render contract (every frame a pure function of t, window.renderAt(t), no clocks, timers or unseeded random, pinned libraries, frames 0..N-1), a numbers-not-adjectives prompt template with a living ban list, and a render -> look -> fix loop whose notes name frames. Deterministic core: scripts/motion_lint.py (static contract linter), scripts/render.mjs (Playwright freeze-frame renderer that also seeks SVG SMIL, with a labelled contact sheet and a --verify purity re-render of sampled frames), scripts/motion_math.py (drift-free beat grid, spring damping ratio, loop frames, text holds, GIF delay schedule and a GIF timing reader). USE WHEN: writing or fixing an animated loop, title card, product shot, explainer clip, logo reveal or launch video in plain HTML/CSS, Canvas, SVG, three.js, GSAP, HyperFrames or Remotion; a render flickers, jitters, hiccups at the loop seam, drifts off the beat or \"looks like AI\"; exporting a loop for X. Triggers on \"motion lab\", \"motion design\", \"animate this\", \"make an animation\", \"animated loop\", \"render this animation\", \"render contract\", \"renderAt\", \"contact sheet\", \"frame 84\", \"looks like AI\", \"it looks generic\", \"loop hiccup\", \"GIF for X\". NOT FOR: UI micro-interactions inside a live app (use the animate skill or the Motion library), editing recorded footage (video-cut), AI-generated video footage or people (higgsfield, ltx-video), or a fixed-aesthetic Remotion recipe (launch-video)."
+}

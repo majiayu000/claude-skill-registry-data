@@ -1,0 +1,39 @@
+{
+  "name": "iru-setup-dotnet-cli",
+  "repo": "albertoirurueta/ai-catalog",
+  "path": ".claude/skills/iru-setup-dotnet-cli/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/albertoirurueta/ai-catalog",
+  "dir_name": "iru-setup-dotnet-cli",
+  "downloaded_at": "2026-10-20T03:46:50.269789Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=4, development=4",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 4,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/ai-catalog/blob/main/.claude/skills/iru-setup-dotnet-cli/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/ai-catalog/blob/main/.claude/skills/iru-setup-dotnet-cli/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Scaffold an agent-friendly .NET 10 / C# 14 command-line tool at the repository root \u2014 `global.json` (SDK pinned, `rollForward: latestFeature`), `Directory.Build.props` (the tool `<Version>` `0.1.0-dev`, nullable, implicit usings, warnings as errors, `AnalysisLevel latest-recommended`, code style enforced in the build, XML docs, `InvariantGlobalization`, one SARIF analyzer log per project), central package management in `Directory.Packages.props` (StyleCop.Analyzers as a `GlobalPackageReference`), `.editorconfig`, `stylecop.json`, a `<ToolName>.slnx` solution, a framework-free `src/<ToolName>.Core` (`net10.0`, `IsAotCompatible`) holding the whole CLI contract \u2014 the exit-code enum 0\u20137/130/143, the JSON error envelope on stderr, deterministic System.Text.Json source-generated output (sorted keys, compact, no reflection), the colour policy per stream (`Console.Is*Redirected`, `NO_COLOR`, `TERM=dumb`, `FORCE_COLOR`, `--no-color`, machine mode), the prompt policy (`--no-input`, `<BIN>_NO_INPUT`, `CI`), SIGINT/SIGTERM through `PosixSignalRegistration` \u2192 130/143 with a second-signal immediate exit, the `schema` model, static bash/zsh/fish/PowerShell completion scripts and an AsciiDoc CLI reference + man page generated from the command tree \u2014 and a thin `src/<ToolName>` executable (`AssemblyName <bin>`, Native AOT `PublishAot`, `PackAsTool` with .NET 10 RID-specific tool packages + an `any` fallback for `dotnet tool install`/ `dnx`) built on System.CommandLine 2.0 stable (`RootCommand`-free root `Command` named after the binary, `Option<T>`/ `Argument<T>`/`SetAction`, `ParserConfiguration` with response files off, usage errors \u2192 exit 2, default exception handler and its signal handling off) and Spectre.Console for styled output that obeys the colour policy, with the commands `greet [NAME]`, `completion <shell>`, `schema`, `--version`, a hidden `gen-docs`, and with `ui: tui` a TTY-gated full-screen Terminal.Gui v2 `browse` command whose view (`Tui/BrowseView`) gets UI tests per the catalog's UI contract \u2014 rendered on Terminal.Gui's ANSI driver, every state \u00d7 `.ui-quality.yml` direction captured as `.ui-screenshots/screen/BrowseView/<state>--<direction>--no-color.txt`, with the asserted terminal accessibility checks at the level of a root `.ui-quality.yml`; MSTest 4 + coverlet `tests/<ToolName>.Core.Tests` (~99% Core line/branch coverage) and `tests/<ToolName>.Cli.Tests` running the command tree in-process with captured stdout/stderr (every exit code, JSON goldens, no-TTY/`NO_COLOR` behaviour) plus opt-in published-binary smoke tests; `tests/coverlet.runsettings` and a DocFX `docfx.json` for the Core API. Invoke as `/iru-setup-dotnet-cli`. Accepts pre-resolved inputs via `args` (`key: value` lines) \u2014 `tool-name` (PascalCase solution/project name), `bin-name` (the command), `package-id`, `description`, `ui` (`none`/`tui`), `accessibility` (`enforce`/`report`/`off`/`none`, only with `ui: tui`), `version`, `branching`, `license`, `developer-name`, `developer-email`, `organization-url`, `owner`, `open-source`, `visibility`, `ci`, `sonar` (+ `sonar-organization`/`sonar-project-key`/`sonar-host-url`), `distribution` (`none`/`internal`/`store`), `channels`, `mode` (`new`/`existing`) and `on-existing` (`ask`/`keep`/`update`/`replace`) \u2014 so `iru-setup-cli-repository` can supply them without re-prompting. Announces whether it is scaffolding from scratch or updating; for every file group it owns that already exists it warns and asks Update / Keep as is / Replace / Stop (unless `on-existing` decides), never overwrites hand-written source, and treats a foreign layout (a single-project `dotnet new console` app, System.CommandLine betas, a Spectre.Console.Cli app, a `.sln` with other projects) as foreign \u2014 add alongside or stop, never convert. Every version is looked up at run time (NuGet flat-container API, .NET release metadata) with a verified 2026-10-16 fallback table. Use whenever a new .NET command-line tool repository needs its solution, contract plumbing, quality tooling, tests and docs bootstrapped from this house template."
+}

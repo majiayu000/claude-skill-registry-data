@@ -1,0 +1,38 @@
+{
+  "name": "iru-setup-nestjs-app",
+  "repo": "albertoirurueta/ai-catalog",
+  "path": ".claude/skills/iru-setup-nestjs-app/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/albertoirurueta/ai-catalog",
+  "dir_name": "iru-setup-nestjs-app",
+  "downloaded_at": "2026-10-20T03:46:49.937247Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/ai-catalog/blob/main/.claude/skills/iru-setup-nestjs-app/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/ai-catalog/blob/main/.claude/skills/iru-setup-nestjs-app/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Scaffold a new NestJS 12 service with the Nest CLI (`nest new` for ESM + Vitest, the default, or the application schematic with `--type=cjs` for CommonJS + Jest), generated in a temporary directory and copied into the repository without overwriting anything, or bring an existing NestJS app up to this catalog's toolchain, then post-process it \u2014 `0.1.0-dev.0` version, the shared npm script names the workflows skill calls (`lint` = Oxlint `--type-aware`, `format`/`format:check` = Prettier, `typecheck` = `tsc --noEmit`, `test` = unit suite, `coverage` = unit coverage with an 80% threshold, `*.module.ts`/`main.ts`/generated code excluded, lcov at `coverage/lcov.info`, `test:e2e`, `build`, `start`, `docs` = Compodoc or TypeDoc), `ConfigModule` validated by a Zod schema, a global `ValidationPipe` registered as `APP_PIPE`, a shared `configureApp()` (security headers, shutdown hooks) used by `main.ts` and the e2e tests, `@nestjs/terminus` liveness/readiness endpoints, a tested sample feature module that follows the `iru-nestjs-code-one-task` references, optional persistence (`orm` TypeORM / Prisma 7 with a driver adapter / Mongoose 9 / Drizzle, with migrations) with Testcontainers-backed e2e tests, a multi-stage non-root `Dockerfile` with a health check, `.env.example`, and `sonar-project.properties` when Sonar is enabled. Invoke as `/iru-setup-nestjs-app`. Accepts pre-resolved inputs via `args` (`key: value` lines) \u2014 `app-name`, `description`, `license`, `developer-name`, `developer-email`, `organization-url`, `open-source` (`yes`/`no`), `sonar` (`cloud`/`self-hosted`/`none`, plus `sonar-organization`/`sonar-project-key`/ `sonar-host-url`), `orm` (`none`/`typeorm`/`prisma`/`mongoose`/`drizzle`), `database` (`postgresql`/`mysql`/ `mongodb`, only when `orm` is not `none`), `distribution` (`none`/`internal` \u2014 `internal` means the workflows push the image to GHCR; the `Dockerfile` is written either way), `package-manager` (`npm`/`pnpm`/`yarn`), `node-version` (the `Dockerfile` base image's Node major, default `24`), `visibility` (`public`/`private`/ `internal`), `ci` (`yes`/`no`), `mode` (`new`/`existing`), `on-existing` (`ask`/`keep`/`update`/`replace`), `module-system` (`esm`/`cjs`), `http` (`express`/`fastify`), and `docs-tool` (`compodoc`/`typedoc`/`none`) \u2014 so an orchestrating skill (`iru-setup-typescript-repository`) can supply them without re-prompting; invoked stand-alone it asks whatever `args` didn't resolve. Announces whether it is scaffolding from scratch or updating an existing app; for every artifact it owns that already exists, warns and asks Update (merge, keep customizations) / Keep as is / Replace (regenerate from the template), explaining each option's consequences. Use whenever a repository needs a NestJS backend service bootstrapped with its full test/lint/e2e/container toolchain from this house template, instead of running `nest new` and wiring the rest by hand."
+}

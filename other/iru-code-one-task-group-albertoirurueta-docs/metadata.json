@@ -1,0 +1,37 @@
+{
+  "name": "iru-code-one-task-group",
+  "repo": "albertoirurueta/docs",
+  "path": ".claude/skills/iru-code-one-task-group/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/albertoirurueta/docs",
+  "dir_name": "iru-code-one-task-group-albertoirurueta-docs",
+  "downloaded_at": "2026-10-20T03:47:17.507154Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-code-one-task-group/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-code-one-task-group/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Implement every task and sub-task in a single task group from an `implementation_plan.md`-style plan, dispatching each task by its declared language/framework key to the matching `<key>-code-one-task-group` skill (e.g. `iru-dotnet-code-one-task-group`, `iru-java-code-one-task-group`, `iru-java-springboot-code-one-task-group`, `iru-kotlin-springboot-code-one-task-group`, `iru-quarkus-code-one-task-group`, `iru-php-code-one-task-group`, `iru-typescript-code-one-task-group`, `iru-nestjs-code-one-task-group`, `iru-nextjs-code-one-task-group`, `iru-fastapi-code-one-task-group`, `iru-django-code-one-task-group`, `iru-android-code-one-task-group`, `iru-swift-code-one-task-group`, `iru-kmp-code-one-task-group`, `iru-react-native-code-one-task-group`, `iru-windows-code-one-task-group`, `iru-rust-code-one-task-group`, `iru-go-code-one-task-group`) \u2014 which itself captures one quality baseline for the group, implements the group's tasks (in parallel agents when the group is marked parallelizable), and validates the whole group once \u2014 falling back to implementing a task directly, best-effort, when its key has no matching `<key>-code-one-task-group` skill installed. Checks off each task/sub-task's box in `implementation_plan.md` and notifies the user as it happens, not just once the group finishes. Does not track a session task list or capture project-wide baselines \u2014 that bookkeeping belongs to the caller (`iru-code`). Invoke as `/iru-code-one-task-group <group text>`, passing the group's full text from the plan: every task/sub-task in the group, each one's language/framework tag if set, the group's `Parallelizable` verdict, and any relevant \"Current code state\" context. Used by the `iru-code` skill, which invokes this once per plan group, in order."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "iru-rust-code-quality",
+  "repo": "albertoirurueta/ai-catalog",
+  "path": ".claude/skills/iru-rust-code-quality/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/albertoirurueta/ai-catalog",
+  "dir_name": "iru-rust-code-quality",
+  "downloaded_at": "2026-10-20T03:46:53.164991Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/ai-catalog/blob/main/.claude/skills/iru-rust-code-quality/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/ai-catalog/blob/main/.claude/skills/iru-rust-code-quality/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run a Rust project's static-analysis and style checks \u2014 Clippy (`cargo clippy --workspace --all-targets --all-features --locked --message-format=json`, honoring the project's `[lints]`/`[workspace.lints]` table and `clippy.toml`; issues bucketed by lint id: `clippy::<lint>` such as `clippy::must_use_candidate`, `clippy::missing_errors_doc`, or rustc lint names such as `missing_docs`, `unused_imports`, `unused_variables`, plus `compile-error`/`E0425`-style codes when the code doesn't build), rustfmt (`cargo fmt --all --check --message-format short`, rule id `rustfmt`, one issue per file; unstable `rustfmt.toml` options on a stable toolchain as `rustfmt-config`), and cargo-deny when a `deny.toml` exists (`cargo deny --format json check <advisories|bans|licenses|sources>`, one run per check, rule ids `cargo-deny:<check>:<code>` such as `cargo-deny:licenses:rejected`, `cargo-deny:advisories:vulnerability`, `cargo-deny:bans:duplicate`) \u2014 in any Rust crate or Cargo workspace (command-line tool, library, service). Counts warnings without `-D warnings` (so one failing crate doesn't hide the lints of the crates that depend on it) and says how many would fail a CI that denies warnings. Verifies each tool is installed before trusting a \"zero issues\" result, reports a missing tool as \"not installed, skipped\", and parses every report with one embedded stdlib Python parser into per-tool totals and per-rule-id counts with a `file:line \u2014 message` list, deduplicating the copies Cargo prints once per target (lib and lib-test). Invoke as `/iru-rust-code-quality` for the whole workspace, or `/iru-rust-code-quality <file-or-dir>[,<file-or-dir>...]` to scope the report (Clippy and rustfmt still run workspace-wide \u2014 Rust checks whole crates \u2014 and findings outside the scope are filtered out; cargo-deny is always workspace-wide). When the prompt supplies a `baseline:` (a prior per-tool/per-rule-id count or itemized list from an earlier run of this skill, e.g. captured by `iru-rust-code-one-task-group` before a task group's changes), reports only the new-vs-baseline diff per rule id. Report-only: never runs `cargo clippy --fix`, `cargo fmt` without `--check`, `cargo deny fetch`/`init`, or edits `Cargo.toml`/`deny.toml`/`clippy.toml`/`rustfmt.toml`. Use whenever the user wants a Rust lint/format/supply-chain pass called out separately from `iru-rust-test`/`iru-rust-coverage`, instead of eyeballing Clippy console output."
+}

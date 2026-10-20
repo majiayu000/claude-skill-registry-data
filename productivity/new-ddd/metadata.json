@@ -1,0 +1,40 @@
+{
+  "name": "new-ddd",
+  "repo": "buildomator/buildomator",
+  "path": "skills/new-ddd/SKILL.md",
+  "github_branch": "master",
+  "category": "productivity",
+  "source": "github.com/buildomator/buildomator",
+  "dir_name": "new-ddd",
+  "downloaded_at": "2026-10-20T04:24:27.784265Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for productivity: automation, workflow, task, planning, memory",
+    "score": 5,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "automation",
+      "workflow",
+      "task",
+      "planning",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "buildomator",
+  "source_url": "https://github.com/buildomator/buildomator/blob/master/skills/new-ddd/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/buildomator/buildomator/blob/master/skills/new-ddd/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Initialize a new project using Documentation-Driven Development. Research, then write user-facing docs (SPEC.md) as the spec, then user validates docs, then phases derive from doc sections. Best for CLIs, libraries, SDKs, APIs, plugin systems, anything with a well-defined user-facing surface."
+}

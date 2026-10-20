@@ -1,0 +1,38 @@
+{
+  "name": "iru-php-coverage",
+  "repo": "albertoirurueta/docs",
+  "path": ".claude/skills/iru-php-coverage/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/albertoirurueta/docs",
+  "dir_name": "iru-php-coverage-albertoirurueta-docs",
+  "downloaded_at": "2026-10-20T03:47:06.218528Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, unittest, integration",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "unittest",
+      "integration"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-php-coverage/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-php-coverage/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run a PHP project's tests (Pest, PHPUnit, or Laravel's `php artisan test`, in whichever environment the project uses \u2014 host PHP, Sail, ddev, or wp-env) with code coverage enabled, using PCOV when loaded and falling back to Xdebug in `coverage` mode, write a Clover XML report (`--coverage-clover`), and read it to report the exact per-class / per-file line coverage (plus method coverage, and branch/path coverage when Xdebug path coverage is enabled) and uncovered line ranges for the target classes. Invoke as `/iru-php-coverage <selector> [TargetClass1,TargetClass2,...]` \u2014 the selector uses the same syntax as the `iru-php-test` skill's (file, directory, `--filter <pattern>`, `--testsuite <name>`, `--group <name>`) \u2014 or `/iru-php-coverage` with no argument to run the whole suite and report whole-project coverage. Detects the coverage driver via `php -m` and reports \"no coverage driver available\" (with how to install PCOV) instead of a false 0%, and avoids the `php -d extension=...` pitfall with `php artisan test`'s child process. Use whenever the user wants to check, or verify a bar (e.g. \"at least 80% line coverage\") for, a PHP class, file, or the whole project, instead of eyeballing the runner's console table."
+}

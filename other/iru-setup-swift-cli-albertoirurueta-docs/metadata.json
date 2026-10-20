@@ -1,0 +1,38 @@
+{
+  "name": "iru-setup-swift-cli",
+  "repo": "albertoirurueta/docs",
+  "path": ".claude/skills/iru-setup-swift-cli/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/albertoirurueta/docs",
+  "dir_name": "iru-setup-swift-cli-albertoirurueta-docs",
+  "downloaded_at": "2026-10-20T03:47:08.828178Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-setup-swift-cli/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-setup-swift-cli/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Scaffold an agent-friendly Swift command-line tool at the repository root \u2014 a SwiftPM package (`Package.swift`, `swift-tools-version` 6.0 by default, `swiftLanguageModes: [.v6]`, macOS 15+ and Linux) with a thin swift-argument-parser executable target `Sources/<Bin>/` (an `AsyncParsableCommand` root whose `static func main() async` hands the process to the Kit's `CommandRunner`, plus the `greet [NAME]`, `completion <bash|zsh|fish>` and `schema [COMMAND] [--asciidoc]` subcommands and `--version`) and a `Sources/<Bin>Kit/` library holding every behaviour: the exit-code enum exactly as the catalog's CLI contract (0\u20137, 130, 143), usage errors mapped to exit 2 instead of swift-argument-parser's default 64, `--help`/`--version` on stdout, the JSON error envelope on stderr with sorted keys, `--format text|json|jsonl`/`--json`, `--no-color`/`NO_COLOR`/`FORCE_COLOR`/ `TERM=dumb` and `isatty` per stream (Darwin/Glibc/Musl behind one file), prompts only on a terminal and never with `--no-input`/`<BIN>_NO_INPUT`/`CI=true`, `--quiet`/`--verbose`/`--log-format`, SIGINT/SIGTERM through `DispatchSource` signal sources \u2192 cleanup + exit 130/143 (second signal exits immediately), SIGPIPE ignored and EPIPE as a quiet stop, a `schema` command tree built from `--experimental-dump-help` plus per-command exit codes and safety metadata, `Version.swift` (`toolVersion = \"0.1.0-dev\"`); Swift Testing `Tests/<Bin>KitTests` (\u2265 80% line coverage of the Kit; ~95% as scaffolded) and `Tests/<Bin>CLITests` that run the built executable through `Process` and assert stdout, stderr and the exit status of every code the command line can produce; `.swift-format`, `.swiftlint.yml`, a DocC catalog for the Kit, `scripts/generate-docs.sh` (man page via swift-argument-parser's `generate-manual` plugin, bash/zsh/fish completions, `schema.json`, and the Antora partial `docs/modules/ROOT/partials/cli-reference.adoc`), and `sonar-project.properties` when `sonar` \u2260 `none`. No terminal UI is offered (SwiftTUI has been dormant since 2024 \u2014 use the Rust or Go scaffold for a full-screen TUI). Invoke as `/iru-setup-swift-cli`. Accepts pre-resolved inputs via `args` (`key: value` lines): `bin-name`, `package-name`, `description`, `swift-version` (tools-version floor), `platforms` (`macos=<min>`; Linux is always supported), `owner`, `license`, `developer-name`, `developer-email`, `organization-url`, `open-source`, `visibility`, `ci`, `sonar` (+ `sonar-organization`/`sonar-project-key`/`sonar-host-url`), `distribution`, `mode` and `on-existing` \u2014 so `iru-setup-cli-repository` can supply them without re-prompting. Announces whether it is scaffolding from scratch or updating; for every file group it owns that already exists it warns and asks Update / Keep as is / Replace / Stop (unless `on-existing` decides) and never overwrites hand-written source. Versions (swift-argument-parser, swift-docc-plugin) are looked up live with a verified 2026-10-16 fallback. Every template was rendered and verified with Swift 6.4 on macOS (build, tests, coverage, swift-format, SwiftLint, DocC, generate-manual, a universal release binary and contract smoke checks). Use whenever a new Swift command-line tool repository needs its package, contract implementation, tests, quality config and docs generator bootstrapped from this house template."
+}

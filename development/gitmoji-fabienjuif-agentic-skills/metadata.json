@@ -1,0 +1,39 @@
+{
+  "name": "gitmoji",
+  "repo": "fabienjuif/agentic-skills",
+  "path": "plugins/fabien-skills/skills/gitmoji/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/fabienjuif/agentic-skills",
+  "dir_name": "gitmoji-fabienjuif-agentic-skills",
+  "downloaded_at": "2026-10-20T05:16:04.794997Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, refactor",
+    "score": 4,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fabienjuif",
+  "source_url": "https://github.com/fabienjuif/agentic-skills/blob/main/plugins/fabien-skills/skills/gitmoji/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fabienjuif/agentic-skills/blob/main/plugins/fabien-skills/skills/gitmoji/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Commit the current changes with a gitmoji-prefixed message (https://gitmoji.dev), picking the one gitmoji that matches the intent of the change and following the repo's own commit format. Use when the user says \"/gitmoji\", \"gitmoji commit\", \"commit with a gitmoji\", \"commit this with an emoji\", \"which gitmoji for this\", or asks to commit in a repo whose convention or history uses gitmoji. Commits only; never pushes."
+}

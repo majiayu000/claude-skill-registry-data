@@ -1,0 +1,37 @@
+{
+  "name": "voice-likeness-eval",
+  "repo": "christos-antono/NPCTalk",
+  "path": ".agents/skills/voice-likeness-eval/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/christos-antono/NPCTalk",
+  "dir_name": "voice-likeness-eval-christos-antono-npctalk-2",
+  "downloaded_at": "2026-10-20T04:34:00.387637Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: model, training",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "christos-antono",
+  "source_url": "https://github.com/christos-antono/NPCTalk/blob/main/.agents/skills/voice-likeness-eval/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/christos-antono/NPCTalk/blob/main/.agents/skills/voice-likeness-eval/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Measure how much a cloned voice sounds like the real character, and whether a change really helped. Covers speaker-embedding similarity (ECAPA) against the centroid of held-out real clips, word error rate with Whisper, comparing per line with paired t-tests, how many runs it takes to beat sampling noise, checking a take-picker with an independent speaker model, and simulating picking strategies on many scored takes. Use when comparing voice engines or settings (Fish Audio Drama 3 vs S2 Pro vs ElevenLabs, sampling, reference clips, best-of-N, fine-tuning), or before telling anyone that one voice setup is better than another."
+}

@@ -1,0 +1,36 @@
+{
+  "name": "iru-knowledge-to-jira",
+  "repo": "albertoirurueta/docs",
+  "path": ".claude/skills/iru-knowledge-to-jira/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/albertoirurueta/docs",
+  "dir_name": "iru-knowledge-to-jira-albertoirurueta-docs",
+  "downloaded_at": "2026-10-20T03:47:14.328095Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-knowledge-to-jira/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-knowledge-to-jira/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Convert one or more pending/not-completed agreements from the `knowledge/` base (built by `iru-knowledge-process-inbox`) into a Jira ticket. Asks the user which agreement(s) to convert, accepting a pending task id (`<timestamp>-<n>`), a `knowledge/pending/pending-*.md` filename, a `knowledge/agreements/ agreement-*.md` filename/id (with an item number if it has more than one open item), or a plain natural-language description \u2014 searching `knowledge/pending` and `knowledge/agreements` by content when given the latter. Once an agreement is resolved, gathers additional context from its meeting's full transcription and attachments (via `knowledge/meetings/meeting-<timestamp>/`) and from the current codebase (via the `iru-explore` skill), then hands the synthesized purpose to the `iru-create-jira-ticket` skill to draft and file the ticket \u2014 passing the meeting transcription and attachments along too, either as an actual attachment (uploaded via Jira MCP tools' native attachment support, or embedded/described per that skill's own fallback if none is connected) or, when the file is already committed and pushed in this repository, as a link to it instead of duplicating its content. Invoke as `/iru-knowledge-to-jira` to be asked which agreement(s) to convert, or `/iru-knowledge-to-jira <id-filename-or-description>` to skip straight to resolving that one. Stops early if `knowledge/` doesn't exist yet (run `iru-knowledge-setup` and `iru-knowledge-process-inbox` first) or if no Jira MCP tool is connected \u2014 there is no CLI fallback the way GitHub has `gh`; use `iru-knowledge-to-issue` instead when the work should be tracked on GitHub. Does not mark the source agreement complete \u2014 filing a ticket means the work is now tracked, not done; it instead appends the created ticket's key/URL back onto the pending file (and a note on the agreement item) so a re-run doesn't file a duplicate, leaving `iru-knowledge-complete` as the step that later closes it out for real. Use whenever a meeting agreement or action item needs to become actionable Jira-ticket work instead of staying a markdown checkbox nobody triages."
+}

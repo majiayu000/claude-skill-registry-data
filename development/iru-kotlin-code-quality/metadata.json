@@ -1,0 +1,38 @@
+{
+  "name": "iru-kotlin-code-quality",
+  "repo": "albertoirurueta/ai-catalog",
+  "path": ".claude/skills/iru-kotlin-code-quality/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/albertoirurueta/ai-catalog",
+  "dir_name": "iru-kotlin-code-quality",
+  "downloaded_at": "2026-10-20T03:46:57.141175Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/ai-catalog/blob/main/.claude/skills/iru-kotlin-code-quality/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/ai-catalog/blob/main/.claude/skills/iru-kotlin-code-quality/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run a JVM Kotlin project's wired static-analysis tools \u2014 detekt (Gradle `io.gitlab.arturbosch.detekt` 1.x / `dev.detekt` 2.x, or Maven `com.github.ozsie:detekt-maven-plugin`, or a project-provided detekt CLI) and ktlint (Gradle `org.jlleitschuh.gradle.ktlint` or Spotless `ktlint()`, Maven `com.github.gantsign.maven:ktlint-maven-plugin` or Spotless) \u2014 on Maven or Gradle (Kotlin DSL or Groovy, wrapper preferred), multi-module aware, then read the generated reports (detekt Checkstyle-format XML or SARIF, ktlint checkstyle/plain reporter output, Spotless console output) to report every issue found (file, line, rule id, severity, message), grouped by tool. Covers plain Kotlin libraries, Kotlin Spring Boot, and Kotlin Quarkus \u2014 not Android (use `iru-android-code-quality`); Java sources in a mixed Java+Kotlin module are covered by `iru-java-code-quality`, not here. Invoke as `/iru-kotlin-code-quality` to check the whole project, or `/iru-kotlin-code-quality <path-or-class-name>` to scope the *reported* summary to a file/class/module \u2014 detekt/ktlint always analyze whole modules (no per-file selector), so a scoped invocation narrows the build to the owning module and filters the report. Report-only: verifies each tool is actually wired before trusting a \"zero issues\" result, reports an unwired tool as \"not wired\" instead of a clean pass, and never adds or changes detekt/ktlint/Spotless configuration. When the prompt supplies a baseline (per-tool/per-rule counts or an itemized list from an earlier run), reports only the new-vs-baseline diff. Use whenever the user wants a Kotlin lint/static-analysis pass called out separately from `iru-java-test`/`iru-java-coverage`, instead of eyeballing `./gradlew detekt` or `mvn verify` console output."
+}

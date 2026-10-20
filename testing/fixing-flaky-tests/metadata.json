@@ -1,0 +1,39 @@
+{
+  "name": "fixing-flaky-tests",
+  "repo": "amplifthq/openmeld",
+  "path": ".agents/skills/fixing-flaky-tests/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/amplifthq/openmeld",
+  "dir_name": "fixing-flaky-tests",
+  "downloaded_at": "2026-10-20T03:54:09.191910Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, jest, pytest, playwright",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "test",
+      "jest",
+      "pytest",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "amplifthq",
+  "source_url": "https://github.com/amplifthq/openmeld/blob/main/.agents/skills/fixing-flaky-tests/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/amplifthq/openmeld/blob/main/.agents/skills/fixing-flaky-tests/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Guides an agent through reproducing, root-causing, fixing, and validating flaky tests in the PostHog monorepo. Use when a test fails intermittently in CI but passes on rerun or locally, when `hogli ci:insights` or the debugging-ci-failures skill classifies a failure as a flaky test, when given a GitHub Actions URL for a flaky job, when asked to check Trunk Flaky Tests for a test, PR, or master, or when asked to deflake, stabilize, or fix a flaky Jest, pytest, or Playwright test. Core discipline: reproduce locally before changing anything, fix the root cause (never mask it with sleeps, retries, or bigger timeouts), and prove the fix with an N-run validation loop sized to the observed failure rate. Stabilizing is not the only valid outcome \u2014 the skill also gates whether the test should exist, so deleting a test that catches nothing real, or re-leveling one that flakes because of the level it runs at, are first-class endings."
+}

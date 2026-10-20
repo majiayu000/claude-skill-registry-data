@@ -1,0 +1,37 @@
+{
+  "name": "tidy-board",
+  "repo": "dvwinck/capybara-toolbox",
+  "path": "plugins/tidy-board/skills/tidy-board/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/dvwinck/capybara-toolbox",
+  "dir_name": "tidy-board",
+  "downloaded_at": "2026-10-20T05:05:23.048471Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dvwinck",
+  "source_url": "https://github.com/dvwinck/capybara-toolbox/blob/master/plugins/tidy-board/skills/tidy-board/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dvwinck/capybara-toolbox/blob/master/plugins/tidy-board/skills/tidy-board/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Cleans up git branches, worktrees and stashes through a local panel. Each candidate is a card showing the proof that it is already merged, only what the user approves (Apagar, \"Delete\") is deleted, and anything that exists in one place only gets a backup first. Use when the user asks to clean or prune branches, worktrees or stashes, for example \"tem branch velha demais\", \"limpa os worktrees\", \"apaga as branches j\u00e1 mescladas\", \"tidy my branches\", \"prune merged branches\", \"clean up stale branches, worktrees or stashes\". Triggers - /tidy-board or /tidy-board:tidy-board."
+}

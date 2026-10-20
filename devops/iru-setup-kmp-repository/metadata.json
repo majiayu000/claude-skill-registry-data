@@ -1,0 +1,38 @@
+{
+  "name": "iru-setup-kmp-repository",
+  "repo": "albertoirurueta/ai-catalog",
+  "path": ".claude/skills/iru-setup-kmp-repository/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/albertoirurueta/ai-catalog",
+  "dir_name": "iru-setup-kmp-repository",
+  "downloaded_at": "2026-10-20T03:46:59.140359Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: ci, cd, deploy",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "ci",
+      "cd",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/ai-catalog/blob/main/.claude/skills/iru-setup-kmp-repository/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/ai-catalog/blob/main/.claude/skills/iru-setup-kmp-repository/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "End-to-end bootstrap for a Kotlin Multiplatform (Android + iOS) app repository \u2014 collects `ui` (`compose` = Compose Multiplatform shared UI, `native` = Jetpack Compose on Android + SwiftUI on iOS over shared logic; asked via `AskUserQuestion` when absent), `branching` (`gitflow`/`main-only`), the app's identity (`app-name`, `application-id`, `bundle-id`, `namespace`, plus license and developer name/email/organization URL), and the shared pipeline parameters (integration branch `develop`, stable branch `main`, Java `17`, min SDK `26`, iOS deployment target, `open-source`, the repository `visibility` (detected via `gh repo view` or asked), `ci`, `ios-ci` (when the ~10\u00d7-cost macOS job runs: `all`/`stable`/`none`), `ci-tests` (`unit`, or `full` = also the iOS app's XCTest bundle on a simulator), `pages` (GitHub Pages vs. a workflow artifact for the Antora + Dokka docs), `distribution` (`none`/`internal`/`store` \u2014 Google Play/Firebase + TestFlight), `accessibility` (`enforce`/`report`/`off`/`none` \u2014 the UI tests' automated accessibility level, written by the scaffold to `.ui-quality.yml`), `sonar` plus its detail keys \u2014 each question stating the Actions-minutes / macOS-multiplier / SonarCloud / Pages cost facts for that visibility) once, prints a setup-mode statement (from scratch, or an inventory of the prior setup it found), then orchestrates `iru-setup-kmp-app` \u2192 `iru-setup-antora` \u2192 `iru-setup-kmp-gitignore` \u2192 `iru-setup-kmp-github-workflows` \u2192 `iru-setup-changelog` \u2192 `iru-setup-readme`, in that order, via `iru-isolated-skill-executor`, so nothing is asked twice \u2014 skipping the workflows step entirely (security block included) when `ci: no`. Invoke as `/iru-setup-kmp-repository`, optionally with `args` (`key: value` lines) to pre-resolve `ui`, `branching`, `mode` (`new`/`existing`), `open-source`, `visibility`, `ci`, `ios-ci`, `ci-tests`, `pages`, `accessibility`, `on-existing` (`ask`/`keep`/`update`/`replace`, forwarded only when supplied), `distribution`, `sonar` (+ `sonar-organization`/ `sonar-project-key`/`sonar-host-url`), `integration-branch`, `stable-branch`, `java-version`, `min-sdk`, `compile-sdk`, `ios-deployment-target`, `runner`, `xcode-version`, `team-id`, and every identity field, skipping the matching question. On an existing repository every component sub-skill warns about the prior setup it owns and asks Update / Keep as is / Replace per file (unless `on-existing` decides), and the final report states the action taken per component. Use whenever bootstrapping (or catching up) a Kotlin Multiplatform mobile app repository's full Gradle/Xcode/docs/gitignore/CI/changelog/README scaffold in one pass, instead of running six skills separately and re-answering the same questions each time."
+}

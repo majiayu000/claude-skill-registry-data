@@ -1,0 +1,38 @@
+{
+  "name": "iru-rust-rustdoc",
+  "repo": "albertoirurueta/docs",
+  "path": ".claude/skills/iru-rust-rustdoc/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/albertoirurueta/docs",
+  "dir_name": "iru-rust-rustdoc-albertoirurueta-docs",
+  "downloaded_at": "2026-10-20T03:47:05.573539Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-rust-rustdoc/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-rust-rustdoc/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audit given Rust items or files (a crate or Cargo workspace \u2014 e.g. a command-line tool's `src/lib.rs` modules, a library) for complete rustdoc on every public item \u2014 crate/module `//!` docs, a one-sentence summary line, and the conventional `# Errors` (functions returning `Result`), `# Panics` (functions that can panic), `# Safety` (`unsafe fn`/traits) and `# Examples` (runnable doctests where they add value) sections, with intra-doc links (``[`Type::method`]``) instead of bare names \u2014 generate any missing or incomplete docs grounded in the actual code and current changes, then verify the result: the doc lints scoped to the files (`missing_docs`, `clippy::missing_errors_doc`, `clippy::missing_panics_doc`, `clippy::missing_safety_doc`, `clippy::doc_markdown`, run through `cargo clippy --message-format=json` even when the project's `[lints]` table doesn't enable them), `cargo doc --workspace --no-deps` with `RUSTDOCFLAGS=\"-D warnings\"` (broken intra-doc links, `rustdoc::missing_crate_level_docs`, bare URLs, invalid code-block attributes), and `cargo test --doc` so every new example compiles and passes. Knows that doctests only run for library targets \u2014 doc examples in a bin-only crate's `main.rs` are never compiled \u2014 and that this catalog's CLI scaffold keeps the logic in `lib.rs` for that reason. Invoke as `/iru-rust-rustdoc <items-or-files>` (comma-separated item paths such as `crate::output::Envelope`, `commands::greet::run`, `<member_crate>::config`, or files/globs such as `src/output.rs,src/commands/*.rs`), or `/iru-rust-rustdoc` with no argument to scope to the `.rs` files touched by uncommitted changes plus commits on the current branch not yet on the base branch. Use whenever the user (or `iru-rust-code-one-task-group` via `iru-gate-runner`) wants rustdoc completeness checked and filled in for specific Rust code, instead of waiting for a `missing_docs` warning or a broken link to fail CI."
+}

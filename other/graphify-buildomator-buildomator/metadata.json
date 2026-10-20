@@ -1,0 +1,37 @@
+{
+  "name": "graphify",
+  "repo": "buildomator/buildomator",
+  "path": "skills/graphify/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/buildomator/buildomator",
+  "dir_name": "graphify-buildomator-buildomator",
+  "downloaded_at": "2026-10-20T04:24:29.237679Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "buildomator",
+  "source_url": "https://github.com/buildomator/buildomator/blob/master/skills/graphify/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/buildomator/buildomator/blob/master/skills/graphify/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Build, query, and inspect the project knowledge graph in .planning/graphs/"
+}

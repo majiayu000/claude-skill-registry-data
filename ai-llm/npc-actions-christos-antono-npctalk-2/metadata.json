@@ -1,0 +1,38 @@
+{
+  "name": "npc-actions",
+  "repo": "christos-antono/NPCTalk",
+  "path": ".agents/skills/npc-actions/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/christos-antono/NPCTalk",
+  "dir_name": "npc-actions-christos-antono-npctalk-2",
+  "downloaded_at": "2026-10-20T04:33:58.223489Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: ai, llm, prompt",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "christos-antono",
+  "source_url": "https://github.com/christos-antono/NPCTalk/blob/main/.agents/skills/npc-actions/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/christos-antono/NPCTalk/blob/main/.agents/skills/npc-actions/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Make NPCs physically react to a conversation and follow spoken orders. Pick an action (punch, slap, hug, kneel and beg, flee, flip off, square up, nothing...) from what the player said and what the NPC replied, with TypeSafe's Jev returning a typed choice and a probability in ~0.1 s, per-action thresholds, a repeat cooldown, orders (\"get on your knees\") that override mood and make the LLM rewrite the line, and mapping action names onto the game's animations with checks at load. Use when NPCs should act out what they say, obey commands, or when actions picked by an LLM are too random, too timid or too frequent."
+}

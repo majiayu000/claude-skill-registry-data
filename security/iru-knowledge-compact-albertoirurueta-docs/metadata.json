@@ -1,0 +1,37 @@
+{
+  "name": "iru-knowledge-compact",
+  "repo": "albertoirurueta/docs",
+  "path": ".claude/skills/iru-knowledge-compact/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/albertoirurueta/docs",
+  "dir_name": "iru-knowledge-compact-albertoirurueta-docs",
+  "downloaded_at": "2026-10-20T03:47:14.488117Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: auth, audit",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-knowledge-compact/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-knowledge-compact/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Compact the `knowledge/` base built by `iru-knowledge-process-inbox` \u2014 sweep `knowledge/pending` and `knowledge/agreements` for (a) duplicate pending tasks, removing the duplicates that have no tracker issue assigned while folding any extra context they carried into the surviving task, and (b) agreements/pending tasks that are already done, determined from the state of the GitHub issue (or Jira ticket) recorded on them by `iru-knowledge-to-issue`/`iru-knowledge-to-jira` \u2014 deleting the pending file and checking off the matching numbered item in its `agreement-<timestamp>.md` for each one that's completed. Also fixes drift between the two directories (a pending file whose agreement item is already checked, an open item whose pending file is gone). Invoke as `/iru-knowledge-compact`. Always shows the full set of proposed deletions/edits for confirmation before touching anything, and never removes a duplicate that has an issue assigned, or one whose duplicate partner also has a different issue \u2014 those are reported for a human decision instead. Stops early if `knowledge/` doesn't exist yet (run `iru-knowledge-setup` and `iru-knowledge-process-inbox` first). Use whenever the knowledge base has accumulated repeated action items across meetings, or its agreements no longer reflect work that has actually shipped, instead of hand-auditing every pending file."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "iru-setup-readme",
+  "repo": "albertoirurueta/ai-catalog",
+  "path": ".claude/skills/iru-setup-readme/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/albertoirurueta/ai-catalog",
+  "dir_name": "iru-setup-readme",
+  "downloaded_at": "2026-10-20T03:46:43.743532Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, framework, build",
+    "score": 4,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/ai-catalog/blob/main/.claude/skills/iru-setup-readme/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/ai-catalog/blob/main/.claude/skills/iru-setup-readme/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Create or update the root `README.md` for a repository \u2014 a brief description, badges (CI status, SonarCloud/SonarQube, npm, Maven Central, Packagist, PyPI, WordPress.org, PHP/Python version, GHCR container image, Swift Package Index, crates.io/docs.rs, pkg.go.dev, NuGet, GitHub release, etc.), a project status table (language, versions, framework, platforms, license, CI, quality tools, distribution; for a command-line tool also the toolchain floor, argument parser, terminal-UI library, release targets and channels), documentation links (Antora site, the generated CLI reference page, Maven site report, SonarCloud dashboard, generated API docs such as TypeDoc/Compodoc/Storybook/Dokka/DocC/DocFX/rustdoc/pkg.go.dev/phpDocumentor/Sphinx, OpenAPI/Swagger UI, CHANGELOG), installation instructions (Maven/Gradle/npm/Composer/uv/pip/SwiftPM/etc. dependency snippets, a \"run it locally\"/container-image/store-listing section for services, web apps, WordPress plugins/themes and PrestaShop modules, or \u2014 for a command-line tool \u2014 only the release channels actually wired: Homebrew tap, `cargo install`, `go install`, Scoop/WinGet, `dotnet tool install -g`, or the release archive with `SHA256SUMS`/`gh attestation verify`, plus build from source \u2014 matched to the project's actual stack and build tool \u2014 Spring Boot (Java or Kotlin, Maven or Gradle KTS), Quarkus, Laravel, WordPress, PrestaShop, NestJS, Next.js, FastAPI, Django, plain Python packages, command-line tools in Rust/Go/Swift/.NET, plain Rust crates and Go modules, and the earlier library/app stacks), and a short \"how it works\" section with a runnable example (for a command-line tool: a human example, a `--json` example piped to `jq`, the exit-code table, and a note on using it from scripts and AI agents). Invoke as `/iru-setup-readme`, optionally with `args` (one key/value pair per line, all optional) \u2014 `sonar` set to `none` suppresses Sonar badges and dashboard links even when a `sonar {}` block or `sonar-project.properties` exists, `ci` set to `no` omits CI status badges, `pages` set to `no` avoids linking a github.io documentation site (or Next.js static export) that won't be published, and `on-existing` (`ask`/`keep`/`update`/`replace`, scripted runs, default `ask`) pre-answers the existing-README question \u2014 so an orchestrator's resolved choices produce a README matching them. Explores the repository's actual state (`pom.xml`/`build.gradle*`/`gradle.properties`/`composer.json`/`package.json`/`pyproject.toml`/`uv.lock`/ `Package.swift`/`Cargo.toml`/`go.mod`/`Directory.Build.props`/WordPress plugin or theme headers/PrestaShop module class/Android Gradle modules/Xcode or Tuist project files/etc., git remote, GitHub Actions workflows, Sonar config, Antora docs, `CHANGELOG.md`, `LICENSE`, source code) to fill in every section \u2014 a section whose source material doesn't exist yet (e.g. a brand-new, mostly empty repository) is omitted rather than filled with placeholders or invented content; a WordPress `readme.txt` is a separate file this skill never replaces. Announces whether it is creating the README from scratch or updating an existing one; if `README.md` already exists (including a generator's stock README from `laravel new`, `create-next-app`, `nest new`, `quarkus create` or `uv init`), warns the user and shows the proposed content as a diff before writing anything, asking whether to Update it (merged draft, hand-written sections kept), Keep it as is, or Replace it (regenerated, hand-written sections dropped). Use whenever a repository needs a README bootstrapped or refreshed from what's actually there, instead of hand-writing it."
+}

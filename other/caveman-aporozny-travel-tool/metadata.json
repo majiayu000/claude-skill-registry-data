@@ -1,0 +1,37 @@
+{
+  "name": "caveman",
+  "repo": "aporozny/Travel-Tool",
+  "path": ".claude/skills/caveman/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/aporozny/Travel-Tool",
+  "dir_name": "caveman-aporozny-travel-tool",
+  "downloaded_at": "2026-10-20T04:00:14.874062Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: security=2, writing=2",
+    "score": 2,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "aporozny",
+  "source_url": "https://github.com/aporozny/Travel-Tool/blob/main/.claude/skills/caveman/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/aporozny/Travel-Tool/blob/main/.claude/skills/caveman/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Terse caveman voice: answer first, fluff gone, every technical fact kept. Use for /caveman, \"caveman mode\", \"talk like caveman\", \"be brief\", \"less tokens\". Stays on until \"stop caveman\" or \"normal mode\"."
+}

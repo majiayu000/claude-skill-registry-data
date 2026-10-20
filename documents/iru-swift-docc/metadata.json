@@ -1,0 +1,38 @@
+{
+  "name": "iru-swift-docc",
+  "repo": "albertoirurueta/ai-catalog",
+  "path": ".claude/skills/iru-swift-docc/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/albertoirurueta/ai-catalog",
+  "dir_name": "iru-swift-docc",
+  "downloaded_at": "2026-10-20T03:46:41.384659Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, documentation",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/ai-catalog/blob/main/.claude/skills/iru-swift-docc/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/ai-catalog/blob/main/.claude/skills/iru-swift-docc/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audit given Swift type(s)/file(s) for complete DocC coverage \u2014 a `///` summary for every public/open type (struct/class/enum/protocol/actor), initializer, property, method, subscript, and enum case within the discovered documentation bar, with `- Parameters:` (or `- Parameter x:` for a single parameter, using the parameter's *internal* name), `- Returns:`, `- Throws:`, and `- Note:`/`- Important:` callouts where applicable \u2014 plus a DocC catalog landing page (`Sources/<Target>/<Target>.docc/<Target>.md`, starting with `# ``<Target>``` and a `## Topics` section) for every target touched, creating one if it's missing \u2014 generate any missing or incomplete DocC comments grounded in the actual code and current changes, audit actual completeness via `swift package dump-symbol-graph` (parsing each symbol's `docComment` presence in the emitted `*.symbols.json`, since DocC's own build does **not** warn on missing documentation by default), then run `swift package generate-documentation --target <Target> --warnings-as-errors` (or `xcodebuild docbuild -scheme <Scheme> -destination 'platform=macOS'` for an app/Xcode project) to confirm the result is structurally well-formed. Invoke as `/iru-swift-docc <Type1,Type2,...>` (or file paths), or `/iru-swift-docc` with no argument to scope to types touched by uncommitted changes plus commits on the current branch not yet on the base branch. Works against any Swift package or Xcode app project \u2014 it discovers the project's own documentation bar from a `.swiftlint.yml`'s `missing_docs` opt-in rule, a `.spi.yml`'s `documentation_targets`, and observed practice, rather than assuming a fixed style. Equivalent to `iru-java-javadoc`/`iru-typescript-tsdoc`/`iru-android-dokka` for the Swift stack. Use whenever the user wants DocC completeness checked and filled in for specific types, instead of relying on a full doc build to surface gaps (which, like Dokka, does not fail or warn on undocumented public members by default)."
+}

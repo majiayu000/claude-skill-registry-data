@@ -1,0 +1,39 @@
+{
+  "name": "visualize-graph-cytoscape",
+  "repo": "cheneeheng/ceh-claude-code-library",
+  "path": "plugins/standalone/ceh-web-frontend/skills/visualize-graph-cytoscape/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/cheneeheng/ceh-claude-code-library",
+  "dir_name": "visualize-graph-cytoscape",
+  "downloaded_at": "2026-10-20T04:31:12.253384Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: ui, css, frontend, tailwind",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ui",
+      "css",
+      "frontend",
+      "tailwind"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cheneeheng",
+  "source_url": "https://github.com/cheneeheng/ceh-claude-code-library/blob/main/plugins/standalone/ceh-web-frontend/skills/visualize-graph-cytoscape/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cheneeheng/ceh-claude-code-library/blob/main/plugins/standalone/ceh-web-frontend/skills/visualize-graph-cytoscape/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Load this skill when building an interactive node-and-edge graph UI with Cytoscape.js: a network, dependency map, knowledge graph, or org chart. Trigger on \"visualize this graph\", \"draw a network\", or any mention of cytoscape. Not for a fixed diagram (use Mermaid)."
+}

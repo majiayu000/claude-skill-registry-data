@@ -1,0 +1,39 @@
+{
+  "name": "write-project-docs",
+  "repo": "cheneeheng/ceh-claude-code-library",
+  "path": "plugins/standalone/ceh-documentation/skills/write-project-docs/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/cheneeheng/ceh-claude-code-library",
+  "dir_name": "write-project-docs",
+  "downloaded_at": "2026-10-20T04:31:07.991508Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: docs, word, markdown, documentation",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "word",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cheneeheng",
+  "source_url": "https://github.com/cheneeheng/ceh-claude-code-library/blob/main/plugins/standalone/ceh-documentation/skills/write-project-docs/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cheneeheng/ceh-claude-code-library/blob/main/plugins/standalone/ceh-documentation/skills/write-project-docs/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Load this skill when writing a complete docs set under docs/: quickstart, guides, concepts, API reference, examples, troubleshooting. Trigger on \"document this project\", \"write the docs for this library\", \"build out the docs folder\". Not for a README refresh."
+}

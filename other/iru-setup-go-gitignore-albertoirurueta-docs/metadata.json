@@ -1,0 +1,37 @@
+{
+  "name": "iru-setup-go-gitignore",
+  "repo": "albertoirurueta/docs",
+  "path": ".claude/skills/iru-setup-go-gitignore/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/albertoirurueta/docs",
+  "dir_name": "iru-setup-go-gitignore-albertoirurueta-docs",
+  "downloaded_at": "2026-10-20T03:47:16.703903Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, generation=2",
+    "score": 2,
+    "runner_up": "generation",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-setup-go-gitignore/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-setup-go-gitignore/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Create or update the root `.gitignore` for a Go repository \u2014 the command-line tool layout `iru-setup-go-cli` produces (`go.mod`, `cmd/<bin>/`, `internal/`, `tools/gendocs`, `testdata/script/`) or any other Go module \u2014 covering the binary `go build` leaves at the root (`/<bin>`, `/<bin>.exe`, root-anchored so `cmd/<bin>/` stays tracked), test binaries and profiles (`*.test`, `*.pprof`), coverage output (`coverage.out`, `*.coverprofile`, `coverage.html`, a `/covdata/` GOCOVERDIR), the `build/` report/docs-generator directory (`build/coverage/cover.out`, `build/gendocs/`), GoReleaser's `dist/`, per-developer `go.work`/`go.work.sum` (unless the repository deliberately tracks a workspace), `/vendor/` only when dependencies are not vendored (asked), env files (keeping `.env.example`), the Antora docs build output, editor/OS files, the repository-wide `.integration-test.lock/`, and \u2014 for a Bubble Tea terminal UI \u2014 the UI tests' capture directory `.ui-screenshots/` (never `.ui-quality.yml`). Never ignores `go.mod`, `go.sum`, `testdata/` or `.secrets.baseline`. Invoke as `/iru-setup-go-gitignore`, optionally with `args` (`key: value` lines): `bin-name` (default: every `cmd/<name>/` directory, else the module path's last element), `vendor: yes|no`, `mode: new|existing` (default: detected) and `on-existing: ask|keep|update|replace` (default `ask`). Announces whether it is creating from scratch or updating; an existing `.gitignore` is never overwritten silently \u2014 it warns, shows a diff, and asks Update (merge in what's missing, keep hand-added lines) / Keep as is / Replace, unless `on-existing` decides. Use whenever a Go repository needs a `.gitignore` bootstrapped from scratch, or an existing one checked and gap-filled against this house template."
+}

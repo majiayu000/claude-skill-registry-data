@@ -1,0 +1,38 @@
+{
+  "name": "doc-truth",
+  "repo": "dvwinck/capybara-toolbox",
+  "path": "plugins/housekeeping/skills/doc-truth/SKILL.md",
+  "github_branch": "master",
+  "category": "documents",
+  "source": "github.com/dvwinck/capybara-toolbox",
+  "dir_name": "doc-truth",
+  "downloaded_at": "2026-10-20T05:05:23.338620Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, documentation",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dvwinck",
+  "source_url": "https://github.com/dvwinck/capybara-toolbox/blob/master/plugins/housekeeping/skills/doc-truth/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dvwinck/capybara-toolbox/blob/master/plugins/housekeeping/skills/doc-truth/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Checks that what a repository's documents say actually exists - cited paths, links and anchors, parity between README.md and README.pt-BR.md, and versions and the plugin list against the manifests. Read-only, no network, exit code 0/1/2. Use when the user asks to check, audit or validate the documentation, for example \"os docs est\u00e3o certos?\", \"tem link quebrado?\", \"o README cita arquivo que n\u00e3o existe?\", \"o README em portugu\u00eas est\u00e1 igual ao em ingl\u00eas?\", \"doc-truth\", \"check the docs\", \"verify documentation paths and links\", \"do the READMEs match\". Triggers - /doc-truth or /housekeeping:doc-truth."
+}

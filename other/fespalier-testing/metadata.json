@@ -1,0 +1,37 @@
+{
+  "name": "fespalier-testing",
+  "repo": "fespalier/fespalier",
+  "path": "skills/fespalier-testing/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/fespalier/fespalier",
+  "dir_name": "fespalier-testing",
+  "downloaded_at": "2026-10-20T05:19:56.400734Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, platform=2",
+    "score": 2,
+    "runner_up": "platform",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fespalier",
+  "source_url": "https://github.com/fespalier/fespalier/blob/main/skills/fespalier-testing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fespalier/fespalier/blob/main/skills/fespalier-testing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Testing an app built with fespalier \u2014 package:fespalier/testing.dart (pumpRouter and currentLocation), booting the generated router at any location, deep links, typed navigation, not-found views and unparsable segments, loading and error states, faking a backend with provider overrides, guards and sign-in (fakeAuth from fespalier_auth, since 0.9.0), flagged routes (FakeFlags from fespalier_flags, since 0.9.0), a restart over a disk cache (fakePrefsStore and memoryBox from fespalier_storage, since 0.9.0), reconnects and offline banners (FakeConnectivity from fespalier_connectivity, since 0.9.0), translated routes (fakeTranslations, FakeTranslations.strict, RecordingEditor from fespalier_tolgee, since 0.10.0), offline and queued writes (FakeCrateStackTransport, FakeRowServer, ManualSyncTicker, crateStackTestOverrides from fespalier_cratestack, since 0.10.0), the window size of an adaptive layout (fespalier_adaptive, since 0.9.0), Dio and package:http without a network (a fake HttpClientAdapter, a MockClient that races the abort trigger, retriers with zero delays; fespalier_dio, since 0.9.0), pure tests of locations, dataAt and match, a generated smoke test per route (fsp test, setup.dart, smokeTestRoute), accessibility guidelines in it (test: a11y, tap targets, labels, contrast, routeA11yGuidelines; since 0.16.0), Maestro on a device or the web (semantics_ids, fsp maestro), local telemetry dashboards (fsp telemetry, OpenObserve, Grafana), and the traps that hang or fail a test (pending timers, retries, stale app.g.dart). Load before writing or changing a widget test that touches the router, or when a routing test hangs, leaves a timer pending, or reports the wrong location."
+}

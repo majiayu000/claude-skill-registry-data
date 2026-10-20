@@ -1,0 +1,36 @@
+{
+  "name": "github-activity",
+  "repo": "curie-eng/curie",
+  "path": "examples/github-activity/skills/github-activity/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/curie-eng/curie",
+  "dir_name": "github-activity",
+  "downloaded_at": "2026-10-20T04:44:36.335806Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category planning scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "security",
+    "runner_up_score": 1,
+    "signals": [
+      "plan"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "curie-eng",
+  "source_url": "https://github.com/curie-eng/curie/blob/main/examples/github-activity/skills/github-activity/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/curie-eng/curie/blob/main/examples/github-activity/skills/github-activity/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Report what happened across GitHub repositories over a time window, read only. Invoke when the user asks what merged, which issues were opened or closed, or what moved between milestones since a date or since the last report, across one or more repositories."
+}

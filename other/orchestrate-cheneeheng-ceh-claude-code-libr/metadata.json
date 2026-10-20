@@ -1,0 +1,37 @@
+{
+  "name": "orchestrate",
+  "repo": "cheneeheng/ceh-claude-code-library",
+  "path": "archive/ceh-orchestration/skills/orchestrate/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/cheneeheng/ceh-claude-code-library",
+  "dir_name": "orchestrate-cheneeheng-ceh-claude-code-libr",
+  "downloaded_at": "2026-10-20T04:31:01.311125Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cheneeheng",
+  "source_url": "https://github.com/cheneeheng/ceh-claude-code-library/blob/main/archive/ceh-orchestration/skills/orchestrate/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cheneeheng/ceh-claude-code-library/blob/main/archive/ceh-orchestration/skills/orchestrate/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Enter thin-orchestrator mode for a large, multi-step task with several heterogeneous or investigation-heavy parts \u2014 decompose and delegate rather than execute directly, capping context/token cost by keeping the main session lean and pushing all file I/O and execution into cheap isolated subagents. Not for mechanical single-pass changes where a scripted edit plus a typecheck is cheaper than delegating (e.g. a repo-wide rename), nor for a single one-off subagent dispatch. Stays in effect for the rest of the session once entered."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "iru-android-code-quality",
+  "repo": "albertoirurueta/docs",
+  "path": ".claude/skills/iru-android-code-quality/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/albertoirurueta/docs",
+  "dir_name": "iru-android-code-quality-albertoirurueta-docs",
+  "downloaded_at": "2026-10-20T03:47:20.571052Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-android-code-quality/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-android-code-quality/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run an Android/Kotlin module's wired static-analysis tools \u2014 Android Lint (always available via AGP's `lintDebug` task), Detekt (only when `io.gitlab.arturbosch.detekt` is applied), and ktlint (only when wired, either through Spotless's `spotlessCheck` task or the standalone `org.jlleitschuh.gradle.ktlint` plugin) \u2014 then read the generated `<module>/build/reports/lint-results-debug.xml` (Android Lint), `<module>/build/reports/detekt/detekt.xml` (Detekt, Checkstyle-format) or its SARIF sibling, to report every issue found (file, line, rule/issue id, severity, message), grouped by tool and classified by id/severity (Fatal/Error/Warning/Informational). Invoke as `/iru-android-code-quality` to check the whole module (`lib` by default), or `/iru-android-code-quality <scope>` where `<scope>` is a file/class name or path to scope the *reported* summary \u2014 Lint/Detekt/Spotless always analyze the whole module in one Gradle invocation (none of them expose a per-file CLI selector the way Surefire's `-Dtest` does), so a scoped invocation still runs everything and only filters the report. Verifies each tool is actually wired (plugin applied, config file present) before trusting a \"zero issues\" result from it, and explicitly reports a tool as \"not wired\" instead of silently omitting it or claiming it found nothing. When the prompt supplies a baseline (a prior per-id/severity issue count or list from an earlier run of this skill), reports only the new-vs-baseline diff instead of the full current list. Use whenever the user wants a lint/static-analysis pass called out separately from `iru-android-test`/`iru-android-coverage`, instead of eyeballing `./gradlew lintDebug` console output."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "iru-setup-python-django",
+  "repo": "albertoirurueta/docs",
+  "path": ".claude/skills/iru-setup-python-django/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/albertoirurueta/docs",
+  "dir_name": "iru-setup-python-django-albertoirurueta-docs",
+  "downloaded_at": "2026-10-20T03:47:18.664755Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for testing: test, pytest, integration, playwright",
+    "score": 4,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "pytest",
+      "integration",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-setup-python-django/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-setup-python-django/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Scaffold a new Django 6.1 project with uv (`uv init --bare` + `uv add`, committed `uv.lock`, `.python-version`) and `django-admin startproject config .`, or bring an existing Django project up to this catalog's toolchain, then post-process it: PEP 621 `pyproject.toml` (`version = \"0.1.0.dev0\"`, the PEP 440 convention `iru-python-bump-version` maintains, read at run time through `importlib.metadata`), a split settings package `config/settings/{base,local,test,production}.py` driven by fail-fast environment variables (no `SECRET_KEY` default outside local/test), apps under `apps/` with the custom user `apps.accounts.User` created before the first migration, `apps.core` (abstract `TimeStampedModel`, `/healthz` + `/readyz` probes), a sample `catalog` app (model \u2192 `@transaction.atomic` service \u2192 admin \u2192 API) whose API is Django REST Framework 3.18 + drf-spectacular (default), Django Ninja 1.7, or none; pytest-django + factory_boy fast tests on SQLite in memory and, for PostgreSQL, an `integration` tier on a testcontainers PostgreSQL; Ruff (lint + format, `DJ` rules, Google docstrings), mypy strict with django-stubs (+ djangorestframework-stubs), coverage with an 80% floor and Cobertura XML at `build/coverage/coverage.xml`; WhiteNoise, Gunicorn (`gthread` on WSGI, or `uvicorn_worker.UvicornWorker` on ASGI for Ninja), Sphinx API docs under `docs/api/` (autodoc + napoleon, Django set up in `conf.py`), a multi-stage non-root `Dockerfile`, `.dockerignore`, `compose.yaml` (`postgres:18` + one-shot `migrate` + `app`), `.env.example`, `sonar-project.properties` when Sonar is enabled, and \u2014 per the catalog's UI contract \u2014 a browser UI tier for the server-rendered pages it ships (the Django admin): `.ui-quality.yml`, pytest-playwright + axe-playwright-python, `LocaleMiddleware`, the shared `tests/ui/ui_screenshots.py` helper and an `AdminLoginScreen` test capturing `.ui-screenshots/` across left-to-right/right-to-left \u00d7 light/dark with an axe check, kept out of the fast tier (`-m ui`). Invoke as `/iru-setup-python-django`. Accepts pre-resolved inputs via `args` (`key: value` lines) \u2014 `name`, `package`, `description`, `license`, `developer-name`, `developer-email`, `organization-url`, `python-version`, `database` (`postgresql`/`sqlite`), `api` (`drf`/`ninja`/`none`), `open-source`, `visibility`, `ci`, `distribution`, `sonar` (+ `sonar-organization`/ `sonar-project-key`/`sonar-host-url`), `accessibility` (`enforce`/`report`/`off`), `mode` (`new`/`existing`), `on-existing` (`ask`/`keep`/`update`/`replace`) \u2014 so `iru-setup-python-repository` can drive it without re-prompting; stand-alone it asks whatever `args` didn't resolve. Announces whether it is scaffolding from scratch or updating an existing project and, for every artifact it owns that already exists, warns and asks Update / Keep as is / Replace (or Stop). Ends by running the same commands the CI workflows and the `iru-python-*` gate skills run. Use whenever a repository needs a Django project bootstrapped with its full test/coverage/type-check/lint/container toolchain from this house template, instead of running `startproject` and wiring the rest by hand."
+}

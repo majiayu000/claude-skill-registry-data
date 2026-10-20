@@ -1,0 +1,37 @@
+{
+  "name": "visual-testing",
+  "repo": "alva-intelligence/agentic-workflows",
+  "path": "skills/visual-testing/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/alva-intelligence/agentic-workflows",
+  "dir_name": "visual-testing-alva-intelligence-agentic-workflows",
+  "downloaded_at": "2026-10-20T03:52:55.441153Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "alva-intelligence",
+  "source_url": "https://github.com/alva-intelligence/agentic-workflows/blob/main/skills/visual-testing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/alva-intelligence/agentic-workflows/blob/main/skills/visual-testing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Validate UI work by driving the browser \u2014 what to click, what to check, screenshot evidence, and strict resource discipline (headless-first, one tab, no waste). Use whenever UI work claims to render, before declaring a UI phase complete, or when verifying a subagent's visual claims."
+}

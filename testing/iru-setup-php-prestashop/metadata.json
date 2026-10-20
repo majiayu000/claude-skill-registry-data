@@ -1,0 +1,39 @@
+{
+  "name": "iru-setup-php-prestashop",
+  "repo": "albertoirurueta/docs",
+  "path": ".claude/skills/iru-setup-php-prestashop/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/albertoirurueta/docs",
+  "dir_name": "iru-setup-php-prestashop",
+  "downloaded_at": "2026-10-20T03:47:21.045190Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for testing: test, integration, e2e, playwright",
+    "score": 4,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "integration",
+      "e2e",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-setup-php-prestashop/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-setup-php-prestashop/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Scaffold a PrestaShop module for PrestaShop 8.x and 9.x in the repository root (the repository is the module directory, named after the module's technical name), or bring an existing module up to this catalog's toolchain: main class `<module>.php` extending `Module` (name, tab, `x.y.z-dev` version, author, `need_instance`, `ps_versions_compliancy` 8.0.0\u20139.99.99, bootstrap, install/uninstall registering hooks and `Configuration` defaults, new translation system), tracked `config.xml`, a 32\u00d732 `logo.png` placeholder, `composer.json` (`type: prestashop-module`, PSR-4 `src/`, classmap of the main file, `prepend-autoloader: false`, `config.platform.php` pinned to the PHP floor) with the catalog's shared composer scripts (`test`, `test:coverage`, `test:integration`, `lint`, `lint:report`, `format`, `format:check`, `package`), a sample `displayFooter` hook, a Symfony back-office configuration page (form type + data configuration + form handler in `config/services.yml`, route in `config/routes.yml`, controller and Twig template, compatible with 8.x and 9.x), `upgrade/` with a README, `translations/`, `index.php` directory guards everywhere, license headers (AFL-3.0 by PrestaShop convention, OSL-3.0, MIT, proprietary, or other \u2014 asked), `prestashop/php-dev-tools` (PHP-CS-Fixer config, PHPStan with `_PS_ROOT_DIR_` against a real shop) plus a stub-based PHPStan config that needs no shop, a fast PHPUnit unit suite with Clover/JUnit under `build/logs/`, an optional Integration suite and Docker `prestashop/prestashop` + MariaDB dev shop, `bin/package.sh` building the distributable zip for Back Office or PrestaShop Addons upload, `sonar-project.properties` when Sonar is on, and browser UI tests per the catalog's UI contract \u2014 `.ui-quality.yml`, a test-only `package.json` with Playwright + `@axe-core/playwright`, `playwright.config.ts` against a running shop at `PS_BASE_URL` (specs skip when it is unset), the shared `tests/e2e/support/ui-screenshots.ts` helper, and a `FooterMessage` spec capturing the hook template across left-to-right/right-to-left \u00d7 light/dark with an accessibility check, all excluded from the module zip. Resolves dev-dependency versions live through `composer require --dev` under the pinned platform, then runs the unit tests, coverage, PHPStan, and PHP-CS-Fixer to prove the scaffold. Invoke as `/iru-setup-php-prestashop`. Announces whether it is creating the module from scratch or updating an existing one; for every file it owns that already exists, warns and asks Update / Keep as is / Replace. Accepts pre-resolved inputs via `args` (`key: value` lines) \u2014 `name`, `slug` (the technical name), `vendor`, `namespace`, `description`, `license`, `developer-name`, `developer-email`, `organization-url`, `php-version`, `open-source`, `visibility`, `ci`, `distribution`, `sonar` (+ `sonar-organization`/`sonar-project-key`/`sonar-host-url`), `tab`, `accessibility`, `mode`, `on-existing` \u2014 so `iru-setup-php-repository` can supply them without re-prompting. Use whenever a PrestaShop module repository needs its module skeleton and build/test/lint/package toolchain bootstrapped from this house template."
+}

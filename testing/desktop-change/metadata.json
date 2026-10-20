@@ -1,0 +1,38 @@
+{
+  "name": "desktop-change",
+  "repo": "arxdsilva/agent-office",
+  "path": ".claude/skills/desktop-change/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/arxdsilva/agent-office",
+  "dir_name": "desktop-change",
+  "downloaded_at": "2026-10-20T04:04:14.540134Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, e2e, playwright",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "e2e",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "arxdsilva",
+  "source_url": "https://github.com/arxdsilva/agent-office/blob/main/.claude/skills/desktop-change/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/arxdsilva/agent-office/blob/main/.claude/skills/desktop-change/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Change agent-office's desktop shell \u2014 tray menu, native notifications, settings, IPC channels, windows, the auto-updater, packaging/installers or icons. Use for edits under packages/desktop/ (main, preload, electron-builder.yml, e2e) or to core domain tray/attention/update/settings logic."
+}

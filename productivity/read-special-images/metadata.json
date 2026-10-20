@@ -1,0 +1,37 @@
+{
+  "name": "read-special-images",
+  "repo": "darrrkkk-crypto/Opencode-V2-Skills-Agents",
+  "path": "skills/read-special-images/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/darrrkkk-crypto/Opencode-V2-Skills-Agents",
+  "dir_name": "read-special-images",
+  "downloaded_at": "2026-10-20T04:50:35.952787Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "communication",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "darrrkkk-crypto",
+  "source_url": "https://github.com/darrrkkk-crypto/Opencode-V2-Skills-Agents/blob/main/skills/read-special-images/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/darrrkkk-crypto/Opencode-V2-Skills-Agents/blob/main/skills/read-special-images/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Read and OCR long webpage screenshots, panoramas, high-resolution images, and dense documents when whole-image display makes task-relevant text or details unreadable or unreliable. Treat aspect ratio at least 4:1, a side over 4096 px, or area over 16 million pixels only as screening signals, never automatic tiling triggers. Keep any image unsplit when the requested content is already readable, including small ultra-wide images."
+}

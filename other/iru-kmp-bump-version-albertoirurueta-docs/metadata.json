@@ -1,0 +1,38 @@
+{
+  "name": "iru-kmp-bump-version",
+  "repo": "albertoirurueta/docs",
+  "path": ".claude/skills/iru-kmp-bump-version/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/albertoirurueta/docs",
+  "dir_name": "iru-kmp-bump-version-albertoirurueta-docs",
+  "downloaded_at": "2026-10-20T03:47:12.169373Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, platform=3",
+    "score": 3,
+    "runner_up": "platform",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-kmp-bump-version/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-kmp-bump-version/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Set a Kotlin Multiplatform (Android + iOS) app's version to an exact value across both platforms \u2014 the root `gradle.properties` `VERSION_NAME` (and, only for a release value, `VERSION_CODE` incremented by one), plus, only for a release value, the iOS host app's `iosApp/Configuration/Config.xcconfig` `MARKETING_VERSION` (set to the release) and `CURRENT_PROJECT_VERSION` (set to the new `VERSION_CODE`) \u2014 never writing a `-SNAPSHOT` value into any iOS file, since App Store Connect rejects it. Detects the layout at runtime and falls back, when the `iru-setup-kmp-app` layout isn't present, to `versionName`/`versionCode` literals in the Android app module's `build.gradle(.kts)` (`androidApp/`, `composeApp/`, `app/`), the `gradle/libs.versions.toml` `[versions]` entries the build reads them from, XcodeGen `project.yml` settings, a literal `Info.plist` `CFBundleShortVersionString`/`CFBundleVersion`, or a committed `project.pbxproj` `MARKETING_VERSION`. Invoke as `/iru-kmp-bump-version <new-version>` where `<new-version>` is the literal target version (`1.2.0` or `1.3.0-SNAPSHOT`) \u2014 this skill never computes a bump itself; `iru-release` computes the release/next-dev values per the pre-release convention in Step 5 and passes each one through. Also accepts `args`: `sync-files: yes|no` (default: ask) to also update README/Antora version mentions, `next-version: <upcoming-version>` so that sync maps \"Latest release\" markers to `<new-version>` and \"Current development version\"/\"Latest snapshot\" markers to the upcoming value, and `dry-run: yes|no` (default `no`) to print the diff without writing anything. Reports the old and new values of every field and every file touched. Equivalent to `iru-android-bump-version`/ `iru-swift-bump-version` for a KMP app. Use whenever the user, or `iru-release`, needs a KMP app's version set to a specific value instead of hand-editing Gradle properties and Xcode build settings."
+}

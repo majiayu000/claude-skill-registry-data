@@ -1,0 +1,37 @@
+{
+  "name": "model-audit",
+  "repo": "cheneeheng/ceh-claude-code-library",
+  "path": ".claude/skills/model-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/cheneeheng/ceh-claude-code-library",
+  "dir_name": "model-audit-cheneeheng-ceh-claude-code-libr",
+  "downloaded_at": "2026-10-20T04:30:59.727683Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "prompt",
+      "prompting"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cheneeheng",
+  "source_url": "https://github.com/cheneeheng/ceh-claude-code-library/blob/main/.claude/skills/model-audit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cheneeheng/ceh-claude-code-library/blob/main/.claude/skills/model-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audit the ceh-* plugins against Claude's per-model prompting guides and open the results as a draft PR. Trigger on \"/model-audit\", \"audit the plugins for the new model\". User-invoked only: every audit is a billed model call."
+}

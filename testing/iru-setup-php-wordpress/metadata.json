@@ -1,0 +1,40 @@
+{
+  "name": "iru-setup-php-wordpress",
+  "repo": "albertoirurueta/ai-catalog",
+  "path": ".claude/skills/iru-setup-php-wordpress/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/albertoirurueta/ai-catalog",
+  "dir_name": "iru-setup-php-wordpress",
+  "downloaded_at": "2026-10-20T03:46:57.315573Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for testing: test, unittest, integration, e2e, playwright",
+    "score": 5,
+    "runner_up": "design",
+    "runner_up_score": 3,
+    "signals": [
+      "test",
+      "unittest",
+      "integration",
+      "e2e",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/ai-catalog/blob/main/.claude/skills/iru-setup-php-wordpress/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/ai-catalog/blob/main/.claude/skills/iru-setup-php-wordpress/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Scaffold (or bring up to date) a WordPress plugin or block theme repository on this catalog's PHP toolchain. `flavor: plugin` writes the main plugin file (full header \u2014 Plugin Name, Description, Version `x.y.z-dev`, Requires at least, Requires PHP, Author, License GPL-2.0-or-later, Text Domain, Domain Path \u2014 plus an `ABSPATH` guard and a `<PREFIX>_VERSION` constant), a namespaced PSR-4 `src/` loaded through Composer's autoloader (a composition root, a filter service with a documented custom hook, a settings page whose `admin-post.php` handler checks nonce and capability, a REST route with a `permission_callback`), `uninstall.php`, `languages/`, a WordPress.org `readme.txt`, and `.distignore`; with `blocks: yes` it also wires `@wordpress/scripts` and a first block. `flavor: theme` writes a block theme \u2014 `style.css` header, `theme.json` v3, `templates/index.html`, `parts/header.html`/`footer.html`, translatable `patterns/`, and a small `functions.php` that requires namespaced classes. Both get `composer.json` (PSR-4, `config.platform.php` pinned to the floor; scripts `test`, `test:coverage`, `test:integration`, `lint`, `lint:report`, `format`, `format:check`), `phpcs.xml.dist` (WordPress-Extra + WordPress-Docs + PHPCompatibilityWP with `testVersion`, `minimum_wp_version`, text domain and prefixes), `phpstan.neon.dist` (phpstan-wordpress, level 6), a Brain Monkey `unit` suite (`phpunit.xml.dist`) and a `WP_UnitTestCase` `integration` suite (`phpunit-integration.xml.dist`) run inside a dedicated `@wordpress/env` environment (`.wp-env.json` + `.wp-env.test.json`, `package.json` used only for wp-env/`@wordpress/scripts`), sample tests, Clover/JUnit under `build/logs/`, browser UI tests per the catalog's UI contract (`.ui-quality.yml`, `playwright.config.ts` extending `wp-scripts test-playwright` against the wp-env tests instance, `@axe-core/playwright`, the shared `tests/e2e/support/ui-screenshots.ts` helper, a test-only RTL mu-plugin, and a sample spec \u2014 the plugin's `ContentNotice` component or the theme's `Index` screen \u2014 captured into `.ui-screenshots/` across left-to-right/right-to-left \u00d7 light/dark with an accessibility check), and `sonar-project.properties` when `sonar` is not `none`. Resolves every dependency, the PHP floor, and the WordPress floor/tested-up-to versions live (Packagist, npm, php.net, api.wordpress.org), installs, and verifies the scaffold with its own gates. Invoke as `/iru-setup-php-wordpress`, or with `args` (`key: value` lines) \u2014 `flavor` (`plugin`/`theme`, asked when missing), `name`, `slug`, `vendor`, `namespace`, `prefix`, `description`, `license`, `developer-name`, `developer-email`, `organization-url`, `php-version`, `wp-version`, `blocks`, `open-source`, `visibility`, `ci`, `distribution` (`none`/`internal`/`store`), `sonar` (+ `sonar-organization`/ `sonar-project-key`/`sonar-host-url`), `accessibility` (`enforce`/`report`/`off`/`none`), `mode` (`new`/`existing`), `on-existing` (`ask`/`keep`/`update`/`replace`) \u2014 as `iru-setup-php-repository` passes them. Announces whether it creates from scratch or updates; for every owned file that already exists it warns and asks Update / Keep as is / Replace. Use whenever a WordPress plugin or block theme repository needs its code skeleton, tests, and quality tooling bootstrapped from this house template."
+}

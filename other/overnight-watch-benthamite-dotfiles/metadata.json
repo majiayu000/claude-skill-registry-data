@@ -1,0 +1,38 @@
+{
+  "name": "overnight-watch",
+  "repo": "benthamite/dotfiles",
+  "path": "claude/skills/overnight-watch/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/benthamite/dotfiles",
+  "dir_name": "overnight-watch-benthamite-dotfiles",
+  "downloaded_at": "2026-10-20T04:14:42.134960Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "benthamite",
+  "source_url": "https://github.com/benthamite/dotfiles/blob/master/claude/skills/overnight-watch/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/benthamite/dotfiles/blob/master/claude/skills/overnight-watch/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Watch every live agent.el session overnight while Pablo sleeps, and unstick any session that has stopped for a reason that does not need him. Use when Pablo asks for an overnight watch, overnight review or babysitting of live sessions, or runs /overnight-watch before bed. Not for reporting one session's state (live-session-status) or for running unattended TODOs (overnight-todos)."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "migrate-git-datastore",
+  "repo": "cheneeheng/ceh-claude-code-library",
+  "path": "plugins/standalone/ceh-git-datastore/skills/migrate-git-datastore/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/cheneeheng/ceh-claude-code-library",
+  "dir_name": "migrate-git-datastore",
+  "downloaded_at": "2026-10-20T04:31:10.481835Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cheneeheng",
+  "source_url": "https://github.com/cheneeheng/ceh-claude-code-library/blob/main/plugins/standalone/ceh-git-datastore/skills/migrate-git-datastore/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cheneeheng/ceh-claude-code-library/blob/main/plugins/standalone/ceh-git-datastore/skills/migrate-git-datastore/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Load this skill when a git-backed or file-based JSON store may have to become a real database, or to decide whether it is time yet. Trigger on \"we have outgrown the file store\", \"move off files to Postgres\", \"migrate the git datastore\", \"verify the backfill\"."
+}

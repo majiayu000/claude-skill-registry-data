@@ -1,0 +1,37 @@
+{
+  "name": "docs-lifecycle-scan",
+  "repo": "amplifthq/openmeld",
+  "path": ".claude/skills/docs-lifecycle-scan/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/amplifthq/openmeld",
+  "dir_name": "docs-lifecycle-scan",
+  "downloaded_at": "2026-10-20T03:54:05.839471Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, documentation",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "amplifthq",
+  "source_url": "https://github.com/amplifthq/openmeld/blob/main/.claude/skills/docs-lifecycle-scan/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/amplifthq/openmeld/blob/main/.claude/skills/docs-lifecycle-scan/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when closing out a feature, tidying developing/ documentation, or asked to check docs health \u2014 runs the lifecycle linter and applies the README deletion rules."
+}

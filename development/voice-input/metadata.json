@@ -1,0 +1,37 @@
+{
+  "name": "voice-input",
+  "repo": "christos-antono/NPCTalk",
+  "path": "skills/voice-input/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/christos-antono/NPCTalk",
+  "dir_name": "voice-input",
+  "downloaded_at": "2026-10-20T04:33:56.751351Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: build, debug",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "christos-antono",
+  "source_url": "https://github.com/christos-antono/NPCTalk/blob/main/skills/voice-input/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/christos-antono/NPCTalk/blob/main/skills/voice-input/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Let the player talk to NPCs out loud. Covers an always-on open mic with voice activity detection against the room's noise floor, push-to-talk and typing as fallbacks, ignoring the NPC's own voice coming out of the speakers, dropping coughs, clicks and filler words, fast speech-to-text (fal's Nemotron ASR, ~0.4 s, audio sent inline), and routing what was heard to the right NPC. Use when building or debugging mic input for a game, when the open mic triggers on noise or misses speech, when NPCs answer things the player didn't say, or when \"nobody answers\"."
+}

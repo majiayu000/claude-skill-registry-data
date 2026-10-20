@@ -1,0 +1,38 @@
+{
+  "name": "job-lead-tier2-scoring",
+  "repo": "esscott1/job-search-assistant",
+  "path": "skills/ai-governance/evals/sally-audit-full-audit/world/installed/job-lead-tier2-scoring/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/esscott1/job-search-assistant",
+  "dir_name": "job-lead-tier2-scoring-esscott1-job-search-assistant",
+  "downloaded_at": "2026-10-20T05:13:42.141791Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: excel, xlsx, docx",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "excel",
+      "xlsx",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "esscott1",
+  "source_url": "https://github.com/esscott1/job-search-assistant/blob/main/skills/ai-governance/evals/sally-audit-full-audit/world/installed/job-lead-tier2-scoring/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/esscott1/job-search-assistant/blob/main/skills/ai-governance/evals/sally-audit-full-audit/world/installed/job-lead-tier2-scoring/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Cloud-only, cron-friendly: for tracker rows still tagged Tier 1, search the open web and fetch the real JD from company/ATS pages (never LinkedIn directly), then score and update the row. Rows it can't resolve get flagged in Notes recommending job-lead-manual-jd-lookup."
+}

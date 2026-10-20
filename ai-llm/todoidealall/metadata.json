@@ -1,0 +1,37 @@
+{
+  "name": "todoIdealAll",
+  "repo": "blackorange0506/prompt-todo",
+  "path": "template/.claude/skills/todoIdealAll/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/blackorange0506/prompt-todo",
+  "dir_name": "todoidealall",
+  "downloaded_at": "2026-10-20T04:18:12.161604Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: prompt, prompting",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "prompt",
+      "prompting"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "blackorange0506",
+  "source_url": "https://github.com/blackorange0506/prompt-todo/blob/main/template/.claude/skills/todoIdealAll/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/blackorange0506/prompt-todo/blob/main/template/.claude/skills/todoIdealAll/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Sweep the user's todo file (TODO.<git user.name>.md, resolved as in the todo rules) at the end of a session: replace the text of every done ([x]) item that was worked in THIS conversation with its distilled ideal prompt (same distillation rules as /todoIdealPrompt). Done items with no dialog in this session are left untouched and listed as skipped \u2014 no honest ideal prompt can be distilled without their dialog. Ids are never assigned, renumbered, or reused. Use when the user wants to batch-update the todo file after a work session \u2014 phrases like '/todoIdealAll', 'ideal prompts for all done items', 'update prompts for done issues', 'go through the todo and update prompts'. This skill IS allowed to edit the user's todo file; that is its purpose."
+}

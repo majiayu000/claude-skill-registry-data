@@ -1,0 +1,37 @@
+{
+  "name": "asset-change",
+  "repo": "arxdsilva/agent-office",
+  "path": ".claude/skills/asset-change/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/arxdsilva/agent-office",
+  "dir_name": "asset-change",
+  "downloaded_at": "2026-10-20T04:04:14.126361Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "arxdsilva",
+  "source_url": "https://github.com/arxdsilva/agent-office/blob/main/.claude/skills/asset-change/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/arxdsilva/agent-office/blob/main/.claude/skills/asset-change/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Change agent-office's Blender-built 3D assets \u2014 the atrium, Main Street, wings and their themes, garden, cap, furniture kit, lighting/bake, the character mesh, rig or animation clips, the manifest or the graphics contract. Use for any edit under assets/ (assets/blender/**, assets/build.mjs, assets/validate*.ts), to docs/graphics-contract.md, or for anything in packages/web/public/assets/."
+}

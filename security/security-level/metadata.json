@@ -1,0 +1,38 @@
+{
+  "name": "security-level",
+  "repo": "codezeroexe/levels",
+  "path": "skills/security-level/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/codezeroexe/levels",
+  "dir_name": "security-level",
+  "downloaded_at": "2026-10-20T04:39:19.765605Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, vulnerability, audit",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "vulnerability",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "codezeroexe",
+  "source_url": "https://github.com/codezeroexe/levels/blob/main/skills/security-level/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/codezeroexe/levels/blob/main/skills/security-level/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audit a project's security against a 5-level scale, starting from a threat model of what is valuable and who would attack it, then propose options and split the chosen fixes into sub-plans delegated to Haiku or Sonnet while Opus plans and reviews. Defensive work on the user's own project only. Use when the user runs /security-level or asks to audit, review or harden security."
+}

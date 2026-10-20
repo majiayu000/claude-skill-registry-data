@@ -1,0 +1,38 @@
+{
+  "name": "iru-dotnet-docfx",
+  "repo": "albertoirurueta/docs",
+  "path": ".claude/skills/iru-dotnet-docfx/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/albertoirurueta/docs",
+  "dir_name": "iru-dotnet-docfx-albertoirurueta-docs",
+  "downloaded_at": "2026-10-20T03:47:05.199194Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=3, testing=3",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "doc",
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-dotnet-docfx/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-dotnet-docfx/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audit given C# class(es)/type(s) for complete XML doc-comment coverage \u2014 type-level `<summary>` (and `<typeparam>` for generics), every field/property/constant/event, every constructor/method (including private ones and any nested type or enum member) \u2014 generate any missing or incomplete XML doc comments grounded in the actual code and current changes, then attempt a best-effort documentation report via DocFX (https://dotnet.github.io/docfx/). Invoke as `/iru-dotnet-docfx <TypeName1,TypeName2,...>` (or file paths), or `/iru-dotnet-docfx` with no argument to scope to types touched by uncommitted changes plus commits on the current branch not yet on the base branch. Checks whether the `docfx` .NET tool is installed and attempts to install it (`dotnet tool install -g docfx`) if it isn't; if installation fails, documenting the code still proceeds, but no HTML documentation report is generated and the user is warned explicitly. Works against any .NET/C# project \u2014 it discovers the project's own doc-comment conventions rather than assuming a fixed style \u2014 including Windows desktop apps (WPF/WinUI 3/Windows Forms), where it uses the repository's root `docfx.json` (metadata from the UI-free Core project, published under the Antora site's `api/`), extracts WPF/Windows Forms app-project metadata on any host via `EnableWindowsTargeting`, and reports a WinUI project's DocFX check as \"unverified (needs Windows)\" off Windows. Use whenever the user wants XML doc-comment completeness checked and filled in for specific types, instead of relying on a full DocFX site build to surface gaps."
+}

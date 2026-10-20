@@ -1,0 +1,36 @@
+{
+  "name": "iru-knowledge-briefing",
+  "repo": "albertoirurueta/ai-catalog",
+  "path": ".claude/skills/iru-knowledge-briefing/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/albertoirurueta/ai-catalog",
+  "dir_name": "iru-knowledge-briefing",
+  "downloaded_at": "2026-10-20T03:46:55.307236Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/ai-catalog/blob/main/.claude/skills/iru-knowledge-briefing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/ai-catalog/blob/main/.claude/skills/iru-knowledge-briefing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Summarize the most relevant agreements and pending tasks recorded in the `knowledge/` base (built by `iru-knowledge-process-inbox`) for a given subject. Accepts any mix of scoping context \u2014 a person (matched against `knowledge/people/*.md`), a meeting reference (\"last meeting\", a date, or a topic keyword matched against `knowledge/meetings/meeting-*/meeting.md`), and/or a plain-language subject/topic \u2014 and searches `knowledge/people`, `knowledge/meetings`, `knowledge/agreements`, and `knowledge/pending` for material that matches. Invoke as `/iru-knowledge-briefing` to be asked for the subject/context, or `/iru-knowledge-briefing <subject-or-context>` to skip straight to searching. Read-only \u2014 produces a conversational report only (which meetings/agreements/pending tasks matched, their status, and who was involved), never edits any file in `knowledge/`. Stops early if `knowledge/` doesn't exist yet (run `iru-knowledge-setup` and `iru-knowledge-process-inbox` first). Use whenever someone needs to catch up on \"what's been agreed/is still open about X\" or \"what did we discuss with/about Y\" without hand-reading every meeting file, instead of `iru-knowledge-complete` (which closes out one specific task) or `iru-knowledge-to-issue` (which files one)."
+}

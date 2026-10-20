@@ -1,0 +1,37 @@
+{
+  "name": "iru-swift-code-quality",
+  "repo": "albertoirurueta/docs",
+  "path": ".claude/skills/iru-swift-code-quality/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/albertoirurueta/docs",
+  "dir_name": "iru-swift-code-quality-albertoirurueta-docs",
+  "downloaded_at": "2026-10-20T03:47:17.055579Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, lint",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "quality",
+      "lint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-swift-code-quality/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-swift-code-quality/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run this Swift package/app's wired static-analysis and formatting tools \u2014 SwiftLint (`swiftlint lint --reporter json [paths]`, only when `.swiftlint.yml` exists AND the `swiftlint` binary is on PATH), the Swift toolchain's bundled formatter (`swift format lint --strict --recursive [paths]`, when a `.swift-format` config exists \u2014 or the third-party SwiftFormat tool via its own `--lint` invocation when only a `.swiftformat` config is present and its binary is on PATH), and Periphery (`periphery scan --format json`, only when a `.periphery.yml` config exists AND the `periphery` binary is on PATH) \u2014 then report every issue found (file, line, rule id, severity, message), grouped by tool and classified by rule id/severity. Invoke as `/iru-swift-code-quality` to check the whole package/project, or `/iru-swift-code-quality [scope]` where `[scope]` is a file/directory path or a type/file simple name \u2014 SwiftLint and `swift format lint` both accept paths directly (so a scoped invocation narrows what actually runs, unlike Java's Checkstyle/PMD/SpotBugs trio), while Periphery has no path selector so a scoped invocation still runs the whole scan and only filters the report. Verifies each tool is actually wired (config file present AND its binary on PATH) before trusting a \"zero issues\" result from it, and never installs a missing tool itself \u2014 if `swiftlint` is missing it reports \"SwiftLint not wired/installed\" and uses `AskUserQuestion` to offer `brew install swiftlint` or skipping that tool (noting `mint run realm/SwiftLint` / `mint install realm/SwiftLint` and the official signed `.pkg` release on the SwiftLint GitHub Releases page as alternatives), with the same never-auto-install courtesy for Periphery and third-party SwiftFormat. When the prompt supplies a baseline (a prior per-rule-id issue count or list from an earlier run of this skill, e.g. captured by `iru-swift-code-one-task-group` before a task group's changes), reports only the new-vs-baseline diff per rule id instead of the full current list. Equivalent to `iru-java-code-quality`/`iru-typescript-code-quality`/`iru-android-code-quality` for the Swift stack. Use whenever the user wants a lint/static-analysis/formatting pass called out separately from `iru-swift-test`/`iru-swift-coverage`, instead of eyeballing `swiftlint lint`/`swift format lint` console output."
+}

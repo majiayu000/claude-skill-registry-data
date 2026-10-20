@@ -1,0 +1,37 @@
+{
+  "name": "fespalier-images",
+  "repo": "fespalier/fespalier",
+  "path": "skills/fespalier-images/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/fespalier/fespalier",
+  "dir_name": "fespalier-images",
+  "downloaded_at": "2026-10-20T05:19:55.915742Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fespalier",
+  "source_url": "https://github.com/fespalier/fespalier/blob/main/skills/fespalier-images/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fespalier/fespalier/blob/main/skills/fespalier-images/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Responsive CDN images in a fespalier app with fespalier_image (since 0.9.0) \u2014 ResponsiveImage (the width bucket from the box and the device pixel ratio, aspectRatio, the latch, placeholders and errors), imageCdnProvider in startup(), the URL builders (imgproxy and EmgR, Cloudinary, imgix, Thumbor, a template, a srcset), signing without a key in the app, precaching behind a RouteLink, hero flights, the web and CORS, caching, FakeImages in tests and image spans. Load before showing a network image, configuring an image CDN, signing image URLs, or when an image flickers, loads twice, is blurry or fails on the web."
+}

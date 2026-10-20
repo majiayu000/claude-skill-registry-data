@@ -1,0 +1,37 @@
+{
+  "name": "iru-android-dokka",
+  "repo": "albertoirurueta/docs",
+  "path": ".claude/skills/iru-android-dokka/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/albertoirurueta/docs",
+  "dir_name": "iru-android-dokka-albertoirurueta-docs",
+  "downloaded_at": "2026-10-20T03:47:07.554485Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-android-dokka/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-android-dokka/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audit given Kotlin class(es)/file(s)/package scope for complete KDoc coverage \u2014 class/interface/object/enum/annotation-level doc, primary-constructor parameters (via `@property` for declared properties, `@param` for plain constructor parameters), every function (including private ones, per the discovered bar), every property, enum entries, companion-object members, top-level functions/properties, and nested/inner declarations \u2014 required tags `@param`/`@return`/`@throws`/`@sample`/`@see`, `@suppress` honored for intentionally hidden members, and Dokka `module.md`/`package.md` includes wired via `dokkaSourceSets { includes.from(...) }` for every module/package touched (creating them if missing) \u2014 generate any missing or incomplete KDoc grounded in the actual code and current changes, then run the project's `dokkaGenerate` Gradle task to confirm the generated Dokka V2 site is well-formed and report per-file gap counts plus the build outcome. Invoke as `/iru-android-dokka <scope>` where `<scope>` is a comma-separated list of class names, file paths, or a package glob, or `/iru-android-dokka` with no argument to scope to classes touched by uncommitted changes plus commits on the current branch not yet on the base branch. Works against any Kotlin/Android Gradle project using the Dokka V2 Gradle plugin \u2014 it discovers the project's own documentation bar (from a `detekt.yml`'s `UndocumentedPublicClass`/`UndocumentedPublicFunction`/`UndocumentedPublicProperty` rules, or observed practice when none is configured) rather than assuming a fixed style. Use whenever the user wants KDoc completeness checked and filled in for specific classes/modules, instead of relying on a full `dokkaGenerate` run to surface gaps (which, unlike Javadoc/TypeDoc, does not fail or warn on undocumented members by default)."
+}

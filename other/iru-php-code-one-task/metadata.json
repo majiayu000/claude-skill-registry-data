@@ -1,0 +1,38 @@
+{
+  "name": "iru-php-code-one-task",
+  "repo": "albertoirurueta/ai-catalog",
+  "path": ".claude/skills/iru-php-code-one-task/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/albertoirurueta/ai-catalog",
+  "dir_name": "iru-php-code-one-task",
+  "downloaded_at": "2026-10-20T03:46:51.401838Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, testing=3",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/ai-catalog/blob/main/.claude/skills/iru-php-code-one-task/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/ai-catalog/blob/main/.claude/skills/iru-php-code-one-task/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Implement a single task from a PHP `implementation_plan.md`-style task list \u2014 the implementation, its tests, and its checkbox update. Detects the project's flavor with the same markers as `iru-explore` and `iru-php-code-quality` (Laravel application, WordPress plugin, WordPress theme including block themes, PrestaShop module, or plain Composer library), its PHP floor, its style tooling (Pint, PHP-CS-Fixer, PHPCS with WordPressCS), and its test runner (Pest or PHPUnit, and which suites are fast vs. integration), then loads only the matching guidance from this skill's own `reference/` directory \u2014 this catalog's PHP code agreements (PER-CS 3.0 unless the project's formatter says otherwise, `declare(strict_types=1)` where the project uses it, PSR-4, native types, enums/`match`/readonly, `final` by default, no closing tag, PHPDoc only for what native types can't express), testing rules (follow the project's Pest-or-PHPUnit choice, attributes, `assertSame`, fakes over mocks, one test class per class, data providers), security rules (escape on output, prepared statements, allow-lists, password hashing, CSRF, uploads, SSRF), and exactly one flavor file (Laravel thin controllers/Form Requests/policies/actions/Eloquent/queues; WordPress prefixing, hooks, nonces plus capabilities, sanitize/escape, `$wpdb->prepare`, REST `permission_callback`, i18n, enqueueing, block themes and `theme.json`; PrestaShop module class, hooks, `Configuration`, `pSQL`/`DbQuery`, upgrade scripts, Symfony controllers, translations), plus \u2014 when the task adds or changes a screen, component, list or other UI \u2014 the catalog's UI contract and its server-rendered mapping (screen \u203a region \u203a component decomposition, Blade/Livewire components, blocks, Smarty/Twig partials, paginated collections with one item component, Playwright UI tests with a left-to-right/right-to-left \u00d7 light/dark screenshot matrix and axe checks, written but never run here). Re-checks the current code state, implements exactly what the task specifies, writes or updates tests, runs only the fast tests it touched (never coverage, the full suite, or anything that needs Docker, a database server, wp-env, or a PrestaShop shop), then checks off this task's own checkbox in `implementation_plan.md` with a \"group validation pending\" note and hands back a short summary. Does not capture a quality baseline, add license headers, audit PHPDoc, or run coverage/quality checks \u2014 those happen once per task group in `iru-php-code-one-task-group`, which invokes this skill once per task. Invoke as `/iru-php-code-one-task <task description>`, passing the task's own text including its exact `implementation_plan.md` checkbox line(s). The PHP counterpart to `iru-typescript-code-one-task` and `iru-java-springboot-code-one-task`."
+}
