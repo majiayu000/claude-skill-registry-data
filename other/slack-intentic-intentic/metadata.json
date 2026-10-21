@@ -1,0 +1,37 @@
+{
+  "name": "slack",
+  "repo": "intentic/intentic",
+  "path": "_extensions/slack/skills/slack/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/intentic/intentic",
+  "dir_name": "slack-intentic-intentic",
+  "downloaded_at": "2026-10-21T04:16:14.597079Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: integration=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "integration",
+      "oauth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "intentic",
+  "source_url": "https://github.com/intentic/intentic/blob/main/_extensions/slack/skills/slack/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/intentic/intentic/blob/main/_extensions/slack/skills/slack/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Read, post, react and search in the connected Slack workspace via the Slack Web API, and help the user finish app setup. Use when the user asks to send a Slack message, list channels or users, read a thread, react to a message, or connect/install the Slack app."
+}

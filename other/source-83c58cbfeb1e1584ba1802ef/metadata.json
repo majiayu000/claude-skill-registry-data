@@ -1,0 +1,38 @@
+{
+  "name": "fix-agent-issue",
+  "repo": "gutsofpratik/OpenClaude-Skills",
+  "path": "skills/source-83c58cbfeb1e1584ba1802ef/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/gutsofpratik/OpenClaude-Skills",
+  "dir_name": "source-83c58cbfeb1e1584ba1802ef",
+  "downloaded_at": "2026-10-21T03:54:26.281440Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=3, context-management=3",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gutsofpratik",
+  "source_url": "https://github.com/gutsofpratik/OpenClaude-Skills/blob/main/skills/source-83c58cbfeb1e1584ba1802ef/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gutsofpratik/OpenClaude-Skills/blob/main/skills/source-83c58cbfeb1e1584ba1802ef/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Fix or change an AI agent's behavior using MLflow traces and regression tests. Use for wrong or incomplete answers, hallucinations, missing tool calls, new business rules, trace-driven debugging, or context and token-cost optimization. Diagnose the actual failure, plan a test, implement the smallest fix, and verify the new behavior without breaking existing cases."
+}

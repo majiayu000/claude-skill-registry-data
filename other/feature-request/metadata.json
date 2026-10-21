@@ -1,0 +1,37 @@
+{
+  "name": "feature-request",
+  "repo": "kirodotdev/KiroCrew",
+  "path": "src/kiro_crew/builtin_skills/feature-request/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/kirodotdev/KiroCrew",
+  "dir_name": "feature-request",
+  "downloaded_at": "2026-10-21T04:46:23.233021Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, writing=2",
+    "score": 2,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kirodotdev",
+  "source_url": "https://github.com/kirodotdev/KiroCrew/blob/main/src/kiro_crew/builtin_skills/feature-request/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kirodotdev/KiroCrew/blob/main/src/kiro_crew/builtin_skills/feature-request/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Conversational workflow for gathering user feedback and filing GitHub Issues on the Kiro Crew repository. Load when the user clicks \"Request a Feature\", wants to report a bug, or suggest an improvement."
+}

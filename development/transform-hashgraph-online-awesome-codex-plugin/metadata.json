@@ -1,0 +1,39 @@
+{
+  "name": "transform",
+  "repo": "hashgraph-online/awesome-codex-plugins",
+  "path": "plugins/exmergo/dex/skills/transform/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/hashgraph-online/awesome-codex-plugins",
+  "dir_name": "transform-hashgraph-online-awesome-codex-plugin",
+  "downloaded_at": "2026-10-21T03:58:47.881016Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build, refactor",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hashgraph-online",
+  "source_url": "https://github.com/hashgraph-online/awesome-codex-plugins/blob/main/plugins/exmergo/dex/skills/transform/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hashgraph-online/awesome-codex-plugins/blob/main/plugins/exmergo/dex/skills/transform/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this to author and change a dbt project or a semantic layer: bootstrap a project (`transform init`), write or refactor models from staging to marts, add tests and docs, and define semantic models, entities, dimensions, and metrics in MetricFlow, Apache Ossie or SLayer YAML. Reach for it instead of editing model files by hand whenever a change spans more than one file or must stay consistent with the project: it validates the edit against the real schema, returns a reviewable diff with a plan id, and catches what otherwise fails at `dbt run`, such as wrong columns or broken refs. Bug-fix tickets count: \"this model returns wrong numbers, fix it\" is a transform task. Also for \"build a staging model for this table\", \"define a revenue metric\", \"add a dimension to this entity\". Warehouse builds are dev-target only, gated, and cost-surfaced first. If you have not verified the source tables' columns or grain, use explore first. For a project that drifted from the warehouse, use maintain."
+}

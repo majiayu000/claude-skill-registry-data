@@ -1,0 +1,38 @@
+{
+  "name": "voice-card",
+  "repo": "gooseworks-ai/goose-skills",
+  "path": "marketing-agent/skills/voice-card/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/gooseworks-ai/goose-skills",
+  "dir_name": "voice-card",
+  "downloaded_at": "2026-10-21T03:50:12.093722Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: marketing=3, writing=3",
+    "score": 3,
+    "runner_up": "writing",
+    "runner_up_score": 3,
+    "signals": [
+      "marketing",
+      "social",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gooseworks-ai",
+  "source_url": "https://github.com/gooseworks-ai/goose-skills/blob/main/marketing-agent/skills/voice-card/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gooseworks-ai/goose-skills/blob/main/marketing-agent/skills/voice-card/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Builds or updates a voice card: how one account or person actually writes, measured from about 8 or more of their real posts (length, casing, emoji, openings, pet phrases, opinions with their source). When there are too few posts, it runs a short interview instead. It ends with a test that checks a draft against the card. The brand's rules always beat the card. Use alone when you already have the account's posts or the person on hand; otherwise run the playbook for the job (e.g. run-organic-social, write-outreach, email-lifecycle)."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "keeping-git-repos-clean",
+  "repo": "kajisho5/ffmpeg-skill",
+  "path": ".claude/skills/git-hygiene/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/kajisho5/ffmpeg-skill",
+  "dir_name": "git-hygiene-kajisho5-ffmpeg-skill",
+  "downloaded_at": "2026-10-21T04:37:45.185830Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kajisho5",
+  "source_url": "https://github.com/kajisho5/ffmpeg-skill/blob/main/.claude/skills/git-hygiene/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kajisho5/ffmpeg-skill/blob/main/.claude/skills/git-hygiene/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Prevents, detects, and remediates files that should never be committed \u2014 secrets (.env, API tokens, hardcoded credentials) and dev artifacts (build output, scratch databases, editor/OS files). Covers .gitignore (and why it does not untrack), git rm --cached, auditing tracked files, history scrubbing, and credential rotation. Use when a repo has committed secrets or junk, when setting up a new repo's ignore rules, or when reviewing what a repo actually tracks."
+}

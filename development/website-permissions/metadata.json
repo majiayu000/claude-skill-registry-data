@@ -1,0 +1,38 @@
+{
+  "name": "website-permissions",
+  "repo": "karero/croftweaver",
+  "path": "skills/website-permissions/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/karero/croftweaver",
+  "dir_name": "website-permissions",
+  "downloaded_at": "2026-10-21T04:39:48.484799Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "karero",
+  "source_url": "https://github.com/karero/croftweaver/blob/main/skills/website-permissions/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/karero/croftweaver/blob/main/skills/website-permissions/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Cut the number of permission prompts on a new-website repo to near-zero for the routine build loop, while keeping destructive actions gated. Installs the bundled `.claude/settings.json` allowlist into the project, explains the allow/deny model (npm / astro / playwright / git commit and push / gh read verbs and repo create / image tools / the link script are pre-approved; `rm -rf`, the usual force pushes, `git reset --hard`, and any `wrangler/gh \u2026 delete` are blocked), and safely EXTENDS the allowlist from the commands you keep approving \u2014 narrowly, never with a blanket wildcard. The allowlist travels with the repo, so a handoff party also gets the quiet build loop. Trigger phrases: \"reduce permission prompts\", \"too many permission prompts\", \"stop asking me to approve\", \"set up permissions for this site\", \"fewer prompts\", \"allowlist this repo\", \"why does it keep asking me\"."
+}

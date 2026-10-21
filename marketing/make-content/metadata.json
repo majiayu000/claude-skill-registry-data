@@ -1,0 +1,40 @@
+{
+  "name": "make-content",
+  "repo": "gooseworks-ai/goose-skills",
+  "path": "marketing-agent/skills/make-content/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/gooseworks-ai/goose-skills",
+  "dir_name": "make-content",
+  "downloaded_at": "2026-10-21T03:50:13.564586Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for marketing: marketing, seo, content, social, brand",
+    "score": 5,
+    "runner_up": "writing",
+    "runner_up_score": 3,
+    "signals": [
+      "marketing",
+      "seo",
+      "content",
+      "social",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gooseworks-ai",
+  "source_url": "https://github.com/gooseworks-ai/goose-skills/blob/main/marketing-agent/skills/make-content/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gooseworks-ai/goose-skills/blob/main/marketing-agent/skills/make-content/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Writes marketing content: articles, single posts, newsletters, scripts and repurposed cuts, each with an edit note and a claims check. Use when a marketer says \"write a blog post / case study\", \"write a LinkedIn or X post / thread / X article\", \"carousel copy\", \"draft this week's newsletter\", \"turn this webinar into posts\" or \"repurpose this\", \"write a TikTok or YouTube script\", \"refresh this old post\", or \"write the page from this SEO brief\". Words only; nothing is invented or published. Not for a dated posting calendar \u2014 use run-organic-social; not ad copy (make-static-ads) or promo emails (email-lifecycle). Press releases, landing and product pages, and sales decks are not covered."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "channel-github",
+  "repo": "llm-wiki-packages/llm-wiki-skills",
+  "path": "skills/channel-github/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/llm-wiki-packages/llm-wiki-skills",
+  "dir_name": "channel-github",
+  "downloaded_at": "2026-10-21T05:03:39.108742Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: process, pipeline",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "process",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "llm-wiki-packages",
+  "source_url": "https://github.com/llm-wiki-packages/llm-wiki-skills/blob/main/skills/channel-github/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/llm-wiki-packages/llm-wiki-skills/blob/main/skills/channel-github/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "GitHub repos as organized references \u2014 watch stars, orgs, users, repos or searches; one categorized page per repo, ranked answers and list pages."
+}

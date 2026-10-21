@@ -1,0 +1,37 @@
+{
+  "name": "acorn-data",
+  "repo": "hekivo/superpowers-sage",
+  "path": "skills/acorn-data/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/hekivo/superpowers-sage",
+  "dir_name": "acorn-data-hekivo-superpowers-sage",
+  "downloaded_at": "2026-10-21T04:00:44.668437Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hekivo",
+  "source_url": "https://github.com/hekivo/superpowers-sage/blob/main/skills/acorn-data/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hekivo/superpowers-sage/blob/main/skills/acorn-data/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when storing or querying data through Acorn's database layer - Eloquent models (app/Models, models over wp_posts, postmeta, users), custom tables, migrations (make:migration, migrate --force on deploy), seeders and factories, the DB facade, table prefix errors (\"Table wp_wp_x doesn't exist\"), and choosing post meta vs options vs a post type vs a custom table. For queues use acorn-background; for endpoints use acorn-routes-api; for post type registration use acorn-scaffolding."
+}

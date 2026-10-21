@@ -1,0 +1,37 @@
+{
+  "name": "setup",
+  "repo": "jovan-babovic/ad-localization",
+  "path": ".claude/skills/setup/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/jovan-babovic/ad-localization",
+  "dir_name": "setup-jovan-babovic-ad-localization",
+  "downloaded_at": "2026-10-21T04:32:24.902262Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jovan-babovic",
+  "source_url": "https://github.com/jovan-babovic/ad-localization/blob/main/.claude/skills/setup/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jovan-babovic/ad-localization/blob/main/.claude/skills/setup/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Interview the user about their company, buyers, ad platforms, target markets, tone per language, names never to translate and claims that need care, then write config/company.md, config/markets.json and config/glossary.md for the ad-localization job. Use when the user types /setup or wants to change their markets, languages, tone or glossary."
+}

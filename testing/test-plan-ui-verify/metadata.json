@@ -1,0 +1,38 @@
+{
+  "name": "test-plan-ui-verify",
+  "repo": "fullsend-ai/test-creator",
+  "path": "skills/test-plan-ui-verify/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/fullsend-ai/test-creator",
+  "dir_name": "test-plan-ui-verify",
+  "downloaded_at": "2026-10-21T03:38:35.781494Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, e2e, playwright",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "e2e",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fullsend-ai",
+  "source_url": "https://github.com/fullsend-ai/test-creator/blob/main/skills/test-plan-ui-verify/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fullsend-ai/test-creator/blob/main/skills/test-plan-ui-verify/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Browser-based UI test execution against live ODH/RHOAI clusters. Loads TCs from a GitHub PR or repo folder via ui_prepare.py, executes each via a persistent Playwright browser, and produces a visual HTML report with PASS/FAIL/BLOCKED/INCOMPLETE verdicts and screenshots. Use for verifying UI test cases against live clusters with visual evidence and screenshot capture."
+}

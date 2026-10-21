@@ -1,0 +1,39 @@
+{
+  "name": "ddev-sync",
+  "repo": "jsirish/workflow-skills",
+  "path": "skills/ddev-sync/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/jsirish/workflow-skills",
+  "dir_name": "ddev-sync",
+  "downloaded_at": "2026-10-21T04:33:40.196804Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, framework, build",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsirish",
+  "source_url": "https://github.com/jsirish/workflow-skills/blob/main/skills/ddev-sync/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsirish/workflow-skills/blob/main/skills/ddev-sync/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Start DDEV, sync a remote database and assets into the local dev environment, and run the framework build step. Use when the user says \"ddev sync\", \"sync remote database\", \"pull remote data\", \"set up local dev\", or asks to sync a DDEV project with a remote environment."
+}

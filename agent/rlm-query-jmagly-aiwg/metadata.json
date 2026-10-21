@@ -1,0 +1,38 @@
+{
+  "name": "rlm-query",
+  "repo": "jmagly/aiwg",
+  "path": "agentic/code/plugins/rlm/skills/rlm-query/SKILL.md",
+  "github_branch": "main",
+  "category": "agent",
+  "source": "github.com/jmagly/aiwg",
+  "dir_name": "rlm-query-jmagly-aiwg",
+  "downloaded_at": "2026-10-21T04:28:58.567776Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "agent",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for agent: agent, agentic, sub-agent",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic",
+      "sub-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jmagly",
+  "source_url": "https://github.com/jmagly/aiwg/blob/main/agentic/code/plugins/rlm/skills/rlm-query/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jmagly/aiwg/blob/main/agentic/code/plugins/rlm/skills/rlm-query/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Spawn sub-agent to process focused context and return structured result"
+}

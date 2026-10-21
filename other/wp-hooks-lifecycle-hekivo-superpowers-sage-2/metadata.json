@@ -1,0 +1,36 @@
+{
+  "name": "wp-hooks-lifecycle",
+  "repo": "hekivo/superpowers-sage",
+  "path": "plugins/kivo-wise/skills/wp-hooks-lifecycle/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/hekivo/superpowers-sage",
+  "dir_name": "wp-hooks-lifecycle-hekivo-superpowers-sage-2",
+  "downloaded_at": "2026-10-21T04:00:38.869448Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category api scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "api"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hekivo",
+  "source_url": "https://github.com/hekivo/superpowers-sage/blob/main/plugins/kivo-wise/skills/wp-hooks-lifecycle/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hekivo/superpowers-sage/blob/main/plugins/kivo-wise/skills/wp-hooks-lifecycle/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when adding, moving or debugging WordPress actions and filters in an Acorn project - add_action/add_filter priority and accepted_args, where a hook belongs (setup or filters files vs a provider boot()), load order (mu-plugins, plugins_loaded, after_setup_theme, init), when Acorn boots per profile, hooks that never fire on Acorn routes, REST or Livewire requests (template_redirect, wp_head), save_post firing twice in the block editor, the_content priorities. For ACF hooks use acf-native; for provider structure use acorn-stack."
+}

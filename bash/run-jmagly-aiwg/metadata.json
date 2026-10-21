@@ -1,0 +1,39 @@
+{
+  "name": "run",
+  "repo": "jmagly/aiwg",
+  "path": "agentic/code/addons/aiwg-utils/skills/run/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/jmagly/aiwg",
+  "dir_name": "run-jmagly-aiwg",
+  "downloaded_at": "2026-10-21T04:28:57.493892Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jmagly",
+  "source_url": "https://github.com/jmagly/aiwg/blob/main/agentic/code/addons/aiwg-utils/skills/run/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jmagly/aiwg/blob/main/agentic/code/addons/aiwg-utils/skills/run/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Execute a named script defined in .aiwg/aiwg.config or list all available scripts"
+}

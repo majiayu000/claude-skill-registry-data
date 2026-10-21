@@ -1,0 +1,37 @@
+{
+  "name": "prawo",
+  "repo": "intentic/intentic",
+  "path": "_extensions/prawo/skills/prawo/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/intentic/intentic",
+  "dir_name": "prawo",
+  "downloaded_at": "2026-10-21T04:16:14.394467Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, database",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "intentic",
+  "source_url": "https://github.com/intentic/intentic/blob/main/_extensions/prawo/skills/prawo/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/intentic/intentic/blob/main/_extensions/prawo/skills/prawo/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Polish law from official public sources. `prawo` finds acts in the Sejm's ELI database (Dziennik Ustaw, Monitor Polski), says whether they are in force, quotes the current consolidated text with a ready citation, and searches court rulings (SAOS). Use for any Polish statute, regulation, KPA question or ruling."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "adr",
+  "repo": "intent-driven-ai/garura",
+  "path": "core/components/plays/adr/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/intent-driven-ai/garura",
+  "dir_name": "adr-intent-driven-ai-garura",
+  "downloaded_at": "2026-10-21T04:15:48.107868Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word, markdown",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "intent-driven-ai",
+  "source_url": "https://github.com/intent-driven-ai/garura/blob/main/core/components/plays/adr/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/intent-driven-ai/garura/blob/main/core/components/plays/adr/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Record a decision as an ADR, written from the one ADR template (standards/templates/adr.md) \u2014 a Markdown ADR for Garura's own decisions (docs/adr/) or a decision.yaml record for a product decision \u2014 with what it overrides and what it changes in plain view: every older ADR it supersedes or amends (with the part), the files, rules, schemas, plays and agents it affects, its effect on agent intent (ICE), and whether it would change a person's business intent (it never does: such a decision is shown to the person and not applied). Accepted only on a person's word: run by hand, a pinned approval before anything is written as accepted; inside a drive, saved as proposed and accepted at the drive's final review. Older ADRs gain only a forward pointer, written after acceptance; the ADR index is rebuilt. Also completes a proposed ADR later (/adr accept <file>). Run by hand it opens and lands its own change; handed a drive's JSON contract it opens nothing of its own."
+}

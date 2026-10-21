@@ -1,0 +1,39 @@
+{
+  "name": "goal-loop",
+  "repo": "kirodotdev/KiroCrew",
+  "path": "skills/goal-loop/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/kirodotdev/KiroCrew",
+  "dir_name": "goal-loop",
+  "downloaded_at": "2026-10-21T04:46:16.933145Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kirodotdev",
+  "source_url": "https://github.com/kirodotdev/KiroCrew/blob/main/skills/goal-loop/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kirodotdev/KiroCrew/blob/main/skills/goal-loop/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Bootstrap a goal-driven self-improving AutoNudge loop from a goal plus an anchor directory, then run the board autonomously until the Definition of Done is met."
+}

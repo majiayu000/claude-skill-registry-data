@@ -1,0 +1,37 @@
+{
+  "name": "bmad-testarch-ci",
+  "repo": "gednt/ControlEasy",
+  "path": ".agent/skills/bmad-testarch-ci/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/gednt/ControlEasy",
+  "dir_name": "bmad-testarch-ci-gednt-controleasy",
+  "downloaded_at": "2026-10-21T03:42:52.687107Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "ci",
+      "cd"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gednt",
+  "source_url": "https://github.com/gednt/ControlEasy/blob/main/.agent/skills/bmad-testarch-ci/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gednt/ControlEasy/blob/main/.agent/skills/bmad-testarch-ci/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Scaffold CI/CD quality pipeline with test execution. Use when the user says \"lets setup CI pipeline\" or \"I want to create quality gates\""
+}

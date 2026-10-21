@@ -1,0 +1,37 @@
+{
+  "name": "block-scaffolding-from-design",
+  "repo": "hekivo/superpowers-sage",
+  "path": "plugins/kivo-creator/skills/block-scaffolding-from-design/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/hekivo/superpowers-sage",
+  "dir_name": "block-scaffolding-from-design",
+  "downloaded_at": "2026-10-21T04:00:33.452923Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "css"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hekivo",
+  "source_url": "https://github.com/hekivo/superpowers-sage/blob/main/plugins/kivo-creator/skills/block-scaffolding-from-design/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hekivo/superpowers-sage/blob/main/plugins/kivo-creator/skills/block-scaffolding-from-design/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when an approved kivo-creator match plan must be emitted - writing the page as block markup, scaffolding the blocks that were missing in the project's conventions (run the project's generator first, then review and copy the prepared files), turning unmatched design values into token proposals and importing media. For deciding which block a section uses use section-matching; for checking the rendered result use visual-fidelity."
+}

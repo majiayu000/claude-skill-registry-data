@@ -1,0 +1,36 @@
+{
+  "name": "ambience-and-sound-for-stills",
+  "repo": "gothicpixie/opendubstage",
+  "path": "skills/ambience-and-sound-for-stills/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/gothicpixie/opendubstage",
+  "dir_name": "ambience-and-sound-for-stills",
+  "downloaded_at": "2026-10-21T03:51:09.815731Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-llm scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gothicpixie",
+  "source_url": "https://github.com/gothicpixie/opendubstage/blob/main/skills/ambience-and-sound-for-stills/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gothicpixie/opendubstage/blob/main/skills/ambience-and-sound-for-stills/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Ambience beds, gap fill and spot effects for narrated documentaries, especially films built from photographs and silent archive: bed levels and coverage (never dead air), the gap lift, the layer hierarchy (bed / texture / spot / designed transition), density and timing rules for spot effects, no-sound classes (portraits, details, weak pictures), worldizing and era-matching so generated effects do not sound like a cartoon, and the witness test. Uses the opendubstage foley CLI (analyze, plan, check, generate, render). Use when someone asks \"what should play under these stills\", \"there is dead air between lines\", \"should this photo have a sound\", \"the effects sound cheesy / like a stinger\", is generating or placing sound effects from image descriptions, or is laying ambience under narration. Do NOT use for music (music-under-narration) or chapter joins (scene-transitions)."
+}

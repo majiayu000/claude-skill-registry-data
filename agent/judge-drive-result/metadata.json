@@ -1,0 +1,37 @@
+{
+  "name": "judge-drive-result",
+  "repo": "intent-driven-ai/garura",
+  "path": "core/components/skills/judge-drive-result/SKILL.md",
+  "github_branch": "main",
+  "category": "agent",
+  "source": "github.com/intent-driven-ai/garura",
+  "dir_name": "judge-drive-result",
+  "downloaded_at": "2026-10-21T04:15:51.676495Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "agent",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for agent: agent, sub-agent",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "agent",
+      "sub-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "intent-driven-ai",
+  "source_url": "https://github.com/intent-driven-ai/garura/blob/main/core/components/skills/judge-drive-result/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/intent-driven-ai/garura/blob/main/core/components/skills/judge-drive-result/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Check a finished drive's result against what the drive promised, and give a pass or reject verdict with a reason for every criterion. It holds the drive checker's rules, its prompt and its verdict shape \u2014 the one source for them, used by both kinds of checker (a sub-agent on a different model, or a different coding agent such as Codex). The checker is handed only a bundle of the drive's outputs (the change it made, its plays' review records, the answers and where each came from, the decision-trace check, each play's done check) and the drive's own criteria; never the drive's reasoning. Use when a drive reaches its checker step (Shared Drive Run, R6)."
+}

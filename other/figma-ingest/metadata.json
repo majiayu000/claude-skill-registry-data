@@ -1,0 +1,38 @@
+{
+  "name": "figma-ingest",
+  "repo": "hekivo/superpowers-sage",
+  "path": "plugins/kivo-creator/skills/figma-ingest/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/hekivo/superpowers-sage",
+  "dir_name": "figma-ingest",
+  "downloaded_at": "2026-10-21T04:00:34.061663Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, design=3",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hekivo",
+  "source_url": "https://github.com/hekivo/superpowers-sage/blob/main/plugins/kivo-creator/skills/figma-ingest/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hekivo/superpowers-sage/blob/main/plugins/kivo-creator/skills/figma-ingest/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when a Figma frame URL has to become kivo-creator section specs - reading the frame through the official Figma MCP server in the main session (get_metadata for the tree, get_design_context per section, get_variable_defs for tokens, get_screenshot to look, get_code_connect_map for mapped components), writing exact or inferred values only, and stopping with connection steps when the server is missing. For HTML sources use html-ingest; for creating Code Connect mappings use code-connect."
+}

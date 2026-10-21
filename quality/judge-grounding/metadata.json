@@ -1,0 +1,38 @@
+{
+  "name": "judge-grounding",
+  "repo": "intent-driven-ai/garura",
+  "path": "core/components/skills/judge-grounding/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/intent-driven-ai/garura",
+  "dir_name": "judge-grounding",
+  "downloaded_at": "2026-10-21T04:15:50.945767Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, lint, review",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "lint",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "intent-driven-ai",
+  "source_url": "https://github.com/intent-driven-ai/garura/blob/main/core/components/skills/judge-grounding/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/intent-driven-ai/garura/blob/main/core/components/skills/judge-grounding/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Grade ONE product-model grounding doc (a domain.md, capability.md, functionality.md or epic) for whether a stranger could understand it, and write the verdict JSON. It holds the grounding judge's rubric (five criteria), its prompt and its verdict shape \u2014 the one source for them (ADR 039 \u00a77). It runs inside an isolated, clean-context judge sub-agent that is handed only the doc, its parent doc when there is one, and the kind's per-section guidance; it never sees the brief or the author's reasoning. It only scores and evidences each criterion; the deterministic gate (grounding_gate.py, all-pass) decides pass or fail. Use when a play's content-quality eval judges a grounding doc it wrote."
+}

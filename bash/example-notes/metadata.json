@@ -1,0 +1,37 @@
+{
+  "name": "example-notes",
+  "repo": "intentic/intentic",
+  "path": "_tools/extension-example/seed/plugin/skills/example-notes/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/intentic/intentic",
+  "dir_name": "example-notes",
+  "downloaded_at": "2026-10-21T04:16:22.792192Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, cli",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 1,
+    "signals": [
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "intentic",
+  "source_url": "https://github.com/intentic/intentic/blob/main/_tools/extension-example/seed/plugin/skills/example-notes/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/intentic/intentic/blob/main/_tools/extension-example/seed/plugin/skills/example-notes/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Leave a short note for the owner in the Example rail view, using the `intentic-example` CLI. Use when the user asks you to note, jot, remember or flag something lightweight for them to read later, and when you want to leave a breadcrumb about work you did that has no better home."
+}

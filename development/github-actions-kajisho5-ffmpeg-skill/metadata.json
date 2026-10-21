@@ -1,0 +1,38 @@
+{
+  "name": "running-github-actions-efficiently",
+  "repo": "kajisho5/ffmpeg-skill",
+  "path": ".claude/skills/github-actions/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/kajisho5/ffmpeg-skill",
+  "dir_name": "github-actions-kajisho5-ffmpeg-skill",
+  "downloaded_at": "2026-10-21T04:37:45.791993Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kajisho5",
+  "source_url": "https://github.com/kajisho5/ffmpeg-skill/blob/main/.claude/skills/github-actions/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kajisho5/ffmpeg-skill/blob/main/.claude/skills/github-actions/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Cut GitHub Actions minutes and wall-clock time without losing coverage \u2014 the OS billing multiplier (macOS 10x / Windows 2x / Linux 1x), trigger hygiene that stops push+pull_request double-firing, concurrency that cancels superseded runs, dependency caching keyed on lockfiles, matrix discipline, and auditing scheduled crons that bill 24/7. Use when CI is burning included minutes, when runs feel slow, when setting up a new repo's workflows, or when reviewing an existing workflow for waste."
+}

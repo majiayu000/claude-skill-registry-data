@@ -1,0 +1,37 @@
+{
+  "name": "drive-editor",
+  "repo": "intent-driven-ai/garura",
+  "path": "core/components/plays/drive-editor/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/intent-driven-ai/garura",
+  "dir_name": "drive-editor",
+  "downloaded_at": "2026-10-21T04:15:48.759795Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: build, compile",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "intent-driven-ai",
+  "source_url": "https://github.com/intent-driven-ai/garura/blob/main/core/components/plays/drive-editor/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/intent-driven-ai/garura/blob/main/core/components/plays/drive-editor/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Changes an existing drive \u2014 its goal, a constraint, a failure condition, a scenario, its plays or their order, the questions it asks first, its checker or runner setting, or how it ends \u2014 by editing the drive's ICE and rebuilding it, so the drive always matches its intent. Companion to drive-creator (which builds new drives). Use when the user wants to edit, change, update or fix a drive \u2014 or says \"edit the drive\", \"add a play to Kickoff\", \"the drive needs a new question\", \"drive-editor\", or \"rebuild the drive after I changed its ICE\"."
+}

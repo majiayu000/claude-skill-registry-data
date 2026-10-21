@@ -1,0 +1,37 @@
+{
+  "name": "gates-ledger",
+  "repo": "m16khb-org/issueops",
+  "path": "skills/gates-ledger/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/m16khb-org/issueops",
+  "dir_name": "gates-ledger",
+  "downloaded_at": "2026-10-21T05:09:01.274874Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "m16khb-org",
+  "source_url": "https://github.com/m16khb-org/issueops/blob/main/skills/gates-ledger/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/m16khb-org/issueops/blob/main/skills/gates-ledger/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Create, check, and report task gate ledgers with the issueops gates CLI. Turns acceptance criteria into G-numbered CHECK and EXPECT gates in .issueops/issues/<n>/gates.md or .issueops/gates/<scope>.md, fills EVIDENCE by running the checks through the command policy, and abandons gates honestly. Use when issueops-plan, issueops-implement, issueops-slop-clean, issueops-verify, or verified-execution needs a gate ledger, or when the user says \"\uac8c\uc774\ud2b8 \uc6d0\uc7a5\", \"gates \ub9cc\ub4e4\uc5b4\uc918\", \"\uc218\uc6a9 \uae30\uc900 \uccb4\ud06c\"."
+}

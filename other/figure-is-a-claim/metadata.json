@@ -1,0 +1,37 @@
+{
+  "name": "figure-is-a-claim",
+  "repo": "ieepirzy/ieeVisualizer",
+  "path": "skills/figure-is-a-claim/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ieepirzy/ieeVisualizer",
+  "dir_name": "figure-is-a-claim",
+  "downloaded_at": "2026-10-21T04:11:32.483282Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ieepirzy",
+  "source_url": "https://github.com/ieepirzy/ieeVisualizer/blob/main/skills/figure-is-a-claim/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ieepirzy/ieeVisualizer/blob/main/skills/figure-is-a-claim/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use before putting any number, KPI tile, chart, table cell or sparkline in front of a reader, and whenever data is missing, partial, failed to load, not yet collected or not applicable. Decides between showing a value, a gap, an explicit no-data state, or nothing; forbids rendering 0, 0%, an empty axis or a flat line for something that was not measured."
+}

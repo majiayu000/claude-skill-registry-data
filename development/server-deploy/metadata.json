@@ -1,0 +1,39 @@
+{
+  "name": "server-deploy",
+  "repo": "jsirish/workflow-skills",
+  "path": "skills/server-deploy/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/jsirish/workflow-skills",
+  "dir_name": "server-deploy",
+  "downloaded_at": "2026-10-21T04:33:40.953947Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, framework, build",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jsirish",
+  "source_url": "https://github.com/jsirish/workflow-skills/blob/main/skills/server-deploy/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jsirish/workflow-skills/blob/main/skills/server-deploy/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Push a local DDEV database and assets to a remote pre-prod/staging server with the project's deploy.sh. Use for \"push local DB to pre-prod\", \"deploy assets to staging\", \"content push\". Destructive. Pulls are server-sync; code deploys are dhq-deploy."
+}

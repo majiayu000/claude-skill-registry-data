@@ -1,0 +1,37 @@
+{
+  "name": "spec-diagram-review",
+  "repo": "friedbotstudio/baseline",
+  "path": ".claude/skills/spec-diagram-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/friedbotstudio/baseline",
+  "dir_name": "spec-diagram-review",
+  "downloaded_at": "2026-10-21T03:38:08.936612Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "friedbotstudio",
+  "source_url": "https://github.com/friedbotstudio/baseline/blob/main/.claude/skills/spec-diagram-review/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/friedbotstudio/baseline/blob/main/.claude/skills/spec-diagram-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Cross-consistency review of a drafted spec's diagrams. Verifies that C4 components appear in the dependency graph, class-diagram changes have matching DDL, every AC resolves to a concrete sequence, and the dependency graph is acyclic. Read-only. Run after `/spec-lint` passes and before implementation."
+}

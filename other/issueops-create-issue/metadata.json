@@ -1,0 +1,38 @@
+{
+  "name": "issueops-create-issue",
+  "repo": "m16khb-org/issueops",
+  "path": "skills/issueops-create-issue/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/m16khb-org/issueops",
+  "dir_name": "issueops-create-issue",
+  "downloaded_at": "2026-10-21T05:09:08.718145Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "docs",
+      "pdf",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "m16khb-org",
+  "source_url": "https://github.com/m16khb-org/issueops/blob/main/skills/issueops-create-issue/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/m16khb-org/issueops/blob/main/skills/issueops-create-issue/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Confirm and create the IssueOps issue that a cycle contracts on. Interview the user only on blocking ambiguity, survey the codebase and background sources into plan-prep evidence, record the intent contract, domain review, split decision, and plan prep, then publish a readable Korean issue through the shared remote write protocol and link it. Use at the start of a cycle, when \"issueops next\" reports stage none or issue, or when the user says \"\uc774\uc288 \ub9cc\ub4e4\uc5b4\uc918\", \"\uc774\uc288\ubd80\ud130 \uc2dc\uc791\ud558\uc790\", \"child task \ub9cc\ub4e4\uc5b4\uc918\"."
+}

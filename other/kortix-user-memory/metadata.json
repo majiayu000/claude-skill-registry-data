@@ -1,0 +1,37 @@
+{
+  "name": "kortix-user-memory",
+  "repo": "kortix-ai/suna",
+  "path": "packages/starter/templates/managed/skills/kortix-user-memory/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/kortix-ai/suna",
+  "dir_name": "kortix-user-memory",
+  "downloaded_at": "2026-10-21T04:48:55.517509Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kortix-ai",
+  "source_url": "https://github.com/kortix-ai/suna/blob/main/packages/starter/templates/managed/skills/kortix-user-memory/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kortix-ai/suna/blob/main/packages/starter/templates/managed/skills/kortix-user-memory/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Per-user memory in the user's own Drive folder: `/drives/me/Memory`. Who this user is, how they like to work, what they corrected, what they are working on \u2014 kept across every session they start, private to them. Load at the start of a task for a person, when the user says remember / forget / you should know, when they correct how you work, or when you learn a durable fact about them."
+}

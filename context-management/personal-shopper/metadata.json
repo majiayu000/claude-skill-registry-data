@@ -1,0 +1,37 @@
+{
+  "name": "personal-shopper",
+  "repo": "kirodotdev/KiroCrew",
+  "path": "src/kiro_crew/apps/builtins/personal_shopper/skills/personal-shopper/SKILL.md",
+  "github_branch": "main",
+  "category": "context-management",
+  "source": "github.com/kirodotdev/KiroCrew",
+  "dir_name": "personal-shopper",
+  "downloaded_at": "2026-10-21T04:46:31.590449Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, memory",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kirodotdev",
+  "source_url": "https://github.com/kirodotdev/KiroCrew/blob/main/src/kiro_crew/apps/builtins/personal_shopper/skills/personal-shopper/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kirodotdev/KiroCrew/blob/main/src/kiro_crew/apps/builtins/personal_shopper/skills/personal-shopper/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Personal advisor for a problem that might be solved by buying something \u2014 diagnoses the real need through conversation, then recommends products from stores the user names only when a purchase is the right answer. Uses preferences stated in the conversation or supplied by Kiro Crew memory, but cannot read or write the app's Preferences tab. Never purchases; always hands back a link. Load when the user asks for product help, shopping advice, gift ideas, or \"help me find / what should I get\"."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "issueops",
+  "repo": "m16khb-org/issueops",
+  "path": "skills/issueops/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/m16khb-org/issueops",
+  "dir_name": "issueops",
+  "downloaded_at": "2026-10-21T05:08:59.841674Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "m16khb-org",
+  "source_url": "https://github.com/m16khb-org/issueops/blob/main/skills/issueops/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/m16khb-org/issueops/blob/main/skills/issueops/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Route an issue-driven work cycle across its ten user-facing stages. Run \"issueops next\" to decide which stage a cycle is in, hand the work to that stage's skill, and hold the invariants every stage shares. Use when the user asks to start, resume, or continue an issue cycle, when the current stage is unclear, or when they say \"\uc774\uc288\uc635\uc2a4\", \"\uc774\uc288 \uc791\uc5c5 \uc2dc\uc791\", \"\uc774\uc5b4\uc11c \uc9c4\ud589\"."
+}

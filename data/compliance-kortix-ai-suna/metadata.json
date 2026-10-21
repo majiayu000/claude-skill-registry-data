@@ -1,0 +1,38 @@
+{
+  "name": "compliance",
+  "repo": "kortix-ai/suna",
+  "path": ".agents/skills/compliance/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/kortix-ai/suna",
+  "dir_name": "compliance-kortix-ai-suna",
+  "downloaded_at": "2026-10-21T04:48:53.973997Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, analytics, sql",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "analytics",
+      "sql"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kortix-ai",
+  "source_url": "https://github.com/kortix-ai/suna/blob/main/.agents/skills/compliance/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kortix-ai/suna/blob/main/.agents/skills/compliance/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Customer-facing compliance duties that code runs: the subprocessor list and its automatic 30-day DPA notice, and the audit evidence it leaves. Load WHENEVER you add, remove or change a subprocessor (a new model provider, host, email or analytics vendor), route customer data to a new third party, touch apps/web/.../legal/subprocessors, packages/shared/src/subprocessors.ts or apps/api/src/billing/services/subprocessor-notices.ts, or need proof for an auditor that customers were notified. Load too for staff access to a customer account: act-as impersonation, 'Open as admin', and its audit trail."
+}

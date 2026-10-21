@@ -1,0 +1,38 @@
+{
+  "name": "theme-pack-authoring",
+  "repo": "kirodotdev/KiroCrew",
+  "path": "src/kiro_crew/builtin_skills/theme-pack-authoring/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/kirodotdev/KiroCrew",
+  "dir_name": "theme-pack-authoring",
+  "downloaded_at": "2026-10-21T04:46:26.304069Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kirodotdev",
+  "source_url": "https://github.com/kirodotdev/KiroCrew/blob/main/src/kiro_crew/builtin_skills/theme-pack-authoring/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kirodotdev/KiroCrew/blob/main/src/kiro_crew/builtin_skills/theme-pack-authoring/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Build, validate, and install Kiro Crew theme packs -- pack anatomy, the 56-variable palette, role-tagged fonts, the overrides.css allowlist (what installs vs what actually renders), and the install-verify cycle. Use when the user wants to create or edit a theme pack."
+}

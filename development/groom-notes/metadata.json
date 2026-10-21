@@ -1,0 +1,37 @@
+{
+  "name": "groom-notes",
+  "repo": "jamie8johnson/cqs",
+  "path": ".claude/skills/groom-notes/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/jamie8johnson/cqs",
+  "dir_name": "groom-notes",
+  "downloaded_at": "2026-10-21T04:21:34.369010Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, refactor",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jamie8johnson",
+  "source_url": "https://github.com/jamie8johnson/cqs/blob/main/.claude/skills/groom-notes/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jamie8johnson/cqs/blob/main/.claude/skills/groom-notes/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Review, prune, and suggest notes in notes.toml. Cleans stale notes and proposes new ones from recent changes."
+}

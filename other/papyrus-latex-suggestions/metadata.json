@@ -1,0 +1,36 @@
+{
+  "name": "papyrus-latex-suggestions",
+  "repo": "kirodotdev/KiroCrew",
+  "path": "src/kiro_crew/builtin_skills/papyrus-latex-suggestions/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/kirodotdev/KiroCrew",
+  "dir_name": "papyrus-latex-suggestions",
+  "downloaded_at": "2026-10-21T04:46:27.639956Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category context-management scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "creative",
+    "runner_up_score": 1,
+    "signals": [
+      "retrieval"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kirodotdev",
+  "source_url": "https://github.com/kirodotdev/KiroCrew/blob/main/src/kiro_crew/builtin_skills/papyrus-latex-suggestions/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kirodotdev/KiroCrew/blob/main/src/kiro_crew/builtin_skills/papyrus-latex-suggestions/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Propose inline replacement text (old -> new) as accept/reject suggestions, LaTeX 'suggesting mode' / track changes, rendered in the PDF. Use when the author wants concrete edit proposals to accept or reject. For remarks ABOUT the text rather than replacements, use papyrus-latex-comments."
+}

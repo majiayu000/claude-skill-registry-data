@@ -1,0 +1,37 @@
+{
+  "name": "assistant-ci-audit",
+  "repo": "laimis91/assistant-framework",
+  "path": "skills/assistant-ci-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/laimis91/assistant-framework",
+  "dir_name": "assistant-ci-audit",
+  "downloaded_at": "2026-10-21T04:52:21.346106Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "laimis91",
+  "source_url": "https://github.com/laimis91/assistant-framework/blob/main/skills/assistant-ci-audit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/laimis91/assistant-framework/blob/main/skills/assistant-ci-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audit CI and test suites for false passes, discovery gaps, stale fixtures, brittle or duplicate tests, and cost."
+}

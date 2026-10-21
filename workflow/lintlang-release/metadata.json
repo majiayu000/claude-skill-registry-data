@@ -1,0 +1,38 @@
+{
+  "name": "lintlang-release",
+  "repo": "hermes-labs-ai/lintlang",
+  "path": ".agents/skills/lintlang-release/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/hermes-labs-ai/lintlang",
+  "dir_name": "lintlang-release",
+  "downloaded_at": "2026-10-21T04:01:40.970953Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process, automation",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "process",
+      "automation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hermes-labs-ai",
+  "source_url": "https://github.com/hermes-labs-ai/lintlang/blob/main/.agents/skills/lintlang-release/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hermes-labs-ai/lintlang/blob/main/.agents/skills/lintlang-release/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Prepare, verify, publish, resume, or dry-run a LintLang release from merged main. Use for release readiness, version synchronization, release publication, or post-release closeout. This entrypoint selects one phase of the maintained release protocol and delegates mechanical work to the repository's existing scripts and workflow."
+}

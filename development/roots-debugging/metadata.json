@@ -1,0 +1,41 @@
+{
+  "name": "roots-debugging",
+  "repo": "hekivo/superpowers-sage",
+  "path": "plugins/kivo-wise/skills/roots-debugging/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/hekivo/superpowers-sage",
+  "dir_name": "roots-debugging",
+  "downloaded_at": "2026-10-21T04:00:37.041661Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, framework, build, compile, debug",
+    "score": 6,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "build",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hekivo",
+  "source_url": "https://github.com/hekivo/superpowers-sage/blob/main/plugins/kivo-wise/skills/roots-debugging/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hekivo/superpowers-sage/blob/main/plugins/kivo-wise/skills/roots-debugging/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when something is broken on a Roots/Acorn WordPress project and the cause is unknown - 500 or white screen, Acorn boot failure, \"class not found\", stale Blade, missing ACF blocks, assets 404, Livewire not mounting. Also when it works locally but not on staging or production, or a change is not visible after a deploy - old HTML, Livewire 419 or RangeError right after a deploy, edge/CDN, object cache or OPcache holding old state. Read-only on shared environments. For new features use the building skill; for Lando container problems use lando-wp."
+}

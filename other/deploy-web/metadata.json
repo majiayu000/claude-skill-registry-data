@@ -1,0 +1,37 @@
+{
+  "name": "deploy-web",
+  "repo": "kirodotdev/KiroCrew",
+  "path": "src/kiro_crew/deploy/skills/deploy-web/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/kirodotdev/KiroCrew",
+  "dir_name": "deploy-web",
+  "downloaded_at": "2026-10-21T04:46:19.913340Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kirodotdev",
+  "source_url": "https://github.com/kirodotdev/KiroCrew/blob/main/src/kiro_crew/deploy/skills/deploy-web/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kirodotdev/KiroCrew/blob/main/src/kiro_crew/deploy/skills/deploy-web/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Publish a Kiro Crew artifact (HTML / markdown / widget) to a public HTTPS URL on the user's own AWS account (private S3 + CloudFront + OAC). Use when the user says \"publish this publicly\", \"deploy this artifact to the web\", \"make this a public URL\", \"deploy-web\", or asks to set up / recall / destroy a deploy-web site. Kiro Crew never stores credentials \u2014 only an AWS profile name."
+}

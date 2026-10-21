@@ -1,0 +1,39 @@
+{
+  "name": "run-memory",
+  "repo": "gooseworks-ai/goose-skills",
+  "path": "marketing-agent/skills/run-memory/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/gooseworks-ai/goose-skills",
+  "dir_name": "run-memory",
+  "downloaded_at": "2026-10-21T03:50:13.152751Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for marketing: marketing, social, campaign, brand",
+    "score": 4,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "marketing",
+      "social",
+      "campaign",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gooseworks-ai",
+  "source_url": "https://github.com/gooseworks-ai/goose-skills/blob/main/marketing-agent/skills/run-memory/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gooseworks-ai/goose-skills/blob/main/marketing-agent/skills/run-memory/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Shared step of the marketing playbooks (analyze-performance, run-paid-campaigns, research-competitors, email-lifecycle): reads the last run's record, checks whether its recommendations were done and whether they worked, and saves a short record of this run for the next one. Loaded by those playbooks; not for direct use."
+}

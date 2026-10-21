@@ -1,0 +1,37 @@
+{
+  "name": "web-browse",
+  "repo": "kirodotdev/KiroCrew",
+  "path": "src/kiro_crew/builtin_skills/web-browse/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/kirodotdev/KiroCrew",
+  "dir_name": "web-browse",
+  "downloaded_at": "2026-10-21T04:46:20.332731Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kirodotdev",
+  "source_url": "https://github.com/kirodotdev/KiroCrew/blob/main/src/kiro_crew/builtin_skills/web-browse/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kirodotdev/KiroCrew/blob/main/src/kiro_crew/builtin_skills/web-browse/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Open a REAL external web page in Kiro Crew's Browser panel. Primary path is the `browser` MCP tool (native panel); playwright-cli is the fallback for remote/plain-browser sessions and attached logged-in browsers. Use when the user wants to VIEW or verify a public URL (dev server = web-preview)."
+}

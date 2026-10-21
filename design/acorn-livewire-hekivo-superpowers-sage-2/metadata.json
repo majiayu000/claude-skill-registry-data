@@ -1,0 +1,38 @@
+{
+  "name": "acorn-livewire",
+  "repo": "hekivo/superpowers-sage",
+  "path": "plugins/kivo-wise/skills/acorn-livewire/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/hekivo/superpowers-sage",
+  "dir_name": "acorn-livewire-hekivo-superpowers-sage-2",
+  "downloaded_at": "2026-10-21T04:00:35.673610Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: ui, component, tailwind",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "ui",
+      "component",
+      "tailwind"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hekivo",
+  "source_url": "https://github.com/hekivo/superpowers-sage/blob/main/plugins/kivo-wise/skills/acorn-livewire/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hekivo/superpowers-sage/blob/main/plugins/kivo-wise/skills/acorn-livewire/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when creating, wiring or fixing a Livewire 4 component in an Acorn app - make:livewire --class, app/Livewire, wire:model modifiers (.live, .blur, .debounce), wire:key, attributes (#[Locked]/#[Computed]/#[Validate]/#[On]), lifecycle hooks, @livewireScripts, the /livewire-<hash>/update route, installing livewire/livewire on Radicle. For errors that start after a deploy (419, RangeError, stale HTML) use roots-debugging; for JSON endpoints use acorn-routes-api; for Alpine-only UI use tailwind-vite-assets."
+}

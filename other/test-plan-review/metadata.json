@@ -1,0 +1,37 @@
+{
+  "name": "test-plan-review",
+  "repo": "fullsend-ai/test-creator",
+  "path": "skills/test-plan-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/fullsend-ai/test-creator",
+  "dir_name": "test-plan-review",
+  "downloaded_at": "2026-10-21T03:38:34.730056Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fullsend-ai",
+  "source_url": "https://github.com/fullsend-ai/test-creator/blob/main/skills/test-plan-review/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fullsend-ai/test-creator/blob/main/skills/test-plan-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Reviews a generated test plan for completeness, consistency, and quality using a 5-criteria rubric. Scores, auto-revises, and re-scores (max 2 cycles). Use for automated quality assessment and iterative improvement of generated test plans."
+}

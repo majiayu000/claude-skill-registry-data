@@ -1,0 +1,37 @@
+{
+  "name": "kickoff",
+  "repo": "intent-driven-ai/garura",
+  "path": "core/components/drives/kickoff/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/intent-driven-ai/garura",
+  "dir_name": "kickoff-intent-driven-ai-garura",
+  "downloaded_at": "2026-10-21T04:15:48.339455Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "sub-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "intent-driven-ai",
+  "source_url": "https://github.com/intent-driven-ai/garura/blob/main/core/components/drives/kickoff/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/intent-driven-ai/garura/blob/main/core/components/drives/kickoff/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "The Kickoff drive \u2014 product to intent (ADR 029 \u00a76). Give it a working prototype (a file, a project folder or a link) and it runs /intent \u2192 /vision \u2192 /understand as one run, on one issue and one branch: business intents proposed with their sources, a domain with its capabilities, and every capability detailed. It asks first what it can, asks the person only what none of its plays, memory or approved research answers, after the draft, has a checker the config picks judge the result, records its evidence, and ends at the pull request where the person types confirm or drop for each intent. Use when someone shares a working prototype and wants the product model built from it \u2014 \"kickoff\", \"start from this prototype\", \"run the Kickoff drive\"."
+}

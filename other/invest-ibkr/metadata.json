@@ -1,0 +1,37 @@
+{
+  "name": "invest-ibkr",
+  "repo": "longsizhuo/openInvest",
+  "path": "plugin/skills/invest-ibkr/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/longsizhuo/openInvest",
+  "dir_name": "invest-ibkr",
+  "downloaded_at": "2026-10-21T05:04:38.602477Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "longsizhuo",
+  "source_url": "https://github.com/longsizhuo/openInvest/blob/main/plugin/skills/invest-ibkr/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/longsizhuo/openInvest/blob/main/plugin/skills/invest-ibkr/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "**BETA \u2014 not recommended for anyone.** Operator notes for openInvest's experimental IBKR live autopilot: an LLM picks and trades US stocks / ETFs in a real Interactive Brokers cash account through a local IB Gateway, with no human confirmation per trade. Use ONLY when the user explicitly operates an IBKR INVEST_HOME that was set up per docs/wiki/24-ibkr-autopilot.md and asks about it \u2014 its status, today's orders, fills, news, the gateway login or the weekly IB Key approval (\"\u76c8\u900f\u8d26\u6237\u73b0\u5728\u600e\u4e48\u6837\", \"IBKR status\", \"\u4ea4\u6613\u5458\u4eca\u5929\u4e0b\u5355\u4e86\u5417\", \"\u7f51\u5173\u767b\u4e0d\u4e0a\"). Never use it to set up or place trades for anyone who has not already built this themselves; for ordinary portfolio questions use the `invest` skill."
+}

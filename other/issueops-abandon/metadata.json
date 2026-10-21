@@ -1,0 +1,36 @@
+{
+  "name": "issueops-abandon",
+  "repo": "m16khb-org/issueops",
+  "path": "skills/issueops-abandon/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/m16khb-org/issueops",
+  "dir_name": "issueops-abandon",
+  "downloaded_at": "2026-10-21T05:09:05.070491Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "devops",
+    "runner_up_score": 1,
+    "signals": [
+      "bash"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "m16khb-org",
+  "source_url": "https://github.com/m16khb-org/issueops/blob/main/skills/issueops-abandon/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/m16khb-org/issueops/blob/main/skills/issueops-abandon/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Leave an IssueOps cycle safely from any stage. Pause by releasing the execution lease so another session or host can resume it, or abandon the cycle by closing its draft PR or MR, closing the issue, deleting the remote branch, and removing the worktree, local branch, and record through one fingerprinted cleanup abandon. Use when the user says \"\uc911\ub2e8\", \"\ud0c8\ucd9c\", \"\uc774\uc288\uc635\uc2a4 \uc815\ub9ac\", \"\uc77c\uc2dc \uc911\ub2e8\", \"abandon the cycle\", or when \"issueops next\" reports an abandon exit."
+}

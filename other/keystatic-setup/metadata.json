@@ -1,0 +1,37 @@
+{
+  "name": "keystatic-setup",
+  "repo": "karero/croftweaver",
+  "path": "skills/keystatic-setup/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/karero/croftweaver",
+  "dir_name": "keystatic-setup",
+  "downloaded_at": "2026-10-21T04:39:45.482767Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "karero",
+  "source_url": "https://github.com/karero/croftweaver/blob/main/skills/keystatic-setup/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/karero/croftweaver/blob/main/skills/keystatic-setup/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Add Keystatic \u2014 a git-based CMS from the Keystone team \u2014 to a new-website Astro scaffold, so a non-technical person can edit content through a UI while the data still rests as Markdown in the GitHub repo. Wires LOCAL storage mode (edit in the dev server, commit/push); documents the GitHub cloud-mode upgrade for browser editing. Run ONCE, at scaffold time, when new-website Q3 = \"a non-technical person edits content\". Trigger phrases: \"add a CMS\", \"Keystatic\", \"non-technical editor\", \"client edits content\", \"git-based CMS\"."
+}

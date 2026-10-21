@@ -1,0 +1,40 @@
+{
+  "name": "og-images",
+  "repo": "karero/croftweaver",
+  "path": "skills/og-images/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/karero/croftweaver",
+  "dir_name": "og-images",
+  "downloaded_at": "2026-10-21T04:39:45.926034Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for marketing: marketing, seo, content, social, brand",
+    "score": 5,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "marketing",
+      "seo",
+      "content",
+      "social",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "karero",
+  "source_url": "https://github.com/karero/croftweaver/blob/main/skills/og-images/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/karero/croftweaver/blob/main/skills/og-images/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generate branded per-page Open Graph (social share) cards for a website: a 1200\u00d7630 JPEG \u2264300 KB for every page, rendered by a committed Python+Pillow script and wired so each page sets its own `image=` (with a default fallback) and the test suite proves the card exists at the right size. Use when building or auditing a site's share previews \u2014 \"OG image\", \"og:image\", \"social share image\", \"share card\", \"WhatsApp/Slack/LinkedIn preview\", \"Twitter card image\", \"the picture when I share the link\", \"per-page OG images\", \"generate share images\". For general marketing image creation/optimization use the `image` skill; this one is specifically the build-time, tested, per-page card generator for the suite's Astro starter."
+}

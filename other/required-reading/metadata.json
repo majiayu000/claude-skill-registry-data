@@ -1,0 +1,36 @@
+{
+  "name": "required-reading",
+  "repo": "hon454/grimoire",
+  "path": "plugins/archmage/skills/required-reading/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/hon454/grimoire",
+  "dir_name": "required-reading",
+  "downloaded_at": "2026-10-21T04:05:18.534073Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-llm scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hon454",
+  "source_url": "https://github.com/hon454/grimoire/blob/main/plugins/archmage/skills/required-reading/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hon454/grimoire/blob/main/plugins/archmage/skills/required-reading/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use at the start of any session where grimoire plugins are installed, or when the user asks what grimoire books are available or how to use them. Explains how grimoire books expose skills in Claude Code and Codex and how to pick the right one."
+}

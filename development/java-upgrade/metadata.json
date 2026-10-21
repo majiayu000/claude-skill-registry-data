@@ -1,0 +1,38 @@
+{
+  "name": "java-upgrade",
+  "repo": "github/awesome-copilot",
+  "path": "skills/java-upgrade/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/github/awesome-copilot",
+  "dir_name": "java-upgrade",
+  "downloaded_at": "2026-10-21T03:46:54.049799Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "github",
+  "source_url": "https://github.com/github/awesome-copilot/blob/main/skills/java-upgrade/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/github/awesome-copilot/blob/main/skills/java-upgrade/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Upgrade a Java project to a newer JDK (11 to 17, 17 to 21, 21 to 25) and adopt the new language and library features. Detects the current Java version from the build files, then loads only the matching per-version guide. Use when the user asks to upgrade Java, modernize Java code, or adopt records, sealed classes, pattern matching, virtual threads or other new Java features. For automated end-to-end upgrades see the modernize-java plugin."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "install",
+  "repo": "jmagly/aiwg",
+  "path": "agentic/code/plugins/utils/skills/install/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jmagly/aiwg",
+  "dir_name": "install-jmagly-aiwg",
+  "downloaded_at": "2026-10-21T04:28:57.681683Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jmagly",
+  "source_url": "https://github.com/jmagly/aiwg/blob/main/agentic/code/plugins/utils/skills/install/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jmagly/aiwg/blob/main/agentic/code/plugins/utils/skills/install/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Install AIWG-compatible packages from remote Git repositories into the current workspace"
+}

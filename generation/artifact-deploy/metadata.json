@@ -1,0 +1,37 @@
+{
+  "name": "artifact-deploy",
+  "repo": "kirodotdev/KiroCrew",
+  "path": "src/kiro_crew/deploy/skills/artifact-deploy/SKILL.md",
+  "github_branch": "main",
+  "category": "generation",
+  "source": "github.com/kirodotdev/KiroCrew",
+  "dir_name": "artifact-deploy",
+  "downloaded_at": "2026-10-21T04:46:22.519724Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "generation",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for generation: generation, generator",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "generation",
+      "generator"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kirodotdev",
+  "source_url": "https://github.com/kirodotdev/KiroCrew/blob/main/src/kiro_crew/deploy/skills/artifact-deploy/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kirodotdev/KiroCrew/blob/main/src/kiro_crew/deploy/skills/artifact-deploy/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "One-click deploy a user's pre-built app/artifact into their OWN AWS account and get a global public HTTPS link (Vercel-like), with a default TTL and promote-to-persistent. Use when the user says \"deploy this\", \"ship this demo\", \"give me a public link\", \"share this externally\", or \"deploy to AWS\"."
+}

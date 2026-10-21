@@ -1,0 +1,39 @@
+{
+  "name": "pod-e2e",
+  "repo": "kirodotdev/KiroCrew",
+  "path": "src/kiro_crew/apps/builtins/dev_fleet/skills/pod-e2e/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/kirodotdev/KiroCrew",
+  "dir_name": "pod-e2e",
+  "downloaded_at": "2026-10-21T04:46:27.225771Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kirodotdev",
+  "source_url": "https://github.com/kirodotdev/KiroCrew/blob/main/src/kiro_crew/apps/builtins/dev_fleet/skills/pod-e2e/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kirodotdev/KiroCrew/blob/main/src/kiro_crew/apps/builtins/dev_fleet/skills/pod-e2e/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "ONLY for developing Kiro Crew itself -- if the project you are working on is anything else, ignore this skill: it drives Kiro Crew's own pod tooling, which does not exist in another repository. Boots a Kiro Crew feature worktree's full stack as an ISOLATED throwaway pod and proves it boots, authenticates and renders (headless Playwright), without touching the live gateway. It does NOT run the worktree's test suite -- run the tests your change touches yourself and let CI own the full suite. Use when asked to e2e-test / smoke-test / verify a Kiro Crew worktree's feature hands-off, drive browser checks on a pod, or prove a new backend route + UI work together. NOT for testing the live instance, and NOT a general-purpose e2e or smoke-test skill."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "issueops-remote-write",
+  "repo": "m16khb-org/issueops",
+  "path": "skills/issueops-remote-write/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/m16khb-org/issueops",
+  "dir_name": "issueops-remote-write",
+  "downloaded_at": "2026-10-21T05:09:09.078924Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, cli",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "m16khb-org",
+  "source_url": "https://github.com/m16khb-org/issueops/blob/main/skills/issueops-remote-write/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/m16khb-org/issueops/blob/main/skills/issueops-remote-write/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Apply the shared IssueOps remote write protocol to any governed \"issueops remote ...\" mutation. Write the body from the render-template skeleton and the readable-body guide, polish it with fluent-korean, read the readability report in the preview, confirm the identical request, read the artifact back, and reconcile instead of retrying when the result is ambiguous. Use before creating or editing issues, child tasks, PR or MR bodies, comments, or review replies inside an IssueOps cycle, or when the user says \"\uc6d0\uaca9\uc5d0 \uc368\uc918\", \"\uc774\uc288 \ubcf8\ubb38 \uc62c\ub824\uc918\", \"PR \ubcf8\ubb38 \uac31\uc2e0\"."
+}

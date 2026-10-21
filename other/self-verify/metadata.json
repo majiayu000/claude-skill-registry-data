@@ -1,0 +1,38 @@
+{
+  "name": "self-verify",
+  "repo": "m16khb-org/issueops",
+  "path": "skills/self-verify/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/m16khb-org/issueops",
+  "dir_name": "self-verify",
+  "downloaded_at": "2026-10-21T05:09:00.897450Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=3, bash=3",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "m16khb-org",
+  "source_url": "https://github.com/m16khb-org/issueops/blob/main/skills/self-verify/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/m16khb-org/issueops/blob/main/skills/self-verify/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run or interpret the issueops self-verification loop. Use when the user asks to verify the harness, run the 95-point gate, inspect self-verification candidates, compare or promote verification baselines, or confirm CLI/MCP/native integration health."
+}

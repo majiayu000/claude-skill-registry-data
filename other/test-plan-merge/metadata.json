@@ -1,0 +1,37 @@
+{
+  "name": "test-plan-merge",
+  "repo": "fullsend-ai/test-creator",
+  "path": "skills/test-plan-merge/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/fullsend-ai/test-creator",
+  "dir_name": "test-plan-merge",
+  "downloaded_at": "2026-10-21T03:38:34.042385Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, analysis=2",
+    "score": 2,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "sub-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fullsend-ai",
+  "source_url": "https://github.com/fullsend-ai/test-creator/blob/main/skills/test-plan-merge/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fullsend-ai/test-creator/blob/main/skills/test-plan-merge/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Intelligently merge new analyzer findings into an existing test plan, preserving user edits while incorporating updates from new documentation. Use for test plan updates when re-analysis produces new findings that need to be integrated without overwriting human modifications."
+}

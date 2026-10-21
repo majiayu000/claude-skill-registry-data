@@ -1,0 +1,39 @@
+{
+  "name": "email-lifecycle",
+  "repo": "gooseworks-ai/goose-skills",
+  "path": "marketing-agent/skills/email-lifecycle/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/gooseworks-ai/goose-skills",
+  "dir_name": "email-lifecycle-gooseworks-ai-goose-skills",
+  "downloaded_at": "2026-10-21T03:50:16.350605Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for marketing: marketing, content, campaign, brand",
+    "score": 4,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "marketing",
+      "content",
+      "campaign",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gooseworks-ai",
+  "source_url": "https://github.com/gooseworks-ai/goose-skills/blob/main/marketing-agent/skills/email-lifecycle/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gooseworks-ai/goose-skills/blob/main/marketing-agent/skills/email-lifecycle/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Lifecycle email, SMS and push: audits the list and deliverability, then writes the flows this kind of business needs first, loadable as-is in your own tool, plus segments, cadence and this week's broadcasts. Never sends anything. Use when: set up my welcome and abandoned-cart emails; trial onboarding or waitlist launch emails; win back lapsed customers; plan this week's emails and texts; push notifications for my app; why are my emails going to spam; plan our Black Friday email and SMS sends; a send went wrong. Not for cold outreach to prospects \u2014 use write-outreach; not the editorial newsletter issue \u2014 use make-content; not the whole cross-channel Black Friday plan \u2014 use plan-campaign."
+}

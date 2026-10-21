@@ -1,0 +1,37 @@
+{
+  "name": "papyrus-make-fluent",
+  "repo": "kirodotdev/KiroCrew",
+  "path": "src/kiro_crew/builtin_skills/papyrus-make-fluent/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/kirodotdev/KiroCrew",
+  "dir_name": "papyrus-make-fluent",
+  "downloaded_at": "2026-10-21T04:46:25.746181Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, article",
+    "score": 2,
+    "runner_up": "creative",
+    "runner_up_score": 1,
+    "signals": [
+      "writing",
+      "article"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kirodotdev",
+  "source_url": "https://github.com/kirodotdev/KiroCrew/blob/main/src/kiro_crew/builtin_skills/papyrus-make-fluent/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kirodotdev/KiroCrew/blob/main/src/kiro_crew/builtin_skills/papyrus-make-fluent/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Polish the English of a LaTeX passage \u2014 fluency, grammar, and clarity \u2014 as tracked suggestions, without changing structure or meaning. Use when the author asks to make text fluent/readable, fix the English, proofread, or tighten wording. Includes a mandatory global-consistency (ripple) check."
+}

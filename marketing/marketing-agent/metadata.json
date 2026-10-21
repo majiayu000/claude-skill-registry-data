@@ -1,0 +1,39 @@
+{
+  "name": "marketing-agent",
+  "repo": "gooseworks-ai/goose-skills",
+  "path": "marketing-agent/skills/marketing-agent/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/gooseworks-ai/goose-skills",
+  "dir_name": "marketing-agent",
+  "downloaded_at": "2026-10-21T03:50:16.159962Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for marketing: marketing, content, social, brand",
+    "score": 4,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "marketing",
+      "content",
+      "social",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gooseworks-ai",
+  "source_url": "https://github.com/gooseworks-ai/goose-skills/blob/main/marketing-agent/skills/marketing-agent/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gooseworks-ai/goose-skills/blob/main/marketing-agent/skills/marketing-agent/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Router for any marketing ask with no playbook named: picks the one GooseWorks marketing playbook for the job and runs it. Use when the ask is vague (\"help me with marketing\", \"where do I start\") or is a job not covered yet (a one-off brand setup), which it says plainly; video ads and product photos go to the goose-video and goose-product-photos skills. Not for an ask that names a job, even two jobs (\"plan our launch and make the ads\"): pick the playbook for the first job. Not for a playbook already chosen: run that one directly."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "voice-matching",
+  "repo": "gothicpixie/opendubstage",
+  "path": "skills/voice-matching/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/gothicpixie/opendubstage",
+  "dir_name": "voice-matching",
+  "downloaded_at": "2026-10-21T03:51:11.074554Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word",
+    "score": 2,
+    "runner_up": "creative",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gothicpixie",
+  "source_url": "https://github.com/gothicpixie/opendubstage/blob/main/skills/voice-matching/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gothicpixie/opendubstage/blob/main/skills/voice-matching/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Making one voice sit next to another in a documentary or podcast mix: long-term average spectrum (LTAS) EQ matching with opendubstage ltasmatch, bridging a TTS or cloned voice into a location recording (band-limit, early reflections, room-tone floor), riding and placing an off-mic second speaker, phone and tape-sync matching, and when two voices should deliberately stay different. Use when a narrator and a pickup line sound like different rooms, when synthetic or re-recorded lines must blend with original tape, when an interviewer's interjections are buried, when a phone caller sits against a studio voice, or when someone asks for \"EQ match\", \"dialogue match\", \"make these voices match\" or \"the bridge sounds dry and clinical\". Do NOT use for cleaning a single recording (dialogue-editing-and-restoration) or for voice cloning itself."
+}

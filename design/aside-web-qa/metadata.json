@@ -1,0 +1,38 @@
+{
+  "name": "aside-web-qa",
+  "repo": "m16khb-org/issueops",
+  "path": "skills/aside-web-qa/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/m16khb-org/issueops",
+  "dir_name": "aside-web-qa",
+  "downloaded_at": "2026-10-21T05:09:01.676831Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, ux",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "ux"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "m16khb-org",
+  "source_url": "https://github.com/m16khb-org/issueops/blob/main/skills/aside-web-qa/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/m16khb-org/issueops/blob/main/skills/aside-web-qa/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Client-facing web QA orchestration through the installed Aside CLI. Runs aside-functional-qa and aside-visual-qa as one combined engagement with a shared preflight, one browser session plan, cross-phase defect routing and deduplication, and a single merged client report. Use when asked for combined or end-to-end web QA, a full client QA report, both behavior verification and UI/UX review, \ud1b5\ud569 QA, \uc885\ud569 QA, \uc6f9 QA \uc624\ucf00\uc2a4\ud2b8\ub808\uc774\uc158, or \ud074\ub77c\uc774\uc5b8\ud2b8 QA \ucd1d\uc810\uac80. Use aside-functional-qa alone for behavior-only asks and aside-visual-qa alone for design- or UX-only asks."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "proposal-architect",
+  "repo": "integral-llc/skills",
+  "path": "skills/proposal-architect/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/integral-llc/skills",
+  "dir_name": "proposal-architect",
+  "downloaded_at": "2026-10-21T04:15:45.339235Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, docx, markdown",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "docx",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "integral-llc",
+  "source_url": "https://github.com/integral-llc/skills/blob/main/skills/proposal-architect/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/integral-llc/skills/blob/main/skills/proposal-architect/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write technical proposals, design docs, RFCs, and architecture decision records in progressive layers. Starts as a one-page brief and deepens only on request, one layer per iteration, freezing decisions as it goes so later detail never reopens settled questions. Final layer emits decoupled, dependency-ordered implementation tasks derived from interface contracts rather than from guesswork. Use whenever the user wants to author or extend a proposal, design doc, RFC, ADR, one-pager, or technical brief; whenever they say \"go deeper\", \"next iteration\", \"expand section X\", or \"break this into tasks\"; and whenever they need a written design artifact that a senior review audience will approve or block. Not for reviewing someone else's proposal."
+}

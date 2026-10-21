@@ -1,0 +1,38 @@
+{
+  "name": "search-knowledge",
+  "repo": "intent-driven-ai/garura",
+  "path": "core/components/plays/search-knowledge/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/intent-driven-ai/garura",
+  "dir_name": "search-knowledge",
+  "downloaded_at": "2026-10-21T04:15:50.523841Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, memory",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "intent-driven-ai",
+  "source_url": "https://github.com/intent-driven-ai/garura/blob/main/core/components/plays/search-knowledge/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/intent-driven-ai/garura/blob/main/core/components/plays/search-knowledge/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Inside a drive, after a round of its plays leaves questions open, close every one the drive's own sources or memory already answer \u2014 before anything is built or anyone is asked. Merges the questions asked again across plays and capabilities, answers from the sources (for a prototype: its views, journeys and page \u2014 quoted) and from memory through the memory tool (traced), and says for the rest what is still missing. The first of the drive's three knowledge member plays (Shared Drive Run, R5c); never writes the product model."
+}

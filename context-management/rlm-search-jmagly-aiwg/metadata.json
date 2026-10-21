@@ -1,0 +1,38 @@
+{
+  "name": "rlm-search",
+  "repo": "jmagly/aiwg",
+  "path": "agentic/code/plugins/rlm/skills/rlm-search/SKILL.md",
+  "github_branch": "main",
+  "category": "context-management",
+  "source": "github.com/jmagly/aiwg",
+  "dir_name": "rlm-search-jmagly-aiwg",
+  "downloaded_at": "2026-10-21T04:28:59.234415Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, context-window, memory",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "context-window",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jmagly",
+  "source_url": "https://github.com/jmagly/aiwg/blob/main/agentic/code/plugins/rlm/skills/rlm-search/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jmagly/aiwg/blob/main/agentic/code/plugins/rlm/skills/rlm-search/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run the full Recursive Language Model pipeline \u2014 prep, fan out across chunks, and recursively synthesize until results fit one context window"
+}

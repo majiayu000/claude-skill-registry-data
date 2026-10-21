@@ -1,0 +1,38 @@
+{
+  "name": "concurrent-branches",
+  "repo": "kajisho5/ffmpeg-skill",
+  "path": ".claude/skills/concurrent-branches/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/kajisho5/ffmpeg-skill",
+  "dir_name": "concurrent-branches",
+  "downloaded_at": "2026-10-21T04:37:46.559782Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kajisho5",
+  "source_url": "https://github.com/kajisho5/ffmpeg-skill/blob/main/.claude/skills/concurrent-branches/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kajisho5/ffmpeg-skill/blob/main/.claude/skills/concurrent-branches/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Resolve conflicts and merges when several branches are open against one repo at the same time \u2014 the hotspot files every change must touch (registry manifests, a single version field, shared tool config, one aggregated test module, tracked build output), union-vs-recompute-vs-rebuild as three different correct resolutions, generated artifacts that must never be merged, non-deterministic serialization that makes every branch conflict, renumbered identifiers that git cannot show you, and why a clean auto-merge is not a passing test. Use when rebasing or merging a long-lived branch, resolving conflict markers, reviewing a merge commit, deciding what a repo should commit vs generate, or setting up a repo that will take parallel contributions."
+}

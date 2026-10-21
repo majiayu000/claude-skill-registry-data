@@ -1,0 +1,37 @@
+{
+  "name": "migrate",
+  "repo": "jamie8johnson/cqs",
+  "path": ".claude/skills/migrate/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/jamie8johnson/cqs",
+  "dir_name": "migrate-jamie8johnson-cqs",
+  "downloaded_at": "2026-10-21T04:21:33.093279Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, database",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jamie8johnson",
+  "source_url": "https://github.com/jamie8johnson/cqs/blob/main/.claude/skills/migrate/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jamie8johnson/cqs/blob/main/.claude/skills/migrate/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Handle cqs schema version upgrades \u2014 check version, attempt migration, rebuild if needed."
+}

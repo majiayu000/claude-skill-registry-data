@@ -1,0 +1,37 @@
+{
+  "name": "llm-council",
+  "repo": "kirodotdev/KiroCrew",
+  "path": "src/kiro_crew/builtin_skills/llm-council/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/kirodotdev/KiroCrew",
+  "dir_name": "llm-council-kirodotdev-kirocrew",
+  "downloaded_at": "2026-10-21T04:46:21.060687Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kirodotdev",
+  "source_url": "https://github.com/kirodotdev/KiroCrew/blob/main/src/kiro_crew/builtin_skills/llm-council/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kirodotdev/KiroCrew/blob/main/src/kiro_crew/builtin_skills/llm-council/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Convene a cross-vendor LLM council \u2014 the session is Chairman and spawns subagents each pinned to a DIFFERENT model family (Anthropic/OpenAI/DeepSeek/Zhipu/Qwen via kiro-cli). Modes \u2014 synthesis, vote, adversarial (SHIP/REVISE/REJECT). Use for hard, high-stakes or subjective questions."
+}

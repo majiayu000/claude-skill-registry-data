@@ -1,0 +1,39 @@
+{
+  "name": "new-website",
+  "repo": "karero/croftweaver",
+  "path": "skills/new-website/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/karero/croftweaver",
+  "dir_name": "new-website",
+  "downloaded_at": "2026-10-21T04:39:45.689933Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for marketing: marketing, seo, content, brand",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "marketing",
+      "seo",
+      "content",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "karero",
+  "source_url": "https://github.com/karero/croftweaver/blob/main/skills/new-website/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/karero/croftweaver/blob/main/skills/new-website/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Orchestrates building a NEW website end-to-end, from insights to launch-ready and handoff-ready. Self-contained: it runs the stack decision interview, sequences the website-* skills + existing marketing skills in order, and scaffolds the project from its own templates/ (Astro starter overlay + full QA test suite + GDPR privacy draft + owner docs + permission allowlist), copying the bundled skill set into the project's skills dir (full copy list in \u00a73) so the repo is self-contained for a third party. Default stack Astro \u2192 GitHub \u2192 Cloudflare Pages. Use at the very start of any new site. Trigger phrases: \"new website\", \"start a new site\", \"scaffold a website\", \"spin up a site\", \"build a new website\", \"set up a new web project\", \"website starter\", \"which stack for this site\"."
+}

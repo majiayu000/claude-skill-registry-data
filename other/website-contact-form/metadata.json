@@ -1,0 +1,36 @@
+{
+  "name": "website-contact-form",
+  "repo": "karero/croftweaver",
+  "path": "skills/website-contact-form/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/karero/croftweaver",
+  "dir_name": "website-contact-form",
+  "downloaded_at": "2026-10-21T04:39:47.715494Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "communication",
+    "runner_up_score": 1,
+    "signals": [
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "karero",
+  "source_url": "https://github.com/karero/croftweaver/blob/main/skills/website-contact-form/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/karero/croftweaver/blob/main/skills/website-contact-form/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Add a contact form to a new-website site that needs no server and no setup: the visitor fills in a few fields, presses a button, and their own email program opens with a message to the owner, ready to send. Nothing is sent or stored by the site. Adds a form component, its texts in English and German, one small script of the site's own (so a strict Content-Security-Policy holds), and tests/mail-form.spec.ts. The owner's address is always shown under the form for visitors without a mail program or without JavaScript. Run when new-website Q2 asks for a contact form, or later when the owner wants one. Trigger phrases: \"contact form\", \"add a form\", \"enquiry form\", \"visitors should be able to write to us\", \"kontaktformular\". Not for newsletter sign-up, file uploads, or anything that has to be stored."
+}

@@ -1,0 +1,36 @@
+{
+  "name": "search-console-setup",
+  "repo": "karero/croftweaver",
+  "path": "skills/search-console-setup/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/karero/croftweaver",
+  "dir_name": "search-console-setup",
+  "downloaded_at": "2026-10-21T04:39:46.717361Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "karero",
+  "source_url": "https://github.com/karero/croftweaver/blob/main/skills/search-console-setup/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/karero/croftweaver/blob/main/skills/search-console-setup/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Post-launch: register the LIVE site with Google Search Console and Bing Webmaster Tools, verify ownership, submit the sitemap, and turn on IndexNow so Bing/Yandex get pinged the moment content changes. For a Cloudflare-hosted Astro site: GSC Domain property verified by a Cloudflare DNS TXT record + submit `sitemap-index.xml`; Bing the easy way via \"Import from Google Search Console\" (auto-verifies + pulls the sitemap); IndexNow by flipping ONE toggle \u2014 Cloudflare Crawler Hints \u2014 no key file to host. Account creation + the DNS record are human actions the agent drafts but can't click. Trigger phrases: \"set up Google Search Console\", \"Search Console\", \"GSC\", \"Bing Webmaster Tools\", \"submit my sitemap\", \"register the site with Google\", \"verify site ownership\", \"enable IndexNow\", \"Crawler Hints\", \"get indexed\", \"submit the website to search engines\"."
+}

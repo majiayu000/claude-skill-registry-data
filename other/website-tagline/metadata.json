@@ -1,0 +1,37 @@
+{
+  "name": "website-tagline",
+  "repo": "karero/croftweaver",
+  "path": "skills/website-tagline/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/karero/croftweaver",
+  "dir_name": "website-tagline",
+  "downloaded_at": "2026-10-21T04:39:50.389386Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: business=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "business",
+      "strategy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "karero",
+  "source_url": "https://github.com/karero/croftweaver/blob/main/skills/website-tagline/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/karero/croftweaver/blob/main/skills/website-tagline/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "OPTIONAL: find the one short line that sits under the logo (the tagline; a German-speaking owner calls it the \"Claim\"). Leads with purpose: starts from what the business is there to do for its customer, taken from POSITIONING.md, not from clever wording. Shows the owner six to eight candidate lines in three or four different directions, asks which direction sounds like them, then refines on the owner's feedback, for at most three rounds, until they pick ONE or stop. Records it in TAGLINE.md and writes SITE.tagline; ships an opt-in tests/tagline.spec.ts. Adds no claim POSITIONING.md lacks and loses every conflict with it. Never runs unasked. Trigger phrases: \"tagline\", \"Claim\", \"strapline\", \"slogan\", \"motto\", \"the line under the logo\", \"a line for under our logo\", \"what do we stand for in five words\". Not for positioning itself, the page headline, or the story one-liner."
+}

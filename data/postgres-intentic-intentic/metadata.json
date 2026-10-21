@@ -1,0 +1,38 @@
+{
+  "name": "postgres",
+  "repo": "intentic/intentic",
+  "path": "_extensions/connectors/skills/postgres/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/intentic/intentic",
+  "dir_name": "postgres-intentic-intentic",
+  "downloaded_at": "2026-10-21T04:16:21.193613Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "intentic",
+  "source_url": "https://github.com/intentic/intentic/blob/main/_extensions/connectors/skills/postgres/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/intentic/intentic/blob/main/_extensions/connectors/skills/postgres/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Query the connected PostgreSQL database with psql. Use when the user asks about their database, tables, rows, schema, or to run SQL against Postgres."
+}

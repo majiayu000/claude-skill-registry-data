@@ -1,0 +1,36 @@
+{
+  "name": "knowledge-graph",
+  "repo": "kgaidev/kgai-gemini",
+  "path": "skills/knowledge-graph/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/kgaidev/kgai-gemini",
+  "dir_name": "knowledge-graph-kgaidev-kgai-gemini",
+  "downloaded_at": "2026-10-21T04:43:57.223843Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-llm scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kgaidev",
+  "source_url": "https://github.com/kgaidev/kgai-gemini/blob/main/skills/knowledge-graph/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kgaidev/kgai-gemini/blob/main/skills/knowledge-graph/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Records and retrieves engineering decisions in the kgai knowledge graph (a small, stable graph of domain ELEMENTS \u2014 Invoice, Pricing, Checkout\u2026 \u2014 shaped by an immutable log of DECISIONS). INVOKE THIS SKILL AUTOMATICALLY, WITHOUT WAITING TO BE ASKED, WHENEVER you make or implement a structural/architectural choice: splitting, merging, or moving a module/feature; renaming a domain element (its canonical name changes \u2014 code-level renames of files/functions don't count); changing a dependency, ownership boundary, or how something is exposed/rendered; deprecating or replacing a prior decision; or finishing ANY task in which such a choice was made. The skill then records it for you (no confirmation needed) \u2014 capturing the decision is part of completing the task, not optional bookkeeping, so do not end your turn with an uncaptured structural decision. ALSO invoke it BEFORE a non-trivial change to read prior decisions you must respect, and to answer \"why is X like this\", \"how does X relate to Y\", \"what changed and when\"."
+}

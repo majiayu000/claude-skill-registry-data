@@ -1,0 +1,38 @@
+{
+  "name": "boundary-probe",
+  "repo": "jamie8johnson/cqs",
+  "path": ".claude/skills/boundary-probe/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jamie8johnson/cqs",
+  "dir_name": "boundary-probe",
+  "downloaded_at": "2026-10-21T04:21:35.613972Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, data=3",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jamie8johnson",
+  "source_url": "https://github.com/jamie8johnson/cqs/blob/main/.claude/skills/boundary-probe/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jamie8johnson/cqs/blob/main/.claude/skills/boundary-probe/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Trust-boundary security audit of cqs \u2014 fans out unbiddable-auditor agents across 6 categories (RT-INJ/RT-FS/RT-RES/RT-DATA/RT-RELAY/RT-EXFIL), attacker mindset, run-the-attack PoC + regression guard."
+}
