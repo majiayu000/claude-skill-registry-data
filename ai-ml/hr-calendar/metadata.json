@@ -1,0 +1,37 @@
+{
+  "name": "hr-calendar",
+  "repo": "polar-bear-org/claude-skills",
+  "path": "packs/ai-for-hr-pack/skills/hr-calendar/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/polar-bear-org/claude-skills",
+  "dir_name": "hr-calendar",
+  "downloaded_at": "2026-10-22T04:28:51.237189Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, training",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polar-bear-org",
+  "source_url": "https://github.com/polar-bear-org/claude-skills/blob/main/packs/ai-for-hr-pack/skills/hr-calendar/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polar-bear-org/claude-skills/blob/main/packs/ai-for-hr-pack/skills/hr-calendar/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Builds a 12-month HR Calendar with an owner and lead time per item, statutory and reporting dates marked to confirm with a qualified adviser, and a clash check against your busy season. Use for \"run hr-calendar\", \"HR calendar\", \"annual HR calendar\", \"HR compliance calendar\", \"Q4 is killing me\", \"plan the HR year\", \"reporting deadlines for HR\", \"when do I start the pay review\", part of the AI for HR Pack by Polar Bear."
+}

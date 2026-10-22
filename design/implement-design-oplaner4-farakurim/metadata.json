@@ -1,0 +1,39 @@
+{
+  "name": "implement-design",
+  "repo": "oplaner4/farakurim",
+  "path": ".claude/skills/implement-design/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/oplaner4/farakurim",
+  "dir_name": "implement-design-oplaner4-farakurim",
+  "downloaded_at": "2026-10-22T04:17:15.427489Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, css, component, tailwind",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "css",
+      "component",
+      "tailwind"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "oplaner4",
+  "source_url": "https://github.com/oplaner4/farakurim/blob/main/.claude/skills/implement-design/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/oplaner4/farakurim/blob/main/.claude/skills/implement-design/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Implement an updated design handoff in this repo - study what changed in design/ (DESIGN.md + mockups), commit the handoff, build the new or changed pages with the tailwind-design-system and vercel-react-best-practices skills, then verify the build against the mockups in a browser (Playwright or Claude in Chrome) at 390/834/1440 px in both themes, and commit the implementation. Use whenever the user says the design was updated, new pages or mockups were added, or asks to implement a page from design/."
+}

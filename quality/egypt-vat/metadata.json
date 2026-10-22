@@ -1,0 +1,37 @@
+{
+  "name": "egypt-vat",
+  "repo": "openaccountants/openaccountants",
+  "path": "agent-skills/egypt-vat/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/openaccountants/openaccountants",
+  "dir_name": "egypt-vat",
+  "downloaded_at": "2026-10-22T04:16:41.551340Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: review, validate",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openaccountants",
+  "source_url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/egypt-vat/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openaccountants/openaccountants/blob/main/agent-skills/egypt-vat/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this skill whenever asked to prepare, review, or classify transactions for an Egypt VAT return or advise on Egyptian VAT registration, filing, and e-invoicing compliance. Trigger on phrases like \"prepare Egypt VAT return\", \"Egyptian VAT\", \"\u0636\u0631\u064a\u0628\u0629 \u0627\u0644\u0642\u064a\u0645\u0629 \u0627\u0644\u0645\u0636\u0627\u0641\u0629 \u0645\u0635\u0631\", \"ETA e-invoice\", or any Egypt VAT request. ALWAYS read this skill before touching any Egypt VAT work."
+}

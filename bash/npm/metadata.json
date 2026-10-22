@@ -1,0 +1,39 @@
+{
+  "name": "npm",
+  "repo": "mouadja02/skills",
+  "path": "skills/dev-workflow/npm/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/mouadja02/skills",
+  "dir_name": "npm",
+  "downloaded_at": "2026-10-22T03:53:24.233512Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mouadja02",
+  "source_url": "https://github.com/mouadja02/skills/blob/main/skills/dev-workflow/npm/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mouadja02/skills/blob/main/skills/dev-workflow/npm/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Handles npm registry and account tasks: npm whoami, package availability, reserving names, publishing, org checks, and auth debugging, with 1Password and tmux for credentials. Use when publishing to npm or diagnosing npm login problems."
+}

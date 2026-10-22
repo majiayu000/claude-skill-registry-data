@@ -1,0 +1,37 @@
+{
+  "name": "revenantworks-scribe-researchscribe",
+  "repo": "revenantworks/claude-skills",
+  "path": "packs/scribe/skills/revenantworks-scribe-researchscribe/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/revenantworks/claude-skills",
+  "dir_name": "revenantworks-scribe-researchscribe",
+  "downloaded_at": "2026-10-22T04:44:49.724194Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "revenantworks",
+  "source_url": "https://github.com/revenantworks/claude-skills/blob/main/packs/scribe/skills/revenantworks-scribe-researchscribe/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/revenantworks/claude-skills/blob/main/packs/scribe/skills/revenantworks-scribe-researchscribe/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Researches a question to something usable \u2014 a verdict with a flip condition, a versioned playbook or a graded report \u2014 every claim tagged by evidence. Trigger on which X should I pick (even from pasted pages), is Y worth it, compare A vs B, go/no-go, research this, deep research, fact-check a doc, write or merge a reference guide or playbook, grade a research report, read a bot-blocking source (Reddit, YouTube, X), or map an unfamiliar repo before contributing (entry points, flows, where to change X); or say researchscribe (verdict, playbook, research, verify, sources, map, refresh). Code review is engineering tooling's; fiction canon is lorescribe's; messages commscribe's; prompt model picks promptwright's; skill niches skillwright's; config rigwright's; brands brandscribe's."
+}

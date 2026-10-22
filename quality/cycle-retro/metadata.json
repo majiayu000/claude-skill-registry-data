@@ -1,0 +1,37 @@
+{
+  "name": "cycle-retro",
+  "repo": "polar-bear-org/claude-skills",
+  "path": "packs/review-cycle-pack/skills/cycle-retro/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/polar-bear-org/claude-skills",
+  "dir_name": "cycle-retro",
+  "downloaded_at": "2026-10-22T04:28:52.288590Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "quality",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polar-bear-org",
+  "source_url": "https://github.com/polar-bear-org/claude-skills/blob/main/packs/review-cycle-pack/skills/cycle-retro/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polar-bear-org/claude-skills/blob/main/packs/review-cycle-pack/skills/cycle-retro/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Runs the retrospective after an annual review cycle ends and prepares the improved input for next year, part of the Annual Review Cycle Pack by Polar Bear. Use this whenever the user says \"run cycle-retro\", \"the review cycle is done\", \"let's do the cycle retrospective\", \"what should we change next year\", or the review conversations have finished and the founder wants to close the cycle. Use it even for a tired \"well, we survived review season\"."
+}

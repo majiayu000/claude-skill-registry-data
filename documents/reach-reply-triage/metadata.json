@@ -1,0 +1,37 @@
+{
+  "name": "reach-reply-triage",
+  "repo": "polar-bear-org/claude-skills",
+  "path": "packs/outreach-pack/skills/reach-reply-triage/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/polar-bear-org/claude-skills",
+  "dir_name": "reach-reply-triage",
+  "downloaded_at": "2026-10-22T04:28:56.884389Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: word, markdown",
+    "score": 2,
+    "runner_up": "business",
+    "runner_up_score": 1,
+    "signals": [
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polar-bear-org",
+  "source_url": "https://github.com/polar-bear-org/claude-skills/blob/main/packs/outreach-pack/skills/reach-reply-triage/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polar-bear-org/claude-skills/blob/main/packs/outreach-pack/skills/reach-reply-triage/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Reads one reply and sets out what it actually says, what it asks of you and by when, the facts it adds to your brief and points for your answer, with \"stop\" recorded at once so the person is never written to again. Use for \"run reach-reply-triage\", \"reply triage\", \"they replied what now\", \"how do I answer this reply\", \"is this a yes or a no\", \"what does this reply mean\", \"they said not now\", \"they asked me to stop emailing\", part of the Claude Guide for Outreach Pack by Polar Bear."
+}

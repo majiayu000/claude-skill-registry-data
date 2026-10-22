@@ -1,0 +1,39 @@
+{
+  "name": "generate-ux-design",
+  "repo": "speakmancip/speakmanai-cc",
+  "path": ".claude/skills/generate-ux-design/SKILL.md",
+  "github_branch": "master",
+  "category": "design",
+  "source": "github.com/speakmancip/speakmanai-cc",
+  "dir_name": "generate-ux-design",
+  "downloaded_at": "2026-10-22T05:17:04.307689Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, ux, component",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "ux",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "speakmancip",
+  "source_url": "https://github.com/speakmancip/speakmanai-cc/blob/master/.claude/skills/generate-ux-design/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/speakmancip/speakmanai-cc/blob/master/.claude/skills/generate-ux-design/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Phase 2.5 of the SPEAKMAN.AI pipeline \u2014 run MCP_UX_DESIGN_V1 to map architecture and requirements into a UI screen inventory, then produce a proposed design direction and clickable HTML mockups for human review before Phase 3 code generation"
+}

@@ -1,0 +1,39 @@
+{
+  "name": "kubescape-operator",
+  "repo": "nitinjain999/platform-skills",
+  "path": "skills/kubescape-operator/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/nitinjain999/platform-skills",
+  "dir_name": "kubescape-operator",
+  "downloaded_at": "2026-10-22T04:06:14.604162Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, vulnerability, audit",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "security",
+      "auth",
+      "vulnerability",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nitinjain999",
+  "source_url": "https://github.com/nitinjain999/platform-skills/blob/main/skills/kubescape-operator/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nitinjain999/platform-skills/blob/main/skills/kubescape-operator/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Install, tune and troubleshoot the Kubescape operator for continuous in-cluster security \u2014 posture scans on every change, vulnerabilities filtered to packages that actually load (relevancy), eBPF runtime threat detection against learned container profiles, NetworkPolicies generated from observed traffic, SecurityException resources with an expiry, and Prometheus metrics and alerts. Flux or Argo CD install with a capability matrix, preflight for kernel and overlap with Falco or Trivy Operator, upgrade and rollback. Interactive when run without arguments. Use when asked to \"install kubescape in the cluster\", \"continuous kubernetes security scanning\", \"which CVEs actually run\", \"runtime alerts for containers\", \"generate network policies from traffic\", \"kubescape operator not working\", or \"node-agent crashloop\". One-off scans, CIS audits and the PR gate \u2192 /platform-skills:kubescape. Falco rules \u2192 /platform-skills:runtime-security. Trivy Operator \u2192 /platform-skills:trivy."
+}

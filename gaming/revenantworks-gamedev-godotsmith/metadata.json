@@ -1,0 +1,38 @@
+{
+  "name": "revenantworks-gamedev-godotsmith",
+  "repo": "revenantworks/claude-skills",
+  "path": "packs/gamedev/skills/revenantworks-gamedev-godotsmith/SKILL.md",
+  "github_branch": "main",
+  "category": "gaming",
+  "source": "github.com/revenantworks/claude-skills",
+  "dir_name": "revenantworks-gamedev-godotsmith",
+  "downloaded_at": "2026-10-22T04:44:48.852204Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "gaming",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for gaming: game, gameplay, godot",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "game",
+      "gameplay",
+      "godot"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "revenantworks",
+  "source_url": "https://github.com/revenantworks/claude-skills/blob/main/packs/gamedev/skills/revenantworks-gamedev-godotsmith/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/revenantworks/claude-skills/blob/main/packs/gamedev/skills/revenantworks-gamedev-godotsmith/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Proves a Godot 4.x build is actually green and holds its project conventions. Trigger when a GUT or GDScript result needs believing (a suite green while a script failed to parse, a one-file run that ran the whole suite, drifted CI guard counts, a coverage claim, a gate figure, a failing check someone wants softened); to review scenes, signals, awaits, threads, determinism, saves, imports or .uid files, or the upgrade rule (not the migration); to prove a simulation or balance rule; for import settings and the pixel-art render precondition; or say godotsmith (check, guard, gate, review, intake). API reference is the Godot docs'; art reads pixelsmith's; audio direction soundsmith's."
+}

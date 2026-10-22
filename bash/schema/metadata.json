@@ -1,0 +1,37 @@
+{
+  "name": "schema",
+  "repo": "seo-skills/geo-audit-skill",
+  "path": "skills/schema/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/seo-skills/geo-audit-skill",
+  "dir_name": "schema",
+  "downloaded_at": "2026-10-22T05:00:30.953330Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, cli",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "seo-skills",
+  "source_url": "https://github.com/seo-skills/geo-audit-skill/blob/main/skills/schema/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/seo-skills/geo-audit-skill/blob/main/skills/schema/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Check and generate structured data: which schema.org types a page declares, which required and recommended properties are missing, whether the JSON-LD parses, and what to add. Use when asked about structured data, JSON-LD, schema markup, rich results or how to describe a page to search engines."
+}

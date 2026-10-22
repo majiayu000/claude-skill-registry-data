@@ -1,0 +1,37 @@
+{
+  "name": "preboarding-planner",
+  "repo": "polar-bear-org/claude-skills",
+  "path": "packs/onboarding-pack/skills/preboarding-planner/SKILL.md",
+  "github_branch": "main",
+  "category": "communication",
+  "source": "github.com/polar-bear-org/claude-skills",
+  "dir_name": "preboarding-planner",
+  "downloaded_at": "2026-10-22T04:29:04.836215Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "communication",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for communication: email, chat",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "email",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polar-bear-org",
+  "source_url": "https://github.com/polar-bear-org/claude-skills/blob/main/packs/onboarding-pack/skills/preboarding-planner/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polar-bear-org/claude-skills/blob/main/packs/onboarding-pack/skills/preboarding-planner/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Builds the pre-boarding plan for a new hire, from the moment they say yes to the morning of day one, part of the Onboarding Pack by Polar Bear and Terry Mattheoyianni. Use this whenever the user says \"run preboarding-planner\", \"someone just accepted our offer\", \"we have a new hire starting\", \"plan the onboarding for [name]\", or a signed offer exists and day one needs to go right. Use it even for a vague \"we're hiring someone, what now\"."
+}

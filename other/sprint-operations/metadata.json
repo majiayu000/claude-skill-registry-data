@@ -1,0 +1,38 @@
+{
+  "name": "sprint-operations",
+  "repo": "rampstackco/claude-skills",
+  "path": "skills/sprint-operations/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/rampstackco/claude-skills",
+  "dir_name": "sprint-operations",
+  "downloaded_at": "2026-10-22T04:39:14.871085Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: planning=3, product=3",
+    "score": 3,
+    "runner_up": "product",
+    "runner_up_score": 3,
+    "signals": [
+      "planning",
+      "plan",
+      "roadmap"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rampstackco",
+  "source_url": "https://github.com/rampstackco/claude-skills/blob/main/skills/sprint-operations/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rampstackco/claude-skills/blob/main/skills/sprint-operations/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run the measurement and ceremony layer of a delivery team: the metric set, estimation and capacity, the five sprint ceremonies, and the sprint report and quarterly rollup. Use this skill whenever the user is acting as PMO or scrum lead, planning a sprint, running standup, refinement, review, or retro, measuring velocity, cycle time, or throughput, checking capacity, or reporting on how a team is doing. Triggers on PMO, sprint planning, plan the sprint, standup, refinement, backlog grooming, sprint review, retro, velocity, capacity, cycle time, lead time, throughput, WIP, burndown, carryover, sprint report, story points to hours, how is the team doing, delivery metrics, agent lanes. Also triggers when the user asks how much work fits in a sprint or whether a team is on track, even if they never say sprint or PMO."
+}

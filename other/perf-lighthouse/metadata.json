@@ -1,0 +1,37 @@
+{
+  "name": "perf-lighthouse",
+  "repo": "paulosantanna/ai-assistent-universal-coder",
+  "path": "skills/perf-lighthouse/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/paulosantanna/ai-assistent-universal-coder",
+  "dir_name": "perf-lighthouse",
+  "downloaded_at": "2026-10-22T04:22:08.539892Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: performance=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "performance",
+      "speed"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "paulosantanna",
+  "source_url": "https://github.com/paulosantanna/ai-assistent-universal-coder/blob/master/skills/perf-lighthouse/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/paulosantanna/ai-assistent-universal-coder/blob/master/skills/perf-lighthouse/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Assimilated TLC Lighthouse audit skill. Run Lighthouse via CLI or Node, parse reports, set performance budgets. Triggers: lighthouse, run lighthouse, lighthouse score, performance audit, performance budget. Do not use to implement CWV or generic speed fixes (core-web-vitals, perf-web-optimization) or Astro-only config (perf-astro)."
+}

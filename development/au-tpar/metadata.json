@@ -1,0 +1,38 @@
+{
+  "name": "au-tpar",
+  "repo": "openaccountants/openaccountants",
+  "path": "agent-skills/au-tpar/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/openaccountants/openaccountants",
+  "dir_name": "au-tpar",
+  "downloaded_at": "2026-10-22T04:16:36.983906Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, software",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openaccountants",
+  "source_url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/au-tpar/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openaccountants/openaccountants/blob/main/agent-skills/au-tpar/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this skill for any Australian Taxable payments annual report (TPAR) question under the taxable payments reporting system: which businesses must lodge, the 10% test and the building and construction 50% test, which contractor payments to report or exclude, the contractor details required, how to lodge online, non-lodgment advice, amendments, and failure to lodge penalties. Trigger on \"TPAR\", \"taxable payments annual report\", \"taxable payments reporting system\", \"TPRS\", \"contractor payments report\", \"28 August\", \"report subcontractor payments\", \"cleaning contractors ATO report\", \"courier TPAR\", \"IT services TPAR\", \"security services TPAR\". Covers the 2026-27 report due 28 August 2027."
+}

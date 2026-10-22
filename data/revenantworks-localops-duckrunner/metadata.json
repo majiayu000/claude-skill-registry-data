@@ -1,0 +1,39 @@
+{
+  "name": "revenantworks-localops-duckrunner",
+  "repo": "revenantworks/claude-skills",
+  "path": "packs/localops/skills/revenantworks-localops-duckrunner/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/revenantworks/claude-skills",
+  "dir_name": "revenantworks-localops-duckrunner",
+  "downloaded_at": "2026-10-22T04:44:49.536360Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for data: data, analytics, sql, database",
+    "score": 4,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "analytics",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "revenantworks",
+  "source_url": "https://github.com/revenantworks/claude-skills/blob/main/packs/localops/skills/revenantworks-localops-duckrunner/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/revenantworks/claude-skills/blob/main/packs/localops/skills/revenantworks-localops-duckrunner/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Answers plain-word questions from a repo's CSV, JSON, Parquet and YAML files, or a .duckdb file, with DuckDB, and shows the SQL it ran. Read-only. Trigger to query, count, join, filter or summarise data files, including analytics CSVs exported from a video platform; to build a Parquet or DuckDB cache; to check no .duckdb, .wal or .parquet cache is committed or stale; when a query hits a locked database file; or say duckrunner (ask, cache, check, refresh). Needs the user-installed duckdb Python package; never a database server. DuckDB docs, S3 and MotherDuck are the duckdb-skills plugin's; outside research researchscribe's."
+}

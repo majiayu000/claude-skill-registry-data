@@ -1,0 +1,37 @@
+{
+  "name": "crypto-listings",
+  "repo": "mickpletcher/AI-Skills",
+  "path": "claude/skills/crypto-listings/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mickpletcher/AI-Skills",
+  "dir_name": "crypto-listings",
+  "downloaded_at": "2026-10-22T03:44:01.381433Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mickpletcher",
+  "source_url": "https://github.com/mickpletcher/AI-Skills/blob/main/claude/skills/crypto-listings/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mickpletcher/AI-Skills/blob/main/claude/skills/crypto-listings/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Retrieve new cryptocurrency listings from the past 7 days and upcoming listings in the next 7 days across major exchanges. Always trigger immediately when the user's message starts with \"cl\" or says \"crypto listings\", \"new crypto\", \"new coins\", \"upcoming listings\", or asks what cryptos just launched or are launching soon. Always verify current listings data before responding; never answer from memory."
+}

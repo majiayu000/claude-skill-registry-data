@@ -1,0 +1,36 @@
+{
+  "name": "parish-cancel-event",
+  "repo": "oplaner4/farakurim",
+  "path": ".claude/skills/parish-cancel-event/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/oplaner4/farakurim",
+  "dir_name": "parish-cancel-event",
+  "downloaded_at": "2026-10-22T04:17:16.077202Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category design scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "documents",
+    "runner_up_score": 1,
+    "signals": [
+      "design"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "oplaner4",
+  "source_url": "https://github.com/oplaner4/farakurim/blob/main/.claude/skills/parish-cancel-event/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/oplaner4/farakurim/blob/main/.claude/skills/parish-cancel-event/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Cancel or postpone an event (an \"aktualita\") already on the new farakurim.cz site, or drop one meeting of a series, by setting its change or cancelledMeetings through a corrected record with pnpm replace-event, then publish. Use whenever the user says an event (\"aktualita\") is cancelled (\"ru\u0161\u00ed se\", \"nekon\u00e1 se\", \"zru\u0161eno\"), postponed or moved to another date (\"p\u0159esouv\u00e1 se\", \"odkl\u00e1d\u00e1 se\"), or a meeting of a series is dropped (\"odpad\u00e1\"), or such a change is withdrawn. Other corrections (text, time, place, files, poster) are made with parish-correct-event, a new event is added with parish-create-event."
+}

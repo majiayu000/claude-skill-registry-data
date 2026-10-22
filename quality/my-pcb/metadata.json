@@ -1,0 +1,37 @@
+{
+  "name": "my-pcb",
+  "repo": "openaccountants/openaccountants",
+  "path": "agent-skills/my-pcb/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/openaccountants/openaccountants",
+  "dir_name": "my-pcb",
+  "downloaded_at": "2026-10-22T04:16:27.161228Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: review, validate",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openaccountants",
+  "source_url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/my-pcb/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openaccountants/openaccountants/blob/main/agent-skills/my-pcb/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this skill whenever asked about Malaysia PCB (monthly tax deduction) or CP500 instalment payments. Trigger on phrases like \"PCB\", \"Potongan Cukai Bulanan\", \"monthly tax deduction Malaysia\", \"CP500\", \"instalment tax Malaysia\", \"self-employed tax payment Malaysia\", \"e-PCB\", \"LHDN instalments\", \"advance tax Malaysia\", or any question about paying income tax during the year in Malaysia. Covers PCB for employees, CP500 for self-employed, payment schedules, penalties, and revision procedures. ALWAYS read this skill before advising on Malaysian tax prepayments."
+}

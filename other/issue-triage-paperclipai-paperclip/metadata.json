@@ -1,0 +1,37 @@
+{
+  "name": "issue-triage",
+  "repo": "paperclipai/paperclip",
+  "path": "packages/skills-catalog/catalog/bundled/paperclip-operations/issue-triage/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/paperclipai/paperclip",
+  "dir_name": "issue-triage-paperclipai-paperclip",
+  "downloaded_at": "2026-10-22T04:20:41.656812Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "paperclipai",
+  "source_url": "https://github.com/paperclipai/paperclip/blob/master/packages/skills-catalog/catalog/bundled/paperclip-operations/issue-triage/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/paperclipai/paperclip/blob/master/packages/skills-catalog/catalog/bundled/paperclip-operations/issue-triage/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Triage Paperclip inbox issues that are stale, blocked, in-review, or assigned-but-not-progressing, and decide a single next action per issue (resume, reassign, unblock, escalate, or close)."
+}

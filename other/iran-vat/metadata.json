@@ -1,0 +1,37 @@
+{
+  "name": "iran-vat",
+  "repo": "openaccountants/openaccountants",
+  "path": "agent-skills/iran-vat/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/openaccountants/openaccountants",
+  "dir_name": "iran-vat",
+  "downloaded_at": "2026-10-22T04:16:40.319977Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: marketing=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "content",
+      "social"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openaccountants",
+  "source_url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/iran-vat/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openaccountants/openaccountants/blob/main/agent-skills/iran-vat/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this skill whenever asked to prepare, review, or classify transactions for an Iran VAT return. Trigger on phrases like \"Iran VAT\", \"INTA tax\", \"Iran value added tax\". Iran imposes VAT at 10% (9% VAT + 1% municipal) under the VAT Law of 2008 as amended. Iran uses the Solar Hijri calendar for all tax purposes. ALWAYS read this skill before handling any Iran VAT work."
+}

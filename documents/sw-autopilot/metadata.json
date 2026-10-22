@@ -1,0 +1,37 @@
+{
+  "name": "sw-autopilot",
+  "repo": "mhmtsrfglu/superwiki",
+  "path": "skills/sw-autopilot/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/mhmtsrfglu/superwiki",
+  "dir_name": "sw-autopilot",
+  "downloaded_at": "2026-10-22T03:43:13.748222Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mhmtsrfglu",
+  "source_url": "https://github.com/mhmtsrfglu/superwiki/blob/main/skills/sw-autopilot/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mhmtsrfglu/superwiki/blob/main/skills/sw-autopilot/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when the user wants several Superwiki tasks worked through one after another without being asked at each step (run the backlog, do all tasks of an area, keep going until done or blocked, act as orchestrator, continue a run), or invokes sw-autopilot."
+}

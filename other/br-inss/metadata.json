@@ -1,0 +1,37 @@
+{
+  "name": "br-inss",
+  "repo": "openaccountants/openaccountants",
+  "path": "agent-skills/br-inss/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/openaccountants/openaccountants",
+  "dir_name": "br-inss",
+  "downloaded_at": "2026-10-22T04:16:38.297781Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: marketing=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "content",
+      "social"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openaccountants",
+  "source_url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/br-inss/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openaccountants/openaccountants/blob/main/agent-skills/br-inss/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this skill whenever asked about Brazilian INSS social contributions for self-employed individuals (contribuinte individual). Trigger on phrases like \"INSS aut\u00f4nomo\", \"contribuinte individual\", \"GPS pagamento\", \"INSS 20%\", \"INSS simplificado 11%\", \"teto INSS\", \"previd\u00eancia aut\u00f4nomo\", or any question about Brazilian social security obligations for self-employed persons. Covers the 20% normal plan, 11% simplified plan, 5% MEI plan, contribution ceiling (teto), GPS payment mechanics, and edge cases. ALWAYS read this skill before touching any Brazilian INSS work."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "ssh-doctor",
+  "repo": "mouadja02/skills",
+  "path": "skills/devops/ssh-doctor/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mouadja02/skills",
+  "dir_name": "ssh-doctor",
+  "downloaded_at": "2026-10-22T03:53:24.777964Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mouadja02",
+  "source_url": "https://github.com/mouadja02/skills/blob/main/skills/devops/ssh-doctor/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mouadja02/skills/blob/main/skills/devops/ssh-doctor/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Triages SSH on macOS: Remote Login settings, launchd sshd, connections closed before auth, and stale sessions. Use when SSH to a Mac connects then drops, Remote Login looks enabled but is unusable, or Mac SSH needs diagnosis."
+}

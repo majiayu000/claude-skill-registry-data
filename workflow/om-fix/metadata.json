@@ -1,0 +1,38 @@
+{
+  "name": "om-fix",
+  "repo": "mikoajp/aitl-starter",
+  "path": ".claude/skills/om-fix/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/mikoajp/aitl-starter",
+  "dir_name": "om-fix",
+  "downloaded_at": "2026-10-22T03:46:14.121397Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, automation, pipeline",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "automation",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mikoajp",
+  "source_url": "https://github.com/mikoajp/aitl-starter/blob/main/.claude/skills/om-fix/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mikoajp/aitl-starter/blob/main/.claude/skills/om-fix/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Implements the minimal code change identified by the om-root-cause step, adds regression tests, and runs the configured validation gate. Claims the tracker issue at start (assignee + in-progress label + claim comment) so concurrent automation backs off. Does not commit, push, or open a PR \u2014 that is the om-open-pr step's job."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "om-prepare-test-env",
+  "repo": "mikoajp/aitl-starter",
+  "path": ".agents/skills/om-prepare-test-env/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/mikoajp/aitl-starter",
+  "dir_name": "om-prepare-test-env",
+  "downloaded_at": "2026-10-22T03:46:28.121080Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, qa, integration, playwright",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "test",
+      "qa",
+      "integration",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mikoajp",
+  "source_url": "https://github.com/mikoajp/aitl-starter/blob/main/.agents/skills/om-prepare-test-env/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mikoajp/aitl-starter/blob/main/.agents/skills/om-prepare-test-env/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Prepare a reusable, technology-agnostic environment for local tests and QA. Compiles discovery into cross-platform launch scripts, provisions the configured browser provider autonomously, and writes the shared test-env descriptor consumed by UI and integration-test skills."
+}

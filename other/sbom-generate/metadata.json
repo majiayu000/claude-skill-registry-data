@@ -1,0 +1,37 @@
+{
+  "name": "sbom-generate",
+  "repo": "runxhq/runx",
+  "path": "skills/sbom-generate/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/runxhq/runx",
+  "dir_name": "sbom-generate",
+  "downloaded_at": "2026-10-22T04:53:06.670673Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "runxhq",
+  "source_url": "https://github.com/runxhq/runx/blob/main/skills/sbom-generate/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/runxhq/runx/blob/main/skills/sbom-generate/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Derive a CycloneDX software bill of materials from a supplied lockfile deterministically, digest-bound to the exact bytes, with license risks surfaced and unsupported or unpinned lockfiles refused."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "sw-migrate",
+  "repo": "mhmtsrfglu/superwiki",
+  "path": "skills/sw-migrate/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mhmtsrfglu/superwiki",
+  "dir_name": "sw-migrate",
+  "downloaded_at": "2026-10-22T03:43:15.504299Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mhmtsrfglu",
+  "source_url": "https://github.com/mhmtsrfglu/superwiki/blob/main/skills/sw-migrate/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mhmtsrfglu/superwiki/blob/main/skills/sw-migrate/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when the user wants to convert an existing docs folder, task index, markdown task tables, backlog or changelog into a Superwiki vault, or invokes sw-migrate."
+}

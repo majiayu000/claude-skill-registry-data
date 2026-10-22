@@ -1,0 +1,37 @@
+{
+  "name": "linear-list-issues",
+  "repo": "nicshik/linear-skills",
+  "path": "linear-list-issues/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/nicshik/linear-skills",
+  "dir_name": "linear-list-issues",
+  "downloaded_at": "2026-10-22T04:04:22.610767Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, business=2",
+    "score": 2,
+    "runner_up": "business",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nicshik",
+  "source_url": "https://github.com/nicshik/linear-skills/blob/main/linear-list-issues/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nicshik/linear-skills/blob/main/linear-list-issues/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Read and filter Linear issues through the direct Linear GraphQL API using a local LINEAR_API_KEY. Use as a read-only fallback when the normal Linear connector cannot list issues for migration, label cleanup, or metadata preflight."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "fable",
+  "repo": "paulosantanna/ai-assistent-universal-coder",
+  "path": "skills/fable/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/paulosantanna/ai-assistent-universal-coder",
+  "dir_name": "fable",
+  "downloaded_at": "2026-10-22T04:21:34.420224Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: planning=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "planning",
+      "plan"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "paulosantanna",
+  "source_url": "https://github.com/paulosantanna/ai-assistent-universal-coder/blob/master/skills/fable/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/paulosantanna/ai-assistent-universal-coder/blob/master/skills/fable/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Standard problem-solving loop (classify ask, define done, gather evidence, decide, act surgically, verify by observation, report outcome-first). Use for non-trivial multi-step tasks, diagnosis, planning, or auditing work. Use when the user requests fable or invokes fable. Do NOT use for unrelated languages, domains or production deployment."
+}

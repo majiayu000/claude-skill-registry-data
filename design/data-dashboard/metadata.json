@@ -1,0 +1,40 @@
+{
+  "name": "data-dashboard",
+  "repo": "plugin87/ux-ui-agent-skills",
+  "path": ".claude/skills/data-dashboard/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/plugin87/ux-ui-agent-skills",
+  "dir_name": "data-dashboard",
+  "downloaded_at": "2026-10-22T04:27:53.911303Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, ui, ux, css, animation",
+    "score": 5,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "ux",
+      "css",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "plugin87",
+  "source_url": "https://github.com/plugin87/ux-ui-agent-skills/blob/main/.claude/skills/data-dashboard/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/plugin87/ux-ui-agent-skills/blob/main/.claude/skills/data-dashboard/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Build a dense, data-heavy screen - an analytics console or a trading terminal - with real charts drawn from tokens: candlestick, volume, depth, stacked area, waterfall, scatter, correlation matrix, donut, gauge, sparklines, heatmaps and order books. Use when the request is a dashboard, terminal, monitoring view, data console, or any screen whose job is to show many numbers at once. Covers the layout sequence, the SVG geometry, the accessibility contract per chart type, and the contrast traps that only appear in dark mode."
+}

@@ -1,0 +1,36 @@
+{
+  "name": "ma-cpu",
+  "repo": "openaccountants/openaccountants",
+  "path": "agent-skills/ma-cpu/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/openaccountants/openaccountants",
+  "dir_name": "ma-cpu",
+  "downloaded_at": "2026-10-22T04:16:24.238764Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "business",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openaccountants",
+  "source_url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ma-cpu/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ma-cpu/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this skill whenever asked about Morocco's Contribution Professionnelle Unique (CPU) \u2014 the single-tax regime that replaced the r\u00e9gime forfaitaire (r\u00e9gime du b\u00e9n\u00e9fice forfaitaire) for small self-employed people and professionals who are not on the auto-entrepreneur status. Trigger on phrases like \"CPU Maroc\", \"Contribution Professionnelle Unique\", \"r\u00e9gime forfaitaire Maroc\", \"contribution professionnelle unique calcul\", \"droit compl\u00e9mentaire AMO CPU\", \"coefficient b\u00e9n\u00e9fice CPU\", \"\u0627\u0644\u0645\u0633\u0627\u0647\u0645\u0629 \u0627\u0644\u0645\u0647\u0646\u064a\u0629 \u0627\u0644\u0645\u0648\u062d\u062f\u0629\", \"CPU vs auto-entrepreneur Maroc\". Covers eligibility and turnover ceilings, the CPU computation (turnover \u00d7 profession coefficient \u2192 10% liberatory IR), the effective minimum, the mandatory complementary health contribution (droit compl\u00e9mentaire) banded by profit for AMO, and the filing & payment calendar. Reply in the user's language (English, French, or Moroccan Arabic / Darija) and keep the native terms (CPU, IR, DGI, AMO, CNSS). Cross-reference ma-auto-entrepreneur (simpler, lo"
+}

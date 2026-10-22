@@ -1,0 +1,36 @@
+{
+  "name": "om-auto-fix-pr",
+  "repo": "mikoajp/aitl-starter",
+  "path": ".claude/skills/om-auto-fix-pr/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mikoajp/aitl-starter",
+  "dir_name": "om-auto-fix-pr-mikoajp-aitl-starter",
+  "downloaded_at": "2026-10-22T03:46:18.565374Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-llm scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "ai"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mikoajp",
+  "source_url": "https://github.com/mikoajp/aitl-starter/blob/main/.claude/skills/om-auto-fix-pr/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mikoajp/aitl-starter/blob/main/.claude/skills/om-auto-fix-pr/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Drive an open PR to merge-ready from its number \u2014 merges the latest base, then loops review-autofix (om-auto-review-pr), built-in CI stabilization, and UI verification (om-auto-qa-pr) until approvable, green, and QA-evidenced. A --ci-only mode drives just CI green on a PR or a plain branch. Files follow-up issues for nits, normalizes labels, hands off to om-approve-merge-pr \u2014 never merges itself. Use for \"get PR 123 merge-ready\"."
+}

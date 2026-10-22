@@ -1,0 +1,39 @@
+{
+  "name": "devin-cli",
+  "repo": "scarletkc/agents",
+  "path": "skills/devin-cli/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/scarletkc/agents",
+  "dir_name": "devin-cli",
+  "downloaded_at": "2026-10-22T04:57:19.971760Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "writing",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "scarletkc",
+  "source_url": "https://github.com/scarletkc/agents/blob/main/skills/devin-cli/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/scarletkc/agents/blob/main/skills/devin-cli/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Delegate bounded coding tasks to the local Devin CLI over ACP from a supervising agent such as Claude Code or Codex. Use when the user asks to hand work to Devin, when an independent implementation, port, review, or investigation can run in parallel with your own work, or when an earlier Devin session needs a follow-up. Includes a blocking run helper with single-use permission answers, a deny policy, progress summaries, and session resume."
+}

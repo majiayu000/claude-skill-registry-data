@@ -1,0 +1,37 @@
+{
+  "name": "firm-bid-no-bid",
+  "repo": "polar-bear-org/claude-skills",
+  "path": "packs/consultants-pack/skills/firm-bid-no-bid/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/polar-bear-org/claude-skills",
+  "dir_name": "firm-bid-no-bid",
+  "downloaded_at": "2026-10-22T04:28:55.850861Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "process"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polar-bear-org",
+  "source_url": "https://github.com/polar-bear-org/claude-skills/blob/main/packs/consultants-pack/skills/firm-bid-no-bid/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polar-bear-org/claude-skills/blob/main/packs/consultants-pack/skills/firm-bid-no-bid/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Runs a go or no-go gate on an RFP or shortlist invitation, with your criteria written before the facts, pass or fail criteria first, the fact and source against each, a shortlist check, the cost of pursuit in your own hours, a decision record and a warm no-bid reply to edit. Use for \"run firm-bid-no-bid\", \"should I answer this RFP\", \"bid or no bid\", \"go or no-go on this tender\", \"am I just the comparison quote\", \"I am on a shortlist and do not know why\", \"is this worth a week of my evenings\", part of the Claude for Consultants \u00b7 Team in Claude Pack by Polar Bear."
+}

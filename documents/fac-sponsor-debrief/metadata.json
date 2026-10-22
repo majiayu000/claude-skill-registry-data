@@ -1,0 +1,38 @@
+{
+  "name": "fac-sponsor-debrief",
+  "repo": "polar-bear-org/claude-skills",
+  "path": "packs/trainers-pack/skills/fac-sponsor-debrief/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/polar-bear-org/claude-skills",
+  "dir_name": "fac-sponsor-debrief",
+  "downloaded_at": "2026-10-22T04:28:59.274764Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word, markdown",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polar-bear-org",
+  "source_url": "https://github.com/polar-bear-org/claude-skills/blob/main/packs/trainers-pack/skills/fac-sponsor-debrief/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polar-bear-org/claude-skills/blob/main/packs/trainers-pack/skills/fac-sponsor-debrief/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Drafts a one-page debrief for the call with the client or sponsor, covering what the session set out to do, what was produced, what feedback and barrier themes say in aggregate, the asks and the one decision. Use for \"run fac-sponsor-debrief\", \"client debrief after training\", \"stakeholder debrief\", \"post workshop report for the client\", \"training report for the sponsor\", \"how did the training go\", \"debrief call with the client\", \"all I can say is they seemed engaged\", part of the Claude for Trainers and Facilitators Pack by Polar Bear."
+}

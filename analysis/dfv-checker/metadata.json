@@ -1,0 +1,37 @@
+{
+  "name": "dfv-checker",
+  "repo": "polar-bear-org/claude-skills",
+  "path": "packs/design-thinking-pack/skills/dfv-checker/SKILL.md",
+  "github_branch": "main",
+  "category": "analysis",
+  "source": "github.com/polar-bear-org/claude-skills",
+  "dir_name": "dfv-checker",
+  "downloaded_at": "2026-10-22T04:28:55.989451Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "analysis",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for analysis: analysis, insights",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "analysis",
+      "insights"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polar-bear-org",
+  "source_url": "https://github.com/polar-bear-org/claude-skills/blob/main/packs/design-thinking-pack/skills/dfv-checker/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polar-bear-org/claude-skills/blob/main/packs/design-thinking-pack/skills/dfv-checker/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Stress tests concepts for desirability, feasibility, and viability, part of the Design Thinking Pack by Polar Bear. Use this whenever the user says \"run dfv-checker\", \"stress test these concepts\", \"check desirability feasibility viability\", \"is this idea actually sound\", or concepts are about to get investment and nobody has asked the three hard questions on paper. Use it even for \"poke holes in this idea\"."
+}

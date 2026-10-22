@@ -1,0 +1,37 @@
+{
+  "name": "au-fbt",
+  "repo": "openaccountants/openaccountants",
+  "path": "agent-skills/au-fbt/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/openaccountants/openaccountants",
+  "dir_name": "au-fbt",
+  "downloaded_at": "2026-10-22T04:16:25.363839Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: review, validate",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openaccountants",
+  "source_url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/au-fbt/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openaccountants/openaccountants/blob/main/agent-skills/au-fbt/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this skill whenever asked about Australian Fringe Benefits Tax -- identifying fringe benefits in a general ledger, car fringe benefits (statutory formula or operating cost), the electric vehicle exemption, meal entertainment, minor benefits, expense payments and the otherwise-deductible rule, LAFHA, loan benefits, employee contributions, reportable fringe benefits amounts (RFBA), FBT gross-up and return preparation. Trigger on phrases like \"FBT\", \"fringe benefits tax\", \"car fringe benefit\", \"novated lease FBT\", \"EV FBT exemption\", \"entertainment FBT\", \"minor benefit\", \"50/50 method\", \"LAFHA\", \"living away from home\", \"gross-up\", \"Type 1 Type 2\", \"RFBA\", \"reportable fringe benefits\", or when sweeping a GL for FBT exposure. The FBT year runs 1 April to 31 March. ALWAYS read this skill before touching any FBT work."
+}

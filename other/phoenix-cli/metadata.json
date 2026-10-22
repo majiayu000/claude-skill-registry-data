@@ -1,0 +1,37 @@
+{
+  "name": "phoenix-cli",
+  "repo": "mouadja02/skills",
+  "path": "skills/llm-tooling/phoenix-cli/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mouadja02/skills",
+  "dir_name": "phoenix-cli",
+  "downloaded_at": "2026-10-22T03:53:43.516572Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, api=2",
+    "score": 2,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mouadja02",
+  "source_url": "https://github.com/mouadja02/skills/blob/main/skills/llm-tooling/phoenix-cli/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mouadja02/skills/blob/main/skills/llm-tooling/phoenix-cli/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Uses the Phoenix CLI (px) to list, fetch, export, annotate, and add notes to traces, analyze errors, and run open and axial coding reviews. Use when inspecting or reviewing LLM traces stored in Arize Phoenix from the terminal."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "market-brief",
+  "repo": "mickpletcher/AI-Skills",
+  "path": "claude/skills/market-brief/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mickpletcher/AI-Skills",
+  "dir_name": "market-brief",
+  "downloaded_at": "2026-10-22T03:43:58.621650Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mickpletcher",
+  "source_url": "https://github.com/mickpletcher/AI-Skills/blob/main/claude/skills/market-brief/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mickpletcher/AI-Skills/blob/main/claude/skills/market-brief/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generate a current morning market brief for Mick's indices, commodities, currencies, macro, and expanded crypto watchlist. Trigger immediately when the user starts with \"mb\" or asks for a market brief, morning brief, market update, pre-market summary, market open summary, or asks what the market is doing. Always verify live prices, market session context, and news before answering. Never use memory for prices, levels, market status, or headlines."
+}

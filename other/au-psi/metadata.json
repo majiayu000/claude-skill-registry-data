@@ -1,0 +1,37 @@
+{
+  "name": "au-psi",
+  "repo": "openaccountants/openaccountants",
+  "path": "agent-skills/au-psi/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/openaccountants/openaccountants",
+  "dir_name": "au-psi",
+  "downloaded_at": "2026-10-22T04:16:23.093353Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openaccountants",
+  "source_url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/au-psi/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openaccountants/openaccountants/blob/main/agent-skills/au-psi/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this skill whenever asked about Australian personal services income -- PSI, the PSI rules, Divisions 84 to 87 ITAA 1997, personal services entities, personal services business tests, the results test, the 80% rule, unrelated clients, employment or business premises tests, PSB determinations, attribution of PSI, PSI deduction limits, contractors invoicing through companies or trusts, income splitting or profit retention by consultants, PCG 2025/5, or Part IVA exposure for PSBs. Trigger on phrases like \"PSI\", \"personal services\", \"PSB\", \"results test\", \"80% rule\", \"attribution\", or a GL showing an entity invoicing one individual's skills. ALWAYS read this skill before any PSI work."
+}

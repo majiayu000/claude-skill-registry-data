@@ -1,0 +1,37 @@
+{
+  "name": "diff-reviewer",
+  "repo": "paulosantanna/ai-assistent-universal-coder",
+  "path": "skills/diff-reviewer/SKILL.md",
+  "github_branch": "master",
+  "category": "quality",
+  "source": "github.com/paulosantanna/ai-assistent-universal-coder",
+  "dir_name": "diff-reviewer",
+  "downloaded_at": "2026-10-22T04:22:00.389218Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "quality",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "paulosantanna",
+  "source_url": "https://github.com/paulosantanna/ai-assistent-universal-coder/blob/master/skills/diff-reviewer/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/paulosantanna/ai-assistent-universal-coder/blob/master/skills/diff-reviewer/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Review generated diffs/patches for correctness, safety, and alignment with evidence. Use when the user requests diff reviewer or invokes diff-reviewer. Do NOT use as deployment authorization or as evidence for checks that were not executed."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "sql-analysis",
+  "repo": "runxhq/runx",
+  "path": "skills/sql-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/runxhq/runx",
+  "dir_name": "sql-analysis-runxhq-runx",
+  "downloaded_at": "2026-10-22T04:53:05.949339Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for data: data, analytics, sql, database",
+    "score": 4,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "analytics",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "runxhq",
+  "source_url": "https://github.com/runxhq/runx/blob/main/skills/sql-analysis/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/runxhq/runx/blob/main/skills/sql-analysis/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Answer a data question by selecting and executing a declared parameterized SQL read, then interpret the actual rows with source identity and measurement limits intact. Plan against a supplied query catalog when execution is not wanted."
+}

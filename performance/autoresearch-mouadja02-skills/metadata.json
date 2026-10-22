@@ -1,0 +1,39 @@
+{
+  "name": "autoresearch",
+  "repo": "mouadja02/skills",
+  "path": "skills/agent-eval/autoresearch/SKILL.md",
+  "github_branch": "main",
+  "category": "performance",
+  "source": "github.com/mouadja02/skills",
+  "dir_name": "autoresearch-mouadja02-skills",
+  "downloaded_at": "2026-10-22T03:53:40.914501Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "performance",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for performance: optimize, latency, speed, benchmark",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "optimize",
+      "latency",
+      "speed",
+      "benchmark"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mouadja02",
+  "source_url": "https://github.com/mouadja02/skills/blob/main/skills/agent-eval/autoresearch/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mouadja02/skills/blob/main/skills/agent-eval/autoresearch/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Runs an autonomous experiment loop on any programming task: you define the goal, metric, and eval command; the agent edits code, measures, and keeps or discards each change until interrupted. Use when optimizing a measurable target (speed, accuracy, size, score) by iteration."
+}

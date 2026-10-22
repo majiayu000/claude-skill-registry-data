@@ -1,0 +1,39 @@
+{
+  "name": "n8n-workflow",
+  "repo": "mickpletcher/AI-Skills",
+  "path": "claude/skills/n8n-workflow/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/mickpletcher/AI-Skills",
+  "dir_name": "n8n-workflow-mickpletcher-ai-skills",
+  "downloaded_at": "2026-10-22T03:43:58.778174Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process, automation, pipeline",
+    "score": 4,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "workflow",
+      "process",
+      "automation",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mickpletcher",
+  "source_url": "https://github.com/mickpletcher/AI-Skills/blob/main/claude/skills/n8n-workflow/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mickpletcher/AI-Skills/blob/main/claude/skills/n8n-workflow/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Design, build, or troubleshoot n8n automation workflows. Always trigger immediately when Mick mentions n8n, workflow nodes, automating a pipeline, or connecting services via n8n. Covers node selection, webhook patterns, Claude API integration, credential setup, Cloudflare Tunnel exposure, and Proxmox LXC deployment. Mick runs n8n on Proxmox CT 104 at 192.168.0.81:5678 with Cloudflare Tunnel for HTTPS."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "website-content",
+  "repo": "mickpletcher/AI-Skills",
+  "path": "claude/skills/website-content/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mickpletcher/AI-Skills",
+  "dir_name": "website-content",
+  "downloaded_at": "2026-10-22T03:44:01.696459Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=3, workflow=3",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 3,
+    "signals": [
+      "automation",
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mickpletcher",
+  "source_url": "https://github.com/mickpletcher/AI-Skills/blob/main/claude/skills/website-content/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mickpletcher/AI-Skills/blob/main/claude/skills/website-content/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write or update content for Mick Pletcher's personal website. Trigger when Mick asks to write, rewrite, or update any section of his personal site including About, Projects, Skills, Blog integration, AI and homelab showcase, health and sports, contact copy, landing page sections, SEO descriptions, or project writeups. Tone is polished and professional, closer to LinkedIn than the blog, but still first-person and direct. Avoid corporate-speak. No emojis. Avoid em dashes in final website copy."
+}

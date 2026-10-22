@@ -1,0 +1,37 @@
+{
+  "name": "win-bid-no-bid",
+  "repo": "polar-bear-org/claude-skills",
+  "path": "packs/finding-clients-pack/skills/win-bid-no-bid/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/polar-bear-org/claude-skills",
+  "dir_name": "win-bid-no-bid",
+  "downloaded_at": "2026-10-22T04:29:04.261996Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: communication=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "email",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polar-bear-org",
+  "source_url": "https://github.com/polar-bear-org/claude-skills/blob/main/packs/finding-clients-pack/skills/win-bid-no-bid/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polar-bear-org/claude-skills/blob/main/packs/finding-clients-pack/skills/win-bid-no-bid/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Builds a Bid/No-Bid Decision for one request, with pass or fail gates, the three questions is it real, can we win and is it worth it, the cost of writing it in your hours, and a go or no-go you decide with the reason written down. Use for \"run win-bid-no-bid\", \"should I answer this RFP\", \"bid or no bid\", \"they asked me to send a proposal\", \"is this tender worth it\", \"help me say no to this request\", part of the Claude Guide for Finding Clients Pack by Polar Bear."
+}

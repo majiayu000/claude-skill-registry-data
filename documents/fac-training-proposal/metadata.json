@@ -1,0 +1,38 @@
+{
+  "name": "fac-training-proposal",
+  "repo": "polar-bear-org/claude-skills",
+  "path": "packs/trainers-pack/skills/fac-training-proposal/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/polar-bear-org/claude-skills",
+  "dir_name": "fac-training-proposal",
+  "downloaded_at": "2026-10-22T04:29:02.899307Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word, markdown",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polar-bear-org",
+  "source_url": "https://github.com/polar-bear-org/claude-skills/blob/main/packs/trainers-pack/skills/fac-training-proposal/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polar-bear-org/claude-skills/blob/main/packs/trainers-pack/skills/fac-training-proposal/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Drafts a proposal for a training or facilitation engagement, producing the situation in the client's words, the design in three stages, the conditions the client must meet and two or three scope options with the price left blank. Use for \"run fac-training-proposal\", \"training proposal\", \"workshop proposal\", \"quote for a one-day workshop\", \"facilitation proposal\", \"scope a training engagement\", \"the client wants a quote\", \"proposal for a leadership programme\", part of the Claude for Trainers and Facilitators Pack by Polar Bear."
+}

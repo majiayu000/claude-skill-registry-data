@@ -1,0 +1,36 @@
+{
+  "name": "report-haiku",
+  "repo": "padosoft/skills",
+  "path": "tests/fixtures/skill-audit/project/dot-claude/skills/report-haiku/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/padosoft/skills",
+  "dir_name": "report-haiku",
+  "downloaded_at": "2026-10-22T04:19:30.676970Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category forensics scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "security",
+    "runner_up_score": 1,
+    "signals": [
+      "incident"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "padosoft",
+  "source_url": "https://github.com/padosoft/skills/blob/main/tests/fixtures/skill-audit/project/dot-claude/skills/report-haiku/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/padosoft/skills/blob/main/tests/fixtures/skill-audit/project/dot-claude/skills/report-haiku/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Writes the weekly status report from the team's tickets. Use when the user asks for the weekly report or a status summary. Do not use it for incident reports."
+}

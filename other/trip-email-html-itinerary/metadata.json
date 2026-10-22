@@ -1,0 +1,37 @@
+{
+  "name": "trip-email-html-itinerary",
+  "repo": "mickpletcher/AI-Skills",
+  "path": "claude/skills/trip-email-html-itinerary/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mickpletcher/AI-Skills",
+  "dir_name": "trip-email-html-itinerary",
+  "downloaded_at": "2026-10-22T03:44:04.595872Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: planning=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "planning",
+      "plan"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mickpletcher",
+  "source_url": "https://github.com/mickpletcher/AI-Skills/blob/main/claude/skills/trip-email-html-itinerary/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mickpletcher/AI-Skills/blob/main/claude/skills/trip-email-html-itinerary/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Extract trip logistics from pasted travel emails, booking confirmations, forwarded messages, reservation notes, or raw itinerary text, research useful restaurant and activity suggestions for each destination, and generate one polished, self-contained offline HTML itinerary file for sharing with family or other travelers. Trigger when the user asks to turn trip emails into an HTML itinerary, travel handoff page, shareable trip page, family trip summary, booking-reference page, destination recommendation page, or offline travel document."
+}

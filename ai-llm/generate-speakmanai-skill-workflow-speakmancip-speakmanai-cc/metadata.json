@@ -1,0 +1,38 @@
+{
+  "name": "generate-speakmanai-skill-workflow",
+  "repo": "speakmancip/speakmanai-cc",
+  "path": "desktop-skills/org-plugins/speakmanai-sdlc/skills/generate-speakmanai-skill-workflow/SKILL.md",
+  "github_branch": "master",
+  "category": "ai-llm",
+  "source": "github.com/speakmancip/speakmanai-cc",
+  "dir_name": "generate-speakmanai-skill-workflow-speakmancip-speakmanai-cc",
+  "downloaded_at": "2026-10-22T05:17:20.168395Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: ai, llm, prompt",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "speakmancip",
+  "source_url": "https://github.com/speakmancip/speakmanai-cc/blob/master/desktop-skills/org-plugins/speakmanai-sdlc/skills/generate-speakmanai-skill-workflow/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/speakmancip/speakmanai-cc/blob/master/desktop-skills/org-plugins/speakmanai-sdlc/skills/generate-speakmanai-skill-workflow/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Design and generate a delegate-first SPEAKMAN.AI \"skill workflow\" \u2014 a workflow whose agents execute directly via the connected coding agent's own tools (filesystem, APIs, MCP servers, email, web search/scraping) instead of a background LLM \u2014 ready for database import"
+}

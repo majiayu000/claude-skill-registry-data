@@ -1,0 +1,38 @@
+{
+  "name": "zizmor",
+  "repo": "nitinjain999/platform-skills",
+  "path": "plugins/platform-skills/skills/zizmor/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/nitinjain999/platform-skills",
+  "dir_name": "zizmor-nitinjain999-platform-skills",
+  "downloaded_at": "2026-10-22T04:06:17.220606Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nitinjain999",
+  "source_url": "https://github.com/nitinjain999/platform-skills/blob/main/plugins/platform-skills/skills/zizmor/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nitinjain999/platform-skills/blob/main/plugins/platform-skills/skills/zizmor/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audit GitHub Actions workflows, composite actions, Dependabot configs, and pre-commit configs for security findings using zizmor \u2014 template injection, credential persistence, unpinned uses, over-broad permissions, impostor commits. Covers local CLI, auto-fix, zizmor.yml policy, severity-based CI gates, SARIF upload, and pre-commit. Use when asked to \"audit my workflows\", \"run zizmor\", \"is this workflow safe\", \"check for template injection\", \"pin my actions\", or \"set up a zizmor CI gate\". Workflow syntax and shell errors \u2192 /platform-skills:github-actions (actionlint). IaC misconfig \u2192 /platform-skills:checkov. Image and dependency CVEs \u2192 /platform-skills:trivy. Keeping SHA pins fresh \u2192 /platform-skills:renovate."
+}

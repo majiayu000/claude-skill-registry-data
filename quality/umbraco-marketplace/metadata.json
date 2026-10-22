@@ -1,0 +1,38 @@
+{
+  "name": "umbraco-marketplace",
+  "repo": "mattbrailsford/umbraco-devkit",
+  "path": "plugins/umbraco-devkit/skills/umbraco-marketplace/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/mattbrailsford/umbraco-devkit",
+  "dir_name": "umbraco-marketplace",
+  "downloaded_at": "2026-10-22T03:38:02.189541Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review, validate",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mattbrailsford",
+  "source_url": "https://github.com/mattbrailsford/umbraco-devkit/blob/main/plugins/umbraco-devkit/skills/umbraco-marketplace/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mattbrailsford/umbraco-devkit/blob/main/plugins/umbraco-devkit/skills/umbraco-marketplace/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Gets a finished package listed on the Umbraco Marketplace: the NuGet tag, the dependency Marketplace reads version support from, the v14+ compatibility gotcha, and umbraco-marketplace.json. Use when a package is ready to publish, or when reviewing its packaging."
+}

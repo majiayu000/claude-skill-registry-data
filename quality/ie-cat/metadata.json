@@ -1,0 +1,37 @@
+{
+  "name": "ie-cat",
+  "repo": "openaccountants/openaccountants",
+  "path": "agent-skills/ie-cat/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/openaccountants/openaccountants",
+  "dir_name": "ie-cat",
+  "downloaded_at": "2026-10-22T04:16:25.158733Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: review, validate",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "openaccountants",
+  "source_url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ie-cat/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ie-cat/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use this skill whenever asked about Irish Capital Acquisitions Tax (CAT) on gifts and inheritances. Trigger on phrases like \"Ireland CAT\", \"Irish inheritance tax\", \"Irish gift tax\", \"Group A Ireland\", \"Group B threshold Ireland\", \"Group C threshold Ireland\", \"Dwelling House Exemption\", \"Section 86 CATCA\", \"Business Relief Ireland\", \"Agricultural Relief Ireland\", \"active farmer test\", \"Form IT38\", \"valuation date Ireland\", \"small gift exemption \u20ac3,000\", \"CAT 33%\", \"aggregation rule CAT\", \"foreign gift Ireland\", or any question about computing, filing, or reporting Irish CAT for a donee or beneficiary. Scope covers CAT computation under the Capital Acquisitions Tax Consolidation Act 2003 (CATCA 2003) as amended by successive Finance Acts, the three group thresholds (A/B/C), the cumulative aggregation rule back to 5 December 1991, the principal reliefs (Dwelling House, Business, Agricultural), foreign-element situs and residence rules, valuation date mechanics, and the Form IT38 pay-and-f"
+}

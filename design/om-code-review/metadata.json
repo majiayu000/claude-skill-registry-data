@@ -1,0 +1,38 @@
+{
+  "name": "om-code-review",
+  "repo": "mikoajp/aitl-starter",
+  "path": ".claude/skills/om-code-review/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/mikoajp/aitl-starter",
+  "dir_name": "om-code-review",
+  "downloaded_at": "2026-10-22T03:46:18.749825Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, component",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mikoajp",
+  "source_url": "https://github.com/mikoajp/aitl-starter/blob/main/.claude/skills/om-code-review/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mikoajp/aitl-starter/blob/main/.claude/skills/om-code-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Review a diff, branch, or PR against correctness, security, breaking-change, and quality standards \u2014 runs the validation gate, applies the built-in checklist plus any repo-local one, and produces severity-ranked findings with an approve/request-changes verdict. The review engine behind om-auto-review-pr and om-review-prs."
+}

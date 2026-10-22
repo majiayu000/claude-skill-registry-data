@@ -1,0 +1,37 @@
+{
+  "name": "qdrant-managed-cloud-quickstart",
+  "repo": "qdrant/skills",
+  "path": "skills/qdrant-managed-cloud-quickstart/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/qdrant/skills",
+  "dir_name": "qdrant-managed-cloud-quickstart",
+  "downloaded_at": "2026-10-22T04:34:21.981215Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, database",
+    "score": 2,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "qdrant",
+  "source_url": "https://github.com/qdrant/skills/blob/main/skills/qdrant-managed-cloud-quickstart/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/qdrant/skills/blob/main/skills/qdrant-managed-cloud-quickstart/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Getting a first Qdrant Managed Cloud cluster running and connected safely: Free, Standard, and Premium tiers, choices that can't be changed later, creating clusters from the Console or the qcloud CLI, Database API keys, ports and TLS, strict mode on new collections, Cloud Inference, and what to set before relying on a cluster. Use when someone says 'getting started with Qdrant Cloud', 'create a Qdrant Cloud cluster', 'is the free tier enough', 'do I need the Premium tier', 'create a cluster with qcloud', 'my free cluster was suspended', 'can't connect to Qdrant Cloud', 'which API key do I use', 'filter works locally but fails on Cloud', or 'Cloud Inference'."
+}

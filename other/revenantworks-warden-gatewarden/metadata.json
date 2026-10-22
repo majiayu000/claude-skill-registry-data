@@ -1,0 +1,37 @@
+{
+  "name": "revenantworks-warden-gatewarden",
+  "repo": "revenantworks/claude-skills",
+  "path": "packs/warden/skills/revenantworks-warden-gatewarden/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/revenantworks/claude-skills",
+  "dir_name": "revenantworks-warden-gatewarden",
+  "downloaded_at": "2026-10-22T04:44:47.658526Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, ai-llm=2",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "autonomous-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "revenantworks",
+  "source_url": "https://github.com/revenantworks/claude-skills/blob/main/packs/warden/skills/revenantworks-warden-gatewarden/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/revenantworks/claude-skills/blob/main/packs/warden/skills/revenantworks-warden-gatewarden/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audits what Claude may do (permission rules, hooks, MCP scope, an agent's grants) and maps what it reaches on disk. Trigger on audit my permissions, why was this allowed, what stalls a routine, swap an allow for a deny, is this hook safe, gate my git pushes, a guard hook or call cap, PowerShell twins of Bash denies, where a rule should live, what is eating my disk, where has Claude been, config drift from a repo copy, skills loading twice; or say gatewarden (audit, harden, explain, scan, hooks, capreview, layout, map, footprint, drift, loads, status, refresh). Installs are trustwarden's; tokens keywarden's; secrets shieldwarden's; standing config rigwright's; agent design agentwright's."
+}

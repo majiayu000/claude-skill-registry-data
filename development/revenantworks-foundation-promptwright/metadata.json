@@ -1,0 +1,39 @@
+{
+  "name": "revenantworks-foundation-promptwright",
+  "repo": "revenantworks/claude-skills",
+  "path": "packs/foundation/skills/revenantworks-foundation-promptwright/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/revenantworks/claude-skills",
+  "dir_name": "revenantworks-foundation-promptwright",
+  "downloaded_at": "2026-10-22T04:44:52.417551Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build, debug",
+    "score": 4,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "revenantworks",
+  "source_url": "https://github.com/revenantworks/claude-skills/blob/main/packs/foundation/skills/revenantworks-foundation-promptwright/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/revenantworks/claude-skills/blob/main/packs/foundation/skills/revenantworks-foundation-promptwright/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Writes, fixes and red-teams prompts \u2014 system prompts, templates, meta-prompts, agent or bot instructions \u2014 as copy-paste-ready artifacts, and picks the model tier for a prompt, task or plan's subtasks. Trigger to write, improve, debug or rewrite a prompt; which model should run this; a prompt that costs too many tokens, to cut with behavior held; or say promptwright (model, optimize \u2014 tune against test cases, slim, refresh). Not for a fan-out's units (dispatchwright), installed local models (lmstudiorunner), skills or their slim (skillwright), sourced comparisons (researchscribe), handoffs (handoffwright) or a pre-build interview (grillwright)."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "hr-leave-of-absence",
+  "repo": "polar-bear-org/claude-skills",
+  "path": "packs/ai-for-hr-pack/skills/hr-leave-of-absence/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/polar-bear-org/claude-skills",
+  "dir_name": "hr-leave-of-absence",
+  "downloaded_at": "2026-10-22T04:29:00.284620Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "process"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polar-bear-org",
+  "source_url": "https://github.com/polar-bear-org/claude-skills/blob/main/packs/ai-for-hr-pack/skills/hr-leave-of-absence/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polar-bear-org/claude-skills/blob/main/packs/ai-for-hr-pack/skills/hr-leave-of-absence/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Builds a Leave of Absence Case Plan for one person's leave, with the eligibility points to confirm, notices, contact, cover and return, plus the letters to the employee and the questions for the leave administrator. Use for \"run hr-leave-of-absence\", \"leave of absence plan\", \"someone is going on FMLA\", \"plan this medical leave\", \"letters for someone on leave\", \"return from leave\", \"restructure during leave\", \"our leave administrator got it wrong\", part of the AI for HR Pack by Polar Bear."
+}

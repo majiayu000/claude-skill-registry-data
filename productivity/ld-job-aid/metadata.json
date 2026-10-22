@@ -1,0 +1,38 @@
+{
+  "name": "ld-job-aid",
+  "repo": "polar-bear-org/claude-skills",
+  "path": "packs/ai-for-training-pack/skills/ld-job-aid/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/polar-bear-org/claude-skills",
+  "dir_name": "ld-job-aid",
+  "downloaded_at": "2026-10-22T04:28:54.790234Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, memory",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polar-bear-org",
+  "source_url": "https://github.com/polar-bear-org/claude-skills/blob/main/packs/ai-for-training-pack/skills/ld-job-aid/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polar-bear-org/claude-skills/blob/main/packs/ai-for-training-pack/skills/ld-job-aid/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Builds a job aid as a checklist, decision table or one-page flow, with where it lives in the workflow and who updates it and when. Use for \"run ld-job-aid\", \"make a job aid\", \"quick reference guide for this task\", \"a checklist instead of a course\", \"decision table for this process\", \"people need the answer mid-task\", \"one-page flow\", part of the AI for L&D and Corporate Training Pack by Polar Bear."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "create-release-branch",
+  "repo": "nexus-a1/claude-skills",
+  "path": "skills/create-release-branch/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/nexus-a1/claude-skills",
+  "dir_name": "create-release-branch",
+  "downloaded_at": "2026-10-22T04:03:02.203985Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nexus-a1",
+  "source_url": "https://github.com/nexus-a1/claude-skills/blob/main/skills/create-release-branch/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nexus-a1/claude-skills/blob/main/skills/create-release-branch/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Create a release/vX.Y.Z branch from the repo's default branch (default), any branch, or a specific tag using tag@vX.Y.Z syntax. Takes a version and an optional source. Step 1 of the release workflow."
+}

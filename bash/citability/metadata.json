@@ -1,0 +1,37 @@
+{
+  "name": "citability",
+  "repo": "seo-skills/geo-audit-skill",
+  "path": "skills/citability/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/seo-skills/geo-audit-skill",
+  "dir_name": "citability",
+  "downloaded_at": "2026-10-22T05:00:30.090908Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, cli",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "seo-skills",
+  "source_url": "https://github.com/seo-skills/geo-audit-skill/blob/main/skills/citability/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/seo-skills/geo-audit-skill/blob/main/skills/citability/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Score how quotable a single page is for AI search engines. Runs the geo CLI, explains the seven citability signals behind the number, and ranks the fixes that recover the most points. Use when asked to check, score or improve whether a page can be cited by ChatGPT, Claude, Perplexity, Gemini or AI Overviews."
+}

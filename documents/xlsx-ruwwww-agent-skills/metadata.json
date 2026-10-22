@@ -1,0 +1,40 @@
+{
+  "name": "xlsx",
+  "repo": "ruwwww/agent-skills",
+  "path": "hermes-skills/productivity/xlsx/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/ruwwww/agent-skills",
+  "dir_name": "xlsx-ruwwww-agent-skills",
+  "downloaded_at": "2026-10-22T04:53:23.551008Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: docs, pdf, excel, xlsx, docx",
+    "score": 5,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "pdf",
+      "excel",
+      "xlsx",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ruwwww",
+  "source_url": "https://github.com/ruwwww/agent-skills/blob/main/hermes-skills/productivity/xlsx/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ruwwww/agent-skills/blob/main/hermes-skills/productivity/xlsx/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Create, read, edit Excel .xlsx workbooks and CSVs."
+}

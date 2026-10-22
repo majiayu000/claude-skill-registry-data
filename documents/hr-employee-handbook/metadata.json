@@ -1,0 +1,37 @@
+{
+  "name": "hr-employee-handbook",
+  "repo": "polar-bear-org/claude-skills",
+  "path": "packs/ai-for-hr-pack/skills/hr-employee-handbook/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/polar-bear-org/claude-skills",
+  "dir_name": "hr-employee-handbook",
+  "downloaded_at": "2026-10-22T04:29:03.666673Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: word, markdown",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polar-bear-org",
+  "source_url": "https://github.com/polar-bear-org/claude-skills/blob/main/packs/ai-for-hr-pack/skills/hr-employee-handbook/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polar-bear-org/claude-skills/blob/main/packs/ai-for-hr-pack/skills/hr-employee-handbook/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Assembles an Employee Handbook from your approved policies, with contents in the order a new starter needs them, a disclaimer flagged for an adviser, an acknowledgement page, a change log and a gap list of policies still missing. Use for \"run hr-employee-handbook\", \"employee handbook\", \"update our handbook\", \"handbook rewrite\", \"handbook acknowledgement form\", \"handbook change log\", \"which policies are missing from our handbook\", \"put our policies in one place\", part of the AI for HR Pack by Polar Bear."
+}

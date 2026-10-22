@@ -1,0 +1,39 @@
+{
+  "name": "rails-dev",
+  "repo": "paulosantanna/ai-assistent-universal-coder",
+  "path": ".agents/skills/rails-dev/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/paulosantanna/ai-assistent-universal-coder",
+  "dir_name": "rails-dev",
+  "downloaded_at": "2026-10-22T04:22:17.573236Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, debug, refactor",
+    "score": 4,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "paulosantanna",
+  "source_url": "https://github.com/paulosantanna/ai-assistent-universal-coder/blob/master/.agents/skills/rails-dev/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/paulosantanna/ai-assistent-universal-coder/blob/master/.agents/skills/rails-dev/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Opinionated Rails conventions: rich models, concerns, CRUD-everything, state-as-records, minimal dependencies, Minitest with fixtures. Load this skill BEFORE any code-level thinking, not only before editing a file. It is required the moment a task touches Rails code in ANY way: designing or even just discussing a data model, schema, migration, entity, association, field, validation, class, or method name; writing, planning, reviewing, analyzing, testing, debugging, or refactoring; or proposing any model, table, column, route, or code snippet inline in chat. If you are about to name a model or sketch a column you are already in scope, even in an exploratory back-and-forth where no file is written yet. Do not let a \"we're just discussing\" framing defer it. Do NOT use for non-Rails backends, NestJS, or general architecture (use nestjs-modular-monolith or coding-guidelines). Use when the user requests rails dev or invokes rails-dev."
+}

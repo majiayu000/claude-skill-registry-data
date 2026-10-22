@@ -1,0 +1,36 @@
+{
+  "name": "invoice-pay",
+  "repo": "runxhq/runx",
+  "path": "skills/invoice-pay/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/runxhq/runx",
+  "dir_name": "invoice-pay",
+  "downloaded_at": "2026-10-22T04:53:05.794193Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category api scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "runxhq",
+  "source_url": "https://github.com/runxhq/runx/blob/main/skills/invoice-pay/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/runxhq/runx/blob/main/skills/invoice-pay/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Check one invoice against the authority that may pay it, then pay it through pay with approval and readback."
+}

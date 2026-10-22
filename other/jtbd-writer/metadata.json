@@ -1,0 +1,37 @@
+{
+  "name": "jtbd-writer",
+  "repo": "polar-bear-org/claude-skills",
+  "path": "packs/design-thinking-pack/skills/jtbd-writer/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/polar-bear-org/claude-skills",
+  "dir_name": "jtbd-writer",
+  "downloaded_at": "2026-10-22T04:28:57.171194Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: product=2, writing=2",
+    "score": 2,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "feature"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polar-bear-org",
+  "source_url": "https://github.com/polar-bear-org/claude-skills/blob/main/packs/design-thinking-pack/skills/jtbd-writer/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polar-bear-org/claude-skills/blob/main/packs/design-thinking-pack/skills/jtbd-writer/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Writes jobs-to-be-done statements from research, part of the Design Thinking Pack by Polar Bear. Use this whenever the user says \"run jtbd-writer\", \"write the jobs to be done\", \"what job are users hiring us for\", \"turn this research into JTBD\", or the team keeps describing features and needs to describe progress people are trying to make. Use it even for \"why do people actually use this\"."
+}

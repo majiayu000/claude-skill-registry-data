@@ -1,0 +1,37 @@
+{
+  "name": "vcc",
+  "repo": "ruwwww/agent-skills",
+  "path": "hermes-skills/vcc/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ruwwww/agent-skills",
+  "dir_name": "vcc",
+  "downloaded_at": "2026-10-22T04:53:15.137771Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ruwwww",
+  "source_url": "https://github.com/ruwwww/agent-skills/blob/main/hermes-skills/vcc/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ruwwww/agent-skills/blob/main/hermes-skills/vcc/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Help the user install, set up, and use the Virtual Cell Challenge (VCC) submission CLI (`vcc`):\ninstall the command, authenticate with an API key, prep/generate a prediction, submit it, and\ncheck scoring status. Use for anything about the vcc CLI.\nTriggers on: set up vcc, install vcc cli, vcc login, generate a vcc api key, how do I submit to\nthe virtual cell challenge, vcc submit, vcc prep, vcc sample, vcc datasets, vcc status,\nvcc command not found."
+}

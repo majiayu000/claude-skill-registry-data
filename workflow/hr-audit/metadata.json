@@ -1,0 +1,37 @@
+{
+  "name": "hr-audit",
+  "repo": "polar-bear-org/claude-skills",
+  "path": "packs/ai-for-hr-pack/skills/hr-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/polar-bear-org/claude-skills",
+  "dir_name": "hr-audit",
+  "downloaded_at": "2026-10-22T04:28:50.675655Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "process"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polar-bear-org",
+  "source_url": "https://github.com/polar-bear-org/claude-skills/blob/main/packs/ai-for-hr-pack/skills/hr-audit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polar-bear-org/claude-skills/blob/main/packs/ai-for-hr-pack/skills/hr-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Runs an HR Audit Report across files, policies and practices, with a gap list ordered by risk and effort, a fix plan with owners, and the deficiency summary leaders sign off. Use for \"run hr-audit\", \"HR audit\", \"audit our personnel files\", \"I inherited a mess\", \"HR audit checklist\", \"employee file audit\", \"records retention check\", \"first 90 days as HR lead\", part of the AI for HR Pack by Polar Bear."
+}

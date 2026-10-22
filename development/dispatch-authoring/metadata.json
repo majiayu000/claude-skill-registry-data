@@ -1,0 +1,38 @@
+{
+  "name": "dispatch-authoring",
+  "repo": "rampstackco/claude-skills",
+  "path": "skills/dispatch-authoring/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/rampstackco/claude-skills",
+  "dir_name": "dispatch-authoring",
+  "downloaded_at": "2026-10-22T04:39:15.071833Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rampstackco",
+  "source_url": "https://github.com/rampstackco/claude-skills/blob/main/skills/dispatch-authoring/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rampstackco/claude-skills/blob/main/skills/dispatch-authoring/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write the structured handoff from a planning session to a coding agent: a dispatch with a header, Gate 0 checks, scope, specification, verification, delivery rules, and stop conditions, so the agent can execute unattended and return a reviewable draft PR. Use this skill whenever the user wants to hand work to an agent, write an agent brief, write instructions for Claude Code, Codex, or a Cursor agent, queue work to run overnight, or turn a plan into something an AI coder can execute without asking questions. Triggers on dispatch, hand off to an agent, agent brief, agent handoff, task brief for an AI coder, instructions for Claude Code, Codex task, Cursor agent, background agent, run this overnight, give this to an agent, unattended run. Also triggers when the user has a plan or a spec and asks how to get an agent to build it, even if they never say dispatch."
+}

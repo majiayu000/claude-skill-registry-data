@@ -1,0 +1,37 @@
+{
+  "name": "project-retro",
+  "repo": "mattbrailsford/umbraco-devkit",
+  "path": "plugins/umbraco-devkit/skills/project-retro/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mattbrailsford/umbraco-devkit",
+  "dir_name": "project-retro",
+  "downloaded_at": "2026-10-22T03:37:59.453696Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mattbrailsford",
+  "source_url": "https://github.com/mattbrailsford/umbraco-devkit/blob/main/plugins/umbraco-devkit/skills/project-retro/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mattbrailsford/umbraco-devkit/blob/main/plugins/umbraco-devkit/skills/project-retro/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Mines the current (or a described) coding session for friction and hard-won knowledge, then fixes it at the source instead of just writing it down: saves a repeatable trap to this project's `.claude/memory/` as a `gotcha`, or hands off to `skill-report` when the devkit itself should have caught the mistake. Use when the user says \"capture what we learned\", \"do a retro\", \"write this down for next time\", \"what would make this faster next time\", or after a session that involved real digging or more than one wrong turn."
+}

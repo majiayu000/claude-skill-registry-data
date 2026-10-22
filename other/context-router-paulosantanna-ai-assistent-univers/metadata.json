@@ -1,0 +1,37 @@
+{
+  "name": "context-router",
+  "repo": "paulosantanna/ai-assistent-universal-coder",
+  "path": "skills/context-router/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/paulosantanna/ai-assistent-universal-coder",
+  "dir_name": "context-router-paulosantanna-ai-assistent-univers",
+  "downloaded_at": "2026-10-22T04:22:02.978604Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "paulosantanna",
+  "source_url": "https://github.com/paulosantanna/ai-assistent-universal-coder/blob/master/skills/context-router/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/paulosantanna/ai-assistent-universal-coder/blob/master/skills/context-router/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Resolve minimal context packets for agents based on task, LCPs and memory rules. Use when the user requests context router or invokes context-router. Do NOT use to promote unverified claims or transient task status into durable memory."
+}

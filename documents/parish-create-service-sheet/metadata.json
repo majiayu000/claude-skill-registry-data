@@ -1,0 +1,38 @@
+{
+  "name": "parish-create-service-sheet",
+  "repo": "oplaner4/farakurim",
+  "path": ".claude/skills/parish-create-service-sheet/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/oplaner4/farakurim",
+  "dir_name": "parish-create-service-sheet",
+  "downloaded_at": "2026-10-22T04:17:17.206558Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: pdf, word, docx",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "pdf",
+      "word",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "oplaner4",
+  "source_url": "https://github.com/oplaner4/farakurim/blob/main/.claude/skills/parish-create-service-sheet/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/oplaner4/farakurim/blob/main/.claude/skills/parish-create-service-sheet/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Publish the weekly service sheet (the \"po\u0159ad bohoslu\u017eeb\" or \"ohl\u00e1\u0161ky\") on the new farakurim.cz site from the parish's DOCX of the year or its weekly PDF - extract the week's days, services and announcements into a sheet record, confirm with the user, stage the week's PDF for upload, then publish. Use whenever the user brings a new service sheet (\"po\u0159ad bohoslu\u017eeb\", \"rozpis bohoslu\u017eeb\", \"ohl\u00e1\u0161ky\") DOCX or PDF."
+}

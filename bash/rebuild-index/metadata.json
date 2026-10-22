@@ -1,0 +1,37 @@
+{
+  "name": "rebuild-index",
+  "repo": "nexus-a1/claude-skills",
+  "path": "skills/rebuild-index/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/nexus-a1/claude-skills",
+  "dir_name": "rebuild-index",
+  "downloaded_at": "2026-10-22T04:02:59.856635Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "shell"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nexus-a1",
+  "source_url": "https://github.com/nexus-a1/claude-skills/blob/main/skills/rebuild-index/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nexus-a1/claude-skills/blob/main/skills/rebuild-index/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Rebuild manifest.json for any artifact storage type. Scans directories and regenerates from scratch."
+}

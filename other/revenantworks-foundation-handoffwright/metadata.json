@@ -1,0 +1,37 @@
+{
+  "name": "revenantworks-foundation-handoffwright",
+  "repo": "revenantworks/claude-skills",
+  "path": "packs/foundation/skills/revenantworks-foundation-handoffwright/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/revenantworks/claude-skills",
+  "dir_name": "revenantworks-foundation-handoffwright",
+  "downloaded_at": "2026-10-22T04:44:52.594186Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "compaction"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "revenantworks",
+  "source_url": "https://github.com/revenantworks/claude-skills/blob/main/packs/foundation/skills/revenantworks-foundation-handoffwright/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/revenantworks/claude-skills/blob/main/packs/foundation/skills/revenantworks-foundation-handoffwright/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Writes handoffs \u2014 a committed session state verified against git, or a forward task brief for a later session or agent \u2014 each ending with a paste-ready starter prompt for the next chat. Trigger on 'write the handoff', 'hand off', 'give me a prompt to hand off', 'pause here', 'holding position', a usage-limit or compaction warning, or closing a session with work still open; 'handoffwright resume' reads one back; 'now' passes it to one fresh agent. Not for resuming an active dispatchwright fan-out (its ledger holds the state), a hook that writes handoffs (rigwright's), or a chat with no filesystem (task-observer's handoff-doc mode)."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "onboarding-setup",
+  "repo": "polar-bear-org/claude-skills",
+  "path": "packs/onboarding-pack/skills/onboarding-setup/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/polar-bear-org/claude-skills",
+  "dir_name": "onboarding-setup",
+  "downloaded_at": "2026-10-22T04:28:57.477339Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: communication=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "email",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polar-bear-org",
+  "source_url": "https://github.com/polar-bear-org/claude-skills/blob/main/packs/onboarding-pack/skills/onboarding-setup/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polar-bear-org/claude-skills/blob/main/packs/onboarding-pack/skills/onboarding-setup/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Sets up the Onboarding Pack workspace and fills in the company context file, part of the Onboarding Pack by Polar Bear and Terry Mattheoyianni. Use this whenever the user says \"run onboarding-setup\", \"set up the onboarding pack\", \"I just installed the onboarding skills\", or has installed the pack and nothing is configured yet. Use it even for \"where do I start with this pack\"."
+}

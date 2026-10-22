@@ -1,0 +1,37 @@
+{
+  "name": "index-refresh",
+  "repo": "paperclipai/paperclip",
+  "path": "packages/plugins/plugin-llm-wiki/skills/index-refresh/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/paperclipai/paperclip",
+  "dir_name": "index-refresh",
+  "downloaded_at": "2026-10-22T04:20:36.108592Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "paperclipai",
+  "source_url": "https://github.com/paperclipai/paperclip/blob/master/packages/plugins/plugin-llm-wiki/skills/index-refresh/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/paperclipai/paperclip/blob/master/packages/plugins/plugin-llm-wiki/skills/index-refresh/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when an LLM Wiki operation issue requests an index refresh. Rebuild `wiki/index.md` from the actual wiki tree, reconcile missing/deleted entries, and log counts without editing page bodies."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "feature-close",
+  "repo": "mattbrailsford/umbraco-devkit",
+  "path": "plugins/umbraco-devkit/skills/feature-close/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/mattbrailsford/umbraco-devkit",
+  "dir_name": "feature-close",
+  "downloaded_at": "2026-10-22T03:37:54.253744Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, memory",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mattbrailsford",
+  "source_url": "https://github.com/mattbrailsford/umbraco-devkit/blob/main/plugins/umbraco-devkit/skills/feature-close/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mattbrailsford/umbraco-devkit/blob/main/plugins/umbraco-devkit/skills/feature-close/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Closes a feature's plan folder once the work is over: records how it ended, moves lasting decisions into project memory, and archives the folder. Use after the feature's PR merges on each version line it shipped to, or when a plan is dropped or replaced."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "renovate",
+  "repo": "nitinjain999/platform-skills",
+  "path": "plugins/platform-skills/skills/renovate/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/nitinjain999/platform-skills",
+  "dir_name": "renovate-nitinjain999-platform-skills",
+  "downloaded_at": "2026-10-22T04:06:18.467455Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "docker",
+      "kubernetes"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nitinjain999",
+  "source_url": "https://github.com/nitinjain999/platform-skills/blob/main/plugins/platform-skills/skills/renovate/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nitinjain999/platform-skills/blob/main/plugins/platform-skills/skills/renovate/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generate renovate.json covering all dependency file types used in a repo, emit a GitHub Actions workflow that validates renovate.json on every PR, or generate a pre-commit hook for local validation."
+}

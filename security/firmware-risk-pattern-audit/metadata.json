@@ -1,0 +1,38 @@
+{
+  "name": "firmware-risk-pattern-audit",
+  "repo": "prizmatik666/codex_prizm_skills",
+  "path": "firmware-reverse-eng-skill/firmware-risk-pattern-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/prizmatik666/codex_prizm_skills",
+  "dir_name": "firmware-risk-pattern-audit",
+  "downloaded_at": "2026-10-22T04:31:15.348679Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "prizmatik666",
+  "source_url": "https://github.com/prizmatik666/codex_prizm_skills/blob/main/firmware-reverse-eng-skill/firmware-risk-pattern-audit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/prizmatik666/codex_prizm_skills/blob/main/firmware-reverse-eng-skill/firmware-risk-pattern-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when auditing embedded firmware source, object files, or extracted rootfs content for risky C/web-backend patterns such as system(), _eval(), exec wrappers, sprintf/strcpy/strcat, user-controlled path construction, /tmp usage, unlink(), mktemp(), firmware/config upload handlers, NVRAM backup/upload/download, restore/default reset paths, WPS handlers, nvram flows, and suspicious hidden CGI endpoints."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "hr-policy-faq",
+  "repo": "polar-bear-org/claude-skills",
+  "path": "packs/ai-for-hr-pack/skills/hr-policy-faq/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/polar-bear-org/claude-skills",
+  "dir_name": "hr-policy-faq",
+  "downloaded_at": "2026-10-22T04:28:52.128615Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: word, markdown",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polar-bear-org",
+  "source_url": "https://github.com/polar-bear-org/claude-skills/blob/main/packs/ai-for-hr-pack/skills/hr-policy-faq/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polar-bear-org/claude-skills/blob/main/packs/ai-for-hr-pack/skills/hr-policy-faq/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Drafts an HR Policy FAQ for HR to review, answering staff questions only from your approved handbook text with the clause quoted, saying \"our policy does not cover this\" when it does not, routing medical, legal and personal questions to a person, and keeping no record of who asked. Use for \"run hr-policy-faq\", \"answer staff questions from our handbook\", \"what does our policy say\", \"handbook FAQ\", \"policy questions I keep answering\", \"is this covered by our handbook\", \"draft answers to employee questions\", part of the AI for HR Pack by Polar Bear."
+}
