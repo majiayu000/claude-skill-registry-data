@@ -1,0 +1,37 @@
+{
+  "name": "citation-crosscheck",
+  "repo": "wanshuiyin/Auto-claude-code-research-in-sleep",
+  "path": "skills/citation-crosscheck/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/wanshuiyin/Auto-claude-code-research-in-sleep",
+  "dir_name": "citation-crosscheck",
+  "downloaded_at": "2026-10-23T04:23:43.599501Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: auth, audit",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wanshuiyin",
+  "source_url": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/blob/main/skills/citation-crosscheck/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/blob/main/skills/citation-crosscheck/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Double-blind bibliographic cross-check: one agent extracts each cited entry verbatim from the local .bib, a second independently re-fetches the same paper's record from the web while blind to the .bib, and a third extractor emits a mechanical field-by-field delta to catch dropped/re-ordered authors, wrong years, wrong venues, and bad DOIs/arXiv ids. The main agent (never a shard) assigns the MATCH/MINOR/MISMATCH verdict per reference, and exports a side-by-side spreadsheet. Use when user says \"citation crosscheck\", \"double-blind citation check\", \"verify bib against scholar\", \"bib field audit\", \"\u5f15\u7528\u4ea4\u53c9\u6838\u5bf9\", or before submission when bibliography FIELD accuracy (not just existence) must be certified."
+}

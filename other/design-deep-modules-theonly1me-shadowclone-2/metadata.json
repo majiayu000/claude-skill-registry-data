@@ -1,0 +1,36 @@
+{
+  "name": "design-deep-modules",
+  "repo": "theonly1me/shadowclone",
+  "path": ".claude/skills/design-deep-modules/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/theonly1me/shadowclone",
+  "dir_name": "design-deep-modules-theonly1me-shadowclone-2",
+  "downloaded_at": "2026-10-23T03:59:01.141893Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category design scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "forensics",
+    "runner_up_score": 1,
+    "signals": [
+      "design"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "theonly1me",
+  "source_url": "https://github.com/theonly1me/shadowclone/blob/main/.claude/skills/design-deep-modules/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/theonly1me/shadowclone/blob/main/.claude/skills/design-deep-modules/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when designing or reshaping a module, or when callers coordinate too many steps. Also use it when the user says \"this is hard to test\", \"callers know too much\", or \"simplify this interface\". Puts related state and decisions behind a small interface that states what the caller wants. Tests then use that interface instead of the internal steps. Not for typing values at a boundary (use `typescript-type-safety`)."
+}

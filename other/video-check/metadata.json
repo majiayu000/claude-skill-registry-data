@@ -1,0 +1,37 @@
+{
+  "name": "video-check",
+  "repo": "tymoshenko-dmytro/claude-marketing-skills",
+  "path": "skills/video-check/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/tymoshenko-dmytro/claude-marketing-skills",
+  "dir_name": "video-check",
+  "downloaded_at": "2026-10-23T04:11:10.057901Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tymoshenko-dmytro",
+  "source_url": "https://github.com/tymoshenko-dmytro/claude-marketing-skills/blob/main/skills/video-check/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tymoshenko-dmytro/claude-marketing-skills/blob/main/skills/video-check/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Runs the quality gates and an independent review on any video before anyone sees it: grounding read of every claim, voice gate, hyperframes check, reading time per line, stills at mid-transitions and at phone width, 1:1 zoom on images, render and encode settings, loudness and true peak, sound against picture, frozen and black frames, one-frame glitches at every cut (ghost, black or held frames, late cuts), the poster frame, a transcript of the finished file, and a review by fresh subagents that grade defects P0/P1/P2. An executor under video-studio. Use when a film is rendered and before it is shown, or when video-studio reaches its gates. Triggers: \"check the video\", \"QA the film\", \"review the film\", \"what is wrong with this video\", \"check the render\", \"seam scan\"."
+}

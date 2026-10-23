@@ -1,0 +1,38 @@
+{
+  "name": "video-sound",
+  "repo": "tymoshenko-dmytro/claude-marketing-skills",
+  "path": "skills/video-sound/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/tymoshenko-dmytro/claude-marketing-skills",
+  "dir_name": "video-sound",
+  "downloaded_at": "2026-10-23T04:11:10.464632Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tymoshenko-dmytro",
+  "source_url": "https://github.com/tymoshenko-dmytro/claude-marketing-skills/blob/main/skills/video-sound/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tymoshenko-dmytro/claude-marketing-skills/blob/main/skills/video-sound/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Makes the sound of any video: ElevenLabs voiceover (one file per line, static levelling, a transcript gate that must hear brand names verbatim, word timings for captions), music picked by role and tempo from a beat-mapped library and cut to the film, sound effects from an analysed library of 1,277 redistributable sounds or generated, the stereo mix that ducks music per spoken passage with a static master to -14 LUFS, and the check that every effect is heard. An executor under video-studio. Use when a film needs a voice, music, effects or a mix, or when video-studio reaches its audio steps. Triggers: \"voiceover\", \"voice the script\", \"music bed\", \"sound design\", \"sound effects\", \"mix the audio\", \"loudness\", \"install the sound library\"."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "phase-review",
+  "repo": "yarlson/yarstack",
+  "path": "plugins/yarstack/skills/phase-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yarlson/yarstack",
+  "dir_name": "phase-review-yarlson-yarstack",
+  "downloaded_at": "2026-10-23T04:42:19.233802Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yarlson",
+  "source_url": "https://github.com/yarlson/yarstack/blob/main/plugins/yarstack/skills/phase-review/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yarlson/yarstack/blob/main/plugins/yarstack/skills/phase-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Review one validated phase for behavior-preserving structural regressions introduced or materially worsened by the change. Use after phase validation and before final delivery."
+}

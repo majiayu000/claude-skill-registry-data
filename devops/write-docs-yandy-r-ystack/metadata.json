@@ -1,0 +1,38 @@
+{
+  "name": "write-docs",
+  "repo": "yandy-r/ystack",
+  "path": ".agents-plugin/skills/write-docs/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/yandy-r/ystack",
+  "dir_name": "write-docs-yandy-r-ystack",
+  "downloaded_at": "2026-10-23T04:41:42.972006Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: deploy, infra, infrastructure",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yandy-r",
+  "source_url": "https://github.com/yandy-r/ystack/blob/main/.agents-plugin/skills/write-docs/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yandy-r/ystack/blob/main/.agents-plugin/skills/write-docs/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Coordinates parallel documentation agents to audit and improve project docs. Use when generating codebase documentation, filling documentation gaps, or updating existing docs."
+}

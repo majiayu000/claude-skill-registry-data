@@ -1,0 +1,38 @@
+{
+  "name": "flutter-agent-loop",
+  "repo": "techmefr/mentis",
+  "path": "skills/flutter-agent-loop/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/techmefr/mentis",
+  "dir_name": "flutter-agent-loop",
+  "downloaded_at": "2026-10-23T03:55:04.187676Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, memory",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "techmefr",
+  "source_url": "https://github.com/techmefr/mentis/blob/main/skills/flutter-agent-loop/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/techmefr/mentis/blob/main/skills/flutter-agent-loop/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when an AI coding agent edits a Dart or Flutter project and the Dart and Flutter MCP server is available (or could be): which server tool replaces a shell command, how to connect to a running app, when to hot reload versus hot restart after an edit, reading runtime errors and the widget tree before guessing a layout fix, reading a dependency's real source and vetting a package instead of recalling its API."
+}

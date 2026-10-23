@@ -1,0 +1,276 @@
+---
+name: guardian-verify-setup
+description: Set up channel verification for phone, Telegram, Slack, Discord, or email channels via outbound verification flow
+compatibility: "Designed for Cadet personal assistants"
+metadata:
+  emoji: "🔐"
+  cadet:
+    category: "integrations"
+    display-name: "Guardian Verify Setup"
+    activation-hints:
+      - "Any guardian verification intent -> load this skill exclusively"
+      - '"help me verify my identity" = verification request'
+    avoid-when:
+      - "Don't load phone-calls for verification intents"
+      - "If the user already specified a channel, do not re-ask"
+---
+
+You are helping your user set up channel verification for a messaging channel (phone, Telegram, Slack, Discord, or email). This links their identity for verified message delivery on the chosen channel. Use the `assistant channel-verification-sessions` CLI for all verification operations.
+
+## When to Use
+
+Load this skill when:
+
+- The user says "verify me", "verify my identity", "set up verification", "verify my [phone/telegram/slack/discord/email]", or any equivalent identity-handshake intent.
+- Another skill is wiring up a channel and needs to bind the guardian's identity to it (e.g., `slack-app-setup` invokes this skill at the end of Slack setup so the user can prove ownership of the configured workspace).
+
+Do not load this skill for:
+
+- Generic "set up X" intents where X is not a guardian channel (use the channel-specific setup skill instead).
+- Phone-CALLS intent (use the phone-calls skill — those are outbound calls the assistant makes, not verification handshakes).
+
+## Prerequisites
+
+- Run shell commands for this skill with `bash`.
+- Keep narration minimal: execute required calls first, then provide a concise status update. Do not narrate internal install/check/load chatter unless something fails.
+
+## Step 1: Confirm Channel
+
+Ask the user which channel they want to verify:
+
+- **phone** -- verify a phone number for voice calls
+- **telegram** -- verify a Telegram account
+- **slack** -- verify a Slack account
+- **discord** -- verify a Discord account
+- **email** -- verify an email address
+
+**Skip the prompt and proceed directly with the named channel when:**
+
+- The user's intent already specifies a channel (e.g. "verify my phone number for voice calls", "verify me on Slack").
+- This skill is loaded from another skill that has already established the channel (e.g., `slack-app-setup` finishes configuring Slack then loads this skill — `slack` is already the channel; do not re-prompt the user for which channel after they just spent the prior steps configuring one).
+
+⚠️ CRITICAL — point of action: **Do not re-prompt for channel when it is already determined.** Re-prompting after a parent skill has just configured a channel makes the user feel like the assistant forgot the previous five minutes of setup.
+
+## Step 2: Collect Destination
+
+Based on the chosen channel, ask for the required destination:
+
+- **Phone**: Ask for their phone number. Accept any common format (e.g. +15551234567, (555) 123-4567, 555-123-4567). The API normalizes it to E.164.
+- **Email**: Ask for their email address. The bot will send a verification code to that address.
+- **Telegram**: Ask for their Telegram chat ID (numeric) or @handle. Explain:
+  - If they know their numeric chat ID, provide it directly. The bot will send the code to that chat.
+  - If they only know their @handle, the flow uses a bootstrap deep-link that they must click first.
+- **Slack**: Offer to look up the user's Slack member ID automatically to reduce friction:
+  1. **Auto-lookup (preferred)**: Ask the user for their Slack display name or @handle, then look up their member ID using the Slack API.
+
+     Set `USER_QUERY` to whatever the user gave you (display name, @handle, or full name — the search matches against all of them). For example, if the user says "find me, I'm @alice", set `USER_QUERY="alice"`. If they say "Alice Example", set `USER_QUERY="Alice Example"`. **Do not leave `USER_QUERY` as a literal `<...>` placeholder string.**
+
+     ```bash
+     USER_QUERY="alice"  # ← replace with the actual value the user provided
+     USER_QUERY="${USER_QUERY#@}"  # strip leading @ — Slack .name fields have no @ prefix
+
+     # Search for matching users (paginate through all workspace members).
+     # The request door sends the bot token from inside the assistant; never
+     # reveal it into a variable or a curl line, where it would land in the
+     # transcript and the tool log. The door exits non-zero when the bot is
+     # not configured, when the call is refused, and when Slack answers with
+     # ok:false, so one branch covers every failure.
+     CURSOR=""
+     MATCHES="[]"
+     while true; do
+       RESPONSE=$(assistant channels request slack "/users.list?limit=200${CURSOR:+&cursor=$CURSOR}") || {
+         echo "ERROR: the Slack lookup failed; fall back to manual entry"
+         exit 1
+       }
+       PAGE_MATCHES=$(echo "$RESPONSE" | jq --arg q "$USER_QUERY" '[.members[] | select(.deleted == false) | select(.profile.display_name == $q or .name == $q or .profile.display_name_normalized == $q or .real_name == $q) | {id: .id, name: .name, display_name: .profile.display_name, real_name: .real_name}]')
+       MATCHES=$(echo "$MATCHES $PAGE_MATCHES" | jq -s 'add')
+       CURSOR=$(echo "$RESPONSE" | jq -r '.response_metadata.next_cursor // empty')
+       [ -z "$CURSOR" ] && break
+     done
+     echo "$MATCHES" | jq '.[]'
+     ```
+
+     ⚠️ CRITICAL — point of action: **Substitute `USER_QUERY` with the actual user-provided value before running the bash block.** A literal `USER_QUERY="<query>"` or `USER_QUERY="<name>"` matches nothing and burns a `users.list` cycle.
+
+     Result handling:
+     - **Single match**: Present it for confirmation: "I found @username (U01ABCDEF) — is that you?" If confirmed, use the `id` value as the destination for Step 3.
+     - **Multiple matches**: Present the list (up to 5) and ask the user to pick: "I found a few matches — which one is you?" Use the confirmed `id` as the destination.
+     - **No matches**: Tell the user no matches were found. Suggest they double-check the spelling, or fall back to manual entry (see below).
+
+  2. **Fallback to manual entry** if any of the following occur:
+     - The bash block above exits 1: the Slack bot is not configured, the request door refused the call, or Slack answered `users.list` with an error such as `missing_scope` (the door prints the reason)
+     - Too many matches are returned (more than 5)
+     - The user prefers to enter their ID directly
+
+     For manual entry: ask for their Slack user ID. Explain that this is their Slack member ID (e.g. U01ABCDEF), not their display name or email. They can find it in their Slack profile under "More" > "Copy member ID".
+
+  The bot will send a verification code via Slack DM once the member ID is resolved.
+
+- **Discord**: Ask for their Discord user ID, a numeric snowflake such as `900000000000000001`. To find it: **User Settings > Advanced > Developer Mode**, then right-click their own name in any channel or the member list and choose **Copy User ID**. A username or `@handle` will not work.
+
+  The bot DMs the code to that user. Discord only permits that DM when the bot and the user share a server, so complete the invite step of `discord-app-setup` first, and note that a user who has turned off direct messages from server members cannot receive it.
+
+## Step 3: Start Outbound Verification
+
+Execute the outbound start request:
+
+```bash
+assistant channel-verification-sessions create --channel <channel> --destination "<destination>" --json
+```
+
+Replace `<channel>` with `phone`, `telegram`, `slack`, `discord`, or `email`, and `<destination>` with the phone number, Telegram destination, Slack user ID, Discord user ID, or email address.
+
+### On success (`success: true`)
+
+Report the exact next action based on the channel:
+
+- **Phone**: The response includes a `secret` field with the verification code. Tell the user the code BEFORE the call connects: "I'm calling [number] now. Your verification code is [secret]. When you answer the call, enter this code using your phone's keypad." The `create` command already initiates the voice call. Do NOT place a separate `call_start` call. **After delivering the code, immediately begin the auto-check polling loop** (see [Auto-Check Polling](#auto-check-polling) below).
+- **Telegram with chat ID** (no `telegramBootstrapUrl` in response): The response includes a `secret` field. Show it in the current chat: "Your verification code is **[secret]**. I've also sent it to your Telegram. Open the Telegram bot chat and reply with that 6-digit code to complete verification." If the response does not contain a `secret` field, treat this as a control-plane error: tell the user something went wrong and ask them to retry from Step 3 or resend (Step 4).
+- **Telegram with handle** (`telegramBootstrapUrl` present in response): "Tap this deep-link first: [telegramBootstrapUrl]. After Telegram binds your identity, I'll send your verification code."
+- **Slack**: The response includes a `secret` field with the verification code. Show it in the current chat: "Your verification code is **[secret]**. I've also sent it to you as a Slack DM. Open the DM from the Cadet bot in Slack and reply with that 6-digit code to complete verification." The DM channel ID is captured automatically during this process for future message delivery. If the response does not contain a `secret` field, treat this as a control-plane error: tell the user something went wrong and ask them to retry from Step 3 or resend (Step 4). **After delivering the code, immediately begin the auto-check polling loop** (see [Auto-Check Polling](#auto-check-polling) below).
+- **Discord**: The response includes a `secret` field with the verification code. Show it in the current chat: "Your verification code is **[secret]**. I've also sent it to you as a Discord DM. Open the DM from the bot and send that 6-digit code in this DM to complete verification. Any plain message containing the code works; Discord's reply feature is not required." If the response does not contain a `secret` field, treat this as a control-plane error: tell the user something went wrong and ask them to retry from Step 3 or resend (Step 4). **After delivering the code, begin the auto-check polling loop** (see [Auto-Check Polling](#auto-check-polling) below). The DM send is fire-and-forget, so a closed-DM or not-in-a-shared-server failure shows up as the poll timing out rather than as an error here.
+- **Email**: The response includes a `secret` field with the verification code. Show it in the current chat: "Your verification code is **[secret]**. I've also sent it to your email. Reply to the verification email with only the 6-digit code to complete verification." If the response does not contain a `secret` field, treat this as a control-plane error: tell the user something went wrong and ask them to retry from Step 3 or resend (Step 4). **After delivering the code, immediately begin the auto-check polling loop** (see [Auto-Check Polling](#auto-check-polling) below).
+
+After reporting the bootstrap URL for Telegram handle flows, wait for the user to confirm they clicked the link. Then check verification status (Step 6) to see if the bootstrap completed and a code was sent.
+
+### On error (`success: false`)
+
+Handle each error code:
+
+| Error code            | Action                                                                                                                                                                                                                                                                                                                                                                             |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `missing_destination` | Ask the user to provide their phone number, Telegram destination, Slack user ID, or Discord user ID.                                                                                                                                                                                                                                                                               |
+| `invalid_destination` | Tell the user the format is invalid. For phone: suggest E.164 format (+15551234567). For Telegram: explain that group chat IDs (negative numbers) are not supported. For Slack: explain that the value must be a Slack member ID (e.g. U01ABCDEF). For Discord: explain that the value must be a numeric user snowflake, not a username. For email: suggest a valid email address. |
+| `already_bound`       | Tell the user a verified identity is already bound for this channel, and ask whether they want to verify that same identity again or replace it. Same identity, or a new phone number: re-run create with `--rebind`. A different identity on any other channel: revoke the current one first (Step 7), confirm `bound: false`, then run create again without `--rebind`.          |
+| `rate_limited`        | Tell the user they have sent too many verification attempts to this destination. Ask them to wait and try again later.                                                                                                                                                                                                                                                             |
+| `unsupported_channel` | Tell the user the channel is not supported. Valid channels are phone, telegram, slack, discord, and email.                                                                                                                                                                                                                                                                         |
+| `no_bot_username`     | Telegram bot is not configured. Load and run the `telegram-setup` skill first.                                                                                                                                                                                                                                                                                                     |
+
+## Step 4: Handle Resend
+
+If the user says they did not receive the code or asks to resend:
+
+```bash
+assistant channel-verification-sessions resend --channel <channel> --json
+```
+
+On success, report the next action based on the channel:
+
+- **Phone**: The resend response includes a fresh `secret` field with a new verification code. Tell the user the new code BEFORE the call connects - just like the initial start flow: "I'm calling [number] again. Your new verification code is [secret]. When you answer the call, enter this code using your phone's keypad." The `resend` command already initiates the voice call. Do NOT place a separate `call_start` call. **After delivering the code, immediately begin the auto-check polling loop** (see [Auto-Check Polling](#auto-check-polling) below).
+- **Telegram**: The resend response includes a fresh `secret` field. Show the new code in the current chat: "Your new verification code is **[secret]**. I've also sent it to your Telegram. Open the Telegram bot chat and reply with that 6-digit code to complete verification." If the response does not contain a `secret` field, treat this as a control-plane error: tell the user something went wrong and ask them to retry from Step 3.
+- **Slack**: The resend response includes a fresh `secret` field. Show the new code in the current chat: "Your new verification code is **[secret]**. I've also sent it to you as a Slack DM. Reply to the DM with that 6-digit code to complete verification. (resent)" If the response does not contain a `secret` field, treat this as a control-plane error: tell the user something went wrong and ask them to retry from Step 3. **After delivering the code, immediately begin the auto-check polling loop** (see [Auto-Check Polling](#auto-check-polling) below).
+- **Discord**: The resend response includes a fresh `secret` field. Show the new code in the current chat: "Your new verification code is **[secret]**. I've also sent it to you as a Discord DM. Open the DM from the bot and send that 6-digit code in this DM to complete verification. Any plain message containing the code works. (resent)" If the response does not contain a `secret` field, treat this as a control-plane error: tell the user something went wrong and ask them to retry from Step 3. **After delivering the code, begin the auto-check polling loop** (see [Auto-Check Polling](#auto-check-polling) below).
+- **Email**: The resend response includes a fresh `secret` field. Show the new code in the current chat: "Your new verification code is **[secret]**. I've also sent it to your email. Reply to the verification email with only the 6-digit code to complete verification. (resent)" If the response does not contain a `secret` field, treat this as a control-plane error: tell the user something went wrong and ask them to retry from Step 3. **After delivering the code, immediately begin the auto-check polling loop** (see [Auto-Check Polling](#auto-check-polling) below).
+
+### Resend errors
+
+Handle each error code from the resend endpoint:
+
+| Error code           | Action                                                                                                                                                                                            |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `rate_limited`       | Tell the user to wait before trying again (the cooldown is 15 seconds between resends).                                                                                                           |
+| `max_sends_exceeded` | Tell the user they have reached the maximum number of resends for this session (5 sends per session). Suggest canceling the current session (Step 5) and starting a new verification from Step 3. |
+| `no_destination`     | This should not normally occur during resend. Tell the user to cancel (Step 5) and restart verification from scratch at Step 3.                                                                   |
+| `pending_bootstrap`  | Remind the user to click the Telegram deep-link first before a code can be sent.                                                                                                                  |
+| `no_active_session`  | No session is active. Start a new one from Step 3.                                                                                                                                                |
+
+## Step 5: Handle Cancel
+
+If the user wants to cancel the verification:
+
+```bash
+assistant channel-verification-sessions cancel --channel <channel> --json
+```
+
+Confirm cancellation to the user. On `no_active_session`, tell them there is nothing to cancel.
+
+## Auto-Check Polling
+
+After delivering the code (in Step 3 or Step 4), do NOT wait for the user to report back. Poll for completion so they get confirmation without having to ask "did it work?"
+
+**Applies to phone, Slack, Discord, and email. Never Telegram** -- Telegram confirms through its own bot-driven flow, so polling it reports nothing useful.
+
+Each channel differs only in timing and in the sentence you send on success:
+
+| Channel | Poll every | Give up after        | Success message                                                                                                                  |
+| ------- | ---------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| phone   | 15s        | 2 minutes (~8 polls) | "Voice verification complete! Your phone number is now verified."                                                                |
+| slack   | 15s        | 2 minutes (~8 polls) | "Slack verification complete! Your Slack account is now verified. The DM channel has been captured for future message delivery." |
+| discord | 15s        | 2 minutes (~8 polls) | "Discord verification complete! Your Discord account is now verified."                                                           |
+| email   | 20s        | 3 minutes (~9 polls) | "Email verification complete! Your email address is now verified."                                                               |
+
+Email is slower than chat, which is why it waits longer before giving up.
+
+**Polling procedure:**
+
+1. Wait one interval after delivering the code, to give the user time to receive it and reply.
+2. Check the binding status. Each bash invocation starts fresh, so set `CHANNEL` in the same block as the command:
+
+```bash
+CHANNEL=""  # ← MUST set to one of: phone, slack, discord, email
+if [ -z "$CHANNEL" ]; then echo "ERROR: CHANNEL not set"; exit 1; fi
+assistant channel-verification-sessions status --channel "$CHANNEL" --json
+```
+
+3. If the response shows `bound: true` (subject to the rebind guard below): immediately send that channel's success message in the current chat and stop polling.
+4. If not yet bound: wait one more interval and poll again.
+5. Stop at the channel's timeout.
+6. On timeout, proactively tell the user: "I've been checking for a couple of minutes but verification hasn't completed yet. The code may have expired or wasn't entered. Would you like me to resend a new code (Step 4) or start a new session (Step 3)?"
+
+A timeout is also how a silent delivery failure surfaces. Code delivery is fire-and-forget, so a Discord user with DMs closed, or a Slack DM that could not be opened, produces a clean `create` response and then no arrival. Offer resend rather than asserting the code was received.
+
+**Rebind guard:**
+This applies only when the session was created with `--rebind`: the identity already linked on the channel verifying again, or a new phone number replacing the linked one. The existing link reports `bound: true` the whole time, so `bound: true` alone would report success before the user has entered the new code. For a rebind session:
+
+- Report success only when BOTH conditions are met: `bound: true` AND `verificationSessionId` is **absent** from the status response. The field is present while the verification session is still pending, and disappears once the user's code is redeemed.
+- If a poll shows `bound: true` but `verificationSessionId` is still present, the new code has not been redeemed yet - continue polling.
+- Non-rebind flows are unaffected, including a replacement on a text channel (revoke, then create): after the revoke the channel reports `bound: false`, so the first `bound: true` is the new link.
+
+**Important polling rules:**
+
+- Do NOT require the user to ask "did it work?" - the whole point is proactive confirmation.
+- If the user sends a message while polling is in progress, handle their message normally. If their message is about verification status, the next poll iteration will provide the answer.
+
+## Step 6: Check Verification Status
+
+After the user reports entering the code, verify the binding was created. Set `CHANNEL` to the channel currently being verified before running:
+
+```bash
+CHANNEL=""  # ← MUST set to one of: phone, telegram, slack, discord, email
+if [ -z "$CHANNEL" ]; then echo "ERROR: CHANNEL not set"; exit 1; fi
+assistant channel-verification-sessions status --channel "$CHANNEL" --json
+```
+
+⚠️ CRITICAL — point of action: **`CHANNEL` must be set to the channel currently being verified (`phone`, `telegram`, `slack`, `discord`, or `email`) before running.** The empty-string guard ensures a missed substitution fails safely rather than operating on the wrong channel.
+
+If the response shows the channel is bound, confirm success: "Verification complete! Your [channel] identity is now verified."
+
+If not yet bound, offer to resend (Step 4) or generate a new session (Step 3).
+
+## Step 7: Revoke Verification
+
+If the user wants to remove themselves (or the current verified identity) from a channel, use the revoke endpoint. Set `CHANNEL` to the channel to unbind from before running:
+
+```bash
+CHANNEL=""  # ← MUST set to one of: phone, telegram, slack, discord, email
+if [ -z "$CHANNEL" ]; then echo "ERROR: CHANNEL not set"; exit 1; fi
+assistant channel-verification-sessions revoke --channel "$CHANNEL" --json
+```
+
+⚠️ CRITICAL — point of action: **`CHANNEL` must be set to the channel to unbind (`phone`, `telegram`, `slack`, `discord`, or `email`) before running.** The empty-string guard ensures a missed substitution fails safely rather than accidentally revoking the wrong channel.
+
+### On success (`success: true`)
+
+The response includes `bound: false` after the operation completes. Check the previous binding state to tailor the message:
+
+- If a binding was previously active (i.e., the user explicitly asked to revoke their verified identity): "Verification revoked for [channel]. The previous verified identity no longer has access to this channel."
+- If no binding existed (`bound: false` and there was nothing to revoke): "There is no active verification for [channel] - nothing to revoke. Any pending verification challenges have been cleared."
+
+## Important Notes
+
+- Verification codes expire after 10 minutes. If the session expires, start a new one.
+- The resend cooldown is 15 seconds between sends, with a maximum of 5 sends per session.
+- Per-destination rate limiting allows up to 10 sends within a 1-hour rolling window.
+- Channel verification is identity-bound: the code can only be consumed by the identity matching the destination provided at start time.
+- **Missing `secret` guardrail**: Every flow returns a `secret` except Telegram's handle bootstrap, which returns a deep link first and sends the code once the user taps it. If `secret` is unexpectedly absent from a start or resend response that otherwise indicates success, treat this as a control-plane error. Do NOT fabricate a code or tell the user to proceed without one. Instead, tell the user something went wrong and ask them to retry the start (Step 3) or resend (Step 4).
+- **Revoking verification**: To remove the current verified identity from a channel, use the revoke API (Step 7). This revokes the binding AND revokes the verified identity's contact record, so they lose access to the channel. A new identity can then be verified for that channel.

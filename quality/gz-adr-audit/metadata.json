@@ -1,0 +1,38 @@
+{
+  "name": "gz-adr-audit",
+  "repo": "tvproductions/gzkit",
+  "path": ".gzkit/skills/gz-adr-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/tvproductions/gzkit",
+  "dir_name": "gz-adr-audit",
+  "downloaded_at": "2026-10-23T04:10:41.049067Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review, validate",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tvproductions",
+  "source_url": "https://github.com/tvproductions/gzkit/blob/main/.gzkit/skills/gz-adr-audit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tvproductions/gzkit/blob/main/.gzkit/skills/gz-adr-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use for an ADR's Gate-5 audit; provides the audit templates and procedure."
+}

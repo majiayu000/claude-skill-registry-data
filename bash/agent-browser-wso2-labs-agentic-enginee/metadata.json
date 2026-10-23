@@ -1,0 +1,37 @@
+{
+  "name": "agent-browser",
+  "repo": "wso2/labs-agentic-engineer",
+  "path": "skills/agent-browser/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/wso2/labs-agentic-engineer",
+  "dir_name": "agent-browser-wso2-labs-agentic-enginee",
+  "downloaded_at": "2026-10-23T04:33:53.021527Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, cli",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wso2",
+  "source_url": "https://github.com/wso2/labs-agentic-engineer/blob/main/skills/agent-browser/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wso2/labs-agentic-engineer/blob/main/skills/agent-browser/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "The browser CLI a coding run drives a web page with \u2014 opening a URL, clicking through a screen, reading what actually rendered. Load before the first `agent-browser` command. For a web application this run built, load `mock-verification` first: that skill is the procedure, this one is only the tool. For driving acceptance scenarios against a deployed system, `validation-task` is the procedure and this is again only the tool."
+}

@@ -1,0 +1,40 @@
+{
+  "name": "smoke-suite-gate",
+  "repo": "testland/qa",
+  "path": "plugins/qa-process/skills/smoke-suite-gate/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/testland/qa",
+  "dir_name": "smoke-suite-gate",
+  "downloaded_at": "2026-10-23T03:56:53.932083Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for testing: test, qa, integration, e2e, playwright",
+    "score": 5,
+    "runner_up": "devops",
+    "runner_up_score": 3,
+    "signals": [
+      "test",
+      "qa",
+      "integration",
+      "e2e",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "testland",
+  "source_url": "https://github.com/testland/qa/blob/main/plugins/qa-process/skills/smoke-suite-gate/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/testland/qa/blob/main/plugins/qa-process/skills/smoke-suite-gate/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Build-an-X workflow for a critical-path smoke suite that runs in <5 minutes - picks the 5-15 highest-business-value journeys (login, hero flow, checkout, payment, primary read), implements as fast E2E or API tests, gates per-deploy, retries on transient failures with quarantine. Use as the canary-precursor or per-deploy verification gate; the team's \"if this fails, the build can't proceed\" floor."
+}

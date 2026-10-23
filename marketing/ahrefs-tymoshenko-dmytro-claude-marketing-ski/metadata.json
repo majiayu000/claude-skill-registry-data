@@ -1,0 +1,38 @@
+{
+  "name": "ahrefs",
+  "repo": "tymoshenko-dmytro/claude-marketing-skills",
+  "path": "skills/ahrefs/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/tymoshenko-dmytro/claude-marketing-skills",
+  "dir_name": "ahrefs-tymoshenko-dmytro-claude-marketing-ski",
+  "downloaded_at": "2026-10-23T04:11:08.203660Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: marketing, seo, content",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "marketing",
+      "seo",
+      "content"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tymoshenko-dmytro",
+  "source_url": "https://github.com/tymoshenko-dmytro/claude-marketing-skills/blob/main/skills/ahrefs/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tymoshenko-dmytro/claude-marketing-skills/blob/main/skills/ahrefs/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Pulls Ahrefs data for any domain and runs staged keyword research under a unit budget. Lookups: organic keywords, top pages, backlinks, referring domains, Domain Rating, traffic history, anchors, organic competitors, the SERP for a keyword, units left. Keyword research: expand seed topics, price keywords, pull top-10 SERPs, cluster the keywords one page can rank for, read which page type each SERP rewards, join your Google positions from Search Console, and suggest improve / new article / landing page / skip. Works through the Ahrefs MCP tools (any paid plan from Lite) or an API v3 key for scripts. Use when someone asks for a domain's SEO metrics, a competitor's organic traffic or backlinks, keyword volumes, or what to write about. Triggers: \"check in Ahrefs\", \"organic traffic of X\", \"backlinks of X\", \"competitor SEO metrics\", \"keyword research\", \"keyword clustering\", \"what should we write about\", \"keywords for the German market\", \"content gap\", \"how much traffic does X get\"."
+}

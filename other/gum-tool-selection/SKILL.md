@@ -1,0 +1,141 @@
+---
+name: gum-tool-selection
+description: Gum editor selection — click/drag, marquee, input handlers (move/resize/rotate/polygon points), IsActive flag, locked instances, SelectionManager coordination, selection event cascade (plugin events, forced default state, tree view sync).
+---
+
+# Gum Editor Selection System Reference
+
+## Overview
+
+Selection in the wireframe (XNA) editor is coordinated by `SelectionManager`. It delegates specific interactions to a set of **input handlers**, each responsible for one type of gesture (move, resize, rotate, polygon point editing). A separate **rectangle selector** handles marquee/rubber-band multi-selection. Locking (`InstanceSave.Locked`) cuts across all of these.
+
+This migrated in two parts: `MoveInputHandler`/`ResizeInputHandler`/`RotationInputHandler`/`InputHandlerBase`, `EditorContext`, `SelectionManager`, and `RectangleSelector` now live under the headless `Tools/Gum.Presentation/...`; `PolygonPointInputHandler` and `LockedSelectionVisual` are under `Tool/EditorTabPlugin.Core/Editors/...` (net10.0, the canvas core both heads share).
+
+## Input Handlers
+
+**Base class:** `Tools/Gum.Presentation/Plugins/InternalPlugins/EditorTab/Editors/Handlers/InputHandlerBase.cs`
+
+Each handler represents one interaction mode. Concrete handlers:
+
+| Handler | File | Responsibility |
+|---------|------|----------------|
+| `MoveInputHandler` | `Tools/Gum.Presentation/Plugins/InternalPlugins/EditorTab/Editors/Handlers/MoveInputHandler.cs` | Drag-to-move selected instance(s) |
+| `ResizeInputHandler` | `Tools/Gum.Presentation/Plugins/InternalPlugins/EditorTab/Editors/Handlers/ResizeInputHandler.cs` | Resize handle dragging |
+| `RotationInputHandler` | `Tools/Gum.Presentation/Plugins/InternalPlugins/EditorTab/Editors/Handlers/RotationInputHandler.cs` | Rotation handle dragging |
+| `PolygonPointInputHandler` | `Tool/EditorTabPlugin.Core/Editors/Handlers/PolygonPointInputHandler.cs` | Polygon vertex select/move/add/delete |
+| `PolygonScaleInputHandler` | `Tool/EditorTabPlugin.Core/Editors/Handlers/PolygonScaleInputHandler.cs` | Scale a polygon's points from handles on their bounding box |
+
+`PolygonPointInputHandler` delegates the drag math to `PolygonPointDrag`. With Snap to Grid on, it snaps the point's absolute (world) position to the nearest grid line via `PolygonPointSnapper`, not its offset from the polygon, so it lands on the grid when the polygon is off-grid or rotated.
+
+`PolygonScaleInputHandler` rewrites `Points` and shifts X/Y so the opposite edge stays fixed; the math is `PolygonScaler`, applied from the points captured at grab by `PolygonScaleDrag`. Its handles sit on edge midpoints where the add-point marker also appears, so it outranks `PolygonPointInputHandler` (96 vs 95), yields to a point node under the cursor, and `PolygonWireframeEditor.UpdateHover` hides the marker over a handle.
+
+### Handler Lifecycle
+
+```
+Mouse down  → HandlePush(x, y)  → returns true to claim gesture; sets IsActive = true
+Mouse drag  → OnDrag()          → only meaningful when IsActive; applies transform
+Mouse up    → OnRelease()       → cleans up; resets IsActive to false
+```
+
+`HandlePush` returns `bool`: `true` means this handler claims the gesture and sets `IsActive = true`; `false` passes to the next handler or the rectangle selector.
+
+`PrimaryClick` is a one-frame edge that needs the cursor on the canvas, so a release during a camera pan (`WireframeCanvasCore` skips `SelectionManager.Activity` while `CameraController.IsPanning`) or off the canvas is never seen. `WireframeEditor.ProcessHandleInput` treats an active handler with `PrimaryDownIgnoringIsInWindow == false` as that lost release, and `SelectionManager.ProcessInputForSelection` calls it on idle frames so the check runs; the texture-coordinate `RectangleSelector.ClickActivity` (`TextureCoordinatePlugin.Core`) does the same for `mSideGrabbed`.
+
+### `IsActive` Flag
+
+`IsActive = true` signals that a handler owns the current drag gesture. It suppresses the rectangle selector — `SelectionManager` passes `isHandlerActive = true` to `RectangleSelector.HandleDrag`, which returns immediately. Must be set in `HandlePush` when claiming a gesture and reset in `OnRelease`.
+
+The base class `HandlePush` automatically checks `Context.IsSelectionLocked()` and returns `false` if locked. Handlers that **override** `HandlePush` must replicate or explicitly call this check.
+
+## Rectangle Selector (Marquee Selection)
+
+**File:** `Tools/Gum.Presentation/Plugins/InternalPlugins/EditorTab/RectangleSelector.cs`
+
+The rectangle selector activates on drag when no handler is active and the cursor is not over the element body (or Shift is held for additive selection), after a minimum drag distance is exceeded. `SelectionManager` passes `isHandlerActive` based on whether any handler's `IsActive` is `true`.
+
+**Pixel thresholds scale with `ICanvasDisplayScale`.** Cursor positions are physical pixels (`AvaloniaInputHostAdapter` converts them), so a threshold constant is in device-independent pixels and is multiplied by `DisplayScale` where it is compared: `GrabbedState.PixelsToMoveBeforeDrag`, `RectangleSelector.MinimumDragDistance`, and `InputLibrary.Cursor`'s drag and double-click distances. A new threshold that skips this is half-size on a Retina display.
+
+`GetElementsInRectangle()` finds visible elements whose bounds intersect the drag rectangle, skipping `ScreenSave` elements and instances where `Locked == true`. On release, it either replaces the selection or toggles additively (Shift held).
+
+## Locking (`InstanceSave.Locked`)
+
+`InstanceSave.Locked` is defined in `GumDataTypes/InstanceSave.cs`. The helper `EditorContext.IsSelectionLocked()` (in `Tools/Gum.Presentation/Plugins/InternalPlugins/EditorTab/Editors/EditorContext.cs`) returns `true` when the selected instance is locked.
+
+### Where Locking Is Enforced
+
+| Location | File | What It Prevents |
+|----------|------|-----------------|
+| `InputHandlerBase.HandlePush()` | `InputHandlerBase.cs` | Base lock check; handlers that don't override inherit this |
+| `PolygonPointInputHandler.HandlePush()` | `PolygonPointInputHandler.cs` | Overrides base; manually checks lock before allowing vert select/add |
+| `PolygonPointInputHandler.TryHandleDelete()` | `PolygonPointInputHandler.cs` | Prevents DEL key from deleting verts |
+| `PolygonPointInputHandler.UpdateHover()` | `PolygonPointInputHandler.cs` | Hides the "add point" sprite on polygon edges |
+| `ElementCommands.MoveSelectedObjectsBy()` | `Tools/Gum.Presentation/ToolCommands/ElementCommands.cs` | Skips locked instances in multi-selection moves |
+| `ResizeInputHandler.ApplySizeChange()` | `ResizeInputHandler.cs` | Skips locked instances during resize |
+| `MoveInputHandler.ReturnAxisToGrabPosition()` | `MoveInputHandler.cs` | Skips locked instances when returning the axis-locked axis to its grab position |
+| `MoveInputHandler.SnapSelectedToUnitValues()` | `MoveInputHandler.cs` | Skips locked instances during snap-to-unit |
+| `RectangleSelector.GetElementsInRectangle()` | `RectangleSelector.cs` | Excludes locked instances from marquee results |
+| `SelectionManager.ReverseLoopToFindIpso()` | `SelectionManager.cs` | Prevents click-selection of locked instances on canvas |
+| `AlignmentViewModel.ApplyToSelection()` / `CommonControlLogic.SetAndCallReact()` | `Tools/Gum.Presentation/Plugins/InternalPlugins/AlignmentButtons/` | Alignment tab skips locked instances and names them in Output |
+| `ListBoxDisplay` (variable grid) | `WpfDataUi/Controls/ListBoxDisplay.xaml.cs` (WPF) and the list editor in `AvaloniaDataUi/Controls/CompositeDisplays.cs` (Avalonia), both over `ListBoxDisplayLogic` in `DataUi.Core` | Disables Add/Delete/Edit in list variables (e.g. polygon Points) |
+
+### Locked + IsActive Interaction (Critical)
+
+When a locked instance is selected and the cursor is over one of its polygon verts, `PolygonPointInputHandler.HandlePush` must: detect the vert, set `IsActive = true` (to suppress the rectangle selector), but not set `_grabbedIndex` (so `OnDrag` is a no-op), and return `true` to consume the push. Without setting `IsActive`, the rectangle selector activates on drag because the cursor over a vert is typically not "over body".
+
+### Locked Selection Display
+
+`LockedSelectionVisual` draws a dashed bounding rectangle for a locked selected instance, replacing the resize handles that would normally appear. It shows regardless of the instance's `Visible` property. Registered in `StandardWireframeEditor`; not used in `PolygonWireframeEditor`.
+
+### Locked Instances Are Still Tree-Selectable
+
+Locked instances cannot be canvas-clicked or rectangle-selected, but **can always be selected via the tree view** — the only way to select a locked instance to unlock it. Multi-selection of mixed locked/unlocked is supported; transforms apply only to unlocked members.
+
+## `_lastPushWasOnLockedBody`
+
+Tracked in `SelectionManager.ProcessInputForSelection()` — set to `true` when the selected instance is locked and the cursor is over the body. Used in `ProcessRectangleSelection()` to prevent deselection when the user releases the mouse over a locked body without dragging.
+
+## Selection Event Cascade
+
+When the user selects an instance (via tree view or wireframe), `SelectedState` orchestrates a synchronous cascade of plugin events:
+
+```
+User selects instance
+  → SelectedState.HandleSelectedInstances()
+    → PerformAfterSelectInstanceLogic()
+      → SelectedStateSave = element.States[0]  (forced default state)
+        → PluginManager.ReactToStateSaveSelected()  ← fires FIRST
+    → PluginManager.InstanceSelected()               ← fires SECOND
+```
+
+**Key behaviors:**
+- State selection fires BEFORE instance selection (from inside `PerformAfterSelectInstanceLogic`). State is only force-selected when the current state doesn't belong to the new element (checked via `AllStates.Contains`).
+- Both events trigger `RefreshEntireGrid` in `VariableGridPluginBase`. `VariableGridSelectionCoordinator.ShouldRefreshOnInstanceSelected` (headless, tested) prevents the double refresh: `HandleStateSelected` records the instance it refreshed for, and `HandleInstanceSelected` skips when it matches.
+- `MainTreeViewPlugin` responds to `InstanceSelected` by syncing the tree view node. It sets `SuppressCallAfterClickSelect` on `ElementTreeViewManager` so the `Select` methods update the visual tree node without re-firing `CallAfterClickSelect`, which would cause a redundant plugin cascade.
+
+**`IsInUiInitiatedSelection` vs `SuppressCallAfterClickSelect`:** `IsInUiInitiatedSelection` is set during `OnSelect` to prevent programmatic `Select` calls from re-entering while the tree view processes a user-initiated selection — but it's cleared before plugin events fire, so it doesn't prevent the `MainTreeViewPlugin` sync path. `SuppressCallAfterClickSelect` handles that case specifically.
+
+### Cascade Key Files
+
+| File | Purpose |
+|------|---------|
+| `Tools/Gum.Presentation/ToolStates/SelectedState.cs` | `HandleSelectedInstances`, `PerformAfterSelectInstanceLogic`, `HandleStateSaveSelected` |
+| `Tools/Gum.Presentation/Plugins/PluginManager.cs` | `InstanceSelected`, `ReactToStateSaveSelected` event dispatch |
+| `Tool/TreeViewPlugin.Core/MainTreeViewPlugin.cs` | Tree view sync with `SuppressCallAfterClickSelect` |
+| `Tool/TreeViewPlugin.Core/ElementTreeViewManager.cs` | `Select` methods, `CallAfterClickSelect`, both suppression flags |
+| `Tools/Gum.Presentation/Plugins/InternalPlugins/VariableGrid/VariableGridPluginBase.cs` | Selection handlers shared by both heads' `MainVariableGridPlugin` subclasses |
+
+## Key Files Summary
+
+| File | Purpose |
+|------|---------|
+| `Tools/Gum.Presentation/Wireframe/SelectionManager.cs` | Main coordinator; manages `IsOverBody`, routes events to handlers, passes `isHandlerActive` to rectangle selector |
+| `Tools/Gum.Presentation/Plugins/InternalPlugins/EditorTab/RectangleSelector.cs` | Marquee selection; activation gated on `isHandlerActive` and `IsOverBody` |
+| `Tools/Gum.Presentation/Plugins/InternalPlugins/EditorTab/Editors/Handlers/InputHandlerBase.cs` | Base class; provides default `HandlePush` with lock check |
+| `Tools/Gum.Presentation/Plugins/InternalPlugins/EditorTab/Editors/Handlers/MoveInputHandler.cs` | Move gesture; also handles axis lock and snap-to-unit for multi-selection |
+| `Tools/Gum.Presentation/Plugins/InternalPlugins/EditorTab/Editors/Handlers/ResizeInputHandler.cs` | Resize handle gestures |
+| `Tool/EditorTabPlugin.Core/Editors/Handlers/PolygonPointInputHandler.cs` | Polygon vertex editing; overrides `HandlePush` (must manage lock manually) |
+| `Tools/Gum.Presentation/Plugins/InternalPlugins/EditorTab/Editors/EditorContext.cs` | Provides `IsSelectionLocked()` helper used throughout handlers |
+| `Tool/EditorTabPlugin.Core/Editors/Visuals/LockedSelectionVisual.cs` | Dashed bounding outline for locked selected instances; display-only, no interaction |
+| `GumDataTypes/InstanceSave.cs` | `Locked` property definition |
+| `Tools/Gum.Presentation/ToolCommands/ElementCommands.cs` | `MoveSelectedObjectsBy()`; skips locked instances in multi-move |
+| `WpfDataUi/Controls/ListBoxDisplay.xaml.cs`, `AvaloniaDataUi/Controls/CompositeDisplays.cs` | Variable grid list editors (WPF, Avalonia); respect `IsReadOnly` (driven by `Locked`) |

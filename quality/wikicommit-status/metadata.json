@@ -1,0 +1,37 @@
+{
+  "name": "wikicommit-status",
+  "repo": "wikicommit/wikicommit",
+  "path": ".claude/skills/wikicommit-status/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/wikicommit/wikicommit",
+  "dir_name": "wikicommit-status",
+  "downloaded_at": "2026-10-23T04:31:03.405803Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: review, validate",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wikicommit",
+  "source_url": "https://github.com/wikicommit/wikicommit/blob/main/.claude/skills/wikicommit-status/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wikicommit/wikicommit/blob/main/.claude/skills/wikicommit-status/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Check the wiki's health \u2014 orphan and wanted pages, pages not yet read by a person, expired pages, stale translations, outdated sources, sources that were deferred or failed, types with no schema file, unlinked entity mentions, unused installed types, self-referential tags, broken external links, and more. Use this whenever someone asks how the wiki is doing, what needs attention, what is left to review, whether anything is stale or broken, or what to work on next \u2014 and run it before concluding the wiki is fine, since most of what it reports is invisible from any single page."
+}

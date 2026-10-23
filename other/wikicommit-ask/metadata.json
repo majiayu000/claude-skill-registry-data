@@ -1,0 +1,36 @@
+{
+  "name": "wikicommit-ask",
+  "repo": "wikicommit/wikicommit",
+  "path": ".claude/skills/wikicommit-ask/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wikicommit/wikicommit",
+  "dir_name": "wikicommit-ask",
+  "downloaded_at": "2026-10-23T04:31:02.018406Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wikicommit",
+  "source_url": "https://github.com/wikicommit/wikicommit/blob/main/.claude/skills/wikicommit-ask/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wikicommit/wikicommit/blob/main/.claude/skills/wikicommit-ask/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Answer a question from the wiki's own pages, citing them, with cross-lingual search across the configured languages. Use this whenever someone asks what this wiki knows about something, asks a question a wiki page would answer, or asks for a summary or explanation of a subject the wiki covers \u2014 in a repository with a .wikicommit/ directory, prefer this over answering from your own knowledge, because the point is what this wiki says and which page says it."
+}

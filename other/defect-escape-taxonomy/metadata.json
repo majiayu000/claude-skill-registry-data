@@ -1,0 +1,37 @@
+{
+  "name": "defect-escape-taxonomy",
+  "repo": "testland/qa",
+  "path": "plugins/qa-bug-repro/skills/defect-escape-taxonomy/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/testland/qa",
+  "dir_name": "defect-escape-taxonomy",
+  "downloaded_at": "2026-10-23T03:57:02.210883Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: forensics=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "incident",
+      "triage"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "testland",
+  "source_url": "https://github.com/testland/qa/blob/main/plugins/qa-bug-repro/skills/defect-escape-taxonomy/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/testland/qa/blob/main/plugins/qa-bug-repro/skills/defect-escape-taxonomy/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Classifies a defect that reached production into one of three root gap categories (test gap, process gap, tooling gap) and one of thirteen sub-patterns, applying the earliest-layer rule: the category is the earliest layer that should have caught the defect, expressed as a property of the system and never of a person. Each sub-pattern carries the typical prevention fix, so the finding names an actionable class of gap. Rejects blame language and generic prevention assets such as 'add more tests'. Does not triage or prioritize the defect, does not write the missing test, and does not run a full incident postmortem. Use when a defect has been confirmed in production and the team needs to name which class of gap let it through before deciding what to build."
+}

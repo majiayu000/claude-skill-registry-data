@@ -1,0 +1,37 @@
+{
+  "name": "k6-load-testing",
+  "repo": "testland/qa",
+  "path": "plugins/qa-load-testing/skills/k6-load-testing/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/testland/qa",
+  "dir_name": "k6-load-testing",
+  "downloaded_at": "2026-10-23T03:56:56.669337Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "testland",
+  "source_url": "https://github.com/testland/qa/blob/main/plugins/qa-load-testing/skills/k6-load-testing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/testland/qa/blob/main/plugins/qa-load-testing/skills/k6-load-testing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Authors k6 JavaScript load-test scripts (VU loops + checks + sleeps), configures the `options` block with `stages` (ramp-up patterns) and `thresholds` (p(95) latency, error rate), runs via `k6 run script.js` or `--vus / --duration` ad-hoc flags, and uses thresholds as the CI pass/fail signal. Includes a latency-percentile interpretation reference: tail ratio (p99/p50), bimodal-distribution detection, coordinated omission and why naive p99 is optimistic, and constant-vus vs constant-arrival-rate executors. Use when the project ships HTTP / WebSocket / gRPC load tests and the team wants developer-friendly JavaScript authoring, or when a k6 threshold passes but the system still feels slow."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "buf-cli-lint-breaking-build",
+  "repo": "testland/qa",
+  "path": "plugins/qa-grpc/skills/buf-cli-lint-breaking-build/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/testland/qa",
+  "dir_name": "buf-cli-lint-breaking-build",
+  "downloaded_at": "2026-10-23T03:57:03.649248Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, build, compile, debug",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "testland",
+  "source_url": "https://github.com/testland/qa/blob/main/plugins/qa-grpc/skills/buf-cli-lint-breaking-build/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/testland/qa/blob/main/plugins/qa-grpc/skills/buf-cli-lint-breaking-build/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Wraps the buf CLI for protobuf PR gating: `buf build` (compile .proto), `buf lint` (STANDARD rules: snake_case fields, Service suffix), `buf breaking --against {ref}` (detect wire/codegen breakage vs a git/BSR baseline), and `buf format`. Use as the CI proto-lint + breaking-change gate, or to debug a breaking failure by rule ID (e.g. FIELD_NO_DELETE_UNLESS_NUMBER_RESERVED) and pick the FILE/PACKAGE/WIRE_JSON/WIRE ruleset per consumer. This is the detection TOOL that enforces the rules and carries the catalog of what is breaking and why (field-number reservation, wire-safe vs wire-incompatible changes, oneof/map constraints, the four buf categories) in references/versioning-strategy.md; for cross-service schema contract testing use protobuf-compat-checking - not this."
+}

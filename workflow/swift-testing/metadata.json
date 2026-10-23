@@ -1,0 +1,38 @@
+{
+  "name": "swift-testing",
+  "repo": "techmefr/mentis",
+  "path": "skills/swift-testing/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/techmefr/mentis",
+  "dir_name": "swift-testing",
+  "downloaded_at": "2026-10-23T03:54:56.703877Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process, pipeline",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "process",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "techmefr",
+  "source_url": "https://github.com/techmefr/mentis/blob/main/skills/swift-testing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/techmefr/mentis/blob/main/skills/swift-testing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when Swift tests are written, migrated or reviewed and the risk is a test that passes while asserting nothing, hangs, or fails only in parallel: XCTest assertions inside Swift Testing tests or #expect inside an XCTestCase (cross-library issues and the interoperability mode), migrating an XCTestCase to a suite, setUp and tearDown versus init and deinit, #expect versus #require and why a pre-evaluated Boolean gives an empty failure, testing errors and optionals, async tests with await, confirmation and its expected count, wait(for:) versus fulfillment(of:) in async XCTest code, completion handlers bridged with a continuation, time limits, injected clocks instead of sleeps, tests that run in parallel in one process and share state, the serialized trait, main-actor isolation of test functions, and leak checks."
+}

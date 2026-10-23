@@ -1,0 +1,37 @@
+{
+  "name": "crap-index-assess",
+  "repo": "yarlson/yarstack",
+  "path": "plugins/yarstack/skills/crap-index-assess/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yarlson/yarstack",
+  "dir_name": "crap-index-assess",
+  "downloaded_at": "2026-10-23T04:42:21.351939Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yarlson",
+  "source_url": "https://github.com/yarlson/yarstack/blob/main/plugins/yarstack/skills/crap-index-assess/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yarlson/yarstack/blob/main/plugins/yarstack/skills/crap-index-assess/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Assess method-level change risk with the Change Risk Anti-Patterns (CRAP) index and recommend focused testing or complexity reduction. Use when the user asks what CRAP means or how to calculate, interpret, or reduce a CRAP score, or when the repository's configured CRAP check covers changed methods; not as a general quality verdict or merge gate."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "e2e-suite-budget",
+  "repo": "testland/qa",
+  "path": "plugins/qa-process/skills/e2e-suite-budget/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/testland/qa",
+  "dir_name": "e2e-suite-budget",
+  "downloaded_at": "2026-10-23T03:56:52.960755Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, qa, e2e",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "qa",
+      "e2e"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "testland",
+  "source_url": "https://github.com/testland/qa/blob/main/plugins/qa-process/skills/e2e-suite-budget/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/testland/qa/blob/main/plugins/qa-process/skills/e2e-suite-budget/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Caps E2E suite size by computing per-test ROI - (regressions caught \u00d7 value) \u00f7 (runtime \u00d7 flake rate \u00d7 maintenance) - then ranks every end-to-end test and recommends which bottom-decile ones to retire, move to a lower layer, or fix. Use when CI is slow or E2E-dominated, flaky failures are rising, or quarterly to keep suite size within maintenance capacity. For strategic unit:service:UI layer ratios use test-pyramid-balancer, for the minimal per-deploy critical-path gate use smoke-suite-gate, and for quarantining flaky tests use flaky-test-quarantine; this prunes low-signal tests by ROI."
+}

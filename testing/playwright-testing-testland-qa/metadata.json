@@ -1,0 +1,40 @@
+{
+  "name": "playwright-testing",
+  "repo": "testland/qa",
+  "path": "plugins/qa-web-e2e/skills/playwright-testing/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/testland/qa",
+  "dir_name": "playwright-testing-testland-qa",
+  "downloaded_at": "2026-10-23T03:56:54.720554Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, qa, integration, e2e, playwright",
+    "score": 5,
+    "runner_up": "development",
+    "runner_up_score": 4,
+    "signals": [
+      "test",
+      "qa",
+      "integration",
+      "e2e",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "testland",
+  "source_url": "https://github.com/testland/qa/blob/main/plugins/qa-web-e2e/skills/playwright-testing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/testland/qa/blob/main/plugins/qa-web-e2e/skills/playwright-testing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Authors and remediates Playwright E2E tests across Chromium, Firefox, WebKit - `npm init playwright@latest` scaffolding, `playwright.config.ts` browser projects, accessibility-first locators (`getByRole`/`getByLabelText`) to replace brittle CSS selectors, web-first assertions to eliminate `waitForTimeout` flakiness, Page Object pattern, trace viewer debugging, sharded parallel execution with merged HTML reporting, mobile-web emulation via the `devices` catalog (viewport / DPR / touch per-device projects), the cross-browser matrix with branded channels (chrome / msedge) in references/browser-matrix.md, and GitHub Actions CI integration. Use for new test authoring, flakiness remediation, mobile-breakpoint regression, cross-browser matrix setup, and CI setup; for reviewing codegen output specifically, use a dedicated codegen-review pass."
+}

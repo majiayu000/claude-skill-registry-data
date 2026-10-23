@@ -1,0 +1,40 @@
+{
+  "name": "cypress-testing",
+  "repo": "testland/qa",
+  "path": "plugins/qa-web-e2e/skills/cypress-testing/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/testland/qa",
+  "dir_name": "cypress-testing",
+  "downloaded_at": "2026-10-23T03:56:52.576852Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=5, testing=5",
+    "score": 5,
+    "runner_up": "testing",
+    "runner_up_score": 5,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "testland",
+  "source_url": "https://github.com/testland/qa/blob/main/plugins/qa-web-e2e/skills/cypress-testing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/testland/qa/blob/main/plugins/qa-web-e2e/skills/cypress-testing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Authors and improves Cypress E2E tests - installs Cypress, configures `cypress.config.ts`, authors `cy.*` command chains, refactors existing specs (`cy.wait(ms)` sleeps into assertions, repeated flows into `cy.session` custom commands), and debugs with the time-travel GUI; Cypress Cloud for parallel runs and recording. Use for both greenfield test authoring and improving hand-written specs already in the codebase. For automated refactor of raw Cypress Studio recordings specifically, use a dedicated codegen-review pass."
+}

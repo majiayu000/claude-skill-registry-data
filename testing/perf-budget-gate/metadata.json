@@ -1,0 +1,38 @@
+{
+  "name": "perf-budget-gate",
+  "repo": "testland/qa",
+  "path": "plugins/qa-load-testing/skills/perf-budget-gate/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/testland/qa",
+  "dir_name": "perf-budget-gate",
+  "downloaded_at": "2026-10-23T03:56:57.933674Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, qa, integration",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "qa",
+      "integration"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "testland",
+  "source_url": "https://github.com/testland/qa/blob/main/plugins/qa-load-testing/skills/perf-budget-gate/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/testland/qa/blob/main/plugins/qa-load-testing/skills/perf-budget-gate/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Builds a unified release-readiness gate that aggregates verdicts from any combination of k6 / JMeter / Gatling / Locust load runners and Lighthouse CI Web Vitals, applies severity-aware pass/fail thresholds, and emits a single go / no-go decision with per-metric deltas vs the main-branch baseline. Posts the delta as a PR comment when the team has the integration set up. Use when authoring a CI step that gates a deployment on cross-runner perf compatibility."
+}

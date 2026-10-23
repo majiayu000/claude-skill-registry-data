@@ -1,0 +1,39 @@
+{
+  "name": "ceedling-build-runner",
+  "repo": "testland/qa",
+  "path": "plugins/qa-embedded/skills/ceedling-build-runner/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/testland/qa",
+  "dir_name": "ceedling-build-runner",
+  "downloaded_at": "2026-10-23T03:57:00.286170Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build, compile",
+    "score": 4,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "testland",
+  "source_url": "https://github.com/testland/qa/blob/main/plugins/qa-embedded/skills/ceedling-build-runner/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/testland/qa/blob/main/plugins/qa-embedded/skills/ceedling-build-runner/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Author and run the Ceedling build system for C unit testing - the canonical build orchestration on top of Unity (assertions) + CMock (mocks) + CException (exceptions). Covers ceedling new scaffolding, the project.yml schema (:project / :paths / :files / :defines / :flags / :tools / :test_runner / :cmock / :unity / :cexception / :gcov / :plugins), the task surface (test:all, test:{name}, test:pattern, test:path, release, clean / clobber, gcov:all, module:create, environment, dumpconfig), JUnit XML via the report_tests_* plugins, gcov integration, host vs cross-build flow, and CI wiring. CMock semantics - the generated Expect / Ignore / IgnoreArg / ReturnThruPtr / AddCallback / Stub / ExpectAndThrow family, cmock.yml :plugins, mock naming, tearDown verification, strict-vs-ignore matching - are in references/cmock.md. Use when a C project wants the ThrowTheSwitch trio bundled by one build command, or when authoring / reading CMock mocks. For the Unity assertion API see unity-test-framework-c."
+}

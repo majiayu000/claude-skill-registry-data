@@ -1,0 +1,37 @@
+{
+  "name": "rollout-readiness-review",
+  "repo": "yarlson/yarstack",
+  "path": "plugins/yarstack/skills/rollout-readiness-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yarlson/yarstack",
+  "dir_name": "rollout-readiness-review",
+  "downloaded_at": "2026-10-23T04:42:23.390188Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "deploy",
+      "infra"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yarlson",
+  "source_url": "https://github.com/yarlson/yarstack/blob/main/plugins/yarstack/skills/rollout-readiness-review/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yarlson/yarstack/blob/main/plugins/yarstack/skills/rollout-readiness-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Review cross-cutting operational readiness after implementation and before deployment. Use when a concrete change may alter runtime prerequisites, failure visibility, deployment order, rollback, recovery, or production failure modes."
+}

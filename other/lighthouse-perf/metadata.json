@@ -1,0 +1,37 @@
+{
+  "name": "lighthouse-perf",
+  "repo": "testland/qa",
+  "path": "plugins/qa-load-testing/skills/lighthouse-perf/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/testland/qa",
+  "dir_name": "lighthouse-perf",
+  "downloaded_at": "2026-10-23T03:56:56.473318Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "testland",
+  "source_url": "https://github.com/testland/qa/blob/main/plugins/qa-load-testing/skills/lighthouse-perf/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/testland/qa/blob/main/plugins/qa-load-testing/skills/lighthouse-perf/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Configures Lighthouse CI (`@lhci/cli`) to audit Web Vitals (LCP, INP, CLS) on every PR, asserts against canonical thresholds (LCP \u22642.5s, INP \u2264200ms, CLS \u22640.1 at the 75th percentile), uploads Lighthouse reports as build artifacts, and posts deltas as PR comments. Includes a budget-authoring reference: per-route LCP/INP/CLS thresholds by traffic class (cached / dynamic / api-heavy / form-heavy / media-heavy) via `assertMatrix`, plus `budget.json` resource-size caps (JS / CSS / images / total bytes). Use when the project ships a web frontend and the team needs continuous Web Vitals monitoring tied to PR gating, or needs its first Lighthouse budgets drafted."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "lizard-complexity",
+  "repo": "testland/qa",
+  "path": "plugins/qa-code-quality/skills/lizard-complexity/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/testland/qa",
+  "dir_name": "lizard-complexity",
+  "downloaded_at": "2026-10-23T03:56:59.778003Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, quality=3",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "testland",
+  "source_url": "https://github.com/testland/qa/blob/main/plugins/qa-code-quality/skills/lizard-complexity/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/testland/qa/blob/main/plugins/qa-code-quality/skills/lizard-complexity/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run Lizard against production source to enforce per-function cyclomatic complexity (CCN), NLOC, and parameter-count thresholds - language-agnostic (30+ languages). Scoped to production code via `-x\"./tests/*\"`; test complexity is reviewed separately. Use when a codebase spans several languages and needs one complexity gate across all of them, or when a function has grown unreviewable and the team wants a numeric threshold in CI."
+}

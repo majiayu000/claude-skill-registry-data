@@ -1,0 +1,38 @@
+{
+  "name": "image-gen",
+  "repo": "tymoshenko-dmytro/claude-marketing-skills",
+  "path": "skills/image-gen/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/tymoshenko-dmytro/claude-marketing-skills",
+  "dir_name": "image-gen-tymoshenko-dmytro-claude-marketing-ski",
+  "downloaded_at": "2026-10-23T04:11:09.062789Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, marketing=3",
+    "score": 3,
+    "runner_up": "marketing",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tymoshenko-dmytro",
+  "source_url": "https://github.com/tymoshenko-dmytro/claude-marketing-skills/blob/main/skills/image-gen/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tymoshenko-dmytro/claude-marketing-skills/blob/main/skills/image-gen/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generate or edit marketing images with OpenAI gpt-image-2 through a bundled stdlib-only CLI \u2014 blog covers, landing-page illustrations, ad visuals, social graphics, product mockups, inpainting and multi-image compositions \u2014 choosing quality (low / medium / high) by whether the user needs drafts or a final asset, and checking every rendered word. Use whenever someone asks to create, draw, render, edit or inpaint an image. Triggers: \"generate an image\", \"make a cover\", \"illustration for the landing\", \"edit this picture\", \"inpaint\"."
+}

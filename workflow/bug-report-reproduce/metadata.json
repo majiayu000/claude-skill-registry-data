@@ -1,0 +1,38 @@
+{
+  "name": "bug-report-reproduce",
+  "repo": "yarlson/yarstack",
+  "path": "plugins/yarstack/skills/bug-report-reproduce/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/yarlson/yarstack",
+  "dir_name": "bug-report-reproduce",
+  "downloaded_at": "2026-10-23T04:42:22.785747Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process, automation",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "process",
+      "automation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yarlson",
+  "source_url": "https://github.com/yarlson/yarstack/blob/main/plugins/yarstack/skills/bug-report-reproduce/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yarlson/yarstack/blob/main/plugins/yarstack/skills/bug-report-reproduce/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Reproduce a user, customer, or support-reported problem with synthetic data, prove the cause with a temporary test, record a narrated click-through walkthrough of the symptom, and report what was and was not proven. Use when the user links a bug report, support thread, or ticket and asks to reproduce it, find the cause, or show a recording or walkthrough video; not for read-only questions without a report, which belong to system-investigate, or for planned feature work."
+}

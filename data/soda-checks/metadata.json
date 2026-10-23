@@ -1,0 +1,38 @@
+{
+  "name": "soda-checks",
+  "repo": "testland/qa",
+  "path": "plugins/qa-data-quality/skills/soda-checks/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/testland/qa",
+  "dir_name": "soda-checks",
+  "downloaded_at": "2026-10-23T03:56:53.667043Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, pipeline",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "testland",
+  "source_url": "https://github.com/testland/qa/blob/main/plugins/qa-data-quality/skills/soda-checks/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/testland/qa/blob/main/plugins/qa-data-quality/skills/soda-checks/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Authors and runs SodaCL (Soda Checks Language) checks against SQL warehouses (Snowflake, BigQuery, Postgres, Redshift, etc.) via `soda scan`, configures scan profiles in configuration.yml, and gates CI on scan exit code. Use when the user works with Soda Core / Soda Cloud or needs YAML-driven warehouse data quality."
+}

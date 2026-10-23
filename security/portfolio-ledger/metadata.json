@@ -1,0 +1,37 @@
+{
+  "name": "portfolio-ledger",
+  "repo": "swcstudiospace/PumpGrok",
+  "path": "skills/portfolio-ledger/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/swcstudiospace/PumpGrok",
+  "dir_name": "portfolio-ledger",
+  "downloaded_at": "2026-10-23T03:49:27.874492Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: auth, audit",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "swcstudiospace",
+  "source_url": "https://github.com/swcstudiospace/PumpGrok/blob/main/skills/portfolio-ledger/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/swcstudiospace/PumpGrok/blob/main/skills/portfolio-ledger/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Read positions, exposure, and P&L from the append-only ledger with restart reconciliation and JSONL export, owned by JOURNAL with RISK reading."
+}

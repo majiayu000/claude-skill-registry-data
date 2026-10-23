@@ -1,0 +1,37 @@
+{
+  "name": "flotherm-sim",
+  "repo": "svd-ai-lab/sim-cli",
+  "path": "plugins/flotherm/src/sim_plugin_flotherm/_skills/flotherm/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/svd-ai-lab/sim-cli",
+  "dir_name": "flotherm",
+  "downloaded_at": "2026-10-23T03:48:59.790808Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "automation",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "svd-ai-lab",
+  "source_url": "https://github.com/svd-ai-lab/sim-cli/blob/main/plugins/flotherm/src/sim_plugin_flotherm/_skills/flotherm/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/svd-ai-lab/sim-cli/blob/main/plugins/flotherm/src/sim_plugin_flotherm/_skills/flotherm/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run, inspect, or troubleshoot Simcenter Flotherm thermal cases using the smallest verified local control path. Use for Flotherm installation checks, existing-project re-solves, .pack import, FloSCRIPT playback, model creation or modification, solver monitoring, and result extraction. Discover native and sim-cli capabilities before choosing a path; do not assume either is installed or connected."
+}

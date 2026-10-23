@@ -1,0 +1,39 @@
+{
+  "name": "infra-review",
+  "repo": "yarlson/yarstack",
+  "path": "plugins/yarstack/skills/infra-review/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/yarlson/yarstack",
+  "dir_name": "infra-review",
+  "downloaded_at": "2026-10-23T04:42:18.741588Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: ci, deploy, infra, infrastructure",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ci",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yarlson",
+  "source_url": "https://github.com/yarlson/yarstack/blob/main/plugins/yarstack/skills/infra-review/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yarlson/yarstack/blob/main/plugins/yarstack/skills/infra-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Review infrastructure-as-code and rendered deployment configuration without modifying it. Use before plan, apply, or deploy when targeting, replacement, state, availability, cost, ordering, or recovery blast radius may change."
+}

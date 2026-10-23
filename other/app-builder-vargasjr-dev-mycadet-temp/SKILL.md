@@ -1,0 +1,393 @@
+---
+name: app-builder
+description: Build and edit small, personal visual tools and artifacts — dashboards, trackers, calculators, data visualizations, charts, simple landing pages, and slide decks the user wants for THEMSELVES. This is the right skill whenever the user asks to "visualize this," "make a chart," or "build an artifact" for their own use, or to edit an app they already built here. Do NOT reach for a ui_show dynamic_page to fake an artifact — build a real persistent app here. A one-off diagram, chart, or explainer that just accompanies an answer belongs to the visualize skill (ui_show visual), not an app. NOT for complex, multi-user, or shippable products — those go to a real project folder with a coding agent (see Scope below).
+metadata:
+  emoji: "🛠️"
+  cadet:
+    display-name: "App Builder"
+    category: "development"
+    includes: ["frontend-design"]
+    activation-hints:
+      - "User asks to build a dashboard, tracker, calculator, data visualization, chart, simple landing page, or slide deck for their own use"
+      - "User asks to build an artifact, tool, or app they will keep using — build a real persistent app here, never a ui_show dynamic_page"
+      - "User asks to change, fix, restyle, or extend an app they already built in the sandbox — open it and iterate"
+      - "User asks to open, show, or pull up an app they already built — this skill provides app_list + app_open even when nothing needs editing"
+    avoid-when:
+      - "An inline diagram, chart, or explainer that accompanies an answer and will not be reopened — use the visualize skill"
+      - "User wants a complex app, a multi-user app, or something to publish, deploy, or hand off to others — route to a local project folder + coding agent instead (see Scope)"
+---
+
+You build small, personal visual tools — dashboards, trackers, calculators, data visualizations, simple landing pages, and slide decks. These are quick, single-user tools the user wants **for themselves**, not products they ship to other people.
+
+Move fast: think, plan in one pass, pick a striking visual direction following the `frontend-design` skill (included with this load — see _Included Skill: Frontend Design_ below), and build it immediately. Don't ask permission to be creative — pick the colors, the layout, the atmosphere, the micro-interactions. Every tool gets its own identity: a plant tracker feels earthy and green, a finance dashboard precise and navy. They should feel designed, not generated.
+
+**Design quality is delegated to the `frontend-design` skill, and you MUST follow it completely.** That skill owns the aesthetics (typography, color, motion); this skill owns the technical infrastructure (sandbox, data, widgets, lifecycle). Its instructions load automatically with this skill — if they are missing (listed under _Suggested Included Skills (not loaded)_), call `skill_load("frontend-design")` before building anything. Building without them gives generic, templated UI, which is a failed build.
+
+---
+
+## Scope — what belongs here, what doesn't
+
+**Build here** (the default — lean toward it): a tool the user wants for themselves. A dashboard, tracker, calculator, data viz, slide deck, or a simple landing page they'll use on their own. Personal and self-contained.
+
+**Does NOT belong here:** anything complex, multi-user, or meant to be **published, deployed, handed off, or shipped to other people**. Sandbox apps are single-user, run only in this preview, and can't be exported or deployed. They're the wrong home for a real product.
+
+When a request is for a shippable/complex app, don't build in the sandbox. Instead:
+
+1. **Explain the approach** in a sentence: a real product belongs in a project folder they own — version-controlled, deployable, shareable — and you'll build it _with_ them as a coding agent, not inside a preview.
+2. **Establish a project folder** (propose a path, or use one they name).
+3. **Hand off to a coding agent:** `skill_load("acp")` → `acp_spawn({ task: "<what to build>", cwd: "<folder>" })` (agent defaults to `claude`), then follow the `acp` skill.
+
+Triage on intent, not artifact type. A simple landing page is a personal build by default — it only becomes a handoff when the user signals they want to publish or share it. When the signal is weak, lean personal and just build. If you genuinely can't tell, ask exactly **one** short question.
+
+**Editing an existing sandbox app? Skip scope entirely** — that's iteration. Resolve the app (see below), open it, and go to _Iteration_.
+
+### Resolving an app the user mentions
+
+`app_open` takes an `app_id`, not a name:
+
+1. If the `app_id` is already in your context, use it.
+2. Otherwise `app_list(query: "<what they said>")` returns matches with `app_id` + `name`. `app_list()` with no query lists everything.
+3. One match → open it. Multiple → list them and ask which. None → say so, show what exists, offer to build it.
+
+---
+
+## Filesystem layout
+
+Apps live under `/workspace/data/apps/`:
+
+```
+/workspace/data/apps/
+  <slug>.json          # App metadata
+  <slug>/
+    src/               # Source files (TSX) — what you write
+    dist/              # Compiled output, generated by app_refresh or assistant apps refresh
+    records/           # Data records (one JSON file per record)
+  <slug>.preview       # Preview image (auto-generated)
+```
+
+Metadata fields: `id`, `name`, `description`, `icon`, `schemaJson`, `createdAt`, `updatedAt`, `formatVersion`, `dirName`. Records: `{ "id", "appId", "data": {...}, "createdAt", "updatedAt" }` — the system auto-adds everything but `data`.
+
+Every app is multi-file TSX (`formatVersion: 2`). Never write a root-level `index.html` or `pages/` — all source lives under `src/`.
+
+⚠️ Correct source path is `/workspace/data/apps/<slug>/src/`. Never `/workspace/apps/`.
+
+---
+
+## Responsive & design system
+
+Every app works phone (~360px) to desktop (~1400px+). The `<turn_context>` block carries a `client_os:` field (the OS the user is on): `ios`/`android` → mobile-first (design narrow first, body 17px); `macos`/`windows`/`web` → desktop-first (multi-column, body 14px); absent → desktop-first unless the request implies phone use ("for my iPhone"). (The sibling `interface:` field is the transport surface, always `web` for the apps, so key layout off `client_os`, not `interface`.)
+
+**Universal baseline — every build, regardless of client_os:**
+
+- Viewport meta: `width=device-width, initial-scale=1, viewport-fit=cover`. Never `user-scalable=no` (blocks accessibility zoom).
+- Pad the root with `env(safe-area-inset-*)` so content clears the notch: `padding-top: max(var(--v-spacing-lg), env(safe-area-inset-top))`, mirrored for the other sides.
+- Full-height containers use `100dvh`, not `100vh`.
+- Form controls (`input`/`textarea`/`select`) must be `font-size: 16px`+ or iOS Safari zooms on focus. Add `inputmode` (`numeric`/`decimal`/`email`/`tel`/`url`).
+- Interactive elements ≥44×44pt (`.v-button` already complies; custom controls set `min-height: 44px`). Gate hover behind `@media (hover: hover)`.
+- Fluid widths only — `%`, `fr`, `minmax`, `clamp()`, never fixed `px` on containers. Size chart containers in `vw`/`%`. At narrow widths, collapse tables into stacked label-value cards.
+
+**Mobile-first extras (`client_os: ios` / `android`):** body `--v-font-size-lg` (17px); one column by default, multi-column only above `@media (min-width: 720px)`; bottom-anchor the primary action (`position: sticky; bottom: env(safe-area-inset-bottom)`); bottom sheets instead of side modals.
+
+Full detail when reachable: `{baseDir}/references/RESPONSIVE.md`.
+
+A design-system CSS and CSS widget library are **auto-injected** (inside a `@layer`, so your own styles always win). Use the `--v-*` variables and `.v-*` classes below — they switch light/dark automatically, no manual dark-mode CSS needed. For charts, bundle `chart.js` (an allowed package), or hand-write inline SVG / CSS bars for tiny sparklines — sized to the container so they can't overflow.
+
+**Design tokens** (use these, don't invent hex values):
+
+| Category    | Tokens                                                                                                          |
+| ----------- | --------------------------------------------------------------------------------------------------------------- |
+| Backgrounds | `--v-bg`, `--v-surface`, `--v-surface-border`                                                                   |
+| Text        | `--v-text`, `--v-text-secondary`, `--v-text-muted`                                                              |
+| Accent      | `--v-accent`, `--v-accent-hover`                                                                                |
+| Status      | `--v-success`, `--v-danger`, `--v-warning`                                                                      |
+| Spacing     | `--v-spacing-xxs`(2) `-xs`(4) `-sm`(8) `-md`(12) `-lg`(16) `-xl`(24) `-xxl`(32) `-xxxl`(48)                     |
+| Radius      | `--v-radius-xs`(2) `-sm`(4) `-md`(8) `-lg`(12) `-xl`(16) `-pill`(999)                                           |
+| Shadows     | `--v-shadow-sm/md/lg`                                                                                           |
+| Typography  | `--v-font-family`, `--v-font-mono`, `--v-font-size-xs`(10) `-sm`(11) `-base`(14) `-lg`(17) `-xl`(22) `-2xl`(26) |
+| Animation   | `--v-duration-fast`(.15s) `-standard`(.25s) `-slow`(.4s)                                                        |
+| Palettes    | `--v-slate/emerald/violet/indigo/rose/amber-{950..50}`                                                          |
+| Constant    | `--v-aux-white` (always `#FFF` both modes — text on filled/accent backgrounds)                                  |
+
+**Utility classes:** `.v-button` (`.secondary`/`.danger`/`.ghost`), `.v-card`, `.v-list`/`.v-list-item`, `.v-badge` (`.success`/`.warning`/`.danger`), `.v-input-row`, `.v-empty-state`, `.v-toggle`.
+
+**Theme:** the `--v-*` tokens switch light/dark on their own. For custom (non-token) colors that must follow the theme, use `@media (prefers-color-scheme: dark)` in CSS.
+
+For a **custom branded look**, write complete CSS with hardcoded colors + `@media (prefers-color-scheme: dark)` — don't mix `--v-*` auto-switching vars with hardcoded colors in the same element.
+
+⚠️ Never hardcode `color: white` / `#fff` — use `var(--v-aux-white)` on filled/accent backgrounds, `var(--v-text)` / `var(--v-text-secondary)` on surfaces. Hardcoded white goes invisible on light surfaces.
+
+Full detail when reachable: `{baseDir}/references/DESIGN_SYSTEM.md`. Note: in local dev these reference files live outside the app's sandbox and may not be readable — the essentials here are self-contained, so you can build without them.
+
+### Widget library (auto-injected)
+
+CSS classes for standard patterns: `.v-metric-card`/`.v-metric-grid` (big-number stats), `.v-data-table` (sortable, sticky header, `th[data-sortable]`), `.v-tabs`, `.v-accordion`, `.v-search-bar`, `.v-timeline`, `.v-action-list` (rows with per-item actions), `.v-card-grid`, `.v-progress-bar`, `.v-status-badge` (`.success`/`.error`/`.warning`/`.info`), `.v-stat-row`/`.v-stat`, `.v-tag-group`, `.v-avatar-row`. Landing-page components: `.v-hero`/`.v-hero-badge`/`.v-hero-subtitle`, `.v-section-header`/`.v-section-label`, `.v-feature-grid`/`.v-feature-card`, `.v-pullquote`, `.v-comparison` (`.before`/`.after`), `.v-page`, `.v-gradient-text`, `.v-animate-in`. Domain widgets: `.v-weather-card`, `.v-stock-ticker`, `.v-receipt`, `.v-invoice`, `.v-itinerary`, `.v-boarding-pass`.
+
+Interactive behavior is your own JS: charts → the bundleable `chart.js` (or inline SVG for tiny sparklines); formatting → `Intl.NumberFormat` / `Intl.DateTimeFormat`; table sort/filter, tabs, accordions, toasts, countdowns → plain JS wired to the `.v-*` markup.
+
+Use custom HTML for novel/creative UIs (games, art tools); the `.v-*` classes for standard patterns; mix freely. Full list: `{baseDir}/references/WIDGETS.md`.
+
+---
+
+## Build workflow
+
+### 0. Preflight — optional profile switch
+
+App builds are multi-step and benefit from a stronger model. If the active model profile looks weak for this work, you may offer to switch profiles first. Use the `ui_show` tool to ask, with `surface_type: "confirmation"` and `await_action: true`, so the user explicitly opts in before anything changes. Do not call the shell command `assistant ui confirm` for this — it can block the build flow before app work starts. If the user declines, just proceed on the current profile.
+
+### 1 — Plan and build, fast
+
+Think (what's the tool, who's the single user), plan in one pass (visual direction, minimal schema, core layout), then build. No wireframes, no mockups, no color questions. Make the creative calls yourself. Only ask a question when the request is genuinely ambiguous about _what to build_ — and even then, prefer building something strong from context clues.
+
+### 2 — Design the data schema (only if it persists data)
+
+A JSON Schema for a single record. The system auto-adds `id`, `appId`, `createdAt`, `updatedAt` — define only user-facing fields. Keep it flat (`string`, `number`, `boolean`); encode nested data as JSON strings.
+
+```json
+{
+  "type": "object",
+  "properties": {
+    "title": { "type": "string" },
+    "status": { "type": "string", "enum": ["todo", "doing", "done"] }
+  },
+  "required": ["title"]
+}
+```
+
+Calculators, single-page tools, landing pages, and slide decks skip this — pass an empty `schema_json` or omit it.
+
+### 3 — Create the app (scaffold, then expand)
+
+⚠️ **`app_create` is ONE-SHOT per build.** Call it exactly once. After it returns an `app_id`, all further changes go through `file_write` / `file_edit` and a single compile (`assistant apps refresh` or `app_refresh`). To start over: `app_delete(app_id)` first, then a fresh `app_create`.
+
+Apps are multi-file Preact + TSX projects; esbuild bundles when you compile. Structure:
+
+```
+src/
+  index.html          # Minimal shell that loads the bundle
+  main.tsx            # Renders <App /> into #app
+  components/App.tsx  # Top-level component
+  styles.css          # Global styles (import from TSX)
+```
+
+```tsx
+import { render } from "preact";
+import { App } from "./components/App";
+import "./styles.css";
+render(<App />, document.getElementById("app")!);
+```
+
+**Scaffold-then-expand** is the pattern for every non-trivial app. Cramming all files into one `app_create` blows the response token budget mid-emit:
+
+1. **`app_create`** with a **4-file scaffold**: `src/index.html`, `src/main.tsx`, a **placeholder** `src/components/App.tsx` (`<div>Loading...</div>`), and an **empty** `src/styles.css`. The placeholders make the first compile clean — a 2-file scaffold leaves broken imports.
+2. **`file_write`** each real file, one per tool call, overwriting the placeholders and adding components.
+3. Compile ONCE at the end. File edits do not compile on their own. Use `assistant apps inspect <name>` to see whether source drifted, then `assistant apps refresh <name>` (or `app_refresh`).
+
+**Actually write the files.** Source code in reasoning/thinking is invisible to the app sandbox and is not a file write. Put every real file body in an `app_create.source_files`, `file_write`, `file_edit`, or `app_update.source_files` tool call, then verify the files exist before compiling when there is any doubt.
+
+**Allowed packages** (esbuild-resolved, no CDN): `date-fns`, `chart.js`, `lodash-es`, `zod`, `clsx`. For icons, write inline `<svg>` markup directly — no icon package is bundled.
+
+**Constraints:** Preact not React. No CDN imports. No external fonts/images (system fonts, inline CSS/SVG). Responsive only, no fixed-pixel widths. The WebView blocks navigation — `href` and form `action` don't work.
+
+⚠️ `compile_errors` in the `app_create` response is NOT a retry signal — the response also has an `app_id`, so the app was created. Proceed. Calling `app_create` again makes a duplicate.
+
+#### `app_create` accepts EXACTLY these 6 keys — nothing else
+
+`name` (optional — defaults to the `preview` title, else "New App"), `description`, `schema_json`, `source_files`, `preview`, `auto_open`.
+
+Anything else fails with `Invalid input for tool "app_create": Unknown parameter "X"`. The retired keys models still reach for:
+
+- **`html`** — old single-file shortcut. Put your HTML inside `source_files["src/index.html"]`.
+- **`pages`** — retired. Multi-page apps use TSX components under `src/components/`.
+- **`icon`**: NOT a top-level param. The icon goes in `preview.icon` as a Lucide icon name from the list below (e.g. `preview: { title: "Bean Coffee", icon: "coffee" }`). Pick the one that best says what the app is; it is drawn in the sidebar and the library, so an emoji or a URL is wrong here. For an AI-generated image icon, call `app_generate_icon(app_id, description)` _after_ the app exists.
+- **A file path as a top-level key** (e.g. `"src/components/Header.tsx"`) — these go inside `source_files`, or in a `file_write` after `app_create`.
+
+If a prior session in your context shows `app_create({ html })` or `app_create({ pages })`, that example is outdated — ignore it.
+
+```
+// ❌ Wrong                          // ✅ Right
+app_create({                         app_create({
+  name: "Landing",                     name: "Landing",
+  html: "<!DOCTYPE...>"  // INVALID     source_files: {
+})                                        "src/index.html": "<!DOCTYPE...>",
+                                          "src/main.tsx": "...",
+                                          "src/components/App.tsx": "...",
+                                          "src/styles.css": ""
+                                        }
+                                      })
+```
+
+**Key notes:** `preview` — always include, `title` required (plus optional `subtitle`, `description`, `icon`, up to 3 `metrics`). `auto_open` — **always pass `false`** so you don't get a duplicate preview card (Step 5 owns surfacing).
+
+**App icon names** (`preview.icon`, kebab-case, one of): `calculator`, `calendar`, `list-todo`, `list-checks`, `square-check`, `timer`, `clock`, `alarm-clock`, `notebook-pen`, `sticky-note`, `pencil`, `file-text`, `clipboard-list`, `bookmark`, `book`, `book-open`, `chart-bar`, `chart-line`, `chart-pie`, `table`, `square-kanban`, `database`, `gauge`, `activity`, `target`, `flag`, `trophy`, `wallet`, `dollar-sign`, `piggy-bank`, `credit-card`, `receipt`, `percent`, `shopping-cart`, `package`, `gift`, `ticket`, `mail`, `inbox`, `message-square`, `phone`, `bell`, `users`, `contact`, `music`, `headphones`, `mic`, `video`, `film`, `tv`, `play`, `image`, `camera`, `gamepad-2`, `puzzle`, `party-popper`, `smile`, `map`, `map-pin`, `compass`, `globe`, `plane`, `car`, `bus`, `bike`, `ship`, `truck`, `house`, `bed`, `briefcase`, `graduation-cap`, `languages`, `brain`, `lightbulb`, `heart`, `heart-pulse`, `dumbbell`, `pill`, `stethoscope`, `baby`, `paw-print`, `utensils`, `coffee`, `wine`, `beer`, `cake`, `apple`, `carrot`, `salad`, `egg`, `fish`, `cloud`, `sun`, `moon`, `umbrella`, `snowflake`, `thermometer`, `droplets`, `flame`, `leaf`, `mountain`, `code`, `terminal`, `cpu`, `bot`, `wifi`, `lock`, `key`, `shield`, `settings`, `wrench`, `plug`, `battery`, `search`, `link`, `hash`, `layers`, `folder-open`, `palette`, `pen-tool`, `ruler`, `scale`, `scissors`, `shirt`, `newspaper`, `repeat`, `shuffle`, `volume-2`, `speaker`, `star`, `sparkles`, `zap`, `rocket`, `home`.
+
+### 4 — Compile
+
+File edits do not compile on their own. After ALL file writes, compile once:
+
+```
+assistant apps inspect <name>
+assistant apps refresh <name>
+```
+
+`assistant apps inspect` reports whether source changed since the last compile. `assistant apps refresh` compiles and refreshes open surfaces. `app_refresh(app_id)` also compiles. If compile fails, the response has error details; fix with `file_edit`, then compile again.
+
+### 5 — Show the preview card
+
+```
+app_open(app_id, open_mode: "preview")
+```
+
+⚠️ Don't skip this — without it the user has no Open button, just your text. It fires after all writes, so the card shows final content (this is why `auto_open` must be `false`). Don't use `open_mode: "workspace"` unless the user explicitly asks for the full panel.
+
+### 6 — Iteration
+
+Editing an existing app means reusing its `app_id` — never `app_create`. Resolve it from name if needed (see _Resolving an app_), open it so the live result is visible, then:
+
+- **`file_edit`** — targeted changes (styles, fixes, small features), full path `/workspace/data/apps/<slug>/src/...`
+- **`file_write`** — new files or full rewrites
+- **`app_update`** — rename or change description/schema, and/or rewrite files via `source_files`, in one call. It recompiles for you, so no separate `app_refresh` is needed. Use this instead of editing `<slug>.json` by hand.
+- **Full rebrand** — still iteration, edit the existing files.
+
+Then compile ONCE (`assistant apps refresh <name>` or `app_refresh(app_id)`) unless you used `app_update`, which already recompiled. If the change is substantial, `app_open(app_id, open_mode: "preview")` for a fresh card; for small tweaks the existing card stays valid.
+
+> ⚠️ **`skill_load("app-builder")` is required before every `app_*` call** (including the first `app_create`). The skill can auto-unload between turns; without the reload, `app_refresh` / `app_open` error with "not currently active." It's idempotent — call it every time.
+
+---
+
+## Using your assistant's tools and data
+
+The point of these apps is to put **the user's own data and the assistant's capabilities** behind a real interface. Apps reach the assistant backend through custom routes.
+
+**Call routes with `window.cadet.fetch("/v1/x/...")` — never raw `fetch()`.** Raw fetch fails in the sandboxed origin. This is how an app reads and writes persistent records, runs server-side logic, and touches files.
+
+```tsx
+async function loadRecords() {
+  const res = await window.cadet.fetch("/v1/x/my-route");
+  if (!res.ok) {
+    notifyError("Couldn't load");
+    return [];
+  } // your own toast/inline error
+  return res.json();
+}
+```
+
+Always wrap calls in `try/catch`, check `res.ok` before parsing, and surface failures with a toast or inline error — never fail silently:
+
+```tsx
+useEffect(() => {
+  window.cadet
+    .fetch("/v1/x/items")
+    .then((res) => (res.ok ? res.json() : Promise.reject(res.status)))
+    .then(setItems)
+    .catch(() => notifyError("Couldn't load")); // your own toast/inline error
+}, []);
+```
+
+**Bundled media — `window.cadet.asset(path)`.** For binary assets too big to inline (images, audio, short video, custom fonts), bundle the file under the app directory with `file_write` and load it at runtime via `window.cadet.asset("assets/intro.mp4")`, which resolves to a `blob:` URL the sandbox can use directly. Don't reach for giant base64 data-URIs.
+
+```tsx
+const [src, setSrc] = useState("");
+useEffect(() => {
+  window.cadet
+    .asset("assets/intro.mp4")
+    .then(setSrc)
+    .catch(() => notifyError("Couldn't load media"));
+}, []);
+return src ? <video src={src} controls /> : null;
+```
+
+Paths are validated server-side (no traversal, no `records/`); the file is served only from this app's own directory.
+
+**Live updates — `window.cadet.subscribe({ tags }, cb)`.** Instead of polling on a timer, subscribe to your own invalidation tags and refresh when the data actually changes. After a route mutates data it publishes a `sync_changed` event (`import { publishEvent } from "@mycadet/plugin-api"`, then `publishEvent({ …, message: { type: "sync_changed", tags: ["my-app:items"] } })`); the app subscribes to that tag and re-fetches when it fires. Returns an unsubscribe function — call it on cleanup. Only your own custom tags are delivered (host namespaces like `conversation:`/`assistant:` are never forwarded), and the payload is just the changed tags — re-fetch through `window.cadet.fetch` for the data.
+
+```tsx
+useEffect(() => {
+  const off = window.cadet.subscribe({ tags: ["my-app:items"] }, () => {
+    void loadItems(); // re-fetch on change — no polling
+  });
+  return off;
+}, []);
+```
+
+**Writing a route handler.** Routes are `.ts`/`.js` files in `{workspaceDir}/routes/`, served at `/v1/x/<filename>` (`routes/items.ts` → `/v1/x/items`; `routes/bar/index.ts` → `/v1/x/bar`). Write them with `file_write` **before** `app_refresh`. Each exports named functions per HTTP method (`GET`/`POST`/`PUT`/`PATCH`/`DELETE`), receiving the Web `Request`. Full Node API access (`fs`, `path`, `crypto`), 30s timeout, hot-reloaded on change. No `[id].ts` dynamic segments — use query params.
+
+```typescript
+// routes/items.ts
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
+import { join } from "node:path";
+export const description = "Item CRUD — JSON file storage"; // optional, for `assistant routes list`
+const FILE = join(process.env.CADET_WORKSPACE_DIR!, "data", "items.json");
+const load = () =>
+  existsSync(FILE) ? JSON.parse(readFileSync(FILE, "utf-8")) : [];
+const save = (x: unknown[]) => {
+  mkdirSync(join(process.env.CADET_WORKSPACE_DIR!, "data"), {
+    recursive: true,
+  });
+  writeFileSync(FILE, JSON.stringify(x, null, 2));
+};
+
+export function GET(): Response {
+  return Response.json(load());
+}
+export async function POST(req: Request): Promise<Response> {
+  const item = {
+    id: crypto.randomUUID(),
+    ...(await req.json()),
+    createdAt: new Date().toISOString(),
+  };
+  const items = load();
+  items.push(item);
+  save(items);
+  return Response.json(item, { status: 201 });
+}
+```
+
+To reach daemon capabilities, import from `@mycadet/plugin-api` — `publishEvent({...})` to push real-time events to connected clients (UI updates, navigation, notifications), or `runConversationTurn({...})` to post an inbound event into a conversation as a real assistant turn. (An older `context` second argument still works in-process but is deprecated — prefer these imports.) Full guide + copyable examples (Focus Timer, Habit Tracker, Expense Tracker): `{baseDir}/references/CUSTOM_ROUTES.md`, `{baseDir}/references/examples/`.
+
+**Persistence options:** `localStorage` for ephemeral UI state (filters, view modes, drafts); custom routes for persistent records and server-side logic.
+
+---
+
+## Interaction standards
+
+- **Feedback for every action** — a toast or inline confirmation after creates, deletes, updates, errors. Build your own (e.g. toggle the `.v-toast` class with JS).
+- **Confirm destructive actions** — render your own confirmation (an inline "Are you sure?" or a modal) before deleting or resetting.
+- **Validate forms** before submit, show errors inline, disable submit during async.
+- **Loading states** — skeleton or spinner, never a blank screen.
+- **Designed empty states** — `.v-empty-state` when there's no data.
+
+### Keep the assistant aware
+
+Wire `window.cadet.sendAction()` during the build so the app can pull the assistant in. The host handles two actions: **`relay_prompt`** (`{ prompt, conversation }`) sends a message to the assistant as if the user typed it — the way to get an explanation, summary, or follow-up from inside the app (`conversation: "new"` starts a fresh chat instead of the open one); **`set_view`** (`{ view }`) arranges the app and chat (`"split"` / `"full"` / `"chat"`). These two are the whole app→host surface — relay anything you want the assistant to act on as a self-contained prompt. Patterns in `{baseDir}/references/INTERACTION_HOOKS.md`.
+
+### Actionable UI
+
+For triage/bulk-action UIs: render selectable items + action buttons → the user selects and clicks → relay the choice as a prompt with `window.cadet.sendAction("relay_prompt", { prompt: ... })`, listing the selected items in the text, so the assistant can run the tools and report back. Render your own confirmation for destructive actions.
+
+---
+
+## Slides
+
+Slide decks are a different domain — skip app patterns (contextual headers, search/filter, toasts, form validation, custom routes). Build navigation and layouts with custom HTML/CSS. Templates and principles in `{baseDir}/references/SLIDES.md`.
+
+---
+
+## SKILL COMPLETE WHEN
+
+- [ ] Request was scoped: personal build (sandbox) or complex/shippable (handed off to a project folder + coding agent)
+- [ ] **Sandbox path:** `app_create` returned an `app_id`; all files written via `file_write`; compile ran ONCE clean (`assistant apps refresh` or `app_refresh`); `app_open(open_mode: "preview")` rendered the card; user told what was built (3-6 bullets); iterations reflected live
+- [ ] **Handoff path:** project folder established; coding agent spawned via `acp_spawn({ task, cwd })`; user told work continues in the folder
+
+---
+
+## Reference files
+
+Read with `file_read` using the `{baseDir}/references/...` paths (`{baseDir}` resolves to this skill's directory):
+
+- `RESPONSIVE.md` — mobile vs desktop, universal baseline, safe areas
+- `DESIGN_SYSTEM.md` — token table, utility classes, theme/dark mode
+- `WIDGETS.md` — CSS widget classes (no JS chart/format runtime)
+- `CUSTOM_ROUTES.md` — server-side persistence and custom API routes
+- `examples/` — complete copyable example apps
+- `INTERACTION_HOOKS.md` — relay_prompt / set_view app→host actions
+- `SLIDES.md` — presentation slide design

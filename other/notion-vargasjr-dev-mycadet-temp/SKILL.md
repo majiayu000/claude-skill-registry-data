@@ -1,0 +1,312 @@
+---
+name: notion
+description: Read and write Notion pages and databases using the Notion API
+compatibility: "Designed for Cadet personal assistants"
+metadata:
+  icon: assets/icon.svg
+  emoji: "📝"
+  cadet:
+    category: "productivity"
+    display-name: "Notion"
+    activation-hints:
+      - "User asks to read, find, search, or open a page, doc, database, or directory in their Notion (e.g. 'find it in notion', 'look in my Notion', 'this is a notion directory')"
+      - "User references Notion content by name or path and wants its contents pulled"
+      - "User wants to create, update, append to, or query Notion pages or databases"
+      - "User asks anything that requires reading or writing Notion data, including checking a task list or workspace held in Notion"
+    avoid-when:
+      - "User wants to set up, connect, or reconnect the Notion OAuth integration for the first time; load cadet-oauth-integrations instead"
+---
+
+You have access to the Notion API via the cloud OAuth connection or an internal integration secret stored in the credential vault. Both paths inject the Authorization header automatically. Never reveal credential values or echo token values into the shell.
+
+## Authentication
+
+**Step 1 - Determine connection type:**
+
+```bash
+assistant credentials list
+```
+
+Look at the results to decide which path to use:
+
+- **Managed OAuth (preferred):** No `service: "notion"` entry is needed in the vault. The OAuth connection is managed by the cloud. Use **Path A** below.
+- **Internal integration secret:** An entry with `service: "notion"` and `field: "internal_secret"` is present. Use **Path A** below (recommended) or **Path B** if the credential has the required metadata (see Path B for details).
+- **Neither configured:** Tell the user: "Notion is not connected yet. Load the **cadet-oauth-integrations** skill to set it up first."
+
+**Step 2 - Make authenticated API calls:**
+
+Choose the path that matches what you found in Step 1.
+
+---
+
+### Path A. Managed OAuth (preferred)
+
+Use `assistant oauth request --provider notion`. The Authorization header is injected automatically; do not supply it manually.
+
+```
+assistant oauth request --provider notion \
+  -X POST \
+  -H "Notion-Version: 2022-06-28" \
+  -H "Content-Type: application/json" \
+  -d '{}' \
+  https://api.notion.com/v1/search
+```
+
+General shape: `assistant oauth request --provider notion -X <METHOD> -H "Notion-Version: 2022-06-28" [-H "Content-Type: application/json"] [-d '<json-body>'] <url>`
+
+- URL can be absolute (`https://api.notion.com/v1/pages/...`) or relative (`/v1/pages/...`).
+- `-d` accepts inline JSON, `@filename`, or `@-` for stdin.
+- Token refresh is handled automatically.
+
+---
+
+### Path B. Proxied bash with credential auto-injection
+
+> **Note:** The standard Notion setup flow (`cadet-oauth-integrations`) does not currently produce credentials with the metadata required by this path. Most users should use **Path A** instead. Path B is documented for credentials that have been manually configured with the required metadata.
+
+For internal integration secrets registered with `allowedTools: ["bash"]` and an `injection_templates` entry for `api.notion.com`. The proxy adds `Authorization: Bearer <token>` automatically. Do not include an Authorization header in the curl command.
+
+```
+bash:
+  network_mode: proxied
+  credential_ids: ["<credential_id_from_step_1>"]
+  command: |
+    curl -s -X POST https://api.notion.com/v1/search \
+      -H "Notion-Version: 2022-06-28" \
+      -H "Content-Type: application/json" \
+      -d '{}'
+```
+
+Where `<credential_id_from_step_1>` is the `id` field from the matching entry in `assistant credentials list` output.
+
+The credential MUST have:
+
+- `allowedTools` including `"bash"` (otherwise the proxy blocks the call).
+- `injection_templates` with host pattern `api.notion.com` and header injection type for `Authorization`.
+
+If these are missing, you will get a `credential tool policy denied` error. Switch to **Path A** instead.
+
+---
+
+All Notion API calls go to `https://api.notion.com/v1/`. Always include the `Notion-Version: 2022-06-28` header.
+
+## Reading Pages
+
+### Get a page by ID
+
+```
+GET https://api.notion.com/v1/pages/{page_id}
+```
+
+Returns page properties. Use the page ID from a Notion URL - the last segment of the URL, e.g. for `https://notion.so/My-Page-abc123def456` the ID is `abc123def456` (formatted as UUID: `abc123de-f456-...`).
+
+### Get page content (blocks)
+
+```
+GET https://api.notion.com/v1/blocks/{block_id}/children?page_size=100
+```
+
+Pages are blocks too - use the page ID as the `block_id`. Iterates through the page's child blocks. Use `start_cursor` for pagination when `has_more` is `true`.
+
+**Block types and how to render them:**
+
+- `paragraph`: Read `paragraph.rich_text[].plain_text`
+- `heading_1`, `heading_2`, `heading_3`: Read `heading_N.rich_text[].plain_text`
+- `bulleted_list_item`, `numbered_list_item`: Read `*.rich_text[].plain_text`
+- `to_do`: Read `to_do.rich_text[].plain_text` and `to_do.checked`
+- `toggle`: Read `toggle.rich_text[].plain_text`; children are nested blocks
+- `code`: Read `code.rich_text[].plain_text` and `code.language`
+- `quote`: Read `quote.rich_text[].plain_text`
+- `callout`: Read `callout.rich_text[].plain_text`
+- `divider`: Render as `---`
+- `image`: Read `image.external.url` or `image.file.url`
+- `child_page`: Read `child_page.title`; use its `id` to recursively fetch if needed
+
+## Searching
+
+### Search pages and databases
+
+```
+POST https://api.notion.com/v1/search
+{
+  "query": "your search term",
+  "filter": { "value": "page", "property": "object" },
+  "sort": { "direction": "descending", "timestamp": "last_edited_time" },
+  "page_size": 10
+}
+```
+
+Omit `filter` to search both pages and databases. Use `filter.value: "database"` to search only databases.
+
+Returns `results[]` with `id`, `url`, `properties.title` (for pages), and `title[]` (for databases).
+
+## Reading Databases
+
+### Get database metadata
+
+```
+GET https://api.notion.com/v1/databases/{database_id}
+```
+
+Returns the database schema (all property definitions).
+
+### Query a database
+
+```
+POST https://api.notion.com/v1/databases/{database_id}/query
+{
+  "filter": {
+    "property": "Status",
+    "select": { "equals": "In Progress" }
+  },
+  "sorts": [
+    { "property": "Created", "direction": "descending" }
+  ],
+  "page_size": 20
+}
+```
+
+Omit `filter` to retrieve all rows. Returns `results[]` where each item is a page (database row).
+
+**Extracting property values from database rows:**
+
+- `title`: `properties.Name.title[].plain_text`
+- `rich_text`: `properties.Notes.rich_text[].plain_text`
+- `number`: `properties.Price.number`
+- `select`: `properties.Status.select.name`
+- `multi_select`: `properties.Tags.multi_select[].name`
+- `date`: `properties.Due.date.start` (ISO 8601)
+- `checkbox`: `properties.Done.checkbox`
+- `url`: `properties.Link.url`
+- `email`: `properties.Email.email`
+- `people`: `properties.Owner.people[].name`
+- `relation`: `properties.Projects.relation[].id` (array of page IDs)
+
+## Creating Pages
+
+### Create a new page
+
+```
+POST https://api.notion.com/v1/pages
+{
+  "parent": { "page_id": "<parent_page_id>" },
+  "properties": {
+    "title": {
+      "title": [{ "text": { "content": "My New Page" } }]
+    }
+  },
+  "children": [
+    {
+      "object": "block",
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [{ "text": { "content": "Page content here." } }]
+      }
+    }
+  ]
+}
+```
+
+For database rows, use `"parent": { "database_id": "<database_id>" }` and include the database's required properties.
+
+## Updating Pages
+
+### Update page properties
+
+```
+PATCH https://api.notion.com/v1/pages/{page_id}
+{
+  "properties": {
+    "Status": { "select": { "name": "Done" } },
+    "Due": { "date": { "start": "2024-12-31" } }
+  }
+}
+```
+
+### Append blocks to a page
+
+```
+PATCH https://api.notion.com/v1/blocks/{block_id}/children
+{
+  "children": [
+    {
+      "object": "block",
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [{ "text": { "content": "Appended content." } }]
+      }
+    },
+    {
+      "object": "block",
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [{ "text": { "content": "A heading" } }]
+      }
+    },
+    {
+      "object": "block",
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{ "text": { "content": "A bullet point" } }]
+      }
+    },
+    {
+      "object": "block",
+      "type": "to_do",
+      "to_do": {
+        "rich_text": [{ "text": { "content": "A task" } }],
+        "checked": false
+      }
+    }
+  ]
+}
+```
+
+### Update a block's content
+
+```
+PATCH https://api.notion.com/v1/blocks/{block_id}
+{
+  "paragraph": {
+    "rich_text": [{ "text": { "content": "Updated text." } }]
+  }
+}
+```
+
+### Delete (archive) a block
+
+```
+DELETE https://api.notion.com/v1/blocks/{block_id}
+```
+
+## Archive / Delete Pages
+
+Notion does not permanently delete pages via the API - it archives them:
+
+```
+PATCH https://api.notion.com/v1/pages/{page_id}
+{
+  "archived": true
+}
+```
+
+## Pagination
+
+When a response includes `"has_more": true`, pass `"start_cursor": response.next_cursor` in the next request to get the next page of results.
+
+## Error Handling
+
+- **401 Unauthorized**: The token is missing, invalid, or expired. For Internal integrations, ask the user to re-run the **cadet-oauth-integrations** skill. For OAuth connections, the access token may need to be refreshed or re-authorized.
+- **403 Forbidden**: The integration doesn't have access to the requested page or database. Remind the user that they need to share the page/database with the "Cadet Assistant" integration in Notion (via the Share menu → "Add connections").
+- **404 Not Found**: The page or database ID doesn't exist or the integration can't see it. Verify the ID and check sharing settings.
+- **400 Bad Request**: Check the request body structure. The Notion API error response includes a `message` field with details.
+- **429 Too Many Requests**: Wait a few seconds and retry.
+- **`credential tool policy denied`**: The credential is missing `bash` in `allowedTools` or an `injection_templates` entry for `api.notion.com`, so the proxy cannot inject the Authorization header. Switch to **Path A** (cloud OAuth), which bypasses credential metadata requirements entirely.
+
+## Tips
+
+- Notion page IDs in URLs are formatted without hyphens. The API accepts both forms: `abc123def456...` or `abc123de-f456-...`.
+- When extracting IDs from Notion URLs, strip any query parameters and trailing path components after the 32-character ID segment.
+- Always include `Notion-Version: 2022-06-28` header to get stable API behavior.
+- For rich text, concatenate all `plain_text` values in the array to get the full text content.
+- When creating content with rich text formatting (bold, italic, links), use the `annotations` and `href` fields in rich_text objects.

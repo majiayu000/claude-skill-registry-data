@@ -1,0 +1,38 @@
+{
+  "name": "design",
+  "repo": "wso2/labs-agentic-engineer",
+  "path": "skills/design/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/wso2/labs-agentic-engineer",
+  "dir_name": "design-wso2-labs-agentic-enginee",
+  "downloaded_at": "2026-10-23T04:33:50.267741Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, prd, feature",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "prd",
+      "feature"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wso2",
+  "source_url": "https://github.com/wso2/labs-agentic-engineer/blob/main/skills/design/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wso2/labs-agentic-engineer/blob/main/skills/design/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when generating a project's design from its PRD \u2014 the /design flow that turns the requirements under specs/requirements/ into the design under specs/design/, a prototype for each web app included, then writes the acceptance tests. Also the flow for converging an existing design onto an amended PRD, and for addressing the design review's comments (/address-comments)."
+}

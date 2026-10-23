@@ -1,0 +1,39 @@
+{
+  "name": "semgrep-rules",
+  "repo": "testland/qa",
+  "path": "plugins/qa-security-scanning/skills/semgrep-rules/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/testland/qa",
+  "dir_name": "semgrep-rules",
+  "downloaded_at": "2026-10-23T03:57:01.685428Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: ci, docker, infra, infrastructure",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "ci",
+      "docker",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "testland",
+  "source_url": "https://github.com/testland/qa/blob/main/plugins/qa-security-scanning/skills/semgrep-rules/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/testland/qa/blob/main/plugins/qa-security-scanning/skills/semgrep-rules/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Configures and runs Semgrep - pattern-based SAST across 30+ languages with the Semgrep Registry rulesets (`p/owasp-top-ten`, `p/default`, `auto`) plus custom YAML rules; integrates `semgrep ci` for PR-blocking gates with `--baseline-commit` diff-aware scanning, per-finding inline `nosemgrep` suppressions, `--exclude` / `--include` path filters, output formats (`--json` / `--sarif` / `--gitlab-sast` / `--junit-xml`), and severity filter (INFO/WARNING/ERROR). Use when the user runs Semgrep, asks about pattern rules, or needs a low-friction SAST gate without semantic-DB setup."
+}

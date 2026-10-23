@@ -1,0 +1,38 @@
+{
+  "name": "video-build",
+  "repo": "tymoshenko-dmytro/claude-marketing-skills",
+  "path": "skills/video-build/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/tymoshenko-dmytro/claude-marketing-skills",
+  "dir_name": "video-build-tymoshenko-dmytro-claude-marketing-ski",
+  "downloaded_at": "2026-10-23T04:11:09.917179Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: ui, css, animation",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ui",
+      "css",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tymoshenko-dmytro",
+  "source_url": "https://github.com/tymoshenko-dmytro/claude-marketing-skills/blob/main/skills/video-build/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tymoshenko-dmytro/claude-marketing-skills/blob/main/skills/video-build/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Builds HyperFrames compositions for any code-built video - the project scaffold (hyperframes.json, pinned CLI, a build.py that emits the composition from measured timings), building from a real product UI (capture the real app, compose from its own classes, a measure pass), word-highlight captions in any language including Arabic and Hebrew, real footage with frame-exact windows, rendering, and a catalogue of HyperFrames, GSAP and render traps. A layer over the upstream hyperframes skills and an executor under video-studio. Use when video-studio reaches the build step of a code-built film. Triggers: \"build the composition\", \"HyperFrames\", \"render the video\", \"add captions\", \"word-by-word captions\", \"put this footage in the video\"."
+}

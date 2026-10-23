@@ -1,0 +1,40 @@
+{
+  "name": "webdev-feedback",
+  "repo": "ytvee-dev/webdev-agent-kit",
+  "path": "skills/webdev-feedback/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/ytvee-dev/webdev-agent-kit",
+  "dir_name": "webdev-feedback",
+  "downloaded_at": "2026-10-23T04:46:22.046226Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build, debug",
+    "score": 4,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "ytvee-dev",
+  "source_url": "https://github.com/ytvee-dev/webdev-agent-kit/blob/main/skills/webdev-feedback/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ytvee-dev/webdev-agent-kit/blob/main/skills/webdev-feedback/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "File WebDev bugs and ideas in GitHub with ownership, duplicate and privacy checks. Excludes fixes and automatic reporting."
+}

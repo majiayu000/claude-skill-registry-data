@@ -1,0 +1,37 @@
+{
+  "name": "session-retro",
+  "repo": "techmefr/mentis",
+  "path": "skills/session-retro/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/techmefr/mentis",
+  "dir_name": "session-retro-techmefr-mentis",
+  "downloaded_at": "2026-10-23T03:54:57.740525Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: quality=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "lint",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "techmefr",
+  "source_url": "https://github.com/techmefr/mentis/blob/main/skills/session-retro/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/techmefr/mentis/blob/main/skills/session-retro/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when a work session has just ended or is being closed and the operator wants to improve the environment the agent works in (not the code it produced): find the moments the session struggled, classify each one, and propose the fix that lands where it will work, a deterministic check for anything that can be checked mechanically, a written rule only for a judgement call. Proposes, never applies."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "design-instance",
+  "repo": "t3chnicallyinclined/groundworks",
+  "path": ".claude/skills/design-instance/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/t3chnicallyinclined/groundworks",
+  "dir_name": "design-instance",
+  "downloaded_at": "2026-10-23T03:51:11.218246Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "t3chnicallyinclined",
+  "source_url": "https://github.com/t3chnicallyinclined/groundworks/blob/main/.claude/skills/design-instance/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/t3chnicallyinclined/groundworks/blob/main/.claude/skills/design-instance/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Map the Scholar method onto a new domain. Interviews the owner through the eight configuring questions (goal, unit, fidelity ladder, status axis, vocabulary, gates, roles, evaluator), starts from the closest existing instance spec, checks the design against the method's non-negotiables, and writes instances/<name>/INSTANCE.md and instance.yaml with a one-chunk pilot plan and a cost estimate. Use whenever someone wants to apply the scholar to a new corpus or problem. Triggers on \"new instance\", \"apply the scholar to\", \"map this domain\", \"design a scholar for\"."
+}

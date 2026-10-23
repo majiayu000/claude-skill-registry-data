@@ -1,0 +1,38 @@
+{
+  "name": "definition-of-done",
+  "repo": "testland/qa",
+  "path": "plugins/qa-process/skills/definition-of-done/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/testland/qa",
+  "dir_name": "definition-of-done-testland-qa",
+  "downloaded_at": "2026-10-23T03:56:54.848977Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=3, quality=3",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "docs",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "testland",
+  "source_url": "https://github.com/testland/qa/blob/main/plugins/qa-process/skills/definition-of-done/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/testland/qa/blob/main/plugins/qa-process/skills/definition-of-done/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "The team's Definition of Done (DoD), both halves of the lifecycle: authoring and auditing. Explains the Scrum Guide's DoD definition (\"a formal description of the state of the Increment when it meets the quality measures required for the product\"), proposes a starter DoD with the 7-10 lines most teams need (code reviewed, unit tests, docs, AC met, deployed to staging, smoke passed, no a11y regressions, telemetry wired), emits a per-PR checklist a reviewer enforces, and audits work against an existing DoD line by line with repository evidence (review records, diffs, CI runs, coverage reports), tagging every line met, not met, or unverifiable - never passing a line on self-attestation. Use when the team doesn't have a DoD, wants to revise theirs, or is about to mark a story or PR done and nobody has checked the work against the committed checklist."
+}

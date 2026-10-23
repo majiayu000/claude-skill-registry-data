@@ -1,0 +1,38 @@
+{
+  "name": "laravel-pest",
+  "repo": "techmefr/mentis",
+  "path": "skills/laravel-pest/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/techmefr/mentis",
+  "dir_name": "laravel-pest",
+  "downloaded_at": "2026-10-23T03:54:55.855709Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, workflow=3",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "techmefr",
+  "source_url": "https://github.com/techmefr/mentis/blob/main/skills/laravel-pest/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/techmefr/mentis/blob/main/skills/laravel-pest/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when a Laravel project already runs Pest and the task goes past plain tests: architecture tests, datasets, mutation testing, type coverage, parallel runs and sharding, and picking a named assertion. Not a reason to move a PHPUnit project to Pest."
+}

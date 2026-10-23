@@ -1,0 +1,37 @@
+{
+  "name": "seo-tech-audit",
+  "repo": "tymoshenko-dmytro/claude-marketing-skills",
+  "path": "skills/seo-tech-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/tymoshenko-dmytro/claude-marketing-skills",
+  "dir_name": "seo-tech-audit",
+  "downloaded_at": "2026-10-23T04:11:09.528464Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, marketing=2",
+    "score": 2,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "insights"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tymoshenko-dmytro",
+  "source_url": "https://github.com/tymoshenko-dmytro/claude-marketing-skills/blob/main/skills/seo-tech-audit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tymoshenko-dmytro/claude-marketing-skills/blob/main/skills/seo-tech-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Runs an evidence-based technical SEO audit of a site and turns it into prioritised developer tickets: a crawl (status codes, redirects, canonicals, noindex, sitemaps, internal links, titles, descriptions, H1, thin pages, JSON-LD, hreflang), Google's index status per URL (URL Inspection API), real-user Core Web Vitals (CrUX), Bing Webmaster data, raw versus rendered HTML, robots.txt access for search and AI bots, and app or staging hosts leaking into search. Keeps a backlog that tracks each finding across weekly runs. Use when someone asks for a technical SEO check, why a page is not indexed, or SEO tickets for developers. Triggers: \"technical SEO audit\", \"crawl the site\", \"check the site for SEO errors\", \"why is this page not indexed\", \"indexing issues\", \"check hreflang\", \"Core Web Vitals\", \"site speed for SEO\", \"SEO tickets for developers\", \"what is still not fixed\". For keyword or traffic analysis use gsc-insights; for playbooks and checklists use the seo skill."
+}

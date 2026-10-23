@@ -1,0 +1,37 @@
+{
+  "name": "compatibility-audit",
+  "repo": "yandy-r/ystack",
+  "path": "ycc/skills/compatibility-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/yandy-r/ystack",
+  "dir_name": "compatibility-audit",
+  "downloaded_at": "2026-10-23T04:41:41.537921Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yandy-r",
+  "source_url": "https://github.com/yandy-r/ystack/blob/main/ycc/skills/compatibility-audit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yandy-r/ystack/blob/main/ycc/skills/compatibility-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audits ycc compatibility for ycc maintainers only. Use when checking generated bundle drift, verifying install assumptions, or comparing target feature gaps."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "toxiproxy-chaos",
+  "repo": "testland/qa",
+  "path": "plugins/qa-resilience/skills/toxiproxy-chaos/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/testland/qa",
+  "dir_name": "toxiproxy-chaos",
+  "downloaded_at": "2026-10-23T03:56:54.193125Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, devops=3",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "framework",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "testland",
+  "source_url": "https://github.com/testland/qa/blob/main/plugins/qa-resilience/skills/toxiproxy-chaos/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/testland/qa/blob/main/plugins/qa-resilience/skills/toxiproxy-chaos/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Configures Toxiproxy for TCP-level fault injection - runs as a sidecar / proxy between client and upstream, applies toxics (latency, bandwidth, slow_close, timeout, slicer, limit_data, reset_peer) via control API. Focused on the proxy itself rather than an API-level chaos runner, including non-test usage (chaos in dev environments, integration tests, pre-prod simulation). Use when the team needs TCP-precise fault injection in development / integration environments without K8s or commercial tooling."
+}

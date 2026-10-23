@@ -1,0 +1,37 @@
+{
+  "name": "resolve-conflicts-by-intent",
+  "repo": "theonly1me/shadowclone",
+  "path": ".agents/skills/resolve-conflicts-by-intent/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/theonly1me/shadowclone",
+  "dir_name": "resolve-conflicts-by-intent-theonly1me-shadowclone",
+  "downloaded_at": "2026-10-23T03:59:03.412156Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "theonly1me",
+  "source_url": "https://github.com/theonly1me/shadowclone/blob/main/.agents/skills/resolve-conflicts-by-intent/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/theonly1me/shadowclone/blob/main/.agents/skills/resolve-conflicts-by-intent/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when Git reports conflicts during a merge, a rebase, or a cherry-pick. Also use it when the user says \"fix the merge conflicts\", \"rebase onto main\", or \"the merge broke the build\". Traces each side of a conflict to the change that it came from. Keeps both intents when they fit together, and asks when they do not. Then runs the checks on the combined result. Not for choosing what a new behavior should be (use `choose-by-consequence`)."
+}

@@ -1,0 +1,489 @@
+---
+name: react-webapp
+description: "How to build a React SPA on the platform — project layout, the build-verify command, and this stack's constraints and pitfalls. Apply when a component's `type` is `web-application`."
+metadata:
+  aep:
+    kind: org
+    audience: [coding]
+---
+
+# React Webapp
+
+A web-app on this platform: a Vite + TS SPA built to static files, served by
+stock `nginx:alpine`. The image is **byte-identical across every environment**.
+Per-env values the **browser** needs (OIDC config, flags) arrive at request time
+in `window._env_`, never at build time. Sibling API addresses are **not**
+browser config — they are pod env for nginx.
+
+## Development flow
+
+1. **Scaffold** per Layout, including the nginx drop-in copy in step 1 of Layout.
+   Read [mock-mode.md](references/mock-mode.md) and include its dependencies in
+   `package.json`, then install **once** with the complete dependency set — npm
+   can only satisfy a peer set it sees all at once, and a package added to an
+   already-resolved tree costs a second full resolve at best. With a design
+   system, its own Setup step IS that install (it writes the manifest and runs
+   `npm install` itself); without one, `npm install`.
+2. **Prepare shared interfaces** — write `src/env.ts`, generate `src/generated/`
+   from each dependency's OpenAPI contract, and write `src/api.ts` with a
+   **same-origin** `baseUrl`. With auth, copy `thunder-authentication`'s
+   `assets/app/` tree (one `cp -r`, which lays down `src/authz/` and
+   `mock/authz/`), set the `USER_AUTH_` prefix in `src/authz/session.ts` (mock
+   mode substitutes that module), and run `npm run gen` once so the three
+   generated tables exist for the type-check.
+3. **Implement pages** — follow Constraints, and check `src/api.ts` against the
+   **first** page with `npx tsc --noEmit` before writing the rest: that pair proves
+   how the generated client types, and every later page repeats the pattern.
+   The prototype (`specs/design/components/<name>/prototype.json` and
+   `prototype.tsx`) is the screen contract. Before the first page, read
+   `${AEP_SKILLS_DIR:-.claude/skills}/prototype/references/implementing.md`.
+4. **Mock mode** — author `mock/` per `references/mock-mode.md`, including the four
+   wiring files in its §2. It stands the same app up with no cluster, no sibling
+   service and no IDP behind it — with the API gateway's own refusals modelled
+   from `openapi.yaml`, so a role that cannot reach a screen fails here the way
+   it fails in a cell. The build eliminates all of it as dead code.
+5. **Verify** — from the app path:
+   ```bash
+   npm install                   # regenerates package-lock.json
+   # ← the design system's check goes here (see below)
+   npm run gen                   # with auth: so the standalone tsc below reads a
+                                 # fresh table (`npm run build` re-runs it)
+   npx tsc --noEmit              # type-check without emitting
+   npm run build                 # actually build
+   ! grep -rq mockServiceWorker dist/ # the bundle carries no mock — step 4
+   git status --porcelain --ignored=matching -- . \
+     | grep '^!!' | grep -vE 'node_modules|dist'   # ← output MUST be empty
+   ```
+   Commit the `package-lock.json` this produces. Never commit `node_modules/`.
+
+   **The last line is not a formality.** Every step above it reads your working
+   tree; the cluster builds the *committed* tree of this folder alone. A build
+   input that git ignores is present for all four checks and absent from the
+   image, and git will not tell you: `git add <app-path>` skips an ignored file
+   **silently, exit 0**, and leaves `git status` clean. `src/generated/` is the
+   one that bites, because the repo-root `.gitignore` is shared with backend
+   components that legitimately ignore a `generated/` directory — an unanchored
+   pattern there reaches down into this app. `--ignored=matching` is what makes
+   those paths visible; `node_modules` and `dist` are the only two the builder
+   stage makes for itself, which is why they are the only two filtered out.
+   A `!!` line naming anything else means the image will not carry that file.
+   Fix the pattern (anchor it in the repo-root `.gitignore`), never `git add -f`.
+
+   **The design-system skill contributes one step to this sequence**, and it is
+   mandatory: run the command its own Verify section names, after `npm install`
+   and before the type-check, and treat a non-zero exit exactly like a failing
+   build. That slot exists because a design system's own wiring — a missing
+   build plugin, an unimported theme, a peer-dependency mismatch — is the one
+   class of fault `tsc` and `vite build` cannot see: it type-checks and builds
+   perfectly clean, then renders an unstyled page in the cluster. If the pinned
+   design-system skill names no such command, the sequence is just the five
+   above.
+
+   The `build` script is `tsc --noEmit && vite build` — **not** `tsc -b`, which
+   needs a composite project: a `tsconfig.json` that `references` a
+   `tsconfig.node.json` setting `noEmit` fails with `TS6310: Referenced project
+   may not disable emit`, and unwinding that costs more than it buys.
+
+   **With an auth dependency `build` gains a `gen` step in front:**
+   `npm run gen && tsc --noEmit && vite build`, where `gen` regenerates the
+   authorization tables (`src/authz/roles.gen.ts`, `src/authz/operations.gen.ts`,
+   `mock/authz/roles.gen.ts`) from the permission catalog and the contracts.
+   It is not optional and it must come BEFORE the type-check — a stale
+   generated union type-checks perfectly green while the app gates on
+   operations the design no longer has (`thunder-authentication`).
+
+   Verification ends at exit 0. **Never run `npm audit` or `npm audit fix`** —
+   the advisories land on Vite's dev-only transitive dependencies, which never
+   reach a static bundle served by nginx, and `audit fix` bumps pinned
+   dependencies behind your back.
+5. **Walk** — `mock-verification`, another agent's dispatch. Your job ends at
+   a clean Verify with `mock/` in place.
+6. **PR** — the lead's, once the walk has reported; an open `[ ]` line rides in
+   its body (the component contract's **Walks**).
+
+## Constraints
+
+**Runtime config, not build-time.** The platform mounts `/env-config.js` into
+the served root and it populates `window._env_`. You never generate or commit
+that file. `import.meta.env.VITE_*`, `process.env.REACT_APP_*`,
+`NEXT_PUBLIC_*` and `.env` files are all build-time mechanisms the platform does
+not use — reading one gets you `undefined` in production.
+
+**The key set is fixed.** It is hardcoded in platform code, so a key you invent
+is `undefined` at module load. Use these exact spellings:
+
+| Key | Set when | Meaning |
+|---|---|---|
+| `<NAME>_URL` | `dependencies` include an `external`-kind entry `<name>` | URL of that **external** upstream (browser may call it). Not used for a sibling `component`-kind service. |
+| `<DEP>_*` | this web-app declares an auth `platform-resource` dependency named `<dep>` | OIDC config — `<DEP>_CLIENT_ID`, `<DEP>_ISSUER`, `<DEP>_JWKS_URL`, `<DEP>_SCOPES` and **`<DEP>_RESOURCE`** (the project's resource-server identifier, the RFC 8707 `resource` indicator the SPA must send or every `/api` call 401s). `<DEP>` = UPPER_SNAKE of the dependency name (`user-auth` → `USER_AUTH_*`) — owned by `thunder-authentication` |
+| `<NAME>` (any) | you declared it in `workload.yaml` `configurations.env` | app-config default, per-env override possible |
+
+There is **no** `API_BASE_URL` and **no** `<UPSTREAM>_URL` in `window._env_` for
+a sibling service. The sibling lives at **same-origin** `/api` (extra siblings:
+`/api/<component-name>/`). Its addresses — `<DEP>_GATEWAY_URL` and `<DEP>_URL` —
+are **pod** env vars, never browser keys; only the nginx drop-in reads them (see
+**Same-origin API proxy** below).
+
+**Throw on a missing key, never default it.** No `?? ""`, no `|| ''`, for keys
+this table says are set. A silent fallback hides a missing OIDC issuer. Do not
+declare sibling API URL keys on `Env` just to throw — they are not emitted.
+
+**Served at host root.** Each web-app gets its **own** gateway hostname, so the
+stock Vite default is correct: **do NOT set `base`**. Asset URLs, any react-router
+`basename`, and any OAuth `redirect_uri` are plain root paths (`/assets/…`,
+`/callback`). Services ARE path-routed, under `/<project>-<component>-http` on a
+shared gateway — copying that prefix into `base` 404s every asset.
+
+**Same-origin API proxy, through the gateway.** Nginx reverse-proxies
+`location /api/` to the primary sibling. Two pod env vars address that sibling and
+they are NOT interchangeable:
+
+| Pod env var | Reaches | Auth |
+|---|---|---|
+| `<DEP>_GATEWAY_URL` | the API gateway's **runtime Service**, `…-gateway-runtime.<ns>.svc.cluster.local:22893` — a cluster address, never the public vhost. Set by the platform for a sibling whose design declares `exposesAPI.auth`. Carries a **context path prefix**. | validates the bearer token, injects `X-User-*` from its claims |
+| `<DEP>_URL` | the project Service, directly | none — nothing validates a token, nothing injects identity |
+
+The asset **prefers `<DEP>_GATEWAY_URL`** and falls back to `<DEP>_URL`. That
+order is the whole point: browser traffic is untrusted, and this proxy is the one
+hop that would otherwise carry it into the project's trusted lane with no
+authentication in between. Two rules follow, and the asset already obeys both —
+which is why you copy it rather than write it:
+
+- **Preserve the context prefix.** The gateway routes on it; a rewrite that
+  strips it 404s every call.
+- **Clear inbound identity.** Identity is the gateway's to assert
+  (`api-management`), and nothing a browser sends on this lane may stand in for
+  it. The asset clears six headers: **`x-jwt-assertion`** — the gateway-signed
+  statement the service actually believes, which on a public operation the
+  gateway overwrites with nothing — and the five unsigned `X-User-*`.
+
+Copy the assets in Layout; do not hand-write a different `proxy_pass`, do not add
+`/oidc/` (token endpoint stays cross-origin; `thunder-authentication`), do not
+copy `apps/console/docker-entrypoint.sh`. Keep the official `nginx:alpine`
+`ENTRYPOINT`. The image adds exactly the three asset files: `nginx.conf`, the
+`default.conf` template and `/docker-entrypoint.d/15-aep-api-proxy.sh`.
+
+**Auth.** If the component declares an auth `platform-resource` dependency, its
+sign-in, screen gating and API-client wiring are `thunder-authentication`'s:
+copy that skill's `assets/app/` tree as one (`src/authz/`, `mock/authz/`,
+`scripts/gen-authz.mjs`), and reach the API through `apiFetch`/`apiJson` rather
+than attaching a bearer by hand. A screen is gated on the **operation it
+loads**, named once in `src/authz/screens.ts` and checked against the generated
+`src/authz/operations.gen.ts`; nothing about screens is in `security.json`
+(`authorization-model`).
+
+**Never `exposesAPI`.** That toggle is for backends only; a web-app expresses
+auth through its auth dependency instead.
+
+**The UI comes from the organization's design system.** Every component, layout
+primitive and style under `src/` comes from the design-system skill pinned on
+this component — no raw HTML styling, no second component or styling library.
+The one carve-out is `thunder-authentication`'s copied assets: `src/authz/gates.tsx`'s
+`Forbidden` and `NoAccess` ship as plain `<main>/<section>/<h1>` so the file is
+copied verbatim into any app, whatever design system it pins. Treat that markup
+as structure to restyle with the design system's components after copying, and
+keep the words — they are prescribed.
+That skill owns everything inside `src/`; this skill owns the app around it.
+Where the two appear to disagree — `base`, the `index.html` script tags, nginx,
+`window._env_` — **this skill wins**, because those are deployment facts, not
+style preferences. The data layer is untouched either way: `openapi-fetch` and
+the committed `src/generated/` client stay exactly as specified above.
+
+**Contract-first client, never hand-rolled shapes.** Every dependency has a
+committed OpenAPI contract: `specs/design/components/<component-name>/openapi.yaml`
+for a `component`-kind dependency, or
+`specs/design/components/<this-app>/dependencies/<dep-name>.openapi.yaml` for an
+`external`-kind one — project-root paths, sibling to this app's own folder.
+Generate types from it and call through `openapi-fetch`'s typed client (Layout);
+don't hand-write request/response shapes. Commit `src/generated/` — the
+per-component Docker build's context is this app's own folder alone.
+
+**An `ai-agent` dependency has no OpenAPI contract — it has one fixed chat
+contract.** It is a sibling like any other: reached **same-origin**, never
+through a `window._env_` URL — an agent has no browser-visible `<AGENT>_URL`
+any more than an API sibling does. If it is the primary dependency, call it at
+`/api`; if it is an extra sibling, call it at `/api/<agent-component-name>/`
+(Layout's nginx section covers wiring either into the drop-in). It is called
+with the same bearer token as any sibling service, but there is nothing to
+generate from; hand-write this one small client against the shape every
+platform agent speaks:
+
+```ts
+// POST /api/chat  (or /api/<agent-component-name>/chat for an extra sibling)
+// in:  { conversationId?: string, message: string,
+//        attachments?: [{ name: string, mediaType: string, data: string /* base64 */ }] }
+// out: { conversationId: string, text: string, toolCalls: unknown[] }
+```
+
+The agent keeps the conversation. Your state is exactly two things:
+
+- **`conversationId`** — from the first response; send it on every later
+  message. "New conversation" = drop it. Persist it in `sessionStorage` if the
+  conversation should survive a refresh.
+- **Your own transcript** — `{ role: "user" | "assistant", text: string }[]`,
+  built as you go: push the user's text when they send, push `response.text`
+  when the agent replies. That list is for RENDERING and is yours alone; the
+  agent never sees it and never returns one. No `messages` array crosses the
+  wire in either direction.
+
+**Files, only when the agent takes them.** If the agent's
+`specs/design/components/<agent>/agent.afm.md` declares `x-aep.attachments`,
+give the chat an attach control and compile its `types`, `maxFiles` and
+`maxFileSizeMB` in as constants: the picker's `accept` is the types; count,
+per-file size and the 15 MB total are checked before sending, naming the file
+that fails. Send each file base64 in `attachments`; `message` may be empty when
+files are present. Without the block, render no attach control. The agent keeps
+no files, so on a 400, 413 or 422 keep the files and their text in the composer
+for a retry and show the agent's `error`.
+
+A `404` from `/chat` means the conversation is gone or was never yours — drop
+the stored id, start fresh, and tell the user the previous conversation
+expired. Do not retry the same id.
+
+A `422` whose body carries `guardrail` (`{ error, guardrail }`) means the
+platform's AI gateway refused that message on policy — the agent is up. Say so
+in the user's terms with the agent's `error` as the reason ("This message was
+blocked by a safety check: <error>"), keep their text in the composer to edit,
+and keep the conversation as it was: the blocked turn left nothing behind.
+Reserve "couldn't reach the assistant" for a network failure or a 5xx.
+
+## Layout
+
+```
+<app-path>/
+├── package.json
+├── tsconfig.json         # ONE file — no project references, no tsconfig.node.json
+├── vite.config.ts        # no `base` — served at host root
+├── index.html
+├── scripts/
+│   └── gen-authz.mjs     # only with an auth dependency — copied verbatim, run by `npm run gen`
+├── src/
+│   ├── main.tsx
+│   ├── App.tsx
+│   ├── env.ts            # typed window._env_ shim
+│   ├── generated/        # openapi-typescript output, one file per dependency — commit, never hand-edit
+│   ├── api.ts            # openapi-fetch client(s), typed against generated/
+│   ├── authz/            # ┐ only with an auth dependency — thunder-authentication owns
+│   │   ├── session.ts    # │ the whole directory. session/core/gates/client arrive
+│   │   ├── core.ts       # │ verbatim with one `cp -r`; screens.ts is a pattern you
+│   │   ├── gates.tsx     # │ adapt; the two *.gen.ts are GENERATED and COMMITTED —
+│   │   ├── client.ts     # │ the per-component build context cannot see ../specs,
+│   │   ├── screens.ts    # │ so an uncommitted one fails the image build
+│   │   ├── roles.gen.ts  # │
+│   │   └── operations.gen.ts # ┘
+│   ├── shell/AppShell.tsx # the app chrome — every gated screen renders inside it
+│   └── pages/            # design-system components only, never raw HTML
+├── mock/                 # mock mode — references/mock-mode.md (mock/authz/ comes with the tree above)
+├── nginx/
+│   ├── nginx.conf        # copied from the skill assets, unchanged
+│   ├── default.conf      # copied from the skill assets, then /api locations kept
+│   └── 15-aep-api-proxy.sh
+├── Dockerfile
+├── .dockerignore         # what `COPY . .` leaves behind
+└── .gitignore            # `node_modules` and `dist` — both are made by a build
+                          #   and neither belongs in the project repo
+```
+
+**Copy the nginx assets first, and never run a project generator** — `npm create
+vite` and friends emit a different shape (project-referenced tsconfigs, starter
+CSS, sample SVGs) and all of it has to be undone before Verify passes. The tree
+above IS the shape. From the App Path:
+
+```bash
+mkdir -p nginx
+cp "$AEP_SKILLS_DIR/react-webapp/assets/nginx.conf" nginx/nginx.conf
+cp "$AEP_SKILLS_DIR/react-webapp/assets/nginx-default.conf" nginx/default.conf
+cp "$AEP_SKILLS_DIR/react-webapp/assets/15-aep-api-proxy.sh" nginx/15-aep-api-proxy.sh
+```
+
+If `$AEP_SKILLS_DIR` is unset, copy from `assets/` next to this skill's `SKILL.md`
+(the BFF mirrors that directory to `.claude/skills/react-webapp/`).
+
+Then in `nginx/15-aep-api-proxy.sh` only: rename **both** variables so they name
+the **primary** component-kind dependency in UPPER_SNAKE —
+`API_URL="${TODO_API_GATEWAY_URL:-}"` and the fallback `"${TODO_API_URL:-}"`
+(`todo-api` → `TODO_API_GATEWAY_URL` / `TODO_API_URL`). Rename both or the
+fallback silently wins and the app runs unauthenticated. Do not invent a second
+name, and do not delete the fallback — an unprotected sibling has no gateway
+address.
+
+**Done when:** `nginx/default.conf` contains `location /api/`,
+`proxy_pass http://$api_backend`, the `__API_CONTEXT__` rewrite and **all six
+`proxy_set_header` clearing lines** — `x-jwt-assertion`, `X-User-Id`,
+`X-User-Name`, `X-User-Groups`, `X-User-Ou` and `X-User-Scopes`; the drop-in
+script's two `API_URL=` lines use that
+primary `<DEP>_URL`; there is no `/oidc/` location.
+
+**Count the six.** This proxy is a lane into the service that the API gateway
+does not sit on. `x-jwt-assertion` is the line that matters most: it is what the
+service verifies and believes, and on a public operation the gateway replaces
+nothing, so one that arrives here arrives intact. An app whose conf is missing a
+line looks correct in every other respect — which is why the check is a count,
+not "it looks like the asset".
+
+Extra component-kind siblings: add one `location /api/<component-name>/` block
+each (same `proxy_pass` pattern, rewrite stripping that prefix) and a matching
+`sed` of `__<NAME>_BACKEND__` from that sibling's `<DEP>_URL`. Primary stays `/api`.
+
+`index.html` — the `env-config.js` tag is **synchronous**, **root-absolute** and
+comes BEFORE the bundle. No `async`, no `defer`, no `type="module"` on it.
+
+The leading `/` is load-bearing: a relative `./` resolves against the current
+route, so on any nested URL the catch-all returns `index.html` instead and the
+app never mounts.
+
+```html
+<head>
+  <script src="/env-config.js"></script>           <!-- 1. synchronous, root-absolute -->
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>  <!-- 2. the bundle -->
+</body>
+```
+
+`src/env.ts` — typed read, throwing if the file never loaded. Declare only keys
+from the table above that this app actually has (OIDC / `configurations.env` /
+external-kind URLs). Example with no browser API URL:
+
+```ts
+type Env = {
+  // Only if this SPA declares an auth dependency named `user-auth`. All four,
+  // and RESOURCE is not optional: without it the token's `aud` is wrong and
+  // every /api call 401s while sign-in looks healthy. The dependency also emits
+  // <DEP>_JWKS_URL; it is NOT here, because the browser never validates a token
+  // — the API gateway does — so no asset reads it.
+  // USER_AUTH_CLIENT_ID: string;
+  // USER_AUTH_ISSUER: string;
+  // USER_AUTH_SCOPES: string;
+  // USER_AUTH_RESOURCE: string;
+};
+
+declare global {
+  interface Window { _env_: Env }
+}
+
+if (!window._env_) {
+  throw new Error(
+    "window._env_ not set — /env-config.js failed to load. " +
+    "The platform mounts this file; if you see this locally, host " +
+    "/env-config.js from your dev server.",
+  );
+}
+
+export const env: Env = window._env_;
+```
+
+`src/generated/<component-name>.ts` — one run per dependency, before writing
+`api.ts`:
+
+```bash
+npx openapi-typescript ../specs/design/components/<component-name>/openapi.yaml \
+  -o src/generated/<component-name>.ts
+```
+
+(`external`-kind dependency: point at
+`../specs/design/components/<this-app>/dependencies/<dep-name>.openapi.yaml`
+instead.) Re-run and commit the diff whenever the upstream spec changes.
+
+`src/api.ts` — **same-origin** `baseUrl`. OpenAPI paths stay as designed
+(`/hello`, `/todos`); nginx strips `/api` before proxying.
+
+```ts
+import createClient from "openapi-fetch";
+import type { paths } from "./generated/todo-api";
+
+export const todoApi = createClient<paths>({ baseUrl: "/api" });
+
+// extra sibling:
+// export const otherApi = createClient<paths>({ baseUrl: "/api/other-api/" });
+```
+
+**Done when:** no `env.API_BASE_URL`, no `env.TODO_API_URL`, no
+`window._env_` key used as an API host.
+
+`Dockerfile` — multi-stage onto stock `nginx:alpine`. **Do not set `ENTRYPOINT`**
+— the image already runs `/docker-entrypoint.sh`, which runs
+`/docker-entrypoint.d/*.sh` then execs `CMD`.
+
+```dockerfile
+FROM node:20-alpine AS builder
+WORKDIR /app
+COPY package*.json ./
+RUN npm i
+COPY . .
+RUN npm run build
+
+FROM nginx:alpine
+COPY --from=builder /app/dist /usr/share/nginx/html
+COPY nginx/nginx.conf /etc/nginx/nginx.conf
+COPY nginx/default.conf /etc/nginx/aep/default.conf
+COPY nginx/15-aep-api-proxy.sh /docker-entrypoint.d/15-aep-api-proxy.sh
+RUN chmod +x /docker-entrypoint.d/15-aep-api-proxy.sh \
+ && rm /etc/nginx/conf.d/default.conf
+USER 101
+EXPOSE 9090
+CMD ["nginx", "-g", "daemon off;"]
+```
+
+**The container runs on a read-only root filesystem, as a non-root UID the
+platform picks** — the cloud `web-application` type enforces both and mounts no
+writable volume, so `/tmp` is read-only too. Every runtime write goes under
+`/dev/shm/nginx`, the tmpfs every pod has: the asset `nginx.conf` keeps nginx's
+pid and temp files there, and the drop-in renders the conf there from the
+read-only template at `/etc/nginx/aep/default.conf`. Keep every path you add
+under `/dev/shm/nginx` too. A local deploy runs on a writable root, so it proves
+nothing here; the first cloud deploy is where a stray write crash-loops the pod.
+
+`.dockerignore` — beside it, so `COPY . .` uploads this app's sources rather than
+a local `node_modules` and a stale `dist`, both of which the builder stage makes
+for itself:
+
+```text
+node_modules
+dist
+```
+
+`mock/` stays in the context: `vite.config.ts` imports `mock/plugin`, so the
+production build needs the directory on disk even though it ships none of it.
+
+`.gitignore` — beside it, with the **same two lines**, because the flow above
+runs `npm install` and `npm run build` in this folder and the project repo has no
+ignore rule of its own to catch what they leave. Without it `git add <app-path>`
+stages a whole `node_modules` and a `dist` that is stale the moment the design
+moves. Keep the patterns to these two and do not write an unanchored
+`generated/` — `src/generated/` is committed on purpose, and ignoring it is the
+`TS2307` failure in Pitfalls.
+
+**Done when:** the Dockerfile COPYs `nginx.conf` to `/etc/nginx/nginx.conf`,
+`default.conf` to `/etc/nginx/aep/default.conf` and the drop-in to
+`/docker-entrypoint.d/`, sets `USER 101`, and has no `ENTRYPOINT` line; and
+`.dockerignore` sits beside it.
+
+`workload.yaml` per the component contract. Consumer connection to the sibling:
+`visibility: project`, `envBindings.address: <DEP_NAME>_URL` (pod, for nginx).
+Any default under `configurations.env` arrives as a `window._env_` entry.
+
+**Done when:** this app's dependency on the sibling is `visibility: project`
+(never `external`). The sibling *service's* own endpoint `visibility` is the
+backend skill's to write, as `workload-and-wiring` gives a provider; leave it
+as written rather than trimming it because this SPA uses `/api`.
+
+## Pitfalls
+
+| Symptom | Cause | Fix |
+|---|---|---|
+| SPA throws on load: `window._env_ not set` | `/env-config.js` failed to load. A `SyntaxError: Unexpected token '<'` just before it means the tag is relative and the catch-all served `index.html`. Otherwise 404, or the `<script>` was `defer`/`async` | Root-absolute (`/env-config.js`), synchronous, in `<head>` before the bundle. Verify on a nested route loaded directly, not clicked into. |
+| Pod exits 1 at start: `Read-only file system` from `sed`, `mkdir` or nginx (`/etc/nginx`, `/tmp`, `/var/cache/nginx`, `/var/run`) | A runtime write outside `/dev/shm/nginx` — the cloud root filesystem is read-only, `/tmp` included, and `chmod` cannot make it writable | Copy `nginx.conf`, `default.conf` and the drop-in from the assets and lay them out as the Dockerfile above does; put any path you add under `/dev/shm/nginx`. |
+| `nginx: [emerg] host not found in upstream "…"` at pod start | Literal `proxy_pass http://hostname` (startup DNS) or leftover `/oidc/` block | Use the asset conf (`proxy_pass http://$api_backend`) and the drop-in; delete `/oidc/`. |
+| Browser CORS error calling the sibling API | `baseUrl` is the public gateway URL or `window._env_.API_BASE_URL` | `baseUrl: "/api"`. |
+| `/api` 502, SPA otherwise fine | API pod down, or drop-in left `TODO_API_URL` when the dep is named something else | Align both `API_URL="${…}"` lines with the dependency name; 502 while the API is down is expected. |
+| `/api` 502 on EVERY call, API pod healthy, the address is the public gateway vhost | nginx's `resolver` does not read `/etc/hosts`, so a `hostAliases` entry for the gateway vhost is invisible to it — and the `:19080` LoadBalancer routes strictly on that vhost anyway | `<DEP>_GATEWAY_URL` must be the gateway **runtime Service** on `:22893` (`…-gw-gateway-gateway-runtime.<org>-<env>.svc.cluster.local:22893`), whose router host is `*`. The platform sets it; do not override it with a vhost. |
+| `/api` 400 `no header value found for 'x-user-id'` | The proxy took the direct-Service lane, so nothing injected identity | Check the pod log line `aep-api-proxy: /api -> … [lane]`. `direct Service` means `<DEP>_GATEWAY_URL` was unset: the provider's design has no `exposesAPI.auth`, or the drop-in names the wrong variable. |
+| `/api` 404 from the gateway | The rewrite dropped the context prefix | `nginx/default.conf` must rewrite to `__API_CONTEXT__/$1`, not `/$1`. |
+| `/api` 503 through the gateway | The gateway authenticated but cannot reach the service | The provider endpoint's `workload.yaml` visibility is not the list `workload-and-wiring` gives a provider. |
+| Types in `src/generated/*` don't match the live service | Upstream `openapi.yaml` changed since last generation | Re-run the `openapi-typescript` command and commit the diff. |
+| Docker build succeeds but ships stale/hand-written shapes, or fails `ENOENT ../specs/...` | `src/generated/` or one of the three `*.gen.ts` tables wasn't committed — the per-component build context is this app's folder alone | Generate and commit ALL of them before PR. `gen-authz.mjs` says on stdout that the specs are out of reach and that it is keeping the committed outputs when it falls back; with any output missing it exits 1 and the image build fails. |
+| The deployed bundle gates a screen on an operation the design dropped, or a newly added handle reaches nothing | A **stale bundle**: `build` ran without `gen`, or the generated tables were committed before the last design change | `build` is `npm run gen && tsc --noEmit && vite build`; re-run `gen` and commit the diff whenever `security.json` or an `openapi.yaml` changes. A stale generated union type-checks green. |
+| A role's own screen is hidden for it, or opens and its list call answers 401 | The role's grants lack the handle of the operation the screen **loads** — whole-string match, so `x:read-all` (`GET /x`) is not `x:read` (`GET /me/x`); or `loads` names the wrong reach for the screen | A design finding, not a code one: in mock mode the console line names the operation and the handle. Report the role, the screen and that handle. Never widen `loads`, a guard or a mock to hide it. |
+| Build red on `TS2307: Cannot find module './generated/…'` (plus a burst of `TS7006` implicit-`any`) while `tsc --noEmit` is clean locally | `src/generated/` is **git-ignored**, usually by an unanchored `generated/` in the repo-root `.gitignore` written for a backend component. `git add` skipped it at exit 0 and `git status` stayed clean | `git check-ignore -v src/generated/*` names the offending line. Anchor that pattern (`/onboarding-api/generated/`), then re-add. The `TS7006` rows are downstream of the missing types and vanish with them. Never `git add -f`. |

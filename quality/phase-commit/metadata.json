@@ -1,0 +1,37 @@
+{
+  "name": "phase-commit",
+  "repo": "yarlson/yarstack",
+  "path": "plugins/yarstack/skills/phase-commit/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/yarlson/yarstack",
+  "dir_name": "phase-commit",
+  "downloaded_at": "2026-10-23T04:42:18.850799Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: review, validate",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 1,
+    "signals": [
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yarlson",
+  "source_url": "https://github.com/yarlson/yarstack/blob/main/plugins/yarstack/skills/phase-commit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yarlson/yarstack/blob/main/plugins/yarstack/skills/phase-commit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Create one local commit for a completed, validated, and reviewed unit of work. Use only when the user explicitly requests a commit without pushing or other delivery actions."
+}

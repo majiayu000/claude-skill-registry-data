@@ -1,0 +1,37 @@
+{
+  "name": "quick-fix",
+  "repo": "yandy-r/ystack",
+  "path": ".agents-plugin/skills/quick-fix/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yandy-r/ystack",
+  "dir_name": "quick-fix-yandy-r-ystack-2",
+  "downloaded_at": "2026-10-23T04:41:42.409437Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yandy-r",
+  "source_url": "https://github.com/yandy-r/ystack/blob/main/.agents-plugin/skills/quick-fix/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yandy-r/ystack/blob/main/.agents-plugin/skills/quick-fix/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Applies inline Quick Review findings without review artifacts. Use when choosing Apply fixes after quick-review, fixing pasted Quick Review findings, or making artifact-free review fixes."
+}

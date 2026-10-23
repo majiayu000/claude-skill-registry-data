@@ -1,0 +1,37 @@
+{
+  "name": "pdf-snapshot-tester",
+  "repo": "testland/qa",
+  "path": "plugins/qa-pdf-print/skills/pdf-snapshot-tester/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/testland/qa",
+  "dir_name": "pdf-snapshot-tester",
+  "downloaded_at": "2026-10-23T03:56:58.123923Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "testland",
+  "source_url": "https://github.com/testland/qa/blob/main/plugins/qa-pdf-print/skills/pdf-snapshot-tester/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/testland/qa/blob/main/plugins/qa-pdf-print/skills/pdf-snapshot-tester/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Test PDF outputs by converting per-page to images (`pdftocairo` / pdf2image / Poppler) and running pixel-diff (pixelmatch / Resemble.js / Pillow `ImageChops`) against approved baselines. Per-page-range targeting, threshold tuning, font-substitution warnings, byte-stable PDF metadata stripping (CreationDate, /ID); references/ carry cross-engine HTML\u2192PDF regression (Chromium `page.pdf()` / WeasyPrint / wkhtmltopdf per-engine baselines, engine-agreement tests, font-embedding checks, engine-version pinning). Use when a product generates invoices, contracts, or regulatory filings whose layout must not shift, when a PDF template, font pack, or generation library is about to change, or when swapping / upgrading the PDF engine."
+}

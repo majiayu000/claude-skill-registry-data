@@ -1,0 +1,36 @@
+{
+  "name": "wikicommit-search",
+  "repo": "wikicommit/wikicommit",
+  "path": ".claude/skills/wikicommit-search/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wikicommit/wikicommit",
+  "dir_name": "wikicommit-search",
+  "downloaded_at": "2026-10-23T04:31:03.663010Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-llm scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "llm"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wikicommit",
+  "source_url": "https://github.com/wikicommit/wikicommit/blob/main/.claude/skills/wikicommit-search/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wikicommit/wikicommit/blob/main/.claude/skills/wikicommit-search/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Search the wiki's pages by keyword, expanding synonyms and searching each configured language. Use this whenever someone asks what the wiki says about something, wants to find a page, asks whether a topic is already covered, or asks which pages mention a term \u2014 even if they do not say \"search\". In a repository with a .wikicommit/ directory, prefer this over grep \u2014 it ranks results, handles CJK without word breaks, expands synonyms and abbreviations, and finds the same page written in another language."
+}

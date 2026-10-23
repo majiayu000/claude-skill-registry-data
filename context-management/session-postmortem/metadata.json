@@ -1,0 +1,38 @@
+{
+  "name": "session-postmortem",
+  "repo": "techmefr/mentis",
+  "path": "skills/session-postmortem/SKILL.md",
+  "github_branch": "main",
+  "category": "context-management",
+  "source": "github.com/techmefr/mentis",
+  "dir_name": "session-postmortem",
+  "downloaded_at": "2026-10-23T03:55:05.795797Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, compaction, memory",
+    "score": 3,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "compaction",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "techmefr",
+  "source_url": "https://github.com/techmefr/mentis/blob/main/skills/session-postmortem/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/techmefr/mentis/blob/main/skills/session-postmortem/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when a past or running agent session went wrong and the operator wants to know why (repeated work, ignored plan, a skill that did not fire, slow or costly): pin the problem down, read the transcripts read-only, report with path:line evidence."
+}

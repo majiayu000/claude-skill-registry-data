@@ -1,0 +1,38 @@
+{
+  "name": "rls-reference",
+  "repo": "testland/qa",
+  "path": "plugins/qa-multi-tenancy/skills/rls-reference/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/testland/qa",
+  "dir_name": "rls-reference",
+  "downloaded_at": "2026-10-23T03:56:55.539587Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "testland",
+  "source_url": "https://github.com/testland/qa/blob/main/plugins/qa-multi-tenancy/skills/rls-reference/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/testland/qa/blob/main/plugins/qa-multi-tenancy/skills/rls-reference/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Pure-reference catalog of row-level security for tenant isolation, Postgres-first. Covers enabling RLS (ALTER TABLE ... ENABLE ROW LEVEL SECURITY, default-deny semantics), CREATE POLICY syntax (USING vs WITH CHECK clauses, FOR SELECT/INSERT/UPDATE/DELETE/ALL, permissive vs restrictive, TO role_name), bypassing RLS (superuser / BYPASSRLS / table owner / FORCE ROW LEVEL SECURITY), tenant context patterns (current_user, current_setting, JWT claims via Supabase auth.uid() / auth.jwt()), and performance discipline (wrapping auth functions in SELECT, index on policy-referenced columns). Row/tenant isolation on the non-Postgres engines - MySQL / MariaDB invoker views, CockroachDB native RLS, Vitess vindex sharding, SQL Server security policies - lives in references/other-engines.md. Use as the RLS-pattern reference for tenant isolation on any of these engines. Consumed by cross-tenant-data-leak-tests."
+}

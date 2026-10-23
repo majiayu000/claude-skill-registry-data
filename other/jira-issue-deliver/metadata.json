@@ -1,0 +1,37 @@
+{
+  "name": "jira-issue-deliver",
+  "repo": "yarlson/yarstack",
+  "path": "plugins/yarstack/skills/jira-issue-deliver/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yarlson/yarstack",
+  "dir_name": "jira-issue-deliver",
+  "downloaded_at": "2026-10-23T04:42:22.039423Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=2, integration=2",
+    "score": 2,
+    "runner_up": "integration",
+    "runner_up_score": 2,
+    "signals": [
+      "ci",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yarlson",
+  "source_url": "https://github.com/yarlson/yarstack/blob/main/plugins/yarstack/skills/jira-issue-deliver/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yarlson/yarstack/blob/main/plugins/yarstack/skills/jira-issue-deliver/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Autonomously deliver one Jira issue from intake to a ready GitHub pull request. Use only when the user authorizes implementation, commits, pushes, PR state changes, CI remediation, and resolution of requested automated review feedback."
+}

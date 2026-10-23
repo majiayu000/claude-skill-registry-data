@@ -1,0 +1,38 @@
+{
+  "name": "finishing-a-development-branch",
+  "repo": "tesslio/tessl-eval-demo",
+  "path": "00-activation-testing/before/plugins/sdlc-assurance/skills/finishing-a-development-branch/SKILL.md",
+  "github_branch": "master",
+  "category": "testing",
+  "source": "github.com/tesslio/tessl-eval-demo",
+  "dir_name": "finishing-a-development-branch-tesslio-tessl-eval-demo-3",
+  "downloaded_at": "2026-10-23T03:56:23.196465Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, pytest, integration",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "pytest",
+      "integration"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tesslio",
+  "source_url": "https://github.com/tesslio/tessl-eval-demo/blob/master/00-activation-testing/before/plugins/sdlc-assurance/skills/finishing-a-development-branch/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tesslio/tessl-eval-demo/blob/master/00-activation-testing/before/plugins/sdlc-assurance/skills/finishing-a-development-branch/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when the user wants to finish a development branch or asks what to do with finished work (merge it, push it and open a pull request, keep it for later, throw it away, or remove its worktree), and before any merge, push, branch deletion or worktree removal at the end of a piece of work. Runs the tests first, presents the options as the user's decision, and never destroys unmerged commits or uncommitted files without explicit confirmation."
+}

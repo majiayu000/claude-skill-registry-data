@@ -1,0 +1,41 @@
+{
+  "name": "axe-a11y",
+  "repo": "testland/qa",
+  "path": "plugins/qa-accessibility/skills/axe-a11y/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/testland/qa",
+  "dir_name": "axe-a11y",
+  "downloaded_at": "2026-10-23T03:56:52.172472Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for testing: test, qa, jest, integration, playwright, cypress",
+    "score": 6,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "test",
+      "qa",
+      "jest",
+      "integration",
+      "playwright",
+      "cypress"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "testland",
+  "source_url": "https://github.com/testland/qa/blob/main/plugins/qa-accessibility/skills/axe-a11y/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/testland/qa/blob/main/plugins/qa-accessibility/skills/axe-a11y/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Automated accessibility scanning across the five engines - axe-core (primary), pa11y, Lighthouse a11y, WAVE, and IBM Equal Access. Authors and runs axe-core scans via the `axe.run()` JavaScript API or the @axe-core/playwright / @axe-core/cli wrappers, parses `violations[]` into per-rule severity, configures rule disable / disable-by-tag patterns, and emits CI-gateable output; references/ carry the pa11y CLI (htmlcs + axe runners), Lighthouse CI `categories:accessibility` assertions, the WAVE API / overlay, and IBM Equal Access (Section 508) with their verified CLI / API / config. Use for any automated a11y scanner setup - axe-core for JS/TS UI test suites on every PR, and the references for CLI-only, Lighthouse-pipeline, WebAIM-branded, or Section 508 scanning."
+}

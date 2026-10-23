@@ -1,0 +1,38 @@
+{
+  "name": "video-3d",
+  "repo": "tymoshenko-dmytro/claude-marketing-skills",
+  "path": "skills/video-3d/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/tymoshenko-dmytro/claude-marketing-skills",
+  "dir_name": "video-3d",
+  "downloaded_at": "2026-10-23T04:11:09.784296Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, script, cli",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tymoshenko-dmytro",
+  "source_url": "https://github.com/tymoshenko-dmytro/claude-marketing-skills/blob/main/skills/video-3d/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tymoshenko-dmytro/claude-marketing-skills/blob/main/skills/video-3d/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Renders real 3D for any code-built video: three.js scenes inside HyperFrames, deterministic (every frame a pure function of t). Covers cameras (rails, ortho, dolly zoom, shake, cuts), extrusion, lathe, 3D text, lines, physical materials, HDRIs, baked AO, every EffectComposer pass (AO, DOF, AA, grain, LUT, glitch, SSR, motion blur), looks (ASCII, toon, halftone, dither, CRT, pixel art, ink), particles and GPU compute, baked physics and cloth, glTF models and animation, screens and image sequences, data maps and graphs, audio-driven visuals, DOM/GSAP/alpha compositing and WebGPU, each with a tested status. An executor under video-studio. Use when a film needs volume, light, depth, element counts or a rendered look that CSS 3D cannot give. Triggers: \"3D\", \"three.js\", \"WebGL\", \"WebGPU\", \"3D logo\", \"logo sting\", \"globe\", \"particles\", \"shader\", \"3D scene\", \"ASCII\", \"glTF\"."
+}

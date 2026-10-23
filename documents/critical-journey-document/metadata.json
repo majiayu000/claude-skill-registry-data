@@ -1,0 +1,37 @@
+{
+  "name": "critical-journey-document",
+  "repo": "yarlson/yarstack",
+  "path": "plugins/yarstack/skills/critical-journey-document/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/yarlson/yarstack",
+  "dir_name": "critical-journey-document",
+  "downloaded_at": "2026-10-23T04:42:23.500754Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, documentation",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yarlson",
+  "source_url": "https://github.com/yarlson/yarstack/blob/main/plugins/yarstack/skills/critical-journey-document/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yarlson/yarstack/blob/main/plugins/yarstack/skills/critical-journey-document/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Create one concise evidence-linked product journey record for one actor pursuing one goal. Use when product behavior needs traceable ownership, acceptance, telemetry, or service-flow documentation for a current decision or delivery gate; not for implemented-system context under docs/context/, which belongs to repo-context-document."
+}

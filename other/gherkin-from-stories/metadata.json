@@ -1,0 +1,37 @@
+{
+  "name": "gherkin-from-stories",
+  "repo": "testland/qa",
+  "path": "plugins/qa-bdd/skills/gherkin-from-stories/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/testland/qa",
+  "dir_name": "gherkin-from-stories",
+  "downloaded_at": "2026-10-23T03:56:53.529741Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: product=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "prd",
+      "feature"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "testland",
+  "source_url": "https://github.com/testland/qa/blob/main/plugins/qa-bdd/skills/gherkin-from-stories/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/testland/qa/blob/main/plugins/qa-bdd/skills/gherkin-from-stories/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Converts requirements in any input shape into Gherkin scenarios - a user story (\"As a \u2026 I want \u2026 so that \u2026\"), a signed-off acceptance-criteria list (ATDD: @AC-N-tagged scenarios, NotImplementedError step stubs, AC-to-test traceability table), existing manual test steps (declarative rewrite that strips UI mechanics), or a raw spec / PRD section (acceptance-criteria extraction with Gherkin or plain-list output). Maps criteria to Scenario blocks, detects Scenario Outline opportunities, factors shared Background, reuses the curated step library, and flags implicit preconditions instead of fabricating them. Emits Gherkin (plus stubs in ATDD mode): runner detection and full step wiring belong to bdd-scenario-author. Use whenever requirements text of any shape needs to become a .feature file."
+}

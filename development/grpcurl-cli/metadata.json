@@ -1,0 +1,39 @@
+{
+  "name": "grpcurl-cli",
+  "repo": "testland/qa",
+  "path": "plugins/qa-grpc/skills/grpcurl-cli/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/testland/qa",
+  "dir_name": "grpcurl-cli",
+  "downloaded_at": "2026-10-23T03:56:49.935675Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, compile, debug",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "testland",
+  "source_url": "https://github.com/testland/qa/blob/main/plugins/qa-grpc/skills/grpcurl-cli/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/testland/qa/blob/main/plugins/qa-grpc/skills/grpcurl-cli/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Wraps grpcurl, the curl-equivalent CLI for gRPC. Covers descriptor sources (server reflection default, --import-path + --proto for proto files, --protoset for compiled descriptor sets), service discovery (`list`, `describe`), invoking unary RPCs (`-d '{...}'`, `-d @file.json`, `-d @` for stdin), streaming RPCs (newline-delimited JSON via stdin), TLS configuration (--cacert, --cert, --key, --insecure, --plaintext), header injection (-H 'Authorization: Bearer ...'), and exit codes. Use for ad-hoc gRPC debugging, smoke testing, scriptable PR-time gates, and CLI-based interaction with reflective gRPC services."
+}

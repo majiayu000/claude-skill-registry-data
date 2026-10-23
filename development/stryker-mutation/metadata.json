@@ -1,0 +1,39 @@
+{
+  "name": "stryker-mutation",
+  "repo": "testland/qa",
+  "path": "plugins/qa-mutation-testing/skills/stryker-mutation/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/testland/qa",
+  "dir_name": "stryker-mutation",
+  "downloaded_at": "2026-10-23T03:57:03.782271Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, framework, build",
+    "score": 4,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "testland",
+  "source_url": "https://github.com/testland/qa/blob/main/plugins/qa-mutation-testing/skills/stryker-mutation/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/testland/qa/blob/main/plugins/qa-mutation-testing/skills/stryker-mutation/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Configures StrykerJS for mutation testing of JavaScript / TypeScript / React / Vue / Svelte / Node - picks the test-runner plugin (`@stryker-mutator/jest-runner`, `mocha-runner`, `vitest-runner`, `karma-runner`), authors `stryker.conf.json` with mutate globs + thresholds, runs incremental mode for PRs (only mutate changed files), and reports the mutation score. Use when a JS/TS test suite has \u226580% line coverage and the team wants to verify the tests actually catch bugs (not just touch lines)."
+}

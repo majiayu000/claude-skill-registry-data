@@ -1,0 +1,37 @@
+{
+  "name": "new-analyzer",
+  "repo": "utkarsh5026/aws-analyzer",
+  "path": ".claude/skills/new-analyzer/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/utkarsh5026/aws-analyzer",
+  "dir_name": "new-analyzer",
+  "downloaded_at": "2026-10-23T04:13:57.090053Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "utkarsh5026",
+  "source_url": "https://github.com/utkarsh5026/aws-analyzer/blob/main/.claude/skills/new-analyzer/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/utkarsh5026/aws-analyzer/blob/main/.claude/skills/new-analyzer/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Scaffold a new AWS service analyzer - src/aws_analyzer/<service>.py with the five-section layout, the shared helpers imported from _kit and its Analyzer and View built on _kit's base classes, a first set of useful commands, moto tests, a README section, a docs guide page and a line on the home page. Use when starting a new service; bedrock_kb.py (Bedrock Knowledge Bases) is the latest one built this way."
+}

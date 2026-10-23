@@ -1,0 +1,39 @@
+{
+  "name": "googletest-embedded-arm",
+  "repo": "testland/qa",
+  "path": "plugins/qa-embedded/skills/googletest-embedded-arm/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/testland/qa",
+  "dir_name": "googletest-embedded-arm",
+  "downloaded_at": "2026-10-23T03:57:02.877691Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, framework, build, compile",
+    "score": 4,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "testland",
+  "source_url": "https://github.com/testland/qa/blob/main/plugins/qa-embedded/skills/googletest-embedded-arm/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/testland/qa/blob/main/plugins/qa-embedded/skills/googletest-embedded-arm/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Author and run GoogleTest 1.17+ for embedded C++ on ARM targets - TEST() / TEST_F() / TEST_P() / TYPED_TEST(), EXPECT_* vs ASSERT_* assertions, fixtures with SetUp() / TearDown(), value-parameterised tests, GoogleMock when paired, cross-compile with arm-none-eabi-g++, run on host or under QEMU via the qemu-system-test-runner skill, --gtest_filter / --gtest_output=xml:results.xml / --gtest_shuffle / --gtest_repeat command-line flags, and XML / JSON output parsing for CI. Use when the unit-under-test is C++ (modern C++17+) and the team wants the de-facto C++ test framework instead of the C-only Unity. For C use unity-test-framework-c; for pure C mocks see the CMock reference in ceedling-build-runner."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "proptest-testing",
+  "repo": "testland/qa",
+  "path": "plugins/qa-property-based/skills/proptest-testing/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/testland/qa",
+  "dir_name": "proptest-testing",
+  "downloaded_at": "2026-10-23T03:57:01.011053Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, framework, refactor",
+    "score": 4,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "testland",
+  "source_url": "https://github.com/testland/qa/blob/main/plugins/qa-property-based/skills/proptest-testing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/testland/qa/blob/main/plugins/qa-property-based/skills/proptest-testing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Authors property-based tests in Rust using proptest - wires the `proptest!` macro, defines strategies (`prop::collection::vec`, type-driven `any` strategies, regex-based string strategies), uses the strategy-per-value model (vs QuickCheck's per-type) for flexible composition, and exploits proptest's automatic shrinking + persistence of failed cases (regression test artifact). Use when a Rust codebase needs PBT - pairs especially well with parsers, serializers, and any function with a structured input domain."
+}

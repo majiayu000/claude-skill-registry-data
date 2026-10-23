@@ -1,0 +1,37 @@
+{
+  "name": "bdd-step-library-curator",
+  "repo": "testland/qa",
+  "path": "plugins/qa-bdd/skills/bdd-step-library-curator/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/testland/qa",
+  "dir_name": "bdd-step-library-curator",
+  "downloaded_at": "2026-10-23T03:56:56.865235Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "testland",
+  "source_url": "https://github.com/testland/qa/blob/main/plugins/qa-bdd/skills/bdd-step-library-curator/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/testland/qa/blob/main/plugins/qa-bdd/skills/bdd-step-library-curator/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Keeps a BDD step-definition library DRY across a Cucumber / Behave / Reqnroll project - inventories every step definition, detects duplicates (different patterns matching the same intent), recommends canonical consolidations, reorganizes steps by domain, publishes a step-library README the team greps for \"is there already a step for X?\" before authoring new ones, and builds a scenario coverage map that fingerprints new Gherkin scenarios against the live suite to classify each as duplicate, partial overlap, or genuine gap before any test is authored. Use when a BDD project's step count grows past ~50, on a quarterly step-library review, when a new engineer is about to write a duplicate step, or when fresh .feature files need a covered-already check."
+}

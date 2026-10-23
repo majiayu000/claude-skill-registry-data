@@ -1,0 +1,39 @@
+{
+  "name": "tui-snapshot-tester",
+  "repo": "testland/qa",
+  "path": "plugins/qa-cli-tools/skills/tui-snapshot-tester/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/testland/qa",
+  "dir_name": "tui-snapshot-tester",
+  "downloaded_at": "2026-10-23T03:56:59.387078Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for testing: test, qa, pytest, integration",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "qa",
+      "pytest",
+      "integration"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "testland",
+  "source_url": "https://github.com/testland/qa/blob/main/plugins/qa-cli-tools/skills/tui-snapshot-tester/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/testland/qa/blob/main/plugins/qa-cli-tools/skills/tui-snapshot-tester/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Snapshot testing for terminal UI apps (TUIs) - captures rendered terminal frames as deterministic SVG / text snapshots, diffs them on every run, surfaces a reviewable HTML report on failure, and supports `--snapshot-update` to accept changes intentionally. Wraps `pytest-textual-snapshot` for Python Textual apps; provides equivalent recipes for Ratatui (Rust) `insta` snapshots, Charm Bracelet (Go) `teatest` golden files, and Ink (Node) `ink-testing-library`. Use for any TUI where layout regressions otherwise reach users via `screenshot looks wrong in terminal`."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "codeql-queries",
+  "repo": "testland/qa",
+  "path": "plugins/qa-security-scanning/skills/codeql-queries/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/testland/qa",
+  "dir_name": "codeql-queries",
+  "downloaded_at": "2026-10-23T03:57:02.755833Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "testland",
+  "source_url": "https://github.com/testland/qa/blob/main/plugins/qa-security-scanning/skills/codeql-queries/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/testland/qa/blob/main/plugins/qa-security-scanning/skills/codeql-queries/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Configures and runs GitHub CodeQL - semantic-database SAST with queries written in the CodeQL declarative query language; supports `codeql database create` (per-language) + `codeql database analyze` with --format=sarif; ships query packs (`codeql/javascript-queries`, `codeql/python-queries`, `codeql/java-queries`, `codeql/go-queries`, etc.); integrates with GitHub Code Scanning via SARIF upload; suppression via inline comment + sarif-filter + Security-tab dismissal. Use when the team uses GitHub-hosted repos and needs deep semantic SAST beyond pattern matching (cross-file taint flows, dataflow analysis)."
+}

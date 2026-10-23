@@ -1,0 +1,37 @@
+{
+  "name": "ga4-reports",
+  "repo": "tymoshenko-dmytro/claude-marketing-skills",
+  "path": "skills/ga4-reports/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/tymoshenko-dmytro/claude-marketing-skills",
+  "dir_name": "ga4-reports",
+  "downloaded_at": "2026-10-23T04:11:08.776554Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tymoshenko-dmytro",
+  "source_url": "https://github.com/tymoshenko-dmytro/claude-marketing-skills/blob/main/skills/ga4-reports/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tymoshenko-dmytro/claude-marketing-skills/blob/main/skills/ga4-reports/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Pull and explain Google Analytics 4 reports \u2014 traffic by source and channel, period comparisons, daily breakdowns, conversion events, signup and purchase funnels \u2014 through the GA4 MCP server, with a REST fallback when the MCP hangs. Knows the GA4 reporting traps (cross-day attribution, users vs events, Ads vs GA date mismatch). Use when someone asks about website traffic, GA4, sessions, conversions, funnel drop-off or channel performance. Triggers: \"pull GA4\", \"traffic last month\", \"conversions by source\", \"funnel report\", \"Google Analytics\"."
+}

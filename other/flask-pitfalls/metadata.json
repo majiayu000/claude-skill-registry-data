@@ -1,0 +1,37 @@
+{
+  "name": "flask-pitfalls",
+  "repo": "techmefr/mentis",
+  "path": "skills/flask-pitfalls/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/techmefr/mentis",
+  "dir_name": "flask-pitfalls",
+  "downloaded_at": "2026-10-23T03:54:58.302273Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "techmefr",
+  "source_url": "https://github.com/techmefr/mentis/blob/main/skills/flask-pitfalls/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/techmefr/mentis/blob/main/skills/flask-pitfalls/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when a Flask application is written, configured or deployed: async views and what they do and do not buy on a WSGI worker, tasks spawned from a view, app and request context errors and proxies handed to another thread, teardown callbacks, debug mode and the interactive debugger, the development server reaching production, SECRET_KEY and key rotation, request size and form limits, trusted hosts, session cookie settings and the signed client-side session, and running behind a reverse proxy with ProxyFix."
+}

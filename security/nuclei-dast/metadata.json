@@ -1,0 +1,39 @@
+{
+  "name": "nuclei-dast",
+  "repo": "testland/qa",
+  "path": "plugins/qa-security-scanning/skills/nuclei-dast/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/testland/qa",
+  "dir_name": "nuclei-dast",
+  "downloaded_at": "2026-10-23T03:56:59.053424Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for security: security, auth, vulnerability, fuzzing",
+    "score": 4,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "vulnerability",
+      "fuzzing"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "testland",
+  "source_url": "https://github.com/testland/qa/blob/main/plugins/qa-security-scanning/skills/nuclei-dast/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/testland/qa/blob/main/plugins/qa-security-scanning/skills/nuclei-dast/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Installs and runs ProjectDiscovery Nuclei template-based HTTP scanning: selects templates via `-t {path}` and `-tags`/`-severity` filters, controls request rate with `-rl`, emits JSONL output via `-j` for cross-tool finding aggregation, authors custom YAML matchers for app-specific checks, and gates CI on severity thresholds. Use when the team runs Nuclei alongside ZAP for template-driven DAST coverage, needs fuzzing-style probes beyond ZAP passive scan, or wants to operationalize community CVE templates in a pipeline."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "ci-failure-triage",
+  "repo": "testland/qa",
+  "path": "plugins/qa-bug-repro/skills/ci-failure-triage/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/testland/qa",
+  "dir_name": "ci-failure-triage-testland-qa",
+  "downloaded_at": "2026-10-23T03:56:55.404788Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: ci, deploy, infra, infrastructure",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ci",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "testland",
+  "source_url": "https://github.com/testland/qa/blob/main/plugins/qa-bug-repro/skills/ci-failure-triage/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/testland/qa/blob/main/plugins/qa-bug-repro/skills/ci-failure-triage/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Decides what kind of failure a red CI test is before anyone starts fixing it. Extracts seven failure signals from the runner output, stack trace, run history, and environment metadata, then walks an ordered first-match-wins rule set to exactly one verdict: flaky-known, environment-drift, defect, timeout, flaky-pre-incident, or flake-of-unknown-cause. Emits the verdict together with the alternatives that were rejected and the specific condition each one failed, so the triage decision is auditable rather than asserted. Use when a test has just gone red and the next action depends on whether the cause is a product defect, a non-deterministic test, or drifted infrastructure."
+}

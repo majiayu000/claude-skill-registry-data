@@ -1,0 +1,38 @@
+{
+  "name": "cadet-memory-v3-migration",
+  "repo": "vargasjr-dev/mycadet-temp",
+  "path": "skills/cadet-memory-v3-migration/SKILL.md",
+  "github_branch": "main",
+  "category": "context-management",
+  "source": "github.com/vargasjr-dev/mycadet-temp",
+  "dir_name": "cadet-memory-v3-migration",
+  "downloaded_at": "2026-10-23T04:15:49.540617Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, retrieval, memory",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 1,
+    "signals": [
+      "context",
+      "retrieval",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vargasjr-dev",
+  "source_url": "https://github.com/vargasjr-dev/mycadet-temp/blob/main/skills/cadet-memory-v3-migration/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vargasjr-dev/mycadet-temp/blob/main/skills/cadet-memory-v3-migration/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "One-time migration of an existing memory-v2 concept corpus into the memory-v3 section-grain \"wiki\" \u2014 topical articles with a stand-alone lead and queryable sections \u2014 with loss-proof staging, assistant-reviewed authoring, and a retrieval-eval gate before cutover."
+}

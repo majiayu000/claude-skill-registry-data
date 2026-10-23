@@ -1,0 +1,38 @@
+{
+  "name": "recreate",
+  "repo": "wso2/labs-agentic-engineer",
+  "path": "skills/recreate/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/wso2/labs-agentic-engineer",
+  "dir_name": "recreate",
+  "downloaded_at": "2026-10-23T04:33:50.762234Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, prd, feature",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "prd",
+      "feature"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wso2",
+  "source_url": "https://github.com/wso2/labs-agentic-engineer/blob/main/skills/recreate/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wso2/labs-agentic-engineer/blob/main/skills/recreate/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use for the first design of a product recreated from its existing code \u2014 the /recreate flow on a project seeded from a code-to-spec bundle, whose requirements, domain model and upstream dependency definitions are already in place. Treats the seeded definitions as givens, then walks the design lineup for every feature."
+}

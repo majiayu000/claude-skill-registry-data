@@ -1,0 +1,38 @@
+{
+  "name": "ads-parser",
+  "repo": "tymoshenko-dmytro/claude-marketing-skills",
+  "path": "skills/ads-parser/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/tymoshenko-dmytro/claude-marketing-skills",
+  "dir_name": "ads-parser",
+  "downloaded_at": "2026-10-23T04:11:07.898071Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: marketing, social, brand",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "marketing",
+      "social",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tymoshenko-dmytro",
+  "source_url": "https://github.com/tymoshenko-dmytro/claude-marketing-skills/blob/main/skills/ads-parser/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tymoshenko-dmytro/claude-marketing-skills/blob/main/skills/ads-parser/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Collect and analyze a company's advertising from public ad-transparency libraries \u2014 LinkedIn Ad Library, Google Ads Transparency Center, Meta Ad Library \u2014 with exact ad texts, run dates, disclosed impressions and links to every ad. Use when someone asks what ads a company runs, how a competitor advertises, or wants a creative teardown from the libraries. Triggers: \"what ads does X run\", \"competitor ads\", \"ad library\", \"collect X's creatives\"."
+}

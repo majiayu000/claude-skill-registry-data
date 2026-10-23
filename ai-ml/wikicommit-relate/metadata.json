@@ -1,0 +1,37 @@
+{
+  "name": "wikicommit-relate",
+  "repo": "wikicommit/wikicommit",
+  "path": ".claude/skills/wikicommit-relate/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/wikicommit/wikicommit",
+  "dir_name": "wikicommit-relate",
+  "downloaded_at": "2026-10-23T04:31:04.287418Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, model",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wikicommit",
+  "source_url": "https://github.com/wikicommit/wikicommit/blob/main/.claude/skills/wikicommit-relate/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wikicommit/wikicommit/blob/main/.claude/skills/wikicommit-relate/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Decide with a person how two or more wiki pages relate \u2014 the same concept, one inside the other, related, distinct, or editions of one series \u2014 and record the decision so the pages are not raised as name collisions again. Use this only when someone explicitly asks to relate or deduplicate pages, or to work through the name collisions wikicommit-status reports. It writes the wiki's record of relations, so do not use it to look for duplicates or to answer what a page says \u2014 wikicommit-status and wikicommit-search do that without writing."
+}

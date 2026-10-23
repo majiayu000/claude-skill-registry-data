@@ -1,0 +1,37 @@
+{
+  "name": "jira-issue-create",
+  "repo": "yarlson/yarstack",
+  "path": "plugins/yarstack/skills/jira-issue-create/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yarlson/yarstack",
+  "dir_name": "jira-issue-create",
+  "downloaded_at": "2026-10-23T04:42:21.220102Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yarlson",
+  "source_url": "https://github.com/yarlson/yarstack/blob/main/plugins/yarstack/skills/jira-issue-create/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yarlson/yarstack/blob/main/plugins/yarstack/skills/jira-issue-create/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Create one or more Jira issues through acli from user-approved drafts using heading-based Context, Acceptance criteria, and Engineering notes sections. Use only when explicitly invoked to create Jira issues; use jira-issue-refine when requirements still need refinement."
+}

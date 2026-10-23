@@ -1,0 +1,38 @@
+{
+  "name": "release",
+  "repo": "utkarsh5026/aws-analyzer",
+  "path": ".claude/skills/release/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/utkarsh5026/aws-analyzer",
+  "dir_name": "release-utkarsh5026-aws-analyzer",
+  "downloaded_at": "2026-10-23T04:13:56.537831Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, build, refactor",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "utkarsh5026",
+  "source_url": "https://github.com/utkarsh5026/aws-analyzer/blob/main/.claude/skills/release/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/utkarsh5026/aws-analyzer/blob/main/.claude/skills/release/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Publish a new version of aws-analyzer to PyPI - check what's on main since the last release, write its CHANGELOG entry, pick the version, open a release pull request, and once the user confirms, merge it and publish the GitHub release that uploads to PyPI. Use when the user asks to release, publish, ship or cut a version, or to push their changes to PyPI."
+}

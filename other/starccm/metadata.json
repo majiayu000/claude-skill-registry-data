@@ -1,0 +1,37 @@
+{
+  "name": "starccm-sim",
+  "repo": "svd-ai-lab/sim-cli",
+  "path": "plugins/starccm/src/sim_plugin_starccm/_skills/starccm/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/svd-ai-lab/sim-cli",
+  "dir_name": "starccm",
+  "downloaded_at": "2026-10-23T03:48:59.642822Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "svd-ai-lab",
+  "source_url": "https://github.com/svd-ai-lab/sim-cli/blob/main/plugins/starccm/src/sim_plugin_starccm/_skills/starccm/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/svd-ai-lab/sim-cli/blob/main/plugins/starccm/src/sim_plugin_starccm/_skills/starccm/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when driving Simcenter STAR-CCM+ for CFD/multiphysics tasks: batch macro execution, mesh generation, solver setup, and result extraction. Choose the smallest real control path first: direct `starccm+` launcher/batch, local project artifacts, native Java macros, or sim-cli when standardized runtime validation, diagnostics, sessions, and artifact handling are useful."
+}

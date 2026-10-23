@@ -1,0 +1,39 @@
+{
+  "name": "mull-mutation",
+  "repo": "testland/qa",
+  "path": "plugins/qa-mutation-testing/skills/mull-mutation/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/testland/qa",
+  "dir_name": "mull-mutation",
+  "downloaded_at": "2026-10-23T03:56:59.678817Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, build, compile, debug",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "testland",
+  "source_url": "https://github.com/testland/qa/blob/main/plugins/qa-mutation-testing/skills/mull-mutation/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/testland/qa/blob/main/plugins/qa-mutation-testing/skills/mull-mutation/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Runs Mull, the LLVM-IR mutation testing tool, against C/C++ test binaries built with Clang: covers install (the version-matched mull-NN package), the -fpass-plugin build flags for the Mull IR frontend, mull-runner invocation, the mutator catalog, path filtering, and GitHub Actions CI. Use when a C or C++ project needs mutation-score verification with the tool already chosen. Does not select among mutation tools and does not cover other languages (stryker-mutation for JS/TS, stryker-net-mutation for .NET, pitest-mutation for the JVM, mutmut-mutation for Python)."
+}

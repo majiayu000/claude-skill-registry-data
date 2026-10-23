@@ -1,0 +1,38 @@
+{
+  "name": "api-chaos-runner",
+  "repo": "testland/qa",
+  "path": "plugins/qa-api-testing/skills/api-chaos-runner/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/testland/qa",
+  "dir_name": "api-chaos-runner",
+  "downloaded_at": "2026-10-23T03:56:57.212757Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=3, testing=3",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "ci",
+      "docker",
+      "kubernetes"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "testland",
+  "source_url": "https://github.com/testland/qa/blob/main/plugins/qa-api-testing/skills/api-chaos-runner/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/testland/qa/blob/main/plugins/qa-api-testing/skills/api-chaos-runner/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Runs the project's existing API tests under injected network chaos - latency, timeouts, dropped connections, bandwidth caps, packet loss - via Toxiproxy (notes on Pumba / Gremlin / LitmusChaos). Builds a per-scenario chaos matrix and reports which assertions break under which conditions, verifying resilience patterns (retry, circuit-breaker, timeout, fallback). Unlike schemathesis-fuzzing and restler-fuzzing, which generate new tests from a schema, this drives your EXISTING example-based suite."
+}

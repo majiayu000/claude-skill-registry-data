@@ -1,0 +1,38 @@
+{
+  "name": "prototype",
+  "repo": "wso2/labs-agentic-engineer",
+  "path": "skills/prototype/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/wso2/labs-agentic-engineer",
+  "dir_name": "prototype",
+  "downloaded_at": "2026-10-23T04:33:51.105744Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, prd, feature",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "prd",
+      "feature"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wso2",
+  "source_url": "https://github.com/wso2/labs-agentic-engineer/blob/main/skills/prototype/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wso2/labs-agentic-engineer/blob/main/skills/prototype/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when the design reaches a web application: write its prototype (prototype.json + prototype.tsx), a clickable, checked app on the data model and the roles that the reviewer uses before anything is built. A coding run that builds a web-application reads its references/implementing.md."
+}

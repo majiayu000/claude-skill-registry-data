@@ -1,0 +1,39 @@
+{
+  "name": "gameplay-recording-replay",
+  "repo": "testland/qa",
+  "path": "plugins/qa-game/skills/gameplay-recording-replay/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/testland/qa",
+  "dir_name": "gameplay-recording-replay",
+  "downloaded_at": "2026-10-23T03:57:00.443849Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=4, gaming=4",
+    "score": 4,
+    "runner_up": "gaming",
+    "runner_up_score": 4,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "testland",
+  "source_url": "https://github.com/testland/qa/blob/main/plugins/qa-game/skills/gameplay-recording-replay/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/testland/qa/blob/main/plugins/qa-game/skills/gameplay-recording-replay/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Build a deterministic gameplay record/replay test artefact for Unity, Unreal, or Godot - record a player session, save it to disk, replay it bit-for-bit, and assert that the resulting game state matches the original. Covers Unity Input System's InputEventTrace API (Enable / Disable / WriteTo / ReadFrom / Replay) for input-level capture, Unreal's Replay System (DemoRec / DemoPlay / DemoStop console commands plus DemoNetDriver + NetworkReplayStreamer, default storage at %LOCALAPPDATA%/{Project}/Saved/Demos) for replication-stream capture, and Godot's community-pattern deterministic-RNG + input-script replay since Godot ships no first-party replay system. Use when authoring a regression-test artefact for player-recorded sessions, building a netcode replay for spectator / esports, or producing reproducible bug repros for cert teams."
+}

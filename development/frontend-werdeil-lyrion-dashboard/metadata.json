@@ -1,0 +1,38 @@
+{
+  "name": "frontend",
+  "repo": "werdeil/lyrion-dashboard",
+  "path": ".claude/skills/frontend/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/werdeil/lyrion-dashboard",
+  "dir_name": "frontend-werdeil-lyrion-dashboard",
+  "downloaded_at": "2026-10-23T04:27:14.585927Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, framework, build",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "werdeil",
+  "source_url": "https://github.com/werdeil/lyrion-dashboard/blob/master/.claude/skills/frontend/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/werdeil/lyrion-dashboard/blob/master/.claude/skills/frontend/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Work on the dashboard's frontend \u2014 the vanilla JS/CSS page with no framework or bundler. Use this whenever a task touches `static/nowplaying.js`, `static/style.css`, the Jinja templates (`templates/nowplaying.html`, `_icons.html`), the accent-color tinting, the karaoke lyrics sync, the now-playing poll, or the empty-state mosaic / recent-plays pile. Covers how the page is wired, how it reads i18n and data from the server, the ESLint gate, and the Android bridge, so changes match the existing patterns."
+}

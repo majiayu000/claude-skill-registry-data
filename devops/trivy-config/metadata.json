@@ -1,0 +1,39 @@
+{
+  "name": "trivy-config",
+  "repo": "testland/qa",
+  "path": "plugins/qa-iac/skills/trivy-config/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/testland/qa",
+  "dir_name": "trivy-config",
+  "downloaded_at": "2026-10-23T03:56:50.092878Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: ci, docker, kubernetes, infra",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ci",
+      "docker",
+      "kubernetes",
+      "infra"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "testland",
+  "source_url": "https://github.com/testland/qa/blob/main/plugins/qa-iac/skills/trivy-config/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/testland/qa/blob/main/plugins/qa-iac/skills/trivy-config/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Runs Trivy's misconfiguration scanner (`trivy config`) against IaC directories to detect security issues across Terraform, CloudFormation, Kubernetes manifests, Helm charts, Dockerfiles, and Azure ARM templates - installs Trivy, scans with severity gating via `--exit-code`, suppresses findings via `.trivyignore` / `.trivyignore.yaml` or inline annotations, extends built-in checks with custom Rego policies, and emits SARIF for GitHub Code Scanning. Trivy is the tfsec successor - the forward path from tfsec per Aqua Security's own migration guidance - and the legacy tfsec workflow (install, custom YAML rules, ignore annotations, migration steps) is kept in references/tfsec-legacy.md. Use when adopting a consolidated IaC scanner for new projects, migrating away from tfsec (or still operating a Terraform-only tfsec stack), or scanning mixed IaC stacks with a single tool."
+}

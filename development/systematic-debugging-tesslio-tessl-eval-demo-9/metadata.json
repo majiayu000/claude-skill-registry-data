@@ -1,0 +1,38 @@
+{
+  "name": "systematic-debugging",
+  "repo": "tesslio/tessl-eval-demo",
+  "path": "03-ablation/versions/cycle-only/sdlc-implementation/skills/systematic-debugging/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/tesslio/tessl-eval-demo",
+  "dir_name": "systematic-debugging-tesslio-tessl-eval-demo-9",
+  "downloaded_at": "2026-10-23T03:56:18.201747Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tesslio",
+  "source_url": "https://github.com/tesslio/tessl-eval-demo/blob/master/03-ablation/versions/cycle-only/sdlc-implementation/skills/systematic-debugging/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tesslio/tessl-eval-demo/blob/master/03-ablation/versions/cycle-only/sdlc-implementation/skills/systematic-debugging/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Investigates a test failure, bug, or unexpected behavior to find its root cause before proposing any fix - reproduce the issue, trace the data flow, form and test one hypothesis at a time, then implement and verify the fix. This is the debugging stage inside the delivery-flow workflow, entered by requests like \"debug this failure\", \"why is this test failing\", \"find the root cause\", or \"this bug keeps coming back\" once delivery-flow has handed off a bug. Do not activate directly for a standalone bug report that has not gone through delivery-flow first."
+}
