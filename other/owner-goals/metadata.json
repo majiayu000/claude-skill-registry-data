@@ -1,0 +1,37 @@
+{
+  "name": "owner-goals",
+  "repo": "thedotmack/claude-mem",
+  "path": "plugin/skills/owner-goals/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/thedotmack/claude-mem",
+  "dir_name": "owner-goals",
+  "downloaded_at": "2026-10-24T04:20:29.312692Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "thedotmack",
+  "source_url": "https://github.com/thedotmack/claude-mem/blob/main/plugin/skills/owner-goals/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/thedotmack/claude-mem/blob/main/plugin/skills/owner-goals/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Map what the owner wants from the prompts they typed themselves (prompts an agent wrote are left out), then put their top priorities and open asks, each with dated quotes, in the Goals panel at the top of My Work. Use when asked for \"owner goals\", \"my goals\", \"what do I want\", \"what am I asking for\", \"map my prompts\", or to refresh Goals in My Work."
+}

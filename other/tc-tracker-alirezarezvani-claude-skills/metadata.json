@@ -1,0 +1,37 @@
+{
+  "name": "tc-tracker",
+  "repo": "alirezarezvani/claude-skills",
+  "path": "engineering/skills/tc-tracker/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/alirezarezvani/claude-skills",
+  "dir_name": "tc-tracker-alirezarezvani-claude-skills",
+  "downloaded_at": "2026-10-24T04:02:06.382394Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "alirezarezvani",
+  "source_url": "https://github.com/alirezarezvani/claude-skills/blob/main/engineering/skills/tc-tracker/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/alirezarezvani/claude-skills/blob/main/engineering/skills/tc-tracker/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user asks to track technical changes, create change records, manage TC lifecycles, or hand off work between AI sessions. Covers init/create/update/status/resume/close/export workflows for structured code change documentation."
+}

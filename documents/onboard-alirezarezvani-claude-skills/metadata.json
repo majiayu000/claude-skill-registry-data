@@ -1,0 +1,37 @@
+{
+  "name": "onboard",
+  "repo": "alirezarezvani/claude-skills",
+  "path": "c-level-agents/skills/onboard/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/alirezarezvani/claude-skills",
+  "dir_name": "onboard-alirezarezvani-claude-skills",
+  "downloaded_at": "2026-10-24T04:02:05.142811Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: word, markdown",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "alirezarezvani",
+  "source_url": "https://github.com/alirezarezvani/claude-skills/blob/main/c-level-agents/skills/onboard/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/alirezarezvani/claude-skills/blob/main/c-level-agents/skills/onboard/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "/cs-onboard \u2014 Founder interview that populates ~/.claude/company-context.md using the canonical 7-dimension cs-onboard schema. The first command to run when starting with c-level-agents. Use when setting up the virtual C-suite for a new company, or when advisors lack company context \u2014 e.g. before a first /c-level-agents:boardroom or after a fundraise changes the numbers."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "phoenix",
+  "repo": "georgeguimaraes/elixir-agent-tools",
+  "path": "plugins/elixir-dev/skills/phoenix/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/georgeguimaraes/elixir-agent-tools",
+  "dir_name": "phoenix-georgeguimaraes-elixir-agent-tools",
+  "downloaded_at": "2026-10-24T04:08:03.539304Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=4, security=4",
+    "score": 4,
+    "runner_up": "security",
+    "runner_up_score": 4,
+    "signals": [
+      "dev",
+      "build",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "georgeguimaraes",
+  "source_url": "https://github.com/georgeguimaraes/elixir-agent-tools/blob/main/plugins/elixir-dev/skills/phoenix/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/georgeguimaraes/elixir-agent-tools/blob/main/plugins/elixir-dev/skills/phoenix/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build and debug Phoenix web interfaces and HTTP endpoints. Use for LiveView lifecycle and data loading, components, forms, routes, controllers, Plug, channels, and PubSub. Use ecto for changesets, queries, and persistence behind those interfaces."
+}

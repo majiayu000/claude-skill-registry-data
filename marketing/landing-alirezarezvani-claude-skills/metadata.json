@@ -1,0 +1,39 @@
+{
+  "name": "landing",
+  "repo": "alirezarezvani/claude-skills",
+  "path": "marketing/landing/skills/landing/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/alirezarezvani/claude-skills",
+  "dir_name": "landing-alirezarezvani-claude-skills",
+  "downloaded_at": "2026-10-24T04:02:12.654977Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: marketing, content, social, brand",
+    "score": 4,
+    "runner_up": "design",
+    "runner_up_score": 3,
+    "signals": [
+      "marketing",
+      "content",
+      "social",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "alirezarezvani",
+  "source_url": "https://github.com/alirezarezvani/claude-skills/blob/main/marketing/landing/skills/landing/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/alirezarezvani/claude-skills/blob/main/marketing/landing/skills/landing/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generates a premium single-page HTML landing page with 3D CSS animations, GSAP scroll effects, and mouse-parallax depth. Forcing intake (product + elevator pitch, audience register, brand overrides, tone) locks down positioning before any copy or markup is written, so the page reflects the actual product rather than generic boilerplate. Use whenever the user says 'landing for X', 'create a landing page', 'build a landing page', 'make a landing page for X', 'I need a web page for Y', or provides product/service details and wants a polished website. Also triggers on 'promotional page', 'product page', 'one-pager', 'web presence', 'sales page'. Outputs a single self-contained HTML file (Claude Code) or HTML artifact (Claude.ai). Supports configurable brand colors via CSS custom property overrides."
+}

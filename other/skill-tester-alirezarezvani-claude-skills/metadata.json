@@ -1,0 +1,38 @@
+{
+  "name": "skill-tester",
+  "repo": "alirezarezvani/claude-skills",
+  "path": "engineering/skills/skill-tester/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/alirezarezvani/claude-skills",
+  "dir_name": "skill-tester-alirezarezvani-claude-skills",
+  "downloaded_at": "2026-10-24T04:02:09.584672Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "alirezarezvani",
+  "source_url": "https://github.com/alirezarezvani/claude-skills/blob/main/engineering/skills/skill-tester/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/alirezarezvani/claude-skills/blob/main/engineering/skills/skill-tester/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Validate, test, and score the quality of skills within the claude-skills ecosystem. Comprehensive meta-skill: structure validation, Python script testing (syntax + imports + runtime + output format), multi-dimensional quality scoring with letter grades and tier classification (BASIC/STANDARD/POWERFUL). Use when authoring a new skill, auditing existing skills for tier promotion, setting up pre-commit hooks for skill quality, or integrating skill QA into CI."
+}

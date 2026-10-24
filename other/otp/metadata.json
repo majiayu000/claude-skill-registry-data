@@ -1,0 +1,38 @@
+{
+  "name": "otp",
+  "repo": "georgeguimaraes/elixir-agent-tools",
+  "path": "plugins/elixir-dev/skills/otp/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/georgeguimaraes/elixir-agent-tools",
+  "dir_name": "otp",
+  "downloaded_at": "2026-10-24T04:08:02.879219Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "georgeguimaraes",
+  "source_url": "https://github.com/georgeguimaraes/elixir-agent-tools/blob/main/plugins/elixir-dev/skills/otp/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/georgeguimaraes/elixir-agent-tools/blob/main/plugins/elixir-dev/skills/otp/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Design and debug Elixir runtime concurrency, process state, and supervision. Use for GenServer, Supervisor, Task, Registry, ETS, process bottlenecks, and Broadway pipelines. Use oban for durable background jobs, retries, and scheduling."
+}

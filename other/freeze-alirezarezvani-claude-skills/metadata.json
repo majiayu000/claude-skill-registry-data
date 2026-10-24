@@ -1,0 +1,37 @@
+{
+  "name": "freeze",
+  "repo": "alirezarezvani/claude-skills",
+  "path": "c-level-agents/skills/freeze/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/alirezarezvani/claude-skills",
+  "dir_name": "freeze-alirezarezvani-claude-skills",
+  "downloaded_at": "2026-10-24T04:02:02.912592Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: business=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "business",
+      "strategy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "alirezarezvani",
+  "source_url": "https://github.com/alirezarezvani/claude-skills/blob/main/c-level-agents/skills/freeze/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/alirezarezvani/claude-skills/blob/main/c-level-agents/skills/freeze/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "/c-level-agents:freeze [decision] [days] \u2014 Lock a strategic decision for a cooldown period to prevent impulse reversal. Mirrors gstack's safety primitives for the business layer. Use when an irreversible decision was made under pressure \u2014 e.g. a layoff plan or multi-year contract \u2014 and deserves a cooling-off lock before execution."
+}

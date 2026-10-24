@@ -1,0 +1,37 @@
+{
+  "name": "stock-analysis",
+  "repo": "alirezarezvani/claude-skills",
+  "path": "finance/skills/stock-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "forensics",
+  "source": "github.com/alirezarezvani/claude-skills",
+  "dir_name": "stock-analysis-alirezarezvani-claude-skills",
+  "downloaded_at": "2026-10-24T04:02:06.525874Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "forensics",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for forensics: forensic, evidence",
+    "score": 2,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "forensic",
+      "evidence"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "alirezarezvani",
+  "source_url": "https://github.com/alirezarezvani/claude-skills/blob/main/finance/skills/stock-analysis/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/alirezarezvani/claude-skills/blob/main/finance/skills/stock-analysis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Produce a rigorous, sector-relative, multi-factor fundamental analysis of a publicly listed company \u2014 Indian (NSE/BSE) or US/global. Use when the user asks to analyse, research, evaluate, or value a stock, ticker, or listed company; asks whether a business is fundamentally strong, cheap, or expensive; compares companies or benchmarks one against its sector; or mentions OPM, ROCE, ROE, ROIC, P/E, EV/EBITDA, free cash flow, NIM, GNPA, CASA, promoter holding or pledging. Use it for accounting-quality and forensic questions \u2014 \"is the profit real\", \"why is profit rising but cash isn't\", auditor qualifications, related-party concerns \u2014 which route to the forensic-only mode, and for IPOs and not-yet-listed companies \u2014 \"should I apply to this IPO\", DRHP/RHP or S-1 questions, price band, grey market premium \u2014 which route to the IPO mode. Use it even when the request sounds casual (\"is Infosys any good?\"). Do not use it for personalised investment advice, portfolio allocation, or trading signals."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "focused-fix",
+  "repo": "alirezarezvani/claude-skills",
+  "path": "engineering/skills/focused-fix/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/alirezarezvani/claude-skills",
+  "dir_name": "focused-fix-alirezarezvani-claude-skills",
+  "downloaded_at": "2026-10-24T04:02:08.343510Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "alirezarezvani",
+  "source_url": "https://github.com/alirezarezvani/claude-skills/blob/main/engineering/skills/focused-fix/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/alirezarezvani/claude-skills/blob/main/engineering/skills/focused-fix/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user asks to fix, debug, or make a specific feature/module/area work end-to-end. Triggers: 'make X work', 'fix the Y feature', 'the Z module is broken', 'focus on [area]'. Not for quick single-bug fixes \u2014 this is for systematic deep-dive repair across all files and dependencies."
+}

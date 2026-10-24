@@ -1,0 +1,43 @@
+{
+  "name": "convert-documents-to-markdown",
+  "repo": "anbeime/skill",
+  "path": "skills/convert-documents-to-markdown/convert-documents-to-markdown/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/anbeime/skill",
+  "dir_name": "convert-documents-to-markdown-anbeime-skill",
+  "downloaded_at": "2026-10-24T04:02:22.144659Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, pdf, word, excel, pptx, xlsx, docx, markdown",
+    "score": 8,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "doc",
+      "pdf",
+      "word",
+      "excel",
+      "pptx",
+      "xlsx",
+      "docx",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "anbeime",
+  "source_url": "https://github.com/anbeime/skill/blob/main/skills/convert-documents-to-markdown/convert-documents-to-markdown/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/anbeime/skill/blob/main/skills/convert-documents-to-markdown/convert-documents-to-markdown/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Convert Word (.doc, .docx), PowerPoint (.ppt, .pptx), Excel (.xls, .xlsx), OpenDocument (.odt, .ods, .odp), RTF, EPUB, CSV, and PDF files to GitHub-Flavored Markdown. Use when a task needs the contents of an office document, spreadsheet, presentation, ebook, or PDF you cannot read directly."
+}

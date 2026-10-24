@@ -1,0 +1,40 @@
+{
+  "name": "ship-gate",
+  "repo": "alirezarezvani/claude-skills",
+  "path": "engineering/skills/ship-gate/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/alirezarezvani/claude-skills",
+  "dir_name": "ship-gate-alirezarezvani-claude-skills",
+  "downloaded_at": "2026-10-24T04:02:03.233002Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: ci, cd, docker, deploy, infra",
+    "score": 5,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "ci",
+      "cd",
+      "docker",
+      "deploy",
+      "infra"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "alirezarezvani",
+  "source_url": "https://github.com/alirezarezvani/claude-skills/blob/main/engineering/skills/ship-gate/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/alirezarezvani/claude-skills/blob/main/engineering/skills/ship-gate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Pre-production audit that scans a codebase for security, database, deployment, code quality, AI/LLM, dependency, frontend, and observability issues. Intercepts deploy commands and blocks until critical items pass. Stack-agnostic. Use for \"run ship gate\", \"am I ready to ship\", \"pre-launch audit\", \"can I deploy\", \"push to production\", \"go live checklist\", \"preflight check\". Not for CI/CD setup or infra provisioning."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "c2c-img",
+  "repo": "actionow-ai/c2c_img",
+  "path": "skills/c2c-img/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/actionow-ai/c2c_img",
+  "dir_name": "c2c-img",
+  "downloaded_at": "2026-10-24T04:00:49.444576Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "actionow-ai",
+  "source_url": "https://github.com/actionow-ai/c2c_img/blob/main/skills/c2c-img/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/actionow-ai/c2c_img/blob/main/skills/c2c-img/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate or edit images with the user's local Codex (ChatGPT) image model, with no API key needed. Use it for ANY request to create a picture (photo, illustration, poster, banner, cover, wallpaper, avatar, icon, logo concept, sticker, mockup, meme) or to change an existing image or photo. That especially includes creative restyling that keeps the people and composition, such as turning a photo into cartoon, anime, pixel art, watercolor, sketch, oil painting, 3D clay or Ghibli style, as well as retouching, removing or replacing the background, and adding or removing objects. Prefer this skill over writing PIL, OpenCV or ImageMagick filter code for any creative or stylistic change. Use code only for exact mechanical edits (crop, resize, rotate, compress, convert format) or when the user explicitly asks for an algorithmic filter. Chinese triggers include \u753b/\u751f\u6210\u56fe\u7247/\u751f\u56fe/\u51fa\u56fe/\u6d77\u62a5/\u914d\u56fe/\u5934\u50cf/\u58c1\u7eb8/\u6539\u56fe/P\u56fe/\u62a0\u56fe/\u6362\u80cc\u666f/\u5361\u901a\u5316/\u52a8\u6f2b\u5316/\u6f2b\u753b\u98ce/\u50cf\u7d20\u753b/\u50cf\u7d20\u98ce/\u624b\u7ed8\u98ce/\u6c34\u5f69/\u7d20\u63cf/\u6cb9\u753b/\u5409\u535c\u529b/Q\u7248/\u98ce\u683c\u5316/\u518d\u6765\u4e00\u5f20. Don't use it for charts, diagrams or UI that should be built as code."
+}

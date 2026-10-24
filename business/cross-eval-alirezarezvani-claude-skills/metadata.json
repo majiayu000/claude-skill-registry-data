@@ -1,0 +1,37 @@
+{
+  "name": "cross-eval",
+  "repo": "alirezarezvani/claude-skills",
+  "path": "c-level-agents/skills/cross-eval/SKILL.md",
+  "github_branch": "main",
+  "category": "business",
+  "source": "github.com/alirezarezvani/claude-skills",
+  "dir_name": "cross-eval-alirezarezvani-claude-skills",
+  "downloaded_at": "2026-10-24T04:02:14.237810Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "business",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for business: business, strategy",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "business",
+      "strategy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "alirezarezvani",
+  "source_url": "https://github.com/alirezarezvani/claude-skills/blob/main/c-level-agents/skills/cross-eval/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/alirezarezvani/claude-skills/blob/main/c-level-agents/skills/cross-eval/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "/c-level-agents:cross-eval [memo] \u2014 Multi-model consensus on a board memo or strategy brief. Claude + Codex + Gemini cross-review with graceful degradation. Use when a high-stakes memo needs an independent sanity check before the boardroom \u2014 e.g. a bet-the-company pivot or fundraise terms."
+}

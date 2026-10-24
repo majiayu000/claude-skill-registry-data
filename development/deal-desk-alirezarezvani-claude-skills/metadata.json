@@ -1,0 +1,38 @@
+{
+  "name": "deal-desk",
+  "repo": "alirezarezvani/claude-skills",
+  "path": "commercial/skills/deal-desk/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/alirezarezvani/claude-skills",
+  "dir_name": "deal-desk-alirezarezvani-claude-skills",
+  "downloaded_at": "2026-10-24T04:02:01.670632Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, software",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "alirezarezvani",
+  "source_url": "https://github.com/alirezarezvani/claude-skills/blob/main/commercial/skills/deal-desk/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/alirezarezvani/claude-skills/blob/main/commercial/skills/deal-desk/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when reviewing a specific inbound deal before close \u2014 when sales has asked for a discount that exceeds AE authority, when the customer has redlined the MSA, when per-deal economics (margin after discount, multi-year payment shape, indemnity exposure) need to be quantified, or when discount approval needs to be routed to a named human approver (Sales Director, VP Sales, CFO, CRO, General Counsel). Covers deal review, discount approval routing, per-deal margin scoring, deal exception handling, MSA redline triage, contract landmine detection (uncapped indemnity, MFN, perpetual license-back, missing DPA), and named-approver chain assembly. NEVER auto-approves \u2014 every output is a numeric scorecard plus a routing recommendation to a named human."
+}

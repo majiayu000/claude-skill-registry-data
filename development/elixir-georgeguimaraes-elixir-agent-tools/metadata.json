@@ -1,0 +1,38 @@
+{
+  "name": "elixir",
+  "repo": "georgeguimaraes/elixir-agent-tools",
+  "path": "plugins/elixir-dev/skills/elixir/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/georgeguimaraes/elixir-agent-tools",
+  "dir_name": "elixir-georgeguimaraes-elixir-agent-tools",
+  "downloaded_at": "2026-10-24T04:08:03.377973Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, refactor",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "georgeguimaraes",
+  "source_url": "https://github.com/georgeguimaraes/elixir-agent-tools/blob/main/plugins/elixir-dev/skills/elixir/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/georgeguimaraes/elixir-agent-tools/blob/main/plugins/elixir-dev/skills/elixir/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write and refactor idiomatic Elixir functions, modules, and data structures. Use for pattern matching, control flow, error handling, protocols, behaviours, and deciding whether a process is needed. Use otp for process design and supervision."
+}

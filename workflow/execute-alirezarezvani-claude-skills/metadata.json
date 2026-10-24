@@ -1,0 +1,37 @@
+{
+  "name": "execute",
+  "repo": "alirezarezvani/claude-skills",
+  "path": "c-level-agents/skills/execute/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/alirezarezvani/claude-skills",
+  "dir_name": "execute-alirezarezvani-claude-skills",
+  "downloaded_at": "2026-10-24T04:02:05.279279Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, pipeline",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "alirezarezvani",
+  "source_url": "https://github.com/alirezarezvani/claude-skills/blob/main/c-level-agents/skills/execute/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/alirezarezvani/claude-skills/blob/main/c-level-agents/skills/execute/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "/c-level-agents:execute [decision] \u2014 Generate a 90-day execution plan with weekly milestones, DRIs, and check-in cadence from an approved decision. Use when a logged decision needs to become an operating plan \u2014 e.g. turning an approved market-entry call into weekly milestones with DRIs."
+}
