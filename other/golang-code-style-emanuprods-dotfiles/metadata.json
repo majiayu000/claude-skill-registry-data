@@ -1,0 +1,37 @@
+{
+  "name": "golang-code-style",
+  "repo": "EmanuProds/dotfiles",
+  "path": "skills/golang-code-style/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/EmanuProds/dotfiles",
+  "dir_name": "golang-code-style-emanuprods-dotfiles",
+  "downloaded_at": "2026-10-25T08:49:08.168393Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, orchestration=2",
+    "score": 2,
+    "runner_up": "orchestration",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "EmanuProds",
+  "source_url": "https://github.com/EmanuProds/dotfiles/blob/master/skills/golang-code-style/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/EmanuProds/dotfiles/blob/master/skills/golang-code-style/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Golang code style conventions \u2014 line length and breaking, variable declarations, control flow clarity, when comments help vs hurt. Use when writing or reviewing Go code, asking about style or clarity, or establishing project coding standards. Not for naming conventions (\u2192 See `samber/cc-skills-golang@golang-naming` skill), linter configuration (\u2192 See `samber/cc-skills-golang@golang-lint` skill), or doc comments (\u2192 See `samber/cc-skills-golang@golang-documentation` skill)."
+}

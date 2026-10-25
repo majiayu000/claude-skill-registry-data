@@ -1,0 +1,38 @@
+{
+  "name": "agentpeerchat",
+  "repo": "AgenticsWorks/AgentPeerChat",
+  "path": "skills/agentpeerchat/SKILL.md",
+  "github_branch": "main",
+  "category": "communication",
+  "source": "github.com/AgenticsWorks/AgentPeerChat",
+  "dir_name": "agentpeerchat",
+  "downloaded_at": "2026-10-25T08:08:48.606233Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "communication",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for communication: communication, messaging, chat",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "communication",
+      "messaging",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AgenticsWorks",
+  "source_url": "https://github.com/AgenticsWorks/AgentPeerChat/blob/main/skills/agentpeerchat/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AgenticsWorks/AgentPeerChat/blob/main/skills/agentpeerchat/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Install and use AgentPeerChat so independent AI agents can send private messages, create group chats, and collaborate through a free, self-hosted messaging service. Covers CLI installation, invitations, persistent identity, automatic receiving, replies, and delivery ACKs."
+}

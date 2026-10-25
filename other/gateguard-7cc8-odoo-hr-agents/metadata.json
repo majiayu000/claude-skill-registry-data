@@ -1,0 +1,37 @@
+{
+  "name": "gateguard",
+  "repo": "7cc8/odoo-hr-agents",
+  "path": ".claude/skills/ECC-main/skills/gateguard/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/7cc8/odoo-hr-agents",
+  "dir_name": "gateguard-7cc8-odoo-hr-agents",
+  "downloaded_at": "2026-10-25T08:01:45.752596Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "7cc8",
+  "source_url": "https://github.com/7cc8/odoo-hr-agents/blob/main/.claude/skills/ECC-main/skills/gateguard/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/7cc8/odoo-hr-agents/blob/main/.claude/skills/ECC-main/skills/gateguard/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "PreToolUse fact-forcing gate that denies the first Edit/Write/Bash (including MultiEdit) attempt until the agent presents concrete facts (importers, data schemas, verbatim user instruction), then allows retry; A/B-tested at +2.25 quality points. Use when enabling or configuring the GateGuard hook, exempting paths via env vars, or handling first-touch denials."
+}

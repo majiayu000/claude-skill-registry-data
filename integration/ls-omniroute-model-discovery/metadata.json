@@ -1,0 +1,38 @@
+{
+  "name": "ls-omniroute-model-discovery",
+  "repo": "CruxExperts/LocalSetup",
+  "path": "ls/skills/ls-omniroute-model-discovery/SKILL.md",
+  "github_branch": "main",
+  "category": "integration",
+  "source": "github.com/CruxExperts/LocalSetup",
+  "dir_name": "ls-omniroute-model-discovery",
+  "downloaded_at": "2026-10-25T08:36:36.166714Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "integration",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for integration: integration, webhook, oauth",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "integration",
+      "webhook",
+      "oauth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "CruxExperts",
+  "source_url": "https://github.com/CruxExperts/LocalSetup/blob/main/ls/skills/ls-omniroute-model-discovery/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/CruxExperts/LocalSetup/blob/main/ls/skills/ls-omniroute-model-discovery/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Guide read-only OmniRoute discovery across models/providers, context/compression, health/usage/resilience, integrations, and agent clients, and emit sanitized model observations. Use for OmniRoute catalogs, runtime metadata, diagnostics, MCP/A2A, CLI tools, plugins, tunnels, webhooks, or client compatibility."
+}

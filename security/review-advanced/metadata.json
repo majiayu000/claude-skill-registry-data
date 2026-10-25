@@ -1,0 +1,38 @@
+{
+  "name": "review-advanced",
+  "repo": "DGouron/review-flow",
+  "path": "templates/en/review-advanced/SKILL.md",
+  "github_branch": "master",
+  "category": "security",
+  "source": "github.com/DGouron/review-flow",
+  "dir_name": "review-advanced",
+  "downloaded_at": "2026-10-25T08:37:25.924540Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DGouron",
+  "source_url": "https://github.com/DGouron/review-flow/blob/master/templates/en/review-advanced/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DGouron/review-flow/blob/master/templates/en/review-advanced/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Rigorous sequential-audit code review with a dedicated security block and cited pedagogical lessons. Customize for your project."
+}

@@ -1,0 +1,250 @@
+---
+name: resolve-pr-conflict
+description: |
+  Resolve an open same-repository GitHub PR conflict by merging its base into the writable dev head, resolving source,
+  config, and `s2sdk` gitlink intent semantically, rebuilding only the conflicted source-owned `bin_artifacts` via
+  targeted isolated runs, running the repository review/format/test gates, creating one merge commit, and pushing
+  without force. Stop after reporting PR checks; never merge or auto-merge the PR.
+disable-model-invocation: true
+---
+
+# Resolve PR Conflict
+
+Resolve one PR through a validated, pushed merge commit. `bin_artifacts/<GAMEVER>/` is the only tracked per-symbol
+truth; snapshots, gamedata, metadata, and release manifests are Release-derived and must not appear in the result.
+
+## Inputs and scope
+
+- `pr` — PR number or URL. If omitted, resolve the single open PR associated with the current branch.
+- `gamever` — optional expected GAMEVER. Infer only when the changed ownership is unambiguous.
+- `remote` — default `origin`.
+
+Support only an open same-repository PR whose non-default head branch is writable through `remote`. Stop for a fork,
+detached head, missing remote, moving head, or ambiguous affected GAMEVER/producer ownership.
+
+## Hard safety rules
+
+- Start with a clean tracked worktree and index. Preserve unrelated untracked files.
+- Never rebase, amend, reset, force-push, delete branches, commit to the default branch, or use `git add .`/`git add -A`.
+- Merge only in this direction: PR head branch <- `remote/<base>` using `--no-ff`.
+- Never resolve source-owned artifact bytes by blindly choosing ours/theirs or hand-editing YAML formatting. Base bytes
+  may seed an isolated rebuild, but final conflict bytes must come from the merged producer/config contract and central
+  finalizer.
+- Reject tracked `gamesymbols/**`, `gamedata/**`, `release-manifests/**`, and `bin/**/*.yaml` in the final PR diff.
+- Treat `s2sdk` as a pin to the reviewed SDK, not release-derived output. Code changes and an `s2sdk` gitlink
+  change in the same PR are almost always unrelated: a code merge can silently carry the gitlink backwards to an
+  ancestor SDK. Keep a gitlink change only when the user confirms it as intentional.
+- Stop on a conflict in trusted planner/policy/required-workflow/publisher code unless the intended trust-root change is
+  independently specified and reviewable; do not let the PR choose its own validation boundary.
+- Do not run a publisher, create Release outputs, push BinSync, or use publication credentials.
+- After push, report checks once and stop. Never merge or enable auto-merge.
+
+## Step 1 — Capture the immutable PR state
+
+```powershell
+git status --short --branch
+git remote
+gh auth status
+gh pr view <PR> --json number,url,state,isDraft,baseRefName,baseRefOid,headRefName,headRefOid,headRepository,headRepositoryOwner,mergeable,mergeStateStatus,statusCheckRollup
+git fetch <REMOTE> <BASE_BRANCH> <HEAD_BRANCH> --prune
+git rev-parse <REMOTE>/<BASE_BRANCH>
+git rev-parse <REMOTE>/<HEAD_BRANCH>
+git diff --name-status <REMOTE>/<BASE_BRANCH>...<REMOTE>/<HEAD_BRANCH>
+git rev-parse <REMOTE>/<BASE_BRANCH>:s2sdk <REMOTE>/<HEAD_BRANCH>:s2sdk
+```
+
+Save `PR_URL`, `BASE_BRANCH`, `HEAD_BRANCH`, `PR_HEAD_SHA`, `BASE_HEAD_SHA`, `ORIGINAL_PR_PATHS`, `BASE_SDK_PIN`, and
+`ORIGINAL_HEAD_SDK_PIN` (the two `s2sdk` gitlink SHAs; a gitlink is tracked with mode `160000`). Require the PR API
+head SHA to equal `<REMOTE>/<HEAD_BRANCH>` after fetch. If the PR is already mergeable and the user did not request a
+base synchronization, report that no resolution is needed and stop.
+
+## Step 2 — Check out the exact PR head
+
+Create a local tracking branch only when absent; otherwise fast-forward the existing clean branch:
+
+```powershell
+git switch --track -c <HEAD_BRANCH> <REMOTE>/<HEAD_BRANCH>
+# or
+git switch <HEAD_BRANCH>
+git pull --ff-only <REMOTE> <HEAD_BRANCH>
+git rev-parse HEAD
+```
+
+Require `HEAD == PR_HEAD_SHA` before merging.
+
+## Step 3 — Merge base and inventory conflicts
+
+```powershell
+git merge --no-ff <REMOTE>/<BASE_BRANCH>
+git status --short
+git diff --name-only --diff-filter=U
+```
+
+Exit code 1 is expected only for reported conflicts. Classify every unmerged path:
+
+- `configs/<GAMEVER>.yaml`: merge producer ordering, alternatives, expected/optional inputs/outputs, prerequisites,
+  symbols, aliases, cpp tests, and platform gates semantically. Do not duplicate an owner or silently drop either
+  parent's intent.
+- `ida_preprocessor_scripts/**`, references, Agent skills, source, tests, or docs: read both parents and resolve behavior
+  semantically. Stop when intent is ambiguous. Never settle a preprocessor conflict by hardcoding a vtable slot, struct
+  offset, or displacement taken from either parent's artifacts; fixed offsets are blocked (see Step 5).
+- `bin_artifacts/<GAMEVER>/<module>/*.yaml`: record A/M/D/R paths and base/merge ownership. Do not accept either side as
+  final; resolution is deferred to the isolated rebuild in Step 4.
+- `s2sdk` gitlink: never choose ours/theirs blindly. Keep an intentional SDK bump only when the merged intent needs
+  the new SDK (headers/layouts the code depends on) and the user confirms it; otherwise restore `BASE_SDK_PIN`. A code
+  merge that drags the pin backwards to an ancestor SDK silently drops header/ABI fixes — review it in Step 5 and treat
+  an unconfirmed pin change as unintentional.
+- forbidden legacy/Release-derived namespaces: remove them from the prospective PR result and investigate why they were
+  introduced; they are not conflict-resolution inputs.
+- trust-root paths named in the safety rules: stop and report the exact conflict for independent handling.
+
+Require one explicit GAMEVER per invocation when artifact/config ownership is involved. A historical GAMEVER change is
+allowed only when the PR explicitly intends a backport and carries the matching source-owned artifact closure; never
+auto-migrate its intent to latest or silently revert it.
+
+## Step 4 — Rebuild conflicted artifacts only
+
+From the merged source/config/reference intent, compute the conflicted producer groups: the skills whose
+`bin_artifacts/<GAMEVER>/<module>/*.yaml` outputs are unmerged (recorded A/M/D/R) or whose producer config entries were
+semantically merged in Step 3. Do not run a force-all rebuild; the default-branch trusted workflow re-validates the full
+prospective tree in CI.
+
+Rebuild only those conflicted groups in a checkout-external artifact root (base bytes may seed it), with explicit
+`-modules`/`-skill` filters, seeding required `expected_input` YAMLs from the merged tree when the filtered run would
+not otherwise produce them:
+
+```powershell
+uv run ida_analyze_bin.py -gamever <GAMEVER> -configyaml configs/<GAMEVER>.yaml `
+  -artifactdir <CHECKOUT_EXTERNAL_ROOT> -oldartifactdir bin_artifacts `
+  -oldgamever <PRIOR_GAMEVER-or-none> -modules <MODULE> -skill <SKILL> -debug
+```
+
+Require, for every conflicted group:
+
+- the group actually executed and has one valid winner;
+- regenerated bytes are canonical (the central finalizer owns formatting);
+- when the same artifact already exists on one side unchanged, prefer keeping that parent's bytes if the rebuild
+  reproduces them byte-for-byte;
+- the source checkout's tracked artifact digest did not change during isolated execution.
+
+Copy the validated outputs from the isolated root into tracked `bin_artifacts/<GAMEVER>/`. Remove obsolete paths only
+when the merged formal contract proves their deletion/rename, then stage each path explicitly. Run the repository
+artifact contract. If IDA/LLM/Agent execution is unavailable, stop without committing: a guessed conflict result is not
+deliverable.
+
+## Step 5 — Resolve remaining paths and review
+
+Stage only explicitly resolved source/config/reference/test/artifact paths. Require no unmerged entries or conflict
+markers:
+
+```powershell
+git diff --name-only --diff-filter=U
+git diff --check
+git status --short
+```
+
+Mandatory before completing the review: check whether the prospective PR changes the `s2sdk` gitlink at the same
+time as source/config code. During the in-progress merge `HEAD` is still the pre-merge commit, so read the staged index
+against the base branch, not `HEAD`:
+
+```powershell
+git diff --cached --raw <REMOTE>/<BASE_BRANCH> -- s2sdk
+git diff --cached --name-only <REMOTE>/<BASE_BRANCH> -- ':(exclude)s2sdk'
+git ls-files -s s2sdk
+git merge-base --is-ancestor <PROSPECTIVE_SDK_PIN> <BASE_SDK_PIN>
+```
+
+If the gitlink changed and at least one non-gitlink path also changed, that is the "code + incidental gitlink" case.
+Ask the user explicitly whether the `s2sdk` change is intentional (quote `BASE_SDK_PIN`, `ORIGINAL_HEAD_SDK_PIN`,
+and the prospective pin from `git ls-files -s s2sdk`). Do not resolve or push until the answer arrives:
+
+- intentional — record the confirmed SDK pin, keep it, and continue the review.
+- unintentional — roll the gitlink back to the base pin and continue the review:
+
+```powershell
+git checkout <REMOTE>/<BASE_BRANCH> -- s2sdk
+git diff --cached --raw <REMOTE>/<BASE_BRANCH> -- s2sdk
+git diff --cached --name-status <REMOTE>/<BASE_BRANCH>
+git diff --name-status HEAD -- s2sdk
+```
+
+After rollback, require `git ls-files -s s2sdk` to show `160000 <BASE_SDK_PIN> 0 s2sdk`, require
+`git diff --cached --raw <REMOTE>/<BASE_BRANCH> -- s2sdk` to become empty, and require `git diff --name-status HEAD --
+s2sdk` to be empty (the merge introduces no net gitlink change). The code changes stay; only the pointer moves.
+When `git merge-base --is-ancestor <PROSPECTIVE_SDK_PIN> <BASE_SDK_PIN>` succeeds (the new pin is an ancestor, i.e. a
+backward move), or the PR body does not justify an SDK bump, default to treating it as unintentional and recommend the
+rollback in the question.
+
+Read `references/review-pr.md` and run its read-only Steps 1–4 against the resolved prospective PR. Its review must treat
+`bin_artifacts` as source-owned proof and reject forbidden tracked Release outputs. It must also block fixed offsets
+(gate 6 in `references/preprocessor-review-patterns.md`): any added or modified preprocessor script or helper that
+hardcodes a game-layout vtable slot, struct member offset, or displacement, instead of deriving it from the current
+binary, is a blocking finding. This holds even when the constant is "verified" by a presence scan or reproduces the
+artifacts byte-for-byte. If actionable findings exist, report them and stop; repairing findings beyond conflict
+resolution requires the user's explicit follow-up direction.
+
+## Step 6 — Format and validate
+
+```powershell
+uv run python format_repo_files.py
+uv run python format_repo_files.py --check
+uv run python bin_artifact_contract.py
+git diff --check
+```
+
+The formatter intentionally skips canonical `bin_artifacts`; never reformat them outside the central finalizer. Run
+focused tests for every changed behavior plus the repository-contract suite. Revert formatting-only changes outside the
+authorized PR scope before staging. Do not claim CI-only self-hosted or external gates passed locally.
+
+## Step 7 — Create one merge commit
+
+Recheck and explicitly stage the authorized set:
+
+```powershell
+git add -- <EXPLICIT_RESOLVED_SOURCE_CONFIG_REFERENCE_TEST_PATHS>
+git add -- <EXPLICIT_BIN_ARTIFACT_CLOSURE_PATHS>
+git update-index --cacheinfo 160000,<CONFIRMED_SDK_PIN>,s2sdk
+git diff --cached --check
+git diff --name-only --diff-filter=U
+git ls-files -s s2sdk
+git diff --cached --name-status <REMOTE>/<BASE_BRANCH>
+git diff --cached --raw <REMOTE>/<BASE_BRANCH> -- s2sdk
+git diff --cached --stat <REMOTE>/<BASE_BRANCH>
+```
+
+Require no unstaged tracked changes. Confirm the final diff preserves the PR intent, includes the complete artifact
+closure, and contains no forbidden tracked output namespace. Do not stage the gitlink with `git add -- s2sdk`: that
+stages the submodule working-tree HEAD, which the base-pin `git checkout` does not update. Write the decided pin into the
+index directly so a confirmed SDK bump is committed and an unconfirmed one stays rolled back, and require
+`git ls-files -s s2sdk` to show `160000 <CONFIRMED_SDK_PIN> 0 s2sdk` before committing. Require
+`git diff --cached --raw <REMOTE>/<BASE_BRANCH> -- s2sdk` to be empty unless the user confirmed an intentional pin
+change. Commit without amending:
+
+```powershell
+git commit -m "chore(merge): sync <BASE_BRANCH> into <TOPIC> branch" -m "Co-Authored-By: Codex <codex@openai.com>"
+```
+
+Verify the merge commit has exactly two parents in order: `PR_HEAD_SHA BASE_HEAD_SHA`.
+
+## Step 8 — Push without force and stop
+
+Immediately before push, query the PR again and require the remote head is still `PR_HEAD_SHA`. Then:
+
+```powershell
+git push <REMOTE> "HEAD:refs/heads/<HEAD_BRANCH>"
+gh pr view <PR> --json url,headRefOid,mergeable,mergeStateStatus,statusCheckRollup
+gh pr checks <PR>
+```
+
+If push is rejected, fetch and report divergence; never retry with force. Pending checks are an acceptable endpoint.
+Never invoke `gh pr merge`, auto-merge, a merge API, branch deletion, or a switch to the default branch.
+
+## Final report
+
+Report the PR/base/head identities, pushed merge SHA, resolved paths, `s2sdk` gitlink decision (base pin, original
+head pin, final pin, and whether an intentional change was confirmed), affected GAMEVER/groups, staged artifact closure,
+format/test/contract evidence, review findings, and latest check state. State explicitly:
+
+```text
+PR was not merged by resolve-pr-conflict.
+```

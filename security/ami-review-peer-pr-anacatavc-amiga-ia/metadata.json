@@ -1,0 +1,38 @@
+{
+  "name": "ami-review-peer-pr",
+  "repo": "AnaCataVC/amiga-ia",
+  "path": "codex/skills/ami-review-peer-pr/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/AnaCataVC/amiga-ia",
+  "dir_name": "ami-review-peer-pr-anacatavc-amiga-ia",
+  "downloaded_at": "2026-10-25T08:13:14.986726Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AnaCataVC",
+  "source_url": "https://github.com/AnaCataVC/amiga-ia/blob/main/codex/skills/ami-review-peer-pr/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AnaCataVC/amiga-ia/blob/main/codex/skills/ami-review-peer-pr/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use ONLY when reviewing Pull Requests authored by OTHER PEOPLE (peer review). It focuses on generating code review observations with criticality levels and drafting review comments for teammates. If reviewing your OWN Pull Request or branch to apply local fixes before publishing, use ami-review-self-pr instead."
+}

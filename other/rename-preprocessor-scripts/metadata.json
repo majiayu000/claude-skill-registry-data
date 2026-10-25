@@ -1,0 +1,37 @@
+{
+  "name": "rename-preprocessor-scripts",
+  "repo": "HLND2T/CS2_VibeSignatures",
+  "path": ".claude/skills/rename-preprocessor-scripts/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/HLND2T/CS2_VibeSignatures",
+  "dir_name": "rename-preprocessor-scripts",
+  "downloaded_at": "2026-10-25T09:03:32.169829Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HLND2T",
+  "source_url": "https://github.com/HLND2T/CS2_VibeSignatures/blob/main/.claude/skills/rename-preprocessor-scripts/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HLND2T/CS2_VibeSignatures/blob/main/.claude/skills/rename-preprocessor-scripts/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Rename a symbol (function, vfunc, vtable, struct member, global variable) across all\npreprocessor scripts, configs/<GAMEVER>.yaml entries, and tracked source-owned YAML artifacts.\nUse when a symbol's name changes (class rename, naming-convention fix, etc.), or when\nsplitting a single finder into an inline/noinline fallback chain because a helper\nde-inlined and the target's YAML stopped being produced on some gamever/platform."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "clean-code",
+  "repo": "DGouron/review-flow",
+  "path": ".claude/skills/clean-code/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/DGouron/review-flow",
+  "dir_name": "clean-code-dgouron-review-flow",
+  "downloaded_at": "2026-10-25T08:37:23.294472Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DGouron",
+  "source_url": "https://github.com/DGouron/review-flow/blob/master/.claude/skills/clean-code/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DGouron/review-flow/blob/master/.claude/skills/clean-code/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Clean Code (Robert C. Martin) guide to produce and challenge code that is readable, durable, simple, and consistent. Covers naming, functions, comments, smells, and refactor heuristics. Complements `/solid` (SOLID principles) and `/anti-overengineering` (YAGNI/KISS). Activate during the REFACTOR phase of the TDD cycle and during implementation self-review."
+}

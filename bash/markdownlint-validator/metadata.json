@@ -1,0 +1,38 @@
+{
+  "name": "markdownlint-validator",
+  "repo": "CowboyLogic/ai-dev",
+  "path": "skills/markdownlint-validator/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/CowboyLogic/ai-dev",
+  "dir_name": "markdownlint-validator",
+  "downloaded_at": "2026-10-25T08:35:57.978154Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "CowboyLogic",
+  "source_url": "https://github.com/CowboyLogic/ai-dev/blob/main/skills/markdownlint-validator/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/CowboyLogic/ai-dev/blob/main/skills/markdownlint-validator/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Guide for identifying and fixing markdownlint violations in Markdown files. Use this skill whenever asked to fix markdown linting errors, validate markdown files, resolve markdownlint violations, clean up markdown formatting issues, enforce markdown style rules, or correct any MD### rule failures. Always load this skill when working with .markdownlint config files or markdownlint-cli output."
+}

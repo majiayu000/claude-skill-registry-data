@@ -1,0 +1,38 @@
+{
+  "name": "golang-context",
+  "repo": "EmanuProds/dotfiles",
+  "path": "skills/golang-context/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/EmanuProds/dotfiles",
+  "dir_name": "golang-context-emanuprods-dotfiles",
+  "downloaded_at": "2026-10-25T08:48:58.786718Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, compile, debug",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "EmanuProds",
+  "source_url": "https://github.com/EmanuProds/dotfiles/blob/master/skills/golang-context/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/EmanuProds/dotfiles/blob/master/skills/golang-context/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Idiomatic context.Context usage in Golang \u2014 propagation through API boundaries, cancellation, timeouts and deadlines, request-scoped values, context.WithoutCancel for background work outliving requests. Apply when designing context propagation across layers, debugging leaked or unexpired contexts, choosing between context.Background/TODO/WithoutCancel, or storing values in context. Not for code that merely accepts ctx as first parameter."
+}

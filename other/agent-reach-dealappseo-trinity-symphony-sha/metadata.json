@@ -1,0 +1,36 @@
+{
+  "name": "agent-reach",
+  "repo": "DealAppSeo/trinity-symphony-shared",
+  "path": ".claude/skills/agent-reach/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/DealAppSeo/trinity-symphony-shared",
+  "dir_name": "agent-reach-dealappseo-trinity-symphony-sha",
+  "downloaded_at": "2026-10-25T08:39:30.457750Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DealAppSeo",
+  "source_url": "https://github.com/DealAppSeo/trinity-symphony-shared/blob/main/.claude/skills/agent-reach/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DealAppSeo/trinity-symphony-shared/blob/main/.claude/skills/agent-reach/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "MUST USE when user wants to research/search/look up/find anything on the internet \u2014 e.g. \"research this topic\", \"do a deep dive on X\", \"search the web for X\", \"see what people say about X\", \"look this up\".\nAlso MUST USE when user mentions any platform or shares any URL/link: Twitter/X, Reddit, Facebook, Instagram, YouTube, GitHub, Bilibili, XiaoHongShu, Xiaoyuzhou Podcast, LinkedIn/jobs/recruiting, V2EX, Xueqiu (stocks), RSS.\n15 platforms, multi-backend routing (OpenCLI / per-platform CLIs / APIs). Zero config for 6 channels. Run `agent-reach doctor --json` to see which backend serves each platform right now.\nNOT for: writing reports/analysis/translation (this skill only FETCHES internet content); posting/commenting/liking (write operations); platforms that already have a dedicated skill installed (prefer that skill)."
+}

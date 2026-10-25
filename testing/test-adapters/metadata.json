@@ -1,0 +1,37 @@
+{
+  "name": "test-adapters-strip-yaml-frontmatter",
+  "repo": "JNZader/repoforge",
+  "path": ".claude/skills/main/test_adapters/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/JNZader/repoforge",
+  "dir_name": "test-adapters",
+  "downloaded_at": "2026-10-25T09:12:31.593875Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, pytest",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "test",
+      "pytest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "JNZader",
+  "source_url": "https://github.com/JNZader/repoforge/blob/main/.claude/skills/main/test_adapters/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/JNZader/repoforge/blob/main/.claude/skills/main/test_adapters/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill covers testing the _strip_yaml_frontmatter helper. Trigger: test_adapters."
+}

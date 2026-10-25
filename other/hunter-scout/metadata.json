@@ -1,0 +1,37 @@
+{
+  "name": "hunter-scout",
+  "repo": "Jakeschincariol/hunter-skill",
+  "path": "skills/hunter-scout/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Jakeschincariol/hunter-skill",
+  "dir_name": "hunter-scout",
+  "downloaded_at": "2026-10-25T09:14:08.016335Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/hunter-skill/blob/main/skills/hunter-scout/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/hunter-skill/blob/main/skills/hunter-scout/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The Job Scout. Finds the best open roles for the user's profile and ranks them by fit: pulls live listings from public job boards that need no login (Greenhouse, Lever, Ashby, NVIDIA's Workday board, Netflix's careers search), filters by title, place, remote and how recent, scores every listing 0-100 against hunter/profile.json with the reasons (title, skills, location, seniority, pay range, freshness), writes hunter/jobs.json and adds the user's picks to the pipeline. Gives the manual route for Google, Meta and Amazon, whose careers sites cannot be read by a script. Use when the user says \"find me jobs\", \"best listings for me\", \"scout roles\", \"what's open at Google\", \"search Software Engineer jobs\", \"rank these jobs\", or \"where should I apply\"."
+}

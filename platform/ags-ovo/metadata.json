@@ -1,0 +1,37 @@
+{
+  "name": "ags-ovo",
+  "repo": "1llu50ry/mcp-gamehacking",
+  "path": "skills/ags-ovo/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/1llu50ry/mcp-gamehacking",
+  "dir_name": "ags-ovo",
+  "downloaded_at": "2026-10-25T07:56:06.805842Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: device, android",
+    "score": 2,
+    "runner_up": "communication",
+    "runner_up_score": 1,
+    "signals": [
+      "device",
+      "android"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "1llu50ry",
+  "source_url": "https://github.com/1llu50ry/mcp-gamehacking/blob/main/skills/ags-ovo/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/1llu50ry/mcp-gamehacking/blob/main/skills/ags-ovo/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Android ARM64 kernel driver module that exposes process memory read/write, MMU page-table manipulation (mmuhack), and touch input simulation through a kernel-space TCP socket server. It provides VMA t"
+}

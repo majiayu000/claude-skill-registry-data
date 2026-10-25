@@ -1,0 +1,38 @@
+{
+  "name": "ami-create-tests",
+  "repo": "AnaCataVC/amiga-ia",
+  "path": "skills/ami-create-tests/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/AnaCataVC/amiga-ia",
+  "dir_name": "ami-create-tests",
+  "downloaded_at": "2026-10-25T08:13:17.028653Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, jest, pytest",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "jest",
+      "pytest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AnaCataVC",
+  "source_url": "https://github.com/AnaCataVC/amiga-ia/blob/main/skills/ami-create-tests/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AnaCataVC/amiga-ia/blob/main/skills/ami-create-tests/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Must be triggered when new functionality is added and no existing tests cover the changes. Automatically generates tests for modified code."
+}

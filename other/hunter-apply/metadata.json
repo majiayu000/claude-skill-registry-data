@@ -1,0 +1,36 @@
+{
+  "name": "hunter-apply",
+  "repo": "Jakeschincariol/hunter-skill",
+  "path": "skills/hunter-apply/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Jakeschincariol/hunter-skill",
+  "dir_name": "hunter-apply",
+  "downloaded_at": "2026-10-25T09:14:07.859697Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "bash"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/hunter-skill/blob/main/skills/hunter-apply/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/hunter-skill/blob/main/skills/hunter-apply/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The Application Assistant. Fills the user's job applications from their own saved answers and leaves every one as a draft for them to review and submit: maps each form question to hunter/profile.json (name, links, work authorization, sponsorship, start date, relocation and more), flags what only the user can answer (salary, voluntary self-identification, anything not in the profile), runs a per-application checklist (tailored resume, cover letter, research, warm intro), fills the form in the user's browser with Claude in Chrome and stops before Submit. Use when the user says \"apply to this job\", \"fill out the application\", \"fill the Greenhouse form\", \"prep my application\", \"what's left before I apply\", or \"save it as a draft\"."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "ami-analyze-pr-comments",
+  "repo": "AnaCataVC/amiga-ia",
+  "path": "codex/skills/ami-analyze-pr-comments/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/AnaCataVC/amiga-ia",
+  "dir_name": "ami-analyze-pr-comments-anacatavc-amiga-ia",
+  "downloaded_at": "2026-10-25T08:13:16.234915Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AnaCataVC",
+  "source_url": "https://github.com/AnaCataVC/amiga-ia/blob/main/codex/skills/ami-analyze-pr-comments/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AnaCataVC/amiga-ia/blob/main/codex/skills/ami-analyze-pr-comments/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Analyzes code review comments left by other developers on an active Pull Request, extracting pending tasks, suggestions, and offering to reply."
+}

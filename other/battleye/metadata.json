@@ -1,0 +1,37 @@
+{
+  "name": "battleye",
+  "repo": "1llu50ry/mcp-gamehacking",
+  "path": "skills/battleye/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/1llu50ry/mcp-gamehacking",
+  "dir_name": "battleye",
+  "downloaded_at": "2026-10-25T07:56:20.746495Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "1llu50ry",
+  "source_url": "https://github.com/1llu50ry/mcp-gamehacking/blob/main/skills/battleye/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/1llu50ry/mcp-gamehacking/blob/main/skills/battleye/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Kernel driver plus service and game module coordination. Emphasizes handle protection, process monitoring, memory scanning, and visibility into injected code / runtime tampering. Used by PUBG, Rainbow"
+}

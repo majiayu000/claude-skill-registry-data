@@ -1,0 +1,1295 @@
+---
+name: convert-finder-skill-to-preprocessor-scripts
+description: |
+  Convert an existing find-XXXX SKILL.md into a preprocessor Python script, updating configs/<GAMEVER>.yaml
+  and removing the old SKILL.md. Covers xref-string-based and LLM_DECOMPILE-based discovery patterns.
+disable-model-invocation: true
+---
+
+# Convert Finder SKILL.md to Preprocessor Script
+
+Port an existing `.claude/skills/find-XXXX/SKILL.md` into an `ida_preprocessor_scripts/find-XXXX.py`
+preprocessor script, update `configs/<GAMEVER>.yaml` entries, and delete the old SKILL.md.
+
+## When to Use
+
+- A `find-XXXX` SKILL.md exists in `.claude/skills/` and needs to be converted to a preprocessor script
+- The SKILL.md uses either **xref-string search** (`find_regex` / `xrefs_to`) or **decompile-based vtable analysis** to discover functions
+
+## Overview
+
+Eight preprocessor patterns exist. The SKILL.md's discovery method and target type determine which to use:
+
+| Pattern | Discovery Method | Has FUNC_XREFS | Has LLM_DECOMPILE | Has INHERIT_VFUNCS | Has FUNC_VTABLE_RELATIONS | preprocess_skill has llm_config |
+|---------|-----------------|-----------------|---------------------|--------------------|---------------------------|-------------------------------|
+| **A** — Regular function via xref strings | `find_regex` + `xrefs_to` on debug strings | Yes | No | No | No | No |
+| **B** — Virtual function via xref strings | Same as A, but function is in a vtable | Yes | No | No | Yes | No |
+| **C** — Virtual function via LLM_DECOMPILE | Decompile a known predecessor function, identify vfunc call offsets | No | Yes | No | Yes | Yes |
+| **D** — Regular function via LLM_DECOMPILE | Decompile a known predecessor function, identify direct call targets | No | Yes | No | No | Yes |
+| **E** — Struct member offset via LLM_DECOMPILE | Decompile a known predecessor function, identify struct field access offsets | No | Yes | No | No | Yes |
+| **F** — Virtual function via INHERIT_VFUNCS | Inherit vtable slot index from a known base-class vfunc, look up same slot in derived-class vtable | No | No | Yes | No | No |
+| **G** — ConCommand handler function | Find the handler callback registered via `RegisterConCommand` by matching command name and help string | No (uses COMMAND_NAME/HELP_STRING) | No | No | No | No |
+| **H** — Secondary (ordinal) vtable | Locate a class's secondary vtable via mangled symbol (Windows) or offset-to-top (Linux) | No | No | No | No | No |
+
+Additionally, **struct member offsets** can be mixed into any pattern as a secondary target (see "Struct Member Mixin" section below).
+
+---
+
+## Step 1: Read and Analyze the SKILL.md
+
+Read the target `.claude/skills/find-XXXX/SKILL.md`.
+
+Extract:
+1. **Target function names** — all functions the skill identifies (may be 1 or many)
+2. **Target struct member names** — all struct member offsets the skill identifies (e.g. `CCheckTransmitInfo_m_nPlayerSlot`)
+3. **Discovery method** for each target:
+   - Does it use `find_regex` / `xrefs_to` with debug strings? → **xref-string based** (Patterns A/B)
+   - Does it search for a ConCommand registration (command name + help string) and extract the handler callback? → **ConCommand handler** (Pattern G)
+   - Does it load a predecessor YAML, decompile that function, and extract vfunc offsets / struct offsets from code patterns? → **LLM_DECOMPILE based** (Patterns C/D/E)
+   - Is the target a derived-class override of a known base-class vfunc (same vtable slot, different class)? → **INHERIT_VFUNCS based** (Pattern F)
+   - Does the SKILL.md locate a secondary vtable using a mangled symbol name (Windows `@@6B@_0`) or offset-to-top (Linux)? → **ordinal vtable** (Pattern H)
+4. **Function category** — `func` (regular), `vfunc` (virtual, has vtable slot), `structmember`, or `vtable`
+5. **VTable class name** — if virtual, e.g. `CBaseEntity`, `CBasePlayerPawn`, `INetworkMessages`
+6. **Xref strings** — debug strings used in `find_regex` patterns (for xref-string patterns). **Check if these differ between Windows and Linux** — if so, you need platform-specific `FUNC_XREFS_WINDOWS` / `FUNC_XREFS_LINUX`. Use the `FULLMATCH:` prefix (e.g. `"FULLMATCH:Precache"`) when you need exact-string matching instead of substring matching — this prevents false positives when the target string is short or generic (e.g. `"Precache"`, `"userid"`, `"team"`).
+7. **Predecessor function** — the function whose decompiled code reveals the target (for LLM_DECOMPILE patterns)
+8. **Base vfunc for inheritance** — if the target is a derived-class override of a known base-class vfunc, the base vfunc name (for INHERIT_VFUNCS pattern)
+9. **Dependencies** — which existing YAMLs are needed as inputs (vtable YAMLs, predecessor function YAMLs, base vfunc YAMLs)
+
+## Step 2: Plan the Split
+
+If the SKILL.md discovers multiple functions using **different methods** or from **different starting points**, split them into separate preprocessor scripts. Each script handles one "discovery unit" — a group of functions findable from the same method and starting point.
+
+**Same script:** Functions found from the same xref string, or from the same decompiled reference.
+**Separate scripts:** Functions found by xref strings vs. functions found by decompiling one of those xref-found functions.
+
+**CRITICAL — LLM_DECOMPILE dependency chains:** When LLM_DECOMPILE targets form a chain (FuncA → FuncB → FuncC, where each is the predecessor of the next), they **MUST** be in separate scripts — one script per link in the chain. A single script CANNOT handle chained LLM_DECOMPILE predecessors because:
+- The LLM_DECOMPILE fallback resolves the predecessor's address from its output YAML (`func_va` field)
+- Within a single script run, FuncB's output YAML doesn't exist yet when FuncC's LLM_DECOMPILE tries to use FuncB as predecessor
+- The IDA name-lookup fallback also fails because the predecessor wasn't renamed in IDA yet
+
+**Rule of thumb:** If target X's LLM_DECOMPILE references target Y as predecessor, and Y is also discovered by LLM_DECOMPILE (not xref strings), then X and Y MUST be in different scripts with a configs/<GAMEVER>.yaml dependency chain.
+
+Example split (what we did for CBaseEntity_TakeDamageOld):
+- Script 1: `find-CBaseEntity_TakeDamageOld.py` — finds TakeDamageOld via xref string (Pattern A)
+- Script 2: `find-CBaseEntity_OnTakeDamage.py` — finds OnTakeDamage by decompiling TakeDamageOld (Pattern C)
+- Script 3: `find-CBaseEntity_OnTakeDamage_Alive-AND-Dying-AND-Dead.py` — finds 3 vfuncs by decompiling OnTakeDamage (Pattern C)
+
+## Step 3: Generate the Preprocessor Script(s)
+
+Script location: `ida_preprocessor_scripts/find-{skill_name}.py`
+
+The filename MUST match the `name` field in `configs/<GAMEVER>.yaml` skill entry.
+
+### Pattern A — Regular function via xref strings
+
+Use when: function is non-virtual, discovered via debug string cross-references.
+
+```python
+#!/usr/bin/env python3
+"""Preprocess script for find-{SKILL_NAME} skill."""
+
+from ida_analyze_util import preprocess_common_skill
+
+TARGET_FUNCTION_NAMES = [
+    "{FUNC_NAME}",
+]
+
+FUNC_XREFS = [
+    {
+        "func_name": "{FUNC_NAME}",
+        "xref_strings": [
+            "{XREF_STRING_1}",  # Debug string from SKILL.md's find_regex pattern
+        ],
+        "xref_gvs": [],          # global variable names if needed, usually empty
+        "xref_signatures": [],    # byte patterns if needed, usually empty
+        "xref_funcs": [],         # known caller function names if needed
+        "exclude_funcs": [],      # function names to exclude from results
+        "exclude_strings": [],    # strings to exclude
+        "exclude_gvs": [],        # global variable names to exclude
+        "exclude_signatures": [], # byte patterns to exclude
+    },
+]
+
+GENERATE_YAML_DESIRED_FIELDS = [
+    # (symbol_name, generate_yaml_fields)
+    (
+        "{FUNC_NAME}",
+        [
+            "func_name",
+            "func_sig",
+            "func_va",
+            "func_rva",
+            "func_size",
+        ],
+    ),
+]
+
+async def preprocess_skill(
+    session, skill_name, expected_outputs, old_yaml_map,
+    new_binary_dir, platform, image_base, debug=False,
+):
+    """Reuse previous gamever func_sig to locate target function(s) and write YAML."""
+    return await preprocess_common_skill(
+        session=session,
+        expected_outputs=expected_outputs,
+        old_yaml_map=old_yaml_map,
+        new_binary_dir=new_binary_dir,
+        platform=platform,
+        image_base=image_base,
+        func_names=TARGET_FUNCTION_NAMES,
+        func_xrefs=FUNC_XREFS,
+        generate_yaml_desired_fields=GENERATE_YAML_DESIRED_FIELDS,
+        debug=debug,
+    )
+```
+
+### Pattern B — Virtual function via xref strings
+
+Use when: function IS virtual (has vtable slot), but discovered via debug string cross-references.
+
+Same as Pattern A, but adds `FUNC_VTABLE_RELATIONS` and vtable fields to `GENERATE_YAML_DESIRED_FIELDS`:
+
+```python
+#!/usr/bin/env python3
+"""Preprocess script for find-{SKILL_NAME} skill."""
+
+from ida_analyze_util import preprocess_common_skill
+
+TARGET_FUNCTION_NAMES = [
+    "{FUNC_NAME}",
+]
+
+FUNC_XREFS = [
+    {
+        "func_name": "{FUNC_NAME}",
+        "xref_strings": [
+            "{XREF_STRING_1}",
+        ],
+        "xref_gvs": [],
+        "xref_signatures": [],
+        "xref_funcs": [],
+        "exclude_funcs": [],
+        "exclude_strings": [],
+        "exclude_gvs": [],
+        "exclude_signatures": [],
+    },
+]
+
+FUNC_VTABLE_RELATIONS = [
+    # (func_name, vtable_class)
+    ("{FUNC_NAME}", "{VTABLE_CLASS}"),
+]
+
+GENERATE_YAML_DESIRED_FIELDS = [
+    # (symbol_name, generate_yaml_fields)
+    (
+        "{FUNC_NAME}",
+        [
+            "func_name",
+            "func_va",
+            "func_rva",
+            "func_size",
+            "func_sig",
+            "vtable_name",
+            "vfunc_offset",
+            "vfunc_index",
+        ],
+    ),
+]
+
+async def preprocess_skill(
+    session, skill_name, expected_outputs, old_yaml_map,
+    new_binary_dir, platform, image_base, debug=False,
+):
+    """Reuse previous gamever func_sig to locate target function(s) and write YAML."""
+    return await preprocess_common_skill(
+        session=session,
+        expected_outputs=expected_outputs,
+        old_yaml_map=old_yaml_map,
+        new_binary_dir=new_binary_dir,
+        platform=platform,
+        image_base=image_base,
+        func_names=TARGET_FUNCTION_NAMES,
+        func_xrefs=FUNC_XREFS,
+        func_vtable_relations=FUNC_VTABLE_RELATIONS,
+        generate_yaml_desired_fields=GENERATE_YAML_DESIRED_FIELDS,
+        debug=debug,
+    )
+```
+
+### Platform-Specific Xref Strings (Patterns A & B variant)
+
+When xref strings differ between Windows and Linux (e.g. Windows has full `ClassName::Method` assertion strings while Linux has only `./filename.cpp:linenum`), split into two variables:
+
+```python
+FUNC_XREFS_WINDOWS = [
+    {
+        "func_name": "{FUNC_NAME}",
+        "xref_strings": [
+            "CSource2GameEntities::CheckTransmit",  # Full assertion string on Windows
+        ],
+        "xref_gvs": [], "xref_signatures": [], "xref_funcs": [],
+        "exclude_funcs": [], "exclude_strings": [], "exclude_gvs": [], "exclude_signatures": [],
+    },
+]
+
+FUNC_XREFS_LINUX = [
+    {
+        "func_name": "{FUNC_NAME}",
+        "xref_strings": [
+            "./gameinterface.cpp:30",  # Shorter path-based string on Linux
+        ],
+        "xref_gvs": [], "xref_signatures": [], "xref_funcs": [],
+        "exclude_funcs": [], "exclude_strings": [], "exclude_gvs": [], "exclude_signatures": [],
+    },
+]
+```
+
+Then in `preprocess_skill`, use a ternary to select the right one:
+
+```python
+        func_xrefs=FUNC_XREFS_WINDOWS if platform == "windows" else FUNC_XREFS_LINUX,
+```
+
+This applies to both Pattern A and Pattern B — the only change is replacing the single `FUNC_XREFS` with the platform-specific pair.
+
+### Pattern C — Virtual function via LLM_DECOMPILE
+
+Use when: function IS virtual (has vtable slot), discovered by decompiling a known predecessor function and reading vfunc call offsets from the decompiled code.
+
+**IMPORTANT — `func_va` in output YAMLs:** If this function will be used as a **predecessor** by a downstream LLM_DECOMPILE script (i.e., another script decompiles this function to find further targets), you **MUST** include `func_va`, `func_rva`, and `func_size` in `GENERATE_YAML_DESIRED_FIELDS`. The downstream script resolves the predecessor's address by reading `func_va` from the output YAML. Without it, the LLM_DECOMPILE fallback fails with "failed to resolve llm_decompile target function address". When in doubt, always include `func_va` — it never hurts.
+
+```python
+#!/usr/bin/env python3
+"""Preprocess script for find-{SKILL_NAME} skill."""
+
+from ida_analyze_util import preprocess_common_skill
+
+TARGET_FUNCTION_NAMES = [
+    "{FUNC_NAME_1}",
+    # "{FUNC_NAME_2}",  # Add more if the skill finds multiple functions from the same reference
+]
+
+LLM_DECOMPILE = [
+    # (symbol_name, path_to_prompt, path_to_reference)
+    # ONE entry per target function. All entries sharing the same reference
+    # YAML will be resolved from the same decompiled predecessor code.
+    (
+        "{FUNC_NAME_1}",
+        "prompt/call_llm_decompile.md",
+        "references/{MODULE}/{PREDECESSOR_FUNC}.{platform}.yaml",
+    ),
+    (
+        "{FUNC_NAME_2}",
+        "prompt/call_llm_decompile.md",
+        "references/{MODULE}/{PREDECESSOR_FUNC}.{platform}.yaml",
+    ),
+    # ... one entry per target function, all pointing to the same reference
+]
+
+FUNC_VTABLE_RELATIONS = [
+    # (func_name, vtable_class)
+    ("{FUNC_NAME_1}", "{VTABLE_CLASS}"),
+    ("{FUNC_NAME_2}", "{VTABLE_CLASS}"),
+    # ... one entry per target function
+]
+
+GENERATE_YAML_DESIRED_FIELDS = [
+    # (symbol_name, generate_yaml_fields)
+    # Include func_va/func_rva/func_size if this function is a predecessor for downstream LLM_DECOMPILE
+    (
+        "{FUNC_NAME_1}",
+        [
+            "func_name",
+            "func_va",
+            "func_rva",
+            "func_size",
+            "vfunc_sig",
+            "vfunc_offset",
+            "vfunc_index",
+            "vtable_name",
+        ],
+    ),
+    (
+        "{FUNC_NAME_2}",
+        [
+            "func_name",
+            "func_va",
+            "func_rva",
+            "func_size",
+            "vfunc_sig",
+            "vfunc_offset",
+            "vfunc_index",
+            "vtable_name",
+        ],
+    ),
+    # ... one entry per target function
+]
+
+async def preprocess_skill(
+    session, skill_name, expected_outputs, old_yaml_map,
+    new_binary_dir, platform, image_base, llm_config=None, debug=False,
+):
+
+    """Reuse previous gamever func_sig to locate target function(s) and write YAML."""
+    return await preprocess_common_skill(
+        session=session,
+        expected_outputs=expected_outputs,
+        old_yaml_map=old_yaml_map,
+        new_binary_dir=new_binary_dir,
+        platform=platform,
+        image_base=image_base,
+        func_names=TARGET_FUNCTION_NAMES,
+        func_vtable_relations=FUNC_VTABLE_RELATIONS,
+        llm_decompile_specs=LLM_DECOMPILE,
+        llm_config=llm_config,
+        generate_yaml_desired_fields=GENERATE_YAML_DESIRED_FIELDS,
+        debug=debug,
+    )
+```
+
+### Pattern D — Regular function via LLM_DECOMPILE
+
+Use when: function is NOT virtual, discovered by decompiling a known predecessor function and identifying direct call targets (not vtable-based calls) from the decompiled code.
+
+```python
+#!/usr/bin/env python3
+"""Preprocess script for find-{SKILL_NAME} skill."""
+
+from ida_analyze_util import preprocess_common_skill
+
+TARGET_FUNCTION_NAMES = [
+    "{FUNC_NAME}",
+]
+
+LLM_DECOMPILE = [
+    # (symbol_name, path_to_prompt, path_to_reference)
+    (
+        "{FUNC_NAME}",
+        "prompt/call_llm_decompile.md",
+        "references/{MODULE}/{PREDECESSOR_FUNC}.{platform}.yaml",
+    ),
+]
+
+GENERATE_YAML_DESIRED_FIELDS = [
+    # (symbol_name, generate_yaml_fields)
+    (
+        "{FUNC_NAME}",
+        [
+            "func_name",
+            "func_sig",
+            "func_va",
+            "func_rva",
+            "func_size",
+        ],
+    ),
+]
+
+async def preprocess_skill(
+    session, skill_name, expected_outputs, old_yaml_map,
+    new_binary_dir, platform, image_base, llm_config=None, debug=False,
+):
+    """Reuse previous gamever func_sig to locate target function(s) and write YAML."""
+    return await preprocess_common_skill(
+        session=session,
+        expected_outputs=expected_outputs,
+        old_yaml_map=old_yaml_map,
+        new_binary_dir=new_binary_dir,
+        platform=platform,
+        image_base=image_base,
+        func_names=TARGET_FUNCTION_NAMES,
+        llm_decompile_specs=LLM_DECOMPILE,
+        llm_config=llm_config,
+        generate_yaml_desired_fields=GENERATE_YAML_DESIRED_FIELDS,
+        debug=debug,
+    )
+```
+
+### Pattern E — Struct member offset via LLM_DECOMPILE
+
+Use when: target is a **struct member offset** (not a function), discovered by decompiling a known predecessor function and identifying struct field access patterns (e.g. `*(int *)(ptr + 0x240)`).
+
+```python
+#!/usr/bin/env python3
+"""Preprocess script for find-{SKILL_NAME} skill."""
+
+from ida_analyze_util import preprocess_common_skill
+
+TARGET_STRUCT_MEMBER_NAMES = [
+    "{STRUCT_MEMBER_NAME}",  # e.g. "CCheckTransmitInfo_m_nPlayerSlot"
+]
+
+LLM_DECOMPILE = [
+    # (symbol_name, path_to_prompt, path_to_reference)
+    (
+        "{STRUCT_MEMBER_NAME}",
+        "prompt/call_llm_decompile.md",
+        "references/{MODULE}/{PREDECESSOR_FUNC}.{platform}.yaml",
+    ),
+]
+
+GENERATE_YAML_DESIRED_FIELDS = [
+    # (symbol_name, generate_yaml_fields)
+    (
+        "{STRUCT_MEMBER_NAME}",
+        [
+            "struct_name",
+            "member_name",
+            "offset",
+            "size",
+            "offset_sig",
+            "offset_sig_disp",
+        ],
+    ),
+]
+
+async def preprocess_skill(
+    session, skill_name, expected_outputs, old_yaml_map,
+    new_binary_dir, platform, image_base, llm_config=None, debug=False,
+):
+    """Reuse previous gamever offset_sig to locate target struct offset and write YAML."""
+    return await preprocess_common_skill(
+        session=session,
+        expected_outputs=expected_outputs,
+        old_yaml_map=old_yaml_map,
+        new_binary_dir=new_binary_dir,
+        platform=platform,
+        image_base=image_base,
+        struct_member_names=TARGET_STRUCT_MEMBER_NAMES,
+        llm_decompile_specs=LLM_DECOMPILE,
+        llm_config=llm_config,
+        generate_yaml_desired_fields=GENERATE_YAML_DESIRED_FIELDS,
+        debug=debug,
+    )
+```
+
+**Key differences from Pattern D:**
+- Uses `TARGET_STRUCT_MEMBER_NAMES` instead of `TARGET_FUNCTION_NAMES`
+- Passes `struct_member_names=` instead of `func_names=` to `preprocess_common_skill`
+- YAML fields are struct-specific: `struct_name, member_name, offset, size, offset_sig, offset_sig_disp`
+- No `FUNC_VTABLE_RELATIONS`
+- configs/<GAMEVER>.yaml symbol category is `structmember` (not `func` or `vfunc`)
+
+### Pattern F — Virtual function via INHERIT_VFUNCS
+
+Use when: the target is a **derived-class override** of a known base-class virtual function. The base vfunc has already been found (by another script), and this script inherits its vtable slot index to look up the same slot in the derived class's vtable.
+
+This is the simplest pattern — no xref strings, no LLM decompilation needed. Just a vtable slot lookup.
+
+```python
+#!/usr/bin/env python3
+"""Preprocess script for find-{SKILL_NAME} skill."""
+
+from ida_analyze_util import preprocess_common_skill
+
+INHERIT_VFUNCS = [
+    # (target_func_name, inherit_vtable_class, base_vfunc_name, generate_func_sig)
+    ("{DERIVED_FUNC_NAME}", "{DERIVED_VTABLE_CLASS}", "{BASE_VFUNC_NAME}", True),
+]
+
+GENERATE_YAML_DESIRED_FIELDS = [
+    # (symbol_name, generate_yaml_fields)
+    (
+        "{DERIVED_FUNC_NAME}",
+        [
+            "func_name",
+            "func_va",
+            "func_rva",
+            "func_size",
+            "func_sig",
+            "vtable_name",
+            "vfunc_offset",
+            "vfunc_index",
+        ],
+    ),
+]
+
+async def preprocess_skill(
+    session,
+    skill_name,
+    expected_outputs,
+    old_yaml_map,
+    new_binary_dir,
+    platform,
+    image_base,
+    debug=False,
+):
+    """Reuse old func_sig first; fallback to vtable index + generated signature when needed."""
+    _ = skill_name
+
+    return await preprocess_common_skill(
+        session=session,
+        expected_outputs=expected_outputs,
+        old_yaml_map=old_yaml_map,
+        new_binary_dir=new_binary_dir,
+        platform=platform,
+        image_base=image_base,
+        inherit_vfuncs=INHERIT_VFUNCS,
+        generate_yaml_desired_fields=GENERATE_YAML_DESIRED_FIELDS,
+        debug=debug,
+    )
+```
+
+**INHERIT_VFUNCS tuple fields:**
+- `target_func_name` — name for the derived-class function (e.g. `"CBaseEntity_Precache"`)
+- `inherit_vtable_class` — class whose vtable to look up (e.g. `"CBaseEntity"`)
+- `base_vfunc_name` — YAML artifact stem of the base-class vfunc that defines the slot index (e.g. `"CEntityInstance_Precache"`). Can be cross-module: `"../engine/INetworkMessages_FindNetworkGroup"`
+- `generate_func_sig` — (optional, default True) whether to generate a func_sig if no old YAML exists
+
+**Key differences from other patterns:**
+- No `TARGET_FUNCTION_NAMES`, `FUNC_XREFS`, `LLM_DECOMPILE`, or `FUNC_VTABLE_RELATIONS`
+- Uses `inherit_vfuncs=` parameter instead of `func_names=`
+- No `llm_config` parameter in `preprocess_skill`
+- configs/<GAMEVER>.yaml `expected_input` must include both the base vfunc YAML and the derived class vtable YAML
+- configs/<GAMEVER>.yaml symbol category is `vfunc`
+
+### Pattern G — ConCommand handler function
+
+Use when: the SKILL.md searches for a ConCommand registration (e.g. `find_regex pattern="bot_kill.*all"` → `xrefs_to` → handler callback). The target is the **handler function** registered via `RegisterConCommand`, identified by matching the command name string and/or help string.
+
+This pattern uses a dedicated helper (`_registerconcommand.py`) instead of `preprocess_common_skill`. It scans for the exact command name and help string in the binary's string table, finds xrefs to those strings, locates nearby `RegisterConCommand` calls, and recovers the handler function pointer from the call arguments.
+
+```python
+#!/usr/bin/env python3
+"""Preprocess script for find-{SKILL_NAME} skill."""
+
+from ida_preprocessor_scripts._registerconcommand import (
+    preprocess_registerconcommand_skill,
+)
+
+
+TARGET_FUNCTION_NAMES = [
+    "{HANDLER_NAME}",
+]
+
+COMMAND_NAME = "{command_name}"
+HELP_STRING = (
+    "{help_string_part1}"
+    "{help_string_part2}"  # Split long strings across lines for readability
+)
+SEARCH_WINDOW_BEFORE_CALL = 96
+SEARCH_WINDOW_AFTER_XREF = 96
+
+GENERATE_YAML_DESIRED_FIELDS = [
+    (
+        "{HANDLER_NAME}",
+        [
+            "func_name",
+            "func_sig",
+            "func_va",
+            "func_rva",
+            "func_size",
+        ],
+    ),
+]
+
+
+async def preprocess_skill(
+    session,
+    skill_name,
+    expected_outputs,
+    old_yaml_map,
+    new_binary_dir,
+    platform,
+    image_base,
+    debug=False,
+):
+    _ = skill_name, old_yaml_map
+    return await preprocess_registerconcommand_skill(
+        session=session,
+        expected_outputs=expected_outputs,
+        new_binary_dir=new_binary_dir,
+        platform=platform,
+        image_base=image_base,
+        target_name=TARGET_FUNCTION_NAMES[0],
+        generate_yaml_desired_fields=GENERATE_YAML_DESIRED_FIELDS,
+        command_name=COMMAND_NAME,
+        help_string=HELP_STRING,
+        rename_to=TARGET_FUNCTION_NAMES[0],
+        search_window_before_call=SEARCH_WINDOW_BEFORE_CALL,
+        search_window_after_xref=SEARCH_WINDOW_AFTER_XREF,
+        debug=debug,
+    )
+```
+
+**Key differences from Pattern A:**
+- Imports `preprocess_registerconcommand_skill` from `ida_preprocessor_scripts._registerconcommand` instead of `preprocess_common_skill` from `ida_analyze_util`
+- Uses `COMMAND_NAME` and `HELP_STRING` variables instead of `FUNC_XREFS`
+- Uses `SEARCH_WINDOW_BEFORE_CALL` and `SEARCH_WINDOW_AFTER_XREF` (typically 96 bytes each) to control the scan window around xrefs
+- The `preprocess_skill` function ignores `old_yaml_map` (`_ = skill_name, old_yaml_map`)
+- Calls `preprocess_registerconcommand_skill()` with `command_name=`, `help_string=`, `rename_to=` instead of `func_xrefs=`
+- configs/<GAMEVER>.yaml category is `func`, no `expected_input` needed
+- The handler function is always a regular function (not virtual), so no `FUNC_VTABLE_RELATIONS`
+
+**When to recognize this pattern in a SKILL.md:**
+- The SKILL.md searches for a command string (e.g. `find_regex pattern="bot_kill.*all"`)
+- It traces xrefs to find a ConCommand registration call
+- The target is the handler callback address extracted from the registration
+
+### Struct Member Mixin (for any pattern)
+
+Struct member offsets can also be **mixed into** a function-finding script when they are discovered from the same function via signature matching (not LLM_DECOMPILE). Add `TARGET_STRUCT_MEMBER_NAMES` alongside `TARGET_FUNCTION_NAMES` and pass `struct_member_names=` to `preprocess_common_skill`:
+
+```python
+TARGET_FUNCTION_NAMES = [
+    "SomeFunction",
+]
+
+TARGET_STRUCT_MEMBER_NAMES = [
+    "SomeStruct_m_someField",
+]
+
+GENERATE_YAML_DESIRED_FIELDS = [
+    ("SomeFunction", ["func_name", "func_sig", "func_va", "func_rva", "func_size"]),
+    ("SomeStruct_m_someField", ["struct_name", "member_name", "offset", "size", "offset_sig", "offset_sig_disp"]),
+]
+
+# In preprocess_skill:
+    return await preprocess_common_skill(
+        ...
+        func_names=TARGET_FUNCTION_NAMES,
+        struct_member_names=TARGET_STRUCT_MEMBER_NAMES,
+        ...
+    )
+```
+
+### CRITICAL — FUNC_VTABLE_RELATIONS and vfunc fields
+
+**`FUNC_VTABLE_RELATIONS` is required for ANY target whose `GENERATE_YAML_DESIRED_FIELDS` includes `vtable_name` or `vfunc_sig`** — not just Pattern B and C. Without it, the LLM_DECOMPILE slot-only fallback fails with `"slot-only fallback missing vtable_name"` and the entire skill fails.
+
+This applies even when:
+- The target is a **vfunc call-site offset** (e.g. `call [rax+128h]`) rather than an actual function body in a vtable
+- **No vtable YAML exists** for that class in configs/<GAMEVER>.yaml (no `expected_input` for the vtable needed)
+- The script also finds **non-vfunc targets** (global variables, struct offsets) alongside the vfunc target
+
+The `vtable_name` from `FUNC_VTABLE_RELATIONS` is used as **metadata** written to the output YAML — it does NOT require an actual vtable lookup. For example, `("IGameTypes_CreateWorkshopMapGroup", "IGameTypes")` provides the vtable class name `IGameTypes` even though no `IGameTypes_vtable.{platform}.yaml` exists.
+
+**Rule of thumb:** If any field in `GENERATE_YAML_DESIRED_FIELDS` starts with `vfunc_` or equals `vtable_name`, the target MUST have an entry in `FUNC_VTABLE_RELATIONS`.
+
+### Key Differences Between Patterns
+
+| Aspect | Pattern A (func + xref) | Pattern B (vfunc + xref) | Pattern C (vfunc + LLM) | Pattern D (func + LLM) | Pattern E (structmember + LLM) | Pattern F (vfunc + inherit) | Pattern G (ConCommand handler) | Pattern H (ordinal vtable) |
+|--------|------------------------|--------------------------|------------------------|------------------------|-------------------------------|---------------------------|-------------------------------|---------------------------|
+| FUNC_XREFS | Yes | Yes | No | No | No | No | No (uses COMMAND_NAME/HELP_STRING) | No |
+| FUNC_VTABLE_RELATIONS | No | Yes | Yes | No | No | No | No | No |
+| INHERIT_VFUNCS | No | No | No | No | No | Yes | No | No |
+| LLM_DECOMPILE | No | No | Yes | Yes | Yes | No | No | No |
+| `llm_config` param | No | No | Yes | Yes | Yes | No | No | No |
+| Helper module | `preprocess_common_skill` | `preprocess_common_skill` | `preprocess_common_skill` | `preprocess_common_skill` | `preprocess_common_skill` | `preprocess_common_skill` | `preprocess_registerconcommand_skill` | `preprocess_ordinal_vtable_via_mcp` |
+| Target list | `TARGET_FUNCTION_NAMES` | `TARGET_FUNCTION_NAMES` | `TARGET_FUNCTION_NAMES` | `TARGET_FUNCTION_NAMES` | `TARGET_STRUCT_MEMBER_NAMES` | (none — defined in INHERIT_VFUNCS) | `TARGET_FUNCTION_NAMES` | `TARGET_CLASS_NAME` (single string) |
+| preprocess param | `func_names=` | `func_names=` | `func_names=` | `func_names=` | `struct_member_names=` | `inherit_vfuncs=` | `command_name=`, `help_string=` | `class_name=`, `ordinal=` |
+| YAML fields | func_name, func_sig, func_va, func_rva, func_size | Same + vtable_name, vfunc_offset, vfunc_index | func_name, func_va, func_rva, func_size, vfunc_sig, vfunc_offset, vfunc_index, vtable_name | func_name, func_sig, func_va, func_rva, func_size | struct_name, member_name, offset, size, offset_sig, offset_sig_disp | func_name, func_va, func_rva, func_size, func_sig, vtable_name, vfunc_offset, vfunc_index | func_name, func_sig, func_va, func_rva, func_size | (vtable YAML via write_vtable_yaml) |
+| config category | `func` | `vfunc` | `vfunc` | `func` | `structmember` | `vfunc` | `func` | `vtable` |
+
+---
+
+## Step 4: Update configs/<GAMEVER>.yaml
+
+### 4a. Skills Section
+
+Each preprocessor script needs a corresponding skill entry under the appropriate module's `skills:` list.
+
+Find the module section (e.g. `server`, `engine`, `networksystem`) and add/update entries.
+
+**Template:**
+
+```yaml
+      - name: find-{SKILL_NAME}
+        expected_output:
+          - {FUNC_NAME_1}.{platform}.yaml
+          # - {FUNC_NAME_2}.{platform}.yaml  # One per target function
+        # expected_input only if the skill depends on other YAMLs:
+        expected_input:
+          - {PREDECESSOR_FUNC}.{platform}.yaml    # For Pattern C: the reference function
+          - {VTABLE_CLASS}_vtable.{platform}.yaml  # For Patterns B & C: the vtable
+```
+
+**Rules:**
+- `expected_output`: One `.{platform}.yaml` per target function in the script
+- `expected_input`: Include predecessor function YAML (Patterns C & D) and/or vtable YAML (Patterns B & C & F)
+- Pattern A with no vtable: typically NO `expected_input` (Pattern D still needs predecessor in `expected_input`)
+- Pattern F: needs both the derived class vtable YAML and the base vfunc YAML in `expected_input`
+- If splitting a combined skill, each new entry should have its own `expected_input` referencing the predecessor's output
+
+**Dependency chain example** (3-script split):
+
+```yaml
+      # Pattern A: found via xref string, no dependencies
+      - name: find-FuncA
+        expected_output:
+          - FuncA.{platform}.yaml
+
+      # Pattern C: found by decompiling FuncA, needs FuncA + vtable
+      - name: find-FuncB
+        expected_output:
+          - FuncB.{platform}.yaml
+        expected_input:
+          - FuncA.{platform}.yaml
+          - SomeClass_vtable.{platform}.yaml
+
+      # Pattern C: found by decompiling FuncB, needs FuncB + vtable
+      - name: find-FuncC1-AND-FuncC2-AND-FuncC3
+        expected_output:
+          - FuncC1.{platform}.yaml
+          - FuncC2.{platform}.yaml
+          - FuncC3.{platform}.yaml
+        expected_input:
+          - FuncB.{platform}.yaml
+          - SomeClass_vtable.{platform}.yaml
+```
+
+### 4b. Symbols Section
+
+For each NEW target function, add a symbol entry under the same module's `symbols:` list (if not already present).
+
+```yaml
+      # Regular function (Pattern A)
+      - name: {FUNC_NAME}
+        category: func
+        alias:
+          - {ClassName}::{MethodName}   # e.g. CBaseEntity::TakeDamageOld
+
+      # Virtual function (Patterns B & C)
+      - name: {FUNC_NAME}
+        category: vfunc
+        alias:
+          - {ClassName}::{MethodName}   # e.g. CBasePlayerPawn::OnTakeDamage
+
+      # Struct member offset (Pattern E)
+      - name: {STRUCT_MEMBER_NAME}
+        category: structmember
+        struct: {STRUCT_NAME}
+        member: {MEMBER_NAME}
+        alias:
+          - {StructName}::{MemberName}   # e.g. CCheckTransmitInfo::m_nPlayerSlot
+```
+
+Check existing symbols before adding — do NOT create duplicates.
+
+---
+
+## Step 5: Handle Reference YAMLs (Patterns C & D)
+
+Pattern C and D scripts reference a predecessor function's YAML at:
+`ida_preprocessor_scripts/references/{module}/{PREDECESSOR_FUNC}.{platform}.yaml`
+
+These reference files contain the decompiled code of the predecessor function (both `disasm_code` and `procedure` fields) so the LLM can identify call patterns.
+
+**Check** if the reference YAML already exists:
+- `ida_preprocessor_scripts/references/{module}/{PREDECESSOR_FUNC}.linux.yaml`
+- `ida_preprocessor_scripts/references/{module}/{PREDECESSOR_FUNC}.windows.yaml`
+
+If NOT present, generate them using `generate_reference_yaml.py`:
+
+```bash
+# Windows — always pass -platform windows explicitly
+uv run generate_reference_yaml.py -func_name {PREDECESSOR_FUNC} -auto_start_mcp -binary "bin/{gamever}/{module}/{binary_name}.dll" -platform windows -debug
+
+# Linux — always pass -platform linux explicitly
+uv run generate_reference_yaml.py -func_name {PREDECESSOR_FUNC} -auto_start_mcp -binary "bin/{gamever}/{module}/lib{module}.so" -platform linux -debug
+```
+
+For example, for the `server` module:
+```bash
+uv run generate_reference_yaml.py -func_name CCSGameRules_TerminateRound -auto_start_mcp -binary "bin/{gamever}/server/server.dll" -platform windows -debug
+uv run generate_reference_yaml.py -func_name CCSGameRules_TerminateRound -auto_start_mcp -binary "bin/{gamever}/server/libserver.so" -platform linux -debug
+```
+
+where `{gamever}` can be obtain from `.env` -> `CS2VIBE_GAMEVER`, or `14141c` if you can't read `.env`.
+
+YOU MUST: rename known symbols / add necessary comments in the generated reference YAMLs the so LLM can find desired symbols by comparing reference ones with raw procedure/disassembly read from new binaries.
+
+For example, if we want the LLM to find `CEntityInstance_AcceptInput` in the owner function:
+
+```c
+      do
+      {
+        sub_1811A0200(*(_QWORD *)(v28 + qword_181D6CD08), (__int64)"CTsWin", 0, 0, (__int64)&v124, 0, 0);
+        ++v27;
+        v28 += 8;
+      }
+      while ( v27 < dword_181D6CD00 );
+```
+
+```
+  .text:00000001808BC82B                 call    sub_1811A0200
+```
+
+We **MUST** be renamed not only `procedure`:
+
+```c
+      do
+      {
+        CEntityInstance_AcceptInput(*(_QWORD *)(v28 + qword_181D6CD08), (__int64)"CTsWin", 0, 0, (__int64)&v124, 0, 0);
+        ++v27;
+        v28 += 8;
+      }
+      while ( v27 < dword_181D6CD00 );
+```
+
+but also `disassembly`:
+
+```
+  .text:00000001808BC82B                 call    CEntityInstance_AcceptInput
+```
+
+For example, if we want the LLM to find `CBaseEntity_OnTakeDamage` as an indirect call to virtual function in the owner function:
+
+We **MUST** add comments not only in `procedure`:
+
+```c
+(*(void (__fastcall **)(_QWORD *, _DWORD *))(*a1 + 1008LL))(a1, v6); // 1008LL = CBaseEntity_OnTakeDamage
+```
+
+but also in `disassembly`:
+
+```
+00000001803CEF54 FF 90 F0 03 00 00    call    qword ptr [rax+3F0h] ; 0x3F0 = CBaseEntity_OnTakeDamage
+```
+
+For example, if we want the LLM to find `g_pNavMesh` as a global variable in the owner function:
+
+```c
+if ( !qword_18200B918 || !*(_BYTE *)(qword_18200B918 + 264) )
+    return 0;
+```
+
+```
+.text:00000001802A6E3C 48 8B 05 D5 4A D6 01                                mov     rax, cs:qword_18200B918
+```
+
+We **MUST** rename it not only in `procedure`:
+
+```c
+if ( !g_pNavMesh || !*(_BYTE *)(g_pNavMesh + 264) )
+    return 0;
+```
+
+but also in `disassembly`:
+
+```
+.text:00000001802A6E3C 48 8B 05 D5 4A D6 01                                mov     rax, cs:g_pNavMesh
+```
+
+For example, if we want the LLM to find `CCheckTransmitInfo_m_nPlayerSlot` as a struct member offset (0x240) in the owner function:
+
+```c
+v18 = sub_180BCF9E0(*(unsigned int *)(*v6 + 576));
+```
+
+```
+  .text:0000000180C99633                 mov     ecx, [rdi+240h]
+```
+
+We **MUST** add comments not only in `procedure`:
+
+```c
+v18 = sub_180BCF9E0(*(unsigned int *)(*v6 + 576)); // 576 = 0x240 = CCheckTransmitInfo::m_nPlayerSlot
+```
+
+but also in `disassembly`:
+
+```
+  .text:0000000180C99633                 mov     ecx, [rdi+240h] ; 0x240 = CCheckTransmitInfo::m_nPlayerSlot
+```
+
+**Prerequisites:** The predecessor function must already be named in the IDA database for the target binary. If it is not named yet, ask the user to either:
+1. Connect IDA Pro MCP and rename the function first, or
+2. Manually rename it in IDA before running the script
+
+**IMPORTANT — `generate_reference_yaml.py` address resolution:** The script resolves the predecessor function's address by reading `func_va` from tracked `bin_artifacts/{gamever}/{module}/{PREDECESSOR_FUNC}.{platform}.yaml`. If the predecessor is one of the target functions being converted, preserve that Git-owned input while generating references. Never delete or rewrite tracked expected artifacts merely to force a test.
+
+**IMPORTANT — When the predecessor is a NEW function (no existing output YAMLs):** If the predecessor function is brand new (discovered by another new script you're creating in the same conversion), its output YAMLs don't exist yet and `generate_reference_yaml.py` cannot resolve its address. You must use a **multi-phase workflow**:
+
+1. **Phase 1:** Create ALL scripts (vtable, xref_string, LLM_DECOMPILE) and update configs/<GAMEVER>.yaml
+2. **Phase 2:** Seed a checkout-external artifact root from `bin_artifacts/<GAMEVER>/`, remove only the new predecessor/target outputs there, then run `ida_analyze_bin.py` with explicit `-artifactdir` and `-oldartifactdir bin_artifacts`. The vtable and xref-string scripts populate the new predecessor in the isolated root.
+3. **Phase 3:** Now that the predecessor has output YAMLs, run `generate_reference_yaml.py` to create reference YAMLs, then annotate them.
+4. **Phase 4:** Remove the target output only from the isolated root so the LLM_DECOMPILE path is exercised.
+5. **Phase 5:** Run the isolated analysis again, validate the complete actual inventory, then copy the canonical computed closure into tracked `bin_artifacts` for the source PR.
+
+**IMPORTANT — Run `generate_reference_yaml.py` sequentially, NOT in parallel.** All invocations share the same IDA MCP connection. Running them in parallel will cause connection conflicts and failures. Run one command at a time, waiting for each to complete before starting the next.
+
+Run the command once per platform (windows/linux) that needs a reference YAML. The `-module` is inferred from the `-binary` path automatically.
+
+**IMPORTANT — Always pass `-platform` explicitly.** While `-platform` can theoretically be inferred from the binary extension (`.dll` → windows, `.so` → linux), auto-inference is unreliable and may produce the wrong platform's reference YAML. Always pass `-platform windows` or `-platform linux` explicitly.
+
+---
+
+## Step 6: Delete the SKILL.md
+
+After the preprocessor script is created and configs/<GAMEVER>.yaml is updated:
+
+1. Delete the SKILL.md file: `.claude/skills/find-{SKILL_NAME}/SKILL.md`
+2. Delete the now-empty directory: `.claude/skills/find-{SKILL_NAME}/`
+
+If a combined SKILL.md was split into multiple preprocessor scripts, delete the single original SKILL.md.
+
+---
+
+## Step 7: Rebuild Source-Owned Outputs in an Isolated Root
+
+Tracked `bin_artifacts` are expected Git bytes, not disposable test output. Create a checkout-external scratch artifact
+root, seed it with the selected GAMEVER's unaffected artifacts, and delete target outputs only in the scratch copy. Run
+the converted producers with the needed module/skill filters, explicit `-artifactdir <scratch-root>`, and
+`-oldartifactdir bin_artifacts`, but without `-force_all`. Never remove artifacts across unrelated game versions.
+
+After the isolated run succeeds, validate its formal inventory and canonical bytes, then copy only the computed affected
+producer-group and downstream closure back to `bin_artifacts/<GAMEVER>/`. The source PR must stage those A/M/D/R paths
+with the script/config/reference change. Run the repository artifact contract before continuing.
+
+---
+
+## Step 8: Remove Entry from docs/claude_skills_stats.yaml
+
+After the conversion is complete and validated, delete the converted skill's entry from `docs/claude_skills_stats.yaml`. This file tracks skills that still use the old SKILL.md format — once converted to a preprocessor script, the entry is no longer relevant.
+
+Remove the entire YAML block for each converted symbol, e.g.:
+
+```yaml
+# Delete this entire block:
+- symbol_name: CBasePlayerController_HandleCommand_JoinTeam
+  skill_name: find-CBasePlayerController_HandleCommand_JoinTeam
+  classicy: with_xref_strings
+  owner_func_name: CBasePlayerController_HandleCommand_JoinTeam
+  owner_module: server
+```
+
+If the original SKILL.md covered multiple symbols, delete ALL corresponding entries from the stats file.
+
+---
+
+## Step 9: Run Tests
+
+After all conversion steps are complete, run the complete config from a different checkout-external fresh empty root.
+The final `-force_all` contract requires both platforms, no module/skill/vcall filters, and an explicit execution report.
+
+Because the output is very long, redirect it to a temp file and then read just the summary:
+
+```bash
+uv run ida_analyze_bin.py -gamever <GAMEVER> -configyaml configs/<GAMEVER>.yaml \
+  -artifactdir <checkout-external-empty-root> -oldartifactdir bin_artifacts \
+  -oldgamever <PRIOR_GAMEVER-or-none> -execution_report <checkout-external-execution-report.json> \
+  -debug -force_all > /tmp/ida_test_output.txt 2>&1
+tail -10 /tmp/ida_test_output.txt
+```
+
+Check the **Summary** at the end of the output:
+- **Failed: 0** means the conversion is correct
+- If any failures, search the full output for the failing skill name to investigate:
+  ```bash
+  grep -A 5 "Failed\|Error" /tmp/ida_test_output.txt
+  ```
+
+This step is mandatory — do not report completion without running and passing this validation.
+
+---
+
+## Step 10: Commit Changes
+
+After validation passes, commit all conversion-related changes to git.
+
+**IMPORTANT — Never commit directly to the `main` branch.** If the current branch is `main`, create and switch to a `dev` branch first:
+
+```bash
+# Check current branch
+git branch --show-current
+
+# If on main, switch to dev (create it if it doesn't exist)
+git checkout dev 2>/dev/null || git checkout -b dev
+```
+
+Then commit:
+
+```bash
+git add <preprocessor_script> <deleted_skill_md> <configs/<GAMEVER>.yaml if changed> <bin_artifacts-closure> docs/claude_skills_stats.yaml
+git commit -m "refactor(preprocessor): convert find-{SKILL_NAME}" -m "Co-Authored-By: Codex <codex@openai.com>"
+```
+
+Include all files changed during the conversion:
+- The new/updated preprocessor script
+- The deleted SKILL.md
+- Any configs/<GAMEVER>.yaml changes
+- The computed source-owned `bin_artifacts/<GAMEVER>/` closure
+- The updated `docs/claude_skills_stats.yaml`
+
+Do NOT include unrelated changes (e.g. `.claude/settings.json` permission changes).
+
+---
+
+## Checklist
+
+Before finishing, verify:
+
+- [ ] Preprocessor script file name matches the `name` field in configs/<GAMEVER>.yaml skill entry
+- [ ] `TARGET_FUNCTION_NAMES` lists all functions the script should find
+- [ ] `FUNC_XREFS` xref strings match the debug strings from the original SKILL.md (Pattern A/B)
+- [ ] `LLM_DECOMPILE` reference path points to the correct predecessor function YAML (Patterns C/D)
+- [ ] `FUNC_VTABLE_RELATIONS` lists correct vtable class for EVERY target that has `vtable_name` or `vfunc_sig` in its `GENERATE_YAML_DESIRED_FIELDS` — required even for vfunc call-site offsets and even if no vtable YAML exists (Patterns B/C, and any LLM_DECOMPILE target with vfunc fields)
+- [ ] `INHERIT_VFUNCS` lists correct (target, derived_class, base_vfunc, gen_sig) tuples (Pattern F only)
+- [ ] `GENERATE_YAML_DESIRED_FIELDS` uses correct field set for the pattern (Pattern C/D: include `func_va` if function is a predecessor for downstream LLM_DECOMPILE)
+- [ ] LLM_DECOMPILE dependency chains are split into separate scripts (one per chain link), NOT combined in a single script
+- [ ] `preprocess_skill` signature includes `llm_config=None` if and only if LLM_DECOMPILE is used (NOT for Pattern F)
+- [ ] `preprocess_common_skill` call passes all relevant lists (`func_xrefs`, `func_vtable_relations`, `llm_decompile_specs`, `llm_config`, `inherit_vfuncs`)
+- [ ] configs/<GAMEVER>.yaml `expected_output` has one entry per target function
+- [ ] configs/<GAMEVER>.yaml `expected_input` correctly chains dependencies
+- [ ] configs/<GAMEVER>.yaml `symbols` section has entries for all target functions (no duplicates)
+- [ ] Reference YAMLs exist or were generated from preserved source-owned predecessor artifacts (Patterns C/D)
+- [ ] Old SKILL.md and its directory are deleted
+- [ ] Target outputs were removed only in an isolated root, rebuilt, and the canonical closure copied into `bin_artifacts`
+- [ ] Entry removed from `docs/claude_skills_stats.yaml` for all converted symbols
+- [ ] `uv run ida_analyze_bin.py -debug` passes with 0 failures
+- [ ] All source/config/reference changes and the tracked artifact closure are committed on `dev`, not `main`
+
+## Real-World Examples
+
+### Example: xref-string regular function (Pattern A)
+
+**Before:** `.claude/skills/find-CBaseEntity_TakeDamageOld/SKILL.md` — used `find_regex pattern="TakeDamageOld.*GetDamageForce"` to locate the function.
+
+**After:** `ida_preprocessor_scripts/find-CBaseEntity_TakeDamageOld.py` with:
+- `FUNC_XREFS` containing `"CBaseEntity::TakeDamageOld: damagetype %d with info.GetDamageForce() == Vector::vZero"`
+- `GENERATE_YAML_DESIRED_FIELDS` with `func_name, func_sig, func_va, func_rva, func_size`
+- No `FUNC_VTABLE_RELATIONS`, no `LLM_DECOMPILE`
+
+### Example: LLM_DECOMPILE virtual function (Pattern C)
+
+**Derived from:** the same SKILL.md's "decompile TakeDamageOld and find vfunc call to OnTakeDamage" steps.
+
+**Result:** `ida_preprocessor_scripts/find-CBaseEntity_OnTakeDamage.py` with:
+- `LLM_DECOMPILE` referencing `references/server/CBaseEntity_TakeDamageOld.{platform}.yaml`
+- `FUNC_VTABLE_RELATIONS`: `("CBaseEntity_OnTakeDamage", "CBasePlayerPawn")`
+- `GENERATE_YAML_DESIRED_FIELDS` with `func_name, vfunc_sig, vfunc_offset, vfunc_index, vtable_name`
+
+### Example: LLM_DECOMPILE multiple virtual functions (Pattern C)
+
+**Derived from:** the same SKILL.md's "decompile OnTakeDamage and find Alive/Dying/Dead vfunc offsets" steps.
+
+**Result:** `ida_preprocessor_scripts/find-CBaseEntity_OnTakeDamage_Alive-AND-Dying-AND-Dead.py` with:
+- 3 target functions, 3 `LLM_DECOMPILE` entries (all referencing the same YAML), 3 `FUNC_VTABLE_RELATIONS` entries, 3 `GENERATE_YAML_DESIRED_FIELDS` entries
+- Each `LLM_DECOMPILE` entry references `references/server/CBaseEntity_OnTakeDamage.{platform}.yaml`
+
+### Example: Split xref-string + LLM_DECOMPILE regular function (Patterns A + D)
+
+**Before:** `.claude/skills/find-CCSGameRules_TerminateRound-AND-CEntityInstance_AcceptInput/SKILL.md` — found TerminateRound via `find_regex pattern="TerminateRound"`, then decompiled it to find AcceptInput called with "CTsWin"/"TerroristsWin" string arguments.
+
+**Split into two scripts:**
+
+1. `ida_preprocessor_scripts/find-CCSGameRules_TerminateRound.py` (Pattern A):
+   - `FUNC_XREFS` containing `"TerminateRound"`
+   - `GENERATE_YAML_DESIRED_FIELDS` with `func_name, func_sig, func_va, func_rva, func_size`
+   - No `FUNC_VTABLE_RELATIONS`, no `LLM_DECOMPILE`
+
+2. `ida_preprocessor_scripts/find-CEntityInstance_AcceptInput.py` (Pattern D):
+   - `LLM_DECOMPILE` referencing `references/server/CCSGameRules_TerminateRound.{platform}.yaml`
+   - `GENERATE_YAML_DESIRED_FIELDS` with `func_name, func_sig, func_va, func_rva, func_size`
+   - No `FUNC_VTABLE_RELATIONS` (it's a regular function, not virtual)
+   - Reference YAMLs generated via `uv run generate_reference_yaml.py -func_name CCSGameRules_TerminateRound -auto_start_mcp -binary "bin/%CS2VIBE_GAMEVER%/server/server.dll" -debug`
+
+**configs/<GAMEVER>.yaml dependency chain:**
+```yaml
+      - name: find-CCSGameRules_TerminateRound
+        expected_output:
+          - CCSGameRules_TerminateRound.{platform}.yaml
+
+      - name: find-CEntityInstance_AcceptInput
+        expected_output:
+          - CEntityInstance_AcceptInput.{platform}.yaml
+        expected_input:
+          - CCSGameRules_TerminateRound.{platform}.yaml
+```
+
+### Example: Split xref-string vfunc + LLM_DECOMPILE struct offset (Patterns B + E with platform-specific xrefs)
+
+**Before:** `.claude/skills/find-CSource2GameEntities_CheckTransmit-AND-CCheckTransmitInfo/SKILL.md` — found CheckTransmit via `find_regex pattern="CSource2GameEntities::CheckTransmit"`, then examined the decompiled code to find `CCheckTransmitInfo::m_nPlayerSlot` at offset 0x240.
+
+**Split into two scripts:**
+
+1. `ida_preprocessor_scripts/find-CSource2GameEntities_CheckTransmit.py` (Pattern B with platform-specific xrefs):
+   - `FUNC_XREFS_WINDOWS` containing `"CSource2GameEntities::CheckTransmit"` (full assertion string on Windows)
+   - `FUNC_XREFS_LINUX` containing `"./gameinterface.cpp:30"` (shorter path on Linux — Windows string not present in Linux binary)
+   - `FUNC_VTABLE_RELATIONS`: `("CSource2GameEntities_CheckTransmit", "CSource2GameEntities")`
+   - `GENERATE_YAML_DESIRED_FIELDS` with `func_name, func_va, func_rva, func_size, func_sig, vtable_name, vfunc_offset, vfunc_index`
+   - Uses `func_xrefs=FUNC_XREFS_WINDOWS if platform == "windows" else FUNC_XREFS_LINUX` in the `preprocess_common_skill` call
+
+2. `ida_preprocessor_scripts/find-CCheckTransmitInfo_m_nPlayerSlot.py` (Pattern E):
+   - `TARGET_STRUCT_MEMBER_NAMES` containing `"CCheckTransmitInfo_m_nPlayerSlot"`
+   - `LLM_DECOMPILE` referencing `references/server/CSource2GameEntities_CheckTransmit.{platform}.yaml`
+   - `GENERATE_YAML_DESIRED_FIELDS` with `struct_name, member_name, offset, size, offset_sig, offset_sig_disp`
+   - Reference YAMLs annotated with `; 0x240 = CCheckTransmitInfo::m_nPlayerSlot` in disasm and `// 576 = 0x240 = CCheckTransmitInfo::m_nPlayerSlot` in procedure
+
+**configs/<GAMEVER>.yaml dependency chain:**
+```yaml
+      - name: find-CSource2GameEntities_CheckTransmit
+        expected_output:
+          - CSource2GameEntities_CheckTransmit.{platform}.yaml
+        expected_input:
+          - CSource2GameEntities_vtable.{platform}.yaml
+
+      - name: find-CCheckTransmitInfo_m_nPlayerSlot
+        expected_output:
+          - CCheckTransmitInfo_m_nPlayerSlot.{platform}.yaml
+        expected_input:
+          - CSource2GameEntities_CheckTransmit.{platform}.yaml
+```
+
+### Example: Split xref-string vfunc + INHERIT_VFUNCS derived vfunc (Patterns B + F)
+
+**Before:** `.claude/skills/find-CBaseEntity_Precache/SKILL.md` — found CBaseEntity_Precache via a wrapper function referencing `"bloodspray"`. CBaseEntity_Precache is actually a derived-class override of CEntityInstance::Precache.
+
+**Split into two scripts with swapped relationship:**
+
+1. `ida_preprocessor_scripts/find-CEntityInstance_Precache.py` (Pattern B with FULLMATCH):
+   - `FUNC_XREFS` containing `"FULLMATCH:Precache"` (exact match to avoid false positives on short string)
+   - `FUNC_VTABLE_RELATIONS`: `("CEntityInstance_Precache", "CEntityInstance")`
+   - `GENERATE_YAML_DESIRED_FIELDS` with vtable fields
+   - This is the **base class** vfunc — found directly via xref strings
+
+2. `ida_preprocessor_scripts/find-CBaseEntity_Precache.py` (Pattern F):
+   - `INHERIT_VFUNCS`: `("CBaseEntity_Precache", "CBaseEntity", "CEntityInstance_Precache", True)`
+   - `GENERATE_YAML_DESIRED_FIELDS` with vtable fields
+   - No FUNC_XREFS, no LLM_DECOMPILE — inherits the vtable slot from CEntityInstance_Precache and looks it up in CBaseEntity's vtable
+
+**configs/<GAMEVER>.yaml dependency chain:**
+```yaml
+      - name: find-CEntityInstance_Precache
+        expected_output:
+          - CEntityInstance_Precache.{platform}.yaml
+        expected_input:
+          - CEntityInstance_vtable.{platform}.yaml
+
+      - name: find-CBaseEntity_Precache
+        expected_output:
+          - CBaseEntity_Precache.{platform}.yaml
+        expected_input:
+          - CBaseEntity_vtable.{platform}.yaml
+          - CEntityInstance_Precache.{platform}.yaml
+```
+
+**Key insight:** The SKILL.md originally found CBaseEntity_Precache directly. When converting, we recognized that `Precache` is a base-class virtual method on `CEntityInstance`, and `CBaseEntity::Precache` is just an override at the same vtable slot. So we split into: find the base method via xref strings → inherit to find the derived override.
+
+### Example: Split vtable + xref-string vfunc + LLM_DECOMPILE regular function (vtable + Patterns B + D)
+
+**Before:** `.claude/skills/find-LegacyGameEventListener/SKILL.md` — found CSource2GameClients_StartHLTVServer via `find_regex pattern="CSource2GameClients::StartHLTVServer: game event %s not found"`, then decompiled it to find LegacyGameEventListener called with `a2` parameter.
+
+**Split into three scripts:**
+
+1. `ida_preprocessor_scripts/find-CSource2GameClients_vtable.py` (vtable discovery):
+   - `TARGET_CLASS_NAMES`: `["CSource2GameClients"]`
+   - No FUNC_XREFS, no LLM_DECOMPILE — pure vtable lookup
+
+2. `ida_preprocessor_scripts/find-CSource2GameClients_StartHLTVServer.py` (Pattern B):
+   - `FUNC_XREFS` containing `"CSource2GameClients::StartHLTVServer: game event %s not found"`
+   - `FUNC_VTABLE_RELATIONS`: `("CSource2GameClients_StartHLTVServer", "CSource2GameClients")`
+   - `GENERATE_YAML_DESIRED_FIELDS` with vtable fields
+   - This is the **intermediate function** — found via xref strings, serves as predecessor for the next script
+
+3. `ida_preprocessor_scripts/find-LegacyGameEventListener.py` (Pattern D):
+   - `LLM_DECOMPILE` referencing `references/server/CSource2GameClients_StartHLTVServer.{platform}.yaml`
+   - `GENERATE_YAML_DESIRED_FIELDS` with `func_name, func_sig, func_va, func_rva, func_size`
+   - No `FUNC_VTABLE_RELATIONS` (it's a regular function, not virtual)
+   - Reference YAMLs annotated with `LegacyGameEventListener` replacing `sub_180B1AC80` / `sub_1516AB0` in both disasm and procedure
+
+**configs/<GAMEVER>.yaml dependency chain:**
+```yaml
+      - name: find-CSource2GameClients_vtable
+        expected_output:
+          - CSource2GameClients_vtable.{platform}.yaml
+
+      - name: find-CSource2GameClients_StartHLTVServer
+        expected_output:
+          - CSource2GameClients_StartHLTVServer.{platform}.yaml
+        expected_input:
+          - CSource2GameClients_vtable.{platform}.yaml
+
+      - name: find-LegacyGameEventListener
+        expected_output:
+          - LegacyGameEventListener.{platform}.yaml
+        expected_input:
+          - CSource2GameClients_StartHLTVServer.{platform}.yaml
+```
+
+**Key insight — multi-phase workflow:** The predecessor `CSource2GameClients_StartHLTVServer` was a brand-new function with no existing output YAMLs. So `generate_reference_yaml.py` couldn't run until the xref_string script populated its output. The workflow was:
+1. Create all 3 scripts + config entries
+2. Run a targeted isolated analyzer pass without `-force_all` → vtable + xref-string scripts create StartHLTVServer in the seeded scratch artifact root
+3. Run `generate_reference_yaml.py` for both platforms using that isolated predecessor artifact
+4. Annotate reference YAMLs (rename `sub_180B1AC80` → `LegacyGameEventListener` in both disasm and procedure)
+5. Remove LegacyGameEventListener only from the scratch artifact root
+6. Run the complete config from a fresh empty root with `-force_all` and `-execution_report`, then copy the verified closure into `bin_artifacts`
+
+### Example: Split ConCommand handler + LLM_DECOMPILE virtual function (Patterns G + C, multi-phase)
+
+**Before:** `.claude/skills/find-CBasePlayerPawn_CommitSuicide/SKILL.md` — searched for `"bot_kill"` command string via `find_regex pattern="bot_kill.*all"`, traced xrefs to find the ConCommand handler, then decompiled the handler to find the `CommitSuicide` vfunc call (at offset `0xC80` in `CBasePlayerPawn` vtable).
+
+**Split into two scripts:**
+
+1. `ida_preprocessor_scripts/find-BotKill_CommandHandler.py` (Pattern G):
+   - `COMMAND_NAME = "bot_kill"`
+   - `HELP_STRING = "bot_kill <all> <t|ct> <type> <difficulty> <name> - Kills a specific bot, or all bots, matching the given criteria."`
+   - `SEARCH_WINDOW_BEFORE_CALL = 96`, `SEARCH_WINDOW_AFTER_XREF = 96`
+   - Uses `preprocess_registerconcommand_skill()` from `_registerconcommand.py`
+   - No dependencies — configs/<GAMEVER>.yaml has no `expected_input`
+
+2. `ida_preprocessor_scripts/find-CBasePlayerPawn_CommitSuicide.py` (Pattern C):
+   - `LLM_DECOMPILE` referencing `references/server/BotKill_CommandHandler.{platform}.yaml`
+   - `FUNC_VTABLE_RELATIONS`: `("CBasePlayerPawn_CommitSuicide", "CBasePlayerPawn")`
+   - `GENERATE_YAML_DESIRED_FIELDS` with `func_name, vfunc_sig, vfunc_offset, vfunc_index, vtable_name`
+   - Reference YAMLs annotated with `; 0xC80 = CBasePlayerPawn_CommitSuicide` in disasm and `// 3200LL = 0xC80 = CBasePlayerPawn_CommitSuicide` in procedure
+
+**configs/<GAMEVER>.yaml dependency chain:**
+```yaml
+      - name: find-BotKill_CommandHandler
+        expected_output:
+          - BotKill_CommandHandler.{platform}.yaml
+
+      - name: find-CBasePlayerPawn_CommitSuicide
+        expected_output:
+          - CBasePlayerPawn_CommitSuicide.{platform}.yaml
+        expected_input:
+          - BotKill_CommandHandler.{platform}.yaml
+          - CBasePlayerPawn_vtable.{platform}.yaml
+```
+
+**Key insight — multi-phase workflow:** `BotKill_CommandHandler` was a brand-new function with no existing output YAMLs. The workflow was:
+1. Create both scripts + config entries, delete old SKILL.md
+2. Run a targeted isolated analyzer pass without `-force_all` → Pattern G creates BotKill_CommandHandler in the seeded scratch artifact root
+3. Run `generate_reference_yaml.py` for both platforms using the newly created BotKill_CommandHandler output YAMLs
+4. Annotate reference YAMLs (add `; 0xC80 = CBasePlayerPawn_CommitSuicide` comments for the vfunc call in the kill loop)
+5. Remove CBasePlayerPawn_CommitSuicide only from the scratch artifact root
+6. Run the complete config from a fresh empty root with `-force_all` and `-execution_report`, then copy the verified closure into `bin_artifacts`
+
+### Example: Split xref-string function + LLM_DECOMPILE global variable & vfunc offset (Patterns A + LLM_DECOMPILE with gv + vfunc, multi-phase)
+
+**Before:** `.claude/skills/find-g_pGameTypes-AND-IGameTypes_CreateWorkshopMapGroup/SKILL.md` — searched for `"mapgroup workshop"` string, found `CDedicatedServerWorkshopManager_SwitchToWorkshopMapGroup`, then decompiled it to find `g_pGameTypes` (global variable at `qword_XXXX`) and `IGameTypes_CreateWorkshopMapGroup` (vfunc call at offset `0x128`/`0x130`).
+
+**Split into two scripts:**
+
+1. `ida_preprocessor_scripts/find-CDedicatedServerWorkshopManager_SwitchToWorkshopMapGroup.py` (Pattern A):
+   - `FUNC_XREFS` containing `"mapgroup workshop"`
+   - `GENERATE_YAML_DESIRED_FIELDS` with `func_name, func_sig, func_va, func_rva, func_size`
+   - No `FUNC_VTABLE_RELATIONS`, no `LLM_DECOMPILE` — pure xref-string discovery
+   - No dependencies — configs/<GAMEVER>.yaml has no `expected_input`
+
+2. `ida_preprocessor_scripts/find-g_pGameTypes-AND-IGameTypes_CreateWorkshopMapGroup.py` (LLM_DECOMPILE):
+   - `TARGET_FUNCTION_NAMES`: `["IGameTypes_CreateWorkshopMapGroup"]`
+   - `TARGET_GLOBALVAR_NAMES`: `["g_pGameTypes"]`
+   - `LLM_DECOMPILE` referencing `references/server/CDedicatedServerWorkshopManager_SwitchToWorkshopMapGroup.{platform}.yaml` (both targets share the same reference)
+   - **CRITICAL:** `FUNC_VTABLE_RELATIONS`: `("IGameTypes_CreateWorkshopMapGroup", "IGameTypes")` — required because `GENERATE_YAML_DESIRED_FIELDS` includes `vtable_name` and `vfunc_sig`. Without this, the slot-only fallback fails with `"slot-only fallback missing vtable_name"`. Note: no `IGameTypes_vtable` YAML exists — the vtable name is purely metadata.
+   - `GENERATE_YAML_DESIRED_FIELDS` for IGameTypes_CreateWorkshopMapGroup: `func_name, vtable_name, vfunc_offset, vfunc_index, vfunc_sig`
+   - `GENERATE_YAML_DESIRED_FIELDS` for g_pGameTypes: `gv_name, gv_va, gv_rva, gv_sig, gv_sig_va, gv_inst_offset, gv_inst_length, gv_inst_disp`
+   - Reference YAMLs annotated: `qword_XXXX` renamed to `g_pGameTypes` in both disasm and procedure; `call [rax+128h]` annotated with `; 0x128 = IGameTypes_CreateWorkshopMapGroup`; `296LL` annotated with `// 296LL = 0x128 = IGameTypes_CreateWorkshopMapGroup`
+
+**configs/<GAMEVER>.yaml dependency chain:**
+```yaml
+      - name: find-CDedicatedServerWorkshopManager_SwitchToWorkshopMapGroup
+        expected_output:
+          - CDedicatedServerWorkshopManager_SwitchToWorkshopMapGroup.{platform}.yaml
+
+      - name: find-g_pGameTypes-AND-IGameTypes_CreateWorkshopMapGroup
+        expected_output:
+          - g_pGameTypes.{platform}.yaml
+          - IGameTypes_CreateWorkshopMapGroup.{platform}.yaml
+        expected_input:
+          - CDedicatedServerWorkshopManager_SwitchToWorkshopMapGroup.{platform}.yaml
+```
+
+**Key insight — FUNC_VTABLE_RELATIONS for vfunc offsets:** Even though `IGameTypes_CreateWorkshopMapGroup` is a vfunc call-site offset (not a function in a vtable we own), `FUNC_VTABLE_RELATIONS` is still required because the `GENERATE_YAML_DESIRED_FIELDS` include `vtable_name` and `vfunc_sig`. The system uses the vtable class name from `FUNC_VTABLE_RELATIONS` as metadata — it does NOT attempt to look up an `IGameTypes_vtable` YAML.

@@ -1,0 +1,37 @@
+{
+  "name": "agent-tasks",
+  "repo": "23blocks-OS/ai-maestro-plugins",
+  "path": "src/skills/agent-tasks/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/23blocks-OS/ai-maestro-plugins",
+  "dir_name": "agent-tasks",
+  "downloaded_at": "2026-10-25T07:59:08.624537Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "23blocks-OS",
+  "source_url": "https://github.com/23blocks-OS/ai-maestro-plugins/blob/main/src/skills/agent-tasks/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/23blocks-OS/ai-maestro-plugins/blob/main/src/skills/agent-tasks/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Keep your own task board and Eisenhower matrix in AI Maestro current, so the operator can see what you are doing, where each task is, how urgent and important it is, and what you are waiting for. Use when you take on, start, finish, hand over, pause or block on a task; when you keep a task list, priorities or a to-do file of your own (the board is where the operator reads it); when you need to wait for the operator, another agent or someone outside; when a card's urgency or importance changes (the operator's Eisenhower matrix), and when a prompt starts with [TASK <id>], which is an instruction written on one of your cards."
+}

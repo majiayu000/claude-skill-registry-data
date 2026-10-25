@@ -1,0 +1,37 @@
+{
+  "name": "discovery",
+  "repo": "DGouron/review-flow",
+  "path": ".claude/skills/discovery/SKILL.md",
+  "github_branch": "master",
+  "category": "documents",
+  "source": "github.com/DGouron/review-flow",
+  "dir_name": "discovery",
+  "downloaded_at": "2026-10-25T08:37:21.763730Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, markdown",
+    "score": 2,
+    "runner_up": "business",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DGouron",
+  "source_url": "https://github.com/DGouron/review-flow/blob/master/.claude/skills/discovery/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DGouron/review-flow/blob/master/.claude/skills/discovery/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Business discovery before technical specs. Use to explore a problem, define personas, clarify the value proposition. Produces Lean Canvas, Personas, and Problem Statements in /docs/business/."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "webapp-testing",
+  "repo": "JNZader/repoforge",
+  "path": "own/skills/webapp-testing/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/JNZader/repoforge",
+  "dir_name": "webapp-testing-jnzader-repoforge",
+  "downloaded_at": "2026-10-25T09:12:25.115262Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for testing: test, integration, e2e, playwright",
+    "score": 4,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "integration",
+      "e2e",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "JNZader",
+  "source_url": "https://github.com/JNZader/repoforge/blob/main/own/skills/webapp-testing/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/JNZader/repoforge/blob/main/own/skills/webapp-testing/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Browser-based UI verification using Playwright. Page Object Model, selector best practices, visual regression, network interception, and MCP integration. Trigger: When writing E2E tests, verifying UI changes, or setting up Playwright."
+}

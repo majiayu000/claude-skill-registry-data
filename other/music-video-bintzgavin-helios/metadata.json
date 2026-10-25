@@ -1,0 +1,37 @@
+{
+  "name": "guided-music-video",
+  "repo": "BintzGavin/helios",
+  "path": "skills/guided/music-video/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/BintzGavin/helios",
+  "dir_name": "music-video-bintzgavin-helios",
+  "downloaded_at": "2026-10-25T08:25:25.504441Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "BintzGavin",
+  "source_url": "https://github.com/BintzGavin/helios/blob/main/skills/guided/music-video/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BintzGavin/helios/blob/main/skills/guided/music-video/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Lyric and karaoke music videos drawn in code: get word- and syllable-level lyric timings (from a cue file, or by forced alignment on a vocal stem), write a treatment and a storyboard by song section, derive the edit from the lyrics and the beat map, and integrate the words into every scene instead of subtitling them. Renders one Helios renderAt(t) page with the song attached. Use for lyric videos, karaoke videos, visualizers with lyrics, and story-driven music videos."
+}

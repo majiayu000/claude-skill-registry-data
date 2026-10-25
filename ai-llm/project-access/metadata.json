@@ -1,0 +1,37 @@
+{
+  "name": "project-access",
+  "repo": "BlackBeltTechnology/pi-agent-dashboard",
+  "path": "packages/extension/.pi/skills/project-access/SKILL.md",
+  "github_branch": "master",
+  "category": "ai-llm",
+  "source": "github.com/BlackBeltTechnology/pi-agent-dashboard",
+  "dir_name": "project-access",
+  "downloaded_at": "2026-10-25T08:25:52.894589Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: prompt, prompting",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "prompt",
+      "prompting"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "BlackBeltTechnology",
+  "source_url": "https://github.com/BlackBeltTechnology/pi-agent-dashboard/blob/master/packages/extension/.pi/skills/project-access/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BlackBeltTechnology/pi-agent-dashboard/blob/master/packages/extension/.pi/skills/project-access/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Map, suggest and request the folder access a project needs: `map` (read-only report), `suggest` (draft `.pi/access.json` from this project's grants), `provision` (submit it for line-by-line operator approval). Use on \"what folders can this project reach\", \"set up folder access\", \"write .pi/access.json\", repeated folder access prompts, or retrying access setup after project-init."
+}

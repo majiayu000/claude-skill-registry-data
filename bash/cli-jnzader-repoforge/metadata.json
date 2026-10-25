@@ -1,0 +1,37 @@
+{
+  "name": "add-cli-options",
+  "repo": "JNZader/repoforge",
+  "path": ".claude/skills/main/cli/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/JNZader/repoforge",
+  "dir_name": "cli-jnzader-repoforge",
+  "downloaded_at": "2026-10-25T09:12:24.424275Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, cli",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "JNZader",
+  "source_url": "https://github.com/JNZader/repoforge/blob/main/.claude/skills/main/cli/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/JNZader/repoforge/blob/main/.claude/skills/main/cli/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill covers the creation of shared options for CLI commands. Trigger: When defining command-line interfaces using the `click` library."
+}

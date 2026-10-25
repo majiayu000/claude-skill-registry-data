@@ -1,0 +1,37 @@
+{
+  "name": "jev-router\"",
+  "repo": "EmanuProds/dotfiles",
+  "path": "skills/jev-router/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/EmanuProds/dotfiles",
+  "dir_name": "jev-router",
+  "downloaded_at": "2026-10-25T08:48:47.284948Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "EmanuProds",
+  "source_url": "https://github.com/EmanuProds/dotfiles/blob/master/skills/jev-router/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/EmanuProds/dotfiles/blob/master/skills/jev-router/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Uses the Jev System One model to choose which OpenCode subagent should handle an ambiguously-routed request, returning a typed choice with a calibrated confidence. Invoke when the correct subagent is not obvious from the task description, when two subagents plausibly apply, or when a previous delegation was sent to the wrong place. Skip entirely when the target is already clear."
+}

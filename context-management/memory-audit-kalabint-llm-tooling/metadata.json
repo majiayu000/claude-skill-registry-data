@@ -1,0 +1,37 @@
+{
+  "name": "memory-audit",
+  "repo": "Kalabint/llm-tooling",
+  "path": "skills/memory-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "context-management",
+  "source": "github.com/Kalabint/llm-tooling",
+  "dir_name": "memory-audit-kalabint-llm-tooling",
+  "downloaded_at": "2026-10-25T09:23:47.578950Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, memory",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Kalabint",
+  "source_url": "https://github.com/Kalabint/llm-tooling/blob/main/skills/memory-audit/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Kalabint/llm-tooling/blob/main/skills/memory-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audit the project's persistent agent memories for backfire-risk, stale/superseded state, contradictions, redundancy, and bloat. Lists problems for the user to disposition - does NOT auto-correct. Surfaced on a 14-day cadence by a SessionStart hook. Use when the user asks to audit/review/clean up memories, or when the overdue reminder fires."
+}

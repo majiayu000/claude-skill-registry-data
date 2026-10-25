@@ -1,0 +1,37 @@
+{
+  "name": "calima-rules\"",
+  "repo": "EmanuProds/dotfiles",
+  "path": "skills/calima-rules/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/EmanuProds/dotfiles",
+  "dir_name": "calima-rules",
+  "downloaded_at": "2026-10-25T08:48:49.985717Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "EmanuProds",
+  "source_url": "https://github.com/EmanuProds/dotfiles/blob/master/skills/calima-rules/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/EmanuProds/dotfiles/blob/master/skills/calima-rules/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Hard rules and silent failure modes of the Calima ERP Cont\u00e1bil web system \u2014 what breaks, what it looks like when it does, and the fix. Use whenever an action on Calima appears to do nothing, a save seems to fail, a field rejects its value, a dropdown will not open, or a result must be confirmed before reporting it. Also holds the authorisation ceiling (L0\u2013L5) and the standing 2FA instruction."
+}

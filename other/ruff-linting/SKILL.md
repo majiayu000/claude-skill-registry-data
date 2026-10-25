@@ -1,0 +1,345 @@
+---
+created: 2025-12-16"
+modified: 2026-05-29
+reviewed: 2026-05-29
+name: ruff-linting
+description: Python linting with ruff. Fast linting, rule selection, auto-fixing, and config. Use when checking Python code quality, enforcing standards, or finding bugs.
+user-invocable: false
+allowed-tools: Bash(ruff *), Bash(python *), Bash(uv *), Read, Edit, Write, Grep, Glob
+---
+
+# ruff Linting
+
+Expert knowledge for using `ruff check` as an extremely fast Python linter with comprehensive rule support and automatic fixing.
+
+## When to Use This Skill
+
+| Use this skill when... | Use a focused sibling instead when... |
+|---|---|
+| Running `ruff check`, selecting rule sets, or auto-fixing lint violations | Running `ruff format` to enforce code style — use ruff-formatting |
+| Configuring `[tool.ruff.lint]` rules and per-file ignores in pyproject.toml | Comparing ruff against type-checkers and formatters at a stack level — use python-code-quality |
+| Wiring ruff into editors, pre-commit, CI/CD, Docker, or build systems | See the quick forms in [CI/CD Integration](#cicd-integration) below; full editor/CI/Docker/migration recipes in [REFERENCE.md](REFERENCE.md) |
+| Migrating from Flake8/pylint/isort/pyupgrade to ruff's combined rule set | Running `ruff format` to enforce code style — use ruff-formatting |
+
+## Core Expertise
+
+**ruff Advantages**
+- Extremely fast (10-100x faster than Flake8)
+- Written in Rust for performance
+- Replaces multiple tools (Flake8, pylint, isort, pyupgrade, etc.)
+- Auto-fix capabilities for many rules
+- Compatible with existing configurations
+- Over 800 built-in rules
+
+## Basic Usage
+
+### Simple Linting
+```bash
+# Lint current directory
+ruff check
+
+# Lint specific files or directories
+ruff check path/to/file.py
+ruff check src/ tests/
+
+# IMPORTANT: Pass directory as parameter to stay in repo root
+# ✅ Good
+ruff check services/orchestrator
+
+# ❌ Bad
+cd services/orchestrator && ruff check
+```
+
+### Auto-Fixing
+```bash
+# Show what would be fixed (diff preview)
+ruff check --diff
+
+# Apply safe automatic fixes
+ruff check --fix
+
+# Fix specific files
+ruff check --fix src/main.py
+
+# Fix with preview (see changes before applying)
+ruff check --diff services/orchestrator
+ruff check --fix services/orchestrator
+```
+
+### Output Formats
+```bash
+# Default output
+ruff check
+
+# Show statistics
+ruff check --statistics
+
+# JSON output for tooling
+ruff check --output-format json
+
+# GitHub Actions annotations
+ruff check --output-format github
+
+# GitLab Code Quality report
+ruff check --output-format gitlab
+
+# Concise output
+ruff check --output-format concise
+```
+
+## Rule Selection
+
+### Common Rule Codes
+
+| Code | Description | Example Rules |
+|------|-------------|---------------|
+| `E` | pycodestyle errors | E501 (line too long) |
+| `F` | Pyflakes | F401 (unused import) |
+| `W` | pycodestyle warnings | W605 (invalid escape) |
+| `B` | flake8-bugbear | B006 (mutable default) |
+| `I` | isort | I001 (unsorted imports) |
+| `UP` | pyupgrade | UP006 (deprecated types) |
+| `SIM` | flake8-simplify | SIM102 (nested if) |
+| `D` | pydocstyle | D100 (missing docstring) |
+| `N` | pep8-naming | N806 (variable naming) |
+| `S` | flake8-bandit (security) | S101 (assert usage) |
+| `C4` | flake8-comprehensions | C400 (unnecessary generator) |
+
+### Selecting Rules
+```bash
+# Select specific rules at runtime
+ruff check --select E,F,B,I
+
+# Extend default selection
+ruff check --extend-select UP,SIM
+
+# Ignore specific rules
+ruff check --ignore E501,E402
+
+# Show which rules would apply
+ruff rule --all
+
+# Explain a specific rule
+ruff rule F401
+```
+
+### Rule Queries
+```bash
+# List all available rules
+ruff rule --all
+
+# Search for rules by pattern
+ruff rule --all | grep "import"
+
+# Get detailed rule explanation
+ruff rule F401
+# Output: unused-import (F401)
+#   Derived from the Pyflakes linter.
+#   Checks for unused imports.
+
+# List all linters
+ruff linter
+
+# JSON output for automation
+ruff rule F401 --output-format json
+```
+
+## Configuration
+
+### pyproject.toml
+```toml
+[tool.ruff]
+# Line length limit (same as Black)
+line-length = 88
+
+# Target Python version
+target-version = "py311"
+
+# Exclude directories
+exclude = [
+    ".git",
+    ".venv",
+    "__pycache__",
+    "build",
+    "dist",
+]
+
+[tool.ruff.lint]
+# Enable specific rule sets
+select = [
+    "E",   # pycodestyle errors
+    "F",   # Pyflakes
+    "B",   # flake8-bugbear
+    "I",   # isort
+    "UP",  # pyupgrade
+    "SIM", # flake8-simplify
+]
+
+# Disable specific rules
+ignore = [
+    "E501",  # Line too long (handled by formatter)
+    "B008",  # Function calls in argument defaults
+]
+
+# Allow automatic fixes
+fixable = ["ALL"]
+unfixable = ["B"]  # Don't auto-fix bugbear rules
+
+# Per-file ignores
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401", "E402"]
+"tests/**/*.py" = ["S101"]  # Allow assert in tests
+```
+
+### ruff.toml (standalone)
+```toml
+# Same options as pyproject.toml but without [tool.ruff] prefix
+line-length = 100
+target-version = "py39"
+
+[lint]
+select = ["E", "F", "B"]
+ignore = ["E501"]
+
+[lint.isort]
+known-first-party = ["myapp"]
+force-single-line = true
+```
+
+## Advanced Usage
+
+Per-file config overrides, targeted rule checks, and changed-files-only / parallel
+invocation patterns are in [references/command-recipes.md](references/command-recipes.md).
+
+## CI/CD Integration
+
+Quick form — lint with PR annotations on GitHub Actions:
+
+```yaml
+# .github/workflows/lint.yml
+name: Lint
+on: [push, pull_request]
+jobs:
+  ruff:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/ruff-action@v3
+        with:
+          args: 'check --output-format github'
+```
+
+Quick form — pre-commit hook:
+
+```yaml
+# .pre-commit-config.yaml
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.14.0
+    hooks:
+      - id: ruff-check
+        args: [--fix]
+      - id: ruff-format
+```
+
+For the full integration recipes — editor setup (VS Code, Neovim, Zed, Helix), the advanced pre-commit config, GitLab/CircleCI/Jenkins, Make/Just/Task/tox, Docker, LSP server settings, and Flake8/Black/pylint migration guides — see [REFERENCE.md](REFERENCE.md).
+
+## Common Patterns
+
+Recipes for finding specific issues, gradual adoption, and refactoring support are
+in [references/command-recipes.md](references/command-recipes.md).
+
+## Plugin Configuration
+
+Per-plugin `[tool.ruff.lint.<plugin>]` settings (isort, flake8-quotes, pydocstyle,
+pylint) are in [references/plugin-configuration.md](references/plugin-configuration.md).
+
+## Best Practices
+
+**When to Use ruff check**
+- Code quality enforcement
+- Pre-commit validation
+- CI/CD pipelines
+- Refactoring assistance
+- Security scanning
+- Import organization
+
+**Critical: Directory Parameters**
+- ✅ **Always** pass directory as parameter: `ruff check services/orchestrator`
+- ❌ **Never** use cd: `cd services/orchestrator && ruff check`
+- Reason: Parallel execution, clearer output, tool compatibility
+
+**Rule Selection Strategy**
+1. Start minimal: `select = ["E", "F"]` (errors + pyflakes)
+2. Add bugbear: `select = ["E", "F", "B"]`
+3. Add imports: `select = ["E", "F", "B", "I"]`
+4. Add pyupgrade: `select = ["E", "F", "B", "I", "UP"]`
+5. Consider security: `select = ["E", "F", "B", "I", "UP", "S"]`
+
+**Fixable vs Unfixable**
+- Mark uncertain rules as `unfixable` to review manually
+- Common unfixables: `B` (bugbear), `F` (pyflakes F401)
+- Let ruff fix safe rules: `I` (isort), `UP` (pyupgrade)
+
+**Common Mistakes to Avoid**
+- Using `cd` instead of passing directory parameter
+- Enabling ALL rules immediately (use gradual adoption)
+- Not using `--diff` before `--fix`
+- Ignoring rule explanations (`ruff rule <code>`)
+- Not configuring per-file ignores for special cases
+
+## Quick Reference
+
+### Essential Commands
+
+```bash
+# Basic operations
+ruff check                          # Lint current directory
+ruff check path/to/dir              # Lint specific directory
+ruff check --diff                   # Show fix preview
+ruff check --fix                    # Apply fixes
+
+# Rule management
+ruff rule --all                     # List all rules
+ruff rule F401                      # Explain rule F401
+ruff linter                         # List all linters
+
+# Output formats
+ruff check --statistics             # Show violation counts
+ruff check --output-format json     # JSON output
+ruff check --output-format github   # GitHub Actions format
+
+# Selection
+ruff check --select E,F,B          # Select rules
+ruff check --ignore E501           # Ignore rules
+ruff check --extend-select UP      # Extend selection
+```
+
+### Configuration Hierarchy
+
+1. Command-line arguments (highest priority)
+2. `ruff.toml` in current directory
+3. `pyproject.toml` in current directory
+4. Parent directory configs (recursive)
+5. User config: `~/.config/ruff/ruff.toml`
+
+### Common Rule Combinations
+
+```bash
+# Minimal safety
+ruff check --select E,F
+
+# Good default
+ruff check --select E,F,B,I
+
+# Comprehensive
+ruff check --select E,F,B,I,UP,SIM
+
+# Security-focused
+ruff check --select E,F,B,S
+
+# Docstring enforcement
+ruff check --select D --config '[lint.pydocstyle]\nconvention = "google"'
+```
+
+This makes ruff check the preferred tool for fast, comprehensive Python code linting.

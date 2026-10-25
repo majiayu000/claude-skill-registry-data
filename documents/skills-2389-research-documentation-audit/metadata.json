@@ -1,0 +1,39 @@
+{
+  "name": "documentation-audit",
+  "repo": "2389-research/documentation-audit",
+  "path": "skills/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/2389-research/documentation-audit",
+  "dir_name": "skills-2389-research-documentation-audit",
+  "downloaded_at": "2026-10-25T07:57:23.922399Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, markdown, documentation",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "doc",
+      "docs",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "2389-research",
+  "source_url": "https://github.com/2389-research/documentation-audit/blob/main/skills/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/2389-research/documentation-audit/blob/main/skills/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used when verifying documentation claims against codebase reality. Triggers on \"audit docs\", \"verify documentation\", \"check docs\", \"docs accurate\", \"documentation drift\", \"before release\", \"after refactor\", \"docs don't match\". Uses two-pass extraction with pattern expansion for comprehensive detection."
+}

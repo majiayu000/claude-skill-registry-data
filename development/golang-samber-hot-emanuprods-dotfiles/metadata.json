@@ -1,0 +1,39 @@
+{
+  "name": "golang-samber-hot",
+  "repo": "EmanuProds/dotfiles",
+  "path": "skills/golang-samber-hot/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/EmanuProds/dotfiles",
+  "dir_name": "golang-samber-hot-emanuprods-dotfiles",
+  "downloaded_at": "2026-10-25T08:49:08.423140Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, debug",
+    "score": 4,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "EmanuProds",
+  "source_url": "https://github.com/EmanuProds/dotfiles/blob/master/skills/golang-samber-hot/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/EmanuProds/dotfiles/blob/master/skills/golang-samber-hot/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "In-memory caching in Golang using samber/hot \u2014 eviction algorithms (LRU, LFU, TinyLFU, W-TinyLFU, S3FIFO, ARC, TwoQueue, SIEVE, FIFO), TTL, cache loaders, sharding, stale-while-revalidate, missing key caching, and Prometheus metrics. Apply when using or adopting samber/hot, when the codebase imports github.com/samber/hot, or when the project repeatedly loads the same medium-to-low cardinality resources at high frequency and needs to reduce latency or backend pressure."
+}

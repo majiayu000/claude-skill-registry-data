@@ -1,0 +1,36 @@
+{
+  "name": "console-saves",
+  "repo": "Jakeschincariol/console-skill",
+  "path": "console-saves/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Jakeschincariol/console-skill",
+  "dir_name": "console-saves",
+  "downloaded_at": "2026-10-25T09:13:56.664986Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "bash"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/console-skill/blob/main/console-saves/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/console-skill/blob/main/console-saves/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Save Manager. Brings your old memory card saves over, backs them up and syncs them to the cloud so you continue on any device. Reads PS2 memory card images (PCSX2 .ps2 and .mcd, raw 8 MB dumps, with or without ECC) and PCSX2 folder cards, lists every save with its title, copies saves into the port's folder memory card (mc0 next to the game's ELF), imports and exports single saves as .psu, makes timestamped zip backups, and syncs mc0 with an iCloud Drive, Dropbox, Google Drive or Syncthing folder. Card images are read only; mc0 is backed up before anything replaces a save; a sync never silently overwrites (when both sides changed it keeps both and reports a conflict). Use when the user says \"bring my saves over\", \"import my PCSX2 save\", \"my memory card\", \"back up my saves\", \"sync my saves\", \"continue on my Steam Deck\", \"restore a backup\", \"convert this .psu\", or before the first run of a port that needs a save."
+}

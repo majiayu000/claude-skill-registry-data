@@ -1,0 +1,37 @@
+{
+  "name": "example-podcast-visualizer",
+  "repo": "BintzGavin/helios",
+  "path": "skills/examples/podcast-visualizer/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/BintzGavin/helios",
+  "dir_name": "podcast-visualizer",
+  "downloaded_at": "2026-10-25T08:25:27.367445Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, visualization",
+    "score": 2,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "BintzGavin",
+  "source_url": "https://github.com/BintzGavin/helios/blob/main/skills/examples/podcast-visualizer/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BintzGavin/helios/blob/main/skills/examples/podcast-visualizer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Workflow for creating a podcast visualizer with multi-track audio mixing and DOM-based synchronization. Use when building audio-reactive compositions."
+}

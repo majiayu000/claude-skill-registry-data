@@ -1,0 +1,39 @@
+{
+  "name": "find-hypertable-candidates",
+  "repo": "HelixDevelopment/agent",
+  "path": "skills/postgres-mcp/find-hypertable-candidates/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/HelixDevelopment/agent",
+  "dir_name": "find-hypertable-candidates-helixdevelopment-agent",
+  "downloaded_at": "2026-10-25T09:05:58.650579Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for data: data, analytics, sql, database",
+    "score": 4,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "analytics",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HelixDevelopment",
+  "source_url": "https://github.com/HelixDevelopment/agent/blob/main/skills/postgres-mcp/find-hypertable-candidates/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HelixDevelopment/agent/blob/main/skills/postgres-mcp/find-hypertable-candidates/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Analyze an existing PostgreSQL database to identify tables that would benefit from conversion to TimescaleDB hypertables"
+}

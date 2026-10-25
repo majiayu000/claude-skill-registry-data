@@ -1,0 +1,37 @@
+{
+  "name": "ls-public-https-origins",
+  "repo": "CruxExperts/LocalSetup",
+  "path": "ls/skills/ls-public-https-origins/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/CruxExperts/LocalSetup",
+  "dir_name": "ls-public-https-origins",
+  "downloaded_at": "2026-10-25T08:36:30.130985Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "CruxExperts",
+  "source_url": "https://github.com/CruxExperts/LocalSetup/blob/main/ls/skills/ls-public-https-origins/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/CruxExperts/LocalSetup/blob/main/ls/skills/ls-public-https-origins/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Migrates HTTP network clients to public DNS and verified HTTPS, with protected Unix socket origins and bounded TLS passthrough for isolated containers. Use when local clients bypass TLS, origins expose plaintext ports, or HTTP proxies break public endpoint compatibility."
+}

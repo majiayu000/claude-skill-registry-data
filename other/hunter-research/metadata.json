@@ -1,0 +1,37 @@
+{
+  "name": "hunter-research",
+  "repo": "Jakeschincariol/hunter-skill",
+  "path": "skills/hunter-research/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Jakeschincariol/hunter-skill",
+  "dir_name": "hunter-research",
+  "downloaded_at": "2026-10-25T09:14:08.817056Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, communication=2",
+    "score": 2,
+    "runner_up": "communication",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/hunter-skill/blob/main/skills/hunter-research/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/hunter-skill/blob/main/skills/hunter-research/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The Company Researcher. Researches each company the user is applying to and writes a one-page brief in hunter/companies/: the business from its own SEC filings (latest 10-K, 10-Q, recent 8-Ks with what each one is about), news from the company's own blogs, the culture in the company's own words, the team the user would join, and the interview loop with a source on every line (official prep pages for Google, Meta, NVIDIA, Netflix and Amazon, everything else marked community-reported). Use when the user says \"research Google\", \"tell me about this company\", \"company brief\", \"prep me for Meta\", \"what's their interview process\", \"what does this team do\", or before a coffee chat or interview."
+}

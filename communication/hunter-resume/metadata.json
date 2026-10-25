@@ -1,0 +1,37 @@
+{
+  "name": "hunter-resume",
+  "repo": "Jakeschincariol/hunter-skill",
+  "path": "skills/hunter-resume/SKILL.md",
+  "github_branch": "main",
+  "category": "communication",
+  "source": "github.com/Jakeschincariol/hunter-skill",
+  "dir_name": "hunter-resume",
+  "downloaded_at": "2026-10-25T09:14:08.360246Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "communication",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for communication: email, chat",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "email",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/hunter-skill/blob/main/skills/hunter-resume/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/hunter-skill/blob/main/skills/hunter-resume/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Resume Writer. Rewrites your resume for each role so it reads like the job description, using only what is true: it mirrors the posting's own words for skills you really have, moves buried results into strong bullets (a number, a strong verb, one line), reorders for the role, and asks you about anything the posting wants that the resume does not show. Scores the match from 0 to 100 with a published formula (minimum qualifications, preferred qualifications, bullet strength, sections) and runs a truth check that fails if the rewrite adds a number or a skill that was not in your original. Use when the user says \"rewrite my resume\", \"tailor my resume\", \"ATS score\", \"beat the ATS\", \"match my resume to this job\", \"resume for Google\", \"improve my bullets\", or after /hunter-scout picks a role."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "skill-recipes",
+  "repo": "JNZader/repoforge",
+  "path": "own/skills/skill-recipes/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/JNZader/repoforge",
+  "dir_name": "skill-recipes",
+  "downloaded_at": "2026-10-25T09:12:24.768934Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "automation",
+      "workflow"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "JNZader",
+  "source_url": "https://github.com/JNZader/repoforge/blob/main/own/skills/skill-recipes/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/JNZader/repoforge/blob/main/own/skills/skill-recipes/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Self-installing markdown recipes for skills. Each skill can include an INSTALL.md that an agent reads and executes to set up dependencies, MCP servers, or config. Trigger: When installing a skill with INSTALL.md, or creating skills with setup requirements."
+}

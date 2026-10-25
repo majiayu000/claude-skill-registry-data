@@ -1,0 +1,39 @@
+{
+  "name": "golang-cli",
+  "repo": "EmanuProds/dotfiles",
+  "path": "skills/golang-cli/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/EmanuProds/dotfiles",
+  "dir_name": "golang-cli-emanuprods-dotfiles",
+  "downloaded_at": "2026-10-25T08:48:46.997660Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "EmanuProds",
+  "source_url": "https://github.com/EmanuProds/dotfiles/blob/master/skills/golang-cli/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/EmanuProds/dotfiles/blob/master/skills/golang-cli/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Golang CLI application development. Use when building, modifying, or reviewing a Go CLI tool \u2014 especially for command structure, flag handling, configuration layering, version embedding, exit codes, I/O patterns, signal handling, shell completion, argument validation, and CLI unit testing. Also triggers when code uses cobra, viper, or urfave/cli. For cobra-specific APIs \u2192 See `samber/cc-skills-golang@golang-spf13-cobra` skill; for viper configuration layering \u2192 See `samber/cc-skills-golang@golang-spf13-viper` skill."
+}

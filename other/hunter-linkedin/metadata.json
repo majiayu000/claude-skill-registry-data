@@ -1,0 +1,37 @@
+{
+  "name": "hunter-linkedin",
+  "repo": "Jakeschincariol/hunter-skill",
+  "path": "skills/hunter-linkedin/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Jakeschincariol/hunter-skill",
+  "dir_name": "hunter-linkedin",
+  "downloaded_at": "2026-10-25T09:14:09.158061Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "build",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/hunter-skill/blob/main/skills/hunter-linkedin/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/hunter-skill/blob/main/skills/hunter-linkedin/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The LinkedIn Optimizer. Rewrites the user's LinkedIn headline, About, skills and experience for the job they want, using only what is true, then checks the draft against LinkedIn's field limits (headline, About, skills count, position title and description) and against the keywords of the target job description, with a before/after report: coverage, required terms, what was gained and what is still missing. The user pastes the final text into LinkedIn themselves. Use when the user says \"optimize my LinkedIn\", \"rewrite my headline\", \"fix my About section\", \"LinkedIn for this job\", \"what skills should I list\", or \"make recruiters find me\"."
+}

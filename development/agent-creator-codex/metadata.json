@@ -1,0 +1,38 @@
+{
+  "name": "agent-creator-codex",
+  "repo": "CowboyLogic/ai-dev",
+  "path": "skills/agent-creator-codex/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/CowboyLogic/ai-dev",
+  "dir_name": "agent-creator-codex",
+  "downloaded_at": "2026-10-25T08:35:57.623464Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "CowboyLogic",
+  "source_url": "https://github.com/CowboyLogic/ai-dev/blob/main/skills/agent-creator-codex/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/CowboyLogic/ai-dev/blob/main/skills/agent-creator-codex/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Guide for creating custom subagents for OpenAI Codex (standalone TOML files in .codex/agents/ or ~/.codex/agents/, each with name, description, and developer_instructions). Use this skill whenever a user wants to build, configure, review, or modify a Codex agent, choose fields (model, model_reasoning_effort, developer_instructions, and the other keys a role file can actually set), tune the [agents] table in config.toml (concurrency, default subagent model), or troubleshoot a Codex agent that is not found, never spawned, on the wrong model, or unexpectedly writing files or missing MCP servers. ALWAYS load this skill before writing or debugging Codex agent files."
+}

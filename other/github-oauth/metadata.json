@@ -1,0 +1,37 @@
+{
+  "name": "exchange-github-oauth-code",
+  "repo": "JNZader/repoforge",
+  "path": ".claude/skills/backend/github_oauth/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/JNZader/repoforge",
+  "dir_name": "github-oauth",
+  "downloaded_at": "2026-10-25T09:12:27.922618Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "JNZader",
+  "source_url": "https://github.com/JNZader/repoforge/blob/main/.claude/skills/backend/github_oauth/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/JNZader/repoforge/blob/main/.claude/skills/backend/github_oauth/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill covers the implementation of GitHub OAuth helper functions. Trigger: Load this skill when handling GitHub OAuth processes."
+}

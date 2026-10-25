@@ -1,0 +1,37 @@
+{
+  "name": "fanout",
+  "repo": "Breadstick-Crumbs/fanout",
+  "path": "skills/fanout/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Breadstick-Crumbs/fanout",
+  "dir_name": "fanout-breadstick-crumbs-fanout",
+  "downloaded_at": "2026-10-25T08:26:57.380434Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Breadstick-Crumbs",
+  "source_url": "https://github.com/Breadstick-Crumbs/fanout/blob/main/skills/fanout/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Breadstick-Crumbs/fanout/blob/main/skills/fanout/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user wants to split a goal into parallel coding-agent sessions (Claude Code, Codex, or both) on git worktrees. Plans who owns which files, freezes shared interfaces, blocks out-of-lane edits, tests all branches together, and merges in the right order. Not for a single small change."
+}

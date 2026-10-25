@@ -1,0 +1,39 @@
+{
+  "name": "refactoring-mikado-strangler",
+  "repo": "DGouron/review-flow",
+  "path": ".claude/skills/refactoring/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/DGouron/review-flow",
+  "dir_name": "refactoring-dgouron-review-flow",
+  "downloaded_at": "2026-10-25T08:37:23.788953Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, framework, refactor",
+    "score": 4,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DGouron",
+  "source_url": "https://github.com/DGouron/review-flow/blob/master/.claude/skills/refactoring/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DGouron/review-flow/blob/master/.claude/skills/refactoring/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Guide for large-scale refactorings with Mikado and Strangler Fig. Use for architecture migration, library replacement, module splitting, or pattern changes. Maintains a Mikado graph to track dependencies."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "extend-harness-module",
+  "repo": "JNZader/repoforge",
+  "path": ".claude/skills/build_modules/harness/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/JNZader/repoforge",
+  "dir_name": "harness-jnzader-repoforge",
+  "downloaded_at": "2026-10-25T09:12:28.057796Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "JNZader",
+  "source_url": "https://github.com/JNZader/repoforge/blob/main/.claude/skills/build_modules/harness/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/JNZader/repoforge/blob/main/.claude/skills/build_modules/harness/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Add parent directory to path when running eval scripts directly. Trigger: when executing eval/harness.py as main script."
+}

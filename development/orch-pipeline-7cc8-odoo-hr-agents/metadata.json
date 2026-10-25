@@ -1,0 +1,39 @@
+{
+  "name": "orch-pipeline",
+  "repo": "7cc8/odoo-hr-agents",
+  "path": ".claude/skills/ECC-main/skills/orch-pipeline/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/7cc8/odoo-hr-agents",
+  "dir_name": "orch-pipeline-7cc8-odoo-hr-agents",
+  "downloaded_at": "2026-10-25T08:01:57.969294Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, refactor",
+    "score": 4,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "7cc8",
+  "source_url": "https://github.com/7cc8/odoo-hr-agents/blob/main/.claude/skills/ECC-main/skills/orch-pipeline/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/7cc8/odoo-hr-agents/blob/main/.claude/skills/ECC-main/skills/orch-pipeline/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Shared orchestration engine behind the orch-* skill family \u2014 the gated Research-Plan-TDD-Review-Commit pipeline, size classifier, agent and command map, and two human gates (plan approval, commit confirmation) that orch-* operation skills delegate to. Use indirectly via orch-add-feature, orch-fix-defect, orch-change-feature, orch-refine-code, or orch-build-mvp; read directly only when adding an orch operation or tuning shared phases."
+}

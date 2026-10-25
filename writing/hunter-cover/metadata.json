@@ -1,0 +1,38 @@
+{
+  "name": "hunter-cover",
+  "repo": "Jakeschincariol/hunter-skill",
+  "path": "skills/hunter-cover/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/Jakeschincariol/hunter-skill",
+  "dir_name": "hunter-cover",
+  "downloaded_at": "2026-10-25T09:14:08.187356Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, writer, copy",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "writing",
+      "writer",
+      "copy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/hunter-skill/blob/main/skills/hunter-cover/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/hunter-skill/blob/main/skills/hunter-cover/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Cover Letter Writer. Writes a specific cover letter for every application: addressed to the hiring manager or the team, opening with something real about the company or the team from the research brief, one paragraph of proof from the tailored resume (a result with a number), why this team, and a clear ask, in 150 to 400 words. Then checks it with cover.py: company, role and team named, at least one concrete proof point, no banned cliches, no leftover placeholders, no other company's name pasted in, every number traceable to the resume, reading level. Use when the user says \"write a cover letter\", \"cover letter for Google\", \"do I need a cover letter\", \"make this letter better\", \"check my cover letter\", or after /hunter-resume."
+}

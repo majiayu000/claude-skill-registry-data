@@ -1,0 +1,36 @@
+{
+  "name": "console-sound",
+  "repo": "Jakeschincariol/console-skill",
+  "path": "console-sound/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Jakeschincariol/console-skill",
+  "dir_name": "console-sound",
+  "downloaded_at": "2026-10-25T09:13:56.800859Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "bash"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/console-skill/blob/main/console-sound/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/console-skill/blob/main/console-sound/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Sound Designer. Rips the music and sound effects and puts your own tracks back in. Decodes PS2 VAG files and raw SPU2 ADPCM from sound banks (.bd) to WAV, finds VAGs hidden inside archives and disc files, and encodes your own 16-bit WAV back to VAG at the original's sample rate, looping and size. Everything it writes goes under console/audio/; it refuses a replacement bigger than the original unless told otherwise, and never writes into the disc folder or the PS2Recomp checkout. Use when the user says \"rip the music\", \"extract the sound effects\", \"put my song in the game\", \"replace the soundtrack\", \"convert this VAG\", \"what is in this .bd\", \"the music loops wrong\", or after /console-levels finds audio files on the disc."
+}

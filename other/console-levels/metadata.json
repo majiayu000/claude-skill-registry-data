@@ -1,0 +1,36 @@
+{
+  "name": "console-levels",
+  "repo": "Jakeschincariol/console-skill",
+  "path": "console-levels/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Jakeschincariol/console-skill",
+  "dir_name": "console-levels",
+  "downloaded_at": "2026-10-25T09:13:56.980660Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/console-skill/blob/main/console-levels/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/console-skill/blob/main/console-levels/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Level Designer. Maps the disc's data files, unpacks the archives the levels live in, and swaps in your edits. Inventories an extracted PS2 disc (size, type by magic, entropy, a table-of-contents guess with a confidence score), unpacks CRI AFS archives and detected table-of-contents archives into a folder with an index.json, repacks them in the same order and alignment (keeping every offset when your edits fit), diffs two files or folders to show which bytes a change touched, lists strings, and reads the port's log to show which disc files a level loads. Writes under console/ and never modifies the original disc files. Use when the user says \"where are the levels\", \"unpack this archive\", \"what's in DATA.BIN\", \"edit the level\", \"swap in my map\", \"what changed between these two files\", \"which files does stage 3 load\", or before /console-graphics or /console-sound needs a file that sits inside an archive."
+}

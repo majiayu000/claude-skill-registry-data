@@ -1,0 +1,38 @@
+{
+  "name": "implement-feature",
+  "repo": "DGouron/review-flow",
+  "path": ".claude/skills/implement-feature/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/DGouron/review-flow",
+  "dir_name": "implement-feature-dgouron-review-flow",
+  "downloaded_at": "2026-10-25T08:37:28.836893Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, refactor",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DGouron",
+  "source_url": "https://github.com/DGouron/review-flow/blob/master/.claude/skills/implement-feature/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DGouron/review-flow/blob/master/.claude/skills/implement-feature/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Autonomous feature implementation via spec-driven development. Orchestrates a planner and a TDD implementer with preloaded skills. Consumes Gherkin specs produced by /product-manager."
+}

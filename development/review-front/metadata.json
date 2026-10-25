@@ -1,0 +1,38 @@
+{
+  "name": "review-front",
+  "repo": "DGouron/review-flow",
+  "path": ".claude/skills/review-front/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/DGouron/review-flow",
+  "dir_name": "review-front",
+  "downloaded_at": "2026-10-25T08:37:25.365356Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, refactor",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DGouron",
+  "source_url": "https://github.com/DGouron/review-flow/blob/master/.claude/skills/review-front/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DGouron/review-flow/blob/master/.claude/skills/review-front/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Complete code review of a MR/PR with 7 sequential audits (Clean Architecture, DDD, TypeScript Best Practices, SOLID, Clean Code, Testing, Code Quality). An orchestrator runs each audit one by one to avoid memory spikes. Generates an .md report and posts it directly on the MR/PR. Direct mode with sourced lessons."
+}

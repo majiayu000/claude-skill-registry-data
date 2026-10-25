@@ -1,0 +1,39 @@
+{
+  "name": "remote-hosts",
+  "repo": "AlaisterLeung/hermes-remote-tools",
+  "path": "skills/remote-hosts/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/AlaisterLeung/hermes-remote-tools",
+  "dir_name": "remote-hosts",
+  "downloaded_at": "2026-10-25T08:11:08.621989Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "AlaisterLeung",
+  "source_url": "https://github.com/AlaisterLeung/hermes-remote-tools/blob/main/skills/remote-hosts/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AlaisterLeung/hermes-remote-tools/blob/main/skills/remote-hosts/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run commands or do file operations on a remote ssh host through the hermes-remote-tools plugin."
+}

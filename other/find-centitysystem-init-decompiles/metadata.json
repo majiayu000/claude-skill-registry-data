@@ -1,0 +1,36 @@
+{
+  "name": "find-CEntitySystem_Init-decompiles",
+  "repo": "HLND2T/CS2_VibeSignatures",
+  "path": ".claude/skills/find-CEntitySystem_Init-decompiles/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/HLND2T/CS2_VibeSignatures",
+  "dir_name": "find-centitysystem-init-decompiles",
+  "downloaded_at": "2026-10-25T09:03:34.756531Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HLND2T",
+  "source_url": "https://github.com/HLND2T/CS2_VibeSignatures/blob/main/.claude/skills/find-CEntitySystem_Init-decompiles/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HLND2T/CS2_VibeSignatures/blob/main/.claude/skills/find-CEntitySystem_Init-decompiles/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Final-guarantee fallback for the find-CEntitySystem_Init-decompiles preprocessor. Recovers the struct\nmembers, indirect virtual-function offsets, and de-inlined helpers that CEntitySystem::Init sets up, by\ndecompiling CEntitySystem_Init in CS2 server.dll / libserver.so and following de-inlined callees when a\ntarget is no longer accessed directly. Use this skill when the deterministic/LLM preprocessor\n(ida_preprocessor_scripts/find-CEntitySystem_Init-decompiles.py) could not resolve every target because a\nmember or vfunc was inlined or de-inlined in a way the LLM_DECOMPILE references do not cover.\nTrigger: CEntitySystem_m_sEntSystemName, CEntitySystem_m_eNetworkSerializationMode, CEntitySystem_m_Symbols,\nCEntitySystem_m_ComponentUnserializerInfoAllocator, CEntitySystem_m_pNetworkFieldChangedEventQueue,\nCEntitySystem_m_pNetworkFieldScratchData, CEntitySystem_m_pFieldChangeLimitSpew,\nCEntitySystem_m_EntityMaterialAttributes, INetworkMessages_SetNetworkSerializationContextData,\nIFlattenedSerializers_CreateFieldChangedEventQueue, CEntitySystem_ProcessEntityRegistration"
+}

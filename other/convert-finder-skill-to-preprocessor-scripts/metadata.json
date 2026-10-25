@@ -1,0 +1,37 @@
+{
+  "name": "convert-finder-skill-to-preprocessor-scripts",
+  "repo": "HLND2T/CS2_VibeSignatures",
+  "path": ".claude/skills/convert-finder-skill-to-preprocessor-scripts/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/HLND2T/CS2_VibeSignatures",
+  "dir_name": "convert-finder-skill-to-preprocessor-scripts",
+  "downloaded_at": "2026-10-25T09:03:39.227149Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HLND2T",
+  "source_url": "https://github.com/HLND2T/CS2_VibeSignatures/blob/main/.claude/skills/convert-finder-skill-to-preprocessor-scripts/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HLND2T/CS2_VibeSignatures/blob/main/.claude/skills/convert-finder-skill-to-preprocessor-scripts/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Convert an existing find-XXXX SKILL.md into a preprocessor Python script, updating configs/<GAMEVER>.yaml\nand removing the old SKILL.md. Covers xref-string-based and LLM_DECOMPILE-based discovery patterns."
+}

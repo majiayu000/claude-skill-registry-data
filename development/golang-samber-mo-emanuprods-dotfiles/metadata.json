@@ -1,0 +1,38 @@
+{
+  "name": "golang-samber-mo",
+  "repo": "EmanuProds/dotfiles",
+  "path": "skills/golang-samber-mo/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/EmanuProds/dotfiles",
+  "dir_name": "golang-samber-mo-emanuprods-dotfiles",
+  "downloaded_at": "2026-10-25T08:49:03.267061Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, programming",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "programming"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "EmanuProds",
+  "source_url": "https://github.com/EmanuProds/dotfiles/blob/master/skills/golang-samber-mo/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/EmanuProds/dotfiles/blob/master/skills/golang-samber-mo/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Monadic types for Golang using samber/mo \u2014 Option, Result, Either, Future, IO, Task, and State types for type-safe nullable values, error handling, and functional composition with pipeline sub-packages. Apply when using or adopting samber/mo, when the codebase imports `github.com/samber/mo`, or when considering functional programming patterns as a safety design for Golang. Not for nil-safety and zero-value design without this library (\u2192 See `samber/cc-skills-golang@golang-safety` skill), nor for native error wrapping with fmt.Errorf, errors.Is and errors.As (\u2192 See `samber/cc-skills-golang@golang-error-handling` skill)."
+}

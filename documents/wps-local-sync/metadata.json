@@ -1,0 +1,39 @@
+{
+  "name": "wps-local-sync",
+  "repo": "EagleRanger/wps-local-automation-skills",
+  "path": "skills/wps-local-sync/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/EagleRanger/wps-local-automation-skills",
+  "dir_name": "wps-local-sync",
+  "downloaded_at": "2026-10-25T08:46:29.959525Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: pdf, pptx, xlsx, docx",
+    "score": 4,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "pdf",
+      "pptx",
+      "xlsx",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "EagleRanger",
+  "source_url": "https://github.com/EagleRanger/wps-local-automation-skills/blob/main/skills/wps-local-sync/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/EagleRanger/wps-local-automation-skills/blob/main/skills/wps-local-sync/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use local WPS Office on Windows to safely inspect, edit, format, export, and reopen-verify DOCX, XLSX, and PPTX files when the user asks to use WPS, synchronize AI work with the installed desktop app, preserve WPS compatibility, or troubleshoot a WPS-native document workflow. Do not use for ordinary file-only authoring when WPS-native execution or compatibility is irrelevant."
+}

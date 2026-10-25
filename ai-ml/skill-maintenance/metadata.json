@@ -1,0 +1,38 @@
+{
+  "name": "skill-maintenance",
+  "repo": "CowboyLogic/ai-dev",
+  "path": ".github/skills/skill-maintenance/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/CowboyLogic/ai-dev",
+  "dir_name": "skill-maintenance",
+  "downloaded_at": "2026-10-25T08:35:59.701131Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, model, training",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "CowboyLogic",
+  "source_url": "https://github.com/CowboyLogic/ai-dev/blob/main/.github/skills/skill-maintenance/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/CowboyLogic/ai-dev/blob/main/.github/skills/skill-maintenance/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Full skill maintenance cycle: research updates, run benchmark evals, create/update the docs/skills overview page, and propose a commit. Use when maintaining any skill in the skills/ folder of this repo."
+}

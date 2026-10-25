@@ -1,0 +1,37 @@
+{
+  "name": "add-api-endpoint",
+  "repo": "JNZader/repoforge",
+  "path": ".claude/skills/frontend/api/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/JNZader/repoforge",
+  "dir_name": "api-jnzader-repoforge",
+  "downloaded_at": "2026-10-25T09:12:25.688964Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "JNZader",
+  "source_url": "https://github.com/JNZader/repoforge/blob/main/.claude/skills/frontend/api/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/JNZader/repoforge/blob/main/.claude/skills/frontend/api/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Centralized API client for the web frontend with React Query integration. Trigger: when fetching or mutating data from the backend API."
+}

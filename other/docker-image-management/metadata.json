@@ -1,0 +1,38 @@
+{
+  "name": "docker-image-management",
+  "repo": "CowboyLogic/ai-dev",
+  "path": "skills/docker-image-management/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/CowboyLogic/ai-dev",
+  "dir_name": "docker-image-management",
+  "downloaded_at": "2026-10-25T08:35:58.747490Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "CowboyLogic",
+  "source_url": "https://github.com/CowboyLogic/ai-dev/blob/main/skills/docker-image-management/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/CowboyLogic/ai-dev/blob/main/skills/docker-image-management/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Guide for creating, building, and managing Docker images and containers. Use this skill when working with Dockerfiles, containerization, image building, registry operations, container runtime, storage mounts, image security, Docker Compose, or any Docker-related task including optimization, debugging, and best practices."
+}

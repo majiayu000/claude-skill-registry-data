@@ -1,0 +1,38 @@
+{
+  "name": "auto-review",
+  "repo": "DGouron/review-flow",
+  "path": ".claude/skills/auto-review/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/DGouron/review-flow",
+  "dir_name": "auto-review-dgouron-review-flow",
+  "downloaded_at": "2026-10-25T08:37:24.022279Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, testing=3",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DGouron",
+  "source_url": "https://github.com/DGouron/review-flow/blob/master/.claude/skills/auto-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DGouron/review-flow/blob/master/.claude/skills/auto-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Local auto-review of modified code (no GitLab/GitHub). Runs 5 sequential audits and generates a local report. Ideal for validating code before creating a MR/PR."
+}

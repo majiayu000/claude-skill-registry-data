@@ -1,0 +1,37 @@
+{
+  "name": "mock-repomaps-fixtures",
+  "repo": "JNZader/repoforge",
+  "path": ".claude/skills/main/test_graph/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/JNZader/repoforge",
+  "dir_name": "test-graph",
+  "downloaded_at": "2026-10-25T09:12:30.851019Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, pytest",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "test",
+      "pytest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "JNZader",
+  "source_url": "https://github.com/JNZader/repoforge/blob/main/.claude/skills/main/test_graph/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/JNZader/repoforge/blob/main/.claude/skills/main/test_graph/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill covers patterns for mocking RepoMaps in tests. Trigger: Load this skill when working with test_graph fixtures."
+}

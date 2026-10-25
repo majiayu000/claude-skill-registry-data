@@ -1,0 +1,37 @@
+{
+  "name": "ship",
+  "repo": "DGouron/review-flow",
+  "path": ".claude/skills/ship/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/DGouron/review-flow",
+  "dir_name": "ship-dgouron-review-flow",
+  "downloaded_at": "2026-10-25T08:37:20.247545Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DGouron",
+  "source_url": "https://github.com/DGouron/review-flow/blob/master/.claude/skills/ship/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DGouron/review-flow/blob/master/.claude/skills/ship/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Ship \u2014 commit and push in one command. Chains quality gates, conventional commit, push, and optional PR creation + merge. Use when the user says \"ship\", \"commit and push\", \"/ship\", or wants to finalize a branch."
+}

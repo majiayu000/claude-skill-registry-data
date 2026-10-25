@@ -1,0 +1,38 @@
+{
+  "name": "ls-docs-create-move",
+  "repo": "CruxExperts/LocalSetup",
+  "path": "ls/skills/ls-docs-create-move/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/CruxExperts/LocalSetup",
+  "dir_name": "ls-docs-create-move",
+  "downloaded_at": "2026-10-25T08:36:25.960583Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, documentation",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "CruxExperts",
+  "source_url": "https://github.com/CruxExperts/LocalSetup/blob/main/ls/skills/ls-docs-create-move/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/CruxExperts/LocalSetup/blob/main/ls/skills/ls-docs-create-move/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when creating, moving, renaming, or significantly updating repo docs; classifies documentation requests, proposes paths, and keeps indexes in sync."
+}

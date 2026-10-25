@@ -1,0 +1,36 @@
+{
+  "name": "find-INetworkServerService_IsActiveInGame",
+  "repo": "HLND2T/CS2_VibeSignatures",
+  "path": ".claude/skills/find-INetworkServerService_IsActiveInGame/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/HLND2T/CS2_VibeSignatures",
+  "dir_name": "find-inetworkserverservice-isactiveingame",
+  "downloaded_at": "2026-10-25T09:03:37.755193Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HLND2T",
+  "source_url": "https://github.com/HLND2T/CS2_VibeSignatures/blob/main/.claude/skills/find-INetworkServerService_IsActiveInGame/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HLND2T/CS2_VibeSignatures/blob/main/.claude/skills/find-INetworkServerService_IsActiveInGame/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Final-guarantee fallback for the find-INetworkServerService_IsActiveInGame preprocessor.\nRecovers INetworkServerService::IsActiveInGame (a virtual function of the CNetworkServerService vtable)\nin CS2 engine2.dll / libengine2.so by decompiling its known predecessor CSteam3ServerS1_InitGameServer\nand identifying the virtual call on g_pNetworkServerService. Use this skill only when the\ndeterministic/LLM preprocessor\n(ida_preprocessor_scripts/find-INetworkServerService_IsActiveInGame.py) could not resolve the target.\nTrigger: INetworkServerService_IsActiveInGame"
+}

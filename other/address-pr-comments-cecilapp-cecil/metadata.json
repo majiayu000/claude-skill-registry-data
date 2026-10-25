@@ -1,0 +1,37 @@
+{
+  "name": "address-pr-comments",
+  "repo": "Cecilapp/Cecil",
+  "path": ".claude/skills/address-pr-comments/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Cecilapp/Cecil",
+  "dir_name": "address-pr-comments-cecilapp-cecil",
+  "downloaded_at": "2026-10-25T08:29:46.274568Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Cecilapp",
+  "source_url": "https://github.com/Cecilapp/Cecil/blob/main/.claude/skills/address-pr-comments/SKILL.md",
+  "license": "EUPL-1.2",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Cecilapp/Cecil/blob/main/.claude/skills/address-pr-comments/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Standard workflow to address pull request review comments in Cecil. Use when responding to review feedback, fixing requested changes, or preparing a clear reviewer reply with reproduction, fix, tests, and response."
+}

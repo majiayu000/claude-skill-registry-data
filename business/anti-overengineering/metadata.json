@@ -1,0 +1,38 @@
+{
+  "name": "anti-overengineering",
+  "repo": "DGouron/review-flow",
+  "path": ".claude/skills/anti-overengineering/SKILL.md",
+  "github_branch": "master",
+  "category": "business",
+  "source": "github.com/DGouron/review-flow",
+  "dir_name": "anti-overengineering",
+  "downloaded_at": "2026-10-25T08:37:29.494521Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "business",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for business: business, operations, strategy",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "business",
+      "operations",
+      "strategy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DGouron",
+  "source_url": "https://github.com/DGouron/review-flow/blob/master/.claude/skills/anti-overengineering/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DGouron/review-flow/blob/master/.claude/skills/anti-overengineering/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Anti-overengineering guide based on YAGNI. Use before adding an architectural pattern, during code review, or to challenge an overly complex implementation."
+}

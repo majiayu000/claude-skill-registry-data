@@ -1,0 +1,36 @@
+{
+  "name": "console-graphics",
+  "repo": "Jakeschincariol/console-skill",
+  "path": "console-graphics/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Jakeschincariol/console-skill",
+  "dir_name": "console-graphics",
+  "downloaded_at": "2026-10-25T09:13:57.722180Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "bash"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/console-skill/blob/main/console-graphics/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/console-skill/blob/main/console-graphics/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Graphics Artist. Rebuilds the graphics: dumps every texture, lets you repaint or replace them with your own art, finds the widescreen fix. Converts PS2 TIM2 textures (.tm2, 32/24/16-bit and 8/4-bit indexed) from the user's own extracted disc to PNG, rebuilds them from edited PNGs at the same size and format (GS registers kept, palettes refit or quantised), finds TIM2 blobs inside archives and puts edited ones back, and lists the 4:3 aspect and FOV constants in the ELF with 16:9 pnach lines to try in PCSX2. Reads the packets the game sends the GS from a RAM dump (DMA chains, VIF codes, GIF tags, every register write) and flags what breaks rendering. Writes to console/textures/ and console/patches/, never into the disc image. Use when the user says \"dump the textures\", \"repaint\", \"replace this texture\", \"my own art\", \"HD textures\", \"make it widescreen\", \"16:9\", \"the picture is stretched\", \"black screen\", \"garbage textures\", \"nothing draws\", or \"how does the port draw\"."
+}

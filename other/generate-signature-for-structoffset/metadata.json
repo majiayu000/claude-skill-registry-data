@@ -1,0 +1,36 @@
+{
+  "name": "generate-signature-for-structoffset",
+  "repo": "HLND2T/CS2_VibeSignatures",
+  "path": ".claude/skills/generate-signature-for-structoffset/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/HLND2T/CS2_VibeSignatures",
+  "dir_name": "generate-signature-for-structoffset",
+  "downloaded_at": "2026-10-25T09:03:35.271190Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category api scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HLND2T",
+  "source_url": "https://github.com/HLND2T/CS2_VibeSignatures/blob/main/.claude/skills/generate-signature-for-structoffset/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HLND2T/CS2_VibeSignatures/blob/main/.claude/skills/generate-signature-for-structoffset/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate and validate unique byte signatures for instructions containing a struct member offset using IDA Pro MCP.\nUse this skill when you need a signature for an instruction like mov [rcx+1A8h], eax or cmp dword ptr [rdi+0B0h], 0, where the struct offset must be explicitly fixed in the first instruction bytes.\nTriggers: struct offset signature, signature for struct offset, structure member offset signature, mov [reg+offset] signature, struct field signature"
+}

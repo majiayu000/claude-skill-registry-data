@@ -1,0 +1,37 @@
+{
+  "name": "client-config-copilotcli",
+  "repo": "CowboyLogic/ai-dev",
+  "path": "skills/client-config-copilotcli/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/CowboyLogic/ai-dev",
+  "dir_name": "client-config-copilotcli",
+  "downloaded_at": "2026-10-25T08:35:59.038166Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "CowboyLogic",
+  "source_url": "https://github.com/CowboyLogic/ai-dev/blob/main/skills/client-config-copilotcli/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/CowboyLogic/ai-dev/blob/main/skills/client-config-copilotcli/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Manage GitHub Copilot CLI configuration files including settings.json, config.json, permissions-config.json, mcp-config.json, lsp-config.json, hooks, skills, custom agents, plugins, and custom instructions. Use this skill whenever the user wants to view, edit, add, or understand any Copilot CLI setting: trusted folders, user or repository settings, tool permissions, sandboxing, MCP or LSP servers, hooks, skills, custom agents, plugins and marketplaces, BYOK models, authentication, session management, or custom instructions. Trigger on: \"add trusted folder\", \"allow tool\", \"configure MCP\", \"add hook\", \"create skill\", \"create agent\", \"install plugin\", \"set model\", \"use my own API key\", \"add custom instructions\", \"name session\", \"resume session\", or \"show my copilot config\"."
+}

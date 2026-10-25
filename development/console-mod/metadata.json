@@ -1,0 +1,38 @@
+{
+  "name": "console-mod",
+  "repo": "Jakeschincariol/console-skill",
+  "path": "console-mod/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Jakeschincariol/console-skill",
+  "dir_name": "console-mod",
+  "downloaded_at": "2026-10-25T09:13:56.517723Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/console-skill/blob/main/console-mod/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/console-skill/blob/main/console-mod/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Mod Maker. Describe any change in plain English and Claude builds it into the game: patches, cheats, new behaviour, as code that never touches the original files. Ports PCSX2 .pnach patches to the PS2Recomp port (code writes become ps2_recomp TOML instruction patches, data writes become a C++ game override that writes RDRAM at load or every frame, the rest are flagged for a manual port with the reason) and scaffolds game overrides that bind, replace or wrap a game function with the real PS2Recomp API. Writes to console/patches/, never to the game's files, the generated runner/*.cpp or headers. Use when the user says \"mod this game\", \"add a cheat\", \"infinite health\", \"port this pnach\", \"make my gun do X\", \"change how X works\", \"game override\", \"turn this PCSX2 patch into the port\", or once the port boots and they want to change it."
+}

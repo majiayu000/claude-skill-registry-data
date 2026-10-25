@@ -1,0 +1,39 @@
+{
+  "name": "ami-stress-test-idea",
+  "repo": "AnaCataVC/amiga-ia",
+  "path": "skills/ami-stress-test-idea/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/AnaCataVC/amiga-ia",
+  "dir_name": "ami-stress-test-idea",
+  "downloaded_at": "2026-10-25T08:13:17.196039Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for security: security, auth, vulnerability, audit",
+    "score": 4,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "vulnerability",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AnaCataVC",
+  "source_url": "https://github.com/AnaCataVC/amiga-ia/blob/main/skills/ami-stress-test-idea/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AnaCataVC/amiga-ia/blob/main/skills/ami-stress-test-idea/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Conducts an adversarial stress-test and premortem analysis on technical proposals, architectures, or features before implementation. Exposes SPOFs, race conditions, cost explosions, and edge-case failure modes."
+}

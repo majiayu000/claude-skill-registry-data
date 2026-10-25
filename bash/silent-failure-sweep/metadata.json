@@ -1,0 +1,38 @@
+{
+  "name": "silent-failure-sweep",
+  "repo": "Focus688/agent-security-skills",
+  "path": "skills/silent-failure-sweep/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/Focus688/agent-security-skills",
+  "dir_name": "silent-failure-sweep",
+  "downloaded_at": "2026-10-25T08:55:05.092494Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Focus688",
+  "source_url": "https://github.com/Focus688/agent-security-skills/blob/main/skills/silent-failure-sweep/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Focus688/agent-security-skills/blob/main/skills/silent-failure-sweep/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Periodically sweep an agent's cron jobs, scripts, and pipelines for silent failures: swallowed stderr, existence-only success checks, stale artifacts, dead probes. Companion to secure-addon-install."
+}

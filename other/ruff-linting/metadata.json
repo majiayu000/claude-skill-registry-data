@@ -1,0 +1,38 @@
+{
+  "name": "ruff-linting",
+  "repo": "EmanuProds/dotfiles",
+  "path": "skills/ruff-linting/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/EmanuProds/dotfiles",
+  "dir_name": "ruff-linting",
+  "downloaded_at": "2026-10-25T08:48:51.108824Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=3, quality=3",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "ci",
+      "cd",
+      "docker"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "EmanuProds",
+  "source_url": "https://github.com/EmanuProds/dotfiles/blob/master/skills/ruff-linting/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/EmanuProds/dotfiles/blob/master/skills/ruff-linting/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Python linting with ruff. Fast linting, rule selection, auto-fixing, and config. Use when checking Python code quality, enforcing standards, or finding bugs."
+}

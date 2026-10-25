@@ -1,0 +1,37 @@
+{
+  "name": "hunter-interview",
+  "repo": "Jakeschincariol/hunter-skill",
+  "path": "skills/hunter-interview/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/Jakeschincariol/hunter-skill",
+  "dir_name": "hunter-interview",
+  "downloaded_at": "2026-10-25T09:14:09.390870Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: ai, prompt",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/hunter-skill/blob/main/skills/hunter-interview/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/hunter-skill/blob/main/skills/hunter-interview/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Interview Coach. Runs mock interviews with the questions this company actually asks, from a question bank that cites each company's own published interview-prep pages (Google, Meta, NVIDIA, Netflix, Amazon) and marks everything else as community-reported. Shows the company's interview loop, asks one question at a time, checks every answer for Situation, Task, Action, Result and a number, coaches the weak part, logs the session and tells you what to practice next. Use when the user says \"mock interview\", \"practice interview\", \"prep me for Google\", \"what does Amazon ask\", \"Leadership Principles\", \"behavioral questions\", \"STAR\", \"system design practice\", \"interview tomorrow\", or when a role moves to screen or interview."
+}

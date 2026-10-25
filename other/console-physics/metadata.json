@@ -1,0 +1,37 @@
+{
+  "name": "console-physics",
+  "repo": "Jakeschincariol/console-skill",
+  "path": "console-physics/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Jakeschincariol/console-skill",
+  "dir_name": "console-physics",
+  "downloaded_at": "2026-10-25T09:13:57.574291Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/console-skill/blob/main/console-physics/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/console-skill/blob/main/console-physics/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Physics Tuner. Finds the numbers that decide how the game moves (speed, gravity, grip, jump height, frame rate) and tunes them. Scans the user's own game ELF for a float32 value stored in data or built in code (lui, ori or addiu, then mtc1), shows the instructions that read it, lists frame-timing candidates, and prints the exact pnach lines to test a new value in PCSX2 plus the PS2Recomp fix (TOML instruction patches or the data write /console-mod bakes in). Reads only; writes nothing. Use when the user says \"make the car faster\", \"lower the gravity\", \"jump higher\", \"more grip\", \"change the damage\", \"wider camera\", \"unlock 60 fps\", \"find the speed value\", or when /console-mod needs a number found."
+}

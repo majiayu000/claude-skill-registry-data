@@ -1,0 +1,39 @@
+{
+  "name": "commit",
+  "repo": "DGouron/review-flow",
+  "path": ".claude/skills/commit/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/DGouron/review-flow",
+  "dir_name": "commit-dgouron-review-flow",
+  "downloaded_at": "2026-10-25T08:37:20.777860Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build, refactor",
+    "score": 4,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DGouron",
+  "source_url": "https://github.com/DGouron/review-flow/blob/master/.claude/skills/commit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DGouron/review-flow/blob/master/.claude/skills/commit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Safe commit and push workflow. Creates a commit following conventions and pushes. Husky handles verifications (TypeScript, Biome, tests)."
+}

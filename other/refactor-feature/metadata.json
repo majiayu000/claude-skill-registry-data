@@ -1,0 +1,37 @@
+{
+  "name": "refactor-feature",
+  "repo": "DGouron/review-flow",
+  "path": ".claude/skills/refactor-feature/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/DGouron/review-flow",
+  "dir_name": "refactor-feature",
+  "downloaded_at": "2026-10-25T08:37:28.428400Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agent-role"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DGouron",
+  "source_url": "https://github.com/DGouron/review-flow/blob/master/.claude/skills/refactor-feature/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DGouron/review-flow/blob/master/.claude/skills/refactor-feature/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Autonomous refactoring via spec-driven development. Orchestrates contract tests, batch planning, and incremental implementation with regression checks. Reuses feature-planner and feature-implementer agents."
+}

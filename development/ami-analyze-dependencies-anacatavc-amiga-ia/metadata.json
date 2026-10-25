@@ -1,0 +1,38 @@
+{
+  "name": "ami-analyze-dependencies",
+  "repo": "AnaCataVC/amiga-ia",
+  "path": "codex/skills/ami-analyze-dependencies/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/AnaCataVC/amiga-ia",
+  "dir_name": "ami-analyze-dependencies-anacatavc-amiga-ia",
+  "downloaded_at": "2026-10-25T08:13:16.554426Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AnaCataVC",
+  "source_url": "https://github.com/AnaCataVC/amiga-ia/blob/main/codex/skills/ami-analyze-dependencies/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AnaCataVC/amiga-ia/blob/main/codex/skills/ami-analyze-dependencies/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Analyzes the project's libraries and dependencies. It checks for unused dependencies, outdated versions, security vulnerabilities, and generates a structured report of the project's dependency health."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "ami-prepare-release",
+  "repo": "AnaCataVC/amiga-ia",
+  "path": "skills/ami-prepare-release/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/AnaCataVC/amiga-ia",
+  "dir_name": "ami-prepare-release",
+  "downloaded_at": "2026-10-25T08:13:12.379662Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, markdown, documentation",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AnaCataVC",
+  "source_url": "https://github.com/AnaCataVC/amiga-ia/blob/main/skills/ami-prepare-release/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AnaCataVC/amiga-ia/blob/main/skills/ami-prepare-release/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Prepares GitHub releases by calculating the next semantic version tag and generating bilingual release notes (English and Spanish) from git commit history in a single unified workflow."
+}

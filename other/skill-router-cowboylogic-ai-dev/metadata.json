@@ -1,0 +1,37 @@
+{
+  "name": "skill-router",
+  "repo": "CowboyLogic/ai-dev",
+  "path": "skills/skill-router/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/CowboyLogic/ai-dev",
+  "dir_name": "skill-router-cowboylogic-ai-dev",
+  "downloaded_at": "2026-10-25T08:35:54.535209Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "CowboyLogic",
+  "source_url": "https://github.com/CowboyLogic/ai-dev/blob/main/skills/skill-router/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/CowboyLogic/ai-dev/blob/main/skills/skill-router/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find an installed skill in the skill library, a folder of skills kept outside the harness's discovery path so their descriptions do not load into every session. Search it BEFORE starting a task that a specialized skill could cover and that no skill already listed in this session fits, and whenever the user names a skill you cannot see or asks what skills are installed. Returns the skill's directory so you can read and follow it. When the library has none, it searches GitHub for one to offer the user. Also use it when the user asks to install, update, review, or remove a skill in the library."
+}

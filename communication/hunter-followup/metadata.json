@@ -1,0 +1,37 @@
+{
+  "name": "hunter-followup",
+  "repo": "Jakeschincariol/hunter-skill",
+  "path": "skills/hunter-followup/SKILL.md",
+  "github_branch": "main",
+  "category": "communication",
+  "source": "github.com/Jakeschincariol/hunter-skill",
+  "dir_name": "hunter-followup",
+  "downloaded_at": "2026-10-25T09:14:08.987751Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "communication",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for communication: email, chat",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "email",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/hunter-skill/blob/main/skills/hunter-followup/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/hunter-skill/blob/main/skills/hunter-followup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Follow-up Manager. Sends polite follow-ups so no thread goes cold, and stops before anyone feels chased. Every morning it reads hunter/pipeline.json and lists what is due today: follow-ups on unanswered outreach, replies waiting on you, drafts waiting for your yes, applications with no news after 10 days, thank-you notes after interviews and coffee chats, and anyone the stop rules have closed (first \"no\", 2 follow-ups, 21 days of silence, a stop request honoured forever). Drafts each message from a polite template; you approve, it goes out from your account, and it is logged. Use when the user says \"follow up\", \"who do I need to follow up with\", \"nudge\", \"they haven't replied\", \"check on my application\", \"thank-you note\", or every morning."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "guided-video-recipes",
+  "repo": "BintzGavin/helios",
+  "path": "skills/guided/video-recipes/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/BintzGavin/helios",
+  "dir_name": "video-recipes",
+  "downloaded_at": "2026-10-25T08:25:26.046462Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "BintzGavin",
+  "source_url": "https://github.com/BintzGavin/helios/blob/main/skills/guided/video-recipes/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BintzGavin/helios/blob/main/skills/guided/video-recipes/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Opt-in recipes for specific code-video genres, each with structure, technique, gotchas and a tested Helios renderAt(t) demo: scale dives (powers of ten), step-by-step process explainers, era timelines, mechanism and proof explainers, kinetic typography, one-shape UI morph loops and pixel-art sprite scenes, plus a video brief template and a gotcha list. Load it only when the user asks for one of these genres by description or name, or asks for genre options or a brief template. Don't load it for general video requests."
+}

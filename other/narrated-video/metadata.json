@@ -1,0 +1,38 @@
+{
+  "name": "narrated-video",
+  "repo": "AI-Business-Tools/claude-code",
+  "path": "skills/narrated-video/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/AI-Business-Tools/claude-code",
+  "dir_name": "narrated-video",
+  "downloaded_at": "2026-10-25T08:03:29.887645Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AI-Business-Tools",
+  "source_url": "https://github.com/AI-Business-Tools/claude-code/blob/main/skills/narrated-video/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AI-Business-Tools/claude-code/blob/main/skills/narrated-video/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turns a slide deck, exported as a PDF, into a short narrated MP4 video with captions, read by a Google Gemini text-to-speech voice. Speaker notes, an outline, or a transcript of the talk improve the script but are optional. Writes a script of one scene per slide, stops for the user's approval, records one audio clip per sentence, times captions from the script's own words, and assembles the video with ffmpeg. Fires on \"make a video from my slides\", \"narrated video from this deck\", \"turn my presentation into a video\", \"add a voiceover to my slides\", and \"captioned video of my talk\"."
+}

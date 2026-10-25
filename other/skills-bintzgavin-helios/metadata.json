@@ -1,0 +1,37 @@
+{
+  "name": "helios-skills",
+  "repo": "BintzGavin/helios",
+  "path": "skills/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/BintzGavin/helios",
+  "dir_name": "skills-bintzgavin-helios",
+  "downloaded_at": "2026-10-25T08:25:22.278040Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, creative=2",
+    "score": 2,
+    "runner_up": "creative",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "BintzGavin",
+  "source_url": "https://github.com/BintzGavin/helios/blob/main/skills/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BintzGavin/helios/blob/main/skills/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Collection of agent skills for Helios video engine. Use when working with programmatic video creation, browser-native animations, or Helios compositions. Install individual skills by path for specific capabilities."
+}

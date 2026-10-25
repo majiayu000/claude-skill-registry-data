@@ -1,0 +1,37 @@
+{
+  "name": "ami-review-self-pr",
+  "repo": "AnaCataVC/amiga-ia",
+  "path": "codex/skills/ami-review-self-pr/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/AnaCataVC/amiga-ia",
+  "dir_name": "ami-review-self-pr-anacatavc-amiga-ia",
+  "downloaded_at": "2026-10-25T08:13:14.835749Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "AnaCataVC",
+  "source_url": "https://github.com/AnaCataVC/amiga-ia/blob/main/codex/skills/ami-review-self-pr/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/AnaCataVC/amiga-ia/blob/main/codex/skills/ami-review-self-pr/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use ONLY when reviewing YOUR OWN Pull Requests, local branches, or work-in-progress code before publishing. Instead of leaving comments, it acts as a stringent Senior Engineer to proactively find flaws and apply concrete code fixes locally. If reviewing a teammate's or another person's Pull Request to leave review comments, use ami-review-peer-pr instead."
+}

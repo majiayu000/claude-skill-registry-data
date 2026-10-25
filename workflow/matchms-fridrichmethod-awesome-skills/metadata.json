@@ -1,0 +1,38 @@
+{
+  "name": "matchms",
+  "repo": "FridrichMethod/awesome-skills",
+  "path": "skills/matchms/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/FridrichMethod/awesome-skills",
+  "dir_name": "matchms-fridrichmethod-awesome-skills",
+  "downloaded_at": "2026-10-25T08:56:16.076592Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process, pipeline",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "process",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "FridrichMethod",
+  "source_url": "https://github.com/FridrichMethod/awesome-skills/blob/main/skills/matchms/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/FridrichMethod/awesome-skills/blob/main/skills/matchms/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Processes, cleans, compares, and searches tandem mass spectra with matchms. Use for MS/MS file I/O, metadata harmonization, peak filtering, spectral similarity, library matching, score matrices, and molecular-similarity networks. Use pyopenms instead for LC-MS feature detection or proteomics pipelines."
+}

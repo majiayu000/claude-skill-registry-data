@@ -1,0 +1,37 @@
+{
+  "name": "trace-review-app",
+  "repo": "Calibre-Labs/reforge-ai-evals",
+  "path": "skills/trace-review-app/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Calibre-Labs/reforge-ai-evals",
+  "dir_name": "trace-review-app",
+  "downloaded_at": "2026-10-25T08:28:46.614663Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Calibre-Labs",
+  "source_url": "https://github.com/Calibre-Labs/reforge-ai-evals/blob/main/skills/trace-review-app/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Calibre-Labs/reforge-ai-evals/blob/main/skills/trace-review-app/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Design and build a custom trace review app for one AI product: a single-page tool where the team reads traces, writes notes, labels pass or fail, tags trace codes and exports the results for other skills. Built around that product's own trace shape, rubric and failure modes, and set up so reviewing becomes a habit (a queue, progress, streaks, quick keys). Use this skill whenever someone asks to \"build a trace viewer\", \"make an annotation tool\", \"set up a review page for our traces\", \"make trace review less painful\", \"build a labeling app\", or says the team isn't reading traces because the tool is clunky."
+}

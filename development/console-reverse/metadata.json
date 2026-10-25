@@ -1,0 +1,37 @@
+{
+  "name": "console-reverse",
+  "repo": "Jakeschincariol/console-skill",
+  "path": "console-reverse/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Jakeschincariol/console-skill",
+  "dir_name": "console-reverse",
+  "downloaded_at": "2026-10-25T09:13:57.274966Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/console-skill/blob/main/console-reverse/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/console-skill/blob/main/console-reverse/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reverse Engineer. Opens your own disc image, finds the game's code and maps how it works: the boot ELF, every function, the design doc. Drives the whole port and is the entry point of the Console pack. Reads ISO 9660 images without loading them whole, reads SYSTEM.CNF and the boot ELF (segments, CRC-32 and PCSX2 CRC, IRX modules), writes a starter PS2Recomp TOML with real keys only, and keeps console/STATE.md, the memory every /console-* skill reads first. Carries the PS2Recomp rules: never clean the build, never edit generated code or headers, a build gate, and a three-strike circuit breaker. Use when the user says \"port my PS2 game\", \"recompile my game\", \"open my ISO\", \"what's on this disc\", \"set up PS2Recomp\", \"where are we\", \"continue the port\", or at the start of any Console session."
+}

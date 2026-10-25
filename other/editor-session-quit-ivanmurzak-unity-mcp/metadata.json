@@ -1,0 +1,37 @@
+{
+  "name": "editor-session-quit",
+  "repo": "IvanMurzak/Unity-MCP",
+  "path": "Unity-MCP-Plugin/.claude/skills/editor-session-quit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/IvanMurzak/Unity-MCP",
+  "dir_name": "editor-session-quit-ivanmurzak-unity-mcp",
+  "downloaded_at": "2026-10-25T09:11:54.989574Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "IvanMurzak",
+  "source_url": "https://github.com/IvanMurzak/Unity-MCP/blob/main/Unity-MCP-Plugin/.claude/skills/editor-session-quit/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/IvanMurzak/Unity-MCP/blob/main/Unity-MCP-Plugin/.claude/skills/editor-session-quit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Save and quit an editor that a CLI session started (`unity-mcp-cli exec`, `open --headless`). Needs the session lease nonce; an editor the user opened is never closed. Used by `unity-mcp-cli close`."
+}

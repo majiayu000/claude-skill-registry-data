@@ -1,0 +1,37 @@
+{
+  "name": "hunter-connector",
+  "repo": "Jakeschincariol/hunter-skill",
+  "path": "skills/hunter-connector/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Jakeschincariol/hunter-skill",
+  "dir_name": "hunter-connector",
+  "downloaded_at": "2026-10-25T09:14:09.548006Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: communication=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "email",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/hunter-skill/blob/main/skills/hunter-connector/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/hunter-skill/blob/main/skills/hunter-connector/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The Connector. Finds the hiring manager for a role (from the posting, the team page and a LinkedIn search the user runs), researches them from public professional information only, works out their likely work email with a confidence, drafts a personalized email and a LinkedIn note, and keeps the conversation going with polite, rule-bound follow-ups until a coffee chat is booked on the user's calendar. Nothing goes out without the user's yes for that exact message, every message is sent from the user's own accounts, and the stop rules end a thread at the first no. Use when the user says \"find the hiring manager\", \"reach out to the team\", \"get me a warm intro\", \"email the manager\", \"set up a coffee chat\", \"who is hiring for this role\", or \"follow up with Maya\"."
+}

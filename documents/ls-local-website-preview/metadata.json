@@ -1,0 +1,37 @@
+{
+  "name": "ls-local-website-preview",
+  "repo": "CruxExperts/LocalSetup",
+  "path": "ls/skills/ls-local-website-preview/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/CruxExperts/LocalSetup",
+  "dir_name": "ls-local-website-preview",
+  "downloaded_at": "2026-10-25T08:36:30.907657Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, documentation",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "CruxExperts",
+  "source_url": "https://github.com/CruxExperts/LocalSetup/blob/main/ls/skills/ls-local-website-preview/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/CruxExperts/LocalSetup/blob/main/ls/skills/ls-local-website-preview/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Start, find, inspect, reuse, or stop a local website preview for a selected project. Guides existing project commands and native process supervision, keeps previews on loopback, and protects unrelated projects; does not deploy a public site."
+}

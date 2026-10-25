@@ -1,0 +1,38 @@
+{
+  "name": "blender",
+  "repo": "BlackBeltTechnology/pi-agent-dashboard",
+  "path": "packages/blender/.pi/skills/blender/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/BlackBeltTechnology/pi-agent-dashboard",
+  "dir_name": "blender-blackbelttechnology-pi-agent-dashboard",
+  "downloaded_at": "2026-10-25T08:25:52.541283Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "BlackBeltTechnology",
+  "source_url": "https://github.com/BlackBeltTechnology/pi-agent-dashboard/blob/master/packages/blender/.pi/skills/blender/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BlackBeltTechnology/pi-agent-dashboard/blob/master/packages/blender/.pi/skills/blender/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Headless Blender (bpy) for 3D modelling and GLB export, with no native Blender install - build or edit a scene in Python, import OBJ/FBX/STL/PLY/glTF/.blend, export .glb and other formats, all through the blender-wasm MCP server and the pi-blender CLI. Use for \"model a 3D object\", \"make a .glb of this\", \"convert this OBJ/FBX to glTF\", \"inspect this 3D model\"."
+}

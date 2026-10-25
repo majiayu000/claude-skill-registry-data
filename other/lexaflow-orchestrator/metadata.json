@@ -1,0 +1,37 @@
+{
+  "name": "lexaflow-orchestrator",
+  "repo": "Hareeshwar-N-K/lexaflow-alexa-plus-mcp",
+  "path": "skills/lexaflow-orchestrator/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Hareeshwar-N-K/lexaflow-alexa-plus-mcp",
+  "dir_name": "lexaflow-orchestrator",
+  "downloaded_at": "2026-10-25T09:05:27.973134Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: orchestration=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "orchestration",
+      "orchestrator"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Hareeshwar-N-K",
+  "source_url": "https://github.com/Hareeshwar-N-K/lexaflow-alexa-plus-mcp/blob/main/skills/lexaflow-orchestrator/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Hareeshwar-N-K/lexaflow-alexa-plus-mcp/blob/main/skills/lexaflow-orchestrator/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Stateful, multi-service Alexa+ household orchestration over the LexaFlow MCP 2025-11-25 server. Use when a request spans household memory, allergy-aware Amazon Fresh or Whole Foods commerce, Matter/Ring/Echo smart-home control, or multimodal APL-style carousel rendering. The skill enforces cross-session recall, allergy and budget guardrails, explicit purchase confirmation, and a concise voice-first response policy."
+}

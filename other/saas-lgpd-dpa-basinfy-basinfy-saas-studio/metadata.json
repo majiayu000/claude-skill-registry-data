@@ -1,0 +1,37 @@
+{
+  "name": "saas-lgpd-dpa",
+  "repo": "Basinfy/Basinfy-SaaS-Studio",
+  "path": ".agents/skills/saas-lgpd-dpa/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/Basinfy/Basinfy-SaaS-Studio",
+  "dir_name": "saas-lgpd-dpa-basinfy-basinfy-saas-studio",
+  "downloaded_at": "2026-10-25T08:23:16.895710Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "analytics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Basinfy",
+  "source_url": "https://github.com/Basinfy/Basinfy-SaaS-Studio/blob/master/.agents/skills/saas-lgpd-dpa/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Basinfy/Basinfy-SaaS-Studio/blob/master/.agents/skills/saas-lgpd-dpa/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Draft and review Data Processing Agreements (DPA) with operadores under LGPD Art. 39. Use when user mentions 'DPA', 'contrato com operador', 'cl\u00e1usulas LGPD', 'data processing agreement', or onboarding a new third-party service (analytics, cloud, payment, email, SMS, observability). Outputs DPA template + per-vendor sheets in `.lgpd/vendors/`."
+}

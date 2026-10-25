@@ -1,0 +1,38 @@
+{
+  "name": "console-anywhere",
+  "repo": "Jakeschincariol/console-skill",
+  "path": "console-anywhere/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Jakeschincariol/console-skill",
+  "dir_name": "console-anywhere",
+  "downloaded_at": "2026-10-25T09:13:57.854822Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/console-skill/blob/main/console-anywhere/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/console-skill/blob/main/console-anywhere/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Play Anywhere. Builds the port for Windows, Mac, Linux, Steam Deck, Android and PS Vita and packages it without any game files inside. doctor checks this machine's tools for a target and prints the exact install command for anything missing; plan prints the build steps taken from PS2Recomp's own README, android/README.md and vita scripts; package makes a player folder in console/dist/ (the runner, its libraries, an empty game/ folder, PLAYERS.md, a launch script, .recomp.json) and refuses outright if a disc image, PS2 ELF, IRX module, recompiled runner source or other game data is inside; guard runs that check on any folder; recomp-json writes the project's optional .recomp.json. Use when the user says \"put it on my Steam Deck\", \"build it for Android\", \"play it on my phone\", \"on my TV\", \"Vita build\", \"Mac build\", \"package it\", \"make a release folder\", \"is it safe to zip this\", or after the port plays on the machine it was built on."
+}

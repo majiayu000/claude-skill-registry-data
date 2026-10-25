@@ -1,0 +1,37 @@
+{
+  "name": "hunter-salary",
+  "repo": "Jakeschincariol/hunter-skill",
+  "path": "skills/hunter-salary/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Jakeschincariol/hunter-skill",
+  "dir_name": "hunter-salary",
+  "downloaded_at": "2026-10-25T09:14:08.509966Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/hunter-skill/blob/main/skills/hunter-salary/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/hunter-skill/blob/main/skills/hunter-salary/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Salary Negotiator. Benchmarks the role and scripts your counter-offer. Turns an offer into total compensation year by year (base, bonus target, equity with its real vesting schedule including back-loaded ones, sign-on), compares offers side by side, pulls wage percentiles from the U.S. Bureau of Labor Statistics (OEWS) for your occupation and area, adds pay ranges printed in job postings with their URL, and writes a counter range and a polite script that cites every number. Never invents a market number. Use when the user says \"I got an offer\", \"negotiate my salary\", \"is this offer good\", \"compare offers\", \"counter offer\", \"what should I ask for\", \"total compensation\", \"RSU vesting\", or when a role reaches the offer stage."
+}

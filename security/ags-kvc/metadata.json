@@ -1,0 +1,37 @@
+{
+  "name": "ags-kvc",
+  "repo": "1llu50ry/mcp-gamehacking",
+  "path": "skills/ags-kvc/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/1llu50ry/mcp-gamehacking",
+  "dir_name": "ags-kvc",
+  "downloaded_at": "2026-10-25T07:56:11.593331Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: auth, vulnerability",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "auth",
+      "vulnerability"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "1llu50ry",
+  "source_url": "https://github.com/1llu50ry/mcp-gamehacking/blob/main/skills/ags-kvc/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/1llu50ry/mcp-gamehacking/blob/main/skills/ags-kvc/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "A Windows kernel vulnerability controller that disables Driver Signature Enforcement (DSE) by patching CI.dll options via a signed Microsoft driver, with certificate-based code signing and multiple lo"
+}

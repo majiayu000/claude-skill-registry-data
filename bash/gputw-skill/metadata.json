@@ -1,0 +1,38 @@
+{
+  "name": "gputw",
+  "repo": "GPUtw-ai/GPUtw-Skill",
+  "path": "SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/GPUtw-ai/GPUtw-Skill",
+  "dir_name": "gputw-skill",
+  "downloaded_at": "2026-10-25T08:57:20.259622Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, cli",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "GPUtw-ai",
+  "source_url": "https://github.com/GPUtw-ai/GPUtw-Skill/blob/master/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/GPUtw-ai/GPUtw-Skill/blob/master/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "GPUtw \u53f0\u7063 GPU \u96f2\u7aef REST API \u6574\u5408\u52a9\u624b\uff08gputw, GPUtw.ai, \u53f0\u7063 GPU \u96f2, \u79df GPU, \u88f8\u6a5f GPU, GPU \u57f7\u884c\u500b\u9ad4\uff09\u3002 \u7528\u6709\u6b0a\u9650\u7bc4\u570d\u7684 API \u91d1\u9470\uff08gputw_live_\uff09\u90e8\u7f72\u8207\u7ba1\u7406 GPU \u57f7\u884c\u500b\u9ad4\u3001\u8f2a\u8a62\u72c0\u614b\u3001\u8b80\u53d6\u7528\u91cf\u8207\u65e5\u8a8c\u3001 \u5728\u5bb9\u5668\u5167\u57f7\u884c\u6307\u4ee4\u3001\u7ba1\u7406 HTTP \u9023\u63a5\u57e0\u8207 raw TCP/UDP\u3001Vault \u5132\u5b58\u7a7a\u9593\uff08\u5206\u6bb5\u7e8c\u50b3\u4e0a\u50b3\u3001Hugging Face \u6a21\u578b\u4e0b\u8f09\uff09\u3001 \u9ede\u6578\u5e33\u52d9\u8207\u5718\u968a\u3002\u9069\u7528\u65bc\u64b0\u5beb\u81ea\u52d5\u5316\u8173\u672c\u3001CI\u3001\u4ee3\u7406\u7a0b\u5f0f\uff0c\u4ee5\u53ca\u9664\u932f 401/403/402/409/429 \u8207 Cloudflare 403 \u56de\u61c9\u3002 Use when the user mentions GPUtw, gputw.ai, renting a GPU in Taiwan, /vault, or a gputw_live_ API key."
+}

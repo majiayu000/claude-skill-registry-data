@@ -1,0 +1,38 @@
+{
+  "name": "audio-extract",
+  "repo": "EtharaOrion/mikazuki-samples",
+  "path": "5c0dbdca-699e-47ad-99af-f68841a805f5/data/environment/skills/audio-extract/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/EtharaOrion/mikazuki-samples",
+  "dir_name": "audio-extract-etharaorion-mikazuki-samples-7",
+  "downloaded_at": "2026-10-25T08:51:12.867953Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "EtharaOrion",
+  "source_url": "https://github.com/EtharaOrion/mikazuki-samples/blob/main/5c0dbdca-699e-47ad-99af-f68841a805f5/data/environment/skills/audio-extract/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/EtharaOrion/mikazuki-samples/blob/main/5c0dbdca-699e-47ad-99af-f68841a805f5/data/environment/skills/audio-extract/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Extract a 16kHz mono WAV audio track from any media file, probe metadata, and transcribe speech to text via the harness-provided LiteLLM sidecar (no internet required from inside the agent container)."
+}

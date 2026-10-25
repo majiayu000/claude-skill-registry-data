@@ -1,0 +1,37 @@
+{
+  "name": "console-controller",
+  "repo": "Jakeschincariol/console-skill",
+  "path": "console-controller/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/Jakeschincariol/console-skill",
+  "dir_name": "console-controller",
+  "downloaded_at": "2026-10-25T09:13:58.022082Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/console-skill/blob/main/console-controller/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/console-skill/blob/main/console-controller/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Controller Mapper. Hooks the game up to any controller: DualSense, Xbox, Switch Pro, keyboard or touch, remapped how you like. Reads a mapping in console/controls.json (a layout preset plus per-button overrides, radial deadzone, invert Y, stick swap, analog trigger threshold, keyboard keys, two players, Android touch zones) and writes console/ps2_pad.cpp, a drop-in replacement for PS2Recomp's ps2xRuntime/src/lib/ps2_pad.cpp with the same class, signature and DualShock 2 report. Optional input replay and recording for scripted test runs. Backs up the stock file before installing and only touches the PS2Recomp checkout you name. Use when the user says \"my controller doesn't work\", \"remap the buttons\", \"use my Xbox pad\", \"Switch Pro buttons are swapped\", \"invert the camera\", \"keyboard controls\", \"two players\", \"touch controls on Android\", or when /console-tester needs scripted input."
+}

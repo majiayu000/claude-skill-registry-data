@@ -1,0 +1,37 @@
+{
+  "name": "ls-herdr-remote-connect",
+  "repo": "CruxExperts/LocalSetup",
+  "path": "ls/skills/ls-herdr-remote-connect/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/CruxExperts/LocalSetup",
+  "dir_name": "ls-herdr-remote-connect",
+  "downloaded_at": "2026-10-25T08:36:29.948485Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "CruxExperts",
+  "source_url": "https://github.com/CruxExperts/LocalSetup/blob/main/ls/skills/ls-herdr-remote-connect/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/CruxExperts/LocalSetup/blob/main/ls/skills/ls-herdr-remote-connect/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Connect Herdr machines and SSH tunnels, deploy missing Herdr, translate master configuration, and perform idle-first upgrades and restart/reconnect workflows. Start with ls-herdr-task-routing."
+}

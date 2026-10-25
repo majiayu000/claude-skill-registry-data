@@ -1,0 +1,38 @@
+{
+  "name": "find-CEngineServer_GetFrameTimeAmnesty-inlined",
+  "repo": "HLND2T/CS2_VibeSignatures",
+  "path": ".claude/skills/find-CEngineServer_GetFrameTimeAmnesty-inlined/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/HLND2T/CS2_VibeSignatures",
+  "dir_name": "find-cengineserver-getframetimeamnesty-inlined",
+  "downloaded_at": "2026-10-25T09:03:39.705507Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HLND2T",
+  "source_url": "https://github.com/HLND2T/CS2_VibeSignatures/blob/main/.claude/skills/find-CEngineServer_GetFrameTimeAmnesty-inlined/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HLND2T/CS2_VibeSignatures/blob/main/.claude/skills/find-CEngineServer_GetFrameTimeAmnesty-inlined/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Recover CEngineServer_GetFrameTimeAmnesty in CS2 engine binaries (Windows and Linux) when the find-CEngineServer_GetFrameTimeAmnesty-inlined preprocessor fails.\nVerify current vtable entries and function semantics rather than reusing historical addresses or signatures.\nTrigger: CEngineServer_GetFrameTimeAmnesty"
+}

@@ -1,0 +1,87 @@
+---
+name: m29
+description: "Sisi data & orkestrasi dari konten sosial: riset tren/kompetitor, insight audiens, social listening, analitik performa, A/B variant, best-time-to-post, engagement handler, dan *full content pipeline"
+category: superagent/content
+---
+
+# m29 — Content Research, Analytics & Pipeline (NEW in v4.1)
+
+Sisi data & orkestrasi dari konten sosial: riset tren/kompetitor, insight audiens, social listening, analitik performa, A/B variant, best-time-to-post, engagement handler, dan **full content pipeline** (research → draft → visual → schedule → analyze). **Opsional.** Otak strategi di belakang m27 (produksi) & m28 (tulisan).
+
+> Jujur soal data: analitik & "best time" butuh **data nyata** dari platform/akun operator (API/export). Tanpa itu = heuristik & benchmark umum, ditandai sebagai estimasi — bukan angka palsu.
+
+---
+
+## 1. Trend & competitor research
+
+```
+- Trending topic: cari di X/IG/LinkedIn/TikTok + Google Trends per niche & region
+- Competitor teardown: format yang nempel, frekuensi, hook, gaya, gap yang bisa diisi
+- Pain points: scrape komentar/forum/review → tema keluhan berulang = bahan konten
+```
+
+Sumber via web fetch operator / API. Untuk riset mendalam bersitasi → handoff m22. Output: daftar peluang konten ter-ranking by relevansi × momentum.
+
+## 2. Audience insight & social listening
+
+```python
+# analisis komentar/engagement → tema + sentimen (real data dari export/API operator)
+from content import analyze_comments
+insight = analyze_comments(comments)   # → {themes, sentiment, questions, objections, quotes}
+```
+
+Real-time listening: pantau keyword/brand/kompetitor di sosial → peluang (pertanyaan belum terjawab, tren naik, krisis). Sambung alert (m4/m14). Pertanyaan audiens = ide konten + objection buat di-address.
+
+## 3. Performance analyzer
+
+```python
+from content import analyze_performance
+report = analyze_performance(posts)    # butuh metrik real: impressions, engagement, CTR, saves
+# → top/bottom performer, pola (format/jam/hook yang menang), rekomendasi konkret
+```
+
+Tanpa data real → kasih kerangka apa yang harus diukur, jangan ngarang angka. Pola menang → reinforce; yang flat → drop. Kaitkan ke self-improving loop (x4): pola kebukti → instinct konten.
+
+## 4. A/B testing & best-time
+
+```python
+from content import ab_variants, best_time
+variants = ab_variants("caption asli", n=3, vary=["hook","cta","length"])  # 1 variabel/uji
+slots = best_time(audience_tz="Asia/Jakarta", history=post_history)         # data > tebakan
+```
+
+A/B: ubah **satu** elemen per uji (hook ATAU CTA, jangan dua) — biar tau mana yang ngefek (prinsip sama x5 eval). Best-time dari data audiens sendiri > benchmark generik; tandai kalau cuma benchmark.
+
+## 5. Engagement response handler
+
+```
+- Draft balasan komentar (match brand voice m20) — POSITIF cepat, KRITIK hati-hati
+- Eskalasi: keluhan serius / legal / krisis → flag ke operator, JANGAN auto-reply
+- Human-in-the-loop: draft dulu → approval → kirim (jangan auto-post balasan sensitif)
+```
+
+## 6. Full content pipeline (orkestrasi)
+
+```
+RESEARCH (m29) → DRAFT (m28+m27) → HUMANIZE (m20) → VISUAL (m18) →
+SCHEDULE (m4/m17 cron) → PUBLISH (cross-platform, R9 gate) → ANALYZE (m29) → loop balik
+```
+
+```python
+from content import repurpose
+pieces = repurpose(long_form_text, into=["x_thread","ig_carousel","reels_script","linkedin_post"])
+# 1 long-form → banyak platform, tiap format di-adapt (bukan copy-paste)
+```
+
+- **Cross-platform publisher**: adapt (m27) lalu publish ke banyak platform via API (m6).
+- **Human-in-the-loop**: generate draft → minta approval operator → refine. Default buat outward content.
+- **Scheduled agent**: konten rutin via cron (m4/m17). Publish = aksi outward → R9 gate.
+- **Self-improving loop**: performa (§3) → pelajaran (x4) → strategi konten makin tajam.
+- **Multi-agent**: riset / tulis / desain bisa di-split jadi lane swarm (m17) — executor yang publish, bukan lane riset.
+
+---
+
+## Catatan
+- Analitik butuh data real — tanpa itu, heuristik bertanda "estimasi".
+- Publish & auto-reply = outward → human-in-the-loop / R9 gate. Jangan auto-reply hal sensitif.
+- Combo: m29 + m27 (produksi) + m28 (copy) + m20 (humanize) + m18 (visual) + m22 (riset dalam) + m6/m4/m17 (publish/schedule) + x4/x5 (improve/eval).

@@ -1,0 +1,37 @@
+{
+  "name": "find-CServerSideClientBase_GetUserIDString",
+  "repo": "HLND2T/CS2_VibeSignatures",
+  "path": ".claude/skills/find-CServerSideClientBase_GetUserIDString/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/HLND2T/CS2_VibeSignatures",
+  "dir_name": "find-cserversideclientbase-getuseridstring",
+  "downloaded_at": "2026-10-25T09:03:37.897124Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HLND2T",
+  "source_url": "https://github.com/HLND2T/CS2_VibeSignatures/blob/main/.claude/skills/find-CServerSideClientBase_GetUserIDString/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HLND2T/CS2_VibeSignatures/blob/main/.claude/skills/find-CServerSideClientBase_GetUserIDString/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Final-guarantee fallback for CServerSideClientBase_GetUserIDString when its deterministic string-xref\npreprocessor cannot resolve the function. Locate the concrete user-ID formatting helper in engine2.dll /\nlibengine2.so and write the semantic artifact for the active platform.\nTrigger: CServerSideClientBase_GetUserIDString"
+}

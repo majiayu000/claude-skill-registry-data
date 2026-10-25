@@ -1,0 +1,39 @@
+{
+  "name": "apple-dev-docs",
+  "repo": "BingoWon/apple-rag-mcp",
+  "path": "skills/apple-dev-docs/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/BingoWon/apple-rag-mcp",
+  "dir_name": "apple-dev-docs",
+  "downloaded_at": "2026-10-25T08:25:17.569244Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, framework, build",
+    "score": 4,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "BingoWon",
+  "source_url": "https://github.com/BingoWon/apple-rag-mcp/blob/main/skills/apple-dev-docs/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BingoWon/apple-rag-mcp/blob/main/skills/apple-dev-docs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Answer Apple platform questions from Apple's official developer documentation and WWDC session transcripts instead of guessing or web-searching. Use when the user asks about iOS, iPadOS, macOS, watchOS, tvOS, or visionOS; Swift, SwiftUI, UIKit, AppKit, StoreKit, SwiftData, RealityKit, or any Apple framework; an API's signature, availability, or deprecation; an Xcode or build error caused by Apple APIs; App Store review rules; or what a WWDC session actually said \u2014 even when a quick web search seems close enough."
+}

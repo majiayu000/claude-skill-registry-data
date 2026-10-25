@@ -1,0 +1,37 @@
+{
+  "name": "console-tester",
+  "repo": "Jakeschincariol/console-skill",
+  "path": "console-tester/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Jakeschincariol/console-skill",
+  "dir_name": "console-tester",
+  "downloaded_at": "2026-10-25T09:13:57.138058Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/console-skill/blob/main/console-tester/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/console-skill/blob/main/console-tester/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Playtester. Runs the port again and again, reads every crash, ranks what to fix next and checks nothing broke. run.py starts ps2EntryRunner with your game's ELF under a hard timeout, kills the whole process tree, keeps the log in console/runs/ and calls the run PASS, HANG, CRASH or FAIL (soak repeats it N times; --input replays a controller script). triage.py reads the runtime's own log lines, clusters them by PC, names the function from your Ghidra CSV map, ranks them and names the /console-* skill that owns each; compare shows fixed, still there and new. abdiff.py finds the first divergence between PCSX2 and the port in register or memory dumps. Use when the user says \"run it\", \"does it boot\", \"test the port\", \"why did it crash\", \"what do I fix next\", \"did that break anything\", \"run it 100 times\", \"compare with PCSX2\", or after every build."
+}

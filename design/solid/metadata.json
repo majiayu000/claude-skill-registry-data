@@ -1,0 +1,37 @@
+{
+  "name": "example-solid",
+  "repo": "BintzGavin/helios",
+  "path": "skills/examples/solid/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/BintzGavin/helios",
+  "dir_name": "solid",
+  "downloaded_at": "2026-10-25T08:25:23.907993Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: component, animation",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "component",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "BintzGavin",
+  "source_url": "https://github.com/BintzGavin/helios/blob/main/skills/examples/solid/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BintzGavin/helios/blob/main/skills/examples/solid/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Patterns for using Helios with SolidJS. Use when building compositions in a SolidJS environment, utilizing signals for fine-grained reactivity."
+}

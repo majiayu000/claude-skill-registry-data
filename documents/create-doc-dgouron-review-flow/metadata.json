@@ -1,0 +1,39 @@
+{
+  "name": "create-doc",
+  "repo": "DGouron/review-flow",
+  "path": ".claude/skills/create-doc/SKILL.md",
+  "github_branch": "master",
+  "category": "documents",
+  "source": "github.com/DGouron/review-flow",
+  "dir_name": "create-doc-dgouron-review-flow",
+  "downloaded_at": "2026-10-25T08:37:22.477889Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word, documentation",
+    "score": 4,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "docs",
+      "word",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DGouron",
+  "source_url": "https://github.com/DGouron/review-flow/blob/master/.claude/skills/create-doc/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DGouron/review-flow/blob/master/.claude/skills/create-doc/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create a new documentation file following project standards. Detects overlap with existing docs before creating."
+}

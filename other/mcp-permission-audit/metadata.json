@@ -1,0 +1,37 @@
+{
+  "name": "mcp-permission-audit",
+  "repo": "Focus688/agent-security-skills",
+  "path": "skills/mcp-permission-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Focus688/agent-security-skills",
+  "dir_name": "mcp-permission-audit",
+  "downloaded_at": "2026-10-25T08:55:04.746222Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Focus688",
+  "source_url": "https://github.com/Focus688/agent-security-skills/blob/main/skills/mcp-permission-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Focus688/agent-security-skills/blob/main/skills/mcp-permission-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit MCP servers wired into an agent runtime: who can change their code, how many tools they expose, who approves calls, and what can fire while nobody is watching. Companion to secure-addon-install."
+}

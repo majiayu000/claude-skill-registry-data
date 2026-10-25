@@ -1,0 +1,37 @@
+{
+  "name": "find-CEngineServiceMgr_GetAddonCount",
+  "repo": "HLND2T/CS2_VibeSignatures",
+  "path": ".claude/skills/find-CEngineServiceMgr_GetAddonCount/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/HLND2T/CS2_VibeSignatures",
+  "dir_name": "find-cengineservicemgr-getaddoncount",
+  "downloaded_at": "2026-10-25T09:03:36.031770Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HLND2T",
+  "source_url": "https://github.com/HLND2T/CS2_VibeSignatures/blob/main/.claude/skills/find-CEngineServiceMgr_GetAddonCount/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HLND2T/CS2_VibeSignatures/blob/main/.claude/skills/find-CEngineServiceMgr_GetAddonCount/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Recover CEngineServiceMgr_GetAddonCount in CS2 engine binaries (Windows and Linux) when the find-CEngineServiceMgr_GetAddonCount preprocessor fails.\nVerify current vtable entries and function semantics rather than reusing historical addresses or signatures.\nTrigger: CEngineServiceMgr_GetAddonCount"
+}

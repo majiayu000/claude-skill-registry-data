@@ -1,0 +1,37 @@
+{
+  "name": "ls-codex-heartbeat-checks",
+  "repo": "CruxExperts/LocalSetup",
+  "path": "ls/skills/ls-codex-heartbeat-checks/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/CruxExperts/LocalSetup",
+  "dir_name": "ls-codex-heartbeat-checks",
+  "downloaded_at": "2026-10-25T08:36:32.228297Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: review, validate",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "CruxExperts",
+  "source_url": "https://github.com/CruxExperts/LocalSetup/blob/main/ls/skills/ls-codex-heartbeat-checks/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/CruxExperts/LocalSetup/blob/main/ls/skills/ls-codex-heartbeat-checks/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Opt-in agent heartbeat harness for target repositories: initialize config, run transaction-safe checks, preserve artifacts, and wire cron only after explicit activation."
+}

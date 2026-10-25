@@ -1,0 +1,37 @@
+{
+  "name": "create-agent-skill-fallback",
+  "repo": "HLND2T/CS2_VibeSignatures",
+  "path": ".claude/skills/create-agent-skill-fallback/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/HLND2T/CS2_VibeSignatures",
+  "dir_name": "create-agent-skill-fallback",
+  "downloaded_at": "2026-10-25T09:03:32.373976Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: llm, prompt",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HLND2T",
+  "source_url": "https://github.com/HLND2T/CS2_VibeSignatures/blob/main/.claude/skills/create-agent-skill-fallback/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HLND2T/CS2_VibeSignatures/blob/main/.claude/skills/create-agent-skill-fallback/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create an Agent SKILL.md fallback for an existing find-XXXX finder that relies on a fragile discovery\nfoundation \u2014 above all LLM_DECOMPILE (patterns C/D/E), which matches the decompiled shape of a predecessor\nfunction against a stored reference and breaks when a symbol is inlined or de-inlined in a way the reference\ndoes not cover. The generated fallback coexists with the preprocessor and runs only when it returns failure,\nrecovering every target robustly by decompiling the predecessor and following the inline/de-inline boundary\nwith semantic anchors. Use when a finder broke on a game update, or you want to durably backstop one before it\ndoes. The recipe generalizes to any finder foundation.\nTriggers: create agent skill fallback, add SKILL.md fallback, robust fallback for finder, backstop LLM_DECOMPILE finder, final guarantee skill"
+}

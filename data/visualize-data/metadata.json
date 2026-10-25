@@ -1,0 +1,37 @@
+{
+  "name": "workflow-visualize-data",
+  "repo": "BintzGavin/helios",
+  "path": "skills/workflows/visualize-data/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/BintzGavin/helios",
+  "dir_name": "visualize-data",
+  "downloaded_at": "2026-10-25T08:25:26.915246Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, visualization",
+    "score": 2,
+    "runner_up": "creative",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "BintzGavin",
+  "source_url": "https://github.com/BintzGavin/helios/blob/main/skills/workflows/visualize-data/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/BintzGavin/helios/blob/main/skills/workflows/visualize-data/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Workflow for creating data-driven animations. Use when you need to visualize datasets using D3, P5, or other libraries."
+}

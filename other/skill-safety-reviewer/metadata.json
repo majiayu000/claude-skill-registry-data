@@ -1,0 +1,36 @@
+{
+  "name": "skill-safety-reviewer",
+  "repo": "411tmnd-star/pyburticapa",
+  "path": "python_skills/corpus/agents_and_tools/skills/26-skill-permissions-sandboxes-and-trust/outputs/skill-safety-reviewer/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/411tmnd-star/pyburticapa",
+  "dir_name": "skill-safety-reviewer",
+  "downloaded_at": "2026-10-25T08:01:10.716102Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "411tmnd-star",
+  "source_url": "https://github.com/411tmnd-star/pyburticapa/blob/main/python_skills/corpus/agents_and_tools/skills/26-skill-permissions-sandboxes-and-trust/outputs/skill-safety-reviewer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/411tmnd-star/pyburticapa/blob/main/python_skills/corpus/agents_and_tools/skills/26-skill-permissions-sandboxes-and-trust/outputs/skill-safety-reviewer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review a skill-requested filesystem, command, network, secret, or destructive action against an explicit sandbox policy without executing it."
+}

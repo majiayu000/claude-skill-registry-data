@@ -1,0 +1,38 @@
+{
+  "name": "ags-qemu",
+  "repo": "1llu50ry/mcp-gamehacking",
+  "path": "skills/ags-qemu/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/1llu50ry/mcp-gamehacking",
+  "dir_name": "ags-qemu",
+  "downloaded_at": "2026-10-25T07:56:20.479735Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, vulnerability",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "vulnerability"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "1llu50ry",
+  "source_url": "https://github.com/1llu50ry/mcp-gamehacking/blob/main/skills/ags-qemu/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/1llu50ry/mcp-gamehacking/blob/main/skills/ags-qemu/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This project is a modified QEMU fork from ISP RAS (Institute for System Programming of the Russian Academy of Sciences) with additional analysis and instrumentation capabilities. It extends QEMU's dyn"
+}

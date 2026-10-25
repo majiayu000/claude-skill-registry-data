@@ -1,0 +1,37 @@
+{
+  "name": "find-CEngineClient_GetStatsAppID",
+  "repo": "HLND2T/CS2_VibeSignatures",
+  "path": ".claude/skills/find-CEngineClient_GetStatsAppID/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/HLND2T/CS2_VibeSignatures",
+  "dir_name": "find-cengineclient-getstatsappid",
+  "downloaded_at": "2026-10-25T09:03:33.907972Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, database",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "HLND2T",
+  "source_url": "https://github.com/HLND2T/CS2_VibeSignatures/blob/main/.claude/skills/find-CEngineClient_GetStatsAppID/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/HLND2T/CS2_VibeSignatures/blob/main/.claude/skills/find-CEngineClient_GetStatsAppID/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Recover CEngineClient_GetStatsAppID in CS2 engine binaries (Windows only) when the find-CEngineClient_GetStatsAppID preprocessor fails.\nVerify current vtable entries and function semantics rather than reusing historical addresses or signatures.\nTrigger: CEngineClient_GetStatsAppID"
+}

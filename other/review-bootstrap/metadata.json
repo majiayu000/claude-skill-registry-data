@@ -1,0 +1,37 @@
+{
+  "name": "review-bootstrap",
+  "repo": "DGouron/review-flow",
+  "path": "templates/skills/review-bootstrap/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/DGouron/review-flow",
+  "dir_name": "review-bootstrap",
+  "downloaded_at": "2026-10-25T08:37:29.266721Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "DGouron",
+  "source_url": "https://github.com/DGouron/review-flow/blob/master/templates/skills/review-bootstrap/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/DGouron/review-flow/blob/master/templates/skills/review-bootstrap/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Bootstrap skill that injects critical automation instructions for review context communication. Must be loaded BEFORE any review skill."
+}

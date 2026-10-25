@@ -1,0 +1,38 @@
+{
+  "name": "copilot-worker",
+  "repo": "CowboyLogic/ai-dev",
+  "path": "skills/copilot-worker/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/CowboyLogic/ai-dev",
+  "dir_name": "copilot-worker",
+  "downloaded_at": "2026-10-25T08:35:56.925977Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "CowboyLogic",
+  "source_url": "https://github.com/CowboyLogic/ai-dev/blob/main/skills/copilot-worker/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/CowboyLogic/ai-dev/blob/main/skills/copilot-worker/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Delegate work to GitHub Copilot instead of doing it yourself, to save Claude tokens. Use this BEFORE reading three or more files (roughly 500 lines or more) to answer a question about a codebase (\"look into\", \"find out how\", \"where is\", \"why does\", \"explain how X works\", \"does the code do Y\", \"give me an overview\", \"summarize\"), before any code review of a diff or files, and before any implementation task that touches more than a file or two. Also use when the user says \"use Copilot\", \"delegate\", \"hand off\", or \"worker\". You plan the task and verify the result; Copilot does the bulk work."
+}

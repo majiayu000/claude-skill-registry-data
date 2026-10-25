@@ -1,0 +1,38 @@
+{
+  "name": "rederive",
+  "repo": "EricJujianZou/rederive",
+  "path": "skills/rederive/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/EricJujianZou/rederive",
+  "dir_name": "rederive",
+  "downloaded_at": "2026-10-25T08:50:41.697272Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "EricJujianZou",
+  "source_url": "https://github.com/EricJujianZou/rederive/blob/master/skills/rederive/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/EricJujianZou/rederive/blob/master/skills/rederive/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Teaches a codebase by making the user re-derive its design decisions from first principles through Socratic questions, instead of explaining the code. Works on the user's own repo or any open source repo (local path or git URL). Use when the user runs /rederive, wants to explain a project they built with AI, is preparing to talk about a project in an interview, or wants to learn how a well-known project works."
+}

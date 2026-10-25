@@ -1,0 +1,37 @@
+{
+  "name": "opencode-memory\"",
+  "repo": "EmanuProds/dotfiles",
+  "path": "skills/opencode-memory/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/EmanuProds/dotfiles",
+  "dir_name": "opencode-memory",
+  "downloaded_at": "2026-10-25T08:48:59.350906Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "EmanuProds",
+  "source_url": "https://github.com/EmanuProds/dotfiles/blob/master/skills/opencode-memory/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/EmanuProds/dotfiles/blob/master/skills/opencode-memory/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Browse local OpenCode history: sessions, messages, plans, prompt history, and prior decisions. Use when the user says history, previous session, last time, remember, recall, plans, prior work, or when resuming/debugging repeated work where earlier OpenCode context may help. Do not use for fresh tasks or when current files/git already answer the question."
+}

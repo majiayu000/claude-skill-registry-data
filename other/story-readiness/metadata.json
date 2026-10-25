@@ -1,0 +1,37 @@
+{
+  "name": "story-readiness",
+  "repo": "Donchitos/Claude-Code-Game-Studios",
+  "path": ".claude/skills/story-readiness/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Donchitos/Claude-Code-Game-Studios",
+  "dir_name": "story-readiness",
+  "downloaded_at": "2026-10-25T08:44:18.890935Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, creative=2",
+    "score": 2,
+    "runner_up": "creative",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Donchitos",
+  "source_url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/story-readiness/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/story-readiness/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Checks whether a story is ready to implement: clear acceptance criteria, no open questions, valid ADR and dependencies. Use when the user asks if a story, or the sprint's stories, are ready to start or build."
+}

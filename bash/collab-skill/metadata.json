@@ -1,0 +1,38 @@
+{
+  "name": "collab",
+  "repo": "Hokken/collab-skill",
+  "path": "SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/Hokken/collab-skill",
+  "dir_name": "collab-skill",
+  "downloaded_at": "2026-10-25T09:06:57.732224Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, cli",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Hokken",
+  "source_url": "https://github.com/Hokken/collab-skill/blob/main/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Hokken/collab-skill/blob/main/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Autonomous implementer/reviewer loop between two coding agents (e.g. Claude Code and Codex CLI) coordinated through the shared `collab` CLI in ~/.collab. Use when the user says \"collab implement\", \"collab review\", \"collab 1\" (implementer) or \"collab 0\" (reviewer)."
+}

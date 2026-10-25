@@ -1,0 +1,37 @@
+{
+  "name": "add-incremental-endpoint",
+  "repo": "JNZader/repoforge",
+  "path": ".claude/skills/build_modules/incremental/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/JNZader/repoforge",
+  "dir_name": "incremental",
+  "downloaded_at": "2026-10-25T09:12:28.200118Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, cli",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "JNZader",
+  "source_url": "https://github.com/JNZader/repoforge/blob/main/.claude/skills/build_modules/incremental/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/JNZader/repoforge/blob/main/.claude/skills/build_modules/incremental/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Incremental data model operations for chapter dependencies and manifest management. Trigger: incremental or manifest operations"
+}

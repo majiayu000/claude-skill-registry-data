@@ -1,0 +1,40 @@
+{
+  "name": "mirrord",
+  "repo": "Anubis-studios/White-label-pro",
+  "path": "skills/mirrord/SKILL.md",
+  "github_branch": "master",
+  "category": "devops",
+  "source": "github.com/Anubis-studios/White-label-pro",
+  "dir_name": "mirrord-anubis-studios-white-label-pro",
+  "downloaded_at": "2026-10-25T08:15:33.430058Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: devops, ci, kubernetes, deploy",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "devops",
+      "ci",
+      "kubernetes",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "Anubis-studios",
+  "source_url": "https://github.com/Anubis-studios/White-label-pro/blob/master/skills/mirrord/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Anubis-studios/White-label-pro/blob/master/skills/mirrord/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run a local process inside a live Kubernetes cluster's network, env and traffic with mirrord, so changes are tested against real services without deploying."
+}

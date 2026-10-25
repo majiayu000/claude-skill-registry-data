@@ -1,0 +1,37 @@
+{
+  "name": "arxiv",
+  "repo": "Akbaralfajar5/hermes-agent-share",
+  "path": "skills/research/arxiv/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Akbaralfajar5/hermes-agent-share",
+  "dir_name": "arxiv-akbaralfajar5-hermes-agent-share",
+  "downloaded_at": "2026-10-25T08:10:41.968527Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "language-model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Akbaralfajar5",
+  "source_url": "https://github.com/Akbaralfajar5/hermes-agent-share/blob/main/skills/research/arxiv/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Akbaralfajar5/hermes-agent-share/blob/main/skills/research/arxiv/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Search arXiv papers by keyword, author, category, or ID."
+}
