@@ -1,0 +1,37 @@
+{
+  "name": "trader-scanner",
+  "repo": "Jakeschincariol/day-trader-skill",
+  "path": "trader-scanner/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Jakeschincariol/day-trader-skill",
+  "dir_name": "trader-scanner",
+  "downloaded_at": "2026-10-25T03:34:47.003009Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/day-trader-skill/blob/main/trader-scanner/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/day-trader-skill/blob/main/trader-scanner/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Chart Scanner. Scans thousands of charts for setups: opening-range breakouts, flags, oversold bounces. Builds the list of US-listed common stocks, ordinary shares and ADRs from Nasdaq Trader's symbol directories, runs a pre-market scan of daily closes (20-day closing-high breakout, bull flag, reclaimed the 20-day average, oversold, oversold bounce) and an intraday opening-range breakout scan on 5-minute bars, then writes trader/watchlist.json for trader-news and trader-entry. Free Yahoo data, bar by bar. Use when the user says \"scan the market\", \"find me setups\", \"what is breaking out\", \"opening range breakouts\", \"scan for bull flags\", \"oversold stocks\", \"pre-market scan\", \"build my watchlist\", \"what should I look at today\", or at the start of a trading day before /trader-news."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "edit-site",
+  "repo": "microsoft/power-platform-skills",
+  "path": "plugins/power-pages/skills/edit-site/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/microsoft/power-platform-skills",
+  "dir_name": "edit-site",
+  "downloaded_at": "2026-10-25T03:54:13.111638Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "microsoft",
+  "source_url": "https://github.com/microsoft/power-platform-skills/blob/main/plugins/power-pages/skills/edit-site/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/microsoft/power-platform-skills/blob/main/plugins/power-pages/skills/edit-site/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Plans, coordinates and customizes PAC CLI-downloaded Standard or Enhanced data model non-SPA Power Pages sites created from Microsoft templates or manually in Design Studio. Use for requests involving pages, localized content, navigation, assets, snippets, site markers, Liquid/web templates, page layouts, or styling. Coordinated work produces an approved browser-viewable plan, executes changes in dependency order, verifies the local result, and optionally hands off to deployment. Not for React, Angular, Vue, or Astro SPA sites."
+}

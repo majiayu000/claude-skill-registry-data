@@ -1,0 +1,37 @@
+{
+  "name": "trader-analyst",
+  "repo": "Jakeschincariol/day-trader-skill",
+  "path": "trader-analyst/SKILL.md",
+  "github_branch": "main",
+  "category": "business",
+  "source": "github.com/Jakeschincariol/day-trader-skill",
+  "dir_name": "trader-analyst-jakeschincariol-day-trader-skill",
+  "downloaded_at": "2026-10-25T03:34:48.239414Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "business",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for business: business, operations",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "business",
+      "operations"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/day-trader-skill/blob/main/trader-analyst/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/day-trader-skill/blob/main/trader-analyst/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The Earnings Analyst. Reads a company's reported numbers straight from SEC EDGAR (XBRL company facts from its 10-Qs and 10-Ks, plus the latest earnings 8-K and its press release) and sums up what changed: revenue, gross, operating and net margins, net income and diluted EPS, quarter by quarter, each against the same quarter a year earlier, with the trailing twelve months. Reads an earnings call transcript when you paste one. Use when the user says \"how did Tesla's earnings look\", \"analyze the earnings\", \"what changed this quarter\", \"is revenue growing\", \"check the 10-Q\", \"compare margins\", \"sum up the call\", \"does it report this week\", or before trading a stock around its earnings."
+}

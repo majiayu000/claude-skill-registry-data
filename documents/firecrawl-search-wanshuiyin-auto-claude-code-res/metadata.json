@@ -1,0 +1,38 @@
+{
+  "name": "firecrawl-search",
+  "repo": "wanshuiyin/Auto-claude-code-research-in-sleep",
+  "path": "skills/firecrawl-search/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/wanshuiyin/Auto-claude-code-research-in-sleep",
+  "dir_name": "firecrawl-search-wanshuiyin-auto-claude-code-res",
+  "downloaded_at": "2026-10-25T04:01:40.427995Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, pdf, markdown",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "pdf",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wanshuiyin",
+  "source_url": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/blob/main/skills/firecrawl-search/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/blob/main/skills/firecrawl-search/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Web search and page scraping via Firecrawl, returning full-page markdown. Use when user says \"firecrawl search\", \"firecrawl scrape\" or \"/firecrawl-search\"."
+}

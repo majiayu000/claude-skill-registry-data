@@ -1,0 +1,36 @@
+{
+  "name": "trader-timemachine",
+  "repo": "Jakeschincariol/day-trader-skill",
+  "path": "trader-timemachine/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Jakeschincariol/day-trader-skill",
+  "dir_name": "trader-timemachine",
+  "downloaded_at": "2026-10-25T03:34:48.427532Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category api scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "api"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/day-trader-skill/blob/main/trader-timemachine/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/day-trader-skill/blob/main/trader-timemachine/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Time Machine. Replays every possible outcome of a trade before you risk a dollar: 10,000 simulated sessions plus every past time the setup fired. Takes the plan from trader-exit (entry, stop, target), rebuilds the rest of the day 10,000 times from the stock's own 5-minute bars over the last 60 days, and re-runs the same rule on every past session. Prints the odds of target first, stop first, or neither by the close, where the price sits at the close, the average R, the history, and one honest verdict, then hands off to /trader-budget. Use when the user says \"run the time machine\", \"replay this trade\", \"what are the odds\", \"simulate this trade\", \"monte carlo\", \"backtest this setup\", \"how often does this hit the target\", \"is this a coin flip\", or after /trader-exit writes a plan, before /trader-budget."
+}

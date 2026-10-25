@@ -1,0 +1,36 @@
+{
+  "name": "trader-alerts",
+  "repo": "Jakeschincariol/day-trader-skill",
+  "path": "trader-alerts/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Jakeschincariol/day-trader-skill",
+  "dir_name": "trader-alerts-jakeschincariol-day-trader-skill",
+  "downloaded_at": "2026-10-25T03:34:46.155715Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category api scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Jakeschincariol",
+  "source_url": "https://github.com/Jakeschincariol/day-trader-skill/blob/main/trader-alerts/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Jakeschincariol/day-trader-skill/blob/main/trader-alerts/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Price Alerts. Rings when a price, a stop or the opening bell hits. Turns the trade plan into three alerts in one go (the stop, the target and \"flat by close\" at your flat-by time), plus above / below / stop / target levels, percent moves from the previous close, any time of day, and the NYSE opening bell, each ringing once so you are not spammed. Knows NYSE hours with the 2026 and 2027 holidays and 1:00 p.m. early closes, works out New York time itself, fetches free delayed quotes (Yahoo chart JSON, Stooq CSV) one ticker at a time, and writes trader/prices.json for sizing and the risk check. Use when the user says \"alert me when\", \"tell me if TSLA hits\", \"watch my stop\", \"watch my trade\", \"remind me to close by 3:55\", \"is the market open\", \"when does the market open\", \"get me a price\", or right after /trader-exit writes a plan."
+}
