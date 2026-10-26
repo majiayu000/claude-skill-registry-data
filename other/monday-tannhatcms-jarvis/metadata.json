@@ -1,0 +1,37 @@
+{
+  "name": "monday",
+  "repo": "TanNhatCMS/jarvis",
+  "path": "connectors/monday/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/TanNhatCMS/jarvis",
+  "dir_name": "monday-tannhatcms-jarvis",
+  "downloaded_at": "2026-10-26T04:39:07.311880Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "TanNhatCMS",
+  "source_url": "https://github.com/TanNhatCMS/jarvis/blob/main/connectors/monday/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/TanNhatCMS/jarvis/blob/main/connectors/monday/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Read and write monday.com: list boards, read items, create items. Trigger phrases: monday, monday.com board."
+}

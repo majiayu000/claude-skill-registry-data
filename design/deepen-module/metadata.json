@@ -1,0 +1,38 @@
+{
+  "name": "deepen-module",
+  "repo": "Ovich/swarmstorm",
+  "path": "skills/architecture/deepen-module/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/Ovich/swarmstorm",
+  "dir_name": "deepen-module",
+  "downloaded_at": "2026-10-26T04:10:35.754949Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, frontend, component",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "frontend",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Ovich",
+  "source_url": "https://github.com/Ovich/swarmstorm/blob/main/skills/architecture/deepen-module/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Ovich/swarmstorm/blob/main/skills/architecture/deepen-module/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a person asks to design a new module's interface or to rework an existing module so that it hides much behind little, in any tier (backend, frontend, test support, tooling), or says a module's callers know too much about it. Produces a module document in aiview, how a caller uses it, its one public entry point as signatures, what stays outside and the gap from today, discussed with the person until agreed. Not for writing the task that carries the rework out (orchestrate's tasks) and not for the rework itself."
+}

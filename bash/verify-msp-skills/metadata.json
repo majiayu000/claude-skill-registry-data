@@ -1,0 +1,38 @@
+{
+  "name": "verify-msp-skills",
+  "repo": "Servosity/msp-skills",
+  "path": ".claude/skills/verify-msp-skills/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/Servosity/msp-skills",
+  "dir_name": "verify-msp-skills",
+  "downloaded_at": "2026-10-26T04:28:17.618316Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Servosity",
+  "source_url": "https://github.com/Servosity/msp-skills/blob/main/.claude/skills/verify-msp-skills/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Servosity/msp-skills/blob/main/.claude/skills/verify-msp-skills/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Drive one msp-skills connector (skills/<slug>, any of the 84) the way a user does and prove it with evidence: install.sh, the <slug>-cli CLI, and the <slug>-mcp server over stdio and over HTTP, in an isolated HOME against a local fake vendor. Use to check a connector's user path before or after a reprint, to compare press versions across the fleet, or when a connector 'builds green' but nobody has watched it run."
+}

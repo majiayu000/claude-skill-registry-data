@@ -1,0 +1,37 @@
+{
+  "name": "repo-scrub",
+  "repo": "KrishP147/skills",
+  "path": "repo-scrub/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/KrishP147/skills",
+  "dir_name": "repo-scrub",
+  "downloaded_at": "2026-10-26T03:37:45.572981Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KrishP147",
+  "source_url": "https://github.com/KrishP147/skills/blob/master/repo-scrub/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KrishP147/skills/blob/master/repo-scrub/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Scan a GitHub repo's full history for secrets and large files, scrub what the user picks, rewrite history safely, then flip it private \u2192 public."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "reproduce-and-fix-issues",
+  "repo": "LeonardSEO/pstack-for-codex",
+  "path": "plugins/pstack-for-codex/references-benny/benny/skills/reproduce-and-fix-issues/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/LeonardSEO/pstack-for-codex",
+  "dir_name": "reproduce-and-fix-issues-leonardseo-pstack-for-codex",
+  "downloaded_at": "2026-10-26T03:41:00.822425Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "context-window"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LeonardSEO",
+  "source_url": "https://github.com/LeonardSEO/pstack-for-codex/blob/main/plugins/pstack-for-codex/references-benny/benny/skills/reproduce-and-fix-issues/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LeonardSEO/pstack-for-codex/blob/main/plugins/pstack-for-codex/references-benny/benny/skills/reproduce-and-fix-issues/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reproduce triaged Slack bugs through a configured app-control adapter, verify existing fixes, and open a bounded draft pull request only after before-and-after proof. Use only from the configured Benny repro automation."
+}

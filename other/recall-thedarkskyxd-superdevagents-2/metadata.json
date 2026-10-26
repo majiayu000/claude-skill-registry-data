@@ -1,0 +1,37 @@
+{
+  "name": "recall",
+  "repo": "TheDarkSkyXD/SuperDevAgents",
+  "path": "plugins/superdev/skills/recall/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/TheDarkSkyXD/SuperDevAgents",
+  "dir_name": "recall-thedarkskyxd-superdevagents-2",
+  "downloaded_at": "2026-10-26T04:42:03.625450Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "TheDarkSkyXD",
+  "source_url": "https://github.com/TheDarkSkyXD/SuperDevAgents/blob/main/plugins/superdev/skills/recall/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/TheDarkSkyXD/SuperDevAgents/blob/main/plugins/superdev/skills/recall/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reconstruct your recent working context from your own chat history, live state, and the shared record (user reports, prior fixes, incidents), then hand back a tight current-state brief. Use for 'recall my work on X', 'catch me up', 'what have I been working on', 'where did I leave off', before starting or resuming work, and before telling the user that something was never recorded."
+}

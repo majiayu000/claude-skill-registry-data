@@ -1,0 +1,38 @@
+{
+  "name": "td-synnex",
+  "repo": "Servosity/msp-skills",
+  "path": "skills/td-synnex/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/Servosity/msp-skills",
+  "dir_name": "td-synnex",
+  "downloaded_at": "2026-10-26T04:28:14.199529Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Servosity",
+  "source_url": "https://github.com/Servosity/msp-skills/blob/main/skills/td-synnex/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Servosity/msp-skills/blob/main/skills/td-synnex/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user asks about TD SYNNEX StreamOne ION (the ION reseller marketplace for Microsoft 365, Azure and security licences): subscriptions renewing soon or with auto-renew off, margin per customer or SKU, seat true-up against Pax8, Sherweb or PSA exports, stuck or failed orders, recent seat and renewal changes, one customer's full picture, or changing seats, renewal settings or status on an ION subscription. Trigger phrases: `what TD SYNNEX subscriptions renew this month`, `which ION customers am I losing money on`, `change seats on a StreamOne ION subscription`, `true up licences across TD SYNNEX and Pax8`, `which ION orders are stuck on hold`, `use td-synnex`, `run td-synnex`."
+}

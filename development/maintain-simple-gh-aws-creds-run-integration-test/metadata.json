@@ -1,0 +1,38 @@
+{
+  "name": "maintain-simple_gh_aws_creds-run-integration-test",
+  "repo": "MacHu-GWU/simple_gh_aws_creds-project",
+  "path": ".claude/skills/maintain-simple_gh_aws_creds-run-integration-test/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/MacHu-GWU/simple_gh_aws_creds-project",
+  "dir_name": "maintain-simple-gh-aws-creds-run-integration-test",
+  "downloaded_at": "2026-10-26T03:49:07.770831Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, debug",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MacHu-GWU",
+  "source_url": "https://github.com/MacHu-GWU/simple_gh_aws_creds-project/blob/main/.claude/skills/maintain-simple_gh_aws_creds-run-integration-test/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MacHu-GWU/simple_gh_aws_creds-project/blob/main/.claude/skills/maintain-simple_gh_aws_creds-run-integration-test/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run the integration test of simple_gh_aws_creds against the real AWS account and this GitHub repository, as done before each release: CLI setup and rotate_key through mise exec, a local check of each key, and the test-aws-creds workflow after each, with the user's yes before each step that changes a real service. Use when the user asks for an integration test, an end-to-end or real-account test, to check the CLI against real AWS or GitHub, or is about to release."
+}

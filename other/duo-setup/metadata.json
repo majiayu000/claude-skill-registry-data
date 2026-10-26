@@ -1,0 +1,37 @@
+{
+  "name": "duo-setup",
+  "repo": "Kimeur/duology",
+  "path": "plugins/duology/skills/duo-setup/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Kimeur/duology",
+  "dir_name": "duo-setup",
+  "downloaded_at": "2026-10-26T03:36:13.514918Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Kimeur",
+  "source_url": "https://github.com/Kimeur/duology/blob/main/plugins/duology/skills/duo-setup/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Kimeur/duology/blob/main/plugins/duology/skills/duo-setup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Sets up a Mac to build, run and test apps for iPhone Duo, the foldable iPhone with an outer display and an inner display, covering Xcode 27.1 next to an older Xcode with DEVELOPER_DIR (no sudo xcode-select), xcodebuild -version, the iOS 27.1 SDK and runtime, the iPhone Duo simulator in Device Hub (xcrun simctl create/bootstatus, a screenshot of each display, the Closed / Partially Open / Open poses and the fold angle), Xcode's MCP server for Claude Code (xcrun mcpbridge, MCP_XCODE_PID, xcrun agent skills export) and project settings (IPHONEOS_DEPLOYMENT_TARGET, SWIFT_VERSION 6, SWIFT_DEFAULT_ACTOR_ISOLATION MainActor, SWIFT_APPROACHABLE_CONCURRENCY, synchronized folders). Use it when the Mac or project isn't ready for iPhone Duo work (duo-start or /duo-doctor sends you here), when /duo-doctor fails, when xcodebuild picks the wrong Xcode, when the Duo simulator, iOS 27.1 runtime or hinge pose is missing, or when Claude Code can't reach Xcode."
+}

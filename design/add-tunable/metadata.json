@@ -1,0 +1,38 @@
+{
+  "name": "add-tunable",
+  "repo": "MooreSi/forex-gold",
+  "path": ".claude/skills/add-tunable/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/MooreSi/forex-gold",
+  "dir_name": "add-tunable",
+  "downloaded_at": "2026-10-26T03:57:28.492959Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, frontend",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "frontend"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MooreSi",
+  "source_url": "https://github.com/MooreSi/forex-gold/blob/main/.claude/skills/add-tunable/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MooreSi/forex-gold/blob/main/.claude/skills/add-tunable/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Make a hardcoded behaviour constant user-editable through Settings \u2192 Expert Tunables. Use when a magic number should be configurable, when the user says \"that should be a setting\" or \"make that configurable\", or when tempted to edit a constant directly."
+}

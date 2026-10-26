@@ -1,0 +1,37 @@
+{
+  "name": "orquestrador-fluxo-ia",
+  "repo": "ViniciusBernucci/le-fabrique",
+  "path": ".agents/skills/orquestrador-fluxo-ia/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/ViniciusBernucci/le-fabrique",
+  "dir_name": "orquestrador-fluxo-ia-viniciusbernucci-le-fabrique",
+  "downloaded_at": "2026-10-26T04:52:30.910172Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, qa",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "test",
+      "qa"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ViniciusBernucci",
+  "source_url": "https://github.com/ViniciusBernucci/le-fabrique/blob/main/.agents/skills/orquestrador-fluxo-ia/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ViniciusBernucci/le-fabrique/blob/main/.agents/skills/orquestrador-fluxo-ia/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Orquestra tarefas de desenvolvimento no fluxo Intranet/ORCA depois do planejamento do Tech Lead, acionando automaticamente planejamento operacional, implementa\u00e7\u00e3o, revis\u00e3o, revalida\u00e7\u00e3o, QA, integra\u00e7\u00e3o e publica\u00e7\u00e3o no ClickUp. Use ao continuar uma tarefa desse fluxo; preserva os checkpoints humanos de ClickUp, Tech Lead, cria\u00e7\u00e3o das worktrees, corre\u00e7\u00f5es de code review e push/PR."
+}

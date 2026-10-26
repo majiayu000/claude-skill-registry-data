@@ -1,0 +1,37 @@
+{
+  "name": "duo-games",
+  "repo": "Kimeur/duology",
+  "path": "plugins/duology-features/skills/duo-games/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/Kimeur/duology",
+  "dir_name": "duo-games",
+  "downloaded_at": "2026-10-26T03:36:17.673622Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: device, ios",
+    "score": 2,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "device",
+      "ios"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Kimeur",
+  "source_url": "https://github.com/Kimeur/duology/blob/main/plugins/duology-features/skills/duo-games/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Kimeur/duology/blob/main/plugins/duology-features/skills/duo-games/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds games for iPhone Duo, Apple's foldable. The game fills the closed outer display, the open inner display, book pose and tabletop by changing its aspect ratio instead of letterboxing, as Apple's HIG asks; touch controls stay off the fold; and in tabletop the world sits above the fold with the controls below it, like a handheld console. Use when you build or port a SpriteKit, Metal or SwiftUI game, when a game letterboxes, restarts or loses input on fold or unfold, or when you add touch controls or game controller support. Covers SKScene .resizeFill with a camera that keeps the play area in view, one scene or renderer that survives every fold (measured), MTKView drawableSizeWillChange, a UIWindowScene display link that follows the scene to the other display, TouchZones split at the .division reserved region, GameLayout for tabletop, GCController and the simulator's own Gamepad, GCVirtualController and Touch Controller placement, orientation locks the inner display ignores, and two-player games."
+}

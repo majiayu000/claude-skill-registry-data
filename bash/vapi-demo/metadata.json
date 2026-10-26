@@ -1,0 +1,39 @@
+{
+  "name": "vapi-demo",
+  "repo": "VapiAI/skills",
+  "path": "vapi-demo/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/VapiAI/skills",
+  "dir_name": "vapi-demo",
+  "downloaded_at": "2026-10-26T04:49:21.533498Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "ai-llm",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "VapiAI",
+  "source_url": "https://github.com/VapiAI/skills/blob/main/vapi-demo/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/VapiAI/skills/blob/main/vapi-demo/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when building a LIVE DEMO DASHBOARD for an EXISTING Vapi assistant or squad \u2014 a Vapi-branded web page that visualizes a call as it happens (streaming transcript, tool calls, optional assistant-request strip, optional web-call button, a custom panel per use case) and deploys to Railway. Triggers on \"make a demo for this assistant\", \"demo dashboard\", \"showcase this agent\", \"live call visualization\", \"demo this to a customer/exec\". NOT for creating, prompting, or testing voice agents \u2014 it points at an agent that already exists and already works, and it never edits the agent itself."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "create-spec",
+  "repo": "achrafbenamrane/TK-link",
+  "path": ".claude/skills/create-spec/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/achrafbenamrane/TK-link",
+  "dir_name": "create-spec-achrafbenamrane-tk-link",
+  "downloaded_at": "2026-10-26T05:09:27.893632Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, prd, feature",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "prd",
+      "feature"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "achrafbenamrane",
+  "source_url": "https://github.com/achrafbenamrane/TK-link/blob/main/.claude/skills/create-spec/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/achrafbenamrane/TK-link/blob/main/.claude/skills/create-spec/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Start feature-track work by turning an idea into a reviewable spec in specs/NNN-slug/. Use whenever the user describes a new feature, capability, experiment, or user-visible change \u2014 phrases like \"build\", \"add a feature\", \"I want users to be able to\", \"let's spec\" \u2014 and no spec exists yet. Do NOT use for bug fixes or small tweaks (S-size quick track needs no spec)."
+}

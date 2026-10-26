@@ -1,0 +1,36 @@
+{
+  "name": "extraction-append",
+  "repo": "PioneerAIAcademy/cowork-genealogy",
+  "path": "eval/skills/extraction-append/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/PioneerAIAcademy/cowork-genealogy",
+  "dir_name": "extraction-append",
+  "downloaded_at": "2026-10-26T04:14:03.772631Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category analysis scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "testing",
+    "runner_up_score": 1,
+    "signals": [
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "PioneerAIAcademy",
+  "source_url": "https://github.com/PioneerAIAcademy/cowork-genealogy/blob/main/eval/skills/extraction-append/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/PioneerAIAcademy/cowork-genealogy/blob/main/eval/skills/extraction-append/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "TEST-ONLY. Never shipped in the plugin. Extracts FamilySearch records the user names by calling extraction_append once, and returns its summary. Use when the message asks to extract, analyze or process FamilySearch records by record id or ARK, or to record people a search did not find."
+}

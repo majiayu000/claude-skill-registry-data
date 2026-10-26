@@ -1,0 +1,39 @@
+{
+  "name": "c",
+  "repo": "TM-59/TM-59",
+  "path": "skills/languages/c/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/TM-59/TM-59",
+  "dir_name": "c-tm-59-tm-59",
+  "downloaded_at": "2026-10-26T04:37:53.957193Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, build, compile, debug",
+    "score": 4,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "TM-59",
+  "source_url": "https://github.com/TM-59/TM-59/blob/master/skills/languages/c/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/TM-59/TM-59/blob/master/skills/languages/c/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when writing C (C11) programs \u2014 numerical simulations, terminal UIs, small command-line utilities, code compiled to WebAssembly, or programs with no libc at all. Covers Make-based builds, unit tests against analytic results, headless snapshot and GIF output, sanitizers, getopt_long and reproducible Docker builds. Also use when C code crashes only with optimisation on, or results drift between compilers."
+}

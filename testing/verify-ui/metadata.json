@@ -1,0 +1,38 @@
+{
+  "name": "verify-ui",
+  "repo": "achrafbenamrane/TK-link",
+  "path": ".claude/skills/verify-ui/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/achrafbenamrane/TK-link",
+  "dir_name": "verify-ui",
+  "downloaded_at": "2026-10-26T05:09:27.202672Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, qa, e2e",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "qa",
+      "e2e"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "achrafbenamrane",
+  "source_url": "https://github.com/achrafbenamrane/TK-link/blob/main/.claude/skills/verify-ui/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/achrafbenamrane/TK-link/blob/main/.claude/skills/verify-ui/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Prove UI work actually works by driving the app on the simulator with Argent (build/launch, tap, screenshot, read logs), walking the Critical User Journeys, and visually inspecting each state against the spec's acceptance criteria. Use after any UI change \u2014 \"verify\", \"check the UI\", \"does it work\", \"screenshots\", \"QA\" \u2014 and always as the verification phase of feature work. Subsumes the old /qa-cuj command. Never declare UI work done without this. Needs Argent + macOS."
+}

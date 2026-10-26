@@ -1,0 +1,37 @@
+{
+  "name": "serena",
+  "repo": "TanNhatCMS/jarvis",
+  "path": "skills/serena/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/TanNhatCMS/jarvis",
+  "dir_name": "serena-tannhatcms-jarvis",
+  "downloaded_at": "2026-10-26T04:38:55.885095Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "TanNhatCMS",
+  "source_url": "https://github.com/TanNhatCMS/jarvis/blob/main/skills/serena/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/TanNhatCMS/jarvis/blob/main/skills/serena/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Semantic code navigation and precise symbol-level edits via Serena LSP (40+ languages): find symbols, references, callers/callees, rename/move across files. Use for refactors and blast-radius analysis when grep is too blunt. Serena runs as an independent tool (GPL-3.0)."
+}

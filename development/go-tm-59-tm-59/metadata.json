@@ -1,0 +1,38 @@
+{
+  "name": "go",
+  "repo": "TM-59/TM-59",
+  "path": "skills/languages/go/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/TM-59/TM-59",
+  "dir_name": "go-tm-59-tm-59",
+  "downloaded_at": "2026-10-26T04:37:54.564035Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "TM-59",
+  "source_url": "https://github.com/TM-59/TM-59/blob/master/skills/languages/go/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/TM-59/TM-59/blob/master/skills/languages/go/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when writing Go \u2014 command-line tools, small HTTP services with the standard library or Echo, WebAssembly builds with TinyGo, table-driven tests and single static binaries. Also use when choosing between Go's standard library and a framework, when a WASM build is too large, or when configuration should come from flags versus environment variables."
+}

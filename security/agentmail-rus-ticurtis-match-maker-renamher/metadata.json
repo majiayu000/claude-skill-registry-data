@@ -1,0 +1,38 @@
+{
+  "name": "agentmail",
+  "repo": "RUS-TICurtis/Match_Maker_RenamHer",
+  "path": ".agent/agentmail/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/RUS-TICurtis/Match_Maker_RenamHer",
+  "dir_name": "agentmail-rus-ticurtis-match-maker-renamher",
+  "downloaded_at": "2026-10-26T04:18:41.956085Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, crypto",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "crypto"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "RUS-TICurtis",
+  "source_url": "https://github.com/RUS-TICurtis/Match_Maker_RenamHer/blob/main/.agent/agentmail/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/RUS-TICurtis/Match_Maker_RenamHer/blob/main/.agent/agentmail/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Email infrastructure for AI agents. Create accounts, send/receive emails, manage webhooks, and check karma balance via the AgentMail API."
+}

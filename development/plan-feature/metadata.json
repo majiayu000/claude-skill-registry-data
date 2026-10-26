@@ -1,0 +1,38 @@
+{
+  "name": "plan-feature",
+  "repo": "achrafbenamrane/TK-link",
+  "path": ".claude/skills/plan-feature/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/achrafbenamrane/TK-link",
+  "dir_name": "plan-feature",
+  "downloaded_at": "2026-10-26T05:09:28.236426Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "achrafbenamrane",
+  "source_url": "https://github.com/achrafbenamrane/TK-link/blob/main/.claude/skills/plan-feature/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/achrafbenamrane/TK-link/blob/main/.claude/skills/plan-feature/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn an approved spec into plan.md + tasks.md ready for implementation \u2014 after running the S/M/L sizing gate. Use when a spec exists and the user says \"plan\", \"how should we build\", \"break this down\", or names a spec number. Resolves open questions, checks conflicts with other active specs, inventories existing code to reuse, and maps every acceptance criterion to a test before any code is written."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "smoke-check",
+  "repo": "Rakshit-or-shadow/Aim-Labs",
+  "path": ".claude/skills/smoke-check/SKILL.md",
+  "github_branch": "main",
+  "category": "gaming",
+  "source": "github.com/Rakshit-or-shadow/Aim-Labs",
+  "dir_name": "smoke-check-rakshit-or-shadow-aim-labs",
+  "downloaded_at": "2026-10-26T04:19:38.589822Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "gaming",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for gaming: game, unity, godot",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "game",
+      "unity",
+      "godot"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Rakshit-or-shadow",
+  "source_url": "https://github.com/Rakshit-or-shadow/Aim-Labs/blob/main/.claude/skills/smoke-check/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Rakshit-or-shadow/Aim-Labs/blob/main/.claude/skills/smoke-check/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Critical-path smoke gate before QA hand-off \u2014 runs the automated suite. A failed check means the build is not QA-ready."
+}

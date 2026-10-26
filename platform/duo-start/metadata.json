@@ -1,0 +1,38 @@
+{
+  "name": "duo-start",
+  "repo": "Kimeur/duology",
+  "path": "plugins/duology/skills/duo-start/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/Kimeur/duology",
+  "dir_name": "duo-start",
+  "downloaded_at": "2026-10-26T03:36:16.008816Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: platform, device, ios",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "platform",
+      "device",
+      "ios"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Kimeur",
+  "source_url": "https://github.com/Kimeur/duology/blob/main/plugins/duology/skills/duo-start/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Kimeur/duology/blob/main/plugins/duology/skills/duo-start/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Entry point for iPhone Duo, Apple's foldable with an outer display, an inner display and a fold; use it first when someone asks to get an app ready for iPhone Duo, make it work on the foldable or survive fold and unfold, or doesn't know which Duology skill to load. It detects SwiftUI or UIKit, new or existing app, the Xcode and iOS SDK the app builds with (iOS 26, 27 or 27.1 behaviour on Duo), the deployment target and the UIKit scene life cycle, runs a five-minute first pass (Xcode 27.1 build, duo-lint, closed and open on the iPhone Duo simulator in Device Hub) and routes to duo-setup, duo-layout, duo-navigation, duo-continuity, duo-scenes, duo-patterns, the design skills (duo-design-system, duo-postures, duo-transitions, duo-ergonomics, duo-accessibility), the iOS 27 feature skills in duology-features, duo-testing, duo-pose-matrix, duo-lint, the recipes and Apple's App Resizability skill (xcrun agent skills export)."
+}

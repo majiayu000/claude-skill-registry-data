@@ -1,0 +1,37 @@
+{
+  "name": "triage-issue-reports",
+  "repo": "MaxFabian25/pstack-harness-adaptations",
+  "path": "automations/benny/skills/triage-issue-reports/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MaxFabian25/pstack-harness-adaptations",
+  "dir_name": "triage-issue-reports-maxfabian25-pstack-harness-adapt",
+  "downloaded_at": "2026-10-26T03:52:44.655890Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MaxFabian25",
+  "source_url": "https://github.com/MaxFabian25/pstack-harness-adaptations/blob/main/automations/benny/skills/triage-issue-reports/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MaxFabian25/pstack-harness-adaptations/blob/main/automations/benny/skills/triage-issue-reports/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Triage Slack issue reports with one thread-only verdict, evidence review, cause-aware routing, tracker dedupe, and fail-closed ticket creation. Use only from the configured Benny triage automation."
+}

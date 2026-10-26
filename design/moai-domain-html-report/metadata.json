@@ -1,0 +1,38 @@
+{
+  "name": "moai-domain-html-report",
+  "repo": "Seung-zedd/dhaa",
+  "path": ".claude/skills/moai-domain-html-report/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/Seung-zedd/dhaa",
+  "dir_name": "moai-domain-html-report",
+  "downloaded_at": "2026-10-26T04:28:35.986485Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, css, tailwind",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "css",
+      "tailwind"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Seung-zedd",
+  "source_url": "https://github.com/Seung-zedd/dhaa/blob/main/.claude/skills/moai-domain-html-report/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Seung-zedd/dhaa/blob/main/.claude/skills/moai-domain-html-report/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Markdown-to-single-file-HTML report renderer. Six modes (status, incident, plan, explainer, financial, pr) selected by report type, crossed with three audience tiers (expert, basic, learn) derived from the active output style. The basic and learn tiers enrich the HTML with mermaid flowcharts, worked examples, and plain-language primers; the expert tier stays dense. Zero external JS/CSS framework dependencies \u2014 inline SVG charts, a font-CDN exception for Korean readability, and a tier-gated mermaid-CDN exception. Self-contained output for email attachment, print, and offline viewing."
+}

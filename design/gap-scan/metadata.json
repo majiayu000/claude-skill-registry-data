@@ -1,0 +1,39 @@
+{
+  "name": "gap-scan",
+  "repo": "KrishP147/skills",
+  "path": "gap-scan/SKILL.md",
+  "github_branch": "master",
+  "category": "design",
+  "source": "github.com/KrishP147/skills",
+  "dir_name": "gap-scan",
+  "downloaded_at": "2026-10-26T03:37:44.219924Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, frontend, component",
+    "score": 4,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "frontend",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KrishP147",
+  "source_url": "https://github.com/KrishP147/skills/blob/master/gap-scan/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KrishP147/skills/blob/master/gap-scan/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Survey one or more repos (code, commits, docs, tests, issues) and return a ranked, evidence-cited list of gaps, bugs, and extension ideas as issue-ready items. Read-only apart from its report. Use for \"what's missing\", \"find gaps\", \"what should I work on in this repo\"."
+}

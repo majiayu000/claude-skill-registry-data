@@ -1,0 +1,37 @@
+{
+  "name": "design-trust-boundaries",
+  "repo": "X-McKay/playbooks",
+  "path": "development-skills/design-trust-boundaries/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/X-McKay/playbooks",
+  "dir_name": "design-trust-boundaries",
+  "downloaded_at": "2026-10-26T04:57:54.173914Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "retrieval"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "X-McKay",
+  "source_url": "https://github.com/X-McKay/playbooks/blob/main/development-skills/design-trust-boundaries/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/X-McKay/playbooks/blob/main/development-skills/design-trust-boundaries/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Design an inspectable authority, content-to-action, and conditional data-handling boundary for a production agent candidate. Use when a candidate may read protected resources, receive untrusted content, render or forward output, call a live service, or process non-public or personal data. Produce a scoped planning packet; do not use to grant permissions, operate a live service, deploy, or replace implementation testing."
+}

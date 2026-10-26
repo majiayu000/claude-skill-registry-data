@@ -1,0 +1,37 @@
+{
+  "name": "music-caption-rewriter",
+  "repo": "SwotAtmk/infinite-creation",
+  "path": "skills/music-caption-rewriter/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/SwotAtmk/infinite-creation",
+  "dir_name": "music-caption-rewriter",
+  "downloaded_at": "2026-10-26T04:36:32.917004Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, database",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "SwotAtmk",
+  "source_url": "https://github.com/SwotAtmk/infinite-creation/blob/main/skills/music-caption-rewriter/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/SwotAtmk/infinite-creation/blob/main/skills/music-caption-rewriter/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn a brief music description and optional tagged lyrics into a professional MiniMax Music 3 structured caption with Global Metadata, Vocal Details, and a section-aware Arrangement. Use when users ask to enhance a music-generation prompt, preserve lyric-section directives, retrieve a similar style from bundled templates, fuse styles, or produce JSON or JSONL caption output."
+}

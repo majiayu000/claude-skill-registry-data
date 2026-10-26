@@ -1,0 +1,37 @@
+{
+  "name": "moai-harness-learner",
+  "repo": "Seung-zedd/dhaa",
+  "path": ".claude/skills/moai-harness-learner/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/Seung-zedd/dhaa",
+  "dir_name": "moai-harness-learner",
+  "downloaded_at": "2026-10-26T04:28:32.823100Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, cli",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Seung-zedd",
+  "source_url": "https://github.com/Seung-zedd/dhaa/blob/main/.claude/skills/moai-harness-learner/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Seung-zedd/dhaa/blob/main/.claude/skills/moai-harness-learner/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Harness learning subsystem coordinator. Produces Tier 4 auto-update proposal payloads consumed by the orchestrator (which surfaces them via AskUserQuestion) and orchestrates Apply/Rollback flows. Triggers when harness learning proposals are pending or learning lifecycle management is needed."
+}

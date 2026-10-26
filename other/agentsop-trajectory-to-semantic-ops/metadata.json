@@ -1,0 +1,37 @@
+{
+  "name": "agentsop-trajectory-to-semantic-ops",
+  "repo": "agentsope/SkillAlchemy",
+  "path": "skills/agentsop-trajectory-to-semantic-ops/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/agentsope/SkillAlchemy",
+  "dir_name": "agentsop-trajectory-to-semantic-ops",
+  "downloaded_at": "2026-10-26T05:15:17.078111Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "agentsope",
+  "source_url": "https://github.com/agentsope/SkillAlchemy/blob/master/skills/agentsop-trajectory-to-semantic-ops/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/agentsope/SkillAlchemy/blob/master/skills/agentsop-trajectory-to-semantic-ops/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "SOP for distilling reusable semantic operators (data-science operation skills) from agent execution trajectories: read action/observation traces, classify per-task failures, bind data-semantic constraints (input semantics / operation decision / output constraints / validation), and feed bounded edits back through an optimizer such as SkillOpt. Use when mining agent runs for cross-task operation knowledge, when a data-science skill keeps failing on the same operation family (join cardinality, group granularity, unit, time alignment), or when wiring trajectory history into a skill optimizer without polluting the skill body."
+}

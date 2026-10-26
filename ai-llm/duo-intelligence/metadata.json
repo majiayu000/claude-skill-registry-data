@@ -1,0 +1,39 @@
+{
+  "name": "duo-intelligence",
+  "repo": "Kimeur/duology",
+  "path": "plugins/duology-features/skills/duo-intelligence/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/Kimeur/duology",
+  "dir_name": "duo-intelligence",
+  "downloaded_at": "2026-10-26T03:36:22.012084Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for ai-llm: ai, language-model, prompt, prompting",
+    "score": 4,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "language-model",
+      "prompt",
+      "prompting"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Kimeur",
+  "source_url": "https://github.com/Kimeur/duology/blob/main/plugins/duology-features/skills/duo-intelligence/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Kimeur/duology/blob/main/plugins/duology-features/skills/duo-intelligence/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Adds Foundation Models to an iPhone Duo app: the on-device model (SystemLanguageModel) and the Private Cloud Compute server model (PrivateCloudComputeLanguageModel) behind one LanguageModelSession API, an AI side pane beside the content when the phone is open or in book pose (split ArrangementView) and a one-line summary when it is closed or in tabletop, streaming (streamResponse with @Generable partial snapshots) into a pane that keeps going through fold and unfold, availability checks and non-AI fallbacks, quota and error handling (LanguageModelError), tool calling, image prompts (Attachment), reasoning levels (ContextOptions) and privacy. Use when someone adds summaries, an assistant, chat, tagging or image understanding to an app that runs on iPhone Duo, or when an AI feature restarts on a fold, sits in the fold or doesn't fit the outer display."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "operate-agent-lifecycle",
+  "repo": "X-McKay/playbooks",
+  "path": "development-skills/operate-agent-lifecycle/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/X-McKay/playbooks",
+  "dir_name": "operate-agent-lifecycle",
+  "downloaded_at": "2026-10-26T04:57:53.982395Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: forensics=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "incident",
+      "evidence"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "X-McKay",
+  "source_url": "https://github.com/X-McKay/playbooks/blob/main/development-skills/operate-agent-lifecycle/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/X-McKay/playbooks/blob/main/development-skills/operate-agent-lifecycle/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Design an operating-control and lifecycle support packet for a production agent or material operational change. Use when defining run and attempt records, runtime bounds, operator stop treatment, support and incident handling, feedback, review, deprecation, or retirement. Do not use to implement a runtime, schedule work, deploy, authorize release, or investigate a live incident."
+}

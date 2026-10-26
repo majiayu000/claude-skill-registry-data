@@ -1,0 +1,37 @@
+{
+  "name": "build-session",
+  "repo": "WingedGuardian/GENesis-AGI",
+  "path": ".claude/skills/build-session/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/WingedGuardian/GENesis-AGI",
+  "dir_name": "build-session",
+  "downloaded_at": "2026-10-26T04:57:19.205349Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "compaction"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "WingedGuardian",
+  "source_url": "https://github.com/WingedGuardian/GENesis-AGI/blob/main/.claude/skills/build-session/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/WingedGuardian/GENesis-AGI/blob/main/.claude/skills/build-session/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used when a session BUILDS one Genesis item: implementing a change in a worktree through to opening its PR, including rework from a send-back spec. Load `genesis-development` (the shared core) first. Do NOT load it for driving open PRs to merge (`closing-session`), post-merge verification (`validating-merges`), or specifying a change before it is planned (`spec-session`)."
+}

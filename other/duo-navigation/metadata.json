@@ -1,0 +1,37 @@
+{
+  "name": "duo-navigation",
+  "repo": "Kimeur/duology",
+  "path": "plugins/duology/skills/duo-navigation/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Kimeur/duology",
+  "dir_name": "duo-navigation",
+  "downloaded_at": "2026-10-26T03:36:17.059082Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, platform=2",
+    "score": 2,
+    "runner_up": "platform",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Kimeur",
+  "source_url": "https://github.com/Kimeur/duology/blob/main/plugins/duology/skills/duo-navigation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Kimeur/duology/blob/main/plugins/duology/skills/duo-navigation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Gets toolbars, navigation bars, tab bars, split views and sheets right on iPhone Duo, Apple's foldable, where bars move into one vertical bar on the side of the outer display and of the inner display in landscape. Use it when bars go vertical, items overflow or vanish, an app draws its own custom bottom bar (UIToolbar, or a SwiftUI row in safeAreaInset or an overlay), toolbar or Menu buttons are icon-only, tabs should become a sidebar on the inner display, a sheet should sit to one side or off the fold, or code touches toolbarVerticalBehavior, toolbarVerticalEdge, axisBehavior, visibilityPriority, topBarPinnedTrailing, ToolbarOverflowMenu, toolbarVerticalCompressionBehavior, defaultTabBarPlacement, presentationPlacement, NavigationSplitView, preferredVerticalBarBehavior, verticalBarEdge, pinnedTrailingGroup, additionalOverflowItems, UITabBarController.Sidebar.preferredPlacement or UISheetPresentationController.preferredPlacement."
+}

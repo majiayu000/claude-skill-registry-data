@@ -1,0 +1,39 @@
+{
+  "name": "beautify",
+  "repo": "MaxPrehoda/motif",
+  "path": "skills/beautify/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/MaxPrehoda/motif",
+  "dir_name": "beautify",
+  "downloaded_at": "2026-10-26T03:52:52.729334Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, ui, component, tailwind",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "design",
+      "ui",
+      "component",
+      "tailwind"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MaxPrehoda",
+  "source_url": "https://github.com/MaxPrehoda/motif/blob/main/skills/beautify/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MaxPrehoda/motif/blob/main/skills/beautify/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Fixes small mistakes in an existing UI without changing its design: spacing and font sizes that are off the scale in DESIGN.md, lines of text that are too long, icons that look off-center, text that clips or overflows, small tap targets and missing focus styles. Use when the user wants an existing UI cleaned up rather than redesigned."
+}

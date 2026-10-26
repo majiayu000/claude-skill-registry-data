@@ -1,0 +1,37 @@
+{
+  "name": "superdev-help",
+  "repo": "TheDarkSkyXD/SuperDevAgents",
+  "path": "plugins/superdev/skills/superdev-help/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/TheDarkSkyXD/SuperDevAgents",
+  "dir_name": "superdev-help-thedarkskyxd-superdevagents",
+  "downloaded_at": "2026-10-26T04:42:10.236514Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "TheDarkSkyXD",
+  "source_url": "https://github.com/TheDarkSkyXD/SuperDevAgents/blob/main/plugins/superdev/skills/superdev-help/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/TheDarkSkyXD/SuperDevAgents/blob/main/plugins/superdev/skills/superdev-help/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Guides users through superdev setup, /superdev-mode, and picking the skill, playbook, or principle for a task. Type /superdev-help with a question."
+}

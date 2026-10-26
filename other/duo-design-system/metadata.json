@@ -1,0 +1,37 @@
+{
+  "name": "duo-design-system",
+  "repo": "Kimeur/duology",
+  "path": "plugins/duology-design/skills/duo-design-system/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Kimeur/duology",
+  "dir_name": "duo-design-system",
+  "downloaded_at": "2026-10-26T03:36:21.751353Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "figma"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Kimeur",
+  "source_url": "https://github.com/Kimeur/duology/blob/main/plugins/duology-design/skills/duo-design-system/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Kimeur/duology/blob/main/plugins/duology-design/skills/duo-design-system/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Design tokens and a drop-in SwiftUI token module for iPhone Duo, Apple's foldable, that adapt by size class instead of by device. Covers a 4-point spacing scale, system margins and gutters with a wider gap at the fold, even-column layout grids (4 compact, 8 regular) with spans, one type scale with Dynamic Type for the 5.4-inch outer and 7.6-inch inner display, Liquid Glass usage and legibility (glassEffect, GlassEffectContainer, regular vs clear, dimming, tint), ConcentricRectangle and containerShape for corners, 44 pt touch targets, and light, dark and Increase Contrast colours with a contrast check. Use when you set up spacing, grids, fonts, corners, glass or colours, build a design system, theme or tokens for an iPhone Duo app, or turn a two-frame Figma design into code."
+}

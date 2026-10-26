@@ -1,0 +1,37 @@
+{
+  "name": "semantic-model-authoring",
+  "repo": "MichelRojo86WPP/copilot-config",
+  "path": "skills/semantic-model-authoring/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MichelRojo86WPP/copilot-config",
+  "dir_name": "semantic-model-authoring",
+  "downloaded_at": "2026-10-26T03:55:27.909170Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MichelRojo86WPP",
+  "source_url": "https://github.com/MichelRojo86WPP/copilot-config/blob/main/skills/semantic-model-authoring/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MichelRojo86WPP/copilot-config/blob/main/skills/semantic-model-authoring/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Develops and manages Power BI semantic models across Desktop, PBIP projects, and Fabric Service. Handles: (1) creating new models (Import, DirectQuery, Direct Lake), (2) editing existing models (e.g. measures, tables, columns, relationships), (3) deploying models to Fabric workspaces, (4) working with PBIP project files, (5) refreshing semantic models, (6) configuring data sources and permissions, (7) DAX performance optimization. Supports both Power BI Desktop and Fabric Service development workflows. For read-only DAX queries, use `semantic-model-consumption`. Does NOT handle report layout/visual authoring, workspace administration, or RLS/OLS role membership management. Triggers: \"create semantic model\", \"edit semantic model\", \"add a DAX measure to semantic model\", \"refresh semantic model\", \"set semantic model permissions\", \"Prepare semantic model for AI/Copilot\"."
+}

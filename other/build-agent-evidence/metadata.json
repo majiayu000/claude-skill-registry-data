@@ -1,0 +1,37 @@
+{
+  "name": "build-agent-evidence",
+  "repo": "X-McKay/playbooks",
+  "path": "development-skills/build-agent-evidence/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/X-McKay/playbooks",
+  "dir_name": "build-agent-evidence",
+  "downloaded_at": "2026-10-26T04:57:53.428485Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "X-McKay",
+  "source_url": "https://github.com/X-McKay/playbooks/blob/main/development-skills/build-agent-evidence/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/X-McKay/playbooks/blob/main/development-skills/build-agent-evidence/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Build a reproducible evidence packet and bounded autonomous coding test workflow for a proposed agent behavior or change. Use when defining cases, fixtures, evaluators, heldout comparisons, test artifacts, or release-facing evidence; do not use to define a missing contract, grant access, approve risk, deploy, or invent results."
+}

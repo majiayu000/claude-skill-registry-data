@@ -1,0 +1,37 @@
+{
+  "name": "maintain-simple_gh_aws_creds-base",
+  "repo": "MacHu-GWU/simple_gh_aws_creds-project",
+  "path": ".claude/skills/maintain-simple_gh_aws_creds-base/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MacHu-GWU/simple_gh_aws_creds-project",
+  "dir_name": "maintain-simple-gh-aws-creds-base",
+  "downloaded_at": "2026-10-26T03:49:07.437965Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MacHu-GWU",
+  "source_url": "https://github.com/MacHu-GWU/simple_gh_aws_creds-project/blob/main/.claude/skills/maintain-simple_gh_aws_creds-base/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MacHu-GWU/simple_gh_aws_creds-project/blob/main/.claude/skills/maintain-simple_gh_aws_creds-base/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Maintenance knowledge of the simple_gh_aws_creds library: its architecture (SetupGitHubRepo steps, the python-fire CLI, config loading), the invariants every change must keep, design decisions and their reasons, how unit tests stay offline, the real-account integration test, and known traps. Load it before changing code, tests, the CLI, or the integration test config of this repo."
+}

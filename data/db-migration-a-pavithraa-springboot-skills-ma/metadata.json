@@ -1,0 +1,38 @@
+{
+  "name": "db-migration",
+  "repo": "a-pavithraa/springboot-skills-marketplace",
+  "path": "plugins/springboot-architecture/skills/spring-boot-team-harness/assets/project-skills/db-migration/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/a-pavithraa/springboot-skills-marketplace",
+  "dir_name": "db-migration-a-pavithraa-springboot-skills-ma",
+  "downloaded_at": "2026-10-26T05:05:55.504401Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "a-pavithraa",
+  "source_url": "https://github.com/a-pavithraa/springboot-skills-marketplace/blob/main/plugins/springboot-architecture/skills/spring-boot-team-harness/assets/project-skills/db-migration/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/a-pavithraa/springboot-skills-marketplace/blob/main/plugins/springboot-architecture/skills/spring-boot-team-harness/assets/project-skills/db-migration/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Writes a Flyway database migration for this project following the team's rules for naming, editing and renaming, so migrations from different developers don't collide and deployed databases stay valid. Use whenever a change needs a new table, column, index or data fix, or the user mentions a schema change or migration."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "duo-system-surfaces",
+  "repo": "Kimeur/duology",
+  "path": "plugins/duology-features/skills/duo-system-surfaces/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Kimeur/duology",
+  "dir_name": "duo-system-surfaces",
+  "downloaded_at": "2026-10-26T03:36:22.509308Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, platform=2",
+    "score": 2,
+    "runner_up": "platform",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Kimeur",
+  "source_url": "https://github.com/Kimeur/duology/blob/main/plugins/duology-features/skills/duo-system-surfaces/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Kimeur/duology/blob/main/plugins/duology-features/skills/duo-system-surfaces/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Widgets, Live Activities, StandBy and Controls for apps on iPhone Duo, Apple's foldable. Use it when you build or check a widget extension, a Live Activity, a Dynamic Island presentation, a StandBy layout or a Control Center or Lock Screen control, and the app runs on iPhone Duo. Covers the redesigned Dynamic Island in the side column of the outer and inner display, which grows down that column as Live Activities arrive and takes room from the app's own vertical bars (measured: about 84 pt closed, 94 pt open); isDynamicIslandLimitedInWidth (iOS 27, names iPhone Duo) for narrow compact and minimal views that fit a 28 pt circle; StandBy on either display, even when not charging; two Home Screen pages and Today View; widget families, including the new systemExtraLargePortrait, where Apple's pages disagree; controls with no Action button on Duo; deep links that work closed and open. Says what Apple has not published, what the simulator cannot run (StandBy, most app extensions) and what to test on a device."
+}

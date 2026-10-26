@@ -1,0 +1,38 @@
+{
+  "name": "document-organize",
+  "repo": "Sean-Koval/ai-dlc",
+  "path": "plugins/ai-dlc-workflow/skills/document-organize/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/Sean-Koval/ai-dlc",
+  "dir_name": "document-organize-sean-koval-ai-dlc",
+  "downloaded_at": "2026-10-26T04:27:00.331402Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, markdown, documentation",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Sean-Koval",
+  "source_url": "https://github.com/Sean-Koval/ai-dlc/blob/main/plugins/ai-dlc-workflow/skills/document-organize/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Sean-Koval/ai-dlc/blob/main/plugins/ai-dlc-workflow/skills/document-organize/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when an existing project's documentation is scattered, overlapping, obsolete, or needs organization across root, docs, and legacy directories."
+}

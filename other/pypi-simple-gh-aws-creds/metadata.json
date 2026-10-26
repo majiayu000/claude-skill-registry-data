@@ -1,0 +1,36 @@
+{
+  "name": "pypi-simple_gh_aws_creds",
+  "repo": "MacHu-GWU/simple_gh_aws_creds-project",
+  "path": ".claude/skills/pypi-simple_gh_aws_creds/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MacHu-GWU/simple_gh_aws_creds-project",
+  "dir_name": "pypi-simple-gh-aws-creds",
+  "downloaded_at": "2026-10-26T03:49:06.722579Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category api scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "api"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MacHu-GWU",
+  "source_url": "https://github.com/MacHu-GWU/simple_gh_aws_creds-project/blob/main/.claude/skills/pypi-simple_gh_aws_creds/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MacHu-GWU/simple_gh_aws_creds-project/blob/main/.claude/skills/pypi-simple_gh_aws_creds/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use the simple_gh_aws_creds Python library (v0.2.0): give a GitHub repository its own AWS IAM user and store the user's access key as GitHub Actions secrets, then update its permissions, rotate the key, or tear it all down. Covers SetupGitHubRepo (setup_all, s12_put_iam_policy, s31_rotate_access_key, teardown_all), the simple-gh-aws-creds CLI (setup, update_policy, rotate_key, teardown), and an end-to-end check of the credentials."
+}

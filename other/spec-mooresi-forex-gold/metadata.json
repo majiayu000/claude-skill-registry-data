@@ -1,0 +1,37 @@
+{
+  "name": "spec",
+  "repo": "MooreSi/forex-gold",
+  "path": ".claude/skills/spec/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MooreSi/forex-gold",
+  "dir_name": "spec-mooresi-forex-gold",
+  "downloaded_at": "2026-10-26T03:57:26.858838Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "frontend"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MooreSi",
+  "source_url": "https://github.com/MooreSi/forex-gold/blob/main/.claude/skills/spec/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MooreSi/forex-gold/blob/main/.claude/skills/spec/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Scaffold a spec-driven plan pack under docs/todo/<domain>/<feature>/ for a bigger piece of work \u2014 setup interview, 010-stepped task files, a README hub, and companion docs (PROGRESS/QUESTIONS/SUMMARY/REVIEW) \u2014 and tear it down again when the work ships. Use when the user says `/spec`, `/spec done`, \"set up a spec for this\", or wants a docs/todo planning directory for a larger feature. NOT for a change that fits in one spec file \u2014 that is `/new-spec`. NOT for a one-line fix."
+}

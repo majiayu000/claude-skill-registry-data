@@ -1,0 +1,37 @@
+{
+  "name": "duo-app-intents",
+  "repo": "Kimeur/duology",
+  "path": "plugins/duology-features/skills/duo-app-intents/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/Kimeur/duology",
+  "dir_name": "duo-app-intents",
+  "downloaded_at": "2026-10-26T03:36:21.583953Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: device, ios",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "device",
+      "ios"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Kimeur",
+  "source_url": "https://github.com/Kimeur/duology/blob/main/plugins/duology-features/skills/duo-app-intents/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Kimeur/duology/blob/main/plugins/duology-features/skills/duo-app-intents/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "App Intents on iPhone Duo: AppIntent, AppEntity with EntityStringQuery, OpenIntent with TargetContentProvidingIntent and onAppIntentExecution (UISceneAppIntent and AppIntentSceneDelegate in UIKit) to show the right item in the right pane or window, handlesExternalEvents to pick the window, intents that work with the phone closed (supportedModes .background, IntentDialog, ProvidesDialog, isVoiceOnly), onscreen awareness when two panes are visible (appEntityIdentifier, appEntityIdentifier(forSelectionType:), NSUserActivity), App Shortcuts (AppShortcutsProvider) and AppIntentsTesting runs on the Duo simulator in each pose. Use when an app adds Siri, Shortcuts, Spotlight or Apple Intelligence actions, when an intent opens the wrong pane or an extra window, or when an intent must work while the phone is closed."
+}

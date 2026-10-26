@@ -1,0 +1,39 @@
+{
+  "name": "grill-docs",
+  "repo": "KrishP147/skills",
+  "path": "grill-docs/SKILL.md",
+  "github_branch": "master",
+  "category": "documents",
+  "source": "github.com/KrishP147/skills",
+  "dir_name": "grill-docs",
+  "downloaded_at": "2026-10-26T03:37:45.263597Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word, markdown",
+    "score": 4,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "docs",
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KrishP147",
+  "source_url": "https://github.com/KrishP147/skills/blob/master/grill-docs/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KrishP147/skills/blob/master/grill-docs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Grill the user about a plan (same interview as grilling) and record it \u2014 Q\u2192A transcript in grills/, each decision appended to the repo's decisions doc (both under skilleddocs/ by default). Use for \"grill me and document it\", \"grill with docs\"."
+}

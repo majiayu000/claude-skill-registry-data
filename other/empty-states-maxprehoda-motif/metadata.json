@@ -1,0 +1,37 @@
+{
+  "name": "empty-states",
+  "repo": "MaxPrehoda/motif",
+  "path": "skills/empty-states/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MaxPrehoda/motif",
+  "dir_name": "empty-states-maxprehoda-motif",
+  "downloaded_at": "2026-10-26T03:52:52.897485Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MaxPrehoda",
+  "source_url": "https://github.com/MaxPrehoda/motif/blob/main/skills/empty-states/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MaxPrehoda/motif/blob/main/skills/empty-states/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Finds lists, tables, search results and dashboards that show nothing, or just a bare line of text, when there's no data. Works out why each one would be empty, then builds an empty state with a short explanation and one action. Use after the design-system pipeline, or when an app looks broken before it has any data."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "compare-state",
+  "repo": "PioneerAIAcademy/cowork-genealogy",
+  "path": ".claude/skills/compare-state/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/PioneerAIAcademy/cowork-genealogy",
+  "dir_name": "compare-state",
+  "downloaded_at": "2026-10-26T04:14:02.819630Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "PioneerAIAcademy",
+  "source_url": "https://github.com/PioneerAIAcademy/cowork-genealogy/blob/main/.claude/skills/compare-state/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/PioneerAIAcademy/cowork-genealogy/blob/main/.claude/skills/compare-state/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Compare the current state of a feedback case directory (research.json, tree.gedcomx.json, results/) against the prose description of what went wrong or what should have happened, from _feedback/feedback.json. Use after the agent has run against a feedback-case directory to either (a) confirm the reported bug reproduces, or (b) verify a fix produces the desired outcome. Invoke as `/compare-state --against=what-went-wrong` or `/compare-state --against=desired`. Reports a structured verdict with a bullet list of specific discrepancies."
+}

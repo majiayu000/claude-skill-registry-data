@@ -1,0 +1,37 @@
+{
+  "name": "terraform",
+  "repo": "TM-59/TM-59",
+  "path": "skills/tech/terraform/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/TM-59/TM-59",
+  "dir_name": "terraform-tm-59-tm-59",
+  "downloaded_at": "2026-10-26T04:37:58.424683Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "TM-59",
+  "source_url": "https://github.com/TM-59/TM-59/blob/master/skills/tech/terraform/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/TM-59/TM-59/blob/master/skills/tech/terraform/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when declaring cloud and DNS resources with Terraform \u2014 importing resources that already exist, provider major-version migrations, remote or local state, plan-then-apply discipline, cost guardrails before creating paid resources, and splitting stacks per service. Also use when plan shows unexpected changes, state is empty but resources exist, or a provider upgrade breaks resource schemas."
+}

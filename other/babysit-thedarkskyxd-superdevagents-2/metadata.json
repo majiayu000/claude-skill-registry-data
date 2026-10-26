@@ -1,0 +1,37 @@
+{
+  "name": "babysit",
+  "repo": "TheDarkSkyXD/SuperDevAgents",
+  "path": "plugins/superdev/skills/babysit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/TheDarkSkyXD/SuperDevAgents",
+  "dir_name": "babysit-thedarkskyxd-superdevagents-2",
+  "downloaded_at": "2026-10-26T04:42:05.591026Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "prompt",
+      "prompting"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "TheDarkSkyXD",
+  "source_url": "https://github.com/TheDarkSkyXD/SuperDevAgents/blob/main/plugins/superdev/skills/babysit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/TheDarkSkyXD/SuperDevAgents/blob/main/plugins/superdev/skills/babysit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Watch an open PR \u2014 fix failing CI, handle the straightforward review comments, and drive it to a mergeable state. Claude Code analog of Cursor's built-in /babysit. Use after opening a PR when the user wants the agent to shepherd it without re-prompting."
+}

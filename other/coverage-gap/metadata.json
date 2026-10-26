@@ -1,0 +1,37 @@
+{
+  "name": "coverage-gap",
+  "repo": "MooreSi/forex-gold",
+  "path": ".claude/skills/coverage-gap/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MooreSi/forex-gold",
+  "dir_name": "coverage-gap",
+  "downloaded_at": "2026-10-26T03:57:28.668288Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "frontend"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MooreSi",
+  "source_url": "https://github.com/MooreSi/forex-gold/blob/main/.claude/skills/coverage-gap/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MooreSi/forex-gold/blob/main/.claude/skills/coverage-gap/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Find untested code and fill the gaps that matter. Use when asked about test coverage, \"what isn't tested\", \"add tests\", or before splitting/refactoring a file that may have none."
+}

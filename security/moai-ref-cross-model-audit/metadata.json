@@ -1,0 +1,38 @@
+{
+  "name": "moai-ref-cross-model-audit",
+  "repo": "Seung-zedd/dhaa",
+  "path": ".claude/skills/moai-ref-cross-model-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/Seung-zedd/dhaa",
+  "dir_name": "moai-ref-cross-model-audit",
+  "downloaded_at": "2026-10-26T04:28:36.781560Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: auth, audit, owasp",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "auth",
+      "audit",
+      "owasp"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Seung-zedd",
+  "source_url": "https://github.com/Seung-zedd/dhaa/blob/main/.claude/skills/moai-ref-cross-model-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Seung-zedd/dhaa/blob/main/.claude/skills/moai-ref-cross-model-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Cross-model audit convergence reference for the plan-auditor and sync-auditor agents. Documents how to invoke the `audit_multi` MCP tool to fan a code review out across the codex and GLM (z.ai) backends in parallel, converge their verdicts with the in-session Claude verdict, and fold the resulting per-backend verdicts + disagreement flag into the audit output. The single skill both audit entry points load \u2014 no duplication."
+}

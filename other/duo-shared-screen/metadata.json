@@ -1,0 +1,37 @@
+{
+  "name": "duo-shared-screen",
+  "repo": "Kimeur/duology",
+  "path": "plugins/duology-design/skills/duo-shared-screen/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Kimeur/duology",
+  "dir_name": "duo-shared-screen",
+  "downloaded_at": "2026-10-26T03:36:20.405792Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, platform=2",
+    "score": 2,
+    "runner_up": "platform",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Kimeur",
+  "source_url": "https://github.com/Kimeur/duology/blob/main/plugins/duology-design/skills/duo-shared-screen/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Kimeur/duology/blob/main/plugins/duology-design/skills/duo-shared-screen/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds screens that two people use at the same time on one iPhone Duo, Apple's foldable iPhone - two-player games, teaching, showing a customer, kid and parent. Use when two people share the inner display or the outer display, sit side by side or face to face across a phone lying flat, or when you need one half per person (SharedSplit, an EvenSplit with seating, not ArrangementView), per-half named coordinate spaces and contentShape, DragGesture minimumDistance with onTapGesture, input gated per seat, one-sided destructive controls, sensoryFeedback per half, persistentSystemOverlays and defersSystemGestures during play, rotationEffect to turn a half for face-to-face use, accessibility per half, and XCUITest identifiers namespaced by seat."
+}

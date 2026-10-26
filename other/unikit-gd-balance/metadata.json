@@ -1,0 +1,37 @@
+{
+  "name": "unikit-gd-balance",
+  "repo": "NintendaDev/unikit-ai",
+  "path": "skills/unikit-gd-balance/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/NintendaDev/unikit-ai",
+  "dir_name": "unikit-gd-balance",
+  "downloaded_at": "2026-10-26T04:05:38.709270Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NintendaDev",
+  "source_url": "https://github.com/NintendaDev/unikit-ai/blob/main/skills/unikit-gd-balance/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NintendaDev/unikit-ai/blob/main/skills/unikit-gd-balance/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Balance partner for a game \u2014 keeps a balance document (what is known, a coarse roadmap of Balance Checkpoints, one detailed checkpoint) and closes the loop: investigates the subject (reads code read-only, runs recon agents), issues ONE checkpoint to plan, takes the hand-back report, revises the roadmap, issues the next checkpoint or closes. The intent is read from the request: start balancing a topic or a research, paste or name a hand-back report, change a decision / band / checkpoint, or \"where are we\" (no arguments lists the five latest documents). Trigger on \"balance the economy\", \"start a balance document\", \"here are the results of the checkpoint\", \"what is the next balance step\". Writes only .unikit/gamedesign/balance/; never edits the GDD or code. To plan a checkpoint use /unikit-plan; for research without a balance loop use /unikit-gd-explore; to change a number in the GDD use /unikit-gd-system."
+}

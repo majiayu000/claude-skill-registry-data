@@ -1,0 +1,37 @@
+{
+  "name": "handoff-auto",
+  "repo": "KrishP147/skills",
+  "path": "handoff-auto/SKILL.md",
+  "github_branch": "master",
+  "category": "documents",
+  "source": "github.com/KrishP147/skills",
+  "dir_name": "handoff-auto",
+  "downloaded_at": "2026-10-26T03:37:46.932528Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, word",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KrishP147",
+  "source_url": "https://github.com/KrishP147/skills/blob/master/handoff-auto/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KrishP147/skills/blob/master/handoff-auto/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write a handoff document for a fresh session, callable by the model. Use from skills or subagents that must end a session unattended."
+}

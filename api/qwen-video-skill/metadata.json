@@ -1,0 +1,37 @@
+{
+  "name": "qwen-video-skill",
+  "repo": "MarOrZou/qwen-video-skill",
+  "path": "SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/MarOrZou/qwen-video-skill",
+  "dir_name": "qwen-video-skill",
+  "downloaded_at": "2026-10-26T03:50:17.777128Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MarOrZou",
+  "source_url": "https://github.com/MarOrZou/qwen-video-skill/blob/main/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MarOrZou/qwen-video-skill/blob/main/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when the user shares, pastes, or references a video (local path or URL) and needs Qwen3.8-Max to describe, summarize, analyze, or recognize its content. Run the bundled video.js helper to convert the video into text."
+}

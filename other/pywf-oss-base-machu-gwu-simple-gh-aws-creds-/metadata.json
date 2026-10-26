@@ -1,0 +1,37 @@
+{
+  "name": "pywf-oss-base",
+  "repo": "MacHu-GWU/simple_gh_aws_creds-project",
+  "path": ".claude/skills/pywf-oss-base/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MacHu-GWU/simple_gh_aws_creds-project",
+  "dir_name": "pywf-oss-base-machu-gwu-simple-gh-aws-creds-",
+  "downloaded_at": "2026-10-26T03:49:04.922858Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MacHu-GWU",
+  "source_url": "https://github.com/MacHu-GWU/simple_gh_aws_creds-project/blob/main/.claude/skills/pywf-oss-base/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MacHu-GWU/simple_gh_aws_creds-project/blob/main/.claude/skills/pywf-oss-base/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Shared conventions, references, and scripts of the pywf-oss skills for pywf open-source Python libraries: setup, layout, code style, tests, user docs and the agent skills that hold API and maintenance knowledge, CI and hosting, release, dependencies, and secrets. Load it before ad-hoc work on modules, tests, or docs in such a repo, for a question about these conventions, or when unsure which pywf-oss skill fits a job."
+}

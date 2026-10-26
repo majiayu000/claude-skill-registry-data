@@ -1,0 +1,37 @@
+{
+  "name": "tavily",
+  "repo": "TanNhatCMS/jarvis",
+  "path": "connectors/tavily/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/TanNhatCMS/jarvis",
+  "dir_name": "tavily-tannhatcms-jarvis",
+  "downloaded_at": "2026-10-26T04:39:06.734014Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, cli",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "TanNhatCMS",
+  "source_url": "https://github.com/TanNhatCMS/jarvis/blob/main/connectors/tavily/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/TanNhatCMS/jarvis/blob/main/connectors/tavily/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Fast, clean web research: search with an AI answer and cited sources. Trigger phrases: research this, web search, look up, tavily, find sources."
+}

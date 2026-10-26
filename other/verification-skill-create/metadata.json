@@ -1,0 +1,38 @@
+{
+  "name": "verification-skill-create",
+  "repo": "Ovich/swarmstorm",
+  "path": "skills/verify/verification-skill-create/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Ovich/swarmstorm",
+  "dir_name": "verification-skill-create",
+  "downloaded_at": "2026-10-26T04:10:39.347374Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, quality=3",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "ux"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Ovich",
+  "source_url": "https://github.com/Ovich/swarmstorm/blob/main/skills/verify/verification-skill-create/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Ovich/swarmstorm/blob/main/skills/verify/verification-skill-create/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a project has no verifier for a focus (what is judged, through what) and an agent should from now on judge, alone, the product quality of what is delivered (done as specified, usable, finished): on request, or from the mandate questions of orchestrate-plan when the person says yes. Produces the project's `verify-<app>-<focus>` skill, proven by one quality pass. Not for a focus that has one (its verify skill adapts itself), running a pass (the project's verify skill), tests, code quality or review."
+}

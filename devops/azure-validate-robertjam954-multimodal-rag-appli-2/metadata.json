@@ -1,0 +1,38 @@
+{
+  "name": "azure-validate",
+  "repo": "Robertjam954/multimodal_rag_application",
+  "path": "Projects/worktrees/mmrag-oauth1-skill/.claude/skills/azure-validate/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/Robertjam954/multimodal_rag_application",
+  "dir_name": "azure-validate-robertjam954-multimodal-rag-appli-2",
+  "downloaded_at": "2026-10-26T04:21:05.389652Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: deploy, infra, infrastructure",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Robertjam954",
+  "source_url": "https://github.com/Robertjam954/multimodal_rag_application/blob/main/Projects/worktrees/mmrag-oauth1-skill/.claude/skills/azure-validate/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Robertjam954/multimodal_rag_application/blob/main/Projects/worktrees/mmrag-oauth1-skill/.claude/skills/azure-validate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Pre-deployment validation for Azure readiness. Run deep checks on configuration, infrastructure (Bicep or Terraform), RBAC role assignments, managed identity permissions, and prerequisites before deploying. WHEN: validate my app, check deployment readiness, run preflight checks, verify configuration, check if ready to deploy, validate azure.yaml, validate Bicep, test before deploying, troubleshoot deployment errors, validate Azure Functions, validate function app, validate serverless deployment, verify RBAC roles, check role assignments, review managed identity permissions, what-if analysis, validate Container Apps deployment."
+}

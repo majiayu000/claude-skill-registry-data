@@ -1,0 +1,38 @@
+{
+  "name": "implement-feature",
+  "repo": "achrafbenamrane/TK-link",
+  "path": ".claude/skills/implement-feature/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/achrafbenamrane/TK-link",
+  "dir_name": "implement-feature-achrafbenamrane-tk-link",
+  "downloaded_at": "2026-10-26T05:09:29.772362Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=3, product=3",
+    "score": 3,
+    "runner_up": "product",
+    "runner_up_score": 3,
+    "signals": [
+      "context",
+      "compaction",
+      "context-window"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "achrafbenamrane",
+  "source_url": "https://github.com/achrafbenamrane/TK-link/blob/main/.claude/skills/implement-feature/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/achrafbenamrane/TK-link/blob/main/.claude/skills/implement-feature/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Execute a planned spec task-by-task with gates green at every step. Use when a spec has plan.md + tasks.md and the user says \"implement\", \"build it\", \"execute the plan\", or names the spec. This is the long-running workhorse \u2014 it runs a one-pass preflight, ticks tasks.md checkboxes, makes checkpoint commits, and ends by chaining verification. Subsumes the old /implement-prd command."
+}

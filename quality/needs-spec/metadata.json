@@ -1,0 +1,37 @@
+{
+  "name": "needs-spec",
+  "repo": "Sean-Koval/ai-dlc",
+  "path": "agents/skills/needs-spec/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/Sean-Koval/ai-dlc",
+  "dir_name": "needs-spec",
+  "downloaded_at": "2026-10-26T04:26:56.965113Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: review, validate",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Sean-Koval",
+  "source_url": "https://github.com/Sean-Koval/ai-dlc/blob/main/agents/skills/needs-spec/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Sean-Koval/ai-dlc/blob/main/agents/skills/needs-spec/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when deciding whether proposed work requires a formal behavior specification."
+}

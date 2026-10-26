@@ -1,0 +1,38 @@
+{
+  "name": "PlaceCall Phone Calls to Businesses",
+  "repo": "agentskillexchange/skills",
+  "path": "skills/placecall/SKILL.md",
+  "github_branch": "main",
+  "category": "integration",
+  "source": "github.com/agentskillexchange/skills",
+  "dir_name": "placecall",
+  "downloaded_at": "2026-10-26T05:15:08.208945Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "integration",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for integration: integration, connector, oauth",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "integration",
+      "connector",
+      "oauth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "agentskillexchange",
+  "source_url": "https://github.com/agentskillexchange/skills/blob/main/skills/placecall/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/agentskillexchange/skills/blob/main/skills/placecall/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Lets an agent place real outbound phone calls to US businesses through the PlaceCall remote MCP server or REST API: reservations, appointments, inquiries and quotes. Use it when the user asks to call a business, book or cancel by phone, check hours or stock, collect quotes from several vendors, or find a place to call when there is no number."
+}

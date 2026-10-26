@@ -1,0 +1,38 @@
+{
+  "name": "encode-lesson",
+  "repo": "achrafbenamrane/TK-link",
+  "path": ".claude/skills/encode-lesson/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/achrafbenamrane/TK-link",
+  "dir_name": "encode-lesson",
+  "downloaded_at": "2026-10-26T05:09:28.757178Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, lint, review",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "lint",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "achrafbenamrane",
+  "source_url": "https://github.com/achrafbenamrane/TK-link/blob/main/.claude/skills/encode-lesson/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/achrafbenamrane/TK-link/blob/main/.claude/skills/encode-lesson/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn a correction, recurring mistake, or review finding into permanent repo machinery \u2014 a doc line, path rule, lint rule, test, hook, or persona check \u2014 so it never has to be said again. Use whenever the user corrects the same thing twice, a persona repeats a finding across PRs, a retro assigns a lesson, or anyone says \"make sure this never happens again\" / \"remember this\". This is the flywheel that makes the whole harness improve (Constitution Art. VI)."
+}

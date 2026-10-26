@@ -1,0 +1,37 @@
+{
+  "name": "knowledge-hub-generator",
+  "repo": "PovertyAction/ipa-research-data-science-hub",
+  "path": ".claude/skills/knowledge-hub-generator/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/PovertyAction/ipa-research-data-science-hub",
+  "dir_name": "knowledge-hub-generator",
+  "downloaded_at": "2026-10-26T04:14:37.039539Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review",
+    "score": 2,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "quality",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "PovertyAction",
+  "source_url": "https://github.com/PovertyAction/ipa-research-data-science-hub/blob/main/.claude/skills/knowledge-hub-generator/SKILL.md",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/PovertyAction/ipa-research-data-science-hub/blob/main/.claude/skills/knowledge-hub-generator/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Draft and quality-check pages for the IPA Knowledge Hub in the site's house style. Use when creating a new .qmd Hub page from source material, adapting outside content into a Hub page, or reviewing an existing page for structure, tone, frontmatter, references, and Di\u00e1taxis fit. Replicates the quality-control workflow of IPA's Knowledge Hub Generator assistant."
+}

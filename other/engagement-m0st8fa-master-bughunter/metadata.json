@@ -1,0 +1,37 @@
+{
+  "name": "engagement",
+  "repo": "M0st8fa/master-bughunter",
+  "path": "skills/engagement/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/M0st8fa/master-bughunter",
+  "dir_name": "engagement-m0st8fa-master-bughunter",
+  "downloaded_at": "2026-10-26T03:47:12.478859Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "M0st8fa",
+  "source_url": "https://github.com/M0st8fa/master-bughunter/blob/main/skills/engagement/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/M0st8fa/master-bughunter/blob/main/skills/engagement/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Persistent authorization, scope, and progress state for a bug-bounty engagement, plus first-class ingestion of an existing recon directory. Establishes the authorization+scope gate ONCE per engagement and writes an engagement manifest (engagement.json) that every other skill reads so routine authorized research proceeds without repeated confirmation prompts. Classifies targets in-scope/out-of-scope/needs-clarification, keeps out-of-scope assets in a separate excluded inventory, builds a deduplicated master URL inventory from supplied recon output (txt/csv/json/jsonl), routes each URL to the right specialist, and tracks per-URL progress for resume. Use at the start of any hunt, when the user supplies a program/scope, when resuming a hunt, or when the user provides an existing recon folder to analyze."
+}

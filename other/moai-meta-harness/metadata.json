@@ -1,0 +1,37 @@
+{
+  "name": "moai-meta-harness",
+  "repo": "Seung-zedd/dhaa",
+  "path": ".claude/skills/moai-meta-harness/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Seung-zedd/dhaa",
+  "dir_name": "moai-meta-harness",
+  "downloaded_at": "2026-10-26T04:28:29.633931Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "sub-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Seung-zedd",
+  "source_url": "https://github.com/Seung-zedd/dhaa/blob/main/.claude/skills/moai-meta-harness/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Seung-zedd/dhaa/blob/main/.claude/skills/moai-meta-harness/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "DEPRECATED \u2014 legacy 7-Phase meta-harness. Redirects to the v4 harness Builder (/moai:harness <natural-language request>) which replaces the static 7-Phase workflow with an orchestrator-direct 4-phase Builder (ANALYZE / PLAN / GENERATE / ACTIVATE) + a manifest-driven dynamic-workflow Runner. Retained as the redirect source for backward-compat invocation paths; the 7-Phase body below is preserved as historical reference, NOT for new harness creation."
+}

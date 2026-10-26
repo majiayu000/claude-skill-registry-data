@@ -1,0 +1,38 @@
+{
+  "name": "pr-review",
+  "repo": "Ovich/swarmstorm",
+  "path": "skills/review/pr-review/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Ovich/swarmstorm",
+  "dir_name": "pr-review-ovich-swarmstorm",
+  "downloaded_at": "2026-10-26T04:10:38.422751Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Ovich",
+  "source_url": "https://github.com/Ovich/swarmstorm/blob/main/skills/review/pr-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Ovich/swarmstorm/blob/main/skills/review/pr-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when reviewing a pull request, branch or diff in any language, to produce the analysis a reviewer decides from: what changed, why, how the structure moved, what it can break, and the decisions only a human can make, at five altitudes from code primitives to delivery and intent. Not a bug hunt, and not framework-specific review."
+}

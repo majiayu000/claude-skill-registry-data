@@ -1,0 +1,38 @@
+{
+  "name": "moai-domain-humanize",
+  "repo": "Seung-zedd/dhaa",
+  "path": ".claude/skills/moai-domain-humanize/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/Seung-zedd/dhaa",
+  "dir_name": "moai-domain-humanize",
+  "downloaded_at": "2026-10-26T04:28:32.512860Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: marketing, content, brand",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "marketing",
+      "content",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Seung-zedd",
+  "source_url": "https://github.com/Seung-zedd/dhaa/blob/main/.claude/skills/moai-domain-humanize/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Seung-zedd/dhaa/blob/main/.claude/skills/moai-domain-humanize/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "AI text humanization and \uc724\ubb38 (post-editing) specialist that detects and removes AI tells while preserving meaning, facts, and figures. Covers Korean, English, Japanese, and Chinese with a shared severity model (S1/S2/S3), quality grades (A/B/C/D), and 30%/50% over-editing guardrails. Use to make AI-generated text read as human-authored without changing what it says (de-ai, naturalness pass)."
+}

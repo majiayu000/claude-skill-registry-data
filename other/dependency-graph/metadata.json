@@ -1,0 +1,36 @@
+{
+  "name": "dependency-graph",
+  "repo": "Ovich/swarmstorm",
+  "path": "skills/architecture/dependency-graph/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Ovich/swarmstorm",
+  "dir_name": "dependency-graph",
+  "downloaded_at": "2026-10-26T04:10:35.906905Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "design",
+    "runner_up_score": 1,
+    "signals": [
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Ovich",
+  "source_url": "https://github.com/Ovich/swarmstorm/blob/main/skills/architecture/dependency-graph/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Ovich/swarmstorm/blob/main/skills/architecture/dependency-graph/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a JavaScript or TypeScript project's dependencies must be seen as they are in the code: the whole graph, what one module depends on, who depends on it, or its neighbourhood, at file or folder level. Produces a Mermaid graph document in aiview, parsed by a deterministic script, never inferred. Not for designing a module's interface (deepen-module)."
+}

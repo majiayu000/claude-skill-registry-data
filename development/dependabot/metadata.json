@@ -1,0 +1,38 @@
+{
+  "name": "dependabot",
+  "repo": "TM-59/TM-59",
+  "path": "skills/tech/dependabot/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/TM-59/TM-59",
+  "dir_name": "dependabot",
+  "downloaded_at": "2026-10-26T04:38:00.843243Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "TM-59",
+  "source_url": "https://github.com/TM-59/TM-59/blob/master/skills/tech/dependabot/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/TM-59/TM-59/blob/master/skills/tech/dependabot/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when configuring or operating Dependabot across many repositories \u2014 generating dependabot.yml from the manifests that actually exist, grouping minor and patch updates, limiting open pull requests, choosing weekly or monthly schedules by repository activity, and merging update PRs safely one at a time. Also use when update PRs pile up, conflict with each other, fail on peer dependencies, or burn CI minutes."
+}

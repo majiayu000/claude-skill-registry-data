@@ -1,0 +1,37 @@
+{
+  "name": "verify",
+  "repo": "MooreSi/forex-gold",
+  "path": ".claude/skills/verify/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MooreSi/forex-gold",
+  "dir_name": "verify-mooresi-forex-gold",
+  "downloaded_at": "2026-10-26T03:57:27.407054Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MooreSi",
+  "source_url": "https://github.com/MooreSi/forex-gold/blob/main/.claude/skills/verify/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MooreSi/forex-gold/blob/main/.claude/skills/verify/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run every check before committing \u2014 full test suite, all four structural gates, the coverage ratchet and the boot smoke test. Use before any commit, and whenever asked \"is this ready\", \"is it green\", \"can I commit\", or \"run the checks\"."
+}

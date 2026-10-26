@@ -1,0 +1,37 @@
+{
+  "name": "new-spec",
+  "repo": "MooreSi/forex-gold",
+  "path": ".claude/skills/new-spec/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/MooreSi/forex-gold",
+  "dir_name": "new-spec",
+  "downloaded_at": "2026-10-26T03:57:27.962856Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MooreSi",
+  "source_url": "https://github.com/MooreSi/forex-gold/blob/main/.claude/skills/new-spec/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MooreSi/forex-gold/blob/main/.claude/skills/new-spec/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write a spec in docs/todo before building anything bigger than a one-line fix. Use when starting a feature, a change with more than one moving part, or when the user describes what they want but not how it should work."
+}

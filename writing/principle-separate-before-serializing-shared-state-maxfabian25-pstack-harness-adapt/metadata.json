@@ -1,0 +1,37 @@
+{
+  "name": "principle-separate-before-serializing-shared-state",
+  "repo": "MaxFabian25/pstack-harness-adaptations",
+  "path": "skills/principle-separate-before-serializing-shared-state/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/MaxFabian25/pstack-harness-adaptations",
+  "dir_name": "principle-separate-before-serializing-shared-state-maxfabian25-pstack-harness-adapt",
+  "downloaded_at": "2026-10-26T03:52:45.255391Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, writer",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "writing",
+      "writer"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MaxFabian25",
+  "source_url": "https://github.com/MaxFabian25/pstack-harness-adaptations/blob/main/skills/principle-separate-before-serializing-shared-state/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MaxFabian25/pstack-harness-adaptations/blob/main/skills/principle-separate-before-serializing-shared-state/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Apply when concurrent actors might write to the same file, branch, key, or state object. Eliminate the sharing first; serialize structurally only when one shared writer is a real invariant."
+}

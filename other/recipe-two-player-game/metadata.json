@@ -1,0 +1,38 @@
+{
+  "name": "recipe-two-player-game",
+  "repo": "Kimeur/duology",
+  "path": "plugins/duology-recipes/skills/recipe-two-player-game/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Kimeur/duology",
+  "dir_name": "recipe-two-player-game",
+  "downloaded_at": "2026-10-26T03:36:22.877243Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, platform=3",
+    "score": 3,
+    "runner_up": "platform",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Kimeur",
+  "source_url": "https://github.com/Kimeur/duology/blob/main/plugins/duology-recipes/skills/recipe-two-player-game/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Kimeur/duology/blob/main/plugins/duology-recipes/skills/recipe-two-player-game/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Creates a complete two-player, one-phone SwiftUI game for iPhone Duo, Apple's foldable, where each player gets half the screen in every pose (closed on the outer display, open on the inner display, upright or sideways, partly folded). Use when someone wants to start a new two-player game or shared-screen app from scratch (a new Xcode project), or runs /duo-new recipe-two-player-game. For an existing app, use duo-shared-screen instead. Covers EvenSplit (GeometryReader plus AnyLayout), per-half coordinate spaces and content shapes, face-to-face seating turned by split axis, right-to-left seats, input gating, countdown, winner screen and rematch, keeping targets off the fold with reservedRegions(kind:) (.division, .occlusion), a Foundation-only game engine tested on the Mac, and UI tests that work on the iPhone Duo simulator."
+}

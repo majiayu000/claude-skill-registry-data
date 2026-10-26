@@ -1,0 +1,37 @@
+{
+  "name": "duo-scenes",
+  "repo": "Kimeur/duology",
+  "path": "plugins/duology/skills/duo-scenes/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Kimeur/duology",
+  "dir_name": "duo-scenes",
+  "downloaded_at": "2026-10-26T03:36:16.264207Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, platform=2",
+    "score": 2,
+    "runner_up": "platform",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Kimeur",
+  "source_url": "https://github.com/Kimeur/duology/blob/main/plugins/duology/skills/duo-scenes/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Kimeur/duology/blob/main/plugins/duology/skills/duo-scenes/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Scenes and windows on iPhone Duo, Apple's foldable. Use when an app opens a second window (openWindow, WindowGroup(for:), activateSceneSession, UISceneSessionActivationRequest, UIWindowScene.ActivationAction), handles new-window requests on the outer display and their errors, asks before a window closes (closureConfirmation), runs in 50/50 Split View, shows content on the outer display while the camera runs on the inner display (sceneAccessory, CameraCaptureAccessory, onAvailabilityChange, UISceneAccessory, registerSceneAccessory, UISceneAccessoryRegistration, windowCameraCaptureAccessory, ExternalNonInteractiveAccessory), restores state per window (@SceneStorage, stateRestorationActivity), or reacts to the UIScene lifecycle when the phone folds or unfolds (scenePhase, didUpdateEffectiveGeometry, UIWindowScene.screen)."
+}

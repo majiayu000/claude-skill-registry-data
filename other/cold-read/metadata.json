@@ -1,0 +1,37 @@
+{
+  "name": "cold-read",
+  "repo": "Ovich/swarmstorm",
+  "path": "skills/plan/cold-read/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Ovich/swarmstorm",
+  "dir_name": "cold-read",
+  "downloaded_at": "2026-10-26T04:10:37.393880Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, writing=2",
+    "score": 2,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Ovich",
+  "source_url": "https://github.com/Ovich/swarmstorm/blob/main/skills/plan/cold-read/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Ovich/swarmstorm/blob/main/skills/plan/cold-read/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when dispatched to cold-read a plan, as an agent that was not in the conversation that wrote it, to say whether it can be carried out from the document alone. Produces what the reader would build, its questions, and a verdict, ready or not ready, repeated as the writer fixes the plan. Not for judging the design (interview, pr-review), not for the mechanical checks (aiview plan check, tracker check), and not for writing the plan (write-plan)."
+}

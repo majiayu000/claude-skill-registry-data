@@ -1,0 +1,37 @@
+{
+  "name": "openpencil-setup",
+  "repo": "ZSeven-W/codex-openpencil",
+  "path": "plugins/openpencil/skills/openpencil-setup/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ZSeven-W/codex-openpencil",
+  "dir_name": "openpencil-setup",
+  "downloaded_at": "2026-10-26T05:03:04.262278Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: communication=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "messaging",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ZSeven-W",
+  "source_url": "https://github.com/ZSeven-W/codex-openpencil/blob/main/plugins/openpencil/skills/openpencil-setup/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ZSeven-W/codex-openpencil/blob/main/plugins/openpencil/skills/openpencil-setup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Connect and diagnose the local Rust OpenPencil editor for the Codex OpenPencil plugin. Use for initial setup, missing tools, or a disconnected local canvas."
+}

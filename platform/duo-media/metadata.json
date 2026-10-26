@@ -1,0 +1,37 @@
+{
+  "name": "duo-media",
+  "repo": "Kimeur/duology",
+  "path": "plugins/duology-features/skills/duo-media/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/Kimeur/duology",
+  "dir_name": "duo-media",
+  "downloaded_at": "2026-10-26T03:36:18.061606Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: device, ios",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "device",
+      "ios"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Kimeur",
+  "source_url": "https://github.com/Kimeur/duology/blob/main/plugins/duology-features/skills/duo-media/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Kimeur/duology/blob/main/plugins/duology-features/skills/duo-media/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Video and audio playback on iPhone Duo, Apple's foldable. Use when an app plays video or audio and must keep playing through fold, unfold and rotation, when you build a tabletop player (video above the fold, the same controls below) or a book-pose player, an up next queue, Picture in Picture, Now Playing or background audio. Covers one AVPlayer owned above the layout switch (VideoPlayer, AVPlayerViewController, AVPlayerLayer), ArrangementView with .overlay and overlayArrangementZIndex for up next (measured on the simulator in every pose), when to pick .split instead, toolbarVerticalBehavior(.disabled) for a full-screen player, AVPictureInPictureController and canStartPictureInPictureAutomaticallyFromInline, the pinned Picture in Picture video that takes half the screen when folded, MPNowPlayingSession and remote commands, the .playback audio session, and what to test in Device Hub and on a device."
+}

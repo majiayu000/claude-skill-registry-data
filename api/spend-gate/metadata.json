@@ -1,0 +1,37 @@
+{
+  "name": "spend-gate",
+  "repo": "KrishP147/skills",
+  "path": "spend-gate/SKILL.md",
+  "github_branch": "master",
+  "category": "api",
+  "source": "github.com/KrishP147/skills",
+  "dir_name": "spend-gate",
+  "downloaded_at": "2026-10-26T03:37:46.261037Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KrishP147",
+  "source_url": "https://github.com/KrishP147/skills/blob/master/spend-gate/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KrishP147/skills/blob/master/spend-gate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Gate any billable action (GPU pods/instances, paid APIs or tiers, cloud credits) behind a cost estimate, a live balance check, and an explicit yes for that action. Use before any create/deploy on a paid provider (runpodctl, vultr-cli, aws/gcloud/az, modal, provider MCP create/deploy/run/start/update), any paid API call, or when spend-guard blocks one."
+}

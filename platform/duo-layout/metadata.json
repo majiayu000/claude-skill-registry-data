@@ -1,0 +1,37 @@
+{
+  "name": "duo-layout",
+  "repo": "Kimeur/duology",
+  "path": "plugins/duology/skills/duo-layout/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/Kimeur/duology",
+  "dir_name": "duo-layout",
+  "downloaded_at": "2026-10-26T03:36:16.484335Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: device, ios",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 1,
+    "signals": [
+      "device",
+      "ios"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Kimeur",
+  "source_url": "https://github.com/Kimeur/duology/blob/main/plugins/duology/skills/duo-layout/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Kimeur/duology/blob/main/plugins/duology/skills/duo-layout/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Core layout rules for iPhone Duo, Apple's foldable. Use when content lands in the fold, a screen breaks on the inner or outer display, or you write SwiftUI or UIKit layout for a foldable. Covers size classes instead of UIScreen.main, idiom or orientation, asymmetric safe areas and margins, reserved regions (ReservedRegion, reservedRegions(kind:options:), .division, .occlusion, .includeInactive), ArrangementView and UIArrangementViewController (split and overlay styles), an even custom split (EvenSplit) for two halves that must always show, even grid columns, and keeping controls off the fold."
+}

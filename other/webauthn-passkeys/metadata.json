@@ -1,0 +1,37 @@
+{
+  "name": "webauthn-passkeys",
+  "repo": "TM-59/TM-59",
+  "path": "skills/tech/webauthn-passkeys/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/TM-59/TM-59",
+  "dir_name": "webauthn-passkeys",
+  "downloaded_at": "2026-10-26T04:38:05.965340Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: communication=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "messaging",
+      "email"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "TM-59",
+  "source_url": "https://github.com/TM-59/TM-59/blob/master/skills/tech/webauthn-passkeys/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/TM-59/TM-59/blob/master/skills/tech/webauthn-passkeys/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when adding passkey (WebAuthn) sign-in to a web app, including passkey-only apps with no passwords \u2014 registration and authentication ceremonies, server-side challenge storage, relying-party ID and origin checks, enrolling a phone when long links cannot be passed to it, Safari's user-gesture rules, and session handling on edge runtimes. Also use when passkey creation fails on iPhone, works on one domain but not another, or users get locked out."
+}

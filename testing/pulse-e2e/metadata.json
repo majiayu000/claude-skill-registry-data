@@ -1,0 +1,39 @@
+{
+  "name": "pulse-e2e",
+  "repo": "NicoPinguinDEV/Pulse",
+  "path": ".claude/skills/pulse-e2e/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/NicoPinguinDEV/Pulse",
+  "dir_name": "pulse-e2e",
+  "downloaded_at": "2026-10-26T04:04:59.233873Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, unittest, e2e, playwright",
+    "score": 4,
+    "runner_up": "design",
+    "runner_up_score": 3,
+    "signals": [
+      "test",
+      "unittest",
+      "e2e",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "NicoPinguinDEV",
+  "source_url": "https://github.com/NicoPinguinDEV/Pulse/blob/main/.claude/skills/pulse-e2e/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/NicoPinguinDEV/Pulse/blob/main/.claude/skills/pulse-e2e/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Dashboard-Workflows von Pulse im echten Browser (Playwright, headless) testen oder neue E2E-Tests schreiben \u2013 Seite \u00f6ffnen, Formular ausf\u00fcllen, speichern, Ergebnis und Persistenz pr\u00fcfen, Desktop und Mobil. Verwenden bei UI-/Formular-/Routen\u00e4nderungen im Dashboard oder wenn ein E2E-Test fehlt."
+}

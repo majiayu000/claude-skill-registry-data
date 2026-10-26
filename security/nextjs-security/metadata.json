@@ -1,0 +1,39 @@
+{
+  "name": "nextjs-security",
+  "repo": "Konstantin212/report_readr_fe",
+  "path": ".claude/skills/nextjs-security/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/Konstantin212/report_readr_fe",
+  "dir_name": "nextjs-security",
+  "downloaded_at": "2026-10-26T03:37:01.797339Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for security: security, auth, vulnerability, audit",
+    "score": 4,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "vulnerability",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Konstantin212",
+  "source_url": "https://github.com/Konstantin212/report_readr_fe/blob/main/.claude/skills/nextjs-security/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Konstantin212/report_readr_fe/blob/main/.claude/skills/nextjs-security/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when writing or reviewing any Next.js server code \u2014 Route Handlers, Server Actions, middleware, auth, cookies, env vars, headers. Enforces the project's Next.js security checklist."
+}

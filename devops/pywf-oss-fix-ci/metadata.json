@@ -1,0 +1,38 @@
+{
+  "name": "pywf-oss-fix-ci",
+  "repo": "MacHu-GWU/cookiecutter_pywf_open_source_demo-project",
+  "path": ".claude/skills/pywf-oss-fix-ci/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/MacHu-GWU/cookiecutter_pywf_open_source_demo-project",
+  "dir_name": "pywf-oss-fix-ci",
+  "downloaded_at": "2026-10-26T03:48:48.038533Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: ci, infra, infrastructure",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ci",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MacHu-GWU",
+  "source_url": "https://github.com/MacHu-GWU/cookiecutter_pywf_open_source_demo-project/blob/main/.claude/skills/pywf-oss-fix-ci/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MacHu-GWU/cookiecutter_pywf_open_source_demo-project/blob/main/.claude/skills/pywf-oss-fix-ci/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Diagnose and fix a red GitHub Actions run, a failed Codecov upload, or a failed Read the Docs build of a pywf open-source Python library, or add or drop a supported Python version. Use when the user says CI, the tests on GitHub, Codecov, the docs build, or Read the Docs fails or shows warnings, or asks to add or drop a Python version."
+}

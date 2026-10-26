@@ -1,0 +1,38 @@
+{
+  "name": "pywf-oss-write-maintain-skill",
+  "repo": "MacHu-GWU/simple_gh_aws_creds-project",
+  "path": ".claude/skills/pywf-oss-write-maintain-skill/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/MacHu-GWU/simple_gh_aws_creds-project",
+  "dir_name": "pywf-oss-write-maintain-skill-machu-gwu-simple-gh-aws-creds-",
+  "downloaded_at": "2026-10-26T03:49:07.258481Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MacHu-GWU",
+  "source_url": "https://github.com/MacHu-GWU/simple_gh_aws_creds-project/blob/main/.claude/skills/pywf-oss-write-maintain-skill/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MacHu-GWU/simple_gh_aws_creds-project/blob/main/.claude/skills/pywf-oss-write-maintain-skill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create or update this library's own maintenance skill family, maintain-<package_name>-base plus one invoker per repeatable job, that records its architecture, invariants, design decisions, debugging recipes, and library-specific jobs, so agents maintaining the repo need no maintainer guide. Use when the user asks to write down how to maintain the repo, to document architecture or a maintenance procedure, to move a maintainer guide out of the docs, or after a change that adds an invariant or a maintenance job."
+}

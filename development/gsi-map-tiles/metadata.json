@@ -1,0 +1,37 @@
+{
+  "name": "gsi-map-tiles",
+  "repo": "TM-59/TM-59",
+  "path": "skills/tech/gsi-map-tiles/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/TM-59/TM-59",
+  "dir_name": "gsi-map-tiles",
+  "downloaded_at": "2026-10-26T04:38:03.019066Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: build, debug",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "TM-59",
+  "source_url": "https://github.com/TM-59/TM-59/blob/master/skills/tech/gsi-map-tiles/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/TM-59/TM-59/blob/master/skills/tech/gsi-map-tiles/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when building 3D worlds, games or visualisations from Japanese open map data \u2014 GSI (Geospatial Information Authority of Japan) elevation PNG tiles, vector tiles for buildings, roads, railways and water, aerial photo tiles, and PLATEAU 3D city models; covers tile math, decoding, runtime fetching with caching and fallback, attribution, and procedural generation on top. Also use when terrain has holes or steps, roads break at bridges, water looks wrong, or buildings from the data are plain boxes."
+}

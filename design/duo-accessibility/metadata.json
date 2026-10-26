@@ -1,0 +1,38 @@
+{
+  "name": "duo-accessibility",
+  "repo": "Kimeur/duology",
+  "path": "plugins/duology-design/skills/duo-accessibility/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/Kimeur/duology",
+  "dir_name": "duo-accessibility",
+  "downloaded_at": "2026-10-26T03:36:20.584017Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, animation",
+    "score": 3,
+    "runner_up": "platform",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Kimeur",
+  "source_url": "https://github.com/Kimeur/duology/blob/main/plugins/duology-design/skills/duo-accessibility/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Kimeur/duology/blob/main/plugins/duology-design/skills/duo-accessibility/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Makes iPhone Duo apps work with VoiceOver, Dynamic Type, Reduce Motion, Increase Contrast, hardware keyboards, Switch Control and Voice Control on both displays. Use it when VoiceOver reads two panes row by row or loses its place after the phone folds or unfolds, when text truncates or clips on the 5.4-inch outer display at large text sizes, when a hinge effect or resize animation ignores Reduce Motion, when colours fail contrast, when keyboard shortcuts or focus don't work, or when you add accessibility labels, identifiers or audits. Covers accessibilityElement(children: .contain), accessibilitySortPriority, AccessibilityFocusState with a delayed move after a size-class change, AnyLayout and ViewThatFits reflow with isAccessibilitySize, ScaledMetric, accessibilityReduceMotion with onHingeChange, colorSchemeContrast, keyboardShortcut, accessibilityInputLabels, modifiers before .position, Accessibility Inspector, performAccessibilityAudit and XCUIDevice voiceOverService UI tests on the iPhone Duo simulator."
+}

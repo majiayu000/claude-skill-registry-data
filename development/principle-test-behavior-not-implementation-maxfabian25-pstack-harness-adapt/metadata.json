@@ -1,0 +1,38 @@
+{
+  "name": "principle-test-behavior-not-implementation",
+  "repo": "MaxFabian25/pstack-harness-adaptations",
+  "path": "skills/principle-test-behavior-not-implementation/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/MaxFabian25/pstack-harness-adaptations",
+  "dir_name": "principle-test-behavior-not-implementation-maxfabian25-pstack-harness-adapt",
+  "downloaded_at": "2026-10-26T03:52:45.468897Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, compile, refactor",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "compile",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MaxFabian25",
+  "source_url": "https://github.com/MaxFabian25/pstack-harness-adaptations/blob/main/skills/principle-test-behavior-not-implementation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MaxFabian25/pstack-harness-adaptations/blob/main/skills/principle-test-behavior-not-implementation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Apply when you write, change, or keep a test. Assert what the code's users can observe, so that the test fails when that behavior breaks and keeps passing when only the internals change."
+}

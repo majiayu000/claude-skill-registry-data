@@ -1,0 +1,39 @@
+{
+  "name": "e2e-medallion-architecture",
+  "repo": "MichelRojo86WPP/copilot-config",
+  "path": "skills/e2e-medallion-architecture/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/MichelRojo86WPP/copilot-config",
+  "dir_name": "e2e-medallion-architecture",
+  "downloaded_at": "2026-10-26T03:55:28.423880Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, analytics, sql, pipeline",
+    "score": 4,
+    "runner_up": "devops",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "analytics",
+      "sql",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MichelRojo86WPP",
+  "source_url": "https://github.com/MichelRojo86WPP/copilot-config/blob/main/skills/e2e-medallion-architecture/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MichelRojo86WPP/copilot-config/blob/main/skills/e2e-medallion-architecture/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Implement end-to-end Medallion Architecture (Bronze/Silver/Gold) lakehouse patterns in Microsoft Fabric using PySpark, Delta Lake, and Fabric Pipelines. Use when the user wants to: (1) design a Bronze/Silver/Gold data lakehouse, (2) set up multi-layer workspace with lakehouses for each tier, (3) build ingestion-to-analytics pipelines with data quality enforcement, (4) optimize Spark configurations per medallion layer, (5) orchestrate Bronze-to-Silver-to-Gold flows via notebooks. Triggers: \"medallion architecture\", \"bronze silver gold\", \"lakehouse layers\", \"e2e data pipeline\", \"end-to-end lakehouse\", \"data lakehouse pattern\", \"multi-layer lakehouse\", \"build medallion\", \"setup medallion\"."
+}

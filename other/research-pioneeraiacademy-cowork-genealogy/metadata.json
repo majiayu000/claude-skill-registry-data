@@ -1,0 +1,37 @@
+{
+  "name": "research",
+  "repo": "PioneerAIAcademy/cowork-genealogy",
+  "path": "packages/engine/plugin/skills/research/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/PioneerAIAcademy/cowork-genealogy",
+  "dir_name": "research-pioneeraiacademy-cowork-genealogy",
+  "downloaded_at": "2026-10-26T04:14:05.029879Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: planning=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "planning",
+      "plan"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "PioneerAIAcademy",
+  "source_url": "https://github.com/PioneerAIAcademy/cowork-genealogy/blob/main/packages/engine/plugin/skills/research/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/PioneerAIAcademy/cowork-genealogy/blob/main/packages/engine/plugin/skills/research/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Full GPS research orchestrator \u2014 the default choice whenever a user wants genealogy research driven forward. Use for: the `/research` command, 'find [relative] of [person]', 'research [person or question]', 'investigate [person]', 'drive the workflow forward', 'answer this research question', any message with `--autonomous`, or any open-ended research goal that needs multiple steps (question selection, planning, searching, extraction, proof conclusion). Also for 'new project', 'start research', 'begin researching' and 'I want to research [person]' \u2014 this is the only front door, including when the folder holds no project yet: the routing table below sends a first message to init-project or tree-survey. Choose this over any sub-skill when the user states an objective rather than a specific action. Do NOT use when the user explicitly targets one step only (search-records, research-plan, question-selection, etc.) or only asks where the project stands (answered from project_context, no skill)."
+}

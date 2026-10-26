@@ -1,0 +1,36 @@
+{
+  "name": "brainswarm",
+  "repo": "Ovich/swarmstorm",
+  "path": "skills/alignment/brainswarm/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Ovich/swarmstorm",
+  "dir_name": "brainswarm",
+  "downloaded_at": "2026-10-26T04:10:35.059011Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "business",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Ovich",
+  "source_url": "https://github.com/Ovich/swarmstorm/blob/main/skills/alignment/brainswarm/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Ovich/swarmstorm/blob/main/skills/alignment/brainswarm/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a person wants a swarm of role seats to work a topic on the swarm board under a chosen protocol: a brainstorm (ideas before any judgment), a debate (questions argued to decisions, a skeptic endorsing) or an editorial (one text drafted, read by seats standing for its readers, revised), a protocol or template the project keeps as a `protocol-<name>` skill (or an older `brainswarm-<name>` one), or a custom protocol recommended for the person's intent, or a seat's brief names a brainswarm protocol. Produces the run's record in aiview, written by the orchestrator alone. Not for one person thinking aloud with the agent (brainstorm, interview) and not for a plan's slices (execute-plan)."
+}

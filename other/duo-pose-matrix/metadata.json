@@ -1,0 +1,37 @@
+{
+  "name": "duo-pose-matrix",
+  "repo": "Kimeur/duology",
+  "path": "plugins/duology-ship/skills/duo-pose-matrix/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Kimeur/duology",
+  "dir_name": "duo-pose-matrix",
+  "downloaded_at": "2026-10-26T03:36:19.274043Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Kimeur",
+  "source_url": "https://github.com/Kimeur/duology/blob/main/plugins/duology-ship/skills/duo-pose-matrix/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Kimeur/duology/blob/main/plugins/duology-ship/skills/duo-pose-matrix/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Screenshots an iPhone Duo app in every pose (closed, open, book, tabletop) on the iPhone Duo simulator by pressing Device Hub's pose buttons through the macOS Accessibility API, then writes summary.md and summary.json to review with the duo-design-review checklist. Use when asked to check, test or screenshot an app in each pose, fold or hinge state, to capture outer and inner display frames for a design review or the App Store, to change the simulator's pose from the command line or a script (simctl and devicectl have no pose command), to run /duo-poses, or when a review is missing book or tabletop frames. Ships duo-pose (status, list, set) and duo-pose-matrix, with a manual fallback when the user has not given Accessibility permission, and checks that no UI tests share the simulator before it changes the pose."
+}

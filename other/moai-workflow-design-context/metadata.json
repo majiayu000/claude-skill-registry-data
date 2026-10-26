@@ -1,0 +1,37 @@
+{
+  "name": "moai-workflow-design-context",
+  "repo": "Seung-zedd/dhaa",
+  "path": ".claude/skills/moai-workflow-design-context/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Seung-zedd/dhaa",
+  "dir_name": "moai-workflow-design-context",
+  "downloaded_at": "2026-10-26T04:28:37.492569Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "frontend"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Seung-zedd",
+  "source_url": "https://github.com/Seung-zedd/dhaa/blob/main/.claude/skills/moai-workflow-design-context/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Seung-zedd/dhaa/blob/main/.claude/skills/moai-workflow-design-context/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Loads human-authored design briefs from .moai/design/ (research, system, spec) and injects them into /moai design workflow context with priority truncation when token budget is exceeded."
+}

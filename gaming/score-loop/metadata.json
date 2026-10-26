@@ -1,0 +1,37 @@
+{
+  "name": "score-loop",
+  "repo": "KrishP147/skills",
+  "path": "score-loop/SKILL.md",
+  "github_branch": "master",
+  "category": "gaming",
+  "source": "github.com/KrishP147/skills",
+  "dir_name": "score-loop",
+  "downloaded_at": "2026-10-26T03:37:45.906823Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "gaming",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for gaming: game, gaming",
+    "score": 2,
+    "runner_up": "performance",
+    "runner_up_score": 1,
+    "signals": [
+      "game",
+      "gaming"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "KrishP147",
+  "source_url": "https://github.com/KrishP147/skills/blob/master/score-loop/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/KrishP147/skills/blob/master/score-loop/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run an unattended experiment loop that hill-climbs one rerunnable numeric score \u2014 local grader-mirroring harness, one hypothesis per commit, keep only gains beyond the noise margin, auto-revert the rest, append-only results ledger; stops on budget, deadline or plateau. Use for \"improve this score\", \"hill-climb a metric\", \"optimize until plateau/deadline\", or \"resume\" / \"status\" / \"summary\" of a score loop."
+}

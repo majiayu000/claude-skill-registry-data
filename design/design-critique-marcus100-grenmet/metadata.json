@@ -1,0 +1,40 @@
+{
+  "name": "design-critique",
+  "repo": "Marcus100/grenmet",
+  "path": ".claude/skills/design-critique/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/Marcus100/grenmet",
+  "dir_name": "design-critique-marcus100-grenmet",
+  "downloaded_at": "2026-10-26T03:50:33.606756Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, ui, css, component, tailwind",
+    "score": 5,
+    "runner_up": "marketing",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "css",
+      "component",
+      "tailwind"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Marcus100",
+  "source_url": "https://github.com/Marcus100/grenmet/blob/main/.claude/skills/design-critique/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Marcus100/grenmet/blob/main/.claude/skills/design-critique/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Critiques a UI surface against the Refactoring UI ladder and returns a ranked, token-legal fix list. Needs no design reference."
+}

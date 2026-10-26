@@ -1,0 +1,37 @@
+{
+  "name": "lumen-consumer-upgrade",
+  "repo": "LedgerHQ/lumen",
+  "path": ".claude/skills/lumen-consumer-upgrade/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/LedgerHQ/lumen",
+  "dir_name": "lumen-consumer-upgrade",
+  "downloaded_at": "2026-10-26T03:40:03.685403Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LedgerHQ",
+  "source_url": "https://github.com/LedgerHQ/lumen/blob/main/.claude/skills/lumen-consumer-upgrade/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LedgerHQ/lumen/blob/main/.claude/skills/lumen-consumer-upgrade/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Upgrade a consumer repo to the latest Lumen: audit the gap, bump every `@ledgerhq/lumen-*` package, apply each migration crossed, verify, and open the PR. Run from the consumer repo's root, only when asked to upgrade or audit Lumen there."
+}

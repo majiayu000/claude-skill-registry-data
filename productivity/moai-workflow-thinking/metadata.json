@@ -1,0 +1,38 @@
+{
+  "name": "moai-workflow-thinking",
+  "repo": "Seung-zedd/dhaa",
+  "path": ".claude/skills/moai-workflow-thinking/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/Seung-zedd/dhaa",
+  "dir_name": "moai-workflow-thinking",
+  "downloaded_at": "2026-10-26T04:28:34.332341Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, planning",
+    "score": 3,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "planning"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Seung-zedd",
+  "source_url": "https://github.com/Seung-zedd/dhaa/blob/main/.claude/skills/moai-workflow-thinking/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Seung-zedd/dhaa/blob/main/.claude/skills/moai-workflow-thinking/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Sequential Thinking MCP for structured step-by-step analysis via --deepthink flag. Separate from UltraThink which is Claude's native extended reasoning mode. Use for multi-step analysis or architecture decisions."
+}

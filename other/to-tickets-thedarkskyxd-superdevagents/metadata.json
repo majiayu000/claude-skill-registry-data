@@ -1,0 +1,37 @@
+{
+  "name": "to-tickets",
+  "repo": "TheDarkSkyXD/SuperDevAgents",
+  "path": ".agents/skills/to-tickets/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/TheDarkSkyXD/SuperDevAgents",
+  "dir_name": "to-tickets-thedarkskyxd-superdevagents",
+  "downloaded_at": "2026-10-26T04:41:59.952660Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "context-window"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "TheDarkSkyXD",
+  "source_url": "https://github.com/TheDarkSkyXD/SuperDevAgents/blob/main/.agents/skills/to-tickets/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/TheDarkSkyXD/SuperDevAgents/blob/main/.agents/skills/to-tickets/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring its blocking edges, published to the configured tracker (edges as text in one file per ticket locally, or native blocking links on a real tracker)."
+}

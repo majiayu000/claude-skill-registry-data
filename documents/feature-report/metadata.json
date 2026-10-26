@@ -1,0 +1,38 @@
+{
+  "name": "feature-report",
+  "repo": "achrafbenamrane/TK-link",
+  "path": ".claude/skills/feature-report/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/achrafbenamrane/TK-link",
+  "dir_name": "feature-report",
+  "downloaded_at": "2026-10-26T05:09:29.104026Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, pdf, markdown",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "pdf",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "achrafbenamrane",
+  "source_url": "https://github.com/achrafbenamrane/TK-link/blob/main/.claude/skills/feature-report/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/achrafbenamrane/TK-link/blob/main/.claude/skills/feature-report/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate the evidence report for a feature \u2014 diff summary, Argent screenshots, AC-to-test traceability, verification verdicts \u2014 into docs/reports/NNN-slug.md (Markdown, the artifact PMs and reviewers actually read). Use when feature work is verified and the user says \"report\", \"feature report\", \"document what we did\", or as the reporting phase before a PR."
+}

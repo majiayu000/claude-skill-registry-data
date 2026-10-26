@@ -1,0 +1,38 @@
+{
+  "name": "design-system",
+  "repo": "MaxPrehoda/motif",
+  "path": "skills/design-system/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/MaxPrehoda/motif",
+  "dir_name": "design-system-maxprehoda-motif",
+  "downloaded_at": "2026-10-26T03:52:53.658070Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MaxPrehoda",
+  "source_url": "https://github.com/MaxPrehoda/motif/blob/main/skills/design-system/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MaxPrehoda/motif/blob/main/skills/design-system/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds a design system for a codebase and keeps it enforced, by running five phases in order: measure the spacing, type and color values in use, settle the design decisions with the user, write them as tokens, update the code to use the tokens, and install a linter. Use when the user wants a design system, says their UI is inconsistent, or asks to standardize spacing, type or color."
+}

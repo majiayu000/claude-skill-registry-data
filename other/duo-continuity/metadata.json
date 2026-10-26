@@ -1,0 +1,37 @@
+{
+  "name": "duo-continuity",
+  "repo": "Kimeur/duology",
+  "path": "plugins/duology/skills/duo-continuity/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Kimeur/duology",
+  "dir_name": "duo-continuity",
+  "downloaded_at": "2026-10-26T03:36:16.856597Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, platform=2",
+    "score": 2,
+    "runner_up": "platform",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Kimeur",
+  "source_url": "https://github.com/Kimeur/duology/blob/main/plugins/duology/skills/duo-continuity/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Kimeur/duology/blob/main/plugins/duology/skills/duo-continuity/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Keeps app state alive when iPhone Duo, Apple's foldable, folds, unfolds, rotates or resizes between the outer display and the inner display. Use when scroll position, video or audio playback, typed text, keyboard focus, selection, form input, the selected item, the navigation stack, an upload or sign-in resets or reloads on fold or unfold, and when writing or reviewing @Observable models, @SceneStorage, NavigationPath, NavigationSplitView, ScrollPosition, AnyLayout, .id, onAppear, .task, registerForTraitChanges or viewWillTransition(to:with:)."
+}

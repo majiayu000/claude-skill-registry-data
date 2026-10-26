@@ -1,0 +1,37 @@
+{
+  "name": "duo-postures",
+  "repo": "Kimeur/duology",
+  "path": "plugins/duology-design/skills/duo-postures/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Kimeur/duology",
+  "dir_name": "duo-postures",
+  "downloaded_at": "2026-10-26T03:36:18.252938Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Kimeur",
+  "source_url": "https://github.com/Kimeur/duology/blob/main/plugins/duology-design/skills/duo-postures/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Kimeur/duology/blob/main/plugins/duology-design/skills/duo-postures/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Designs iPhone Duo screens for every pose Apple shows: closed on the outer display, open flat (wide or tall), partly folded like a book, propped on a table like a laptop (tabletop), standing like a tent, and open and turned around (flipped, rear cameras facing the user). Use it when a screen must work half folded, when you build a tabletop media player or video call (video on top, the same controls below the fold), a book-pose layout with two regions, or a hinge effect. There is no posture API: read size classes and the .division reserved region (active only when partly folded) with FoldGeometry and FoldRegionsLayout, and keep onHingeChange and UIHingeInteraction for effects, with Reduce Motion and accessibility rules."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "finetuning",
+  "repo": "Robertjam954/multimodal_rag_application",
+  "path": "Projects/worktrees/mmrag-oauth1-skill/.claude/skills/microsoft-foundry/finetuning/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Robertjam954/multimodal_rag_application",
+  "dir_name": "finetuning-robertjam954-multimodal-rag-appli",
+  "downloaded_at": "2026-10-26T04:21:08.848612Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=3, ai-ml=3",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Robertjam954",
+  "source_url": "https://github.com/Robertjam954/multimodal_rag_application/blob/main/Projects/worktrees/mmrag-oauth1-skill/.claude/skills/microsoft-foundry/finetuning/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Robertjam954/multimodal_rag_application/blob/main/Projects/worktrees/mmrag-oauth1-skill/.claude/skills/microsoft-foundry/finetuning/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Fine-tune models on Azure AI Foundry using SFT (supervised), DPO (preference), or RFT (reinforcement with graders). Covers dataset preparation, training job submission, deployment, and evaluation. USE FOR: fine-tune, SFT, DPO, RFT, training data, grader, distillation, fine-tuned model, training job, large file upload, calibrate grader, deploy fine-tuned model, evaluate fine-tuned model. DO NOT USE FOR: general model deployment without fine-tuning (use deploy-model), agent creation (use agents), prompt optimization without training (use prompt-optimizer)."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "pywf-oss-setup-repo",
+  "repo": "MacHu-GWU/cookiecutter_pywf_open_source_demo-project",
+  "path": ".claude/skills/pywf-oss-setup-repo/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MacHu-GWU/cookiecutter_pywf_open_source_demo-project",
+  "dir_name": "pywf-oss-setup-repo",
+  "downloaded_at": "2026-10-26T03:48:49.760055Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MacHu-GWU",
+  "source_url": "https://github.com/MacHu-GWU/cookiecutter_pywf_open_source_demo-project/blob/main/.claude/skills/pywf-oss-setup-repo/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MacHu-GWU/cookiecutter_pywf_open_source_demo-project/blob/main/.claude/skills/pywf-oss-setup-repo/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Take a freshly generated pywf open-source Python library repo live: verify it locally, create and push the GitHub repo, set its metadata, connect Codecov and Read the Docs, enable CI, and confirm all are green, with the user's yes before each external step. Use when the user has a new repo from the template and wants it on GitHub with CI, coverage, and hosted docs."
+}

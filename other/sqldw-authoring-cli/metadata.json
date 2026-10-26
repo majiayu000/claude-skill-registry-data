@@ -1,0 +1,38 @@
+{
+  "name": "sqldw-authoring-cli",
+  "repo": "MichelRojo86WPP/copilot-config",
+  "path": "skills/sqldw-authoring-cli/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MichelRojo86WPP/copilot-config",
+  "dir_name": "sqldw-authoring-cli",
+  "downloaded_at": "2026-10-26T03:55:24.654131Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, data=3",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MichelRojo86WPP",
+  "source_url": "https://github.com/MichelRojo86WPP/copilot-config/blob/main/skills/sqldw-authoring-cli/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MichelRojo86WPP/copilot-config/blob/main/skills/sqldw-authoring-cli/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Execute authoring T-SQL (DDL, DML, data ingestion, transactions, schema changes) against Microsoft Fabric Data Warehouse and SQL endpoints from agentic CLI environments. Use when the user wants to: (1) create/alter/drop tables from terminal, (2) insert/update/delete/merge data via CLI, (3) run COPY INTO or OPENROWSET ingestion, (4) manage transactions or stored procedures, (5) perform schema evolution, (6) use time travel or snapshots, (7) generate ETL/ELT shell scripts, (8) create views/functions/procedures on Lakehouse SQLEP. Triggers: \"create table in warehouse\", \"insert data via T-SQL\", \"load from ADLS\", \"COPY INTO\", \"run ETL with T-SQL\", \"alter warehouse table\", \"upsert with T-SQL\", \"merge into warehouse\", \"create T-SQL procedure\", \"warehouse time travel\", \"recover deleted warehouse data\", \"create warehouse schema\", \"deploy warehouse\", \"transaction conflict\", \"snapshot isolation error\"."
+}

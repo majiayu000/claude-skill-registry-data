@@ -1,0 +1,37 @@
+{
+  "name": "br-woo-analytics",
+  "repo": "Lonsdale201/wp-agent-skills",
+  "path": "better-route/br-woo-analytics/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Lonsdale201/wp-agent-skills",
+  "dir_name": "br-woo-analytics",
+  "downloaded_at": "2026-10-26T03:44:10.430111Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "analytics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Lonsdale201",
+  "source_url": "https://github.com/Lonsdale201/wp-agent-skills/blob/main/better-route/br-woo-analytics/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Lonsdale201/wp-agent-skills/blob/main/better-route/br-woo-analytics/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Expose read-only WooCommerce Analytics with Better Route WooAnalyticsService. Use for supported reports, report-specific date and pagination contracts, native report permissions, comparison windows, historical import readiness, decimal-money DTOs or WooAnalyticsOpenApi helpers. CRUD, checkout eligibility and import execution are separate concerns."
+}

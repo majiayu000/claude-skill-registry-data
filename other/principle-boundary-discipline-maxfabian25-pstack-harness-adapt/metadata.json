@@ -1,0 +1,37 @@
+{
+  "name": "principle-boundary-discipline",
+  "repo": "MaxFabian25/pstack-harness-adaptations",
+  "path": "skills/principle-boundary-discipline/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MaxFabian25/pstack-harness-adaptations",
+  "dir_name": "principle-boundary-discipline-maxfabian25-pstack-harness-adapt",
+  "downloaded_at": "2026-10-26T03:52:42.319908Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MaxFabian25",
+  "source_url": "https://github.com/MaxFabian25/pstack-harness-adaptations/blob/main/skills/principle-boundary-discipline/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MaxFabian25/pstack-harness-adaptations/blob/main/skills/principle-boundary-discipline/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Apply when wiring validation, error handling, or framework adapters. Concentrate guards at system boundaries (CLI, config, network, external APIs); trust internal types and keep business logic in pure functions."
+}

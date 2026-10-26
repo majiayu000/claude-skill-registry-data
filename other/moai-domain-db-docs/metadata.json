@@ -1,0 +1,37 @@
+{
+  "name": "moai-domain-db-docs",
+  "repo": "Seung-zedd/dhaa",
+  "path": ".claude/skills/moai-domain-db-docs/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Seung-zedd/dhaa",
+  "dir_name": "moai-domain-db-docs",
+  "downloaded_at": "2026-10-26T04:28:31.993472Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Seung-zedd",
+  "source_url": "https://github.com/Seung-zedd/dhaa/blob/main/.claude/skills/moai-domain-db-docs/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Seung-zedd/dhaa/blob/main/.claude/skills/moai-domain-db-docs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Parses DB migration files (Prisma, Alembic, Rails, raw SQL) and keeps .moai/project/db/schema.md, erd.mmd, migrations.md in sync. Powers the PostToolUse hook and /moai db refresh/verify subcommands."
+}

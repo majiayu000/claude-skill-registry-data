@@ -1,0 +1,38 @@
+{
+  "name": "design-apply",
+  "repo": "MaxPrehoda/motif",
+  "path": "skills/design-apply/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/MaxPrehoda/motif",
+  "dir_name": "design-apply",
+  "downloaded_at": "2026-10-26T03:52:53.372232Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, component, tailwind",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "component",
+      "tailwind"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MaxPrehoda",
+  "source_url": "https://github.com/MaxPrehoda/motif/blob/main/skills/design-apply/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MaxPrehoda/motif/blob/main/skills/design-apply/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Updates a codebase to use the design tokens from design-ratify, in four batches ordered from safest to riskiest: exact matches, near matches, Tailwind colors to named roles, then everything else. Commits each batch separately. Use as phase 4 of design-system, after design-ratify."
+}

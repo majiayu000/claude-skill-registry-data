@@ -1,0 +1,37 @@
+{
+  "name": "daily-report",
+  "repo": "achrafbenamrane/TK-link",
+  "path": ".claude/skills/daily-report/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/achrafbenamrane/TK-link",
+  "dir_name": "daily-report-achrafbenamrane-tk-link",
+  "downloaded_at": "2026-10-26T05:09:28.060742Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "achrafbenamrane",
+  "source_url": "https://github.com/achrafbenamrane/TK-link/blob/main/.claude/skills/daily-report/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/achrafbenamrane/TK-link/blob/main/.claude/skills/daily-report/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write today's daily report in FRENCH, organized by project, under docs/reports/daily/. Use when the user says \"daily report\", \"rapport quotidien\", \"standup\", \"what did I do today/yesterday\", or wants a log of what changed. Built so nothing gets forgotten."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "azure-enterprise-infra-planner",
+  "repo": "Robertjam954/multimodal_rag_application",
+  "path": "Projects/worktrees/mmrag-oauth1-skill/.claude/skills/azure-enterprise-infra-planner/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/Robertjam954/multimodal_rag_application",
+  "dir_name": "azure-enterprise-infra-planner-robertjam954-multimodal-rag-appli",
+  "downloaded_at": "2026-10-26T04:21:09.021444Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: deploy, infra, infrastructure",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Robertjam954",
+  "source_url": "https://github.com/Robertjam954/multimodal_rag_application/blob/main/Projects/worktrees/mmrag-oauth1-skill/.claude/skills/azure-enterprise-infra-planner/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Robertjam954/multimodal_rag_application/blob/main/Projects/worktrees/mmrag-oauth1-skill/.claude/skills/azure-enterprise-infra-planner/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Architect and provision enterprise Azure infrastructure from workload descriptions. For cloud architects and platform engineers planning networking, identity, security, compliance, and multi-resource topologies with WAF alignment. Generates Bicep or Terraform directly (no azd). WHEN: 'plan Azure infrastructure', 'architect Azure landing zone', 'design hub-spoke network', 'plan multi-region DR topology', 'set up VNets firewalls and private endpoints', 'subscription-scope Bicep deployment', 'Azure Backup for VM workloads'. PREFER azure-prepare FOR app-centric workflows."
+}

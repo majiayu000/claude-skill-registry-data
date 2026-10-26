@@ -1,0 +1,37 @@
+{
+  "name": "duo-swiftui-27",
+  "repo": "Kimeur/duology",
+  "path": "plugins/duology-features/skills/duo-swiftui-27/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Kimeur/duology",
+  "dir_name": "duo-swiftui-27",
+  "downloaded_at": "2026-10-26T03:36:20.031606Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Kimeur",
+  "source_url": "https://github.com/Kimeur/duology/blob/main/plugins/duology-features/skills/duo-swiftui-27/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Kimeur/duology/blob/main/plugins/duology-features/skills/duo-swiftui-27/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The iOS 27 SwiftUI changes that matter on iPhone Duo, Apple's foldable, where every fold, unfold and rotation resizes the app. Use it when building with Xcode 27.1 breaks a view (@State macro, ContentBuilder, TN3211), when a grid or list that reflows between the outer and inner display needs drag to reorder or swipe actions, or when you adopt the new tab, toolbar, dialog or AsyncImage APIs in a Duo app. Covers the @State macro through a fold and its source breaks, reorderable() and reorderContainer(for:isEnabled:move:) in a 2 or 4 column grid and across the fold, swipeActionsContainer() outside List, Tab(role: .prominent) at the foot of the vertical tab bar, toolbarMinimizationBehavior(_:for:) (the talk's toolbarMinimizeBehavior is not in the SDK), visibilityPriority, ToolbarOverflowMenu, topBarPinnedTrailing, alert and confirmationDialog with item:, AsyncImage HTTP caching and asyncImageURLSession(_:), and resizable iPhone apps. Points to Apple's swiftui-whats-new-27 Xcode skill for the rest."
+}

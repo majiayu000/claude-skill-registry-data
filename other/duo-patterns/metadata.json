@@ -1,0 +1,37 @@
+{
+  "name": "duo-patterns",
+  "repo": "Kimeur/duology",
+  "path": "plugins/duology-design/skills/duo-patterns/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Kimeur/duology",
+  "dir_name": "duo-patterns",
+  "downloaded_at": "2026-10-26T03:36:18.463190Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Kimeur",
+  "source_url": "https://github.com/Kimeur/duology/blob/main/plugins/duology-design/skills/duo-patterns/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Kimeur/duology/blob/main/plugins/duology-design/skills/duo-patterns/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Picks and builds layout patterns for iPhone Duo, Apple's foldable iPhone, in SwiftUI - list-detail, supporting pane, two-page, dual view, extended canvas, feed reflow with even columns, tabs to sidebar, and displacement off the fold. Use it when you design or fix a screen for the outer display and the inner display, when content or buttons land in the fold, or when choosing between NavigationSplitView, inspector, ArrangementView (split and overlay styles), TabView with sidebarAdaptable and defaultTabBarPlacement, and reserved regions (division, occlusion, includeInactive)."
+}

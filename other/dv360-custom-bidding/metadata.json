@@ -1,0 +1,37 @@
+{
+  "name": "dv360-custom-bidding",
+  "repo": "MichelRojo86WPP/copilot-config",
+  "path": "skills/dv360-custom-bidding/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MichelRojo86WPP/copilot-config",
+  "dir_name": "dv360-custom-bidding",
+  "downloaded_at": "2026-10-26T03:55:25.767064Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, platform=2",
+    "score": 2,
+    "runner_up": "platform",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "analytics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MichelRojo86WPP",
+  "source_url": "https://github.com/MichelRojo86WPP/copilot-config/blob/main/skills/dv360-custom-bidding/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MichelRojo86WPP/copilot-config/blob/main/skills/dv360-custom-bidding/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Custom Bidding de Google Display & Video 360 (DV360): escritura, revisi\u00f3n y depuraci\u00f3n de scripts de puja personalizada. Cubre el DSL completo (funciones de agregaci\u00f3n max_aggregate/sum_aggregate/first_match_aggregate, casting, log), el cat\u00e1logo de se\u00f1ales (dimensiones, geo, dispositivo, inventario, viewability, v\u00eddeo/audio, Floodlight, GA4), las limitaciones del lenguaje (sin bucles, sin def, sin try, sin slices), y patrones probados en producci\u00f3n: tROAS escalonado, CPA fijo, micro-conversiones de checkout, routing por insertion_order_id, panel de pesos centralizado y bloque fallback. Usar al crear un algoritmo de custom bidding, iterar sobre uno existente, diagnosticar underdelivery o data sparsity, o traducir un objetivo de negocio a una funci\u00f3n de scoring."
+}

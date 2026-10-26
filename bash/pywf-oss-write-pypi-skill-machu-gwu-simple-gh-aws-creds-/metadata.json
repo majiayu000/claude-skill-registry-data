@@ -1,0 +1,37 @@
+{
+  "name": "pywf-oss-write-pypi-skill",
+  "repo": "MacHu-GWU/simple_gh_aws_creds-project",
+  "path": ".claude/skills/pywf-oss-write-pypi-skill/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/MacHu-GWU/simple_gh_aws_creds-project",
+  "dir_name": "pywf-oss-write-pypi-skill-machu-gwu-simple-gh-aws-creds-",
+  "downloaded_at": "2026-10-26T03:49:06.895257Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: script, cli",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MacHu-GWU",
+  "source_url": "https://github.com/MacHu-GWU/simple_gh_aws_creds-project/blob/main/.claude/skills/pywf-oss-write-pypi-skill/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MacHu-GWU/simple_gh_aws_creds-project/blob/main/.claude/skills/pywf-oss-write-pypi-skill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate an Agent Skill, named pypi-<package_name>, that documents this library's public API and command line interface, so future sessions in other projects can use the library without re-reading its source. Use when the user asks to turn this library into a Claude skill, usually after a release."
+}

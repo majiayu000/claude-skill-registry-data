@@ -1,0 +1,38 @@
+{
+  "name": "write-prd",
+  "repo": "achrafbenamrane/TK-link",
+  "path": ".claude/skills/write-prd/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/achrafbenamrane/TK-link",
+  "dir_name": "write-prd-achrafbenamrane-tk-link",
+  "downloaded_at": "2026-10-26T05:09:27.032111Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, prd, feature",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "prd",
+      "feature"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "achrafbenamrane",
+  "source_url": "https://github.com/achrafbenamrane/TK-link/blob/main/.claude/skills/write-prd/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/achrafbenamrane/TK-link/blob/main/.claude/skills/write-prd/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn project context (intake answers, meeting transcripts, the cadrage doc) into a clear Product Requirements Document in docs/product/prds/. Use when starting a project, when /progix needs the PRD, or when the user says \"write the PRD\", \"draft requirements\", or requirements changed enough to need a rewrite. The PRD is the product's source of intent \u2014 what and why, before how."
+}

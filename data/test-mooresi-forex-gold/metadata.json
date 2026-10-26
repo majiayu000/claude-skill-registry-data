@@ -1,0 +1,38 @@
+{
+  "name": "test",
+  "repo": "MooreSi/forex-gold",
+  "path": ".claude/skills/test/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/MooreSi/forex-gold",
+  "dir_name": "test-mooresi-forex-gold",
+  "downloaded_at": "2026-10-26T03:57:29.260707Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, analytics, database",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "analytics",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MooreSi",
+  "source_url": "https://github.com/MooreSi/forex-gold/blob/main/.claude/skills/test/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MooreSi/forex-gold/blob/main/.claude/skills/test/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write and review test cases. Use when creating new tests, reviewing existing tests for correctness, or improving coverage. Enforces rules that stop AI-generated tests from being written to pass rather than to verify. Read alongside docs/system/rules/40-testing.md."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "review-agent-readiness",
+  "repo": "X-McKay/playbooks",
+  "path": "development-skills/review-agent-readiness/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/X-McKay/playbooks",
+  "dir_name": "review-agent-readiness",
+  "downloaded_at": "2026-10-26T04:57:53.799337Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "X-McKay",
+  "source_url": "https://github.com/X-McKay/playbooks/blob/main/development-skills/review-agent-readiness/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/X-McKay/playbooks/blob/main/development-skills/review-agent-readiness/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Assemble a bounded readiness review for one frozen agent candidate before a production release, pilot, promotion, or material change. Use to consume a Part 4 evaluation handoff; verify code, configuration, dependency, evidence, support, and rollout identities; expose blockers; and recommend a scoped go, conditional_go, or no_go. Do not use to create evaluation evidence, authorize release, deploy, or operate a service."
+}

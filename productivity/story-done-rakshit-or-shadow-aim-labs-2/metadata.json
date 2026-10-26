@@ -1,0 +1,38 @@
+{
+  "name": "story-done",
+  "repo": "Rakshit-or-shadow/Aim-Labs",
+  "path": ".agents/skills/story-done/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/Rakshit-or-shadow/Aim-Labs",
+  "dir_name": "story-done-rakshit-or-shadow-aim-labs-2",
+  "downloaded_at": "2026-10-26T04:19:34.391023Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: automation, workflow, task",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "automation",
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Rakshit-or-shadow",
+  "source_url": "https://github.com/Rakshit-or-shadow/Aim-Labs/blob/main/.agents/skills/story-done/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Rakshit-or-shadow/Aim-Labs/blob/main/.agents/skills/story-done/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Closes a finished story: verifies each acceptance criterion, checks for design or ADR deviations and updates its status. Use when the user says a story is done, finished or ready to close."
+}

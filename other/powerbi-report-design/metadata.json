@@ -1,0 +1,37 @@
+{
+  "name": "powerbi-report-design",
+  "repo": "MichelRojo86WPP/copilot-config",
+  "path": "skills/powerbi-report-design/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/MichelRojo86WPP/copilot-config",
+  "dir_name": "powerbi-report-design",
+  "downloaded_at": "2026-10-26T03:55:26.914075Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MichelRojo86WPP",
+  "source_url": "https://github.com/MichelRojo86WPP/copilot-config/blob/main/skills/powerbi-report-design/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MichelRojo86WPP/copilot-config/blob/main/skills/powerbi-report-design/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generate Power BI report visual design guidance before PBIR files are written. Use when the user wants to: (1) choose tone, signature, page archetypes, chart types, layout, color, typography, theme direction, or accessibility approach, (2) redesign/restyle an existing report, apply a brand, or critique chart/layout choices, (3) produce a design contract for `powerbi-report-authoring`. For end-to-end requirements, approval, and build sequencing, use `powerbi-report-planning`. Triggers: \"design Power BI report\", \"make dashboard look professional\", \"choose chart type\", \"apply brand to report\", \"redesign report\", \"create design brief\", \"Power BI report design archetype\"."
+}

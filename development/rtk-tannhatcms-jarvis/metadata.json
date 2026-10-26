@@ -1,0 +1,38 @@
+{
+  "name": "rtk",
+  "repo": "TanNhatCMS/jarvis",
+  "path": "skills/rtk/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/TanNhatCMS/jarvis",
+  "dir_name": "rtk-tannhatcms-jarvis",
+  "downloaded_at": "2026-10-26T04:38:55.558603Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "TanNhatCMS",
+  "source_url": "https://github.com/TanNhatCMS/jarvis/blob/main/skills/rtk/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/TanNhatCMS/jarvis/blob/main/skills/rtk/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Trim noisy dev-command output (git diff, tsc, test logs) before it fills agent context, using the rtk binary. Use when a command's output is long and repetitive \u2014 saves 60-90% tokens. Do NOT use when another tool or gate parses the raw output."
+}

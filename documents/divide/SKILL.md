@@ -1,0 +1,13 @@
+---
+name: divide
+description: Split a GitHub issue or task into session-sized issues and put them on the board. Use when a task is too big for one session or remaining work must be split off.
+argument-hint: "issue number or task description"
+---
+
+0. **Target repo** per [BOARD.md](../next/BOARD.md#target-repo): resolve `origin` (this skill needs it on GitHub), `-R <owner>/<repo>` on every `gh` call, and on a fork ask which repo to write to before any write.
+1. Read the target (`gh issue view <n> -R <owner>/<repo>`, or the user's description), its existing children (`gh api repos/<owner>/<repo>/issues/<n>/sub_issues`, which `issue view` doesn't show, and any task list in the body), plus any detail the caller passes (from `wayfinder`: decision rows and resolution comments).
+2. **Session-sized** = fits the ~75K-token smart zone and ends in one PR. Target already fits one session → don't divide: say so and stop. Else propose 2+ session-sized pieces, each with a "done when", covering only what no existing child (open or closed) already covers; list those children in the proposal. Show the split; create nothing yet. You revise the split → show it again and wait for the yes.
+3. On yes: `gh issue create -R <owner>/<repo> --title "<piece>" --body "Part of #<n>. <details>"` per piece, then add a task-list checkbox per child to the parent's body; a parent that already has sub-issues gets each child attached as one instead (`gh api repos/<owner>/<repo>/issues/<n>/sub_issues -X POST -F sub_issue_id=<id>`, `<id>` from `gh api repos/<owner>/<repo>/issues/<a> -q .id`), no checkboxes. Target read from another repo than the one written to (fork, per BOARD.md) → full cross-refs: `Part of <owner>/<repo>#<n>` naming the target's repo, and edit the parent (checkboxes as `<owner>/<repo>#a`, or sub-issue attach) only after a yes naming the parent's repo, else skip them and say so; the roadmap line (step 5) names children the same way (`#n → <owner>/<repo>#a`). Free-text target (no issue number) → there is no parent: omit "Part of", the checkboxes and the roadmap link (steps 3 and 5), and put the shared context in each child's body.
+4. Put each child on the board at Todo ([BOARD.md](../next/BOARD.md)).
+5. Roadmap doc links the parent → add `#n → #a, #b` beside it and commit only that file (`git add <roadmap path>`), as `docs: divide #n into #a/#b/#c…` (every child). Commit on the current branch; on the default branch, make a branch first per the repo's branch rules, and once committed report the branch + SHA, ask whether to push and open a PR (push only on a yes), then switch back to the branch you started on.
+6. Issue target: parent now only tracks children → say so; offer to close it once they land.

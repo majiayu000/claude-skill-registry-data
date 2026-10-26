@@ -1,0 +1,37 @@
+{
+  "name": "moai-kanban-foreman",
+  "repo": "Seung-zedd/dhaa",
+  "path": ".claude/skills/moai-kanban-foreman/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Seung-zedd/dhaa",
+  "dir_name": "moai-kanban-foreman",
+  "downloaded_at": "2026-10-26T04:28:31.493979Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "ci",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Seung-zedd",
+  "source_url": "https://github.com/Seung-zedd/dhaa/blob/main/.claude/skills/moai-kanban-foreman/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Seung-zedd/dhaa/blob/main/.claude/skills/moai-kanban-foreman/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "One unattended kanban foreman iteration: watch the backlog queue, dispatch the next operator-picked card to an isolated worker, collect completion evidence on read (not on claims), and report. This is the body the project's loop.md driver invokes each iteration of a bare /loop; it can also be invoked directly to test one cycle by hand."
+}

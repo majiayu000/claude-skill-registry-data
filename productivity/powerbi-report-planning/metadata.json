@@ -1,0 +1,38 @@
+{
+  "name": "powerbi-report-planning",
+  "repo": "MichelRojo86WPP/copilot-config",
+  "path": "skills/powerbi-report-planning/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/MichelRojo86WPP/copilot-config",
+  "dir_name": "powerbi-report-planning",
+  "downloaded_at": "2026-10-26T03:55:27.397629Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, planning",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "planning"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MichelRojo86WPP",
+  "source_url": "https://github.com/MichelRojo86WPP/copilot-config/blob/main/skills/powerbi-report-planning/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MichelRojo86WPP/copilot-config/blob/main/skills/powerbi-report-planning/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Build a guided requirements-to-implementation workflow for new Power BI reports and dashboards from semantic models, datasets, or PBIP projects. Use when the user wants to: (1) plan then implement a report, (2) define audience, scope, page plan, design direction, dependencies, and delivery target, (3) create a locked report spec with approval before PBIR authoring. For direct edits to existing report files, use `powerbi-report-authoring`. For design-only critique or redesign, use `powerbi-report-design`. Triggers: \"build me a dashboard\", \"create a new report\", \"plan then implement\", \"define and build Power BI report\", \"walk me through creating a report\"."
+}

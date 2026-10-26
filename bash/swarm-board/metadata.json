@@ -1,0 +1,37 @@
+{
+  "name": "swarm-board",
+  "repo": "Ovich/swarmstorm",
+  "path": "skills/companions/swarm-board/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/Ovich/swarmstorm",
+  "dir_name": "swarm-board",
+  "downloaded_at": "2026-10-26T04:10:36.398127Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, cli",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Ovich",
+  "source_url": "https://github.com/Ovich/swarmstorm/blob/main/skills/companions/swarm-board/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Ovich/swarmstorm/blob/main/skills/companions/swarm-board/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when agents run together on the project's swarm board: a plan, a task swarm or a brainswarm, as its orchestrator or a member whose brief names a run, or when a run on the board has to be opened, read, interrupted or closed, or how the runs went has to be read from outside them. Produces nothing but the run's state on the board, or its figures. Not for documents (aiview)."
+}

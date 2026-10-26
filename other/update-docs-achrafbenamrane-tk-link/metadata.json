@@ -1,0 +1,38 @@
+{
+  "name": "update-docs",
+  "repo": "achrafbenamrane/TK-link",
+  "path": ".claude/skills/update-docs/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/achrafbenamrane/TK-link",
+  "dir_name": "update-docs-achrafbenamrane-tk-link",
+  "downloaded_at": "2026-10-26T05:09:27.731711Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=3, quality=3",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "doc",
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "achrafbenamrane",
+  "source_url": "https://github.com/achrafbenamrane/TK-link/blob/main/.claude/skills/update-docs/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/achrafbenamrane/TK-link/blob/main/.claude/skills/update-docs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Close the documentation loop after a feature ships \u2014 distill the spec into the living feature doc, update CUJs and indexes, mark the spec shipped \u2014 or run an audit to reconcile the docs tree with reality. Use after merge, when the user says \"update docs\", \"docs pass\", \"close out the feature\", \"sync docs\", or when docs have drifted. Subsumes the old /sync-docs command. Stale docs poison every future agent session, so this is maintenance of the harness itself."
+}

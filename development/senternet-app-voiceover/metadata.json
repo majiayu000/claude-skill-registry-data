@@ -1,0 +1,39 @@
+{
+  "name": "senternet-app-voiceover",
+  "repo": "MattSenter/senternet-site-skills",
+  "path": ".claude/skills/senternet-app-voiceover/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/MattSenter/senternet-site-skills",
+  "dir_name": "senternet-app-voiceover",
+  "downloaded_at": "2026-10-26T03:52:14.023438Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, debug",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "MattSenter",
+  "source_url": "https://github.com/MattSenter/senternet-site-skills/blob/main/.claude/skills/senternet-app-voiceover/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/MattSenter/senternet-site-skills/blob/main/.claude/skills/senternet-app-voiceover/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Test a Senternet macOS app with VoiceOver for real, then fix what fails. Drives a live VoiceOver session from the shell through VoiceOver's AppleScript interface and records what VoiceOver actually speaks (not what the code suggests it should), walks every window, pane, control, menu bar menu and app-specific flow, fixes the gaps with standard SwiftUI/AppKit patterns, localizes any new spoken strings in every supported language, retests each fix live, and restores the machine (VoiceOver, its AppleScript permission, hidden apps, clipboard, the installed app copy) afterwards. Weatherling and CommandH are the references. Use when the user says \"test VoiceOver\", \"VoiceOver support\", \"is this accessible with VoiceOver\", \"screen reader test\", or before declaring VoiceOver support in App Store Connect."
+}

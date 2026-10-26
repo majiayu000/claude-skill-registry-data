@@ -1,0 +1,38 @@
+{
+  "name": "featureplan-kickoff",
+  "repo": "Vinix24/vnx-orchestration",
+  "path": "skills/featureplan-kickoff/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/Vinix24/vnx-orchestration",
+  "dir_name": "featureplan-kickoff",
+  "downloaded_at": "2026-10-26T04:52:46.320848Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "orchestration",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Vinix24",
+  "source_url": "https://github.com/Vinix24/vnx-orchestration/blob/main/skills/featureplan-kickoff/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Vinix24/vnx-orchestration/blob/main/skills/featureplan-kickoff/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "VNX feature-execution kickoff preflight. USE THIS when starting or resuming a feature or track from its plan: checking worktree/queue health, finding the first promoteable deliverable, and handing off to @t0-orchestrator. Reads the feature's track + plan doc from Horizon's tracks DB (`vnx horizon`, alias `vnx objective`); the repo FEATURE_PLAN.md/PR_QUEUE.md are generated examples, not the source, and kickoff never initializes or promotes from them."
+}

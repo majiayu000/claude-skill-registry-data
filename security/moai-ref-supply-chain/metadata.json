@@ -1,0 +1,39 @@
+{
+  "name": "moai-ref-supply-chain",
+  "repo": "Seung-zedd/dhaa",
+  "path": ".claude/skills/moai-ref-supply-chain/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/Seung-zedd/dhaa",
+  "dir_name": "moai-ref-supply-chain",
+  "downloaded_at": "2026-10-26T04:28:33.812393Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit, owasp",
+    "score": 4,
+    "runner_up": "ai-ml",
+    "runner_up_score": 3,
+    "signals": [
+      "security",
+      "auth",
+      "audit",
+      "owasp"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Seung-zedd",
+  "source_url": "https://github.com/Seung-zedd/dhaa/blob/main/.claude/skills/moai-ref-supply-chain/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Seung-zedd/dhaa/blob/main/.claude/skills/moai-ref-supply-chain/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Software supply-chain defensive security reference: SBOM generation and verification (SPDX / CycloneDX), dependency-confusion defense, malicious-package triage playbook, SLSA provenance levels, Sigstore / cosign signing and verification, package-registry hardening, typosquatting defense, and transitive-dependency auditing. Agent-extending skill that amplifies backend, security, and release-engineering work with production-grade defensive patterns for the software supply chain. NOT for: offensive techniques (dependency-confusion attack execution, malicious package authoring, registry exploitation), LLM/AI-specific security (see moai-ref-llm-security), web-app OWASP Top 10 (see moai-ref-owasp-checklist), or general API design (see moai-ref-api-patterns)."
+}

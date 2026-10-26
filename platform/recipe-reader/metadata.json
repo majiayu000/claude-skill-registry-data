@@ -1,0 +1,38 @@
+{
+  "name": "recipe-reader",
+  "repo": "Kimeur/duology",
+  "path": "plugins/duology-recipes/skills/recipe-reader/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/Kimeur/duology",
+  "dir_name": "recipe-reader",
+  "downloaded_at": "2026-10-26T03:36:19.636353Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: platform, device, ios",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "platform",
+      "device",
+      "ios"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Kimeur",
+  "source_url": "https://github.com/Kimeur/duology/blob/main/plugins/duology-recipes/skills/recipe-reader/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Kimeur/duology/blob/main/plugins/duology-recipes/skills/recipe-reader/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Creates a complete SwiftUI reading app for iPhone Duo, Apple's foldable: a library shelf, then one page on the closed outer display, two facing pages split at the fold when the phone is open and held wide or folded like a book, and in tabletop the page above the fold with the page turns below it. Use when someone wants to start a new e-reader, book, story, essay or long-form reading app from scratch, or runs /duo-new recipe-reader. For an existing reader, use duo-reading instead. Covers the reading place kept as a chapter and character offset in a store above the navigation stack, TextKit 1 pagination that runs again after every fold, rotation and Dynamic Type change, ReaderLayout reading the .division reserved region, an even-column shelf split at the fold, an in-app text size menu, swipe and VoiceOver page turns, three sample books written for the template, a Foundation-only model tested on the Mac (the paginator too, through AppKit), and UI tests that work on the iPhone Duo simulator."
+}

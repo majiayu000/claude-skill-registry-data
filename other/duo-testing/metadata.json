@@ -1,0 +1,37 @@
+{
+  "name": "duo-testing",
+  "repo": "Kimeur/duology",
+  "path": "plugins/duology-ship/skills/duo-testing/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Kimeur/duology",
+  "dir_name": "duo-testing",
+  "downloaded_at": "2026-10-26T03:36:17.253051Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, platform=2",
+    "score": 2,
+    "runner_up": "platform",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Kimeur",
+  "source_url": "https://github.com/Kimeur/duology/blob/main/plugins/duology-ship/skills/duo-testing/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Kimeur/duology/blob/main/plugins/duology-ship/skills/duo-testing/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Writes and runs tests for iPhone Duo apps, Apple's foldable with an outer display and an inner display, on the Mac and on the iPhone Duo simulator in Xcode 27.1. Use when adding logic tests (swiftc script, or Swift Testing with @Test and #expect), UI tests with XCTest and XCUIAutomation, launch arguments such as -uiTesting, -resetState and jump-to-screen switches with a TestSupport type, test markers with accessibilityIdentifier and accessibilityValue, when a tap or drag in a UI test doesn't reach a SwiftUI gesture (coordinate(withNormalizedOffset:), press(forDuration:thenDragTo:)), when XCUIDevice rotation or a fold can't be scripted, or when running xcodebuild test on the existing iPhone Duo simulator with -destination id=<UDID>, -parallel-testing-enabled NO, -only-testing, -resultBundlePath, -collect-test-diagnostics and xcresulttool."
+}

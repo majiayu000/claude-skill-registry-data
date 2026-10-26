@@ -1,0 +1,39 @@
+{
+  "name": "create-workbench",
+  "repo": "Ovich/swarmstorm",
+  "path": "skills/workbench/create-workbench/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/Ovich/swarmstorm",
+  "dir_name": "create-workbench",
+  "downloaded_at": "2026-10-26T04:10:39.501597Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, debug",
+    "score": 4,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Ovich",
+  "source_url": "https://github.com/Ovich/swarmstorm/blob/main/skills/workbench/create-workbench/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Ovich/swarmstorm/blob/main/skills/workbench/create-workbench/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a page is wanted to work on something with the person during development, fed the project's real data (comparing model answers, walking an agent call by call, measuring an output against its template), when such a workbench has to change, be reworked or its feed broke, or mid-session when turns went into aligning with the person on how to do a kind of work that recurs and real project data could show it. Produces the page in aiview, kind `workbench`, and the project's `workbench-<bench>` skill with its feed and operating steps. Not for designing a product screen (design-prototype) or verifying user stories (verification-skill-create)."
+}

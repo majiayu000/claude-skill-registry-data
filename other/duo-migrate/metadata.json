@@ -1,0 +1,37 @@
+{
+  "name": "duo-migrate",
+  "repo": "Kimeur/duology",
+  "path": "plugins/duology-ship/skills/duo-migrate/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Kimeur/duology",
+  "dir_name": "duo-migrate",
+  "downloaded_at": "2026-10-26T03:36:17.480327Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Kimeur",
+  "source_url": "https://github.com/Kimeur/duology/blob/main/plugins/duology-ship/skills/duo-migrate/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Kimeur/duology/blob/main/plugins/duology-ship/skills/duo-migrate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Moves an existing iOS app that already ships onto iPhone Duo, Apple's foldable, step by step: from an app built with Xcode 26 (iOS 26 SDK) or Xcode 27.0 to a build with Xcode 27.1 and the iOS 27.1 SDK. Use when an app shows up centred with empty space around it on the open iPhone Duo, when a UIKit app built with the new SDK crashes at launch because it has no scene life cycle (no UIApplicationSceneManifest, no configurationForConnecting, UIWindow(frame:) in didFinishLaunching), when replacing UIScreen.main, device orientation, userInterfaceIdiom, regular width treated as iPad, hard-coded device sizes or UIRequiresFullScreen, when toolbars and tab bars turn vertical after the rebuild, when moving CI off an older Xcode, or when planning for the April 2027 App Store rules (iOS 27 SDK or later, iOS 15 or later)."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "quarto-authoring",
+  "repo": "PovertyAction/ipa-research-data-science-hub",
+  "path": ".claude/skills/quarto/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/PovertyAction/ipa-research-data-science-hub",
+  "dir_name": "quarto",
+  "downloaded_at": "2026-10-26T04:14:34.599057Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, blog, article",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "writing",
+      "blog",
+      "article"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "PovertyAction",
+  "source_url": "https://github.com/PovertyAction/ipa-research-data-science-hub/blob/main/.claude/skills/quarto/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/PovertyAction/ipa-research-data-science-hub/blob/main/.claude/skills/quarto/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user is explicitly working with Quarto, .qmd files, _quarto.yml, Quarto projects, or Quarto features such as callouts, cross-references, citations, Mermaid diagrams, extensions, websites, books, presentations, and reports. Also use for explicit migration from or comparison with R Markdown, bookdown, blogdown, xaringan, distill, or Jupyter notebooks to Quarto. Do not use for general R Markdown or related-format questions unless Quarto or migration to Quarto is explicitly mentioned."
+}

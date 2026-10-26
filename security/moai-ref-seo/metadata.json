@@ -1,0 +1,38 @@
+{
+  "name": "moai-ref-seo",
+  "repo": "Seung-zedd/dhaa",
+  "path": ".claude/skills/moai-ref-seo/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/Seung-zedd/dhaa",
+  "dir_name": "moai-ref-seo",
+  "downloaded_at": "2026-10-26T04:28:27.764026Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, audit, owasp",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "audit",
+      "owasp"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Seung-zedd",
+  "source_url": "https://github.com/Seung-zedd/dhaa/blob/main/.claude/skills/moai-ref-seo/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Seung-zedd/dhaa/blob/main/.claude/skills/moai-ref-seo/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Search-visibility and crawlability reference for web output: canonical URL discipline, per-page title and meta description uniqueness, robots.txt and sitemap.xml as host-derived artifacts, JSON-LD structured data with entity consistency, and the document-semantics rules that decide whether a machine can read a page at all. Agent-extending skill that amplifies web-output implementation and pre-ship review with production-grade indexing and structured-data patterns. NOT for: keyboard operability, visible focus indicators, and form-control labeling (accessibility owns those; delegated to the accessibility surface); generative-engine optimization, deliberately excluded as insufficiently settled; visual polish and interface detail (see moai-ref-ui-polish); API contract design (see moai-ref-api-patterns); security headers and hardening (see moai-ref-owasp-checklist and moai-ref-secops)."
+}

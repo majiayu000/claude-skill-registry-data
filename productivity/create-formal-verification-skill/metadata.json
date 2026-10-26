@@ -1,0 +1,37 @@
+{
+  "name": "create-formal-verification-skill",
+  "repo": "LeonardSEO/pstack-for-codex",
+  "path": "plugins/pstack-for-codex/skills/create-formal-verification-skill/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/LeonardSEO/pstack-for-codex",
+  "dir_name": "create-formal-verification-skill",
+  "downloaded_at": "2026-10-26T03:41:01.437993Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, memory",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "LeonardSEO",
+  "source_url": "https://github.com/LeonardSEO/pstack-for-codex/blob/main/plugins/pstack-for-codex/skills/create-formal-verification-skill/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/LeonardSEO/pstack-for-codex/blob/main/plugins/pstack-for-codex/skills/create-formal-verification-skill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate a project-local skill that formally verifies the code where a bug costs the most and tests reach the least, in any language, with whichever verification tool fits. Use for /create-formal-verification-skill, \"model-check this race\", \"prove this invariant\", or when concurrency, retries, state machines, parsers, or unsafe code need more than tests."
+}

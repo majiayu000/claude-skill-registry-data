@@ -1,0 +1,37 @@
+{
+  "name": "duo-app-store",
+  "repo": "Kimeur/duology",
+  "path": "plugins/duology-ship/skills/duo-app-store/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Kimeur/duology",
+  "dir_name": "duo-app-store",
+  "downloaded_at": "2026-10-26T03:36:17.888297Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Kimeur",
+  "source_url": "https://github.com/Kimeur/duology/blob/main/plugins/duology-ship/skills/duo-app-store/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Kimeur/duology/blob/main/plugins/duology-ship/skills/duo-app-store/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Prepares an app's App Store submission for iPhone Duo, Apple's foldable with a 1398 x 2034 outer display and a 2007 x 2853 inner display: App Store screenshots of both displays at the exact sizes App Store Connect lists, flattened without alpha, captured from the iPhone Duo simulator in each pose with a clean status bar; app previews (886 x 1920); uploading them in App Store Connect or with the App Store Connect API (screenshot display type APP_IPHONE_DUO, not in Apple's API reference yet); the 'optimized for iPhone Duo' product page badge; promotional text and the App Store Connect preview tool; App Review notes for the poses; the privacy manifest; and the April 2027 rules (Duo screenshots required, iOS 27 SDK or later, iOS 15 or later). Use when someone asks for Duo screenshots, store assets, a submission checklist or review notes for iPhone Duo."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "writing-springboot-tests",
+  "repo": "a-pavithraa/springboot-skills-marketplace",
+  "path": "plugins/springboot-architecture/skills/writing-springboot-tests/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/a-pavithraa/springboot-skills-marketplace",
+  "dir_name": "writing-springboot-tests",
+  "downloaded_at": "2026-10-26T05:05:55.672005Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "api",
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "a-pavithraa",
+  "source_url": "https://github.com/a-pavithraa/springboot-skills-marketplace/blob/main/plugins/springboot-architecture/skills/writing-springboot-tests/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/a-pavithraa/springboot-skills-marketplace/blob/main/plugins/springboot-architecture/skills/writing-springboot-tests/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when writing or adding tests for Spring Boot code at a service's edges: HTTP clients that call other services (WireMock: 4xx and 5xx responses, timeouts, retries), Kafka or RabbitMQ listeners (redelivery, poison messages, dead-letter topics), events published to other services, or full-API tests against real databases with Testcontainers; also when a Boot 4 test needs the right imports, slices or container wiring. Supplies verified Boot 4.1 templates and the framework traps that make such tests pass without proving anything. Not for reviewing existing tests (see code-reviewer) or Boot 3 to 4 test migration (see springboot-migration)."
+}

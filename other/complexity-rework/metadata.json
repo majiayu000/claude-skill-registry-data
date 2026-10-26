@@ -1,0 +1,37 @@
+{
+  "name": "complexity-rework",
+  "repo": "Ovich/swarmstorm",
+  "path": "skills/architecture/complexity-rework/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/Ovich/swarmstorm",
+  "dir_name": "complexity-rework",
+  "downloaded_at": "2026-10-26T04:10:35.580964Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "Ovich",
+  "source_url": "https://github.com/Ovich/swarmstorm/blob/main/skills/architecture/complexity-rework/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/Ovich/swarmstorm/blob/main/skills/architecture/complexity-rework/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when code is hard to follow and is to be audited or reworked: long if/else or switch chains, cascades of type checks or parse attempts, kind fields compared to strings, flag parameters, deep nesting, a function hard to read. Also for complexity guardrails, or one long conditional function pasted. Produces a ranked audit of families, one family reworked behind characterization tests, or the guardrails."
+}
