@@ -1,0 +1,39 @@
+{
+  "name": "auditor-sample-preparation",
+  "repo": "better-isms/grcskills",
+  "path": "skills/tristan-roth/auditor-sample-preparation/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/better-isms/grcskills",
+  "dir_name": "auditor-sample-preparation",
+  "downloaded_at": "2026-10-27T04:35:48.186377Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "better-isms",
+  "source_url": "https://github.com/better-isms/grcskills/blob/main/skills/tristan-roth/auditor-sample-preparation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/better-isms/grcskills/blob/main/skills/tristan-roth/auditor-sample-preparation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when an external audit, attestation examination or assessment is coming and the\nteam wants populations and evidence ready for the samples the auditor will pull, or asks\n\"prepare for audit sampling\", \"what samples will the auditor ask for\", \"get our populations\nready\", \"the auditor wants a list of all changes in the period\", \"evidence for the leavers\nsample\", \"Type II sample prep\" or \"how do we prove completeness of the population\". Lists the\npopulations an auditor is likely to sample, builds each from the system of record with the\nquery that produced it, checks completeness and the evidence behind a dry-run sample, and\nwrites a readiness file per population plus a list of gaps to fix before fieldwork."
+}

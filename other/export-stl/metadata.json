@@ -1,0 +1,37 @@
+{
+  "name": "export-stl",
+  "repo": "appendjeff/openscad-toolkit",
+  "path": "export-stl/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/appendjeff/openscad-toolkit",
+  "dir_name": "export-stl",
+  "downloaded_at": "2026-10-27T04:20:44.841246Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "appendjeff",
+  "source_url": "https://github.com/appendjeff/openscad-toolkit/blob/main/export-stl/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/appendjeff/openscad-toolkit/blob/main/export-stl/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Export OpenSCAD (.scad) files to STL format with geometry validation. Checks for non-manifold geometry, self-intersections, and other printability issues."
+}

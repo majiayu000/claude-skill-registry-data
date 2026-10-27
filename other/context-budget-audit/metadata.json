@@ -1,0 +1,38 @@
+{
+  "name": "context-budget-audit",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/cc-setup-tooling/skills/context-budget-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "context-budget-audit",
+  "downloaded_at": "2026-10-27T04:32:43.226776Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, context-management=3",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/cc-setup-tooling/skills/context-budget-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/cc-setup-tooling/skills/context-budget-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit what a Claude Code project puts in context on every turn (CLAUDE.md and its imports, AGENTS.md, rules files, skill descriptions, MCP tool schemas from saved tools/list output, hooks), estimate the tokens, rank the biggest items and flag duplicates and stale sections. Use when asked \"why is my context so full?\", when sessions compact early, or before adding more skills or servers. Not for measuring a live session's usage or for editing a skill's own instructions."
+}

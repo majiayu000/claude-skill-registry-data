@@ -1,0 +1,37 @@
+{
+  "name": "break-pattern",
+  "repo": "bogheorghiu/ex-cog-dev",
+  "path": "vasana-system/skills/break-pattern/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/bogheorghiu/ex-cog-dev",
+  "dir_name": "break-pattern",
+  "downloaded_at": "2026-10-27T04:40:08.215536Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: framework, debug",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "framework",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bogheorghiu",
+  "source_url": "https://github.com/bogheorghiu/ex-cog-dev/blob/main/vasana-system/skills/break-pattern/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bogheorghiu/ex-cog-dev/blob/main/vasana-system/skills/break-pattern/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Am I trying harder at the wrong thing? - Detects stuckness loops and breaks them. Triggers on (1) explicit stuckness - \"going in circles\", \"keep trying the same thing\", \"need fresh perspective\", (2) implicit stuckness - blame-shifting (\"the framework is broken\"), false certainty (\"I've tried everything\"), escalation (\"let me just try one more...\"), (3) Claude self-observation - noticing own repeated similar attempts or escalating complexity. Does NOT trigger for first attempts, normal exploration, or standard debugging with clear errors. Core action: STOP the current approach, name the pattern, offer exit ramps to completely different approaches. References pattern-library for specific behavioral patterns."
+}

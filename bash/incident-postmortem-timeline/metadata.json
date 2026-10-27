@@ -1,0 +1,38 @@
+{
+  "name": "incident-postmortem-timeline",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/github-manager/skills/incident-postmortem-timeline/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "incident-postmortem-timeline",
+  "downloaded_at": "2026-10-27T04:32:51.219973Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/github-manager/skills/incident-postmortem-timeline/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/github-manager/skills/incident-postmortem-timeline/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build a blameless, cited postmortem timeline and document skeleton from a saved incident issue export, ordering label changes, comments, cross-references, PR merges and the close by time, deriving detected, acknowledged, mitigated and resolved, listing people as roles and writing contributing factors as questions. Use when asked to \"write the postmortem for incident #412\" or \"how long did it take to mitigate?\". Not for deciding a root cause or blame, live incident response, or sprint reports of what shipped (iteration-report)."
+}

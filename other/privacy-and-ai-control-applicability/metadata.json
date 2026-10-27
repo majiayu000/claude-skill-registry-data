@@ -1,0 +1,38 @@
+{
+  "name": "privacy-and-ai-control-applicability",
+  "repo": "better-isms/grcskills",
+  "path": "skills/tristan-roth/privacy-and-ai-control-applicability/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/better-isms/grcskills",
+  "dir_name": "privacy-and-ai-control-applicability",
+  "downloaded_at": "2026-10-27T04:35:52.774456Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "better-isms",
+  "source_url": "https://github.com/better-isms/grcskills/blob/main/skills/tristan-roth/privacy-and-ai-control-applicability/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/better-isms/grcskills/blob/main/skills/tristan-roth/privacy-and-ai-control-applicability/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when a company with a security applicability statement extends its management\nsystem to privacy or to AI, and asks \"extend our SoA for privacy\", \"which privacy controls apply\nto a processor\", \"AI controls applicability\", \"SoA for our AI management system\", \"are we\ncontroller or processor for this\" or \"do the AI development controls apply if we only use a\nmodel\". Settles the company's role per processing activity and per AI system, decides\napplicability of the additional controls from those roles and the risk or impact assessments,\nand writes an extension to the applicability statement plus role and scope notes."
+}

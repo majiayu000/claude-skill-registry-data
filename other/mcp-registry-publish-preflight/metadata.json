@@ -1,0 +1,37 @@
+{
+  "name": "mcp-registry-publish-preflight",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/repo-engineering/skills/mcp-registry-publish-preflight/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "mcp-registry-publish-preflight",
+  "downloaded_at": "2026-10-27T04:32:53.986000Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/repo-engineering/skills/mcp-registry-publish-preflight/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/repo-engineering/skills/mcp-registry-publish-preflight/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Check an MCP server repository offline before mcp-publisher publish: a bundled script reads server.json and the local package.json, pyproject.toml and README, Cargo.toml, .csproj and Dockerfile, and reports what the official MCP Registry's documented rules would reject (name, description, version ranges, registry URLs, ownership markers, _meta size), plus DNS or HTTP proof record format. Use when asked \"will this publish to the MCP registry?\" or before a first publish. Not for a security review of an MCP server (mcp-server-review in agent-security-skills)."
+}

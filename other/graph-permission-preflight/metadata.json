@@ -1,0 +1,37 @@
+{
+  "name": "graph-permission-preflight",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/m365-governance/skills/graph-permission-preflight/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "graph-permission-preflight",
+  "downloaded_at": "2026-10-27T04:32:52.265267Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/m365-governance/skills/graph-permission-preflight/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/m365-governance/skills/graph-permission-preflight/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Check the Microsoft Graph permissions or scopes an app, connector or MCP server requests or holds against a needs manifest of what it actually uses, flag high-risk, .All, write-where-read-suffices and unused grants, and propose a least-privilege set. Use when asked \"is it safe to grant admin consent to this app?\", before granting consent, or before connecting an automation to Microsoft 365. Not for a tenant-wide review of which apps hold high-risk permissions (entra-posture-review); it never changes consent."
+}

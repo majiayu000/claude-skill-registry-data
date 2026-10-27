@@ -1,0 +1,37 @@
+{
+  "name": "find-reverse-engineered",
+  "repo": "alexgaoth/awesome-reverse-engineered",
+  "path": "plugin/skills/find-reverse-engineered/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/alexgaoth/awesome-reverse-engineered",
+  "dir_name": "find-reverse-engineered",
+  "downloaded_at": "2026-10-27T04:09:04.355519Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "alexgaoth",
+  "source_url": "https://github.com/alexgaoth/awesome-reverse-engineered/blob/main/plugin/skills/find-reverse-engineered/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/alexgaoth/awesome-reverse-engineered/blob/main/plugin/skills/find-reverse-engineered/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find an open-source, reverse-engineered tool for a closed app, API, device, protocol, file format or game, then read or fetch it. Use when a task needs to talk to something that has no official API, SDK, driver or spec, or only a limited one. Examples include \"control my Tuya plug locally\", \"read a .psd or .dwg file\", \"unofficial WhatsApp, Instagram or Bilibili client\", \"Bambu printer protocol\", \"talk to my car's API\", \"Garmin or CGM data\", \"decompilation of a game\" and \"OpenAI-compatible proxy for a web chatbot\". The skill searches a curated index of 17,000+ verified projects ranked by stars, language, license and activity."
+}

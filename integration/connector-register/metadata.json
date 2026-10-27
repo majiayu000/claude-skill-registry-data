@@ -1,0 +1,38 @@
+{
+  "name": "connector-register",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/agent-identity-governance/skills/connector-register/SKILL.md",
+  "github_branch": "main",
+  "category": "integration",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "connector-register",
+  "downloaded_at": "2026-10-27T04:32:38.825902Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "integration",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for integration: integration, connector, oauth",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "integration",
+      "connector",
+      "oauth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/agent-identity-governance/skills/connector-register/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/agent-identity-governance/skills/connector-register/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Keep an approved register of the MCP servers, connectors and plugins your agents may use, and check every entry has an owner, purpose, data classification, permissions and review date. Compares the register with saved tools/list outputs and permission manifests to catch unregistered servers and tools and entries that are gone. Use when asked \"which MCP servers are we actually running?\" or before a quarterly connector review. Not for auditing an MCP server's code (mcp-server-review) or agent config files (agent-config-audit)."
+}

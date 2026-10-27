@@ -1,0 +1,38 @@
+{
+  "name": "db",
+  "repo": "brain-bootstrap/claude-code-brain-bootstrap",
+  "path": ".claude/skills/db/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/brain-bootstrap/claude-code-brain-bootstrap",
+  "dir_name": "db-brain-bootstrap-claude-code-brain-bo",
+  "downloaded_at": "2026-10-27T04:42:09.673704Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "brain-bootstrap",
+  "source_url": "https://github.com/brain-bootstrap/claude-code-brain-bootstrap/blob/main/.claude/skills/db/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/brain-bootstrap/claude-code-brain-bootstrap/blob/main/.claude/skills/db/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Query the database \u2014 list schemas, tables, describe a table, or run SQL. Accepts arguments like schemas, tables, describe <table>, or raw SQL."
+}

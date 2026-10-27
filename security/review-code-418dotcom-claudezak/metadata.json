@@ -1,0 +1,39 @@
+{
+  "name": "review",
+  "repo": "code-418dotcom/claudezak",
+  "path": ".claude/skills/review/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/code-418dotcom/claudezak",
+  "dir_name": "review-code-418dotcom-claudezak",
+  "downloaded_at": "2026-10-27T04:58:36.097237Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, vulnerability, owasp",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "security",
+      "auth",
+      "vulnerability",
+      "owasp"
+    ],
+    "semantic_sources": {
+      "name": "metadata",
+      "description": "frontmatter"
+    }
+  },
+  "author": "code-418dotcom",
+  "source_url": "https://github.com/code-418dotcom/claudezak/blob/main/.claude/skills/review/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/code-418dotcom/claudezak/blob/main/.claude/skills/review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Deep code review - security, performance, architecture, and actionable fixes"
+}

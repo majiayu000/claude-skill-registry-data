@@ -1,0 +1,37 @@
+{
+  "name": "antfu-issue-triage",
+  "repo": "antfu/skills",
+  "path": "skills/antfu-issue-triage/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/antfu/skills",
+  "dir_name": "antfu-issue-triage",
+  "downloaded_at": "2026-10-27T04:17:55.738695Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "antfu",
+  "source_url": "https://github.com/antfu/skills/blob/main/skills/antfu-issue-triage/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/antfu/skills/blob/main/skills/antfu-issue-triage/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Triage open issues and PRs of the current GitHub repo - find already-fixed, duplicate, and spam items, suggest labels, gauge demand from reactions and comments, then present a table of proposed actions and comments for confirmation before touching anything. Use when asked to triage, organize, clean up, or groom issues and PRs."
+}

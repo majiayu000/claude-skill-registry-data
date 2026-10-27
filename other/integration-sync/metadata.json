@@ -1,0 +1,37 @@
+{
+  "name": "integration-sync",
+  "repo": "crowdin/skills",
+  "path": "skills/integration-sync/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/crowdin/skills",
+  "dir_name": "integration-sync",
+  "downloaded_at": "2026-10-27T05:04:19.408933Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "crowdin",
+  "source_url": "https://github.com/crowdin/skills/blob/main/skills/integration-sync/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/crowdin/skills/blob/main/skills/integration-sync/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Syncs content between Crowdin and a platform connected through an installed Crowdin integration app (Webflow, HubSpot, Contentful, Zendesk Guide, Braze and the other store integrations), through the Crowdin connector or the Crowdin CLI. Use when someone wants platform content brought into Crowdin (\"import the new pages from Webflow\", \"translate the latest HubSpot campaigns\"), translations sent back (\"push the German back to Contentful\"), content checked against Crowdin (\"anything new in Webflow?\"), an integration job checked (\"has the Zendesk sync finished\"), or a schedule set up (\"sync our blog posts every night\"). Not for choosing which app to install (how-to-crowdin), installing it (crowdin-cli or the Crowdin UI), building one (create-app), repository and design integrations configured inside Crowdin, or syncing local files with crowdin.yml (crowdin-cli)."
+}

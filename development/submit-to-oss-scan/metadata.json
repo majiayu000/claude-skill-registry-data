@@ -1,0 +1,38 @@
+{
+  "name": "submit-to-oss-scan",
+  "repo": "apache/magpie",
+  "path": "plugins/magpie-security/skills/submit-to-oss-scan/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/apache/magpie",
+  "dir_name": "submit-to-oss-scan",
+  "downloaded_at": "2026-10-27T04:18:59.570695Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, framework",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "framework"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "apache",
+  "source_url": "https://github.com/apache/magpie/blob/main/plugins/magpie-security/skills/submit-to-oss-scan/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/apache/magpie/blob/main/plugins/magpie-security/skills/submit-to-oss-scan/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Prepare the enrolment (or update) PR that puts a project into\nAnthropic's OSS Scanner: `project.yaml`, an offline-capable\n`Dockerfile`, and a `threat_model.md` derived from the project's\nsecurity model; guides the maintainer through testing it first."
+}

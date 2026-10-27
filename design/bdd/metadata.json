@@ -1,0 +1,38 @@
+{
+  "name": "bdd",
+  "repo": "danielsogl/copilot-workflow-demo",
+  "path": ".claude/skills/bdd/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/danielsogl/copilot-workflow-demo",
+  "dir_name": "bdd",
+  "downloaded_at": "2026-10-27T05:10:02.683893Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, component",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "danielsogl",
+  "source_url": "https://github.com/danielsogl/copilot-workflow-demo/blob/main/.claude/skills/bdd/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/danielsogl/copilot-workflow-demo/blob/main/.claude/skills/bdd/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write disciplined Behavior-Driven Development specs and tests with Gherkin / Cucumber. Use whenever the user mentions BDD, Gherkin, Cucumber, .feature files, Given/When/Then, scenarios, Scenario Outline, Background, step definitions, acceptance criteria, executable specifications, living documentation, the Three Amigos, or Example Mapping. Also trigger when the user asks to \"write tests in plain English\", convert acceptance criteria into tests, design step definitions, refactor an imperative or UI-coupled feature file, or wire up BDD with Vitest (unit/component) or Playwright (end-to-end). Do NOT use for pure unit tests with no business-readable contract, pure performance/load tests, or generic test-framework questions unrelated to behavior specs."
+}

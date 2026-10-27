@@ -1,0 +1,38 @@
+{
+  "name": "generate-screenshots",
+  "repo": "crowdin/skills",
+  "path": "skills/generate-screenshots/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/crowdin/skills",
+  "dir_name": "generate-screenshots",
+  "downloaded_at": "2026-10-27T05:04:19.957125Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, cli",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "crowdin",
+  "source_url": "https://github.com/crowdin/skills/blob/main/skills/generate-screenshots/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/crowdin/skills/blob/main/skills/generate-screenshots/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Captures screenshots of a running app and uploads them to Crowdin as visual context tagged to the strings they show. Use when someone wants to add screenshots to a Crowdin project, show translators where a string appears in the UI, find which strings still have no screenshot, or update the screenshots after a release - including bare phrasings like \"translators can't see where this string is used\". Not for `crowdin screenshot` syntax alone (crowdin-cli), textual string context or `ai_context` (context-extraction), or the full internationalize-and-connect journey (i18n-setup, which delegates here)."
+}

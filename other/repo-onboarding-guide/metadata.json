@@ -1,0 +1,37 @@
+{
+  "name": "repo-onboarding-guide",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/repo-engineering/skills/repo-onboarding-guide/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "repo-onboarding-guide",
+  "downloaded_at": "2026-10-27T04:32:54.670912Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/repo-engineering/skills/repo-onboarding-guide/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/repo-engineering/skills/repo-onboarding-guide/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write an onboarding guide for a repository (how to run and test it, where things live, which services it needs, who owns what) only from facts a bundled script extracted with a path:line citation each, then lint the guide so every command, path, variable, service or owner matches a fact. Use when asked \"how do I get started in this repo?\" or to write or refresh an onboarding doc for a new hire. Not for diagrams, API reference docs, or a README's first screen (readme-who-what-why)."
+}

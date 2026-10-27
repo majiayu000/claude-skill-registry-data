@@ -1,0 +1,38 @@
+{
+  "name": "flaky-test-hunter",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/debugging/skills/flaky-test-hunter/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "flaky-test-hunter",
+  "downloaded_at": "2026-10-27T04:32:48.611577Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, testing=3",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/debugging/skills/flaky-test-hunter/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/debugging/skills/flaky-test-hunter/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find tests that pass and fail without code changes by comparing JUnit XML reports from several runs with a bundled script, then classify each flaky test by cause (ordering, timing, shared state, resources, environment) and prescribe the fix. Use when CI fails intermittently, when someone asks \"is this test flaky?\", or to quarantine and track flaky tests. Not for tests that fail every time (that is a bug, use bug-repro-minimiser)."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "dxt",
+  "repo": "dxpr/dxpr_cms",
+  "path": ".claude/skills/dxt/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/dxpr/dxpr_cms",
+  "dir_name": "dxt",
+  "downloaded_at": "2026-10-27T05:26:52.727982Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dxpr",
+  "source_url": "https://github.com/dxpr/dxpr_cms/blob/master/.claude/skills/dxt/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dxpr/dxpr_cms/blob/master/.claude/skills/dxt/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Manage DXPR Theme settings via drush dxt:* commands.\nConfigure layout, header, colors, fonts, typography, block design,\npage title, and custom CSS/JS \u2014 all from the CLI. Use when asked to\n\"change the theme\", \"update colors\", \"change color palette\",\n\"set font size\", \"configure header\", \"modify layout\",\n\"generate palette\", \"set page layout\", or any DXPR Theme\nconfiguration task. Proactively invoke this skill instead of\nediting Drupal config YAML directly.\nFor color palette changes: use dxt:palette:set to set all colors\nin one command, or dxt:config:set color_palette_<key> for individual\ncolors. Do NOT try to set the serialized color_palette directly."
+}

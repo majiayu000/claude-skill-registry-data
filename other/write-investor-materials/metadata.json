@@ -1,0 +1,37 @@
+{
+  "name": "write-investor-materials",
+  "repo": "cheneeheng/ceh-claude-code-library",
+  "path": "plugins/standalone/ceh-business-plan/skills/write-investor-materials/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/cheneeheng/ceh-claude-code-library",
+  "dir_name": "write-investor-materials",
+  "downloaded_at": "2026-10-27T04:51:44.167240Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: business=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "business",
+      "strategy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cheneeheng",
+  "source_url": "https://github.com/cheneeheng/ceh-claude-code-library/blob/main/plugins/standalone/ceh-business-plan/skills/write-investor-materials/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cheneeheng/ceh-claude-code-library/blob/main/plugins/standalone/ceh-business-plan/skills/write-investor-materials/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turns a validated business plan into a pitch deck outline and investor outreach notes, every claim traced to a plan section, called by ceh-business-plan:develop-business-plan."
+}

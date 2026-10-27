@@ -1,0 +1,38 @@
+{
+  "name": "sandbox-account-guardrail-pack",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/aws-security/skills/sandbox-account-guardrail-pack/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "sandbox-account-guardrail-pack",
+  "downloaded_at": "2026-10-27T04:32:42.605851Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/aws-security/skills/sandbox-account-guardrail-pack/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/aws-security/skills/sandbox-account-guardrail-pack/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate a guardrail pack for an AWS sandbox OU where engineers and AI agents experiment: SCPs that pass the bundled size checks (region allowlist, IMDSv2, no root, protected logging), AWS Budgets, a checklist for new sandbox accounts and a tag-based auto-expiry design. Use when asked to \"set up a safe sandbox account\", or when creating or tightening a sandbox or training OU. Not for production OUs or linting an existing SCP (scp-guardrails), runaway spend alerts on their own (aws-spend-guardrails) or checking an existing account (aws-account-audit), and it never runs the cleanup."
+}

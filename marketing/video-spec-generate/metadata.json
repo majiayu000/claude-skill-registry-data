@@ -1,0 +1,37 @@
+{
+  "name": "video-spec-generate",
+  "repo": "dimagi-internal/ace",
+  "path": "skills/video-spec-generate/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/dimagi-internal/ace",
+  "dir_name": "video-spec-generate",
+  "downloaded_at": "2026-10-27T05:18:55.048617Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: content, campaign",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "content",
+      "campaign"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dimagi-internal",
+  "source_url": "https://github.com/dimagi-internal/ace/blob/main/skills/video-spec-generate/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dimagi-internal/ace/blob/main/skills/video-spec-generate/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Template-agnostic generator for ace-web video programs. Ingests a template's structured data (meta + intent + skeleton + example), fills every {{placeholder}} from a source (program-page URL, pasted brief, or prospect research), substitutes into the skeleton, validates, and POSTs the complete spec to ace-web. Works for every video template; no per-template prompt required. Owns one artifact: the new program's spec.yaml in Drive."
+}

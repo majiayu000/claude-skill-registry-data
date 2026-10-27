@@ -1,0 +1,37 @@
+{
+  "name": "nmrglue",
+  "repo": "boisenoise/skills-collections",
+  "path": "skills/kdense-nmrglue/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/boisenoise/skills-collections",
+  "dir_name": "kdense-nmrglue",
+  "downloaded_at": "2026-10-27T04:40:43.358412Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "boisenoise",
+  "source_url": "https://github.com/boisenoise/skills-collections/blob/main/skills/kdense-nmrglue/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/boisenoise/skills-collections/blob/main/skills/kdense-nmrglue/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Processes calibrated one-dimensional complex NMR free-induction decays with nmrglue into phased spectra, peak candidates, and signed integration regions. Use for raw 1D NMR processing, ppm-axis verification, apodization, Fourier transformation, manual phasing, baseline correction, or reproducible spectral integration."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "debug",
+  "repo": "brain-bootstrap/claude-code-brain-bootstrap",
+  "path": ".claude/skills/debug/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/brain-bootstrap/claude-code-brain-bootstrap",
+  "dir_name": "debug-brain-bootstrap-claude-code-brain-bo",
+  "downloaded_at": "2026-10-27T04:42:09.858508Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, debug, refactor",
+    "score": 4,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "brain-bootstrap",
+  "source_url": "https://github.com/brain-bootstrap/claude-code-brain-bootstrap/blob/main/.claude/skills/debug/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/brain-bootstrap/claude-code-brain-bootstrap/blob/main/.claude/skills/debug/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Root cause analysis for bugs and errors. Use when something is broken and the cause is not obvious. Applies the 5-step investigation method \u2014 observe, hypothesize, trace backwards, binary search, prove."
+}

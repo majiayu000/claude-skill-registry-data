@@ -1,0 +1,37 @@
+{
+  "name": "iru-setup-java-library",
+  "repo": "albertoirurueta/docs",
+  "path": ".claude/skills/iru-setup-java-library/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/albertoirurueta/docs",
+  "dir_name": "iru-setup-java-library",
+  "downloaded_at": "2026-10-27T04:07:06.033208Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-setup-java-library/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-setup-java-library/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Invoke as `/iru-setup-java-library`, optionally with `args` (key: value lines). Generates the root `pom.xml` and Maven source folders for a new Java library from the house template; asks Update / Keep / Replace / Stop if a pom exists. Normally called by `iru-setup-java-library-repository`."
+}

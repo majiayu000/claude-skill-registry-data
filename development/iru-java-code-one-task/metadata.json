@@ -1,0 +1,37 @@
+{
+  "name": "iru-java-code-one-task",
+  "repo": "albertoirurueta/docs",
+  "path": ".claude/skills/iru-java-code-one-task/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/albertoirurueta/docs",
+  "dir_name": "iru-java-code-one-task",
+  "downloaded_at": "2026-10-27T04:07:06.194207Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, compile",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-java-code-one-task/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-java-code-one-task/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Invoked as /iru-java-code-one-task <task description> (the task's text with its implementation_plan.md checkbox lines) via Skill. Implements one Java/Maven plan task and its tests, compile-checks, ticks the checkbox with a group-validation-pending note; no baseline or full gates, which iru-java-code-one-task-group runs."
+}

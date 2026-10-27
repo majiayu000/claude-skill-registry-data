@@ -1,0 +1,38 @@
+{
+  "name": "adr-miner",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/repo-engineering/skills/adr-miner/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "adr-miner",
+  "downloaded_at": "2026-10-27T04:32:53.460283Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, writer, copy",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "writing",
+      "writer",
+      "copy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/repo-engineering/skills/adr-miner/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/repo-engineering/skills/adr-miner/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Recover design decisions that were made but never written down by mining git history, manifest and config changes and rationale comments, then draft MADR stubs (status proposed) that cite a commit SHA on every line; a second script lints an existing docs/adr folder for numbering, status and superseded-link problems. Use when asked \"why did we switch to X?\", to dig old decisions out of git history, or to backfill ADRs. Not for writing a new architecture decision record or a decision being made now (adr-writer, or decision-log for operational decisions) or generating a changelog."
+}

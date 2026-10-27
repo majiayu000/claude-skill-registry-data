@@ -1,0 +1,39 @@
+{
+  "name": "github-actions-author",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/devops/skills/github-actions-author/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "github-actions-author",
+  "downloaded_at": "2026-10-27T04:32:49.658210Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: devops, ci, docker, deploy",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "devops",
+      "ci",
+      "docker",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/devops/skills/github-actions-author/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/devops/skills/github-actions-author/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write or review GitHub Actions workflows in .github/workflows with least-privilege permissions, SHA-pinned actions, timeouts, concurrency and caching, checked by a bundled linter for missing or too permissive permissions, pull_request_target checkout of forks, expression injection in run steps, unpinned actions and literal secrets. Use when asked to \"write a CI workflow\", a release workflow that publishes on a tag, to review a workflow file such as deploy.yml, or to fix a workflow security finding. Not for other CI systems or branch protection."
+}

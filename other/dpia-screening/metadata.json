@@ -1,0 +1,38 @@
+{
+  "name": "dpia-screening",
+  "repo": "better-isms/grcskills",
+  "path": "skills/tristan-roth/dpia-screening/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/better-isms/grcskills",
+  "dir_name": "dpia-screening",
+  "downloaded_at": "2026-10-27T04:35:42.140740Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "better-isms",
+  "source_url": "https://github.com/better-isms/grcskills/blob/main/skills/tristan-roth/dpia-screening/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/better-isms/grcskills/blob/main/skills/tristan-roth/dpia-screening/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when a new product feature, vendor, AI use, monitoring tool or change in processing\nraises the question \"do we need a DPIA\", or someone asks \"DPIA screening\", \"is this high risk\nprocessing\", \"data protection impact assessment threshold\", \"privacy impact screening for this\nfeature\", \"does our AI feature need a DPIA\" or \"document why we did not do a DPIA\". Describes the\nprocessing with numbers, tests it against the GDPR cases, the supervisory authority's list and\nthe EDPB-endorsed criteria, reaches a reasoned outcome (required, recommended, not required) with\na re-screen trigger, and keeps a screening log for accountability."
+}

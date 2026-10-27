@@ -1,0 +1,37 @@
+{
+  "name": "hone",
+  "repo": "escoffier-labs/skillet",
+  "path": "skillet/skills/hone/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/escoffier-labs/skillet",
+  "dir_name": "hone-escoffier-labs-skillet",
+  "downloaded_at": "2026-10-27T05:34:49.036229Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "escoffier-labs",
+  "source_url": "https://github.com/escoffier-labs/skillet/blob/main/skillet/skills/hone/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/escoffier-labs/skillet/blob/main/skillet/skills/hone/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a prompt, worker brief, or task description is about to be sent to another agent or model and should be deeper first, or the user says \"sharpen this prompt\", \"hone this brief\", \"make this deeper, not bigger\", or \"improve this before I dispatch it\"."
+}

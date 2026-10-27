@@ -1,0 +1,38 @@
+{
+  "name": "adr-writer",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/docs/skills/adr-writer/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "adr-writer-basitalisandhu-claude-skills",
+  "downloaded_at": "2026-10-27T04:32:50.423912Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, markdown",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/docs/skills/adr-writer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/docs/skills/adr-writer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write an Architecture Decision Record for a technical choice, with context, the options considered and their trade-offs, the decision and its consequences, in a fixed format with a status lifecycle (proposed, accepted, superseded), numbered and stored in the repository. Use when asked to \"write an ADR\", when a team is choosing between technologies, patterns or designs, when someone asks why something was done this way, or to record a decision already made. Not for product requirements or meeting minutes."
+}

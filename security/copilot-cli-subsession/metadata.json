@@ -1,0 +1,38 @@
+{
+  "name": "copilot-cli-subsession",
+  "repo": "arisng/github-copilot-fc",
+  "path": "skills/copilot-cli-subsession/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/arisng/github-copilot-fc",
+  "dir_name": "copilot-cli-subsession",
+  "downloaded_at": "2026-10-27T04:22:45.746174Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "arisng",
+  "source_url": "https://github.com/arisng/github-copilot-fc/blob/main/skills/copilot-cli-subsession/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/arisng/github-copilot-fc/blob/main/skills/copilot-cli-subsession/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Spawn a new isolated Copilot CLI sub-session from a main Copilot CLI or VS Code session. Use when you need to programmatically create, resume, or chain Copilot CLI sessions with explicit control over session ID, custom agent, model, BYOK provider profile, permissions, and working directory. Triggers: \"invoke copilot\", \"spawn copilot\", \"copilot sub-session\", \"programmatic copilot cli\", \"programmatic copilot subprocess\", \"copilot cli session id\", \"resume copilot session\", \"chain copilot sessions\", \"isolated copilot session\", \"subagent copilot cli\", \"task copilot cli\"."
+}

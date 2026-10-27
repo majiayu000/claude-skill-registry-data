@@ -1,0 +1,38 @@
+{
+  "name": "post-incident-review",
+  "repo": "better-isms/grcskills",
+  "path": "skills/tristan-roth/post-incident-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/better-isms/grcskills",
+  "dir_name": "post-incident-review",
+  "downloaded_at": "2026-10-27T04:35:44.445588Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "better-isms",
+  "source_url": "https://github.com/better-isms/grcskills/blob/main/skills/tristan-roth/post-incident-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/better-isms/grcskills/blob/main/skills/tristan-roth/post-incident-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when an incident or a serious near miss is closed and the team must learn from it,\nor an auditor asks for lessons learned, and someone says \"run the post-mortem\", \"post-incident\nreview\", \"lessons learned\", \"retro on the outage\", \"blameless review\", \"root cause of the\nincident\" or \"what do we change after this breach\". Builds the timeline from records before the\nmeeting, runs a blameless discussion, finds the contributing factors, and turns them into a few\nowned, dated actions linked to updates of the risk register, controls, playbooks and supplier\nrecords, then writes the review and an action tracker."
+}

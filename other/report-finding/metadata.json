@@ -1,0 +1,36 @@
+{
+  "name": "report-finding",
+  "repo": "cuhawk/tlxkull",
+  "path": ".claude/skills/report-finding/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/cuhawk/tlxkull",
+  "dir_name": "report-finding",
+  "downloaded_at": "2026-10-27T05:05:14.717828Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-llm scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "llm"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cuhawk",
+  "source_url": "https://github.com/cuhawk/tlxkull/blob/main/.claude/skills/report-finding/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cuhawk/tlxkull/blob/main/.claude/skills/report-finding/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Compose the human-readable writeup for a confirmed TP finding. Generates SARIF (js_export_findings format=sarif), a markdown writeup using the template, and bundles the PoC HTML/curl into findings/<id>/. Run when findings/<id>/confirmed.json exists and the writeup is missing. Stops short of submission \u2014 that's a human step."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "codeburn",
+  "repo": "brain-bootstrap/claude-code-brain-bootstrap",
+  "path": ".claude/skills/codeburn/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/brain-bootstrap/claude-code-brain-bootstrap",
+  "dir_name": "codeburn",
+  "downloaded_at": "2026-10-27T04:42:09.278744Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, debug, refactor",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "brain-bootstrap",
+  "source_url": "https://github.com/brain-bootstrap/claude-code-brain-bootstrap/blob/main/.claude/skills/codeburn/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/brain-bootstrap/claude-code-brain-bootstrap/blob/main/.claude/skills/codeburn/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when you want to see token consumption by task type, model, one-shot rate, or USD cost \u2014 observability dashboard for Claude Code sessions"
+}

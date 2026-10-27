@@ -1,0 +1,38 @@
+{
+  "name": "project-hardness",
+  "repo": "appleweiping/AGENT_RESOURCE",
+  "path": "skills/vipin/project-hardness/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/appleweiping/AGENT_RESOURCE",
+  "dir_name": "project-hardness",
+  "downloaded_at": "2026-10-27T04:21:00.246412Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "appleweiping",
+  "source_url": "https://github.com/appleweiping/AGENT_RESOURCE/blob/master/skills/vipin/project-hardness/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/appleweiping/AGENT_RESOURCE/blob/master/skills/vipin/project-hardness/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn any local project into an AI-readable, maintainable, verifiable causal layer under the project's `.agent/` directory, and harden vague requirements into concrete task specs before editing. Use when (a) starting work on an unfamiliar or large project, (b) you need to know a change's blast radius / do-not-modify boundaries, or (c) a requirement is vague and you need clarified goal + involved modules + edit paths + risks + acceptance criteria + test commands. Not a grep/index/chat-memory; it is a static, source-backed project model. Applies to every agent (Claude Code, Codex, OpenCode, etc.)."
+}

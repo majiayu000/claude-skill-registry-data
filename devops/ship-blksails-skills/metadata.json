@@ -1,0 +1,39 @@
+{
+  "name": "autoresearch:ship",
+  "repo": "blksails/skills",
+  "path": "skills/autoresearch-skill/skills/ship/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/blksails/skills",
+  "dir_name": "ship-blksails-skills",
+  "downloaded_at": "2026-10-27T04:39:49.748867Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: docker, deploy, infra, infrastructure",
+    "score": 4,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "docker",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "blksails",
+  "source_url": "https://github.com/blksails/skills/blob/main/skills/autoresearch-skill/skills/ship/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/blksails/skills/blob/main/skills/autoresearch-skill/skills/ship/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Universal shipping workflow: 8-phase linear pipeline from verification to deploy.\nReads type-checklists.md to select the right checklist for the artifact type.\nThe ONLY pause is Phase 7 (user confirmation before irreversible deploy/publish).\nTRIGGER when: user wants to ship, release, publish, or deploy something; user asks\n\"is this ready to ship?\"; user wants a pre-release checklist; user wants to publish\na package, CLI, API, web app, ML model, skill, docs site, infrastructure, or research\npaper; user invokes /autoresearch:ship.\nDO NOT TRIGGER when: user wants iterative development (use autoresearch); user wants\nto debug errors (use autoresearch:fix); user just wants a code review."
+}

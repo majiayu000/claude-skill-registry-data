@@ -1,0 +1,37 @@
+{
+  "name": "memory-leak-checklist",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/debugging/skills/memory-leak-checklist/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "memory-leak-checklist",
+  "downloaded_at": "2026-10-27T04:32:48.880928Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, metrics",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "product",
+      "metrics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/debugging/skills/memory-leak-checklist/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/debugging/skills/memory-leak-checklist/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Diagnose a service whose memory keeps growing or only goes up, with a fixed checklist: confirm it is a real leak and not a cache warming up or fragmentation, measure with heap tools (tracemalloc, objgraph, Node heap snapshots, Go pprof heap, JVM histograms), follow the retaining paths to what holds the objects, and fix the usual causes (unbounded caches, listeners, closures, registries, pools). Use when asked \"why does memory keep growing?\", or when RSS climbs until an OOM kill or restart. Not for CPU profiles (perf-profile-reader)."
+}

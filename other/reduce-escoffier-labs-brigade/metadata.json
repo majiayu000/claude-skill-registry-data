@@ -1,0 +1,37 @@
+{
+  "name": "reduce",
+  "repo": "escoffier-labs/brigade",
+  "path": "registry/skills/reduce/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/escoffier-labs/brigade",
+  "dir_name": "reduce-escoffier-labs-brigade",
+  "downloaded_at": "2026-10-27T05:34:44.439182Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "escoffier-labs",
+  "source_url": "https://github.com/escoffier-labs/brigade/blob/main/registry/skills/reduce/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/escoffier-labs/brigade/blob/main/registry/skills/reduce/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when asked to simplify, clean up, tidy, or refactor code for clarity without changing what it does, or when the user says \"simplify this\", \"clean this up\", \"make it readable\", \"reduce the complexity\", or \"tidy this\". Behavior-preserving only; not a bug or security audit (use bug-hunt or security-sweep for those)."
+}

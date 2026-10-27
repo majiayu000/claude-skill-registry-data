@@ -1,0 +1,38 @@
+{
+  "name": "aspire-cli",
+  "repo": "arisng/github-copilot-fc",
+  "path": "skills/aspire-cli/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/arisng/github-copilot-fc",
+  "dir_name": "aspire-cli",
+  "downloaded_at": "2026-10-27T04:22:41.513756Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=3, testing=3",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "automation",
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "arisng",
+  "source_url": "https://github.com/arisng/github-copilot-fc/blob/main/skills/aspire-cli/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/arisng/github-copilot-fc/blob/main/skills/aspire-cli/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Guidance for using the .NET Aspire CLI and agent integration to create, adopt, run, inspect, debug, update, publish, deploy, and automate Aspire AppHosts. Use when choosing or explaining Aspire commands and workflows such as aspire new, init, restore, run, start, ps, stop, wait, resource, describe, logs, otel, add, update, publish, deploy, do, doctor, docs list, docs search, docs get, or agent; when setting up AI coding agents with aspire agent init or aspire agent mcp; when browsing official Aspire guidance before editing unfamiliar integrations, custom commands, or AppHost APIs; when troubleshooting distributed apps with resource status, logs, traces, endpoints, or MCP docs tools such as list_docs, search_docs, and get_doc; or when running multiple AppHost instances in parallel with --isolated."
+}

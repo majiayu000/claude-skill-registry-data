@@ -1,0 +1,38 @@
+{
+  "name": "regex-builder",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/data/skills/regex-builder/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "regex-builder",
+  "downloaded_at": "2026-10-27T04:32:48.070575Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, jest, pytest",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "jest",
+      "pytest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/data/skills/regex-builder/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/data/skills/regex-builder/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write and test regular expressions that match what they should and nothing else: a bundled script runs a pattern against labelled sample lines, shows each match and captured group, and warns on patterns that can backtrack catastrophically. Use when asked to \"write a regex\" (phone numbers, dates, ids), \"why does my pattern not match\", to \"extract the id and amount from lines like\" a sample, or to check a regex used on user input. Not for parsing structured formats (JSON, HTML, URLs: use a parser) and not for full-text search."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "iru-swift-bump-version",
+  "repo": "albertoirurueta/docs",
+  "path": ".claude/skills/iru-swift-bump-version/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/albertoirurueta/docs",
+  "dir_name": "iru-swift-bump-version",
+  "downloaded_at": "2026-10-27T04:07:05.843471Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, marketing=2",
+    "score": 2,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-swift-bump-version/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-swift-bump-version/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "/iru-swift-bump-version <new-version> - sets a Swift package, command-line tool or Apple app version to the exact value given: the CLI version literal, a SwiftPM library's tag-mirroring files, or an app's MARKETING_VERSION and build number. Optional args: sync-files, dry-run, kind: library|app|cli. Reports old/new values and files touched."
+}

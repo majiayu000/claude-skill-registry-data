@@ -1,0 +1,38 @@
+{
+  "name": "iam-least-privilege-review",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/aws-security/skills/iam-least-privilege-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "iam-least-privilege-review",
+  "downloaded_at": "2026-10-27T04:32:41.994975Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/aws-security/skills/iam-least-privilege-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/aws-security/skills/iam-least-privilege-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review AWS IAM policies offline, from policy files or a get-account-authorization-details export, for over-broad permissions and privilege-escalation paths (admin, wildcards, unscoped iam:PassRole, NotAction in Allow, known escalation combinations), ranked by severity with a tightened policy per document. Use when asked \"is this IAM policy least privilege?\", before approving a permissions change, or after an audit flags an admin policy on a role. Not for SCPs (scp-guardrails), bucket or key policies, or planning an agent's role (agent-safe-aws-access)."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "artcraft",
+  "repo": "akillness/jeo-skills",
+  "path": ".agent-skills/artcraft/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/akillness/jeo-skills",
+  "dir_name": "artcraft",
+  "downloaded_at": "2026-10-27T04:06:31.879443Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "akillness",
+  "source_url": "https://github.com/akillness/jeo-skills/blob/main/.agent-skills/artcraft/SKILL.md",
+  "license": "MIT OR Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/akillness/jeo-skills/blob/main/.agent-skills/artcraft/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Operate storytold/artcraft, the dual-licensed Rust/Tauri ArtCraft creator IDE for 2D and 3D scene blocking, hosted AI image, video, audio, mesh, and world generation, release/source-build handoff, exports, and troubleshooting. Use when a user asks to fit-check ArtCraft, inspect its pinned source, install a desktop release, build the app, block a scene, generate media, account for providers or credits, or hand off downloaded assets. Keep remote generation, credentials, downloads, installers, ports, source builds, publishing, and destructive reset actions approval-gated. Route hosted multi-provider generative studio work to `open-generative-ai`, script-to-video storyboard work to `openstory`, Blender scene control to `blender-mcp`, and code-first video assembly to `video-production`."
+}

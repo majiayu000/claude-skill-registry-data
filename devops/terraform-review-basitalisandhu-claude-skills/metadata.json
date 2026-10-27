@@ -1,0 +1,41 @@
+{
+  "name": "terraform-review",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/devops/skills/terraform-review/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "terraform-review-basitalisandhu-claude-skills",
+  "downloaded_at": "2026-10-27T04:32:50.310531Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: devops, ci, docker, kubernetes, infra, infrastructure",
+    "score": 6,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "devops",
+      "ci",
+      "docker",
+      "kubernetes",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/devops/skills/terraform-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/devops/skills/terraform-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review Terraform or OpenTofu files (main.tf, modules, variables) against a checklist: state and backend safety, version pinning, typed and validated variables, secrets in variables, public exposure (open security groups, public buckets, 0.0.0.0/0), missing encryption and logging defaults, lifecycle and destroy protection. Use when asked to \"review this Terraform\" or other IaC files, or what in it is exposed to the internet. Not for gating a saved plan before apply (terraform-apply-gate), cloud architecture from scratch, or Dockerfiles and manifests."
+}

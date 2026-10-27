@@ -1,0 +1,38 @@
+{
+  "name": "release-notes-verifier",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/repo-engineering/skills/release-notes-verifier/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "release-notes-verifier",
+  "downloaded_at": "2026-10-27T04:32:54.398419Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/repo-engineering/skills/release-notes-verifier/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/repo-engineering/skills/release-notes-verifier/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Check a release's notes against what changed between two tags, flagging notes that match no commit, commits with no note (chores excluded by a pattern), manifest versions that disagree with the tag, and missing compare links; pull request titles are read only when asked. Use when asked \"are the release notes complete?\", before tagging, or as a release CI gate. Not for drafting notes from commits (release-notes), semantic version policy, or detecting breaking API changes."
+}

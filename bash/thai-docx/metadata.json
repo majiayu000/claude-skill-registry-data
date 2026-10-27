@@ -1,0 +1,38 @@
+{
+  "name": "thai-docx",
+  "repo": "dohcivil-ui/naichangmoo.com",
+  "path": ".claude/skills/thai-docx/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/dohcivil-ui/naichangmoo.com",
+  "dir_name": "thai-docx",
+  "downloaded_at": "2026-10-27T05:21:48.841331Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dohcivil-ui",
+  "source_url": "https://github.com/dohcivil-ui/naichangmoo.com/blob/master/.claude/skills/thai-docx/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dohcivil-ui/naichangmoo.com/blob/master/.claude/skills/thai-docx/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "\u0e2a\u0e23\u0e49\u0e32\u0e07\u0e44\u0e1f\u0e25\u0e4c Word (.docx) \u0e17\u0e35\u0e48\u0e20\u0e32\u0e29\u0e32\u0e44\u0e17\u0e22\u0e40\u0e02\u0e35\u0e22\u0e19\u0e40\u0e15\u0e47\u0e21\u0e1a\u0e23\u0e23\u0e17\u0e31\u0e14\u0e44\u0e21\u0e48\u0e15\u0e31\u0e14\u0e1a\u0e23\u0e23\u0e17\u0e31\u0e14\u0e01\u0e48\u0e2d\u0e19\u0e40\u0e27\u0e25\u0e32 \u0e43\u0e0a\u0e49 skill \u0e19\u0e35\u0e49\u0e17\u0e38\u0e01\u0e04\u0e23\u0e31\u0e49\u0e07\u0e17\u0e35\u0e48\u0e15\u0e49\u0e2d\u0e07\u0e2a\u0e23\u0e49\u0e32\u0e07\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23 Word \u0e17\u0e35\u0e48\u0e21\u0e35\u0e40\u0e19\u0e37\u0e49\u0e2d\u0e2b\u0e32\u0e20\u0e32\u0e29\u0e32\u0e44\u0e17\u0e22 \u0e44\u0e21\u0e48\u0e27\u0e48\u0e32\u0e08\u0e30\u0e40\u0e1b\u0e47\u0e19\u0e23\u0e32\u0e22\u0e07\u0e32\u0e19 \u0e1a\u0e17\u0e04\u0e27\u0e32\u0e21 \u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23\u0e27\u0e34\u0e0a\u0e32\u0e01\u0e32\u0e23 \u0e1a\u0e31\u0e19\u0e17\u0e36\u0e01\u0e02\u0e49\u0e2d\u0e04\u0e27\u0e32\u0e21 \u0e2b\u0e23\u0e37\u0e2d\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23\u0e17\u0e31\u0e48\u0e27\u0e44\u0e1b \u0e43\u0e0a\u0e49\u0e44\u0e14\u0e49\u0e01\u0e31\u0e1a\u0e02\u0e49\u0e2d\u0e04\u0e27\u0e32\u0e21\u0e20\u0e32\u0e29\u0e32\u0e44\u0e17\u0e22\u0e25\u0e49\u0e27\u0e19\u0e41\u0e25\u0e30\u0e44\u0e17\u0e22-\u0e2d\u0e31\u0e07\u0e01\u0e24\u0e29\u0e1c\u0e2a\u0e21\nTrigger \u0e40\u0e21\u0e37\u0e48\u0e2d: \u0e1c\u0e39\u0e49\u0e43\u0e0a\u0e49\u0e15\u0e49\u0e2d\u0e07\u0e01\u0e32\u0e23\u0e2a\u0e23\u0e49\u0e32\u0e07 Word \u0e17\u0e35\u0e48\u0e21\u0e35\u0e20\u0e32\u0e29\u0e32\u0e44\u0e17\u0e22, \"\u0e17\u0e33 docx \u0e20\u0e32\u0e29\u0e32\u0e44\u0e17\u0e22\", \"\u0e2a\u0e23\u0e49\u0e32\u0e07\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23 Word\", \"\u0e02\u0e49\u0e2d\u0e04\u0e27\u0e32\u0e21\u0e44\u0e17\u0e22\u0e44\u0e21\u0e48\u0e40\u0e15\u0e47\u0e21\u0e1a\u0e23\u0e23\u0e17\u0e31\u0e14\", \"\u0e02\u0e49\u0e2d\u0e04\u0e27\u0e32\u0e21\u0e15\u0e31\u0e14\u0e1a\u0e23\u0e23\u0e17\u0e31\u0e14\u0e1c\u0e34\u0e14\", \"Thai text line break\", \"\u0e2a\u0e23\u0e49\u0e32\u0e07\u0e23\u0e32\u0e22\u0e07\u0e32\u0e19\", \"\u0e40\u0e02\u0e35\u0e22\u0e19\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23\"\n\u0e43\u0e0a\u0e49 skill \u0e19\u0e35\u0e49\u0e41\u0e17\u0e19 docx skill \u0e1b\u0e01\u0e15\u0e34\u0e40\u0e21\u0e37\u0e48\u0e2d\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23\u0e21\u0e35\u0e20\u0e32\u0e29\u0e32\u0e44\u0e17\u0e22 \u0e40\u0e1e\u0e23\u0e32\u0e30 docx-js (JavaScript) \u0e44\u0e21\u0e48\u0e08\u0e31\u0e14\u0e01\u0e32\u0e23 Thai line breaking \u0e44\u0e14\u0e49\u0e14\u0e35"
+}

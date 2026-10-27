@@ -1,0 +1,37 @@
+{
+  "name": "app-case-sharing",
+  "repo": "dimagi-internal/ace",
+  "path": "skills/app-case-sharing/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/dimagi-internal/ace",
+  "dir_name": "app-case-sharing",
+  "downloaded_at": "2026-10-27T05:18:47.428917Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dimagi-internal",
+  "source_url": "https://github.com/dimagi-internal/ace/blob/main/skills/app-case-sharing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dimagi-internal/ace/blob/main/skills/app-case-sharing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Design and build location-based case sharing into an app, so a supervisor sees their team's cases and other areas see none. Use when a request mentions case sharing or a supervisor seeing their team. Covers Nova authoring, its proof, and HQ setup."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "diagnose-session",
+  "repo": "escoffier-labs/skillet",
+  "path": "skillet/skills/diagnose-session/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/escoffier-labs/skillet",
+  "dir_name": "diagnose-session-escoffier-labs-skillet",
+  "downloaded_at": "2026-10-27T05:34:50.189628Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "escoffier-labs",
+  "source_url": "https://github.com/escoffier-labs/skillet/blob/main/skillet/skills/diagnose-session/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/escoffier-labs/skillet/blob/main/skillet/skills/diagnose-session/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use only when the user asks why an agent run went wrong and wants evidence from the transcripts - \"why did that take so long\", \"why was it so expensive\", \"it ignored the plan\", \"it kept redoing X\", \"that skill never fired\", \"what was it doing\". Runs only when the user asks. Not for debugging product code (use refire)."
+}

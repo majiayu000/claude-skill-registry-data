@@ -1,0 +1,38 @@
+{
+  "name": "leaked-credential-response",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/agent-identity-governance/skills/leaked-credential-response/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "leaked-credential-response",
+  "downloaded_at": "2026-10-27T04:32:39.334123Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/agent-identity-governance/skills/leaked-credential-response/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/agent-identity-governance/skills/leaked-credential-response/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Respond to a leaked agent key, API token or secret: what it could reach, what happened after the leak time, which credentials to replace first, and an evidence folder with SHA-256 hashes. Reads the identity's inventory record and saved audit exports. Use when a key or token turns up in a commit pushed to GitHub, a chat transcript, log or ticket, or when asked \"what did someone do with this leaked token?\". Not for scanning code for secrets, for rotating keys itself, or for audit evidence outside an incident (evidence-pack-builder)."
+}

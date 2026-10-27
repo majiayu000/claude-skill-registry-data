@@ -1,0 +1,38 @@
+{
+  "name": "sql-server",
+  "repo": "dadadan23/world-pulse",
+  "path": ".claude/skills/sql-server/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/dadadan23/world-pulse",
+  "dir_name": "sql-server-dadadan23-world-pulse",
+  "downloaded_at": "2026-10-27T05:07:55.193891Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dadadan23",
+  "source_url": "https://github.com/dadadan23/world-pulse/blob/main/.claude/skills/sql-server/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dadadan23/world-pulse/blob/main/.claude/skills/sql-server/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Develop SQL Server databases with T-SQL, stored procedures, indexing, and performance optimization. Use when writing T-SQL queries, creating stored procedures/functions, designing index strategies, optimizing query execution plans, or troubleshooting SQL Server performance."
+}

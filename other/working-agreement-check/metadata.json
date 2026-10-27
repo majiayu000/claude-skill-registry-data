@@ -1,0 +1,37 @@
+{
+  "name": "working-agreement-check",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/ways-of-working/skills/working-agreement-check/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "working-agreement-check",
+  "downloaded_at": "2026-10-27T04:32:57.702339Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/ways-of-working/skills/working-agreement-check/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/ways-of-working/skills/working-agreement-check/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Check whether repository settings in GitHub match a team's written working agreement (rules such as 'PRs need one review' or 'main is protected') using saved branch protection and rulesets JSON, CODEOWNERS and the workflow list: each written rule met, not met (not enforced) or not checkable, with evidence, and unrecognised rules listed. Use when asked \"do our repo settings match what we agreed?\" or before a process retro. Not for audit evidence (github-change-control-evidence), README claims against code (docs-truth-check), or turning on or changing any setting."
+}

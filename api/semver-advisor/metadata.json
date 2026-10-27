@@ -1,0 +1,38 @@
+{
+  "name": "semver-advisor",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/devops/skills/semver-advisor/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "semver-advisor",
+  "downloaded_at": "2026-10-27T04:32:50.052400Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint, openapi",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/devops/skills/semver-advisor/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/devops/skills/semver-advisor/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Decide the next version number (major, minor, patch or a pre-release) for a library, service, REST API, CLI or schema from the actual changes, with a table of what counts as a breaking change for each, and explain the bump with evidence. Use when asked \"is this a breaking change?\", \"what version should I release?\", whether removing or adding a field or parameter needs a major bump, or how to version an API. Not for release notes (release-notes) or a changelog entry (changelog-keeper)."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "plan",
+  "repo": "brain-bootstrap/claude-code-brain-bootstrap",
+  "path": ".claude/skills/plan/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/brain-bootstrap/claude-code-brain-bootstrap",
+  "dir_name": "plan-brain-bootstrap-claude-code-brain-bo",
+  "downloaded_at": "2026-10-27T04:42:11.476779Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: lint, review, validate",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "lint",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "brain-bootstrap",
+  "source_url": "https://github.com/brain-bootstrap/claude-code-brain-bootstrap/blob/main/.claude/skills/plan/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/brain-bootstrap/claude-code-brain-bootstrap/blob/main/.claude/skills/plan/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Plan a non-trivial task before implementing. Use when the task requires 3+ steps, multiple files, or an architectural decision. Writes a checkable plan to claude/tasks/todo.md."
+}

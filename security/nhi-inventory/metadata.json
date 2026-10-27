@@ -1,0 +1,38 @@
+{
+  "name": "nhi-inventory",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/agent-identity-governance/skills/nhi-inventory/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "nhi-inventory",
+  "downloaded_at": "2026-10-27T04:32:39.474935Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/agent-identity-governance/skills/nhi-inventory/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/agent-identity-governance/skills/nhi-inventory/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Inventory every non-human or machine identity your agents and automations run as (service principals, IAM roles and users, GitHub apps and tokens), with owner, last use, credential count and oldest credential, and flag the ownerless and the unused. Merges saved Entra (with Agent ID), AWS IAM and GitHub exports with a hand-kept register. Use when asked \"which agent identities have no owner?\" or when starting agent identity governance. Not for one app's Graph permissions (graph-permission-preflight), IAM policy content or human access reviews (access-review-pack)."
+}

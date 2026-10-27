@@ -1,0 +1,38 @@
+{
+  "name": "nis2-entity-applicability-check",
+  "repo": "better-isms/grcskills",
+  "path": "skills/tristan-roth/nis2-entity-applicability-check/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/better-isms/grcskills",
+  "dir_name": "nis2-entity-applicability-check",
+  "downloaded_at": "2026-10-27T04:35:50.672935Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "framework",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "better-isms",
+  "source_url": "https://github.com/better-isms/grcskills/blob/main/skills/tristan-roth/nis2-entity-applicability-check/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/better-isms/grcskills/blob/main/skills/tristan-roth/nis2-entity-applicability-check/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when a company needs to know whether the NIS 2 Directive applies to it, and asks\n\"are we in scope of NIS 2\", \"are we an essential or important entity\", \"which country supervises\nus\", \"do we have to register\", \"a customer says we fall under NIS 2\" or \"does DORA replace NIS 2\nfor us\". Works through sector, size, the size-independent cases, entity type, jurisdiction and\nsector-specific law, entity by entity and member state by member state, and writes a reasoned\napplicability memo with the facts each conclusion rests on and what follows from it."
+}

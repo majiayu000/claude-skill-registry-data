@@ -1,0 +1,38 @@
+{
+  "name": "api-contract-review",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/data/skills/api-contract-review/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "api-contract-review-basitalisandhu-claude-skills",
+  "downloaded_at": "2026-10-27T04:32:47.577986Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint, openapi",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/data/skills/api-contract-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/data/skills/api-contract-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review an OpenAPI 3.x spec (openapi.yaml or JSON) for consistency, versioning, error responses and client friendliness after a bundled script lints it: missing operationIds, undeclared path parameters, responses without schemas, http servers, missing security schemes, dangling components, naming. Use when asked to \"review this OpenAPI spec\", when designing a REST API contract, before publishing a spec, or when a client generator chokes on it. Not for GraphQL or gRPC, implementing endpoints, version numbers (semver-advisor) or one payload's JSON Schema (json-schema-author)."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "shipping",
+  "repo": "dimagi-internal/ace",
+  "path": "skills/shipping/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/dimagi-internal/ace",
+  "dir_name": "shipping",
+  "downloaded_at": "2026-10-27T05:18:38.330055Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dimagi-internal",
+  "source_url": "https://github.com/dimagi-internal/ace/blob/main/skills/shipping/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dimagi-internal/ace/blob/main/skills/shipping/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Internal ACE turn step \u2014 Ship an ACE change: branch \u2192 PR \u2192 wait \u2192 merge \u2192 verify it landed."
+}

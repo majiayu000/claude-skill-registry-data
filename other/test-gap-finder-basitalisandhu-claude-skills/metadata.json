@@ -1,0 +1,37 @@
+{
+  "name": "test-gap-finder",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/code-quality/skills/test-gap-finder/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "test-gap-finder-basitalisandhu-claude-skills",
+  "downloaded_at": "2026-10-27T04:32:45.869306Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/code-quality/skills/test-gap-finder/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/code-quality/skills/test-gap-finder/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find the source modules that have no tests and prioritise which to cover first by risk: a bundled script maps modules to their tests by naming convention and imports and shows what is missing. Use when asked \"what is untested?\", where to add tests first, or to check that a change comes with tests. Not for line coverage; it works at module level without running anything (use coverage.py, c8 or go test -cover for that)."
+}

@@ -1,0 +1,40 @@
+{
+  "name": "dockerfile-hardening",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/devops/skills/dockerfile-hardening/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "dockerfile-hardening",
+  "downloaded_at": "2026-10-27T04:32:49.407431Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: devops, ci, docker, kubernetes, deploy",
+    "score": 5,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "devops",
+      "ci",
+      "docker",
+      "kubernetes",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/devops/skills/dockerfile-hardening/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/devops/skills/dockerfile-hardening/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Harden a Dockerfile before the image ships: a bundled script flags running as root, unpinned base images or the latest tag, secrets in ENV or ARG, remote scripts piped to a shell, uncleaned apt layers, world-writable files and no HEALTHCHECK, and the file is rewritten as a smaller, pinned, non-root multi-stage build. Use when asked to \"review my Dockerfile\", to check an image is safe to publish, or to harden, slim down or write a Dockerfile for a Python or Node app. Not for Kubernetes Deployments or manifests (k8s-manifest-review) or docker-compose networking."
+}

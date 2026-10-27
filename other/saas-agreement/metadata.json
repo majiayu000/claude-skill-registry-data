@@ -1,0 +1,37 @@
+{
+  "name": "saas-agreement",
+  "repo": "bromso/metapowers",
+  "path": "plugins/legal/skills/saas-agreement/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/bromso/metapowers",
+  "dir_name": "saas-agreement",
+  "downloaded_at": "2026-10-27T04:43:03.591355Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bromso",
+  "source_url": "https://github.com/bromso/metapowers/blob/main/plugins/legal/skills/saas-agreement/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bromso/metapowers/blob/main/plugins/legal/skills/saas-agreement/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Draft a SaaS subscription or licensing agreement for a software provider \u2014 license grant, subscription and billing, SLA and service credits, data ownership, security, suspension, data export and liability cap. Use when the user sells software as a service and needs the customer contract their business buyers sign. Not for public click-through terms; see /legal:terms-of-service."
+}

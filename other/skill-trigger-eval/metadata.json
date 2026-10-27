@@ -1,0 +1,37 @@
+{
+  "name": "skill-trigger-eval",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/cc-setup-tooling/skills/skill-trigger-eval/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "skill-trigger-eval",
+  "downloaded_at": "2026-10-27T04:32:44.642051Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/cc-setup-tooling/skills/skill-trigger-eval/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/cc-setup-tooling/skills/skill-trigger-eval/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Measure whether a skill's description triggers on the prompts it should and stays quiet on the ones it should not, using a labelled prompt set and transparent lexical scoring, and compare two description versions by precision and recall. Use when asked \"will this description trigger?\", before and after rewriting a description, or to find two skills competing for one prompt. Not for predicting the host's real choice, which a model makes; this is a proxy."
+}

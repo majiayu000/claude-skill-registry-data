@@ -1,0 +1,39 @@
+{
+  "name": "timeline-monitor",
+  "repo": "dimagi-internal/ace",
+  "path": "skills/timeline-monitor/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-llm",
+  "source": "github.com/dimagi-internal/ace",
+  "dir_name": "timeline-monitor",
+  "downloaded_at": "2026-10-27T05:18:47.842136Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: ai, llm, prompt, prompting",
+    "score": 4,
+    "runner_up": "communication",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt",
+      "prompting"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dimagi-internal",
+  "source_url": "https://github.com/dimagi-internal/ace/blob/main/skills/timeline-monitor/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dimagi-internal/ace/blob/main/skills/timeline-monitor/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Check whether an opportunity's LLOs are hitting milestones on schedule and email a nudge to any that are behind."
+}

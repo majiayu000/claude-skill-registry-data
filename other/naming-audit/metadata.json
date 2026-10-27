@@ -1,0 +1,38 @@
+{
+  "name": "naming-audit",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/code-quality/skills/naming-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "naming-audit",
+  "downloaded_at": "2026-10-27T04:32:45.462447Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=3, quality=3",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "word",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/code-quality/skills/naming-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/code-quality/skills/naming-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit function, variable, method and module names in a file or diff: are the names any good, consistent with how the project names things, or misleading names that lie about behaviour (a getter that creates), then propose renames with a migration path for public ones. Use when asked \"are these names clear?\", whether names are misleading, to review naming in a PR, or to agree naming conventions for a new codebase (modules, functions, constants). Not for formatting or choosing a product name."
+}

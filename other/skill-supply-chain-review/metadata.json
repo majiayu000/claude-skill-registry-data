@@ -1,0 +1,37 @@
+{
+  "name": "skill-supply-chain-review",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/cc-setup-tooling/skills/skill-supply-chain-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "skill-supply-chain-review",
+  "downloaded_at": "2026-10-27T04:32:44.513922Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/cc-setup-tooling/skills/skill-supply-chain-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/cc-setup-tooling/skills/skill-supply-chain-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review a third-party skill or plugin before you install it: run skill-scan-gate on the folder, lock it with cc-plugin-lock, read every script for network and shell use with a bundled offline inventory, and write a one-page verdict. Use when asked \"is this skill safe to install?\", before adding a marketplace or plugin, or when a locked plugin changed. Not for skills you are writing yourself (use skill-description-linter and skill-portability-check) and not a malware sandbox."
+}

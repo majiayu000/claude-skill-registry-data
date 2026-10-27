@@ -1,0 +1,38 @@
+{
+  "name": "update-code-index",
+  "repo": "brain-bootstrap/claude-code-brain-bootstrap",
+  "path": ".claude/skills/update-code-index/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/brain-bootstrap/claude-code-brain-bootstrap",
+  "dir_name": "update-code-index",
+  "downloaded_at": "2026-10-27T04:42:13.816503Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "brain-bootstrap",
+  "source_url": "https://github.com/brain-bootstrap/claude-code-brain-bootstrap/blob/main/.claude/skills/update-code-index/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/brain-bootstrap/claude-code-brain-bootstrap/blob/main/.claude/skills/update-code-index/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Scan codebase exports and generate CODE_INDEX.md organized by capability. Check this index before writing new functions to prevent duplication (no more formatDate2 when formatDate exists)."
+}

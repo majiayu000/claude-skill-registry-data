@@ -1,0 +1,37 @@
+{
+  "name": "luke-docs",
+  "repo": "brail/luke",
+  "path": ".claude/skills/luke-docs/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/brail/luke",
+  "dir_name": "luke-docs",
+  "downloaded_at": "2026-10-27T04:41:57.844778Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "brail",
+  "source_url": "https://github.com/brail/luke/blob/main/.claude/skills/luke-docs/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/brail/luke/blob/main/.claude/skills/luke-docs/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Documentation generator, maintainer, and impact auditor for the Luke monorepo. Four modes: readme (creates/updates the root README.md, apps/*/README.md, packages/*/README.md and docs/README.md, with luke-docs markers), inline (JSDoc on TypeScript exports, tRPC procedure comments, Prisma /// field docs), adr (validates docs/decisions/ ADRs against the codebase and maintains the index), audit (read-only documentation-impact and semantic-drift review). Use when asked to generate, update, normalize, or review documentation, and after changes to architecture, public/API behavior, configuration, operations, release/deployment, developer workflows, or repository structure. One mode per invocation."
+}

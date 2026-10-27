@@ -1,0 +1,39 @@
+{
+  "name": "readme-who-what-why",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/repo-engineering/skills/readme-who-what-why/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "readme-who-what-why",
+  "downloaded_at": "2026-10-27T04:32:54.265689Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: docs, word, markdown, documentation",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "word",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/repo-engineering/skills/readme-who-what-why/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/repo-engineering/skills/readme-who-what-why/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Check whether a README's first screen answers six questions (what it is, who it is for, why it exists, how to install, one example, where to ask), flag hype words, list the gaps as a to-do list, then fix them with verified text. Use when asked to \"review my README\", before publishing or announcing a repository, or to add a README gate to CI. Not for checking whether README commands still work (docs-truth-check), writing a README from scratch (readme-author), or long-form documentation."
+}

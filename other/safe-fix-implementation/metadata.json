@@ -1,0 +1,38 @@
+{
+  "name": "safe-fix-implementation",
+  "repo": "dss-time/repo-doctor-skills",
+  "path": "plugins/repo-doctor/skills/safe-fix-implementation/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/dss-time/repo-doctor-skills",
+  "dir_name": "safe-fix-implementation",
+  "downloaded_at": "2026-10-27T05:25:52.845902Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dss-time",
+  "source_url": "https://github.com/dss-time/repo-doctor-skills/blob/main/plugins/repo-doctor/skills/safe-fix-implementation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dss-time/repo-doctor-skills/blob/main/plugins/repo-doctor/skills/safe-fix-implementation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Implement one small, safe, verified production fix after a clear diagnosis or for an exact, low-risk edit with an explicit target and desired result. Use feature-implementation for settled multi-slice feature delivery, safe-test-implementation for test-only changes and documentation-sync for documentation-only changes. \u5728\u660e\u786e\u8bca\u65ad\u540e\uff0c\u6216\u9488\u5bf9\u76ee\u6807\u4e0e\u671f\u671b\u7ed3\u679c\u6e05\u695a\u7684\u7cbe\u786e\u4f4e\u98ce\u9669\u7f16\u8f91\uff0c\u5b9e\u65bd\u4e00\u4e2a\u5c0f\u8303\u56f4\u3001\u53ef\u9a8c\u8bc1\u7684\u751f\u4ea7\u4ee3\u7801\u4fee\u590d\u3002\u5df2\u786e\u8ba4\u7684\u591a\u5207\u7247\u529f\u80fd\u4ea4\u4ed8\u4f7f\u7528 feature-implementation\uff0c\u4ec5\u6d4b\u8bd5\u4fee\u6539\u4f7f\u7528 safe-test-implementation\uff0c\u4ec5\u6587\u6863\u4fee\u6539\u4f7f\u7528 documentation-sync\u3002"
+}

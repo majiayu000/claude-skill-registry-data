@@ -1,0 +1,38 @@
+{
+  "name": "test-kitchen",
+  "repo": "escoffier-labs/skillet",
+  "path": "skillet/skills/test-kitchen/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/escoffier-labs/skillet",
+  "dir_name": "test-kitchen-escoffier-labs-skillet",
+  "downloaded_at": "2026-10-27T05:34:51.265917Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "escoffier-labs",
+  "source_url": "https://github.com/escoffier-labs/skillet/blob/main/skillet/skills/test-kitchen/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/escoffier-labs/skillet/blob/main/skillet/skills/test-kitchen/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use only when the user asks to create, audit, or refresh a project-local verify skill that drives the real app - \"make a verify skill for this repo\", \"script how to prove this app works\", \"audit the verify skill\", \"the feature map is stale\". Runs only when the user asks. Not for a one-off check (use check)."
+}

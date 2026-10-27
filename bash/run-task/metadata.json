@@ -1,0 +1,38 @@
+{
+  "name": "run-task",
+  "repo": "diegoami/game-archaeologist",
+  "path": ".claude/skills/run-task/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/diegoami/game-archaeologist",
+  "dir_name": "run-task",
+  "downloaded_at": "2026-10-27T05:18:03.992341Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "diegoami",
+  "source_url": "https://github.com/diegoami/game-archaeologist/blob/main/.claude/skills/run-task/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/diegoami/game-archaeologist/blob/main/.claude/skills/run-task/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run tasks or fixes end to end. OpenCode (or Claude) implements, a reviewer of another model family reviews, the main session merges and reports. Main session only."
+}

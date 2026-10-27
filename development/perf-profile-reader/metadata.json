@@ -1,0 +1,38 @@
+{
+  "name": "perf-profile-reader",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/debugging/skills/perf-profile-reader/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "perf-profile-reader",
+  "downloaded_at": "2026-10-27T04:32:49.008102Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, compile, debug",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/debugging/skills/perf-profile-reader/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/debugging/skills/perf-profile-reader/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Read a captured CPU profile (py-spy collapsed stacks or dump, Go pprof text output, Python cProfile output) with a bundled script, find the few functions and calls that hold the time, say whether it is real work or waiting, and what to optimise or fix first. Use when someone has a profile and asks \"where does the time go?\", which functions to optimise, or before optimising anything. Not for taking the profile (instructions are included), memory growth (memory-leak-checklist) or static complexity (complexity-report)."
+}

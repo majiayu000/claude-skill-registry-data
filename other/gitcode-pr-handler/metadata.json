@@ -1,0 +1,37 @@
+{
+  "name": "gitcode-pr-handler",
+  "repo": "catman626/cannbot-skills",
+  "path": "infra/gitcode-pr-handler/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/catman626/cannbot-skills",
+  "dir_name": "gitcode-pr-handler",
+  "downloaded_at": "2026-10-27T04:49:23.943161Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "catman626",
+  "source_url": "https://github.com/catman626/cannbot-skills/blob/main/infra/gitcode-pr-handler/SKILL.md",
+  "license": "CANN-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/catman626/cannbot-skills/blob/main/infra/gitcode-pr-handler/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "\u6839\u636e GitCode PR \u7684\u4ee3\u7801\u53d8\u66f4\uff0c\u91cd\u65b0\u751f\u6210\u7b26\u5408\u7ea6\u5b9a\u5f0f\u63d0\u4ea4\u89c4\u8303\u7684 PR \u6807\u9898\u4e0e\u7b26\u5408\u4ed3\u5e93 PR \u6a21\u677f\u7684 PR \u63cf\u8ff0\uff08body\uff09\uff0c\u7136\u540e\u901a\u8fc7 GitCode API \u5199\u56de PR\u3002\u5f53\u7528\u6237\u63d0\u4f9b PR \u94fe\u63a5\u3001\u8981\u6c42\"\u66f4\u65b0 PR / \u751f\u6210\u6807\u9898 / \u751f\u6210\u63cf\u8ff0 / \u6539 PR \u6587\u6848 / \u91cd\u5199 PR \u6807\u9898\u63cf\u8ff0\"\u65f6\u89e6\u53d1\u6b64 skill\u3002"
+}

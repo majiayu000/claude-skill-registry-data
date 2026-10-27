@@ -1,0 +1,38 @@
+{
+  "name": "requirements-clarification",
+  "repo": "dss-time/repo-doctor-skills",
+  "path": "skills/requirements-clarification/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/dss-time/repo-doctor-skills",
+  "dir_name": "requirements-clarification-dss-time-repo-doctor-skills",
+  "downloaded_at": "2026-10-27T05:25:57.523001Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dss-time",
+  "source_url": "https://github.com/dss-time/repo-doctor-skills/blob/main/skills/requirements-clarification/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dss-time/repo-doctor-skills/blob/main/skills/requirements-clarification/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Close consequential product, behavior, data, permission, compatibility, and acceptance decisions through an evidence-first decision-tree interview. Use for a vague or disputed request before specification; choose fast, standard, or documented mode. Do not use when a testable specification already exists or to implement code. Automatic invocation is appropriate only when material ambiguity is evident; durable terminology or ADR edits require explicit write authorization. \u901a\u8fc7\u8bc1\u636e\u4f18\u5148\u7684\u95ee\u9898\u6811\u8bbf\u8c08\uff0c\u5173\u95ed\u4f1a\u5f71\u54cd\u4ea7\u54c1\u3001\u884c\u4e3a\u3001\u6570\u636e\u3001\u6743\u9650\u3001\u517c\u5bb9\u6027\u548c\u9a8c\u6536\u7684\u91cd\u8981\u51b3\u7b56\u3002\u7528\u4e8e\u89c4\u683c\u5316\u524d\u4ecd\u6a21\u7cca\u6216\u5b58\u5728\u4e89\u8bae\u7684\u9700\u6c42\uff0c\u53ef\u9009 fast\u3001standard \u6216 documented \u6a21\u5f0f\u3002\u5df2\u6709\u53ef\u6d4b\u8bd5\u89c4\u683c\u6216\u9700\u8981\u5b9e\u65bd\u4ee3\u7801\u65f6\u4e0d\u4f7f\u7528\uff1b\u4ec5\u5728\u660e\u663e\u5b58\u5728\u91cd\u5927\u6b67\u4e49\u65f6\u9002\u5408\u81ea\u52a8\u8c03\u7528\uff0c\u6301\u4e45\u672f\u8bed\u6216 ADR \u4fee\u6539\u5fc5\u987b\u83b7\u5f97\u660e\u786e\u5199\u6743\u9650\u3002"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "multi-framework-overlap-map",
+  "repo": "better-isms/grcskills",
+  "path": "skills/tristan-roth/multi-framework-overlap-map/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/better-isms/grcskills",
+  "dir_name": "multi-framework-overlap-map",
+  "downloaded_at": "2026-10-27T04:35:48.937193Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "better-isms",
+  "source_url": "https://github.com/better-isms/grcskills/blob/main/skills/tristan-roth/multi-framework-overlap-map/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/better-isms/grcskills/blob/main/skills/tristan-roth/multi-framework-overlap-map/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when a company answers to two or more frameworks and is collecting the same evidence\ntwice, and asks \"map our controls across frameworks\", \"crosswalk between our certification and\nour attestation\", \"can our ISMS cover NIS 2\", \"unified control framework\", \"collect evidence once,\nuse it everywhere\" or \"what is unique to each framework\". Builds one internal control set in the\ncompany's own words, maps each control to the framework references by bare identifier with an\nhonest match strength, flags what only one framework asks for, and writes a control map plus an\nevidence plan where each artefact is collected once."
+}

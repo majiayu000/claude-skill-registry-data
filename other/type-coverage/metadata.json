@@ -1,0 +1,37 @@
+{
+  "name": "type-coverage",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/code-quality/skills/type-coverage/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "type-coverage",
+  "downloaded_at": "2026-10-27T04:32:46.009647Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/code-quality/skills/type-coverage/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/code-quality/skills/type-coverage/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Measure how much of a Python or TypeScript codebase is type-annotated with a bundled script (parameter and return annotations per function, explicit any counts), count functions missing annotations, find the least-typed files, and plan a gradual typing rollout with a CI threshold. Use when asked \"how well typed is this code?\", where to add types first, or to enforce typing on new code. Not for finding type errors; it measures annotations only (run mypy, pyright or tsc for that)."
+}

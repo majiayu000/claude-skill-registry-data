@@ -1,0 +1,39 @@
+{
+  "name": "crowdin-cli",
+  "repo": "crowdin/skills",
+  "path": "skills/crowdin-cli/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/crowdin/skills",
+  "dir_name": "crowdin-cli",
+  "downloaded_at": "2026-10-27T05:04:18.662961Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "devops",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "crowdin",
+  "source_url": "https://github.com/crowdin/skills/blob/main/skills/crowdin-cli/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/crowdin/skills/blob/main/skills/crowdin-cli/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Guides correct usage of Crowdin CLI - the `crowdin` command that syncs localization files between a local project and Crowdin. Use whenever the user runs, scripts, or debugs `crowdin` commands, authorizes the CLI, creates or edits a crowdin.yml configuration, uploads sources, downloads translations, checks translation status, auto-translates a project, wires localization into CI/CD, or migrates scripts from CLI v4 to v5 - even if they just say \"sync translations\" or \"push strings to Crowdin\" without naming the CLI."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "iteration-report",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/github-manager/skills/iteration-report/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "iteration-report",
+  "downloaded_at": "2026-10-27T04:32:51.485602Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/github-manager/skills/iteration-report/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/github-manager/skills/iteration-report/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write a team-level sprint or iteration report from saved gh pull request, issue and milestone exports: what shipped or merged, what carried over or slipped, what was opened or closed as not planned, with cycle time (median and p90) and review turnaround, every number cited to its rows. Use when asked \"what did we ship this sprint?\", to \"write the iteration report\", for a milestone summary or a stakeholder update. Not for per-person output or performance reviews, sprint planning, or work tracked outside GitHub."
+}

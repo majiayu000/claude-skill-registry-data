@@ -1,0 +1,38 @@
+{
+  "name": "customer-security-questionnaire-answers",
+  "repo": "better-isms/grcskills",
+  "path": "skills/tristan-roth/customer-security-questionnaire-answers/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/better-isms/grcskills",
+  "dir_name": "customer-security-questionnaire-answers",
+  "downloaded_at": "2026-10-27T04:35:52.943973Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "word",
+      "excel"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "better-isms",
+  "source_url": "https://github.com/better-isms/grcskills/blob/main/skills/tristan-roth/customer-security-questionnaire-answers/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/better-isms/grcskills/blob/main/skills/tristan-roth/customer-security-questionnaire-answers/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when a customer or prospect has sent a security questionnaire, due diligence form\nor vendor assessment and someone asks \"answer this security questionnaire\", \"fill in the\ncustomer's vendor assessment\", \"draft answers from our policies\", \"we have 300 questions due\nFriday\", \"reuse our previous questionnaire answers\" or \"which answers can we not back up\".\nDrafts every answer from the company's own documents with a source and a confidence level, flags\nanswers without evidence and answers that create commitments, checks consistency with past\nanswers, and writes an answer sheet plus a list of items for owners to confirm."
+}

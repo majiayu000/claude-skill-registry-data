@@ -1,0 +1,38 @@
+{
+  "name": "forward-plan",
+  "repo": "escoffier-labs/brigade",
+  "path": "src/brigade/templates/skills/forward-plan/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/escoffier-labs/brigade",
+  "dir_name": "forward-plan",
+  "downloaded_at": "2026-10-27T05:34:46.050310Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, planning=3",
+    "score": 3,
+    "runner_up": "planning",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "escoffier-labs",
+  "source_url": "https://github.com/escoffier-labs/brigade/blob/main/src/brigade/templates/skills/forward-plan/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/escoffier-labs/brigade/blob/main/src/brigade/templates/skills/forward-plan/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when turning Brigade's native ready set, outcome rank, and ROADMAP.md into a dependency-filed plan artifact under .brigade/work/plans/ - propose GraphTrail-derived edges (blocks from def/use, conflicts-with from write overlap) marked derived and requiring confirmation. Degrade cleanly when GraphTrail is unavailable. Never a subcommand."
+}

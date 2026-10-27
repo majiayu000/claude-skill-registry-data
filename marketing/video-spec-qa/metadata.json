@@ -1,0 +1,37 @@
+{
+  "name": "video-spec-qa",
+  "repo": "dimagi-internal/ace",
+  "path": "skills/video-spec-qa/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/dimagi-internal/ace",
+  "dir_name": "video-spec-qa",
+  "downloaded_at": "2026-10-27T05:18:43.126225Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: marketing, campaign",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "marketing",
+      "campaign"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dimagi-internal",
+  "source_url": "https://github.com/dimagi-internal/ace/blob/main/skills/video-spec-qa/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dimagi-internal/ace/blob/main/skills/video-spec-qa/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Structural QA on the spec.yaml produced by /ace:video-from-program-page (or hand-authored) for an ace-web video program. Binary pass/fail. 13 static checks, no LLM. Gates video-spec-eval."
+}

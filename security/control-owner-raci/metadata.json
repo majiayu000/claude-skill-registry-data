@@ -1,0 +1,39 @@
+{
+  "name": "control-owner-raci",
+  "repo": "better-isms/grcskills",
+  "path": "skills/tristan-roth/control-owner-raci/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/better-isms/grcskills",
+  "dir_name": "control-owner-raci",
+  "downloaded_at": "2026-10-27T04:35:43.136867Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "business",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "better-isms",
+  "source_url": "https://github.com/better-isms/grcskills/blob/main/skills/tristan-roth/control-owner-raci/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/better-isms/grcskills/blob/main/skills/tristan-roth/control-owner-raci/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when controls have no clear owner, or \"security\" owns everything, and the team asks\n\"who owns each control\", \"build a RACI for our controls\", \"assign control owners\", \"nobody knows\nwho runs the access review\", \"set a review cadence per control\" or \"the auditor asked who is\naccountable\". Assigns one accountable role and the operators to every applicable control, checks\nworkload and segregation of duties, sets a review cadence from how each control runs, and writes a\nRACI table plus a one-page brief per owner role."
+}

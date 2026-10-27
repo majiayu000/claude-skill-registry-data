@@ -1,0 +1,38 @@
+{
+  "name": "dead-code-verification",
+  "repo": "dss-time/repo-doctor-skills",
+  "path": "plugins/repo-doctor/skills/dead-code-verification/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/dss-time/repo-doctor-skills",
+  "dir_name": "dead-code-verification",
+  "downloaded_at": "2026-10-27T05:25:50.700706Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dss-time",
+  "source_url": "https://github.com/dss-time/repo-doctor-skills/blob/main/plugins/repo-doctor/skills/dead-code-verification/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dss-time/repo-doctor-skills/blob/main/plugins/repo-doctor/skills/dead-code-verification/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Verify whether a specific symbol, file, route, configuration path, or feature is safely removable by checking static and dynamic usage, registries, build entries, templates, plugins, scripts, and external contracts. Use for evidence of unused code; do not perform general impact analysis, assume absence from text search proves safety, or delete code. \u901a\u8fc7\u68c0\u67e5\u9759\u6001\u4e0e\u52a8\u6001\u4f7f\u7528\u3001\u6ce8\u518c\u5668\u3001\u6784\u5efa\u5165\u53e3\u3001\u6a21\u677f\u3001\u63d2\u4ef6\u3001\u811a\u672c\u548c\u5916\u90e8\u5951\u7ea6\uff0c\u9a8c\u8bc1\u5177\u4f53\u7b26\u53f7\u3001\u6587\u4ef6\u3001\u8def\u7531\u3001\u914d\u7f6e\u8def\u5f84\u6216\u529f\u80fd\u662f\u5426\u53ef\u5b89\u5168\u5220\u9664\u3002\u7528\u4e8e\u65e0\u7528\u4ee3\u7801\u8bc1\u636e\uff1b\u4e0d\u66ff\u4ee3\u901a\u7528\u5f71\u54cd\u5206\u6790\uff0c\u4e0d\u628a\u6587\u672c\u641c\u7d22\u65e0\u7ed3\u679c\u5f53\u5b89\u5168\u8bc1\u660e\uff0c\u4e5f\u4e0d\u5220\u9664\u4ee3\u7801\u3002"
+}

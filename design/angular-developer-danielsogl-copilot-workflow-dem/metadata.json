@@ -1,0 +1,39 @@
+{
+  "name": "angular-developer",
+  "repo": "danielsogl/copilot-workflow-demo",
+  "path": ".claude/skills/angular-developer/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/danielsogl/copilot-workflow-demo",
+  "dir_name": "angular-developer-danielsogl-copilot-workflow-dem",
+  "downloaded_at": "2026-10-27T05:10:03.547982Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: css, component, tailwind, animation",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "css",
+      "component",
+      "tailwind",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "danielsogl",
+  "source_url": "https://github.com/danielsogl/copilot-workflow-demo/blob/main/.claude/skills/angular-developer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/danielsogl/copilot-workflow-demo/blob/main/.claude/skills/angular-developer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generates Angular code and provides architectural guidance. Trigger when creating projects, components, services, or HTTP communication, or for best practices on reactivity (signals, linkedSignal, resource, httpResource), forms, dependency injection, routing, SSR, accessibility (ARIA), animations, styling (component styles, Tailwind CSS), testing, naming conventions, or CLI tooling."
+}

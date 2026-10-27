@@ -1,0 +1,38 @@
+{
+  "name": "gateway-workers",
+  "repo": "fcakyon/claude-codex-settings",
+  "path": "plugins/cloudflare-skills/skills/gateway-workers/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/fcakyon/claude-codex-settings",
+  "dir_name": "gateway-workers",
+  "downloaded_at": "2026-10-27T05:38:47.437847Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, memory",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fcakyon",
+  "source_url": "https://github.com/fcakyon/claude-codex-settings/blob/main/plugins/cloudflare-skills/skills/gateway-workers/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fcakyon/claude-codex-settings/blob/main/plugins/cloudflare-skills/skills/gateway-workers/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build, debug, or review Cloudflare Workers invoked by the Forward action in Gateway HTTP policies, including the GatewayMiddleware entrypoint, Gateway types, context, and continuation."
+}

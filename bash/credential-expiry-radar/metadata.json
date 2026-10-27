@@ -1,0 +1,37 @@
+{
+  "name": "credential-expiry-radar",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/agent-identity-governance/skills/credential-expiry-radar/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "credential-expiry-radar",
+  "downloaded_at": "2026-10-27T04:32:38.994474Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: script, cli",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/agent-identity-governance/skills/credential-expiry-radar/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/agent-identity-governance/skills/credential-expiry-radar/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find the secrets, certificates, access keys and tokens that have expired or soon will, across Entra app and Agent ID blueprint credentials, AWS IAM, GitHub fine-grained tokens and a CSV of other keys, bucketed at 7, 30 and 90 days with an action list per owner. Use when asked \"which app secrets expire this month?\", before a rotation sprint, or after an outage from an expired certificate or secret. Not for rotating, leaked secrets (leaked-credential-response) or what agent apps can do (entra-agent-id-review)."
+}

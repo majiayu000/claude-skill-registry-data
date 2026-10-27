@@ -1,0 +1,37 @@
+{
+  "name": "agent-recertification",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/agent-identity-governance/skills/agent-recertification/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "agent-recertification",
+  "downloaded_at": "2026-10-27T04:32:38.665529Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/agent-identity-governance/skills/agent-recertification/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/agent-identity-governance/skills/agent-recertification/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run the quarterly recertification of agent and workload identities: one review sheet per owner to re-attest, saying what each identity can do, when it last acted and what changed, plus a tracking CSV. Flags identities never attested, attestations older than 90 days and owners who have left. Use when asked \"prepare the agent access review for this quarter\" or before an audit of non-human access. Not for reviews of human users and admins (access-review-pack), listing ownerless identities (nhi-inventory) or deciding for an owner."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "ape-write-paper",
+  "repo": "arpitbbhayani/ape-skills",
+  "path": "ape-write-paper/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/arpitbbhayani/ape-skills",
+  "dir_name": "ape-write-paper",
+  "downloaded_at": "2026-10-27T04:23:16.490009Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "arpitbbhayani",
+  "source_url": "https://github.com/arpitbbhayani/ape-skills/blob/master/ape-write-paper/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/arpitbbhayani/ape-skills/blob/master/ape-write-paper/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Writes a polished, standard two-column research paper (LaTeX to PDF) from any source material -- code, docs, experiment logs, benchmark files, notes -- optimising for correctness, readability, structure, figures, tables and references. Supports both standalone papers and conference templates (ACM SIGMOD/VLDB, IEEE, NeurIPS). Audits every claim against evidence before writing, reports losses honestly, and renders pages to check them. Trigger on \"ape write paper\", \"write a paper from this\", \"turn these experiments into a paper\", or \"draft the paper for this project\"."
+}

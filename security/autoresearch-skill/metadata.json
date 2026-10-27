@@ -1,0 +1,38 @@
+{
+  "name": "autoresearch-skill",
+  "repo": "blksails/skills",
+  "path": "skills/autoresearch-skill/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/blksails/skills",
+  "dir_name": "autoresearch-skill",
+  "downloaded_at": "2026-10-27T04:39:47.003184Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, audit, owasp",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "audit",
+      "owasp"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "blksails",
+  "source_url": "https://github.com/blksails/skills/blob/main/skills/autoresearch-skill/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/blksails/skills/blob/main/skills/autoresearch-skill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Autonomous research and experimentation toolkit with 10 commands.\nCore loop inspired by Karpathy's autoresearch \u2014 generalizes to any domain\nwith mechanical evaluation, overnight persistence, and zero dependencies.\nTRIGGER when: user wants autonomous experiments; user mentions \"autoresearch\"\nor \"auto-research\"; user wants iterative optimization; user wants a research loop;\nuser mentions \"research.md\"; user wants to iterate until some condition;\nuser wants to optimize code, prompts, configs, or parameters iteratively;\nuser invokes any /autoresearch:* subcommand.\nDO NOT TRIGGER when: user wants a one-shot answer; user wants manual step-by-step\nguidance; user just wants to read a single paper; user wants a simple web search."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "autoresearch",
+  "repo": "blksails/skills",
+  "path": "skills/autoresearch-skill/skills/autoresearch/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/blksails/skills",
+  "dir_name": "autoresearch-blksails-skills",
+  "downloaded_at": "2026-10-27T04:39:50.710578Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ml",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "blksails",
+  "source_url": "https://github.com/blksails/skills/blob/main/skills/autoresearch-skill/skills/autoresearch/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/blksails/skills/blob/main/skills/autoresearch-skill/skills/autoresearch/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Core autonomous research loop. Reads research.md, proposes hypotheses,\nruns experiments, evaluates results mechanically, keeps improvements,\ndiscards failures, and iterates until the target metric is achieved or\nthe iteration budget is exhausted.\nTRIGGER when: user invokes \"autoresearch\" (no subcommand); research.md exists;\nuser wants the 5-stage loop; user wants iterative optimization overnight."
+}

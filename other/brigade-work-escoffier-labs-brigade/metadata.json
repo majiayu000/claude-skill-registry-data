@@ -1,0 +1,37 @@
+{
+  "name": "brigade-work",
+  "repo": "escoffier-labs/brigade",
+  "path": "src/brigade/templates/skills/brigade-work/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/escoffier-labs/brigade",
+  "dir_name": "brigade-work-escoffier-labs-brigade",
+  "downloaded_at": "2026-10-27T05:34:45.736761Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "escoffier-labs",
+  "source_url": "https://github.com/escoffier-labs/brigade/blob/main/src/brigade/templates/skills/brigade-work/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/escoffier-labs/brigade/blob/main/src/brigade/templates/skills/brigade-work/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use at the start of any work session and whenever you verify a change in a Brigade-wired repo or workspace - routes work through Brigade so verification, outcomes, evidence export, and handoffs are captured (verify with capture \u2192 outcome from run \u2192 evidence brief next time) instead of leaving Brigade installed-but-dormant. Triggers on starting a task, running tests/checks, or finishing a session."
+}

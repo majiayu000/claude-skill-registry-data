@@ -1,0 +1,38 @@
+{
+  "name": "preventive-control-mapper",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/aws-security/skills/preventive-control-mapper/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "preventive-control-mapper",
+  "downloaded_at": "2026-10-27T04:32:42.369649Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/aws-security/skills/preventive-control-mapper/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/aws-security/skills/preventive-control-mapper/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn failing Security Hub controls and Prowler checks (S3, EC2, IAM, CloudTrail, KMS, RDS and more) into the preventive controls that stop the same misconfiguration coming back: an SCP statement, an account or declarative-policy setting, an IaC check, plus the AWS Config rule that detects a regression. Offline, from saved exports. Use when asked \"how do we stop this finding coming back?\" or to move from fixing findings to preventing them. Not for deciding what to fix first (security-hub-triage), linting an SCP (scp-guardrails) or checking one account (aws-account-audit)."
+}

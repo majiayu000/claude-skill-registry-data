@@ -1,0 +1,37 @@
+{
+  "name": "machina-driving",
+  "repo": "arisng/github-copilot-fc",
+  "path": "skills/machina-driving/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/arisng/github-copilot-fc",
+  "dir_name": "machina-driving",
+  "downloaded_at": "2026-10-27T04:22:43.393117Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "arisng",
+  "source_url": "https://github.com/arisng/github-copilot-fc/blob/main/skills/machina-driving/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/arisng/github-copilot-fc/blob/main/skills/machina-driving/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Drive a Machina state machine to a deterministic outcome on behalf of an AI agent. USE WHEN: a task is governed by a state machine (a machine definition JSON with states, transitions, guards, actions, tools, checks, scenarios); executing a workflow that must be deterministic and auditable; running a skill whose SKILL.md declares a `machina:` machine; firing events, checking status, satisfying evidence checks, verifying run integrity with `check`, or producing a terminal report for a machine-driven run; escalating a STUCK run to a human conductor. DO NOT USE FOR: authoring or scoring machine definitions (use machina-authoring); modifying the Machina simulator app or its engine (use machina-simulator); implementing or modifying the driver/runtime tooling such as `scripts/machine-driver.py` (engine development) unless you are a maintainer of this skill upgrading the driver itself; general diagramming or XState/SCXML authoring."
+}

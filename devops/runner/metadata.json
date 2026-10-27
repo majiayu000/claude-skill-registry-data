@@ -1,0 +1,38 @@
+{
+  "name": "runner",
+  "repo": "escoffier-labs/skillet",
+  "path": "skillet/skills/runner/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/escoffier-labs/skillet",
+  "dir_name": "runner",
+  "downloaded_at": "2026-10-27T05:34:49.427948Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: ci, infra, infrastructure",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "ci",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "escoffier-labs",
+  "source_url": "https://github.com/escoffier-labs/skillet/blob/main/skillet/skills/runner/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/escoffier-labs/skillet/blob/main/skillet/skills/runner/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when an open pull request must be driven to merge-ready - conflicts, unanswered review threads, or failing CI are outstanding - or the user says \"babysit this PR\", \"get PR 123 green\", \"address the review comments\", \"is it mergeable yet\", or \"check on PR 123\". Not for filing a PR (use pass) or landing a campaign (use fleet-conductor)."
+}

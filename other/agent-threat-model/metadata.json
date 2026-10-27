@@ -1,0 +1,39 @@
+{
+  "name": "agent-threat-model",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/agent-security/skills/agent-threat-model/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "agent-threat-model",
+  "downloaded_at": "2026-10-27T04:32:40.083558Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=4, security=4",
+    "score": 4,
+    "runner_up": "security",
+    "runner_up_score": 4,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/agent-security/skills/agent-threat-model/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/agent-security/skills/agent-threat-model/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write a threat model or threat assessment for an LLM-agent system by drafting principals, tools, channels, data stores and controls in YAML from the code, running the atm analyser for STRIDE and OWASP findings, and summarising with incident precedents. Use when asked to \"threat model this agent\", \"what could go wrong with this agent?\", to map its trust boundaries and attack surface, or for a design review of an agent we are building. Not for scanning code (semgrep-agentic) or a ship decision (secure-agent-checklist)."
+}

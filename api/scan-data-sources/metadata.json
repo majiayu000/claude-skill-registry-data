@@ -1,0 +1,37 @@
+{
+  "name": "scan-data-sources",
+  "repo": "dimagi-internal/ace",
+  "path": "skills/scan-data-sources/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/dimagi-internal/ace",
+  "dir_name": "scan-data-sources",
+  "downloaded_at": "2026-10-27T05:18:48.992865Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dimagi-internal",
+  "source_url": "https://github.com/dimagi-internal/ace/blob/main/skills/scan-data-sources/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dimagi-internal/ace/blob/main/skills/scan-data-sources/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Sweep for sources that could answer an indicator and vet each on licence and coverage. Use when data is thin or a note needs rescanning."
+}

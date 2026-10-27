@@ -1,0 +1,38 @@
+{
+  "name": "license-and-service-plan-audit",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/m365-governance/skills/license-and-service-plan-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "license-and-service-plan-audit",
+  "downloaded_at": "2026-10-27T04:32:52.675463Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/m365-governance/skills/license-and-service-plan-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/m365-governance/skills/license-and-service-plan-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find wasted Microsoft 365 licences from read-only Graph exports, reporting licences on disabled, never-signed-in or inactive accounts, overlapping SKUs (such as E3 and E5 on one user), unwanted service plans, group-based licensing errors and unassigned units, with a draft reclaim list per SKU; costs appear only when you supply unit prices. Use when asked \"where are we wasting licences?\", before a renewal or true-up, or after leavers go. Not for buying subscriptions, app usage, cleaning up groups (teams-and-groups-sprawl) or removing licences."
+}

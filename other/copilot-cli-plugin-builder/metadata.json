@@ -1,0 +1,37 @@
+{
+  "name": "copilot-cli-plugin-builder",
+  "repo": "arisng/github-copilot-fc",
+  "path": "skills/copilot-cli-plugin-builder/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/arisng/github-copilot-fc",
+  "dir_name": "copilot-cli-plugin-builder",
+  "downloaded_at": "2026-10-27T04:22:46.525752Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "arisng",
+  "source_url": "https://github.com/arisng/github-copilot-fc/blob/main/skills/copilot-cli-plugin-builder/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/arisng/github-copilot-fc/blob/main/skills/copilot-cli-plugin-builder/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Author, scaffold, test, and distribute GitHub Copilot CLI plugins. Use when the user wants to: (1) create a new Copilot CLI plugin, (2) add skills, agents, hooks, or MCP servers to a plugin, (3) write a plugin.json manifest, (4) use the Copilot SDK to build programmable plugins, (5) publish a plugin to a marketplace, (6) scaffold plugin boilerplate, (7) migrate from legacy Copilot Extensions, or (8) bump or update a plugin's version. Covers the Agent Plugins 1.0 format (agent-plugins.org) and the @github/copilot-sdk in all 6 languages. Do NOT use for Copilot CLI extensions (tools/commands/canvas via @github/copilot-sdk/extension) \u2014 use copilot-cli-extension-builder instead."
+}

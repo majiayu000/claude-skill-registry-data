@@ -1,0 +1,37 @@
+{
+  "name": "hook-author",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/cc-setup-tooling/skills/hook-author/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "hook-author",
+  "downloaded_at": "2026-10-27T04:32:43.346286Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/cc-setup-tooling/skills/hook-author/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/cc-setup-tooling/skills/hook-author/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write and test a Claude Code hook with cc-hooks: pick the event and the decision (block, warn, allow or modify) from a table, scaffold the hook, its fixtures, a pytest file and the settings block from a short spec, then prove it with cc-hooks test. Use when asked \"add a hook that blocks this command\", to warn on risky edits, or to turn a team rule into a check that runs every time. Not for permission rules alone (use permissions-builder) or hooks for other agents."
+}

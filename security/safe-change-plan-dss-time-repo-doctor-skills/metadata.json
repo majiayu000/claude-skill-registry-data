@@ -1,0 +1,38 @@
+{
+  "name": "safe-change-plan",
+  "repo": "dss-time/repo-doctor-skills",
+  "path": "skills/safe-change-plan/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/dss-time/repo-doctor-skills",
+  "dir_name": "safe-change-plan-dss-time-repo-doctor-skills",
+  "downloaded_at": "2026-10-27T05:25:57.901477Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dss-time",
+  "source_url": "https://github.com/dss-time/repo-doctor-skills/blob/main/skills/safe-change-plan/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dss-time/repo-doctor-skills/blob/main/skills/safe-change-plan/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn a confirmed specification, root-cause finding, or impact analysis into an atomic, verifiable, reversible implementation plan with explicit scope and risk controls. Use only when material decisions are closed and blast radius is sufficiently known; route open decisions to requirements-clarification, settled requirements needing a specification to requirements-to-spec, unknown impact to change-impact-analysis, architecture rationale or decision documentation to architecture-decision-record, and execution to safe-fix-implementation. \u5c06\u5df2\u786e\u8ba4\u89c4\u683c\u3001\u6839\u56e0\u7ed3\u8bba\u6216\u5f71\u54cd\u5206\u6790\u8f6c\u4e3a\u539f\u5b50\u5316\u3001\u53ef\u9a8c\u8bc1\u3001\u53ef\u56de\u6eda\u4e14\u8303\u56f4\u660e\u786e\u7684\u5b9e\u65bd\u8ba1\u5212\u3002\u4ec5\u5728\u91cd\u5927\u51b3\u7b56\u5df2\u95ed\u5408\u4e14\u5f71\u54cd\u8303\u56f4\u8db3\u591f\u660e\u786e\u65f6\u4f7f\u7528\uff1b\u672a\u51b3\u9700\u6c42\u4ea4\u7ed9 requirements-clarification\uff0c\u5df2\u95ed\u5408\u4f46\u5c1a\u9700\u89c4\u683c\u5316\u7684\u9700\u6c42\u4ea4\u7ed9 requirements-to-spec\uff0c\u5f71\u54cd\u672a\u77e5\u4ea4\u7ed9 change-impact-analysis\uff0c\u67b6\u6784\u7406\u7531\u6216\u51b3\u7b56\u6587\u6863\u4ea4\u7ed9 architecture-decision-record\uff0c\u6267\u884c\u4ea4\u7ed9 safe-fix-implementation\u3002"
+}

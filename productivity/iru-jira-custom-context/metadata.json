@@ -1,0 +1,37 @@
+{
+  "name": "iru-jira-custom-context",
+  "repo": "albertoirurueta/docs",
+  "path": ".claude/skills/iru-jira-custom-context/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/albertoirurueta/docs",
+  "dir_name": "iru-jira-custom-context",
+  "downloaded_at": "2026-10-27T04:07:07.201449Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-jira-custom-context/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-jira-custom-context/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Invoked as `Skill({skill: \"iru-jira-custom-context\", args: \"<task purpose>\"})` by `iru-create-jira-ticket` (also runnable as `/iru-jira-custom-context`). Customization point for organization-specific Jira context (custom fields, team, customer, environment, classification); ships with one open-ended question and is meant to be edited in place."
+}

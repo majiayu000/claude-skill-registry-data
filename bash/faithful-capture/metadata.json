@@ -1,0 +1,38 @@
+{
+  "name": "faithful-capture",
+  "repo": "damiantorresmx11/replica-crew",
+  "path": "skills/faithful-capture/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/damiantorresmx11/replica-crew",
+  "dir_name": "faithful-capture",
+  "downloaded_at": "2026-10-27T05:09:00.501803Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "damiantorresmx11",
+  "source_url": "https://github.com/damiantorresmx11/replica-crew/blob/main/skills/faithful-capture/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/damiantorresmx11/replica-crew/blob/main/skills/faithful-capture/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Makes a verbatim LOCAL copy of a web page the user OWNS or is authorized to copy (site migration, backup, lost-source recovery): keeps the page's own CSS, assets and scripts so its real animations re-run, via SingleFile. Gated on recorded authorization; copies the owner's copyrighted code, so it never publishes or hosts. Use when the user says \"capture my site exactly\", \"save the real animations\", \"verbatim/1:1 copy\", \"download my site with assets\", \"mirror this page I own\". For someone else's site, or to rebuild cleanly, use replica-crew product mode instead."
+}

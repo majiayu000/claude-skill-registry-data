@@ -1,0 +1,38 @@
+{
+  "name": "review-doc",
+  "repo": "angadhn/botference",
+  "path": ".agents/skills/review-doc/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/angadhn/botference",
+  "dir_name": "review-doc-angadhn-botference",
+  "downloaded_at": "2026-10-27T04:16:26.273136Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, markdown",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "angadhn",
+  "source_url": "https://github.com/angadhn/botference/blob/main/.agents/skills/review-doc/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/angadhn/botference/blob/main/.agents/skills/review-doc/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Render any document the user needs to review (design docs, plans, story bibles, proposals, reports) as a self-contained HTML page with Google-Docs-style commenting \u2014 highlight text, attach notes, export feedback. Use whenever producing or updating a document whose primary purpose is for the user to READ AND REACT TO, whenever the user asks for \"a review doc\", or when they hand back a *.feedback.md file. The user has standing instructions that all review documents get this treatment."
+}

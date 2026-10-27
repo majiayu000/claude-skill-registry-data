@@ -1,0 +1,38 @@
+{
+  "name": "harness2",
+  "repo": "akillness/jeo-skills",
+  "path": ".agent-skills/harness2/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/akillness/jeo-skills",
+  "dir_name": "harness2",
+  "downloaded_at": "2026-10-27T04:06:31.739711Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, memory",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "akillness",
+  "source_url": "https://github.com/akillness/jeo-skills/blob/main/.agent-skills/harness2/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/akillness/jeo-skills/blob/main/.agent-skills/harness2/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Operate google-research/harness2 (Harness\u00b2), the Apache-2.0 framework for recursive agent harnessing: refine the prompts, guardrails, memory, tool guidance, subagents, skills, scripts, and plugins around a fixed model through contrastive Propose-Probe-Compose steps and a per-domain improvement library. Use when a user wants to run the credential-free local demo, preflight or set up the LAB, JobBench, or WorkBuddy benchmarks, budget and launch a parallel or sequential refinement run with OpenCode or Codex executors, judge and report results, start the Codex bridge, or apply the method by hand to design or refine their own agent harness or agent team. Owns the retired `harness` name. Route reusable SKILL.md ratcheting to `skill-autoresearch`, multi-agent coordination evals to `multi-agent-eval-harness`, production tracing to `agent-observability`, and runtime team execution to `paperclip`, `ruflo`, or `zeroshot`."
+}

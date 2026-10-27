@@ -1,0 +1,37 @@
+{
+  "name": "kiro-verify-completion",
+  "repo": "blksails/skills",
+  "path": "skills/kiro/phases/verify-completion/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/blksails/skills",
+  "dir_name": "verify-completion",
+  "downloaded_at": "2026-10-27T04:39:49.353169Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "blksails",
+  "source_url": "https://github.com/blksails/skills/blob/main/skills/kiro/phases/verify-completion/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/blksails/skills/blob/main/skills/kiro/phases/verify-completion/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Verify completion and success claims with fresh evidence. Use before claiming a task is complete, a fix works, tests pass, or a feature is ready for GO."
+}

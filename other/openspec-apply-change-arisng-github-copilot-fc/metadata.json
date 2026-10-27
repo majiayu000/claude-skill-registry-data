@@ -1,0 +1,37 @@
+{
+  "name": "openspec-apply-change",
+  "repo": "arisng/github-copilot-fc",
+  "path": ".github/skills/openspec-apply-change/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/arisng/github-copilot-fc",
+  "dir_name": "openspec-apply-change-arisng-github-copilot-fc",
+  "downloaded_at": "2026-10-27T04:22:49.674116Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "arisng",
+  "source_url": "https://github.com/arisng/github-copilot-fc/blob/main/.github/skills/openspec-apply-change/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/arisng/github-copilot-fc/blob/main/.github/skills/openspec-apply-change/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Implement tasks from an OpenSpec change. Use when the user wants to start implementing, continue implementation, or work through tasks."
+}

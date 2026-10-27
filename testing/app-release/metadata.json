@@ -1,0 +1,37 @@
+{
+  "name": "app-release",
+  "repo": "dimagi-internal/ace",
+  "path": "skills/app-release/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/dimagi-internal/ace",
+  "dir_name": "app-release",
+  "downloaded_at": "2026-10-27T05:18:41.555672Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: qa, integration",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "qa",
+      "integration"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dimagi-internal",
+  "source_url": "https://github.com/dimagi-internal/ace/blob/main/skills/app-release/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dimagi-internal/ace/blob/main/skills/app-release/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Build and release Learn and Deliver apps on CommCare HQ so Connect can read their form schema and deliver units. Needs the HQ app ids."
+}

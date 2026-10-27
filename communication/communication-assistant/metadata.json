@@ -1,0 +1,39 @@
+{
+  "name": "communication-assistant",
+  "repo": "appleweiping/AGENT_RESOURCE",
+  "path": "skills/vipin/communication-assistant/SKILL.md",
+  "github_branch": "master",
+  "category": "communication",
+  "source": "github.com/appleweiping/AGENT_RESOURCE",
+  "dir_name": "communication-assistant",
+  "downloaded_at": "2026-10-27T04:20:59.756447Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "communication",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for communication: communication, messaging, email, chat",
+    "score": 4,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "communication",
+      "messaging",
+      "email",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "appleweiping",
+  "source_url": "https://github.com/appleweiping/AGENT_RESOURCE/blob/master/skills/vipin/communication-assistant/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/appleweiping/AGENT_RESOURCE/blob/master/skills/vipin/communication-assistant/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Unified lazy-mode communication assistant for Vipin across WhatsApp, WeChat, QQ, Feishu/Lark, and email. Use when Codex needs to triage messages, summarize chats in Chinese, draft replies, save reusable outbox items, prefill a chat box without sending, or route to platform-specific messaging adapters while preserving QR/login-state credentials and requiring explicit approval before any send."
+}

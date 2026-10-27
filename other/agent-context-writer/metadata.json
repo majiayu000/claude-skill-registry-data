@@ -1,0 +1,38 @@
+{
+  "name": "agent-context-writer",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/repo-engineering/skills/agent-context-writer/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "agent-context-writer",
+  "downloaded_at": "2026-10-27T04:32:53.575642Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "doc",
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/repo-engineering/skills/agent-context-writer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/repo-engineering/skills/agent-context-writer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write or refresh AGENTS.md and CLAUDE.md so they hold only what an agent cannot learn from the code, and lint them for lines that restate manifests, scripts, dependency lists or directory trees, paths that do not exist, generic advice and length over a budget. Use when asked to \"shorten our CLAUDE.md\", after /init produced a long file, or when agents ignore a bloated context file. Not for auditing agent permissions, hooks or MCP configuration (agent-config-audit), or human onboarding docs."
+}

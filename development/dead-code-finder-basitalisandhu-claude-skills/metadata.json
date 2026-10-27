@@ -1,0 +1,38 @@
+{
+  "name": "dead-code-finder",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/code-quality/skills/dead-code-finder/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "dead-code-finder-basitalisandhu-claude-skills",
+  "downloaded_at": "2026-10-27T04:32:45.193608Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, refactor",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/code-quality/skills/dead-code-finder/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/code-quality/skills/dead-code-finder/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Shrink a codebase safely: a bundled script lists probably-unused functions, classes, unused methods and exports in a Python or JavaScript/TypeScript tree, each candidate is confirmed by searching for dynamic use, and the skill proposes a safe order to remove them. Use when asked to find dead or unused code, \"what can be deleted safely\", or to prepare a cleanup before a refactor. Not for unused imports or variables inside a function (a linter does that) and not for unused dependencies in package manifests."
+}

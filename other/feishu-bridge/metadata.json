@@ -1,0 +1,37 @@
+{
+  "name": "feishu-bridge",
+  "repo": "appleweiping/AGENT_RESOURCE",
+  "path": "skills/vipin/feishu-bridge/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/appleweiping/AGENT_RESOURCE",
+  "dir_name": "feishu-bridge",
+  "downloaded_at": "2026-10-27T04:20:59.944562Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "appleweiping",
+  "source_url": "https://github.com/appleweiping/AGENT_RESOURCE/blob/master/skills/vipin/feishu-bridge/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/appleweiping/AGENT_RESOURCE/blob/master/skills/vipin/feishu-bridge/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Route Feishu/Lark content access for Codex. Use when the user asks to read, summarize, extract, search, create, update, or fill Feishu/Lark links, documents, wikis, Drive files, Base/bitable tables, Sheets, messages, forms, or pages; when Chinese prompts mention \u98de\u4e66\u3001\u98de\u4e66\u6587\u6863\u3001\u98de\u4e66\u77e5\u8bc6\u5e93\u3001\u98de\u4e66\u591a\u7ef4\u8868\u683c\u3001\u98de\u4e66\u8868\u5355\u3001\u98de\u4e66\u94fe\u63a5\u3001Lark, or lark-cli; or when deciding whether to use official Lark/Feishu API commands or Chrome automation for logged-in web pages."
+}

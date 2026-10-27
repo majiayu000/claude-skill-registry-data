@@ -1,0 +1,38 @@
+{
+  "name": "stale-branch-sweep",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/repo-engineering/skills/stale-branch-sweep/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "stale-branch-sweep",
+  "downloaded_at": "2026-10-27T04:32:54.958521Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/repo-engineering/skills/stale-branch-sweep/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/repo-engineering/skills/stale-branch-sweep/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Clean up a repository's branch list safely: a bundled script joins saved gh and git exports (remote branches, for-each-ref dates and committers, merged refs, PR list) and reports merged branches never deleted, branches idle for N days, branches with an open PR and protected ones, with the last committer as owner, then writes the exact git push --delete commands as a list to review and never runs them. Use when asked \"which branches can we delete?\" or before archiving a repository. Not for reviewing or summarising pull requests, or a whole-repository hygiene pass (repo-hygiene-bundle)."
+}

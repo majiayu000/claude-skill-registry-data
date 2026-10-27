@@ -1,0 +1,36 @@
+{
+  "name": "pdf-review",
+  "repo": "dss-time/repo-doctor-skills",
+  "path": "plugins/productivity-toolkit/skills/pdf-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/dss-time/repo-doctor-skills",
+  "dir_name": "pdf-review",
+  "downloaded_at": "2026-10-27T05:25:48.706059Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category documents scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "forensics",
+    "runner_up_score": 1,
+    "signals": [
+      "pdf"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dss-time",
+  "source_url": "https://github.com/dss-time/repo-doctor-skills/blob/main/plugins/productivity-toolkit/skills/pdf-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dss-time/repo-doctor-skills/blob/main/plugins/productivity-toolkit/skills/pdf-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Default to this Skill for an unqualified PDF review and for checks involving searchable text, structure, tables, page-located claims, numeric consistency, citations, scanned pages, OCR, rendering, completeness, or visual layout. Detect available capabilities and degrade within this Skill when tools are unavailable; do not modify the source PDF or claim unsupported verification. Do not use when the user explicitly requests pdf-review-basic or a lightweight, text-only check without OCR, rendering, or complex layout review. \u672a\u9650\u5b9a\u8303\u56f4\u7684\u901a\u7528 PDF \u5ba1\u67e5\uff0c\u4ee5\u53ca\u6d89\u53ca\u53ef\u641c\u7d22\u6587\u5b57\u3001\u7ed3\u6784\u3001\u8868\u683c\u3001\u9875\u7801\u5b9a\u4f4d\u3001\u6570\u5b57\u4e00\u81f4\u6027\u3001\u5f15\u7528\u3001\u626b\u63cf\u9875\u3001OCR\u3001\u6e32\u67d3\u3001\u5b8c\u6574\u6027\u6216\u89c6\u89c9\u7248\u5f0f\u7684\u68c0\u67e5\uff0c\u9ed8\u8ba4\u4f7f\u7528\u672c Skill\u3002\u68c0\u6d4b\u53ef\u7528\u80fd\u529b\uff0c\u5de5\u5177\u4e0d\u53ef\u7528\u65f6\u4ecd\u5728\u672c Skill \u5185\u964d\u7ea7\uff1b\u4e0d\u5f97\u4fee\u6539\u539f PDF \u6216\u58f0\u79f0\u5b8c\u6210\u4e0d\u53d7\u652f\u6301\u7684\u9a8c\u8bc1\u3002\u7528\u6237\u660e\u786e\u6307\u5b9a pdf-review-basic\uff0c\u6216\u660e\u786e\u8981\u6c42\u4e0d\u505a OCR\u3001\u6e32\u67d3\u548c\u590d\u6742\u7248\u5f0f\u68c0\u67e5\u7684\u8f7b\u91cf\u7eaf\u6587\u672c\u4efb\u52a1\u65f6\u4e0d\u4f7f\u7528\u672c Skill\u3002"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "risk-to-control-traceability-check",
+  "repo": "better-isms/grcskills",
+  "path": "skills/tristan-roth/risk-to-control-traceability-check/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/better-isms/grcskills",
+  "dir_name": "risk-to-control-traceability-check",
+  "downloaded_at": "2026-10-27T04:35:51.643989Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, audit",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "better-isms",
+  "source_url": "https://github.com/better-isms/grcskills/blob/main/skills/tristan-roth/risk-to-control-traceability-check/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/better-isms/grcskills/blob/main/skills/tristan-roth/risk-to-control-traceability-check/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when the risk register and the statement of applicability were written separately\nand may not agree, and the team asks \"do our risks link to our controls\", \"traceability between\nrisk treatment and the SoA\", \"why is this control applicable\", \"the auditor could not trace a risk\nto a control\", \"check our risk treatment plan against the SoA\" or \"orphan controls\". Checks in both\ndirections that every treated risk points to controls and actions, and every applicable control\ntraces back to a risk or obligation, then writes a traceability matrix and a list of orphans and\ncontradictions with proposed fixes."
+}

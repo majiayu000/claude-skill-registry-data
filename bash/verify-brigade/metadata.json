@@ -1,0 +1,38 @@
+{
+  "name": "verify-brigade",
+  "repo": "escoffier-labs/brigade",
+  "path": "registry/skills/verify-brigade/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/escoffier-labs/brigade",
+  "dir_name": "verify-brigade",
+  "downloaded_at": "2026-10-27T05:34:45.114730Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, cli",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "escoffier-labs",
+  "source_url": "https://github.com/escoffier-labs/brigade/blob/main/registry/skills/verify-brigade/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/escoffier-labs/brigade/blob/main/registry/skills/verify-brigade/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Prove a Brigade change works by driving the real `brigade` CLI against a throwaway temp target, then capture receipts as evidence. Use when you changed anything under src/brigade/ and need proof beyond pytest - init/doctor wiring, work-verify receipts, Grok Bot connector packs, feed manifests, handoff lint. Also use before claiming a CLI behavior in a PR body, handoff, or job report."
+}

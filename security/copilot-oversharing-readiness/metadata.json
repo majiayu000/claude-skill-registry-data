@@ -1,0 +1,37 @@
+{
+  "name": "copilot-oversharing-readiness",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/m365-governance/skills/copilot-oversharing-readiness/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "copilot-oversharing-readiness",
+  "downloaded_at": "2026-10-27T04:32:52.002998Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "auth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/m365-governance/skills/copilot-oversharing-readiness/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/m365-governance/skills/copilot-oversharing-readiness/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Score a Microsoft 365 tenant's readiness for a Copilot rollout against Microsoft's oversharing checks and produce a fix list per site owner, from read-only exports of SharePoint sites, sensitivity labels, Everyone grants, sharing links and DLP policies. Use when asked \"are we ready to turn on Copilot?\", before a Copilot pilot or before it widens. Not for tenant guest settings alone (guest-and-external-sharing-review), reading file contents, or changing any permission."
+}

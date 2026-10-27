@@ -1,0 +1,39 @@
+{
+  "name": "incident-severity-triage",
+  "repo": "better-isms/grcskills",
+  "path": "skills/tristan-roth/incident-severity-triage/SKILL.md",
+  "github_branch": "main",
+  "category": "forensics",
+  "source": "github.com/better-isms/grcskills",
+  "dir_name": "incident-severity-triage",
+  "downloaded_at": "2026-10-27T04:35:46.063212Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "forensics",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for forensics: incident, evidence, triage",
+    "score": 3,
+    "runner_up": "business",
+    "runner_up_score": 2,
+    "signals": [
+      "incident",
+      "evidence",
+      "triage"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "better-isms",
+  "source_url": "https://github.com/better-isms/grcskills/blob/main/skills/tristan-roth/incident-severity-triage/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/better-isms/grcskills/blob/main/skills/tristan-roth/incident-severity-triage/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when something is happening now: an alert, a suspicious login, a ransomware note,\ndata sent to the wrong customer, an outage that might be an attack, and someone asks \"how bad is\nthis\", \"classify this incident\", \"is this a SEV1\", \"who do we wake up\", \"is this a breach\", \"do we\nneed to notify anyone\" or \"start the incident log\". Classifies the incident on the company's own\nscale in minutes, decides who is called and how fast, flags any regulatory or contractual clock,\nlists the evidence to preserve, and starts a timestamped triage record that is revisited as facts\nchange."
+}

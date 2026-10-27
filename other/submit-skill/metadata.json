@@ -1,0 +1,37 @@
+{
+  "name": "submit-skill",
+  "repo": "better-isms/grcskills",
+  "path": "skills/.system/submit-skill/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/better-isms/grcskills",
+  "dir_name": "submit-skill",
+  "downloaded_at": "2026-10-27T04:35:41.736024Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "better-isms",
+  "source_url": "https://github.com/better-isms/grcskills/blob/main/skills/.system/submit-skill/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/better-isms/grcskills/blob/main/skills/.system/submit-skill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when someone wants to contribute, submit or publish a GRC skill to the grcskills\nlibrary (github.com/better-isms/grcskills, grcskills.com), or update a skill or author profile\nthey already published there. Interviews the contributor for practitioner judgment, drafts the\nfiles in the library format, runs the validator and opens one pull request."
+}

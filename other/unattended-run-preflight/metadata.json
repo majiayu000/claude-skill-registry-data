@@ -1,0 +1,37 @@
+{
+  "name": "unattended-run-preflight",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/cc-setup-tooling/skills/unattended-run-preflight/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "unattended-run-preflight",
+  "downloaded_at": "2026-10-27T04:32:44.905271Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/cc-setup-tooling/skills/unattended-run-preflight/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/cc-setup-tooling/skills/unattended-run-preflight/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Replay the tool calls of a Claude Code run (a session log or a list) against the permission rules in your settings files and show which calls would stop a scheduled task, routine, CI job or claude -p run on a prompt or a deny rule, with the narrowest allow rule for each. Use when asked \"why does my scheduled task stall on permission prompts?\" or before running a prompt unattended. Not for writing a whole permission set (permissions-builder) or for the sandbox (sandbox-config-review)."
+}

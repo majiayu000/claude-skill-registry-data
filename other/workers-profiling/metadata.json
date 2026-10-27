@@ -1,0 +1,37 @@
+{
+  "name": "workers-profiling",
+  "repo": "fcakyon/claude-codex-settings",
+  "path": "plugins/cloudflare-skills/skills/workers-profiling/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/fcakyon/claude-codex-settings",
+  "dir_name": "workers-profiling",
+  "downloaded_at": "2026-10-27T05:38:47.571767Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "prompt",
+      "prompting"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fcakyon",
+  "source_url": "https://github.com/fcakyon/claude-codex-settings/blob/main/plugins/cloudflare-skills/skills/workers-profiling/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fcakyon/claude-codex-settings/blob/main/plugins/cloudflare-skills/skills/workers-profiling/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Profile or debug CPU usage and memory allocation in deployed Cloudflare Workers and Durable Objects. Then use this information to optimize your code."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "valid-skill",
+  "repo": "dss-time/repo-doctor-skills",
+  "path": "tests/fixtures/skill-quality/valid/valid-skill/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/dss-time/repo-doctor-skills",
+  "dir_name": "valid-skill",
+  "downloaded_at": "2026-10-27T05:25:59.664316Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, validate",
+    "score": 2,
+    "runner_up": "business",
+    "runner_up_score": 1,
+    "signals": [
+      "quality",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dss-time",
+  "source_url": "https://github.com/dss-time/repo-doctor-skills/blob/main/tests/fixtures/skill-quality/valid/valid-skill/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dss-time/repo-doctor-skills/blob/main/tests/fixtures/skill-quality/valid/valid-skill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Validate one public-safe example Skill. Use for deterministic fixture checks; do not use for business workflows."
+}

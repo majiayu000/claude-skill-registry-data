@@ -1,0 +1,37 @@
+{
+  "name": "iru-review-github-issue",
+  "repo": "albertoirurueta/docs",
+  "path": ".claude/skills/iru-review-github-issue/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/albertoirurueta/docs",
+  "dir_name": "iru-review-github-issue",
+  "downloaded_at": "2026-10-27T04:07:06.878392Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-review-github-issue/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-review-github-issue/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "/iru-review-github-issue <issue-number> or /iru-review-github-issue draft:<path> (draft file: first line '# <title>', rest the body); optional kind: functional|documentation overrides auto-detection. Reviews a GitHub issue against a quality checklist and returns classified findings (gap / pending / inconsistency / doubt), each with the exact question to ask, plus size signals hinting at /iru-split-github-issue. Read-only: on an existing issue it posts a comment or edits the body only after explicit confirmation. GitHub-only. Use before picking up an issue with /iru-issue, or as the review loop of /iru-draft-github-issue."
+}

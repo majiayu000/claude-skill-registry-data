@@ -1,0 +1,39 @@
+{
+  "name": "security-focused-review",
+  "repo": "dss-time/repo-doctor-skills",
+  "path": "skills/security-focused-review/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/dss-time/repo-doctor-skills",
+  "dir_name": "security-focused-review-dss-time-repo-doctor-skills",
+  "downloaded_at": "2026-10-27T05:25:58.524910Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for security: security, auth, vulnerability, audit",
+    "score": 4,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "vulnerability",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dss-time",
+  "source_url": "https://github.com/dss-time/repo-doctor-skills/blob/main/skills/security-focused-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dss-time/repo-doctor-skills/blob/main/skills/security-focused-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Explicit-invocation scoped security review that establishes assets, trust boundaries, attacker prerequisites, and evidence-backed findings across the named security surface. Do not trigger for general code review, run attacks, access production, reveal credentials, or implement fixes. \u4ec5\u663e\u5f0f\u8c03\u7528\uff1a\u9488\u5bf9\u6307\u5b9a\u5b89\u5168\u8fb9\u754c\u5efa\u7acb\u8d44\u4ea7\u3001\u4fe1\u4efb\u8fb9\u754c\u548c\u653b\u51fb\u524d\u63d0\uff0c\u5e76\u8f93\u51fa\u6709\u8bc1\u636e\u7684\u4e13\u9879\u53d1\u73b0\u3002\u4e0d\u5f97\u56e0\u666e\u901a\u4ee3\u7801\u5ba1\u67e5\u800c\u89e6\u53d1\uff0c\u4e0d\u6267\u884c\u653b\u51fb\u3001\u4e0d\u8bbf\u95ee\u751f\u4ea7\u3001\u4e0d\u663e\u793a\u51ed\u636e\uff0c\u4e5f\u4e0d\u5b9e\u65bd\u4fee\u590d\u3002"
+}

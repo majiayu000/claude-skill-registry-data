@@ -1,0 +1,38 @@
+{
+  "name": "compaction-loss-check",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/cc-setup-tooling/skills/compaction-loss-check/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "compaction-loss-check",
+  "downloaded_at": "2026-10-27T04:32:43.009324Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/cc-setup-tooling/skills/compaction-loss-check/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/cc-setup-tooling/skills/compaction-loss-check/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Check each compaction in a Claude Code session transcript: trigger, tokens before and after, time since the last user message, and whether the summary kept the standing rules the user gave, the files edited, branches and pull requests created and open to-dos. Prints a re-state list and a paste-ready recap. Use when asked \"what did compaction forget?\" or after a session ignored an earlier instruction. Not for what loads on every turn (context-budget-audit) or token totals (session-usage-ledger)."
+}

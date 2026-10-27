@@ -1,0 +1,38 @@
+{
+  "name": "subagent-helper",
+  "repo": "arvnfly/VIBE-CODE-SKILLS",
+  "path": "skills/subagent-helper/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/arvnfly/VIBE-CODE-SKILLS",
+  "dir_name": "subagent-helper",
+  "downloaded_at": "2026-10-27T04:24:27.309759Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, compile, refactor",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "compile",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "arvnfly",
+  "source_url": "https://github.com/arvnfly/VIBE-CODE-SKILLS/blob/main/skills/subagent-helper/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/arvnfly/VIBE-CODE-SKILLS/blob/main/skills/subagent-helper/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Task-isolated worker for codebase exploration, test generation, and repetitive mechanical refactoring"
+}

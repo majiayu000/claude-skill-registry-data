@@ -1,0 +1,38 @@
+{
+  "name": "pr-queue-digest",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/github-manager/skills/pr-queue-digest/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "pr-queue-digest",
+  "downloaded_at": "2026-10-27T04:32:51.619882Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/github-manager/skills/pr-queue-digest/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/github-manager/skills/pr-queue-digest/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find stuck pull requests and review bottlenecks from a saved gh pr list export: PRs waiting on review, blocked on one reviewer, changes requested with no new commits, failing checks, conflicts, approved but not merged, no reviewer, or stale drafts, with one next action per PR and queue counts per reviewer. Use when asked \"which PRs are stuck?\", \"which approved PRs are not merged yet?\" or for a standup PR digest. Not for reviewing code, ranking engineers, or open issues (issue-triage-digest)."
+}

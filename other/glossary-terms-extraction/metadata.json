@@ -1,0 +1,37 @@
+{
+  "name": "glossary-terms-extraction",
+  "repo": "crowdin/skills",
+  "path": "skills/glossary-terms-extraction/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/crowdin/skills",
+  "dir_name": "glossary-terms-extraction",
+  "downloaded_at": "2026-10-27T05:04:20.124328Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "crowdin",
+  "source_url": "https://github.com/crowdin/skills/blob/main/skills/glossary-terms-extraction/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/crowdin/skills/blob/main/skills/glossary-terms-extraction/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds or expands a Crowdin glossary from the project's real content. Use when someone wants a glossary created or topped up, asks which terms to add or what is missing, or wants product and feature names found in their strings, docs or files and marked do-not-translate. Not for adding one named term, filling in term translations from the project's own translations (glossary-term-translations), importing or exporting a glossary file as is, editing existing entries, or the full internationalize-and-connect journey (i18n-setup)."
+}

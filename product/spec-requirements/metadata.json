@@ -1,0 +1,37 @@
+{
+  "name": "kiro-spec-requirements",
+  "repo": "blksails/skills",
+  "path": "skills/kiro/phases/spec-requirements/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/blksails/skills",
+  "dir_name": "spec-requirements",
+  "downloaded_at": "2026-10-27T04:39:49.483184Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, feature",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "product",
+      "feature"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "blksails",
+  "source_url": "https://github.com/blksails/skills/blob/main/skills/kiro/phases/spec-requirements/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/blksails/skills/blob/main/skills/kiro/phases/spec-requirements/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate EARS-format requirements based on project description and steering context. Use when generating requirements from project description."
+}

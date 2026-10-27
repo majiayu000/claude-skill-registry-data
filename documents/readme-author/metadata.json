@@ -1,0 +1,38 @@
+{
+  "name": "readme-author",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/docs/skills/readme-author/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "readme-author",
+  "downloaded_at": "2026-10-27T04:32:51.075947Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, markdown, documentation",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/docs/skills/readme-author/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/docs/skills/readme-author/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write or rewrite a README that answers what the project is, who it is for, how to install and use it in under five minutes, and where everything else lives, using a fixed section order and a quality checklist (first screen, copy-pasteable commands verified to work, no stale claims). Use when asked to \"write a README\", when a repository has none or it is out of date, or when a project is about to be published. Not for API reference generation (use api-docs-from-code) and not for marketing copy."
+}

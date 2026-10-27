@@ -1,0 +1,38 @@
+{
+  "name": "refire",
+  "repo": "escoffier-labs/brigade",
+  "path": "registry/skills/refire/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/escoffier-labs/brigade",
+  "dir_name": "refire-escoffier-labs-brigade",
+  "downloaded_at": "2026-10-27T05:34:44.297965Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "escoffier-labs",
+  "source_url": "https://github.com/escoffier-labs/brigade/blob/main/registry/skills/refire/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/escoffier-labs/brigade/blob/main/registry/skills/refire/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when anything misbehaves - a failing test, a production bug, a build break, flaky or unexpected behavior - before proposing or attempting any fix. Especially under pressure (\"CI is blocking everyone\", \"just get it green\") and after a previous fix didn't hold."
+}

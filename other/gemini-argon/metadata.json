@@ -1,0 +1,37 @@
+{
+  "name": "gemini-argon",
+  "repo": "elcerqua/argon-agent",
+  "path": "skills/gemini-argon/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/elcerqua/argon-agent",
+  "dir_name": "gemini-argon",
+  "downloaded_at": "2026-10-27T05:30:05.695141Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "elcerqua",
+  "source_url": "https://github.com/elcerqua/argon-agent/blob/main/skills/gemini-argon/SKILL.md",
+  "license": "GPL-3.0-only",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/elcerqua/argon-agent/blob/main/skills/gemini-argon/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Usa Gemini come agente o collaboratore esterno in Codex tramite Antigravity CLI e login Google al proprio piano Google AI, senza API a consumo. Supporta Argon predefinito e altri modelli Gemini selezionabili con --model. Usa per chiedere a Gemini revisioni, secondi pareri, analisi o proposte sul progetto."
+}

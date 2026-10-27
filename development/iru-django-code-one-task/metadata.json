@@ -1,0 +1,39 @@
+{
+  "name": "iru-django-code-one-task",
+  "repo": "albertoirurueta/docs",
+  "path": ".claude/skills/iru-django-code-one-task/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/albertoirurueta/docs",
+  "dir_name": "iru-django-code-one-task",
+  "downloaded_at": "2026-10-27T04:07:07.376627Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build, compile",
+    "score": 4,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-django-code-one-task/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-django-code-one-task/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Invoked as /iru-django-code-one-task <task description> (the task's text with its implementation_plan.md checkbox lines) via Skill. Implements one Django (any project shape, migrations included) plan task and its tests, compile-checks, ticks the checkbox with a group-validation-pending note; no baseline or full gates, which iru-django-code-one-task-group runs."
+}

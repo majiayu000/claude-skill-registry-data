@@ -1,0 +1,38 @@
+{
+  "name": "create-app",
+  "repo": "crowdin/skills",
+  "path": "skills/create-app/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/crowdin/skills",
+  "dir_name": "create-app",
+  "downloaded_at": "2026-10-27T05:04:18.295641Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=3, language=3",
+    "score": 3,
+    "runner_up": "language",
+    "runner_up_score": 3,
+    "signals": [
+      "docs",
+      "word",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "crowdin",
+  "source_url": "https://github.com/crowdin/skills/blob/main/skills/create-app/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/crowdin/skills/blob/main/skills/create-app/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build a Crowdin app end to end and leave the user with a published app they can click - scaffold it with @crowdin/serverless-apps-cli, write the UI with @crowdin/serverless-apps-sdk, publish it into their Crowdin or Crowdin Enterprise organization, and open it for them. Reach for this whenever someone wants something of their own inside the Crowdin UI - a panel in the translation editor, a tool or report in a project, a page in the organization menu, a dashboard over their projects - and also when they describe a localization chore they are tired of doing by hand. Covers phrasings like \"create a Crowdin app\", \"add a tool to my Crowdin project\", a bare \"/create-app\", and cases where the word \"app\" is never said. Also use it when a serverless Crowdin app already exists in the working directory and needs another module, a manifest change, or a republish. Not for the separate Crowdin CLI that syncs sources and translations through crowdin.yml."
+}

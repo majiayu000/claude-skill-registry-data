@@ -1,0 +1,38 @@
+{
+  "name": "dev-smoke",
+  "repo": "codeaholicguy/ai-devkit",
+  "path": "skills/dev-smoke/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/codeaholicguy/ai-devkit",
+  "dir_name": "dev-smoke",
+  "downloaded_at": "2026-10-27T04:59:08.933404Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, testing=3",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "codeaholicguy",
+  "source_url": "https://github.com/codeaholicguy/ai-devkit/blob/main/skills/dev-smoke/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/codeaholicguy/ai-devkit/blob/main/skills/dev-smoke/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "AI DevKit \u00b7 Smoke-test the user flows a change affects (CLI, API, UI) end to end with a disposable sandboxed script against the real app. Use before calling a feature or fix done, when unit tests pass but the flow is untested, or when users ask for a smoke, e2e, or impact check."
+}

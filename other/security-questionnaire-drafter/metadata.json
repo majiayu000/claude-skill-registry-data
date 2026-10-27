@@ -1,0 +1,38 @@
+{
+  "name": "security-questionnaire-drafter",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/compliance-evidence/skills/security-questionnaire-drafter/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "security-questionnaire-drafter",
+  "downloaded_at": "2026-10-27T04:32:47.331419Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "word",
+      "excel",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/compliance-evidence/skills/security-questionnaire-drafter/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/compliance-evidence/skills/security-questionnaire-drafter/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Draft answers to a customer or vendor security questionnaire only from your own evidence pack and policy folder, citing the policy section or evidence file behind every answer and marking questions with nothing behind them as not assessable instead of inventing an answer. Use when asked to \"fill in this security questionnaire\", for a CAIQ, SIG-style or customer due diligence sheet saved as CSV or Markdown. Not for writing policies, judging a supplier's answers, or signing anything off."
+}

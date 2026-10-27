@@ -1,0 +1,38 @@
+{
+  "name": "github-action",
+  "repo": "crowdin/skills",
+  "path": "skills/github-action/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/crowdin/skills",
+  "dir_name": "github-action-crowdin-skills",
+  "downloaded_at": "2026-10-27T05:04:18.961803Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "crowdin",
+  "source_url": "https://github.com/crowdin/skills/blob/main/skills/github-action/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/crowdin/skills/blob/main/skills/github-action/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Sets up and debugs the Crowdin GitHub Action (crowdin/github-action), which syncs a repository with a Crowdin project and opens the translation pull request. Use whenever the user wires Crowdin into GitHub Actions, writes or reviews a .github/workflows/crowdin.yml step, tunes its inputs (upload_sources, download_translations, localization_branch_name, create_pull_request, command), or debugs a run that opened no pull request, opened one that gets no CI checks, or hit a 409 while a build was in progress - including bare phrasings like \"automate translations in CI\" or \"my Crowdin workflow is broken\"."
+}

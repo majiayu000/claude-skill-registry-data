@@ -1,0 +1,37 @@
+{
+  "name": "autoresearch:learn",
+  "repo": "blksails/skills",
+  "path": "skills/autoresearch-skill/skills/learn/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/blksails/skills",
+  "dir_name": "learn-blksails-skills",
+  "downloaded_at": "2026-10-27T04:39:50.040683Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, documentation",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "blksails",
+  "source_url": "https://github.com/blksails/skills/blob/main/skills/autoresearch-skill/skills/learn/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/blksails/skills/blob/main/skills/autoresearch-skill/skills/learn/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Feedback-driven self-improvement protocol for autoresearch-skill. Converts\nfailed runs, confusing transcripts, bad outputs, or user feedback into a\nbounded improvement plan, an eval scenario, and a patch checklist without\nexecuting the patch automatically.\nTRIGGER when: user says the skill failed, wants to improve autoresearch-skill,\nprovides feedback on confusing behavior, asks to turn a failure into an eval,\nor invokes /autoresearch:learn.\nDO NOT TRIGGER when: the user wants to run an optimization loop (use\n/autoresearch), fix code errors (use /autoresearch:fix), or ship a finished\nartifact (use /autoresearch:ship)."
+}

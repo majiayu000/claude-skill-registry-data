@@ -1,0 +1,39 @@
+{
+  "name": "fabric-forecasting",
+  "repo": "dadadan23/world-pulse",
+  "path": ".claude/skills/fabric-forecasting/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/dadadan23/world-pulse",
+  "dir_name": "fabric-forecasting-dadadan23-world-pulse",
+  "downloaded_at": "2026-10-27T05:07:56.735441Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, analytics, sql, pipeline",
+    "score": 4,
+    "runner_up": "ai-ml",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "analytics",
+      "sql",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dadadan23",
+  "source_url": "https://github.com/dadadan23/world-pulse/blob/main/.claude/skills/fabric-forecasting/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dadadan23/world-pulse/blob/main/.claude/skills/fabric-forecasting/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build time-series forecasting pipelines on Microsoft Fabric - data preparation, profiling, clustering, feature engineering, and model training. Use when implementing demand forecasting, training LightGBM/Prophet models, engineering time-series features, or deploying prediction pipelines on Fabric."
+}

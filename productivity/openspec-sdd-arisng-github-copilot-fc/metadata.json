@@ -1,0 +1,38 @@
+{
+  "name": "openspec-sdd",
+  "repo": "arisng/github-copilot-fc",
+  "path": "skills/openspec-sdd/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/arisng/github-copilot-fc",
+  "dir_name": "openspec-sdd-arisng-github-copilot-fc",
+  "downloaded_at": "2026-10-27T04:22:42.246834Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, planning",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "planning"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "arisng",
+  "source_url": "https://github.com/arisng/github-copilot-fc/blob/main/skills/openspec-sdd/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/arisng/github-copilot-fc/blob/main/skills/openspec-sdd/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Spec-driven development (SDD) using OpenSpec with GitHub Copilot. Use when initializing OpenSpec in a project, writing specifications (requirements + scenarios), proposing changes with delta specs, designing and breaking down tasks, implementing from tasks.md, verifying against specs, syncing/archiving completed changes, managing the openspec/ directory, or adopting specs in existing brownfield codebases. Triggers: \"openspec\", \"spec-driven\", \"SDD\", \"write specs\", \"propose a change\", \"delta spec\", \"archive change\", \"opsx\", \"/opsx:\", \"GIVEN/WHEN/THEN scenarios\", \"requirements specification\", \"change proposal\", \"brownfield specs\", \"verify implementation\"."
+}

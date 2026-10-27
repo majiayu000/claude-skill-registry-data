@@ -1,0 +1,37 @@
+{
+  "name": "critic-loop",
+  "repo": "augchan42/inkstone",
+  "path": "skills/critic-loop/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/augchan42/inkstone",
+  "dir_name": "critic-loop",
+  "downloaded_at": "2026-10-27T04:27:11.987509Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: forensics=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "evidence",
+      "triage"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "augchan42",
+  "source_url": "https://github.com/augchan42/inkstone/blob/main/skills/critic-loop/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/augchan42/inkstone/blob/main/skills/critic-loop/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run an independent critic loop on generated work that is not code or a plan \u2014 images, renders, ASCII or canvas art, video stills, frames and shorts, covers, copy. A fresh-context critic scores each round against a rubric written before round 1, starts with a blind read (it says what it sees before it is told what was intended), lists every gap, and the loop stops on a threshold, a stall rule or a round limit. Use when asked to \"critic loop\", \"have a critic score this\", \"get an independent critic\", or before showing generated visuals or copy to the owner as ready. For code, see codex-review; for implementation plans, see plan-review-loop."
+}

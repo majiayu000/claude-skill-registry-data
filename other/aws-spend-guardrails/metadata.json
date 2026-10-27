@@ -1,0 +1,37 @@
+{
+  "name": "aws-spend-guardrails",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/aws-security/skills/aws-spend-guardrails/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "aws-spend-guardrails",
+  "downloaded_at": "2026-10-27T04:32:41.844607Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/aws-security/skills/aws-spend-guardrails/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/aws-security/skills/aws-spend-guardrails/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate AWS Budgets, a Cost Anomaly Detection monitor and a sandbox SCP that denies expensive services (large GPU instances, SageMaker and similar), then check an exported Cost Explorer report for spikes. Use when asked to \"stop runaway AWS spend\", when setting cost alerts, protecting sandbox or agent accounts from a bill that grows overnight, or explaining a cost spike. Not for rightsizing or savings recommendations, or a full sandbox OU pack (sandbox-account-guardrail-pack)."
+}

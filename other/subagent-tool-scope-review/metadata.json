@@ -1,0 +1,37 @@
+{
+  "name": "subagent-tool-scope-review",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/cc-setup-tooling/skills/subagent-tool-scope-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "subagent-tool-scope-review",
+  "downloaded_at": "2026-10-27T04:32:44.770213Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/cc-setup-tooling/skills/subagent-tool-scope-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/cc-setup-tooling/skills/subagent-tool-scope-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review every Claude Code subagent file for the tools it can actually reach: agents with no tools line inherit every built-in and MCP tool, lookalike fields such as allowed-tools are ignored, and reviewers that can write or run a shell. Proposes a narrower tools line. Use when asked \"which of my subagents can use the GitHub MCP tools?\", before adding an MCP server or after installing a plugin with agents. Not for permission rules (permissions-builder) or for skills (skill-supply-chain-review)."
+}

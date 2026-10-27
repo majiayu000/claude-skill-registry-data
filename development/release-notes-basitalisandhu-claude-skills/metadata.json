@@ -1,0 +1,38 @@
+{
+  "name": "release-notes",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/devops/skills/release-notes/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "release-notes-basitalisandhu-claude-skills",
+  "downloaded_at": "2026-10-27T04:32:49.923578Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, refactor",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/devops/skills/release-notes/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/devops/skills/release-notes/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate release notes from a git commit range with a bundled script that groups commits by Conventional Commits type (breaking, features, fixes, performance, docs, build), links commits and issues, and lists contributors; then edit them into notes a user can read. Use when asked to \"write the release notes\", when cutting a release, writing a GitHub release body, or updating CHANGELOG.md from history. Not for deciding the version number (use semver-advisor) and not for commit message writing."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "copilot-cli-agent-customization",
+  "repo": "arisng/github-copilot-fc",
+  "path": "skills/copilot-cli-agent-customization/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/arisng/github-copilot-fc",
+  "dir_name": "copilot-cli-agent-customization",
+  "downloaded_at": "2026-10-27T04:22:47.544423Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, script, cli",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "arisng",
+  "source_url": "https://github.com/arisng/github-copilot-fc/blob/main/skills/copilot-cli-agent-customization/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/arisng/github-copilot-fc/blob/main/skills/copilot-cli-agent-customization/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "**WORKFLOW SKILL** \u2014 Create, update, review, fix, or debug Copilot CLI customization files (`copilot-instructions.md`, `AGENTS.md`, `*.instructions.md`, `*.agent.md`, `SKILL.md`, hook JSON, `plugin.json`, and plugin command files). USE FOR: authoring terminal-first customization workflows; troubleshooting why CLI instructions, skills, agents, hooks, or plugins are ignored; configuring `applyTo` and `excludeAgent`; defining CLI tool restrictions; creating custom agents or command packs; packaging reusable CLI customizations. DO NOT USE FOR: general coding questions; non-customization runtime debugging; Copilot in VS Code customization (use `copilot-vscode-agent-customization` instead); MCP server configuration; VS Code prompt files or extension development. INVOKES: file system tools, ask-questions tool, subagents for codebase exploration. FOR SINGLE OPERATIONS: For quick YAML or JSON fixes, or for creating one known file from a clear pattern, edit directly instead of loading the full skill."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "datarobot-gap-analysis",
+  "repo": "datarobot-oss/datarobot-agent-skills",
+  "path": "skills/datarobot-gap-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/datarobot-oss/datarobot-agent-skills",
+  "dir_name": "datarobot-gap-analysis",
+  "downloaded_at": "2026-10-27T05:12:11.330348Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "ci",
+      "docker",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "datarobot-oss",
+  "source_url": "https://github.com/datarobot-oss/datarobot-agent-skills/blob/main/skills/datarobot-gap-analysis/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/datarobot-oss/datarobot-agent-skills/blob/main/skills/datarobot-gap-analysis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user wants to assess whether an AI agent repository (DataRobot-built or not) is enterprise-ready, run a gap analysis / readiness scan against security, governance, reliability, or regulatory standards, score an agent against EU AI Act requirements, or find and fix gaps (secrets, unpinned models, missing CI, missing guardrails, over-permissioned identity, etc.) before deploying an agent to production. Works on any repository, not only ones built with DataRobot."
+}

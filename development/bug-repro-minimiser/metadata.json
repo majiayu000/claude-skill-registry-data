@@ -1,0 +1,38 @@
+{
+  "name": "bug-repro-minimiser",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/debugging/skills/bug-repro-minimiser/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "bug-repro-minimiser",
+  "downloaded_at": "2026-10-27T04:32:48.472651Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/debugging/skills/bug-repro-minimiser/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/debugging/skills/bug-repro-minimiser/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn a vague bug report or a long failing script into the smallest reliable reproduction: reduce it to a single command or test that fails every time and still shows the bug, with the environment, input and expected versus actual result pinned down. Use when a bug report says \"sometimes\", \"on my machine\" or \"it just crashes\", before any fix is attempted, or when a fix needs a regression test. Not for performance regressions (perf-profile-reader) and not a debugger tutorial."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "cors-review",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/security-basics/skills/cors-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "cors-review",
+  "downloaded_at": "2026-10-27T04:32:55.349623Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "frontend"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/security-basics/skills/cors-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/security-basics/skills/cors-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review a CORS configuration (allowed origins, Access-Control-Allow-Origin with credentials, methods, headers, preflight caching, exposed headers) against the mistakes that leak data cross-site or break real clients, and write the correct config for Express, nginx or the gateway in use. Use when a browser says \"blocked by CORS policy\", when an API must be callable from another domain, or when a scanner flags a permissive CORS policy. Not for CSRF defence in general, CSP or other security headers (http-security-headers)."
+}

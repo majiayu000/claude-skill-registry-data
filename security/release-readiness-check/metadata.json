@@ -1,0 +1,38 @@
+{
+  "name": "release-readiness-check",
+  "repo": "dss-time/repo-doctor-skills",
+  "path": "plugins/repo-doctor/skills/release-readiness-check/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/dss-time/repo-doctor-skills",
+  "dir_name": "release-readiness-check",
+  "downloaded_at": "2026-10-27T05:25:51.719258Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dss-time",
+  "source_url": "https://github.com/dss-time/repo-doctor-skills/blob/main/plugins/repo-doctor/skills/release-readiness-check/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dss-time/repo-doctor-skills/blob/main/plugins/repo-doctor/skills/release-readiness-check/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Explicit-invocation, evidence-backed, read-only release gate for a specific candidate version, returning GO, GO WITH CONDITIONS, or NO-GO after full release checks. Do not trigger for ordinary validation or project health, and never execute release, commit, tag, push, or version changes. \u4ec5\u663e\u5f0f\u8c03\u7528\uff1a\u9488\u5bf9\u5177\u4f53\u5019\u9009\u7248\u672c\u6267\u884c\u6709\u8bc1\u636e\u7684\u53ea\u8bfb\u53d1\u5e03\u95e8\u7981\uff0c\u5b8c\u6210\u53d1\u5e03\u68c0\u67e5\u540e\u7ed9\u51fa GO\u3001GO WITH CONDITIONS \u6216 NO-GO\u3002\u4e0d\u5f97\u56e0\u666e\u901a\u9a8c\u8bc1\u6216\u9879\u76ee\u4f53\u68c0\u800c\u89e6\u53d1\uff0c\u4e5f\u4e0d\u6267\u884c\u53d1\u5e03\u3001\u63d0\u4ea4\u3001tag\u3001push \u6216\u7248\u672c\u4fee\u6539\u3002"
+}

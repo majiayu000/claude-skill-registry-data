@@ -1,0 +1,37 @@
+{
+  "name": "rfc-lifecycle",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/ways-of-working/skills/rfc-lifecycle/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "rfc-lifecycle",
+  "downloaded_at": "2026-10-27T04:32:56.916556Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/ways-of-working/skills/rfc-lifecycle/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/ways-of-working/skills/rfc-lifecycle/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Draft a design proposal (RFC or design doc) with a fixed section list and a security review checklist, then lint a folder of RFCs for the status header, review questions with no answer, open questions left in review or accepted RFCs, a missing decision date or section, and RFCs stuck in review over 14 days. Use when asked to \"draft an RFC for this design\" or which RFCs are stuck in review. Not for architecture decision records (adr-writer once accepted), choosing the design, or replacing the review itself."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "review-checklist",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/code-quality/skills/review-checklist/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "review-checklist",
+  "downloaded_at": "2026-10-27T04:32:45.725341Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, lint, review",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "lint",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/code-quality/skills/review-checklist/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/code-quality/skills/review-checklist/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review a pull request, diff, patch or branch against a fixed checklist (correctness, tests, error handling, security, performance, readability, compatibility) and give findings with file and line references and a verdict: approve or request changes. Use when asked to \"review this code\", review a PR or a colleague's diff, \"look over my changes\" before merging, or go through a patch properly. Not for a security-only pass (diff-security-review), a deep error-handling pass (error-handling-review), formatter nitpicks or architecture reviews."
+}

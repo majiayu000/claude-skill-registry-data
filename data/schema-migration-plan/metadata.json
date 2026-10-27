@@ -1,0 +1,38 @@
+{
+  "name": "schema-migration-plan",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/data/skills/schema-migration-plan/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "schema-migration-plan",
+  "downloaded_at": "2026-10-27T04:32:48.200939Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/data/skills/schema-migration-plan/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/data/skills/schema-migration-plan/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Plan a database schema migration on a live database as an expand and contract sequence of backwards-compatible, reversible steps that work with the running app version: lock and downtime per step, batched backfills for large tables, rollback. Use when asked \"how do I rename this column safely?\", to rename a column or change its type (such as a varchar id to a uuid) without downtime, to add a NOT NULL column with no long lock, or to review a migration PR that drops a column. Not for query tuning (sql-query-review), version numbers (semver-advisor) or choosing a database."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "privileged-access-review",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/m365-governance/skills/privileged-access-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "privileged-access-review",
+  "downloaded_at": "2026-10-27T04:32:52.810189Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/m365-governance/skills/privileged-access-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/m365-governance/skills/privileged-access-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review privileged Microsoft Entra ID role holders from read-only Graph exports and score each admin account, reporting permanent privileged assignments, never-activated PIM eligibility, admins without phishing-resistant MFA, admin accounts used daily, stale or synchronised admins, and service principals and groups in roles. Use when asked \"which admins still use SMS?\", to review admins or PIM, or before a privileged access audit. Not for quarterly access review evidence and sign-off (access-review-pack), Azure resource roles, or changing assignments."
+}

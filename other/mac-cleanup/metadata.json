@@ -1,0 +1,37 @@
+{
+  "name": "mac-cleanup",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/mac-maintenance/skills/mac-cleanup/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "mac-cleanup",
+  "downloaded_at": "2026-10-27T04:32:53.200938Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/mac-maintenance/skills/mac-cleanup/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/mac-maintenance/skills/mac-cleanup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Free disk space and speed up a Mac safely: survey it read-only, clear only what programs recreate (npm, Xcode and other package and build caches, Docker build cache, old logs), and write a decision list for everything else. Use when asked to free disk space, when \"my Mac feels slow\", to find duplicate apps installed twice, or when System Data is huge and something is eating it. Not for Windows or Linux, malware scans, or deleting user files without an explicit yes."
+}

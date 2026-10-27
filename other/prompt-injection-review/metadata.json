@@ -1,0 +1,38 @@
+{
+  "name": "prompt-injection-review",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/agent-security/skills/prompt-injection-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "prompt-injection-review",
+  "downloaded_at": "2026-10-27T04:32:40.560199Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/agent-security/skills/prompt-injection-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/agent-security/skills/prompt-injection-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Trace untrusted input such as web pages, emails, tickets and tool results to consequential tool calls in agent code (sending replies, HTTP requests, shell, payments), and judge each path against provenance and approval rules. Use when asked \"can this agent be prompt injected?\", to find exfiltration or privilege escalation paths, or to decide where approvals belong. Not for config files (agent-config-audit) or for measuring attack success rates (agent-eval-harness)."
+}

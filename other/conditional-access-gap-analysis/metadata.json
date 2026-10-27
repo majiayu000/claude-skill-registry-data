@@ -1,0 +1,38 @@
+{
+  "name": "conditional-access-gap-analysis",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/m365-governance/skills/conditional-access-gap-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "conditional-access-gap-analysis",
+  "downloaded_at": "2026-10-27T04:32:51.869999Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/m365-governance/skills/conditional-access-gap-analysis/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/m365-governance/skills/conditional-access-gap-analysis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find gaps, overlaps and exclusion problems in Microsoft Entra Conditional Access from read-only Graph exports, resolving who each policy really covers and checking MFA for all users and admins, legacy authentication, device and risk policies, break-glass accounts and exclusions nobody can explain, report-only and self-cancelling policies, with a coverage matrix by persona. Use when asked \"who is not covered by MFA?\", before turning off security defaults or redesigning Conditional Access. Not for the wider tenant posture review (entra-posture-review), simulating sign-ins, or changing policies."
+}

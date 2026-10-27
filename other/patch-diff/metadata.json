@@ -1,0 +1,37 @@
+{
+  "name": "patch-diff",
+  "repo": "cuhawk/tlxkull",
+  "path": ".claude/skills/patch-diff/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/cuhawk/tlxkull",
+  "dir_name": "patch-diff",
+  "downloaded_at": "2026-10-27T05:05:12.087210Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cuhawk",
+  "source_url": "https://github.com/cuhawk/tlxkull/blob/main/.claude/skills/patch-diff/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cuhawk/tlxkull/blob/main/.claude/skills/patch-diff/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Diff two npm-package versions for added/removed security-control invocations (T3.1). Per-target wrapper around bin/npm_version_diff.py. Use when a target ships a vulnerable library version and a fix exists upstream \u2014 the diff highlights what control was added so you can grep the target for the same gap."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "soa-first-draft",
+  "repo": "better-isms/grcskills",
+  "path": "skills/tristan-roth/soa-first-draft/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/better-isms/grcskills",
+  "dir_name": "soa-first-draft",
+  "downloaded_at": "2026-10-27T04:35:42.349970Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: framework, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "better-isms",
+  "source_url": "https://github.com/better-isms/grcskills/blob/main/skills/tristan-roth/soa-first-draft/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/better-isms/grcskills/blob/main/skills/tristan-roth/soa-first-draft/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when a company has a risk assessment and treatment plan and now needs its first\nstatement of applicability, and asks \"build our SoA\", \"draft the statement of applicability\",\n\"which controls apply to us\", \"SoA from the risk treatment plan\", \"justify inclusions and\nexclusions\" or \"our SoA says implemented everywhere\". Drafts one row per control of the reader's\nframework with the inclusion decision, the risk or obligation behind it, an implementation status\ntaken from records, an evidence pointer and an owner role, and writes a CSV statement plus notes\nof open decisions."
+}

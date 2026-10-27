@@ -1,0 +1,38 @@
+{
+  "name": "docs-truth-check",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/repo-engineering/skills/docs-truth-check/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "docs-truth-check",
+  "downloaded_at": "2026-10-27T04:32:53.850785Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/repo-engineering/skills/docs-truth-check/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/repo-engineering/skills/docs-truth-check/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Verify that a repository's README, docs/, AGENTS.md and CLAUDE.md still match the code, checking file paths, links, CLI flags and defaults, environment variables, symbol names, config keys, npm and make targets and version strings against the working tree. Use when asked \"is the README out of date?\", after renaming files, flags or functions, before a release, or to add a docs drift gate to CI. Not for judging prose (readme-who-what-why), rewriting a README (readme-author), or checking external URLs."
+}

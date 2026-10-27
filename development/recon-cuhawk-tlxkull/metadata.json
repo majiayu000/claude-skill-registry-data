@@ -1,0 +1,37 @@
+{
+  "name": "recon",
+  "repo": "cuhawk/tlxkull",
+  "path": ".claude/skills/recon/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/cuhawk/tlxkull",
+  "dir_name": "recon-cuhawk-tlxkull",
+  "downloaded_at": "2026-10-27T05:05:10.915156Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cuhawk",
+  "source_url": "https://github.com/cuhawk/tlxkull/blob/main/.claude/skills/recon/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cuhawk/tlxkull/blob/main/.claude/skills/recon/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run the DigitalOcean ephemeral-droplet recon pipeline over a list of IPs, CIDRs, or wildcard domains. Use when target-init has produced http.md scope but recon (port scan, subdomain enum, httpx, feroxbuster) is missing. Spawns droplets, runs in parallel, tears down. Optional multi-region for geo-block detection."
+}

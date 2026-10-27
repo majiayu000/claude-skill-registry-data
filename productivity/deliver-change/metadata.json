@@ -1,0 +1,37 @@
+{
+  "name": "deliver-change",
+  "repo": "augchan42/inkstone",
+  "path": "skills/deliver-change/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/augchan42/inkstone",
+  "dir_name": "deliver-change",
+  "downloaded_at": "2026-10-27T04:27:12.299653Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "augchan42",
+  "source_url": "https://github.com/augchan42/inkstone/blob/main/skills/deliver-change/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/augchan42/inkstone/blob/main/skills/deliver-change/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Coordinate a development task from a stronger brief through implementation and verification, with optional adversarial Codex review. Use when asked to deliver a change using deepen-task and verify-change or to run this combined workflow. Codex review is off unless explicitly requested. For verification alone, use verify-change; for a standalone review, use codex-review."
+}

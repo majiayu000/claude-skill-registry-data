@@ -1,0 +1,38 @@
+{
+  "name": "i18n-setup",
+  "repo": "crowdin/skills",
+  "path": "skills/i18n-setup/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/crowdin/skills",
+  "dir_name": "i18n-setup-crowdin-skills",
+  "downloaded_at": "2026-10-27T05:04:18.473730Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "crowdin",
+  "source_url": "https://github.com/crowdin/skills/blob/main/skills/i18n-setup/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/crowdin/skills/blob/main/skills/i18n-setup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Takes a project from hardcoded strings to internationalized, connected to Crowdin, and translating continuously. Use when someone wants to add i18n or multi-language support, internationalize an app, extract hardcoded strings, set up Lingui (or another i18n library), or connect Crowdin to a repository - including connect-only, \"my app already uses i18next/next-intl/vue-i18n/Lingui, wire it to Crowdin\". Not for individual `crowdin` CLI commands or crowdin.yml syntax (that is `crowdin-cli`), not for editing Crowdin context files or `ai_context` on their own (`context-extraction`), not for generating a glossary alone (`glossary-terms-extraction`), not for uploading screenshots alone (`generate-screenshots`), and not for building Crowdin apps (`create-app`)."
+}

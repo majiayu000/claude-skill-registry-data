@@ -1,0 +1,37 @@
+{
+  "name": "skill-creator",
+  "repo": "dadadan23/world-pulse",
+  "path": ".claude/skills/skill-creator/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/dadadan23/world-pulse",
+  "dir_name": "skill-creator-dadadan23-world-pulse-2",
+  "downloaded_at": "2026-10-27T05:07:55.622878Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "context-window"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dadadan23",
+  "source_url": "https://github.com/dadadan23/world-pulse/blob/main/.claude/skills/skill-creator/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dadadan23/world-pulse/blob/main/.claude/skills/skill-creator/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create, validate, and maintain AgentX skills following the agentskills.io specification. Use when scaffolding a new skill, auditing skill compliance, restructuring for progressive disclosure, or adding scripts/references/assets to an existing skill."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "aws-agent-session-audit",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/aws-security/skills/aws-agent-session-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "aws-agent-session-audit",
+  "downloaded_at": "2026-10-27T04:32:41.469510Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/aws-security/skills/aws-agent-session-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/aws-security/skills/aws-agent-session-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit what an AI coding agent did in an AWS account and which permissions it never needed, from a saved CloudTrail export of the agent's role session: actions by service, writes versus reads, calls outside a declared allow list, logging tampering, destructive and IAM calls, resources touched and errors. Use when asked \"what did the agent do according to CloudTrail?\", after an agent session or before widening its role. Not for reviewing policy text (iam-least-privilege-review), planning a new agent role (agent-safe-aws-access) or local tool calls (agent-session-log-review)."
+}

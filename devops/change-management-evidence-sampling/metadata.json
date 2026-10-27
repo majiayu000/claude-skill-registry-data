@@ -1,0 +1,41 @@
+{
+  "name": "change-management-evidence-sampling",
+  "repo": "better-isms/grcskills",
+  "path": "skills/tristan-roth/change-management-evidence-sampling/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/better-isms/grcskills",
+  "dir_name": "change-management-evidence-sampling",
+  "downloaded_at": "2026-10-27T04:35:51.835851Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: ci, cd, deploy, infra, infrastructure",
+    "score": 5,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "ci",
+      "cd",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "better-isms",
+  "source_url": "https://github.com/better-isms/grcskills/blob/main/skills/tristan-roth/change-management-evidence-sampling/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/better-isms/grcskills/blob/main/skills/tristan-roth/change-management-evidence-sampling/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when an auditor will test change management, or the team wants to know before they\ndo, and asks \"sample our production changes\", \"check our PR approvals\", \"do we have segregation\nof duties on deploys\", \"test change management before the audit\", \"were emergency changes\napproved\" or \"can a developer push to production alone\". Builds the change population from what\nactually reached production, reconciles it with tickets and pull requests, draws a recorded\nsample, tests approval, testing, segregation and emergency attributes, and writes the results and\nthe exceptions as facts."
+}

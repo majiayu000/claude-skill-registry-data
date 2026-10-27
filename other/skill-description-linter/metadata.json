@@ -1,0 +1,37 @@
+{
+  "name": "skill-description-linter",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/cc-setup-tooling/skills/skill-description-linter/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "skill-description-linter",
+  "downloaded_at": "2026-10-27T04:32:44.249612Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/cc-setup-tooling/skills/skill-description-linter/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/cc-setup-tooling/skills/skill-description-linter/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Lint the front matter of your SKILL.md files so each skill is listed and picked correctly: double-quoted description under 600 characters, a verb first, a quoted trigger phrase, Use when and Not for sentences, name equal to the folder, strict-YAML safety and a Limits section, with --fix for the quoting. Use when asked \"why does my skill not trigger?\", before publishing skills, or in CI. Not for testing which prompts trigger a skill (use skill-trigger-eval) or for reviewing third-party skills."
+}

@@ -1,0 +1,36 @@
+{
+  "name": "evaluate-plugin",
+  "repo": "cheneeheng/ceh-claude-code-library",
+  "path": ".claude/skills/evaluate-plugin/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/cheneeheng/ceh-claude-code-library",
+  "dir_name": "evaluate-plugin-cheneeheng-ceh-claude-code-libr",
+  "downloaded_at": "2026-10-27T04:51:43.928833Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cheneeheng",
+  "source_url": "https://github.com/cheneeheng/ceh-claude-code-library/blob/main/.claude/skills/evaluate-plugin/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cheneeheng/ceh-claude-code-library/blob/main/.claude/skills/evaluate-plugin/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Load this skill when checking whether a plugin's skills, hooks, agents, or MCP servers work: write claude plugin eval cases, run the smallest paid check first, fix one gap per round. Trigger on \"evaluate this plugin\", \"does this skill trigger\", \"eval the hook\", \"hill-climb this skill\"."
+}

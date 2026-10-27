@@ -1,0 +1,37 @@
+{
+  "name": "statechart",
+  "repo": "escoffier-labs/skillet",
+  "path": "skillet/skills/statechart/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/escoffier-labs/skillet",
+  "dir_name": "statechart",
+  "downloaded_at": "2026-10-27T05:34:49.711746Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: auth, audit",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "escoffier-labs",
+  "source_url": "https://github.com/escoffier-labs/skillet/blob/main/skillet/skills/statechart/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/escoffier-labs/skillet/blob/main/skillet/skills/statechart/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use only when the user explicitly asks for a Mermaid statechart, a user-visible chart of a TLA+ model or counterexample, a code/spec/fix chart comparison, or a TLA+ scaffold from an agreed chart."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "untested-entry-points",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/repo-engineering/skills/untested-entry-points/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "untested-entry-points",
+  "downloaded_at": "2026-10-27T04:32:55.101444Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/repo-engineering/skills/untested-entry-points/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/repo-engineering/skills/untested-entry-points/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find public functions, classes and CLI entry points that no test mentions in Python, JavaScript and TypeScript code, rank them (entry points first, then size and fan-in), and write characterisation test stubs in the project's framework. Use when asked \"what is untested?\", where to add tests first, or to pin behaviour before a refactor. Not for measuring coverage (it never runs tests), module-level gap lists or coverage ratchets (test-gap-finder)."
+}

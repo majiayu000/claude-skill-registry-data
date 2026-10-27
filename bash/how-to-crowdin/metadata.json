@@ -1,0 +1,38 @@
+{
+  "name": "how-to-crowdin",
+  "repo": "crowdin/skills",
+  "path": "skills/how-to-crowdin/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/crowdin/skills",
+  "dir_name": "how-to-crowdin",
+  "downloaded_at": "2026-10-27T05:04:19.219376Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, script, cli",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "crowdin",
+  "source_url": "https://github.com/crowdin/skills/blob/main/skills/how-to-crowdin/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/crowdin/skills/blob/main/skills/how-to-crowdin/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Answers \"how do I do X in Crowdin\" by mapping a localization pain to the cheapest thing Crowdin already offers - a built-in feature, a few actions through the Crowdin connector or API, an app from the Crowdin Store, or a custom app - and handing the exact how to the skill that owns it. Use when someone describes a Crowdin or localization problem without naming a tool (\"translators keep missing our terminology\", \"find strings changed since the last release\", \"QA passes but the German is wrong\"), asks if Crowdin can do something or which app to use, names a store app and asks what it does or if they need it, or asks how a built-in report is calculated or why it shows a number. Not for a crowdin CLI command or crowdin.yml (crowdin-cli), a CroQL expression already in hand (croql), a GraphQL query or Playground error (graphql), code against the API client (crowdin-api-client), building an app (create-app), or internationalizing a codebase (i18n-setup)."
+}

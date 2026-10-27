@@ -1,0 +1,37 @@
+{
+  "name": "browser-confirm",
+  "repo": "cuhawk/tlxkull",
+  "path": ".claude/skills/browser-confirm/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/cuhawk/tlxkull",
+  "dir_name": "browser-confirm",
+  "downloaded_at": "2026-10-27T05:05:15.646231Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "cuhawk",
+  "source_url": "https://github.com/cuhawk/tlxkull/blob/main/.claude/skills/browser-confirm/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/cuhawk/tlxkull/blob/main/.claude/skills/browser-confirm/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Confirm an Opus-flagged true-positive chain in a real browser (live via Caido proxy or mock_backend). Run when opus-deep-audit marked verdict=true_positive or chain queued by cc-taint-route. Writes findings/<id>/confirmed.json. Default live; falls back to mock if rate-limited."
+}

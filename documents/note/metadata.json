@@ -1,0 +1,38 @@
+{
+  "name": "note",
+  "repo": "escoffier-labs/brigade",
+  "path": "src/brigade/templates/skills/note/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/escoffier-labs/brigade",
+  "dir_name": "note",
+  "downloaded_at": "2026-10-27T05:34:45.400051Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word, markdown",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "escoffier-labs",
+  "source_url": "https://github.com/escoffier-labs/brigade/blob/main/src/brigade/templates/skills/note/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/escoffier-labs/brigade/blob/main/src/brigade/templates/skills/note/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create an Obsidian-formatted markdown note documenting the current session topic. Use when the user says /note, 'save this to Obsidian', 'write a note about X', or asks to document a troubleshooting session, system concept, coding pattern, or workflow. Writes to ~/notes/<slug>.md and syncs to the configured Obsidian inbox. If an argument is provided after /note, use it as the topic; otherwise review the conversation."
+}

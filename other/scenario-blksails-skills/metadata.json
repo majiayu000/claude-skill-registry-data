@@ -1,0 +1,37 @@
+{
+  "name": "autoresearch:scenario",
+  "repo": "blksails/skills",
+  "path": "skills/autoresearch-skill/skills/scenario/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/blksails/skills",
+  "dir_name": "scenario-blksails-skills",
+  "downloaded_at": "2026-10-27T04:39:50.422805Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "blksails",
+  "source_url": "https://github.com/blksails/skills/blob/main/skills/autoresearch-skill/skills/scenario/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/blksails/skills/blob/main/skills/autoresearch-skill/skills/scenario/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "12-dimension scenario exploration across user-specified domain modes.\nTRIGGER when: user wants to explore scenarios, edge cases, or what-if analysis;\nuser asks \"what could go wrong\"; user wants failure mode analysis; user asks about\nbest/worst case outcomes; user wants to stress-test a plan, design, or system;\nuser mentions \"scenario analysis\" or \"scenario planning\";\nuser invokes /autoresearch:scenario.\nDO NOT TRIGGER when: user wants a one-shot answer; user wants a simple pros/cons list;\nuser just wants debugging help; user wants iterative optimization."
+}

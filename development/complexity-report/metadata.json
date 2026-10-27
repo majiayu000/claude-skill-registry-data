@@ -1,0 +1,38 @@
+{
+  "name": "complexity-report",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/code-quality/skills/complexity-report/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "complexity-report",
+  "downloaded_at": "2026-10-27T04:32:45.053996Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, refactor",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/code-quality/skills/complexity-report/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/code-quality/skills/complexity-report/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Rank the functions in a Python or JavaScript/TypeScript tree by cyclomatic complexity, length and nesting depth with a bundled script, then say which are most tangled and how to simplify them. Use when asked \"which code is most complex?\", for the worst offenders by branching and nesting, where to start a cleanup, to measure complexity before and after a refactor, or to add a complexity ceiling in CI. Not for unused or never used exports (dead-code-finder), a refactoring sequence (refactor-plan) or runtime performance (perf-profile-reader)."
+}

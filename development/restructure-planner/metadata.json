@@ -1,0 +1,38 @@
+{
+  "name": "restructure-planner",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/repo-engineering/skills/restructure-planner/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "restructure-planner",
+  "downloaded_at": "2026-10-27T04:32:54.816181Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, refactor",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/repo-engineering/skills/restructure-planner/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/repo-engineering/skills/restructure-planner/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Plan a repository restructure (split or merge packages, fix module boundaries) from the real import dependency graph of Python, JavaScript and TypeScript files, reporting the most coupled files, import cycles and god modules, and proposing a move plan with blast radius and git mv commands it prints and never runs. Use when asked \"how should we split this package?\" or to break an import cycle before a large refactor. Not for renaming symbols, build or bundler analysis, or other languages."
+}

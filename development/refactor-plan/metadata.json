@@ -1,0 +1,38 @@
+{
+  "name": "refactor-plan",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/code-quality/skills/refactor-plan/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "refactor-plan",
+  "downloaded_at": "2026-10-27T04:32:45.601254Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, compile, refactor",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "compile",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/code-quality/skills/refactor-plan/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/code-quality/skills/refactor-plan/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Plan a safe refactor of a module, package or large file as small, behaviour-preserving commits, with the tests that guard each step and a rollback point: split a 3000-line file into smaller units, untangle packages that import each other in a circle, or clean up code when behaviour must not change. Use when asked to \"plan this refactor\", for the steps to split or restructure a module, or to untangle dependencies. Not for ranking complexity (complexity-report), finding unused code (dead-code-finder), renames alone (naming-audit) or features and bug fixes."
+}

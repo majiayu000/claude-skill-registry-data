@@ -1,0 +1,38 @@
+{
+  "name": "test-gap-analysis",
+  "repo": "dss-time/repo-doctor-skills",
+  "path": "plugins/repo-doctor/skills/test-gap-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/dss-time/repo-doctor-skills",
+  "dir_name": "test-gap-analysis",
+  "downloaded_at": "2026-10-27T05:25:53.572082Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dss-time",
+  "source_url": "https://github.com/dss-time/repo-doctor-skills/blob/main/plugins/repo-doctor/skills/test-gap-analysis/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dss-time/repo-doctor-skills/blob/main/plugins/repo-doctor/skills/test-gap-analysis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Map a requirement, root cause, existing tests, or Git diff to evidence-backed test coverage and prioritized gaps across unit, integration, contract, end-to-end, and manual validation. Use to decide what is covered or missing; do not generate bulk test code, and route explicit test implementation to safe-test-implementation when available. \u5c06\u9700\u6c42\u3001\u6839\u56e0\u3001\u73b0\u6709\u6d4b\u8bd5\u6216 Git Diff \u6620\u5c04\u5230\u6709\u8bc1\u636e\u7684\u6d4b\u8bd5\u8986\u76d6\u4e0e\u4f18\u5148\u7ea7\u7f3a\u53e3\uff0c\u8986\u76d6\u5355\u5143\u3001\u96c6\u6210\u3001\u5951\u7ea6\u3001\u7aef\u5230\u7aef\u548c\u4eba\u5de5\u9a8c\u8bc1\u3002\u7528\u4e8e\u5224\u65ad\u5df2\u8986\u76d6\u548c\u7f3a\u5931\u573a\u666f\uff1b\u4e0d\u5f97\u6279\u91cf\u751f\u6210\u6d4b\u8bd5\u4ee3\u7801\uff0c\u660e\u786e\u5b9e\u65bd\u6d4b\u8bd5\u65f6\u4ea4\u7ed9\u53ef\u7528\u7684 safe-test-implementation\u3002"
+}

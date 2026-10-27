@@ -1,0 +1,38 @@
+{
+  "name": "ruflo",
+  "repo": "akillness/jeo-skills",
+  "path": ".agent-skills/ruflo/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/akillness/jeo-skills",
+  "dir_name": "ruflo",
+  "downloaded_at": "2026-10-27T04:06:31.142822Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "akillness",
+  "source_url": "https://github.com/akillness/jeo-skills/blob/main/.agent-skills/ruflo/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/akillness/jeo-skills/blob/main/.agent-skills/ruflo/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when operating the source-pinned ruvnet/ruflo repository or Ruflo CLI for fit checks, offline preflight, initialization previews, Claude Code or Codex swarm and hive-mind orchestration, MCP registration, memory inspection, cleanup, rollback, or troubleshooting. Keep the rename boundary explicit: the root package and compatibility CLI expose claude-flow names while current Ruflo docs and the wrapper use ruflo. Separate read-only discovery from commands writing project files, Claude settings, MCP registrations, hooks, helpers, runtime configuration, CLAUDE.md, or memory databases; require approval before installs, package or model downloads, paid or remote calls, servers or ports, credentials, publishing, or destructive cleanup. Route agent-company control-plane work to paperclip, local tmux lifecycle management to agent-manager, graph-based provider-CLI orchestration to zeroshot, specification-first clarification to ooo, and recursive agent-harness optimization to harness2."
+}

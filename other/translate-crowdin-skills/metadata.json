@@ -1,0 +1,37 @@
+{
+  "name": "translate",
+  "repo": "crowdin/skills",
+  "path": "skills/translate/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/crowdin/skills",
+  "dir_name": "translate-crowdin-skills",
+  "downloaded_at": "2026-10-27T05:04:18.112944Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, language=2",
+    "score": 2,
+    "runner_up": "language",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "crowdin",
+  "source_url": "https://github.com/crowdin/skills/blob/main/skills/translate/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/crowdin/skills/blob/main/skills/translate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Drafts translations into the project's own resource files from the terminal and uploads them to Crowdin as suggestions for review. Use when a developer asks to translate their app's strings, fill the missing translations for a locale, or translate the catalog into a newly added language. Not for prose documents, not for Crowdin's server-side pre-translation (`crowdin auto-translate`, in crowdin-cli), not for the full internationalize-and-connect journey (i18n-setup, which delegates here)."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "catlass-op-design",
+  "repo": "catman626/cannbot-skills",
+  "path": "ops/catlass-op-design/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/catman626/cannbot-skills",
+  "dir_name": "catlass-op-design",
+  "downloaded_at": "2026-10-27T04:49:20.224883Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "catman626",
+  "source_url": "https://github.com/catman626/cannbot-skills/blob/main/ops/catlass-op-design/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/catman626/cannbot-skills/blob/main/ops/catlass-op-design/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Analyze operator requirements and select CATLASS components (ArchTag, DispatchPolicy, TileShape, BlockMmad, BlockEpilogue, BlockScheduler, Kernel type). Use when designing new CATLASS-based Ascend C operators, selecting DispatchPolicy, determining TileShape, choosing Kernel type, or picking Epilogue components. Output: component selection tables, epilogue slot analysis, branch instantiation conditions, workspace estimation."
+}

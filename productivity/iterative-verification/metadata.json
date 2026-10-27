@@ -1,0 +1,37 @@
+{
+  "name": "iterative-verification",
+  "repo": "bogheorghiu/ex-cog-dev",
+  "path": "research-toolkit/skills/iterative-verification/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/bogheorghiu/ex-cog-dev",
+  "dir_name": "iterative-verification",
+  "downloaded_at": "2026-10-27T04:40:11.500707Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "bogheorghiu",
+  "source_url": "https://github.com/bogheorghiu/ex-cog-dev/blob/main/research-toolkit/skills/iterative-verification/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/bogheorghiu/ex-cog-dev/blob/main/research-toolkit/skills/iterative-verification/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "\"Is this ACTUALLY verified, or did I just say it is?\" - Factual accuracy verification loop. Use when (1) claims require evidence not assumption, (2) verification must be demonstrable, (3) single-pass investigation insufficient, (4) factual accuracy is critical. Provides the loop logic: iterate until verification thresholds met. Does NOT trigger for: opinions, preferences, how-to instructions, or when user explicitly wants quick answer."
+}

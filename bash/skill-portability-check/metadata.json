@@ -1,0 +1,38 @@
+{
+  "name": "skill-portability-check",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/cc-setup-tooling/skills/skill-portability-check/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "skill-portability-check",
+  "downloaded_at": "2026-10-27T04:32:44.380263Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/cc-setup-tooling/skills/skill-portability-check/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/cc-setup-tooling/skills/skill-portability-check/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Check a skill folder for what breaks on other hosts and operating systems: unquoted YAML colons, hard-coded home paths, CLAUDE_PLUGIN_ROOT with no fallback, GNU-only or BSD-only shell, Python open calls without encoding, POSIX-only calls, Windows path separators, CRLF and symlinks, with a fix hint per file. Use when asked \"will this skill work on Windows?\", before publishing a skill, or in CI. Not for security review (use skill-supply-chain-review) or description wording."
+}

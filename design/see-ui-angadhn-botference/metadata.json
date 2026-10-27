@@ -1,0 +1,38 @@
+{
+  "name": "see-ui",
+  "repo": "angadhn/botference",
+  "path": ".agents/skills/see-ui/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/angadhn/botference",
+  "dir_name": "see-ui-angadhn-botference",
+  "downloaded_at": "2026-10-27T04:16:25.513948Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, css",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "css"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "angadhn",
+  "source_url": "https://github.com/angadhn/botference/blob/main/.agents/skills/see-ui/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/angadhn/botference/blob/main/.agents/skills/see-ui/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Look at any web UI you build or change \u2014 render it headless with `botference see` and read the screenshots \u2014 because layout and design failures produce NO errors or warnings. Use after every UI change, before declaring done, and whenever a human says something \"looks wrong\"."
+}

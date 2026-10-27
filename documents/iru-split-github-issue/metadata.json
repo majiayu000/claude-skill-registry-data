@@ -1,0 +1,37 @@
+{
+  "name": "iru-split-github-issue",
+  "repo": "albertoirurueta/docs",
+  "path": ".claude/skills/iru-split-github-issue/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/albertoirurueta/docs",
+  "dir_name": "iru-split-github-issue",
+  "downloaded_at": "2026-10-27T04:07:05.538629Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: markdown, documentation",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "albertoirurueta",
+  "source_url": "https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-split-github-issue/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/albertoirurueta/docs/blob/main/.claude/skills/iru-split-github-issue/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "/iru-split-github-issue <issue-number> (stays the root) or /iru-split-github-issue draft:<path> (root created from the draft); optional force: yes skips the size assessment, label: <name> sets the label. Splits an oversized GitHub issue into dependency-ordered sub-issues (same Parallel group = independent) under a root issue and a milestone, reviewing each draft with iru-review-github-issue. GitHub-only. Creates nothing until the user confirms the proposed split. Use when an issue has many requirements, several independently deliverable capabilities, or is estimated hard or above."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "risk-register-refresh",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/ways-of-working/skills/risk-register-refresh/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "risk-register-refresh",
+  "downloaded_at": "2026-10-27T04:32:57.177529Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/ways-of-working/skills/risk-register-refresh/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/ways-of-working/skills/risk-register-refresh/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Prepare the quarterly risk review from a register CSV, saved findings (Security Hub ASFF JSON, generic JSON or CSV) and last quarter's snapshot: new findings with no register entry, risks with no supporting finding, risks whose rating moved since the snapshot, overdue reviews, risks without an owner, and a refresh agenda. Use when asked \"what changed in the risk register?\" or which findings are not in it. Not for user access reviews, scoring or rating a risk's likelihood and impact yourself (it uses the register's own values), triaging a live findings backlog, or GRC tool integration."
+}

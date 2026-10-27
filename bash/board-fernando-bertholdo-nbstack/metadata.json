@@ -1,0 +1,39 @@
+{
+  "name": "board",
+  "repo": "fernando-bertholdo/nbstack",
+  "path": "plugins/multica-ops/skills/board/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/fernando-bertholdo/nbstack",
+  "dir_name": "board-fernando-bertholdo-nbstack",
+  "downloaded_at": "2026-10-27T05:40:50.529869Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fernando-bertholdo",
+  "source_url": "https://github.com/fernando-bertholdo/nbstack/blob/main/plugins/multica-ops/skills/board/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fernando-bertholdo/nbstack/blob/main/plugins/multica-ops/skills/board/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The layer around the official Multica CLI skill \u2014 where the binary hides in a desktop-app install, how to reach it from a bridged Cowork/claude.ai session, the shell and JSON shapes that bite, the platform limits, and how to work a board that is governed by a repository which versions its Multica configuration. Use alongside the official `multica-cli` skill whenever a task touches a Multica board."
+}

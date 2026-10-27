@@ -1,0 +1,41 @@
+{
+  "name": "video-to-ui",
+  "repo": "damiantorresmx11/replica-crew",
+  "path": "skills/video-to-ui/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/damiantorresmx11/replica-crew",
+  "dir_name": "video-to-ui",
+  "downloaded_at": "2026-10-27T05:09:03.879721Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, ui, frontend, component, tailwind, animation",
+    "score": 6,
+    "runner_up": "analysis",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "frontend",
+      "component",
+      "tailwind",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "damiantorresmx11",
+  "source_url": "https://github.com/damiantorresmx11/replica-crew/blob/main/skills/video-to-ui/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/damiantorresmx11/replica-crew/blob/main/skills/video-to-ui/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Take a UI screen recording (mobile/desktop/web/marketing video) and do one of four things \u2014 your\npick: (1) just extract the frames as PNGs, (2) analyze the design system shown in the video and\nlist the distinct screens, (3) compare the video against files in your codebase and produce a\nconcrete list of edits to make those files feel like the video, or (4) scaffold a real frontend\napp (Vite + React + TypeScript + Tailwind) that recreates the UI's behavior \u2014 not just its\nappearance \u2014 with working interactions and animations. Option 3 always shows you the proposed\nchanges first and waits for your approval before editing. Requires ffmpeg; mode 4 additionally\nneeds Node.js to run the generated app. Mode 4 reads the `frontend-design` skill (if installed)\nbefore generating to inherit its component-quality and aesthetic guidance.\n\nTrigger whenever the user mentions a screen recording, video walkthrough, mobile-app demo,\ndesktop-app capture, marketing/product video, or wants to extract design insights from a clip \u2014\neven if they don't explicitly say \"use the video skill\". Phrases like \"I have this video of a UI\",\n\"extract frames from this recording\", \"what's the design system in this video\", \"make my\ncomponents look like this clip\", \"build a frontend app from this video\", or \"I have a UI demo,\nhere are files I want to update\" should all trigger it. The skill itself will ask which of the\nfour modes to run."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "sandbox-config-review",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/cc-setup-tooling/skills/sandbox-config-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "sandbox-config-review",
+  "downloaded_at": "2026-10-27T04:32:43.662753Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/cc-setup-tooling/skills/sandbox-config-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/cc-setup-tooling/skills/sandbox-config-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review a Claude Code project's sandbox settings across user, project, local and managed scopes, show what the operating system actually enforces around Bash commands, and flag what leaves it open: sandbox off, fail-open, the unsandboxed retry, broad excludedCommands, wildcard domains, readable credentials and loosening values a cloned repository ships. Use when asked \"is my sandbox actually locked down?\" or before trusting auto-allow. Not for permission rules (use permissions-builder) or for containers and VMs."
+}

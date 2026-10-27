@@ -1,0 +1,39 @@
+{
+  "name": "triton-simulator-optimizer",
+  "repo": "catman626/cannbot-skills",
+  "path": "ops/triton-simulator-optimizer/SKILL.md",
+  "github_branch": "main",
+  "category": "performance",
+  "source": "github.com/catman626/cannbot-skills",
+  "dir_name": "triton-simulator-optimizer",
+  "downloaded_at": "2026-10-27T04:49:31.041961Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "performance",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for performance: optimize, latency, speed, benchmark",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "optimize",
+      "latency",
+      "speed",
+      "benchmark"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "catman626",
+  "source_url": "https://github.com/catman626/cannbot-skills/blob/main/ops/triton-simulator-optimizer/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/catman626/cannbot-skills/blob/main/ops/triton-simulator-optimizer/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Triton-Ascend \u7b97\u5b50\u7684 simulator \u6d41\u6c34**\u91c7\u96c6\u4e0e\u8bca\u65ad**\u4e13\u5bb6\u3002\u7528 msprof op simulator \u91c7\u96c6 per-instruction pipe \u7edf\u8ba1\uff0c\u5b9a\u4f4d\u771f\u5b9e\u74f6\u9888\uff08\u800c\u975e\u731c\u6d4b\uff09\uff0c\u4ea7\u51fa**\u8bca\u65ad\u62a5\u544a**\uff1a\u74f6\u9888\u7c7b\u578b + \u70ed\u6e90\u7801\u884c + \u4fee\u590d\u65b9\u5411\uff08\u6307\u5411 triton-latency-optimizer \u7684\u5df2\u6709\u4f18\u5316\u70b9\u7f16\u53f7\uff09\u3002 \u672c skill **\u53ea\u91c7\u96c6 + \u8bca\u65ad\uff0c\u4e0d\u81ea\u5e26\u4f18\u5316\u6280\u672f**\u2014\u2014\u4fee\u590d\u843d\u5730\u4e00\u5f8b\u8d70 latency-optimizer\uff0c \u7981\u6b62\u5728\u672c skill \u91cd\u590d\u5b9a\u4e49\u7b2c\u4e8c\u4e2a\u4f18\u5316\u6280\u672f\u76ee\u5f55\u3002\u7981\u6b62\u5728\u672a\u91c7\u96c6\u524d declaring \"\u786c\u4ef6\u6781\u9650\"\u3002 \u89e6\u53d1\uff1a\u5f53\u7528\u6237\u9700\u8981\u901a\u8fc7 simulator \u6d41\u6c34\u91c7\u96c6\u5b9a\u4f4d Triton-Ascend \u7b97\u5b50\u74f6\u9888\uff0c\u6216\u7aef\u5230\u7aef benchmark \u6162\u4f46\u74f6\u9888\u4e0d\u660e\uff08dot / \u9010\u5143\u7d20 / \u8bbf\u5b58 / \u540c\u6b65\u54ea\u4e00\u9879\u672a\u77e5\uff09\uff0c\u6216\u5373\u5c06\u5f97\u51fa\"\u786c\u4ef6\u74f6\u9888\u4e0d\u53ef\u4f18\u5316\" \u7ed3\u8bba\u4e4b\u524d\u2014\u2014\u5fc5\u987b\u5148\u91c7\u96c6\u3002 \u5165\u53e3\uff1a\u7531\u7f16\u6392\u5668\uff08triton-op-generator / AGENTS.md Phase 4\uff09\u5728 latency-optimizer \u4f18\u5316\u8017\u5c3d \u4e14 speedup \u4ecd\u672a\u8fbe\u6807\u65f6\u8c03\u7528\u3002\u88ab\u8c03\u7528\u5373\u76f4\u63a5\u8fdb\u5165\u91c7\u96c6\u5faa\u73af\u3002"
+}

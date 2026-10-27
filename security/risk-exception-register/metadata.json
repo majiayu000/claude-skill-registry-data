@@ -1,0 +1,38 @@
+{
+  "name": "risk-exception-register",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/ways-of-working/skills/risk-exception-register/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "risk-exception-register",
+  "downloaded_at": "2026-10-27T04:32:57.050971Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/ways-of-working/skills/risk-exception-register/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/ways-of-working/skills/risk-exception-register/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review a register of time-bound security exceptions, waivers and risk acceptances (CSV or Markdown table): flags expired exceptions and those that expire in the next 30 days, missing approvers or compensating controls, approvers who signed off their own request, and repeated renewals, then prints a review agenda with a blank decision line per item. Use when asked to \"review the exception register\", which waivers have expired, or to check the register before an audit. Not for user access reviews, deciding whether a risk is acceptable, scoring risk, or Vanta and other GRC tool integration."
+}

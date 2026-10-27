@@ -1,0 +1,38 @@
+{
+  "name": "scp-guardrails",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/aws-security/skills/scp-guardrails/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "scp-guardrails",
+  "downloaded_at": "2026-10-27T04:32:42.750232Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "business",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/aws-security/skills/scp-guardrails/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/aws-security/skills/scp-guardrails/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write, review and lint AWS Organizations service control policies: build SCPs from a short spec (region allowlist, break-glass roles, protected logging, no root user, IMDSv2, no public S3 ACLs) under the SCP character limit, and lint any SCP for Allow statements, region denies that break global services, NotAction misuse and size. Use when asked \"why did our region SCP break IAM?\", to write a service control policy, or to lint a guardrail SCP before you attach it to an OU. Not for IAM identity policies (iam-least-privilege-review) or organization design (landing-zone-blast-radius)."
+}

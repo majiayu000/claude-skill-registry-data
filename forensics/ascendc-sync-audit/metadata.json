@@ -1,0 +1,37 @@
+{
+  "name": "ascendc-sync-audit",
+  "repo": "catman626/cannbot-skills",
+  "path": "ops/ascendc-sync-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "forensics",
+  "source": "github.com/catman626/cannbot-skills",
+  "dir_name": "ascendc-sync-audit",
+  "downloaded_at": "2026-10-27T04:49:22.180880Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "forensics",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for forensics: evidence, triage",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "evidence",
+      "triage"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "catman626",
+  "source_url": "https://github.com/catman626/cannbot-skills/blob/main/ops/ascendc-sync-audit/SKILL.md",
+  "license": "CANN-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/catman626/cannbot-skills/blob/main/ops/ascendc-sync-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Ascend C \u4fe1\u53f7\u540c\u6b65\u95ee\u9898\u68c0\u9a8c\u4e0e\u4fee\u6b63\u3002\u68c0\u6d4b\u6838\u5185\u6d41\u6c34\u7ebf\u540c\u6b65\uff08SetFlag/WaitFlag\u3001SyncFunc\u3001PipeBarrier\u3001EnQue/DeQue\uff09\u3001\u6838\u95f4\u540c\u6b65\uff08CrossCoreSetFlag/WaitFlag\u3001SyncAll\u3001ScalarBar\uff09\u4ee5\u53ca producer/consumer/sync \u6570\u636e\u6d41\u56fe\u4e2d\u7684 buffer \u7d22\u5f15\u4e00\u81f4\u6027\u95ee\u9898\u3002\u89e6\u53d1\u5173\u952e\u8bcd\uff1a\u540c\u6b65\u3001\u540c\u6b65\u95ee\u9898\u3001SetFlag\u3001WaitFlag\u3001CrossCore\u3001SyncFunc\u3001PipeBarrier\u3001\u6b7b\u9501\u3001\u6b7b\u7b49\u3001\u5361\u6b7b\u3001hang\u3001\u6570\u636e\u9519\u4e71\u3001\u534a\u6210\u54c1\u3001flagId\u3001buffer \u7d22\u5f15\u3001output buffer id\u3001producer consumer\u3001\u6838\u95f4\u540c\u6b65\u3001\u6d41\u6c34\u7ebf\u540c\u6b65\u3001\u4fe1\u53f7\u540c\u6b65\u3001\u68c0\u89c6\u540c\u6b65\u3001\u68c0\u67e5\u540c\u6b65\u3001\u4fee\u6b63\u540c\u6b65\u3001sync\u3002"
+}

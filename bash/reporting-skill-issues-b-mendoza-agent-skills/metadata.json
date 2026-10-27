@@ -1,0 +1,38 @@
+{
+  "name": "reporting-skill-issues",
+  "repo": "b-mendoza/agent-skills",
+  "path": ".agents/skills/reporting-skill-issues/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/b-mendoza/agent-skills",
+  "dir_name": "reporting-skill-issues-b-mendoza-agent-skills",
+  "downloaded_at": "2026-10-27T04:30:15.715130Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, script, cli",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "b-mendoza",
+  "source_url": "https://github.com/b-mendoza/agent-skills/blob/main/.agents/skills/reporting-skill-issues/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/b-mendoza/agent-skills/blob/main/.agents/skills/reporting-skill-issues/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Reports observed defects and explicit improvement requests from runs of b-mendoza/agent-skills. Use when a library skill has ambiguous or contradictory instructions, missing files, broken scripts, wrong outputs, or does not cover something the user asked it to do."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "repo-hygiene-bundle",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/repo-engineering/skills/repo-hygiene-bundle/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "repo-hygiene-bundle",
+  "downloaded_at": "2026-10-27T04:32:54.525404Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for security: security, auth, vulnerability, audit",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "vulnerability",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/repo-engineering/skills/repo-hygiene-bundle/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/repo-engineering/skills/repo-hygiene-bundle/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run one offline hygiene pass over a repository and report findings with severity as a table, JSON or SARIF with a CI exit code, covering manifests without lockfiles, lockfile drift, version splits across workspaces, missing licence or SPDX fields, redacted secret-shaped strings, actions pinned by tag, write-all workflows, missing SECURITY.md, and large or built files. Use when asked \"is this repository ready to open source?\" or to add a hygiene gate to CI. Not for vulnerability scanning, secret search through history, or licence compatibility audits."
+}

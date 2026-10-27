@@ -1,0 +1,39 @@
+{
+  "name": "agent-tools-browsing",
+  "repo": "arisng/github-copilot-fc",
+  "path": "skills/agent-tools-browsing/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/arisng/github-copilot-fc",
+  "dir_name": "agent-tools-browsing",
+  "downloaded_at": "2026-10-27T04:22:45.485901Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "arisng",
+  "source_url": "https://github.com/arisng/github-copilot-fc/blob/main/skills/agent-tools-browsing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/arisng/github-copilot-fc/blob/main/skills/agent-tools-browsing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "**UTILITY SKILL** \u2014 Browse the tool names a runtime accepts in a custom agent's `tools:` frontmatter and produce a validated, minimal allowlist; and how to invoke a runtime's tools to get a task done. USE FOR: choosing or tightening an agent's tools list; finding valid tool names for the Copilot CLI, VS Code Agent Host, extension host, or GitHub.com cloud agent; telling a conceptual alias apart from a concrete built-in; debugging an agent whose tools list is ignored, too broad, or too narrow; naming MCP server tools in an allowlist; designing read-only, implementer, reviewer, or orchestrator tool profiles; running a task that needs runtime tools, such as creating a nested session in the Agents window. DO NOT USE FOR: authoring the agent file itself, frontmatter keys other than `tools:`, installing MCP servers, or VS Code UI customization. INVOKES: file system tools, browse_tools.py. FOR SINGLE OPERATIONS: to validate one candidate list, run scripts/browse_tools.py check instead of loading this skill."
+}

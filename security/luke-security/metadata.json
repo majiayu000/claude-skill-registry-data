@@ -1,0 +1,38 @@
+{
+  "name": "luke-security",
+  "repo": "brail/luke",
+  "path": ".claude/skills/luke-security/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/brail/luke",
+  "dir_name": "luke-security",
+  "downloaded_at": "2026-10-27T04:41:58.157200Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "brail",
+  "source_url": "https://github.com/brail/luke/blob/main/.claude/skills/luke-security/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/brail/luke/blob/main/.claude/skills/luke-security/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Security-focused audit for the Luke codebase. Covers IDOR, auth bypass, session security, input validation, rate limiting gaps, sensitive data exposure, LDAP injection, JWT/token issues, and invokes Trail of Bits sharp-edges and insecure-defaults plugins. Use when asked to audit security or find vulnerabilities. Scoping: default = diff vs merge-base. /luke-security apps/api | --since <ref> | --full"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "antilua-mcp",
+  "repo": "corarona/antilua",
+  "path": "skills/antilua-mcp/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/corarona/antilua",
+  "dir_name": "antilua-mcp",
+  "downloaded_at": "2026-10-27T05:02:08.646350Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, gaming=2",
+    "score": 2,
+    "runner_up": "gaming",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "corarona",
+  "source_url": "https://github.com/corarona/antilua/blob/main/skills/antilua-mcp/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/corarona/antilua/blob/main/skills/antilua-mcp/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when controlling a running Antilua client through its MCP server (structured tools over the Lua pipe) \u2014 orientation and context (agent_ctx), event feed (agent_events/wait_event), movement (goto walk/sprint/fly/tp), verified world actions (dig_at/place_at/use_node), inventory and crafting, server chat commands, cheats, and screenshots. Prefer this over raw `antilua-lua-pipe` bash when the MCP server is available in the host."
+}

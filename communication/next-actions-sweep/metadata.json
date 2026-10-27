@@ -1,0 +1,37 @@
+{
+  "name": "next-actions-sweep",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/ways-of-working/skills/next-actions-sweep/SKILL.md",
+  "github_branch": "main",
+  "category": "communication",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "next-actions-sweep",
+  "downloaded_at": "2026-10-27T04:32:56.653339Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "communication",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for communication: email, chat",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "email",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/ways-of-working/skills/next-actions-sweep/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/ways-of-working/skills/next-actions-sweep/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn saved exports of emails and chats from several inboxes (Microsoft Graph mail and Teams JSON, Slack export, CSV; work and personal accounts together) into one ranked do-next list: each message labelled reply, decide, do or FYI with the reason, any stated deadline and the source link, duplicates across accounts merged, and what is waiting on you versus waiting on others. Use when asked \"what should I answer first?\" or to triage several inboxes at once and tell what to do next. Not for sending, drafting or filing mail, live connector access, or meeting actions (meeting-actions-ledger)."
+}

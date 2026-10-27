@@ -1,0 +1,37 @@
+{
+  "name": "record-rule",
+  "repo": "darkmatter/skills",
+  "path": "skills/record-rule/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/darkmatter/skills",
+  "dir_name": "record-rule",
+  "downloaded_at": "2026-10-27T05:11:08.506186Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "darkmatter",
+  "source_url": "https://github.com/darkmatter/skills/blob/main/skills/record-rule/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/darkmatter/skills/blob/main/skills/record-rule/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Only when explicitly asked to record a rule, interview to clarify the note, reconcile org-wide or project-local guidance, and publish, activate, and verify it across configured agents."
+}

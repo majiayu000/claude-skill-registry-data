@@ -1,0 +1,38 @@
+{
+  "name": "eighty-six",
+  "repo": "escoffier-labs/skillet",
+  "path": "skillet/skills/eighty-six/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/escoffier-labs/skillet",
+  "dir_name": "eighty-six",
+  "downloaded_at": "2026-10-27T05:34:49.895585Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, refactor",
+    "score": 3,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "escoffier-labs",
+  "source_url": "https://github.com/escoffier-labs/skillet/blob/main/skillet/skills/eighty-six/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/escoffier-labs/skillet/blob/main/skillet/skills/eighty-six/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when agents keep repeating the same mistake in a repository, the operator keeps correcting the same thing, or the user asks to \"make this mistake impossible\", \"stop agents doing X\", \"harden the repo against agent errors\", or audit which CLAUDE.md or AGENTS.md rules anything actually enforces."
+}

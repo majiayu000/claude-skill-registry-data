@@ -1,0 +1,39 @@
+{
+  "name": "vendor-security-questionnaire-triage",
+  "repo": "better-isms/grcskills",
+  "path": "skills/tristan-roth/vendor-security-questionnaire-triage/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/better-isms/grcskills",
+  "dir_name": "vendor-security-questionnaire-triage",
+  "downloaded_at": "2026-10-27T04:35:52.583236Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: forensics=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "incident",
+      "evidence",
+      "triage"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "better-isms",
+  "source_url": "https://github.com/better-isms/grcskills/blob/main/skills/tristan-roth/vendor-security-questionnaire-triage/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/better-isms/grcskills/blob/main/skills/tristan-roth/vendor-security-questionnaire-triage/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when a supplier has returned a security questionnaire, assurance report,\ncertificate or trust pack and someone asks \"review this vendor's answers\", \"is this supplier\nsafe to use\", \"read their SOC report for us\", \"what should we ask the vendor next\", \"triage the\nvendor security assessment\" or \"does their certificate cover the service we buy\". Checks report\nand certificate scope against the service in use, sorts answers into evidenced, asserted,\ncontradicted and evasive, lists the obligations the report puts back on the customer, and writes\na triage note with follow-up questions and a proposed decision for the owner."
+}

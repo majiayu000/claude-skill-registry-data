@@ -1,0 +1,38 @@
+{
+  "name": "api-contract-review",
+  "repo": "dss-time/repo-doctor-skills",
+  "path": "skills/api-contract-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/dss-time/repo-doctor-skills",
+  "dir_name": "api-contract-review-dss-time-repo-doctor-skills-2",
+  "downloaded_at": "2026-10-27T05:25:54.002396Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=3, quality=3",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "workflow",
+      "task",
+      "planning"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "dss-time",
+  "source_url": "https://github.com/dss-time/repo-doctor-skills/blob/main/skills/api-contract-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/dss-time/repo-doctor-skills/blob/main/skills/api-contract-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review a specific REST, GraphQL, RPC, event, SDK, or internal-module contract across server, client, schema, documentation, and tests, classifying breaking, non-breaking, and behavioral changes. Use for API contract compatibility; do not perform a general code review, generic impact analysis, or modify the interface. \u5ba1\u67e5\u5177\u4f53 REST\u3001GraphQL\u3001RPC\u3001\u4e8b\u4ef6\u3001SDK \u6216\u5185\u90e8\u6a21\u5757\u5951\u7ea6\u5728\u670d\u52a1\u7aef\u3001\u5ba2\u6237\u7aef\u3001Schema\u3001\u6587\u6863\u548c\u6d4b\u8bd5\u95f4\u7684\u4e00\u81f4\u6027\uff0c\u5e76\u5206\u7c7b\u7834\u574f\u6027\u3001\u975e\u7834\u574f\u6027\u548c\u884c\u4e3a\u53d8\u5316\u3002\u7528\u4e8e API \u5951\u7ea6\u517c\u5bb9\u6027\uff1b\u4e0d\u66ff\u4ee3\u666e\u901a\u4ee3\u7801\u5ba1\u67e5\u6216\u901a\u7528\u5f71\u54cd\u5206\u6790\uff0c\u4e5f\u4e0d\u4fee\u6539\u63a5\u53e3\u3002"
+}

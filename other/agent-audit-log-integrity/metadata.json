@@ -1,0 +1,37 @@
+{
+  "name": "agent-audit-log-integrity",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/agent-identity-governance/skills/agent-audit-log-integrity/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "agent-audit-log-integrity",
+  "downloaded_at": "2026-10-27T04:32:38.327611Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/agent-identity-governance/skills/agent-audit-log-integrity/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/agent-identity-governance/skills/agent-audit-log-integrity/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Seal an agent's audit log (JSON lines from a hook, MCP gateway or agent runtime) as a SHA-256 or HMAC hash chain, verify it later for edited, deleted, inserted or reordered lines and truncation against a stored head, and list actions the log never recorded. Use when asked \"was this agent log edited?\", before handing agent logs to an auditor or after an incident. Not for building the timeline (agent-action-timeline) or for log storage and retention."
+}

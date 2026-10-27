@@ -1,0 +1,38 @@
+{
+  "name": "api-docs-from-code",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/docs/skills/api-docs-from-code/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "api-docs-from-code",
+  "downloaded_at": "2026-10-27T04:32:50.556898Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, markdown, documentation",
+    "score": 3,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/docs/skills/api-docs-from-code/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/docs/skills/api-docs-from-code/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate an API reference from source: a bundled script extracts Python docstrings and JavaScript or TypeScript JSDoc into Markdown or JSON, lists public functions and classes with no docstring and gives a documentation coverage number; then fill the gaps and wire it into the docs build. Use when asked to \"document this module\" or package, when the reference docs are out of date, or which public functions lack docstrings. Not for OpenAPI specs (api-contract-review) and not a replacement for Sphinx, mkdocstrings or TypeDoc where already used."
+}

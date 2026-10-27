@@ -1,0 +1,39 @@
+{
+  "name": "incident-lookup",
+  "repo": "basitalisandhu/claude-skills",
+  "path": "plugins/agent-security/skills/incident-lookup/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/basitalisandhu/claude-skills",
+  "dir_name": "incident-lookup",
+  "downloaded_at": "2026-10-27T04:32:40.252029Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, vulnerability, owasp",
+    "score": 4,
+    "runner_up": "ai-llm",
+    "runner_up_score": 3,
+    "signals": [
+      "security",
+      "auth",
+      "vulnerability",
+      "owasp"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "basitalisandhu",
+  "source_url": "https://github.com/basitalisandhu/claude-skills/blob/main/plugins/agent-security/skills/incident-lookup/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/basitalisandhu/claude-skills/blob/main/plugins/agent-security/skills/incident-lookup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Look up 80 coded AI-agent security incidents from 2023 to 2026 (prompt injection, tool poisoning, exfiltration and more), mapped to OWASP Agentic and LLM Top 10 and MITRE ATLAS techniques, and list real precedents with sources. Use when asked \"has this happened before?\", to find incidents that justify a control with evidence, or to \"cite a precedent\". Not for general CVE lookups, security news, a live threat feed or writing a threat model (agent-threat-model); it reads a daily-refreshed copy of the published dataset and falls back to a bundled snapshot offline."
+}

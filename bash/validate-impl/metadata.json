@@ -1,0 +1,39 @@
+{
+  "name": "kiro-validate-impl",
+  "repo": "blksails/skills",
+  "path": "skills/kiro/phases/validate-impl/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/blksails/skills",
+  "dir_name": "validate-impl",
+  "downloaded_at": "2026-10-27T04:39:48.798469Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "blksails",
+  "source_url": "https://github.com/blksails/skills/blob/main/skills/kiro/phases/validate-impl/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/blksails/skills/blob/main/skills/kiro/phases/validate-impl/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Validate feature-level integration after all tasks are implemented. Checks cross-task consistency, full test suite, and overall spec coverage."
+}

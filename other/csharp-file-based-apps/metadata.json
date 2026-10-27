@@ -1,0 +1,37 @@
+{
+  "name": "csharp-file-based-apps",
+  "repo": "arisng/github-copilot-fc",
+  "path": "skills/csharp-file-based-apps/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/arisng/github-copilot-fc",
+  "dir_name": "csharp-file-based-apps",
+  "downloaded_at": "2026-10-27T04:22:45.879558Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "arisng",
+  "source_url": "https://github.com/arisng/github-copilot-fc/blob/main/skills/csharp-file-based-apps/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/arisng/github-copilot-fc/blob/main/skills/csharp-file-based-apps/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write and run C# programs without a .csproj or solution file using .NET 10+ file-based apps, including multi-file apps with `#:include` (.NET 11+). Use when the user wants to execute C# code quickly \u2014 scripts, utilities, prototyping, quick experiments, data processing, teaching examples, or tool authoring. Triggers on phrases like \"run this C# file\", \"C# script\", \"no project file needed\", \"single file C# app\", \"dotnet run file.cs\", \"quick C# utility\", \"split script across files\", \"#:include directive\", or any request to write and immediately execute a small self-contained C# program."
+}
