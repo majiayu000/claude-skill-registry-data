@@ -1,0 +1,38 @@
+{
+  "name": "nell",
+  "repo": "jvandenbos/nell",
+  "path": "src/skill.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/jvandenbos/nell",
+  "dir_name": "src",
+  "downloaded_at": "2026-10-28T05:29:40.554440Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: pdf, word, markdown",
+    "score": 3,
+    "runner_up": "marketing",
+    "runner_up_score": 1,
+    "signals": [
+      "pdf",
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jvandenbos",
+  "source_url": "https://github.com/jvandenbos/nell/blob/main/src/skill.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jvandenbos/nell/blob/main/src/skill.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Read and manage the person's e-book library with Nell, the Omarchy EPUB and\nPDF reader. Use when asked about their books, what they're reading, their\nhighlights, notes, bookmarks, or looked-up words, or to add books to Nell."
+}

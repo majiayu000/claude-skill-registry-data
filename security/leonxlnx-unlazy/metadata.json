@@ -1,0 +1,38 @@
+{
+  "name": "unlazy",
+  "repo": "gabrielmoreira/agent-skills-mirror",
+  "path": "mirrors/repos/Leonxlnx@unlazy/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/gabrielmoreira/agent-skills-mirror",
+  "dir_name": "leonxlnx-unlazy",
+  "downloaded_at": "2026-10-28T04:31:21.629147Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gabrielmoreira",
+  "source_url": "https://github.com/gabrielmoreira/agent-skills-mirror/blob/main/mirrors/repos/Leonxlnx@unlazy/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gabrielmoreira/agent-skills-mirror/blob/main/mirrors/repos/Leonxlnx@unlazy/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Enforces completion discipline for substantial autonomous work by writing acceptance gates before execution, decomposing work with the Depth Tree, running approved checks, and re-verifying evidence before reporting. Use when an agent faces a long or multi-part task, work that has returned half-done, an exhaustive audit or build, parallel leaves or pipelines, or explicit triggers such as /unlazy, $unlazy, \"tree N\", \"gates\", and \"do not stop until it is done\"."
+}

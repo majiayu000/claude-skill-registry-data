@@ -1,0 +1,37 @@
+{
+  "name": "save",
+  "repo": "korchasa/flowai-plugins",
+  "path": "plugins/flowai-memex/skills/save/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/korchasa/flowai-plugins",
+  "dir_name": "save-korchasa-flowai-plugins",
+  "downloaded_at": "2026-10-28T05:41:45.866219Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "korchasa",
+  "source_url": "https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai-memex/skills/save/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai-memex/skills/save/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user gives a source (URL, file, or text) to save into the project's memex \u2014 a long-term knowledge bank for AI agents. Stores the raw source, extracts cross-linked entity pages, audits backlinks, updates the index. Not for casual reads."
+}

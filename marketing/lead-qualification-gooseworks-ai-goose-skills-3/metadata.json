@@ -1,0 +1,38 @@
+{
+  "name": "lead-qualification",
+  "repo": "gooseworks-ai/goose-skills",
+  "path": "skills/shared/lead-qualification/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/gooseworks-ai/goose-skills",
+  "dir_name": "lead-qualification-gooseworks-ai-goose-skills-3",
+  "downloaded_at": "2026-10-28T04:41:13.695029Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: marketing, content, campaign",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "marketing",
+      "content",
+      "campaign"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gooseworks-ai",
+  "source_url": "https://github.com/gooseworks-ai/goose-skills/blob/main/skills/shared/lead-qualification/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gooseworks-ai/goose-skills/blob/main/skills/shared/lead-qualification/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Lead qualification engine with conversational intake. Asks structured questions to understand your qualification criteria, generates a reusable qualification prompt, then batch-enriches leads via Apify LinkedIn scraping and scores them with parallel processing. Outputs qualified/disqualified verdicts with confidence scores and reasoning to CSV or whatever output format the user prefers. Supports calibration mode for prompt refinement."
+}

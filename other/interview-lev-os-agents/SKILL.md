@@ -1,0 +1,480 @@
+---
+name: interview
+description: Use when guiding decision interviews that produce a design artifact in .lev/pm/designs before proposal or implementation planning.
+output_template: footer
+---
+
+# Interview
+
+<goal>
+Run a design-acquisition interview. First reduce ambiguity until the subject, intent, outcome, scope, constraints, and success criteria are clear enough to know the decision space. Then walk one researched design branch at a time until a design artifact is ready under `.lev/pm/designs/`.
+
+The interview output is a design, not a spec. It should carry the product
+framing normally expected from a PRD, but inside the design artifact.
+After design alignment, route by scope and domain: broad work needs a plan from
+`skill://lev-plan`; a bounded coding slice uses that skill's slice review or
+packet with the plan recorded as not required; non-coding
+work can use a sufficient plan directly with its domain execution owner.
+</goal>
+
+## Entity Reconciliation
+
+After authorized material progress, reconcile touched and causally affected
+artifacts before routing, handoff, or final response. Track entity ref,
+island/provider locator (a path for file storage), basis/evidence, and the
+reason/action due. Update through the verified owning CLI/adapter; use a
+write-authorized skill fallback only when that operation is unavailable.
+Record updated, no_change(reason), or blocked(reason), preserving unresolved
+refs. Reading or mentioning a path alone creates no update obligation.
+Read-only work reports pending changes only. Reminders grant no write authority;
+task status stays with the bound tracker. Update only artifacts whose content
+or evidence changed; do not rewrite every referenced document.
+
+<commands>
+
+```bash
+/interview                      # --standard --compact by default
+/interview --quick              # lower rigor, ambiguity gate <= 0.30
+/interview --standard           # default rigor, ambiguity gate <= 0.20
+/interview --deep               # high rigor, ambiguity gate <= 0.15
+/interview --auto               # synthesize/update from context; stop for human judgment or propose handoff
+/interview --framework=SCAMPER  # use this lens internally; show only the tag unless d. Deep dive is requested
+/interview --rounds             # grilling: ask independent ready decisions together, then wait
+```
+
+</commands>
+
+<operational-contract>
+
+```yaml
+rules:
+  - "Depth and verbosity are separate controls: quick/standard/deep changes ambiguity threshold; compact/full changes visible text volume only."
+  - "--auto performs lookup and scoring first; if ambiguity is at or below threshold, update the artifact instead of interviewing."
+  - "Start in the orientation loop unless ambiguity is already at or below the active depth threshold."
+  - "Do not walk design branches until the orientation loop identifies the subject and ambiguity is at or below threshold."
+  - "Run codebase/docs/artifact lookup before asking in both loops; do not ask the user what files can answer."
+  - "When ambiguity is above threshold, ask one Socratic question targeting the weakest clarity dimension, with three concrete ways to answer and one recommendation."
+  - "When ambiguity is at or below threshold, discover the candidate branch map and walk one design branch at a time."
+  - "For design-branch questions, provide three researched options, one recommendation, and the consequence of each option."
+  - "Persist subject, source context, depth, ambiguity, resolved branches, deferred branches, and next branch."
+  - "`--auto` may answer lookup-resolvable branches without pausing, but it must stop for human product judgment, irreversible decisions, or when the design is ready for propose."
+  - "When the design is ready, stop asking branch questions and render the compact design result with proposal and alternate next actions."
+validation: "Every active interview turn declares phase, ambiguity, evidence or gap, and next transition; a completed interview renders the design result."
+on_failure: "Do not ask another broad question. Re-score ambiguity, inspect context, or switch to the orientation template."
+```
+
+</operational-contract>
+
+<process-contract>
+
+```yaml
+steps:
+  - id: select_controls
+    action: Choose depth and cadence
+    instruction: |
+      Default to --standard --compact.
+      --auto inherits --standard --compact unless quick/standard/deep/full is also supplied.
+      User-passed quick/standard/deep overrides complexity inference.
+      If not passed, infer depth from complexity: quick for low blast radius and reversible choices, standard for normal product/architecture design, deep for cross-module, high-risk, or irreversible design.
+      Auto controls cadence only; it never changes lookup, scoring, branch coverage, or artifact quality.
+      In --auto, ask only when lookup cannot reduce ambiguity below the selected threshold or human judgment/propose handoff is required.
+      Compact/full controls presentation only; it never changes lookup, scoring, or branch coverage.
+    validation: "Depth is quick, standard, or deep; output mode is compact or full; auto is true or false."
+    on_failure: "Default to --standard --compact and state that more detail is available with --full or d. Deep dive."
+
+  - id: load_design_template
+    action: Load the canonical design template
+    instruction: |
+      Before creating or updating the design artifact, load:
+      /Users/jean-patricksmith/.agents/skills/work/templates/design.md
+      Use it as the artifact skeleton under .lev/pm/designs/.
+      Do not create a spec artifact from interview output.
+    validation: "Design template loaded and target artifact path is under .lev/pm/designs/."
+    on_failure: "Stop and load the design template before writing interview artifacts."
+
+  - id: discover_context
+    action: Lookup before asking
+    instruction: |
+      Before each orientation or branch question, inspect the local workspace when the answer may be discoverable.
+      Search code, docs, designs, proposals, workstreams, validation gates, and existing task artifacts as relevant.
+      Pull one useful artifact fact, one implementation/doc fact, and one constraint or gate when available.
+      If lookup resolves the ambiguity dimension or branch, update state and move to the next unresolved dimension or branch without asking.
+      If lookup cannot resolve it, ask the smallest human judgment question that remains.
+    validation: "Each question is grounded in lookup evidence or an explicit lookup gap."
+    on_failure: "Do not ask a generic question. Search files/docs first or say what evidence is missing."
+
+  - id: orient_subject
+    action: Reduce ambiguity before branch walking
+    instruction: |
+      Establish the current subject, likely design artifact, source context, and whether this is a design problem at all.
+      Score intent, outcome, scope, constraints, and success criteria after lookup.
+      If ambiguity is above the active depth threshold, ask one Socratic question against the weakest dimension.
+      Do not invent the whole decision tree while the subject is still unclear.
+    validation: "Subject, candidate design target, source context, ambiguity score, weakest dimension, and next orientation question are known."
+    on_failure: "Use the orientation template and ask for the missing dimension."
+
+  - id: discover_design_branches
+    action: Discover candidate branches after orientation
+    instruction: |
+      After ambiguity is at or below threshold, derive the candidate branch map from the clarified subject and lookup evidence.
+      The branch map is a LIVING map, not a checklist: it has no fixed total, and it is expected to GROW.
+      Scan every user answer for the new branches it spawns (a correction, a sketch, a rejected premise, or a
+      "what about X" all open branches) and add them to the map before asking the next question.
+      Never treat the interview as counting down a fixed set of questions; the interview ends when the design
+      is ready, not when an initial list is exhausted.
+      Name dependencies between branches so the next question resolves the highest-leverage design uncertainty.
+      Keep the branch map concise; store resolved/deferred branches in state rather than dumping all of them.
+    validation: "Candidate branches exist only after ambiguity is at or below the active depth threshold."
+    on_failure: "Return to orient_subject; the decision space is not ready for branch walking."
+
+  - id: shape_product_requirements
+    action: Fold PRD-style content into the design
+    instruction: |
+      The design artifact should include the PRD-derived content needed for later slicing:
+      problem statement, solution direction, user/operator stories, implementation decisions,
+      proof design, design-to-propose handoff, and out-of-scope boundaries.
+
+      Before asking the user, inspect repo/docs for domain vocabulary, ADRs, major modules,
+      deep-module candidates, and test prior art. Ask only for product or design judgment
+      that lookup cannot answer.
+    validation: "Design artifact has product framing, stories, implementation decisions, proof design, propose handoff, and out-of-scope boundaries when relevant."
+    on_failure: "Ask one focused design question for the missing product/design requirement."
+
+  - id: reconcile_domain_language
+    action: Sharpen the domain model as decisions crystallize
+    instruction: |
+      Read the project's canonical vocabulary and decision records. If CONTEXT-MAP.md exists,
+      follow it to the relevant bounded context; otherwise inspect root CONTEXT.md. Prefer
+      an existing project vocabulary owner over creating a competing glossary. Ask when
+      the topic's context cannot be inferred from evidence.
+      Challenge conflicts between the user's words, glossary definitions, and observed behavior;
+      cite the conflicting meanings and ask which is intended rather than silently renaming.
+      For overloaded terms, recommend a canonical term and probe a concrete boundary/edge case.
+      Compare implementation claims with code when available; distinguish actual behavior from
+      desired behavior. In non-coding domains use the authoritative domain evidence instead.
+      Before adding a candidate term, explicitly ask whether it is specific to this bounded
+      context or a generic programming/implementation concept. Add only the former; keep an
+      uncertain classification pending and ask the smallest boundary question.
+      Once a term or domain decision crystallizes, record it immediately in the authorized
+      destination rather than batching it: for a term, include context name and short purpose,
+      canonical term, one or two sentences defining what it IS, and
+      avoided synonyms. Group natural clusters; include project-domain concepts only, not
+      generic programming terms, implementation details, decisions, or scratch notes.
+      Create a vocabulary file lazily on the first resolved term only when artifact writes are
+      authorized; use CONTEXT.md as the fallback, not a new standard imposed on an existing owner.
+      For multiple contexts preserve their locations and relationships in the existing map.
+      In read-only mode show the proposed vocabulary delta in the response without writing.
+    validation: "Each changed term has a context, confirmed meaning, evidence/decision source, and canonical destination or an explicit pending delta."
+    on_failure: "Keep conflicting terms unresolved and ask the smallest boundary question."
+
+  - id: record_significant_decision
+    action: Preserve ADR-worthy rationale without multiplying artifacts
+    instruction: |
+      Offer an ADR only when the decision is hard to reverse, surprising without context,
+      and the outcome of a real trade-off. Otherwise keep it in the design's decision record.
+      Record each decision in that destination as soon as it crystallizes; do not batch decision
+      capture until the interview ends. In read-only mode show the pending decision inline
+      without claiming that it was persisted.
+      Follow the project's existing ADR owner/template; when none exists and creation is
+      authorized, lazily use docs/adr/NNNN-slug.md with the next unused sequential number.
+      Use the context-specific ADR directory for local decisions and the system-wide owner
+      for cross-context decisions. A title and one to three sentences of context, decision,
+      and rationale suffice unless the project's template requires more.
+      Add rejected alternatives, consequences, or proposed/accepted/deprecated/superseded
+      status only when useful. Preserve non-obvious exclusions, external constraints, and
+      supersession links rather than erasing why an earlier decision was made.
+      A recommendation is not an accepted decision: preserve the user's unresolved choice.
+      Read-only requests receive an inline candidate, never a file mutation.
+    validation: "An ADR candidate meets all three criteria, has the correct scope/owner, and distinguishes proposed from accepted."
+    on_failure: "Retain a pending design decision instead of inventing acceptance or an ADR."
+
+  - id: shape_proof_design
+    action: Design QA/Pentagon proof before proposal
+    instruction: |
+      For non-trivial, runtime, agentic, promotion, cleanup, fallback, or boundary-risk work,
+      add proof design to the Proof Design section before handing off to propose.
+      Name the promotion decision, highest-risk behavioral claim, fail-closed acceptance,
+      required Pentagon axes, UltraQA scenario classes, owner-local test placement, and
+      any ai-slop-cleaner review gate.
+
+      Keep ownership explicit: module-specific tests, probes, fixtures, and harness suites
+      live with the owning module and use shared testing/eval helpers. Do not put
+      module-specific tests into core/testing just because Pentagon is involved.
+      This is internal design hygiene unless the user asks for d. Deep dive.
+      Also update Design-to-Propose Handoff with first executable slice, acceptance
+      horizon, expected receipts, forbidden moves, and unresolved forks.
+    validation: "Proof Design and Design-to-Propose Handoff include proof fields or explicitly mark proof gates N/A with rationale."
+    on_failure: "Ask one focused proof-design question before proposing."
+
+  - id: shape_semantic_controls
+    action: Shape semantic KPIs and ontology boundaries
+    instruction: |
+      During design, name the semantic control signals the later proposal can harden:
+      ambiguity, alignment, convergence, semantic drift, proof readiness, and unresolved branch count.
+      These are design-stage KPIs until propose converts them into concrete proof metrics, gate
+      thresholds, fixtures, receipts, or validation commands.
+
+      When the design depends on vocabulary, ownership categories, graph entities, lifecycle states,
+      or authority boundaries, run an ontological taxonomy exploration before branch closure. Keep it
+      practical: identify the taxonomy axis, the drift risk, the canonical owner, and the proof signal
+      that would catch bad drift.
+      This is internal design hygiene unless the user asks for d. Deep dive.
+    validation: "Non-trivial designs name semantic KPIs, taxonomy/drift risk, and whether each proof signal is design-stage or propose-hardened."
+    on_failure: "Ask one focused semantic-control or taxonomy question before proposing."
+
+  - id: synthesize_lenses
+    action: Think through perspectives silently
+    instruction: |
+      Consider systems thinking, first principles, trade-off analysis, Thinking Hats, and other useful lenses internally.
+      Print only one lens tag, such as (systems thinking), near the question title or recommendation.
+      Do not print a framework essay unless the user asks for d. Deep dive.
+    validation: "Output contains at most one visible lens tag."
+    on_failure: "Remove framework prose and leave only the tag."
+
+  - id: walk_tree
+    action: Resolve one decision branch
+    instruction: |
+      Only run this step after ambiguity is at or below the active depth threshold.
+      Default to one branch per turn. For explicit grilling, grill-me, or --rounds, use the
+      ready frontier: all decisions whose prerequisites are already settled. Number each
+      independent question with its recommendation and consequences, then wait for the user.
+      A question depending on another unanswered question belongs to a later round.
+      Environment facts belong to lookup, not the human: when delegation is available and
+      authorized, dispatch independent fact discovery while asking the unaffected frontier.
+      Pending discovery is an unsettled prerequisite; re-read its result before unblocking
+      dependent questions. Recompute the tree after every round, including newly spawned branches.
+      Recommendations and --auto never stand in for human product decisions. Grilling ends
+      only when every branch is visited, choices are resolved or explicitly deferred with
+      consequences, and the user confirms shared understanding; that confirmation alone
+      does not authorize implementation. An empty ready frontier with blocked branches is
+      a wait/blocker, not completion.
+      In single-branch cadence ask one question; in rounds apply the following format to each ready branch.
+      Name the current branch and the dependency it unblocks.
+      Provide three researched answers when viable; use two only if a third branch would be fake.
+      Recommend one answer and name the design consequence of each option.
+      Carry unresolved branches forward instead of dumping all branches at once.
+      Before moving to the next branch, re-scan the user's last answer: if it spawned new branches
+      (new constraint, rejected premise, deeper pattern, adjacent decision), add them to the map and
+      re-rank; the freshly spawned branch is often the highest-leverage next question.
+    validation: "Each question has its branch, prerequisites, lookup result or gap, one decision, viable options, and a recommendation; rounds contain only independent ready questions."
+    on_failure: "Split the question or collapse fake options."
+
+  - id: update_design
+    action: Update the design artifact
+    instruction: |
+      Treat interview as a design phase, not a generic planning phase.
+      The output target is a design artifact: problem framing, constraints, direction, alternatives, interaction model, PRD-style product sections, risks, and recommendation.
+      It should also carry proof design and a design-to-propose handoff when the next step is execution packet creation.
+      Write or update the design under .lev/pm/designs/ using the canonical design template.
+      When the user says propose, stop interviewing and hand the aligned design to `skill://lev-plan`.
+    validation: "A design artifact path under .lev/pm/designs/ is named or updated."
+    on_failure: "Add a concrete design artifact target before asking."
+```
+
+</process-contract>
+
+<lifecycle-contract>
+
+```yaml
+steps:
+  - id: lifecycle_sync
+    action: Keep work artifacts current when .lev/pm/ exists
+    instruction: |
+      If .lev/pm/ exists, treat interview as part of the work lifecycle.
+      Prefer updating active workstream state, handoff, and .lev/pm/designs/ artifacts.
+      Preserve branch IDs, dependency edges, user answers versus recommendations, resolved
+      vocabulary/ADR links, explicit deferrals and consequences, pending lookup handles/results,
+      and the next eligible frontier. On resume revalidate prerequisites against current
+      artifacts; reopen contradicted decisions rather than treating stale state as acceptance.
+      Read-only interviews keep these updates inline and label them unsaved.
+      Update proposals only when the user enters proposition mode or asks to run propose.
+    validation: "Relevant lifecycle artifact is updated or explicitly not needed for read-only/trivial work."
+    on_failure: "Pause and create or resume lifecycle continuity before continuing substantial work."
+```
+
+</lifecycle-contract>
+
+<format-contract>
+
+```yaml
+rules:
+  - "Use the same question format in single-branch and rounds cadence; rounds repeat it for independent ready questions."
+  - "Use hard line breaks between sections; do not combine multiple metadata fields into dense status prose."
+  - "Every question uses exactly this order: description, options, recommendation. Description states the context and question in plain prose; options each give their consequence; recommendation comes last with its reason."
+  - "The three parts are content placeholders, not literal XML tags. Omit question titles, Question/Decision labels, progress lines and HUDs from ordinary question turns; retain interview metadata in durable state."
+  - "Completed design output uses: Direction, Breakdown, Open decisions, and next actions. It does not ask another a/b/c question."
+  - "Recommended must explain why the option is recommended, not just restate the option."
+  - "Each a/b/c answer gets its own mini-block with a consequence after ->."
+  - "Orientation a/b/c choices are answer frames, not final design-branch alternatives."
+  - "Design a/b/c choices are researched branch options."
+  - "Explicit deep dives and completed design reports may show progress separately; their concluding question still follows description, options, recommendation."
+  - "Use d. Deep dive as the only expansion mode for evidence, gates, trade-offs, codebase exploration, or alternate lenses."
+  - "Use plain ASCII arrows like => in templates."
+  - "Deep-dive output uses markdown headings and bold labels only; XML tags must never appear in visible output."
+validation: "Active output has one question or an explicit round of independent questions plus compact choices; completed output uses the design-result template. Visible output has zero XML tags."
+on_failure: "Rewrite using the orientation or design template. Remove progress bullet lists, XML tags, and display-mode wording."
+```
+
+</format-contract>
+
+<orientation-template>
+{brief_context_and_smallest_socratic_question}
+
+**Options**
+`a` {answer_frame_a} -> {what_this_clarifies}
+
+`b` {answer_frame_b} -> {what_this_clarifies}
+
+`c` {answer_frame_c} -> {what_this_clarifies}
+
+`d` Deep dive
+
+**Recommended**
+`{a|b|c}` because {why_this_answer_frame_best_reduces_ambiguity}
+</orientation-template>
+
+<design-template>
+{brief_context_and_decision_question}
+
+**Options**
+`a` {researched_answer_a} -> {design_consequence}
+
+`b` {researched_answer_b} -> {design_consequence}
+
+`c` {researched_answer_c} -> {design_consequence}
+
+`d` Deep dive
+
+**Recommended**
+`{a|b|c}` because {why_recommended}
+</design-template>
+
+<design-result>
+## Design ready: {design_title}
+
+Direction: {one_sentence_direction}
+Experience: {operator_visible_behavior}
+System: {code_areas_and_critical_path}
+Proof: {highest_risk_claim_and_field_signal}
+Open decisions: {none_or_decisions}
+Saved: `.lev/pm/designs/{design_slug}.md`
+Next: {applicable_skill_route_and_reason_from_the_next_routes_table}
+</design-result>
+
+## Next Routes
+
+At design completion, show only applicable choices as a numbered table using
+`skill://<name>`; a single clear next step needs only its route and reason.
+These suggestions preserve the current authorization boundary. References to
+proposal readiness below describe the SDLC overlay, not a mandatory non-coding gate.
+
+| Result | Next owner |
+|---|---|
+| Broad aligned design | `skill://lev-plan` |
+| Bounded coding slice ready to specify | `skill://lev-plan` slice review or `emit`, plan not required |
+| Sufficient non-coding plan and authorized next action | `skill://exec` with the domain method; proposal optional |
+| Planning artifact needs adversarial enrichment | `skill://auto-enrich` |
+| Feasibility remains unresolved | `skill://poc` |
+| Material decision remains | `skill://interview` |
+| Pause or domain route unknown | `skill://handoff` to pause; `skill://lev` to resolve the route |
+
+<deep-dive-template>
+## q{n}) {decision_title} ({lens_tag}) — deep dive
+
+**Why this decision, why now**
+One short paragraph: what is being decided, why it is needed now, what it
+unblocks, and the failure mode if wrong. Plain prose, no field labels.
+
+**Analysis ({framework})**
+{framework_read_of_pressure_points — short readable prose paragraphs}
+
+**Evidence**
+- {artifact_fact_with_path}
+- {code_or_doc_fact_with_path}
+- {constraint_or_gate}
+- {assumption_check}
+
+**Trade-offs**
+
+| Option | Benefits | Costs/Risks | Side Effects |
+|---|---|---|---|
+| a | ... | ... | ... |
+| b | ... | ... | ... |
+| c | ... | ... | ... |
+
+**Options**
+`a` {researched_option_a} -> {design_consequence}
+
+`b` {researched_option_b} -> {design_consequence}
+
+`c` {researched_option_c} -> {design_consequence}
+
+`d` Deep dive / branch expansion
+
+**Recommended**
+`{a|b|c}` because {why}
+
+Progress: `.lev/pm/designs/{design_slug}.md` | {phase} | ambiguity {0.xx}/{threshold} | open {open_branch_count} | next: choose `a`, `b`, `c`, `d`, or `propose`
+
+🧭 {phase} | 🎯 ambiguity {0.xx}/{threshold} | ✅ alignment {xx}% | 🌿 open {open_branch_count} (map grows) | 🧪 proof {proof_state} | ⏭️ {next_action}
+</deep-dive-template>
+
+<ambiguity-contract>
+
+```yaml
+score:
+  formula: "ambiguity = 1 - sum(clarity_i * weight_i)"
+  depth_thresholds:
+    quick: 0.30
+    standard: 0.20
+    deep: 0.15
+  phase_gate: "If ambiguity is above the active depth threshold, stay in orientation. If ambiguity is at or below threshold, enter the design phase."
+  dimensions:
+    intent: 0.30
+    outcome: 0.25
+    scope: 0.20
+    constraints: 0.15
+    success_criteria: 0.10
+  complexity_default_depth:
+    formula: "complexity = novelty*.25 + blast_radius*.25 + cross_module_scope*.20 + irreversibility*.15 + evidence_gap*.15"
+    quick: "complexity < 0.35"
+    standard: "0.35 <= complexity < 0.70"
+    deep: "complexity >= 0.70"
+  design_readiness_gate: "The design is ready to propose when ambiguity is at or below the active threshold, major branches are resolved or explicitly deferred, and the design artifact can name acceptance horizon, constraints, first slice, proof signals, and forbidden moves."
+  progress_fields:
+    design_entity: "The .lev/pm/designs artifact path or slug. It identifies the durable design, not process state."
+    phase: "orientation until ambiguity is below threshold, design while resolving branches, proof-shaping while naming gates/KPIs, ready-to-propose when propose can harden it."
+    ambiguity: "Weighted uncertainty. It should fall as intent, outcome, scope, constraints, and success criteria become clear."
+    alignment: "Operator/design confidence that the selected branch matches the desired direction. It should rise as branches resolve."
+    branches: "Resolved branch count over known branch count. It should move toward all resolved or explicitly deferred."
+    proof: "Proof-design maturity. Keep details internal unless d. Deep dive is requested."
+    next: "The smallest valid transition: answer, deep dive, continue auto, or propose."
+  visible_output: "Description, then options (a/b/c when viable, d. Deep dive), then recommendation with rationale. Ordinary question turns omit progress/HUD; persist those fields in state."
+```
+
+</ambiguity-contract>
+
+<guardrails>
+
+```yaml
+rules:
+  - "The primary interview output is a design under .lev/pm/designs/; authorized glossary/ADR updates are linked supporting artifacts. Read-only output remains inline and unsaved."
+  - "Load /Users/jean-patricksmith/.agents/skills/work/templates/design.md before creating or updating the design."
+  - "Do not create spec artifacts from interview output."
+  - "Do not create a separate PRD artifact; PRD-style product content lives inside the design."
+  - "Do not walk design branches until ambiguity is at or below the active depth threshold."
+  - "If the subject or decision space is unclear, use the orientation template with three ways to answer."
+  - "Quick/standard/deep controls rigor. Do not introduce alternate output modes."
+  - "Never ask ingredient-only option prompts; every a/b/c answer must include a consequence after ->."
+  - "Do not print hidden chain-of-thought or framework analysis unless d. Deep dive is requested."
+  - "Do not mention stale provenance, deprecated project names, or internal origin stories."
+  - "Use YAML for workflow, contracts, scoring, validation, and state."
+  - "Template wrappers in this file are XML, but visible interview output is plain markdown only — never emit XML tags (decision-context, analysis, evidence, options, etc.) into the transcript."
+  - "Use d. Deep dive for evidence, gates, trade-offs, codebase exploration, and alternate lenses."
+  - "When the user says propose, stop interviewing and route the aligned design to `skill://lev-plan`."
+  - "When the user says plan, route to the standalone planning lane instead of treating plan as a propose prerequisite."
+validation: "Output is an orientation question while ambiguity is high, a design question while branches remain, or the compact design result when ready. Deep detail appears only after d. Deep dive."
+on_failure: "Rewrite the response using the orientation, design, or design-result live XML template."
+```
+
+</guardrails>

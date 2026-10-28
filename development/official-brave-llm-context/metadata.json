@@ -1,0 +1,38 @@
+{
+  "name": "llm-context",
+  "repo": "iDorgham/Workspace-Factory",
+  "path": ".ai/skills/official_brave_llm_context/skill.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/iDorgham/Workspace-Factory",
+  "dir_name": "official-brave-llm-context",
+  "downloaded_at": "2026-10-28T05:02:32.967406Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, programming, build",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "programming",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "iDorgham",
+  "source_url": "https://github.com/iDorgham/Workspace-Factory/blob/master/.ai/skills/official_brave_llm_context/skill.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/iDorgham/Workspace-Factory/blob/master/.ai/skills/official_brave_llm_context/skill.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "USE FOR RAG/LLM grounding. Returns pre-extracted web content (text, tables, code) optimized for LLMs. GET + POST. Adjust max_tokens/count based on complexity. Supports Goggles, local/POI. For AI answers use answers. Recommended for anyone building AI/agentic applications."
+}

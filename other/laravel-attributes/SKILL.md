@@ -1,0 +1,148 @@
+---
+name: laravel-attributes
+description: Use when migrating Eloquent models, Jobs, Console commands, Controllers, API Resources, Validation, Factories or Seeders to Laravel 13 PHP attributes.
+versions:
+  laravel: "13.0"
+  php: "8.3"
+user-invocable: true
+references: references/eloquent.md, references/queue.md, references/console.md, references/controllers.md, references/validation.md, references/api-resources.md, references/factories-seeders.md, references/templates/Model-with-attributes.php.md, references/templates/Job-with-attributes.php.md
+related-skills: laravel-eloquent, laravel-queues, laravel-api
+---
+
+<objective>
+Covers all 7 categories of Laravel 13 first-party PHP 8.3 attributes that
+replace legacy class properties: Eloquent (#[Table], #[Fillable], #[Hidden],
+#[Guarded], #[Appends], #[Touches], #[Connection]), Queue/Job (#[Connection],
+#[Queue], #[Tries], #[Timeout], #[Backoff], #[MaxExceptions],
+#[FailOnTimeout], #[UniqueFor]), Console (#[Signature], #[Description]),
+Controllers (#[Middleware], #[Authorize]), Validation (#[RedirectTo],
+#[StopOnFirstFailure]), API Resources (#[Collects], #[PreserveKeys]), and
+Factories/Test seeding (#[UseModel], #[Seed], #[Seeder]).
+</objective>
+
+# Laravel 13 PHP Attributes
+
+## Agent Workflow (MANDATORY)
+
+Before ANY implementation, spawn 3 agents in parallel, one `Agent` call each with a `name`:
+
+1. **fuse-ai-pilot:explore-codebase** - Scan existing models/jobs/controllers for legacy `protected $fillable / $hidden / $connection` properties to convert
+2. **fuse-ai-pilot:research-expert** - Verify Laravel 13 release notes for attribute coverage and edge cases
+3. **mcp__context7__query-docs** - Pull authoritative examples from `laravel.com/docs/13.x`
+
+After implementation, run **fuse-ai-pilot:sniper** for validation.
+
+---
+
+## Overview
+
+| Category | Attributes |
+|---------|-------------|
+| **Eloquent** | `#[Table]` `#[Connection]` `#[Fillable]` `#[Hidden]` `#[Visible]` `#[Guarded]` `#[Unguarded]` `#[Appends]` `#[Touches]` `#[WithoutTimestamps]` `#[WithoutIncrementing]` `#[DateFormat]` `#[Refreshes]` (13.33+) — no `#[Casts]` (use `casts()`) |
+| **Queue / Job** | `#[Connection]` `#[Queue]` `#[Tries]` `#[Timeout]` `#[Backoff]` `#[MaxExceptions]` `#[FailOnTimeout]` `#[UniqueFor]` `#[DeleteWhenMissingModels]` `#[Delay]` (13.4+) `#[DebounceFor]` (13.6+) |
+| **Console** | `#[Signature]` `#[Description]` |
+| **Controllers** | `#[Middleware]` `#[Authorize]` `#[WithoutMiddleware]` (13.20+) — namespace `Illuminate\Routing\Attributes\Controllers` |
+| **Validation** | `#[RedirectTo]` `#[RedirectToRoute]` `#[ErrorBag]` `#[StopOnFirstFailure]` `#[FailOnUnknownFields]` — namespace `Illuminate\Foundation\Http\Attributes` |
+| **API Resources** | `#[Collects]` `#[PreserveKeys]` |
+| **Factories / Testing** | `#[UseModel]` (factories) · `#[Seed]` `#[Seeder]` `#[UnitTest]` (test classes, `Illuminate\Foundation\Testing\Attributes`) |
+| **Container** | `#[BindWhen]` (13.22+, PHP 8.5) and the contextual attributes (`#[Config]`, `#[Auth]`, ...) |
+
+---
+
+## Critical Rules
+
+1. **NEVER mix attributes and legacy properties** - `#[Fillable(['name'])]` + `protected $fillable = [...]` causes Laravel to ignore the attribute silently
+2. **Class-level for Eloquent / Job** - Eloquent and queue attributes apply to the class; controller `#[Middleware]` / `#[Authorize]` also work on public action methods
+3. **Single source of truth** - Choose attributes OR properties per class; refactor in one pass to avoid drift
+4. **Inheritance is additive** - Child class attributes merge with parent attributes; redeclare to override
+5. **Import the right namespace** - `Illuminate\Database\Eloquent\Attributes\*` for Eloquent, `Illuminate\Queue\Attributes\*` for Jobs
+
+---
+
+## Architecture
+
+```
+app/
+├── Models/
+│   └── User.php              # #[Table] #[Fillable] #[Hidden] #[Appends]
+├── Jobs/
+│   └── ProcessPodcast.php    # #[Connection] #[Queue] #[Tries] #[Backoff]
+├── Console/Commands/
+│   └── SendEmails.php        # #[Signature] #[Description]
+├── Http/
+│   ├── Controllers/
+│   │   └── PostController.php # #[Middleware] #[Authorize]
+│   └── Resources/
+│       └── PostCollection.php # #[Collects] #[PreserveKeys]
+└── Http/Requests/
+    └── StoreUserRequest.php   # #[RedirectTo] #[StopOnFirstFailure]
+```
+
+→ See [Model-with-attributes.php.md](references/templates/Model-with-attributes.php.md) for full example
+
+---
+
+## Reference Guide
+
+| Topic | Reference | When to Consult |
+|-------|-----------|-----------------|
+| **Eloquent models** | [eloquent.md](references/eloquent.md) | Migrating `$fillable / $hidden / $table / $connection` |
+| **Queue jobs** | [queue.md](references/queue.md) | Replacing `$tries / $timeout / $backoff` properties |
+| **Console commands** | [console.md](references/console.md) | Refactoring `$signature / $description` properties |
+| **Controllers** | [controllers.md](references/controllers.md) | Moving middleware/authorize from constructors |
+| **Validation** | [validation.md](references/validation.md) | FormRequest redirect + early-stop config |
+| **API Resources** | [api-resources.md](references/api-resources.md) | Collection wrapping and key preservation |
+| **Factories / Seeders** | [factories-seeders.md](references/factories-seeders.md) | Factory model binding and test seeding |
+
+### Templates
+
+| Template | When to Use |
+|----------|-------------|
+| [Model-with-attributes.php.md](references/templates/Model-with-attributes.php.md) | Net new Eloquent model |
+| [Job-with-attributes.php.md](references/templates/Job-with-attributes.php.md) | Net new queue Job |
+
+---
+
+## Quick Reference
+
+### Eloquent model
+
+```php
+use Illuminate\Database\Eloquent\Attributes\{Table, Fillable, Hidden, Appends};
+
+#[Table('flights')]
+#[Fillable(['name', 'origin'])]
+#[Hidden(['password'])]
+#[Appends(['is_admin'])]
+class Flight extends Model {}
+```
+
+### Queue job
+
+```php
+use Illuminate\Queue\Attributes\{Connection, Queue, Tries, Backoff};
+
+#[Connection('redis')]
+#[Queue('podcasts')]
+#[Tries(5)]
+#[Backoff([10, 30, 60])]
+class ProcessPodcast implements ShouldQueue {}
+```
+
+→ See [Job-with-attributes.php.md](references/templates/Job-with-attributes.php.md) for complete example
+
+---
+
+## Best Practices
+
+### DO
+- Convert one class at a time and run tests between commits
+- Keep attribute imports grouped at the top via PHP 8.1 grouped `use` syntax
+- Use `#[Fillable]` for mass-assigned models and `#[Unguarded]` only on trusted internal models
+- Combine `#[Connection]` + `#[Queue]` on Jobs to centralize routing intent
+
+### DON'T
+- Don't mix `#[Fillable(['x'])]` with `protected $fillable = ['y']` - the property silently wins on some setups, the attribute on others
+- Don't place Eloquent/Job attributes on methods - they target the class only
+- Don't put `#[Authorize]` on a controller action without an underlying Policy (auto-discovered, `Gate::policy()` in `AppServiceProvider`, or `#[UsePolicy]` on the model)
+- Don't forget to drop the legacy `$tries`, `$backoff`, `$timeout` properties after adding the attributes - duplication is a red flag for code review

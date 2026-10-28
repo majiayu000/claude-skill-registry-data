@@ -1,0 +1,37 @@
+{
+  "name": "motion-review",
+  "repo": "fusengine/agents",
+  "path": "plugins/motion-expert/skills/motion-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/fusengine/agents",
+  "dir_name": "motion-review",
+  "downloaded_at": "2026-10-28T04:30:01.306752Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fusengine",
+  "source_url": "https://github.com/fusengine/agents/blob/main/plugins/motion-expert/skills/motion-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fusengine/agents/blob/main/plugins/motion-expert/skills/motion-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when judging a rendered film (draft or master) from its frames alone \u2014 review pack (ffprobe, stills at 0.0/0.5/1.5 s/mid/last, one still per cut, area-weighted OKLCH planes per still, opacity-blend and drift detection, motion energy, cuts, gesture-free runs and gesture onsets per second, genre + look.md copies), hard-fails checked first (Flat F1-F11 incl. value contrast, display type, centered composition, type scale, mid-tone, full bleed, gesture-free span > 0.75 s, under-animated < 1 onset/s; Motion M1-M3 crossfade/drift/zoom yo-yo; Decorative effect D1-D9 incl. decorative blur, bouncy overshoot, ambient or unproven 3D; Legibility L1-L4; Slop X1-X4; Safety S1-S6), 9-criterion rubric (hook, one idea, motion behaviours, tempo grid, CTA hold, accent, phone legibility, sound-off, look.md consistency) with 1/5/10 anchors, symptom \u2192 cause table, and the fixed PASS/REVISE/FAIL/UNCERTAIN verdict."
+}

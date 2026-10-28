@@ -1,0 +1,39 @@
+{
+  "name": "detecting-golden-ticket-forgery",
+  "repo": "henriquescastilho/my-claude",
+  "path": ".claude/skills/detecting-golden-ticket-forgery/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/henriquescastilho/my-claude",
+  "dir_name": "detecting-golden-ticket-forgery-henriquescastilho-my-claude",
+  "downloaded_at": "2026-10-28T04:52:35.211002Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "henriquescastilho",
+  "source_url": "https://github.com/henriquescastilho/my-claude/blob/main/.claude/skills/detecting-golden-ticket-forgery/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/henriquescastilho/my-claude/blob/main/.claude/skills/detecting-golden-ticket-forgery/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Detect Kerberos Golden Ticket forgery by analyzing Windows Event ID 4769 for RC4 encryption downgrades (0x17), abnormal ticket lifetimes, and krbtgt account anomalies in Splunk and Elastic SIEM"
+}

@@ -1,0 +1,39 @@
+{
+  "name": "mr-qa",
+  "repo": "futo-org/futo-notes",
+  "path": ".claude/skills/mr-qa/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/futo-org/futo-notes",
+  "dir_name": "mr-qa",
+  "downloaded_at": "2026-10-28T04:30:13.240962Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: platform, device, android, ios",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "platform",
+      "device",
+      "android",
+      "ios"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "futo-org",
+  "source_url": "https://github.com/futo-org/futo-notes/blob/main/.claude/skills/mr-qa/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/futo-org/futo-notes/blob/main/.claude/skills/mr-qa/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Parallel QA of one or more merge requests across desktop/iOS/Android, including cross-client sync. Use when the user wants MRs tested \u2014 \"test MR !123\", \"QA these five MRs in parallel\", \"spin up QA for my open MRs\", \"test this branch on mobile\" \u2014 or wants a full spec pass. Works the open MRs oldest-first and skips drafts. Creates a git worktree per MR for isolation, pre-builds, fans out one app-qa subagent per MR/platform leg concurrently, aggregates verdicts, and calls SHIP/NO SHIP on each \u2014 merging the SHIPs."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "render-logo-equation-card",
+  "repo": "gooseworks-ai/goose-skills",
+  "path": "skills/video/render-logo-equation-card/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/gooseworks-ai/goose-skills",
+  "dir_name": "render-logo-equation-card",
+  "downloaded_at": "2026-10-28T04:41:25.967530Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gooseworks-ai",
+  "source_url": "https://github.com/gooseworks-ai/goose-skills/blob/main/skills/video/render-logo-equation-card/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gooseworks-ai/goose-skills/blob/main/skills/video/render-logo-equation-card/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Render the logo-equation card ad (7s, 9:16) \u2014 partner icon + brand icon joined by a plus sign as an equation, a two-line \"= outcome\" headline, four numbered steps, and a CTA that hard-cuts in at 2s, on a static black card over timelapse b-roll, no voice. render_card.py draws the two card plates with measured geometry and hard guardrails (the user must confirm the integration is real, no partnership/endorsement/ranking words, no comment-bait CTA, no dashes); compose.py lays the card over the b-roll sped up to read as a timelapse, with an optional bed; measure_motion.py gates the b-roll (a real-time shot reads as a photo). Free, local."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "draw-mermaid-diagrams",
+  "repo": "korchasa/flowai-plugins",
+  "path": "plugins/flowai-engineering/skills/draw-mermaid-diagrams/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/korchasa/flowai-plugins",
+  "dir_name": "draw-mermaid-diagrams",
+  "downloaded_at": "2026-10-28T05:41:51.294405Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "korchasa",
+  "source_url": "https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai-engineering/skills/draw-mermaid-diagrams/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai-engineering/skills/draw-mermaid-diagrams/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Draw and edit Mermaid diagrams in Markdown. Use when the user wants to visualize processes, flows or sequences, or asks for a diagram. Load it before writing any Mermaid block, even when you know the syntax \u2014 that is why it gets skipped."
+}

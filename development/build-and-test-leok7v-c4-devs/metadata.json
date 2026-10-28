@@ -1,0 +1,37 @@
+{
+  "name": "build-and-test",
+  "repo": "leok7v/c4.devs",
+  "path": ".claude/skills/build-and-test/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/leok7v/c4.devs",
+  "dir_name": "build-and-test-leok7v-c4-devs",
+  "downloaded_at": "2026-10-28T05:51:06.695391Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "leok7v",
+  "source_url": "https://github.com/leok7v/c4.devs/blob/main/.claude/skills/build-and-test/SKILL.md",
+  "license": "GPL-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/leok7v/c4.devs/blob/main/.claude/skills/build-and-test/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Rebuild cx and run the full dual-path test suite. Use after any change to cx.c, toys.c, or tests/*.c. Passes only when every test returns 45/45 under both native and self-hosted paths."
+}

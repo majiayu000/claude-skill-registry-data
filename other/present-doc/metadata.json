@@ -1,0 +1,37 @@
+{
+  "name": "present-doc",
+  "repo": "leonardoacosta/agents",
+  "path": "skills/present-doc/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/leonardoacosta/agents",
+  "dir_name": "present-doc",
+  "downloaded_at": "2026-10-28T05:51:14.295788Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "leonardoacosta",
+  "source_url": "https://github.com/leonardoacosta/agents/blob/main/skills/present-doc/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/leonardoacosta/agents/blob/main/skills/present-doc/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Prepare and deliver Markdown or HTML document assets to Leonardo Acosta. Use whenever an .md or .html document is being considered, created, revised, or selected as an asset to present at the end of the current turn: reports, plans, explanations, comparisons, README previews, or review pages. Always use the dark Markdown Graphs schema; render every Mermaid diagram with Mermaid and frame it in mdxcn style. Deliver with ropen and return its verified tailnet URL.\nDo not trigger for an inline-only answer or a repository file edit that is not being offered as a document asset."
+}

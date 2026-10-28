@@ -1,0 +1,39 @@
+{
+  "name": "vscode-extension-dev",
+  "repo": "isathish/localpilot",
+  "path": ".localpilot/skills/vscode-extension-dev/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/isathish/localpilot",
+  "dir_name": "vscode-extension-dev",
+  "downloaded_at": "2026-10-28T05:10:05.268779Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build, compile",
+    "score": 4,
+    "runner_up": "local-ai-infrastructure",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "isathish",
+  "source_url": "https://github.com/isathish/localpilot/blob/main/.localpilot/skills/vscode-extension-dev/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/isathish/localpilot/blob/main/.localpilot/skills/vscode-extension-dev/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Conventions for working on this LocalPilot VS Code extension codebase \u2014 build/test commands, architecture map, and where to add providers, tools, or UI features."
+}

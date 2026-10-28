@@ -1,0 +1,37 @@
+{
+  "name": "writing-handoffs",
+  "repo": "k45sle/Claude-auto-pause",
+  "path": "skills/writing-handoffs/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/k45sle/Claude-auto-pause",
+  "dir_name": "writing-handoffs",
+  "downloaded_at": "2026-10-28T05:30:45.689202Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "k45sle",
+  "source_url": "https://github.com/k45sle/Claude-auto-pause/blob/main/skills/writing-handoffs/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/k45sle/Claude-auto-pause/blob/main/skills/writing-handoffs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Writes a compact handoff document and a ready-to-paste resume prompt that let a fresh Claude Code session resume the current task without the old conversation. Use when an AUTO-PAUSE notice says the usage-limit pause threshold was reached, or when the user asks to write a handoff, wrap up for a new session, save progress before the usage limit, pause here, or hand off to a fresh session. Do not use for summarizing finished work, changelogs, commit messages, or PR descriptions."
+}

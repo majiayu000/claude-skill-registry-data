@@ -1,0 +1,37 @@
+{
+  "name": "aem-rde",
+  "repo": "lisongmeinorc/apnorcedge",
+  "path": ".claude/skills/aem-rde/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/lisongmeinorc/apnorcedge",
+  "dir_name": "aem-rde-lisongmeinorc-apnorcedge",
+  "downloaded_at": "2026-10-28T05:55:42.413357Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lisongmeinorc",
+  "source_url": "https://github.com/lisongmeinorc/apnorcedge/blob/main/.claude/skills/aem-rde/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lisongmeinorc/apnorcedge/blob/main/.claude/skills/aem-rde/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "[BETA] Expert assistance for the Adobe I/O CLI plugin `@adobe/aio-cli-plugin-aem-rde` \u2014 the `aio aem rde` / `aio aem:rde` command tree used to deploy, inspect, log-tail, snapshot, and troubleshoot AEM Rapid Development Environments (RDEs). Activate ONLY when the user explicitly references RDE concepts: 'AEM RDE', 'Rapid Development Environment', `aio aem rde`, `aio aem:rde`, `aem-rde`, RDE snapshots, RDE deploy/install, `rde install`, `rde inspect`, `rde status`, `rde history`, `rde reset`, the `@adobe/aio-cli-plugin-aem-rde` package, or Cloud Manager program/environment configuration that is specifically for an RDE environment. Do NOT activate on generic AEMaaCS phrases like 'deploy to AEM Cloud', 'push my bundle', 'tail the publish log', 'cloud sandbox', or unqualified 'dispatcher-config / frontend / env-config deployments' \u2014 those belong to Cloud Manager pipelines, not RDE. This skill is in beta. Verify all outputs before applying them to production projects."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "code-review",
+  "repo": "lisongmeinorc/apnorcedge",
+  "path": ".agents/skills/code-review/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/lisongmeinorc/apnorcedge",
+  "dir_name": "code-review-lisongmeinorc-apnorcedge",
+  "downloaded_at": "2026-10-28T05:55:51.421361Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review, validate",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lisongmeinorc",
+  "source_url": "https://github.com/lisongmeinorc/apnorcedge/blob/main/.agents/skills/code-review/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lisongmeinorc/apnorcedge/blob/main/.agents/skills/code-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this when reviewing AEM Edge Delivery Services (EDS, Franklin, Helix) code, either self-review at the end of development before opening a PR, or reviewing an existing pull request. Validates block structure, CSS and JS patterns, DOM output, Lighthouse performance, and accessibility against EDS best practices, and posts findings as review comments or GitHub suggestions."
+}

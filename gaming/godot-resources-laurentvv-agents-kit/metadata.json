@@ -1,0 +1,37 @@
+{
+  "name": "godot-resources",
+  "repo": "laurentvv/agents-kit",
+  "path": "skills/godot-resources/SKILL.md",
+  "github_branch": "main",
+  "category": "gaming",
+  "source": "github.com/laurentvv/agents-kit",
+  "dir_name": "godot-resources-laurentvv-agents-kit",
+  "downloaded_at": "2026-10-28T05:48:02.509326Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "gaming",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for gaming: game, godot",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "game",
+      "godot"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "laurentvv",
+  "source_url": "https://github.com/laurentvv/agents-kit/blob/main/skills/godot-resources/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/laurentvv/agents-kit/blob/main/skills/godot-resources/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Design data-driven Godot 4.7 games with custom Resource classes: define typed data with class_name + @export, save/load .tres/.res files, instance and duplicate resources, and load on demand with ResourceLoader (incl. threaded loading). Use when modeling items/stats/configs as data in a Godot project, creating .tres resources, or working with custom Resource subclasses and ResourceLoader/ResourceSaver."
+}

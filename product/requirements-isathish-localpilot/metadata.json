@@ -1,0 +1,38 @@
+{
+  "name": "requirements",
+  "repo": "isathish/localpilot",
+  "path": "skills/requirements/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/isathish/localpilot",
+  "dir_name": "requirements-isathish-localpilot",
+  "downloaded_at": "2026-10-28T05:10:04.937441Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, prd, feature",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "prd",
+      "feature"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "isathish",
+  "source_url": "https://github.com/isathish/localpilot/blob/main/skills/requirements/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/isathish/localpilot/blob/main/skills/requirements/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn a vague idea or feature request into a concrete, testable requirements spec (goals, user stories, acceptance criteria, non-goals, open questions) before any code is written. USE WHEN the user describes what they want in product terms, says \"spec\", \"requirements\", \"PRD\", \"user stories\", \"what should this do\", or the request is too ambiguous to implement safely."
+}

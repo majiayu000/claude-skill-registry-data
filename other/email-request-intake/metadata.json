@@ -1,0 +1,37 @@
+{
+  "name": "email-request-intake",
+  "repo": "jamditis/claude-skills-journalism",
+  "path": "newsroom-agent-ops/skills/email-request-intake/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/jamditis/claude-skills-journalism",
+  "dir_name": "email-request-intake",
+  "downloaded_at": "2026-10-28T05:13:53.559054Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: marketing=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "content",
+      "campaign"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jamditis",
+  "source_url": "https://github.com/jamditis/claude-skills-journalism/blob/master/newsroom-agent-ops/skills/email-request-intake/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jamditis/claude-skills-journalism/blob/master/newsroom-agent-ops/skills/email-request-intake/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use to process a concrete request from an allowlisted email intake route while preserving thread context, authority, and delivery evidence."
+}

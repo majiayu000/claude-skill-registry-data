@@ -1,0 +1,38 @@
+{
+  "name": "qa",
+  "repo": "lisongmeinorc/apnorcedge",
+  "path": ".claude/skills/qa/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/lisongmeinorc/apnorcedge",
+  "dir_name": "qa-lisongmeinorc-apnorcedge",
+  "downloaded_at": "2026-10-28T05:55:36.649545Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lisongmeinorc",
+  "source_url": "https://github.com/lisongmeinorc/apnorcedge/blob/main/.claude/skills/qa/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lisongmeinorc/apnorcedge/blob/main/.claude/skills/qa/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Read-only automated QA sweep of a deployed stardust site on AEM Edge Delivery Services \u2014 validates routing, content fidelity vs the source capture, template conformance, rendered integrity (geometry, JS errors, broken images), visual regression vs baselines, metadata/SEO/JSON-LD, link integrity, accessibility (axe), and performance budgets, then emits a findings report with an allowlist for documented non-defects. Finds issues; never fixes them. Use when the user asks to \"QA the site\", \"validate the migration\", \"check the live site for issues\", \"run a QA sweep/regression check\", or invokes `$stardust qa` (`/stardust:qa` in Claude Code) <live-url>."
+}

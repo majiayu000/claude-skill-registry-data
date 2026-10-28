@@ -1,0 +1,37 @@
+{
+  "name": "ask",
+  "repo": "korchasa/flowai-plugins",
+  "path": "plugins/flowai-memex/skills/ask/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/korchasa/flowai-plugins",
+  "dir_name": "ask-korchasa-flowai-plugins",
+  "downloaded_at": "2026-10-28T05:41:45.681951Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "korchasa",
+  "source_url": "https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai-memex/skills/ask/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai-memex/skills/ask/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user asks a question to be answered from the project's memex (long-term knowledge bank for AI agents) rather than training data or the live web. Reads the index, follows one SALP-REF hop, files a cited answer back. Not for source code."
+}

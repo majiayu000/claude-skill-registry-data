@@ -1,0 +1,37 @@
+{
+  "name": "spark-replace-xctests",
+  "repo": "leboncoin/spark-ios",
+  "path": ".claude/skills/spark-replace-xctests/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/leboncoin/spark-ios",
+  "dir_name": "spark-replace-xctests",
+  "downloaded_at": "2026-10-28T05:49:54.628235Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, unittest",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "test",
+      "unittest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "leboncoin",
+  "source_url": "https://github.com/leboncoin/spark-ios/blob/main/.claude/skills/spark-replace-xctests/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/leboncoin/spark-ios/blob/main/.claude/skills/spark-replace-xctests/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Migrate the XCTests unit tests of a spark-ios-component-XXX (or common/theming) to Swift Testing, folder by folder, without adding or removing tests."
+}

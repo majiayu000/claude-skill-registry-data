@@ -1,0 +1,38 @@
+{
+  "name": "godot-animation",
+  "repo": "laurentvv/agents-kit",
+  "path": "skills/godot-animation/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/laurentvv/agents-kit",
+  "dir_name": "godot-animation-laurentvv-agents-kit",
+  "downloaded_at": "2026-10-28T05:48:02.338412Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, animation",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "laurentvv",
+  "source_url": "https://github.com/laurentvv/agents-kit/blob/main/skills/godot-animation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/laurentvv/agents-kit/blob/main/skills/godot-animation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Animate in Godot 4.7 three ways: AnimationPlayer for keyframed clips (incl. Call Method tracks), AnimationTree with state machines and blend spaces for character animation, and Tween for short procedural/UI tweens via create_tween(). Use when working with AnimationPlayer/AnimationTree nodes in a .tscn, blending character states, sprite-sheet animation, or code-driven Tweens."
+}

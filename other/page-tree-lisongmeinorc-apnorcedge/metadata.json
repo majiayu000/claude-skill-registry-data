@@ -1,0 +1,37 @@
+{
+  "name": "page-tree",
+  "repo": "lisongmeinorc/apnorcedge",
+  "path": ".claude/skills/page-tree/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/lisongmeinorc/apnorcedge",
+  "dir_name": "page-tree-lisongmeinorc-apnorcedge",
+  "downloaded_at": "2026-10-28T05:55:47.736603Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, marketing=2",
+    "score": 2,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lisongmeinorc",
+  "source_url": "https://github.com/lisongmeinorc/apnorcedge/blob/main/.claude/skills/page-tree/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lisongmeinorc/apnorcedge/blob/main/.claude/skills/page-tree/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Captures the rendered layout of a webpage as a spatial tree of elements, with positions, sizes, grid layouts, backgrounds, and overlay occlusion, via the web CLI. Returns indented text, a JSON tree, and a map from node IDs to CSS selectors. Use before page decomposition, overlay detection, or brand extraction, or when the user asks for a page's visual hierarchy or layout."
+}

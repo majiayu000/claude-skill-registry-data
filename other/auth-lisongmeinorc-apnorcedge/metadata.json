@@ -1,0 +1,37 @@
+{
+  "name": "auth",
+  "repo": "lisongmeinorc/apnorcedge",
+  "path": ".agents/skills/auth/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/lisongmeinorc/apnorcedge",
+  "dir_name": "auth-lisongmeinorc-apnorcedge",
+  "downloaded_at": "2026-10-28T05:55:37.406250Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lisongmeinorc",
+  "source_url": "https://github.com/lisongmeinorc/apnorcedge/blob/main/.agents/skills/auth/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lisongmeinorc/apnorcedge/blob/main/.agents/skills/auth/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Authenticate with AEM Edge Delivery Services. Opens browser for login and captures token. Works for admin.hlx.page and Config Service APIs regardless of content source (Document Authoring, SharePoint, or Google Drive)."
+}

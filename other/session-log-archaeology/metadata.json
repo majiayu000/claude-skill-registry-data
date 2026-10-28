@@ -1,0 +1,37 @@
+{
+  "name": "session-log-archaeology",
+  "repo": "jin2004-cmd/codex-practical-skills",
+  "path": "session-log-archaeology/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jin2004-cmd/codex-practical-skills",
+  "dir_name": "session-log-archaeology",
+  "downloaded_at": "2026-10-28T05:21:07.224276Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "retrieval",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jin2004-cmd",
+  "source_url": "https://github.com/jin2004-cmd/codex-practical-skills/blob/main/session-log-archaeology/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jin2004-cmd/codex-practical-skills/blob/main/session-log-archaeology/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Dig a user's original text out of their own archives when they ask for it \u2014 dated memory notes first, then session logs, then repo snapshots, then workspace logs. Includes the JSONL shape traps that produce silent zero hits, the cross-machine gap that makes a session genuinely absent, and the rule that not finding it must be reported rather than filled with a rewrite. Triggers on \"\u7ffb\u51fa\u6211\u8bb0\u5fc6\u91cc\u7684\", \"\u4e4b\u524d\u90a3\u4e2a\u7a3f\u5b50\u627e\u51fa\u6765\", \"\u4e0a\u6b21\u5199\u7684 XX \u5728\u54ea\", \"\u53bb\u4f1a\u8bdd\u8bb0\u5f55\u91cc\u6316\". Not for writing a checkpoint (session-checkpoint) and not for maintaining the memory base (personal-secretary-memory)."
+}

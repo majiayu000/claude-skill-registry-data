@@ -1,0 +1,37 @@
+{
+  "name": "resolve-review-comments",
+  "repo": "leek/agent-skills",
+  "path": "skills/resolve-review-comments/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/leek/agent-skills",
+  "dir_name": "resolve-review-comments",
+  "downloaded_at": "2026-10-28T05:50:19.848150Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "sub-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "leek",
+  "source_url": "https://github.com/leek/agent-skills/blob/main/skills/resolve-review-comments/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/leek/agent-skills/blob/main/skills/resolve-review-comments/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Triage, fix or rebut, then reply-and-resolve every review comment on a pull request, including AI-review bot findings (Codex, Copilot, Gemini). Use when the user wants to address, respond to, action, or clear the review comments on a PR."
+}

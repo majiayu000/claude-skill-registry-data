@@ -1,0 +1,37 @@
+{
+  "name": "engineer-command",
+  "repo": "korchasa/flowai-plugins",
+  "path": "plugins/flowai-devtools/skills/engineer-command/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/korchasa/flowai-plugins",
+  "dir_name": "engineer-command",
+  "downloaded_at": "2026-10-28T05:41:49.745124Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "korchasa",
+  "source_url": "https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai-devtools/skills/engineer-command/SKILL.md",
+  "license": "Based on https://github.com/anthropics/skills",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai-devtools/skills/engineer-command/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Guide for authoring an IDE slash command - one Markdown file the user runs as /name in Cursor, Claude Code or OpenCode. Use when users want to create or update such a command. Not for model-discovered skills."
+}

@@ -1,0 +1,36 @@
+{
+  "name": "release",
+  "repo": "leek/agent-skills",
+  "path": "skills/release/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/leek/agent-skills",
+  "dir_name": "release-leek-agent-skills",
+  "downloaded_at": "2026-10-28T05:50:13.564243Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "leek",
+  "source_url": "https://github.com/leek/agent-skills/blob/main/skills/release/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/leek/agent-skills/blob/main/skills/release/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Commit this session's work, bump the version, tag, push, and publish a GitHub release with grouped notes. Use when the user asks to release, cut, tag, or publish a version."
+}

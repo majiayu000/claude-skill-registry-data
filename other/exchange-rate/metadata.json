@@ -1,0 +1,37 @@
+{
+  "name": "exchange-rate",
+  "repo": "hillstreet-ph/open-connect",
+  "path": "resources/migrated/v1-skills/exchange-rate/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/hillstreet-ph/open-connect",
+  "dir_name": "exchange-rate",
+  "downloaded_at": "2026-10-28T04:55:34.373406Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hillstreet-ph",
+  "source_url": "https://github.com/hillstreet-ph/open-connect/blob/main/resources/migrated/v1-skills/exchange-rate/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hillstreet-ph/open-connect/blob/main/resources/migrated/v1-skills/exchange-rate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Query real-time exchange rates for any base currency via ExchangeRate-API. Use this skill whenever the user needs currency conversion rates, forex data, or wants to know how much one currency is worth in another."
+}

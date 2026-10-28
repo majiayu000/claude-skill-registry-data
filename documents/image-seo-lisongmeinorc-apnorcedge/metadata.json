@@ -1,0 +1,38 @@
+{
+  "name": "image-seo",
+  "repo": "lisongmeinorc/apnorcedge",
+  "path": ".claude/skills/image-seo/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/lisongmeinorc/apnorcedge",
+  "dir_name": "image-seo-lisongmeinorc-apnorcedge",
+  "downloaded_at": "2026-10-28T05:55:47.228271Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word, markdown",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lisongmeinorc",
+  "source_url": "https://github.com/lisongmeinorc/apnorcedge/blob/main/.claude/skills/image-seo/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lisongmeinorc/apnorcedge/blob/main/.claude/skills/image-seo/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit images across AEM Edge Delivery Services pages for SEO and performance. Checks alt text quality, missing dimensions, lazy loading on LCP images, fetch priority, file naming, and decorative image handling. Generates a per-page report with specific fix instructions for alt text (in the source document) and performance attributes (in block code or scripts). Use when optimizing Core Web Vitals, improving image accessibility, or auditing image SEO."
+}

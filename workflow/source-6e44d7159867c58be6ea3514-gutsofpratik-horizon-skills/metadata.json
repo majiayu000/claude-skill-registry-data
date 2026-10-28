@@ -1,0 +1,37 @@
+{
+  "name": "zpa-application_segment-onboard",
+  "repo": "gutsofpratik/Horizon-Skills",
+  "path": "skills/source-6e44d7159867c58be6ea3514/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/gutsofpratik/Horizon-Skills",
+  "dir_name": "source-6e44d7159867c58be6ea3514-gutsofpratik-horizon-skills",
+  "downloaded_at": "2026-10-28T04:45:15.284428Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process",
+    "score": 2,
+    "runner_up": "business",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "process"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gutsofpratik",
+  "source_url": "https://github.com/gutsofpratik/Horizon-Skills/blob/main/skills/source-6e44d7159867c58be6ea3514/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gutsofpratik/Horizon-Skills/blob/main/skills/source-6e44d7159867c58be6ea3514/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "End-to-end onboarding of a new application in Zscaler Private Access. Walks through the complete dependency chain: (1) App connector group, (2) Server group, (3) Segment group, (4) Application segment with domain names and ports, (5) Access policy rule to grant user/group access. Use when an administrator needs to make an internal application accessible through ZPA."
+}

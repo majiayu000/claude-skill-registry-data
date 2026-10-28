@@ -1,0 +1,37 @@
+{
+  "name": "lev-relay",
+  "repo": "lev-os/agents",
+  "path": "skills/lev-relay/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/lev-os/agents",
+  "dir_name": "lev-relay",
+  "downloaded_at": "2026-10-28T05:52:15.798379Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lev-os",
+  "source_url": "https://github.com/lev-os/agents/blob/main/skills/lev-relay/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lev-os/agents/blob/main/skills/lev-relay/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "List, find and read Claude Code, native OMO/Senpi and OMP sessions from permitted user-owned JSONL, bind this Codex relay to one session, show summaries or sanitized verbatim trace, and manage requested same-chat monitoring. Use when JP asks Lev Relay for agent-session inventory, activity, catch-up or approved steering. Codex transcripts and hidden databases are excluded."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "audit",
+  "repo": "lisongmeinorc/apnorcedge",
+  "path": ".agents/skills/audit/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/lisongmeinorc/apnorcedge",
+  "dir_name": "audit-lisongmeinorc-apnorcedge",
+  "downloaded_at": "2026-10-28T05:55:38.364622Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: marketing, seo, brand",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "marketing",
+      "seo",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lisongmeinorc",
+  "source_url": "https://github.com/lisongmeinorc/apnorcedge/blob/main/.agents/skills/audit/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lisongmeinorc/apnorcedge/blob/main/.agents/skills/audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Full three-perspective audit of an existing website from one URL \u2014 design (tensions + concrete improvement opportunities), SEO/technical, and LLM/AI-search visibility \u2014 plus Core Web Vitals, synthesized into a scored, evidence-bound report. Use when the user asks to \"audit this site\", \"site audit\", \"design audit\", \"SEO audit\", \"why is my site underperforming\", \"LLM visibility\", \"how does my site look to AI\", or invokes `$stardust audit` (`/stardust:audit` in Claude Code) <url>."
+}

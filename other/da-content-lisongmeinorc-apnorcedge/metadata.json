@@ -1,0 +1,37 @@
+{
+  "name": "da-content",
+  "repo": "lisongmeinorc/apnorcedge",
+  "path": ".claude/skills/da-content/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/lisongmeinorc/apnorcedge",
+  "dir_name": "da-content-lisongmeinorc-apnorcedge",
+  "downloaded_at": "2026-10-28T05:55:48.909798Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lisongmeinorc",
+  "source_url": "https://github.com/lisongmeinorc/apnorcedge/blob/main/.claude/skills/da-content/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lisongmeinorc/apnorcedge/blob/main/.claude/skills/da-content/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this when generating HTML for Adobe Document Authoring (DA, da.live) upload, uploading media binaries to DA, publishing to aem.live, or driving the DA admin API (auth, source PUT, preview/publish). Covers block HTML format (canonical div-class form and accepted table alternate), section structure, page and section metadata, icons, links, images, default content, document skeleton constraints, block cell content normalization, the DA Source API contract, IMS auth, media storage, supported formats, Media Bus vs Content Bus delivery, and silent-failure rules that corrupt content."
+}

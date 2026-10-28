@@ -1,0 +1,40 @@
+{
+  "name": "engineer-prompts-for-reasoning",
+  "repo": "korchasa/flowai-plugins",
+  "path": "plugins/flowai-engineering/skills/engineer-prompts-for-reasoning/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/korchasa/flowai-plugins",
+  "dir_name": "engineer-prompts-for-reasoning",
+  "downloaded_at": "2026-10-28T05:41:53.187635Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, programming, framework, debug, refactor",
+    "score": 5,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "programming",
+      "framework",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "korchasa",
+  "source_url": "https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai-engineering/skills/engineer-prompts-for-reasoning/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai-engineering/skills/engineer-prompts-for-reasoning/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write or fix a prompt for a reasoning model (Gemini Pro, GPT-4o, Claude Sonnet) so it holds context across a multi-step task. Use for any request to draft, structure or debug such a prompt. Not for fast models (use engineer-prompts-for-instant)."
+}

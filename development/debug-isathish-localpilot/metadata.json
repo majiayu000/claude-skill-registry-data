@@ -1,0 +1,38 @@
+{
+  "name": "debug",
+  "repo": "isathish/localpilot",
+  "path": "skills/debug/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/isathish/localpilot",
+  "dir_name": "debug-isathish-localpilot",
+  "downloaded_at": "2026-10-28T05:10:03.325649Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, compile, debug",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "isathish",
+  "source_url": "https://github.com/isathish/localpilot/blob/main/skills/debug/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/isathish/localpilot/blob/main/skills/debug/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Systematic bug fixing \u2014 reproduce, localise with logs/tests/diagnostics, form and test a hypothesis, fix the root cause, add a regression test. USE WHEN the user reports an error, stack trace, crash, \"doesn't work\", \"broken\", \"fails\", \"why does\", unexpected output, or flaky behaviour."
+}

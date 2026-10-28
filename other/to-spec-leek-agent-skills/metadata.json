@@ -1,0 +1,38 @@
+{
+  "name": "to-spec",
+  "repo": "leek/agent-skills",
+  "path": "skills/to-spec/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/leek/agent-skills",
+  "dir_name": "to-spec-leek-agent-skills",
+  "downloaded_at": "2026-10-28T05:50:13.749925Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "leek",
+  "source_url": "https://github.com/leek/agent-skills/blob/main/skills/to-spec/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/leek/agent-skills/blob/main/skills/to-spec/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn the current conversation into a spec (PRD) and save it as markdown under .scratch/: no interview, just synthesis, with Laravel test seams chosen from the tdd ranking rules rather than asked about. Use when the user wants a spec or PRD written from what was just discussed, when a grilling or wayfinder session has settled its decisions, or when an existing spec needs revising in place."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "simplify",
+  "repo": "justfiles/justfiles",
+  "path": ".claude/skills/simplify/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/justfiles/justfiles",
+  "dir_name": "simplify",
+  "downloaded_at": "2026-10-28T05:29:03.999116Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, word",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "justfiles",
+  "source_url": "https://github.com/justfiles/justfiles/blob/main/.claude/skills/simplify/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/justfiles/justfiles/blob/main/.claude/skills/simplify/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill automatically when you feel your code is ready for human review, and whenever writing or reviewing code comments. Ready means the code works and achieves a stated goal, verified by your own tests and/or, if you deem it necessary, human testing."
+}

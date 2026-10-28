@@ -1,0 +1,36 @@
+{
+  "name": "scratch-cleanup",
+  "repo": "leek/agent-skills",
+  "path": "skills/scratch-cleanup/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/leek/agent-skills",
+  "dir_name": "scratch-cleanup",
+  "downloaded_at": "2026-10-28T05:50:17.875391Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "leek",
+  "source_url": "https://github.com/leek/agent-skills/blob/main/skills/scratch-cleanup/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/leek/agent-skills/blob/main/skills/scratch-cleanup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Sweep a dusty .scratch/: file research into docs/, remove finished efforts, and report the work still open."
+}

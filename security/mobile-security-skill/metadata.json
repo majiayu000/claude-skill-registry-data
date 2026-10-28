@@ -1,0 +1,41 @@
+{
+  "name": "mobile-security-skill",
+  "repo": "harshdhamaniya/mobile-security-skill",
+  "path": "skills/mobile-security-skill/SKILL.md",
+  "github_branch": "master",
+  "category": "security",
+  "source": "github.com/harshdhamaniya/mobile-security-skill",
+  "dir_name": "mobile-security-skill",
+  "downloaded_at": "2026-10-28T04:50:11.034830Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for security: security, auth, crypto, audit, owasp, pentest",
+    "score": 6,
+    "runner_up": "platform",
+    "runner_up_score": 4,
+    "signals": [
+      "security",
+      "auth",
+      "crypto",
+      "audit",
+      "owasp",
+      "pentest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "harshdhamaniya",
+  "source_url": "https://github.com/harshdhamaniya/mobile-security-skill/blob/master/skills/mobile-security-skill/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/harshdhamaniya/mobile-security-skill/blob/master/skills/mobile-security-skill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run a complete mobile application security assessment of an Android APK/AAB, iOS IPA, or their source, covering manifest/plist/entitlements misconfiguration, insecure local storage and weak crypto, taint analysis from attacker-controlled sources to dangerous sinks, WebView/OAuth/OIDC/deep-link flaws, Android IPC and iOS platform attack surface, anti-tamper/root-jailbreak/pinning resilience, network and backend API weaknesses (BOLA, JWT, secrets), supply-chain and framework-specific issues (Flutter/React Native/Xamarin/Unity/Cordova), and business-logic abuse. Then it adversarially confirms exploitability before anything is reported as Confirmed. Use this whenever the user asks for a mobile app security audit, pentest, or MASVS/MASTG assessment; mentions an APK, AAB, IPA, or mobile app source tree they want reviewed for vulnerabilities; asks to check a mobile app for hardcoded secrets, insecure storage, SSL pinning, WebView/JS-bridge issues, OAuth or deep-link flaws, root/jailbreak detection bypass, or OWASP Mobile Top 10 issues; or wants to know whether a specific mobile finding is actually exploitable. Always run the Step 0 authorization check before touching any target."
+}

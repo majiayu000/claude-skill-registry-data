@@ -1,0 +1,38 @@
+{
+  "name": "roblox-luau",
+  "repo": "laurentvv/agents-kit",
+  "path": "skills/roblox-luau/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/laurentvv/agents-kit",
+  "dir_name": "roblox-luau-laurentvv-agents-kit",
+  "downloaded_at": "2026-10-28T05:48:00.036511Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "laurentvv",
+  "source_url": "https://github.com/laurentvv/agents-kit/blob/main/skills/roblox-luau/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/laurentvv/agents-kit/blob/main/skills/roblox-luau/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Script a Roblox experience in Luau: get services, create and parent Instances, connect events, run server Scripts vs client LocalScripts, and communicate across the client/server boundary with RemoteEvents/RemoteFunctions (server-authoritative). Use when building or debugging Roblox Studio scripts \u2014 when the user mentions Roblox, Luau, services, RemoteEvent, Instance.new, PlayerAdded, or client vs server. For saving player data use roblox-datastores."
+}

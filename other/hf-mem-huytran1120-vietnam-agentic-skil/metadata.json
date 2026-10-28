@@ -1,0 +1,38 @@
+{
+  "name": "hf-mem",
+  "repo": "huytran1120/vietnam-agentic-skills",
+  "path": "skills/hf-mem/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/huytran1120/vietnam-agentic-skills",
+  "dir_name": "hf-mem-huytran1120-vietnam-agentic-skil",
+  "downloaded_at": "2026-10-28T05:00:32.962037Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, context-management=3",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "huytran1120",
+  "source_url": "https://github.com/huytran1120/vietnam-agentic-skills/blob/main/skills/hf-mem/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/huytran1120/vietnam-agentic-skills/blob/main/skills/hf-mem/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Hugging Face CLI to estimate the required memory to load Safetensors or GGUF model weights for inference from the Hugging Face Hub"
+}

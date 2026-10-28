@@ -1,0 +1,38 @@
+{
+  "name": "llm-evals",
+  "repo": "laurentvv/agents-kit",
+  "path": "skills/llm-evals/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/laurentvv/agents-kit",
+  "dir_name": "llm-evals",
+  "downloaded_at": "2026-10-28T05:47:59.678453Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "laurentvv",
+  "source_url": "https://github.com/laurentvv/agents-kit/blob/main/skills/llm-evals/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/laurentvv/agents-kit/blob/main/skills/llm-evals/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Pick and wire the right LLM evaluation tool for a repository - Promptfoo (prompt regression and CI gating on local llama.cpp/Ollama endpoints, red-teaming), DeepEval (pytest-style semantic metrics on LLM outputs), Inspect AI (end-to-end agent evals with tasks, solvers, scorers and sandboxes). Use whenever the user asks to evaluate, regression-test, benchmark or gate prompts, model outputs or agents, to set up eval CI on a local OpenAI-compatible endpoint, or to choose between promptfoo, deepeval and inspect-ai."
+}

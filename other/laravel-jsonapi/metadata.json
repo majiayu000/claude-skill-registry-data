@@ -1,0 +1,37 @@
+{
+  "name": "laravel-jsonapi",
+  "repo": "fusengine/agents",
+  "path": "plugins/laravel-expert/skills/laravel-jsonapi/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/fusengine/agents",
+  "dir_name": "laravel-jsonapi",
+  "downloaded_at": "2026-10-28T04:29:59.661514Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fusengine",
+  "source_url": "https://github.com/fusengine/agents/blob/main/plugins/laravel-expert/skills/laravel-jsonapi/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fusengine/agents/blob/main/plugins/laravel-expert/skills/laravel-jsonapi/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when building JSON:API spec-compliant endpoints in Laravel 13 with the first-party `JsonApiResource` base class."
+}

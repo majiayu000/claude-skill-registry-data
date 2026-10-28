@@ -1,0 +1,37 @@
+{
+  "name": "merge-review",
+  "repo": "gwpreston16/Logbook",
+  "path": ".claude/skills/merge-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/gwpreston16/Logbook",
+  "dir_name": "merge-review",
+  "downloaded_at": "2026-10-28T04:45:36.047842Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gwpreston16",
+  "source_url": "https://github.com/gwpreston16/Logbook/blob/main/.claude/skills/merge-review/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gwpreston16/Logbook/blob/main/.claude/skills/merge-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Runs Logbook's review agents (bug-hunter, security-scanner, performance-auditor, design-reviewer, spec-keeper, upgrade-tester, deploy-checker, api-contract-checker, ai-evaluator, import-tester) on a branch, pull request or release and turns their reports into one clear MERGE or REJECT decision with the reasons and the shortest path to MERGE. Use this whenever Gareth asks \"can I merge this\", \"is this ready\", \"review this PR / branch / phase\", \"should this go in\", \"pre-merge check\", \"release check\", or invokes /merge-review \u2014 even if he names only one concern, since the point is the combined verdict. Never merges, pushes, approves or edits code."
+}

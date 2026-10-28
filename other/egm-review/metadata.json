@@ -1,0 +1,37 @@
+{
+  "name": "egm-review",
+  "repo": "google/elephant-goldfish-model",
+  "path": "skills/egm-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/google/elephant-goldfish-model",
+  "dir_name": "egm-review",
+  "downloaded_at": "2026-10-28T04:40:52.598770Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: communication=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "communication",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "google",
+  "source_url": "https://github.com/google/elephant-goldfish-model/blob/main/skills/egm-review/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/google/elephant-goldfish-model/blob/main/skills/egm-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Orchestrates the EGM Goldfish Review Protocol. Used as part of the EGM process to perform design document reviews. Executes five review phases: Initial Zoom Out Review, Comprehension Review, Design Critique, Intermediate Zoom Out Review, and Implementation Readiness."
+}

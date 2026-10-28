@@ -1,0 +1,37 @@
+{
+  "name": "rust-tests",
+  "repo": "kromatv/kroma",
+  "path": ".claude/skills/rust-tests/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/kromatv/kroma",
+  "dir_name": "rust-tests-kromatv-kroma",
+  "downloaded_at": "2026-10-28T05:43:19.375726Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "creative",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kromatv",
+  "source_url": "https://github.com/kromatv/kroma/blob/main/.claude/skills/rust-tests/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kromatv/kroma/blob/main/.claude/skills/rust-tests/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write cargo tests. A test name is a sentence, the body is setup, mock, test and verify blocks separated by blank lines with no comments, and shared setup lives in a named test-support module rather than in each test. Covers naming, the block shape, where a test file goes, async and time, workspaces, and running one crate or one filter. Use when adding or changing any #[test] or #[tokio::test], or when Rust coverage has to come up. Triggers - \"write a rust test\", \"cargo test\", \"test this crate\", \"cover this handler\"."
+}

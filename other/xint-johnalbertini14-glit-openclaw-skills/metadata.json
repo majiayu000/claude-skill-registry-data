@@ -1,0 +1,38 @@
+{
+  "name": "xint",
+  "repo": "johnalbertini14-glitch/openclaw-skills",
+  "path": "skills/0xnyk/xint/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/johnalbertini14-glitch/openclaw-skills",
+  "dir_name": "xint-johnalbertini14-glit-openclaw-skills",
+  "downloaded_at": "2026-10-28T05:24:12.684285Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, integration=3",
+    "score": 3,
+    "runner_up": "integration",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "johnalbertini14-glitch",
+  "source_url": "https://github.com/johnalbertini14-glitch/openclaw-skills/blob/main/skills/0xnyk/xint/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/johnalbertini14-glitch/openclaw-skills/blob/main/skills/0xnyk/xint/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "X Intelligence CLI \u2014 search, analyze, and engage on X/Twitter from the terminal. Use when: (1) user says \"x research\", \"search x for\", \"search twitter for\", \"what are people saying about\", \"what's twitter saying\", \"check x for\", \"x search\", \"search x\", \"find tweets about\", \"monitor x for\", \"track followers\", (2) user is working on  something where recent X discourse would provide useful context (new library releases,  API changes, product launches, cultural events, industry drama), (3) user wants to find  what devs/experts/community thinks about a topic, (4) user needs real-time monitoring (\"watch\"), (5) user wants AI-powered analysis (\"analyze\", \"sentiment\", \"report\"). Also supports: bookmarks, likes, following (read/write), trending topics, Grok AI analysis, and cost tracking. Export as JSON, JSONL (pipeable), CSV, or Markdown. Non-goals: Not for posting tweets, not for DMs, not for enterprise features. Requires OAuth for user-context operations (bookmarks, likes, following, diff)."
+}

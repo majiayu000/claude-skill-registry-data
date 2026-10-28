@@ -1,0 +1,37 @@
+{
+  "name": "goal-exec",
+  "repo": "lev-os/agents",
+  "path": "skills/goal-exec/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/lev-os/agents",
+  "dir_name": "goal-exec",
+  "downloaded_at": "2026-10-28T05:52:15.332949Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: auth, audit",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lev-os",
+  "source_url": "https://github.com/lev-os/agents/blob/main/skills/goal-exec/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lev-os/agents/blob/main/skills/goal-exec/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Convert an explicit user request into a Codex goal and pass its chosen coder, Lev, omo/omp, SDD, or Fable execution flags to $coder."
+}

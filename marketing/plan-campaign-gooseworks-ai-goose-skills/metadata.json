@@ -1,0 +1,39 @@
+{
+  "name": "plan-campaign",
+  "repo": "gooseworks-ai/goose-skills",
+  "path": "skills/marketing/plan-campaign/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/gooseworks-ai/goose-skills",
+  "dir_name": "plan-campaign-gooseworks-ai-goose-skills",
+  "downloaded_at": "2026-10-28T04:41:11.073120Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for marketing: marketing, social, campaign, brand",
+    "score": 4,
+    "runner_up": "performance",
+    "runner_up_score": 2,
+    "signals": [
+      "marketing",
+      "social",
+      "campaign",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gooseworks-ai",
+  "source_url": "https://github.com/gooseworks-ai/goose-skills/blob/main/skills/marketing/plan-campaign/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gooseworks-ai/goose-skills/blob/main/skills/marketing/plan-campaign/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Campaign planner: turns a product, offer, goal, budget and date into a plan the marketer can approve and a designer can start from today, with every channel kept or dropped for a reason. Zero paid is a valid answer; it never spends. Use when the ask names a campaign, a launch, drop or season push, a budget or a date: I have this budget and a launch date \u2014 what do I run, where?; plan my launch, drop or Black Friday push; plan a campaign; how should I split $5k; plan next month's campaign; our CAC blew up \u2014 replan. Not for a broad \"grow my brand\", \"get more customers\" or \"where do I start\" with no campaign, budget or date \u2014 use where-to-start; not for pausing ads on a sold-out product \u2014 use run-paid-campaigns; not for an email-only send plan \u2014 use email-lifecycle; not for reading this week's numbers \u2014 use analyze-performance."
+}

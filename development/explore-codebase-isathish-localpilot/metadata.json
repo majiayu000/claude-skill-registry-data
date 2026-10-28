@@ -1,0 +1,39 @@
+{
+  "name": "explore-codebase",
+  "repo": "isathish/localpilot",
+  "path": "skills/explore-codebase/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/isathish/localpilot",
+  "dir_name": "explore-codebase-isathish-localpilot",
+  "downloaded_at": "2026-10-28T05:10:05.097859Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, framework, build",
+    "score": 4,
+    "runner_up": "design",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "isathish",
+  "source_url": "https://github.com/isathish/localpilot/blob/main/skills/explore-codebase/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/isathish/localpilot/blob/main/skills/explore-codebase/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build a mental map of an unfamiliar or large codebase \u2014 folder structure, entry points, architecture layers, data flow, conventions, build/test commands \u2014 and record it for future sessions. USE WHEN the user asks \"explain this project/codebase\", \"how is this organised\", \"where is X handled\", \"walk me through\", \"onboard me\", \"what does this repo do\", or before a big change in an area you haven't read yet."
+}

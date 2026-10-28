@@ -1,0 +1,39 @@
+{
+  "name": "prune-tests",
+  "repo": "leek/agent-skills",
+  "path": "skills/prune-tests/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/leek/agent-skills",
+  "dir_name": "prune-tests",
+  "downloaded_at": "2026-10-28T05:50:20.531380Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for testing: test, tdd, integration, e2e",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "tdd",
+      "integration",
+      "e2e"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "leek",
+  "source_url": "https://github.com/leek/agent-skills/blob/main/skills/prune-tests/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/leek/agent-skills/blob/main/skills/prune-tests/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Delete low-signal tests (tests that restate the code, always pass, or break on every refactor) one test area at a time, keeping coverage, and open one PR per area. Every run takes an area no earlier run touched."
+}

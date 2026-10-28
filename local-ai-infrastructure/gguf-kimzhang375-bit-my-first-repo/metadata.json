@@ -1,0 +1,39 @@
+{
+  "name": "gguf-quantization",
+  "repo": "kimzhang375-bit/my-first-repo",
+  "path": "skills/file-reader/ai-research-skills/10-optimization/gguf/SKILL.md",
+  "github_branch": "main",
+  "category": "local-ai-infrastructure",
+  "source": "github.com/kimzhang375-bit/my-first-repo",
+  "dir_name": "gguf-kimzhang375-bit-my-first-repo",
+  "downloaded_at": "2026-10-28T05:39:26.087949Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "local-ai-infrastructure",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for local-ai-infrastructure: ollama, llama-cpp, gguf",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "ollama",
+      "llama-cpp",
+      "gguf"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "kimzhang375-bit",
+  "source_url": "https://github.com/kimzhang375-bit/my-first-repo/blob/main/skills/file-reader/ai-research-skills/10-optimization/gguf/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kimzhang375-bit/my-first-repo/blob/main/skills/file-reader/ai-research-skills/10-optimization/gguf/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "GGUF format and llama.cpp quantization for efficient CPU/GPU inference. Use when deploying models on consumer hardware, Apple Silicon, or when needing flexible quantization from 2-8 bit without GPU requirements."
+}

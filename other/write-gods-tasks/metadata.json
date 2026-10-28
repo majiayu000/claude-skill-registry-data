@@ -1,0 +1,38 @@
+{
+  "name": "write-gods-tasks",
+  "repo": "korchasa/flowai-plugins",
+  "path": "plugins/flowai/skills/write-gods-tasks/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/korchasa/flowai-plugins",
+  "dir_name": "write-gods-tasks",
+  "downloaded_at": "2026-10-28T05:41:47.190731Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, devops=3",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "korchasa",
+  "source_url": "https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai/skills/write-gods-tasks/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai/skills/write-gods-tasks/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Supplies the accepted task format GODS (Goal, Overview, Definition of Done, Solution). Use when the user asks what that format is, or to write up decided work in it. NOT for planning before coding \u2014 weighing variants belongs to the planning skill."
+}

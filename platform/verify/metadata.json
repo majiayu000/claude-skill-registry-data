@@ -1,0 +1,40 @@
+{
+  "name": "verify",
+  "repo": "futo-org/futo-notes",
+  "path": ".claude/skills/verify/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/futo-org/futo-notes",
+  "dir_name": "verify",
+  "downloaded_at": "2026-10-28T04:30:13.649701Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for platform: platform, device, adb, android, ios",
+    "score": 5,
+    "runner_up": "design",
+    "runner_up_score": 3,
+    "signals": [
+      "platform",
+      "device",
+      "adb",
+      "android",
+      "ios"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "futo-org",
+  "source_url": "https://github.com/futo-org/futo-notes/blob/main/.claude/skills/verify/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/futo-org/futo-notes/blob/main/.claude/skills/verify/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run the appropriate verification chain for recent changes. Detects what changed and runs build, tests, smoke checks, and visual UI verification. Use when the user says \"verify\", \"check this\", \"does it work\", \"test it\", \"make sure X works\", or after completing a feature/fix. Also use whenever the user wants to see a change running for real on ANY platform \u2014 the desktop Tauri app, the web dev server, the native iOS app on a simulator, the native Android app on an emulator/device, or Windows WebView2 in the qemu VM \u2014 including requests like \"run it on the simulator\", \"screenshot the app on Android\", or verifying a specific feature regardless of recent changes."
+}

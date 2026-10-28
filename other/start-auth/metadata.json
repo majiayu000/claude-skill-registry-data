@@ -1,0 +1,38 @@
+{
+  "name": "start-auth",
+  "repo": "fusengine/agents",
+  "path": "plugins/tanstack-start-expert/skills/start-auth/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/fusengine/agents",
+  "dir_name": "start-auth",
+  "downloaded_at": "2026-10-28T04:30:04.151043Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "ui",
+      "ux",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fusengine",
+  "source_url": "https://github.com/fusengine/agents/blob/main/plugins/tanstack-start-expert/skills/start-auth/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fusengine/agents/blob/main/plugins/tanstack-start-expert/skills/start-auth/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when adding auth to a TanStack Start app \u2014 route protection, server-function authorization, sessions, CSRF. Do NOT use for generic route guards."
+}

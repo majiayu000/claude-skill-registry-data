@@ -1,0 +1,40 @@
+{
+  "name": "ad-policy-check",
+  "repo": "gooseworks-ai/goose-skills",
+  "path": "skills/marketing/ad-policy-check/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/gooseworks-ai/goose-skills",
+  "dir_name": "ad-policy-check-gooseworks-ai-goose-skills",
+  "downloaded_at": "2026-10-28T04:41:15.875143Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for marketing: marketing, content, social, campaign, brand",
+    "score": 5,
+    "runner_up": "creative",
+    "runner_up_score": 2,
+    "signals": [
+      "marketing",
+      "content",
+      "social",
+      "campaign",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gooseworks-ai",
+  "source_url": "https://github.com/gooseworks-ai/goose-skills/blob/main/skills/marketing/ad-policy-check/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gooseworks-ai/goose-skills/blob/main/skills/marketing/ad-policy-check/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Checks paid ads against the ad platform's rules (Meta, TikTok, Google, LinkedIn and others) and the brand's category rules: the copy, on-image or on-screen text, pictures and people. Rewrites what can be fixed honestly, adds the disclosures that are needed, and flags anything that needs a human or legal review, with one pass, fixed or flag line per ad and platform. Use alone when you already have the ad text or images and know where they will run; otherwise run the playbook for the job (e.g. make-static-ads, make-content, email-lifecycle)."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "carta-portfolio-valuations",
+  "repo": "gutsofpratik/Horizon-Skills",
+  "path": "skills/source-fdefd23dd5611151d8779241/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/gutsofpratik/Horizon-Skills",
+  "dir_name": "source-fdefd23dd5611151d8779241-gutsofpratik-horizon-skills",
+  "downloaded_at": "2026-10-28T04:45:12.459015Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gutsofpratik",
+  "source_url": "https://github.com/gutsofpratik/Horizon-Skills/blob/main/skills/source-fdefd23dd5611151d8779241/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gutsofpratik/Horizon-Skills/blob/main/skills/source-fdefd23dd5611151d8779241/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Portfolio valuations workflow \u2014 firm selection, dashboard, bulk-create valuations on one or many companies (refresh, manual EV), and dive-in on a single valuation. TRIGGER when the user mentions working on, reviewing, or running portfolio valuations, takes a closer look at a specific company's valuation, or updates the EV / company value (e.g. \"work on my valuations today\", \"review our portfolio valuations\", \"run all my Q2 valuations\", \"which companies need new valuations\", \"look at MangoCart's valuations\", \"update the EV for Acme\", \"set the company value for MangoCart\", \"batch valuations\", \"auto-run valuations\"). DO NOT TRIGGER for 409A valuations or cap table valuations, or to turn the valuation tool on for a firm (this skill runs valuations only once it is already enabled). Use instead: carta-valuations-excel when the user is working in Claude for Excel (a workbook is open) \u2014 this skill's dashboard and bulk-create UI don't run there."
+}

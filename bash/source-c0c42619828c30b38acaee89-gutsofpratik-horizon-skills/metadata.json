@@ -1,0 +1,38 @@
+{
+  "name": "dx-org-manage",
+  "repo": "gutsofpratik/Horizon-Skills",
+  "path": "skills/source-c0c42619828c30b38acaee89/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/gutsofpratik/Horizon-Skills",
+  "dir_name": "source-c0c42619828c30b38acaee89-gutsofpratik-horizon-skills",
+  "downloaded_at": "2026-10-28T04:45:16.792408Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gutsofpratik",
+  "source_url": "https://github.com/gutsofpratik/Horizon-Skills/blob/main/skills/source-c0c42619828c30b38acaee89/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gutsofpratik/Horizon-Skills/blob/main/skills/source-c0c42619828c30b38acaee89/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "INVOKE this skill to execute Salesforce org operations: create scratch orgs, list/display/resume/delete scratch orgs, create org snapshots, open orgs in browser. This skill EXECUTES operations immediately - it does NOT generate scripts or code files. ALWAYS invoke this skill (do not execute SF CLI commands directly) when user requests to: create a scratch org (from edition, definition file (.json), snapshot, or org shape), list/display/resume/delete scratch orgs, create an org snapshot, or open a Salesforce org. Trigger phrases include: 'create a snapshot', 'take a snapshot', 'create scratch org', 'new scratch org', 'spin up an org', 'create 5 scratch orgs', 'create org from snapshot', 'scratch-def.json', 'project-scratch-def.json', 'list scratch orgs', 'display org', 'delete scratch org', 'resume scratch org', 'open my Salesforce org', 'open org in browser'. Do NOT use for switching default org (use dx-org-switch) or deploying metadata (use platform-metadata-deploy)."
+}

@@ -1,0 +1,94 @@
+---
+name: astro-security
+description: Use when configuring Content Security Policy (CSP) in Astro 7 — security headers, script/style hashes, nonces, or adapter staticHeaders.
+versions:
+  astro: "7"
+user-invocable: true
+references: references/csp-overview.md, references/csp-config.md, references/script-directive.md, references/style-directive.md, references/nonces.md, references/static-headers.md, references/templates/csp-basic.md, references/templates/csp-advanced.md
+related-skills: astro-7, astro-deployment, solid-astro
+---
+
+<objective>
+Configures Astro 7's stable Content Security Policy support (`security.csp` in `astro.config.mjs`): automatic SHA-256/384/512 hash generation for bundled scripts and styles, the injected `<meta http-equiv="content-security-policy">` tag, manual hash configuration for external scripts/styles, and nonces for dynamic script injection.
+
+Also covers the adapters' `staticHeaders` option (formerly `experimentalStaticHeaders`) for emitting CSP as HTTP headers instead of a meta tag, and the 7.1+ `kind` scoping to `script-src-elem`/`-attr` and `style-src-elem`/`-attr`. States the known limitations: CSP is inactive in `dev` mode (test with `build` + `preview`), incompatible with `<ClientRouter />` view transitions, and unsupported for Shiki's inline styles. Does not cover general deployment adapter setup beyond the CSP header wiring (astro-deployment).
+</objective>
+
+# Astro Security
+
+## Agent Workflow (MANDATORY)
+
+Before ANY implementation, spawn 3 agents in parallel, one `Agent` call each with a `name`:
+
+1. **fuse-ai-pilot:explore-codebase** - Analyze existing security config, adapters, headers
+2. **fuse-ai-pilot:research-expert** - Verify latest Astro 7 CSP docs via Context7/Exa
+3. **mcp__context7__query-docs** - Check CSP compatibility with deployment adapter
+
+After implementation, run **fuse-ai-pilot:sniper** for validation.
+
+---
+
+## Overview
+
+### When to Use
+
+- Enabling CSP in an Astro project (stable in v6.0.0)
+- Configuring `security.csp` in `astro.config.mjs`
+- Adding SHA-256/384/512 hashes for external scripts or styles
+- Using nonces for dynamic script injection
+- Setting up adapter `staticHeaders` for CSP as HTTP headers
+
+### CSP in Astro
+
+Content Security Policy is **stable** since Astro 6.0 (previously experimental) and unchanged in Astro 7. When enabled:
+- Astro automatically generates SHA hashes for all bundled scripts and styles
+- Injects a `<meta http-equiv="content-security-policy">` in each page's `<head>`
+- Supports `script-src` and `style-src` directives by default
+- Since 7.1: hashes/resources accept `{ hash | resource, kind: 'element' | 'attribute' | 'default' }` to target `*-src-elem` / `*-src-attr`
+
+**Limitations:**
+- Not supported in `dev` mode — test with `build` + `preview`
+- External scripts and styles require manual hash configuration
+- Incompatible with `<ClientRouter />` view transitions (use native View Transition API)
+- Shiki syntax highlighter (inline styles) not currently supported
+
+---
+
+## Reference Guide
+
+### Concepts
+
+| Topic | Reference | When to Consult |
+|-------|-----------|-----------------|
+| CSP overview | [csp-overview.md](references/csp-overview.md) | Understanding CSP in Astro |
+| Configuration | [csp-config.md](references/csp-config.md) | All config options |
+| Script directive | [script-directive.md](references/script-directive.md) | script-src configuration |
+| Style directive | [style-directive.md](references/style-directive.md) | style-src configuration |
+| Nonces | [nonces.md](references/nonces.md) | Dynamic script injection |
+| Static headers | [static-headers.md](references/static-headers.md) | Adapter-based CSP headers |
+
+### Templates
+
+| Template | When to Use |
+|----------|-------------|
+| [csp-basic.md](references/templates/csp-basic.md) | Basic CSP enable with algorithm |
+| [csp-advanced.md](references/templates/csp-advanced.md) | Full config with directives + static headers |
+
+---
+
+## Best Practices
+
+1. **Always test with build + preview** — CSP is inactive in dev mode
+2. **Start with SHA-512** — strongest hash algorithm
+3. **Use `'self'` explicitly** — not included by default in resources
+4. **Hash external scripts manually** — compute SHA hashes for CDN resources
+5. **Combine with adapter headers** — use `staticHeaders: true` on the Vercel/Netlify/Node adapter
+
+---
+
+## Forbidden
+
+- Testing CSP in `dev` mode (doesn't work — always use `build + preview`)
+- Using `<ClientRouter />` with CSP enabled
+- Forgetting to add `'self'` when using `resources` array
+- Adding `unsafe-inline` (defeats purpose of CSP)

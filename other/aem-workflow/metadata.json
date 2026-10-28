@@ -1,0 +1,38 @@
+{
+  "name": "aem-workflow",
+  "repo": "lisongmeinorc/apnorcedge",
+  "path": ".agents/skills/aem-workflow/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/lisongmeinorc/apnorcedge",
+  "dir_name": "aem-workflow",
+  "downloaded_at": "2026-10-28T05:55:53.801299Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, workflow=3",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lisongmeinorc",
+  "source_url": "https://github.com/lisongmeinorc/apnorcedge/blob/main/.agents/skills/aem-workflow/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lisongmeinorc/apnorcedge/blob/main/.agents/skills/aem-workflow/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Single entry point for all AEM as a Cloud Service Workflow skills. Covers workflow model design,\ncustom process step and participant chooser development, launcher configuration, workflow triggering,\nand production support including debugging stuck/failed workflows, triaging incidents with Cloud Manager\nlogs, thread pool analysis, and Sling Job diagnostics for the Granite Workflow Engine."
+}

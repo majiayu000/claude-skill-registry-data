@@ -1,0 +1,37 @@
+{
+  "name": "certisyn-independent-verification",
+  "repo": "internet-court/internet-court-skill",
+  "path": "vendored/certisyn/certisyn-independent-verification/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/internet-court/internet-court-skill",
+  "dir_name": "certisyn-independent-verification",
+  "downloaded_at": "2026-10-28T05:08:59.250637Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "internet-court",
+  "source_url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/certisyn/certisyn-independent-verification/SKILL.md",
+  "license": "LicenseRef-Certisyn-Skill-1.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/internet-court/internet-court-skill/blob/main/vendored/certisyn/certisyn-independent-verification/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Independent, third-party verification of what a counterparty claims about itself, established BEFORE an agent commits funds, signs, delegates authority, or admits that counterparty to a deal. Declared coverage today is verification by physical law - vehicle telemetry and orbital node claims - where a finding is arithmetic that can be re-derived rather than an opinion that must be weighed. Use for any reliance on a counterparty assertion, when drafting the verification clause of an agreement, and when assembling or assessing a dispute filing. Returns one of four outcomes, always names what it could not determine, and states the conditions under which its own evidence should be ruled out."
+}

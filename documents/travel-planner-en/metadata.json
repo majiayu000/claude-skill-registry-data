@@ -1,0 +1,38 @@
+{
+  "name": "travel-planner-en",
+  "repo": "hillstreet-ph/open-connect",
+  "path": "resources/migrated/v1-skills/travel-planner-en/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/hillstreet-ph/open-connect",
+  "dir_name": "travel-planner-en",
+  "downloaded_at": "2026-10-28T04:55:38.034444Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: pdf, word, excel",
+    "score": 3,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "pdf",
+      "word",
+      "excel"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hillstreet-ph",
+  "source_url": "https://github.com/hillstreet-ph/open-connect/blob/main/resources/migrated/v1-skills/travel-planner-en/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hillstreet-ph/open-connect/blob/main/resources/migrated/v1-skills/travel-planner-en/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Travel planning and destination research assistant. Use when users need itineraries, budgets, packing lists, cultural guidance, or pre-trip preparation. This Skill automatically invokes @Large language Model for open-ended planning; when current destination facts are needed, it discovers and invokes an available search Skill during generation. Never promise live prices, bookings, payments, visa processing, or safety outcomes."
+}

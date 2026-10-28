@@ -1,0 +1,37 @@
+{
+  "name": "barcode-capture-net-ios",
+  "repo": "gutsofpratik/Horizon-Skills",
+  "path": "skills/source-e1585a24982251d46b1a18de/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/gutsofpratik/Horizon-Skills",
+  "dir_name": "source-e1585a24982251d46b1a18de-gutsofpratik-horizon-skills",
+  "downloaded_at": "2026-10-28T04:45:18.420268Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gutsofpratik",
+  "source_url": "https://github.com/gutsofpratik/Horizon-Skills/blob/main/skills/source-e1585a24982251d46b1a18de/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gutsofpratik/Horizon-Skills/blob/main/skills/source-e1585a24982251d46b1a18de/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Scandit BarcodeCapture in .NET for iOS projects (`net*-ios` target framework, `Scandit.DataCapture.Barcode` NuGet, non-MAUI \u2014 for MAUI apps use barcode-capture-net-maui) \u2014 the low-level, full-control barcode scanning mode without the pre-built SparkScan UI. Use for integration, scan settings, listener and event wiring, overlay customization, camera lifecycle, SDK version migration (v6\u2192v7\u2192v8), replacing ZXing.Net.Mobile or AVFoundation scanners, or troubleshooting."
+}

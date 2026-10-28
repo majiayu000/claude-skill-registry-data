@@ -1,0 +1,37 @@
+{
+  "name": "domain-modeling",
+  "repo": "leek/agent-skills",
+  "path": "skills/domain-modeling/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/leek/agent-skills",
+  "dir_name": "domain-modeling-leek-agent-skills",
+  "downloaded_at": "2026-10-28T05:50:17.330866Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "leek",
+  "source_url": "https://github.com/leek/agent-skills/blob/main/skills/domain-modeling/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/leek/agent-skills/blob/main/skills/domain-modeling/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build and sharpen a project's domain model: challenge terms against the glossary, resolve fuzzy language, stress-test concepts with concrete scenarios, and record GLOSSARY.md entries and ADRs the moment decisions land. Use when pinning down domain terminology or a ubiquitous language, recording an architectural decision, or when another skill (grilling, wayfinder, to-spec) needs the domain model maintained."
+}

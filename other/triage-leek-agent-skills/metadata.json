@@ -1,0 +1,37 @@
+{
+  "name": "triage",
+  "repo": "leek/agent-skills",
+  "path": "skills/triage/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/leek/agent-skills",
+  "dir_name": "triage-leek-agent-skills",
+  "downloaded_at": "2026-10-28T05:50:12.560294Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "leek",
+  "source_url": "https://github.com/leek/agent-skills/blob/main/skills/triage/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/leek/agent-skills/blob/main/skills/triage/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Move markdown issues and external-PR requests through triage roles: categorise, verify, grill if needed, and write agent-ready briefs."
+}

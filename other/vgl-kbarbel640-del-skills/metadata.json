@@ -1,0 +1,37 @@
+{
+  "name": "vgl",
+  "repo": "kbarbel640-del/skills",
+  "path": "skills/galbria/vgl/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/kbarbel640-del/skills",
+  "dir_name": "vgl-kbarbel640-del-skills",
+  "downloaded_at": "2026-10-28T05:35:00.318016Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kbarbel640-del",
+  "source_url": "https://github.com/kbarbel640-del/skills/blob/main/skills/galbria/vgl/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kbarbel640-del/skills/blob/main/skills/galbria/vgl/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write structured VGL (Visual Generation Language) JSON prompts for Bria's FIBO image generation models. Use this skill when creating detailed image descriptions in JSON format for text-to-image generation, image editing, inpainting, outpainting, background generation, or captioning. Triggers include requests to write structured prompts, create VGL JSON, describe images for AI generation, or work with Bria/FIBO's structured_prompt format. Also use when converting natural language image requests into the deterministic JSON schema required by FIBO models."
+}

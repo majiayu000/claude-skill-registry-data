@@ -1,0 +1,38 @@
+{
+  "name": "contract-compare",
+  "repo": "jeremylongshore/tons-of-skills-marketplace",
+  "path": "skills/.curated/contract-compare/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jeremylongshore/tons-of-skills-marketplace",
+  "dir_name": "contract-compare",
+  "downloaded_at": "2026-10-28T05:18:15.349507Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "jeremylongshore",
+  "source_url": "https://github.com/jeremylongshore/tons-of-skills-marketplace/blob/main/skills/.curated/contract-compare/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jeremylongshore/tons-of-skills-marketplace/blob/main/skills/.curated/contract-compare/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Compares two contract versions side-by-side to detect added, removed, and\nmodified clauses with favorability analysis. Use when a user receives a\nrevised contract or redline and needs to understand what changed and who\neach change favors. Trigger with \"/contract-compare\" or \"compare these\ntwo contracts\"."
+}

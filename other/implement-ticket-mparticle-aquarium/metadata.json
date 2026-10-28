@@ -1,0 +1,38 @@
+{
+  "name": "implement-ticket",
+  "repo": "mParticle/aquarium",
+  "path": ".claude/skills/implement-ticket/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mParticle/aquarium",
+  "dir_name": "implement-ticket-mparticle-aquarium",
+  "downloaded_at": "2026-10-28T06:03:40.785552Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "css",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mParticle",
+  "source_url": "https://github.com/mParticle/aquarium/blob/main/.claude/skills/implement-ticket/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mParticle/aquarium/blob/main/.claude/skills/implement-ticket/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "End-to-end Jira ticket implementation \u2014 fetches ticket, creates branch, implements changes, builds, commits, pushes, and creates a PR. Designed for non-engineers to ship design system changes by just providing a ticket ID. Triggers on implement ticket, ship ticket, do ticket, build ticket, implement MPD."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "godot-export",
+  "repo": "laurentvv/agents-kit",
+  "path": "skills/godot-export/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/laurentvv/agents-kit",
+  "dir_name": "godot-export-laurentvv-agents-kit",
+  "downloaded_at": "2026-10-28T05:48:00.759728Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, platform=3",
+    "score": 3,
+    "runner_up": "platform",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "laurentvv",
+  "source_url": "https://github.com/laurentvv/agents-kit/blob/main/skills/godot-export/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/laurentvv/agents-kit/blob/main/skills/godot-export/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Export and build a Godot 4.7 project for distribution: install export templates, define export presets (Windows/macOS/Linux/Web/Android), run headless command-line exports for CI, and handle web (HTML5) COOP/COEP and dedicated-server/headless builds. Use when exporting a Godot game, configuring export_presets.cfg, building for web/desktop/mobile, or automating builds from the command line."
+}

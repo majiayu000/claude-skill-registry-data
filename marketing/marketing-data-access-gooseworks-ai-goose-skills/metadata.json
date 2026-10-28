@@ -1,0 +1,39 @@
+{
+  "name": "marketing-data-access",
+  "repo": "gooseworks-ai/goose-skills",
+  "path": "skills/marketing/marketing-data-access/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/gooseworks-ai/goose-skills",
+  "dir_name": "marketing-data-access-gooseworks-ai-goose-skills",
+  "downloaded_at": "2026-10-28T04:41:25.735001Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for marketing: marketing, seo, social, brand",
+    "score": 4,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "marketing",
+      "seo",
+      "social",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gooseworks-ai",
+  "source_url": "https://github.com/gooseworks-ai/goose-skills/blob/main/skills/marketing/marketing-data-access/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gooseworks-ai/goose-skills/blob/main/skills/marketing/marketing-data-access/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "How to get live public data (ads libraries, social posts and comments, search results, creator profiles), business identity/work-contact reads, domain SEO metrics and paid media generation through GooseWorks, with no vendor key. Load before any playbook step that reads public data or calls an outside model: which proxy call fits the job, what it costs, how to get the human's yes, and what to do when the data is not reachable. Not for brand facts (read the brand brain) or the customer's own ad accounts (the GooseWorks ads tools, or an ads connector they have)."
+}

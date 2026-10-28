@@ -1,0 +1,37 @@
+{
+  "name": "local-pois",
+  "repo": "iDorgham/Workspace-Factory",
+  "path": ".ai/skills/official_brave_local_pois/skill.md",
+  "github_branch": "master",
+  "category": "api",
+  "source": "github.com/iDorgham/Workspace-Factory",
+  "dir_name": "official-brave-local-pois",
+  "downloaded_at": "2026-10-28T05:02:25.603316Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "iDorgham",
+  "source_url": "https://github.com/iDorgham/Workspace-Factory/blob/master/.ai/skills/official_brave_local_pois/skill.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/iDorgham/Workspace-Factory/blob/master/.ai/skills/official_brave_local_pois/skill.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "USE FOR getting local business/POI details. Requires POI IDs obtained from web-search (with result_filter=locations). Returns full business information including ratings, hours, contact info. Max 20 IDs."
+}

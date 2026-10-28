@@ -1,0 +1,37 @@
+{
+  "name": "naming",
+  "repo": "kromatv/kroma",
+  "path": ".claude/skills/naming/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/kromatv/kroma",
+  "dir_name": "naming-kromatv-kroma",
+  "downloaded_at": "2026-10-28T05:43:17.574341Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kromatv",
+  "source_url": "https://github.com/kromatv/kroma/blob/main/.claude/skills/naming/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kromatv/kroma/blob/main/.claude/skills/naming/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "What things get called. A file is named after its export in the project's case convention, a suffix is a resolution instruction rather than decoration, an index file only re-exports, and some symbol names are always wrong (utils, helpers, V2, Enhanced, New). Covers learning a tree's local vocabulary before adding to it, test and platform-variant naming, and the per-language conventions. Use when creating a file or directory, naming a test file, adding a platform variant, or when a name has to change. Triggers - \"what should I call this file\", \"where does this file go\", \"naming convention\", \"kebab or camel\", \"name this test\"."
+}

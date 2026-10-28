@@ -1,0 +1,38 @@
+{
+  "name": "cli",
+  "repo": "korchasa/flowai-plugins",
+  "path": "plugins/flowai-deno/skills/cli/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/korchasa/flowai-plugins",
+  "dir_name": "cli-korchasa-flowai-plugins",
+  "downloaded_at": "2026-10-28T05:41:45.068498Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "korchasa",
+  "source_url": "https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai-deno/skills/cli/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai-deno/skills/cli/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run Deno with the right flags \u2014 run/test permissions, `deno task` over raw commands, unstable opt-ins, deps via `deno add`/`outdated`/`remove`. Use when wiring or running Deno locally. Not for Deno Deploy or cloud hosting \u2014 use deploy."
+}

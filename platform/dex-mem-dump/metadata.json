@@ -1,0 +1,38 @@
+{
+  "name": "dex-mem-dump",
+  "repo": "index-login/MobileRE-Skill",
+  "path": ".kilo/skill/dex-mem-dump/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/index-login/MobileRE-Skill",
+  "dir_name": "dex-mem-dump",
+  "downloaded_at": "2026-10-28T05:06:42.020488Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: device, adb, android",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "device",
+      "adb",
+      "android"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "index-login",
+  "source_url": "https://github.com/index-login/MobileRE-Skill/blob/main/.kilo/skill/dex-mem-dump/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/index-login/MobileRE-Skill/blob/main/.kilo/skill/dex-mem-dump/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "\u8fd0\u884c\u65f6 DEX \u5185\u5b58 dump / \u8131\u58f3\uff08root \u76f4\u8bfb /proc/<pid>/mem\uff0c\u4e0d\u6ce8\u5165\u3001\u4e0d ptrace\uff09\uff1a\u5e38\u89c4\u89e3\u5305\u62ff\u4e0d\u5230\u3001\u62bd\u53d6\u58f3\u672a\u56de\u586b\u3001\u6216\u76ee\u6807\u67e5 TracerPid \u65f6\u7528\u3002\u6d41\u7a0b\uff1a\u63a8\u5de5\u5177 \u2192 \u8dd1 \u2192 \u62c9\u56de \u2192 \u6e05\u7406\uff1b\u5206\u8bca\u4e0e\u6392\u969c\u89c1 references/unpacking.md\u3002"
+}

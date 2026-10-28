@@ -1,0 +1,38 @@
+{
+  "name": "aws-s3",
+  "repo": "ibrdot/swe-re-expert",
+  "path": "skills/aws-s3/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/ibrdot/swe-re-expert",
+  "dir_name": "aws-s3-ibrdot-swe-re-expert",
+  "downloaded_at": "2026-10-28T05:03:52.634597Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ibrdot",
+  "source_url": "https://github.com/ibrdot/swe-re-expert/blob/main/skills/aws-s3/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ibrdot/swe-re-expert/blob/main/skills/aws-s3/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Configure S3 buckets, policies, and lifecycle rules. Implement versioning, replication, and security. Use when managing object storage on AWS."
+}

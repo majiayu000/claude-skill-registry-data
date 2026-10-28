@@ -1,0 +1,38 @@
+{
+  "name": "test-agent",
+  "repo": "futo-org/futo-notes",
+  "path": ".claude/skills/test-agent/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/futo-org/futo-notes",
+  "dir_name": "test-agent-futo-org-futo-notes",
+  "downloaded_at": "2026-10-28T04:30:15.551461Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, qa, integration",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "qa",
+      "integration"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "futo-org",
+  "source_url": "https://github.com/futo-org/futo-notes/blob/main/.claude/skills/test-agent/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/futo-org/futo-notes/blob/main/.claude/skills/test-agent/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Adversarial testing agent. Takes natural language test targets (\"test sync conflict resolution, semantic search, markdown tables\"), generates adversarial scenarios, executes them, and reports structured verdicts comparing actual vs expected behavior. Use when the user says \"test X\", \"can you test\", \"X needs testing\", \"break this\", \"QA this\", or describes features/fixes that need adversarial validation. Unlike /verify (which runs existing test suites), /test-agent generates NEW ephemeral test scenarios designed to break things."
+}

@@ -1,0 +1,36 @@
+{
+  "name": "ship",
+  "repo": "gabrielbsandim/task-funnel",
+  "path": "skills/ship/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/gabrielbsandim/task-funnel",
+  "dir_name": "ship-gabrielbsandim-task-funnel",
+  "downloaded_at": "2026-10-28T04:31:15.516622Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gabrielbsandim",
+  "source_url": "https://github.com/gabrielbsandim/task-funnel/blob/main/skills/ship/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gabrielbsandim/task-funnel/blob/main/skills/ship/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Takes work that is already implemented and committed on a branch and ships it: runs the repo's ship gates off receipts, pushes, opens a draft pull request, moves the board to in review, and removes the worktree. Use when the code exists and the task is to get it reviewable, or on /ship, and not when anything still needs writing."
+}

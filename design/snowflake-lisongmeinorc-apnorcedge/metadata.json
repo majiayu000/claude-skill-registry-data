@@ -1,0 +1,38 @@
+{
+  "name": "snowflake",
+  "repo": "lisongmeinorc/apnorcedge",
+  "path": ".claude/skills/snowflake/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/lisongmeinorc/apnorcedge",
+  "dir_name": "snowflake-lisongmeinorc-apnorcedge",
+  "downloaded_at": "2026-10-28T05:55:46.452689Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, css, figma",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "design",
+      "css",
+      "figma"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lisongmeinorc",
+  "source_url": "https://github.com/lisongmeinorc/apnorcedge/blob/main/.claude/skills/snowflake/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lisongmeinorc/apnorcedge/blob/main/.claude/skills/snowflake/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this when converting an AI-generated static HTML page (Stardust, Mobirise, Relume, Lovable, v0, Figma-derived, etc.) into an Edge Delivery Services page while preserving the original design and making content authorable in Document Authoring \u2014 triggers include \"convert this page to EDS\", \"static-to-EDS overlay\", \"convert to EDS blocks\", \"next experimentation\", \"next run\", \"start run\", or providing a source URL to make editable in DA. Covers two modes \u2014 page-level (overlay template with slot markers) and block-level (each section becomes an independent EDS block). For canonical EDS block-rewrite migrations use page-import instead."
+}

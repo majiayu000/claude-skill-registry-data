@@ -1,0 +1,37 @@
+{
+  "name": "ads-north-star-strategy",
+  "repo": "gooseworks-ai/goose-skills",
+  "path": "skills/shared/ads-north-star-strategy/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/gooseworks-ai/goose-skills",
+  "dir_name": "ads-north-star-strategy-gooseworks-ai-goose-skills",
+  "downloaded_at": "2026-10-28T04:41:23.952313Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: business=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "business",
+      "strategy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gooseworks-ai",
+  "source_url": "https://github.com/gooseworks-ai/goose-skills/blob/main/skills/shared/ads-north-star-strategy/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gooseworks-ai/goose-skills/blob/main/skills/shared/ads-north-star-strategy/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn a brand's facts, a campaign brief and the product into a one-minute Meta ad strategy with its reasoning \u2014 goal, audience, objective and placements, budget split, how many ads and how different they must be (generate 3x so the user can choose), the test frame, the success metric, and safety rules for the user to accept. Decides what launch-meta-ad-campaign then executes, and re-reads the strategy after a deep check to show which assumption changed. Use it after intake and before any creative is generated or any campaign is built."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "adr-skill",
+  "repo": "iDorgham/Workspace-Factory",
+  "path": ".ai/skills/official_vercel_adr_skill/skill.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/iDorgham/Workspace-Factory",
+  "dir_name": "official-vercel-adr-skill",
+  "downloaded_at": "2026-10-28T05:02:26.836321Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "iDorgham",
+  "source_url": "https://github.com/iDorgham/Workspace-Factory/blob/master/.ai/skills/official_vercel_adr_skill/skill.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/iDorgham/Workspace-Factory/blob/master/.ai/skills/official_vercel_adr_skill/skill.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Create and maintain Architecture Decision Records (ADRs) optimized for agentic coding workflows. Use when you need to propose, write, update, accept/reject, deprecate, or supersede an ADR; bootstrap an adr folder and index; consult existing ADRs before implementing changes; or enforce ADR conventions. This skill uses Socratic questioning to capture intent before drafting, and validates output against an agent-readiness checklist."
+}

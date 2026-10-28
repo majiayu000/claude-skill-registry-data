@@ -1,0 +1,39 @@
+{
+  "name": "wizard",
+  "repo": "leek/agent-skills",
+  "path": "skills/wizard/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/leek/agent-skills",
+  "dir_name": "wizard-leek-agent-skills",
+  "downloaded_at": "2026-10-28T05:50:12.989978Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: ci, docker, infra, infrastructure",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ci",
+      "docker",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "leek",
+  "source_url": "https://github.com/leek/agent-skills/blob/main/skills/wizard/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/leek/agent-skills/blob/main/skills/wizard/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate an interactive bash wizard that walks a human through steps only they can perform. Use when provisioning infrastructure, creating credentials or CI secrets in a third-party dashboard, or running a one-off migration or cutover. For steps the agent can perform itself, perform them."
+}

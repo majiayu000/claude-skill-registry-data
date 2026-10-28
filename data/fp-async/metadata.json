@@ -1,0 +1,39 @@
+{
+  "name": "fp-async",
+  "repo": "ibrdot/swe-re-expert",
+  "path": "skills/fp-async/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/ibrdot/swe-re-expert",
+  "dir_name": "fp-async",
+  "downloaded_at": "2026-10-28T05:04:04.163771Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, database, pipeline",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "ibrdot",
+  "source_url": "https://github.com/ibrdot/swe-re-expert/blob/main/skills/fp-async/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ibrdot/swe-re-expert/blob/main/skills/fp-async/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Practical async patterns using TaskEither - clean pipelines instead of try/catch hell, with real API examples"
+}

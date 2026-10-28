@@ -1,0 +1,37 @@
+{
+  "name": "engineer-ai-ide-plugin",
+  "repo": "korchasa/flowai-plugins",
+  "path": "plugins/flowai-engineering/skills/engineer-ai-ide-plugin/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/korchasa/flowai-plugins",
+  "dir_name": "engineer-ai-ide-plugin",
+  "downloaded_at": "2026-10-28T05:41:51.683963Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "korchasa",
+  "source_url": "https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai-engineering/skills/engineer-ai-ide-plugin/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai-engineering/skills/engineer-ai-ide-plugin/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Design and build complete AI-IDE plugins bundling skills, MCP tools and hooks with packaging, manifests, marketplaces and per-IDE validation. Use when the user wants to create, design or package a multi-component plugin. Not for a standalone skill."
+}

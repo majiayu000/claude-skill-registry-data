@@ -1,0 +1,36 @@
+{
+  "name": "diagnose-benchmark-failure",
+  "repo": "korchasa/flowai-plugins",
+  "path": "plugins/flowai-engineering/skills/diagnose-benchmark-failure/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/korchasa/flowai-plugins",
+  "dir_name": "diagnose-benchmark-failure",
+  "downloaded_at": "2026-10-28T05:41:52.058782Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "korchasa",
+  "source_url": "https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai-engineering/skills/diagnose-benchmark-failure/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai-engineering/skills/diagnose-benchmark-failure/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a judged benchmark or acceptance scenario fails and you need the cause before editing. Reads the judge's rendering, the raw transcript, the primitive the agent saw and the scenario, then reports a classified diagnosis without fixing."
+}

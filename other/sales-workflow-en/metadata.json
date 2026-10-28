@@ -1,0 +1,37 @@
+{
+  "name": "sales-workflow-en",
+  "repo": "hillstreet-ph/open-connect",
+  "path": "resources/migrated/v1-skills/sales-workflow-en/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/hillstreet-ph/open-connect",
+  "dir_name": "sales-workflow-en",
+  "downloaded_at": "2026-10-28T04:55:38.277564Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hillstreet-ph",
+  "source_url": "https://github.com/hillstreet-ph/open-connect/blob/main/resources/migrated/v1-skills/sales-workflow-en/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hillstreet-ph/open-connect/blob/main/resources/migrated/v1-skills/sales-workflow-en/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Sales workflow assistant. Trigger when users mention \"sales\", \"account\", \"deal\", \"lead\", \"pipeline\", \"forecast\", \"CRM\", \"meeting prep\", \"follow-up\", \"proposal\", \"competitive\", \"ROI\", \"call coaching\", \"account prioritization\", \"customer quote\", \"company research\", \"enrichment\", \"next step\", or any sales-related workflow request. Supports meeting preparation, post-call follow-up, account prioritization, forecast review, deal strategy, competitive intelligence, company enrichment, account signal monitoring, call coaching, trend analysis, customer quote retrieval, company deep research, next-step suggestions, and user preference management."
+}

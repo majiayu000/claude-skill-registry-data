@@ -1,0 +1,38 @@
+{
+  "name": "review-and-commit",
+  "repo": "korchasa/flowai-plugins",
+  "path": "plugins/flowai/skills/review-and-commit/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/korchasa/flowai-plugins",
+  "dir_name": "review-and-commit",
+  "downloaded_at": "2026-10-28T05:41:47.373272Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, qa, pytest",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "qa",
+      "pytest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "korchasa",
+  "source_url": "https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai/skills/review-and-commit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai/skills/review-and-commit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user asks to review the uncommitted changes and then commit them \u2014 the verdict gates the commit. Not for a review alone or a plain commit. Self-contained \u2014 execute the inlined steps directly, do NOT invoke other skills."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "tool-exception-dump",
+  "repo": "hicann/cannbot-skills",
+  "path": "tools/tool-exception-dump/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/hicann/cannbot-skills",
+  "dir_name": "tool-exception-dump-hicann-cannbot-skills",
+  "downloaded_at": "2026-10-28T04:54:52.378883Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, software, debug",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "software",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hicann",
+  "source_url": "https://github.com/hicann/cannbot-skills/blob/master/tools/tool-exception-dump/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hicann/cannbot-skills/blob/master/tools/tool-exception-dump/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "\u6607\u817e NPU AI Core Error \u7cfb\u7edf\u5316\u8bca\u65ad\u5de5\u4f5c\u6d41\uff1a\u73af\u5883\u4e0e\u8f93\u5165\u68c0\u67e5\u3001\u6545\u969c\u4fe1\u606f\u6536\u96c6\u3001\u573a\u666f\u5224\u5b9a\u4e0e\u62a5\u9519\u884c\u5b9a\u4f4d\u3001\u9519\u8bef\u7c7b\u578b\u8bc6\u522b\u3001\u5355\u7b97\u5b50\u590d\u73b0\u3001\u8bc1\u636e\u94fe\u6c47\u805a\u4e0e\u4fee\u590d\u5efa\u8bae\uff0c\u57fa\u4e8e msaicerr/asys \u5b98\u65b9\u5de5\u5177\u7ba1\u7ebf\u6267\u884c\u4e0e\u5224\u8bfb\uff0c\u8f93\u51fa\u516d\u6bb5\u5f0f\u8bc1\u636e\u94fe\u8bca\u65ad\u62a5\u544a\u3002\nUse when\uff08\u6ee1\u8db3\u4efb\u4e00\u5f3a\u4fe1\u53f7\u5373\u89e6\u53d1\uff09\uff1a\u5f53\u7528\u6237\u63d0\u5230 aicore error\u3001aivec error\u3001AI Core Error\u3001AI Core \u5f02\u5e38\u3001\u6838\u9519\u8bef\u3001\u7b97\u5b50\u62a5\u9519\uff1b\u8d8a\u754c\u3001\u91ce\u6307\u9488\u3001\u5185\u5b58\u8e29\u8e0f\u3001\u5730\u5740\u975e\u6cd5\uff1bexception dump \u89e3\u6790\u3001plog\u3001\u6545\u969c\u65e5\u5fd7\u6536\u96c6\u3001asys collect\u3001msaicerr -p/-d/-e\uff1b\u62a5\u9519\u884c\u5b9a\u4f4d\u3001\u9519\u8bef\u7801\u5b9a\u4f4d\u3001\u5bc4\u5b58\u5668\u89e3\u7801\u3001\u7ed3\u8bba\u7801 101-107\uff1b\u5355\u7b97\u5b50\u590d\u73b0\u3001\u6700\u5c0f\u590d\u73b0\u3001\u6839\u56e0\u5206\u6790\uff1bKernel \u62a5\u9519\u8c03\u8bd5\u3002\u5373\u4f7f\u53ea\u662f\u8be2\u95ee\u67d0\u62a5\u9519\u662f\u5426\u4e3a AI Core Error \u4e5f\u5e94\u4f7f\u7528\u672c\u6280\u80fd\u3002\nDo NOT use\uff1a\u4ec5\u8be2\u95ee msaicerr/asys \u5de5\u5177\u7528\u6cd5\u4e0e\u53c2\u6570\u7ec6\u8282\uff08\u8f6c msaicerr-toolkit\u3001asys-toolkit \u6280\u80fd\uff09\uff1bGE/\u56fe\u7f16\u8bd1\u5c42\u95ee\u9898\uff08\u8f6c graph/ \u57df\u6280\u80fd\uff09\uff1b\u7b97\u5b50\u7cbe\u5ea6\u4e0d\u8fbe\u6807\uff08\u8f6c ascendc-precision-debug\uff09\uff1bAI CPU Error\u3001HCCL \u7b49\u5176\u4ed6\u9519\u8bef\u7c7b\u578b\uff08\u4e0d\u5728\u8986\u76d6\u8303\u56f4\uff0c\u8bf4\u660e\u540e\u6307\u8def\uff09\u3002"
+}

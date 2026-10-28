@@ -1,0 +1,38 @@
+{
+  "name": "claude-md-improver",
+  "repo": "gutsofpratik/Horizon-Skills",
+  "path": "skills/local-b37f3edc325b16fbacb0a5c6/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/gutsofpratik/Horizon-Skills",
+  "dir_name": "local-b37f3edc325b16fbacb0a5c6-gutsofpratik-horizon-skills",
+  "downloaded_at": "2026-10-28T04:45:05.747253Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gutsofpratik",
+  "source_url": "https://github.com/gutsofpratik/Horizon-Skills/blob/main/skills/local-b37f3edc325b16fbacb0a5c6/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gutsofpratik/Horizon-Skills/blob/main/skills/local-b37f3edc325b16fbacb0a5c6/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit and improve CLAUDE.md files in repositories. Use when user asks to check, audit, update, improve, or fix CLAUDE.md files. Scans for all CLAUDE.md files, evaluates quality against templates, outputs quality report, then makes targeted updates. Also use when the user mentions \"CLAUDE.md maintenance\" or \"project memory optimization\"."
+}

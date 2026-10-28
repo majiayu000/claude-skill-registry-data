@@ -1,0 +1,36 @@
+{
+  "name": "agent-usability-loop",
+  "repo": "m16khb-org/issueops",
+  "path": "skills/agent-usability-loop/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/m16khb-org/issueops",
+  "dir_name": "agent-usability-loop",
+  "downloaded_at": "2026-10-28T06:03:16.536701Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "m16khb-org",
+  "source_url": "https://github.com/m16khb-org/issueops/blob/main/skills/agent-usability-loop/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/m16khb-org/issueops/blob/main/skills/agent-usability-loop/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use to improve how coding agents use a CLI, MCP server, or harness (\"\uc5d0\uc774\uc804\ud2b8 \uc0ac\uc6a9\uc131 \uac1c\uc120\", \"agent QA \ub3cc\ub824\uc918\", \"autoresearch\"): measures model-facing output, runs host agents in sandboxes, keeps or reverts one change per run."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "zpa-create-conditional-access-rule",
+  "repo": "gutsofpratik/Horizon-Skills",
+  "path": "skills/source-9866e06ba57ac5ebc92e0182/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/gutsofpratik/Horizon-Skills",
+  "dir_name": "source-9866e06ba57ac5ebc92e0182-gutsofpratik-horizon-skills",
+  "downloaded_at": "2026-10-28T04:45:08.805462Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: business=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "business",
+      "strategy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gutsofpratik",
+  "source_url": "https://github.com/gutsofpratik/Horizon-Skills/blob/main/skills/source-9866e06ba57ac5ebc92e0182/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gutsofpratik/Horizon-Skills/blob/main/skills/source-9866e06ba57ac5ebc92e0182/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create a ZPA Access Policy rule that gates access to a private application on multiple combined checks: identity (SCIM group / SAML), one or more named device posture profiles (associated by UDID; ZPA does not introspect what each profile checks), platform reported by ZCC, country, and risk-score level. Use when an admin asks for 'conditional access', 'multi-check access rule', 'attach posture profile X and risk level low to this rule', or 'allow only if posture passes and risk is low' for a private application. For session-duration / re-auth requirements, see `zpa-create-session-duration-rule` (separate ZPA resource type)."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "pb-aos-e2e",
+  "repo": "hybridlabor-api/aos",
+  "path": "skills/playbooks/pb-aos-e2e/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/hybridlabor-api/aos",
+  "dir_name": "pb-aos-e2e",
+  "downloaded_at": "2026-10-28T05:00:50.323723Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hybridlabor-api",
+  "source_url": "https://github.com/hybridlabor-api/aos/blob/main/skills/playbooks/pb-aos-e2e/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hybridlabor-api/aos/blob/main/skills/playbooks/pb-aos-e2e/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "AOS release E2E in a sandbox: install the packed tarball, verify doctor, gates, memB, hub, update, uninstall. Run before a release merge."
+}

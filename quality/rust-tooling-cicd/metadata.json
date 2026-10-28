@@ -1,0 +1,38 @@
+{
+  "name": "rust-tooling-cicd",
+  "repo": "fusengine/agents",
+  "path": "plugins/rust-expert/skills/rust-tooling-cicd/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/fusengine/agents",
+  "dir_name": "rust-tooling-cicd",
+  "downloaded_at": "2026-10-28T04:30:03.413886Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, lint, review",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "lint",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fusengine",
+  "source_url": "https://github.com/fusengine/agents/blob/main/plugins/rust-expert/skills/rust-tooling-cicd/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fusengine/agents/blob/main/plugins/rust-expert/skills/rust-tooling-cicd/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when structuring a Cargo workspace or building a Rust CI pipeline \u2014 fmt, clippy, cargo-deny/audit, nextest, coverage, MSRV. Not for writing the tests themselves (rust-testing-quality)."
+}

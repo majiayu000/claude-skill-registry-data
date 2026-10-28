@@ -1,0 +1,39 @@
+{
+  "name": "write-report",
+  "repo": "gooseworks-ai/goose-skills",
+  "path": "skills/marketing/write-report/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/gooseworks-ai/goose-skills",
+  "dir_name": "write-report-gooseworks-ai-goose-skills",
+  "downloaded_at": "2026-10-28T04:41:07.995474Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for marketing: marketing, social, campaign, brand",
+    "score": 4,
+    "runner_up": "creative",
+    "runner_up_score": 2,
+    "signals": [
+      "marketing",
+      "social",
+      "campaign",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gooseworks-ai",
+  "source_url": "https://github.com/gooseworks-ai/goose-skills/blob/main/skills/marketing/write-report/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gooseworks-ai/goose-skills/blob/main/skills/marketing/write-report/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turns findings you already have into a report a marketer can read in 30 seconds. It has a short summary with key findings and how sure each one is, the first move, decisions needed, at most six next moves, what was not checked, and dated sources. It checks length and wording before handing over, then saves the report to the brand. Use alone when you already have the findings and their sources; otherwise run the playbook for the job (e.g. research-market, research-competitors, plan-campaign)."
+}

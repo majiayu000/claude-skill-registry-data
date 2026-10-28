@@ -1,0 +1,38 @@
+{
+  "name": "review-commit-push",
+  "repo": "korchasa/flowai-plugins",
+  "path": "plugins/flowai/skills/review-commit-push/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/korchasa/flowai-plugins",
+  "dir_name": "review-commit-push",
+  "downloaded_at": "2026-10-28T05:41:47.807221Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, planning",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "planning"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "korchasa",
+  "source_url": "https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai/skills/review-commit-push/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai/skills/review-commit-push/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user asks to review finished uncommitted work, commit it and push it in one run. Not for planning or implementing, nor when the user stops before the push. Self-contained \u2014 execute the inlined steps directly, do NOT invoke other skills."
+}

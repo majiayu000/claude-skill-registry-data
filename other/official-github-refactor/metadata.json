@@ -1,0 +1,37 @@
+{
+  "name": "refactor",
+  "repo": "iDorgham/Workspace-Factory",
+  "path": ".ai/skills/official_github_refactor/skill.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/iDorgham/Workspace-Factory",
+  "dir_name": "official-github-refactor",
+  "downloaded_at": "2026-10-28T05:02:21.319765Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "iDorgham",
+  "source_url": "https://github.com/iDorgham/Workspace-Factory/blob/master/.ai/skills/official_github_refactor/skill.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/iDorgham/Workspace-Factory/blob/master/.ai/skills/official_github_refactor/skill.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Surgical code refactoring to improve maintainability without changing behavior. Covers extracting functions, renaming variables, breaking down god functions, improving type safety, eliminating code smells, and applying design patterns. Less drastic than repo-rebuilder; use for gradual improvements."
+}

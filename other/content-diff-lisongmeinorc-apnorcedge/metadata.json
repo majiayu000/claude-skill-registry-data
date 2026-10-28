@@ -1,0 +1,37 @@
+{
+  "name": "content-diff",
+  "repo": "lisongmeinorc/apnorcedge",
+  "path": ".agents/skills/content-diff/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/lisongmeinorc/apnorcedge",
+  "dir_name": "content-diff-lisongmeinorc-apnorcedge",
+  "downloaded_at": "2026-10-28T05:55:55.706927Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, marketing=2",
+    "score": 2,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lisongmeinorc",
+  "source_url": "https://github.com/lisongmeinorc/apnorcedge/blob/main/.agents/skills/content-diff/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lisongmeinorc/apnorcedge/blob/main/.agents/skills/content-diff/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Compare two versions of an AEM Edge Delivery Services page to identify what changed. Fetches preview vs live, or two different URLs, and produces a detailed content diff showing added, removed, and modified content, metadata, and blocks. Use when reviewing changes before publishing, auditing content modifications, or tracking content evolution."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "feature-doc",
+  "repo": "huytieu/COG-second-brain",
+  "path": ".claude/skills/feature-doc/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/huytieu/COG-second-brain",
+  "dir_name": "feature-doc-huytieu-cog-second-brain-2",
+  "downloaded_at": "2026-10-28T05:00:11.227113Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, markdown, documentation",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "huytieu",
+  "source_url": "https://github.com/huytieu/COG-second-brain/blob/main/.claude/skills/feature-doc/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/huytieu/COG-second-brain/blob/main/.claude/skills/feature-doc/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Closed-loop feature documentation for your product. Give it a feature (issue numbers or an id) and it reads the source, drives your live app to capture real screenshots and a screen recording, writes a docs article (Docusaurus or any markdown docs site) with both how-to steps and use-case content, then verifies the article with a fresh-context read-only verifier before reporting. Use when you say \"write the doc for <feature>\", \"document issue #123\", or \"/feature-doc\"."
+}

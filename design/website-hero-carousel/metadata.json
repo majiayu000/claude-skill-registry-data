@@ -1,0 +1,37 @@
+{
+  "name": "website-hero-carousel",
+  "repo": "karero/croftweaver",
+  "path": "skills/website-hero-carousel/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/karero/croftweaver",
+  "dir_name": "website-hero-carousel",
+  "downloaded_at": "2026-10-28T05:33:45.525101Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, component",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "design",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "karero",
+  "source_url": "https://github.com/karero/croftweaver/blob/main/skills/website-hero-carousel/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/karero/croftweaver/blob/main/skills/website-hero-carousel/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Add a photo place whose photos take turns by themselves, with one dot per photo, to a new-website site: a component, one script of the site's own (so a strict Content-Security-Policy holds), its texts in English and German, and tests/hero-carousel.spec.ts. Settings: pause \"button\" (default, a visible Pause / Resume button) or \"dots\" (no button, a dot stops it); swap \"instant\" (default) or \"fade\". Built to keep the page from jumping, the dots readable on any photo, and phones usable. Run on request, for a home page or any page. Trigger phrases: \"photos that rotate\", \"auto-rotating hero\", \"carousel\", \"slider\", \"key visual that changes\", \"dots under the photo\", \"slideshow\", \"Bildwechsel\", \"Karussell\". Not for one photo (no carousel needed), a gallery the visitor pages through, or video."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "adaptive-fastopd",
+  "repo": "hiyenwong/ai_collection",
+  "path": "collection/skills/other/adaptive-fastopd/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/hiyenwong/ai_collection",
+  "dir_name": "adaptive-fastopd",
+  "downloaded_at": "2026-10-28T04:56:39.326451Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hiyenwong",
+  "source_url": "https://github.com/hiyenwong/ai_collection/blob/main/collection/skills/other/adaptive-fastopd/SKILL.md",
+  "license": "Complete terms in LICENSE.txt",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hiyenwong/ai_collection/blob/main/collection/skills/other/adaptive-fastopd/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Adaptive FastOPD methodology for efficient on-policy distillation with progress-aware rollout horizon expansion. Reduces training time by 49.1-71.2% while maintaining or improving performance by dynamically expanding rollout horizons only when learning has plateaued and current horizon is sufficiently utilized."
+}

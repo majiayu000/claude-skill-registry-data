@@ -1,0 +1,38 @@
+{
+  "name": "orca-emulator",
+  "repo": "leonardoacosta/agents",
+  "path": "skills/orca-emulator/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/leonardoacosta/agents",
+  "dir_name": "orca-emulator",
+  "downloaded_at": "2026-10-28T05:51:15.504969Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: device, android, ios",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "device",
+      "android",
+      "ios"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "leonardoacosta",
+  "source_url": "https://github.com/leonardoacosta/agents/blob/main/skills/orca-emulator/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/leonardoacosta/agents/blob/main/skills/orca-emulator/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "iOS Simulator control from inside Orca, with the live device view in Orca's emulator pane. Use when driving a booted Apple Simulator on macOS: taps, gestures, typing, hardware buttons, rotation, and the accessibility tree, or when an iOS change needs simulator evidence. For an Android device or emulator use the Android emulator skill; build and install the app with xcodebuild or simctl first."
+}

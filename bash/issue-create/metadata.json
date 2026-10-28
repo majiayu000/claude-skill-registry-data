@@ -1,0 +1,38 @@
+{
+  "name": "issue-create",
+  "repo": "jmagly/aiwg",
+  "path": "agentic/code/plugins/sdlc/skills/issue-create/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/jmagly/aiwg",
+  "dir_name": "issue-create",
+  "downloaded_at": "2026-10-28T05:22:27.045643Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jmagly",
+  "source_url": "https://github.com/jmagly/aiwg/blob/main/agentic/code/plugins/sdlc/skills/issue-create/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jmagly/aiwg/blob/main/agentic/code/plugins/sdlc/skills/issue-create/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create a new ticket/issue with configurable backend (Gitea, GitHub, Jira, Linear, or local files)"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "create-vo-elevenlabs",
+  "repo": "gooseworks-ai/goose-skills",
+  "path": "skills/video/create-vo-elevenlabs/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/gooseworks-ai/goose-skills",
+  "dir_name": "create-vo-elevenlabs",
+  "downloaded_at": "2026-10-28T04:41:17.469747Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gooseworks-ai",
+  "source_url": "https://github.com/gooseworks-ai/goose-skills/blob/main/skills/video/create-vo-elevenlabs/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gooseworks-ai/goose-skills/blob/main/skills/video/create-vo-elevenlabs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate a voiceover (VO) clip via ElevenLabs text-to-speech, routed through the GooseWorks proxy, so the call is charged to your GooseWorks credits. Voice id + script text come from the template recipe. Use for the spoken narration of VO-driven video-ad formats (cgi-app-sizzle, flat-vector-explainer, hypermotion). Never call ElevenLabs directly \u2014 the proxy attribution is required."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "migration",
+  "repo": "lisongmeinorc/apnorcedge",
+  "path": ".agents/skills/migration/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/lisongmeinorc/apnorcedge",
+  "dir_name": "migration-lisongmeinorc-apnorcedge",
+  "downloaded_at": "2026-10-28T05:55:46.249497Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, component",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lisongmeinorc",
+  "source_url": "https://github.com/lisongmeinorc/apnorcedge/blob/main/.agents/skills/migration/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lisongmeinorc/apnorcedge/blob/main/.agents/skills/migration/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Migrates legacy AEM (6.x, AMS, on-prem) to AEM as a Cloud Service via BPA CSV/cache and\nCAM/MCP discovery, one pattern per session. Use to review/scan a project for AEMaaCS\nmigration \u2014 generates a read-only migration-runbook.md \u2014 or to fix specific Cloud Service\nblockers: scheduler, ResourceChangeListener, replication, EventListener, OSGi EventHandler,\nDAM AssetManager, HTL data-sly-test lint, Classic UI / ExtJS / Coral 2 \u2192 Coral 3 dialog migration (lui),\nCustom Design Widgets (cdw), Vault package install-time dependencies (vault-package-dependencies),\nGuava cache \u2192 Caffeine swaps (guavaCache), and static\u2192editable template modernization. Also\nexternalizes OSGi config secrets to Cloud Manager (scans ui.config/.cfg.json for $[secret:]/$[env:]\nplaceholders) and converts AMS/on-prem Dispatcher configs to AEMaaCS (Branch E)."
+}

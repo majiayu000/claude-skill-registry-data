@@ -1,0 +1,38 @@
+{
+  "name": "render-imessage-chat",
+  "repo": "gooseworks-ai/goose-skills",
+  "path": "skills/video/render-imessage-chat/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/gooseworks-ai/goose-skills",
+  "dir_name": "render-imessage-chat",
+  "downloaded_at": "2026-10-28T04:41:17.720424Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gooseworks-ai",
+  "source_url": "https://github.com/gooseworks-ai/goose-skills/blob/main/skills/video/render-imessage-chat/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gooseworks-ai/goose-skills/blob/main/skills/video/render-imessage-chat/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Render a configurable iMessage conversation inside a properly framed phone, then a brand end card. Uses the original send/receive sounds and a shared frame timeline for text, typing, scrolling and sound. Free local Playwright + ffmpeg assembly; optional image/music generation belongs to separate gated capabilities."
+}

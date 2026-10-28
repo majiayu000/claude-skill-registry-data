@@ -1,0 +1,38 @@
+{
+  "name": "triage",
+  "repo": "huytran1120/vietnam-agentic-skills",
+  "path": "skills/triage/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/huytran1120/vietnam-agentic-skills",
+  "dir_name": "triage-huytran1120-vietnam-agentic-skil",
+  "downloaded_at": "2026-10-28T05:00:34.065289Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "huytran1120",
+  "source_url": "https://github.com/huytran1120/vietnam-agentic-skills/blob/main/skills/triage/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/huytran1120/vietnam-agentic-skills/blob/main/skills/triage/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Move issues and external PRs through a state machine of triage roles \u2014 categorise, verify, grill if needed, and write agent-ready briefs."
+}

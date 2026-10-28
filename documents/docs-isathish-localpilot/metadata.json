@@ -1,0 +1,39 @@
+{
+  "name": "docs",
+  "repo": "isathish/localpilot",
+  "path": "skills/docs/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/isathish/localpilot",
+  "dir_name": "docs-isathish-localpilot",
+  "downloaded_at": "2026-10-28T05:10:02.918773Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, markdown, documentation",
+    "score": 4,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "doc",
+      "docs",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "isathish",
+  "source_url": "https://github.com/isathish/localpilot/blob/main/skills/docs/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/isathish/localpilot/blob/main/skills/docs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write or update project documentation that matches the code \u2014 README, getting started, architecture overview, API/CLI reference, inline doc comments for public APIs, changelog entries. USE WHEN the user asks to \"document\", \"write a README\", \"explain how this works\" for others, \"API docs\", \"update the docs\", \"changelog\", or after a feature that changes how the project is used."
+}

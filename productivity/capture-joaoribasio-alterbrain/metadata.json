@@ -1,0 +1,37 @@
+{
+  "name": "capture",
+  "repo": "joaoribasio/alterbrain",
+  "path": ".claude/skills/capture/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/joaoribasio/alterbrain",
+  "dir_name": "capture-joaoribasio-alterbrain",
+  "downloaded_at": "2026-10-28T05:23:09.224485Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: task, memory",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "joaoribasio",
+  "source_url": "https://github.com/joaoribasio/alterbrain/blob/main/.claude/skills/capture/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/joaoribasio/alterbrain/blob/main/.claude/skills/capture/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Saves a quick note, idea or braindump exactly as the user wrote it, and turns anything like 'remind me' or 'I need to' into a task. Use whenever the user wants to jot something down fast without organising it."
+}

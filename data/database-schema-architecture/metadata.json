@@ -1,0 +1,38 @@
+{
+  "name": "database-schema-architecture",
+  "repo": "m16khb-org/issueops",
+  "path": "skills/database-schema-architecture/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/m16khb-org/issueops",
+  "dir_name": "database-schema-architecture",
+  "downloaded_at": "2026-10-28T06:03:16.781108Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "m16khb-org",
+  "source_url": "https://github.com/m16khb-org/issueops/blob/main/skills/database-schema-architecture/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/m16khb-org/issueops/blob/main/skills/database-schema-architecture/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use to design or review relational schemas: keys, normalization, partitioning, indexes, ORM entities and their SQL, slow queries, N+1, connection pools. IssueOps plan architecture review: architecture-review."
+}

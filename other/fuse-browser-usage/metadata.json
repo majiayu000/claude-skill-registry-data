@@ -1,0 +1,37 @@
+{
+  "name": "fuse-browser-usage",
+  "repo": "fusengine/agents",
+  "path": "plugins/ai-pilot/skills/fuse-browser-usage/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/fusengine/agents",
+  "dir_name": "fuse-browser-usage",
+  "downloaded_at": "2026-10-28T04:29:57.722627Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fusengine",
+  "source_url": "https://github.com/fusengine/agents/blob/main/plugins/ai-pilot/skills/fuse-browser-usage/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fusengine/agents/blob/main/plugins/ai-pilot/skills/fuse-browser-usage/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when about to call any mcp__fuse-browser__* tool. Routes fetch/crawl/SERP vs live browser session vs screenshot capture, and enforces the 4 ZERO-TOLERANCE rules -- read BEFORE the tool call."
+}

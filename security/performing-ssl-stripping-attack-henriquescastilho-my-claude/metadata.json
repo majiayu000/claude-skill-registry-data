@@ -1,0 +1,38 @@
+{
+  "name": "performing-ssl-stripping-attack",
+  "repo": "henriquescastilho/my-claude",
+  "path": ".claude/skills/performing-ssl-stripping-attack/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/henriquescastilho/my-claude",
+  "dir_name": "performing-ssl-stripping-attack-henriquescastilho-my-claude",
+  "downloaded_at": "2026-10-28T04:52:35.749031Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "auth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "henriquescastilho",
+  "source_url": "https://github.com/henriquescastilho/my-claude/blob/main/.claude/skills/performing-ssl-stripping-attack/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/henriquescastilho/my-claude/blob/main/.claude/skills/performing-ssl-stripping-attack/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Simulates SSL stripping attacks using sslstrip, Bettercap, and mitmproxy in authorized environments to test HSTS enforcement, certificate validation, and HTTPS upgrade mechanisms that protect users from downgrade attacks on encrypted connections."
+}

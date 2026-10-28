@@ -1,0 +1,38 @@
+{
+  "name": "run-workflow",
+  "repo": "lisongmeinorc/apnorcedge",
+  "path": ".agents/skills/run-workflow/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/lisongmeinorc/apnorcedge",
+  "dir_name": "run-workflow-lisongmeinorc-apnorcedge",
+  "downloaded_at": "2026-10-28T05:55:54.941708Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lisongmeinorc",
+  "source_url": "https://github.com/lisongmeinorc/apnorcedge/blob/main/.agents/skills/run-workflow/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lisongmeinorc/apnorcedge/blob/main/.agents/skills/run-workflow/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use the run-workflow MCP to discover, compose, execute, publish, and save Adobe Firefly workflows. TRIGGER when: user asks what the MCP can do; wants to process images/video/3D via workflow; wants to build/run/save/publish a workflow; wants to list/view saved or recent workflows, presets/interfaces, or golden demos (e.g. 'run banners at scale'); pastes any workflow/batch/execution ID; names a featured workflow (retargeting, product banners, localization, packaging, banner advertising) \u2014 call get_featured_workflow first. NOTE: 'banners at scale' = GOLDEN DEMO (list_golden_workflows), NOT the featured workflow 'Product Banners At Scale'. BARE ID = INSPECT ONLY \u2014 call inspect_run, never run_workflow_submit. ALWAYS call list_actions first for action/node discovery; a \"what tools\" question is answered directly from your visible tool list, no call. DO NOT TRIGGER for direct Firefly API calls without MCP (use firefly-api-specs)."
+}

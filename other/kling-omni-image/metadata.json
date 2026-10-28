@@ -1,0 +1,37 @@
+{
+  "name": "kling-omni-image",
+  "repo": "hillstreet-ph/open-connect",
+  "path": "resources/migrated/v1-skills/kling-omni-image/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/hillstreet-ph/open-connect",
+  "dir_name": "kling-omni-image",
+  "downloaded_at": "2026-10-28T04:55:37.201418Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hillstreet-ph",
+  "source_url": "https://github.com/hillstreet-ph/open-connect/blob/main/resources/migrated/v1-skills/kling-omni-image/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hillstreet-ph/open-connect/blob/main/resources/migrated/v1-skills/kling-omni-image/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate high-quality AI images using Kling's Omni-Image model via an async submit\u2192poll workflow. Supports text prompts, reference images (URL or Base64), element library composition, resolutions up to 2k, flexible aspect ratios, and single/series output modes. Use this skill whenever the user wants to generate, create, or produce images with Kling AI, asks about Omni-Image, wants multi-modal image generation with reference images or elements, or needs batch image series output."
+}

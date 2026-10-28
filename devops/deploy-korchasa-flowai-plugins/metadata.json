@@ -1,0 +1,40 @@
+{
+  "name": "deploy",
+  "repo": "korchasa/flowai-plugins",
+  "path": "plugins/flowai-deno/skills/deploy/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/korchasa/flowai-plugins",
+  "dir_name": "deploy-korchasa-flowai-plugins",
+  "downloaded_at": "2026-10-28T05:41:46.631133Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: ci, cd, deploy, infra, infrastructure",
+    "score": 5,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "ci",
+      "cd",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "korchasa",
+  "source_url": "https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai-deno/skills/deploy/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai-deno/skills/deploy/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Manage Deno Deploy cloud services using both `deno deploy` and `deployctl`. Use this skill for deploying projects, managing Build/Dev/Prod environments, monitoring logs, and troubleshooting issues like private npm dependencies."
+}

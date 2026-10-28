@@ -1,0 +1,40 @@
+{
+  "name": "autoresearch",
+  "repo": "kimzhang375-bit/my-first-repo",
+  "path": "skills/file-reader/ai-research-skills/0-autoresearch-skill/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/kimzhang375-bit/my-first-repo",
+  "dir_name": "0-autoresearch-skill-kimzhang375-bit-my-first-repo",
+  "downloaded_at": "2026-10-28T05:39:24.305346Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for ai-ml: ai, ml, model, training",
+    "score": 4,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "ml",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "kimzhang375-bit",
+  "source_url": "https://github.com/kimzhang375-bit/my-first-repo/blob/main/skills/file-reader/ai-research-skills/0-autoresearch-skill/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kimzhang375-bit/my-first-repo/blob/main/skills/file-reader/ai-research-skills/0-autoresearch-skill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Orchestrates end-to-end autonomous AI research projects using a two-loop architecture. The inner loop runs rapid experiment iterations with clear optimization targets. The outer loop synthesizes results, identifies patterns, and steers research direction. Routes to domain-specific skills for execution, supports continuous agent operation via Claude Code /loop and OpenClaw heartbeat, and produces research presentations and papers. Use when starting a research project, running autonomous experiments, or managing a multi-hypothesis research effort."
+}

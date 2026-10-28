@@ -1,0 +1,37 @@
+{
+  "name": "engineer-prompts-for-instant",
+  "repo": "korchasa/flowai-plugins",
+  "path": "plugins/flowai-engineering/skills/engineer-prompts-for-instant/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/korchasa/flowai-plugins",
+  "dir_name": "engineer-prompts-for-instant",
+  "downloaded_at": "2026-10-28T05:41:52.446662Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, communication=2",
+    "score": 2,
+    "runner_up": "communication",
+    "runner_up_score": 2,
+    "signals": [
+      "prompt",
+      "prompting"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "korchasa",
+  "source_url": "https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai-engineering/skills/engineer-prompts-for-instant/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai-engineering/skills/engineer-prompts-for-instant/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write or fix a prompt for a fast/cheap model (Gemini Flash, GPT-4o Mini, Haiku) so its output is stable and parseable. Use for any request to draft, tune or debug such a prompt. Not for reasoning models (use engineer-prompts-for-reasoning)."
+}

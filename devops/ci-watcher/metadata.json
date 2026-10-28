@@ -1,0 +1,39 @@
+{
+  "name": "ci-watcher",
+  "repo": "mParticle/aquarium",
+  "path": ".claude/skills/ci-watcher/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/mParticle/aquarium",
+  "dir_name": "ci-watcher",
+  "downloaded_at": "2026-10-28T06:03:39.853735Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: ci, cd, deploy, infra",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "ci",
+      "cd",
+      "deploy",
+      "infra"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mParticle",
+  "source_url": "https://github.com/mParticle/aquarium/blob/main/.claude/skills/ci-watcher/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mParticle/aquarium/blob/main/.claude/skills/ci-watcher/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Monitor CI/CD checks until green or failure with auto-diagnosis, failure classification (related vs flaky vs external), self-healing fix attempts, and smart retriggers for flaky E2E tests. Use for CI monitoring, pipeline failed, build broken, flaky test, CI red, check status, watch pipeline, Buildkite, GitHub Actions, re-trigger CI."
+}

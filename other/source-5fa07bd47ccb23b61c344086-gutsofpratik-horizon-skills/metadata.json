@@ -1,0 +1,36 @@
+{
+  "name": "commitment-ledger",
+  "repo": "gutsofpratik/Horizon-Skills",
+  "path": "skills/source-5fa07bd47ccb23b61c344086/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/gutsofpratik/Horizon-Skills",
+  "dir_name": "source-5fa07bd47ccb23b61c344086-gutsofpratik-horizon-skills",
+  "downloaded_at": "2026-10-28T04:45:17.520334Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-llm scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "ai"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gutsofpratik",
+  "source_url": "https://github.com/gutsofpratik/Horizon-Skills/blob/main/skills/source-5fa07bd47ccb23b61c344086/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gutsofpratik/Horizon-Skills/blob/main/skills/source-5fa07bd47ccb23b61c344086/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build a ledger of what we promised versus what they promised, and what is still outstanding, across the last few engagements with an account or contact. Uses conversation_intelligence as the primary source. Identify the account or contact by ZoomInfo ID (preferred) or name (triggers a lookup), or point it at specific calls. Use when someone asks \"what did we commit to\", \"what are they supposed to send us\", \"what's still outstanding with this account\", or wants an accountability check before a follow-up. Covers the last few engagements only, not full history."
+}

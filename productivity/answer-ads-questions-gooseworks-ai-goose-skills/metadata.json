@@ -1,0 +1,38 @@
+{
+  "name": "answer-ads-questions",
+  "repo": "gooseworks-ai/goose-skills",
+  "path": "skills/shared/answer-ads-questions/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/gooseworks-ai/goose-skills",
+  "dir_name": "answer-ads-questions-gooseworks-ai-goose-skills",
+  "downloaded_at": "2026-10-28T04:41:18.648723Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, planning, memory",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "planning",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gooseworks-ai",
+  "source_url": "https://github.com/gooseworks-ai/goose-skills/blob/main/skills/shared/answer-ads-questions/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gooseworks-ai/goose-skills/blob/main/skills/shared/answer-ads-questions/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Answer questions about a brand's Meta ads (spend, results, which ad is winning, is it paused, why did Goose do that) only from reads made in the same turn, with the data window and sync time on every number and a plain caveat when the connection is stale or partial. Use it whenever a user asks how their ads are doing or why an ad action was taken."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "woostack-commit",
+  "repo": "howarewoo/woostack",
+  "path": "skills/woostack-commit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/howarewoo/woostack",
+  "dir_name": "woostack-commit",
+  "downloaded_at": "2026-10-28T04:57:42.200782Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "howarewoo",
+  "source_url": "https://github.com/howarewoo/woostack/blob/main/skills/woostack-commit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/howarewoo/woostack/blob/main/skills/woostack-commit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Commit the current authorized outcome and, when requested, publish or update its pull request. Use for a local-only commit, a requested draft PR, or a commit from an established task that already names its issue."
+}

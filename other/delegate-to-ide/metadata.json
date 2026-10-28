@@ -1,0 +1,37 @@
+{
+  "name": "delegate-to-ide",
+  "repo": "korchasa/flowai-plugins",
+  "path": "plugins/flowai-beta/skills/delegate-to-ide/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/korchasa/flowai-plugins",
+  "dir_name": "delegate-to-ide",
+  "downloaded_at": "2026-10-28T05:41:48.224609Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "korchasa",
+  "source_url": "https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai-beta/skills/delegate-to-ide/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai-beta/skills/delegate-to-ide/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Delegate a task to another AI IDE's CLI (codex / claude / opencode / cursor-agent) through an isolated-context subagent. Use when the user says delegate to <ide>, have <ide> do <task>, or offload to <ide>. For one-shot relay use `ai-ide-runner`."
+}

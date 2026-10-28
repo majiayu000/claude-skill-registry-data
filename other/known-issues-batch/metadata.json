@@ -1,0 +1,37 @@
+{
+  "name": "known-issues-batch",
+  "repo": "gwpreston16/Logbook",
+  "path": ".claude/skills/known-issues-batch/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/gwpreston16/Logbook",
+  "dir_name": "known-issues-batch",
+  "downloaded_at": "2026-10-28T04:45:36.233900Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gwpreston16",
+  "source_url": "https://github.com/gwpreston16/Logbook/blob/main/.claude/skills/known-issues-batch/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gwpreston16/Logbook/blob/main/.claude/skills/known-issues-batch/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Plan the next small batch of bug fixes from docs/phases/known-issues.md \u2014 pick a few Open rows that need no decision (default 4), confirm them and the release with the owner, number it as the next undefined phase (or straight after the active one), then write docs/phases/phase-N.M.md in the style of Phases 52.1 and 52.2, add the ROADMAP row and section and the spec.md \u00a713 entry, mark the rows Scheduled and log any open questions. Plans only; /next-phase builds it. Run with /known-issues-batch, optionally with a count or the rows to take."
+}

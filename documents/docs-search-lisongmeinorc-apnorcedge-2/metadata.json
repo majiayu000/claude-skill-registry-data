@@ -1,0 +1,39 @@
+{
+  "name": "docs-search",
+  "repo": "lisongmeinorc/apnorcedge",
+  "path": ".claude/skills/docs-search/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/lisongmeinorc/apnorcedge",
+  "dir_name": "docs-search-lisongmeinorc-apnorcedge-2",
+  "downloaded_at": "2026-10-28T05:55:52.384348Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word, documentation",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "word",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lisongmeinorc",
+  "source_url": "https://github.com/lisongmeinorc/apnorcedge/blob/main/.claude/skills/docs-search/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lisongmeinorc/apnorcedge/blob/main/.claude/skills/docs-search/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this when you need more information about an AEM Edge Delivery Services (EDS, Franklin, Helix) feature or guidance on how to implement one, and your existing web-search tools are not turning up relevant results. Searches the aem.live documentation, ranks matching pages by relevance, fetches full articles, and surfaces code examples and deprecation warnings."
+}

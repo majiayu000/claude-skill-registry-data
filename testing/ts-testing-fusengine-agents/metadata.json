@@ -1,0 +1,40 @@
+{
+  "name": "ts-testing",
+  "repo": "fusengine/agents",
+  "path": "plugins/typescript-expert/skills/ts-testing/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/fusengine/agents",
+  "dir_name": "ts-testing-fusengine-agents",
+  "downloaded_at": "2026-10-28T04:30:07.046903Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for testing: test, tdd, jest, e2e, playwright",
+    "score": 5,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "test",
+      "tdd",
+      "jest",
+      "e2e",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fusengine",
+  "source_url": "https://github.com/fusengine/agents/blob/main/plugins/typescript-expert/skills/ts-testing/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fusengine/agents/blob/main/plugins/typescript-expert/skills/ts-testing/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when writing or configuring TypeScript tests and choosing between bun test and Vitest. Not for framework-specific testing (React \u2192 react-testing)."
+}

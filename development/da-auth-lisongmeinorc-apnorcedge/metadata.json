@@ -1,0 +1,38 @@
+{
+  "name": "da-auth",
+  "repo": "lisongmeinorc/apnorcedge",
+  "path": ".claude/skills/da-auth/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/lisongmeinorc/apnorcedge",
+  "dir_name": "da-auth-lisongmeinorc-apnorcedge",
+  "downloaded_at": "2026-10-28T05:55:43.026524Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lisongmeinorc",
+  "source_url": "https://github.com/lisongmeinorc/apnorcedge/blob/main/.claude/skills/da-auth/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lisongmeinorc/apnorcedge/blob/main/.claude/skills/da-auth/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this when another step needs to call the admin.da.live API, for example before pushing HTML content, listing documents, or triggering a DA preview, and you do not already have a valid DA_TOKEN in scope from an earlier step in the same session. Covers obtaining a valid Adobe IMS access token for the DA (Document Authoring) API."
+}

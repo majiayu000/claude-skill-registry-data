@@ -1,0 +1,39 @@
+{
+  "name": "health-check",
+  "repo": "joaoribasio/alterbrain",
+  "path": ".claude/skills/health-check/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/joaoribasio/alterbrain",
+  "dir_name": "health-check",
+  "downloaded_at": "2026-10-28T05:23:11.606621Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, framework, software",
+    "score": 4,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "framework",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "joaoribasio",
+  "source_url": "https://github.com/joaoribasio/alterbrain/blob/main/.claude/skills/health-check/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/joaoribasio/alterbrain/blob/main/.claude/skills/health-check/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Runs the Alterbrain health check, explains the results in plain English and offers to fix each problem. Also does the quarterly model check (are the Claude models Alterbrain uses still the best fit?). Use when something seems broken, after setup or an update, when the user asks whether everything is working, or asks to check the models."
+}

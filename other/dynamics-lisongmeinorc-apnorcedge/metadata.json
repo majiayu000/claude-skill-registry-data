@@ -1,0 +1,37 @@
+{
+  "name": "dynamics",
+  "repo": "lisongmeinorc/apnorcedge",
+  "path": ".agents/skills/dynamics/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/lisongmeinorc/apnorcedge",
+  "dir_name": "dynamics-lisongmeinorc-apnorcedge",
+  "downloaded_at": "2026-10-28T05:55:44.532116Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lisongmeinorc",
+  "source_url": "https://github.com/lisongmeinorc/apnorcedge/blob/main/.agents/skills/dynamics/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lisongmeinorc/apnorcedge/blob/main/.agents/skills/dynamics/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find, classify, triage, re-implement and verify a source site's dynamic surface (APIs, search, forms, modals, media, tags, client-rendered and sheet-backed content) during a migration to a platform. Migration-bound \u2014 invoked by prepare-migration, replica, migrate and rollout, or standalone on an already-migrated site; never for redesign-only work."
+}

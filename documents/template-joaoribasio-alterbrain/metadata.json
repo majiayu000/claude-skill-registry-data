@@ -1,0 +1,41 @@
+{
+  "name": "template",
+  "repo": "joaoribasio/alterbrain",
+  "path": ".claude/skills/template/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/joaoribasio/alterbrain",
+  "dir_name": "template-joaoribasio-alterbrain",
+  "downloaded_at": "2026-10-28T05:23:09.887605Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, pdf, word, pptx, docx",
+    "score": 6,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "pdf",
+      "word",
+      "pptx",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "joaoribasio",
+  "source_url": "https://github.com/joaoribasio/alterbrain/blob/main/.claude/skills/template/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/joaoribasio/alterbrain/blob/main/.claude/skills/template/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Turns a school, employer or provider template (PowerPoint, Word or a Quarto extension) into a template the documents and decks use, and lists, attaches, previews and removes templates. Use when the user gives a template file, says \"use my school's template\" or \"make my slides look like this\", or asks which template a document uses."
+}

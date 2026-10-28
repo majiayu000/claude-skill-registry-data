@@ -1,0 +1,37 @@
+{
+  "name": "bro",
+  "repo": "leonardoacosta/agents",
+  "path": "skills/bro/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/leonardoacosta/agents",
+  "dir_name": "bro",
+  "downloaded_at": "2026-10-28T05:51:11.886736Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "leonardoacosta",
+  "source_url": "https://github.com/leonardoacosta/agents/blob/main/skills/bro/SKILL.md",
+  "license": "MIT; upstream notices in references/licenses/",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/leonardoacosta/agents/blob/main/skills/bro/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Explain the previous answer or connected thread so its practical meaning is clear. Use on /bro, /bro shorter, or requests such as \"break that down\", \"wait, what does that mean?\", \"what actually changed?\", or \"what am I choosing?\" Restores missing context, separates investigation from implementation, and explains choices without resuming the task."
+}

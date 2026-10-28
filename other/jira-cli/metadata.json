@@ -1,0 +1,37 @@
+{
+  "name": "jira-cli",
+  "repo": "mParticle/aquarium",
+  "path": ".claude/skills/jira-cli/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mParticle/aquarium",
+  "dir_name": "jira-cli",
+  "downloaded_at": "2026-10-28T06:03:39.303110Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mParticle",
+  "source_url": "https://github.com/mParticle/aquarium/blob/main/.claude/skills/jira-cli/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mParticle/aquarium/blob/main/.claude/skills/jira-cli/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Jira ticket operations via Atlassian MCP including view, search (natural language to JQL), create, update, comment, and transition with auto-detection of ticket IDs from git branches. Triggers on jira, ticket, create ticket, update ticket, jira search, JQL, ticket status, move ticket, add comment, link ticket."
+}

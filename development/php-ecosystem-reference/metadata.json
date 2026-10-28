@@ -1,0 +1,38 @@
+{
+  "name": "php-ecosystem-reference",
+  "repo": "fusengine/agents",
+  "path": "plugins/php-expert/skills/php-ecosystem-reference/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/fusengine/agents",
+  "dir_name": "php-ecosystem-reference",
+  "downloaded_at": "2026-10-28T04:30:01.865451Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fusengine",
+  "source_url": "https://github.com/fusengine/agents/blob/main/plugins/php-expert/skills/php-ecosystem-reference/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fusengine/agents/blob/main/plugins/php-expert/skills/php-ecosystem-reference/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when picking a non-Laravel PHP tool \u2014 Symfony components, API Platform, or Slim \u2014 and routing to implementation. Do NOT use for Laravel (laravel-expert)."
+}

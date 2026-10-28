@@ -1,0 +1,37 @@
+{
+  "name": "kortix-channel-memory",
+  "repo": "kortix-ai/suna",
+  "path": "packages/starter/templates/managed/skills/kortix-channel-memory/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/kortix-ai/suna",
+  "dir_name": "kortix-channel-memory",
+  "downloaded_at": "2026-10-28T05:42:08.615139Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kortix-ai",
+  "source_url": "https://github.com/kortix-ai/suna/blob/main/packages/starter/templates/managed/skills/kortix-channel-memory/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kortix-ai/suna/blob/main/packages/starter/templates/managed/skills/kortix-channel-memory/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Memory of a channel or DM thread: Markdown files in the channel's `Memory/` folder (or, in a DM, `/drives/me/Memory/<agent>/`), the same files people see in the Memory tab. Load at the start of a thread in a channel or DM, when the user says remember / note / you should know, and when you learn something the next thread there should know."
+}

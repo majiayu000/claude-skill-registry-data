@@ -1,0 +1,39 @@
+{
+  "name": "write-prd",
+  "repo": "korchasa/flowai-plugins",
+  "path": "plugins/flowai-engineering/skills/write-prd/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/korchasa/flowai-plugins",
+  "dir_name": "write-prd-korchasa-flowai-plugins",
+  "downloaded_at": "2026-10-28T05:41:48.545129Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for product: product, prd, feature, metrics",
+    "score": 4,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "prd",
+      "feature",
+      "metrics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "korchasa",
+  "source_url": "https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai-engineering/skills/write-prd/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai-engineering/skills/write-prd/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Produce a Product Requirements Document (PRD) for a product feature. Use when the user asks to write a PRD, or to formalize a feature's scope, goals, user value and success metrics. Not for internal technical or architecture change proposals."
+}

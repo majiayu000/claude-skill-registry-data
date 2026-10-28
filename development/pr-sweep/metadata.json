@@ -1,0 +1,38 @@
+{
+  "name": "pr-sweep",
+  "repo": "harnessprotocol/harness-kit",
+  "path": "plugins/pr-sweep/skills/pr-sweep/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/harnessprotocol/harness-kit",
+  "dir_name": "pr-sweep",
+  "downloaded_at": "2026-10-28T04:49:33.257714Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, refactor",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "harnessprotocol",
+  "source_url": "https://github.com/harnessprotocol/harness-kit/blob/main/plugins/pr-sweep/skills/pr-sweep/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/harnessprotocol/harness-kit/blob/main/plugins/pr-sweep/skills/pr-sweep/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when you want to sweep all open pull requests across all repos, triage their status, run code reviews on unreviewed PRs, merge what's ready, fix quick blockers, and produce a full status report. Trigger when the user says \"check my PRs\", \"close out open PRs\", \"what's the status of my PRs\", \"sweep my PRs\", \"PR sweep\", \"pull request sweep\", or wants a cross-repo PR status report. Future: pairs with the loop skill for ongoing automated PR management."
+}

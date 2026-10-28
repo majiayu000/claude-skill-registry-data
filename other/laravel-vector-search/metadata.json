@@ -1,0 +1,37 @@
+{
+  "name": "laravel-vector-search",
+  "repo": "fusengine/agents",
+  "path": "plugins/laravel-expert/skills/laravel-vector-search/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/fusengine/agents",
+  "dir_name": "laravel-vector-search",
+  "downloaded_at": "2026-10-28T04:30:00.530249Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fusengine",
+  "source_url": "https://github.com/fusengine/agents/blob/main/plugins/laravel-expert/skills/laravel-vector-search/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fusengine/agents/blob/main/plugins/laravel-expert/skills/laravel-vector-search/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when implementing semantic/vector search in Laravel 13 with PostgreSQL + pgvector."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "music",
+  "repo": "iDorgham/Workspace-Factory",
+  "path": ".ai/skills/official_elevenlabs_music/skill.md",
+  "github_branch": "master",
+  "category": "ai-llm",
+  "source": "github.com/iDorgham/Workspace-Factory",
+  "dir_name": "official-elevenlabs-music",
+  "downloaded_at": "2026-10-28T05:02:27.999199Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: ai, prompt",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "iDorgham",
+  "source_url": "https://github.com/iDorgham/Workspace-Factory/blob/master/.ai/skills/official_elevenlabs_music/skill.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/iDorgham/Workspace-Factory/blob/master/.ai/skills/official_elevenlabs_music/skill.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate music using ElevenLabs Music API. Use when creating instrumental tracks, songs with lyrics, background music, jingles, or any AI-generated music composition. Supports prompt-based generation, composition plans for granular control, and detailed output with metadata."
+}

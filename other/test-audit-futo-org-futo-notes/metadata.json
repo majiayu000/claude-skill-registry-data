@@ -1,0 +1,37 @@
+{
+  "name": "test-audit",
+  "repo": "futo-org/futo-notes",
+  "path": ".claude/skills/test-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/futo-org/futo-notes",
+  "dir_name": "test-audit-futo-org-futo-notes",
+  "downloaded_at": "2026-10-28T04:30:15.348070Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "futo-org",
+  "source_url": "https://github.com/futo-org/futo-notes/blob/main/.claude/skills/test-audit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/futo-org/futo-notes/blob/main/.claude/skills/test-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Invoke whenever writing, changing, reviewing, or sweeping tests. Authoring gate for new tests plus audit workflow for low-value, implementation-coupled, or duplicative tests and the test-only production seams they demand."
+}

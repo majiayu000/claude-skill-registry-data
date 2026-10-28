@@ -1,0 +1,36 @@
+{
+  "name": "job-postings",
+  "repo": "firecrawl/firecrawl-claude-plugin",
+  "path": "skills/job-postings/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/firecrawl/firecrawl-claude-plugin",
+  "dir_name": "job-postings",
+  "downloaded_at": "2026-10-28T04:24:28.770962Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category forensics scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "marketing",
+    "runner_up_score": 1,
+    "signals": [
+      "evidence"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "firecrawl",
+  "source_url": "https://github.com/firecrawl/firecrawl-claude-plugin/blob/main/skills/job-postings/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/firecrawl/firecrawl-claude-plugin/blob/main/skills/job-postings/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find current job postings by role, employer, location, or remote eligibility. Use for who's hiring, job shortlists, and openings matching supplied skills, experience, or pay preferences."
+}

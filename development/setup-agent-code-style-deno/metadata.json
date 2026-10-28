@@ -1,0 +1,39 @@
+{
+  "name": "setup-agent-code-style-deno",
+  "repo": "korchasa/flowai-plugins",
+  "path": "plugins/flowai-typescript/skills/setup-agent-code-style-deno/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/korchasa/flowai-plugins",
+  "dir_name": "setup-agent-code-style-deno",
+  "downloaded_at": "2026-10-28T05:41:51.878507Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, framework, build, compile",
+    "score": 4,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "korchasa",
+  "source_url": "https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai-typescript/skills/setup-agent-code-style-deno/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai-typescript/skills/setup-agent-code-style-deno/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user asks to add Deno/TypeScript code-style rules to AGENTS.md, or during initial Deno project setup. Do NOT trigger for non-Deno TypeScript projects (use setup-agent-code-style-strict), or for runtime-agnostic style advice."
+}

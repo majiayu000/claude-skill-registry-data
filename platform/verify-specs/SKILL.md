@@ -1,0 +1,248 @@
+---
+name: verify-specs
+description: Run the behavioral spec in docs/spec/ against the real apps — a parallel, story-driven QA sweep across desktop, iOS, and Android plus cross-client sync. Use when the user says "verify specs", "run the specs", "spec pass", "QA the specs", "check the app against the spec", or "/verify-specs [scope]". A bare run does the full spec (all surfaces × all platforms + sync mesh); a scope phrase ("since the last tagged release", "just the editor") narrows to the surfaces/platforms the diff touched; "release smoke" / "smoke test before the release" runs the diff deep plus a fixed baseline smoke checklist on every platform and ends in a GO / NO GO. Fans out Sonnet medium-effort app-qa legs, escalates FAILs to high effort, and is built to survive session-limit deaths without losing work.
+---
+
+# Verify Specs — parallel spec QA that resumes after a session death
+
+This runs `docs/spec/` as **stories against the running apps** and reports
+evidence-backed verdicts. It is not `just check` (that's the static chain);
+this is the device-driven behavioral pass. Three modes, chosen from the invocation:
+
+- **Full run** — `/verify-specs` (no scope) → every area file in `docs/spec/`
+  (excluding `README.md` and `AGENTS.md`), including a split area's section
+  files under `docs/spec/<area>/` ×
+  every platform + the cross-client sync mesh.
+- **Scoped run** — `/verify-specs since the last tagged release` (or "since
+  <tag>", "just the editor", "what changed on this branch") → map the diff to
+  spec surfaces + affected platforms and QA only those.
+- **Release smoke**: `/verify-specs release smoke` (or "smoke test before
+  the release", "pre-release QA"). This is a scoped run since the last tag with
+  a `changes` brief per leg, plus per-platform smoke legs running a fixed
+  baseline checklist on the untouched surfaces, plus at least a mesh
+  round-trip. It ends in a GO / NO GO verdict. Read
+  **`references/release-smoke.md`**, which owns this mode's legs and report.
+
+Read `.claude/skills/verify/references/session.md` for shared provisioning,
+isolation, evidence, and cleanup. Platform playbooks live beside it. This skill
+owns spec scoping, the workflow manifest, fan-out, and resumable aggregation.
+
+## The pipeline at a glance
+
+```
+Step 1  Scope        full | diff-since-tag → {surfaces, platforms}
+Step 2  Provision    worktrees · qa-claim · pre-build · qa-server   (INLINE — git/shell)
+        └─ write test-screenshots/verify-specs/run.json (manifest + runId)  ← durable
+Step 3  Fan out      Workflow(workflow.js, args=manifest)                    (parallel)
+        per leg:   app-qa sonnet effort=medium ── sweep ──▶ FAIL? ── high ──▶ verify
+Step 4  Aggregate    confirmed FAILs (upheld) · overturned · per-leg tables · ledgers
+Step 5  Teardown     qa-release --shutdown · qa-server-stop --drop · remove worktrees
+```
+
+Everything in Step 2 must happen inline **before** the Workflow, because
+workflow scripts have no git/shell/filesystem access. The Workflow only fans
+out over fully-provisioned legs.
+
+---
+
+## Step 1 — Scope
+
+```bash
+cd "$(git rev-parse --show-toplevel)"
+LAST_TAG=$(git describe --tags --abbrev=0 --exclude '*-*')   # skip pre-release tags (v1.7.2-6, -milkdown.3)
+echo "last tag: $LAST_TAG"
+```
+
+A hotfix tagged on a `release/*` branch (e.g. v1.8.1) is not an ancestor of
+main, so this lands on the main-line release it was cut from — the right base
+for "what ships next". Say so in the scope report.
+
+- **Full run** (no scope phrase): every spec surface, all platforms this OS
+  supports (`uname -s`: Darwin → desktop+iOS+Android; Linux → desktop+Android),
+  plus the sync mesh.
+- **Scoped run**: compute the diff (`git diff --name-only "$LAST_TAG"..HEAD`,
+  or the branch base / user-named range) and map it to surfaces + platforms
+  per **`references/scoping.md`** — read it.
+- **Release smoke**: the scoped run above against `"$LAST_TAG"..HEAD`,
+  then add the smoke and mesh legs per **`references/release-smoke.md`**.
+
+Report the derived scope to the user before provisioning ("v1.6.0..HEAD
+touched editor, sync, list, app across all platforms + iOS/Android shells —
+QA those, skip nav/tabs/settings*").
+
+## Step 2 — Provision (inline; this is the expensive part, done once)
+
+Follow `.claude/skills/verify/references/session.md` for provisioning. For a full
+run, `references/full-run.md` owns topology and resource limits; scoped runs use
+`references/scoping.md`. Pre-build all apps before fan-out. Never schedule more
+device-backed legs on a platform than the number of distinct devices claimed.
+
+### Editor dedup — sweep the web editor once
+
+The `editor` surface is the **same embedded single-file web editor** on all
+three apps, so its rendering/decoration/interaction stories only need one full
+sweep: give it to the **desktop** leg (cheapest to drive, MCP bridge, and on
+macOS it's WKWebKit — the same engine as iOS). Mobile legs cover only what the
+native shells actually own: set each iOS/Android editor leg's **`focus`** to
+the shell-integration delta —
+
+> futoBridge round-trips, toolbar actions, keyboard/IME (insets,
+> scroll-during-IME), tap/selection/focus handoff, image insertion,
+> safe areas — plus every editor story explicitly tagged _(iOS)_ / _(Android)_.
+
+This applies in both modes. It does NOT apply to `list`/`nav`/`search`/
+`settings`/`tabs` — those are native SwiftUI/Compose implementations per
+platform and must be swept on each platform they're in scope for.
+
+### Write the durable run manifest (before launching the fan-out)
+
+`mkdir -p test-screenshots/verify-specs`, then write
+`test-screenshots/verify-specs/run.json` (gitignored, so it survives a session
+death) — one entry per leg:
+
+```jsonc
+{
+  "runNote": "full run @ HEAD (v1.6.0..HEAD scope: editor,sync,list,app)",
+  "effort": { "sweep": "medium", "verify": "high" },
+  "legs": [
+    {
+      "id": "A-ios",
+      "platform": "ios",
+      "idPrefix": "ed",
+      "worktree": "/abs/path/.claude/worktrees/extra-A",
+      "surfaces": ["editor", "app"],
+      "focus": "Shell-integration delta only: futoBridge, toolbar, keyboard/IME, …",
+      "device": "iOS sim <udid>",
+      "deviceEnv": "export SIM=<udid>",
+      "ledger": "/abs/path/extra-A/test-screenshots/A-ios-ledger.md",
+    },
+    {
+      "id": "mesh",
+      "platform": "sync-mesh",
+      "surfaces": ["sync"],
+      "worktree": "/abs/main",
+      "device": "desktop + iOS <udid> + Android <serial>",
+      "deviceEnv": "export SIM=<udid> ANDROID_SERIAL=<serial>",
+      "serverUrl": "http://127.0.0.1:31NN",
+      "password": "testing123",
+      "ledger": "/abs/main/test-screenshots/mesh-ledger.md",
+    },
+  ],
+}
+```
+
+Ledger paths **must be absolute and inside each leg's own worktree** — that's
+where the app-qa agent runs and where a resume looks.
+
+A leg may also carry an optional `"focus"` string. With it, that leg covers
+exactly the flows named and stops, instead of sweeping its whole surface and
+reporting the remainder as SKIP noise:
+
+```jsonc
+{
+  "id": "A-ios",
+  "platform": "ios",
+  "surfaces": ["editor"],
+  "focus": "only the toolbar-overflow and IME-scroll stories from the last run",
+  "ledger": "/abs/path/extra-A/test-screenshots/A-ios-ledger.md",
+}
+```
+
+Omit it for a full sweep — that is the default and what a bare run uses. Reach
+for it on a **resume** pass or a targeted re-check after a fix, where
+re-sweeping the whole surface wastes a leg.
+
+Two more optional leg fields, used mainly by release smoke:
+
+- `"changes"`: plain-language list of behavior changes on this leg's surfaces.
+  The leg exercises them first and adversarially, then sweeps the rest.
+- `"model"`: the sweep model for this leg (default `sonnet`). The verify pass
+  stays Sonnet at high effort no matter what. Only drop a leg to
+  `claude-haiku-5-5` for a `focus`-narrowed smoke leg. Verification only
+  re-checks FAILs, so a weaker sweeper's false PASS is never caught.
+
+## Step 3 — Fan out via the workflow
+
+```
+Workflow({
+  scriptPath: ".claude/skills/verify-specs/workflow.js",
+  args: <the run.json contents, as a JSON value — not a string>,
+})
+```
+
+The workflow (`workflow.js` next to this file) runs each leg as an `app-qa`
+agent at **Sonnet effort=medium** (the sweep); the moment a leg's sweep returns any
+FAIL it spawns a **Sonnet effort=high** app-qa to independently refute those
+FAILs — pipelined, so verification overlaps other legs' sweeps. The
+`agentType`/`model`/`effort` are set per-call inside `workflow.js` because the
+Agent tool has no per-call effort override. Keep the sweep at medium: at low,
+legs stop after ~8 stories and log the rest as "not run (budget)", which is no
+basis for a verdict. The sweep brief also sets a coverage floor (every in-scope
+bullet and `changes` line gets a driven verdict); a ledger full of "not run"
+rows means the leg needs a re-run, not a SKIP count.
+
+**Capture the `runId`** the Workflow tool returns immediately, and append it to
+`run.json`. It is your resume handle.
+
+## Step 4 — Survive session limits (expect a death; minimize lost work)
+
+Session limits _will_ hit mid-run (8–9 concurrent QA agents burn ~2.5M
+tokens/hour). Three layers make a death cheap:
+
+1. **Ledgers (ground truth, survive anything).** Every leg appends each
+   story's verdict to its ledger the instant it's decided — the brief tells it
+   to, and to _resume from_ an existing ledger without re-running done stories.
+   Even a killed leg loses only the story it was mid-way through.
+2. **Workflow resume (within-session).** On resume, re-invoke
+   `Workflow({ scriptPath, args, resumeFromRunId: <runId from run.json> })`
+   with **identical args**. Completed legs return from cache instantly; only
+   in-flight/pending legs re-run — and those read their ledgers and skip done
+   stories. If the journal is needed, read `<transcriptDir>/journal.jsonl`
+   before assuming a cached leg was empty.
+3. **Idempotent provisioning (across a restart).** On (re)entry, **check for
+   `test-screenshots/verify-specs/run.json` FIRST.** If it exists with a
+   `runId`, do NOT re-provision: `just qa-status` confirms the device claims
+   still hold, worktrees persist on disk, and `qa-server` is likely still up.
+   Verify, then jump straight to the resume in layer 2. Re-provisioning is what
+   thrashes the device pool — don't.
+
+If a leg comes back `needsResume` (its agent died before returning structured
+output), its ledger still holds partial verdicts — resume just that leg.
+
+**Scheduling tip:** launch a big wave right after a limit reset, and don't
+provision more concurrent legs than the budget until the next reset will
+sustain. A scoped run that fits one wave is far more likely to finish clean.
+
+## Step 5 — Aggregate & report
+
+The workflow returns `{ legs, confirmedFails, overturned, needsResume,
+verdict }`. Use the shared session verdict format:
+
+- One verdict table per leg (story id → spec line → verdict → evidence path),
+  reading the deep detail from each leg's ledger.
+- **Confirmed FAILs** (sweep FAIL _upheld_ by the high-effort pass) with
+  expected (quote the spec) vs actual vs repro. These are the real findings.
+- **Overturned** (sweep FAIL the verify pass disproved) — report as a
+  false-alarm line, and if it recurs, it's a signal the sweep is too
+  trigger-happy on that surface.
+- Distinguish **BLOCKED** (environment can't exercise it — e.g. no route to the
+  sync-server package registry → sync mesh blocked; Linux → iOS blocked) from
+  **FAIL**.
+- A confirmed new divergence → follow `/spec-sync` (record a `> **Gap:**` note
+  inline in the area file). A regression against previously-verified
+  behavior → report it as a bug, don't silently patch.
+
+## Step 6 — Teardown
+
+Follow the shared session teardown protocol. Keep `run.json` until the report is
+delivered and the user is done; its presence is the resume signal.
+
+## Budgets
+
+- Full spec, 3 platforms + mesh: target **≤1h** on a strong machine with a warm
+  pool. Report actual tokens and wall clock.
+- Scoped runs (the common case): a few 100k tokens, well under an hour.
+- Release smoke across every surface (11 legs incl. Linux and mesh, 2026-10-14):
+  about 2.5M subagent tokens at a medium sweep.
+- Failures cost more than passes (the high-effort verify pass). A run with many
+  FAILs will run longer and hotter than a clean one.

@@ -1,0 +1,38 @@
+{
+  "name": "adapt",
+  "repo": "korchasa/flowai-plugins",
+  "path": "plugins/flowai/skills/adapt/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/korchasa/flowai-plugins",
+  "dir_name": "adapt",
+  "downloaded_at": "2026-10-28T05:41:44.058286Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "korchasa",
+  "source_url": "https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai/skills/adapt/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai/skills/adapt/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user asks to tailor the installed flowai skills, agents, hooks or AGENTS.md artifacts to this project's specifics. Not for first-time setup, template reconciliation, or edits to the project's own code."
+}

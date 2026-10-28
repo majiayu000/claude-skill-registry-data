@@ -1,0 +1,41 @@
+{
+  "name": "liteparse",
+  "repo": "lilinji/GeneTind-Life-Skills",
+  "path": "skills/liteparse/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/lilinji/GeneTind-Life-Skills",
+  "dir_name": "liteparse-lilinji-genetind-life-skills",
+  "downloaded_at": "2026-10-28T05:53:42.428295Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: docs, pdf, word, excel, docx, markdown",
+    "score": 6,
+    "runner_up": "workflow",
+    "runner_up_score": 3,
+    "signals": [
+      "docs",
+      "pdf",
+      "word",
+      "excel",
+      "docx",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lilinji",
+  "source_url": "https://github.com/lilinji/GeneTind-Life-Skills/blob/main/skills/liteparse/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lilinji/GeneTind-Life-Skills/blob/main/skills/liteparse/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Local document and PDF parsing that returns spatial text with bounding boxes. Use for extracting text from PDFs, DOCX, Office files, and images; running OCR on scans; producing layout-preserved JSON for RAG; batch-ingesting folders of papers; or rendering pages to PNG for multimodal agents. Distinguishing capabilities are per-token bounding boxes, page raster output, and fully local processing with no cloud API."
+}

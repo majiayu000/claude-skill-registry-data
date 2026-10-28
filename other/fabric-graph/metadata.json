@@ -1,0 +1,38 @@
+{
+  "name": "fabric-graph",
+  "repo": "hybridlabor-api/aos",
+  "path": "skills/basic/fabric-graph/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/hybridlabor-api/aos",
+  "dir_name": "fabric-graph",
+  "downloaded_at": "2026-10-28T05:00:49.986322Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, quality=3",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "ui",
+      "ux",
+      "frontend"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hybridlabor-api",
+  "source_url": "https://github.com/hybridlabor-api/aos/blob/main/skills/basic/fabric-graph/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hybridlabor-api/aos/blob/main/skills/basic/fabric-graph/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when running the autonomous multi-agent build pipeline after /bdbrainstorm or /grill-me, when the user types /fabric-graph or \"run a fabric\", or when a task needs durable state, a review repair loop and an automated quality gate. Routes to the fabric-dispatch Dynamic Workflow, which reads production_artifacts/state.json and invokes Architect, TechLead, UI/UX, Engineering, Media/EventTech, Reviewer, and Shipping in turn per .agents/graph.md's edge table \u2014 the agents never invoke each other."
+}

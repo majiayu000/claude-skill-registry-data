@@ -1,0 +1,37 @@
+{
+  "name": "site-scan",
+  "repo": "lisongmeinorc/apnorcedge",
+  "path": ".claude/skills/site-scan/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/lisongmeinorc/apnorcedge",
+  "dir_name": "site-scan",
+  "downloaded_at": "2026-10-28T05:55:45.910280Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, cli",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lisongmeinorc",
+  "source_url": "https://github.com/lisongmeinorc/apnorcedge/blob/main/.claude/skills/site-scan/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lisongmeinorc/apnorcedge/blob/main/.claude/skills/site-scan/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Discover and collect all URLs of a website with the web CLI: parses robots.txt and sitemaps (XML, sitemap indexes, gzip) or follows links, with include/exclude glob patterns, a URL limit and language detection from the URL path. Triggers on: site urls, list pages, discover urls, site inventory, url collection, find all pages, site-scan, website urls, enumerate pages, map site, how many pages."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "self-host-check",
+  "repo": "leok7v/c4.devs",
+  "path": ".claude/skills/self-host-check/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/leok7v/c4.devs",
+  "dir_name": "self-host-check",
+  "downloaded_at": "2026-10-28T05:51:06.530492Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "leok7v",
+  "source_url": "https://github.com/leok7v/c4.devs/blob/main/.claude/skills/self-host-check/SKILL.md",
+  "license": "GPL-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/leok7v/c4.devs/blob/main/.claude/skills/self-host-check/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run a single test file under both native and self-hosted cx and compare outputs. Use when diagnosing a self-host-only regression \u2014 it's faster than the full 45-test suite and shows the divergence directly."
+}

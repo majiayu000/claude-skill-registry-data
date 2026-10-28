@@ -1,0 +1,38 @@
+{
+  "name": "roblox-simulator-economy",
+  "repo": "gamedev-skills/awesome-gamedev-agent-skills",
+  "path": "skills/other-engines/roblox-simulator-economy/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/gamedev-skills/awesome-gamedev-agent-skills",
+  "dir_name": "roblox-simulator-economy",
+  "downloaded_at": "2026-10-28T04:32:34.396567Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, ux",
+    "score": 3,
+    "runner_up": "gaming",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "ux"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gamedev-skills",
+  "source_url": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/main/skills/other-engines/roblox-simulator-economy/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/main/skills/other-engines/roblox-simulator-economy/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Design, balance, and implement the economy of a Roblox simulator, tycoon, clicker, or idle game in Luau: upgrade cost curves, buy max, income per second, rebirth/prestige requirements and multipliers, offline earnings, big-number display (1.5K, 3.4M, 2.0Qa), server-authoritative purchases, repairing tampered or old save data, and odds disclosure for paid random items such as eggs, crates, and spins. Includes a Lune pacing calculator. Use when choosing or checking baseCost/costGrowth/rebirth numbers, writing upgrade/currency/rebirth/offline code, or when progress stalls, a rebirth takes far longer than the last, numbers display as 1000K, offline earnings pay too much, or players gain currency they did not earn."
+}

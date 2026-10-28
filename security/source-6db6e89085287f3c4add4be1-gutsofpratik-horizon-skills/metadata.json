@@ -1,0 +1,38 @@
+{
+  "name": "azure-compliance",
+  "repo": "gutsofpratik/Horizon-Skills",
+  "path": "skills/source-6db6e89085287f3c4add4be1/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/gutsofpratik/Horizon-Skills",
+  "dir_name": "source-6db6e89085287f3c4add4be1-gutsofpratik-horizon-skills",
+  "downloaded_at": "2026-10-28T04:45:06.097883Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gutsofpratik",
+  "source_url": "https://github.com/gutsofpratik/Horizon-Skills/blob/main/skills/source-6db6e89085287f3c4add4be1/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gutsofpratik/Horizon-Skills/blob/main/skills/source-6db6e89085287f3c4add4be1/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run Azure compliance and security audits with azqr plus Key Vault expiration checks. Covers best-practice assessment, resource review, policy/compliance validation, and security posture checks. WHEN: compliance scan, security audit, BEFORE running azqr (compliance cli tool), Azure best practices, Key Vault expiration check, expired certificates, expiring secrets, orphaned resources, compliance assessment."
+}

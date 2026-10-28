@@ -1,0 +1,38 @@
+{
+  "name": "atlas",
+  "repo": "henriquescastilho/my-claude",
+  "path": ".codex/skills/atlas/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/henriquescastilho/my-claude",
+  "dir_name": "atlas-henriquescastilho-my-claude",
+  "downloaded_at": "2026-10-28T04:52:33.092157Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "henriquescastilho",
+  "source_url": "https://github.com/henriquescastilho/my-claude/blob/main/.codex/skills/atlas/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/henriquescastilho/my-claude/blob/main/.codex/skills/atlas/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "macOS-only AppleScript control for the ChatGPT Atlas desktop app. Use only when the user explicitly asks to control Atlas tabs/bookmarks/history on macOS and the \"ChatGPT Atlas\" app is installed; do not trigger for general browser tasks or non-macOS environments."
+}

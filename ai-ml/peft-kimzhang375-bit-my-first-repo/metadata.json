@@ -1,0 +1,39 @@
+{
+  "name": "peft-fine-tuning",
+  "repo": "kimzhang375-bit/my-first-repo",
+  "path": "skills/file-reader/ai-research-skills/03-fine-tuning/peft/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/kimzhang375-bit/my-first-repo",
+  "dir_name": "peft-kimzhang375-bit-my-first-repo",
+  "downloaded_at": "2026-10-28T05:39:19.341742Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, model, training",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "kimzhang375-bit",
+  "source_url": "https://github.com/kimzhang375-bit/my-first-repo/blob/main/skills/file-reader/ai-research-skills/03-fine-tuning/peft/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kimzhang375-bit/my-first-repo/blob/main/skills/file-reader/ai-research-skills/03-fine-tuning/peft/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Parameter-efficient fine-tuning for LLMs using LoRA, QLoRA, and 25+ methods. Use when fine-tuning large models (7B-70B) with limited GPU memory, when you need to train <1% of parameters with minimal accuracy loss, or for multi-adapter serving. HuggingFace's official library integrated with transformers ecosystem."
+}

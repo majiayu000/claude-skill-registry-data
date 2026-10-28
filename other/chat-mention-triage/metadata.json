@@ -1,0 +1,37 @@
+{
+  "name": "chat-mention-triage",
+  "repo": "jamditis/claude-skills-journalism",
+  "path": "newsroom-agent-ops/skills/chat-mention-triage/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/jamditis/claude-skills-journalism",
+  "dir_name": "chat-mention-triage",
+  "downloaded_at": "2026-10-28T05:13:53.258827Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: communication=2, marketing=2",
+    "score": 2,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "email",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jamditis",
+  "source_url": "https://github.com/jamditis/claude-skills-journalism/blob/master/newsroom-agent-ops/skills/chat-mention-triage/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jamditis/claude-skills-journalism/blob/master/newsroom-agent-ops/skills/chat-mention-triage/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use to classify a team-chat mention, track distinct work, and avoid duplicating the designated live responder."
+}

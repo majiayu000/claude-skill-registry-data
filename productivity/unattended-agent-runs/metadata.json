@@ -1,0 +1,38 @@
+{
+  "name": "unattended-agent-runs",
+  "repo": "jamditis/claude-skills-journalism",
+  "path": "newsroom-agent-ops/skills/unattended-agent-runs/SKILL.md",
+  "github_branch": "master",
+  "category": "productivity",
+  "source": "github.com/jamditis/claude-skills-journalism",
+  "dir_name": "unattended-agent-runs",
+  "downloaded_at": "2026-10-28T05:13:54.169726Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, memory",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jamditis",
+  "source_url": "https://github.com/jamditis/claude-skills-journalism/blob/master/newsroom-agent-ops/skills/unattended-agent-runs/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jamditis/claude-skills-journalism/blob/master/newsroom-agent-ops/skills/unattended-agent-runs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use to design or operate recurring newsroom agent work without a person watching each run. Covers a simple process-per-run starter and a persistent supervised session."
+}

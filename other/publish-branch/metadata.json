@@ -1,0 +1,37 @@
+{
+  "name": "publish-branch",
+  "repo": "mParticle/aquarium",
+  "path": ".claude/skills/publish-branch/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mParticle/aquarium",
+  "dir_name": "publish-branch",
+  "downloaded_at": "2026-10-28T06:03:40.280409Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mParticle",
+  "source_url": "https://github.com/mParticle/aquarium/blob/main/.claude/skills/publish-branch/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mParticle/aquarium/blob/main/.claude/skills/publish-branch/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Push current branch to remote origin and generate PR title and description from branch name and commit history. Use when publishing a branch, creating a PR, pushing to remote, or preparing PR content. Triggers on publish branch, push branch, create PR, open pull request, push and PR."
+}

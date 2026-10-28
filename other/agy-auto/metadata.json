@@ -1,0 +1,39 @@
+{
+  "name": "agy-auto",
+  "repo": "ibrdot/swe-re-expert",
+  "path": "skills/agy-auto/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ibrdot/swe-re-expert",
+  "dir_name": "agy-auto",
+  "downloaded_at": "2026-10-28T05:04:05.426450Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "ibrdot",
+  "source_url": "https://github.com/ibrdot/swe-re-expert/blob/main/skills/agy-auto/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ibrdot/swe-re-expert/blob/main/skills/agy-auto/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Configure agy-auto PreToolUse security gate to run Antigravity CLI (agy) unattended with layered policy controls instead of --dangerously-skip-permissions."
+}

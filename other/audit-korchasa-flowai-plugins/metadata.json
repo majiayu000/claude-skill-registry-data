@@ -1,0 +1,37 @@
+{
+  "name": "audit",
+  "repo": "korchasa/flowai-plugins",
+  "path": "plugins/flowai-memex/skills/audit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/korchasa/flowai-plugins",
+  "dir_name": "audit-korchasa-flowai-plugins",
+  "downloaded_at": "2026-10-28T05:41:46.072521Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "korchasa",
+  "source_url": "https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai-memex/skills/audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai-memex/skills/audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user asks to audit a memex (long-term knowledge bank for AI agents) for orphans, dead SALP REFs, missing sections, contradictions or index drift. Runs a structural check, layers LLM-judgement findings, auto-fixes trivia with `--fix`."
+}

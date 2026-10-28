@@ -1,0 +1,38 @@
+{
+  "name": "task",
+  "repo": "gabrielbsandim/task-funnel",
+  "path": "skills/task/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/gabrielbsandim/task-funnel",
+  "dir_name": "task-gabrielbsandim-task-funnel",
+  "downloaded_at": "2026-10-28T04:31:15.095542Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, refactor",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gabrielbsandim",
+  "source_url": "https://github.com/gabrielbsandim/task-funnel/blob/main/skills/task/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gabrielbsandim/task-funnel/blob/main/skills/task/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Delivery funnel for one repository task: a feature, bug fix, refactor or chore, from description or issue number to a pushed branch and a draft pull request with the board moved. Use whenever the user asks, in any language, to implement, fix, build, change or refactor something in this repository, including requests like \"fix this and leave it ready for a PR\", \"open a pull request for\", or a bare issue number, and on /task <description | issue number>. Not for questions about why something happens: that is investigate. Every path, gate command and board id comes from .claude/funnel.config.json, so this runs on any stack."
+}

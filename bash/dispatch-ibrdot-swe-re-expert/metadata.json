@@ -1,0 +1,39 @@
+{
+  "name": "dispatch",
+  "repo": "ibrdot/swe-re-expert",
+  "path": "skills/dispatch/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/ibrdot/swe-re-expert",
+  "dir_name": "dispatch-ibrdot-swe-re-expert",
+  "downloaded_at": "2026-10-28T05:04:04.721066Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, cli",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "ibrdot",
+  "source_url": "https://github.com/ibrdot/swe-re-expert/blob/main/skills/dispatch/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ibrdot/swe-re-expert/blob/main/skills/dispatch/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Delegate tasks to OpenAI Codex CLI and Google Antigravity CLI from Claude Code with topic-aware sessions"
+}

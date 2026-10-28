@@ -1,0 +1,37 @@
+{
+  "name": "netlify-edge-functions",
+  "repo": "gutsofpratik/Horizon-Skills",
+  "path": "skills/source-4859f826346204c9129cc55c/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/gutsofpratik/Horizon-Skills",
+  "dir_name": "source-4859f826346204c9129cc55c-gutsofpratik-horizon-skills",
+  "downloaded_at": "2026-10-28T04:45:11.477192Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gutsofpratik",
+  "source_url": "https://github.com/gutsofpratik/Horizon-Skills/blob/main/skills/source-4859f826346204c9129cc55c/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gutsofpratik/Horizon-Skills/blob/main/skills/source-4859f826346204c9129cc55c/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write and configure Netlify Edge Functions \u2014 TypeScript/JavaScript handlers running in a Deno runtime at the network edge. Use when adding auth middleware or auth redirects, geolocation or localization logic, A/B testing or personalization, request/response transforms (rewrites/redirects), or edge SSR to a Netlify site. Triggers on tasks like \"add an edge function\", \"auth check at the edge\", \"redirect visitors by country\", \"A/B test with cookies\", \"rewrite requests\", \"personalize by geo\", or \"cache an edge response\". Covers the config export, path routing, the Context object, response caching, environment variables, and edge-vs-serverless choices. Check the framework's adapter first \u2014 only hand-write an edge function when the framework doesn't already generate one."
+}

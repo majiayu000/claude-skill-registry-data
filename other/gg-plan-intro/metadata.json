@@ -1,0 +1,37 @@
+{
+  "name": "gg-plan-intro",
+  "repo": "ggdna/dna_plan",
+  "path": ".claude/skills/gg-plan-intro/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ggdna/dna_plan",
+  "dir_name": "gg-plan-intro",
+  "downloaded_at": "2026-10-28T04:36:50.609072Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: planning=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "planning",
+      "plan"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ggdna",
+  "source_url": "https://github.com/ggdna/dna_plan/blob/main/.claude/skills/gg-plan-intro/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ggdna/dna_plan/blob/main/.claude/skills/gg-plan-intro/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Lists the planning skills of the project management repo and says which one comes next. Use when the user says \"/gg-plan-intro\", asks how to plan the project, or asks what comes before the tickets."
+}

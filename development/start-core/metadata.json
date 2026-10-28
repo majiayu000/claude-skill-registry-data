@@ -1,0 +1,39 @@
+{
+  "name": "start-core",
+  "repo": "fusengine/agents",
+  "path": "plugins/tanstack-start-expert/skills/start-core/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/fusengine/agents",
+  "dir_name": "start-core",
+  "downloaded_at": "2026-10-28T04:30:04.364640Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build, debug",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fusengine",
+  "source_url": "https://github.com/fusengine/agents/blob/main/plugins/tanstack-start-expert/skills/start-core/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fusengine/agents/blob/main/plugins/tanstack-start-expert/skills/start-core/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when scaffolding a TanStack Start project, wiring the build tool, or debugging setup (blank page, hydration, no client JS)."
+}

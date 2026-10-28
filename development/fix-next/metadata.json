@@ -1,0 +1,37 @@
+{
+  "name": "fix-next",
+  "repo": "frontierJS/frontierjs",
+  "path": ".claude/skills/fix-next/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/frontierJS/frontierjs",
+  "dir_name": "fix-next",
+  "downloaded_at": "2026-10-28T04:29:19.786788Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "frontierJS",
+  "source_url": "https://github.com/frontierJS/frontierjs/blob/main/.claude/skills/fix-next/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/frontierJS/frontierjs/blob/main/.claude/skills/fix-next/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Take the top open row from `fli next` (or a named id, or `--pkg <name>`) and carry it from re-probe to closed; a choice it meets is filed as a question the row waits on, or put to the user with `--ask`. Use when asked to fix the next issue."
+}

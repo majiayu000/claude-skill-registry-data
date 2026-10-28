@@ -1,0 +1,37 @@
+{
+  "name": "ai-ide-runner",
+  "repo": "korchasa/flowai-plugins",
+  "path": "plugins/flowai-beta/skills/ai-ide-runner/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/korchasa/flowai-plugins",
+  "dir_name": "ai-ide-runner",
+  "downloaded_at": "2026-10-28T05:41:48.036241Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "korchasa",
+  "source_url": "https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai-beta/skills/ai-ide-runner/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai-beta/skills/ai-ide-runner/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run prompts in Claude Code, OpenCode, Cursor, or Codex CLIs from this session \u2014 one IDE, fan-out, or model comparison. Relay the other runtime's stdout verbatim. Use on run in <ide>, compare <ide> vs <ide>, try on <model>, run across models."
+}

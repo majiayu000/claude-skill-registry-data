@@ -1,0 +1,36 @@
+{
+  "name": "tapreel-setup",
+  "repo": "infinity20dragon-lab/tapreel",
+  "path": "skills/tapreel-setup/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/infinity20dragon-lab/tapreel",
+  "dir_name": "tapreel-setup",
+  "downloaded_at": "2026-10-28T05:07:39.761952Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "creative",
+    "runner_up_score": 1,
+    "signals": [
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "infinity20dragon-lab",
+  "source_url": "https://github.com/infinity20dragon-lab/tapreel/blob/main/skills/tapreel-setup/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/infinity20dragon-lab/tapreel/blob/main/skills/tapreel-setup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Check and install what Tapreel needs (VoiceStudio, FilmCraft, ffmpeg, Playwright) before making a video. Use at the start of any Tapreel job, or when a Tapreel step fails because a tool is missing."
+}

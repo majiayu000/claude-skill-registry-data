@@ -1,0 +1,38 @@
+{
+  "name": "ticket-writing",
+  "repo": "kromatv/kroma",
+  "path": ".claude/skills/ticket-writing/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/kromatv/kroma",
+  "dir_name": "ticket-writing",
+  "downloaded_at": "2026-10-28T05:43:18.846594Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word",
+    "score": 3,
+    "runner_up": "creative",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kromatv",
+  "source_url": "https://github.com/kromatv/kroma/blob/main/.claude/skills/ticket-writing/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kromatv/kroma/blob/main/.claude/skills/ticket-writing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write GitHub issues and PR descriptions. Covers the epic and sub-issue structure, linking a requirement instead of copying spec text, reading the project's label set and templates rather than guessing them, title format, and what a reviewer needs in a PR body. Use when opening an issue, turning a spec requirement into work, filing a bug, or writing a PR description. Triggers - \"open an issue\", \"write a ticket\", \"file a bug\", \"turn this into work\", \"write the PR description\"."
+}

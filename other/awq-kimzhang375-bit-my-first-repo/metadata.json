@@ -1,0 +1,38 @@
+{
+  "name": "awq-quantization",
+  "repo": "kimzhang375-bit/my-first-repo",
+  "path": "skills/file-reader/ai-research-skills/10-optimization/awq/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/kimzhang375-bit/my-first-repo",
+  "dir_name": "awq-kimzhang375-bit-my-first-repo",
+  "downloaded_at": "2026-10-28T05:39:22.074388Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "llm"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "kimzhang375-bit",
+  "source_url": "https://github.com/kimzhang375-bit/my-first-repo/blob/main/skills/file-reader/ai-research-skills/10-optimization/awq/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kimzhang375-bit/my-first-repo/blob/main/skills/file-reader/ai-research-skills/10-optimization/awq/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Activation-aware weight quantization for 4-bit LLM compression with 3x speedup and minimal accuracy loss. Use when deploying large models (7B-70B) on limited GPU memory, when you need faster inference than GPTQ with better accuracy preservation, or for instruction-tuned and multimodal models. MLSys 2024 Best Paper Award winner."
+}

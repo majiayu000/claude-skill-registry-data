@@ -1,0 +1,37 @@
+{
+  "name": "fabric",
+  "repo": "hybridlabor-api/aos",
+  "path": "skills/basic/fabric/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/hybridlabor-api/aos",
+  "dir_name": "fabric-hybridlabor-api-aos",
+  "downloaded_at": "2026-10-28T05:00:49.457536Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hybridlabor-api",
+  "source_url": "https://github.com/hybridlabor-api/aos/blob/main/skills/basic/fabric/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hybridlabor-api/aos/blob/main/skills/basic/fabric/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Master entry for the fabric family. Use for /fabric or when you must pick a multi-agent mode: reads the task, picks one mode, says why in one line, then follows that skill."
+}

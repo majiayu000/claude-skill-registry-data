@@ -1,0 +1,38 @@
+{
+  "name": "claims-gate",
+  "repo": "gooseworks-ai/goose-skills",
+  "path": "skills/marketing/claims-gate/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/gooseworks-ai/goose-skills",
+  "dir_name": "claims-gate-gooseworks-ai-goose-skills",
+  "downloaded_at": "2026-10-28T04:41:06.526457Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: marketing, content, brand",
+    "score": 3,
+    "runner_up": "communication",
+    "runner_up_score": 2,
+    "signals": [
+      "marketing",
+      "content",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gooseworks-ai",
+  "source_url": "https://github.com/gooseworks-ai/goose-skills/blob/main/skills/marketing/claims-gate/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gooseworks-ai/goose-skills/blob/main/skills/marketing/claims-gate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Checks every claim in a piece of copy (ads, emails, posts, pages, scripts, briefs) against the claims the brand has approved. Keeps, rewrites or cuts each line, and lists the proof that would bring a cut line back. When a line the copy needs has no approval, it asks for a short sign-off on the 3 or 4 lines that matter and records the answer. Use alone when you already have the copy and a brand set up; otherwise run the playbook for the job (e.g. make-static-ads, make-content, write-outreach)."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "woostack-debug",
+  "repo": "howarewoo/woostack",
+  "path": "skills/woostack-debug/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/howarewoo/woostack",
+  "dir_name": "woostack-debug",
+  "downloaded_at": "2026-10-28T04:57:41.194432Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, testing=3",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "howarewoo",
+  "source_url": "https://github.com/howarewoo/woostack/blob/main/skills/woostack-debug/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/howarewoo/woostack/blob/main/skills/woostack-debug/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Read-only systematic debugging: prove the root cause of a bug, test failure, or unexpected behavior from source/runtime evidence plus optional exact GitHub Project, issue, or PR context, then hand back evidence and a proposed minimal fix. Debug never mutates GitHub or repository state."
+}

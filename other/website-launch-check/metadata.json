@@ -1,0 +1,37 @@
+{
+  "name": "website-launch-check",
+  "repo": "karero/croftweaver",
+  "path": "skills/website-launch-check/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/karero/croftweaver",
+  "dir_name": "website-launch-check",
+  "downloaded_at": "2026-10-28T05:33:45.263523Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "analytics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "karero",
+  "source_url": "https://github.com/karero/croftweaver/blob/main/skills/website-launch-check/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/karero/croftweaver/blob/main/skills/website-launch-check/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Launch readiness check for a site built with this toolkit: runs the site's own build and tests first, then checks only what they cannot (legal pages, E-E-A-T and local signals, content the site's settings call for, testimonial consent, what only a deployed site shows), asks only where the owner's intent decides, and writes a dated report with a verdict to docs/launch/ as Markdown plus a self-contained HTML page. When the site replaces an older one, also a current-vs-new comparison with a redirect map for every old address. Runs three times in new-website (baseline after the scaffold, the verdict before launch, an optional live re-check) and on its own. Trigger phrases: \"launch check\", \"ready to launch\", \"what's missing before launch\", \"pre-launch\", \"go live\", \"launch audit\", \"relaunch\", \"compare the old and the new site\", \"post-launch gap analysis\"."
+}

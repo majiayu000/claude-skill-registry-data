@@ -1,0 +1,38 @@
+{
+  "name": "chaos-code-risk-scan",
+  "repo": "harness/harness-skills",
+  "path": "skills/observability-governance/chaos-code-risk-scan/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/harness/harness-skills",
+  "dir_name": "chaos-code-risk-scan",
+  "downloaded_at": "2026-10-28T04:49:28.269718Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review, validate",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "harness",
+  "source_url": "https://github.com/harness/harness-skills/blob/main/skills/observability-governance/chaos-code-risk-scan/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/harness/harness-skills/blob/main/skills/observability-governance/chaos-code-risk-scan/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Scan a source code repository for resilience risks that a Harness chaos experiment can prove (outbound calls without timeouts, retries without backoff, missing graceful shutdown, health checks that mask dependency state, unbounded queues and pools, local state), map each one to a generic SourceCode risk rule, and report them to Harness as a CodeRepository risk scan. Use when the user asks to scan a repo or service code for resilience or chaos risks, or wants code findings they can verify with chaos experiments. Do not use for manifest or pipeline risk scans (those run in Harness), to create or run chaos experiments (use chaos-experiment), or for security or code quality review. Trigger phrases: scan this repo for resilience risks, chaos code scan, find chaos-provable risks, code risk scan, resilience review of this service."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "systematic-debugging",
+  "repo": "hillstreet-ph/open-connect",
+  "path": "resources/migrated/v1-skills/systematic-debugging/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/hillstreet-ph/open-connect",
+  "dir_name": "systematic-debugging-hillstreet-ph-open-connect",
+  "downloaded_at": "2026-10-28T04:55:40.406588Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, build, debug, refactor",
+    "score": 4,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hillstreet-ph",
+  "source_url": "https://github.com/hillstreet-ph/open-connect/blob/main/resources/migrated/v1-skills/systematic-debugging/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hillstreet-ph/open-connect/blob/main/resources/migrated/v1-skills/systematic-debugging/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Systematic root-cause debugging with structured triage. Use when tests fail, builds break, behavior doesn't match expectations, or you encounter any unexpected error. Find root cause before fixing - never guess."
+}

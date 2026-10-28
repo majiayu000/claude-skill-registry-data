@@ -1,0 +1,37 @@
+{
+  "name": "godot-multiplayer",
+  "repo": "laurentvv/agents-kit",
+  "path": "skills/godot-multiplayer/SKILL.md",
+  "github_branch": "main",
+  "category": "gaming",
+  "source": "github.com/laurentvv/agents-kit",
+  "dir_name": "godot-multiplayer",
+  "downloaded_at": "2026-10-28T05:48:03.203626Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "gaming",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for gaming: game, godot",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "game",
+      "godot"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "laurentvv",
+  "source_url": "https://github.com/laurentvv/agents-kit/blob/main/skills/godot-multiplayer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/laurentvv/agents-kit/blob/main/skills/godot-multiplayer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build networked games with Godot 4.7 high-level multiplayer: set up an ENetMultiplayerPeer server/client, define RPCs with the @rpc annotation (call via rpc()/rpc_id()), set per-node multiplayer authority, and replicate state with MultiplayerSpawner and MultiplayerSynchronizer. Use when adding multiplayer/networking to a Godot project, writing @rpc functions, or syncing player/world state across peers."
+}

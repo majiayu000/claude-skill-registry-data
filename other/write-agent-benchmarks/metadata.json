@@ -1,0 +1,38 @@
+{
+  "name": "write-agent-benchmarks",
+  "repo": "korchasa/flowai-plugins",
+  "path": "plugins/flowai-devtools/skills/write-agent-benchmarks/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/korchasa/flowai-plugins",
+  "dir_name": "write-agent-benchmarks",
+  "downloaded_at": "2026-10-28T05:41:50.899226Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=3, data=3",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "korchasa",
+  "source_url": "https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai-devtools/skills/write-agent-benchmarks/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai-devtools/skills/write-agent-benchmarks/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build and run benchmarks that measure an AI AGENT's behaviour \u2014 scenarios, checklists, judged runs. Use when authoring or evaluating agent benchmark scenarios. Not for code performance benchmarks (deno bench, criterion) or ordinary test suites."
+}

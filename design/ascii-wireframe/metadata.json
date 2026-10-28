@@ -1,0 +1,40 @@
+{
+  "name": "ascii-wireframe",
+  "repo": "leonardoacosta/agents",
+  "path": "skills/ascii-wireframe/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/leonardoacosta/agents",
+  "dir_name": "ascii-wireframe",
+  "downloaded_at": "2026-10-28T05:51:18.945352Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, ui, css, frontend, component",
+    "score": 5,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "ui",
+      "css",
+      "frontend",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "leonardoacosta",
+  "source_url": "https://github.com/leonardoacosta/agents/blob/main/skills/ascii-wireframe/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/leonardoacosta/agents/blob/main/skills/ascii-wireframe/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Author UI wireframes as Unicode box-drawing TEXT (\u250c\u2500\u2510\u2502\u2514\u2518) that embeds directly into proposal.md, tasks.md, specs, and PR/issue bodies \u2014 the corpus's native text medium. Use this skill whenever the request is for a \"wireframe\", \"mockup\", \"ASCII layout\", \"box-drawing UI sketch\", \"text wireframe\", \"low-fi mockup\", \"lay out a screen\", or any low-fidelity sketch of a UI/page/screen/form/dashboard that should live inside a markdown doc rather than a browser. Trigger broadly \u2014 even when the user says \"sketch the settings page\" or \"show me roughly how the checkout flow lays out\" without the word \"wireframe\". Ships a glyph canon (4 border families, 30 component recipes, composition rules) for hand-authoring, plus an optional `scripts/bin/wireframe-render` for spec-driven generation. Do NOT use for rich explanatory HTML diagrams (use `wayfinder`) or production UI (use `frontend-design`)."
+}

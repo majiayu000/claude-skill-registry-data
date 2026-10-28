@@ -1,0 +1,38 @@
+{
+  "name": "pave-env",
+  "repo": "flight505/skill-forge",
+  "path": "plugins/ai-agency/tonone/skills/pave-env/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/flight505/skill-forge",
+  "dir_name": "pave-env-flight505-skill-forge",
+  "downloaded_at": "2026-10-28T04:25:37.210435Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "flight505",
+  "source_url": "https://github.com/flight505/skill-forge/blob/main/plugins/ai-agency/tonone/skills/pave-env/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/flight505/skill-forge/blob/main/plugins/ai-agency/tonone/skills/pave-env/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Set up local development environments \u2014 devcontainers, Docker Compose, one-command setup, dev/prod parity. Use when asked to \"set up dev environment\", \"devcontainer\", \"docker compose for dev\", \"local development setup\", or \"one command to run\"."
+}

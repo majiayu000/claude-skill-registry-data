@@ -1,0 +1,36 @@
+{
+  "name": "gg-plan-requirements",
+  "repo": "ggdna/dna_plan",
+  "path": ".claude/skills/gg-plan-requirements/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ggdna/dna_plan",
+  "dir_name": "gg-plan-requirements",
+  "downloaded_at": "2026-10-28T04:36:51.649752Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category documents scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "planning",
+    "runner_up_score": 1,
+    "signals": [
+      "doc"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ggdna",
+  "source_url": "https://github.com/ggdna/dna_plan/blob/main/.claude/skills/gg-plan-requirements/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ggdna/dna_plan/blob/main/.claude/skills/gg-plan-requirements/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Engineers the goals and requirements of the project interactively with the user and writes them to doc/goals and doc/requirements. Use when the user says \"/gg-plan-requirements\", wants to find or change requirements, or before the first ticket when no accepted requirement covers the work."
+}

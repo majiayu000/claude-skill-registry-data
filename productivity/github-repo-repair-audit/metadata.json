@@ -1,0 +1,38 @@
+{
+  "name": "github-repo-repair-audit",
+  "repo": "jin2004-cmd/codex-practical-skills",
+  "path": "github-repo-repair-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/jin2004-cmd/codex-practical-skills",
+  "dir_name": "github-repo-repair-audit",
+  "downloaded_at": "2026-10-28T05:21:05.621616Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, memory",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jin2004-cmd",
+  "source_url": "https://github.com/jin2004-cmd/codex-practical-skills/blob/main/github-repo-repair-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jin2004-cmd/codex-practical-skills/blob/main/github-repo-repair-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Repair and audit an existing GitHub repository \u2014 verify what is actually on the remote before acting, compare local vs remote at byte level, fix real bugs with a reproducible setup, and sync every place that quotes the number you changed. Use when a task says \"the repo is still on the old version\" or \"fix X\", or when auditing several repos for stale descriptions and broken claims. Not for launching a new repo (use github-repo-launch-polish)."
+}

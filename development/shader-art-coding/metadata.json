@@ -1,0 +1,39 @@
+{
+  "name": "shader-art-coding",
+  "repo": "gokayfem/shader-skills",
+  "path": "skills/shader-art-coding/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/gokayfem/shader-skills",
+  "dir_name": "shader-art-coding",
+  "downloaded_at": "2026-10-28T04:40:39.669251Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, build, compile, debug",
+    "score": 4,
+    "runner_up": "performance",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gokayfem",
+  "source_url": "https://github.com/gokayfem/shader-skills/blob/main/skills/shader-art-coding/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gokayfem/shader-skills/blob/main/skills/shader-art-coding/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Writes, debugs, and art-directs procedural GLSL fragment shaders (Shadertoy mainImage, WebGL2 / GLSL ES 3.00): SDF raymarching, procedural buildings/cities, 2D distance-field graphics, noise / fBm / domain warping, terrain, ocean/coastal water optics, clouds and other volumes, PBR lighting, color and tonemapping. Ships a verified GLSL building-block library with a bundler and checker. Use when the user asks for a shader, Shadertoy, GLSL/.frag/.glsl code, a raymarcher, an SDF scene, a procedural texture or generative visual, or wants a shader fixed, optimized, ported or explained. Not for HLSL/Unity ShaderLab or non-graphics GPU compute."
+}

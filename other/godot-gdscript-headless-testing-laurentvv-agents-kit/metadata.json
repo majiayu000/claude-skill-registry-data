@@ -1,0 +1,38 @@
+{
+  "name": "godot-gdscript-headless-testing",
+  "repo": "laurentvv/agents-kit",
+  "path": "skills/godot-gdscript-headless-testing/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/laurentvv/agents-kit",
+  "dir_name": "godot-gdscript-headless-testing-laurentvv-agents-kit",
+  "downloaded_at": "2026-10-28T05:48:04.419677Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "laurentvv",
+  "source_url": "https://github.com/laurentvv/agents-kit/blob/main/skills/godot-gdscript-headless-testing/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/laurentvv/agents-kit/blob/main/skills/godot-gdscript-headless-testing/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run GDScript test suites from the command line with `godot --headless`, using a SceneTree/MainLoop runner script that exits non-zero on failure so CI can gate merges. Use when a Godot project needs unit tests without opening the editor, when wiring a CI job (GitHub Actions or similar) that must fail the build on a failing `.gd` test, or when a `godot --headless` invocation hangs, opens a window, or exits 0 despite failed assertions."
+}

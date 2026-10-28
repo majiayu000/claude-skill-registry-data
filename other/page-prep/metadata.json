@@ -1,0 +1,37 @@
+{
+  "name": "page-prep",
+  "repo": "lisongmeinorc/apnorcedge",
+  "path": ".claude/skills/page-prep/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/lisongmeinorc/apnorcedge",
+  "dir_name": "page-prep",
+  "downloaded_at": "2026-10-28T05:55:45.094581Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lisongmeinorc",
+  "source_url": "https://github.com/lisongmeinorc/apnorcedge/blob/main/.claude/skills/page-prep/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lisongmeinorc/apnorcedge/blob/main/.claude/skills/page-prep/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Detects and removes overlays that block a webpage (cookie and GDPR consent banners, modals, newsletter popups, paywalls, login walls) with the web CLI, using Consent-O-Matic rules for known consent platforms plus DOM heuristics. Use before screenshotting, scraping, or automating a page that shows or may show such overlays, or when the user asks to dismiss cookie banners or popups."
+}

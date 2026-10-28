@@ -1,0 +1,37 @@
+{
+  "name": "rust-error-handling",
+  "repo": "fusengine/agents",
+  "path": "plugins/rust-expert/skills/rust-error-handling/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/fusengine/agents",
+  "dir_name": "rust-error-handling-fusengine-agents",
+  "downloaded_at": "2026-10-28T04:30:03.034318Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fusengine",
+  "source_url": "https://github.com/fusengine/agents/blob/main/plugins/rust-expert/skills/rust-error-handling/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fusengine/agents/blob/main/plugins/rust-expert/skills/rust-error-handling/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when designing Rust error handling \u2014 thiserror vs anyhow, typed error enums,"
+}

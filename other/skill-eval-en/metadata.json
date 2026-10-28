@@ -1,0 +1,37 @@
+{
+  "name": "skill-eval-en",
+  "repo": "hillstreet-ph/open-connect",
+  "path": "resources/migrated/v1-skills/skill-eval-en/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/hillstreet-ph/open-connect",
+  "dir_name": "skill-eval-en",
+  "downloaded_at": "2026-10-28T04:55:34.127650Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hillstreet-ph",
+  "source_url": "https://github.com/hillstreet-ph/open-connect/blob/main/resources/migrated/v1-skills/skill-eval-en/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hillstreet-ph/open-connect/blob/main/resources/migrated/v1-skills/skill-eval-en/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Skill quality evaluation assistant. Trigger when users ask to evaluate a skill, review a skill package, explain a score, identify what to fix first, analyze token or context budget, improve a skill, or define custom scoring rules. Use it for static quality reviews of local skill packages, with banded scores, risks, priority fixes, and rewrite briefs."
+}

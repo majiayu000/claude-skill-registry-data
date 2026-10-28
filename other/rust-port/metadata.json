@@ -1,0 +1,37 @@
+{
+  "name": "rust-port",
+  "repo": "kabudu/engineering-agent-skills",
+  "path": "skills/rust-port/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/kabudu/engineering-agent-skills",
+  "dir_name": "rust-port",
+  "downloaded_at": "2026-10-28T05:31:00.487324Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kabudu",
+  "source_url": "https://github.com/kabudu/engineering-agent-skills/blob/master/skills/rust-port/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kabudu/engineering-agent-skills/blob/master/skills/rust-port/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Port existing C, C++, Python, Go, JavaScript, or TypeScript code to Rust while preserving its agreed observable behaviour. Use for requested Rust migrations or rewrites, not conceptual language comparisons or unrelated Rust edits."
+}

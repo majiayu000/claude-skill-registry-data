@@ -1,0 +1,39 @@
+{
+  "name": "save-to-brain",
+  "repo": "gooseworks-ai/goose-skills",
+  "path": "skills/marketing/save-to-brain/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/gooseworks-ai/goose-skills",
+  "dir_name": "save-to-brain-gooseworks-ai-goose-skills",
+  "downloaded_at": "2026-10-28T04:41:09.221055Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for marketing: marketing, content, campaign, brand",
+    "score": 4,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "marketing",
+      "content",
+      "campaign",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gooseworks-ai",
+  "source_url": "https://github.com/gooseworks-ai/goose-skills/blob/main/skills/marketing/save-to-brain/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gooseworks-ai/goose-skills/blob/main/skills/marketing/save-to-brain/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Shared step of the marketing playbooks (research-market, plan-campaign, make-content, analyze-performance): saves a finished file to the brand and makes it searchable. It either replaces older versions or keeps dated history, then checks that the file can be found. Loaded by those playbooks; not for direct use."
+}

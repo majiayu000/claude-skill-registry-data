@@ -1,0 +1,39 @@
+{
+  "name": "mcpc",
+  "repo": "gabrielmoreira/agent-skills-mirror",
+  "path": "mirrors/repos/apify@mcpc/skills/mcpc/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/gabrielmoreira/agent-skills-mirror",
+  "dir_name": "mcpc",
+  "downloaded_at": "2026-10-28T04:31:28.291619Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gabrielmoreira",
+  "source_url": "https://github.com/gabrielmoreira/agent-skills-mirror/blob/main/mirrors/repos/apify@mcpc/skills/mcpc/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gabrielmoreira/agent-skills-mirror/blob/main/mirrors/repos/apify@mcpc/skills/mcpc/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use the mcpc CLI to work with MCP (Model Context Protocol) servers from the shell - connect to a server as a persistent session, then list and call tools, read resources, get prompts, and run async tasks. Use --json for scripting and code mode. Reach for this whenever interacting with MCP servers, calling MCP tools, or accessing MCP resources programmatically."
+}

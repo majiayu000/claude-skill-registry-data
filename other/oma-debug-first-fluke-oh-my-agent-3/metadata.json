@@ -1,0 +1,38 @@
+{
+  "name": "oma-debug",
+  "repo": "first-fluke/oh-my-agent",
+  "path": ".claude-plugin/domains/security/skills/oma-debug/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/first-fluke/oh-my-agent",
+  "dir_name": "oma-debug-first-fluke-oh-my-agent-3",
+  "downloaded_at": "2026-10-28T04:24:41.945726Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, quality=3",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "first-fluke",
+  "source_url": "https://github.com/first-fluke/oh-my-agent/blob/main/.claude-plugin/domains/security/skills/oma-debug/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/first-fluke/oh-my-agent/blob/main/.claude-plugin/domains/security/skills/oma-debug/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Diagnose a reproducible failure, fix its cause, and verify the regression. Use for crashes, incorrect behavior, and failing tests."
+}

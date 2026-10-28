@@ -1,0 +1,37 @@
+{
+  "name": "wiki-qa",
+  "repo": "huytran1120/vietnam-agentic-skills",
+  "path": "skills/wiki-qa/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/huytran1120/vietnam-agentic-skills",
+  "dir_name": "wiki-qa-huytran1120-vietnam-agentic-skil",
+  "downloaded_at": "2026-10-28T05:00:35.214175Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "huytran1120",
+  "source_url": "https://github.com/huytran1120/vietnam-agentic-skills/blob/main/skills/wiki-qa/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/huytran1120/vietnam-agentic-skills/blob/main/skills/wiki-qa/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Answer repository questions grounded entirely in source code evidence. Use when user asks a question about the codebase, user wants to understand a specific file, function, or component, or user asks \"how does X work\" or \"where is Y defined\"."
+}

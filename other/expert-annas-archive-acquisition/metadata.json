@@ -1,0 +1,37 @@
+{
+  "name": "expert-annas-archive-acquisition",
+  "repo": "jamiezigelbaum/expert-agents",
+  "path": "skills/expert-annas-archive-acquisition/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jamiezigelbaum/expert-agents",
+  "dir_name": "expert-annas-archive-acquisition",
+  "downloaded_at": "2026-10-28T05:14:08.972654Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "pdf",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jamiezigelbaum",
+  "source_url": "https://github.com/jamiezigelbaum/expert-agents/blob/main/skills/expert-annas-archive-acquisition/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jamiezigelbaum/expert-agents/blob/main/skills/expert-annas-archive-acquisition/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Search for candidate books, download owner-named titles immediately, present candidates for selection questions, save approved files through the configured sink, and ingest them into the domain's page library."
+}

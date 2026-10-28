@@ -1,0 +1,37 @@
+{
+  "name": "verify-product-image",
+  "repo": "gooseworks-ai/goose-skills",
+  "path": "skills/video/verify-product-image/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/gooseworks-ai/goose-skills",
+  "dir_name": "verify-product-image-gooseworks-ai-goose-skills",
+  "downloaded_at": "2026-10-28T04:41:16.981189Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, feature",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 1,
+    "signals": [
+      "product",
+      "feature"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gooseworks-ai",
+  "source_url": "https://github.com/gooseworks-ai/goose-skills/blob/main/skills/video/verify-product-image/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gooseworks-ai/goose-skills/blob/main/skills/video/verify-product-image/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "QC gate for a generated static ad image \u2014 verify the file opens, matches the requested dimensions, shows the correct product/subject (right shape, colour, label, logo), and has no garbled text or severe artifacts. Records pass/fail/needs-human in verification.md. Used as the final check in the static ad remix flow before shipping."
+}

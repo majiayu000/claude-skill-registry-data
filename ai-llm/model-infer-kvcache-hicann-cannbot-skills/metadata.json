@@ -1,0 +1,37 @@
+{
+  "name": "model-infer-kvcache",
+  "repo": "hicann/cannbot-skills",
+  "path": "model/model-infer-kvcache/SKILL.md",
+  "github_branch": "master",
+  "category": "ai-llm",
+  "source": "github.com/hicann/cannbot-skills",
+  "dir_name": "model-infer-kvcache-hicann-cannbot-skills",
+  "downloaded_at": "2026-10-28T04:54:53.638906Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-llm",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-llm: llm, prompt",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "llm",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hicann",
+  "source_url": "https://github.com/hicann/cannbot-skills/blob/master/model/model-infer-kvcache/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hicann/cannbot-skills/blob/master/model/model-infer-kvcache/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "\u57fa\u4e8e PyTorch \u6846\u67b6\u7684\u6607\u817e NPU \u6a21\u578b\u63a8\u7406 KVCache \u4f18\u5316\u6280\u80fd\u3002\u5206\u6790\u5e76\u6539\u9020 LLM \u63a8\u7406\u6a21\u578b\u7684 KVCache \u5b9e\u73b0\uff0c\u8986\u76d6 Legacy \u8fde\u7eed\u7f13\u5b58\u4e0e\u5206\u9875\u6ce8\u610f\u529b\uff08Paged Attention\uff09\u914d FA \u878d\u5408\u7b97\u5b50\u3001MLA \u538b\u7f29\u7f13\u5b58\u3001SlidingWindow / \u591a attn_type \u6df7\u5408\u3002\u89e6\u53d1\u573a\u666f\uff1aKVCache \u7ba1\u7406\u5b9e\u73b0\u3001\u5206\u9875\u6ce8\u610f\u529b\u63a5\u5165\u3001KV \u538b\u7f29\u3001FA \u878d\u5408\u7b97\u5b50\u3001OOM / \u6027\u80fd\u95ee\u9898\u3001block_table / slot_mapping \u6784\u9020\u3002\u652f\u6301\u6846\u67b6\u90e8\u7f72\u4e0e\u72ec\u7acb\u90e8\u7f72\u4e24\u79cd\u6a21\u5f0f\u3002"
+}

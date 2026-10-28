@@ -1,0 +1,37 @@
+{
+  "name": "pair-review",
+  "repo": "leandronsp/overmind",
+  "path": ".claude/skills/pair-review/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/leandronsp/overmind",
+  "dir_name": "pair-review",
+  "downloaded_at": "2026-10-28T05:49:49.716941Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, cli",
+    "score": 2,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "leandronsp",
+  "source_url": "https://github.com/leandronsp/overmind/blob/main/.claude/skills/pair-review/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/leandronsp/overmind/blob/main/.claude/skills/pair-review/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Interactive pair review of a PR. Fetches the diff, scouts for context, then walks through each changed file one at a time. Collects review comments in a bag with conventional comment prefixes, previews them, and posts only after explicit approval. Trigger on: pair review, let's review together, walk me through the PR, review with me."
+}

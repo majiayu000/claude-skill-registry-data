@@ -1,0 +1,10 @@
+---
+name: ngautopilot-internal-typescript
+description: Internal canonical NgAutoPilot typescript skill boundary. Public installation uses curated NgAutoPilot gateways.
+metadata:
+  internal: true
+---
+
+# Internal typescript catalog
+
+This entrypoint prevents broad third-party skill discovery from advertising individual canonical procedures. Source procedures remain available to NgAutoPilot tools. Use the public gateway skills under `.agents/skills/` for npx installation.

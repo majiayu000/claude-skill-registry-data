@@ -1,0 +1,38 @@
+{
+  "name": "implement",
+  "repo": "korchasa/flowai-plugins",
+  "path": "plugins/flowai/skills/implement/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/korchasa/flowai-plugins",
+  "dir_name": "implement-korchasa-flowai-plugins",
+  "downloaded_at": "2026-10-28T05:41:45.507912Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "korchasa",
+  "source_url": "https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai/skills/implement/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai/skills/implement/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user asks to execute an existing task plan's Solution under TDD \u2014 RED \u2192 GREEN \u2192 REFACTOR \u2192 CHECK per AGENTS.md. Requires a written plan under the `tasks` role. Do NOT trigger on planning, review, or unrelated failing tests."
+}

@@ -1,0 +1,36 @@
+{
+  "name": "torch-custom-ops-guide",
+  "repo": "hicann/cannbot-skills",
+  "path": "graph/torch-custom-ops-guide/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/hicann/cannbot-skills",
+  "dir_name": "torch-custom-ops-guide-hicann-cannbot-skills",
+  "downloaded_at": "2026-10-28T04:55:02.430921Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hicann",
+  "source_url": "https://github.com/hicann/cannbot-skills/blob/master/graph/torch-custom-ops-guide/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hicann/cannbot-skills/blob/master/graph/torch-custom-ops-guide/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "\u81ea\u5b9a\u4e49\u7b97\u5b50\u5165\u56fe\u5b8c\u6574\u6307\u5357\u3002\u8986\u76d6\u4ece\u96f6\u5f00\u53d1\u3001Eager \u7b97\u5b50\u9002\u914d npugraph_ex \u56fe\u6a21\u5f0f\uff08torch.library.custom_op / torch.library.Library\uff09\u3001Meta \u63a8\u5bfc\u51fd\u6570\u7f16\u5199\u7b49\u5168\u6d41\u7a0b\u3002\u9002\u7528\u4e8e\u4e24\u79cd\u7eaf Python \u81ea\u5b9a\u4e49\u7b97\u5b50\u6ce8\u518c\u573a\u666f\u3002\u5173\u952e\u8bcd\uff1acustom_op\u3001torch.library.Library\u3001register_fake\u3001meta\u3001mutates_args\u3002"
+}

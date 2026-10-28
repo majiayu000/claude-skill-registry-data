@@ -1,0 +1,37 @@
+{
+  "name": "company-contact-finder",
+  "repo": "gooseworks-ai/goose-skills",
+  "path": "skills/shared/company-contact-finder/SKILL.md",
+  "github_branch": "main",
+  "category": "context-management",
+  "source": "github.com/gooseworks-ai/goose-skills",
+  "dir_name": "company-contact-finder",
+  "downloaded_at": "2026-10-28T04:41:22.485131Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, memory",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gooseworks-ai",
+  "source_url": "https://github.com/gooseworks-ai/goose-skills/blob/main/skills/shared/company-contact-finder/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gooseworks-ai/goose-skills/blob/main/skills/shared/company-contact-finder/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find decision-makers at a specific company using Fiber, Crustdata and PDL people search inside the GooseWorks coworker. Given a company name and target titles, returns a list of contacts with name, title, LinkedIn URL, and location."
+}

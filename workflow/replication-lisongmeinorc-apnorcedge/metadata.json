@@ -1,0 +1,38 @@
+{
+  "name": "replication",
+  "repo": "lisongmeinorc/apnorcedge",
+  "path": ".claude/skills/replication/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/lisongmeinorc/apnorcedge",
+  "dir_name": "replication-lisongmeinorc-apnorcedge",
+  "downloaded_at": "2026-10-28T05:55:51.781226Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process, pipeline",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "process",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lisongmeinorc",
+  "source_url": "https://github.com/lisongmeinorc/apnorcedge/blob/main/.claude/skills/replication/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lisongmeinorc/apnorcedge/blob/main/.claude/skills/replication/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Publish, deactivate, and delete AEM content programmatically via the Cloud Service Replication API (com.day.cq.replication). Covers single-path and bulk activation, preview-tier targeting with AgentFilter, synchronous/async options, ReplicationStatus checks, permission validation, workflow process steps, and replication event handling. Use when the user needs to publish pages, activate or deactivate content, check replication status, build workflow steps that replicate content, listen to replication events, query batch publication state, or work with Replicator, ReplicationOptions, or ReplicationStatusProvider in AEM Cloud Service."
+}

@@ -1,0 +1,102 @@
+---
+name: ts-runtime-node
+description: Use when running TypeScript directly on Node.js without a build step — native type stripping, its limits, or when to reach for tsx. Not for Bun (ts-runtime-bun).
+versions:
+  node: "24 LTS (26 Current, LTS from 2026-10-28)"
+  typescript: "5.8+ (latest stable 7.0)"
+  tsx: "4.x"
+references: references/type-stripping.md, references/tsx-when-needed.md, references/node24-features.md, references/templates/node-esm-setup.md
+related-skills: ts-runtime-bun, ts-lint-format, solid-generic
+---
+
+<objective>
+This skill covers running .ts/.mts/.cts files directly on Node 24 LTS (or Node 26) via native type
+stripping: what erases cleanly versus what throws ERR_UNSUPPORTED_TYPESCRIPT_SYNTAX (enum,
+namespace with runtime code, parameter properties, import aliases), why tsconfig.json
+paths/downleveling are ignored at runtime, and mandatory explicit file extensions and import
+type usage.
+
+It also covers when native stripping is insufficient and a full loader (tsx) is needed —
+paths, decorators, enum, or .tsx — plus setting up an ESM-only Node project, --watch mode,
+and node:test, and migrating a script/CLI off ts-node.
+
+Out of scope: Bun runtime specifics belong to ts-runtime-bun; tsconfig configuration details
+belong to ts-config.
+</objective>
+
+# TypeScript on Node.js
+
+## Agent Workflow (MANDATORY)
+
+Before ANY implementation, spawn 3 agents in parallel, one `Agent` call each with a `name`:
+
+1. **fuse-ai-pilot:explore-codebase** - Inspect existing `package.json`, `tsconfig.json`, entry scripts
+2. **fuse-ai-pilot:research-expert** - Verify latest Node LTS + type-stripping behavior via Context7/Exa
+3. **mcp__context7__query-docs** - Check Node `Modules: TypeScript` and CLI flag docs
+
+After implementation, run **fuse-ai-pilot:sniper** for validation.
+
+## Use when
+
+- Running `.ts`/`.mts`/`.cts` files directly with `node file.ts` (no bundler)
+- Deciding between native **type stripping** and a full loader (`tsx`)
+- Setting up an ESM-only Node project, `--watch` mode, or `node:test`
+- Migrating a script/CLI/hook off `ts-node` to Node's built-in support
+
+## Do NOT use for
+
+- Bun runtime or `bun test` → use [ts-runtime-bun](../ts-runtime-bun/SKILL.md)
+- Linting / formatting choices → use [ts-lint-format](../ts-lint-format/SKILL.md)
+- Framework runtimes (Next.js, Astro) that own their own transpile pipeline
+- Browser/bundled output → use a bundler skill
+
+## Critical Rules
+
+1. **Type stripping is erase-only** - Node replaces types with whitespace and does NO type checking. Run `tsc --noEmit` separately for safety.
+2. **`tsconfig.json` is ignored at runtime** - `paths`, downleveling, and JS target lowering do not apply. Native stripping only erases inline types.
+3. **Non-erasable syntax errors out** - `enum`, `namespace` with runtime code, parameter properties, and import aliases throw `ERR_UNSUPPORTED_TYPESCRIPT_SYNTAX`.
+4. **Use `import type` / `verbatimModuleSyntax`** - Value imports of types crash at runtime; the `type` keyword is mandatory for type-only imports.
+5. **File extensions are mandatory** - `import './file.ts'`, not `./file`. `.tsx` is unsupported by native stripping.
+
+## Architecture
+
+```
+project/
+├── package.json          # "type": "module"
+├── tsconfig.json         # noEmit, erasableSyntaxOnly, verbatimModuleSyntax
+├── src/
+│   ├── index.ts          # node src/index.ts
+│   └── interfaces/       # type-only modules (import type)
+└── test/
+    └── unit.test.ts      # node --test (node:test)
+```
+
+→ See [node-esm-setup.md](references/templates/node-esm-setup.md) for a complete setup
+
+## Reference Guide
+
+### Concepts
+
+| Topic | Reference | When to Consult |
+|-------|-----------|-----------------|
+| **Type Stripping** | [type-stripping.md](references/type-stripping.md) | Running `.ts` natively, understanding what erases and what errors |
+| **When tsx** | [tsx-when-needed.md](references/tsx-when-needed.md) | Native stripping is insufficient (paths, enums, decorators, `.tsx`) |
+| **Node 24 / 26 features** | [references/node24-features.md](references/node24-features.md) | Watch mode, `node:test`, ESM resolution, relevant built-ins, Node 26 changes |
+
+### Templates
+
+| Template | When to Use |
+|----------|-------------|
+| [node-esm-setup.md](references/templates/node-esm-setup.md) | Starting an ESM Node + native TS project |
+
+## Best Practices
+
+### DO
+- Set `"type": "module"` and use `.ts`/`.mts` with explicit import extensions
+- Keep `tsc --noEmit` in CI for real type safety alongside runtime stripping
+- Reach for `tsx` the moment you need `paths`, decorators, `enum`, or `.tsx`
+
+### DON'T
+- Assume `tsconfig` `paths` or `target` downleveling work at runtime — they don't
+- Publish `.ts` files inside `node_modules` — Node refuses to strip them
+- Rely on native stripping for decorators (TC39 Stage 3, not transformed)

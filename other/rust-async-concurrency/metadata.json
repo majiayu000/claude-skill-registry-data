@@ -1,0 +1,37 @@
+{
+  "name": "rust-async-concurrency",
+  "repo": "fusengine/agents",
+  "path": "plugins/rust-expert/skills/rust-async-concurrency/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/fusengine/agents",
+  "dir_name": "rust-async-concurrency",
+  "downloaded_at": "2026-10-28T04:30:02.468527Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fusengine",
+  "source_url": "https://github.com/fusengine/agents/blob/main/plugins/rust-expert/skills/rust-async-concurrency/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fusengine/agents/blob/main/plugins/rust-expert/skills/rust-async-concurrency/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when writing async Rust \u2014 spawning tasks, sharing state across tasks/threads, choosing channels vs mutexes, or hitting Send-bound errors with async traits. Not for HTTP service structure (rust-web-backend) or sync-only ownership (rust-core-language)."
+}

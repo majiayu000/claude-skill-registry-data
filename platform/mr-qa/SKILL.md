@@ -1,0 +1,308 @@
+---
+name: mr-qa
+description: Parallel QA of one or more merge requests across desktop/iOS/Android, including cross-client sync. Use when the user wants MRs tested — "test MR !123", "QA these five MRs in parallel", "spin up QA for my open MRs", "test this branch on mobile" — or wants a full spec pass. Works the open MRs oldest-first and skips drafts. Creates a git worktree per MR for isolation, pre-builds, fans out one app-qa subagent per MR/platform leg concurrently, aggregates verdicts, and calls SHIP/NO SHIP on each — merging the SHIPs.
+---
+
+# MR QA — parallel by default
+
+One MR = one worktree = one leg = one isolated stack (own pooled devices, own
+sync server + database). QA several MRs **concurrently**; the `/verify` skill's
+isolation model is what makes that safe.
+
+## The parallelism floor
+
+**One leg per non-draft MR, all launched concurrently.** This is a floor, not
+a target: a pass over nine MRs that spawned two agents is a failed pass even
+when every verdict it produced was right, because nothing fresh looked at the
+other seven. The only permitted subtractions are drafts and MRs whose diff is
+genuinely static-only (docs, CI config — no runtime code), which take the
+static route below. An MR needing two platforms gets two legs.
+
+**Prefer more, smaller subagents to one long-lived one**: give each `app-qa`
+agent a single (MR × platform) leg, pinned to Sonnet. Its context then stays
+about one diff on one device, which is what keeps its judgment about that diff
+sharp — and a session-limit death costs one leg instead of the pass. Two MRs
+in one agent eventually misattributes one MR's failure to the other (it has
+happened here — see the `driver_session` default-app trap), and a
+misattributed FAIL costs a re-run plus the credibility of the whole report.
+
+The orchestrator routes, briefs, watches, adjudicates, and merges — it does not
+run legs itself. Adjudicating an MR from your own reading of the diff is
+exactly the shortcut this floor exists to close. Nor in the main checkout: that
+strands whatever the user had in flight and re-invalidates the cargo/gradle
+caches on every switch, so the "saved" setup comes back as cold builds. A
+worktree is `git worktree add` plus `pnpm install`; a leg is one tool call.
+Neither is worth economizing on.
+
+## Keep the orchestrator's context small
+
+Put nearly everything in a subagent so the main thread is not polluted. One
+pass got to 414k tokens in the orchestrator, and its judgment at the end was
+worse for it. The orchestrator holds the plan, the ledger of MR states, and
+the verdicts. Everything tool-heavy goes to a subagent, **Sonnet by default,
+Opus only after a Sonnet attempt failed**:
+
+- reading CI job logs and tallying failures across pipelines
+- merge-conflict resolution, trivial ones included
+- static gates and builds
+- device QA
+- fixes
+- watching and landing pipelines — one subagent can run the wait-and-land loop
+  for a batch of MRs and report back only state changes
+- filing issues
+- teardown
+
+Subagents report a short summary: verdict, SHAs, counts, and paths to
+evidence. No raw logs. The orchestrator should almost never cat a CI trace, a
+diff or a test log into its own context.
+
+Long-lived subagents bloat too. If a leg has run very long, stop it and start
+a fresh one with a narrow brief that carries over its results from its ledger
+or evidence files. Don't let one agent keep going indefinitely.
+
+## Session protocol
+
+Read `.claude/skills/verify/references/session.md` for provisioning, safety rules,
+evidence reuse, sync smoke, verdict ledgers, and teardown. Include that path in every
+leg brief. Platform drivers live beside it; MR defect capture is in
+`.claude/skills/verify/references/evidence.md`.
+
+## Pick the MR set — oldest first, drafts skipped
+
+Work **oldest → newest** by iid. Old MRs have drifted furthest from main, are
+likeliest to need a conflict resolved, and their author has waited longest;
+landing them in that order also shrinks the diff every younger MR rebases over.
+
+Skip drafts — GitLab exposes `"draft": true` and the `Draft:` title prefix, the
+author explicitly saying "not ready". Name the skipped drafts in the report so
+the user sees they were considered, not overlooked.
+
+```bash
+curl -s --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
+  "https://gitlab.futo.org/api/v4/projects/futo-notes%2Ffuto-notes/merge_requests?state=opened&order_by=created_at&sort=asc&per_page=100" \
+  | jq -r '.[] | select(.draft == false) | "\(.iid)\t\(.source_branch)\t\(.title)"'
+```
+
+Ordering governs the sequence you _start_ legs in, not a serialization. If the
+user names specific MRs, honor their list — still oldest-first, still flagging
+any draft among them. **Re-query at the start of every pass**: the open set
+drifts mid-session.
+
+## Before anything
+
+- **Probe host capability**: `xcrun` (iOS — absent on Linux, so iOS QA is
+  impossible there), `adb devices` + `just qa-status` (Android pool), desktop
+  (always available). Map each MR to the platforms its diff actually needs and
+  state impossible coverage explicitly per MR — never silently drop it. From
+  Linux, probe Justin's Mac over Tailscale (`ssh -o ConnectTimeout=5 …
+'xcrun -f xcodebuild'`) before writing iOS off; if it answers, work in a
+  throwaway worktree there and say which iOS coverage was remote.
+- **Delete old worktrees, always.** Before starting, list `.claude/worktrees/mr-*`
+  and `git worktree list`. Stale ones from earlier passes are removed by the
+  teardown step's procedure, not left to pile up (the disk filled mid-pass once).
+- **Route static-only MRs away from device QA.** A docs- or CI-only MR (e.g.
+  `.gitlab-ci.yml`) is verified by (a) a green pipeline on its head sha AND the
+  specific job it fixes having actually run (not skipped by rules), and (b) a
+  static review against AGENTS.md §6C (M11–M16). No app-qa agents.
+
+## Per MR (pipelines run concurrently across MRs)
+
+1. **Static gate first, across all worktrees at once, before any device
+   build**: `tsc --noEmit` + the MR's targeted unit tests. Dependency bump →
+   duplicate-dependency check (`find node_modules/.pnpm -maxdepth 1 -name
+'@milkdown+kit@*'` — M22's blank-editor failure). Editor change →
+   `pnpm run test:e2e:editor-embed` is the key gate, but it runs in Chromium —
+   the leg must still confirm rendering live in Tauri's WebKit.
+2. **Worktree**: resolve the MR's source branch, then
+   `git worktree add .claude/worktrees/mr-<iid> origin/<branch>` and
+   `pnpm install` (installs run concurrently across worktrees).
+3. **Claim + pre-build — before spawning any agent.** Follow the shared session
+   protocol. The orchestrator handles build waits and records device/server identity.
+4. **Spawn the legs** — one `app-qa` agent per (MR × platform). Brief each:
+   worktree path, claimed device ids, server port/password, diff summary → spec
+   surfaces, that apps are pre-built, the shared session protocol, and any
+   carried-over ledger with what it does and does not settle. Hand fixes to `fixer` rather than asking a QA leg to
+   fix what it found. Pass `model: "sonnet"` on `fixer` agents — the agent's
+   frontmatter pins Opus — and escalate to Opus only after a Sonnet attempt
+   failed — a wrong fix is the most expensive thing this pipeline
+   can emit.
+5. **Codex sanity review** — once per MR, launched alongside the legs, never
+   blocking them. See [Codex review](#codex-review--one-pass-reviewer-only).
+6. **Monitor — idle ≠ progress.** `idle_notification {reason: available}`
+   fires both while an agent parks on a long cold build AND when it has
+   stalled/died. On each idle (or on a timer) verify actual progress: a live
+   build process (`pgrep -af "worktrees/mr-<iid>" | grep -E
+'cargo|gradle|tauri|vite'`) plus ledger movement (`stat` + tail of
+   the leg's ledger path from its brief). Idle + neither = stalled → re-engage once via
+   `SendMessage`; on a second stall (two strikes) take over the remaining
+   checks yourself — the agent leaves its Tauri instances + qa-server running,
+   so drive them directly or run `pnpm run test:cross-platform`.
+7. **Aggregate**: one verdict table per MR (stories + sync legs, with evidence
+   paths), FAIL details quoting the spec, the Codex line, and a cross-MR
+   isolation note (any collision finding is a bug in the isolation layer —
+   report it loudly).
+8. **Verdict + merge** — see the next section. The pass is not done until this
+   step is.
+9. **Teardown** per the shared session protocol (delegate it to a subagent).
+   Then **delete old worktrees, always** — see below.
+
+## Codex review — one pass, reviewer only
+
+A second model reads each MR's diff adversarially, as a sanity check on what
+device QA can't see (an error path, a race, a data-loss branch). It is one
+read, not a conversation: no re-review after fixes, no arguing findings back
+and forth, and Codex never writes code — it runs in a read-only sandbox, and
+anything it finds that needs fixing goes to `fixer` like any other finding.
+
+Use the newest Sol model the CLI offers (6.1 at time of writing; resolve it
+rather than hard-coding it):
+
+```bash
+model=$(codex debug models | jq -r '.models[].slug' | grep -E '^gpt-[0-9.]+-sol$' | sort -V | tail -1)
+cd .claude/worktrees/mr-<iid>
+codex exec -m "$model" -c model_reasoning_effort=high -s read-only --ephemeral \
+  -o "<scratchpad>/codex-mr-<iid>.md" \
+  "Adversarially review this merge request: \`git diff origin/<target>...HEAD\`. \
+You are a reviewer only — do not edit files. Report only defects that would \
+break behavior, lose or corrupt user data, or open a security hole, each as \
+HIGH|MEDIUM | file:line | one-sentence failure scenario. No style, naming, \
+or nitpicks. If nothing qualifies, reply exactly: NO BLOCKERS" >/dev/null 2>&1
+```
+
+`codex exec review --base` rejects a custom prompt, which is why this uses plain
+`exec`. Run it in the background; read only the `-o` file, never the log.
+
+Triage each finding once, by reading the cited code (a Sonnet subagent if
+there are several):
+
+- **HIGH, confirmed** → treated like a QA FAIL: fixed on the branch or the MR
+  is NO SHIP. A fixer's change gets the normal gates and QA re-check, not a
+  second Codex run.
+- **HIGH, not real** → dismissed with a one-line reason in the report.
+- **MEDIUM** → listed in the report; it does not gate SHIP. Mention it in the
+  MR comment for a NO SHIP so the author sees it.
+
+The report carries one line per MR: `Codex (<model>): NO BLOCKERS`, or the
+findings with their triage. If Codex couldn't run (auth expired, CLI missing,
+timeout), say so on that line; that alone does not make an MR NO SHIP.
+
+## Delete old worktrees, always
+
+At the end of every pass, remove **every** `.claude/worktrees/mr-*` worktree,
+including ones left behind by earlier passes and by QA legs (e.g.
+`mr-<iid>-main` comparison worktrees), and delete their local `qa/mr-*`
+branches. A previous pass left about 110 GB of stale build dirs from passes
+weeks old, and the disk hit 100% mid-pass.
+
+Before removing one, check for work that exists nowhere else:
+
+- uncommitted tracked changes (`git -C <wt> status --porcelain -uno`)
+- commits not on any remote branch (`git -C <wt> log HEAD --not --remotes`).
+  Rebased MR branches carry the same commits under new SHAs, so compare by
+  subject or patch (`git cherry`), not SHA.
+
+Rescue anything unique first — an un-upstreamed `.papercuts.jsonl` line goes
+into a commit. Then delete `target/`, `node_modules/` and build dirs so removal
+is fast, and `git worktree remove --force <wt>`. Only the user's explicit
+"keep it for iteration" overrides this.
+
+## SHIP / NO SHIP — and merging is part of the verdict
+
+Every MR in the pass gets an explicit **SHIP** or **NO SHIP** line. A wall of
+evidence with no verdict pushes the decision back onto the user, which is the
+one thing this pass existed to take off their plate. If the evidence genuinely
+doesn't support a call, that is itself a verdict — **NO SHIP (insufficient
+coverage)** — naming the leg that was blocked rather than hedging.
+
+**Merging a SHIP is part of reaching the verdict, not a step after it.** A
+pass that ends with `SHIP` and an unmerged MR has not finished. Don't stop to
+ask; merge, then report what landed.
+
+```bash
+curl -s --request PUT --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
+  "https://gitlab.futo.org/api/v4/projects/futo-notes%2Ffuto-notes/merge_requests/<iid>/merge"
+```
+
+Merge the SHIPs **oldest-first, one at a time, re-checking the next MR's
+mergeability after each merge.** That re-check is load-bearing, not ceremony:
+landing one MR has already put a younger one into a content conflict the same
+afternoon.
+
+SHIP requires all of these. Any one missing makes it NO SHIP, not a judgment
+call:
+
+- No unexplained FAIL. A FAIL is either fixed on the branch **and that fix
+  re-driven**, or shown to be pre-existing on main / a broken gate **with the
+  evidence for that claim** (see the tally procedure below; "probably the
+  isolation layer" is not evidence).
+- Every leg passed on the head sha being merged. A fix pushed mid-QA voids
+  the passes before it on every platform the fix touches; re-drive those legs
+  on the new head. Green CI and unit tests do not stand in for the re-drive.
+  This has already been violated: !407 merged after a fresh-iOS fix that iOS
+  never re-ran.
+- No confirmed HIGH Codex finding left unfixed.
+- Coverage actually matched the diff, from this pass or a legitimately
+  carried-over one. An `apps/ios` MR whose iOS leg was impossible is NO SHIP
+  (insufficient coverage), however clean the desktop leg looked.
+- GitLab says it can merge: green pipeline **on the head sha**, no conflicts,
+  no unresolved discussion threads, not a draft.
+- `just check` passes in the MR's worktree if the diff touches shared code.
+
+**The permitted holds are a closed list**: AGENTS.md §11's stop-and-ask items,
+and nothing else — anything under `keys/` or the updater trust boundary, a
+CRITICAL guard (dev/prod data split, push-first sync, the release gate, the
+dep-guard, hash/crypto), publishing, or a cross-cutting protocol change (sync
+payload, `BRIDGE_VERSION`, `AppState` schema). A clean QA pass says the code
+behaves; it doesn't say the trust boundary or the wire format should move.
+Report those as **SHIP (needs your merge)** with the reason, and leave them
+open.
+
+**Nothing else is a hold.** Not an unrelated open incident. Not an unfinished
+sibling leg on another MR. Not wanting the user to confirm something else
+first. Not general caution. Ask one question: does this bear on whether _this_
+MR behaves correctly? If not, it does not gate _this_ MR. This has already
+been violated: an MR with nine passing stories and a green pipeline was held
+because a _different_ leg had leaked keystrokes into the user's real vault and
+the orchestrator wanted the data question settled before merging anything.
+Those were two threads, and only one of them was about the MR.
+
+For a NO SHIP, say what would flip it — a fix, a rerun on a named platform, or
+a decision only the user can make. Hand fixable ones to `fixer` if the user
+asked for fixes; otherwise leave the finding on the MR as a comment so the
+author has it.
+
+## Attributing a red CI job
+
+"Probably infra" is not evidence — and neither is "it went red on this MR, so
+it's this MR". **Tally the failing scenario across every recent pipeline and
+every branch**, then group by ref:
+
+```bash
+curl -s --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
+  "https://gitlab.futo.org/api/v4/projects/futo-notes%2Ffuto-notes/pipelines?per_page=50" \
+  | jq -r '.[] | "\(.ref)\t\(.status)\t\(.id)"'
+```
+
+Same assertion failing across unrelated branches = a broken gate. Failing only
+here = the MR. The decisive case is a branch carrying **zero runtime code**: a
+docs- or CI-only MR cannot break a runtime assertion, so that job failing
+there proves the gate rather than the branch. One such failure can still be a
+flake — it took two consecutive failures on the same docs-only MR to make it
+conclusive. Write the tally into the report either way, so the next pass
+doesn't redo it, and treat a broken gate as its own finding (report it; M15 —
+never loosen it to get green).
+
+## Scope and cost
+
+Default to MR-scoped: map the diff to `docs/spec/<surface>.md` surfaces and QA
+those, plus the cross-client sync smoke whenever the diff touches sync, the
+shared Rust core, or the editor. A typical MR pass costs ~100–250k output
+tokens (failures cost more than passes). Device pool: 7 per platform, 50 port
+slots; the practical ceiling on simultaneous MRs is RAM/CPU during overlapping
+cold builds — stagger the build step past ~3 fresh worktrees. Budget pressure
+is a reason to make legs cheaper (narrower scope, a carried-over ledger as
+input, Sonnet legs), never a reason to run fewer of them.
+
+**Full spec pass** (only when asked — 5–10× the cost of an MR pass): use the
+[full-run topology](../verify-specs/references/full-run.md),
+never sequential legs.

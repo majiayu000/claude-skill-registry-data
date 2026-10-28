@@ -1,0 +1,37 @@
+{
+  "name": "woostack-reflect",
+  "repo": "howarewoo/woostack",
+  "path": "skills/woostack-reflect/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/howarewoo/woostack",
+  "dir_name": "woostack-reflect",
+  "downloaded_at": "2026-10-28T04:57:42.377411Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "howarewoo",
+  "source_url": "https://github.com/howarewoo/woostack/blob/main/skills/woostack-reflect/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/howarewoo/woostack/blob/main/skills/woostack-reflect/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when reviewing a completed conversation for concrete, preventable instruction gaps; invoke as /woostack-reflect to report suggestions and, only after explicit acceptance, prepare a sanitized duplicate-safe upstream issue."
+}

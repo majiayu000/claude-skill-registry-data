@@ -1,0 +1,39 @@
+{
+  "name": "gptq",
+  "repo": "kimzhang375-bit/my-first-repo",
+  "path": "skills/file-reader/ai-research-skills/10-optimization/gptq/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/kimzhang375-bit/my-first-repo",
+  "dir_name": "gptq-kimzhang375-bit-my-first-repo",
+  "downloaded_at": "2026-10-28T05:39:25.772279Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, model, training",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "kimzhang375-bit",
+  "source_url": "https://github.com/kimzhang375-bit/my-first-repo/blob/main/skills/file-reader/ai-research-skills/10-optimization/gptq/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kimzhang375-bit/my-first-repo/blob/main/skills/file-reader/ai-research-skills/10-optimization/gptq/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Post-training 4-bit quantization for LLMs with minimal accuracy loss. Use for deploying large models (70B, 405B) on consumer GPUs, when you need 4\u00d7 memory reduction with <2% perplexity degradation, or for faster inference (3-4\u00d7 speedup) vs FP16. Integrates with transformers and PEFT for QLoRA fine-tuning."
+}

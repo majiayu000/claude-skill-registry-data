@@ -1,0 +1,37 @@
+{
+  "name": "verify-app",
+  "repo": "frodobaggins23/ideas-lab-monorepo",
+  "path": ".claude/skills/verify-app/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/frodobaggins23/ideas-lab-monorepo",
+  "dir_name": "verify-app-frodobaggins23-ideas-lab-monorepo",
+  "downloaded_at": "2026-10-28T04:29:13.878867Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "frodobaggins23",
+  "source_url": "https://github.com/frodobaggins23/ideas-lab-monorepo/blob/main/.claude/skills/verify-app/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/frodobaggins23/ideas-lab-monorepo/blob/main/.claude/skills/verify-app/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run the quality gates for an app in this lab repo (typecheck, lint, tests, build) and look at it in a browser. Use before shipping an app, after changing one, or when asked whether an app works."
+}

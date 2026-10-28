@@ -1,0 +1,39 @@
+{
+  "name": "cosmos-dbt-core",
+  "repo": "gutsofpratik/Horizon-Skills",
+  "path": "skills/source-7613e317ad1a30d2479954dd/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/gutsofpratik/Horizon-Skills",
+  "dir_name": "source-7613e317ad1a30d2479954dd-gutsofpratik-horizon-skills",
+  "downloaded_at": "2026-10-28T04:45:14.357421Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: ci, docker, kubernetes, deploy",
+    "score": 4,
+    "runner_up": "business",
+    "runner_up_score": 1,
+    "signals": [
+      "ci",
+      "docker",
+      "kubernetes",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gutsofpratik",
+  "source_url": "https://github.com/gutsofpratik/Horizon-Skills/blob/main/skills/source-7613e317ad1a30d2479954dd/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gutsofpratik/Horizon-Skills/blob/main/skills/source-7613e317ad1a30d2479954dd/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turns a dbt Core project into an Airflow DAG/TaskGroup using Astronomer Cosmos. Use turning a dbt Core project into an Airflow DAG or TaskGroup with Astronomer Cosmos. Before implementing, verify dbt engine, warehouse, Airflow version, execution environment, DAG vs TaskGroup, and manifest availability."
+}

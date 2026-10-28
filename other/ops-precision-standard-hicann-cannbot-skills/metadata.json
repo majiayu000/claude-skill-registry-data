@@ -1,0 +1,36 @@
+{
+  "name": "ops-precision-standard",
+  "repo": "hicann/cannbot-skills",
+  "path": "ops/ops-precision-standard/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/hicann/cannbot-skills",
+  "dir_name": "ops-precision-standard-hicann-cannbot-skills",
+  "downloaded_at": "2026-10-28T04:54:57.630489Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category generation scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "performance",
+    "runner_up_score": 1,
+    "signals": [
+      "generation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "hicann",
+  "source_url": "https://github.com/hicann/cannbot-skills/blob/master/ops/ops-precision-standard/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/hicann/cannbot-skills/blob/master/ops/ops-precision-standard/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "\u7b97\u5b50\u7cbe\u5ea6\u6807\u51c6\u3002\u63cf\u8ff0 Ascend C \u7b97\u5b50\u5404\u79cd dtype \u8f93\u51fa\u5bf9\u5e94\u7684\u7cbe\u5ea6\u6bd4\u5bf9\u6807\u51c6(\u6df7\u5408\u5bb9\u5dee atol/rtol)\u3002\u5f53\u9700\u8981(1)\u8bc4\u4f30\u7b97\u5b50\u7cbe\u5ea6\u662f\u5426\u8fbe\u6807,(2)\u7f16\u5199 ST \u6d4b\u8bd5\u9a8c\u8bc1\u7cbe\u5ea6,(3)\u5904\u7406 FP16/FP32/BF16 \u7b49\u4e0d\u540c\u6570\u636e\u7c7b\u578b\u7cbe\u5ea6\u95ee\u9898,(4)\u786e\u8ba4\u7b97\u5b50\u7cbe\u5ea6\u9a8c\u6536\u6807\u51c6\u65f6\u89e6\u53d1\u3002"
+}

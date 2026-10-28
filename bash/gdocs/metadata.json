@@ -1,0 +1,39 @@
+{
+  "name": "gdocs",
+  "repo": "huytran1120/vietnam-agentic-skills",
+  "path": "skills/gdocs/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/huytran1120/vietnam-agentic-skills",
+  "dir_name": "gdocs",
+  "downloaded_at": "2026-10-28T05:00:23.556501Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "huytran1120",
+  "source_url": "https://github.com/huytran1120/vietnam-agentic-skills/blob/main/skills/gdocs/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/huytran1120/vietnam-agentic-skills/blob/main/skills/gdocs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Read, create, edit, and manage Google Docs. Use when the user shares a docs.google.com URL, asks to summarize or extract content from a doc, wants a doc drafted, edited, formatted, or commented on, wants tables, images, or smart chips inserted, wants markdown imported or synchronized with a doc, or wants a doc exported. Requires a known document ID \u2014 to find documents, use the gdrive skill from the Google Drive plugin; if it isn't installed, ask the user for the doc link. Don't use for Google Sheets, Slides, or Drive file management."
+}

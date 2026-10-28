@@ -1,0 +1,38 @@
+{
+  "name": "motion2code",
+  "repo": "lovisdotio/motion2code",
+  "path": "skills/motion2code/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/lovisdotio/motion2code",
+  "dir_name": "motion2code",
+  "downloaded_at": "2026-10-28T05:59:27.413972Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, animation",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lovisdotio",
+  "source_url": "https://github.com/lovisdotio/motion2code/blob/main/skills/motion2code/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lovisdotio/motion2code/blob/main/skills/motion2code/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Rebuilds an AI-generated (or any) flat motion design video as clean, editable code: inline SVG shapes animated by one GSAP timeline, seekable frame by frame, looping seamlessly, checked side by side against the source; and optionally turns an interface recording into a real interactive website (GSAP ScrollTrigger, real clicks). Ships scripts to study the video (frames, cuts, contact sheet, exact palette), render the code to mp4/GIF through anim.seek, compare it with the source frame by frame and check the loop seam and page contract. Use when the user wants a video, GIF, Lottie-like clip, motion design shot, animated logo, UI screen recording or AI video \"recreated in code\", \"converted to SVG/GSAP\", \"made into an HTML animation\" or \"made into a real site\". Not for photographic footage, 3D rendering or video editing."
+}

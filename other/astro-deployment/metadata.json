@@ -1,0 +1,37 @@
+{
+  "name": "astro-deployment",
+  "repo": "fusengine/agents",
+  "path": "plugins/astro-expert/skills/astro-deployment/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/fusengine/agents",
+  "dir_name": "astro-deployment",
+  "downloaded_at": "2026-10-28T04:29:57.893053Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fusengine",
+  "source_url": "https://github.com/fusengine/agents/blob/main/plugins/astro-expert/skills/astro-deployment/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fusengine/agents/blob/main/plugins/astro-expert/skills/astro-deployment/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when deploying an Astro 7 app to Cloudflare, Vercel, Netlify, or Node.js \u2014 adapter setup, ISR patterns, edge middleware."
+}

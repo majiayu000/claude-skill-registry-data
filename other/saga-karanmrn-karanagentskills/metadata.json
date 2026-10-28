@@ -1,0 +1,38 @@
+{
+  "name": "saga",
+  "repo": "karanmrn/karanagentskills",
+  "path": "skills/saga/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/karanmrn/karanagentskills",
+  "dir_name": "saga-karanmrn-karanagentskills",
+  "downloaded_at": "2026-10-28T05:33:09.853220Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "context",
+      "compaction",
+      "context-window"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "karanmrn",
+  "source_url": "https://github.com/karanmrn/karanagentskills/blob/master/skills/saga/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/karanmrn/karanagentskills/blob/master/skills/saga/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run an autonomous, spec-driven development \"saga\" for medium-to-large features using an orchestrator agent and a fleet of worker subagents. Use this skill whenever the user invokes /saga, asks to autonomously build a sizable feature end-to-end with minimal human intervention, wants a comprehensive spec broken into milestones and tasks with airtight validation criteria before parallelized implementation, or wants an orchestrator to delegate implementation to worker agents while preserving its own context window. Trigger on phrases like \"run a saga\", \"autonomously implement this feature\", \"spec it out then build it with subagents\", \"orchestrate this big feature end-to-end\", or \"build this with workers and validate each step\". Also use this skill when asked to continue, resume, or pick up an existing saga from its saga directory (e.g. under ~/.sagas)."
+}

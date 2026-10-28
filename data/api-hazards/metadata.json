@@ -1,0 +1,38 @@
+{
+  "name": "api-hazards",
+  "repo": "frontierJS/frontierjs",
+  "path": ".claude/skills/api-hazards/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/frontierJS/frontierjs",
+  "dir_name": "api-hazards",
+  "downloaded_at": "2026-10-28T04:29:20.943688Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, pipeline",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "sql",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "frontierJS",
+  "source_url": "https://github.com/frontierJS/frontierjs/blob/main/.claude/skills/api-hazards/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/frontierJS/frontierjs/blob/main/.claude/skills/api-hazards/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Junction \u2014 a service, the hook pipeline, HTTP/WS transport, a raw route, a plugin, `ctx`, a job or cron. Correct-but-surprising behavior in the API realm; use when touching any of them."
+}

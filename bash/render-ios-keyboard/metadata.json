@@ -1,0 +1,38 @@
+{
+  "name": "render-ios-keyboard",
+  "repo": "gooseworks-ai/goose-skills",
+  "path": "skills/video/render-ios-keyboard/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/gooseworks-ai/goose-skills",
+  "dir_name": "render-ios-keyboard",
+  "downloaded_at": "2026-10-28T04:41:14.941847Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "communication",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gooseworks-ai",
+  "source_url": "https://github.com/gooseworks-ai/goose-skills/blob/main/skills/video/render-ios-keyboard/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gooseworks-ai/goose-skills/blob/main/skills/video/render-ios-keyboard/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Render a static iOS QWERTY keyboard as inline HTML+CSS sized for the 750-wide 9:16 stage. Includes the 3-suggestion bar, alpha keys, shift/backspace, 123/emoji/space/return row, and the bottom globe+mic strip. No animation logic \u2014 slide up/down is the molecule's job (CSS transform on the .keyboard root)."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "adobe",
+  "repo": "lisongmeinorc/apnorcedge",
+  "path": ".claude/skills/adobe/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/lisongmeinorc/apnorcedge",
+  "dir_name": "adobe-lisongmeinorc-apnorcedge",
+  "downloaded_at": "2026-10-28T05:55:38.755182Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=2, marketing=2",
+    "score": 2,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "css"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "lisongmeinorc",
+  "source_url": "https://github.com/lisongmeinorc/apnorcedge/blob/main/.claude/skills/adobe/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/lisongmeinorc/apnorcedge/blob/main/.claude/skills/adobe/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Show an onboarding tour of the Adobe for creativity connector: what capabilities are available, an example workflow for each, and which Adobe product powers it. Trigger when the user invokes /adobe by name, or asks what they can do with Adobe, what Adobe skills or tools exist, or wants a tour or overview of Adobe capabilities. Do NOT trigger this for a request to actually create/edit/design something (e.g. 'make me a flyer') \u2014 that goes straight to the matching Adobe skill or tool instead."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "render-value-prop",
+  "repo": "gooseworks-ai/goose-skills",
+  "path": "skills/video/render-value-prop/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/gooseworks-ai/goose-skills",
+  "dir_name": "render-value-prop-gooseworks-ai-goose-skills",
+  "downloaded_at": "2026-10-28T04:41:10.115368Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, css",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "design",
+      "css"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gooseworks-ai",
+  "source_url": "https://github.com/gooseworks-ai/goose-skills/blob/main/skills/video/render-value-prop/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gooseworks-ai/goose-skills/blob/main/skills/video/render-value-prop/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Render a designed 'value prop' video from a config \u2014 3-5 noun-phrase benefit claims (<=4 words each) revealed sequentially over per-SKU product visuals, one crisp editorial frame per claim (hook sticker -> N claim beats -> brand end card). Deterministic PIL/HTML beat renderer frame-stepped via Playwright and encoded with FFmpeg, sound-off legible, hard cuts, uniform pacing. FREE (no paid calls); music is added separately (create-music-elevenlabs). Use for the value-prop format."
+}

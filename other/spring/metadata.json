@@ -1,0 +1,37 @@
+{
+  "name": "spring",
+  "repo": "jesperancinha/guitar-shop",
+  "path": ".claude/skills/spring/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/jesperancinha/guitar-shop",
+  "dir_name": "spring",
+  "downloaded_at": "2026-10-28T05:18:55.536417Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "jesperancinha",
+  "source_url": "https://github.com/jesperancinha/guitar-shop/blob/main/.claude/skills/spring/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/jesperancinha/guitar-shop/blob/main/.claude/skills/spring/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Conventions for dependency injection and mocking in Spring Boot in this project. Use this whenever writing, reviewing, or refactoring integration test classes (anything annotated @SpringBootTest, or under src/test that talks to a real Spring context), especially when deciding how to wire dependencies or mock collaborators. Also consult this before adding @Autowired, @MockBean, @MockitoBean, or field injection in any test class."
+}

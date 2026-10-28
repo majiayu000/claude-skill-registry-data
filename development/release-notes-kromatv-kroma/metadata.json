@@ -1,0 +1,38 @@
+{
+  "name": "release-notes",
+  "repo": "kromatv/kroma",
+  "path": ".claude/skills/release-notes/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/kromatv/kroma",
+  "dir_name": "release-notes-kromatv-kroma",
+  "downloaded_at": "2026-10-28T05:43:18.289935Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, refactor",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kromatv",
+  "source_url": "https://github.com/kromatv/kroma/blob/main/.claude/skills/release-notes/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kromatv/kroma/blob/main/.claude/skills/release-notes/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write a short release note people finish reading. Picks the few changes a user will notice from the pull requests since the last release, names each by what the reader can now do, keeps to a length budget, writes every language from the intent instead of translating, and traces every line to a PR. Use when cutting a release, or filling a GitHub Release body, a store \"what's new\", a package changelog or an in-app what's new screen. Triggers - \"write the release notes\", \"release notes for 0.4.0\", \"what's new\", \"changelog for this release\", \"notes de version\"."
+}

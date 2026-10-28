@@ -1,0 +1,38 @@
+{
+  "name": "ts-packaging",
+  "repo": "fusengine/agents",
+  "path": "plugins/typescript-expert/skills/ts-packaging/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/fusengine/agents",
+  "dir_name": "ts-packaging",
+  "downloaded_at": "2026-10-28T04:30:06.527115Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fusengine",
+  "source_url": "https://github.com/fusengine/agents/blob/main/plugins/typescript-expert/skills/ts-packaging/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fusengine/agents/blob/main/plugins/typescript-expert/skills/ts-packaging/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when publishing a TypeScript library \u2014 exports map, JSR vs npm, dual ESM/CJS, type validation, provenance. Not for application deployment."
+}

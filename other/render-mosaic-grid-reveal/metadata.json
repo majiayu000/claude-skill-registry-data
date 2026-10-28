@@ -1,0 +1,37 @@
+{
+  "name": "render-mosaic-grid-reveal",
+  "repo": "gooseworks-ai/goose-skills",
+  "path": "skills/video/render-mosaic-grid-reveal/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/gooseworks-ai/goose-skills",
+  "dir_name": "render-mosaic-grid-reveal",
+  "downloaded_at": "2026-10-28T04:41:24.834807Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gooseworks-ai",
+  "source_url": "https://github.com/gooseworks-ai/goose-skills/blob/main/skills/video/render-mosaic-grid-reveal/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gooseworks-ai/goose-skills/blob/main/skills/video/render-mosaic-grid-reveal/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Render a 'mosaic-grid-reveal' video from a config \u2014 a real-DOM FULL-BLEED N\u00d7N mosaic of real product tiles that pops in one tile at a time (scatter order, ease-out-back overshoot), the grid clears, then the brand wordmark builds line-by-line followed by a sub-label, tagline, and CTA; frame-stepped via Playwright and encoded with FFmpeg \u2014 deterministic assembly, FREE (the music bed comes from create-music-elevenlabs), so the wordmark, tile captions, and CTA stay pixel-crisp. Use for the mosaic-grid-reveal format."
+}

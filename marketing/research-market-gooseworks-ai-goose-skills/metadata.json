@@ -1,0 +1,37 @@
+{
+  "name": "research-market",
+  "repo": "gooseworks-ai/goose-skills",
+  "path": "skills/marketing/research-market/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/gooseworks-ai/goose-skills",
+  "dir_name": "research-market-gooseworks-ai-goose-skills",
+  "downloaded_at": "2026-10-28T04:41:15.410651Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: marketing, brand",
+    "score": 2,
+    "runner_up": "communication",
+    "runner_up_score": 1,
+    "signals": [
+      "marketing",
+      "brand"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gooseworks-ai",
+  "source_url": "https://github.com/gooseworks-ai/goose-skills/blob/main/skills/marketing/research-market/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gooseworks-ai/goose-skills/blob/main/skills/marketing/research-market/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Market research and brand watch: which market the brand is in, how big the reachable part is, what's changing, how buyers buy and what they pay, what people are saying now, and what it means for positioning. Use when the marketer asks for market research, \"how big is my market\", \"what's changing in my category\", \"what do others charge\", \"what are people saying about us\", \"is there demand for <idea>\", or \"watch my brand / tell me if something blows up\" (alerts only, risk first). Also writes positioning choices and finished messages (\"position my product\", \"write our positioning\"). Researches first, asks only decisions at the end, and saves the output to the brand. Not for who the buyers are and their own words \u2014 use research-audience; not for a deep look at rivals \u2014 use research-competitors."
+}

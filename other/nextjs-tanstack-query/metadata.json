@@ -1,0 +1,37 @@
+{
+  "name": "nextjs-tanstack-query",
+  "repo": "fusengine/agents",
+  "path": "plugins/nextjs-expert/skills/nextjs-tanstack-query/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/fusengine/agents",
+  "dir_name": "nextjs-tanstack-query",
+  "downloaded_at": "2026-10-28T04:30:01.698099Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "fusengine",
+  "source_url": "https://github.com/fusengine/agents/blob/main/plugins/nextjs-expert/skills/nextjs-tanstack-query/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/fusengine/agents/blob/main/plugins/nextjs-expert/skills/nextjs-tanstack-query/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when implementing client-side data fetching, server prefetching with hydration, or optimistic mutations in Next.js 16 with TanStack Query."
+}

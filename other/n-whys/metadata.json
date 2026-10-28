@@ -1,0 +1,36 @@
+{
+  "name": "n-whys",
+  "repo": "karanmrn/karanagentskills",
+  "path": "skills/n-whys/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/karanmrn/karanagentskills",
+  "dir_name": "n-whys",
+  "downloaded_at": "2026-10-28T05:33:18.414900Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "karanmrn",
+  "source_url": "https://github.com/karanmrn/karanagentskills/blob/master/skills/n-whys/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/karanmrn/karanagentskills/blob/master/skills/n-whys/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Generate a why-chain exactly n levels deep for any topic, question, observation, problem, or idea. Invoke like `n-whys n=8 q=<my question>`. The general form of five-whys \u2014 use this when you want an explicit depth."
+}

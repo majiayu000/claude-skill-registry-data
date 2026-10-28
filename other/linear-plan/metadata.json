@@ -1,0 +1,38 @@
+{
+  "name": "linear-plan",
+  "repo": "leonardoacosta/agents",
+  "path": "skills/linear-plan/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/leonardoacosta/agents",
+  "dir_name": "linear-plan",
+  "downloaded_at": "2026-10-28T05:51:14.463659Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: planning=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "planning",
+      "plan",
+      "roadmap"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "leonardoacosta",
+  "source_url": "https://github.com/leonardoacosta/agents/blob/main/skills/linear-plan/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/leonardoacosta/agents/blob/main/skills/linear-plan/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Turn an idea or existing plan into a draft feature/epic hierarchy and dependency-aware roadmap, reusing Linear outcomes, native OpenSpec requirements and the existing task board. Use for idea-to-roadmap planning, deciding feature boundaries, sequencing vertical slices, or selecting the next feature; draft first, publish only on explicit request."
+}

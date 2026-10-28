@@ -1,0 +1,39 @@
+{
+  "name": "voice-card",
+  "repo": "gooseworks-ai/goose-skills",
+  "path": "skills/marketing/voice-card/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/gooseworks-ai/goose-skills",
+  "dir_name": "voice-card",
+  "downloaded_at": "2026-10-28T04:41:05.401598Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, writer, copy, blog",
+    "score": 4,
+    "runner_up": "marketing",
+    "runner_up_score": 3,
+    "signals": [
+      "writing",
+      "writer",
+      "copy",
+      "blog"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "gooseworks-ai",
+  "source_url": "https://github.com/gooseworks-ai/goose-skills/blob/main/skills/marketing/voice-card/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/gooseworks-ai/goose-skills/blob/main/skills/marketing/voice-card/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds or updates a voice card from a company blog (\"extract our blog voice\") or how an account or person actually writes, measured from about 8 or more of their real posts (length, casing, emoji, openings, pet phrases, opinions with their source). When there are too few posts, it runs a short interview instead. It ends with a test that checks a draft against the card. The brand's rules always beat the card. Use alone when you already have the account's posts or the person on hand; otherwise run the playbook for the job (e.g. run-organic-social, write-outreach, email-lifecycle)."
+}

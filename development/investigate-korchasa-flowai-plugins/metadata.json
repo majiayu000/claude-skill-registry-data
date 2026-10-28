@@ -1,0 +1,37 @@
+{
+  "name": "investigate",
+  "repo": "korchasa/flowai-plugins",
+  "path": "plugins/flowai/skills/investigate/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/korchasa/flowai-plugins",
+  "dir_name": "investigate-korchasa-flowai-plugins",
+  "downloaded_at": "2026-10-28T05:41:46.470694Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, debug",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "korchasa",
+  "source_url": "https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai/skills/investigate/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/korchasa/flowai-plugins/blob/main/plugins/flowai/skills/investigate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user asks to diagnose a bug, find the root cause of a failing behavior, or run a hypothesis-by-hypothesis investigation with experiments and evidence. Produces a diagnostic report with a recommended fix, but does not apply the fix."
+}

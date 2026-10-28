@@ -1,0 +1,39 @@
+{
+  "name": "pair",
+  "repo": "leandronsp/overmind",
+  "path": ".claude/skills/pair/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/leandronsp/overmind",
+  "dir_name": "pair",
+  "downloaded_at": "2026-10-28T05:49:48.534201Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, programming, build, refactor",
+    "score": 4,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "programming",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "leandronsp",
+  "source_url": "https://github.com/leandronsp/overmind/blob/main/.claude/skills/pair/SKILL.md",
+  "license": "AGPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/leandronsp/overmind/blob/main/.claude/skills/pair/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "TDD pair programming with mode switching. Claude can be driver (writes code) or navigator (watches, questions, provokes). Supports GitHub issues, file watching, or arbitrary prompts. Scientific TDD, baby steps, one test at a time. Trigger on: pair, let's pair, tdd, you drive, I'll drive, dojo."
+}

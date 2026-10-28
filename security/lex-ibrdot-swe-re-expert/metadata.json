@@ -1,0 +1,39 @@
+{
+  "name": "lex",
+  "repo": "ibrdot/swe-re-expert",
+  "path": "skills/lex/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/ibrdot/swe-re-expert",
+  "dir_name": "lex-ibrdot-swe-re-expert",
+  "downloaded_at": "2026-10-28T05:03:48.571140Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "ibrdot",
+  "source_url": "https://github.com/ibrdot/swe-re-expert/blob/main/skills/lex/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ibrdot/swe-re-expert/blob/main/skills/lex/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Centralized 'Truth Engine' for cross-jurisdictional legal context (US, EU, CA) and contract scaffolding."
+}

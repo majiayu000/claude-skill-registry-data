@@ -1,0 +1,37 @@
+{
+  "name": "pyzotero",
+  "repo": "kimzhang375-bit/my-first-repo",
+  "path": "skills/file-reader/scientific-agent-skills/skills/pyzotero/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/kimzhang375-bit/my-first-repo",
+  "dir_name": "pyzotero-kimzhang375-bit-my-first-repo",
+  "downloaded_at": "2026-10-28T05:39:25.444949Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "kimzhang375-bit",
+  "source_url": "https://github.com/kimzhang375-bit/my-first-repo/blob/main/skills/file-reader/scientific-agent-skills/skills/pyzotero/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/kimzhang375-bit/my-first-repo/blob/main/skills/file-reader/scientific-agent-skills/skills/pyzotero/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Manages Zotero reference libraries using the pyzotero Python client: retrieves, creates, updates, and deletes items, collections, tags, and attachments via the Zotero Web API v3 or local API. Applies when working with Zotero libraries programmatically, managing bibliographic references, exporting citations, searching library contents, uploading PDF attachments, or building research automation workflows that integrate with Zotero."
+}

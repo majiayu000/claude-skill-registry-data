@@ -1,0 +1,37 @@
+{
+  "name": "gg-plan-report",
+  "repo": "ggdna/dna_plan",
+  "path": ".claude/skills/gg-plan-report/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/ggdna/dna_plan",
+  "dir_name": "gg-plan-report",
+  "downloaded_at": "2026-10-28T04:36:50.858785Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, copy",
+    "score": 2,
+    "runner_up": "creative",
+    "runner_up_score": 1,
+    "signals": [
+      "writing",
+      "copy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ggdna",
+  "source_url": "https://github.com/ggdna/dna_plan/blob/main/.claude/skills/gg-plan-report/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ggdna/dna_plan/blob/main/.claude/skills/gg-plan-report/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Keeps the quarterly report of each person in doc/reports up to date - collects what changed in the PM repo that their roles and areas need to hear, appends it as checkbox points and starts the file of a new quarter with the open points carried over. Use when the user says \"/gg-plan-report\", asks what to tell someone, wants to update the reports or starts a new quarter."
+}

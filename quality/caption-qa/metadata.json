@@ -1,0 +1,38 @@
+{
+  "name": "caption-qa",
+  "repo": "github/awesome-copilot",
+  "path": "skills/caption-qa/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/github/awesome-copilot",
+  "dir_name": "caption-qa",
+  "downloaded_at": "2026-10-28T04:38:04.537482Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: lint, review, validate",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "lint",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "github",
+  "source_url": "https://github.com/github/awesome-copilot/blob/main/skills/caption-qa/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/github/awesome-copilot/blob/main/skills/caption-qa/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Check SRT or WebVTT captions and subtitles against published standards (Netflix English, BBC subtitle guidelines, DCMP Captioning Key) for reading speed, line length, line count, time on screen, gaps and overlaps, then fix failures by retiming before rewording. Use when asked to QA, lint or validate captions, check whether subtitles read too fast, prepare captions for Netflix, broadcast or educational delivery, or add a caption check to CI."
+}

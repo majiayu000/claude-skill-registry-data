@@ -1,0 +1,38 @@
+{
+  "name": "rust-review",
+  "repo": "laurentvv/agents-kit",
+  "path": "skills/rust-review/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/laurentvv/agents-kit",
+  "dir_name": "rust-review-laurentvv-agents-kit",
+  "downloaded_at": "2026-10-28T05:47:59.861041Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, compile, debug",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "laurentvv",
+  "source_url": "https://github.com/laurentvv/agents-kit/blob/main/skills/rust-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/laurentvv/agents-kit/blob/main/skills/rust-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review existing Rust code for idiom, API design, error handling, safety, and maintainability, and produce a prioritized report where every finding cites the rule it breaks and gives a concrete fix. Use this whenever the user asks to review, audit, critique, grade, or \"check\" Rust code, a crate, a module, a .rs file, a diff, or a pull request, or asks what is wrong with their Rust or how to make it more idiomatic, even if they don't say \"review\". Pairs with the rust-best-practices skill, which covers writing new code."
+}
