@@ -1,0 +1,37 @@
+{
+  "name": "om-share-this-session",
+  "repo": "polo-blue/sds",
+  "path": ".claude/skills/om-share-this-session/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/polo-blue/sds",
+  "dir_name": "om-share-this-session",
+  "downloaded_at": "2026-10-29T05:45:09.944633Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, ai-llm=2",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polo-blue",
+  "source_url": "https://github.com/polo-blue/sds/blob/main/.claude/skills/om-share-this-session/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polo-blue/sds/blob/main/.claude/skills/om-share-this-session/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Publicly share a sanitized coding-agent session plus a ZIP of the files it generated, then file a harness-feedback issue at the configured destination \u2014 local sanitization, full privacy review, exact fresh consent first. Use for \"share this session\", \"report this agent run\", \"udost\u0119pnij t\u0119 sesj\u0119\". Never for telemetry or without consent."
+}

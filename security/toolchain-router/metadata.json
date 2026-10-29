@@ -1,0 +1,39 @@
+{
+  "name": "toolchain-router",
+  "repo": "meowdiocre/meowpi",
+  "path": "skills/toolchain-router/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/meowdiocre/meowpi",
+  "dir_name": "toolchain-router",
+  "downloaded_at": "2026-10-29T04:57:39.888795Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for security: security, auth, vulnerability, fuzzing",
+    "score": 4,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "vulnerability",
+      "fuzzing"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "meowdiocre",
+  "source_url": "https://github.com/meowdiocre/meowpi/blob/main/skills/toolchain-router/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/meowdiocre/meowpi/blob/main/skills/toolchain-router/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Route an offensive or security-testing task to the one tool skill that fits it \u2014 Active Directory, web, reconnaissance, JavaScript reversing, credentials, pivoting, C2, AI/LLM testing or shell plumbing. Use at the start of any engagement step when the right tool is not already named. Not for choosing between libraries inside a single tool."
+}

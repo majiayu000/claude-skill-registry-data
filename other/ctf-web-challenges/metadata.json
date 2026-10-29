@@ -1,0 +1,38 @@
+{
+  "name": "ctf-web-challenges",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/ctf/ctf-web-challenges/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "ctf-web-challenges",
+  "downloaded_at": "2026-10-29T05:04:59.490576Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/ctf/ctf-web-challenges/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/ctf/ctf-web-challenges/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when competing in a CTF web challenge, practicing in a lab, or testing a web application you are authorized to test. Covers the web challenge workflow, mapping routes and inputs, reading client-side JavaScript for hidden endpoints, exploiting SQL injection, server-side template injection, JWT weaknesses, command injection, file inclusion, and insecure deserialization to capture flags. Use when a challenge gives you a URL, when source code is provided for a web app, or when you need a systematic path from recon to flag in an authorized setting."
+}

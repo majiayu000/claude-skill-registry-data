@@ -1,0 +1,39 @@
+{
+  "name": "azd-deployment",
+  "repo": "pratyushdeosingh/mdp",
+  "path": ".agents/skills/azd-deployment/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/pratyushdeosingh/mdp",
+  "dir_name": "azd-deployment-pratyushdeosingh-mdp",
+  "downloaded_at": "2026-10-29T05:48:03.374247Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: docker, deploy, infra, infrastructure",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "docker",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pratyushdeosingh",
+  "source_url": "https://github.com/pratyushdeosingh/mdp/blob/main/.agents/skills/azd-deployment/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pratyushdeosingh/mdp/blob/main/.agents/skills/azd-deployment/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Deploy containerized applications to Azure Container Apps using Azure Developer CLI (azd). Use when setting up azd projects, writing azure.yaml configuration, creating Bicep infrastructure for Cont..."
+}

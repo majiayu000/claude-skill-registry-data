@@ -1,0 +1,37 @@
+{
+  "name": "ssrf",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/web/ssrf/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "ssrf",
+  "downloaded_at": "2026-10-29T05:04:42.967090Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: auth, pentest",
+    "score": 2,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "auth",
+      "pentest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/web/ssrf/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/web/ssrf/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when testing a web application for Server-Side Request Forgery on an authorized engagement. Covers finding server-fetched URL inputs, confirming outbound requests with a collaborator, reading cloud instance metadata (169.254.169.254), port scanning the internal network, and bypassing SSRF allow-lists and block-lists with parser tricks, DNS rebinding, redirects, and encoded IP forms. Use when parameters, webhooks, file uploads from URL, PDF generators, or image proxies let the server fetch a remote resource for you."
+}

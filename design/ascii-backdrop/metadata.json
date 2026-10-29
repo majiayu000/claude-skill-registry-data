@@ -1,0 +1,37 @@
+{
+  "name": "ascii-backdrop",
+  "repo": "majiayu000/spellbook",
+  "path": "skills/ascii-backdrop/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/majiayu000/spellbook",
+  "dir_name": "ascii-backdrop",
+  "downloaded_at": "2026-10-29T04:46:13.877501Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: ui, animation",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "ui",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "majiayu000",
+  "source_url": "https://github.com/majiayu000/spellbook/blob/main/skills/ascii-backdrop/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/majiayu000/spellbook/blob/main/skills/ascii-backdrop/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn any subject into an animated ASCII backdrop behind a UI, like a dark prompt page with jellyfish drawn in drifting characters, or a swarm of colour-tile bodies that veer away from the cursor. The subject is open-ended: creatures, objects, particles, smoke, a word or logo, an image or video, a per-pixel field, a shaded 3D solid, or your own canvas draw function. Six print modes can be mixed: brightness glyphs, edge-following glyphs, shape-matched glyphs, braille dots, ordered-dither dots and colour tiles; plus cursor glow, click ripples, a CRT terminal finish, and two page helpers (text decode and image-to-ASCII dissolve). Ships a dependency-free JS engine with HTML and React wiring. Use when the user asks for an ASCII background, ASCII art animation, glyph or braille backdrop, text scramble/decode, or an ASCII image reveal, or says 'ASCII \u80cc\u666f' / '\u5b57\u7b26\u753b\u52a8\u6548'."
+}

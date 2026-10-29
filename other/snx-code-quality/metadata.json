@@ -1,0 +1,37 @@
+{
+  "name": "snx-code-quality",
+  "repo": "scarletnx/ScarletNX",
+  "path": ".claude/skills/snx-code-quality/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/scarletnx/ScarletNX",
+  "dir_name": "snx-code-quality",
+  "downloaded_at": "2026-10-29T06:20:12.687488Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "scarletnx",
+  "source_url": "https://github.com/scarletnx/ScarletNX/blob/main/.claude/skills/snx-code-quality/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/scarletnx/ScarletNX/blob/main/.claude/skills/snx-code-quality/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "The C rules of RFC #142: strict ISO C99, no redundant state and indices in place of pointer chains. Also one allocation per owner, atomics apart, no stored pointers and one global struct per file. Use it when you write or review C in src/."
+}

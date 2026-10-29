@@ -1,0 +1,38 @@
+{
+  "name": "firecrawl-knowledge-base",
+  "repo": "mppyxx/claude-power-pack",
+  "path": "skills/firecrawl-knowledge-base/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mppyxx/claude-power-pack",
+  "dir_name": "firecrawl-knowledge-base-mppyxx-claude-power-pack",
+  "downloaded_at": "2026-10-29T05:09:24.175508Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mppyxx",
+  "source_url": "https://github.com/mppyxx/claude-power-pack/blob/main/skills/firecrawl-knowledge-base/SKILL.md",
+  "license": "ISC",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mppyxx/claude-power-pack/blob/main/skills/firecrawl-knowledge-base/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Build a knowledge base from web content with Firecrawl. Use for local reference docs, RAG-ready chunks, fine-tuning datasets, documentation mirrors, topic corpora, or LLM-ready markdown organized from web sources."
+}

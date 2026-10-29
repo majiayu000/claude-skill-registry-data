@@ -1,0 +1,38 @@
+{
+  "name": "document-feature",
+  "repo": "samjmarshall/personal-finance",
+  "path": ".claude/skills/document-feature/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/samjmarshall/personal-finance",
+  "dir_name": "document-feature-samjmarshall-personal-finance",
+  "downloaded_at": "2026-10-29T06:16:33.020864Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: planning=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "planning",
+      "plan",
+      "roadmap"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "samjmarshall",
+  "source_url": "https://github.com/samjmarshall/personal-finance/blob/main/.claude/skills/document-feature/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/samjmarshall/personal-finance/blob/main/.claude/skills/document-feature/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Interview a developer to produce a living feature doc at docs/feature/{slug}.md, capturing user value, architecture (with ADR links), and data/user flow with at least one Mermaid diagram. Use when the user says \"document this feature\", \"write a feature doc\", \"create docs/feature/X\", \"explain feature X for new devs\", or asks to onboard future engineers onto a shipped feature. Different from /write-plan (forward-looking design) and Epics (scope/sprint planning) \u2014 this is the present-tense \"what does this thing do today\" doc for engineers reading the codebase cold."
+}

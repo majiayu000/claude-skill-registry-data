@@ -1,0 +1,39 @@
+{
+  "name": "tamarind",
+  "repo": "raktim-mondol/academic-harness",
+  "path": "skills/tamarind/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/raktim-mondol/academic-harness",
+  "dir_name": "tamarind-raktim-mondol-academic-harness",
+  "downloaded_at": "2026-10-29T05:59:56.682796Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for api: api, sdk, endpoint, openapi",
+    "score": 4,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk",
+      "endpoint",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "raktim-mondol",
+  "source_url": "https://github.com/raktim-mondol/academic-harness/blob/main/skills/tamarind/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/raktim-mondol/academic-harness/blob/main/skills/tamarind/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Access a collection of open-source molecular design and structural biology tools on the Tamarind Bio platform, via its REST API or MCP server \u2014 no local GPUs required. Tamarind bundles popular open-source models for structure prediction (AlphaFold, Boltz, Chai, ESMFold), protein, binder, and de novo design (RFdiffusion, ProteinMPNN, BoltzGen), antibody and nanobody design and developability, protein-ligand docking (DiffDock, Autodock Vina), binding-affinity prediction, MSA generation, and molecular dynamics. Use when the user mentions Tamarind or tamarind.bio, wants to run any of these open-source tools in the cloud, references app.tamarind.bio/api or the x-api-key header, or needs to submit batches of sequences for structural or biophysical characterization."
+}

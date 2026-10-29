@@ -1,0 +1,37 @@
+{
+  "name": "compact-project-memory",
+  "repo": "pekral/test-redundancy",
+  "path": ".claude/skills/compact-project-memory/SKILL.md",
+  "github_branch": "master",
+  "category": "context-management",
+  "source": "github.com/pekral/test-redundancy",
+  "dir_name": "compact-project-memory-pekral-test-redundancy",
+  "downloaded_at": "2026-10-29T05:40:14.893546Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, memory",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pekral",
+  "source_url": "https://github.com/pekral/test-redundancy/blob/master/.claude/skills/compact-project-memory/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pekral/test-redundancy/blob/master/.claude/skills/compact-project-memory/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when docs/memory/PROJECT_MEMORY.md was just written to \u2014 a new entry appended or an existing one edited \u2014 and the run that wrote it is about to report completion. Shrinks the token footprint of only the entries the write actually touched, plus at most 3 demonstrably related ones, without ever losing a recorded fact; a true no-op when the file carries no diff."
+}

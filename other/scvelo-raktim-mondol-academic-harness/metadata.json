@@ -1,0 +1,37 @@
+{
+  "name": "scvelo",
+  "repo": "raktim-mondol/academic-harness",
+  "path": "skills/scvelo/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/raktim-mondol/academic-harness",
+  "dir_name": "scvelo-raktim-mondol-academic-harness",
+  "downloaded_at": "2026-10-29T05:59:50.339989Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "raktim-mondol",
+  "source_url": "https://github.com/raktim-mondol/academic-harness/blob/main/skills/scvelo/SKILL.md",
+  "license": "BSD-3-Clause",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/raktim-mondol/academic-harness/blob/main/skills/scvelo/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "RNA velocity analysis with scVelo. Estimate cell state transitions from unspliced/spliced mRNA dynamics, infer trajectory directions, compute latent time, and identify driver genes in single-cell RNA-seq data. Complements Scanpy/scVI-tools for trajectory inference."
+}

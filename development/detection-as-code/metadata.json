@@ -1,0 +1,40 @@
+{
+  "name": "detection-as-code",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/soc/detection-as-code/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "detection-as-code",
+  "downloaded_at": "2026-10-29T05:04:58.232369Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, software, debug",
+    "score": 5,
+    "runner_up": "workflow",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "software",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/soc/detection-as-code/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/soc/detection-as-code/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when building detections as versioned, tested code. Covers Sigma rule authoring, detection pipelines, unit testing detections, and CI for the SOC. Also use when detection rules are scattered, untested, and nobody knows what they cover."
+}

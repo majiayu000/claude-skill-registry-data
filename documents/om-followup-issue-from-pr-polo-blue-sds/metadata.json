@@ -1,0 +1,38 @@
+{
+  "name": "om-followup-issue-from-pr",
+  "repo": "polo-blue/sds",
+  "path": ".claude/skills/om-followup-issue-from-pr/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/polo-blue/sds",
+  "dir_name": "om-followup-issue-from-pr-polo-blue-sds",
+  "downloaded_at": "2026-10-29T05:45:12.089019Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polo-blue",
+  "source_url": "https://github.com/polo-blue/sds/blob/main/.claude/skills/om-followup-issue-from-pr/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polo-blue/sds/blob/main/.claude/skills/om-followup-issue-from-pr/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn a PR into tracked follow-up work \u2014 paste a PR or PR-comment link to extract the actionable ask and open a follow-up issue assigned to the @-mention or PR author; for a PR adding a design doc, it opens the missing `Implement:` tracking issue instead. Use for \"make a follow-up issue\", \"create an issue for this\", or a pasted PR/comment link with that intent."
+}

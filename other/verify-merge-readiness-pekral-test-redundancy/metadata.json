@@ -1,0 +1,37 @@
+{
+  "name": "verify-merge-readiness",
+  "repo": "pekral/test-redundancy",
+  "path": ".agents/skills/verify-merge-readiness/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/pekral/test-redundancy",
+  "dir_name": "verify-merge-readiness-pekral-test-redundancy",
+  "downloaded_at": "2026-10-29T05:40:13.029797Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pekral",
+  "source_url": "https://github.com/pekral/test-redundancy/blob/master/.agents/skills/verify-merge-readiness/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pekral/test-redundancy/blob/master/.agents/skills/verify-merge-readiness/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a GitHub issue, a GitHub pull request, or a JIRA issue must have its pull request brought to a merge-ready state without merging, then summarized in one source-issue TL;DR while superseded preparation comments are removed safely."
+}

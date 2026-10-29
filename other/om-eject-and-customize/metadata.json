@@ -1,0 +1,37 @@
+{
+  "name": "om-eject-and-customize",
+  "repo": "polo-blue/sds",
+  "path": ".claude/skills/om-eject-and-customize/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/polo-blue/sds",
+  "dir_name": "om-eject-and-customize",
+  "downloaded_at": "2026-10-29T05:45:10.476815Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polo-blue",
+  "source_url": "https://github.com/polo-blue/sds/blob/main/.claude/skills/om-eject-and-customize/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polo-blue/sds/blob/main/.claude/skills/om-eject-and-customize/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Take one part of an installed dependency into the repo for customization via the eject recipe the dependency ships \u2014 decision gate first, confirmation before any change, provenance recorded so later upgrades can diff. Stops when no recipe exists. Use for \"eject this module\", \"fork the installed component\", \"customize beyond extension points\"."
+}

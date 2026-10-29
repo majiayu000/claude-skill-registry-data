@@ -1,0 +1,38 @@
+{
+  "name": "merge-policy",
+  "repo": "on-par/software-factory",
+  "path": ".claude/skills/merge-policy/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/on-par/software-factory",
+  "dir_name": "merge-policy",
+  "downloaded_at": "2026-10-29T05:31:04.336071Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, testing=3",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "on-par",
+  "source_url": "https://github.com/on-par/software-factory/blob/main/.claude/skills/merge-policy/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/on-par/software-factory/blob/main/.claude/skills/merge-policy/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The software-factory rule that main must always be green, and how to land PRs under it \u2014 when a bypass/admin merge is and is not allowed, how to handle a hung required check, and what to do when main goes red. Use before merging or landing any PR, before running `gh pr merge --admin` or any merge that skips required checks, when a required check is stuck or failing, or when a test fails on main."
+}

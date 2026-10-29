@@ -1,0 +1,37 @@
+{
+  "name": "peekaboo-vm-app-audit",
+  "repo": "prateek/dotfiles",
+  "path": ".agents/skills/peekaboo-vm-app-audit/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/prateek/dotfiles",
+  "dir_name": "peekaboo-vm-app-audit",
+  "downloaded_at": "2026-10-29T05:47:09.713975Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "prateek",
+  "source_url": "https://github.com/prateek/dotfiles/blob/master/.agents/skills/peekaboo-vm-app-audit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/prateek/dotfiles/blob/master/.agents/skills/peekaboo-vm-app-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Drive an LLM-led audit of one or more macOS apps using Peekaboo as eyes-and-hands \u2014 verify install, inspect on-disk preferences, launch the app, navigate its UI (windows, menu bar, settings panes), compare what the app's own UI shows against the configured plist, and produce a markdown report with embedded screenshot proof for each step. Works locally on the current Mac, against a remote Mac via SSH, or inside a Tart VM via double-hop SSH. Use whenever the user asks to \"verify the install\", \"prove the settings landed\", \"screenshot every app\", \"audit what's running\", or after a fresh chezmoi/dotfiles apply on a new machine or VM. The skill installs Peekaboo if missing."
+}

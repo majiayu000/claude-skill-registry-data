@@ -1,0 +1,37 @@
+{
+  "name": "om-troubleshooter",
+  "repo": "polo-blue/sds",
+  "path": ".claude/skills/om-troubleshooter/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/polo-blue/sds",
+  "dir_name": "om-troubleshooter",
+  "downloaded_at": "2026-10-29T05:45:06.360253Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polo-blue",
+  "source_url": "https://github.com/polo-blue/sds/blob/main/.claude/skills/om-troubleshooter/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polo-blue/sds/blob/main/.claude/skills/om-troubleshooter/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Diagnose a failure from its symptom \u2014 reproduce, classify the broken invariant, route via the repo AGENTS.md Task Router, trace the smallest root cause, and on request land a minimal fix behind a regression test. Framework knowledge via om-framework-context. Use for \"why does this fail\", \"debug this\", \"fix this bug\", \"regression\", \"napraw b\u0142\u0105d\"."
+}

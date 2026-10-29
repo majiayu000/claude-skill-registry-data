@@ -1,0 +1,38 @@
+{
+  "name": "aws-s3",
+  "repo": "n2g7/agent-skills",
+  "path": "aws-s3/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/n2g7/agent-skills",
+  "dir_name": "aws-s3-n2g7-agent-skills",
+  "downloaded_at": "2026-10-29T05:13:25.249794Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "n2g7",
+  "source_url": "https://github.com/n2g7/agent-skills/blob/main/aws-s3/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/n2g7/agent-skills/blob/main/aws-s3/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Configure S3 buckets, policies, and lifecycle rules. Implement versioning, replication, and security. Use when managing object storage on AWS."
+}

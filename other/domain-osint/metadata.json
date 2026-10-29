@@ -1,0 +1,37 @@
+{
+  "name": "domain-osint",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/osint/domain-osint/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "domain-osint",
+  "downloaded_at": "2026-10-29T05:04:48.730591Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=2, marketing=2",
+    "score": 2,
+    "runner_up": "marketing",
+    "runner_up_score": 2,
+    "signals": [
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/osint/domain-osint/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/osint/domain-osint/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when investigating domains, DNS history, certificates, and hosting infrastructure from public sources on an authorized engagement. Covers RDAP and WHOIS lookups, DNS enumeration past and present, certificate transparency mining, passive DNS pivoting, ASN and BGP analysis, and infrastructure link analysis. Use when mapping an organization's external footprint, when triaging a suspicious domain from a phishing email, or when linking attacker infrastructure."
+}

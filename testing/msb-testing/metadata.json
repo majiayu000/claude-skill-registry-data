@@ -1,0 +1,37 @@
+{
+  "name": "msb-testing",
+  "repo": "runoverlabs/sandbox-manager",
+  "path": ".agents/skills/msb-testing/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/runoverlabs/sandbox-manager",
+  "dir_name": "msb-testing",
+  "downloaded_at": "2026-10-29T06:14:23.790806Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, unittest",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "test",
+      "unittest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "runoverlabs",
+  "source_url": "https://github.com/runoverlabs/sandbox-manager/blob/main/.agents/skills/msb-testing/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/runoverlabs/sandbox-manager/blob/main/.agents/skills/msb-testing/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Tests and spikes: tests/harness.py MsbctlTest giving each test a throwaway HOME and a freshly loaded msbctl with preflight() and the agent filter patched out and the network off, tests/fake/msb recording argv and the env vars a test names and exiting 2 on an unknown call, tests/fake/tailscale, assert_not_in_argv() to prove a planted secret never reaches argv, and the re-runnable spikes/NN-*.sh with the host-specific env vars each needs. Use when writing or debugging a test, or when a mechanism needs a real PASS/FAIL check on live msb."
+}

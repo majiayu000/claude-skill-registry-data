@@ -1,0 +1,38 @@
+{
+  "name": "learning-aggregator-ci",
+  "repo": "pskoett/pskoett-ai-skills",
+  "path": "plugin/skills/learning-aggregator-ci/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/pskoett/pskoett-ai-skills",
+  "dir_name": "learning-aggregator-ci-pskoett-pskoett-ai-skills",
+  "downloaded_at": "2026-10-29T05:53:46.754773Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, memory",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pskoett",
+  "source_url": "https://github.com/pskoett/pskoett-ai-skills/blob/main/plugin/skills/learning-aggregator-ci/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pskoett/pskoett-ai-skills/blob/main/plugin/skills/learning-aggregator-ci/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "[Beta] CI-only learning aggregation workflow using gh-aw (GitHub Agentic Workflows). Scans .learnings/ files on a schedule, groups entries by pattern_key, identifies promotion-ready patterns, and posts a gap report as a PR or issue comment. Use when: you want automated cross-session pattern detection in CI/headless pipelines without interactive prompts. For interactive use, use learning-aggregator."
+}

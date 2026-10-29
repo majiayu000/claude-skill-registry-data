@@ -1,0 +1,37 @@
+{
+  "name": "matlab-generate-5g-waveform",
+  "repo": "matlab/matlab-agentic-toolkit",
+  "path": "skills-catalog/wireless-communications/matlab-generate-5g-waveform/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/matlab/matlab-agentic-toolkit",
+  "dir_name": "matlab-generate-5g-waveform",
+  "downloaded_at": "2026-10-29T04:52:34.904406Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: generation=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "generation",
+      "generator"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "matlab",
+  "source_url": "https://github.com/matlab/matlab-agentic-toolkit/blob/main/skills-catalog/wireless-communications/matlab-generate-5g-waveform/SKILL.md",
+  "license": "https://www.mathworks.com/content/dam/mathworks/license/pmrl/license.md",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/matlab/matlab-agentic-toolkit/blob/main/skills-catalog/wireless-communications/matlab-generate-5g-waveform/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Generate 3GPP-compliant 5G NR downlink and uplink baseband waveforms. Use to create NR signals, test model (TM) waveforms, fixed reference channels (FRC), test and measurement (T&M) signals, or test vectors for conformance testing. Covers configuring data, control, and broadcast channels and signals: PDSCH, PUSCH, PDCCH, PUCCH, SRS, SSBurst, CSI-RS, DM-RS, PT-RS, CORESET, and BWP parameters including bandwidth, subcarrier spacing (SCS), modulation (QPSK, QAM), numerology, FR1, FR2, TDD, FDD, and multi-bandwidth-part setups. Use for signal generation, RF instrument playback, or IQ baseband synthesis. Requires 5G Toolbox."
+}

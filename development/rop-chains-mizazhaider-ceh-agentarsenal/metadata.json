@@ -1,0 +1,38 @@
+{
+  "name": "rop-chains",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/binary/rop-chains/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "rop-chains-mizazhaider-ceh-agentarsenal",
+  "downloaded_at": "2026-10-29T05:04:47.232861Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, programming, build",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "programming",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/binary/rop-chains/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/binary/rop-chains/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when you need to build a Return Oriented Programming chain on an authorized target, such as a CTF pwn challenge with NX enabled and no easy win function. Covers gadget hunting with ROPgadget 7.x and Ropper 1.13.x, building chains with pwntools 4.13, ret2libc and ret2system patterns, the ret2csu technique for argument setup, stack pivoting when buffer space is short, and handling bad characters. Use when NX blocks shellcode, when you must call functions with controlled arguments, or when pwn-fundamentals got you control of RIP and now you need to do something useful with it."
+}

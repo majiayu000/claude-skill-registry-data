@@ -1,0 +1,37 @@
+{
+  "name": "om-auto-write-spec",
+  "repo": "polo-blue/sds",
+  "path": ".claude/skills/om-auto-write-spec/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/polo-blue/sds",
+  "dir_name": "om-auto-write-spec-polo-blue-sds",
+  "downloaded_at": "2026-10-29T05:45:07.834669Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polo-blue",
+  "source_url": "https://github.com/polo-blue/sds/blob/main/.claude/skills/om-auto-write-spec/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polo-blue/sds/blob/main/.claude/skills/om-auto-write-spec/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Autonomously turn a brief or FR issue into a spec landed on a ready PR \u2014 runs om-spec-writing --autonomous (defaults posted for override), attaches UI mockups and current-app screenshots as PR evidence when a browser provider exists, applies full SDLC labels, and emits PR/spec markers for chaining into om-auto-implement-spec. Use for \"write a spec for X and open a PR\", \"spec this issue\"."
+}

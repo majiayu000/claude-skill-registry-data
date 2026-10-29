@@ -1,0 +1,38 @@
+{
+  "name": "segfault-cli",
+  "repo": "meowdiocre/meowpi",
+  "path": "skills/segfault-cli/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/meowdiocre/meowpi",
+  "dir_name": "segfault-cli",
+  "downloaded_at": "2026-10-29T04:57:38.658046Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, cli",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "meowdiocre",
+  "source_url": "https://github.com/meowdiocre/meowpi/blob/main/skills/segfault-cli/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/meowdiocre/meowpi/blob/main/skills/segfault-cli/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use the segfault-derived helper CLIs in /opt/segfault/bin (crt, asnl, resolv, rdns, io, io2, ptr, dns, find_subdomains, addfileextension, transfer, gssec, sshj, xssh, supervise) plus the PROXY/TOR/hl/hgrep/lsg shell functions. Use for one-liner enumeration, resolution, pivoting and loot transfer; Not for full scanners (use nmap, httpx, ffuf) or C2 (use sliver)."
+}

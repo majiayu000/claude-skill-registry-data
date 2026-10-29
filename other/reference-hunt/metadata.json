@@ -1,0 +1,38 @@
+{
+  "name": "reference-hunt",
+  "repo": "namedtoaster/The-Last-Mile",
+  "path": "skills/reference-hunt/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/namedtoaster/The-Last-Mile",
+  "dir_name": "reference-hunt",
+  "downloaded_at": "2026-10-29T05:14:20.326151Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, platform=3",
+    "score": 3,
+    "runner_up": "platform",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "namedtoaster",
+  "source_url": "https://github.com/namedtoaster/The-Last-Mile/blob/main/skills/reference-hunt/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/namedtoaster/The-Last-Mile/blob/main/skills/reference-hunt/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find how real, shipped apps solve a given screen or flow, so the design starts from patterns people actually use instead of the AI's average guess. Searches Mobbin when it is connected, otherwise works from the user's own screenshots and App Store listing screenshots. Gives the 3 best patterns in chat, each linked to the real screen and marked seen or unconfirmed, and saves a dated reference card in the project. Use before designing or rebuilding a screen, or when the user asks \"how do other apps do this\", wants design references or examples, or says something like \"find examples of a paywall screen\" or \"show me good onboarding flows\"."
+}

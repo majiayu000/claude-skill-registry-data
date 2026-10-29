@@ -1,0 +1,38 @@
+{
+  "name": "om-ux-review-pr",
+  "repo": "polo-blue/sds",
+  "path": ".claude/skills/om-ux-review-pr/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/polo-blue/sds",
+  "dir_name": "om-ux-review-pr-polo-blue-sds",
+  "downloaded_at": "2026-10-29T05:45:05.267835Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, ux",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "ux"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polo-blue",
+  "source_url": "https://github.com/polo-blue/sds/blob/main/.claude/skills/om-ux-review-pr/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polo-blue/sds/blob/main/.claude/skills/om-ux-review-pr/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Evidence-first design review of a PR's UI. Walks the changed screens in a real browser, performs the user's tasks, and posts findings ranked by user impact, each with evidence, a pattern, a trade-off and an acceptance criterion. A --guard mode checks code statically against the design contract, per PR or repository-wide with --health."
+}

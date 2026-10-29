@@ -1,0 +1,38 @@
+{
+  "name": "skill-creator",
+  "repo": "pekral/test-redundancy",
+  "path": ".agents/skills/skill-creator/SKILL.md",
+  "github_branch": "master",
+  "category": "documents",
+  "source": "github.com/pekral/test-redundancy",
+  "dir_name": "skill-creator-pekral-test-redundancy",
+  "downloaded_at": "2026-10-29T05:39:52.177972Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word, markdown",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pekral",
+  "source_url": "https://github.com/pekral/test-redundancy/blob/master/.agents/skills/skill-creator/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pekral/test-redundancy/blob/master/.agents/skills/skill-creator/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when creating a new Agent skill in this repository. Generates a SKILL.md that follows project conventions, passes skill-check validation, and updates the changelog and readme."
+}

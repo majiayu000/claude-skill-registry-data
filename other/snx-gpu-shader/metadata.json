@@ -1,0 +1,37 @@
+{
+  "name": "snx-gpu-shader",
+  "repo": "scarletnx/ScarletNX",
+  "path": ".claude/skills/snx-gpu-shader/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/scarletnx/ScarletNX",
+  "dir_name": "snx-gpu-shader",
+  "downloaded_at": "2026-10-29T06:20:12.505550Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, performance=2",
+    "score": 2,
+    "runner_up": "performance",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "scarletnx",
+  "source_url": "https://github.com/scarletnx/ScarletNX/blob/main/.claude/skills/snx-gpu-shader/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/scarletnx/ScarletNX/blob/main/.claude/skills/snx-gpu-shader/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Write and optimize ScarletNX's own compute shaders (astc.comp, vic.comp, future ones) for what the GPU actually executes. It covers constant tables, bit tricks, uniform branches, fewer fetches, and workgroup and subgroup structure. It also covers proofs of exactness, and the GLSL-as-C++ tests and lavapipe time measurements that check them. Use it when you write, review or speed up a GLSL shader under src/nx/gpu/. Use it also when you decide if you split a shader."
+}

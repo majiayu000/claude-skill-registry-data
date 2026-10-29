@@ -1,0 +1,37 @@
+{
+  "name": "msb-release-ci",
+  "repo": "runoverlabs/sandbox-manager",
+  "path": ".agents/skills/msb-release-ci/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/runoverlabs/sandbox-manager",
+  "dir_name": "msb-release-ci",
+  "downloaded_at": "2026-10-29T06:14:24.484972Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "runoverlabs",
+  "source_url": "https://github.com/runoverlabs/sandbox-manager/blob/main/.agents/skills/msb-release-ci/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/runoverlabs/sandbox-manager/blob/main/.agents/skills/msb-release-ci/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Changelog discipline, CI and releases: the one-line CHANGELOG.md entry every behaviour change needs and which group it goes in, scripts/check.sh as exactly what CI runs (syntax, shellcheck, ruff, the unit tests, TOML, PAYLOAD in step, tracked modes, gitleaks), the tracked-mode rule and the sed -i trap, and the tag-driven release with actions pinned by hash and read-only permissions. Use when making any user-visible change, cutting a release, or when CI, a mode or a payload check complains."
+}

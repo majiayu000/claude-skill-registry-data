@@ -1,0 +1,39 @@
+{
+  "name": "shell-environment",
+  "repo": "meowdiocre/meowpi",
+  "path": "skills/shell-environment/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/meowdiocre/meowpi",
+  "dir_name": "shell-environment",
+  "downloaded_at": "2026-10-29T04:57:40.398859Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "meowdiocre",
+  "source_url": "https://github.com/meowdiocre/meowpi/blob/main/skills/shell-environment/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/meowdiocre/meowpi/blob/main/skills/shell-environment/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "This machine's interactive shell setup \u2014 zsh with oh-my-zsh and powerlevel10k, the toolchain PATH order, history and key bindings, the red team aliases and helper functions, plus ssh, vim and Tern settings. Use when a tool is not found, PATH order is wrong, the prompt or completions break, history misbehaves, or a new pane does not pick up the shell. Not for installing tools (use redteam-toolchain) or for choosing a tool (use toolchain-router)."
+}

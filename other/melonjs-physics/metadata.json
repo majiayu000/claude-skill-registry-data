@@ -1,0 +1,36 @@
+{
+  "name": "melonjs-physics",
+  "repo": "melonjs/melonJS",
+  "path": "packages/melonjs/skills/melonjs-physics/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/melonjs/melonJS",
+  "dir_name": "melonjs-physics",
+  "downloaded_at": "2026-10-29T04:56:33.256436Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "melonjs",
+  "source_url": "https://github.com/melonjs/melonJS/blob/master/packages/melonjs/skills/melonjs-physics/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/melonjs/melonJS/blob/master/packages/melonjs/skills/melonjs-physics/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill for collision, physics bodies, movement, and spatial queries in melonJS \u2014 the built-in SAT world and the planck/matter adapters. Covers bodyDef vs Body, collision types and masks, the collision callback family and their firing rules, raycast/queryAABB/querySphere, the behaviour differences between adapters, and which one to pick for a given game. Triggers on: which physics engine, choosing an adapter, rotation collision, rotating body, torque, joints, stacking, Body, bodyDef, collision, collisionType, collisionMask, onCollision, onCollisionStart, onCollisionActive, raycast, queryAABB, querySphere, PlanckAdapter, MatterAdapter, gravity, velocity, applyForce, isGrounded, SAT."
+}

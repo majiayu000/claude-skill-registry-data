@@ -1,0 +1,38 @@
+{
+  "name": "blast-radius-analysis",
+  "repo": "pekral/test-redundancy",
+  "path": ".claude/skills/blast-radius-analysis/SKILL.md",
+  "github_branch": "master",
+  "category": "data",
+  "source": "github.com/pekral/test-redundancy",
+  "dir_name": "blast-radius-analysis-pekral-test-redundancy-2",
+  "downloaded_at": "2026-10-29T05:40:12.058551Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pekral",
+  "source_url": "https://github.com/pekral/test-redundancy/blob/master/.claude/skills/blast-radius-analysis/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pekral/test-redundancy/blob/master/.claude/skills/blast-radius-analysis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a planned code change must be mapped to everything that depends on it before implementation starts. Produces a read-only, evidence-graded impact report \u2014 affected components, risks, unknowns, a targeted verification plan, and implementation constraints \u2014 at a depth set by the FAST / STANDARD / CRITICAL tier."
+}

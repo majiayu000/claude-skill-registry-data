@@ -1,0 +1,38 @@
+{
+  "name": "memory-recall",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/memory/memory-recall/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "memory-recall-mizazhaider-ceh-agentarsenal",
+  "downloaded_at": "2026-10-29T05:04:54.891558Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, memory",
+    "score": 3,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/memory/memory-recall/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/memory/memory-recall/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when an agent needs to look up what it already knows before doing new work, or when an operator wants the facts behind a past decision. Covers query patterns (keyword choice, kind filters, tag and agent filters), how the memory-store relevance ranking works, interpreting confidence and staleness, and recalling procedural knowledge mid-task. Use when starting any scan, investigation, or incident, when verifying a claim, or when drafting a report that depends on earlier findings."
+}

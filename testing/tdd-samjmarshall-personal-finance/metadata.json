@@ -1,0 +1,38 @@
+{
+  "name": "tdd",
+  "repo": "samjmarshall/personal-finance",
+  "path": ".claude/skills/tdd/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/samjmarshall/personal-finance",
+  "dir_name": "tdd-samjmarshall-personal-finance",
+  "downloaded_at": "2026-10-29T06:16:29.727195Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, tdd, integration",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "tdd",
+      "integration"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "samjmarshall",
+  "source_url": "https://github.com/samjmarshall/personal-finance/blob/main/.claude/skills/tdd/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/samjmarshall/personal-finance/blob/main/.claude/skills/tdd/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Test-Driven Development workflow enforcing vertical slicing - one test \u2192 one implementation \u2192 repeat. Use when writing tests alongside new code, designing interfaces for testability, deciding what to mock, or when a plan phase requires test-first development. Also triggers when user asks about \"TDD\", \"red/green\", \"tracer bullet\", or whether tests are testing behavior vs implementation."
+}

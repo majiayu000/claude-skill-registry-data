@@ -1,0 +1,38 @@
+{
+  "name": "research",
+  "repo": "namedtoaster/The-Last-Mile",
+  "path": "skills/research/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/namedtoaster/The-Last-Mile",
+  "dir_name": "research-namedtoaster-the-last-mile",
+  "downloaded_at": "2026-10-29T05:14:17.881475Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=3, product=3",
+    "score": 3,
+    "runner_up": "product",
+    "runner_up_score": 3,
+    "signals": [
+      "doc",
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "namedtoaster",
+  "source_url": "https://github.com/namedtoaster/The-Last-Mile/blob/main/skills/research/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/namedtoaster/The-Last-Mile/blob/main/skills/research/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Answer a question by searching the project's own docs and code first, then official sources, and file the dated, sourced answer where it will be read again. Adds to an existing doc before creating a new one, marks anything unverified, and keeps a one line summary with the headline finding in the rules file's Docs index. Gives a short answer in chat first. Use when the user asks to research, look into, compare options for, or find out how something works before deciding or building."
+}

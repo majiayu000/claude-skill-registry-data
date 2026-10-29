@@ -1,0 +1,38 @@
+{
+  "name": "lean-out",
+  "repo": "namedtoaster/The-Last-Mile",
+  "path": "skills/lean-out/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/namedtoaster/The-Last-Mile",
+  "dir_name": "lean-out",
+  "downloaded_at": "2026-10-29T05:14:18.080327Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, refactor",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "namedtoaster",
+  "source_url": "https://github.com/namedtoaster/The-Last-Mile/blob/main/skills/lean-out/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/namedtoaster/The-Last-Mile/blob/main/skills/lean-out/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find the structural clutter in an app that is making every new change land wrong, and rank it by what it would have prevented rather than by taste. Produces a measured audit and a list that can be worked through in pieces, never a big bang refactor. Use when the codebase feels heavy, when the same kind of bug keeps coming back in a new place, when a file has grown past anyone's head, or when the app's size keeps climbing and nobody has looked at why."
+}

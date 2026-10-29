@@ -1,0 +1,36 @@
+{
+  "name": "asreproasting",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/ad/asreproasting/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "asreproasting",
+  "downloaded_at": "2026-10-29T05:04:45.325899Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "data",
+    "runner_up_score": 1,
+    "signals": [
+      "bash"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/ad/asreproasting/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/ad/asreproasting/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when testing Active Directory for AS-REP roasting on an authorized engagement. Covers finding accounts with Kerberos preauthentication disabled, requesting crackable AS-REP responses with GetNPUsers.py from impacket 0.12.0 and Rubeus 2.x, and offline cracking of krbasrep5 hashes with hashcat 6.2.6 mode 18200 or John the Ripper 1.9.0-jumbo-1. Use when you have usernames but no credentials, when NetExec or BloodHound flags accounts with preauth disabled, or when you need low noise credential recovery during an internal test or CTF."
+}

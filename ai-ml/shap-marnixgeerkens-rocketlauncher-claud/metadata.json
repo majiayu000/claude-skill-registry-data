@@ -1,0 +1,38 @@
+{
+  "name": "shap",
+  "repo": "marnixGeerkens/rocketlauncher-claude-code",
+  "path": "components/skills/scientific/shap/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/marnixGeerkens/rocketlauncher-claude-code",
+  "dir_name": "shap-marnixgeerkens-rocketlauncher-claud",
+  "downloaded_at": "2026-10-29T04:50:20.655440Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, machine-learning, model",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "machine-learning",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "marnixGeerkens",
+  "source_url": "https://github.com/marnixGeerkens/rocketlauncher-claude-code/blob/main/components/skills/scientific/shap/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/marnixGeerkens/rocketlauncher-claude-code/blob/main/components/skills/scientific/shap/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Model interpretability and explainability using SHAP (SHapley Additive exPlanations). Use this skill when explaining machine learning model predictions, computing feature importance, generating SHAP plots (waterfall, beeswarm, bar, scatter, force, heatmap), debugging models, analyzing model bias or fairness, comparing models, or implementing explainable AI. Works with tree-based models (XGBoost, LightGBM, Random Forest), deep learning (TensorFlow, PyTorch), linear models, and any black-box model."
+}

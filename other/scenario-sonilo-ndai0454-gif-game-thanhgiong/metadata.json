@@ -1,0 +1,37 @@
+{
+  "name": "scenario-sonilo",
+  "repo": "ndai0454-gif/Game_thanhgiong",
+  "path": ".agents/skills/scenario-sonilo/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ndai0454-gif/Game_thanhgiong",
+  "dir_name": "scenario-sonilo-ndai0454-gif-game-thanhgiong",
+  "downloaded_at": "2026-10-29T05:16:38.098600Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ndai0454-gif",
+  "source_url": "https://github.com/ndai0454-gif/Game_thanhgiong/blob/main/.agents/skills/scenario-sonilo/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ndai0454-gif/Game_thanhgiong/blob/main/.agents/skills/scenario-sonilo/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when adding sound to a video or generating standalone audio with Sonilo models on Scenario via MCP: text-to-sound-effects, text-to-music, video-to-sound-effects or video-to-music from a clip, scoring silent AI video, foley, ambience, muxed video-to-video variants returning the clip with the new track mixed in, keeping speech while replacing music, or per-segment sound control. Keywords: Sonilo V1.1, SFX, soundtrack, score, keepSpeechVocal, segments, royalty-free."
+}

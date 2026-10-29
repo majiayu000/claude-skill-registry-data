@@ -1,0 +1,38 @@
+{
+  "name": "hash-cracking",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/crypto/hash-cracking/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "hash-cracking",
+  "downloaded_at": "2026-10-29T05:04:54.031276Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: auth, crypto, audit",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "auth",
+      "crypto",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/crypto/hash-cracking/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/crypto/hash-cracking/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when you need to recover plaintexts from password hashes on an authorized engagement, such as cracking NTLM hashes from a domain dump, testing password strength after extracting hashes in scope, or solving CTF crypto challenges. Covers hash identification, choosing between hashcat 6.2.6 and John the Ripper 1.9.0-jumbo, the cost-ordered attack ladder (wordlist, rules, masks, brute force), Kerberos and NetNTLM specifics, potfile and session management, and knowing when to stop. Use when you hold hashes you are authorized to crack, or when password-attacks gave you a dump and now you need the plaintexts."
+}

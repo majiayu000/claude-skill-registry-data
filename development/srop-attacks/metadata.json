@@ -1,0 +1,38 @@
+{
+  "name": "srop-attacks",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/binary/srop-attacks/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "srop-attacks",
+  "downloaded_at": "2026-10-29T05:04:51.034260Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: programming, build, debug",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "programming",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/binary/srop-attacks/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/binary/srop-attacks/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when learning Sigreturn Oriented Programming in a lab on CTF style binaries you own. Covers sigreturn mechanics, frame forging, and chaining syscalls without gadgets. Also use when a binary has almost no ROP gadgets and needs another path."
+}

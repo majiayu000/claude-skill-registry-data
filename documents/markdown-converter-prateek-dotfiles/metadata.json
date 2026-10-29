@@ -1,0 +1,42 @@
+{
+  "name": "markdown-converter",
+  "repo": "prateek/dotfiles",
+  "path": "agent-marketplace/src/utils-human/skills/markdown-converter/SKILL.md",
+  "github_branch": "master",
+  "category": "documents",
+  "source": "github.com/prateek/dotfiles",
+  "dir_name": "markdown-converter-prateek-dotfiles",
+  "downloaded_at": "2026-10-29T05:47:22.444002Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: pdf, word, excel, pptx, xlsx, docx, markdown",
+    "score": 7,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "pdf",
+      "word",
+      "excel",
+      "pptx",
+      "xlsx",
+      "docx",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "prateek",
+  "source_url": "https://github.com/prateek/dotfiles/blob/master/agent-marketplace/src/utils-human/skills/markdown-converter/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/prateek/dotfiles/blob/master/agent-marketplace/src/utils-human/skills/markdown-converter/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Convert documents and files to Markdown using markitdown. Use when converting PDF, Word (.docx), PowerPoint (.pptx), Excel (.xlsx, .xls), HTML, CSV, JSON, XML, images (with EXIF/OCR), audio (with transcription), ZIP archives, remote URLs (including YouTube), or EPubs to Markdown format for LLM processing or text analysis."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "ncats-arax",
+  "repo": "raktim-mondol/academic-harness",
+  "path": "skills/ncats-arax/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/raktim-mondol/academic-harness",
+  "dir_name": "ncats-arax-raktim-mondol-academic-harness",
+  "downloaded_at": "2026-10-29T06:00:02.077723Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, endpoint, openapi",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "raktim-mondol",
+  "source_url": "https://github.com/raktim-mondol/academic-harness/blob/main/skills/ncats-arax/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/raktim-mondol/academic-harness/blob/main/skills/ncats-arax/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Queries the NCATS Translator ARAX production API for bounded, typed, provenance-rich one-hop and endpoint-pinned two-hop biomedical knowledge-graph relationships. Use for Biolink-constrained RTX-KG2 lookup, explicit selected-provider ARAX federation, separate entity normalization, qualifier-aware graph traversal, and inspection of TRAPI edge bindings, publications, and knowledge-source provenance. Do not use for inference, ranking, open-ended pathfinding, clinical guidance, or sensitive queries."
+}

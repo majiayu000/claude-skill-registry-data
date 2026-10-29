@@ -1,0 +1,39 @@
+{
+  "name": "absolute-debt",
+  "repo": "punkouter27/PoFootball",
+  "path": ".claude/skills/absolute-debt/SKILL.md",
+  "github_branch": "master",
+  "category": "quality",
+  "source": "github.com/punkouter27/PoFootball",
+  "dir_name": "absolute-debt-punkouter27-pofootball",
+  "downloaded_at": "2026-10-29T05:54:29.880045Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, lint, review",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "lint",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "punkouter27",
+  "source_url": "https://github.com/punkouter27/PoFootball/blob/master/.claude/skills/absolute-debt/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/punkouter27/PoFootball/blob/master/.claude/skills/absolute-debt/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Lint and typecheck debt paydown: clear pre-existing repo-wide lint/type violations and suppressions (@ts-ignore, # type: ignore) one rule per wave, fixing causes not symptoms. Runs on green main. For diff-scoped quality use absolute-simplify. Triggers on \"absolute debt\", \"fix our lint warnings\", \"clear the type errors\", \"get to strict mode\", \"burn down suppressions\"."
+}

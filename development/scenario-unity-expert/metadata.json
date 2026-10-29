@@ -1,0 +1,40 @@
+{
+  "name": "scenario-unity-expert",
+  "repo": "ndai0454-gif/Game_thanhgiong",
+  "path": ".agents/skills/scenario-unity-expert/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/ndai0454-gif/Game_thanhgiong",
+  "dir_name": "scenario-unity-expert",
+  "downloaded_at": "2026-10-29T05:16:42.385123Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, framework, build, compile, refactor",
+    "score": 5,
+    "runner_up": "workflow",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "compile",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ndai0454-gif",
+  "source_url": "https://github.com/ndai0454-gif/Game_thanhgiong/blob/main/.agents/skills/scenario-unity-expert/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ndai0454-gif/Game_thanhgiong/blob/main/.agents/skills/scenario-unity-expert/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when an agent drives Unity 6.3 (6000.3) on a Mac for any task: batch mode and -executeMethod jobs, a running editor (the user's GUI editor or a headless one), the Unity CLI and com.unity.pipeline, MCP servers, the Test Framework, command-line builds; when a batch run fails silently, 'Scripts have compiler errors', a capture comes back black or pink, or a result must be proven with numbers and a frame; or when a Unity brief must go to the right scenario-unity-* specialist."
+}

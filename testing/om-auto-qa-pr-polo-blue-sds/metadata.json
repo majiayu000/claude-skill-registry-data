@@ -1,0 +1,38 @@
+{
+  "name": "om-auto-qa-pr",
+  "repo": "polo-blue/sds",
+  "path": ".claude/skills/om-auto-qa-pr/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/polo-blue/sds",
+  "dir_name": "om-auto-qa-pr-polo-blue-sds",
+  "downloaded_at": "2026-10-29T05:45:04.316318Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, qa, integration",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "qa",
+      "integration"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polo-blue",
+  "source_url": "https://github.com/polo-blue/sds/blob/main/.claude/skills/om-auto-qa-pr/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polo-blue/sds/blob/main/.claude/skills/om-auto-qa-pr/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "QA a PR's UI change in a real browser through the configured browser-provider descriptor \u2014 first ensuring the PR has been reviewed (invoking om-auto-review-pr when it has not), then capturing screenshots and a pass/fail report, and optionally posting tracker evidence or self-QA labels without modifying source. Also runs in a local, tracker-less mode against the current worktree."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "diagram-design",
+  "repo": "pekral/test-redundancy",
+  "path": ".claude/skills/diagram-design/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/pekral/test-redundancy",
+  "dir_name": "diagram-design",
+  "downloaded_at": "2026-10-29T05:39:55.804911Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pekral",
+  "source_url": "https://github.com/pekral/test-redundancy/blob/master/.claude/skills/diagram-design/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pekral/test-redundancy/blob/master/.claude/skills/diagram-design/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a change, analysis, or document needs a diagram \u2014 architecture, request flow, sequence, state machine, ER model, timeline, or comparison \u2014 and a picture explains it better than prose. Produces one self-contained HTML + inline SVG file with no build step, no external asset, and no runtime dependency, styled by a fixed editorial design system and validated against a density, contrast, and geometry checklist before it ships."
+}

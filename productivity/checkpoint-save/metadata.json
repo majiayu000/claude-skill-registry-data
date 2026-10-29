@@ -1,0 +1,37 @@
+{
+  "name": "checkpoint-save",
+  "repo": "rm0nroe/loadout",
+  "path": "skills/productivity/checkpoint-save/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/rm0nroe/loadout",
+  "dir_name": "checkpoint-save",
+  "downloaded_at": "2026-10-29T06:09:08.790706Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: productivity, task",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "productivity",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rm0nroe",
+  "source_url": "https://github.com/rm0nroe/loadout/blob/main/skills/productivity/checkpoint-save/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rm0nroe/loadout/blob/main/skills/productivity/checkpoint-save/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Saves session progress to a state file, naming it automatically from the session's work. Usage: /checkpoint-save [optional_name]"
+}

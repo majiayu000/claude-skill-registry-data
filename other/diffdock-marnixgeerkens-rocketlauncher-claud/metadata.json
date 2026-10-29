@@ -1,0 +1,37 @@
+{
+  "name": "diffdock",
+  "repo": "marnixGeerkens/rocketlauncher-claude-code",
+  "path": "components/skills/scientific/diffdock/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/marnixGeerkens/rocketlauncher-claude-code",
+  "dir_name": "diffdock-marnixgeerkens-rocketlauncher-claud",
+  "downloaded_at": "2026-10-29T04:50:31.887633Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "marnixGeerkens",
+  "source_url": "https://github.com/marnixGeerkens/rocketlauncher-claude-code/blob/main/components/skills/scientific/diffdock/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/marnixGeerkens/rocketlauncher-claude-code/blob/main/components/skills/scientific/diffdock/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Diffusion-based molecular docking. Predict protein-ligand binding poses from PDB/SMILES, confidence scores, virtual screening, for structure-based drug design. Not for affinity prediction."
+}

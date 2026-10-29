@@ -1,0 +1,38 @@
+{
+  "name": "plan",
+  "repo": "remorses/opencode-config",
+  "path": "skills/plan/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/remorses/opencode-config",
+  "dir_name": "plan-remorses-opencode-config",
+  "downloaded_at": "2026-10-29T06:04:48.854122Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, refactor",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "remorses",
+  "source_url": "https://github.com/remorses/opencode-config/blob/main/skills/plan/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/remorses/opencode-config/blob/main/skills/plan/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Plan work that spans several tasks or sessions as a checklist file where every box names its evidence, then execute it task by task with clean pickup between sessions. Adapted from the pstack multi-phase plan playbook. Records user corrections and design calls as decision files in plans/decisions/ (adapted from tRPC vNext), so later agents keep the same choices. Use when asked to plan, write a plan, break work into tasks or phases, or continue, resume or pick up a plan in a new session. Also use when the user corrects an approach in a repo that has plans/decisions/."
+}

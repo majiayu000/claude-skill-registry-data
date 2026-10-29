@@ -1,0 +1,38 @@
+{
+  "name": "snx-build",
+  "repo": "scarletnx/ScarletNX",
+  "path": ".claude/skills/snx-build/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/scarletnx/ScarletNX",
+  "dir_name": "snx-build",
+  "downloaded_at": "2026-10-29T06:20:11.547478Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "scarletnx",
+  "source_url": "https://github.com/scarletnx/ScarletNX/blob/main/.claude/skills/snx-build/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/scarletnx/ScarletNX/blob/main/.claude/skills/snx-build/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Build the ScarletNX runtime and recompile games correctly. Avoid the setups that build \"successfully\" into something that does not work. It covers the CPM.cmake dependencies, the presets for Clang only and the deploy into games/. It also tells when a game needs a recompile, and which warnings a plain build does not show. Use it when you build or rebuild the runtime, or recompile a game. Use it also after you pull or bump a dependency, or when a build result looks suspicious."
+}

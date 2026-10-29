@@ -1,0 +1,37 @@
+{
+  "name": "reversa-audit",
+  "repo": "sandeco/pix-golpe",
+  "path": ".claude/skills/reversa-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sandeco/pix-golpe",
+  "dir_name": "reversa-audit-sandeco-pix-golpe",
+  "downloaded_at": "2026-10-29T06:17:24.488060Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sandeco",
+  "source_url": "https://github.com/sandeco/pix-golpe/blob/main/.claude/skills/reversa-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sandeco/pix-golpe/blob/main/.claude/skills/reversa-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Auditoria leitora estrita. Compara requirements, roadmap e actions, reporta inconsist\u00eancias com severidade CRITICAL, HIGH, MEDIUM, LOW. JAMAIS altera os artefatos analisados. Etapa opcional do ciclo forward."
+}

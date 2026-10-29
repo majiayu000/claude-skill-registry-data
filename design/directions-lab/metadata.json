@@ -1,0 +1,40 @@
+{
+  "name": "directions-lab",
+  "repo": "paperclipai/paperclip",
+  "path": ".agents/skills/directions-lab/SKILL.md",
+  "github_branch": "master",
+  "category": "design",
+  "source": "github.com/paperclipai/paperclip",
+  "dir_name": "directions-lab",
+  "downloaded_at": "2026-10-29T05:36:36.315428Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, ui, css, component, animation",
+    "score": 5,
+    "runner_up": "generation",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "css",
+      "component",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "paperclipai",
+  "source_url": "https://github.com/paperclipai/paperclip/blob/master/.agents/skills/directions-lab/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/paperclipai/paperclip/blob/master/.agents/skills/directions-lab/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Scaffold a directions lab that shows shipped UI (Today) beside 2-3 design directions, with surface tabs, theme and animation toggles and the V1 MVP hover motion, registered in design-proposals Storybook. Use for a directions page or lab, or to explore design directions next to production."
+}

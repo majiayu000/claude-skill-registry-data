@@ -1,0 +1,40 @@
+{
+  "name": "om-ux-setup",
+  "repo": "polo-blue/sds",
+  "path": ".claude/skills/om-ux-setup/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/polo-blue/sds",
+  "dir_name": "om-ux-setup-polo-blue-sds",
+  "downloaded_at": "2026-10-29T05:45:03.543971Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, ui, ux, component, figma",
+    "score": 5,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "ux",
+      "component",
+      "figma"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polo-blue",
+  "source_url": "https://github.com/polo-blue/sds/blob/main/.claude/skills/om-ux-setup/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polo-blue/sds/blob/main/.claude/skills/om-ux-setup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Extract the repository's design contract (tokens, component registry, screen archetypes, conventions) into .uxproof/ so every UX skill judges against THIS repo's design system, whatever it is \u2014 including one shipped by a dependency, imported as a version-stamped layer. Run once per repository; re-run to refresh after design-system changes."
+}

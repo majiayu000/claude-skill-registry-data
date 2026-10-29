@@ -1,0 +1,37 @@
+{
+  "name": "webperf-core-web-vitals",
+  "repo": "nucliweb/webperf-snippets",
+  "path": ".claude/skills/webperf-core-web-vitals/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/nucliweb/webperf-snippets",
+  "dir_name": "webperf-core-web-vitals-nucliweb-webperf-snippets",
+  "downloaded_at": "2026-10-29T05:24:56.797872Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nucliweb",
+  "source_url": "https://github.com/nucliweb/webperf-snippets/blob/main/.claude/skills/webperf-core-web-vitals/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nucliweb/webperf-snippets/blob/main/.claude/skills/webperf-core-web-vitals/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Intelligent Core Web Vitals analysis with automated workflows and decision trees. Measures LCP, CLS, INP with guided debugging that automatically determines follow-up analysis based on results. Includes workflows for LCP deep dive (5 phases), CLS investigation (loading vs interaction), INP debugging (latency breakdown + attribution), and cross-skill integration with loading, interaction, and media skills. Use when the user asks about Core Web Vitals, LCP optimization, layout shifts, or interaction responsiveness. Compatible with Chrome DevTools MCP."
+}

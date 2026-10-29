@@ -1,0 +1,37 @@
+{
+  "name": "harness-lessons",
+  "repo": "nerviz-ai/nerviz",
+  "path": ".claude/skills/harness-lessons/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/nerviz-ai/nerviz",
+  "dir_name": "harness-lessons",
+  "downloaded_at": "2026-10-29T05:17:15.023464Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, documentation",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nerviz-ai",
+  "source_url": "https://github.com/nerviz-ai/nerviz/blob/main/.claude/skills/harness-lessons/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nerviz-ai/nerviz/blob/main/.claude/skills/harness-lessons/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Measures what this `.claude/` costs in context \u2014 every session and per skill, agent, rule and hook \u2014 through `ArchHook.jar footprint`, reads the audit trail's spend, failures and peaks when the project records one, judges both against a curated baseline of Claude Code and Anthropic best practices, and writes `harness-NNN.md` \u2014 under `docs/lessons-learned/` in a generated project, `.claude/lessons-learned/` here: each finding with its evidence, the practice it breaks, the file that owns the fix and the expected saving. Ends with `/report-issue` in a generated project, `/claude-code-architect-designer` here. Explicit invocation only."
+}

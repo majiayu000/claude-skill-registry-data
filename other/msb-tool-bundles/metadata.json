@@ -1,0 +1,36 @@
+{
+  "name": "msb-tool-bundles",
+  "repo": "runoverlabs/sandbox-manager",
+  "path": ".agents/skills/msb-tool-bundles/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/runoverlabs/sandbox-manager",
+  "dir_name": "msb-tool-bundles",
+  "downloaded_at": "2026-10-29T06:14:24.814601Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "runoverlabs",
+  "source_url": "https://github.com/runoverlabs/sandbox-manager/blob/main/.agents/skills/msb-tool-bundles/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/runoverlabs/sandbox-manager/blob/main/.agents/skills/msb-tool-bundles/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Agent tool bundles: ~/.config/msb/tools/<name>/ with bundle.toml (description, hosts, [env], pi_package \u2014 a pi package installed by pi in the guest via plan_pi_packages()/sync_pi_packages(), validated by bundle_problem()/bundle_host()), pi.ts and claude/SKILL.md; Sandbox.bundles from the registry's tools or [defaults] tools and never the project, its allow@host:tcp:port rules in net_rules() as source tools:<name>, its ports in --tls-intercept-port, bundle_env() under every [env], is_reserved_var() and the MSB_ prefix refused, apply_pi_bundles() copying msb-<name>.ts into STATE_DIR/pi/<name>/agent/extensions, apply_claude_bundles() copying skills/msb-<name>/SKILL.md into STATE_DIR/claude/<name> (the guest's ~/.claude), the STATE_DIR/tools/<name>.json marker that makes a disable take the adapter away, kandev getting none, section_tools/section_agent_tools, and spike 19. Use when changing how a capability reaches an agent, or when a tool an agent should have is missing or its endpoint is refused."
+}

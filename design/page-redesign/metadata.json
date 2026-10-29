@@ -1,0 +1,38 @@
+{
+  "name": "page-redesign",
+  "repo": "pekral/test-redundancy",
+  "path": ".agents/skills/page-redesign/SKILL.md",
+  "github_branch": "master",
+  "category": "design",
+  "source": "github.com/pekral/test-redundancy",
+  "dir_name": "page-redesign",
+  "downloaded_at": "2026-10-29T05:39:52.468237Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, frontend, component",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "frontend",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pekral",
+  "source_url": "https://github.com/pekral/test-redundancy/blob/master/.agents/skills/page-redesign/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pekral/test-redundancy/blob/master/.agents/skills/page-redesign/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when an existing application page must be redesigned so its element layout is logical, intuitive, and readable for operators who are not IT people \u2014 warehouse, workshop, and shop-floor staff who use the software to process orders as fast as possible. Produces a grounded redesign proposal, a rendered preview screenshot of every state the main view hides, and an implementation-ready handoff a developer can build from without asking a follow-up question. Never changes the application's main layout shell unless the caller explicitly orders it."
+}

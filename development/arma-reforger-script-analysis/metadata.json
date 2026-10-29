@@ -1,0 +1,38 @@
+{
+  "name": "arma-reforger-script-analysis",
+  "repo": "nick100lay/arma-reforger-server-config-utils",
+  "path": "skills/arma-reforger-script-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/nick100lay/arma-reforger-server-config-utils",
+  "dir_name": "arma-reforger-script-analysis",
+  "downloaded_at": "2026-10-29T05:19:51.072162Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nick100lay",
+  "source_url": "https://github.com/nick100lay/arma-reforger-server-config-utils/blob/main/skills/arma-reforger-script-analysis/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nick100lay/arma-reforger-server-config-utils/blob/main/skills/arma-reforger-script-analysis/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Analyse Arma Reforger Enforce Script code - what a class or method actually does, which file and line declares it in the installed build, which mods replace it with modded class, and why an override changes nothing or two mods fight over one method. Use when asked to explain, trace, review or debug a .c script or a mod's scripts; when a modded class, modded enum or override does not take effect; when deciding whether two mods conflict on one class (SCR_CharacterCameraHandlerComponent, SCR_PlayerController, SCR_BaseGameMode); when a method has no call sites in the sources because the engine calls it; when a base class is reported missing or a chain stops at ScriptComponent, GenericEntity or Managed because core's pak was not passed - core and data conflict as resources but core carries the engine's script declarations; or when a comment in a mod claims something about vanilla code that must be checked. Not for reading pak archives, resource GUIDs or localization tables (the game-data skill), and not for writing a server config."
+}

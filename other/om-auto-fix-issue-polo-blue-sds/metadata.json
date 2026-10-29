@@ -1,0 +1,37 @@
+{
+  "name": "om-auto-fix-issue",
+  "repo": "polo-blue/sds",
+  "path": ".claude/skills/om-auto-fix-issue/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/polo-blue/sds",
+  "dir_name": "om-auto-fix-issue-polo-blue-sds",
+  "downloaded_at": "2026-10-29T05:45:06.736889Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polo-blue",
+  "source_url": "https://github.com/polo-blue/sds/blob/main/.claude/skills/om-auto-fix-issue/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polo-blue/sds/blob/main/.claude/skills/om-auto-fix-issue/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Fix or implement a tracker issue end to end from a single command \u2014 takes an issue id or a plain problem description (filed first via om-prepare-issue), classifies, then drives the bug autofix chain (om-verify-in-repo, om-root-cause, om-fix, om-open-pr, om-auto-review-pr, om-auto-qa-pr for UI fixes) or the feature route (spec via om-auto-write-spec, built via om-auto-implement-spec). Isolated worktree, claim protocol, clean stops. Use for \"fix issue 123\" or a pasted problem description."
+}

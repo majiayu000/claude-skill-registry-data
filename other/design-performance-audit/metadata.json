@@ -1,0 +1,38 @@
+{
+  "name": "design-performance-audit",
+  "repo": "nvdigitalsolutions/mcp-ai-wpoos",
+  "path": ".agents/skills/design-performance-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/nvdigitalsolutions/mcp-ai-wpoos",
+  "dir_name": "design-performance-audit",
+  "downloaded_at": "2026-10-29T05:25:42.331496Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: design=3, performance=3",
+    "score": 3,
+    "runner_up": "performance",
+    "runner_up_score": 3,
+    "signals": [
+      "design",
+      "css",
+      "animation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nvdigitalsolutions",
+  "source_url": "https://github.com/nvdigitalsolutions/mcp-ai-wpoos/blob/main/.agents/skills/design-performance-audit/SKILL.md",
+  "license": "Proprietary. See LICENSE.txt",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nvdigitalsolutions/mcp-ai-wpoos/blob/main/.agents/skills/design-performance-audit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Analyze GTmetrix (and PageSpeed) reports for WordPress sites and produce a prioritized optimization plan, a custom WPCode-ready PHP optimization snippet, and a self-contained HTML summary report. Covers PDF report extraction with pypdf, live-page cross-referencing, WordPress-specific fix mapping (Elementor, WooCommerce, Breeze, reCAPTCHA, Google-tag duplication, WebP conversion), and staging-test discipline. Use when asked to review GTmetrix reports, optimize page speed or Core Web Vitals, create a custom performance optimization snippet, or produce an optimization report for a WordPress site."
+}

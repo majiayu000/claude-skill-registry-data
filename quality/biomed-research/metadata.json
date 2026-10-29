@@ -1,0 +1,38 @@
+{
+  "name": "biomed-research",
+  "repo": "obousquet/obousquet.github.io",
+  "path": ".claude/skills/biomed-research/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/obousquet/obousquet.github.io",
+  "dir_name": "biomed-research",
+  "downloaded_at": "2026-10-29T05:26:15.348588Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review, validate",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "obousquet",
+  "source_url": "https://github.com/obousquet/obousquet.github.io/blob/main/.claude/skills/biomed-research/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/obousquet/obousquet.github.io/blob/main/.claude/skills/biomed-research/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Umbrella skill for biomedical and medicine research sessions. Load at the beginning of a session involving diseases, drugs, supplements, molecules, pathways, biomarkers, clinical trials, animal studies, in vitro experiments, case reports, longitudinal studies, or translational claims. Routes work to specialized skills for literature review, study appraisal, evidence synthesis, and clinical translation checks while emphasizing rigorous source quality, human clinical relevance, safety, and uncertainty."
+}

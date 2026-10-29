@@ -1,0 +1,37 @@
+{
+  "name": "padding-oracle",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/crypto/padding-oracle/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "padding-oracle",
+  "downloaded_at": "2026-10-29T05:04:55.593961Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: auth, crypto",
+    "score": 2,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "auth",
+      "crypto"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/crypto/padding-oracle/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/crypto/padding-oracle/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when you encounter CBC-mode ciphertext with distinguishable padding errors on an authorized test, CTF, or code review, and need to decrypt or forge messages without the key. Covers identifying the oracle (error messages, timing, behavior differences), byte-at-a-time decryption with a manual Python 3.12 workflow, CBC-R style encryption of chosen plaintexts, tooling with padbuster patterns and Burp Suite 2026.2, and analysis support with CyberChef 10.x and OpenSSL 3.x. Use when an application decrypts attacker-influenced CBC ciphertext and reveals whether padding was valid, or when the crypto-fundamentals skill flagged CBC with padding as the primitive."
+}

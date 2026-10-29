@@ -1,0 +1,38 @@
+{
+  "name": "lamindb",
+  "repo": "marnixGeerkens/rocketlauncher-claude-code",
+  "path": "components/skills/scientific/lamindb/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/marnixGeerkens/rocketlauncher-claude-code",
+  "dir_name": "lamindb-marnixgeerkens-rocketlauncher-claud",
+  "downloaded_at": "2026-10-29T04:50:29.087621Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, devops=3",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "marnixGeerkens",
+  "source_url": "https://github.com/marnixGeerkens/rocketlauncher-claude-code/blob/main/components/skills/scientific/lamindb/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/marnixGeerkens/rocketlauncher-claude-code/blob/main/components/skills/scientific/lamindb/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "This skill should be used when working with LaminDB, an open-source data framework for biology that makes data queryable, traceable, reproducible, and FAIR. Use when managing biological datasets (scRNA-seq, spatial, flow cytometry, etc.), tracking computational workflows, curating and validating data with biological ontologies, building data lakehouses, or ensuring data lineage and reproducibility in biological research. Covers data management, annotation, ontologies (genes, cell types, diseases, tissues), schema validation, integrations with workflow managers (Nextflow, Snakemake) and MLOps platforms (W&B, MLflow), and deployment strategies."
+}

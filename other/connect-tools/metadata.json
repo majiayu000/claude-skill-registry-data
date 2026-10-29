@@ -1,0 +1,37 @@
+{
+  "name": "connect-tools",
+  "repo": "namedtoaster/The-Last-Mile",
+  "path": "skills/connect-tools/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/namedtoaster/The-Last-Mile",
+  "dir_name": "connect-tools",
+  "downloaded_at": "2026-10-29T05:14:19.973861Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "analytics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "namedtoaster",
+  "source_url": "https://github.com/namedtoaster/The-Last-Mile/blob/main/skills/connect-tools/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/namedtoaster/The-Last-Mile/blob/main/skills/connect-tools/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Connect Claude to the services an app already uses (RevenueCat, PostHog, Sentry, Expo, Supabase, Stripe and others) through each vendor's official MCP server, so it can read real crashes, analytics, subscriptions and builds instead of guessing. Reads the project to see which services it uses, checks what is already connected, adds the missing ones with the right scope, and records them in the rules file. Use when the user says \"connect RevenueCat\", \"add the PostHog MCP\", \"what MCP servers should I add\", \"can Claude see my crashes\", during setup, or when a task needs data from a service that is not connected."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "mbg-voltage-reference",
+  "repo": "mthudaa/Microelectronic-Block-Generator",
+  "path": ".claude/skills/mbg-voltage-reference/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mthudaa/Microelectronic-Block-Generator",
+  "dir_name": "mbg-voltage-reference",
+  "downloaded_at": "2026-10-29T05:10:39.835396Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mthudaa",
+  "source_url": "https://github.com/mthudaa/Microelectronic-Block-Generator/blob/main/.claude/skills/mbg-voltage-reference/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mthudaa/Microelectronic-Block-Generator/blob/main/.claude/skills/mbg-voltage-reference/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Designs, characterises and lays out a voltage reference (bandgap with vertical PNPs and poly resistors, or MOS-only zero-TC) on gf180mcuD with the MBG tools \u2014 topology choice, first-cut sizing equations, the `mbg measure vref` recipe across temperature, supply, corners and IBIAS, and layout matching through placement hints. Use when the task is a voltage or current reference, a bandgap, a PTAT/CTAT generator or a VREF.md-style specification. Do not use it for amplifiers (use mbg-pex-aware-flow with `mbg measure ota`) or for verification of an existing GDS (use mbg-ic-verify)."
+}

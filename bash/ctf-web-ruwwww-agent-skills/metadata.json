@@ -1,0 +1,38 @@
+{
+  "name": "ctf-web",
+  "repo": "ruwwww/agent-skills",
+  "path": "hermes-skills/security/ctf-web/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/ruwwww/agent-skills",
+  "dir_name": "ctf-web-ruwwww-agent-skills",
+  "downloaded_at": "2026-10-29T06:15:07.647149Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ruwwww",
+  "source_url": "https://github.com/ruwwww/agent-skills/blob/main/hermes-skills/security/ctf-web/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ruwwww/agent-skills/blob/main/hermes-skills/security/ctf-web/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Analyze and exploit web application challenge surfaces."
+}

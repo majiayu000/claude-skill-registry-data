@@ -1,0 +1,36 @@
+{
+  "name": "melonjs-renderables",
+  "repo": "melonjs/melonJS",
+  "path": "packages/melonjs/skills/melonjs-renderables/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/melonjs/melonJS",
+  "dir_name": "melonjs-renderables",
+  "downloaded_at": "2026-10-29T04:56:35.480089Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category creative scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "design",
+    "runner_up_score": 1,
+    "signals": [
+      "writing"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "melonjs",
+  "source_url": "https://github.com/melonjs/melonJS/blob/master/packages/melonjs/skills/melonjs-renderables/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/melonjs/melonJS/blob/master/packages/melonjs/skills/melonjs-renderables/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when subclassing Renderable, writing a custom draw() method, handling pointer or click events on game objects, applying post effects and shaders, or controlling draw order. Covers the pos-relative draw contract, isKinematic and input, addPostEffect vs the deprecated shader property, and z-ordering. Triggers on: Tween, easing, animate, Renderable, extends Renderable, draw(, update(, isKinematic, pointerEvent, registerPointerEvent, onClick, addPostEffect, removePostEffect, ShaderEffect, addChild, z-order, anchorPoint, floating."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "scenario-unity-gameplay",
+  "repo": "ndai0454-gif/Game_thanhgiong",
+  "path": ".agents/skills/scenario-unity-gameplay/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ndai0454-gif/Game_thanhgiong",
+  "dir_name": "scenario-unity-gameplay",
+  "downloaded_at": "2026-10-29T05:16:42.924118Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, gaming=3",
+    "score": 3,
+    "runner_up": "gaming",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ndai0454-gif",
+  "source_url": "https://github.com/ndai0454-gif/Game_thanhgiong/blob/main/.agents/skills/scenario-unity-gameplay/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ndai0454-gif/Game_thanhgiong/blob/main/.agents/skills/scenario-unity-gameplay/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when building or debugging Unity gameplay systems: enemy AI that patrols, chases and attacks, NavMesh baking and agents (AI Navigation 2), feet sliding on agents, state machines or behavior trees, physics projectiles that tunnel, the physics spiral, layers and the collision matrix, CharacterController vs Rigidbody characters, object pooling, 'hundreds of enemies', DOTS, Burst or Jobs decisions, Netcode for GameObjects multiplayer, audio mixers, snapshots, volume sliders and 3D combat sounds."
+}

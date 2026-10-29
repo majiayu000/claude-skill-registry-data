@@ -1,0 +1,38 @@
+{
+  "name": "om-auto-review-pr",
+  "repo": "polo-blue/sds",
+  "path": ".claude/skills/om-auto-review-pr/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/polo-blue/sds",
+  "dir_name": "om-auto-review-pr-polo-blue-sds",
+  "downloaded_at": "2026-10-29T05:45:06.526618Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, automation, pipeline",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "automation",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polo-blue",
+  "source_url": "https://github.com/polo-blue/sds/blob/main/.claude/skills/om-auto-review-pr/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polo-blue/sds/blob/main/.claude/skills/om-auto-review-pr/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Review or re-review a PR by number in an isolated worktree. Runs the `om-code-review` skill \u2014 or, for spec-only design PRs, a specification review \u2014 submits approve/request-changes, manages pipeline labels. On changes-requested, the autofix loop (fix/test/validate/re-review until merge-ready) runs on the automation's own PRs or with --autofix; other authors' PRs get review + handoff only. Usage - /om-auto-review-pr <PR-number> [--autofix]"
+}

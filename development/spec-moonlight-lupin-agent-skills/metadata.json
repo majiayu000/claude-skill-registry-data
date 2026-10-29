@@ -1,0 +1,38 @@
+{
+  "name": "spec",
+  "repo": "moonlight-lupin/agent-skills",
+  "path": "plugins/dev-pipeline/skills/spec/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/moonlight-lupin/agent-skills",
+  "dir_name": "spec-moonlight-lupin-agent-skills",
+  "downloaded_at": "2026-10-29T05:07:49.107518Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "moonlight-lupin",
+  "source_url": "https://github.com/moonlight-lupin/agent-skills/blob/main/plugins/dev-pipeline/skills/spec/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/moonlight-lupin/agent-skills/blob/main/plugins/dev-pipeline/skills/spec/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when pinning intent before code \u2014 capture a spec (user stories, acceptance criteria, [NEEDS CLARIFICATION] markers), then plan the HOW (bite-sized tasks, blocking edges, gates) or slice tracer-bullet tickets. Triggers: 'write a spec', 'plan this', 'break this into tickets', 'slice this up', 'create tickets', 'what are the work units'."
+}

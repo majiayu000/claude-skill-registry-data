@@ -1,0 +1,38 @@
+{
+  "name": "see-it-work",
+  "repo": "namedtoaster/The-Last-Mile",
+  "path": "skills/see-it-work/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/namedtoaster/The-Last-Mile",
+  "dir_name": "see-it-work",
+  "downloaded_at": "2026-10-29T05:14:18.716941Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: platform, device, android",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "platform",
+      "device",
+      "android"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "namedtoaster",
+  "source_url": "https://github.com/namedtoaster/The-Last-Mile/blob/main/skills/see-it-work/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/namedtoaster/The-Last-Mile/blob/main/skills/see-it-work/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Prove a change to an Expo app or a website works by seeing it, not by trusting a passing test. Picks which layer proves this change (component test, seeded simulator screenshot, smoke case, release build smoke run, browser preview, end to end journey), runs it, and shows the evidence. Use after any UI, navigation, layout, purchase or deep link change, before saying something is fixed or done, and when setting up testing in a new app."
+}

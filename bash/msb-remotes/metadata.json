@@ -1,0 +1,37 @@
+{
+  "name": "msb-remotes",
+  "repo": "runoverlabs/sandbox-manager",
+  "path": ".agents/skills/msb-remotes/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/runoverlabs/sandbox-manager",
+  "dir_name": "msb-remotes",
+  "downloaded_at": "2026-10-29T06:14:23.984464Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, cli",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "runoverlabs",
+  "source_url": "https://github.com/runoverlabs/sandbox-manager/blob/main/.agents/skills/msb-remotes/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/runoverlabs/sandbox-manager/blob/main/.agents/skills/msb-remotes/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "msbctl on a remote machine: host_serve() and restricted_problem() deciding the verb, sandbox-name and exec-flag allowlist with a 126 refusal, host authorize and the restrict,pty forced command, MSB_RESTRICTED, host check and autostart install, [remotes.<name>] on the laptop, host:name recognised in main() after parsing and never by scanning argv, ssh_argv() with one shared ControlMaster per host, ls/status fan-out in threads with the STATE_DIR/remotes cache and stale rows, remote setup, probe, share-settings and key restriction, and add_on_remote(). Use when changing remote execution, widening the restricted allowlist, or when a remote host refuses or a lookup goes stale."
+}

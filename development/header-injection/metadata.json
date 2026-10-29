@@ -1,0 +1,37 @@
+{
+  "name": "header-injection",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/web/header-injection/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "header-injection",
+  "downloaded_at": "2026-10-29T05:04:53.696405Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, framework",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "framework"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/web/header-injection/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/web/header-injection/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when testing for HTTP header injection and response splitting on an authorized web assessment. Covers CRLF injection in reflected headers, cache poisoning via headers, log injection, and request smuggling adjacencies. Also use when user input lands in redirects, cookies, or custom response headers."
+}

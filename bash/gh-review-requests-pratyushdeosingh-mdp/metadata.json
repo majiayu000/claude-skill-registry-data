@@ -1,0 +1,38 @@
+{
+  "name": "gh-review-requests",
+  "repo": "pratyushdeosingh/mdp",
+  "path": ".agents/skills/gh-review-requests/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/pratyushdeosingh/mdp",
+  "dir_name": "gh-review-requests-pratyushdeosingh-mdp",
+  "downloaded_at": "2026-10-29T05:49:14.864118Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pratyushdeosingh",
+  "source_url": "https://github.com/pratyushdeosingh/mdp/blob/main/.agents/skills/gh-review-requests/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pratyushdeosingh/mdp/blob/main/.agents/skills/gh-review-requests/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Fetch unread GitHub notifications for open PRs where review is requested from a specified team or opened by a team member. Use when asked to \"find PRs I need to review\", \"show my review requests\", \"what needs my review\", \"fetch GitHub review requests\", or \"check team review queue\"."
+}

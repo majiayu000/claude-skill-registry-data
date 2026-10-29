@@ -1,0 +1,37 @@
+{
+  "name": "leak-check",
+  "repo": "sathyaNEU/real-world-data-extraction-conformation-etl-build-problems",
+  "path": ".claude/skills/leak-check/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sathyaNEU/real-world-data-extraction-conformation-etl-build-problems",
+  "dir_name": "leak-check",
+  "downloaded_at": "2026-10-29T06:18:37.330370Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sathyaNEU",
+  "source_url": "https://github.com/sathyaNEU/real-world-data-extraction-conformation-etl-build-problems/blob/main/.claude/skills/leak-check/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sathyaNEU/real-world-data-extraction-conformation-etl-build-problems/blob/main/.claude/skills/leak-check/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Check a built bundle for anything that hands the solver the answer or the author's intent: golden figures in a memo, the stump's vocabulary in a filed document, a sentence that announces the decisive step, a file name that names the trap, hidden sheets or tracked changes, toolchain signatures, a shipped artifact that ranks the candidates, dates after the setting, a prompt that fails the prompt gate. leak.py runs eleven mechanical sweeps and writes leak_check_report.md; the /leak-check command adds one isolated leak read that never solves the task. Stage 4 of the build pipeline, together with the duplicate check and before the determinism judge; leak.py again after any rebuild, the reader again only when a document or the prompt changed."
+}

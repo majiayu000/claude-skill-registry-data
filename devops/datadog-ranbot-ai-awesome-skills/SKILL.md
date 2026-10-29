@@ -1,0 +1,224 @@
+---
+name: datadog
+description: Implement Datadog monitoring and APM for infrastructure and applications. 
+category: AI & Agents
+source: antigravity
+tags: [python, javascript, node, api, ai, agent, template, image, security, docker]
+url: https://github.com/sickn33/antigravity-awesome-skills/tree/main/skills/datadog
+---
+
+
+# Datadog
+
+Monitor infrastructure and applications with Datadog's unified observability platform.
+
+## When to Use This Skill
+
+Use this skill when:
+- Implementing enterprise-grade monitoring
+- Setting up APM and distributed tracing
+- Creating unified dashboards for infrastructure and apps
+- Configuring intelligent alerting
+- Monitoring cloud infrastructure (AWS, Azure, GCP)
+
+## Prerequisites
+
+- Datadog account and API key
+- Agent installation access
+- Application code access for APM
+
+Confirm account/site, approved telemetry and cost/retention limits before enabling logs, process data or APM. Redact credentials, request bodies, user/order IDs and sensitive tags before egress; distribution metrics do not eliminate cardinality costs. Docker socket access is privileged even with a read-only bind. Use a pre-created scoped Secret with the chart's existing-secret setting rather than passing a real API key through --set/history/Helm release values. Pin chart/agent/tracer versions and validate their configuration schemas. Inline SDK fragments are partial: Python metrics needs time and the version-appropriate metric intake enum, Go needs a real request context/user ID, and tracer.configure parameters vary by ddtrace major. Verify metric names/units and no-data/zero-denominator behavior against actual instrumentation before activating monitors or external notifications.
+
+## Agent Installation
+
+### Linux
+
+```bash
+# Install agent
+curl -fL https://s3.amazonaws.com/dd-agent/scripts/install_script_agent7.sh -o /tmp/datadog-agent-install.sh
+# Review and pin the full installer before executing separately with protected credentials.
+
+# Or via package manager
+apt-get update && apt-get install datadog-agent
+
+# Configure API key
+echo "api_key: YOUR_API_KEY" >> /etc/datadog-agent/datadog.yaml
+
+# Start agent
+systemctl start datadog-agent
+systemctl enable datadog-agent
+```
+
+### Docker
+
+```yaml
+# docker-compose.yml
+version: '3.8'
+
+services:
+  datadog-agent:
+    image: gcr.io/datadoghq/agent:7
+    environment:
+      - DD_API_KEY=${DD_API_KEY}
+      - DD_SITE=datadoghq.com
+      - DD_LOGS_ENABLED=true
+      - DD_APM_ENABLED=true
+      - DD_PROCESS_AGENT_ENABLED=true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /proc/:/host/proc/:ro
+      - /sys/fs/cgroup/:/host/sys/fs/cgroup:ro
+    ports:
+      - "127.0.0.1:8126:8126"  # APM
+      - "127.0.0.1:8125:8125/udp"  # DogStatsD
+```
+
+### Kubernetes
+
+```bash
+# Using Helm
+helm repo add datadog https://helm.datadoghq.com
+
+helm install datadog datadog/datadog \
+  --set datadog.apiKey=${DD_API_KEY} \
+  --set datadog.site=datadoghq.com \
+  --set datadog.logs.enabled=true \
+  --set datadog.apm.portEnabled=true \
+  --set datadog.processAgent.enabled=true \
+  --namespace datadog \
+  --create-namespace
+```
+
+## Agent Configuration
+
+```yaml
+# /etc/datadog-agent/datadog.yaml
+api_key: YOUR_API_KEY
+site: datadoghq.com
+
+# Hostname
+hostname: myserver.example.com
+
+# Tags applied to all metrics
+tags:
+  - env:production
+  - service:myapp
+  - team:platform
+
+# Log collection
+logs_enabled: true
+
+# APM
+apm_config:
+  enabled: true
+  apm_dd_url: https://trace.agent.datadoghq.com
+
+# Process monitoring
+process_config:
+  enabled: true
+
+# Container monitoring
+container_collect_all: true
+docker_labels_as_tags:
+  app: service
+  environment: env
+```
+
+## Integration Configuration
+
+### MySQL
+
+```yaml
+# /etc/datadog-agent/conf.d/mysql.d/conf.yaml
+init_config:
+
+instances:
+  - host: localhost
+    port: 3306
+    username: datadog
+    password: <PASSWORD>
+    tags:
+      - env:production
+    options:
+      replication: true
+      extra_status_metrics: true
+```
+
+### PostgreSQL
+
+```yaml
+# /etc/datadog-agent/conf.d/postgres.d/conf.yaml
+init_config:
+
+instances:
+  - host: localhost
+    port: 5432
+    username: datadog
+    password: <PASSWORD>
+    dbname: mydb
+    collect_activity_metrics: true
+    collect_database_size_metrics: true
+```
+
+### NGINX
+
+```yaml
+# /etc/datadog-agent/conf.d/nginx.d/conf.yaml
+init_config:
+
+instances:
+  - nginx_status_url: http://localhost:80/nginx_status
+    tags:
+      - env:production
+```
+
+## Log Collection
+
+### File-Based Logs
+
+```yaml
+# /etc/datadog-agent/conf.d/myapp.d/conf.yaml
+logs:
+  - type: file
+    path: /var/log/myapp/*.log
+    service: myapp
+    source: python
+    sourcecategory: custom
+    tags:
+      - env:production
+
+  - type: file
+    path: /var/log/nginx/access.log
+    service: nginx
+    source: nginx
+    log_processing_rules:
+      - type: exclude_at_match
+        name: exclude_healthchecks
+        pattern: health_check
+```
+
+### Docker Logs
+
+```yaml
+# docker-compose.yml
+services:
+  myapp:
+    labels:
+      com.datadoghq.ad.logs: '[{"source": "python", "service": "myapp"}]'
+```
+
+### Kubernetes Logs
+
+```yaml
+# Pod annotation
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    ad.datadoghq.com/myapp.logs: |
+      [{
+        "source": "python",
+        "service": "myapp",
+        "log_processing_rules": [{
+          "type": "multi_line",
+          "name": "python_tra

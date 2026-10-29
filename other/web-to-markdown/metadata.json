@@ -1,0 +1,37 @@
+{
+  "name": "web-to-markdown",
+  "repo": "manu14357/zskills",
+  "path": "skills/web-to-markdown/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/manu14357/zskills",
+  "dir_name": "web-to-markdown",
+  "downloaded_at": "2026-10-29T04:47:39.719551Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "manu14357",
+  "source_url": "https://github.com/manu14357/zskills/blob/main/skills/web-to-markdown/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/manu14357/zskills/blob/main/skills/web-to-markdown/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use ONLY when the user explicitly says: 'use the skill web-to-markdown ...' (or 'use a skill web-to-markdown ...'). Converts webpage URLs to clean Markdown by calling the local web2md CLI (Puppeteer + Readability), suitable for JS-rendered pages."
+}

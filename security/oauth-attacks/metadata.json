@@ -1,0 +1,37 @@
+{
+  "name": "oauth-attacks",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/web/oauth-attacks/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "oauth-attacks",
+  "downloaded_at": "2026-10-29T05:04:47.813785Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: auth, pentest",
+    "score": 2,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "auth",
+      "pentest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/web/oauth-attacks/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/web/oauth-attacks/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when testing OAuth 2.0 and OpenID Connect logins on an authorized engagement. Covers mapping the authorization flow, redirect_uri manipulation and open redirect chains, authorization code interception and replay, missing or weak state parameters, PKCE downgrade, implicit flow token leakage, client secret exposure, and scope and audience confusion. Use when an app offers login with Google, GitHub, Microsoft, or a custom identity provider and you need to steal accounts or escalate through the SSO handshake."
+}

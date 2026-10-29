@@ -1,0 +1,37 @@
+{
+  "name": "threat-intel",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/osint/threat-intel/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "threat-intel",
+  "downloaded_at": "2026-10-29T05:04:48.165871Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: marketing=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "content",
+      "campaign"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/osint/threat-intel/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/osint/threat-intel/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when working with cyber threat intelligence on a defensive team: collecting IOCs, evaluating feeds, running a MISP instance, writing STIX/TAXII sharing packages, scoring and aging indicators, and turning intel into detections and blocks. Use when the SOC needs to know which threat actors and campaigns matter to the organization, when deciding whether to block an indicator, or when sharing intel with peers under TLP rules."
+}

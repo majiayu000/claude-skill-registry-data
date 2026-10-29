@@ -1,0 +1,36 @@
+{
+  "name": "statechart",
+  "repo": "michael-denyer/pstack-claude",
+  "path": "plugins/pstack/skills/statechart/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/michael-denyer/pstack-claude",
+  "dir_name": "statechart-michael-denyer-pstack-claude",
+  "downloaded_at": "2026-10-29T04:59:32.000032Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "michael-denyer",
+  "source_url": "https://github.com/michael-denyer/pstack-claude/blob/main/plugins/pstack/skills/statechart/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/michael-denyer/pstack-claude/blob/main/plugins/pstack/skills/statechart/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Check a TLA+ model of a system that moves between states, such as a product flow, a protocol, or a service, and draw it as a Mermaid statechart. The report gives the shortest path to each state that breaks a rule. Use for /statechart, or to show a bug as a path through states."
+}

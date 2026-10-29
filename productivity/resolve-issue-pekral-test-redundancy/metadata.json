@@ -1,0 +1,38 @@
+{
+  "name": "resolve-issue",
+  "repo": "pekral/test-redundancy",
+  "path": ".claude/skills/resolve-issue/SKILL.md",
+  "github_branch": "master",
+  "category": "productivity",
+  "source": "github.com/pekral/test-redundancy",
+  "dir_name": "resolve-issue-pekral-test-redundancy",
+  "downloaded_at": "2026-10-29T05:39:54.884783Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, memory",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pekral",
+  "source_url": "https://github.com/pekral/test-redundancy/blob/master/.claude/skills/resolve-issue/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pekral/test-redundancy/blob/master/.claude/skills/resolve-issue/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when resolving an issue from any supported tracker (GitHub, JIRA, Bugsnag). Detects the source automatically from the provided link or ID, implements a safe fix or feature, validates with tests, and creates a pull request."
+}

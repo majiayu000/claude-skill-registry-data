@@ -1,0 +1,39 @@
+{
+  "name": "dfir-timeline",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/soc/dfir-timeline/SKILL.md",
+  "github_branch": "main",
+  "category": "forensics",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "dfir-timeline",
+  "downloaded_at": "2026-10-29T05:04:46.452514Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "forensics",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for forensics: forensic, forensics, incident, evidence",
+    "score": 4,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "forensic",
+      "forensics",
+      "incident",
+      "evidence"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/soc/dfir-timeline/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/soc/dfir-timeline/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when building a forensic timeline for an authorized investigation. Covers evidence source collection, timestamp normalization, super timeline creation with Plaso, and analyzing the merged timeline for attacker activity. Also use when multiple evidence sources need one coherent story."
+}

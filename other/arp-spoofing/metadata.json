@@ -1,0 +1,36 @@
+{
+  "name": "arp-spoofing",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/network/arp-spoofing/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "arp-spoofing",
+  "downloaded_at": "2026-10-29T05:04:55.085132Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category bash scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "bash"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/network/arp-spoofing/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/network/arp-spoofing/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when performing authorized man-in-the-middle testing on a local network segment. Covers how ARP works and why it trusts anyone, enabling IP forwarding, poisoning a target and gateway with arpspoof or bettercap, capturing and filtering traffic with Wireshark and tshark, spotting cleartext credentials and session tokens, and restoring the network cleanly. Use when the scope allows MITM on a lab or client LAN and you need to prove cleartext protocols or session exposure."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "melonjs-loading-assets",
+  "repo": "melonjs/melonJS",
+  "path": "packages/melonjs/skills/melonjs-loading-assets/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/melonjs/melonJS",
+  "dir_name": "melonjs-loading-assets",
+  "downloaded_at": "2026-10-29T04:56:36.406426Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: build, compile",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "melonjs",
+  "source_url": "https://github.com/melonjs/melonJS/blob/master/packages/melonjs/skills/melonjs-loading-assets/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/melonjs/melonJS/blob/master/packages/melonjs/skills/melonjs-loading-assets/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill for loading and managing game assets in melonJS \u2014 the resource descriptor format, the full asset type list, preload versus load, retrieving loaded assets, base URLs and cross-origin settings, and the loading screen. Triggers on: loader, loader.preload, loader.load, resources, getImage, getJSON, getTMX, getGLTF, getVideo, getFont, setBaseURL, setOptions, crossOrigin, withCredentials, credentials, cookies, authenticated assets, CORS, asset, preload, LOADER_COMPLETE, loading screen, unload, setParser, custom asset type, generated texture, procedural texture."
+}

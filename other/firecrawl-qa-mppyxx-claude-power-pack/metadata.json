@@ -1,0 +1,37 @@
+{
+  "name": "firecrawl-qa",
+  "repo": "mppyxx/claude-power-pack",
+  "path": "skills/firecrawl-qa/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mppyxx/claude-power-pack",
+  "dir_name": "firecrawl-qa-mppyxx-claude-power-pack",
+  "downloaded_at": "2026-10-29T05:09:14.059998Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mppyxx",
+  "source_url": "https://github.com/mppyxx/claude-power-pack/blob/main/skills/firecrawl-qa/SKILL.md",
+  "license": "ISC",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mppyxx/claude-power-pack/blob/main/skills/firecrawl-qa/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "QA test a live website with Firecrawl browser and scrape evidence. Use when the user wants exploratory QA, form testing, navigation/link checks, responsive checks, performance observations, bug reports, or a pre-launch quality review."
+}

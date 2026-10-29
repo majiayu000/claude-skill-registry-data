@@ -1,0 +1,37 @@
+{
+  "name": "wireless-wpa",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/network/wireless-wpa/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "wireless-wpa",
+  "downloaded_at": "2026-10-29T05:04:53.155536Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: security=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/network/wireless-wpa/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/network/wireless-wpa/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when testing Wi-Fi security on authorized engagements with written permission covering the wireless network. Covers putting adapters into monitor mode, surveying access points and clients with airodump-ng, capturing WPA and WPA2 four-way handshakes with targeted deauthentication, cracking captures with aircrack-ng and hashcat, and the clientless PMKID attack. Use when the scope names an SSID or office wireless, or when you need to prove a weak pre-shared key before a wired test begins."
+}

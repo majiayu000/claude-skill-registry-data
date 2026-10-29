@@ -1,0 +1,38 @@
+{
+  "name": "web-sqli",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/web/web-sqli/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "web-sqli",
+  "downloaded_at": "2026-10-29T05:04:44.208974Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/web/web-sqli/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/web/web-sqli/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when testing a web application for SQL injection on an authorized engagement. Covers detection and confirmation probes, UNION-based extraction, boolean and time-based blind techniques, error-based extraction, second-order injection, and sqlmap 1.9.2 automation plus full manual fallback when automation is blocked. Use when login forms, search boxes, URL parameters, cookies, or API inputs look injectable, or when a scan flags a possible database error."
+}

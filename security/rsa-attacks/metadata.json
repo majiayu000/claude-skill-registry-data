@@ -1,0 +1,38 @@
+{
+  "name": "rsa-attacks",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/crypto/rsa-attacks/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "rsa-attacks",
+  "downloaded_at": "2026-10-29T05:04:50.518503Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: auth, crypto, pentest",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "auth",
+      "crypto",
+      "pentest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/crypto/rsa-attacks/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/crypto/rsa-attacks/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when you face an RSA challenge or misconfigured RSA on an authorized test, CTF, or code review and need an operator workflow for the classic attacks. Covers parameter sanity checks (key size, public exponent), Hastad broadcast attack on small e, common modulus attack, batch GCD for shared prime factors, Wiener attack on small private exponents, textbook RSA without padding, and automation with RsaCtfTool 1.7.x plus manual OpenSSL 3.x and SageMath 10.x recovery. Use when you have RSA public keys, ciphertexts, or parameters that look weak, or when the crypto-fundamentals skill identified RSA as the primitive."
+}

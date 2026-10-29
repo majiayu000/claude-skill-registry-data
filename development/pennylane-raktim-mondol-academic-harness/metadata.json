@@ -1,0 +1,40 @@
+{
+  "name": "pennylane",
+  "repo": "raktim-mondol/academic-harness",
+  "path": "skills/pennylane/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/raktim-mondol/academic-harness",
+  "dir_name": "pennylane-raktim-mondol-academic-harness",
+  "downloaded_at": "2026-10-29T05:59:57.409491Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, programming, framework, build, debug",
+    "score": 5,
+    "runner_up": "ai-ml",
+    "runner_up_score": 4,
+    "signals": [
+      "dev",
+      "programming",
+      "framework",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "raktim-mondol",
+  "source_url": "https://github.com/raktim-mondol/academic-harness/blob/main/skills/pennylane/SKILL.md",
+  "license": "Apache-2.0 license",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/raktim-mondol/academic-harness/blob/main/skills/pennylane/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Hardware-agnostic quantum ML framework with automatic differentiation. Use when training quantum circuits via gradients, building hybrid quantum-classical models, or needing device portability across IBM/Google/Rigetti/IonQ. Best for variational algorithms (VQE, QAOA), quantum neural networks, and integration with PyTorch/JAX/TensorFlow. For hardware-specific optimizations use qiskit (IBM) or cirq (Google); for open quantum systems use qutip."
+}

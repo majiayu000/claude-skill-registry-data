@@ -1,0 +1,37 @@
+{
+  "name": "ai-slop-preflight",
+  "repo": "obousquet/obousquet.github.io",
+  "path": ".claude/skills/ai-slop-preflight/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/obousquet/obousquet.github.io",
+  "dir_name": "ai-slop-preflight",
+  "downloaded_at": "2026-10-29T05:26:15.896159Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "obousquet",
+  "source_url": "https://github.com/obousquet/obousquet.github.io/blob/main/.claude/skills/ai-slop-preflight/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/obousquet/obousquet.github.io/blob/main/.claude/skills/ai-slop-preflight/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Audit LaTeX manuscripts before arXiv or journal submission for unchecked AI artifacts, hallucinated or unsupported citations, conversation residue, AI-flavored prose, missing disclosure, provenance gaps, and compliance with current publisher/community expectations for AI-assisted scientific writing."
+}

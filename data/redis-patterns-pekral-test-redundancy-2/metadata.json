@@ -1,0 +1,38 @@
+{
+  "name": "redis-patterns",
+  "repo": "pekral/test-redundancy",
+  "path": ".claude/skills/redis-patterns/SKILL.md",
+  "github_branch": "master",
+  "category": "data",
+  "source": "github.com/pekral/test-redundancy",
+  "dir_name": "redis-patterns-pekral-test-redundancy-2",
+  "downloaded_at": "2026-10-29T05:39:56.406510Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, pipeline",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pekral",
+  "source_url": "https://github.com/pekral/test-redundancy/blob/master/.claude/skills/redis-patterns/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pekral/test-redundancy/blob/master/.claude/skills/redis-patterns/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when using Redis in a Laravel app \u2014 caching strategies, atomic/distributed locks, rate limiting, stampede protection, pub/sub, pipelines, and key/TTL design beyond raw query tuning."
+}

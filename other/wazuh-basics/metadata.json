@@ -1,0 +1,38 @@
+{
+  "name": "wazuh-basics",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/soc/wazuh-basics/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "wazuh-basics",
+  "downloaded_at": "2026-10-29T05:04:45.521342Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=3, forensics=3",
+    "score": 3,
+    "runner_up": "forensics",
+    "runner_up_score": 3,
+    "signals": [
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/soc/wazuh-basics/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/soc/wazuh-basics/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when deploying or operating Wazuh for host-based intrusion detection on infrastructure you are authorized to defend. Covers manager and agent architecture, agent enrollment, file integrity monitoring, security configuration assessment, custom rules and decoders, vulnerability detection, active response, and agent health monitoring. Use when the team needs EDR-lite visibility on servers and workstations, when tuning noisy Wazuh rules, or when onboarding new hosts to the Wazuh fleet."
+}

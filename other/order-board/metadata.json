@@ -1,0 +1,37 @@
+{
+  "name": "order-board",
+  "repo": "malkholy/Sila",
+  "path": ".claude/skills/order-board/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/malkholy/Sila",
+  "dir_name": "order-board",
+  "downloaded_at": "2026-10-29T04:47:00.214875Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "malkholy",
+  "source_url": "https://github.com/malkholy/Sila/blob/main/.claude/skills/order-board/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/malkholy/Sila/blob/main/.claude/skills/order-board/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "The \"Order Board\" page design (first built in PlusV1 for Customer Order) -- a Table view plus grouped views (By Customer / By Vendor / By Status ...) switched inside a top filter panel, page-driven checklist filters, an entity drawer, a \"party\" drawer of open records, and per-record print with a stacked Preview panel. Load when the user says \"Order Board\", \"same design as Customer Order (PlusV1)\", or asks to give a page that design."
+}

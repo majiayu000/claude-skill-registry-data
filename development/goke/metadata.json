@@ -1,0 +1,38 @@
+{
+  "name": "goke",
+  "repo": "remorses/opencode-config",
+  "path": "synced-skills/goke/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/remorses/opencode-config",
+  "dir_name": "goke",
+  "downloaded_at": "2026-10-29T06:04:49.933205Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "remorses",
+  "source_url": "https://github.com/remorses/opencode-config/blob/main/synced-skills/goke/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/remorses/opencode-config/blob/main/synced-skills/goke/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "goke is a zero-dependency, type-safe CLI framework for TypeScript. CAC replacement with Standard Schema support (Zod, Valibot, ArkType). Use goke when building CLI tools \u2014 it handles commands, subcommands, options, type coercion, help generation, and more. Schema-based options give you automatic type inference, coercion from strings, and help text generation. Pair with `@goke/mcp` to generate CLI commands automatically from an MCP server. ALWAYS read this skill when a repo uses goke for its CLI."
+}

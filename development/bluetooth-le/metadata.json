@@ -1,0 +1,37 @@
+{
+  "name": "bluetooth-le",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/network/bluetooth-le/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "bluetooth-le",
+  "downloaded_at": "2026-10-29T05:04:53.505559Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, build",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/network/bluetooth-le/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/network/bluetooth-le/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when assessing Bluetooth Low Energy devices on authorized engagements, such as beacons, locks, wearables, or IoT sensors in scope. Covers enabling and verifying the adapter with BlueZ, passive advertisement sniffing, active scanning, connecting to GATT servers, enumerating services and characteristics, reading and writing values safely, and capturing traffic for Wireshark analysis. Use when the scope includes BLE peripherals and you need to map their attack surface before protocol or firmware testing."
+}

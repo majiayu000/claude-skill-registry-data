@@ -1,0 +1,37 @@
+{
+  "name": "blog-emit",
+  "repo": "open-lakehouse/docs-factory",
+  "path": ".claude/skills/blog-emit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/open-lakehouse/docs-factory",
+  "dir_name": "blog-emit",
+  "downloaded_at": "2026-10-29T05:32:23.711466Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "open-lakehouse",
+  "source_url": "https://github.com/open-lakehouse/docs-factory/blob/main/.claude/skills/blog-emit/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/open-lakehouse/docs-factory/blob/main/.claude/skills/blog-emit/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Emit a canonical blog draft (blogs/<slug>/index.md) to a downstream target. Runs\nthe deterministic emitter core (resolves file= snippets, renders\njourneys/callouts/diagrams per the target), then delivers the result and\nrecords the delivery for idempotent re-emits. Targets:\n  - unitycatalog \u2014 a rich native Astro MDX post in the sibling unitycatalog-website\n    repo (interactive LikeC4, <Journey> timelines, :::callouts).\n  - delta \u2014 a rich native Astro MDX post in the sibling delta-io/website repo\n    (../website), same rich rendering.\nA post may list several targets to cross-post to; the first is the primary and the\nothers carry a canonical link to it.\nUse when the user wants to emit / export / cross-publish a draft to unitycatalog.io\nor delta.io, or to refresh an already-delivered post there."
+}

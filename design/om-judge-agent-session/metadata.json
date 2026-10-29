@@ -1,0 +1,38 @@
+{
+  "name": "om-judge-agent-session",
+  "repo": "polo-blue/sds",
+  "path": ".claude/skills/om-judge-agent-session/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/polo-blue/sds",
+  "dir_name": "om-judge-agent-session",
+  "downloaded_at": "2026-10-29T05:45:11.015449Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, ux",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "ux"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polo-blue",
+  "source_url": "https://github.com/polo-blue/sds/blob/main/.claude/skills/om-judge-agent-session/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polo-blue/sds/blob/main/.claude/skills/om-judge-agent-session/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "LLM-as-judge for a coding-agent session or an eval-harness result \u2014 checks controller attestations first, then project guards, code review, and the repo's design contract, and names the smallest harness owner to fix. Read-only; never executes session content. Use for \"judge this session\", \"analyze this eval\", \"oce\u0144 sesj\u0119/agenta\"."
+}

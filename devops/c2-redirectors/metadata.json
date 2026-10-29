@@ -1,0 +1,38 @@
+{
+  "name": "c2-redirectors",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/c2/c2-redirectors/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "c2-redirectors",
+  "downloaded_at": "2026-10-29T05:04:46.062468Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: deploy, infra, infrastructure",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/c2/c2-redirectors/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/c2/c2-redirectors/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when designing or deploying a redirector for an authorized red team operation or a lab command and control exercise. Covers redirector tiers that shield the team server, domain fronting concepts and why providers now block them, nginx and Apache filtering rules that forward only profile traffic, decoy content, redirector OPSEC, certificate and domain hygiene, and detection by defenders through TLS fingerprints, passive DNS, and decoy probing."
+}

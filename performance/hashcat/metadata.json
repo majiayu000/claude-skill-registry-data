@@ -1,0 +1,37 @@
+{
+  "name": "hashcat",
+  "repo": "meowdiocre/meowpi",
+  "path": "skills/hashcat/SKILL.md",
+  "github_branch": "main",
+  "category": "performance",
+  "source": "github.com/meowdiocre/meowpi",
+  "dir_name": "hashcat",
+  "downloaded_at": "2026-10-29T04:57:35.689890Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "performance",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for performance: speed, benchmark",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 1,
+    "signals": [
+      "speed",
+      "benchmark"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "meowdiocre",
+  "source_url": "https://github.com/meowdiocre/meowpi/blob/main/skills/hashcat/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/meowdiocre/meowpi/blob/main/skills/hashcat/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Crack hashes offline with hashcat: choose the right -m mode, run dictionary, rule, mask and hybrid attacks, and manage the potfile. Use when NetNTLM, Kerberos or application hashes have been captured and need cracking before being reported as uncracked. Not for on-host credential dumping (use netexec) and not for protocol capture (use responder)."
+}

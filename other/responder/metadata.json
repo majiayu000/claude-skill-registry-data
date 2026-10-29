@@ -1,0 +1,36 @@
+{
+  "name": "responder",
+  "repo": "meowdiocre/meowpi",
+  "path": "skills/responder/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/meowdiocre/meowpi",
+  "dir_name": "responder",
+  "downloaded_at": "2026-10-29T04:57:37.443128Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-llm scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "meowdiocre",
+  "source_url": "https://github.com/meowdiocre/meowpi/blob/main/skills/responder/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/meowdiocre/meowpi/blob/main/skills/responder/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Poison LLMNR, NBT-NS and mDNS plus rogue SMB/HTTP/LDAP/MSSQL servers to capture NetNTLM hashes, cleartext logons and WPAD proxy auth. Use when you have a foothold on a LAN segment and need credentials from name-resolution fallback traffic. Not for IPv6-only DNS takeover (use mitm6) and not for relaying, which belongs to ntlmrelayx."
+}

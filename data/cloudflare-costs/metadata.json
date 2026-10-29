@@ -1,0 +1,38 @@
+{
+  "name": "cloudflare-costs",
+  "repo": "remorses/opencode-config",
+  "path": "skills/cloudflare-costs/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/remorses/opencode-config",
+  "dir_name": "cloudflare-costs",
+  "downloaded_at": "2026-10-29T06:04:52.630727Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, analytics, database",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "analytics",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "remorses",
+  "source_url": "https://github.com/remorses/opencode-config/blob/main/skills/cloudflare-costs/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/remorses/opencode-config/blob/main/skills/cloudflare-costs/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Estimate Cloudflare spend per project (Worker) for the current month: Workers requests and CPU, Durable Objects requests and duration, KV, R2, D1 and Workers AI. Reads usage from the GraphQL Analytics API and applies list prices, so it works when account credits make the invoice $0. Use when asked what Cloudflare costs, which project spends the most, monthly spend reports, billed usage per project, or to check a cost fix (DO hibernation, KV writes) after deploy."
+}

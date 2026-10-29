@@ -1,0 +1,38 @@
+{
+  "name": "auto-interactive-testing",
+  "repo": "pekral/test-redundancy",
+  "path": ".claude/skills/auto-interactive-testing/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/pekral/test-redundancy",
+  "dir_name": "auto-interactive-testing",
+  "downloaded_at": "2026-10-29T05:40:16.397130Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pekral",
+  "source_url": "https://github.com/pekral/test-redundancy/blob/master/.claude/skills/auto-interactive-testing/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pekral/test-redundancy/blob/master/.claude/skills/auto-interactive-testing/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when every open GitHub issue labelled interactive-testing must be worked through as one unattended batch. Fixes and merges the defects the issues already link, runs each issue's scenarios with the interactive-testing skill on the freshly pulled default branch, resolves and merges every new defect it finds, re-tests, cleans up its test data, then posts the verdicts on each issue and closes it when every scenario passed."
+}

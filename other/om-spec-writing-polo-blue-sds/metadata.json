@@ -1,0 +1,37 @@
+{
+  "name": "om-spec-writing",
+  "repo": "polo-blue/sds",
+  "path": ".claude/skills/om-spec-writing/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/polo-blue/sds",
+  "dir_name": "om-spec-writing-polo-blue-sds",
+  "downloaded_at": "2026-10-29T05:45:05.052042Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polo-blue",
+  "source_url": "https://github.com/polo-blue/sds/blob/main/.claude/skills/om-spec-writing/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polo-blue/sds/blob/main/.claude/skills/om-spec-writing/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write and review feature specifications to staff-engineer standards. Skeleton-first drafting with a hard Open Questions gate, research against market leaders, an implementation breakdown into phases and steps that feeds om-auto-create-pr, and a severity-ranked architectural review format. Use when starting a new spec or reviewing one."
+}

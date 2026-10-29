@@ -1,0 +1,38 @@
+{
+  "name": "experiment-scaffold",
+  "repo": "prateek/dotfiles",
+  "path": "agent-marketplace/src/experimental/skills/experiment-scaffold/SKILL.md",
+  "github_branch": "master",
+  "category": "documents",
+  "source": "github.com/prateek/dotfiles",
+  "dir_name": "experiment-scaffold",
+  "downloaded_at": "2026-10-29T05:47:22.724877Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, markdown",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "prateek",
+  "source_url": "https://github.com/prateek/dotfiles/blob/master/agent-marketplace/src/experimental/skills/experiment-scaffold/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/prateek/dotfiles/blob/master/agent-marketplace/src/experimental/skills/experiment-scaffold/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Create a new experiment workspace directory: initialize git, write an AGENTS.md goal doc, and create references/ with index.md + notes/links markdown plus local repo copies under references/repos (gitignored). Prefer canonical GRM clones when available, otherwise seed from a shared experiment cache. Use when the user asks to spin up a scratch/research/experiment folder and provides repos, links, and/or notes to collect."
+}

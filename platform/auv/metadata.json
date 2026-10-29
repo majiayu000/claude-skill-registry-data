@@ -1,0 +1,37 @@
+{
+  "name": "auv",
+  "repo": "moeru-ai/auv",
+  "path": "skills/auv/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/moeru-ai/auv",
+  "dir_name": "auv",
+  "downloaded_at": "2026-10-29T05:06:10.458722Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: platform, device",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "platform",
+      "device"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "moeru-ai",
+  "source_url": "https://github.com/moeru-ai/auv/blob/main/skills/auv/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/moeru-ai/auv/blob/main/skills/auv/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Automate desktop applications with AUV. Use for screenshots, OCR, mouse and keyboard input, reusable GUI workflows, or operations on a paired AUV Device."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "iran-news",
+  "repo": "sepehr071/iran-mcp",
+  "path": "plugins/iran-news/skills/iran-news/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/sepehr071/iran-mcp",
+  "dir_name": "iran-news-sepehr071-iran-mcp",
+  "downloaded_at": "2026-10-29T06:23:22.504180Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, crypto",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "crypto"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sepehr071",
+  "source_url": "https://github.com/sepehr071/iran-mcp/blob/main/plugins/iran-news/skills/iran-news/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sepehr071/iran-mcp/blob/main/plugins/iran-news/skills/iran-news/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Unofficial read-only Persian news RSS: Mehr, Tabnak, Entekhab, Zoomit, Varzesh3, more. Use when the user asks about Iran News RSS (mehrnews.com) or wants news headlines or full news articles in Iran."
+}

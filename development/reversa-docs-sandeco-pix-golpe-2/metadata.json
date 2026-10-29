@@ -1,0 +1,38 @@
+{
+  "name": "reversa-docs",
+  "repo": "sandeco/pix-golpe",
+  "path": ".claude/skills/reversa-docs/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/sandeco/pix-golpe",
+  "dir_name": "reversa-docs-sandeco-pix-golpe-2",
+  "downloaded_at": "2026-10-29T06:17:23.798751Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, framework",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "framework"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sandeco",
+  "source_url": "https://github.com/sandeco/pix-golpe/blob/main/.claude/skills/reversa-docs/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sandeco/pix-golpe/blob/main/.claude/skills/reversa-docs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Orquestrador do Time Reversa Docs. Gera um mini-site HTML autocontido em _reversa_docs/ com arquitetura 3D, dashboards, gloss\u00e1rio, deck e p\u00e1ginas por feature, a partir do conhecimento j\u00e1 extra\u00eddo pelo core do Reversa. Ative com /reversa-docs, reversa-docs, gerar documenta\u00e7\u00e3o visual, mini-site do projeto, documenta\u00e7\u00e3o interativa."
+}

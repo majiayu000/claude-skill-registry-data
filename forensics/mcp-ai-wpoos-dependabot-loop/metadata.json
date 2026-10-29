@@ -1,0 +1,38 @@
+{
+  "name": "mcp-ai-wpoos-dependabot-loop",
+  "repo": "nvdigitalsolutions/mcp-ai-wpoos",
+  "path": ".agents/skills/mcp-ai-wpoos-dependabot-loop/SKILL.md",
+  "github_branch": "main",
+  "category": "forensics",
+  "source": "github.com/nvdigitalsolutions/mcp-ai-wpoos",
+  "dir_name": "mcp-ai-wpoos-dependabot-loop",
+  "downloaded_at": "2026-10-29T05:25:42.710144Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "forensics",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for forensics: forensic, forensics, triage",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "forensic",
+      "forensics",
+      "triage"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nvdigitalsolutions",
+  "source_url": "https://github.com/nvdigitalsolutions/mcp-ai-wpoos/blob/main/.agents/skills/mcp-ai-wpoos-dependabot-loop/SKILL.md",
+  "license": "Proprietary. See LICENSE.txt",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nvdigitalsolutions/mcp-ai-wpoos/blob/main/.agents/skills/mcp-ai-wpoos-dependabot-loop/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Operational guide for the NV oOS Dependabot alert triage-and-remediation loop: querying open alerts via gh api, separating stale from genuinely vulnerable lockfile entries (default-branch forensics), deciding between safe in-major override bumps, scoped overrides, or deferred major migrations (npm pack signature diffing), regenerating the 13-lockfile tree, rebuilding the tracked JS bundles that lockfile movement stales, dismissing alerts with the right reason, GitHub issue housekeeping, and triaging the known CI failure modes. Use when asked to fix dependabot alerts, close out dependabot issues, bump vulnerable npm packages, or resume a dependabot session."
+}

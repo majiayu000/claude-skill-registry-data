@@ -1,0 +1,37 @@
+{
+  "name": "reversa-docs-mapper",
+  "repo": "sandeco/pix-golpe",
+  "path": ".claude/skills/reversa-docs-mapper/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sandeco/pix-golpe",
+  "dir_name": "reversa-docs-mapper-sandeco-pix-golpe",
+  "downloaded_at": "2026-10-29T06:17:41.911050Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sandeco",
+  "source_url": "https://github.com/sandeco/pix-golpe/blob/main/.claude/skills/reversa-docs-mapper/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sandeco/pix-golpe/blob/main/.claude/skills/reversa-docs-mapper/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Mapeador do Time Reversa Docs. Produz as p\u00e1ginas de estrutura espacial do mini-site: arquitetura 3D (Code City via Three.js), module map 2D (force-directed via D3), e topologia side-by-side (legado vs moderno vs h\u00edbrido)."
+}

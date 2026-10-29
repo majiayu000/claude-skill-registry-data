@@ -1,0 +1,38 @@
+{
+  "name": "latency-critical-systems",
+  "repo": "pekral/test-redundancy",
+  "path": ".agents/skills/latency-critical-systems/SKILL.md",
+  "github_branch": "master",
+  "category": "performance",
+  "source": "github.com/pekral/test-redundancy",
+  "dir_name": "latency-critical-systems",
+  "downloaded_at": "2026-10-29T05:40:16.745640Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "performance",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for performance: performance, latency, speed",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "performance",
+      "latency",
+      "speed"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pekral",
+  "source_url": "https://github.com/pekral/test-redundancy/blob/master/.agents/skills/latency-critical-systems/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pekral/test-redundancy/blob/master/.agents/skills/latency-critical-systems/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when working on latency-sensitive Laravel paths \u2014 realtime dashboards, streaming, queues, caches, or execution gateways \u2014 where p95 latency and data freshness matter."
+}

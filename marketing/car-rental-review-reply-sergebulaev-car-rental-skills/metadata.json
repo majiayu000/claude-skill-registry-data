@@ -1,0 +1,37 @@
+{
+  "name": "car-rental-review-reply",
+  "repo": "sergebulaev/car-rental-skills",
+  "path": "skills/car-rental-review-reply/SKILL.md",
+  "github_branch": "main",
+  "category": "marketing",
+  "source": "github.com/sergebulaev/car-rental-skills",
+  "dir_name": "car-rental-review-reply-sergebulaev-car-rental-skills",
+  "downloaded_at": "2026-10-29T06:23:49.904601Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "marketing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for marketing: content, social",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "content",
+      "social"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sergebulaev",
+  "source_url": "https://github.com/sergebulaev/car-rental-skills/blob/main/skills/car-rental-review-reply/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sergebulaev/car-rental-skills/blob/main/skills/car-rental-review-reply/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reply to car rental customer reviews on Google, Yelp, Turo and Facebook: thank-you replies that add a booking reason, calm public answers to deposit, damage-charge and late-delivery complaints, plus a private follow-up message and a fix note for the team. Triggers on \"reply to this review\", \"bad google review about our deposit\", \"respond to 1 star\". Not for damage claim letters (use car-rental-damage-inspection)."
+}

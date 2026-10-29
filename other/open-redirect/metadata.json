@@ -1,0 +1,37 @@
+{
+  "name": "open-redirect",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/web/open-redirect/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "open-redirect",
+  "downloaded_at": "2026-10-29T05:04:47.991450Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/web/open-redirect/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/web/open-redirect/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when testing for unvalidated redirects and forwards on an authorized engagement. Covers finding redirect parameters (next, returnUrl, redirect_uri, continue), payload bypasses for domain allowlists (double slashes, backslashes, encoded dots, @ tricks, subdomain tricks, parameter pollution), JavaScript and meta refresh redirects, and OAuth redirect_uri abuse leading to authorization code and token theft. Use when login flows, logout links, or error pages redirect to user-controlled URLs, or when phishing impact needs proof."
+}

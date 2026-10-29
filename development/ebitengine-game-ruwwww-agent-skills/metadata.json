@@ -1,0 +1,38 @@
+{
+  "name": "ebitengine-game",
+  "repo": "ruwwww/agent-skills",
+  "path": "agents-skills/ebitengine-game/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/ruwwww/agent-skills",
+  "dir_name": "ebitengine-game-ruwwww-agent-skills",
+  "downloaded_at": "2026-10-29T06:15:06.480110Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: build, software, debug",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "build",
+      "software",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ruwwww",
+  "source_url": "https://github.com/ruwwww/agent-skills/blob/main/agents-skills/ebitengine-game/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ruwwww/agent-skills/blob/main/agents-skills/ebitengine-game/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Create, improve, debug and package playable 2D games in Go with Ebitengine (github.com/hajimehoshi/ebiten/v2). Use for Ebitengine game requests: game design translated into a complete loop, input, rendering, text, audio, scenes, gameplay tests and desktop, browser or mobile builds. Also use when fixing these systems in an existing Ebitengine game. Do not apply to unrelated Go software or engine-internal patches merely because they depend on Ebitengine."
+}

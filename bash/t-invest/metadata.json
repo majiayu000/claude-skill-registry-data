@@ -1,0 +1,38 @@
+{
+  "name": "t-invest",
+  "repo": "nyxandro/t-invest-skill",
+  "path": "skills/t-invest/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/nyxandro/t-invest-skill",
+  "dir_name": "t-invest",
+  "downloaded_at": "2026-10-29T05:25:50.044347Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nyxandro",
+  "source_url": "https://github.com/nyxandro/t-invest-skill/blob/main/skills/t-invest/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nyxandro/t-invest-skill/blob/main/skills/t-invest/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Access to the user's \u0422-\u0418\u043d\u0432\u0435\u0441\u0442\u0438\u0446\u0438\u0438 / Tinkoff (T-Invest) brokerage account via the T-Invest API \u2014 portfolio, positions, cash, quotes and prices, operations, dividends, commissions, yield/returns, bonds, stocks, funds, screeners, and trades on explicit command. Data and analytics, not investment advice. Use whenever the user asks about their own portfolio, account, securities, a quote or price, operations, dividends, returns or trading, or mentions \u0422-\u0418\u043d\u0432\u0435\u0441\u0442\u0438\u0446\u0438\u0438 / \u0422\u0438\u043d\u044c\u043a\u043e\u0444\u0444 / T-Invest or a ticker (SBER, GAZP). Data comes from the T-Invest API via the bundled CLI \u2014 do not answer from memory."
+}

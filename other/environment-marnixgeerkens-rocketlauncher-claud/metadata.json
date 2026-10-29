@@ -1,0 +1,40 @@
+{
+  "name": "railway-environment",
+  "repo": "marnixGeerkens/rocketlauncher-claude-code",
+  "path": "components/skills/railway/environment/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/marnixGeerkens/rocketlauncher-claude-code",
+  "dir_name": "environment-marnixgeerkens-rocketlauncher-claud",
+  "downloaded_at": "2026-10-29T04:50:31.380252Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=4, devops=4",
+    "score": 4,
+    "runner_up": "devops",
+    "runner_up_score": 4,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "marnixGeerkens",
+  "source_url": "https://github.com/marnixGeerkens/rocketlauncher-claude-code/blob/main/components/skills/railway/environment/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/marnixGeerkens/rocketlauncher-claude-code/blob/main/components/skills/railway/environment/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Query, stage, and apply configuration changes for Railway environments. Use for ANY variable or env var operations, service configuration (source, build settings, deploy settings), lifecycle (delete service), and applying changes. Prefer over railway-status skill for any configuration or variable queries."
+}

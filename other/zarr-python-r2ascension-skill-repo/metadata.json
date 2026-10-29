@@ -1,0 +1,37 @@
+{
+  "name": "zarr-python",
+  "repo": "r2ascension/skill_repo",
+  "path": "skills/zarr-python/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/r2ascension/skill_repo",
+  "dir_name": "zarr-python-r2ascension-skill-repo",
+  "downloaded_at": "2026-10-29T05:59:14.486484Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "r2ascension",
+  "source_url": "https://github.com/r2ascension/skill_repo/blob/main/skills/zarr-python/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/r2ascension/skill_repo/blob/main/skills/zarr-python/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Chunked N-D arrays for cloud storage. Compressed arrays, parallel I/O, S3/GCS integration, NumPy/Dask/Xarray compatible, for large-scale scientific computing pipelines."
+}

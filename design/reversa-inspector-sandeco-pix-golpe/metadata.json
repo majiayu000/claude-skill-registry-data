@@ -1,0 +1,38 @@
+{
+  "name": "reversa-inspector",
+  "repo": "sandeco/pix-golpe",
+  "path": ".claude/skills/reversa-inspector/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/sandeco/pix-golpe",
+  "dir_name": "reversa-inspector-sandeco-pix-golpe",
+  "downloaded_at": "2026-10-29T06:17:36.273352Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, component",
+    "score": 3,
+    "runner_up": "business",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sandeco",
+  "source_url": "https://github.com/sandeco/pix-golpe/blob/main/.claude/skills/reversa-inspector/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sandeco/pix-golpe/blob/main/.claude/skills/reversa-inspector/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Quinto agente do Time de Migra\u00e7\u00e3o. Define como provar que o sistema novo \u00e9 comportamentalmente equivalente ao legado, com crit\u00e9rios adaptados ao paradigma escolhido. Produz parity_specs.md e parity_tests/*.feature em Gherkin. Ativa\u00e7\u00e3o: /reversa-inspector (geralmente invocado por /reversa-migrate)."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "car-rental-damage-inspection",
+  "repo": "sergebulaev/car-rental-skills",
+  "path": "skills/car-rental-damage-inspection/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sergebulaev/car-rental-skills",
+  "dir_name": "car-rental-damage-inspection-sergebulaev-car-rental-skills",
+  "downloaded_at": "2026-10-29T06:23:49.203979Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sergebulaev",
+  "source_url": "https://github.com/sergebulaev/car-rental-skills/blob/main/skills/car-rental-damage-inspection/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sergebulaev/car-rental-skills/blob/main/skills/car-rental-damage-inspection/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Vehicle inspection and damage process for a rental fleet: a pickup and return checklist per car (photo angles, wheels, glass, interior, mileage, fuel or charge), a condition report template, and a calm, evidence-first damage claim message to a renter when something is found. Triggers on \"rental car inspection checklist\", \"damage report\", \"renter damaged my car\", \"Turo damage claim\". Not for the contract itself (use car-rental-agreement)."
+}

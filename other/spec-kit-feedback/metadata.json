@@ -1,0 +1,37 @@
+{
+  "name": "spec-kit-feedback",
+  "repo": "pradeepmouli/rune-langium",
+  "path": ".specify/extensions/workflows/extensions/skills/spec-kit-feedback/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/pradeepmouli/rune-langium",
+  "dir_name": "spec-kit-feedback",
+  "downloaded_at": "2026-10-29T05:46:57.583724Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "automation",
+      "workflow"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pradeepmouli",
+  "source_url": "https://github.com/pradeepmouli/rune-langium/blob/master/.specify/extensions/workflows/extensions/skills/spec-kit-feedback/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pradeepmouli/rune-langium/blob/master/.specify/extensions/workflows/extensions/skills/spec-kit-feedback/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Capture workflow usage data for spec-kit optimization. Auto-activates when:\n(1) completing a spec-kit workflow (/speckit.review, final commit),\n(2) encountering friction or confusion during workflows,\n(3) user mentions issues with prompts or templates,\n(4) workflow deviates from expected quality gates.\nReminds to export chat logs and tracks patterns for feedback."
+}

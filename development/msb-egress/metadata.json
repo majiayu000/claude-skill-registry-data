@@ -1,0 +1,37 @@
+{
+  "name": "msb-egress",
+  "repo": "runoverlabs/sandbox-manager",
+  "path": ".agents/skills/msb-egress/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/runoverlabs/sandbox-manager",
+  "dir_name": "msb-egress",
+  "downloaded_at": "2026-10-29T06:14:23.465222Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, debug",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "runoverlabs",
+  "source_url": "https://github.com/runoverlabs/sandbox-manager/blob/main/.agents/skills/msb-egress/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/runoverlabs/sandbox-manager/blob/main/.agents/skills/msb-egress/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Emitting, ordering, approving or debugging msb egress rules and secret bindings in msbctl \u2014 rule_groups, extra_rules, --net-rule, --tls-intercept, --tls-intercept-port, egress_mode and observe mode, allow_private_dns, --secret placeholders and transcript passthrough, and the policy pin. Use before changing any of these, or when a connection out of a sandbox is refused, or before deciding whether a settings change needs a rebuild."
+}

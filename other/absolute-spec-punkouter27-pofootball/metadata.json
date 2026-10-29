@@ -1,0 +1,39 @@
+{
+  "name": "absolute-spec",
+  "repo": "punkouter27/PoFootball",
+  "path": ".claude/skills/absolute-spec/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/punkouter27/PoFootball",
+  "dir_name": "absolute-spec-punkouter27-pofootball",
+  "downloaded_at": "2026-10-29T05:54:31.476134Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=3, quality=3",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "workflow",
+      "task",
+      "planning"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "punkouter27",
+  "source_url": "https://github.com/punkouter27/PoFootball/blob/master/.claude/skills/absolute-spec/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/punkouter27/PoFootball/blob/master/.claude/skills/absolute-spec/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Lightweight standalone design spec for AI coding agents: codebase scan \u2192 bounded clarify pass (3\u20135 questions, not a grill) \u2192 reviewed design doc written to docs/plans/ \u2192 independent scored review \u2192 stop. No task board, no build. Use when you want a spec to discuss, hand off, or review before committing to implementation. Chains into absolute-work when ready to build. Triggers on \"absolute spec\", \"write a spec\", \"spec out this feature\", \"draft a design doc\", \"I want a spec to hand off / review, don't build it yet\"."
+}

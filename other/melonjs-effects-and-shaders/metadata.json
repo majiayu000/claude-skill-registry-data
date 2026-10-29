@@ -1,0 +1,36 @@
+{
+  "name": "melonjs-effects-and-shaders",
+  "repo": "melonjs/melonJS",
+  "path": "packages/melonjs/skills/melonjs-effects-and-shaders/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/melonjs/melonJS",
+  "dir_name": "melonjs-effects-and-shaders",
+  "downloaded_at": "2026-10-29T04:56:38.284523Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category creative scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "design",
+    "runner_up_score": 1,
+    "signals": [
+      "writing"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "melonjs",
+  "source_url": "https://github.com/melonjs/melonJS/blob/master/packages/melonjs/skills/melonjs-effects-and-shaders/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/melonjs/melonJS/blob/master/packages/melonjs/skills/melonjs-effects-and-shaders/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill for post-processing effects, custom shaders, blend modes and colour grading in melonJS. Covers the built-in ShaderEffect presets, addPostEffect on renderables and cameras, writing a custom dual-language GLSL/WGSL effect, the screen_texture builtins, and why effects silently do nothing on the Canvas fallback. Triggers on: Tween, easing, animate an effect, ShaderEffect, addPostEffect, removePostEffect, getPostEffect, postEffectNeedsCapture, VignetteEffect, GlowEffect, BlurEffect, PixelateEffect, ScanlineEffect, shader, GLSL, WGSL, uniform, setUniform, setTexture, setTime, blendMode, colorMatrix, screen_texture, toFrameTexture, post effect, filter."
+}

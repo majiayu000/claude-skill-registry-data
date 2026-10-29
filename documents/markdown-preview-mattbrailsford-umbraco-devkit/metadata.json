@@ -1,0 +1,39 @@
+{
+  "name": "markdown-preview",
+  "repo": "mattbrailsford/umbraco-devkit",
+  "path": "plugins/umbraco-devkit/skills/markdown-preview/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/mattbrailsford/umbraco-devkit",
+  "dir_name": "markdown-preview-mattbrailsford-umbraco-devkit",
+  "downloaded_at": "2026-10-29T04:53:14.075132Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word, markdown",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "word",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mattbrailsford",
+  "source_url": "https://github.com/mattbrailsford/umbraco-devkit/blob/main/plugins/umbraco-devkit/skills/markdown-preview/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mattbrailsford/umbraco-devkit/blob/main/plugins/umbraco-devkit/skills/markdown-preview/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Opens a Markdown file or folder in the browser as GitHub will show it, drawn by GitHub's own renderer, refreshing as the file changes. A folder opens GitHub-style, its file list beside its README. Readers comment on any line and send the comments to Claude in one batch, and Claude fixes the doc and replies on each. Use when the user asks to see, show, open, view or preview a doc (\"show me the brief\", \"open the plan\", \"preview the spec\"), or says \"go through my comments\". Also owns when a phase offers a preview, how a step picks up open comments left on its files, which docs a step asks the reader to approve, and the check for unresolved comments and approvals before a step moves on."
+}

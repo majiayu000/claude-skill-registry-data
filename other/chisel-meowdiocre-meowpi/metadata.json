@@ -1,0 +1,36 @@
+{
+  "name": "chisel",
+  "repo": "meowdiocre/meowpi",
+  "path": "skills/chisel/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/meowdiocre/meowpi",
+  "dir_name": "chisel-meowdiocre-meowpi",
+  "downloaded_at": "2026-10-29T04:57:34.609552Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category security scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "",
+    "runner_up_score": 0,
+    "signals": [
+      "auth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "meowdiocre",
+  "source_url": "https://github.com/meowdiocre/meowpi/blob/main/skills/chisel/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/meowdiocre/meowpi/blob/main/skills/chisel/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Tunnel TCP, UDP and SOCKS5 traffic through a single HTTP/WebSocket stream with the chisel client/server pair. Use when a foothold can reach the internet but cannot accept inbound connections, or when you need a portable pivot with no root, no drivers and no libpcap. Not for kernel-routed pivots (use ligolo-ng) or for pushing existing tools through a proxy (use proxychains)."
+}

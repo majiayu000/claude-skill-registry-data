@@ -1,0 +1,38 @@
+{
+  "name": "codebase-hygiene-reviewer",
+  "repo": "ralvarezdev/ralvaskills",
+  "path": "skills/quality/codebase-hygiene-reviewer/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/ralvarezdev/ralvaskills",
+  "dir_name": "codebase-hygiene-reviewer",
+  "downloaded_at": "2026-10-29T06:00:22.297185Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, refactor",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ralvarezdev",
+  "source_url": "https://github.com/ralvarezdev/ralvaskills/blob/main/skills/quality/codebase-hygiene-reviewer/SKILL.md",
+  "license": "GPL-3.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ralvarezdev/ralvaskills/blob/main/skills/quality/codebase-hygiene-reviewer/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Evidence-based declutter audit \u2014 dead code, unused exports, duplication, oversized files/functions, modularization candidates; shared libraries with several consumers. Proposes, never edits. Use when cleaning up a repo or library, hunting dead code, or sizing a split."
+}

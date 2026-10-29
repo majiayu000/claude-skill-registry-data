@@ -1,0 +1,38 @@
+{
+  "name": "cognitive-complexity",
+  "repo": "realdreamer/agent-skills",
+  "path": "skills/cognitive-complexity/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/realdreamer/agent-skills",
+  "dir_name": "cognitive-complexity",
+  "downloaded_at": "2026-10-29T06:03:27.347209Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, software, refactor",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "software",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "realdreamer",
+  "source_url": "https://github.com/realdreamer/agent-skills/blob/main/skills/cognitive-complexity/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/realdreamer/agent-skills/blob/main/skills/cognitive-complexity/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Keeps TypeScript/JavaScript functions readable for software developers by computing SonarSource Cognitive Complexity with a bundled scorer instead of estimating it, then explaining, refactoring and auditing complex code. Use when writing or refactoring TS/JS functions so they stay readable, when asked why a function is complex or hard to follow, how to simplify or flatten deeply nested code, to fix a sonarjs/cognitive-complexity or Biome noExcessiveCognitiveComplexity lint failure, or to audit changed files or a folder for overly complex functions."
+}

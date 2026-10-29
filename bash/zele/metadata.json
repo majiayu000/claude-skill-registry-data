@@ -1,0 +1,38 @@
+{
+  "name": "zele",
+  "repo": "remorses/opencode-config",
+  "path": "synced-skills/zele/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/remorses/opencode-config",
+  "dir_name": "zele",
+  "downloaded_at": "2026-10-29T06:04:50.291988Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, cli",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "remorses",
+  "source_url": "https://github.com/remorses/opencode-config/blob/main/synced-skills/zele/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/remorses/opencode-config/blob/main/synced-skills/zele/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "zele is a multi-account email and calendar CLI for Gmail, IMAP/SMTP (Fastmail, Outlook, any provider), and Google Calendar. It reads, searches, sends, replies, forwards, archives, stars, and trashes emails, waits for replies with `zele mail watch` (use it after sending instead of ending the turn or sleeping), manages drafts, labels, attachments, and Gmail filters, and creates, updates, and deletes calendar events with RSVP and free/busy support. Output is YAML so commands can be piped through yq and xargs. ALWAYS load this skill when the user asks to check email, read/send messages, reply or forward, archive or trash threads, manage drafts or labels, download attachments, schedule meetings, check their calendar, RSVP to events, create a free permanent @zele.sh email address (receive-only for now) for themselves, a project, or an agent, or when they run any `zele` command. Load it before writing any code or shell commands that touch zele so you know the correct subcommand structure, the Google vs IMAP feature matrix, the headless login flow, and the agent-specific rules."
+}

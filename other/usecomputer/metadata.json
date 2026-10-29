@@ -1,0 +1,37 @@
+{
+  "name": "usecomputer",
+  "repo": "remorses/opencode-config",
+  "path": "synced-skills/usecomputer/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/remorses/opencode-config",
+  "dir_name": "usecomputer",
+  "downloaded_at": "2026-10-29T06:04:53.323355Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "prompt"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "remorses",
+  "source_url": "https://github.com/remorses/opencode-config/blob/main/synced-skills/usecomputer/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/remorses/opencode-config/blob/main/synced-skills/usecomputer/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Desktop automation CLI for AI agents (macOS, Linux, Windows). Screenshot, click, type, scroll, drag with native Zig backend. Use this skill when automating desktop apps with computer use models (GPT-5.4, Claude). Covers the screenshot-action feedback loop, coord-map workflow, window-scoped screenshots, and system prompts for accurate clicking."
+}

@@ -1,0 +1,41 @@
+{
+  "name": "om-integration-tests",
+  "repo": "polo-blue/sds",
+  "path": ".claude/skills/om-integration-tests/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/polo-blue/sds",
+  "dir_name": "om-integration-tests-polo-blue-sds",
+  "downloaded_at": "2026-10-29T05:45:12.835018Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for testing: test, qa, integration, e2e, playwright, cypress",
+    "score": 6,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "test",
+      "qa",
+      "integration",
+      "e2e",
+      "playwright",
+      "cypress"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polo-blue",
+  "source_url": "https://github.com/polo-blue/sds/blob/main/.claude/skills/om-integration-tests/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polo-blue/sds/blob/main/.claude/skills/om-integration-tests/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run and create integration/E2E tests by exploring the live app with the configured browser provider, preserving repository-native runners, reusing the shared test environment, and diagnosing failures from concrete artifacts."
+}

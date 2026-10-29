@@ -1,0 +1,37 @@
+{
+  "name": "nerviz-diagrams",
+  "repo": "nerviz-ai/nerviz",
+  "path": ".claude/skills/nerviz-diagrams/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/nerviz-ai/nerviz",
+  "dir_name": "nerviz-diagrams",
+  "downloaded_at": "2026-10-29T05:17:14.837716Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nerviz-ai",
+  "source_url": "https://github.com/nerviz-ai/nerviz/blob/main/.claude/skills/nerviz-diagrams/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nerviz-ai/nerviz/blob/main/.claude/skills/nerviz-diagrams/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Renders diagrams of this repository's own .claude/ harness \u2014 the layers, the skill and agent classes with their write territories, the /new-feature pipeline \u2014 from .claude/schemas/extensions.json and the files on disk, as .drawio, .excalidraw, static and animated SVG under docs/diagrams/, plus PNG and video for the site. Meta-repository only; never a use case or domain diagram, which are Mermaid inside the spec."
+}

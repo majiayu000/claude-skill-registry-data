@@ -1,0 +1,40 @@
+{
+  "name": "om-figma-design-with-ds",
+  "repo": "polo-blue/sds",
+  "path": ".claude/skills/om-figma-design-with-ds/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/polo-blue/sds",
+  "dir_name": "om-figma-design-with-ds",
+  "downloaded_at": "2026-10-29T05:45:11.553310Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, ui, ux, component, figma",
+    "score": 5,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "ux",
+      "component",
+      "figma"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polo-blue",
+  "source_url": "https://github.com/polo-blue/sds/blob/main/.claude/skills/om-figma-design-with-ds/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polo-blue/sds/blob/main/.claude/skills/om-figma-design-with-ds/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Design in a design tool (Figma or similar) on the repository's design system \u2014 write a brief for a new screen using only the contract's tokens, components and archetypes, or audit an existing design against the contract with a ranked remediation plan. Tool access goes through a configured provider. Use for \"figma mockup\", \"audit this figma design\"."
+}

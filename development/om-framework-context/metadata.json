@@ -1,0 +1,38 @@
+{
+  "name": "om-framework-context",
+  "repo": "polo-blue/sds",
+  "path": ".claude/skills/om-framework-context/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/polo-blue/sds",
+  "dir_name": "om-framework-context",
+  "downloaded_at": "2026-10-29T05:45:09.215101Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polo-blue",
+  "source_url": "https://github.com/polo-blue/sds/blob/main/.claude/skills/om-framework-context/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polo-blue/sds/blob/main/.claude/skills/om-framework-context/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Read knowledge shipped inside installed dependencies \u2014 detect the ecosystem and exact installed version, locate AGENTS.md and guides per the `knowledge.sources` slot, and report doc-versus-code skew. Read-only. Use for \"which version is installed\", \"find the framework's AGENTS.md\", \"inspect dependency source\", \"kontekst frameworka\"."
+}

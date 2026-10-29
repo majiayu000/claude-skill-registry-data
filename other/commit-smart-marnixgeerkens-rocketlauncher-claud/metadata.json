@@ -1,0 +1,37 @@
+{
+  "name": "commit-smart",
+  "repo": "marnixGeerkens/rocketlauncher-claude-code",
+  "path": "components/skills/git/commit-smart/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/marnixGeerkens/rocketlauncher-claude-code",
+  "dir_name": "commit-smart-marnixgeerkens-rocketlauncher-claud",
+  "downloaded_at": "2026-10-29T04:50:22.216470Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "marnixGeerkens",
+  "source_url": "https://github.com/marnixGeerkens/rocketlauncher-claude-code/blob/main/components/skills/git/commit-smart/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/marnixGeerkens/rocketlauncher-claude-code/blob/main/components/skills/git/commit-smart/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Analyze staged/unstaged changes and create semantic conventional commits with context about WHY, not just WHAT. Auto-detects commit type and scope from the diff. Supports optional type/scope arguments. Usage - /commit-smart, /commit-smart fix, /commit-smart refactor api"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "legal-review",
+  "repo": "projectious-work/aibox",
+  "path": "context/skills/product/legal-review/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/projectious-work/aibox",
+  "dir_name": "legal-review",
+  "downloaded_at": "2026-10-29T05:52:33.442050Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "auth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "projectious-work",
+  "source_url": "https://github.com/projectious-work/aibox/blob/main/context/skills/product/legal-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/projectious-work/aibox/blob/main/context/skills/product/legal-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Structures a systematic legal and compliance review of contracts, policies, or technical decisions \u2014 identifying key clauses, risks, and questions for counsel. Use when asked to review a contract, check compliance implications, flag legal risks in a technical design, or prepare for a legal consultation. Always surfaces work for qualified counsel; never replaces legal advice."
+}

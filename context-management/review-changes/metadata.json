@@ -1,0 +1,37 @@
+{
+  "name": "Review Changes",
+  "repo": "marcostor13/zenda",
+  "path": ".claude/skills/review-changes/skill.md",
+  "github_branch": "main",
+  "category": "context-management",
+  "source": "github.com/marcostor13/zenda",
+  "dir_name": "review-changes",
+  "downloaded_at": "2026-10-29T04:49:03.327538Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, memory",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "marcostor13",
+  "source_url": "https://github.com/marcostor13/zenda/blob/main/.claude/skills/review-changes/skill.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/marcostor13/zenda/blob/main/.claude/skills/review-changes/skill.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Perform a structured code review using change detection and impact"
+}

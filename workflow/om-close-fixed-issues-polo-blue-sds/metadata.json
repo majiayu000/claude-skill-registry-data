@@ -1,0 +1,38 @@
+{
+  "name": "om-close-fixed-issues",
+  "repo": "polo-blue/sds",
+  "path": ".claude/skills/om-close-fixed-issues/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/polo-blue/sds",
+  "dir_name": "om-close-fixed-issues-polo-blue-sds",
+  "downloaded_at": "2026-10-29T05:45:10.295309Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process, pipeline",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "process",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polo-blue",
+  "source_url": "https://github.com/polo-blue/sds/blob/main/.claude/skills/om-close-fixed-issues/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polo-blue/sds/blob/main/.claude/skills/om-close-fixed-issues/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Close the tracker issues that recently merged PRs authoritatively fixed \u2014 via `fixes`/`closes`/`resolves` keywords or `closingIssuesReferences` \u2014 and post informational comments on issues whose PRs were closed without merging or merged into a non-base branch. Use for post-merge housekeeping and release prep. Respects claim locks and never acts on bare `#N` mentions."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "om-pre-implement-spec",
+  "repo": "polo-blue/sds",
+  "path": ".claude/skills/om-pre-implement-spec/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/polo-blue/sds",
+  "dir_name": "om-pre-implement-spec",
+  "downloaded_at": "2026-10-29T05:45:09.756272Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, business=2",
+    "score": 2,
+    "runner_up": "business",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polo-blue",
+  "source_url": "https://github.com/polo-blue/sds/blob/main/.claude/skills/om-pre-implement-spec/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polo-blue/sds/blob/main/.claude/skills/om-pre-implement-spec/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit a spec before implementation \u2014 readiness gate, backward-compatibility check against BACKWARD_COMPATIBILITY.md, completeness, repo-rule compliance, risks, gaps \u2014 and leave a go/conditional/no-go report with a remediation plan. Read-only. Use for \"is this spec ready\", \"pre-implement\", \"spec readiness\", \"BC analysis\", \"spec gap analysis\"."
+}

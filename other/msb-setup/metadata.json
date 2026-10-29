@@ -1,0 +1,36 @@
+{
+  "name": "msb-setup",
+  "repo": "runoverlabs/sandbox-manager",
+  "path": ".agents/skills/msb-setup/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/runoverlabs/sandbox-manager",
+  "dir_name": "msb-setup",
+  "downloaded_at": "2026-10-29T06:14:22.728932Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "creative",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "runoverlabs",
+  "source_url": "https://github.com/runoverlabs/sandbox-manager/blob/main/.agents/skills/msb-setup/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/runoverlabs/sandbox-manager/blob/main/.agents/skills/msb-setup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Machine-level setup and first run: msbctl setup's SETUP_SECTIONS (git identities, Claude login, your network, new-sandbox defaults) plus the raw file, writing ~/.config/msb/config.toml through set_toml_key()/remove_toml_table(), secrets/global.env at 0600 through set_env_file_value() keeping its documenting comments, needs_welcome()/maybe_welcome() and the welcome-done marker, named Claude tokens with [defaults] claude_token and the registry entry overriding it, and a LAN group needing defaults.private_dns_groups. Use when adding a machine-level setting or changing first-run behaviour."
+}

@@ -1,0 +1,36 @@
+{
+  "name": "web-infra",
+  "repo": "matheusmaximianomv/smaug",
+  "path": ".claude/skills/web-infra/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/matheusmaximianomv/smaug",
+  "dir_name": "web-infra",
+  "downloaded_at": "2026-10-29T04:52:16.017348Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category api scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "api"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "matheusmaximianomv",
+  "source_url": "https://github.com/matheusmaximianomv/smaug/blob/main/.claude/skills/web-infra/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/matheusmaximianomv/smaug/blob/main/.claude/skills/web-infra/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Camada infra do web do Smaug \u2014 api-client (baseURL \"/api\", Bearer, renova\u00e7\u00e3o silenciosa, s\u00f3 401 encerra sess\u00e3o), auth-refresh (single-flight por aba), session.ts (access token em mem\u00f3ria + indicador smaug_session), tabela de mensagens de api-error.ts e sua ordem de resolu\u00e7\u00e3o, navigation.ts como seam de teste, router-adapter e query-client."
+}

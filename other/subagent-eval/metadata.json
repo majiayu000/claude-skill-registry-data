@@ -1,0 +1,37 @@
+{
+  "name": "subagent-eval",
+  "repo": "samjmarshall/personal-finance",
+  "path": ".claude/skills/subagent-eval/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/samjmarshall/personal-finance",
+  "dir_name": "subagent-eval",
+  "downloaded_at": "2026-10-29T06:16:31.568970Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "sub-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "samjmarshall",
+  "source_url": "https://github.com/samjmarshall/personal-finance/blob/main/.claude/skills/subagent-eval/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/samjmarshall/personal-finance/blob/main/.claude/skills/subagent-eval/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Empirically evaluate and optimise a Claude Code sub-agent via a blinded head-to-head against the production baseline, then pick its model on data. Use when tuning a sub-agent's prompt, choosing or re-checking its model (e.g. a new model release), proving an agent change before committing, or testing whether a specialist beats native Explore. To author a new agent first, read AUTHORING.md."
+}

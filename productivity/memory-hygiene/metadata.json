@@ -1,0 +1,37 @@
+{
+  "name": "memory-hygiene",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/memory/memory-hygiene/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "memory-hygiene",
+  "downloaded_at": "2026-10-29T05:04:56.870063Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, memory",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/memory/memory-hygiene/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/memory/memory-hygiene/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the memory store needs a health check: removing duplicates safely, resolving contradictory entries, decaying stale confidence, redacting secrets that slipped in, keeping an audit trail, or enforcing size budgets. Covers the full hygiene pass (dedupe, contradiction procedure, confidence decay, PII redaction, audit, budgets) with memory-store commands. Use when running the weekly maintenance pass, when recall returns conflicting facts, when stats show the store growing too fast, or after any incident that may have polluted the store."
+}

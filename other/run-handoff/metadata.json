@@ -1,0 +1,37 @@
+{
+  "name": "run-handoff",
+  "repo": "nickolaj-jepsen/nixos",
+  "path": "skills/run-handoff/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/nickolaj-jepsen/nixos",
+  "dir_name": "run-handoff",
+  "downloaded_at": "2026-10-29T05:20:17.761542Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nickolaj-jepsen",
+  "source_url": "https://github.com/nickolaj-jepsen/nixos/blob/main/skills/run-handoff/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nickolaj-jepsen/nixos/blob/main/skills/run-handoff/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Build a plan written by /handoff in one long-running session \u2014 keep PROGRESS.md, dispatch every unblocked item to a background subagent in its own worktree, re-run its acceptance yourself before fast-forwarding an integration branch, review at gates and over the whole branch. Checks in with the user at every gate by default; --auto runs unattended until done or blocked. Use when the user asks to run, build, execute or resume a handoff."
+}

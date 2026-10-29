@@ -1,0 +1,37 @@
+{
+  "name": "format-strings",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/binary/format-strings/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "format-strings",
+  "downloaded_at": "2026-10-29T05:04:57.403032Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/binary/format-strings/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/binary/format-strings/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when you need to exploit a format string vulnerability on an authorized target, such as a CTF pwn challenge or lab binary that passes user input directly to printf or a similar function. Covers finding the positional parameter offset, reading stack and memory with %x and %s, leaking libc and binary addresses to defeat ASLR and PIE, writing values with %n, and automating exploitation with pwntools 4.13 fmtstr_payload. Use when user input reaches a printf-family function as the format string, or when you need an info leak to enable another exploit primitive."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "reversa-prune",
+  "repo": "sandeco/pix-golpe",
+  "path": ".agents/skills/reversa-prune/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/sandeco/pix-golpe",
+  "dir_name": "reversa-prune",
+  "downloaded_at": "2026-10-29T06:17:24.859275Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, refactor",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "framework",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sandeco",
+  "source_url": "https://github.com/sandeco/pix-golpe/blob/main/.agents/skills/reversa-prune/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sandeco/pix-golpe/blob/main/.agents/skills/reversa-prune/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Remo\u00e7\u00e3o de c\u00f3digo morto: s\u00f3 remove o que provar ser morto (sem refer\u00eancia est\u00e1tica nem entrada din\u00e2mica), distinguindo morto de \u00f3rf\u00e3o suspeito e conferindo contra a alma. Revers\u00edvel pelo diff."
+}

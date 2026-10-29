@@ -1,0 +1,40 @@
+{
+  "name": "curviate",
+  "repo": "marnixGeerkens/rocketlauncher-claude-code",
+  "path": "components/skills/curviate/curviate/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/marnixGeerkens/rocketlauncher-claude-code",
+  "dir_name": "curviate",
+  "downloaded_at": "2026-10-29T04:50:26.893936Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "marnixGeerkens",
+  "source_url": "https://github.com/marnixGeerkens/rocketlauncher-claude-code/blob/main/components/skills/curviate/curviate/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/marnixGeerkens/rocketlauncher-claude-code/blob/main/components/skills/curviate/curviate/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Entry point for driving LinkedIn work through the Curviate CLI: which skill answers which task, how to resolve the `curviate` binary, the retrieval-mode concept and the flags only four commands accept, and the rule that an agent branches on the exit code rather than on the message text. Use whenever a task involves LinkedIn profiles, companies, search, messages, posts, comments, reactions, connections, follows, job postings, Sales Navigator or Recruiter, or whenever a `curviate` command is about to run and it is not obvious which area covers it."
+}

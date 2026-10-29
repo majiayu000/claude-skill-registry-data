@@ -1,0 +1,38 @@
+{
+  "name": "code-comment",
+  "repo": "samjmarshall/personal-finance",
+  "path": ".claude/skills/code-comment/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/samjmarshall/personal-finance",
+  "dir_name": "code-comment",
+  "downloaded_at": "2026-10-29T06:16:30.833649Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review, validate",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "samjmarshall",
+  "source_url": "https://github.com/samjmarshall/personal-finance/blob/main/.claude/skills/code-comment/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/samjmarshall/personal-finance/blob/main/.claude/skills/code-comment/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Writes and updates terse, why-only code comments to house standard, and judges the comments in a diff via an isolated sub-agent (PASS/REWRITE/REMOVE/FIX_CODE). Use when writing or editing a code comment, or reviewing the comments in a change \u2014 loaded inline by /implement_plan (writer) and run as a review pass by /validate_plan (judge). Complements /code-review (bugs, documented standards) and /quality-control (Fowler design smells) with the comment-quality lens neither covers."
+}

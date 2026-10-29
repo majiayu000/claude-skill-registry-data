@@ -1,0 +1,37 @@
+{
+  "name": "om-auto-continue-pr",
+  "repo": "polo-blue/sds",
+  "path": ".claude/skills/om-auto-continue-pr/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/polo-blue/sds",
+  "dir_name": "om-auto-continue-pr-polo-blue-sds",
+  "downloaded_at": "2026-10-29T05:45:08.016250Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polo-blue",
+  "source_url": "https://github.com/polo-blue/sds/blob/main/.claude/skills/om-auto-continue-pr/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polo-blue/sds/blob/main/.claude/skills/om-auto-continue-pr/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Resume any open PR \u2014 started by `om-auto-create-pr` or opened outside the pipeline. Claims it, resumes in an isolated worktree from the first unchecked step of its execution plan; a PR with no plan is adopted \u2014 the goal is reconstructed from its description, comments, review feedback, linked issues and diff, then executed. Usage - /om-auto-continue-pr <PR-number>"
+}

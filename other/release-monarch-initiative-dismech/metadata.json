@@ -1,0 +1,36 @@
+{
+  "name": "release",
+  "repo": "monarch-initiative/dismech",
+  "path": ".claude/skills/release/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/monarch-initiative/dismech",
+  "dir_name": "release-monarch-initiative-dismech",
+  "downloaded_at": "2026-10-29T05:07:11.974809Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category api scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "api"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "monarch-initiative",
+  "source_url": "https://github.com/monarch-initiative/dismech/blob/main/.claude/skills/release/SKILL.md",
+  "license": "BSD-3-Clause",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/monarch-initiative/dismech/blob/main/.claude/skills/release/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when cutting a new DisMech GitHub release (a `v0.1.x` tag) \u2014 the action that rebuilds every bulk export and refreshes the Downloads page. Covers the mandatory origin/main sync, the version convention, the draft\u2192review\u2192publish order, every asset workflow that fires on publish (KGX JSONL+TSV, Mondo EMC, kb/pathographs/cx2/omex archives, manifest, maximal KGX), what the separate NDEx step does, and how the self-updating Downloads page consumes it."
+}

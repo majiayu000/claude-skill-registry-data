@@ -1,0 +1,38 @@
+{
+  "name": "session-end",
+  "repo": "namedtoaster/The-Last-Mile",
+  "path": "skills/session-end/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/namedtoaster/The-Last-Mile",
+  "dir_name": "session-end-namedtoaster-the-last-mile",
+  "downloaded_at": "2026-10-29T05:14:18.895154Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word",
+    "score": 3,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "namedtoaster",
+  "source_url": "https://github.com/namedtoaster/The-Last-Mile/blob/main/skills/session-end/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/namedtoaster/The-Last-Mile/blob/main/skills/session-end/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Wrap up a working session automatically. Runs the project's checks, adds manual test items to the release checklist, records new gotchas and decisions, updates the handoff file and docs, checks progress against the current goal, commits only this session's files and pushes. Use when the user says they are done, wrapping up, or asks to end the session."
+}

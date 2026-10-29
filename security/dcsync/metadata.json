@@ -1,0 +1,37 @@
+{
+  "name": "dcsync",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/ad/dcsync/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "dcsync",
+  "downloaded_at": "2026-10-29T05:04:43.344822Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "auth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/ad/dcsync/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/ad/dcsync/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when pulling Active Directory credential material through directory replication on an authorized engagement. Covers confirming replication rights, targeted DCSync of the krbtgt and Administrator accounts with secretsdump.py from impacket 0.12.0 and mimikatz 2.2.0 lsadump::dcsync, disciplined full domain pulls, granting yourself replication rights with dacledit when you hold WriteDACL, and turning recovered hashes into pass the hash access. Use when you hold Domain Admin equivalent rights and need hashes for lateral movement or ticket forging, or when a CTF or lab requires offline credential extraction."
+}

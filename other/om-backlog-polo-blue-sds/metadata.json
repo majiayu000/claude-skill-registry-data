@@ -1,0 +1,37 @@
+{
+  "name": "om-backlog",
+  "repo": "polo-blue/sds",
+  "path": ".claude/skills/om-backlog/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/polo-blue/sds",
+  "dir_name": "om-backlog-polo-blue-sds",
+  "downloaded_at": "2026-10-29T05:45:02.792387Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, business=2",
+    "score": 2,
+    "runner_up": "business",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polo-blue",
+  "source_url": "https://github.com/polo-blue/sds/blob/main/.claude/skills/om-backlog/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polo-blue/sds/blob/main/.claude/skills/om-backlog/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turns a product brief (its Scope and Key flows) or a spec's Phasing into a tracker backlog \u2014 epics, stories with acceptance criteria, tasks \u2014 with stable ids in titles, epic checklists, and Epic links, filing every issue through om-prepare-issue so dedupe, SDLC labels, and rationale come for free. Refuses a brief that is not ready; shows the whole tree and waits before writing. Use for \"build the backlog\", \"turn the brief into issues\"."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "speckit-superb-critique",
+  "repo": "pradeepmouli/rune-langium",
+  "path": ".github/skills/speckit-superb-critique/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/pradeepmouli/rune-langium",
+  "dir_name": "speckit-superb-critique-pradeepmouli-rune-langium-2",
+  "downloaded_at": "2026-10-29T05:46:48.306657Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agent-role"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pradeepmouli",
+  "source_url": "https://github.com/pradeepmouli/rune-langium/blob/master/.github/skills/speckit-superb-critique/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pradeepmouli/rune-langium/blob/master/.github/skills/speckit-superb-critique/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Spec-aligned code review agent. Acts as a dedicated independent reviewer: loads spec.md, plan.md, and tasks.md, then reviews every code change against declared requirements, reporting issues by severity. Use after any significant implementation to catch spec divergence before it compounds."
+}

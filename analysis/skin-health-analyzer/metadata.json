@@ -1,0 +1,37 @@
+{
+  "name": "skin-health-analyzer",
+  "repo": "pratyushdeosingh/mdp",
+  "path": ".agents/skills/skin-health-analyzer/SKILL.md",
+  "github_branch": "main",
+  "category": "analysis",
+  "source": "github.com/pratyushdeosingh/mdp",
+  "dir_name": "skin-health-analyzer",
+  "downloaded_at": "2026-10-29T05:50:38.348969Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "analysis",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for analysis: analysis, analyze",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pratyushdeosingh",
+  "source_url": "https://github.com/pratyushdeosingh/mdp/blob/main/.agents/skills/skin-health-analyzer/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pratyushdeosingh/mdp/blob/main/.agents/skills/skin-health-analyzer/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Analyze skin health data, identify skin problem patterns, assess skin health status. Supports correlation analysis with nutrition, chronic diseases, and medication data."
+}

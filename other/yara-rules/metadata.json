@@ -1,0 +1,37 @@
+{
+  "name": "yara-rules",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/malware/yara-rules/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "yara-rules",
+  "downloaded_at": "2026-10-29T05:04:50.149740Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "software",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/malware/yara-rules/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/malware/yara-rules/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when you need to write, test, or tune YARA rules for malware detection and hunting. Covers rule anatomy, string types and modifiers, condition logic, the pe/elf/math/hash/dotnet modules, testing against clean and malicious corpora, measuring false positives, atom quality for performance, and YARA-X differences. Use when static triage finds a new family, when you need hunt rules for an incident, or when an existing rule fires too much or too little."
+}

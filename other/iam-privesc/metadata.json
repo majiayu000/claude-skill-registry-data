@@ -1,0 +1,37 @@
+{
+  "name": "iam-privesc",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/cloud/iam-privesc/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "iam-privesc",
+  "downloaded_at": "2026-10-29T05:04:46.864233Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/cloud/iam-privesc/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/cloud/iam-privesc/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when assessing AWS IAM privilege escalation paths during an authorized cloud assessment, bug bounty engagement, or lab exercise. Covers effective permission enumeration with SimulatePrincipalPolicy and the classic escalation primitives: iam:PassRole combined with Lambda or EC2 creation, iam:CreatePolicyVersion, iam:AttachUserPolicy and iam:AttachRolePolicy, sts:AssumeRole chains, and EC2 instance profile abuse using aws-cli 2.22 and Python 3.12. Use when you hold low-privilege AWS credentials and need to determine whether they can reach administrative access."
+}

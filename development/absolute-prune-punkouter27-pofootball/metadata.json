@@ -1,0 +1,39 @@
+{
+  "name": "absolute-prune",
+  "repo": "punkouter27/PoFootball",
+  "path": ".claude/skills/absolute-prune/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/punkouter27/PoFootball",
+  "dir_name": "absolute-prune-punkouter27-pofootball",
+  "downloaded_at": "2026-10-29T05:54:38.405439Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, refactor",
+    "score": 3,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "punkouter27",
+  "source_url": "https://github.com/punkouter27/PoFootball/blob/master/.claude/skills/absolute-prune/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/punkouter27/PoFootball/blob/master/.claude/skills/absolute-prune/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Dead code and dependency cleanup, repo-wide: unused deps, unreferenced exports, unreachable code, orphaned files \u2014 removed only with tool evidence, in reversible waves. Runs on green main. For diff-scoped cleanup use absolute-simplify. Triggers on \"absolute prune\", \"remove dead code\", \"find unused deps/exports\", \"what can we delete\", \"clean up orphaned files\"."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "melonjs-scenes-and-state",
+  "repo": "melonjs/melonJS",
+  "path": "packages/melonjs/skills/melonjs-scenes-and-state/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/melonjs/melonJS",
+  "dir_name": "melonjs-scenes-and-state",
+  "downloaded_at": "2026-10-29T04:56:37.002688Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: build, compile",
+    "score": 2,
+    "runner_up": "gaming",
+    "runner_up_score": 1,
+    "signals": [
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "melonjs",
+  "source_url": "https://github.com/melonjs/melonJS/blob/master/packages/melonjs/skills/melonjs-scenes-and-state/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/melonjs/melonJS/blob/master/packages/melonjs/skills/melonjs-scenes-and-state/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill for scene structure and game flow in melonJS \u2014 Stage subclasses, the state manager, transitions, pausing, the update loop, timers and tweens. Covers onResetEvent versus the constructor, state.set before state.change, the camera and world lifecycle per stage, and pause-aware timing. Triggers on: Tween, easing, fade out, flash, pulse, punch, shrink back, ease in, ease out, animate over time, countdown in update, Stage, state, state.set, state.change, state.transition, state.pause, onResetEvent, onDestroyEvent, onActivateEvent, onDeactivateEvent, PLAY, MENU, LOADING, update loop, GAME_UPDATE, timer, setTimeout, setInterval, Tween, freeze."
+}

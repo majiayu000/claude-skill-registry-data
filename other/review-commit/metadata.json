@@ -1,0 +1,38 @@
+{
+  "name": "review-commit",
+  "repo": "moonlight-lupin/agent-skills",
+  "path": "plugins/dev-pipeline/skills/review-commit/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/moonlight-lupin/agent-skills",
+  "dir_name": "review-commit",
+  "downloaded_at": "2026-10-29T05:07:50.010970Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, workflow=3",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "moonlight-lupin",
+  "source_url": "https://github.com/moonlight-lupin/agent-skills/blob/main/plugins/dev-pipeline/skills/review-commit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/moonlight-lupin/agent-skills/blob/main/plugins/dev-pipeline/skills/review-commit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user says 'review loop N times', 'build then review', 'fix and re-review', 'review loop until clean', 'have cursor build, codex review', or wants the dev-pipeline review stage: a two-axis single pass (Standards + Spec, parallel, never merged) FIRST, then a budgeted confirm-round loop on the fix diffs until no BLOCKING/MAJOR is open, then the commit/deploy gate \u2014 three-reviewer gate before live deploy, release hygiene before tagging. Also triggers: 'two-axis review', 'confirm rounds', 'review diff until SHIP', 'N confirm rounds', ship gate."
+}

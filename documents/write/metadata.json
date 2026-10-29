@@ -1,0 +1,38 @@
+{
+  "name": "write",
+  "repo": "rm0nroe/loadout",
+  "path": "skills/communication/write/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/rm0nroe/loadout",
+  "dir_name": "write",
+  "downloaded_at": "2026-10-29T06:09:07.222054Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, documentation",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "rm0nroe",
+  "source_url": "https://github.com/rm0nroe/loadout/blob/main/skills/communication/write/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/rm0nroe/loadout/blob/main/skills/communication/write/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Drafts Slack messages, emails, GitHub PR titles and descriptions, PR review comments and replies, and git commit messages, release notes, incident postmortems, tickets, technical articles and documentation pages in the user's own voice, with facts, quotes, code, identifiers and URLs kept byte-exact and all AI attribution stripped. Use whenever the user asks to write, draft, rewrite or tighten a Slack message, DM, thread reply, standup post, email or email reply, PR title, PR description or body, PR or review comment, commit message, release notes or changelog, postmortem, ticket, article or blog post, or docs page, even if they only say \"write this up for slack\", \"describe this PR\" or \"message for this diff\". Drafting only; it never sends, posts, commits, pushes or opens PRs."
+}

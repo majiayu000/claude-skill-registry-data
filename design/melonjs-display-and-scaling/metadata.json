@@ -1,0 +1,37 @@
+{
+  "name": "melonjs-display-and-scaling",
+  "repo": "melonjs/melonJS",
+  "path": "packages/melonjs/skills/melonjs-display-and-scaling/SKILL.md",
+  "github_branch": "master",
+  "category": "design",
+  "source": "github.com/melonjs/melonJS",
+  "dir_name": "melonjs-display-and-scaling",
+  "downloaded_at": "2026-10-29T04:56:37.968414Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, css",
+    "score": 2,
+    "runner_up": "gaming",
+    "runner_up_score": 1,
+    "signals": [
+      "design",
+      "css"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "melonjs",
+  "source_url": "https://github.com/melonjs/melonJS/blob/master/packages/melonjs/skills/melonjs-display-and-scaling/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/melonjs/melonJS/blob/master/packages/melonjs/skills/melonjs-display-and-scaling/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when a melonJS game looks blurry, soft, shimmering or cropped, or when choosing how the canvas fills its page. Covers the design resolution, scale and scaleMethod, scaleTarget, scaleRounding for pixel-perfect integer scaling, antiAlias, textureFilter and linear-mipmap for what is drawn small, subPixel, syncToDisplay for steady motion, devicePixelRatio, and which setting does which job. Triggers on: blurry, soft, fuzzy, shimmering, pixel art, pixel perfect, crisp, nearest, linear, scale, scaleMethod, scaleTarget, scaleRounding, integer scaling, antiAlias, textureFilter, linear-mipmap, mipmaps, minimap shimmer, zoomed out, subPixel, syncToDisplay, stutter, judder, uneven scrolling, devicePixelRatio, retina, hidpi, design resolution, canvas size, canvas cropped, letterbox, image-rendering, upscale, resolution."
+}

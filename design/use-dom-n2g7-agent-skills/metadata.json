@@ -1,0 +1,38 @@
+{
+  "name": "use-dom",
+  "repo": "n2g7/agent-skills",
+  "path": "use-dom/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/n2g7/agent-skills",
+  "dir_name": "use-dom-n2g7-agent-skills",
+  "downloaded_at": "2026-10-29T05:13:27.395516Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: ui, css, component",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "ui",
+      "css",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "n2g7",
+  "source_url": "https://github.com/n2g7/agent-skills/blob/main/use-dom/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/n2g7/agent-skills/blob/main/use-dom/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use Expo DOM components to run web code in a webview on native and as-is on web. Migrate web code to native incrementally."
+}

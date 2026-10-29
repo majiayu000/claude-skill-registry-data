@@ -1,0 +1,37 @@
+{
+  "name": "animating-with-code",
+  "repo": "oaustegard/claude-skills",
+  "path": "animating-with-code/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/oaustegard/claude-skills",
+  "dir_name": "animating-with-code",
+  "downloaded_at": "2026-10-29T05:26:02.817941Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: creative=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "story",
+      "writing"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "oaustegard",
+  "source_url": "https://github.com/oaustegard/claude-skills/blob/main/animating-with-code/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/oaustegard/claude-skills/blob/main/animating-with-code/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Make a short animated film by writing the drawing code yourself: every frame a pure function of time, rendered headlessly to MP4. Covers storyboarding with a per-shot timing sheet of viewer 'reads', blocking key poses as stills, the contact-sheet / frame-strip / crop review loop, and the hand-painted character kit JohnHeibel/ClaudeAnimationBase (p5.js + p5.brush, the Clawd mascot, 31 emotions). Use for 'animate', 'make a cartoon', 'animated short', 'motion graphic', 'Clawd video', 'p5 animation', or any video request where Claude draws the frames. Not for AI-generated footage (creating-video), transcoding or trimming existing video (processing-video), or a comic from footage (drawing-video)."
+}

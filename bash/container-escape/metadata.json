@@ -1,0 +1,38 @@
+{
+  "name": "container-escape",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/cloud/container-escape/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "container-escape",
+  "downloaded_at": "2026-10-29T05:05:00.109827Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, cli",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/cloud/container-escape/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/cloud/container-escape/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when testing container escape during an authorized security assessment, CTF, or lab exercise. Covers in-container reconnaissance (capabilities, mounts, Docker socket, cgroups), privileged container escape, Docker socket abuse, the release_agent cgroup escape, CAP_SYS_ADMIN techniques, and host filesystem access via exposed mounts using Docker 27.x and Python 3.12. Use when you have a shell inside a Docker container and need to determine whether host access is reachable, in your own lab or an in-scope target."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "devil",
+  "repo": "marnixGeerkens/rocketlauncher-claude-code",
+  "path": "components/skills/productivity/devil/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/marnixGeerkens/rocketlauncher-claude-code",
+  "dir_name": "devil-marnixgeerkens-rocketlauncher-claud",
+  "downloaded_at": "2026-10-29T04:50:30.161492Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, product=3",
+    "score": 3,
+    "runner_up": "product",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "marnixGeerkens",
+  "source_url": "https://github.com/marnixGeerkens/rocketlauncher-claude-code/blob/main/components/skills/productivity/devil/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/marnixGeerkens/rocketlauncher-claude-code/blob/main/components/skills/productivity/devil/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reviews a product document (PRD, spec, design brief) BEFORE implementation to surface holes \u2014 undefined edge cases, missing states, policy gaps \u2014 by attacking what the document is SILENT about (things unwritten, and things written only for the happy path). Acts as a strict \"sign-off manager,\" ruling Approve / Conditional / Reject and producing a polite, forwardable question list. Works for planners/PMs (self-review before sharing), engineers (blocking questions before coding), and designers (screen states with no mockup). Use whenever the user wants a spec/PRD/plan/brief checked for readiness or gaps, or says \"review this spec\", \"find holes in this PRD\", \"poke holes in this\", \"is this plan good to build?\", \"can I start implementing this?\", \"what states/edge cases am I missing?\", \"what should I ask the PM before coding?\", \"run devil\", or pastes/links a planning document and asks whether it's ready to act on. Do NOT use it to: write or draft a new spec, summarize or translate a document, estimate/break down tickets, generate test cases, review or debug code, or compare already-built code against a doc \u2014 this skill runs on the DOCUMENT stage, before code exists."
+}

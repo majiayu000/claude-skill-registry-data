@@ -1,0 +1,38 @@
+{
+  "name": "interactive-testing",
+  "repo": "pekral/test-redundancy",
+  "path": ".agents/skills/interactive-testing/SKILL.md",
+  "github_branch": "master",
+  "category": "testing",
+  "source": "github.com/pekral/test-redundancy",
+  "dir_name": "interactive-testing",
+  "downloaded_at": "2026-10-29T05:40:06.636227Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, qa, playwright",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "qa",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pekral",
+  "source_url": "https://github.com/pekral/test-redundancy/blob/master/.agents/skills/interactive-testing/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pekral/test-redundancy/blob/master/.agents/skills/interactive-testing/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when verifying user-visible project changes against an assignment and the actual code diff. Requires the testing agent's own interactive browser and returns evidence-backed results, including failures and blocked scenarios."
+}

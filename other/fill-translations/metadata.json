@@ -1,0 +1,37 @@
+{
+  "name": "fill-translations",
+  "repo": "reactive-resume/reactive-resume",
+  "path": ".agents/skills/fill-translations/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/reactive-resume/reactive-resume",
+  "dir_name": "fill-translations",
+  "downloaded_at": "2026-10-29T06:03:11.780398Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "reactive-resume",
+  "source_url": "https://github.com/reactive-resume/reactive-resume/blob/main/.agents/skills/fill-translations/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/reactive-resume/reactive-resume/blob/main/.agents/skills/fill-translations/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Fill missing Reactive Resume translations across all configured web and mobile locales using parallel subagents, then prove catalog completeness. Use for \u201cfill translations\u201d, \u201ccomplete translations\u201d, missing locale strings, or a request to ensure translations are complete before release. Cover existing gaps unrelated to the current task unless the user explicitly narrows scope. Do not activate for ordinary prose translation or a read-only audit that forbids edits."
+}

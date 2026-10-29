@@ -1,0 +1,39 @@
+{
+  "name": "android-dynamic",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/mobile/android-dynamic/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "android-dynamic",
+  "downloaded_at": "2026-10-29T05:05:00.453650Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: platform=4, security=4",
+    "score": 4,
+    "runner_up": "security",
+    "runner_up_score": 4,
+    "signals": [
+      "device",
+      "adb",
+      "android",
+      "ios"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/mobile/android-dynamic/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/mobile/android-dynamic/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when you need to test a running Android app on an authorized engagement, such as a client mobile app pentest or a CTF APK that only reveals behavior at runtime. Covers test device setup with adb, objection 1.11.0 runtime exploration, Frida 16.x instrumentation for SSL pinning bypass and API hooking, traffic interception through Burp Suite, runtime secret extraction, intent and deep link fuzzing, and local storage inspection. Use when static analysis found leads that need confirmation, or when the app hides logic behind obfuscation, encryption, or server checks."
+}

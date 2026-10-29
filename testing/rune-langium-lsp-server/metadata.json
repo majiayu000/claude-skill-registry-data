@@ -1,0 +1,37 @@
+{
+  "name": "rune-langium-lsp-server",
+  "repo": "pradeepmouli/rune-langium",
+  "path": "apps/docs/skills/rune-langium-lsp-server/SKILL.md",
+  "github_branch": "master",
+  "category": "testing",
+  "source": "github.com/pradeepmouli/rune-langium",
+  "dir_name": "rune-langium-lsp-server",
+  "downloaded_at": "2026-10-29T05:46:57.924224Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, integration",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "test",
+      "integration"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pradeepmouli",
+  "source_url": "https://github.com/pradeepmouli/rune-langium/blob/master/apps/docs/skills/rune-langium-lsp-server/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pradeepmouli/rune-langium/blob/master/apps/docs/skills/rune-langium-lsp-server/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Embed a Rune DSL language server behind a WebSocket or custom connection\nadapter. Use when: Embedding a Rune DSL language server in a web application via WebSocket."
+}

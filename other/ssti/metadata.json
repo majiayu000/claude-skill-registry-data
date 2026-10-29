@@ -1,0 +1,37 @@
+{
+  "name": "ssti",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/web/ssti/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "ssti",
+  "downloaded_at": "2026-10-29T05:04:42.791026Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/web/ssti/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/web/ssti/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when testing a web application for Server-Side Template Injection on an authorized engagement. Covers polyglot detection probes that distinguish template engines, fingerprinting Jinja2, Twig, Freemarker, Velocity, Smarty, ERB and others, escalating from reflected math to object traversal and remote code execution, and exploiting blind SSTI out-of-band. Use when user input is reflected inside pages, emails, PDFs, error messages, or profile fields and simple math expressions like 7*7 evaluate server side."
+}

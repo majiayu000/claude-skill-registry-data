@@ -1,0 +1,37 @@
+{
+  "name": "om-create-skill",
+  "repo": "polo-blue/sds",
+  "path": ".claude/skills/om-create-skill/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/polo-blue/sds",
+  "dir_name": "om-create-skill",
+  "downloaded_at": "2026-10-29T05:45:05.797594Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polo-blue",
+  "source_url": "https://github.com/polo-blue/sds/blob/main/.claude/skills/om-create-skill/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polo-blue/sds/blob/main/.claude/skills/om-create-skill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Author a new OM skill from a brief, or split an oversized SKILL.md into layered references/ files \u2014 conservatively, behind the lint + completeness gate. Knows the layering philosophy, lint invariants, tracker abstraction, and the cross-skill contract, so output matches house conventions. Use for \"create a skill for\u2026\", \"new om-skill\", \"split this skill into references\"."
+}

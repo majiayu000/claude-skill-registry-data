@@ -1,0 +1,38 @@
+{
+  "name": "om-auto-create-pr-loop",
+  "repo": "polo-blue/sds",
+  "path": ".claude/skills/om-auto-create-pr-loop/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/polo-blue/sds",
+  "dir_name": "om-auto-create-pr-loop-polo-blue-sds",
+  "downloaded_at": "2026-10-29T05:45:10.839535Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=3, testing=3",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "workflow",
+      "task",
+      "planning"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polo-blue",
+  "source_url": "https://github.com/polo-blue/sds/blob/main/.claude/skills/om-auto-create-pr-loop/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polo-blue/sds/blob/main/.claude/skills/om-auto-create-pr-loop/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Advanced om-auto-create-pr for long, multi-step spec implementations needing resumability and strict step tracking \u2014 run folder (PLAN/HANDOFF/NOTIFY), one lean commit per Step, checkpoint verification every ~5 Steps with integration tests and UI screenshots, full gate at completion, ready labeled PR. Resumable via om-auto-continue-pr-loop. Use plain om-auto-create-pr for small fixes."
+}

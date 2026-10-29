@@ -1,0 +1,38 @@
+{
+  "name": "project-config",
+  "repo": "nerviz-ai/nerviz",
+  "path": ".claude/skills/project-config/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/nerviz-ai/nerviz",
+  "dir_name": "project-config-nerviz-ai-nerviz",
+  "downloaded_at": "2026-10-29T05:17:14.638462Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, cli",
+    "score": 3,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "nerviz-ai",
+  "source_url": "https://github.com/nerviz-ai/nerviz/blob/main/.claude/skills/project-config/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/nerviz-ai/nerviz/blob/main/.claude/skills/project-config/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Shows and changes what this project configures in its own `.claude/` \u2014 which skills and agents the audit trail records, the plan-window budget of the audit reports, whether a compose service stopped on purpose blocks the end of a turn \u2014 through `ArchHook.jar config`, the only writer, which validates every value before it writes. Explicit invocation only."
+}

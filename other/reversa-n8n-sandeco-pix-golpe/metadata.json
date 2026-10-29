@@ -1,0 +1,37 @@
+{
+  "name": "reversa-n8n",
+  "repo": "sandeco/pix-golpe",
+  "path": ".agents/skills/reversa-n8n/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sandeco/pix-golpe",
+  "dir_name": "reversa-n8n-sandeco-pix-golpe",
+  "downloaded_at": "2026-10-29T06:17:22.179909Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sandeco",
+  "source_url": "https://github.com/sandeco/pix-golpe/blob/main/.agents/skills/reversa-n8n/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sandeco/pix-golpe/blob/main/.agents/skills/reversa-n8n/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Gera specs SDD (workflow-overview, requirements, design) a partir de workflows do N8N exportados em JSON, preparando o terreno para reimplementa\u00e7\u00e3o em Python ou outra linguagem. Use quando o usu\u00e1rio tiver um arquivo JSON exportado do N8N e quiser document\u00e1-lo como spec ou portar para c\u00f3digo."
+}

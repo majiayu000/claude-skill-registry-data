@@ -1,0 +1,39 @@
+{
+  "name": "spec-to-code-compliance",
+  "repo": "pratyushdeosingh/mdp",
+  "path": ".agents/skills/spec-to-code-compliance/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/pratyushdeosingh/mdp",
+  "dir_name": "spec-to-code-compliance",
+  "downloaded_at": "2026-10-29T05:50:40.202836Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: pdf, docx, markdown, documentation",
+    "score": 4,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "pdf",
+      "docx",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pratyushdeosingh",
+  "source_url": "https://github.com/pratyushdeosingh/mdp/blob/main/.agents/skills/spec-to-code-compliance/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pratyushdeosingh/mdp/blob/main/.agents/skills/spec-to-code-compliance/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Verifies code implements exactly what documentation specifies for blockchain audits. Use when comparing code against whitepapers, finding gaps between specs and implementation, or performing compliance checks for protocol implementations."
+}

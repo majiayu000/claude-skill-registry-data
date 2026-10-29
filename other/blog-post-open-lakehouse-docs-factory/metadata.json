@@ -1,0 +1,37 @@
+{
+  "name": "blog-post",
+  "repo": "open-lakehouse/docs-factory",
+  "path": ".claude/skills/blog-post/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/open-lakehouse/docs-factory",
+  "dir_name": "blog-post-open-lakehouse-docs-factory",
+  "downloaded_at": "2026-10-29T05:32:23.895108Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: quality=2, writing=2",
+    "score": 2,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "open-lakehouse",
+  "source_url": "https://github.com/open-lakehouse/docs-factory/blob/main/.claude/skills/blog-post/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/open-lakehouse/docs-factory/blob/main/.claude/skills/blog-post/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Author an opinionated long-form blog post through its lifecycle \u2014 park an idea,\nturn it into a brief, draft it, and refine it \u2014 following the writing repo's blog\nconventions. Use when the user wants to start, write, or draft a blog post, turn\nan idea into a brief, or continue an in-progress post in blogs/<slug>/."
+}

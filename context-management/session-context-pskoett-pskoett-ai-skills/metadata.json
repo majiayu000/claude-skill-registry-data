@@ -1,0 +1,38 @@
+{
+  "name": "session-context",
+  "repo": "pskoett/pskoett-ai-skills",
+  "path": "skills/session-context/SKILL.md",
+  "github_branch": "main",
+  "category": "context-management",
+  "source": "github.com/pskoett/pskoett-ai-skills",
+  "dir_name": "session-context-pskoett-pskoett-ai-skills",
+  "downloaded_at": "2026-10-29T05:53:38.234570Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, retrieval, memory",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "retrieval",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pskoett",
+  "source_url": "https://github.com/pskoett/pskoett-ai-skills/blob/main/skills/session-context/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pskoett/pskoett-ai-skills/blob/main/skills/session-context/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "[Beta] Retrieves task-relevant prior sessions and returns a short, cited brief of decisions, corrections, failed approaches, and unresolved work. Use after the initial intent frame and before finalizing the approach, when asked to find related work, or when a concrete history gap could change the approach."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "om-setup-agent-pipeline",
+  "repo": "polo-blue/sds",
+  "path": ".claude/skills/om-setup-agent-pipeline/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/polo-blue/sds",
+  "dir_name": "om-setup-agent-pipeline-polo-blue-sds",
+  "downloaded_at": "2026-10-29T05:45:11.358564Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: testing=4, workflow=4",
+    "score": 4,
+    "runner_up": "workflow",
+    "runner_up_score": 4,
+    "signals": [
+      "test",
+      "qa",
+      "integration",
+      "playwright"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polo-blue",
+  "source_url": "https://github.com/polo-blue/sds/blob/main/.claude/skills/om-setup-agent-pipeline/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polo-blue/sds/blob/main/.claude/skills/om-setup-agent-pipeline/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "One-time pipeline configurator. Inspects the repo (default branch, validation scripts, labels), asks a few questions, writes .ai/agentic.config.json \u2014 the file every other skill reads \u2014 installs the tracker descriptor, and generates missing project docs (SDLC.md, CODE_REVIEW.md, BACKWARD_COMPATIBILITY.md, AGENTS.md starter). Re-run when the toolchain or label taxonomy changes. Verifies cross-skill coverage and prints the install command for missing skills."
+}

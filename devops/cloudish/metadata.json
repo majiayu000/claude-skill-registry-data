@@ -1,0 +1,39 @@
+{
+  "name": "cloudish",
+  "repo": "ranbot-ai/awesome-skills",
+  "path": "skills/cloudish/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/ranbot-ai/awesome-skills",
+  "dir_name": "cloudish",
+  "downloaded_at": "2026-10-29T06:01:04.678886Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for devops: docker, kubernetes, deploy",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "docker",
+      "kubernetes",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "ranbot-ai",
+  "source_url": "https://github.com/ranbot-ai/awesome-skills/blob/main/skills/cloudish/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ranbot-ai/awesome-skills/blob/main/skills/cloudish/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Deploy a Dockerfile, source folder, or existing image to Cloudish as a running container at a live URL, built server-side with no local Docker, with confirmation before spending credits."
+}

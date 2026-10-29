@@ -1,0 +1,37 @@
+{
+  "name": "seekter-interview",
+  "repo": "selfishprimate/seekter",
+  "path": ".claude/skills/seekter-interview/SKILL.md",
+  "github_branch": "main",
+  "category": "creative",
+  "source": "github.com/selfishprimate/seekter",
+  "dir_name": "seekter-interview",
+  "downloaded_at": "2026-10-29T06:22:33.136431Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "creative",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for creative: story, writing",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "story",
+      "writing"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "selfishprimate",
+  "source_url": "https://github.com/selfishprimate/seekter/blob/main/.claude/skills/seekter-interview/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/selfishprimate/seekter/blob/main/.claude/skills/seekter-interview/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Prepare the candidate for an interview stage at a company they applied to - screening call, hiring-manager round, portfolio review, design or take-home test, async video, final round. Reads the tracker record, the posting, what the application said, the company's own site and the candidate's story bank, and writes a prep file in profile/interviews/. Use when the user runs /seekter-interview, says they have a call or interview with a company, or asks for help preparing for one."
+}

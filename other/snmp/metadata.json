@@ -1,0 +1,37 @@
+{
+  "name": "snmp",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/network/snmp/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "snmp",
+  "downloaded_at": "2026-10-29T05:04:43.870452Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, platform=2",
+    "score": 2,
+    "runner_up": "platform",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/network/snmp/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/network/snmp/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when enumerating SNMP services on authorized targets, typically UDP 161. Covers finding SNMP hosts, testing default and common community strings, walking MIB trees with snmpwalk and snmpbulkwalk for system info, interfaces, routes, users, and running processes, probing SNMP write access safely, and handling SNMPv3 auth. Use when a network device, printer, or server exposes SNMP and you need configuration, credential, or topology data before deeper testing."
+}

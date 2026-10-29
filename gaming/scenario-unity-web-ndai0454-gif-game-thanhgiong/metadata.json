@@ -1,0 +1,38 @@
+{
+  "name": "scenario-unity-web",
+  "repo": "ndai0454-gif/Game_thanhgiong",
+  "path": ".agents/skills/scenario-unity-web/SKILL.md",
+  "github_branch": "main",
+  "category": "gaming",
+  "source": "github.com/ndai0454-gif/Game_thanhgiong",
+  "dir_name": "scenario-unity-web-ndai0454-gif-game-thanhgiong",
+  "downloaded_at": "2026-10-29T05:16:40.637331Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "gaming",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for gaming: game, gameplay, unity",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "game",
+      "gameplay",
+      "unity"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ndai0454-gif",
+  "source_url": "https://github.com/ndai0454-gif/Game_thanhgiong/blob/main/.agents/skills/scenario-unity-web/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ndai0454-gif/Game_thanhgiong/blob/main/.agents/skills/scenario-unity-web/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a Unity 6.3 game must run in a browser: 'export to WebGL', Web build settings or Build Profiles, gzip or Brotli, Decompression Fallback, server headers, 'Unable to parse .framework.js.br', build too big or slow to load, itch.io, CrazyGames or Poki limits, Addressables or AssetBundles on the Web, 'Could not produce class with ID', Task.Run freezing the browser, WebGL 2 vs WebGPU, .jslib and SendMessage interop, a page text field that gets no keystrokes, mobile browsers crashing, HTTPS for sensors, hosting and rollout."
+}

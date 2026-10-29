@@ -1,0 +1,37 @@
+{
+  "name": "reversa",
+  "repo": "sandeco/pix-golpe",
+  "path": ".agents/skills/reversa/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/sandeco/pix-golpe",
+  "dir_name": "reversa-sandeco-pix-golpe-2",
+  "downloaded_at": "2026-10-29T06:17:21.587507Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "framework"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sandeco",
+  "source_url": "https://github.com/sandeco/pix-golpe/blob/main/.agents/skills/reversa/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sandeco/pix-golpe/blob/main/.agents/skills/reversa/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Ponto de entrada principal do Reversa. Orquestra a an\u00e1lise completa de um sistema legado, gerando especifica\u00e7\u00f5es execut\u00e1veis por agentes de IA. Use quando o usu\u00e1rio digitar \"/reversa\", \"reversa\", \"iniciar an\u00e1lise\" ou \"engenharia reversa\". \u00c9 o primeiro skill a ser chamado em qualquer sess\u00e3o."
+}

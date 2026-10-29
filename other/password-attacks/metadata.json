@@ -1,0 +1,37 @@
+{
+  "name": "password-attacks",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/auth/password-attacks/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "password-attacks",
+  "downloaded_at": "2026-10-29T05:04:55.960455Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/auth/password-attacks/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/auth/password-attacks/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when cracking password hashes or auditing password strength on an authorized engagement. Covers hash identification, hashcat 6.2.6 and John the Ripper 1.9.0-jumbo-1 workflows, wordlist strategy, rule-based mutation, mask and hybrid attacks, and interpreting results for the report. Use when you recovered hashes from a database dump, a SAM file, /etc/shadow, or an application backup, or when the client asked for a password audit."
+}

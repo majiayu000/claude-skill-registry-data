@@ -1,0 +1,38 @@
+{
+  "name": "merge-github-pr",
+  "repo": "pekral/test-redundancy",
+  "path": ".agents/skills/merge-github-pr/SKILL.md",
+  "github_branch": "master",
+  "category": "quality",
+  "source": "github.com/pekral/test-redundancy",
+  "dir_name": "merge-github-pr",
+  "downloaded_at": "2026-10-29T05:39:58.153546Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, lint, review",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "lint",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pekral",
+  "source_url": "https://github.com/pekral/test-redundancy/blob/master/.agents/skills/merge-github-pr/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pekral/test-redundancy/blob/master/.agents/skills/merge-github-pr/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when safely merge GitHub pull requests that are ready"
+}

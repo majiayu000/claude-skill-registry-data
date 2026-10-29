@@ -1,0 +1,37 @@
+{
+  "name": "om-gap-analysis",
+  "repo": "polo-blue/sds",
+  "path": ".claude/skills/om-gap-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/polo-blue/sds",
+  "dir_name": "om-gap-analysis",
+  "downloaded_at": "2026-10-29T05:45:05.624037Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, ai-ml=2",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polo-blue",
+  "source_url": "https://github.com/polo-blue/sds/blob/main/.claude/skills/om-gap-analysis/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polo-blue/sds/blob/main/.claude/skills/om-gap-analysis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Grounded gap analysis of requirements against the platform an app builds on \u2014 client docs become an Epic/Story tree whose every coverage verdict is re-run by executable gates against a validated platform checkout, scored in atomic commits, license-tier-tagged, summarized with a backlog. Use for \"gap analysis\", \"what does the platform already cover\"."
+}

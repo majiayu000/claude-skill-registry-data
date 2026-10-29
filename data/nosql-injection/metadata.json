@@ -1,0 +1,38 @@
+{
+  "name": "nosql-injection",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/web/nosql-injection/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "nosql-injection",
+  "downloaded_at": "2026-10-29T05:04:51.375976Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/web/nosql-injection/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/web/nosql-injection/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when testing NoSQL-backed applications (MongoDB, CouchDB, Redis) for injection on an authorized engagement. Covers detecting NoSQL backends, operator injection ($ne, $gt, $regex, $where) in JSON bodies and query strings, authentication bypass with $ne tricks, boolean blind extraction with $regex, JavaScript injection through $where, and automating extraction with Python 3.12. Use when login forms or search features talk to a document database, when JSON payloads accept query operators, or when classic SQL payloads fail but the backend is not relational."
+}

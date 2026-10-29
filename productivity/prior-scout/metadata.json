@@ -1,0 +1,39 @@
+{
+  "name": "prior-scout",
+  "repo": "orange-clockwork/prior-scout",
+  "path": "skills/prior-scout/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/orange-clockwork/prior-scout",
+  "dir_name": "prior-scout",
+  "downloaded_at": "2026-10-29T05:33:32.828157Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, planning, memory",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "workflow",
+      "task",
+      "planning",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "orange-clockwork",
+  "source_url": "https://github.com/orange-clockwork/prior-scout/blob/main/skills/prior-scout/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/orange-clockwork/prior-scout/blob/main/skills/prior-scout/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find and compare existing tools, services, agent skills, libraries, or research using public sources or supplied materials. Verify source-backed claims and explain meaningful differences. Use for explicit similarity, alternatives, prior-art or related-work requests, and substantial new software, Agent Skill or research planning that needs external comparison. Not for ordinary debugging, formatting, refactoring, settled implementation, translation, summaries or documentation cleanup."
+}

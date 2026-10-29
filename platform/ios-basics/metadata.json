@@ -1,0 +1,39 @@
+{
+  "name": "ios-basics",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/mobile/ios-basics/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "ios-basics",
+  "downloaded_at": "2026-10-29T05:04:46.638518Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for platform: platform, device, android, ios",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "platform",
+      "device",
+      "android",
+      "ios"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/mobile/ios-basics/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/mobile/ios-basics/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when you need to assess an iOS application you are authorized to test, such as a client iPhone app on a penetration test or a CTF challenge IPA. Covers IPA acquisition and triage, Info.plist and entitlement review, binary inspection, Keychain and local storage checks, App Transport Security analysis, URL scheme attack surface, and runtime instrumentation with Frida 16.x and objection 1.11.0 on a jailbroken test device. Use when the engagement scope includes iOS, or when you must compare Android and iOS builds of the same app for platform-specific flaws."
+}

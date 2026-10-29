@@ -1,0 +1,37 @@
+{
+  "name": "gargoyle",
+  "repo": "otarampinelli/gargoyle",
+  "path": "skills/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/otarampinelli/gargoyle",
+  "dir_name": "skills-otarampinelli-gargoyle",
+  "downloaded_at": "2026-10-29T05:34:31.629169Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 1,
+    "signals": [
+      "quality",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "otarampinelli",
+  "source_url": "https://github.com/otarampinelli/gargoyle/blob/main/skills/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/otarampinelli/gargoyle/blob/main/skills/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reviews local changes with gargoyle checks before pushing, then helps fix what it finds. Use when the user says \"/gargoyle\", \"run gargoyle\", or asks to review their changes before pushing."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "om-auto-manage-issues",
+  "repo": "polo-blue/sds",
+  "path": ".claude/skills/om-auto-manage-issues/SKILL.md",
+  "github_branch": "main",
+  "category": "analysis",
+  "source": "github.com/polo-blue/sds",
+  "dir_name": "om-auto-manage-issues-polo-blue-sds",
+  "downloaded_at": "2026-10-29T05:45:10.126301Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "analysis",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for analysis: analysis, analyze",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polo-blue",
+  "source_url": "https://github.com/polo-blue/sds/blob/main/.claude/skills/om-auto-manage-issues/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polo-blue/sds/blob/main/.claude/skills/om-auto-manage-issues/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Bring existing tracker issues up to standard without implementing anything \u2014 applies missing SDLC labels, clarifies laconic issues (analyzing attached screenshots), posts a read-only implementation-prep analysis, checks each issue against SDLC.md's Definition of Ready (READY_STATUS, not-ready comment), and flags feature issues lacking a covering spec (optionally authoring one with --write-missing-specs). Single issue or a batch (last ~25 open, worst-described first). Idempotent, claim-aware."
+}

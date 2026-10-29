@@ -1,0 +1,39 @@
+{
+  "name": "absolute-deflake",
+  "repo": "punkouter27/PoFootball",
+  "path": ".claude/skills/absolute-deflake/SKILL.md",
+  "github_branch": "master",
+  "category": "testing",
+  "source": "github.com/punkouter27/PoFootball",
+  "dir_name": "absolute-deflake-punkouter27-pofootball",
+  "downloaded_at": "2026-10-29T05:54:45.901799Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, jest, pytest",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "jest",
+      "pytest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "punkouter27",
+  "source_url": "https://github.com/punkouter27/PoFootball/blob/master/.claude/skills/absolute-deflake/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/punkouter27/PoFootball/blob/master/.claude/skills/absolute-deflake/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Flaky test fixes: detect nondeterministic tests empirically (repeat/shuffle/parallel runs), diagnose the root cause, fix it \u2014 never retry/skip/sleep \u2014 and verify across many randomized runs. Triggers on \"absolute deflake\", \"fix flaky tests\", \"CI is flaky\", \"this test fails randomly/intermittently\"."
+}

@@ -1,0 +1,40 @@
+{
+  "name": "threat-hunting",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/soc/threat-hunting/SKILL.md",
+  "github_branch": "main",
+  "category": "forensics",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "threat-hunting-mizazhaider-ceh-agentarsenal",
+  "downloaded_at": "2026-10-29T05:04:49.963360Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "forensics",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for forensics: forensic, forensics, incident, evidence, triage",
+    "score": 5,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "forensic",
+      "forensics",
+      "incident",
+      "evidence",
+      "triage"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/soc/threat-hunting/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/soc/threat-hunting/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when proactively hunting for undetected intruders in an environment you are authorized to defend. Covers hypothesis-driven hunting, building hunts from MITRE ATT&CK techniques and threat intel, data sources and collection windows, frequency and stacking analysis, first-seen and rare-event hunting, documenting findings, and turning a successful hunt into a permanent detection. Use when alerts are quiet but risk is high, after a threat intel report, or on a recurring hunt schedule."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "om-prepare-issue",
+  "repo": "polo-blue/sds",
+  "path": ".claude/skills/om-prepare-issue/SKILL.md",
+  "github_branch": "main",
+  "category": "product",
+  "source": "github.com/polo-blue/sds",
+  "dir_name": "om-prepare-issue-polo-blue-sds",
+  "downloaded_at": "2026-10-29T05:45:05.975839Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "product",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for product: product, feature, backlog",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "product",
+      "feature",
+      "backlog"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polo-blue",
+  "source_url": "https://github.com/polo-blue/sds/blob/main/.claude/skills/om-prepare-issue/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polo-blue/sds/blob/main/.claude/skills/om-prepare-issue/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create one well-formed tracker issue from a brief without implementing it \u2014 dedupes against existing issues and PRs, links a covering spec (authoring one via om-auto-write-spec on a design-only PR when a feature needs it), attaches user-provided images as tracker evidence, otherwise embeds step-by-step guidance, and applies SDLC labels on creation. For existing issues use om-auto-manage-issues. Use for \"file an issue for X\", \"park this idea\"."
+}

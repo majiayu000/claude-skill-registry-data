@@ -1,0 +1,37 @@
+{
+  "name": "reversa-curator",
+  "repo": "sandeco/pix-golpe",
+  "path": ".claude/skills/reversa-curator/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/sandeco/pix-golpe",
+  "dir_name": "reversa-curator-sandeco-pix-golpe-2",
+  "downloaded_at": "2026-10-29T06:17:30.289372Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "framework"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sandeco",
+  "source_url": "https://github.com/sandeco/pix-golpe/blob/main/.claude/skills/reversa-curator/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sandeco/pix-golpe/blob/main/.claude/skills/reversa-curator/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Segundo agente do Time de Migra\u00e7\u00e3o. Decide o que migra, o que descarta e o que precisa de decis\u00e3o humana, com base nas specs do legado, no crit\u00e9rio do brief e no paradigma escolhido. Produz target_business_rules.md e discard_log.md. Ativa\u00e7\u00e3o: /reversa-curator (geralmente invocado por /reversa-migrate)."
+}

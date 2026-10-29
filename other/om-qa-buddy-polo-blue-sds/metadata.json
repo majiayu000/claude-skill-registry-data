@@ -1,0 +1,37 @@
+{
+  "name": "om-qa-buddy",
+  "repo": "polo-blue/sds",
+  "path": ".claude/skills/om-qa-buddy/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/polo-blue/sds",
+  "dir_name": "om-qa-buddy-polo-blue-sds",
+  "downloaded_at": "2026-10-29T05:45:03.355415Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polo-blue",
+  "source_url": "https://github.com/polo-blue/sds/blob/main/.claude/skills/om-qa-buddy/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polo-blue/sds/blob/main/.claude/skills/om-qa-buddy/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Runs a manual QA session for a PR, issue, or branch \u2014 publishes an interactive runbook the tester works through in parallel from the moment a plan exists, updated with AI verdicts and bugs at the end. Never touches the tracker itself. Unlike `om-auto-qa-pr`'s automated sign-off, this is human-in-the-loop and grows a local QA knowledge base. Use when the user says \"test this for me\", \"QA this PR\", \"find bugs in this change\", \"walk through this issue for bugs\"."
+}

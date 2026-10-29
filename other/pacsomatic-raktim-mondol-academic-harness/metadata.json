@@ -1,0 +1,37 @@
+{
+  "name": "pacsomatic",
+  "repo": "raktim-mondol/academic-harness",
+  "path": "skills/pacsomatic/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/raktim-mondol/academic-harness",
+  "dir_name": "pacsomatic-raktim-mondol-academic-harness",
+  "downloaded_at": "2026-10-29T06:00:02.288100Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "raktim-mondol",
+  "source_url": "https://github.com/raktim-mondol/academic-harness/blob/main/skills/pacsomatic/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/raktim-mondol/academic-harness/blob/main/skills/pacsomatic/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Operator toolkit for nf-core/pacsomatic matched tumor-normal workflows from BAM inputs. Use this skill when the user needs to validate run inputs, generate pacsomatic-compliant samplesheets, prepare reproducible Nextflow launch artifacts, run locally or submit to schedulers (LSF/Slurm/PBS/SGE), and triage execution failures. Triggers on requests to run pacsomatic, prepare launch commands/scripts, perform dry-run checks, or troubleshoot pipeline startup and scheduler submission errors."
+}

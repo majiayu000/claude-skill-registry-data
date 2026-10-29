@@ -1,0 +1,38 @@
+{
+  "name": "datamol",
+  "repo": "marnixGeerkens/rocketlauncher-claude-code",
+  "path": "components/skills/scientific/datamol/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/marnixGeerkens/rocketlauncher-claude-code",
+  "dir_name": "datamol-marnixgeerkens-rocketlauncher-claud",
+  "downloaded_at": "2026-10-29T04:50:27.592682Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: excel, xlsx, documentation",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "excel",
+      "xlsx",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "marnixGeerkens",
+  "source_url": "https://github.com/marnixGeerkens/rocketlauncher-claude-code/blob/main/components/skills/scientific/datamol/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/marnixGeerkens/rocketlauncher-claude-code/blob/main/components/skills/scientific/datamol/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Pythonic wrapper around RDKit with simplified interface and sensible defaults. Preferred for standard drug discovery: SMILES parsing, standardization, descriptors, fingerprints, clustering, 3D conformers, parallel processing. Returns native rdkit.Chem.Mol objects. For advanced control or custom parameters, use rdkit directly."
+}

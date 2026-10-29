@@ -1,0 +1,38 @@
+{
+  "name": "write-tickets",
+  "repo": "samjmarshall/personal-finance",
+  "path": ".claude/skills/write-tickets/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/samjmarshall/personal-finance",
+  "dir_name": "write-tickets",
+  "downloaded_at": "2026-10-29T06:16:31.897161Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, ux",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "ux"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "samjmarshall",
+  "source_url": "https://github.com/samjmarshall/personal-finance/blob/main/.claude/skills/write-tickets/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/samjmarshall/personal-finance/blob/main/.claude/skills/write-tickets/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Single entry point for turning a design, plan, PRD, or in-chat spec into either a single GitHub Issue or a parent epic with child issues. Use when the user wants to create, review, or improve any ticket destined for a coding agent or another developer to pick up. Covers atomic issues, bug reports, technical tasks, spikes, and epic breakdowns using tracer-bullet vertical slices. Output is AFK-ready by default \u2014 written so a coding agent days later can produce the right work without the original chat context."
+}

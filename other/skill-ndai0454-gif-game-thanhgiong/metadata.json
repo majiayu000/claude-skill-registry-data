@@ -1,0 +1,36 @@
+{
+  "name": "qwen-mm-plugins-mhs",
+  "repo": "ndai0454-gif/Game_thanhgiong",
+  "path": "Tools/Qwen-MM-Plugins/src/capabilities/mhs/skill/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ndai0454-gif/Game_thanhgiong",
+  "dir_name": "skill-ndai0454-gif-game-thanhgiong",
+  "downloaded_at": "2026-10-29T05:16:44.738092Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category ai-ml scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "api",
+    "runner_up_score": 1,
+    "signals": [
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ndai0454-gif",
+  "source_url": "https://github.com/ndai0454-gif/Game_thanhgiong/blob/main/Tools/Qwen-MM-Plugins/src/capabilities/mhs/skill/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ndai0454-gif/Game_thanhgiong/blob/main/Tools/Qwen-MM-Plugins/src/capabilities/mhs/skill/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Operate physical hardware (cameras, sensors, lamps, arms, lab equipment) through Model Hardware Standard adapters \u2014 mhs_discover (what devices exist), mhs_meta_info (what one device can do and its safety limits), mhs_read (sensor values, camera frames), mhs_write (send a command), mhs_health_check (is it alive), mhs_reset (recover or emergency-stop). Use whenever a task involves reading from or controlling a real device rather than a file."
+}

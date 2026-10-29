@@ -1,0 +1,39 @@
+{
+  "name": "query-engine",
+  "repo": "malkholy/Sila",
+  "path": ".claude/skills/query-engine/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/malkholy/Sila",
+  "dir_name": "query-engine",
+  "downloaded_at": "2026-10-29T04:47:00.406783Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for design: design, ui, frontend, component",
+    "score": 4,
+    "runner_up": "business",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "frontend",
+      "component"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "malkholy",
+  "source_url": "https://github.com/malkholy/Sila/blob/main/.claude/skills/query-engine/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/malkholy/Sila/blob/main/.claude/skills/query-engine/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "PlusV1 ERP query/page architecture \u2014 every page dataset flows SQL View \u2192 Query Master \u2192 Page mapping \u2192 permission validation \u2192 the Generic Operation (GetGridData). Covers Base/Detail queries, filters, operations, Group By, and the tables/ops that implement it."
+}

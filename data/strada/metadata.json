@@ -1,0 +1,39 @@
+{
+  "name": "strada",
+  "repo": "remorses/opencode-config",
+  "path": "synced-skills/strada/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/remorses/opencode-config",
+  "dir_name": "strada",
+  "downloaded_at": "2026-10-29T06:04:50.807642Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for data: data, analytics, sql, database",
+    "score": 4,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "analytics",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "remorses",
+  "source_url": "https://github.com/remorses/opencode-config/blob/main/synced-skills/strada/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/remorses/opencode-config/blob/main/synced-skills/strada/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Strada is an open-source OpenTelemetry observability platform (error tracking, tracing, logs, metrics, browser analytics, product events, health checks) that stores data in ClickHouse/Tinybird. ALWAYS load this skill when you need to interface with the Strada CLI, read or debug a project issue via OpenTelemetry data collected by Strada, set up and configure a project that uses Strada for OpenTelemetry data ingestion, or add product analytics with track()."
+}

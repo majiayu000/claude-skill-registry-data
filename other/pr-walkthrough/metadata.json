@@ -1,0 +1,37 @@
+{
+  "name": "pr-walkthrough",
+  "repo": "prateek/dotfiles",
+  "path": "agent-marketplace/src/review/skills/pr-walkthrough/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/prateek/dotfiles",
+  "dir_name": "pr-walkthrough",
+  "downloaded_at": "2026-10-29T05:47:16.060192Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: creative=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "story",
+      "writing"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "prateek",
+  "source_url": "https://github.com/prateek/dotfiles/blob/master/agent-marketplace/src/review/skills/pr-walkthrough/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/prateek/dotfiles/blob/master/agent-marketplace/src/review/skills/pr-walkthrough/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Walk a reader through a pull request, branch, or set of changes as if they were a senior engineer with no context on the work. Produces a Markdown document with the code flow before the change (snippets and a diagram), the problem substantiated with real evidence, then each change and why it fixes the problem. Use when asked to \"walk me through\" or \"give me a tour of\" a PR or branch, to explain a change to someone who was not there, or to understand what a branch does before reviewing it. Not for writing PR descriptions, reviews, or crit stories."
+}

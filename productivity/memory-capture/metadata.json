@@ -1,0 +1,38 @@
+{
+  "name": "memory-capture",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/memory/memory-capture/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "memory-capture",
+  "downloaded_at": "2026-10-29T05:04:58.403940Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, memory",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/memory/memory-capture/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/memory/memory-capture/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when an agent needs to record what it learned so future runs can reuse it, or when an operator wants durable notes from a task that took real effort. Covers choosing the right memory kind (episodic events, semantic facts, procedural how-to), writing one-idea entries with honest confidence scores, tagging for later recall, and capturing with the memory-store CLI. Use when a scan finishes, a host behaves unexpectedly, a lesson is learned the hard way, or a session ends and the knowledge must survive it."
+}

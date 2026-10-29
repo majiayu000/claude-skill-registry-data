@@ -1,0 +1,37 @@
+{
+  "name": "race-conditions",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/web/race-conditions/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "race-conditions-mizazhaider-ceh-agentarsenal",
+  "downloaded_at": "2026-10-29T05:04:52.266853Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/web/race-conditions/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/web/race-conditions/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when testing for race conditions (time-of-check to time-of-use flaws) on an authorized engagement. Covers finding single-use or limited-quantity endpoints (coupons, credits, rate limits, email change, password reset), sending parallel requests with Python 3.12 threads and Burp Suite Turbo Intruder single-packet attacks, last-byte synchronization, and measuring outcomes without causing real damage. Use when business logic enforces limits that might break under concurrent requests, or when sequential tests behave correctly but parallel ones might not."
+}

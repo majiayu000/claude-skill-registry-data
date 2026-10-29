@@ -1,0 +1,38 @@
+{
+  "name": "benchmark-zsh-startup",
+  "repo": "prateek/dotfiles",
+  "path": ".agents/skills/benchmark-zsh-startup/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/prateek/dotfiles",
+  "dir_name": "benchmark-zsh-startup",
+  "downloaded_at": "2026-10-29T05:47:09.424195Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, performance=3",
+    "score": 3,
+    "runner_up": "performance",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "prateek",
+  "source_url": "https://github.com/prateek/dotfiles/blob/master/.agents/skills/benchmark-zsh-startup/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/prateek/dotfiles/blob/master/.agents/skills/benchmark-zsh-startup/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Benchmark and attribute zsh startup and prompt latency. Use when asked to profile a slow zsh prompt, explain where shell startup time is spent, compare `zsh-bench` with `zprof` or xtrace, or decide which zsh plugin, hook, or startup file to optimize first. Also use when the task is to track which zsh features, widgets, completions, or plugin-provided commands are actually being used."
+}

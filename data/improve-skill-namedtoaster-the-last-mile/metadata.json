@@ -1,0 +1,37 @@
+{
+  "name": "improve-skill",
+  "repo": "namedtoaster/The-Last-Mile",
+  "path": "skills/improve-skill/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/namedtoaster/The-Last-Mile",
+  "dir_name": "improve-skill-namedtoaster-the-last-mile",
+  "downloaded_at": "2026-10-29T05:14:20.163253Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, analytics",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "data",
+      "analytics"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "namedtoaster",
+  "source_url": "https://github.com/namedtoaster/The-Last-Mile/blob/main/skills/improve-skill/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/namedtoaster/The-Last-Mile/blob/main/skills/improve-skill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Fix a Last Mile skill that did the wrong thing, from inside the project where it went wrong. Decides whether the lesson belongs in the project's rules file or in the skill, makes the smallest change to the skill in The Last Mile repo (never the synced copy), keeps every project detail out because the repo is public, runs the checks and opens a pull request. Also adds a store or build trap other apps would hit to the ship skill's traps, through a fork when the user cannot push. Use when the user says a skill misfired, \"improve the skill\", \"fix session-end\", \"that skill should have done X\", or when session end lists a skill problem."
+}

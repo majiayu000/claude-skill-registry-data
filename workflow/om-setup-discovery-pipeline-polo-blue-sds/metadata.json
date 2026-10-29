@@ -1,0 +1,38 @@
+{
+  "name": "om-setup-discovery-pipeline",
+  "repo": "polo-blue/sds",
+  "path": ".claude/skills/om-setup-discovery-pipeline/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/polo-blue/sds",
+  "dir_name": "om-setup-discovery-pipeline-polo-blue-sds",
+  "downloaded_at": "2026-10-29T05:45:12.265094Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, process, pipeline",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "process",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polo-blue",
+  "source_url": "https://github.com/polo-blue/sds/blob/main/.claude/skills/om-setup-discovery-pipeline/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polo-blue/sds/blob/main/.claude/skills/om-setup-discovery-pipeline/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Adds the product layer to a repository that om-setup-agent-pipeline already configured \u2014 one yes per product role, a discovery block in .ai/agentic.config.json, the Discovery stage, Definition of Ready, product roles, and protected product decisions appended to SDLC.md between markers, the research directory, and a routing row in AGENTS.md. Run once; re-run with --refresh. No product skill requires it."
+}

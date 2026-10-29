@@ -1,0 +1,37 @@
+{
+  "name": "melonjs-getting-started",
+  "repo": "melonjs/melonJS",
+  "path": "packages/melonjs/skills/melonjs-getting-started/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/melonjs/melonJS",
+  "dir_name": "melonjs-getting-started",
+  "downloaded_at": "2026-10-29T04:56:36.702228Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "creative",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "melonjs",
+  "source_url": "https://github.com/melonjs/melonJS/blob/master/packages/melonjs/skills/melonjs-getting-started/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/melonjs/melonJS/blob/master/packages/melonjs/skills/melonjs-getting-started/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use this skill when starting or bootstrapping a melonJS game, creating the Application, choosing a renderer, or setting up the first scene. Covers the mandatory async init, the world container, adding renderables, and the WebGPU/WebGL 2/Canvas fallback. Triggers on: melonjs, new Application, app.init, app.world, video.AUTO, video.WEBGL, video.CANVAS, Stage, state.change, getting started, bootstrap."
+}

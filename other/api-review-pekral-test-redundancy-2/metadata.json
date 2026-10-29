@@ -1,0 +1,37 @@
+{
+  "name": "api-review",
+  "repo": "pekral/test-redundancy",
+  "path": ".claude/skills/api-review/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/pekral/test-redundancy",
+  "dir_name": "api-review-pekral-test-redundancy-2",
+  "downloaded_at": "2026-10-29T05:39:48.111767Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pekral",
+  "source_url": "https://github.com/pekral/test-redundancy/blob/master/.claude/skills/api-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pekral/test-redundancy/blob/master/.claude/skills/api-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when reviewing HTTP API design in a PR or change set \u2014 endpoints, routes, HTTP methods, status codes, idempotency, and input validation. Treats the API as a consumer-facing contract and flags resource-orientation, method-semantics, status-code, and trust-boundary violations. Read-only."
+}

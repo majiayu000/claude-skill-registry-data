@@ -1,0 +1,37 @@
+{
+  "name": "self-healing",
+  "repo": "pskoett/pskoett-ai-skills",
+  "path": "agent-plugin/skills/self-healing/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/pskoett/pskoett-ai-skills",
+  "dir_name": "self-healing-pskoett-pskoett-ai-skills-2",
+  "downloaded_at": "2026-10-29T05:53:44.047880Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pskoett",
+  "source_url": "https://github.com/pskoett/pskoett-ai-skills/blob/main/agent-plugin/skills/self-healing/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pskoett/pskoett-ai-skills/blob/main/agent-plugin/skills/self-healing/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Active runtime recovery for coding agents: when something breaks mid-task, diagnose the root cause, write a fix, VERIFY by re-running the broken thing, then file a `HEAL-` entry to `.learnings/HEALS.md` with proof. Use whenever a command, test, build, or lint fails or exits non-zero; on missing tooling, dependency/lockfile mismatch, wrong runtime version, venv or permission errors, port conflicts, dirty git state, or a missing `.env`; when the agent needs a helper or one-off script that doesn't exist yet; when an external API, tool, or MCP errors or rate-limits; or when a test flakes. Search `HEALS.md` by `Pattern-Key` first \u2014 most heals are recurrences, so increment `Recurrence-Count` instead of duplicating. Verify is mandatory: mark `pending-verify` honestly if sandboxed, `abandoned` if the fix can't be made to work. Pairs with `self-improvement` (which promotes recurring heals to durable memory) but owns the verify-before-persist discipline self-improvement doesn't."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "reversa-forward",
+  "repo": "sandeco/pix-golpe",
+  "path": ".agents/skills/reversa-forward/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sandeco/pix-golpe",
+  "dir_name": "reversa-forward-sandeco-pix-golpe",
+  "downloaded_at": "2026-10-29T06:17:29.142587Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sandeco",
+  "source_url": "https://github.com/sandeco/pix-golpe/blob/main/.agents/skills/reversa-forward/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sandeco/pix-golpe/blob/main/.agents/skills/reversa-forward/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Orquestrador do ciclo forward do Reversa: detecta o est\u00e1gio da feature ativa em `_reversa_forward/` e roteia para o pr\u00f3ximo agente (requirements, clarify, plan, to-do, audit, quality, coding, add, sync). S\u00f3 roteia, n\u00e3o escreve artefatos. Use com \"/reversa-forward\", \"iniciar evolu\u00e7\u00e3o\", \"iniciar pipeline forward\"."
+}

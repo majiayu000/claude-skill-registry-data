@@ -1,0 +1,37 @@
+{
+  "name": "msb-repo-layout",
+  "repo": "runoverlabs/sandbox-manager",
+  "path": ".agents/skills/msb-repo-layout/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/runoverlabs/sandbox-manager",
+  "dir_name": "msb-repo-layout",
+  "downloaded_at": "2026-10-29T06:14:24.654465Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "runoverlabs",
+  "source_url": "https://github.com/runoverlabs/sandbox-manager/blob/main/.agents/skills/msb-repo-layout/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/runoverlabs/sandbox-manager/blob/main/.agents/skills/msb-repo-layout/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Where things live in the msb-manager checkout and what each file is for: msbctl's internal shape (the Sandbox class, cmd_* handlers, main() argparse, the fzf menu with its numbered-prompt fallback), msb-picker, bootstrap.sh and how it is piped into the guest, defaults.toml, each template in templates/, and this repo's own .msb/. Use when you cannot find the code behind a behaviour, or when adding a file, a template or a command."
+}

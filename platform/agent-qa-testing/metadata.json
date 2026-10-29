@@ -1,0 +1,38 @@
+{
+  "name": "agent-qa-testing",
+  "repo": "majiayu000/spellbook",
+  "path": "skills/agent-qa-testing/SKILL.md",
+  "github_branch": "main",
+  "category": "platform",
+  "source": "github.com/majiayu000/spellbook",
+  "dir_name": "agent-qa-testing",
+  "downloaded_at": "2026-10-29T04:46:15.031441Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "platform",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for platform: device, android, ios",
+    "score": 3,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "device",
+      "android",
+      "ios"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "majiayu000",
+  "source_url": "https://github.com/majiayu000/spellbook/blob/main/skills/agent-qa-testing/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/majiayu000/spellbook/blob/main/skills/agent-qa-testing/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a project uses agent-qa and the user asks to validate its YAML, run a selected regression test, or triage a failed/healed run with memidex evidence. For a general app feature inventory, use app-user-story-qa."
+}

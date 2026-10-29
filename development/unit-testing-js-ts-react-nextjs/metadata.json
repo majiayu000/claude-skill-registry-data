@@ -1,0 +1,39 @@
+{
+  "name": "unit-testing-js-ts-react-nextjs",
+  "repo": "realdreamer/agent-skills",
+  "path": "skills/unit-testing-js-ts-react-nextjs/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/realdreamer/agent-skills",
+  "dir_name": "unit-testing-js-ts-react-nextjs",
+  "downloaded_at": "2026-10-29T06:03:27.537059Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, software, refactor",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "software",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "realdreamer",
+  "source_url": "https://github.com/realdreamer/agent-skills/blob/main/skills/unit-testing-js-ts-react-nextjs/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/realdreamer/agent-skills/blob/main/skills/unit-testing-js-ts-react-nextjs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Unit tests that catch real regressions, not just coverage, for software developers and QA engineers. Writes and reviews behavior-first tests for JavaScript/TypeScript, React and Next.js with Jest, Vitest and React Testing Library. Use when writing tests for a module, component, hook, route handler or server action; writing tests for a commit, branch, PR or diff; reviewing or auditing existing tests (brittle, over-mocked, snapshot-heavy, testing implementation details, flaky); or when asked to raise coverage or find missing test cases."
+}

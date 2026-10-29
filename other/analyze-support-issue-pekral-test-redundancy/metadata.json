@@ -1,0 +1,37 @@
+{
+  "name": "analyze-support-issue",
+  "repo": "pekral/test-redundancy",
+  "path": ".claude/skills/analyze-support-issue/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/pekral/test-redundancy",
+  "dir_name": "analyze-support-issue-pekral-test-redundancy",
+  "downloaded_at": "2026-10-29T05:40:11.370521Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pekral",
+  "source_url": "https://github.com/pekral/test-redundancy/blob/master/.claude/skills/analyze-support-issue/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pekral/test-redundancy/blob/master/.claude/skills/analyze-support-issue/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a JIRA issue from a support team needs an analysis a non-technical colleague can act on. Decides whether it is an application bug, a known bug, correct behaviour the user did not expect (with or without a documentation article), a documentation error, a missing feature, a data request, or something outside the application, and publishes one plain-language TL;DR comment in the language of the issue. Runs unattended; every statement in the comment is verified in this run and nothing is estimated."
+}

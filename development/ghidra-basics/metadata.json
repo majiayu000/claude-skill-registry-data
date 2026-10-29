@@ -1,0 +1,39 @@
+{
+  "name": "ghidra-basics",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/binary/ghidra-basics/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "ghidra-basics",
+  "downloaded_at": "2026-10-29T05:04:54.202763Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, software, compile",
+    "score": 4,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "software",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/binary/ghidra-basics/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/binary/ghidra-basics/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when you need to reverse engineer a compiled binary on an authorized task, such as a CTF reversing challenge, malware triage in a lab, or auditing a binary you have permission to analyze. Covers importing binaries into Ghidra 11.4, running auto-analysis, navigating functions and cross-references, reading the decompiler output, renaming and retyping for clarity, finding the main logic and input handling, string and import analysis, and basic Ghidra Python scripting. Use when source code is unavailable and you must understand what a binary does, or before writing an exploit for it."
+}

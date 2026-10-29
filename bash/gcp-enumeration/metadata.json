@@ -1,0 +1,38 @@
+{
+  "name": "gcp-enumeration",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/cloud/gcp-enumeration/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "gcp-enumeration",
+  "downloaded_at": "2026-10-29T05:04:57.890044Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, cli",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/cloud/gcp-enumeration/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/cloud/gcp-enumeration/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when enumerating a Google Cloud project, folder, or organization during an authorized cloud assessment, bug bounty engagement, or lab exercise. Covers authentication context, project and organization hierarchy, IAM policy bindings, service accounts and keys, Compute Engine instances, Cloud Storage buckets, Cloud Functions, and Cloud Asset Inventory search with gcloud 500.0.0 and Python 3.12. Use when you hold GCP credentials for a test project and need to map what the principal can reach, or when the scope permits unauthenticated checks of public buckets."
+}

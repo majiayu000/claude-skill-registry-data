@@ -1,0 +1,37 @@
+{
+  "name": "dom-clobbering",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/web/dom-clobbering/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "dom-clobbering",
+  "downloaded_at": "2026-10-29T05:04:49.276722Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/web/dom-clobbering/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/web/dom-clobbering/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when testing for DOM clobbering on an authorized web assessment. Covers named element clobbering, clobbering to XSS escalation, and code patterns that are vulnerable. Also use when reviewing client side JavaScript that reads DOM properties into security decisions."
+}

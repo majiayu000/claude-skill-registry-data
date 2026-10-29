@@ -1,0 +1,38 @@
+{
+  "name": "agent-state",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/memory/agent-state/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "agent-state",
+  "downloaded_at": "2026-10-29T05:04:48.912452Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, memory",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/memory/agent-state/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/memory/agent-state/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when an agent needs to save where it is in a long task so it can resume later, or when handing a task to another agent without losing context. Covers checkpointing progress as episodic entries, restoring state with targeted recall, writing handover notes that another agent can act on, and cleaning up stale checkpoints when the task finishes. Use when pausing a multi-step engagement, when a session might end before the work does, when splitting work across agents, or when resuming a task after a break."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "worktree",
+  "repo": "samjmarshall/personal-finance",
+  "path": ".claude/skills/worktree/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/samjmarshall/personal-finance",
+  "dir_name": "worktree-samjmarshall-personal-finance",
+  "downloaded_at": "2026-10-29T06:16:30.094214Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "samjmarshall",
+  "source_url": "https://github.com/samjmarshall/personal-finance/blob/main/.claude/skills/worktree/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/samjmarshall/personal-finance/blob/main/.claude/skills/worktree/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create, list, and tear down per-branch git worktrees, each with an isolated Neon database branch and a portless dev URL, so multiple branches can be worked in parallel without DB or dev-server collisions. A worktree is named for its branch and can be optionally tagged with a GitHub issue number. Use when the user says \"spin up / create a worktree for <branch>\", \"clean up the worktree\", \"list worktrees\", invokes /worktree, or wants parallel isolated dev environments."
+}

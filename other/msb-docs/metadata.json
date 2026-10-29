@@ -1,0 +1,38 @@
+{
+  "name": "msb-docs",
+  "repo": "runoverlabs/sandbox-manager",
+  "path": ".agents/skills/msb-docs/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/runoverlabs/sandbox-manager",
+  "dir_name": "msb-docs",
+  "downloaded_at": "2026-10-29T06:14:22.524832Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "runoverlabs",
+  "source_url": "https://github.com/runoverlabs/sandbox-manager/blob/main/.agents/skills/msb-docs/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/runoverlabs/sandbox-manager/blob/main/.agents/skills/msb-docs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The documentation site and the README's pictures: how a page is written (the four page kinds by section, the voice, the table shapes for commands, config keys and troubleshooting), docs/content Markdown with title/section/order/description front matter, docs/build.py's deliberate Markdown subset and template.html, the SEO and agent outputs (canonical, Open Graph, JSON-LD, sitemap.xml, llms.txt, a .md copy per page), what --check refuses including an msbctl subcommand with no Commands-page section, and scripts/screenshots (make.sh driving real msbctl in tmux against an invented HOME, render.py drawing the SVG). Use when editing or adding a page, when --check fails on a link, anchor or missing section, or when a screen a screenshot shows has changed."
+}

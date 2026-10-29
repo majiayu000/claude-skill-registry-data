@@ -1,0 +1,37 @@
+{
+  "name": "software-concept-architect-guardrails",
+  "repo": "ontology-of-everything/concept-skills",
+  "path": "skills/en/software-concept-architect-guardrails/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ontology-of-everything/concept-skills",
+  "dir_name": "software-concept-architect-guardrails",
+  "downloaded_at": "2026-10-29T05:31:34.724422Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ontology-of-everything",
+  "source_url": "https://github.com/ontology-of-everything/concept-skills/blob/main/skills/en/software-concept-architect-guardrails/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ontology-of-everything/concept-skills/blob/main/skills/en/software-concept-architect-guardrails/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Runs concept-spec guardrails in audit, concept, drift, pipeline, sync, or map mode only when the user explicitly invokes $software-concept-architect-guardrails. Use to create, backfill, compare, or map colocated concept specifications."
+}

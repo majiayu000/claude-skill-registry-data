@@ -1,0 +1,38 @@
+{
+  "name": "scenario-unity-architecture",
+  "repo": "ndai0454-gif/Game_thanhgiong",
+  "path": ".agents/skills/scenario-unity-architecture/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/ndai0454-gif/Game_thanhgiong",
+  "dir_name": "scenario-unity-architecture",
+  "downloaded_at": "2026-10-29T05:16:44.189996Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, gaming=3",
+    "score": 3,
+    "runner_up": "gaming",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "ndai0454-gif",
+  "source_url": "https://github.com/ndai0454-gif/Game_thanhgiong/blob/main/.agents/skills/scenario-unity-architecture/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/ndai0454-gif/Game_thanhgiong/blob/main/.agents/skills/scenario-unity-architecture/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when structuring Unity 6.3 C# code: ScriptableObject data vs runtime state, events and services, inventory, health, save and load, Input System actions and key rebinding, async with Awaitable, assembly definitions, Enter Play Mode and domain reload, .meta files, Git, Smart Merge and LFS. Also when 'my save works in the Editor but not in the build', statics keep values on the second Play, events fire twice or never, an await runs after its object died, rebinds are lost on relaunch, a renamed class loses its data, a scene merge breaks."
+}

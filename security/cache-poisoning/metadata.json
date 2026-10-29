@@ -1,0 +1,37 @@
+{
+  "name": "cache-poisoning",
+  "repo": "mizazhaider-ceh/AgentArsenal",
+  "path": "skills/web/cache-poisoning/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/mizazhaider-ceh/AgentArsenal",
+  "dir_name": "cache-poisoning",
+  "downloaded_at": "2026-10-29T05:04:51.193273Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: auth, pentest",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "auth",
+      "pentest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mizazhaider-ceh",
+  "source_url": "https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/web/cache-poisoning/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mizazhaider-ceh/AgentArsenal/blob/main/skills/web/cache-poisoning/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when testing web cache poisoning and web cache deception on an authorized engagement. Covers detecting cache layers via headers and timing, finding unkeyed inputs (headers, cookies, query parameters), poisoning cached responses with reflected XSS payloads or redirects, web cache deception with path confusion and static extensions, and confirming victim impact with a second session. Use when the target sits behind a CDN or reverse proxy cache, when responses include Age or X-Cache headers, or when unkeyed input is reflected in cached pages."
+}

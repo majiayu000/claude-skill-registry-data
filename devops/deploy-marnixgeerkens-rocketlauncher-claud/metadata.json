@@ -1,0 +1,42 @@
+{
+  "name": "railway-deploy",
+  "repo": "marnixGeerkens/rocketlauncher-claude-code",
+  "path": "components/skills/railway/deploy/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/marnixGeerkens/rocketlauncher-claude-code",
+  "dir_name": "deploy-marnixgeerkens-rocketlauncher-claud",
+  "downloaded_at": "2026-10-29T04:50:18.298306Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: ci, cd, docker, deploy, infra, infrastructure",
+    "score": 6,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "ci",
+      "cd",
+      "docker",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "marnixGeerkens",
+  "source_url": "https://github.com/marnixGeerkens/rocketlauncher-claude-code/blob/main/components/skills/railway/deploy/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/marnixGeerkens/rocketlauncher-claude-code/blob/main/components/skills/railway/deploy/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Deploy code to Railway using \"railway up\". Use when user wants to push code, says \"railway up\", \"deploy\", \"ship\", or \"push\". For initial setup or creating services, use railway-new skill. For Docker images, use railway-environment skill."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "om-smart-test",
+  "repo": "polo-blue/sds",
+  "path": ".claude/skills/om-smart-test/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/polo-blue/sds",
+  "dir_name": "om-smart-test",
+  "downloaded_at": "2026-10-29T05:45:12.450447Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, qa, integration",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "qa",
+      "integration"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polo-blue",
+  "source_url": "https://github.com/polo-blue/sds/blob/main/.claude/skills/om-smart-test/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polo-blue/sds/blob/main/.claude/skills/om-smart-test/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run only the tests a change can affect \u2014 diffs the branch against its base, maps changed files to affected units via the repo's test map or workspace manifest, picks tests per configured suite, runs them, and falls back to the full suite whenever the mapping is unsure. Use for \"run affected tests\", \"test only what changed\", \"smart test\"."
+}

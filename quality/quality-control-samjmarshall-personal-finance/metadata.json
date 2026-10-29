@@ -1,0 +1,38 @@
+{
+  "name": "quality-control",
+  "repo": "samjmarshall/personal-finance",
+  "path": ".claude/skills/quality-control/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/samjmarshall/personal-finance",
+  "dir_name": "quality-control-samjmarshall-personal-finance",
+  "downloaded_at": "2026-10-29T06:16:32.664898Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review, validate",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "quality",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "samjmarshall",
+  "source_url": "https://github.com/samjmarshall/personal-finance/blob/main/.claude/skills/quality-control/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/samjmarshall/personal-finance/blob/main/.claude/skills/quality-control/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Design-smell review of a diff \u2014 matches the changes since a fixed point (commit, branch, tag, or merge-base) against a fixed baseline of Fowler code smells (Refactoring, ch.3) and reports judgement-call findings. Complements /code-review (bugs, documented standards) and /validate_plan (spec conformance); use for the design-quality lens neither covers, or when the user asks for a \"smell review\"."
+}

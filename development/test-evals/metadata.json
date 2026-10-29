@@ -1,0 +1,40 @@
+{
+  "name": "test-evals",
+  "repo": "moonlight-lupin/agent-skills",
+  "path": "plugins/dev-pipeline/skills/test-evals/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/moonlight-lupin/agent-skills",
+  "dir_name": "test-evals",
+  "downloaded_at": "2026-10-29T05:07:50.515594Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, debug, refactor",
+    "score": 5,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "moonlight-lupin",
+  "source_url": "https://github.com/moonlight-lupin/agent-skills/blob/main/plugins/dev-pipeline/skills/test-evals/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/moonlight-lupin/agent-skills/blob/main/plugins/dev-pipeline/skills/test-evals/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when writing tests or verifying behavior before code lands \u2014 the stage that writes the plan's tests and runs them RED before build; TDD red-green-refactor, the iron law (no production code without a failing test first), seam-first public-interface tests, test sizes, mock discipline. Or when the user says \"TDD N loops each batch Opus loop\", \"batch properly, Opus on each batch before commit\", \"implement, use TDD\", or wants multi-feature TDD with per-batch Opus review before commit. Supports both Hermes-builds and Cursor-builds. Covers pre-commit five-axis review, severity labels, and verifying external review findings before fixing."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "feroxbuster",
+  "repo": "meowdiocre/meowpi",
+  "path": "skills/feroxbuster/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/meowdiocre/meowpi",
+  "dir_name": "feroxbuster",
+  "downloaded_at": "2026-10-29T04:57:38.301112Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: auth, fuzzing",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 1,
+    "signals": [
+      "auth",
+      "fuzzing"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "meowdiocre",
+  "source_url": "https://github.com/meowdiocre/meowpi/blob/main/skills/feroxbuster/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/meowdiocre/meowpi/blob/main/skills/feroxbuster/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Run feroxbuster 2.13 for recursive content discovery that filters wildcard responses, extracts links and records state you can resume. Use when a target is directory-heavy or you want one pass with extensions and recursion instead of hand-driving every branch. Not for vhost or parameter fuzzing (use ffuf) or template-based CVE checks (use nuclei)."
+}

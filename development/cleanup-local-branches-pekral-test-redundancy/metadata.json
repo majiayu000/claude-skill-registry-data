@@ -1,0 +1,37 @@
+{
+  "name": "cleanup-local-branches",
+  "repo": "pekral/test-redundancy",
+  "path": ".agents/skills/cleanup-local-branches/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/pekral/test-redundancy",
+  "dir_name": "cleanup-local-branches-pekral-test-redundancy",
+  "downloaded_at": "2026-10-29T05:40:15.482655Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "pekral",
+  "source_url": "https://github.com/pekral/test-redundancy/blob/master/.agents/skills/cleanup-local-branches/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/pekral/test-redundancy/blob/master/.agents/skills/cleanup-local-branches/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when cleaning up local Git branches after origin pruning. Deletes local branches whose upstream was deleted on origin (marked gone) and local branches with no origin counterpart that have been inactive for more than six months, while always protecting the current branch and the default branches. Previews every deletion before running it."
+}

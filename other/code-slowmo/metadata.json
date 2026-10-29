@@ -1,0 +1,37 @@
+{
+  "name": "code-slowmo",
+  "repo": "precious112/code-slowmo",
+  "path": "skills/code-slowmo/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/precious112/code-slowmo",
+  "dir_name": "code-slowmo",
+  "downloaded_at": "2026-10-29T05:51:25.502972Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, writing=2",
+    "score": 2,
+    "runner_up": "writing",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "precious112",
+  "source_url": "https://github.com/precious112/code-slowmo/blob/main/skills/code-slowmo/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/precious112/code-slowmo/blob/main/skills/code-slowmo/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Explains code with an interactive visual page instead of a wall of text. It builds one HTML file with a clickable map of the system, a step-by-step timeline of what each part tells the others, and a line-by-line run of the real code that shows changing values, a log and a mock of the screen. Everything is written in short, plain sentences. Use this whenever someone wants to understand how code works, such as \"how does X work\", \"walk me through this flow\", \"explain this codebase\", \"what happens when I click Y\", \"help me understand the architecture\" or \"I'm new to this repo\". Use it even if they never ask for a picture. Do not use it for writing, fixing or reviewing code."
+}

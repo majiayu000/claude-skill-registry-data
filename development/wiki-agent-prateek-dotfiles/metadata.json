@@ -1,0 +1,39 @@
+{
+  "name": "wiki-agent",
+  "repo": "prateek/dotfiles",
+  "path": "agent-marketplace/vendor/apm_modules/ar9av/obsidian-wiki/.skills/wiki-agent/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/prateek/dotfiles",
+  "dir_name": "wiki-agent-prateek-dotfiles",
+  "downloaded_at": "2026-10-29T05:47:36.416363Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build, refactor",
+    "score": 4,
+    "runner_up": "ai-llm",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "prateek",
+  "source_url": "https://github.com/prateek/dotfiles/blob/master/agent-marketplace/vendor/apm_modules/ar9av/obsidian-wiki/.skills/wiki-agent/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/prateek/dotfiles/blob/master/agent-marketplace/vendor/apm_modules/ar9av/obsidian-wiki/.skills/wiki-agent/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Search one AI agent's raw history for a specific topic, ingest only matching sessions, and return a synthesized answer. Use for targeted cross-agent recall; use wiki-history-ingest for bulk archival ingestion."
+}

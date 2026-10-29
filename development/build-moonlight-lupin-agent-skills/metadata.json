@@ -1,0 +1,39 @@
+{
+  "name": "build",
+  "repo": "moonlight-lupin/agent-skills",
+  "path": "plugins/dev-pipeline/skills/build/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/moonlight-lupin/agent-skills",
+  "dir_name": "build-moonlight-lupin-agent-skills",
+  "downloaded_at": "2026-10-29T05:07:49.510352Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build, debug",
+    "score": 4,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "moonlight-lupin",
+  "source_url": "https://github.com/moonlight-lupin/agent-skills/blob/main/plugins/dev-pipeline/skills/build/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/moonlight-lupin/agent-skills/blob/main/plugins/dev-pipeline/skills/build/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when executing an implementation plan with subagents \u2014 delegate_task a fresh implementer per task that makes the plan's RED tests pass, per-task review sized by risk-derived tier (one combined reviewer at T2, spec-compliance then code-quality at T3), durable progress ledger, converge loop, per-task independent verification. Or whenever dispatching an implementer on a ticket: state the ticket title before starting, dependency injection for mockability, SDK-style interfaces, cadenced inner/outer test loop. The build stage of the dev-pipeline."
+}

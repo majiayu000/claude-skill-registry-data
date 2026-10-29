@@ -1,0 +1,37 @@
+{
+  "name": "om-evolve-harness",
+  "repo": "polo-blue/sds",
+  "path": ".claude/skills/om-evolve-harness/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/polo-blue/sds",
+  "dir_name": "om-evolve-harness",
+  "downloaded_at": "2026-10-29T05:45:07.098091Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, ai-llm=2",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polo-blue",
+  "source_url": "https://github.com/polo-blue/sds/blob/main/.claude/skills/om-evolve-harness/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polo-blue/sds/blob/main/.claude/skills/om-evolve-harness/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Turn a real agent failure into one reproducible eval-harness case plus the smallest knowledge change \u2014 failing case first, one knowledge owner, semantic assertions, before/after evidence through the repo's configured harness commands. Use for \"add harness case\", \"agent got this wrong\", \"extend the harness\", \"rozszerz harness\"."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "om-brainstorm",
+  "repo": "polo-blue/sds",
+  "path": ".claude/skills/om-brainstorm/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/polo-blue/sds",
+  "dir_name": "om-brainstorm-polo-blue-sds",
+  "downloaded_at": "2026-10-29T05:45:04.129668Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, ai-llm=2",
+    "score": 2,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "agentic"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "polo-blue",
+  "source_url": "https://github.com/polo-blue/sds/blob/main/.claude/skills/om-brainstorm/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/polo-blue/sds/blob/main/.claude/skills/om-brainstorm/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Divergent conversation before any artifact exists \u2014 open questions one at a time, alternatives including building nothing, converging on a routing decision and a handoff brief for the next skill. Runs before om-spec-writing and om-prepare-issue. Use when the user says \"should we build this\", \"let's think this through\", \"I have an idea\", \"is this worth doing\"."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "engram-index",
+  "repo": "phanijapps/engram",
+  "path": ".agents/skills/engram-index/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/phanijapps/engram",
+  "dir_name": "engram-index",
+  "downloaded_at": "2026-10-29T05:41:47.754522Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "phanijapps",
+  "source_url": "https://github.com/phanijapps/engram/blob/main/.agents/skills/engram-index/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/phanijapps/engram/blob/main/.agents/skills/engram-index/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Index a codebase AND memorize what matters about it \u2014 build the code graph, then write durable, evidence-labeled memories (stack, invariants, sharp edges, build/test procedures). Trigger on \"index this repo\", first session in a repository, or when the engram stale-index reminder fires."
+}
