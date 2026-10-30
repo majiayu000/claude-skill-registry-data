@@ -1,0 +1,38 @@
+{
+  "name": "lit-humanizer",
+  "repo": "wjgoarxiv/litgravity",
+  "path": "plugin/skills/lit-humanizer/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/wjgoarxiv/litgravity",
+  "dir_name": "lit-humanizer",
+  "downloaded_at": "2026-10-30T05:46:54.428405Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: word, pptx, docx",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "word",
+      "pptx",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wjgoarxiv",
+  "source_url": "https://github.com/wjgoarxiv/litgravity/blob/main/plugin/skills/lit-humanizer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wjgoarxiv/litgravity/blob/main/plugin/skills/lit-humanizer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Rewrites Korean or English prose so it reads in the writer's own voice for its reader, keeping meaning, facts, numbers and uncertainty. Use to polish or de-template text."
+}

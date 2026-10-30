@@ -1,0 +1,38 @@
+{
+  "name": "thatch-code-archaeology",
+  "repo": "sysread/nak",
+  "path": ".claude/skills/thatch-code-archaeology/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sysread/nak",
+  "dir_name": "thatch-code-archaeology",
+  "downloaded_at": "2026-10-30T05:07:13.905624Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sysread",
+  "source_url": "https://github.com/sysread/nak/blob/main/.claude/skills/thatch-code-archaeology/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sysread/nak/blob/main/.claude/skills/thatch-code-archaeology/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user asks you to investigate an existing feature, debug an unfamiliar area of the code, or begin a new ticket. Explores the code base from multiple angles to build a complete picture before you propose changes. This is the research skill: it tells you how to understand code as it currently is. Pair with thatch-coding-workflow, which tells you how to structure the procedure for making a change."
+}

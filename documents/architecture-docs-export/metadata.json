@@ -1,0 +1,40 @@
+{
+  "name": "architecture-docs-export",
+  "repo": "shadowX4fox/solutions-architect-skills",
+  "path": "plugins/sa-delivery/skills/architecture-docs-export/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/shadowX4fox/solutions-architect-skills",
+  "dir_name": "architecture-docs-export",
+  "downloaded_at": "2026-10-30T04:44:53.542490Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word, docx, documentation",
+    "score": 5,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "word",
+      "docx",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "shadowX4fox",
+  "source_url": "https://github.com/shadowX4fox/solutions-architect-skills/blob/main/plugins/sa-delivery/skills/architecture-docs-export/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/shadowX4fox/solutions-architect-skills/blob/main/plugins/sa-delivery/skills/architecture-docs-export/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Export architecture documents to professional Word (.docx) files: \"export architecture to Word\", \"export handoff to Word\", \"stakeholder briefing\", \"generate .docx\". On-demand only \u2014 never runs automatically. Two modes: Solution Architecture (a bounded role-routed stakeholder briefing for Product Owners, chapter leads and technical owners, its companion architecture reference, then individual ADR docs) and Handoff (the four-part handoff kit). Content is extracted verbatim from existing files. This skill only produces .docx files. A request to release, publish, ship, tag, freeze, bump or finalize an architecture version is a release, not an export: it routes to `architecture-docs` (`architecture-lifecycle`)."
+}

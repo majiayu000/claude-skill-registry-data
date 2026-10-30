@@ -1,0 +1,37 @@
+{
+  "name": "swarm",
+  "repo": "wangzitian0/truealpha",
+  "path": ".agents/skills/swarm/SKILL.md",
+  "github_branch": "main",
+  "category": "orchestration",
+  "source": "github.com/wangzitian0/truealpha",
+  "dir_name": "swarm-wangzitian0-truealpha",
+  "downloaded_at": "2026-10-30T05:39:39.923580Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "orchestration",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for orchestration: orchestrator, multi-agent",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "orchestrator",
+      "multi-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wangzitian0",
+  "source_url": "https://github.com/wangzitian0/truealpha/blob/main/.agents/skills/swarm/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wangzitian0/truealpha/blob/main/.agents/skills/swarm/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Atomic multi-agent batch execution engine. Executes a single concurrent batch of M Interns via subagent_batch and aggregates outputs."
+}

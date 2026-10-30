@@ -1,0 +1,37 @@
+{
+  "name": "tg-check",
+  "repo": "youlianvr/oper-share",
+  "path": "skills/telegram/parts/tg-check/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/youlianvr/oper-share",
+  "dir_name": "tg-check-youlianvr-oper-share",
+  "downloaded_at": "2026-10-30T06:00:44.000338Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: analysis=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "analysis",
+      "analyze"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "youlianvr",
+  "source_url": "https://github.com/youlianvr/oper-share/blob/master/skills/telegram/parts/tg-check/SKILL.md",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/youlianvr/oper-share/blob/master/skills/telegram/parts/tg-check/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Telegram inbox analysis: read per-channel folders in inbox/, extract findings (API keys, tools, services, freebies, attachments) and report to the user. Triggered by \"check tg\", \"what's new in tg\". This is the READ side: the fetcher is not run, only already-downloaded messages are analyzed."
+}

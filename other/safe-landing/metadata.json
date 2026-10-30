@@ -1,0 +1,37 @@
+{
+  "name": "safe-landing",
+  "repo": "tmcfarlane/team-avatar",
+  "path": "plugins/team-avatar/skills/safe-landing/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/tmcfarlane/team-avatar",
+  "dir_name": "safe-landing",
+  "downloaded_at": "2026-10-30T05:19:49.035625Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tmcfarlane",
+  "source_url": "https://github.com/tmcfarlane/team-avatar/blob/main/plugins/team-avatar/skills/safe-landing/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tmcfarlane/team-avatar/blob/main/plugins/team-avatar/skills/safe-landing/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Appa's safe landing for shipping a green stack. Appa never sets down until he has seen the ground is solid. Use for \"land it\", \"ship the stack\", \"merge when ready\", \"merge it\", or landing PRs after `long-flight` reports merge-ready. Verifies each PR independently, lands only the contiguous verified run from the root bottom-up under a head guard, and reads back every landing. Needs the user's landing authority."
+}

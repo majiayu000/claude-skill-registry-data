@@ -1,0 +1,38 @@
+{
+  "name": "model-dos",
+  "repo": "thejefflarson/soundcheck",
+  "path": ".claude/skills/model-dos/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/thejefflarson/soundcheck",
+  "dir_name": "model-dos",
+  "downloaded_at": "2026-10-30T05:15:30.551171Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "api",
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "thejefflarson",
+  "source_url": "https://github.com/thejefflarson/soundcheck/blob/main/.claude/skills/model-dos/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/thejefflarson/soundcheck/blob/main/.claude/skills/model-dos/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Detects LLM endpoints missing token caps, rate limits, or prompt-length bounds, enabling cost and resource exhaustion. Use when writing LLM API call handlers, setting up inference endpoints, implementing chatbot backends, or configuring token limits for LLM services. Also invoke when accepting user- provided prompts without length constraints."
+}

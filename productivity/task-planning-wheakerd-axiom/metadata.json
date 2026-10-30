@@ -1,0 +1,39 @@
+{
+  "name": "task-planning",
+  "repo": "wheakerd/axiom",
+  "path": "plugin/skills/task-planning/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/wheakerd/axiom",
+  "dir_name": "task-planning-wheakerd-axiom",
+  "downloaded_at": "2026-10-30T05:43:48.894188Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for productivity: automation, workflow, task, planning",
+    "score": 4,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "automation",
+      "workflow",
+      "task",
+      "planning"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wheakerd",
+  "source_url": "https://github.com/wheakerd/axiom/blob/main/plugin/skills/task-planning/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wheakerd/axiom/blob/main/plugin/skills/task-planning/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create or revise an actionable task plan from the user's current requirements. Use when the user explicitly requests a task or implementation plan, or asks to remove, replace, merge, reorder, or narrow items in an existing plan. Keep retained decisions, dependencies, and acceptance criteria consistent with the current scope. Do not use for scheduled automations, progress reports, ordinary chat corrections, plan execution, or specialized planning already owned by another Axiom route. An explicit task-planning invocation may refine that plan's presentation while preserving its owner's constraints and authority."
+}

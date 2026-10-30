@@ -1,0 +1,38 @@
+{
+  "name": "lagune.repair",
+  "repo": "wellwelwel/lagune",
+  "path": "skills/lagune.repair/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/wellwelwel/lagune",
+  "dir_name": "lagune-repair",
+  "downloaded_at": "2026-10-30T05:42:33.273014Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, refactor",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wellwelwel",
+  "source_url": "https://github.com/wellwelwel/lagune/blob/main/skills/lagune.repair/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wellwelwel/lagune/blob/main/skills/lagune.repair/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Repair Lagune's internal tracking so each item stays whole when files are renamed or moved, and check every memory artifact against its template. A maintenance pass, not a security phase, rewriting the tracking map across all phases in one pass."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "gz-wp",
+  "repo": "tvproductions/gzkit",
+  "path": ".claude/skills/gz-wp/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/tvproductions/gzkit",
+  "dir_name": "gz-wp-tvproductions-gzkit",
+  "downloaded_at": "2026-10-30T05:26:52.475922Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tvproductions",
+  "source_url": "https://github.com/tvproductions/gzkit/blob/main/.claude/skills/gz-wp/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tvproductions/gzkit/blob/main/.claude/skills/gz-wp/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use to create, attach issues to, move, change, add evidence to or record an issue close on a work package (WP-<NN>-<slug>) through gz wp."
+}

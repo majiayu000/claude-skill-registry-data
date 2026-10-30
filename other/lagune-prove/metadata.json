@@ -1,0 +1,37 @@
+{
+  "name": "lagune.prove",
+  "repo": "wellwelwel/lagune",
+  "path": "skills/lagune.prove/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wellwelwel/lagune",
+  "dir_name": "lagune-prove",
+  "downloaded_at": "2026-10-30T05:42:32.580997Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wellwelwel",
+  "source_url": "https://github.com/wellwelwel/lagune/blob/main/skills/lagune.prove/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wellwelwel/lagune/blob/main/skills/lagune.prove/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Prove detected findings with runnable, defense-only evidence. For each finding the detect map carries, it writes a safe-path JavaScript test and a self-contained advisory under `.lagune/proofs/`. The test asserts secure behavior, never an exploit."
+}

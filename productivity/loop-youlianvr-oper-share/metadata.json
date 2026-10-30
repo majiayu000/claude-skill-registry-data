@@ -1,0 +1,38 @@
+{
+  "name": "loop",
+  "repo": "youlianvr/oper-share",
+  "path": "skills/loops/parts/loop/SKILL.md",
+  "github_branch": "master",
+  "category": "productivity",
+  "source": "github.com/youlianvr/oper-share",
+  "dir_name": "loop-youlianvr-oper-share",
+  "downloaded_at": "2026-10-30T06:00:35.324084Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, memory",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "youlianvr",
+  "source_url": "https://github.com/youlianvr/oper-share/blob/master/skills/loops/parts/loop/SKILL.md",
+  "license": "Proprietary",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/youlianvr/oper-share/blob/master/skills/loops/parts/loop/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Load when the user asks for a repeating autonomous mode: \"loop 10 30m <prompt>\", \"loop 99 6666 <prompt>\", \"work cycle after cycle\", \"keep going until it's done\", \"continue on your own, don't stop\", \"find new solutions turn after turn\", \"infinite loop\", \"autonomous until the result\". Each iteration is a full work cycle (re-state \u2192 prior knowledge \u2192 research \u2192 act \u2192 verify \u2192 checkpoint), the next iteration starts with a NEW angle or hypothesis, and the agent makes its own decisions. Stop: N iterations / M minutes / a readiness criterion / 2 iterations without progress. NOT for a single task (task-cycle) or unattended assigned-goal work (autonomous-work)."
+}

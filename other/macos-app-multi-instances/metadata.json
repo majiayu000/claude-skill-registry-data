@@ -1,0 +1,37 @@
+{
+  "name": "macos-app-multi-instances",
+  "repo": "soulmachine/skills",
+  "path": "macos-app-multi-instances/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/soulmachine/skills",
+  "dir_name": "macos-app-multi-instances",
+  "downloaded_at": "2026-10-30T04:58:26.610593Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "soulmachine",
+  "source_url": "https://github.com/soulmachine/skills/blob/main/macos-app-multi-instances/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/soulmachine/skills/blob/main/macos-app-multi-instances/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run several simultaneous instances of one macOS app (e.g. two or three accounts logged into WeChat at once) by duplicating and re-signing its .app bundle. Use when an app refuses to open a second window and just refocuses the running one, when `open -n -a <App>` launches no new process, or when a second independent login session for the same app is needed without a second macOS user account or VM."
+}

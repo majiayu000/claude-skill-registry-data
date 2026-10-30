@@ -1,0 +1,38 @@
+{
+  "name": "architecture-explorer-headers",
+  "repo": "shadowX4fox/solutions-architect-skills",
+  "path": "skills/architecture-explorer-headers/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/shadowX4fox/solutions-architect-skills",
+  "dir_name": "architecture-explorer-headers",
+  "downloaded_at": "2026-10-30T04:44:46.493858Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, documentation",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "shadowX4fox",
+  "source_url": "https://github.com/shadowX4fox/solutions-architect-skills/blob/main/skills/architecture-explorer-headers/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/shadowX4fox/solutions-architect-skills/blob/main/skills/architecture-explorer-headers/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Backfill `<!-- EXPLORER_HEADER ... -->` blocks into existing `docs/NN-*.md` and `docs/components/**/*.md` files that are missing one. The header (5\u201310 lines after the H1) surfaces key concepts, technologies, components, scope, and related ADRs, which `explorer-cli.ts manifest` lists and downstream skills use to choose which files to read. Invoke when a doc lacks a header, when bulk-backfilling a legacy project, or whenever the explorer is misclassifying files."
+}

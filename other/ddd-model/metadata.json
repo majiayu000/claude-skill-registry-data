@@ -1,0 +1,37 @@
+{
+  "name": "ddd-model",
+  "repo": "zudochkin/go-clean-ddd-skill",
+  "path": "skills/ddd-model/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/zudochkin/go-clean-ddd-skill",
+  "dir_name": "ddd-model",
+  "downloaded_at": "2026-10-30T06:11:10.494672Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zudochkin",
+  "source_url": "https://github.com/zudochkin/go-clean-ddd-skill/blob/master/skills/ddd-model/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zudochkin/go-clean-ddd-skill/blob/master/skills/ddd-model/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Interactive Domain-Driven Design modeling workflow. Use when you need to: design a new domain, identify Aggregates and Entities, choose architecture, define invariants. Generates Go code following Uber Style Guide."
+}

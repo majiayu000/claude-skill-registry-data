@@ -1,0 +1,37 @@
+{
+  "name": "outbox",
+  "repo": "tereo-io/tereo",
+  "path": ".claude/skills/outbox/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/tereo-io/tereo",
+  "dir_name": "outbox",
+  "downloaded_at": "2026-10-30T05:13:04.042878Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tereo-io",
+  "source_url": "https://github.com/tereo-io/tereo/blob/master/.claude/skills/outbox/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tereo-io/tereo/blob/master/.claude/skills/outbox/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Transactional audit entries and webhook events \u2014 core's own `logAuditTx`/`emitTx` and the `core.outbox` that app services get from @tereo-io/sdk. Use when writing an audit entry or emitting a webhook event from a mutation, adding an event type, touching the outbox reaper, or wiring the outbox into an app service."
+}

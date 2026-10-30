@@ -1,0 +1,39 @@
+{
+  "name": "kill-zombies",
+  "repo": "tatsoft-llc/Claude-Code-Skills",
+  "path": "skills/kill-zombies/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/tatsoft-llc/Claude-Code-Skills",
+  "dir_name": "kill-zombies",
+  "downloaded_at": "2026-10-30T05:10:19.053304Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, compile, debug",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "compile",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tatsoft-llc",
+  "source_url": "https://github.com/tatsoft-llc/Claude-Code-Skills/blob/main/skills/kill-zombies/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tatsoft-llc/Claude-Code-Skills/blob/main/skills/kill-zombies/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Find and terminate an orphaned process that is holding a file lock or a listen port after a crashed or interrupted session, so the next operation can proceed. Triggers when an operation fails because a file \"is being used by another process\", when a server or bridge cannot bind its port with \"address already in use\", when an error names the holder in a `Name (PID)` form, or when the user says \"kill zombies\", \"release the lock\", \"the port is stuck\", or \"it is hung\"."
+}

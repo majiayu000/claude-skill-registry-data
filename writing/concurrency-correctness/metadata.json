@@ -1,0 +1,37 @@
+{
+  "name": "concurrency-correctness",
+  "repo": "thejefflarson/soundcheck",
+  "path": ".claude/skills/concurrency-correctness/SKILL.md",
+  "github_branch": "main",
+  "category": "writing",
+  "source": "github.com/thejefflarson/soundcheck",
+  "dir_name": "concurrency-correctness",
+  "downloaded_at": "2026-10-30T05:15:36.542856Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "writing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for writing: writing, writer",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "writing",
+      "writer"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "thejefflarson",
+  "source_url": "https://github.com/thejefflarson/soundcheck/blob/main/.claude/skills/concurrency-correctness/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/thejefflarson/soundcheck/blob/main/.claude/skills/concurrency-correctness/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Detects multi-threaded code where a lock is held across a blocking operation, lock acquisition order risks deadlock, lock-free atomics use the wrong memory ordering, or double-checked locking is missing the necessary barrier. Use when writing or modifying code that acquires multiple locks, uses atomic operations with explicit memory orders (std::memory_order_*, atomic.LoadAcquire, Ordering::Relaxed), implements lazy initialization with double-checked locking, or calls a blocking operation (I/O, sleep, await, blocking channel send) inside a locked region."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "unsafe-api-consumption",
+  "repo": "thejefflarson/soundcheck",
+  "path": ".claude/skills/unsafe-api-consumption/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/thejefflarson/soundcheck",
+  "dir_name": "unsafe-api-consumption",
+  "downloaded_at": "2026-10-30T05:15:36.149695Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, audit, owasp",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "audit",
+      "owasp"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "thejefflarson",
+  "source_url": "https://github.com/thejefflarson/soundcheck/blob/main/.claude/skills/unsafe-api-consumption/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/thejefflarson/soundcheck/blob/main/.claude/skills/unsafe-api-consumption/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Detects code that consumes third-party API responses without type validation or sanitization. Use when writing code that calls third-party APIs, parses responses from external services, or integrates with webhooks and callbacks from external systems. Also invoke when deserializing or acting on data received from partner or vendor APIs without validation."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "thatch-fact-extractor",
+  "repo": "sysread/nak",
+  "path": ".claude/skills/thatch-fact-extractor/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/sysread/nak",
+  "dir_name": "thatch-fact-extractor",
+  "downloaded_at": "2026-10-30T05:07:12.472666Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build, debug",
+    "score": 4,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "framework",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sysread",
+  "source_url": "https://github.com/sysread/nak/blob/main/.claude/skills/thatch-fact-extractor/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sysread/nak/blob/main/.claude/skills/thatch-fact-extractor/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Extract durable project facts, user preferences, and environment knowledge from recent tool interactions. Use when thatch reports queued tool interactions needing extraction."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "checkup",
+  "repo": "tmcfarlane/team-avatar",
+  "path": "plugins/team-avatar/skills/checkup/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/tmcfarlane/team-avatar",
+  "dir_name": "checkup",
+  "downloaded_at": "2026-10-30T05:19:43.808114Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tmcfarlane",
+  "source_url": "https://github.com/tmcfarlane/team-avatar/blob/main/plugins/team-avatar/skills/checkup/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tmcfarlane/team-avatar/blob/main/plugins/team-avatar/skills/checkup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Katara's regular checkup, because a patient who was healthy last month can be sick today. Use for maintain-verification-skill, /maintain-verification-skill, \"audit the verify skill\", or \"is the feature map still right\". Periodic pass that keeps a project's verify skill and feature map honest. One read-only source reader per feature, one live session driving every feature, and at most one PR of proven corrections."
+}

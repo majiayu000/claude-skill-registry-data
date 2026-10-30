@@ -1,0 +1,37 @@
+{
+  "name": "dream",
+  "repo": "tatsoft-llc/Claude-Code-Skills",
+  "path": "skills/dream/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/tatsoft-llc/Claude-Code-Skills",
+  "dir_name": "dream",
+  "downloaded_at": "2026-10-30T05:10:18.905113Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, memory",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tatsoft-llc",
+  "source_url": "https://github.com/tatsoft-llc/Claude-Code-Skills/blob/main/skills/dream/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tatsoft-llc/Claude-Code-Skills/blob/main/skills/dream/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Consolidate the project's durable knowledge (auto memory, CLAUDE.md lessons, notes files) against what actually happened in the session records written since the last run. Finds entries a later decision has contradicted, duplicates, and lessons that recurred in several sessions but were never written down, then writes one cited report and applies only what the user approves. Use when the user asks to \"dream\", \"consolidate memory against the sessions\", \"what patterns are we repeating\", \"what keeps going stale\", \"clean up what Claude remembers\". User-invoked only: never scheduled, never run by a hook. Does NOT fire at session close (that is session-summary) or to save a single fact (write that directly)."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "thatch-review-synthesizer",
+  "repo": "sysread/nak",
+  "path": ".claude/skills/thatch-review-synthesizer/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/sysread/nak",
+  "dir_name": "thatch-review-synthesizer",
+  "downloaded_at": "2026-10-30T05:07:15.069530Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sysread",
+  "source_url": "https://github.com/sysread/nak/blob/main/.claude/skills/thatch-review-synthesizer/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sysread/nak/blob/main/.claude/skills/thatch-review-synthesizer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Verify and synthesize findings from multiple review specialist skills into a single deduplicated, severity-grouped report. Cross-references prior review comments and sibling PR registers when provided. Use after running one or more thatch-review-* specialist skills."
+}

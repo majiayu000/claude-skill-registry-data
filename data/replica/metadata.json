@@ -1,0 +1,38 @@
+{
+  "name": "replica",
+  "repo": "youlianvr/oper-share",
+  "path": "skills/replica/SKILL.md",
+  "github_branch": "master",
+  "category": "data",
+  "source": "github.com/youlianvr/oper-share",
+  "dir_name": "replica",
+  "downloaded_at": "2026-10-30T06:00:31.985036Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, database, pipeline",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "youlianvr",
+  "source_url": "https://github.com/youlianvr/oper-share/blob/master/skills/replica/SKILL.md",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/youlianvr/oper-share/blob/master/skills/replica/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Clean-room app cloning pipeline in eleven parts: reverse-engineer an app into a recon map, plan the stack and schema, rebuild the design system, build screens, add auth and payments, test the flows, score parity against the original, mine what its users hate, rebrand, then run the launch assets and deploy. Use when cloning or substantially re-implementing another app's features and flows \u2014 features and flows only, never its code, assets, logo or copy. One contract; the parts under parts/ carry the method and the tools."
+}

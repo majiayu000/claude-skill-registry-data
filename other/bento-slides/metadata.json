@@ -1,0 +1,37 @@
+{
+  "name": "bento-slides",
+  "repo": "youlianvr/oper-share",
+  "path": "skills/decks/parts/bento-slides/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/youlianvr/oper-share",
+  "dir_name": "bento-slides",
+  "downloaded_at": "2026-10-30T06:00:47.725295Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "youlianvr",
+  "source_url": "https://github.com/youlianvr/oper-share/blob/master/skills/decks/parts/bento-slides/SKILL.md",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/youlianvr/oper-share/blob/master/skills/decks/parts/bento-slides/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Create and edit Bento presentations \u2014 single-file .bento.html decks whose document is plain JSON in a \"#bento-doc\" script block. Use whenever the user wants a slide deck or presentation: starting from NOTHING (it downloads the latest Bento app from bento.page automatically), from source material, or by improving an existing .bento.html. Maps content to the right feature (charts, morph transitions, state slides, ken-burns, motion paths) instead of static text slides, then writes the document JSON in place. Full schema + recipes at https://bento.page/agents.md."
+}

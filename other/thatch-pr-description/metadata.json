@@ -1,0 +1,37 @@
+{
+  "name": "thatch-pr-description",
+  "repo": "sysread/nak",
+  "path": ".claude/skills/thatch-pr-description/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sysread/nak",
+  "dir_name": "thatch-pr-description",
+  "downloaded_at": "2026-10-30T05:07:11.993933Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, creative=2",
+    "score": 2,
+    "runner_up": "creative",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sysread",
+  "source_url": "https://github.com/sysread/nak/blob/main/.claude/skills/thatch-pr-description/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sysread/nak/blob/main/.claude/skills/thatch-pr-description/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Draft a PR description (SYNOPSIS / PURPOSE / DESCRIPTION / WALK-THROUGH / NOTES) with bold and italic emphasis on the phrases that carry the meaning, so a reviewer skimming only the emphasized fragments still gets the story. Use when the user asks you to write, draft, or update a PR description or PR body, or when running `gh pr create` and no body has been supplied. Do NOT use for commit messages, release notes, or changelog entries."
+}

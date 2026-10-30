@@ -1,0 +1,37 @@
+{
+  "name": "fastapi",
+  "repo": "youlianvr/oper-share",
+  "path": "skills/dev/parts/fastapi/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/youlianvr/oper-share",
+  "dir_name": "fastapi-youlianvr-oper-share",
+  "downloaded_at": "2026-10-30T06:00:35.527849Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "youlianvr",
+  "source_url": "https://github.com/youlianvr/oper-share/blob/master/skills/dev/parts/fastapi/SKILL.md",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/youlianvr/oper-share/blob/master/skills/dev/parts/fastapi/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "FastAPI and Pydantic conventions for API work: `Annotated` parameters and dependencies, return types and response models, router-level parameters, async versus sync path operations, JSON Lines / SSE / byte streaming, serving a built frontend, and native OpenTelemetry. Use when writing or reviewing a FastAPI app in this workspace."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "memory-config",
+  "repo": "zilliztech/memsearch",
+  "path": "plugins/_shared/skills/memory-config/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/zilliztech/memsearch",
+  "dir_name": "memory-config-zilliztech-memsearch",
+  "downloaded_at": "2026-10-30T06:09:10.858803Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zilliztech",
+  "source_url": "https://github.com/zilliztech/memsearch/blob/main/plugins/_shared/skills/memory-config/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zilliztech/memsearch/blob/main/plugins/_shared/skills/memory-config/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Diagnose and configure MemSearch memory behavior. Use when the user asks about MemSearch configuration, plugin summarization, PROJECT.md/USER.md maintenance, memory directories, index health, provider routing, prompt files, or migration/compatibility questions."
+}

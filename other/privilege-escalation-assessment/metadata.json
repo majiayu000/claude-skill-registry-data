@@ -1,0 +1,37 @@
+{
+  "name": "privilege-escalation-assessment",
+  "repo": "zero-lab-ai/skills",
+  "path": "plugins/identity-security/skills/privilege-escalation-assessment/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/zero-lab-ai/skills",
+  "dir_name": "privilege-escalation-assessment",
+  "downloaded_at": "2026-10-30T06:05:47.420793Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zero-lab-ai",
+  "source_url": "https://github.com/zero-lab-ai/skills/blob/main/plugins/identity-security/skills/privilege-escalation-assessment/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zero-lab-ai/skills/blob/main/plugins/identity-security/skills/privilege-escalation-assessment/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Assesses and ranks Windows, Linux, and cloud privilege-escalation paths using observed prerequisites, execution authority, operational signal, reliability, risk, cleanup, and verification. Use after gaining an authorized foothold or cloud identity when deciding whether elevation is necessary and which candidate path is defensible."
+}

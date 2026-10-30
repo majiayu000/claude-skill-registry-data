@@ -1,0 +1,38 @@
+{
+  "name": "move-and-repoint",
+  "repo": "tatsoft-llc/Claude-Code-Skills",
+  "path": "skills/move-and-repoint/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/tatsoft-llc/Claude-Code-Skills",
+  "dir_name": "move-and-repoint",
+  "downloaded_at": "2026-10-30T05:10:19.349947Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, markdown",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "doc",
+      "docs",
+      "markdown"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tatsoft-llc",
+  "source_url": "https://github.com/tatsoft-llc/Claude-Code-Skills/blob/main/skills/move-and-repoint/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tatsoft-llc/Claude-Code-Skills/blob/main/skills/move-and-repoint/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "When a file or folder is moved, renamed, or retired, find every reference to it, repoint the living documents to the new location, and leave historical records citing the old name untouched. Use before and after any move or rename that other files point at, and when cleaning up broken links after a reorganization. Trigger phrases include \"rename X to Y\", \"move this folder\", \"fix the references\", \"repoint the links\", \"clean up after the move\", \"we have broken links\", \"this doc moved\". Does NOT rewrite the content of historical records, and does not decide on its own to retire a document."
+}

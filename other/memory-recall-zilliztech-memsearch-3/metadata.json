@@ -1,0 +1,38 @@
+{
+  "name": "memory-recall",
+  "repo": "zilliztech/memsearch",
+  "path": "plugins/claude-code/skills/memory-recall/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/zilliztech/memsearch",
+  "dir_name": "memory-recall-zilliztech-memsearch-3",
+  "downloaded_at": "2026-10-30T06:09:12.007126Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "context",
+      "retrieval",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zilliztech",
+  "source_url": "https://github.com/zilliztech/memsearch/blob/main/plugins/claude-code/skills/memory-recall/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zilliztech/memsearch/blob/main/plugins/claude-code/skills/memory-recall/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Search and recall relevant memories from past sessions via memsearch. Use when the user's question could benefit from historical context, past decisions, debugging notes, previous conversations, or project knowledge -- especially questions like 'what did I decide about X', 'why did we do Y', or 'have I seen this before'. Also use when you see `[memsearch] Recall available if needed` capability hints injected via SessionStart or UserPromptSubmit. Typical flow: search for 3-5 chunks, expand the most relevant, optionally deep-drill into original transcripts via the anchor format. Skip when the question is purely about current code state (use Read/Grep), ephemeral (today's task only), or the user has explicitly asked to ignore memory."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "tempo",
+  "repo": "stanfish06/skillquarium",
+  "path": "skills/tempo/SKILL.md",
+  "github_branch": "master",
+  "category": "devops",
+  "source": "github.com/stanfish06/skillquarium",
+  "dir_name": "tempo-stanfish06-skillquarium",
+  "downloaded_at": "2026-10-30T05:01:02.737495Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: cd, docker, kubernetes, deploy",
+    "score": 4,
+    "runner_up": "api",
+    "runner_up_score": 2,
+    "signals": [
+      "cd",
+      "docker",
+      "kubernetes",
+      "deploy"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "stanfish06",
+  "source_url": "https://github.com/stanfish06/skillquarium/blob/master/skills/tempo/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/stanfish06/skillquarium/blob/master/skills/tempo/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Stand up Grafana Tempo as a cost-efficient distributed-tracing backend that only needs object storage, and write TraceQL queries against it. Covers OTLP + Jaeger + Zipkin ingestion, the distributor \u2192 live-store \u2192 block-builder \u2192 object-storage write path, metrics-generator for RED spanmetrics + service graphs, Helm `tempo-distributed` deployment, multi-tenant `X-Scope-OrgID`, TraceQL span / resource / event scopes, structural operators (`>>`, `<<`), `rate()` + `quantile_over_time` metrics, and the traces-to-logs / metrics / profiles datasource links. Use when deploying Tempo, writing a TraceQL query for slow / errored requests, debugging \"no traces showing in Explore\", sizing queriers / compactors, configuring S3 / GCS / Azure block storage, or wiring trace \u2194 log \u2194 profile correlation \u2014 even when the user says \"tracing backend\", \"find slow requests\", \"show me the service graph\", \"store traces in S3\", \"Jaeger compatible store\", or \"what called this span\" without naming Tempo."
+}

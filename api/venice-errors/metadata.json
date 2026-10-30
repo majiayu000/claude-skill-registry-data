@@ -1,0 +1,38 @@
+{
+  "name": "venice-errors",
+  "repo": "sysread/nak",
+  "path": ".claude/skills/venice-errors/SKILL.md",
+  "github_branch": "main",
+  "category": "api",
+  "source": "github.com/sysread/nak",
+  "dir_name": "venice-errors",
+  "downloaded_at": "2026-10-30T05:07:09.696059Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "api",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for api: api, sdk, endpoint",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "sdk",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sysread",
+  "source_url": "https://github.com/sysread/nak/blob/main/.claude/skills/venice-errors/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sysread/nak/blob/main/.claude/skills/venice-errors/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Handle Venice API errors correctly. Covers the StandardError / DetailedError / ContentViolationError / X402InferencePaymentRequired body shapes, every meaningful status code (400, 401, 402, 403, 415, 422, 429, 500, 503, 504), the 402 PAYMENT-REQUIRED header used by x402 inference, 422 content-policy suggested_prompt retry pattern, 429 rate-limit headers, and an exponential-backoff retry strategy with idempotency."
+}

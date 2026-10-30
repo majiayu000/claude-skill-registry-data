@@ -1,0 +1,37 @@
+{
+  "name": "thatch-review-context",
+  "repo": "sysread/nak",
+  "path": ".claude/skills/thatch-review-context/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sysread/nak",
+  "dir_name": "thatch-review-context",
+  "downloaded_at": "2026-10-30T05:07:11.845950Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sysread",
+  "source_url": "https://github.com/sysread/nak/blob/main/.claude/skills/thatch-review-context/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sysread/nak/blob/main/.claude/skills/thatch-review-context/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Gather project and feature context before a code review. Investigates PR descriptions, git history, ticket references, linked docs/tickets, docs, memory, and related PRs (stack members, release trains) to build a context brief that prevents false positives about intentionally deferred work and about pieces delivered by sibling PRs. Use before dispatching review specialists or running a solo review."
+}

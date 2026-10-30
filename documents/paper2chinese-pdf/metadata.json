@@ -1,0 +1,38 @@
+{
+  "name": "paper2chinese-pdf",
+  "repo": "zhikanglab/Paper2Chinese-PDF",
+  "path": "skills/paper2chinese-pdf/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/zhikanglab/Paper2Chinese-PDF",
+  "dir_name": "paper2chinese-pdf",
+  "downloaded_at": "2026-10-30T06:08:02.636868Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: pdf, word, docx",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "pdf",
+      "word",
+      "docx"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zhikanglab",
+  "source_url": "https://github.com/zhikanglab/Paper2Chinese-PDF/blob/main/skills/paper2chinese-pdf/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zhikanglab/Paper2Chinese-PDF/blob/main/skills/paper2chinese-pdf/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Translate English academic research PDFs into high-fidelity, full Simplified Chinese PDF and editable Word DOCX editions; exact English title under Chinese title; inline source-faithful figures/tables/equations; preserve true math indices; verify page spacing and original text alignment; output PDF, DOCX, or both as requested."
+}

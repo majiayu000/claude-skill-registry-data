@@ -1,0 +1,38 @@
+{
+  "name": "push-and-pull",
+  "repo": "tmcfarlane/team-avatar",
+  "path": "plugins/team-avatar/skills/push-and-pull/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/tmcfarlane/team-avatar",
+  "dir_name": "push-and-pull",
+  "downloaded_at": "2026-10-30T05:19:50.520218Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, testing=3",
+    "score": 3,
+    "runner_up": "testing",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tmcfarlane",
+  "source_url": "https://github.com/tmcfarlane/team-avatar/blob/main/plugins/team-avatar/skills/push-and-pull/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tmcfarlane/team-avatar/blob/main/plugins/team-avatar/skills/push-and-pull/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Katara's push and pull for test discipline. Use for tdd, /tdd, \"red green\", \"write a failing test\", \"add a regression test\", when a bug has an obvious cheap local test target, and when writing, changing, or reviewing tests. Skip a new test when the test path is unclear, expensive, integration-heavy, or not requested. Tests assert observable behavior so they fail when behavior breaks and survive refactors."
+}

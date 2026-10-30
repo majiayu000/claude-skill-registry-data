@@ -1,0 +1,37 @@
+{
+  "name": "covert-channel-assessment",
+  "repo": "zero-lab-ai/skills",
+  "path": "plugins/network-protocol-security/skills/covert-channel-assessment/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/zero-lab-ai/skills",
+  "dir_name": "covert-channel-assessment",
+  "downloaded_at": "2026-10-30T06:05:48.191629Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: security=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zero-lab-ai",
+  "source_url": "https://github.com/zero-lab-ai/skills/blob/main/plugins/network-protocol-security/skills/covert-channel-assessment/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zero-lab-ai/skills/blob/main/plugins/network-protocol-security/skills/covert-channel-assessment/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Assesses covert-channel and data-egress exposure, then plans or records bounded purple-team validation with synthetic data. Use when evaluating DNS, web, cloud, ICMP, tunnel, timing, steganographic, or dead-drop paths without turning a plausible route into a claim of successful exfiltration."
+}

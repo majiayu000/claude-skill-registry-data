@@ -1,0 +1,38 @@
+{
+  "name": "rust-coder",
+  "repo": "sno-ai/sno-station-skills",
+  "path": "plugins/sno-station-standalone/skills/rust-coder/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sno-ai/sno-station-skills",
+  "dir_name": "rust-coder",
+  "downloaded_at": "2026-10-30T04:55:39.421578Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, quality=3",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "compile",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sno-ai",
+  "source_url": "https://github.com/sno-ai/sno-station-skills/blob/main/plugins/sno-station-standalone/skills/rust-coder/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sno-ai/sno-station-skills/blob/main/plugins/sno-station-standalone/skills/rust-coder/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Implement, refactor, and migrate production Rust with repository-grounded ownership, type-driven invariants, explicit errors, safe concurrency, minimal unsafe code, and verified Cargo workflows. Use for Rust features, crates, CLIs, services, libraries, async code, FFI, performance work, migrations, or substantial .rs and Cargo.toml changes, including requests such as 'rust-coder', 'write Rust', or 'implement this Rust feature with Codex'."
+}

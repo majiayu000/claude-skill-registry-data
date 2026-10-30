@@ -1,0 +1,39 @@
+{
+  "name": "imsg-permissions",
+  "repo": "soulmachine/skills",
+  "path": "imsg-permissions/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/soulmachine/skills",
+  "dir_name": "imsg-permissions",
+  "downloaded_at": "2026-10-30T04:58:26.196431Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "soulmachine",
+  "source_url": "https://github.com/soulmachine/skills/blob/main/imsg-permissions/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/soulmachine/skills/blob/main/imsg-permissions/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Grant the imsg CLI its macOS privacy permissions (Full Disk Access, Automation \u2192 Messages, Contacts) and prove each one from every parent that runs imsg; on a SIP-off Mac, also deploy its IMCore bridge. Use when setting up imsg on a Mac, after `brew upgrade imsg` or a node upgrade, when imsg fails with \"unable to open database file\", \"Not authorized to send Apple events\" or \"(Contacts unavailable)\", or when typing indicators, read receipts or `imsg status` need the IMCore bridge."
+}

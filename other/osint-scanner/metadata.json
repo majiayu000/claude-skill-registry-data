@@ -1,0 +1,38 @@
+{
+  "name": "osint-scanner",
+  "repo": "zero-lab-ai/skills",
+  "path": "plugins/recon-operations/skills/osint-scanner/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/zero-lab-ai/skills",
+  "dir_name": "osint-scanner",
+  "downloaded_at": "2026-10-30T06:05:42.636179Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "framework",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zero-lab-ai",
+  "source_url": "https://github.com/zero-lab-ai/skills/blob/main/plugins/recon-operations/skills/osint-scanner/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zero-lab-ai/skills/blob/main/plugins/recon-operations/skills/osint-scanner/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Maps a target's public footprint \u2014 infrastructure, tech stack, leaked credentials, and people \u2014 using third-party data so no packet reaches the target. Use when scoping an engagement, planning a phishing pretext, or doing reconnaissance where the target must not detect it, and when deciding whether a recon action actually touches the target or not."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "agent-action-proof",
+  "repo": "zero-lab-ai/skills",
+  "path": "plugins/engagement-operations/skills/agent-action-proof/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/zero-lab-ai/skills",
+  "dir_name": "agent-action-proof",
+  "downloaded_at": "2026-10-30T06:05:45.110922Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=2, business=2",
+    "score": 2,
+    "runner_up": "business",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zero-lab-ai",
+  "source_url": "https://github.com/zero-lab-ai/skills/blob/main/plugins/engagement-operations/skills/agent-action-proof/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zero-lab-ai/skills/blob/main/plugins/engagement-operations/skills/agent-action-proof/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Grades evidence for an AI agent's downstream actions without overstating what a callback, tool trace, file read, command result, or target change proves. Use when validating impact, writing findings, or reviewing agent test receipts."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "detection-resilience-test-plan",
+  "repo": "zero-lab-ai/skills",
+  "path": "plugins/detection-validation/skills/detection-resilience-test-plan/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/zero-lab-ai/skills",
+  "dir_name": "detection-resilience-test-plan",
+  "downloaded_at": "2026-10-30T06:05:50.043073Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, planning, memory",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "planning",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zero-lab-ai",
+  "source_url": "https://github.com/zero-lab-ai/skills/blob/main/plugins/detection-validation/skills/detection-resilience-test-plan/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zero-lab-ai/skills/blob/main/plugins/detection-validation/skills/detection-resilience-test-plan/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Plans and records bounded defensive tests of whether preventive controls, telemetry, and detections remain effective across pre-approved opaque technique variations. Use when a blue or purple team needs authorization-, safety-, evidence-, cleanup-, and remediation-gated resilience measurement without generating bypass procedures, commands, payloads, or stealth rankings."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "architecture-lifecycle",
+  "repo": "shadowX4fox/solutions-architect-skills",
+  "path": "skills/architecture-lifecycle/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/shadowX4fox/solutions-architect-skills",
+  "dir_name": "architecture-lifecycle",
+  "downloaded_at": "2026-10-30T04:44:45.718980Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word, documentation",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "word",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "shadowX4fox",
+  "source_url": "https://github.com/shadowX4fox/solutions-architect-skills/blob/main/skills/architecture-lifecycle/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/shadowX4fox/solutions-architect-skills/blob/main/skills/architecture-lifecycle/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "The lifecycle of an architecture \u2014 where it stands, whether it can be released, what changed since the last release, and the release itself. Invoke first, without planning, for any request to release, publish, ship, tag, freeze, bump or finalize the architecture version, to check release readiness, to ask the architecture's status or which downstream artifacts are stale, to recover a missing architecture tag, or to deprecate an architecture. Not for Word export (architecture-docs-export). A release is a git tag: the project must be in a git repository."
+}

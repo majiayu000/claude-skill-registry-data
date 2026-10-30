@@ -1,0 +1,38 @@
+{
+  "name": "openapi",
+  "repo": "tereo-io/tereo",
+  "path": ".claude/skills/openapi/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/tereo-io/tereo",
+  "dir_name": "openapi",
+  "downloaded_at": "2026-10-30T05:13:04.800144Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "api",
+      "endpoint",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tereo-io",
+  "source_url": "https://github.com/tereo-io/tereo/blob/master/.claude/skills/openapi/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tereo-io/tereo/blob/master/.claude/skills/openapi/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create and update tereo's multi-file OpenAPI 3.1.0 spec \u2014 one spec for the whole service, split by API area (auth, files, webhooks, audit). Use when adding endpoints, modifying request/response shapes, adding webhook event definitions, or speccing an area that has none yet."
+}

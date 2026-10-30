@@ -1,0 +1,37 @@
+{
+  "name": "firmware-hardware-assessment",
+  "repo": "zero-lab-ai/skills",
+  "path": "plugins/application-endpoint-security/skills/firmware-hardware-assessment/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/zero-lab-ai/skills",
+  "dir_name": "firmware-hardware-assessment",
+  "downloaded_at": "2026-10-30T06:05:49.282292Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zero-lab-ai",
+  "source_url": "https://github.com/zero-lab-ai/skills/blob/main/plugins/application-endpoint-security/skills/firmware-hardware-assessment/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zero-lab-ai/skills/blob/main/plugins/application-endpoint-security/skills/firmware-hardware-assessment/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Tracks embedded-device and firmware assessment coverage across exact units, acquisition methods, debug interfaces, stored secrets, update trust, radios, physical safety, and delegated external systems. Use when planning, conducting, reviewing, or handing over an authorized hardware or IoT penetration test."
+}

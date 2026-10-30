@@ -1,0 +1,38 @@
+{
+  "name": "codebase-search",
+  "repo": "tmcfarlane/team-avatar",
+  "path": "skills/codebase-search/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/tmcfarlane/team-avatar",
+  "dir_name": "codebase-search-tmcfarlane-team-avatar",
+  "downloaded_at": "2026-10-30T05:19:42.022540Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: communication=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "email",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter",
+      "tags": "frontmatter:list"
+    }
+  },
+  "author": "tmcfarlane",
+  "source_url": "https://github.com/tmcfarlane/team-avatar/blob/main/skills/codebase-search/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tmcfarlane/team-avatar/blob/main/skills/codebase-search/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Search and navigate large codebases efficiently. Use when finding specific code patterns, tracing function calls, understanding code structure, or locating bugs. Handles semantic search, grep patterns, AST analysis."
+}

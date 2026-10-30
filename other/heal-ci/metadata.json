@@ -1,0 +1,37 @@
+{
+  "name": "heal-ci",
+  "repo": "tmcfarlane/team-avatar",
+  "path": "plugins/team-avatar/skills/heal-ci/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/tmcfarlane/team-avatar",
+  "dir_name": "heal-ci",
+  "downloaded_at": "2026-10-30T05:19:43.711880Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, workflow=2",
+    "score": 2,
+    "runner_up": "workflow",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tmcfarlane",
+  "source_url": "https://github.com/tmcfarlane/team-avatar/blob/main/plugins/team-avatar/skills/heal-ci/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tmcfarlane/team-avatar/blob/main/plugins/team-avatar/skills/heal-ci/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Katara heals a sick pipeline one wound at a time. Use for fix-ci, /fix-ci, \"CI is red\", \"fix the failing checks\", \"get CI green\", or a branch or PR whose checks fail. Finds the failing checks, reads the logs or external check links for the first actionable error, applies the smallest safe fix, and repeats until the checks are green."
+}

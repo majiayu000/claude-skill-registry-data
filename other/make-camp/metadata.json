@@ -1,0 +1,37 @@
+{
+  "name": "make-camp",
+  "repo": "tmcfarlane/team-avatar",
+  "path": "plugins/team-avatar/skills/make-camp/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/tmcfarlane/team-avatar",
+  "dir_name": "make-camp",
+  "downloaded_at": "2026-10-30T05:19:45.208234Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tmcfarlane",
+  "source_url": "https://github.com/tmcfarlane/team-avatar/blob/main/plugins/team-avatar/skills/make-camp/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tmcfarlane/team-avatar/blob/main/plugins/team-avatar/skills/make-camp/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Appa's camp for pausing work safely. When the team sets down for the night, they leave camp so anyone can pick up in the morning. Use for pause-safely, \"pause here\", \"stop for now\", \"save your place\", \"checkpoint this\", going offline, a session restart, or imminent context compaction. Stops at a safe boundary, commits a wip checkpoint, and publishes a resume note a cold-start agent can read. Explicit pauses only."
+}

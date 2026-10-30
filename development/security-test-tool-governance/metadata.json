@@ -1,0 +1,38 @@
+{
+  "name": "security-test-tool-governance",
+  "repo": "zero-lab-ai/skills",
+  "path": "plugins/engagement-operations/skills/security-test-tool-governance/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/zero-lab-ai/skills",
+  "dir_name": "security-test-tool-governance",
+  "downloaded_at": "2026-10-30T06:05:49.850999Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zero-lab-ai",
+  "source_url": "https://github.com/zero-lab-ai/skills/blob/main/plugins/engagement-operations/skills/security-test-tool-governance/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zero-lab-ai/skills/blob/main/plugins/engagement-operations/skills/security-test-tool-governance/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Governs supplied benign security-test tool artifacts through purpose, authority, provenance, artifact integrity, safety-test evidence, version-bound review, custody, change control, and defensive handoff. Use when reviewing proposed security tooling or deciding whether an externally supplied artifact is ready for an authorized isolated test, without generating source code, payloads, build procedures, bypasses, or deployment instructions."
+}

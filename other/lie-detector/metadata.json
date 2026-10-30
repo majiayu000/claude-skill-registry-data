@@ -1,0 +1,37 @@
+{
+  "name": "lie-detector",
+  "repo": "tmcfarlane/team-avatar",
+  "path": "plugins/team-avatar/skills/lie-detector/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/tmcfarlane/team-avatar",
+  "dir_name": "lie-detector",
+  "downloaded_at": "2026-10-30T05:19:49.390252Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tmcfarlane",
+  "source_url": "https://github.com/tmcfarlane/team-avatar/blob/main/plugins/team-avatar/skills/lie-detector/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tmcfarlane/team-avatar/blob/main/plugins/team-avatar/skills/lie-detector/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Toph's lie detector for multi-model adversarial review. She feels a heartbeat through the ground and knows when someone is lying, so a change that only claims to work does not fool her. Use for interrogate, /interrogate, adversarial review, multi-model review, \"challenge this\", \"stress test this code\", \"find blind spots\", \"tear this apart\", or a contested design before it ships. Several reviewers on different models challenge the change independently, and the lead sorts their findings into act on, consider, noted, and dismissed. Never applies changes."
+}

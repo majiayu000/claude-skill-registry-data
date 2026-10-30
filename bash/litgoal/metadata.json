@@ -1,0 +1,38 @@
+{
+  "name": "litgoal",
+  "repo": "wjgoarxiv/litgravity",
+  "path": "plugin/skills/litgoal/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/wjgoarxiv/litgravity",
+  "dir_name": "litgoal",
+  "downloaded_at": "2026-10-30T05:46:50.347814Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: shell, script, cli",
+    "score": 3,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wjgoarxiv",
+  "source_url": "https://github.com/wjgoarxiv/litgravity/blob/main/plugin/skills/litgoal/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wjgoarxiv/litgravity/blob/main/plugin/skills/litgoal/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Set, check or close a durable goal in .litgravity/goals with criteria, status and evidence. Use when work must outlive this conversation."
+}

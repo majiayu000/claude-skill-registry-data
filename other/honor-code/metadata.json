@@ -1,0 +1,37 @@
+{
+  "name": "honor-code",
+  "repo": "tmcfarlane/team-avatar",
+  "path": "plugins/team-avatar/skills/honor-code/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/tmcfarlane/team-avatar",
+  "dir_name": "honor-code",
+  "downloaded_at": "2026-10-30T05:19:46.241651Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tmcfarlane",
+  "source_url": "https://github.com/tmcfarlane/team-avatar/blob/main/plugins/team-avatar/skills/honor-code/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tmcfarlane/team-avatar/blob/main/plugins/team-avatar/skills/honor-code/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Zuko's honor code for making repeated agent mistakes impossible. Zuko turned his past mistakes into a code he lives by. Use for correct, /correct, \"stop making this mistake\", \"agents keep doing X\", or each time the operator corrects you. Finds the mistake classes agents repeat in this repo and fixes each at the highest level that works, architecture first, then types, then a lint whose error names the fix, then a test, and docs last. Proves each check fails on a real past mistake."
+}

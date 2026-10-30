@@ -1,0 +1,37 @@
+{
+  "name": "delegate-simple-task",
+  "repo": "wheakerd/axiom",
+  "path": "plugin/skills/delegate-simple-task/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/wheakerd/axiom",
+  "dir_name": "delegate-simple-task",
+  "downloaded_at": "2026-10-30T05:43:48.239137Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wheakerd",
+  "source_url": "https://github.com/wheakerd/axiom/blob/main/plugin/skills/delegate-simple-task/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wheakerd/axiom/blob/main/plugin/skills/delegate-simple-task/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Delegate clear, simple, bounded work to a subagent model from the user's ordered candidate list while the main session keeps responsibility for the outcome. Use on an explicit invocation or a clear request to delegate such work. Delegation needs the user's consent and, outside a permission-bypass mode, confirmation of the exact model and brief. Do not use for ambiguous requests or work the main session cannot verify."
+}

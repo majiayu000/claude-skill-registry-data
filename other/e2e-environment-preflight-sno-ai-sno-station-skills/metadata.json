@@ -1,0 +1,37 @@
+{
+  "name": "e2e-environment-preflight",
+  "repo": "sno-ai/sno-station-skills",
+  "path": "plugins/sno-station-standalone/skills/e2e-environment-preflight/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sno-ai/sno-station-skills",
+  "dir_name": "e2e-environment-preflight-sno-ai-sno-station-skills",
+  "downloaded_at": "2026-10-30T04:55:41.035973Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sno-ai",
+  "source_url": "https://github.com/sno-ai/sno-station-skills/blob/main/plugins/sno-station-standalone/skills/e2e-environment-preflight/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sno-ai/sno-station-skills/blob/main/plugins/sno-station-standalone/skills/e2e-environment-preflight/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Check external services, hosts, browser sessions, model endpoints, and agents before an end-to-end run. MANUAL-ONLY: load when a caller names it. NEVER auto-load from context for ordinary testing or debugging."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "caveman-review",
+  "repo": "shortcuts/locationjoystick",
+  "path": ".agents/skills/caveman-review/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/shortcuts/locationjoystick",
+  "dir_name": "caveman-review-shortcuts-locationjoystick",
+  "downloaded_at": "2026-10-30T04:48:19.271504Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: lint, review, validate",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "lint",
+      "review",
+      "validate"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "shortcuts",
+  "source_url": "https://github.com/shortcuts/locationjoystick/blob/main/.agents/skills/caveman-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/shortcuts/locationjoystick/blob/main/.agents/skills/caveman-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Ultra-compressed code review comments. Cuts noise from PR feedback while preserving the actionable signal. Each comment is one line: location, problem, fix. Use when user says \"review this PR\", \"code review\", \"review the diff\", \"/review\", or invokes /caveman-review. Auto-triggers when reviewing pull requests."
+}

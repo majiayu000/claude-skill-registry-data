@@ -1,0 +1,39 @@
+{
+  "name": "architecture-analysis",
+  "repo": "shadowX4fox/solutions-architect-skills",
+  "path": "plugins/sa-analysis/skills/architecture-analysis/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/shadowX4fox/solutions-architect-skills",
+  "dir_name": "architecture-analysis",
+  "downloaded_at": "2026-10-30T04:44:53.338355Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, markdown, documentation",
+    "score": 4,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "doc",
+      "docs",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "shadowX4fox",
+  "source_url": "https://github.com/shadowX4fox/solutions-architect-skills/blob/main/plugins/sa-analysis/skills/architecture-analysis/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/shadowX4fox/solutions-architect-skills/blob/main/plugins/sa-analysis/skills/architecture-analysis/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Run risk and design-characteristics analyses over an existing architecture: \"run architecture analysis\", \"SPOF analysis\", \"blast radius analysis\", \"STRIDE threat model\", \"cost hotspot analysis\", \"tech debt analysis\", \"security posture\", \"all analyses\". Ten lenses \u2014 SPOF, Blast Radius, Bottleneck, Cost Hotspots, STRIDE, Vendor Lock-in, Latency Budget, Tech Debt/EOL, Coupling, Data Sensitivity \u2014 one, a group or all ten, plus a Security Posture checklist that merges STRIDE and Data Sensitivity. Writes dated reports under analysis/ (Markdown or interactive HTML). Requires ARCHITECTURE.md. Not for compliance contracts (architecture-compliance) or ADRs (architecture-definition-record)."
+}

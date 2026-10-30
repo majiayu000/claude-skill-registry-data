@@ -1,0 +1,38 @@
+{
+  "name": "mlops",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/mlops/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "mlops-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-10-30T05:56:12.007316Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-ml=3, data=3",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "ml",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/mlops/SKILL.md",
+  "license": "MIT \u00a9 2026 V\u0169 V\u0103n T\u00e2m",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/mlops/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Design and implement ML operations \u2014 model registry, serving patterns, deployment strategies (shadow/canary/blue-green), drift detection, feature stores, retraining triggers, and prediction monitoring. Use when asked to \"deploy a model\", \"model registry\", \"MLflow\", \"feature store\", \"drift detection\", \"retrain trigger\", \"shadow mode\", \"model versioning\", \"serving infrastructure\", or \"ML pipeline\". Do NOT use for: prompt engineering or RAG pipelines \u2014 see prompt-engineering and rag-architect skills. Do NOT use for: general API deployment without an ML component."
+}

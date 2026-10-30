@@ -1,0 +1,37 @@
+{
+  "name": "clear-water",
+  "repo": "tmcfarlane/team-avatar",
+  "path": "plugins/team-avatar/skills/clear-water/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/tmcfarlane/team-avatar",
+  "dir_name": "clear-water",
+  "downloaded_at": "2026-10-30T05:19:48.377066Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: quality=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "lint",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tmcfarlane",
+  "source_url": "https://github.com/tmcfarlane/team-avatar/blob/main/plugins/team-avatar/skills/clear-water/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tmcfarlane/team-avatar/blob/main/plugins/team-avatar/skills/clear-water/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Katara clears the muddy water so the bottom shows. Use for no-comments, /no-comments, \"remove the comments\", \"comment review\", or before every review. Runs a fresh comment-reviewer pass over the diff, fixes the accepted findings at the root, and offers a type, test, or lint that encodes each claimed constraint so its comment can go."
+}

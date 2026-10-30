@@ -1,0 +1,39 @@
+{
+  "name": "thatch-coding-workflow",
+  "repo": "sysread/nak",
+  "path": ".claude/skills/thatch-coding-workflow/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/sysread/nak",
+  "dir_name": "thatch-coding-workflow",
+  "downloaded_at": "2026-10-30T05:07:13.243499Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, planning, memory",
+    "score": 4,
+    "runner_up": "quality",
+    "runner_up_score": 3,
+    "signals": [
+      "workflow",
+      "task",
+      "planning",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sysread",
+  "source_url": "https://github.com/sysread/nak/blob/main/.claude/skills/thatch-coding-workflow/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sysread/nak/blob/main/.claude/skills/thatch-coding-workflow/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Plan and execute code changes with a task-list-driven workflow. Use when implementing features, fixing bugs, or making multi-file changes that benefit from milestone planning and a verification checklist. This is the procedure skill: it tells you how to structure the work of making a change. Pair with thatch-code-archaeology, which tells you how to understand the code as it currently is before you start."
+}

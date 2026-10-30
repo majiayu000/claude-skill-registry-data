@@ -1,0 +1,38 @@
+{
+  "name": "architecture-ci-setup",
+  "repo": "shadowX4fox/solutions-architect-skills",
+  "path": "plugins/sa-delivery/skills/architecture-ci-setup/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/shadowX4fox/solutions-architect-skills",
+  "dir_name": "architecture-ci-setup",
+  "downloaded_at": "2026-10-30T04:44:50.368942Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "shadowX4fox",
+  "source_url": "https://github.com/shadowX4fox/solutions-architect-skills/blob/main/plugins/sa-delivery/skills/architecture-ci-setup/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/shadowX4fox/solutions-architect-skills/blob/main/plugins/sa-delivery/skills/architecture-ci-setup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Set up CI/CD for an architecture and connect the service (dev) repositories built from it: in the architecture repository the six GitHub Actions workflows (gates, release, handoff, index, escalations, Tier 0) from the plugin's templates with the plugin's pin, the RUN-team policy, the labels and the repository's variables, secrets and settings; in a service repository the binding (.architecture.json), the architecture MCP server for the IDE (.mcp.json) and, for an unattended build, the build and merge workflows, and on either kind the workflow that answers @alia with the architecture. Checks first, writes after the user's yes, never sets a secret itself. Use for \"set up architecture CI\", \"connect a service repo to the architecture\", \"configure the architecture MCP in this repo\", \"set up the unattended build\"."
+}

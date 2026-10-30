@@ -1,0 +1,38 @@
+{
+  "name": "thatch-plan-refinement",
+  "repo": "sysread/nak",
+  "path": ".claude/skills/thatch-plan-refinement/SKILL.md",
+  "github_branch": "main",
+  "category": "design",
+  "source": "github.com/sysread/nak",
+  "dir_name": "thatch-plan-refinement",
+  "downloaded_at": "2026-10-30T05:07:13.629993Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "design",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for design: design, ui, ux",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "design",
+      "ui",
+      "ux"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sysread",
+  "source_url": "https://github.com/sysread/nak/blob/main/.claude/skills/thatch-plan-refinement/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sysread/nak/blob/main/.claude/skills/thatch-plan-refinement/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Refine a plan for a code change by dispatching a fresh-context reviewer subagent to hunt for gaps, unverified premises, and unexpected side effects, then revising and re-reviewing until consensus. Use when a plan is about to be implemented, when the user asks to refine, stress-test, or double-check a plan, or after a plan revision that incorporated prior findings. This is the generic core loop; when the project type should shape the refinement bar, load thatch-refine instead and it will apply a type delta on top of this loop. Quick mode is one fresh reviewer per round; deep mode adds a specialist lens fan-out (reuse, alternatives, hidden problems, safe-to-modify, archaeology, evidence, consistency). Deep-mode triggers are binding; when one is met the fan-out runs, and project-type deltas relax round counts, never mode selection. The lens fan-out is opencode-only; on Claude Code and Cursor the lenses run inline in the session, because dispatched sub-agents there cannot be given the access the lenses need. Every round reviewer also runs two introspection audits (evidence, consistency) on the plan text under review, both must pass for consensus, and a failed audit triggers reroot analysis, not in-place patches. The full audit methods live in the thatch-plan-evidence and thatch-plan-consistency skills."
+}

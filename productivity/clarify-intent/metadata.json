@@ -1,0 +1,37 @@
+{
+  "name": "clarify-intent",
+  "repo": "wheakerd/axiom",
+  "path": "plugin/skills/clarify-intent/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/wheakerd/axiom",
+  "dir_name": "clarify-intent",
+  "downloaded_at": "2026-10-30T05:43:47.805521Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wheakerd",
+  "source_url": "https://github.com/wheakerd/axiom/blob/main/plugin/skills/clarify-intent/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wheakerd/axiom/blob/main/plugin/skills/clarify-intent/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Clarify a user request when its wording supports materially different intended outcomes that current context cannot resolve. Offer the most plausible options and accept a custom answer before dependent work. Use on an explicit invocation or when using-axiom selects this ambiguity boundary; do not trigger on tentative wording alone, routine implementation choices, or facts available through inspection."
+}

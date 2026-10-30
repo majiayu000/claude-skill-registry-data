@@ -1,0 +1,38 @@
+{
+  "name": "lsp-setup",
+  "repo": "wjgoarxiv/litgravity",
+  "path": "plugin/skills/lsp-setup/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wjgoarxiv/litgravity",
+  "dir_name": "lsp-setup-wjgoarxiv-litgravity",
+  "downloaded_at": "2026-10-30T05:46:52.749969Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wjgoarxiv",
+  "source_url": "https://github.com/wjgoarxiv/litgravity/blob/main/plugin/skills/lsp-setup/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wjgoarxiv/litgravity/blob/main/plugin/skills/lsp-setup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Fallback setup for language servers and checker CLIs on agy: detect what a project needs, print per-OS install commands, verify a real diagnostics roundtrip."
+}

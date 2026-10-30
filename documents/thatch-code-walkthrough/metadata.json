@@ -1,0 +1,39 @@
+{
+  "name": "thatch-code-walkthrough",
+  "repo": "sysread/nak",
+  "path": ".claude/skills/thatch-code-walkthrough/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/sysread/nak",
+  "dir_name": "thatch-code-walkthrough",
+  "downloaded_at": "2026-10-30T05:07:14.427586Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, markdown, documentation",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sysread",
+  "source_url": "https://github.com/sysread/nak/blob/main/.claude/skills/thatch-code-walkthrough/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sysread/nak/blob/main/.claude/skills/thatch-code-walkthrough/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user asks \"walk me through this feature\", \"how does X work\", or wants on-demand documentation about a feature, module, or workflow. Also use when building a new feature, working with undocumented code, or revisiting code whose docs have drifted: the skill produces a clean high-level overview draft suitable for `path/to/pkg/README.md`, `docs/features/some-feature.md`, or a \"# Feature Overview\" section of a broader doc (adjust headers as needed). Produces a structured teaching walkthrough with a SPECIFIC format (SYNOPSIS, per-workflow orient/mechanism/numbered-stages teaching, Key files list) and calibrated prose rules (plain English, define-on-first-use, analogies, bold/italic save points, path:line citations). The format and prose rules are load-bearing and live in the skill body \u2014 load this skill for the output scaffold, not just for the research method. Do NOT use for explaining a specific change (use thatch-change-walkthrough) or for pre-change investigation (use thatch-code-archaeology)."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "seismic-sense",
+  "repo": "tmcfarlane/team-avatar",
+  "path": "plugins/team-avatar/skills/seismic-sense/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/tmcfarlane/team-avatar",
+  "dir_name": "seismic-sense",
+  "downloaded_at": "2026-10-30T05:19:49.929817Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tmcfarlane",
+  "source_url": "https://github.com/tmcfarlane/team-avatar/blob/main/plugins/team-avatar/skills/seismic-sense/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tmcfarlane/team-avatar/blob/main/plugins/team-avatar/skills/seismic-sense/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Toph's seismic sense for read-only investigation. She cannot see, so she feels every vibration in the ground and reports exactly what is there. Use for how, /how, \"how does X work\", \"where does Y live\", \"where should this live\", \"which package owns this\", \"is this the right layer\", \"are we sure\", code walkthroughs before a change, and onboarding mental models of a subsystem. Produces a cited explanation or a recommendation, never a code change. Use past-lives for why a thing was built this way."
+}

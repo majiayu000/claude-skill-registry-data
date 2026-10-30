@@ -1,0 +1,38 @@
+{
+  "name": "trading-execution-safety",
+  "repo": "shubhamtaywade82/ruby-agent-skills",
+  "path": "skills/trading-execution-safety/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/shubhamtaywade82/ruby-agent-skills",
+  "dir_name": "trading-execution-safety",
+  "downloaded_at": "2026-10-30T04:49:04.228914Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, software",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "software"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "shubhamtaywade82",
+  "source_url": "https://github.com/shubhamtaywade82/ruby-agent-skills/blob/main/skills/trading-execution-safety/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/shubhamtaywade82/ruby-agent-skills/blob/main/skills/trading-execution-safety/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when Ruby/Rails applications place or manage orders through an external execution system \u2014 brokers, exchanges, paper and live gateways \u2014 covering durable order intent, client order IDs, duplicate order prevention, submission versus acknowledgement versus fill, retry under uncertain outcomes, reconciliation, paper/live separation, and fail-closed risk gates."
+}

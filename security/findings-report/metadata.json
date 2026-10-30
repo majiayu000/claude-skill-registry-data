@@ -1,0 +1,38 @@
+{
+  "name": "findings-report",
+  "repo": "zero-lab-ai/skills",
+  "path": "plugins/engagement-operations/skills/findings-report/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/zero-lab-ai/skills",
+  "dir_name": "findings-report",
+  "downloaded_at": "2026-10-30T06:05:44.046136Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, vulnerability",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "vulnerability"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zero-lab-ai",
+  "source_url": "https://github.com/zero-lab-ai/skills/blob/main/plugins/engagement-operations/skills/findings-report/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zero-lab-ai/skills/blob/main/plugins/engagement-operations/skills/findings-report/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Writes security findings that survive triage: reproducible, severity-justified, and fixable, in a fixed structure with a severity rubric. Use when turning a discovered vulnerability, misconfiguration, or weakness into a report entry, ticket, or disclosure."
+}

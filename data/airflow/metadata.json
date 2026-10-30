@@ -1,0 +1,39 @@
+{
+  "name": "airflow",
+  "repo": "stanfish06/skillquarium",
+  "path": "skills/airflow/SKILL.md",
+  "github_branch": "master",
+  "category": "data",
+  "source": "github.com/stanfish06/skillquarium",
+  "dir_name": "airflow",
+  "downloaded_at": "2026-10-30T05:01:07.398025Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, analytics, sql, pipeline",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "analytics",
+      "sql",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "stanfish06",
+  "source_url": "https://github.com/stanfish06/skillquarium/blob/master/skills/airflow/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/stanfish06/skillquarium/blob/master/skills/airflow/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Queries, manages, and troubleshoots Apache Airflow using the `af` CLI. Use when working with anything related to Airflow - a DAG, a DAG run, a task log, an import or parse error, a broken DAG, or any Airflow operation. Covers listing and triggering DAGs, retrying runs, reading task logs, diagnosing failures, debugging import and parse errors, checking connections, variables and pools, exploring the REST API, and monitoring health (for example \"trigger a pipeline\", \"retry a run\", \"list connections\", \"check Airflow health\", \"why did my DAG fail\"). This is the entrypoint that routes to sibling skills for authoring, testing, deploying, and migrating Airflow 2 to 3. Not for warehouse/SQL analytics on Airflow metadata tables (use analyzing-data); for deep root-cause reports use debugging-dags or airflow-investigation."
+}

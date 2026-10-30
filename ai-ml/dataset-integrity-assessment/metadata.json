@@ -1,0 +1,39 @@
+{
+  "name": "dataset-integrity-assessment",
+  "repo": "zero-lab-ai/skills",
+  "path": "plugins/ml-system-security/skills/dataset-integrity-assessment/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/zero-lab-ai/skills",
+  "dir_name": "dataset-integrity-assessment",
+  "downloaded_at": "2026-10-30T06:05:46.914144Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, ml, model, training",
+    "score": 4,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "ml",
+      "model",
+      "training"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zero-lab-ai",
+  "source_url": "https://github.com/zero-lab-ai/skills/blob/main/plugins/ml-system-security/skills/dataset-integrity-assessment/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zero-lab-ai/skills/blob/main/plugins/ml-system-security/skills/dataset-integrity-assessment/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audits dataset sources, labels, transformations, review, versioning, split integrity, retraining triggers, and rollback controls for poisoning and targeted degradation risk. Use when reviewing an ML training or evaluation data supply chain."
+}

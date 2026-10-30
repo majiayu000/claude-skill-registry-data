@@ -1,0 +1,39 @@
+{
+  "name": "cavecrew",
+  "repo": "shortcuts/locationjoystick",
+  "path": ".agents/skills/cavecrew/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/shortcuts/locationjoystick",
+  "dir_name": "cavecrew-shortcuts-locationjoystick",
+  "downloaded_at": "2026-10-30T04:48:18.278097Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: dev, code, build, refactor",
+    "score": 4,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "shortcuts",
+  "source_url": "https://github.com/shortcuts/locationjoystick/blob/main/.agents/skills/cavecrew/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/shortcuts/locationjoystick/blob/main/.agents/skills/cavecrew/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Decision guide for delegating to caveman-style subagents. Tells the main thread WHEN to spawn `cavecrew-investigator` (locate code), `cavecrew-builder` (1-2 file edit), or `cavecrew-reviewer` (diff review) instead of doing the work inline or using vanilla `Explore`. Subagent output is caveman-compressed so the tool-result injected back into main context is ~60% smaller \u2014 main context lasts longer across long sessions. Trigger: \"delegate to subagent\", \"use cavecrew\", \"spawn investigator/builder/reviewer\", \"save context\", \"compressed agent output\"."
+}

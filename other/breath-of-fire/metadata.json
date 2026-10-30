@@ -1,0 +1,37 @@
+{
+  "name": "breath-of-fire",
+  "repo": "tmcfarlane/team-avatar",
+  "path": "plugins/team-avatar/skills/breath-of-fire/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/tmcfarlane/team-avatar",
+  "dir_name": "breath-of-fire",
+  "downloaded_at": "2026-10-30T05:19:50.985650Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, performance=2",
+    "score": 2,
+    "runner_up": "performance",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tmcfarlane",
+  "source_url": "https://github.com/tmcfarlane/team-avatar/blob/main/plugins/team-avatar/skills/breath-of-fire/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tmcfarlane/team-avatar/blob/main/plugins/team-avatar/skills/breath-of-fire/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Zuko's breath of fire for performance work. Use for slowness, high latency, memory growth, CPU spin, bundle size, cloud cost, \"make this faster\", or the old perf-issue playbook. Captures a baseline trace, finds the real limit, fixes the cheapest thing that meets the target, and reports a number it can explain."
+}

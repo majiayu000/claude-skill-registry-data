@@ -1,0 +1,38 @@
+{
+  "name": "matlab-orchestrator",
+  "repo": "wzyn20051216/matlab-agent-skills",
+  "path": "skills/matlab-orchestrator/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wzyn20051216/matlab-agent-skills",
+  "dir_name": "matlab-orchestrator",
+  "downloaded_at": "2026-10-30T05:50:01.910145Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, productivity=3",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "pipeline",
+      "visualization"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wzyn20051216",
+  "source_url": "https://github.com/wzyn20051216/matlab-agent-skills/blob/main/skills/matlab-orchestrator/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wzyn20051216/matlab-agent-skills/blob/main/skills/matlab-orchestrator/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "MATLAB agentic workflow router. Use this whenever the user asks for MATLAB, Simulink, .m/.mlx/.slx work, toolbox-driven engineering, paper reproduction, simulation, code generation, data analysis, control, robotics, signal/image/AI workflows, or wants an end-to-end automated MATLAB task with validation. For Simulink tasks on this machine, default to a visible workflow: open MATLAB/Simulink windows first so the user can watch modeling, simulation, tuning, and plotting progress."
+}

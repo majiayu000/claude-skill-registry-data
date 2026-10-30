@@ -1,0 +1,36 @@
+{
+  "name": "skill-diet",
+  "repo": "staticaland/skills",
+  "path": "plugins/skill-authoring/skills/skill-diet/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/staticaland/skills",
+  "dir_name": "skill-diet",
+  "downloaded_at": "2026-10-30T05:01:47.388761Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category agent scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "ai-llm",
+    "runner_up_score": 1,
+    "signals": [
+      "agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "staticaland",
+  "source_url": "https://github.com/staticaland/skills/blob/main/plugins/skill-authoring/skills/skill-diet/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/staticaland/skills/blob/main/plugins/skill-authoring/skills/skill-diet/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Keep agent skills lean and correct. Use before editing an existing skill, such as adding a lesson; when a code change touches names or behavior a skill describes; and to put a skill on a full diet when it is large, loads detail most tasks never use, or has drifted from the tool it teaches."
+}

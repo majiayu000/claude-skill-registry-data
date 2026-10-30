@@ -1,0 +1,37 @@
+{
+  "name": "change-specify",
+  "repo": "tikalk/adlc-team-skills",
+  "path": "skills/change/change-specify/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/tikalk/adlc-team-skills",
+  "dir_name": "change-specify",
+  "downloaded_at": "2026-10-30T05:17:47.847263Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, product=2",
+    "score": 2,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tikalk",
+  "source_url": "https://github.com/tikalk/adlc-team-skills/blob/main/skills/change/change-specify/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tikalk/adlc-team-skills/blob/main/skills/change/change-specify/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a change rationale just emerged \u2014 a revert, hotfix, fix chain, workaround, or abandoned approach \u2014 and you want guided facilitation (options, consequences, provenance) before it becomes a ChDR. Not for mining git history (/change-init) or reviewing drafts (/change-clarify); class boots only suggest this skill, they never write drafts."
+}

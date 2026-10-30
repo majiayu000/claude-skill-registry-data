@@ -1,0 +1,37 @@
+{
+  "name": "ingest",
+  "repo": "wellwelwel/lagune",
+  "path": ".claude/skills/ingest/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wellwelwel/lagune",
+  "dir_name": "ingest-wellwelwel-lagune",
+  "downloaded_at": "2026-10-30T05:42:33.407387Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wellwelwel",
+  "source_url": "https://github.com/wellwelwel/lagune/blob/main/.claude/skills/ingest/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wellwelwel/lagune/blob/main/.claude/skills/ingest/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use before reading any .txt file, whatever its name, and whenever a task builds on GitIngest digests. Checks whether a file is a digest (a whole repository in one file) and surveys, searches, and reads it without loading it whole. Returns only the requested lines, with token estimates and anchors for a reusable synthesis."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "pai-sho",
+  "repo": "tmcfarlane/team-avatar",
+  "path": "plugins/team-avatar/skills/pai-sho/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/tmcfarlane/team-avatar",
+  "dir_name": "pai-sho",
+  "downloaded_at": "2026-10-30T05:19:44.227844Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tmcfarlane",
+  "source_url": "https://github.com/tmcfarlane/team-avatar/blob/main/plugins/team-avatar/skills/pai-sho/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tmcfarlane/team-avatar/blob/main/plugins/team-avatar/skills/pai-sho/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Iroh's Pai Sho, testing a strategy against a real opponent before trusting it. Use for eval, /eval, \"test this skill change\", \"does this prompt change behavior\", \"A/B this skill\", \"will agents actually follow this\", or before promoting any skill, structure, or prompt change that is meant to change what an agent does. Runs blinded candidates on several models, one blinded judge, and checks the real transcripts."
+}

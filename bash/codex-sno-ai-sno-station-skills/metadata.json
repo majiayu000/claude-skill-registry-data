@@ -1,0 +1,39 @@
+{
+  "name": "codex-coder",
+  "repo": "sno-ai/sno-station-skills",
+  "path": "skills/M-build-and-rollout/codex-coder/overlay/codex/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/sno-ai/sno-station-skills",
+  "dir_name": "codex-sno-ai-sno-station-skills",
+  "downloaded_at": "2026-10-30T04:55:40.033217Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script, cli",
+    "score": 4,
+    "runner_up": "productivity",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sno-ai",
+  "source_url": "https://github.com/sno-ai/sno-station-skills/blob/main/skills/M-build-and-rollout/codex-coder/overlay/codex/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sno-ai/sno-station-skills/blob/main/skills/M-build-and-rollout/codex-coder/overlay/codex/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Route production coding tasks to the user-level Shell, TypeScript, Python, or Rust Codex workflow. Use for \"codex-coder\", \"Codex write\", \"generate with Codex\", language migrations, or mixed Shell/TypeScript/Python/Rust implementation when Codex should choose the correct language specialist automatically."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "binary-fault-triage",
+  "repo": "zero-lab-ai/skills",
+  "path": "plugins/binary-forensics/skills/binary-fault-triage/SKILL.md",
+  "github_branch": "main",
+  "category": "forensics",
+  "source": "github.com/zero-lab-ai/skills",
+  "dir_name": "binary-fault-triage",
+  "downloaded_at": "2026-10-30T06:05:43.904737Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "forensics",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for forensics: forensic, forensics, evidence, triage",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "forensic",
+      "forensics",
+      "evidence",
+      "triage"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zero-lab-ai",
+  "source_url": "https://github.com/zero-lab-ai/skills/blob/main/plugins/binary-forensics/skills/binary-fault-triage/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zero-lab-ai/skills/blob/main/plugins/binary-forensics/skills/binary-fault-triage/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Triages supplied binary, crash, sanitizer, dump, static-analysis, and external reproduction evidence to distinguish a lead, observed fault, reproducible fault, security relevance, and demonstrated non-weaponized impact without executing, mutating, exploiting, or weaponizing a binary."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "routes",
+  "repo": "tereo-io/tereo",
+  "path": ".claude/skills/routes/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/tereo-io/tereo",
+  "dir_name": "routes-tereo-io-tereo",
+  "downloaded_at": "2026-10-30T05:13:04.314031Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, integration=2",
+    "score": 2,
+    "runner_up": "integration",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tereo-io",
+  "source_url": "https://github.com/tereo-io/tereo/blob/master/.claude/skills/routes/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tereo-io/tereo/blob/master/.claude/skills/routes/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Route layout standards for tereo's Express routers (packages/tereo/src/routes). Use when adding, moving, renaming or reviewing a route, router, controller, route schema or route-local middleware; when deciding where a new endpoint's files go or what order to register routes in; or when routeLayout.unit.test.ts fails."
+}

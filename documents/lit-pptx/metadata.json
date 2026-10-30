@@ -1,0 +1,40 @@
+{
+  "name": "lit-pptx",
+  "repo": "wjgoarxiv/litgravity",
+  "path": "plugin/skills/lit-pptx/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/wjgoarxiv/litgravity",
+  "dir_name": "lit-pptx",
+  "downloaded_at": "2026-10-30T05:46:51.578383Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: word, pptx, docx, markdown, documentation",
+    "score": 5,
+    "runner_up": "design",
+    "runner_up_score": 4,
+    "signals": [
+      "word",
+      "pptx",
+      "docx",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wjgoarxiv",
+  "source_url": "https://github.com/wjgoarxiv/litgravity/blob/main/plugin/skills/lit-pptx/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wjgoarxiv/litgravity/blob/main/plugin/skills/lit-pptx/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Make a .pptx slide deck from a request or sources in a chosen design direction, gate it mechanically, then look at every rendered page. Needs Python 3.10+."
+}

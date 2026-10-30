@@ -1,0 +1,39 @@
+{
+  "name": "architecture-readiness",
+  "repo": "shadowX4fox/solutions-architect-skills",
+  "path": "plugins/sa-requirements/skills/architecture-readiness/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/shadowX4fox/solutions-architect-skills",
+  "dir_name": "architecture-readiness",
+  "downloaded_at": "2026-10-30T04:44:54.378436Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: doc, docs, pdf, documentation",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "pdf",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "shadowX4fox",
+  "source_url": "https://github.com/shadowX4fox/solutions-architect-skills/blob/main/plugins/sa-requirements/skills/architecture-readiness/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/shadowX4fox/solutions-architect-skills/blob/main/plugins/sa-requirements/skills/architecture-readiness/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Requirements elicitation, discovery interviews, and creating or evaluating Product Owner Specifications that document business requirements before architecture design: \"PO spec\", \"elicit requirements\", \"business context intake\", \"evaluate PO spec\". Scores a spec against the readiness rubric, runs gap interviews on weak areas, and writes PRODUCT_OWNER_SPEC.md plus a distribution PDF under exports/. Run this before architecture-docs Workflow 1 \u2014 the PO Spec gate reads its output. Also keeps the spec current once the architecture evolves: \"update the PO spec\", \"sync PO spec\", \"actualiza el PO spec\" \u2014 a delta collected by code from the changelog, the ADRs and the flows, proposals in business language, the Product Owner's approval item by item, a sync marker."
+}

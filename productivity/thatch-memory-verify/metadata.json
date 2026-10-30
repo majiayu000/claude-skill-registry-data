@@ -1,0 +1,38 @@
+{
+  "name": "thatch-memory-verify",
+  "repo": "sysread/nak",
+  "path": ".claude/skills/thatch-memory-verify/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/sysread/nak",
+  "dir_name": "thatch-memory-verify",
+  "downloaded_at": "2026-10-30T05:07:11.495846Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, memory",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sysread",
+  "source_url": "https://github.com/sysread/nak/blob/main/.claude/skills/thatch-memory-verify/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sysread/nak/blob/main/.claude/skills/thatch-memory-verify/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Fact-check a single thatch memory against the current codebase and correct it if stale. Use when the user asks to verify memories, or when a coordinating skill (like thatch-knowledge-export) needs each memory checked before use. Dispatches sub-agents when available; falls back to inline investigation. Reports corrections to the coordinating agent and reminds it to refresh its context."
+}

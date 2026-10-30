@@ -1,0 +1,39 @@
+{
+  "name": "steady-flame",
+  "repo": "tmcfarlane/team-avatar",
+  "path": "plugins/team-avatar/skills/steady-flame/SKILL.md",
+  "github_branch": "main",
+  "category": "performance",
+  "source": "github.com/tmcfarlane/team-avatar",
+  "dir_name": "steady-flame",
+  "downloaded_at": "2026-10-30T05:19:48.919039Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "performance",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for performance: performance, latency, speed, benchmark",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "performance",
+      "latency",
+      "speed",
+      "benchmark"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tmcfarlane",
+  "source_url": "https://github.com/tmcfarlane/team-avatar/blob/main/plugins/team-avatar/skills/steady-flame/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tmcfarlane/team-avatar/blob/main/plugins/team-avatar/skills/steady-flame/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Zuko's steady flame for vetting a performance number. A flame that flickers is not a measurement. Use for benchmark-checklist, /benchmark-checklist, before you report or act on a speedup, a regression, a latency, a throughput, a hillclimb harness, or a library or config choice you measured. Checks the limiter, tuning, physical limits, errors, repeatability, relevance, and whether the work happened at all."
+}

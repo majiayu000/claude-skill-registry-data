@@ -1,0 +1,37 @@
+{
+  "name": "thatch-review-response",
+  "repo": "sysread/nak",
+  "path": ".claude/skills/thatch-review-response/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sysread/nak",
+  "dir_name": "thatch-review-response",
+  "downloaded_at": "2026-10-30T05:07:12.832396Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, productivity=2",
+    "score": 2,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sysread",
+  "source_url": "https://github.com/sysread/nak/blob/main/.claude/skills/thatch-review-response/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sysread/nak/blob/main/.claude/skills/thatch-review-response/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Respond to code review on the user's own PR. Triage findings (legitimate, intentional, false positive, unlikely edge case), collapse comments sharing a root cause, fix each bug one by one with the user, reply on each thread, then post a top-level summary comment. Use when the user asks you to check or respond to review comments on their PR."
+}

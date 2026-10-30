@@ -1,0 +1,37 @@
+{
+  "name": "wine-setup",
+  "repo": "youlianvr/oper-share",
+  "path": "skills/desktop/parts/wine-setup/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/youlianvr/oper-share",
+  "dir_name": "wine-setup",
+  "downloaded_at": "2026-10-30T06:00:46.605736Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, framework",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 1,
+    "signals": [
+      "dev",
+      "framework"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "youlianvr",
+  "source_url": "https://github.com/youlianvr/oper-share/blob/master/skills/desktop/parts/wine-setup/SKILL.md",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/youlianvr/oper-share/blob/master/skills/desktop/parts/wine-setup/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Full Wine setup on Fedora for Windows games and repacks: install wine/winetricks + missing components (MFC42, VC++ runtimes, DirectX, corefonts, d3dx), map a folder as an extra drive (D:/E: \u2192 the configured mount point via dosdevices symlinks), and diagnose/fix broken installers (Inno Setup/xatab repacks: \"MFC42.DLL not found\", isskin.dll, silent exit of setup.exe). Use when the user says wine won't run, a game setup.exe doesn't start, a repack fails, needs to install to another drive, or \"the game won't install\", \"in Wine\"."
+}

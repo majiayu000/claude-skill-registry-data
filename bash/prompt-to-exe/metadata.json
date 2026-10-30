@@ -1,0 +1,38 @@
+{
+  "name": "prompt-to-exe",
+  "repo": "youlianvr/oper-share",
+  "path": "skills/prompt-to-exe/SKILL.md",
+  "github_branch": "master",
+  "category": "bash",
+  "source": "github.com/youlianvr/oper-share",
+  "dir_name": "prompt-to-exe",
+  "downloaded_at": "2026-10-30T06:00:34.746520Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, cli",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "youlianvr",
+  "source_url": "https://github.com/youlianvr/oper-share/blob/master/skills/prompt-to-exe/SKILL.md",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/youlianvr/oper-share/blob/master/skills/prompt-to-exe/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Turn a natural-language app idea (\"an app that...\") into a working, double-clickable Windows .exe \u2014 with ZERO git, GitHub, terminal, or build knowledge required from the user. Covers stack choice (default: Python + Tkinter + PyInstaller; alternatives: pywebview/Tauri, .NET WinForms), Python bootstrap via winget/py launcher, minimal project scaffold, implementation rules, onedir vs onefile, install folder + Desktop shortcut, smoke test, startup measurement, antivirus false-positive caveats, and delivery. Use when the user asks to \"make an app from my prompt\", \"create an exe\", \"build a Windows app\", \"build an app from a prompt\", \"assemble the exe\", or reports that a generated app \"didn't work\" / \"won't open on Windows\"."
+}

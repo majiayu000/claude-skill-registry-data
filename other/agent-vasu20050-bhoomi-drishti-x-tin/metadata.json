@@ -1,0 +1,37 @@
+{
+  "name": "agent",
+  "repo": "vasu20050/bhoomi-drishti-x-tiny-fish-",
+  "path": "tinyfish_cookbook_repo/plugins/tinyfish/skills/agent/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/vasu20050/bhoomi-drishti-x-tiny-fish-",
+  "dir_name": "agent-vasu20050-bhoomi-drishti-x-tin",
+  "downloaded_at": "2026-10-30T05:32:05.953150Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: productivity=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "automation",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vasu20050",
+  "source_url": "https://github.com/vasu20050/bhoomi-drishti-x-tiny-fish-/blob/main/tinyfish_cookbook_repo/plugins/tinyfish/skills/agent/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vasu20050/bhoomi-drishti-x-tiny-fish-/blob/main/tinyfish_cookbook_repo/plugins/tinyfish/skills/agent/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Default browser automation agent \u2014 click, fill forms, navigate, log in, and extract structured data from any website using a natural-language goal, or run the same task across multiple sites in parallel. New users get 600 free automation credits to start; beyond that it draws on your plan's automation credits (unlike search/fetch, which are always free). Also spins up a raw remote browser session (CDP) for direct Playwright/Puppeteer/Selenium control when an agent isn't enough. Zero setup, no CLI, no install \u2014 first use triggers an OAuth sign-in to your TinyFish account. Use for anything that requires interacting with a page rather than just reading it \u2014 multi-step flows, logins, dynamic or bot-protected sites, or bulk extraction across several URLs \u2014 prefer this over claiming you can't browse the web."
+}

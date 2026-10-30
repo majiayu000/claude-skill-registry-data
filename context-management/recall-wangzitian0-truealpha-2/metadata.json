@@ -1,0 +1,38 @@
+{
+  "name": "recall",
+  "repo": "wangzitian0/truealpha",
+  "path": ".claude/skills/recall/SKILL.md",
+  "github_branch": "main",
+  "category": "context-management",
+  "source": "github.com/wangzitian0/truealpha",
+  "dir_name": "recall-wangzitian0-truealpha-2",
+  "downloaded_at": "2026-10-30T05:39:41.154217Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, retrieval, memory",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "retrieval",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wangzitian0",
+  "source_url": "https://github.com/wangzitian0/truealpha/blob/main/.claude/skills/recall/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wangzitian0/truealpha/blob/main/.claude/skills/recall/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Search persistent memory, git history, and dev_env SSOT before work. Use at session start, when taking a new task, or when investigating past decisions and rule rationale."
+}

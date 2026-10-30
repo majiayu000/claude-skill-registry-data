@@ -1,0 +1,37 @@
+{
+  "name": "lit-plan",
+  "repo": "wjgoarxiv/litgravity",
+  "path": "plugin/skills/lit-plan/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wjgoarxiv/litgravity",
+  "dir_name": "lit-plan",
+  "downloaded_at": "2026-10-30T05:46:51.064558Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wjgoarxiv",
+  "source_url": "https://github.com/wjgoarxiv/litgravity/blob/main/plugin/skills/lit-plan/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wjgoarxiv/litgravity/blob/main/plugin/skills/lit-plan/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Plan before code: write a decision-complete plans/<slug>.md with tasks, files, tests and checks. Use for planning, scoping and plan-then-build requests."
+}

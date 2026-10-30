@@ -1,0 +1,39 @@
+{
+  "name": "insecure-local-storage",
+  "repo": "thejefflarson/soundcheck",
+  "path": ".claude/skills/insecure-local-storage/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/thejefflarson/soundcheck",
+  "dir_name": "insecure-local-storage",
+  "downloaded_at": "2026-10-30T05:15:35.731825Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: platform=4, security=4",
+    "score": 4,
+    "runner_up": "security",
+    "runner_up_score": 4,
+    "signals": [
+      "platform",
+      "device",
+      "android",
+      "ios"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "thejefflarson",
+  "source_url": "https://github.com/thejefflarson/soundcheck/blob/main/.claude/skills/insecure-local-storage/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/thejefflarson/soundcheck/blob/main/.claude/skills/insecure-local-storage/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Detects sensitive data written to unprotected local files, preference stores, or SQLite. Use when writing code that stores sensitive data (credentials, tokens, PII) to local files, platform preference stores (NSUserDefaults, SharedPreferences, UserDefaults), SQLite databases, or localStorage without encryption at rest."
+}

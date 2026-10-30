@@ -1,0 +1,38 @@
+{
+  "name": "agent-plugin-architect",
+  "repo": "wheakerd/axiom",
+  "path": "plugin/skills/agent-plugin-architect/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/wheakerd/axiom",
+  "dir_name": "agent-plugin-architect",
+  "downloaded_at": "2026-10-30T05:43:47.528991Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, planning",
+    "score": 3,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "planning"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wheakerd",
+  "source_url": "https://github.com/wheakerd/axiom/blob/main/plugin/skills/agent-plugin-architect/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wheakerd/axiom/blob/main/plugin/skills/agent-plugin-architect/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Design, initialize, audit, migrate, maintain, or evaluate a packaged Codex or Claude Code plugin's architecture across shared Skills, route ownership, manifests, marketplace wrappers, hooks, and version-bound compatibility evidence. Use only for explicit packaged agent-plugin architecture work. Do not use for evaluating or reviewing an individual Skill or Skill proposal, repository-local AGENTS.md, .agents/skills, or .claude/skills systems, ordinary source-code or documentation work merely because it is in a plugin repository, host installation, publication, deployment, or Git submission."
+}

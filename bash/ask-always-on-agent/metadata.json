@@ -1,0 +1,38 @@
+{
+  "name": "ask-always-on-agent",
+  "repo": "soulmachine/skills",
+  "path": "ask-always-on-agent/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/soulmachine/skills",
+  "dir_name": "ask-always-on-agent",
+  "downloaded_at": "2026-10-30T04:58:26.345438Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, script, cli",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "soulmachine",
+  "source_url": "https://github.com/soulmachine/skills/blob/main/ask-always-on-agent/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/soulmachine/skills/blob/main/ask-always-on-agent/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reach Frank on his phone through an always-on paseo agent (coding-agent or personal-agent). Use when a question to the user has had no answer for 15 minutes, or when the user says to send a message, ask, or hand off work to the coding-agent, the personal-agent, or \"the always-on agent\"."
+}

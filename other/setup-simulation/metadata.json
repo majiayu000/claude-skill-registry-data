@@ -1,0 +1,37 @@
+{
+  "name": "setup-simulation",
+  "repo": "struphy-hub/struphy",
+  "path": "src/struphy/agent_guides/skills/setup-simulation/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/struphy-hub/struphy",
+  "dir_name": "setup-simulation",
+  "downloaded_at": "2026-10-30T05:02:59.187114Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "struphy-hub",
+  "source_url": "https://github.com/struphy-hub/struphy/blob/main/src/struphy/agent_guides/skills/setup-simulation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/struphy-hub/struphy/blob/main/src/struphy/agent_guides/skills/setup-simulation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when creating or editing a Struphy simulation parameter file (params_*.py) - choosing a model, configuring domain/grid/time-stepping, species/backgrounds/perturbations and propagator options, then running the simulation. Triggers on requests like \"set up a simulation\", \"create a params file for a model\", \"configure a model run\", or \"how do I run struphy\". For reading and plotting results, use the postprocess-simulation skill."
+}

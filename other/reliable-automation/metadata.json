@@ -1,0 +1,37 @@
+{
+  "name": "reliable-automation",
+  "repo": "youlianvr/oper-share",
+  "path": "skills/reliable-automation/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/youlianvr/oper-share",
+  "dir_name": "reliable-automation",
+  "downloaded_at": "2026-10-30T06:00:37.607298Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "youlianvr",
+  "source_url": "https://github.com/youlianvr/oper-share/blob/master/skills/reliable-automation/SKILL.md",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/youlianvr/oper-share/blob/master/skills/reliable-automation/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Four proven patterns for reliable automation, extracted from an auto-registration stack and generalized: 1) swappable mailbox pool, 2) OAuth device flow without loopback, 3) anti-detection browser automation techniques, 4) bounded retries per stage. Use for tasks with email verification, OAuth login and browser automation where it's important not to get detected and not to crash."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "file-upload",
+  "repo": "thejefflarson/soundcheck",
+  "path": ".claude/skills/file-upload/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/thejefflarson/soundcheck",
+  "dir_name": "file-upload",
+  "downloaded_at": "2026-10-30T05:15:30.880333Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, audit, owasp",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "audit",
+      "owasp"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "thejefflarson",
+  "source_url": "https://github.com/thejefflarson/soundcheck/blob/main/.claude/skills/file-upload/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/thejefflarson/soundcheck/blob/main/.claude/skills/file-upload/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Detects file upload handlers that accept executable content or write to web- accessible paths without validation. Use when writing file upload handlers, processing multipart form data, saving uploaded files to disk or cloud storage. Also invoke when accepting user-supplied filenames or storing uploads in a web-accessible directory."
+}

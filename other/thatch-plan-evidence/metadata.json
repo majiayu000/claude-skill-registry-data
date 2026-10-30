@@ -1,0 +1,37 @@
+{
+  "name": "thatch-plan-evidence",
+  "repo": "sysread/nak",
+  "path": ".claude/skills/thatch-plan-evidence/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sysread/nak",
+  "dir_name": "thatch-plan-evidence",
+  "downloaded_at": "2026-10-30T05:07:11.732014Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: agent=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "agent",
+      "sub-agent"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sysread",
+  "source_url": "https://github.com/sysread/nak/blob/main/.claude/skills/thatch-plan-evidence/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sysread/nak/blob/main/.claude/skills/thatch-plan-evidence/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Evidence audit for a plan document - an exhaustive citation sweep verifying that every file, line, function, constraint, and prior decision the plan cites exists and says what the plan claims. Runs as a dispatched sub-agent on opencode or inline in-session on other hosts. Use whenever a plan is being refined or re-checked and its citations need verification, standalone or as part of the thatch-plan-refinement loop."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "codex-coder",
+  "repo": "sno-ai/sno-station-skills",
+  "path": "skills/M-build-and-rollout/codex-coder/overlay/claude/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sno-ai/sno-station-skills",
+  "dir_name": "claude-sno-ai-sno-station-skills",
+  "downloaded_at": "2026-10-30T04:55:40.291315Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sno-ai",
+  "source_url": "https://github.com/sno-ai/sno-station-skills/blob/main/skills/M-build-and-rollout/codex-coder/overlay/claude/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sno-ai/sno-station-skills/blob/main/skills/M-build-and-rollout/codex-coder/overlay/claude/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Route production coding tasks from Claude Code to the user-level Codex Shell, TypeScript, Python, or Rust workflow through a direct `codex exec` run. Use for \"codex-coder\", \"ask Codex to write code\", \"generate with Codex\", language migrations, or mixed Shell/TypeScript/Python/Rust implementation."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "architecture-index-export",
+  "repo": "shadowX4fox/solutions-architect-skills",
+  "path": "plugins/sa-delivery/skills/architecture-index-export/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/shadowX4fox/solutions-architect-skills",
+  "dir_name": "architecture-index-export",
+  "downloaded_at": "2026-10-30T04:44:53.967266Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, devops=2",
+    "score": 2,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "shadowX4fox",
+  "source_url": "https://github.com/shadowX4fox/solutions-architect-skills/blob/main/plugins/sa-delivery/skills/architecture-index-export/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/shadowX4fox/solutions-architect-skills/blob/main/plugins/sa-delivery/skills/architecture-index-export/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Export an architecture as an index bundle (sa-index/1) for an architecture MCP server \u2014 the chunks a server embeds for search, the facts ledger its exact tools answer from, and one build pack per container the handoff kit covers (spec, interface contracts, assets byte for byte, flows and budgets, governing ADRs in force, open questions, an ordered build plan), so a developer's IDE can ask the architecture and build one component from its spec. By code; calls no model and no vector store; reads nothing compliance writes."
+}

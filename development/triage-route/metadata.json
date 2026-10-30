@@ -1,0 +1,38 @@
+{
+  "name": "triage-route",
+  "repo": "youlianvr/oper-share",
+  "path": "skills/triage-route/SKILL.md",
+  "github_branch": "master",
+  "category": "development",
+  "source": "github.com/youlianvr/oper-share",
+  "dir_name": "triage-route",
+  "downloaded_at": "2026-10-30T06:00:34.101037Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, debug",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "youlianvr",
+  "source_url": "https://github.com/youlianvr/oper-share/blob/master/skills/triage-route/SKILL.md",
+  "license": "Proprietary",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/youlianvr/oper-share/blob/master/skills/triage-route/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Triage and routing of a reverse-engineering task: by signal (what the target is, what material exists, what result is wanted) choose which reverse-engineering skill to load first. Use ALWAYS at the start of any RE task \u2014 before reading other skills. Not for ordinary coding."
+}

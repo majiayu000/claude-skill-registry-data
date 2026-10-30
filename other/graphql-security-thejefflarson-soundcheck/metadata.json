@@ -1,0 +1,37 @@
+{
+  "name": "graphql-security",
+  "repo": "thejefflarson/soundcheck",
+  "path": ".claude/skills/graphql-security/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/thejefflarson/soundcheck",
+  "dir_name": "graphql-security-thejefflarson-soundcheck",
+  "downloaded_at": "2026-10-30T05:15:33.938325Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "thejefflarson",
+  "source_url": "https://github.com/thejefflarson/soundcheck/blob/main/.claude/skills/graphql-security/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/thejefflarson/soundcheck/blob/main/.claude/skills/graphql-security/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Detects GraphQL schemas without depth limits, cost analysis, or introspection controls. Use when writing GraphQL schemas, resolvers, or server configuration. Also invoke when setting up Apollo Server, graphql-yoga, Strawberry, gqlgen, or any GraphQL framework without explicit depth limiting, cost analysis, or introspection controls."
+}

@@ -1,0 +1,40 @@
+{
+  "name": "thatch-refine-infra",
+  "repo": "sysread/nak",
+  "path": ".claude/skills/thatch-refine-infra/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/sysread/nak",
+  "dir_name": "thatch-refine-infra",
+  "downloaded_at": "2026-10-30T05:07:11.242728Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: ci, kubernetes, deploy, infra, infrastructure",
+    "score": 5,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "ci",
+      "kubernetes",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sysread",
+  "source_url": "https://github.com/sysread/nak/blob/main/.claude/skills/thatch-refine-infra/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sysread/nak/blob/main/.claude/skills/thatch-refine-infra/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Type-specific requirements for refining a plan that touches infrastructure (CI pipelines, Terraform, Kubernetes manifests, build and deploy configuration). Loaded by thatch-refine after classification; assumes the core loop in thatch-plan-refinement. Use when a wrong premise can break deploys or pipelines for everyone downstream."
+}

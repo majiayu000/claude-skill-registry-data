@@ -1,0 +1,38 @@
+{
+  "name": "loop-breaker",
+  "repo": "youlianvr/oper-share",
+  "path": "skills/loop-breaker/SKILL.md",
+  "github_branch": "master",
+  "category": "productivity",
+  "source": "github.com/youlianvr/oper-share",
+  "dir_name": "loop-breaker",
+  "downloaded_at": "2026-10-30T06:00:34.562023Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: task, planning, memory",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "task",
+      "planning",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "youlianvr",
+  "source_url": "https://github.com/youlianvr/oper-share/blob/master/skills/loop-breaker/SKILL.md",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/youlianvr/oper-share/blob/master/skills/loop-breaker/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Use when a long task has drifted into a frame the agent built for itself and stopped serving the owner's goal, even though each step checks out \u2014 endless sub-proofs of one component, polishing one property past the point it matters, re-planning a plan instead of delivering, or building tools for the tools. The strongest case is an agent that wrote a requirement into its own plan, labelled it as the owner's decision, and now works to satisfy a goal nobody asked for. Also use when the owner asks what the work is for, says it went in circles, says the agent pushed a requirement through, or says the agent lost the point. Not for ordinary debugging, where repeated attempts at one bug are expected."
+}

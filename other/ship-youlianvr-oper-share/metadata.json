@@ -1,0 +1,38 @@
+{
+  "name": "ship",
+  "repo": "youlianvr/oper-share",
+  "path": "skills/ship/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/youlianvr/oper-share",
+  "dir_name": "ship-youlianvr-oper-share",
+  "downloaded_at": "2026-10-30T06:00:30.112249Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "youlianvr",
+  "source_url": "https://github.com/youlianvr/oper-share/blob/master/skills/ship/SKILL.md",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/youlianvr/oper-share/blob/master/skills/ship/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Delivering changes safely: release preparation, dependency audits and scoped updates, secrets hygiene, changelog generation, Git conventions and worktrees, GitHub Actions, PR comment handling and CI repair, Cloudflare and Vercel deploys, technical-change and technical-debt tracking, operational runbooks. One contract; parts under parts/."
+}

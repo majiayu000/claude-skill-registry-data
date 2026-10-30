@@ -1,0 +1,40 @@
+{
+  "name": "integrity-failures",
+  "repo": "thejefflarson/soundcheck",
+  "path": ".claude/skills/integrity-failures/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/thejefflarson/soundcheck",
+  "dir_name": "integrity-failures",
+  "downloaded_at": "2026-10-30T05:15:34.600717Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for security: security, auth, crypto, audit, owasp",
+    "score": 5,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "security",
+      "auth",
+      "crypto",
+      "audit",
+      "owasp"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "thejefflarson",
+  "source_url": "https://github.com/thejefflarson/soundcheck/blob/main/.claude/skills/integrity-failures/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/thejefflarson/soundcheck/blob/main/.claude/skills/integrity-failures/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Detects unsafe deserialization, unverified software updates, and tampered CI artifacts. Use when writing deserialization code, processing pickled or marshalled data, implementing software update mechanisms, consuming CI/CD artifact downloads, or handling data from untrusted sources that gets reconstructed into objects."
+}

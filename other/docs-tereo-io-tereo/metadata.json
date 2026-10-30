@@ -1,0 +1,38 @@
+{
+  "name": "docs",
+  "repo": "tereo-io/tereo",
+  "path": ".claude/skills/docs/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/tereo-io/tereo",
+  "dir_name": "docs-tereo-io-tereo",
+  "downloaded_at": "2026-10-30T05:13:03.775752Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=3, data=3",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "signals": [
+      "sdk",
+      "endpoint",
+      "openapi"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tereo-io",
+  "source_url": "https://github.com/tereo-io/tereo/blob/master/.claude/skills/docs/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tereo-io/tereo/blob/master/.claude/skills/docs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Documentation maintenance guide. Use when making code changes that affect APIs, features, patterns, or architecture to keep documentation in sync."
+}

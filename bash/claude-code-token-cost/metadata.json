@@ -1,0 +1,38 @@
+{
+  "name": "claude-code-token-cost",
+  "repo": "shangliy/kvleak",
+  "path": "skills/claude-code-token-cost/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/shangliy/kvleak",
+  "dir_name": "claude-code-token-cost",
+  "downloaded_at": "2026-10-30T04:45:30.620873Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, cli",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "shell",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "shangliy",
+  "source_url": "https://github.com/shangliy/kvleak/blob/main/skills/claude-code-token-cost/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/shangliy/kvleak/blob/main/skills/claude-code-token-cost/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Cut Claude Code token cost and prompt-cache waste. Use when the user asks why Claude Code (or Codex CLI, Gemini CLI, OpenCode) burns so many tokens, how much their sessions cost, whether the prompt cache is working, whether to /compact, or how to reduce the bill. Runs the local kvleak audit (no API key, no network) and turns its numbers into the one or two settings that actually move the bill."
+}

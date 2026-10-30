@@ -1,0 +1,38 @@
+{
+  "name": "new-feature",
+  "repo": "vedantlavale/billy",
+  "path": "skills/new-feature/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/vedantlavale/billy",
+  "dir_name": "new-feature-vedantlavale-billy",
+  "downloaded_at": "2026-10-30T05:32:12.789061Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: dev, code, build",
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vedantlavale",
+  "source_url": "https://github.com/vedantlavale/billy/blob/main/skills/new-feature/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vedantlavale/billy/blob/main/skills/new-feature/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Start a task. Clarify the issue with the user when it is unclear, then branch off the latest origin/main after checking no open PR already owns the files. Use at the start of every feature, fix or task, before writing code."
+}

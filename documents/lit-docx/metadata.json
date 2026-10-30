@@ -1,0 +1,42 @@
+{
+  "name": "lit-docx",
+  "repo": "wjgoarxiv/litgravity",
+  "path": "plugin/skills/lit-docx/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/wjgoarxiv/litgravity",
+  "dir_name": "lit-docx",
+  "downloaded_at": "2026-10-30T05:46:51.411979Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for documents: docs, pdf, word, pptx, docx, markdown, documentation",
+    "score": 7,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "pdf",
+      "word",
+      "pptx",
+      "docx",
+      "markdown",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wjgoarxiv",
+  "source_url": "https://github.com/wjgoarxiv/litgravity/blob/main/plugin/skills/lit-docx/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wjgoarxiv/litgravity/blob/main/plugin/skills/lit-docx/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Make a Word .docx report, proposal, manual, memo or manuscript from a request or sources in a chosen design direction, or convert DOCX/PDF to Markdown, gated and render-checked. Needs Python 3.10+."
+}

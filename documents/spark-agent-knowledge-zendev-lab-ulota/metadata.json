@@ -1,0 +1,37 @@
+{
+  "name": "spark-agent-knowledge",
+  "repo": "zendev-lab/ulota",
+  "path": ".agents/skills/spark-agent-knowledge/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/zendev-lab/ulota",
+  "dir_name": "spark-agent-knowledge-zendev-lab-ulota",
+  "downloaded_at": "2026-10-30T06:04:53.256563Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, documentation",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zendev-lab",
+  "source_url": "https://github.com/zendev-lab/ulota/blob/main/.agents/skills/spark-agent-knowledge/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zendev-lab/ulota/blob/main/.agents/skills/spark-agent-knowledge/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when Spark engineering knowledge must be placed, deduplicated, migrated, or validated across AGENTS, Notes, Roles, Skills, and Workflows."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "thatch-ticket-description",
+  "repo": "sysread/nak",
+  "path": ".claude/skills/thatch-ticket-description/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/sysread/nak",
+  "dir_name": "thatch-ticket-description",
+  "downloaded_at": "2026-10-30T05:07:15.394743Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word",
+    "score": 3,
+    "runner_up": "creative",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sysread",
+  "source_url": "https://github.com/sysread/nak/blob/main/.claude/skills/thatch-ticket-description/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sysread/nak/blob/main/.claude/skills/thatch-ticket-description/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Draft a ticket description (SYNOPSIS / PROBLEM / BACKGROUND / PROPOSED APPROACH / ACCEPTANCE CRITERIA / RELEASE PLAN / VALIDATION / DEPENDENCIES / NOTES) with bold and italic emphasis on the phrases that carry the meaning, so a reader skimming only the emphasized fragments still gets the story. Use when the user asks you to write, draft, or file a ticket, issue, or work item (Linear or Jira). Do NOT use for PR descriptions (use thatch-pr-description), commit messages, or design docs."
+}

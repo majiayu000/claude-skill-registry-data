@@ -1,0 +1,38 @@
+{
+  "name": "samskara-audit",
+  "repo": "sysread/nak",
+  "path": ".claude/skills/samskara-audit/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/sysread/nak",
+  "dir_name": "samskara-audit",
+  "downloaded_at": "2026-10-30T05:07:09.979412Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, pipeline",
+    "score": 3,
+    "runner_up": "communication",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sysread",
+  "source_url": "https://github.com/sysread/nak/blob/main/.claude/skills/samskara-audit/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sysread/nak/blob/main/.claude/skills/samskara-audit/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Full stem-to-stern health audit of the samskara system - walk every pipeline stage, state the contract each stage assumes of the one before it, verify each contract against live data, and only then synthesize a whole-system verdict. Use for \"how is the samskara system doing\", periodic check-ins, or any diagnosis that risks tunnel-visioning on one symptom. Runs against the cloud project (Supabase MCP); read-only."
+}

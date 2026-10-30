@@ -1,0 +1,37 @@
+{
+  "name": "my-cabbages",
+  "repo": "tmcfarlane/team-avatar",
+  "path": "plugins/team-avatar/skills/my-cabbages/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/tmcfarlane/team-avatar",
+  "dir_name": "my-cabbages",
+  "downloaded_at": "2026-10-30T05:19:46.962465Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tmcfarlane",
+  "source_url": "https://github.com/tmcfarlane/team-avatar/blob/main/plugins/team-avatar/skills/my-cabbages/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tmcfarlane/team-avatar/blob/main/plugins/team-avatar/skills/my-cabbages/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Toph's my cabbages, for finding who gets hit before a change ships. The cabbage merchant's cart gets wrecked in every chase scene, because nobody looks at who is standing nearby. Look first. Use for blast-radius, /blast-radius, \"blast radius of X\", \"what could this break\", \"who else uses this\", reviewing a small diff you do not trust, or a brief that asserts something about existing code (\"make X public\", \"X already handles Y\") before you design against that assertion. Finds the breakage grep will not show and proves the one fact the change is safe because of by running real code."
+}

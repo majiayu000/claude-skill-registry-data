@@ -1,0 +1,38 @@
+{
+  "name": "agents-architect",
+  "repo": "wheakerd/axiom",
+  "path": "plugin/skills/agents-architect/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wheakerd/axiom",
+  "dir_name": "agents-architect",
+  "downloaded_at": "2026-10-30T05:43:47.670284Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "context",
+      "retrieval",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wheakerd",
+  "source_url": "https://github.com/wheakerd/axiom/blob/main/plugin/skills/agents-architect/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wheakerd/axiom/blob/main/plugin/skills/agents-architect/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Design, initialize, audit, split, migrate, maintain, or validate a repository's AGENTS.md instruction system, routed .agents guidance, and repo-local .agents/skills or .claude/skills that support that system. Use for active-instruction discovery, durable AGENTS updates, route ownership, oversized guidance, instruction-memory growth, task-state placement, or an explicit effective-instructions, effective-instructions:preview, effective-instructions:refactor, effective-instructions:force, effective-instructions:reconcile, or effective-instructions:reconcile-preview mode. Do not use for packaged or installed plugin Skills, ordinary documentation, or general agent usage optimization unless the requested change is specifically to AGENTS architecture."
+}

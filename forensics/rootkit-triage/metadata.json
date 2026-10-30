@@ -1,0 +1,40 @@
+{
+  "name": "rootkit-triage",
+  "repo": "zero-lab-ai/skills",
+  "path": "plugins/binary-forensics/skills/rootkit-triage/SKILL.md",
+  "github_branch": "main",
+  "category": "forensics",
+  "source": "github.com/zero-lab-ai/skills",
+  "dir_name": "rootkit-triage",
+  "downloaded_at": "2026-10-30T06:05:43.079723Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "forensics",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for forensics: forensic, forensics, incident, evidence, triage",
+    "score": 5,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "forensic",
+      "forensics",
+      "incident",
+      "evidence",
+      "triage"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zero-lab-ai",
+  "source_url": "https://github.com/zero-lab-ai/skills/blob/main/plugins/binary-forensics/skills/rootkit-triage/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zero-lab-ai/skills/blob/main/plugins/binary-forensics/skills/rootkit-triage/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Triages suspected rootkits, bootkits, hidden processes, kernel hooks, driver or module anomalies, concealed network activity, eBPF implants, and boot-integrity failures. Use when host tools may be lying and the incident needs evidence-preserving cross-view analysis, containment, or forensic handoff."
+}

@@ -1,0 +1,40 @@
+{
+  "name": "security",
+  "repo": "youlianvr/oper-share",
+  "path": "skills/security/SKILL.md",
+  "github_branch": "master",
+  "category": "security",
+  "source": "github.com/youlianvr/oper-share",
+  "dir_name": "security-youlianvr-oper-share",
+  "downloaded_at": "2026-10-30T06:00:32.581862Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for security: security, auth, vulnerability, audit, pentest",
+    "score": 5,
+    "runner_up": "ai-llm",
+    "runner_up_score": 3,
+    "signals": [
+      "security",
+      "auth",
+      "vulnerability",
+      "audit",
+      "pentest"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "youlianvr",
+  "source_url": "https://github.com/youlianvr/oper-share/blob/master/skills/security/SKILL.md",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/youlianvr/oper-share/blob/master/skills/security/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Authorized offensive and defensive security assessments, one router over per-surface playbooks: API, cloud/K8s, code audit & SAST review, database, digital forensics, EDR bypass, email, firmware, LLM/AI, malware analysis, OT/ICS, patch-diff exploitation, pwn and attack chains, supply chain, threat hunting, Windows AD, Wi-Fi, SDR radio, thick clients, hardware \u2014 plus pentest-tools. Use when the task is an authorized security assessment or code vulnerability review."
+}

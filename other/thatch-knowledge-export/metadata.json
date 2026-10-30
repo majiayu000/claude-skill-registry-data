@@ -1,0 +1,38 @@
+{
+  "name": "thatch-knowledge-export",
+  "repo": "sysread/nak",
+  "path": ".claude/skills/thatch-knowledge-export/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sysread/nak",
+  "dir_name": "thatch-knowledge-export",
+  "downloaded_at": "2026-10-30T05:07:14.171876Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, workflow=3",
+    "score": 3,
+    "runner_up": "workflow",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sysread",
+  "source_url": "https://github.com/sysread/nak/blob/main/.claude/skills/thatch-knowledge-export/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sysread/nak/blob/main/.claude/skills/thatch-knowledge-export/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Compile everything thatch knows about a topic into a curated, self-contained markdown file for knowledge transfer to another engineer. Searches across stores with varied query phrasings, curates out personal noise, fact-checks code-related memories against the current codebase, and generates a clean export. Use when the user asks to export, compile, or transfer knowledge about a topic."
+}

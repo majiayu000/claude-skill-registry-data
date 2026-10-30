@@ -1,0 +1,38 @@
+{
+  "name": "thatch-review-acceptance",
+  "repo": "sysread/nak",
+  "path": ".claude/skills/thatch-review-acceptance/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/sysread/nak",
+  "dir_name": "thatch-review-acceptance",
+  "downloaded_at": "2026-10-30T05:07:14.926124Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, compile",
+    "score": 3,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "compile"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sysread",
+  "source_url": "https://github.com/sysread/nak/blob/main/.claude/skills/thatch-review-acceptance/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sysread/nak/blob/main/.claude/skills/thatch-review-acceptance/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Behavioral and product-level code review \u2014 UX coherency, behavioral delta, integration effects, user assumptions. Use for post-implementation review of a branch, PR, or commit range."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "ml-decision-boundary-assessment",
+  "repo": "zero-lab-ai/skills",
+  "path": "plugins/ml-system-security/skills/ml-decision-boundary-assessment/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/zero-lab-ai/skills",
+  "dir_name": "ml-decision-boundary-assessment",
+  "downloaded_at": "2026-10-30T06:05:48.074023Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, ml, model",
+    "score": 3,
+    "runner_up": "product",
+    "runner_up_score": 2,
+    "signals": [
+      "ai",
+      "ml",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zero-lab-ai",
+  "source_url": "https://github.com/zero-lab-ai/skills/blob/main/plugins/ml-system-security/skills/ml-decision-boundary-assessment/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zero-lab-ai/skills/blob/main/plugins/ml-system-security/skills/ml-decision-boundary-assessment/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Evaluates classifiers and scoring models used as security gates for adversarial robustness, preprocessing differences, thresholds, abstention, and fallback behavior. Use when an authorized assessment must measure whether bounded input changes alter a security decision."
+}

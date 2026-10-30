@@ -1,0 +1,37 @@
+{
+  "name": "desktop",
+  "repo": "youlianvr/oper-share",
+  "path": "skills/desktop/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/youlianvr/oper-share",
+  "dir_name": "desktop",
+  "downloaded_at": "2026-10-30T06:00:32.398966Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, performance=2",
+    "score": 2,
+    "runner_up": "performance",
+    "runner_up_score": 2,
+    "signals": [
+      "dev",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "youlianvr",
+  "source_url": "https://github.com/youlianvr/oper-share/blob/master/skills/desktop/SKILL.md",
+  "license": "CC-BY-4.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/youlianvr/oper-share/blob/master/skills/desktop/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Desktop and workstation environment: Windows dev-env patterns, system optimization and cleanup, console encoding fixes (cp1251/CRLF), Windows 11 theming for Linux tools, Wine and game setup on Linux, Firefox performance and extensions, zram swap, disk formatting, and PipeWire mic noise suppression."
+}

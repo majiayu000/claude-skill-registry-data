@@ -1,0 +1,37 @@
+{
+  "name": "backup-setup",
+  "repo": "thedotmack/claude-mem",
+  "path": "plugin/skills/backup-setup/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/thedotmack/claude-mem",
+  "dir_name": "backup-setup",
+  "downloaded_at": "2026-10-30T05:15:19.795866Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "thedotmack",
+  "source_url": "https://github.com/thedotmack/claude-mem/blob/main/plugin/skills/backup-setup/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/thedotmack/claude-mem/blob/main/plugin/skills/backup-setup/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Set up, check, or restore local claude-mem database snapshots. Use when the user says \"set up backups\", \"back up my memories\", \"backup status\", or \"restore my database\"."
+}

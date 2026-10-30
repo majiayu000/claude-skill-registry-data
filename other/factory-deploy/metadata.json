@@ -1,0 +1,37 @@
+{
+  "name": "factory-deploy",
+  "repo": "tikalk/adlc-team-skills",
+  "path": "skills/factory/factory-deploy/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/tikalk/adlc-team-skills",
+  "dir_name": "factory-deploy",
+  "downloaded_at": "2026-10-30T05:17:48.007849Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: devops=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "deploy",
+      "infra"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tikalk",
+  "source_url": "https://github.com/tikalk/adlc-team-skills/blob/main/skills/factory/factory-deploy/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tikalk/adlc-team-skills/blob/main/skills/factory/factory-deploy/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when an approved PR head must reach production through a gated release \u2014 exact-head merge, staged canary rollout with threshold verdicts, and a SemVer-tagged release with notes plus a monitor handoff. Triggers on post-merge rollout work; not for continuous monitoring, review depth, or infra provisioning."
+}

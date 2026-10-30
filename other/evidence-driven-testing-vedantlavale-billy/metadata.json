@@ -1,0 +1,37 @@
+{
+  "name": "evidence-driven-testing",
+  "repo": "vedantlavale/billy",
+  "path": "skills/evidence-driven-testing/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/vedantlavale/billy",
+  "dir_name": "evidence-driven-testing-vedantlavale-billy",
+  "downloaded_at": "2026-10-30T05:32:13.517604Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: api=2, bash=2",
+    "score": 2,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "api",
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vedantlavale",
+  "source_url": "https://github.com/vedantlavale/billy/blob/main/skills/evidence-driven-testing/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vedantlavale/billy/blob/main/skills/evidence-driven-testing/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Prove a change works by driving the running app and capturing what happened, before the fix and after. Screenshots and probes by default, a screen recording when a flow only makes sense over time. Use whenever a change needs evidence instead of a claim that it works."
+}

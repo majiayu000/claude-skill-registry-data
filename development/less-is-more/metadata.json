@@ -1,0 +1,38 @@
+{
+  "name": "less-is-more",
+  "repo": "sno-ai/sno-station-skills",
+  "path": "plugins/sno-station-standalone/skills/less-is-more/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/sno-ai/sno-station-skills",
+  "dir_name": "less-is-more",
+  "downloaded_at": "2026-10-30T04:55:39.733036Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, refactor",
+    "score": 3,
+    "runner_up": "productivity",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sno-ai",
+  "source_url": "https://github.com/sno-ai/sno-station-skills/blob/main/plugins/sno-station-standalone/skills/less-is-more/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sno-ai/sno-station-skills/blob/main/plugins/sno-station-standalone/skills/less-is-more/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write the least code that works, and cut what an AI agent over-built. Use on any coding task: write, fix, refactor, or review a diff. Also when the user says 'less', 'simplify', 'too complex', 'over-engineered', or 'what can we delete'. Not for prose, research, or non-code questions."
+}

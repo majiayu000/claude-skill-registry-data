@@ -1,0 +1,37 @@
+{
+  "name": "ship-pr",
+  "repo": "vedantlavale/billy",
+  "path": "skills/ship-pr/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/vedantlavale/billy",
+  "dir_name": "ship-pr",
+  "downloaded_at": "2026-10-30T05:32:12.239782Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vedantlavale",
+  "source_url": "https://github.com/vedantlavale/billy/blob/main/skills/ship-pr/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vedantlavale/billy/blob/main/skills/ship-pr/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Open a PR with before/after proof, then loop on the review until the verdict is 'Looks good' with no unresolved comments. Use when the work is built and proven and it is time to open or finish a pull request, or when the user says \"ship it\", \"open a PR\", or \"get this PR clean\"."
+}

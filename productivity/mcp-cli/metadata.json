@@ -1,0 +1,39 @@
+{
+  "name": "mcp-cli",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/mcp-cli/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "mcp-cli",
+  "downloaded_at": "2026-10-30T05:56:07.989811Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: productivity, automation, workflow, memory",
+    "score": 4,
+    "runner_up": "bash",
+    "runner_up_score": 3,
+    "signals": [
+      "productivity",
+      "automation",
+      "workflow",
+      "memory"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/mcp-cli/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/mcp-cli/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when needing to interact with MCP servers on-demand via CLI without permanently loading integrations, discover available tools/resources on an MCP server, or call MCP tools from the command line. Triggers on: 'mcp cli', 'mcp tool call', 'call mcp server', 'discover mcp tools', 'mcp on-demand', 'mcp command line', 'mcp binary', 'list mcp tools', 'invoke mcp', 'mcp without integration'."
+}

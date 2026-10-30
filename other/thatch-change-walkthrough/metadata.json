@@ -1,0 +1,38 @@
+{
+  "name": "thatch-change-walkthrough",
+  "repo": "sysread/nak",
+  "path": ".claude/skills/thatch-change-walkthrough/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sysread/nak",
+  "dir_name": "thatch-change-walkthrough",
+  "downloaded_at": "2026-10-30T05:07:15.240694Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=3, development=3",
+    "score": 3,
+    "runner_up": "development",
+    "runner_up_score": 3,
+    "signals": [
+      "data",
+      "database",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sysread",
+  "source_url": "https://github.com/sysread/nak/blob/main/.claude/skills/thatch-change-walkthrough/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sysread/nak/blob/main/.claude/skills/thatch-change-walkthrough/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when the user asks \"walk me through this change\", \"explain what this PR does\", or wants to understand the code touched by a diff. Produces a structured teaching walkthrough with a SPECIFIC format (SYNOPSIS, per-workflow orient/mechanism/numbered-stages teaching, change overlay mirroring those same numbers) and calibrated prose rules (plain English, define-on-first-use, analogies, bold/italic save points, path:line citations). The format and prose rules are load-bearing and live in the skill body \u2014 load this skill for the output scaffold, not just for the research method. Do NOT use for PR descriptions, code review, or standalone workflow research."
+}

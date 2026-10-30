@@ -1,0 +1,36 @@
+{
+  "name": "reversible-system-change",
+  "repo": "wheakerd/axiom",
+  "path": "plugin/skills/reversible-system-change/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wheakerd/axiom",
+  "dir_name": "reversible-system-change",
+  "downloaded_at": "2026-10-30T05:43:48.606869Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "top category api scored 1, below minimum score 2",
+    "score": 1,
+    "runner_up": "business",
+    "runner_up_score": 1,
+    "signals": [
+      "endpoint"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wheakerd",
+  "source_url": "https://github.com/wheakerd/axiom/blob/main/plugin/skills/reversible-system-change/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wheakerd/axiom/blob/main/plugin/skills/reversible-system-change/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Plan, prepare recovery material, rehearse, or execute persistent system changes with verified rollback and postconditions. Use for an install, upgrade, deployment, migration, destructive retention action, active-version promotion, or explicit machine-credential lifecycle inventory, plan, activation, or retirement with rollback, data, service, or activation risk. Plans and non-mutating workflow rehearsals stay read-only; recovery preparation and isolated restore rehearsals require bounded write authority. Pair with confirm-external-action when the same request also causes a consequential external app or account effect. Do not use for ordinary source/configuration edits, Git operations, generic status queries, or conceptual explanations."
+}

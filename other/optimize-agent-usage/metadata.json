@@ -1,0 +1,37 @@
+{
+  "name": "optimize-agent-usage",
+  "repo": "wheakerd/axiom",
+  "path": "plugin/skills/optimize-agent-usage/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wheakerd/axiom",
+  "dir_name": "optimize-agent-usage",
+  "downloaded_at": "2026-10-30T05:43:48.484188Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, performance=2",
+    "score": 2,
+    "runner_up": "performance",
+    "runner_up_score": 2,
+    "signals": [
+      "word",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wheakerd",
+  "source_url": "https://github.com/wheakerd/axiom/blob/main/plugin/skills/optimize-agent-usage/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wheakerd/axiom/blob/main/plugin/skills/optimize-agent-usage/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Reduce or diagnose agent usage of tokens, credits, and context without weakening task quality or safety. Use only when the user explicitly asks to save credits, tokens, or usage limits in the current agent host; optimize Skills, instruction files such as AGENTS.md or CLAUDE.md, MCP, or context loading; explain unusually high usage; or design a lower-consumption workflow. Do not use for ordinary coding, software performance work, or generic cost questions."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "password-audit-plan",
+  "repo": "zero-lab-ai/skills",
+  "path": "plugins/application-endpoint-security/skills/password-audit-plan/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/zero-lab-ai/skills",
+  "dir_name": "password-audit-plan",
+  "downloaded_at": "2026-10-30T06:05:47.672606Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for security: security, auth, audit",
+    "score": 3,
+    "runner_up": "analysis",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zero-lab-ai",
+  "source_url": "https://github.com/zero-lab-ai/skills/blob/main/plugins/application-endpoint-security/skills/password-audit-plan/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zero-lab-ai/skills/blob/main/plugins/application-endpoint-security/skills/password-audit-plan/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Plans authorized offline password-strength audits across supplied hash datasets while enforcing compute budgets, progressive pass order, cohort coverage, aggregate-only reporting, and restricted handling. Use when preparing or documenting password cracking without online authentication, spraying, stuffing, replay, or credential reuse testing."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "meditation",
+  "repo": "tmcfarlane/team-avatar",
+  "path": "plugins/team-avatar/skills/meditation/SKILL.md",
+  "github_branch": "main",
+  "category": "bash",
+  "source": "github.com/tmcfarlane/team-avatar",
+  "dir_name": "meditation",
+  "downloaded_at": "2026-10-30T05:19:46.495141Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "bash",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for bash: bash, shell, script",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tmcfarlane",
+  "source_url": "https://github.com/tmcfarlane/team-avatar/blob/main/plugins/team-avatar/skills/meditation/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tmcfarlane/team-avatar/blob/main/plugins/team-avatar/skills/meditation/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Aang meditating to see clearly. Use for reflect, /reflect, \"reflect on this session\", \"what did we learn\", or \"turn this into skill edits\". Dispatches three parallel reviewers over the active Claude Code or Codex transcript, surfaces durable learnings, and routes each to a concrete edit on an existing skill, held for the user's approval."
+}

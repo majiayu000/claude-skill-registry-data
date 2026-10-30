@@ -1,0 +1,37 @@
+{
+  "name": "deep-review",
+  "repo": "vedantlavale/billy",
+  "path": "skills/deep-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/vedantlavale/billy",
+  "dir_name": "deep-review-vedantlavale-billy",
+  "downloaded_at": "2026-10-30T05:32:12.640590Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vedantlavale",
+  "source_url": "https://github.com/vedantlavale/billy/blob/main/skills/deep-review/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vedantlavale/billy/blob/main/skills/deep-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Deep code review for pull requests, tuned to match CodeRabbit and Greptile depth but reported short. Checks two things separately, whether the code is right (correctness, project invariants, security, performance, conventions, code smells) and whether it does what the linked issue asked, then posts a plain-language summary anyone can read, at most five P0 to P3 findings underneath it, and a verdict. Use when reviewing a PR, re-reviewing after a push, or when the user asks for a thorough review."
+}

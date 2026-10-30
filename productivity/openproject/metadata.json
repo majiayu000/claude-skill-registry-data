@@ -1,0 +1,38 @@
+{
+  "name": "openproject",
+  "repo": "zilligm/openproject-mcp",
+  "path": "skills/openproject/SKILL.md",
+  "github_branch": "main",
+  "category": "productivity",
+  "source": "github.com/zilligm/openproject-mcp",
+  "dir_name": "openproject",
+  "downloaded_at": "2026-10-30T06:09:04.999623Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task, planning",
+    "score": 3,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "workflow",
+      "task",
+      "planning"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zilligm",
+  "source_url": "https://github.com/zilligm/openproject-mcp/blob/main/skills/openproject/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zilligm/openproject-mcp/blob/main/skills/openproject/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when working with OpenProject \u2014 reading or updating projects, work packages, tasks, bugs, features, milestones, sprints/versions, statuses, priorities, due dates, assignees, dependencies, time entries, or progress reports through the OpenProject MCP tools. Triggers on requests to check what is in a project, find overdue or assigned work, create or break down tickets, move tickets between statuses, reschedule or reprioritize, log hours, post progress updates on a task, write status reports, or track progress of a (coding) project in OpenProject."
+}

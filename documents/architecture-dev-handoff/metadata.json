@@ -1,0 +1,38 @@
+{
+  "name": "architecture-dev-handoff",
+  "repo": "shadowX4fox/solutions-architect-skills",
+  "path": "plugins/sa-delivery/skills/architecture-dev-handoff/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/shadowX4fox/solutions-architect-skills",
+  "dir_name": "architecture-dev-handoff",
+  "downloaded_at": "2026-10-30T04:44:53.762771Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, documentation",
+    "score": 3,
+    "runner_up": "creative",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "shadowX4fox",
+  "source_url": "https://github.com/shadowX4fox/solutions-architect-skills/blob/main/plugins/sa-delivery/skills/architecture-dev-handoff/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/shadowX4fox/solutions-architect-skills/blob/main/plugins/sa-delivery/skills/architecture-dev-handoff/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Generate the four-part Service Handoff Kit from architecture documentation \u2014 internally the Ekonte (\u7d75\u30b3\u30f3\u30c6) kit. Produces a shared System Runtime View (whole-system storyboard with per-hop budget decomposition and edge rationale), shared Cross-Cutting Standards (institution-wide rules synthesized from institutional ADRs), one Interface Contract per adjacent-service pair (continuity contract with mutual assumptions and failure semantics), and one Component Specification per C4 L2 component (intent + constraint only, deliberately not execution). Assets (OpenAPI, AsyncAPI, GraphQL, Avro, DDL, Protobuf, Redis key schema) are generated in parallel per component. Invoke when handing off components for implementation, when a dev team needs implementation specs, or when generating development handoff documents."
+}

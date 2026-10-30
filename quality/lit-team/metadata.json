@@ -1,0 +1,37 @@
+{
+  "name": "lit-team",
+  "repo": "wjgoarxiv/litgravity",
+  "path": "plugin/skills/lit-team/SKILL.md",
+  "github_branch": "main",
+  "category": "quality",
+  "source": "github.com/wjgoarxiv/litgravity",
+  "dir_name": "lit-team",
+  "downloaded_at": "2026-10-30T05:46:51.247649Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "quality",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for quality: quality, review",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "quality",
+      "review"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wjgoarxiv",
+  "source_url": "https://github.com/wjgoarxiv/litgravity/blob/main/plugin/skills/lit-team/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wjgoarxiv/litgravity/blob/main/plugin/skills/lit-team/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Coordinate two or more child agents behind a durable team packet: owned slices, evidence reports, archive receipt. Use for team mode, not a single delegation."
+}

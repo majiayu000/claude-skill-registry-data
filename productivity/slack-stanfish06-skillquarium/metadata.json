@@ -1,0 +1,37 @@
+{
+  "name": "slack",
+  "repo": "stanfish06/skillquarium",
+  "path": "skills/slack/SKILL.md",
+  "github_branch": "master",
+  "category": "productivity",
+  "source": "github.com/stanfish06/skillquarium",
+  "dir_name": "slack-stanfish06-skillquarium",
+  "downloaded_at": "2026-10-30T05:01:01.951402Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "productivity",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for productivity: workflow, task",
+    "score": 2,
+    "runner_up": "analysis",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "task"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "stanfish06",
+  "source_url": "https://github.com/stanfish06/skillquarium/blob/master/skills/slack/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/stanfish06/skillquarium/blob/master/skills/slack/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Read Slack context, route to the right Slack workflow, and prepare or perform Slack writes that match the user's intent."
+}

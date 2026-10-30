@@ -1,0 +1,39 @@
+{
+  "name": "dep-security",
+  "repo": "vasu20050/bhoomi-drishti-x-tiny-fish-",
+  "path": "tinyfish_cookbook_repo/skills/dep-security/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/vasu20050/bhoomi-drishti-x-tiny-fish-",
+  "dir_name": "dep-security",
+  "downloaded_at": "2026-10-30T05:32:03.097262Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for security: security, auth, vulnerability, audit",
+    "score": 4,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "security",
+      "auth",
+      "vulnerability",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vasu20050",
+  "source_url": "https://github.com/vasu20050/bhoomi-drishti-x-tiny-fish-/blob/main/tinyfish_cookbook_repo/skills/dep-security/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vasu20050/bhoomi-drishti-x-tiny-fish-/blob/main/tinyfish_cookbook_repo/skills/dep-security/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Check every dependency in a package.json against live CVE databases and security advisories in real time \u2014 specifically targeting vulnerabilities disclosed in the last 48 hours, the window that Snyk, Dependabot, and npm audit miss. Use this skill whenever a user mentions checking dependencies for vulnerabilities, wants to audit their package.json, asks about CVEs for their packages, says \"are my dependencies safe\", \"check my packages for security issues\", \"any new vulnerabilities in my deps\", or pastes a package.json and asks about security. Also trigger when a user mentions wanting fresher data than Snyk or Dependabot provides. Returns: which dependencies have brand-new vulnerabilities, severity, what the vulnerability does, whether a patched version exists yet, and a prioritised fix list."
+}

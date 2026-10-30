@@ -1,0 +1,37 @@
+{
+  "name": "detection-engineering",
+  "repo": "zero-lab-ai/skills",
+  "path": "plugins/detection-validation/skills/detection-engineering/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/zero-lab-ai/skills",
+  "dir_name": "detection-engineering-zero-lab-ai-skills",
+  "downloaded_at": "2026-10-30T06:05:45.747577Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, data=2",
+    "score": 2,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zero-lab-ai",
+  "source_url": "https://github.com/zero-lab-ai/skills/blob/main/plugins/detection-validation/skills/detection-engineering/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zero-lab-ai/skills/blob/main/plugins/detection-validation/skills/detection-engineering/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Builds detection rules that are proven before they ship \u2014 fire on known-bad, stay silent on known-good \u2014 and keeps false positives from blinding the SOC. Use when writing a Sigma/Suricata/YARA rule, reviewing a detection before deployment, triaging alert fatigue, or deciding whether a rule has earned production."
+}

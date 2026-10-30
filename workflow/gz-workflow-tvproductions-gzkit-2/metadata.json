@@ -1,0 +1,37 @@
+{
+  "name": "gz-workflow",
+  "repo": "tvproductions/gzkit",
+  "path": ".claude/skills/gz-workflow/SKILL.md",
+  "github_branch": "main",
+  "category": "workflow",
+  "source": "github.com/tvproductions/gzkit",
+  "dir_name": "gz-workflow-tvproductions-gzkit-2",
+  "downloaded_at": "2026-10-30T05:26:52.882900Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "workflow",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for workflow: workflow, pipeline",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "workflow",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tvproductions",
+  "source_url": "https://github.com/tvproductions/gzkit/blob/main/.claude/skills/gz-workflow/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tvproductions/gzkit/blob/main/.claude/skills/gz-workflow/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Namespace router \u2192 end-to-end workflow skills (design through release). Use to pick the next workflow stage before invoking the matched concrete skill directly."
+}

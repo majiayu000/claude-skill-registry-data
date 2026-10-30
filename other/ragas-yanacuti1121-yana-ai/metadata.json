@@ -1,0 +1,37 @@
+{
+  "name": "ragas",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": ".claude/skills/ragas/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "ragas-yanacuti1121-yana-ai",
+  "downloaded_at": "2026-10-30T05:56:11.705178Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, testing=2",
+    "score": 2,
+    "runner_up": "testing",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/ragas/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/.claude/skills/ragas/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Evaluate RAG pipelines with Ragas \u2014 measure faithfulness, answer relevancy, context precision/recall, and noise sensitivity using LLM-as-judge metrics; run automated test suite generation with TestsetGenerator; integrate with LangChain, LlamaIndex, and CI pipelines."
+}

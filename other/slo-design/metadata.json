@@ -1,0 +1,37 @@
+{
+  "name": "slo-design",
+  "repo": "yanacuti1121/Yana-AI",
+  "path": "core/skills/slo-design/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/yanacuti1121/Yana-AI",
+  "dir_name": "slo-design",
+  "downloaded_at": "2026-10-30T05:56:18.011098Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, design=2",
+    "score": 2,
+    "runner_up": "design",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "pipeline"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "yanacuti1121",
+  "source_url": "https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/slo-design/SKILL.md",
+  "license": "MIT \u00a9 2025 V\u0169 V\u0103n T\u00e2m",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/yanacuti1121/Yana-AI/blob/main/core/skills/slo-design/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "unknown",
+  "description": "Design and implement SLIs, SLOs, and error budgets for production services. Covers SLI selection, SLO target-setting, error budget calculation, burn-rate alerting, and error budget policy. Use when asked about \"SLO\", \"SLI\", \"error budget\", \"reliability targets\", \"burn rate\", \"uptime SLA\", or when designing alerting for a production service. Do NOT use for: application-level performance optimization \u2014 use `web-performance` for frontend."
+}

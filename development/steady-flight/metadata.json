@@ -1,0 +1,39 @@
+{
+  "name": "steady-flight",
+  "repo": "tmcfarlane/team-avatar",
+  "path": "plugins/team-avatar/skills/steady-flight/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/tmcfarlane/team-avatar",
+  "dir_name": "steady-flight",
+  "downloaded_at": "2026-10-30T05:19:50.068776Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for development: code, build, debug, refactor",
+    "score": 4,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tmcfarlane",
+  "source_url": "https://github.com/tmcfarlane/team-avatar/blob/main/plugins/team-avatar/skills/steady-flight/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tmcfarlane/team-avatar/blob/main/plugins/team-avatar/skills/steady-flight/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Appa's steady flight for executing a plan and for behavior-preserving refactors. Use when a plan, spec, or list of units already exists and needs faithful step-by-step implementation, or for a refactor (rename, extract, inline, dedupe, move) that must change structure and keep behavior. Pins the behavior first, executes each unit with its check, and stops rather than improvising when the plan stops matching reality."
+}

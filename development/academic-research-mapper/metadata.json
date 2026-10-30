@@ -1,0 +1,38 @@
+{
+  "name": "academic-research-mapper",
+  "repo": "vasu20050/bhoomi-drishti-x-tiny-fish-",
+  "path": "tinyfish_cookbook_repo/skills/academic-research-mapper/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/vasu20050/bhoomi-drishti-x-tiny-fish-",
+  "dir_name": "academic-research-mapper",
+  "downloaded_at": "2026-10-30T05:32:06.441174Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, debug",
+    "score": 3,
+    "runner_up": "ai-llm",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vasu20050",
+  "source_url": "https://github.com/vasu20050/bhoomi-drishti-x-tiny-fish-/blob/main/tinyfish_cookbook_repo/skills/academic-research-mapper/SKILL.md",
+  "license": "NOASSERTION",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vasu20050/bhoomi-drishti-x-tiny-fish-/blob/main/tinyfish_cookbook_repo/skills/academic-research-mapper/SKILL.md",
+  "permission_note": "Restricted or unknown license. Do not treat as MIT; verify upstream permission before reuse.",
+  "distribution": "restricted",
+  "license_class": "restricted",
+  "description": "Map the research landscape for any technical or academic topic by searching arXiv, Semantic Scholar, and Google Scholar in parallel. Use when a developer, researcher, or engineer wants to understand what has been published, who the key authors are, which subtopics are active, and where the gaps still live. Runs parallel TinyFish agents across all three sources, deduplicates results, and synthesizes findings into a structured landscape report with a gap analysis. Trigger this skill whenever someone wants to survey a field, prepare a literature review, find underexplored research directions, or understand the state of the art before building something new."
+}

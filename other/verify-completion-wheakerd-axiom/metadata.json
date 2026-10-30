@@ -1,0 +1,37 @@
+{
+  "name": "verify-completion",
+  "repo": "wheakerd/axiom",
+  "path": "plugin/skills/verify-completion/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wheakerd/axiom",
+  "dir_name": "verify-completion-wheakerd-axiom",
+  "downloaded_at": "2026-10-30T05:43:49.289601Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: context-management=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "context",
+      "compaction"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wheakerd",
+  "source_url": "https://github.com/wheakerd/axiom/blob/main/plugin/skills/verify-completion/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wheakerd/axiom/blob/main/plugin/skills/verify-completion/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Verify a completion, progress, or success claim against current direct evidence before it is made or accepted, especially after context compaction, resume, or a long task, and keep advice separate from compliance. Use when the user asks to verify or audit whether work is really complete, when a task resumes or continues after compaction with unfinished mutations, or when a completion claim rests on recalled or summarized facts. Classifies each fact as observed, recalled, or summarized, rebuilds a short evidence ledger for every completion criterion, re-derives the task state from files, commands, and records instead of summaries, and states advice and risks before complying when evidence conflicts with the request. Do not use for ordinary status questions, routine continuation of an unfinished task, reviewing an identified Axiom task's routing and authorization, or supervised multi-session progress."
+}

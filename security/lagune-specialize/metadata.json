@@ -1,0 +1,39 @@
+{
+  "name": "lagune.specialize",
+  "repo": "wellwelwel/lagune",
+  "path": "skills/lagune.specialize/SKILL.md",
+  "github_branch": "main",
+  "category": "security",
+  "source": "github.com/wellwelwel/lagune",
+  "dir_name": "lagune-specialize",
+  "downloaded_at": "2026-10-30T05:42:34.022397Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "security",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for security: security, auth, vulnerability, audit",
+    "score": 4,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "security",
+      "auth",
+      "vulnerability",
+      "audit"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wellwelwel",
+  "source_url": "https://github.com/wellwelwel/lagune/blob/main/skills/lagune.specialize/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wellwelwel/lagune/blob/main/skills/lagune.specialize/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Specialize Lagune from a source or topic you give it, distilling it into a new on-demand specialization the detect and verify phases load later. It writes a focused, language-agnostic, defense-only knowledge module, never an exploit."
+}

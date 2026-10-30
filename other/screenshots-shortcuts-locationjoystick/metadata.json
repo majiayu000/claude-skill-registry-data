@@ -1,0 +1,38 @@
+{
+  "name": "screenshots",
+  "repo": "shortcuts/locationjoystick",
+  "path": ".claude/skills/screenshots/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/shortcuts/locationjoystick",
+  "dir_name": "screenshots-shortcuts-locationjoystick",
+  "downloaded_at": "2026-10-30T04:48:18.444516Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, platform=3",
+    "score": 3,
+    "runner_up": "platform",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "shortcuts",
+  "source_url": "https://github.com/shortcuts/locationjoystick/blob/main/.claude/skills/screenshots/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/shortcuts/locationjoystick/blob/main/.claude/skills/screenshots/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Refresh all wiki/Play Store gallery screenshots from a connected Android device. Use this skill whenever the user asks to update, regenerate, recapture, or refresh screenshots for the wiki, docs, or Play Store. Also triggers on \"run screenshot script\", \"capture gallery\", \"update docs screenshots\", \"screenshot-gallery\", or any mention of refreshing the 01_idle through 26_onboarding_path_picker PNGs. Always use this skill for screenshot-related tasks \u2014 don't attempt to run screenshot-gallery.sh manually without it."
+}

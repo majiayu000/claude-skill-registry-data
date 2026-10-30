@@ -1,0 +1,37 @@
+{
+  "name": "race-condition",
+  "repo": "thejefflarson/soundcheck",
+  "path": ".claude/skills/race-condition/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/thejefflarson/soundcheck",
+  "dir_name": "race-condition-thejefflarson-soundcheck",
+  "downloaded_at": "2026-10-30T05:15:32.224083Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, security=2",
+    "score": 2,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "thejefflarson",
+  "source_url": "https://github.com/thejefflarson/soundcheck/blob/main/.claude/skills/race-condition/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/thejefflarson/soundcheck/blob/main/.claude/skills/race-condition/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Detects check-then-act sequences on shared state vulnerable to TOCTOU manipulation. Use when writing check-then-act sequences on shared state, file operations that check existence before read/write, balance updates without locking, or any code where two operations on the same resource are not atomic."
+}

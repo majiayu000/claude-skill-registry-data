@@ -1,0 +1,38 @@
+{
+  "name": "comment-checker",
+  "repo": "wjgoarxiv/litgravity",
+  "path": "plugin/skills/comment-checker/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wjgoarxiv/litgravity",
+  "dir_name": "comment-checker-wjgoarxiv-litgravity",
+  "downloaded_at": "2026-10-30T05:46:55.755409Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=3, documents=3",
+    "score": 3,
+    "runner_up": "documents",
+    "runner_up_score": 3,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wjgoarxiv",
+  "source_url": "https://github.com/wjgoarxiv/litgravity/blob/main/plugin/skills/comment-checker/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wjgoarxiv/litgravity/blob/main/plugin/skills/comment-checker/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Audit code comments in a diff or named files: keep intent and reasons, remove stale narration, fix misleading text."
+}

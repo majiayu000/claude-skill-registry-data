@@ -1,0 +1,37 @@
+{
+  "name": "thatch-bug-intake",
+  "repo": "sysread/nak",
+  "path": ".claude/skills/thatch-bug-intake/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sysread/nak",
+  "dir_name": "thatch-bug-intake",
+  "downloaded_at": "2026-10-30T05:07:10.729009Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, forensics=2",
+    "score": 2,
+    "runner_up": "forensics",
+    "runner_up_score": 2,
+    "signals": [
+      "doc",
+      "docs"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sysread",
+  "source_url": "https://github.com/sysread/nak/blob/main/.claude/skills/thatch-bug-intake/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sysread/nak/blob/main/.claude/skills/thatch-bug-intake/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Coordinate incoming bug reports for a project: triage reports from the user or from other agent sessions over cross-session chat, verify every claim against the source code, then route each confirmed bug to a filed issue in the project tracker or a coordinated fix, and close the loop with the reporter. Use when the user asks for a bug intake session, a bug-report coordinator, or triage of incoming bug reports."
+}

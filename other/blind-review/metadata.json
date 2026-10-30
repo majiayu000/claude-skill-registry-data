@@ -1,0 +1,37 @@
+{
+  "name": "blind-review",
+  "repo": "wellwelwel/lagune",
+  "path": ".claude/skills/blind-review/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wellwelwel/lagune",
+  "dir_name": "blind-review",
+  "downloaded_at": "2026-10-30T05:42:34.174770Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, documents=2",
+    "score": 2,
+    "runner_up": "documents",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "programming"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wellwelwel",
+  "source_url": "https://github.com/wellwelwel/lagune/blob/main/.claude/skills/blind-review/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wellwelwel/lagune/blob/main/.claude/skills/blind-review/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Maps what a branch or the work in progress changes in behavior, before and after, from the code diff alone. Commit messages, documents, and tests stay closed, so the map shows what the code does rather than what anyone says it does. The commits are approved before anything is read."
+}

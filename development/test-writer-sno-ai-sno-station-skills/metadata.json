@@ -1,0 +1,38 @@
+{
+  "name": "test-writer",
+  "repo": "sno-ai/sno-station-skills",
+  "path": "plugins/sno-station-standalone/skills/test-writer/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/sno-ai/sno-station-skills",
+  "dir_name": "test-writer-sno-ai-sno-station-skills",
+  "downloaded_at": "2026-10-30T04:55:41.320399Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sno-ai",
+  "source_url": "https://github.com/sno-ai/sno-station-skills/blob/main/plugins/sno-station-standalone/skills/test-writer/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sno-ai/sno-station-skills/blob/main/plugins/sno-station-standalone/skills/test-writer/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Write and improve test-owned code: tests, test scripts, fixtures, evals, and test-only helpers. Use whenever Codex is asked to create or change test code. Its only job is to produce the strongest practical tests in the repository's existing harness, run them, and fix defects in the test code."
+}

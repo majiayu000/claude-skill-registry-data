@@ -1,0 +1,39 @@
+{
+  "name": "diagnosing-bugs",
+  "repo": "vedantlavale/billy",
+  "path": "skills/diagnosing-bugs/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/vedantlavale/billy",
+  "dir_name": "diagnosing-bugs-vedantlavale-billy",
+  "downloaded_at": "2026-10-30T05:32:13.267045Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=4, testing=4",
+    "score": 4,
+    "runner_up": "testing",
+    "runner_up_score": 4,
+    "signals": [
+      "dev",
+      "code",
+      "build",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "vedantlavale",
+  "source_url": "https://github.com/vedantlavale/billy/blob/main/skills/diagnosing-bugs/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/vedantlavale/billy/blob/main/skills/diagnosing-bugs/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Diagnosis loop for hard bugs and performance regressions. Use when the user says \"diagnose\"/\"debug this\", or reports something broken/throwing/failing/slow."
+}

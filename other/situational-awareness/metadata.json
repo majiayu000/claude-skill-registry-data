@@ -1,0 +1,38 @@
+{
+  "name": "situational-awareness",
+  "repo": "zero-lab-ai/skills",
+  "path": "plugins/recon-operations/skills/situational-awareness/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/zero-lab-ai/skills",
+  "dir_name": "situational-awareness",
+  "downloaded_at": "2026-10-30T06:05:44.609821Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=3, security=3",
+    "score": 3,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "bash",
+      "shell",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "zero-lab-ai",
+  "source_url": "https://github.com/zero-lab-ai/skills/blob/main/plugins/recon-operations/skills/situational-awareness/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/zero-lab-ai/skills/blob/main/plugins/recon-operations/skills/situational-awareness/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Assesses a freshly compromised host quietly before acting \u2014 who/where/what's here/what's watching/what's around \u2014 using local reads and living-off-the-land so the SOC never sees the recon. Use right after gaining a foothold, before privilege escalation or lateral movement, or when deciding whether an enumeration command is quiet enough to run."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "shedding-season",
+  "repo": "tmcfarlane/team-avatar",
+  "path": "plugins/team-avatar/skills/shedding-season/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/tmcfarlane/team-avatar",
+  "dir_name": "shedding-season",
+  "downloaded_at": "2026-10-30T05:19:51.197727Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "bash",
+      "script"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tmcfarlane",
+  "source_url": "https://github.com/tmcfarlane/team-avatar/blob/main/plugins/team-avatar/skills/shedding-season/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tmcfarlane/team-avatar/blob/main/plugins/team-avatar/skills/shedding-season/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Appa's shedding season for reclaiming disk. Every spring Appa sheds his winter coat, and the team sweeps up what he no longer needs, never what someone is still using. Use for worktree-cleanup, \"what's using my disk\", \"clean up worktrees\", \"prune safe-to-prune worktrees\", \"free up space\", or \"delete old simulators\". Audits every git worktree read-only, cross-checks pinned and active chats, pauses on any uncommitted work, then prunes only the confirmed set."
+}

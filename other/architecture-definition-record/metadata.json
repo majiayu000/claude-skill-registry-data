@@ -1,0 +1,38 @@
+{
+  "name": "architecture-definition-record",
+  "repo": "shadowX4fox/solutions-architect-skills",
+  "path": "plugins/sa-records/skills/architecture-definition-record/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/shadowX4fox/solutions-architect-skills",
+  "dir_name": "architecture-definition-record",
+  "downloaded_at": "2026-10-30T04:44:54.776956Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=3, writing=3",
+    "score": 3,
+    "runner_up": "writing",
+    "runner_up_score": 3,
+    "signals": [
+      "doc",
+      "docs",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "shadowX4fox",
+  "source_url": "https://github.com/shadowX4fox/solutions-architect-skills/blob/main/plugins/sa-records/skills/architecture-definition-record/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/shadowX4fox/solutions-architect-skills/blob/main/plugins/sa-records/skills/architecture-definition-record/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create and manage Architecture Decision Records (ADRs) \u2014 the single writer of adr/: create an ADR interactively or generate them from the architecture's decisions table, update a status, supersede or amend a decision, compact a verbose ADR, regenerate the index (adr/README.md), import or sync an institutional ADR catalog from its git repository (classify what changed and propagate it into the architecture), maintain the institutional catalog itself (catalog mode, no ARCHITECTURE.md needed). Other skills read adr/*.md directly but delegate every ADR change here."
+}

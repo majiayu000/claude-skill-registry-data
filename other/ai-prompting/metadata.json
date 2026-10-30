@@ -1,0 +1,38 @@
+{
+  "name": "ai-prompting",
+  "repo": "youlianvr/oper-share",
+  "path": "skills/ai-prompting/SKILL.md",
+  "github_branch": "master",
+  "category": "other",
+  "source": "github.com/youlianvr/oper-share",
+  "dir_name": "ai-prompting",
+  "downloaded_at": "2026-10-30T06:00:34.309512Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: ai-llm=3, design=3",
+    "score": 3,
+    "runner_up": "design",
+    "runner_up_score": 3,
+    "signals": [
+      "ai",
+      "prompt",
+      "prompting"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "youlianvr",
+  "source_url": "https://github.com/youlianvr/oper-share/blob/master/skills/ai-prompting/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/youlianvr/oper-share/blob/master/skills/ai-prompting/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Effective communication with the assistant: context-first prompting, phased work from requirements to design to tasks, iterative refinement, examples, explicit constraints, role framing, validation and trade-off exploration. Use when a request needs a prompt built or repaired \u2014 \"how do I prompt for this\", \"the answer ignores my instructions\", \"make it produce a spec\" \u2014 or when a previous answer came back generic and the next attempt has to be better."
+}

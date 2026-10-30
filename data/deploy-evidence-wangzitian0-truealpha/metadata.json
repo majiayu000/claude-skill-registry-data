@@ -1,0 +1,38 @@
+{
+  "name": "deploy-evidence",
+  "repo": "wangzitian0/truealpha",
+  "path": ".claude/skills/deploy-evidence/SKILL.md",
+  "github_branch": "main",
+  "category": "data",
+  "source": "github.com/wangzitian0/truealpha",
+  "dir_name": "deploy-evidence-wangzitian0-truealpha",
+  "downloaded_at": "2026-10-30T05:39:41.616878Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "data",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for data: data, sql, database",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "sql",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wangzitian0",
+  "source_url": "https://github.com/wangzitian0/truealpha/blob/main/.claude/skills/deploy-evidence/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wangzitian0/truealpha/blob/main/.claude/skills/deploy-evidence/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "TrueAlpha Deploy Evidence & Issue Closure Guard. Automates AGENTS.md Rule 6 (\"Closed means verified on staging with real data\") verification before any product issue can be closed."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "lagune.charter",
+  "repo": "wellwelwel/lagune",
+  "path": "skills/lagune.charter/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wellwelwel/lagune",
+  "dir_name": "lagune-charter",
+  "downloaded_at": "2026-10-30T05:42:33.704955Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: data=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "data",
+      "database"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wellwelwel",
+  "source_url": "https://github.com/wellwelwel/lagune/blob/main/skills/lagune.charter/SKILL.md",
+  "license": "Apache-2.0",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wellwelwel/lagune/blob/main/skills/lagune.charter/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Establish or update the project's security charter, the safe-by-default principles every later phase must respect. Reads the project's files to learn what it is and uses, weighs any description you give against them, and asks when something is unclear."
+}

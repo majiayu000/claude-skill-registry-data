@@ -1,0 +1,39 @@
+{
+  "name": "technical-debt-records",
+  "repo": "shadowX4fox/solutions-architect-skills",
+  "path": "plugins/sa-records/skills/technical-debt-records/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/shadowX4fox/solutions-architect-skills",
+  "dir_name": "technical-debt-records",
+  "downloaded_at": "2026-10-30T04:44:53.191374Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: doc, docs, word, documentation",
+    "score": 4,
+    "runner_up": "security",
+    "runner_up_score": 3,
+    "signals": [
+      "doc",
+      "docs",
+      "word",
+      "documentation"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "shadowX4fox",
+  "source_url": "https://github.com/shadowX4fox/solutions-architect-skills/blob/main/plugins/sa-records/skills/technical-debt-records/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/shadowX4fox/solutions-architect-skills/blob/main/plugins/sa-records/skills/technical-debt-records/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Create and manage Technical Debt Records (TDRs) \u2014 the only writer of tdr/: create, update a status, list, audit (\"check TDRs\") and compact TDRs. Use whenever the user mentions deferred work, known compromises, shortcuts taken, \"we'll fix this later\", temporary workarounds, missing controls, or an architectural trade-off that should be visible and tracked; when the architecture's technical-debt section (Section 13, or Section 11 in legacy layouts) is written or updated; or when an ADR accepts debt on purpose. Not for bug reports, feature requests or backlog items \u2014 TDRs record architectural or systemic compromises, not ordinary defects."
+}

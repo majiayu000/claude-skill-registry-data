@@ -1,0 +1,37 @@
+{
+  "name": "break-camp",
+  "repo": "tmcfarlane/team-avatar",
+  "path": "plugins/team-avatar/skills/break-camp/SKILL.md",
+  "github_branch": "main",
+  "category": "context-management",
+  "source": "github.com/tmcfarlane/team-avatar",
+  "dir_name": "break-camp",
+  "downloaded_at": "2026-10-30T05:19:45.781685Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, context-window",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "context",
+      "context-window"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "tmcfarlane",
+  "source_url": "https://github.com/tmcfarlane/team-avatar/blob/main/plugins/team-avatar/skills/break-camp/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/tmcfarlane/team-avatar/blob/main/plugins/team-avatar/skills/break-camp/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Appa's morning departure for picking up paused or handed-off work. The team breaks camp, reads the map they left, and flies on from where they stopped. Use for session-pickup, \"pick up where we left off\", \"resume\", \"continue the previous session\", \"take over this agent's work\", or a handed-over transcript, cloud-agent URL, or pushed branch. Reads the checkpoint or prior trail, rebuilds state, and resumes without redoing finished work."
+}

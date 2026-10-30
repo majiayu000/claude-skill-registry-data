@@ -1,0 +1,37 @@
+{
+  "name": "thatch-split-overlarge-pr",
+  "repo": "sysread/nak",
+  "path": ".claude/skills/thatch-split-overlarge-pr/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/sysread/nak",
+  "dir_name": "thatch-split-overlarge-pr",
+  "downloaded_at": "2026-10-30T05:07:15.557852Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: development=2, planning=2",
+    "score": 2,
+    "runner_up": "planning",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sysread",
+  "source_url": "https://github.com/sysread/nak/blob/main/.claude/skills/thatch-split-overlarge-pr/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sysread/nak/blob/main/.claude/skills/thatch-split-overlarge-pr/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Split already-completed work from an overlarge PR into human-reviewable, release-safe PRs. Use when the user asks to split a large existing branch/PR, break up completed work, or turn an oversized PR into multiple PRs. Do NOT use for planning brand-new work before code exists."
+}

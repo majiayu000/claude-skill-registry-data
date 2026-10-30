@@ -1,0 +1,37 @@
+{
+  "name": "continuous-progress",
+  "repo": "wheakerd/axiom",
+  "path": "plugin/skills/continuous-progress/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/wheakerd/axiom",
+  "dir_name": "continuous-progress",
+  "downloaded_at": "2026-10-30T05:43:48.092067Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: communication=2, context-management=2",
+    "score": 2,
+    "runner_up": "context-management",
+    "runner_up_score": 2,
+    "signals": [
+      "messaging",
+      "chat"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "wheakerd",
+  "source_url": "https://github.com/wheakerd/axiom/blob/main/plugin/skills/continuous-progress/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/wheakerd/axiom/blob/main/plugin/skills/continuous-progress/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Supervised progress across host sessions by explicit invocation only. Use when the human invokes this skill to pursue a defined outcome through fresh execution sessions, coordinator handoffs, compaction, and independent recovery. Do not select it for ordinary requests to continue, one-off work, skill evaluation or authoring, or a request to use native Goals or /goal alone. Activation requires verified native scheduling, a supported independent supervisor, and existing authority for the requested coordination."
+}

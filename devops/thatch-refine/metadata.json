@@ -1,0 +1,39 @@
+{
+  "name": "thatch-refine",
+  "repo": "sysread/nak",
+  "path": ".claude/skills/thatch-refine/SKILL.md",
+  "github_branch": "main",
+  "category": "devops",
+  "source": "github.com/sysread/nak",
+  "dir_name": "thatch-refine",
+  "downloaded_at": "2026-10-30T05:07:09.428400Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "devops",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "high",
+    "reason": "matched taxonomy keywords for devops: ci, deploy, infra, infrastructure",
+    "score": 4,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "ci",
+      "deploy",
+      "infra",
+      "infrastructure"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "sysread",
+  "source_url": "https://github.com/sysread/nak/blob/main/.claude/skills/thatch-refine/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/sysread/nak/blob/main/.claude/skills/thatch-refine/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Classify the current project (audience, lifecycle, surface) and refine a plan under that type's requirements. Entry point for the thatch-refine-* family. Use when the user asks to refine a plan, runs /thatch/refine, or when a plan is about to be implemented and the project type should shape the refinement bar. For a bare \"refine this plan\" request, load this skill rather than thatch-plan-refinement directly - the router picks the type and applies its delta on top of the core loop. Deep-mode triggers in the core skill are binding; a type delta relaxes round counts, never mode selection."
+}
