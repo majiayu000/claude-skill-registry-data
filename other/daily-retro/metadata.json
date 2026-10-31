@@ -1,0 +1,37 @@
+{
+  "name": "daily-retro",
+  "repo": "serejaris/personal-corp-os",
+  "path": "experimental/skills/daily-retro/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/serejaris/personal-corp-os",
+  "dir_name": "daily-retro",
+  "downloaded_at": "2026-10-31T04:54:20.335917Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: bash=2, development=2",
+    "score": 2,
+    "runner_up": "development",
+    "runner_up_score": 2,
+    "signals": [
+      "script",
+      "cli"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "serejaris",
+  "source_url": "https://github.com/serejaris/personal-corp-os/blob/main/experimental/skills/daily-retro/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/serejaris/personal-corp-os/blob/main/experimental/skills/daily-retro/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Experimental. Daily retro from your agents' own logs: reads today's Claude Code and Codex sessions on this machine, groups them by project, adds git state (commits, uncommitted files, unpushed commits) and lists the tails \u2014 what was done and what was left open. Then closes the tails the way the manager skill does: issue comment, commit or a conscious \"drop\". Runs by itself every evening as an automation. Triggers on \"/daily-retro\", \"\u0434\u043d\u0435\u0432\u043d\u043e\u0435 \u0440\u0435\u0442\u0440\u043e\", \"\u0447\u0442\u043e \u0441\u0435\u0433\u043e\u0434\u043d\u044f \u0441\u0434\u0435\u043b\u0430\u043b\u0438 \u0430\u0433\u0435\u043d\u0442\u044b\", \"\u043f\u043e\u0434\u0431\u0435\u0439 \u0445\u0432\u043e\u0441\u0442\u044b\", \"daily retro\"."
+}

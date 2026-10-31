@@ -1,0 +1,37 @@
+{
+  "name": "cash-watch",
+  "repo": "mohitagw15856/pm-claude-skills",
+  "path": "skills/cash-watch/SKILL.md",
+  "github_branch": "main",
+  "category": "documents",
+  "source": "github.com/mohitagw15856/pm-claude-skills",
+  "dir_name": "cash-watch",
+  "downloaded_at": "2026-10-31T04:50:06.866034Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "documents",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for documents: docs, word",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mohitagw15856",
+  "source_url": "https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/cash-watch/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/cash-watch/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Set up a proactive agent to watch a small business's cash every day across Stripe, QuickBooks or Xero and the bank feed: today's cash position, money due in and out this week, failed payments, new disputes and the runway line, with clear rules for what interrupts you and what waits for the morning brief. Use when asked to have my agent keep an eye on cash, daily cash check for Duet, alert me about failed payments or disputes, watch my runway, or monitor Stripe and QuickBooks for me. Produces the watch definition (sources, checks, thresholds), the interrupt and brief rules, the daily cash lines in a fixed format, and the drafts the agent may prepare."
+}

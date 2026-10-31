@@ -1,0 +1,37 @@
+{
+  "name": "store-watch",
+  "repo": "mohitagw15856/pm-claude-skills",
+  "path": "skills/store-watch/SKILL.md",
+  "github_branch": "main",
+  "category": "other",
+  "source": "github.com/mohitagw15856/pm-claude-skills",
+  "dir_name": "store-watch",
+  "downloaded_at": "2026-10-31T04:50:07.025510Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "other",
+    "status": "unclassified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "low",
+    "reason": "ambiguous taxonomy keyword scores: documents=2, quality=2",
+    "score": 2,
+    "runner_up": "quality",
+    "runner_up_score": 2,
+    "signals": [
+      "docs",
+      "word"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "mohitagw15856",
+  "source_url": "https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/store-watch/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/store-watch/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Have a proactive agent watch an online shop (Shopify, WooCommerce, Etsy) for what needs the owner: best-sellers about to run out, a spike in refunds or returns on one product, bad reviews, failed orders and checkout problems, with interrupts only for what cannot wait and drafted replies for reviews. Use when asked to monitor my Shopify store, have Duet watch my shop, alert me when stock runs low, watch for bad reviews, or daily store health check. Produces the watch rules, the daily store lines, the interrupt thresholds, and drafted review replies; it never changes prices, refunds orders or publishes anything."
+}

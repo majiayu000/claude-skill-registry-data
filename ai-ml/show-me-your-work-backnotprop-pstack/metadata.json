@@ -1,0 +1,37 @@
+{
+  "name": "show-me-your-work",
+  "repo": "backnotprop/pstack",
+  "path": "skills/show-me-your-work/SKILL.md",
+  "github_branch": "main",
+  "category": "ai-ml",
+  "source": "github.com/backnotprop/pstack",
+  "dir_name": "show-me-your-work-backnotprop-pstack",
+  "downloaded_at": "2026-10-31T04:38:58.724353Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "ai-ml",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for ai-ml: ai, model",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "ai",
+      "model"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "backnotprop",
+  "source_url": "https://github.com/backnotprop/pstack/blob/main/skills/show-me-your-work/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/backnotprop/pstack/blob/main/skills/show-me-your-work/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Keep a reviewable decision trail for long-running or unattended work: a TSV log with one row per decision (what, why, evidence, result). Local by default; commit it when a reviewer needs the trail to trust the result. Use for /show-me-your-work, autonomous or multi-phase runs, or work a human reviews after stepping away."
+}

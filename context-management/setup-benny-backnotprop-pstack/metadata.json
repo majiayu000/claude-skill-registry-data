@@ -1,0 +1,37 @@
+{
+  "name": "setup-benny",
+  "repo": "backnotprop/pstack",
+  "path": "automations/benny/skills/setup-benny/SKILL.md",
+  "github_branch": "main",
+  "category": "context-management",
+  "source": "github.com/backnotprop/pstack",
+  "dir_name": "setup-benny-backnotprop-pstack",
+  "downloaded_at": "2026-10-31T04:39:01.344798Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "context-management",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for context-management: context, context-window",
+    "score": 2,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "context",
+      "context-window"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "backnotprop",
+  "source_url": "https://github.com/backnotprop/pstack/blob/main/automations/benny/skills/setup-benny/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/backnotprop/pstack/blob/main/automations/benny/skills/setup-benny/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Configure Benny and prepare its triage and repro automations. Use when installing Benny or changing its Slack, tracker, repository, routing, control, model, or budget settings."
+}

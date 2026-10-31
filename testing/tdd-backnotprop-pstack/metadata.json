@@ -1,0 +1,38 @@
+{
+  "name": "tdd",
+  "repo": "backnotprop/pstack",
+  "path": "skills/tdd/SKILL.md",
+  "github_branch": "main",
+  "category": "testing",
+  "source": "github.com/backnotprop/pstack",
+  "dir_name": "tdd-backnotprop-pstack",
+  "downloaded_at": "2026-10-31T04:38:51.960442Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "testing",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for testing: test, tdd, integration",
+    "score": 3,
+    "runner_up": "devops",
+    "runner_up_score": 2,
+    "signals": [
+      "test",
+      "tdd",
+      "integration"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "backnotprop",
+  "source_url": "https://github.com/backnotprop/pstack/blob/main/skills/tdd/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/backnotprop/pstack/blob/main/skills/tdd/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use only when the user explicitly asks for TDD, a failing test, or a regression test, OR when the bug has an obvious cheap local test target. Skip when the test path is unclear, expensive, integration-heavy, or not requested."
+}

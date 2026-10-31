@@ -1,0 +1,37 @@
+{
+  "name": "principle-fix-root-causes",
+  "repo": "backnotprop/pstack",
+  "path": "skills/principle-fix-root-causes/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/backnotprop/pstack",
+  "dir_name": "principle-fix-root-causes-backnotprop-pstack",
+  "downloaded_at": "2026-10-31T04:38:59.286916Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, debug",
+    "score": 2,
+    "runner_up": "ai-ml",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "debug"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "backnotprop",
+  "source_url": "https://github.com/backnotprop/pstack/blob/main/skills/principle-fix-root-causes/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/backnotprop/pstack/blob/main/skills/principle-fix-root-causes/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Apply when debugging. Trace each symptom back to the first place the system went wrong and fix it there. A guard is a fix only when the state it handles is legitimate."
+}

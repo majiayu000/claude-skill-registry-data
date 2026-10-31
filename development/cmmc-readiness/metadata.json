@@ -1,0 +1,38 @@
+{
+  "name": "cmmc-readiness",
+  "repo": "alirezarezvani/claude-skills",
+  "path": "ra-qm-team/skills/cmmc-readiness/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/alirezarezvani/claude-skills",
+  "dir_name": "cmmc-readiness",
+  "downloaded_at": "2026-10-31T04:37:52.077467Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, framework, build",
+    "score": 3,
+    "runner_up": "bash",
+    "runner_up_score": 2,
+    "signals": [
+      "code",
+      "framework",
+      "build"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "alirezarezvani",
+  "source_url": "https://github.com/alirezarezvani/claude-skills/blob/main/ra-qm-team/skills/cmmc-readiness/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/alirezarezvani/claude-skills/blob/main/ra-qm-team/skills/cmmc-readiness/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Use when a defense contractor or subcontractor is preparing for a CMMC 2.0 Level 2 self-assessment or C3PAO assessment, calculating or checking an SPRS score against NIST SP 800-171 Rev 2, deciding what can go on a POA&M, tracking POA&M closeout before Conditional status expires, or scoping assets, enclaves and cloud providers that handle CUI. Scores all 110 requirements with the 32 CFR 170.24 weights, blocks gaps that can never be deferred, and classifies the asset inventory into CMMC asset categories."
+}

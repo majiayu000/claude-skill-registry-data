@@ -1,0 +1,38 @@
+{
+  "name": "maintain-formal-verification-skill",
+  "repo": "backnotprop/pstack",
+  "path": "skills/maintain-formal-verification-skill/SKILL.md",
+  "github_branch": "main",
+  "category": "development",
+  "source": "github.com/backnotprop/pstack",
+  "dir_name": "maintain-formal-verification-skill-backnotprop-pstack",
+  "downloaded_at": "2026-10-31T04:39:02.737821Z",
+  "classification": {
+    "schema_version": 1,
+    "category": "development",
+    "status": "classified",
+    "method": "taxonomy_keyword_v1",
+    "confidence": "medium",
+    "reason": "matched taxonomy keywords for development: code, build, refactor",
+    "score": 3,
+    "runner_up": "agent",
+    "runner_up_score": 1,
+    "signals": [
+      "code",
+      "build",
+      "refactor"
+    ],
+    "semantic_sources": {
+      "name": "frontmatter",
+      "description": "frontmatter"
+    }
+  },
+  "author": "backnotprop",
+  "source_url": "https://github.com/backnotprop/pstack/blob/main/skills/maintain-formal-verification-skill/SKILL.md",
+  "license": "MIT",
+  "copyright": "Copyright belongs to upstream author(s); see https://github.com/backnotprop/pstack/blob/main/skills/maintain-formal-verification-skill/SKILL.md",
+  "permission_note": "Use according to upstream license terms and attribution requirements.",
+  "distribution": "compatible",
+  "license_class": "compatible",
+  "description": "Bring a project's formal verification back in line with the code after the code changes: find the commits that touched verified code, update the model, harness, or properties to describe the code as it is now, rerun, and say whether each failure is drift in the verification or a bug in the code. Use for /maintain-formal-verification-skill, \"is the model still true to the code\", or after merges and refactors that touched verified code without rechecking it."
+}
